@@ -1,0 +1,26 @@
+{
+	"ecmaFeatures": {
+		"jsx": true,
+		"modules": true
+	},
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true,
+		"mocha": true
+	},
+	"rules": {
+		"quotes": [2, "single"],
+		"comma-dangle": [0, "always-multiline"],
+		"react/prop-types": 2,
+		"no-trailing-spaces": 2,
+		"no-undef": 2,
+		"no-unused-vars": 2,
+		"react/jsx-uses-react": 2,
+		"react/jsx-uses-vars": 2,
+		"react/react-in-jsx-scope": 2
+	},
+	"plugins": [
+		"react"
+	]
+}
