@@ -6,6 +6,8 @@ import _ from 'lodash';
  * A basic button.
  */
 var Button = React.createClass({
+	category: 'Controls.Buttons',
+
 	displayName: 'Button',
 
 	propTypes: {
