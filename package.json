@@ -4,12 +4,9 @@
   "description": "A component library",
   "main": "dist/index.js",
   "scripts": {
-    "build": "npm run build:js && npm run build:css",
-    "build:css": "mkdir -p dist && lessc src/index.less --autoprefix='last 2 versions' > dist/index.css",
-    "build:js": "babel --ignore *.spec.* src -d dist",
-    "lint": "eslint --ext .js,.jsx src",
-    "prepublish": "npm run lint && npm run build",
-    "test": "npm run lint && mocha src/**/*.spec.jsx --compilers jsx:babel-register"
+    "build": "gulp",
+    "prepublish": "rm -rf dist && gulp prepublish",
+    "test": "gulp test"
   },
   "keywords": [],
   "author": "Jon de la Motte <jdelamotte@appnexus.com>",
@@ -19,20 +16,21 @@
     "lodash": "^4.1.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.4.5",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
-    "babel-register": "^6.4.3",
     "enzyme": "^2.0.0-rc1",
-    "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.16.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-cached": "^1.1.0",
+    "gulp-eslint": "^1.1.1",
+    "gulp-less": "^3.0.5",
+    "gulp-mocha": "^2.2.0",
     "jsdom": "^8.0.1",
-    "less": "^2.5.3",
-    "less-plugin-autoprefix": "^1.5.1",
-    "mocha": "^2.4.5",
     "react": "^0.14.0",
-    "react-dom": "^0.14.0",
     "react-addons-test-utils": "^0.14.0",
+    "react-dom": "^0.14.0",
     "sinon": "^2.0.0-pre"
   },
   "peerDependencies": {
