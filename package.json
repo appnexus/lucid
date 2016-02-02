@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "gulp",
+    "dev": "webpack-dev-server",
     "prepublish": "rm -rf dist && gulp prepublish",
+    "tdd": "gulp tdd",
     "test": "gulp test"
   },
   "keywords": [],
