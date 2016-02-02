@@ -11,6 +11,9 @@ module.exports = {
 		SOURCE: SOURCE_DIR + '/**/*.js*',
 		DEST: BUILD_DIR + '/**/*.js*'
 	},
+	EXAMPLES_GLOB: {
+		SOURCE: SOURCE_DIR + '/**/examples/*.js*',
+	},
 	AUTOPREFIXER_BROWSERS: 'last 2 versions',
 	SOURCE_DIR: SOURCE_DIR,
 	BUILD_DIR: BUILD_DIR,

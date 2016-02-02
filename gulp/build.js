@@ -19,6 +19,7 @@ module.exports = {
 	js: function() {
 		return gulp.src([
 			'!' + CONFIG.TEST_GLOB.SOURCE,
+			'!' + CONFIG.EXAMPLES_GLOB.SOURCE,
 			CONFIG.JS_GLOB.SOURCE,
 		])
 		.pipe(cache('build-js')) // only useful when using a watch task
