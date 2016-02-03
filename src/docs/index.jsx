@@ -11,45 +11,119 @@ import docgenMap from './docgen.json';
 var reqExamples = require.context('../components/', true, /examples.*\.jsx?/i);
 var reqExamplesRaw = require.context('!!raw!../components/', true, /examples.*\.jsx?/i);
 
-var groupedExamples = _.chain(reqExamples.keys())
+var examplesByComponent = _.chain(reqExamples.keys())
 	.map((path) => {
 		var items = path.split('/').reverse(); // e.g. ['default.jsx', 'examples', 'Button', '.']
 		var componentName = items[2];
 		return {
-			docs: _.get(docgenMap, componentName),
+			docs: _.get(docgenMap, componentName), // TODO: remove, wrong level
 			componentName: componentName,
-			exampleName: _.startCase(items[0].split('.')[0]),
-			exampleSource: reqExamplesRaw(path),
+			name: _.startCase(items[0].split('.')[0]),
+			source: reqExamplesRaw(path),
 			Example: reqExamples(path).default // `default` because we use es6 modules in the examples
 		};
 	})
 	.groupBy('componentName')
 	.value();
 
-var App = React.createClass({
+var docgenGroups = _.reduce(docgenMap, (acc, value, key) => {
+	var path = value.customData.categories.join('.');
+	var newGroup = _.get(acc, path, []);
+	newGroup.push(key);
+	return _.set(acc, path, newGroup);
+}, {});
+
+var {
+	PropTypes: {
+		oneOfType,
+		object,
+		array
+		}
+	} = React;
+
+var Category = React.createClass({
+	propTypes: {
+		items: oneOfType([
+			object,
+			array
+		])
+	},
+
 	render() {
+		var { items } = this.props;
+
+		if (_.isPlainObject(items)) {
+			return (
+				<div className='Category'>
+					<ul>
+						{_.map(items, (value, key) => {
+							return (
+								<li key={key}>
+									<h2>{_.startCase(key)}</h2>
+									<Category items={value} />
+								</li>
+							)
+						})}
+					</ul>
+				</div>
+			);
+		}
+
 		return (
 			<ul>
-				{_.map(groupedExamples, (examples, groupName) => {
+				{_.map(items, (item) => {
 					return (
-						<ul key={groupName}>
-							<h2>{groupName}</h2>
-							{_.map(examples, ({exampleName, exampleSource, Example, docs}) => {
-								return (
-									<li key={exampleName}>
-										<h3>{exampleName}</h3>
-										<p>Description: {docs.description}</p>
-										<p>Categories: {docs.customData.categories.join(', ')}</p>
-										<pre><code>{exampleSource}</code></pre>
-										<Example/>
-									</li>
-								)
-							})}
-						</ul>
+						<li key={item}>
+							<h3>{item}</h3>
+							<ul>
+								<h3>Props</h3>
+								<table className='Category-prop-table'>
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Type</th>
+											<th>Required</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										{_.map(_.get(docgenMap, item + '.props', []), (propDetails, propName) => {
+											return (
+												<tr key={propName}>
+													<td>{propName}</td>
+													<td>{propDetails.type.name}</td>
+													<td>{String(propDetails.required)}</td>
+													<td>{propDetails.description}</td>
+												</tr>
+											);
+										})}
+									</tbody>
+								</table>
+							</ul>
+							<ul>
+								<h3>Examples</h3>
+								{_.map(_.get(examplesByComponent, item, []), (example) => {
+									return (
+										<li key={example.name}>
+											<h4>{example.name}</h4>
+											<pre><code>{example.source}</code></pre>
+											<example.Example />
+											{console.log(example)}
+										</li>
+									);
+								})}
+							</ul>
+						</li>
 					);
 				})}
 			</ul>
 		);
+	}
+});
+
+var App = React.createClass({
+	render() {
+		return <Category items={docgenGroups} />;
 	}
 });
 
