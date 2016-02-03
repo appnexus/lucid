@@ -38,7 +38,8 @@ var App = React.createClass({
 								return (
 									<li key={exampleName}>
 										<h3>{exampleName}</h3>
-										<p>{docs.description}</p>
+										<p>Description: {docs.description}</p>
+										<p>Categories: {docs.customData.categories.join(', ')}</p>
 										<pre><code>{exampleSource}</code></pre>
 										<Example/>
 									</li>
