@@ -6,8 +6,8 @@ module.exports = {
 	devtool: 'source-map',
 	context: __dirname,
 	entry: [
-		'./docs/index.html',
-		'./docs/index.jsx'
+		'./src/docs/index.html',
+		'./src/docs/index.jsx'
 	],
 	output: {
 		path: path.join(__dirname, '/dist/docs'),
@@ -30,6 +30,10 @@ module.exports = {
 			{
 				test: /\.less$/,
 				loaders: ['style', 'css?sourceMap', 'less?sourceMap']
+			},
+			{
+				test: /\.json/,
+				loader: 'json'
 			}
 		]
 	},

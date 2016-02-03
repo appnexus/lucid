@@ -3,13 +3,12 @@ import classNames from 'classnames';
 import _ from 'lodash';
 
 /**
+ *
+ * {"categories": ["controls", "buttons"]}
+ *
  * A basic button.
  */
 var Button = React.createClass({
-	category: 'Controls.Buttons',
-
-	displayName: 'Button',
-
 	propTypes: {
 		/**
 		 * display text can be passed as a prop or as children

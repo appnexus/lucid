@@ -1,4 +1,5 @@
 node_modules
 **/*.swp
 dist
+src/docs/docgen.json
 npm-debug.log

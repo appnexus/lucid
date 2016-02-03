@@ -2,7 +2,7 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
-import describeWithDOM from '../util/describeWithDOM';
+import describeWithDOM from '../../util/describeWithDOM';
 import _ from 'lodash';
 
 import Button from './Button';
