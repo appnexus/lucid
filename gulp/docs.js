@@ -108,8 +108,8 @@ module.exports = {
 						form.append('buildId', isTagged ? tag : currentBranch);
 						form.append('isLatest', isTagged.toString());
 						form.submit({
-							host: 'localhost',
-							port: 3000,
+							host: 'docspot.devnxs.net',
+							port: 80,
 							path: '/api/projects'
 						}, callback);
 					});
