@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "gulp docs-generate && webpack-dev-server --inline",
     "preversion": "rm -rf dist && gulp preversion",
+    "postversion":"gulp docs-upload",
     "test": "gulp test",
     "test-tdd": "gulp test-tdd"
   },
