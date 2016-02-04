@@ -2,6 +2,15 @@ import React from 'react';
 import classNames from 'classnames';
 import _ from 'lodash';
 
+var {
+	bool,
+	string,
+	oneOfType,
+	node,
+	arrayOf,
+	func
+} = React.PropTypes;
+
 /**
  *
  * {"categories": ["controls", "buttons"]}
@@ -11,61 +20,65 @@ import _ from 'lodash';
 var Button = React.createClass({
 	propTypes: {
 		/**
-		 * display text can be passed as a prop or as children
+		 * disables the button by greying it out
 		 */
-		text: React.PropTypes.string,
-		disable: React.PropTypes.bool,
-		active: React.PropTypes.bool,
-		hasIcon: React.PropTypes.bool,
-		className: React.PropTypes.string,
-		children: React.PropTypes.oneOfType([
-			React.PropTypes.node,
-			React.PropTypes.arrayOf(React.PropTypes.node)
+		isDisabled: bool,
+		/**
+		 * activates the button by giving it a "pressed down" look
+		 */
+		isActive: bool,
+		/**
+		 * set this to `true` if you want to include an icon as a child
+		 */
+		hasIcon: bool,
+		/**
+		 * class names that are appended to the defaults
+		 */
+		className: string,
+		/**
+		 * any valid React children
+		 */
+		children: oneOfType([
+			node,
+			arrayOf(node)
 		]),
 		/**
-		 * click handler (called along with onClick)
+		 * called when the user clicks the button
 		 */
-		onTrigger: React.PropTypes.func,
-		/**
-		 * click handler (called along with onTrigger)
-		 */
-		onClick: React.PropTypes.func
+		onClick: func
 	},
 
 	getDefaultProps() {
 		return {
-			text: 'Button',
-			disable: false,
-			active: false,
+			isDisabled: false,
+			isActive: false,
 			hasIcon: false,
-			onTrigger: _.noop,
 			onClick: _.noop
 		};
 	},
 
 	handleClick() {
-		if (!this.props.disable) {
-			this.props.onTrigger();
+		if (!this.props.isDisabled) {
 			this.props.onClick();
 		}
 	},
 
 	render() {
 		var classes = classNames(this.props.className, {
-			'ArButton': true,
-			'disable': this.props.disable,
-			'active': this.props.active,
-			'hasIcon': this.props.hasIcon
+			'BertButton': true,
+			'BertButton-is-disabled': this.props.isDisabled,
+			'BertButton-is-active': this.props.isActive,
+			'BertButton-has-icon': this.props.hasIcon
 		});
 
 		return (
 			<button
 				className={classes}
 				onClick={this.handleClick}
-				disabled={this.props.disable}
+				disabled={this.props.isDisabled}
 				ref='button'>
-				<span className='ArButtonContent'>
-					{this.props.children || this.props.text}
+				<span className='BertButton-content'>
+					{this.props.children}
 				</span>
 			</button>
 		);

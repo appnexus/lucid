@@ -6,6 +6,7 @@ import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import docgenMap from './docgen.json';
+import hljs from 'hljs';
 
 // This is webpackism for "dynamically load all example files"
 var reqExamples = require.context('../components/', true, /examples.*\.jsx?/i);
@@ -16,7 +17,6 @@ var examplesByComponent = _.chain(reqExamples.keys())
 		var items = path.split('/').reverse(); // e.g. ['default.jsx', 'examples', 'Button', '.']
 		var componentName = items[2];
 		return {
-			docs: _.get(docgenMap, componentName), // TODO: remove, wrong level
 			componentName: componentName,
 			name: _.startCase(items[0].split('.')[0]),
 			source: reqExamplesRaw(path),
@@ -33,6 +33,12 @@ var docgenGroups = _.reduce(docgenMap, (acc, value, key) => {
 	return _.set(acc, path, newGroup);
 }, {});
 
+function handleHighlightCode() {
+	_.each(document.querySelectorAll('pre code'), (block) => {
+		hljs.highlightBlock(block);
+	});
+}
+
 var {
 	PropTypes: {
 		oneOfType,
@@ -47,6 +53,28 @@ var Category = React.createClass({
 			object,
 			array
 		])
+	},
+
+	componentDidMount: handleHighlightCode,
+	componentDidUpdate: handleHighlightCode,
+
+	renderPropType(type) {
+		// If type.value exists it means there are multiple children and we need to
+		// recurse
+		if (type.value) {
+			return (
+				<div>
+					{type.name === 'union' ? 'oneOfType' : type.name}:
+					<ul>
+						{_.map(type.value, (innerType) => {
+							return <li>{this.renderPropType(innerType)}</li>
+						})}
+					</ul>
+				</div>
+			)
+		}
+
+		return <span>{type.name || type}</span>;
 	},
 
 	render() {
@@ -91,7 +119,7 @@ var Category = React.createClass({
 											return (
 												<tr key={propName}>
 													<td>{propName}</td>
-													<td>{propDetails.type.name}</td>
+													<td>{this.renderPropType(propDetails.type)}</td>
 													<td>{String(propDetails.required)}</td>
 													<td>{propDetails.description}</td>
 												</tr>
@@ -106,9 +134,8 @@ var Category = React.createClass({
 									return (
 										<li key={example.name}>
 											<h4>{example.name}</h4>
-											<pre><code>{example.source}</code></pre>
+											<pre><code className="lang-javascript">{example.source}</code></pre>
 											<example.Example />
-											{console.log(example)}
 										</li>
 									);
 								})}

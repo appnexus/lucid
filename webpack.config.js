@@ -7,11 +7,14 @@ module.exports = {
 	context: __dirname,
 	entry: [
 		'./src/docs/index.html',
-		'./src/docs/index.jsx'
+		'./src/docs/index.jsx',
 	],
 	output: {
 		path: path.join(__dirname, '/dist/docs'),
-		filename: 'bundle.js'
+		filename: 'bundle.js',
+	},
+	externals: {
+		hljs: 'hljs',
 	},
 	devServer: {
 		contentBase: 'dist/docs'
@@ -20,24 +23,24 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.html$/,
-				loader: 'file?name=index.html'
+				loader: 'file?name=index.html',
 			},
 			{
 				test: /\.jsx?$/,
 				loader: 'babel',
-				exclude: /(node_modules)/
+				exclude: /(node_modules)/,
 			},
 			{
 				test: /\.less$/,
-				loaders: ['style', 'css?sourceMap', 'less?sourceMap']
+				loaders: ['style', 'css?sourceMap', 'less?sourceMap'],
 			},
 			{
 				test: /\.json/,
-				loader: 'json'
+				loader: 'json',
 			}
 		]
 	},
 	resolve: {
 		extensions: ['', '.js', '.jsx']
-	}
+	},
 };
