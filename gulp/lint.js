@@ -7,7 +7,8 @@ module.exports = function lint() {
 	return gulp.src([
 		CONFIG.JS_GLOB.SOURCE,
 		CONFIG.TEST_GLOB.SOURCE,
-		'!node_modules/**'
+		'!node_modules/**',
+		'!/**/*.json'
 	])
 	.pipe(eslint())
 	.pipe(eslint.format())

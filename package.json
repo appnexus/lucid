@@ -4,11 +4,10 @@
   "description": "A component library",
   "main": "dist/index.js",
   "scripts": {
-    "build": "gulp",
     "dev": "gulp docs-generate && webpack-dev-server --inline",
-    "prepublish": "rm -rf dist && gulp prepublish",
-    "tdd": "gulp tdd",
-    "test": "gulp test"
+    "preversion": "rm -rf dist && gulp preversion",
+    "test": "gulp test",
+    "test-tdd": "gulp test-tdd"
   },
   "keywords": [],
   "author": "Jon de la Motte <jdelamotte@appnexus.com>",

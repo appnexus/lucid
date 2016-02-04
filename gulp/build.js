@@ -18,6 +18,7 @@ module.exports = {
 
 	js: function() {
 		return gulp.src([
+			'!/**/*.json',
 			'!' + CONFIG.TEST_GLOB.SOURCE,
 			'!' + CONFIG.EXAMPLES_GLOB.SOURCE,
 			CONFIG.JS_GLOB.SOURCE,
