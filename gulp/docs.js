@@ -84,12 +84,12 @@ module.exports = {
 			// Figure out of the last commit was a tagged version. This command only
 			// succeeds if the last commit has an annotated tag and the tag is output
 			// on stdout if one is found.
-			exec('git describe --abbrev=0 --candidates=0 --tags', (err, stdoutTag) => {
+			exec('git describe --abbrev=0 --candidates=0 --tags', function(err, stdoutTag) {
 				var isTagged = !err;
 				var tag = stdoutTag.replace(/\n/g, '');
 
 				// Get the current branch
-				exec('git rev-parse --abbrev-ref HEAD', (err2, stdoutBranch) => {
+				exec('git rev-parse --abbrev-ref HEAD', function(err2, stdoutBranch) {
 					if (err2) {
 						console.log('Warning: was unable to retrieve git branch');
 					}
