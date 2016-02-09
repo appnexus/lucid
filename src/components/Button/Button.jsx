@@ -1,11 +1,15 @@
 import React from 'react';
 import classNames from 'classnames';
 import _ from 'lodash';
+import { bindClassNames } from '../../util/style-helpers';
 
-var {
+const boundClassNames = bindClassNames('Button');
+
+const {
 	bool,
 	string,
 	oneOfType,
+	oneOf,
 	node,
 	arrayOf,
 	func
@@ -17,7 +21,7 @@ var {
  *
  * A basic button.
  */
-var Button = React.createClass({
+const Button = React.createClass({
 	propTypes: {
 		/**
 		 * disables the button by greying it out
@@ -43,9 +47,16 @@ var Button = React.createClass({
 			arrayOf(node)
 		]),
 		/**
+		 * style variations of the button
+		 */
+		type: oneOf([
+			'primary',
+			'cancel'
+		]),
+		/**
 		 * called when the user clicks the button
 		 */
-		onClick: func
+		onClick: func.required
 	},
 
 	getDefaultProps() {
@@ -64,21 +75,33 @@ var Button = React.createClass({
 	},
 
 	render() {
-		var classes = classNames(this.props.className, {
-			'BertButton': true,
-			'BertButton-is-disabled': this.props.isDisabled,
-			'BertButton-is-active': this.props.isActive,
-			'BertButton-has-icon': this.props.hasIcon
+		let {
+			isDisabled,
+			isActive,
+			hasIcon,
+			type,
+			className,
+			children,
+			...others
+		} = this.props;
+
+		let scopedClasses = boundClassNames('~', {
+			'is-disabled': isDisabled,
+			'is-active': isActive,
+			'has-icon': hasIcon,
+			'primary': type === 'primary',
+			'cancel': type === 'cancel'
 		});
 
 		return (
 			<button
-				className={classes}
+				className={classNames(className, scopedClasses)}
 				onClick={this.handleClick}
-				disabled={this.props.isDisabled}
-				ref='button'>
-				<span className='BertButton-content'>
-					{this.props.children}
+				disabled={isDisabled}
+				{...others}
+				ref='button' >
+				<span className={boundClassNames('content')}>
+					{children}
 				</span>
 			</button>
 		);

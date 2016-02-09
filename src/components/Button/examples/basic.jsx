@@ -6,8 +6,8 @@ export default React.createClass({
 		return (
 			<div>
 				<Button>Plain</Button>
-				<Button className='BertButton-primary'>Primary</Button>
-				<Button className='BertButton-cancel'>Cancel</Button>
+				<Button type='primary'>Primary</Button>
+				<Button type='cancel'>Cancel</Button>
 				<Button isActive={true}>Active</Button>
 				<Button isDisabled={true}>Disabled</Button>
 			</div>
