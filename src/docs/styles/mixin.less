@@ -1,0 +1,51 @@
+// gradient animation mixin
+// takes start color, end color and transition time (set to .2s by default)
+.gradient-animation( @start, @end, @transTime: .2s ){
+  position: relative;
+  background-size: 100%;
+  background-image: linear-gradient(@start, @end);
+  z-index: 100;
+  &:before {
+    background-image: linear-gradient(@end, @start);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    transition: opacity @transTime, box-shadow .2s;
+		box-shadow: none;
+  }
+  &:hover {
+     &:before {
+       opacity: 1;
+     }
+  }
+	&:active {
+		outline: none;
+		&::before {
+			box-shadow: 0 0 10px rgba(0, 0, 0, .2) inset;
+		}
+	}
+}
+
+// gradient reset take a background if different than none
+.gradient-reset(@background: none) {
+	background: @background;
+  &:before {
+    content: '';		
+		display: none;
+  }
+	&:active {
+		&::before {
+			box-shadow: none;
+		}
+	}
+}
+
+// normaize box-sizing
+.box-sizing(@box-sizing: border-box) {
+	box-sizing: @box-sizing;
+}
