@@ -19,7 +19,8 @@ const {
  *
  * {"categories": ["controls", "buttons"]}
  *
- * A basic button.
+ * A basic button. Any props that are not explicitly called out below will be
+ * passed through to the native `button` component.
  */
 const Button = React.createClass({
 	propTypes: {
