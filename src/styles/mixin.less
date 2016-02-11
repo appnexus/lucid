@@ -29,18 +29,30 @@
 			box-shadow: 0 0 10px rgba(0, 0, 0, .2) inset;
 		}
 	}
+  &:focus {
+    outline: rgba(0,0,0,.2) dotted 1px;
+  }
 }
 
 // gradient reset take a background if different than none
 .gradient-reset(@background: none) {
 	background: @background;
   &:before {
-    content: '';		
+    content: '';
 		display: none;
   }
 	&:active {
 		&::before {
 			box-shadow: none;
+		}
+	}
+}
+
+.make-is-disabled(@start-color: transparent, @end-color: transparent, @gradient: @standardGradient) {
+	&.@{name}-is-disabled {
+		.gradient-reset(linear-gradient(@gradient, @start-color, @end-color));
+		&:hover {
+			text-decoration: none;
 		}
 	}
 }

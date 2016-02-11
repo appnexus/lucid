@@ -1,7 +1,7 @@
 @import '../../styles/mixin';
 @import '../../styles/variables';
 
-.bert-Button {
+.@{name} {
 	.box-sizing();
 	.gradient-animation( @default-startColor, @default-endColor);
 	cursor: pointer;
@@ -18,32 +18,41 @@
 		color: white;
 		border-color: @primary-borderColor;
 		.gradient-animation(@primary-startColor, @primary-endColor);
+		.make-is-disabled(@primary-startColor, @primary-endColor);
+
 	}
 	&-success {
 		color: white;
 		border-color: @success-borderColor;
 		.gradient-animation(@success-startColor, @success-endColor);
+		.make-is-disabled(@success-startColor, @success-endColor);
 	}
 	&-info {
 		color: white;
 		border-color: @info-borderColor;
 		.gradient-animation(@info-startColor, @info-endColor);
+		.make-is-disabled(@info-startColor, @info-endColor);
 	}
 	&-warning {
 		color: white;
 		border-color: @warning-borderColor;
 		.gradient-animation(@warning-startColor, @warning-endColor);
+		.make-is-disabled(@warning-startColor, @warning-endColor);
 	}
 	&-danger {
 		color: white;
 		border-color: @danger-borderColor;
 		.gradient-animation(@danger-startColor, @danger-endColor);
+		.make-is-disabled(@danger-startColor, @danger-endColor);
 	}
 	&-link {
 		.gradient-reset();
+		.make-is-disabled();
 		border: none;
 		background: none;
+		color: @primary;
 		&:hover {
+			color: darken(@primary, 20%);
 			background: none;
 			text-decoration: underline;
 		}
@@ -57,16 +66,22 @@
 		line-height: @button-lineHeight/1.5;
 		padding: 0 @button-padding/1.5;
 	}
+	&-large {
+		line-height: @button-lineHeight*1.5;
+		padding: 0 @button-padding*1.5;
+		font-size: 1.2em;
+	}
 
 	// States
 	&-is-active {
 		.gradient-reset(@primary);
 		background: @primary;
 		box-shadow: 0 0 15px rgba(@r, @g, @b, @a) inset;
+		color: white;
 	}
 	&-is-disabled {
 		.gradient-reset(linear-gradient(@standardGradient, @default-startColor, @default-endColor));
 		cursor: not-allowed;
-		opacity: .5;
+		opacity: .35;
 	}
 }
