@@ -23,7 +23,7 @@ export function common(Component) {
 		});
 
 		it('should have an application scoped base class', () => {
-			let expectedClass = 'bert-' + Component.displayName;
+			let expectedClass = 'lucid-' + Component.displayName;
 			const wrapper = shallow(<Component />);
 			let classNames = wrapper.first().prop('className').split(' ');
 
@@ -44,7 +44,7 @@ export function common(Component) {
 			let allClasses = parentClasses.concat(childrenClasses);
 
 			assert(_.every(allClasses, (className) => {
-				return _.includes(className, 'bert-' + Component.displayName);
+				return _.includes(className, 'lucid-' + Component.displayName);
 			}));
 		});
 

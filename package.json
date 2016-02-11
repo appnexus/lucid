@@ -1,5 +1,5 @@
 {
-  "name": "bert",
+  "name": "lucid",
   "version": "1.0.0",
   "description": "A component library",
   "main": "dist/index.js",

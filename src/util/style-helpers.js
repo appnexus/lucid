@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import classNames from 'classnames';
 
-const APP_NAME = 'bert';
+const APP_NAME = 'lucid';
 
 /**
  * bindClassNames

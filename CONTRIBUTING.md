@@ -1,4 +1,4 @@
-# Bert Contributions
+# Lucid Contributions
 
 Please ensure all pull requests follow these guidelines:
 
@@ -26,7 +26,7 @@ Please ensure all pull requests follow these guidelines:
 - Styling
   - Css classes used for state, such as `.is-active`, should also be prefixed
     with the component name. E.g. Button should use the class
-    `bert-Button-is-active`
+    `lucid-Button-is-active`
 - Code styling
   - createClass only, no ES6 classes
   - Folders should use kebab case e.g.

@@ -36,19 +36,19 @@ describe('Button', () => {
 		it('should have the Button class', () => {
 			const wrapper = shallow(<Button />);
 			let classNames = wrapper.find('button').prop('className').split(' ');
-			assert(_.includes(classNames, 'bert-Button'), `'${classNames}' should include 'bert-Button'`);
+			assert(_.includes(classNames, 'lucid-Button'), `'${classNames}' should include 'lucid-Button'`);
 		});
 
 		it('should have a button with the "active" class when active is true', () => {
 			const wrapper = shallow(<Button isActive={true} />);
 			let classNames = wrapper.find('button').prop('className').split(' ');
-			assert(_.includes(classNames, 'bert-Button-is-active'), `'${classNames}' should include 'bert-Button-is-active'`);
+			assert(_.includes(classNames, 'lucid-Button-is-active'), `'${classNames}' should include 'lucid-Button-is-active'`);
 		});
 
 		it('should have a button with the "hasIcon" class when hasIcon is true', () => {
 			const wrapper = shallow(<Button hasIcon={true} />);
 			let classNames = wrapper.find('button').prop('className').split(' ');
-			assert(_.includes(classNames, 'bert-Button-has-icon'), `'${classNames}' should include 'bert-Button-has-icon'`);
+			assert(_.includes(classNames, 'lucid-Button-has-icon'), `'${classNames}' should include 'lucid-Button-has-icon'`);
 		});
 	});
 });
