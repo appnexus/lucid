@@ -61,14 +61,13 @@ var Category = React.createClass({
 	renderPropType(type) {
 		// If type.value exists it means there are multiple children and we need to
 		// recurse
-		console.log(type.value);
 		if (_.isPlainObject(type.value) || _.isArray(type.value)) {
 			return (
 				<div>
 					{type.name === 'union' ? 'oneOfType' : type.name}:
 					<ul>
-						{_.map(type.value, (innerType) => {
-							return <li>{this.renderPropType(innerType)}</li>
+						{_.map(type.value, (innerType, index) => {
+							return <li key={index}>{this.renderPropType(innerType)}</li>
 						})}
 					</ul>
 				</div>

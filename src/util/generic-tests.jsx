@@ -34,6 +34,10 @@ export function common(Component) {
 			const wrapper = shallow(<Component>test</Component>);
 			let parentClasses = wrapper.first().prop('className').split(' ');
 			let childrenClasses = wrapper.children().reduce((acc, node) => {
+				if (!node.prop('className')) {
+					return acc;
+				}
+
 				return acc.concat(node.prop('className').split(' '))
 			}, []);
 
@@ -51,9 +55,19 @@ export function common(Component) {
 				let props = {};
 				props[key] = _.noop;
 
-				let isFunction = !(value(props, key) instanceof Error);
+				// Here we test the validation against a noop function, if it doesn't
+				// have an error, then it's probably a function. The other possible is
+				// that it's an `any`, so we'll test for that below
+				let isProbablyFunction = !(value(props, key) instanceof Error);
 
-				if (isFunction && !_.startsWith(key, 'on')) {
+				// We'll also test out a string to see if that valid
+				props[key] = '';
+
+				let isAny = isProbablyFunction && !(value(props, key) instanceof Error);
+
+				// If it's probably a function, and it's not `any`, then we make sure
+				// it starts with `on`
+				if (isProbablyFunction && !isAny && !_.startsWith(key, 'on')) {
 					return false
 				}
 
