@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "gulp docs-generate && webpack-dev-server --inline",
     "preversion": "rm -rf dist && gulp preversion",
-    "postversion":"gulp docs-upload",
+    "postversion": "gulp docs-upload",
     "test": "gulp test",
     "test-tdd": "gulp test-tdd"
   },
@@ -22,6 +22,7 @@
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-2": "^6.5.0",
     "css-loader": "^0.23.1",
     "enzyme": "^2.0.0-rc1",
     "eslint-plugin-react": "^3.16.1",

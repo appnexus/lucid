@@ -6,12 +6,15 @@ export default React.createClass({
 		return (
 			<div>
 				<Button>Plain</Button>
-				<Button className='BertButton-primary'>Primary</Button>
-				<Button className='BertButton-success'>Success</Button>
-				<Button className='BertButton-info'>Info</Button>
-				<Button className='BertButton-warning'>Warning</Button>
-				<Button className='BertButton-danger'>Danger</Button>
-				<Button className='BertButton-link'>link</Button>
+				<Button type='primary'>Primary</Button>
+				<Button type='link'>link</Button>
+				<Button type='success'>Success</Button>
+				<Button type='warning'>Warning</Button>
+				<Button type='danger'>Danger</Button>
+				<Button type='info'>Info</Button>
+				<Button size='short'>Short</Button>
+				<Button size='small'>Small</Button>
+				<Button size='large'>Large</Button>
 				<Button isActive={true}>Active</Button>
 				<Button isDisabled={true}>Disabled</Button>
 			</div>
