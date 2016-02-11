@@ -52,7 +52,19 @@ const Button = React.createClass({
 		 */
 		type: oneOf([
 			'primary',
-			'cancel'
+			'link',
+			'success',
+			'warning',
+			'danger',
+			'info'
+		]),
+		/**
+		 * size variations of the button
+		 */
+		size: oneOf([
+			'short',
+			'small',
+			'large'
 		]),
 		/**
 		 * called when the user clicks the button
@@ -81,6 +93,7 @@ const Button = React.createClass({
 			isActive,
 			hasIcon,
 			type,
+			size,
 			className,
 			children,
 			...others
@@ -91,7 +104,14 @@ const Button = React.createClass({
 			'is-active': isActive,
 			'has-icon': hasIcon,
 			'primary': type === 'primary',
-			'cancel': type === 'cancel'
+			'link': type === 'link',
+			'success': type === 'success',
+			'warning': type === 'warning',
+			'danger': type === 'danger',
+			'info': type === 'info',
+			'short': size === 'short',
+			'small': size === 'small',
+			'large': size === 'large',
 		});
 
 		return (

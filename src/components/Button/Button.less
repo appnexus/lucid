@@ -12,6 +12,8 @@
 	font: @font;
 	line-height: @button-lineHeight;
 	padding: 0 @button-padding;
+
+	// Types
 	&-primary {
 		color: white;
 		border-color: @primary-borderColor;
@@ -46,6 +48,17 @@
 			text-decoration: underline;
 		}
 	}
+
+	// Sizes
+	&-short {
+		line-height: @button-lineHeight/1.5;
+	}
+	&-small {
+		line-height: @button-lineHeight/1.5;
+		padding: 0 @button-padding/1.5;
+	}
+
+	// States
 	&-is-active {
 		.gradient-reset(@primary);
 		background: @primary;
@@ -55,12 +68,5 @@
 		.gradient-reset(linear-gradient(@standardGradient, @default-startColor, @default-endColor));
 		cursor: not-allowed;
 		opacity: .5;
-	}
-	&-is-short {
-		line-height: @button-lineHeight/1.5;
-	}
-	&-is-small {
-		line-height: @button-lineHeight/1.5;
-		padding: 0 @button-padding/1.5;
 	}
 }
