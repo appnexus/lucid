@@ -57,7 +57,7 @@ const Button = React.createClass({
 		/**
 		 * called when the user clicks the button
 		 */
-		onClick: func.required
+		onClick: func,
 	},
 
 	getDefaultProps() {

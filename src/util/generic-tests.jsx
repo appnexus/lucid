@@ -6,6 +6,14 @@ import _ from 'lodash';
 // Common tests for all our components
 export function common(Component) {
 	describe(`[common]`, () => {
+		it('should pass through styles to the root element', () => {
+			let style = {
+				backgroundColor: '#f0f'
+			};
+			const wrapper = shallow(<Component style={style}/>);
+			assert.deepEqual(wrapper.first().prop('style'), style);
+		});
+
 		it('should pass through className', () => {
 			let expectedClass = 'rAnDoM';
 			const wrapper = shallow(<Component className={expectedClass}/>);
@@ -31,11 +39,27 @@ export function common(Component) {
 
 			let allClasses = parentClasses.concat(childrenClasses);
 
-			console.log(allClasses);
 			assert(_.every(allClasses, (className) => {
 				return _.includes(className, 'bert-' + Component.displayName);
 			}));
-
 		});
+
+		it('should only use onX convention for function proptypes', () => {
+			assert(_.every(Component.propTypes, (value, key) => {
+				// See the following tests from the React source code to figure out how
+				// this works: https://github.com/facebook/react/blob/v0.14.7/src/isomorphic/classic/types/__tests__/ReactPropTypes-test.js
+				let props = {};
+				props[key] = _.noop;
+
+				let isFunction = !(value(props, key) instanceof Error);
+
+				if (isFunction && !_.startsWith(key, 'on')) {
+					return false
+				}
+
+				return true;
+			}));
+		});
+
 	});
 }
