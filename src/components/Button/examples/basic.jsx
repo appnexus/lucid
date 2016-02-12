@@ -17,58 +17,58 @@ export default React.createClass({
 					<Button size='large' isDisabled={true}>Default</Button>
 				</div>
 				<div>
-					<Button type='primary'>Primary</Button>
-					<Button type='primary' isDisabled={true}>Primary</Button>
-					<Button type='primary' size='short'>Primary</Button>
-					<Button type='primary' size='short' isDisabled={true}>Primary</Button>
-					<Button type='primary' size='small'>Primary</Button>
-					<Button type='primary' size='small' isDisabled={true}>Primary</Button>
-					<Button type='primary' size='large'>Primary</Button>
-					<Button type='primary' size='large' isDisabled={true}>Primary</Button>
+					<Button kind='primary'>Primary</Button>
+					<Button kind='primary' isDisabled={true}>Primary</Button>
+					<Button kind='primary' size='short'>Primary</Button>
+					<Button kind='primary' size='short' isDisabled={true}>Primary</Button>
+					<Button kind='primary' size='small'>Primary</Button>
+					<Button kind='primary' size='small' isDisabled={true}>Primary</Button>
+					<Button kind='primary' size='large'>Primary</Button>
+					<Button kind='primary' size='large' isDisabled={true}>Primary</Button>
 				</div>
 				<div>
-					<Button type='success'>Success</Button>
-					<Button type='success' isDisabled={true}>Success</Button>
-					<Button type='success' size='short'>Success</Button>
-					<Button type='success' size='short' isDisabled={true}>Success</Button>
-					<Button type='success' size='small'>Success</Button>
-					<Button type='success' size='small' isDisabled={true}>Success</Button>
-					<Button type='success' size='large'>Success</Button>
-					<Button type='success' size='large' isDisabled={true}>Success</Button>
+					<Button kind='success'>Success</Button>
+					<Button kind='success' isDisabled={true}>Success</Button>
+					<Button kind='success' size='short'>Success</Button>
+					<Button kind='success' size='short' isDisabled={true}>Success</Button>
+					<Button kind='success' size='small'>Success</Button>
+					<Button kind='success' size='small' isDisabled={true}>Success</Button>
+					<Button kind='success' size='large'>Success</Button>
+					<Button kind='success' size='large' isDisabled={true}>Success</Button>
 				</div>
 				<div>
-					<Button type='warning'>Warning</Button>
-					<Button type='warning' isDisabled={true}>Warning</Button>
-					<Button type='warning' size='short'>Warning</Button>
-					<Button type='warning' size='short' isDisabled={true}>Warning</Button>
-					<Button type='warning' size='small'>Warning</Button>
-					<Button type='warning' size='small' isDisabled={true}>Warning</Button>
-					<Button type='warning' size='large'>Warning</Button>
-					<Button type='warning' size='large' isDisabled={true}>Warning</Button>
+					<Button kind='warning'>Warning</Button>
+					<Button kind='warning' isDisabled={true}>Warning</Button>
+					<Button kind='warning' size='short'>Warning</Button>
+					<Button kind='warning' size='short' isDisabled={true}>Warning</Button>
+					<Button kind='warning' size='small'>Warning</Button>
+					<Button kind='warning' size='small' isDisabled={true}>Warning</Button>
+					<Button kind='warning' size='large'>Warning</Button>
+					<Button kind='warning' size='large' isDisabled={true}>Warning</Button>
 				</div>
 				<div>
-					<Button type='danger'>Danger</Button>
-					<Button type='danger' isDisabled={true}>Danger</Button>
-					<Button type='danger' size='short'>Danger</Button>
-					<Button type='danger' size='short' isDisabled={true}>Danger</Button>
-					<Button type='danger' size='small'>Danger</Button>
-					<Button type='danger' size='small' isDisabled={true}>Danger</Button>
-					<Button type='danger' size='large'>Danger</Button>
-					<Button type='danger' size='large' isDisabled={true}>Danger</Button>
+					<Button kind='danger'>Danger</Button>
+					<Button kind='danger' isDisabled={true}>Danger</Button>
+					<Button kind='danger' size='short'>Danger</Button>
+					<Button kind='danger' size='short' isDisabled={true}>Danger</Button>
+					<Button kind='danger' size='small'>Danger</Button>
+					<Button kind='danger' size='small' isDisabled={true}>Danger</Button>
+					<Button kind='danger' size='large'>Danger</Button>
+					<Button kind='danger' size='large' isDisabled={true}>Danger</Button>
 				</div>
 				<div>
-					<Button type='info'>Info</Button>
-					<Button type='info' isDisabled={true}>Info</Button>
-					<Button type='info' size='short'>Info</Button>
-					<Button type='info' size='short' isDisabled={true}>Info</Button>
-					<Button type='info' size='small'>Info</Button>
-					<Button type='info' size='small' isDisabled={true}>Info</Button>
-					<Button type='info' size='large'>Info</Button>
-					<Button type='info' size='large' isDisabled={true}>Info</Button>
+					<Button kind='info'>Info</Button>
+					<Button kind='info' isDisabled={true}>Info</Button>
+					<Button kind='info' size='short'>Info</Button>
+					<Button kind='info' size='short' isDisabled={true}>Info</Button>
+					<Button kind='info' size='small'>Info</Button>
+					<Button kind='info' size='small' isDisabled={true}>Info</Button>
+					<Button kind='info' size='large'>Info</Button>
+					<Button kind='info' size='large' isDisabled={true}>Info</Button>
 				</div>
 				<div>
-					<Button type='link'>Link</Button>
-					<Button type='link' isDisabled={true}>Link</Button>
+					<Button kind='link'>Link</Button>
+					<Button kind='link' isDisabled={true}>Link</Button>
 				</div>
 			</div>
 		);

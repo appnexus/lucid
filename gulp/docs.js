@@ -13,9 +13,9 @@ var webpackConfig = require('../webpack.config.js');
 
 function extractComponentName(path) {
 	// Here's a broken down example:
-	// 1) /Users/jdelamotte/dev/appnexus/bert/src/components/Button/Button.jsx
-	// 2) ["","Users","jdelamotte","dev","appnexus","bert","src","components","Button","Button.jsx"]
-	// 3) ["Button.jsx","Button","components","src","bert","appnexus","dev","jdelamotte","Users",""]
+	// 1) /Users/jdelamotte/dev/appnexus/lucid/src/components/Button/Button.jsx
+	// 2) ["","Users","jdelamotte","dev","appnexus","lucid","src","components","Button","Button.jsx"]
+	// 3) ["Button.jsx","Button","components","src","lucid","appnexus","dev","jdelamotte","Users",""]
 	// 4) "Button.jsx"
 	// 5) ["Button", "jsx"]
 	// 6) "Button"
@@ -104,7 +104,7 @@ module.exports = {
 					tarStream.on('end', function() {
 						var form = new FormData();
 						form.append('file', fs.createReadStream(path.join('/tmp', currentBranch + '.tar.gz')));
-						form.append('projectId', 'bert');
+						form.append('projectId', 'lucid');
 						form.append('buildId', isTagged ? tag : currentBranch);
 						form.append('isLatest', isTagged.toString());
 						form.submit({

@@ -50,7 +50,7 @@ const Button = React.createClass({
 		/**
 		 * style variations of the button
 		 */
-		type: oneOf([
+		kind: oneOf([
 			'primary',
 			'link',
 			'success',
@@ -92,7 +92,7 @@ const Button = React.createClass({
 			isDisabled,
 			isActive,
 			hasIcon,
-			type,
+			kind,
 			size,
 			className,
 			children,
@@ -103,12 +103,12 @@ const Button = React.createClass({
 			'is-disabled': isDisabled,
 			'is-active': isActive,
 			'has-icon': hasIcon,
-			'primary': type === 'primary',
-			'link': type === 'link',
-			'success': type === 'success',
-			'warning': type === 'warning',
-			'danger': type === 'danger',
-			'info': type === 'info',
+			'primary': kind === 'primary',
+			'link': kind === 'link',
+			'success': kind === 'success',
+			'warning': kind === 'warning',
+			'danger': kind === 'danger',
+			'info': kind === 'info',
 			'short': size === 'short',
 			'small': size === 'small',
 			'large': size === 'large',
