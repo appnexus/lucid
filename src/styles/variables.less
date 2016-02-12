@@ -1,58 +1,61 @@
-@name: bert-Button;
-
 // font properties
 @fontSize: 12px;
 @fontFamily: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 @font: @fontSize @fontFamily;
 
-// Drop Shadow
-@r: 0;
-@g: 0;
-@b: 0;
-@a: .2;
-
-@default: #f3f3f3;
-@primary: #2abbb0;
-@success: #28af6a;
-@info: #5bc0de;
-@warning: #f0ad4e;
-@danger: #d9534f;
+// type-subtype-propName
 
 // Gradianet values
 @standardGradient: to bottom;
 @hoverGradient: to top;
 
+@size-generic-boxShadow: rgba(0,0,0,.2);
+
 // button sizes
-@button-padding: 15px;
-@button-lineHeight: 26px;
-@button-borderRadiaus: 4px;
+@size-button-padding: 15px;
+@size-button-lineHeight: 26px;
+@size-button-borderRadiaus: 4px;
 
-// default button
-@default-borderColor: darken(@default, 15%);
-@default-startColor: @default;
-@default-endColor: darken(@default, 10%);
+// colors
+@color-default: #f3f3f3;
+@color-primary: #2abbb0;
+@color-success: #28af6a;
+@color-info: #5bc0de;
+@color-warning: #f0ad4e;
+@color-danger: #d9534f;
 
-// primary button
-@primary-borderColor: darken(@primary, 15%);
-@primary-startColor: @primary;
-@primary-endColor: darken(@primary, 10%);
+// default
+@color-default-borderColor: darken(@color-default, 15%);
+@color-default-backgroundColor: transparent;
+@color-default-gradientStartColor: @color-default;
+@color-default-gradientEndColor: darken(@color-default, 10%);
 
-// success button
-@success-borderColor: darken(@success, 15%);
-@success-startColor: @success;
-@success-endColor: darken(@success, 10%);
+// primary
+@color-primary-borderColor: darken(@color-primary, 15%);
+@color-primary-backgroundColor: transparent;
+@color-primary-gradientStartColor: @color-primary;
+@color-primary-gradientEndColor: darken(@color-primary, 10%);
 
-// info button
-@info-borderColor: darken(@info, 15%);
-@info-startColor: @info;
-@info-endColor: darken(@info, 10%);
+// success
+@color-success-borderColor: darken(@color-success, 15%);
+@color-success-backgroundColor: transparent;
+@color-success-gradientStartColor: @color-success;
+@color-success-gradientEndColor: darken(@color-success, 10%);
 
-// warning button
-@warning-borderColor: darken(@warning, 15%);
-@warning-startColor: @warning;
-@warning-endColor: darken(@warning, 10%);
+// info
+@color-info-borderColor: darken(@color-info, 15%);
+@color-info-backgroundColor: transparent;
+@color-info-gradientStartColor: @color-info;
+@color-info-gradientEndColor: darken(@color-info, 10%);
 
-// danger button
-@danger-borderColor: darken(@danger, 15%);
-@danger-startColor: @danger;
-@danger-endColor: darken(@danger, 10%);
+// warning
+@color-warning-borderColor: darken(@color-warning, 15%);
+@color-warning-backgroundColor: transparent;
+@color-warning-gradientStartColor: @color-warning;
+@color-warning-gradientEndColor: darken(@color-warning, 10%);
+
+// danger
+@color-danger-borderColor: darken(@color-danger, 15%);
+@color-danger-backgroundColor: transparent;
+@color-danger-gradientStartColor: @color-danger;
+@color-danger-gradientEndColor: darken(@color-danger, 10%);

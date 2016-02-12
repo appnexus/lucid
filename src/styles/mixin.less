@@ -48,7 +48,7 @@
 	}
 }
 
-.make-is-disabled(@start-color: transparent, @end-color: transparent, @gradient: @standardGradient) {
+.make-is-disabled(@name, @start-color: transparent, @end-color: transparent, @gradient: @standardGradient) {
 	&.@{name}-is-disabled {
 		.gradient-reset(linear-gradient(@gradient, @start-color, @end-color));
 		&:hover {
@@ -57,7 +57,11 @@
 	}
 }
 
-// normaize box-sizing
+// normaize
 .box-sizing(@box-sizing: border-box) {
 	box-sizing: @box-sizing;
+}
+
+.opacity(@opacity: .35) {
+  opacity: @opacity;
 }
