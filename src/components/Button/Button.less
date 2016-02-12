@@ -2,12 +2,14 @@
 .@{name} {
 	.box-sizing();
 	.gradient-animation( @color-default-gradientStartColor, @color-default-gradientEndColor);
+	background-color: #fff;
 	cursor: pointer;
 	display: inline-block;
 	outline: none;
 	border: 1px solid @color-default-borderColor;
 	border-radius: @size-button-borderRadiaus;
 	font: @font;
+	letter-spacing: .05em;
 	line-height: @size-button-lineHeight;
 	padding: 0 @size-button-padding;
 
@@ -15,31 +17,35 @@
 	&-primary {
 		color: white;
 		border-color: @color-primary-borderColor;
+		font-weight: 500;
 		.gradient-animation(@color-primary-gradientStartColor, @color-primary-gradientEndColor);
 		.make-is-disabled(@name, @color-primary-gradientStartColor, @color-primary-gradientEndColor);
-
 	}
 	&-success {
 		color: white;
 		border-color: @color-success-borderColor;
+		font-weight: 500;
 		.gradient-animation(@color-success-gradientStartColor, @color-success-gradientEndColor);
 		.make-is-disabled(@name, @color-success-gradientStartColor, @color-success-gradientEndColor);
 	}
 	&-info {
 		color: white;
 		border-color: @color-info-borderColor;
+		font-weight: 500;
 		.gradient-animation(@color-info-gradientStartColor, @color-info-gradientEndColor);
 		.make-is-disabled(@name, @color-info-gradientStartColor, @color-info-gradientEndColor);
 	}
 	&-warning {
 		color: white;
 		border-color: @color-warning-borderColor;
+		font-weight: 500;
 		.gradient-animation(@color-warning-gradientStartColor, @color-warning-gradientEndColor);
 		.make-is-disabled(@name, @color-warning-gradientStartColor, @color-warning-gradientEndColor);
 	}
 	&-danger {
 		color: white;
 		border-color: @color-danger-borderColor;
+		font-weight: 500;
 		.gradient-animation(@color-danger-gradientStartColor, @color-danger-gradientEndColor);
 		.make-is-disabled(@name, @color-danger-gradientStartColor, @color-danger-gradientEndColor);
 	}
@@ -74,7 +80,8 @@
 	&-is-active {
 		.gradient-reset(@color-primary);
 		background: @color-primary;
-		box-shadow: 0 0 15px @size-generic-boxShadow inset;
+		border-color: @color-primary;
+		box-shadow: 0 0 10px @size-generic-boxShadow inset;
 		color: white;
 	}
 	&-is-disabled {
