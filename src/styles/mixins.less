@@ -1,5 +1,5 @@
 // gradient animation mixin
-// takes start color, end color and transition time (set to .2s by default)
+// takes start color, end color and transition time (set to .1s by default)
 .gradient-animation( @start, @end, @transTime: .1s ){
   position: relative;
   background-size: 100%;
@@ -25,14 +25,11 @@
        opacity: 1;
      }
   }
-	&:active {
-		outline: none;
-		&::before {
-			box-shadow: 0 10px 10px -10px rgba(0, 0, 0, .3) inset;
-		}
-	}
-  &:focus {
-    outline: rgba(0,0,0,.2) dotted 1px;
+  &:active {
+    outline: none;
+    &::before {
+      box-shadow: 0 10px 10px -10px rgba(0, 0, 0, .3) inset;
+    }
   }
 }
 
