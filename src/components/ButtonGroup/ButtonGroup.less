@@ -1,0 +1,25 @@
+.lucid-ButtonGroup {
+	display: flex;
+
+	> .lucid-Button {
+
+		// First button
+		&:first-of-type {
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			border-right: 0;
+		}
+
+		// Subway sandwiched buttons
+		&:not(:first-of-type):not(:last-of-type) {
+			border-radius: 0;
+			border-right: 0;
+		}
+
+		// Last button
+		&:last-of-type {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+}

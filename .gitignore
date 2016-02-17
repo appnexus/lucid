@@ -1,0 +1,14 @@
+# Built files
+dist
+src/docs/docgen.json
+
+# Npm
+npm-debug.log*
+node_modules
+
+# Vim
+**/*.swp
+**/*.swo
+
+# IntelliJ
+.idea
