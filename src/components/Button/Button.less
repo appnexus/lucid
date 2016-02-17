@@ -1,46 +1,62 @@
-.lucid-Button {
+@name: lucid-Button;
+.@{name} {
 	.box-sizing();
-	.gradient-animation( @default-startColor, @default-endColor);
+	.gradient-animation( @color-default-gradientStartColor, @color-default-gradientEndColor);
+	background-color: #fff;
 	cursor: pointer;
 	display: inline-block;
 	outline: none;
-	border: 1px solid @default-borderColor;
-	border-radius: @button-borderRadiaus;
+	border: 1px solid @color-default-borderColor;
+	border-radius: @size-button-borderRadiaus;
 	font: @font;
-	line-height: @button-lineHeight;
-	padding: 0 @button-padding;
+	letter-spacing: .05em;
+	line-height: @size-button-lineHeight;
+	padding: 0 @size-button-padding;
 
 	// Types
 	&-primary {
 		color: white;
-		border-color: @primary-borderColor;
-		.gradient-animation(@primary-startColor, @primary-endColor);
+		border-color: @color-primary-borderColor;
+		font-weight: 500;
+		.gradient-animation(@color-primary-gradientStartColor, @color-primary-gradientEndColor);
+		.make-is-disabled(@name, @color-primary-gradientStartColor, @color-primary-gradientEndColor);
 	}
 	&-success {
 		color: white;
-		border-color: @success-borderColor;
-		.gradient-animation(@success-startColor, @success-endColor);
+		border-color: @color-success-borderColor;
+		font-weight: 500;
+		.gradient-animation(@color-success-gradientStartColor, @color-success-gradientEndColor);
+		.make-is-disabled(@name, @color-success-gradientStartColor, @color-success-gradientEndColor);
 	}
 	&-info {
 		color: white;
-		border-color: @info-borderColor;
-		.gradient-animation(@info-startColor, @info-endColor);
+		border-color: @color-info-borderColor;
+		font-weight: 500;
+		.gradient-animation(@color-info-gradientStartColor, @color-info-gradientEndColor);
+		.make-is-disabled(@name, @color-info-gradientStartColor, @color-info-gradientEndColor);
 	}
 	&-warning {
 		color: white;
-		border-color: @warning-borderColor;
-		.gradient-animation(@warning-startColor, @warning-endColor);
+		border-color: @color-warning-borderColor;
+		font-weight: 500;
+		.gradient-animation(@color-warning-gradientStartColor, @color-warning-gradientEndColor);
+		.make-is-disabled(@name, @color-warning-gradientStartColor, @color-warning-gradientEndColor);
 	}
 	&-danger {
 		color: white;
-		border-color: @danger-borderColor;
-		.gradient-animation(@danger-startColor, @danger-endColor);
+		border-color: @color-danger-borderColor;
+		font-weight: 500;
+		.gradient-animation(@color-danger-gradientStartColor, @color-danger-gradientEndColor);
+		.make-is-disabled(@name, @color-danger-gradientStartColor, @color-danger-gradientEndColor);
 	}
 	&-link {
 		.gradient-reset();
+		.make-is-disabled(@name);
 		border: none;
 		background: none;
+		color: @color-primary;
 		&:hover {
+			color: darken(@color-primary, 20%);
 			background: none;
 			text-decoration: underline;
 		}
@@ -48,22 +64,28 @@
 
 	// Sizes
 	&-short {
-		line-height: @button-lineHeight/1.5;
+		line-height: @size-button-lineHeight/1.5;
 	}
 	&-small {
-		line-height: @button-lineHeight/1.5;
-		padding: 0 @button-padding/1.5;
+		line-height: @size-button-lineHeight/1.5;
+		padding: 0 @size-button-padding/1.5;
+	}
+	&-large {
+		line-height: @size-button-lineHeight*1.5;
+		padding: 0 @size-button-padding*1.5;
+		font-size: 1.2em;
 	}
 
 	// States
 	&-is-active {
-		.gradient-reset(@primary);
-		background: @primary;
-		box-shadow: 0 0 15px rgba(@r, @g, @b, @a) inset;
+		.gradient-reset();
+		background: @color-primary;
+		border-color: @color-primary;	
+		color: white;
 	}
 	&-is-disabled {
-		.gradient-reset(linear-gradient(@standardGradient, @default-startColor, @default-endColor));
+		.gradient-reset(linear-gradient(@standardGradient, @color-default-gradientStartColor, @color-default-gradientEndColor));
 		cursor: not-allowed;
-		opacity: .5;
+		.opacity();
 	}
 }
