@@ -1,6 +1,6 @@
 {
   "name": "lucid",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A component library",
   "main": "dist/index.js",
   "scripts": {
