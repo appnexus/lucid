@@ -13,7 +13,7 @@ const {
 
 /**
  *
- * {"categories": ["icons", "icons"]}
+ * {"categories": ["icons", "_icon"]}
  *
  * A basic svg icon. Any props that are not explicitly called out below will be
  * passed through to the native `svg` component.

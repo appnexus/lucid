@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import _ from 'lodash';
 import Icon from '../Icon';
 
 import { bindClassNames } from '../../../util/style-helpers';
@@ -22,6 +21,7 @@ const {
 
 const EligibilityIcon = React.createClass({
 	propTypes: {
+		...Icon.propTypes,
 		/**
 		 * eligibility variations of the icon
 		 */
@@ -43,9 +43,6 @@ const EligibilityIcon = React.createClass({
 		let {
 			className,
 			eligibility,
-			size,
-			viewBox,
-			aspectRatio,
 			badge,
 			...passThroughs
 		} = this.props;
@@ -59,7 +56,8 @@ const EligibilityIcon = React.createClass({
 		});
 
 		return (
-			<Icon className={classNames(className, scopedClasses)}>
+			<Icon className={classNames(className, scopedClasses)}
+				{...passThroughs}>
 				<g>
 					<path className="Icon-left"
 						d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"/>

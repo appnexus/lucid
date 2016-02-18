@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import _ from 'lodash';
 import Icon from '../Icon';
 
 import { bindClassNames } from '../../../util/style-helpers';
@@ -18,13 +17,13 @@ const {
  * A Minus Icon.
  */
 const MinusIcon = React.createClass({
+	propTypes: {
+		...Icon.propTypes,
+	},
 
 	render() {
 		let {
 			className,
-			size,
-			viewBox,
-			aspectRatio,
 			badge,
 			...passThroughs
 		} = this.props;
@@ -34,7 +33,8 @@ const MinusIcon = React.createClass({
 		});
 
 		return (
-			<Icon className={classNames(className, scopedClasses)}>
+			<Icon className={classNames(className, scopedClasses)}
+				{...passThroughs}>
 				<path className="ArMinusIcon-path" d="M3,7h10v2H3V7z" />
 			</Icon>
 		);

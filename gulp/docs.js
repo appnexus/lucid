@@ -45,7 +45,6 @@ module.exports = {
 				if (!isInComponents) { return acc; }
 
 				var componentName = extractComponentName(file);
-				console.log('Parseing %s', file);
 				var docs = reactDocgen.parse(fs.readFileSync(file));
 
 				if (!docs.description) {
@@ -119,5 +118,3 @@ module.exports = {
 		});
 	}
 };
-
-

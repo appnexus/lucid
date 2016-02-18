@@ -3,11 +3,10 @@
 	height: 16px;
 	width: 16px;
 	vertical-align: top; /* Prevents automatic addition of bottom margin. */
+	fill: #b7b7b7;
 
 	>path, >rect, >circle {
-		fill: #b7b7b7;
-		stroke: none;
-		stroke-width: 0;
+		transform-origin: center center;
 	}
 
 	&-has-badge{
@@ -15,9 +14,6 @@
 		background-color: #cccccc;
 		padding: 1px;
 		border: 1px solid transparent;
-
-		>path {
-			fill: #ffffff;
-		}
+		fill: #ffffff;
 	}
 }
