@@ -1,0 +1,57 @@
+& {
+	@name: lucid-DropMenu;
+
+	.@{name} {
+		position: relative;
+		display: inline-block;
+
+		.@{name}-control {
+			//background-image: @arDropSelectorGradient;
+			.gradient-reset();
+			border-radius: 4px;
+			border: 1px solid #c5c5c5;
+			cursor: pointer;
+			font-size: 12px;
+			line-height: 26px;
+			padding: 0 10px 0 10px;
+			display: flex;
+
+			&:hover {
+				//background-image: @arDropSelectorGradientReversed;
+				.gradient-reset();
+			}
+
+			&.disable {
+				cursor: default;
+				opacity: .5;
+				outline: none;
+
+				&:hover {
+					//background-image: @arDropSelectorGradient;
+					.gradient-reset();
+				}
+			}
+
+			.ArCaret {
+				margin-left: auto;
+			}
+		}
+	}
+
+	.@{name}-Option {
+		padding-left: .4em;
+		cursor: pointer;
+		font-size: 13px;
+		line-height: 15px;
+
+		&.@{name}-Option--focused {
+			//outline: 2px solid rgba(55,55,55,0.5);
+			background: #e0e6f0;
+		}
+
+		&.@{name}-Option--selected {
+			background-color: #9dc7ea;
+		}
+	}
+}
+
