@@ -122,9 +122,7 @@ var Category = React.createClass({
 											return (
 												<tr key={propName}>
 													<td>{propName}</td>
-													<td>{
-														this.renderPropType(propDetails.type)
-													}</td>
+													<td>{this.renderPropType(propDetails.type)}</td>
 													<td>{String(propDetails.required)}</td>
 													<td>{propDetails.description}</td>
 												</tr>
