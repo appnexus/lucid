@@ -1,0 +1,51 @@
+@size-TextField-padding: 8px;
+@size-TextField-height: 28px;
+@color-TextField-font: #333;
+
+.lucid-TextField {
+	&-native {
+		.box-sizing();
+		.inset-box-shadow();
+
+		background-color: #fff;
+		border-radius: @size-borderRadius;
+		border: 1px solid @color-default-borderColor;
+		color: @color-TextField-font;
+		font-family: @fontFamily;
+		font-size: @fontSize;
+		margin: 0;
+		padding: 0 @size-TextField-padding;
+	}
+
+	&-native:focus {
+		.inset-box-shadow(@color-primary);
+		outline: none;
+		border-color: @color-primary;
+	}
+
+	&-is-single-line &-native {
+		vertical-align: middle;
+		height: @size-TextField-height;
+	}
+
+	&-is-multi-line &-native {
+		vertical-align: top;
+		resize: both;
+		padding-top: @size-TextField-padding - 2px; // Handle padding appropriately for `textarea`s
+	}
+
+	&-is-disabled &-native {
+		cursor: not-allowed;
+		background-color: fade(#000, 5%);
+		border-color: fade(#000, 10%);
+		color: fade(#000, 25%);
+	}
+
+	// Error styling
+
+	.lucid-Validation-is-error &-native {
+		.inset-box-shadow(@color-danger);
+		border-color: @color-danger;
+	}
+
+}
