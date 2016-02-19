@@ -1,4 +1,4 @@
-# Lucid
+# Lucid [![Build Status](https://travis-ci.org/appnexus/lucid.svg?branch=master)](https://travis-ci.org/appnexus/lucid)
 
 A UI component library from AppNexus.
 
