@@ -6,7 +6,7 @@ export default React.createClass({
 		return (
 			<div>
 				<ResizeIcon />
-				<ResizeIcon badge />
+				<ResizeIcon isBadge />
 			</div>
 		);
 	}

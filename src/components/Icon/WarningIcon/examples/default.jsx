@@ -6,7 +6,7 @@ export default React.createClass({
 		return (
 			<div>
 				<WarningIcon />
-				<WarningIcon badge />
+				<WarningIcon isBadge />
 			</div>
 		);
 	}

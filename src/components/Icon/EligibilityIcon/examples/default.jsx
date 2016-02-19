@@ -15,10 +15,10 @@ export default React.createClass({
 					<EligibilityIcon eligibility='right' />
 				</div>
 				<div>
-					<EligibilityIcon eligibility='both' badge />
-					<EligibilityIcon eligibility='neither' badge />
-					<EligibilityIcon eligibility='left' badge />
-					<EligibilityIcon eligibility='right' badge />
+					<EligibilityIcon eligibility='both' isBadge />
+					<EligibilityIcon eligibility='neither' isBadge />
+					<EligibilityIcon eligibility='left' isBadge />
+					<EligibilityIcon eligibility='right' isBadge />
 				</div>
 			</div>
 		);

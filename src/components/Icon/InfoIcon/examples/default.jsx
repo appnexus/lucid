@@ -6,7 +6,7 @@ export default React.createClass({
 		return (
 			<div>
 				<InfoIcon />
-				<InfoIcon badge />
+				<InfoIcon isBadge />
 			</div>
 		);
 	}

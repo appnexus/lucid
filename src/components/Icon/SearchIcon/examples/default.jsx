@@ -6,7 +6,7 @@ export default React.createClass({
 		return (
 			<div>
 				<SearchIcon />
-				<SearchIcon badge />
+				<SearchIcon isBadge />
 			</div>
 		);
 	}

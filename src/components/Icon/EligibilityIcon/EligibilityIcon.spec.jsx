@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import { shallow } from 'enzyme';
 import assert from 'assert';
-import { common } from '../../util/generic-tests';
+import { common } from '../../../util/generic-tests';
 
 import EligibilityIcon from './EligibilityIcon';
 

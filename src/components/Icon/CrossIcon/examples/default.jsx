@@ -6,7 +6,7 @@ export default React.createClass({
 		return (
 			<div>
 				<CrossIcon />
-				<CrossIcon badge />
+				<CrossIcon isBadge />
 			</div>
 		);
 	}

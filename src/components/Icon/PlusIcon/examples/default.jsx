@@ -6,7 +6,7 @@ export default React.createClass({
 		return (
 			<div>
 				<PlusIcon />
-				<PlusIcon badge />
+				<PlusIcon isBadge />
 			</div>
 		);
 	}

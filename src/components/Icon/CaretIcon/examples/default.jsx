@@ -15,10 +15,10 @@ export default React.createClass({
 					<CaretIcon direction="right" />
 				</div>
 				<div>
-					<CaretIcon direction="up" badge />
-					<CaretIcon direction="down" badge />
-					<CaretIcon direction="left" badge />
-					<CaretIcon direction="right" badge />
+					<CaretIcon direction="up" isBadge />
+					<CaretIcon direction="down" isBadge />
+					<CaretIcon direction="left" isBadge />
+					<CaretIcon direction="right" isBadge />
 				</div>
 			</div>
 		);

@@ -6,7 +6,7 @@ export default React.createClass({
 		return (
 			<div>
 				<CheckIcon />
-				<CheckIcon badge />
+				<CheckIcon isBadge />
 			</div>
 		);
 	}

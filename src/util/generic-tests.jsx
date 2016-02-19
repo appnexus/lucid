@@ -1,6 +1,7 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import assert from 'assert';
+import describeWithDOM  from './describe-with-dom';
 import _ from 'lodash';
 
 // Common tests for all our components
@@ -75,5 +76,17 @@ export function common(Component) {
 			}));
 		});
 
+	});
+}
+
+// Common tests for all our icon components
+export function icons(Component) {
+	describeWithDOM(`[icon]`, () => {
+		it('should pass through isBadge prop to underlying Icon component', () => {
+			const wrapper = mount(<Component isBadge={true} />);
+			let classNames = wrapper.find('svg').prop('className').split(' ');
+			let targetClassName = 'lucid-Icon-is-badge';
+			assert(_.includes(classNames, targetClassName), `'${classNames}' should include '${targetClassName}'`);
+		});
 	});
 }

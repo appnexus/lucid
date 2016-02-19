@@ -6,7 +6,7 @@ export default React.createClass({
 		return (
 			<div>
 				<MinusIcon />
-				<MinusIcon badge />
+				<MinusIcon isBadge />
 			</div>
 		);
 	}

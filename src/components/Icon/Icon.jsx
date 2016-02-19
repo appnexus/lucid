@@ -5,15 +5,15 @@ import { bindClassNames } from '../../util/style-helpers';
 const boundClassNames = bindClassNames('Icon');
 
 const {
+	any,
 	string,
 	number,
-	node,
 	bool
 } = React.PropTypes;
 
 /**
  *
- * {"categories": ["icons", "_icon"]}
+ * {"categories": ["visual design", "icons"]}
  *
  * A basic svg icon. Any props that are not explicitly called out below will be
  * passed through to the native `svg` component.
@@ -21,39 +21,40 @@ const {
 const Icon = React.createClass({
 	propTypes: {
 		/**
-		 * class names that are appended to the defaults
+		 * Classes that are appended to the component defaults. This prop is run
+		 * through the `classnames` library.
 		 */
-		className: string,
+		className: any,
 		/**
-		 * size variations of the icons,
-		 * size directly effects height and width but the developer should also be conscious of the relationship with viewbox.
+		 * Size variations of the icons. `size` directly effects height and width
+		 * but the developer should also be conscious of the relationship with
+		 * `viewBox`.
 		 */
 		size: number,
 		/**
-		 * The viewbox is very important for SVGs.
-		 * You can think of viewbox at the "artboard" for our SVG
-		 * while Size is the presented height and width.
+		 * `viewBox` is very important for SVGs. You can think of `viewBox` as the
+		 * "artboard" for our SVG while `size` is the presented height and width.
 		 */
 		viewBox: string,
 		/**
-		 * any valid SVG aspect ratio
+		 * Any valid SVG aspect ratio.
 		 */
 		aspectRatio: string,
 		/**
-		 * true or false, is the icon also a badge (adds stlying)
+		 * Add badge styling.
 		 */
-		badge: bool,
+		isBadge: bool,
 		/**
-		 * any valid React children
+		 * Any valid React children.
 		 */
-		children: node
+		children: any
 	},
 
 	getDefaultProps() {
 		return {
 			size: 16,
 			aspectRatio: 'xMinYMin meet',
-			badge: false
+			isBadge: false
 		};
 	},
 
@@ -64,21 +65,23 @@ const Icon = React.createClass({
 			size,
 			viewBox,
 			aspectRatio,
-			badge,
+			isBadge,
 			...passThroughs
 		} = this.props;
 
 		let scopedClasses = boundClassNames('~', {
-			'has-badge': badge,
+			'is-badge': isBadge,
 		});
-		// kind.charAt(0).toUpperCase() + kind.slice(1);
 
 		return (
-			<svg {...passThroughs}
+			<svg
+				{...passThroughs}
 				className={classNames(className, scopedClasses)}
-				height={size} width={size}
+				width={size}
+				height={size}
 				viewBox={viewBox || [0, 0, size, size].join(' ')}
-				preserveAspectRatio={aspectRatio}>
+				preserveAspectRatio={aspectRatio}
+			>
 				{children}
 			</svg>
 		);

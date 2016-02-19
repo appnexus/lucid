@@ -11,9 +11,9 @@ const {
 
 /**
  *
- * {"categories": ["icons", "caret"]}
+ * {"categories": ["visual design", "icons"]}
  *
- * A Caret Icon.
+ * A caret icon.
  */
 const CaretIcon = React.createClass({
 	propTypes: {
@@ -38,7 +38,6 @@ const CaretIcon = React.createClass({
 	render() {
 		let {
 			className,
-			badge,
 			direction,
 			...passThroughs
 		} = this.props;
@@ -48,12 +47,13 @@ const CaretIcon = React.createClass({
 			'is-up': direction === 'up',
 			'is-left': direction === 'left',
 			'is-right': direction === 'right',
-			'has-badge': badge,
 		});
 
 		return (
-			<Icon className={classNames(className, scopedClasses)}
-				{...passThroughs}>
+			<Icon
+				{...passThroughs}
+				className={classNames(className, scopedClasses)}
+			>
 				<path d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
 			</Icon>
 		);

@@ -6,15 +6,11 @@ import { bindClassNames } from '../../../util/style-helpers';
 
 const boundClassNames = bindClassNames('MinusIcon');
 
-const {
-	PropTypes: {}
-} = React;
-
 /**
  *
- * {"categories": ["icons", "minus"]}
+ * {"categories": ["visual design", "icons"]}
  *
- * A Minus Icon.
+ * A minus icon.
  */
 const MinusIcon = React.createClass({
 	propTypes: {
@@ -24,18 +20,15 @@ const MinusIcon = React.createClass({
 	render() {
 		let {
 			className,
-			badge,
 			...passThroughs
 		} = this.props;
 
-		let scopedClasses = boundClassNames('~', {
-			'has-badge': badge,
-		});
-
 		return (
-			<Icon className={classNames(className, scopedClasses)}
-				{...passThroughs}>
-				<path className="ArMinusIcon-path" d="M3,7h10v2H3V7z" />
+			<Icon
+				{...passThroughs}
+				className={classNames(className, boundClassNames('~'))}
+			>
+				<path d="M3,7h10v2H3V7z" />
 			</Icon>
 		);
 	}

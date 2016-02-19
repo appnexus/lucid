@@ -7,23 +7,21 @@ import { bindClassNames } from '../../../util/style-helpers';
 const boundClassNames = bindClassNames('EligibilityIcon');
 
 const {
-	PropTypes: {
-		oneOf,
-	}
-} = React;
+	oneOf,
+} = React.PropTypes;
 
 /**
  *
- * {"categories": ["icons", "eligibility"]}
+ * {"categories": ["visual design", "icons"]}
  *
- * A Eligibility Icon.
+ * An eligibility icon.
  */
 
 const EligibilityIcon = React.createClass({
 	propTypes: {
 		...Icon.propTypes,
 		/**
-		 * eligibility variations of the icon
+		 * Eligibility variations of the icon.
 		 */
 		eligibility: oneOf([
 			'both',
@@ -43,7 +41,6 @@ const EligibilityIcon = React.createClass({
 		let {
 			className,
 			eligibility,
-			badge,
 			...passThroughs
 		} = this.props;
 
@@ -51,13 +48,14 @@ const EligibilityIcon = React.createClass({
 			'is-selected-both': eligibility === 'both',
 			'is-selected-neither': eligibility === 'neither',
 			'is-selected-left': eligibility === 'left',
-			'is-selected-right': eligibility === 'right',
-			'has-badge': badge,
+			'is-selected-right': eligibility === 'right'
 		});
 
 		return (
-			<Icon className={classNames(className, scopedClasses)}
-				{...passThroughs}>
+			<Icon
+				{...passThroughs}
+				className={classNames(className, scopedClasses)}
+			>
 				<g>
 					<path className="Icon-left"
 						d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"/>

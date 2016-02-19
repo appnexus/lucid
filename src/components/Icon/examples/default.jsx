@@ -8,7 +8,7 @@ export default React.createClass({
 				<Icon>
 					<rect width="10" height="10" stroke="black" strokeWidth="1" fill="red" />
 				</Icon>
-				<Icon badge>
+				<Icon isBadge>
 					<rect width="10" height="10" stroke="black" strokeWidth="1" fill="red" />
 				</Icon>
 			</div>
