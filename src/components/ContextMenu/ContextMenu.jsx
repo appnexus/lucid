@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import classNames from 'classnames';
 import Portal from '../Portal/Portal';
@@ -30,7 +29,7 @@ const ContextMenu = React.createClass({
 		style: object,
 		isExpanded: bool,
 		direction: oneOf(['down', 'up']),
-		portalId: string, 
+		portalId: string,
 		onChangeBounds: func,
 		onClickOut: func
 	},
@@ -84,7 +83,7 @@ const ContextMenu = React.createClass({
 		window.document.body.removeEventListener(this.onClickBodyEventListener);
 	},
 
-	componentWillReceiveProps(nextProps) {
+	componentWillReceiveProps() {
 		let targetDOMNode = this.refs.target;
 
 		if (targetDOMNode) {

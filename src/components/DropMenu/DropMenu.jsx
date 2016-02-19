@@ -14,7 +14,6 @@ const boundClassNames = bindClassNames('DropMenu');
 const {
 	bool,
 	string,
-	oneOfType,
 	oneOf,
 	node,
 	arrayOf,
@@ -145,7 +144,7 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 			onAboveFold();
 		}
 	},
-	
+
 	handleMouseFocusOption(optionIndex) {
 		let {
 			focusedIndex,
@@ -160,7 +159,7 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 			onFocusOption(optionIndex);
 		}
 	},
-	
+
 	handleSelectOption(optionIndex) {
 		let {
 			onSelect
@@ -210,15 +209,9 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 			isExpanded,
 			direction,
 			children,
-			selectedIndices,
-			focusedIndex,
 			portalId,
 			onCollapse
 		} = this.props;
-
-		let {
-			isMouseTriggered
-		} = this.state;
 
 		let controlChildProps = DropMenu.Control.getAllAsProps(this.props, children);
 		let optionChildProps = DropMenu.Option.getAllAsProps(this.props);

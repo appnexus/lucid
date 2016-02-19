@@ -20,7 +20,7 @@ export function createChildComponent (definition={}) {
 			 *
 			 * Returns all collective children of elements with this component type
 			 *
-			 * @param {Array} elements - usually `this.props.children` but can be any list of elements which 
+			 * @param {Array} elements - usually `this.props.children` but can be any list of elements which
 			 *	                          might have this type
 			 * @return {Array} All the collective children of elements with this component type
 			 */
@@ -40,7 +40,7 @@ export function createChildComponent (definition={}) {
 			 *
 			 * Returns all elements with this component type
 			 *
-			 * @param {Array} elements - usually `this.props.children` but can be any list of elements which 
+			 * @param {Array} elements - usually `this.props.children` but can be any list of elements which
 			 *	                          might have this type
 			 * @return {Array} elements with this component type
 			 */
@@ -60,7 +60,7 @@ export function createChildComponent (definition={}) {
 			 *
 			 * Returns the `props` object of each element with this component type
 			 *
-			 * @param {Array} elements - usually `this.props.children` but can be any list of elements which 
+			 * @param {Array} elements - usually `this.props.children` but can be any list of elements which
 			 *	                          might have this type
 			 * @return {Array} `props` objects of elements with this component type
 			 */
