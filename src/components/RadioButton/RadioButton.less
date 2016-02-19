@@ -1,0 +1,130 @@
+@RadioButton-height: 28px;
+@RadioButton-width: 50px;
+@RadioButton-animation-timing: 0.2s ease-in-out;
+@RadioButton-selected-transform: translate(22px, 0);
+
+@RadioButton-container-height: 22px;
+@RadioButton-container-offset: 3px;
+@RadioButton-container-width: 44px;
+
+@RadioButton-glow-offset: 5px;
+@RadioButton-glow-radius: 9px;
+@RadioButton-glow-scale: scale(1.556);
+
+@RadioButton-handle-offset: 6px;
+@RadioButton-handle-radius: 8px;
+@RadioButton-handle-scale: scale(1.125);
+
+.lucid-Switch {
+	cursor: pointer;
+	display: inline-block;
+	height: @RadioButton-height;
+	position: relative;
+	user-select: none;
+	width: @RadioButton-width;
+
+	&-is-disabled {
+		cursor: default;
+	}
+
+	&-native {
+		opacity: 0;
+	}
+
+	&-visualization-container {
+		background-color: @color-default-borderColor;
+		border-radius: @RadioButton-container-height / 2;
+		height: @RadioButton-container-height;
+		left: @RadioButton-container-offset;
+		position: absolute;
+		top: @RadioButton-container-offset;
+		width: @RadioButton-container-width;
+	}
+
+	&-visualization-glow {
+		background-color: @color-primary;
+		border-radius: @RadioButton-glow-radius;
+		height: @RadioButton-glow-radius * 2;
+		left: @RadioButton-glow-offset;
+		opacity: 0;
+		position: absolute;
+		top: @RadioButton-glow-offset;
+		transition: @RadioButton-animation-timing;
+		width: @RadioButton-glow-radius * 2;
+	}
+
+	&-visualization-handle {
+		background-color: white;
+		border-radius: @RadioButton-handle-radius;
+		height: @RadioButton-handle-radius * 2;
+		left: @RadioButton-handle-offset;
+		position: absolute;
+		top: @RadioButton-handle-offset;
+		transition: @RadioButton-animation-timing;
+		width: @RadioButton-handle-radius * 2;
+	}
+
+	&:hover &-visualization-glow {
+		opacity: 0.3;
+		transform: @RadioButton-glow-scale;
+	}
+
+	&:hover &-visualization-handle {
+		transform: @RadioButton-handle-scale;
+	}
+
+	&-is-disabled:hover &-visualization-glow {
+		opacity: 0;
+		transform: none;
+	}
+
+	&-is-disabled:hover &-visualization-handle {
+		transform: none;
+	}
+
+	&-is-disabled &-visualization-container,
+	&-is-disabled &-visualization-handle {
+		opacity: 0.3;
+	}
+
+	&-is-disabled&-is-selected:hover &-visualization-handle {
+		transform: @RadioButton-selected-transform scale(1);
+	}
+
+	&-is-selected &-visualization-container {
+		background-color: @color-primary;
+	}
+
+	&-is-selected &-visualization-glow {
+		transform: @RadioButton-selected-transform;
+	}
+
+	&-is-selected &-visualization-handle {
+		transform: @RadioButton-selected-transform;
+	}
+
+	&-is-selected &-native:focus ~ &-visualization-glow {
+		transform: @RadioButton-selected-transform @RadioButton-glow-scale;
+	}
+
+	&-is-selected &-native:focus ~ &-visualization-handle {
+		transform: @RadioButton-selected-transform @RadioButton-handle-scale;
+	}
+
+	&-is-selected:hover &-visualization-glow {
+		transform: @RadioButton-selected-transform @RadioButton-glow-scale;
+	}
+
+	&-is-selected:hover &-visualization-handle {
+		transform: @RadioButton-selected-transform @RadioButton-handle-scale;
+	}
+
+	&-native:focus ~ &-visualization-glow {
+		opacity: 0.3;
+		transform: @RadioButton-glow-scale;
+	}
+
+	&-native:focus ~ &-visualization-handle {
+		transform: @RadioButton-handle-scale;
+	}
+}
