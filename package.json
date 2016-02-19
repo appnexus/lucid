@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "A component library",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appnexus/lucid.git"
+  },
   "scripts": {
     "dev": "gulp docs-generate && webpack-dev-server --inline",
     "preversion": "rm -rf dist && gulp preversion",
@@ -41,6 +45,7 @@
     "gulp-zip": "^3.1.0",
     "jsdom": "^8.0.1",
     "json-loader": "^0.5.4",
+    "less": "^2.3.1",
     "less-loader": "^2.2.2",
     "postcss-loader": "^0.8.1",
     "raw-loader": "^0.5.1",
