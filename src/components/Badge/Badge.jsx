@@ -1,6 +1,5 @@
 import React from 'react';
 import classNames from 'classnames';
-import _ from 'lodash';
 import { bindClassNames } from '../../util/style-helpers';
 
 const boundClassNames = bindClassNames('Badge');
