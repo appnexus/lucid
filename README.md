@@ -29,9 +29,9 @@ Or use the precompiled CSS file `node_modules/lucid/dist/index.css`.
 
 ### Dependencies
 
-`lucid` declares both `React` and `ReactDOM` as `peerDependency`s, which means
+`lucid` has both `react` and `react-dom` as `peerDependency`s. This means
 the consuming application is responsible for declaring a dependency on a
-compatible version of `React`. Don't forget the dependency on `react-dom`.
+compatible version.
 
 ```
 package.json
