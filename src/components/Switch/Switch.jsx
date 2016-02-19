@@ -19,8 +19,8 @@ const {
  * any given moment in time -- that uses a visualization of a physical on/off
  * switch made popular by smartphone OSes to reflect its current state.
  *
- * It uses a hidden native check box component under the hood but leverages
- * other HTML elements to visualize its state.
+ * It uses a hidden native check box control under the hood but leverages other
+ * HTML elements to visualize its state.
  */
 const Switch = React.createClass({
 	propTypes: {
@@ -61,8 +61,7 @@ const Switch = React.createClass({
 		return {
 			isDisabled: false,
 			isSelected: false,
-			onSelect: _.noop,
-			tabIndex: 0
+			onSelect: _.noop
 		};
 	},
 
