@@ -1,0 +1,130 @@
+@lucid-Switch-height: 28px;
+@lucid-Switch-width: 50px;
+@lucid-Switch-animation-timing: 0.2s ease-in-out;
+@lucid-Switch-selected-transform: translate(22px, 0);
+
+@lucid-Switch-container-height: 22px;
+@lucid-Switch-container-offset: 3px;
+@lucid-Switch-container-width: 44px;
+
+@lucid-Switch-glow-offset: 5px;
+@lucid-Switch-glow-radius: 9px;
+@lucid-Switch-glow-scale: scale(1.556);
+
+@lucid-Switch-handle-offset: 6px;
+@lucid-Switch-handle-radius: 8px;
+@lucid-Switch-handle-scale: scale(1.125);
+
+.lucid-Switch {
+	cursor: pointer;
+	display: inline-block;
+	height: @lucid-Switch-height;
+	position: relative;
+	user-select: none;
+	width: @lucid-Switch-width;
+
+	&-is-disabled {
+		cursor: default;
+	}
+
+	&-native {
+		opacity: 0;
+	}
+
+	&-visualization-container {
+		background-color: @color-default-borderColor;
+		border-radius: @lucid-Switch-container-height / 2;
+		height: @lucid-Switch-container-height;
+		left: @lucid-Switch-container-offset;
+		position: absolute;
+		top: @lucid-Switch-container-offset;
+		width: @lucid-Switch-container-width;
+	}
+
+	&-visualization-glow {
+		background-color: @color-primary;
+		border-radius: @lucid-Switch-glow-radius;
+		height: @lucid-Switch-glow-radius * 2;
+		left: @lucid-Switch-glow-offset;
+		opacity: 0;
+		position: absolute;
+		top: @lucid-Switch-glow-offset;
+		transition: @lucid-Switch-animation-timing;
+		width: @lucid-Switch-glow-radius * 2;
+	}
+
+	&-visualization-handle {
+		background-color: white;
+		border-radius: @lucid-Switch-handle-radius;
+		height: @lucid-Switch-handle-radius * 2;
+		left: @lucid-Switch-handle-offset;
+		position: absolute;
+		top: @lucid-Switch-handle-offset;
+		transition: @lucid-Switch-animation-timing;
+		width: @lucid-Switch-handle-radius * 2;
+	}
+
+	&:hover &-visualization-glow {
+		opacity: 0.3;
+		transform: @lucid-Switch-glow-scale;
+	}
+
+	&:hover &-visualization-handle {
+		transform: @lucid-Switch-handle-scale;
+	}
+
+	&-is-disabled:hover &-visualization-glow {
+		opacity: 0;
+		transform: none;
+	}
+
+	&-is-disabled:hover &-visualization-handle {
+		transform: none;
+	}
+
+	&-is-disabled &-visualization-container,
+	&-is-disabled &-visualization-handle {
+		opacity: 0.3;
+	}
+
+	&-is-disabled&-is-selected:hover &-visualization-handle {
+		transform: @lucid-Switch-selected-transform scale(1);
+	}
+
+	&-is-selected &-visualization-container {
+		background-color: @color-primary;
+	}
+
+	&-is-selected &-visualization-glow {
+		transform: @lucid-Switch-selected-transform;
+	}
+
+	&-is-selected &-visualization-handle {
+		transform: @lucid-Switch-selected-transform;
+	}
+
+	&-is-selected &-native:focus ~ &-visualization-glow {
+		transform: @lucid-Switch-selected-transform @lucid-Switch-glow-scale;
+	}
+
+	&-is-selected &-native:focus ~ &-visualization-handle {
+		transform: @lucid-Switch-selected-transform @lucid-Switch-handle-scale;
+	}
+
+	&-is-selected:hover &-visualization-glow {
+		transform: @lucid-Switch-selected-transform @lucid-Switch-glow-scale;
+	}
+
+	&-is-selected:hover &-visualization-handle {
+		transform: @lucid-Switch-selected-transform @lucid-Switch-handle-scale;
+	}
+
+	&-native:focus ~ &-visualization-glow {
+		opacity: 0.3;
+		transform: @lucid-Switch-glow-scale;
+	}
+
+	&-native:focus ~ &-visualization-handle {
+		transform: @lucid-Switch-handle-scale;
+	}
+}
