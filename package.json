@@ -1,6 +1,6 @@
 {
   "name": "lucid",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A component library",
   "main": "dist/index.js",
   "scripts": {
@@ -37,7 +37,6 @@
     "gulp-gzip": "^1.2.0",
     "gulp-less": "^3.0.5",
     "gulp-mocha": "^2.2.0",
-    "gulp-postcss": "^6.1.0",
     "gulp-tar": "^1.8.0",
     "gulp-zip": "^3.1.0",
     "jsdom": "^8.0.1",

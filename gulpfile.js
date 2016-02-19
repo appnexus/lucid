@@ -12,5 +12,5 @@ gulp.task('docs-generate', docs.generate);
 gulp.task('docs-upload', ['docs-generate'], docs.upload);
 gulp.task('lint', lint);
 gulp.task('preversion', ['lint', 'test', 'build-css', 'build-js']);
-gulp.task('test', ['build-js', 'build-test'], test.test);
+gulp.task('test', ['lint', 'build-js', 'build-test'], test.test);
 gulp.task('test-tdd', test.tdd);

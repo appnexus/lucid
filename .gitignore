@@ -1,5 +1,14 @@
-node_modules
-**/*.swp
+# Built files
 dist
 src/docs/docgen.json
-npm-debug.log
+
+# Npm
+npm-debug.log*
+node_modules
+
+# Vim
+**/*.swp
+**/*.swo
+
+# IntelliJ
+.idea
