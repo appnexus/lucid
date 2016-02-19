@@ -1,27 +1,27 @@
-@lucid-Switch-height: 28px;
-@lucid-Switch-width: 50px;
-@lucid-Switch-animation-timing: 0.2s ease-in-out;
-@lucid-Switch-selected-transform: translate(22px, 0);
+@Switch-height: 28px;
+@Switch-width: 50px;
+@Switch-animation-timing: 0.2s ease-in-out;
+@Switch-selected-transform: translate(22px, 0);
 
-@lucid-Switch-container-height: 22px;
-@lucid-Switch-container-offset: 3px;
-@lucid-Switch-container-width: 44px;
+@Switch-container-height: 22px;
+@Switch-container-offset: 3px;
+@Switch-container-width: 44px;
 
-@lucid-Switch-glow-offset: 5px;
-@lucid-Switch-glow-radius: 9px;
-@lucid-Switch-glow-scale: scale(1.556);
+@Switch-glow-offset: 5px;
+@Switch-glow-radius: 9px;
+@Switch-glow-scale: scale(1.556);
 
-@lucid-Switch-handle-offset: 6px;
-@lucid-Switch-handle-radius: 8px;
-@lucid-Switch-handle-scale: scale(1.125);
+@Switch-handle-offset: 6px;
+@Switch-handle-radius: 8px;
+@Switch-handle-scale: scale(1.125);
 
 .lucid-Switch {
 	cursor: pointer;
 	display: inline-block;
-	height: @lucid-Switch-height;
+	height: @Switch-height;
 	position: relative;
 	user-select: none;
-	width: @lucid-Switch-width;
+	width: @Switch-width;
 
 	&-is-disabled {
 		cursor: default;
@@ -33,44 +33,44 @@
 
 	&-visualization-container {
 		background-color: @color-default-borderColor;
-		border-radius: @lucid-Switch-container-height / 2;
-		height: @lucid-Switch-container-height;
-		left: @lucid-Switch-container-offset;
+		border-radius: @Switch-container-height / 2;
+		height: @Switch-container-height;
+		left: @Switch-container-offset;
 		position: absolute;
-		top: @lucid-Switch-container-offset;
-		width: @lucid-Switch-container-width;
+		top: @Switch-container-offset;
+		width: @Switch-container-width;
 	}
 
 	&-visualization-glow {
 		background-color: @color-primary;
-		border-radius: @lucid-Switch-glow-radius;
-		height: @lucid-Switch-glow-radius * 2;
-		left: @lucid-Switch-glow-offset;
+		border-radius: @Switch-glow-radius;
+		height: @Switch-glow-radius * 2;
+		left: @Switch-glow-offset;
 		opacity: 0;
 		position: absolute;
-		top: @lucid-Switch-glow-offset;
-		transition: @lucid-Switch-animation-timing;
-		width: @lucid-Switch-glow-radius * 2;
+		top: @Switch-glow-offset;
+		transition: @Switch-animation-timing;
+		width: @Switch-glow-radius * 2;
 	}
 
 	&-visualization-handle {
 		background-color: white;
-		border-radius: @lucid-Switch-handle-radius;
-		height: @lucid-Switch-handle-radius * 2;
-		left: @lucid-Switch-handle-offset;
+		border-radius: @Switch-handle-radius;
+		height: @Switch-handle-radius * 2;
+		left: @Switch-handle-offset;
 		position: absolute;
-		top: @lucid-Switch-handle-offset;
-		transition: @lucid-Switch-animation-timing;
-		width: @lucid-Switch-handle-radius * 2;
+		top: @Switch-handle-offset;
+		transition: @Switch-animation-timing;
+		width: @Switch-handle-radius * 2;
 	}
 
 	&:hover &-visualization-glow {
 		opacity: 0.3;
-		transform: @lucid-Switch-glow-scale;
+		transform: @Switch-glow-scale;
 	}
 
 	&:hover &-visualization-handle {
-		transform: @lucid-Switch-handle-scale;
+		transform: @Switch-handle-scale;
 	}
 
 	&-is-disabled:hover &-visualization-glow {
@@ -88,7 +88,7 @@
 	}
 
 	&-is-disabled&-is-selected:hover &-visualization-handle {
-		transform: @lucid-Switch-selected-transform scale(1);
+		transform: @Switch-selected-transform scale(1);
 	}
 
 	&-is-selected &-visualization-container {
@@ -96,35 +96,35 @@
 	}
 
 	&-is-selected &-visualization-glow {
-		transform: @lucid-Switch-selected-transform;
+		transform: @Switch-selected-transform;
 	}
 
 	&-is-selected &-visualization-handle {
-		transform: @lucid-Switch-selected-transform;
+		transform: @Switch-selected-transform;
 	}
 
 	&-is-selected &-native:focus ~ &-visualization-glow {
-		transform: @lucid-Switch-selected-transform @lucid-Switch-glow-scale;
+		transform: @Switch-selected-transform @Switch-glow-scale;
 	}
 
 	&-is-selected &-native:focus ~ &-visualization-handle {
-		transform: @lucid-Switch-selected-transform @lucid-Switch-handle-scale;
+		transform: @Switch-selected-transform @Switch-handle-scale;
 	}
 
 	&-is-selected:hover &-visualization-glow {
-		transform: @lucid-Switch-selected-transform @lucid-Switch-glow-scale;
+		transform: @Switch-selected-transform @Switch-glow-scale;
 	}
 
 	&-is-selected:hover &-visualization-handle {
-		transform: @lucid-Switch-selected-transform @lucid-Switch-handle-scale;
+		transform: @Switch-selected-transform @Switch-handle-scale;
 	}
 
 	&-native:focus ~ &-visualization-glow {
 		opacity: 0.3;
-		transform: @lucid-Switch-glow-scale;
+		transform: @Switch-glow-scale;
 	}
 
 	&-native:focus ~ &-visualization-handle {
-		transform: @lucid-Switch-handle-scale;
+		transform: @Switch-handle-scale;
 	}
 }
