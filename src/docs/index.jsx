@@ -59,6 +59,9 @@ var Category = React.createClass({
 	componentDidUpdate: handleHighlightCode,
 
 	renderPropType(type) {
+		if (!type){
+			return null;
+		}
 		// If type.value exists it means there are multiple children and we need to
 		// recurse
 		if (_.isPlainObject(type.value) || _.isArray(type.value)) {

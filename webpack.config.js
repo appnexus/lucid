@@ -1,6 +1,8 @@
 // This file exists for the docs generation
 
 var path = require('path');
+var autoprefixer = require('autoprefixer');
+var gulpConfig = require('./gulp/config');
 
 module.exports = {
 	devtool: 'source-map',
@@ -19,6 +21,13 @@ module.exports = {
 	devServer: {
 		contentBase: 'dist/docs'
 	},
+	postcss: function() {
+		return [
+			autoprefixer({
+				browsers: gulpConfig.AUTOPREFIXER_BROWSERS
+			})
+		];
+	},
 	module: {
 		loaders: [
 			{
@@ -32,7 +41,7 @@ module.exports = {
 			},
 			{
 				test: /\.less$/,
-				loaders: ['style', 'css?sourceMap', 'less?sourceMap'],
+				loaders: ['style', 'css?sourceMap', 'postcss', 'less?sourceMap'],
 			},
 			{
 				test: /\.json/,
