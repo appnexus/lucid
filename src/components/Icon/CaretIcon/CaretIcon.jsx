@@ -36,13 +36,13 @@ const CaretIcon = React.createClass({
 	},
 
 	render() {
-		let {
+		const {
 			className,
 			direction,
 			...passThroughs
 		} = this.props;
 
-		let scopedClasses = boundClassNames('~', {
+		const scopedClasses = boundClassNames('~', {
 			'is-down': direction === 'down',
 			'is-up': direction === 'up',
 			'is-left': direction === 'left',
@@ -54,7 +54,7 @@ const CaretIcon = React.createClass({
 				{...passThroughs}
 				className={classNames(className, scopedClasses)}
 			>
-				<path d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+				<path d='M1.234,4.408l6.718,7.184l6.813-7.184H1.234z' />
 			</Icon>
 		);
 	}

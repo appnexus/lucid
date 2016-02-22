@@ -35,13 +35,13 @@ const Badge = React.createClass({
 	},
 
 	render() {
-		let {
+		const {
 			className,
 			children,
 			...passThroughs
 		} = this.props;
 
-		let scopedClasses = boundClassNames('~');
+		const scopedClasses = boundClassNames('~');
 
 		return (
 			<span className={classNames(className, scopedClasses)} {...passThroughs}>

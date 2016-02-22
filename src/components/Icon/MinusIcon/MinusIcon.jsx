@@ -8,7 +8,7 @@ const boundClassNames = bindClassNames('MinusIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"]}
+ * {'categories': ['visual design', 'icons']}
  *
  * A minus icon.
  */
@@ -18,7 +18,7 @@ const MinusIcon = React.createClass({
 	},
 
 	render() {
-		let {
+		const {
 			className,
 			...passThroughs
 		} = this.props;
@@ -28,7 +28,7 @@ const MinusIcon = React.createClass({
 				{...passThroughs}
 				className={classNames(className, boundClassNames('~'))}
 			>
-				<path d="M3,7h10v2H3V7z" />
+				<path d='M3,7h10v2H3V7z' />
 			</Icon>
 		);
 	}

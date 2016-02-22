@@ -18,7 +18,7 @@ const EditIcon = React.createClass({
 	},
 
 	render() {
-		let {
+		const {
 			className,
 			...passThroughs
 		} = this.props;

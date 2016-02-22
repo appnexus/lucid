@@ -8,7 +8,7 @@ const boundClassNames = bindClassNames('PlusIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"]}
+ * {'categories': ['visual design', 'icons']}
  *
  * A plus icon.
  */
@@ -18,7 +18,7 @@ const PlusIcon = React.createClass({
 	},
 
 	render() {
-		let {
+		const {
 			className,
 			...passThroughs
 		} = this.props;
@@ -28,8 +28,8 @@ const PlusIcon = React.createClass({
 				{...passThroughs}
 				className={classNames(className, boundClassNames('~'))}
 			>
-				<path d="M1,6.6h14v2.8H1V6.6z"/>
-				<path d="M6.6,1v14h2.8V1H6.6z"/>
+				<path d='M1,6.6h14v2.8H1V6.6z'/>
+				<path d='M6.6,1v14h2.8V1H6.6z'/>
 			</Icon>
 		);
 	}

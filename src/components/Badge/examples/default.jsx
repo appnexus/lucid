@@ -5,7 +5,7 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-					<Badge>Default</Badge>
+					<Badge>Badge</Badge>
 			</div>
 		);
 	}
