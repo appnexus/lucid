@@ -1,0 +1,19 @@
+.lucid-Icon {
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	vertical-align: top; /* Prevents automatic addition of bottom margin. */
+	fill: lighten(#000, 70%);
+
+	>path, >rect, >circle {
+		transform-origin: center center;
+	}
+
+	&-is-badge{
+		border-radius: 16px;
+		background-color: lighten(#000, 80%);
+		padding: 1px;
+		border: 1px solid transparent;
+		fill: #ffffff;
+	}
+}

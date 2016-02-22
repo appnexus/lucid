@@ -1,0 +1,38 @@
+@import '../Icon';
+
+.lucid-EligibilityIcon {
+	&:extend(.lucid-Icon all);
+
+	&-is-selected-neither{
+		.Icon-left, .Icon-right {
+			fill: #ffffff;
+			stroke: #F1272E
+		}
+	}
+	&-is-selected-both{
+		.Icon-left, .Icon-right {
+			fill: #39B54A;
+			stroke: transparent
+		}
+	}
+	&-is-selected-left{
+		.Icon-left {
+			fill: #39B54A;
+			stroke: transparent
+		}
+		.Icon-right {
+			fill: #ffffff;
+			stroke: #F1272E
+		}
+	}
+	&-is-selected-right{
+		.Icon-left {
+			fill: #ffffff;
+			stroke: #F1272E
+		}
+		.Icon-right {
+			fill: #39B54A;
+			stroke: transparent
+		}
+	}
+}
