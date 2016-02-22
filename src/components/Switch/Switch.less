@@ -1,6 +1,6 @@
 @Switch-height: 28px;
 @Switch-width: 50px;
-@Switch-animation-timing: 0.2s ease-in-out;
+@Switch-animation-timing: 0.1s linear;
 @Switch-selected-transform: translate(22px, 0);
 
 @Switch-container-height: 22px;
@@ -38,6 +38,7 @@
 		left: @Switch-container-offset;
 		position: absolute;
 		top: @Switch-container-offset;
+		transition: @Switch-animation-timing;
 		width: @Switch-container-width;
 	}
 
