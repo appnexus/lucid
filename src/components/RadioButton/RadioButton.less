@@ -1,21 +1,15 @@
-@RadioButton-height: 28px;
-@RadioButton-width: 50px;
+@RadioButton-height: 22px;
+@RadioButton-width: 22px;
 @RadioButton-animation-timing: 0.2s ease-in-out;
-@RadioButton-selected-transform: translate(22px, 0);
 
-@RadioButton-container-height: 22px;
 @RadioButton-container-offset: 3px;
-@RadioButton-container-width: 44px;
+@RadioButton-container-radius: 7px;
 
-@RadioButton-glow-offset: 5px;
-@RadioButton-glow-radius: 9px;
-@RadioButton-glow-scale: scale(1.556);
+@RadioButton-glow-offset: 3px;
+@RadioButton-glow-radius: 8px;
+@RadioButton-glow-scale: scale(1.375);
 
-@RadioButton-handle-offset: 6px;
-@RadioButton-handle-radius: 8px;
-@RadioButton-handle-scale: scale(1.125);
-
-.lucid-Switch {
+.lucid-RadioButton {
 	cursor: pointer;
 	display: inline-block;
 	height: @RadioButton-height;
@@ -32,13 +26,14 @@
 	}
 
 	&-visualization-container {
-		background-color: @color-default-borderColor;
-		border-radius: @RadioButton-container-height / 2;
-		height: @RadioButton-container-height;
+		background-color: white;
+		border-radius: @RadioButton-container-radius + 1;
+		border: solid 1px rgba(0, 0, 0, 0.3);
+		height: @RadioButton-container-radius * 2;
 		left: @RadioButton-container-offset;
 		position: absolute;
 		top: @RadioButton-container-offset;
-		width: @RadioButton-container-width;
+		width: @RadioButton-container-radius * 2;
 	}
 
 	&-visualization-glow {
@@ -53,15 +48,8 @@
 		width: @RadioButton-glow-radius * 2;
 	}
 
-	&-visualization-handle {
-		background-color: white;
-		border-radius: @RadioButton-handle-radius;
-		height: @RadioButton-handle-radius * 2;
-		left: @RadioButton-handle-offset;
-		position: absolute;
-		top: @RadioButton-handle-offset;
-		transition: @RadioButton-animation-timing;
-		width: @RadioButton-handle-radius * 2;
+	&:hover &-visualization-container {
+		border-color: @color-primary;
 	}
 
 	&:hover &-visualization-glow {
@@ -69,8 +57,10 @@
 		transform: @RadioButton-glow-scale;
 	}
 
-	&:hover &-visualization-handle {
-		transform: @RadioButton-handle-scale;
+	&-is-disabled &-visualization-container,
+	&-is-disabled:hover &-visualization-container {
+		background-color: rgba(0, 0, 0, 0.05);
+		border-color: rgba(0, 0, 0, 0.1);
 	}
 
 	&-is-disabled:hover &-visualization-glow {
@@ -78,53 +68,13 @@
 		transform: none;
 	}
 
-	&-is-disabled:hover &-visualization-handle {
-		transform: none;
-	}
-
-	&-is-disabled &-visualization-container,
-	&-is-disabled &-visualization-handle {
+	&-is-disabled&-is-selected &-visualization-container {
 		opacity: 0.3;
 	}
 
-	&-is-disabled&-is-selected:hover &-visualization-handle {
-		transform: @RadioButton-selected-transform scale(1);
-	}
-
+	&-is-disabled&-is-selected:hover &-visualization-container,
 	&-is-selected &-visualization-container {
 		background-color: @color-primary;
-	}
-
-	&-is-selected &-visualization-glow {
-		transform: @RadioButton-selected-transform;
-	}
-
-	&-is-selected &-visualization-handle {
-		transform: @RadioButton-selected-transform;
-	}
-
-	&-is-selected &-native:focus ~ &-visualization-glow {
-		transform: @RadioButton-selected-transform @RadioButton-glow-scale;
-	}
-
-	&-is-selected &-native:focus ~ &-visualization-handle {
-		transform: @RadioButton-selected-transform @RadioButton-handle-scale;
-	}
-
-	&-is-selected:hover &-visualization-glow {
-		transform: @RadioButton-selected-transform @RadioButton-glow-scale;
-	}
-
-	&-is-selected:hover &-visualization-handle {
-		transform: @RadioButton-selected-transform @RadioButton-handle-scale;
-	}
-
-	&-native:focus ~ &-visualization-glow {
-		opacity: 0.3;
-		transform: @RadioButton-glow-scale;
-	}
-
-	&-native:focus ~ &-visualization-handle {
-		transform: @RadioButton-handle-scale;
+		border-color: @color-primary;
 	}
 }

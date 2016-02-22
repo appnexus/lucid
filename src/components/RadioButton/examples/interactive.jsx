@@ -6,28 +6,13 @@ import RadioButton from '../RadioButton';
 export default React.createClass({
 	getInitialState() {
 		return {
-			disabled: {
-				isSelected: false
-			},
-			enabled: {
-				isSelected: false
-			}
+			isSelected: false
 		};
 	},
 
-	handleDisabledSelected(isSelected) {
+	handleSelected(isSelected) {
 		this.setState(_.assign({}, this.state, {
-			disabled: _.assign({}, this.state.disabled, {
-				isSelected
-			})
-		}));
-	},
-
-	handleEnabledSelected(isSelected) {
-		this.setState(_.assign({}, this.state, {
-			enabled: _.assign({}, this.state.enabled, {
-				isSelected
-			})
+			isSelected
 		}));
 	},
 
@@ -37,19 +22,10 @@ export default React.createClass({
 				<li>
 					<label>Enabled</label>
 					<RadioButton
-							isDisabled={false}
-							isSelected={this.state.enabled.isSelected}
-							onSelect={this.handleEnabledSelected}
-							tabIndex={10}
-					/>
-				</li>
-				<li>
-					<label>Disabled</label>
-					<RadioButton
-							isDisabled={true}
-							isSelected={this.state.disabled.isSelected}
-							onSelect={this.handleDisabledSelected}
-							tabIndex={11}
+							isSelected={this.state.isSelected}
+							name='interactive-radio-buttons'
+							onSelect={this.handleSelected}
+							tabIndex={20}
 					/>
 				</li>
 			</ul>
