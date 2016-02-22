@@ -89,13 +89,13 @@ const Switch = React.createClass({
 					style={style}
 			>
 				<input
+						{...passThroughs}
 						checked={isSelected}
 						className={generateBoundClassNames('native')}
 						disabled={isDisabled}
 						defaultChecked={isSelected}
 						ref='nativeElement'
 						type='checkbox'
-						{...passThroughs}
 				/>
 				<span className={generateBoundClassNames('visualization-container')} />
 				<span className={generateBoundClassNames('visualization-glow')} />

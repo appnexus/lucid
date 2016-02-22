@@ -57,6 +57,22 @@ describe('Switch', () => {
 				assert.equal(wrapper.prop('onSelect'), _.noop);
 			});
 		});
+
+		describe('pass throughs', () => {
+			it('passes through all props not defined in `propTypes` to the native input.', () => {
+				const wrapper = mount(
+					<Switch className='wut' isDisabled={true} isSelected={true} style={{ fontWeight: 'bold' }} onSelect={_.noop}
+							foo={1} bar={2} baz={3} qux={4} quux={5} />
+				);
+				const nativeProps = _.keys(wrapper.find('input[type="checkbox"]').props());
+
+				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
+				// to the native input.
+				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
+					assert(_.includes(nativeProps, prop));
+				});
+			});
+		});
 	});
 });
 
