@@ -7,11 +7,8 @@ import { mount, shallow } from 'enzyme';
 
 import describeWithDOM from '../../util/describe-with-dom';
 import { common } from '../../util/generic-tests';
-import { bindClassNames } from '../../util/style-helpers';
 
 import Switch from './Switch';
-
-const generateBoundClassNames = bindClassNames('Switch');
 
 describe('Switch', () => {
 	common(Switch);
@@ -83,11 +80,11 @@ describeWithDOM('Switch', () => {
 			let onSelect;
 			let wrapper;
 
-			_.forEach(['~', 'native', 'visualization-container', 'visualization-glow', 'visualization-handle'], (classSubString) => {
+			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
 				_.forEach(['click', 'touchend'], (event) => {
 					onSelect = sinon.spy();
 					wrapper = mount(<Switch onSelect={onSelect} />);
-					wrapper.find(`.${generateBoundClassNames(classSubString)}`).simulate(event);
+					wrapper.find(`.lucid-Switch${classSubString}`).simulate(event);
 					assert(onSelect.calledOnce);
 				});
 			});
@@ -97,7 +94,7 @@ describeWithDOM('Switch', () => {
 			const onSelect = sinon.spy();
 			const wrapper = mount(<Switch isSelected={true} onSelect={onSelect} />);
 
-			wrapper.find(`.${generateBoundClassNames('~')}`).simulate('click');
+			wrapper.find(`.lucid-Switch`).simulate('click');
 			assert.equal(onSelect.args[0][0], false);
 		});
 
@@ -105,7 +102,7 @@ describeWithDOM('Switch', () => {
 			const onSelect = sinon.spy();
 			const wrapper = mount(<Switch onSelect={onSelect} />);
 
-			wrapper.find(`.${generateBoundClassNames('~')}`).simulate('click');
+			wrapper.find(`.lucid-Switch`).simulate('click');
 			assert(onSelect.args[0][1] instanceof SyntheticEvent);
 		});
 	});
