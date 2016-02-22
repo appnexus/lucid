@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import assert from 'assert';
 import React from 'react';
+import SyntheticEvent from 'react/lib/SyntheticEvent';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
@@ -90,6 +91,22 @@ describeWithDOM('Switch', () => {
 					assert(onSelect.calledOnce);
 				});
 			});
+		});
+
+		it('passes the opposite of the value of the `isSelected` prop as the first argument.', () => {
+			const onSelect = sinon.spy();
+			const wrapper = mount(<Switch isSelected={true} onSelect={onSelect} />);
+
+			wrapper.find(`.${generateBoundClassNames('~')}`).simulate('click');
+			assert.equal(onSelect.args[0][0], false);
+		});
+
+		it('passes the React synthetic event as the second argument.', () => {
+			const onSelect = sinon.spy();
+			const wrapper = mount(<Switch onSelect={onSelect} />);
+
+			wrapper.find(`.${generateBoundClassNames('~')}`).simulate('click');
+			assert(onSelect.args[0][1] instanceof SyntheticEvent);
 		});
 	});
 });
