@@ -5,6 +5,9 @@
 @RadioButton-container-offset: 3px;
 @RadioButton-container-radius: 7px;
 
+@RadioButton-dot-offset: 8px;
+@RadioButton-dot-radius: 3px;
+
 @RadioButton-glow-offset: 3px;
 @RadioButton-glow-radius: 8px;
 @RadioButton-glow-scale: scale(1.375);
@@ -34,6 +37,18 @@
 		position: absolute;
 		top: @RadioButton-container-offset;
 		width: @RadioButton-container-radius * 2;
+	}
+
+	&-visualization-dot {
+		background-color: white;
+		border-radius: @RadioButton-dot-radius;
+		height: @RadioButton-dot-radius * 2;
+		left: @RadioButton-dot-offset;
+		opacity: 0;
+		position: absolute;
+		top: @RadioButton-dot-offset;
+		transition: @RadioButton-animation-timing;
+		width: @RadioButton-dot-radius * 2;
 	}
 
 	&-visualization-glow {
@@ -76,5 +91,14 @@
 	&-is-selected &-visualization-container {
 		background-color: @color-primary;
 		border-color: @color-primary;
+	}
+
+	&-is-selected &-visualization-dot {
+		opacity: 1;
+	}
+
+	&-native:focus ~ &-visualization-glow {
+		opacity: 0.3;
+		transform: @RadioButton-glow-scale;
 	}
 }
