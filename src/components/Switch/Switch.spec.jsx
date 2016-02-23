@@ -75,35 +75,30 @@ describe('Switch', () => {
 });
 
 describeWithDOM('Switch', () => {
-	describe('user clicks or taps on the rendered control', () => {
-		it('calls the function passed in as the `onSelect` prop.', () => {
-			let onSelect;
-			let wrapper;
+	_.forEach([['click', 'click'], ['tap', 'touchend']], ([verb, event]) => {
+		describe(`user ${verb}s on the rendered control`, () => {
+			it('calls the function passed in as the `onSelect` prop...', () => {
+				_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
+					const onSelect = sinon.spy();
+					const wrapper = mount(<Switch onSelect={onSelect} />);
 
-			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
-				_.forEach(['click', 'touchend'], (event) => {
-					onSelect = sinon.spy();
-					wrapper = mount(<Switch onSelect={onSelect} />);
 					wrapper.find(`.lucid-Switch${classSubString}`).simulate(event);
 					assert(onSelect.calledOnce);
 				});
 			});
-		});
 
-		it('passes the opposite of the value of the `isSelected` prop as the first argument.', () => {
-			const onSelect = sinon.spy();
-			const wrapper = mount(<Switch isSelected={true} onSelect={onSelect} />);
+			_.forEach([true, false], (initialIsSelected) => {
+				it(`...and when \`isSelected\` is ${initialIsSelected} passes along ${!initialIsSelected} as the first argument and a React synthetic event as the second argument.`, () => {
+					_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
+						const onSelect = sinon.spy();
+						const wrapper = mount(<Switch isSelected={initialIsSelected} onSelect={onSelect} />);
 
-			wrapper.find(`.lucid-Switch`).simulate('click');
-			assert.equal(onSelect.args[0][0], false);
-		});
-
-		it('passes the React synthetic event as the second argument.', () => {
-			const onSelect = sinon.spy();
-			const wrapper = mount(<Switch onSelect={onSelect} />);
-
-			wrapper.find(`.lucid-Switch`).simulate('click');
-			assert(onSelect.args[0][1] instanceof SyntheticEvent);
+						wrapper.find(`.lucid-Switch${classSubString}`).simulate(event);
+						assert.equal(onSelect.args[0][0], !initialIsSelected);
+						assert(onSelect.args[0][1] instanceof SyntheticEvent);
+					});
+				});
+			});
 		});
 	});
 });
