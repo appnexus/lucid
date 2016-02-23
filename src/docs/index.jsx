@@ -58,7 +58,12 @@ var Category = React.createClass({
 	componentDidMount: handleHighlightCode,
 	componentDidUpdate: handleHighlightCode,
 
-	renderPropType(type) {
+	renderPropType(type, component) {
+		if (!type) {
+			console.error(`It looks like there's an issue with ${component}'s props. One common cause of this issue is when the getDefaultProps method defines a default value for a prop that is not explicitly defined in the propTypes map.`);
+			return null;
+		}
+
 		// If type.value exists it means there are multiple children and we need to
 		// recurse
 		if (_.isPlainObject(type.value) || _.isArray(type.value)) {
@@ -67,7 +72,7 @@ var Category = React.createClass({
 					{type.name === 'union' ? 'oneOfType' : type.name}:
 					<ul>
 						{_.map(type.value, (innerType, index) => {
-							return <li key={index}>{this.renderPropType(innerType)}</li>
+							return <li key={index}>{this.renderPropType(innerType, component)}</li>
 						})}
 					</ul>
 				</div>
@@ -119,7 +124,7 @@ var Category = React.createClass({
 											return (
 												<tr key={propName}>
 													<td>{propName}</td>
-													<td>{this.renderPropType(propDetails.type)}</td>
+													<td>{this.renderPropType(propDetails.type, item)}</td>
 													<td>{String(propDetails.required)}</td>
 													<td>{propDetails.description}</td>
 												</tr>
