@@ -16,7 +16,6 @@ const {
 	element
 } = React.PropTypes;
 
-
 const defaultIcons = {
 	'success': '<SuccessIcon/>',
 	'danger': '<DangerIcon/>',
@@ -96,7 +95,7 @@ const Banner = React.createClass({
 	},
 
 	handleClick() {
-		this.props.onClick();		
+		this.props.onClick();
 	},
 
 	render() {
@@ -151,6 +150,4 @@ const Banner = React.createClass({
 	}
 });
 
-
-
-export default Banner;
+export default Banner
