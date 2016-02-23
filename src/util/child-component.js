@@ -16,70 +16,84 @@ export function createChildComponent (definition={}) {
 		statics: {
 
 			/**
-			 * getOwnChildren
-			 *
-			 * Returns all collective children of elements with this component type
-			 *
-			 * @param {Array} elements - usually `this.props.children` but can be any list of elements which
-			 *	                          might have this type
-			 * @return {Array} All the collective children of elements with this component type
-			 */
-			getOwnChildren(elements) {
-				let component = this;
-				let children = [];
-				React.Children.forEach(elements, (element) => {
-					if (element && element.type === component) {
-						children = children.concat(React.Children.map(element.props.children, x => x));
-					}
-				});
-				return children;
-			},
-
-			/**
-			 * getAll
+			 * findInChildren
 			 *
 			 * Returns all elements with this component type
 			 *
-			 * @param {Array} elements - usually `this.props.children` but can be any list of elements which
-			 *	                          might have this type
-			 * @return {Array} elements with this component type
+			 * @param {array} elements - usually `this.props.children` but can be any list of elements which might have this type
+			 * @return {array} elements with this component type
 			 */
-			getAll(elements) {
+			findInChildren(elements) {
 				let component = this;
-				let elementsOfThisType = [];
+				let ownElements = [];
 				React.Children.forEach(elements, (element) => {
 					if (element && element.type === component) {
-						elementsOfThisType = elementsOfThisType.concat(element);
+						ownElements.push(element);
 					}
 				});
-				return elementsOfThisType;
+				return ownElements;
 			},
 
 			/**
-			 * getAllProps
+			 * findInChildrenAsProps
 			 *
 			 * Returns the `props` object of each element with this component type
 			 *
-			 * @param {Array} elements - usually `this.props.children` but can be any list of elements which
-			 *	                          might have this type
-			 * @return {Array} `props` objects of elements with this component type
+			 * @param {array} elements - usually `this.props.children` but can be any list of elements which might have this type
+			 * @return {array} `props` objects of elements with this component type
 			 */
-			getAllProps(elements) {
+			findInChildrenAsProps(elements) {
 				let component = this;
-				return _.map(component.getAll(elements), 'props');
+				return _.map(component.findInChildren(elements), 'props');
 			},
 
-			getAllAsProps(props, elements) {
-				let component = this;
-				return _.map(_.flatten([_.get(props, definition.propName, [])]), (childProp) => {
+			/**
+			 * findInProps
+			 *
+			 * Given a set of parent props this will return only the props for this
+			 * component type
+			 *
+			 * @param {object} parentProps - usually `this.props` that may contain a prop for the current component type
+			 * @return {array} - an array of normalized props
+			 */
+			findInProps(parentProps) {
+				// Extract out the defined `childProps` from the parent class
+				const currentProps = _.chain(parentProps)
+					.get(definition.propName) // grab the prop we care about, e.g. "Child"
+					.thru(x => [x]) // wrap in an array
+					.flatten()
+					.filter(x => x) // remove falsey values
+					.value();
+
+				return _.map(currentProps, (childProp) => {
 					if (_.isPlainObject(childProp)) {
-						return _.assign({}, childProp, {children: childProp.children || childProp.text});
+						return childProp;
 					} else {
 						return {
 							children: childProp
 						};
 					}
-				}).concat(component.getAllProps(elements));
+				});
+			},
+
+			/**
+			 * findInAllAsProps
+			 *
+			 * Given a parent props object, this will return a mashup of all the
+			 * children and/or props for the current component type. This is
+			 * particularly useful for providing a flexible component API. It allows
+			 * consumers to either pass stuff through props or children.
+			 *
+			 * @param {object} parentProps - usually `this.props` that may contain a prop for the current component type
+			 * @return {array} - an array of `props`
+			 */
+			findInAllAsProps(parentProps) {
+				let component = this;
+
+				const propsFromProps = component.findInProps(parentProps);
+				const propsFromChildren = component.findInChildrenAsProps(parentProps.children);
+
+				return propsFromProps.concat(propsFromChildren);
 			}
 		}
 	});
