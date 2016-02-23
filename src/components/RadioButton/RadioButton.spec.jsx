@@ -17,7 +17,7 @@ describe('RadioButton', () => {
 
 	describe('props', () => {
 		describe('isDisabled', () => {
-			it('sets the `disabled` attribute of the native check box element.', () => {
+			it('sets the `disabled` attribute of the native radio button element.', () => {
 				_.forEach(booleanValues, (testValue) => {
 					const wrapper = shallow(<RadioButton isDisabled={testValue} />);
 
@@ -33,7 +33,7 @@ describe('RadioButton', () => {
 		});
 
 		describe('isSelected', () => {
-			it('sets the `checked` attribute of the native check box element.', () => {
+			it('sets the `checked` attribute of the native radio button element.', () => {
 				_.forEach(booleanValues, (testValue) => {
 					const wrapper = shallow(<RadioButton isSelected={testValue} />);
 
