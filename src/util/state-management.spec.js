@@ -3,6 +3,7 @@ import _ from 'lodash';
 import sinon from 'sinon';
 import React from 'react';
 import { mount } from 'enzyme';
+import describeWithDOM from './describe-with-dom';
 
 import {
 	getDeepPaths,
@@ -425,7 +426,7 @@ describe('#getStatefulPropsContext', () => {
 	});
 });
 
-describe('#buildStatefulComponent', () => {
+describeWithDOM('#buildStatefulComponent', () => {
 	const Counter = React.createClass({
 		displayName: 'Counter',
 		propTypes: {
