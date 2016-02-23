@@ -16,14 +16,14 @@ export function createChildComponent (definition={}) {
 		statics: {
 
 			/**
-			 * getOwnChildren
+			 * findInChildren
 			 *
 			 * Returns all elements with this component type
 			 *
 			 * @param {array} elements - usually `this.props.children` but can be any list of elements which might have this type
 			 * @return {array} elements with this component type
 			 */
-			getOwnChildren(elements) {
+			findInChildren(elements) {
 				let component = this;
 				let ownElements = [];
 				React.Children.forEach(elements, (element) => {
@@ -35,20 +35,20 @@ export function createChildComponent (definition={}) {
 			},
 
 			/**
-			 * getOwnChildrenAsProps
+			 * findInChildrenAsProps
 			 *
 			 * Returns the `props` object of each element with this component type
 			 *
 			 * @param {array} elements - usually `this.props.children` but can be any list of elements which might have this type
 			 * @return {array} `props` objects of elements with this component type
 			 */
-			getOwnChildrenAsProps(elements) {
+			findInChildrenAsProps(elements) {
 				let component = this;
-				return _.map(component.getOwnChildren(elements), 'props');
+				return _.map(component.findInChildren(elements), 'props');
 			},
 
 			/**
-			 * getOwnProps
+			 * findInProps
 			 *
 			 * Given a set of parent props this will return only the props for this
 			 * component type
@@ -56,7 +56,7 @@ export function createChildComponent (definition={}) {
 			 * @param {object} parentProps - usually `this.props` that may contain a prop for the current component type
 			 * @return {array} - an array of normalized props
 			 */
-			getOwnProps(parentProps) {
+			findInProps(parentProps) {
 				// Extract out the defined `childProps` from the parent class
 				const currentProps = _.chain(parentProps)
 					.get(definition.propName) // grab the prop we care about, e.g. "Child"
@@ -77,7 +77,7 @@ export function createChildComponent (definition={}) {
 			},
 
 			/**
-			 * getAllAsProps
+			 * findInAllAsProps
 			 *
 			 * Given a parent props object, this will return a mashup of all the
 			 * children and/or props for the current component type. This is
@@ -87,11 +87,11 @@ export function createChildComponent (definition={}) {
 			 * @param {object} parentProps - usually `this.props` that may contain a prop for the current component type
 			 * @return {array} - an array of `props`
 			 */
-			getAllAsProps(parentProps) {
+			findInAllAsProps(parentProps) {
 				let component = this;
 
-				const propsFromProps = component.getOwnProps(parentProps);
-				const propsFromChildren = component.getOwnChildrenAsProps(parentProps.children);
+				const propsFromProps = component.findInProps(parentProps);
+				const propsFromChildren = component.findInChildrenAsProps(parentProps.children);
 
 				return propsFromProps.concat(propsFromChildren);
 			}
