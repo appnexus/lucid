@@ -1,6 +1,6 @@
 @RadioButton-height: 22px;
 @RadioButton-width: 22px;
-@RadioButton-animation-timing: 0.2s ease-in-out;
+@RadioButton-animation-timing: 0.1s linear;
 
 @RadioButton-container-offset: 3px;
 @RadioButton-container-radius: 7px;
@@ -65,6 +65,7 @@
 
 	&:hover &-visualization-container {
 		border-color: @color-primary;
+		transition: @RadioButton-animation-timing;
 	}
 
 	&:hover &-visualization-glow {
