@@ -1,6 +1,6 @@
-@size-TextField-padding: 8px;
-@size-TextField-height: 28px;
-@color-TextField-font: #333;
+@TextField-size-padding: 8px;
+@TextField-size-height: 28px;
+@TextField-color-font: #333;
 
 .lucid-TextField {
 	&-native {
@@ -10,11 +10,11 @@
 		background-color: #fff;
 		border-radius: @size-borderRadius;
 		border: 1px solid @color-default-borderColor;
-		color: @color-TextField-font;
+		color: @TextField-color-font;
 		font-family: @fontFamily;
 		font-size: @fontSize;
 		margin: 0;
-		padding: 0 @size-TextField-padding;
+		padding: 0 @TextField-size-padding;
 	}
 
 	&-native:focus {
@@ -25,13 +25,13 @@
 
 	&-is-single-line &-native {
 		vertical-align: middle;
-		height: @size-TextField-height;
+		height: @TextField-size-height;
 	}
 
 	&-is-multi-line &-native {
 		vertical-align: top;
 		resize: both;
-		padding-top: @size-TextField-padding - 2px; // Handle padding appropriately for `textarea`s
+		padding-top: @TextField-size-padding - 2px; // Handle padding appropriately for `textarea`s
 	}
 
 	&-is-disabled &-native {
