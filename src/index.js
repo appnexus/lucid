@@ -1,5 +1,6 @@
 import Button from './components/Button/Button';
 import ButtonGroup from './components/ButtonGroup/ButtonGroup';
+import Switch from './components/Switch/Switch';
 import Badge from './components/Badge/Badge';
 import Icon from './components/Icon/Icon';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
@@ -17,6 +18,7 @@ import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
 export default {
 	Button,
 	ButtonGroup,
+	Switch
 	Badge,
 	Icon,
 	CaretIcon,
