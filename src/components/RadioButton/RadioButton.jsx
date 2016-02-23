@@ -93,13 +93,13 @@ const RadioButton = React.createClass({
 					style={style}
 			>
 				<input
+						{...passThroughs}
 						checked={isSelected}
 						className={generateBoundClassNames('native')}
 						disabled={isDisabled}
 						defaultChecked={isSelected}
 						ref='nativeElement'
 						type='radio'
-						{...passThroughs}
 				/>
 				<span className={generateBoundClassNames('visualization-glow')} />
 				<span className={generateBoundClassNames('visualization-container')} />
