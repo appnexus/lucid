@@ -13,7 +13,6 @@ const {
 	node,
 	arrayOf,
 	func,
-	number,
 	element
 } = React.PropTypes;
 
@@ -97,9 +96,7 @@ const Banner = React.createClass({
 	},
 
 	handleClick() {
-		if (!this.props.abled) {
-			this.props.onClick();
-		}
+		this.props.onClick();		
 	},
 
 	render() {
