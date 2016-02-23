@@ -6,10 +6,10 @@ export default React.createClass({
 		return (
 			<div>
 				<Icon>
-					<rect width="10" height="10" stroke="black" strokeWidth="1" fill="red" />
+					<rect width='10' height='10' stroke='black' strokeWidth='1' fill='red' />
 				</Icon>
 				<Icon isBadge>
-					<rect width="10" height="10" stroke="black" strokeWidth="1" fill="red" />
+					<rect width='10' height='10' stroke='black' strokeWidth='1' fill='red' />
 				</Icon>
 			</div>
 		);

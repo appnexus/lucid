@@ -84,8 +84,8 @@ export function icons(Component) {
 	describeWithDOM(`[icon]`, () => {
 		it('should pass through isBadge prop to underlying Icon component', () => {
 			const wrapper = mount(<Component isBadge={true} />);
-			let classNames = wrapper.find('svg').prop('className').split(' ');
-			let targetClassName = 'lucid-Icon-is-badge';
+			const classNames = wrapper.find('svg').prop('className').split(' ');
+			const targetClassName = 'lucid-Icon-is-badge';
 			assert(_.includes(classNames, targetClassName), `'${classNames}' should include '${targetClassName}'`);
 		});
 	});
