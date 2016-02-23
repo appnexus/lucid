@@ -90,8 +90,8 @@ export function createChildComponent (definition={}) {
 			getAllAsProps(parentProps) {
 				let component = this;
 
-				var propsFromProps = component.getOwnProps(parentProps);
-				var propsFromChildren = component.getOwnChildrenAsProps(parentProps.children);
+				const propsFromProps = component.getOwnProps(parentProps);
+				const propsFromChildren = component.getOwnChildrenAsProps(parentProps.children);
 
 				return propsFromProps.concat(propsFromChildren);
 			}
