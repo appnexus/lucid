@@ -12,6 +12,7 @@
 	},
 	"rules": {
 		"quotes": [2, "single"],
+    "jsx-quotes": [2, "prefer-single"],
 		"comma-dangle": [0, "always-multiline"],
 		"react/prop-types": 2,
 		"no-trailing-spaces": 2,
