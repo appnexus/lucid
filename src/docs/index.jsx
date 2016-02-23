@@ -134,7 +134,7 @@ var Category = React.createClass({
 									return (
 										<li key={example.name}>
 											<h4>{example.name}</h4>
-											<pre><code className="lang-javascript">{example.source}</code></pre>
+											<pre><code className='lang-javascript'>{example.source}</code></pre>
 											<example.Example />
 										</li>
 									);
@@ -155,4 +155,3 @@ var App = React.createClass({
 });
 
 ReactDOM.render(<App />, document.querySelector('#docs'));
-

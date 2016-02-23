@@ -8,7 +8,7 @@ const boundClassNames = bindClassNames('InfoIcon');
 
 /**
  *
- * {'categories': ['visual design', 'icons']}
+ * {"categories": ["visual design", "icons"]}
  *
  * An info icon.
  */

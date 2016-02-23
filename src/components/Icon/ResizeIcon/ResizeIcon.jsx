@@ -8,7 +8,7 @@ const boundClassNames = bindClassNames('ResizeIcon');
 
 /**
  *
- * {'categories': ['visual design', 'icons']}
+ * {"categories": ["visual design", "icons"]}
  *
  * A resize icon.
  */

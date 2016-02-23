@@ -18,7 +18,7 @@ import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
 export default {
 	Button,
 	ButtonGroup,
-	Switch
+	Switch,
 	Badge,
 	Icon,
 	CaretIcon,

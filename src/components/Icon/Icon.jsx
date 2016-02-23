@@ -53,7 +53,7 @@ const Icon = React.createClass({
 	getDefaultProps() {
 		return {
 			size: 16,
-			aspectRatio: 'xMinYMin meet',
+			aspectRatio: 'xMidYMid meet',
 			isBadge: false
 		};
 	},
