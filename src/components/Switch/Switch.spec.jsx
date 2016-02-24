@@ -75,71 +75,64 @@ describe('Switch', () => {
 });
 
 describeWithDOM('Switch', () => {
+	function simulateEvent(reactElement, selector, event) {
+		mount(reactElement).find(selector).simulate(event);
+	}
+
+	function verifyArgumentsWhenFalse(event) {
+		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
+			const onSelect = sinon.spy();
+
+			simulateEvent(<Switch isSelected={false} onSelect={onSelect} />, `.lucid-Switch${classSubString}`, event);
+			assert.equal(onSelect.args[0][0], true);
+			assert(onSelect.args[0][1] instanceof SyntheticEvent);
+		});
+	}
+
+	function verifyArgumentsWhenTrue(event) {
+		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
+			const onSelect = sinon.spy();
+
+			simulateEvent(<Switch isSelected={true} onSelect={onSelect} />, `.lucid-Switch${classSubString}`, event);
+			assert.equal(onSelect.args[0][0], false);
+			assert(onSelect.args[0][1] instanceof SyntheticEvent);
+		});
+	}
+
+	function verifyOnSelect(event) {
+		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
+			const onSelect = sinon.spy();
+
+			simulateEvent(<Switch onSelect={onSelect} />, `.lucid-Switch${classSubString}`, event);
+			assert(onSelect.calledOnce);
+		});
+	}
+
 	describe('user clicks on the rendered control', () => {
 		it('calls the function passed in as the `onSelect` prop...', () => {
-			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
-				const onSelect = sinon.spy();
-				const wrapper = mount(<Switch onSelect={onSelect} />);
-
-				wrapper.find(`.lucid-Switch${classSubString}`).simulate('click');
-				assert(onSelect.calledOnce);
-			});
+			verifyOnSelect('click');
 		});
 
 		it('...and when `isSelected` is true passes along false as the first argument and a React synthetic event as the second argument.', () => {
-			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
-				const onSelect = sinon.spy();
-				const wrapper = mount(<Switch isSelected={true} onSelect={onSelect} />);
-
-				wrapper.find(`.lucid-Switch${classSubString}`).simulate('click');
-				assert.equal(onSelect.args[0][0], false);
-				assert(onSelect.args[0][1] instanceof SyntheticEvent);
-			});
+			verifyArgumentsWhenTrue('click');
 		});
 
 		it('...and when `isSelected` is false passes along true as the first argument and a React synthetic event as the second argument.', () => {
-			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
-				const onSelect = sinon.spy();
-				const wrapper = mount(<Switch isSelected={false} onSelect={onSelect} />);
-
-				wrapper.find(`.lucid-Switch${classSubString}`).simulate('click');
-				assert.equal(onSelect.args[0][0], true);
-				assert(onSelect.args[0][1] instanceof SyntheticEvent);
-			});
+			verifyArgumentsWhenFalse('click');
 		});
 	});
 
 	describe('user taps on the rendered control', () => {
 		it('calls the function passed in as the `onSelect` prop...', () => {
-			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
-				const onSelect = sinon.spy();
-				const wrapper = mount(<Switch onSelect={onSelect} />);
-
-				wrapper.find(`.lucid-Switch${classSubString}`).simulate('touchend');
-				assert(onSelect.calledOnce);
-			});
+			verifyOnSelect('touchend');
 		});
 
 		it('...and when `isSelected` is true passes along false as the first argument and a React synthetic event as the second argument.', () => {
-			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
-				const onSelect = sinon.spy();
-				const wrapper = mount(<Switch isSelected={true} onSelect={onSelect} />);
-
-				wrapper.find(`.lucid-Switch${classSubString}`).simulate('touchend');
-				assert.equal(onSelect.args[0][0], false);
-				assert(onSelect.args[0][1] instanceof SyntheticEvent);
-			});
+			verifyArgumentsWhenTrue('touchend');
 		});
 
 		it('...and when `isSelected` is false passes along true as the first argument and a React synthetic event as the second argument.', () => {
-			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
-				const onSelect = sinon.spy();
-				const wrapper = mount(<Switch isSelected={false} onSelect={onSelect} />);
-
-				wrapper.find(`.lucid-Switch${classSubString}`).simulate('touchend');
-				assert.equal(onSelect.args[0][0], true);
-				assert(onSelect.args[0][1] instanceof SyntheticEvent);
-			});
+			verifyArgumentsWhenFalse('touchend');
 		});
 	});
 });
