@@ -75,7 +75,7 @@ describe('RadioButton', () => {
 });
 
 describeWithDOM('RadioButton', () => {
-	describe(`user clicks on the rendered control`, () => {
+	describe('user clicks on the rendered control', () => {
 		it('calls the function passed in as the `onSelect` prop if `isSelected` is false...', () => {
 			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-dot'], (classSubString) => {
 				const onSelect = sinon.spy();
@@ -108,7 +108,7 @@ describeWithDOM('RadioButton', () => {
 		});
 	});
 
-	describe(`user taps on the rendered control`, () => {
+	describe('user taps on the rendered control', () => {
 		it('calls the function passed in as the `onSelect` prop if `isSelected` is false...', () => {
 			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-dot'], (classSubString) => {
 				const onSelect = sinon.spy();
