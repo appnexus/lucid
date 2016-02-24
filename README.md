@@ -4,7 +4,11 @@ A UI component library from AppNexus.
 
 ## Install
 
-Lucid will soon be available on npm.
+Lucid can be installed with NPM.
+
+```bash
+npm install --save lucid-ui
+```
 
 ## Usage
 
