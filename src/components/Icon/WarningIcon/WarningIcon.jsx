@@ -8,7 +8,7 @@ const boundClassNames = bindClassNames('WarningIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"]}
+ * {"categories": ["visual design", "icons"], "extend": "Icon"}
  *
  * A warning Icon.
  */

@@ -12,7 +12,7 @@ const {
 
 /**
  *
- * {"categories": ["visual design", "icons"]}
+ * {"categories": ["visual design", "icons"], "extend": "Icon"}
  *
  * An eligibility icon.
  */

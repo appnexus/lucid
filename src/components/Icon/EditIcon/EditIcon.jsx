@@ -8,7 +8,7 @@ const boundClassNames = bindClassNames('EditIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"]}
+ * {"categories": ["visual design", "icons"], "extend": "Icon"}
  *
  * An edit icon.
  */

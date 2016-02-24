@@ -7,7 +7,7 @@ const boundClassNames = bindClassNames('CheckIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"]}
+ * {"categories": ["visual design", "icons"], "extend": "Icon"}
  *
  * A check icon.
  */

@@ -8,7 +8,7 @@ const boundClassNames = bindClassNames('MinusIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"]}
+ * {"categories": ["visual design", "icons"], "extend": "Icon"}
  *
  * A minus icon.
  */

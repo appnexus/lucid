@@ -8,7 +8,7 @@ const boundClassNames = bindClassNames('PlusIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"]}
+ * {"categories": ["visual design", "icons"], "extend": "Icon"}
  *
  * A plus icon.
  */

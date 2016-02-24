@@ -8,7 +8,7 @@ const boundClassNames = bindClassNames('CrossIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"]}
+ * {"categories": ["visual design", "icons"], "extend": "Icon"}
  *
  * A cross icon.
  */
