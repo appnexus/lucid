@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-function getDeepPaths (obj, path=[]) {
+export function getDeepPaths (obj, path=[]) {
 	return _.reduce(obj, (terminalKeys, value, key) => (
 		_.isPlainObject(value) ?
 			terminalKeys.concat(getDeepPaths(value, path.concat(key))) :
@@ -9,7 +9,7 @@ function getDeepPaths (obj, path=[]) {
 	), []);
 }
 
-function omitFunctionPropsDeep(obj) {
+export function omitFunctionPropsDeep(obj) {
 	return _.reduce(obj, (memo, value, key) => {
 		if (_.isPlainObject(value)) {
 			memo[key] = omitFunctionPropsDeep(value);
@@ -19,6 +19,52 @@ function omitFunctionPropsDeep(obj) {
 		return memo;
 	}, {});
 }
+
+export function bindReducerToState(reducerFunction, { getState, setState }, path=[]) {
+	let localPath = _.take(path, _.size(path) - 1);
+	return _.assign(function (...args) {
+		if (_.isEmpty(localPath)) {
+			setState(reducerFunction(getState(), ...args));
+		} else {
+			let localNextState = reducerFunction(_.get(getState(), localPath), ...args);
+			setState(_.set(_.clone(getState()), localPath, localNextState));
+		}
+	}, { path });
+}
+
+export function bindReducersToState(reducers, { getState, setState }) {
+	return _.reduce(getDeepPaths(reducers), (memo, path) => {
+		return _.set(memo, path, bindReducerToState(_.get(reducers, path), { getState, setState }, path));
+	}, {});
+};
+
+export function getStatefulPropsContext(reducers, { getState, setState }) {
+	const boundReducers = bindReducersToState(reducers, { getState, setState });
+
+	const combineFunctionsCustomizer = (objValue, srcValue) => {
+		if (_.isFunction(srcValue) && _.isFunction(objValue)) {
+			return function (...args) {
+				objValue(...args);
+				return srcValue(...args);
+			};
+		}
+	};
+
+	const bindFunctionOverwritesCustomizer = (objValue, srcValue) => {
+		if (_.isFunction(srcValue) && _.isFunction(objValue)) {
+			return bindReducerToState(srcValue, { getState, setState }, objValue.path);
+		}
+	};
+
+	return {
+		getPropReplaceReducers(props) {
+			return _.mergeWith({}, boundReducers, getState(), props, bindFunctionOverwritesCustomizer);
+		},
+		getProps(props) {
+			return _.mergeWith({}, boundReducers, getState(), props, combineFunctionsCustomizer);
+		}
+	};
+};
 
 export function buildStatefulComponent(baseComponent, opts) {
 	opts = _.merge({
@@ -45,7 +91,7 @@ export function buildStatefulComponent(baseComponent, opts) {
 			}
 		},
 		componentWillMount() {
-			this.boundContext = bindReducersToState(reducers, {
+			this.boundContext = getStatefulPropsContext(reducers, {
 				getState: () => { return this.state; },
 				setState: (state) => { this.setState(state); }
 			});
@@ -58,45 +104,3 @@ export function buildStatefulComponent(baseComponent, opts) {
 		}
 	});
 }
-
-export function bindReducersToState(reducers, { getState, setState }) {
-	function bindReducerToState(reducerFunction, path=[]) {
-		let localPath = _.take(path, _.size(path) - 1);
-		return _.assign(function (...args) {
-			if (_.isEmpty(localPath)) {
-				setState(reducerFunction(getState(), ...args));
-			} else {
-				let localNextState = reducerFunction(_.get(getState(), localPath), ...args);
-				setState(_.set(_.clone(getState()), localPath, localNextState));
-			}
-		}, { path });
-	}
-
-	const splatFuncs = _.reduce(getDeepPaths(reducers), (memo, path) => {
-		return _.set(memo, path, bindReducerToState(_.get(reducers, path), path));
-	}, {});
-
-	const combineFunctionsCustomizer = (objValue, srcValue) => {
-		if (_.isFunction(srcValue) && _.isFunction(objValue)) {
-			return function (...args) {
-				objValue(...args);
-				return srcValue(...args);
-			};
-		}
-	};
-
-	const bindFunctionOverwritesCustomizer = (objValue, srcValue) => {
-		if (_.isFunction(srcValue) && _.isFunction(objValue)) {
-			return bindReducerToState(srcValue, objValue.path);
-		}
-	};
-
-	return {
-		getPropReplaceReducers(props) {
-			return _.mergeWith({}, splatFuncs, getState(), props, bindFunctionOverwritesCustomizer);
-		},
-		getProps(props) {
-			return _.mergeWith({}, splatFuncs, getState(), props, combineFunctionsCustomizer);
-		}
-	};
-};
