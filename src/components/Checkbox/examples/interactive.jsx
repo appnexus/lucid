@@ -20,10 +20,26 @@ export default React.createClass({
 		return (
 			<ul>
 				<li>
-					<label>Checkbox</label>
+					<label>Plain</label>
 					<Checkbox
 						isSelected={this.state.isSelected}
 						onSelect={this.handleSelected}
+						tabIndex={20}
+					/>
+				</li>
+				<li>
+					<label>Disabled unselected</label>
+					<Checkbox
+						isSelected={false}
+						isDisabled={true}
+						tabIndex={20}
+					/>
+				</li>
+				<li>
+					<label>Disabled selected</label>
+					<Checkbox
+						isSelected={true}
+						isDisabled={true}
 						tabIndex={20}
 					/>
 				</li>
