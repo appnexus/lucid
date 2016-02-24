@@ -458,9 +458,9 @@ describeWithDOM('#buildStatefulComponent', () => {
 
 			return (
 				<section>
-					<button className="minus" onClick={onDecrement}>-</button>
-					<span className="count">{count}</span>
-					<button className="plus" onClick={onIncrement}>+</button>
+					<button className='minus' onClick={onDecrement}>-</button>
+					<span className='count'>{count}</span>
+					<button className='plus' onClick={onIncrement}>+</button>
 				</section>
 			);
 		}
