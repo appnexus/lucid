@@ -75,69 +75,63 @@ describe('RadioButton', () => {
 });
 
 describeWithDOM('RadioButton', () => {
+	function simulateEvent(reactElement, selector, event) {
+		mount(reactElement).find(selector).simulate(event);
+	}
+
+	function verifyArguments(event) {
+		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-dot'], (classSubString) => {
+			const onSelect = sinon.spy();
+
+			simulateEvent(<RadioButton isSelected={false} onSelect={onSelect} />, `.lucid-RadioButton${classSubString}`, event);
+			assert.equal(onSelect.args[0][0], true);
+			assert(onSelect.args[0][1] instanceof SyntheticEvent);
+		});
+	}
+
+	function verifyNoOnSelect(event) {
+		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-dot'], (classSubString) => {
+			const onSelect = sinon.spy();
+
+			simulateEvent(<RadioButton isSelected={true} onSelect={onSelect} />, `.lucid-RadioButton${classSubString}`, event);
+			assert.equal(onSelect.calledOnce, false);
+		});
+	}
+
+	function verifyOnSelect(event) {
+		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-dot'], (classSubString) => {
+			const onSelect = sinon.spy();
+
+			simulateEvent(<RadioButton isSelected={false} onSelect={onSelect} />, `.lucid-RadioButton${classSubString}`, event);
+			assert(onSelect.calledOnce);
+		});
+	}
+
 	describe('user clicks on the rendered control', () => {
 		it('calls the function passed in as the `onSelect` prop if `isSelected` is false...', () => {
-			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-dot'], (classSubString) => {
-				const onSelect = sinon.spy();
-				const wrapper = mount(<RadioButton isSelected={false} onSelect={onSelect} />);
-
-				wrapper.find(`.lucid-RadioButton${classSubString}`).simulate('click');
-				assert(onSelect.calledOnce);
-			});
+			verifyOnSelect('click');
 		});
 
 		it('...and passes along true as the first argument and a React synthetic event as the second argument.', () => {
-			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-dot'], (classSubString) => {
-				const onSelect = sinon.spy();
-				const wrapper = mount(<RadioButton isSelected={false} onSelect={onSelect} />);
-
-				wrapper.find(`.lucid-RadioButton${classSubString}`).simulate('click');
-				assert.equal(onSelect.args[0][0], true);
-				assert(onSelect.args[0][1] instanceof SyntheticEvent);
-			});
+			verifyArguments('click');
 		});
 
 		it('does not call the function passed in as the `onSelect` prop if `isSelected` is true.', () => {
-			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-dot'], (classSubString) => {
-				const onSelect = sinon.spy();
-				const wrapper = mount(<RadioButton isSelected={true} onSelect={onSelect} />);
-
-				wrapper.find(`.lucid-RadioButton${classSubString}`).simulate('click');
-				assert.equal(onSelect.calledOnce, false);
-			});
+			verifyNoOnSelect('click');
 		});
 	});
 
 	describe('user taps on the rendered control', () => {
 		it('calls the function passed in as the `onSelect` prop if `isSelected` is false...', () => {
-			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-dot'], (classSubString) => {
-				const onSelect = sinon.spy();
-				const wrapper = mount(<RadioButton isSelected={false} onSelect={onSelect} />);
-
-				wrapper.find(`.lucid-RadioButton${classSubString}`).simulate('touchend');
-				assert(onSelect.calledOnce);
-			});
+			verifyOnSelect('touchend');
 		});
 
 		it('...and passes along true as the first argument and a React synthetic event as the second argument.', () => {
-			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-dot'], (classSubString) => {
-				const onSelect = sinon.spy();
-				const wrapper = mount(<RadioButton isSelected={false} onSelect={onSelect} />);
-
-				wrapper.find(`.lucid-RadioButton${classSubString}`).simulate('touchend');
-				assert.equal(onSelect.args[0][0], true);
-				assert(onSelect.args[0][1] instanceof SyntheticEvent);
-			});
+			verifyArguments('touchend');
 		});
 
 		it('does not call the function passed in as the `onSelect` prop if `isSelected` is true.', () => {
-			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-dot'], (classSubString) => {
-				const onSelect = sinon.spy();
-				const wrapper = mount(<RadioButton isSelected={true} onSelect={onSelect} />);
-
-				wrapper.find(`.lucid-RadioButton${classSubString}`).simulate('touchend');
-				assert.equal(onSelect.calledOnce, false);
-			});
+			verifyNoOnSelect('touchend');
 		});
 	});
 });
