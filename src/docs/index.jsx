@@ -5,12 +5,28 @@ require('../index.less');
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import docgenMap from './docgen.json';
+import docgenMapRaw from './docgen.json';
 import hljs from 'hljs';
 
 // This is webpackism for "dynamically load all example files"
 var reqExamples = require.context('../components/', true, /examples.*\.jsx?/i);
 var reqExamplesRaw = require.context('!!raw!../components/', true, /examples.*\.jsx?/i);
+
+var docgenMap = _.mapValues(docgenMapRaw, (value, componentName) => {
+	var parentName = value.customData.extend;
+
+	if (!parentName) {
+		return value;
+	}
+
+	var parentProps = _.get(docgenMapRaw, `${parentName}.props`);
+
+	if (!parentProps) {
+		throw new Error(`Looks like something is wrong with the custom metadata for ${componentName}. Please make sure the 'extend' refers to a real component that has valid props defined.`);
+	}
+
+	return _.merge(value, { props: parentProps });
+});
 
 var examplesByComponent = _.chain(reqExamples.keys())
 	.map((path) => {
@@ -139,7 +155,7 @@ var Category = React.createClass({
 									return (
 										<li key={example.name}>
 											<h4>{example.name}</h4>
-											<pre><code className="lang-javascript">{example.source}</code></pre>
+											<pre><code className='lang-javascript'>{example.source}</code></pre>
 											<example.Example />
 										</li>
 									);
@@ -160,4 +176,3 @@ var App = React.createClass({
 });
 
 ReactDOM.render(<App />, document.querySelector('#docs'));
-
