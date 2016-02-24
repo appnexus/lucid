@@ -1,7 +1,7 @@
 {
-  "name": "lucid",
+  "name": "lucid-ui",
   "version": "0.0.0",
-  "description": "A component library",
+  "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
@@ -14,8 +14,16 @@
     "test": "gulp test",
     "test-tdd": "gulp test-tdd"
   },
-  "keywords": [],
-  "author": "Jon de la Motte <jdelamotte@appnexus.com>",
+  "keywords": [
+    "component",
+    "ecosystem-react",
+    "react",
+    "react-component",
+    "reactive",
+    "stateful",
+    "stateless"
+  ],
+  "author": "AppNexus engineering",
   "license": "Apache-2.0",
   "dependencies": {
     "classnames": "^2.2.3",
