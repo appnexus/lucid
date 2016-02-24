@@ -1,8 +1,9 @@
-var autoprefixer = require('gulp-autoprefixer');
+var autoprefixer = require('autoprefixer');
 var babel = require('gulp-babel');
+var cache = require('gulp-cached');
 var gulp = require('gulp');
 var less = require('gulp-less');
-var cache = require('gulp-cached');
+var postcss = require('gulp-postcss');
 
 var CONFIG = require('./config');
 
@@ -10,9 +11,11 @@ module.exports = {
 	css: function() {
 		return gulp.src([CONFIG.LESS_ENTRY])
 		.pipe(less())
-		.pipe(autoprefixer({
-			browsers: [CONFIG.AUTOPREFIXER_BROWSERS]
-		}))
+		.pipe(postcss([
+			autoprefixer({
+				browsers: [CONFIG.AUTOPREFIXER_BROWSERS]
+			})
+		]))
 		.pipe(gulp.dest(CONFIG.BUILD_DIR));
 	},
 
