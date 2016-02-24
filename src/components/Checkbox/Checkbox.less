@@ -1,0 +1,122 @@
+@Checkbox-height: 22px;
+@Checkbox-width: 22px;
+@Checkbox-animation-timing: 0.1s linear;
+
+@Checkbox-container-offset: 3px;
+@Checkbox-container-radius: 7px;
+
+@Checkbox-dot-offset: 8px;
+@Checkbox-dot-radius: 3px;
+
+@Checkbox-glow-offset: 3px;
+@Checkbox-glow-radius: 8px;
+@Checkbox-glow-scale: scale(1.375);
+
+.lucid-Checkbox {
+	cursor: pointer;
+	display: inline-block;
+	height: @Checkbox-height;
+	position: relative;
+	user-select: none;
+	width: @Checkbox-width;
+
+	&-is-disabled {
+		cursor: default;
+	}
+
+	&-native {
+		opacity: 0;
+	}
+
+	&-visualization-container {
+		background-color: white;
+		border: solid 1px rgba(0, 0, 0, 0.3);
+		height: @Checkbox-container-radius * 2;
+		left: @Checkbox-container-offset;
+		position: absolute;
+		top: @Checkbox-container-offset;
+		width: @Checkbox-container-radius * 2;
+	}
+
+	&-visualization-checkmark {
+		opacity: 0;
+		width: @Checkbox-width;
+		height: @Checkbox-height;
+		transform: rotate(-45deg);
+		top: 0;
+		left: 0;
+		position: absolute;
+	}
+
+	// TODO: algebra this size backward into variables
+	&-visualization-checkmark-stem {
+		top: 11px;
+		left: 7px;
+		width: 11px;
+		height: 2px;
+		background-color: white;
+		position: absolute;
+	}
+
+	// TODO: algebra this size backward into variables
+	&-visualization-checkmark-kick {
+		top: 6px;
+		left: 7px;
+		width: 2px;
+		height: 7px;
+		background-color: white;
+		position: absolute;
+	}
+
+	&-visualization-glow {
+		background-color: @color-primary;
+		height: @Checkbox-glow-radius * 2;
+		border-radius: @Checkbox-glow-radius * 0.5;
+		left: @Checkbox-glow-offset;
+		opacity: 0;
+		position: absolute;
+		top: @Checkbox-glow-offset;
+		transition: @Checkbox-animation-timing;
+		width: @Checkbox-glow-radius * 2;
+	}
+
+	&:hover &-visualization-container {
+		border-color: @color-primary;
+		transition: @Checkbox-animation-timing;
+	}
+
+	&:hover &-visualization-glow {
+		opacity: 0.3;
+		transform: @Checkbox-glow-scale;
+	}
+
+	&-is-disabled &-visualization-container,
+	&-is-disabled:hover &-visualization-container {
+		background-color: rgba(0, 0, 0, 0.05);
+		border-color: rgba(0, 0, 0, 0.1);
+	}
+
+	&-is-disabled:hover &-visualization-glow {
+		opacity: 0;
+		transform: none;
+	}
+
+	&-is-disabled&-is-selected &-visualization-container {
+		opacity: 0.3;
+	}
+
+	&-is-disabled&-is-selected:hover &-visualization-container,
+	&-is-selected &-visualization-container {
+		background-color: @color-primary;
+		border-color: @color-primary;
+	}
+
+	&-is-selected &-visualization-checkmark {
+		opacity: 1;
+	}
+
+	&-native:focus ~ &-visualization-glow {
+		opacity: 0.3;
+		transform: @Checkbox-glow-scale;
+	}
+}
