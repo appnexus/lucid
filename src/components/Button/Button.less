@@ -2,7 +2,7 @@
 .@{name} {
 	.box-sizing();
 	.gradient-animation( @color-default-gradientStartColor, @color-default-gradientEndColor);
-	background-color: #fff;
+	background-color: @color-default;
 	cursor: pointer;
 	display: inline-block;
 	outline: none;
@@ -15,35 +15,35 @@
 
 	// Types
 	&-primary {
-		color: white;
+		color: @color-default;
 		border-color: @color-primary-borderColor;
 		font-weight: 500;
 		.gradient-animation(@color-primary-gradientStartColor, @color-primary-gradientEndColor);
 		.make-is-disabled(@name, @color-primary-gradientStartColor, @color-primary-gradientEndColor);
 	}
 	&-success {
-		color: white;
+		color: @color-default;
 		border-color: @color-success-borderColor;
 		font-weight: 500;
 		.gradient-animation(@color-success-gradientStartColor, @color-success-gradientEndColor);
 		.make-is-disabled(@name, @color-success-gradientStartColor, @color-success-gradientEndColor);
 	}
 	&-info {
-		color: white;
+		color: @color-default;
 		border-color: @color-info-borderColor;
 		font-weight: 500;
 		.gradient-animation(@color-info-gradientStartColor, @color-info-gradientEndColor);
 		.make-is-disabled(@name, @color-info-gradientStartColor, @color-info-gradientEndColor);
 	}
 	&-warning {
-		color: white;
+		color: @color-default;
 		border-color: @color-warning-borderColor;
 		font-weight: 500;
 		.gradient-animation(@color-warning-gradientStartColor, @color-warning-gradientEndColor);
 		.make-is-disabled(@name, @color-warning-gradientStartColor, @color-warning-gradientEndColor);
 	}
 	&-danger {
-		color: white;
+		color: @color-default;
 		border-color: @color-danger-borderColor;
 		font-weight: 500;
 		.gradient-animation(@color-danger-gradientStartColor, @color-danger-gradientEndColor);
@@ -80,8 +80,8 @@
 	&-is-active {
 		.gradient-reset();
 		background: @color-primary;
-		border-color: @color-primary;	
-		color: white;
+		border-color: @color-primary;
+		color: @color-default;
 	}
 	&-is-disabled {
 		.gradient-reset(linear-gradient(@standardGradient, @color-default-gradientStartColor, @color-default-gradientEndColor));
