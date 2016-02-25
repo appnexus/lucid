@@ -1,5 +1,6 @@
-@name: lucid-Button;
-.@{name} {
+
+.lucid-Button {
+	.no-safari-flicker();
 	.box-sizing();
 	.gradient-animation( @color-default-gradientStartColor, @color-default-gradientEndColor);
 	background-color: @color-default;
@@ -19,39 +20,39 @@
 		border-color: @color-primary-borderColor;
 		font-weight: 500;
 		.gradient-animation(@color-primary-gradientStartColor, @color-primary-gradientEndColor);
-		.make-is-disabled(@name, @color-primary-gradientStartColor, @color-primary-gradientEndColor);
+		.make-is-disabled(lucid-Button, @color-primary-gradientStartColor, @color-primary-gradientEndColor);
 	}
 	&-success {
 		color: @color-default;
 		border-color: @color-success-borderColor;
 		font-weight: 500;
 		.gradient-animation(@color-success-gradientStartColor, @color-success-gradientEndColor);
-		.make-is-disabled(@name, @color-success-gradientStartColor, @color-success-gradientEndColor);
+		.make-is-disabled(lucid-Button, @color-success-gradientStartColor, @color-success-gradientEndColor);
 	}
 	&-info {
 		color: @color-default;
 		border-color: @color-info-borderColor;
 		font-weight: 500;
 		.gradient-animation(@color-info-gradientStartColor, @color-info-gradientEndColor);
-		.make-is-disabled(@name, @color-info-gradientStartColor, @color-info-gradientEndColor);
+		.make-is-disabled(lucid-Button, @color-info-gradientStartColor, @color-info-gradientEndColor);
 	}
 	&-warning {
 		color: @color-default;
 		border-color: @color-warning-borderColor;
 		font-weight: 500;
 		.gradient-animation(@color-warning-gradientStartColor, @color-warning-gradientEndColor);
-		.make-is-disabled(@name, @color-warning-gradientStartColor, @color-warning-gradientEndColor);
+		.make-is-disabled(lucid-Button, @color-warning-gradientStartColor, @color-warning-gradientEndColor);
 	}
 	&-danger {
 		color: @color-default;
 		border-color: @color-danger-borderColor;
 		font-weight: 500;
 		.gradient-animation(@color-danger-gradientStartColor, @color-danger-gradientEndColor);
-		.make-is-disabled(@name, @color-danger-gradientStartColor, @color-danger-gradientEndColor);
+		.make-is-disabled(lucid-Button, @color-danger-gradientStartColor, @color-danger-gradientEndColor);
 	}
 	&-link {
 		.gradient-reset();
-		.make-is-disabled(@name);
+		.make-is-disabled(lucid-Button);
 		border: none;
 		background: none;
 		color: @color-primary;

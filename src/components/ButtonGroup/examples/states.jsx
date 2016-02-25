@@ -12,6 +12,9 @@ export default React.createClass({
 				<Button isActive={true}>Four</Button>
 				<Button isDisabled={true}>Five</Button>
 				<Button>Six</Button>
+				<Button isActive={true}>Seven</Button>
+				<Button isActive={true}>Eight</Button>
+				<Button>Nine</Button>
 			</ButtonGroup>
 		);
 	}

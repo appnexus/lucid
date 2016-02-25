@@ -5,9 +5,6 @@ import { bindClassNames } from '../../util/style-helpers';
 const boundClassNames = bindClassNames('ButtonGroup');
 
 const {
-	oneOfType,
-	node,
-	arrayOf,
 	any
 } = React.PropTypes;
 
@@ -16,25 +13,20 @@ const {
  * {"categories": ["controls", "buttons"]}
  *
  * Button groups allow you to pair buttons together to form a seamless cluster.
+ * Any props not explicitly called out are spread on to the root component.
  */
 const ButtonGroup = React.createClass({
 	propTypes: {
 		/**
-		 * class names that are appended to the defaults
+		 * Appended to the component-specific class names set on the root
+		 * element. Value is run through the `classnames` library.
 		 */
 		className: any,
-		/**
-		 * any valid React children
-		 */
-		children: oneOfType([
-			node,
-			arrayOf(node)
-		])
-	},
 
-	getDefaultProps() {
-		return {
-		};
+		/**
+		 * Any valid React children, but they really should be `Button`s.
+		 */
+		children: any
 	},
 
 	render() {
@@ -48,8 +40,9 @@ const ButtonGroup = React.createClass({
 
 		return (
 			<div
+				{...others}
 				className={classNames(className, scopedClasses)}
-				{...others}>
+			>
 				{children}
 			</div>
 		);
