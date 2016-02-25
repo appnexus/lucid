@@ -13,7 +13,7 @@ import hljs from 'hljs';
 // Opt out of the ?_k=asdffb in the query string since we don't need to keep
 // state in our router.
 // https://github.com/reactjs/react-router/issues/1967#issuecomment-187730662
-const appHistory = useRouterHistory(createHashHistory)({ queryKey: false })
+const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
 // This is webpackism for "dynamically load all example files"
 const reqExamples = require.context('../components/', true, /examples.*\.jsx?/i);
