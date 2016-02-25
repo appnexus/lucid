@@ -10,9 +10,9 @@
   "scripts": {
     "dev": "gulp docs-generate && webpack-dev-server --inline",
     "preversion": "rm -rf dist && gulp preversion",
-    "postversion": "gulp docs-upload",
-    "test": "gulp test",
-    "test-tdd": "gulp test-tdd"
+    "postversion": "rm -rf dist && gulp docs-upload",
+    "test": "rm -rf dist && gulp test",
+    "test-tdd": "rm -rf dist && gulp test-tdd"
   },
   "keywords": [
     "component",
