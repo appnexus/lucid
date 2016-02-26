@@ -83,7 +83,7 @@ const RadioButton = React.createClass({
 		} = this.props;
 
 		return (
-			<div
+			<span
 					className={classNames(boundClassNames('~', {
 						'is-disabled': isDisabled,
 						'is-selected': isSelected
@@ -104,7 +104,7 @@ const RadioButton = React.createClass({
 				<span className={boundClassNames('visualization-glow')} />
 				<span className={boundClassNames('visualization-container')} />
 				<span className={boundClassNames('visualization-dot')} />
-			</div>
+			</span>
 		);
 	},
 
