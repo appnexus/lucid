@@ -5,12 +5,28 @@ require('../index.less');
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import docgenMap from './docgen.json';
+import docgenMapRaw from './docgen.json';
 import hljs from 'hljs';
 
 // This is webpackism for "dynamically load all example files"
 var reqExamples = require.context('../components/', true, /examples.*\.jsx?/i);
 var reqExamplesRaw = require.context('!!raw!../components/', true, /examples.*\.jsx?/i);
+
+var docgenMap = _.mapValues(docgenMapRaw, (value, componentName) => {
+	var parentName = value.customData.extend;
+
+	if (!parentName) {
+		return value;
+	}
+
+	var parentProps = _.get(docgenMapRaw, `${parentName}.props`);
+
+	if (!parentProps) {
+		throw new Error(`Looks like something is wrong with the custom metadata for ${componentName}. Please make sure the 'extend' refers to a real component that has valid props defined.`);
+	}
+
+	return _.merge(value, { props: parentProps });
+});
 
 var examplesByComponent = _.chain(reqExamples.keys())
 	.map((path) => {
@@ -58,7 +74,12 @@ var Category = React.createClass({
 	componentDidMount: handleHighlightCode,
 	componentDidUpdate: handleHighlightCode,
 
-	renderPropType(type) {
+	renderPropType(type, component) {
+		if (!type) {
+			console.error(`It looks like there's an issue with ${component}'s props. One common cause of this issue is when the getDefaultProps method defines a default value for a prop that is not explicitly defined in the propTypes map.`);
+			return null;
+		}
+
 		// If type.value exists it means there are multiple children and we need to
 		// recurse
 		if (_.isPlainObject(type.value) || _.isArray(type.value)) {
@@ -67,7 +88,7 @@ var Category = React.createClass({
 					{type.name === 'union' ? 'oneOfType' : type.name}:
 					<ul>
 						{_.map(type.value, (innerType, index) => {
-							return <li key={index}>{this.renderPropType(innerType)}</li>
+							return <li key={index}>{this.renderPropType(innerType, component)}</li>
 						})}
 					</ul>
 				</div>
@@ -119,7 +140,7 @@ var Category = React.createClass({
 											return (
 												<tr key={propName}>
 													<td>{propName}</td>
-													<td>{this.renderPropType(propDetails.type)}</td>
+													<td>{this.renderPropType(propDetails.type, item)}</td>
 													<td>{String(propDetails.required)}</td>
 													<td>{propDetails.description}</td>
 												</tr>
@@ -134,7 +155,7 @@ var Category = React.createClass({
 									return (
 										<li key={example.name}>
 											<h4>{example.name}</h4>
-											<pre><code className="lang-javascript">{example.source}</code></pre>
+											<pre><code className='lang-javascript'>{example.source}</code></pre>
 											<example.Example />
 										</li>
 									);
@@ -155,4 +176,3 @@ var App = React.createClass({
 });
 
 ReactDOM.render(<App />, document.querySelector('#docs'));
-
