@@ -4,8 +4,8 @@
 	border: 1px solid @color-default-borderColor;
 	background-color: @color-default-backgroundColor;
 	font: @font;
-	border-radius: @size-banner-borderRadiaus;
-	padding: 0 @size-banner-spacing-rightLeft;
+	border-radius: @Banner-size-borderRadiaus;
+	padding: 0 @Banner-size-spacing-rightLeft;
 	display: flex;
 
 	&.@{banner}-has-close {
@@ -18,13 +18,13 @@
 
 	&-has-icon {
 		& > .@{banner}-content {
-			padding: @size-banner-spacing-topBottom + 2px 0;
+			padding: @Banner-size-spacing-topBottom + 2px 0;
 		}
 	}
 
 	&-content {
 		flex: 1;
-		padding: @size-banner-spacing-topBottom 0;
+		padding: @Banner-size-spacing-topBottom 0;
 		line-height: 1em;
 		& > p {
 			&:first-of-type {
@@ -51,8 +51,8 @@
 
 	// has Icon
 	&-icon {
-		padding-top: @size-banner-spacing-topBottom - 3px;
-		margin-right: @size-banner-spacing-rightLeft;
+		padding-top: @Banner-size-spacing-topBottom - 3px;
+		margin-right: @Banner-size-spacing-rightLeft;
 	}
 
 	// Types
@@ -84,7 +84,7 @@
 
 	&-small {
 		.@{banner}-content {
-			padding: @size-banner-spacing-topBottom - 5px 0;
+			padding: @Banner-size-spacing-topBottom - 5px 0;
 		}
 	}
 }

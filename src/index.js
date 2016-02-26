@@ -1,3 +1,4 @@
+import Banner from './components/Banner/Banner';
 import Button from './components/Button/Button';
 import ButtonGroup from './components/ButtonGroup/ButtonGroup';
 import Switch from './components/Switch/Switch';
@@ -16,6 +17,7 @@ import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
 
 export default {
+	Banner,
 	Button,
 	ButtonGroup,
 	Switch,
