@@ -1,20 +1,68 @@
+// -------------------------------------
+// Imports
+//
+
+@import 'http://yui.yahooapis.com/pure/0.6.0/pure-min.css';
+
+// -------------------------------------
+// Globals
+//
+
 pre code {
+	font-family: monospace;
 	tab-size: 2;
 }
 
-.Category {
-	ul {
-		margin: 10px;
-		padding: 0 10px 10px 10px;
-		list-style-type: none;
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+// -------------------------------------
+// Component
+//
+
+.Component {
+	&-examples {
+		list-style: none;
+		padding-left: 0;
 	}
 
-	.Category-prop-table {
-		border-collapse: collapse;
-		td, th {
-			padding-right: 20px;
-			border: 1px solid #ccc;
-		}
+	&-examples-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 }
 
+// -------------------------------------
+// App
+//
+
+@App-sidebar-width: 180px;
+
+.App {
+	&-sidebar {
+		position: fixed;
+		height: 100vh;
+		width: @App-sidebar-width;
+		padding: 15px;
+		padding-left: 0;
+	}
+
+	&-body{
+		padding: 15px;
+		padding-left: @App-sidebar-width;
+	}
+
+	&-nav {
+		ul, li {
+			padding-left: 10px;
+			list-style-type: none;
+		}
+	}
+}

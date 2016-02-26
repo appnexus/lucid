@@ -4,18 +4,41 @@ require('../index.less');
 
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import docgenMap from './docgen.json';
+import { render } from 'react-dom';
+import { Router, Route, Link, useRouterHistory } from 'react-router';
+import { createHashHistory } from 'react-router/node_modules/history';
+import docgenMapRaw from './docgen.json';
 import hljs from 'hljs';
 
-// This is webpackism for "dynamically load all example files"
-var reqExamples = require.context('../components/', true, /examples.*\.jsx?/i);
-var reqExamplesRaw = require.context('!!raw!../components/', true, /examples.*\.jsx?/i);
+// Opt out of the ?_k=asdffb in the query string since we don't need to keep
+// state in our router.
+// https://github.com/reactjs/react-router/issues/1967#issuecomment-187730662
+const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
-var examplesByComponent = _.chain(reqExamples.keys())
+// This is webpackism for "dynamically load all example files"
+const reqExamples = require.context('../components/', true, /examples.*\.jsx?/i);
+const reqExamplesRaw = require.context('!!raw!../components/', true, /examples.*\.jsx?/i);
+
+const docgenMap = _.mapValues(docgenMapRaw, (value, componentName) => {
+	const parentName = value.customData.extend;
+
+	if (!parentName) {
+		return value;
+	}
+
+	const parentProps = _.get(docgenMapRaw, `${parentName}.props`);
+
+	if (!parentProps) {
+		throw new Error(`Looks like something is wrong with the custom metadata for ${componentName}. Please make sure the 'extend' refers to a real component that has valid props defined.`);
+	}
+
+	return _.merge(value, { props: parentProps });
+});
+
+const examplesByComponent = _.chain(reqExamples.keys())
 	.map((path) => {
-		var items = path.split('/').reverse(); // e.g. ['default.jsx', 'examples', 'Button', '.']
-		var componentName = items[2];
+		const items = path.split('/').reverse(); // e.g. ['default.jsx', 'examples', 'Button', '.']
+		const componentName = items[2];
 		return {
 			componentName: componentName,
 			name: _.startCase(items[0].split('.')[0]),
@@ -26,9 +49,9 @@ var examplesByComponent = _.chain(reqExamples.keys())
 	.groupBy('componentName')
 	.value();
 
-var docgenGroups = _.reduce(docgenMap, (acc, value, key) => {
-	var path = value.customData.categories.join('.');
-	var newGroup = _.get(acc, path, []);
+const docgenGroups = _.reduce(docgenMap, (acc, value, key) => {
+	const path = value.customData.categories.join('.');
+	const newGroup = _.get(acc, path, []);
 	newGroup.push(key);
 	return _.set(acc, path, newGroup);
 }, {});
@@ -39,26 +62,48 @@ function handleHighlightCode() {
 	});
 }
 
-var {
+const {
 	PropTypes: {
 		oneOfType,
+		shape,
 		object,
-		array
+		array,
+		string,
+		node,
+		any,
+		bool,
 		}
 	} = React;
 
-var Category = React.createClass({
+const PropType = React.createClass({
 	propTypes: {
-		items: oneOfType([
-			object,
-			array
-		])
+		componentName: string.isRequired,
+		type: oneOfType([
+			node,
+			string,
+			shape({
+				name: string,
+				computed: bool,
+				value: oneOfType([
+					string,
+					array,
+					object,
+				])
+			})
+		]).isRequired
 	},
 
-	componentDidMount: handleHighlightCode,
-	componentDidUpdate: handleHighlightCode,
+	render() {
+		const {
+			componentName,
+			type
+		} = this.props;
 
-	renderPropType(type) {
+		if (!type) {
+			console.error(`It looks like there's an issue with ${componentName}'s props. One common cause of this issue is when the getDefaultProps method defines a default value for a prop that is not explicitly defined in the propTypes map.`);
+			return null;
+		}
+
 		// If type.value exists it means there are multiple children and we need to
 		// recurse
 		if (_.isPlainObject(type.value) || _.isArray(type.value)) {
@@ -67,7 +112,11 @@ var Category = React.createClass({
 					{type.name === 'union' ? 'oneOfType' : type.name}:
 					<ul>
 						{_.map(type.value, (innerType, index) => {
-							return <li key={index}>{this.renderPropType(innerType)}</li>
+							return (
+								<li key={index}>
+									<PropType type={innerType} componentName={componentName} />
+								</li>
+							);
 						})}
 					</ul>
 				</div>
@@ -75,84 +124,149 @@ var Category = React.createClass({
 		}
 
 		return <span>{type.name || type.value || type}</span>;
+	}
+});
+
+const Component = React.createClass({
+	propTypes: {
+		params: shape({
+			componentName: string.isRequired
+		})
+	},
+
+	getInitialState() {
+		return {
+			examples: {
+				Foo: { // an example of the shape of this state
+					isShown: true
+				}
+			}
+		};
+	},
+
+	componentDidMount: handleHighlightCode,
+	componentDidUpdate: handleHighlightCode,
+
+	handleShowExample(componentName, exampleName) {
+		const path = `${componentName}.${exampleName}`;
+		const isShown = _.get(this.state.examples, path, false);
+		this.setState({
+			examples: _.set(this.state.examples, path, !isShown)
+		});
 	},
 
 	render() {
-		var { items } = this.props;
+		const {
+			componentName
+		} = this.props.params;
 
+		return (
+			<div>
+				<h2>{componentName}</h2>
+				<h3>Props</h3>
+				<table className='pure-table pure-table-bordered'>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Type</th>
+							<th>Required</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						{_.map(_.get(docgenMap, componentName + '.props', []), (propDetails, propName) => {
+							return (
+								<tr key={propName}>
+									<td>{propName}</td>
+									<td><PropType type={propDetails.type} componentName={componentName} /></td>
+									<td>{String(propDetails.required)}</td>
+									<td>{propDetails.description}</td>
+								</tr>
+							);
+						})}
+					</tbody>
+				</table>
+				<h3>Examples</h3>
+				<ul className='Component-examples'>
+					{_.map(_.get(examplesByComponent, componentName, []), (example) => {
+						return (
+							<li key={example.name}>
+								<div className='Component-examples-header'>
+									<h4>{example.name}</h4>
+									<a href='#' onClick={(event) => {
+										event.preventDefault();
+										this.handleShowExample(componentName, example.name);
+									}}>
+										Show code
+									</a>
+								</div>
+								{_.get(this.state.examples, `${componentName}.${example.name}`) ?
+									<pre><code className='lang-javascript'>{example.source}</code></pre>
+								: null}
+								<example.Example />
+							</li>
+						);
+					})}
+				</ul>
+			</div>
+		);
+	}
+});
+
+const App = React.createClass({
+	propTypes: {
+		children: any,
+	},
+
+	renderCategoryLinks(items) {
 		if (_.isPlainObject(items)) {
 			return (
-				<div className='Category'>
-					<ul>
-						{_.map(items, (value, key) => {
-							return (
-								<li key={key}>
-									<h2>{_.startCase(key)}</h2>
-									<Category items={value} />
-								</li>
-							)
-						})}
-					</ul>
-				</div>
+				<ul>
+					{_.map(items, (kids, categoryName) => {
+						return (
+							<li key={categoryName}>
+								<b>{_.startCase(categoryName)}</b>
+								{this.renderCategoryLinks(kids)}
+							</li>
+						);
+					})}
+				</ul>
 			);
 		}
 
 		return (
 			<ul>
-				{_.map(items, (item) => {
+				{_.map(items, (componentName) => {
 					return (
-						<li key={item}>
-							<h3>{item}</h3>
-							<ul>
-								<h3>Props</h3>
-								<table className='Category-prop-table'>
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Type</th>
-											<th>Required</th>
-											<th>Description</th>
-										</tr>
-									</thead>
-									<tbody>
-										{_.map(_.get(docgenMap, item + '.props', []), (propDetails, propName) => {
-											return (
-												<tr key={propName}>
-													<td>{propName}</td>
-													<td>{this.renderPropType(propDetails.type)}</td>
-													<td>{String(propDetails.required)}</td>
-													<td>{propDetails.description}</td>
-												</tr>
-											);
-										})}
-									</tbody>
-								</table>
-							</ul>
-							<ul>
-								<h3>Examples</h3>
-								{_.map(_.get(examplesByComponent, item, []), (example) => {
-									return (
-										<li key={example.name}>
-											<h4>{example.name}</h4>
-											<pre><code className="lang-javascript">{example.source}</code></pre>
-											<example.Example />
-										</li>
-									);
-								})}
-							</ul>
+						<li key={componentName}>
+							<Link to={`/components/${componentName}`}>{componentName}</Link>
 						</li>
 					);
 				})}
 			</ul>
 		);
-	}
-});
+	},
 
-var App = React.createClass({
 	render() {
-		return <Category items={docgenGroups} />;
+		return (
+			<div className='App'>
+				<div className='App-sidebar'>
+					<nav className='App-nav'>
+						{this.renderCategoryLinks(docgenGroups)}
+					</nav>
+				</div>
+				<div className='App-body'>
+					{this.props.children}
+				</div>
+			</div>
+		);
 	}
 });
 
-ReactDOM.render(<App />, document.querySelector('#docs'));
-
+render((
+	<Router history={appHistory}>
+		<Route path='/' component={App}>
+			<Route path='/components/:componentName' component={Component}/>
+		</Route>
+	</Router>
+), document.querySelector('#docs'));
