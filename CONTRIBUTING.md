@@ -31,6 +31,7 @@ Below is a running list of conventions we are establishing:
   - If the component is a thin wrapper around a native control, be sure to pass
     through any extra props through to the native component.
   - Stateless by default, uses the reducer pattern for stateful components
+  - Prefer `span`s for root level component elements
 - Styling
   - Css classes used for state, such as `.is-active`, should also be prefixed
     with the component name. E.g. Button should use the class
