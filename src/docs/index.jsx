@@ -191,7 +191,7 @@ const Component = React.createClass({
 				<h2>{`${componentName} ${composesComponents}`}</h2>
 				<p dangerouslySetInnerHTML={{ __html: descriptionAsHTML }} />
 				<h3>Props</h3>
-				<table className='pure-table pure-table-bordered'>
+				<table className='Component-props-table pure-table pure-table-bordered'>
 					<thead>
 						<tr>
 							<th>Name</th>
@@ -207,7 +207,7 @@ const Component = React.createClass({
 									<td>{propName}</td>
 									<td><PropType type={propDetails.type} componentName={componentName} /></td>
 									<td>{String(propDetails.required)}</td>
-									<td>{propDetails.description}</td>
+									<td dangerouslySetInnerHTML={{ __html: markdown.toHTML(propDetails.description)}} />
 								</tr>
 							);
 						})}
