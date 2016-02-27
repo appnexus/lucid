@@ -9,6 +9,7 @@ import { Router, Route, Link, useRouterHistory } from 'react-router';
 import { createHashHistory } from 'react-router/node_modules/history';
 import docgenMapRaw from './docgen.json';
 import hljs from 'hljs';
+import { markdown } from 'markdown';
 
 // Opt out of the ?_k=asdffb in the query string since we don't need to keep
 // state in our router.
@@ -160,9 +161,35 @@ const Component = React.createClass({
 			componentName
 		} = this.props.params;
 
+		const componentProps = _.chain(docgenMap)
+			.get(`${componentName}.props`, [])
+			.toPairs() // this turns the object into an array of [propName, propDetails] so we can sort
+			.sortBy(x => x[0]) // sort by property name
+			.value()
+
+		const descriptionAsHTML = _.chain(docgenMap)
+			.get(`${componentName}.description`, '')
+			.thru(markdown.toHTML)
+			.value();
+
+		const composesComponents = _.chain(docgenMap)
+			.get(`${componentName}.composes`, null)
+			.map((path) => {
+				return _.last(path.split('/'));
+			})
+			.thru((componentNames) => {
+				if (_.isEmpty(componentNames)) {
+					return '';
+				}
+
+				return `(made from: ${componentNames.join(', ')})`;
+			})
+			.value();
+
 		return (
 			<div>
-				<h2>{componentName}</h2>
+				<h2>{`${componentName} ${composesComponents}`}</h2>
+				<p dangerouslySetInnerHTML={{ __html: descriptionAsHTML }} />
 				<h3>Props</h3>
 				<table className='pure-table pure-table-bordered'>
 					<thead>
@@ -174,7 +201,7 @@ const Component = React.createClass({
 						</tr>
 					</thead>
 					<tbody>
-						{_.map(_.get(docgenMap, componentName + '.props', []), (propDetails, propName) => {
+						{_.map(componentProps, ([propName, propDetails]) => {
 							return (
 								<tr key={propName}>
 									<td>{propName}</td>
