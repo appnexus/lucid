@@ -2,6 +2,7 @@ import Badge from './components/Badge/Badge';
 import Button from './components/Button/Button';
 import ButtonGroup from './components/ButtonGroup/ButtonGroup';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
+import Checkbox from './components/Checkbox/Checkbox';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
 import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
@@ -21,6 +22,7 @@ export default {
 	Button,
 	ButtonGroup,
 	CaretIcon,
+	Checkbox,
 	CheckIcon,
 	CrossIcon,
 	EditIcon,
