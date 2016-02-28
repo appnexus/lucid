@@ -4,6 +4,7 @@ import Switch from './components/Switch/Switch';
 import Badge from './components/Badge/Badge';
 import Icon from './components/Icon/Icon';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
+import Checkbox from './components/Checkbox/Checkbox';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
 import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
@@ -22,6 +23,7 @@ export default {
 	Badge,
 	Icon,
 	CaretIcon,
+	Checkbox,
 	CheckIcon,
 	CrossIcon,
 	EditIcon,
