@@ -169,7 +169,11 @@ const Component = React.createClass({
 
 		const descriptionAsHTML = _.chain(docgenMap)
 			.get(`${componentName}.description`, '')
-			.thru(markdown.toHTML)
+			.thru((description) => {
+				return {
+					__html: markdown.toHTML(description)
+				};
+			})
 			.value();
 
 		const composesComponents = _.chain(docgenMap)
@@ -189,7 +193,7 @@ const Component = React.createClass({
 		return (
 			<div>
 				<h2>{`${componentName} ${composesComponents}`}</h2>
-				<p dangerouslySetInnerHTML={{ __html: descriptionAsHTML }} />
+				<div dangerouslySetInnerHTML={descriptionAsHTML} />
 				<h3>Props</h3>
 				<table className='Component-props-table pure-table pure-table-bordered'>
 					<thead>
