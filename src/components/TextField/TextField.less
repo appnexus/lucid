@@ -7,7 +7,7 @@
 		.box-sizing();
 		.inset-box-shadow();
 
-		background-color: #fff;
+		background-color: @color-white;
 		border-radius: @size-borderRadius;
 		border: 1px solid @color-default-borderColor;
 		color: @TextField-color-font;
@@ -36,9 +36,9 @@
 
 	&-is-disabled &-native {
 		cursor: not-allowed;
-		background-color: fade(#000, 5%);
-		border-color: fade(#000, 10%);
-		color: fade(#000, 25%);
+		background-color: @color-gray-5;
+		border-color: @color-gray-10;
+		color: @color-gray-25;
 	}
 
 	// Error styling
