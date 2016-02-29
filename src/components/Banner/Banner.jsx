@@ -21,10 +21,10 @@ const {
 } = React.PropTypes;
 
 const defaultIcons = {
-	'success': <CheckIcon size="22" isBadge/>,
-	'danger': <CrossIcon size="22" isBadge />,
-	'info': <InfoIcon size="22" isBadge />,
-	'warning': <WarningIcon size="22" />,
+	'success': <CheckIcon size='22' isBadge/>,
+	'danger': <CrossIcon size='22' isBadge />,
+	'info': <InfoIcon size='22' isBadge />,
+	'warning': <WarningIcon size='22' />,
 	'primary': null,
 	'default': null
 };
