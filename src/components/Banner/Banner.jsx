@@ -56,9 +56,10 @@ const Banner = React.createClass({
 		 */
 		isCloseable: bool,
 		/**
-		 * set this to `true` if you want to remove rounded corners.
+		 * set this value to `false` of you want to remove the rounded corners
+		 * on the `Banner`.  **default is `true`**
 		 */
-		isFullWidth: bool,
+		hasRoundedCorners: bool,
 		/**
 		 * class names that are appended to the defaults
 		 */
@@ -81,11 +82,9 @@ const Banner = React.createClass({
 			'info'
 		]),
 		/**
-		 * size variations of the Banner
+		 * if set to `true` the banner have smaller padding on the inside
 		 */
-		size: oneOf([
-			'small'
-		]),
+		isSmall: bool,
 		/**
 		 * called when the user clicks the Banner
 		 */
@@ -97,22 +96,23 @@ const Banner = React.createClass({
 			hasIcon: false,
 			icon: null,
 			isCloseable: true,
-			isFullWidth: false,
+			hasRoundedCorners: true,
 			kind: 'default',
+			isSmall: false,
 			onClick: _.noop
 		};
 	},
 
 	render() {
-		let {
+		const {
 			hasIcon,
 			icon,
 			kind,
-			size,
+			isSmall,
 			className,
 			children,
 			isCloseable,
-			isFullWidth,
+			hasRoundedCorners,
 			...passThroughs
 		} = this.props;
 
@@ -127,29 +127,28 @@ const Banner = React.createClass({
 
 		//if icon than hasicon needs to be ture
 
-		let scopedClasses = boundClassNames('~', {
+		const scopedClasses = boundClassNames('~', {
 			'has-icon': displayedIcon,
 			'has-close': isCloseable,
-			'full-width': isFullWidth,
+			'has-no-roundedCorners': !hasRoundedCorners,
 			'primary': kind === 'primary',
 			'success': kind === 'success',
 			'warning': kind === 'warning',
 			'danger': kind === 'danger',
 			'info': kind === 'info',
-			'small': size === 'small',
+			'small': isSmall,
 		});
 
 		return (
 			<section
 				className={classNames(className, scopedClasses)}
-				onClick={this.handleClick}
 				{...passThroughs}
-				ref='Banner' >
+				>
 				{displayedIcon ? <span className={boundClassNames('icon')}>{displayedIcon}</span> : null}
 				<span className={boundClassNames('content')}>
 					{children}
 				</span>
-				{isCloseable ? <span className={boundClassNames('close')} onClick={this.props.onClick}>{ String.fromCharCode(215) } </span> : null}
+				{isCloseable ? <span className={boundClassNames('close')} onClick={this.props.onClick}>{String.fromCharCode(0x00d7)}</span> : null}
 			</section>
 		);
 	}

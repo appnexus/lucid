@@ -55,24 +55,24 @@ export default React.createClass({
 			<div>
 				<div>
 					<Banner>Default</Banner>
-					<Banner isFullWidth={true}>Default full width</Banner>
-					<Banner isCloseable={false}>Default -- No Close {String.fromCharCode(215)}</Banner>
-					<Banner size='small'>Default -- small</Banner>
-					<Banner size='small' isCloseable={false}>Default -- small -- No Close {String.fromCharCode(215)}</Banner>
+					<Banner hasRoundedCorners={false}>Default no rounded corners</Banner>
+					<Banner isCloseable={false}>Default -- No Close {String.fromCharCode(0x00d7)}</Banner>
+					<Banner isSmall={true}>Default -- small</Banner>
+					<Banner isSmall={true} isCloseable={false}>Default -- small -- No Close {String.fromCharCode(0x00d7)}</Banner>
 				</div>
 				<div>
 					<Banner kind='primary'>Primary</Banner>
-					<Banner kind='primary' isCloseable={false}>Primary -- No Close {String.fromCharCode(215)}</Banner>
-					<Banner kind='primary' size='small'>Primary -- small</Banner>
-					<Banner kind='primary' size='small' isCloseable={false}>Primary -- small -- No Close {String.fromCharCode(215)}</Banner>
+					<Banner kind='primary' isCloseable={false}>Primary -- No Close {String.fromCharCode(0x00d7)}</Banner>
+					<Banner kind='primary' isSmall={true}>Primary -- small</Banner>
+					<Banner kind='primary' isSmall={true} isCloseable={false}>Primary -- small -- No Close {String.fromCharCode(0x00d7)}</Banner>
 				</div>
 				<div>
 					<Banner kind='success'>Success</Banner>
-					<Banner kind='success' isCloseable={false}>Success -- No Close {String.fromCharCode(215)}</Banner>
+					<Banner kind='success' isCloseable={false}>Success -- No Close {String.fromCharCode(0x00d7)}</Banner>
 					<Banner kind='success' hasIcon={true}>Success -- has icon</Banner>
-					<Banner kind='success' hasIcon={true} isCloseable={false}>Success -- has icon -- No Close {String.fromCharCode(215)}</Banner>
-					<Banner kind='success' size='small'>Success -- small</Banner>
-					<Banner kind='success' size='small' isCloseable={false}>Success -- small -- No Close {String.fromCharCode(215)}</Banner>
+					<Banner kind='success' hasIcon={true} isCloseable={false}>Success -- has icon -- No Close {String.fromCharCode(0x00d7)}</Banner>
+					<Banner kind='success' isSmall={true}>Success -- small</Banner>
+					<Banner kind='success' isSmall={true} isCloseable={false}>Success -- small -- No Close {String.fromCharCode(0x00d7)}</Banner>
 					<Banner kind='success' hasIcon={true}>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius neque veniam nisi aspernatur, quos dolorem aut praesentium eaque consequatur inventore adipisci, architecto atque ipsa, laudantium laboriosam ipsam non vitae, cum maiores hic. Laboriosam fugiat eveniet quos assumenda delectus aperiam excepturi vel, officia sint reiciendis expedita consequuntur, a sed deleniti commodi rerum natus quam veniam earum quibusdam! Nemo iusto asperiores sit velit eveniet quod nam. Voluptatibus beatae maxime, quia a velit praesentium vel vitae consectetur, libero nulla magni voluptatum facilis ea facere, minus doloribus. Excepturi veniam, mollitia esse aut illum ad tenetur facere quidem. Ipsum odio, dolore, error rem assumenda debitis.
 						</p>
@@ -84,27 +84,27 @@ export default React.createClass({
 				</div>
 				<div>
 					<Banner kind='warning'>Warning</Banner>
-					<Banner kind='warning' isCloseable={false}>Warning -- No Close {String.fromCharCode(215)}</Banner>
+					<Banner kind='warning' isCloseable={false}>Warning -- No Close {String.fromCharCode(0x00d7)}</Banner>
 					<Banner kind='warning' hasIcon={true}>Warning -- has icon</Banner>
 					<Banner kind='warning' hasIcon={true} isCloseable={false}>Warning -- has iconv</Banner>
-					<Banner kind='warning' size='small'>Warning -- small</Banner>
-					<Banner kind='warning' size='small' isCloseable={false}>Warning -- small -- No Close {String.fromCharCode(215)}</Banner>
+					<Banner kind='warning' isSmall={true}>Warning -- small</Banner>
+					<Banner kind='warning' isSmall={true} isCloseable={false}>Warning -- small -- No Close {String.fromCharCode(0x00d7)}</Banner>
 				</div>
 				<div>
 					<Banner kind='danger'>Danger</Banner>
-					<Banner kind='danger' isCloseable={false}>Danger -- No Close {String.fromCharCode(215)}</Banner>
+					<Banner kind='danger' isCloseable={false}>Danger -- No Close {String.fromCharCode(0x00d7)}</Banner>
 					<Banner kind='danger' hasIcon={true}>Danger -- has icon</Banner>
-					<Banner kind='danger' hasIcon={true} isCloseable={false}>Danger -- has icon -- No Close {String.fromCharCode(215)}</Banner>
-					<Banner kind='danger' size='small'>Danger -- small</Banner>
-					<Banner kind='danger' size='small' isCloseable={false}>Danger -- small -- No Close {String.fromCharCode(215)}</Banner>
+					<Banner kind='danger' hasIcon={true} isCloseable={false}>Danger -- has icon -- No Close {String.fromCharCode(0x00d7)}</Banner>
+					<Banner kind='danger' isSmall={true}>Danger -- small</Banner>
+					<Banner kind='danger' isSmall={true} isCloseable={false}>Danger -- small -- No Close {String.fromCharCode(0x00d7)}</Banner>
 				</div>
 				<div>
 					<Banner kind='info'>Info</Banner>
-					<Banner kind='info' isCloseable={false}>Info -- No Close {String.fromCharCode(215)}</Banner>
+					<Banner kind='info' isCloseable={false}>Info -- No Close {String.fromCharCode(0x00d7)}</Banner>
 					<Banner kind='info' hasIcon={true}>Info -- has icon</Banner>
-					<Banner kind='info' hasIcon={true} isCloseable={false}>Info -- has icon -- No Close {String.fromCharCode(215)}</Banner>
-					<Banner kind='info' size='small'>Info -- small</Banner>
-					<Banner kind='info' size='small' isCloseable={false}>Info -- small -- No Close {String.fromCharCode(215)}</Banner>
+					<Banner kind='info' hasIcon={true} isCloseable={false}>Info -- has icon -- No Close {String.fromCharCode(0x00d7)}</Banner>
+					<Banner kind='info' isSmall={true}>Info -- small</Banner>
+					<Banner kind='info' isSmall={true} isCloseable={false}>Info -- small -- No Close {String.fromCharCode(0x00d7)}</Banner>
 				</div>
 
 				<div>
