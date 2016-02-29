@@ -2,6 +2,10 @@ import React from 'react';
 import classNames from 'classnames';
 import _ from 'lodash';
 import { bindClassNames } from '../../util/style-helpers';
+import CheckIcon from '../Icon/CheckIcon/CheckIcon';
+import InfoIcon from '../Icon/InfoIcon/InfoIcon';
+import CrossIcon from '../Icon/CrossIcon/CrossIcon';
+import WarningIcon from '../Icon/WarningIcon/WarningIcon';
 
 const boundClassNames = bindClassNames('Banner');
 
@@ -17,10 +21,10 @@ const {
 } = React.PropTypes;
 
 const defaultIcons = {
-	'success': '<SuccessIcon/>',
-	'danger': '<DangerIcon/>',
-	'info': '<InfoIcon/>',
-	'warning': '<WarningIcon/>',
+	'success': <CheckIcon size="22" isBadge/>,
+	'danger': <CrossIcon size="22" isBadge />,
+	'info': <InfoIcon size="22" isBadge />,
+	'warning': <WarningIcon size="22" />,
 	'primary': null,
 	'default': null
 };

@@ -18,7 +18,7 @@
 
 	&-has-icon {
 		& > .@{banner}-content {
-			padding: @Banner-size-spacing-topBottom + 2px 0;
+			padding: @Banner-size-spacing-topBottom 0;
 		}
 	}
 
@@ -51,8 +51,12 @@
 
 	// has Icon
 	&-icon {
-		padding-top: @Banner-size-spacing-topBottom - 3px;
+		padding-top: @Banner-size-spacing-topBottom - 5px;
 		margin-right: @Banner-size-spacing-rightLeft;
+		.lucid-Icon {
+			width: 22px;
+			height: 22px;
+		}
 	}
 
 	// Types
@@ -65,11 +69,17 @@
 		border-color: @color-success-borderColorLite;
 		.gradient-reset(linear-gradient(@standardGradient, @color-success-backgroundColor, @color-success-backgroundColor));
 		background-color: #fff;
+		.lucid-Icon {
+			background: @color-success;
+		}
 	}
 	&-info {
 		border-color: @color-info-borderColorLite;
 		.gradient-reset(linear-gradient(@standardGradient, @color-info-backgroundColor, @color-info-backgroundColor));
 		background-color: #fff;
+		.lucid-Icon {
+			background: @color-info;
+		}
 	}
 	&-warning {
 		border-color: @color-warning-borderColorLite;
@@ -80,6 +90,9 @@
 		border-color: @color-danger-borderColorLite;
 		.gradient-reset(linear-gradient(@standardGradient, @color-danger-backgroundColor, @color-danger-backgroundColor));
 		background-color: #fff;
+		.lucid-Icon {
+			background: @color-danger;
+		}
 	}
 
 	&-small {

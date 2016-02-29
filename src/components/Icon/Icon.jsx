@@ -54,6 +54,7 @@ const Icon = React.createClass({
 		return {
 			size: 16,
 			aspectRatio: 'xMidYMid meet',
+			viewBox: '0 0 16 16',
 			isBadge: false
 		};
 	},
@@ -79,7 +80,7 @@ const Icon = React.createClass({
 				className={classNames(className, scopedClasses)}
 				width={size}
 				height={size}
-				viewBox={viewBox || [0, 0, size, size].join(' ')}
+				viewBox={viewBox}
 				preserveAspectRatio={aspectRatio}
 			>
 				{children}
