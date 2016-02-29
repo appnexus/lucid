@@ -36,6 +36,19 @@ Below is a running list of conventions we are establishing:
   - Css classes used for state, such as `.is-active`, should also be prefixed
     with the component name. E.g. Button should use the class
     `lucid-Button-is-active`
+  - We have a naming convention for our props. Below is a list of examples that
+    are valid. Please see the `variables.less` file for real world examples.
+```
+@type-propName
+@type-subType-propName
+
+@ComponentName-type-propName
+@ComponentName-type-subType-propName
+```
+  - Here is a list of valid `type`s:
+    - color
+    - size
+    - animation
 - Code styling
   - createClass only, no ES6 classes
   - Folders should use kebab case e.g.
