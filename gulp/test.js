@@ -8,6 +8,7 @@ module.exports = {
 	test: function once() {
 		return gulp.src(CONFIG.TEST_GLOB.DEST)
 		.pipe(mocha({
+			require: ['./gulp/beforeAll'],
 			reporter: 'spec',
 			debugBrk: debugBrk
 		}));
