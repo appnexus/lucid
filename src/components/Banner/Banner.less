@@ -1,5 +1,4 @@
-@banner: lucid-Banner;
-.@{banner} {
+.lucid-Banner {
 	.box-sizing();
 	border: 1px solid @color-default-borderColor;
 	background-color: @color-default-backgroundColor;
@@ -8,16 +7,16 @@
 	padding: 0 @Banner-size-spacing-rightLeft;
 	display: flex;
 
-	&.@{banner}-has-close {
+	&.lucid-Banner-has-close {
 		padding-right: 10px;
 	}
 
-	&.@{banner}-has-no-roundedCorners {
+	&.lucid-Banner-has-no-roundedCorners {
 		border-radius: 0;
 	}
 
 	&-has-icon {
-		& > .@{banner}-content {
+		& > .lucid-Banner-content {
 			padding: @Banner-size-spacing-topBottom 0;
 		}
 	}
@@ -51,11 +50,11 @@
 
 	// has Icon
 	&-icon {
-		padding-top: @Banner-size-spacing-topBottom - 5px;
+		padding-top: @Banner-size-spacing-topBottom - 3px;
 		margin-right: @Banner-size-spacing-rightLeft;
 		.lucid-Icon {
-			width: 22px;
-			height: 22px;
+			width: 18px;
+			height: 18px;
 		}
 	}
 
@@ -96,7 +95,7 @@
 	}
 
 	&-small {
-		.@{banner}-content {
+		.lucid-Banner-content {
 			padding: @Banner-size-spacing-topBottom - 5px 0;
 		}
 	}
