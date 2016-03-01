@@ -1,23 +1,34 @@
+@ButtonGroup-active-borderColor: fade(#fff, 30%);
+
 .lucid-ButtonGroup {
 	display: flex;
 
 	> .lucid-Button {
+		// This crazy selector was written to help with the problem of having two
+		// active buttons right next to each other. See the following more for
+		// context: https://appnexus.slack.com/archives/anx-react-future/p1456439335000016
+		&-is-active + .lucid-Button-is-active {
+			border-left: 1px solid @ButtonGroup-active-borderColor;
+		}
 
-		// First button
-		&:first-of-type {
+		// First button. The `::before` selector targets the button gradient
+		&:first-of-type,
+		&:first-of-type::before {
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
 			border-right: 0;
 		}
 
-		// Subway sandwiched buttons
-		&:not(:first-of-type):not(:last-of-type) {
+		// Buttons in the middle
+		&:not(:first-of-type):not(:last-of-type),
+		&:not(:first-of-type):not(:last-of-type)::before {
 			border-radius: 0;
 			border-right: 0;
 		}
 
-		// Last button
-		&:last-of-type {
+		// Last button. The `::before` selector targets the button gradient
+		&:last-of-type,
+		&:last-of-type::before {
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
 		}

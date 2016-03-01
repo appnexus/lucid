@@ -10,7 +10,7 @@
 
 pre code {
 	font-family: monospace;
-	tab-size: 2;
+	tab-size: 2; // This does not work in IE, I can live with that
 }
 
 html {
@@ -36,6 +36,16 @@ html {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+	}
+
+	&-props-table {
+		p {
+			margin: 5px 0;
+		}
+
+		td {
+			padding: 2px 7px;
+		}
 	}
 }
 

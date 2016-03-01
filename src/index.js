@@ -3,8 +3,8 @@ import Banner from './components/Banner/Banner';
 import Button from './components/Button/Button';
 import ButtonGroup from './components/ButtonGroup/ButtonGroup';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
-import Checkbox from './components/Checkbox/Checkbox';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
+import Checkbox from './components/Checkbox/Checkbox';
 import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
@@ -16,6 +16,8 @@ import RadioButton from './components/RadioButton/RadioButton';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import Switch from './components/Switch/Switch';
+import TextField from './components/TextField/TextField'
+import Validation from './components/Validation/Validation';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
 
 export default {
@@ -24,8 +26,8 @@ export default {
 	Button,
 	ButtonGroup,
 	CaretIcon,
-	Checkbox,
 	CheckIcon,
+	Checkbox,
 	CrossIcon,
 	EditIcon,
 	EligibilityIcon,
@@ -37,5 +39,7 @@ export default {
 	ResizeIcon,
 	SearchIcon,
 	Switch,
+	TextField,
+	Validation,
 	WarningIcon,
 };
