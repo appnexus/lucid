@@ -12,6 +12,7 @@ import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import RadioButton from './components/RadioButton/RadioButton';
+import RadioGroup from './components/RadioGroup/RadioGroup';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import Switch from './components/Switch/Switch';
@@ -34,6 +35,7 @@ export default {
 	MinusIcon,
 	PlusIcon,
 	RadioButton,
+	RadioGroup,
 	ResizeIcon,
 	SearchIcon,
 	Switch,
