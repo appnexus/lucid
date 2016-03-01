@@ -32,7 +32,8 @@ const CaretIcon = React.createClass({
 	getDefaultProps() {
 		return {
 			direction: 'down',
-			viewBox: '0 3 16 8'
+			viewBox: '0 3 16 8',
+			size: 16
 		};
 	},
 
@@ -40,6 +41,7 @@ const CaretIcon = React.createClass({
 		const {
 			className,
 			direction,
+			size,
 			...passThroughs
 		} = this.props;
 
@@ -54,6 +56,7 @@ const CaretIcon = React.createClass({
 			<Icon
 				{...passThroughs}
 				className={classNames(className, scopedClasses)}
+				size={size}
 			>
 				<path d='M1.234,4.408l6.718,7.184l6.813-7.184H1.234z' />
 			</Icon>

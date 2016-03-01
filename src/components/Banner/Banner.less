@@ -15,26 +15,6 @@
 		border-radius: 0;
 	}
 
-	&-has-icon {
-		& > .lucid-Banner-content {
-			padding: @Banner-size-spacing-topBottom 0;
-		}
-	}
-
-	&-content {
-		flex: 1;
-		padding: @Banner-size-spacing-topBottom 0;
-		line-height: 1em;
-		& > p {
-			&:first-of-type {
-				margin-top: 0;
-			}
-			&:last-of-type {
-				margin-bottom: 0;
-			}
-		}
-	}
-
 	&-close {
 		align-self: flex-start;
 		font-size: 1rem;
@@ -48,55 +28,86 @@
 		}
 	}
 
-	// has Icon
+	// States
+
+	&-has-icon {
+		& > .lucid-Banner-content {
+			padding: @Banner-size-spacing-topBottom 0;
+		}
+	}
+
 	&-icon {
 		padding-top: @Banner-size-spacing-topBottom - 3px;
 		margin-right: @Banner-size-spacing-rightLeft;
-		.lucid-Icon {
-			width: 18px;
-			height: 18px;
+	}
+
+	&-content {
+		flex: 1;
+		padding: @Banner-size-spacing-topBottom 0;
+		line-height: 1em;
+		& > p {
+			line-height: 1.25em;
+
+			&:first-of-type {
+				margin-top: 0;
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
 		}
 	}
 
 	// Types
+
 	&-primary {
 		border-color: @color-primary-borderColorLite;
 		.gradient-reset(linear-gradient(@standardGradient, @color-primary-backgroundColor, @color-primary-backgroundColor));
-		background-color: #fff;
+		background-color: @color-white;
 	}
 	&-success {
 		border-color: @color-success-borderColorLite;
 		.gradient-reset(linear-gradient(@standardGradient, @color-success-backgroundColor, @color-success-backgroundColor));
-		background-color: #fff;
-		.lucid-Icon {
-			background: @color-success;
-		}
+		background-color: @color-white;
 	}
 	&-info {
 		border-color: @color-info-borderColorLite;
 		.gradient-reset(linear-gradient(@standardGradient, @color-info-backgroundColor, @color-info-backgroundColor));
-		background-color: #fff;
-		.lucid-Icon {
-			background: @color-info;
-		}
+		background-color: @color-white;
 	}
 	&-warning {
 		border-color: @color-warning-borderColorLite;
 		.gradient-reset(linear-gradient(@standardGradient, @color-warning-backgroundColor, @color-warning-backgroundColor));
-		background-color: #fff;
+		background-color: @color-white;
 	}
 	&-danger {
 		border-color: @color-danger-borderColorLite;
 		.gradient-reset(linear-gradient(@standardGradient, @color-danger-backgroundColor, @color-danger-backgroundColor));
-		background-color: #fff;
-		.lucid-Icon {
-			background: @color-danger;
-		}
+		background-color: @color-white;
 	}
 
 	&-small {
 		.lucid-Banner-content {
 			padding: @Banner-size-spacing-topBottom - 5px 0;
 		}
+	}
+
+	// Transition styles
+
+	&-enter {
+		opacity: 0.01;
+	}
+
+	&-enter&-enter-active {
+		opacity: 1;
+		transition: opacity 300ms ease-in;
+	}
+
+	&-leave {
+		opacity: 1;
+	}
+
+	&-leave&-leave-active {
+		opacity: 0.01;
+		transition: opacity 300ms ease-in;
 	}
 }

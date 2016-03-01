@@ -1,30 +1,26 @@
+import _ from 'lodash';
 import React from 'react';
 import classNames from 'classnames';
-import _ from 'lodash';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { bindClassNames } from '../../util/style-helpers';
-import CheckIcon from '../Icon/CheckIcon/CheckIcon';
-import InfoIcon from '../Icon/InfoIcon/InfoIcon';
-import CrossIcon from '../Icon/CrossIcon/CrossIcon';
-import WarningIcon from '../Icon/WarningIcon/WarningIcon';
+import { SuccessIcon, DangerIcon, InfoIcon, WarningIcon } from '../../index';
 
 const boundClassNames = bindClassNames('Banner');
 
 const {
+	any,
 	bool,
 	string,
-	oneOfType,
 	oneOf,
-	node,
-	arrayOf,
 	func,
 	element
 } = React.PropTypes;
 
 const defaultIcons = {
-	'success': <CheckIcon size='18' isBadge/>,
-	'danger': <CrossIcon size='18' isBadge />,
-	'info': <InfoIcon size='18' isBadge />,
-	'warning': <WarningIcon size='18' />,
+	'success': <SuccessIcon />,
+	'danger': <DangerIcon />,
+	'info': <InfoIcon isBadge />,
+	'warning': <WarningIcon />,
 	'primary': null,
 	'default': null
 };
@@ -44,51 +40,54 @@ const defaultIcons = {
 const Banner = React.createClass({
 	propTypes: {
 		/**
-		 * pass in a bool to display predefined icon based on `kind`.
+		 * Pass in a bool to display predefined icon based on `kind`.
 		 */
 		hasIcon: bool,
 		/**
-		 * pass in a icon component for custom icons within banner.
+		 * Pass in a icon component for custom icons within `Banner`.
 		 */
 		icon: element,
 		/**
-		 * set this to `true` if you want to have a `x` close icon.
+		 * Set this to `true` if you want to have a `x` close icon.
 		 */
 		isCloseable: bool,
 		/**
-		 * set this value to `false` of you want to remove the rounded corners
-		 * on the `Banner`.  **default is `true`**
+		 * Set this value to `false` if you want to remove the rounded corners on
+		 * the `Banner`.  **default is `true`**
 		 */
 		hasRoundedCorners: bool,
 		/**
-		 * class names that are appended to the defaults
+		 * Class names that are appended to the defaults.
 		 */
 		className: string,
 		/**
-		 * any valid React children
+		 * Any valid React children.
 		 */
-		children: oneOfType([
-			node,
-			arrayOf(node)
-		]),
+		children: any,
 		/**
-		 * style variations of the Banner
+		 * Style variations of the `Banner`.
 		 */
 		kind: oneOf([
 			'primary',
 			'success',
 			'warning',
 			'danger',
-			'info'
+			'info',
+			'default',
 		]),
 		/**
-		 * if set to `true` the banner have smaller padding on the inside
+		 * If set to `true` the banner have smaller padding on the inside.
 		 */
 		isSmall: bool,
 		/**
-		 * called when the user clicks the Banner
+		 * Called when the user closes the `Banner`. Calls back with the native
+		 * click event.
 		 */
-		onClick: func,
+		onClose: func,
+		/**
+		 * Controls the visibility of the `Banner`.
+		 */
+		isClosed: bool,
 	},
 
 	getDefaultProps() {
@@ -99,13 +98,14 @@ const Banner = React.createClass({
 			hasRoundedCorners: true,
 			kind: 'default',
 			isSmall: false,
-			onClick: _.noop
+			onClose: _.noop,
 		};
 	},
 
 	render() {
 		const {
 			hasIcon,
+			onClose,
 			icon,
 			kind,
 			isSmall,
@@ -113,19 +113,17 @@ const Banner = React.createClass({
 			children,
 			isCloseable,
 			hasRoundedCorners,
+			isClosed,
 			...passThroughs
 		} = this.props;
 
 		let displayedIcon = null;
 
-		if(icon) {
+		if (icon) {
 			displayedIcon = icon;
-		}
-		else if(hasIcon) {
+		} else if (hasIcon) {
 			displayedIcon = defaultIcons[kind];
 		}
-
-		//if icon than hasicon needs to be ture
 
 		const scopedClasses = boundClassNames('~', {
 			'has-icon': displayedIcon,
@@ -140,16 +138,32 @@ const Banner = React.createClass({
 		});
 
 		return (
-			<section
-				className={classNames(className, scopedClasses)}
-				{...passThroughs}
-				>
-				{displayedIcon ? <span className={boundClassNames('icon')}>{displayedIcon}</span> : null}
-				<span className={boundClassNames('content')}>
-					{children}
-				</span>
-				{isCloseable ? <span className={boundClassNames('close')} onClick={this.props.onClick}>{String.fromCharCode(0x00d7)}</span> : null}
-			</section>
+			<ReactCSSTransitionGroup
+				transitionName={boundClassNames('~')}
+				transitionEnterTimeout={300}
+				transitionLeaveTimeout={300}
+			>
+				{!isClosed ?
+					<section
+						{...passThroughs}
+						className={classNames(className, scopedClasses)}
+					>
+						{displayedIcon ?
+							<span className={boundClassNames('icon')}>{displayedIcon}</span>
+						: null}
+
+						<span className={boundClassNames('content')}>
+							{children}
+						</span>
+
+						{isCloseable ?
+							<span className={boundClassNames('close')} onClick={onClose}>
+								{String.fromCharCode(0x00d7)}
+							</span>
+						: null}
+					</section>
+				: null}
+			</ReactCSSTransitionGroup>
 		);
 	}
 });
