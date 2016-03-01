@@ -3,9 +3,9 @@
 First of all, thank you for contributing. It’s appreciated.
 
 1. Clone the repo and install dependencies with `npm install`.
-2. Make a GitHub issue before doing any significant amount of work. Make sure the core team thinks your idea makes sense for the project. This step is really important. If you skip this, your PR will likely be rejected.
-3. Run `npm test` to lint and test. Don't commit before fixing all errors and warnings.
-4. Reference the issue's number in your commit. E.g.: "Did this #12"
+2. Make a GitHub issue before doing any significant amount of work. Make sure the core team approves your idea. This step is really important. If you skip this, your PR might be rejected.
+3. Run `npm test` to lint and test, and `npm run dev` to see the docs. Don't commit before fixing all errors and warnings.
+4. Reference the issue's number in your commit. E.g.: "Did this #12".
 5. Make a pull request.
 
 ## Process
