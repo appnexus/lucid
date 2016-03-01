@@ -111,7 +111,7 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 		return (
 			<span
 					{...passThroughs}
-					className={classNames(boundClassNames('~'))}
+					className={classNames(boundClassNames('~'), className)}
 			>
 				{_.map(radioButtonChildProps, (radioButtonChildProp, index) => {
 					return (
