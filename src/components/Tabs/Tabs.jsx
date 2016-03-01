@@ -87,10 +87,21 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 					{_.map(tabChildProps, (tabChildProp, index) => {
 						return (
 							<li
+								className={boundClassNames('tab-bar-item')}
 								key={index}
 								onClick={_.partial(onSelect, index)}
 							>
-								{tabChildProp.Title}
+								<div
+									className={boundClassNames('tab-bar-spacer', {
+										'tab-bar-spacer-is-active': index === selectedIndex,
+										'tab-bar-spacer-is-first': index === 0
+									})}
+								/>
+								<div className={boundClassNames('tab-bar-content', {
+									'tab-bar-content-is-first': index === 0
+								})}>
+									{tabChildProp.Title}
+								</div>
 							</li>
 						)
 					})}

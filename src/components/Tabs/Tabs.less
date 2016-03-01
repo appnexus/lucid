@@ -1,0 +1,53 @@
+@Tabs-spacer-height: 3px;
+@Tabs-tab-height: 28px - @Tabs-spacer-height;
+
+.lucid-Tabs {
+	&-tab-bar {
+		font-size: @fontSize;
+		font-family: @fontFamily;
+		list-style-type: none;
+		display: flex;
+		margin: 0;
+		padding: 0;
+	}
+
+	&-tab-bar-item {
+		text-align: center;
+		flex: 1 1 auto;
+
+		&:hover {
+			background-color: grey;
+		}
+	}
+
+	&-tab-bar-spacer {
+		border: 1px solid @color-default-borderColor;
+		border-bottom: 0;
+		border-left: 0;
+		height: 3px;
+	}
+	&-tab-bar-spacer-is-active {
+		border: 0;
+		background-color: @color-primary;
+	}
+	&-tab-bar-spacer-is-first {
+		border-left: 1px solid @color-default-borderColor;
+	}
+
+	&-tab-bar-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: @Tabs-tab-height;
+		border: 1px solid @color-default-borderColor;
+		border-top: 0;
+		border-left: 0;
+	}
+	&-tab-bar-content-is-first {
+		border-left: 1px solid @color-default-borderColor;
+	}
+
+	&-content {
+
+	}
+}

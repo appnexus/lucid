@@ -10,6 +10,8 @@ export default React.createClass({
 			<StatefulTabs>
 				<StatefulTabs.Tab Title='One'>One content</StatefulTabs.Tab>
 				<StatefulTabs.Tab Title='Two'>Two content</StatefulTabs.Tab>
+				<StatefulTabs.Tab Title='Three'>Three content</StatefulTabs.Tab>
+				<StatefulTabs.Tab Title='Four'>Four content</StatefulTabs.Tab>
 			</StatefulTabs>
 		);
 	}
