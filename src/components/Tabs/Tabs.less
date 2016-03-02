@@ -2,7 +2,7 @@
 @Tabs-tab-height: 28px - @Tabs-spacer-height;
 
 .lucid-Tabs {
-	&-tab-bar {
+	&-bar {
 		font-size: @fontSize;
 		font-family: @fontFamily;
 		list-style-type: none;
@@ -11,30 +11,45 @@
 		padding: 0;
 	}
 
-	&-tab-bar-item {
+	&-bar-item {
+		color: @color-primary;
 		text-align: center;
 		flex: 1 1 auto;
+		cursor: pointer;
+		user-select: none;
 
 		&:hover {
-			background-color: grey;
+			background-color: @color-gray-5;
+		}
+
+		&:active {
+			box-shadow: @shadow-inset;
+		}
+	}
+	&-bar-item-is-active {
+		color: #000;
+		cursor: initial;
+
+		&:hover {
+			background-color: initial;
 		}
 	}
 
-	&-tab-bar-spacer {
+	&-bar-spacer {
 		border: 1px solid @color-default-borderColor;
 		border-bottom: 0;
 		border-left: 0;
 		height: 3px;
 	}
-	&-tab-bar-spacer-is-active {
+	&-bar-spacer-is-active {
 		border: 0;
 		background-color: @color-primary;
 	}
-	&-tab-bar-spacer-is-first {
+	&-bar-spacer-is-first {
 		border-left: 1px solid @color-default-borderColor;
 	}
 
-	&-tab-bar-content {
+	&-bar-content {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -43,8 +58,12 @@
 		border-top: 0;
 		border-left: 0;
 	}
-	&-tab-bar-content-is-first {
+	&-bar-content-is-first {
 		border-left: 1px solid @color-default-borderColor;
+	}
+	&-bar-content-is-open {
+		border-bottom: 0;
+		padding-bottom: 1px;
 	}
 
 	&-content {

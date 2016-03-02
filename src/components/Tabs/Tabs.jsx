@@ -53,6 +53,11 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 		selectedIndex: number,
 
 		onSelect: func,
+
+		/**
+		 * If `true` then the active tab will appear open on the bottom.
+		 */
+		hasOpenTabs: bool,
 	},
 
 	getDefaultProps() {
@@ -61,6 +66,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 			className: null,
 			selectedIndex: 0,
 			onSelect: _.noop,
+			hasOpenTabs: true,
 		};
 	},
 
@@ -70,6 +76,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 			onSelect,
 			selectedIndex,
 			style,
+			hasOpenTabs,
 			...passThroughs,
 		} = this.props;
 
@@ -83,22 +90,23 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 				style={style}
 				className={rootClasses}
 			>
-				<ul className={boundClassNames('tab-bar')}>
+				<ul className={boundClassNames('bar')}>
 					{_.map(tabChildProps, (tabChildProp, index) => {
 						return (
 							<li
-								className={boundClassNames('tab-bar-item')}
+								className={boundClassNames('bar-item', {
+									'bar-item-is-active': index === selectedIndex
+								})}
 								key={index}
 								onClick={_.partial(onSelect, index)}
 							>
-								<div
-									className={boundClassNames('tab-bar-spacer', {
-										'tab-bar-spacer-is-active': index === selectedIndex,
-										'tab-bar-spacer-is-first': index === 0
-									})}
-								/>
-								<div className={boundClassNames('tab-bar-content', {
-									'tab-bar-content-is-first': index === 0
+								<div className={boundClassNames('bar-spacer', {
+									'bar-spacer-is-active': index === selectedIndex,
+									'bar-spacer-is-first': index === 0,
+								})} />
+								<div className={boundClassNames('bar-content', {
+									'bar-content-is-open': hasOpenTabs && index === selectedIndex,
+									'bar-content-is-first': index === 0,
 								})}>
 									{tabChildProp.Title}
 								</div>
@@ -106,7 +114,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 						)
 					})}
 				</ul>
-				<div className={boundClassNames('content')}>
+				<div>
 					{tabChildProps[selectedIndex].children}
 				</div>
 			</div>
