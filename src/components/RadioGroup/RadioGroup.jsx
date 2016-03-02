@@ -12,11 +12,9 @@ import reducers from './RadioGroup.reducers';
 const boundClassNames = bindClassNames('RadioGroup');
 
 const {
-	arrayOf,
 	func,
 	node,
 	number,
-	oneOfType,
 	string
 } = React.PropTypes;
 
