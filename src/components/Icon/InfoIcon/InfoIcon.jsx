@@ -27,6 +27,7 @@ const InfoIcon = React.createClass({
 			<Icon
 				{...passThroughs}
 				className={classNames(className, boundClassNames('~'))}
+				viewBox='0 0 16 16'
 			>
 				<path d='M6.739,6.11h2.521v7.562H6.739V6.11z' />
 				<path d='M6.739,2.328h2.521v2.521H6.739V2.328z' />
