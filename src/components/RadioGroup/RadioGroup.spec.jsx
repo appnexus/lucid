@@ -29,7 +29,7 @@ describe('RadioGroup', () => {
 				});
 			});
 
-			it('defaults to a randomly generated string that is passed along to the children.', () => {
+			it('defaults to a string that is passed along to the children.', () => {
 				// Use `mount` here to get at the props that are actually passed
 				// to the component's root element (which includes the defaults)
 				// as opposed to the props that are provided by the consumer to

@@ -43,10 +43,7 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 		 * Should be instances of `RadioGroup.RadioButton` which supports the
 		 * same props as `RadioButton`.
 		 */
-		children: oneOfType([
-			arrayOf(node),
-			node
-		]),
+		children: node,
 
 		/**
 		 * Appended to the component-specific class names set on the root
@@ -79,8 +76,6 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 
 	getDefaultProps() {
 		return {
-			children: null,
-			className: null,
 			name: `${boundClassNames('~')}-${getRandom()}`,
 			onSelect: _.noop,
 			selectedIndex: 0
@@ -101,7 +96,7 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 			isSelected: true
 		});
 
-		// If there are any `RadioGroup.RadioButton` children with `isSelecte`
+		// If there are any `RadioGroup.RadioButton` children with `isSelected`
 		// equal to true, then the index of the last one should override the
 		// value of the `selectedIndex` prop.
 		const actualSelectedIndex = selectedIndexFromChildren !== -1 ?
