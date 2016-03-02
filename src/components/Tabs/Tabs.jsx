@@ -50,8 +50,15 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 		 */
 		className: string,
 
+		/**
+		 * Index of the currently selected tab.
+		 */
 		selectedIndex: number,
 
+		/**
+		 * Callback for when the user clicks a tab. Called with the index of the
+		 * tab that was clicked.
+		 */
 		onSelect: func,
 
 		/**
