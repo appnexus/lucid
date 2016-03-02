@@ -9,7 +9,6 @@ const boundClassNames = bindClassNames('Tabs');
 
 const {
 	any,
-	node,
 	string,
 	number,
 	bool,
@@ -26,9 +25,9 @@ const {
 const Tabs = React.createClass(createLucidComponentDefinition({
 	childProps: {
 		Tab: {
-			Title: node, // TODO: can this be a proper child component itself?
-			isSelected: bool,
-		}
+			isSelected: bool
+		},
+		Title: null // we're only interested in children
 	},
 
 	reducers,
@@ -44,6 +43,12 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 		 * child component instead. See the examples for details.
 		 */
 		Tab: any,
+
+		/**
+		 * Title can be a prop on `Tabs.Tab` or a child of `Tabs.Tab`. See the
+		 * examples for details.
+		 */
+		Title: any,
 
 		/**
 		 * Class names that are appended to the defaults.
@@ -102,7 +107,8 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 						return (
 							<li
 								className={boundClassNames('bar-item', {
-									'bar-item-is-active': index === selectedIndex
+									'bar-item-is-active': index === selectedIndex,
+									'bar-item-is-open': hasOpenTabs && index === selectedIndex,
 								})}
 								key={index}
 								onClick={_.partial(onSelect, index)}
@@ -112,16 +118,15 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 									'bar-spacer-is-first': index === 0,
 								})} />
 								<div className={boundClassNames('bar-content', {
-									'bar-content-is-open': hasOpenTabs && index === selectedIndex,
 									'bar-content-is-first': index === 0,
 								})}>
-									{tabChildProp.Title}
+									{_.get(_.first(Tabs.Title.findInAllAsProps(tabChildProp)), 'children', '')}
 								</div>
 							</li>
 						)
 					})}
 				</ul>
-				<div>
+				<div className={boundClassNames('content')}>
 					{tabChildProps[selectedIndex].children}
 				</div>
 			</div>

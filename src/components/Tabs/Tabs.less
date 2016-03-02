@@ -17,6 +17,7 @@
 		flex: 1 1 auto;
 		cursor: pointer;
 		user-select: none;
+		margin-bottom: -1px;
 
 		&:hover {
 			background-color: @color-gray-5;
@@ -34,11 +35,13 @@
 			background-color: initial;
 		}
 	}
+	&-bar-item-is-open {
+		border-bottom: 1px solid @color-white;
+	}
 
 	&-bar-spacer {
-		border: 1px solid @color-default-borderColor;
-		border-bottom: 0;
-		border-left: 0;
+		border-top: 1px solid @color-default-borderColor;
+		border-right: 1px solid @color-default-borderColor;
 		height: 3px;
 	}
 	&-bar-spacer-is-active {
@@ -54,19 +57,13 @@
 		justify-content: center;
 		align-items: center;
 		height: @Tabs-tab-height;
-		border: 1px solid @color-default-borderColor;
-		border-top: 0;
-		border-left: 0;
+		border-right: 1px solid @color-default-borderColor;
 	}
 	&-bar-content-is-first {
 		border-left: 1px solid @color-default-borderColor;
 	}
-	&-bar-content-is-open {
-		border-bottom: 0;
-		padding-bottom: 1px;
-	}
 
 	&-content {
-
+		border-top: 1px solid @color-default-borderColor;
 	}
 }
