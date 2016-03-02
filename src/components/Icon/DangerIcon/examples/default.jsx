@@ -1,11 +1,11 @@
 import React from 'react';
-import WarningIcon from '../WarningIcon';
+import DangerIcon from '../DangerIcon';
 
 export default React.createClass({
 	render() {
 		return (
 			<div>
-				<WarningIcon />
+				<DangerIcon />
 			</div>
 		);
 	}
