@@ -1,5 +1,5 @@
 @Tabs-spacer-height: 3px;
-@Tabs-tab-height: 28px - @Tabs-spacer-height;
+@Tabs-tab-height: 28px;
 
 .lucid-Tabs {
 	&-bar {
@@ -13,11 +13,21 @@
 
 	&-bar-item {
 		color: @color-primary;
-		text-align: center;
 		flex: 1 1 auto;
 		cursor: pointer;
 		user-select: none;
 		margin-bottom: -1px;
+		height: @Tabs-tab-height;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-top: @Tabs-spacer-height;
+		border: 1px solid @color-default-borderColor;
+		border-right: 0;
+
+		&:last-of-type {
+			border-right: 1px solid @color-default-borderColor;
+		}
 
 		&:hover {
 			background-color: @color-gray-5;
@@ -28,6 +38,8 @@
 		}
 	}
 	&-bar-item-is-active {
+		border-top: 3px solid @color-primary;
+		padding-top: 0;
 		color: #000;
 		cursor: initial;
 
@@ -35,35 +47,12 @@
 			background-color: initial;
 		}
 	}
-	&-bar-item-is-open {
+	&-bar-item-is-active-and-open {
 		border-bottom: 1px solid @color-white;
-	}
-
-	&-bar-spacer {
-		border-top: 1px solid @color-default-borderColor;
-		border-right: 1px solid @color-default-borderColor;
-		height: 3px;
-	}
-	&-bar-spacer-is-active {
-		border: 0;
-		background-color: @color-primary;
-	}
-	&-bar-spacer-is-first {
-		border-left: 1px solid @color-default-borderColor;
-	}
-
-	&-bar-content {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: @Tabs-tab-height;
-		border-right: 1px solid @color-default-borderColor;
-	}
-	&-bar-content-is-first {
-		border-left: 1px solid @color-default-borderColor;
 	}
 
 	&-content {
 		border-top: 1px solid @color-default-borderColor;
+		padding-top: 10px; // TODO: use our default gutter
 	}
 }
