@@ -1,6 +1,8 @@
 import React from 'react';
 import _ from 'lodash';
-import {Grid, Cell} from '../Grid';
+import Grid from '../Grid';
+
+const Cell = Grid.Cell;
 
 const gridStyle = {
 	half: { background: '#0089c4' },
