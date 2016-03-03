@@ -69,7 +69,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 		/**
 		 * If `true` then the active tab will appear open on the bottom.
 		 */
-		hasOpenTabs: bool,
+		isOpen: bool,
 	},
 
 	getDefaultProps() {
@@ -78,7 +78,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 			className: null,
 			selectedIndex: 0,
 			onSelect: _.noop,
-			hasOpenTabs: true,
+			isOpen: true,
 		};
 	},
 
@@ -88,7 +88,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 			onSelect,
 			selectedIndex,
 			style,
-			hasOpenTabs,
+			isOpen,
 			...passThroughs,
 		} = this.props;
 
@@ -108,7 +108,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 							<li
 								className={boundClassNames('bar-item', {
 									'bar-item-is-active': index === selectedIndex,
-									'bar-item-is-active-and-open': hasOpenTabs && index === selectedIndex
+									'bar-item-is-active-and-open': isOpen && index === selectedIndex
 								})}
 								key={index}
 								onClick={_.partial(onSelect, index)}
