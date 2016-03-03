@@ -25,6 +25,9 @@ const {
  *
  * It uses a hidden native radio button control under the hood but leverages
  * other HTML elements to visualize its state.
+ *
+ * Any props that are not explicitly defined in `propTypes` are spread onto the
+ * native control.
  */
 const RadioButton = React.createClass({
 	propTypes: {

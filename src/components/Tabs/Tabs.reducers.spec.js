@@ -1,0 +1,13 @@
+import assert from 'assert';
+import reducers from './Tabs.reducers.js';
+
+describe('Tabs reducers', () => {
+	it('onSelect should set selectedIndex properly', () => {
+		const initialState = { foo: 1 };
+
+		assert.deepEqual(reducers.onSelect(initialState, 99), {
+			foo: 1,
+			selectedIndex: 99
+		});
+	});
+});
