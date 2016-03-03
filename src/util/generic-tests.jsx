@@ -3,21 +3,31 @@ import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import describeWithDOM  from './describe-with-dom';
 import _ from 'lodash';
+import lucid from '../index';
 
 // Common tests for all our components
-export function common(Component) {
+export function common(Component, getDefaultProps=_.noop) {
+
+	function generateDefaultProps(props={}) {
+		return _.assign({}, getDefaultProps(), props);
+	}
+
 	describe(`[common]`, () => {
+		it('should have a `displayName` defined', () => {
+			assert(Component.displayName);
+		});
+
 		it('should pass through styles to the root element', () => {
 			let style = {
 				backgroundColor: '#f0f'
 			};
-			const wrapper = shallow(<Component style={style}/>);
+			const wrapper = shallow(<Component {...generateDefaultProps()} style={style}/>);
 			assert.deepEqual(wrapper.first().prop('style'), style);
 		});
 
-		it('should pass through className', () => {
+		it('should pass through `className`', () => {
 			let expectedClass = 'rAnDoM';
-			const wrapper = shallow(<Component className={expectedClass}/>);
+			const wrapper = shallow(<Component {...generateDefaultProps()} className={expectedClass}/>);
 			let classNames = wrapper.first().prop('className').split(' ');
 
 			assert(_.includes(classNames, expectedClass), `'${classNames}' should include '${expectedClass}'`);
@@ -25,14 +35,14 @@ export function common(Component) {
 
 		it('should have an application scoped base class', () => {
 			let expectedClass = 'lucid-' + Component.displayName;
-			const wrapper = shallow(<Component />);
+			const wrapper = shallow(<Component {...generateDefaultProps()} />);
 			let classNames = wrapper.first().prop('className').split(' ');
 
 			assert(_.includes(classNames, expectedClass), `'${classNames}' should include '${Component.displayName}'`);
 		});
 
 		it('should have only application scoped classes', () => {
-			const wrapper = shallow(<Component>test</Component>);
+			const wrapper = shallow(<Component {...generateDefaultProps()} />);
 			let parentClasses = wrapper.first().prop('className').split(' ');
 			let childrenClasses = wrapper.children().reduce((acc, node) => {
 				if (!node.prop('className')) {
@@ -76,6 +86,9 @@ export function common(Component) {
 			}));
 		});
 
+		it('should be available as an exported module from index.js', () => {
+			assert(lucid[Component.displayName]);
+		});
 	});
 }
 

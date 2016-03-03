@@ -4,7 +4,7 @@ import React from 'react';
 
 import { bindClassNames } from '../../util/style-helpers';
 
-const generateBoundClassNames = bindClassNames('Switch');
+const boundClassNames = bindClassNames('Switch');
 const {
 	bool,
 	func,
@@ -79,8 +79,8 @@ const Switch = React.createClass({
 		} = this.props;
 
 		return (
-			<div
-					className={classNames(generateBoundClassNames('~', {
+			<span
+					className={classNames(boundClassNames('~', {
 						'is-disabled': isDisabled,
 						'is-selected': isSelected
 					}), className)}
@@ -91,16 +91,16 @@ const Switch = React.createClass({
 				<input
 						{...passThroughs}
 						checked={isSelected}
-						className={generateBoundClassNames('native')}
+						className={boundClassNames('native')}
 						disabled={isDisabled}
 						defaultChecked={isSelected}
 						ref='nativeElement'
 						type='checkbox'
 				/>
-				<span className={generateBoundClassNames('visualization-container')} />
-				<span className={generateBoundClassNames('visualization-glow')} />
-				<span className={generateBoundClassNames('visualization-handle')} />
-			</div>
+				<span className={boundClassNames('visualization-container')} />
+				<span className={boundClassNames('visualization-glow')} />
+				<span className={boundClassNames('visualization-handle')} />
+			</span>
 		);
 	},
 

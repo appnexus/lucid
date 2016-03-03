@@ -75,35 +75,64 @@ describe('Switch', () => {
 });
 
 describeWithDOM('Switch', () => {
-	describe('user clicks or taps on the rendered control', () => {
-		it('calls the function passed in as the `onSelect` prop.', () => {
-			let onSelect;
-			let wrapper;
+	function simulateEvent(reactElement, selector, event) {
+		mount(reactElement).find(selector).simulate(event);
+	}
 
-			_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
-				_.forEach(['click', 'touchend'], (event) => {
-					onSelect = sinon.spy();
-					wrapper = mount(<Switch onSelect={onSelect} />);
-					wrapper.find(`.lucid-Switch${classSubString}`).simulate(event);
-					assert(onSelect.calledOnce);
-				});
-			});
-		});
-
-		it('passes the opposite of the value of the `isSelected` prop as the first argument.', () => {
+	function verifyArgumentsWhenFalse(event) {
+		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
 			const onSelect = sinon.spy();
-			const wrapper = mount(<Switch isSelected={true} onSelect={onSelect} />);
 
-			wrapper.find(`.lucid-Switch`).simulate('click');
-			assert.equal(onSelect.args[0][0], false);
-		});
-
-		it('passes the React synthetic event as the second argument.', () => {
-			const onSelect = sinon.spy();
-			const wrapper = mount(<Switch onSelect={onSelect} />);
-
-			wrapper.find(`.lucid-Switch`).simulate('click');
+			simulateEvent(<Switch isSelected={false} onSelect={onSelect} />, `.lucid-Switch${classSubString}`, event);
+			assert.equal(onSelect.args[0][0], true);
 			assert(onSelect.args[0][1] instanceof SyntheticEvent);
+		});
+	}
+
+	function verifyArgumentsWhenTrue(event) {
+		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
+			const onSelect = sinon.spy();
+
+			simulateEvent(<Switch isSelected={true} onSelect={onSelect} />, `.lucid-Switch${classSubString}`, event);
+			assert.equal(onSelect.args[0][0], false);
+			assert(onSelect.args[0][1] instanceof SyntheticEvent);
+		});
+	}
+
+	function verifyOnSelect(event) {
+		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
+			const onSelect = sinon.spy();
+
+			simulateEvent(<Switch onSelect={onSelect} />, `.lucid-Switch${classSubString}`, event);
+			assert(onSelect.calledOnce);
+		});
+	}
+
+	describe('user clicks on the rendered control', () => {
+		it('calls the function passed in as the `onSelect` prop...', () => {
+			verifyOnSelect('click');
+		});
+
+		it('...and when `isSelected` is true passes along false as the first argument and a React synthetic event as the second argument.', () => {
+			verifyArgumentsWhenTrue('click');
+		});
+
+		it('...and when `isSelected` is false passes along true as the first argument and a React synthetic event as the second argument.', () => {
+			verifyArgumentsWhenFalse('click');
+		});
+	});
+
+	describe('user taps on the rendered control', () => {
+		it('calls the function passed in as the `onSelect` prop...', () => {
+			verifyOnSelect('touchend');
+		});
+
+		it('...and when `isSelected` is true passes along false as the first argument and a React synthetic event as the second argument.', () => {
+			verifyArgumentsWhenTrue('touchend');
+		});
+
+		it('...and when `isSelected` is false passes along true as the first argument and a React synthetic event as the second argument.', () => {
+			verifyArgumentsWhenFalse('touchend');
 		});
 	});
 });

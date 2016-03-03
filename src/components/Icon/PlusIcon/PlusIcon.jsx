@@ -27,6 +27,7 @@ const PlusIcon = React.createClass({
 			<Icon
 				{...passThroughs}
 				className={classNames(className, boundClassNames('~'))}
+				viewBox='0 0 16 16'
 			>
 				<path d='M1,6.6h14v2.8H1V6.6z'/>
 				<path d='M6.6,1v14h2.8V1H6.6z'/>

@@ -15,7 +15,7 @@ npm install --save lucid-ui
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from 'lucid';
+import { Button } from 'lucid-ui';
 
 ReactDOM.render(
 	<Button>Hello World<Button/>,
@@ -26,14 +26,14 @@ ReactDOM.render(
 You must also include lucid's styles:
 
 ```less
-@import "node_modules/lucid/src/index.less";
+@import "node_modules/lucid-ui/src/index.less";
 ```
 
-Or use the precompiled CSS file `node_modules/lucid/dist/index.css`.
+Or use the precompiled CSS file `node_modules/lucid-ui/dist/index.css`.
 
 ### Dependencies
 
-`lucid` has both `react` and `react-dom` as `peerDependency`s. This means
+`lucid-ui` has both `react` and `react-dom` as `peerDependency`s. This means
 the consuming application is responsible for declaring a dependency on a
 compatible version.
 
@@ -42,7 +42,7 @@ package.json
 
 {
 	"dependencies": {
-		"lucid": "^0.0.1",
+		"lucid-ui": "^0.0.1",
 		"react": "^0.14.0",
 		"react-dom": "^0.14.0"
 	}
