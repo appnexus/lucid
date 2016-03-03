@@ -5,7 +5,13 @@
 
 	&-is-vertical {
 		flex-direction: column;
+
+		.lucid-Grid-Cell {
+			display: flex;
+			padding: 0 10px 5px 0;
+		}
 	}
+
 	&-is-horizontal {
 		flex-direction: row;
 	}
@@ -13,7 +19,7 @@
 		flex-wrap: wrap;
 	}
 	&-is-gutterless {
-		.lucid-Cell {
+		.lucid-Grid-Cell {
 			padding: 0;
 		}
 	}
@@ -21,10 +27,11 @@
 	.lucid-Grid { flex: 1 }
 }
 
-.lucid-Cell {
+.lucid-Grid-Cell {
 	.box-sizing();
+	position: relative;
 	flex: 1 1 auto;
-	padding: 10px 0 0 5px;
+	padding: 10px 5px 0 0;
 
 	&:first-child{
 		padding-left: 0;
@@ -33,6 +40,7 @@
 	&-is-full{
 		flex: 0 0 100%;
 	}
+
 	&-is-half{
 		flex: 0 0 50%;
 	}
@@ -43,16 +51,16 @@
 		flex: 0 0 25%;
 	}
 
-	&-is-2{ flex: 2 1 0%; }
-	&-is-3{ flex: 3 1 0%; }
-	&-is-4{ flex: 4 1 0%; }
-	&-is-5{ flex: 5 1 0%; }
-	&-is-6{ flex: 6 1 0%; }
-	&-is-7{ flex: 7 1 0%; }
-	&-is-8{ flex: 8 1 0%; }
-	&-is-9{ flex: 9 1 0%; }
-	&-is-10{ flex: 10 1 0%; }
-	&-is-11{ flex: 11 1 0%; }
+	&-is-2{ flex: 0 0 (100%/12*2); }
+	&-is-3{ flex: 0 0 (100%/12*3); }
+	&-is-4{ flex: 0 0 (100%/12*4); }
+	&-is-5{ flex: 0 0 (100%/12*5); }
+	&-is-6{ flex: 0 0 (100%/12*6); }
+	&-is-7{ flex: 0 0 (100%/12*7); }
+	&-is-8{ flex: 0 0 (100%/12*8); }
+	&-is-9{ flex: 0 0 (100%/12*9); }
+	&-is-10{ flex: 0 0 (100%/12*10); }
+	&-is-11{ flex: 0 0 (100%/12*11); }
 
 	&-is-offset-quarter { margin-left: 25%; }
 	&-is-offset-third { margin-left: 33.3333%; }
