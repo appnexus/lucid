@@ -5,16 +5,13 @@ require('../index.less');
 import _ from 'lodash';
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, Link, useRouterHistory } from 'react-router';
-import { createHashHistory } from 'react-router/node_modules/history';
+import { Router, Route, Link} from 'react-router';
+import createHashHistory from 'history/lib/createHashHistory';
 import docgenMapRaw from './docgen.json';
 import hljs from 'hljs';
 import { markdown } from 'markdown';
 
-// Opt out of the ?_k=asdffb in the query string since we don't need to keep
-// state in our router.
-// https://github.com/reactjs/react-router/issues/1967#issuecomment-187730662
-const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
+const hashHistory = createHashHistory({ queryKey: false });
 
 // This is webpackism for "dynamically load all example files"
 const reqExamples = require.context('../components/', true, /examples.*\.jsx?/i);
@@ -295,7 +292,7 @@ const App = React.createClass({
 });
 
 render((
-	<Router history={appHistory}>
+	<Router history={hashHistory}>
 		<Route path='/' component={App}>
 			<Route path='/components/:componentName' component={Component}/>
 		</Route>
