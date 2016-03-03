@@ -27,7 +27,11 @@ const ColorPalette = React.createClass({
 		/**
 		 * the name of the variable
 		 */
-		variableName: string
+		variableName: string,
+		/**
+		 * the name of the variable
+		 */
+		hexString: string,
 	},
 
 	render() {
@@ -35,6 +39,7 @@ const ColorPalette = React.createClass({
 		const {
 			className,
 			variableName,
+			hexString,
 			...passThroughs
 		} = this.props;
 
@@ -43,7 +48,8 @@ const ColorPalette = React.createClass({
 				className={classNames(boundClassNames('~'))}
 			>
 				<div className={className}></div>
-				<p>{variableName}</p>
+				<p><code>{variableName}</code></p>
+				<p className={boundClassNames('hex-string')}>{hexString}</p>
 			</div>);
 	}
 });
