@@ -3,7 +3,7 @@ import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import describeWithDOM  from './describe-with-dom';
 import _ from 'lodash';
-import lucid from '../index';
+import * as lucid from '../index';
 
 // Common tests for all our components
 export function common(Component, getDefaultProps=_.noop) {
