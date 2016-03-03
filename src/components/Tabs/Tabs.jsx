@@ -42,7 +42,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 		 * While you can pass tab content through this prop, it's better to use the
 		 * child component instead. See the examples for details.
 		 */
-		Tab: any,
+		Tab: any.isRequired,
 
 		/**
 		 * `Title` can be a prop on `Tabs.Tab` or a child of `Tabs.Tab`. See the
