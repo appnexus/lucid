@@ -1,20 +1,20 @@
 import React from 'react';
 import classNames from 'classnames';
-import Icon from '../Icon';
+import CheckIcon from '../CheckIcon/CheckIcon';
 
 import { bindClassNames } from '../../../util/style-helpers';
 
-const boundClassNames = bindClassNames('MinusIcon');
+const boundClassNames = bindClassNames('SuccessIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"], "extend": "Icon"}
+ * {"categories": ["visual design", "icons"], "extend": "CheckIcon"}
  *
- * A minus icon.
+ * A success icon.
  */
-const MinusIcon = React.createClass({
+const SuccessIcon = React.createClass({
 	propTypes: {
-		...Icon.propTypes,
+		...CheckIcon.propTypes,
 	},
 
 	render() {
@@ -24,15 +24,13 @@ const MinusIcon = React.createClass({
 		} = this.props;
 
 		return (
-			<Icon
+			<CheckIcon
 				{...passThroughs}
 				className={classNames(className, boundClassNames('~'))}
-				viewBox='0 0 16 16'
-			>
-				<path d='M3,7h10v2H3V7z' />
-			</Icon>
+				isBadge
+			/>
 		);
 	}
 });
 
-export default MinusIcon;
+export default SuccessIcon;

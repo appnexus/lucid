@@ -55,6 +55,7 @@ const EligibilityIcon = React.createClass({
 			<Icon
 				{...passThroughs}
 				className={classNames(className, scopedClasses)}
+				viewBox='0 0 16 16'
 			>
 				<g>
 					<path className='Icon-left'
