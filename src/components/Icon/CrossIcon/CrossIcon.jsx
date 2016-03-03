@@ -28,7 +28,7 @@ const CrossIcon = React.createClass({
 				{...passThroughs}
 				className={classNames(className, boundClassNames('~'))}
 			>
-				<path d='M6.45,8l-2.9-2.9L5.15,3.5L8.05,6.4l2.9-2.9l1.6,1.6l-3,2.9l3,2.9l-1.6,1.6l-2.9-3l-3,3l-1.6-1.6L6.45,8z'/>
+				<path d='M8,9.25L5.25,6.48,6.53,5.16l2.8,2.78L12.1,5.16l1.32,1.31L10.63,9.25,13.42,12,12.1,13.34,9.32,10.56,6.53,13.34,5.21,12Z' />
 			</Icon>
 		);
 	}

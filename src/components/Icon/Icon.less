@@ -1,6 +1,6 @@
-@import '../../styles/variables';
-@Icon-size: 16px;
+@Icon-size: 18px;
 @Icon-color-badgeBackground: @color-default-borderColor;
+
 .lucid-Icon {
 	display: inline-block;
 	height: @Icon-size;
@@ -12,11 +12,10 @@
 		transform-origin: center center;
 	}
 
-	&-is-badge{
+	&-is-badge {
 		border-radius: @Icon-size;
 		background-color: @Icon-color-badgeBackground;
-		padding: 2px;
 		border: 1px solid transparent;
-		fill: #ffffff;
+		fill: @color-white;
 	}
 }
