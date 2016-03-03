@@ -2,7 +2,7 @@
 require('./index.less');
 require('../index.less');
 
-import path from 'path';
+import { basename } from 'path';
 import _ from 'lodash';
 import React from 'react';
 import { render } from 'react-dom';
@@ -39,7 +39,7 @@ const docgenMap = _.mapValues(docgenMapRaw, (value, componentName) => {
  * file extensions then capitalizes each word and separates each with a space.
  */
 function getExampleTitleFromFilename (filename) {
-    const words = _.words(_.startCase(path.basename(filename, '.jsx')));
+    const words = _.words(_.startCase(basename(filename, '.jsx')));
     return (/^\d+$/.test(_.head(words)) ? _.tail(words) : words).join(' ');
 }
 
