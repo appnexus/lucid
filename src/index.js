@@ -16,6 +16,7 @@ import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Portal from './components/Portal/Portal';
 import RadioButton from './components/RadioButton/RadioButton';
+import RadioGroup from './components/RadioGroup/RadioGroup';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
@@ -70,6 +71,7 @@ export default {
 	PlusIcon,
 	Portal,
 	RadioButton,
+	RadioGroup,
 	ResizeIcon,
 	SearchIcon,
 	SuccessIcon,
