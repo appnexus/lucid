@@ -28,9 +28,10 @@ const Portal = React.createClass(createLucidComponentDefinition({
 	},
 	render: () => null,
 	componentDidMount() {
-		let {
+		const {
 			portalId
 		} = this.props;
+
 		let portalElement = window.document.getElementById(portalId);
 		if (!portalElement) {
 			portalElement = window.document.createElement('div');
