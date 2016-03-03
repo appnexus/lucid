@@ -2,6 +2,7 @@
 require('./index.less');
 require('../index.less');
 
+import { basename } from 'path';
 import _ from 'lodash';
 import React from 'react';
 import { render } from 'react-dom';
@@ -33,13 +34,22 @@ const docgenMap = _.mapValues(docgenMapRaw, (value, componentName) => {
 	return _.merge(value, { props: parentProps });
 });
 
+/**
+ * Transforms an example filename to an example title. Remove leading numbers and
+ * file extensions then capitalizes each word and separates each with a space.
+ */
+function getExampleTitleFromFilename (filename) {
+    const words = _.words(_.startCase(basename(filename, '.jsx')));
+    return (/^\d+$/.test(_.head(words)) ? _.tail(words) : words).join(' ');
+}
+
 const examplesByComponent = _.chain(reqExamples.keys())
 	.map((path) => {
 		const items = path.split('/').reverse(); // e.g. ['default.jsx', 'examples', 'Button', '.']
 		const componentName = items[2];
 		return {
 			componentName: componentName,
-			name: _.startCase(items[0].split('.')[0]),
+			name: getExampleTitleFromFilename(items[0]),
 			source: reqExamplesRaw(path),
 			Example: reqExamples(path).default // `default` because we use es6 modules in the examples
 		};
