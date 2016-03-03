@@ -7,6 +7,14 @@ import { bindClassNames } from '../../util/style-helpers';
 const boundGridClassNames = bindClassNames('Grid');
 const boundCellClassNames = bindClassNames('Cell');
 
+/**
+ * {"categories": ["layout", "grid"]}
+ *
+ * This component is designed to be used in Composits as a layout tool.
+ * You can use the Grid components themselves or create your own components using the Grid styles from Grid.less.
+ * Please see examples/CSS-Grid.jsx for more information.
+ */
+
 const {
 	object,
 	string,
@@ -28,14 +36,6 @@ function propsToClass (props) {
 	return classNameProps;
 }
 
-/**
- * {"categories": ["layout", "grid"]}
- *
- * This component is designed to be used in Composits as a layout tool.
- *
- * You can use the Grid components themselves or create your own components using the Grid styles from Grid.less.
- * Please see examples/CSS-Grid.jsx for more information.
- */
 const Grid = React.createClass({
 	propTypes: {
 		/**
@@ -75,6 +75,13 @@ const Grid = React.createClass({
 	}
 });
 
+/**
+ * {"categories": ["layout", "grid"], "extend": "Grid"}
+ *
+ * This component is designed to be used in Composits as a layout tool.
+ * You can use the Grid components themselves or create your own components using the Grid styles from Grid.less.
+ * Please see examples/CSS-Grid.jsx for more information.
+ */
 const Cell  = React.createClass({
 	propTypes: {
 		/**
