@@ -16,10 +16,12 @@ import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Portal from './components/Portal/Portal';
 import RadioButton from './components/RadioButton/RadioButton';
+import RadioGroup from './components/RadioGroup/RadioGroup';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import Switch from './components/Switch/Switch';
+import Tabs from './components/Tabs/Tabs';
 import TextField from './components/TextField/TextField'
 import Validation from './components/Validation/Validation';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
@@ -45,6 +47,7 @@ export {ResizeIcon}
 export {SearchIcon}
 export {SuccessIcon}
 export {Switch}
+export {Tabs}
 export {TextField}
 export {Validation}
 export {WarningIcon}
@@ -68,10 +71,12 @@ export default {
 	PlusIcon,
 	Portal,
 	RadioButton,
+	RadioGroup,
 	ResizeIcon,
 	SearchIcon,
 	SuccessIcon,
 	Switch,
+	Tabs,
 	TextField,
 	Validation,
 	WarningIcon,
