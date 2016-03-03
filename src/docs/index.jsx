@@ -6,13 +6,13 @@ import { basename } from 'path';
 import _ from 'lodash';
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, Link} from 'react-router';
-import createHashHistory from 'history/lib/createHashHistory';
+import { Router, Route, Link, useRouterHistory } from 'react-router';
+import { createHashHistory } from 'history';
 import docgenMapRaw from './docgen.json';
 import hljs from 'hljs';
 import { markdown } from 'markdown';
 
-const hashHistory = createHashHistory({ queryKey: false });
+const hashHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
 // This is webpackism for "dynamically load all example files"
 const reqExamples = require.context('../components/', true, /examples.*\.jsx?/i);
