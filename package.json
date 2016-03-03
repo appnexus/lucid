@@ -27,7 +27,8 @@
   "license": "Apache-2.0",
   "dependencies": {
     "classnames": "^2.2.3",
-    "lodash": "^4.1.0"
+    "lodash": "^4.1.0",
+    "react-addons-css-transition-group": "^0.14.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.3",
@@ -61,7 +62,6 @@
     "postcss-loader": "^0.8.1",
     "raw-loader": "^0.5.1",
     "react": "^0.14.0",
-    "react-addons-css-transition-group": "^0.14.0",
     "react-addons-test-utils": "^0.14.0",
     "react-docgen": "^2.7.0",
     "react-dom": "^0.14.0",
