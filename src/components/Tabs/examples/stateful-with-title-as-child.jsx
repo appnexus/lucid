@@ -9,10 +9,25 @@ export default React.createClass({
 		return (
 			<div>
 				<StatefulTabs>
-					<StatefulTabs.Tab Title='One'>One content</StatefulTabs.Tab>
-					<StatefulTabs.Tab Title='Two'>Two content</StatefulTabs.Tab>
-					<StatefulTabs.Tab Title='Three'>Three content</StatefulTabs.Tab>
-					<StatefulTabs.Tab Title='Five'>Four content</StatefulTabs.Tab>
+					<StatefulTabs.Tab>
+						<StatefulTabs.Title>One</StatefulTabs.Title>
+						One content
+					</StatefulTabs.Tab>
+
+					<StatefulTabs.Tab>
+						<StatefulTabs.Title>Two</StatefulTabs.Title>
+						Two content
+					</StatefulTabs.Tab>
+
+					<StatefulTabs.Tab>
+						<StatefulTabs.Title>Three</StatefulTabs.Title>
+						Three content
+					</StatefulTabs.Tab>
+
+					<StatefulTabs.Tab>
+						<StatefulTabs.Title>Four</StatefulTabs.Title>
+						Four content
+					</StatefulTabs.Tab>
 				</StatefulTabs>
 			</div>
 		);

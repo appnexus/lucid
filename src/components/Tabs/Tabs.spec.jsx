@@ -26,7 +26,7 @@ describe('Tabs', () => {
 				<Tabs Tab={[{children: 'Bert'}, {children: 'Ernie'}]} />
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-bar-item').length, 2);
+			assert.equal(wrapper.find('.lucid-Tabs-Tab').length, 2);
 			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Bert');
 		});
 
@@ -38,8 +38,8 @@ describe('Tabs', () => {
 				]} />
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-bar-item').length, 2);
-			assert.equal(wrapper.find('.lucid-Tabs-bar-item-is-active').text(), 'Coolest');
+			assert.equal(wrapper.find('.lucid-Tabs-Tab').length, 2);
+			assert.equal(wrapper.find('.lucid-Tabs-Tab-is-active').text(), 'Coolest');
 			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Bert');
 		});
 
@@ -51,7 +51,7 @@ describe('Tabs', () => {
 				</Tabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-bar-item').first().text(), 'Froyo');
+			assert.equal(wrapper.find('.lucid-Tabs-Tab').first().text(), 'Froyo');
 		});
 
 		it('Title as children', () => {
@@ -65,7 +65,7 @@ describe('Tabs', () => {
 				</Tabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-bar-item').first().text(), 'Froyo');
+			assert.equal(wrapper.find('.lucid-Tabs-Tab').first().text(), 'Froyo');
 		});
 
 		it('selectedIndex', () => {
@@ -76,7 +76,7 @@ describe('Tabs', () => {
 				</Tabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-bar-item-is-active').text(), 'Slurpee');
+			assert.equal(wrapper.find('.lucid-Tabs-Tab-is-active').text(), 'Slurpee');
 			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Yum');
 		});
 
@@ -89,7 +89,7 @@ describe('Tabs', () => {
 				</Tabs>
 			);
 
-			wrapper.find('.lucid-Tabs-bar-item').at(1).simulate('click');
+			wrapper.find('.lucid-Tabs-Tab').at(1).simulate('click');
 
 			assert(onSelect.called);
 			assert.equal(onSelect.args[0][0], 1);
@@ -103,7 +103,7 @@ describe('Tabs', () => {
 				</Tabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-bar-item-is-active-and-open').length, 0);
+			assert.equal(wrapper.find('.lucid-Tabs-Tab-is-active-and-open').length, 0);
 		});
 	});
 });
