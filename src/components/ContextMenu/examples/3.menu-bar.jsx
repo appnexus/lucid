@@ -53,7 +53,13 @@ export default React.createClass({
 		return (
 			<section style={{ height: 300 }}>
 
-				<ContextMenu portalId='FileMenu-example' isExpanded={isFileExpanded} direction={fileDirection} onClickOut={this.handleFileMenuToggle} onChangeBounds={this.handleFileMenuChangeBounds}>
+				<ContextMenu
+					portalId='FileMenu-example'
+					isExpanded={isFileExpanded}
+					direction={fileDirection}
+					onClickOut={this.handleFileMenuToggle}
+					onChangeBounds={this.handleFileMenuChangeBounds}
+				>
 
 					<ContextMenu.Target>
 						<div style={{
@@ -89,7 +95,13 @@ export default React.createClass({
 
 				</ContextMenu>
 
-				<ContextMenu portalId='EditMenu-example' isExpanded={isEditExpanded} direction={editDirection} onClickOut={this.handleEditMenuToggle} onChangeBounds={this.handleEditMenuChangeBounds}>
+				<ContextMenu
+					portalId='EditMenu-example'
+					isExpanded={isEditExpanded}
+					direction={editDirection}
+					onClickOut={this.handleEditMenuToggle}
+					onChangeBounds={this.handleEditMenuChangeBounds}
+				>
 
 					<ContextMenu.Target>
 						<div style={{

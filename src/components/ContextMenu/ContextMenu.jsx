@@ -41,17 +41,13 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 		 */
 		style: object,
 		/**
-		 * Indicates whether the FlyOut will render or not. Defaults to `true`.
-		 */
-		isExpanded: bool,
-		/**
 		 * alignment of the FlyOut relative to Target. Defaults to `'down'`.
 		 */
 		direction: oneOf(['down', 'up']),
 		/**
-		 * The `id` of the FlyOut portal element that is appended to `document.body`. Defaults to a generated `id`.
+		 * Indicates whether the FlyOut will render or not. Defaults to `true`.
 		 */
-		portalId: string,
+		isExpanded: bool,
 		/**
 		 * Called once when one of following happens:
 		 *
@@ -62,7 +58,11 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 		/**
 		 * Called when a click event happenens outside of the ContextMenu.
 		 */
-		onClickOut: func
+		onClickOut: func,
+		/**
+		 * The `id` of the FlyOut portal element that is appended to `document.body`. Defaults to a generated `id`.
+		 */
+		portalId: string
 	},
 
 	childProps: {
@@ -74,10 +74,11 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 
 	getDefaultProps() {
 		return {
-			isExpanded: true,
 			direction: 'down',
+			isExpanded: true,
 			onChangeBounds: null,
-			onClickOut: null
+			onClickOut: null,
+			portalId: null
 		};
 	},
 
@@ -102,7 +103,7 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 	},
 
 	componentDidMount() {
-		let targetDOMNode = this.refs.target;
+		const targetDOMNode = this.refs.target;
 
 		this.updateTargetRectangleIntervalId = setInterval(() => {
 			this.alignFlyOut(targetDOMNode);
@@ -110,7 +111,7 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 
 		this.onClickBodyEventListener = window.addEventListener('click', (event) => {
 			if (this.props.onClickOut && this.refs.flyOutPortal) {
-				let flyOutEl = this.refs.flyOutPortal.portalElement.firstChild;
+				const flyOutEl = this.refs.flyOutPortal.portalElement.firstChild;
 				if (!(flyOutEl.contains(event.target) || targetDOMNode.contains(event.target))) {
 					this.props.onClickOut(event);
 				}
@@ -124,7 +125,7 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 	},
 
 	componentWillReceiveProps() {
-		let targetDOMNode = this.refs.target;
+		const targetDOMNode = this.refs.target;
 
 		if (targetDOMNode) {
 			this.alignFlyOut(targetDOMNode);
@@ -138,14 +139,10 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 		ABOVE_FOLD: 'ABOVE_FOLD',
 		isElementBelowFold(targetElement, yPosition) {
 			if (typeof window !== 'undefined') {
-				let bodyRect = window.document.body.getBoundingClientRect();
-				let targetElementRect = targetElement.getBoundingClientRect();
+				const bodyRect = window.document.body.getBoundingClientRect();
+				const targetElementRect = targetElement.getBoundingClientRect();
 				yPosition = (yPosition === undefined ? targetElementRect.top : yPosition);
-				if (yPosition + targetElementRect.height - bodyRect.top > window.innerHeight - bodyRect.top) {
-					return true;
-				} else {
-					return false;
-				}
+				return (yPosition + targetElementRect.height - bodyRect.top > window.innerHeight - bodyRect.top);
 			} else {
 				throw new Error('Browser only! Cannot access window object.');
 			}
@@ -155,14 +152,14 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 	alignFlyOut(targetDOMNode) {
 		let flyOutHeight = this.state.flyOutHeight;
 		if (this.refs.flyOutPortal) {
-			let flyOutEl = this.refs.flyOutPortal.portalElement.firstChild;
+			const flyOutEl = this.refs.flyOutPortal.portalElement.firstChild;
 			flyOutHeight = flyOutEl.getBoundingClientRect().height;
 
 			if (this.props.onChangeBounds) {
-				let isFlyoutBelowFold = ContextMenu.isElementBelowFold(flyOutEl, targetDOMNode.getBoundingClientRect().bottom);
+				const isFlyoutBelowFold = ContextMenu.isElementBelowFold(flyOutEl, targetDOMNode.getBoundingClientRect().bottom);
 				if (this.state.isFlyoutBelowFold !== isFlyoutBelowFold) {
 					this.setState({
-						isFlyoutBelowFold: isFlyoutBelowFold
+						isFlyoutBelowFold
 					});
 					this.props.onChangeBounds(isFlyoutBelowFold ? ContextMenu.BELOW_FOLD : ContextMenu.ABOVE_FOLD);
 				}
@@ -171,7 +168,7 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 
 		this.setState({
 			targetRect: getAbsoluteBoundingClientRect(targetDOMNode),
-			flyOutHeight: flyOutHeight
+			flyOutHeight
 		});
 	},
 
@@ -180,7 +177,8 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 			className,
 			style,
 			isExpanded,
-			direction
+			direction,
+			...passThroughs
 		} = this.props;
 
 		const {
@@ -196,7 +194,7 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 
 
 		return (
-			<span ref='target' className={classNames(boundClassNames('~'), className)} style={style}>
+			<span ref='target' {...passThroughs} className={classNames(boundClassNames('~'), className)} style={style}>
 				{targetChildren}
 				{isExpanded ? (
 					<Portal
@@ -210,12 +208,9 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 						style={_.assign({}, flyProps.style, {
 							position: 'absolute',
 							left: targetRect.left,
-							minWidth: targetRect.width
-						}, (direction === ContextMenu.UP ? {
-							top: targetRect.top - flyOutHeight
-						} : {
-							top: targetRect.bottom
-						}))}
+							minWidth: targetRect.width,
+							top: (direction === ContextMenu.UP ? targetRect.top - flyOutHeight : targetRect.bottom)
+						})}
 					>
 						{flyChildren}
 					</Portal>
