@@ -1,3 +1,10 @@
+// Colors
+
+@color-black: black;
+
+// Base
+@borderRadius: 4px;
+
 // font properties
 @fontSize: 12px;
 @fontFamily: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
@@ -11,6 +18,11 @@
 
 @size-boxShadow: rgba(0,0,0,.3);
 @size-borderRadius: 4px;
+
+// banner sizes
+@Banner-size-spacing-rightLeft: 10px;
+@Banner-size-spacing-topBottom: 13px;
+@Banner-size-borderRadiaus: @borderRadius;
 
 // button sizes
 @size-button-padding: 12px;
@@ -38,36 +50,41 @@
 
 // default
 @color-default-borderColor: #c5c5c5;
-@color-default-backgroundColor: transparent;
+@color-default-backgroundColor: #ededed;
 @color-default-gradientStartColor: #f3f3f3;
 @color-default-gradientEndColor: #e2e2e2;
 
 // primary
 @color-primary-borderColor: @color-primary;
-@color-primary-backgroundColor: transparent;
+@color-primary-borderColorLite: fade(@color-primary, 40%);
+@color-primary-backgroundColor: fade(@color-primary, 30%);
 @color-primary-gradientStartColor: fade(@color-primary, 70%);
 @color-primary-gradientEndColor: @color-primary;
 
 // success
 @color-success-borderColor: @color-success;
-@color-success-backgroundColor: transparent;
+@color-success-borderColorLite: fade(@color-success, 40%);
+@color-success-backgroundColor: fade(@color-success, 30%);
 @color-success-gradientStartColor: fade(@color-success, 70%);
 @color-success-gradientEndColor: @color-success;
 
 // info
 @color-info-borderColor: @color-info;
-@color-info-backgroundColor: transparent;
+@color-info-borderColorLite: fade(@color-info, 40%);
+@color-info-backgroundColor: fade(@color-info, 30%);
 @color-info-gradientStartColor: fade(@color-info, 70%);
 @color-info-gradientEndColor: @color-info;
 
 // warning
 @color-warning-borderColor: @color-warning;
-@color-warning-backgroundColor: transparent;
+@color-warning-borderColorLite: fade(@color-warning, 40%);
+@color-warning-backgroundColor: fade(@color-warning, 30%);
 @color-warning-gradientStartColor: fade(@color-warning, 70%);
 @color-warning-gradientEndColor: @color-warning;
 
 // danger
 @color-danger-borderColor: @color-danger;
-@color-danger-backgroundColor: transparent;
+@color-danger-borderColorLite: fade(@color-danger, 40%);
+@color-danger-backgroundColor: fade(@color-danger, 30%);
 @color-danger-gradientStartColor: fade(@color-danger, 70%);
 @color-danger-gradientEndColor: @color-danger;
