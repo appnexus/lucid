@@ -26,33 +26,21 @@ import TextField from './components/TextField/TextField'
 import Validation from './components/Validation/Validation';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
 
-export {Badge}
-export {Banner}
-export {Button}
-export {ButtonGroup}
-export {CaretIcon}
-export {CheckIcon}
-export {Checkbox}
-export {ContextMenu}
-export {CrossIcon}
-export {DangerIcon}
-export {EditIcon}
-export {EligibilityIcon}
-export {Icon}
-export {InfoIcon}
-export {MinusIcon}
-export {PlusIcon}
-export {RadioButton}
-export {ResizeIcon}
-export {SearchIcon}
-export {SuccessIcon}
-export {Switch}
-export {Tabs}
-export {TextField}
-export {Validation}
-export {WarningIcon}
+import * as childComponent from './util/child-component';
+import * as componentDefinition from './util/component-definition';
+import * as domHelpers from './util/dom-helpers';
+import * as stateManagement from './util/state-management';
+import * as styleHelpers from './util/style-helpers';
 
-export default {
+export {
+	childComponent,
+	componentDefinition,
+	domHelpers,
+	stateManagement,
+	styleHelpers
+};
+
+export {
 	Badge,
 	Banner,
 	Button,
@@ -79,5 +67,5 @@ export default {
 	Tabs,
 	TextField,
 	Validation,
-	WarningIcon,
+	WarningIcon
 };
