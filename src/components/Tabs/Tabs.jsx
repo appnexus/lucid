@@ -94,13 +94,11 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 
 		const tabChildProps = Tabs.Tab.findInAllAsProps(this.props);
 
-		const rootClasses = classNames(className, boundClassNames('~'));
-
 		return (
 			<div
 				{...passThroughs}
 				style={style}
-				className={rootClasses}
+				className={classNames(className, boundClassNames('~'))}
 			>
 				<ul className={boundClassNames('bar')}>
 					{_.map(tabChildProps, (tabChildProp, index) => {

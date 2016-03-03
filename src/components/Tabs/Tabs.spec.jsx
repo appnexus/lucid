@@ -21,23 +21,25 @@ describe('Tabs', () => {
 			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Foo Content')
 		});
 
-		it('Tab as children with isSelected', () => {
-			const wrapper = shallow(
-				<Tabs>
-					<Tabs.Tab>Foo Content</Tabs.Tab>
-					<Tabs.Tab isSelected={true}>Two</Tabs.Tab>
-				</Tabs>
-			);
-
-			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Foo Content')
-		});
-
 		it('Tab as props', () => {
 			const wrapper = shallow(
 				<Tabs Tab={[{children: 'Bert'}, {children: 'Ernie'}]} />
 			);
 
 			assert.equal(wrapper.find('.lucid-Tabs-bar-item').length, 2);
+			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Bert');
+		});
+
+		it('Tab as props with Title', () => {
+			const wrapper = shallow(
+				<Tabs Tab={[
+					{ Title: 'Coolest', children: 'Bert' },
+					{ Title: 'Not so cool', children: 'Ernie' },
+				]} />
+			);
+
+			assert.equal(wrapper.find('.lucid-Tabs-bar-item').length, 2);
+			assert.equal(wrapper.find('.lucid-Tabs-bar-item-is-active').text(), 'Coolest');
 			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Bert');
 		});
 
