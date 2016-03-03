@@ -122,7 +122,7 @@ export default React.createClass({
 				</Grid>
 				<Grid>
 					<Cell is-third is-offset-third>
-						<p style={assign(gridStyle.quarter)}>third with offset third</p>
+						<p style={assign(gridStyle.third)}>third with offset third</p>
 					</Cell>
 				</Grid>
 				<Grid is-gutterless>
