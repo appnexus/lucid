@@ -1,0 +1,8 @@
+dist
+src/docs/docgen.json
+npm-debug.log*
+node_modules
+**/*.swp
+**/*.swo
+.idea
+.babelrc
