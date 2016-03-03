@@ -24,7 +24,11 @@
 .lucid-Cell {
 	.box-sizing();
 	flex: 1 1 auto;
-	padding: 10 0 0 (10/2);
+	padding: 10px 0 0 5px;
+
+	&:first-child{
+		padding-left: 0;
+	}
 
 	&-is-full{
 		flex: 0 0 100%;
