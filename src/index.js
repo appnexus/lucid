@@ -5,6 +5,7 @@ import ButtonGroup from './components/ButtonGroup/ButtonGroup';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
 import Checkbox from './components/Checkbox/Checkbox';
+import ContextMenu from './components/ContextMenu/ContextMenu';
 import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
@@ -13,6 +14,7 @@ import Icon from './components/Icon/Icon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
+import Portal from './components/Portal/Portal';
 import RadioButton from './components/RadioButton/RadioButton';
 import RadioGroup from './components/RadioGroup/RadioGroup';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
@@ -30,6 +32,7 @@ export {ButtonGroup}
 export {CaretIcon}
 export {CheckIcon}
 export {Checkbox}
+export {ContextMenu}
 export {CrossIcon}
 export {DangerIcon}
 export {EditIcon}
@@ -55,6 +58,7 @@ export default {
 	CaretIcon,
 	CheckIcon,
 	Checkbox,
+	ContextMenu,
 	CrossIcon,
 	DangerIcon,
 	EditIcon,
@@ -63,6 +67,7 @@ export default {
 	InfoIcon,
 	MinusIcon,
 	PlusIcon,
+	Portal,
 	RadioButton,
 	RadioGroup,
 	ResizeIcon,

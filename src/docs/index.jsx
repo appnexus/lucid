@@ -2,19 +2,17 @@
 require('./index.less');
 require('../index.less');
 
+import { basename } from 'path';
 import _ from 'lodash';
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, Link, useRouterHistory } from 'react-router';
-import { createHashHistory } from 'react-router/node_modules/history';
+import { Router, Route, Link} from 'react-router';
+import createHashHistory from 'history/lib/createHashHistory';
 import docgenMapRaw from './docgen.json';
 import hljs from 'hljs';
 import { markdown } from 'markdown';
 
-// Opt out of the ?_k=asdffb in the query string since we don't need to keep
-// state in our router.
-// https://github.com/reactjs/react-router/issues/1967#issuecomment-187730662
-const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
+const hashHistory = createHashHistory({ queryKey: false });
 
 // This is webpackism for "dynamically load all example files"
 const reqExamples = require.context('../components/', true, /examples.*\.jsx?/i);
@@ -36,13 +34,22 @@ const docgenMap = _.mapValues(docgenMapRaw, (value, componentName) => {
 	return _.merge(value, { props: parentProps });
 });
 
+/**
+ * Transforms an example filename to an example title. Remove leading numbers and
+ * file extensions then capitalizes each word and separates each with a space.
+ */
+function getExampleTitleFromFilename (filename) {
+    const words = _.words(_.startCase(basename(filename, '.jsx')));
+    return (/^\d+$/.test(_.head(words)) ? _.tail(words) : words).join(' ');
+}
+
 const examplesByComponent = _.chain(reqExamples.keys())
 	.map((path) => {
 		const items = path.split('/').reverse(); // e.g. ['default.jsx', 'examples', 'Button', '.']
 		const componentName = items[2];
 		return {
 			componentName: componentName,
-			name: _.startCase(items[0].split('.')[0]),
+			name: getExampleTitleFromFilename(items[0]),
 			source: reqExamplesRaw(path),
 			Example: reqExamples(path).default // `default` because we use es6 modules in the examples
 		};
@@ -295,7 +302,7 @@ const App = React.createClass({
 });
 
 render((
-	<Router history={appHistory}>
+	<Router history={hashHistory}>
 		<Route path='/' component={App}>
 			<Route path='/components/:componentName' component={Component}/>
 		</Route>
