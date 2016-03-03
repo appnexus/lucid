@@ -39,18 +39,6 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 		style: any,
 
 		/**
-		 * While you can pass tab content through this prop, it's better to use the
-		 * child component instead. See the examples for details.
-		 */
-		Tab: any.isRequired,
-
-		/**
-		 * `Title` can be a prop on `Tabs.Tab` or a child of `Tabs.Tab`. See the
-		 * examples for details.
-		 */
-		Title: any,
-
-		/**
 		 * Class names that are appended to the defaults.
 		 */
 		className: string,
@@ -74,8 +62,6 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 
 	getDefaultProps() {
 		return {
-			style: null,
-			className: null,
 			selectedIndex: 0,
 			onSelect: _.noop,
 			isOpen: true,

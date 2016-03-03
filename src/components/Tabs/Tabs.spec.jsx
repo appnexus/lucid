@@ -106,15 +106,4 @@ describe('Tabs', () => {
 			assert.equal(wrapper.find('.lucid-Tabs-bar-item-is-active-and-open').length, 0);
 		});
 	});
-
-	describe('reducers', () => {
-		it('onSelect should set selectedIndex properly', () => {
-			const initialState = { foo: 1 };
-
-			assert.deepEqual(Tabs.reducers.onSelect(initialState, 99), {
-				foo: 1,
-				selectedIndex: 99
-			});
-		});
-	});
 });
