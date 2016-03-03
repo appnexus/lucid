@@ -21,6 +21,7 @@ import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import Switch from './components/Switch/Switch';
+import Tabs from './components/Tabs/Tabs';
 import TextField from './components/TextField/TextField'
 import Validation from './components/Validation/Validation';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
@@ -46,6 +47,7 @@ export {ResizeIcon}
 export {SearchIcon}
 export {SuccessIcon}
 export {Switch}
+export {Tabs}
 export {TextField}
 export {Validation}
 export {WarningIcon}
@@ -74,6 +76,7 @@ export default {
 	SearchIcon,
 	SuccessIcon,
 	Switch,
+	Tabs,
 	TextField,
 	Validation,
 	WarningIcon,

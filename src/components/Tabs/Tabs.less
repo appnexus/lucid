@@ -1,0 +1,63 @@
+@Tabs-spacer-height: 3px;
+@Tabs-tab-height: 28px;
+
+.lucid-Tabs {
+	&-bar {
+		font-size: @fontSize;
+		font-family: @fontFamily;
+		list-style-type: none;
+		display: flex;
+		margin: 0;
+		padding: 0;
+	}
+
+	&-Tab {
+		color: @color-primary;
+		flex: 1 1 auto;
+		cursor: pointer;
+		user-select: none;
+		margin-bottom: -1px;
+		height: @Tabs-tab-height;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-top: @Tabs-spacer-height;
+		border: 1px solid @color-default-borderColor;
+		border-right: 0;
+
+		&:last-of-type {
+			border-right: 1px solid @color-default-borderColor;
+		}
+
+		&:hover {
+			background-color: @color-gray-5;
+		}
+
+		&:active {
+			box-shadow: @shadow-inset;
+		}
+	}
+	&-Tab-is-active {
+		border-top: @Tabs-spacer-height solid @color-primary;
+		padding-top: 0;
+		color: #000;
+		cursor: initial;
+
+		&:hover {
+			background-color: @color-white;
+		}
+
+		&:active {
+			box-shadow: none;
+		}
+	}
+	&-Tab-is-active-and-open {
+		border-bottom: 1px solid @color-white;
+		z-index: 1; // Safari fix
+	}
+
+	&-content {
+		border-top: 1px solid @color-default-borderColor;
+		padding-top: 10px; // TODO: use our default gutter
+	}
+}
