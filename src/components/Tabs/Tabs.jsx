@@ -23,11 +23,11 @@ const {
  * tab content to be passed as regular React children or through props.
  */
 const Tabs = React.createClass(createLucidComponentDefinition({
+	displayName: 'Tabs',
+
 	childProps: {
-		Tab: {
-			isSelected: bool
-		},
-		Title: null // we're only interested in children
+		Tab: null, // we're only interested in children
+		Title: null, // we're only interested in children
 	},
 
 	reducers,
@@ -115,11 +115,11 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 							>
 								{_.get(_.first(Tabs.Title.findInAllAsProps(tabChildProp)), 'children', '')}
 							</li>
-						)
+						);
 					})}
 				</ul>
 				<div className={boundClassNames('content')}>
-					{tabChildProps[selectedIndex].children}
+					{_.get(tabChildProps[selectedIndex], 'children', '')}
 				</div>
 			</div>
 		);
