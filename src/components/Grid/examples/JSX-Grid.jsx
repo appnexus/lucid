@@ -3,12 +3,11 @@ import _ from 'lodash';
 import {Grid, Cell} from '../Grid';
 
 const gridStyle = {
-	half: {
-		background: '#0089c4',
-	},
+	half: { background: '#0089c4' },
 	quarter: { background: '#f7403a' },
 	third: {background: '#3fa516', color: '#f3f3f3'},
-	auto: {background: '#c5c5c5', color: '#f3f3f3'},
+	full: {background: '#333333', color: '#f3f3f3'},
+	auto: {background: '#999999', color: '#f3f3f3'},
 	flexdefault: {background: '#feb209'},
 	sharedStyles: {
 		padding: '5px 10px',
@@ -56,7 +55,7 @@ export default React.createClass({
 				</Grid>
 				<Grid>
 					<Cell is-2>
-						<p>2</p>
+						<p style={assign(gridStyle.flexdefault)}>2</p>
 					</Cell>
 					{fillCells(12-2)}
 				</Grid>
