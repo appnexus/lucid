@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "gulp docs-generate && webpack-dev-server --inline",
     "preversion": "rm -rf dist && gulp preversion",
-    "postversion": "rm -rf dist && gulp docs-upload",
+    "postversion": "gulp docs-upload",
     "test": "rm -rf dist && gulp test",
     "test-tdd": "rm -rf dist && gulp test-tdd"
   },
