@@ -26,7 +26,9 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 	displayName: 'Tabs',
 
 	childProps: {
-		Tab: null, // we're only interested in children
+		Tab: {
+			isSelected: bool
+		},
 		Title: null, // we're only interested in children
 	},
 
@@ -44,7 +46,9 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 		className: string,
 
 		/**
-		 * Index of the currently selected tab.
+		 * Indicates which of the `Tabs.Tab` children is currently selected. The
+		 * index of the last `Tabs.Tab` child with `isSelected` equal to `true`
+		 * takes precedence over this prop.
 		 */
 		selectedIndex: number,
 
@@ -79,6 +83,13 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 		} = this.props;
 
 		const tabChildProps = Tabs.Tab.findInAllAsProps(this.props);
+		const selectedIndexFromChildren = _.findLastIndex(tabChildProps, {
+			isSelected: true
+		});
+
+		const actualSelectedIndex = selectedIndexFromChildren !== -1
+			? selectedIndexFromChildren
+			: selectedIndex;
 
 		return (
 			<div
@@ -91,8 +102,8 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 						return (
 							<li
 								className={boundClassNames('Tab', {
-									'Tab-is-active': index === selectedIndex,
-									'Tab-is-active-and-open': isOpen && index === selectedIndex
+									'Tab-is-active': index === actualSelectedIndex,
+									'Tab-is-active-and-open': isOpen && index === actualSelectedIndex
 								})}
 								key={index}
 								onClick={_.partial(onSelect, index)}
@@ -103,7 +114,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 					})}
 				</ul>
 				<div className={boundClassNames('content')}>
-					{_.get(tabChildProps[selectedIndex], 'children', '')}
+					{_.get(tabChildProps[actualSelectedIndex], 'children', '')}
 				</div>
 			</div>
 		);

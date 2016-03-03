@@ -80,6 +80,31 @@ describe('Tabs', () => {
 			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Yum');
 		});
 
+		it(`Tab.isSelected`, () => {
+			const wrapper = shallow(
+				<Tabs>
+					<Tabs.Tab Title='Lollipop'>Yuck</Tabs.Tab>
+					<Tabs.Tab isSelected={true} Title='Slurpee'>Yum</Tabs.Tab>
+				</Tabs>
+			);
+
+			assert.equal(wrapper.find('.lucid-Tabs-Tab-is-active').text(), 'Slurpee');
+			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Yum');
+		});
+
+		it(`last Tab.isSelected beats selectedIndex`, () => {
+			const wrapper = shallow(
+				<Tabs selectedIndex={0}>
+					<Tabs.Tab Title='One'>One content</Tabs.Tab>
+					<Tabs.Tab isSelected={true} Title='Two'>Two content</Tabs.Tab>
+					<Tabs.Tab isSelected={true} Title='Three'>Three content</Tabs.Tab>
+				</Tabs>
+			);
+
+			assert.equal(wrapper.find('.lucid-Tabs-Tab-is-active').text(), 'Three');
+			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Three content');
+		});
+
 		it('onSelect', () => {
 			const onSelect = sinon.spy();
 			const wrapper = shallow(

@@ -7,7 +7,7 @@ export default React.createClass({
 			<Tabs>
 				<Tabs.Tab Title='One'>One content</Tabs.Tab>
 				<Tabs.Tab Title='Two'>Two content</Tabs.Tab>
-				<Tabs.Tab Title='Three'>Three Content</Tabs.Tab>
+				<Tabs.Tab Title='Three' isSelected={true}>Three Content</Tabs.Tab>
 			</Tabs>
 		);
 	}
