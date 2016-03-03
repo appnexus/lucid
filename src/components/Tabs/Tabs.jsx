@@ -45,7 +45,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 		Tab: any,
 
 		/**
-		 * Title can be a prop on `Tabs.Tab` or a child of `Tabs.Tab`. See the
+		 * `Title` can be a prop on `Tabs.Tab` or a child of `Tabs.Tab`. See the
 		 * examples for details.
 		 */
 		Title: any,

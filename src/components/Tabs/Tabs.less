@@ -46,9 +46,14 @@
 		&:hover {
 			background-color: initial;
 		}
+
+		&:active {
+			box-shadow: none;
+		}
 	}
 	&-bar-item-is-active-and-open {
 		border-bottom: 1px solid @color-white;
+		z-index: 1; // Safari fix
 	}
 
 	&-content {
