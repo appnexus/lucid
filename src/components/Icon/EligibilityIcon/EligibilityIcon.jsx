@@ -1,10 +1,8 @@
 import React from 'react';
-import classNames from 'classnames';
 import Icon from '../Icon';
+import { lucidClassNames } from '../../../util/style-helpers';
 
-import { bindClassNames } from '../../../util/style-helpers';
-
-const boundClassNames = bindClassNames('EligibilityIcon');
+const boundClassNames = lucidClassNames.bind('&-EligibilityIcon');
 
 const {
 	oneOf,
@@ -44,17 +42,15 @@ const EligibilityIcon = React.createClass({
 			...passThroughs
 		} = this.props;
 
-		const scopedClasses = boundClassNames('~', {
-			'is-selected-both': eligibility === 'both',
-			'is-selected-neither': eligibility === 'neither',
-			'is-selected-left': eligibility === 'left',
-			'is-selected-right': eligibility === 'right'
-		});
-
 		return (
 			<Icon
 				{...passThroughs}
-				className={classNames(className, scopedClasses)}
+				className={boundClassNames('&', {
+					'&-is-selected-both': eligibility === 'both',
+					'&-is-selected-neither': eligibility === 'neither',
+					'&-is-selected-left': eligibility === 'left',
+					'&-is-selected-right': eligibility === 'right'
+				}, className)}
 				viewBox='0 0 16 16'
 			>
 				<g>

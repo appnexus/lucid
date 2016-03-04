@@ -1,11 +1,10 @@
 import _ from 'lodash';
 import React from 'react';
-import classNames from 'classnames';
-import { bindClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition } from '../../util/component-definition';
 import reducers from './Tabs.reducers';
 
-const boundClassNames = bindClassNames('Tabs');
+const boundClassNames = lucidClassNames.bind('&-Tabs');
 
 const {
 	any,
@@ -95,15 +94,15 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 			<div
 				{...passThroughs}
 				style={style}
-				className={classNames(className, boundClassNames('~'))}
+				className={boundClassNames('&', className)}
 			>
-				<ul className={boundClassNames('bar')}>
+				<ul className={boundClassNames('&-bar')}>
 					{_.map(tabChildProps, (tabChildProp, index) => {
 						return (
 							<li
-								className={boundClassNames('Tab', {
-									'Tab-is-active': index === actualSelectedIndex,
-									'Tab-is-active-and-open': isOpen && index === actualSelectedIndex
+								className={boundClassNames('&-Tab', {
+									'&-Tab-is-active': index === actualSelectedIndex,
+									'&-Tab-is-active-and-open': isOpen && index === actualSelectedIndex
 								})}
 								key={index}
 								onClick={_.partial(onSelect, index)}
@@ -113,7 +112,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 						);
 					})}
 				</ul>
-				<div className={boundClassNames('content')}>
+				<div className={boundClassNames('&-content')}>
 					{_.get(tabChildProps[actualSelectedIndex], 'children', '')}
 				</div>
 			</div>

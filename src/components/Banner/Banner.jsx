@@ -1,11 +1,10 @@
 import _ from 'lodash';
 import React from 'react';
-import classNames from 'classnames';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import { bindClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 import { SuccessIcon, DangerIcon, InfoIcon, WarningIcon } from '../../index';
 
-const boundClassNames = bindClassNames('Banner');
+const boundClassNames = lucidClassNames('&-Banner');
 
 const {
 	any,
@@ -125,18 +124,6 @@ const Banner = React.createClass({
 			displayedIcon = defaultIcons[kind];
 		}
 
-		const scopedClasses = boundClassNames('~', {
-			'has-icon': displayedIcon,
-			'has-close': isCloseable,
-			'has-no-roundedCorners': !hasRoundedCorners,
-			'primary': kind === 'primary',
-			'success': kind === 'success',
-			'warning': kind === 'warning',
-			'danger': kind === 'danger',
-			'info': kind === 'info',
-			'small': isSmall,
-		});
-
 		return (
 			<ReactCSSTransitionGroup
 				transitionName={boundClassNames('~')}
@@ -146,7 +133,17 @@ const Banner = React.createClass({
 				{!isClosed ?
 					<section
 						{...passThroughs}
-						className={classNames(className, scopedClasses)}
+						className={boundClassNames('&', {
+							'&-has-icon': displayedIcon,
+							'&-has-close': isCloseable,
+							'&-has-no-roundedCorners': !hasRoundedCorners,
+							'&-primary': kind === 'primary',
+							'&-success': kind === 'success',
+							'&-warning': kind === 'warning',
+							'&-danger': kind === 'danger',
+							'&-info': kind === 'info',
+							'&-small': isSmall,
+						}, className)}
 					>
 						{displayedIcon ?
 							<span className={boundClassNames('icon')}>{displayedIcon}</span>

@@ -1,15 +1,12 @@
 import _ from 'lodash';
-import classNames from 'classnames';
 import React from 'react';
-
-import { bindClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition } from '../../util/component-definition';
 import getRandom from '../../util/random';
-
 import RadioButton from '../RadioButton/RadioButton';
 import reducers from './RadioGroup.reducers';
 
-const boundClassNames = bindClassNames('RadioGroup');
+const boundClassNames = lucidClassNames.bind('&-RadioGroup');
 
 const {
 	func,
@@ -74,7 +71,7 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 
 	getDefaultProps() {
 		return {
-			name: `${boundClassNames('~')}-${getRandom()}`,
+			name: `${boundClassNames('&')}-${getRandom()}`,
 			onSelect: _.noop,
 			selectedIndex: 0
 		};
@@ -104,7 +101,7 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 		return (
 			<span
 					{...passThroughs}
-					className={classNames(boundClassNames('~'), className)}
+					className={boundClassNames('&', className)}
 			>
 				{_.map(radioButtonChildProps, (radioButtonChildProp, index) => {
 					return (

@@ -1,10 +1,8 @@
 import React from 'react';
-import classNames from 'classnames';
 import Icon from '../Icon';
+import { lucidClassNames } from '../../../util/style-helpers';
 
-import { bindClassNames } from '../../../util/style-helpers';
-
-const boundClassNames = bindClassNames('ResizeIcon');
+const boundClassNames = lucidClassNames.bind('&-ResizeIcon');
 
 /**
  *
@@ -26,7 +24,7 @@ const ResizeIcon = React.createClass({
 		return (
 			<Icon
 				{...passThroughs}
-				className={classNames(className, boundClassNames('~'))}
+				className={boundClassNames('&', className)}
 			>
 				<rect x='-1.871' y='7.346' transform='matrix(0.7071 -0.7071 0.7071 0.7071 -3.3135 8.0001)' width='19.743' height='1.308'/>
 				<rect x='4.378' y='9.934' transform='matrix(0.7071 -0.7071 0.7071 0.7071 -4.404 10.5408)' width='12.289' height='1.306'/>

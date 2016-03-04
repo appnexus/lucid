@@ -1,10 +1,9 @@
 import React from 'react';
-import classNames from 'classnames';
 import _ from 'lodash';
-import { bindClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 import Validation from '../Validation/Validation';
 
-const boundClassNames = bindClassNames('TextField');
+const boundClassNames = lucidClassNames.bind('&-TextField');
 
 const {
 	bool,
@@ -100,16 +99,10 @@ const TextField = React.createClass({
 			...passThroughs
 		} = this.props;
 
-		const rootClasses = classNames(className, boundClassNames('~', {
-			'is-disabled': isDisabled,
-			'is-multi-line': isMultiLine,
-			'is-single-line': !isMultiLine
-		}));
-
 		const nativeProps = {
 			...passThroughs,
 			style: inputStyle,
-			className: boundClassNames('native'),
+			className: boundClassNames('&-native'),
 			disabled: isDisabled,
 			onChange: this.handleChange,
 			rows,
@@ -122,7 +115,11 @@ const TextField = React.createClass({
 		return (
 			<Validation
 				Error={Error}
-				className={rootClasses}
+				className={boundClassNames('&', {
+					'&-is-disabled': isDisabled,
+					'&-is-multi-line': isMultiLine,
+					'&-is-single-line': !isMultiLine
+				}, className)}
 				style={style}
 			>
 				{control}
