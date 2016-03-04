@@ -4,7 +4,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
 import { SuccessIcon, DangerIcon, InfoIcon, WarningIcon } from '../../index';
 
-const boundClassNames = lucidClassNames('&-Banner');
+const boundClassNames = lucidClassNames.bind('&-Banner');
 
 const {
 	any,
@@ -126,7 +126,7 @@ const Banner = React.createClass({
 
 		return (
 			<ReactCSSTransitionGroup
-				transitionName={boundClassNames('~')}
+				transitionName={boundClassNames('&')}
 				transitionEnterTimeout={300}
 				transitionLeaveTimeout={300}
 			>
@@ -146,15 +146,15 @@ const Banner = React.createClass({
 						}, className)}
 					>
 						{displayedIcon ?
-							<span className={boundClassNames('icon')}>{displayedIcon}</span>
+							<span className={boundClassNames('&-icon')}>{displayedIcon}</span>
 						: null}
 
-						<span className={boundClassNames('content')}>
+						<span className={boundClassNames('&-content')}>
 							{children}
 						</span>
 
 						{isCloseable ?
-							<span className={boundClassNames('close')} onClick={onClose}>
+							<span className={boundClassNames('&-close')} onClick={onClose}>
 								{String.fromCharCode(0x00d7)}
 							</span>
 						: null}
