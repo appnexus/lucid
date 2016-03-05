@@ -34,6 +34,14 @@ describe('#bindClassNames', function() {
 			assert.equal(boundClassNames('~-one', ['~-two']), 'lucid-one lucid-two');
 		});
 
+		it('should be able to take a RegExp as the 2nd arg to be replaced', () => {
+			const boundClassNames = bindClassNames('lucid', /~/g);
+
+			assert.equal(boundClassNames({'&-yolo': true, '~-bar': true}), '&-yolo lucid-bar');
+			assert.equal(boundClassNames({'yolo~': true, 'bar': true}), 'yololucid bar');
+			assert.equal(boundClassNames('~-one', ['~-two']), 'lucid-one lucid-two');
+		});
+
 		describe('.bind', () => {
 			it('should always return a function', () => {
 				const boundClassNames = bindClassNames('lucid');
