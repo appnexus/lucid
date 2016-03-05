@@ -7,6 +7,7 @@ import Validation from '../Validation/Validation';
 const boundClassNames = bindClassNames('TextField');
 
 const {
+	oneOfType,
 	bool,
 	string,
 	func,
@@ -64,11 +65,22 @@ const TextField = React.createClass({
 		className: string,
 
 		/**
-		 * Fires an event every time the user types text into the TextField. The
-		 * first argument is the string value they input and the second is the raw
-		 * dom event.
+		 * Fires an event every time the user types text into the `TextField`.
+		 *
+		 * Signature: `(value, { uniqueId, event }) => {}`
 		 */
 		onChange: func,
+
+		/**
+		 * Set an identifier on the component that will be returned when `onChange`
+		 * fires.
+		 */
+		uniqueId: oneOfType([string, number]),
+
+		/**
+		 * Set the value of the input.
+		 */
+		value: string,
 	},
 
 	getDefaultProps() {
@@ -84,8 +96,13 @@ const TextField = React.createClass({
 	},
 
 	handleChange(event) {
+		const {
+			uniqueId,
+			onChange,
+		} = this.props;
 		const value = _.get(event, 'target.value', '');
-		this.props.onChange(value, event);
+
+		onChange(value, { uniqueId, event });
 	},
 
 	render() {
@@ -97,6 +114,7 @@ const TextField = React.createClass({
 			isMultiLine,
 			rows,
 			style,
+			value,
 			...passThroughs
 		} = this.props;
 
@@ -113,6 +131,7 @@ const TextField = React.createClass({
 			disabled: isDisabled,
 			onChange: this.handleChange,
 			rows,
+			value,
 		};
 
 		const control = isMultiLine

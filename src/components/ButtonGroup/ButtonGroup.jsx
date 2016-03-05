@@ -34,7 +34,8 @@ const ButtonGroup = React.createClass(createLucidComponentDefinition({
 	propTypes: {
 		/**
 		 * A function that is called with the index of the child button clicked.
-		 * The second argument is the raw DOM event.
+		 *
+		 * Signature: `(selectedIndex, { uniqueId, event }) => {}`
 		 */
 		onSelect: func,
 
@@ -67,15 +68,17 @@ const ButtonGroup = React.createClass(createLucidComponentDefinition({
 		};
 	},
 
-	handleSelect(index, origHandler, event) {
+	handleSelect({ uniqueId, event }) {
+		const clickedButtonProps = ButtonGroup.Button.findInAllAsProps(this.props)[uniqueId];
+
 		// If the consumer passed in an `onClick` to the child `ButtonGroup.Button`
 		// component, we should make sure to call that in addition to the
 		// `ButtonGroup`'s `onSelect`.
-		if (_.isFunction(origHandler)) {
-			origHandler(event);
+		if (_.isFunction(clickedButtonProps.onClick)) {
+			clickedButtonProps.onClick({ uniqueId, event });
 		}
 
-		this.props.onSelect(index, event);
+		this.props.onSelect(uniqueId, { uniqueId, event });
 	},
 
 	render() {
@@ -88,12 +91,10 @@ const ButtonGroup = React.createClass(createLucidComponentDefinition({
 
 		const buttonChildProps = ButtonGroup.Button.findInAllAsProps(this.props);
 
-		const rootClasses = classNames(className, boundClassNames('~'));
-
 		return (
 			<span
 				{...others}
-				className={rootClasses}
+				className={classNames(className, boundClassNames('~'))}
 			>
 				{_.map(buttonChildProps, (buttonChildProp, index) => {
 					return (
@@ -107,7 +108,8 @@ const ButtonGroup = React.createClass(createLucidComponentDefinition({
 							isActive={_.includes(selectedIndices, index)}
 							{...buttonChildProp}
 							key={index}
-							onClick={_.partial(this.handleSelect, index, buttonChildProp.onClick)}
+							uniqueId={index}
+							onClick={this.handleSelect}
 						/>
 					);
 				})}

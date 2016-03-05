@@ -6,12 +6,17 @@ import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
 import describeWithDOM from '../../util/describe-with-dom';
-import { common } from '../../util/generic-tests';
+import { common, controls } from '../../util/generic-tests';
 
 import RadioButton from './RadioButton';
 
 describe('RadioButton', () => {
 	common(RadioButton);
+	controls(RadioButton, {
+		callbackName: 'onSelect',
+		controlSelector: '.lucid-RadioButton-native',
+		eventType: 'click',
+	});
 
 	const booleanValues = [true, false];
 
@@ -85,7 +90,7 @@ describeWithDOM('RadioButton', () => {
 
 			simulateEvent(<RadioButton isSelected={false} onSelect={onSelect} />, `.lucid-RadioButton${classSubString}`, event);
 			assert.equal(onSelect.args[0][0], true);
-			assert(onSelect.args[0][1] instanceof SyntheticEvent);
+			assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
 		});
 	}
 

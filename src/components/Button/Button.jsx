@@ -6,13 +6,14 @@ import { bindClassNames } from '../../util/style-helpers';
 const boundClassNames = bindClassNames('Button');
 
 const {
-	bool,
-	string,
-	oneOfType,
-	oneOf,
-	node,
 	arrayOf,
-	func
+	bool,
+	func,
+	node,
+	number,
+	oneOf,
+	oneOfType,
+	string,
 } = React.PropTypes;
 
 /**
@@ -67,9 +68,17 @@ const Button = React.createClass({
 			'large'
 		]),
 		/**
-		 * called when the user clicks the button
+		 * Called when the user clicks the `Button`.
+		 *
+		 * Signature: `({ event, uniqueId }) => {}`
 		 */
 		onClick: func,
+
+		/**
+		 * Set an identifier on the component that will be returned when `onClick`
+		 * fires.
+		 */
+		uniqueId: oneOfType([string, number]),
 	},
 
 	getDefaultProps() {
@@ -81,14 +90,20 @@ const Button = React.createClass({
 		};
 	},
 
-	handleClick() {
-		if (!this.props.isDisabled) {
-			this.props.onClick();
+	handleClick(event) {
+		const {
+			uniqueId,
+			isDisabled,
+			onClick,
+		} = this.props;
+
+		if (!isDisabled) {
+			onClick({ uniqueId, event });
 		}
 	},
 
 	render() {
-		let {
+		const {
 			isDisabled,
 			isActive,
 			hasIcon,
@@ -96,7 +111,7 @@ const Button = React.createClass({
 			size,
 			className,
 			children,
-			...others
+			...passThroughs
 		} = this.props;
 
 		let scopedClasses = boundClassNames('~', {
@@ -116,11 +131,12 @@ const Button = React.createClass({
 
 		return (
 			<button
+				{...passThroughs}
 				className={classNames(className, scopedClasses)}
 				onClick={this.handleClick}
 				disabled={isDisabled}
-				{...others}
-				ref='button' >
+				ref='button'
+			>
 				<span className={boundClassNames('content')}>
 					{children}
 				</span>

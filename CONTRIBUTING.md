@@ -40,6 +40,10 @@ describe('MyNewComponent', () => {
   - Use `onVerbNoun` structure.
 - Use `handleX` methods for event handlers.
 - Handlers that are passing through to native handlers should include the `event` as the last argument.
+- Every component that wraps around native controls should provide a `uniqueId` property for performance reasons. This allows consumers to avoid creating functions inside their `render` blocks.
+  - When the callback event is fired, the last argument should be an object with at least `uniqueId` and `event`.
+  - See [this article][perf] for a more in depth explanation.
+  - There is a test within the `controls` function of "generic-tests" to help test this convention.
 - If the component is a thin wrapper around a native control, be sure to pass through any extra props through to the native component.
 - Stateless by default, uses the reducer pattern for stateful components. Don't use `setState` anywhere in our components.
 - Prefer `span`s for root level component elements.
@@ -71,3 +75,4 @@ describe('MyNewComponent', () => {
 - Most tests should be shallow rendered using `enzyme`.
 - If your tests need to be functional, i.e. using button clicks, then be sure to use the `describeWithDOM` util.
 
+[perf]: https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f

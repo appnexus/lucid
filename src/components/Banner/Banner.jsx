@@ -10,10 +10,12 @@ const boundClassNames = bindClassNames('Banner');
 const {
 	any,
 	bool,
-	string,
-	oneOf,
+	element,
 	func,
-	element
+	number,
+	oneOf,
+	oneOfType,
+	string,
 } = React.PropTypes;
 
 const defaultIcons = {
@@ -80,14 +82,21 @@ const Banner = React.createClass({
 		 */
 		isSmall: bool,
 		/**
-		 * Called when the user closes the `Banner`. Calls back with the native
-		 * click event.
+		 * Called when the user closes the `Banner`.
+		 *
+		 * Signature: `({ uniqueId, event }) => {}`
 		 */
 		onClose: func,
 		/**
 		 * Controls the visibility of the `Banner`.
 		 */
 		isClosed: bool,
+
+		/**
+		 * Set an identifier on the component that will be returned when `onClose`
+		 * fires.
+		 */
+		uniqueId: oneOfType([string, number]),
 	},
 
 	getDefaultProps() {
@@ -102,10 +111,18 @@ const Banner = React.createClass({
 		};
 	},
 
+	handleClose(event) {
+		const {
+			uniqueId,
+			onClose,
+		} = this.props;
+
+		onClose({ uniqueId, event });
+	},
+
 	render() {
 		const {
 			hasIcon,
-			onClose,
 			icon,
 			kind,
 			isSmall,
@@ -157,7 +174,7 @@ const Banner = React.createClass({
 						</span>
 
 						{isCloseable ?
-							<span className={boundClassNames('close')} onClick={onClose}>
+							<span className={boundClassNames('close')} onClick={this.handleClose}>
 								{String.fromCharCode(0x00d7)}
 							</span>
 						: null}
