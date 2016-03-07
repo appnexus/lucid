@@ -1,13 +1,10 @@
+import _ from 'lodash';
 import classNames from 'classnames';
 import React from 'react';
 
 import { bindClassNames } from '../../util/style-helpers';
 
 const boundClassNames = bindClassNames('ColorPalette');
-
-const {
-	string
-} = React.PropTypes;
 
 const colorList = [
 	{
