@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "repository": {
@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "gulp docs-generate && webpack-dev-server --inline",
     "preversion": "rm -rf dist && gulp preversion",
-    "postversion": "rm -rf dist && gulp docs-upload",
+    "postversion": "gulp docs-upload",
     "test": "rm -rf dist && gulp test",
     "test-tdd": "rm -rf dist && gulp test-tdd"
   },
@@ -27,7 +27,8 @@
   "license": "Apache-2.0",
   "dependencies": {
     "classnames": "^2.2.3",
-    "lodash": "^4.1.0"
+    "lodash": "^4.1.0",
+    "react-addons-css-transition-group": "^0.14.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.3",
@@ -61,7 +62,6 @@
     "postcss-loader": "^0.8.1",
     "raw-loader": "^0.5.1",
     "react": "^0.14.0",
-    "react-addons-css-transition-group": "^0.14.0",
     "react-addons-test-utils": "^0.14.0",
     "react-docgen": "^2.7.0",
     "react-dom": "^0.14.0",
