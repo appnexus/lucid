@@ -1,7 +1,13 @@
-import _ from 'lodash';
+import classNames from 'classnames';
 import React from 'react';
 
-import ColorPalette from '../ColorPalette';
+import { bindClassNames } from '../../util/style-helpers';
+
+const boundClassNames = bindClassNames('ColorPalette');
+
+const {
+	string
+} = React.PropTypes;
 
 const colorList = [
 	{
@@ -157,20 +163,22 @@ const colorList = [
 	},
 ];
 
-export default React.createClass({
+const ColorPalette = React.createClass({
 	render() {
 		return (
-			<div>
+			<div >
+				<h2>Color Palette</h2>
+				<p>A list of all colors used.  Colors are listed by group type.</p>
 				{_.map(colorList, (group, i) => (
 					<div key={i} style={{display: 'flex', flexWrap: 'wrap'}}>
 						{console.log(group)}
-						<h2 style={{flex: '1 0 100%'}}>{group.category}</h2>
+						<h3 style={{flex: '1 0 100%'}}>{group.category}</h3>
 						{_.map(group.colors, (color) => (
-							<ColorPalette
-								className={`lucid-ColorPalette-color-${color.varName}`}
-								variableName={`@${color.varName};`}
-								hexString={color.hex}
-							/>
+							<div className={classNames(boundClassNames('~'))}>
+								<div className={`lucid-ColorPalette-color-${color.varName}`}></div>
+								<p><code>{`@${color.varName};`}</code></p>
+								<p className={boundClassNames('hex-string')}>{color.hex}</p>
+							</div>
 						))}
 					</div>
 				))}
@@ -178,3 +186,5 @@ export default React.createClass({
 		);
 	}
 });
+
+export default ColorPalette;
