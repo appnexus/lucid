@@ -19,12 +19,12 @@ const colorList = [
 				hex: '#000'
 			},
 			{
-				varName: 'borderColor',
-				hex: '@color-gray'
-			},
-			{
 				varName: 'backgroundColor',
 				hex: '@color-lightGray'
+			},
+			{
+				varName: 'borderColor',
+				hex: '@color-mediumGray'
 			},
 		]
 	},
@@ -173,7 +173,7 @@ const ColorPalette = React.createClass({
 						{_.map(group.colors, (color) => (
 							<div className={classNames(boundClassNames('~'))}>
 								<div className={`lucid-ColorPalette-color-${color.varName}`}></div>
-								<p><code>{`@${color.varName};`}</code></p>
+								<p><code>{`@color-${color.varName};`}</code></p>
 								<p className={boundClassNames('hex-string')}>{color.hex}</p>
 							</div>
 						))}
