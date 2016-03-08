@@ -3,7 +3,11 @@ import React from 'react';
 import classNames from 'classnames';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { bindClassNames } from '../../util/style-helpers';
-import { SuccessIcon, DangerIcon, InfoIcon, WarningIcon } from '../../index';
+
+import DangerIcon from '../Icon/DangerIcon/DangerIcon';
+import InfoIcon from '../Icon/InfoIcon/InfoIcon';
+import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
+import WarningIcon from '../Icon/WarningIcon/WarningIcon';
 
 const boundClassNames = bindClassNames('Banner');
 
