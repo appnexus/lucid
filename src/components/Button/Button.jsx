@@ -10,7 +10,6 @@ const {
 	bool,
 	func,
 	node,
-	number,
 	oneOf,
 	oneOfType,
 	string,
@@ -70,15 +69,9 @@ const Button = React.createClass({
 		/**
 		 * Called when the user clicks the `Button`.
 		 *
-		 * Signature: `({ event, uniqueId }) => {}`
+		 * Signature: `({ event, props }) => {}`
 		 */
 		onClick: func,
-
-		/**
-		 * Set an identifier on the component that will be returned when `onClick`
-		 * fires.
-		 */
-		uniqueId: oneOfType([string, number]),
 	},
 
 	getDefaultProps() {
@@ -92,13 +85,12 @@ const Button = React.createClass({
 
 	handleClick(event) {
 		const {
-			uniqueId,
 			isDisabled,
 			onClick,
 		} = this.props;
 
 		if (!isDisabled) {
-			onClick({ uniqueId, event });
+			onClick({ event, props: this.props });
 		}
 	},
 

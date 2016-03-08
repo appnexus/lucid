@@ -8,9 +8,7 @@ const boundClassNames = bindClassNames('Switch');
 const {
 	bool,
 	func,
-	number,
 	object,
-	oneOfType,
 	string,
 } = React.PropTypes;
 
@@ -48,7 +46,7 @@ const Switch = React.createClass({
 		 * Called when the user clicks on the component or when they press the
 		 * space key while the component is in focus.
 		 *
-		 * Signature: `(isSelected, { uniqueId, event }) => {}`
+		 * Signature: `(isSelected, { event, props }) => {}`
 		 */
 		onSelect: func,
 
@@ -56,12 +54,6 @@ const Switch = React.createClass({
 		 * Passed through to the root element.
 		 */
 		style: object,
-
-		/**
-		 * Set an identifier on the component that will be returned when `onSelect`
-		 * fires.
-		 */
-		uniqueId: oneOfType([string, number]),
 	},
 
 	getDefaultProps() {
@@ -116,11 +108,10 @@ const Switch = React.createClass({
 			isDisabled,
 			isSelected,
 			onSelect,
-			uniqueId,
 		} = this.props;
 
 		if (!isDisabled) {
-			onSelect(!isSelected, { uniqueId, event });
+			onSelect(!isSelected, { event, props: this.props });
 			this.nativeElement.focus();
 		}
 	}

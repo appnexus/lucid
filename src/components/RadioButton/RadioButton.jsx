@@ -6,12 +6,10 @@ import { bindClassNames } from '../../util/style-helpers';
 
 const boundClassNames = bindClassNames('RadioButton');
 const {
-	oneOfType,
 	bool,
 	func,
 	object,
 	string,
-	number,
 } = React.PropTypes;
 
 /**
@@ -56,7 +54,7 @@ const RadioButton = React.createClass({
 		 * space key while the component is in focus, and only called when the
 		 * component is in the unselected state.
 		 *
-		 * Signature: `(true, { uniqueId, event }) => {}`
+		 * Signature: `(true, { event, props }) => {}`
 		 */
 		onSelect: func,
 
@@ -64,12 +62,6 @@ const RadioButton = React.createClass({
 		 * Passed through to the root element.
 		 */
 		style: object,
-
-		/**
-		 * Set an identifier on the component that will be returned when `onSelect`
-		 * fires.
-		 */
-		uniqueId: oneOfType([string, number]),
 	},
 
 	getDefaultProps() {
@@ -90,7 +82,6 @@ const RadioButton = React.createClass({
 			isDisabled,
 			isSelected,
 			style,
-			uniqueId,
 			...passThroughs
 		} = this.props;
 
@@ -107,7 +98,6 @@ const RadioButton = React.createClass({
 				<input
 						onChange={_.noop}
 						{...passThroughs}
-						value={uniqueId}
 						checked={isSelected}
 						className={boundClassNames('native')}
 						disabled={isDisabled}
@@ -126,11 +116,10 @@ const RadioButton = React.createClass({
 			isDisabled,
 			isSelected,
 			onSelect,
-			uniqueId,
 		} = this.props;
 
 		if (!isDisabled && !isSelected) {
-			onSelect(true, { uniqueId, event });
+			onSelect(true, { event, props: this.props });
 			this.nativeElement.focus();
 		}
 	}

@@ -16,9 +16,7 @@ const {
 	bool,
 	element,
 	func,
-	number,
 	oneOf,
-	oneOfType,
 	string,
 } = React.PropTypes;
 
@@ -88,7 +86,7 @@ const Banner = React.createClass({
 		/**
 		 * Called when the user closes the `Banner`.
 		 *
-		 * Signature: `({ uniqueId, event }) => {}`
+		 * Signature: `({ event, props }) => {}`
 		 */
 		onClose: func,
 		/**
@@ -96,11 +94,6 @@ const Banner = React.createClass({
 		 */
 		isClosed: bool,
 
-		/**
-		 * Set an identifier on the component that will be returned when `onClose`
-		 * fires.
-		 */
-		uniqueId: oneOfType([string, number]),
 	},
 
 	getDefaultProps() {
@@ -117,11 +110,10 @@ const Banner = React.createClass({
 
 	handleClose(event) {
 		const {
-			uniqueId,
 			onClose,
 		} = this.props;
 
-		onClose({ uniqueId, event });
+		onClose({ event, props: this.props });
 	},
 
 	render() {

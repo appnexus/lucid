@@ -7,8 +7,6 @@ import { bindClassNames } from '../../util/style-helpers';
 const boundClassNames = bindClassNames('Checkbox');
 
 const {
-	oneOfType,
-	number,
 	bool,
 	func,
 	object,
@@ -49,7 +47,7 @@ const Checkbox = React.createClass({
 		 * Called when the user clicks on the component or when they press the
 		 * space key while the component is in focus.
 		 *
-		 * Signature: (isSelected, { uniqueId, event }) => {}
+		 * Signature: (isSelected, { event, props }) => {}
 		 */
 		onSelect: func,
 
@@ -57,12 +55,6 @@ const Checkbox = React.createClass({
 		 * Passed through to the root element.
 		 */
 		style: object,
-
-		/**
-		 * Set an identifier on the component that will be returned when `onSelect`
-		 * fires.
-		 */
-		uniqueId: oneOfType([string, number]),
 	},
 
 	getDefaultProps() {
@@ -83,7 +75,6 @@ const Checkbox = React.createClass({
 			isDisabled,
 			isSelected,
 			style,
-			uniqueId,
 			...passThroughs
 		} = this.props;
 
@@ -100,7 +91,6 @@ const Checkbox = React.createClass({
 				<input
 					onChange={_.noop}
 					{...passThroughs}
-					value={uniqueId}
 					checked={isSelected}
 					className={boundClassNames('native')}
 					disabled={isDisabled}
@@ -122,11 +112,10 @@ const Checkbox = React.createClass({
 			isDisabled,
 			isSelected,
 			onSelect,
-			uniqueId,
 		} = this.props;
 
 		if (!isDisabled) {
-			onSelect(!isSelected, { uniqueId, event });
+			onSelect(!isSelected, { event, props: this.props });
 			this.nativeElement.focus();
 		}
 	}

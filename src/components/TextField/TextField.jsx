@@ -7,7 +7,6 @@ import Validation from '../Validation/Validation';
 const boundClassNames = bindClassNames('TextField');
 
 const {
-	oneOfType,
 	bool,
 	string,
 	func,
@@ -67,15 +66,9 @@ const TextField = React.createClass({
 		/**
 		 * Fires an event every time the user types text into the `TextField`.
 		 *
-		 * Signature: `(value, { uniqueId, event }) => {}`
+		 * Signature: `(value, { event, props }) => {}`
 		 */
 		onChange: func,
-
-		/**
-		 * Set an identifier on the component that will be returned when `onChange`
-		 * fires.
-		 */
-		uniqueId: oneOfType([string, number]),
 
 		/**
 		 * Set the value of the input.
@@ -97,12 +90,11 @@ const TextField = React.createClass({
 
 	handleChange(event) {
 		const {
-			uniqueId,
 			onChange,
 		} = this.props;
 		const value = _.get(event, 'target.value', '');
 
-		onChange(value, { uniqueId, event });
+		onChange(value, { event, props: this.props });
 	},
 
 	render() {

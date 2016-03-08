@@ -57,10 +57,11 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 
 		/**
 		 * Called when the user clicks on one of the child radio buttons or when
-		 * they press the space key while one is in focus, and only called when
-		 * the component is in the unselected state.
+		 * they press the space key while one is in focus, and only called when the
+		 * component is in the unselected state. `props` refers to the child
+		 * `RadioButton` props.
 		 *
-		 * Signature: `(selectedIndex, { uniqueId, event }) => {}`
+		 * Signature: `(selectedIndex, { event, props }) => {}`
 		 */
 		onSelect: func,
 
@@ -112,7 +113,7 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 								{...radioButtonChildProp}
 								isSelected={actualSelectedIndex === index}
 								key={index}
-								uniqueId={index}
+								callbackId={index}
 								name={name}
 								onSelect={this.handleSelected}
 						/>
@@ -123,16 +124,17 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 		);
 	},
 
-	handleSelected(isSelected, { uniqueId, event }) {
-		const clickedRadioButtonProps = RadioGroup.RadioButton.findInAllAsProps(this.props)[uniqueId];
+	handleSelected(isSelected, { event, props }) {
+		const { callbackId } = props;
+		const clickedRadioButtonProps = RadioGroup.RadioButton.findInAllAsProps(this.props)[callbackId];
 
 		// If the `RadioGroup.RadioButton` child has an `onSelect` prop that is
 		// a function, call that prior to calling the group's `onSelect` prop.
 		if (_.isFunction(clickedRadioButtonProps.onSelect)) {
-			clickedRadioButtonProps.onSelect(isSelected, { uniqueId, event });
+			clickedRadioButtonProps.onSelect(isSelected, { event, props });
 		}
 
-		this.props.onSelect(uniqueId, { uniqueId, event });
+		this.props.onSelect(callbackId, { event, props });
 	}
 }));
 
