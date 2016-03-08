@@ -119,6 +119,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 								onClick={_.partial(onSelect, index)}
 							>
 								{_.get(_.first(Tabs.Title.findInAllAsProps(tabChildProp)), 'children', '')}
+								{isProgressive && index !== tabChildProps.length - 1 ? <TabArrow/> : null}
 							</li>
 						);
 					})}
@@ -130,5 +131,17 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 		);
 	}
 }));
+
+const TabArrow = React.createClass({
+	render() {
+		return (
+			<svg className="tab-arrow" xmlns="http://www.w3.org/2000/svg" width="8px" height="28px" viewBox="0 0 8 28" >
+					<polygon className="tab-arrow-background" fill="#FFFF00" points="0,0 8,14 0,28"/>
+					<polyline className="tab-arrow-tab-line" fill="#00FF00" points="0,0 1.7,3 0,3"/>
+					<polyline className="tab-arrow-line" fill="none" stroke="#000000" stroke-width="0.25" stroke-miterlimit="10" points="0,28 7.9,14 0,0"/>
+			</svg>
+		);
+	}
+});
 
 export default Tabs;
