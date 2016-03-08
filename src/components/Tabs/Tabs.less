@@ -1,8 +1,10 @@
 @Tabs-spacer-height: 3px;
 @Tabs-tab-height: 28px;
+@Tabs-zIndex: 1;
 
 .lucid-Tabs {
 	&-bar {
+		overflow: hidden;
 		font-size: @fontSize;
 		font-family: @fontFamily;
 		list-style-type: none;
@@ -23,11 +25,11 @@
 		justify-content: center;
 		padding-top: @Tabs-spacer-height;
 		border: 1px solid @color-default-borderColor;
-		border-right: 0;
+		border-left: 0;
 		background-color: @color-white;
 
-		&:last-of-type {
-			border-right: 1px solid @color-default-borderColor;
+		&:first-of-type {
+			border-left: 1px solid @color-default-borderColor;
 		}
 
 		&:hover {
@@ -54,7 +56,29 @@
 	}
 	&-Tab-is-active-and-open {
 		border-bottom: 1px solid @color-white;
-		z-index: 1; // Safari fix
+		z-index: @Tabs-zIndex; // Safari fix
+	}
+	&-Tab-is-progressive {
+		position: relative;
+		border-right: 0;
+
+		&::after {
+			position: absolute;
+			content: '';
+			border-right: 1px solid @color-default-borderColor;
+			border-top: 1px solid @color-default-borderColor;
+			background-color: transparent;
+			height: @Tabs-tab-height * 2;
+			width: @Tabs-tab-height * 2;
+			transform: rotate(45deg);
+			bottom: -15px;
+			right: -4px;
+			z-index: @Tabs-zIndex + 1;
+		}
+
+		&:hover::after {
+			background-color: tint(#000, 95%);
+		}
 	}
 
 	&-content {
