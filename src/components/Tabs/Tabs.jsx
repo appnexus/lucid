@@ -62,6 +62,13 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 		 * If `true` then the active tab will appear open on the bottom.
 		 */
 		isOpen: bool,
+
+		/**
+		 * Style the tabs as a progression. This is typically used for a work flow
+		 * where the user needs to move forward and backward through a series of
+		 * steps.
+		 */
+		isProgressive: bool,
 	},
 
 	getDefaultProps() {
@@ -69,6 +76,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 			selectedIndex: 0,
 			onSelect: _.noop,
 			isOpen: true,
+			isProgressive: false,
 		};
 	},
 
@@ -79,6 +87,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 			selectedIndex,
 			style,
 			isOpen,
+			isProgressive,
 			...passThroughs,
 		} = this.props;
 
@@ -103,7 +112,8 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 							<li
 								className={boundClassNames('Tab', {
 									'Tab-is-active': index === actualSelectedIndex,
-									'Tab-is-active-and-open': isOpen && index === actualSelectedIndex
+									'Tab-is-active-and-open': isOpen && index === actualSelectedIndex,
+									'Tab-is-progressive': isProgressive && index !== tabChildProps.length - 1,
 								})}
 								key={index}
 								onClick={_.partial(onSelect, index)}
