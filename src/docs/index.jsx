@@ -11,6 +11,7 @@ import { createHashHistory } from 'history';
 import docgenMapRaw from './docgen.json';
 import hljs from 'hljs';
 import { markdown } from 'markdown';
+import ColorPalette from './containers/colors';
 
 const hashHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
@@ -304,6 +305,17 @@ const App = React.createClass({
 			<div className='App'>
 				<div className='App-sidebar'>
 					<nav className='App-nav'>
+
+						<ul>
+							<li>
+								<b>General</b>
+								<ul>
+									<li>
+										<Link to='/colors'>Color Palette</Link>
+									</li>
+								</ul>
+							</li>
+						</ul>
 						{this.renderCategoryLinks(docgenGroups)}
 					</nav>
 				</div>
@@ -319,6 +331,7 @@ render((
 	<Router history={hashHistory}>
 		<Route path='/' component={App}>
 			<Route path='/components/:componentName' component={Component}/>
+			<Route path='/colors' component={ColorPalette}/>
 		</Route>
 	</Router>
 ), document.querySelector('#docs'));
