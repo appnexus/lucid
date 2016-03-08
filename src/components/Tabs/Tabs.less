@@ -44,20 +44,6 @@
 			box-shadow: @shadow-inset;
 		}
 	}
-	&-Tab-is-active {
-		border-top: @Tabs-spacer-height solid @color-primary;
-		padding-top: 0;
-		color: #000;
-		cursor: initial;
-
-		&:hover {
-			background-color: @color-white;
-		}
-
-		&:active {
-			box-shadow: none;
-		}
-	}
 
 	&-Tab-is-progressive {
 		position: relative;
@@ -66,7 +52,7 @@
 			height: @Tabs-tab-height;
 			width: @Tabs-arrow-width;
 			position: absolute;
-			top: -1px;
+			bottom: -1px;
 			right: -@Tabs-arrow-width;
 			.tab-arrow-tab-line {
 				fill: transparent;
@@ -76,6 +62,30 @@
 			}
 			.tab-arrow-line {
 				stroke: @color-default-borderColor;
+			}
+		}
+	}
+
+	&-Tab-is-active {
+		border-top: @Tabs-spacer-height solid @color-primary;
+		padding-top: 0;
+		color: #000;
+		cursor: initial;
+
+		&:hover {
+			background-color: @color-white;
+			.tab-arrow {
+				.tab-arrow-background {
+					fill: @color-white;
+				}
+			}
+		}
+		&:active {
+			box-shadow: none;
+		}
+		.tab-arrow {
+			.tab-arrow-tab-line {
+				fill: @color-primary;
 			}
 		}
 	}
@@ -91,7 +101,6 @@
 			}
 		}
 		.tab-arrow {
-			top: -@Tabs-spacer-height;
 			.tab-arrow-tab-line {
 				fill: @color-primary;
 			}
