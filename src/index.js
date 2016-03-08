@@ -10,6 +10,7 @@ import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
+import Grid from './components/Grid/Grid';
 import Icon from './components/Icon/Icon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
@@ -53,6 +54,7 @@ export {
 	DangerIcon,
 	EditIcon,
 	EligibilityIcon,
+	Grid,
 	Icon,
 	InfoIcon,
 	MinusIcon,

@@ -194,13 +194,27 @@ const Component = React.createClass({
 					return '';
 				}
 
-				return `(made from: ${componentNames.join(', ')})`;
+				const composesComponentLinks = componentNames.map((name, index) => (
+					<span>
+						<Link to={`/components/${name}`}>
+							{name}
+						</Link>
+						{index == componentNames.length - 1 ? null : ', '}
+					</span>
+				));
+
+				return (
+					<span>
+						<span>made from: </span>
+						{composesComponentLinks}
+					</span>
+				);
 			})
 			.value();
 
 		return (
 			<div>
-				<h2>{`${componentName} ${composesComponents}`}</h2>
+				<h2>{componentName} {composesComponents}</h2>
 				<div dangerouslySetInnerHTML={descriptionAsHTML} />
 				<h3>Props</h3>
 				<table className='Component-props-table pure-table pure-table-bordered'>
