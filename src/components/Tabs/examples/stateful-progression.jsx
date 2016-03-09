@@ -8,7 +8,7 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<StatefulTabs isProgressive={true}>
+				<StatefulTabs isOpen={false} isProgressive={true}>
 					<StatefulTabs.Tab Title='One'>One content</StatefulTabs.Tab>
 					<StatefulTabs.Tab Title='Two'>Two content</StatefulTabs.Tab>
 					<StatefulTabs.Tab Title='Three'>Three content</StatefulTabs.Tab>

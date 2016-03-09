@@ -41,12 +41,19 @@
 		}
 
 		&:active {
-			box-shadow: @shadow-inset;
+			box-shadow: 0 10px 5px -11px rgba(0, 0, 0, 0.4) inset;
 		}
 	}
 
 	&-Tab-is-progressive {
 		position: relative;
+		border-width: 1px 0;
+		&:first-of-type {
+			border-left-width: 1px;
+		}
+		& + * {
+			border-left-width: 0;
+		}
 		.tab-arrow {
 			z-index: 100;
 			height: @Tabs-tab-height;
