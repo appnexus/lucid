@@ -12,6 +12,7 @@ const {
 	func,
 	number,
 	object,
+	oneOfType,
 	any,
 } = React.PropTypes;
 
@@ -73,7 +74,10 @@ const TextField = React.createClass({
 		/**
 		 * Set the value of the input.
 		 */
-		value: string,
+		value: oneOfType([
+			number,
+			string
+		])
 	},
 
 	getDefaultProps() {
