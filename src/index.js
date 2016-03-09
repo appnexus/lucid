@@ -18,6 +18,7 @@ import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import LabeledCheckbox from './components/LabeledCheckbox/LabeledCheckbox';
 import LabeledRadioButton from './components/LabeledRadioButton/LabeledRadioButton';
 import LabeledSwitch from './components/LabeledSwitch/LabeledSwitch';
+import List from './components/List/List';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import Overlay from './components/Overlay/Overlay';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
@@ -70,6 +71,7 @@ export {
 	LabeledCheckbox,
 	LabeledRadioButton,
 	LabeledSwitch,
+    List,
 	MinusIcon,
 	Overlay,
 	PlusIcon,
