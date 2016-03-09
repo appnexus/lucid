@@ -6,12 +6,17 @@ import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
 import describeWithDOM from '../../util/describe-with-dom';
-import { common } from '../../util/generic-tests';
+import { common, controls } from '../../util/generic-tests';
 
 import Switch from './Switch';
 
 describe('Switch', () => {
 	common(Switch);
+	controls(Switch, {
+		callbackName: 'onSelect',
+		controlSelector: '.lucid-Switch-native',
+		eventType: 'click',
+	});
 
 	const booleanValues = [true, false];
 
@@ -85,7 +90,7 @@ describeWithDOM('Switch', () => {
 
 			simulateEvent(<Switch isSelected={false} onSelect={onSelect} />, `.lucid-Switch${classSubString}`, event);
 			assert.equal(onSelect.args[0][0], true);
-			assert(onSelect.args[0][1] instanceof SyntheticEvent);
+			assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
 		});
 	}
 
@@ -95,7 +100,7 @@ describeWithDOM('Switch', () => {
 
 			simulateEvent(<Switch isSelected={true} onSelect={onSelect} />, `.lucid-Switch${classSubString}`, event);
 			assert.equal(onSelect.args[0][0], false);
-			assert(onSelect.args[0][1] instanceof SyntheticEvent);
+			assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
 		});
 	}
 
