@@ -27,7 +27,19 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 
 	childProps: {
 		Tab: {
-			isSelected: bool
+			isSelected: bool,
+			/**
+			* Styles a tab as disabled.  This typically used with `isProgressive` to
+			* to disabled steps that have not been compleated and should not be
+			* selected until the current step has been compleated.
+			*/
+			isDisabled: bool,
+			/**
+			* Style a tabs as a progression component. This is typically used with
+			* `isProgressive` to indicate a step has been compleated and a can be
+			* selected again.
+			*/
+			isProgressiveComplete: bool
 		},
 		Title: null, // we're only interested in children
 	},
@@ -76,7 +88,9 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 			selectedIndex: 0,
 			onSelect: _.noop,
 			isOpen: true,
+			isDisabled: false,
 			isProgressive: false,
+			isProgressiveCompleate: false
 		};
 	},
 
@@ -112,18 +126,20 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 							<li
 								className={boundClassNames('Tab', {
 									'Tab-is-active': index === actualSelectedIndex,
+									'Tab-is-disabled': tabChildProp.isDisabled,
 									'Tab-is-active-and-open': isOpen && index === actualSelectedIndex,
 									'Tab-is-progressive': isProgressive && index !== tabChildProps.length - 1,
+									'Tab-is-progressive-complete': isProgressive && tabChildProp.isProgressiveComplete && index !== tabChildProps.length - 1,
 								})}
 								key={index}
-								onClick={_.partial(onSelect, index)}
+								onClick={_.partial(onSelect, index, tabChildProp)}
 							>
 								{_.get(_.first(Tabs.Title.findInAllAsProps(tabChildProp)), 'children', '')}
 								{isProgressive && index !== tabChildProps.length - 1 ?
-										<svg className="tab-arrow" xmlns="http://www.w3.org/2000/svg" width="8px" height="28px" viewBox="0 0 8 28" >
-											 <polygon className="tab-arrow-background" fill="#fff" points="0,0 8,14 0,28"/>
-											 <polyline className="tab-arrow-tab-line" fill="#fff" points="0,0 1.7,3 0,3"/>
-											 <polyline className="tab-arrow-line" fill="none" stroke="#fff" stroke-width="0.25" stroke-miterlimit="10" points="0,28 7.9,14 0,0"/>
+										<svg className={boundClassNames('Tab-arrow')} xmlns='http://www.w3.org/2000/svg' width='8px' height='28px' viewBox='0 0 8 28' >
+											 <polygon className={boundClassNames('Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
+											 <polyline className={boundClassNames('Tab-arrow-tab-line')} fill='#fff' points='0,0 1.7,3 0,3'/>
+											 <polyline className={boundClassNames('Tab-arrow-line')} fill='none' stroke='#fff' stroke-width='0.25' stroke-miterlimit='10' points='0,28 7.9,14 0,0'/>
 									 </svg>
 								: null}
 							</li>

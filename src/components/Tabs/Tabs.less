@@ -13,7 +13,6 @@
 	}
 
 	&-Tab {
-		color: @color-primary;
 		flex: 1 1 auto;
 		cursor: pointer;
 		user-select: none;
@@ -22,7 +21,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding-top: @Tabs-spacer-height;
 		border: 1px solid @color-default-borderColor;
 		border-right: 0;
 		background-color: @color-white;
@@ -33,15 +31,27 @@
 
 		&:hover {
 			background-color: @color-lightGray;
-			.tab-arrow {
-				.tab-arrow-background {
-					fill: @color-lightGray;
-				}
-			}
+			.Tabs-mixin-tab-arrow-background(@color-lightGray);
 		}
 
 		&:active {
-			box-shadow: 0 10px 5px -11px rgba(0, 0, 0, 0.4) inset;
+			
+		}
+	}
+
+	&-Tab-is-progressive-complete {
+		color: @color-primary;
+	}
+
+	&-Tab-is-disabled {
+		color: fade(#333, 50%);
+		&:hover {
+			background-color: @color-white;
+			cursor: default;
+			.Tabs-mixin-tab-arrow-background();
+		}
+		&:active {
+			background: @color-white;
 		}
 	}
 
@@ -54,69 +64,64 @@
 		& + * {
 			border-left-width: 0;
 		}
-		.tab-arrow {
+		.lucid-Tabs-Tab-arrow{
 			z-index: 100;
 			height: @Tabs-tab-height;
 			width: @Tabs-arrow-width;
 			position: absolute;
 			bottom: -1px;
 			right: -@Tabs-arrow-width;
-			.tab-arrow-tab-line {
-				fill: transparent;
-			}
-			.tab-arrow-background {
-				fill: @color-white;
-			}
-			.tab-arrow-line {
+			.lucid-Tabs-Tab-arrow-line {
 				stroke: @color-default-borderColor;
 			}
 		}
+		.Tabs-mixin-tab-line(transparent);
+		.Tabs-mixin-tab-arrow-background();
 	}
 
 	&-Tab-is-active {
-		border-top: @Tabs-spacer-height solid @color-primary;
-		padding-top: 0;
-		color: #000;
+		border-top: none;
+		padding-top: 1px;
+		color: @color-black;
+		background-image: linear-gradient(@color-primary 0, @color-primary @Tabs-spacer-height, @color-white 3px);
 		cursor: initial;
-
 		&:hover {
 			background-color: @color-white;
-			.tab-arrow {
-				.tab-arrow-background {
-					fill: @color-white;
-				}
-			}
+			.Tabs-mixin-tab-arrow-background();
 		}
 		&:active {
 			box-shadow: none;
 		}
-		.tab-arrow {
-			.tab-arrow-tab-line {
-				fill: @color-primary;
-			}
-		}
+		.Tabs-mixin-tab-line();
 	}
 
 	&-Tab-is-active-and-open {
 		border-bottom: 1px solid @color-white;
 		z-index: 1; // Safari fix
 		&:hover {
-			.tab-arrow {
-				.tab-arrow-background {
-					fill: @color-white;
-				}
-			}
+			.Tabs-mixin-tab-arrow-background();
 		}
-		.tab-arrow {
-			.tab-arrow-tab-line {
-				fill: @color-primary;
-			}
-		}
-
+		.Tabs-mixin-tab-line();
 	}
 
 	&-content {
 		border-top: 1px solid @color-default-borderColor;
 		padding-top: 10px; // TODO: use our default gutter
+	}
+}
+
+.Tabs-mixin-tab-line(@color-Tab-line: @color-primary) {
+	.lucid-Tabs-Tab-arrow {
+		.lucid-Tabs-Tab-arrow-tab-line {
+			fill: @color-Tab-line;
+		}
+	}
+}
+
+.Tabs-mixin-tab-arrow-background(@color-Tab-background: @color-white) {
+	.lucid-Tabs-Tab-arrow {
+		.lucid-Tabs-Tab-arrow-background {
+			fill: @color-Tab-background;
+		}
 	}
 }
