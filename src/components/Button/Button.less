@@ -8,6 +8,11 @@
 	display: inline-block;
 	outline: none;
 	border: 1px solid @color-default-borderColor;
+	border-radius: @Button-size-borderRadius;
+	font: @font;
+	letter-spacing: .05em;
+	line-height: @Button-size-lineHeight;
+	padding: 0 @Button-size-padding;
 
 
 	// Types
@@ -61,15 +66,15 @@
 
 	// Sizes
 	&-short {
-		line-height: @size-button-lineHeight/1.5;
+		line-height: @Button-size-lineHeight/1.5;
 	}
 	&-small {
-		line-height: @size-button-lineHeight/1.5;
-		padding: 0 @size-button-padding/1.5;
+		line-height: @Button-size-lineHeight/1.5;
+		padding: 0 @Button-size-padding/1.5;
 	}
 	&-large {
-		line-height: @size-button-lineHeight*1.5;
-		padding: 0 @size-button-padding*1.5;
+		line-height: @Button-size-lineHeight*1.5;
+		padding: 0 @Button-size-padding*1.5;
 		font-size: 1.2em;
 	}
 
