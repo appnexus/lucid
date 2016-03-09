@@ -89,7 +89,6 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 			onSelect: _.noop,
 			isOpen: true,
 			isProgressive: false,
-			foo: true,
 		};
 	},
 
