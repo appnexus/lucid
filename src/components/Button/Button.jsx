@@ -6,13 +6,13 @@ import { bindClassNames } from '../../util/style-helpers';
 const boundClassNames = bindClassNames('Button');
 
 const {
-	bool,
-	string,
-	oneOfType,
-	oneOf,
-	node,
 	arrayOf,
-	func
+	bool,
+	func,
+	node,
+	oneOf,
+	oneOfType,
+	string,
 } = React.PropTypes;
 
 /**
@@ -67,7 +67,9 @@ const Button = React.createClass({
 			'large'
 		]),
 		/**
-		 * called when the user clicks the button
+		 * Called when the user clicks the `Button`.
+		 *
+		 * Signature: `({ event, props }) => {}`
 		 */
 		onClick: func,
 	},
@@ -81,14 +83,19 @@ const Button = React.createClass({
 		};
 	},
 
-	handleClick() {
-		if (!this.props.isDisabled) {
-			this.props.onClick();
+	handleClick(event) {
+		const {
+			isDisabled,
+			onClick,
+		} = this.props;
+
+		if (!isDisabled) {
+			onClick({ event, props: this.props });
 		}
 	},
 
 	render() {
-		let {
+		const {
 			isDisabled,
 			isActive,
 			hasIcon,
@@ -96,7 +103,7 @@ const Button = React.createClass({
 			size,
 			className,
 			children,
-			...others
+			...passThroughs
 		} = this.props;
 
 		let scopedClasses = boundClassNames('~', {
@@ -116,11 +123,12 @@ const Button = React.createClass({
 
 		return (
 			<button
+				{...passThroughs}
 				className={classNames(className, scopedClasses)}
 				onClick={this.handleClick}
 				disabled={isDisabled}
-				{...others}
-				ref='button' >
+				ref='button'
+			>
 				<span className={boundClassNames('content')}>
 					{children}
 				</span>

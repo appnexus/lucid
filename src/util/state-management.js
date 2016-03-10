@@ -87,7 +87,8 @@ export function buildStatefulComponent(baseComponent, opts) {
 		},
 		componentWillReceiveProps(nextProps) {
 			if (opts.setStateWithNewProps) {
-				this.setState(omitFunctionPropsDeep(nextProps));
+				let nextPropsData = omitFunctionPropsDeep(nextProps);
+				this.setState(_.merge({}, _.pick(this.state, _.intersection(_.keys(this.state), _.keys(nextPropsData))), nextPropsData));
 			}
 		},
 		componentWillMount() {
