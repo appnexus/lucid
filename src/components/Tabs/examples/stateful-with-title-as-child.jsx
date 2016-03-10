@@ -24,7 +24,7 @@ export default React.createClass({
 						Three content
 					</StatefulTabs.Tab>
 
-					<StatefulTabs.Tab>
+					<StatefulTabs.Tab isDisabled={true}>
 						<StatefulTabs.Title>Four</StatefulTabs.Title>
 						Four content
 					</StatefulTabs.Tab>

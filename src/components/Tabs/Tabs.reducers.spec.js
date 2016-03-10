@@ -10,4 +10,19 @@ describe('Tabs reducers', () => {
 			selectedIndex: 99
 		});
 	});
+
+	it('onSelect should not set selectedIndex when isDisabled', () => {
+		const initialState = {
+			selectedIndex: 5
+		};
+
+		const props = {
+			isDisabled: true
+		};
+
+		assert.notDeepEqual(reducers.onSelect(initialState, 99, props), {
+			foo: 1,
+			selectedIndex: 5
+		});
+	});
 });
