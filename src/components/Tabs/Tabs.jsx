@@ -29,17 +29,11 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 		Tab: {
 			isSelected: bool,
 			/**
-			 * Styles a tab as disabled.  This typically used with `isProgressive` to
-			 * to disabled steps that have not been compleated and should not be
-			 * selected until the current step has been compleated.
-			 */
+			* Styles a tab as disabled.  This typically used with `isProgressive` to
+			* to disabled steps that have not been compleated and should not be
+			* selected until the current step has been compleated.
+			*/
 			isDisabled: bool,
-			/**
-			 * Style a tabs as a progression component. This is typically used with
-			 * `isProgressive` to indicate a step has been compleated and a can be
-			 * selected again.
-			 */
-			isProgressiveComplete: bool
 		},
 		Title: null, // we're only interested in children
 	},
@@ -89,7 +83,6 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 			onSelect: _.noop,
 			isOpen: true,
 			isProgressive: false,
-			foo: true,
 		};
 	},
 
@@ -127,8 +120,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 									'Tab-is-active': index === actualSelectedIndex,
 									'Tab-is-disabled': tabChildProp.isDisabled,
 									'Tab-is-active-and-open': isOpen && index === actualSelectedIndex,
-									'Tab-is-progressive': isProgressive && index !== tabChildProps.length - 1,
-									'Tab-is-progressive-complete': isProgressive && tabChildProp.isProgressiveComplete && index !== tabChildProps.length - 1,
+									'Tab-is-progressive': isProgressive && index !== tabChildProps.length - 1,							
 								})}
 								key={index}
 								onClick={_.partial(onSelect, index, tabChildProp)}

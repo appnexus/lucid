@@ -15,6 +15,7 @@
 	&-Tab {
 		flex: 1 1 auto;
 		cursor: pointer;
+		color: @color-primary;
 		user-select: none;
 		margin-bottom: -1px;
 		height: @Tabs-tab-height;
@@ -39,15 +40,11 @@
 		}
 	}
 
-	&-Tab-is-progressive-complete {
-		color: @color-primary;
-	}
-
 	&-Tab-is-disabled {
 		color: fade(#333, 50%);
+		cursor: not-allowed;
 		&:hover {
 			background-color: @color-white;
-			cursor: default;
 			.Tabs-mixin-tab-arrow-background();
 		}
 		&:active {
@@ -90,7 +87,7 @@
 			.Tabs-mixin-tab-arrow-background();
 		}
 		&:active {
-			box-shadow: none;
+			background-image: linear-gradient(@color-primary 0, @color-primary @Tabs-spacer-height, @color-white 3px);
 		}
 		.Tabs-mixin-tab-line();
 	}
