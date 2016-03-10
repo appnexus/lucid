@@ -1,3 +1,4 @@
+import sinon from 'sinon';
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
@@ -100,6 +101,29 @@ export function icons(Component) {
 			const classNames = wrapper.find('svg').prop('className').split(' ');
 			const targetClassName = 'lucid-Icon-is-badge';
 			assert(_.includes(classNames, targetClassName), `'${classNames}' should include '${targetClassName}'`);
+		});
+	});
+}
+
+// Common tests for all control components
+export function controls(Component, { callbackName, controlSelector , eventType }) {
+	// Use DOM tests here since some of our controls use dom events under the hood
+	describeWithDOM('[control]', () => {
+		it('should callback with `event` and `props`', () => {
+			const expectedSpecialProp = 32;
+			const props = {
+				specialProp: expectedSpecialProp,
+				[callbackName]: sinon.spy(),
+			};
+			const wrapper = mount(<Component {...props} />);
+
+			wrapper.find(controlSelector).simulate(eventType);
+
+			// Last argument should be an object with `uniqueId` and `event`
+			const { props: { specialProp }, event } = _.last(props[callbackName].args[0]);
+
+			assert(event, 'missing event');
+			assert.equal(specialProp, expectedSpecialProp, 'incorrect or missing specialProp');
 		});
 	});
 }

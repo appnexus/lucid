@@ -150,7 +150,7 @@ describe('RadioGroup', () => {
 
 				wrapper.children().at(1).simulate('click');
 				assert.equal(onSelect.args[0][0], 1);
-				assert(onSelect.args[0][1] instanceof SyntheticEvent);
+				assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
 			});
 
 			it('calls the `onSelect` prop, if a function, of the child prior to calling its own.', () => {
