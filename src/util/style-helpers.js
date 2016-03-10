@@ -16,7 +16,7 @@ export function bindClassNames(value='', variable=/&/g) {
 	function boundClassNames(...args) {
 		return _.map(
 			classNames(...args).split(' '),
-			(className) => `${className.replace(variable, value)}`
+			(className) => className.replace(variable, value)
 		).join(' ');
 	};
 
