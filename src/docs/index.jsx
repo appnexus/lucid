@@ -195,7 +195,7 @@ const Component = React.createClass({
 				}
 
 				const composesComponentLinks = componentNames.map((name, index) => (
-					<span>
+					<span key={name}>
 						<Link to={`/components/${name}`}>
 							{name}
 						</Link>
