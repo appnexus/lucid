@@ -1,8 +1,7 @@
 import React from 'react';
-import classNames from 'classnames';
-import { bindClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 
-const boundClassNames = bindClassNames('Badge');
+const boundClassNames = lucidClassNames.bind('&-Badge');
 
 const {
 	node,
@@ -41,10 +40,8 @@ const Badge = React.createClass({
 			...passThroughs
 		} = this.props;
 
-		const scopedClasses = boundClassNames('~');
-
 		return (
-			<span className={classNames(className, scopedClasses)} {...passThroughs}>
+			<span className={boundClassNames('&', className)} {...passThroughs}>
 				{children}
 			</span>
 		);

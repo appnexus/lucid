@@ -1,9 +1,7 @@
 import React from 'react';
-import classNames from 'classnames';
 import _ from 'lodash';
-import { bindClassNames } from '../../util/style-helpers';
-
-const boundClassNames = bindClassNames('Button');
+import { lucidClassNames } from '../../util/style-helpers';
+const boundClassNames = lucidClassNames.bind('&-Button');
 
 const {
 	arrayOf,
@@ -106,30 +104,28 @@ const Button = React.createClass({
 			...passThroughs
 		} = this.props;
 
-		let scopedClasses = boundClassNames('~', {
-			'is-disabled': isDisabled,
-			'is-active': isActive,
-			'has-icon': hasIcon,
-			'primary': kind === 'primary',
-			'link': kind === 'link',
-			'success': kind === 'success',
-			'warning': kind === 'warning',
-			'danger': kind === 'danger',
-			'info': kind === 'info',
-			'short': size === 'short',
-			'small': size === 'small',
-			'large': size === 'large',
-		});
-
 		return (
 			<button
 				{...passThroughs}
-				className={classNames(className, scopedClasses)}
+				className={boundClassNames('&', {
+					'&-is-disabled': isDisabled,
+					'&-is-active': isActive,
+					'&-has-icon': hasIcon,
+					'&-primary': kind === 'primary',
+					'&-link': kind === 'link',
+					'&-success': kind === 'success',
+					'&-warning': kind === 'warning',
+					'&-danger': kind === 'danger',
+					'&-info': kind === 'info',
+					'&-short': size === 'short',
+					'&-small': size === 'small',
+					'&-large': size === 'large',
+				}, className)}
 				onClick={this.handleClick}
 				disabled={isDisabled}
 				ref='button'
 			>
-				<span className={boundClassNames('content')}>
+				<span className={boundClassNames('&-content')}>
 					{children}
 				</span>
 			</button>

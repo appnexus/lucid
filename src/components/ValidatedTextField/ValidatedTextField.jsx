@@ -1,13 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
-import classNames from 'classnames';
 import Validation from '../Validation/Validation';
 import TextField from '../TextField/TextField';
 import reducers from '../TextField/TextField.reducers';
-import { bindClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition } from '../../util/component-definition';
 
-const boundClassNames = bindClassNames('ValidatedTextField');
+const boundClassNames = lucidClassNames.bind('&-ValidatedTextField');
 
 const {
 	object,
@@ -53,7 +52,7 @@ const ValidatedTextField = React.createClass(createLucidComponentDefinition({
 
 		return (
 			<Validation
-				className={classNames(className, boundClassNames('~'))}
+				className={boundClassNames('&', className)}
 				style={style}
 				Error={errorChildProps}
 			>

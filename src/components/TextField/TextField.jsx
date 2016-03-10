@@ -1,11 +1,10 @@
 import React from 'react';
-import classNames from 'classnames';
 import _ from 'lodash';
-import { bindClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition } from '../../util/component-definition';
 import reducers from './TextField.reducers';
 
-const boundClassNames = bindClassNames('TextField');
+const boundClassNames = lucidClassNames.bind('&-TextField');
 
 const {
 	bool,
@@ -134,11 +133,11 @@ const TextField = React.createClass(createLucidComponentDefinition({
 
 		const finalProps = {
 			...passThroughs,
-			className: classNames(className, boundClassNames('~', {
-				'is-disabled': isDisabled,
-				'is-multi-line': isMultiLine,
-				'is-single-line': !isMultiLine
-			})),
+			className: boundClassNames('&', {
+				'&-is-disabled': isDisabled,
+				'&-is-multi-line': isMultiLine,
+				'&-is-single-line': !isMultiLine
+			}, className),
 			disabled: isDisabled,
 			onChange: this.handleChange,
 			onKeyDown: this.handleKeyDown,

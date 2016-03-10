@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import classNames from 'classnames';
 import { createLucidComponentDefinition } from '../../util/component-definition';
-import { bindClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 
-const boundClassNames = bindClassNames('Portal');
+const boundClassNames = lucidClassNames.bind('&-Portal');
 
 const {
 	PropTypes: {
@@ -46,7 +45,7 @@ const Portal = React.createClass(createLucidComponentDefinition({
 	},
 	componentDidUpdate() {
 		ReactDOM.render((
-			<div {...this.props} className={classNames(boundClassNames('~'), this.props.className)}>
+			<div {...this.props} className={boundClassNames('&', this.props.className)}>
 				{this.props.children}
 			</div>
 		), this.portalElement);

@@ -1,10 +1,8 @@
 import _ from 'lodash';
-import classNames from 'classnames';
 import React from 'react';
+import { lucidClassNames } from '../../util/style-helpers';
 
-import { bindClassNames } from '../../util/style-helpers';
-
-const boundClassNames = bindClassNames('Checkbox');
+const boundClassNames = lucidClassNames.bind('&-Checkbox');
 
 const {
 	bool,
@@ -80,10 +78,10 @@ const Checkbox = React.createClass({
 
 		return (
 			<div
-				className={classNames(boundClassNames('~', {
-					'is-disabled': isDisabled,
-					'is-selected': isSelected
-				}), className)}
+				className={boundClassNames('&', {
+					'&-is-disabled': isDisabled,
+					'&-is-selected': isSelected
+				}, className)}
 				onClick={this.handleClicked}
 				onTouchEnd={this.handleClicked}
 				style={style}
@@ -92,16 +90,16 @@ const Checkbox = React.createClass({
 					onChange={_.noop}
 					{...passThroughs}
 					checked={isSelected}
-					className={boundClassNames('native')}
+					className={boundClassNames('&-native')}
 					disabled={isDisabled}
 					ref='nativeElement'
 					type='checkbox'
 				/>
-				<span className={boundClassNames('visualization-glow')} />
-				<span className={boundClassNames('visualization-container')} />
-				<span className={boundClassNames('visualization-checkmark')}>
-					<span className={boundClassNames('visualization-checkmark-stem')}></span>
-					<span className={boundClassNames('visualization-checkmark-kick')}></span>
+				<span className={boundClassNames('&-visualization-glow')} />
+				<span className={boundClassNames('&-visualization-container')} />
+				<span className={boundClassNames('&-visualization-checkmark')}>
+					<span className={boundClassNames('&-visualization-checkmark-stem')}></span>
+					<span className={boundClassNames('&-visualization-checkmark-kick')}></span>
 				</span>
 			</div>
 		);

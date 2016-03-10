@@ -1,10 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
-import classNames from 'classnames';
-import { bindClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition }  from '../../util/component-definition';
 
-const boundClassNames = bindClassNames('Grid');
+const boundClassNames = lucidClassNames.bind('&-Grid');
 
 const {
 	string,
@@ -142,38 +141,38 @@ const Grid = React.createClass(createLucidComponentDefinition({
 
 		const cellChildProps = Grid.Cell.findInAllAsProps(this.props);
 
-		const gridClasses = classNames(className, boundClassNames('~', {
-			'is-vertical': isVertical,
-			'is-horizontal': isHorizontal,
-			'is-gutterless': isGutterless,
-			'is-multiline': isMultiline,
-		}));
-
 		return (
 			<section {...passThroughs}
-				className={gridClasses}>
+				className={boundClassNames('&', {
+					'&-is-vertical': isVertical,
+					'&-is-horizontal': isHorizontal,
+					'&-is-gutterless': isGutterless,
+					'&-is-multiline': isMultiline,
+				}, className)}
+			>
 				{_.map(cellChildProps, (cellChildProp) => {
 					return (
 						<article {...cellChildProp}
-							className={classNames(cellChildProp.className, boundClassNames('Cell', {
-								'Cell-is-full': cellChildProp.isFull,
-								'Cell-is-half': cellChildProp.isHalf,
-								'Cell-is-quarter': cellChildProp.isQuarter,
-								'Cell-is-third': cellChildProp.isThird,
-								'Cell-is-2': cellChildProp.is2,
-								'Cell-is-3': cellChildProp.is3,
-								'Cell-is-4': cellChildProp.is4,
-								'Cell-is-5': cellChildProp.is5,
-								'Cell-is-6': cellChildProp.is6,
-								'Cell-is-7': cellChildProp.is7,
-								'Cell-is-8': cellChildProp.is8,
-								'Cell-is-9': cellChildProp.is9,
-								'Cell-is-10': cellChildProp.is10,
-								'Cell-is-11': cellChildProp.is11,
-								'Cell-is-offset-quarter': cellChildProp.isOffsetQuarter,
-								'Cell-is-offset-third': cellChildProp.isOffsetThird,
-								'Cell-is-offset-half': cellChildProp.isOffsetHalf,
-							}))} >
+							className={boundClassNames('&-Cell', {
+									'&-Cell-is-full': cellChildProp.isFull,
+									'&-Cell-is-half': cellChildProp.isHalf,
+									'&-Cell-is-quarter': cellChildProp.isQuarter,
+									'&-Cell-is-third': cellChildProp.isThird,
+									'&-Cell-is-2': cellChildProp.is2,
+									'&-Cell-is-3': cellChildProp.is3,
+									'&-Cell-is-4': cellChildProp.is4,
+									'&-Cell-is-5': cellChildProp.is5,
+									'&-Cell-is-6': cellChildProp.is6,
+									'&-Cell-is-7': cellChildProp.is7,
+									'&-Cell-is-8': cellChildProp.is8,
+									'&-Cell-is-9': cellChildProp.is9,
+									'&-Cell-is-10': cellChildProp.is10,
+									'&-Cell-is-11': cellChildProp.is11,
+									'&-Cell-is-offset-quarter': cellChildProp.isOffsetQuarter,
+									'&-Cell-is-offset-third': cellChildProp.isOffsetThird,
+									'&-Cell-is-offset-half': cellChildProp.isOffsetHalf,
+								}, cellChildProp.className)}
+							>
 							{cellChildProp.children}
 						</article>
 					);
