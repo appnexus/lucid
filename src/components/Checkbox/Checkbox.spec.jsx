@@ -1,5 +1,5 @@
 import React from 'react';
-import { common } from '../../util/generic-tests';
+import { common, controls } from '../../util/generic-tests';
 import { shallow, mount } from 'enzyme';
 import SyntheticEvent from 'react/lib/SyntheticEvent';
 import assert from 'assert';
@@ -12,22 +12,27 @@ import Checkbox from './Checkbox';
 
 describe('Checkbox', () => {
 	common(Checkbox);
+	controls(Checkbox, {
+		callbackName: 'onSelect',
+		controlSelector: '.lucid-Checkbox-native',
+		eventType: 'click',
+	});
 
 	describe('props', () => {
 		it('`isDisabled` sets the `disabled` attribute of the native checkbox element', () => {
 			const trueWrapper = shallow(<Checkbox isDisabled={true} />);
 			const falseWrapper = shallow(<Checkbox isDisabled={false} />);
 
-			assert.equal(trueWrapper.find('input[type="checkbox"]').prop('disabled'), true);
-			assert.equal(falseWrapper.find('input[type="checkbox"]').prop('disabled'), false);
+			assert.equal(trueWrapper.find('.lucid-Checkbox-native').prop('disabled'), true);
+			assert.equal(falseWrapper.find('.lucid-Checkbox-native').prop('disabled'), false);
 		});
 
 		it('`isSelected` sets the `checked` attribute of the native check box element', () => {
 			const trueWrapper = shallow(<Checkbox isSelected={true} />);
 			const falseWrapper = shallow(<Checkbox isSelected={false} />);
 
-			assert.equal(trueWrapper.find('input[type="checkbox"]').prop('checked'), true);
-			assert.equal(falseWrapper.find('input[type="checkbox"]').prop('checked'), false);
+			assert.equal(trueWrapper.find('.lucid-Checkbox-native').prop('checked'), true);
+			assert.equal(falseWrapper.find('.lucid-Checkbox-native').prop('checked'), false);
 		});
 
 	});
@@ -44,7 +49,7 @@ describeWithDOM('Checkbox', () => {
 
 			simulateEvent(<Checkbox isSelected={false} onSelect={onSelect} />, `.lucid-Checkbox${classSubString}`, event);
 			assert.equal(onSelect.args[0][0], true);
-			assert(onSelect.args[0][1] instanceof SyntheticEvent);
+			assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
 		});
 	}
 
@@ -54,7 +59,7 @@ describeWithDOM('Checkbox', () => {
 
 			simulateEvent(<Checkbox isSelected={true} onSelect={onSelect} />, `.lucid-Checkbox${classSubString}`, event);
 			assert.equal(onSelect.args[0][0], false);
-			assert(onSelect.args[0][1] instanceof SyntheticEvent);
+			assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
 		});
 	}
 
@@ -104,7 +109,7 @@ describeWithDOM('Checkbox', () => {
 				/>
 			);
 
-			const nativeWrapper = wrapper.find('input[type="checkbox"]');
+			const nativeWrapper = wrapper.find('.lucid-Checkbox-native');
 
 			assert.equal(nativeWrapper.prop('foo'), 1);
 			assert.equal(nativeWrapper.prop('bar'), 2);

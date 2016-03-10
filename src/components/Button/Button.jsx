@@ -1,17 +1,16 @@
 import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-
 const boundClassNames = lucidClassNames.bind('&-Button');
 
 const {
-	bool,
-	string,
-	oneOfType,
-	oneOf,
-	node,
 	arrayOf,
-	func
+	bool,
+	func,
+	node,
+	oneOf,
+	oneOfType,
+	string,
 } = React.PropTypes;
 
 /**
@@ -66,7 +65,9 @@ const Button = React.createClass({
 			'large'
 		]),
 		/**
-		 * called when the user clicks the button
+		 * Called when the user clicks the `Button`.
+		 *
+		 * Signature: `({ event, props }) => {}`
 		 */
 		onClick: func,
 	},
@@ -80,14 +81,19 @@ const Button = React.createClass({
 		};
 	},
 
-	handleClick() {
-		if (!this.props.isDisabled) {
-			this.props.onClick();
+	handleClick(event) {
+		const {
+			isDisabled,
+			onClick,
+		} = this.props;
+
+		if (!isDisabled) {
+			onClick({ event, props: this.props });
 		}
 	},
 
 	render() {
-		let {
+		const {
 			isDisabled,
 			isActive,
 			hasIcon,
@@ -95,11 +101,12 @@ const Button = React.createClass({
 			size,
 			className,
 			children,
-			...others
+			...passThroughs
 		} = this.props;
 
 		return (
 			<button
+				{...passThroughs}
 				className={boundClassNames('&', {
 					'&-is-disabled': isDisabled,
 					'&-is-active': isActive,
@@ -116,8 +123,8 @@ const Button = React.createClass({
 				}, className)}
 				onClick={this.handleClick}
 				disabled={isDisabled}
-				{...others}
-				ref='button' >
+				ref='button'
+			>
 				<span className={boundClassNames('&-content')}>
 					{children}
 				</span>

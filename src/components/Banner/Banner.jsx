@@ -2,17 +2,20 @@ import _ from 'lodash';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { SuccessIcon, DangerIcon, InfoIcon, WarningIcon } from '../../index';
+import DangerIcon from '../Icon/DangerIcon/DangerIcon';
+import InfoIcon from '../Icon/InfoIcon/InfoIcon';
+import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
+import WarningIcon from '../Icon/WarningIcon/WarningIcon';
 
 const boundClassNames = lucidClassNames.bind('&-Banner');
 
 const {
 	any,
 	bool,
-	string,
-	oneOf,
+	element,
 	func,
-	element
+	oneOf,
+	string,
 } = React.PropTypes;
 
 const defaultIcons = {
@@ -79,14 +82,16 @@ const Banner = React.createClass({
 		 */
 		isSmall: bool,
 		/**
-		 * Called when the user closes the `Banner`. Calls back with the native
-		 * click event.
+		 * Called when the user closes the `Banner`.
+		 *
+		 * Signature: `({ event, props }) => {}`
 		 */
 		onClose: func,
 		/**
 		 * Controls the visibility of the `Banner`.
 		 */
 		isClosed: bool,
+
 	},
 
 	getDefaultProps() {
@@ -101,10 +106,17 @@ const Banner = React.createClass({
 		};
 	},
 
+	handleClose(event) {
+		const {
+			onClose,
+		} = this.props;
+
+		onClose({ event, props: this.props });
+	},
+
 	render() {
 		const {
 			hasIcon,
-			onClose,
 			icon,
 			kind,
 			isSmall,
@@ -154,7 +166,7 @@ const Banner = React.createClass({
 						</span>
 
 						{isCloseable ?
-							<span className={boundClassNames('&-close')} onClick={onClose}>
+							<span className={boundClassNames('&-close')} onClick={this.handleClose}>
 								{String.fromCharCode(0x00d7)}
 							</span>
 						: null}

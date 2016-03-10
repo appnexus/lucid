@@ -1,7 +1,3 @@
-// Colors
-
-@color-black: black;
-
 // Base
 @borderRadius: 4px;
 
@@ -25,11 +21,26 @@
 @Banner-size-borderRadiaus: @borderRadius;
 
 // button sizes
-@size-button-padding: 12px;
-@size-button-lineHeight: 26px;
-@size-button-borderRadius: @size-borderRadius;
+@Button-size-padding: 12px;
+@Button-size-lineHeight: 26px;
+@Button-size-borderRadius: @size-borderRadius;
 
 // colors
+@color-white: #fff;
+@color-black: #000;
+
+@color-gray-5: fade(@color-black, 5%);
+@color-gray-10: fade(@color-black, 10%);
+@color-gray-25: fade(@color-black, 25%);
+@color-gray-30: fade(@color-black, 30%);
+
+// basic colors
+@color-lightGray: #f4f4f4;
+@color-gray: #e3e3e3;
+@color-mediumGray: #c5c5c5;
+@color-darkGray: #333333;
+
+// featured colors
 @color-default: #f3f3f3;
 @color-primary: #2abbb0;
 @color-success: #3fa516;
@@ -37,12 +48,8 @@
 @color-warning: #feb209;
 @color-danger: #f7403a;
 
-@color-white: #fff;
-
-@color-gray-5: fade(#000, 5%);
-@color-gray-10: fade(#000, 10%);
-@color-gray-25: fade(#000, 25%);
-@color-gray-30: fade(#000, 30%);
+@color-borderColor: @color-mediumGray;
+@color-backgroundColor: @color-lightGray;
 
 // Shadows
 
