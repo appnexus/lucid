@@ -27,7 +27,7 @@ export function createLucidComponentDefinition(componentDefinition) {
 				(newPropTypes, childProp) => _.assign(
 					{},
 					newPropTypes,
-					{[childProp.propName]: oneOfType([arrayOf(shape(childProp.propTypes)), shape(childProp.propTypes), node])}
+					{[childProp.propName]: oneOfType([arrayOf(oneOfType([shape(childProp.propTypes), node])), shape(childProp.propTypes), node])}
 				),
 				{}
 			)
