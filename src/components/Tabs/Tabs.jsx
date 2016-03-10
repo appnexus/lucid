@@ -120,7 +120,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 									'Tab-is-active': index === actualSelectedIndex,
 									'Tab-is-disabled': tabChildProp.isDisabled,
 									'Tab-is-active-and-open': isOpen && index === actualSelectedIndex,
-									'Tab-is-progressive': isProgressive && index !== tabChildProps.length - 1,							
+									'Tab-is-progressive': isProgressive && index !== tabChildProps.length - 1,					
 								})}
 								key={index}
 								onClick={_.partial(onSelect, index, tabChildProp)}
