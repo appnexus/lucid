@@ -1,10 +1,8 @@
 import _ from 'lodash';
-import classNames from 'classnames';
 import React from 'react';
+import { lucidClassNames } from '../../util/style-helpers';
 
-import { bindClassNames } from '../../util/style-helpers';
-
-const boundClassNames = bindClassNames('RadioButton');
+const boundClassNames = lucidClassNames.bind('&-RadioButton');
 const {
 	bool,
 	func,
@@ -87,10 +85,10 @@ const RadioButton = React.createClass({
 
 		return (
 			<span
-					className={classNames(boundClassNames('~', {
-						'is-disabled': isDisabled,
-						'is-selected': isSelected
-					}), className)}
+					className={boundClassNames('&', {
+						'&-is-disabled': isDisabled,
+						'&-is-selected': isSelected
+					}, className)}
 					onClick={this.handleClicked}
 					onTouchEnd={this.handleClicked}
 					style={style}
@@ -99,14 +97,14 @@ const RadioButton = React.createClass({
 						onChange={_.noop}
 						{...passThroughs}
 						checked={isSelected}
-						className={boundClassNames('native')}
+						className={boundClassNames('&-native')}
 						disabled={isDisabled}
 						ref='nativeElement'
 						type='radio'
 				/>
-				<span className={boundClassNames('visualization-glow')} />
-				<span className={boundClassNames('visualization-container')} />
-				<span className={boundClassNames('visualization-dot')} />
+				<span className={boundClassNames('&-visualization-glow')} />
+				<span className={boundClassNames('&-visualization-container')} />
+				<span className={boundClassNames('&-visualization-dot')} />
 			</span>
 		);
 	},

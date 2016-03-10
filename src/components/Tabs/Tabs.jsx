@@ -1,11 +1,10 @@
 import _ from 'lodash';
 import React from 'react';
-import classNames from 'classnames';
-import { bindClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition } from '../../util/component-definition';
 import reducers from './Tabs.reducers';
 
-const boundClassNames = bindClassNames('Tabs');
+const boundClassNames = lucidClassNames.bind('&-Tabs');
 
 const {
 	any,
@@ -110,34 +109,34 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 			<div
 				{...passThroughs}
 				style={style}
-				className={classNames(className, boundClassNames('~'))}
+				className={boundClassNames('&', className)}
 			>
-				<ul className={boundClassNames('bar')}>
+				<ul className={boundClassNames('&-bar')}>
 					{_.map(tabChildProps, (tabChildProp, index) => {
 						return (
 							<li
-								className={boundClassNames('Tab', {
-									'Tab-is-active': index === actualSelectedIndex,
-									'Tab-is-disabled': tabChildProp.isDisabled,
-									'Tab-is-active-and-open': isOpen && index === actualSelectedIndex,
-									'Tab-is-progressive': isProgressive && index !== tabChildProps.length - 1,
+								className={boundClassNames('&-Tab', {
+									'&-Tab-is-active': index === actualSelectedIndex,
+									'&-Tab-is-disabled': tabChildProp.isDisabled,
+									'&-Tab-is-active-and-open': isOpen && index === actualSelectedIndex,
+									'&-Tab-is-progressive': isProgressive && index !== tabChildProps.length - 1,
 								})}
 								key={index}
 								onClick={_.partial(onSelect, index, tabChildProp)}
 							>
 								{_.get(_.first(Tabs.Title.findInAllAsProps(tabChildProp)), 'children', '')}
 								{isProgressive && index !== tabChildProps.length - 1 ?
-										<svg className={boundClassNames('Tab-arrow')} xmlns='http://www.w3.org/2000/svg' width='8px' height='28px' viewBox='0 0 8 28' >
-											 <polygon className={boundClassNames('Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
-											 <polyline className={boundClassNames('Tab-arrow-tab-line')} fill='#fff' points='0,0 1.7,3 0,3'/>
-											 <polyline className={boundClassNames('Tab-arrow-line')} fill='none' stroke='#fff' stroke-width='0.25' stroke-miterlimit='10' points='0,28 7.9,14 0,0'/>
+										<svg className={boundClassNames('&-Tab-arrow')} xmlns='http://www.w3.org/2000/svg' width='8px' height='28px' viewBox='0 0 8 28' >
+											 <polygon className={boundClassNames('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
+											 <polyline className={boundClassNames('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1.7,3 0,3'/>
+											 <polyline className={boundClassNames('&-Tab-arrow-line')} fill='none' stroke='#fff' stroke-width='0.25' stroke-miterlimit='10' points='0,28 7.9,14 0,0'/>
 									 </svg>
 								: null}
 							</li>
 						);
 					})}
 				</ul>
-				<div className={boundClassNames('content')}>
+				<div className={boundClassNames('&-content')}>
 					{_.get(tabChildProps[actualSelectedIndex], 'children', '')}
 				</div>
 			</div>
