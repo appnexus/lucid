@@ -2,26 +2,13 @@ import React from 'react';
 import assert from 'assert';
 import sinon from 'sinon';
 import { common } from '../../util/generic-tests';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import describeWithDOM from '../../util/describe-with-dom';
 
 import ButtonGroup from './ButtonGroup';
 
 describe('ButtonGroup', () => {
 	common(ButtonGroup);
-
-	it('prop onSelect', () => {
-		const onSelect = sinon.spy();
-		const wrapper = shallow(
-			<ButtonGroup onSelect={onSelect}>
-				<ButtonGroup.Button />
-				<ButtonGroup.Button />
-			</ButtonGroup>
-		);
-
-		wrapper.children().at(1).simulate('click'); // second button
-
-		assert.equal(onSelect.args[0][0], 1);
-	});
 
 	it('prop children', () => {
 		const wrapper = shallow(
@@ -44,6 +31,23 @@ describe('ButtonGroup', () => {
 
 		assert.equal(wrapper.children().at(1).prop('isActive'), true);
 	});
+});
+
+describeWithDOM('ButtonGroup', () => {
+	it('prop onSelect', () => {
+		const onSelect = sinon.spy();
+		const wrapper = mount(
+			<ButtonGroup onSelect={onSelect}>
+				<ButtonGroup.Button />
+				<ButtonGroup.Button />
+			</ButtonGroup>
+		);
+
+		wrapper.children().at(1).simulate('click'); // second button
+
+		assert.equal(onSelect.args[0][0], 1);
+	});
+
 });
 
 

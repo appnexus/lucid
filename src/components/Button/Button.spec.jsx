@@ -4,12 +4,17 @@ import assert from 'assert';
 import sinon from 'sinon';
 import describeWithDOM from '../../util/describe-with-dom';
 import _ from 'lodash';
-import { common } from '../../util/generic-tests';
+import { common, controls } from '../../util/generic-tests';
 
 import Button from './Button';
 
 describe('Button', () => {
 	common(Button);
+	controls(Button, {
+		callbackName: 'onClick',
+		controlSelector: '.lucid-Button',
+		eventType: 'click',
+	});
 
 	describe('text', () => {
 		it('should allow children as content', () => {
