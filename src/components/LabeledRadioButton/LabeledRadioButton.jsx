@@ -4,10 +4,13 @@ import React from 'react';
 
 import { bindClassNames } from '../../util/style-helpers';
 
-const boundClassNames = bindClassNames('RadioButton');
+import RadioButton from '../RadioButton/RadioButton';
+
+const boundClassNames = bindClassNames('LabeledRadioButton');
 const {
 	bool,
 	func,
+	node,
 	object,
 	string,
 } = React.PropTypes;
@@ -15,21 +18,10 @@ const {
 /**
  * {"categories": ["controls", "toggles"]}
  *
- * This is a toggle -- a component that is in one of two particular states at
- * any given moment in time -- that features a custom visualization of the
- * native radio button control to reflect its current state.
- *
- * The radio button is different from a standard toggle in that when it is in
- * the selected state user events do not cause it to toggle to the unselected
- * state so the `onSelect` function is called only when `isSelected` is false.
- *
- * It uses a hidden native radio button control under the hood but leverages
- * other HTML elements to visualize its state.
- *
- * Any props that are not explicitly defined in `propTypes` are spread onto the
- * native control.
+ * This is a composite of the `RadioButton` component and the native `label`
+ * element.
  */
-const RadioButton = React.createClass({
+const LabeledRadioButton = React.createClass({
 	propTypes: {
 		/**
 		 * Appended to the component-specific class names set on the root
@@ -48,6 +40,12 @@ const RadioButton = React.createClass({
 		 * and in the "unselected" state when false.
 		 */
 		isSelected: bool,
+
+		/**
+		 * Used to identify the purpose of this radio button to the user -- can
+		 * be any renderable content.
+		 */
+		label: node,
 
 		/**
 		 * Called when the user clicks on the component or when they press the
@@ -81,48 +79,31 @@ const RadioButton = React.createClass({
 			className,
 			isDisabled,
 			isSelected,
+			label,
+			onSelect,
 			style,
 			...passThroughs
 		} = this.props;
 
 		return (
-			<span
+			<label
 					className={classNames(boundClassNames('~', {
 						'is-disabled': isDisabled,
 						'is-selected': isSelected
 					}), className)}
-					onClick={this.handleClicked}
-					onTouchEnd={this.handleClicked}
 					style={style}
 			>
-				<input
-						onChange={_.noop}
+				<RadioButton
+						className={className}
+						isDisabled={isDisabled}
+						isSelected={isSelected}
+						onSelect={onSelect}
 						{...passThroughs}
-						checked={isSelected}
-						className={boundClassNames('native')}
-						disabled={isDisabled}
-						ref='nativeElement'
-						type='radio'
 				/>
-				<span className={boundClassNames('visualization-glow')} />
-				<span className={boundClassNames('visualization-container')} />
-				<span className={boundClassNames('visualization-dot')} />
-			</span>
+				{label}
+			</label>
 		);
-	},
-
-	handleClicked(event) {
-		const {
-			isDisabled,
-			isSelected,
-			onSelect,
-		} = this.props;
-
-		if (!isDisabled && !isSelected) {
-			onSelect(true, { event, props: this.props });
-			this.nativeElement.focus();
-		}
 	}
 });
 
-export default RadioButton;
+export default LabeledRadioButton;

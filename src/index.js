@@ -13,6 +13,7 @@ import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
 import Grid from './components/Grid/Grid';
 import Icon from './components/Icon/Icon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
+import LabeledRadioButton from './components/LabeledRadioButton/LabeledRadioButton';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Portal from './components/Portal/Portal';
@@ -57,6 +58,7 @@ export {
 	Grid,
 	Icon,
 	InfoIcon,
+	LabeledRadioButton,
 	MinusIcon,
 	PlusIcon,
 	Portal,
