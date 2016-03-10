@@ -1,0 +1,63 @@
+.lucid-SingleSelect {
+
+	.lucid-SingleSelect-Control {
+		.no-safari-flicker();
+		.box-sizing();
+		.gradient-animation( @color-default-gradientStartColor, @color-default-gradientEndColor);
+		background-color: @color-default;
+		cursor: pointer;
+		height: 28px;
+		display: flex;
+		outline: none;
+		border: 1px solid @color-default-borderColor;
+		border-radius: @Button-size-borderRadius;
+		font: @font;
+		color: @color-black;
+		letter-spacing: .05em;
+		line-height: @Button-size-lineHeight;
+		padding: 0 10px;
+		align-items: center;
+
+		.lucid-SingleSelect-Control-content {
+			margin-right: 10px;
+		}
+
+		.lucid-CaretIcon {
+			fill: @color-black;
+			width: 8px;
+			height: 8px;
+			margin-left: auto;
+		}
+
+		// States
+		&-is-active {
+			.gradient-reset();
+			background: @color-primary;
+			border-color: @color-primary;
+			color: @color-default;
+
+			.lucid-CaretIcon {
+				fill: @color-default;
+			}
+		}
+		&-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @color-default-gradientStartColor, @color-default-gradientEndColor));
+			cursor: not-allowed;
+			.opacity();
+		}
+	}
+
+	&.lucid-DropMenu-is-expanded {
+		&.lucid-DropMenu-direction-up {
+			.lucid-SingleSelect-Control {
+				border-radius: 0 0 @Button-size-borderRadius @Button-size-borderRadius;
+			}
+		}
+
+		&.lucid-DropMenu-direction-down {
+			.lucid-SingleSelect-Control {
+				border-radius: @Button-size-borderRadius @Button-size-borderRadius 0 0;
+			}
+		}
+	}
+}

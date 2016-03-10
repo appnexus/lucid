@@ -287,3 +287,8 @@ describeWithDOM('#createChildComponent', () => {
 	});
 });
 
+describe('#rejectNullElements', () => {
+	it('should do stuff', () => {
+	});
+});
+

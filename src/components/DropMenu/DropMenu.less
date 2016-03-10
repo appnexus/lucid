@@ -1,0 +1,77 @@
+.lucid-DropMenu {
+
+	&.lucid-DropMenu-base {
+		display: inline-block;
+	}
+
+	.lucid-DropMenu-Control {
+		position:relative;
+		outline: 0px;
+	}
+
+	&.lucid-DropMenu-is-expanded {
+		.lucid-DropMenu-Control {
+			z-index: 300;
+		}
+	}
+
+	.lucid-DropMenu-Option {
+		cursor: pointer;
+		padding: 0 10px;
+		line-height: @Button-size-lineHeight;
+		font: @font;
+		height: 25px;
+		display: flex;
+		align-items: center;
+
+		&.lucid-DropMenu-Option-disabled {
+			opacity: .5;
+			font-style: italic;
+			cursor: not-allowed;
+		}
+
+		&.lucid-DropMenu-Option-focused {
+			background: fade(@color-primary, 30%);
+		}
+
+		&.lucid-DropMenu-Option-selected {
+			background: fade(@color-primary, 50%);
+		}
+	}
+
+	&.lucid-ContextMenu-FlyOut {
+		.box-sizing();
+		.no-safari-flicker(); // fixes hidden scrollbar for 100+ z-index
+		background-color: @color-white;
+		border: solid 1px @color-default-borderColor;
+
+		// are these something we want to keep?
+		max-height: 20em;
+		overflow-y: scroll;
+
+		&.lucid-ContextMenu-FlyOut-Up {
+			border-width: 1px 1px 0 1px;
+			border-radius: @Button-size-borderRadius @Button-size-borderRadius 0 0;
+			box-shadow: 0 1px 0 @color-default-borderColor;
+		}
+
+		&.lucid-ContextMenu-FlyOut-Down {
+			border-width: 0 1px 1px 1px;
+			border-radius: 0 0 @Button-size-borderRadius @Button-size-borderRadius;
+			box-shadow: 0 -1px 0 @color-default-borderColor;
+		}
+	}
+
+	.lucid-DropMenu-OptionGroup-end {
+		margin-top: 10px;
+	}
+
+	.lucid-DropMenu-Label {
+		padding: 0 6px;
+		font: @font;
+		font-weight: bold;
+		height: 25px;
+		display: flex;
+		align-items: center;
+	}
+}

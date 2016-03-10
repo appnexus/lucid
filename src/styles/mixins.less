@@ -86,6 +86,8 @@
 
 // This helps prevent flickering on safari when using certain animations. See
 // the following link for more info: http://stackoverflow.com/questions/3461441/prevent-flicker-on-webkit-transition-of-webkit-transform
+// 
+// this also fixes the scrollbars being hidden on elements with z-index 100+
 .no-safari-flicker() {
 	-webkit-transform:translate3d(0,0,0);
 }
