@@ -3,7 +3,7 @@ import TextField from '../TextField';
 import Button from '../../Button/Button';
 import { buildStatefulComponent } from '../../../util/state-management';
 
-var StatefulTextField = buildStatefulComponent(TextField);
+const StatefulTextField = buildStatefulComponent(TextField);
 
 export default React.createClass({
 	getInitialState() {
