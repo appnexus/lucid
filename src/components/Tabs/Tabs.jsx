@@ -129,7 +129,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 										<svg className={boundClassNames('&-Tab-arrow')} xmlns='http://www.w3.org/2000/svg' width='8px' height='28px' viewBox='0 0 8 28' >
 											 <polygon className={boundClassNames('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
 											 <polyline className={boundClassNames('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1.7,3 0,3'/>
-											 <polyline className={boundClassNames('&-Tab-arrow-line')} fill='none' stroke='#fff' stroke-width='0.25' stroke-miterlimit='10' points='0,28 7.9,14 0,0'/>
+											 <polyline className={boundClassNames('&-Tab-arrow-line')} fill='none' stroke='#fff' strokeWidth='0.25' strokeMiterlimit='10' points='0,28 7.9,14 0,0'/>
 									 </svg>
 								: null}
 							</li>
