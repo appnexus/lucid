@@ -1,7 +1,8 @@
 import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import Validation from '../Validation/Validation';
+import { createLucidComponentDefinition } from '../../util/component-definition';
+import reducers from './TextField.reducers';
 
 const boundClassNames = lucidClassNames.bind('&-TextField');
 
@@ -12,27 +13,30 @@ const {
 	number,
 	object,
 	oneOfType,
-	any,
 } = React.PropTypes;
 
 /**
  *
  * {"categories": ["controls", "text"]}
  *
- * TextField should cover all your text input needs. It is able to
- * handle single and multi line inputs.
+ * TextField should cover all your text input needs. It is able to handle
+ * single and multi line inputs.
+ *
+ * Like all other Lucid components, it is stateless by default unless you run
+ * it through `buildStatefulComponent`. If you do that it will maintain
+ * internal state for the `value` without losing the ability to pass a new
+ * `value` through props.
  */
-const TextField = React.createClass({
+const TextField = React.createClass(createLucidComponentDefinition({
+	displayName: 'TextField',
+
+	reducers,
+
 	propTypes: {
 		/**
-		 * Styles that are passed through to the root `div` container.
+		 * Styles that are passed through to native control.
 		 */
 		style: object,
-
-		/**
-		 * Styles that are passed through to the underlying `input`.
-		 */
-		inputStyle: object,
 
 		/**
 		 * Set the TextField to multi line mode. Under the hood this will use a
@@ -41,20 +45,13 @@ const TextField = React.createClass({
 		isMultiLine: bool,
 
 		/**
-		 * Set the TextField to be in an invalid state by providing a message here.
-		 * In most cases this will be a string, but it also accepts any valid React
-		 * element. If this is a falsey value, then no error message will be
-		 * displayed.
-		 */
-		Error: any,
-
-		/**
 		 * Disables the TextField by greying it out.
 		 */
 		isDisabled: bool,
 
 		/**
-		 * Initial number of rows a multi line TextField should have.
+		 * Initial number of rows a multi line TextField should have. Ignored when
+		 * not in multi-line mode.
 		 */
 		rows: number,
 
@@ -64,11 +61,18 @@ const TextField = React.createClass({
 		className: string,
 
 		/**
-		 * Fires an event every time the user types text into the `TextField`.
+		 * Fires an event every time the user types text into the TextField.
 		 *
 		 * Signature: `(value, { event, props }) => {}`
 		 */
 		onChange: func,
+
+		/**
+		 * Fires an event when the user hits "enter" from the TextField.
+		 *
+		 * Signature: `(value, { event, props }) => {}`
+		 */
+		onSubmit: func,
 
 		/**
 		 * Set the value of the input.
@@ -82,11 +86,10 @@ const TextField = React.createClass({
 	getDefaultProps() {
 		return {
 			style: null,
-			inputStyle: null,
-			Error: null,
 			isDisabled: false,
 			isMultiLine: false,
 			onChange: _.noop,
+			onSubmit: _.noop,
 			rows: 5,
 		};
 	},
@@ -100,11 +103,26 @@ const TextField = React.createClass({
 		onChange(value, { event, props: this.props });
 	},
 
+	handleKeyDown(event) {
+		const {
+			onSubmit,
+			onKeyDown
+		} = this.props;
+		const value = _.get(event, 'target.value', '');
+
+		// If the consumer passed an onKeyDown, we call it
+		if (onKeyDown) {
+			onKeyDown(event);
+		}
+
+		if (event.key === 'Enter') {
+			onSubmit(value, {event, props: this.props });
+		}
+	},
+
 	render() {
 		const {
-			Error,
 			className,
-			inputStyle,
 			isDisabled,
 			isMultiLine,
 			rows,
@@ -113,34 +131,25 @@ const TextField = React.createClass({
 			...passThroughs
 		} = this.props;
 
-		const nativeProps = {
+		const finalProps = {
 			...passThroughs,
-			style: inputStyle,
-			className: boundClassNames('&-native'),
+			className: boundClassNames('&', {
+				'&-is-disabled': isDisabled,
+				'&-is-multi-line': isMultiLine,
+				'&-is-single-line': !isMultiLine
+			}, className),
 			disabled: isDisabled,
 			onChange: this.handleChange,
+			onKeyDown: this.handleKeyDown,
+			style,
 			rows,
 			value,
 		};
 
-		const control = isMultiLine
-			? <textarea {...nativeProps}/>
-			: <input type='text' {...nativeProps}/>;
-
-		return (
-			<Validation
-				Error={Error}
-				className={boundClassNames('&', {
-					'&-is-disabled': isDisabled,
-					'&-is-multi-line': isMultiLine,
-					'&-is-single-line': !isMultiLine
-				}, className)}
-				style={style}
-			>
-				{control}
-			</Validation>
-		);
+		return isMultiLine
+			? <textarea {...finalProps}/>
+			: <input type='text' {...finalProps}/>;
 	}
-});
+}));
 
 export default TextField;

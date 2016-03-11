@@ -5,7 +5,7 @@ describe('TextField', () => {
 	common(TextField);
 	controls(TextField, {
 		callbackName: 'onChange',
-		controlSelector: '.lucid-TextField-native',
+		controlSelector: '.lucid-TextField',
 		eventType: 'change',
 	});
 });
