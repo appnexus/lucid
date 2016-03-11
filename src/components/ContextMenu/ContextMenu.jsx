@@ -1,12 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
-import classNames from 'classnames';
 import Portal from '../Portal/Portal';
 import { createLucidComponentDefinition } from '../../util/component-definition';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
-import { bindClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 
-const boundClassNames = bindClassNames('ContextMenu');
+const boundClassNames = lucidClassNames.bind('&-ContextMenu');
 
 const {
 	PropTypes: {
@@ -194,16 +193,16 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 
 
 		return (
-			<span ref='target' {...passThroughs} className={classNames(boundClassNames('~'), className)} style={style}>
+			<span ref='target' {...passThroughs} className={boundClassNames('&', className)} style={style}>
 				{targetChildren}
 				{isExpanded ? (
 					<Portal
 						ref='flyOutPortal'
 						{...flyProps}
-						className={classNames(boundClassNames('FlyOut', {
-							'FlyOut-Up': direction === ContextMenu.UP,
-							'FlyOut-Down': direction === ContextMenu.DOWN
-						}), flyProps.className)}
+						className={boundClassNames('&-FlyOut', {
+							'&-FlyOut-Up': direction === ContextMenu.UP,
+							'&-FlyOut-Down': direction === ContextMenu.DOWN
+						}, flyProps.className)}
 						portalId={portalId}
 						style={_.assign({}, flyProps.style, {
 							position: 'absolute',
