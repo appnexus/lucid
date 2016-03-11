@@ -1,11 +1,11 @@
 .lucid-Button {
 	.no-safari-flicker();
 	.box-sizing();
-	.gradient-animation( @special-color-default-gradientStartColor, @special-color-default-gradientEndColor);
+	.gradient-animation( @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 	cursor: pointer;
 	display: inline-block;
 	outline: none;
-	border: 1px solid @special-color-default-borderColor;
+	border: 1px solid @featured-color-default-borderColor;
 	border-radius: @Button-size-borderRadius;
 	font: @font;
 	letter-spacing: .05em;
@@ -16,47 +16,47 @@
 	// Types
 	&-primary {
 		color: @color-white;
-		border-color: @special-color-primary-borderColor;
+		border-color: @featured-color-primary-borderColor;
 		font-weight: 500;
-		.gradient-animation(@special-color-primary-gradientStartColor, @special-color-primary-gradientEndColor);
-		.make-is-disabled(lucid-Button, @special-color-primary-gradientStartColor, @special-color-primary-gradientEndColor);
+		.gradient-animation(@featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
+		.make-is-disabled(lucid-Button, @featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
 	}
 	&-success {
 		color: @color-white;
-		border-color: @special-color-success-borderColor;
+		border-color: @featured-color-success-borderColor;
 		font-weight: 500;
-		.gradient-animation(@special-color-success-gradientStartColor, @special-color-success-gradientEndColor);
-		.make-is-disabled(lucid-Button, @special-color-success-gradientStartColor, @special-color-success-gradientEndColor);
+		.gradient-animation(@featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
+		.make-is-disabled(lucid-Button, @featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
 	}
 	&-info {
 		color: @color-white;
-		border-color: @special-color-info-borderColor;
+		border-color: @featured-color-info-borderColor;
 		font-weight: 500;
-		.gradient-animation(@special-color-info-gradientStartColor, @special-color-info-gradientEndColor);
-		.make-is-disabled(lucid-Button, @special-color-info-gradientStartColor, @special-color-info-gradientEndColor);
+		.gradient-animation(@featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
+		.make-is-disabled(lucid-Button, @featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
 	}
 	&-warning {
 		color: @color-white;
-		border-color: @special-color-warning-borderColor;
+		border-color: @featured-color-warning-borderColor;
 		font-weight: 500;
-		.gradient-animation(@special-color-warning-gradientStartColor, @special-color-warning-gradientEndColor);
-		.make-is-disabled(lucid-Button, @special-color-warning-gradientStartColor, @special-color-warning-gradientEndColor);
+		.gradient-animation(@featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
+		.make-is-disabled(lucid-Button, @featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
 	}
 	&-danger {
 		color: @color-white;
-		border-color: @special-color-danger-borderColor;
+		border-color: @featured-color-danger-borderColor;
 		font-weight: 500;
-		.gradient-animation(@special-color-danger-gradientStartColor, @special-color-danger-gradientEndColor);
-		.make-is-disabled(lucid-Button, @special-color-danger-gradientStartColor, @special-color-danger-gradientEndColor);
+		.gradient-animation(@featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
+		.make-is-disabled(lucid-Button, @featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
 	}
 	&-link {
 		.gradient-reset();
 		.make-is-disabled(lucid-Button);
 		border: none;
 		background: none;
-		color: @special-color-primary;
+		color: @featured-color-primary;
 		&:hover {
-			color: darken(@special-color-primary, 20%);
+			color: darken(@featured-color-primary, 20%);
 			background: none;
 			text-decoration: underline;
 		}
@@ -79,12 +79,12 @@
 	// States
 	&-is-active {
 		.gradient-reset();
-		background: @special-color-primary;
-		border-color: @special-color-primary;
+		background: @featured-color-primary;
+		border-color: @featured-color-primary;
 		color: @color-white;
 	}
 	&-is-disabled {
-		.gradient-reset(linear-gradient(@standardGradient, @special-color-default-gradientStartColor, @special-color-default-gradientEndColor));
+		.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
 		cursor: not-allowed;
 		.opacity();
 	}
