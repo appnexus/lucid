@@ -23,12 +23,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		border: @Tabs-border-width solid @color-default-borderColor;
+		border: @Tabs-border-width solid @color-borderColor;
 		border-right: 0;
 		background-color: @color-white;
 
 		&:last-of-type {
-			border-right: @Tabs-border-width solid @color-default-borderColor;
+			border-right: @Tabs-border-width solid @color-borderColor;
 		}
 
 		&:hover {
@@ -70,7 +70,7 @@
 			bottom: -@Tabs-border-width;
 			right: -@Tabs-arrow-width;
 			.lucid-Tabs-Tab-arrow-line {
-				stroke: @color-default-borderColor;
+				stroke: @color-borderColor;
 			}
 		}
 		.Tabs-mixin-tab-line(transparent);
@@ -103,7 +103,7 @@
 	}
 
 	&-content {
-		border-top: @Tabs-border-width solid @color-default-borderColor;
+		border-top: @Tabs-border-width solid @color-borderColor;
 		padding-top: 10px; // TODO: use our default gutter
 	}
 }

@@ -1,7 +1,7 @@
 .lucid-Banner {
 	.box-sizing();
-	border: 1px solid @color-default-borderColor;
-	background-color: @color-default-backgroundColor;
+	border: 1px solid @color-borderColor;
+	background-color: @color-backgroundColor;
 	font: @font;
 	border-radius: @Banner-size-borderRadiaus;
 	padding: 0 @Banner-size-spacing-rightLeft;
@@ -60,29 +60,24 @@
 	// Types
 
 	&-primary {
-		border-color: @color-primary-borderColorLite;
-		.gradient-reset(linear-gradient(@standardGradient, @color-primary-backgroundColor, @color-primary-backgroundColor));
-		background-color: @color-white;
+		border-color: @special-color-primary-borderColorLite;
+		background-color: @special-color-primary-backgroundColor;
 	}
 	&-success {
-		border-color: @color-success-borderColorLite;
-		.gradient-reset(linear-gradient(@standardGradient, @color-success-backgroundColor, @color-success-backgroundColor));
-		background-color: @color-white;
+		border-color: @special-color-success-borderColorLite;
+		background-color: @special-color-success-backgroundColor;
 	}
 	&-info {
-		border-color: @color-info-borderColorLite;
-		.gradient-reset(linear-gradient(@standardGradient, @color-info-backgroundColor, @color-info-backgroundColor));
-		background-color: @color-white;
+		border-color: @special-color-info-borderColorLite;
+		background-color: @special-color-info-backgroundColor;
 	}
 	&-warning {
-		border-color: @color-warning-borderColorLite;
-		.gradient-reset(linear-gradient(@standardGradient, @color-warning-backgroundColor, @color-warning-backgroundColor));
-		background-color: @color-white;
+		border-color: @special-color-warning-borderColorLite;
+		background-color: @special-color-warning-backgroundColor;
 	}
 	&-danger {
-		border-color: @color-danger-borderColorLite;
-		.gradient-reset(linear-gradient(@standardGradient, @color-danger-backgroundColor, @color-danger-backgroundColor));
-		background-color: @color-white;
+		border-color: @special-color-danger-borderColorLite;
+		background-color: @special-color-danger-backgroundColor;
 	}
 
 	&-small {

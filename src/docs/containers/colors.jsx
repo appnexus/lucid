@@ -112,9 +112,9 @@ const colorList = [
 		category: 'featured primary',
 		colors: [
 			{varName: 'primary-borderColor', hex: '@color-primary'},
-			{varName: 'primary-backgroundColor', hex: 'fade(@color-primary, 30%)'},
-			{varName: 'primary-borderColorLite', hex: 'fade(@color-primary, 40%)'},
-			{varName: 'primary-gradientStartColor', hex: 'fade(@color-primary, 70%)'},
+			{varName: 'primary-backgroundColor', hex: 'tint(@color-primary, 70%)'},
+			{varName: 'primary-borderColorLite', hex: 'tint(@color-primary, 60%)'},
+			{varName: 'primary-gradientStartColor', hex: 'tint(@color-primary, 30%)'},
 			{varName: 'primary-gradientEndColor', hex: '@color-primary'},
 		]
 	},
@@ -122,9 +122,9 @@ const colorList = [
 		category: 'featured success',
 		colors: [
 			{varName: 'success-borderColor', hex: '@color-success'},
-			{varName: 'success-backgroundColor', hex: 'fade(@color-success, 30%)'},
-			{varName: 'success-borderColorLite', hex: 'fade(@color-success, 40%)'},
-			{varName: 'success-gradientStartColor', hex: 'fade(@color-success, 70%)'},
+			{varName: 'success-backgroundColor', hex: 'tint(@color-success, 70%)'},
+			{varName: 'success-borderColorLite', hex: 'tint(@color-success, 60%)'},
+			{varName: 'success-gradientStartColor', hex: 'tint(@color-success, 30%)'},
 			{varName: 'success-gradientEndColor', hex: '@color-success'},
 		]
 	},
@@ -132,9 +132,9 @@ const colorList = [
 		category: 'featured info',
 		colors: [
 			{varName: 'info-borderColor', hex: '@color-info'},
-			{varName: 'info-backgroundColor', hex: 'fade(@color-info, 30%)'},
-			{varName: 'info-borderColorLite', hex: 'fade(@color-info, 40%)'},
-			{varName: 'info-gradientStartColor', hex: 'fade(@color-info, 70%)'},
+			{varName: 'info-backgroundColor', hex: 'tint(@color-info, 70%)'},
+			{varName: 'info-borderColorLite', hex: 'tint(@color-info, 60%)'},
+			{varName: 'info-gradientStartColor', hex: 'tint(@color-info, 30%)'},
 			{varName: 'info-gradientEndColor', hex: '@color-info'},
 		]
 	},
@@ -142,9 +142,9 @@ const colorList = [
 		category: 'featured warning',
 		colors: [
 			{varName: 'warning-borderColor', hex: '@color-warning'},
-			{varName: 'warning-backgroundColor', hex: 'fade(@color-warning, 30%)'},
-			{varName: 'warning-borderColorLite', hex: 'fade(@color-warning, 40%)'},
-			{varName: 'warning-gradientStartColor', hex: 'fade(@color-warning, 70%)'},
+			{varName: 'warning-backgroundColor', hex: 'tint(@color-warning, 70%)'},
+			{varName: 'warning-borderColorLite', hex: 'tint(@color-warning, 60%)'},
+			{varName: 'warning-gradientStartColor', hex: 'tint(@color-warning, 30%)'},
 			{varName: 'warning-gradientEndColor', hex: '@color-warning'},
 		]
 	},
@@ -152,9 +152,9 @@ const colorList = [
 		category: 'featured danger',
 		colors: [
 			{varName: 'danger-borderColor', hex: '@color-danger'},
-			{varName: 'danger-backgroundColor', hex: 'fade(@color-danger, 30%)'},
-			{varName: 'danger-borderColorLite', hex: 'fade(@color-danger, 40%)'},
-			{varName: 'danger-gradientStartColor', hex: 'fade(@color-danger, 70%)'},
+			{varName: 'danger-backgroundColor', hex: 'tint(@color-danger, 70%)'},
+			{varName: 'danger-borderColorLite', hex: 'tint(@color-danger, 60%)'},
+			{varName: 'danger-gradientStartColor', hex: 'tint(@color-danger, 30%)'},
 			{varName: 'danger-gradientEndColor', hex: '@color-danger'},
 		]
 	},
@@ -173,7 +173,7 @@ const ColorPalette = React.createClass({
 						{_.map(group.colors, (color) => (
 							<div className={classNames(boundClassNames('~'))}>
 								<div className={`lucid-ColorPalette-color-${color.varName}`}></div>
-								<p><code>{`@color-${color.varName};`}</code></p>
+								<p><code>{`@special-color-${color.varName};`}</code></p>
 								<p className={boundClassNames('hex-string')}>{color.hex}</p>
 							</div>
 						))}
