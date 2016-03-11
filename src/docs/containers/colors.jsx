@@ -19,6 +19,10 @@ const colorList = [
 				hex: '#000'
 			},
 			{
+				varName: 'primary',
+				hex: '#2abbb0'
+			},
+			{
 				varName: 'backgroundColor',
 				hex: '@color-lightGray'
 			},
@@ -75,87 +79,93 @@ const colorList = [
 		colors: [
 			{
 				varName: 'default',
-				hex: '#f3f3f3'
+				hex: '#f3f3f3',
+				featured: 'featured-'
 			},
 			{
 				varName: 'primary',
-				hex: '#2abbb0'
+				hex: '#2abbb0',
+				featured: 'featured-'
 			},
 			{
 				varName: 'success',
-				hex: '#3fa516'
+				hex: '#3fa516',
+				featured: 'featured-'
 			},
 			{
 				varName:'info',
-				hex: '#0089c4'
+				hex: '#0089c4',
+				featured: 'featured-'
 			},
 			{
 				varName: 'warning',
-				hex: '#feb209'
+				hex: '#feb209',
+				featured: 'featured-'
 			},
 			{
 				varName: 'danger',
-				hex: '#f7403a'
+				hex: '#f7403a',
+				featured: 'featured-'
 			},
 		]
 	},
 	{
 		category: 'featured default',
 		colors: [
-			{varName: 'default-borderColor', hex: '#c5c5c5'},
-			{varName: 'default-backgroundColor', hex: '#ededed'},
-			{varName: 'default-gradientStartColor', hex: '#f3f3f3'},
-			{varName: 'default-gradientEndColor', hex: '#e2e2e2'},
+			{varName: 'default-borderColor', hex: '#c5c5c5', featured: 'featured-'},
+			{varName: 'default-backgroundColor', hex: '#ededed', featured: 'featured-'},
+			{varName: 'default-gradientStartColor', hex: '#f3f3f3', featured: 'featured-'},
+			{varName: 'default-gradientEndColor', hex: '#e2e2e2', featured: 'featured-'},
 		]
 	},
 	{
 		category: 'featured primary',
 		colors: [
-			{varName: 'primary-borderColor', hex: '@color-primary'},
-			{varName: 'primary-backgroundColor', hex: 'fade(@color-primary, 30%)'},
-			{varName: 'primary-borderColorLite', hex: 'fade(@color-primary, 40%)'},
-			{varName: 'primary-gradientStartColor', hex: 'fade(@color-primary, 70%)'},
-			{varName: 'primary-gradientEndColor', hex: '@color-primary'},
+			{varName: 'primary-borderColor', hex: '@color-primary', featured: 'featured-'},
+			{varName: 'primary-backgroundColor', hex: 'tint(@color-primary, 70%)', featured: 'featured-'},
+			{varName: 'primary-borderColorLite', hex: 'tint(@color-primary, 60%)', featured: 'featured-'},
+			{varName: 'primary-gradientStartColor', hex: 'tint(@color-primary, 30%)', featured: 'featured-'},
+			{varName: 'primary-gradientEndColor', hex: '@color-primary', featured: 'featured-'},
 		]
 	},
 	{
 		category: 'featured success',
 		colors: [
-			{varName: 'success-borderColor', hex: '@color-success'},
-			{varName: 'success-backgroundColor', hex: 'fade(@color-success, 30%)'},
-			{varName: 'success-borderColorLite', hex: 'fade(@color-success, 40%)'},
-			{varName: 'success-gradientStartColor', hex: 'fade(@color-success, 70%)'},
-			{varName: 'success-gradientEndColor', hex: '@color-success'},
+			{varName: 'success-borderColor', hex: '@color-success', featured: 'featured-'},
+			{varName: 'success-backgroundColor', hex: 'tint(@color-success, 70%)', featured: 'featured-'},
+			{varName: 'success-borderColorLite', hex: 'tint(@color-success, 60%)', featured: 'featured-'},
+			{varName: 'success-gradientStartColor', hex: 'tint(@color-success, 30%)', featured: 'featured-'},
+			{varName: 'success-gradientEndColor', hex: '@color-success', featured: 'featured-'},
 		]
 	},
 	{
 		category: 'featured info',
 		colors: [
-			{varName: 'info-borderColor', hex: '@color-info'},
-			{varName: 'info-backgroundColor', hex: 'fade(@color-info, 30%)'},
-			{varName: 'info-borderColorLite', hex: 'fade(@color-info, 40%)'},
-			{varName: 'info-gradientStartColor', hex: 'fade(@color-info, 70%)'},
-			{varName: 'info-gradientEndColor', hex: '@color-info'},
+			{varName: 'info-borderColor', hex: '@color-info', featured: 'featured-'},
+			{varName: 'info-backgroundColor', hex: 'tint(@color-info, 70%)', featured: 'featured-'},
+			{varName: 'info-borderColorLite', hex: 'tint(@color-info, 60%)', featured: 'featured-'},
+			{varName: 'info-gradientStartColor', hex: 'tint(@color-info, 30%)', featured: 'featured-'},
+			{varName: 'info-gradientEndColor', hex: '@color-info', featured: 'featured-'},
 		]
 	},
 	{
 		category: 'featured warning',
 		colors: [
-			{varName: 'warning-borderColor', hex: '@color-warning'},
-			{varName: 'warning-backgroundColor', hex: 'fade(@color-warning, 30%)'},
-			{varName: 'warning-borderColorLite', hex: 'fade(@color-warning, 40%)'},
-			{varName: 'warning-gradientStartColor', hex: 'fade(@color-warning, 70%)'},
-			{varName: 'warning-gradientEndColor', hex: '@color-warning'},
+			{varName: 'warning-borderColor', hex: '@color-warning', featured: 'featured-'},
+			{varName: 'warning-backgroundColor', hex: 'tint(@color-warning, 70%)', featured: 'featured-'},
+			{varName: 'warning-borderColorLite', hex: 'tint(@color-warning, 60%)', featured: 'featured-'},
+			{varName: 'warning-gradientStartColor', hex: 'tint(@color-warning, 30%)', featured: 'featured-'},
+			{varName: 'warning-gradientEndColor', hex: '@color-warning', featured: 'featured-'},
 		]
 	},
 	{
 		category: 'featured danger',
 		colors: [
 			{varName: 'danger-borderColor', hex: '@color-danger'},
-			{varName: 'danger-backgroundColor', hex: 'fade(@color-danger, 30%)'},
-			{varName: 'danger-borderColorLite', hex: 'fade(@color-danger, 40%)'},
-			{varName: 'danger-gradientStartColor', hex: 'fade(@color-danger, 70%)'},
-			{varName: 'danger-gradientEndColor', hex: '@color-danger'},
+			{varName: 'danger-backgroundColor', hex: 'tint(@color-danger, 70%)', featured: 'featured-'},
+			{varName: 'danger-borderColorLite', hex: 'tint(@color-danger, 60%)', featured: 'featured-'},
+			{varName: 'danger-gradientStartColor', hex: 'tint(@color-danger, 30%)', featured: 'featured-'},
+			{varName: 'danger-gradientEndColor', hex: '@color-danger', featured: 'featured-'},
 		]
 	},
 ];
@@ -168,12 +178,11 @@ const ColorPalette = React.createClass({
 				<p>A list of all colors used.  Colors are listed by group type.</p>
 				{_.map(colorList, (group, i) => (
 					<div key={i} style={{display: 'flex', flexWrap: 'wrap'}}>
-						{console.log(group)}
 						<h3 style={{flex: '1 0 100%'}}>{group.category}</h3>
-						{_.map(group.colors, (color) => (
-							<div className={classNames(boundClassNames('&'))}>
+						{_.map(group.colors, (color, j) => (
+							<div key={j} className={classNames(boundClassNames('&'))}>
 								<div className={boundClassNames(`&-color-${color.varName}`)}></div>
-								<p><code>{`@color-${color.varName};`}</code></p>
+								<p><code>{`@${color.featured || ''}color-${color.varName};`}</code></p>
 								<p className={boundClassNames('&-hex-string')}>{color.hex}</p>
 							</div>
 						))}

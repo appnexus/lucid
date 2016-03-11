@@ -23,12 +23,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		border: @Tabs-border-width solid @color-default-borderColor;
+		border: @Tabs-border-width solid @color-borderColor;
 		border-right: 0;
 		background-color: @color-white;
 
 		&:last-of-type {
-			border-right: @Tabs-border-width solid @color-default-borderColor;
+			border-right: @Tabs-border-width solid @color-borderColor;
 		}
 
 		&:hover {
@@ -37,7 +37,7 @@
 		}
 
 		&:active {
-			background-image: linear-gradient(@color-gray 0, @color-lightGray @Tabs-spacer-height);
+			.dropshadow-gradient(@color-gray, @color-lightGray, @Tabs-spacer-height);
 		}
 	}
 
@@ -70,7 +70,7 @@
 			bottom: -@Tabs-border-width;
 			right: -@Tabs-arrow-width;
 			.lucid-Tabs-Tab-arrow-line {
-				stroke: @color-default-borderColor;
+				stroke: @color-borderColor;
 			}
 		}
 		.Tabs-mixin-tab-line(transparent);
@@ -81,14 +81,14 @@
 		border-top: none;
 		padding-top: @Tabs-border-width;
 		color: @color-black;
-		background-image: linear-gradient(@color-primary 0, @color-primary @Tabs-spacer-height, @color-white @Tabs-spacer-height);
+		.hardstop-gradient();
 		cursor: initial;
 		&:hover {
 			background-color: @color-white;
 			.Tabs-mixin-tab-arrow-background();
 		}
 		&:active {
-			background-image: linear-gradient(@color-primary 0, @color-primary @Tabs-spacer-height, @color-white @Tabs-spacer-height);
+			.hardstop-gradient();
 		}
 		.Tabs-mixin-tab-line();
 	}
@@ -103,7 +103,7 @@
 	}
 
 	&-content {
-		border-top: @Tabs-border-width solid @color-default-borderColor;
+		border-top: @Tabs-border-width solid @color-borderColor;
 		padding-top: 10px; // TODO: use our default gutter
 	}
 }
