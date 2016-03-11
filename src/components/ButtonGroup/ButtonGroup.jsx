@@ -1,12 +1,11 @@
 import _ from 'lodash';
 import Button from '../Button/Button';
 import React from 'react';
-import classNames from 'classnames';
-import { bindClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition }  from '../../util/component-definition';
 import reducers from './ButtonGroup.reducers';
 
-const boundClassNames = bindClassNames('ButtonGroup');
+const boundClassNames = lucidClassNames.bind('&-ButtonGroup');
 
 const {
 	any,
@@ -96,7 +95,7 @@ const ButtonGroup = React.createClass(createLucidComponentDefinition({
 		return (
 			<span
 				{...others}
-				className={classNames(className, boundClassNames('~'))}
+				className={boundClassNames('&', className)}
 			>
 				{_.map(buttonChildProps, (buttonChildProp, index) => {
 					return (

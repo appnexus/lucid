@@ -2,9 +2,9 @@ import _ from 'lodash';
 import classNames from 'classnames';
 import React from 'react';
 
-import { bindClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 
-const boundClassNames = bindClassNames('ColorPalette');
+const boundClassNames = lucidClassNames.bind('&-ColorPalette');
 
 const colorList = [
 	{
@@ -180,10 +180,10 @@ const ColorPalette = React.createClass({
 					<div key={i} style={{display: 'flex', flexWrap: 'wrap'}}>
 						<h3 style={{flex: '1 0 100%'}}>{group.category}</h3>
 						{_.map(group.colors, (color, j) => (
-							<div key={j} className={classNames(boundClassNames('~'))}>
-								<div className={`lucid-ColorPalette-color-${color.varName}`}></div>
+							<div key={j} className={classNames(boundClassNames('&'))}>
+								<div className={boundClassNames(`&-color-${color.varName}`)}></div>
 								<p><code>{`@${color.featured || ''}color-${color.varName};`}</code></p>
-								<p className={boundClassNames('hex-string')}>{color.hex}</p>
+								<p className={boundClassNames('&-hex-string')}>{color.hex}</p>
 							</div>
 						))}
 					</div>

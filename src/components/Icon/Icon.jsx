@@ -1,8 +1,7 @@
 import React from 'react';
-import classNames from 'classnames';
-import { bindClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 
-const boundClassNames = bindClassNames('Icon');
+const boundClassNames = lucidClassNames.bind('&-Icon');
 
 const {
 	any,
@@ -70,14 +69,12 @@ const Icon = React.createClass({
 			...passThroughs
 		} = this.props;
 
-		let scopedClasses = boundClassNames('~', {
-			'is-badge': isBadge,
-		});
-
 		return (
 			<svg
 				{...passThroughs}
-				className={classNames(className, scopedClasses)}
+				className={boundClassNames('&', {
+					'&-is-badge': isBadge,
+				}, className)}
 				width={size}
 				height={size}
 				viewBox={viewBox}

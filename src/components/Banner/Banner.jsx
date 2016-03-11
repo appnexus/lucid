@@ -1,15 +1,13 @@
 import _ from 'lodash';
 import React from 'react';
-import classNames from 'classnames';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import { bindClassNames } from '../../util/style-helpers';
-
+import { lucidClassNames } from '../../util/style-helpers';
 import DangerIcon from '../Icon/DangerIcon/DangerIcon';
 import InfoIcon from '../Icon/InfoIcon/InfoIcon';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
 import WarningIcon from '../Icon/WarningIcon/WarningIcon';
 
-const boundClassNames = bindClassNames('Banner');
+const boundClassNames = lucidClassNames.bind('&-Banner');
 
 const {
 	any,
@@ -138,39 +136,37 @@ const Banner = React.createClass({
 			displayedIcon = defaultIcons[kind];
 		}
 
-		const scopedClasses = boundClassNames('~', {
-			'has-icon': displayedIcon,
-			'has-close': isCloseable,
-			'has-no-roundedCorners': !hasRoundedCorners,
-			'primary': kind === 'primary',
-			'success': kind === 'success',
-			'warning': kind === 'warning',
-			'danger': kind === 'danger',
-			'info': kind === 'info',
-			'small': isSmall,
-		});
-
 		return (
 			<ReactCSSTransitionGroup
-				transitionName={boundClassNames('~')}
+				transitionName={boundClassNames('&')}
 				transitionEnterTimeout={300}
 				transitionLeaveTimeout={300}
 			>
 				{!isClosed ?
 					<section
 						{...passThroughs}
-						className={classNames(className, scopedClasses)}
+						className={boundClassNames('&', {
+							'&-has-icon': displayedIcon,
+							'&-has-close': isCloseable,
+							'&-has-no-roundedCorners': !hasRoundedCorners,
+							'&-primary': kind === 'primary',
+							'&-success': kind === 'success',
+							'&-warning': kind === 'warning',
+							'&-danger': kind === 'danger',
+							'&-info': kind === 'info',
+							'&-small': isSmall,
+						}, className)}
 					>
 						{displayedIcon ?
-							<span className={boundClassNames('icon')}>{displayedIcon}</span>
+							<span className={boundClassNames('&-icon')}>{displayedIcon}</span>
 						: null}
 
-						<span className={boundClassNames('content')}>
+						<span className={boundClassNames('&-content')}>
 							{children}
 						</span>
 
 						{isCloseable ?
-							<span className={boundClassNames('close')} onClick={this.handleClose}>
+							<span className={boundClassNames('&-close')} onClick={this.handleClose}>
 								{String.fromCharCode(0x00d7)}
 							</span>
 						: null}

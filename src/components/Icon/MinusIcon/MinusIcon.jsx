@@ -1,10 +1,8 @@
 import React from 'react';
-import classNames from 'classnames';
 import Icon from '../Icon';
+import { lucidClassNames } from '../../../util/style-helpers';
 
-import { bindClassNames } from '../../../util/style-helpers';
-
-const boundClassNames = bindClassNames('MinusIcon');
+const boundClassNames = lucidClassNames.bind('&-MinusIcon');
 
 /**
  *
@@ -26,7 +24,7 @@ const MinusIcon = React.createClass({
 		return (
 			<Icon
 				{...passThroughs}
-				className={classNames(className, boundClassNames('~'))}
+				className={boundClassNames('&', className)}
 				viewBox='0 0 16 16'
 			>
 				<path d='M3,7h10v2H3V7z' />
