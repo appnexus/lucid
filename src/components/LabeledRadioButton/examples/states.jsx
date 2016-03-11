@@ -10,11 +10,17 @@ export default React.createClass({
 	render() {
 		return (
 			<section style={{ display: 'flex' }}>
-				<LabeledRadioButton label='String passed in as the label' style={style} />
-				<LabeledRadioButton label={<p>HTML element passed in as the label</p>} style={style} />
-				<LabeledRadioButton isDisabled={true} label='Disabled' style={style} />
-				<LabeledRadioButton isSelected={true} label='Selected' style={style} />
-				<LabeledRadioButton isDisabled={true} isSelected={true} label='Disabled & selected' style={style} />
+				<LabeledRadioButton style={style} />
+				<LabeledRadioButton Label='String passed in as the label' style={style} />
+				<LabeledRadioButton Label={<p>HTML element passed in as the label</p>} style={style} />
+				<LabeledRadioButton Label={[
+					'First in an array passed in as the label', 
+					'Second in an array passed in as the label',
+					'Third in an array passed in as the label'
+				]} style={style} />
+				<LabeledRadioButton isDisabled={true} Label='Disabled' style={style} />
+				<LabeledRadioButton isSelected={true} Label='Selected' style={style} />
+				<LabeledRadioButton isDisabled={true} isSelected={true} Label='Disabled & selected' style={style} />
 			</section>
 		);
 	}
