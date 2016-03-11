@@ -1,10 +1,9 @@
 import React from 'react';
-import classNames from 'classnames';
-import { bindClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition } from '../../util/component-definition';
 import _ from 'lodash';
 
-const boundClassNames = bindClassNames('Validation');
+const boundClassNames = lucidClassNames.bind('&-Validation');
 
 const {
 	any,
@@ -61,18 +60,16 @@ const Validation = React.createClass(createLucidComponentDefinition({
 
 		const errorChildProps = _.first(Validation.Error.findInAllAsProps(this.props));
 
-		const rootClasses = classNames(className, boundClassNames('~', {
-			'is-error': errorChildProps,
-		}));
-
 		return (
 			<div
 				{...passThroughs}
-				className={rootClasses}
+				className={boundClassNames('&', {
+					'is-error': errorChildProps,
+				}, className)}
 			>
 				{children}
 				{errorChildProps ?
-					<div className={boundClassNames('error-content')} >
+					<div className={boundClassNames('&-error-content')} >
 						{errorChildProps.children || errorChildProps}
 					</div>
 				: null}

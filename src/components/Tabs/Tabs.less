@@ -1,5 +1,7 @@
 @Tabs-spacer-height: 3px;
 @Tabs-tab-height: 28px;
+@Tabs-arrow-width: 8px;
+@Tabs-border-width: 1px;
 
 .lucid-Tabs {
 	&-bar {
@@ -12,53 +14,112 @@
 	}
 
 	&-Tab {
-		color: @color-primary;
 		flex: 1 1 auto;
 		cursor: pointer;
+		color: @color-primary;
 		user-select: none;
-		margin-bottom: -1px;
+		margin-bottom: -@Tabs-border-width;
 		height: @Tabs-tab-height;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding-top: @Tabs-spacer-height;
-		border: 1px solid @color-default-borderColor;
+		border: @Tabs-border-width solid @color-default-borderColor;
 		border-right: 0;
 		background-color: @color-white;
 
 		&:last-of-type {
-			border-right: 1px solid @color-default-borderColor;
+			border-right: @Tabs-border-width solid @color-default-borderColor;
 		}
 
 		&:hover {
-			background-color: @color-gray-5;
+			background-color: @color-lightGray;
+			.Tabs-mixin-tab-arrow-background(@color-lightGray);
 		}
 
 		&:active {
-			box-shadow: @shadow-inset;
+			background-image: linear-gradient(@color-gray 0, @color-lightGray @Tabs-spacer-height);
 		}
 	}
-	&-Tab-is-active {
-		border-top: @Tabs-spacer-height solid @color-primary;
-		padding-top: 0;
-		color: #000;
-		cursor: initial;
 
+	&-Tab-is-disabled {
+		color: @color-disabledText;
+		cursor: not-allowed;
 		&:hover {
 			background-color: @color-white;
+			.Tabs-mixin-tab-arrow-background();
 		}
-
 		&:active {
-			box-shadow: none;
+			background: @color-white;
 		}
 	}
+
+	&-Tab-is-progressive {
+		position: relative;
+		border-width: @Tabs-border-width 0;
+		&:first-of-type {
+			border-left-width: @Tabs-border-width;
+		}
+		& + * {
+			border-left-width: 0;
+		}
+		.lucid-Tabs-Tab-arrow{
+			z-index: 1;
+			height: @Tabs-tab-height;
+			width: @Tabs-arrow-width;
+			position: absolute;
+			bottom: -@Tabs-border-width;
+			right: -@Tabs-arrow-width;
+			.lucid-Tabs-Tab-arrow-line {
+				stroke: @color-default-borderColor;
+			}
+		}
+		.Tabs-mixin-tab-line(transparent);
+		.Tabs-mixin-tab-arrow-background();
+	}
+
+	&-Tab-is-active {
+		border-top: none;
+		padding-top: @Tabs-border-width;
+		color: @color-black;
+		background-image: linear-gradient(@color-primary 0, @color-primary @Tabs-spacer-height, @color-white @Tabs-spacer-height);
+		cursor: initial;
+		&:hover {
+			background-color: @color-white;
+			.Tabs-mixin-tab-arrow-background();
+		}
+		&:active {
+			background-image: linear-gradient(@color-primary 0, @color-primary @Tabs-spacer-height, @color-white @Tabs-spacer-height);
+		}
+		.Tabs-mixin-tab-line();
+	}
+
 	&-Tab-is-active-and-open {
-		border-bottom: 1px solid @color-white;
+		border-bottom: @Tabs-border-width solid @color-white;
 		z-index: 1; // Safari fix
+		&:hover {
+			.Tabs-mixin-tab-arrow-background();
+		}
+		.Tabs-mixin-tab-line();
 	}
 
 	&-content {
-		border-top: 1px solid @color-default-borderColor;
+		border-top: @Tabs-border-width solid @color-default-borderColor;
 		padding-top: 10px; // TODO: use our default gutter
+	}
+}
+
+.Tabs-mixin-tab-line(@color-Tab-line: @color-primary) {
+	.lucid-Tabs-Tab-arrow {
+		.lucid-Tabs-Tab-arrow-tab-line {
+			fill: @color-Tab-line;
+		}
+	}
+}
+
+.Tabs-mixin-tab-arrow-background(@color-Tab-background: @color-white) {
+	.lucid-Tabs-Tab-arrow {
+		.lucid-Tabs-Tab-arrow-background {
+			fill: @color-Tab-background;
+		}
 	}
 }

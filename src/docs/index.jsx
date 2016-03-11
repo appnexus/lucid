@@ -228,6 +228,11 @@ const Component = React.createClass({
 					</thead>
 					<tbody>
 						{_.map(componentProps, ([propName, propDetails]) => {
+							if (!propDetails || !propDetails.description) {
+								console.error(`Warning: There was an issue with the docs that were generated for component "${componentName}" and prop "${propName}". One reason might be that you have a default value for something that was never declared in propTypes.`);
+								return null;
+							}
+
 							return (
 								<tr key={propName}>
 									<td>{propName}</td>

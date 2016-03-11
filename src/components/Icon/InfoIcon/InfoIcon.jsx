@@ -1,10 +1,8 @@
 import React from 'react';
-import classNames from 'classnames';
 import Icon from '../Icon';
+import { lucidClassNames } from '../../../util/style-helpers';
 
-import { bindClassNames } from '../../../util/style-helpers';
-
-const boundClassNames = bindClassNames('InfoIcon');
+const boundClassNames = lucidClassNames.bind('&-InfoIcon');
 
 /**
  *
@@ -26,7 +24,7 @@ const InfoIcon = React.createClass({
 		return (
 			<Icon
 				{...passThroughs}
-				className={classNames(className, boundClassNames('~'))}
+				className={boundClassNames('&', className)}
 				viewBox='0 0 16 16'
 			>
 				<path d='M6.739,6.11h2.521v7.562H6.739V6.11z' />
