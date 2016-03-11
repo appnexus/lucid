@@ -37,7 +37,7 @@
 		}
 
 		&:active {
-			background-image: linear-gradient(@color-gray 0, @color-lightGray @Tabs-spacer-height);
+			.dropshaow-gradient(@color-gray, @color-lightGray, @Tabs-spacer-height);
 		}
 	}
 
@@ -81,14 +81,14 @@
 		border-top: none;
 		padding-top: @Tabs-border-width;
 		color: @color-black;
-		background-image: linear-gradient(@color-primary 0, @color-primary @Tabs-spacer-height, @color-white @Tabs-spacer-height);
+		.hardstop-gradient();
 		cursor: initial;
 		&:hover {
 			background-color: @color-white;
 			.Tabs-mixin-tab-arrow-background();
 		}
 		&:active {
-			background-image: linear-gradient(@color-primary 0, @color-primary @Tabs-spacer-height, @color-white @Tabs-spacer-height);
+			.hardstop-gradient();
 		}
 		.Tabs-mixin-tab-line();
 	}

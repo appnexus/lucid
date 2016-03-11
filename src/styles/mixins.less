@@ -90,3 +90,10 @@
 	-webkit-transform:translate3d(0,0,0);
 }
 
+.dropshaow-gradient(@start, @stop, @height) {
+	background-image: linear-gradient(@start 0, @stop @height);
+}
+
+.hardstop-gradient(@direction: 'to bottom', @line: @color-primary, @background: @color-white, @height: 3px) {
+	background-image: linear-gradient(@line 0, @line @height, @background @height);
+}
