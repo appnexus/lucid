@@ -34,7 +34,7 @@ export default React.createClass({
 	render() {
 		return (
 			<section>
-				<span style={{ display: 'flex' }}>
+				<span>
 					<LabeledRadioButton
 							isSelected={this.state.flavor === 'vanilla'}
 							Label='Vanilla'
