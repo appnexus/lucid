@@ -101,7 +101,7 @@ const LabeledRadioButton = React.createClass(createLucidComponentDefinition({
 						isDisabled={isDisabled}
 						isSelected={isSelected}
 						onSelect={onSelect}
-						{...passThroughs}
+						{..._.omit(passThroughs, 'Label')}
 				/>
 				{
 					labelChildProps
