@@ -59,7 +59,7 @@ const RadioButton = React.createClass({
 		/**
 		 * Passed through to the root element.
 		 */
-		style: object,
+		style: object
 	},
 
 	getDefaultProps() {
