@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 
 import LabeledCheckbox from '../LabeledCheckbox';
@@ -9,49 +10,54 @@ const style = {
 export default React.createClass({
 	getInitialState() {
 		return {
-			flavor: 'vanilla'
+			flavors: []
 		};
 	},
 
-	handleSelectedChocolate() {
+	handleSelectedChocolate(isSelected) {
 		this.setState({
-			flavor: 'chocolate'
+			flavors: isSelected
+					? _.concat(this.state.flavors, 'chocolate')
+					: _.without(this.state.flavors, 'chocolate')
 		});
 	},
 
-	handleSelectedStrawberry() {
+	handleSelectedStrawberry(isSelected) {
 		this.setState({
-			flavor: 'strawberry'
+			flavors: isSelected
+					? _.concat(this.state.flavors, 'strawberry')
+					: _.without(this.state.flavors, 'strawberry')
 		});
 	},
 
-	handleSelectedVanilla() {
+	handleSelectedVanilla(isSelected) {
 		this.setState({
-			flavor: 'vanilla'
+			flavors: isSelected
+					? _.concat(this.state.flavors, 'vanilla')
+					: _.without(this.state.flavors, 'vanilla')
 		});
 	},
 
 	render() {
-		console.log('woot');
 		return (
 			<section>
 				<span>
 					<LabeledCheckbox
-							isSelected={this.state.flavor === 'vanilla'}
+							isSelected={_.includes(this.state.flavors, 'vanilla')}
 							Label='Vanilla'
 							name='interactive-checkboxes'
 							onSelect={this.handleSelectedVanilla}
 							style={style}
 					/>
 					<LabeledCheckbox
-							isSelected={this.state.flavor === 'chocolate'}
+							isSelected={_.includes(this.state.flavors, 'chocolate')}
 							Label='Chocolate'
 							name='interactive-checkboxes'
 							onSelect={this.handleSelectedChocolate}
 							style={style}
 					/>
 					<LabeledCheckbox
-							isSelected={this.state.flavor === 'strawberry'}
+							isSelected={_.includes(this.state.flavors, 'strawberry')}
 							Label='Strawberry'
 							name='interactive-checkboxes'
 							onSelect={this.handleSelectedStrawberry}
