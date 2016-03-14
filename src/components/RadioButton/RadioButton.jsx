@@ -116,6 +116,8 @@ const RadioButton = React.createClass({
 			onSelect,
 		} = this.props;
 
+		event.preventDefault();
+
 		if (!isDisabled && !isSelected) {
 			onSelect(true, { event, props: this.props });
 			this.nativeElement.focus();
