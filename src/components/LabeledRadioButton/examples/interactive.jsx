@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React from 'react';
 
 import LabeledRadioButton from '../LabeledRadioButton';
@@ -15,21 +14,21 @@ export default React.createClass({
 	},
 
 	handleSelectedChocolate() {
-		this.setState(_.assign({}, this.state, {
+		this.setState({
 			flavor: 'chocolate'
-		}));
+		});
 	},
 
 	handleSelectedStrawberry() {
-		this.setState(_.assign({}, this.state, {
+		this.setState({
 			flavor: 'strawberry'
-		}));
+		});
 	},
 
 	handleSelectedVanilla() {
-		this.setState(_.assign({}, this.state, {
+		this.setState({
 			flavor: 'vanilla'
-		}));
+		});
 	},
 
 	render() {
