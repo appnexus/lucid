@@ -9,6 +9,22 @@
 		.lucid-Grid-Cell {
 			display: flex;
 			padding: 0 10px 5px 0;
+
+			// overwrite for IE Flex bugs (solved in IE12)
+			&-is-full,
+			&-is-half,
+			&-is-third,
+			&-is-quarter,
+			&-is-2,
+			&-is-3,
+			&-is-4,
+			&-is-5,
+			&-is-6,
+			&-is-7,
+			&-is-8,
+			&-is-9,
+			&-is-10,
+			&-is-11{ max-width: 100%; }
 		}
 	}
 
@@ -38,29 +54,30 @@
 	}
 
 	&-is-full{
-		flex: 0 0 100%;
+		#normalize > .flex(0, 0, 100%);
+
 	}
 
 	&-is-half{
-		flex: 0 0 50%;
+		#normalize > .flex(0, 0, 50%);
 	}
 	&-is-third{
-		flex: 0 0 33.333%;
+		#normalize > .flex(0, 0, 33.333%);
 	}
 	&-is-quarter{
-		flex: 0 0 25%;
+		#normalize > .flex(0, 0, 25%);
 	}
 
-	&-is-2{ flex: 0 0 (100%/12*2); }
-	&-is-3{ flex: 0 0 (100%/12*3); }
-	&-is-4{ flex: 0 0 (100%/12*4); }
-	&-is-5{ flex: 0 0 (100%/12*5); }
-	&-is-6{ flex: 0 0 (100%/12*6); }
-	&-is-7{ flex: 0 0 (100%/12*7); }
-	&-is-8{ flex: 0 0 (100%/12*8); }
-	&-is-9{ flex: 0 0 (100%/12*9); }
-	&-is-10{ flex: 0 0 (100%/12*10); }
-	&-is-11{ flex: 0 0 (100%/12*11); }
+	&-is-2{ #normalize > .flex(0, 0, (100%/12*2)); }
+	&-is-3{ #normalize > .flex(0, 0, (100%/12*3)); }
+	&-is-4{ #normalize > .flex(0, 0, (100%/12*4));  }
+	&-is-5{ #normalize > .flex(0, 0, (100%/12*5));  }
+	&-is-6{ #normalize > .flex(0, 0, (100%/12*6)); }
+	&-is-7{ #normalize > .flex(0, 0, (100%/12*7));  }
+	&-is-8{ #normalize > .flex(0, 0, (100%/12*8));  }
+	&-is-9{ #normalize > .flex(0, 0, (100%/12*9));  }
+	&-is-10{ #normalize > .flex(0, 0, (100%/12*10));  }
+	&-is-11{ #normalize > .flex(0, 0, (100%/12*11));  }
 
 	&-is-offset-quarter { margin-left: 25%; }
 	&-is-offset-third { margin-left: 33.3333%; }

@@ -21,11 +21,11 @@
 	width: @RadioButton-width;
 
 	&-is-disabled {
-		cursor: default;
+		cursor: not-allowed;
 	}
 
 	&-native {
-		opacity: 0;
+		.opacity(0);
 	}
 
 	&-visualization-container {
@@ -44,7 +44,7 @@
 		border-radius: @RadioButton-dot-radius;
 		height: @RadioButton-dot-radius * 2;
 		left: @RadioButton-dot-offset;
-		opacity: 0;
+		.opacity(0);
 		position: absolute;
 		top: @RadioButton-dot-offset;
 		transition: @RadioButton-animation-timing;
@@ -56,7 +56,7 @@
 		border-radius: @RadioButton-glow-radius;
 		height: @RadioButton-glow-radius * 2;
 		left: @RadioButton-glow-offset;
-		opacity: 0;
+		.opacity(0);
 		position: absolute;
 		top: @RadioButton-glow-offset;
 		transition: @RadioButton-animation-timing;
@@ -69,7 +69,7 @@
 	}
 
 	&:hover &-visualization-glow {
-		opacity: 0.3;
+		.opacity();
 		transform: @RadioButton-glow-scale;
 	}
 
@@ -80,12 +80,12 @@
 	}
 
 	&-is-disabled:hover &-visualization-glow {
-		opacity: 0;
+		.opacity(0);
 		transform: none;
 	}
 
 	&-is-disabled&-is-selected &-visualization-container {
-		opacity: 0.3;
+		.opacity();
 	}
 
 	&-is-disabled&-is-selected:hover &-visualization-container,
@@ -95,11 +95,11 @@
 	}
 
 	&-is-selected &-visualization-dot {
-		opacity: 1;
+		.opacity(1);
 	}
 
 	&-native:focus ~ &-visualization-glow {
-		opacity: 0.3;
+		.opacity();
 		transform: @RadioButton-glow-scale;
 	}
 }
