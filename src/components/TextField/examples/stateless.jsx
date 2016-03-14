@@ -7,7 +7,6 @@ export default React.createClass({
 			<div>
 				<TextField />
 				<TextField placeholder='Enter some text'/>
-				<TextField Error='No bueno' />
 				<TextField value='Cant type me' isDisabled={true} />
 				<TextField isMultiLine={true} rows={10} />
 			</div>

@@ -64,7 +64,7 @@ const Validation = React.createClass(createLucidComponentDefinition({
 			<div
 				{...passThroughs}
 				className={boundClassNames('&', {
-					'is-error': errorChildProps,
+					'&-is-error': errorChildProps,
 				}, className)}
 			>
 				{children}
