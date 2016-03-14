@@ -67,12 +67,12 @@ describe('RadioButton', () => {
 					<RadioButton className='wut' isDisabled={true} isSelected={true} style={{ fontWeight: 'bold' }} onSelect={_.noop}
 							foo={1} bar={2} baz={3} qux={4} quux={5} />
 				);
-				const nativeProps = _.keys(wrapper.find('input[type="radio"]').props());
+				const nativeProps = wrapper.find('input[type="radio"]').props();
 
 				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
 				// to the native input.
 				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
-					assert(_.includes(nativeProps, prop));
+					assert(_.has(nativeProps, prop));
 				});
 			});
 		});

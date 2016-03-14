@@ -65,15 +65,25 @@ describe('LabeledRadioButton', () => {
 		describe('pass throughs', () => {
 			it('passes through all props not defined in `propTypes` to its `RadioButton` instance.', () => {
 				const wrapper = shallow(
-					<LabeledRadioButton className='wut' isDisabled={true} isSelected={true} style={{ fontWeight: 'bold' }} onSelect={_.noop}
-							foo={1} bar={2} baz={3} qux={4} quux={5} />
+					<LabeledRadioButton
+							className='wut'
+							isDisabled={true}
+							isSelected={true}
+							style={{ fontWeight: 'bold' }}
+							onSelect={_.noop}
+							foo={1}
+							bar={2}
+							baz={3}
+							qux={4}
+							quux={5}
+					/>
 				);
-				const radioButtonProps = _.keys(wrapper.find(RadioButton).props());
+				const radioButtonProps = wrapper.find(RadioButton).props();
 
 				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
 				// to the `RadioButton` instance.
 				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
-					assert(_.includes(radioButtonProps, prop));
+					assert(_.has(radioButtonProps, prop));
 				});
 			});
 		});
