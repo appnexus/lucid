@@ -15,19 +15,10 @@
 @size-boxShadow: rgba(0,0,0,.3);
 @size-borderRadius: 4px;
 
-// banner sizes
-@Banner-size-spacing-rightLeft: 10px;
-@Banner-size-spacing-topBottom: 13px;
-@Banner-size-borderRadiaus: @borderRadius;
-
-// button sizes
-@Button-size-padding: 12px;
-@Button-size-lineHeight: 26px;
-@Button-size-borderRadius: @size-borderRadius;
-
 // colors
 @color-white: #fff;
 @color-black: #000;
+@color-primary: #2abbb0;
 
 @color-disabledText: tint(#333, 50%);
 
@@ -43,12 +34,12 @@
 @color-darkGray: #333333;
 
 // featured colors
-@color-default: #f3f3f3;
-@color-primary: #2abbb0;
-@color-success: #3fa516;
-@color-info: #0089c4;
-@color-warning: #feb209;
-@color-danger: #f7403a;
+@featured-color-default: #f3f3f3;
+@featured-color-primary: @color-primary;
+@featured-color-success: #3fa516;
+@featured-color-info: #0089c4;
+@featured-color-warning: #feb209;
+@featured-color-danger: #f7403a;
 
 @color-borderColor: @color-mediumGray;
 @color-backgroundColor: @color-lightGray;
@@ -58,42 +49,42 @@
 @shadow-inset: 0 10px 10px -10px @color-gray-30 inset;
 
 // default
-@color-default-borderColor: #c5c5c5;
-@color-default-backgroundColor: #ededed;
-@color-default-gradientStartColor: #f3f3f3;
-@color-default-gradientEndColor: #e2e2e2;
+@featured-color-default-borderColor: #c5c5c5;
+@featured-color-default-backgroundColor: #ededed;
+@featured-color-default-gradientStartColor: #f3f3f3;
+@featured-color-default-gradientEndColor: #e2e2e2;
 
 // primary
-@color-primary-borderColor: @color-primary;
-@color-primary-borderColorLite: fade(@color-primary, 40%);
-@color-primary-backgroundColor: fade(@color-primary, 30%);
-@color-primary-gradientStartColor: fade(@color-primary, 70%);
-@color-primary-gradientEndColor: @color-primary;
+@featured-color-primary-borderColor: @featured-color-primary;
+@featured-color-primary-borderColorLite: tint(@featured-color-primary, 60%);
+@featured-color-primary-backgroundColor: tint(@featured-color-primary, 70%);
+@featured-color-primary-gradientStartColor: tint(@featured-color-primary, 30%);
+@featured-color-primary-gradientEndColor: @featured-color-primary;
 
 // success
-@color-success-borderColor: @color-success;
-@color-success-borderColorLite: fade(@color-success, 40%);
-@color-success-backgroundColor: fade(@color-success, 30%);
-@color-success-gradientStartColor: fade(@color-success, 70%);
-@color-success-gradientEndColor: @color-success;
+@featured-color-success-borderColor: @featured-color-success;
+@featured-color-success-borderColorLite: tint(@featured-color-success, 60%);
+@featured-color-success-backgroundColor: tint(@featured-color-success, 70%);
+@featured-color-success-gradientStartColor: tint(@featured-color-success, 30%);
+@featured-color-success-gradientEndColor: @featured-color-success;
 
 // info
-@color-info-borderColor: @color-info;
-@color-info-borderColorLite: fade(@color-info, 40%);
-@color-info-backgroundColor: fade(@color-info, 30%);
-@color-info-gradientStartColor: fade(@color-info, 70%);
-@color-info-gradientEndColor: @color-info;
+@featured-color-info-borderColor: @featured-color-info;
+@featured-color-info-borderColorLite: tint(@featured-color-info, 60%);
+@featured-color-info-backgroundColor: tint(@featured-color-info, 70%);
+@featured-color-info-gradientStartColor: tint(@featured-color-info, 30%);
+@featured-color-info-gradientEndColor: @featured-color-info;
 
 // warning
-@color-warning-borderColor: @color-warning;
-@color-warning-borderColorLite: fade(@color-warning, 40%);
-@color-warning-backgroundColor: fade(@color-warning, 30%);
-@color-warning-gradientStartColor: fade(@color-warning, 70%);
-@color-warning-gradientEndColor: @color-warning;
+@featured-color-warning-borderColor: @featured-color-warning;
+@featured-color-warning-borderColorLite: tint(@featured-color-warning, 60%);
+@featured-color-warning-backgroundColor: tint(@featured-color-warning, 70%);
+@featured-color-warning-gradientStartColor: tint(@featured-color-warning, 30%);
+@featured-color-warning-gradientEndColor: @featured-color-warning;
 
 // danger
-@color-danger-borderColor: @color-danger;
-@color-danger-borderColorLite: fade(@color-danger, 40%);
-@color-danger-backgroundColor: fade(@color-danger, 30%);
-@color-danger-gradientStartColor: fade(@color-danger, 70%);
-@color-danger-gradientEndColor: @color-danger;
+@featured-color-danger-borderColor: @featured-color-danger;
+@featured-color-danger-borderColorLite: tint(@featured-color-danger, 60%);
+@featured-color-danger-backgroundColor: tint(@featured-color-danger, 70%);
+@featured-color-danger-gradientStartColor: tint(@featured-color-danger, 30%);
+@featured-color-danger-gradientEndColor: @featured-color-danger;
