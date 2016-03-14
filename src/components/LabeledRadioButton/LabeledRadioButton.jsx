@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import classNames from 'classnames';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition }  from '../../util/component-definition';
@@ -89,10 +88,10 @@ const LabeledRadioButton = React.createClass(createLucidComponentDefinition({
 
 		return (
 			<label
-					className={classNames(boundClassNames('&', {
+					className={boundClassNames('&', {
 						'&-is-disabled': isDisabled,
 						'&-is-selected': isSelected
-					}), className)}
+					}, className)}
 					style={style}
 					{...labelChildProps}
 			>
