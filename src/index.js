@@ -25,6 +25,7 @@ import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import Switch from './components/Switch/Switch';
 import Tabs from './components/Tabs/Tabs';
 import TextField from './components/TextField/TextField'
+import ValidatedTextField from './components/ValidatedTextField/ValidatedTextField';
 import Validation from './components/Validation/Validation';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
 
@@ -39,7 +40,7 @@ export {
 	componentDefinition,
 	domHelpers,
 	stateManagement,
-	styleHelpers
+	styleHelpers,
 };
 
 export {
@@ -70,6 +71,7 @@ export {
 	Switch,
 	Tabs,
 	TextField,
+	ValidatedTextField,
 	Validation,
-	WarningIcon
+	WarningIcon,
 };

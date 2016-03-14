@@ -1,7 +1,12 @@
+// banner sizes
+@Banner-size-spacing-rightLeft: 10px;
+@Banner-size-spacing-topBottom: 13px;
+@Banner-size-borderRadiaus: @borderRadius;
+
 .lucid-Banner {
 	.box-sizing();
-	border: 1px solid @color-default-borderColor;
-	background-color: @color-default-backgroundColor;
+	border: 1px solid @color-borderColor;
+	background-color: @color-backgroundColor;
 	font: @font;
 	border-radius: @Banner-size-borderRadiaus;
 	padding: 0 @Banner-size-spacing-rightLeft;
@@ -60,29 +65,24 @@
 	// Types
 
 	&-primary {
-		border-color: @color-primary-borderColorLite;
-		.gradient-reset(linear-gradient(@standardGradient, @color-primary-backgroundColor, @color-primary-backgroundColor));
-		background-color: @color-white;
+		border-color: @featured-color-primary-borderColorLite;
+		background-color: @featured-color-primary-backgroundColor;
 	}
 	&-success {
-		border-color: @color-success-borderColorLite;
-		.gradient-reset(linear-gradient(@standardGradient, @color-success-backgroundColor, @color-success-backgroundColor));
-		background-color: @color-white;
+		border-color: @featured-color-success-borderColorLite;
+		background-color: @featured-color-success-backgroundColor;
 	}
 	&-info {
-		border-color: @color-info-borderColorLite;
-		.gradient-reset(linear-gradient(@standardGradient, @color-info-backgroundColor, @color-info-backgroundColor));
-		background-color: @color-white;
+		border-color: @featured-color-info-borderColorLite;
+		background-color: @featured-color-info-backgroundColor;
 	}
 	&-warning {
-		border-color: @color-warning-borderColorLite;
-		.gradient-reset(linear-gradient(@standardGradient, @color-warning-backgroundColor, @color-warning-backgroundColor));
-		background-color: @color-white;
+		border-color: @featured-color-warning-borderColorLite;
+		background-color: @featured-color-warning-backgroundColor;
 	}
 	&-danger {
-		border-color: @color-danger-borderColorLite;
-		.gradient-reset(linear-gradient(@standardGradient, @color-danger-backgroundColor, @color-danger-backgroundColor));
-		background-color: @color-white;
+		border-color: @featured-color-danger-borderColorLite;
+		background-color: @featured-color-danger-backgroundColor;
 	}
 
 	&-small {

@@ -3,50 +3,40 @@
 @TextField-color-font: #333;
 
 .lucid-TextField {
-	&-native {
-		.box-sizing();
-		.inset-box-shadow();
+	.box-sizing();
+	.inset-box-shadow();
 
-		background-color: @color-white;
-		border-radius: @size-borderRadius;
-		border: 1px solid @color-default-borderColor;
-		color: @TextField-color-font;
-		font-family: @fontFamily;
-		font-size: @fontSize;
-		margin: 0;
-		padding: 0 @TextField-size-padding;
-		width: 100%;
-	}
+	background-color: @color-white;
+	border-radius: @size-borderRadius;
+	border: 1px solid @color-borderColor;
+	color: @TextField-color-font;
+	font-family: @fontFamily;
+	font-size: @fontSize;
+	margin: 0;
+	padding: 0 @TextField-size-padding;
+	width: 100%;
 
-	&-native:focus {
+	&:focus {
 		.inset-box-shadow(@color-primary);
 		outline: none;
 		border-color: @color-primary;
 	}
 
-	&-is-single-line &-native {
+	&&-is-single-line {
 		vertical-align: middle;
 		height: @TextField-size-height;
 	}
 
-	&-is-multi-line &-native {
+	&&-is-multi-line {
 		vertical-align: top;
 		resize: both;
 		padding-top: @TextField-size-padding - 2px; // Handle padding appropriately for `textarea`s
 	}
 
-	&-is-disabled &-native {
+	&&-is-disabled {
 		cursor: not-allowed;
 		background-color: @color-gray-5;
 		border-color: @color-gray-10;
 		color: @color-gray-25;
 	}
-
-	// Error styling
-
-	.lucid-Validation-is-error &-native {
-		.inset-box-shadow(@color-danger);
-		border-color: @color-danger;
-	}
-
 }
