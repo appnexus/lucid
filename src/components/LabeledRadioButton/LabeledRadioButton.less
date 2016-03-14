@@ -1,0 +1,41 @@
+.lucid-LabeledRadioButton {
+	align-items: center;
+	color: @color-darkGray;
+	cursor: pointer;
+	display: flex;
+	font: @font;
+	justify-content: flex-start;
+
+	&&-is-disabled {
+		color: @color-mediumGray;
+		cursor: not-allowed;
+	}
+
+	&:hover .lucid-RadioButton-visualization-container {
+		border-color: @color-primary;
+		transition: @RadioButton-animation-timing;
+	}
+
+	&:hover .lucid-RadioButton-visualization-glow {
+		.opacity();
+		transform: @RadioButton-glow-scale;
+	}
+
+	&&-is-disabled .lucid-RadioButton-visualization-container,
+	&&-is-disabled:hover .lucid-RadioButton-visualization-container {
+		background-color: rgba(0, 0, 0, 0.05);
+		border-color: rgba(0, 0, 0, 0.1);
+	}
+
+	&&-is-disabled:hover .lucid-RadioButton-visualization-glow {
+		.opacity(0);
+		transform: none;
+	}
+
+
+	&&-is-disabled&&-is-selected:hover .lucid-RadioButton-visualization-container,
+	&&-is-selected .lucid-RadioButton-visualization-container {
+		background-color: @color-primary;
+		border-color: @color-primary;
+	}
+}
