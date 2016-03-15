@@ -19,9 +19,23 @@ const colorList = [
 				varName: 'black',
 				hex: '#000'
 			},
+		]
+	},
+	{
+		category: 'Primary',
+		description: 'Primary Colors come in three states primary, primaryMedium and primaryLight',
+		colors: [
 			{
 				varName: 'primary',
 				hex: '#2abbb0'
+			},
+			{
+				varName: 'primaryMedium',
+				hex: 'tint(@color-primary, 65%)'
+			},
+			{
+				varName: 'primaryLight',
+				hex: 'tint(@color-primary, 85%)'
 			},
 		]
 	},
