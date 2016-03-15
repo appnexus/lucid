@@ -44,25 +44,28 @@ export default React.createClass({
 				<span>
 					<LabeledCheckbox
 							isSelected={_.includes(this.state.flavors, 'vanilla')}
-							Label='Vanilla'
 							name='interactive-checkboxes'
 							onSelect={this.handleSelectedVanilla}
 							style={style}
-					/>
+					>
+						<LabeledCheckbox.Label>Vanilla</LabeledCheckbox.Label>
+					</LabeledCheckbox>
 					<LabeledCheckbox
 							isSelected={_.includes(this.state.flavors, 'chocolate')}
-							Label='Chocolate'
 							name='interactive-checkboxes'
 							onSelect={this.handleSelectedChocolate}
 							style={style}
-					/>
+					>
+						<LabeledCheckbox.Label>Chocolate</LabeledCheckbox.Label>
+					</LabeledCheckbox>
 					<LabeledCheckbox
 							isSelected={_.includes(this.state.flavors, 'strawberry')}
-							Label='Strawberry'
 							name='interactive-checkboxes'
 							onSelect={this.handleSelectedStrawberry}
 							style={style}
-					/>
+					>
+						<LabeledCheckbox.Label>Strawberry</LabeledCheckbox.Label>
+					</LabeledCheckbox>
 				</span>
 			</section>
 		);

@@ -37,25 +37,28 @@ export default React.createClass({
 				<span>
 					<LabeledRadioButton
 							isSelected={this.state.flavor === 'vanilla'}
-							Label='Vanilla'
 							name='interactive-radio-buttons'
 							onSelect={this.handleSelectedVanilla}
 							style={style}
-					/>
+					>
+						<LabeledRadioButton.Label>Vanilla</LabeledRadioButton.Label>
+					</LabeledRadioButton>
 					<LabeledRadioButton
 							isSelected={this.state.flavor === 'chocolate'}
-							Label='Chocolate'
 							name='interactive-radio-buttons'
 							onSelect={this.handleSelectedChocolate}
 							style={style}
-					/>
+					>
+						<LabeledRadioButton.Label>Chocolate</LabeledRadioButton.Label>
+					</LabeledRadioButton>
 					<LabeledRadioButton
 							isSelected={this.state.flavor === 'strawberry'}
-							Label='Strawberry'
 							name='interactive-radio-buttons'
 							onSelect={this.handleSelectedStrawberry}
 							style={style}
-					/>
+					>
+						<LabeledRadioButton.Label>Strawberry</LabeledRadioButton.Label>
+					</LabeledRadioButton>
 				</span>
 			</section>
 		);
