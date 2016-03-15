@@ -4,7 +4,7 @@ import LabeledCheckbox from '../LabeledCheckbox';
 
 const style = {
 	marginBottom: '3px',
-	marginRight: '5px'
+	marginRight: '13px'
 };
 
 export default React.createClass({
