@@ -1,9 +1,9 @@
 import React from 'react';
 
-import LabeledRadioButton from '../LabeledRadioButton';
+import LabeledCheckbox from '../LabeledCheckbox';
 
 const style = {
-	marginBottom: '3px'
+	marginRight: '5px'
 };
 
 export default React.createClass({
@@ -11,14 +11,14 @@ export default React.createClass({
 		return (
 			<section>
 				<section>
-					<LabeledRadioButton Label='Just text' style={style} />
-					<LabeledRadioButton Label={<span>HTML element</span>} style={style} />
-					<LabeledRadioButton Label={[
+					<LabeledCheckbox Label='Just text' style={style} />
+					<LabeledCheckbox Label={<span>HTML element</span>} style={style} />
+					<LabeledCheckbox Label={[
 						'Text in an array',
 						'Only the first value in the array is used',
 						'The rest of these should be ignored'
 					]} style={style} />
-					<LabeledRadioButton Label={[
+					<LabeledCheckbox Label={[
 						<span>HTML element in an array</span>,
 						<span>Again only the first value in the array is used</span>,
 						<span>The rest should not be rendered</span>

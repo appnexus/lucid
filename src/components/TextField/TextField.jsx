@@ -132,7 +132,7 @@ const TextField = React.createClass(createLucidComponentDefinition({
 		} = this.props;
 
 		const finalProps = {
-			...passThroughs,
+			..._.omit(passThroughs, 'children'),
 			className: boundClassNames('&', {
 				'&-is-disabled': isDisabled,
 				'&-is-multi-line': isMultiLine,
