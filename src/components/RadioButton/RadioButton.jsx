@@ -95,7 +95,7 @@ const RadioButton = React.createClass({
 			>
 				<input
 						onChange={_.noop}
-						{...passThroughs}
+						{..._.omit(passThroughs, 'children')}
 						checked={isSelected}
 						className={boundClassNames('&-native')}
 						disabled={isDisabled}
@@ -115,6 +115,8 @@ const RadioButton = React.createClass({
 			isSelected,
 			onSelect,
 		} = this.props;
+
+		event.preventDefault();
 
 		if (!isDisabled && !isSelected) {
 			onSelect(true, { event, props: this.props });
