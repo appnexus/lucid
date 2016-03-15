@@ -3,7 +3,7 @@ import React from 'react';
 import LabeledRadioButton from '../LabeledRadioButton';
 
 const style = {
-	marginRight: '5px'
+	marginBottom: '3px'
 };
 
 export default React.createClass({

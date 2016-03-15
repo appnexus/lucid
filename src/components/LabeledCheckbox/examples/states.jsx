@@ -3,6 +3,7 @@ import React from 'react';
 import LabeledCheckbox from '../LabeledCheckbox';
 
 const style = {
+	marginBottom: '3px',
 	marginRight: '5px'
 };
 
