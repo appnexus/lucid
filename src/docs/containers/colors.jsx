@@ -8,7 +8,8 @@ const boundClassNames = lucidClassNames.bind('&-ColorPalette');
 
 const colorList = [
 	{
-		category: 'basic',
+		category: 'Basic',
+		description: 'Basic colors',
 		colors: [
 			{
 				varName: 'white',
@@ -18,10 +19,30 @@ const colorList = [
 				varName: 'black',
 				hex: '#000'
 			},
+		]
+	},
+	{
+		category: 'Primary',
+		description: 'Primary Colors come in three states primary, primaryMedium and primaryLight',
+		colors: [
 			{
 				varName: 'primary',
 				hex: '#2abbb0'
 			},
+			{
+				varName: 'primaryMedium',
+				hex: 'tint(@color-primary, 65%)'
+			},
+			{
+				varName: 'primaryLight',
+				hex: 'tint(@color-primary, 85%)'
+			},
+		]
+	},
+	{
+		category: 'Container Colors',
+		description: 'Colors used to define colors of containers within components.',
+		colors: [
 			{
 				varName: 'backgroundColor',
 				hex: '@color-lightGray'
@@ -33,7 +54,30 @@ const colorList = [
 		]
 	},
 	{
-		category: 'transparent gray',
+		category: 'Text Colors',
+		description: 'Used to define the color of text within a component.',
+		colors: [
+			{
+				varName: 'textColor',
+				hex: '@color-darkGray'
+			},
+			{
+				varName: 'disabledText',
+				hex: 'tint(@color-textColor, 50%)'
+			},
+			{
+				varName: 'linkColor',
+				hex: '@color-primary'
+			},
+			{
+				varName: 'linkColorHover',
+				hex: 'darken(@color-linkColor, 20%)'
+			},
+		]
+	},
+	{
+		category: 'Transparent Gray',
+		description: 'Gray with an opacity.',
 		colors: [
 			{
 				varName: 'gray-5',
@@ -54,7 +98,9 @@ const colorList = [
 		]
 	},
 	{
-		category: 'grays',
+		category: 'Grays',
+		description: 'Defined gray colors to be used with a component.  Do not use ' +
+		'if a variable has been created that is more descriptive.',
 		colors: [
 			{
 				varName: 'lightGray',
@@ -75,7 +121,11 @@ const colorList = [
 		]
 	},
 	{
-		category: 'featured colors',
+		category: 'Featured colors',
+		description: 'A featured color should only be used for a component that has ' +
+		'multible states like banners or buttons or button like components ' +
+		'(drop select).  Featured colors should not be consumed by most components ' +
+		'instead use the color variables defined above.',
 		colors: [
 			{
 				varName: 'default',
@@ -110,7 +160,7 @@ const colorList = [
 		]
 	},
 	{
-		category: 'featured default',
+		category: 'Featured default',
 		colors: [
 			{varName: 'default-borderColor', hex: '#c5c5c5', featured: 'featured-'},
 			{varName: 'default-backgroundColor', hex: '#ededed', featured: 'featured-'},
@@ -119,7 +169,7 @@ const colorList = [
 		]
 	},
 	{
-		category: 'featured primary',
+		category: 'Featured primary',
 		colors: [
 			{varName: 'primary-borderColor', hex: '@color-primary', featured: 'featured-'},
 			{varName: 'primary-backgroundColor', hex: 'tint(@color-primary, 70%)', featured: 'featured-'},
@@ -129,7 +179,7 @@ const colorList = [
 		]
 	},
 	{
-		category: 'featured success',
+		category: 'Featured success',
 		colors: [
 			{varName: 'success-borderColor', hex: '@color-success', featured: 'featured-'},
 			{varName: 'success-backgroundColor', hex: 'tint(@color-success, 70%)', featured: 'featured-'},
@@ -139,7 +189,7 @@ const colorList = [
 		]
 	},
 	{
-		category: 'featured info',
+		category: 'Featured info',
 		colors: [
 			{varName: 'info-borderColor', hex: '@color-info', featured: 'featured-'},
 			{varName: 'info-backgroundColor', hex: 'tint(@color-info, 70%)', featured: 'featured-'},
@@ -149,7 +199,7 @@ const colorList = [
 		]
 	},
 	{
-		category: 'featured warning',
+		category: 'Featured warning',
 		colors: [
 			{varName: 'warning-borderColor', hex: '@color-warning', featured: 'featured-'},
 			{varName: 'warning-backgroundColor', hex: 'tint(@color-warning, 70%)', featured: 'featured-'},
@@ -159,7 +209,7 @@ const colorList = [
 		]
 	},
 	{
-		category: 'featured danger',
+		category: 'Featured danger',
 		colors: [
 			{varName: 'danger-borderColor', hex: '@color-danger'},
 			{varName: 'danger-backgroundColor', hex: 'tint(@color-danger, 70%)', featured: 'featured-'},
@@ -176,9 +226,13 @@ const ColorPalette = React.createClass({
 			<div >
 				<h2>Color Palette</h2>
 				<p>A list of all colors used.  Colors are listed by group type.</p>
+				<p></p>
 				{_.map(colorList, (group, i) => (
 					<div key={i} style={{display: 'flex', flexWrap: 'wrap'}}>
 						<h3 style={{flex: '1 0 100%'}}>{group.category}</h3>
+						{group.description ?
+							<p style={{flex: '1 0 100%'}}>{group.description}</p>
+						: null}
 						{_.map(group.colors, (color, j) => (
 							<div key={j} className={classNames(boundClassNames('&'))}>
 								<div className={boundClassNames(`&-color-${color.varName}`)}></div>
