@@ -56,10 +56,14 @@
 	}
 }
 
-.make-is-disabled(@name, @start-color: transparent, @end-color: transparent, @gradient: @standardGradient) {
+// Creates a disabled element **uses `.gradient-reset()`**
+// * `@name` is passed in to help name space the styles.
+// * `@start-color` gradient start color if other than transparent.
+// * `@end-color` gradient end color if other than transparent.
+// * `@gradient` is the flow of the gradient.
+.make-is-disabled(@name, @start-color: @color-transparent, @end-color: @color-transparent, @gradient: @standardGradient) {
 	&.@{name}-is-disabled {
 		.gradient-reset(linear-gradient(@gradient, @start-color, @end-color));
-
 		&:hover {
 			text-decoration: none;
 		}
@@ -75,7 +79,8 @@
 	box-sizing: @box-sizing;
 }
 
-.opacity(@opacity: .35) {
+// Defines a standard 30% opacity
+.opacity(@opacity: .30) {
 	opacity: @opacity;
 }
 
@@ -91,10 +96,21 @@
 	-webkit-transform:translate3d(0,0,0);
 }
 
+// Creates a drop shadow using a background gradient.
+// * `@start` color at the top of the gradient
+// * `@stop` color at end and fills the rest of the container
+// * `@height` the height of the gradient
 .dropshadow-gradient(@start, @stop, @height) {
 	background-image: linear-gradient(@start 0, @stop @height);
 }
 
+// Create a border like line.  There are times that you may not want to set a
+// border that is thicker than 2px because the way that borders intersect.
+// This will use a background gradient to create a "border" within a container
+// * `@direction` *'to bottom'* defines the side the "border" is on
+// * `@line` *@color-primary* defines "border" color
+// * `@background` *@color-white* defines the remainder fill color-primary
+// * `@height` *3px* defines the thickness of the "border"
 .hardstop-gradient(@direction: 'to bottom', @line: @color-primary, @background: @color-white, @height: 3px) {
 	background-image: linear-gradient(@line 0, @line @height, @background @height);
 }

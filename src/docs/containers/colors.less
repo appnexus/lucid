@@ -1,12 +1,13 @@
 .lucid-ColorPalette {
 	border: 1px solid @color-borderColor;
+	background-color: @color-backgroundColor;
 	width: 200px;
 	padding: 10px;
 	margin-right: 10px;
 	margin-bottom: 10px;
-	border-radius: @borderRadius;
+	border-radius: @size-borderRadius;
 	&:hover {
-		background-color: orange;
+		background-color: @color-primary;
 	}
 	& > div {
 		height: 100px;
@@ -28,8 +29,32 @@
 		background-color: @color-black;
 	}
 
+	&-color-textColor {
+		background-color: @color-textColor;
+	}
+
+	&-color-disabledText {
+		background-color: @color-disabledText;
+	}
+
+	&-color-linkColor {
+		background-color: @color-linkColor;
+	}
+
+	&-color-linkColorHover {
+		background-color: @color-linkColorHover;
+	}
+
 	&-color-primary {
 		background-color: @color-primary;
+	}
+
+	&-color-primaryMedium {
+		background-color: @color-primaryMedium;
+	}
+
+	&-color-primaryLight {
+		background-color: @color-primaryLight;
 	}
 
 	&-color-gray-5 {
