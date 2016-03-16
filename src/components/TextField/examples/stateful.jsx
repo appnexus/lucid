@@ -15,15 +15,11 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<StatefulTextField value={this.state.value} />
+				<StatefulTextField value={this.state.value} style={{marginBottom: 5}} />
 
 				<Button onClick={() => { this.setState({ value: 'foo' }); }}>
 					Set TextField to "foo"
 				</Button>
-
-				<div>
-					this.state.value: {this.state.value}
-				</div>
 			</div>
 		);
 	}
