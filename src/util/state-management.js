@@ -57,11 +57,23 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 	};
 
 	return {
-		getPropReplaceReducers(props) {
-			return _.mergeWith({}, boundReducers, getState(), props, bindFunctionOverwritesCustomizer);
+		getPropReplaceReducers(props, stateBeatsProps=false) {
+			var args = [{}, boundReducers, getState(), props, bindFunctionOverwritesCustomizer];
+
+			if (stateBeatsProps) {
+				args = [{}, boundReducers, props, getState(), bindFunctionOverwritesCustomizer];
+			}
+
+			return _.mergeWith(...args);
 		},
-		getProps(props) {
-			return _.mergeWith({}, boundReducers, getState(), props, combineFunctionsCustomizer);
+		getProps(props, stateBeatsProps=false) {
+			var args = [{}, boundReducers, getState(), props, combineFunctionsCustomizer];
+
+			if (stateBeatsProps) {
+				args = [{}, boundReducers, props, getState(), combineFunctionsCustomizer];
+			}
+
+			return _.mergeWith(...args);
 		}
 	};
 };
@@ -69,7 +81,8 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 export function buildStatefulComponent(baseComponent, opts) {
 	opts = _.merge({
 		setStateWithNewProps: true, // if true, new props will update state, else prop has priority over existing state
-		replaceEvents: false // if true, function props replace the existing reducers, else they are invoked *after* state reducer returns
+		replaceEvents: false, // if true, function props replace the existing reducers, else they are invoked *after* state reducer returns
+		stateBeatsProps: false, // if true, when the component re-renders, state will take precedence over props, but on componentwillreceiveprops it will still favor props, there is a very limited case where this useful, mostly with text inputs to keep the user input until new props come in
 	}, opts);
 
 	const { reducers } = baseComponent;
@@ -99,9 +112,9 @@ export function buildStatefulComponent(baseComponent, opts) {
 		},
 		render() {
 			if (opts.replaceEvents) {
-				return React.createElement(baseComponent, this.boundContext.getPropReplaceReducers(this.props), this.props.children);
+				return React.createElement(baseComponent, this.boundContext.getPropReplaceReducers(this.props, opts.stateBeatsProps), this.props.children);
 			}
-			return React.createElement(baseComponent, this.boundContext.getProps(this.props), this.props.children);
+			return React.createElement(baseComponent, this.boundContext.getProps(this.props, opts.stateBeatsProps), this.props.children);
 		}
 	});
 }

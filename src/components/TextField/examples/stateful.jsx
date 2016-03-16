@@ -3,7 +3,7 @@ import TextField from '../TextField';
 import Button from '../../Button/Button';
 import { buildStatefulComponent } from '../../../util/state-management';
 
-const StatefulTextField = buildStatefulComponent(TextField);
+const StatefulTextField = buildStatefulComponent(TextField, { stateBeatsProps: true });
 
 export default React.createClass({
 	getInitialState() {
@@ -15,17 +15,15 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<StatefulTextField value={this.state.value} onChange={(value) => {
-					this.setState({ value })
-				}} />
+				<StatefulTextField value={this.state.value} />
 
-					<Button onClick={() => { this.setState({ value: 'foo' }); }}>
-						Set TextField to "foo"
-					</Button>
+				<Button onClick={() => { this.setState({ value: 'foo' }); }}>
+					Set TextField to "foo"
+				</Button>
 
-					<div>
-						this.state.value: {this.state.value}
-					</div>
+				<div>
+					this.state.value: {this.state.value}
+				</div>
 			</div>
 		);
 	}
