@@ -9,6 +9,7 @@ import reducers from './RadioGroup.reducers';
 
 const boundClassNames = lucidClassNames.bind('&-RadioGroup');
 
+
 const {
 	func,
 	node,
