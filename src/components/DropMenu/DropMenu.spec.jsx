@@ -258,7 +258,7 @@ describe('DropMenu', () => {
 			});
 
 			describe('keyboard', () => {
-				it('should be called when DropMenu [not expanded,has focus,space key pressed]', () => {
+				it('should be called when DropMenu [not expanded, has focus, Space key pressed]', () => {
 					const onExpand = sinon.spy();
 					const wrapper = shallow(
 						<DropMenu isExpanded={false} onExpand={onExpand}>
@@ -277,7 +277,7 @@ describe('DropMenu', () => {
 					assert(onExpand.called);
 				});
 
-				it('should be called when DropMenu [not expanded,has focus,down arrow pressed]', () => {
+				it('should be called when DropMenu [not expanded, has focus, Down Arrow key pressed]', () => {
 					const onExpand = sinon.spy();
 					const wrapper = shallow(
 						<DropMenu isExpanded={false} onExpand={onExpand}>
@@ -350,7 +350,7 @@ describe('DropMenu', () => {
 			});
 
 			describe('keyboard', () => {
-				it('should be called when DropMenu [expanded, esc key pressed]', () => {
+				it('should be called when DropMenu [expanded, Escape key pressed]', () => {
 					const onCollapse = sinon.spy();
 					const wrapper = shallow(
 						<DropMenu isExpanded={true} onCollapse={onCollapse}>
@@ -405,7 +405,7 @@ describe('DropMenu', () => {
 			});
 
 			describe('keyboard', () => {
-				it('should be called when DropMenu [expanded, option focused, space pressed]', () => {
+				it('should be called when DropMenu [expanded, option focused, Space key  pressed]', () => {
 					const onSelect = sinon.spy();
 					const wrapper = shallow(
 						<DropMenu isExpanded={true} focusedIndex={2} onSelect={onSelect}>
@@ -429,7 +429,7 @@ describe('DropMenu', () => {
 
 		describe('onFocusNext', () => {
 			describe('keyboard', () => {
-				it('should be called when DropMenu [expanded, focusedIndex=null, down array pressed]', () => {
+				it('should be called when DropMenu [expanded, focusedIndex=null, Down Arrow key pressed]', () => {
 					const onFocusNext = sinon.spy();
 					const wrapper = shallow(
 						<DropMenu isExpanded={true} focusedIndex={null} onFocusNext={onFocusNext}>
@@ -448,7 +448,7 @@ describe('DropMenu', () => {
 					assert(onFocusNext.called);
 				});
 
-				it('should be called when DropMenu [expanded, focusedIndex={not last option}, down array pressed]', () => {
+				it('should be called when DropMenu [expanded, focusedIndex={not last option}, Down Arrow key pressed]', () => {
 					const onFocusNext = sinon.spy();
 					const wrapper = shallow(
 						<DropMenu isExpanded={true} focusedIndex={1} onFocusNext={onFocusNext}>
@@ -467,7 +467,7 @@ describe('DropMenu', () => {
 					assert(onFocusNext.called);
 				});
 
-				it('should not be called when DropMenu [expanded, focusedIndex={last option}, down array pressed]', () => {
+				it('should not be called when DropMenu [expanded, focusedIndex={last option}, Down Arrow key pressed]', () => {
 					const onFocusNext = sinon.spy();
 					const wrapper = shallow(
 						<DropMenu isExpanded={true} focusedIndex={2} onFocusNext={onFocusNext}>
@@ -490,7 +490,7 @@ describe('DropMenu', () => {
 
 		describe('onFocusPrev', () => {
 			describe('keyboard', () => {
-				it('should be called when DropMenu [expanded, focusedIndex={not first option}, down array pressed]', () => {
+				it('should be called when DropMenu [expanded, focusedIndex={not first option}, Down Arrow key pressed]', () => {
 					const onFocusPrev = sinon.spy();
 					const wrapper = shallow(
 						<DropMenu isExpanded={true} focusedIndex={2} onFocusPrev={onFocusPrev}>
@@ -509,7 +509,7 @@ describe('DropMenu', () => {
 					assert(onFocusPrev.called);
 				});
 
-				it('should not be called when DropMenu [expanded, focusedIndex={first option}, down array pressed]', () => {
+				it('should not be called when DropMenu [expanded, focusedIndex={first option}, Down Arrow key pressed]', () => {
 					const onFocusPrev = sinon.spy();
 					const wrapper = shallow(
 						<DropMenu isExpanded={true} focusedIndex={0} onFocusPrev={onFocusPrev}>
@@ -528,7 +528,7 @@ describe('DropMenu', () => {
 					assert(onFocusPrev.notCalled);
 				});
 
-				it('should not be called when DropMenu [expanded, focusedIndex={null}, down array pressed]', () => {
+				it('should not be called when DropMenu [expanded, focusedIndex={null}, Down Arrow key pressed]', () => {
 					const onFocusPrev = sinon.spy();
 					const wrapper = shallow(
 						<DropMenu isExpanded={true} focusedIndex={null} onFocusPrev={onFocusPrev}>

@@ -38,14 +38,12 @@
 	}
 
 	&.lucid-ContextMenu-FlyOut {
+		#normalize > .fix-chrome-scrollbar-zindex();
 		.box-sizing();
-		.no-safari-flicker(); // fixes hidden scrollbar for 100+ z-index
 		background-color: @color-white;
 		border: solid 1px @featured-color-default-borderColor;
-
-		// are these something we want to keep?
-		max-height: 20em;
-		overflow-y: scroll;
+		overflow-y: auto;
+		max-height: 420px; // arbitrary
 
 		&.lucid-ContextMenu-FlyOut-Up {
 			border-width: 1px 1px 0 1px;
