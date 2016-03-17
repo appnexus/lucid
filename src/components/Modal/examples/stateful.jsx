@@ -9,7 +9,7 @@ const StatefulModal = buildStatefulComponent(Modal);
 export default React.createClass({
 	getInitialState() {
 		return {
-			isClosed: true
+			isClosed: false
 		};
 	},
 
@@ -34,9 +34,14 @@ export default React.createClass({
 					isClosed={this.state.isClosed}
 					onClose={_.partial(this.handleOpenClose, true)}
 					Header='Header'
-					Footer='Footer'
 				>
-					Body content
+					{_.times(50).map(() => {
+						return <div>Body</div>
+					})}
+					<StatefulModal.Footer>
+						<Button kind='link'>Cancel</Button>
+						<Button kind='primary'>Save</Button>
+					</StatefulModal.Footer>
 				</StatefulModal>
 			</div>
 		)

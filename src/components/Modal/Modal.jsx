@@ -164,7 +164,7 @@ const Modal = React.createClass(createLucidComponentDefinition({
 		const finalHeight = resizeHeight ? `${resizeHeight}px` : height;
 
 		return (
-			<Portal portalId='asdfasdf'>
+			<Portal portalId={'Modal-Portal-' + Math.random().toString(16).substr(2)}>
 				<ReactCSSTransitionGroup
 					transitionName={boundClassNames('&', className)}
 					transitionEnterTimeout={300}
@@ -187,17 +187,19 @@ const Modal = React.createClass(createLucidComponentDefinition({
 									minHeight: minHeight,
 								}}
 							>
-								<header
-									className={boundClassNames('&-header')}
-									{...headerChildProp}
-								/>
-								<section className={boundClassNames('&-content')}>
-									{this.props.children}
-								</section>
-								<footer
-									className={boundClassNames('&-footer')}
-									{...footerChildProp}
-								/>
+								<div className={boundClassNames('&-content')}>
+									<header
+										className={boundClassNames('&-header')}
+										{...headerChildProp}
+									/>
+										<section className={boundClassNames('&-body')}>
+											{this.props.children}
+										</section>
+									<footer
+										className={boundClassNames('&-footer')}
+										{...footerChildProp}
+									/>
+								</div>
 							</div>
 						</div>
 					: null}

@@ -1,5 +1,6 @@
 @Modal-zIndex: 4000;
-@Modal-size-border: 5px;
+@Modal-size-spacing: 12px;
+@Modal-size-borderRadius: @size-borderRadius + 2;
 
 .lucid-Modal {
 	position: fixed;
@@ -7,7 +8,7 @@
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background-color: @color-gray-40;
+	background-color: @color-gray-30;
 	display: block;
 	overflow: hidden;
 	z-index: @Modal-zIndex; // TODO: use variable
@@ -18,18 +19,39 @@
 		z-index: @Modal-zIndex + 1;
 		max-width: 90%;
 		max-height: 90%;
-		border: @Modal-size-border solid @color-gray-50;
-		border-radius: @Modal-size-border;
+		border-radius: @Modal-size-borderRadius;
+		box-shadow: 0 0 4px 0 @color-gray-50;
+		overflow: hidden;
 	}
 
 	&-header {
-		display: flex;
-		align-items: baseline;
-		justify-content: space-between;
-		background-color: @color-gray;
-		background: linear-gradient(@color-lightGray, @color-gray);
-		border-bottom: @color-borderColor;
-		box-shadow: 0px -1px 0px white inset;
+		// display: flex;
+		// align-items: baseline;
+		// justify-content: space-between;
+		display: relative;
+		flex: 1 0 auto;
+		font-family: @fontFamily;
+		font-size: @size-font-large;
+		color: @color-darkGray;
+		font-weight: bold;
+		background-color: @color-lightGray;
+		border-bottom: 1px solid @color-gray;
+		padding: @Modal-size-spacing;
+		padding-bottom: @Modal-size-spacing - 2;
+	}
+
+	&-body {
+		flex: 1 1 auto;
+		overflow: auto;
+		padding: @Modal-size-spacing;
+	}
+
+	&-footer {
+		flex: 1 0 auto;
+		text-align: right;
+		background-color: @color-white;
+		padding: @Modal-size-spacing;
+		border-top: 1px solid @color-gray;
 	}
 
 	&-content {
