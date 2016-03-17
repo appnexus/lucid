@@ -1,0 +1,459 @@
+import React from 'react';
+import _ from 'lodash';
+import { lucidClassNames } from '../../util/style-helpers';
+import { createLucidComponentDefinition } from '../../util/component-definition';
+import { scrollParentTo } from '../../util/dom-helpers';
+import { rejectNullElements } from '../../util/child-component';
+import * as KEYCODE from '../../constants/key-code';
+import * as reducers from './DropMenu.reducers';
+import ContextMenu from '../ContextMenu/ContextMenu';
+
+function joinArray(array, getSeparator) {
+	return _.reduce(array, (newArray, element, index) => {
+		newArray.push(element);
+		if (index < _.size(array) - 1) {
+			newArray.push(getSeparator(element, index, array));
+		}
+		return newArray;
+	}, []);
+}
+
+const boundClassNames = lucidClassNames.bind('&-DropMenu');
+
+const {
+	any,
+	arrayOf,
+	bool,
+	func,
+	node,
+	number,
+	object,
+	oneOf,
+	string
+} = React.PropTypes;
+
+/**
+ *
+ * {"categories": ["helpers"]}
+ *
+ * This is a helper component used to render a menu of options attached to any control. Supports option groups with and without labels as well as special options with a `null` index for unselect.
+ */
+const DropMenu = React.createClass(createLucidComponentDefinition({
+	displayName: 'DropMenu',
+
+	reducers,
+
+	childProps: {
+		Control: {},
+		OptionGroup: {},
+		Option: {
+			isDisabled: bool
+		},
+		NullOption: {}
+	},
+
+	propTypes: {
+		/**
+		 * Should be instances of {`DropMenu.Control`, `DropMenu.Option`, `DropMenu.OptionGroup`, `DropMenu.Nulloption`}. Other direct child elements will not render.
+		 */
+		children: node,
+		/**
+		 * Appended to the component-specific class names set on the root elements. Applies to *both* the control and the flyout menu.
+		 */
+		className: string,
+		/**
+		 * Styles that are passed through to root element.
+		 */
+		style: object,
+		/**
+		 * Renders the flyout menu adjacent to the control.
+		 */
+		isExpanded: bool,
+		/**
+		 * Sets the direction the flyout menu will render relative to the control.
+		 */
+		direction: oneOf(['down', 'up']),
+		/**
+		 * An array of currently selected `DropMenu.Option` indices.
+		 */
+		selectedIndices: arrayOf(number),
+		/**
+		 * The currently focused index of `DropMenu.Option`. Can also be `null`.
+		 */
+		focusedIndex: number,
+		/**
+		 * The `id` of the flyout menu portal element that is appended to `document.body`. Defaults to a generated id.
+		 */
+		portalId: string,
+		/**
+		 * Called when collapsed and the control is clicked, or when the control has focus and the Down Arrow or Space key is pressed.
+		 */
+		onExpand: func,
+		/**
+		 * Called when expanded and the user clicks the control or outside of the menu, or when the control has focus and the Escape key is pressed.
+		 */
+		onCollapse: func,
+		/**
+		 * Called when an option is clicked, or when an option has focus and the Space or Enter key is pressed.
+		 * Has the signature `(optionIndex) => {}` where optionIndex can be a number or `null`.
+		 */
+		onSelect: func,
+		/**
+		 * Called when expanded and the the Down Arrow key is pressed. Not called when focus is on the last option.
+		 */
+		onFocusNext: func,
+		/**
+		 * Called when expanded and the the Up Arrow key is pressed. Not called when focus is on the first option.
+		 */
+		onFocusPrev: func,
+		/**
+		 * Called when `direction` is `down` and the bottom of the flyout menu is clipping the screen boundary.
+		 */
+		onBelowFold: func,
+		/**
+		 * Called when `direction` is `up` and there is enough space below the control to render the flyout menu without clipping the screen boundary.
+		 */
+		onAboveFold: func,
+		/**
+		 * Called when the mouse moves over an option.
+		 * Has the signature `(optionIndex) => {}` where optionIndex can be a number or `null`.
+		 */
+		onFocusOption: func,
+		/**
+		 * *Child Element* - The control target which the flyout menu is anchored to. Only one `Control` is used.
+		 */
+		Control: any,
+		/**
+		 * *Child Element* - These are menu options. The `optionIndex` is in-order of rendering regardless of group nesting, starting with index `0`.
+		 * Each `Option` may be passed a prop called `isDisabled` to disable selection of that `Option`.
+		 */
+		Option: any,
+		/**
+		 * *Child Element* - Used to group `Option`s within the menu. Any non-`Option`s passed in will be rendered as a label for the group.
+		 */
+		OptionGroup: any,
+		/**
+		 * *Child Element* - A special kind of `Option` that is always rendered at the top of the menu and has an `optionIndex` of `null`. Useful for unselect.
+		 */
+		NullOption: any
+	},
+
+	getDefaultProps() {
+		return {
+			isExpanded: false,
+			direction: 'down',
+			selectedIndices: [],
+			focusedIndex: null,
+			portalId: 'DropMenu-Portal-' + Math.random().toString(16).substr(2),
+			onExpand: _.noop,
+			onCollapse: _.noop,
+			onSelect: _.noop,
+			onFocusNext: _.noop,
+			onFocusPrev: _.noop,
+			onBelowFold: _.noop,
+			onAboveFold: _.noop,
+			onFocusOption: _.noop
+		};
+	},
+
+	getInitialState() {
+		return {
+			isMouseTriggered: false,
+			optionGroups: [],
+			flattenedOptionsData: [],
+			ungroupedOptionData: [],
+			optionGroupDataLookup: {}
+		}
+	},
+
+	statics: {
+		preprocessOptionData(props, ParentType=DropMenu) {
+			const {
+				OptionGroup,
+				Option,
+				NullOption
+			} = ParentType;
+			const optionGroups = OptionGroup.findInAllAsProps(props); // find all OptionGroup props
+			const ungroupedOptions = Option.findInAllAsProps(props); // find all ungrouped Option props
+			const nullOptions = NullOption ? NullOption.findInAllAsProps(props) : []; // find all NullOption props
+
+			// flatten grouped options into array of objects to associate { index, group index, and props } for each option
+			const groupedOptionData = _.reduce(optionGroups, (memo, optionGroupProps, optionGroupIndex) => {
+				const groupedOptions = Option.findInAllAsProps(optionGroupProps); // find all Option props for current group
+				return memo.concat(_.map(groupedOptions, (optionProps, localOptionIndex) => {
+					return {
+						localOptionIndex,
+						optionIndex: _.size(memo) + localOptionIndex, // add current index to current array length to get final option index
+						optionGroupIndex, // store option group index to associate option back to group
+						optionProps
+					};
+				}));
+			}, []);
+
+			// create lookup object for options by their group index
+			const optionGroupDataLookup = _.groupBy(groupedOptionData, 'optionGroupIndex');
+
+			// store ungrouped options into array of objects to associate { index, and props } for each option
+			const ungroupedOptionData = _.map(ungroupedOptions, (optionProps, localOptionIndex) => {
+				return {
+						localOptionIndex,
+						optionIndex: _.size(groupedOptionData) + localOptionIndex, // add current index to grouped options array length to get final option index (grouped options rendered first)
+						optionGroupIndex: null, // ungrouped options have no `optionGroupIndex`
+						optionProps
+				};
+			});
+
+			// concatenate grouped options array with ungrouped options array to get flat list of all options
+			const flattenedOptionsData = groupedOptionData.concat(ungroupedOptionData);
+
+			return {
+				optionGroups,
+				optionGroupDataLookup,
+				ungroupedOptionData,
+				flattenedOptionsData,
+				nullOptions
+			};
+		}
+	},
+
+	getPreprocessedOptionData(props) {
+		return DropMenu.preprocessOptionData(props, DropMenu);
+	},
+
+	handleKeydown(e) {
+		const {
+			isExpanded,
+			focusedIndex,
+			onExpand,
+			onCollapse,
+			onSelect,
+			onFocusPrev,
+			onFocusNext
+		} = this.props;
+
+		const {
+			flattenedOptionsData,
+			nullOptions
+		} = this.state;
+
+		this.setState({
+			isMouseTriggered: false
+		});
+
+		if (isExpanded) {
+			if (_.includes([KEYCODE.Enter, KEYCODE.Space], e.keyCode)) {
+				e.preventDefault();
+				if (_.isNumber(focusedIndex)
+						&& _.get(flattenedOptionsData, focusedIndex)
+						&& !_.get(flattenedOptionsData, `[${focusedIndex}]optionProps.isDisabled`, false)) {
+					onSelect(focusedIndex);
+				} else if (_.isNull(focusedIndex)) {
+					onSelect(null);
+				}
+			}
+			if (e.keyCode === KEYCODE.Escape) {
+				e.preventDefault();
+				onCollapse(e);
+			}
+			if (e.keyCode === KEYCODE.ArrowUp) {
+				if (_.isNumber(focusedIndex) || _.isNull(focusedIndex)) {
+					if (focusedIndex === 0) {
+						if (!_.isEmpty(nullOptions)) {
+							e.preventDefault();
+							onFocusPrev(e);
+						}
+					}
+					if (focusedIndex > 0) {
+						e.preventDefault();
+						onFocusPrev(e);
+					}
+				} else {
+					e.preventDefault();
+					onFocusPrev(e);
+				}
+			}
+			if (e.keyCode === KEYCODE.ArrowDown) {
+				if (_.isNumber(focusedIndex)) {
+					if (focusedIndex < _.size(flattenedOptionsData) - 1) {
+						e.preventDefault();
+						onFocusNext(e);
+					}
+				} else {
+					e.preventDefault();
+					onFocusNext(e);
+				}
+			}
+		} else {
+			if (_.includes([KEYCODE.Space, KEYCODE.ArrowDown], e.keyCode)) {
+				e.preventDefault();
+				onExpand(e);
+			}
+		}
+	},
+
+	handleClick(e) {
+		const {
+			isExpanded,
+			onExpand,
+			onCollapse
+		} = this.props;
+
+		if (isExpanded) {
+			onCollapse(e);
+		} else {
+			onExpand(e);
+		}
+	},
+
+	handleChangeBounds(type) {
+		const {
+			onBelowFold,
+			onAboveFold
+		} = this.props;
+		if (type === ContextMenu.BELOW_FOLD) {
+			onBelowFold();
+		} else if (type === ContextMenu.ABOVE_FOLD) {
+			onAboveFold();
+		}
+	},
+
+	handleMouseFocusOption(optionIndex, optionProps) {
+		const {
+			focusedIndex,
+			onFocusOption
+		} = this.props;
+
+		this.setState({
+			isMouseTriggered: true
+		});
+
+		if (!optionProps.isDisabled && focusedIndex !== optionIndex) {
+			onFocusOption(optionIndex);
+		}
+	},
+
+	handleSelectOption(optionIndex, optionProps) {
+		const {
+			onSelect
+		} = this.props;
+
+		if (!optionProps.isDisabled) {
+			onSelect(optionIndex);
+		}
+	},
+
+	renderOption(optionProps, optionIndex, isGrouped) {
+		const {
+			selectedIndices,
+			focusedIndex,
+		} = this.props;
+
+		const {
+			isMouseTriggered
+		} = this.state;
+
+		const {
+			isDisabled
+		} = optionProps;
+
+		const isFocused = optionIndex === focusedIndex;
+		const isSelected = _.includes(selectedIndices, optionIndex);
+
+		return (
+			<div
+				className={boundClassNames(
+					'&-Option', {
+					'&-Option-is-grouped': isGrouped,
+					'&-Option-is-focused': isFocused,
+					'&-Option-is-selected': isSelected,
+					'&-Option-is-disabled': isDisabled,
+					'&-Option-is-null': _.isNull(optionIndex)
+				})}
+				onMouseMove={() => this.handleMouseFocusOption(optionIndex, optionProps)}
+				onClick={() => this.handleSelectOption(optionIndex, optionProps)}
+				ref={(optionDOMNode)=> {
+					if (isFocused && !isMouseTriggered) {
+						scrollParentTo(optionDOMNode);
+					}
+				}}
+				key={'DropMenuOption' + optionIndex}
+			>
+				{optionProps.children}
+			</div>
+		);
+	},
+
+	componentWillMount() {
+		// preprocess the options data before rendering
+		this.setState(this.getPreprocessedOptionData(this.props));
+	},
+
+	componentWillReceiveProps(nextProps) {
+		// only preprocess options data when it changes (via new props) - better performance than doing this each render
+		this.setState(this.getPreprocessedOptionData(nextProps));
+	},
+
+	render() {
+		const {
+			className,
+			style,
+			isExpanded,
+			direction,
+			portalId,
+			onCollapse
+		} = this.props;
+
+		const {
+			optionGroups,
+			ungroupedOptionData,
+			optionGroupDataLookup,
+			nullOptions
+		} = this.state;
+
+		const controlProps = _.first(DropMenu.Control.findInAllAsProps(this.props));
+
+		return (
+			<div className={boundClassNames('&', '&-base', {
+				'&-is-expanded': isExpanded,
+				'&-direction-down': isExpanded && direction === 'down',
+				'&-direction-up': isExpanded && direction === 'up'
+			}, className)} style={style}>
+				<ContextMenu portalId={portalId} isExpanded={isExpanded} direction={direction} onChangeBounds={this.handleChangeBounds} onClickOut={onCollapse}>
+					<ContextMenu.Target>
+						<div
+							className={boundClassNames('&-Control')}
+							tabIndex={0}
+							onClick={this.handleClick}
+							onKeyDown={this.handleKeydown}
+						>{_.get(controlProps, 'children', null)}</div>
+					</ContextMenu.Target>
+					<ContextMenu.FlyOut className={boundClassNames('&', className)}>
+						{
+							_.map(nullOptions, (optionProps) => this.renderOption(optionProps, null))
+							.concat(_.isEmpty(nullOptions) ? [] : [(<div key={'OptionGroup-divider-NullOption'} className={boundClassNames('&-OptionGroup-divider')} />)])
+						}
+						{
+							joinArray(
+								// for each option group,
+								_.map(optionGroups, (optionGroupProps, optionGroupIndex) => {
+									const labelElements = rejectNullElements(optionGroupProps.children);
+									// render label if there is one
+									return (_.isEmpty(labelElements) ? [] : [
+										<div className={boundClassNames('&-label')}>
+											{labelElements}
+										</div>
+									// render the options in the group
+									]).concat(_.map(_.get(optionGroupDataLookup, optionGroupIndex), ({ optionProps, optionIndex }) => this.renderOption(optionProps, optionIndex, true)));
+								// append all ungrouped options as another unlabeled group
+								}).concat(_.isEmpty(ungroupedOptionData) ? [] : [_.map(ungroupedOptionData, ({ optionProps, optionIndex }) => this.renderOption(optionProps, optionIndex))]),
+								(element, index) => (<div key={`OptionGroup-divider-${index}`} className={boundClassNames('&-OptionGroup-divider')} />) // separate each group with divider
+							)
+						}
+					</ContextMenu.FlyOut>
+				</ContextMenu>
+			</div>
+		);
+	}
+}));
+
+export default DropMenu;
