@@ -2,10 +2,10 @@ export function getAbsoluteBoundingClientRect(domNode) {
 	let elementRect = domNode.getBoundingClientRect();
 
 	return {
-		bottom: elementRect.bottom + window.scrollY,
-		top: elementRect.top + window.scrollY,
-		left: elementRect.left + window.scrollX,
-		right: elementRect.right + window.scrollX,
+		bottom: elementRect.bottom + window.pageYOffset,
+		top: elementRect.top + window.pageYOffset,
+		left: elementRect.left + window.pageXOffset,
+		right: elementRect.right + window.pageXOffset,
 		height: elementRect.height,
 		width: elementRect.width
 	};
