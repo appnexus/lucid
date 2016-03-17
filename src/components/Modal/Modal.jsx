@@ -3,18 +3,16 @@ import React from 'react';
 import Portal from '../Portal/Portal';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
-import * as reducers from './Modal.reducers';
+import { createLucidComponentDefinition }  from '../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-Modal');
 
 const {
-	number,
 	string,
-	object,
 	bool,
 	func,
 	node,
+	oneOf,
 } = React.PropTypes;
 
 /**
@@ -31,8 +29,6 @@ const Modal = React.createClass(createLucidComponentDefinition({
 		Footer: null,
 	},
 
-	reducers,
-
 	propTypes: {
 		/**
 		 * Appended to the component-specific class names set on the root
@@ -46,64 +42,47 @@ const Modal = React.createClass(createLucidComponentDefinition({
 		children: node,
 
 		/**
-		 * TODO
-		 */
-		isCloseable: bool,
-
-		/**
-		 * TODO
+		 * Controls visibility
 		 */
 		isClosed: bool,
 
 		/**
-		 * TODO
+		 * Size variations
 		 */
-		width: string,
-
-		/**
-		 * TODO
-		 */
-		height: string,
-
-		/**
-		 * TODO
-		 */
-		minWidth: string,
-
-		/**
-		 * TODO
-		 */
-		minHeight: string,
+		size: oneOf(['small', 'medium', 'large']),
 
 		/**
 		 * TODO
 		 *
-		 * Signature: ({ height, width, minHeight, minWidth } => {})
-		 */
-		onResize: func,
-
-		/**
-		 * TODO
+		 * Fired when the user hit's escape.
 		 *
 		 * Signature: `() => {}`
 		 */
-		onClose: func,
+		onEscape: func,
+
+		/**
+		 * TODO
+		 *
+		 */
+		Header: node,
+
+		/**
+		 * TODO
+		 *
+		 */
+		Footer: node
 	},
 
 	getDefaultProps() {
 		return {
-			width: 'auto',
-			height: 'auto',
-			isCloseable: true,
 			isClosed: true,
-			onClose: _.noop,
+			onEscape: _.noop,
+			size: 'medium',
 		};
 	},
 
 	componentDidMount() {
 		window.document.addEventListener('keyup', this.handleDocumentKeyUp);
-
-		this.centerDialog();
 	},
 
 	componentWillUnmount() {
@@ -111,90 +90,49 @@ const Modal = React.createClass(createLucidComponentDefinition({
 	},
 
 	handleDocumentKeyUp(event) {
-		// If the user hits the "escape" key, then close the modal
+		// If the user hits the "escape" key, then fire an `onEscape`
 		// TODO: use key helpers
 		if (event.keyCode === 27) {
-			this.props.onClose();
+			this.props.onEscape();
 		}
-	},
-
-	getWindowBounds() {
-		return this.refs.window.getBoundingClientRect();
-	},
-
-	// Position the dialog in the center of the screen when first rendered
-	centerDialog() {
-		const { width, height } = this.props;
-		const { minWidth, minHeight } = this.props;
-
-		const left = (window.innerWidth - _.parseInt(width)) / 2;
-		const top = (window.innerHeight - _.parseInt(height)) / 2;
-
-		this.props.onResize({
-			left,
-			top,
-			minWidth: minWidth || width,
-			minHeight: minHeight || height,
-		});
 	},
 
 	render() {
 		const {
 			className,
-			isCloseable,
 			isClosed,
-			width,
-			height,
-			top,
-			left,
-			minWidth,
-			minHeight,
-			resizeWidth,
-			resizeHeight,
+			size,
 			...passThroughs
 		} = this.props;
-
-		console.log({width, height, top, left, minWidth, minHeight});
 
 		const headerChildProp = _.first(Modal.Header.findInAllAsProps(this.props));
 		const footerChildProp = _.first(Modal.Footer.findInAllAsProps(this.props));
 
-		// If resizing always set the size in pixels
-		const finalWidth = resizeWidth ? `${resizeWidth}px` : width;
-		const finalHeight = resizeHeight ? `${resizeHeight}px` : height;
-
 		return (
 			<Portal portalId={'Modal-Portal-' + Math.random().toString(16).substr(2)}>
 				<ReactCSSTransitionGroup
-					transitionName={boundClassNames('&', className)}
+					transitionName={boundClassNames('&')}
 					transitionEnterTimeout={300}
 					transitionLeaveTimeout={300}
-				>
+					>
 					{!isClosed ?
 						<div
 							{...passThroughs}
-							className={boundClassNames('&', className)}
-						>
-							<div
-								className={boundClassNames('&-window')}
-								ref='window'
-								style={{
-									width: finalWidth,
-									height: finalHeight,
-									top: top,
-									left: left,
-									minWidth: minWidth,
-									minHeight: minHeight,
-								}}
+							className={boundClassNames(className, '&', )}
 							>
+							<div className={boundClassNames('&-window', {
+								'&-window-is-small': size === 'small',
+								'&-window-is-medium': size === 'medium',
+								'&-window-is-large': size === 'large',
+							})} >
 								<div className={boundClassNames('&-content')}>
 									<header
 										className={boundClassNames('&-header')}
 										{...headerChildProp}
 									/>
-										<section className={boundClassNames('&-body')}>
-											{this.props.children}
-										</section>
+									<section className={boundClassNames('&-body')}>
+										{this.props.children}
+									</section>
 									<footer
 										className={boundClassNames('&-footer')}
 										{...footerChildProp}
@@ -202,9 +140,9 @@ const Modal = React.createClass(createLucidComponentDefinition({
 								</div>
 							</div>
 						</div>
-					: null}
-				</ReactCSSTransitionGroup>
-			</Portal>
+						: null}
+					</ReactCSSTransitionGroup>
+				</Portal>
 		);
 	},
 }));

@@ -12,16 +12,24 @@
 	display: block;
 	overflow: hidden;
 	z-index: @Modal-zIndex; // TODO: use variable
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	&-window {
-		position: fixed;
-		display: block;
 		z-index: @Modal-zIndex + 1;
-		max-width: 90%;
-		max-height: 90%;
 		border-radius: @Modal-size-borderRadius;
 		box-shadow: 0 0 4px 0 @color-gray-50;
 		overflow: hidden;
+	}
+	&-window-is-small {
+		width: 30%;
+	}
+	&-window-is-medium {
+		width: 60%;
+	}
+	&-window-is-large {
+		width: 90%;
 	}
 
 	&-header {
@@ -44,6 +52,7 @@
 		flex: 1 1 auto;
 		overflow: auto;
 		padding: @Modal-size-spacing;
+		max-height: 80vh;
 	}
 
 	&-footer {

@@ -4,12 +4,10 @@ import Modal from '../Modal';
 import Button from '../../Button/Button';
 import { buildStatefulComponent } from '../../../util/state-management';
 
-const StatefulModal = buildStatefulComponent(Modal);
-
 export default React.createClass({
 	getInitialState() {
 		return {
-			isClosed: false
+			isClosed: true
 		};
 	},
 
@@ -28,21 +26,25 @@ export default React.createClass({
 					Toggle
 				</Button>
 
-				<StatefulModal
-					width='300px'
-					height='500px'
+				<Modal
 					isClosed={this.state.isClosed}
-					onClose={_.partial(this.handleOpenClose, true)}
+					onEscape={_.partial(this.handleOpenClose, true)}
 					Header='Header'
+					size='small'
 				>
-					{_.times(50).map(() => {
-						return <div>Body</div>
+					{_.times(50).map((i) => {
+						return <div key={i}>Body</div>
 					})}
-					<StatefulModal.Footer>
-						<Button kind='link'>Cancel</Button>
+					<Modal.Footer>
+						<Button
+							kind='link'
+							onClick={_.partial(this.handleOpenClose, true)}
+						>
+							Cancel
+						</Button>
 						<Button kind='primary'>Save</Button>
-					</StatefulModal.Footer>
-				</StatefulModal>
+					</Modal.Footer>
+				</Modal>
 			</div>
 		)
 	}
