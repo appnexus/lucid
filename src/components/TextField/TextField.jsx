@@ -68,6 +68,14 @@ const TextField = React.createClass(createLucidComponentDefinition({
 		onChange: func,
 
 		/**
+		 * Fires an event, debounced by `debounceLevel`, when the user types text
+		 * into the TextField.
+		 *
+		 * Signature: `(value, { event, props }) => {}`
+		 */
+		onChangeDebounced: func,
+
+		/**
 		 * Fires an event when the user hits "enter" from the TextField.
 		 *
 		 * Signature: `(value, { event, props }) => {}`
@@ -80,7 +88,13 @@ const TextField = React.createClass(createLucidComponentDefinition({
 		value: oneOfType([
 			number,
 			string
-		])
+		]),
+
+		/**
+		 * Number of milliseconds to debounce the `onChangeDebounced` callback.
+		 * Only really used if you provide an `onChangeDebouned`.
+		 */
+		debounceLevel: number,
 	},
 
 	getDefaultProps() {
@@ -89,18 +103,49 @@ const TextField = React.createClass(createLucidComponentDefinition({
 			isDisabled: false,
 			isMultiLine: false,
 			onChange: _.noop,
+			onChangeDebounced: _.noop,
 			onSubmit: _.noop,
 			rows: 5,
+			debounceLevel: 500,
 		};
+	},
+
+	getInitialState() {
+		return {
+			value: this.props.value
+		}
+	},
+
+	componentWillMount() {
+		// Because we want the debounceLevel to be configurable, we can't put the
+		// debounced handler directly on the react class, so we set it up right
+		// before mount
+		this._handleChangeDebounced = _.debounce((...args) => {
+			this.props.onChangeDebounced(...args);
+		}, this.props.debounceLevel);
+	},
+
+	componentWillReceiveProps(nextProps) {
+		// Allow consumer to optionally control state
+		if (_.has(nextProps, 'value')) {
+			this.setState({ value: nextProps.value });
+		}
 	},
 
 	handleChange(event) {
 		const {
 			onChange,
 		} = this.props;
+
 		const value = _.get(event, 'target.value', '');
 
+		this.setState({ value });
+
 		onChange(value, { event, props: this.props });
+
+		// Also call the debounced handler in case the user wants debounced change
+		// events.
+		this._handleChangeDebounced(value, { event, props: this.props });
 	},
 
 	handleKeyDown(event) {
@@ -127,9 +172,12 @@ const TextField = React.createClass(createLucidComponentDefinition({
 			isMultiLine,
 			rows,
 			style,
-			value,
 			...passThroughs
 		} = this.props;
+
+		const {
+			value
+		} = this.state;
 
 		const finalProps = {
 			..._.omit(passThroughs, 'children'),

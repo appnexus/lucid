@@ -1,9 +1,10 @@
 import React from 'react';
 import TextField from '../TextField';
 import Button from '../../Button/Button';
-import { buildStatefulComponent } from '../../../util/state-management';
 
-const StatefulTextField = buildStatefulComponent(TextField, { stateBeatsProps: true });
+const style = {
+	marginBottom: '10px'
+};
 
 export default React.createClass({
 	getInitialState() {
@@ -15,7 +16,13 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<StatefulTextField value={this.state.value} style={{marginBottom: 5}} />
+				<TextField
+					style={style}
+					value={this.state.value}
+					onChangeDebounced={(value) => this.setState({value})}
+				/>
+
+				<div style={style}>this.state.value: {this.state.value}</div>
 
 				<Button onClick={() => { this.setState({ value: 'foo' }); }}>
 					Set TextField to "foo"
