@@ -3,6 +3,7 @@ import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition } from '../../util/component-definition';
 import getRandom from '../../util/random';
+import LabeledRadioButton from '../LabeledRadioButton/LabeledRadioButton';
 import RadioButton from '../RadioButton/RadioButton';
 import reducers from './RadioGroup.reducers';
 
@@ -28,7 +29,15 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 	displayName: 'RadioGroup',
 
 	childProps: {
-		RadioButton: { ...RadioButton.propTypes }
+		RadioButton: { ...RadioButton.propTypes },
+
+		/**
+		 * Support radio button labels as `RadioGroup.Label` component which can
+		 * be provided as a child of a `RadioGroup.RadioButton` component.
+		 */
+		Label: {
+			children: node
+		}
 	},
 
 	reducers,
@@ -54,8 +63,8 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 
 		/**
 		 * Called when the user clicks on one of the child radio buttons or when
-		 * they press the space key while one is in focus, and only called when the
-		 * component is in the unselected state. `props` refers to the child
+		 * they press the space key while one is in focus, and only called when
+		 * the component is in the unselected state. `props` refers to the child
 		 * `RadioButton` props.
 		 *
 		 * Signature: `(selectedIndex, { event, props }) => {}`
@@ -95,9 +104,9 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 		// If there are any `RadioGroup.RadioButton` children with `isSelected`
 		// equal to true, then the index of the last one should override the
 		// value of the `selectedIndex` prop.
-		const actualSelectedIndex = selectedIndexFromChildren !== -1 ?
-				selectedIndexFromChildren :
-				selectedIndex;
+		const actualSelectedIndex = selectedIndexFromChildren !== -1
+				? selectedIndexFromChildren
+				: selectedIndex;
 
 		return (
 			<span
@@ -106,13 +115,14 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 			>
 				{_.map(radioButtonChildProps, (radioButtonChildProp, index) => {
 					return (
-						<RadioButton
+						<LabeledRadioButton
 								{...radioButtonChildProp}
 								isSelected={actualSelectedIndex === index}
 								key={index}
 								callbackId={index}
 								name={name}
 								onSelect={this.handleSelected}
+								Label={_.get(_.first(RadioGroup.Label.findInAllAsProps(radioButtonChildProp)), 'children', '')}
 						/>
 					);
 				})}
