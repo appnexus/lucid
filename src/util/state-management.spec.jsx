@@ -328,6 +328,15 @@ describe('#getStatefulPropsContext', () => {
 				assert(_.isEqualWith(props, _.merge({}, state, reducers, overrides), isFunctions));
 			});
 
+			it('should return an object with reducers and current state merged with state arg overrides when passing in the stateBeatsProps arg', () => {
+				const overrides = {
+					name: 'Neumann',
+					dead: 0xbeef
+				};
+				const props = statefulPropsContext.getProps(overrides, true);
+				assert(_.isEqualWith(props, _.merge({}, reducers, overrides, state), isFunctions));
+			});
+
 			it('should return an object with current state applied after function call modifies state', () => {
 				const overrides = {
 					name: 'Neumann'
