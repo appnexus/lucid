@@ -14,7 +14,7 @@ const {
 } = React.PropTypes;
 
 /**
- * {"categories": ["controls", "toggles"], "extend": "RadioButton"}
+ * {"categories": ["controls", "toggles"], "extend": "RadioButton", "madeFrom": ["RadioButton"]}
  *
  * This is a composite of the `RadioButton` component and the native `label`
  * element.

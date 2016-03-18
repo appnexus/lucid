@@ -185,10 +185,7 @@ const Component = React.createClass({
 			.value();
 
 		const composesComponents = _.chain(docgenMap)
-			.get(`${componentName}.composes`, null)
-			.map((path) => {
-				return _.last(path.split('/'));
-			})
+			.get(`${componentName}.customData.madeFrom`, null)
 			.thru((componentNames) => {
 				if (_.isEmpty(componentNames)) {
 					return '';
@@ -204,7 +201,7 @@ const Component = React.createClass({
 				));
 
 				return (
-					<span>
+					<span className='Component-made-from'>
 						<span>made from: </span>
 						{composesComponentLinks}
 					</span>

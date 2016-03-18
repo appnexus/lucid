@@ -10,7 +10,7 @@ const {
 
 /**
  *
- * {"categories": ["visual design", "icons"], "extend": "Icon"}
+ * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
  * An eligibility icon.
  */

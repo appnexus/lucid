@@ -6,7 +6,7 @@ const boundClassNames = lucidClassNames.bind('&-PlusIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"], "extend": "Icon"}
+ * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
  * A plus icon.
  */
