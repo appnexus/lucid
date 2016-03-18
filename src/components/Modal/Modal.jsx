@@ -77,14 +77,18 @@ const Modal = React.createClass(createLucidComponentDefinition({
 	},
 
 	componentDidMount() {
-		window.document.addEventListener('keyup', this.handleDocumentKeyUp);
+		if (window && window.document) {
+			window.document.addEventListener('keydown', this.handleDocumentKeyDown);
+		}
 	},
 
 	componentWillUnmount() {
-		window.document.removeEventListener('keyup', this.handleDocumentKeyUp);
+		if (window && window.document) {
+			window.document.removeEventListener('keydown', this.handleDocumentKeyDown);
+		}
 	},
 
-	handleDocumentKeyUp(event) {
+	handleDocumentKeyDown(event) {
 		// If the user hits the "escape" key, then fire an `onEscape`
 		// TODO: use key helpers
 		if (event.keyCode === 27) {
