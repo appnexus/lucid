@@ -66,6 +66,10 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 		 */
 		style: object,
 		/**
+		 * Disables the DropMenu from being clicked or focused.
+		 */
+		isDisabled: bool,
+		/**
 		 * Renders the flyout menu adjacent to the control.
 		 */
 		isExpanded: bool,
@@ -140,6 +144,7 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 
 	getDefaultProps() {
 		return {
+			isDisabled: false,
 			isExpanded: false,
 			direction: 'down',
 			selectedIndices: [],
@@ -397,6 +402,7 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 		const {
 			className,
 			style,
+			isDisabled,
 			isExpanded,
 			direction,
 			portalId,
@@ -421,11 +427,14 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 				<ContextMenu portalId={portalId} isExpanded={isExpanded} direction={direction} onChangeBounds={this.handleChangeBounds} onClickOut={onCollapse}>
 					<ContextMenu.Target>
 						<div
-							className={boundClassNames('&-Control')}
-							tabIndex={0}
-							onClick={this.handleClick}
-							onKeyDown={this.handleKeydown}
-						>{_.get(controlProps, 'children', null)}</div>
+							{...(!isDisabled ? {
+								tabIndex: 0,
+								onClick: this.handleClick,
+								onKeyDown: this.handleKeydown
+							} : null)}
+							{...controlProps}
+							className={boundClassNames('&-Control', _.get(controlProps, 'className'))}
+						/>
 					</ContextMenu.Target>
 					<ContextMenu.FlyOut className={boundClassNames('&', className)}>
 						{

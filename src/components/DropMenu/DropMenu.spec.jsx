@@ -114,6 +114,42 @@ describe('DropMenu', () => {
 			});
 		});
 
+		describe('isDisabled', () => {
+			it('should make the control handle `onClick`, `onKeyDown`, and have a `tabIndex` when `false`', () => {
+				const wrapper = shallow(
+					<DropMenu isDisabled={false}>
+						<Control>control</Control>
+						<Option>option a</Option>
+						<Option>option b</Option>
+						<Option>option c</Option>
+					</DropMenu>
+				);
+
+				const controlElement = wrapper.find('.lucid-DropMenu-Control');
+
+				assert(!_.isNil(controlElement.prop('tabIndex')));
+				assert(!_.isNil(controlElement.prop('onClick')));
+				assert(!_.isNil(controlElement.prop('onKeyDown')));
+			});
+
+			it('should make the control not handle `onClick`, `onKeydown`, or have a `tabIndex` when `true`', () => {
+				const wrapper = shallow(
+					<DropMenu isDisabled={true}>
+						<Control>control</Control>
+						<Option>option a</Option>
+						<Option>option b</Option>
+						<Option>option c</Option>
+					</DropMenu>
+				);
+
+				const controlElement = wrapper.find('.lucid-DropMenu-Control');
+
+				assert(_.isNil(controlElement.prop('tabIndex')));
+				assert(_.isNil(controlElement.prop('onClick')));
+				assert(_.isNil(controlElement.prop('onKeyDown')));
+			});
+		});
+
 		describe('isExpanded', () => {
 			it('should pass isExpanded to the underlying ContextMenu component thru props', () => {
 				const wrapper = shallow(
