@@ -21,21 +21,21 @@
 		display: flex;
 		align-items: center;
 
-		&&-Option-is-disabled {
+		&&-is-disabled {
 			color: @color-disabledText;
 			font-style: italic;
 			cursor: not-allowed;
 		}
 
-		&&-Option-is-focused {
+		&&-is-focused {
 			background: @color-lightGray;
 		}
 
-		&&-Option-is-selected {
+		&&-is-selected {
 			background: @color-primaryMedium;
 		}
 
-		&&-Option-is-null {
+		&&-is-null {
 			color: @color-disabledText;
 		}
 	}
@@ -48,13 +48,13 @@
 		overflow-y: auto;
 		max-height: @DropMenu-size-maxHeight;
 
-		&.lucid-ContextMenu-FlyOut-Up {
+		&&-Up {
 			border-width: 1px 1px 0 1px;
 			border-radius: @Button-size-borderRadius @Button-size-borderRadius 0 0;
 			box-shadow: 0 1px 0 @featured-color-default-borderColor;
 		}
 
-		&.lucid-ContextMenu-FlyOut-Down {
+		&&-Down {
 			border-width: 0 1px 1px 1px;
 			border-radius: 0 0 @Button-size-borderRadius @Button-size-borderRadius;
 			box-shadow: 0 -1px 0 @featured-color-default-borderColor;
