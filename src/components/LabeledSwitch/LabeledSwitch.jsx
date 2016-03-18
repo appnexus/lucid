@@ -7,8 +7,6 @@ import Switch from '../Switch/Switch';
 
 const boundClassNames = lucidClassNames.bind('&-LabeledSwitch');
 const {
-	bool,
-	func,
 	node,
 	object,
 	string
@@ -34,31 +32,13 @@ const LabeledSwitch = React.createClass(createLucidComponentDefinition({
 	},
 
 	propTypes: {
+		...Switch.propTypes,
+
 		/**
 		 * Appended to the component-specific class names set on the root
 		 * element.
 		 */
 		className: string,
-
-		/**
-		 * Indicates whether the component should appear and act disabled by
-		 * having a "greyed out" palette and ignoring user interactions.
-		 */
-		isDisabled: bool,
-
-		/**
-		 * Indicates that the component is in the "selected" state when true
-		 * and in the "unselected" state when false.
-		 */
-		isSelected: bool,
-
-		/**
-		 * Called when the user clicks on the component or when they press the
-		 * space key while the component is in focus.
-		 *
-		 * Signature: (isSelected, { event, props }) => {}
-		 */
-		onSelect: func,
 
 		/**
 		 * Passed through to the root element.

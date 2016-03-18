@@ -6,8 +6,6 @@ import RadioButton from '../RadioButton/RadioButton';
 
 const boundClassNames = lucidClassNames.bind('&-LabeledRadioButton');
 const {
-	bool,
-	func,
 	node,
 	object,
 	string
@@ -33,32 +31,13 @@ const LabeledRadioButton = React.createClass(createLucidComponentDefinition({
 	},
 
 	propTypes: {
+		...RadioButton.propTypes,
+
 		/**
 		 * Appended to the component-specific class names set on the root
 		 * element.
 		 */
 		className: string,
-
-		/**
-		 * Indicates whether the component should appear and act disabled by
-		 * having a "greyed out" palette and ignoring user interactions.
-		 */
-		isDisabled: bool,
-
-		/**
-		 * Indicates that the component is in the "selected" state when true
-		 * and in the "unselected" state when false.
-		 */
-		isSelected: bool,
-
-		/**
-		 * Called when the user clicks on the component or when they press the
-		 * space key while the component is in focus, and only called when the
-		 * component is in the unselected state.
-		 *
-		 * Signature: `(true, { event, props }) => {}`
-		 */
-		onSelect: func,
 
 		/**
 		 * Passed through to the root element.
