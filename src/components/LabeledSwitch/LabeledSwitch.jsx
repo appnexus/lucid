@@ -15,7 +15,7 @@ const {
 } = React.PropTypes;
 
 /**
- * {"categories": ["controls", "toggles"], "extend": "Switch"}
+ * {"categories": ["controls", "toggles"], "extend": "Switch", "madeFrom": ["Switch"]}
  *
  * This is a composite of the `Switch` component and the native `label`
  * element.
