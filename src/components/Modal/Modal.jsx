@@ -46,7 +46,9 @@ const Modal = React.createClass(createLucidComponentDefinition({
 		isClosed: bool,
 
 		/**
-		 * Size variations.
+		 * Size variations that only affect the width of the modal. All the sizes
+		 * will grow in height until they get too big, at which point they will
+		 * scroll inside.
 		 */
 		size: oneOf(['small', 'medium', 'large']),
 

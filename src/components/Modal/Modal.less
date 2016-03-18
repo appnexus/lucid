@@ -4,27 +4,24 @@
 @Modal-size-maxHeight: 80vh;
 
 .lucid-Modal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: fixed;
 	left: 0;
 	top: 0;
 	width: 100vw;
 	height: 100vh;
 	background-color: @color-gray-60;
-	display: block;
 	overflow: hidden;
 	z-index: @Modal-zIndex; // TODO: use variable
-	display: flex;
-	justify-content: center;
-	align-items: center;
 
 	&-window {
-		align-content: stretch;
+		display: flex;
+		flex-direction: column;
 		background: @color-white;
 		border-radius: @Modal-size-borderRadius;
 		box-shadow: 0 0 4px 0 @color-gray-50;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
 		max-height: @Modal-size-maxHeight;
 		overflow: hidden;
 		z-index: @Modal-zIndex + 1;
@@ -55,6 +52,7 @@
 		flex: 1 1 auto;
 		overflow: auto;
 		padding: @Modal-size-spacing;
+		max-height: 60vh; // fix for IE 11 bug, otherwise the body doesn't shrink properly
 	}
 
 	&-footer {

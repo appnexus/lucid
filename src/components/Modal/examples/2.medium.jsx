@@ -6,7 +6,7 @@ import Button from '../../Button/Button';
 export default React.createClass({
 	getInitialState() {
 		return {
-			isClosed: true
+			isClosed: false
 		};
 	},
 
