@@ -4,6 +4,7 @@
 @Banner-size-borderRadiaus: @size-borderRadius;
 
 .lucid-Banner {
+	.transition-group-animation-fade();
 	.box-sizing();
 	border: 1px solid @color-borderColor;
 	background-color: @color-backgroundColor;
@@ -89,25 +90,5 @@
 		.lucid-Banner-content {
 			padding: @Banner-size-spacing-topBottom - 5px 0;
 		}
-	}
-
-	// Transition styles
-
-	&-enter {
-		opacity: 0.01;
-	}
-
-	&-enter&-enter-active {
-		opacity: 1;
-		transition: opacity 300ms ease-in;
-	}
-
-	&-leave {
-		opacity: 1;
-	}
-
-	&-leave&-leave-active {
-		opacity: 0.01;
-		transition: opacity 300ms ease-in;
 	}
 }

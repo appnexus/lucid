@@ -16,10 +16,10 @@ const {
 } = React.PropTypes;
 
 /**
- * {"categories": ["layout"]}
+ * {"categories": ["layout"], "madeFrom": ["Portal"]}
  *
- * Modal is used to pop open a window where the user will complete a series of
- * actions before closing it.
+ * Modal is used to pop open a window so the user doesn't lose the context of
+ * the page behind it.
  */
 const Modal = React.createClass(createLucidComponentDefinition({
 	displayName: 'Modal',
@@ -31,44 +31,39 @@ const Modal = React.createClass(createLucidComponentDefinition({
 
 	propTypes: {
 		/**
-		 * Appended to the component-specific class names set on the root
-		 * element.
+		 * Appended to the component-specific class names set on the root element.
 		 */
 		className: string,
 
 		/**
-		 * TODO
+		 * Children will be placed in the body of the `Modal`.
 		 */
 		children: node,
 
 		/**
-		 * Controls visibility
+		 * Controls visibility.
 		 */
 		isClosed: bool,
 
 		/**
-		 * Size variations
+		 * Size variations.
 		 */
 		size: oneOf(['small', 'medium', 'large']),
 
 		/**
-		 * TODO
+		 * Fired when the user hits escape.
 		 *
-		 * Fired when the user hit's escape.
-		 *
-		 * Signature: `() => {}`
+		 * Signature: `({ event, props }) => {}`
 		 */
 		onEscape: func,
 
 		/**
-		 * TODO
-		 *
+		 * *Child Element* - Header contents. Only one `Header` is used.
 		 */
 		Header: node,
 
 		/**
-		 * TODO
-		 *
+		 * *Child Element* - Footer contents. Only one `Footer` is used.
 		 */
 		Footer: node
 	},
@@ -93,7 +88,7 @@ const Modal = React.createClass(createLucidComponentDefinition({
 		// If the user hits the "escape" key, then fire an `onEscape`
 		// TODO: use key helpers
 		if (event.keyCode === 27) {
-			this.props.onEscape();
+			this.props.onEscape({event, props: this.props });
 		}
 	},
 
@@ -114,35 +109,35 @@ const Modal = React.createClass(createLucidComponentDefinition({
 					transitionName={boundClassNames('&')}
 					transitionEnterTimeout={300}
 					transitionLeaveTimeout={300}
-					>
+				>
 					{!isClosed ?
 						<div
 							{...passThroughs}
-							className={boundClassNames(className, '&', )}
-							>
+							className={boundClassNames(className, '&')}
+						>
 							<div className={boundClassNames('&-window', {
 								'&-window-is-small': size === 'small',
 								'&-window-is-medium': size === 'medium',
 								'&-window-is-large': size === 'large',
 							})} >
-								<div className={boundClassNames('&-content')}>
-									<header
-										className={boundClassNames('&-header')}
-										{...headerChildProp}
-									/>
-									<section className={boundClassNames('&-body')}>
-										{this.props.children}
-									</section>
-									<footer
-										className={boundClassNames('&-footer')}
-										{...footerChildProp}
-									/>
-								</div>
+								<header
+									className={boundClassNames('&-header')}
+									{...headerChildProp}
+								/>
+
+								<section className={boundClassNames('&-body')}>
+									{this.props.children}
+								</section>
+
+								<footer
+									className={boundClassNames('&-footer')}
+									{...footerChildProp}
+								/>
 							</div>
 						</div>
-						: null}
-					</ReactCSSTransitionGroup>
-				</Portal>
+					: null}
+				</ReactCSSTransitionGroup>
+			</Portal>
 		);
 	},
 }));

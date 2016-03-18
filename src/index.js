@@ -16,6 +16,7 @@ import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import LabeledCheckbox from './components/LabeledCheckbox/LabeledCheckbox';
 import LabeledRadioButton from './components/LabeledRadioButton/LabeledRadioButton';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
+import Modal from './components/Modal/Modal';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Portal from './components/Portal/Portal';
 import RadioButton from './components/RadioButton/RadioButton';
@@ -63,6 +64,7 @@ export {
 	LabeledCheckbox,
 	LabeledRadioButton,
 	MinusIcon,
+	Modal,
 	PlusIcon,
 	Portal,
 	RadioButton,

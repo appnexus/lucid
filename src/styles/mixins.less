@@ -114,3 +114,32 @@
 .hardstop-gradient(@direction: 'to bottom', @line: @color-primary, @background: @color-white, @height: 3px) {
 	background-image: linear-gradient(@line 0, @line @height, @background @height);
 }
+
+// -----------------------------------------------------------------------------
+// Transition group animations
+// -----------------------------------------------------------------------------
+
+// This set of mixins in intended to be used with ReactCSSTransitionGroup. It's
+// important that you place this mixin directly underneath the parent that
+// should be animating.
+
+.transition-group-animation-fade() {
+	&-enter {
+		.opacity(0.01);
+	}
+
+	&-enter&-enter-active {
+		.opacity(1);
+		transition: opacity @timing-animation ease-in;
+	}
+
+	&-leave {
+		.opacity(1);
+	}
+
+	&-leave&-leave-active {
+		.opacity(0.01);
+		transition: opacity @timing-animation ease-in;
+	}
+}
+

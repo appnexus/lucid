@@ -1,13 +1,14 @@
 @Modal-zIndex: 4000;
 @Modal-size-spacing: 12px;
 @Modal-size-borderRadius: @size-borderRadius + 2;
+@Modal-size-maxHeight: 80vh;
 
 .lucid-Modal {
 	position: fixed;
 	left: 0;
 	top: 0;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	background-color: @color-gray-30;
 	display: block;
 	overflow: hidden;
@@ -17,10 +18,16 @@
 	align-items: center;
 
 	&-window {
-		z-index: @Modal-zIndex + 1;
+		align-content: stretch;
+		background: @color-white;
 		border-radius: @Modal-size-borderRadius;
 		box-shadow: 0 0 4px 0 @color-gray-50;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-height: @Modal-size-maxHeight;
 		overflow: hidden;
+		z-index: @Modal-zIndex + 1;
 	}
 	&-window-is-small {
 		width: 30%;
@@ -33,10 +40,6 @@
 	}
 
 	&-header {
-		// display: flex;
-		// align-items: baseline;
-		// justify-content: space-between;
-		display: relative;
 		flex: 1 0 auto;
 		font-family: @fontFamily;
 		font-size: @size-font-large;
@@ -52,7 +55,6 @@
 		flex: 1 1 auto;
 		overflow: auto;
 		padding: @Modal-size-spacing;
-		max-height: 80vh;
 	}
 
 	&-footer {
@@ -63,35 +65,25 @@
 		border-top: 1px solid @color-gray;
 	}
 
-	&-content {
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		align-content: stretch;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-		background: @color-white;
-	}
-
 	// Transition styles
 	// TODO: make mixin and use in Banner
 
-	&-enter {
-		opacity: 0.01;
-	}
+	.transition-group-animation-fade();
+	// &-enter {
+	// 	opacity: 0.01;
+	// }
 
-	&-enter&-enter-active {
-		opacity: 1;
-		transition: opacity 300ms ease-in;
-	}
+	// &-enter&-enter-active {
+	// 	opacity: 1;
+	// 	transition: opacity 300ms ease-in;
+	// }
 
-	&-leave {
-		opacity: 1;
-	}
+	// &-leave {
+	// 	opacity: 1;
+	// }
 
-	&-leave&-leave-active {
-		opacity: 0.01;
-		transition: opacity 300ms ease-in;
-	}
+	// &-leave&-leave-active {
+	// 	opacity: 0.01;
+	// 	transition: opacity 300ms ease-in;
+	// }
 }
