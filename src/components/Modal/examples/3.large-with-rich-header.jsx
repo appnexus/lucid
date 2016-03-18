@@ -2,7 +2,6 @@ import _ from 'lodash';
 import React from 'react';
 import Modal from '../Modal';
 import Button from '../../Button/Button';
-import { buildStatefulComponent } from '../../../util/state-management';
 
 export default React.createClass({
 	getInitialState() {
@@ -29,9 +28,11 @@ export default React.createClass({
 				<Modal
 					isClosed={this.state.isClosed}
 					onEscape={_.partial(this.handleOpenClose, true)}
-					Header='Header'
-					size='small'
+					size='large'
 				>
+					<Modal.Header>
+						<i>Rich Header</i>
+					</Modal.Header>
 					{_.times(50).map((i) => {
 						return <div key={i}>Body</div>
 					})}
