@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import assert from 'assert';
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import SyntheticEvent from 'react/lib/SyntheticEvent';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
@@ -59,6 +60,30 @@ describe('LabeledSwitch', () => {
 				const wrapper = mount(<LabeledSwitch />);
 
 				assert.equal(wrapper.prop('onSelect'), _.noop);
+			});
+		});
+
+		describe('Label (as a prop)', () => {
+			it('renders the value in a `span` neighboring its `Switch` instance.', () => {
+				const wrapper = shallow(
+					<LabeledSwitch
+							Label={'foo'}
+					/>
+				);
+
+				assert.equal(wrapper.find(ReactCSSTransitionGroup).find('span').prop('children'), 'foo');
+			});
+		});
+
+		describe('Label (as a child)', () => {
+			it('renders the value in a `span` neighboring its `Switch` instance.', () => {
+				const wrapper = shallow(
+					<LabeledSwitch>
+						<LabeledSwitch.Label>foo</LabeledSwitch.Label>
+					</LabeledSwitch>
+				);
+
+				assert.equal(wrapper.find(ReactCSSTransitionGroup).find('span').prop('children'), 'foo');
 			});
 		});
 

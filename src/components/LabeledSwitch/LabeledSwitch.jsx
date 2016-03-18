@@ -103,19 +103,19 @@ const LabeledSwitch = React.createClass(createLucidComponentDefinition({
 						onSelect={onSelect}
 						{..._.omit(passThroughs, 'Label')}
 				/>
-					<ReactCSSTransitionGroup
-							transitionName={boundClassNames('&-text')}
-							transitionEnterTimeout={100}
-							transitionLeaveTimeout={100}
-							style={{position: 'relative'}}
-							className={boundClassNames('&-text')}
-					>
-						{
-							labelChildProps
-									? <span key={labelKey}>{labelChildProps.children || labelChildProps}</span>
-									: null
-						}
-					</ReactCSSTransitionGroup>
+				<ReactCSSTransitionGroup
+						transitionName={boundClassNames('&-text')}
+						transitionEnterTimeout={100}
+						transitionLeaveTimeout={100}
+						style={{position: 'relative'}}
+						className={boundClassNames('&-text')}
+				>
+					{
+						labelChildProps
+								? <span key={labelKey}>{labelChildProps.children || labelChildProps}</span>
+								: null
+					}
+				</ReactCSSTransitionGroup>
 			</label>
 		);
 	}
