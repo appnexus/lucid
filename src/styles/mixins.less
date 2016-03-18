@@ -6,8 +6,7 @@
 	position: relative;
 	background-size: 100%;
 	background-image: linear-gradient(@start, @end);
-	// todo: create zindex pattern
-	z-index: 100;
+	z-index: 0;
 
 	&:before {
 		background-image: linear-gradient(@end, @start);
@@ -20,7 +19,7 @@
 		top: 0; left: 0;
 		opacity: 0;
 		width: 100%;
-		z-index: -100;
+		z-index: -1;
 		transition: opacity @transTime, box-shadow .05s;
 		box-shadow: none;
 	}
