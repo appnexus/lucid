@@ -9,9 +9,10 @@ const style = {
 export default React.createClass({
 	getInitialState() {
 		return {
-			airplaneMode: false,
-			bluetooth: false,
-			cellularData: false
+			airplaneMode: true,
+			bluetooth: true,
+			cellularData: true,
+			spam: true
 		};
 	},
 
@@ -33,38 +34,47 @@ export default React.createClass({
 		});
 	},
 
+	handleSelectedSpam(isSelected) {
+		this.setState({
+			spam: isSelected
+		});
+	},
+
 	render() {
+		const spamSwitchLabel = this.state.spam
+				? 'Yes! I would like to receive updates, special offers, and other information from AppNexus and its subsidiaries.'
+				: 'No! Please keep your wicked, dirty spam all to yourselves!';
+
 		return (
 			<section>
 				<span>
 					<LabeledSwitch
 							isSelected={this.state.airplaneMode === true}
-							// Label={`Airplane Mode ${this.state.airplaneMode === true ? 'Activated' : 'Deactivated'}`}
+							Label={`Airplane Mode ${this.state.airplaneMode === true ? 'Activated' : 'Deactivated'}`}
 							onSelect={this.handleSelectedAirplaneMode}
 							style={style}
-					>
-						<LabeledSwitch.SelectedLabel>Airplane Mode Activated</LabeledSwitch.SelectedLabel>
-						<LabeledSwitch.UnselectedLabel>Airplane Mode Deactivated</LabeledSwitch.UnselectedLabel>
-					</LabeledSwitch>
+					/>
 					<LabeledSwitch
 							isSelected={this.state.bluetooth === true}
-							// Label={`Bluetooth ${this.state.bluetooth === true ? 'Enabled' : 'Disabled'}`}
+							Label={`Bluetooth ${this.state.bluetooth === true ? 'Enabled' : 'Disabled'}`}
 							onSelect={this.handleSelectedBluetooth}
 							style={style}
-					>
-						<LabeledSwitch.SelectedLabel>Bluetooth Enabled</LabeledSwitch.SelectedLabel>
-						<LabeledSwitch.UnselectedLabel>Bluetooth Disabled</LabeledSwitch.UnselectedLabel>
-					</LabeledSwitch>
+					/>
 					<LabeledSwitch
 							isSelected={this.state.cellularData === true}
-							// Label={`${this.state.cellularData ? 'Use' : 'Do Not Use'} Cellular Data`}
+							Label={`${this.state.cellularData ? 'Use' : 'Do Not Use'} Cellular Data`}
 							onSelect={this.handleSelectedCellularData}
 							style={style}
-					>
-						<LabeledSwitch.SelectedLabel>Use Cellular Data</LabeledSwitch.SelectedLabel>
-						<LabeledSwitch.UnselectedLabel>Do Not Use Cellular Data</LabeledSwitch.UnselectedLabel>
-					</LabeledSwitch>
+					/>
 				</span>
+				<br />
+				<LabeledSwitch
+						isSelected={this.state.spam === true}
+						onSelect={this.handleSelectedSpam}
+						style={style}
+				>
+					<LabeledSwitch.Label>{spamSwitchLabel}</LabeledSwitch.Label>
+				</LabeledSwitch>
 			</section>
 		);
 	}

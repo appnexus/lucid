@@ -24,18 +24,10 @@ const LabeledSwitch = React.createClass(createLucidComponentDefinition({
 	displayName: 'LabeledSwitch',
 
 	childProps: {
-		SelectedLabel: {
+		Label: {
 			/**
-			 * Used to identify the purpose of this switch to the user and that
-			 * it is in a selected state -- can be any renderable content.
-			 */
-			children: node
-		},
-
-		UnselectedLabel: {
-			/**
-			 * Used to identify the purpose of this switch to the user and that
-			 * it is in an unselected state -- can be any renderable content.
+			 * Used to identify the purpose of this switch to the user -- can be
+			 * any renderable content.
 			 */
 			children: node
 		}
@@ -92,8 +84,8 @@ const LabeledSwitch = React.createClass(createLucidComponentDefinition({
 			...passThroughs
 		} = this.props;
 
-		const selectedLabelChildProps = _.first(LabeledSwitch.SelectedLabel.findInAllAsProps(this.props));
-		const unselectedLabelChildProps = _.first(LabeledSwitch.UnselectedLabel.findInAllAsProps(this.props));
+		const labelChildProps = _.first(LabeledSwitch.Label.findInAllAsProps(this.props));
+		const labelKey = isSelected ? 'selectedLabel' : 'unselectedLabel';
 
 		return (
 			<label
@@ -102,11 +94,7 @@ const LabeledSwitch = React.createClass(createLucidComponentDefinition({
 						'&-is-selected': isSelected
 					}, className)}
 					style={style}
-					{
-						...isSelected
-								? selectedLabelChildProps
-								: unselectedLabelChildProps
-					}
+					{...labelChildProps}
 			>
 				<Switch
 						className={className}
@@ -124,13 +112,9 @@ const LabeledSwitch = React.createClass(createLucidComponentDefinition({
 							className={boundClassNames('&-text')}
 					>
 						{
-							isSelected
-									? selectedLabelChildProps
-											? <span key='selectedLabel'>{selectedLabelChildProps.children || selectedLabelChildProps}</span>
-											: null
-									: unselectedLabelChildProps
-											? <span key='unselectedLabel'>{unselectedLabelChildProps.children || unselectedLabelChildProps}</span>
-											: null
+							labelChildProps
+									? <span key={labelKey}>{labelChildProps.children || labelChildProps}</span>
+									: null
 						}
 					</ReactCSSTransitionGroup>
 				

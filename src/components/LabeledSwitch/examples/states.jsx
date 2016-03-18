@@ -9,14 +9,13 @@ const style = {
 
 export default React.createClass({
 	render() {
-		/*
 		return (
 			<section>
 				<LabeledSwitch style={style}>
 					<LabeledSwitch.Label>(default props)</LabeledSwitch.Label>
 				</LabeledSwitch>
 
-				<section style={{ display: 'flex' }}>
+				<section>
 					<LabeledSwitch isDisabled={true} style={style}>
 						<LabeledSwitch.Label>Disabled</LabeledSwitch.Label>
 					</LabeledSwitch>
@@ -29,7 +28,5 @@ export default React.createClass({
 				</section>
 			</section>
 		);
-		*/
-		return <section>Woot</section>;
 	}
 });
