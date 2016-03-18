@@ -1,38 +1,41 @@
+@DropMenu-size-maxHeight: 420px;
+@DropMenu-size-optionHeight: 25px;
+
 .lucid-DropMenu {
 
-	&.lucid-DropMenu-base {
+	&&-base {
 		display: inline-block;
 	}
 
-	.lucid-DropMenu-Control {
+	&-Control {
 		position:relative;
 		outline: 0px;
 	}
 
-	.lucid-DropMenu-Option {
+	&-Option {
 		cursor: pointer;
 		padding: 0 10px;
 		line-height: @Button-size-lineHeight;
 		font: @font;
-		height: 25px;
+		height: @DropMenu-size-optionHeight;
 		display: flex;
 		align-items: center;
 
-		&.lucid-DropMenu-Option-is-disabled {
+		&&-Option-is-disabled {
 			color: @color-disabledText;
 			font-style: italic;
 			cursor: not-allowed;
 		}
 
-		&.lucid-DropMenu-Option-is-focused {
-			background: @color-lightGray
+		&&-Option-is-focused {
+			background: @color-lightGray;
 		}
 
-		&.lucid-DropMenu-Option-is-selected {
-			background: @color-primaryMedium
+		&&-Option-is-selected {
+			background: @color-primaryMedium;
 		}
 
-		&.lucid-DropMenu-Option-is-null {
+		&&-Option-is-null {
 			color: @color-disabledText;
 		}
 	}
@@ -43,7 +46,7 @@
 		background-color: @color-white;
 		border: solid 1px @featured-color-default-borderColor;
 		overflow-y: auto;
-		max-height: 420px; // arbitrary
+		max-height: @DropMenu-size-maxHeight;
 
 		&.lucid-ContextMenu-FlyOut-Up {
 			border-width: 1px 1px 0 1px;
@@ -58,17 +61,17 @@
 		}
 	}
 
-	.lucid-DropMenu-OptionGroup-divider {
+	&-OptionGroup-divider {
 		border: 1px solid @color-gray;
 		border-width: 1px 0 0 0;
 		height: 1px;
 	}
 
-	.lucid-DropMenu-label {
+	&-label {
 		padding: 0 6px;
 		font: @font;
 		font-weight: bold;
-		height: 25px;
+		height: @DropMenu-size-optionHeight;
 		display: flex;
 		align-items: center;
 	}

@@ -34,7 +34,7 @@ const {
 
 /**
  *
- * {"categories": ["helpers"]}
+ * {"categories": ["helpers"], "madeFrom": ["ContextMenu"]}
  *
  * This is a helper component used to render a menu of options attached to any control. Supports option groups with and without labels as well as special options with a `null` index for unselect.
  */

@@ -3,35 +3,40 @@ import _ from 'lodash';
 export function onExpand(state) {
 	const { selectedIndices } = state;
 
-	return _.assign({}, state, {
+	return {
+		...state,
 		isExpanded: true,
 		focusedIndex: _.isEmpty(selectedIndices) ? null : _.last(selectedIndices)
-	});
+	};
 }
 
 export function onCollapse(state) {
-	return _.assign({}, state, {
+	return {
+		...state,
 		isExpanded: false
-	});
+	};
 }
 
 export function onSelect(state, optionIndex) {
-	return _.assign({}, state, {
+	return {
+		...state,
 		selectedIndices: [optionIndex],
 		isExpanded: false
-	});
+	};
 }
 
 export function onAboveFold(state) {
-	return _.assign({}, state, {
+	return {
+		...state,
 		direction: 'down'
-	});
+	};
 }
 
 export function onBelowFold(state) {
-	return _.assign({}, state, {
+	return {
+		...state,
 		direction: 'up'
-	});
+	};
 }
 
 export function onFocusNext(state) {
@@ -44,9 +49,10 @@ export function onFocusNext(state) {
 		nextFocusedIndex = focusedIndex + 1;
 	}
 
-	return _.assign({}, state, {
+	return {
+		...state,
 		focusedIndex: nextFocusedIndex
-	});
+	};
 }
 
 export function onFocusPrev(state) {
@@ -59,13 +65,15 @@ export function onFocusPrev(state) {
 		nextFocusedIndex = focusedIndex - 1;
 	}
 
-	return _.assign({}, state, {
+	return {
+		...state,
 		focusedIndex: nextFocusedIndex
-	});
+	};
 }
 
 export function onFocusOption(state, optionIndex) {
-	return _.assign({}, state, {
+	return {
+		...state,
 		focusedIndex: optionIndex
-	});
+	};
 }
