@@ -248,12 +248,12 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 		if (isExpanded) {
 			if (_.includes([KEYCODE.Enter, KEYCODE.Space], e.keyCode)) {
 				e.preventDefault();
-				if (_.isNumber(focusedIndex)
-						&& _.get(flattenedOptionsData, focusedIndex)
-						&& !_.get(flattenedOptionsData, `[${focusedIndex}]optionProps.isDisabled`, false)) {
-					onSelect(focusedIndex);
+				const focusedOptionData = _.get(flattenedOptionsData, focusedIndex, null);
+				const focusedOptionProps = _.get(focusedOptionData, 'optionProps', {});
+				if (focusedOptionData && !focusedOptionProps.isDisabled) {
+					onSelect(focusedIndex, {props: focusedOptionProps, event: e});
 				} else if (_.isNull(focusedIndex)) {
-					onSelect(null);
+					onSelect(null, {props: _.first(nullOptions), event: e});
 				}
 			}
 			if (e.keyCode === KEYCODE.Escape) {
@@ -337,13 +337,13 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 		}
 	},
 
-	handleSelectOption(optionIndex, optionProps) {
+	handleSelectOption(optionIndex, optionProps, event) {
 		const {
 			onSelect
 		} = this.props;
 
 		if (!optionProps.isDisabled) {
-			onSelect(optionIndex);
+			onSelect(optionIndex, { props: optionProps, event: event });
 		}
 	},
 
@@ -366,6 +366,10 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 
 		return (
 			<div
+				key={'DropMenuOption' + optionIndex}
+				onMouseMove={() => this.handleMouseFocusOption(optionIndex, optionProps)}
+				onClick={(event) => this.handleSelectOption(optionIndex, optionProps, event)}
+				{...optionProps}
 				className={boundClassNames(
 					'&-Option', {
 					'&-Option-is-grouped': isGrouped,
@@ -373,18 +377,13 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 					'&-Option-is-selected': isSelected,
 					'&-Option-is-disabled': isDisabled,
 					'&-Option-is-null': _.isNull(optionIndex)
-				})}
-				onMouseMove={() => this.handleMouseFocusOption(optionIndex, optionProps)}
-				onClick={() => this.handleSelectOption(optionIndex, optionProps)}
+				}, optionProps.className)}
 				ref={(optionDOMNode)=> {
 					if (isFocused && !isMouseTriggered) {
 						scrollParentTo(optionDOMNode);
 					}
 				}}
-				key={'DropMenuOption' + optionIndex}
-			>
-				{optionProps.children}
-			</div>
+			/>
 		);
 	},
 
@@ -448,7 +447,7 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 									const labelElements = rejectNullElements(optionGroupProps.children);
 									// render label if there is one
 									return (_.isEmpty(labelElements) ? [] : [
-										<div className={boundClassNames('&-label')}>
+										<div {...optionGroupProps} className={boundClassNames('&-label', optionGroupProps.className)}>
 											{labelElements}
 										</div>
 									// render the options in the group
