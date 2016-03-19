@@ -74,7 +74,6 @@ const LabeledSwitch = React.createClass(createLucidComponentDefinition({
 						'&-is-selected': isSelected
 					}, className)}
 					style={style}
-					{...labelChildProps}
 			>
 				<Switch
 						className={className}

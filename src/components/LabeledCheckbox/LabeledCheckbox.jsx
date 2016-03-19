@@ -72,7 +72,6 @@ const LabeledCheckbox = React.createClass(createLucidComponentDefinition({
 						'&-is-selected': isSelected
 					}, className)}
 					style={style}
-					{...labelChildProps}
 			>
 				<Checkbox
 						className={className}

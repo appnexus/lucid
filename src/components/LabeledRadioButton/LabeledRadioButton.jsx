@@ -72,7 +72,6 @@ const LabeledRadioButton = React.createClass(createLucidComponentDefinition({
 						'&-is-selected': isSelected
 					}, className)}
 					style={style}
-					{...labelChildProps}
 			>
 				<RadioButton
 						className={className}
