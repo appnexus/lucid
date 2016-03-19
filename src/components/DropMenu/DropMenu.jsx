@@ -99,7 +99,7 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 		onCollapse: func,
 		/**
 		 * Called when an option is clicked, or when an option has focus and the Space or Enter key is pressed.
-		 * Has the signature `(optionIndex) => {}` where optionIndex can be a number or `null`.
+		 * Has the signature `(optionIndex, {props, event}) => {}` where optionIndex can be a number or `null`.
 		 */
 		onSelect: func,
 		/**
