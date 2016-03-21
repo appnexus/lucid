@@ -45,7 +45,7 @@ const Checkbox = React.createClass({
 		 * Called when the user clicks on the component or when they press the
 		 * space key while the component is in focus.
 		 *
-		 * Signature: (isSelected, { event, props }) => {}
+		 * Signature: `(isSelected, { event, props }) => {}`
 		 */
 		onSelect: func,
 

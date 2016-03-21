@@ -87,7 +87,7 @@ const Switch = React.createClass({
 			>
 				<input
 						onChange={_.noop}
-						{...passThroughs}
+						{..._.omit(passThroughs, 'children')}
 						checked={isSelected}
 						className={boundClassNames('&-native')}
 						disabled={isDisabled}
@@ -107,6 +107,8 @@ const Switch = React.createClass({
 			isSelected,
 			onSelect,
 		} = this.props;
+
+		event.preventDefault();
 
 		if (!isDisabled) {
 			onSelect(!isSelected, { event, props: this.props });
