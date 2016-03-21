@@ -14,6 +14,7 @@ export function createChildComponent (definition={}) {
 		displayName: _.get(definition, 'displayName', null),
 		render: () => null,
 		statics: {
+			isRenderNull: true,
 
 			/**
 			 * findInChildren
@@ -97,4 +98,8 @@ export function createChildComponent (definition={}) {
 			}
 		}
 	});
+}
+
+export function rejectNullElements(children) {
+	return _.reject(React.Children.toArray(children), (node) => (React.isValidElement(node) && node.type.isRenderNull));
 }

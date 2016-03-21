@@ -8,6 +8,7 @@ import Checkbox from './components/Checkbox/Checkbox';
 import ContextMenu from './components/ContextMenu/ContextMenu';
 import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
+import DropMenu from './components/DropMenu/DropMenu';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
 import Grid from './components/Grid/Grid';
@@ -56,6 +57,7 @@ export {
 	ContextMenu,
 	CrossIcon,
 	DangerIcon,
+	DropMenu,
 	EditIcon,
 	EligibilityIcon,
 	Grid,
