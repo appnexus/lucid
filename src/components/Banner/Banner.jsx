@@ -29,7 +29,7 @@ const defaultIcons = {
 
 /**
  *
- * {"categories": ["controls", "banners"]}
+ * {"categories": ["controls", "banners"], "madeFrom": ["DangerIcon", "InfoIcon", "SuccessIcon", "WarningIcon"]}
  *
  * A basic Banner. Any props that are not explicitly called out below will be
  * passed through to the native `Banner` component.
