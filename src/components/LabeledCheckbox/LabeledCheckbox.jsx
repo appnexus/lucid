@@ -6,6 +6,7 @@ import Checkbox from '../Checkbox/Checkbox';
 
 const boundClassNames = lucidClassNames.bind('&-LabeledCheckbox');
 const {
+	any,
 	node,
 	object,
 	string

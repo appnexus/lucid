@@ -6,6 +6,7 @@ import RadioButton from '../RadioButton/RadioButton';
 
 const boundClassNames = lucidClassNames.bind('&-LabeledRadioButton');
 const {
+	any,
 	node,
 	object,
 	string

@@ -7,6 +7,7 @@ import Switch from '../Switch/Switch';
 
 const boundClassNames = lucidClassNames.bind('&-LabeledSwitch');
 const {
+	any,
 	node,
 	object,
 	string
