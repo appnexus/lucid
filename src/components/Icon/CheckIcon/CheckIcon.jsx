@@ -6,7 +6,7 @@ const boundClassNames = lucidClassNames.bind('&-CheckIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"], "extend": "Icon"}
+ * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
  * A check icon.
  */
