@@ -262,7 +262,10 @@ const Component = React.createClass({
 										event.preventDefault();
 										this.handleShowExample(componentName, example.name);
 									}}>
-										Show code
+									{_.get(this.state.examples, `${componentName}.${example.name}`, false)
+										? 'Hide code'
+										: 'Show code'
+									}
 									</a>
 								</div>
 								{_.get(this.state.examples, `${componentName}.${example.name}`) ?
