@@ -42,7 +42,13 @@ const LabeledCheckbox = React.createClass(createLucidComponentDefinition({
 		/**
 		 * Passed through to the root element.
 		 */
-		style: object
+		style: object,
+
+		/**
+		 * Child element whose children are used to identify the purpose of this
+		 * checkbox to the user.
+		 */
+		Label: any
 	},
 
 	getDefaultProps() {
