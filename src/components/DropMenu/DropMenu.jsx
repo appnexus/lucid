@@ -99,7 +99,7 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 		onCollapse: func,
 		/**
 		 * Called when an option is clicked, or when an option has focus and the Space or Enter key is pressed.
-		 * Has the signature `(optionIndex) => {}` where optionIndex can be a number or `null`.
+		 * Has the signature `(optionIndex, {props, event}) => {}` where optionIndex can be a number or `null`.
 		 */
 		onSelect: func,
 		/**
@@ -130,6 +130,7 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 		/**
 		 * *Child Element* - These are menu options. The `optionIndex` is in-order of rendering regardless of group nesting, starting with index `0`.
 		 * Each `Option` may be passed a prop called `isDisabled` to disable selection of that `Option`.
+		 * Any other props pass to Option will be available from the `onSelect` handler.
 		 */
 		Option: any,
 		/**
