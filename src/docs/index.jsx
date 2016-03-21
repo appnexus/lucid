@@ -185,10 +185,7 @@ const Component = React.createClass({
 			.value();
 
 		const composesComponents = _.chain(docgenMap)
-			.get(`${componentName}.composes`, null)
-			.map((path) => {
-				return _.last(path.split('/'));
-			})
+			.get(`${componentName}.customData.madeFrom`, null)
 			.thru((componentNames) => {
 				if (_.isEmpty(componentNames)) {
 					return '';
@@ -204,7 +201,7 @@ const Component = React.createClass({
 				));
 
 				return (
-					<span>
+					<span className='Component-made-from'>
 						<span>made from: </span>
 						{composesComponentLinks}
 					</span>
@@ -223,6 +220,7 @@ const Component = React.createClass({
 							<th>Name</th>
 							<th>Type</th>
 							<th>Required</th>
+							<th>Default</th>
 							<th>Description</th>
 						</tr>
 					</thead>
@@ -237,7 +235,16 @@ const Component = React.createClass({
 								<tr key={propName}>
 									<td>{propName}</td>
 									<td><PropType type={propDetails.type} componentName={componentName} /></td>
-									<td>{String(propDetails.required)}</td>
+									<td>{propDetails.required ? 'yes' : 'no'}</td>
+									<td>
+										{propDetails.defaultValue ?
+											<pre>
+												<code className='lang-javascript'>
+													{_.get(propDetails, 'defaultValue.value', '')}
+												</code>
+											</pre>
+										: null}
+									</td>
 									<td dangerouslySetInnerHTML={{ __html: markdown.toHTML(propDetails.description)}} />
 								</tr>
 							);
@@ -255,7 +262,10 @@ const Component = React.createClass({
 										event.preventDefault();
 										this.handleShowExample(componentName, example.name);
 									}}>
-										Show code
+									{_.get(this.state.examples, `${componentName}.${example.name}`, false)
+										? 'Hide code'
+										: 'Show code'
+									}
 									</a>
 								</div>
 								{_.get(this.state.examples, `${componentName}.${example.name}`) ?

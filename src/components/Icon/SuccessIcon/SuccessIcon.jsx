@@ -6,7 +6,7 @@ const boundClassNames = lucidClassNames.bind('&-SuccessIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"], "extend": "CheckIcon"}
+ * {"categories": ["visual design", "icons"], "extend": "CheckIcon", "madeFrom": ["CheckIcon"]}
  *
  * A success icon.
  */

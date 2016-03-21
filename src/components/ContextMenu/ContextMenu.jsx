@@ -20,7 +20,7 @@ const {
 
 /**
  *
- * {"categories": ["utility"]}
+ * {"categories": ["utility"], "madeFrom": ["Portal"]}
  *
  * A ContextMenu component is used to render a target and a flyout which is positioned relative to the target.
  */

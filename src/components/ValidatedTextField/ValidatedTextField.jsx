@@ -15,7 +15,7 @@ const {
 
 /**
  *
- * {"categories": ["controls", "text"], "extend": "TextField"}
+ * {"categories": ["controls", "text"], "extend": "TextField", "madeFrom": ["TextField", "Validation"]}
  *
  * A composition of TextField and Validation.
  */

@@ -6,7 +6,7 @@ const boundClassNames = lucidClassNames.bind('&-WarningIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"], "extend": "Icon"}
+ * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
  * A warning Icon.
  */

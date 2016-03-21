@@ -16,7 +16,7 @@ const {
 
 /**
  *
- * {"categories": ["controls", "buttons"]}
+ * {"categories": ["controls", "buttons"], "madeFrom": ["Button"]}
  *
  * Button groups allow you to pair buttons together to form a seamless cluster.
  * Any props not explicitly called out are spread on to the root component.
