@@ -6,7 +6,7 @@ const boundClassNames = lucidClassNames.bind('&-EditIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"], "extend": "Icon"}
+ * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
  * An edit icon.
  */
