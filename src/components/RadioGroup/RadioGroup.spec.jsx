@@ -26,7 +26,7 @@ describe('RadioGroup', () => {
 					</RadioGroup>
 				);
 
-				_.forEach(wrapper.find('RadioButton').nodes, (node) => {
+				_.forEach(wrapper.find('LabeledRadioButton').nodes, (node) => {
 					assert.equal(node.props.name, name);
 				});
 			});
@@ -41,7 +41,7 @@ describe('RadioGroup', () => {
 				);
 				const name = wrapper.first().prop('name');
 
-				_.forEach(wrapper.find('RadioButton').nodes, (node) => {
+				_.forEach(wrapper.find('LabeledRadioButton').nodes, (node) => {
 					assert.equal(node.props.name, name);
 				});
 			});
@@ -64,7 +64,7 @@ describe('RadioGroup', () => {
 						<RadioGroup.RadioButton />
 					</RadioGroup>
 				);
-				const childNodes = wrapper.find('RadioButton').nodes;
+				const childNodes = wrapper.find('LabeledRadioButton').nodes;
 
 				assert.equal(childNodes[0].props.isSelected, false);
 				assert.equal(childNodes[1].props.isSelected, false);
@@ -79,7 +79,7 @@ describe('RadioGroup', () => {
 						<RadioGroup.RadioButton />
 					</RadioGroup>
 				);
-				const childNodes = wrapper.find('RadioButton').nodes;
+				const childNodes = wrapper.find('LabeledRadioButton').nodes;
 
 				assert.equal(childNodes[0].props.isSelected, false);
 				assert.equal(childNodes[1].props.isSelected, true);
@@ -94,7 +94,7 @@ describe('RadioGroup', () => {
 						<RadioGroup.RadioButton />
 					</RadioGroup>
 				);
-				const childNodes = wrapper.find('RadioButton').nodes;
+				const childNodes = wrapper.find('LabeledRadioButton').nodes;
 
 				assert.equal(childNodes[0].props.isSelected, true);
 				assert.equal(childNodes[1].props.isSelected, false);
@@ -122,53 +122,72 @@ describe('RadioGroup', () => {
 		});
 	});
 
-	describeWithDOM('RadioGroup', () => {
-		describe('user selects one of the radio button children', () => {
-			it('calls the function passed in as the `onSelect` prop...', () => {
-				const onSelect = sinon.spy();
-				const wrapper = mount(
-					<RadioGroup onSelect={onSelect}>
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-					</RadioGroup>
-				);
+	describe('RadioGroup.Label', () => {
+		it('passes its children through as the `Label` prop for the corresponding `LabeledRadioButton`.', () => {
+			const wrapper = shallow(
+				<RadioGroup>
+					<RadioGroup.RadioButton>
+						<RadioGroup.Label>foo</RadioGroup.Label>
+					</RadioGroup.RadioButton>
+					<RadioGroup.RadioButton>
+						<RadioGroup.Label>bar</RadioGroup.Label>
+					</RadioGroup.RadioButton>
+					<RadioGroup.RadioButton></RadioGroup.RadioButton>
+				</RadioGroup>
+			);
+			const childNodes = wrapper.find('LabeledRadioButton').nodes;
 
-				wrapper.children().at(1).simulate('click');
-				assert(onSelect.calledOnce);
-			});
-
-			it('...and passes along the index of that child as the first argument and a React synthetic event as the second argument.', () => {
-				const onSelect = sinon.spy();
-				const wrapper = mount(
-					<RadioGroup onSelect={onSelect}>
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-					</RadioGroup>
-				);
-
-				wrapper.children().at(1).simulate('click');
-				assert.equal(onSelect.args[0][0], 1);
-				assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
-			});
-
-			it('calls the `onSelect` prop, if a function, of the child prior to calling its own.', () => {
-				const childOnSelect = sinon.spy();
-				const onSelect = sinon.spy();
-				const wrapper = mount(
-					<RadioGroup onSelect={onSelect}>
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton onSelect={childOnSelect} />
-						<RadioGroup.RadioButton />
-					</RadioGroup>
-				);
-
-				wrapper.children().at(1).simulate('click');
-				assert(childOnSelect.calledBefore(onSelect));
-			});
+			assert.equal(childNodes[0].props.Label, 'foo');
+			assert.equal(childNodes[1].props.Label, 'bar');
+			assert.equal(childNodes[2].props.Label, '');
 		});
 	});
 });
 
+describeWithDOM('RadioGroup', () => {
+	describe('user selects one of the radio button children', () => {
+		it('calls the function passed in as the `onSelect` prop...', () => {
+			const onSelect = sinon.spy();
+			const wrapper = mount(
+				<RadioGroup onSelect={onSelect}>
+					<RadioGroup.RadioButton />
+					<RadioGroup.RadioButton />
+					<RadioGroup.RadioButton />
+				</RadioGroup>
+			);
 
+			wrapper.children().at(1).children().simulate('click');
+			assert(onSelect.calledOnce);
+		});
+
+		it('...and passes along the index of that child as the first argument and a React synthetic event as the second argument.', () => {
+			const onSelect = sinon.spy();
+			const wrapper = mount(
+				<RadioGroup onSelect={onSelect}>
+					<RadioGroup.RadioButton />
+					<RadioGroup.RadioButton />
+					<RadioGroup.RadioButton />
+				</RadioGroup>
+			);
+
+			wrapper.children().at(1).children().simulate('click');
+			assert.equal(onSelect.args[0][0], 1);
+			assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
+		});
+
+		it('calls the `onSelect` prop, if a function, of the child prior to calling its own.', () => {
+			const childOnSelect = sinon.spy();
+			const onSelect = sinon.spy();
+			const wrapper = mount(
+				<RadioGroup onSelect={onSelect}>
+					<RadioGroup.RadioButton />
+					<RadioGroup.RadioButton onSelect={childOnSelect} />
+					<RadioGroup.RadioButton />
+				</RadioGroup>
+			);
+
+			wrapper.children().at(1).children().simulate('click');
+			assert(childOnSelect.calledBefore(onSelect));
+		});
+	});
+});
