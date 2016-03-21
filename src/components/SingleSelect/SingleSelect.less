@@ -1,0 +1,68 @@
+.lucid-SingleSelect {
+
+	.lucid-SingleSelect-Control {
+		.no-safari-flicker();
+		.box-sizing();
+		.gradient-animation( @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+		cursor: pointer;
+		height: 28px;
+		display: flex;
+		outline: none;
+		border: 1px solid @featured-color-default-borderColor;
+		border-radius: @Button-size-borderRadius;
+		font: @font;
+		color: @color-black;
+		letter-spacing: .05em;
+		line-height: @Button-size-lineHeight;
+		padding: 0 10px;
+		align-items: center;
+
+		.lucid-SingleSelect-Control-content {
+			display: flex;
+			align-items: center;
+			margin-right: 10px;
+		}
+
+		.lucid-CaretIcon {
+			fill: @color-black;
+			width: 8px;
+			height: 8px;
+			margin-left: auto;
+		}
+
+		// States
+		&-is-selected,&-is-expanded {
+			color: @color-white;
+			border-color: @featured-color-primary-borderColor;
+			.gradient-animation(@featured-color-primary, @featured-color-primary);
+
+			.lucid-CaretIcon {
+				fill: @color-white;
+			}
+		}
+
+		&-is-expanded {
+			z-index: 301;
+		}
+
+		&-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
+			cursor: not-allowed;
+			.opacity();
+		}
+	}
+
+	&.lucid-DropMenu-is-expanded {
+		&.lucid-DropMenu-direction-up {
+			.lucid-SingleSelect-Control {
+				border-radius: 0 0 @Button-size-borderRadius @Button-size-borderRadius;
+			}
+		}
+
+		&.lucid-DropMenu-direction-down {
+			.lucid-SingleSelect-Control {
+				border-radius: @Button-size-borderRadius @Button-size-borderRadius 0 0;
+			}
+		}
+	}
+}
