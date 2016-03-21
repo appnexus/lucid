@@ -18,7 +18,7 @@ const {
 } = React.PropTypes;
 
 /**
- * {"categories": ["controls", "toggles"]}
+ * {"categories": ["controls", "toggles"], "madeFrom": ["RadioButton"]}
  *
  * This is a group of related radio buttons whose values are mutually exclusive
  * and one whom must be selected any given moment in time.

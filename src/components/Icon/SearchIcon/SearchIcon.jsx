@@ -6,7 +6,7 @@ const boundClassNames = lucidClassNames.bind('&-SearchIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"], "extend": "Icon"}
+ * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
  * A search icon.
  */

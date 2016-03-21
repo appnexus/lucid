@@ -14,7 +14,7 @@ const {
 } = React.PropTypes;
 
 /**
- * {"categories": ["controls", "toggles"], "extend": "Checkbox"}
+ * {"categories": ["controls", "toggles"], "extend": "Checkbox", "madeFrom": ["Checkbox"]}
  *
  * This is a composite of the `Checkbox` component and the native `label`
  * element.
