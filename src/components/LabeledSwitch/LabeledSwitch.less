@@ -1,0 +1,79 @@
+.lucid-LabeledSwitch {
+	align-items: center;
+	color: @color-darkGray;
+	cursor: pointer;
+	display: flex;
+	font: @font;
+	justify-content: flex-start;
+
+	> .lucid-Switch {
+		margin-right: 3px;
+	}
+
+	&&-is-disabled {
+		color: @color-mediumGray;
+		cursor: not-allowed;
+	}
+
+	&:hover .lucid-Switch-visualization-glow {
+		.opacity();
+		transform: @Switch-glow-scale;
+	}
+
+	&:hover .lucid-Switch-visualization-handle {
+		transform: @Switch-handle-scale;
+	}
+
+	&&-is-disabled:hover .lucid-Switch-visualization-glow {
+		.opacity(0);
+		transform: none;
+	}
+
+	&&-is-disabled:hover .lucid-Switch-visualization-handle {
+		transform: none;
+	}
+
+	&-is-disabled&-is-selected:hover .lucid-Switch-visualization-handle {
+		transform: @Switch-selected-transform scale(1);
+	}
+
+
+	&-is-selected:hover .lucid-Switch-visualization-glow {
+		transform: @Switch-selected-transform @Switch-glow-scale;
+	}
+
+	&-is-selected:hover .lucid-Switch-visualization-handle {
+		transform: @Switch-selected-transform @Switch-handle-scale;
+	}
+
+	&-text {
+		position: relative;
+		height: @Switch-height;
+
+		> * {
+			position: absolute;
+			white-space: nowrap;
+			top: 0;
+			left: 0;
+			line-height: @Switch-height;
+		}
+
+		&-enter {
+			opacity: 0.01;
+		}
+
+		&-enter&-enter-active {
+			opacity: 1;
+			transition: opacity 100ms ease-in;
+		}
+
+		&-leave {
+			opacity: 1;
+		}
+
+		&-leave&-leave-active {
+			opacity: 0.01;
+			transition: opacity 100ms ease-in;
+		}
+	}
+}
