@@ -1,10 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition }  from '../../util/component-definition';
-import RadioButton from '../RadioButton/RadioButton';
+import Switch from '../Switch/Switch';
 
-const boundClassNames = lucidClassNames.bind('&-LabeledRadioButton');
+const boundClassNames = lucidClassNames.bind('&-LabeledSwitch');
 const {
 	any,
 	node,
@@ -13,26 +14,26 @@ const {
 } = React.PropTypes;
 
 /**
- * {"categories": ["controls", "toggles"], "extend": "RadioButton", "madeFrom": ["RadioButton"]}
+ * {"categories": ["controls", "toggles"], "extend": "Switch", "madeFrom": ["Switch"]}
  *
- * This is a composite of the `RadioButton` component and the native `label`
+ * This is a composite of the `Switch` component and the native `label`
  * element.
  */
-const LabeledRadioButton = React.createClass(createLucidComponentDefinition({
-	displayName: 'LabeledRadioButton',
+const LabeledSwitch = React.createClass(createLucidComponentDefinition({
+	displayName: 'LabeledSwitch',
 
 	childProps: {
 		Label: {
 			/**
-			 * Used to identify the purpose of this radio button to the user --
-			 * can be any renderable content.
+			 * Used to identify the purpose of this switch to the user -- can be
+			 * any renderable content.
 			 */
 			children: node
 		}
 	},
 
 	propTypes: {
-		...RadioButton.propTypes,
+		...Switch.propTypes,
 
 		/**
 		 * Appended to the component-specific class names set on the root
@@ -47,7 +48,7 @@ const LabeledRadioButton = React.createClass(createLucidComponentDefinition({
 
 		/**
 		 * Child element whose children are used to identify the purpose of this
-		 * radio button to the user.
+		 * switch to the user.
 		 */
 		Label: any
 	},
@@ -70,7 +71,8 @@ const LabeledRadioButton = React.createClass(createLucidComponentDefinition({
 			...passThroughs
 		} = this.props;
 
-		const labelChildProps = _.first(LabeledRadioButton.Label.findInAllAsProps(this.props));
+		const labelChildProps = _.first(LabeledSwitch.Label.findInAllAsProps(this.props));
+		const labelKey = isSelected ? 'selectedLabel' : 'unselectedLabel';
 
 		return (
 			<label
@@ -80,21 +82,29 @@ const LabeledRadioButton = React.createClass(createLucidComponentDefinition({
 					}, className)}
 					style={style}
 			>
-				<RadioButton
+				<Switch
 						className={className}
 						isDisabled={isDisabled}
 						isSelected={isSelected}
 						onSelect={onSelect}
 						{..._.omit(passThroughs, 'Label')}
 				/>
-				{
-					labelChildProps
-							? labelChildProps.children || labelChildProps
-							: null
-				}
+				<ReactCSSTransitionGroup
+						transitionName={boundClassNames('&-text')}
+						transitionEnterTimeout={100}
+						transitionLeaveTimeout={100}
+						style={{position: 'relative'}}
+						className={boundClassNames('&-text')}
+				>
+					{
+						labelChildProps
+								? <span key={labelKey}>{labelChildProps.children || labelChildProps}</span>
+								: null
+					}
+				</ReactCSSTransitionGroup>
 			</label>
 		);
 	}
 }));
 
-export default LabeledRadioButton;
+export default LabeledSwitch;

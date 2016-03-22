@@ -7,8 +7,9 @@ import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
 import Checkbox from './components/Checkbox/Checkbox';
 import ContextMenu from './components/ContextMenu/ContextMenu';
 import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
-import Dialog from './components/Dialog/Dialog';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
+import Dialog from './components/Dialog/Dialog';
+import DropMenu from './components/DropMenu/DropMenu';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
 import Grid from './components/Grid/Grid';
@@ -16,6 +17,7 @@ import Icon from './components/Icon/Icon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import LabeledCheckbox from './components/LabeledCheckbox/LabeledCheckbox';
 import LabeledRadioButton from './components/LabeledRadioButton/LabeledRadioButton';
+import LabeledSwitch from './components/LabeledSwitch/LabeledSwitch';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import Overlay from './components/Overlay/Overlay';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
@@ -58,6 +60,7 @@ export {
 	CrossIcon,
 	DangerIcon,
 	Dialog,
+	DropMenu,
 	EditIcon,
 	EligibilityIcon,
 	Grid,
@@ -65,6 +68,7 @@ export {
 	InfoIcon,
 	LabeledCheckbox,
 	LabeledRadioButton,
+	LabeledSwitch,
 	MinusIcon,
 	Overlay,
 	PlusIcon,

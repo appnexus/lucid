@@ -6,7 +6,8 @@ import { mount } from 'enzyme';
 import describeWithDOM from './describe-with-dom';
 
 import {
-	createChildComponent
+	createChildComponent,
+	rejectNullElements
 } from './child-component';
 
 function isReactComponentClass (componentClass) {
@@ -284,6 +285,48 @@ describeWithDOM('#createChildComponent', () => {
 			assert(itemsWrapper.at(3).hasClass('item'));
 			assert(itemsWrapper.at(3).hasClass('available'));
 		});
+	});
+});
+
+describe('#rejectNullElements', () => {
+	it('should filter out child component elements from other children', () => {
+		const ChildComponent0 = createChildComponent();
+		const ChildComponent1 = createChildComponent();
+		const ParentComponent = React.createClass({
+			displayName: 'ParentComponent',
+			propTypes: {
+				children: React.PropTypes.node
+			},
+			render() {
+				const {
+					children
+				} = this.props;
+
+				var normalElements = rejectNullElements(children);
+
+				assert.equal(_.size(normalElements), 3);
+
+				_.forEach(normalElements, (element) => {
+					assert.equal(element.props.className, 'test');
+				});
+
+				return (
+					<section>{children}</section>
+				);
+			}
+		});
+
+		const wrapper = mount(
+			<ParentComponent>
+				<div className='test'>Many</div>
+				<ChildComponent0>Hands</ChildComponent0>
+				<div className='test'>Make</div>
+				<ChildComponent1>Light</ChildComponent1>
+				<div className='test'>Work</div>
+			</ParentComponent>
+		);
+
+		assert.equal(wrapper.text(), 'ManyMakeWork');
 	});
 });
 

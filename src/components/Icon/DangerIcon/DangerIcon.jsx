@@ -6,7 +6,7 @@ const boundClassNames = lucidClassNames.bind('&-DangerIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"], "extend": "CrossIcon"}
+ * {"categories": ["visual design", "icons"], "extend": "CrossIcon", "madeFrom": ["CrossIcon"]}
  *
  * A danger icon.
  */
