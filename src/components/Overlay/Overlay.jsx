@@ -30,8 +30,8 @@ const Overlay = React.createClass(createLucidComponentDefinition({
 		className: string,
 
 		/**
-		 * The modal contents. Generally you should only have a single child
-		 * element so the centering works correctly.
+		 * Generally you should only have a single child element so the centering
+		 * works correctly.
 		 */
 		children: node,
 
@@ -41,15 +41,15 @@ const Overlay = React.createClass(createLucidComponentDefinition({
 		isShown: bool,
 
 		/**
-		 * Determines of the `Overlay` shows with a gray background. If `false`,
-		 * the `Overlay` will be rendered but will be invisible, except for the
+		 * Determines if it shows with a gray background. If `false`, the
+		 * background will be rendered but will be invisible, except for the
 		 * contents, and it won't capture any of the user click events.
 		 */
 		isModal: bool,
 
 		/**
 		 * Set your own id for the `Portal` is that is opened up to contain the
-		 * `Overlay`. In practice you should never need to set this manually.
+		 * contents. In practice you should never need to set this manually.
 		 */
 		portalId: string,
 
@@ -72,7 +72,6 @@ const Overlay = React.createClass(createLucidComponentDefinition({
 		return {
 			isShown: false,
 			isModal: true,
-			portalId: 'Overlay-Portal-' + Math.random().toString(16).substr(2),
 			onEscape: _.noop,
 			onOverlayClick: _.noop,
 		};
@@ -116,7 +115,7 @@ const Overlay = React.createClass(createLucidComponentDefinition({
 			className,
 			isShown,
 			isModal,
-			portalId,
+			portalId = 'Overlay-Portal-' + Math.random().toString(16).substr(2), // this was intentionally left out of getdefaultprops
 			children,
 			...passThroughs
 		} = this.props;

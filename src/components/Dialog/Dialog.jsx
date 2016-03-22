@@ -7,14 +7,12 @@ import { createLucidComponentDefinition }  from '../../util/component-definition
 const boundClassNames = lucidClassNames.bind('&-Dialog');
 
 const {
-	string,
-	bool,
 	node,
 	oneOf,
 } = React.PropTypes;
 
 /**
- * {"categories": ["layout"], "madeFrom": ["Portal", "Overlay"]}
+ * {"categories": ["layout"], "extend": "Overlay", "madeFrom": ["Portal", "Overlay"]}
  *
  * Dialog is used to pop open a window so the user doesn't lose the context of
  * the page behind it. Extra props are spread through to the underlying `Overlay`
@@ -28,26 +26,7 @@ const Dialog = React.createClass(createLucidComponentDefinition({
 	},
 
 	propTypes: {
-		/**
-		 * Appended to the component-specific class names set on the root element.
-		 */
-		className: string,
-
-		/**
-		 * Children will be placed in the body of the `Dialog`.
-		 */
-		children: node,
-
-		/**
-		 * Controls visibility.
-		 */
-		isShown: bool,
-
-		/**
-		 * Set the `Dialog` to be a modal that blocks user input until they
-		 * complete the interaction with the `Dialog`.
-		 */
-		isModal: bool,
+		...Overlay.propTypes,
 
 		/**
 		 * Size variations that only affect the width of the dialog. All the sizes
@@ -69,16 +48,12 @@ const Dialog = React.createClass(createLucidComponentDefinition({
 
 	getDefaultProps() {
 		return {
-			isShown: true,
-			isModal: true,
 			size: 'medium',
 		};
 	},
 
 	render() {
 		const {
-			isShown,
-			isModal,
 			className,
 			size,
 			...passThroughs
@@ -91,8 +66,6 @@ const Dialog = React.createClass(createLucidComponentDefinition({
 			<Overlay
 				{...passThroughs}
 				className={boundClassNames('&', className)}
-				isShown={isShown}
-				isModal={isModal}
 			>
 				<div
 					className={boundClassNames('&-window', {
