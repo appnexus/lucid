@@ -1,0 +1,139 @@
+@Table-row-height: 26px;
+@Table-cell-padding: 9px;
+
+.lucid-Table {
+	&-table {
+		border: 1px solid @color-borderColor;
+		width: 100%;
+		font: 500 @font;
+		color: @color-textColor;
+		a {
+			color: @color-linkColor;
+		}
+	}
+
+	&-row {
+		.rowHover(@color-lightGray);
+	}
+
+	&-isHover {
+		background-color: @color-lightGray;
+		td{
+			&:first-of-type {
+				.hardstop-gradient(to right, @color-primary, @color-lightGray, 4px);
+			}
+		}
+		.rowHover(@color-lightGray);
+	}
+
+	&-isDisabled {
+		color: @color-disabledText;
+		font-style: italic;
+		a {
+			color: fade(multiply(@color-disabledText, @color-primary), 50%);
+		}
+	}
+
+	&-isChecked {
+		background-color: @color-primaryLight;
+		.rowHover(multiply(@color-primaryLight, @color-lightGray));
+	}
+
+	&-isSelected {
+		background-color: @color-primaryMedium;
+		td{
+			&:first-of-type {
+				.hardstop-gradient(to right, @color-primary, @color-primaryMedium, 4px);
+			}
+		}
+		.rowHover(multiply(@color-primaryMedium, @color-lightGray));
+	}
+
+	&-cell {
+		padding: 0 @Table-cell-padding;
+		line-height: @Table-row-height;
+		box-sizing: border-box;
+	}
+
+	&-align-left {
+		text-align: left;
+	}
+	&-align-right {
+		text-align: right;
+	}
+	&-align-center {
+		text-align: center;
+	}
+	&-checkbox {
+		width: 41px;
+		padding: 0 @Table-cell-padding;
+		line-height: inherit;
+	}
+
+	&-hasIcon {
+		line-height: inherit;
+		width: 37px;
+	}
+
+	&-hasButton {
+		text-align: center;
+	}
+
+	&-thead {
+		tr {
+			background-color: #757b7f;
+		}
+		th {
+			border-top: 1px solid tint(black, 50%);
+			border-bottom: 1px solid tint(black, 50%);
+			border-right: 1px solid fade(white, 30%);
+			color: @color-white;
+			&:first-of-type {
+				border-left: 1px solid tint(black, 50%);
+			}
+			&:last-of-type {
+				border-right: 1px solid tint(black, 50%);
+			}
+		}
+	}
+	&-tbody {
+		td {
+			border-bottom: 1px solid @color-mediumGray;
+		}
+	}
+
+	&-isComfortable {
+		th.lucid-Table-cell {
+			padding: 0 @Table-cell-padding*1.5;
+			&.lucid-Table-checkbox {
+				width: 41px;
+				padding: 0 @Table-cell-padding;
+				line-height: inherit;
+			}
+		}
+		td.lucid-Table-cell {
+			padding: 0 @Table-cell-padding*1.5;
+			line-height: @Table-row-height*1.5;
+			&.lucid-Table-checkbox {
+				width: 41px;
+				padding: 0 @Table-cell-padding;
+				line-height: inherit;
+			}
+			&.lucid-Table-hasIcon {
+				line-height: inherit;
+			}
+		}
+
+	}
+}
+
+.rowHover(@bgcolor) {
+	&:hover {
+		background-color: @bgcolor;
+		td {
+			&:first-of-type {
+				.hardstop-gradient(to right, @color-primary, @bgcolor, 4px);
+			}
+		}
+	}
+}
