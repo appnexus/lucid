@@ -33,7 +33,11 @@ export default React.createClass({
 					Header='Header'
 					size='small'
 				>
-					When you aren't using the modal mode, it's a good idea to provide handlers for onEscape and onOverlayClick so the user can exit out easily.
+
+					In most cases, you'll probably just use an isModal Dialog, but this
+					example shows that the Dialog doesn't have to be a modal. Try
+					pressing "escape" to close this Dialog.
+
 					<Dialog.Footer>
 						<Button
 							kind='link'
@@ -43,6 +47,7 @@ export default React.createClass({
 						</Button>
 						<Button kind='primary'>Save</Button>
 					</Dialog.Footer>
+
 				</Dialog>
 			</div>
 		)
