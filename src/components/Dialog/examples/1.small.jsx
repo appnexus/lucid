@@ -30,6 +30,12 @@ export default React.createClass({
 					Header='Header'
 					size='small'
 				>
+					<div key={'info'}>
+						For better UX, we recommend NOT handling onEscape and
+						onOverlayClick when isModal is true. The term "modal" implies that
+						the user needs to interact with one of the buttons in the footer to
+						exit the dialog.
+					</div>
 					{_.times(10).map((i) => {
 						return <div key={i}>Body</div>
 					})}

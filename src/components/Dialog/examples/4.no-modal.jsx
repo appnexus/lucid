@@ -28,12 +28,12 @@ export default React.createClass({
 				<Dialog
 					isModal={false}
 					isShown={this.state.isShown}
+					onOverlayClick={_.partial(this.handleShow, false)}
+					onEscape={_.partial(this.handleShow, false)}
 					Header='Header'
 					size='small'
 				>
-					{_.times(10).map((i) => {
-						return <div key={i}>Body</div>
-					})}
+					When you aren't using the modal mode, it's a good idea to provide handlers for onEscape and onOverlayClick so the user can exit out easily.
 					<Dialog.Footer>
 						<Button
 							kind='link'
