@@ -1,6 +1,7 @@
 // button sizes
 @Button-size-padding: 12px;
 @Button-size-lineHeight: 26px;
+@Button-size-shortlineHeight: 20px;
 @Button-size-borderRadius: @size-borderRadius;
 
 .lucid-Button {
@@ -16,6 +17,10 @@
 	letter-spacing: .05em;
 	line-height: @Button-size-lineHeight;
 	padding: 0 @Button-size-padding;
+
+	&[disabled] {
+		cursor: not-allowed;
+	}
 
 
 	// Types
@@ -69,10 +74,10 @@
 
 	// Sizes
 	&-short {
-		line-height: @Button-size-lineHeight/1.5;
+		line-height: @Button-size-shortlineHeight;
 	}
 	&-small {
-		line-height: @Button-size-lineHeight/1.5;
+		line-height: @Button-size-shortlineHeight;
 		padding: 0 @Button-size-padding/1.5;
 	}
 	&-large {
