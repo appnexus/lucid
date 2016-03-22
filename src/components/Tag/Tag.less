@@ -1,0 +1,26 @@
+@Tag-spacing: 6px;
+
+.lucid-Tag {
+	background-color: @color-primary;
+	border-radius: 3px;
+	color: @color-white;
+	display: inline-block;
+	font: @font;
+	height: 20px;
+	line-height: 20px;
+	margin: 1px;
+	padding: 0 @Tag-spacing;
+
+	&-close {
+		color: fade(@color-white, 50%);
+		cursor: pointer;
+		font-size: 1rem;
+		font-weight: bold;
+		line-height: 1em;
+		margin-left: @Tag-spacing;
+
+		&:hover {
+			color: @color-white;
+		}
+	}
+}
