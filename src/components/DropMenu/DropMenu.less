@@ -1,0 +1,78 @@
+@DropMenu-size-maxHeight: 420px;
+@DropMenu-size-optionHeight: 25px;
+
+.lucid-DropMenu {
+
+	&&-base {
+		display: inline-block;
+	}
+
+	&-Control {
+		position:relative;
+		outline: 0px;
+	}
+
+	&-Option {
+		cursor: pointer;
+		padding: 0 10px;
+		line-height: @Button-size-lineHeight;
+		font: @font;
+		height: @DropMenu-size-optionHeight;
+		display: flex;
+		align-items: center;
+
+		&&-is-disabled {
+			color: @color-disabledText;
+			font-style: italic;
+			cursor: not-allowed;
+		}
+
+		&&-is-focused {
+			background: @color-lightGray;
+		}
+
+		&&-is-selected {
+			background: @color-primaryMedium;
+		}
+
+		&&-is-null {
+			color: @color-disabledText;
+		}
+	}
+
+	&.lucid-ContextMenu-FlyOut {
+		#normalize > .fix-chrome-scrollbar-zindex();
+		.box-sizing();
+		background-color: @color-white;
+		border: solid 1px @featured-color-default-borderColor;
+		overflow-y: auto;
+		max-height: @DropMenu-size-maxHeight;
+
+		&&-Up {
+			border-width: 1px 1px 0 1px;
+			border-radius: @Button-size-borderRadius @Button-size-borderRadius 0 0;
+			box-shadow: 0 1px 0 @featured-color-default-borderColor;
+		}
+
+		&&-Down {
+			border-width: 0 1px 1px 1px;
+			border-radius: 0 0 @Button-size-borderRadius @Button-size-borderRadius;
+			box-shadow: 0 -1px 0 @featured-color-default-borderColor;
+		}
+	}
+
+	&-OptionGroup-divider {
+		border: 1px solid @color-gray;
+		border-width: 1px 0 0 0;
+		height: 1px;
+	}
+
+	&-label {
+		padding: 0 6px;
+		font: @font;
+		font-weight: bold;
+		height: @DropMenu-size-optionHeight;
+		display: flex;
+		align-items: center;
+	}
+}
