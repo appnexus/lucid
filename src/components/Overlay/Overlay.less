@@ -1,0 +1,28 @@
+.lucid-Overlay {
+	.transition-group-animation-fade();
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	z-index: @zIndexModal;
+	background-color: @color-gray-60;
+
+	&&-is-not-modal {
+		background-color: @color-transparent;
+		// Setting this to `none` allows us to use flex box to center the content
+		// on the screen while still allowing the user to interact with elements
+		// behind it
+		pointer-events: none;
+
+		// Have to set the pointer events back to initial so the user can interact
+		// with the contents
+		> * {
+			pointer-events: initial;
+		}
+	}
+}

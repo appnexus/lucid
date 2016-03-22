@@ -1,18 +1,18 @@
 import _ from 'lodash';
 import React from 'react';
-import Modal from '../Modal';
+import Dialog from '../Dialog';
 import Button from '../../Button/Button';
 
 export default React.createClass({
 	getInitialState() {
 		return {
-			isClosed: true
+			isShown: false
 		};
 	},
 
-	handleOpenClose(isClosed) {
+	handleShow(isShown) {
 		this.setState({
-			isClosed: isClosed
+			isShown: isShown
 		});
 	},
 
@@ -20,32 +20,31 @@ export default React.createClass({
 		return (
 			<div>
 				<Button
-					onClick={_.partial(this.handleOpenClose, !this.state.isClosed)}
+					onClick={_.partial(this.handleShow, !this.state.isShown)}
 				>
 					Toggle
 				</Button>
 
-				<Modal
-					isClosed={this.state.isClosed}
-					onEscape={_.partial(this.handleOpenClose, true)}
+				<Dialog
+					isShown={this.state.isShown}
 					size='large'
 				>
-					<Modal.Header>
+					<Dialog.Header>
 						<i>Rich Header</i>
-					</Modal.Header>
+					</Dialog.Header>
 					{_.times(50).map((i) => {
 						return <div key={i}>Body</div>
 					})}
-					<Modal.Footer>
+					<Dialog.Footer>
 						<Button
 							kind='link'
-							onClick={_.partial(this.handleOpenClose, true)}
+							onClick={_.partial(this.handleShow, false)}
 						>
 							Cancel
 						</Button>
 						<Button kind='primary'>Save</Button>
-					</Modal.Footer>
-				</Modal>
+					</Dialog.Footer>
+				</Dialog>
 			</div>
 		)
 	}
