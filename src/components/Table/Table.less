@@ -1,5 +1,12 @@
 @Table-row-height: 26px;
 @Table-cell-padding: 9px;
+@Table-cell-border: 1px solid @color-mediumGray;
+@Table-header-backgroundColor: #767b7f;
+@Table-header-colorDark: fade(@color-black, 60%);
+@Table-header-border: 1px solid @Table-header-colorDark;
+@Table-header-cell-border: 1px solid fade(white, 30%);
+@Table-hover-borderWidth: 4px;
+@Table-hasCheckbox-width: 41px;
 
 .lucid-Table {
 	&-table {
@@ -12,20 +19,80 @@
 		}
 	}
 
+	// **
+	// * `&-thead` is used to limit some styles to be only applyed to the
+	// * `<thead>`.  The `&-head` defines the header or the `.lucid-Table`
+	&-thead {
+		// **
+		// * a "row" within the "thead"
+		// *
+		.lucid-Table-thead-row {
+			background-color: @Table-header-backgroundColor;
+		}
+		// **
+		// * a "cell" within the "thead"
+		// *
+		.lucid-Table-cell {
+
+			border-top: @Table-header-border;
+			border-bottom: @Table-header-border;
+			border-right: @Table-header-cell-border;
+			color: @color-white;
+
+			&[colspan] {
+				border-bottom: @Table-header-cell-border;
+			}
+
+			&.lucid-Table-isSorted {
+				background-color: @Table-header-colorDark;
+			}
+
+			// **
+			// * set the border of the first "th" to match the border of the header
+			// *
+			&:first-of-type {
+				border-left: @Table-header-border;
+			}
+			// **
+			// * set the border of the last "th" to match the border of the header
+			// *
+			&:last-of-type {
+				border-right: @Table-header-border;
+			}
+		}
+	}
+	&-tbody {
+		// **
+		// * set the border of all "td" within a '&-tbody'
+		// *
+		.lucid-Table-cell {
+			border-bottom: @Table-cell-border;
+		}
+	}
+
+	// **
+	// *A standard `<tr>` tag
+	// *
 	&-row {
 		.rowHover(@color-lightGray);
 	}
 
+	// **
+	// * TEMP to show always on hover state
+	// *
 	&-isHover {
 		background-color: @color-lightGray;
 		td{
 			&:first-of-type {
-				.hardstop-gradient(to right, @color-primary, @color-lightGray, 4px);
+				.hardstop-gradient(to right, @color-primary, @color-lightGray, @Table-hover-borderWidth);
 			}
 		}
 		.rowHover(@color-lightGray);
 	}
 
+	// **
+	// * When `&-isDisabled` is applied to a row the row will appear disabled
+	// *
 	&-isDisabled {
 		color: @color-disabledText;
 		font-style: italic;
@@ -34,79 +101,117 @@
 		}
 	}
 
+	// **
+	// * A row is `&-isChecked` when a `<Checkbox>` within that row is active
+	// *
 	&-isChecked {
 		background-color: @color-primaryLight;
 		.rowHover(multiply(@color-primaryLight, @color-lightGray));
 	}
 
+	// **
+	// * A row is `&-isSelected` when that row is active and a lower third panel
+	// * is displayed.
+	// *
 	&-isSelected {
 		background-color: @color-primaryMedium;
 		td{
 			&:first-of-type {
-				.hardstop-gradient(to right, @color-primary, @color-primaryMedium, 4px);
+				.hardstop-gradient(to right, @color-primary, @color-primaryMedium, @Table-hover-borderWidth);
 			}
 		}
 		.rowHover(multiply(@color-primaryMedium, @color-lightGray));
 	}
 
+	// **
+	// * A standard `<td>` or `<th>` tag.
+	// *
 	&-cell {
 		padding: 0 @Table-cell-padding;
 		line-height: @Table-row-height;
 		box-sizing: border-box;
 	}
 
+	// **
+	// * Apply to align the text to the left.
+	// *
 	&-align-left {
 		text-align: left;
 	}
+
+	// **
+	// * Apply to align the text to the right.
+	// *
 	&-align-right {
 		text-align: right;
 	}
+
+	// **
+	// * Apply to align the text in the center of a `&-cell`.
+	// *
 	&-align-center {
 		text-align: center;
 	}
+
+	// **
+	// * Add `&-checkbox` if the `&-cell` has a `<Checkbox>` as a child.  This
+	// * will change the width to fit only the `<Checkbox`> and change the
+	// * line-height to inherit to allow the `<Checkbox>` to be centered within
+	// * the cell.
+	// *
 	&-checkbox {
-		width: 41px;
+		width: @Table-hasCheckbox-width;
 		padding: 0 @Table-cell-padding;
 		line-height: inherit;
 	}
-
+	// **
+	// * Add `&-hasIcon` if the `&-cell` has a `<Icon>` as a child.  This will
+	// * change the width to fit only the `<Icon`> and change the line-height to
+	// * inherit to allow the `<Icon>` to be centered within the cell.
+	// *
 	&-hasIcon {
 		line-height: inherit;
 		width: 37px;
 	}
 
+	// **
+	// * Add `&-hasButton` if the `&-cell` has a `<Button>` as a child. This class
+	// * will center the `<Button>` within the cell.
+	// *
 	&-hasButton {
 		text-align: center;
 	}
 
-	&-thead {
-		tr {
-			background-color: #757b7f;
-		}
-		th {
-			border-top: 1px solid tint(black, 50%);
-			border-bottom: 1px solid tint(black, 50%);
-			border-right: 1px solid fade(white, 30%);
-			color: @color-white;
-			&:first-of-type {
-				border-left: 1px solid tint(black, 50%);
-			}
-			&:last-of-type {
-				border-right: 1px solid tint(black, 50%);
-			}
-		}
-	}
-	&-tbody {
-		td {
-			border-bottom: 1px solid @color-mediumGray;
-		}
+	// **
+	// * Add `&-hasBorderLeft` if the `&-cell` needs to have a vertical border
+	// * line on the left.
+	// *
+	&-hasBorderLeft {
+		border-left: @Table-cell-border;
 	}
 
+	// **
+	// * Add `&-hasBorderRight` if the `&-cell` needs to have a vertical border
+	// * line on the right.
+	// *
+	&-hasBorderRight {
+		border-right: @Table-cell-border;
+	}
+
+	&-hasRowSpan {
+		background: @color-white !important;
+	}
+
+	// **
+	// * Add `&-isComfortable` increased the padding/line-height of the cells of
+	// * the the table by 50%. The increased line-heightis applyed only the
+	// * `&-tbody` cells.
+	// *
 	&-isComfortable {
 		th.lucid-Table-cell {
 			padding: 0 @Table-cell-padding*1.5;
 			&.lucid-Table-checkbox {
-				width: 41px;
+				width: @Table-hasCheckbox-width;
 				padding: 0 @Table-cell-padding;
 				line-height: inherit;
 			}
@@ -115,7 +220,7 @@
 			padding: 0 @Table-cell-padding*1.5;
 			line-height: @Table-row-height*1.5;
 			&.lucid-Table-checkbox {
-				width: 41px;
+				width: @Table-hasCheckbox-width;
 				padding: 0 @Table-cell-padding;
 				line-height: inherit;
 			}
@@ -127,12 +232,18 @@
 	}
 }
 
+// ** MIXIN
+// * This mixin is used to help with the hover state.  The designs call for a
+// * 4px line on the left of the "row".  To do this we use our `.hardstop-gradient`
+// * which is appied to the first `.lucid-Table-cell` as a background gradient.
+// * The mixin takes a single background color that is used to fill the "row"
+// *
 .rowHover(@bgcolor) {
 	&:hover {
 		background-color: @bgcolor;
-		td {
-			&:first-of-type {
-				.hardstop-gradient(to right, @color-primary, @bgcolor, 4px);
+		.lucid-Table-cell {
+			&:first-of-type, &.lucid-Table-fixHover {
+				.hardstop-gradient(to right, @color-primary, @bgcolor, @Table-hover-borderWidth);
 			}
 		}
 	}
