@@ -1,6 +1,6 @@
 import { common } from '../../util/generic-tests';
-import Grid from './Grid';
+import List from './List';
 
-describe('Grid', () => {
-	common(Grid);
+describe('List', () => {
+	common(List);
 });

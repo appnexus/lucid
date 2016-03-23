@@ -1,98 +1,159 @@
-@List-border-size: 4px;
-@list-child-list-spacer: 6px;
-@list-child-padding: 15px;
+@import '../../styles/mixins';
+@import '../../styles/variables';
 
+@List: lucid-List;
+@ListLevels: 3;
+
+@List-size-border: 4px;
+@List-size-iconButton: 20px;
+@List-size-icon: 12px;
+
+@ListChild-size-spacer: 6px;
+@ListChild-size-padding: 15px;
+
+
+
+// Resets
 ul.lucid-List { list-style: none; }
 
-// Base List
+/*
+	Primary Component - List
+  Should create a default flexible list capable of
+  containing an infinate number of nested items.
+*/
 .lucid-List {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	width: 100%;
+	padding: 0;
+
+	// ToDo: style version with a the x-axis set as primary
+	&-is-horizontal { flex-direction: row; }
+}
+
+/*
+ * Child Component - ListItem
+*/
+.lucid-List-ListItem {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+
+	>a {
+		.selectable();
 		display: flex;
-		flex-direction: column;
+		font-size: 12px;
 		justify-content: flex-start;
-		align-items: stretch;
-		width: 100%;
-		padding: 0;
+		align-items: center;
+		font-weight: bold;
+		border-width: 1px 0 0 0;
+		border-color: @color-gray;
+		border-style: solid;
+		color: @color-primary;
+		padding: 10px 0 8px @ListChild-size-padding;
+		line-height: 1em;
+    height: 30px;
 
-		a {
-			.selectable();
-			display:block;
-			font-weight: bold;
-			line-height: @Button-size-lineHeight;
-			border-width: 0 0 1px 0;
-			border-color: #e3e3e3;
-			border-style: solid;
-			width: 100%;
-			color: @color-primary;
-
-			&:hover {
-				.hardstop-gradient(to right, @featured-color-primary, @featured-color-default-gradientEndColor, @List-border-size);
-				color: @color-darkGray;
-			}
-
-			&:focus,
-			&:active {
-				.hardstop-gradient(to right, @featured-color-primary, @featured-color-primary-gradientStartColor, @List-border-size);
-				color: @color-darkGray;
-			}
+		&:hover {
+			.hardstop-gradient(to right, @featured-color-primary, @featured-color-default-gradientEndColor, @List-size-border);
+			color: @color-darkGray;
 		}
-	&-ListItem-is-parent &-ListItem {
-		a {
-			font-weight: normal;
 
-			&:before {
-				content: '-';
-				display: inline-block;
-				width: @list-child-list-spacer;
-				color: #e3e3e3;
-				margin: 0 @list-child-list-spacer 0 0;
-			}
-
-			&:hover {
-				&:before {
-					color: #333333;
-				}
-			}
+		&:focus,
+		&:active {
+			.hardstop-gradient(to right, @featured-color-primary, @featured-color-primary-gradientStartColor, @List-size-border);
+			color: @color-darkGray;
 		}
+
+		>span{ flex: 1; }
 	}
 
-	/*
-	 * This handles the indentation spacing of the menu items.
-	*/
-	> li {
-		:hover{
+	// All List Items who have nested Lists
+	&-is-parent {
+		> a {border-bottom-color: transparent;}
 
-		}
+		.lucid-List .lucid-List-ListItem{
+			>a {
+				font-weight: normal;
+				border-color: transparent;
 
-		> a {
-			padding: 0 @list-child-padding;
-		}
+				&:before {
+					content: '-';
+					display: inline-block;
+					width: @ListChild-size-spacer;
+					color: @color-gray;
+					margin: 0 @ListChild-size-spacer 0 0;
+				}
 
-		> .lucid-List li {
-			> a {
-				padding: 0 @list-child-padding;
-			}
-
-			> .lucid-List li {
-				> a {
-					padding: 0 (@list-child-padding + (@list-child-list-spacer*2));
+				&:hover {
+					&:before {
+						color: @color-darkGray;
+					}
 				}
 			}
+
+			// ToDo make this a looping mixin, to handle as many layers deep as we need to go
+			//  Calc @ListChild-size-padding + (12 * nestingListDepth) (in this case nestingListDepth = 1)
+			>ul {
+				li a{
+					padding: 10px 0 8px @ListChild-size-padding + 12;
+				}
+			}
+
+		}
+	}
+	&:first-of-type {
+		>a {
+			border-top-color: transparent;
 		}
 	}
 }
 
-.lucid-List-is-expandable {
-	.downArrowButton();
-	overflow: hidden;
+/* Expander Button - Added to the DOM with React when hasExpander = true */
+.lucid-List-ListItem {
+	>a {
+		.lucid-List-expander{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: @List-size-iconButton;
+			height: @List-size-iconButton;
+			font-size: @List-size-icon;
+			background: transparent;
+			border-color: transparent;
+			margin-right: 5px;
+			padding: 0;
+			line-height: 1em;
 
-	.lucid-List-ListItem-is-parent {
-		&:hover {
-			border: red 2px solid;
+			// Remove the unnecessary animated background button gradient from the DOM
+			&:active, &:focus {
+				&:before{display: none;}
+			}
+
+			.lucid-CaretIcon {
+				width: @List-size-icon;
+				height: @List-size-icon;
+				color: @color-gray;
+			}
 		}
-	}
 
-	.lucid-List{
-		// height: 0;
+		&:hover {
+			.lucid-List-expander {
+				border: 1px solid @featured-color-default-borderColor;
+			}
+		}
+		&:focus,
+		&:active {
+			.lucid-List-expander {
+				background: transparent;
+				border: 1px solid transparent;
 
+				.lucid-CaretIcon {
+					color: @color-primary;
+				}
+			}
+		}
 	}
 }

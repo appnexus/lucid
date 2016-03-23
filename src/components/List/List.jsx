@@ -1,16 +1,18 @@
 import _ from 'lodash';
 import React from 'react';
-import classNames from 'classnames';
 import { bindClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition }  from '../../util/component-definition';
+import Button from '../Button/Button';
+import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 
 const boundClassNames = bindClassNames('lucid-List');
 
 const {
-	string,
+	func,
 	bool,
-	node,
-	oneOf,
+	any,
+	string,
+	number,
 } = React.PropTypes;
 
 /**
@@ -25,100 +27,166 @@ const List = React.createClass(createLucidComponentDefinition({
 	childProps: {
 		ListItem: {
 			/**
-			 * Appended to the component-specific class names set on the root
-			 * element.
+			 * Class names that are appended to the defaults.
 			 */
 			className: string,
 
 			/**
-			 * Any valid React component
+			 * If `true` then the active list will be selected.
 			 */
-			 children: node,
+			isSelected: bool,
+
+			/**
+			 * Callback for when the user clicks a sublist. Called with the index of the
+			 * list that was clicked.
+			 */
+			onSelect: func,
+
+			/**
+			 * If `true` then the active list will appear open.
+			 */
+			isOpen: bool,
+
+			/**
+			 * Indicates whether the component should appear and act disabled by
+			 * having a "greyed out" palette and ignoring user interactions.
+			 */
+			isDisabled: bool,
 		}
 	},
 
 	propTypes: {
 		/**
-		 * Appended to the component-specific class names set on the root
-		 * element.
+		 * Styles that are passed through to the root container.
+		 */
+		style: any,
+
+		/**
+		 * Class names that are appended to the defaults.
 		 */
 		className: string,
 
 		/**
-		 * explicitly set the primary axis of the grid to Y
+		 * Indicates which of the `List.ListItem` children is currently selected. The
+		 * index of the last `List.ListItem` child with `isSelected` equal to `true`
+		 * takes precedence over this prop.
 		 */
-		hasDirection: oneOf(['vertical', 'horizontal']),
+		selectedIndex: number,
 
 		/**
-		 * Any valid React component
-		 */
-		 children: node,
-
-		 /**
- 		 * Builds the Expander button to show child lists.
- 		 */
- 		 isExpandable: bool,
+		* Styles a tab as disabled.  This typically used with `isProgressive` to
+		* to disabled steps that have not been compleated and should not be
+		* selected until the current step has been compleated.
+		*/
+		isDisabled: bool,
 
 		/**
-		 * Should the list be flexible or not
+		 * Indicates that this component follows the Y axis by default.
 		 */
-		 isFlexible: bool
+		isVertical: bool,
+
+		/**
+		 * Indicates that this component uses the expander styling
+		 */
+		hasExpander: bool,
 	},
 
 	getDefaultProps() {
 		return {
-			className: null,
-			children: null,
-			hasDirection: 'horizontal',
-			isFlexible: true,
-			isExpandable: true
+			isDisabled: false,
+			isVertical: true,
+			hasExpander: false
 		};
 	},
 
 	render() {
 		const {
+			isVertical,
+			isDisabled,
+			selectedIndex,
+			hasExpander,
+			isOpen,
 			className,
+			style,
 			children,
-			hasDirection,
-			isExpandable,
-			isFlexible,
 			...passThroughs
 		} = this.props;
 
 		const listChildProps = List.ListItem.findInAllAsProps(this.props);
-
-		const listClasses = classNames(boundClassNames('&', {
-			'&-is-vertical': hasDirection === 'vertical',
-			'&-is-expandable': isExpandable === true,
-			'&-is-flexible': isFlexible === true
-		}, className));
+		const selectedIndexFromChildren = _.findLastIndex(listChildProps, {
+			isSelected: true,
+		});
+		const actualSelectedIndex = selectedIndexFromChildren !== -1
+			? selectedIndexFromChildren
+			: selectedIndex;
 
 		return (
 			<ul {...passThroughs}
-				className={listClasses}>
-				{_.map(listChildProps, (listChildProp) => {
+				className={boundClassNames('&', {
+					'&-is-alignedOnX': isVertical === false,
+					'&-is-disabled'  : isDisabled,
+					'&-is-selected'  : isOpen,
+					'&-has-expander' : hasExpander
+				}, className)}
+				style={style} >
+				{_.map(listChildProps, (listChildProp, index) => {
 					const hasChildList = _.isArray(listChildProp.children);
-					const listChildClasses = classNames(boundClassNames('&-ListItem', {
-						'&-ListItem-is-parent' : hasChildList
-					}, className));
+					listChildProp = _.defaults({}, listChildProp, {
+						isSelected: false,
+						onSelect: _.noop,
+						isOpen: true,
+						isDisabled: false
+					});
 
 					return (
-						<li {...listChildProp}
-							className={listChildClasses} >
-							{ hasChildList ?
-									<a>{ listChildProp.children[0]}
-									</a>
-									:
-									<a>{listChildProp.children}</a>
+						<li {...listChildProp.passThroughs}
+							key={index}
+							onClick={this.handleClicked}
+							onTouchEnd={this.handleClicked}
+							className={boundClassNames('&-ListItem', {
+								'&-ListItem-is-parent' : hasChildList,
+								'&-ListItem-is-active': index === actualSelectedIndex,
+								'&-ListItem-is-open': isOpen,
+							}, className)} >
+							{hasChildList?
+								<a>
+									{ listChildProp.children[0]}
+									{hasExpander?
+										<Button
+											className='lucid-List-expander'
+											size='short'>
+											<CaretIcon direction={isOpen?'up':'down'} openIcon />
+										</Button>
+										: null
+									}
+								</a>
+								:
+								<a>{listChildProp.children}</a>
 							}
 							{hasChildList? _.slice(listChildProp.children, 1) : null}
 						</li>
-					);
+					)
 				})}
 				{children}
 			</ul>
 		);
+	},
+
+	handleClicked(event) {
+		const {
+			isDisabled,
+			isOpen,
+			onSelect,
+		} = this.props;
+
+		event.preventDefault();
+
+		if (!isDisabled && !isOpen) {
+			onSelect(true, { event, props: this.props });
+
+		}
 	}
+
 }));
 
 export default List;
