@@ -4,10 +4,11 @@ import classNames from 'classnames';
 import { bindClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition }  from '../../util/component-definition';
 
-const boundClassNames = bindClassNames('List');
+const boundClassNames = bindClassNames('lucid-List');
 
 const {
 	string,
+	bool,
 	node,
 	oneOf,
 } = React.PropTypes;
@@ -46,12 +47,22 @@ const List = React.createClass(createLucidComponentDefinition({
 		/**
 		 * explicitly set the primary axis of the grid to Y
 		 */
-		hasDirection: oneOf('vertical', 'horizontal'),
+		hasDirection: oneOf(['vertical', 'horizontal']),
 
 		/**
 		 * Any valid React component
 		 */
 		 children: node,
+
+		 /**
+ 		 * Builds the Expander button to show child lists.
+ 		 */
+ 		 isExpandable: bool,
+
+		/**
+		 * Should the list be flexible or not
+		 */
+		 isFlexible: bool
 	},
 
 	getDefaultProps() {
@@ -59,6 +70,8 @@ const List = React.createClass(createLucidComponentDefinition({
 			className: null,
 			children: null,
 			hasDirection: 'horizontal',
+			isFlexible: true,
+			isExpandable: true
 		};
 	},
 
@@ -67,23 +80,38 @@ const List = React.createClass(createLucidComponentDefinition({
 			className,
 			children,
 			hasDirection,
+			isExpandable,
+			isFlexible,
 			...passThroughs
 		} = this.props;
 
 		const listChildProps = List.ListItem.findInAllAsProps(this.props);
 
-		const listClasses = classNames(className, boundClassNames('~', {
-			'is-vertical': hasDirection === 'vertical',
-		}));
+		const listClasses = classNames(boundClassNames('&', {
+			'&-is-vertical': hasDirection === 'vertical',
+			'&-is-expandable': isExpandable === true,
+			'&-is-flexible': isFlexible === true
+		}, className));
 
 		return (
 			<ul {...passThroughs}
 				className={listClasses}>
 				{_.map(listChildProps, (listChildProp) => {
+					const hasChildList = _.isArray(listChildProp.children);
+					const listChildClasses = classNames(boundClassNames('&-ListItem', {
+						'&-ListItem-is-parent' : hasChildList
+					}, className));
+
 					return (
 						<li {...listChildProp}
-							className={classNames(listChildProp.className, boundClassNames('ListItem'))} >
-							{listChildProp.children}
+							className={listChildClasses} >
+							{ hasChildList ?
+									<a>{ listChildProp.children[0]}
+									</a>
+									:
+									<a>{listChildProp.children}</a>
+							}
+							{hasChildList? _.slice(listChildProp.children, 1) : null}
 						</li>
 					);
 				})}

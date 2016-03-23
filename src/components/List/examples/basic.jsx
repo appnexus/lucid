@@ -5,8 +5,26 @@ export default React.createClass({
 	render() {
 		return (
 			<List>
-				<List.ListItem>one</List.ListItem>
-				<List.ListItem>two</List.ListItem>
+				<List.ListItem>one
+					<List>
+						<List.ListItem>one</List.ListItem>
+						<List.ListItem>two</List.ListItem>
+						<List.ListItem>three</List.ListItem>
+					</List>
+				</List.ListItem>
+				<List.ListItem>two
+					<List>
+						<List.ListItem>one
+							<List>
+								<List.ListItem>one</List.ListItem>
+								<List.ListItem>two</List.ListItem>
+								<List.ListItem>three</List.ListItem>
+							</List>
+						</List.ListItem>
+						<List.ListItem>two</List.ListItem>
+						<List.ListItem>three</List.ListItem>
+					</List>
+				</List.ListItem>
 				<List.ListItem>three</List.ListItem>
 			</List>
 		);
