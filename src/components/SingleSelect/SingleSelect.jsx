@@ -55,7 +55,7 @@ const SingleSelect = React.createClass(createLucidComponentDefinition({
 		 * Allows user to reset the `optionIndex` to `null` if they select the placeholder at the top of the options list.
 		 * If `false`, it will not render the placeholder in the menu.
 		 */
-		allowReset: bool,
+		hasReset: bool,
 		/**
 		 * Disables the SingleSelect from being clicked or focused.
 		 */
@@ -91,7 +91,7 @@ const SingleSelect = React.createClass(createLucidComponentDefinition({
 
 	getDefaultProps() {
 		return {
-			allowReset: true,
+			hasReset: true,
 			isDisabled: false,
 			selectedIndex: null,
 			DropMenu: DropMenu.getDefaultProps()
@@ -121,7 +121,7 @@ const SingleSelect = React.createClass(createLucidComponentDefinition({
 		const {
 			style,
 			className,
-			allowReset,
+			hasReset,
 			isDisabled,
 			selectedIndex,
 			onSelect,
@@ -171,22 +171,20 @@ const SingleSelect = React.createClass(createLucidComponentDefinition({
 						<CaretIcon direction={isExpanded ? direction : 'down'} />
 					</div>
 				</DropMenu.Control>
-				{allowReset && isItemSelected ? (
+				{hasReset && isItemSelected ? (
 					<DropMenu.NullOption {...placeholderProps}>{placeholder}</DropMenu.NullOption>
 				) : null}
 				{
 					// for each option group passed in, render a DropMenu.OptionGroup, any label will be included in it's children, render each option inside the group
-					_.map(optionGroups, (optionGroupProps, optionGroupIndex) => {
-						return (
+					_.map(optionGroups, (optionGroupProps, optionGroupIndex) => (
 							<DropMenu.OptionGroup key={'SingleSelectOptionGroup' + optionGroupIndex} {...optionGroupProps}>
 								{optionGroupProps.children}
 								{_.map(_.get(optionGroupDataLookup, optionGroupIndex), ({ optionProps, optionIndex }) => (
 									<DropMenu.Option key={'SingleSelectOption' + optionIndex} {...optionProps} />
 								))}
 							</DropMenu.OptionGroup>
-						);
-					// then render all the ungrouped options at the end
-					}).concat(_.map(ungroupedOptionData, ({ optionProps, optionIndex }) => (<DropMenu.Option key={'SingleSelectOption' + optionIndex} {...optionProps} />)))
+						// then render all the ungrouped options at the end
+						)).concat(_.map(ungroupedOptionData, ({ optionProps, optionIndex }) => (<DropMenu.Option key={'SingleSelectOption' + optionIndex} {...optionProps} />)))
 				}
 			</DropMenu>
 		);

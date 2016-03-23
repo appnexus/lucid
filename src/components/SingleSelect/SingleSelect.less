@@ -1,11 +1,13 @@
+@SingleSelect-size-controlHeight: 28px;
+
 .lucid-SingleSelect {
 
-	.lucid-SingleSelect-Control {
+	&-Control {
 		.no-safari-flicker();
 		.box-sizing();
 		.gradient-animation( @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 		cursor: pointer;
-		height: 28px;
+		height: @SingleSelect-size-controlHeight;
 		display: flex;
 		outline: none;
 		border: 1px solid @featured-color-default-borderColor;
@@ -17,7 +19,7 @@
 		padding: 0 10px;
 		align-items: center;
 
-		.lucid-SingleSelect-Control-content {
+		&-content {
 			display: flex;
 			align-items: center;
 			margin-right: 10px;

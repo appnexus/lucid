@@ -11,7 +11,7 @@ const {
 export default React.createClass({
 	render() {
 		return (
-			<SingleSelect allowUnselect={false}>
+			<SingleSelect hasReset={false}>
 				<Placeholder>Select Foo</Placeholder>
 				<Option>Red</Option>
 				<Option>Green</Option>

@@ -53,7 +53,7 @@ describe('SingleSelect', () => {
 			});
 		});
 
-		describeWithDOM('allowReset', () => {
+		describeWithDOM('hasReset', () => {
 			let wrapper;
 
 			afterEach(() => {
@@ -64,7 +64,7 @@ describe('SingleSelect', () => {
 
 			it('should render the placeholder option as the first one in the menu and be a null option', () => {
 				wrapper = mount(
-					<SingleSelect allowReset={true} selectedIndex={1} DropMenu={{ isExpanded: true }}>
+					<SingleSelect hasReset={true} selectedIndex={1} DropMenu={{ isExpanded: true }}>
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
@@ -79,7 +79,7 @@ describe('SingleSelect', () => {
 
 			it('should not render the placeholder null option as the first one in the menu', () => {
 				wrapper = mount(
-					<SingleSelect allowReset={false} selectedIndex={1} DropMenu={{ isExpanded: true }}>
+					<SingleSelect hasReset={false} selectedIndex={1} DropMenu={{ isExpanded: true }}>
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
