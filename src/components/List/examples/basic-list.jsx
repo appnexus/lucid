@@ -5,9 +5,9 @@ export default React.createClass({
 	render() {
 		return (
 			<List>
-				<List.ListItem>one</List.ListItem>
-				<List.ListItem>two</List.ListItem>
-				<List.ListItem>three</List.ListItem>
+				<List.Item>one</List.Item>
+				<List.Item>two</List.Item>
+				<List.Item>three</List.Item>
 			</List>
 		);
 	}
