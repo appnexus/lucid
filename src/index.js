@@ -5,6 +5,7 @@ import ButtonGroup from './components/ButtonGroup/ButtonGroup';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
 import Checkbox from './components/Checkbox/Checkbox';
+import Container from './components/Container/Container';
 import ContextMenu from './components/ContextMenu/ContextMenu';
 import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
@@ -57,6 +58,7 @@ export {
 	CaretIcon,
 	CheckIcon,
 	Checkbox,
+	Container,
 	ContextMenu,
 	CrossIcon,
 	DangerIcon,
