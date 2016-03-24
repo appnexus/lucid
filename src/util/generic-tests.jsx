@@ -7,7 +7,7 @@ import _ from 'lodash';
 import * as lucid from '../index';
 
 // Common tests for all our components
-export function common(Component, getDefaultProps=_.noop) {
+export function common(Component, { getDefaultProps = _.noop, selector = null } = {}) {
 
 	function generateDefaultProps(props={}) {
 		return _.assign({}, getDefaultProps(), props);
@@ -23,29 +23,33 @@ export function common(Component, getDefaultProps=_.noop) {
 				backgroundColor: '#f0f'
 			};
 			const wrapper = shallow(<Component {...generateDefaultProps()} style={style}/>);
-			assert.deepEqual(wrapper.first().prop('style'), style);
+			const rootWrapper = selector ? wrapper.find(selector).first() : wrapper.first();
+			assert.deepEqual(rootWrapper.prop('style'), style);
 		});
 
 		it('should pass through `className`', () => {
-			let expectedClass = 'rAnDoM';
+			const expectedClass = 'rAnDoM';
 			const wrapper = shallow(<Component {...generateDefaultProps()} className={expectedClass}/>);
-			let classNames = wrapper.first().prop('className').split(' ');
+			const rootWrapper = selector ? wrapper.find(selector).first() : wrapper.first();
+			const classNames = rootWrapper.prop('className').split(' ');
 
 			assert(_.includes(classNames, expectedClass), `'${classNames}' should include '${expectedClass}'`);
 		});
 
 		it('should have an application scoped base class', () => {
-			let expectedClass = 'lucid-' + Component.displayName;
+			const expectedClass = 'lucid-' + Component.displayName;
 			const wrapper = shallow(<Component {...generateDefaultProps()} />);
-			let classNames = wrapper.first().prop('className').split(' ');
+			const rootWrapper = selector ? wrapper.find(selector).first() : wrapper.first();
+			const classNames = rootWrapper.prop('className').split(' ');
 
 			assert(_.includes(classNames, expectedClass), `'${classNames}' should include '${Component.displayName}'`);
 		});
 
 		it('should have only application scoped classes', () => {
 			const wrapper = shallow(<Component {...generateDefaultProps()} />);
-			let parentClasses = wrapper.first().prop('className').split(' ');
-			let childrenClasses = wrapper.children().reduce((acc, node) => {
+			const rootWrapper = selector ? wrapper.find(selector).first() : wrapper.first();
+			const parentClasses = rootWrapper.prop('className').split(' ');
+			const childrenClasses = rootWrapper.children().reduce((acc, node) => {
 				if (!node.prop('className')) {
 					return acc;
 				}
@@ -53,7 +57,7 @@ export function common(Component, getDefaultProps=_.noop) {
 				return acc.concat(node.prop('className').split(' '))
 			}, []);
 
-			let allClasses = parentClasses.concat(childrenClasses);
+			const allClasses = parentClasses.concat(childrenClasses);
 
 			assert(_.every(allClasses, (className) => {
 				return _.includes(className, 'lucid-' + Component.displayName);
@@ -70,12 +74,12 @@ export function common(Component, getDefaultProps=_.noop) {
 				// Here we test the validation against a noop function, if it doesn't
 				// have an error, then it's probably a function. The other possible is
 				// that it's an `any`, so we'll test for that below
-				let isProbablyFunction = !(value(props, key) instanceof Error);
+				const isProbablyFunction = !(value(props, key) instanceof Error);
 
 				// We'll also test out a string to see if that valid
 				props[key] = '';
 
-				let isAny = isProbablyFunction && !(value(props, key) instanceof Error);
+				const isAny = isProbablyFunction && !(value(props, key) instanceof Error);
 
 				// If it's probably a function, and it's not `any`, then we make sure
 				// it starts with `on`
