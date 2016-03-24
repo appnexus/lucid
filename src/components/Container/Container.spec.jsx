@@ -10,52 +10,51 @@ describe('Container', () => {
 
 	describe('header', () => {
 		it('should exists', () => {
-			const wrapper = shallow(<Container><Container.Header>Header</Container.Header><Container.Body>Body</Container.Body></Container>);
-			const header = wrapper.find(Container.Header);
-			assert.equal(header.length, 1);
+			const wrapper = shallow(<Container><Container.Header>Header</Container.Header><Container.Content>Content</Container.Content></Container>);
+			assert.equal(wrapper.find('.lucid-Container-header').length, 1);
 		});
 
 		it('should not exists', () => {
-			const wrapper = shallow(<Container><Container.Body>Body</Container.Body></Container>);
-			assert.equal(wrapper.find(Container.Header).length, 0);
+			const wrapper = shallow(<Container><Container.Content>Content</Container.Content></Container>);
+			assert.equal(wrapper.find('.lucid-Container-header').length, 0);
 		});
 	});
 
 	describe('title', () => {
 		it('should exists', () => {
-			const wrapper = shallow(<Container title={'Title'}><Container.Body>Body</Container.Body></Container>);
-			const header = wrapper.find(Container.Header);
+			const wrapper = shallow(<Container title={'Title'}><Container.Content>Content</Container.Content></Container>);
+			const header = wrapper.find('.lucid-Container-header');
 			assert.equal(header.length, 1);
-			assert.equal(header.prop('title'), 'Title');
+			assert.equal(header.text(), 'Title');
 		});
 
 		it('should not exists', () => {
-			const wrapper = shallow(<Container><Container.Body>Body</Container.Body></Container>);
-			assert.equal(wrapper.find(Container.Header).length, 0);
+			const wrapper = shallow(<Container><Container.Content>Content</Container.Content></Container>);
+			assert.equal(wrapper.find('.lucid-Container-header').length, 0);
 		});
 	});
 
-	describe('body', () => {
+	describe('content', () => {
 		it('should exists', () => {
-			const wrapper = shallow(<Container><Container.Body>Body</Container.Body><Container.Footer><button>Save</button></Container.Footer></Container>);
-			assert.equal(wrapper.find(Container.Body).length, 1);
+			const wrapper = shallow(<Container><Container.Content>Content</Container.Content><Container.Footer><button>Save</button></Container.Footer></Container>);
+			assert.equal(wrapper.find('.lucid-Container-content').length, 1);
 		});
 
 		it('should not exists', () => {
 			const wrapper = shallow(<Container><Container.Footer><button>Save</button></Container.Footer></Container>);
-			assert.equal(wrapper.find(Container.Body).length, 0);
+			assert.equal(wrapper.find('.lucid-Container-content').length, 0);
 		});
 	});
 
 	describe('footer', () => {
 		it('should exists', () => {
-			const wrapper = shallow(<Container><Container.Body>Body</Container.Body><Container.Footer><button>Save</button></Container.Footer></Container>);
-			assert.equal(wrapper.find(Container.Footer).length, 1);
+			const wrapper = shallow(<Container><Container.Content>Content</Container.Content><Container.Footer><button>Save</button></Container.Footer></Container>);
+			assert.equal(wrapper.find('.lucid-Container-footer').length, 1);
 		});
 
 		it('should not exists', () => {
-			const wrapper = shallow(<Container><Container.Body>Body</Container.Body></Container>);
-			assert.equal(wrapper.find(Container.Footer).length, 0);
+			const wrapper = shallow(<Container><Container.Content>Content</Container.Content></Container>);
+			assert.equal(wrapper.find('.lucid-Container-footer').length, 0);
 		});
 	});
 
@@ -70,13 +69,13 @@ describe('Container', () => {
 			assert(wrapper.find('.lucid-Container-header'), `Header should include 'lucid-Container-header' class`);
 		});
 
-		it('should have the Container Body class', () => {
-			const wrapper = shallow(<Container><Container.Body>Body</Container.Body><Container.Footer><button>Save</button></Container.Footer></Container>);
-			assert(wrapper.find('.lucid-Container-body'), `Body should include 'lucid-Container-body' class`);
+		it('should have the Container Content class', () => {
+			const wrapper = shallow(<Container><Container.Content>Content</Container.Content><Container.Footer><button>Save</button></Container.Footer></Container>);
+			assert(wrapper.find('.lucid-Container-content'), `Content should include 'lucid-Container-content' class`);
 		});
 
 		it('should have the Container Footer class', () => {
-			const wrapper = shallow(<Container><Container.Body>Body</Container.Body><Container.Footer><button>Save</button></Container.Footer></Container>);
+			const wrapper = shallow(<Container><Container.Content>Content</Container.Content><Container.Footer><button>Save</button></Container.Footer></Container>);
 			assert(wrapper.find('.lucid-Container-footer'), `Footer should include 'lucid-Container-footer' class`);
 		});
 	});

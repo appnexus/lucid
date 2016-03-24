@@ -1,100 +1,88 @@
-import React, { PropTypes } from 'react';
+import _ from 'lodash';
+import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createLucidComponentDefinition } from '../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-Container');
 
 const {
 	node,
-	string,
-	object
-} = PropTypes;
+	string
+} = React.PropTypes;
 
-const Header = React.createClass({
-	propTypes: {
-		className: string,
-		style: object,
-		children: node,
-		title: string
-	},
-	render: function() {
-		const {className, style, title, children} = this.props;
-		const titleEl = (title)?<span className={boundClassNames('&-title')}>{title}</span>:null;
-		return (
-			<div className={boundClassNames('&-header', className)} style={style}>{titleEl || children}</div>
-		)
-	}
-})
+function getHeader(headerChildProp, title){
+	if(headerChildProp) return <header {...headerChildProp} className={boundClassNames('&-header')}/>
+	else if(title) return <header {...headerChildProp} className={boundClassNames('&-header')}><span className={boundClassNames('&-title')}>{title}</span></header>
+	else return null;
+}
 
-const Body = React.createClass({
-	propTypes: {
-		className: string,
-		children: node,
-		style: object
-	},
-	render: function() {
-		const {className, style, children} = this.props;
-		return (
-			<div className={boundClassNames('&-body', className)} style={style}>{children}</div>
-		)
-	}
-})
+function getContent(contentChildProp, children){
+	if(contentChildProp) return <section {...contentChildProp} className={boundClassNames('&-content')} />
+	else children;
+}
 
-const Footer = React.createClass({
-	propTypes: {
-		className: string,
-		children: node,
-		style: object
-	},
-	render: function() {
-		const {className, style, children} = this.props;
-		return (
-			<div className={boundClassNames('&-footer', className)} style={style}>{children}</div>
-		)
-	}
-})
+function getFooter(footerChildProp){
+	if(footerChildProp) return <footer {...footerChildProp} className={boundClassNames('&-footer')} />
+	else return null;
+}
 
 /**
+ * {"categories": ["layout"]}
  *
- * {"categories": ["controls", "containers"]}
- *
- * A basic Container. It can have Body and Footer,
- * as a Header that will be rendered if you fill `title` prop.
+ * Container is used to wrap content to better organize elements in window.
  */
-const Container = React.createClass({
+const Container = React.createClass(createLucidComponentDefinition({
+	displayName: 'Container',
+
+	childProps: {
+		Header: null,
+		Content: null,
+		Footer: null
+	},
+
 	propTypes: {
 		/**
-		 * class names that are appended to the defaults
+		 * Appended to the component-specific class names set on the root element.
 		 */
 		className: string,
 		/**
-		 * text that will be appended in header of container
+		 * Text to be inserted in container's header.
 		 */
 		title: string,
 		/**
-		 * any valid React children
+		 * *Child Element* - Header contents. Only one `Header` is used.
 		 */
-		children: node,
+		Header: node,
 		/**
-		 * style that are appended to the defaults
+		 * *Child Element* - Header contents. Only one `Header` is used.
 		 */
-		style: object
+		Content: node,
+		/**
+		 * *Child Element* - Header contents. Only one `Header` is used.
+		 */
+		Footer: node,
+		/**
+		 * Generally you should only have a single child element so the centering
+		 * works correctly.
+		 */
+		children: node
 	},
-	render: function() {
-		const {title, className, style, children} = this.props;
 
-		const headerEl = (title)?(<Header title={title} />):null;
+	render: function() {
+		const {className, style, title, children} = this.props;
+
+		const headerEl = getHeader(_.first(Container.Header.findInAllAsProps(this.props)), title);
+		const contentEl = getContent(_.first(Container.Content.findInAllAsProps(this.props)), children);
+		const footerEl = getFooter(_.first(Container.Footer.findInAllAsProps(this.props)));
 
 		return (
 			<div className={boundClassNames('&', className)} style={style}>
 				{headerEl}
-				{children}
+				{contentEl}
+				{footerEl}
 			</div>
 		)
 	}
-})
-
-Container.Header = Header;
-Container.Body = Body;
-Container.Footer = Footer;
+}))
 
 export default Container;
