@@ -27,7 +27,8 @@ import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import Switch from './components/Switch/Switch';
 import Tabs from './components/Tabs/Tabs';
-import TextField from './components/TextField/TextField'
+import TextField from './components/TextField/TextField';
+import Typeahead from './components/Typeahead/Typeahead';
 import ValidatedTextField from './components/ValidatedTextField/ValidatedTextField';
 import Validation from './components/Validation/Validation';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
@@ -77,6 +78,7 @@ export {
 	Switch,
 	Tabs,
 	TextField,
+	Typeahead,
 	ValidatedTextField,
 	Validation,
 	WarningIcon,

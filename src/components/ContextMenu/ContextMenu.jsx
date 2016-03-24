@@ -55,7 +55,7 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 		 */
 		onChangeBounds: func,
 		/**
-		 * Called when a click event happenens outside of the ContextMenu.
+		 * Called when a click event happens outside of the ContextMenu.
 		 */
 		onClickOut: func,
 		/**
