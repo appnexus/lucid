@@ -24,6 +24,7 @@ import RadioButton from './components/RadioButton/RadioButton';
 import RadioGroup from './components/RadioGroup/RadioGroup';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
+import SingleSelect from './components/SingleSelect/SingleSelect';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import Switch from './components/Switch/Switch';
 import Tabs from './components/Tabs/Tabs';
@@ -73,6 +74,7 @@ export {
 	RadioGroup,
 	ResizeIcon,
 	SearchIcon,
+	SingleSelect,
 	SuccessIcon,
 	Switch,
 	Tabs,
