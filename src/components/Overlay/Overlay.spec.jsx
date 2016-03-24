@@ -47,13 +47,13 @@ describe('Overlay', () => {
 });
 
 describeWithDOM('Overlay', () => {
-	it('should fire onOverlayClick', () => {
-		const onOverlayClick = sinon.spy();
+	it('should fire onBackgroundClick', () => {
+		const onBackgroundClick = sinon.spy();
 		const wrapper = mount(
 			<Overlay
 				isShown={true}
 				isModal={false}
-				onOverlayClick={onOverlayClick}
+				onBackgroundClick={onBackgroundClick}
 				portalId={'brolo'}
 			/>
 		);
@@ -66,17 +66,17 @@ describeWithDOM('Overlay', () => {
 
 		document.querySelector('#brolo .lucid-Overlay').dispatchEvent(event);
 
-		assert(onOverlayClick.called);
+		assert(onBackgroundClick.called);
 		wrapper.unmount();
 	});
 
-	it('should not fire onOverlayClick when content is clicked', () => {
-		const onOverlayClick = sinon.spy();
+	it('should not fire onBackgroundClick when content is clicked', () => {
+		const onBackgroundClick = sinon.spy();
 		const wrapper = mount(
 			<Overlay
 				isShown={true}
 				isModal={false}
-				onOverlayClick={onOverlayClick}
+				onBackgroundClick={onBackgroundClick}
 				portalId={'regiewat'}
 			>
 				<div id='foo'>Nope</div>
@@ -91,7 +91,7 @@ describeWithDOM('Overlay', () => {
 
 		document.querySelector('#regiewat #foo').dispatchEvent(event);
 
-		assert(onOverlayClick.notCalled);
+		assert(onBackgroundClick.notCalled);
 		wrapper.unmount();
 	});
 

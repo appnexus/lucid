@@ -11,6 +11,10 @@ const {
 	oneOf,
 } = React.PropTypes;
 
+const SMALL = 'small';
+const MEDIUM = 'medium';
+const LARGE = 'large';
+
 /**
  * {"categories": ["layout"], "extend": "Overlay", "madeFrom": ["Portal", "Overlay"]}
  *
@@ -48,7 +52,7 @@ const Dialog = React.createClass(createLucidComponentDefinition({
 
 	getDefaultProps() {
 		return {
-			size: 'medium',
+			size: MEDIUM,
 		};
 	},
 
@@ -69,9 +73,9 @@ const Dialog = React.createClass(createLucidComponentDefinition({
 			>
 				<div
 					className={boundClassNames('&-window', {
-						'&-window-is-small': size === 'small',
-						'&-window-is-medium': size === 'medium',
-						'&-window-is-large': size === 'large',
+						'&-window-is-small': size === SMALL,
+						'&-window-is-medium': size === MEDIUM,
+						'&-window-is-large': size === LARGE,
 					})}
 				>
 					<header

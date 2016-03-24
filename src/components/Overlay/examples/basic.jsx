@@ -28,7 +28,7 @@ export default React.createClass({
 				<Overlay
 					isShown={this.state.isShown}
 					onEscape={_.partial(this.handleOpenClose, false)}
-					onOverlayClick={_.partial(this.handleOpenClose, false)}
+					onBackgroundClick={_.partial(this.handleOpenClose, false)}
 				>
 					<div style={{ color: '#fff' }}>
 						User cannot interact with the background (except scrolling).

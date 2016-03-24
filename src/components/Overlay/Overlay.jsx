@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Portal from '../Portal/Portal';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import random from '../../util/random';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition }  from '../../util/component-definition';
 
@@ -61,11 +62,12 @@ const Overlay = React.createClass(createLucidComponentDefinition({
 		onEscape: func,
 
 		/**
-		 * Fired when the user clicks on the background of the `Overlay`.
+		 * Fired when the user clicks on the background, this may or may not be
+		 * visible depending on `isModal`.
 		 *
 		 * Signature: `({ event, props }) => {}`
 		 */
-		onOverlayClick: func,
+		onBackgroundClick: func,
 	},
 
 	getDefaultProps() {
@@ -73,8 +75,16 @@ const Overlay = React.createClass(createLucidComponentDefinition({
 			isShown: false,
 			isModal: true,
 			onEscape: _.noop,
-			onOverlayClick: _.noop,
+			onBackgroundClick: _.noop,
 		};
+	},
+
+	getInitialState() {
+		return {
+			// This must be in state because getDefaultProps only runs once per
+			// component import which causes collisions
+			portalId: this.props.portalId || `Overlay-Portal-${random()}`
+		}
 	},
 
 	componentDidMount() {
@@ -102,11 +112,11 @@ const Overlay = React.createClass(createLucidComponentDefinition({
 		this._divDOMNode = divDOMNode;
 	},
 
-	handleOverlayClick(event) {
+	handleBackgroundClick(event) {
 		// Use the reference we previously stored from the `ref` to check what
 		// element was clicked on.
 		if (this._divDOMNode && event.target === this._divDOMNode) {
-			this.props.onOverlayClick({event, props: this.props });
+			this.props.onBackgroundClick({event, props: this.props });
 		}
 	},
 
@@ -115,10 +125,13 @@ const Overlay = React.createClass(createLucidComponentDefinition({
 			className,
 			isShown,
 			isModal,
-			portalId = 'Overlay-Portal-' + Math.random().toString(16).substr(2), // this was intentionally left out of getdefaultprops
 			children,
 			...passThroughs
 		} = this.props;
+
+		const {
+			portalId
+		} = this.state;
 
 		return (
 			<Portal portalId={portalId}>
@@ -133,7 +146,7 @@ const Overlay = React.createClass(createLucidComponentDefinition({
 							className={boundClassNames(className, '&', {
 								'&-is-not-modal': !isModal
 							})}
-							onClick={this.handleOverlayClick}
+							onClick={this.handleBackgroundClick}
 							ref={this.handleDivRef}
 						>
 							{children}

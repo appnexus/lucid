@@ -11,9 +11,7 @@ export default React.createClass({
 	},
 
 	handleShow(isShown) {
-		this.setState({
-			isShown: isShown
-		});
+		this.setState({ isShown });
 	},
 
 	render() {
@@ -28,7 +26,7 @@ export default React.createClass({
 				<Dialog
 					isModal={false}
 					isShown={this.state.isShown}
-					onOverlayClick={_.partial(this.handleShow, false)}
+					onBackgroundClick={_.partial(this.handleShow, false)}
 					onEscape={_.partial(this.handleShow, false)}
 					Header='Header'
 					size='small'

@@ -11,9 +11,7 @@ export default React.createClass({
 	},
 
 	handleShow(isShown) {
-		this.setState({
-			isShown: isShown
-		});
+		this.setState({ isShown });
 	},
 
 	render() {
@@ -34,7 +32,7 @@ export default React.createClass({
 					</Dialog.Header>
 					<div key={'info'}>
 						For better UX, we recommend NOT handling onEscape and
-						onOverlayClick when isModal is true. The term "modal" implies that
+						onBackgroundClick when isModal is true. The term "modal" implies that
 						the user needs to interact with one of the buttons in the footer to
 						exit the dialog.
 					</div>
