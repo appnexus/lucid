@@ -29,6 +29,21 @@ ul.lucid-List { list-style: none; }
 	width: 100%;
 	padding: 0;
 
+	&&-is-disabled {
+
+		a {
+			color: @color-mediumGray;
+			cursor: not-allowed;
+
+			&:hover,
+			&:active,
+			&:focus {
+				background: transparent;
+				color: @color-mediumGray;
+			}
+		}
+	}
+
 	// ToDo: style version with a the x-axis set as primary
 	&-is-horizontal { flex-direction: row; }
 }
@@ -42,7 +57,7 @@ ul.lucid-List { list-style: none; }
 	align-items: stretch;
 
 	>a {
-		.selectable();
+		.is-selectable();
 		display: flex;
 		font-size: 12px;
 		justify-content: flex-start;
@@ -53,8 +68,7 @@ ul.lucid-List { list-style: none; }
 		border-style: solid;
 		color: @color-primary;
 		padding: 10px 0 8px @ListChild-size-padding;
-		line-height: 1em;
-    height: 30px;
+		line-height: 11px;
 
 		&:hover {
 			.hardstop-gradient(to right, @featured-color-primary, @featured-color-default-gradientEndColor, @List-size-border);
@@ -104,6 +118,22 @@ ul.lucid-List { list-style: none; }
 
 		}
 	}
+
+	&&-is-disabled {
+
+		a {
+			color: @color-mediumGray;
+			cursor: not-allowed;
+
+			&:hover,
+			&:active,
+			&:focus {
+				background: transparent;
+				color: @color-mediumGray;
+			}
+		}
+	}
+
 	&:first-of-type {
 		>a {
 			border-top-color: transparent;
@@ -112,9 +142,16 @@ ul.lucid-List { list-style: none; }
 }
 
 /* Expander Button - Added to the DOM with React when hasExpander = true */
+.lucid-List-has-expander
 .lucid-List-ListItem {
 	>a {
+		position: relative;
+		padding-right: 24px;
+
 		.lucid-List-expander{
+			position: absolute;
+			right: 5px;
+			top: 5px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -123,7 +160,6 @@ ul.lucid-List { list-style: none; }
 			font-size: @List-size-icon;
 			background: transparent;
 			border-color: transparent;
-			margin-right: 5px;
 			padding: 0;
 			line-height: 1em;
 

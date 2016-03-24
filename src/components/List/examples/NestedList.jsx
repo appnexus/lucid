@@ -5,26 +5,18 @@ export default React.createClass({
 	render() {
 		return (
 			<List>
-				<List.ListItem>subList One
+				<List.ListItem>List Item</List.ListItem>
+				<List.ListItem>List Item with Sublist
 					<List>
-						<List.ListItem>one</List.ListItem>
-						<List.ListItem>two</List.ListItem>
-						<List.ListItem>three</List.ListItem>
-					</List>
-				</List.ListItem>
-				<List.ListItem>cat</List.ListItem>
-				<List.ListItem>dog</List.ListItem>
-				<List.ListItem>sublist two
-					<List>
-						<List.ListItem>sub sublist one
+						<List.ListItem>Sublist Item</List.ListItem>
+						<List.ListItem>Sublist Item with another List
 							<List>
-								<List.ListItem>one</List.ListItem>
-								<List.ListItem>two</List.ListItem>
-								<List.ListItem>three</List.ListItem>
+								<List.ListItem>sub Sublist Item</List.ListItem>
+								<List.ListItem>sub Sublist Item</List.ListItem>
+								<List.ListItem>sub Sublist Item</List.ListItem>
 							</List>
 						</List.ListItem>
-						<List.ListItem>two</List.ListItem>
-						<List.ListItem>three</List.ListItem>
+						<List.ListItem>Sublist Item</List.ListItem>
 					</List>
 				</List.ListItem>
 				<List.ListItem>three</List.ListItem>
