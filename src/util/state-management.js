@@ -48,11 +48,17 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 				return srcValue(...args);
 			};
 		}
+		if (_.isArray(srcValue) && _.isArray(objValue)) {
+			return srcValue;
+		}
 	};
 
 	const bindFunctionOverwritesCustomizer = (objValue, srcValue) => {
 		if (_.isFunction(srcValue) && _.isFunction(objValue)) {
 			return bindReducerToState(srcValue, { getState, setState }, objValue.path);
+		}
+		if (_.isArray(srcValue) && _.isArray(objValue)) {
+			return srcValue;
 		}
 	};
 

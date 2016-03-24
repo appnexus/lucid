@@ -107,6 +107,9 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 		this.updateTargetRectangleIntervalId = setInterval(() => {
 			this.alignFlyOut(targetDOMNode);
 		}, 10);
+		//window.requestAnimationFrame(() => {
+		//	this.alignFlyOut(targetDOMNode);
+		//});
 
 		this.onClickBodyEventListener = window.addEventListener('click', (event) => {
 			if (this.props.onClickOut && this.refs.flyOutPortal) {

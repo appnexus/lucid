@@ -1,0 +1,80 @@
+.lucid-Autocomplete {
+
+	&-Control {
+		.no-safari-flicker();
+		.box-sizing();
+		//.gradient-animation( @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+		cursor: pointer;
+		height: 28px;
+		display: flex;
+		outline: none;
+		border: 1px solid @featured-color-default-borderColor;
+		border-radius: @Button-size-borderRadius;
+		font: @font;
+		color: @color-black;
+		letter-spacing: .05em;
+		line-height: @Button-size-lineHeight;
+		padding: 0 10px;
+		align-items: center;
+
+		//.lucid-Autocomplete-Control-content {
+		//	display: flex;
+		//	align-items: center;
+		//	margin-right: 10px;
+		//}
+		
+		&-input {
+			background: none;
+			border: none;
+			outline: none;
+			font: @font;
+			font-weight: normal;
+			color: rgba(0,0,0,.5);
+		}
+
+		.lucid-CaretIcon {
+			fill: @color-black;
+			width: 8px;
+			height: 8px;
+			margin-left: auto;
+		}
+
+		// States
+
+		&-is-expanded {
+			border-color: @featured-color-primary-borderColor;
+		}
+
+		&-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
+			cursor: not-allowed;
+			.opacity();
+		}
+	}
+
+	&.lucid-DropMenu-is-expanded {
+		&.lucid-DropMenu-direction-up {
+			.lucid-Autocomplete-Control {
+				border-radius: 0 0 @Button-size-borderRadius @Button-size-borderRadius;
+			}
+		}
+
+		&.lucid-DropMenu-direction-down {
+			.lucid-Autocomplete-Control {
+				border-radius: @Button-size-borderRadius @Button-size-borderRadius 0 0;
+			}
+		}
+
+		.lucid-DropMenu-Control {
+			z-index: 301;
+		}
+	}
+
+	&.lucid-ContextMenu-FlyOut {
+		max-height: 220px;
+	}
+
+	&-Option-suggestion-match {
+		text-decoration: underline;
+	}
+}
