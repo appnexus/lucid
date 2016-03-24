@@ -8,6 +8,7 @@ import Checkbox from './components/Checkbox/Checkbox';
 import ContextMenu from './components/ContextMenu/ContextMenu';
 import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
+import Dialog from './components/Dialog/Dialog';
 import DropMenu from './components/DropMenu/DropMenu';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
@@ -18,6 +19,7 @@ import LabeledCheckbox from './components/LabeledCheckbox/LabeledCheckbox';
 import LabeledRadioButton from './components/LabeledRadioButton/LabeledRadioButton';
 import LabeledSwitch from './components/LabeledSwitch/LabeledSwitch';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
+import Overlay from './components/Overlay/Overlay';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Portal from './components/Portal/Portal';
 import RadioButton from './components/RadioButton/RadioButton';
@@ -58,6 +60,7 @@ export {
 	ContextMenu,
 	CrossIcon,
 	DangerIcon,
+	Dialog,
 	DropMenu,
 	EditIcon,
 	EligibilityIcon,
@@ -68,6 +71,7 @@ export {
 	LabeledRadioButton,
 	LabeledSwitch,
 	MinusIcon,
+	Overlay,
 	PlusIcon,
 	Portal,
 	RadioButton,
