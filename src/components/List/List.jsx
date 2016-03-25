@@ -19,7 +19,7 @@ const {
 } = React.PropTypes;
 
 /**
- * {"categories": ["layout", "list"]}
+ * {"categories": ["layout"]}
  *
  * This component is designed to be used in Composits as a layout tool.
  * Please see examples for more information.
