@@ -9,18 +9,18 @@ export default React.createClass({
 		return (
 			<List>
 				<List.Item>List Item</List.Item>
-				<List.Item hasExpander >
+				<List.Item>
 					Another list with expander
 					<List>
 						<List.Item>One</List.Item>
 						<List.Item>Two</List.Item>
 					</List>
 				</List.Item>
-				<List.Item hasExpander >
+				<List.Item>
 					List Item with Sublist
 					<List>
 						<List.Item>Sublist Item</List.Item>
-						<List.Item hasExpander >
+						<List.Item>
 							Sublist Item with another List
 							<List>
 								<List.Item>sub Sublist Item</List.Item>
