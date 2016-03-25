@@ -4,7 +4,6 @@ import React from 'react';
 import SyntheticEvent from 'react/lib/SyntheticEvent';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
-shallow;
 
 import describeWithDOM from '../../util/describe-with-dom';
 import { common } from '../../util/generic-tests';
