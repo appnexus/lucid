@@ -45,6 +45,8 @@ module.exports = {
 				if (!isInComponents) { return acc; }
 
 				var componentName = extractComponentName(file);
+
+				console.log('Docgen parsing %s...', file);
 				var docs = reactDocgen.parse(
 					fs.readFileSync(file),
 					// Resolver

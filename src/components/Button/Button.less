@@ -1,6 +1,7 @@
 // button sizes
 @Button-size-padding: 12px;
 @Button-size-lineHeight: 26px;
+@Button-size-shortlineHeight: 20px;
 @Button-size-borderRadius: @size-borderRadius;
 
 .lucid-Button {
@@ -16,7 +17,6 @@
 	letter-spacing: .05em;
 	line-height: @Button-size-lineHeight;
 	padding: 0 @Button-size-padding;
-
 
 	// Types
 	&-primary {
@@ -69,10 +69,10 @@
 
 	// Sizes
 	&-short {
-		line-height: @Button-size-lineHeight/1.5;
+		line-height: @Button-size-shortlineHeight;
 	}
 	&-small {
-		line-height: @Button-size-lineHeight/1.5;
+		line-height: @Button-size-shortlineHeight;
 		padding: 0 @Button-size-padding/1.5;
 	}
 	&-large {
@@ -92,5 +92,10 @@
 		.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
 		cursor: not-allowed;
 		.opacity();
+	}
+
+	// Also needed in some cases to beat other libraries (e.g. pure.css)
+	&[disabled] {
+		cursor: not-allowed;
 	}
 }

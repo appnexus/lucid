@@ -8,12 +8,14 @@ import { mount } from 'enzyme';
 import ContextMenu from './ContextMenu';
 
 describe('ContextMenu', () => {
-	common(ContextMenu, () => ({
-		children: [
-			(<ContextMenu.Target>Test</ContextMenu.Target>),
-			(<ContextMenu.FlyOut>Menu</ContextMenu.FlyOut>)
-		]
-	}));
+	common(ContextMenu, {
+		getDefaultProps: () => ({
+			children: [
+				(<ContextMenu.Target>Test</ContextMenu.Target>),
+				(<ContextMenu.FlyOut>Menu</ContextMenu.FlyOut>)
+			]
+		})
+	});
 
 	describeWithDOM('props', () => {
 		let wrapper;
