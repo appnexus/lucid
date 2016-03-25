@@ -64,13 +64,25 @@ const Tag = React.createClass({
 			...passThroughs
 		} = this.props;
 
+		const childTagClassName = boundClassNames('&-is-nested');
+		const childrenArray = React.Children.toArray(children);
+		const nonTagChildren = _.filter(childrenArray, (child) => !child || (child && child.type !== Tag));
+		const tagChildrenProps = _(childrenArray)
+				.filter((child) => child && child.type === Tag)
+				.map((child) => _.assign({}, child.props, {
+					className: _.isString(child.props.className)
+							? child.props.className + childTagClassName
+							: childTagClassName
+				}))
+				.value();
+
 		return (
 			<div
 					className={boundClassNames('&', className)}
 					style={style}
 					{..._.omit(passThroughs, 'onClose')}
 			>
-				{children}
+				{nonTagChildren}
 				{isCloseable
 						? (
 							<span
@@ -81,6 +93,7 @@ const Tag = React.createClass({
 							</span>
 						)
 						: null}
+				{_.map(tagChildrenProps, (tagChildProps, index) => <Tag {...tagChildProps} key={index} />)}
 			</div>
 		);
 	},

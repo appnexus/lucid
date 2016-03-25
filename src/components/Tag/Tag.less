@@ -6,9 +6,9 @@
 	color: @color-white;
 	display: inline-block;
 	font: @font;
-	height: 20px;
 	line-height: 20px;
 	margin: 1px;
+	min-height: 20px;
 	padding: 0 @Tag-spacing;
 
 	&-close {
@@ -22,5 +22,17 @@
 		&:hover {
 			color: @color-white;
 		}
+	}
+
+	&-is-nested {
+		background-color: tint(@color-primary, 30%);
+	}
+
+	&-is-nested &-is-nested {
+		background-color: tint(@color-primary, 60%);
+	}
+
+	&-is-nested &-is-nested &-is-nested {
+		background-color: tint(@color-primary, 90%);
 	}
 }

@@ -8,12 +8,24 @@ export default React.createClass({
 			<section>
 				<section>
 					<Tag>awesome</Tag>
-					<Tag>choice</Tag>
+					<Tag>excellent</Tag>
 					<Tag>gnarly</Tag>
 				</section>
 				<section>
 					<Tag isCloseable={true}>rad</Tag>
 					<Tag isCloseable={true}>tubular</Tag>
+				</section>
+				<section>
+					<Tag isCloseable={true}>
+						magnificent
+						<Tag isCloseable={true}>
+							stupendous
+							<Tag isCloseable={true}>
+								amazing
+								<Tag isCloseable={true}>incredible</Tag>
+							</Tag>
+						</Tag>
+					</Tag>
 				</section>
 			</section>
 		);
