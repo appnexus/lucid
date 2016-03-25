@@ -72,6 +72,12 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 	};
 };
 
+function overwriteArrays (objValue, srcValue) {
+	if (_.isArray(srcValue) && _.isArray(objValue)) {
+		return srcValue;
+	}
+}
+
 export function buildStatefulComponent(baseComponent, opts) {
 	opts = _.merge({
 		setStateWithNewProps: true, // if true, new props will update state, else prop has priority over existing state
@@ -87,14 +93,14 @@ export function buildStatefulComponent(baseComponent, opts) {
 		displayName: baseComponent.displayName,
 		getInitialState() {
 			if (opts.setStateWithNewProps) {
-				return _.merge({}, omitFunctionPropsDeep(baseComponent.getDefaultProps()), omitFunctionPropsDeep(this.props));
+				return _.mergeWith({}, omitFunctionPropsDeep(baseComponent.getDefaultProps()), omitFunctionPropsDeep(this.props), overwriteArrays);
 			}
 			return omitFunctionPropsDeep(baseComponent.getDefaultProps());
 		},
 		componentWillReceiveProps(nextProps) {
 			if (opts.setStateWithNewProps) {
 				let nextPropsData = omitFunctionPropsDeep(nextProps);
-				this.setState(_.merge({}, _.pick(this.state, _.intersection(_.keys(this.state), _.keys(nextPropsData))), nextPropsData));
+				this.setState(_.mergeWith({}, _.pick(this.state, _.intersection(_.keys(this.state), _.keys(nextPropsData))), nextPropsData, overwriteArrays));
 			}
 		},
 		componentWillMount() {

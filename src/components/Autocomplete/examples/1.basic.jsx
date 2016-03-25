@@ -284,10 +284,10 @@ export default React.createClass({
 		return (
 			<section style={{ minHeight: 300 }}>
 
-				<Autocomplete onChange={this.handleChange} suggestions={filteredWordList} placeholder='Enter a word...' />
+				<Autocomplete onChange={this.handleChange} suggestions={_.size(filteredWordList) <= 1 && _.first(filteredWordList) === value ? [] : filteredWordList} placeholder='Enter a word...' />
 
 				<section>
-					Selected Indices: {JSON.stringify(this.state.selectedIndices)}
+					Current Value: {this.state.value}
 				</section>
 			</section>
 		);

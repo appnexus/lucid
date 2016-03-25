@@ -3,12 +3,14 @@ import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition } from '../../util/component-definition';
 import * as reducers from './Autocomplete.reducers';
+import * as KEYCODE from '../../constants/key-code';
 import DropMenu from '../DropMenu/DropMenu';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 
 const boundClassNames = lucidClassNames.bind('&-Autocomplete');
 
 const {
+	arrayOf,
 	bool,
 	func,
 	object,
@@ -43,6 +45,10 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 		 */
 		isDisabled: bool,
 		/**
+		 * suggestions
+		 */
+		suggestions: arrayOf(string),
+		/**
 		 * value
 		 */
 		value: string,
@@ -58,8 +64,9 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 
 	getDefaultProps() {
 		return {
-			value: '',
 			isDisabled: false,
+			suggestions: [],
+			value: '',
 			DropMenu: DropMenu.getDefaultProps()
 		};
 	},
@@ -67,19 +74,35 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 	handleSelect(optionIndex, ...args) {
 		const {
 			suggestions,
-			onChange
+			onChange,
+			onSelect,
+			DropMenu: {
+				onCollapse
+			}
 		} = this.props;
 
-		this.setInputValue(suggestions[optionIndex]);
+		//this.setInputValue(suggestions[optionIndex]);
 		onChange(suggestions[optionIndex], ...args);
+		onSelect(optionIndex, ...args);
+		//onCollapse();
 	},
 
 	handleInput(event) {
 		const {
-			onChange
+			onChange,
+			onExpand,
+			DropMenu: {
+				onCollapse
+			}
 		} = this.props;
+
 		this.forceUpdate();
 		onChange(event.target.value, {event, props: this.props});
+		if (!_.isEmpty(event.target.value)) {
+			onExpand();
+		} else {
+			onCollapse();
+		}
 	},
 
 	getInputValue() {
@@ -92,6 +115,85 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 	setInputValue(value) {
 		if (this.refs.inputNode) {
 			this.refs.inputNode.value = value;
+		}
+	},
+
+	handleInputKeydown(event) {
+		const {
+			onExpand,
+			DropMenu: {
+				isExpanded,
+				focusedIndex,
+				onCollapse,
+			}
+		} = this.props;
+
+		const value = this.getInputValue();
+
+		if (event.keyCode === KEYCODE.Tab && isExpanded && focusedIndex !== null) {
+			this.handleSelect(focusedIndex, event);
+			event.preventDefault();
+		}
+
+		if (event.keyCode === KEYCODE.Space) {
+			event.stopPropagation();
+		}
+
+		if (event.keyCode === KEYCODE.ArrowDown && !isExpanded) {
+			event.stopPropagation();
+
+			if (value !== '') {
+				onExpand(event);
+			}
+		}
+
+		if (event.keyCode === KEYCODE.Escape) {
+			event.stopPropagation();
+			onCollapse(event);
+		}
+
+		if (event.keyCode === KEYCODE.Enter && focusedIndex === null) {
+			event.stopPropagation();
+			onCollapse(event);
+		}
+	},
+
+	handleInputBlur(event) {
+		const {
+			DropMenu: {
+				onCollapse
+			}
+		} = this.props;
+		onCollapse(event);
+	},
+
+	handleControlClick(event) {
+		const {
+			onExpand,
+			DropMenu: {
+				isExpanded,
+				onCollapse
+			}
+		} = this.props;
+
+		const value = this.getInputValue();
+
+		if (event.target === this.refs.inputNode) {
+			if (value !== '') {
+				onExpand(event);
+			}
+
+			event.stopPropagation();
+		} else {
+			if (isExpanded) {
+				onCollapse(event);
+			} else {
+				if (value !== '') {
+					onExpand(event);
+				}
+			}
+
+			this.refs.inputNode.focus();
 		}
 	},
 
@@ -141,12 +243,19 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 				onSelect={this.handleSelect}
 				style={style}
 			>
-				<DropMenu.Control onClick={(e) => { if (value !== '') { dropMenuProps.onExpand(e); } }}>
+				<DropMenu.Control onClick={this.handleControlClick}>
 					<div className={boundClassNames('&-Control', {
 						'&-Control-is-expanded': isExpanded,
 						'&-Control-is-disabled': isDisabled
 					})}>
-						<input type='text' placeholder={placeholder} className={boundClassNames('&-Control-input')} ref='inputNode' />
+						<input
+							type='text'
+							placeholder={placeholder}
+							className={boundClassNames('&-Control-input')}
+							ref='inputNode'
+							onKeyDown={this.handleInputKeydown}
+							//onBlur={this.handleInputBlur}
+						/>
 						<CaretIcon direction={isExpanded ? direction : 'down'} />
 					</div>
 				</DropMenu.Control>
