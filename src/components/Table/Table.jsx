@@ -4,6 +4,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 
 import Button from '../Button/Button';
 import Checkbox from '../Checkbox/Checkbox';
+import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
 
 const boundClassNames = lucidClassNames.bind('&-Table');
@@ -67,16 +68,26 @@ const Table = React.createClass({
 							<th className={boundClassNames('&-cell', '&-checkbox')} rowSpan="2">
 								<Checkbox></Checkbox>
 							</th>
-							<th className={boundClassNames('&-cell')} rowSpan="2">Lorem.</th>
+							<th className={boundClassNames('&-cell', '&-isSortable')} rowSpan="2">Lorem.</th>
 							<th className={boundClassNames('&-cell', '&-hasIcon')} rowSpan="2"><SuccessIcon/></th>
 							<th className={boundClassNames('&-cell')} rowSpan="2">Button</th>
-							<th className={boundClassNames('&-cell', '&-isSorted')} rowSpan="2">Sorted Column</th>
+							<th className={boundClassNames('&-cell', '&-isSorted')} rowSpan="2">
+								<ul className={boundClassNames('&-isSorted-container')}>
+									<li className={boundClassNames('&-isSorted-title')}>Sorted Column</li>
+									<li className={boundClassNames('&-isSorted-caret')}><CaretIcon className={boundClassNames('&-sort-icon')} size="6"/></li>
+								</ul>
+							</th>
 							<th className={boundClassNames('&-cell', '&-align-center')} colSpan="3">Alignments</th>
 						</tr>
 						<tr className={boundClassNames('&-thead-row')}>
-							<th className={boundClassNames('&-cell', '&-align-left')}>align left</th>
+							<th className={boundClassNames('&-cell', '&-align-left', '&-isSortable')}>align left</th>
 							<th className={boundClassNames('&-cell', '&-align-center')}>align center</th>
-							<th className={boundClassNames('&-cell', '&-align-right')}>align right</th>
+							<th className={boundClassNames('&-cell', '&-align-right', '&-isSorted')}>
+								<ul className={boundClassNames('&-isSorted-container')}>
+									<li className={boundClassNames('&-isSorted-title')}>align right</li>
+									<li className={boundClassNames('&-isSorted-caret')}><CaretIcon className={boundClassNames('&-sort-icon')} size="6"/></li>
+								</ul>
+							</th>
 						</tr>
 					</thead>
 					<tbody className={boundClassNames('&-tbody')}>
