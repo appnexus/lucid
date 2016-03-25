@@ -6,7 +6,7 @@ const boundClassNames = lucidClassNames.bind('&-ResizeIcon');
 
 /**
  *
- * {"categories": ["visual design", "icons"], "extend": "Icon"}
+ * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
  * A resize icon.
  */

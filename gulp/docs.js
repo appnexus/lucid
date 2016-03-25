@@ -45,20 +45,33 @@ module.exports = {
 				if (!isInComponents) { return acc; }
 
 				var componentName = extractComponentName(file);
-				var docs = reactDocgen.parse(fs.readFileSync(file), function (ast, recast) {
-					var definition;
-					recast.visit(ast, {
-						visitObjectExpression: function (path) {
-							_.forEach(path.get('properties').value, function (property) {
-								if (property.key.name === 'render') {
-									definition = path;
-								}
-							});
-							return false;
-						}
-					});
-					return definition;
-				});
+
+				console.log('Docgen parsing %s...', file);
+				var docs = reactDocgen.parse(
+					fs.readFileSync(file),
+					// Resolver
+					function (ast, recast) {
+						var definition;
+						recast.visit(ast, {
+							visitObjectExpression: function (path) {
+								_.forEach(path.get('properties').value, function (property) {
+									if (property.key.name === 'render') {
+										definition = path;
+									}
+								});
+								return false;
+							}
+						});
+						return definition;
+					},
+					// Handlers, a series of functions through which the documentation is
+					// built up.
+					reactDocgen.defaultHandlers.concat(function (/* documentation, definition */) {
+						// TODO: determine composition from the `import` statements See
+						// existing handlers for examples:
+						// https://github.com/reactjs/react-docgen/blob/dca8ec9d57b4833f7ddb3164bedf4d74578eee1e/src/handlers/propTypeCompositionHandler.js
+					})
+				);
 
 				if (!docs.description) {
 					return new Error('Missing a description from ' + file + ' - please put a comment block right above `createClass` and make sure to include the proper JSON blob in it.')

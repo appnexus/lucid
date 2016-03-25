@@ -1,0 +1,59 @@
+@Dialog-zIndex: 4000;
+@Dialog-size-spacing: 12px;
+@Dialog-size-borderRadius: @size-borderRadius + 2;
+@Dialog-size-maxHeight: 80vh;
+@Dialog-size-smallWidth: 30%;
+@Dialog-size-mediumWidth: 60%;
+@Dialog-size-largeWidth: 90%;
+
+.lucid-Dialog {
+	.transition-group-animation-fade();
+
+	&-window {
+		display: flex;
+		flex-direction: column;
+		background: @color-white;
+		border-radius: @Dialog-size-borderRadius;
+		box-shadow: 0 0 4px 0 @color-gray-50;
+		max-height: @Dialog-size-maxHeight;
+		overflow: hidden;
+		z-index: @Dialog-zIndex + 1;
+	}
+
+	&-window-is-small {
+		width: @Dialog-size-smallWidth;
+	}
+	&-window-is-medium {
+		width: @Dialog-size-mediumWidth;
+	}
+	&-window-is-large {
+		width: @Dialog-size-largeWidth;
+	}
+
+	&-header {
+		flex: 1 0 auto;
+		font-family: @fontFamily;
+		font-size: @size-font-large;
+		color: @color-darkGray;
+		font-weight: bold;
+		background-color: @color-lightGray;
+		border-bottom: 1px solid @color-gray;
+		padding: @Dialog-size-spacing;
+		padding-bottom: @Dialog-size-spacing - 2;
+	}
+
+	&-body {
+		flex: 1 1 auto;
+		overflow: auto;
+		padding: @Dialog-size-spacing;
+		max-height: 60vh; // fix for IE 11 bug, otherwise the body doesn't shrink properly
+	}
+
+	&-footer {
+		flex: 1 0 auto;
+		text-align: right;
+		background-color: @color-white;
+		padding: @Dialog-size-spacing;
+		border-top: 1px solid @color-gray;
+	}
+}

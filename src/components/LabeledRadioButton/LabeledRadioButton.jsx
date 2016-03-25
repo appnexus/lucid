@@ -6,15 +6,14 @@ import RadioButton from '../RadioButton/RadioButton';
 
 const boundClassNames = lucidClassNames.bind('&-LabeledRadioButton');
 const {
-	bool,
-	func,
+	any,
 	node,
 	object,
 	string
 } = React.PropTypes;
 
 /**
- * {"categories": ["controls", "toggles"], "extend": "RadioButton"}
+ * {"categories": ["controls", "toggles"], "extend": "RadioButton", "madeFrom": ["RadioButton"]}
  *
  * This is a composite of the `RadioButton` component and the native `label`
  * element.
@@ -33,6 +32,8 @@ const LabeledRadioButton = React.createClass(createLucidComponentDefinition({
 	},
 
 	propTypes: {
+		...RadioButton.propTypes,
+
 		/**
 		 * Appended to the component-specific class names set on the root
 		 * element.
@@ -40,30 +41,15 @@ const LabeledRadioButton = React.createClass(createLucidComponentDefinition({
 		className: string,
 
 		/**
-		 * Indicates whether the component should appear and act disabled by
-		 * having a "greyed out" palette and ignoring user interactions.
-		 */
-		isDisabled: bool,
-
-		/**
-		 * Indicates that the component is in the "selected" state when true
-		 * and in the "unselected" state when false.
-		 */
-		isSelected: bool,
-
-		/**
-		 * Called when the user clicks on the component or when they press the
-		 * space key while the component is in focus, and only called when the
-		 * component is in the unselected state.
-		 *
-		 * Signature: `(true, { event, props }) => {}`
-		 */
-		onSelect: func,
-
-		/**
 		 * Passed through to the root element.
 		 */
-		style: object
+		style: object,
+
+		/**
+		 * Child element whose children are used to identify the purpose of this
+		 * radio button to the user.
+		 */
+		Label: any
 	},
 
 	getDefaultProps() {
@@ -93,7 +79,6 @@ const LabeledRadioButton = React.createClass(createLucidComponentDefinition({
 						'&-is-selected': isSelected
 					}, className)}
 					style={style}
-					{...labelChildProps}
 			>
 				<RadioButton
 						className={className}
