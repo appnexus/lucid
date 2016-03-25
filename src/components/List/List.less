@@ -12,10 +12,6 @@
 @ListChild-size-padding: 15px;
 
 
-
-// Resets
-ul.lucid-List { list-style: none; }
-
 /*
 	Primary Component - List
   Should create a default flexible list capable of
@@ -28,10 +24,11 @@ ul.lucid-List { list-style: none; }
 	align-items: stretch;
 	width: 100%;
 	padding: 0;
+	list-style: none;
 
-	&&-is-disabled {
-
-		a {
+	&-is-disabled,
+	&-Item-is-disabled {
+		.lucid-List-Item-content {
 			color: @color-mediumGray;
 			cursor: not-allowed;
 
@@ -45,108 +42,124 @@ ul.lucid-List { list-style: none; }
 	}
 
 	// ToDo: style version with a the x-axis set as primary
-	&-is-horizontal { flex-direction: row; }
+	// &-is-horizontal { flex-direction: row; }
 }
 
 /*
- * Child Component - ListItem
+ * Child Component - Item
 */
-.lucid-List-ListItem {
+.lucid-List-Item {
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
 
-	>a {
-		.is-selectable();
-		display: flex;
-		font-size: 12px;
-		justify-content: flex-start;
-		align-items: center;
-		font-weight: bold;
-		border-width: 1px 0 0 0;
-		border-color: @color-gray;
-		border-style: solid;
-		color: @color-primary;
-		padding: 10px 0 8px @ListChild-size-padding;
-		line-height: 11px;
+	.lucid-List &&-is-selected > &-content {
+		&:before {
+			color: @color-darkGray;
+		}
+	}
+
+	&-is-selected > &-content {
+		// TODO: fix color
+		.hardstop-gradient(to right, @featured-color-primary, @featured-color-primary-backgroundColor, @List-size-border);
+		color: @color-darkGray;
 
 		&:hover {
-			.hardstop-gradient(to right, @featured-color-primary, @featured-color-default-gradientEndColor, @List-size-border);
+			.hardstop-gradient(to right, @featured-color-primary, @featured-color-primary-backgroundColor, @List-size-border);
 			color: @color-darkGray;
 		}
-
-		&:focus,
-		&:active {
-			.hardstop-gradient(to right, @featured-color-primary, @featured-color-primary-gradientStartColor, @List-size-border);
-			color: @color-darkGray;
-		}
-
-		>span{ flex: 1; }
 	}
 
 	// All List Items who have nested Lists
-	&-is-parent {
-		> a {border-bottom-color: transparent;}
+	&-is-parent .lucid-List {
+		.lucid-List-Item-content {
+			font-weight: normal;
+			border-color: transparent;
 
-		.lucid-List .lucid-List-ListItem{
-			>a {
-				font-weight: normal;
-				border-color: transparent;
+			&:before {
+				content: '-';
+				display: inline-block;
+				width: @ListChild-size-spacer;
+				color: @color-gray;
+				margin: 0 @ListChild-size-spacer 0 0;
+			}
 
+			&:hover {
 				&:before {
-					content: '-';
-					display: inline-block;
-					width: @ListChild-size-spacer;
-					color: @color-gray;
-					margin: 0 @ListChild-size-spacer 0 0;
-				}
-
-				&:hover {
-					&:before {
-						color: @color-darkGray;
-					}
+					color: @color-darkGray;
 				}
 			}
+		}
 
-			// ToDo make this a looping mixin, to handle as many layers deep as we need to go
-			//  Calc @ListChild-size-padding + (12 * nestingListDepth) (in this case nestingListDepth = 1)
-			>ul {
-				li a{
-					padding: 10px 0 8px @ListChild-size-padding + 12;
-				}
-			}
 
+		> .lucid-List-Item-content {
+			border-bottom: @color-transparent;
+		}
+
+		.lucid-List {
+			margin: 0;
+			padding: 0;
 		}
 	}
 
-	&&-is-disabled {
+	&:first-of-type > &-content {
+		border-top-color: transparent;
+	}
+}
 
-		a {
-			color: @color-mediumGray;
-			cursor: not-allowed;
+.lucid-List-Item-content {
+	.is-selectable();
+	display: flex;
+	font-size: 12px;
+	justify-content: flex-start;
+	align-items: center;
+	font-weight: bold;
+	border-width: 1px 0 0 0;
+	border-color: @color-gray;
+	border-style: solid;
+	color: @color-primary;
+	padding: 10px 0 8px @ListChild-size-padding;
+	line-height: 11px;
 
-			&:hover,
-			&:active,
-			&:focus {
-				background: transparent;
-				color: @color-mediumGray;
-			}
-		}
+	// TODO: only when something isn't selected
+	&:hover {
+		.hardstop-gradient(to right, @featured-color-primary, @featured-color-default-gradientEndColor, @List-size-border);
+		color: @color-darkGray;
 	}
 
-	&:first-of-type {
-		>a {
-			border-top-color: transparent;
+	&:focus,
+	&:active {
+		.hardstop-gradient(to right, @featured-color-primary, @featured-color-primary-gradientStartColor, @List-size-border);
+		color: @color-darkGray;
+	}
+}
+
+.lucid-List-Item {
+
+	&&-is-expanded {
+		> .lucid-List {
+			overflow: hidden;
+			max-height: 0;
+			transition: max-height 300ms cubic-bezier(0.230, 1.000, 0.320, 1.000); /* easeOutQuint */
 		}
+	}
+	> .lucid-List {
+		max-height: 9999px;
+		overflow: hidden;
+		transition: max-height 1000ms cubic-bezier(0.755, 0.050, 0.855, 0.060); /* easeInQuint */
 	}
 }
 
 /* Expander Button - Added to the DOM with React when hasExpander = true */
-.lucid-List-has-expander
-.lucid-List-ListItem {
-	>a {
+.lucid-List-Item-has-expander {
+
+	> .lucid-List > .lucid-List-Item {
+		flex-shrink: 0;
+	}
+
+	> .lucid-List-Item-content {
 		position: relative;
-		padding-right: 24px;
+		padding-right: 25px;
 
 		.lucid-List-expander{
 			position: absolute;
@@ -163,21 +176,35 @@ ul.lucid-List { list-style: none; }
 			padding: 0;
 			line-height: 1em;
 
+			// Fix for safari
+			> .lucid-Button-content {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+
 			// Remove the unnecessary animated background button gradient from the DOM
 			&:active, &:focus {
-				&:before{display: none;}
+				&:before {
+					display: none;
+				}
 			}
 
 			.lucid-CaretIcon {
 				width: @List-size-icon;
 				height: @List-size-icon;
-				color: @color-gray;
+				stroke: @color-gray;
 			}
 		}
+
 
 		&:hover {
 			.lucid-List-expander {
 				border: 1px solid @featured-color-default-borderColor;
+
+				.lucid-CaretIcon {
+					stroke: @color-primary;
+				}
 			}
 		}
 		&:focus,
@@ -187,9 +214,32 @@ ul.lucid-List { list-style: none; }
 				border: 1px solid transparent;
 
 				.lucid-CaretIcon {
-					color: @color-primary;
+					stroke: @color-primary;
 				}
 			}
 		}
+	}
+
+}
+
+.lucid-List-Item-is-selected >.lucid-List-Item-content > .lucid-List-expander .lucid-CaretIcon {
+	stroke: @color-primary;
+}
+
+/*
+ * Nested List Padding (should be a looping mixin)
+*/
+.lucid-List{
+	margin: 0;
+	padding: 0;
+
+	.lucid-List .lucid-List-Item-content {
+		padding-left: @ListChild-size-padding + (12);
+	}
+	.lucid-List .lucid-List .lucid-List-Item-content {
+		padding-left: @ListChild-size-padding + (12*2);
+	}
+	.lucid-List .lucid-List .lucid-List .lucid-List-Item-content {
+		padding-left: @ListChild-size-padding + (12*3);
 	}
 }
