@@ -64,7 +64,6 @@ const docgenGroups = _.reduce(docgenMap, (acc, value, key) => {
 	newGroup.push(key);
 	return _.set(acc, path, newGroup);
 }, {});
-console.log(docgenGroups);
 function handleHighlightCode() {
 	_.each(document.querySelectorAll('pre code'), (block) => {
 		hljs.highlightBlock(block);

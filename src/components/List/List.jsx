@@ -4,16 +4,15 @@ import { bindClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition }  from '../../util/component-definition';
 import Button from '../Button/Button';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
+import * as reducers from './List.reducers';
 
 const boundClassNames = bindClassNames('lucid-List');
 
 const {
 	func,
 	bool,
-	any,
 	array,
 	string,
-	number,
 	node,
 	object,
 } = React.PropTypes;
@@ -26,6 +25,8 @@ const {
  */
 const List = React.createClass(createLucidComponentDefinition({
 	displayName: 'List',
+
+	reducers,
 
 	propTypes: {
 		/**
@@ -134,10 +135,14 @@ const List = React.createClass(createLucidComponentDefinition({
 
 	getDefaultProps() {
 		return {
+			onSelect: _.noop,
+			onExpand: _.noop,
 			isDisabled: false,
-			isVertical: true
+			isVertical: true,
 		};
 	},
+
+	_index: 0,
 
 	render() {
 		const {
@@ -166,6 +171,8 @@ const List = React.createClass(createLucidComponentDefinition({
 		// 	? selectedIndicesFromChildren
 		// 	: selectedIndices;
 
+		this._index = -1;
+
 		return (
 			<ul {...passThroughs}
 				className={boundClassNames('&', {
@@ -175,70 +182,112 @@ const List = React.createClass(createLucidComponentDefinition({
 				}, className)}
 				style={style} >
 				{_.map(listItemChildProps, (listItemChildProp) => {
+					this._index++;
 					return this.renderListItem(listItemChildProp);
-				} )}
+				})}
 			</ul>
 		);
 	},
 
-	renderListItem(childProps, selectedIndices){
+	renderListItem(childProps) {
+		const childPropsWithDefaults = _.defaults({}, childProps, {
+			onSelect: _.noop,
+			onExpand: _.noop,
+			isExpanded: _.includes(this.props.expandedIndices, this._index),
+			isSelected: _.includes(this.props.selectedIndices, this._index),
+			isDisabled: false,
+			hasExpander: this.props.hasExpander,
+		});
+
 		const {
 			children,
 			className,
 			style,
-			onSelect = _.noop,
-			isExpanded = false,
-			isSelected = false,
-			isDisabled = false,
-			hasExpander = this.props.hasExpander,
+			onSelect,
+			onExpand,
+			isExpanded,
+			isSelected,
+			isDisabled,
+			hasExpander,
 			...passThroughs
-		} = childProps;
+		} = childPropsWithDefaults;
 
 		const isParent = _.isArray(children);
 		const classNames = boundClassNames('&-Item', {
-				'&-Item-is-parent' : isParent,
-				/*'&-Item-is-active': index === actualSelectedIndex,*/
-				'&-Item-is-selected': isSelected,
-				'&-Item-is-disabled' : isDisabled,
-				'&-Item-is-expanded' : isExpanded,
-			}, className);
+			'&-Item-is-parent' : isParent,
+			'&-Item-is-selected': isSelected,
+			'&-Item-is-disabled': isDisabled,
+			'&-Item-is-expanded': isExpanded,
+			'&-Item-is-collapsed': !isExpanded && isParent,
+		}, className);
 
 		return (
-			isParent?
+			isParent ?
 				<li className={classNames}>
-					<a className={boundClassNames('&-Item-content')}>
+					<a
+						className={boundClassNames('&-Item-content')}
+						onClick={_.partial(this.handleClickItem, this._index, childPropsWithDefaults)}
+					>
 						{children[0]}
 						{hasExpander ?
 							<Button
 								className={boundClassNames('&-expander')}
-								size='short'>
+								size='short'
+								onClick={_.partial(this.handleClickExpander, this._index, childPropsWithDefaults)}
+							>
 								<CaretIcon direction={isExpanded ? 'up' : 'down'} isOutline />
 							</Button>
 						: null }
 					</a>
 					<ul className={boundClassNames('&-Item-sublist')}>
-						{_.map(List.Item.findInAllAsProps(childProps), (child, index) => {
+						{_.map(List.Item.findInAllAsProps(childProps), (child) => {
+							this._index++;
 							return this.renderListItem(child);
 						})}
 					</ul>
 				</li>
 			:
-			<li className={classNames}><a className={boundClassNames('&-Item-content')}>{children}</a></li>
+				<li className={classNames}>
+					<a className={boundClassNames('&-Item-content')}
+						onClick={_.partial(this.handleClickItem, this._index, childPropsWithDefaults)}
+					>
+						{children}
+					</a>
+				</li>
 		);
 	},
 
-	handleClicked(event) {
+	handleClickExpander(index, props, { event }) {
+		// When the user clicks the expander, we don't want that click event to
+		// flow through to the `onSelect` handler as well
+		event.stopPropagation();
+
+		const {
+			onExpand,
+		} = this.props;
+
 		const {
 			isDisabled,
-			isOpen,
+			isExpanded,
+		} = props;
+
+		if (!isDisabled) {
+			onExpand(index, !isExpanded, { event, props });
+		}
+	},
+
+	handleClickItem(index, props, event) {
+		const {
 			onSelect,
 		} = this.props;
 
-		event.preventDefault();
+		const {
+			isDisabled,
+			isSelected,
+		} = props;
 
-		if (!isDisabled && !isOpen) {
-			onSelect(true, { event, props: this.props });
-
+		if (!isDisabled) {
+			onSelect(index, !isSelected, { event, props });
 		}
 	}
 
