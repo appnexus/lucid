@@ -38,11 +38,11 @@ const Container = React.createClass(createLucidComponentDefinition({
 		 */
 		Header: node,
 		/**
-		 * *Child Element* - Header contents. Only one `Header` is used.
+		 * *Child Element* - Content contents. Only one `Content` is used.
 		 */
 		Content: node,
 		/**
-		 * *Child Element* - Header contents. Only one `Header` is used.
+		 * *Child Element* - Footer contents. Only one `Footer` is used.
 		 */
 		Footer: node,
 		/**
