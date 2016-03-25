@@ -10,22 +10,6 @@ const {
 	string
 } = React.PropTypes;
 
-function getHeader(headerChildProp, title){
-	if(headerChildProp) return <header {...headerChildProp} className={boundClassNames('&-header')}/>
-	else if(title) return <header {...headerChildProp} className={boundClassNames('&-header')}><span className={boundClassNames('&-title')}>{title}</span></header>
-	else return null;
-}
-
-function getContent(contentChildProp, children){
-	if(contentChildProp) return <section {...contentChildProp} className={boundClassNames('&-content')} />
-	else children;
-}
-
-function getFooter(footerChildProp){
-	if(footerChildProp) return <footer {...footerChildProp} className={boundClassNames('&-footer')} />
-	else return null;
-}
-
 /**
  * {"categories": ["layout"]}
  *
@@ -71,12 +55,18 @@ const Container = React.createClass(createLucidComponentDefinition({
 	render: function() {
 		const {className, style, title, children} = this.props;
 
-		const headerEl = getHeader(_.first(Container.Header.findInAllAsProps(this.props)), title);
-		const contentEl = getContent(_.first(Container.Content.findInAllAsProps(this.props)), children);
-		const footerEl = getFooter(_.first(Container.Footer.findInAllAsProps(this.props)));
+		const headerChildProp = _.first(Container.Header.findInAllAsProps(this.props));
+		const contentChildProp = _.first(Container.Content.findInAllAsProps(this.props));
+		const footerChildProp = _.first(Container.Footer.findInAllAsProps(this.props));
+
+		const titleEl = (title)?<header className={boundClassNames('&-header')}><span className={boundClassNames('&-title')}>{title}</span></header>:null;
+		const headerEl = (headerChildProp)?<header {...headerChildProp} className={boundClassNames('&-header')} />:null;
+		const contentEl = (contentChildProp)?<section {...contentChildProp} className={boundClassNames('&-content')} />:children;
+		const footerEl = (footerChildProp)?<footer {...footerChildProp} className={boundClassNames('&-footer')} />:null;
 
 		return (
 			<div className={boundClassNames('&', className)} style={style}>
+				{titleEl}
 				{headerEl}
 				{contentEl}
 				{footerEl}
