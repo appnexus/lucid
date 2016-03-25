@@ -1,7 +1,9 @@
 import React from 'react';
 import _ from 'lodash';
-import Autocomplete from '../Autocomplete';
+import AutocompleteStateless from '../Autocomplete';
+import { buildStatefulComponent } from '../../../util/state-management';
 
+const Autocomplete = buildStatefulComponent(AutocompleteStateless);
 
 const wordlist = [
   'abaft',
@@ -281,24 +283,18 @@ export default React.createClass({
 		const filteredWordList = value !== '' ? _.filter(wordlist, (word) => valuePattern.test(word)) : wordlist;
 
 		return (
-			<section style={{ minHeight: 300 }}>
-
-				<Autocomplete
-					placeholder='Enter a word...'
-					suggestions={_.size(filteredWordList) <= 1 && _.first(filteredWordList) === value ? [] : filteredWordList}
-					value='ab'
-					//onChange={this.handleChange}
-					DropMenu={{
-						isExpanded: true,
-						onSelect: _.noop,
-						focusedIndex: 2,
-						onCollapse: _.noop
-					}}
-				/>
+			<section>
 
 				<section>
 					Current Value: {this.state.value}
 				</section>
+
+				<Autocomplete
+					placeholder='Enter a word...'
+					suggestions={_.size(filteredWordList) <= 1 && _.first(filteredWordList) === value ? [] : filteredWordList}
+					onChange={this.handleChange}
+				/>
+
 			</section>
 		);
 	}

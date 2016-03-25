@@ -20,10 +20,9 @@ const {
 
 /**
  *
- * {"categories": ["controls", "selectors"], "madeFrom": ["DropMenu"]}
+ * {"categories": ["controls", "text"], "madeFrom": ["DropMenu"]}
  *
- * A selector control (like native `<select>`) which is used to select a single option from a dropdown list.
- * Supports option groups with and without labels.
+ * A text input with suggested values displayed in an attached menu.
  */
 
 const Autocomplete = React.createClass(createLucidComponentDefinition({
@@ -33,7 +32,7 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 
 	propTypes: {
 		/**
-		 * Appended to the component-specific class names set on the root elements. Applies to *both* the control and the flyout menu.
+		 * Appended to the component-specific class names set on the root elements.
 		 */
 		className: string,
 		/**
@@ -45,11 +44,11 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 		 */
 		isDisabled: bool,
 		/**
-		 * suggestions
+		 * Array of suggested text input values shown in drop menu.
 		 */
 		suggestions: arrayOf(string),
 		/**
-		 * value
+		 * Text value of the input.
 		 */
 		value: string,
 		/**
@@ -58,14 +57,17 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 		DropMenu: shape(DropMenu.propTypes),
 		/**
 		 * Called when the input value changes.
+		 * Has the signature `(value, {props, event}) => {}` where value is a string.
 		 */
 		onChange: func,
 		/**
-		 * onSelect
+		 * Called when a suggestion is selected from the menu.
+		 * Has the signature `(optionIndex, {props, event}) => {}` where optionIndex is a number.
 		 */
 		onSelect: func,
 		/**
-		 * onExpand
+		 * Called when menu is expected to expand.
+		 * Has the signature `({props, event}) => {}`.
 		 */
 		onExpand: func,
 	},
@@ -82,7 +84,7 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 		};
 	},
 
-	handleSelect(optionIndex, ...args) {
+	handleSelect(optionIndex, { event }) {
 		const {
 			suggestions,
 			onChange,
@@ -92,8 +94,8 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 			}
 		} = this.props;
 
-		onChange(suggestions[optionIndex], ...args);
-		onSelect(optionIndex, ...args);
+		onChange(suggestions[optionIndex], { event, props: this.props});
+		onSelect(optionIndex, { event, props: this.props});
 	},
 
 	handleInput(event) {
@@ -107,7 +109,7 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 
 		onChange(event.target.value, {event, props: this.props});
 		if (!_.isEmpty(event.target.value)) {
-			onExpand();
+			onExpand({event, props: this.props});
 		} else {
 			onCollapse();
 		}
@@ -136,7 +138,7 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 		const value = this.getInputValue();
 
 		if (event.keyCode === KEYCODE.Tab && isExpanded && focusedIndex !== null) {
-			this.handleSelect(focusedIndex, event);
+			this.handleSelect(focusedIndex, {event, props: this.props});
 			event.preventDefault();
 		}
 
@@ -148,7 +150,7 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 			event.stopPropagation();
 
 			if (_.isEmpty(value)) {
-				onExpand(event);
+				onExpand({event, props: this.props});
 			}
 		}
 
@@ -175,18 +177,12 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 		const value = this.getInputValue();
 
 		if (event.target === this.refs.inputNode) {
-			if (_.isEmpty(value)) {
-				onExpand(event);
-			}
-
-			event.stopPropagation();
+			onExpand({event, props: this.props});
 		} else {
 			if (isExpanded) {
 				onCollapse(event);
 			} else {
-				if (_.isEmpty(value)) {
-					onExpand(event);
-				}
+				onExpand({event, props: this.props});
 			}
 
 			this.refs.inputNode.focus();
@@ -250,6 +246,7 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 							className={boundClassNames('&-Control-input')}
 							ref='inputNode'
 							onKeyDown={this.handleInputKeydown}
+							disabled={isDisabled}
 						/>
 						<CaretIcon direction={isExpanded ? direction : 'down'} />
 					</div>
