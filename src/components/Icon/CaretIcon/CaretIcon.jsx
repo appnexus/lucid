@@ -32,7 +32,7 @@ const CaretIcon = React.createClass({
 		 * removes the fill of the icon and replaces it with an open stroke.
 		 * default is *false*
 		 */
-		isOutline: bool,
+		openIcon: bool,
 	},
 
 	getDefaultProps() {
@@ -40,7 +40,7 @@ const CaretIcon = React.createClass({
 			direction: 'down',
 			viewBox: '0 3 16 8',
 			size: 16,
-			isOutline: false
+			openIcon: false
 		};
 	},
 
@@ -49,7 +49,7 @@ const CaretIcon = React.createClass({
 			className,
 			direction,
 			size,
-			isOutline,
+			openIcon,
 			...passThroughs
 		} = this.props;
 
@@ -61,7 +61,7 @@ const CaretIcon = React.createClass({
 					'&-is-up': direction === 'up',
 					'&-is-left': direction === 'left',
 					'&-is-right': direction === 'right',
-					'&-is-outline': isOutline,
+					'&-is-open': openIcon,
 				}, className)}
 				size={size}
 			>

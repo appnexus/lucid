@@ -29,9 +29,9 @@ ul.lucid-List { list-style: none; }
 	width: 100%;
 	padding: 0;
 
-	&-is-disabled,
-	&-Item-is-disabled {
-		.lucid-List-Item-content {
+	&&-is-disabled {
+
+		a {
 			color: @color-mediumGray;
 			cursor: not-allowed;
 
@@ -51,12 +51,12 @@ ul.lucid-List { list-style: none; }
 /*
  * Child Component - ListItem
 */
-.lucid-List-Item {
+.lucid-List-ListItem {
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
 
-	&-content {
+	>a {
 		.is-selectable();
 		display: flex;
 		font-size: 12px;
@@ -86,41 +86,56 @@ ul.lucid-List { list-style: none; }
 
 	// All List Items who have nested Lists
 	&-is-parent {
-		.lucid-List-Item-content {
-			font-weight: normal;
-			border-color: transparent;
+		> a {border-bottom-color: transparent;}
 
-			&:before {
-				content: '-';
-				display: inline-block;
-				width: @ListChild-size-spacer;
-				color: @color-gray;
-				margin: 0 @ListChild-size-spacer 0 0;
-			}
+		.lucid-List .lucid-List-ListItem{
+			>a {
+				font-weight: normal;
+				border-color: transparent;
 
-			&:hover {
 				&:before {
-					color: @color-darkGray;
+					content: '-';
+					display: inline-block;
+					width: @ListChild-size-spacer;
+					color: @color-gray;
+					margin: 0 @ListChild-size-spacer 0 0;
+				}
+
+				&:hover {
+					&:before {
+						color: @color-darkGray;
+					}
 				}
 			}
-		}
 
 			// ToDo make this a looping mixin, to handle as many layers deep as we need to go
 			//  Calc @ListChild-size-padding + (12 * nestingListDepth) (in this case nestingListDepth = 1)
-		.lucid-List .lucid-List-Item .lucid-List-Item-content{
-			padding: 10px 0 8px @ListChild-size-padding + 12;
+			>ul {
+				li a{
+					padding: 10px 0 8px @ListChild-size-padding + 12;
+				}
+			}
+
 		}
+	}
 
-		> .lucid-List-Item-content { border-bottom-color: transparent; }
+	&&-is-disabled {
 
-		.lucid-List-Item-sublist {
-			margin: 0;
-			padding: 0;
+		a {
+			color: @color-mediumGray;
+			cursor: not-allowed;
+
+			&:hover,
+			&:active,
+			&:focus {
+				background: transparent;
+				color: @color-mediumGray;
+			}
 		}
 	}
 
 	&:first-of-type {
-		>.lucid-List-Item-content {
+		>a {
 			border-top-color: transparent;
 		}
 	}
@@ -129,7 +144,7 @@ ul.lucid-List { list-style: none; }
 /* Expander Button - Added to the DOM with React when hasExpander = true */
 .lucid-List-has-expander
 .lucid-List-ListItem {
-	> .lucid-List-Item-content {
+	>a {
 		position: relative;
 		padding-right: 24px;
 
@@ -147,12 +162,6 @@ ul.lucid-List { list-style: none; }
 			border-color: transparent;
 			padding: 0;
 			line-height: 1em;
-
-			>span{
-				display: flex;
-				justify-content: center;
-
-			}
 
 			// Remove the unnecessary animated background button gradient from the DOM
 			&:active, &:focus {
@@ -183,244 +192,4 @@ ul.lucid-List { list-style: none; }
 			}
 		}
 	}
-
 }
-
-.lucid-List-has-expander .lucid-List-Item-content{
-	position: relative;
-	padding-right: 24px;
-
-	.lucid-List-expander{
-		position: absolute;
-		right: 5px;
-		top: 5px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: @List-size-iconButton;
-		height: @List-size-iconButton;
-		font-size: @List-size-icon;
-		background: transparent;
-		border-color: transparent;
-		padding: 0;
-		line-height: 1em;
-
-		>span{
-			display: flex;
-			justify-content: center;
-
-		}
-
-		// Remove the unnecessary animated background button gradient from the DOM
-		&:active, &:focus {
-			&:before{display: none;}
-		}
-
-		.lucid-CaretIcon {
-			width: @List-size-icon;
-			height: @List-size-icon;
-			color: @color-gray;
-		}
-	}
-
-	&:hover {
-		.lucid-List-expander {
-			border: 1px solid @featured-color-default-borderColor;
-		}
-	}
-	&:focus,
-	&:active {
-		.lucid-List-expander {
-			background: transparent;
-			border: 1px solid transparent;
-
-			.lucid-CaretIcon {
-				color: @color-primary;
-			}
-		}
-	}
-}
-
-
-//
-//
-//
-
-// .lucid-List {
-// 	display: flex;
-// 	flex-direction: column;
-// 	justify-content: flex-start;
-// 	align-items: stretch;
-// 	width: 100%;
-// 	padding: 0;
-//
-// 	&&-is-disabled {
-//
-// 		a {
-// 			color: @color-mediumGray;
-// 			cursor: not-allowed;
-//
-// 			&:hover,
-// 			&:active,
-// 			&:focus {
-// 				background: transparent;
-// 				color: @color-mediumGray;
-// 			}
-// 		}
-// 	}
-//
-// 	// ToDo: style version with a the x-axis set as primary
-// 	&-is-horizontal { flex-direction: row; }
-// }
-//
-// /*
-//  * Child Component - ListItem
-// */
-// .lucid-List-ListItem {
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: stretch;
-//
-// 	>a {
-// 		.is-selectable();
-// 		display: flex;
-// 		font-size: 12px;
-// 		justify-content: flex-start;
-// 		align-items: center;
-// 		font-weight: bold;
-// 		border-width: 1px 0 0 0;
-// 		border-color: @color-gray;
-// 		border-style: solid;
-// 		color: @color-primary;
-// 		padding: 10px 0 8px @ListChild-size-padding;
-// 		line-height: 11px;
-//
-// 		&:hover {
-// 			.hardstop-gradient(to right, @featured-color-primary, @featured-color-default-gradientEndColor, @List-size-border);
-// 			color: @color-darkGray;
-// 		}
-//
-// 		&:focus,
-// 		&:active {
-// 			.hardstop-gradient(to right, @featured-color-primary, @featured-color-primary-gradientStartColor, @List-size-border);
-// 			color: @color-darkGray;
-// 		}
-//
-// 		>span{ flex: 1; }
-// 	}
-//
-// 	// All List Items who have nested Lists
-// 	&-is-parent {
-// 		> a {border-bottom-color: transparent;}
-//
-// 		.lucid-List .lucid-List-ListItem{
-// 			>a {
-// 				font-weight: normal;
-// 				border-color: transparent;
-//
-// 				&:before {
-// 					content: '-';
-// 					display: inline-block;
-// 					width: @ListChild-size-spacer;
-// 					color: @color-gray;
-// 					margin: 0 @ListChild-size-spacer 0 0;
-// 				}
-//
-// 				&:hover {
-// 					&:before {
-// 						color: @color-darkGray;
-// 					}
-// 				}
-// 			}
-//
-// 			// ToDo make this a looping mixin, to handle as many layers deep as we need to go
-// 			//  Calc @ListChild-size-padding + (12 * nestingListDepth) (in this case nestingListDepth = 1)
-// 			>ul {
-// 				li a{
-// 					padding: 10px 0 8px @ListChild-size-padding + 12;
-// 				}
-// 			}
-//
-// 		}
-// 	}
-//
-// 	&&-is-disabled {
-//
-// 		a {
-// 			color: @color-mediumGray;
-// 			cursor: not-allowed;
-//
-// 			&:hover,
-// 			&:active,
-// 			&:focus {
-// 				background: transparent;
-// 				color: @color-mediumGray;
-// 			}
-// 		}
-// 	}
-//
-// 	&:first-of-type {
-// 		>a {
-// 			border-top-color: transparent;
-// 		}
-// 	}
-// }
-//
-// /* Expander Button - Added to the DOM with React when hasExpander = true */
-// .lucid-List-has-expander
-// .lucid-List-ListItem {
-// 	>a {
-// 		position: relative;
-// 		padding-right: 24px;
-//
-// 		.lucid-List-expander{
-// 			position: absolute;
-// 			right: 5px;
-// 			top: 5px;
-// 			display: flex;
-// 			justify-content: center;
-// 			align-items: center;
-// 			width: @List-size-iconButton;
-// 			height: @List-size-iconButton;
-// 			font-size: @List-size-icon;
-// 			background: transparent;
-// 			border-color: transparent;
-// 			padding: 0;
-// 			line-height: 1em;
-//
-// 			>span{
-// 				display: flex;
-// 				justify-content: center;
-//
-// 			}
-//
-// 			// Remove the unnecessary animated background button gradient from the DOM
-// 			&:active, &:focus {
-// 				&:before{display: none;}
-// 			}
-//
-// 			.lucid-CaretIcon {
-// 				width: @List-size-icon;
-// 				height: @List-size-icon;
-// 				color: @color-gray;
-// 			}
-// 		}
-//
-// 		&:hover {
-// 			.lucid-List-expander {
-// 				border: 1px solid @featured-color-default-borderColor;
-// 			}
-// 		}
-// 		&:focus,
-// 		&:active {
-// 			.lucid-List-expander {
-// 				background: transparent;
-// 				border: 1px solid transparent;
-//
-// 				.lucid-CaretIcon {
-// 					color: @color-primary;
-// 				}
-// 			}
-// 		}
-// 	}
-// }
