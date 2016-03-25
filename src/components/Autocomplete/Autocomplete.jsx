@@ -60,6 +60,14 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 		 * Called when the input value changes.
 		 */
 		onChange: func,
+		/**
+		 * onSelect
+		 */
+		onSelect: func,
+		/**
+		 * onExpand
+		 */
+		onExpand: func,
 	},
 
 	getDefaultProps() {
@@ -67,6 +75,9 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 			isDisabled: false,
 			suggestions: [],
 			value: '',
+			onChange: _.noop,
+			onSelect: _.noop,
+			onExpand: _.noop,
 			DropMenu: DropMenu.getDefaultProps()
 		};
 	},
@@ -81,10 +92,8 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 			}
 		} = this.props;
 
-		//this.setInputValue(suggestions[optionIndex]);
 		onChange(suggestions[optionIndex], ...args);
 		onSelect(optionIndex, ...args);
-		//onCollapse();
 	},
 
 	handleInput(event) {
@@ -96,7 +105,6 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 			}
 		} = this.props;
 
-		this.forceUpdate();
 		onChange(event.target.value, {event, props: this.props});
 		if (!_.isEmpty(event.target.value)) {
 			onExpand();
@@ -106,10 +114,7 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 	},
 
 	getInputValue() {
-		if (this.refs.inputNode) {
-			return this.refs.inputNode.value;
-		}
-		return '';
+		return _.get(this.refs, 'inputNode.value', this.props.value);
 	},
 
 	setInputValue(value) {
@@ -142,7 +147,7 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 		if (event.keyCode === KEYCODE.ArrowDown && !isExpanded) {
 			event.stopPropagation();
 
-			if (value !== '') {
+			if (_.isEmpty(value)) {
 				onExpand(event);
 			}
 		}
@@ -158,15 +163,6 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 		}
 	},
 
-	handleInputBlur(event) {
-		const {
-			DropMenu: {
-				onCollapse
-			}
-		} = this.props;
-		onCollapse(event);
-	},
-
 	handleControlClick(event) {
 		const {
 			onExpand,
@@ -179,7 +175,7 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 		const value = this.getInputValue();
 
 		if (event.target === this.refs.inputNode) {
-			if (value !== '') {
+			if (_.isEmpty(value)) {
 				onExpand(event);
 			}
 
@@ -188,7 +184,7 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 			if (isExpanded) {
 				onCollapse(event);
 			} else {
-				if (value !== '') {
+				if (_.isEmpty(value)) {
 					onExpand(event);
 				}
 			}
@@ -223,7 +219,7 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 			isDisabled,
 			DropMenu: dropMenuProps,
 			suggestions,
-			placeholder
+			...passThroughs
 		} = this.props;
 
 		const {
@@ -249,12 +245,11 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 						'&-Control-is-disabled': isDisabled
 					})}>
 						<input
+							{..._.omit(passThroughs, ['onChange', 'onSelect', 'onExpand', 'value', 'children'])}
 							type='text'
-							placeholder={placeholder}
 							className={boundClassNames('&-Control-input')}
 							ref='inputNode'
 							onKeyDown={this.handleInputKeydown}
-							//onBlur={this.handleInputBlur}
 						/>
 						<CaretIcon direction={isExpanded ? direction : 'down'} />
 					</div>
@@ -263,7 +258,7 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 					<DropMenu.Option key={'AutocompleteOption' + suggestion} >
 						{(() => {
 							const [pre, match, post] = partitionText(suggestion, valuePattern, value.length);
-							let formattedSuggestion = [];
+							const formattedSuggestion = [];
 							if (pre) {
 								formattedSuggestion.push(
 									<span key={`AutocompleteOption-suggestion-pre-${suggestion}`} className={boundClassNames('&-Option-suggestion-pre')}>{pre}</span>

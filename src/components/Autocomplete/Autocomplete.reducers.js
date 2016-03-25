@@ -7,21 +7,22 @@ export function onChange(state, value) {
 		value,
 		DropMenu: {
 			...state.DropMenu,
-			focusedIndex: null,
-			//isExpanded: !_.isEmpty(state.value) && !_.isEmpty(state.suggestions)
+			focusedIndex: null
 		}
 	};
 }
 
 export function onSelect(state, selectedIndex) {
-	return {
+	const value = _.get(state.suggestions, selectedIndex);
+
+	return onChange({
 		...state,
-		value: _.get(state.suggestions, selectedIndex),
+		value,
 		DropMenu: {
 			...DropMenu.onSelect(state.DropMenu, selectedIndex),
 			selectedIndices: []
 		}
-	};
+	}, value);
 }
 
 export function onExpand(state) {
