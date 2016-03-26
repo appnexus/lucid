@@ -95,6 +95,16 @@ const TextField = React.createClass(createLucidComponentDefinition({
 		 * Only really used if you provide an `onChangeDebouned`.
 		 */
 		debounceLevel: number,
+
+		/**
+		 * Set the holding time that the component will wait if the user is typing
+		 * and the component gets a new `value` prop.
+		 *
+		 * Any time the user hits a key, it starts a timer that prevents state
+		 * changes from flowing in to the component until the timer has elapsed.
+		 * This was heavily inspired on the lazy-input component.
+		 */
+		lazyLevel: number,
 	},
 
 	getDefaultProps() {
@@ -107,6 +117,7 @@ const TextField = React.createClass(createLucidComponentDefinition({
 			onSubmit: _.noop,
 			rows: 5,
 			debounceLevel: 500,
+			lazyLevel: 1000,
 		};
 	},
 
@@ -123,12 +134,28 @@ const TextField = React.createClass(createLucidComponentDefinition({
 		this._handleChangeDebounced = _.debounce((...args) => {
 			this.props.onChangeDebounced(...args);
 		}, this.props.debounceLevel);
+
+		this._releaseHold = _.debounce(() => {
+			this.setState({ isHolding: false });
+		}, this.props.lazyLevel);
+
+		this._updateWhenReady = _.debounce((newValue) => {
+			if (this.state.isHolding) {
+				this._updateWhenReady(newValue);
+			} else {
+				this.setState({ value: newValue });
+			}
+		}, this.props.lazyLevel);
 	},
 
 	componentWillReceiveProps(nextProps) {
 		// Allow consumer to optionally control state
 		if (_.has(nextProps, 'value')) {
-			this.setState({ value: nextProps.value });
+			if (this.state.isHolding) {
+				this._updateWhenReady(nextProps.value);
+			} else {
+				this.setState({ value: nextProps.value });
+			}
 		}
 	},
 
@@ -139,7 +166,8 @@ const TextField = React.createClass(createLucidComponentDefinition({
 
 		const value = _.get(event, 'target.value', '');
 
-		this.setState({ value });
+		this.setState({ value, isHolding: true });
+		this._releaseHold();
 
 		onChange(value, { event, props: this.props });
 
