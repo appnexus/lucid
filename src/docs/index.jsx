@@ -9,7 +9,6 @@ import { render } from 'react-dom';
 import { Router, Route, Link, useRouterHistory } from 'react-router';
 import { createHashHistory } from 'history';
 import docgenMapRaw from './docgen.json';
-import hljs from 'hljs';
 import { markdown } from 'markdown';
 import ColorPalette from './containers/colors';
 
@@ -66,9 +65,11 @@ const docgenGroups = _.reduce(docgenMap, (acc, value, key) => {
 }, {});
 
 function handleHighlightCode() {
-	_.each(document.querySelectorAll('pre code'), (block) => {
-		hljs.highlightBlock(block);
-	});
+	if (window.hljs) { //eslint-disable-line
+		_.each(document.querySelectorAll('pre code'), (block) => {
+			hljs.highlightBlock(block); //eslint-disable-line
+		});
+	}
 }
 
 const {
