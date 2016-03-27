@@ -9,7 +9,7 @@ export default React.createClass({
 			<div>
 				<Container>
 					<Container.Header>
-						<SuccessIcon /> Custom Header <CheckIcon style={{float: 'right'}} />
+						<SuccessIcon /> Header <CheckIcon style={{float: 'right'}} />
 					</Container.Header>
 					<Container.Content>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula ornare ex. Proin dui magna, dapibus in neque sed, aliquet ornare felis. Suspendisse mollis augue vitae sem tincidunt blandit. Vivamus accumsan tincidunt lectus, vehicula pretium magna rutrum ac. Etiam vitae porttitor sem. Curabitur non egestas dui. Nunc aliquam, nulla sit amet hendrerit maximus, turpis nisi vehicula lectus, nec lacinia neque neque consequat est. Vestibulum mattis lorem tellus, ac suscipit neque scelerisque in. Nunc accumsan mi quam, a blandit justo rhoncus ac. Pellentesque laoreet sed tellus eu congue.

@@ -1,3 +1,6 @@
+@horizontal-lines: 1px solid @color-gray;
+@size-padding: 12px;
+
 .lucid-Container {
 	overflow: hidden;
 	border-radius: 6px;
@@ -7,25 +10,18 @@
 	border: 1px solid @color-borderColor;
 
 	&-header {
-		padding: 12px;
-		border-bottom: 1px solid @color-gray;
-	}
-	
-	&-title {
-		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-		font-size: 18px;
-		font-weight: bold;
-		color: @color-darkGray;
+		padding: @size-padding;
+		border-bottom: @horizontal-lines;
 	}
 
-	&-content{
-		padding: 12px;
+	&-content {
+		padding: @size-padding;
 		overflow: auto;
 	}
 
-	&-footer{
-		padding: 12px;
+	&-footer {
 		text-align: right;
-		border-top: 1px solid @color-gray;
+		padding: @size-padding;
+		border-top: @horizontal-lines;
 	}
 }

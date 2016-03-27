@@ -30,10 +30,6 @@ const Container = React.createClass(createLucidComponentDefinition({
 		 */
 		className: string,
 		/**
-		 * Text to be inserted in container's header.
-		 */
-		title: string,
-		/**
 		 * *Child Element* - Header contents. Only one `Header` is used.
 		 */
 		Header: node,
@@ -53,23 +49,23 @@ const Container = React.createClass(createLucidComponentDefinition({
 	},
 
 	render: function() {
-		const {className, style, title, children} = this.props;
+		const {className, style, children} = this.props;
 
 		const headerChildProp = _.first(Container.Header.findInAllAsProps(this.props));
 		const contentChildProp = _.first(Container.Content.findInAllAsProps(this.props));
 		const footerChildProp = _.first(Container.Footer.findInAllAsProps(this.props));
 
-		const titleEl = (title)?<header className={boundClassNames('&-header')}><span className={boundClassNames('&-title')}>{title}</span></header>:null;
-		const headerEl = (headerChildProp)?<header {...headerChildProp} className={boundClassNames('&-header')} />:null;
-		const contentEl = (contentChildProp)?<section {...contentChildProp} className={boundClassNames('&-content')} />:children;
-		const footerEl = (footerChildProp)?<footer {...footerChildProp} className={boundClassNames('&-footer')} />:null;
-
 		return (
 			<div className={boundClassNames('&', className)} style={style}>
-				{titleEl}
-				{headerEl}
-				{contentEl}
-				{footerEl}
+				{headerChildProp ? (
+					<header {...headerChildProp} className={boundClassNames('&-header')} />
+				) : null}
+				{contentChildProp ? (
+					<section {...contentChildProp} className={boundClassNames('&-content')} />
+				) : children}
+				{footerChildProp ? (
+					<footer {...footerChildProp} className={boundClassNames('&-footer')} />
+				) : null}
 			</div>
 		)
 	}
