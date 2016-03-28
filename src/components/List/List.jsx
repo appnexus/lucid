@@ -167,8 +167,6 @@ const List = React.createClass(createLucidComponentDefinition({
 			>
 				{_.map(itemChildProps, (itemChildProp, index) => {
 					const {
-						isExpanded = false,
-						isSelected = false,
 						isDisabled = false,
 						hasExpander = false,
 					} = itemChildProp;
@@ -177,6 +175,16 @@ const List = React.createClass(createLucidComponentDefinition({
 					const listChildren = _.filter(itemChildrenAsArray, (child) => _.get(child, 'type.displayName', '') === 'List');
 					const otherChildren = _.filter(itemChildrenAsArray, (child) => _.get(child, 'type.displayName', '') !== 'List');
 					const isParent = listChildren.length > 0;
+
+					// If the prop is found on the child, it should override what was
+					// passed in at the top level for selectedIndices and
+					// expandedIndices
+					const actualIsExpanded = _.has(itemChildProp, 'isExpanded')
+						? itemChildProp.isExpanded
+						: _.includes(expandedIndices, index);
+					const actualIsSelected = _.has(itemChildProp, 'isSelected')
+						? itemChildProp.isSelected
+						: _.includes(selectedIndices, index);
 
 					return (
 						<li
@@ -187,8 +195,8 @@ const List = React.createClass(createLucidComponentDefinition({
 							className={boundClassNames('&-Item', {
 								'&-Item-is-parent': isParent,
 								'&-Item-has-expander': hasExpander,
-								'&-Item-is-expanded': isExpanded || _.includes(expandedIndices, index),
-								'&-Item-is-selected': isSelected || _.includes(selectedIndices, index),
+								'&-Item-is-expanded': actualIsExpanded,
+								'&-Item-is-selected': actualIsSelected,
 								'&-Item-is-disabled': isDisabled,
 							}, className)}
 						>
@@ -203,7 +211,13 @@ const List = React.createClass(createLucidComponentDefinition({
 										size='short'
 										onClick={_.partial(this.handleClickExpander, index, itemChildProp)}
 									>
-										<CaretIcon direction={isExpanded || _.includes(expandedIndices, index) ? 'down' : 'up'} openIcon />
+										<CaretIcon
+											direction={actualIsExpanded ? 'up' : 'down'}
+											openIcon
+											className={boundClassNames('&-caret', {
+												'&-caret-is-selected': actualIsSelected
+											})}
+										/>
 									</Button>
 								: null}
 							</a>

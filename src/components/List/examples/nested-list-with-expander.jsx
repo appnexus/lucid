@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import ListStateless from '../List';
 import { buildStatefulComponent } from '../../../util/state-management';
@@ -13,12 +14,12 @@ export default React.createClass({
 					List Item with Sublist
 					<List>
 						<List.Item>Sublist Item</List.Item>
-						<List.Item hasExpander>
+						<List.Item hasExpander >
 							Sublist Item with another List
 							<List>
-								<List.Item>sub Sublist Item</List.Item>
-								<List.Item>sub Sublist Item</List.Item>
-								<List.Item>sub Sublist Item</List.Item>
+								{_.times(100, () => {
+									return <List.Item>sub Sublist Item</List.Item>;
+								})}
 							</List>
 						</List.Item>
 						<List.Item>Sublist Item</List.Item>
