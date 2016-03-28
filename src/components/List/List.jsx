@@ -78,12 +78,6 @@ const List = React.createClass(createLucidComponentDefinition({
 		isDisabled: bool,
 
 		/**
-		 * Indicates that the primary axis the component should follow
-		 * is the Y axis. defaults to `true`
-		 */
-		isVertical: bool,
-
-		/**
 		 * Indicates that this component uses the expander styling.
 		 * Defaults to `false`
 		 */
@@ -134,7 +128,6 @@ const List = React.createClass(createLucidComponentDefinition({
 			onSelect: _.noop,
 			onExpand: _.noop,
 			isDisabled: false,
-			isVertical: true,
 			expandedIndices: [],
 			selectedIndices: [],
 		};
@@ -148,11 +141,8 @@ const List = React.createClass(createLucidComponentDefinition({
 			selectedIndices,
 			expandedIndices,
 			isDisabled,
-			isVertical,
 			...passThroughs
 		} = this.props;
-
-		console.log(expandedIndices);
 
 		const itemChildProps = List.Item.findInAllAsProps(this.props);
 
@@ -160,7 +150,6 @@ const List = React.createClass(createLucidComponentDefinition({
 			<ul
 				{...passThroughs}
 				className={boundClassNames('&', {
-					'&-is-alignedOnX': isVertical === false,
 					'&-is-disabled': isDisabled,
 				}, className)}
 				style={style}
