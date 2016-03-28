@@ -1,5 +1,4 @@
-@RadioButton-height: 22px;
-@RadioButton-width: 22px;
+@RadioButton-size: 22px;
 @RadioButton-animation-timing: 0.1s linear;
 
 @RadioButton-container-offset: 3px;
@@ -15,10 +14,10 @@
 .lucid-RadioButton {
 	cursor: pointer;
 	display: inline-block;
-	height: @RadioButton-height;
+	height: @RadioButton-size;
 	position: relative;
 	user-select: none;
-	width: @RadioButton-width;
+	width: @RadioButton-size;
 
 	&-is-disabled {
 		cursor: not-allowed;
@@ -32,6 +31,7 @@
 		background-color: white;
 		border-radius: @RadioButton-container-radius + 1;
 		border: solid 1px rgba(0, 0, 0, 0.3);
+		.box-sizing();
 		height: @RadioButton-container-radius * 2;
 		left: @RadioButton-container-offset;
 		position: absolute;
@@ -42,6 +42,7 @@
 	&-visualization-dot {
 		background-color: white;
 		border-radius: @RadioButton-dot-radius;
+		.box-sizing();
 		height: @RadioButton-dot-radius * 2;
 		left: @RadioButton-dot-offset;
 		.opacity(0);
@@ -54,6 +55,7 @@
 	&-visualization-glow {
 		background-color: @color-primary;
 		border-radius: @RadioButton-glow-radius;
+		.box-sizing();
 		height: @RadioButton-glow-radius * 2;
 		left: @RadioButton-glow-offset;
 		.opacity(0);
