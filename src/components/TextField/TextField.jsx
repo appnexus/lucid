@@ -40,7 +40,7 @@ const TextField = React.createClass(createLucidComponentDefinition({
 
 		/**
 		 * Set the TextField to multi line mode. Under the hood this will use a
-		 * `textarea` instead of an `input` if set to `true`
+		 * `textarea` instead of an `input` if set to `true`.
 		 */
 		isMultiLine: bool,
 
@@ -92,17 +92,19 @@ const TextField = React.createClass(createLucidComponentDefinition({
 
 		/**
 		 * Number of milliseconds to debounce the `onChangeDebounced` callback.
-		 * Only really used if you provide an `onChangeDebouned`.
+		 * Only useful if you provide an `onChangeDebouned` handler.
 		 */
 		debounceLevel: number,
 
 		/**
-		 * Set the holding time that the component will wait if the user is typing
-		 * and the component gets a new `value` prop.
+		 * Set the holding time, in milliseconds, that the component will wait if
+		 * the user is typing and the component gets a new `value` prop.
 		 *
 		 * Any time the user hits a key, it starts a timer that prevents state
 		 * changes from flowing in to the component until the timer has elapsed.
-		 * This was heavily inspired on the lazy-input component.
+		 * This was heavily inspired by the [lazy-input][li] component.
+		 *
+		 * [li]: https://www.npmjs.com/package/lazy-input
 		 */
 		lazyLevel: number,
 	},
