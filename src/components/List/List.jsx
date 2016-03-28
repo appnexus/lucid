@@ -79,49 +79,10 @@ const List = React.createClass(createLucidComponentDefinition({
 
 		/**
 		 * Indicates that this component uses the expander styling.
-		 * Defaults to `false`
 		 */
 		onExpand: func,
+
 	},
-
-	// childProps: {
-	// 	ListItem: {
-	// 		/**
-	// 		 * `children` can include additional nested lists.
-	// 		 */
-	// 		children: node,
-	// 		/**
-	// 		 * Appended to the component-specific class names set on the root element.
-	// 		 */
-	// 		className: string,
-	// 		/**
-	// 		 * Passed through to the root element.
-	// 		 */
-	// 		style: object,
-
-	// 		/**
-	// 		 * Indicates whether the nested Lists will render or not. Defaults to `true`.
-	// 		 */
-	// 		isExpanded: bool,
-
-	// 		/**
-	// 		 * If `true` then the active ListItem will be selected.
-	// 		 */
-	// 		isSelected: bool,
-
-	// 		/**
-	// 		 * Callback for when the user clicks a sublist. Called with the index of the
-	// 		 * list that was clicked.
-	// 		 */
-	// 		onSelect: func,
-
-	// 		/**
-	// 		 * Indicates whether the ListItem should appear and act disabled by
-	// 		 * having a "greyed out" palette and ignoring user interactions.
-	// 		 */
-	// 		isDisabled: bool,
-	// 	}
-	// },
 
 	getDefaultProps() {
 		return {
@@ -161,26 +122,27 @@ const List = React.createClass(createLucidComponentDefinition({
 					} = itemChildProp;
 
 					const itemChildrenAsArray = React.Children.toArray(itemChildProp.children);
+
+					// Was not able to get `child.Type` to work correctly, I suspect this
+					// is due to the way we wrap components with createLucidComponentDefinition
 					const listChildren = _.filter(itemChildrenAsArray, (child) => _.get(child, 'type.displayName', '') === 'List');
 					const otherChildren = _.filter(itemChildrenAsArray, (child) => _.get(child, 'type.displayName', '') !== 'List');
 					const isParent = listChildren.length > 0;
 
 					// If the prop is found on the child, it should override what was
-					// passed in at the top level for selectedIndices and
-					// expandedIndices
+					// passed in at the top level for selectedIndices and expandedIndices
 					const actualIsExpanded = _.has(itemChildProp, 'isExpanded')
-						? itemChildProp.isExpanded
+						? _.get(itemChildProp, 'isExpanded', true)
 						: _.includes(expandedIndices, index);
+
 					const actualIsSelected = _.has(itemChildProp, 'isSelected')
-						? itemChildProp.isSelected
+						? _.get(itemChildProp, 'isSelected', false)
 						: _.includes(selectedIndices, index);
 
 					return (
 						<li
 							{...itemChildProp.passThroughs}
 							key={index}
-							onClick={this.handleClicked}
-							onTouchEnd={this.handleClicked}
 							className={boundClassNames('&-Item', {
 								'&-Item-is-parent': isParent,
 								'&-Item-has-expander': hasExpander,
@@ -220,11 +182,21 @@ const List = React.createClass(createLucidComponentDefinition({
 	},
 
 	handleClickExpander(index, itemChildProp, { event }) {
+		const {
+			isDisabled,
+			onExpand,
+		} = itemChildProp;
 
 		// Prevent the user from also selecting the current item.
 		event.stopPropagation();
 
-		this.props.onExpand(index, { event, itemChildProp });
+		if (!this.props.isDisabled && !isDisabled) {
+			this.props.onExpand(index, { event, props: itemChildProp });
+
+			if (onExpand) {
+				onExpand(index, { event, props: itemChildProp });
+			}
+		}
 	},
 
 	handleClickItem(index, itemChildProp, event) {
@@ -233,13 +205,11 @@ const List = React.createClass(createLucidComponentDefinition({
 			onSelect,
 		} = itemChildProp;
 
-		// event.preventDefault();
-
-		if (!isDisabled) {
-			this.props.onSelect(index, { event, itemChildProp });
+		if (!this.props.isDisabled && !isDisabled) {
+			this.props.onSelect(index, { event, props: itemChildProp });
 
 			if (onSelect) {
-				onSelect(index, { event, itemChildProp });
+				onSelect(index, { event, props: itemChildProp });
 			}
 		}
 	}
