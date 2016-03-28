@@ -29,10 +29,10 @@
 	}
 
 	&-visualization-container {
-		.box-sizing();
 		background-color: white;
 		border: solid 1px @Checkbox-borderColor;
 		border-radius: @Checkbox-borderRadius;
+		.box-sizing();
 		height: @Checkbox-container-size;
 		left: @Checkbox-container-offset;
 		position: absolute;
@@ -71,6 +71,7 @@
 	&-visualization-glow {
 		background-color: @color-primary;
 		border-radius: @Checkbox-borderRadius;
+		.box-sizing();
 		height: @Checkbox-container-size;
 		left: @Checkbox-glow-offset;
 		opacity: 0;
