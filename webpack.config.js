@@ -15,9 +15,6 @@ module.exports = {
 		path: path.join(__dirname, '/dist/docs'),
 		filename: 'bundle.js',
 	},
-	externals: {
-		hljs: 'hljs',
-	},
 	devServer: {
 		contentBase: 'dist/docs'
 	},
