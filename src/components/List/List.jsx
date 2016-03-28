@@ -164,7 +164,7 @@ const List = React.createClass(createLucidComponentDefinition({
 									>
 										<CaretIcon
 											direction={actualIsExpanded ? 'up' : 'down'}
-											openIcon
+											isOpen={true}
 											className={boundClassNames('&-caret', {
 												'&-caret-is-selected': actualIsSelected
 											})}

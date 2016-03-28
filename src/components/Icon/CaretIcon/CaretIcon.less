@@ -1,4 +1,5 @@
 @CaretIcon-size: 16px;
+@CaretIcon-size-strokeWidth: 2px;
 
 .lucid-CaretIcon {
 	height: @CaretIcon-size;
@@ -12,7 +13,7 @@
 	&-is-open {
 		fill: none;
 		stroke: @color-primary;
-		stroke-width: 2px;
+		stroke-width: @CaretIcon-size-strokeWidth;
 		stroke-miterlimit: 1;
 	}
 }
