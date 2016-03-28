@@ -1,14 +1,16 @@
+@Autocomplete-size-menu-maxHeight: 220px;
+@Autocomplete-size-controlHeight: 28px;
+
 .lucid-Autocomplete {
 
 	&-Control {
 		.no-safari-flicker();
 		.box-sizing();
-		//.gradient-animation( @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 		cursor: pointer;
-		height: 28px;
+		height: @Autocomplete-size-controlHeight;
 		display: flex;
 		outline: none;
-		border: 1px solid @featured-color-default-borderColor;
+		border: 1px solid @color-borderColor;
 		border-radius: @Button-size-borderRadius;
 		font: @font;
 		color: @color-black;
@@ -17,12 +19,6 @@
 		padding: 0 10px;
 		align-items: center;
 
-		//.lucid-Autocomplete-Control-content {
-		//	display: flex;
-		//	align-items: center;
-		//	margin-right: 10px;
-		//}
-		
 		&-input {
 			background: none;
 			border: none;
@@ -42,7 +38,7 @@
 		// States
 
 		&-is-expanded {
-			border-color: @featured-color-primary-borderColor;
+			border-color: @color-primary;
 		}
 
 		&-is-disabled {
@@ -74,7 +70,7 @@
 	}
 
 	&.lucid-ContextMenu-FlyOut {
-		max-height: 220px;
+		max-height: @Autocomplete-size-menu-maxHeight;
 	}
 
 	&-Option-suggestion-match {

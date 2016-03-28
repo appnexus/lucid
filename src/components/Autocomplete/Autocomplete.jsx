@@ -20,7 +20,7 @@ const {
 
 /**
  *
- * {"categories": ["controls", "text"], "madeFrom": ["DropMenu"]}
+ * {"categories": ["controls", "text"], "madeFrom": ["CaretIcon", "DropMenu"]}
  *
  * A text input with suggested values displayed in an attached menu.
  */
