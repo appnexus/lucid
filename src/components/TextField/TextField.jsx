@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition } from '../../util/component-definition';
 import reducers from './TextField.reducers';
+import * as KEYCODE from '../../constants/key-code';
 
 const boundClassNames = lucidClassNames.bind('&-TextField');
 
@@ -190,7 +191,7 @@ const TextField = React.createClass(createLucidComponentDefinition({
 			onKeyDown(event);
 		}
 
-		if (event.key === 'Enter') {
+		if (event.keyCode === KEYCODE.Enter) {
 			onSubmit(value, {event, props: this.props });
 		}
 	},
