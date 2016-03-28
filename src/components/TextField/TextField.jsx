@@ -142,7 +142,7 @@ const TextField = React.createClass(createLucidComponentDefinition({
 		this._updateWhenReady = _.debounce((newValue) => {
 			if (this.state.isHolding) {
 				this._updateWhenReady(newValue);
-			} else {
+			} else if(newValue !== this.state.value) {
 				this.setState({ value: newValue });
 			}
 		}, this.props.lazyLevel);

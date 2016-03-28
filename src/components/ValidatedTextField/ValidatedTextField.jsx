@@ -43,7 +43,7 @@ const ValidatedTextField = React.createClass(createLucidComponentDefinition({
 	},
 
 	getDefaultProps() {
-		return TextField.getDefaultProps;
+		return TextField.getDefaultProps();
 	},
 
 	render() {
