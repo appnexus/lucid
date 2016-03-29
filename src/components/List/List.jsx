@@ -19,7 +19,7 @@ const {
 } = React.PropTypes;
 
 /**
- * {"categories": ["layout"]}
+ * {"categories": ["layout"], "madeFrom": ["Button", "CaretIcon"]}
  *
  * This component is designed to be used in Composits as a layout tool.
  * Please see examples for more information.
