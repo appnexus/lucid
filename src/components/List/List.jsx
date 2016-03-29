@@ -21,8 +21,10 @@ const {
 /**
  * {"categories": ["layout"], "madeFrom": ["Button", "CaretIcon"]}
  *
- * This component is designed to be used in Composits as a layout tool.
- * Please see examples for more information.
+ * A component for lists of data. It supports nesting `List`s below
+ * `List.Item`s and animating expanding of those sub lists. The default reducer
+ * behavior is for only one `List.Item` to be selected at any given time; that
+ * is easily overridden by handling `onSelect` yourself.
  */
 const List = React.createClass(createLucidComponentDefinition({
 	displayName: 'List',
@@ -34,6 +36,7 @@ const List = React.createClass(createLucidComponentDefinition({
 			hasExpander: bool,
 			isExpanded: bool,
 			isSelected: bool,
+			isDisabled: bool,
 			onSelect: func,
 			onExpand: func,
 		}
@@ -41,47 +44,55 @@ const List = React.createClass(createLucidComponentDefinition({
 
 	propTypes: {
 		/**
-		 * `children` .
+		 * Regular `children` aren't really used in this component, but if you do
+		 * add them they will be placed at the end of the component. You should be
+		 * `List.Item`s instead of regular children.
 		 */
 		children: node,
+
 		/**
 		 * Appended to the component-specific class names set on the root element.
 		 */
 		className: string,
+
 		/**
 		 * Passed through to the root element.
 		 */
 		style: object,
 
 		/**
-		 * Indicates which of the `List.ListItem` children is currently selected. The
-		 * index of the last `List.ListItem` child with `isSelected` equal to `true`
-		 * takes precedence over this prop.
+		 * Indicates which of the `List.Item` children are currently selected. You
+		 * can also put the `isSelected` prop directly on the `List.Item`s if you
+		 * wish.
 		 */
 		selectedIndices: arrayOf(number),
 
 		/**
-		 * TODO
+		 * Indicates which of the `List.Item` children are currently expanded. You
+		 * can also put the `isExpanded` prop directly on the `List.Item`s if you
+		 * wish.
 		 */
 		expandedIndices: arrayOf(number),
 
 		/**
-		 * TODO
+		 * Callback fired when the user selects a `List.Item`.
+		 *
+		 * Signature: `(index, { event, props }) => {}`
 		 */
 		onSelect: func,
 
 		/**
-		 * Indicates whether the List should appear and act disabled by
-		 * having a "greyed out" palette and ignoring user interactions.
-		 * defaults to `false`
-		 */
-		isDisabled: bool,
-
-		/**
-		 * Indicates that this component uses the expander styling.
+		 * Callback fired when the user expands an expandable `List.Item`.
+		 *
+		 * Signature: `(index, { event, props }) => {}`
 		 */
 		onExpand: func,
 
+		/**
+		 * Indicates whether the List should appear and act disabled by having a
+		 * "greyed out" palette and ignoring user interactions.
+		 */
+		isDisabled: bool,
 	},
 
 	getDefaultProps() {
