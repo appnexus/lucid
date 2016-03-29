@@ -1,11 +1,9 @@
 import _ from 'lodash';
 
 export function onSelect(state = {}, index) {
-	const selectedIndices = state.selectedIndices || [];
-
 	return {
 		...state,
-		selectedIndices: _.xor(selectedIndices, [index]),
+		selectedIndices: [index],
 	}
 }
 
