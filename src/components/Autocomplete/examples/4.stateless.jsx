@@ -14,7 +14,8 @@ const wordlist = [
   'advertisement',
   'applaud',
   'appreciate',
-  'awesome'
+  'awesome',
+  'abracadabra alakazam hocus pocus shazam say the magic word please if you will thank you very much'
 ];
 
 export default React.createClass({
