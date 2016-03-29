@@ -127,7 +127,6 @@ const List = React.createClass(createLucidComponentDefinition({
 					// is due to the way we wrap components with createLucidComponentDefinition
 					const listChildren = _.filter(itemChildrenAsArray, (child) => _.get(child, 'type.displayName', '') === 'List');
 					const otherChildren = _.filter(itemChildrenAsArray, (child) => _.get(child, 'type.displayName', '') !== 'List');
-					const isParent = listChildren.length > 0;
 
 					// If the prop is found on the child, it should override what was
 					// passed in at the top level for selectedIndices and expandedIndices
@@ -144,7 +143,6 @@ const List = React.createClass(createLucidComponentDefinition({
 							{...itemChildProp.passThroughs}
 							key={index}
 							className={boundClassNames('&-Item', {
-								'&-Item-is-parent': isParent,
 								'&-Item-has-expander': hasExpander,
 								'&-Item-is-expanded': actualIsExpanded,
 								'&-Item-is-selected': actualIsSelected,

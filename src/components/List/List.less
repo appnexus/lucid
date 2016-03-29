@@ -45,9 +45,6 @@
 		position: absolute;
 		right: 5px;
 		top: 5px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		width: @List-size-iconButton;
 		height: @List-size-iconButton;
 		font-size: @List-size-icon;
@@ -56,24 +53,12 @@
 		padding: 0;
 		line-height: 1em;
 
-		// Fix for safari
 		> .lucid-Button-content {
-			display: block;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			width: 100%;
 			height: 100%;
-		}
-
-		// Remove the unnecessary animated background button gradient from the DOM
-		&:active, &:focus {
-			&:before {
-				display: none;
-			}
-		}
-	}
-
-	&-Item-is-selected > &-Item-conent {
-		&:before {
-			color: @color-darkGray;
 		}
 	}
 }
@@ -113,6 +98,10 @@
 
 				.lucid-List-expander {
 					border: 1px solid @featured-color-default-borderColor;
+
+					&:before {
+						opacity: 1;
+					}
 				}
 			}
 
@@ -139,7 +128,6 @@
 		padding: 10px 0 8px @List-size-childPadding;
 		line-height: 11px;
 
-		// TODO: only when something isn't selected
 		&:hover {
 			.hardstop-gradient(
 				to right,
@@ -182,10 +170,16 @@
 		}
 	}
 
-	&-is-parent .lucid-List {
+	// The first List-Item shouldn't have a top border
+	&:first-of-type > &-content {
+		border-top-color: transparent;
+	}
+
+	// Any time we have a List below a List-Item
+	.lucid-List {
 		.lucid-List-Item-content {
 			font-weight: normal;
-			border-color: transparent;
+			border-color: @color-transparent;
 
 			&:before {
 				content: '-';
@@ -202,14 +196,14 @@
 			}
 		}
 
-		> .lucid-List-Item-content {
-			border-bottom: @color-transparent;
+		// Make sure the little `-` is dark when an item is selected
+		.lucid-List-Item-is-selected > .lucid-List-Item-content {
+			&:before {
+				color: @color-darkGray;
+			}
 		}
 	}
 
-	&:first-of-type > &-content {
-		border-top-color: transparent;
-	}
 }
 
 // Recursive mixin to facilitate nesting to a pre-determined depth
