@@ -1,3 +1,4 @@
+import Autocomplete from './components/Autocomplete/Autocomplete';
 import Badge from './components/Badge/Badge';
 import Banner from './components/Banner/Banner';
 import Button from './components/Button/Button';
@@ -51,6 +52,7 @@ export {
 };
 
 export {
+	Autocomplete,
 	Badge,
 	Banner,
 	Button,
