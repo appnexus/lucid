@@ -1,0 +1,27 @@
+@Panel-horizontal-lines: 1px solid @color-gray;
+@Panel-size-padding: 12px;
+
+.lucid-Panel {
+	overflow: hidden;
+	border-radius: 6px;
+	margin: 0 10px 10px 10px;
+	position: relative;
+	background-color: @color-white;
+	border: 1px solid @color-borderColor;
+
+	&-header {
+		padding: @Panel-size-padding;
+		border-bottom: @Panel-horizontal-lines;
+	}
+	
+	&:not(&-content-is-gutterless) &-content{
+		padding: @Panel-size-padding;
+		overflow: auto;
+	}
+
+	&-footer {
+		text-align: right;
+		padding: @Panel-size-padding;
+		border-top: @Panel-horizontal-lines;
+	}
+}

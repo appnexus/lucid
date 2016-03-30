@@ -3,24 +3,24 @@ import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition } from '../../util/component-definition';
 
-const boundClassNames = lucidClassNames.bind('&-Container');
+const boundClassNames = lucidClassNames.bind('&-Panel');
 
 const {
 	node,
+	bool,
 	string
 } = React.PropTypes;
 
 /**
  * {"categories": ["layout"]}
  *
- * Container is used to wrap content to better organize elements in window.
+ * Panel is used to wrap content to better organize elements in window.
  */
-const Container = React.createClass(createLucidComponentDefinition({
-	displayName: 'Container',
+const Panel = React.createClass(createLucidComponentDefinition({
+	displayName: 'Panel',
 
 	childProps: {
 		Header: null,
-		Content: null,
 		Footer: null
 	},
 
@@ -34,10 +34,6 @@ const Container = React.createClass(createLucidComponentDefinition({
 		 */
 		Header: node,
 		/**
-		 * *Child Element* - Content contents. Only one `Content` is used.
-		 */
-		Content: node,
-		/**
 		 * *Child Element* - Footer contents. Only one `Footer` is used.
 		 */
 		Footer: node,
@@ -45,24 +41,28 @@ const Container = React.createClass(createLucidComponentDefinition({
 		 * Generally you should only have a single child element so the centering
 		 * works correctly.
 		 */
-		children: node
+		children: node,
+		/**
+		 * Sets a content section with no padding.
+		 */
+		isGutterless: bool
 	},
 
 	render: function() {
-		const {className, style, children} = this.props;
+		const {className, style, children, isGutterless} = this.props;
 
-		const headerChildProp = _.first(Container.Header.findInAllAsProps(this.props));
-		const contentChildProp = _.first(Container.Content.findInAllAsProps(this.props));
-		const footerChildProp = _.first(Container.Footer.findInAllAsProps(this.props));
+		const headerChildProp = _.first(Panel.Header.findInAllAsProps(this.props));
+		const footerChildProp = _.first(Panel.Footer.findInAllAsProps(this.props));
+		const classNames = boundClassNames('&', className, (isGutterless)?'&-content-is-gutterless':null);
 
 		return (
-			<div className={boundClassNames('&', className)} style={style}>
+			<div className={classNames} style={style}>
 				{headerChildProp ? (
 					<header {...headerChildProp} className={boundClassNames('&-header')} />
 				) : null}
-				{contentChildProp ? (
-					<section {...contentChildProp} className={boundClassNames('&-content')} />
-				) : children}
+				{children ? (
+					<section className={boundClassNames('&-content')}>{children}</section>
+				) : null}
 				{footerChildProp ? (
 					<footer {...footerChildProp} className={boundClassNames('&-footer')} />
 				) : null}
@@ -71,4 +71,4 @@ const Container = React.createClass(createLucidComponentDefinition({
 	}
 }))
 
-export default Container;
+export default Panel;
