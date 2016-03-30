@@ -65,7 +65,7 @@ const Icon = React.createClass({
 	},
 
 	render() {
-		let {
+		const {
 			className,
 			children,
 			size,
@@ -79,7 +79,7 @@ const Icon = React.createClass({
 		// Because we control the icon size inline, we must also control the border
 		// radius in the case where they user wants `isBadge`. Later one, we filter
 		// out any `undefined` properties using lodash methods.
-		let actualStyle = {
+		const actualStyle = {
 			...style,
 			borderRadius: _.get(style, 'borderRadius', isBadge ? `${size}px` : undefined)
 		};
