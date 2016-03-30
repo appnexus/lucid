@@ -8,6 +8,11 @@ const {
 	oneOf,
 } = React.PropTypes;
 
+const LEFT = 'left';
+const RIGHT = 'right';
+const NEITHER = 'neither';
+const BOTH = 'both';
+
 /**
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
@@ -31,7 +36,7 @@ const EligibilityIcon = React.createClass({
 
 	getDefaultProps() {
 		return {
-			eligibility: 'neither'
+			eligibility: NEITHER,
 		};
 	},
 
@@ -45,19 +50,21 @@ const EligibilityIcon = React.createClass({
 		return (
 			<Icon
 				{...passThroughs}
-				className={boundClassNames('&', {
-					'&-is-selected-both': eligibility === 'both',
-					'&-is-selected-neither': eligibility === 'neither',
-					'&-is-selected-left': eligibility === 'left',
-					'&-is-selected-right': eligibility === 'right'
-				}, className)}
-				viewBox='0 0 16 16'
+				className={boundClassNames('&', className)}
 			>
 				<g>
-					<path className='Icon-left'
-						d='M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z'/>
-					<path className='Icon-right'
-						d='M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z'/>
+					<path
+						className={boundClassNames('&-half-circle', {
+							'&-is-selected': eligibility === LEFT || eligibility === BOTH
+						})}
+						d='M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z'
+					/>
+					<path
+						className={boundClassNames('&-half-circle', {
+							'&-is-selected': eligibility === RIGHT || eligibility === BOTH
+						})}
+						d='M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z'
+					/>
 				</g>
 			</Icon>
 		);

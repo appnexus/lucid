@@ -15,6 +15,12 @@ const CrossIcon = React.createClass({
 		...Icon.propTypes,
 	},
 
+	getDefaultProps() {
+		return {
+			viewBox: '0 0 18 18',
+		}
+	},
+
 	render() {
 		const {
 			className,

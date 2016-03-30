@@ -31,7 +31,8 @@ const docgenMap = _.mapValues(docgenMapRaw, (value, componentName) => {
 		throw new Error(`Looks like something is wrong with the custom metadata for ${componentName}. Please make sure the 'extend' refers to a real component that has valid props defined.`);
 	}
 
-	return _.merge(value, { props: parentProps });
+	// The `clone` is important to keep from mutating `value`
+	return _.defaultsDeep(_.clone(value), { props: parentProps });
 });
 
 /**

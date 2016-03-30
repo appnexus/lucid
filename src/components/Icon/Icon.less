@@ -1,19 +1,17 @@
-@Icon-size: 18px;
-@Icon-color-badgeBackground: @color-backgroundColor;
+@Icon-color-badgeBackground: @color-mediumGray;
 
 .lucid-Icon {
 	display: inline-block;
-	height: @Icon-size;
-	width: @Icon-size;
 	vertical-align: top; /* Prevents automatic addition of bottom margin. */
 	fill: @color-primary;
 
-	>path, >rect, >circle {
+	> path,
+	> rect,
+	> circle {
 		transform-origin: center center;
 	}
 
 	&-is-badge {
-		border-radius: @Icon-size;
 		background-color: @Icon-color-badgeBackground;
 		border: 1px solid @color-transparent;
 		fill: @color-white;

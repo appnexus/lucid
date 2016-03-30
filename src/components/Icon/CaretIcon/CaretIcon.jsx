@@ -32,7 +32,6 @@ const CaretIcon = React.createClass({
 		return {
 			direction: 'down',
 			viewBox: '0 3 16 8',
-			size: 16
 		};
 	},
 
