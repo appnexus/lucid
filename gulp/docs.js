@@ -22,6 +22,29 @@ function extractComponentName(path) {
 	return path.split('/').reverse()[0].split('.')[0];
 }
 
+function findParentNodeIdentifier(path) {
+	var name = _.get(path, 'value.id.name');
+	if (name) {
+		return name;
+	}
+
+	if (path.parentPath) {
+		return findParentNodeIdentifier(path.parentPath);
+	}
+
+	return null;
+}
+
+function getDocsForPath(definitionPath, name) {
+	return reactDocgen.parse('', function (ast, recast) {
+		return definitionPath;
+	}, reactDocgen.defaultHandlers.concat([
+		function (documentation, definition) {
+			documentation.set('displayName', name);
+		}
+	]));
+}
+
 module.exports = {
 	generate: function(callback) {
 		glob('./src/components/**/*.jsx', function(err, files) {
@@ -47,29 +70,44 @@ module.exports = {
 				var componentName = extractComponentName(file);
 
 				console.log('Docgen parsing %s...', file);
+
+				var definitionMap;
+				var exportIdentiferName;
+				var componentSource = fs.readFileSync(file)
 				var docs = reactDocgen.parse(
-					fs.readFileSync(file),
+					componentSource,
 					// Resolver
 					function (ast, recast) {
-						var definition;
+						definitionMap = {};
 						recast.visit(ast, {
 							visitObjectExpression: function (path) {
 								_.forEach(path.get('properties').value, function (property) {
 									if (property.key.name === 'render') {
-										definition = path;
+										var identifier = findParentNodeIdentifier(path);
+										if (identifier) {
+											definitionMap[identifier] = path;
+										}
 									}
 								});
 								return false;
+							},
+							visitExportDefaultDeclaration: function (path) {
+								exportIdentiferName = path.value.declaration.name;
+								return false;
 							}
 						});
-						return definition;
+						return definitionMap[exportIdentiferName];
 					},
 					// Handlers, a series of functions through which the documentation is
 					// built up.
-					reactDocgen.defaultHandlers.concat(function (/* documentation, definition */) {
+					reactDocgen.defaultHandlers.concat(function (documentation, definition) {
 						// TODO: determine composition from the `import` statements See
 						// existing handlers for examples:
 						// https://github.com/reactjs/react-docgen/blob/dca8ec9d57b4833f7ddb3164bedf4d74578eee1e/src/handlers/propTypeCompositionHandler.js
+						var childComponentDocs = _.map(_.reject(_.keys(definitionMap), _.partial(_.isEqual, exportIdentiferName)), function (childComponentId) {
+							return getDocsForPath(definitionMap[childComponentId], childComponentId);
+						});
+						documentation.set('childComponents', childComponentDocs);
 					})
 				);
 
