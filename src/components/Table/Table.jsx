@@ -1,35 +1,319 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-
-import Button from '../Button/Button';
-import Checkbox from '../Checkbox/Checkbox';
+import { createLucidComponentDefinition } from '../../util/component-definition';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
-import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
 
 const boundClassNames = lucidClassNames.bind('&-Table');
 
 const {
-	any,
+	object,
 	string,
-	bool,
+	bool
 } = React.PropTypes;
+
+/**
+ * `Thead` renders <thead>.
+ *
+ * Any child `<Tr>` will have `isHeader` set to `true` unless otherwise specified.
+ */
+const Thead = React.createClass(createLucidComponentDefinition({
+	render() {
+		const {
+			children
+		} = this.props;
+
+		return (
+			<thead {...this.props} className={boundClassNames('&-thead', this.props.className)}>
+				{React.Children.map(children, (childElement) => React.createElement(childElement.type, {isHeader: true, ...childElement.props}))}
+			</thead>
+		);
+	}
+}));
+
+/**
+ * `Tbody` renders <tbody>.
+ */
+const Tbody = React.createClass(createLucidComponentDefinition({
+	render() {
+		return (
+			<tbody {...this.props} className={boundClassNames('&-tbody', this.props.className)} />
+		);
+	}
+}));
+
+/**
+ * `Tr` renders <tr>.
+ *
+ * For children `<Td>`, `isAfterRowSpan` will be set to `true` on the second `<Td>` if the first `<Td>` has a `rowSpan` value greater than `1`, unless otherwise specified.
+ */
+const Tr = React.createClass(createLucidComponentDefinition({
+	propTypes: {
+		/**
+		 * Should be `true` when rendered inside a thead.
+		 */
+		isHeader: bool,
+		/**
+		 * Applies disabled styles to the row.
+		 */
+		isDisabled: bool,
+		/**
+		 * Applies styles to the row for when a checkbox is checked on that row.
+		 */
+		isChecked: bool,
+		/**
+		 * Applies selected styles to the row.
+		 */
+		isSelected: bool
+	},
+	getDefaultProps() {
+		return {
+			isDisabled: false,
+			isChecked: false,
+			isSelected: false
+		};
+	},
+	getInitialState() {
+		return {
+			isFirstItemRowSpan: false
+		};
+	},
+	checkForRowSpan(props=this.props) {
+		const {
+			children
+		} = props;
+		const firstElement = _.first(React.Children.toArray(children));
+		const rowSpanValue = _.get(firstElement, 'props.rowSpan', 1);
+
+		return rowSpanValue > 1;
+	},
+	componentWillMount() {
+		this.setState({
+			isFirstItemRowSpan: this.checkForRowSpan()
+		});
+	},
+	componentWillReceiveProps(nextProps) {
+		this.setState({
+			isFirstItemRowSpan: this.checkForRowSpan(nextProps)
+		});
+	},
+	render() {
+		const {
+			children,
+			className,
+			isHeader,
+			isDisabled,
+			isChecked,
+			isSelected
+		} = this.props;
+
+		const {
+			isFirstItemRowSpan
+		} = this.state;
+
+		return (
+			<tr {...this.props} className={boundClassNames({
+				'&-row': !isHeader,
+				'&-thead-row': isHeader,
+				'&-isDisabled': isDisabled,
+				'&-isChecked': isChecked,
+				'&-isSelected': isSelected
+			}, className)}>
+				{isFirstItemRowSpan ? React.Children.map(children, (childElement, index) => {
+					if (index === 1) {
+						return React.createElement(childElement.type, {
+							isAfterRowSpan: true,
+							...childElement.props
+						});
+					} else {
+						return childElement;
+					}
+				}) : children}
+			</tr>
+		);
+	}
+}));
+
+/**
+ * `Th` renders <th>.
+ *
+ * Will Render a CaretIcon next to the children if `isSorted`.
+ */
+const Th = React.createClass(createLucidComponentDefinition({
+	propTypes: {
+		/**
+		 * Aligns the content of a cell. Can be `left`, `center`, or `right`.
+		 */
+		align: string,
+		/**
+		 * Should be `true` when the cell has a checkbox.
+		 */
+		hasCheckbox: bool,
+		/**
+		 * Should be `true` when the cell has an icon.
+		 */
+		hasIcon: bool,
+		/**
+		 * Should be `true` when the cell has a button.
+		 */
+		hasButton: bool,
+		/**
+		 * Styles the cell to allow column sorting.
+		 */
+		isSortable: bool,
+		/**
+		 * Styles the cell when a column is sorted.
+		 */
+		isSorted: bool,
+		/**
+		 * The direction of the caret in the sorted column.
+		 */
+		sortDirection: string
+	},
+	getDefaultProps() {
+		return {
+			align: 'left',
+			hasCheckbox: false,
+			hasIcon: false,
+			hasButton: false,
+			isSorted: false,
+			sortDirection: 'up'
+		};
+	},
+	render() {
+		const {
+			children,
+			className,
+			align,
+			hasCheckbox,
+			hasIcon,
+			hasButton,
+			isSortable,
+			isSorted,
+			sortDirection
+		} = this.props;
+
+		return (
+			<th {...this.props} className={boundClassNames(
+				'&-cell', {
+				'&-align-left': align === 'left',
+				'&-align-center': align === 'center',
+				'&-align-right': align === 'right',
+				'&-hasCheckbox': hasCheckbox,
+				'&-hasIcon': hasIcon,
+				'&-hasButton': hasButton,
+				'&-isSortable': (isSortable === false ? isSortable : (isSorted || isSortable)),
+				'&-isSorted': isSorted,
+			}, className)}>
+				{isSorted ? (
+					<ul className={boundClassNames('&-isSorted-container')}>
+						<li className={boundClassNames('&-isSorted-title')}>{children}</li>
+						<li className={boundClassNames('&-isSorted-caret')}><CaretIcon className={boundClassNames('&-sort-icon')} direction={sortDirection} size={6}/></li>
+					</ul>
+				) : children}
+			</th>
+		);
+	}
+}));
+
+/**
+ * `Td` renders <td>.
+ */
+const Td = React.createClass(createLucidComponentDefinition({
+	propTypes: {
+		/**
+		 * Aligns the content of a cell. Can be `left`, `center`, or `right`.
+		 */
+		align: string,
+		/**
+		 * Should be `true` when the cell has a checkbox.
+		 */
+		hasCheckbox: bool,
+		/**
+		 * Should be `true` when the cell has an icon.
+		 */
+		hasIcon: bool,
+		/**
+		 * Should be `true` when the cell has a button.
+		 */
+		hasButton: bool,
+		/**
+		 * Should be `true` to render a right border.
+		 */
+		hasBorderRight: bool,
+		/**
+		 * Should be `true` to render a left border.
+		 */
+		hasBorderLeft: bool,
+		/**
+		 * Should be set to `true` on the second cell in a table where the first cell has a rowspan greater than 1.
+		 */
+		isAfterRowSpan: bool
+	},
+	getDefaultProps() {
+		return {
+			align: 'left',
+			hasCheckbox: false,
+			hasIcon: false,
+			hasButton: false,
+			hasBorderRight: false,
+			hasBorderLeft: false,
+		};
+	},
+	render() {
+		const {
+			className,
+			align,
+			hasCheckbox,
+			hasIcon,
+			hasButton,
+			rowSpan,
+			hasBorderRight,
+			hasBorderLeft,
+			isAfterRowSpan
+		} = this.props;
+
+		return (
+			<td {...this.props} className={boundClassNames(
+				'&-cell', {
+				'&-align-left': align === 'left',
+				'&-align-center': align === 'center',
+				'&-align-right': align === 'right',
+				'&-hasCheckbox': hasCheckbox,
+				'&-hasIcon': hasIcon,
+				'&-hasButton': hasButton,
+				'&-hasRowSpan': !_.isNil(rowSpan),
+				'&-hasBorderRight': hasBorderRight,
+				'&-hasBorderLeft': hasBorderLeft,
+				'&-isAfterRowSpan': isAfterRowSpan
+			}, className)} />
+		);
+	}
+}));
 
 /**
  *
  * {"categories": ["table"]}
  *
- * `Table` provides tabbed navigation. It has a flexible interface that allows
- * tab content to be passed as regular React children or through props.
+ * `Table` provides the most basic components to create a lucid table.
+ * It is recommended to create a wrapper around this component rather than using it directly in an app.
  */
+const Table = React.createClass(createLucidComponentDefinition({
+	displayName: 'Table',
 
-const Table = React.createClass({
+	statics: {
+		Thead,
+		Tbody,
+		Tr,
+		Th,
+		Td,
+	},
 
 	propTypes: {
 		/**
 		 * Styles that are passed through to the root container.
 		 */
-		style: any,
+		style: object,
 
 		/**
 		 * Class names that are appended to the defaults.
@@ -52,142 +336,15 @@ const Table = React.createClass({
 
 		const {
 			className,
-			style,
 			isComfortable,
-			...passThroughs,
 		} = this.props;
 
 		return (
-			<div>
-				<table className={boundClassNames('&-table',{
-						'&-isComfortable': isComfortable,
-					})}>
-					<thead className={boundClassNames('&-thead')}>
-						<tr className={boundClassNames('&-thead-row')}>
-							<th className={boundClassNames('&-cell')} rowSpan="2">RS</th>
-							<th className={boundClassNames('&-cell', '&-checkbox')} rowSpan="2">
-								<Checkbox></Checkbox>
-							</th>
-							<th className={boundClassNames('&-cell', '&-isSortable')} rowSpan="2">Lorem.</th>
-							<th className={boundClassNames('&-cell', '&-hasIcon')} rowSpan="2"><SuccessIcon/></th>
-							<th className={boundClassNames('&-cell')} rowSpan="2">Button</th>
-							<th className={boundClassNames('&-cell', '&-isSorted')} rowSpan="2">
-								<ul className={boundClassNames('&-isSorted-container')}>
-									<li className={boundClassNames('&-isSorted-title')}>Sorted Column</li>
-									<li className={boundClassNames('&-isSorted-caret')}><CaretIcon className={boundClassNames('&-sort-icon')} size="6"/></li>
-								</ul>
-							</th>
-							<th className={boundClassNames('&-cell', '&-align-center')} colSpan="3">Alignments</th>
-						</tr>
-						<tr className={boundClassNames('&-thead-row')}>
-							<th className={boundClassNames('&-cell', '&-align-left', '&-isSortable')}>align left</th>
-							<th className={boundClassNames('&-cell', '&-align-center')}>align center</th>
-							<th className={boundClassNames('&-cell', '&-align-right', '&-isSorted')}>
-								<ul className={boundClassNames('&-isSorted-container')}>
-									<li className={boundClassNames('&-isSorted-title')}>align right</li>
-									<li className={boundClassNames('&-isSorted-caret')}><CaretIcon className={boundClassNames('&-sort-icon')} size="6"/></li>
-								</ul>
-							</th>
-						</tr>
-					</thead>
-					<tbody className={boundClassNames('&-tbody')}>
-						<tr className={boundClassNames('&-row')}>
-							<td className={boundClassNames('&-cell', '&-hasBorderRight', '&-hasBorderLeft', '&-hasRowSpan')} rowSpan="9">RS</td>
-							<td className={boundClassNames('&-cell', '&-checkbox', '&-fixHover')}><Checkbox/></td>
-							<td className={boundClassNames('&-cell')}>Text</td>
-							<td className={boundClassNames('&-cell', '&-hasIcon', '&-hasBorderRight', '&-hasBorderLeft')}><SuccessIcon/></td>
-							<td className={boundClassNames('&-cell', '&-hasButton')}><Button size="small">button</Button></td>
-							<td className={boundClassNames('&-cell')}>Sorted Column</td>
-							<td className={boundClassNames('&-cell', '&-align-left', '&-hasBorderLeft')}>align left</td>
-							<td className={boundClassNames('&-cell', '&-align-center')}>align center</td>
-							<td className={boundClassNames('&-cell', '&-align-right')}>align right</td>
-						</tr>
-						<tr className={boundClassNames('&-row', '&-isDisabled')}>
-							<td className={boundClassNames('&-cell', '&-checkbox')}><Checkbox/></td>
-							<td className={boundClassNames('&-cell')}>isDisabled</td>
-							<td className={boundClassNames('&-cell', '&-hasIcon', '&-hasBorderRight', '&-hasBorderLeft')}><SuccessIcon/></td>
-							<td className={boundClassNames('&-cell', '&-hasButton')}><Button size="small" isDisabled={true}>button</Button></td>
-							<td className={boundClassNames('&-cell')}>Sorted Column</td>
-							<td className={boundClassNames('&-cell', '&-align-left', '&-hasBorderLeft')}>align left</td>
-							<td className={boundClassNames('&-cell', '&-align-center')}>align center</td>
-							<td className={boundClassNames('&-cell', '&-align-right')}>align right</td>
-						</tr>
-						<tr className={boundClassNames('&-row')}>
-							<td className={boundClassNames('&-cell', '&-checkbox')}><Checkbox/></td>
-							<td className={boundClassNames('&-cell')}><a href="#">Link</a></td>
-							<td className={boundClassNames('&-cell', '&-hasIcon', '&-hasBorderRight', '&-hasBorderLeft')}><SuccessIcon/></td>
-							<td className={boundClassNames('&-cell', '&-hasButton')}><Button size="small">button</Button></td>
-							<td className={boundClassNames('&-cell')}>Sorted Column</td>
-							<td className={boundClassNames('&-cell', '&-align-left', '&-hasBorderLeft')}>align left</td>
-							<td className={boundClassNames('&-cell', '&-align-center')}>align center</td>
-							<td className={boundClassNames('&-cell', '&-align-right')}>align right</td>
-						</tr>
-						<tr className={boundClassNames('&-row', '&-isDisabled')}>
-							<td className={boundClassNames('&-cell', '&-checkbox')}><Checkbox/></td>
-							<td className={boundClassNames('&-cell')}><a href="#">isDisabled Link</a></td>
-							<td className={boundClassNames('&-cell', '&-hasIcon', '&-hasBorderRight', '&-hasBorderLeft')}><SuccessIcon/></td>
-							<td className={boundClassNames('&-cell', '&-hasButton')}><Button size="small" isDisabled={true}>button</Button></td>
-							<td className={boundClassNames('&-cell')}>Sorted Column</td>
-							<td className={boundClassNames('&-cell', '&-align-left', '&-hasBorderLeft')}>align left</td>
-							<td className={boundClassNames('&-cell', '&-align-center')}>align center</td>
-							<td className={boundClassNames('&-cell', '&-align-right')}>align right</td>
-						</tr>
-						<tr className={boundClassNames('&-row', '&-isChecked')}>
-							<td className={boundClassNames('&-cell', '&-checkbox')}><Checkbox isSelected={true}/></td>
-							<td className={boundClassNames('&-cell')}>isChecked</td>
-							<td className={boundClassNames('&-cell', '&-hasIcon', '&-hasBorderRight', '&-hasBorderLeft')}><SuccessIcon/></td>
-							<td className={boundClassNames('&-cell', '&-hasButton')}><Button size="small">button</Button></td>
-							<td className={boundClassNames('&-cell')}>Sorted Column</td>
-							<td className={boundClassNames('&-cell', '&-align-left', '&-hasBorderLeft')}>align left</td>
-							<td className={boundClassNames('&-cell', '&-align-center')}>align center</td>
-							<td className={boundClassNames('&-cell', '&-align-right')}>align right</td>
-						</tr>
-						<tr className={boundClassNames('&-row', '&-isChecked', '&-isDisabled')}>
-							<td className={boundClassNames('&-cell', '&-checkbox')}><Checkbox isSelected={true}/></td>
-							<td className={boundClassNames('&-cell')}>isChecked && isDisabled</td>
-							<td className={boundClassNames('&-cell', '&-hasIcon', '&-hasBorderRight', '&-hasBorderLeft')}><SuccessIcon/></td>
-							<td className={boundClassNames('&-cell', '&-hasButton')}><Button size="small" isDisabled={true}>button</Button></td>
-							<td className={boundClassNames('&-cell')}>Sorted Column</td>
-							<td className={boundClassNames('&-cell', '&-align-left', '&-hasBorderLeft')}>align left</td>
-							<td className={boundClassNames('&-cell', '&-align-center')}>align center</td>
-							<td className={boundClassNames('&-cell', '&-align-right')}>align right</td>
-						</tr>
-						<tr className={boundClassNames('&-row', '&-isSelected')}>
-							<td className={boundClassNames('&-cell', '&-checkbox')}><Checkbox/></td>
-							<td className={boundClassNames('&-cell')}>isSelected</td>
-							<td className={boundClassNames('&-cell', '&-hasIcon', '&-hasBorderRight', '&-hasBorderLeft')}><SuccessIcon/></td>
-							<td className={boundClassNames('&-cell', '&-hasButton')}><Button size="small">button</Button></td>
-							<td className={boundClassNames('&-cell')}>Sorted Column</td>
-							<td className={boundClassNames('&-cell', '&-align-left', '&-hasBorderLeft')}>align left</td>
-							<td className={boundClassNames('&-cell', '&-align-center')}>align center</td>
-							<td className={boundClassNames('&-cell', '&-align-right')}>align right</td>
-						</tr>
-						<tr className={boundClassNames('&-row', '&-isSelected', '&-isDisabled')}>
-							<td className={boundClassNames('&-cell', '&-checkbox')}><Checkbox/></td>
-							<td className={boundClassNames('&-cell')}>isSelected && isDisabled</td>
-							<td className={boundClassNames('&-cell', '&-hasIcon', '&-hasBorderRight', '&-hasBorderLeft')}><SuccessIcon/></td>
-							<td className={boundClassNames('&-cell', '&-hasButton')}><Button size="small" isDisabled={true}>button</Button></td>
-							<td className={boundClassNames('&-cell')}>Sorted Column</td>
-							<td className={boundClassNames('&-cell', '&-align-left', '&-hasBorderLeft')}>align left</td>
-							<td className={boundClassNames('&-cell', '&-align-center')}>align center</td>
-							<td className={boundClassNames('&-cell', '&-align-right')}>align right</td>
-						</tr>
-						<tr className={boundClassNames('&-row', '&-isHover')}>
-							<td className={boundClassNames('&-cell', '&-checkbox')}><Checkbox/></td>
-							<td className={boundClassNames('&-cell')}>:hover</td>
-							<td className={boundClassNames('&-cell', '&-hasIcon', '&-hasBorderRight', '&-hasBorderLeft')}><SuccessIcon/></td>
-							<td className={boundClassNames('&-cell', '&-hasButton')}><Button size="small">button</Button></td>
-							<td className={boundClassNames('&-cell')}>Sorted Column</td>
-							<td className={boundClassNames('&-cell', '&-align-left', '&-hasBorderLeft')}>align left</td>
-							<td className={boundClassNames('&-cell', '&-align-center')}>align center</td>
-							<td className={boundClassNames('&-cell', '&-align-right')}>align right</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-
+			<table {...this.props} className={boundClassNames('&', {
+				'&-isComfortable': isComfortable,
+			}, className)} />
 		);
 	}
-});
+}));
 
 export default Table;

@@ -11,14 +11,13 @@
 @Table-hasCheckbox-width: 41px;
 
 .lucid-Table {
-	&-table {
-		border: 1px solid @color-borderColor;
-		width: 100%;
-		font: 500 @font;
-		color: @color-textColor;
-		a {
-			color: @color-linkColor;
-		}
+	#normalize.lucid-table();
+	border: 1px solid @color-borderColor;
+	font: 500 @font;
+	color: @color-textColor;
+
+	a {
+		color: @color-linkColor;
 	}
 
 	// **
@@ -62,11 +61,6 @@
 			&.lucid-Table-isSorted {
 				background-color: @Table-header-colorLight;
 				line-height: inherit;
-				cursor: pointer;
-				&:hover {
-					background-color: @Table-header-colorDark;
-					cursor: pointer;
-				}
 			}
 
 			// **
@@ -203,12 +197,12 @@
 	}
 
 	// **
-	// * Add `&-checkbox` if the `&-cell` has a `<Checkbox>` as a child.  This
+	// * Add `&-hasCheckbox` if the `&-cell` has a `<Checkbox>` as a child.  This
 	// * will change the width to fit only the `<Checkbox`> and change the
 	// * line-height to inherit to allow the `<Checkbox>` to be centered within
 	// * the cell.
 	// *
-	&-checkbox {
+	&-hasCheckbox {
 		width: @Table-hasCheckbox-width;
 		padding: 0 @Table-cell-padding;
 		line-height: inherit;
@@ -258,14 +252,14 @@
 	// *
 	&-isComfortable {
 		th.lucid-Table-cell {
-			&.lucid-Table-checkbox {
+			&.lucid-Table-hasCheckbox {
 				width: @Table-hasCheckbox-width;
 				line-height: inherit;
 			}
 		}
 		td.lucid-Table-cell {
 			line-height: @Table-row-heightLarge;
-			&.lucid-Table-checkbox {				
+			&.lucid-Table-hasCheckbox {				
 				line-height: inherit;
 			}
 			&.lucid-Table-hasIcon {
@@ -286,7 +280,7 @@
 	&:hover {
 		background-color: @bgcolor;
 		.lucid-Table-cell {
-			&:first-of-type, &.lucid-Table-fixHover {
+			&:first-of-type, &.lucid-Table-isAfterRowSpan {
 				.hardstop-gradient(to right, @color-primary, @bgcolor, @Table-hover-borderWidth);
 			}
 		}

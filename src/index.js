@@ -31,6 +31,7 @@ import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import SingleSelect from './components/SingleSelect/SingleSelect';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import Switch from './components/Switch/Switch';
+import Table from './components/Table/Table';
 import Tabs from './components/Tabs/Tabs';
 import TextField from './components/TextField/TextField'
 import ValidatedTextField from './components/ValidatedTextField/ValidatedTextField';
@@ -85,6 +86,7 @@ export {
 	SingleSelect,
 	SuccessIcon,
 	Switch,
+	Table,
 	Tabs,
 	TextField,
 	ValidatedTextField,
