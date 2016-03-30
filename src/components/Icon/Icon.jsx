@@ -77,17 +77,17 @@ const Icon = React.createClass({
 		} = this.props;
 
 		// Because we control the icon size inline, we must also control the border
-		// radius in the case where they user wants `isBadge`
-		const borderRadius = _.get(style, 'borderRadius', isBadge ? `${size}px` : null);
-		const actualStyle = {
+		// radius in the case where they user wants `isBadge`. Later one, we filter
+		// out any `undefined` properties using lodash methods.
+		let actualStyle = {
 			...style,
-			borderRadius
+			borderRadius: _.get(style, 'borderRadius', isBadge ? `${size}px` : undefined)
 		};
 
 		return (
 			<svg
 				{...passThroughs}
-				style={actualStyle}
+				style={_.pickBy(actualStyle, _.negate(_.isUndefined))}
 				className={boundClassNames('&', {
 					'&-is-badge': isBadge,
 				}, className)}
