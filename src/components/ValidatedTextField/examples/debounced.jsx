@@ -1,6 +1,10 @@
 import React from 'react';
 import ValidatedTextField from '../ValidatedTextField';
 
+const style = {
+	marginBottom: '10px'
+};
+
 export default React.createClass({
 	getInitialState() {
 		return {
@@ -17,7 +21,7 @@ export default React.createClass({
 					Error={this.state.value === 'foo' ? null : 'Please enter "foo"'}
 				/>
 
-				<div><br/>state.value: {this.state.value}</div>
+				<div style={style}>state.value: {this.state.value}</div>
 			</div>
 		)
 	}

@@ -2,6 +2,7 @@ import React from 'react';
 import sinon from 'sinon';
 import { shallow } from 'enzyme';
 import { common, controls } from '../../util/generic-tests';
+import * as KEYCODE from '../../constants/key-code';
 import assert from 'assert';
 import TextField from './TextField';
 
@@ -70,7 +71,7 @@ describe('TextField', () => {
 		);
 
 		wrapper.find('input').simulate('keydown', {
-			keyCode: 0x0D,
+			keyCode: KEYCODE.Enter,
 			target: {
 				value: 'yolo'
 			}

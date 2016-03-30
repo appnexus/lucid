@@ -93,7 +93,7 @@ const TextField = React.createClass(createLucidComponentDefinition({
 
 		/**
 		 * Number of milliseconds to debounce the `onChangeDebounced` callback.
-		 * Only useful if you provide an `onChangeDebouned` handler.
+		 * Only useful if you provide an `onChangeDebounced` handler.
 		 */
 		debounceLevel: number,
 
