@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 
@@ -7,7 +8,8 @@ const {
 	any,
 	string,
 	number,
-	bool
+	object,
+	bool,
 } = React.PropTypes;
 
 /**
@@ -19,6 +21,10 @@ const {
  */
 const Icon = React.createClass({
 	propTypes: {
+		/**
+		 * Styles that are passed through to the `svg`.
+		 */
+		style: object,
 		/**
 		 * Classes that are appended to the component defaults. This prop is run
 		 * through the `classnames` library.
@@ -51,9 +57,9 @@ const Icon = React.createClass({
 
 	getDefaultProps() {
 		return {
-			size: 18,
+			size: 16,
 			aspectRatio: 'xMidYMid meet',
-			viewBox: '0 0 18 18',
+			viewBox: '0 0 16 16',
 			isBadge: false
 		};
 	},
@@ -63,15 +69,25 @@ const Icon = React.createClass({
 			className,
 			children,
 			size,
+			style,
 			viewBox,
 			aspectRatio,
 			isBadge,
 			...passThroughs
 		} = this.props;
 
+		// Because we control the icon size inline, we must also control the border
+		// radius in the case where they user wants `isBadge`
+		const borderRadius = _.get(style, 'borderRadius', isBadge ? `${size}px` : null);
+		const actualStyle = {
+			...style,
+			borderRadius
+		};
+
 		return (
 			<svg
 				{...passThroughs}
+				style={actualStyle}
 				className={boundClassNames('&', {
 					'&-is-badge': isBadge,
 				}, className)}
