@@ -43,7 +43,7 @@ const Panel = React.createClass(createLucidComponentDefinition({
 		 */
 		children: node,
 		/**
-		 * Sets a content section with no padding.
+		 * If set to true, creates a content section with no padding.
 		 */
 		isGutterless: bool
 	},
