@@ -11,6 +11,7 @@
 @Table-hasCheckbox-width: 41px;
 
 .lucid-Table {
+	.no-safari-flicker();
 	#normalize.lucid-table();
 	border: 1px solid @color-borderColor;
 	font: 500 @font;
@@ -259,7 +260,7 @@
 		}
 		td.lucid-Table-cell {
 			line-height: @Table-row-heightLarge;
-			&.lucid-Table-hasCheckbox {				
+			&.lucid-Table-hasCheckbox {
 				line-height: inherit;
 			}
 			&.lucid-Table-hasIcon {
