@@ -14,6 +14,7 @@ import Dialog from './components/Dialog/Dialog';
 import DropMenu from './components/DropMenu/DropMenu';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
+import Expander from './components/Expander/Expander';
 import Grid from './components/Grid/Grid';
 import Icon from './components/Icon/Icon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
@@ -68,6 +69,7 @@ export {
 	DropMenu,
 	EditIcon,
 	EligibilityIcon,
+	Expander,
 	Grid,
 	Icon,
 	InfoIcon,
