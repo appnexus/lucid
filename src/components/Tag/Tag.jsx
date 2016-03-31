@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
+import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 
 const boundClassNames = lucidClassNames.bind('&-Tag');
 const {
@@ -83,16 +84,7 @@ const Tag = React.createClass({
 					{..._.omit(passThroughs, 'onClose')}
 			>
 				{nonTagChildren}
-				{isCloseable
-						? (
-							<span
-									className={boundClassNames('&-close')}
-									onClick={this.handleClose}
-							>
-								{String.fromCharCode(0x00d7)}
-							</span>
-						)
-						: null}
+				{isCloseable ? <CrossIcon className={boundClassNames('&-close')} onClick={this.handleClose} /> : null}
 				{_.map(tagChildrenProps, (tagChildProps, index) => <Tag {...tagChildProps} key={index} />)}
 			</div>
 		);
