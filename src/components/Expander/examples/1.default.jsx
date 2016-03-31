@@ -8,8 +8,8 @@ export default React.createClass({
 		return (
 			<div>
 				<Expander>
-					<Expander.Label>bar</Expander.Label>
-					<p>Yadda yadda yadda</p>
+					<Expander.Label>Show More</Expander.Label>
+					<p>This won't show up no matter how many times you click that icon!</p>
 				</Expander>
 			</div>
 		);
