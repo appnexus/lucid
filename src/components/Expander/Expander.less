@@ -15,7 +15,6 @@
 			}
 
 			> .lucid-Expander-icon {
-				.box-sizing();
 				.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 				border: solid 1px @featured-color-default-borderColor;
 				border-radius: @size-borderRadius;
@@ -36,12 +35,14 @@
 		}
 
 		> .lucid-Expander-icon {
+			.box-sizing();
 			align-items: center;
 			display: flex;
 			flex: 0 0 @Expander-size-icon;
 			height: @Expander-size-icon;
 			justify-content: center;
 			margin-right: 6px;
+			width: @Expander-size-icon;
 		}
 	}
 
