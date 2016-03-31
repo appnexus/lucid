@@ -7,8 +7,8 @@ set -e
 # to commit our built static documentation to the `gh-pages` branch of our
 # repo. It was heavily inspired by https://gist.github.com/domenic/ec8b0fc8ab45f39403dd
 
-# Only run this script if we're on `master`
-if [ "$TRAVIS_BRANCH" = "master" ]; then
+# Only run this script if we're on `master` and not sourced from a PR
+if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ "$TRAVIS_BRANCH" = "master" ]; then
 	# Clear out the old docs if they exist
 	rm -rf ./dist/docs
 
