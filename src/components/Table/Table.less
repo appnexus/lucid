@@ -146,18 +146,18 @@
 	}
 
 	// **
-	// * A row is `&-isChecked` when a `<Checkbox>` within that row is active
+	// * A row is `&-isSelected` when a `<Checkbox>` within that row is active
 	// *
-	&-isChecked {
+	&-isSelected {
 		background-color: @color-primaryLight;
 		.rowHover(multiply(@color-primaryLight, @color-lightGray));
 	}
 
 	// **
-	// * A row is `&-isSelected` when that row is active and a lower third panel
+	// * A row is `&-isActive` when that row is active and a lower third panel
 	// * is displayed.
 	// *
-	&-isSelected {
+	&-isActive {
 		background-color: @color-primaryMedium;
 		td{
 			&:first-of-type {

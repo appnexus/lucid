@@ -58,19 +58,19 @@ const Tr = React.createClass(createLucidComponentDefinition({
 		 */
 		isDisabled: bool,
 		/**
-		 * Applies styles to the row for when a checkbox is checked on that row.
+		 * Applies styles to the row for when the row is selected, usually by a checkbox.
 		 */
-		isChecked: bool,
+		isSelected: bool,
 		/**
-		 * Applies selected styles to the row.
+		 * Applies active styles to the row, usually when the row has been clicked.
 		 */
-		isSelected: bool
+		isActive: bool
 	},
 	getDefaultProps() {
 		return {
 			isDisabled: false,
-			isChecked: false,
-			isSelected: false
+			isSelected: false,
+			isActive: false
 		};
 	},
 	getInitialState() {
@@ -103,8 +103,8 @@ const Tr = React.createClass(createLucidComponentDefinition({
 			className,
 			isHeader,
 			isDisabled,
-			isChecked,
-			isSelected
+			isSelected,
+			isActive
 		} = this.props;
 
 		const {
@@ -116,8 +116,8 @@ const Tr = React.createClass(createLucidComponentDefinition({
 				'&-row': !isHeader,
 				'&-thead-row': isHeader,
 				'&-isDisabled': isDisabled,
-				'&-isChecked': isChecked,
-				'&-isSelected': isSelected
+				'&-isSelected': isSelected,
+				'&-isActive': isActive
 			}, className)}>
 				{isFirstItemRowSpan ? React.Children.map(children, (childElement, index) => {
 					if (index === 1) {
