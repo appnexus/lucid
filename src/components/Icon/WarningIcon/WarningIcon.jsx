@@ -17,7 +17,7 @@ const WarningIcon = React.createClass({
 
 	getDefaultProps() {
 		return {
-			viewBox: '0 0 18 18'
+			viewBox: '0 0 18 18',
 		};
 	},
 

@@ -1,34 +1,11 @@
 .lucid-EligibilityIcon{
-	&-is-selected-neither{
-		.Icon-left, .Icon-right {
-			fill: @featured-color-default;
-			stroke: @featured-color-danger;
-		}
+	&-half-circle {
+		fill: @featured-color-default;
+		stroke: @featured-color-danger;
 	}
-	&-is-selected-both{
-		.Icon-left, .Icon-right {
-			fill: @featured-color-success;
-			stroke: @color-transparent;
-		}
-	}
-	&-is-selected-left{
-		.Icon-left {
-			fill: @featured-color-success;
-			stroke: @color-transparent;
-		}
-		.Icon-right {
-			fill: @featured-color-default;
-			stroke: @featured-color-danger;
-		}
-	}
-	&-is-selected-right{
-		.Icon-left {
-			fill: @featured-color-default;
-			stroke: @featured-color-danger;
-		}
-		.Icon-right {
-			fill: @featured-color-success;
-			stroke: @color-transparent;
-		}
+
+	&-is-selected {
+		fill: @featured-color-success;
+		stroke: @color-transparent;
 	}
 }

@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition } from '../../util/component-definition';
 import reducers from './TextField.reducers';
+import * as KEYCODE from '../../constants/key-code';
 
 const boundClassNames = lucidClassNames.bind('&-TextField');
 
@@ -40,7 +41,7 @@ const TextField = React.createClass(createLucidComponentDefinition({
 
 		/**
 		 * Set the TextField to multi line mode. Under the hood this will use a
-		 * `textarea` instead of an `input` if set to `true`
+		 * `textarea` instead of an `input` if set to `true`.
 		 */
 		isMultiLine: bool,
 
@@ -68,6 +69,14 @@ const TextField = React.createClass(createLucidComponentDefinition({
 		onChange: func,
 
 		/**
+		 * Fires an event, debounced by `debounceLevel`, when the user types text
+		 * into the TextField.
+		 *
+		 * Signature: `(value, { event, props }) => {}`
+		 */
+		onChangeDebounced: func,
+
+		/**
 		 * Fires an event when the user hits "enter" from the TextField.
 		 *
 		 * Signature: `(value, { event, props }) => {}`
@@ -80,7 +89,25 @@ const TextField = React.createClass(createLucidComponentDefinition({
 		value: oneOfType([
 			number,
 			string
-		])
+		]),
+
+		/**
+		 * Number of milliseconds to debounce the `onChangeDebounced` callback.
+		 * Only useful if you provide an `onChangeDebounced` handler.
+		 */
+		debounceLevel: number,
+
+		/**
+		 * Set the holding time, in milliseconds, that the component will wait if
+		 * the user is typing and the component gets a new `value` prop.
+		 *
+		 * Any time the user hits a key, it starts a timer that prevents state
+		 * changes from flowing in to the component until the timer has elapsed.
+		 * This was heavily inspired by the [lazy-input][li] component.
+		 *
+		 * [li]: https://www.npmjs.com/package/lazy-input
+		 */
+		lazyLevel: number,
 	},
 
 	getDefaultProps() {
@@ -89,18 +116,67 @@ const TextField = React.createClass(createLucidComponentDefinition({
 			isDisabled: false,
 			isMultiLine: false,
 			onChange: _.noop,
+			onChangeDebounced: _.noop,
 			onSubmit: _.noop,
 			rows: 5,
+			debounceLevel: 500,
+			lazyLevel: 1000,
 		};
+	},
+
+	getInitialState() {
+		return {
+			value: this.props.value
+		}
+	},
+
+	componentWillMount() {
+		// Because we want the debounceLevel to be configurable, we can't put the
+		// debounced handler directly on the react class, so we set it up right
+		// before mount
+		this._handleChangeDebounced = _.debounce((...args) => {
+			this.props.onChangeDebounced(...args);
+		}, this.props.debounceLevel);
+
+		this._releaseHold = _.debounce(() => {
+			this.setState({ isHolding: false });
+		}, this.props.lazyLevel);
+
+		this._updateWhenReady = _.debounce((newValue) => {
+			if (this.state.isHolding) {
+				this._updateWhenReady(newValue);
+			} else if(newValue !== this.state.value) {
+				this.setState({ value: newValue });
+			}
+		}, this.props.lazyLevel);
+	},
+
+	componentWillReceiveProps(nextProps) {
+		// Allow consumer to optionally control state
+		if (_.has(nextProps, 'value')) {
+			if (this.state.isHolding) {
+				this._updateWhenReady(nextProps.value);
+			} else {
+				this.setState({ value: nextProps.value });
+			}
+		}
 	},
 
 	handleChange(event) {
 		const {
 			onChange,
 		} = this.props;
+
 		const value = _.get(event, 'target.value', '');
 
+		this.setState({ value, isHolding: true });
+		this._releaseHold();
+
 		onChange(value, { event, props: this.props });
+
+		// Also call the debounced handler in case the user wants debounced change
+		// events.
+		this._handleChangeDebounced(value, { event, props: this.props });
 	},
 
 	handleKeyDown(event) {
@@ -115,7 +191,7 @@ const TextField = React.createClass(createLucidComponentDefinition({
 			onKeyDown(event);
 		}
 
-		if (event.key === 'Enter') {
+		if (event.keyCode === KEYCODE.Enter) {
 			onSubmit(value, {event, props: this.props });
 		}
 	},
@@ -127,9 +203,12 @@ const TextField = React.createClass(createLucidComponentDefinition({
 			isMultiLine,
 			rows,
 			style,
-			value,
 			...passThroughs
 		} = this.props;
+
+		const {
+			value
+		} = this.state;
 
 		const finalProps = {
 			..._.omit(passThroughs, 'children'),

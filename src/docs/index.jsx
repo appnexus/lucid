@@ -9,7 +9,6 @@ import { render } from 'react-dom';
 import { Router, Route, Link, useRouterHistory } from 'react-router';
 import { createHashHistory } from 'history';
 import docgenMapRaw from './docgen.json';
-import hljs from 'hljs';
 import { markdown } from 'markdown';
 import ColorPalette from './containers/colors';
 
@@ -32,7 +31,8 @@ const docgenMap = _.mapValues(docgenMapRaw, (value, componentName) => {
 		throw new Error(`Looks like something is wrong with the custom metadata for ${componentName}. Please make sure the 'extend' refers to a real component that has valid props defined.`);
 	}
 
-	return _.merge(value, { props: parentProps });
+	// The `clone` is important to keep from mutating `value`
+	return _.defaultsDeep(_.clone(value), { props: parentProps });
 });
 
 /**
@@ -66,9 +66,11 @@ const docgenGroups = _.reduce(docgenMap, (acc, value, key) => {
 }, {});
 
 function handleHighlightCode() {
-	_.each(document.querySelectorAll('pre code'), (block) => {
-		hljs.highlightBlock(block);
-	});
+	if (window.hljs) { //eslint-disable-line
+		_.each(document.querySelectorAll('pre code'), (block) => {
+			hljs.highlightBlock(block); //eslint-disable-line
+		});
+	}
 }
 
 const {

@@ -25,7 +25,6 @@ const MinusIcon = React.createClass({
 			<Icon
 				{...passThroughs}
 				className={boundClassNames('&', className)}
-				viewBox='0 0 16 16'
 			>
 				<path d='M3,7h10v2H3V7z' />
 			</Icon>
