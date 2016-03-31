@@ -82,21 +82,33 @@ const Expander = React.createClass(createLucidComponentDefinition({
 		};
 	},
 
+	componentWillMount() {
+		this._labelKey = 0;
+	},
+
+	componentWillReceiveProps(nextProps) {
+		const currentLabel = _.first(Expander.Label.findInAllAsProps(this.props)).children;
+		const nextLabel = _.first(Expander.Label.findInAllAsProps(nextProps)).children;
+
+		if (currentLabel !== nextLabel) {
+			this._labelKey++;
+		}
+	},
+
 	render() {
 		const {
 			children,
 			className,
 			isExpanded,
-			onExpand,
 			style,
 			...passThroughs
 		} = this.props;
 
 		const labelChildProps = _.first(Expander.Label.findInAllAsProps(this.props));
-		const labelKey = isExpanded ? 'expandedLabel' : 'unexpandedLabel';
 
 		return (
 			<div
+				{..._.omit(passThroughs, 'onExpand')}
 				className={boundClassNames('&', {
 					'&-is-expanded': isExpanded,
 				}, className)}
@@ -117,7 +129,7 @@ const Expander = React.createClass(createLucidComponentDefinition({
 					>
 						{
 							labelChildProps
-									? <span key={labelKey}>{labelChildProps.children || labelChildProps}</span>
+									? <span key={this._labelKey}>{labelChildProps.children || labelChildProps}</span>
 									: null
 						}
 					</ReactCSSTransitionGroup>

@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React from 'react';
 import { buildStatefulComponent } from '../../../util/state-management';
 
