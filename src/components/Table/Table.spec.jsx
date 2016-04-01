@@ -22,13 +22,13 @@ describe('Table', () => {
 	});
 
 	describe('props', () => {
-		describe('isComfortable', () => {
-			it('should apply the `lucid-Table-isComfortable` class name to the rendered table', () => {
+		describe('hasExtraWhitespace', () => {
+			it('should apply the `lucid-Table-hasExtraWhitespace` class name to the rendered table', () => {
 				const wrapper = shallow(
-					<Table isComfortable={true} />
+					<Table hasExtraWhitespace={true} />
 				);
 
-				assert.equal(wrapper.find('table.lucid-Table-isComfortable').length, 1);
+				assert.equal(wrapper.find('table.lucid-Table-hasExtraWhitespace').length, 1);
 			});
 		});
 	});

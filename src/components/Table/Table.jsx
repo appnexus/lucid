@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition } from '../../util/component-definition';
+import { filterElementsByType } from '../../util/child-component';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 
 const boundClassNames = lucidClassNames.bind('&-Table');
@@ -25,7 +26,7 @@ const Thead = React.createClass(createLucidComponentDefinition({
 
 		return (
 			<thead {...this.props} className={boundClassNames('&-thead', this.props.className)}>
-				{React.Children.map(children, (childElement) => React.createElement(childElement.type, {isHeader: true, ...childElement.props}))}
+				{_.map(filterElementsByType(children, [Tr]), (trElement, index) => React.createElement(trElement.type, {key: 'Tr-'+index, isHeader: true, ...trElement.props}))}
 			</thead>
 		);
 	}
@@ -323,12 +324,12 @@ const Table = React.createClass(createLucidComponentDefinition({
 		/**
 		 * Adjusts the style of the table to have more spacing within the table cells
 		 */
-		isComfortable: bool,
+		hasExtraWhitespace: bool,
 	},
 
 	getDefaultProps() {
 		return {
-			isComfortable: false,
+			hasExtraWhitespace: false,
 		};
 	},
 
@@ -336,12 +337,12 @@ const Table = React.createClass(createLucidComponentDefinition({
 
 		const {
 			className,
-			isComfortable,
+			hasExtraWhitespace,
 		} = this.props;
 
 		return (
 			<table {...this.props} className={boundClassNames('&', {
-				'&-isComfortable': isComfortable,
+				'&-hasExtraWhitespace': hasExtraWhitespace,
 			}, className)} />
 		);
 	}

@@ -15,7 +15,7 @@ const {
 export default React.createClass({
 	render() {
 		return(
-			<Table isComfortable>
+			<Table hasExtraWhitespace>
 				<Thead>
 					<Tr>
 						<Th rowSpan={2}>RS</Th>

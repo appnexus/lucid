@@ -16,6 +16,7 @@
 	border: 1px solid @color-borderColor;
 	font: 500 @font;
 	color: @color-textColor;
+	background-color: @color-white;
 
 	a {
 		color: @color-linkColor;
@@ -25,6 +26,8 @@
 	// * `&-thead` is used to limit some styles to be only applyed to the
 	// * `<thead>`.  The `&-head` defines the header or the `.lucid-Table`
 	&-thead {
+		user-select: none;
+
 		// **
 		// * a "row" within the "thead"
 		// *
@@ -174,6 +177,10 @@
 		padding: 0 @Table-cell-padding;
 		line-height: @Table-row-height;
 		box-sizing: border-box;
+
+		&[rowspan] {
+			line-height: inherit;
+		}
 	}
 
 	// **
@@ -247,11 +254,11 @@
 	}
 
 	// **
-	// * Add `&-isComfortable` increased the padding/line-height of the cells of
+	// * Add `&-hasExtraWhitespace` increased the padding/line-height of the cells of
 	// * the the table by 50%. The increased line-heightis applyed only the
 	// * `&-tbody` cells.
 	// *
-	&-isComfortable {
+	&-hasExtraWhitespace {
 		th.lucid-Table-cell {
 			&.lucid-Table-hasCheckbox {
 				width: @Table-hasCheckbox-width;
