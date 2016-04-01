@@ -14,6 +14,7 @@ export function createChildComponent (definition={}) {
 		displayName: _.get(definition, 'displayName', null),
 		render: () => null,
 		statics: {
+			childComponentDefinition: definition,
 			isRenderNull: true,
 
 			/**
@@ -58,23 +59,8 @@ export function createChildComponent (definition={}) {
 			 * @return {array} - an array of normalized props
 			 */
 			findInProps(parentProps) {
-				// Extract out the defined `childProps` from the parent class
-				const currentProps = _.chain(parentProps)
-					.get(definition.propName) // grab the prop we care about, e.g. "Child"
-					.thru(x => [x]) // wrap in an array
-					.flatten()
-					.filter(x => x) // remove falsey values
-					.value();
-
-				return _.map(currentProps, (childProp) => {
-					if (_.isPlainObject(childProp)) {
-						return childProp;
-					} else {
-						return {
-							children: childProp
-						};
-					}
-				});
+				let component = this;
+				return getChildComponentPropsArray(parentProps, component);
 			},
 
 			/**
@@ -102,4 +88,44 @@ export function createChildComponent (definition={}) {
 
 export function rejectNullElements(children) {
 	return _.reject(React.Children.toArray(children), (node) => (React.isValidElement(node) && node.type.isRenderNull));
+}
+
+export function filterElementsByType(children, elementTypes) {
+	return _.filter(React.Children.toArray(children), (node) => (React.isValidElement(node) && _.includes(elementTypes, node.type)));
+}
+
+export function getChildComponentPropsArray(props, childComponentType) {
+	const propName = _.get(childComponentType, 'childComponentDefinition.propName');
+	if (propName) {
+		const currentProps = _.chain(props)
+			.get(propName) // grab the prop we care about, e.g. "Child"
+			.thru(x => [x]) // wrap in an array
+			.flatten()
+			.filter(x => x) // remove falsey values
+			.value();
+		const childComponentPropsArray = _.map(currentProps, (childProp) => {
+			if (_.isPlainObject(childProp)) {
+				return childProp;
+			} else {
+				return {
+					children: childProp
+				};
+			}
+		});
+		return childComponentPropsArray;
+	}
+	return [];
+}
+
+export function findAllChildComponents(props, childComponentTypes) {
+	return _.reduce(childComponentTypes, (acc, childComponentType) => {
+		const childComponentProps = getChildComponentPropsArray(props, childComponentType);
+		return acc.concat(_.map(childComponentProps, (childComponentProp) => ({
+			type: childComponentType,
+			props: childComponentProp
+		})));
+	}, []).concat(_.map(filterElementsByType(props.children, childComponentTypes), (element) => ({
+		type: element.type,
+		props: element.props
+	})));
 }
