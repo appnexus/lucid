@@ -8,7 +8,7 @@
 @Table-header-border: 1px solid @Table-header-colorDark;
 @Table-header-cell-border: 1px solid fade(white, 30%);
 @Table-hover-borderWidth: 4px;
-@Table-hasCheckbox-width: 41px;
+@Table-has-checkbox-width: 41px;
 
 .lucid-Table {
 	.no-safari-flicker();
@@ -52,7 +52,7 @@
 				border-bottom: @Table-header-cell-border;
 			}
 
-			&.lucid-Table-isSortable {
+			&.lucid-Table-is-sortable {
 				&:hover {
 					background-color: @Table-header-colorDark;
 					cursor: pointer;
@@ -62,7 +62,7 @@
 			// *
 			// * is applied when a column has been sorted.
 			// *
-			&.lucid-Table-isSorted {
+			&.lucid-Table-is-sorted {
 				background-color: @Table-header-colorLight;
 				line-height: inherit;
 			}
@@ -100,7 +100,7 @@
 	// **
 	// * TEMP to show always on hover state
 	// *
-	&-isHover {
+	&-is-hover {
 		background-color: @color-lightGray;
 		td{
 			&:first-of-type {
@@ -110,7 +110,7 @@
 		.Table-row-hover(@color-lightGray);
 	}
 
-	&-isSorted-container {
+	&-is-sorted-container {
 		display: flex;
 		margin: 0;
 		padding: 0;
@@ -119,11 +119,11 @@
 		align-items: center;
 	}
 
-	&-isSorted-title {
+	&-is-sorted-title {
 		flex: 1;
 	}
 
-	&-isSorted-caret {
+	&-is-sorted-caret {
 		display: flex;
 		margin-left: @Table-cell-padding;
 	}
@@ -205,72 +205,72 @@
 	}
 
 	// **
-	// * Add `&-hasCheckbox` if the `&-cell` has a `<Checkbox>` as a child.  This
+	// * Add `&-has-checkbox` if the `&-cell` has a `<Checkbox>` as a child.  This
 	// * will change the width to fit only the `<Checkbox`> and change the
 	// * line-height to inherit to allow the `<Checkbox>` to be centered within
 	// * the cell.
 	// *
-	&-hasCheckbox {
-		width: @Table-hasCheckbox-width;
+	&-has-checkbox {
+		width: @Table-has-checkbox-width;
 		padding: 0 @Table-cell-padding;
 		line-height: inherit;
 	}
 	// **
-	// * Add `&-hasIcon` if the `&-cell` has a `<Icon>` as a child.  This will
+	// * Add `&-has-icon` if the `&-cell` has a `<Icon>` as a child.  This will
 	// * change the width to fit only the `<Icon`> and change the line-height to
 	// * inherit to allow the `<Icon>` to be centered within the cell.
 	// *
-	&-hasIcon {
+	&-has-icon {
 		line-height: inherit;
 		width: 37px;
 	}
 
 	// **
-	// * Add `&-hasButton` if the `&-cell` has a `<Button>` as a child. This class
+	// * Add `&-has-button` if the `&-cell` has a `<Button>` as a child. This class
 	// * will center the `<Button>` within the cell.
 	// *
-	&-hasButton {
+	&-has-button {
 		text-align: center;
 	}
 
 	// **
-	// * Add `&-hasBorderLeft` if the `&-cell` needs to have a vertical border
+	// * Add `&-has-border-left` if the `&-cell` needs to have a vertical border
 	// * line on the left.
 	// *
-	&-hasBorderLeft {
+	&-has-border-left {
 		border-left: @Table-cell-border;
 	}
 
 	// **
-	// * Add `&-hasBorderRight` if the `&-cell` needs to have a vertical border
+	// * Add `&-has-border-right` if the `&-cell` needs to have a vertical border
 	// * line on the right.
 	// *
-	&-hasBorderRight {
+	&-has-border-right {
 		border-right: @Table-cell-border;
 	}
 
-	&-hasRowSpan {
+	&-has-rowspan {
 		background: @color-white !important;
 	}
 
 	// **
-	// * Add `&-hasExtraWhitespace` increased the padding/line-height of the cells of
-	// * the the table by 50%. The increased line-heightis applyed only the
+	// * Add `&-has-extra-whitespace` increased the padding/line-height of the cells of
+	// * the the table by 50%. The increased line-height is applyed only the
 	// * `&-tbody` cells.
 	// *
-	&-hasExtraWhitespace {
+	&-has-extra-whitespace {
 		th.lucid-Table-cell {
-			&.lucid-Table-hasCheckbox {
-				width: @Table-hasCheckbox-width;
+			&.lucid-Table-has-checkbox {
+				width: @Table-has-checkbox-width;
 				line-height: inherit;
 			}
 		}
 		td.lucid-Table-cell {
 			line-height: @Table-row-heightLarge;
-			&.lucid-Table-hasCheckbox {
+			&.lucid-Table-has-checkbox {
 				line-height: inherit;
 			}
-			&.lucid-Table-hasIcon {
+			&.lucid-Table-has-icon {
 				line-height: inherit;
 			}
 		}
@@ -288,7 +288,7 @@
 	&:hover {
 		background-color: @bgcolor;
 		.lucid-Table-cell {
-			&:first-of-type, &.lucid-Table-isAfterRowSpan {
+			&:first-of-type, &.lucid-Table-is-after-rowspan {
 				.hardstop-gradient(to right, @color-primary, @bgcolor, @Table-hover-borderWidth);
 			}
 		}

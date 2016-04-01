@@ -211,16 +211,16 @@ const Th = React.createClass(createLucidComponentDefinition({
 				'&-align-left': align === 'left',
 				'&-align-center': align === 'center',
 				'&-align-right': align === 'right',
-				'&-hasCheckbox': hasCheckbox,
-				'&-hasIcon': hasIcon,
-				'&-hasButton': hasButton,
-				'&-isSortable': (isSortable === false ? isSortable : (isSorted || isSortable)),
-				'&-isSorted': isSorted,
+				'&-has-checkbox': hasCheckbox,
+				'&-has-icon': hasIcon,
+				'&-has-button': hasButton,
+				'&-is-sortable': (isSortable === false ? isSortable : (isSorted || isSortable)),
+				'&-is-sorted': isSorted,
 			}, className)}>
 				{isSorted ? (
-					<ul className={boundClassNames('&-isSorted-container')}>
-						<li className={boundClassNames('&-isSorted-title')}>{children}</li>
-						<li className={boundClassNames('&-isSorted-caret')}>
+					<ul className={boundClassNames('&-is-sorted-container')}>
+						<li className={boundClassNames('&-is-sorted-title')}>{children}</li>
+						<li className={boundClassNames('&-is-sorted-caret')}>
 							<CaretIcon className={boundClassNames('&-sort-icon')} direction={sortDirection} size={6}/>
 						</li>
 					</ul>
@@ -293,13 +293,13 @@ const Td = React.createClass(createLucidComponentDefinition({
 				'&-align-left': align === 'left',
 				'&-align-center': align === 'center',
 				'&-align-right': align === 'right',
-				'&-hasCheckbox': hasCheckbox,
-				'&-hasIcon': hasIcon,
-				'&-hasButton': hasButton,
-				'&-hasRowSpan': !_.isNil(rowSpan),
-				'&-hasBorderRight': hasBorderRight,
-				'&-hasBorderLeft': hasBorderLeft,
-				'&-isAfterRowSpan': isAfterRowSpan
+				'&-has-checkbox': hasCheckbox,
+				'&-has-icon': hasIcon,
+				'&-has-button': hasButton,
+				'&-has-rowspan': !_.isNil(rowSpan),
+				'&-has-border-right': hasBorderRight,
+				'&-has-border-left': hasBorderLeft,
+				'&-is-after-rowspan': isAfterRowSpan
 			}, className)} />
 		);
 	}
@@ -355,7 +355,7 @@ const Table = React.createClass(createLucidComponentDefinition({
 
 		return (
 			<table {...this.props} className={boundClassNames('&', {
-				'&-hasExtraWhitespace': hasExtraWhitespace,
+				'&-has-extra-whitespace': hasExtraWhitespace,
 			}, className)} />
 		);
 	}

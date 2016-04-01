@@ -23,12 +23,12 @@ describe('Table', () => {
 
 	describe('props', () => {
 		describe('hasExtraWhitespace', () => {
-			it('should apply the `lucid-Table-hasExtraWhitespace` class name to the rendered table', () => {
+			it('should apply the `lucid-Table-has-extra-whitespace` class name to the rendered table', () => {
 				const wrapper = shallow(
 					<Table hasExtraWhitespace={true} />
 				);
 
-				assert.equal(wrapper.find('table.lucid-Table-hasExtraWhitespace').length, 1);
+				assert.equal(wrapper.find('table.lucid-Table-has-extra-whitespace').length, 1);
 			});
 		});
 	});
@@ -178,76 +178,76 @@ describe('Table', () => {
 				});
 
 				describe('hasCheckbox', () => {
-					it('should apply the class name `lucid-Table-hasCheckbox`', () => {
+					it('should apply the class name `lucid-Table-has-checkbox`', () => {
 						const wrapper = shallow(
 							<Th hasCheckbox />
 						);
 
-						assert.equal(wrapper.find('th.lucid-Table-hasCheckbox').length, 1);
+						assert.equal(wrapper.find('th.lucid-Table-has-checkbox').length, 1);
 					});
 				});
 
 				describe('hasIcon', () => {
-					it('should apply the class name `lucid-Table-hasIcon`', () => {
+					it('should apply the class name `lucid-Table-has-icon`', () => {
 						const wrapper = shallow(
 							<Th hasIcon />
 						);
 
-						assert.equal(wrapper.find('th.lucid-Table-hasIcon').length, 1);
+						assert.equal(wrapper.find('th.lucid-Table-has-icon').length, 1);
 					});
 				});
 
 				describe('hasButton', () => {
-					it('should apply the class name `lucid-Table-hasButton`', () => {
+					it('should apply the class name `lucid-Table-has-button`', () => {
 						const wrapper = shallow(
 							<Th hasButton />
 						);
 
-						assert.equal(wrapper.find('th.lucid-Table-hasButton').length, 1);
+						assert.equal(wrapper.find('th.lucid-Table-has-button').length, 1);
 					});
 				});
 
 				describe('isSortable', () => {
-					it('should apply the class name `lucid-Table-isSortable` when true', () => {
+					it('should apply the class name `lucid-Table-is-sortable` when true', () => {
 						const wrapper = shallow(
 							<Th isSortable={true} />
 						);
 
-						assert.equal(wrapper.find('th.lucid-Table-isSortable').length, 1);
+						assert.equal(wrapper.find('th.lucid-Table-is-sortable').length, 1);
 					});
 
-					it('should not apply the class name `lucid-Table-isSortable` when false', () => {
+					it('should not apply the class name `lucid-Table-is-sortable` when false', () => {
 						const wrapper = shallow(
 							<Th isSortable={false} />
 						);
 
-						assert.equal(wrapper.find('th.lucid-Table-isSortable').length, 0);
+						assert.equal(wrapper.find('th.lucid-Table-is-sortable').length, 0);
 					});
 
-					it('should apply the class name `lucid-Table-isSortable` when not specified and `isSorted` is true', () => {
+					it('should apply the class name `lucid-Table-is-sortable` when not specified and `isSorted` is true', () => {
 						const wrapper = shallow(
 							<Th isSorted={true} />
 						);
 
-						assert.equal(wrapper.find('th.lucid-Table-isSortable').length, 1);
+						assert.equal(wrapper.find('th.lucid-Table-is-sortable').length, 1);
 					});
 
-					it('should not apply the class name `lucid-Table-isSortable` when neither `isSortable` or `isSorted` are specified', () => {
+					it('should not apply the class name `lucid-Table-is-sortable` when neither `isSortable` or `isSorted` are specified', () => {
 						const wrapper = shallow(
 							<Th/>
 						);
 
-						assert.equal(wrapper.find('th.lucid-Table-isSortable').length, 0);
+						assert.equal(wrapper.find('th.lucid-Table-is-sortable').length, 0);
 					});
 				});
 
 				describe('isSorted', () => {
-					it('should apply the class name `lucid-Table-isSorted`', () => {
+					it('should apply the class name `lucid-Table-is-sorted`', () => {
 						const wrapper = shallow(
 							<Th isSorted />
 						);
 
-						assert.equal(wrapper.find('th.lucid-Table-isSorted').length, 1);
+						assert.equal(wrapper.find('th.lucid-Table-is-sorted').length, 1);
 					});
 
 					it('should render a container for sorted header content', () => {
@@ -255,13 +255,13 @@ describe('Table', () => {
 							<Th isSorted>foo</Th>
 						);
 
-						const containerWrapper = wrapper.find('ul.lucid-Table-isSorted-container');
+						const containerWrapper = wrapper.find('ul.lucid-Table-is-sorted-container');
 						assert.equal(containerWrapper.length, 1, 'must have a container');
-						assert.equal(containerWrapper.find('li.lucid-Table-isSorted-title').length, 1, 'container must have a title');
-						assert.equal(containerWrapper.find('li.lucid-Table-isSorted-title').text(), 'foo', 'title content must match children');
-						assert.equal(containerWrapper.find('li.lucid-Table-isSorted-caret').length, 1, 'container must have a caret');
-						assert.equal(containerWrapper.find('li.lucid-Table-isSorted-caret').find('CaretIcon').length, 1, 'CaretIcon must be rendered');
-						assert(_.includes(containerWrapper.find('li.lucid-Table-isSorted-caret').find('CaretIcon').prop('className'), 'lucid-Table-sort-icon'), 'CaretIcon must have correct className');
+						assert.equal(containerWrapper.find('li.lucid-Table-is-sorted-title').length, 1, 'container must have a title');
+						assert.equal(containerWrapper.find('li.lucid-Table-is-sorted-title').text(), 'foo', 'title content must match children');
+						assert.equal(containerWrapper.find('li.lucid-Table-is-sorted-caret').length, 1, 'container must have a caret');
+						assert.equal(containerWrapper.find('li.lucid-Table-is-sorted-caret').find('CaretIcon').length, 1, 'CaretIcon must be rendered');
+						assert(_.includes(containerWrapper.find('li.lucid-Table-is-sorted-caret').find('CaretIcon').prop('className'), 'lucid-Table-sort-icon'), 'CaretIcon must have correct className');
 					});
 				});
 
@@ -271,8 +271,8 @@ describe('Table', () => {
 							<Th isSorted sortDirection='up' />
 						);
 
-						const containerWrapper = wrapper.find('ul.lucid-Table-isSorted-container');
-						assert.equal('up', containerWrapper.find('li.lucid-Table-isSorted-caret').find('CaretIcon').prop('direction'), 'CaretIcon direction must match prop');
+						const containerWrapper = wrapper.find('ul.lucid-Table-is-sorted-container');
+						assert.equal('up', containerWrapper.find('li.lucid-Table-is-sorted-caret').find('CaretIcon').prop('direction'), 'CaretIcon direction must match prop');
 					});
 				});
 			});
@@ -318,62 +318,62 @@ describe('Table', () => {
 				});
 
 				describe('hasCheckbox', () => {
-					it('should apply the class name `lucid-Table-hasCheckbox`', () => {
+					it('should apply the class name `lucid-Table-has-checkbox`', () => {
 						const wrapper = shallow(
 							<Td hasCheckbox />
 						);
 
-						assert.equal(wrapper.find('td.lucid-Table-hasCheckbox').length, 1);
+						assert.equal(wrapper.find('td.lucid-Table-has-checkbox').length, 1);
 					});
 				});
 
 				describe('hasIcon', () => {
-					it('should apply the class name `lucid-Table-hasIcon`', () => {
+					it('should apply the class name `lucid-Table-has-icon`', () => {
 						const wrapper = shallow(
 							<Td hasIcon />
 						);
 
-						assert.equal(wrapper.find('td.lucid-Table-hasIcon').length, 1);
+						assert.equal(wrapper.find('td.lucid-Table-has-icon').length, 1);
 					});
 				});
 
 				describe('hasButton', () => {
-					it('should apply the class name `lucid-Table-hasButton`', () => {
+					it('should apply the class name `lucid-Table-has-button`', () => {
 						const wrapper = shallow(
 							<Td hasButton />
 						);
 
-						assert.equal(wrapper.find('td.lucid-Table-hasButton').length, 1);
+						assert.equal(wrapper.find('td.lucid-Table-has-button').length, 1);
 					});
 				});
 
 				describe('hasBorderRight', () => {
-					it('should apply the class name `lucid-Table-hasBorderRight`', () => {
+					it('should apply the class name `lucid-Table-has-border-right`', () => {
 						const wrapper = shallow(
 							<Td hasBorderRight />
 						);
 
-						assert.equal(wrapper.find('td.lucid-Table-hasBorderRight').length, 1);
+						assert.equal(wrapper.find('td.lucid-Table-has-border-right').length, 1);
 					});
 				});
 
-				describe('hasBorderLeft', () => {
-					it('should apply the class name `lucid-Table-hasBorderLeft`', () => {
+				describe('has-borderLeft', () => {
+					it('should apply the class name `lucid-Table-has-border-left`', () => {
 						const wrapper = shallow(
 							<Td hasBorderLeft />
 						);
 
-						assert.equal(wrapper.find('td.lucid-Table-hasBorderLeft').length, 1);
+						assert.equal(wrapper.find('td.lucid-Table-has-border-left').length, 1);
 					});
 				});
 
 				describe('isAfterRowSpan', () => {
-					it('should apply the class name `lucid-Table-isAfterRowSpan`', () => {
+					it('should apply the class name `lucid-Table-is-after-rowspan`', () => {
 						const wrapper = shallow(
 							<Td isAfterRowSpan />
 						);
 
-						assert.equal(wrapper.find('td.lucid-Table-isAfterRowSpan').length, 1);
+						assert.equal(wrapper.find('td.lucid-Table-is-after-rowspan').length, 1);
 					});
 				});
 			});
