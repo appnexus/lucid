@@ -36,6 +36,8 @@
 
 		> .lucid-Expander-icon {
 			.box-sizing();
+			// Fix for IE 11 not respecting box sizing correctly
+			border: solid 1px @color-transparent;
 			align-items: center;
 			display: flex;
 			flex: 0 0 @Expander-size-icon;
