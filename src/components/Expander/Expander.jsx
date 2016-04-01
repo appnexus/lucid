@@ -144,7 +144,9 @@ const Expander = React.createClass(createLucidComponentDefinition({
 	},
 
 	handleExpand(event) {
-		this.props.onExpand(!this.props.isExpanded, { event, props: this.props });
+		this.props.onExpand(!this.props.isExpanded, {
+			event, props: this.props
+		});
 	}
 }));
 
