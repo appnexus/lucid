@@ -124,7 +124,6 @@ const Expander = React.createClass(createLucidComponentDefinition({
 						transitionName={boundClassNames('&-text')}
 						transitionEnterTimeout={100}
 						transitionLeaveTimeout={100}
-						style={{position: 'relative'}}
 						className={boundClassNames('&-text')}
 					>
 						{
