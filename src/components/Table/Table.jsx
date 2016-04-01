@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition } from '../../util/component-definition';
-import { filterElementsByType } from '../../util/child-component';
+import { findElementsByType } from '../../util/child-component';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 
 const boundClassNames = lucidClassNames.bind('&-Table');
@@ -26,7 +26,17 @@ const Thead = React.createClass(createLucidComponentDefinition({
 
 		return (
 			<thead {...this.props} className={boundClassNames('&-thead', this.props.className)}>
-				{_.map(filterElementsByType(children, [Tr]), (trElement, index) => React.createElement(trElement.type, {key: 'Tr-'+index, isHeader: true, ...trElement.props}))}
+				{_.map(
+					findElementsByType(children, [Tr]),
+					(trElement, index) => React.createElement(
+						trElement.type,
+						{
+							key: 'Tr-'+index,
+							isHeader: true,
+							...trElement.props
+						}
+					)
+				)}
 			</thead>
 		);
 	}
@@ -116,20 +126,21 @@ const Tr = React.createClass(createLucidComponentDefinition({
 			<tr {...this.props} className={boundClassNames({
 				'&-row': !isHeader,
 				'&-thead-row': isHeader,
-				'&-isDisabled': isDisabled,
-				'&-isSelected': isSelected,
-				'&-isActive': isActive
+				'&-is-disabled': isDisabled,
+				'&-is-selected': isSelected,
+				'&-is-active': isActive
 			}, className)}>
-				{isFirstItemRowSpan ? React.Children.map(children, (childElement, index) => {
-					if (index === 1) {
-						return React.createElement(childElement.type, {
+				{isFirstItemRowSpan ? React.Children.map(
+					children,
+					(childElement, index) => (
+						index === 1
+						? React.createElement(childElement.type, {
 							isAfterRowSpan: true,
 							...childElement.props
-						});
-					} else {
-						return childElement;
-					}
-				}) : children}
+						})
+						: childElement
+					)
+				) : children}
 			</tr>
 		);
 	}
@@ -209,7 +220,9 @@ const Th = React.createClass(createLucidComponentDefinition({
 				{isSorted ? (
 					<ul className={boundClassNames('&-isSorted-container')}>
 						<li className={boundClassNames('&-isSorted-title')}>{children}</li>
-						<li className={boundClassNames('&-isSorted-caret')}><CaretIcon className={boundClassNames('&-sort-icon')} direction={sortDirection} size={6}/></li>
+						<li className={boundClassNames('&-isSorted-caret')}>
+							<CaretIcon className={boundClassNames('&-sort-icon')} direction={sortDirection} size={6}/>
+						</li>
 					</ul>
 				) : children}
 			</th>

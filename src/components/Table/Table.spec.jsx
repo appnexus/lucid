@@ -107,32 +107,32 @@ describe('Table', () => {
 				});
 
 				describe('isDisabled', () => {
-					it('should apply the class name `lucid-Table-isDisabled`', () => {
+					it('should apply the class name `lucid-Table-is-disabled`', () => {
 						const wrapper = shallow(
 							<Tr isDisabled />
 						);
 
-						assert.equal(wrapper.find('tr.lucid-Table-isDisabled').length, 1);
+						assert.equal(wrapper.find('tr.lucid-Table-is-disabled').length, 1);
 					});
 				});
 
 				describe('isSelected', () => {
-					it('should apply the class name `lucid-Table-isSelected`', () => {
+					it('should apply the class name `lucid-Table-is-selected`', () => {
 						const wrapper = shallow(
 							<Tr isSelected />
 						);
 
-						assert.equal(wrapper.find('tr.lucid-Table-isSelected').length, 1);
+						assert.equal(wrapper.find('tr.lucid-Table-is-selected').length, 1);
 					});
 				});
 
 				describe('isActive', () => {
-					it('should apply the class name `lucid-Table-isActive`', () => {
+					it('should apply the class name `lucid-Table-is-active`', () => {
 						const wrapper = shallow(
 							<Tr isActive />
 						);
 
-						assert.equal(wrapper.find('tr.lucid-Table-isActive').length, 1);
+						assert.equal(wrapper.find('tr.lucid-Table-is-active').length, 1);
 					});
 				});
 			});

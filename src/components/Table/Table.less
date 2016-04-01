@@ -94,7 +94,7 @@
 	// *A standard `<tr>` tag
 	// *
 	&-row {
-		.rowHover(@color-lightGray);
+		.Table-row-hover(@color-lightGray);
 	}
 
 	// **
@@ -107,7 +107,7 @@
 				.hardstop-gradient(to right, @color-primary, @color-lightGray, @Table-hover-borderWidth);
 			}
 		}
-		.rowHover(@color-lightGray);
+		.Table-row-hover(@color-lightGray);
 	}
 
 	&-isSorted-container {
@@ -138,9 +138,9 @@
 	}
 
 	// **
-	// * When `&-isDisabled` is applied to a row the row will appear disabled
+	// * When `&-is-disabled` is applied to a row the row will appear disabled
 	// *
-	&-isDisabled {
+	&-is-disabled {
 		color: @color-disabledText;
 		font-style: italic;
 		a {
@@ -149,25 +149,25 @@
 	}
 
 	// **
-	// * A row is `&-isSelected` when a `<Checkbox>` within that row is active
+	// * A row is `&-is-selected` when a `<Checkbox>` within that row is active
 	// *
-	&-isSelected {
+	&-is-selected {
 		background-color: @color-primaryLight;
-		.rowHover(multiply(@color-primaryLight, @color-lightGray));
+		.Table-row-hover(multiply(@color-primaryLight, @color-lightGray));
 	}
 
 	// **
-	// * A row is `&-isActive` when that row is active and a lower third panel
+	// * A row is `&-is-active` when that row is active and a lower third panel
 	// * is displayed.
 	// *
-	&-isActive {
+	&-is-active {
 		background-color: @color-primaryMedium;
 		td{
 			&:first-of-type {
 				.hardstop-gradient(to right, @color-primary, @color-primaryMedium, @Table-hover-borderWidth);
 			}
 		}
-		.rowHover(multiply(@color-primaryMedium, @color-lightGray));
+		.Table-row-hover(multiply(@color-primaryMedium, @color-lightGray));
 	}
 
 	// **
@@ -284,7 +284,7 @@
 // * which is appied to the first `.lucid-Table-cell` as a background gradient.
 // * The mixin takes a single background color that is used to fill the "row"
 // *
-.rowHover(@bgcolor) {
+.Table-row-hover(@bgcolor) {
 	&:hover {
 		background-color: @bgcolor;
 		.lucid-Table-cell {
