@@ -3,11 +3,8 @@
 .lucid-Expander {
 	&-icon {
 		.box-sizing();
-		// Fix for IE 11 not respecting box sizing correctly
-		border: solid 1px @color-transparent;
 		align-items: center;
 		display: flex;
-		flex: 0 0 @Expander-size-icon;
 		height: @Expander-size-icon;
 		justify-content: center;
 		margin-right: 6px;
@@ -25,6 +22,7 @@
 		&:hover {
 			> .lucid-Expander-icon {
 				.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+				.box-sizing();
 				border: solid 1px @featured-color-default-borderColor;
 				border-radius: @size-borderRadius;
 				outline: none;
