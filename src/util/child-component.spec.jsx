@@ -8,8 +8,8 @@ import describeWithDOM from './describe-with-dom';
 import {
 	createChildComponent,
 	rejectNullElements,
-	filterElementsByType,
-	getChildComponentPropsArray,
+	findElementsByType,
+	findChildComponentsInProps,
 	findAllChildComponents,
 } from './child-component';
 
@@ -121,9 +121,9 @@ describeWithDOM('#createChildComponent', () => {
 
 					return (
 						<ul className='selection'>
-							{_.map(itemsProps, (itemProps, i) => (
-								<li className={'item' + (itemProps.isAvailable ? ' available' : '')} key={i}>
-									{itemProps.children}
+							{_.map(itemsProps, ({isAvailable, children}, i) => (
+								<li className={'item' + (isAvailable ? ' available' : '')} key={i}>
+									{children}
 								</li>
 							))}
 						</ul>
@@ -187,9 +187,9 @@ describeWithDOM('#createChildComponent', () => {
 
 					return (
 						<ul className='selection'>
-							{_.map(itemsProps, (itemProps, i) => (
-								<li className={'item' + (itemProps.isAvailable ? ' available' : '')} key={i}>
-									{itemProps.children}
+							{_.map(itemsProps, ({isAvailable, children}, i) => (
+								<li className={'item' + (isAvailable ? ' available' : '')} key={i}>
+									{children}
 								</li>
 							))}
 						</ul>
@@ -246,9 +246,9 @@ describeWithDOM('#createChildComponent', () => {
 
 					return (
 						<ul className='selection'>
-							{_.map(itemsProps, (itemProps, i) => (
-								<li className={'item' + (itemProps.isAvailable ? ' available' : '')} key={i}>
-									{itemProps.children}
+							{_.map(itemsProps, ({isAvailable, children}, i) => (
+								<li className={'item' + (isAvailable ? ' available' : '')} key={i}>
+									{children}
 								</li>
 							))}
 						</ul>
@@ -333,7 +333,7 @@ describe('#rejectNullElements', () => {
 	});
 });
 
-describe('#filterElementsByType', () => {
+describe('#findElementsByType', () => {
 	it('should filter child component elements which match the given element types in render order', () => {
 		const ChildComponent0 = createChildComponent();
 		const ChildComponent1 = createChildComponent();
@@ -348,7 +348,7 @@ describe('#filterElementsByType', () => {
 					children
 				} = this.props;
 
-				var filteredElements = filterElementsByType(children, [ChildComponent0, ChildComponent2]);
+				var filteredElements = findElementsByType(children, [ChildComponent0, ChildComponent2]);
 
 				assert.equal(_.size(filteredElements), 3);
 				assert(React.isValidElement(filteredElements[0]));
@@ -383,7 +383,7 @@ describe('#filterElementsByType', () => {
 	});
 });
 
-describe('#getChildComponentPropsArray', () => {
+describe('#findChildComponentsInProps', () => {
 	it('should return array of props from the given props object matching the given child component type', () => {
 		// `propName` must be defined to define component via props
 		const Item = createChildComponent({ propName: 'Item' });
@@ -396,7 +396,7 @@ describe('#getChildComponentPropsArray', () => {
 				Item: createChildComponent({ propName: 'Item' })
 			},
 			render() {
-				const itemsProps = getChildComponentPropsArray(this.props, Item);
+				const itemsProps = findChildComponentsInProps(this.props, Item);
 
 				assert(_.isArray(itemsProps));
 				_.forEach(itemsProps, (itemProps) => {
@@ -405,9 +405,9 @@ describe('#getChildComponentPropsArray', () => {
 
 				return (
 					<ul className='selection'>
-						{_.map(itemsProps, (itemProps, i) => (
-							<li className={'item' + (itemProps.isAvailable ? ' available' : '')} key={i}>
-								{itemProps.children}
+						{_.map(itemsProps, ({isAvailable, children}, i) => (
+							<li className={'item' + (isAvailable ? ' available' : '')} key={i}>
+								{children}
 							</li>
 						))}
 					</ul>
