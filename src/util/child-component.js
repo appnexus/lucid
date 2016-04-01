@@ -27,13 +27,7 @@ export function createChildComponent (definition={}) {
 			 */
 			findInChildren(elements) {
 				let component = this;
-				let ownElements = [];
-				React.Children.forEach(elements, (element) => {
-					if (element && element.type === component) {
-						ownElements.push(element);
-					}
-				});
-				return ownElements;
+				return findElementsByType(elements, [component]);
 			},
 
 			/**
@@ -60,7 +54,7 @@ export function createChildComponent (definition={}) {
 			 */
 			findInProps(parentProps) {
 				let component = this;
-				return getChildComponentPropsArray(parentProps, component);
+				return findChildComponentsInProps(parentProps, component);
 			},
 
 			/**
@@ -77,24 +71,27 @@ export function createChildComponent (definition={}) {
 			findInAllAsProps(parentProps) {
 				let component = this;
 
-				const propsFromProps = component.findInProps(parentProps);
-				const propsFromChildren = component.findInChildrenAsProps(parentProps.children);
-
-				return propsFromProps.concat(propsFromChildren);
+				return _.map(findAllChildComponents(parentProps, [component]), 'props');
 			}
 		}
 	});
 }
 
 export function rejectNullElements(children) {
-	return _.reject(React.Children.toArray(children), (node) => (React.isValidElement(node) && node.type.isRenderNull));
+	return _.reject(
+		React.Children.toArray(children),
+		(node) => (React.isValidElement(node) && node.type.isRenderNull)
+	);
 }
 
-export function filterElementsByType(children, elementTypes) {
-	return _.filter(React.Children.toArray(children), (node) => (React.isValidElement(node) && _.includes(elementTypes, node.type)));
+export function findElementsByType(children, elementTypes) {
+	return _.filter(
+		React.Children.toArray(children),
+		(node) => (React.isValidElement(node) && _.includes(elementTypes, node.type))
+	);
 }
 
-export function getChildComponentPropsArray(props, childComponentType) {
+export function findChildComponentsInProps(props, childComponentType) {
 	const propName = _.get(childComponentType, 'childComponentDefinition.propName');
 	if (propName) {
 		const currentProps = _.chain(props)
@@ -103,29 +100,28 @@ export function getChildComponentPropsArray(props, childComponentType) {
 			.flatten()
 			.filter(x => x) // remove falsey values
 			.value();
-		const childComponentPropsArray = _.map(currentProps, (childProp) => {
-			if (_.isPlainObject(childProp)) {
-				return childProp;
-			} else {
-				return {
-					children: childProp
-				};
-			}
-		});
-		return childComponentPropsArray;
+
+		return _.map(
+			currentProps,
+			(childProp) => (
+				_.isPlainObject(childProp)
+					? childProp
+					: { children: childProp }
+			)
+		);
 	}
 	return [];
 }
 
 export function findAllChildComponents(props, childComponentTypes) {
-	return _.reduce(childComponentTypes, (acc, childComponentType) => {
-		const childComponentProps = getChildComponentPropsArray(props, childComponentType);
-		return acc.concat(_.map(childComponentProps, (childComponentProp) => ({
-			type: childComponentType,
-			props: childComponentProp
-		})));
-	}, []).concat(_.map(filterElementsByType(props.children, childComponentTypes), (element) => ({
-		type: element.type,
-		props: element.props
-	})));
+	return _.reduce(
+		childComponentTypes,
+		(acc, childComponentType) => acc.concat(_.map(
+			findChildComponentsInProps(props, childComponentType),
+			(childComponentProp) => ({
+				type: childComponentType,
+				props: childComponentProp
+			})
+		)), [])
+	.concat(findElementsByType(props.children, childComponentTypes));
 }
