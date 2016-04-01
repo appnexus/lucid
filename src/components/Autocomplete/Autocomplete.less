@@ -3,7 +3,7 @@
 
 .lucid-Autocomplete {
 
-	&-Control {
+	& &-Control {
 		.no-safari-flicker();
 		.box-sizing();
 		cursor: pointer;
@@ -19,13 +19,15 @@
 		padding: 0 10px;
 		align-items: center;
 
-		&-input {
-			background: none;
-			border: none;
+		& .lucid-Autocomplete-Control-input {
+			background: none transparent;
+			border: 0 solid transparent;
 			outline: none;
 			font: @font;
 			font-weight: normal;
 			color: @color-textColor;
+			margin: 0;
+			padding: 0;
 		}
 
 		.lucid-CaretIcon {
