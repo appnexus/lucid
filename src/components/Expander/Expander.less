@@ -1,6 +1,19 @@
 @Expander-size-icon: 20px;
 
 .lucid-Expander {
+	&-icon {
+		.box-sizing();
+		// Fix for IE 11 not respecting box sizing correctly
+		border: solid 1px @color-transparent;
+		align-items: center;
+		display: flex;
+		flex: 0 0 @Expander-size-icon;
+		height: @Expander-size-icon;
+		justify-content: center;
+		margin-right: 6px;
+		width: @Expander-size-icon;
+	}
+
 	&-header {
 		align-items: center;
 		color: @color-darkGray;
@@ -10,10 +23,6 @@
 		justify-content: flex-start;
 
 		&:hover {
-			> .lucid-Expander-icon .lucid-ChevronIcon {
-				stroke: @color-darkGray;
-			}
-
 			> .lucid-Expander-icon {
 				.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 				border: solid 1px @featured-color-default-borderColor;
@@ -28,24 +37,14 @@
 			> .lucid-Expander-text {
 				color: @color-linkColorHover;
 
+				// `text-decoration `does not inherit when you're using `position:
+				// absolute` as per the spec
 				> span {
 					text-decoration: underline;
 				}
 			}
 		}
 
-		> .lucid-Expander-icon {
-			.box-sizing();
-			// Fix for IE 11 not respecting box sizing correctly
-			border: solid 1px @color-transparent;
-			align-items: center;
-			display: flex;
-			flex: 0 0 @Expander-size-icon;
-			height: @Expander-size-icon;
-			justify-content: center;
-			margin-right: 6px;
-			width: @Expander-size-icon;
-		}
 	}
 
 	&-text {
