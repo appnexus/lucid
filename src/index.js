@@ -5,6 +5,7 @@ import Button from './components/Button/Button';
 import ButtonGroup from './components/ButtonGroup/ButtonGroup';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
+import ChevronIcon from './components/Icon/ChevronIcon/ChevronIcon';
 import Checkbox from './components/Checkbox/Checkbox';
 import Panel from './components/Panel/Panel';
 import ContextMenu from './components/ContextMenu/ContextMenu';
@@ -60,6 +61,7 @@ export {
 	ButtonGroup,
 	CaretIcon,
 	CheckIcon,
+	ChevronIcon,
 	Checkbox,
 	Panel,
 	ContextMenu,
