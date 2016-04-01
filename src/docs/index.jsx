@@ -73,6 +73,16 @@ function handleHighlightCode() {
 	}
 }
 
+function getDescriptionAsHtml(description) {
+	return _.chain(description)
+		.thru((description) => {
+			return {
+				__html: markdown.toHTML(description)
+			};
+		})
+		.value();
+}
+
 const {
 	PropTypes: {
 		oneOfType,
@@ -171,20 +181,16 @@ const Component = React.createClass({
 			componentName
 		} = this.props.params;
 
+		const component = _.get(docgenMap, componentName, {});
+		const childComponents = _.get(component, 'childComponents', []);
+
 		const componentProps = _.chain(docgenMap)
 			.get(`${componentName}.props`, [])
 			.toPairs() // this turns the object into an array of [propName, propDetails] so we can sort
 			.sortBy(x => x[0]) // sort by property name
 			.value()
 
-		const descriptionAsHTML = _.chain(docgenMap)
-			.get(`${componentName}.description`, '')
-			.thru((description) => {
-				return {
-					__html: markdown.toHTML(description)
-				};
-			})
-			.value();
+		const descriptionAsHTML = getDescriptionAsHtml(_.get(docgenMap, `${componentName}.description`));
 
 		const composesComponents = _.chain(docgenMap)
 			.get(`${componentName}.customData.madeFrom`, null)
@@ -253,6 +259,61 @@ const Component = React.createClass({
 						})}
 					</tbody>
 				</table>
+				{!_.isEmpty(childComponents) ? (
+					<section>
+						<h3>Child Components</h3>
+						{_.map(childComponents, (childComponent) => (
+							<section key={childComponent.displayName}>
+								<h4>{childComponent.displayName}</h4>
+								<div dangerouslySetInnerHTML={getDescriptionAsHtml(childComponent.description)} />
+								{!_.isNil(childComponent.props) ? (
+									<table className='Component-props-table pure-table pure-table-bordered'>
+										<thead>
+											<tr>
+												<th>Name</th>
+												<th>Type</th>
+												<th>Required</th>
+												<th>Default</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											{_.map((_.chain(childComponent)
+												.get('props', [])
+												.toPairs() // this turns the object into an array of [propName, propDetails] so we can sort
+												.sortBy(x => x[0]) // sort by property name
+												.value()
+											), ([propName, propDetails]) => {
+												if (!propDetails || _.isNil(propDetails.description)) {
+													console.error(`Warning: There was an issue with the docs that were generated for component "${componentName}.${childComponent.displayName}" and prop "${propName}". One reason might be that you have a default value for something that was never declared in propTypes.`);
+													return null;
+												}
+
+												return (
+													<tr key={`${childComponent.displayName}-${propName}`}>
+														<td>{propName}</td>
+														<td><PropType type={propDetails.type} componentName={childComponent.displayName} /></td>
+														<td>{propDetails.required ? 'yes' : 'no'}</td>
+														<td>
+															{propDetails.defaultValue ?
+																<pre>
+																	<code className='lang-javascript'>
+																		{_.get(propDetails, 'defaultValue.value', '')}
+																	</code>
+																</pre>
+															: null}
+														</td>
+														<td dangerouslySetInnerHTML={{ __html: markdown.toHTML(propDetails.description)}} />
+													</tr>
+												);
+											})}
+										</tbody>
+									</table>
+								) : null}
+							</section>
+						))}
+					</section>
+				) : null}
 				<h3>Examples</h3>
 				<ul className='Component-examples'>
 					{_.map(_.get(examplesByComponent, componentName, []), (example) => {
