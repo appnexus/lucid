@@ -19,9 +19,11 @@
 		padding: 0 10px;
 		align-items: center;
 
+		// The highly specific selector makes it so global input styles
+		// are less likely to affect the Autocomplete input.
 		& .lucid-Autocomplete-Control-input {
-			background: none transparent;
-			border: 0 solid transparent;
+			background: none @color-transparent;
+			border: 0 solid @color-transparent;
 			outline: none;
 			font: @font;
 			font-weight: normal;
