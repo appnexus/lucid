@@ -30,12 +30,13 @@
 		}
 	}
 
-	&:active {
-		outline: none;
+	&:active,
+	&:focus { outline: none; }
 
-		&::before {
-			box-shadow: @shadow-inset;
-		}
+	&:active::before,
+	&:focus::before {
+		box-shadow: @shadow-inset;
+		opacity: 1;
 	}
 }
 
@@ -141,4 +142,3 @@
 		transition: opacity @timing ease-in;
 	}
 }
-

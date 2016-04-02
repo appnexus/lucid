@@ -18,6 +18,14 @@
 	line-height: @Button-size-lineHeight;
 	padding: 0 @Button-size-padding;
 
+	& &-content {
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+		.lucid-Icon { margin-right: 5px; }
+	}
+
 	// Types
 	&-primary {
 		color: @color-white;
@@ -79,6 +87,11 @@
 		line-height: @Button-size-lineHeight*1.5;
 		padding: 0 @Button-size-padding*1.5;
 		font-size: 1.2em;
+
+		.lucid-Icon {
+			width: 1.2em;
+			height: 1.2em;
+		}
 	}
 
 	// States
@@ -87,6 +100,8 @@
 		background: @featured-color-primary;
 		border-color: @featured-color-primary;
 		color: @color-white;
+
+		.lucid-Icon { fill: @color-white; }
 	}
 	&-is-disabled {
 		.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
