@@ -3,7 +3,7 @@
 
 .lucid-Autocomplete {
 
-	&-Control {
+	& &-Control {
 		.no-safari-flicker();
 		.box-sizing();
 		cursor: pointer;
@@ -19,13 +19,17 @@
 		padding: 0 10px;
 		align-items: center;
 
-		&-input {
-			background: none;
-			border: none;
+		// The highly specific selector makes it so global input styles
+		// are less likely to affect the Autocomplete input.
+		& .lucid-Autocomplete-Control-input {
+			background: none @color-transparent;
+			border: 0 solid @color-transparent;
 			outline: none;
 			font: @font;
 			font-weight: normal;
 			color: @color-textColor;
+			margin: 0;
+			padding: 0;
 		}
 
 		.lucid-CaretIcon {
