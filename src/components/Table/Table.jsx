@@ -75,7 +75,11 @@ const Tr = React.createClass(createLucidComponentDefinition({
 		/**
 		 * Applies active styles to the row, usually when the row has been clicked.
 		 */
-		isActive: bool
+		isActive: bool,
+		/**
+		 * hasDetails.
+		 */
+		hasDetails: bool,
 	},
 	getDefaultProps() {
 		return {
@@ -115,7 +119,8 @@ const Tr = React.createClass(createLucidComponentDefinition({
 			isHeader,
 			isDisabled,
 			isSelected,
-			isActive
+			hasDetails,
+			isActive,
 		} = this.props;
 
 		const {
@@ -128,7 +133,8 @@ const Tr = React.createClass(createLucidComponentDefinition({
 				'&-thead-row': isHeader,
 				'&-is-disabled': isDisabled,
 				'&-is-selected': isSelected,
-				'&-is-active': isActive
+				'&-has-details': hasDetails,
+				'&-is-active': isActive,
 			}, className)}>
 				{isFirstItemRowSpan ? React.Children.map(
 					children,

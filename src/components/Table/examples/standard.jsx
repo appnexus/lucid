@@ -36,7 +36,7 @@ export default React.createClass({
 				</Thead>
 				<Tbody>
 					<Tr>
-						<Td rowSpan={9} hasBorderRight>RS</Td>
+						<Td rowSpan={14} hasBorderRight>RS</Td>
 						<Td hasCheckbox><Checkbox/></Td>
 						<Td>Text</Td>
 						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
@@ -49,6 +49,26 @@ export default React.createClass({
 					<Tr isDisabled>
 						<Td hasCheckbox><Checkbox/></Td>
 						<Td>isDisabled</Td>
+						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td hasButton><Button size='small' isDisabled={true}>button</Button></Td>
+						<Td>Sorted Column</Td>
+						<Td align='left' hasBorderLeft>align left</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
+					</Tr>
+					<Tr hasDetails>
+						<Td hasCheckbox><Checkbox/></Td>
+						<Td>Text && hasDetails</Td>
+						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td hasButton><Button size='small'>button</Button></Td>
+						<Td>Sorted Column</Td>
+						<Td align='left' hasBorderLeft>align left</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
+					</Tr>
+					<Tr isDisabled hasDetails>
+						<Td hasCheckbox><Checkbox/></Td>
+						<Td>isDisabled && hasDetails</Td>
 						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
 						<Td hasButton><Button size='small' isDisabled={true}>button</Button></Td>
 						<Td>Sorted Column</Td>
@@ -76,6 +96,26 @@ export default React.createClass({
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
+					<Tr hasDetails>
+						<Td hasCheckbox><Checkbox/></Td>
+						<Td><a href='#'>Link && hasDetails</a></Td>
+						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td hasButton><Button size='small'>button</Button></Td>
+						<Td>Sorted Column</Td>
+						<Td align='left' hasBorderLeft>align left</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
+					</Tr>
+					<Tr hasDetails isDisabled>
+						<Td hasCheckbox><Checkbox/></Td>
+						<Td><a href='#'>isDisabled Link && hasDetails</a></Td>
+						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td hasButton><Button size='small' isDisabled={true}>button</Button></Td>
+						<Td>Sorted Column</Td>
+						<Td align='left' hasBorderLeft>align left</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
+					</Tr>
 					<Tr isSelected>
 						<Td hasCheckbox><Checkbox isSelected={true}/></Td>
 						<Td>isSelected</Td>
@@ -96,7 +136,27 @@ export default React.createClass({
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
-					<Tr isActive>
+					<Tr isSelected hasDetails>
+						<Td hasCheckbox><Checkbox isSelected={true}/></Td>
+						<Td>isSelected && hasDetails</Td>
+						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td hasButton><Button size='small'>button</Button></Td>
+						<Td>Sorted Column</Td>
+						<Td align='left' hasBorderLeft>align left</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
+					</Tr>
+					<Tr isSelected isDisabled hasDetails>
+						<Td hasCheckbox><Checkbox isSelected={true}/></Td>
+						<Td>isSelected && isDisabled && hasDetails</Td>
+						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td hasButton><Button size='small' isDisabled={true}>button</Button></Td>
+						<Td>Sorted Column</Td>
+						<Td align='left' hasBorderLeft>align left</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
+					</Tr>
+					<Tr hasDetails isActive>
 						<Td hasCheckbox><Checkbox/></Td>
 						<Td>isActive</Td>
 						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
@@ -106,7 +166,7 @@ export default React.createClass({
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
-					<Tr isActive isDisabled>
+					<Tr hasDetails isActive isDisabled>
 						<Td hasCheckbox><Checkbox/></Td>
 						<Td>isActive && isDisabled</Td>
 						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
