@@ -9,6 +9,8 @@
   },
   "scripts": {
     "dev": "gulp docs-generate && webpack-dev-server --inline",
+    "docs-upload-gh": "./scripts/docs-upload-gh.sh",
+    "docs-upload": "gulp docs-upload",
     "preversion": "rm -rf dist && gulp preversion",
     "postversion": "gulp docs-upload",
     "test": "rm -rf dist && gulp test",

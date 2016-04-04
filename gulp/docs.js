@@ -46,6 +46,10 @@ function getDocsForPath(definitionPath, name) {
 }
 
 module.exports = {
+	// This command should probably be a webpack plugin so we can properly take
+	// advantage of the webpack watching. Right now it's basically a shim that
+	// generates a `docgen.json` file that is then required by other doc
+	// javascript files.
 	generate: function(callback) {
 		glob('./src/components/**/*.jsx', function(err, files) {
 			if (err) {
@@ -141,6 +145,10 @@ module.exports = {
 			fs.writeFileSync('./src/docs/docgen.json', JSON.stringify(docgenMap, null, 2));
 			return callback();
 		})
+	},
+
+	build: function(callback) {
+		webpack(webpackConfig, callback);
 	},
 
 	upload: function(callback) {
