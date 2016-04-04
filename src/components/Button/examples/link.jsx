@@ -8,7 +8,7 @@ export default React.createClass({
 			<section>
 				<Button kind='link'>Link</Button>
 				<Button kind='link' isDisabled={true}>Link</Button>
-				<Button kind='link'><PlusIcon />Link</Button>
+				<Button kind='link'><PlusIcon />Link has icon</Button>
 			</section>
 		);
 	}
