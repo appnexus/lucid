@@ -114,7 +114,7 @@ const Expander = React.createClass(createLucidComponentDefinition({
 				}, className)}
 				style={style}
 			>
-				<header className={boundClassNames('&-header')} onClick={this.handleExpand}>
+				<header className={boundClassNames('&-header')} onClick={this.handleToggle}>
 					<span className={boundClassNames('&-icon')}>
 						<ChevronIcon
 							direction={isExpanded ? 'up' : 'down'}
@@ -140,7 +140,7 @@ const Expander = React.createClass(createLucidComponentDefinition({
 		);
 	},
 
-	handleExpand(event) {
+	handleToggle(event) {
 		this.props.onToggle(!this.props.isExpanded, {
 			event, props: this.props
 		});
