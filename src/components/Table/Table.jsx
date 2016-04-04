@@ -77,7 +77,7 @@ const Tr = React.createClass(createLucidComponentDefinition({
 		 */
 		isActive: bool,
 		/**
-		 * hasDetails.
+		 * Applies the _has details_ styles to the row, used to show if a row is clickable or can be made active.
 		 */
 		hasDetails: bool,
 	},

@@ -135,6 +135,16 @@ describe('Table', () => {
 						assert.equal(wrapper.find('tr.lucid-Table-is-active').length, 1);
 					});
 				});
+
+				describe('hasDetails', () => {
+					it('should apply the class name `lucid-Table-has-details`', () => {
+						const wrapper = shallow(
+							<Tr hasDetails />
+						);
+
+						assert.equal(wrapper.find('tr.lucid-Table-has-details').length, 1);
+					});
+				});
 			});
 		});
 
