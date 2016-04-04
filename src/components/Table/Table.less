@@ -1,0 +1,300 @@
+@Table-row-height: 26px;
+@Table-row-heightLarge: 36px;
+@Table-cell-padding: 9px;
+@Table-cell-border: 1px solid @color-gray;
+@Table-header-backgroundColor: #767b7f;
+@Table-header-colorLight: #525659;
+@Table-header-colorDark: #393d40;
+@Table-header-border: 1px solid @Table-header-colorDark;
+@Table-header-cell-border: 1px solid fade(white, 30%);
+@Table-hover-borderWidth: 4px;
+@Table-has-checkbox-width: 41px;
+
+.lucid-Table {
+	.no-safari-flicker();
+	#normalize.lucid-table();
+	border: 1px solid @color-borderColor;
+	font: 500 @font;
+	color: @color-textColor;
+	background-color: @color-white;
+
+	a {
+		color: @color-linkColor;
+	}
+
+	// **
+	// * `&-thead` is used to limit some styles to be only applyed to the
+	// * `<thead>`.  The `&-head` defines the header or the `.lucid-Table`
+	&-thead {
+		user-select: none;
+
+		// **
+		// * a "row" within the "thead"
+		// *
+		.lucid-Table-thead-row {
+			background-color: @Table-header-backgroundColor;
+		}
+		// **
+		// * a "cell" within the "thead"
+		// *
+		.lucid-Table-cell {
+
+			border-top: @Table-header-border;
+			border-bottom: @Table-header-border;
+			border-right: @Table-header-cell-border;
+			color: @color-white;
+
+			// **
+			// * if a cell in the `&-thead` has a `colspan` can the border bottom
+			// * color to match the vertical styling.
+			// *
+			&[colspan] {
+				border-bottom: @Table-header-cell-border;
+			}
+
+			&.lucid-Table-is-sortable {
+				&:hover {
+					background-color: @Table-header-colorDark;
+					cursor: pointer;
+				}
+			}
+
+			// *
+			// * is applied when a column has been sorted.
+			// *
+			&.lucid-Table-is-sorted {
+				background-color: @Table-header-colorLight;
+				line-height: inherit;
+			}
+
+			// **
+			// * set the border of the first "th" to match the border of the header
+			// *
+			&:first-of-type {
+				border-left: @Table-header-border;
+			}
+			// **
+			// * set the border of the last "th" to match the border of the header
+			// *
+			&:last-of-type {
+				border-right: @Table-header-border;
+			}
+		}
+	}
+	&-tbody {
+		// **
+		// * set the border of all "td" within a '&-tbody'
+		// *
+		.lucid-Table-cell {
+			border-bottom: @Table-cell-border;
+		}
+	}
+
+	// **
+	// *A standard `<tr>` tag
+	// *
+	&-row {
+		.Table-row-hover(@color-lightGray, false);
+	}
+
+	&-is-sorted-container {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&-is-sorted-title {
+		flex: 1;
+	}
+
+	&-is-sorted-caret {
+		display: flex;
+		margin-left: @Table-cell-padding;
+	}
+
+	// **
+	// * sort icon is used within a TH to indicate that a column can be sorted.
+	// *
+	&-sort-icon {
+		fill: @color-white;
+		width: 8px;
+		height: 8px;
+	}
+
+	// **
+	// * When `&-is-disabled` is applied to a row the row will appear disabled
+	// *
+	&-is-disabled {
+		color: @color-disabledText;
+		font-style: italic;
+		a {
+			color: fade(multiply(@color-disabledText, @color-primary), 50%);
+		}
+	}
+
+	// **
+	// * A row is `&-is-selected` when a `<Checkbox>` within that row is active
+	// *
+	&-is-selected {
+		background-color: @color-primaryLight;
+		.Table-row-hover(multiply(@color-primaryLight, @color-lightGray));
+	}
+
+	&-has-details&-is-selected {
+		background-color: @color-primaryLight;
+		.Table-row-hover(multiply(@color-primaryLight, @color-lightGray), true);
+	}
+
+	// **
+	// * A row is `&-is-active` when that row is active and a lower third panel
+	// * is displayed.
+	// *
+	//&-is-active {
+		//.Table-row-hover(multiply(@color-primaryMedium, @color-lightGray));
+	//}
+
+	&-has-details {
+		.Table-row-hover(@color-lightGray, true);
+	}
+
+	// **
+	// * A row is `&-has-details` when that row is able to be made active
+	// *
+	&-has-details&-is-active {
+		.Table-row-hover(multiply(@color-primaryMedium, @color-lightGray), true);
+		background-color: @color-primaryMedium;
+		> .lucid-Table-cell {
+			&:first-of-type, &.lucid-Table-is-after-rowspan {
+				.hardstop-gradient(to right, @color-primary, @color-primaryMedium, @Table-hover-borderWidth);
+			}
+		}
+	}
+	
+
+	// **
+	// * A standard `<td>` or `<th>` tag.
+	// *
+	&-cell {
+		padding: 0 @Table-cell-padding;
+		line-height: @Table-row-height;
+		box-sizing: border-box;
+
+		&[rowspan] {
+			line-height: inherit;
+		}
+	}
+
+	// **
+	// * Apply to align the text to the left.
+	// *
+	&-align-left {
+		text-align: left;
+	}
+
+	// **
+	// * Apply to align the text to the right.
+	// *
+	&-align-right {
+		text-align: right;
+	}
+
+	// **
+	// * Apply to align the text in the center of a `&-cell`.
+	// *
+	&-align-center {
+		text-align: center;
+	}
+
+	// **
+	// * Add `&-has-checkbox` if the `&-cell` has a `<Checkbox>` as a child.  This
+	// * will change the width to fit only the `<Checkbox`> and change the
+	// * line-height to inherit to allow the `<Checkbox>` to be centered within
+	// * the cell.
+	// *
+	&-has-checkbox {
+		width: @Table-has-checkbox-width;
+		padding: 0 @Table-cell-padding;
+		line-height: inherit;
+	}
+	// **
+	// * Add `&-has-icon` if the `&-cell` has a `<Icon>` as a child.  This will
+	// * change the width to fit only the `<Icon`> and change the line-height to
+	// * inherit to allow the `<Icon>` to be centered within the cell.
+	// *
+	&-has-icon {
+		line-height: inherit;
+		width: 37px;
+	}
+
+	// **
+	// * Add `&-has-button` if the `&-cell` has a `<Button>` as a child. This class
+	// * will center the `<Button>` within the cell.
+	// *
+	&-has-button {
+		text-align: center;
+	}
+
+	// **
+	// * Add `&-has-border-left` if the `&-cell` needs to have a vertical border
+	// * line on the left.
+	// *
+	&-has-border-left {
+		border-left: @Table-cell-border;
+	}
+
+	// **
+	// * Add `&-has-border-right` if the `&-cell` needs to have a vertical border
+	// * line on the right.
+	// *
+	&-has-border-right {
+		border-right: @Table-cell-border;
+	}
+
+	&-has-rowspan {
+		background: @color-white !important;
+	}
+
+	// **
+	// * Add `&-has-extra-whitespace` increased the padding/line-height of the cells of
+	// * the the table by 50%. The increased line-height is applyed only the
+	// * `&-tbody` cells.
+	// *
+	&-has-extra-whitespace {
+		th.lucid-Table-cell {
+			&.lucid-Table-has-checkbox {
+				width: @Table-has-checkbox-width;
+				line-height: inherit;
+			}
+		}
+		td.lucid-Table-cell {
+			line-height: @Table-row-heightLarge;
+			&.lucid-Table-has-checkbox {
+				line-height: inherit;
+			}
+			&.lucid-Table-has-icon {
+				line-height: inherit;
+			}
+		}
+
+	}
+}
+
+// ** MIXIN
+// * This mixin is used to help with the hover state.  The designs call for a
+// * 4px line on the left of the "row".  To do this we use our `.hardstop-gradient`
+// * which is appied to the first `.lucid-Table-cell` as a background gradient.
+// * The mixin takes a single background color that is used to fill the "row"
+// *
+.Table-row-hover(@bgcolor, @hasDetails: false) {
+	&:hover {
+		background-color: @bgcolor;
+		.lucid-Table-cell when (@hasDetails = true){
+			&:first-of-type, &.lucid-Table-is-after-rowspan {
+				.hardstop-gradient(to right, @color-primary, @bgcolor, @Table-hover-borderWidth);
+			}
+		}
+	}
+}

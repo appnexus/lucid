@@ -5,6 +5,7 @@ import Button from './components/Button/Button';
 import ButtonGroup from './components/ButtonGroup/ButtonGroup';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
+import ChevronIcon from './components/Icon/ChevronIcon/ChevronIcon';
 import Checkbox from './components/Checkbox/Checkbox';
 import Panel from './components/Panel/Panel';
 import ContextMenu from './components/ContextMenu/ContextMenu';
@@ -14,6 +15,7 @@ import Dialog from './components/Dialog/Dialog';
 import DropMenu from './components/DropMenu/DropMenu';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
+import Expander from './components/Expander/Expander';
 import Grid from './components/Grid/Grid';
 import Icon from './components/Icon/Icon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
@@ -31,6 +33,7 @@ import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import SingleSelect from './components/SingleSelect/SingleSelect';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import Switch from './components/Switch/Switch';
+import Table from './components/Table/Table';
 import Tabs from './components/Tabs/Tabs';
 import TextField from './components/TextField/TextField'
 import ValidatedTextField from './components/ValidatedTextField/ValidatedTextField';
@@ -59,6 +62,7 @@ export {
 	ButtonGroup,
 	CaretIcon,
 	CheckIcon,
+	ChevronIcon,
 	Checkbox,
 	Panel,
 	ContextMenu,
@@ -68,6 +72,7 @@ export {
 	DropMenu,
 	EditIcon,
 	EligibilityIcon,
+	Expander,
 	Grid,
 	Icon,
 	InfoIcon,
@@ -85,6 +90,7 @@ export {
 	SingleSelect,
 	SuccessIcon,
 	Switch,
+	Table,
 	Tabs,
 	TextField,
 	ValidatedTextField,

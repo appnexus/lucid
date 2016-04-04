@@ -2,19 +2,12 @@ import _ from 'lodash';
 import assert from 'assert';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import SyntheticEvent from 'react/lib/SyntheticEvent';
-import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
-import describeWithDOM from '../../util/describe-with-dom';
 import { common } from '../../util/generic-tests';
 
 import LabeledSwitch from './LabeledSwitch';
 import Switch from '../Switch/Switch';
-
-SyntheticEvent;
-sinon;
-describeWithDOM;
 
 describe('LabeledSwitch', () => {
 	common(LabeledSwitch);

@@ -1,0 +1,79 @@
+@Expander-size-icon: 20px;
+
+.lucid-Expander {
+	&-icon {
+		.box-sizing();
+		align-items: center;
+		display: flex;
+		height: @Expander-size-icon;
+		justify-content: center;
+		margin-right: 6px;
+		width: @Expander-size-icon;
+	}
+
+	&-header {
+		align-items: center;
+		color: @color-darkGray;
+		cursor: pointer;
+		display: flex;
+		font: @font;
+		justify-content: flex-start;
+
+		&:hover {
+			> .lucid-Expander-icon {
+				.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+				.box-sizing();
+				border: solid 1px @featured-color-default-borderColor;
+				border-radius: @size-borderRadius;
+				outline: none;
+
+				.lucid-ChevronIcon {
+					stroke: @color-darkGray;
+				}
+			}
+
+			> .lucid-Expander-text {
+				color: @color-linkColorHover;
+
+				// `text-decoration `does not inherit when you're using `position:
+				// absolute` as per the spec
+				> span {
+					text-decoration: underline;
+				}
+			}
+		}
+
+	}
+
+	&-text {
+		.transition-group-animation-fade(100ms);
+		color: @color-linkColor;
+		height: @Expander-size-icon;
+		position: relative;
+
+		// Since we have two elements in the dom during the transition from one
+		// label to another, we want the element that's leaving to appear "over
+		// the top" of the label that coming in.
+		&-leave {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		> * {
+			line-height: @Expander-size-icon;
+			white-space: nowrap;
+		}
+	}
+
+	&-content {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 300ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+
+		&-is-expanded {
+			max-height: 9999px;
+			transition: max-height 800ms cubic-bezier(0.755, 0.050, 0.855, 0.060);
+		}
+	}
+}

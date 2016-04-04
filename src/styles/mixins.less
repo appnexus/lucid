@@ -111,8 +111,8 @@
 // * `@line` *@color-primary* defines "border" color
 // * `@background` *@color-white* defines the remainder fill color-primary
 // * `@height` *3px* defines the thickness of the "border"
-.hardstop-gradient(@direction: 'to bottom', @line: @color-primary, @background: @color-white, @height: 3px) {
-	background-image: linear-gradient(@line 0, @line @height, @background @height);
+.hardstop-gradient(@direction: to bottom, @line: @color-primary, @background: @color-white, @height: 3px) {
+	background-image: linear-gradient(@direction, @line 0, @line @height, @background @height);
 }
 
 // -----------------------------------------------------------------------------
