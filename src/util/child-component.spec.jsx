@@ -7,7 +7,10 @@ import describeWithDOM from './describe-with-dom';
 
 import {
 	createChildComponent,
-	rejectNullElements
+	rejectNullElements,
+	findElementsByType,
+	findChildComponentsInProps,
+	findAllChildComponents,
 } from './child-component';
 
 function isReactComponentClass (componentClass) {
@@ -118,9 +121,9 @@ describeWithDOM('#createChildComponent', () => {
 
 					return (
 						<ul className='selection'>
-							{_.map(itemsProps, (itemProps, i) => (
-								<li className={'item' + (itemProps.isAvailable ? ' available' : '')} key={i}>
-									{itemProps.children}
+							{_.map(itemsProps, ({isAvailable, children}, i) => (
+								<li className={'item' + (isAvailable ? ' available' : '')} key={i}>
+									{children}
 								</li>
 							))}
 						</ul>
@@ -184,9 +187,9 @@ describeWithDOM('#createChildComponent', () => {
 
 					return (
 						<ul className='selection'>
-							{_.map(itemsProps, (itemProps, i) => (
-								<li className={'item' + (itemProps.isAvailable ? ' available' : '')} key={i}>
-									{itemProps.children}
+							{_.map(itemsProps, ({isAvailable, children}, i) => (
+								<li className={'item' + (isAvailable ? ' available' : '')} key={i}>
+									{children}
 								</li>
 							))}
 						</ul>
@@ -243,9 +246,9 @@ describeWithDOM('#createChildComponent', () => {
 
 					return (
 						<ul className='selection'>
-							{_.map(itemsProps, (itemProps, i) => (
-								<li className={'item' + (itemProps.isAvailable ? ' available' : '')} key={i}>
-									{itemProps.children}
+							{_.map(itemsProps, ({isAvailable, children}, i) => (
+								<li className={'item' + (isAvailable ? ' available' : '')} key={i}>
+									{children}
 								</li>
 							))}
 						</ul>
@@ -330,3 +333,187 @@ describe('#rejectNullElements', () => {
 	});
 });
 
+describe('#findElementsByType', () => {
+	it('should filter child component elements which match the given element types in render order', () => {
+		const ChildComponent0 = createChildComponent();
+		const ChildComponent1 = createChildComponent();
+		const ChildComponent2 = createChildComponent();
+		const ParentComponent = React.createClass({
+			displayName: 'ParentComponent',
+			propTypes: {
+				children: React.PropTypes.node
+			},
+			render() {
+				const {
+					children
+				} = this.props;
+
+				var filteredElements = findElementsByType(children, [ChildComponent0, ChildComponent2]);
+
+				assert.equal(_.size(filteredElements), 3);
+				assert(React.isValidElement(filteredElements[0]));
+				assert(filteredElements[0].type === ChildComponent2);
+				assert(filteredElements[0].props.children === 'So');
+				assert(React.isValidElement(filteredElements[1]));
+				assert(filteredElements[1].type === ChildComponent0);
+				assert(filteredElements[1].props.children === 'Hands');
+				assert(React.isValidElement(filteredElements[2]));
+				assert(filteredElements[2].type === ChildComponent2);
+				assert(filteredElements[2].props.children === 'Fun');
+
+				return (
+					<section>{children}</section>
+				);
+			}
+		});
+
+		const wrapper = mount(
+			<ParentComponent>
+				<ChildComponent2>So</ChildComponent2>
+				<div className='test'>Many</div>
+				<ChildComponent0>Hands</ChildComponent0>
+				<div className='test'>Make</div>
+				<ChildComponent1>Light</ChildComponent1>
+				<div className='test'>Work</div>
+				<ChildComponent2>Fun</ChildComponent2>
+			</ParentComponent>
+		);
+
+		assert.equal(wrapper.text(), 'ManyMakeWork');
+	});
+});
+
+describe('#findChildComponentsInProps', () => {
+	it('should return array of props from the given props object matching the given child component type', () => {
+		// `propName` must be defined to define component via props
+		const Item = createChildComponent({ propName: 'Item' });
+
+		const SelectedItems = React.createClass({
+			propTypes: {
+				children: React.PropTypes.node
+			},
+			statics: {
+				Item: createChildComponent({ propName: 'Item' })
+			},
+			render() {
+				const itemsProps = findChildComponentsInProps(this.props, Item);
+
+				assert(_.isArray(itemsProps));
+				_.forEach(itemsProps, (itemProps) => {
+					assert(_.has(itemProps, 'children'));
+				});
+
+				return (
+					<ul className='selection'>
+						{_.map(itemsProps, ({isAvailable, children}, i) => (
+							<li className={'item' + (isAvailable ? ' available' : '')} key={i}>
+								{children}
+							</li>
+						))}
+					</ul>
+				);
+			}
+		});
+
+		const wrapper = mount(
+			<SelectedItems Item={[
+				{ isAvailable: false, children: 'Education' },
+				{ isAvailable: true, children: 'Science' },
+				{ isAvailable: false, children: 'Economics' },
+				{ isAvailable: true, children: 'Business' }
+			]} />
+		);
+
+		const itemsWrapper = wrapper.find('li.item');
+
+		assert.equal(itemsWrapper.at(0).text(), 'Education');
+		assert(itemsWrapper.at(0).hasClass('item'));
+		assert(!itemsWrapper.at(0).hasClass('available'));
+
+		assert.equal(itemsWrapper.at(1).text(), 'Science');
+		assert(itemsWrapper.at(1).hasClass('item'));
+		assert(itemsWrapper.at(1).hasClass('available'));
+
+		assert.equal(itemsWrapper.at(2).text(), 'Economics');
+		assert(itemsWrapper.at(2).hasClass('item'));
+		assert(!itemsWrapper.at(2).hasClass('available'));
+
+		assert.equal(itemsWrapper.at(3).text(), 'Business');
+		assert(itemsWrapper.at(3).hasClass('item'));
+		assert(itemsWrapper.at(3).hasClass('available'));
+	});
+});
+
+describe('#findAllChildComponents', () => {
+	it('should return array of objects with `type` in render order for the given child component types', () => {
+
+		const Select = React.createClass({
+			render: () => null
+		});
+
+		const Option = createChildComponent({ propName: 'Option' });
+		const OptionGroup = createChildComponent({ propName: 'OptionGroup' });
+
+		const selectElement = (
+			<Select Option={[{id: '0'}, {id: '1'}]} OptionGroup={{id: '2'}}>
+				<OptionGroup id='a' />
+				<span id='b' />
+				<Option id='c' />
+				<p id='d' />
+				<OptionGroup id='e' />
+				<div id='f' />
+				<Option id='g' />
+				<span id='h' />
+				<OptionGroup id='i' />
+			</Select>
+		);
+
+		const result = findAllChildComponents(selectElement.props, [OptionGroup, Option]);
+
+		assert.equal(_.size(result), 8);
+		assert.equal(result[0].type, OptionGroup);
+		assert.equal(result[1].type, Option);
+		assert.equal(result[2].type, Option);
+		assert.equal(result[3].type, OptionGroup);
+		assert.equal(result[4].type, Option);
+		assert.equal(result[5].type, OptionGroup);
+		assert.equal(result[6].type, Option);
+		assert.equal(result[7].type, OptionGroup);
+	});
+
+	it('should return array of objects with `props` in render order for the given child component types', () => {
+
+		const Select = React.createClass({
+			render: () => null
+		});
+
+		const Option = createChildComponent({ propName: 'Option' });
+		const OptionGroup = createChildComponent({ propName: 'OptionGroup' });
+
+		const selectElement = (
+			<Select Option={[{id: '0'}, {id: '1'}]} OptionGroup={{id: '2'}}>
+				<OptionGroup id='a' />
+				<span id='b' />
+				<Option id='c' />
+				<p id='d' />
+				<OptionGroup id='e' />
+				<div id='f' />
+				<Option id='g' />
+				<span id='h' />
+				<OptionGroup id='i' />
+			</Select>
+		);
+
+		const result = findAllChildComponents(selectElement.props, [OptionGroup, Option]);
+
+		assert.equal(_.size(result), 8);
+		assert.equal(result[0].props.id, '2');
+		assert.equal(result[1].props.id, '0');
+		assert.equal(result[2].props.id, '1');
+		assert.equal(result[3].props.id, 'a');
+		assert.equal(result[4].props.id, 'c');
+		assert.equal(result[5].props.id, 'e');
+		assert.equal(result[6].props.id, 'g');
+		assert.equal(result[7].props.id, 'i');
+	});
+});

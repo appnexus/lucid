@@ -14,6 +14,7 @@ export function createChildComponent (definition={}) {
 		displayName: _.get(definition, 'displayName', null),
 		render: () => null,
 		statics: {
+			childComponentDefinition: definition,
 			isRenderNull: true,
 
 			/**
@@ -26,13 +27,7 @@ export function createChildComponent (definition={}) {
 			 */
 			findInChildren(elements) {
 				let component = this;
-				let ownElements = [];
-				React.Children.forEach(elements, (element) => {
-					if (element && element.type === component) {
-						ownElements.push(element);
-					}
-				});
-				return ownElements;
+				return findElementsByType(elements, [component]);
 			},
 
 			/**
@@ -58,23 +53,8 @@ export function createChildComponent (definition={}) {
 			 * @return {array} - an array of normalized props
 			 */
 			findInProps(parentProps) {
-				// Extract out the defined `childProps` from the parent class
-				const currentProps = _.chain(parentProps)
-					.get(definition.propName) // grab the prop we care about, e.g. "Child"
-					.thru(x => [x]) // wrap in an array
-					.flatten()
-					.filter(x => x) // remove falsey values
-					.value();
-
-				return _.map(currentProps, (childProp) => {
-					if (_.isPlainObject(childProp)) {
-						return childProp;
-					} else {
-						return {
-							children: childProp
-						};
-					}
-				});
+				let component = this;
+				return findChildComponentsInProps(parentProps, component);
 			},
 
 			/**
@@ -91,15 +71,57 @@ export function createChildComponent (definition={}) {
 			findInAllAsProps(parentProps) {
 				let component = this;
 
-				const propsFromProps = component.findInProps(parentProps);
-				const propsFromChildren = component.findInChildrenAsProps(parentProps.children);
-
-				return propsFromProps.concat(propsFromChildren);
+				return _.map(findAllChildComponents(parentProps, [component]), 'props');
 			}
 		}
 	});
 }
 
 export function rejectNullElements(children) {
-	return _.reject(React.Children.toArray(children), (node) => (React.isValidElement(node) && node.type.isRenderNull));
+	return _.reject(
+		React.Children.toArray(children),
+		(node) => (React.isValidElement(node) && node.type.isRenderNull)
+	);
+}
+
+export function findElementsByType(children, elementTypes) {
+	return _.filter(
+		React.Children.toArray(children),
+		(node) => (React.isValidElement(node) && _.includes(elementTypes, node.type))
+	);
+}
+
+export function findChildComponentsInProps(props, childComponentType) {
+	const propName = _.get(childComponentType, 'childComponentDefinition.propName');
+	if (propName) {
+		const currentProps = _.chain(props)
+			.get(propName) // grab the prop we care about, e.g. "Child"
+			.thru(x => [x]) // wrap in an array
+			.flatten()
+			.filter(x => x) // remove falsey values
+			.value();
+
+		return _.map(
+			currentProps,
+			(childProp) => (
+				_.isPlainObject(childProp)
+					? childProp
+					: { children: childProp }
+			)
+		);
+	}
+	return [];
+}
+
+export function findAllChildComponents(props, childComponentTypes) {
+	return _.reduce(
+		childComponentTypes,
+		(acc, childComponentType) => acc.concat(_.map(
+			findChildComponentsInProps(props, childComponentType),
+			(childComponentProp) => ({
+				type: childComponentType,
+				props: childComponentProp
+			})
+		)), [])
+	.concat(findElementsByType(props.children, childComponentTypes));
 }
