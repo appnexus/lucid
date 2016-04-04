@@ -61,7 +61,7 @@ const Expander = React.createClass(createLucidComponentDefinition({
 		 *
 		 * Signature: `(isExpanded, { event, props }) => {}`
 		 */
-		onExpand: func,
+		onToggle: func,
 
 		/**
 		 * Passed through to the root element.
@@ -78,7 +78,7 @@ const Expander = React.createClass(createLucidComponentDefinition({
 	getDefaultProps() {
 		return {
 			isExpanded: false,
-			onExpand: _.noop
+			onToggle: _.noop
 		};
 	},
 
@@ -108,13 +108,13 @@ const Expander = React.createClass(createLucidComponentDefinition({
 
 		return (
 			<div
-				{..._.omit(passThroughs, 'onExpand')}
+				{...passThroughs}
 				className={boundClassNames('&', {
 					'&-is-expanded': isExpanded,
 				}, className)}
 				style={style}
 			>
-				<header className={boundClassNames('&-header')} onClick={this.handleExpand}>
+				<header className={boundClassNames('&-header')} onClick={this.handleToggle}>
 					<span className={boundClassNames('&-icon')}>
 						<ChevronIcon
 							direction={isExpanded ? 'up' : 'down'}
@@ -128,7 +128,7 @@ const Expander = React.createClass(createLucidComponentDefinition({
 					>
 						{
 							labelChildProps
-									? <span key={this._labelKey}>{labelChildProps.children || labelChildProps}</span>
+									? <span key={this._labelKey}>{labelChildProps.children}</span>
 									: null
 						}
 					</ReactCSSTransitionGroup>
@@ -142,8 +142,8 @@ const Expander = React.createClass(createLucidComponentDefinition({
 		);
 	},
 
-	handleExpand(event) {
-		this.props.onExpand(!this.props.isExpanded, {
+	handleToggle(event) {
+		this.props.onToggle(!this.props.isExpanded, {
 			event, props: this.props
 		});
 	}

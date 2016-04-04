@@ -37,9 +37,9 @@ describe('Expander', () => {
 			});
 		});
 
-		describe('onExpand', () => {
+		describe('onToggle', () => {
 			it('defaults to the Lodash `noop` method.', () => {
-				assert.equal(mount(<Expander />).prop('onExpand'), _.noop);
+				assert.equal(mount(<Expander />).prop('onToggle'), _.noop);
 			});
 		});
 
@@ -79,7 +79,7 @@ describe('Expander', () => {
 					<Expander
 							className='wut'
 							isExpanded={true}
-							onExpand={_.noop}
+							onToggle={_.noop}
 							style={{ marginRight: 10 }}
 							foo={1}
 							bar={2}
@@ -102,32 +102,32 @@ describe('Expander', () => {
 
 describeWithDOM('Expander', () => {
 	describe('user clicks on the header', () => {
-		it('calls the function passed in as the `onExpand` prop...', () => {
+		it('calls the function passed in as the `onToggle` prop...', () => {
 			_.forEach(['-header', '-icon', '-text'], (classSubstring) => {
-				const onExpand = sinon.spy();
+				const onToggle = sinon.spy();
 
-				mount(<Expander onExpand={onExpand} />).find(`.lucid-Expander${classSubstring}`).simulate('click');
-				assert(onExpand.calledOnce);
+				mount(<Expander onToggle={onToggle} />).find(`.lucid-Expander${classSubstring}`).simulate('click');
+				assert(onToggle.calledOnce);
 			});
 		});
 
 		it('...and when `isExpanded` equals `false` passes along `true` as the first argument and a React synthetic event as the second argument.', () => {
 			_.forEach(['-header', '-icon', '-text'], (classSubstring) => {
-				const onExpand = sinon.spy();
+				const onToggle = sinon.spy();
 
-				mount(<Expander isExpanded={false} onExpand={onExpand} />).find(`.lucid-Expander${classSubstring}`).simulate('click');
-				assert.equal(onExpand.args[0][0], true);
-				assert(_.last(onExpand.args[0]).event instanceof SyntheticEvent);
+				mount(<Expander isExpanded={false} onToggle={onToggle} />).find(`.lucid-Expander${classSubstring}`).simulate('click');
+				assert.equal(onToggle.args[0][0], true);
+				assert(_.last(onToggle.args[0]).event instanceof SyntheticEvent);
 			});
 		});
 
 		it('...and when `isExpanded` equals `true` passes along `false` as the first argument and a React synthetic event as the second argument.', () => {
 			_.forEach(['-header', '-icon', '-text'], (classSubstring) => {
-				const onExpand = sinon.spy();
+				const onToggle = sinon.spy();
 
-				mount(<Expander isExpanded={true} onExpand={onExpand} />).find(`.lucid-Expander${classSubstring}`).simulate('click');
-				assert.equal(onExpand.args[0][0], false);
-				assert(_.last(onExpand.args[0]).event instanceof SyntheticEvent);
+				mount(<Expander isExpanded={true} onToggle={onToggle} />).find(`.lucid-Expander${classSubstring}`).simulate('click');
+				assert.equal(onToggle.args[0][0], false);
+				assert(_.last(onToggle.args[0]).event instanceof SyntheticEvent);
 			});
 		});
 	});
