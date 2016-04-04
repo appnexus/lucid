@@ -61,7 +61,7 @@ const Expander = React.createClass(createLucidComponentDefinition({
 		 *
 		 * Signature: `(isExpanded, { event, props }) => {}`
 		 */
-		onExpand: func,
+		onToggle: func,
 
 		/**
 		 * Passed through to the root element.
@@ -78,7 +78,7 @@ const Expander = React.createClass(createLucidComponentDefinition({
 	getDefaultProps() {
 		return {
 			isExpanded: false,
-			onExpand: _.noop
+			onToggle: _.noop
 		};
 	},
 
@@ -104,11 +104,11 @@ const Expander = React.createClass(createLucidComponentDefinition({
 			...passThroughs
 		} = this.props;
 
-		const labelChildProps = _.first(Expander.Label.findInAllAsProps(this.props));
+		const labelChildProp = _.first(Expander.Label.findInAllAsProps(this.props));
 
 		return (
 			<div
-				{..._.omit(passThroughs, 'onExpand')}
+				{...passThroughs}
 				className={boundClassNames('&', {
 					'&-is-expanded': isExpanded,
 				}, className)}
@@ -126,11 +126,9 @@ const Expander = React.createClass(createLucidComponentDefinition({
 						transitionLeaveTimeout={100}
 						className={boundClassNames('&-text')}
 					>
-						{
-							labelChildProps
-									? <span key={this._labelKey}>{labelChildProps.children || labelChildProps}</span>
-									: null
-						}
+						{labelChildProp ?
+							<span key={this._labelKey}>{labelChildProp.children}</span>
+						: null}
 					</ReactCSSTransitionGroup>
 				</header>
 				<section className={boundClassNames('&-content', {
@@ -143,7 +141,7 @@ const Expander = React.createClass(createLucidComponentDefinition({
 	},
 
 	handleExpand(event) {
-		this.props.onExpand(!this.props.isExpanded, {
+		this.props.onToggle(!this.props.isExpanded, {
 			event, props: this.props
 		});
 	}

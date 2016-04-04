@@ -1,6 +1,6 @@
-export function onExpand(state = {}, isExpanded) {
+export function onToggle(state = {}) {
 	return {
 		...state,
-		isExpanded
+		isExpanded: !state.isExpanded
 	};
 };

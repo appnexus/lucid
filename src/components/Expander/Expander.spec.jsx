@@ -2,17 +2,21 @@ import _ from 'lodash';
 import assert from 'assert';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import SyntheticEvent from 'react/lib/SyntheticEvent';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
 import describeWithDOM from '../../util/describe-with-dom';
-import { common } from '../../util/generic-tests';
+import { common, controls } from '../../util/generic-tests';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Expander from './Expander';
 
 describe('Expander', () => {
 	common(Expander);
+	controls(Expander, {
+		callbackName: 'onToggle',
+		controlSelector: '.lucid-Expander-header',
+		eventType: 'click'
+	});
 
 	describe('props', () => {
 		describe('isExpanded', () => {
@@ -37,9 +41,9 @@ describe('Expander', () => {
 			});
 		});
 
-		describe('onExpand', () => {
+		describe('onToggle', () => {
 			it('defaults to the Lodash `noop` method.', () => {
-				assert.equal(mount(<Expander />).prop('onExpand'), _.noop);
+				assert.equal(mount(<Expander />).prop('onToggle'), _.noop);
 			});
 		});
 
@@ -79,22 +83,16 @@ describe('Expander', () => {
 					<Expander
 							className='wut'
 							isExpanded={true}
-							onExpand={_.noop}
+							onToggle={_.noop}
 							style={{ marginRight: 10 }}
 							foo={1}
 							bar={2}
-							baz={3}
-							qux={4}
-							quux={5}
 					/>
 				);
 				const rootProps = wrapper.find('.lucid-Expander').props();
 
-				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
-				// to the `Switch` instance.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
-					assert(_.has(rootProps, prop));
-				});
+				assert(_.has(rootProps, 'foo'));
+				assert(_.has(rootProps, 'bar'));
 			});
 		});
 	});
@@ -102,33 +100,53 @@ describe('Expander', () => {
 
 describeWithDOM('Expander', () => {
 	describe('user clicks on the header', () => {
-		it('calls the function passed in as the `onExpand` prop...', () => {
-			_.forEach(['-header', '-icon', '-text'], (classSubstring) => {
-				const onExpand = sinon.spy();
+		it('calls the function passed in as the `onToggle` prop', () => {
+			const onToggle = sinon.spy();
+			const wrapper = mount(
+				<Expander onToggle={onToggle} />
+			);
 
-				mount(<Expander onExpand={onExpand} />).find(`.lucid-Expander${classSubstring}`).simulate('click');
-				assert(onExpand.calledOnce);
-			});
+			wrapper.find('.lucid-Expander-header').simulate('click');
+			wrapper.find('.lucid-Expander-icon').simulate('click');
+			wrapper.find('.lucid-Expander-text').simulate('click');
+
+			assert.equal(onToggle.callCount, 3);
+
+			wrapper.unmount();
 		});
 
-		it('...and when `isExpanded` equals `false` passes along `true` as the first argument and a React synthetic event as the second argument.', () => {
-			_.forEach(['-header', '-icon', '-text'], (classSubstring) => {
-				const onExpand = sinon.spy();
+		it('should call `onToggle` correctly when not `isExpanded`', () => {
+			const onToggle = sinon.spy();
+			const wrapper = mount(
+				<Expander isExpanded={false} onToggle={onToggle} />
+			);
 
-				mount(<Expander isExpanded={false} onExpand={onExpand} />).find(`.lucid-Expander${classSubstring}`).simulate('click');
-				assert.equal(onExpand.args[0][0], true);
-				assert(_.last(onExpand.args[0]).event instanceof SyntheticEvent);
-			});
+			wrapper.find(`.lucid-Expander-header`).simulate('click');
+			wrapper.find(`.lucid-Expander-icon`).simulate('click');
+			wrapper.find(`.lucid-Expander-text`).simulate('click');
+
+			assert.equal(onToggle.args[0][0], true);
+			assert.equal(onToggle.args[1][0], true);
+			assert.equal(onToggle.args[2][0], true);
+
+			wrapper.unmount();
 		});
 
-		it('...and when `isExpanded` equals `true` passes along `false` as the first argument and a React synthetic event as the second argument.', () => {
-			_.forEach(['-header', '-icon', '-text'], (classSubstring) => {
-				const onExpand = sinon.spy();
+		it('should call `onToggle` correctly when `isExpanded`', () => {
+			const onToggle = sinon.spy();
+			const wrapper = mount(
+				<Expander isExpanded={true} onToggle={onToggle} />
+			);
 
-				mount(<Expander isExpanded={true} onExpand={onExpand} />).find(`.lucid-Expander${classSubstring}`).simulate('click');
-				assert.equal(onExpand.args[0][0], false);
-				assert(_.last(onExpand.args[0]).event instanceof SyntheticEvent);
-			});
+			wrapper.find(`.lucid-Expander-header`).simulate('click');
+			wrapper.find(`.lucid-Expander-icon`).simulate('click');
+			wrapper.find(`.lucid-Expander-text`).simulate('click');
+
+			assert.equal(onToggle.args[0][0], false);
+			assert.equal(onToggle.args[1][0], false);
+			assert.equal(onToggle.args[2][0], false);
+
+			wrapper.unmount();
 		});
 	});
 });
