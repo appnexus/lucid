@@ -1,0 +1,151 @@
+@List-levels: 8;
+
+@List-size-itemHeight: 29px;
+@List-size-border: 4px;
+@List-size-icon: 20px;
+@List-size-lineHeight: 10px;
+
+@List-size-childSpacer: 6px;
+@List-size-childPadding: 15px;
+
+// Recursive mixin to facilitate nesting to a pre-determined depth
+.List-nest(@i: 0) when (@i < @List-levels) {
+	.lucid-List {
+		.lucid-List-Item-content {
+			padding-left: @List-size-childPadding + (12 * @i);
+		}
+
+		.List-nest(@i + 1);
+	}
+}
+
+.lucid-List {
+	.List-nest();
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&-is-disabled,
+	&-Item-is-disabled {
+		.lucid-List-Item-content {
+			color: @color-mediumGray;
+			cursor: not-allowed;
+
+			&:hover,
+			&:active,
+			&:focus {
+				background: transparent;
+				color: @color-mediumGray;
+			}
+		}
+	}
+
+	&-Item {
+		&-expander {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-shrink: 0;
+			height: @List-size-icon;
+			width: @List-size-icon;
+			margin-left: auto;
+			margin-right: 5px;
+		}
+
+		&-content {
+			.is-selectable();
+			min-height: @List-size-itemHeight;
+			display: flex;
+			font-size: 12px;
+			align-items: center;
+			font-weight: bold;
+			border-width: 1px 0 0 0;
+			border-color: @color-gray;
+			border-style: solid;
+			color: @color-primary;
+			padding-left: 15px;
+
+			&-text {
+				padding: 6px 0;
+			}
+
+			// Selected and hover state are the same for items
+			&&-is-selected,
+			&&-is-selected:hover {
+				.hardstop-gradient(
+					to right,
+					@color-primary,
+					@featured-color-primary-backgroundColor,
+					@List-size-border
+				);
+				color: @color-darkGray;
+			}
+
+			&:hover,
+			&:focus {
+				.hardstop-gradient(
+					to right,
+					@color-primary,
+					@color-lightGray,
+					@List-size-border
+				);
+				color: @color-darkGray;
+
+				// Style the expander button when the user hovers on the item content
+				.lucid-List-Item-expander {
+					.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+					.box-sizing();
+					border: solid 1px @featured-color-default-borderColor;
+					border-radius: @size-borderRadius;
+					outline: none;
+
+					.lucid-ChevronIcon {
+						stroke: @color-darkGray;
+					}
+				}
+			}
+		}
+
+		&-nested-list {
+			.expandable-animation-collapsed();
+
+			&&-is-expanded {
+				.expandable-animation-expanded();
+			}
+		}
+
+		// The first List-Item shouldn't have a top border
+		&:first-of-type > &-content {
+			border-top-color: @color-transparent;
+		}
+
+		// Any time we have a List below a List-Item
+		.lucid-List {
+			.lucid-List-Item-content {
+				font-weight: normal;
+				border-color: @color-transparent;
+
+				&:before {
+					content: '\2013'; // en dash
+					display: inline-block;
+					width: @List-size-childSpacer;
+					color: @color-gray;
+					margin: 0 @List-size-childSpacer 0 0;
+				}
+
+				&:hover,
+				&-is-selected {
+					&:before {
+						color: @color-darkGray;
+					}
+				}
+			}
+		}
+	}
+}
+
