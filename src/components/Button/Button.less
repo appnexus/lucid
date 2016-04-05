@@ -27,42 +27,42 @@
 	}
 
 	// Types
-	&-primary {
+	&&-primary {
 		color: @color-white;
 		border-color: @featured-color-primary-borderColor;
 		font-weight: 500;
 		.gradient-animation(@featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
 		.make-is-disabled(lucid-Button, @featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
 	}
-	&-success {
+	&&-success {
 		color: @color-white;
 		border-color: @featured-color-success-borderColor;
 		font-weight: 500;
 		.gradient-animation(@featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
 		.make-is-disabled(lucid-Button, @featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
 	}
-	&-info {
+	&&-info {
 		color: @color-white;
 		border-color: @featured-color-info-borderColor;
 		font-weight: 500;
 		.gradient-animation(@featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
 		.make-is-disabled(lucid-Button, @featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
 	}
-	&-warning {
+	&&-warning {
 		color: @color-white;
 		border-color: @featured-color-warning-borderColor;
 		font-weight: 500;
 		.gradient-animation(@featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
 		.make-is-disabled(lucid-Button, @featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
 	}
-	&-danger {
+	&&-danger {
 		color: @color-white;
 		border-color: @featured-color-danger-borderColor;
 		font-weight: 500;
 		.gradient-animation(@featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
 		.make-is-disabled(lucid-Button, @featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
 	}
-	&-link {
+	&&-link {
 		.gradient-reset();
 		.make-is-disabled(lucid-Button);
 		border: none;
@@ -76,14 +76,14 @@
 	}
 
 	// Sizes
-	&-short {
+	&&-short {
 		line-height: @Button-size-shortlineHeight;
 	}
-	&-small {
+	&&-small {
 		line-height: @Button-size-shortlineHeight;
 		padding: 0 @Button-size-padding/1.5;
 	}
-	&-large {
+	&&-large {
 		line-height: @Button-size-lineHeight*1.5;
 		padding: 0 @Button-size-padding*1.5;
 		font-size: 1.2em;
@@ -95,13 +95,35 @@
 	}
 
 	// States
-	&-is-active {
-		.gradient-reset();
-		background: @featured-color-primary;
-		border-color: @featured-color-primary;
+	&&-is-active {
+		background-image: linear-gradient(shade(@featured-color-default-gradientStartColor, 30%), shade(@featured-color-default-gradientEndColor, 10%));
+		box-shadow: @shadow-inset;
+		border-color: @featured-color-default-borderColor;
 		color: @color-white;
 
 		.lucid-Icon { fill: @color-white; }
+	}
+	&&-is-active&-primary {
+		background-image: linear-gradient(shade(@featured-color-primary-gradientStartColor, 30%), shade(@featured-color-primary-gradientEndColor, 10%));
+		border-color: @featured-color-primary;
+
+		.lucid-Button-primary:hover {}
+	}
+	&&-is-active&-success {
+		border-color: @featured-color-success-borderColor;
+		background-image: linear-gradient(shade(@featured-color-success-gradientStartColor, 30%), shade(@featured-color-success-gradientEndColor, 10%));
+	}
+	&&-is-active&-info {
+		border-color: @featured-color-info-borderColor;
+		background-image: linear-gradient(shade(@featured-color-info-gradientStartColor, 30%), shade(@featured-color-info-gradientEndColor, 10%));
+	}
+	&&-is-active&-warning {
+		border-color: @featured-color-warning-borderColor;
+		background-image: linear-gradient(shade(@featured-color-warning-gradientStartColor, 30%), shade(@featured-color-warning-gradientEndColor, 10%));
+	}
+	&&-is-active&-danger {
+		border-color: @featured-color-danger-borderColor;
+		background-image: linear-gradient(shade(@featured-color-danger-gradientStartColor, 30%), shade(@featured-color-danger-gradientEndColor, 10%));
 	}
 	&-is-disabled {
 		.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
