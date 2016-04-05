@@ -19,6 +19,16 @@ describe('Panel', () => {
 			assert.equal(wrapper.find('.lucid-Panel-header').length, 1);
 		});
 
+		it('passes through className', () => {
+			const wrapper = mount(
+				<Panel>
+					<Panel.Header className='foo'>Header</Panel.Header>
+					Content
+				</Panel>
+			);
+			assert.equal(wrapper.find('.lucid-Panel-header.foo').length, 1);
+		});
+
 		it('does not render a header element when not included.', () => {
 			const wrapper = mount(
 				<Panel>
@@ -40,6 +50,16 @@ describe('Panel', () => {
 				</Panel>
 			);
 			assert.equal(wrapper.find('.lucid-Panel-footer').length, 1);
+		});
+
+		it('passes through className', () => {
+			const wrapper = mount(
+				<Panel>
+					<Panel.Footer className='bar'>Footer</Panel.Footer>
+					Content
+				</Panel>
+			);
+			assert.equal(wrapper.find('.lucid-Panel-footer.bar').length, 1);
 		});
 
 		it('does not render a footer element when not included.', () => {
