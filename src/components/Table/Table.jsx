@@ -208,11 +208,14 @@ const Th = React.createClass(createLucidComponentDefinition({
 			hasButton,
 			isSortable,
 			isSorted,
-			sortDirection
+			sortDirection,
+			width,
+			style,
+			...passthrus
 		} = this.props;
 
 		return (
-			<th {...this.props} className={boundClassNames(
+			<th {...passthrus} className={boundClassNames(
 				'&-cell', {
 				'&-align-left': align === 'left',
 				'&-align-center': align === 'center',
@@ -222,7 +225,12 @@ const Th = React.createClass(createLucidComponentDefinition({
 				'&-has-button': hasButton,
 				'&-is-sortable': (isSortable === false ? isSortable : (isSorted || isSortable)),
 				'&-is-sorted': isSorted,
-			}, className)}>
+			}, className)}
+				style={{
+					width,
+					...style
+				}}
+			>
 				{isSorted ? (
 					<ul className={boundClassNames('&-is-sorted-container')}>
 						<li className={boundClassNames('&-is-sorted-title')}>{children}</li>
@@ -290,11 +298,14 @@ const Td = React.createClass(createLucidComponentDefinition({
 			rowSpan,
 			hasBorderRight,
 			hasBorderLeft,
-			isAfterRowSpan
+			isAfterRowSpan,
+			width,
+			style,
+			...passthrus
 		} = this.props;
 
 		return (
-			<td {...this.props} className={boundClassNames(
+			<td {...passthrus} className={boundClassNames(
 				'&-cell', {
 				'&-align-left': align === 'left',
 				'&-align-center': align === 'center',
@@ -306,7 +317,13 @@ const Td = React.createClass(createLucidComponentDefinition({
 				'&-has-border-right': hasBorderRight,
 				'&-has-border-left': hasBorderLeft,
 				'&-is-after-rowspan': isAfterRowSpan
-			}, className)} />
+			}, className)}
+				style={{
+					width,
+					...style
+				}}
+				rowSpan={rowSpan}
+			/>
 		);
 	}
 }));
