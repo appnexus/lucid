@@ -24,17 +24,11 @@
 		box-shadow: none;
 	}
 
-	&:hover {
-		&:before {
-			opacity: 1;
-		}
-	}
-
-	&:active,
-	&:focus { outline: none; }
+	&:hover::before { opacity: 1; }
 
 	&:active::before,
 	&:focus::before {
+		background-image: linear-gradient(shade(@start, 30%), shade(@end, 10%));
 		box-shadow: @shadow-inset;
 		opacity: 1;
 	}
