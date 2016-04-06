@@ -155,7 +155,8 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 			}
 
 			if (widthColspan) {
-				const nextScrollColspanWidth = getColSpanWidth(this.theadDOMNode, widthColspan - (freezeColSpan || 0), freezeColSpan) + (_.isNumber(freezeColSpan) &&  freezeColSpan > 0 ? 0 : 1);
+				//const nextScrollColspanWidth = getColSpanWidth(this.theadDOMNode, widthColspan - (freezeColSpan || 0), freezeColSpan) + (_.isNumber(freezeColSpan) &&  freezeColSpan > 0 ? 0 : 1);
+				const nextScrollColspanWidth = getColSpanWidth(this.theadDOMNode, widthColspan - (freezeColSpan || 0), freezeColSpan);
 				if (scrollColspanWidth !== nextScrollColspanWidth) {
 					this.setState({
 						scrollColspanWidth: nextScrollColspanWidth
@@ -216,7 +217,10 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 					<div
 						style={{
 							margin: 0,
-							width: colspanWidth,
+							//width: colspanWidth,
+							flexGrow: 0,
+							flexShrink: 0,
+							flexBasis: colspanWidth,
 							display: 'flex',
 							overflow: 'hidden',
 						}}
@@ -260,6 +264,7 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 					</div>
 				) : null}
 				<div
+					className={boundClassNames('&-scroll-container')}
 					style={{
 						margin: 0,
 						width: scrollColspanWidth,
@@ -269,7 +274,7 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 				>
 					{hasStickyHeader ? (
 						<StickyContainer>
-							<StickyContainer.Header viewportWidth={scrollColspanWidth} style={{ zIndex: 999 }}>
+							<StickyContainer.Header viewportWidth={scrollColspanWidth} style={{ zIndex: 999, borderRight: '1px solid blue' }}>
 								{/*SCROLL HEADER*/}
 								<div
 									style={{

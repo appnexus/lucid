@@ -17,7 +17,7 @@ const {
  * `StickyContainer` renders a sticky <section>.
  */
 const StickyContainer = React.createClass(createLucidComponentDefinition({
-	displayName: 'StickySection',
+	displayName: 'StickyContainer',
 	propTypes: {
 		/**
 		 * className
