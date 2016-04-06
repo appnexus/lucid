@@ -1,8 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
+import { lucidClassNames } from '../../util/style-helpers';
 
+const boundClassNames = lucidClassNames.bind('&-DragCaptureZone');
 const {
-	func
+	func,
+	string
 } = React.PropTypes;
 
 /**
@@ -14,19 +17,25 @@ const {
 const DragCaptureZone = React.createClass({
 	propTypes: {
 		/**
+		 * Appended to the component-specific class names set on the root
+		 * element.
+		 */
+		className: string,
+
+		/**
 		 * Called as the user drags the mouse.
 		 *
 		 * Signature: `({ dx, dy, pageX, pageY }, { event, props }) => {}`
 		 */
 		onDrag: func,
-		
+
 		/**
 		 * Called when the user releases the mouse button after having dragged.
 		 *
 		 * Signature: `({ dx, dy, pageX, pageY }, { event, props }) => {}`
 		 */
 		onDragEnd: func,
-		
+
 		/**
 		 * Called when the user presses the mouse button down while over the
 		 * component.
@@ -52,7 +61,14 @@ const DragCaptureZone = React.createClass({
 	},
 
 	render() {
-		return <div key='DragCaptureZone' {...this.props} onMouseDown={this.handleDragStart} />;
+		return (
+			<div
+				{...this.props}
+				className={boundClassNames('&', this.props.className)}
+				key='DragCaptureZone'
+				onMouseDown={this.handleDragStart}
+			/>
+		);
 	},
 
 	handleDrag(event) {
