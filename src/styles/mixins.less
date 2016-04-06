@@ -33,11 +33,9 @@
 
 	&:active { box-shadow: @shadow-inset;}
 
-	// &:active::before,
-	// &:focus::before {
-	// 	box-shadow: @shadow-inset;
-	// 	opacity: 1;
-	// }
+	&:focus {
+		box-shadow: 0px 0px 0px 3px rgba(42,187,176,0.3);
+	}
 
 	&:focus::before {
 		box-shadow: 0 0 5px @featured-color-primary;
