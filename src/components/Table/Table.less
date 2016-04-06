@@ -1,7 +1,7 @@
-@Table-row-height: 26px;
-@Table-row-heightLarge: 36px;
-@Table-cell-padding: 9px;
-@Table-cell-border: 1px solid @color-gray;
+@Table-row-height: @size-standard-height - 2;
+@Table-row-heightLarge: @Table-row-height + @size-standard;
+@Table-cell-padding: @size-S;
+@Table-cell-border: @border-standardBorder;
 @Table-header-backgroundColor: #767b7f;
 @Table-header-colorLight: #525659;
 @Table-header-colorDark: #393d40;
@@ -172,7 +172,7 @@
 			}
 		}
 	}
-	
+
 
 	// **
 	// * A standard `<td>` or `<th>` tag.

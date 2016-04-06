@@ -1,7 +1,9 @@
 // button sizes
-@Button-size-padding: 12px;
-@Button-size-lineHeight: 26px;
-@Button-size-shortlineHeight: 20px;
+@Button-size-padding: @size-standard;
+// take off two pixels for the border
+@Button-size-lineHeight: @size-standard-height - 2;
+// take off six pixels for the short button
+@Button-size-shortlineHeight: @Button-size-lineHeight - 6;
 @Button-size-borderRadius: @size-borderRadius;
 
 .lucid-Button {
