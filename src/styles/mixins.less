@@ -3,6 +3,7 @@
 // gradient animation mixin
 // takes start color, end color and transition time (set to .1s by default)
 .gradient-animation(@start, @end, @transTime: .1s) {
+	transition: opacity @transTime, box-shadow .05s;
 	position: relative;
 	background-size: 100%;
 	background-image: linear-gradient(@start, @end);
@@ -30,12 +31,20 @@
 		}
 	}
 
-	&:active,
-	&:focus { box-shadow: @shadow-inset; outline: none; }
+	&:active { box-shadow: @shadow-inset;}
 
-	&:active::before,
+	// &:active::before,
+	// &:focus::before {
+	// 	box-shadow: @shadow-inset;
+	// 	opacity: 1;
+	// }
+
 	&:focus::before {
-		box-shadow: @shadow-inset;
+		box-shadow: 0 0 5px @featured-color-primary;
+		background: transparent;
+		background-image: none;
+		border-radius: 3px;
+		box-sizing: border-box;
 		opacity: 1;
 	}
 }

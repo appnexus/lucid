@@ -7,23 +7,19 @@ export default React.createClass({
 			<section>
 				<article>
 					<Button kind='warning'>Warning</Button>
-					<Button kind='warning' isDisabled={true}>Warning</Button>
-					<Button kind='warning' isActive={true}>Warning</Button>
+					<Button kind='warning' isDisabled={true}>is disabled</Button>
 				</article>
 				<article>
-					<Button kind='warning' size='short'>Warning</Button>
-					<Button kind='warning' size='short' isDisabled={true}>Warning</Button>
-					<Button kind='warning' size='short' isActive={true}>Warning</Button>
+					<Button kind='warning' size='short'>short</Button>
+					<Button kind='warning' size='short' isDisabled={true}>short is disabled</Button>
 				</article>
 				<article>
-					<Button kind='warning' size='small'>Warning</Button>
-					<Button kind='warning' size='small' isDisabled={true}>Warning</Button>
-					<Button kind='warning' size='small' isActive={true}>Warning</Button>
+					<Button kind='warning' size='small'>small</Button>
+					<Button kind='warning' size='small' isDisabled={true}>small is disabled</Button>
 				</article>
 				<article>
-					<Button kind='warning' size='large'>Warning</Button>
-					<Button kind='warning' size='large' isDisabled={true}>Warning</Button>
-					<Button kind='warning' size='large' isActive={true}>Warning</Button>
+					<Button kind='warning' size='large'>large</Button>
+					<Button kind='warning' size='large' isDisabled={true}>large is disabled</Button>
 				</article>
 			</section>
 		);
