@@ -111,7 +111,7 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 			tableWidth: null,
 		};
 	},
-	
+
 	handleRefThead(instance) {
 		const theadDOMNode = ReactDOM.findDOMNode(instance);
 
@@ -168,7 +168,7 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 			const nextTableWidth = theadRect.width + 1;
 			if (tableWidth !== nextTableWidth) {
 				this.setState({
-					tableWidth: nextTableWidth 
+					tableWidth: nextTableWidth
 				});
 			}
 		}, 1);
@@ -214,6 +214,7 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 				}}
 			>
 				{_.isNumber(freezeColSpan) && freezeColSpan > 0 ? (
+
 					<div
 						style={{
 							margin: 0,
@@ -225,9 +226,21 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 							overflow: 'hidden',
 						}}
 					>
+						<span
+							className={boundClassNames('&-before')}
+							style={{
+								left: colspanWidth
+							}}
+						/>
+						<span
+							className={boundClassNames('&-after')}
+							style={{
+								left: colspanWidth + scrollColspanWidth -20
+							}}
+						/>
 						{hasStickyHeader ? (
 							<StickyContainer>
-								<StickyContainer.Header style={{ zIndex: 999 }}>
+								<StickyContainer.Header className="test" style={{ zIndex: 999 }}>
 									{/*FREEZE HEADER*/}
 									<div
 										style={{
@@ -274,7 +287,7 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 				>
 					{hasStickyHeader ? (
 						<StickyContainer>
-							<StickyContainer.Header viewportWidth={scrollColspanWidth} style={{ zIndex: 999, borderRight: '1px solid blue' }}>
+							<StickyContainer.Header  className={boundClassNames('&-isStickyHeader')} viewportWidth={scrollColspanWidth} style={{ zIndex: 999}}>
 								{/*SCROLL HEADER*/}
 								<div
 									style={{

@@ -1,5 +1,27 @@
 .lucid-ScrollTable {
-	&-scroll-container {
-		border-right: 1px solid red;
+	position: relative;
+	&-before, &-after {
+		content: "";
+    position: absolute;
+		top: 55px;
+    left: 0;
+    bottom: 0;
+    width: 20px;
+    z-index: 1;
+		background: linear-gradient(to right,rgba(0,0,0,.3),transparent);
 	}
+	&-after{
+		background: linear-gradient(to left,rgba(0,0,0,.3),transparent);
+	}
+
+	&-scroll-container {
+		border-right: 1px solid @color-borderColor;
+	}
+
+	&-isStickyHeader {
+		.lucid-StickySection-sticky-frame {
+			border-right: 1px solid @color-darkGray;
+		}
+	}
+
 }
