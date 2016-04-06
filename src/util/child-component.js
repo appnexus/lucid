@@ -91,6 +91,13 @@ export function findElementsByType(children, elementTypes) {
 	);
 }
 
+export function rejectElementsByType(children, elementTypes) {
+	return _.reject(
+		React.Children.toArray(children),
+		(node) => (React.isValidElement(node) && _.includes(elementTypes, node.type))
+	);
+}
+
 export function findChildComponentsInProps(props, childComponentType) {
 	const propName = _.get(childComponentType, 'childComponentDefinition.propName');
 	if (propName) {
