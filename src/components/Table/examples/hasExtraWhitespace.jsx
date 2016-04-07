@@ -30,7 +30,7 @@ export default React.createClass({
 					</Tr>
 					<Tr>
 						<Th align='left'>align left</Th>
-						<Th align='center'>align center</Th>
+						<Th align='center' isResizable>align center</Th>
 						<Th align='right' isSortable isSorted>align right</Th>
 					</Tr>
 				</Thead>

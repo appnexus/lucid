@@ -71,6 +71,11 @@
 			&.lucid-Table-is-resizable {
 				line-height: inherit;
 				padding: 0;
+				&[rowspan='2'] {
+					.lucid-Table-is-resizable-content	{
+						line-height: 53px;
+					}
+				}
 			}
 
 			// **
@@ -198,7 +203,7 @@
 			}
 		}
 	}
-	
+
 
 	// **
 	// * A standard `<td>` or `<th>` tag.
