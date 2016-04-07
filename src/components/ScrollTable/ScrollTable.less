@@ -10,12 +10,15 @@
     z-index: 1;
 		background: linear-gradient(to right,rgba(0,0,0,.3),transparent);
 	}
+
 	&-after{
 		background: linear-gradient(to left,rgba(0,0,0,.3),transparent);
+		border-right: 1px solid #c5c5c5;
 	}
 
 	&-scroll-container {
-		border-right: 1px solid @color-borderColor;
+		//border-right: 1px solid @color-borderColor;
+		border-right: 1px solid #393D40;
 	}
 
 	&-isStickyHeader {
@@ -24,4 +27,13 @@
 		}
 	}
 
+	& &-scroll-container {
+		.lucid-Table {
+				border-right: 0;
+
+			.lucid-Table-thead .lucid-Table-cell:last-of-type {
+				border-right: 0;
+			}
+		}
+	}
 }

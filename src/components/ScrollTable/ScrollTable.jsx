@@ -165,7 +165,8 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 			}
 
 			// Full table width
-			const nextTableWidth = theadRect.width + 1;
+			//const nextTableWidth = theadRect.width + 1;
+			const nextTableWidth = theadRect.width;
 			if (tableWidth !== nextTableWidth) {
 				this.setState({
 					tableWidth: nextTableWidth
@@ -229,7 +230,7 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 						<span
 							className={boundClassNames('&-before')}
 							style={{
-								left: colspanWidth
+								left: colspanWidth - 1
 							}}
 						/>
 						<span
@@ -250,7 +251,7 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 										}}
 									>
 										<Table {...passthrus} style={{
-											width: tableWidth,
+											width: tableWidth + 1,
 											height: theadHeight,
 										}}>
 											{children}
@@ -259,7 +260,7 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 								</StickyContainer.Header>
 								{/*FREEZE BODY*/}
 								<Table {...passthrus} style={{
-									width: tableWidth,
+									width: tableWidth + 1,
 									marginTop: -theadHeight,
 								}}>
 									{children}
