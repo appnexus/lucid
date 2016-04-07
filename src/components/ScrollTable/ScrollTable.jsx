@@ -109,6 +109,7 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 			colspanWidth: null,
 			scrollColspanWidth: null,
 			tableWidth: null,
+			scrolledMaxDirection: 'left',
 		};
 	},
 
@@ -175,6 +176,34 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 		}, 1);
 	},
 
+	handleScrollContainerScroll(event) {
+		const {
+			scrolledMaxDirection
+		} = this.state;
+		const el = event.target;
+		if (el.scrollLeft === 0) {
+			//console.log('scrolled max left');
+			if (scrolledMaxDirection !== 'left') {
+				this.setState({
+					scrolledMaxDirection: 'left'
+				});
+			}
+		} else if ((el.scrollWidth - el.scrollLeft) - el.getBoundingClientRect().width <= 0) {
+			//console.log('scrolled max right');
+			if (scrolledMaxDirection !== 'right') {
+				this.setState({
+					scrolledMaxDirection: 'right'
+				});
+			}
+		} else {
+			if (scrolledMaxDirection !== null) {
+				this.setState({
+					scrolledMaxDirection: null
+				});
+			}
+		}
+	},
+
 	componentDidMount() {
 		this.updateDimensions();
 	},
@@ -199,6 +228,7 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 			colspanWidth,
 			scrollColspanWidth,
 			tableWidth,
+			scrolledMaxDirection,
 		} = this.state;
 
 		const thead = _.first(findElementsByType(children, [Thead]));
@@ -208,7 +238,11 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 
 		return (
 			<section
-				className={boundClassNames('&', className)}
+				className={boundClassNames('&', {
+					'&-scroll-max-none': scrolledMaxDirection === null,
+					'&-scroll-max-left': scrolledMaxDirection === 'left',
+					'&-scroll-max-right': scrolledMaxDirection === 'right',
+				}, className)}
 				style={{
 					display: 'flex',
 					...style
@@ -285,9 +319,10 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 						overflowX: 'auto',
 						overflowY: 'hidden',
 					}}
+					onScroll={this.handleScrollContainerScroll}
 				>
 					{hasStickyHeader ? (
-						<StickyContainer>
+						<StickyContainer onScroll>
 							<StickyContainer.Header  className={boundClassNames('&-isStickyHeader')} viewportWidth={scrollColspanWidth} style={{ zIndex: 999}}>
 								{/*SCROLL HEADER*/}
 								<div
