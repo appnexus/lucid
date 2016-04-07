@@ -22,7 +22,7 @@ export default React.createClass({
 						<Th hasCheckbox rowSpan={2}>
 							<Checkbox></Checkbox>
 						</Th>
-						<Th rowSpan={2} isSortable>Lorem.</Th>
+						<Th rowSpan={2} isSortable isResizable>Lorem.</Th>
 						<Th hasIcon rowSpan={2}><SuccessIcon/></Th>
 						<Th rowSpan={2}>Button</Th>
 						<Th rowSpan={2} isSorted sortDirection='up'>Sorted Column</Th>

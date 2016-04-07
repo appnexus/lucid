@@ -4,6 +4,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition } from '../../util/component-definition';
 import { findElementsByType } from '../../util/child-component';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
+import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
 const boundClassNames = lucidClassNames.bind('&-Table');
 
@@ -176,6 +177,11 @@ const Th = React.createClass(createLucidComponentDefinition({
 		 */
 		hasButton: bool,
 		/**
+		 * Styles the cell to indicate it should be resizable and sets up drag-
+		 * related events to enable this resizing functionality.
+		 */
+		isResizable: bool,
+		/**
 		 * Styles the cell to allow column sorting.
 		 */
 		isSortable: bool,
@@ -194,6 +200,7 @@ const Th = React.createClass(createLucidComponentDefinition({
 			hasCheckbox: false,
 			hasIcon: false,
 			hasButton: false,
+			isResizable: false,
 			isSorted: false,
 			sortDirection: 'up'
 		};
@@ -206,6 +213,7 @@ const Th = React.createClass(createLucidComponentDefinition({
 			hasCheckbox,
 			hasIcon,
 			hasButton,
+			isResizable,
 			isSortable,
 			isSorted,
 			sortDirection
@@ -220,6 +228,7 @@ const Th = React.createClass(createLucidComponentDefinition({
 				'&-has-checkbox': hasCheckbox,
 				'&-has-icon': hasIcon,
 				'&-has-button': hasButton,
+				'&-is-resizable': isResizable,
 				'&-is-sortable': (isSortable === false ? isSortable : (isSorted || isSortable)),
 				'&-is-sorted': isSorted,
 			}, className)}>
@@ -230,7 +239,18 @@ const Th = React.createClass(createLucidComponentDefinition({
 							<CaretIcon className={boundClassNames('&-sort-icon')} direction={sortDirection} size={6}/>
 						</li>
 					</ul>
-				) : children}
+				) : null}
+				{isResizable ? (
+					<div className={boundClassNames('&-is-resizable-container')}>
+						<div className={boundClassNames('&-is-resizable-content')}>{children}</div>
+						<DragCaptureZone
+							onDrag={this.handleDragged}
+							onDragEnd={this.handleDragEnded}
+							onDragStart={this.handleDragStarted}
+						/>
+					</div>
+				) : null}
+				{!isSorted && !isResizable ? children : null}
 			</th>
 		);
 	}
