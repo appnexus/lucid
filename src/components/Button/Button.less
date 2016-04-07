@@ -1,9 +1,6 @@
 // button sizes
-@Button-size-padding: 15px;
+@Button-size-padding: 12px;
 @Button-size-lineHeight: 26px;
-@Button-size-height: 28px;
-@Button-size-height-small: 20px;
-@Button-size-height-large: 40px;
 @Button-size-shortlineHeight: 20px;
 @Button-size-borderRadius: @size-borderRadius;
 
@@ -11,7 +8,6 @@
 	.no-safari-flicker();
 	.box-sizing();
 	.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
-	height: @Button-size-height;
 	cursor: pointer;
 	display: inline-block;
 	outline: none;
@@ -19,125 +15,83 @@
 	border-radius: @Button-size-borderRadius;
 	font: @font;
 	letter-spacing: .05em;
+	line-height: @Button-size-lineHeight;
 	padding: 0 @Button-size-padding;
 
-	& &-content {
-		display: inline;
-		> .lucid-Icon {
-
-		}
-		> .lucid-Icon {
-			margin-left: -3px;
-			margin-right: -3px;
-		}
-	}
-
 	// Types
-	&&-primary {
-		.gradient-animation(@featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
-		.make-is-disabled(lucid-Button, @featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
+	&-primary {
 		color: @color-white;
 		border-color: @featured-color-primary-borderColor;
 		font-weight: 500;
+		.gradient-animation(@featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
+		.make-is-disabled(lucid-Button, @featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
 	}
-	&&-success {
-		.gradient-animation(@featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
-		.make-is-disabled(lucid-Button, @featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
+	&-success {
 		color: @color-white;
 		border-color: @featured-color-success-borderColor;
 		font-weight: 500;
+		.gradient-animation(@featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
+		.make-is-disabled(lucid-Button, @featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
 	}
-	&&-info {
-		.gradient-animation(@featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
-		.make-is-disabled(lucid-Button, @featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
+	&-info {
 		color: @color-white;
 		border-color: @featured-color-info-borderColor;
 		font-weight: 500;
+		.gradient-animation(@featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
+		.make-is-disabled(lucid-Button, @featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
 	}
-	&&-warning {
-		.gradient-animation(@featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
-		.make-is-disabled(lucid-Button, @featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
+	&-warning {
 		color: @color-white;
 		border-color: @featured-color-warning-borderColor;
 		font-weight: 500;
+		.gradient-animation(@featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
+		.make-is-disabled(lucid-Button, @featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
 	}
-	&&-danger {
-		.gradient-animation(@featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
-		.make-is-disabled(lucid-Button, @featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
+	&-danger {
 		color: @color-white;
 		border-color: @featured-color-danger-borderColor;
 		font-weight: 500;
+		.gradient-animation(@featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
+		.make-is-disabled(lucid-Button, @featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
 	}
-	&&-link {
+	&-link {
 		.gradient-reset();
 		.make-is-disabled(lucid-Button);
 		border: none;
 		background: none;
 		color: @color-linkColor;
-
 		&:hover {
 			color: @color-linkColorHover;
 			background: none;
 			text-decoration: underline;
 		}
-
-		.lucid-Icon {
-			margin-right: 5px;
-			margin-top: -1px;
-		}
 	}
 
 	// Sizes
-	&&-short {
-		height: @Button-size-height-small;
+	&-short {
+		line-height: @Button-size-shortlineHeight;
 	}
-	&&-small {
+	&-small {
+		line-height: @Button-size-shortlineHeight;
 		padding: 0 @Button-size-padding/1.5;
 	}
-	&&-large {
-		height: @Button-size-height-large;
+	&-large {
+		line-height: @Button-size-lineHeight*1.5;
 		padding: 0 @Button-size-padding*1.5;
 		font-size: 1.2em;
-
-		.lucid-Icon {
-			width: 1.2em;
-			height: 1.2em;
-		}
 	}
 
 	// States
-	&&-is-active {
+	&-is-active {
 		.gradient-reset();
 		background: @featured-color-primary;
 		border-color: @featured-color-primary;
 		color: @color-white;
-
-		.lucid-Icon { fill: @color-white; }
-	}
-	&&-is-active&-primary {
-		background: @featured-color-primary;
-		border-color: @featured-color-primary;
-	}
-	&&-is-active&-success {
-		border-color: @featured-color-success-borderColor;
-		background: @featured-color-success;
-	}
-	&&-is-active&-info {
-		border-color: @featured-color-info-borderColor;
-		background: @featured-color-info;
-	}
-	&&-is-active&-warning {
-		border-color: @featured-color-warning-borderColor;
-		background: @featured-color-warning;
-	}
-	&&-is-active&-danger {
-		border-color: @featured-color-danger-borderColor;
-		background: @featured-color-danger;
 	}
 	&-is-disabled {
 		.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
-		.opacity();
 		cursor: not-allowed;
+		.opacity();
 	}
 
 	// Also needed in some cases to beat other libraries (e.g. pure.css)
