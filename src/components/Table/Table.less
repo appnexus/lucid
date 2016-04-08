@@ -53,7 +53,7 @@
 				border-bottom: @Table-header-cell-border;
 			}
 
-			&.lucid-Table-is-sortable {
+			&.lucid-Table-is-sortable:not(.lucid-Table-is-resizing) {
 				&:hover {
 					background-color: @Table-header-colorDark;
 					cursor: pointer;
@@ -92,7 +92,6 @@
 			}
 
 			.lucid-DragCaptureZone {
-				background-color: orange;
 				cursor: ew-resize;
 				width: 4px;
 			}
@@ -212,6 +211,7 @@
 		padding: 0 @Table-cell-padding;
 		line-height: @Table-row-height;
 		box-sizing: border-box;
+		white-space: nowrap;
 
 		&[rowspan] {
 			line-height: inherit;
