@@ -2,10 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import { bindClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition }  from '../../util/component-definition';
-import * as reducers from './List.reducers';
+import * as reducers from './VerticalListMenu.reducers';
 import ChevronIcon  from '../Icon/ChevronIcon/ChevronIcon';
 
-const boundClassNames = bindClassNames('lucid-List');
+const boundClassNames = bindClassNames('lucid-VerticalListMenu');
 
 const {
 	func,
@@ -20,13 +20,14 @@ const {
 /**
  * {"categories": ["layout"], "madeFrom": ["ChevronIcon"]}
  *
- * A component for lists of data. It supports nesting `List`s below
- * `List.Item`s and animating expanding of those sub lists. The default reducer
- * behavior is for only one `List.Item` to be selected at any given time; that
- * is easily overridden by handling `onSelect` yourself.
+ * Used primarily for navigation lists. It supports nesting `VerticalListMenu`s
+ * below `VerticalListMenu.Item`s and animating expanding of those sub lists.
+ * The default reducer behavior is for only one `VerticalListMenu.Item` to be
+ * selected at any given time; that is easily overridden by handling `onSelect`
+ * yourself.
  */
-const List = React.createClass(createLucidComponentDefinition({
-	displayName: 'List',
+const VerticalListMenu = React.createClass(createLucidComponentDefinition({
+	displayName: 'VerticalListMenu',
 
 	reducers,
 
@@ -35,7 +36,6 @@ const List = React.createClass(createLucidComponentDefinition({
 			hasExpander: bool,
 			isExpanded: bool,
 			isSelected: bool,
-			isDisabled: bool,
 			onSelect: func,
 			onToggle: func,
 		}
@@ -45,7 +45,7 @@ const List = React.createClass(createLucidComponentDefinition({
 		/**
 		 * Regular `children` aren't really used in this component, but if you do
 		 * add them they will be placed at the end of the component. You should be
-		 * `List.Item`s instead of regular children.
+		 * using `VerticalListMenu.Item`s instead of regular children.
 		 */
 		children: node,
 
@@ -60,45 +60,38 @@ const List = React.createClass(createLucidComponentDefinition({
 		style: object,
 
 		/**
-		 * Indicates which of the `List.Item` children are currently selected. You
-		 * can also put the `isSelected` prop directly on the `List.Item`s if you
-		 * wish.
+		 * Indicates which of the `VerticalListMenu.Item` children are currently
+		 * selected. You can also put the `isSelected` prop directly on the
+		 * `VerticalListMenu.Item`s if you wish.
 		 */
 		selectedIndices: arrayOf(number),
 
 		/**
-		 * Indicates which of the `List.Item` children are currently expanded. You
-		 * can also put the `isExpanded` prop directly on the `List.Item`s if you
-		 * wish.
+		 * Indicates which of the `VerticalListMenu.Item` children are currently
+		 * expanded. You can also put the `isExpanded` prop directly on the
+		 * `VerticalListMenu.Item`s if you wish.
 		 */
 		expandedIndices: arrayOf(number),
 
 		/**
-		 * Callback fired when the user selects a `List.Item`.
+		 * Callback fired when the user selects a `VerticalListMenu.Item`.
 		 *
 		 * Signature: `(index, { event, props }) => {}`
 		 */
 		onSelect: func,
 
 		/**
-		 * Callback fired when the user expands or collapses an expandable `List.Item`.
+		 * Callback fired when the user expands or collapses an expandable `VerticalListMenu.Item`.
 		 *
 		 * Signature: `(index, { event, props }) => {}`
 		 */
 		onToggle: func,
-
-		/**
-		 * Indicates whether the List should appear and act disabled by having a
-		 * "greyed out" palette and ignoring user interactions.
-		 */
-		isDisabled: bool,
 	},
 
 	getDefaultProps() {
 		return {
 			onSelect: _.noop,
 			onToggle: _.noop,
-			isDisabled: false,
 			expandedIndices: [],
 			selectedIndices: [],
 		};
@@ -111,23 +104,19 @@ const List = React.createClass(createLucidComponentDefinition({
 			style,
 			selectedIndices,
 			expandedIndices,
-			isDisabled,
 			...passThroughs
 		} = this.props;
 
-		const itemChildProps = List.Item.findInAllAsProps(this.props);
+		const itemChildProps = VerticalListMenu.Item.findInAllAsProps(this.props);
 
 		return (
 			<ul
 				{...passThroughs}
-				className={boundClassNames('&', {
-					'&-is-disabled': isDisabled,
-				}, className)}
+				className={boundClassNames('&', className)}
 				style={style}
 			>
 				{_.map(itemChildProps, (itemChildProp, index) => {
 					const {
-						isDisabled = false,
 						hasExpander = false,
 					} = itemChildProp;
 
@@ -135,8 +124,8 @@ const List = React.createClass(createLucidComponentDefinition({
 
 					// Was not able to get `child.Type` to work correctly, I suspect this
 					// is due to the way we wrap components with createLucidComponentDefinition
-					const listChildren = _.filter(itemChildrenAsArray, (child) => _.get(child, 'type.displayName', '') === 'List');
-					const otherChildren = _.filter(itemChildrenAsArray, (child) => _.get(child, 'type.displayName', '') !== 'List');
+					const listChildren = _.filter(itemChildrenAsArray, (child) => _.get(child, 'type.displayName', '') === 'VerticalListMenu');
+					const otherChildren = _.filter(itemChildrenAsArray, (child) => _.get(child, 'type.displayName', '') !== 'VerticalListMenu');
 
 					// If the prop is found on the child, it should override what was
 					// passed in at the top level for selectedIndices and expandedIndices
@@ -152,9 +141,7 @@ const List = React.createClass(createLucidComponentDefinition({
 						<li
 							key={index}
 							{...itemChildProp.passThroughs}
-							className={boundClassNames('&-Item', itemChildProp.className, {
-								'&-Item-is-disabled': isDisabled,
-							})}
+							className={boundClassNames('&-Item', itemChildProp.className)}
 						>
 							<div
 								className={boundClassNames('&-Item-content', {
@@ -192,37 +179,31 @@ const List = React.createClass(createLucidComponentDefinition({
 
 	handleToggle(index, itemChildProp, event) {
 		const {
-			isDisabled,
 			onToggle,
 		} = itemChildProp;
 
 		// Prevent the user from also selecting the current item.
 		event.stopPropagation();
 
-		if (!this.props.isDisabled && !isDisabled) {
-			this.props.onToggle(index, { event, props: itemChildProp });
+		this.props.onToggle(index, { event, props: itemChildProp });
 
-			if (onToggle) {
-				onToggle(index, { event, props: itemChildProp });
-			}
+		if (onToggle) {
+			onToggle(index, { event, props: itemChildProp });
 		}
 	},
 
 	handleClickItem(index, itemChildProp, event) {
 		const {
-			isDisabled,
 			onSelect,
 		} = itemChildProp;
 
-		if (!this.props.isDisabled && !isDisabled) {
-			this.props.onSelect(index, { event, props: itemChildProp });
+		this.props.onSelect(index, { event, props: itemChildProp });
 
-			if (onSelect) {
-				onSelect(index, { event, props: itemChildProp });
-			}
+		if (onSelect) {
+			onSelect(index, { event, props: itemChildProp });
 		}
 	}
 
 }));
 
-export default List;
+export default VerticalListMenu;

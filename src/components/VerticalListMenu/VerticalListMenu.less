@@ -1,24 +1,24 @@
-@List-levels: 8;
+@VerticalListMenu-levels: 8;
 
-@List-size-itemHeight: 29px;
-@List-size-border: 4px;
-@List-size-icon: 20px;
-@List-size-childSpacer: 6px;
-@List-size-childPadding: 15px;
+@VerticalListMenu-size-itemHeight: 29px;
+@VerticalListMenu-size-border: 4px;
+@VerticalListMenu-size-icon: 20px;
+@VerticalListMenu-size-childSpacer: 6px;
+@VerticalListMenu-size-childPadding: 15px;
 
 // Recursive mixin to facilitate nesting to a pre-determined depth
-.List-nest(@i: 0) when (@i < @List-levels) {
-	.lucid-List {
-		.lucid-List-Item-content {
-			padding-left: @List-size-childPadding + (12 * @i);
+.VerticalListMenu-nest(@i: 0) when (@i < @VerticalListMenu-levels) {
+	.lucid-VerticalListMenu {
+		.lucid-VerticalListMenu-Item-content {
+			padding-left: @VerticalListMenu-size-childPadding + (12 * @i);
 		}
 
-		.List-nest(@i + 1);
+		.VerticalListMenu-nest(@i + 1);
 	}
 }
 
-.lucid-List {
-	.List-nest();
+.lucid-VerticalListMenu {
+	.VerticalListMenu-nest();
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -28,20 +28,6 @@
 	padding: 0;
 	list-style: none;
 
-	&-is-disabled,
-	&-Item-is-disabled {
-		.lucid-List-Item-content {
-			color: @color-mediumGray;
-			cursor: not-allowed;
-
-			&:hover,
-			&:focus {
-				background: transparent;
-				color: @color-mediumGray;
-			}
-		}
-	}
-
 	&-Item {
 		&-expander {
 			align-self: flex-start;
@@ -49,15 +35,15 @@
 			justify-content: center;
 			align-items: center;
 			flex-shrink: 0;
-			height: @List-size-icon;
-			width: @List-size-icon;
+			height: @VerticalListMenu-size-icon;
+			width: @VerticalListMenu-size-icon;
 			margin: 4px;
 			margin-left: auto; // allows the expander to be flush on the right side
 		}
 
 		&-content {
 			.is-selectable();
-			min-height: @List-size-itemHeight;
+			min-height: @VerticalListMenu-size-itemHeight;
 			display: flex;
 			font-size: 12px;
 			align-items: center;
@@ -69,7 +55,7 @@
 			padding-left: 15px;
 
 			&-text {
-				padding: @List-size-childSpacer 0;
+				padding: @VerticalListMenu-size-childSpacer 0;
 			}
 
 			// Selected and hover state are the same for items
@@ -79,7 +65,7 @@
 					to right,
 					@color-primary,
 					@featured-color-primary-backgroundColor,
-					@List-size-border
+					@VerticalListMenu-size-border
 				);
 				color: @color-darkGray;
 			}
@@ -90,12 +76,12 @@
 					to right,
 					@color-primary,
 					@color-lightGray,
-					@List-size-border
+					@VerticalListMenu-size-border
 				);
 				color: @color-darkGray;
 
 				// Style the expander button when the user hovers on the item content
-				.lucid-List-Item-expander {
+				.lucid-VerticalListMenu-Item-expander {
 					.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 					.box-sizing();
 					border: solid 1px @featured-color-default-borderColor;
@@ -117,14 +103,14 @@
 			}
 		}
 
-		// The first List-Item shouldn't have a top border
+		// The first VerticalListMenu-Item shouldn't have a top border
 		&:first-of-type > &-content {
 			border-top-color: @color-transparent;
 		}
 
-		// Any time we have a List below a List-Item
-		.lucid-List {
-			.lucid-List-Item-content {
+		// Any time we have a VerticalListMenu below a VerticalListMenu-Item
+		.lucid-VerticalListMenu {
+			.lucid-VerticalListMenu-Item-content {
 				font-weight: normal;
 				border-color: @color-transparent;
 
@@ -133,9 +119,9 @@
 					flex-shrink: 0;
 					content: '\2013'; // en dash
 					display: inline-block;
-					width: @List-size-childSpacer;
+					width: @VerticalListMenu-size-childSpacer;
 					color: @color-gray;
-					margin: @List-size-childSpacer;
+					margin: @VerticalListMenu-size-childSpacer;
 					margin-left: 0;
 				}
 
