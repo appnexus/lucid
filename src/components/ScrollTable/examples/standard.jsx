@@ -22,7 +22,7 @@ export default React.createClass({
 				<Table
 					widthColspan={6}
 					freezeColSpan={3}
-					hasStickyHeader={true}
+					hasStickyHeader
 					hasExtraWhitespace
 				>
 					<Thead>

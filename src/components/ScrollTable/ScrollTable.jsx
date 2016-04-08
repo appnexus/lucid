@@ -303,7 +303,8 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 						) : (
 							/*FREEZE BODY*/
 							<Table {...passthrus} style={{
-								width: tableWidth,
+								//width: tableWidth,
+								width: tableWidth + 1,
 								marginTop: -theadHeight,
 							}}>
 								{children}
