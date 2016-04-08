@@ -106,34 +106,6 @@ describe('VerticalListMenu', () => {
 		assert(_.has(onSelect.args[0][1], 'props'), 'missing `props` on the onSelect callback');
 	});
 
-	it('should not fire onSelect when isDisabled on the parent', () => {
-		const onSelect = sinon.spy();
-		const wrapper = shallow(
-			<VerticalListMenu onSelect={onSelect} isDisabled={true}>
-				<VerticalListMenu.Item>One</VerticalListMenu.Item>
-				<VerticalListMenu.Item>Two</VerticalListMenu.Item>
-			</VerticalListMenu>
-		);
-
-		wrapper.find('.lucid-VerticalListMenu-Item-content').at(1).simulate('click');
-
-		assert(!onSelect.called);
-	});
-
-	it('should not fire onSelect when isDisabled on the child', () => {
-		const onSelect = sinon.spy();
-		const wrapper = shallow(
-			<VerticalListMenu onSelect={onSelect}>
-				<VerticalListMenu.Item>One</VerticalListMenu.Item>
-				<VerticalListMenu.Item isDisabled={true}>Two</VerticalListMenu.Item>
-			</VerticalListMenu>
-		);
-
-		wrapper.find('.lucid-VerticalListMenu-Item-content').at(1).simulate('click');
-
-		assert(!onSelect.called);
-	});
-
 	it('should show expanders based on hasExpander', () => {
 
 		const wrapper = shallow(
@@ -183,34 +155,6 @@ describeWithDOM('VerticalListMenu', () => {
 		assert.equal(onToggle.args[0][0], 0, 'wrong index on the onToggle callback');
 		assert(_.has(onToggle.args[0][1], 'event'), 'missing `event` on the onToggle callback');
 		assert(_.has(onToggle.args[0][1], 'props'), 'missing `props` on the onToggle callback');
-	});
-
-	it('should not fire onToggle when isDisabled on the parent', () => {
-		const onToggle = sinon.spy();
-		const wrapper = mount(
-			<VerticalListMenu onToggle={onToggle} isDisabled={true}>
-				<VerticalListMenu.Item hasExpander={true} />
-				<VerticalListMenu.Item hasExpander={true} />
-			</VerticalListMenu>
-		);
-
-		wrapper.find('.lucid-VerticalListMenu-Item-expander').at(0).simulate('click');
-
-		assert(!onToggle.called);
-	});
-
-	it('should not fire onToggle when isDisabled on the child', () => {
-		const onToggle = sinon.spy();
-		const wrapper = mount(
-			<VerticalListMenu onToggle={onToggle}>
-				<VerticalListMenu.Item hasExpander={true} isDisabled={true} />
-				<VerticalListMenu.Item hasExpander={true} />
-			</VerticalListMenu>
-		);
-
-		wrapper.find('.lucid-VerticalListMenu-Item-expander').at(0).simulate('click');
-
-		assert(!onToggle.called);
 	});
 
 });
