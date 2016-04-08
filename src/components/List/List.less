@@ -3,7 +3,6 @@
 @List-size-itemHeight: 29px;
 @List-size-border: 4px;
 @List-size-icon: 20px;
-
 @List-size-childSpacer: 6px;
 @List-size-childPadding: 15px;
 
@@ -45,14 +44,15 @@
 
 	&-Item {
 		&-expander {
+			align-self: flex-start;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			flex-shrink: 0;
 			height: @List-size-icon;
 			width: @List-size-icon;
-			margin-left: auto;
-			margin-right: 5px;
+			margin: 4px;
+			margin-left: auto; // allows the expander to be flush on the right side
 		}
 
 		&-content {
@@ -68,9 +68,8 @@
 			color: @color-primary;
 			padding-left: 15px;
 
-			&:before,
 			&-text {
-				padding: 6px 0;
+				padding: @List-size-childSpacer 0;
 			}
 
 			// Selected and hover state are the same for items
@@ -130,12 +129,14 @@
 				border-color: @color-transparent;
 
 				&:before {
+					align-self: flex-start;
+					flex-shrink: 0;
 					content: '\2013'; // en dash
 					display: inline-block;
 					width: @List-size-childSpacer;
 					color: @color-gray;
-					margin: 0 @List-size-childSpacer 0 0;
-					align-self: flex-start;
+					margin: @List-size-childSpacer;
+					margin-left: 0;
 				}
 
 				&:hover,
