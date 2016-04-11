@@ -2,53 +2,41 @@
 
 // gradient animation mixin
 // takes start color, end color and transition time (set to .1s by default)
-.gradient-animation(@start, @end, @transTime: .1s) {
-	transition: opacity @transTime, box-shadow .05s;
+.gradient-animation(@start, @end, @transTime: .1s, @zindex: 0) {
 	position: relative;
 	background-size: 100%;
 	background-image: linear-gradient(@start, @end);
-	z-index: 0;
+	transition: opacity @transTime, box-shadow (@transTime / 2);
+	z-index: @zindex;
 
 	&:before {
-		background-image: linear-gradient(@end, @start);
-		background-color: @color-white;
-		border-radius: 3px;
-		content: '';
+		position: absolute;
 		display: block;
 		height: 100%;
-		position: absolute;
-		top: 0; left: 0;
-		opacity: 0;
 		width: 100%;
-		z-index: -1;
-		transition: opacity @transTime, box-shadow .05s;
+		top: 0; left: 0;
+		background-image: linear-gradient(@end, @start);
 		box-shadow: none;
+		opacity: 0;
+		transition: opacity @transTime, box-shadow (@transTime / 2);
+		z-index: (@zindex - 1);
+		content: '';
 	}
-
-	&:hover:not(&-is-active) {
-		&:before {
-			opacity: 1;
-		}
-	}
-
-	&:focus {
-		box-shadow: 0px 0px 0px 3px rgba(42,187,176,0.3);
-	}
-
-	&:focus::before {
-		box-shadow: 0 0 5px @featured-color-primary;
-		background: transparent;
-		background-image: none;
-		border-radius: 3px;
-		box-sizing: border-box;
+	&:hover:not(&-is-active):before {
 		opacity: 1;
 	}
 
-	&:active {
+	&:focus {
+		box-shadow: @shadow-solid-outline;
+	}
+	&:active:focus {
+		border-radius: @size-borderRadius;
 		box-shadow: @shadow-inset;
 	}
-	&:active::before{
-		box-shadow: none;
+	&:active:before{
+		border-radius: @size-borderRadius;
+		box-shadow: @shadow-inset;
+		opacity: 1;
 	}
 }
 
@@ -172,3 +160,14 @@
 }
 
 
+// This is a simple mixin to normalize the styles for an unselectable and unclickable element.
+.no-cursor() {
+	cursor: not-allowed;
+}
+
+// -----------------------------------------------------------------------------
+// Font mixins
+// -----------------------------------------------------------------------------
+.bold(){
+	font-weight: 500;
+}

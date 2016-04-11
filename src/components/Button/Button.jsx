@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 const boundClassNames = lucidClassNames.bind('&-Button');
@@ -86,9 +87,12 @@ const Button = React.createClass({
 			isDisabled,
 			onClick,
 		} = this.props;
+		const domNode = ReactDOM.findDOMNode(this);
 
 		if (!isDisabled) {
 			onClick({ event, props: this.props });
+			// required to correctly apply the focus state in Safari and Firefox
+			domNode.focus();
 		}
 	},
 
