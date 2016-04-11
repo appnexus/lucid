@@ -49,6 +49,12 @@ describe('Button', () => {
 			let classNames = wrapper.find('button').prop('className').split(' ');
 			assert(_.includes(classNames, 'lucid-Button-is-active'), `'${classNames}' should include 'lucid-Button-is-active'`);
 		});
+
+		it('should have a button with the "hasIcon" class when hasIcon is true', () => {
+			const wrapper = shallow(<Button hasIcon={true} />);
+			let classNames = wrapper.find('button').prop('className').split(' ');
+			assert(_.includes(classNames, 'lucid-Button-has-icon'), `'${classNames}' should include 'lucid-Button-has-icon'`);
+		});
 	});
 });
 
@@ -64,3 +70,4 @@ describeWithDOM('Button', () => {
 		});
 	});
 });
+

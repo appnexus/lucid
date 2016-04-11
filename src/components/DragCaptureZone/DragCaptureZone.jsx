@@ -71,6 +71,11 @@ const DragCaptureZone = React.createClass({
 		);
 	},
 
+	componentWillUnmount() {
+		window.document.removeEventListener('mousemove', this.handleDrag);
+		window.document.removeEventListener('mouseup', this.handleDragEnd);
+	},
+
 	handleDrag(event) {
 		const {
 			pageX,

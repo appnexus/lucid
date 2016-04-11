@@ -315,10 +315,10 @@ const Component = React.createClass({
 					</section>
 				) : null}
 				<h3>Examples</h3>
-				<ul className={'Component-examples '+componentName}>
+				<ul className='Component-examples'>
 					{_.map(_.get(examplesByComponent, componentName, []), (example) => {
 						return (
-							<li className={componentName+'-example-'+example.name} key={example.name}>
+							<li key={example.name}>
 								<div className='Component-examples-header'>
 									<h4>{example.name}</h4>
 									<a href='#' onClick={(event) => {
