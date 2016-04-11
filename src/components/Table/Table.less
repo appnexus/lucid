@@ -76,6 +76,9 @@
 						line-height: 53px;
 					}
 				}
+				.lucid-Table-is-resizable-content {
+					padding: 0 @Table-cell-padding - 4 0 @Table-cell-padding;
+				}
 			}
 
 			// **
@@ -94,6 +97,9 @@
 			.lucid-DragCaptureZone {
 				cursor: ew-resize;
 				width: 4px;
+				&:hover {
+					background-color: fade(@color-black, 70%);
+				}
 			}
 		}
 	}

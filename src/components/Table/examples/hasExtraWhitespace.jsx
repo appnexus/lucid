@@ -25,7 +25,7 @@ export default React.createClass({
 						<Th rowSpan={2} isSortable isResizable>Sortable and resizable.</Th>
 						<Th hasIcon rowSpan={2}><SuccessIcon/></Th>
 						<Th rowSpan={2}>Button</Th>
-						<Th rowSpan={2} isSorted sortDirection='up'>Sorted Column</Th>
+						<Th rowSpan={2} isSorted sortDirection='up' isResizable>Sorted Column</Th>
 						<Th colSpan={3} align='center'>Alignments</Th>
 					</Tr>
 					<Tr>

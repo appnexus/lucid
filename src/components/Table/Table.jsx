@@ -277,7 +277,7 @@ const Th = React.createClass(createLucidComponentDefinition({
 					width: isResizing ? activeWidth : passiveWidth
 				}) : style}
 			>
-				{isSorted ? (
+				{isSorted && !isResizable? (
 					<ul className={boundClassNames('&-is-sorted-container')}>
 						<li className={boundClassNames('&-is-sorted-title')}>{children}</li>
 						<li className={boundClassNames('&-is-sorted-caret')}>
@@ -285,7 +285,7 @@ const Th = React.createClass(createLucidComponentDefinition({
 						</li>
 					</ul>
 				) : null}
-				{isResizable ? (
+				{isResizable && !isSorted ? (
 					<div className={boundClassNames('&-is-resizable-container')}>
 						<div className={boundClassNames('&-is-resizable-content')}>{children}</div>
 						<DragCaptureZone
@@ -295,6 +295,23 @@ const Th = React.createClass(createLucidComponentDefinition({
 						/>
 					</div>
 				) : null}
+				{isSorted && isResizable ?
+					<div className={boundClassNames('&-is-resizable-container')}>
+						<div className={boundClassNames('&-is-resizable-content')}>
+							<ul className={boundClassNames('&-is-sorted-container')}>
+								<li className={boundClassNames('&-is-sorted-title')}>{children}</li>
+								<li className={boundClassNames('&-is-sorted-caret')}>
+									<CaretIcon className={boundClassNames('&-sort-icon')} direction={sortDirection} size={6}/>
+								</li>
+							</ul>
+						</div>
+						<DragCaptureZone
+							onDrag={this.handleDragged}
+							onDragEnd={this.handleDragEnded}
+							onDragStart={this.handleDragStarted}
+						/>
+					</div>
+				: null}
 				{!isSorted && !isResizable ? children : null}
 			</th>
 		);
