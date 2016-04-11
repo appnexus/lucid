@@ -1,7 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import assert from 'assert';
-import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import Table from './Table';
 
@@ -251,6 +250,34 @@ describe('Table', () => {
 					});
 				});
 
+				describe.only('isResizable', () => {
+					it('should apply the class name `lucid-Table-is-resizable`', () => {
+						const wrapper = shallow(
+							<Th isResizable />
+						);
+
+						assert.equal(wrapper.find('th.lucid-Table-is-resizable').length, 1);
+					});
+
+					it('should render a container for resizable header content', () => {
+						const wrapper = mount(
+							<Table>
+								<Thead>
+									<Tr>
+										<Th isResizable>foo</Th>
+									</Tr>
+								</Thead>
+							</Table>
+						);
+						const containerWrapper = wrapper.find('div.lucid-Table-is-resizable-container');
+
+						assert.equal(containerWrapper.length, 1, 'must have a container');
+						assert.equal(containerWrapper.find('div.lucid-Table-is-resizable-content').length, 1, 'container must have content');
+						assert.equal(containerWrapper.find('div.lucid-Table-is-resizable-content').text(), 'foo', 'content must match children');
+						assert.equal(containerWrapper.find('div.lucid-DragCaptureZone').length, 1, 'container must have a drag capture zone');
+					});
+				});
+
 				describe('isSorted', () => {
 					it('should apply the class name `lucid-Table-is-sorted`', () => {
 						const wrapper = shallow(
@@ -261,28 +288,40 @@ describe('Table', () => {
 					});
 
 					it('should render a container for sorted header content', () => {
-						const wrapper = shallow(
-							<Th isSorted>foo</Th>
+						const wrapper = mount(
+							<Table>
+								<Thead>
+									<Tr>
+										<Th isSorted>foo</Th>
+									</Tr>
+								</Thead>
+							</Table>
 						);
-
 						const containerWrapper = wrapper.find('ul.lucid-Table-is-sorted-container');
+
 						assert.equal(containerWrapper.length, 1, 'must have a container');
 						assert.equal(containerWrapper.find('li.lucid-Table-is-sorted-title').length, 1, 'container must have a title');
 						assert.equal(containerWrapper.find('li.lucid-Table-is-sorted-title').text(), 'foo', 'title content must match children');
 						assert.equal(containerWrapper.find('li.lucid-Table-is-sorted-caret').length, 1, 'container must have a caret');
-						assert.equal(containerWrapper.find('li.lucid-Table-is-sorted-caret').find('CaretIcon').length, 1, 'CaretIcon must be rendered');
-						assert(_.includes(containerWrapper.find('li.lucid-Table-is-sorted-caret').find('CaretIcon').prop('className'), 'lucid-Table-sort-icon'), 'CaretIcon must have correct className');
+						assert.equal(containerWrapper.find('li.lucid-Table-is-sorted-caret').find('.lucid-CaretIcon').length, 1, 'CaretIcon must be rendered');
+						assert.equal(containerWrapper.find('li.lucid-Table-is-sorted-caret').find('.lucid-CaretIcon.lucid-Table-sort-icon').length, 1, 'CaretIcon must have correct className');
 					});
 				});
 
 				describe('sortDirection', () => {
 					it('should pass thru to the CaretIcon when `isSorted` is also true', () => {
-						const wrapper = shallow(
-							<Th isSorted sortDirection='up' />
+						const wrapper = mount(
+							<Table>
+								<Thead>
+									<Tr>
+										<Th isSorted sortDirection='up' />
+									</Tr>
+								</Thead>
+							</Table>
 						);
 
 						const containerWrapper = wrapper.find('ul.lucid-Table-is-sorted-container');
-						assert.equal('up', containerWrapper.find('li.lucid-Table-is-sorted-caret').find('CaretIcon').prop('direction'), 'CaretIcon direction must match prop');
+						assert.equal(containerWrapper.find('li.lucid-Table-is-sorted-caret').find('.lucid-CaretIcon-is-up').length, 1, 'CaretIcon direction must match prop');
 					});
 				});
 			});

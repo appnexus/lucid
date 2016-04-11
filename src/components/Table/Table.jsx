@@ -264,10 +264,8 @@ const Th = React.createClass(createLucidComponentDefinition({
 			isResizable,
 			isSortable,
 			isSorted,
-			onResize,
 			sortDirection,
-			style,
-			width
+			style
 		} = this.props;
 		const {
 			activeWidth,
