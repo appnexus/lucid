@@ -318,7 +318,7 @@ const Th = React.createClass(createLucidComponentDefinition({
 			passiveWidth: this.state.activeWidth
 		});
 
-		window.document.body.style.cursor = 'initial';
+		window.document.body.style.cursor = 'auto';
 
 		if (this.props.onResize) {
 			this.props.onResize(this.state.activeWidth, {
