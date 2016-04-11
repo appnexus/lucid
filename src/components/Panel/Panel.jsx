@@ -50,10 +50,10 @@ const Panel = React.createClass(createLucidComponentDefinition({
 
 	render: function() {
 		const {
-			className,
-			style,
 			children,
-			isGutterless
+			className,
+			isGutterless,
+			style,
 		} = this.props;
 
 		const headerChildProp = _.first(Panel.Header.findInAllAsProps(this.props));
@@ -69,7 +69,7 @@ const Panel = React.createClass(createLucidComponentDefinition({
 				{headerChildProp ? (
 					<header
 						{...headerChildProp}
-						className={boundClassNames('&-header', headerChildProp.className)}
+						className={boundClassNames('&-Header', headerChildProp.className)}
 					/>
 				) : null}
 
@@ -80,7 +80,7 @@ const Panel = React.createClass(createLucidComponentDefinition({
 				{footerChildProp ? (
 					<footer
 						{...footerChildProp}
-						className={boundClassNames('&-footer', footerChildProp.className)}
+						className={boundClassNames('&-Footer', footerChildProp.className)}
 					/>
 				) : null}
 			</div>
