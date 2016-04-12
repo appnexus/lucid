@@ -61,6 +61,19 @@ const LabeledSwitch = React.createClass(createLucidComponentDefinition({
 		};
 	},
 
+	componentWillMount() {
+		this._labelKey = 0;
+	},
+
+	componentWillReceiveProps(nextProps) {
+		const currentLabel = _.first(LabeledSwitch.Label.findInAllAsProps(this.props)).children;
+		const nextLabel = _.first(LabeledSwitch.Label.findInAllAsProps(nextProps)).children;
+
+		if (currentLabel !== nextLabel) {
+			this._labelKey++;
+		}
+	},
+
 	render() {
 		const {
 			className,
@@ -72,7 +85,6 @@ const LabeledSwitch = React.createClass(createLucidComponentDefinition({
 		} = this.props;
 
 		const labelChildProps = _.first(LabeledSwitch.Label.findInAllAsProps(this.props));
-		const labelKey = isSelected ? 'selectedLabel' : 'unselectedLabel';
 
 		return (
 			<label
@@ -98,7 +110,7 @@ const LabeledSwitch = React.createClass(createLucidComponentDefinition({
 				>
 					{
 						labelChildProps
-								? <span key={labelKey}>{labelChildProps.children || labelChildProps}</span>
+								? <span key={this._labelKey}>{labelChildProps.children || labelChildProps}</span>
 								: null
 					}
 				</ReactCSSTransitionGroup>

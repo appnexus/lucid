@@ -11,6 +11,15 @@ import { createHashHistory } from 'history';
 import docgenMapRaw from './docgen.json';
 import { markdown } from 'markdown';
 import ColorPalette from './containers/colors';
+import Table from '../components/Table/Table.jsx';
+
+const {
+	Thead,
+	Tbody,
+	Tr,
+	Th,
+	Td,
+} = Table;
 
 const hashHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
@@ -71,6 +80,16 @@ function handleHighlightCode() {
 			hljs.highlightBlock(block); //eslint-disable-line
 		});
 	}
+}
+
+function getDescriptionAsHtml(description) {
+	return _.chain(description)
+		.thru((description) => {
+			return {
+				__html: markdown.toHTML(description)
+			};
+		})
+		.value();
 }
 
 const {
@@ -171,20 +190,16 @@ const Component = React.createClass({
 			componentName
 		} = this.props.params;
 
+		const component = _.get(docgenMap, componentName, {});
+		const childComponents = _.get(component, 'childComponents', []);
+
 		const componentProps = _.chain(docgenMap)
 			.get(`${componentName}.props`, [])
 			.toPairs() // this turns the object into an array of [propName, propDetails] so we can sort
 			.sortBy(x => x[0]) // sort by property name
 			.value()
 
-		const descriptionAsHTML = _.chain(docgenMap)
-			.get(`${componentName}.description`, '')
-			.thru((description) => {
-				return {
-					__html: markdown.toHTML(description)
-				};
-			})
-			.value();
+		const descriptionAsHTML = getDescriptionAsHtml(_.get(docgenMap, `${componentName}.description`));
 
 		const composesComponents = _.chain(docgenMap)
 			.get(`${componentName}.customData.madeFrom`, null)
@@ -216,17 +231,17 @@ const Component = React.createClass({
 				<h2>{componentName} {composesComponents}</h2>
 				<div dangerouslySetInnerHTML={descriptionAsHTML} />
 				<h3>Props</h3>
-				<table className='Component-props-table pure-table pure-table-bordered'>
-					<thead>
-						<tr>
-							<th>Name</th>
-							<th>Type</th>
-							<th>Required</th>
-							<th>Default</th>
-							<th>Description</th>
-						</tr>
-					</thead>
-					<tbody>
+				<Table style={{width:'100%'}}>
+					<Thead>
+						<Tr>
+							<Th>Name</Th>
+							<Th>Type</Th>
+							<Th>Required</Th>
+							<Th>Default</Th>
+							<Th>Description</Th>
+						</Tr>
+					</Thead>
+					<Tbody>
 						{_.map(componentProps, ([propName, propDetails]) => {
 							if (!propDetails || !propDetails.description) {
 								console.error(`Warning: There was an issue with the docs that were generated for component "${componentName}" and prop "${propName}". One reason might be that you have a default value for something that was never declared in propTypes.`);
@@ -234,11 +249,11 @@ const Component = React.createClass({
 							}
 
 							return (
-								<tr key={propName}>
-									<td>{propName}</td>
-									<td><PropType type={propDetails.type} componentName={componentName} /></td>
-									<td>{propDetails.required ? 'yes' : 'no'}</td>
-									<td>
+								<Tr key={propName}>
+									<Td hasBorderRight>{propName}</Td>
+									<Td hasBorderRight><PropType type={propDetails.type} componentName={componentName} /></Td>
+									<Td hasBorderRight>{propDetails.required ? 'yes' : 'no'}</Td>
+									<Td hasBorderRight>
 										{propDetails.defaultValue ?
 											<pre>
 												<code className='lang-javascript'>
@@ -246,13 +261,68 @@ const Component = React.createClass({
 												</code>
 											</pre>
 										: null}
-									</td>
-									<td dangerouslySetInnerHTML={{ __html: markdown.toHTML(propDetails.description)}} />
-								</tr>
+									</Td>
+									<Td dangerouslySetInnerHTML={{ __html: markdown.toHTML(propDetails.description)}} />
+								</Tr>
 							);
 						})}
-					</tbody>
-				</table>
+					</Tbody>
+				</Table>
+				{!_.isEmpty(childComponents) ? (
+					<section>
+						<h3>Child Components</h3>
+						{_.map(childComponents, (childComponent) => (
+							<section key={childComponent.displayName}>
+								<h4>{childComponent.displayName}</h4>
+								<div dangerouslySetInnerHTML={getDescriptionAsHtml(childComponent.description)} />
+								{!_.isNil(childComponent.props) ? (
+									<Table style={{width:'100%'}}>
+										<Thead>
+											<Tr>
+												<Th>Name</Th>
+												<Th>Type</Th>
+												<Th>Required</Th>
+												<Th>Default</Th>
+												<Th>Description</Th>
+											</Tr>
+										</Thead>
+										<Tbody>
+											{_.map((_.chain(childComponent)
+												.get('props', [])
+												.toPairs() // this turns the object into an array of [propName, propDetails] so we can sort
+												.sortBy(x => x[0]) // sort by property name
+												.value()
+											), ([propName, propDetails]) => {
+												if (!propDetails || _.isNil(propDetails.description)) {
+													console.error(`Warning: There was an issue with the docs that were generated for component "${componentName}.${childComponent.displayName}" and prop "${propName}". One reason might be that you have a default value for something that was never declared in propTypes.`);
+													return null;
+												}
+
+												return (
+													<Tr key={`${childComponent.displayName}-${propName}`}>
+														<Td hasBorderRight>{propName}</Td>
+														<Td hasBorderRight><PropType type={propDetails.type} componentName={childComponent.displayName} /></Td>
+														<Td hasBorderRight>{propDetails.required ? 'yes' : 'no'}</Td>
+														<Td hasBorderRight>
+															{propDetails.defaultValue ?
+																<pre>
+																	<code className='lang-javascript'>
+																		{_.get(propDetails, 'defaultValue.value', '')}
+																	</code>
+																</pre>
+															: null}
+														</Td>
+														<Td dangerouslySetInnerHTML={{ __html: markdown.toHTML(propDetails.description)}} />
+													</Tr>
+												);
+											})}
+										</Tbody>
+									</Table>
+								) : null}
+							</section>
+						))}
+					</section>
+				) : null}
 				<h3>Examples</h3>
 				<ul className='Component-examples'>
 					{_.map(_.get(examplesByComponent, componentName, []), (example) => {
