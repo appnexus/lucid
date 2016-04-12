@@ -379,14 +379,42 @@ const Table = React.createClass(createLucidComponentDefinition({
 	},
 	
 	renderCell(cell, handleRef=_.noop) {
+		if (_.isNil(cell)){
+			return null;
+		}
+
+		const {
+			className,
+			align,
+			hasCheckbox,
+			hasIcon,
+			hasButton,
+			rowSpan,
+			hasBorderRight,
+			hasBorderLeft,
+			isAfterRowSpan,
+			...passThrus
+		} = cell;
+
 		return !_.isNil(cell) ? (
 			<div
-				{...cell}
-				className='cell'
+				{...passThrus}
+				className={boundClassNames('&-cell', {
+					'&-align-left': align === 'left',
+					'&-align-center': align === 'center',
+					'&-align-right': align === 'right',
+					//'&-has-checkbox': hasCheckbox,
+					//'&-has-icon': hasIcon,
+					//'&-has-button': hasButton,
+					//'&-has-rowspan': !_.isNil(rowSpan),
+					'&-has-border-right': hasBorderRight,
+					'&-has-border-left': hasBorderLeft,
+					//'&-is-after-rowspan': isAfterRowSpan
+				}, className)}
 				style={{
-					border: '1px solid gray',
-					borderWidth: '0 1px 1px 0',
-					padding: 4,
+					//border: '1px solid gray',
+					//borderWidth: '0 1px 1px 0',
+					//padding: 4,
 					display: 'flex',
 					alignItems: 'center',
 				}}
@@ -398,7 +426,7 @@ const Table = React.createClass(createLucidComponentDefinition({
 	renderColumnList(columnList, columnIndex, startRowIndex=0, rowManagerKey, columnManagerKey) {
 		return (
 			<div
-				className='column'
+				className={boundClassNames('&-column')}
 				style={{
 					display: 'flex',
 					flexDirection: 'column',
@@ -410,7 +438,7 @@ const Table = React.createClass(createLucidComponentDefinition({
 		);
 	},
 
-	renderSubGrid(grid, startRowIndex=0, startColumnIndex=0, rowManagerKey='subgrid', columnManagerKey='subgrid') {
+	renderSubGrid(grid, startRowIndex=0, startColumnIndex=0, rowManagerKey='subgrid', columnManagerKey='subgrid', props={}) {
 		const elements = [];
 		for (let columnIndex=0; columnIndex < grid.length; columnIndex++) {
 			const column = grid[columnIndex];
@@ -424,7 +452,7 @@ const Table = React.createClass(createLucidComponentDefinition({
 					const bottomSubGrid = _.map(colSpanColumns, (subColumnList) => _.slice(subColumnList, maxColSpanCellIndex + 1));
 					elements.push(
 						<div
-							className='wrapper'
+							className={boundClassNames('&-wrapper')}
 							style={{
 								display: 'flex',
 								flexDirection: 'column',
@@ -450,7 +478,7 @@ const Table = React.createClass(createLucidComponentDefinition({
 
 		return (
 			<div
-				className='subGrid'
+				className={boundClassNames('&-subGrid', props.className)}
 				style={{
 					display: 'flex'
 				}}
@@ -517,8 +545,12 @@ const Table = React.createClass(createLucidComponentDefinition({
 			<div {...this.props} className={boundClassNames('&', {
 				'&-has-extra-whitespace': hasExtraWhitespace,
 			}, className)}>
-				{this.renderSubGrid(headerGrid, 0, 0, 'header', 'table')}
-				{this.renderSubGrid(bodyGrid, 0, 0, 'body', 'table')}
+				{this.renderSubGrid(headerGrid, 0, 0, 'header', 'table', {
+					className: boundClassNames('&-thead'),
+				})}
+				{this.renderSubGrid(bodyGrid, 0, 0, 'body', 'table', {
+					className: boundClassNames('&-tbody'),
+				})}
 			</div>
 		);
 	}
