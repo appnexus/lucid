@@ -18,7 +18,7 @@ const {
 export default React.createClass({
 	render() {
 		return(
-			<section>
+			<section style={{height: 3000}}>
 				<Table
 					widthColspan={6}
 					freezeColSpan={3}

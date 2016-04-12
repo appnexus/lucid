@@ -61,7 +61,7 @@ const StickySection = React.createClass(createLucidComponentDefinition({
 			}
 		}
 
-		if (window.scrollY >= footerBottom) {
+		if (_.isNumber(footerBottom) && window.scrollY >= footerBottom) {
 			this.setState({
 				isAboveFold: false
 			});

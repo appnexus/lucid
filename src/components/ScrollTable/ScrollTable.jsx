@@ -270,7 +270,7 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 						<span
 							className={boundClassNames('&-after')}
 							style={{
-								left: colspanWidth + scrollColspanWidth -20
+								left: colspanWidth + scrollColspanWidth - 20
 							}}
 						/>
 						{hasStickyHeader ? (
