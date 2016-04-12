@@ -176,6 +176,18 @@ export default React.createClass({
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
+
+					<Tr>
+						<Td>foo</Td>
+						<Td hasCheckbox><Checkbox/></Td>
+						<Td>isActive && isDisabled</Td>
+						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td hasButton><Button size='small' isDisabled={true}>button</Button></Td>
+						<Td>Sorted Column</Td>
+						<Td align='left' hasBorderLeft>align left</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
+					</Tr>
 				</Tbody>
 			</Table>
 		);

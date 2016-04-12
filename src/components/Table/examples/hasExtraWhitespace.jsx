@@ -18,7 +18,7 @@ export default React.createClass({
 			<Table hasExtraWhitespace>
 				<Thead>
 					<Tr>
-						<Th rowSpan={2}>RS</Th>
+					{/*<Th rowSpan={2}>RS</Th>*/}
 						<Th hasCheckbox rowSpan={2}>
 							<Checkbox></Checkbox>
 						</Th>
@@ -36,7 +36,7 @@ export default React.createClass({
 				</Thead>
 				<Tbody>
 					<Tr>
-						<Td rowSpan={14} hasBorderRight>RS</Td>
+					{/*<Td rowSpan={14} hasBorderRight>RS</Td>*/}
 						<Td hasCheckbox><Checkbox/></Td>
 						<Td>Text</Td>
 						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>

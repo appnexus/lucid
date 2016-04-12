@@ -25,7 +25,7 @@ const Thead = React.createClass(createLucidComponentDefinition({
 		} = this.props;
 
 		return (
-			<thead {...this.props} className={boundClassNames('&-thead', this.props.className)}>
+			<div {...this.props} className={boundClassNames('&-thead', this.props.className)}>
 				{_.map(
 					findElementsByType(children, [Tr]),
 					(trElement, index) => React.createElement(
@@ -37,7 +37,7 @@ const Thead = React.createClass(createLucidComponentDefinition({
 						}
 					)
 				)}
-			</thead>
+			</div>
 		);
 	}
 }));
@@ -48,7 +48,7 @@ const Thead = React.createClass(createLucidComponentDefinition({
 const Tbody = React.createClass(createLucidComponentDefinition({
 	render() {
 		return (
-			<tbody {...this.props} className={boundClassNames('&-tbody', this.props.className)} />
+			<div {...this.props} className={boundClassNames('&-tbody', this.props.className)} />
 		);
 	}
 }));
@@ -128,14 +128,20 @@ const Tr = React.createClass(createLucidComponentDefinition({
 		} = this.state;
 
 		return (
-			<tr {...this.props} className={boundClassNames({
-				'&-row': !isHeader,
-				'&-thead-row': isHeader,
-				'&-is-disabled': isDisabled,
-				'&-is-selected': isSelected,
-				'&-has-details': hasDetails,
-				'&-is-active': isActive,
-			}, className)}>
+			<div
+				{...this.props}
+				className={boundClassNames({
+					'&-row': !isHeader,
+					'&-thead-row': isHeader,
+					'&-is-disabled': isDisabled,
+					'&-is-selected': isSelected,
+					'&-has-details': hasDetails,
+					'&-is-active': isActive,
+				}, className)}
+				style={{
+					display: 'flex',
+				}}
+			>
 				{isFirstItemRowSpan ? React.Children.map(
 					children,
 					(childElement, index) => (
@@ -147,7 +153,7 @@ const Tr = React.createClass(createLucidComponentDefinition({
 						: childElement
 					)
 				) : children}
-			</tr>
+			</div>
 		);
 	}
 }));
@@ -212,17 +218,23 @@ const Th = React.createClass(createLucidComponentDefinition({
 		} = this.props;
 
 		return (
-			<th {...this.props} className={boundClassNames(
-				'&-cell', {
-				'&-align-left': align === 'left',
-				'&-align-center': align === 'center',
-				'&-align-right': align === 'right',
-				'&-has-checkbox': hasCheckbox,
-				'&-has-icon': hasIcon,
-				'&-has-button': hasButton,
-				'&-is-sortable': (isSortable === false ? isSortable : (isSorted || isSortable)),
-				'&-is-sorted': isSorted,
-			}, className)}>
+			<div
+				{...this.props}
+				className={boundClassNames(
+					'&-cell', {
+					'&-align-left': align === 'left',
+					'&-align-center': align === 'center',
+					'&-align-right': align === 'right',
+					'&-has-checkbox': hasCheckbox,
+					'&-has-icon': hasIcon,
+					'&-has-button': hasButton,
+					'&-is-sortable': (isSortable === false ? isSortable : (isSorted || isSortable)),
+					'&-is-sorted': isSorted,
+				}, className)}
+				style={{
+					width: 200,
+				}}
+			>
 				{isSorted ? (
 					<ul className={boundClassNames('&-is-sorted-container')}>
 						<li className={boundClassNames('&-is-sorted-title')}>{children}</li>
@@ -231,7 +243,7 @@ const Th = React.createClass(createLucidComponentDefinition({
 						</li>
 					</ul>
 				) : children}
-			</th>
+			</div>
 		);
 	}
 }));
@@ -294,19 +306,25 @@ const Td = React.createClass(createLucidComponentDefinition({
 		} = this.props;
 
 		return (
-			<td {...this.props} className={boundClassNames(
-				'&-cell', {
-				'&-align-left': align === 'left',
-				'&-align-center': align === 'center',
-				'&-align-right': align === 'right',
-				'&-has-checkbox': hasCheckbox,
-				'&-has-icon': hasIcon,
-				'&-has-button': hasButton,
-				'&-has-rowspan': !_.isNil(rowSpan),
-				'&-has-border-right': hasBorderRight,
-				'&-has-border-left': hasBorderLeft,
-				'&-is-after-rowspan': isAfterRowSpan
-			}, className)} />
+			<div
+				{...this.props}
+				className={boundClassNames(
+					'&-cell', {
+					'&-align-left': align === 'left',
+					'&-align-center': align === 'center',
+					'&-align-right': align === 'right',
+					'&-has-checkbox': hasCheckbox,
+					'&-has-icon': hasIcon,
+					'&-has-button': hasButton,
+					'&-has-rowspan': !_.isNil(rowSpan),
+					'&-has-border-right': hasBorderRight,
+					'&-has-border-left': hasBorderLeft,
+					'&-is-after-rowspan': isAfterRowSpan
+				}, className)}
+				style={{
+					width: 200,
+				}}
+			/>
 		);
 	}
 }));
@@ -321,13 +339,21 @@ const Td = React.createClass(createLucidComponentDefinition({
 const Table = React.createClass(createLucidComponentDefinition({
 	displayName: 'Table',
 
-	statics: {
-		Thead,
-		Tbody,
-		Tr,
-		Th,
-		Td,
+	childProps: {
+		Thead: null,
+		Tbody: null,
+		Tr: null,
+		Th: null,
+		Td: null,
 	},
+
+	//statics: {
+	//	Thead,
+	//	Tbody,
+	//	Tr,
+	//	Th,
+	//	Td,
+	//},
 
 	propTypes: {
 		/**
@@ -351,20 +377,302 @@ const Table = React.createClass(createLucidComponentDefinition({
 			hasExtraWhitespace: false,
 		};
 	},
+	
+	renderCell(cell, handleRef=_.noop) {
+		return !_.isNil(cell) ? (
+			<div
+				{...cell}
+				className='cell'
+				style={{
+					border: '1px solid gray',
+					borderWidth: '0 1px 1px 0',
+					padding: 4,
+					display: 'flex',
+					alignItems: 'center',
+				}}
+				ref={handleRef}
+			/>
+		) : null;
+	},
+
+	renderColumnList(columnList, columnIndex, startRowIndex=0, rowManagerKey, columnManagerKey) {
+		return (
+			<div
+				className='column'
+				style={{
+					display: 'flex',
+					flexDirection: 'column',
+				}}
+				ref={this.getGridColumnWidthManager(columnManagerKey).onColumnRender(columnIndex)}
+			>
+				{_.map(columnList, (cell, index) => this.renderCell(cell, this.getGridRowHeightManager(rowManagerKey).onCellRender(startRowIndex + index, cell)))}
+			</div>
+		);
+	},
+
+	renderSubGrid(grid, startRowIndex=0, startColumnIndex=0, rowManagerKey='subgrid', columnManagerKey='subgrid') {
+		const elements = [];
+		for (let columnIndex=0; columnIndex < grid.length; columnIndex++) {
+			const column = grid[columnIndex];
+			if (!_.isEmpty(column) && !_.every(column, _.isEmpty)) {
+				const maxColSpanCell = _.maxBy(column, (cell) => (!_.isNil(cell) && _.isNumber(cell.colSpan) ? cell.colSpan : 1));
+				const maxColSpan = !_.isNil(maxColSpanCell) && _.isNumber(maxColSpanCell.colSpan) ? maxColSpanCell.colSpan : 1;
+				if (maxColSpan > 1) {
+					const maxColSpanCellIndex = _.indexOf(column, maxColSpanCell);
+					const colSpanColumns = _.slice(grid, columnIndex, columnIndex + maxColSpan);
+					const topSubGrid = _.map(colSpanColumns, (subColumnList) => _.slice(subColumnList, 0, maxColSpanCellIndex));
+					const bottomSubGrid = _.map(colSpanColumns, (subColumnList) => _.slice(subColumnList, maxColSpanCellIndex + 1));
+					elements.push(
+						<div
+							className='wrapper'
+							style={{
+								display: 'flex',
+								flexDirection: 'column',
+							}}
+						>
+							{[
+								(maxColSpanCellIndex !== 0 ? this.renderSubGrid(topSubGrid, startRowIndex, columnIndex, rowManagerKey, columnManagerKey): null),
+								(this.renderCell(maxColSpanCell, this.getGridRowHeightManager(rowManagerKey).onCellRender(maxColSpanCellIndex, maxColSpanCell))),
+								(this.renderSubGrid(bottomSubGrid, maxColSpanCellIndex + 1, columnIndex, rowManagerKey, columnManagerKey))
+							]}
+						</div>
+					);
+					columnIndex += maxColSpan - 1;
+				} else {
+					elements.push(this.renderColumnList(column, startColumnIndex + columnIndex, startRowIndex, rowManagerKey, columnManagerKey));
+				}
+			}
+		}
+
+		if (_.isEmpty(elements)) {
+			return null;
+		}
+
+		return (
+			<div
+				className='subGrid'
+				style={{
+					display: 'flex'
+				}}
+			>
+				{elements}
+			</div>
+		);
+	},
+
+	getGridRowHeightManager(rowManagerKey) {
+		if (_.isNil(this.gridRowHeightManagers)) {
+			this.gridRowHeightManagers = {};
+		}
+		if (_.isNil(this.gridRowHeightManagers[rowManagerKey])) {
+			this.gridRowHeightManagers[rowManagerKey] = GridRowHeightManager.create();
+		}
+		return this.gridRowHeightManagers[rowManagerKey];
+	},
+
+	getGridColumnWidthManager(columnManagerKey) {
+		if (_.isNil(this.gridColumnWidthManagers)) {
+			this.gridColumnWidthManagers = {};
+		}
+		if (_.isNil(this.gridColumnWidthManagers[columnManagerKey])) {
+			this.gridColumnWidthManagers[columnManagerKey] = GridColumnWidthManager.create();
+		}
+		return this.gridColumnWidthManagers[columnManagerKey];
+	},
+
+	componentDidUpdate() {
+		if (!_.isNil(this.gridRowHeightManagers)) {
+			_.forEach(this.gridRowHeightManagers, (manager) => {
+				manager.normalizeHeights();
+			});
+		}
+		if (!_.isNil(this.gridColumnWidthManagers)) {
+			_.forEach(this.gridColumnWidthManagers, (manager) => {
+				manager.normalizeWidths();
+			});
+		}
+	},
 
 	render() {
 
 		const {
+			children,
 			className,
 			hasExtraWhitespace,
 		} = this.props;
 
+		const theadProps = _.first(Table.Thead.findInAllAsProps(this.props));
+		const theadTrPropsList = Table.Tr.findInAllAsProps(theadProps);
+		const thPropsListList = _.map(theadTrPropsList, (theadTrProps) => Table.Th.findInAllAsProps(theadTrProps));
+		const tbodyProps = _.first(Table.Tbody.findInAllAsProps(this.props));
+		const tbodyTrPropsList = Table.Tr.findInAllAsProps(tbodyProps);
+		const tdPropsListList = _.map(tbodyTrPropsList, (tbodyTrProps) => Table.Td.findInAllAsProps(tbodyTrProps));
+
+		//console.log(thPropsListList);
+		const headerGrid = rowToColumnGrid(gridify(thPropsListList, false));
+		const bodyGrid = rowToColumnGrid(gridify(tdPropsListList, false));
+		//console.log(headerGrid);
+
 		return (
-			<table {...this.props} className={boundClassNames('&', {
+			<div {...this.props} className={boundClassNames('&', {
 				'&-has-extra-whitespace': hasExtraWhitespace,
-			}, className)} />
+			}, className)}>
+				{this.renderSubGrid(headerGrid, 0, 0, 'header', 'table')}
+				{this.renderSubGrid(bodyGrid, 0, 0, 'body', 'table')}
+			</div>
 		);
 	}
 }));
+
+class GridRowHeightManager {
+	constructor() {
+		this.rows = {};
+		this.debouncedNormalizeHeights = _.debounce(() => this.normalizeHeights(), 10);
+	}
+
+	static create(...args) {
+		return new GridRowHeightManager(...args);
+	}
+
+	onCellRender(rowIndex, props={}) {
+		if (_.isNil(this.rows[rowIndex])) {
+			this.rows[rowIndex] = [];
+		}
+		return (node) => {
+			this.rows[rowIndex].push({props, node});
+			this.debouncedNormalizeHeights();
+		};
+	}
+
+	getMaxHeightForRow(rowIndex) {
+		const rowCells = _.get(this.rows, rowIndex, []);
+		return _.max(_.map(rowCells, ({node, props}) => _.get(props, 'rowSpan', 1) === 1 ? node.getBoundingClientRect().height : 0));
+	}
+
+	sumRowHeights(rowIndices) {
+		return _.sum(_.map(rowIndices, (rowIndex) => this.getMaxHeightForRow(rowIndex)));
+	}
+
+	setRowHeight(rowIndex, height) {
+		const rowCells = _.get(this.rows, rowIndex, []);
+		_.forEach(rowCells, ({props, node}) => {
+			const rowSpan = _.get(props, 'rowSpan', 1);
+			if(rowSpan === 1) {
+				node.style.height = height + 'px';
+			}
+		})
+	}
+
+	normalizeHeights() {
+		const rowIndices = _.map(_.keys(this.rows), _.parseInt);
+		_.forEach(rowIndices, (rowIndex) => {
+			const row = this.rows[rowIndex];
+			this.setRowHeight(rowIndex, this.getMaxHeightForRow(rowIndex));
+			_.forEach(row, ({props, node}) => {
+				const rowSpan = _.get(props, 'rowSpan', 1);
+				if(rowSpan > 1) {
+					const rowSpanHeight = this.sumRowHeights(_.filter(rowIndices, (idx) => _.inRange(idx, rowIndex, rowIndex + rowSpan)));
+					node.style.height = rowSpanHeight + 'px';
+				}
+			});
+		});
+	}
+}
+
+class GridColumnWidthManager {
+	constructor() {
+		this.columns = {};
+		this.debouncedNormalizeWidths = _.debounce(() => this.normalizeWidths(), 10);
+	}
+
+	static create(...args) {
+		return new GridColumnWidthManager(...args);
+	}
+
+	onColumnRender(columnIndex) {
+		if (_.isNil(this.columns[columnIndex])) {
+			this.columns[columnIndex] = [];
+		}
+		return (node) => {
+			this.columns[columnIndex].push({node});
+			this.debouncedNormalizeWidths();
+		};
+	}
+
+	getMaxWidthForColumn(columnIndex) {
+		const columns = _.get(this.columns, columnIndex, []);
+		return _.max(_.map(columns, ({node}) => node.getBoundingClientRect().width));
+	}
+
+	setColumnWidth(columnIndex, width) {
+		const columns = _.get(this.columns, columnIndex, []);
+		_.forEach(columns, ({node}) => {
+			node.style.width = width + 'px';
+		});
+	}
+
+	normalizeWidths() {
+		const columnIndices = _.map(_.keys(this.columns), _.parseInt);
+		_.forEach(columnIndices, (columnIndex) => {
+			this.setColumnWidth(columnIndex, this.getMaxWidthForColumn(columnIndex));
+		});
+	}
+
+}
+
+function gridify(cellRowList, hasDuplicates=true) {
+	const grid = [];
+
+	_.forEach(cellRowList, (cellRow, rowIndex) => {
+		if (_.isNil(grid[rowIndex])) {
+			grid[rowIndex] = [];
+		}
+		_.forEach(cellRow, (cell) => {
+			let rowSpan = 1;
+			let colSpan = 1;
+			let isCellIncluded = false;
+
+			if (_.isNumber(cell.rowSpan)) {
+				rowSpan = cell.rowSpan;
+			}
+			if (_.isNumber(cell.colSpan)) {
+				colSpan = cell.colSpan;
+			}
+
+			let rowSpanCount = 0;
+			_.times(rowSpan, () => {
+				_.times(colSpan, () => {
+					if (_.isNil(grid[rowIndex + rowSpanCount])) {
+						grid[rowIndex + rowSpanCount] = [];
+					}
+					if (hasDuplicates || !isCellIncluded) {
+						grid[rowIndex + rowSpanCount].push(cell);
+						isCellIncluded = true;
+					} else {
+						grid[rowIndex + rowSpanCount].push(null);
+					}
+				});
+				rowSpanCount++;
+			});
+		});
+	});
+
+	return grid;
+}
+
+function someInGrid(grid, predicate) {
+	for (let rowIndex=0; rowIndex < grid.length; rowIndex++) {
+		for (let columnIndex=0; columnIndex < grid[rowIndex].length; columnIndex++) {
+			if (predicate(grid[rowIndex][columnIndex], [rowIndex, columnIndex], grid)) {
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+function rowToColumnGrid(rowBasedGrid) {
+	return _.unzip(rowBasedGrid);
+}
 
 export default Table;
