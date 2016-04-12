@@ -152,16 +152,16 @@ const VerticalListMenu = React.createClass(createLucidComponentDefinition({
 							<span className={boundClassNames('&-Item-content-text')}>
 								{otherChildren}
 							</span>
-								{hasExpander ?
-									<div
-										className={boundClassNames('&-Item-expander')}
-										onClick={_.partial(this.handleToggle, index, itemChildProp)}
-									>
-										<ChevronIcon
-											direction={actualIsExpanded ? 'up' : 'down'}
-										/>
-									</div>
-								: null}
+							{hasExpander ?
+								<div
+									className={boundClassNames('&-Item-expander')}
+									onClick={_.partial(this.handleToggle, index, itemChildProp)}
+								>
+									<ChevronIcon
+										direction={actualIsExpanded ? 'up' : 'down'}
+									/>
+								</div>
+							: null}
 							</div>
 
 							<div className={boundClassNames('&-Item-nested-list', {
