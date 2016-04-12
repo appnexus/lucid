@@ -23,7 +23,7 @@ export default React.createClass({
 	render() {
 		return (
 			<VerticalListMenu
-				style={{ width: '250px' }}
+				style={{ width: 250 }}
 				onSelect={_.partial(this.handleSelect, 'one')}
 				selectedIndices={this.state.currentList === 'one' ? this.state.selectedIndices : []}
 			>
