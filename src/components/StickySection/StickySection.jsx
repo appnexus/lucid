@@ -56,7 +56,7 @@ const StickySection = React.createClass(createLucidComponentDefinition({
 
 		const nextContainerRect = this.getContainerRect();
 
-		if (window.scrollY >= nextContainerRect.top) {
+		if (window.pageYOffset >= nextContainerRect.top) {
 			if (!isAboveFold) {
 				this.setState({
 					isAboveFold: true
@@ -70,7 +70,7 @@ const StickySection = React.createClass(createLucidComponentDefinition({
 			}
 		}
 
-		if (_.isNumber(lowerBound) && window.scrollY >= lowerBound) {
+		if (_.isNumber(lowerBound) && window.pageYOffset >= lowerBound) {
 			this.setState({
 				isAboveFold: false
 			});
@@ -83,6 +83,8 @@ const StickySection = React.createClass(createLucidComponentDefinition({
 			|| containerRect.right !== nextContainerRect.right
 			|| containerRect.top !== nextContainerRect.top
 			|| containerRect.width !== nextContainerRect.width
+			|| containerRect.scrollWidth !== nextContainerRect.scrollWidth
+			|| containerRect.frameLeft !== nextContainerRect.frameLeft
 		) {
 			this.setState({
 				containerRect: nextContainerRect
@@ -93,6 +95,8 @@ const StickySection = React.createClass(createLucidComponentDefinition({
 	getContainerRect() {
 		const containerRect = getAbsoluteBoundingClientRect(this.refs.scrollContainer);
 		const stickyRect = this.refs.stickySection.getBoundingClientRect();
+		const frameRect = this.refs.stickyFrame.getBoundingClientRect();
+
 
 		return {
 			bottom: containerRect.top + stickyRect.height,
@@ -102,6 +106,7 @@ const StickySection = React.createClass(createLucidComponentDefinition({
 			top: containerRect.top,
 			scrollWidth: this.refs.stickySection.scrollWidth,
 			width: containerRect.width,
+			frameLeft: frameRect.left,
 		};
 	},
 
@@ -147,6 +152,7 @@ const StickySection = React.createClass(createLucidComponentDefinition({
 			>
 				<div
 					className={boundClassNames('&-sticky-frame')}
+					ref='stickyFrame'
 					style={{
 						...(isAboveFold ? {
 							position: 'fixed',
@@ -163,9 +169,9 @@ const StickySection = React.createClass(createLucidComponentDefinition({
 						ref='stickySection'
 						style={{
 							...(isAboveFold ? {
-								position: 'fixed',
+								position: 'absolute',
 								top: 0,
-								left: containerRect.left,
+								left: containerRect.left - containerRect.frameLeft,
 								width: containerRect.scrollWidth,
 								height: containerRect.height,
 							} : {

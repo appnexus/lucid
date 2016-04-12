@@ -38,20 +38,20 @@ describe('StickySection', () => {
 				);
 
 				// scroll to position 499
-				window.scrollY = 499;
+				window.pageYOffset = 499;
 				dispatchDOMEvent(window, 'scroll');
 
 				// check that the fixed position sticky section is rendered
 				assert.equal(_.get(wrapper.find('.lucid-StickySection-sticky-frame').prop('style'), 'position'), 'fixed', 'sticky frame must be position fixed');
-				assert.equal(_.get(wrapper.find('.lucid-StickySection-sticky-section').prop('style'), 'position'), 'fixed', 'sticky section must be position fixed');
+				assert.equal(_.get(wrapper.find('.lucid-StickySection-sticky-section').prop('style'), 'position'), 'absolute', 'sticky section must be position absolute');
 
 				// scroll to position 501, passed the lowerBound value
-				window.scrollY = 501;
+				window.pageYOffset = 501;
 				dispatchDOMEvent(window, 'scroll');
 
 				// check that the sticky section is no longer fixed position
 				assert.notEqual(_.get(wrapper.find('.lucid-StickySection-sticky-frame').prop('style'), 'position'), 'fixed', 'sticky frame must not be position fixed');
-				assert.notEqual(_.get(wrapper.find('.lucid-StickySection-sticky-section').prop('style'), 'position'), 'fixed', 'sticky section must not be position fixed');
+				assert.notEqual(_.get(wrapper.find('.lucid-StickySection-sticky-section').prop('style'), 'position'), 'absolute', 'sticky section must not be position absolute');
 			});
 		});
 		describe('viewportWidth', () => {
