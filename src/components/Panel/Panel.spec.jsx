@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import assert from 'assert';
 import { common } from '../../util/generic-tests';
 
@@ -8,53 +8,9 @@ import Panel from './Panel';
 describe('Panel', () => {
 	common(Panel);
 
-	describe('Panel.Header', () => {
-		it('renders a header element when included.', () => {
-			const wrapper = mount(
-				<Panel>
-					<Panel.Header>Header</Panel.Header>
-					Content
-				</Panel>
-			);
-			assert.equal(wrapper.find('.lucid-Panel-header').length, 1);
-		});
-
-		it('does not render a header element when not included.', () => {
-			const wrapper = mount(
-				<Panel>
-					Content
-				</Panel>
-			);
-			assert.equal(wrapper.find('.lucid-Panel-header').length, 0);
-		});
-	});
-
-	describe('Panel.Footer', () => {
-		it('renders a footer element when included.', () => {
-			const wrapper = mount(
-				<Panel>
-					Content
-					<Panel.Footer>
-						<button>Save</button>
-					</Panel.Footer>
-				</Panel>
-			);
-			assert.equal(wrapper.find('.lucid-Panel-footer').length, 1);
-		});
-
-		it('does not render a footer element when not included.', () => {
-			const wrapper = mount(
-				<Panel>
-					Content
-				</Panel>
-			);
-			assert.equal(wrapper.find('.lucid-Panel-footer').length, 0);
-		});
-	});
-
-	describe('any other children', () => {
-		it('renders any children that are not instances of `Panel.Header` or `Panel.Footer`.', () => {
-			const wrapper = mount(
+	describe('render', () => {
+		it('should render any children that are not instances of `Panel.Header` or `Panel.Footer`', () => {
+			const wrapper = shallow(
 				<Panel>
 					<Panel.Header>Header</Panel.Header>
 					A Cool Content
@@ -62,7 +18,89 @@ describe('Panel', () => {
 				</Panel>
 			);
 			assert.equal(wrapper.find('.lucid-Panel-content').length, 1);
-			assert.equal(wrapper.find('.lucid-Panel-content').text(), 'A Cool Content');
+			assert(wrapper.contains('A Cool Content'));
 		});
+	});
+
+	describe('props', () => {
+		describe('isGutterless', () => {
+			it('should apply the correct class', () => {
+				const wrapper = shallow(<Panel />);
+				assert.equal(wrapper.find('.lucid-Panel-is-not-gutterless').length, 1);
+			});
+		});
+	});
+
+	describe('childComponents', () => {
+		describe('Header', () => {
+			it('should render', () => {
+				const wrapper = shallow(
+					<Panel>
+						<Panel.Header>Header</Panel.Header>
+						Content
+					</Panel>
+				);
+				assert.equal(wrapper.find('.lucid-Panel-Header').length, 1);
+			});
+
+			it('should not render when not included', () => {
+				const wrapper = shallow(
+					<Panel>
+						Content
+					</Panel>
+				);
+				assert.equal(wrapper.find('.lucid-Panel-Header').length, 0);
+			});
+
+			it('should pass through className', () => {
+				const wrapper = shallow(
+					<Panel>
+						<Panel.Header className='foo'>Header</Panel.Header>
+						Content
+					</Panel>
+				);
+				assert.equal(wrapper.find('.lucid-Panel-Header.foo').length, 1);
+			});
+		});
+
+		describe('Footer', () => {
+			it('should render', () => {
+				const wrapper = shallow(
+					<Panel>
+						Content
+						<Panel.Footer>
+							<button>Save</button>
+						</Panel.Footer>
+					</Panel>
+				);
+				assert.equal(wrapper.find('.lucid-Panel-Footer').length, 1);
+			});
+
+			it('should pass through className', () => {
+				const wrapper = shallow(
+					<Panel>
+						<Panel.Footer className='bar'>Footer</Panel.Footer>
+						Content
+					</Panel>
+				);
+				assert.equal(wrapper.find('.lucid-Panel-Footer.bar').length, 1);
+			});
+
+			it('should not render when not included', () => {
+				const wrapper = shallow(
+					<Panel>
+						Content
+					</Panel>
+				);
+				assert.equal(wrapper.find('.lucid-Panel-footer').length, 0);
+			});
+		});
+
+	});
+
+
+
+
+	describe('any other children', () => {
 	});
 });
