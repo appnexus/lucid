@@ -155,17 +155,6 @@ const Tr = React.createClass(createLucidComponentDefinition({
 	}
 }));
 
-const ResizableThContent = ({ children, onDrag, onDragEnd, onDragStart }) => (
-	<div className={boundClassNames('&-is-resizable-container')}>
-		<div className={boundClassNames('&-is-resizable-content')}>{children}</div>
-		<DragCaptureZone
-			onDrag={onDrag}
-			onDragEnd={onDragEnd}
-			onDragStart={onDragStart}
-		/>
-	</div>
-);
-
 const SortedThContent = ({ children, sortDirection }) => (
 	<ul className={boundClassNames('&-is-sorted-container')}>
 		<li className={boundClassNames('&-is-sorted-title')}>{children}</li>
@@ -296,13 +285,16 @@ const Th = React.createClass(createLucidComponentDefinition({
 				}) : style}
 			>
 				{isResizable ? (
-					<ResizableThContent
-						onDrag={this.handleDragged}
-						onDragEnd={this.handleDragEnded}
-						onDragStart={this.handleDragStarted}
-					>
-						{isSorted ? <SortedThContent sortDirection={sortDirection}>{children}</SortedThContent> : children}
-					</ResizableThContent>
+					<div className={boundClassNames('&-is-resizable-container')}>
+						<div className={boundClassNames('&-is-resizable-content')}>
+							{isSorted ? <SortedThContent sortDirection={sortDirection}>{children}</SortedThContent> : children}
+						</div>
+						<DragCaptureZone
+							onDrag={this.handleDragged}
+							onDragEnd={this.handleDragEnded}
+							onDragStart={this.handleDragStarted}
+						/>
+					</div>
 				) : null}
 				{isSorted && !isResizable ? <SortedThContent sortDirection={sortDirection}>{children}</SortedThContent> : null}
 				{!isSorted && !isResizable ? children : null}
