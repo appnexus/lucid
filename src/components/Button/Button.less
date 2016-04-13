@@ -8,6 +8,9 @@
 @Button-size-borderRadius: @size-borderRadius;
 
 .lucid-Button {
+	// Normalize SVG
+	#normalize > .svg();
+	// Mixins
 	.no-safari-flicker();
 	.box-sizing();
 	.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
@@ -21,6 +24,8 @@
 	padding: 0 @Button-size-padding;
 	cursor: pointer;
 	outline: none;
+
+
 	&:before {border-radius: @Button-size-borderRadius;}
 
 	& &-content {
