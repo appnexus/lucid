@@ -1,103 +1,159 @@
-// button sizes
-@Button-size-padding: @size-standard;
-// take off two pixels for the border
-@Button-size-lineHeight: @size-standard-height - 2;
-// take off six pixels for the short button
-@Button-size-shortlineHeight: @Button-size-lineHeight - 6;
+@Button-size-padding: @size-L;
+@Button-size-height: @size-standard-height;
+@Button-size-height-small: @size-standard-height - 8;
+@Button-size-height-large: @size-standard-height + 12;
 @Button-size-borderRadius: @size-borderRadius;
 
 .lucid-Button {
+	// Mixins
 	.no-safari-flicker();
 	.box-sizing();
 	.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 	cursor: pointer;
-	display: inline-block;
-	outline: none;
+	height: @Button-size-height;
 	border: 1px solid @featured-color-default-borderColor;
 	border-radius: @Button-size-borderRadius;
 	font: @font;
 	letter-spacing: .05em;
-	line-height: @Button-size-lineHeight;
 	padding: 0 @Button-size-padding;
+	cursor: pointer;
+	outline: none;
+
+
+	&:before {border-radius: @Button-size-borderRadius;}
+
+	& &-content {
+
+		> .lucid-Icon {
+			margin-left: -1em/2;
+			transition: color 0.1s, fill 0.1s;
+		}
+		> span {
+			transition: color 0.1s, fill 0.1s;
+		}
+	}
 
 	// Types
-	&-primary {
-		color: @color-white;
-		border-color: @featured-color-primary-borderColor;
-		font-weight: 500;
+	&&-primary {
 		.gradient-animation(@featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
 		.make-is-disabled(lucid-Button, @featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
-	}
-	&-success {
+		.bold();
+		border-color: @featured-color-primary-borderColor;
 		color: @color-white;
-		border-color: @featured-color-success-borderColor;
-		font-weight: 500;
+	}
+	&&-success {
 		.gradient-animation(@featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
 		.make-is-disabled(lucid-Button, @featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
-	}
-	&-info {
+		.bold();
 		color: @color-white;
-		border-color: @featured-color-info-borderColor;
-		font-weight: 500;
+		border-color: @featured-color-success-borderColor;
+	}
+	&&-info {
 		.gradient-animation(@featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
 		.make-is-disabled(lucid-Button, @featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
-	}
-	&-warning {
+		.bold();
+		border-color: @featured-color-info-borderColor;
 		color: @color-white;
-		border-color: @featured-color-warning-borderColor;
-		font-weight: 500;
+	}
+	&&-warning {
 		.gradient-animation(@featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
 		.make-is-disabled(lucid-Button, @featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
-	}
-	&-danger {
+		.bold();
+		border-color: @featured-color-warning-borderColor;
 		color: @color-white;
-		border-color: @featured-color-danger-borderColor;
-		font-weight: 500;
+	}
+	&&-danger {
 		.gradient-animation(@featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
 		.make-is-disabled(lucid-Button, @featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
+		.bold();
+		border-color: @featured-color-danger-borderColor;
+		color: @color-white;
 	}
-	&-link {
+	&&-link {
 		.gradient-reset();
 		.make-is-disabled(lucid-Button);
 		border: none;
 		background: none;
 		color: @color-linkColor;
+
 		&:hover {
-			color: @color-linkColorHover;
 			background: none;
+			color: @color-linkColorHover;
 			text-decoration: underline;
 		}
+
+		&:active,
+		&:focus {
+			background: none;
+			color: @color-linkColorHover;
+			text-decoration: underline;
+			box-shadow: none;
+
+			.lucid-Icon { fill: @color-linkColorHover; }
+		}
+		&:active:before { opacity: 0;}
+
+		.lucid-Button-content{ line-height: 1em; }
+		.lucid-Icon { margin-right: 0.25em; }
+		.lucid-Icon + span { line-height: 1.4em; }
 	}
 
 	// Sizes
-	&-short {
-		line-height: @Button-size-shortlineHeight;
+	&&-short {
+		height: @Button-size-height-small;
 	}
-	&-small {
-		line-height: @Button-size-shortlineHeight;
+	&&-small {
+		height: @Button-size-height-small;
 		padding: 0 @Button-size-padding/1.5;
 	}
-	&-large {
-		line-height: @Button-size-lineHeight*1.5;
+	&&-large {
+		height: @Button-size-height-large;
 		padding: 0 @Button-size-padding*1.5;
 		font-size: 1.2em;
+
+		.lucid-Icon {
+			width: 1.2em;
+			height: 1.2em;
+		}
 	}
 
 	// States
-	&-is-active {
+	&&-is-active {
 		.gradient-reset();
 		background: @featured-color-primary;
 		border-color: @featured-color-primary;
 		color: @color-white;
+
+		.lucid-Icon { fill: @color-white; }
+	}
+	&&-is-active&-primary {
+		background: @featured-color-primary;
+		border-color: @featured-color-primary;
+	}
+	&&-is-active&-success {
+		border-color: @featured-color-success-borderColor;
+		background: @featured-color-success;
+	}
+	&&-is-active&-info {
+		border-color: @featured-color-info-borderColor;
+		background: @featured-color-info;
+	}
+	&&-is-active&-warning {
+		border-color: @featured-color-warning-borderColor;
+		background: @featured-color-warning;
+	}
+	&&-is-active&-danger {
+		border-color: @featured-color-danger-borderColor;
+		background: @featured-color-danger;
 	}
 	&-is-disabled {
 		.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
-		cursor: not-allowed;
 		.opacity();
+		.no-cursor();
 	}
 
 	// Also needed in some cases to beat other libraries (e.g. pure.css)
 	&[disabled] {
-		cursor: not-allowed;
+		.no-cursor();
 	}
 }

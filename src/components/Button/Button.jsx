@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 const boundClassNames = lucidClassNames.bind('&-Button');
@@ -30,10 +31,6 @@ const Button = React.createClass({
 		 * activates the button by giving it a "pressed down" look
 		 */
 		isActive: bool,
-		/**
-		 * set this to `true` if you want to include an icon as a child
-		 */
-		hasIcon: bool,
 		/**
 		 * class names that are appended to the defaults
 		 */
@@ -76,7 +73,6 @@ const Button = React.createClass({
 		return {
 			isDisabled: false,
 			isActive: false,
-			hasIcon: false,
 			onClick: _.noop
 		};
 	},
@@ -86,8 +82,11 @@ const Button = React.createClass({
 			isDisabled,
 			onClick,
 		} = this.props;
+		const domNode = ReactDOM.findDOMNode(this);
 
 		if (!isDisabled) {
+			// required to correctly apply the focus state in Safari and Firefox
+			domNode.focus();
 			onClick({ event, props: this.props });
 		}
 	},
@@ -96,7 +95,6 @@ const Button = React.createClass({
 		const {
 			isDisabled,
 			isActive,
-			hasIcon,
 			kind,
 			size,
 			className,
@@ -110,7 +108,6 @@ const Button = React.createClass({
 				className={boundClassNames('&', {
 					'&-is-disabled': isDisabled,
 					'&-is-active': isActive,
-					'&-has-icon': hasIcon,
 					'&-primary': kind === 'primary',
 					'&-link': kind === 'link',
 					'&-success': kind === 'success',
