@@ -85,9 +85,9 @@ const Button = React.createClass({
 		const domNode = ReactDOM.findDOMNode(this);
 
 		if (!isDisabled) {
-			onClick({ event, props: this.props });
 			// required to correctly apply the focus state in Safari and Firefox
 			domNode.focus();
+			onClick({ event, props: this.props });
 		}
 	},
 
