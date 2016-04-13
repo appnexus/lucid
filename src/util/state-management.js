@@ -48,18 +48,16 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 				return srcValue(...args);
 			};
 		}
-		if (_.isArray(srcValue) && _.isArray(objValue)) {
-			return srcValue;
-		}
+
+		return overwriteArrays(objValue, srcValue);
 	};
 
 	const bindFunctionOverwritesCustomizer = (objValue, srcValue) => {
 		if (_.isFunction(srcValue) && _.isFunction(objValue)) {
 			return bindReducerToState(srcValue, { getState, setState }, objValue.path);
 		}
-		if (_.isArray(srcValue) && _.isArray(objValue)) {
-			return srcValue;
-		}
+
+		return overwriteArrays(objValue, srcValue);
 	};
 
 	return {
@@ -74,6 +72,12 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 
 function overwriteArrays (objValue, srcValue) {
 	if (_.isArray(srcValue) && _.isArray(objValue)) {
+		return srcValue;
+	}
+
+	// If we don't have this clause, lodash (as of 4.7.0) will attempt to
+	// deeply clone the react children, which is really freaking slow.
+	if (_.isArray(srcValue) && _.isUndefined(objValue)) {
 		return srcValue;
 	}
 }
