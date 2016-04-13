@@ -32,10 +32,6 @@ const Button = React.createClass({
 		 */
 		isActive: bool,
 		/**
-		 * set this to `true` if you want to include an icon as a child
-		 */
-		hasIcon: bool,
-		/**
 		 * class names that are appended to the defaults
 		 */
 		className: string,
@@ -77,7 +73,6 @@ const Button = React.createClass({
 		return {
 			isDisabled: false,
 			isActive: false,
-			hasIcon: false,
 			onClick: _.noop
 		};
 	},
@@ -100,7 +95,6 @@ const Button = React.createClass({
 		const {
 			isDisabled,
 			isActive,
-			hasIcon,
 			kind,
 			size,
 			className,
@@ -114,7 +108,6 @@ const Button = React.createClass({
 				className={boundClassNames('&', {
 					'&-is-disabled': isDisabled,
 					'&-is-active': isActive,
-					'&-has-icon': hasIcon,
 					'&-primary': kind === 'primary',
 					'&-link': kind === 'link',
 					'&-success': kind === 'success',
