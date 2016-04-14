@@ -29,7 +29,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "classnames": "^2.2.3",
-    "lodash": "^4.1.0",
+    "lodash": "^4.11.0",
     "react-addons-css-transition-group": "^0.14.0"
   },
   "devDependencies": {
