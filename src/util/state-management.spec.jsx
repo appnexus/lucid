@@ -367,6 +367,17 @@ describe('#getStatefulPropsContext', () => {
 				assert(overrides.setName.calledOnce);
 				assert(reducers.setName.calledBefore(overrides.setName));
 			});
+
+			// Test written because of a perf issue related to cloning we ran into
+			// with lodash@4.7.0 -- https://github.com/appnexus/lucid/issues/181
+			it('should not clone arrays when the source object is undefined', () => {
+				const overrides = {
+					fresh: [{a: 1}]
+				};
+				const props = statefulPropsContext.getProps(overrides);
+
+				assert(overrides.fresh[0] === props.fresh[0]);
+			});
 		});
 
 		describe('.getPropReplaceReducers', () => {
