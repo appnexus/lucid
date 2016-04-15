@@ -1,0 +1,22 @@
+.lucid-BarChart {
+	display: inline-block;
+
+	.axis {
+		font-size: @font;
+
+		line,
+		path {
+			fill: none;
+			stroke: @color-black;
+		}
+	}
+
+	&-x-axis-label {
+		text-anchor: middle;
+	}
+
+	&-y-axis-label {
+		text-anchor: middle;
+		transform: rotate(-90deg);
+	}
+}
