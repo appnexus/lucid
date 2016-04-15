@@ -153,22 +153,35 @@ const BarChart = React.createClass({
 		};
 	},
 
+	componentWillMount() {
+		this.configChart(this.props);
+	},
+
 	componentDidMount() {
+		this._svg = this.refs['svg'];
 		this._xAxis = this.refs['xAxis'];
 		this._yAxis = this.refs['yAxis'];
 
-		this.configChart(this.props);
-
-		d3.select(this._xAxis)
-				.call(this._xAxisConfig)
-				.selectAll('.tick text')
-						.attr('dy', '.75em');
-		d3.select(this._yAxis)
-				.call(this._yAxisConfig);
+		this.applyConfigurations();
+		this.formatBars(this.props);
 	},
 
-	componentWillReceiveProps(nextProps) {
+	componentWillUpdate(nextProps) {
 		this.configChart(nextProps);
+	},
+
+	componentDidUpdate() {
+		this.applyConfigurations();
+		this.formatBars(this.props);
+	},
+
+	// Apply the d3 axis configurations to the DOM nodes representing the x- and
+	// y-axes. This method requires that the refs to these DOM nodes are already
+	// stored on the instance so it cannot be called until after the initial
+	// render.
+	applyConfigurations() {
+		d3.select(this._xAxis).call(this._xAxisConfig);
+		d3.select(this._yAxis).call(this._yAxisConfig);
 	},
 
 	configChart({
@@ -196,6 +209,8 @@ const BarChart = React.createClass({
 		this.configYDomain(data, yAxisDataKey);
 	},
 
+	// Create a d3 axis configuration for the x-axis. This can then be applied
+	// to the actual DOM node that represents the axis.
 	configXAxis(orientation, formatFunction) {
 		this._xAxisConfig = d3.svg.axis()
 				.scale(this._xScale)
@@ -203,14 +218,20 @@ const BarChart = React.createClass({
 				.tickFormat(formatFunction);
 	},
 
+	// Sets the x-axis scale's domain using the supplied `key` to determine the
+	// values to use. The domain is the set of all those values.
 	configXDomain(data, key) {
 		this._xScale.domain(_.map(data, (d) => d[key]));
 	},
 
+	// Create a d3 scale for the x-axis. The `rangeRoundBands` method is used to
+	// ensure that bar width is an integer.
 	configXScale(width) {
 		this._xScale = d3.scale.ordinal().rangeRoundBands([0, width], 0.05);
 	},
 
+	// Create a d3 axis configuration for the y-axis. This can then be applied
+	// to the actual DOM node that represents the axis.
 	configYAxis(orientation, tickCount) {
 		this._yAxisConfig = d3.svg.axis()
 				.scale(this._yScale)
@@ -218,29 +239,57 @@ const BarChart = React.createClass({
 				.ticks(tickCount);
 	},
 
+	// Sets the y-axis scale's domain using the supplied `key` to determine the
+	// data to use. The domain goes from 0 to the maximum value in the data set.
 	configYDomain(data, key) {
 		this._yScale.domain([0, d3.max(data, (d) => d[key])]);
 	},
 
+	// Create a d3 scale for the y-axis.
 	configYScale(height) {
 		this._yScale = d3.scale.linear().range([height, 0]);
 	},
 
+	// Set the dimensions and position of each bar on the chart.
+	formatBars({ data, height, marginBottom, marginTop, xAxisDataKey, yAxisDataKey }) {
+		const barClassName = `.${boundClassNames('&-bar')}`;
+		// The `selectAll` method returns an array of nodes for each member of
+		// the existing selection so the following call from the existing
+		// selection of `this._svg` will return an array of length 1 that
+		// contains an array of all nodes that match `barClassName`.
+		const bars = _.head(d3.select(this._svg).selectAll(barClassName));
+
+		_.forEach(data, (d, index) => {
+			const x = d[xAxisDataKey];
+			const y = d[yAxisDataKey];
+
+			console.log(x, y, bars[index]);
+
+			d3.select(bars[index])
+					.attr('x', () => this._xScale(x))
+					.attr('width', this._xScale.rangeBand())
+					.attr('y', () => this._yScale(y))
+					.attr('height', () => height - marginBottom - marginTop - this._yScale(y));
+		});
+	},
+
 	render() {
 		const {
+			data,
 			height,
 			marginBottom,
 			marginLeft,
 			marginRight,
 			marginTop,
 			width,
+			xAxisDataKey,
 			xAxisLabel,
 			yAxisLabel
 		} = this.props;
 
 		return (
 			<span className={boundClassNames('&')}>
-				<svg width={width} height={height}>
+				<svg ref='svg' width={width} height={height}>
 					<g style={{
 						transform: `translate(${marginLeft}px, ${marginTop}px)`
 					}}>
@@ -268,6 +317,12 @@ const BarChart = React.createClass({
 								y='6'
 							>{yAxisLabel}</text>
 						</g>
+						{_.map(data, (d) => (
+							<rect
+								className={boundClassNames('&-bar')}
+								key={d[xAxisDataKey]}
+							/>
+						))}
 					</g>
 				</svg>
 			</span>
