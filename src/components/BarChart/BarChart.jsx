@@ -263,8 +263,6 @@ const BarChart = React.createClass({
 			const x = d[xAxisDataKey];
 			const y = d[yAxisDataKey];
 
-			console.log(x, y, bars[index]);
-
 			d3.select(bars[index])
 					.attr('x', () => this._xScale(x))
 					.attr('width', this._xScale.rangeBand())
