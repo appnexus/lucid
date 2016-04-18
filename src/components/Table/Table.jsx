@@ -4,10 +4,13 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createLucidComponentDefinition } from '../../util/component-definition';
 import { findElementsByType } from '../../util/child-component';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
+import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
 const boundClassNames = lucidClassNames.bind('&-Table');
 
 const {
+	func,
+	number,
 	object,
 	string,
 	bool
@@ -152,6 +155,15 @@ const Tr = React.createClass(createLucidComponentDefinition({
 	}
 }));
 
+const SortedThContent = ({ children, sortDirection }) => (
+	<ul className={boundClassNames('&-is-sorted-container')}>
+		<li className={boundClassNames('&-is-sorted-title')}>{children}</li>
+		<li className={boundClassNames('&-is-sorted-caret')}>
+			<CaretIcon className={boundClassNames('&-sort-icon')} direction={sortDirection} size={6}/>
+		</li>
+	</ul>
+);
+
 /**
  * `Th` renders <th>.
  *
@@ -176,6 +188,11 @@ const Th = React.createClass(createLucidComponentDefinition({
 		 */
 		hasButton: bool,
 		/**
+		 * Styles the cell to indicate it should be resizable and sets up drag-
+		 * related events to enable this resizing functionality.
+		 */
+		isResizable: bool,
+		/**
 		 * Styles the cell to allow column sorting.
 		 */
 		isSortable: bool,
@@ -184,9 +201,18 @@ const Th = React.createClass(createLucidComponentDefinition({
 		 */
 		isSorted: bool,
 		/**
+		 * Called as the user drags the resize handle to resize the column atop
+		 * which this table header cell sits.
+		 */
+		onResize: func,
+		/**
 		 * The direction of the caret in the sorted column.
 		 */
-		sortDirection: string
+		sortDirection: string,
+		/**
+		 * Width of the column atop which this table header cell sits.
+		 */
+		width: number
 	},
 	getDefaultProps() {
 		return {
@@ -194,9 +220,27 @@ const Th = React.createClass(createLucidComponentDefinition({
 			hasCheckbox: false,
 			hasIcon: false,
 			hasButton: false,
+			isResizable: false,
 			isSorted: false,
 			sortDirection: 'up'
 		};
+	},
+	getInitialState() {
+		const { width } = this.props;
+
+		return {
+			// Represents the actively changing width as the cell is resized.
+			activeWidth: width || null,
+			// Indicates if a `width` prop was explicitly provided.
+			hasSetWidth: !!width,
+			// Indicates whether the cell is currently being resized.
+			isResizing: false,
+			// Represents the width when the cell is not actively being resized.
+			passiveWidth: width || null
+		};
+	},
+	componentDidMount() {
+		this._root = this.refs['root'];
 	},
 	render() {
 		const {
@@ -206,33 +250,105 @@ const Th = React.createClass(createLucidComponentDefinition({
 			hasCheckbox,
 			hasIcon,
 			hasButton,
+			isResizable,
 			isSortable,
 			isSorted,
-			sortDirection
+			sortDirection,
+			style
 		} = this.props;
+		const {
+			activeWidth,
+			hasSetWidth,
+			isResizing,
+			passiveWidth
+		} = this.state;
 
 		return (
-			<th {...this.props} className={boundClassNames(
-				'&-cell', {
-				'&-align-left': align === 'left',
-				'&-align-center': align === 'center',
-				'&-align-right': align === 'right',
-				'&-has-checkbox': hasCheckbox,
-				'&-has-icon': hasIcon,
-				'&-has-button': hasButton,
-				'&-is-sortable': (isSortable === false ? isSortable : (isSorted || isSortable)),
-				'&-is-sorted': isSorted,
-			}, className)}>
-				{isSorted ? (
-					<ul className={boundClassNames('&-is-sorted-container')}>
-						<li className={boundClassNames('&-is-sorted-title')}>{children}</li>
-						<li className={boundClassNames('&-is-sorted-caret')}>
-							<CaretIcon className={boundClassNames('&-sort-icon')} direction={sortDirection} size={6}/>
-						</li>
-					</ul>
-				) : children}
+			<th
+				{...this.props}
+				className={boundClassNames(
+					'&-cell', {
+					'&-align-left': align === 'left',
+					'&-align-center': align === 'center',
+					'&-align-right': align === 'right',
+					'&-has-checkbox': hasCheckbox,
+					'&-has-icon': hasIcon,
+					'&-has-button': hasButton,
+					'&-is-resizable': isResizable,
+					'&-is-resizing': isResizing,
+					'&-is-sortable': (isSortable === false ? isSortable : (isSorted || isSortable)),
+					'&-is-sorted': isSorted,
+				}, className)}
+				ref='root'
+				style={hasSetWidth ? _.assign({}, style, {
+					width: isResizing ? activeWidth : passiveWidth
+				}) : style}
+			>
+				{isResizable ? (
+					<div className={boundClassNames('&-is-resizable-container')}>
+						<div className={boundClassNames('&-is-resizable-content')}>
+							{isSorted ? <SortedThContent sortDirection={sortDirection}>{children}</SortedThContent> : children}
+						</div>
+						<DragCaptureZone
+							onDrag={this.handleDragged}
+							onDragEnd={this.handleDragEnded}
+							onDragStart={this.handleDragStarted}
+						/>
+					</div>
+				) : null}
+				{isSorted && !isResizable ? <SortedThContent sortDirection={sortDirection}>{children}</SortedThContent> : null}
+				{!isSorted && !isResizable ? children : null}
 			</th>
 		);
+	},
+	getWidth() {
+		return this._root.getBoundingClientRect().width;
+	},
+	handleDragEnded(coordinates, { event }) {
+		this.setState({
+			isResizing: false,
+			passiveWidth: this.state.activeWidth
+		});
+
+		window.document.body.style.cursor = 'auto';
+
+		if (this.props.onResize) {
+			this.props.onResize(this.state.activeWidth, {
+				event,
+				props: this.props
+			});
+		}
+	},
+	handleDragStarted(coordinates, { event }) {
+		const startingWidth = this.getWidth();
+
+		this.setState({
+			activeWidth: startingWidth,
+			hasSetWidth: true,
+			isResizing: true,
+			passiveWidth: startingWidth
+		});
+
+		window.document.body.style.cursor = 'ew-resize';
+
+		if (this.props.onResize) {
+			this.props.onResize(startingWidth, {
+				event,
+				props: this.props
+			});
+		}
+	},
+	handleDragged(coordinates, { event }) {
+		const activeWidth = this.state.passiveWidth + coordinates.dX;
+
+		this.setState({ activeWidth });
+
+		if (this.props.onResize) {
+			this.props.onResize(activeWidth, {
+				event,
+				props: this.props
+			});
+		}
 	}
 }));
 
@@ -313,7 +429,7 @@ const Td = React.createClass(createLucidComponentDefinition({
 
 /**
  *
- * {"categories": ["table"]}
+ * {"categories": ["table"], "madeFrom": ["CaretIcon", "DragCaptureZone"]}
  *
  * `Table` provides the most basic components to create a lucid table.
  * It is recommended to create a wrapper around this component rather than using it directly in an app.
