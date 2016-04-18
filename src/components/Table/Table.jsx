@@ -155,15 +155,6 @@ const Tr = React.createClass(createLucidComponentDefinition({
 	}
 }));
 
-const SortedThContent = ({ children, sortDirection }) => (
-	<ul className={boundClassNames('&-is-sorted-container')}>
-		<li className={boundClassNames('&-is-sorted-title')}>{children}</li>
-		<li className={boundClassNames('&-is-sorted-caret')}>
-			<CaretIcon className={boundClassNames('&-sort-icon')} direction={sortDirection} size={6}/>
-		</li>
-	</ul>
-);
-
 /**
  * `Th` renders <th>.
  *
@@ -263,6 +254,15 @@ const Th = React.createClass(createLucidComponentDefinition({
 			passiveWidth
 		} = this.state;
 
+		const cellContent = (isSorted ? (
+			<ul className={boundClassNames('&-is-sorted-container')}>
+				<li className={boundClassNames('&-is-sorted-title')}>{children}</li>
+				<li className={boundClassNames('&-is-sorted-caret')}>
+					<CaretIcon className={boundClassNames('&-sort-icon')} direction={sortDirection} size={6}/>
+				</li>
+			</ul>
+		) : children);
+
 		return (
 			<th
 				{...this.props}
@@ -287,7 +287,7 @@ const Th = React.createClass(createLucidComponentDefinition({
 				{isResizable ? (
 					<div className={boundClassNames('&-is-resizable-container')}>
 						<div className={boundClassNames('&-is-resizable-content')}>
-							{isSorted ? <SortedThContent sortDirection={sortDirection}>{children}</SortedThContent> : children}
+							{cellContent}
 						</div>
 						<DragCaptureZone
 							onDrag={this.handleDragged}
@@ -295,9 +295,7 @@ const Th = React.createClass(createLucidComponentDefinition({
 							onDragStart={this.handleDragStarted}
 						/>
 					</div>
-				) : null}
-				{isSorted && !isResizable ? <SortedThContent sortDirection={sortDirection}>{children}</SortedThContent> : null}
-				{!isSorted && !isResizable ? children : null}
+				) : cellContent}
 			</th>
 		);
 	},
