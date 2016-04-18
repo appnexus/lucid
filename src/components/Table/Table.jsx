@@ -429,7 +429,7 @@ const Td = React.createClass(createLucidComponentDefinition({
 
 /**
  *
- * {"categories": ["table"]}
+ * {"categories": ["table"], "madeFrom": ["CaretIcon", "DragCaptureZone"]}
  *
  * `Table` provides the most basic components to create a lucid table.
  * It is recommended to create a wrapper around this component rather than using it directly in an app.
