@@ -250,7 +250,7 @@ describe('Table', () => {
 					});
 				});
 
-				describe.only('isResizable', () => {
+				describe('isResizable', () => {
 					it('should apply the class name `lucid-Table-is-resizable`', () => {
 						const wrapper = shallow(
 							<Th isResizable />
