@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 export function getAbsoluteBoundingClientRect(domNode) {
 	let elementRect = domNode.getBoundingClientRect();
 
@@ -25,4 +27,11 @@ export function scrollParentTo(domNode) {
 			parentNode.scrollTop = domNode.offsetHeight - (parentNode.clientHeight - domNode.offsetTop);
 		} // else don't need to align anything
 	}
+}
+
+export function dispatchDOMEvent(node, eventName, assignedEventProps) {
+	const event = document.createEvent('Event');
+	event.initEvent(eventName, true, true);
+	node.dispatchEvent(_.assign(event, assignedEventProps));
+	return event;
 }

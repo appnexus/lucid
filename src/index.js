@@ -34,6 +34,7 @@ import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import SingleSelect from './components/SingleSelect/SingleSelect';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
+import StickySection from './components/StickySection/StickySection';
 import Switch from './components/Switch/Switch';
 import Table from './components/Table/Table';
 import Tabs from './components/Tabs/Tabs';
@@ -93,6 +94,7 @@ export {
 	SearchIcon,
 	SingleSelect,
 	SuccessIcon,
+	StickySection,
 	Switch,
 	Table,
 	Tabs,

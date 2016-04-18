@@ -12,10 +12,12 @@ export default React.createClass({
 				placeholder='Enter a word...'
 				suggestions={[
 					'Portland',
-					'portal',
+					'pinky and the brain',
+					'playa please',
 					'porridge',
+					'portal',
+					'potent potables',
 					'potent',
-					'please'
 				]}
 			/>
 		);
