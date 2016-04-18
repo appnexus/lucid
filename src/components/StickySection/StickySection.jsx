@@ -141,7 +141,7 @@ const StickySection = React.createClass(createLucidComponentDefinition({
 		return (
 			<div
 				{...passthrus}
-				className={boundClassNames('&', '&-base', className)}
+				className={boundClassNames('&', className)}
 				style={{
 					...(isAboveFold ? {
 						height: containerRect.height,

@@ -11,12 +11,12 @@ describe('StickySection', () => {
 	common(StickySection);
 
 	describe('render', () => {
-		it('should render a div with class `lucid-StickySection-base`', () => {
+		it('should render a div with class `lucid-StickySection`', () => {
 			const wrapper = shallow(
 				<StickySection />
 			);
 
-			assert.equal(wrapper.find('div.lucid-StickySection-base').length, 1, 'StickySection must render the base div at root');
+			assert.equal(wrapper.find('div.lucid-StickySection').length, 1, 'StickySection must render the base div at root');
 		});
 	});
 
