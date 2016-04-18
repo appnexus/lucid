@@ -1,7 +1,8 @@
 // banner sizes
-@Banner-size-spacing-rightLeft: @size-standard;
+@Banner-size-spacing-rightLeft: @size-S;
 @Banner-size-spacing-topBottom: @size-standard;
-@Banner-size-borderRadiaus: @size-borderRadius;
+@Banner-size-borderRadius: @size-borderRadius;
+@Banner-size-iconFontSize: 16px;
 
 .lucid-Banner {
 	.transition-group-animation-fade();
@@ -9,7 +10,7 @@
 	border: @border-standardBorder;
 	background-color: @color-backgroundColor;
 	font: @font;
-	border-radius: @Banner-size-borderRadiaus;
+	border-radius: @Banner-size-borderRadius;
 	padding: 0 @Banner-size-spacing-rightLeft;
 	display: flex;
 
@@ -23,7 +24,7 @@
 
 	&-close {
 		align-self: flex-start;
-		font-size: 1.3em;
+		font-size: @Banner-size-iconFontSize;
 		font-weight: bold;
 		cursor: pointer;
 		line-height: 1em;
@@ -43,7 +44,7 @@
 	}
 
 	&-icon {
-		padding-top: @Banner-size-spacing-topBottom - 3px;
+		padding-top: @Banner-size-spacing-topBottom - 2px;
 		margin-right: @Banner-size-spacing-rightLeft;
 	}
 
