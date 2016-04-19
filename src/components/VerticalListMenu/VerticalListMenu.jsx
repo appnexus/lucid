@@ -18,7 +18,7 @@ const {
 } = React.PropTypes;
 
 /**
- * {"categories": ["layout"], "madeFrom": ["ChevronIcon"]}
+ * {"categories": ["navigation"], "madeFrom": ["ChevronIcon"]}
  *
  * Used primarily for navigation lists. It supports nesting `VerticalListMenu`s
  * below `VerticalListMenu.Item`s and animating expanding of those sub lists.
