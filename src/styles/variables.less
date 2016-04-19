@@ -3,7 +3,8 @@
 @fontFamily: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 @font: @fontSize @fontFamily;
 
-// standard border
+// Borders
+@border-lightBorder: 1px solid @color-borderColorLight;
 @border-standardBorder: 1px solid @color-borderColor;
 
 // Sizes
@@ -45,6 +46,7 @@
 @color-linkColorHover: darken(@color-linkColor, 20%);
 
 // Standard Border Color
+@color-borderColorLight: @color-gray;
 @color-borderColor: @color-mediumGray;
 
 // Standard Background Color
@@ -77,13 +79,12 @@
 // Normalize transparent due to Safari bug
 @color-transparent: rgba(255, 255, 255, 0);
 
-// ---------------------------------------------
-//                  Box Shadows
-// ---------------------------------------------
+// -------------------------------------
+//             Box Shadows
+// -------------------------------------
 // Standard inset shadow
 @shadow-inset: 0 10px 10px -10px @color-gray-30 inset;
 @shadow-solid-outline: 0px 0px 0px 3px @color-primary-30;
-
 
 // Featured color variables are intended to only be used for components that
 // have "states" to them like `info`, `waring`, `danger` etc.
@@ -141,3 +142,4 @@
 @featured-color-danger-backgroundColor: tint(@featured-color-danger, 70%);
 @featured-color-danger-gradientStartColor: tint(@featured-color-danger, 30%);
 @featured-color-danger-gradientEndColor: @featured-color-danger;
+
