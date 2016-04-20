@@ -29,6 +29,8 @@
   "license": "Apache-2.0",
   "dependencies": {
     "classnames": "^2.2.3",
+    "d3-scale": "^0.6.4",
+    "d3-time": "^0.2.5",
     "lodash": "^4.1.0",
     "react-addons-css-transition-group": "^0.14.0"
   },
