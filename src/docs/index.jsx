@@ -6,11 +6,18 @@ import { basename } from 'path';
 import _ from 'lodash';
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, Link, useRouterHistory } from 'react-router';
+import {
+	IndexRoute,
+	Link,
+	Route,
+	Router,
+	useRouterHistory,
+} from 'react-router';
 import { createHashHistory } from 'history';
 import docgenMapRaw from './docgen.json';
 import { markdown } from 'markdown';
 import ColorPalette from './containers/colors';
+import LandingPage from './containers/landing-page';
 import Table from '../components/Table/Table.jsx';
 
 const {
@@ -417,6 +424,7 @@ const App = React.createClass({
 render((
 	<Router history={hashHistory}>
 		<Route path='/' component={App}>
+			<IndexRoute component={LandingPage} />
 			<Route path='/components/:componentName' component={Component}/>
 			<Route path='/colors' component={ColorPalette}/>
 		</Route>
