@@ -459,10 +459,16 @@ const Table = React.createClass(createLucidComponentDefinition({
 		 * Adjusts the style of the table to have more spacing within the table cells
 		 */
 		hasExtraWhitespace: bool,
+
+		/**
+		 * render the table without borders on the outer edge
+		 */
+		hasNoBorder: bool,
 	},
 
 	getDefaultProps() {
 		return {
+			hasBorders: false,
 			hasExtraWhitespace: false,
 		};
 	},
@@ -471,13 +477,18 @@ const Table = React.createClass(createLucidComponentDefinition({
 
 		const {
 			className,
+			hasNoBorder,
 			hasExtraWhitespace,
 		} = this.props;
 
 		return (
-			<table {...this.props} className={boundClassNames('&', {
-				'&-has-extra-whitespace': hasExtraWhitespace,
-			}, className)} />
+			<table
+				{...this.props}
+				className={boundClassNames('&', {
+					'&-has-extra-whitespace': hasExtraWhitespace,
+					'&-has-no-border': hasNoBorder,
+				}, className)}
+			/>
 		);
 	}
 }));

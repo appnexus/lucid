@@ -32,6 +32,16 @@ describe('Table', () => {
 				assert.equal(wrapper.find('table.lucid-Table-has-extra-whitespace').length, 1);
 			});
 		});
+
+		describe('hasNoBorder', () => {
+			it('should apply the `lucid-Table-has-no-border` class name to the rendered table', () => {
+				const wrapper = shallow(
+					<Table hasNoBorder={true} />
+				);
+
+				assert.equal(wrapper.find('table.lucid-Table-has-no-border').length, 1, 'the className lucid-Table-has-no-border must be included');
+			});
+		});
 	});
 
 	describe('Child Elements', () => {
