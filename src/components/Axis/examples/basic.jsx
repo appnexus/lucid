@@ -11,7 +11,7 @@ export default React.createClass({
 		return {
 			data: [1,2,3,4,5,6,8,9,9],
 			dateData: [
-				new Date('2016-01-01'),
+				new Date('2014-01-01'),
 				new Date('2016-01-03'),
 				new Date('2016-01-07'),
 			],
@@ -22,12 +22,10 @@ export default React.createClass({
 	},
 
 	handleRandomize() {
-		const data = _.map(_.times(_.random(5, 20)), () => _.random(1, 10));
-		this.setState({ data });
-	},
-
-	handleScaleSwitch() {
-
+		const randomLengthArray = _.times(_.random(2, 20));
+		const data = _.map(randomLengthArray, () => _.random(1, 250));
+		const dateData = _.map(randomLengthArray, () => new Date(_.random(1388563200000, 1451635200000)));
+		this.setState({ data, dateData });
 	},
 
 	render() {
@@ -42,9 +40,13 @@ export default React.createClass({
 		const insideWidth = width - margin.left - margin.right;
 		const insideHeight = height - margin.top - margin.bottom;
 
-		const x = d3Scale.scaleLinear()
+		// 		const x = d3Scale.scaleLinear()
+		// 			.domain([_.min(data), _.max(data)])
+		// 			.range([0, insideWidth]);
+
+		const y = d3Scale.scaleLinear()
 			.domain([_.min(data), _.max(data)])
-			.range([0, insideWidth]);
+			.range([0, insideHeight]);
 
 		const time = d3Scale.scaleTime()
 			.domain([_.min(dateData), _.max(dateData)])
@@ -61,14 +63,30 @@ export default React.createClass({
 				<svg
 					width={width}
 					height={height}
+					style={{outline: '1px solid black'}}
 				>
-					{/* Push the axis to the bottom margin with a translate */}
-					<g transform={`translate(${margin.left}, ${insideHeight})`}>
+				{/* Dashed rectangle to show the body */}
+				<rect
+					x={margin.left}
+					y={margin.top}
+					width={insideWidth}
+					height={insideHeight}
+					style={{
+						fill: 'none',
+						stroke: 'black',
+						strokeWidth: 1,
+						strokeDasharray: '3',
+						shapeRendering: 'crispEdges',
+					}}
+				/>
+					{/* Push the y axis to the right margin with a translate */}
+					<g transform={`translate(${margin.left}, ${margin.top})`}>
+						<Axis scale={y} orient='left' />
+					</g>
+					{/* Push the x axis to the bottom margin with a translate */}
+					<g transform={`translate(${margin.left}, ${insideHeight + margin.top})`}>
 						<Axis
-							kind='x'
-							size={insideWidth}
 							scale={time}
-							ticks={time.ticks(d3Time.timeDay, 1)}
 						/>
 					</g>
 				</svg>

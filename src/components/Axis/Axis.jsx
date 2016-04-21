@@ -23,17 +23,11 @@ const BarChart = React.createClass({
 		 * Must be a D3 scale.
 		 */
 		scale: func.isRequired,
-		/**
-		 * Size will refer to either `width` or `height` depending on the value of
-		 * `kind`
-		 */
-		size: number,
-		orient: oneOf(['left', 'right']),
 		innerTickSize: number,
 		outerTickSize: number,
 		tickFormat: func,
 		ticks: array,
-		orient: oneOf(['top', 'bottom', 'left', 'right']),
+		orient: oneOf(['bottom', 'left']), // TODO test and support top and right
 	},
 
 	getDefaultProps() {
@@ -42,13 +36,12 @@ const BarChart = React.createClass({
 			innerTickSize: 6, // same as d3
 			outerTickSize: 6, // same as d3
 			tickFormat: null,
-			kind: 'bottom',
+			orient: 'bottom',
 		};
 	},
 
 	render() {
 		const {
-			size,
 			scale,
 			orient,
 			ticks = scale.ticks(),
@@ -61,27 +54,39 @@ const BarChart = React.createClass({
 		// Domain
 		const range = scale.range();
 		const sign = orient === 'top' || orient === 'left' ? -1 : 1;
+		const isH = orient === 'top' || orient === 'bottom';
 
 		return (
 			<g
 				className={boundClassNames('&')}
 				{...passThroughs}
 			>
+			{isH ? (
 				<path d={`M${range[0]},${sign * outerTickSize}V0H${range[1]}V${sign * outerTickSize}`} />
+			) : (
+				<path d={`M${sign * outerTickSize},${range[0]}H0V${range[1]}H${sign * outerTickSize}`} />
+			)}
 				{_.map(ticks, (tick, index) =>
 					<g
 						key={index}
-						className={boundClassNames('&-tick')}
-						transform={`translate(${scale(tick)}, 0)`}
+						transform={`translate(${isH ? scale(tick) : 0}, ${isH ? 0 : range[1] - scale(tick)})`}
 					>
 						<line
-							x2={0}
-							y2={innerTickSize}
+							x2={isH ? 0 : sign * innerTickSize}
+							y2={isH ? innerTickSize : 0}
 						/>
 						<text
-							x={0}
-							y={innerTickSize + 3}
-							dy='.71em'
+							x={isH ? 0 : innerTickSize * 2 * sign}
+							y={isH ? innerTickSize + 3 : 0}
+							dy={isH
+								? sign < 0 ? '0em' : '.71em'
+								: '.32em'
+							}
+							style={{
+								textAnchor: isH
+									? 'middle'
+									: sign < 0 ? 'end' : 'start'
+							}}
 						>
 							{scale.tickFormat(tickFormat)(tick)}
 						</text>
