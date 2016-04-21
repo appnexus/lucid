@@ -103,7 +103,7 @@ const BarChart = React.createClass({
 				{_.map(ticks, (tick) =>
 					<g
 						key={tick}
-						transform={`translate(${isH ? scale(tick) : 0}, ${isH ? 0 : range[1] - scale(tick)})`}
+						transform={`translate(${isH ? scale(tick) : 0}, ${isH ? 0 : scale(tick)})`}
 					>
 						<line
 							className={boundClassNames('&-tick')}
@@ -124,7 +124,11 @@ const BarChart = React.createClass({
 									: sign < 0 ? 'end' : 'start'
 							}}
 						>
-							{scale.tickFormat(tickFormat)(tick)}
+							{scale.tickFormat ?
+								scale.tickFormat(tickFormat)(tick)
+							:
+								tick
+							}
 						</text>
 					</g>
 				)}

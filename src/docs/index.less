@@ -109,7 +109,16 @@ html {
 	.transition-group-animation-fade();
 }
 
-.circle {
+.circle, .line {
 	fill: @color-primary;
+	stroke: @color-primary;
+	transition: transform 300ms;
+	transform-origin: center center;
+}
+
+.circle {
+	&:hover {
+		transform: scale(2);
+	}
 }
 

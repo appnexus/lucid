@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
 import d3Scale from 'd3-scale';
-import d3Time from 'd3-time';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Axis from '../Axis';
@@ -45,12 +44,12 @@ export default React.createClass({
 		const innerHeight = height - margin.top - margin.bottom;
 
 		const x = d3Scale.scaleLinear()
-			.domain([_.min(_.map(data, 'x')), _.max(_.map(data, 'x'))])
+			.domain([0, _.max(_.map(data, 'x'))])
 			.range([0, innerWidth]);
 
 		const y = d3Scale.scaleLinear()
-			.domain([_.min(_.map(data, 'y')), _.max(_.map(data, 'y'))])
-			.range([0, innerHeight]);
+			.domain([0, _.max(_.map(data, 'y'))])
+			.range([innerHeight, 0]);
 
 		/*
 		const time = d3Scale.scaleTime()

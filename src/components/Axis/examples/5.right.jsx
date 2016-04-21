@@ -9,7 +9,7 @@ const height = 200;
 const innerHeight = height - margin.top - margin.bottom;
 const y = d3Scale.scaleLinear()
 	.domain([0, 100000])
-	.range([0, innerHeight]);
+	.range([innerHeight, 0]);
 
 export default React.createClass({
 	render() {
