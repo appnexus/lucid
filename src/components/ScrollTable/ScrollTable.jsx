@@ -1,0 +1,87 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { createLucidComponentDefinition } from '../../util/component-definition';
+import { lucidClassNames } from '../../util/style-helpers';
+import { findElementsByType } from '../../util/child-component';
+import Table from '../Table/Table';
+
+const boundClassNames = lucidClassNames.bind('&-ScrollTable');
+
+const {
+	object,
+	string,
+	bool,
+	node,
+	number,
+} = React.PropTypes;
+
+/**
+ * {"categories": ["table"], "madeFrom": ["Table"]}
+ *
+ * Table in a scrollable container.
+ */
+const ScrollTable = React.createClass(createLucidComponentDefinition({
+	displayName: 'ScrollTable',
+
+	statics: {
+		Thead: Table.Thead,
+		Tbody: Table.Tbody,
+		Tr: Table.Tr,
+		Th: Table.Th,
+		Td: Table.Td,
+	},
+
+	propTypes: {
+		/**
+		 * {Thead, Tbody, Tr, Th, Td} are the child components of Scrolltable, same as Table.
+		 */
+		children: node,
+		/**
+		 * Class names that are appended to the defaults.
+		 */
+		className: string,
+		/**
+		 * Styles that are passed through to the root container.
+		 */
+		style: object,
+		/**
+		 * Set the width of the Table inside the scrollable container.
+		 */
+		tablewidth: number,
+		/**
+		 * Set the Table contents to not allow word wrapping.
+		 */
+		isNowrap: bool,
+	},
+
+	render() {
+		const {
+			children,
+			className,
+			style,
+			tableWidth,
+			isNowrap,
+			...passThrus
+		} = this.props;
+
+		return (
+			<div
+				className={boundClassNames('&', className)}
+				style={style}
+			>
+				<Table
+					style={{
+						width: tableWidth,
+					}}
+					className={boundClassNames({'&-nowrap': isNowrap})}
+					hasNoBorder={true}
+					{...passThrus}
+				>
+					{children}
+				</Table>
+			</div>
+		);
+	},
+}));
+
+export default ScrollTable;
