@@ -1,8 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { createLucidComponentDefinition } from '../../util/component-definition';
 import { lucidClassNames } from '../../util/style-helpers';
-import { findElementsByType } from '../../util/child-component';
 import Table from '../Table/Table';
 
 const boundClassNames = lucidClassNames.bind('&-ScrollTable');

@@ -468,7 +468,7 @@ const Table = React.createClass(createLucidComponentDefinition({
 
 	getDefaultProps() {
 		return {
-			hasBorders: false,
+			hasNoBorder: false,
 			hasExtraWhitespace: false,
 		};
 	},
