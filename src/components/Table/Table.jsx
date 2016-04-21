@@ -230,9 +230,6 @@ const Th = React.createClass(createLucidComponentDefinition({
 			passiveWidth: width || null
 		};
 	},
-	componentDidMount() {
-		this._root = this.refs['root'];
-	},
 	render() {
 		const {
 			children,
@@ -300,7 +297,11 @@ const Th = React.createClass(createLucidComponentDefinition({
 		);
 	},
 	getWidth() {
-		return this._root.getBoundingClientRect().width;
+		const styleWidth = _.get(this.refs.root, 'style.width');
+		if (_.endsWith(styleWidth, 'px')){
+			return parseInt(styleWidth);
+		}
+		return this.refs.root.getBoundingClientRect().width;
 	},
 	handleDragEnded(coordinates, { event }) {
 		this.setState({
