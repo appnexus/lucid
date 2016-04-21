@@ -23,8 +23,17 @@ const BarChart = React.createClass({
 		 * Must be a D3 scale.
 		 */
 		scale: func.isRequired,
+		/**
+		 * Tick size.
+		 */
 		innerTickSize: number,
+		/**
+		 * Tick size.
+		 */
 		outerTickSize: number,
+		/**
+		 *
+		 */
 		tickFormat: func,
 		ticks: array,
 		orient: oneOf(['bottom', 'left']), // TODO test and support top and right
@@ -62,20 +71,28 @@ const BarChart = React.createClass({
 				{...passThroughs}
 			>
 			{isH ? (
-				<path d={`M${range[0]},${sign * outerTickSize}V0H${range[1]}V${sign * outerTickSize}`} />
+				<path
+					className={boundClassNames('&-domain')}
+					d={`M${range[0]},${sign * outerTickSize}V0H${range[1]}V${sign * outerTickSize}`}
+				/>
 			) : (
-				<path d={`M${sign * outerTickSize},${range[0]}H0V${range[1]}H${sign * outerTickSize}`} />
+				<path
+					className={boundClassNames('&-domain')}
+					d={`M${sign * outerTickSize},${range[0]}H0V${range[1]}H${sign * outerTickSize}`}
+				/>
 			)}
-				{_.map(ticks, (tick, index) =>
+				{_.map(ticks, (tick) =>
 					<g
-						key={index}
+						key={tick}
 						transform={`translate(${isH ? scale(tick) : 0}, ${isH ? 0 : range[1] - scale(tick)})`}
 					>
 						<line
+							className={boundClassNames('&-tick')}
 							x2={isH ? 0 : sign * innerTickSize}
 							y2={isH ? innerTickSize : 0}
 						/>
 						<text
+							className={boundClassNames('&-tick-text')}
 							x={isH ? 0 : innerTickSize * 2 * sign}
 							y={isH ? innerTickSize + 3 : 0}
 							dy={isH
