@@ -41,21 +41,21 @@ export default React.createClass({
 			data,
 		} = this.state;
 
-		const insideWidth = width - margin.left - margin.right;
-		const insideHeight = height - margin.top - margin.bottom;
+		const innerWidth = width - margin.left - margin.right;
+		const innerHeight = height - margin.top - margin.bottom;
 
 		const x = d3Scale.scaleLinear()
 			.domain([_.min(_.map(data, 'x')), _.max(_.map(data, 'x'))])
-			.range([0, insideWidth]);
+			.range([0, innerWidth]);
 
 		const y = d3Scale.scaleLinear()
 			.domain([_.min(_.map(data, 'y')), _.max(_.map(data, 'y'))])
-			.range([0, insideHeight]);
+			.range([0, innerHeight]);
 
 		/*
 		const time = d3Scale.scaleTime()
 			.domain([_.min(dateData), _.max(dateData)])
-			.range([0, insideWidth]);
+			.range([0, innerWidth]);
 		*/
 
 		return (
@@ -75,7 +75,7 @@ export default React.createClass({
 						<Axis scale={y} orient='left' />
 					</g>
 					{/* Push the x axis to the bottom margin with a translate */}
-					<g transform={`translate(${margin.left}, ${insideHeight + margin.top})`}>
+					<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
 						<Axis scale={x} />
 					</g>
 					{/* Scatter plot */}
