@@ -22,15 +22,15 @@ export default React.createClass({
 						<Th hasCheckbox rowSpan={2}>
 							<Checkbox></Checkbox>
 						</Th>
-						<Th rowSpan={2} isSortable>Lorem.</Th>
+						<Th rowSpan={2} isSortable isResizable>Sortable and resizable.</Th>
 						<Th hasIcon rowSpan={2}><SuccessIcon/></Th>
 						<Th rowSpan={2}>Button</Th>
-						<Th rowSpan={2} isSorted sortDirection='up'>Sorted Column</Th>
+						<Th rowSpan={2} isSorted sortDirection='up' isResizable>Sorted Column</Th>
 						<Th colSpan={3} align='center'>Alignments</Th>
 					</Tr>
 					<Tr>
 						<Th align='left'>align left</Th>
-						<Th align='center'>align center</Th>
+						<Th align='center' isResizable>align center</Th>
 						<Th align='right' isSortable isSorted>align right</Th>
 					</Tr>
 				</Thead>

@@ -1,5 +1,14 @@
 import React from 'react';
 import Panel from '../Panel';
+import Table from '../../Table/Table';
+
+const {
+	Thead,
+	Tbody,
+	Th,
+	Tr,
+	Td,
+} = Table;
 
 export default React.createClass({
 	render() {
@@ -9,37 +18,37 @@ export default React.createClass({
 					<Panel.Header>
 						<h3 style={{ margin: 0 }}>Title</h3>
 					</Panel.Header>
-					<table className={'pure-table pure-table-horizontal'} style={{width: '100%'}}>
-						<thead>
-							<tr>
-								<th>Cell</th>
-								<th>Cell</th>
-								<th>Cell</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Cell</td>
-								<td>Cell</td>
-								<td>Cell</td>
-							</tr>
-							<tr>
-								<td>Cell</td>
-								<td>Cell</td>
-								<td>Cell</td>
-							</tr>
-							<tr>
-								<td>Cell</td>
-								<td>Cell</td>
-								<td>Cell</td>
-							</tr>
-							<tr>
-								<td>Cell</td>
-								<td>Cell</td>
-								<td>Cell</td>
-							</tr>
-						</tbody>
-					</table>
+					<Table style={{width: '100%'}}>
+						<Thead>
+							<Tr>
+								<Th>Cell</Th>
+								<Th>Cell</Th>
+								<Th>Cell</Th>
+							</Tr>
+						</Thead>
+						<Tbody>
+							<Tr>
+								<Td>Cell</Td>
+								<Td>Cell</Td>
+								<Td>Cell</Td>
+							</Tr>
+							<Tr>
+								<Td>Cell</Td>
+								<Td>Cell</Td>
+								<Td>Cell</Td>
+							</Tr>
+							<Tr>
+								<Td>Cell</Td>
+								<Td>Cell</Td>
+								<Td>Cell</Td>
+							</Tr>
+							<Tr>
+								<Td>Cell</Td>
+								<Td>Cell</Td>
+								<Td>Cell</Td>
+							</Tr>
+						</Tbody>
+					</Table>
 				</Panel>
 			</div>
 		);

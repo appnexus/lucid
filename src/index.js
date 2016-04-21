@@ -23,6 +23,7 @@ import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import LabeledCheckbox from './components/LabeledCheckbox/LabeledCheckbox';
 import LabeledRadioButton from './components/LabeledRadioButton/LabeledRadioButton';
 import LabeledSwitch from './components/LabeledSwitch/LabeledSwitch';
+import VerticalListMenu from './components/VerticalListMenu/VerticalListMenu';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import Overlay from './components/Overlay/Overlay';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
@@ -33,6 +34,7 @@ import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import SingleSelect from './components/SingleSelect/SingleSelect';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
+import StickySection from './components/StickySection/StickySection';
 import Switch from './components/Switch/Switch';
 import Table from './components/Table/Table';
 import Tabs from './components/Tabs/Tabs';
@@ -81,6 +83,7 @@ export {
 	LabeledCheckbox,
 	LabeledRadioButton,
 	LabeledSwitch,
+	VerticalListMenu,
 	MinusIcon,
 	Overlay,
 	PlusIcon,
@@ -91,6 +94,7 @@ export {
 	SearchIcon,
 	SingleSelect,
 	SuccessIcon,
+	StickySection,
 	Switch,
 	Table,
 	Tabs,

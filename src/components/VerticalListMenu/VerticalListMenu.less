@@ -1,0 +1,138 @@
+@VerticalListMenu-levels: 8;
+
+@VerticalListMenu-size-itemHeight: 29px;
+@VerticalListMenu-size-border: 4px;
+@VerticalListMenu-size-icon: 20px;
+@VerticalListMenu-size-childSpacer: 6px;
+@VerticalListMenu-size-childPadding: 15px;
+
+// Recursive mixin to facilitate nesting to a pre-determined depth
+.VerticalListMenu-nest(@i: 0) when (@i < @VerticalListMenu-levels) {
+	.lucid-VerticalListMenu {
+		.lucid-VerticalListMenu-Item-content {
+			padding-left: @VerticalListMenu-size-childPadding + (12 * @i);
+		}
+
+		.VerticalListMenu-nest(@i + 1);
+	}
+}
+
+.lucid-VerticalListMenu {
+	.VerticalListMenu-nest();
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	&-Item {
+		&-expander {
+			align-self: flex-start;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-shrink: 0;
+			height: @VerticalListMenu-size-icon;
+			width: @VerticalListMenu-size-icon;
+			margin: 4px;
+			margin-left: auto; // allows the expander to be flush on the right side
+		}
+
+		&-content {
+			.is-selectable();
+			min-height: @VerticalListMenu-size-itemHeight;
+			display: flex;
+			font-size: 12px;
+			align-items: center;
+			font-weight: bold;
+			border-width: 1px 0 0 0;
+			border-color: @color-gray;
+			border-style: solid;
+			color: @color-primary;
+			padding-left: 15px;
+
+			&-text {
+				padding: @VerticalListMenu-size-childSpacer 0;
+			}
+
+			// Selected and hover state are the same for items
+			&&-is-selected,
+			&&-is-selected:hover {
+				.hardstop-gradient(
+					to right,
+					@color-primary,
+					@featured-color-primary-backgroundColor,
+					@VerticalListMenu-size-border
+				);
+				color: @color-darkGray;
+			}
+
+			&:hover,
+			&:focus {
+				.hardstop-gradient(
+					to right,
+					@color-primary,
+					@color-lightGray,
+					@VerticalListMenu-size-border
+				);
+				color: @color-darkGray;
+
+				// Style the expander button when the user hovers on the item content
+				.lucid-VerticalListMenu-Item-expander {
+					.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+					.box-sizing();
+					border: solid 1px @featured-color-default-borderColor;
+					border-radius: @size-borderRadius;
+					outline: none;
+
+					.lucid-ChevronIcon {
+						stroke: @color-darkGray;
+					}
+				}
+			}
+		}
+
+		&-nested-list {
+			.expandable-animation-collapsed();
+
+			&&-is-expanded {
+				.expandable-animation-expanded();
+			}
+		}
+
+		// The first VerticalListMenu-Item shouldn't have a top border
+		&:first-of-type > &-content {
+			border-top-color: @color-transparent;
+		}
+
+		// Any time we have a VerticalListMenu below a VerticalListMenu-Item
+		.lucid-VerticalListMenu {
+			.lucid-VerticalListMenu-Item-content {
+				font-weight: normal;
+				border-color: @color-transparent;
+
+				&:before {
+					align-self: flex-start;
+					flex-shrink: 0;
+					content: '\2013'; // en dash
+					display: inline-block;
+					width: @VerticalListMenu-size-childSpacer;
+					color: @color-gray;
+					margin: @VerticalListMenu-size-childSpacer;
+					margin-left: 0;
+				}
+
+				&:hover,
+				&-is-selected {
+					&:before {
+						color: @color-darkGray;
+					}
+				}
+			}
+		}
+	}
+}
+

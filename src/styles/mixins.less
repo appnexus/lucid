@@ -2,40 +2,43 @@
 
 // gradient animation mixin
 // takes start color, end color and transition time (set to .1s by default)
-.gradient-animation(@start, @end, @transTime: .1s) {
+.gradient-animation(@start, @end, @transTime: .1s, @zindex: 0) {
 	position: relative;
 	background-size: 100%;
 	background-image: linear-gradient(@start, @end);
-	z-index: 0;
+	transition: opacity @transTime, box-shadow (@transTime / 2);
+	z-index: @zindex;
 
 	&:before {
-		background-image: linear-gradient(@end, @start);
-		background-color: @color-white;
-		border-radius: 3px;
-		content: '';
+		position: absolute;
 		display: block;
 		height: 100%;
-		position: absolute;
-		top: 0; left: 0;
-		opacity: 0;
 		width: 100%;
-		z-index: -1;
-		transition: opacity @transTime, box-shadow .05s;
+		top: 0; left: 0;
+		background-image: linear-gradient(@end, @start);
 		box-shadow: none;
+		opacity: 0;
+		transition: opacity @transTime, box-shadow (@transTime / 2);
+		z-index: (@zindex - 1);
+		content: '';
+	}
+	&:hover:not(&-is-active):before {
+		opacity: 1;
 	}
 
-	&:hover {
-		&:before {
-			opacity: 1;
-		}
+	&:active { box-shadow: @shadow-inset;}
+
+	&:focus {
+		box-shadow: @shadow-solid-outline;
 	}
-
-	&:active {
-		outline: none;
-
-		&::before {
-			box-shadow: @shadow-inset;
-		}
+	&:active:focus {
+		border-radius: @size-borderRadius;
+		box-shadow: @shadow-inset;
+	}
+	&:active:before{
+		border-radius: @size-borderRadius;
+		box-shadow: @shadow-inset;
+		opacity: 1;
 	}
 }
 
@@ -114,8 +117,13 @@
 	background-image: linear-gradient(@direction, @line 0, @line @height, @background @height);
 }
 
+// Create an element which displays the properties of a selectable UI component
+.is-selectable() {
+	cursor: pointer;
+}
+
 // -----------------------------------------------------------------------------
-// Transition group animations
+// Animations
 // -----------------------------------------------------------------------------
 
 // This set of mixins in intended to be used with ReactCSSTransitionGroup. It's
@@ -142,3 +150,26 @@
 	}
 }
 
+.expandable-animation-collapsed() {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 300ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+}
+
+.expandable-animation-expanded() {
+	max-height: 9999px;
+	transition: max-height 800ms cubic-bezier(0.755, 0.050, 0.855, 0.060);
+}
+
+
+// This is a simple mixin to normalize the styles for an unselectable and unclickable element.
+.no-cursor() {
+	cursor: not-allowed;
+}
+
+// -----------------------------------------------------------------------------
+// Font mixins
+// -----------------------------------------------------------------------------
+.bold(){
+	font-weight: 500;
+}

@@ -43,6 +43,7 @@
 			border-bottom: @Table-header-border;
 			border-right: @Table-header-cell-border;
 			color: @color-white;
+			position: relative;
 
 			// **
 			// * if a cell in the `&-thead` has a `colspan` can the border bottom
@@ -52,7 +53,7 @@
 				border-bottom: @Table-header-cell-border;
 			}
 
-			&.lucid-Table-is-sortable {
+			&.lucid-Table-is-sortable:not(.lucid-Table-is-resizing) {
 				&:hover {
 					background-color: @Table-header-colorDark;
 					cursor: pointer;
@@ -67,6 +68,19 @@
 				line-height: inherit;
 			}
 
+			&.lucid-Table-is-resizable {
+				line-height: inherit;
+				padding: 0;
+				&[rowspan='2'] {
+					.lucid-Table-is-resizable-content	{
+						line-height: 53px;
+					}
+				}
+				.lucid-Table-is-resizable-content {
+					padding: 0 (@Table-cell-padding - 4) 0 @Table-cell-padding;
+				}
+			}
+
 			// **
 			// * set the border of the first "th" to match the border of the header
 			// *
@@ -78,6 +92,14 @@
 			// *
 			&:last-of-type {
 				border-right: @Table-header-border;
+			}
+
+			.lucid-DragCaptureZone {
+				cursor: ew-resize;
+				width: 4px;
+				&:hover {
+					background-color: fade(@color-black, 70%);
+				}
 			}
 		}
 	}
@@ -97,12 +119,20 @@
 		.Table-row-hover(@color-lightGray, false);
 	}
 
+	&-is-resizable-container,
 	&-is-sorted-container {
 		display: flex;
+		justify-content: space-between;
+		list-style: none;
 		margin: 0;
 		padding: 0;
-		list-style: none;
-		justify-content: space-between;
+	}
+
+	&-is-resizable-container {
+		align-items: stretch;
+	}
+
+	&-is-sorted-container {
 		align-items: center;
 	}
 
@@ -113,6 +143,12 @@
 	&-is-sorted-caret {
 		display: flex;
 		margin-left: @Table-cell-padding;
+	}
+
+	&-is-resizable-content {
+		flex: 1;
+		line-height: @Table-row-height;
+		padding: 0 @Table-cell-padding;
 	}
 
 	// **
@@ -172,7 +208,7 @@
 			}
 		}
 	}
-	
+
 
 	// **
 	// * A standard `<td>` or `<th>` tag.
@@ -181,6 +217,7 @@
 		padding: 0 @Table-cell-padding;
 		line-height: @Table-row-height;
 		box-sizing: border-box;
+		white-space: nowrap;
 
 		&[rowspan] {
 			line-height: inherit;
