@@ -38,6 +38,7 @@ import StickySection from './components/StickySection/StickySection';
 import Switch from './components/Switch/Switch';
 import Table from './components/Table/Table';
 import Tabs from './components/Tabs/Tabs';
+import Tag from './components/Tag/Tag';
 import TextField from './components/TextField/TextField'
 import ValidatedTextField from './components/ValidatedTextField/ValidatedTextField';
 import Validation from './components/Validation/Validation';
@@ -98,6 +99,7 @@ export {
 	Switch,
 	Table,
 	Tabs,
+	Tag,
 	TextField,
 	ValidatedTextField,
 	Validation,

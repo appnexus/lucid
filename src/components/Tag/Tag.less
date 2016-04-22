@@ -1,0 +1,38 @@
+@Tag-spacing: 6px;
+
+.lucid-Tag {
+	background-color: @color-primary;
+	border-radius: 3px;
+	color: @color-white;
+	display: inline-block;
+	font: @font;
+	line-height: 20px;
+	margin: 1px;
+	min-height: 20px;
+	padding: 0 @Tag-spacing;
+
+	&-close {
+		cursor: pointer;
+		fill: fade(@color-white, 50%);
+		font-size: 1rem;
+		font-weight: bold;
+		line-height: 1em;
+		margin-left: @Tag-spacing;
+
+		&:hover {
+			fill: @color-white;
+		}
+	}
+
+	&-is-nested {
+		background-color: tint(@color-primary, 30%);
+	}
+
+	&-is-nested &-is-nested {
+		background-color: tint(@color-primary, 60%);
+	}
+
+	&-is-nested &-is-nested &-is-nested {
+		background-color: tint(@color-primary, 90%);
+	}
+}

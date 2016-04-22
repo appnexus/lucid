@@ -51,7 +51,7 @@ const Switch = React.createClass({
 		/**
 		 * Passed through to the root element.
 		 */
-		style: object,
+		style: object
 	},
 
 	getDefaultProps() {
