@@ -23,15 +23,14 @@ export default React.createClass({
 	},
 
 	handleRandomize() {
-		const randomLengthArray = _.times(_.random(5, 50));
-		const data = _.map(randomLengthArray, () => {
+		const data = _.map(['one', 'two', 'three', 'four', 'five'], (x) => {
 			return {
-				x: new Date(_.random(1388563200000, 1451635200000)),
+				x,
 				y: _.random(1, 250),
 			}
 		});
-		const sortedData = _.sortBy(data, 'x');
-		this.setState({ data: sortedData });
+
+		this.setState({ data });
 	},
 
 	render() {
@@ -87,7 +86,7 @@ export default React.createClass({
 							<rect
 								className='bar'
 								x={x(d.x)}
-								y={y(d.y)}
+								y={y(d.y) - 1}
 								height={innerHeight - y(d.y)}
 								width={x.bandwidth()}
 							/>

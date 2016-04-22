@@ -33,9 +33,10 @@ const BarChart = React.createClass({
 		 */
 		outerTickSize: number,
 		/**
-		 * An optional function that gets passed to `scale.tickFormat`. Generally
-		 * this shouldn't be needed since d3 has very good default formatters for
-		 * most data.
+		 * An optional function that can format ticks. Generally this shouldn't be
+		 * needed since d3 has very good default formatters for most data.
+		 *
+		 * Signature: `(tick) => {}`
 		 */
 		tickFormat: func,
 		/**
