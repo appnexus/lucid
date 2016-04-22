@@ -17,7 +17,7 @@ export default React.createClass({
 	render() {
 		return (
 			<svg width={width} height={height}>
-				<g transform={`translate(${margin.left}, 0)`}>
+				<g transform={`translate(${margin.left}, 1)`}>
 					<Axis
 						orient='bottom'
 						scale={x}

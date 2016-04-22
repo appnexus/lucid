@@ -83,16 +83,13 @@ const BarChart = React.createClass({
 		const range = scale.range();
 		const sign = orient === 'top' || orient === 'left' ? -1 : 1;
 		const isH = orient === 'top' || orient === 'bottom';
-		const isOrdinal = !!scale.step;
 
-		let scaleNormalized;
+		let scaleNormalized = scale;
 
-		// Only ordinal scales have `step`
-		if (isOrdinal) {
-			const bandModifier = scale.step() / 2;
+		// Only ordinal scales have `bandwidth`
+		if (scale.bandwidth) {
+			const bandModifier = scale.bandwidth() / 2;
 			scaleNormalized = (d) => scale(d) + bandModifier;
-		} else {
-			scaleNormalized = scale;
 		}
 
 		return (

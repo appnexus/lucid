@@ -48,6 +48,8 @@ export default React.createClass({
 		const domain = _.uniq(_.map(data, 'x'));
 
 		const x = d3Scale.scaleBand()
+			.align(0.5)
+			.padding(0.4)
 			.domain(domain)
 			.range([0, innerWidth]);
 
@@ -75,12 +77,21 @@ export default React.createClass({
 					<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
 						<Axis
 							scale={x}
+							outerTickSize={0}
 							ticks={domain}
 						/>
 					</g>
-					{/* line + scatter */}
+					{/* bars */}
 					<g transform={`translate(${margin.left}, ${margin.top})`}>
-						<text>Yolo</text>
+						{_.map(data, (d) =>
+							<rect
+								className='bar'
+								x={x(d.x)}
+								y={y(d.y)}
+								height={innerHeight - y(d.y)}
+								width={x.bandwidth()}
+							/>
+						)}
 					</g>
 				</svg>
 				<pre style={{
