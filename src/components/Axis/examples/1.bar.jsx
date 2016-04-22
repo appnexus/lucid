@@ -2,7 +2,6 @@ import _ from 'lodash';
 import React from 'react';
 import d3Scale from 'd3-scale';
 import d3Shape from 'd3-shape';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Axis from '../Axis';
 import Button from '../../Button/Button';
@@ -11,11 +10,11 @@ export default React.createClass({
 	getInitialState() {
 		return {
 			data: [
-				{x: 'One', y: 5},
+				{x: 'one', y: 5},
 				{x: 'two', y: 25},
-				{x: 'One', y: 50},
-				{x: 'One', y: 200},
-				{x: 'One', y: 250},
+				{x: 'three', y: 50},
+				{x: 'four', y: 200},
+				{x: 'five', y: 250},
 			],
 			margin: {top: 10, right: 20, bottom: 50, left: 50},
 			width: 1000,
@@ -49,7 +48,7 @@ export default React.createClass({
 		const domain = _.uniq(_.map(data, 'x'));
 
 		const x = d3Scale.scaleBand()
-			.domain([domain])
+			.domain(domain)
 			.range([0, innerWidth]);
 
 		const y = d3Scale.scaleLinear()

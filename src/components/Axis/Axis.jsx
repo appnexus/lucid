@@ -60,7 +60,7 @@ const BarChart = React.createClass({
 			innerTickSize: 6, // same as d3
 			outerTickSize: 6, // same as d3
 			tickPadding: 3, // same as d3
-			tickFormat: null,
+			tickFormat: undefined, // purposefully `undefined` so we can drop through to destructuring defaults
 			orient: 'bottom',
 		};
 	},
@@ -69,10 +69,10 @@ const BarChart = React.createClass({
 		const {
 			scale,
 			orient,
-			ticks = scale.ticks(),
+			ticks = scale.ticks ? scale.ticks() : scale.domain(), // ordinal scales don't have `ticks` but they do have `domains`
 			innerTickSize,
 			outerTickSize,
-			tickFormat,
+			tickFormat = scale.tickFormat ? scale.tickFormat() : _.identity,
 			tickPadding,
 			...passThroughs,
 		} = this.props;
@@ -83,6 +83,17 @@ const BarChart = React.createClass({
 		const range = scale.range();
 		const sign = orient === 'top' || orient === 'left' ? -1 : 1;
 		const isH = orient === 'top' || orient === 'bottom';
+		const isOrdinal = !!scale.step;
+
+		let scaleNormalized;
+
+		// Only ordinal scales have `step`
+		if (isOrdinal) {
+			const bandModifier = scale.step() / 2;
+			scaleNormalized = (d) => scale(d) + bandModifier;
+		} else {
+			scaleNormalized = scale;
+		}
 
 		return (
 			<g
@@ -103,7 +114,7 @@ const BarChart = React.createClass({
 				{_.map(ticks, (tick) =>
 					<g
 						key={tick}
-						transform={`translate(${isH ? scale(tick) : 0}, ${isH ? 0 : scale(tick)})`}
+						transform={`translate(${isH ? scaleNormalized(tick) : 0}, ${isH ? 0 : scaleNormalized(tick)})`}
 					>
 						<line
 							className={boundClassNames('&-tick')}
@@ -124,11 +135,7 @@ const BarChart = React.createClass({
 									: sign < 0 ? 'end' : 'start'
 							}}
 						>
-							{scale.tickFormat ?
-								scale.tickFormat(tickFormat)(tick)
-							:
-								tick
-							}
+							{tickFormat(tick)}
 						</text>
 					</g>
 				)}
