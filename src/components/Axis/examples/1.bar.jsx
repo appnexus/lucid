@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import d3Scale from 'd3-scale';
 import d3Shape from 'd3-shape';
+import {Motion, spring} from 'react-motion';
 
 import Axis from '../Axis';
 import Button from '../../Button/Button';
@@ -56,6 +57,9 @@ export default React.createClass({
 			.domain([0, _.max(_.map(data, 'y'))])
 			.range([innerHeight, 0]);
 
+		_.each(data, (d) => {
+			console.log(d.y, innerHeight - y(d.y))
+		});
 		return (
 			<div>
 				<Button
@@ -83,13 +87,17 @@ export default React.createClass({
 					{/* bars */}
 					<g transform={`translate(${margin.left}, ${margin.top})`}>
 						{_.map(data, (d) =>
-							<rect
-								className='bar'
-								x={x(d.x)}
-								y={y(d.y) - 1}
-								height={innerHeight - y(d.y)}
-								width={x.bandwidth()}
-							/>
+							<Motion defaultStyle={{height: 0}} style={{height: spring(innerHeight - y(d.y))}}>
+								{value =>
+									<rect
+										className='bar'
+										x={x(d.x)}
+										y={innerHeight - value.height}
+										height={value.height}
+										width={x.bandwidth()}
+									/>
+								}
+							</Motion>
 						)}
 					</g>
 				</svg>
