@@ -50,7 +50,7 @@ export function getReduxPrimitives({
 	let dispatchTree;
 
 	const reducer = createReduxReducer(reducers, initialState, rootPath);
-	const selector = reduceSelectors(selectors);
+	const selector = selectors ? reduceSelectors(selectors) : identity;
 	const rootPathSelector = state => isEmpty(rootPath) ? state : get(state, rootPath);
 	const mapStateToProps = createSelector(
 		[rootPathSelector],
