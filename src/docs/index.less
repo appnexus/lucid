@@ -109,7 +109,7 @@ html {
 	.transition-group-animation-fade();
 }
 
-.circle, .line, .bar {
+.line, .bar {
 	fill: @color-primary;
 	stroke: @color-primary;
 	transition: transform 300ms;
@@ -117,8 +117,13 @@ html {
 }
 
 .circle {
-	&:hover {
-		transform: scale(2);
-	}
+	stroke: none;
 }
+
+.circle-1 { fill: @color-chart-1; }
+.circle-2 { fill: @color-chart-2; }
+.circle-3 { fill: @color-chart-3; }
+.circle-4 { fill: @color-chart-4; }
+.circle-5 { fill: @color-chart-5; }
+.circle-6 { fill: @color-chart-6; }
 

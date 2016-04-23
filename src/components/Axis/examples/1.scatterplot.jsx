@@ -10,10 +10,10 @@ export default React.createClass({
 	getInitialState() {
 		return {
 			data: [
-				{x: 1, y: 2},
-				{x: 10, y: 15},
-				{x: 5, y: 20},
-				{x: 3, y: 5},
+				{x: 1, y: 2, color: 1},
+				{x: 10, y: 15, color: 2},
+				{x: 5, y: 20, color: 3},
+				{x: 3, y: 5, color: 4},
 			],
 			margin: {top: 10, right: 10, bottom: 50, left: 50},
 			width: 600,
@@ -27,6 +27,7 @@ export default React.createClass({
 			return {
 				x: _.random(1, 250),
 				y: _.random(1, 250),
+				color: _.random(1, 6),
 			}
 		});
 		this.setState({ data });
@@ -94,11 +95,11 @@ export default React.createClass({
 								>
 								{value => (
 									<circle
-										className={'circle'}
+										className={`circle circle-${d.color}`}
 										key={`${d.x}|${d.y}`}
 										cx={value.cx}
 										cy={value.cy}
-										r={4}
+										r={6}
 										style={{
 											opacity: value.opacity
 										}}
