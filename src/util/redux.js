@@ -242,5 +242,5 @@ function reduceSelectors(selectors) {
  * @return {Object}
  */
 function mergeProps(state, dispatchTree, ownProps) {
-	return merge({}, state, dispatchTree, ownProps, (a, b) => (isArray(a) && isArray(b)) ? b : undefined);
+	return merge({}, state, dispatchTree, ownProps);
 }
