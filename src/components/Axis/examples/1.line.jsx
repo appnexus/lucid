@@ -2,7 +2,6 @@ import _ from 'lodash';
 import React from 'react';
 import d3Scale from 'd3-scale';
 import d3Shape from 'd3-shape';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Axis from '../Axis';
 import Button from '../../Button/Button';

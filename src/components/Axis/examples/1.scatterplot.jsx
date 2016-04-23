@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import d3Scale from 'd3-scale';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { Motion, spring } from 'react-motion';
 
 import Axis from '../Axis';
 import Button from '../../Button/Button';
@@ -78,23 +78,35 @@ export default React.createClass({
 						<Axis scale={x} />
 					</g>
 					{/* Scatter plot */}
-					<ReactCSSTransitionGroup
-						transitionName={'circles'}
-						transitionEnterTimeout={300}
-						transitionLeaveTimeout={300}
-						component='g'
-						transform={`translate(${margin.left}, ${margin.top})`}
-					>
-						{_.map(data, (d) =>
-							<circle
-								className={'circle'}
-								key={`${d.x}|${d.y}`}
-								cx={x(d.x)}
-								cy={y(d.y)}
-								r={4}
-							/>
-						)}
-					</ReactCSSTransitionGroup>
+					<g transform={`translate(${margin.left}, ${margin.top})`}>
+						{_.map(data, (d) => (
+							<Motion
+								defaultStyle={{
+									cx: x(d.x),
+									cy: y(d.y),
+									opacity: 0,
+								}}
+								style={{
+									cx: spring(x(d.x)),
+									cy: spring(y(d.y)),
+									opacity: spring(1),
+								}}
+								>
+								{value => (
+									<circle
+										className={'circle'}
+										key={`${d.x}|${d.y}`}
+										cx={value.cx}
+										cy={value.cy}
+										r={4}
+										style={{
+											opacity: value.opacity
+										}}
+									/>
+								)}
+							</Motion>
+						))}
+					</g>
 				</svg>
 				<pre style={{
 					maxHeight: 200,

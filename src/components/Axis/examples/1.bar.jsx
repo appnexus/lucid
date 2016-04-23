@@ -91,6 +91,7 @@ export default React.createClass({
 								{value =>
 									<rect
 										className='bar'
+										key={d.x}
 										x={x(d.x)}
 										y={innerHeight - value.height}
 										height={value.height}

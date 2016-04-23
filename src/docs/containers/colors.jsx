@@ -123,8 +123,8 @@ const colorList = [
 	{
 		category: 'Featured colors',
 		description: 'A featured color should only be used for a component that has ' +
-		'multible states like banners or buttons or button like components ' +
-		'(drop select).  Featured colors should not be consumed by most components ' +
+		'multiple states like banners or buttons or button like components ' +
+		'(single select).  Featured colors should not be consumed by most components ' +
 		'instead use the color variables defined above.',
 		colors: [
 			{
@@ -216,6 +216,35 @@ const colorList = [
 			{varName: 'danger-borderColorLite', hex: 'tint(@color-danger, 60%)', featured: 'featured-'},
 			{varName: 'danger-gradientStartColor', hex: 'tint(@color-danger, 30%)', featured: 'featured-'},
 			{varName: 'danger-gradientEndColor', hex: '@color-danger', featured: 'featured-'},
+		]
+	},
+	{
+		category: 'Charts',
+		description: 'Colors that are used throughout our charts.',
+		colors: [
+			{ varName: 'chart-1', hex: '#0089c4'},
+			{ varName: 'chart-1-dark', hex: 'shade(@color-chart-1, 35%)' },
+			{ varName: 'chart-1-light', hex: 'tint(@color-chart-1, 65%)' },
+
+			{ varName: 'chart-2', hex: '#ff8700' },
+			{ varName: 'chart-2-dark', hex: 'shade(@color-chart-2, 35%)' },
+			{ varName: 'chart-2-light', hex: 'tint(@color-chart-2, 65%)' },
+
+			{ varName: 'chart-3', hex: '@color-primary' },
+			{ varName: 'chart-3-dark', hex: 'shade(@color-chart-3, 35%)' },
+			{ varName: 'chart-3-light', hex: 'tint(@color-chart-3, 65%)' },
+
+			{ varName: 'chart-4', hex: '#824bb0' },
+			{ varName: 'chart-4-dark', hex: 'shade(@color-chart-4, 35%)' },
+			{ varName: 'chart-4-light', hex: 'tint(@color-chart-4, 65%)' },
+
+			{ varName: 'chart-5', hex: '#fed100' },
+			{ varName: 'chart-5-dark', hex: 'shade(@color-chart-5, 35%)' },
+			{ varName: 'chart-5-light', hex: 'tint(@color-chart-5, 65%)' },
+
+			{ varName: 'chart-6', hex: '#d144b5' },
+			{ varName: 'chart-6-dark', hex: 'shade(@color-chart-6, 35%)' },
+			{ varName: 'chart-6-light', hex: 'tint(@color-chart-6, 65%)' },
 		]
 	},
 ];
