@@ -2,7 +2,6 @@ import {
 	assign,
 	get,
 	identity,
-	isArray,
 	isEmpty,
 	isFunction,
 	isUndefined,
@@ -54,7 +53,7 @@ export function getReduxPrimitives({
 	const rootPathSelector = state => isEmpty(rootPath) ? state : get(state, rootPath);
 	const mapStateToProps = createSelector(
 		[rootPathSelector],
-		root => rootSelector(selector(root))
+		rootState => rootSelector(selector(rootState))
 	);
 	const mapDispatchToProps = dispatch => getDispatchTree(reducers, rootPath, dispatch);
 
@@ -223,7 +222,7 @@ function bindActionCreatorTree(actionCreatorTree, dispatch, path = []) {
  */
 // @TODO: optimize to create and reuse selectors?
 function reduceSelectors(selectors) {
-	return function rootSelector(state) {
+	return function reducedSelector(state) {
 		return reduce(selectors, (state, selector, key) => assign({}, state, {
 			[key]: isFunction(selector) ?
 				selector(state) :
