@@ -42,6 +42,7 @@
 
 // Standard inset shadow
 @shadow-inset: 0 10px 10px -10px @color-gray-30 inset;
+
 @shadow-solid-outline: 0px 0px 0px 3px @color-primary-30;
 
 // -----------------------------------------------------------------------------
@@ -153,27 +154,51 @@
 // Chart Colors
 // -------------------------------------
 
-@color-chart-1: #0089c4;
-@color-chart-1-dark: shade(@color-chart-1, 35%);
+@color-chart-1: @featured-color-info;
+@color-chart-1-lightest: tint(@color-chart-1, 90%);
 @color-chart-1-light: tint(@color-chart-1, 65%);
+@color-chart-1-dark: shade(@color-chart-1, 35%);
+@color-chart-1-darkest: shade(@color-chart-1, 70%);
 
 @color-chart-2: #ff8700;
-@color-chart-2-dark: shade(@color-chart-2, 35%);
+@color-chart-2-lightest: tint(@color-chart-2, 90%);
 @color-chart-2-light: tint(@color-chart-2, 65%);
+@color-chart-2-dark: shade(@color-chart-2, 35%);
+@color-chart-2-darkest: shade(@color-chart-2, 70%);
 
 @color-chart-3: @color-primary;
-@color-chart-3-dark: shade(@color-chart-3, 35%);
+@color-chart-3-lightest: tint(@color-chart-3, 90%);
 @color-chart-3-light: tint(@color-chart-3, 65%);
+@color-chart-3-dark: shade(@color-chart-3, 35%);
+@color-chart-3-darkest: shade(@color-chart-3, 70%);
 
 @color-chart-4: #824bb0;
-@color-chart-4-dark: shade(@color-chart-4, 35%);
+@color-chart-4-lightest: tint(@color-chart-4, 90%);
 @color-chart-4-light: tint(@color-chart-4, 65%);
+@color-chart-4-dark: shade(@color-chart-4, 35%);
+@color-chart-4-darkest: shade(@color-chart-4, 70%);
 
 @color-chart-5: #fed100;
-@color-chart-5-dark: shade(@color-chart-5, 35%);
+@color-chart-5-lightest: tint(@color-chart-5, 90%);
 @color-chart-5-light: tint(@color-chart-5, 65%);
+@color-chart-5-dark: shade(@color-chart-5, 35%);
+@color-chart-5-darkest: shade(@color-chart-5, 70%);
 
 @color-chart-6: #d144b5;
-@color-chart-6-dark: shade(@color-chart-6, 35%);
+@color-chart-6-lightest: tint(@color-chart-6, 90%);
 @color-chart-6-light: tint(@color-chart-6, 65%);
+@color-chart-6-dark: shade(@color-chart-6, 35%);
+@color-chart-6-darkest: shade(@color-chart-6, 70%);
+
+// Semantic colors
+
+@color-chart-good: @featured-color-success;
+@color-chart-good-dark: shade(@color-chart-good, 35%);
+@color-chart-good-light: tint(@color-chart-good, 65%);
+
+@color-chart-bad: @featured-color-danger;
+@color-chart-bad-dark: shade(@color-chart-bad, 35%);
+@color-chart-bad-light: tint(@color-chart-bad, 65%);
+
+@color-chart-neutral: @color-gray;
 

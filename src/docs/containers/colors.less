@@ -1,4 +1,107 @@
+@ColorPalette-variables:
+	color-primary,
+	color-primaryMedium,
+	color-primaryLight,
+	color-white,
+	color-textColor,
+	color-disabledText,
+	color-linkColor,
+	color-linkColorHover,
+	color-gray-5,
+	color-gray-10,
+	color-gray-25,
+	color-gray-30,
+	color-lightGray,
+	color-gray,
+	color-mediumGray,
+	color-darkGray,
+	color-borderColor,
+	color-backgroundColor,
+	featured-color-default,
+	featured-color-primary,
+	featured-color-success,
+	featured-color-info,
+	featured-color-warning,
+	featured-color-danger,
+	featured-color-default-borderColor,
+	featured-color-default-backgroundColor,
+	featured-color-default-gradientStartColor,
+	featured-color-default-gradientEndColor,
+	featured-color-primary-borderColor,
+	featured-color-primary-borderColorLite,
+	featured-color-primary-backgroundColor,
+	featured-color-primary-gradientStartColor,
+	featured-color-primary-gradientEndColor,
+	featured-color-success-borderColor,
+	featured-color-success-borderColorLite,
+	featured-color-success-backgroundColor,
+	featured-color-success-gradientStartColor,
+	featured-color-success-gradientEndColor,
+	featured-color-info-borderColor,
+	featured-color-info-borderColorLite,
+	featured-color-info-backgroundColor,
+	featured-color-info-gradientStartColor,
+	featured-color-info-gradientEndColor,
+	featured-color-warning-borderColor,
+	featured-color-warning-borderColorLite,
+	featured-color-warning-backgroundColor,
+	featured-color-warning-gradientStartColor,
+	featured-color-warning-gradientEndColor,
+	featured-color-danger-borderColor,
+	featured-color-danger-borderColorLite,
+	featured-color-danger-backgroundColor,
+	featured-color-danger-gradientStartColor,
+	featured-color-danger-gradientEndColor,
+	color-chart-1-lightest,
+	color-chart-1-light,
+	color-chart-1,
+	color-chart-1-dark,
+	color-chart-1-darkest,
+	color-chart-2-lightest,
+	color-chart-2-light,
+	color-chart-2,
+	color-chart-2-dark,
+	color-chart-2-darkest,
+	color-chart-3-lightest,
+	color-chart-3-light,
+	color-chart-3,
+	color-chart-3-dark,
+	color-chart-3-darkest,
+	color-chart-4-lightest,
+	color-chart-4-light,
+	color-chart-4,
+	color-chart-4-dark,
+	color-chart-4-darkest,
+	color-chart-5-lightest,
+	color-chart-5-light,
+	color-chart-5,
+	color-chart-5-dark,
+	color-chart-5-darkest,
+	color-chart-6-lightest,
+	color-chart-6-light,
+	color-chart-6,
+	color-chart-6-dark,
+	color-chart-6-darkest,
+	color-chart-good,
+	color-chart-good-dark,
+	color-chart-good-light,
+	color-chart-bad,
+	color-chart-bad-dark,
+	color-chart-bad-light,
+	color-black;
+
+.ColorPalette-loop(@i: length(@ColorPalette-variables)) when (@i > 0) {
+	@name: extract(@ColorPalette-variables, @i);
+
+	&-@{name} { background-color: @@name }
+
+	// Recurse
+	.ColorPalette-loop(@i - 1);
+}
+
 .lucid-ColorPalette {
+	// Invoke the loop
+	.ColorPalette-loop();
 	border: 1px solid @color-borderColor;
 	background-color: @color-backgroundColor;
 	width: 200px;
@@ -7,13 +110,9 @@
 	margin-bottom: 10px;
 	border-radius: @size-borderRadius;
 
-	&:hover {
-		background-color: @color-primary;
-	}
-
 	& > div {
 		height: 100px;
-		border-radius: 2px;
+		border-radius: @size-borderRadius;
 		border: 1px solid @color-borderColor;
 	}
 
@@ -21,288 +120,5 @@
 		font-style: italic;
 		font-size: .8em;
 		margin: 0;
-	}
-
-	&-color-white {
-		background-color: @color-white;
-	}
-
-	&-color-black {
-		background-color: @color-black;
-	}
-
-	&-color-textColor {
-		background-color: @color-textColor;
-	}
-
-	&-color-disabledText {
-		background-color: @color-disabledText;
-	}
-
-	&-color-linkColor {
-		background-color: @color-linkColor;
-	}
-
-	&-color-linkColorHover {
-		background-color: @color-linkColorHover;
-	}
-
-	&-color-primary {
-		background-color: @color-primary;
-	}
-
-	&-color-primaryMedium {
-		background-color: @color-primaryMedium;
-	}
-
-	&-color-primaryLight {
-		background-color: @color-primaryLight;
-	}
-
-	&-color-gray-5 {
-		background-color: @color-gray-5;
-	}
-
-	&-color-gray-10 {
-		background-color: @color-gray-10;
-	}
-
-	&-color-gray-25 {
-		background-color: @color-gray-25;
-	}
-
-	&-color-gray-30 {
-		background-color: @color-gray-30;
-	}
-
-	&-color-lightGray {
-		background-color: @color-lightGray;
-	}
-
-	&-color-gray {
-		background-color: @color-gray;
-	}
-
-	&-color-mediumGray {
-		background-color: @color-mediumGray;
-	}
-
-	&-color-darkGray {
-		background-color: @color-darkGray;
-	}
-
-	&-color-default {
-		background-color: @featured-color-default;
-	}
-
-	&-color-primary {
-		background-color: @featured-color-primary;
-	}
-
-	&-color-success {
-		background-color: @featured-color-success;
-	}
-
-	&-color-info {
-		background-color: @featured-color-info;
-	}
-
-	&-color-warning {
-		background-color: @featured-color-warning;
-	}
-
-	&-color-danger {
-		background-color: @featured-color-danger;
-	}
-
-	&-color-borderColor {
-		background-color: @color-borderColor;
-	}
-
-	&-color-backgroundColor {
-		background-color: @color-backgroundColor;
-	}
-
-	// default
-	&-color-default-borderColor {
-		background-color: @featured-color-default-borderColor;
-	}
-
-	&-color-default-backgroundColor {
-		background-color: @featured-color-default-backgroundColor;
-	}
-
-	&-color-default-gradientStartColor {
-		background-color: @featured-color-default-gradientStartColor;
-	}
-
-	&-color-default-gradientEndColor {
-		background-color: @featured-color-default-gradientEndColor;
-	}
-
-	// primary
-	&-color-primary-borderColor {
-		background-color: @featured-color-primary-borderColor;
-	}
-
-	&-color-primary-borderColorLite {
-		background-color: @featured-color-primary-borderColorLite;
-	}
-
-	&-color-primary-backgroundColor {
-		background-color: @featured-color-primary-backgroundColor;
-	}
-
-	&-color-primary-gradientStartColor {
-		background-color: @featured-color-primary-gradientStartColor;
-	}
-
-	&-color-primary-gradientEndColor {
-		background-color: @featured-color-primary-gradientEndColor;
-	}
-
-	// success
-	&-color-success-borderColor {
-		background-color: @featured-color-success-borderColor;
-	}
-
-	&-color-success-borderColorLite {
-		background-color: @featured-color-success-borderColorLite;
-	}
-
-	&-color-success-backgroundColor {
-		background-color: @featured-color-success-backgroundColor;
-	}
-
-	&-color-success-gradientStartColor {
-		background-color: @featured-color-success-gradientStartColor;
-	}
-
-	&-color-success-gradientEndColor {
-		background-color: @featured-color-success-gradientEndColor;
-	}
-
-	// info
-	&-color-info-borderColor {
-		background-color: @featured-color-info-borderColor;
-	}
-
-	&-color-info-borderColorLite {
-		background-color: @featured-color-info-borderColorLite;
-	}
-
-	&-color-info-backgroundColor {
-		background-color: @featured-color-info-backgroundColor;
-	}
-
-	&-color-info-gradientStartColor {
-		background-color: @featured-color-info-gradientStartColor;
-	}
-
-	&-color-info-gradientEndColor {
-		background-color: @featured-color-info-gradientEndColor;
-	}
-
-	// warning
-	&-color-warning-borderColor {
-		background-color: @featured-color-warning-borderColor;
-	}
-
-	&-color-warning-borderColorLite {
-		background-color: @featured-color-warning-borderColorLite;
-	}
-
-	&-color-warning-backgroundColor {
-		background-color: @featured-color-warning-backgroundColor;
-	}
-
-	&-color-warning-gradientStartColor {
-		background-color: @featured-color-warning-gradientStartColor;
-	}
-
-	&-color-warning-gradientEndColor {
-		background-color: @featured-color-warning-gradientEndColor;
-	}
-
-	// danger
-	&-color-danger-borderColor {
-		background-color: @featured-color-danger-borderColor;
-	}
-
-	&-color-danger-borderColorLite {
-		background-color: @featured-color-danger-borderColorLite;
-	}
-
-	&-color-danger-backgroundColor {
-		background-color: @featured-color-danger-backgroundColor;
-	}
-
-	&-color-danger-gradientStartColor {
-		background-color: @featured-color-danger-gradientStartColor;
-	}
-
-	&-color-danger-gradientEndColor {
-		background-color: @featured-color-danger-gradientEndColor;
-	}
-
-	// chart colors
-	&-color-chart-1 {
-		background-color: @color-chart-1;
-	}
-	&-color-chart-1-dark {
-		background-color: @color-chart-1-dark;
-	}
-	&-color-chart-1-light {
-		background-color: @color-chart-1-light;
-	}
-
-	&-color-chart-2 {
-		background-color: @color-chart-2;
-	}
-	&-color-chart-2-dark {
-		background-color: @color-chart-2-dark;
-	}
-	&-color-chart-2-light {
-		background-color: @color-chart-2-light;
-	}
-
-	&-color-chart-3 {
-		background-color: @color-chart-3;
-	}
-	&-color-chart-3-dark {
-		background-color: @color-chart-3-dark;
-	}
-	&-color-chart-3-light {
-		background-color: @color-chart-3-light;
-	}
-
-	&-color-chart-4 {
-		background-color: @color-chart-4;
-	}
-	&-color-chart-4-dark {
-		background-color: @color-chart-4-dark;
-	}
-	&-color-chart-4-light {
-		background-color: @color-chart-4-light;
-	}
-
-	&-color-chart-5 {
-		background-color: @color-chart-5;
-	}
-	&-color-chart-5-dark {
-		background-color: @color-chart-5-dark;
-	}
-	&-color-chart-5-light {
-		background-color: @color-chart-5-light;
-	}
-
-	&-color-chart-6 {
-		background-color: @color-chart-6;
-	}
-	&-color-chart-6-dark {
-		background-color: @color-chart-6-dark;
-	}
-	&-color-chart-6-light {
-		background-color: @color-chart-6-light;
 	}
 }
