@@ -5,6 +5,7 @@ import { Motion, spring } from 'react-motion';
 
 import Axis from '../Axis';
 import Button from '../../Button/Button';
+import Point from '../../Point/Point';
 
 export default React.createClass({
 	getInitialState() {
@@ -27,7 +28,7 @@ export default React.createClass({
 			return {
 				x: _.random(1, 250),
 				y: _.random(1, 250),
-				color: _.random(1, 6),
+				color: _.random(1, 5),
 			}
 		});
 		this.setState({ data });
@@ -83,23 +84,23 @@ export default React.createClass({
 						{_.map(data, (d) => (
 							<Motion
 								defaultStyle={{
-									cx: x(d.x),
-									cy: y(d.y),
+									x: x(d.x),
+									y: y(d.y),
 									opacity: 0,
 								}}
 								style={{
-									cx: spring(x(d.x)),
-									cy: spring(y(d.y)),
+									x: spring(x(d.x)),
+									y: spring(y(d.y)),
 									opacity: spring(1),
 								}}
 								>
 								{value => (
-									<circle
-										className={`circle circle-${d.color}`}
+									<Point
+										kind={d.color}
+										color={d.color}
 										key={`${d.x}|${d.y}`}
-										cx={value.cx}
-										cy={value.cy}
-										r={6}
+										x={value.x}
+										y={value.y}
 										style={{
 											opacity: value.opacity
 										}}

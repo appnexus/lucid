@@ -5,6 +5,7 @@ import d3Shape from 'd3-shape';
 
 import Axis from '../Axis';
 import Button from '../../Button/Button';
+import Point from '../../Point/Point';
 
 export default React.createClass({
 	getInitialState() {
@@ -55,8 +56,8 @@ export default React.createClass({
 
 		const line = d3Shape.line()
 			.x((d) => x(d.x))
-			.y((d) => y(d.y))
-			.curve(d3Shape.curveMonotoneX);
+			.y((d) => y(d.y));
+			// .curve(d3Shape.curveMonotoneX);
 
 		return (
 			<div>
@@ -89,11 +90,10 @@ export default React.createClass({
 							}}
 						/>
 						{_.map(data, (d) =>
-							<circle
-								className='circle'
-								cx={x(d.x)}
-								cy={y(d.y)}
-								r={3}
+							<Point
+								x={x(d.x)}
+								y={y(d.y)}
+								kind={3}
 							/>
 						)}
 					</g>
