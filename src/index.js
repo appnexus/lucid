@@ -31,6 +31,7 @@ import Portal from './components/Portal/Portal';
 import RadioButton from './components/RadioButton/RadioButton';
 import RadioGroup from './components/RadioGroup/RadioGroup';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
+import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import SingleSelect from './components/SingleSelect/SingleSelect';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
@@ -91,6 +92,7 @@ export {
 	RadioButton,
 	RadioGroup,
 	ResizeIcon,
+	ScrollTable,
 	SearchIcon,
 	SingleSelect,
 	SuccessIcon,

@@ -230,9 +230,6 @@ const Th = React.createClass(createLucidComponentDefinition({
 			passiveWidth: width || null
 		};
 	},
-	componentDidMount() {
-		this._root = this.refs['root'];
-	},
 	render() {
 		const {
 			children,
@@ -300,7 +297,11 @@ const Th = React.createClass(createLucidComponentDefinition({
 		);
 	},
 	getWidth() {
-		return this._root.getBoundingClientRect().width;
+		const styleWidth = _.get(this.refs.root, 'style.width');
+		if (_.endsWith(styleWidth, 'px')){
+			return parseInt(styleWidth);
+		}
+		return this.refs.root.getBoundingClientRect().width;
 	},
 	handleDragEnded(coordinates, { event }) {
 		this.setState({
@@ -458,10 +459,16 @@ const Table = React.createClass(createLucidComponentDefinition({
 		 * Adjusts the style of the table to have more spacing within the table cells
 		 */
 		hasExtraWhitespace: bool,
+
+		/**
+		 * render the table without borders on the outer edge
+		 */
+		hasNoBorder: bool,
 	},
 
 	getDefaultProps() {
 		return {
+			hasNoBorder: false,
 			hasExtraWhitespace: false,
 		};
 	},
@@ -470,13 +477,18 @@ const Table = React.createClass(createLucidComponentDefinition({
 
 		const {
 			className,
+			hasNoBorder,
 			hasExtraWhitespace,
 		} = this.props;
 
 		return (
-			<table {...this.props} className={boundClassNames('&', {
-				'&-has-extra-whitespace': hasExtraWhitespace,
-			}, className)} />
+			<table
+				{...this.props}
+				className={boundClassNames('&', {
+					'&-has-extra-whitespace': hasExtraWhitespace,
+					'&-has-no-border': hasNoBorder,
+				}, className)}
+			/>
 		);
 	}
 }));

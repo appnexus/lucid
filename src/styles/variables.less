@@ -3,9 +3,6 @@
 @fontFamily: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 @font: @fontSize @fontFamily;
 
-// Borders
-@border-lightBorder: 1px solid @color-borderColorLight;
-@border-standardBorder: 1px solid @color-borderColor;
 
 // Sizes
 @size-font: 12px;
@@ -78,6 +75,14 @@
 
 // Normalize transparent due to Safari bug
 @color-transparent: rgba(255, 255, 255, 0);
+
+// ---------------------------------------------
+//                  Borders
+// ---------------------------------------------
+@border-standardBorder: 1px solid @color-borderColor;
+@border-lightBorder: 1px solid @color-borderColorLight;
+
+@border-table: 1px solid @color-gray;
 
 // -------------------------------------
 //             Box Shadows

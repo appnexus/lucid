@@ -1,7 +1,6 @@
 @Table-row-height: @size-standard-height - 2;
 @Table-row-heightLarge: @Table-row-height + @size-standard;
 @Table-cell-padding: @size-S;
-@Table-cell-border: @border-lightBorder;
 @Table-header-backgroundColor: #767b7f;
 @Table-header-colorLight: #525659;
 @Table-header-colorDark: #393d40;
@@ -17,6 +16,41 @@
 	font: 500 @font;
 	color: @color-textColor;
 	background-color: @color-white;
+
+	// hide all borders on the outer edge of the table.
+	&&-has-no-border {
+		border: 0 solid @color-transparent;
+
+		.lucid-Table-thead {
+			.lucid-Table-thead-row:first-of-type {
+				.lucid-Table-cell {
+					border-top: 0 solid @color-transparent;
+				}
+			}
+
+			.lucid-Table-cell:first-of-type {
+				border-left: 0 solid @color-transparent;
+			}
+
+			.lucid-Table-cell:last-of-type {
+				border-right: 0 solid @color-transparent;
+			}
+		}
+
+		.lucid-Table-tbody {
+			.lucid-Table-row {
+				.lucid-Table-cell:first-of-type {
+					border-left: 0 solid @color-transparent;
+				}
+			}
+
+			.lucid-Table-row:last-of-type {
+				.lucid-Table-cell {
+					border-bottom: 0 solid @color-transparent;
+				}
+			}
+		}
+	}
 
 	a {
 		color: @color-linkColor;
@@ -108,7 +142,7 @@
 		// * set the border of all "td" within a '&-tbody'
 		// *
 		.lucid-Table-cell {
-			border-bottom: @Table-cell-border;
+			border-bottom: @border-table;
 		}
 	}
 
@@ -279,7 +313,7 @@
 	// * line on the left.
 	// *
 	&-has-border-left {
-		border-left: @Table-cell-border;
+		border-left: @border-table;
 	}
 
 	// **
@@ -287,7 +321,7 @@
 	// * line on the right.
 	// *
 	&-has-border-right {
-		border-right: @Table-cell-border;
+		border-right: @border-table;
 	}
 
 	&-has-rowspan {
