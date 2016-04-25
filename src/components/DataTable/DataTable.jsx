@@ -171,7 +171,7 @@ const DataTable = React.createClass(createLucidComponentDefinition({
 			data,
 			hasDetails,
 			isSelectable,
-			...passThrus
+			...passThroughs
 		} = this.props;
 
 
@@ -187,7 +187,7 @@ const DataTable = React.createClass(createLucidComponentDefinition({
 
 		const hasGroupedColumns = _.some(childComponentElements, (childComponentElement) => childComponentElement.type === DataTable.ColumnGroup);
 		return (
-			<ScrollTable {...passThrus} className={boundClassNames('&', className)}>
+			<ScrollTable {...passThroughs} className={boundClassNames('&', className)}>
 				<Thead>
 					<Tr>
 						{isSelectable ? (

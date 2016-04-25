@@ -184,12 +184,6 @@ describe('DataTable', () => {
 					</DataTable>
 				);
 
-				// select the rows of the rendered table head
-				//const headTrsWrapper = wrapper
-				//	.find(ScrollTable).shallow()
-				//		.find(ScrollTable.Thead).shallow()
-				//			.find(ScrollTable.Tr);
-
 				// select the rows of the rendered table body
 				const bodyTrsWrapper = wrapper
 					.find(ScrollTable).shallow()
@@ -215,12 +209,6 @@ describe('DataTable', () => {
 						<Column field='occupation' title='Occupation'/>
 					</DataTable>
 				);
-
-				// select the rows of the rendered table head
-				//const headTrsWrapper = wrapper
-				//	.find(ScrollTable).shallow()
-				//		.find(ScrollTable.Thead).shallow()
-				//			.find(ScrollTable.Tr);
 
 				// select the rows of the rendered table body
 				const bodyTrsWrapper = wrapper
