@@ -1,27 +1,24 @@
-@Panel-horizontal-lines: 1px solid @color-gray;
-@Panel-size-padding: 12px;
-
 .lucid-Panel {
 	overflow: hidden;
-	border-radius: 6px;
-	margin: 0 10px 10px 10px;
+	border-radius: @size-borderRadius;
+	margin: 0 @size-standard @size-standard @size-standard;
 	position: relative;
 	background-color: @color-white;
-	border: 1px solid @color-borderColor;
+	border: @border-standardBorder;
 
 	&-Header {
-		padding: @Panel-size-padding;
-		border-bottom: @Panel-horizontal-lines;
+		padding: @size-standard;
+		border-bottom: @border-lightBorder;
 	}
-	
+
 	&-is-not-gutterless &-content{
-		padding: @Panel-size-padding;
+		padding: @size-standard;
 		overflow: auto;
 	}
 
 	&-Footer {
 		text-align: right;
-		padding: @Panel-size-padding;
-		border-top: @Panel-horizontal-lines;
+		padding: @size-standard;
+		border-top: @border-lightBorder;
 	}
 }

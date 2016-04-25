@@ -1,5 +1,5 @@
 @Autocomplete-size-menu-maxHeight: 220px;
-@Autocomplete-size-controlHeight: 28px;
+@Autocomplete-size-controlHeight: @size-standard-height;
 
 .lucid-Autocomplete {
 
@@ -11,12 +11,12 @@
 		display: flex;
 		outline: none;
 		border: 1px solid @color-borderColor;
-		border-radius: @Button-size-borderRadius;
+		border-radius: @size-borderRadius;
 		font: @font;
 		color: @color-black;
 		letter-spacing: .05em;
-		line-height: @Button-size-lineHeight;
-		padding: 0 10px;
+		line-height: @size-standard-height;
+		padding: 0 @size-S;
 		align-items: center;
 
 		// The highly specific selector makes it so global input styles
@@ -58,13 +58,13 @@
 	&.lucid-DropMenu-is-expanded {
 		&.lucid-DropMenu-direction-up {
 			.lucid-Autocomplete-Control {
-				border-radius: 0 0 @Button-size-borderRadius @Button-size-borderRadius;
+				border-radius: 0 0 @size-borderRadius @size-borderRadius;
 			}
 		}
 
 		&.lucid-DropMenu-direction-down {
 			.lucid-Autocomplete-Control {
-				border-radius: @Button-size-borderRadius @Button-size-borderRadius 0 0;
+				border-radius: @size-borderRadius @size-borderRadius 0 0;
 			}
 		}
 
