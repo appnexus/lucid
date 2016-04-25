@@ -59,7 +59,7 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 			style,
 			tableWidth,
 			isNowrap,
-			...passThrus
+			...passThroughs
 		} = this.props;
 
 		return (
@@ -73,7 +73,7 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 					}}
 					className={boundClassNames({'&-nowrap': isNowrap})}
 					hasNoBorder={true}
-					{...passThrus}
+					{...passThroughs}
 				>
 					{children}
 				</Table>
