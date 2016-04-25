@@ -1,4 +1,4 @@
-@SingleSelect-size-controlHeight: 28px;
+@SingleSelect-size-controlHeight: @size-standard-height;
 
 .lucid-SingleSelect {
 
@@ -11,18 +11,18 @@
 		display: flex;
 		outline: none;
 		border: 1px solid @featured-color-default-borderColor;
-		border-radius: @Button-size-borderRadius;
+		border-radius: @size-borderRadius;
 		font: @font;
 		color: @color-black;
 		letter-spacing: .05em;
-		line-height: @Button-size-lineHeight;
-		padding: 0 10px;
+		line-height: @size-standard-height;
+		padding: 0 @size-standard;
 		align-items: center;
 
 		&-content {
 			display: flex;
 			align-items: center;
-			margin-right: 10px;
+			margin-right: @size-standard;
 		}
 
 		.lucid-CaretIcon {
@@ -57,13 +57,13 @@
 	&.lucid-DropMenu-is-expanded {
 		&.lucid-DropMenu-direction-up {
 			.lucid-SingleSelect-Control {
-				border-radius: 0 0 @Button-size-borderRadius @Button-size-borderRadius;
+				border-radius: 0 0 @size-borderRadius @size-borderRadius;
 			}
 		}
 
 		&.lucid-DropMenu-direction-down {
 			.lucid-SingleSelect-Control {
-				border-radius: @Button-size-borderRadius @Button-size-borderRadius 0 0;
+				border-radius: @size-borderRadius @size-borderRadius 0 0;
 			}
 		}
 	}
