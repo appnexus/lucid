@@ -1,14 +1,4 @@
-import {
-	assign,
-	get,
-	identity,
-	isEmpty,
-	isFunction,
-	isUndefined,
-	merge,
-	reduce,
-	slice
-} from 'lodash';
+import _ from 'lodash';
 import { createSelector } from 'reselect';
 
 /**
@@ -41,7 +31,7 @@ export function getReduxPrimitives({
 	initialState,
 	reducers,
 	rootPath = [],
-	rootSelector = identity,
+	rootSelector = _.identity,
 	selectors
 }) {
 
@@ -49,8 +39,8 @@ export function getReduxPrimitives({
 	let dispatchTree;
 
 	const reducer = createReduxReducer(reducers, initialState, rootPath);
-	const selector = selectors ? reduceSelectors(selectors) : identity;
-	const rootPathSelector = state => isEmpty(rootPath) ? state : get(state, rootPath);
+	const selector = selectors ? reduceSelectors(selectors) : _.identity;
+	const rootPathSelector = state => _.isEmpty(rootPath) ? state : _.get(state, rootPath);
 	const mapStateToProps = createSelector(
 		[rootPathSelector],
 		rootState => rootSelector(selector(rootState))
@@ -78,9 +68,9 @@ export function getReduxPrimitives({
 		if (node.isThunk) {
 			return function thunk(...args) {
 				return function thunkInner(dispatch, getState) {
-					const localPath = slice(path, rootPath.length, -1);
-					const localDispatchTree = isEmpty(localPath) ? dispatchTree : get(dispatchTree, localPath);
-					const getLocalState = isEmpty(rootPath) ? getState : () => get(getState(), slice(path, 0, -1));
+					const localPath = _.slice(path, rootPath.length, -1);
+					const localDispatchTree = _.isEmpty(localPath) ? dispatchTree : _.get(dispatchTree, localPath);
+					const getLocalState = _.isEmpty(rootPath) ? getState : () => _.get(getState(), _.slice(path, 0, -1));
 					return node(...args)(localDispatchTree, getLocalState, dispatch, getState);
 				};
 			};
@@ -104,10 +94,10 @@ export function getReduxPrimitives({
 	 */
 	function createActionCreatorTree(reducers, rootPath) {
 		return (function recur(reducers, path = []) {
-			return reduce(reducers, (memo, node, key) => {
+			return _.reduce(reducers, (memo, node, key) => {
 				const currentPath = path.concat(key);
-				return assign(memo, {
-					[key]: isFunction(node) ?
+				return _.assign(memo, {
+					[key]: _.isFunction(node) ?
 						createActionCreator(node, currentPath, rootPath) :
 						recur(node, currentPath)
 				});
@@ -141,17 +131,17 @@ export function getReduxPrimitives({
  * @return {Object} redux reducer tree
  */
 function createReduxReducerTree(reducers, path = []) {
-	return reduce(reducers, (memo, node, key) => {
+	return _.reduce(reducers, (memo, node, key) => {
 		// filter out thunks from the reducer tree
 		if (node.isThunk) {
 			return memo;
 		}
 		const currentPath = path.concat(key);
-		return assign(memo, {
-			[key]: isFunction(node) ?
+		return _.assign(memo, {
+			[key]: _.isFunction(node) ?
 				function reduxReducer(state, action) {
 					const { type, payload, meta = [] } = action;
-					if (isUndefined(state) || type !== currentPath.join('.')) {
+					if (_.isUndefined(state) || type !== currentPath.join('.')) {
 						return state;
 					}
 					return node(state, payload, ...meta);
@@ -171,11 +161,11 @@ function createReduxReducerTree(reducers, path = []) {
  */
 function createReducerFromReducerTree(reduxReducerTree, initialState) {
 	return function reduxReducer(state, action) {
-		if (isUndefined(state)) {
+		if (_.isUndefined(state)) {
 			return initialState;
 		}
-		return reduce(reduxReducerTree, (state, node, key) => {
-			return assign({}, state, isFunction(node) ? node(state, action) : {
+		return _.reduce(reduxReducerTree, (state, node, key) => {
+			return _.assign({}, state, _.isFunction(node) ? node(state, action) : {
 				[key]: createReducerFromReducerTree(node)(state[key], action)
 			});
 		}, state);
@@ -204,8 +194,8 @@ function createReduxReducer(reducers, initialState, rootPath) {
  * @param {string[]} path - array of strings representing the path to the action creator
  */
 function bindActionCreatorTree(actionCreatorTree, dispatch, path = []) {
-	return reduce(actionCreatorTree, (memo, node, key) => assign(memo, {
-		[key]: isFunction(node) ? function boundActionCreator(...args) {
+	return _.reduce(actionCreatorTree, (memo, node, key) => _.assign(memo, {
+		[key]: _.isFunction(node) ? function boundActionCreator(...args) {
 			const action = actionCreatorTree[key](...args);
 			return dispatch(action);
 		} : bindActionCreatorTree(node, dispatch, path.concat(key))
@@ -223,8 +213,8 @@ function bindActionCreatorTree(actionCreatorTree, dispatch, path = []) {
 // @TODO: optimize to create and reuse selectors?
 function reduceSelectors(selectors) {
 	return function reducedSelector(state) {
-		return reduce(selectors, (state, selector, key) => assign({}, state, {
-			[key]: isFunction(selector) ?
+		return _.reduce(selectors, (state, selector, key) => _.assign({}, state, {
+			[key]: _.isFunction(selector) ?
 				selector(state) :
 				reduceSelectors(selector)(state[key])
 		}), state);
@@ -241,5 +231,5 @@ function reduceSelectors(selectors) {
  * @return {Object}
  */
 function mergeProps(state, dispatchTree, ownProps) {
-	return merge({}, state, dispatchTree, ownProps);
+	return _.merge({}, state, dispatchTree, ownProps);
 }
