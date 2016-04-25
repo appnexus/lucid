@@ -11,6 +11,7 @@ import Panel from './components/Panel/Panel';
 import ContextMenu from './components/ContextMenu/ContextMenu';
 import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
+import DataTable from './components/DataTable/DataTable';
 import Dialog from './components/Dialog/Dialog';
 import DragCaptureZone from './components/DragCaptureZone/DragCaptureZone';
 import DropMenu from './components/DropMenu/DropMenu';
@@ -72,6 +73,7 @@ export {
 	ContextMenu,
 	CrossIcon,
 	DangerIcon,
+	DataTable,
 	Dialog,
 	DragCaptureZone,
 	DropMenu,
