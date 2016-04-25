@@ -28,7 +28,7 @@ const {
 
 /**
  *
- * {"categories": ["table"], "madeFrom": ["Table","ScrollTable"]}
+ * {"categories": ["table"], "madeFrom": ["ScrollTable", "Checkbox"]}
  *
  * `DataTable` provides a simple abstraction over the `Table` component to make it easier to define data-driven tables and render an array of objects.
  */
