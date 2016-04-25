@@ -234,7 +234,13 @@ const DataTable = React.createClass(createLucidComponentDefinition({
 				</Thead>
 				<Tbody>
 					{_.map(data, (row, index) => (
-						<Tr isSelected={row.isSelected} isActive={row.isActive} onClick={_.partial(this.handleRowClick, index)} hasDetails={hasDetails} key={'row' + index}>
+						<Tr
+							isSelected={row.isSelected}
+							isActive={row.isActive}
+							onClick={_.partial(this.handleRowClick, index)}
+							hasDetails={hasDetails}
+							key={'row' + index}
+						>
 							{isSelectable ? (
 								<Td hasCheckbox><Checkbox isSelected={row.isSelected} onSelect={_.partial(this.handleSelect, index)} /></Td>
 							) : null}
