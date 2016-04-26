@@ -2,6 +2,11 @@ import React from 'react';
 import _ from 'lodash';
 import { createChildComponent } from './child-component';
 
+export function createClass(componentDefinition) {
+	const lucidComponentDefinition = createLucidComponentDefinition(componentDefinition);
+	return React.createClass(lucidComponentDefinition);
+}
+
 export function createLucidComponentDefinition(componentDefinition) {
 	let {
 		arrayOf,
