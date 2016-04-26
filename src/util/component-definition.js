@@ -14,7 +14,7 @@ export function createLucidComponentDefinition(componentDefinition) {
 		oneOfType,
 		node
 	} = React.PropTypes;
-	let reducers = _.get(componentDefinition, 'reducers');
+	let reducers = _.get(componentDefinition, 'reducers', {});
 	let childProps = _.get(componentDefinition, 'childProps', {});
 	let childPropsList = _.reduce(childProps, (list, value, key) => list.concat({
 		propTypes: value,
