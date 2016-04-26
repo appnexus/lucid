@@ -7,8 +7,6 @@ const boundClassNames = lucidClassNames.bind('&-Badge');
 const {
 	node,
 	string,
-	oneOfType,
-	arrayOf,
 } = React.PropTypes;
 
 /**
@@ -29,10 +27,7 @@ const Badge = createClass({
 		/**
 		 * any valid React children
 		 */
-		children: oneOfType([
-			node,
-			arrayOf(node)
-		]),
+		children: node,
 	},
 
 	render() {

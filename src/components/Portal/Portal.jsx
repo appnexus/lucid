@@ -7,7 +7,9 @@ const boundClassNames = lucidClassNames.bind('&-Portal');
 
 const {
 	PropTypes: {
-		string
+		any,
+		node,
+		string,
 	}
 } = React;
 
@@ -20,6 +22,15 @@ const {
  */
 const Portal = createClass({
 	propTypes: {
+		/**
+		 * any valid React children
+		 */
+		children: node,
+		/**
+		 * Appended to the component-specific class names set on the root
+		 * element. Value is run through the `classnames` library.
+		 */
+		className: any,
 		/**
 		 * The `id` of the portal element that is appended to `document.body`.
 		 */

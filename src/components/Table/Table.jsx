@@ -9,11 +9,13 @@ import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 const boundClassNames = lucidClassNames.bind('&-Table');
 
 const {
+	any,
+	bool,
 	func,
+	node,
 	number,
 	object,
 	string,
-	bool
 } = React.PropTypes;
 
 /**
@@ -22,6 +24,17 @@ const {
  * Any child `<Tr>` will have `isHeader` set to `true` unless otherwise specified.
  */
 const Thead = createClass({
+	propTypes: {
+		/**
+		 * Appended to the component-specific class names set on the root
+		 * element. Value is run through the `classnames` library.
+		 */
+		className: any,
+		/**
+		 * any valid React children
+		 */
+		children: node,
+	},
 	render() {
 		const {
 			children
@@ -49,6 +62,13 @@ const Thead = createClass({
  * `Tbody` renders <tbody>.
  */
 const Tbody = createClass({
+	propTypes: {
+		/**
+		 * Appended to the component-specific class names set on the root
+		 * element. Value is run through the `classnames` library.
+		 */
+		className: any,
+	},
 	render() {
 		return (
 			<tbody {...this.props} className={boundClassNames('&-tbody', this.props.className)} />
@@ -63,6 +83,15 @@ const Tbody = createClass({
  */
 const Tr = createClass({
 	propTypes: {
+		/**
+		 * any valid React children
+		 */
+		children: node,
+		/**
+		 * Appended to the component-specific class names set on the root
+		 * element. Value is run through the `classnames` library.
+		 */
+		className: any,
 		/**
 		 * Should be `true` when rendered inside a thead.
 		 */
@@ -167,6 +196,15 @@ const Th = createClass({
 		 */
 		align: string,
 		/**
+		 * any valid React children
+		 */
+		children: node,
+		/**
+		 * Appended to the component-specific class names set on the root
+		 * element. Value is run through the `classnames` library.
+		 */
+		className: any,
+		/**
 		 * Should be `true` when the cell has a checkbox.
 		 */
 		hasCheckbox: bool,
@@ -200,6 +238,10 @@ const Th = createClass({
 		 * The direction of the caret in the sorted column.
 		 */
 		sortDirection: string,
+		/**
+		 * Styles that are passed through to root element.
+		 */
+		style: object,
 		/**
 		 * Width of the column atop which this table header cell sits.
 		 */
@@ -361,6 +403,11 @@ const Td = createClass({
 		 */
 		align: string,
 		/**
+		 * Appended to the component-specific class names set on the root
+		 * element. Value is run through the `classnames` library.
+		 */
+		className: any,
+		/**
 		 * Should be `true` when the cell has a checkbox.
 		 */
 		hasCheckbox: bool,
@@ -383,7 +430,11 @@ const Td = createClass({
 		/**
 		 * Should be set to `true` on the second cell in a table where the first cell has a rowspan greater than 1.
 		 */
-		isAfterRowSpan: bool
+		isAfterRowSpan: bool,
+		/**
+		 * Passed to the underlying `td`.
+		 */
+		rowSpan: number,
 	},
 	getDefaultProps() {
 		return {

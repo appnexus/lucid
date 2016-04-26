@@ -68,18 +68,18 @@ const ButtonGroup = createClass({
 		};
 	},
 
-	handleSelect({ event, props }) {
-		const { callbackId } = props;
+	handleSelect({ event, props: childProps }) {
+		const { callbackId } = childProps;
 		const clickedButtonProps = ButtonGroup.Button.findInAllAsProps(this.props)[callbackId];
 
 		// If the consumer passed in an `onClick` to the child `ButtonGroup.Button`
 		// component, we should make sure to call that in addition to the
 		// `ButtonGroup`'s `onSelect`.
 		if (_.isFunction(clickedButtonProps.onClick)) {
-			clickedButtonProps.onClick({ event, props });
+			clickedButtonProps.onClick({ event, props: childProps });
 		}
 
-		this.props.onSelect(callbackId, { event, props });
+		this.props.onSelect(callbackId, { event, props: childProps });
 	},
 
 	render() {

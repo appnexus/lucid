@@ -6,8 +6,9 @@ import { createClass } from '../../util/component-definition';
 const boundClassNames = lucidClassNames.bind('&-Panel');
 
 const {
-	node,
 	bool,
+	node,
+	object,
 	string
 } = React.PropTypes;
 
@@ -45,7 +46,11 @@ const Panel = createClass({
 		/**
 		 * If set to true, creates a content section with no padding.
 		 */
-		isGutterless: bool
+		isGutterless: bool,
+		/**
+		 * Styles that are passed through to root element.
+		 */
+		style: object,
 	},
 
 	render: function() {

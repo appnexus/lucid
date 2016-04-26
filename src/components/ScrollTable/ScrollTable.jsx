@@ -45,7 +45,7 @@ const ScrollTable = createClass({
 		/**
 		 * Set the width of the Table inside the scrollable container.
 		 */
-		tablewidth: number,
+		tableWidth: number,
 		/**
 		 * Set the Table contents to not allow word wrapping.
 		 */

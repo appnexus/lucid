@@ -6,8 +6,9 @@ import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 
 const boundClassNames = lucidClassNames.bind('&-StickySection');
 const {
-	any,
+	node,
 	number,
+	object,
 	string,
 } = React.PropTypes;
 
@@ -20,13 +21,17 @@ const StickySection = createClass({
 	displayName: 'StickySection',
 	propTypes: {
 		/**
+		 * any valid React children
+		 */
+		children: node,
+		/**
 		 * Appended to the component-specific class names set on the root element.
 		 */
 		className: string,
 		/**
 		 * Styles that are passed through to the root container.
 		 */
-		style: any,
+		style: object,
 		/**
 		 * Pixel value from the top of the document. When scrolled passed, the sticky header is no longer sticky, and renders normally.
 		 */

@@ -77,10 +77,17 @@ const TextField = createClass({
 		onChangeDebounced: func,
 
 		/**
+		 * Fires an event on every keydown
+		 *
+		 * Signature: `(value, { event, props }) => {}`
+		 */
+		onKeyDown: func,
+
+		/**
 		 * Fires an event when the user hits "enter" from the TextField. You
 		 * shouldn't use it if you're using `isMultiLine`.
 		 *
-		 * Signature: `(value, { event, props }) => {}`
+		 * Signature: `(event) => {}`
 		 */
 		onSubmit: func,
 

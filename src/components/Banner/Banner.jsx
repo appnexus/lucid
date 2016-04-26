@@ -11,10 +11,10 @@ import WarningIcon from '../Icon/WarningIcon/WarningIcon';
 const boundClassNames = lucidClassNames.bind('&-Banner');
 
 const {
-	any,
 	bool,
 	element,
 	func,
+	node,
 	oneOf,
 	string,
 } = React.PropTypes;
@@ -67,7 +67,7 @@ const Banner = createClass({
 		/**
 		 * Any valid React children.
 		 */
-		children: any,
+		children: node,
 		/**
 		 * Style variations of the `Banner`.
 		 */

@@ -132,17 +132,17 @@ const RadioGroup = createClass({
 		);
 	},
 
-	handleSelected(isSelected, { event, props }) {
-		const { callbackId } = props;
+	handleSelected(isSelected, { event, props: childProps }) {
+		const { callbackId } = childProps;
 		const clickedRadioButtonProps = RadioGroup.RadioButton.findInAllAsProps(this.props)[callbackId];
 
 		// If the `RadioGroup.RadioButton` child has an `onSelect` prop that is
 		// a function, call that prior to calling the group's `onSelect` prop.
 		if (_.isFunction(clickedRadioButtonProps.onSelect)) {
-			clickedRadioButtonProps.onSelect(isSelected, { event, props });
+			clickedRadioButtonProps.onSelect(isSelected, { event, props: childProps });
 		}
 
-		this.props.onSelect(callbackId, { event, props });
+		this.props.onSelect(callbackId, { event, props: childProps });
 	}
 });
 
