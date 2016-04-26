@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
+import { createClass } from '../../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-EditIcon');
 
@@ -10,7 +11,8 @@ const boundClassNames = lucidClassNames.bind('&-EditIcon');
  *
  * An edit icon.
  */
-const EditIcon = React.createClass({
+const EditIcon = createClass({
+	displayName: 'EditIcon',
 	propTypes: {
 		...Icon.propTypes,
 	},

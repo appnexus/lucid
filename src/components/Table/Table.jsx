@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass } from '../../util/component-definition';
 import { findElementsByType } from '../../util/child-component';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
@@ -21,7 +21,7 @@ const {
  *
  * Any child `<Tr>` will have `isHeader` set to `true` unless otherwise specified.
  */
-const Thead = React.createClass(createLucidComponentDefinition({
+const Thead = createClass({
 	render() {
 		const {
 			children
@@ -43,25 +43,25 @@ const Thead = React.createClass(createLucidComponentDefinition({
 			</thead>
 		);
 	}
-}));
+});
 
 /**
  * `Tbody` renders <tbody>.
  */
-const Tbody = React.createClass(createLucidComponentDefinition({
+const Tbody = createClass({
 	render() {
 		return (
 			<tbody {...this.props} className={boundClassNames('&-tbody', this.props.className)} />
 		);
 	}
-}));
+});
 
 /**
  * `Tr` renders <tr>.
  *
  * For children `<Td>`, `isAfterRowSpan` will be set to `true` on the second `<Td>` if the first `<Td>` has a `rowSpan` value greater than `1`, unless otherwise specified.
  */
-const Tr = React.createClass(createLucidComponentDefinition({
+const Tr = createClass({
 	propTypes: {
 		/**
 		 * Should be `true` when rendered inside a thead.
@@ -153,14 +153,14 @@ const Tr = React.createClass(createLucidComponentDefinition({
 			</tr>
 		);
 	}
-}));
+});
 
 /**
  * `Th` renders <th>.
  *
  * Will Render a CaretIcon next to the children if `isSorted`.
  */
-const Th = React.createClass(createLucidComponentDefinition({
+const Th = createClass({
 	propTypes: {
 		/**
 		 * Aligns the content of a cell. Can be `left`, `center`, or `right`.
@@ -349,12 +349,12 @@ const Th = React.createClass(createLucidComponentDefinition({
 			});
 		}
 	}
-}));
+});
 
 /**
  * `Td` renders <td>.
  */
-const Td = React.createClass(createLucidComponentDefinition({
+const Td = createClass({
 	propTypes: {
 		/**
 		 * Aligns the content of a cell. Can be `left`, `center`, or `right`.
@@ -424,7 +424,7 @@ const Td = React.createClass(createLucidComponentDefinition({
 			}, className)} />
 		);
 	}
-}));
+});
 
 /**
  *
@@ -433,7 +433,7 @@ const Td = React.createClass(createLucidComponentDefinition({
  * `Table` provides the most basic components to create a lucid table.
  * It is recommended to create a wrapper around this component rather than using it directly in an app.
  */
-const Table = React.createClass(createLucidComponentDefinition({
+const Table = createClass({
 	displayName: 'Table',
 
 	statics: {
@@ -491,6 +491,6 @@ const Table = React.createClass(createLucidComponentDefinition({
 			/>
 		);
 	}
-}));
+});
 
 export default Table;

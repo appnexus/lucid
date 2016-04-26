@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-definition';
 import DangerIcon from '../Icon/DangerIcon/DangerIcon';
 import InfoIcon from '../Icon/InfoIcon/InfoIcon';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
@@ -39,7 +40,8 @@ const defaultIcons = {
  *
  * It is valid to use `strong` or `em` within a `Banner` message.
  */
-const Banner = React.createClass({
+const Banner = createClass({
+	displayName: 'Banner',
 	propTypes: {
 		/**
 		 * Pass in a bool to display predefined icon based on `kind`.

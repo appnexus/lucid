@@ -2,7 +2,7 @@ import _ from 'lodash';
 import Button from '../Button/Button';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition }  from '../../util/component-definition';
+import { createClass }  from '../../util/component-definition';
 import reducers from './ButtonGroup.reducers';
 
 const boundClassNames = lucidClassNames.bind('&-ButtonGroup');
@@ -21,7 +21,7 @@ const {
  * Button groups allow you to pair buttons together to form a seamless cluster.
  * Any props not explicitly called out are spread on to the root component.
  */
-const ButtonGroup = React.createClass(createLucidComponentDefinition({
+const ButtonGroup = createClass({
 	displayName: 'ButtonGroup',
 
 	childProps: {
@@ -118,6 +118,6 @@ const ButtonGroup = React.createClass(createLucidComponentDefinition({
 			</span>
 		);
 	}
-}));
+});
 
 export default ButtonGroup;

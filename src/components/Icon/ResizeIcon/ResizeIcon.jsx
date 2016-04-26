@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
+import { createClass } from '../../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-ResizeIcon');
 
@@ -10,7 +11,8 @@ const boundClassNames = lucidClassNames.bind('&-ResizeIcon');
  *
  * A resize icon.
  */
-const ResizeIcon = React.createClass({
+const ResizeIcon = createClass({
+	displayName: 'ResizeIcon',
 	propTypes: {
 		...Icon.propTypes,
 	},

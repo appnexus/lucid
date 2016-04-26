@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Overlay from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition }  from '../../util/component-definition';
+import { createClass }  from '../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-Dialog');
 
@@ -21,7 +21,7 @@ const LARGE = 'large';
  * Dialog is used to pop open a window so the user doesn't lose the context of
  * the page behind it. Extra props are spread through to the underlying `Overlay`
  */
-const Dialog = React.createClass(createLucidComponentDefinition({
+const Dialog = createClass({
 	displayName: 'Dialog',
 
 	childProps: {
@@ -95,7 +95,7 @@ const Dialog = React.createClass(createLucidComponentDefinition({
 			</Overlay>
 		);
 	},
-}));
+});
 
 export default Dialog;
 

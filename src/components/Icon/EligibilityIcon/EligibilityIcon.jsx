@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
+import { createClass } from '../../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-EligibilityIcon');
 
@@ -20,7 +21,8 @@ const BOTH = 'both';
  * An eligibility icon.
  */
 
-const EligibilityIcon = React.createClass({
+const EligibilityIcon = createClass({
+	displayName: 'EligibilityIcon',
 	propTypes: {
 		...Icon.propTypes,
 		/**

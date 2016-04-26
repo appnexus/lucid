@@ -1,6 +1,6 @@
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass } from '../../util/component-definition';
 import _ from 'lodash';
 
 const boundClassNames = lucidClassNames.bind('&-Validation');
@@ -17,7 +17,7 @@ const {
  * components. Wrap your form components in it and style them accordingly if
  * there's an error.
  */
-const Validation = React.createClass(createLucidComponentDefinition({
+const Validation = createClass({
 	displayName: 'Validation',
 
 	childProps: {
@@ -76,6 +76,6 @@ const Validation = React.createClass(createLucidComponentDefinition({
 			</div>
 		);
 	}
-}));
+});
 
 export default Validation;

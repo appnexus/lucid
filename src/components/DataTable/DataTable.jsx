@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass } from '../../util/component-definition';
 import { findAllChildComponents } from '../../util/child-component';
 
 import Checkbox from '../Checkbox/Checkbox';
@@ -32,7 +32,7 @@ const {
  *
  * `DataTable` provides a simple abstraction over the `Table` component to make it easier to define data-driven tables and render an array of objects.
  */
-const DataTable = React.createClass(createLucidComponentDefinition({
+const DataTable = createClass({
 	displayName: 'DataTable',
 
 	propTypes: {
@@ -261,6 +261,6 @@ const DataTable = React.createClass(createLucidComponentDefinition({
 			</ScrollTable>
 		);
 	}
-}));
+});
 
 export default DataTable;

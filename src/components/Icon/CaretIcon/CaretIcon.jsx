@@ -1,5 +1,6 @@
 import React from 'react';
 import { lucidClassNames } from '../../../util/style-helpers';
+import { createClass } from '../../../util/component-definition';
 import Icon from '../Icon';
 
 const boundClassNames = lucidClassNames.bind('&-CaretIcon');
@@ -14,7 +15,8 @@ const {
  *
  * A caret icon.
  */
-const CaretIcon = React.createClass({
+const CaretIcon = createClass({
+	displayName: 'CaretIcon',
 	propTypes: {
 		...Icon.propTypes,
 		/**

@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass } from '../../util/component-definition';
 import * as reducers from './SingleSelect.reducers';
 import DropMenu from '../DropMenu/DropMenu';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
@@ -27,7 +27,7 @@ const {
  * Supports option groups with and without labels.
  */
 
-const SingleSelect = React.createClass(createLucidComponentDefinition({
+const SingleSelect = createClass({
 	displayName: 'SingleSelect',
 
 	reducers,
@@ -189,6 +189,6 @@ const SingleSelect = React.createClass(createLucidComponentDefinition({
 			</DropMenu>
 		);
 	}
-}));
+});
 
 export default SingleSelect;

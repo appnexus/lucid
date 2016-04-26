@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass } from '../../util/component-definition';
 import getRandom from '../../util/random';
 import LabeledRadioButton from '../LabeledRadioButton/LabeledRadioButton';
 import RadioButton from '../RadioButton/RadioButton';
@@ -26,7 +26,7 @@ const {
  * Any props that are not explicitly defined in `propTypes` are spread onto the
  * root element.
  */
-const RadioGroup = React.createClass(createLucidComponentDefinition({
+const RadioGroup = createClass({
 	displayName: 'RadioGroup',
 
 	childProps: {
@@ -144,6 +144,6 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 
 		this.props.onSelect(callbackId, { event, props });
 	}
-}));
+});
 
 export default RadioGroup;

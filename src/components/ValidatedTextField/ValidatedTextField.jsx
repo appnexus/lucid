@@ -4,7 +4,7 @@ import Validation from '../Validation/Validation';
 import TextField from '../TextField/TextField';
 import reducers from '../TextField/TextField.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass } from '../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-ValidatedTextField');
 
@@ -19,7 +19,7 @@ const {
  *
  * A composition of TextField and Validation.
  */
-const ValidatedTextField = React.createClass(createLucidComponentDefinition({
+const ValidatedTextField = createClass({
 	displayName: 'ValidatedTextField',
 
 	reducers,
@@ -64,6 +64,6 @@ const ValidatedTextField = React.createClass(createLucidComponentDefinition({
 			</Validation>
 		);
 	}
-}));
+});
 
 export default ValidatedTextField;

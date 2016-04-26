@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition }  from '../../util/component-definition';
+import { createClass }  from '../../util/component-definition';
 import Checkbox from '../Checkbox/Checkbox';
 
 const boundClassNames = lucidClassNames.bind('&-LabeledCheckbox');
@@ -18,7 +18,7 @@ const {
  * This is a composite of the `Checkbox` component and the native `label`
  * element.
  */
-const LabeledCheckbox = React.createClass(createLucidComponentDefinition({
+const LabeledCheckbox = createClass({
 	displayName: 'LabeledCheckbox',
 
 	childProps: {
@@ -95,6 +95,6 @@ const LabeledCheckbox = React.createClass(createLucidComponentDefinition({
 			</label>
 		);
 	}
-}));
+});
 
 export default LabeledCheckbox;

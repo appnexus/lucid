@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass } from '../../util/component-definition';
 import * as reducers from './Autocomplete.reducers';
 import * as KEYCODE from '../../constants/key-code';
 import DropMenu from '../DropMenu/DropMenu';
@@ -25,7 +25,7 @@ const {
  * A text input with suggested values displayed in an attached menu.
  */
 
-const Autocomplete = React.createClass(createLucidComponentDefinition({
+const Autocomplete = createClass({
 	displayName: 'Autocomplete',
 
 	reducers,
@@ -275,7 +275,7 @@ const Autocomplete = React.createClass(createLucidComponentDefinition({
 			</DropMenu>
 		);
 	}
-}));
+});
 
 function partitionText(text, pattern, length) {
 	const index = text.search(pattern);

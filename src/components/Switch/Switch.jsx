@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-Switch');
 const {
@@ -20,7 +21,8 @@ const {
  * It uses a hidden native check box control under the hood but leverages other
  * HTML elements to visualize its state.
  */
-const Switch = React.createClass({
+const Switch = createClass({
+	displayName: 'Switch',
 	propTypes: {
 		/**
 		 * Appended to the component-specific class names set on the root
