@@ -2,21 +2,22 @@ import React from 'react';
 import _ from 'lodash';
 import { createChildComponent } from './child-component';
 
+const {
+	arrayOf,
+	shape,
+	oneOfType,
+	node
+} = React.PropTypes;
+
 export function createClass(componentDefinition) {
 	const lucidComponentDefinition = createLucidComponentDefinition(componentDefinition);
 	return React.createClass(lucidComponentDefinition);
 }
 
 export function createLucidComponentDefinition(componentDefinition) {
-	let {
-		arrayOf,
-		shape,
-		oneOfType,
-		node
-	} = React.PropTypes;
-	let reducers = _.get(componentDefinition, 'reducers', {});
-	let childProps = _.get(componentDefinition, 'childProps', {});
-	let childPropsList = _.reduce(childProps, (list, value, key) => list.concat({
+	const reducers = _.get(componentDefinition, 'reducers', {});
+	const childProps = _.get(componentDefinition, 'childProps', {});
+	const childPropsList = _.reduce(childProps, (list, value, key) => list.concat({
 		propTypes: value,
 		baseName: key,
 		propName: key,
