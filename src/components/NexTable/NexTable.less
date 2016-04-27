@@ -1,0 +1,63 @@
+.lucid-NexTable {
+	border: @border-table;
+
+	&-Fragment {
+		display: inline-block;
+
+		&-table {
+			table-layout: fixed;
+			//height: auto;
+		}
+
+		& &-lead-row {
+			height: 0px;
+
+			td {
+				//border-left: 1px solid red; //dev
+				//min-width: 10px;
+			}
+		}
+
+		& tr:not(&-lead-row) > td&-lead-col {
+			width: 0px;
+			//min-height: 10px;
+		}
+
+		& tr:not(&-lead-row) > td:not(&-lead-col) {
+			//box-sizing: border-box;
+			//border-left: 1px solid gray;
+			//border-top: 1px solid gray;
+			//border-collapse: collapse;
+		}
+
+		&-cell {
+			position: relative;
+			//vertical-align: top;
+
+			//&-content {
+			//	box-sizing: border-box;
+			//	overflow: auto;
+			//	background-color: cyan;
+
+			//	border-left: 1px solid gray;
+			//	border-top: 1px solid gray;
+			//	position: absolute;
+			//	left: 0px;
+			//	top: 0px;
+			//	right: 0px;
+			//	bottom: 0px;
+			//}
+
+			&-content {
+				box-sizing: border-box;
+				height: 100%;
+				overflow: auto;
+				//background-color: cyan;
+
+				border-left: 1px solid gray;
+				border-top: 1px solid gray;
+				border-collapse: collapse;
+			}
+		}
+	}
+}
