@@ -88,7 +88,6 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 	render() {
 		const {
 			className,
-			onSelect,
 			selectedIndex,
 			style,
 			isOpen,
@@ -122,7 +121,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 									'&-Tab-is-progressive': isProgressive && index !== tabChildProps.length - 1,
 								})}
 								key={index}
-								onClick={_.partial(onSelect, index, tabChildProp)}
+								onClick={_.partial(this.handleClicked, index, tabChildProp)}
 							>
 								{_.get(_.first(Tabs.Title.findInAllAsProps(tabChildProp)), 'children', '')}
 								{isProgressive && index !== tabChildProps.length - 1 ?
@@ -141,6 +140,14 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 				</div>
 			</div>
 		);
+	},
+
+	handleClicked(index, tabProps, event) {
+		const {
+			onSelect,
+		} = this.props;
+
+		onSelect(index, { event, props: tabProps });
 	}
 }));
 
