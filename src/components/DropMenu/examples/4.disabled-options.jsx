@@ -1,9 +1,6 @@
 import React from 'react';
-import DropMenuStateless from '../DropMenu';
-import { buildStatefulComponent } from '../../../util/state-management';
-import Button from '../../Button/Button';
+import { Button, DropMenu } from '../../../index';
 
-const DropMenu = buildStatefulComponent(DropMenuStateless);
 const {
 	Control,
 	Option

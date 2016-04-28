@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Overlay from '../Overlay';
-import Button from '../../Button/Button';
+import { Button, Overlay } from '../../../index';
 
 export default React.createClass({
 	getInitialState() {

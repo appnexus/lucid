@@ -1,9 +1,6 @@
 import React from 'react';
-import SingleSelectStateless from '../SingleSelect';
-import { buildStatefulComponent } from '../../../util/state-management';
-import PlusIcon from '../../Icon/PlusIcon/PlusIcon';
+import { SingleSelect } from '../../../index';
 
-const SingleSelect = buildStatefulComponent(SingleSelectStateless);
 const {
 	Placeholder,
 	Option

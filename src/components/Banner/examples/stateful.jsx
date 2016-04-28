@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import Banner from '../Banner';
-import Button from '../../Button/Button';
+import { Banner, Button } from '../../../index';
 
 export default React.createClass({
 	getInitialState() {

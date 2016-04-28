@@ -1,6 +1,5 @@
 import React from 'react';
-import Banner from '../Banner';
-import Icon from '../../Icon/Icon';
+import { Banner, Icon } from '../../../index';
 
 const CustomIcon = React.createClass({
 	render() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import ValidatedTextField from '../ValidatedTextField';
+import { ValidatedTextField } from '../../../index';
 
 export default React.createClass({
 	render() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchIcon from '../SearchIcon';
+import { SearchIcon } from '../../../../index';
 
 export default React.createClass({
 	render() {

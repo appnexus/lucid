@@ -1,8 +1,5 @@
 import React from 'react';
-import ScrollTable from '../ScrollTable';
-import Checkbox from '../../Checkbox/Checkbox';
-import Button from '../../Button/Button';
-import SuccessIcon from '../../Icon/SuccessIcon/SuccessIcon';
+import { Button, Checkbox, ScrollTable, SuccessIcon } from '../../../index';
 
 const {
 	Thead,

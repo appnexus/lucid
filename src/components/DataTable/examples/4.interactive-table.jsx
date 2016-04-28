@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import DataTable from '../DataTable';
+import { DataTable } from '../../../index';
 
 export default React.createClass({
 	getInitialState() {

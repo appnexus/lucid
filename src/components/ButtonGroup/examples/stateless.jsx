@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonGroup from '../ButtonGroup';
+import { ButtonGroupDumb as ButtonGroup } from '../../../index';
 
 export default React.createClass({
 	render() {
