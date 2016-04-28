@@ -84,8 +84,12 @@ function overwriteArrays (objValue, srcValue) {
 
 export function buildHybridComponent(baseComponent, opts) {
 
-	if (baseComponent._isLucidHybridComponent && process.NODE_ENV !== 'production') {
-		console.warn('Input component is already a Lucid hybdrid component. Lucid exports hybrid components by default. To access the dumb components, use the -Dumb suffix, e.g. "ComponentDumb"');
+	if (baseComponent._isLucidHybridComponent) {
+
+		if (process.NODE_ENV !== 'production') {
+			console.warn('Input component is already a Lucid hybdrid component. Lucid exports hybrid components by default. To access the dumb components, use the -Dumb suffix, e.g. "ComponentDumb"');
+		}
+
 		return baseComponent;
 	}
 
