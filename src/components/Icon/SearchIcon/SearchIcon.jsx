@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
+import { createClass } from '../../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-SearchIcon');
 
@@ -10,7 +11,8 @@ const boundClassNames = lucidClassNames.bind('&-SearchIcon');
  *
  * A search icon.
  */
-const SearchIcon = React.createClass({
+const SearchIcon = createClass({
+	displayName: 'SearchIcon',
 	propTypes: {
 		...Icon.propTypes,
 	},

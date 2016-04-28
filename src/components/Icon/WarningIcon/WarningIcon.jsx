@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
+import { createClass } from '../../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-WarningIcon');
 
@@ -10,7 +11,8 @@ const boundClassNames = lucidClassNames.bind('&-WarningIcon');
  *
  * A warning Icon.
  */
-const WarningIcon = React.createClass({
+const WarningIcon = createClass({
+	displayName: 'WarningIcon',
 	propTypes: {
 		...Icon.propTypes,
 	},

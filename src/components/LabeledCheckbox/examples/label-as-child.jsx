@@ -1,6 +1,5 @@
 import React from 'react';
-
-import LabeledCheckbox from '../LabeledCheckbox';
+import { LabeledCheckbox } from '../../../index';
 
 const style = {
 	marginBottom: '3px'

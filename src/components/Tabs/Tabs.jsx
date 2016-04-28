@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass } from '../../util/component-definition';
 import reducers from './Tabs.reducers';
 
 const boundClassNames = lucidClassNames.bind('&-Tabs');
@@ -21,7 +21,7 @@ const {
  * `Tabs` provides tabbed navigation. It has a flexible interface that allows
  * tab content to be passed as regular React children or through props.
  */
-const Tabs = React.createClass(createLucidComponentDefinition({
+const Tabs = createClass({
 	displayName: 'Tabs',
 
 	childProps: {
@@ -142,6 +142,6 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 			</div>
 		);
 	}
-}));
+});
 
 export default Tabs;

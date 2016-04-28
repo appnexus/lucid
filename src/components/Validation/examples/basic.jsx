@@ -1,5 +1,5 @@
 import React from 'react';
-import Validation from '../Validation';
+import { Validation } from '../../../index';
 
 export default React.createClass({
 	render() {

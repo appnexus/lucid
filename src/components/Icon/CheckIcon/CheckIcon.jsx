@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
+import { createClass } from '../../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-CheckIcon');
 
@@ -10,7 +11,8 @@ const boundClassNames = lucidClassNames.bind('&-CheckIcon');
  *
  * A check icon.
  */
-const CheckIcon = React.createClass({
+const CheckIcon = createClass({
+	displayName: 'CheckIcon',
 	propTypes: {
 		...Icon.propTypes,
 	},

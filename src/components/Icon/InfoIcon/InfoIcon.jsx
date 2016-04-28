@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
+import { createClass } from '../../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-InfoIcon');
 
@@ -10,7 +11,8 @@ const boundClassNames = lucidClassNames.bind('&-InfoIcon');
  *
  * An info icon.
  */
-const InfoIcon = React.createClass({
+const InfoIcon = createClass({
+	displayName: 'InfoIcon',
 	propTypes: {
 		...Icon.propTypes,
 	},

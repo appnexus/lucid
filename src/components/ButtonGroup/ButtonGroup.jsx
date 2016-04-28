@@ -2,7 +2,7 @@ import _ from 'lodash';
 import Button from '../Button/Button';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition }  from '../../util/component-definition';
+import { createClass }  from '../../util/component-definition';
 import reducers from './ButtonGroup.reducers';
 
 const boundClassNames = lucidClassNames.bind('&-ButtonGroup');
@@ -21,7 +21,7 @@ const {
  * Button groups allow you to pair buttons together to form a seamless cluster.
  * Any props not explicitly called out are spread on to the root component.
  */
-const ButtonGroup = React.createClass(createLucidComponentDefinition({
+const ButtonGroup = createClass({
 	displayName: 'ButtonGroup',
 
 	childProps: {
@@ -68,18 +68,18 @@ const ButtonGroup = React.createClass(createLucidComponentDefinition({
 		};
 	},
 
-	handleSelect({ event, props }) {
-		const { callbackId } = props;
+	handleSelect({ event, props: childProps }) {
+		const { callbackId } = childProps;
 		const clickedButtonProps = ButtonGroup.Button.findInAllAsProps(this.props)[callbackId];
 
 		// If the consumer passed in an `onClick` to the child `ButtonGroup.Button`
 		// component, we should make sure to call that in addition to the
 		// `ButtonGroup`'s `onSelect`.
 		if (_.isFunction(clickedButtonProps.onClick)) {
-			clickedButtonProps.onClick({ event, props });
+			clickedButtonProps.onClick({ event, props: childProps });
 		}
 
-		this.props.onSelect(callbackId, { event, props });
+		this.props.onSelect(callbackId, { event, props: childProps });
 	},
 
 	render() {
@@ -118,6 +118,6 @@ const ButtonGroup = React.createClass(createLucidComponentDefinition({
 			</span>
 		);
 	}
-}));
+});
 
 export default ButtonGroup;

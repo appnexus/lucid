@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition }  from '../../util/component-definition';
+import { createClass }  from '../../util/component-definition';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import * as reducers from './Expander.reducers';
 
@@ -23,7 +23,7 @@ const {
  * This is a container that provides a toggle that controls when the content is
  * shown.
  */
-const Expander = React.createClass(createLucidComponentDefinition({
+const Expander = createClass({
 	displayName: 'Expander',
 
 	childProps: {
@@ -145,6 +145,6 @@ const Expander = React.createClass(createLucidComponentDefinition({
 			event, props: this.props
 		});
 	}
-}));
+});
 
 export default Expander;

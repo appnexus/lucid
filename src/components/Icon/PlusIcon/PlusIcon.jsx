@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
+import { createClass } from '../../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-PlusIcon');
 
@@ -10,7 +11,8 @@ const boundClassNames = lucidClassNames.bind('&-PlusIcon');
  *
  * A plus icon.
  */
-const PlusIcon = React.createClass({
+const PlusIcon = createClass({
+	displayName: 'PlusIcon',
 	propTypes: {
 		...Icon.propTypes,
 	},

@@ -1,13 +1,14 @@
 import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass } from '../../util/component-definition';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 
 const boundClassNames = lucidClassNames.bind('&-StickySection');
 const {
-	any,
+	node,
 	number,
+	object,
 	string,
 } = React.PropTypes;
 
@@ -16,9 +17,13 @@ const {
  *
  * `StickySection` can be wrapped around any content to make it _stick_ to the top edge of the screen when a user scrolls beyond its initial location.
  */
-const StickySection = React.createClass(createLucidComponentDefinition({
+const StickySection = createClass({
 	displayName: 'StickySection',
 	propTypes: {
+		/**
+		 * any valid React children
+		 */
+		children: node,
 		/**
 		 * Appended to the component-specific class names set on the root element.
 		 */
@@ -26,7 +31,7 @@ const StickySection = React.createClass(createLucidComponentDefinition({
 		/**
 		 * Styles that are passed through to the root container.
 		 */
-		style: any,
+		style: object,
 		/**
 		 * Pixel value from the top of the document. When scrolled passed, the sticky header is no longer sticky, and renders normally.
 		 */
@@ -186,6 +191,6 @@ const StickySection = React.createClass(createLucidComponentDefinition({
 			</div>
 		);
 	}
-}));
+});
 
 export default StickySection;

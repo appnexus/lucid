@@ -1,5 +1,5 @@
 import React from 'react';
-import EligibilityIcon from '../EligibilityIcon';
+import { EligibilityIcon } from '../../../../index';
 
 export default React.createClass({
 	render() {

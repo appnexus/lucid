@@ -1,5 +1,5 @@
 import React from 'react';
-import WarningIcon from '../WarningIcon';
+import { WarningIcon } from '../../../../index';
 
 export default React.createClass({
 	render() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import DangerIcon from '../DangerIcon';
+import { DangerIcon } from '../../../../index';
 
 export default React.createClass({
 	render() {

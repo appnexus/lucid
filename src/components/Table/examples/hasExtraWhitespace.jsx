@@ -1,8 +1,5 @@
 import React from 'react';
-import Table from '../Table';
-import Checkbox from '../../Checkbox/Checkbox';
-import Button from '../../Button/Button';
-import SuccessIcon from '../../Icon/SuccessIcon/SuccessIcon';
+import { Button, Checkbox, SuccessIcon, Table } from '../../../index';
 
 const {
 	Thead,

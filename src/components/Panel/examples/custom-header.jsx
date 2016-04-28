@@ -1,7 +1,5 @@
 import React from 'react';
-import Panel from '../Panel';
-import CheckIcon from '../../Icon/CheckIcon/CheckIcon';
-import SuccessIcon from '../../Icon/SuccessIcon/SuccessIcon';
+import { CheckIcon, Panel, SuccessIcon } from '../../../index';
 
 export default React.createClass({
 	render() {

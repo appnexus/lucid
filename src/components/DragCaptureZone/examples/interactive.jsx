@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-
-import DragCaptureZone from '../DragCaptureZone';
+import { DragCaptureZone } from '../../../index';
 
 export default React.createClass({
 	getInitialState() {

@@ -1,6 +1,7 @@
 import React from 'react';
 import CrossIcon  from '../CrossIcon/CrossIcon';
 import { lucidClassNames } from '../../../util/style-helpers';
+import { createClass } from '../../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-DangerIcon');
 
@@ -10,7 +11,8 @@ const boundClassNames = lucidClassNames.bind('&-DangerIcon');
  *
  * A danger icon.
  */
-const DangerIcon = React.createClass({
+const DangerIcon = createClass({
+	displayName: 'DangerIcon',
 	propTypes: {
 		...CrossIcon.propTypes,
 	},

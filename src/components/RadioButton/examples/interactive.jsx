@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-
-import RadioButton from '../RadioButton';
+import { RadioButton } from '../../../index';
 
 export default React.createClass({
 	getInitialState() {

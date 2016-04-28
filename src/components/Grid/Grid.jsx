@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition }  from '../../util/component-definition';
+import { createClass }  from '../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-Grid');
 
@@ -18,7 +18,7 @@ const {
  * You can use the Grid components themselves or create your own components using the Grid styles from Grid.less.
  * Please see examples for more information.
  */
-const Grid = React.createClass(createLucidComponentDefinition({
+const Grid = createClass({
 	displayName: 'Grid',
 
 	childProps: {
@@ -181,6 +181,6 @@ const Grid = React.createClass(createLucidComponentDefinition({
 			</section>
 		);
 	}
-}));
+});
 
 export default Grid;

@@ -1,18 +1,15 @@
 import React from 'react';
-import ButtonGroup from '../ButtonGroup';
-import { buildStatefulComponent } from '../../../util/state-management';
-
-var StatefulButtonGroup = buildStatefulComponent(ButtonGroup);
+import { ButtonGroup } from '../../../index';
 
 export default React.createClass({
 	render() {
 		return (
-			<StatefulButtonGroup>
-				<StatefulButtonGroup.Button>Zero</StatefulButtonGroup.Button>
-				<StatefulButtonGroup.Button>One</StatefulButtonGroup.Button>
-				<StatefulButtonGroup.Button>Two</StatefulButtonGroup.Button>
-				<StatefulButtonGroup.Button>Three</StatefulButtonGroup.Button>
-			</StatefulButtonGroup>
+			<ButtonGroup>
+				<ButtonGroup.Button>Zero</ButtonGroup.Button>
+				<ButtonGroup.Button>One</ButtonGroup.Button>
+				<ButtonGroup.Button>Two</ButtonGroup.Button>
+				<ButtonGroup.Button>Three</ButtonGroup.Button>
+			</ButtonGroup>
 		);
 	}
 });
