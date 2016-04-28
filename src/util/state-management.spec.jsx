@@ -503,6 +503,11 @@ describeWithDOM('#buildStatefulComponent', () => {
 		assert.equal(countSpan.text(), '1');
 	});
 
+	it('should not wrap a wrapped component', () => {
+		const StatefulCounter = buildStatefulComponent(Counter);
+		assert.equal(StatefulCounter, buildStatefulComponent(StatefulCounter));
+	});
+
 	it('should prioritize passed-in prop values over internal state', () => {
 		const StatefulCounter = buildStatefulComponent(Counter);
 		const wrapper = mount(<StatefulCounter count={36} />);

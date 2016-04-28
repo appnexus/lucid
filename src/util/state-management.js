@@ -83,6 +83,12 @@ function overwriteArrays (objValue, srcValue) {
 }
 
 export function buildStatefulComponent(baseComponent, opts) {
+
+	if (baseComponent._isLucidHybridComponent) {
+		console.warn('Input component is already a Lucid hybdrid component. Lucid exports hybrid components by default. To access the dumb components, use the -Dumb suffix, e.g. "ComponentDumb"');
+		return baseComponent;
+	}
+
 	opts = _.merge({
 		setStateWithNewProps: true, // if true, new props will update state, else prop has priority over existing state
 		replaceEvents: false // if true, function props replace the existing reducers, else they are invoked *after* state reducer returns
@@ -93,7 +99,9 @@ export function buildStatefulComponent(baseComponent, opts) {
 
 	return React.createClass({
 		propTypes: otherProps,
-		statics: _.omit(baseComponent, ['displayName', 'propTypes', 'getDefaultProps', 'defaultProps']),
+		statics: _.chain(baseComponent).omit(['displayName', 'propTypes', 'getDefaultProps', 'defaultProps']).assign({
+			_isLucidHybridComponent: true
+		}).value(),
 		displayName: baseComponent.displayName,
 		getInitialState() {
 			if (opts.setStateWithNewProps) {
