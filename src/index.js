@@ -6,6 +6,7 @@ import { default as ButtonGroupDumb } from './components/ButtonGroup/ButtonGroup
 import { default as DropMenuDumb } from './components/DropMenu/DropMenu';
 import { default as ExpanderDumb } from './components/Expander/Expander';
 import { default as SingleSelectDumb } from './components/SingleSelect/SingleSelect';
+import { default as TabsDumb } from './components/Tabs/Tabs';
 import { default as TextFieldDumb } from './components/TextField/TextField'
 import { default as ValidatedTextFieldDumb } from './components/ValidatedTextField/ValidatedTextField';
 import { default as VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
@@ -15,6 +16,7 @@ const ButtonGroup = buildStatefulComponent(ButtonGroupDumb);
 const DropMenu = buildStatefulComponent(DropMenuDumb);
 const Expander = buildStatefulComponent(ExpanderDumb);
 const SingleSelect = buildStatefulComponent(SingleSelectDumb);
+const Tabs = buildStatefulComponent(TabsDumb);
 const TextField = buildStatefulComponent(TextFieldDumb);
 const ValidatedTextField = buildStatefulComponent(ValidatedTextFieldDumb);
 const VerticalListMenu = buildStatefulComponent(VerticalListMenuDumb);
@@ -55,7 +57,6 @@ import StickySection from './components/StickySection/StickySection';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import Switch from './components/Switch/Switch';
 import Table from './components/Table/Table';
-import Tabs from './components/Tabs/Tabs';
 import Validation from './components/Validation/Validation';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
 
@@ -121,6 +122,7 @@ export {
 	Switch,
 	Table,
 	Tabs,
+	TabsDumb,
 	TextField,
 	TextFieldDumb,
 	ValidatedTextField,
