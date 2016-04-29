@@ -80,7 +80,7 @@ describe('Tabs', () => {
 			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Yum');
 		});
 
-		it(`Tab.isSelected`, () => {
+		it('Tab.isSelected', () => {
 			const wrapper = shallow(
 				<Tabs>
 					<Tabs.Tab Title='Lollipop'>Yuck</Tabs.Tab>
@@ -92,7 +92,7 @@ describe('Tabs', () => {
 			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Yum');
 		});
 
-		it(`last Tab.isSelected beats selectedIndex`, () => {
+		it('last Tab.isSelected beats selectedIndex', () => {
 			const wrapper = shallow(
 				<Tabs selectedIndex={0}>
 					<Tabs.Tab Title='One'>One content</Tabs.Tab>
@@ -107,6 +107,7 @@ describe('Tabs', () => {
 
 		it('onSelect', () => {
 			const onSelect = sinon.spy();
+			const clickEvent = 'event';
 			const wrapper = shallow(
 				<Tabs onSelect={onSelect}>
 					<Tabs.Tab>One</Tabs.Tab>
@@ -114,10 +115,12 @@ describe('Tabs', () => {
 				</Tabs>
 			);
 
-			wrapper.find('.lucid-Tabs-Tab').at(1).simulate('click');
+			wrapper.find('.lucid-Tabs-Tab').at(1).simulate('click', clickEvent);
 
 			assert(onSelect.called);
 			assert.equal(onSelect.args[0][0], 1);
+			assert.equal(onSelect.args[0][1]['event'], clickEvent);
+			assert.deepEqual(onSelect.args[0][1]['props'], {children: 'Two'});
 		});
 
 		it('isOpen', () => {
