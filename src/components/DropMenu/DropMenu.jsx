@@ -1,9 +1,8 @@
 import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-definition';
+import { createClass, findTypes, rejectTypes } from '../../util/component-types';
 import { scrollParentTo } from '../../util/dom-helpers';
-import { rejectNullElements } from '../../util/child-component';
 import * as KEYCODE from '../../constants/key-code';
 import * as reducers from './DropMenu.reducers';
 import ContextMenu from '../ContextMenu/ContextMenu';
@@ -43,13 +42,26 @@ const DropMenu = createClass({
 
 	reducers,
 
-	childProps: {
-		Control: {},
-		OptionGroup: {},
-		Option: {
-			isDisabled: bool
-		},
-		NullOption: {}
+	components: {
+		Control: createClass({
+			displayName: 'DropMenu.Control',
+			propName: 'Control'
+		}),
+		OptionGroup: createClass({
+			displayName: 'DropMenu.OptionGroup',
+			propName: 'OptionGroup'
+		}),
+		Option: createClass({
+			displayName: 'DropMenu.Option',
+			propName: 'Option',
+			propTypes: {
+				isDisabled: bool
+			}
+		}),
+		NullOption: createClass({
+			displayName: 'DropMenu.NullOption',
+			propName: 'NullOption'
+		})
 	},
 
 	propTypes: {
@@ -179,13 +191,17 @@ const DropMenu = createClass({
 				Option,
 				NullOption
 			} = ParentType;
-			const optionGroups = OptionGroup.findInAllAsProps(props); // find all OptionGroup props
-			const ungroupedOptions = Option.findInAllAsProps(props); // find all ungrouped Option props
-			const nullOptions = NullOption ? NullOption.findInAllAsProps(props) : []; // find all NullOption props
+			//const optionGroups = OptionGroup.findInAllAsProps(props); // find all OptionGroup props
+			const optionGroups = _.map(findTypes(props, OptionGroup), 'props'); // find all OptionGroup props
+			//const ungroupedOptions = Option.findInAllAsProps(props); // find all ungrouped Option props
+			const ungroupedOptions = _.map(findTypes(props, Option), 'props') // find all ungrouped Option props
+			//const nullOptions = NullOption ? NullOption.findInAllAsProps(props) : []; // find all NullOption props
+			const nullOptions = NullOption ? _.map(findTypes(props, NullOption), 'props') : []; // find all NullOption props
 
 			// flatten grouped options into array of objects to associate { index, group index, and props } for each option
 			const groupedOptionData = _.reduce(optionGroups, (memo, optionGroupProps, optionGroupIndex) => {
-				const groupedOptions = Option.findInAllAsProps(optionGroupProps); // find all Option props for current group
+				//const groupedOptions = Option.findInAllAsProps(optionGroupProps); // find all Option props for current group
+				const groupedOptions = _.map(findTypes(optionGroupProps, Option), 'props'); // find all Option props for current group
 				return memo.concat(_.map(groupedOptions, (optionProps, localOptionIndex) => {
 					return {
 						localOptionIndex,
@@ -416,7 +432,8 @@ const DropMenu = createClass({
 			nullOptions
 		} = this.state;
 
-		const controlProps = _.first(DropMenu.Control.findInAllAsProps(this.props));
+		//const controlProps = _.first(DropMenu.Control.findInAllAsProps(this.props));
+		const controlProps = _.get(_.first(findTypes(this.props, DropMenu.Control)), 'props', {});
 
 		return (
 			<div className={boundClassNames('&', '&-base', {
@@ -445,7 +462,7 @@ const DropMenu = createClass({
 							joinArray(
 								// for each option group,
 								_.map(optionGroups, (optionGroupProps, optionGroupIndex) => {
-									const labelElements = rejectNullElements(optionGroupProps.children);
+									const labelElements = rejectTypes(optionGroupProps.children, [DropMenu.Control, DropMenu.OptionGroup, DropMenu.Option, DropMenu.NullOption]);
 									// render label if there is one
 									return (_.isEmpty(labelElements) ? [] : [
 										<div {...optionGroupProps} className={boundClassNames('&-label', optionGroupProps.className)}>

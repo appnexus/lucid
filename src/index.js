@@ -61,15 +61,13 @@ import Validation from './components/Validation/Validation';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
 
 // utils
-import * as childComponent from './util/child-component';
-import * as componentDefinition from './util/component-definition';
+import * as componentTypes from './util/component-types';
 import * as domHelpers from './util/dom-helpers';
 import * as stateManagement from './util/state-management';
 import * as styleHelpers from './util/style-helpers';
 
 export {
-	childComponent,
-	componentDefinition,
+	componentTypes,
 	domHelpers,
 	stateManagement,
 	styleHelpers,

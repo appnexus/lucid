@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass }  from '../../util/component-definition';
+import { createClass, findTypes }  from '../../util/component-types';
 import Switch from '../Switch/Switch';
 
 const boundClassNames = lucidClassNames.bind('&-LabeledSwitch');
@@ -22,14 +22,18 @@ const {
 const LabeledSwitch = createClass({
 	displayName: 'LabeledSwitch',
 
-	childProps: {
-		Label: {
-			/**
-			 * Used to identify the purpose of this switch to the user -- can be
-			 * any renderable content.
-			 */
-			children: node
-		}
+	components: {
+		Label: createClass({
+			displayName: 'LabeledSwitch.Label',
+			propName: 'Label',
+			propTypes: {
+				/**
+				 * Used to identify the purpose of this switch to the user -- can be
+				 * any renderable content.
+				 */
+				children: node
+			}
+		})
 	},
 
 	propTypes: {
@@ -66,8 +70,8 @@ const LabeledSwitch = createClass({
 	},
 
 	componentWillReceiveProps(nextProps) {
-		const currentLabel = _.first(LabeledSwitch.Label.findInAllAsProps(this.props)).children;
-		const nextLabel = _.first(LabeledSwitch.Label.findInAllAsProps(nextProps)).children;
+		const currentLabel = _.get(_.first(findTypes(this.props, LabeledSwitch.Label)), 'props.children', null);
+		const nextLabel = _.get(_.first(findTypes(nextProps, LabeledSwitch.Label)), 'props.children', null);
 
 		if (currentLabel !== nextLabel) {
 			this._labelKey++;
@@ -84,7 +88,7 @@ const LabeledSwitch = createClass({
 			...passThroughs
 		} = this.props;
 
-		const labelChildProps = _.first(LabeledSwitch.Label.findInAllAsProps(this.props));
+		const labelChildProps = _.first(_.map(findTypes(this.props, LabeledSwitch.Label), 'props'));
 
 		return (
 			<label

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-definition';
+import { createClass, findTypes } from '../../util/component-types';
 
 const boundClassNames = lucidClassNames.bind('&-Panel');
 
@@ -20,9 +20,15 @@ const {
 const Panel = createClass({
 	displayName: 'Panel',
 
-	childProps: {
-		Header: null,
-		Footer: null
+	components: {
+		Header: createClass({
+			displayName: 'Panel.Header',
+			propName: 'Header'
+		}),
+		Footer: createClass({
+			displayName: 'Panel.Footer',
+			propName: 'Footer'
+		})
 	},
 
 	propTypes: {
@@ -61,8 +67,8 @@ const Panel = createClass({
 			style,
 		} = this.props;
 
-		const headerChildProp = _.first(Panel.Header.findInAllAsProps(this.props));
-		const footerChildProp = _.first(Panel.Footer.findInAllAsProps(this.props));
+		const headerChildProp = _.first(_.map(findTypes(this.props, Panel.Header), 'props'));
+		const footerChildProp = _.first(_.map(findTypes(this.props, Panel.Footer), 'props'));
 
 		return (
 			<div

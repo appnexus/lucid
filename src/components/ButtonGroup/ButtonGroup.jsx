@@ -2,7 +2,7 @@ import _ from 'lodash';
 import Button from '../Button/Button';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass }  from '../../util/component-definition';
+import { createClass, findTypes }  from '../../util/component-types';
 import reducers from './ButtonGroup.reducers';
 
 const boundClassNames = lucidClassNames.bind('&-ButtonGroup');
@@ -24,8 +24,11 @@ const {
 const ButtonGroup = createClass({
 	displayName: 'ButtonGroup',
 
-	childProps: {
-		Button: { ...Button.propTypes }
+	components: {
+		Button: createClass({
+			displayName: 'ButtonGroup.Button',
+			propName: 'Button'
+		})
 	},
 
 	reducers: reducers,
@@ -70,7 +73,7 @@ const ButtonGroup = createClass({
 
 	handleSelect({ event, props: childProps }) {
 		const { callbackId } = childProps;
-		const clickedButtonProps = ButtonGroup.Button.findInAllAsProps(this.props)[callbackId];
+		const clickedButtonProps = findTypes(this.props, ButtonGroup.Button)[callbackId];
 
 		// If the consumer passed in an `onClick` to the child `ButtonGroup.Button`
 		// component, we should make sure to call that in addition to the
@@ -90,7 +93,7 @@ const ButtonGroup = createClass({
 			...others
 		} = this.props;
 
-		const buttonChildProps = ButtonGroup.Button.findInAllAsProps(this.props);
+		const buttonChildProps = _.map(findTypes(this.props, ButtonGroup.Button), 'props');
 
 		return (
 			<span

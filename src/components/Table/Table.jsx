@@ -1,8 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-definition';
-import { findElementsByType } from '../../util/child-component';
+import { createClass, filterTypes } from '../../util/component-types';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
@@ -24,6 +23,7 @@ const {
  * Any child `<Tr>` will have `isHeader` set to `true` unless otherwise specified.
  */
 const Thead = createClass({
+	displayName: 'Table.Thead',
 	propTypes: {
 		/**
 		 * Appended to the component-specific class names set on the root
@@ -43,13 +43,13 @@ const Thead = createClass({
 		return (
 			<thead {...this.props} className={boundClassNames('&-thead', this.props.className)}>
 				{_.map(
-					findElementsByType(children, [Tr]),
-					(trElement, index) => React.createElement(
-						trElement.type,
+					filterTypes(children, Tr),
+					({ props }, index) => React.createElement(
+						Tr,
 						{
 							key: 'Tr-'+index,
 							isHeader: true,
-							...trElement.props
+							...props
 						}
 					)
 				)}
@@ -62,6 +62,7 @@ const Thead = createClass({
  * `Tbody` renders <tbody>.
  */
 const Tbody = createClass({
+	displayName: 'Table.Tbody',
 	propTypes: {
 		/**
 		 * Appended to the component-specific class names set on the root
@@ -82,6 +83,7 @@ const Tbody = createClass({
  * For children `<Td>`, `isAfterRowSpan` will be set to `true` on the second `<Td>` if the first `<Td>` has a `rowSpan` value greater than `1`, unless otherwise specified.
  */
 const Tr = createClass({
+	displayName: 'Table.Tr',
 	propTypes: {
 		/**
 		 * any valid React children
@@ -190,6 +192,7 @@ const Tr = createClass({
  * Will Render a CaretIcon next to the children if `isSorted`.
  */
 const Th = createClass({
+	displayName: 'Table.Th',
 	propTypes: {
 		/**
 		 * Aligns the content of a cell. Can be `left`, `center`, or `right`.
@@ -397,6 +400,7 @@ const Th = createClass({
  * `Td` renders <td>.
  */
 const Td = createClass({
+	displayName: 'Table.Td',
 	propTypes: {
 		/**
 		 * Aligns the content of a cell. Can be `left`, `center`, or `right`.
@@ -487,7 +491,7 @@ const Td = createClass({
 const Table = createClass({
 	displayName: 'Table',
 
-	statics: {
+	components: {
 		Thead,
 		Tbody,
 		Tr,

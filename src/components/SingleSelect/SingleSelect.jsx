@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-definition';
+import { createClass, findTypes } from '../../util/component-types';
 import * as reducers from './SingleSelect.reducers';
 import DropMenu from '../DropMenu/DropMenu';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
@@ -32,10 +32,21 @@ const SingleSelect = createClass({
 
 	reducers,
 
-	childProps: {
-		Placeholder: null,
-		Option: DropMenu.Option.propTypes,
-		OptionGroup: DropMenu.OptionGroup.propTypes
+	components: {
+		Placeholder: createClass({
+			displayName: 'SingleSelect.Placeholder',
+			propName: 'Placeholder'
+		}),
+		Option: createClass({
+			displayName: 'SingleSelect.Option',
+			propName: 'Option',
+			propTypes: DropMenu.Option.propTypes
+		}),
+		OptionGroup: createClass({
+			displayName: 'SingleSelect.OptionGroup',
+			propName: 'OptionGroup',
+			propTypes: DropMenu.OptionGroup.propTypes
+		})
 	},
 
 	propTypes: {
@@ -140,7 +151,7 @@ const SingleSelect = createClass({
 			flattenedOptionsData
 		} = this.state;
 
-		const placeholderProps = _.first(SingleSelect.Placeholder.findInAllAsProps(this.props));
+		const placeholderProps = _.first(_.map(findTypes(this.props, SingleSelect.Placeholder), 'props'));
 		const placeholder = _.get(placeholderProps, 'children', 'Select');
 		const isItemSelected = _.isNumber(selectedIndex);
 

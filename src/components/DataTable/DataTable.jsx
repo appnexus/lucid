@@ -1,8 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-definition';
-import { findAllChildComponents } from '../../util/child-component';
+import { createClass, findTypes, filterTypes } from '../../util/component-types';
 
 import Checkbox from '../Checkbox/Checkbox';
 import ScrollTable from '../ScrollTable/ScrollTable';
@@ -108,14 +107,22 @@ const DataTable = createClass({
 		};
 	},
 
-	childProps: {
-		Column: {
-			field: string.isRequired,
-			title: string
-		},
-		ColumnGroup: {
-			title: string
-		}
+	components: {
+		Column: createClass({
+			displayName: 'DataTable.Column',
+			propName: 'Column',
+			propTypes: {
+				field: string.isRequired,
+				title: string
+			}
+		}),
+		ColumnGroup: createClass({
+			displayName: 'DataTable.ColumnGroup',
+			propName: 'ColumnGroup',
+			propTypes: {
+				title: string
+			}
+		})
 	},
 
 	statics: {
@@ -175,13 +182,13 @@ const DataTable = createClass({
 		} = this.props;
 
 
-		const childComponentElements = findAllChildComponents(this.props, [DataTable.Column, DataTable.ColumnGroup]);
+		const childComponentElements = findTypes(this.props, [DataTable.Column, DataTable.ColumnGroup]);
 		const flattenedColumns = _.reduce(childComponentElements, (acc, childComponentElement) => {
 			if (childComponentElement.type === DataTable.Column) {
 				return acc.concat([{props: childComponentElement.props, columnGroupProps: null}]);
 			}
 			if (childComponentElement.type === DataTable.ColumnGroup) {
-				return acc.concat(_.map(findAllChildComponents(childComponentElement.props, [DataTable.Column]), (columnChildComponent) => ({ props: columnChildComponent.props, columnGroupProps: childComponentElement.props })));
+				return acc.concat(_.map(findTypes(childComponentElement.props, DataTable.Column), (columnChildComponent) => ({ props: columnChildComponent.props, columnGroupProps: childComponentElement.props })));
 			}
 		}, []);
 
@@ -207,7 +214,7 @@ const DataTable = createClass({
 							</Th>
 						) : (
 							<Th
-								colSpan={_.size(DataTable.Column.findInChildren(props.children))}
+								colSpan={_.size(filterTypes(props.children, DataTable.Column))}
 								{..._.omit(props, ['field', 'children', 'width', 'title'])}
 								key={_.get(props, 'field', index)}
 							>

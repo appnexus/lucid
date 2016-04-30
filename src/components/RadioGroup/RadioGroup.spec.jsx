@@ -10,6 +10,7 @@ import describeWithDOM from '../../util/describe-with-dom';
 import getRandom from '../../util/random';
 
 import RadioGroup from './RadioGroup';
+import LabeledRadioButton from '../LabeledRadioButton/LabeledRadioButton';
 
 describe('RadioGroup', () => {
 	common(RadioGroup);
@@ -26,7 +27,7 @@ describe('RadioGroup', () => {
 					</RadioGroup>
 				);
 
-				_.forEach(wrapper.find('LabeledRadioButton').nodes, (node) => {
+				_.forEach(wrapper.find(LabeledRadioButton).nodes, (node) => {
 					assert.equal(node.props.name, name);
 				});
 			});
@@ -41,7 +42,7 @@ describe('RadioGroup', () => {
 				);
 				const name = wrapper.first().prop('name');
 
-				_.forEach(wrapper.find('LabeledRadioButton').nodes, (node) => {
+				_.forEach(wrapper.find(LabeledRadioButton).nodes, (node) => {
 					assert.equal(node.props.name, name);
 				});
 			});
@@ -64,7 +65,7 @@ describe('RadioGroup', () => {
 						<RadioGroup.RadioButton />
 					</RadioGroup>
 				);
-				const childNodes = wrapper.find('LabeledRadioButton').nodes;
+				const childNodes = wrapper.find(LabeledRadioButton).nodes;
 
 				assert.equal(childNodes[0].props.isSelected, false);
 				assert.equal(childNodes[1].props.isSelected, false);
@@ -79,7 +80,7 @@ describe('RadioGroup', () => {
 						<RadioGroup.RadioButton />
 					</RadioGroup>
 				);
-				const childNodes = wrapper.find('LabeledRadioButton').nodes;
+				const childNodes = wrapper.find(LabeledRadioButton).nodes;
 
 				assert.equal(childNodes[0].props.isSelected, false);
 				assert.equal(childNodes[1].props.isSelected, true);
@@ -94,7 +95,7 @@ describe('RadioGroup', () => {
 						<RadioGroup.RadioButton />
 					</RadioGroup>
 				);
-				const childNodes = wrapper.find('LabeledRadioButton').nodes;
+				const childNodes = wrapper.find(LabeledRadioButton).nodes;
 
 				assert.equal(childNodes[0].props.isSelected, true);
 				assert.equal(childNodes[1].props.isSelected, false);
@@ -135,11 +136,11 @@ describe('RadioGroup', () => {
 					<RadioGroup.RadioButton></RadioGroup.RadioButton>
 				</RadioGroup>
 			);
-			const childNodes = wrapper.find('LabeledRadioButton').nodes;
+			const childNodes = wrapper.find(LabeledRadioButton).nodes;
 
 			assert.equal(childNodes[0].props.Label, 'foo');
 			assert.equal(childNodes[1].props.Label, 'bar');
-			assert.equal(childNodes[2].props.Label, '');
+			assert(_.isNil(childNodes[2].props.Label));
 		});
 	});
 });

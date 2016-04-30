@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass }  from '../../util/component-definition';
+import { createClass, findTypes }  from '../../util/component-types';
 import RadioButton from '../RadioButton/RadioButton';
 
 const boundClassNames = lucidClassNames.bind('&-LabeledRadioButton');
@@ -21,14 +21,18 @@ const {
 const LabeledRadioButton = createClass({
 	displayName: 'LabeledRadioButton',
 
-	childProps: {
-		Label: {
-			/**
-			 * Used to identify the purpose of this radio button to the user --
-			 * can be any renderable content.
-			 */
-			children: node
-		}
+	components: {
+		Label: createClass({
+			displayName: 'LabeledRadioButton.Label',
+			propName: 'Label',
+			propTypes: {
+				/**
+				 * Used to identify the purpose of this radio button to the user --
+				 * can be any renderable content.
+				 */
+				children: node
+			}
+		})
 	},
 
 	propTypes: {
@@ -70,7 +74,7 @@ const LabeledRadioButton = createClass({
 			...passThroughs
 		} = this.props;
 
-		const labelChildProps = _.first(LabeledRadioButton.Label.findInAllAsProps(this.props));
+		const labelChildProps = _.first(_.map(findTypes(this.props, LabeledRadioButton.Label), 'props'));
 
 		return (
 			<label
@@ -89,7 +93,7 @@ const LabeledRadioButton = createClass({
 				/>
 				{
 					labelChildProps
-							? labelChildProps.children || labelChildProps
+							? labelChildProps.children
 							: null
 				}
 			</label>
