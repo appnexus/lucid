@@ -91,9 +91,7 @@ const Expander = createClass({
 	},
 
 	componentWillReceiveProps(nextProps) {
-		//const currentLabel = _.first(Expander.Label.findInAllAsProps(this.props)).children;
 		const currentLabel = _.get(_.first(findTypes(this.props, Expander.Label)), 'props.children', null);
-		//const nextLabel = _.first(Expander.Label.findInAllAsProps(nextProps)).children;
 		const nextLabel = _.get(_.first(findTypes(nextProps, Expander.Label)), 'props.children', null);
 
 		if (currentLabel !== nextLabel) {
@@ -110,7 +108,6 @@ const Expander = createClass({
 			...passThroughs
 		} = this.props;
 
-		//const labelChildProp = _.first(Expander.Label.findInAllAsProps(this.props));
 		const labelChildProp = _.first(_.map(findTypes(this.props, Expander.Label), 'props'));
 
 		return (

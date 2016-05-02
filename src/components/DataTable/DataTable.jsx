@@ -188,17 +188,35 @@ const DataTable = createClass({
 				return acc.concat([{props: childComponentElement.props, columnGroupProps: null}]);
 			}
 			if (childComponentElement.type === DataTable.ColumnGroup) {
-				return acc.concat(_.map(findTypes(childComponentElement.props, DataTable.Column), (columnChildComponent) => ({ props: columnChildComponent.props, columnGroupProps: childComponentElement.props })));
+				return acc.concat(_.map(
+					findTypes(childComponentElement.props, DataTable.Column),
+					(columnChildComponent) => ({
+						props: columnChildComponent.props,
+						columnGroupProps: childComponentElement.props
+					})
+				));
 			}
 		}, []);
 
-		const hasGroupedColumns = _.some(childComponentElements, (childComponentElement) => childComponentElement.type === DataTable.ColumnGroup);
+		const hasGroupedColumns = _.some(
+			childComponentElements,
+			(childComponentElement) => childComponentElement.type === DataTable.ColumnGroup
+		);
+
 		return (
 			<ScrollTable {...passThroughs} className={boundClassNames('&', className)}>
 				<Thead>
 					<Tr>
 						{isSelectable ? (
-							<Th hasCheckbox rowSpan={hasGroupedColumns ? 2 : null}><Checkbox isSelected={_.every(data, 'isSelected')} onSelect={this.handleSelectAll} /></Th>
+							<Th
+								hasCheckbox
+								rowSpan={hasGroupedColumns ? 2 : null}
+							>
+								<Checkbox
+									isSelected={_.every(data, 'isSelected')}
+									onSelect={this.handleSelectAll}
+								/>
+							</Th>
 						) : null}
 						{_.map(childComponentElements, ({ props, type }, index) => type === DataTable.Column ? (
 							<Th
@@ -249,7 +267,12 @@ const DataTable = createClass({
 							key={'row' + index}
 						>
 							{isSelectable ? (
-								<Td hasCheckbox><Checkbox isSelected={row.isSelected} onSelect={_.partial(this.handleSelect, index)} /></Td>
+								<Td hasCheckbox>
+									<Checkbox
+										isSelected={row.isSelected}
+										onSelect={_.partial(this.handleSelect, index)}
+									/>
+								</Td>
 							) : null}
 							{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => (
 								<Td

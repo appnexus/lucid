@@ -191,16 +191,13 @@ const DropMenu = createClass({
 				Option,
 				NullOption
 			} = ParentType;
-			//const optionGroups = OptionGroup.findInAllAsProps(props); // find all OptionGroup props
+
 			const optionGroups = _.map(findTypes(props, OptionGroup), 'props'); // find all OptionGroup props
-			//const ungroupedOptions = Option.findInAllAsProps(props); // find all ungrouped Option props
 			const ungroupedOptions = _.map(findTypes(props, Option), 'props') // find all ungrouped Option props
-			//const nullOptions = NullOption ? NullOption.findInAllAsProps(props) : []; // find all NullOption props
 			const nullOptions = NullOption ? _.map(findTypes(props, NullOption), 'props') : []; // find all NullOption props
 
 			// flatten grouped options into array of objects to associate { index, group index, and props } for each option
 			const groupedOptionData = _.reduce(optionGroups, (memo, optionGroupProps, optionGroupIndex) => {
-				//const groupedOptions = Option.findInAllAsProps(optionGroupProps); // find all Option props for current group
 				const groupedOptions = _.map(findTypes(optionGroupProps, Option), 'props'); // find all Option props for current group
 				return memo.concat(_.map(groupedOptions, (optionProps, localOptionIndex) => {
 					return {
@@ -432,7 +429,6 @@ const DropMenu = createClass({
 			nullOptions
 		} = this.state;
 
-		//const controlProps = _.first(DropMenu.Control.findInAllAsProps(this.props));
 		const controlProps = _.get(_.first(findTypes(this.props, DropMenu.Control)), 'props', {});
 
 		return (
