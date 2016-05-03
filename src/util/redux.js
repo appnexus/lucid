@@ -23,6 +23,7 @@ export function thunk(fn) {
  * @param {Object} param.initialState - the initial state object that the reducer will return
  * @param {Object} param.reducers - a tree of lucid reducers
  * @param {string[]} param.rootPath - array of strings representing the path to local state in global state
+ * @param {function} param.rootSelector - a top-level selector which takes as input state that has run through every selector in param.selectors
  * @param {Object} param.selectors - a tree of lucid selectors
  * @return {Object} redux reducer and connectors
  */
@@ -181,6 +182,7 @@ function createReducerFromReducerTree(reduxReducerTree, initialState) {
  * Generates a redux reducer from a tree of lucid reducers
  * @param {Object} reducers - a tree of lucid reducers
  * @param {Object} initialState - the initial state object that the reducer will return
+ * @param {string[]} rootPath - array of strings representing the path to part of global state this reducer applies to
  * @return {function} the redux reducer
  */
 function createReduxReducer(reducers, initialState, rootPath) {
