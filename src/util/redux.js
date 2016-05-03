@@ -95,12 +95,13 @@ export function getReduxPrimitives({
 	function createActionCreatorTree(reducers, rootPath) {
 		return (function recur(reducers, path = []) {
 			return _.reduce(reducers, (memo, node, key) => {
-				const currentPath = path.concat(key);
-				return _.assign(memo, {
-					[key]: _.isFunction(node) ?
-						createActionCreator(node, currentPath, rootPath) :
-						recur(node, currentPath)
-				});
+        const currentPath = path.concat(key);
+        return {
+          ...memo,
+          [key]: _.isFunction(node) ?
+            createActionCreator(node, currentPath, rootPath) :
+            createActionCreatorTree(node, rootPath, currentPath)
+        };
 			}, {});
 		})(reducers, rootPath);
 	}
@@ -137,7 +138,8 @@ function createReduxReducerTree(reducers, path = []) {
 			return memo;
 		}
 		const currentPath = path.concat(key);
-		return _.assign(memo, {
+		return {
+			...memo,
 			[key]: _.isFunction(node) ?
 				function reduxReducer(state, action) {
 					const { type, payload, meta = [] } = action;
@@ -147,7 +149,7 @@ function createReduxReducerTree(reducers, path = []) {
 					return node(state, payload, ...meta);
 				} :
 				createReduxReducerTree(node, currentPath)
-		});
+		};
 	}, {});
 }
 
@@ -165,9 +167,12 @@ function createReducerFromReducerTree(reduxReducerTree, initialState) {
 			return initialState;
 		}
 		return _.reduce(reduxReducerTree, (state, node, key) => {
-			return _.assign({}, state, _.isFunction(node) ? node(state, action) : {
-				[key]: createReducerFromReducerTree(node)(state[key], action)
-			});
+			return {
+				...state,
+				..._.isFunction(node) ? node(state, action) : {
+					[key]: createReducerFromReducerTree(node)(state[key], action)
+				}
+			};
 		}, state);
 	};
 }
@@ -194,7 +199,8 @@ function createReduxReducer(reducers, initialState, rootPath) {
  * @param {string[]} path - array of strings representing the path to the action creator
  */
 function bindActionCreatorTree(actionCreatorTree, dispatch, path = []) {
-	return _.reduce(actionCreatorTree, (memo, node, key) => _.assign(memo, {
+	return _.reduce(actionCreatorTree, (memo, node, key) => ({
+		...memo,
 		[key]: _.isFunction(node) ? function boundActionCreator(...args) {
 			const action = actionCreatorTree[key](...args);
 			return dispatch(action);
@@ -213,7 +219,8 @@ function bindActionCreatorTree(actionCreatorTree, dispatch, path = []) {
 // @TODO: optimize to create and reuse selectors?
 function reduceSelectors(selectors) {
 	return function reducedSelector(state) {
-		return _.reduce(selectors, (state, selector, key) => _.assign({}, state, {
+		return _.reduce(selectors, (state, selector, key) => ({
+			...state,
 			[key]: _.isFunction(selector) ?
 				selector(state) :
 				reduceSelectors(selector)(state[key])
