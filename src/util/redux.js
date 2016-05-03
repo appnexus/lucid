@@ -64,7 +64,7 @@ export function getReduxPrimitives({
 	 * @param {string[]} rootPath - array of strings representing the path to local state in global state
 	 * @return {function} action creator that returns either an action or a thunk
 	 */
-	function createActionCreator(node, path, rootPath) {
+	function createActionCreator(node, rootPath, path) {
 		if (node.isThunk) {
 			return function thunk(...args) {
 				return function thunkInner(dispatch, getState) {
@@ -92,18 +92,16 @@ export function getReduxPrimitives({
 	 * @param {string[]} rootPath - array of strings representing the path to local state in global state
 	 * @returns {Object} action creator tree
 	 */
-	function createActionCreatorTree(reducers, rootPath) {
-		return (function recur(reducers, path = []) {
-			return _.reduce(reducers, (memo, node, key) => {
-        const currentPath = path.concat(key);
-        return {
-          ...memo,
-          [key]: _.isFunction(node) ?
-            createActionCreator(node, currentPath, rootPath) :
-            createActionCreatorTree(node, rootPath, currentPath)
-        };
-			}, {});
-		})(reducers, rootPath);
+	function createActionCreatorTree(reducers, rootPath, path = rootPath) {
+		return _.reduce(reducers, (memo, node, key) => {
+			const currentPath = path.concat(key);
+			return {
+				...memo,
+				[key]: _.isFunction(node) ?
+					createActionCreator(node, rootPath, currentPath) :
+					createActionCreatorTree(node, rootPath, currentPath)
+			};
+		}, {});
 	}
 
 	/**
