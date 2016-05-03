@@ -1,7 +1,6 @@
 import assert from 'assert';
 import sinon from 'sinon';
 import {
-	assign,
 	isFunction,
 	upperCase
 } from 'lodash';
@@ -48,13 +47,13 @@ describe('redux utils', () => {
 
 			it('should return initialState on unmatched type', () => {
 				const action = { type: 'UNKNOWN' };
-				assert.deepEqual(reducer(initialState, action), initialState);
+				assert.deepEqual(reducer(initialState, action), initialState, 'must deep equal initialState');
 			});
 
 			it('should correctly apply state change', () => {
 				const action = { type: 'foo.onChange', payload: 'bar' };
 				const nextState = reducer(initialState, action);
-				assert.equal(nextState.foo.value, 'bar');
+				assert.equal(nextState.foo.value, 'bar', 'must equal action payload');
 			});
 
 			describe('nested reducer', () => {
@@ -62,7 +61,7 @@ describe('redux utils', () => {
 				it('should correctly apply state change', () => {
 					const action = { type: 'foo.bar.onChange', payload: 'baz' };
 					const nextState = reducer(initialState, action);
-					assert.equal(nextState.foo.bar.value, 'baz');
+					assert.equal(nextState.foo.bar.value, 'baz', 'must equal action payload');
 				});
 
 			});
@@ -78,7 +77,7 @@ describe('redux utils', () => {
 				it('should correctly apply state change', () => {
 					const action = { type: 'root.foo.onChange', payload: 'bar' };
 					const nextState = reducerWithRootPath(initialState, action);
-					assert.equal(nextState.foo.value, 'bar');
+					assert.equal(nextState.foo.value, 'bar', 'must equal action payload');
 				});
 
 			});
@@ -87,7 +86,7 @@ describe('redux utils', () => {
 				it('should not include thunk paths in reducer', () => {
 					const action = { type: 'root.foo.asyncOperation' };
 					const nextState = reducer(initialState, action);
-					assert.deepEqual(initialState, nextState);
+					assert.deepEqual(initialState, nextState, 'must deep equal initialState');
 				});
 			});
 
@@ -112,7 +111,7 @@ describe('redux utils', () => {
 
 				it('should apply selector', () => {
 					const viewState = mapStateToProps(initialState);
-					assert.equal(viewState.foo.uppercase, 'FOO');
+					assert.equal(viewState.foo.uppercase, 'FOO', 'must equal "FOO"');
 				});
 
 				describe('rootPath', () => {
@@ -128,7 +127,7 @@ describe('redux utils', () => {
 
 					it('should apply selector', () => {
 						const viewState = mapStateToProps({ root: initialState });
-						assert.equal(viewState.foo.uppercase, 'FOO');
+						assert.equal(viewState.foo.uppercase, 'FOO', 'must equal "FOO"');
 					});
 
 				});
@@ -141,14 +140,15 @@ describe('redux utils', () => {
 						reducers,
 						initialState,
 						selectors,
-						rootSelector: state => assign({}, state, {
+						rootSelector: state => ({
+							...state,
 							computed: state.foo.uppercase + state.foo.value
 						})
 					});
 
 					it('should apply rootSelector', () => {
 						const viewState = mapStateToProps(initialState);
-						assert.equal(viewState.computed, 'FOOfoo');
+						assert.equal(viewState.computed, 'FOOfoo', 'must equal "FOOfoo"');
 					});
 
 				});
@@ -176,7 +176,7 @@ describe('redux utils', () => {
 						type: 'foo.onChange',
 						payload: 'bar',
 						meta: ['baz']
-					});
+					}, 'must include path as type, first param as payload, and subsequent params as meta');
 				});
 
 				describe('thunks', () => {
@@ -185,7 +185,7 @@ describe('redux utils', () => {
 
 					it('should dispatch a thunk', () => {
 						const dispatchedThunk = mockDispatch.getCall(0).args[0];
-						assert(isFunction(dispatchedThunk))
+						assert(isFunction(dispatchedThunk), 'must be a function')
 					});
 
 					it('should dispatch the correct action', () => {
@@ -194,7 +194,7 @@ describe('redux utils', () => {
 							type: 'foo.onChange',
 							payload: 'qux',
 							meta: []
-						});
+						}, 'must include path as type and param on payload');
 					});
 
 				});
