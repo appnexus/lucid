@@ -214,7 +214,7 @@ function bindActionCreatorTree(actionCreatorTree, dispatch, path = []) {
  * @returns {function} root selector that when called with state, calls each of
  * the selectors in the tree with the state local to that selector
  */
-// @TODO: optimize to create and reuse selectors?
+
 function reduceSelectors(selectors) {
 	return function reducedSelector(state) {
 		return _.reduce(selectors, (state, selector, key) => ({
