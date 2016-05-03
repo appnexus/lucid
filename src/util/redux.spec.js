@@ -11,7 +11,13 @@ import {
 	getReduxPrimitives
 } from './redux';
 
-describe('getReduxPrimitives', () => {
+describe('#thunk', () => {
+	it('should set `isThunk` property on the input function to `true`', () => {
+		assert(thunk(function() {}).isThunk, 'must have `isThunk`');
+	});
+});
+
+describe('#getReduxPrimitives', () => {
 
 	const reducers = {
 		foo: {
