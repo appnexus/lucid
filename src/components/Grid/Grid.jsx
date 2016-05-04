@@ -150,9 +150,10 @@ const Grid = React.createClass(createLucidComponentDefinition({
 					'&-is-multiline': isMultiline,
 				}, className)}
 			>
-				{_.map(cellChildProps, (cellChildProp) => {
+				{_.map(cellChildProps, (cellChildProp, i) => {
 					return (
 						<article {...cellChildProp}
+							key={i}
 							className={boundClassNames('&-Cell', {
 									'&-Cell-is-full': cellChildProp.isFull,
 									'&-Cell-is-half': cellChildProp.isHalf,
