@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition }  from '../../util/component-definition';
+import { createClass }  from '../../util/component-definition';
 import RadioButton from '../RadioButton/RadioButton';
 
 const boundClassNames = lucidClassNames.bind('&-LabeledRadioButton');
@@ -18,7 +18,7 @@ const {
  * This is a composite of the `RadioButton` component and the native `label`
  * element.
  */
-const LabeledRadioButton = React.createClass(createLucidComponentDefinition({
+const LabeledRadioButton = createClass({
 	displayName: 'LabeledRadioButton',
 
 	childProps: {
@@ -95,6 +95,6 @@ const LabeledRadioButton = React.createClass(createLucidComponentDefinition({
 			</label>
 		);
 	}
-}));
+});
 
 export default LabeledRadioButton;

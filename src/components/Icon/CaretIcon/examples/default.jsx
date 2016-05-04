@@ -1,5 +1,5 @@
 import React from 'react';
-import CaretIcon from '../CaretIcon';
+import { CaretIcon } from '../../../../index';
 
 export default React.createClass({
 	render() {

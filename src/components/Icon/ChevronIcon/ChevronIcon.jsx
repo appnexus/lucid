@@ -1,5 +1,6 @@
 import React from 'react';
 import { lucidClassNames } from '../../../util/style-helpers';
+import { createClass } from '../../../util/component-definition';
 import Icon from '../Icon';
 
 const boundClassNames = lucidClassNames.bind('&-ChevronIcon');
@@ -14,7 +15,8 @@ const {
  *
  * A chevron icon.
  */
-const ChevronIcon = React.createClass({
+const ChevronIcon = createClass({
+	displayName: 'ChevronIcon',
 	propTypes: {
 		...Icon.propTypes,
 		/**

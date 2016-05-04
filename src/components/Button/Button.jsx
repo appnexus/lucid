@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-definition';
 const boundClassNames = lucidClassNames.bind('&-Button');
 
 const {
@@ -21,7 +22,8 @@ const {
  * A basic button. Any props that are not explicitly called out below will be
  * passed through to the native `button` component.
  */
-const Button = React.createClass({
+const Button = createClass({
+	displayName: 'Button',
 	propTypes: {
 		/**
 		 * disables the button by greying it out

@@ -1,6 +1,5 @@
 import React from 'react';
-
-import LabeledRadioButton from '../LabeledRadioButton';
+import { LabeledRadioButton } from '../../../index';
 
 const style = {
 	marginBottom: '3px'

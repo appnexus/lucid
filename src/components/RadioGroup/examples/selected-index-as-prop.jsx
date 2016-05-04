@@ -1,5 +1,5 @@
 import React from 'react';
-import RadioGroup from '../RadioGroup';
+import { RadioGroupDumb as RadioGroup } from '../../../index';
 
 const style = {
 	marginRight: '13px'

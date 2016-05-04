@@ -1,5 +1,5 @@
 import React from 'react';
-import SingleSelect from '../SingleSelect';
+import { SingleSelectDumb as SingleSelect } from '../../../index';
 
 const {
 	Placeholder,

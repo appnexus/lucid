@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition }  from '../../util/component-definition';
+import { createClass }  from '../../util/component-definition';
 import Switch from '../Switch/Switch';
 
 const boundClassNames = lucidClassNames.bind('&-LabeledSwitch');
@@ -19,7 +19,7 @@ const {
  * This is a composite of the `Switch` component and the native `label`
  * element.
  */
-const LabeledSwitch = React.createClass(createLucidComponentDefinition({
+const LabeledSwitch = createClass({
 	displayName: 'LabeledSwitch',
 
 	childProps: {
@@ -117,6 +117,6 @@ const LabeledSwitch = React.createClass(createLucidComponentDefinition({
 			</label>
 		);
 	}
-}));
+});
 
 export default LabeledSwitch;

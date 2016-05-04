@@ -1,5 +1,5 @@
 import React from 'react';
-import Autocomplete from '../Autocomplete';
+import { Autocomplete } from '../../../index';
 
 export default React.createClass({
 	render() {

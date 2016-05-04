@@ -1,5 +1,5 @@
 import React from 'react';
-import ValidatedTextField from '../ValidatedTextField';
+import { ValidatedTextField } from '../../../index';
 
 const style = {
 	marginBottom: '10px'

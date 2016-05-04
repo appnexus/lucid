@@ -1,13 +1,12 @@
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-Badge');
 
 const {
 	node,
 	string,
-	oneOfType,
-	arrayOf,
 } = React.PropTypes;
 
 /**
@@ -18,7 +17,8 @@ const {
  * element(s). Do not wrap existing `Icon`s in a badge, rather add the
  * `isBadge` prop to any Icon component to turn it into a badge.
  */
-const Badge = React.createClass({
+const Badge = createClass({
+	displayName: 'Badge',
 	propTypes: {
 		/**
 		 * class names that are appended to the defaults
@@ -27,10 +27,7 @@ const Badge = React.createClass({
 		/**
 		 * any valid React children
 		 */
-		children: oneOfType([
-			node,
-			arrayOf(node)
-		]),
+		children: node,
 	},
 
 	render() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import StickySection from '../StickySection';
+import { StickySection } from '../../../index';
 
 export default React.createClass({
 	render() {

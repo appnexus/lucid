@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import Portal from '../Portal/Portal';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass } from '../../util/component-definition';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 import { lucidClassNames } from '../../util/style-helpers';
 
@@ -24,7 +24,7 @@ const {
  *
  * A ContextMenu component is used to render a target and a flyout which is positioned relative to the target.
  */
-const ContextMenu = React.createClass(createLucidComponentDefinition({
+const ContextMenu = createClass({
 	displayName: 'ContextMenu',
 	propTypes: {
 		/**
@@ -217,6 +217,6 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 			</span>
 		);
 	}
-}));
+});
 
 export default ContextMenu;

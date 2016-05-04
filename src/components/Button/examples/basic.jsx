@@ -1,6 +1,5 @@
 import React from 'react';
-import Button from '../Button';
-import CheckIcon from '../../Icon/CheckIcon/CheckIcon';
+import { Button, CheckIcon } from '../../../index';
 
 export default React.createClass({
 	render() {

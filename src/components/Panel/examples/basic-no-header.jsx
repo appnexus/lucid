@@ -1,5 +1,5 @@
 import React from 'react';
-import Panel from '../Panel';
+import { Panel } from '../../../index';
 
 export default React.createClass({
 	render() {

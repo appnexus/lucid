@@ -1,5 +1,5 @@
 import React from 'react';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass } from '../../util/component-definition';
 import { lucidClassNames } from '../../util/style-helpers';
 import Table from '../Table/Table';
 
@@ -18,7 +18,7 @@ const {
  *
  * Table in a scrollable container.
  */
-const ScrollTable = React.createClass(createLucidComponentDefinition({
+const ScrollTable = createClass({
 	displayName: 'ScrollTable',
 
 	statics: {
@@ -45,7 +45,7 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 		/**
 		 * Set the width of the Table inside the scrollable container.
 		 */
-		tablewidth: number,
+		tableWidth: number,
 		/**
 		 * Set the Table contents to not allow word wrapping.
 		 */
@@ -80,6 +80,6 @@ const ScrollTable = React.createClass(createLucidComponentDefinition({
 			</div>
 		);
 	},
-}));
+});
 
 export default ScrollTable;

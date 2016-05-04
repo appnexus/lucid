@@ -1,6 +1,5 @@
 import React from 'react';
-import Button from '../Button';
-import PlusIcon from '../../Icon/PlusIcon/PlusIcon';
+import { Button, PlusIcon } from '../../../index';
 
 export default React.createClass({
 	render() {

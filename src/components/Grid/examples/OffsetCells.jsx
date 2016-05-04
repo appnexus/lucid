@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '../Grid';
+import { Grid } from '../../../index';
 
 const gridStyle = {
 	half: { background: '#0089c4' },

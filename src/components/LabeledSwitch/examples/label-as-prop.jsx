@@ -1,6 +1,5 @@
 import React from 'react';
-
-import LabeledSwitch from '../LabeledSwitch';
+import { LabeledSwitch } from '../../../index';
 
 const style = {
 	marginRight: '5px'

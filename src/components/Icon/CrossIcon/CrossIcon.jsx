@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
+import { createClass } from '../../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-CrossIcon');
 
@@ -10,7 +11,8 @@ const boundClassNames = lucidClassNames.bind('&-CrossIcon');
  *
  * A cross icon.
  */
-const CrossIcon = React.createClass({
+const CrossIcon = createClass({
+	displayName: 'CrossIcon',
 	propTypes: {
 		...Icon.propTypes,
 	},

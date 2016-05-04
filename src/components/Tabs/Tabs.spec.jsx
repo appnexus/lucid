@@ -105,22 +105,42 @@ describe('Tabs', () => {
 			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Three content');
 		});
 
-		it('onSelect', () => {
-			const onSelect = sinon.spy();
-			const clickEvent = 'event';
-			const wrapper = shallow(
-				<Tabs onSelect={onSelect}>
-					<Tabs.Tab>One</Tabs.Tab>
-					<Tabs.Tab>Two</Tabs.Tab>
-				</Tabs>
-			);
+		describe('onSelect', () => {
 
-			wrapper.find('.lucid-Tabs-Tab').at(1).simulate('click', clickEvent);
+			let onSelect = sinon.spy();
+			let clickEvent;
+			let wrapper;
 
-			assert(onSelect.called);
-			assert.equal(onSelect.args[0][0], 1);
-			assert.equal(onSelect.args[0][1]['event'], clickEvent);
-			assert.deepEqual(onSelect.args[0][1]['props'], {children: 'Two'});
+			beforeEach(() => {
+
+				onSelect.reset();
+				clickEvent = 'event';
+				wrapper = shallow(
+					<Tabs onSelect={onSelect}>
+						<Tabs.Tab isDisabled={true}>One</Tabs.Tab>
+						<Tabs.Tab>Two</Tabs.Tab>
+					</Tabs>
+				);
+
+			});
+
+			it('should call onSelect with the correct arguments', () => {
+				wrapper.find('.lucid-Tabs-Tab').at(1).simulate('click', clickEvent);
+				const selectedIndex = onSelect.args[0][0];
+				const meta = onSelect.args[0][1];
+				assert(onSelect.called);
+				assert.equal(selectedIndex, 1);
+				assert.equal(meta.event, clickEvent);
+				assert.deepEqual(meta.props, {children: 'Two'});
+			});
+
+			it('should call onSelect with isDisabled prop', () => {
+				wrapper.find('.lucid-Tabs-Tab').at(0).simulate('click', clickEvent);
+				const meta = onSelect.args[0][1];
+				assert(onSelect.called);
+				assert(meta.props.isDisabled, 'isDisabled should be true');
+			});
+
 		});
 
 		it('isOpen', () => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass } from '../../util/component-definition';
 import { scrollParentTo } from '../../util/dom-helpers';
 import { rejectNullElements } from '../../util/child-component';
 import * as KEYCODE from '../../constants/key-code';
@@ -38,7 +38,7 @@ const {
  *
  * This is a helper component used to render a menu of options attached to any control. Supports option groups with and without labels as well as special options with a `null` index for unselect.
  */
-const DropMenu = React.createClass(createLucidComponentDefinition({
+const DropMenu = createClass({
 	displayName: 'DropMenu',
 
 	reducers,
@@ -463,6 +463,6 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 			</div>
 		);
 	}
-}));
+});
 
 export default DropMenu;

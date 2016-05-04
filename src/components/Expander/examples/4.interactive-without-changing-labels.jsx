@@ -1,9 +1,5 @@
 import React from 'react';
-import { buildStatefulComponent } from '../../../util/state-management';
-
-import ExpanderStateless from '../Expander';
-
-const Expander = buildStatefulComponent(ExpanderStateless);
+import { Expander } from '../../../index';
 
 export default React.createClass({
 	render() {

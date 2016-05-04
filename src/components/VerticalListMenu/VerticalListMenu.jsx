@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { bindClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition }  from '../../util/component-definition';
+import { createClass }  from '../../util/component-definition';
 import * as reducers from './VerticalListMenu.reducers';
 import ChevronIcon  from '../Icon/ChevronIcon/ChevronIcon';
 
@@ -26,7 +26,7 @@ const {
  * selected at any given time; that is easily overridden by handling `onSelect`
  * yourself.
  */
-const VerticalListMenu = React.createClass(createLucidComponentDefinition({
+const VerticalListMenu = createClass({
 	displayName: 'VerticalListMenu',
 
 	reducers,
@@ -204,6 +204,6 @@ const VerticalListMenu = React.createClass(createLucidComponentDefinition({
 		}
 	}
 
-}));
+});
 
 export default VerticalListMenu;

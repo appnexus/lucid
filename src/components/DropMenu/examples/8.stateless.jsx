@@ -1,6 +1,5 @@
 import React from 'react';
-import DropMenu from '../DropMenu';
-import Button from '../../Button/Button';
+import { Button, DropMenuDumb as DropMenu } from '../../../index';
 
 const {
 	Control,

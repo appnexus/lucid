@@ -1,13 +1,14 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass } from '../../util/component-definition';
 
 const boundClassNames = lucidClassNames.bind('&-Panel');
 
 const {
-	node,
 	bool,
+	node,
+	object,
 	string
 } = React.PropTypes;
 
@@ -16,7 +17,7 @@ const {
  *
  * Panel is used to wrap content to better organize elements in window.
  */
-const Panel = React.createClass(createLucidComponentDefinition({
+const Panel = createClass({
 	displayName: 'Panel',
 
 	childProps: {
@@ -45,7 +46,11 @@ const Panel = React.createClass(createLucidComponentDefinition({
 		/**
 		 * If set to true, creates a content section with no padding.
 		 */
-		isGutterless: bool
+		isGutterless: bool,
+		/**
+		 * Styles that are passed through to root element.
+		 */
+		style: object,
 	},
 
 	render: function() {
@@ -86,6 +91,6 @@ const Panel = React.createClass(createLucidComponentDefinition({
 			</div>
 		)
 	}
-}))
+})
 
 export default Panel;
