@@ -105,7 +105,7 @@ describe('Tabs', () => {
 			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Three content');
 		});
 
-		describe.only('onSelect', () => {
+		describe('onSelect', () => {
 
 			let onSelect = sinon.spy();
 			let clickEvent;
