@@ -10,11 +10,13 @@ import { default as TabsDumb } from './components/Tabs/Tabs';
 import { default as TextFieldDumb } from './components/TextField/TextField'
 import { default as ValidatedTextFieldDumb } from './components/ValidatedTextField/ValidatedTextField';
 import { default as VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
+import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 
 const Autocomplete = buildStatefulComponent(AutocompleteDumb);
 const ButtonGroup = buildStatefulComponent(ButtonGroupDumb);
 const DropMenu = buildStatefulComponent(DropMenuDumb);
 const Expander = buildStatefulComponent(ExpanderDumb);
+const RadioGroup = buildStatefulComponent(RadioGroupDumb);
 const SingleSelect = buildStatefulComponent(SingleSelectDumb);
 const Tabs = buildStatefulComponent(TabsDumb);
 const TextField = buildStatefulComponent(TextFieldDumb);
@@ -49,7 +51,6 @@ import Panel from './components/Panel/Panel';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Portal from './components/Portal/Portal';
 import RadioButton from './components/RadioButton/RadioButton';
-import RadioGroup from './components/RadioGroup/RadioGroup';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
@@ -112,6 +113,7 @@ export {
 	Portal,
 	RadioButton,
 	RadioGroup,
+	RadioGroupDumb,
 	ResizeIcon,
 	ScrollTable,
 	SearchIcon,
