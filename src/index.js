@@ -1,4 +1,4 @@
-import { buildStatefulComponent } from './util/state-management';
+import { buildHybridComponent } from './util/state-management';
 
 // components with reducers
 import { default as AutocompleteDumb } from './components/Autocomplete/Autocomplete';
@@ -12,16 +12,16 @@ import { default as ValidatedTextFieldDumb } from './components/ValidatedTextFie
 import { default as VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
 import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 
-const Autocomplete = buildStatefulComponent(AutocompleteDumb);
-const ButtonGroup = buildStatefulComponent(ButtonGroupDumb);
-const DropMenu = buildStatefulComponent(DropMenuDumb);
-const Expander = buildStatefulComponent(ExpanderDumb);
-const RadioGroup = buildStatefulComponent(RadioGroupDumb);
-const SingleSelect = buildStatefulComponent(SingleSelectDumb);
-const Tabs = buildStatefulComponent(TabsDumb);
-const TextField = buildStatefulComponent(TextFieldDumb);
-const ValidatedTextField = buildStatefulComponent(ValidatedTextFieldDumb);
-const VerticalListMenu = buildStatefulComponent(VerticalListMenuDumb);
+const Autocomplete = buildHybridComponent(AutocompleteDumb);
+const ButtonGroup = buildHybridComponent(ButtonGroupDumb);
+const DropMenu = buildHybridComponent(DropMenuDumb);
+const Expander = buildHybridComponent(ExpanderDumb);
+const RadioGroup = buildHybridComponent(RadioGroupDumb);
+const SingleSelect = buildHybridComponent(SingleSelectDumb);
+const Tabs = buildHybridComponent(TabsDumb);
+const TextField = buildHybridComponent(TextFieldDumb);
+const ValidatedTextField = buildHybridComponent(ValidatedTextFieldDumb);
+const VerticalListMenu = buildHybridComponent(VerticalListMenuDumb);
 
 // dumb components
 import Badge from './components/Badge/Badge';
