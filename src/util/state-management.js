@@ -1,9 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { logger } from './util';
-
-let hasLoggedBuildStateComponentWarning = false;
-const alreadyWarnedHybrid = {};
+import { logger } from './logger';
 
 export function getDeepPaths (obj, path=[]) {
 	return _.reduce(obj, (terminalKeys, value, key) => (
@@ -88,12 +85,12 @@ function overwriteArrays (objValue, srcValue) {
 
 export function buildHybridComponent(baseComponent, opts) {
 
-	if (baseComponent._isLucidHybridComponent && !alreadyWarnedHybrid[baseComponent.displayName]) {
+	if (baseComponent._isLucidHybridComponent) {
 
-		logger.warn(
-			`Lucid: you are trying to apply buildHybridComponent to ${baseComponent.displayName}, which is already a hybdrid component. Lucid exports hybrid components by default. To access the dumb components, use the -Dumb suffix, e.g. "ComponentDumb"`);
-
-		alreadyWarnedHybrid[baseComponent.displayName] = true;
+		logger.warnOnce(
+			baseComponent.displayName,
+			`Lucid: you are trying to apply buildHybridComponent to ${baseComponent.displayName}, which is already a hybdrid component. Lucid exports hybrid components by default. To access the dumb components, use the -Dumb suffix, e.g. "ComponentDumb"`
+		);
 
 		return baseComponent;
 	}
@@ -140,9 +137,6 @@ export function buildHybridComponent(baseComponent, opts) {
 }
 
 export function buildStatefulComponent(...args) {
-	if(!hasLoggedBuildStateComponentWarning) {
-		logger.warn('Lucid: buildStatefulComponent has been renamed to buildHybridComponent.');
-		hasLoggedBuildStateComponentWarning = true;
-	}
+	logger.warnOnce('buildHybridComponent-once', 'Lucid: buildStatefulComponent has been renamed to buildHybridComponent.');
 	return buildHybridComponent(...args);
 }
