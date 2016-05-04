@@ -67,13 +67,15 @@ import * as componentDefinition from './util/component-definition';
 import * as domHelpers from './util/dom-helpers';
 import * as stateManagement from './util/state-management';
 import * as styleHelpers from './util/style-helpers';
+import * as redux from './util/redux';
 
 export {
 	childComponent,
 	componentDefinition,
 	domHelpers,
+	redux,
 	stateManagement,
-	styleHelpers,
+	styleHelpers
 };
 
 export {
