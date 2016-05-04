@@ -8,7 +8,7 @@ import { default as ExpanderDumb } from './components/Expander/Expander';
 import { default as SingleSelectDumb } from './components/SingleSelect/SingleSelect';
 import { default as TabsDumb } from './components/Tabs/Tabs';
 import { default as TextFieldDumb } from './components/TextField/TextField'
-import { default as ValidatedTextFieldDumb } from './components/ValidatedTextField/ValidatedTextField';
+import { default as TextFieldValidatedDumb } from './components/TextFieldValidated/TextFieldValidated';
 import { default as VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
 import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 
@@ -20,7 +20,7 @@ const RadioGroup = buildHybridComponent(RadioGroupDumb);
 const SingleSelect = buildHybridComponent(SingleSelectDumb);
 const Tabs = buildHybridComponent(TabsDumb);
 const TextField = buildHybridComponent(TextFieldDumb);
-const ValidatedTextField = buildHybridComponent(ValidatedTextFieldDumb);
+const TextFieldValidated = buildHybridComponent(TextFieldValidatedDumb);
 const VerticalListMenu = buildHybridComponent(VerticalListMenuDumb);
 
 // dumb components
@@ -42,9 +42,9 @@ import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
 import Grid from './components/Grid/Grid';
 import Icon from './components/Icon/Icon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
-import LabeledCheckbox from './components/LabeledCheckbox/LabeledCheckbox';
-import LabeledRadioButton from './components/LabeledRadioButton/LabeledRadioButton';
-import LabeledSwitch from './components/LabeledSwitch/LabeledSwitch';
+import CheckboxLabeled from './components/CheckboxLabeled/CheckboxLabeled';
+import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
+import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import Overlay from './components/Overlay/Overlay';
 import Panel from './components/Panel/Panel';
@@ -106,9 +106,9 @@ export {
 	Grid,
 	Icon,
 	InfoIcon,
-	LabeledCheckbox,
-	LabeledRadioButton,
-	LabeledSwitch,
+	CheckboxLabeled,
+	RadioButtonLabeled,
+	SwitchLabeled,
 	MinusIcon,
 	Overlay,
 	PlusIcon,
@@ -129,8 +129,8 @@ export {
 	TabsDumb,
 	TextField,
 	TextFieldDumb,
-	ValidatedTextField,
-	ValidatedTextFieldDumb,
+	TextFieldValidated,
+	TextFieldValidatedDumb,
 	Validation,
 	VerticalListMenu,
 	VerticalListMenuDumb,
