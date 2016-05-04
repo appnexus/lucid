@@ -18,14 +18,35 @@ export const isNode = typeof process === 'object' && process.title === 'node';
 export const logger = (function() {
 	return checkIsDev() ? {
 		log,
+		logOnce,
 		warn,
-		error
+		warnOnce,
+		error,
+		errorOnce,
+		resetOnce,
 	} : {
 		log: _.noop,
+		logOnce: _.noop,
 		warn: _.noop,
-		error: _.noop
+		warnOnce: _.noop,
+		error: _.noop,
+		errorOnce: _.noop,
+		resetOnce: _.noop,
 	};
 })();
+
+const onceMap = new Map();
+
+function once(key, fn) {
+	if(!onceMap.has(key)) {
+		onceMap.set(key, true);
+		fn();
+	}
+}
+
+function resetOnce(key) {
+	onceMap.delete(key);
+}
 
 export function checkIsDev() {
 	return isDevMode &&
@@ -33,6 +54,7 @@ export function checkIsDev() {
 		!isNode &&
 		typeof console !== 'undefined';
 }
+
 
 function log(...args) {
 
@@ -45,6 +67,10 @@ function log(...args) {
 		throw new Error(args[0]);
 	} catch (x) {}
 
+}
+
+function logOnce(key, ...args) {
+	once(key, () => log(...args));
 }
 
 function warn(...args) {
@@ -60,6 +86,11 @@ function warn(...args) {
 
 }
 
+function warnOnce(key, ...args) {
+	once(key, () => warn(...args));
+}
+
+
 function error(...args) {
 
 	console.error(...args);
@@ -71,4 +102,8 @@ function error(...args) {
 		throw new Error(args[0]);
 	} catch (x) {}
 
+}
+
+function errorOnce(key, ...args) {
+	once(key, () => error(...args));
 }
