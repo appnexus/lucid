@@ -61,6 +61,10 @@ const Bars = React.createClass({
 		 */
 		yScale: func.isRequired,
 		/**
+		 * The field we should look up your x data by.
+		 */
+		xField: string,
+		/**
 		 * The field(s) we should look up your y data by. Each entry represents a
 		 * series. Your actual y data should be numeric.
 		 */
@@ -71,14 +75,22 @@ const Bars = React.createClass({
 		 * the `sum` of the data.
 		 */
 		isStacked: bool,
+		/**
+		 * Sometimes you might not want the colors to start rotating at the blue
+		 * color, this number will be added the bar index in determining which
+		 * color the bars are.
+		 */
+		colorOffset: number,
 	},
 
 	getDefaultProps() {
 		return {
 			top: 0,
 			left: 0,
+			xField: 'x',
 			yFields: ['y'],
 			isStacked: false,
+			colorOffset: 0,
 		};
 	},
 
@@ -89,6 +101,7 @@ const Bars = React.createClass({
 			left,
 			top,
 			xScale,
+			xField,
 			yScale: yScaleOriginal,
 			yFields,
 			isStacked,
@@ -130,7 +143,7 @@ const Bars = React.createClass({
 								{_.map(d, (series, seriesIndex) => (
 									<Bar
 										key={seriesIndex}
-										x={xScale(data[seriesIndex].x)}
+										x={xScale(data[seriesIndex][xField])}
 										y={yScale(series[1])}
 										height={yScale(series[0]) - yScale(series[1])}
 										width={xScale.bandwidth()}
@@ -150,7 +163,7 @@ const Bars = React.createClass({
 								{_.map(d, (y, yIndex) => (
 									<Bar
 										key={yIndex}
-										x={innerXScale(dIndex) + xScale(data[yIndex].x)}
+										x={innerXScale(dIndex) + xScale(data[yIndex][xField])}
 										y={yScale(y)}
 										height={yScaleHeight - yScale(y)}
 										width={innerXScale.bandwidth()}

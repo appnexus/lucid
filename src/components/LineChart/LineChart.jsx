@@ -12,7 +12,7 @@ import d3Shape from 'd3-shape';
 
 import Axis from '../Axis/Axis';
 import Lines from '../Lines/Lines';
-import Point from '../Point/Point';
+import Points from '../Points/Points';
 
 const boundClassNames = lucidClassNames.bind('&-LineChart');
 
@@ -70,6 +70,8 @@ const LineChart = React.createClass({
 		 *     ]
 		 */
 		data: arrayOf(object).isRequired,
+
+
 		/**
 		 * The field we should look up your x data by.
 		 */
@@ -89,6 +91,8 @@ const LineChart = React.createClass({
 		 * provide anything, we use the default D3 formatter.
 		 */
 		xAxisFormatter: func,
+
+
 		/**
 		 * An array of your y axis fields. Typically this will just be a single
 		 * item unless you need to display multiple lines.
@@ -115,6 +119,42 @@ const LineChart = React.createClass({
 		 */
 		yAxisIsStacked: bool,
 		/**
+		 * Display points along with the y axis lines.
+		 */
+		yAxisHasPoints: bool,
+
+
+		/**
+		 * An array of your y2 axis fields. Typically this will just be a single
+		 * item unless you need to display multiple lines.
+		 */
+		y2AxisFields: array,
+		/**
+		 * The minimum number the y2 axis should display. Typically this should be
+		 * `0`.
+		 */
+		y2AxisMin: number,
+		/**
+		 * The maximum number the y2 axis should display. This should almost always
+		 * be the largest number from your dataset.
+		 */
+		y2AxisMax: number,
+		/**
+		 * An optional function used to format your y2 axis data. If you don't
+		 * provide anything, we use the default D3 formatter.
+		 */
+		y2AxisFormatter: func,
+		/**
+		 * Stack the y2 axis data. This is only useful if you have multiple
+		 * `y2AxisFields`. Stacking will cause the chart to be aggregated by sum.
+		 */
+		y2AxisIsStacked: bool,
+		/**
+		 * Display points along with the y2 axis lines.
+		 */
+		y2AxisHasPoints: bool,
+
+		/**
 		 * An object with human readable names for fields that is used for legend
 		 * purposes. E.g:
 		 *
@@ -137,10 +177,18 @@ const LineChart = React.createClass({
 				bottom: 50,
 				left: 80,
 			},
+
 			xAxisField: 'x',
+
 			yAxisFields: ['y'],
 			yAxisIsStacked: false,
 			yAxisMin: 0,
+			yAxisHasPoints: true,
+
+			y2AxisFields: null,
+			y2AxisIsStacked: false,
+			y2AxisHasPoints: true,
+			y2AxisMin: 0,
 		};
 	},
 
@@ -151,16 +199,29 @@ const LineChart = React.createClass({
 			width,
 			margin,
 			data,
+
 			xAxisField,
 			xAxisMin = minByFields(data, xAxisField),
 			xAxisMax = maxByFields(data, xAxisField),
+
 			yAxisFields,
 			yAxisIsStacked,
+			yAxisHasPoints,
 			yAxisFormatter,
 			yAxisMin,
 			yAxisMax = yAxisIsStacked
 				? maxByFieldsStacked(data, yAxisFields)
 				: maxByFields(data, yAxisFields),
+
+			y2AxisFields,
+			y2AxisIsStacked,
+			y2AxisHasPoints,
+			y2AxisFormatter,
+			y2AxisMin,
+			y2AxisMax = y2AxisFields && y2AxisIsStacked
+				? maxByFieldsStacked(data, y2AxisFields)
+				: maxByFields(data, y2AxisFields),
+
 			...passThroughs,
 		} = this.props;
 
@@ -171,10 +232,6 @@ const LineChart = React.createClass({
 		const innerWidth = width - margin.left - margin.right;
 		const innerHeight = height - margin.top - margin.bottom;
 
-		const transformedData = yAxisIsStacked
-			? d3Shape.stack().keys(yAxisFields)(data)
-			: groupByFields(data, yAxisFields);
-
 		const xScale = d3Scale.scaleTime()
 			.domain([xAxisMin, xAxisMax])
 			.range([0, innerWidth]);
@@ -183,6 +240,10 @@ const LineChart = React.createClass({
 			.domain([yAxisMin, yAxisMax])
 			.range([innerHeight, 0]);
 
+		const y2Scale = y2AxisFields
+			? d3Scale.scaleLinear().domain([y2AxisMin, y2AxisMax]).range([innerHeight, 0])
+			: null;
+
 		return (
 			<svg
 				{...passThroughs}
@@ -190,16 +251,7 @@ const LineChart = React.createClass({
 				width={width}
 				height={height}
 			>
-				{/* Push the y axis to the right margin with a translate */}
-				<g transform={`translate(${margin.left}, ${margin.top})`}>
-					<Axis
-						orient='left'
-						scale={yScale}
-						tickFormat={yAxisFormatter}
-					/>
-				</g>
-
-				{/* Push the x axis to the bottom margin with a translate */}
+				{/* x axis */}
 				<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
 					<Axis
 						orient='bottom'
@@ -208,34 +260,85 @@ const LineChart = React.createClass({
 					/>
 				</g>
 
-				{/* lines */}
+				{/* y axis */}
+				<g transform={`translate(${margin.left}, ${margin.top})`}>
+					<Axis
+						orient='left'
+						scale={yScale}
+						tickFormat={yAxisFormatter}
+					/>
+				</g>
+
+				{/* y2 axis */}
+				{y2AxisFields ?
+					<g transform={`translate(${margin.left + innerWidth}, ${margin.top})`}>
+						<Axis
+							orient='right'
+							scale={y2Scale}
+							tickFormat={y2AxisFormatter}
+						/>
+					</g>
+				: null}
+
+				{/* y axis lines */}
 				<Lines
 					top={margin.top}
 					left={margin.left}
 					xScale={xScale}
 					yScale={yScale}
+					xField={xAxisField}
 					yFields={yAxisFields}
 					data={data}
 					isStacked={yAxisIsStacked}
 				/>
 
-				{/* points */}
-				<g transform={`translate(${margin.left}, ${margin.top})`}>
-					{_.map(transformedData, (d, dIndex) => (
-						_.map(d, (series, seriesIndex) => (
-							<Point
-								x={xScale(data[seriesIndex][xAxisField])}
-								y={yScale(_.isArray(series) ? _.last(series) : series)}
-								hasStroke={true}
-								kind={dIndex}
-								color={dIndex}
-							/>
-						))
-					))}
-				</g>
+				{/* y axis points */}
+				{yAxisHasPoints ?
+					<Points
+						top={margin.top}
+						left={margin.left}
+						xScale={xScale}
+						yScale={yScale}
+						xField={xAxisField}
+						yFields={yAxisFields}
+						data={data}
+						isStacked={yAxisIsStacked}
+					/>
+				: null}
+
+				{/* y2 axis lines */}
+				{y2AxisFields ?
+					<Lines
+						top={margin.top}
+						left={margin.left}
+						xScale={xScale}
+						yScale={y2Scale}
+						xField={xAxisField}
+						yFields={y2AxisFields}
+						data={data}
+						isStacked={y2AxisIsStacked}
+						colorOffset={1}
+					/>
+				: null}
+
+				{/* y2 axis points */}
+				{y2AxisFields && y2AxisHasPoints ?
+					<Points
+						top={margin.top}
+						left={margin.left}
+						xScale={xScale}
+						yScale={y2Scale}
+						xField={xAxisField}
+						yFields={y2AxisFields}
+						data={data}
+						isStacked={y2AxisIsStacked}
+						colorOffset={1}
+					/>
+				: null}
 			</svg>
 		);
 	}
 });
 
 export default LineChart;
+

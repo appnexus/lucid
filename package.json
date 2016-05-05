@@ -33,6 +33,7 @@
     "d3-scale": "^0.6.4",
     "d3-shape": "^0.6.0",
     "d3-time": "^0.2.5",
+    "d3-time-format": "^0.3.2",
     "lodash": "^4.11.0",
     "react-addons-css-transition-group": "^0.14.0",
     "react-motion": "^0.4.3"

@@ -4,9 +4,9 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { groupByFields } from '../../util/chart-helpers';
 import d3Shape from 'd3-shape';
 
-import Line from '../Line/Line';
+import Point from '../Point/Point';
 
-const boundClassNames = lucidClassNames.bind('&-Lines');
+const boundClassNames = lucidClassNames.bind('&-Points');
 
 const {
 	any,
@@ -23,7 +23,7 @@ const {
  *
  * Foo
  */
-const Lines = React.createClass({
+const Points = React.createClass({
 	propTypes: {
 		/**
 		 * Classes are appended to existing classes using the `classnames` library.
@@ -81,17 +81,21 @@ const Lines = React.createClass({
 		 */
 		yFields: arrayOf(string),
 		/**
-		 * This will stack the data instead of grouping it. In order to stack the
-		 * data we have to calculate a new domain for the y scale that is based on
-		 * the `sum` of the data.
-		 */
-		isStacked: bool,
-		/**
 		 * Sometimes you might not want the colors to start rotating at the blue
 		 * color, this number will be added the line index in determining which
 		 * color the lines are.
 		 */
 		colorOffset: number,
+		/**
+		 * Display a stroke around each of the points.
+		 */
+		hasStroke: bool,
+		/**
+		 * This will stack the data. In order to stack the data we have to
+		 * calculate a new domain for the y scale that is based on the `sum` of the
+		 * data.
+		 */
+		isStacked: bool,
 	},
 
 	getDefaultProps() {
@@ -100,8 +104,9 @@ const Lines = React.createClass({
 			left: 0,
 			xField: 'x',
 			yFields: ['y'],
-			isStacked: false,
 			colorOffset: 0,
+			hasStroke: true,
+			isStacked: false,
 		};
 	},
 
@@ -109,13 +114,14 @@ const Lines = React.createClass({
 		const {
 			className,
 			data,
-			isStacked,
 			left,
 			top,
 			colorOffset,
-			xScale,
 			xField,
+			hasStroke,
+			xScale,
 			yFields,
+			isStacked,
 			yScale: yScaleOriginal,
 			...passThroughs,
 		} = this.props;
@@ -129,20 +135,11 @@ const Lines = React.createClass({
 			? d3Shape.stack().keys(yFields)(data)
 			: groupByFields(data, yFields);
 
-		const area = isStacked
-			? d3Shape.area()
-				.x((a, i) => xScale(data[i][xField]))
-				.y0((a) => yScale(a[1]))
-				.y1((a) => yScale(a[0]))
-			: d3Shape.area()
-				.x((a, i) => xScale(data[i][xField]))
-				.y((a) => yScale(a));
-
 		// If we are stacked, we need to calculate a new domain based on the sum of
 		// the various group's y data
 		if (isStacked) {
 			yScale.domain([
-				yScale.domain()[0], // only stacks well if this is `0`
+				yScale.domain()[0],
 				_.chain(transformedData).last().flatten().max().value()
 			]);
 		}
@@ -154,16 +151,19 @@ const Lines = React.createClass({
 				transform={`translate(${left}, ${top})`}
 			>
 				{_.map(transformedData, (d, dIndex) => (
-					<g key={dIndex}>
-						<Line
+					_.map(d, (series, seriesIndex) => (
+						<Point
+							x={xScale(data[seriesIndex][xField])}
+							y={yScale(_.isArray(series) ? _.last(series) : series)}
+							hasStroke={hasStroke}
+							kind={dIndex + colorOffset}
 							color={dIndex + colorOffset}
-							d={area(d)}
 						/>
-					</g>
+					))
 				))}
 			</g>
 		);
 	}
 });
 
-export default Lines;
+export default Points;
