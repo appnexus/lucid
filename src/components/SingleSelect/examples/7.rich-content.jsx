@@ -1,5 +1,5 @@
 import React from 'react';
-import { SingleSelect } from '../../../index';
+import { PlusIcon, SingleSelect } from '../../../index';
 
 const {
 	Placeholder,

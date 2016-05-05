@@ -23,10 +23,6 @@ const {
  * TextField should cover all your text input needs. It is able to handle
  * single and multi line inputs.
  *
- * Like all other Lucid components, it is stateless by default unless you run
- * it through `buildStatefulComponent`. If you do that it will maintain
- * internal state for the `value` without losing the ability to pass a new
- * `value` through props.
  */
 const TextField = createClass({
 	displayName: 'TextField',

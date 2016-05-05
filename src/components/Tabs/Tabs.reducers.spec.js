@@ -20,9 +20,6 @@ describe('Tabs reducers', () => {
 			isDisabled: true
 		};
 
-		assert.notDeepEqual(reducers.onSelect(initialState, 99, props), {
-			foo: 1,
-			selectedIndex: 5
-		});
+		assert.deepEqual(reducers.onSelect(initialState, 99, { props }), initialState);
 	});
 });

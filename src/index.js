@@ -1,4 +1,4 @@
-import { buildStatefulComponent } from './util/state-management';
+import { buildHybridComponent } from './util/state-management';
 
 // components with reducers
 import { default as AutocompleteDumb } from './components/Autocomplete/Autocomplete';
@@ -10,16 +10,18 @@ import { default as TabsDumb } from './components/Tabs/Tabs';
 import { default as TextFieldDumb } from './components/TextField/TextField'
 import { default as ValidatedTextFieldDumb } from './components/ValidatedTextField/ValidatedTextField';
 import { default as VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
+import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 
-const Autocomplete = buildStatefulComponent(AutocompleteDumb);
-const ButtonGroup = buildStatefulComponent(ButtonGroupDumb);
-const DropMenu = buildStatefulComponent(DropMenuDumb);
-const Expander = buildStatefulComponent(ExpanderDumb);
-const SingleSelect = buildStatefulComponent(SingleSelectDumb);
-const Tabs = buildStatefulComponent(TabsDumb);
-const TextField = buildStatefulComponent(TextFieldDumb);
-const ValidatedTextField = buildStatefulComponent(ValidatedTextFieldDumb);
-const VerticalListMenu = buildStatefulComponent(VerticalListMenuDumb);
+const Autocomplete = buildHybridComponent(AutocompleteDumb);
+const ButtonGroup = buildHybridComponent(ButtonGroupDumb);
+const DropMenu = buildHybridComponent(DropMenuDumb);
+const Expander = buildHybridComponent(ExpanderDumb);
+const RadioGroup = buildHybridComponent(RadioGroupDumb);
+const SingleSelect = buildHybridComponent(SingleSelectDumb);
+const Tabs = buildHybridComponent(TabsDumb);
+const TextField = buildHybridComponent(TextFieldDumb);
+const ValidatedTextField = buildHybridComponent(ValidatedTextFieldDumb);
+const VerticalListMenu = buildHybridComponent(VerticalListMenuDumb);
 
 // dumb components
 import Badge from './components/Badge/Badge';
@@ -49,7 +51,6 @@ import Panel from './components/Panel/Panel';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Portal from './components/Portal/Portal';
 import RadioButton from './components/RadioButton/RadioButton';
-import RadioGroup from './components/RadioGroup/RadioGroup';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
@@ -65,12 +66,14 @@ import * as componentTypes from './util/component-types';
 import * as domHelpers from './util/dom-helpers';
 import * as stateManagement from './util/state-management';
 import * as styleHelpers from './util/style-helpers';
+import * as redux from './util/redux';
 
 export {
 	componentTypes,
 	domHelpers,
+	redux,
 	stateManagement,
-	styleHelpers,
+	styleHelpers
 };
 
 export {
@@ -110,6 +113,7 @@ export {
 	Portal,
 	RadioButton,
 	RadioGroup,
+	RadioGroupDumb,
 	ResizeIcon,
 	ScrollTable,
 	SearchIcon,
