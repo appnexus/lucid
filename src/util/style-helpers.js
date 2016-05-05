@@ -13,14 +13,14 @@ import classNames from 'classnames';
  *   bindClassNames('lucid').bind('&-Button')('&-active') === 'lucid-Button-active'
  */
 export function bindClassNames(value='', variable=/&/g) {
-	function boundClassNames(...args) {
+	function cx(...args) {
 		return _.map(
 			classNames(...args).split(' '),
 			(className) => className.replace(variable, value)
 		).join(' ');
 	};
 
-	return _.assign(boundClassNames, {
+	return _.assign(cx, {
 		bind(nextValue=value, ...args) {
 			return bindClassNames(nextValue.replace(variable, value), ...args);
 		}
@@ -34,9 +34,9 @@ export const NAMESPACE = 'lucid';
  * to a component.
  *
  * Example:
- *   const boundClassNames = lucidClassNames.bind('&-Button')
+ *   const cx = lucidClassNames.bind('&-Button')
  *
- *   boundClassNames('&',{
+ *   cx('&',{
  *     '&-active': true
  *   }, ['custom-classname']) === 'lucid-Button lucid-Button-active custom-classname'
  */

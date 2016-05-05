@@ -4,7 +4,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-definition';
 import reducers from './Tabs.reducers';
 
-const boundClassNames = lucidClassNames.bind('&-Tabs');
+const cx = lucidClassNames.bind('&-Tabs');
 
 const {
 	any,
@@ -108,13 +108,13 @@ const Tabs = createClass({
 			<div
 				{...passThroughs}
 				style={style}
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 			>
-				<ul className={boundClassNames('&-bar')}>
+				<ul className={cx('&-bar')}>
 					{_.map(tabChildProps, (tabChildProp, index) => {
 						return (
 							<li
-								className={boundClassNames('&-Tab', {
+								className={cx('&-Tab', {
 									'&-Tab-is-active': index === actualSelectedIndex,
 									'&-Tab-is-disabled': tabChildProp.isDisabled,
 									'&-Tab-is-active-and-open': isOpen && index === actualSelectedIndex,
@@ -125,17 +125,17 @@ const Tabs = createClass({
 							>
 								{_.get(_.first(Tabs.Title.findInAllAsProps(tabChildProp)), 'children', '')}
 								{isProgressive && index !== tabChildProps.length - 1 ?
-									<svg className={boundClassNames('&-Tab-arrow')} xmlns='http://www.w3.org/2000/svg' width='8px' height='28px' viewBox='0 0 8 28' >
-										<polygon className={boundClassNames('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
-										<polyline className={boundClassNames('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1.7,3 0,3'/>
-										<polyline className={boundClassNames('&-Tab-arrow-line')} fill='none' stroke='#fff' strokeWidth='1' points='0,28 7.9,14 0,0'/>
+									<svg className={cx('&-Tab-arrow')} xmlns='http://www.w3.org/2000/svg' width='8px' height='28px' viewBox='0 0 8 28' >
+										<polygon className={cx('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
+										<polyline className={cx('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1.7,3 0,3'/>
+										<polyline className={cx('&-Tab-arrow-line')} fill='none' stroke='#fff' strokeWidth='1' points='0,28 7.9,14 0,0'/>
 									</svg>
 								: null}
 							</li>
 						);
 					})}
 				</ul>
-				<div className={boundClassNames('&-content')}>
+				<div className={cx('&-content')}>
 					{_.get(tabChildProps[actualSelectedIndex], 'children', '')}
 				</div>
 			</div>

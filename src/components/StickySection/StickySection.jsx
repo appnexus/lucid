@@ -4,7 +4,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-definition';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 
-const boundClassNames = lucidClassNames.bind('&-StickySection');
+const cx = lucidClassNames.bind('&-StickySection');
 const {
 	node,
 	number,
@@ -146,7 +146,7 @@ const StickySection = createClass({
 		return (
 			<div
 				{...passthrus}
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 				style={{
 					...(isAboveFold ? {
 						height: containerRect.height,
@@ -156,7 +156,7 @@ const StickySection = createClass({
 				ref='scrollContainer'
 			>
 				<div
-					className={boundClassNames('&-sticky-frame')}
+					className={cx('&-sticky-frame')}
 					ref='stickyFrame'
 					style={{
 						...(isAboveFold ? {
@@ -170,7 +170,7 @@ const StickySection = createClass({
 					}}
 				>
 					<div
-						className={boundClassNames('&-sticky-section')}
+						className={cx('&-sticky-section')}
 						ref='stickySection'
 						style={{
 							...(isAboveFold ? {

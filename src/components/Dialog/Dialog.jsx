@@ -4,7 +4,7 @@ import Overlay from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass }  from '../../util/component-definition';
 
-const boundClassNames = lucidClassNames.bind('&-Dialog');
+const cx = lucidClassNames.bind('&-Dialog');
 
 const {
 	node,
@@ -69,10 +69,10 @@ const Dialog = createClass({
 		return (
 			<Overlay
 				{...passThroughs}
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 			>
 				<div
-					className={boundClassNames('&-window', {
+					className={cx('&-window', {
 						'&-window-is-small': size === SMALL,
 						'&-window-is-medium': size === MEDIUM,
 						'&-window-is-large': size === LARGE,
@@ -80,16 +80,16 @@ const Dialog = createClass({
 				>
 					<header
 						{...headerChildProp}
-						className={boundClassNames('&-header')}
+						className={cx('&-header')}
 					/>
 
-					<section className={boundClassNames('&-body')}>
+					<section className={cx('&-body')}>
 						{this.props.children}
 					</section>
 
 					<footer
 						{...footerChildProp}
-						className={boundClassNames('&-footer')}
+						className={cx('&-footer')}
 					/>
 				</div>
 			</Overlay>

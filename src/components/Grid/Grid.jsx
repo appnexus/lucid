@@ -3,7 +3,7 @@ import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass }  from '../../util/component-definition';
 
-const boundClassNames = lucidClassNames.bind('&-Grid');
+const cx = lucidClassNames.bind('&-Grid');
 
 const {
 	string,
@@ -143,7 +143,7 @@ const Grid = createClass({
 
 		return (
 			<section {...passThroughs}
-				className={boundClassNames('&', {
+				className={cx('&', {
 					'&-is-vertical': isVertical,
 					'&-is-horizontal': isHorizontal,
 					'&-is-gutterless': isGutterless,
@@ -153,7 +153,7 @@ const Grid = createClass({
 				{_.map(cellChildProps, (cellChildProp) => {
 					return (
 						<article {...cellChildProp}
-							className={boundClassNames('&-Cell', {
+							className={cx('&-Cell', {
 									'&-Cell-is-full': cellChildProp.isFull,
 									'&-Cell-is-half': cellChildProp.isHalf,
 									'&-Cell-is-quarter': cellChildProp.isQuarter,

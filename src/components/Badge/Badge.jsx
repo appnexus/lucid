@@ -2,7 +2,7 @@ import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-definition';
 
-const boundClassNames = lucidClassNames.bind('&-Badge');
+const cx = lucidClassNames.bind('&-Badge');
 
 const {
 	node,
@@ -38,7 +38,7 @@ const Badge = createClass({
 		} = this.props;
 
 		return (
-			<span className={boundClassNames('&', className)} {...passThroughs}>
+			<span className={cx('&', className)} {...passThroughs}>
 				{children}
 			</span>
 		);

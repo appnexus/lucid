@@ -6,7 +6,7 @@ import random from '../../util/random';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass }  from '../../util/component-definition';
 
-const boundClassNames = lucidClassNames.bind('&-Overlay');
+const cx = lucidClassNames.bind('&-Overlay');
 
 const {
 	string,
@@ -136,14 +136,14 @@ const Overlay = createClass({
 		return (
 			<Portal portalId={portalId}>
 				<ReactCSSTransitionGroup
-					transitionName={boundClassNames('&')}
+					transitionName={cx('&')}
 					transitionEnterTimeout={300}
 					transitionLeaveTimeout={300}
 				>
 					{isShown ?
 						<div
 							{...passThroughs}
-							className={boundClassNames(className, '&', {
+							className={cx(className, '&', {
 								'&-is-not-modal': !isModal
 							})}
 							onClick={this.handleBackgroundClick}

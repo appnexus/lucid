@@ -3,7 +3,7 @@ import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-definition';
 
-const boundClassNames = lucidClassNames.bind('&-Panel');
+const cx = lucidClassNames.bind('&-Panel');
 
 const {
 	bool,
@@ -66,7 +66,7 @@ const Panel = createClass({
 
 		return (
 			<div
-				className={boundClassNames('&', className, {
+				className={cx('&', className, {
 					'&-is-not-gutterless': !isGutterless
 				})}
 				style={style}
@@ -74,18 +74,18 @@ const Panel = createClass({
 				{headerChildProp ? (
 					<header
 						{...headerChildProp}
-						className={boundClassNames('&-Header', headerChildProp.className)}
+						className={cx('&-Header', headerChildProp.className)}
 					/>
 				) : null}
 
-				<section className={boundClassNames('&-content')} >
+				<section className={cx('&-content')} >
 					{children}
 				</section>
 
 				{footerChildProp ? (
 					<footer
 						{...footerChildProp}
-						className={boundClassNames('&-Footer', footerChildProp.className)}
+						className={cx('&-Footer', footerChildProp.className)}
 					/>
 				) : null}
 			</div>

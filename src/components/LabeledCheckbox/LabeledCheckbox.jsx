@@ -4,7 +4,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass }  from '../../util/component-definition';
 import Checkbox from '../Checkbox/Checkbox';
 
-const boundClassNames = lucidClassNames.bind('&-LabeledCheckbox');
+const cx = lucidClassNames.bind('&-LabeledCheckbox');
 const {
 	any,
 	node,
@@ -74,7 +74,7 @@ const LabeledCheckbox = createClass({
 
 		return (
 			<label
-					className={boundClassNames('&', {
+					className={cx('&', {
 						'&-is-disabled': isDisabled,
 						'&-is-selected': isSelected
 					}, className)}

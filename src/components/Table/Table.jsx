@@ -6,7 +6,7 @@ import { findElementsByType } from '../../util/child-component';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
-const boundClassNames = lucidClassNames.bind('&-Table');
+const cx = lucidClassNames.bind('&-Table');
 
 const {
 	any,
@@ -41,7 +41,7 @@ const Thead = createClass({
 		} = this.props;
 
 		return (
-			<thead {...this.props} className={boundClassNames('&-thead', this.props.className)}>
+			<thead {...this.props} className={cx('&-thead', this.props.className)}>
 				{_.map(
 					findElementsByType(children, [Tr]),
 					(trElement, index) => React.createElement(
@@ -71,7 +71,7 @@ const Tbody = createClass({
 	},
 	render() {
 		return (
-			<tbody {...this.props} className={boundClassNames('&-tbody', this.props.className)} />
+			<tbody {...this.props} className={cx('&-tbody', this.props.className)} />
 		);
 	}
 });
@@ -160,7 +160,7 @@ const Tr = createClass({
 		} = this.state;
 
 		return (
-			<tr {...this.props} className={boundClassNames({
+			<tr {...this.props} className={cx({
 				'&-row': !isHeader,
 				'&-thead-row': isHeader,
 				'&-is-disabled': isDisabled,
@@ -294,10 +294,10 @@ const Th = createClass({
 		} = this.state;
 
 		const cellContent = (isSorted ? (
-			<ul className={boundClassNames('&-is-sorted-container')}>
-				<li className={boundClassNames('&-is-sorted-title')}>{children}</li>
-				<li className={boundClassNames('&-is-sorted-caret')}>
-					<CaretIcon className={boundClassNames('&-sort-icon')} direction={sortDirection} size={6}/>
+			<ul className={cx('&-is-sorted-container')}>
+				<li className={cx('&-is-sorted-title')}>{children}</li>
+				<li className={cx('&-is-sorted-caret')}>
+					<CaretIcon className={cx('&-sort-icon')} direction={sortDirection} size={6}/>
 				</li>
 			</ul>
 		) : children);
@@ -305,7 +305,7 @@ const Th = createClass({
 		return (
 			<th
 				{...this.props}
-				className={boundClassNames(
+				className={cx(
 					'&-cell', {
 					'&-align-left': align === 'left',
 					'&-align-center': align === 'center',
@@ -324,8 +324,8 @@ const Th = createClass({
 				}) : style}
 			>
 				{isResizable ? (
-					<div className={boundClassNames('&-is-resizable-container')}>
-						<div className={boundClassNames('&-is-resizable-content')}>
+					<div className={cx('&-is-resizable-container')}>
+						<div className={cx('&-is-resizable-content')}>
 							{cellContent}
 						</div>
 						<DragCaptureZone
@@ -460,7 +460,7 @@ const Td = createClass({
 		} = this.props;
 
 		return (
-			<td {...this.props} className={boundClassNames(
+			<td {...this.props} className={cx(
 				'&-cell', {
 				'&-align-left': align === 'left',
 				'&-align-center': align === 'center',
@@ -535,7 +535,7 @@ const Table = createClass({
 		return (
 			<table
 				{...this.props}
-				className={boundClassNames('&', {
+				className={cx('&', {
 					'&-has-extra-whitespace': hasExtraWhitespace,
 					'&-has-no-border': hasNoBorder,
 				}, className)}

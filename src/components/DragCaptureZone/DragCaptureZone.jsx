@@ -3,7 +3,7 @@ import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-definition';
 
-const boundClassNames = lucidClassNames.bind('&-DragCaptureZone');
+const cx = lucidClassNames.bind('&-DragCaptureZone');
 const {
 	func,
 	string
@@ -66,7 +66,7 @@ const DragCaptureZone = createClass({
 		return (
 			<div
 				{...this.props}
-				className={boundClassNames('&', this.props.className)}
+				className={cx('&', this.props.className)}
 				key='DragCaptureZone'
 				onMouseDown={this.handleDragStart}
 			/>

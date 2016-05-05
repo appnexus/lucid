@@ -3,7 +3,7 @@ import { createClass } from '../../util/component-definition';
 import { lucidClassNames } from '../../util/style-helpers';
 import Table from '../Table/Table';
 
-const boundClassNames = lucidClassNames.bind('&-ScrollTable');
+const cx = lucidClassNames.bind('&-ScrollTable');
 
 const {
 	object,
@@ -64,7 +64,7 @@ const ScrollTable = createClass({
 
 		return (
 			<div
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 				style={style}
 			>
 				<Table
@@ -72,7 +72,7 @@ const ScrollTable = createClass({
 					style={{
 						width: tableWidth,
 					}}
-					className={boundClassNames({'&-nowrap': isNowrap})}
+					className={cx({'&-nowrap': isNowrap})}
 					hasNoBorder={true}
 				>
 					{children}

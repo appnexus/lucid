@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-definition';
-const boundClassNames = lucidClassNames.bind('&-Button');
+const cx = lucidClassNames.bind('&-Button');
 
 const {
 	arrayOf,
@@ -107,7 +107,7 @@ const Button = createClass({
 		return (
 			<button
 				{...passThroughs}
-				className={boundClassNames('&', {
+				className={cx('&', {
 					'&-is-disabled': isDisabled,
 					'&-is-active': isActive,
 					'&-primary': kind === 'primary',
@@ -124,7 +124,7 @@ const Button = createClass({
 				disabled={isDisabled}
 				ref='button'
 			>
-				<span className={boundClassNames('&-content')}>
+				<span className={cx('&-content')}>
 					{children}
 				</span>
 			</button>

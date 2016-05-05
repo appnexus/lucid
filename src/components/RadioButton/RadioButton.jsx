@@ -3,7 +3,7 @@ import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-definition';
 
-const boundClassNames = lucidClassNames.bind('&-RadioButton');
+const cx = lucidClassNames.bind('&-RadioButton');
 const {
 	bool,
 	func,
@@ -87,7 +87,7 @@ const RadioButton = createClass({
 
 		return (
 			<span
-					className={boundClassNames('&', {
+					className={cx('&', {
 						'&-is-disabled': isDisabled,
 						'&-is-selected': isSelected
 					}, className)}
@@ -99,14 +99,14 @@ const RadioButton = createClass({
 						onChange={_.noop}
 						{..._.omit(passThroughs, 'children')}
 						checked={isSelected}
-						className={boundClassNames('&-native')}
+						className={cx('&-native')}
 						disabled={isDisabled}
 						ref='nativeElement'
 						type='radio'
 				/>
-				<span className={boundClassNames('&-visualization-glow')} />
-				<span className={boundClassNames('&-visualization-container')} />
-				<span className={boundClassNames('&-visualization-dot')} />
+				<span className={cx('&-visualization-glow')} />
+				<span className={cx('&-visualization-container')} />
+				<span className={cx('&-visualization-dot')} />
 			</span>
 		);
 	},

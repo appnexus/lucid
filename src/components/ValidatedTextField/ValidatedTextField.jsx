@@ -6,7 +6,7 @@ import reducers from '../TextField/TextField.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-definition';
 
-const boundClassNames = lucidClassNames.bind('&-ValidatedTextField');
+const cx = lucidClassNames.bind('&-ValidatedTextField');
 
 const {
 	object,
@@ -56,7 +56,7 @@ const ValidatedTextField = createClass({
 
 		return (
 			<Validation
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 				style={style}
 				Error={errorChildProps}
 			>

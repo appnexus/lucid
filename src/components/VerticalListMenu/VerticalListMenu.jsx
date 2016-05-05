@@ -5,7 +5,7 @@ import { createClass }  from '../../util/component-definition';
 import * as reducers from './VerticalListMenu.reducers';
 import ChevronIcon  from '../Icon/ChevronIcon/ChevronIcon';
 
-const boundClassNames = bindClassNames('lucid-VerticalListMenu');
+const cx = bindClassNames('lucid-VerticalListMenu');
 
 const {
 	func,
@@ -112,7 +112,7 @@ const VerticalListMenu = createClass({
 		return (
 			<ul
 				{...passThroughs}
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 				style={style}
 			>
 				{_.map(itemChildProps, (itemChildProp, index) => {
@@ -141,20 +141,20 @@ const VerticalListMenu = createClass({
 						<li
 							key={index}
 							{...itemChildProp.passThroughs}
-							className={boundClassNames('&-Item', itemChildProp.className)}
+							className={cx('&-Item', itemChildProp.className)}
 						>
 							<div
-								className={boundClassNames('&-Item-content', {
+								className={cx('&-Item-content', {
 									'&-Item-content-is-selected': actualIsSelected,
 								})}
 								onClick={_.partial(this.handleClickItem, index, itemChildProp)}
 							>
-							<span className={boundClassNames('&-Item-content-text')}>
+							<span className={cx('&-Item-content-text')}>
 								{otherChildren}
 							</span>
 							{hasExpander ?
 								<div
-									className={boundClassNames('&-Item-expander')}
+									className={cx('&-Item-expander')}
 									onClick={_.partial(this.handleToggle, index, itemChildProp)}
 								>
 									<ChevronIcon
@@ -164,7 +164,7 @@ const VerticalListMenu = createClass({
 							: null}
 							</div>
 
-							<div className={boundClassNames('&-Item-nested-list', {
+							<div className={cx('&-Item-nested-list', {
 								'&-Item-nested-list-is-expanded': actualIsExpanded,
 							})}>
 								{listChildren}
