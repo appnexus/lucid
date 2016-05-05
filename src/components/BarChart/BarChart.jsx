@@ -2,7 +2,6 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	minByFields,
 	maxByFields,
 	maxByFieldsStacked,
 } from '../../util/chart-helpers';

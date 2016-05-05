@@ -5,10 +5,8 @@ import {
 	minByFields,
 	maxByFields,
 	maxByFieldsStacked,
-	groupByFields,
 } from '../../util/chart-helpers';
 import d3Scale from 'd3-scale';
-import d3Shape from 'd3-shape';
 
 import Axis from '../Axis/Axis';
 import Lines from '../Lines/Lines';
