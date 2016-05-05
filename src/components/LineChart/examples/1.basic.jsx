@@ -1,19 +1,17 @@
 import React from 'react';
-import BarChart from '../BarChart';
+import LineChart from '../LineChart';
 
 const data = [
-	{ x: '2015-01-01', y: 1 },
-	{ x: '2015-01-02', y: 2 },
-	{ x: '2015-01-03', y: 3 },
-	{ x: '2015-01-04', y: 5 },
+	{ x: new Date('2015-01-01T00:00:00-08:00'), y: 1 },
+	{ x: new Date('2015-01-02T00:00:00-08:00'), y: 2 },
+	{ x: new Date('2015-01-03T00:00:00-08:00'), y: 3 },
+	{ x: new Date('2015-01-04T00:00:00-08:00'), y: 5 },
 ];
 
 export default React.createClass({
 	render() {
 		return (
-			<div>
-				<BarChart data={data} />
-			</div>
+			<LineChart data={data} />
 		);
 	}
 });

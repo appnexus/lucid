@@ -128,7 +128,7 @@ const Lines = React.createClass({
 		// the various group's y data
 		if (isStacked) {
 			yScale.domain([
-				yScale.domain()[0],
+				yScale.domain()[0], // only stacks well if this is `0`
 				_.chain(transformedData).last().flatten().max().value()
 			]);
 		}

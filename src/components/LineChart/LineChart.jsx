@@ -5,11 +5,14 @@ import {
 	minByFields,
 	maxByFields,
 	maxByFieldsStacked,
+	groupByFields,
 } from '../../util/chart-helpers';
 import d3Scale from 'd3-scale';
+import d3Shape from 'd3-shape';
 
 import Axis from '../Axis/Axis';
 import Lines from '../Lines/Lines';
+import Point from '../Point/Point';
 
 const boundClassNames = lucidClassNames.bind('&-LineChart');
 
@@ -72,18 +75,28 @@ const LineChart = React.createClass({
 		 */
 		xAxisField: string,
 		/**
-		 * It's not recommended, but there are some cases where you need to only
-		 * show a "sampling" of ticks on the x axis. This number will control that.
+		 * The minimum the x axis should display. Typically this will be the
+		 * smallest items from your dataset.
 		 */
-		xAxisTickCount: number,
+		xAxisMin: number,
+		/**
+		 * The maximum the x axis should display. This should almost always be the
+		 * largest item from your dataset.
+		 */
+		xAxisMax: number,
+		/**
+		 * An optional function used to format your x axis data. If you don't
+		 * provide anything, we use the default D3 formatter.
+		 */
+		xAxisFormatter: func,
 		/**
 		 * An array of your y axis fields. Typically this will just be a single
 		 * item unless you need to display multiple lines.
 		 */
 		yAxisFields: array.isRequired,
 		/**
-		 * The minimum number the y axis should display. Typically this will either
-		 * be `0` or the smallest number from your dataset.
+		 * The minimum number the y axis should display. Typically this should be
+		 * `0`.
 		 */
 		yAxisMin: number,
 		/**
@@ -125,9 +138,9 @@ const LineChart = React.createClass({
 				left: 80,
 			},
 			xAxisField: 'x',
-			xAxisTickCount: null,
 			yAxisFields: ['y'],
 			yAxisIsStacked: false,
+			yAxisMin: 0,
 		};
 	},
 
@@ -139,11 +152,12 @@ const LineChart = React.createClass({
 			margin,
 			data,
 			xAxisField,
-			xAxisTickCount,
+			xAxisMin = minByFields(data, xAxisField),
+			xAxisMax = maxByFields(data, xAxisField),
 			yAxisFields,
 			yAxisIsStacked,
 			yAxisFormatter,
-			yAxisMin = minByFields(data, yAxisFields),
+			yAxisMin,
 			yAxisMax = yAxisIsStacked
 				? maxByFieldsStacked(data, yAxisFields)
 				: maxByFields(data, yAxisFields),
@@ -157,11 +171,13 @@ const LineChart = React.createClass({
 		const innerWidth = width - margin.left - margin.right;
 		const innerHeight = height - margin.top - margin.bottom;
 
-		const xScale = d3Scale.scaleBand()
-			.domain(_.map(data, xAxisField))
-			.range([0, innerWidth])
-			.paddingInner(paddingInner)
-			.paddingOuter(0.5);
+		const transformedData = yAxisIsStacked
+			? d3Shape.stack().keys(yAxisFields)(data)
+			: groupByFields(data, yAxisFields);
+
+		const xScale = d3Scale.scaleTime()
+			.domain([xAxisMin, xAxisMax])
+			.range([0, innerWidth]);
 
 		const yScale = d3Scale.scaleLinear()
 			.domain([yAxisMin, yAxisMax])
@@ -189,22 +205,34 @@ const LineChart = React.createClass({
 						orient='bottom'
 						scale={xScale}
 						outerTickSize={0}
-						ordinalTickCount={xAxisTickCount}
 					/>
 				</g>
 
-				{/* bars */}
+				{/* lines */}
 				<Lines
 					top={margin.top}
 					left={margin.left}
 					xScale={xScale}
 					yScale={yScale}
 					yFields={yAxisFields}
-					height={innerHeight}
-					width={innerWidth}
 					data={data}
 					isStacked={yAxisIsStacked}
 				/>
+
+				{/* points */}
+				<g transform={`translate(${margin.left}, ${margin.top})`}>
+					{_.map(transformedData, (d, dIndex) => (
+						_.map(d, (series, seriesIndex) => (
+							<Point
+								x={xScale(data[seriesIndex][xAxisField])}
+								y={yScale(_.isArray(series) ? _.last(series) : series)}
+								hasStroke={true}
+								kind={dIndex}
+								color={dIndex}
+							/>
+						))
+					))}
+				</g>
 			</svg>
 		);
 	}

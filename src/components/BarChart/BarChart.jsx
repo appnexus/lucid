@@ -83,8 +83,8 @@ const BarChart = React.createClass({
 		 */
 		yAxisFields: array.isRequired,
 		/**
-		 * The minimum number the y axis should display. Typically this will either
-		 * be `0` or the smallest number from your dataset.
+		 * The minimum number the y axis should display. Typically this
+		 * should be be `0`.
 		 */
 		yAxisMin: number,
 		/**
@@ -130,6 +130,7 @@ const BarChart = React.createClass({
 			xAxisTickCount: null,
 			yAxisFields: ['y'],
 			yAxisIsStacked: false,
+			yAxisMin: 0,
 		};
 	},
 
@@ -145,7 +146,7 @@ const BarChart = React.createClass({
 			yAxisFields,
 			yAxisIsStacked,
 			yAxisFormatter,
-			yAxisMin = minByFields(data, yAxisFields),
+			yAxisMin,
 			yAxisMax = yAxisIsStacked
 				? maxByFieldsStacked(data, yAxisFields)
 				: maxByFields(data, yAxisFields),
@@ -204,8 +205,6 @@ const BarChart = React.createClass({
 					xScale={xScale}
 					yScale={yScale}
 					yFields={yAxisFields}
-					height={innerHeight}
-					width={innerWidth}
 					data={data}
 					isStacked={yAxisIsStacked}
 				/>
