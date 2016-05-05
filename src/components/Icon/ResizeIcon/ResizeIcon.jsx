@@ -26,9 +26,9 @@ const ResizeIcon = React.createClass({
 				{...passThroughs}
 				className={boundClassNames('&', className)}
 			>
-				<path d='M4.5,15.5 L15.5,4.5' stroke-width='1'/>
-				<path d='M8.5,15.5 L15.5,8.5' stroke-width='1'/>
-				<path d='M12.5,15.5 L15.5,12.5' stroke-width='1'/>
+				<path d='M4.5,15.5 L15.5,4.5' strokeWidth='1'/>
+				<path d='M8.5,15.5 L15.5,8.5' strokeWidth='1'/>
+				<path d='M12.5,15.5 L15.5,12.5' strokeWidth='1'/>
 			</Icon>
 		);
 	}
