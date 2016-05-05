@@ -1,6 +1,7 @@
 import Autocomplete from './components/Autocomplete/Autocomplete';
 import Badge from './components/Badge/Badge';
 import Banner from './components/Banner/Banner';
+import BarChart from './components/BarChart/BarChart';
 import Button from './components/Button/Button';
 import ButtonGroup from './components/ButtonGroup/ButtonGroup';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
@@ -24,6 +25,7 @@ import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import LabeledCheckbox from './components/LabeledCheckbox/LabeledCheckbox';
 import LabeledRadioButton from './components/LabeledRadioButton/LabeledRadioButton';
 import LabeledSwitch from './components/LabeledSwitch/LabeledSwitch';
+import LineChart from './components/LineChart/LineChart';
 import VerticalListMenu from './components/VerticalListMenu/VerticalListMenu';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import Overlay from './components/Overlay/Overlay';
@@ -63,6 +65,7 @@ export {
 	Autocomplete,
 	Badge,
 	Banner,
+	BarChart,
 	Button,
 	ButtonGroup,
 	CaretIcon,
@@ -86,6 +89,7 @@ export {
 	LabeledCheckbox,
 	LabeledRadioButton,
 	LabeledSwitch,
+	LineChart,
 	VerticalListMenu,
 	MinusIcon,
 	Overlay,
