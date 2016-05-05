@@ -7,8 +7,6 @@ import { default as DropMenuDumb } from './components/DropMenu/DropMenu';
 import { default as ExpanderDumb } from './components/Expander/Expander';
 import { default as SingleSelectDumb } from './components/SingleSelect/SingleSelect';
 import { default as TabsDumb } from './components/Tabs/Tabs';
-import { default as TextFieldDumb } from './components/TextField/TextField'
-import { default as ValidatedTextFieldDumb } from './components/ValidatedTextField/ValidatedTextField';
 import { default as VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
 import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 
@@ -19,8 +17,6 @@ const Expander = buildHybridComponent(ExpanderDumb);
 const RadioGroup = buildHybridComponent(RadioGroupDumb);
 const SingleSelect = buildHybridComponent(SingleSelectDumb);
 const Tabs = buildHybridComponent(TabsDumb);
-const TextField = buildHybridComponent(TextFieldDumb);
-const ValidatedTextField = buildHybridComponent(ValidatedTextFieldDumb);
 const VerticalListMenu = buildHybridComponent(VerticalListMenuDumb);
 
 // dumb components
@@ -58,6 +54,8 @@ import StickySection from './components/StickySection/StickySection';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import Switch from './components/Switch/Switch';
 import Table from './components/Table/Table';
+import TextField from './components/TextField/TextField';
+import ValidatedTextField from './components/ValidatedTextField/ValidatedTextField';
 import Validation from './components/Validation/Validation';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
 
@@ -126,9 +124,7 @@ export {
 	Tabs,
 	TabsDumb,
 	TextField,
-	TextFieldDumb,
 	ValidatedTextField,
-	ValidatedTextFieldDumb,
 	Validation,
 	VerticalListMenu,
 	VerticalListMenuDumb,
