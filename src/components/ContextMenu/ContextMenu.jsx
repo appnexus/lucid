@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import Portal from '../Portal/Portal';
-import { createClass } from '../../util/component-definition';
+import { createClass, findTypes } from '../../util/component-types';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 import { lucidClassNames } from '../../util/style-helpers';
 
@@ -64,11 +64,18 @@ const ContextMenu = createClass({
 		portalId: string
 	},
 
-	childProps: {
-		Target: {},
-		FlyOut: {
-			style: object
-		}
+	components: {
+		Target: createClass({
+			displayName: 'ContextMenu.Target',
+			propName: 'Target',
+		}),
+		FlyOut: createClass({
+			displayName: 'ContextMenu.FlyOut',
+			propName: 'FlyOut',
+			propTypes: {
+				style: object
+			}
+		})
 	},
 
 	getDefaultProps() {
@@ -186,10 +193,11 @@ const ContextMenu = createClass({
 			flyOutHeight
 		} = this.state;
 
-		const targetProps = _.first(ContextMenu.Target.findInAllAsProps(this.props));
-		const targetChildren = targetProps.children;
-		const flyProps = _.first(ContextMenu.FlyOut.findInAllAsProps(this.props));
-		const flyChildren = flyProps.children;
+		const targetElement = _.first(findTypes(this.props, ContextMenu.Target));
+		const targetChildren = _.get(targetElement, 'props.children', null);
+
+		const flyoutElement = _.first(findTypes(this.props, ContextMenu.FlyOut));
+		const flyProps = _.get(flyoutElement, 'props', {});
 
 
 		return (
@@ -211,7 +219,7 @@ const ContextMenu = createClass({
 							top: (direction === ContextMenu.UP ? targetRect.top - flyOutHeight : targetRect.bottom)
 						})}
 					>
-						{flyChildren}
+						{flyProps.children}
 					</Portal>
 				) : null}
 			</span>

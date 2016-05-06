@@ -1,6 +1,6 @@
 import React from 'react';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-definition';
+import { createClass } from '../../../util/component-types';
 import Icon from '../Icon';
 
 const cx = lucidClassNames.bind('&-ChevronIcon');

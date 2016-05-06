@@ -1,9 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-definition';
+import { createClass, findTypes } from '../../util/component-types';
 import getRandom from '../../util/random';
-import LabeledRadioButton from '../LabeledRadioButton/LabeledRadioButton';
+import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 import RadioButton from '../RadioButton/RadioButton';
 import reducers from './RadioGroup.reducers';
 
@@ -29,16 +29,24 @@ const {
 const RadioGroup = createClass({
 	displayName: 'RadioGroup',
 
-	childProps: {
-		RadioButton: { ...RadioButton.propTypes },
+	components: {
+		RadioButton: createClass({
+			displayName: 'RadioGroup.RadioButton',
+			propName: 'RadioButton',
+			propTypes: RadioButton.propTypes
+		}),
 
 		/**
 		 * Support radio button labels as `RadioGroup.Label` component which can
 		 * be provided as a child of a `RadioGroup.RadioButton` component.
 		 */
-		Label: {
-			children: node
-		}
+		Label: createClass({
+			displayName: 'RadioGroup.Label',
+			propName: 'Label',
+			propTypes: {
+				children: node
+			}
+		})
 	},
 
 	reducers,
@@ -97,7 +105,7 @@ const RadioGroup = createClass({
 			...passThroughs
 		} = this.props;
 
-		const radioButtonChildProps = RadioGroup.RadioButton.findInAllAsProps(this.props);
+		const radioButtonChildProps = _.map(findTypes(this.props, RadioGroup.RadioButton), 'props')
 		const selectedIndexFromChildren = _.findLastIndex(radioButtonChildProps, {
 			isSelected: true
 		});
@@ -116,14 +124,14 @@ const RadioGroup = createClass({
 			>
 				{_.map(radioButtonChildProps, (radioButtonChildProp, index) => {
 					return (
-						<LabeledRadioButton
+						<RadioButtonLabeled
 								{...radioButtonChildProp}
 								isSelected={actualSelectedIndex === index}
 								key={index}
 								callbackId={index}
 								name={name}
 								onSelect={this.handleSelected}
-								Label={_.get(_.first(RadioGroup.Label.findInAllAsProps(radioButtonChildProp)), 'children', '')}
+								Label={_.get(_.first(findTypes(radioButtonChildProp, RadioGroup.Label)), 'props.children', null)}
 						/>
 					);
 				})}
@@ -134,7 +142,7 @@ const RadioGroup = createClass({
 
 	handleSelected(isSelected, { event, props: childProps }) {
 		const { callbackId } = childProps;
-		const clickedRadioButtonProps = RadioGroup.RadioButton.findInAllAsProps(this.props)[callbackId];
+		const clickedRadioButtonProps = _.map(findTypes(this.props, RadioGroup.RadioButton), 'props')[callbackId];
 
 		// If the `RadioGroup.RadioButton` child has an `onSelect` prop that is
 		// a function, call that prior to calling the group's `onSelect` prop.

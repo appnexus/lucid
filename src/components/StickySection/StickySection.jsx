@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-definition';
+import { createClass } from '../../util/component-types';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 
 const cx = lucidClassNames.bind('&-StickySection');
@@ -15,7 +15,8 @@ const {
 /**
  * {"categories": ["helpers"]}
  *
- * `StickySection` can be wrapped around any content to make it _stick_ to the top edge of the screen when a user scrolls beyond its initial location.
+ * `StickySection` can be wrapped around any content to make it _stick_ to the
+ * top edge of the screen when a user scrolls beyond its initial location.
  */
 const StickySection = createClass({
 	displayName: 'StickySection',
@@ -33,11 +34,13 @@ const StickySection = createClass({
 		 */
 		style: object,
 		/**
-		 * Pixel value from the top of the document. When scrolled passed, the sticky header is no longer sticky, and renders normally.
+		 * Pixel value from the top of the document. When scrolled passed, the
+		 * sticky header is no longer sticky, and renders normally.
 		 */
 		lowerBound: number,
 		/**
-		 * Width of section when it sticks to the top edge of the screen. When omitted, it defaults to the last width of the section.
+		 * Width of section when it sticks to the top edge of the screen. When
+		 * omitted, it defaults to the last width of the section.
 		 */
 		viewportWidth: number,
 	},

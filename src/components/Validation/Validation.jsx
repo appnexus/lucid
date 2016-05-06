@@ -1,6 +1,6 @@
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-definition';
+import { createClass, findTypes } from '../../util/component-types';
 import _ from 'lodash';
 
 const cx = lucidClassNames.bind('&-Validation');
@@ -20,8 +20,11 @@ const {
 const Validation = createClass({
 	displayName: 'Validation',
 
-	childProps: {
-		Error: {} // intentionally left blank since we only care about `children`
+	components: {
+		Error: createClass({
+			displayName: 'Validation.Error',
+			propName: 'Error'
+		})
 	},
 
 	propTypes: {
@@ -58,7 +61,7 @@ const Validation = createClass({
 			...passThroughs
 		} = this.props;
 
-		const errorChildProps = _.first(Validation.Error.findInAllAsProps(this.props));
+		const errorChildProps = _.first(_.map(findTypes(this.props, Validation.Error), 'props'));
 
 		return (
 			<div
@@ -70,7 +73,7 @@ const Validation = createClass({
 				{children}
 				{errorChildProps ?
 					<div className={cx('&-error-content')} >
-						{errorChildProps.children || errorChildProps}
+						{errorChildProps.children}
 					</div>
 				: null}
 			</div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-definition';
+import { createClass } from '../../util/component-types';
 import * as reducers from './Autocomplete.reducers';
 import * as KEYCODE from '../../constants/key-code';
 import DropMenu from '../DropMenu/DropMenu';

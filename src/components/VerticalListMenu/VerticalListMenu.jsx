@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { bindClassNames } from '../../util/style-helpers';
-import { createClass }  from '../../util/component-definition';
+import { createClass, findTypes }  from '../../util/component-types';
 import * as reducers from './VerticalListMenu.reducers';
 import ChevronIcon  from '../Icon/ChevronIcon/ChevronIcon';
 
@@ -31,14 +31,18 @@ const VerticalListMenu = createClass({
 
 	reducers,
 
-	childProps: {
-		Item: {
-			hasExpander: bool,
-			isExpanded: bool,
-			isSelected: bool,
-			onSelect: func,
-			onToggle: func,
-		}
+	components: {
+		Item: createClass({
+			displayName: 'VerticalListMenu.Item',
+			propName: 'Item',
+			propTypes: {
+				hasExpander: bool,
+				isExpanded: bool,
+				isSelected: bool,
+				onSelect: func,
+				onToggle: func,
+			}
+		})
 	},
 
 	propTypes: {
@@ -107,7 +111,7 @@ const VerticalListMenu = createClass({
 			...passThroughs
 		} = this.props;
 
-		const itemChildProps = VerticalListMenu.Item.findInAllAsProps(this.props);
+		const itemChildProps = _.map(findTypes(this.props, VerticalListMenu.Item), 'props');
 
 		return (
 			<ul

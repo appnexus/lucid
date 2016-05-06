@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Overlay from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass }  from '../../util/component-definition';
+import { createClass, findTypes }  from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Dialog');
 
@@ -24,9 +24,15 @@ const LARGE = 'large';
 const Dialog = createClass({
 	displayName: 'Dialog',
 
-	childProps: {
-		Header: null,
-		Footer: null,
+	components: {
+		Header: createClass({
+			displayName: 'Dialog.Header',
+			propName: 'Header'
+		}),
+		Footer: createClass({
+			displayName: 'Dialog.Footer',
+			propName: 'Footer'
+		}),
 	},
 
 	propTypes: {
@@ -63,8 +69,8 @@ const Dialog = createClass({
 			...passThroughs
 		} = this.props;
 
-		const headerChildProp = _.first(Dialog.Header.findInAllAsProps(this.props));
-		const footerChildProp = _.first(Dialog.Footer.findInAllAsProps(this.props));
+		const headerChildProp = _.get(_.first(findTypes(this.props, Dialog.Header)), 'props', {});
+		const footerChildProp = _.get(_.first(findTypes(this.props, Dialog.Footer)), 'props', {});
 
 		return (
 			<Overlay

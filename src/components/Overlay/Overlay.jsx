@@ -4,7 +4,7 @@ import Portal from '../Portal/Portal';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import random from '../../util/random';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass }  from '../../util/component-definition';
+import { createClass }  from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Overlay');
 
