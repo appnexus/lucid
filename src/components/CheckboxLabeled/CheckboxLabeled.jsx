@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass }  from '../../util/component-definition';
+import { createClass, findTypes }  from '../../util/component-types';
 import Checkbox from '../Checkbox/Checkbox';
 
 const boundClassNames = lucidClassNames.bind('&-CheckboxLabeled');
@@ -21,14 +21,18 @@ const {
 const CheckboxLabeled = createClass({
 	displayName: 'CheckboxLabeled',
 
-	childProps: {
-		Label: {
-			/**
-			 * Used to identify the purpose of this checkbox to the user -- can
-			 * be any renderable content.
-			 */
-			children: node
-		}
+	components: {
+		Label: createClass({
+			displayName: 'LabeledCheckbox.Label',
+			propName: 'Label',
+			propTypes: {
+				/**
+				 * Used to identify the purpose of this checkbox to the user -- can
+				 * be any renderable content.
+				 */
+				children: node
+			}
+		})
 	},
 
 	propTypes: {
@@ -70,7 +74,7 @@ const CheckboxLabeled = createClass({
 			...passThroughs
 		} = this.props;
 
-		const labelChildProps = _.first(CheckboxLabeled.Label.findInAllAsProps(this.props));
+		const labelChildProps = _.first(_.map(findTypes(this.props, CheckboxLabeled.Label), 'props'));
 
 		return (
 			<label

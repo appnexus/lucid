@@ -1,7 +1,7 @@
 import React from 'react';
 import CheckIcon from '../CheckIcon/CheckIcon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-definition';
+import { createClass } from '../../../util/component-types';
 
 const boundClassNames = lucidClassNames.bind('&-SuccessIcon');
 

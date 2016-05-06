@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-definition';
+import { createClass } from '../../util/component-types';
 const boundClassNames = lucidClassNames.bind('&-Button');
 
 const {
@@ -24,6 +24,7 @@ const {
  */
 const Button = createClass({
 	displayName: 'Button',
+	propName: 'Button',
 	propTypes: {
 		/**
 		 * disables the button by greying it out

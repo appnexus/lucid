@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass }  from '../../util/component-definition';
+import { createClass, findTypes }  from '../../util/component-types';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import * as reducers from './Expander.reducers';
 
@@ -26,14 +26,18 @@ const {
 const Expander = createClass({
 	displayName: 'Expander',
 
-	childProps: {
-		Label: {
-			/**
-			 * Used to identify the purpose of this switch to the user -- can be
-			 * any renderable content.
-			 */
-			children: node
-		}
+	components: {
+		Label: createClass({
+			displayName: 'Expander.Label',
+			propName: 'Label',
+			propTypes: {
+				/**
+				 * Used to identify the purpose of this switch to the user -- can be
+				 * any renderable content.
+				 */
+				children: node
+			}
+		})
 	},
 
 	reducers,
@@ -87,8 +91,8 @@ const Expander = createClass({
 	},
 
 	componentWillReceiveProps(nextProps) {
-		const currentLabel = _.first(Expander.Label.findInAllAsProps(this.props)).children;
-		const nextLabel = _.first(Expander.Label.findInAllAsProps(nextProps)).children;
+		const currentLabel = _.get(_.first(findTypes(this.props, Expander.Label)), 'props.children', null);
+		const nextLabel = _.get(_.first(findTypes(nextProps, Expander.Label)), 'props.children', null);
 
 		if (currentLabel !== nextLabel) {
 			this._labelKey++;
@@ -104,7 +108,7 @@ const Expander = createClass({
 			...passThroughs
 		} = this.props;
 
-		const labelChildProp = _.first(Expander.Label.findInAllAsProps(this.props));
+		const labelChildProp = _.first(_.map(findTypes(this.props, Expander.Label), 'props'));
 
 		return (
 			<div

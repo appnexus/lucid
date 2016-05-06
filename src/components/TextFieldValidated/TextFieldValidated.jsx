@@ -4,7 +4,7 @@ import Validation from '../Validation/Validation';
 import TextField from '../TextField/TextField';
 import reducers from '../TextField/TextField.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-definition';
+import { createClass, findTypes } from '../../util/component-types';
 
 const boundClassNames = lucidClassNames.bind('&-TextFieldValidated');
 
@@ -24,8 +24,11 @@ const TextFieldValidated = createClass({
 
 	reducers,
 
-	childProps: {
-		Error: null,
+	components: {
+		Error: createClass({
+			displayName: 'ValidatedTextField.Error',
+			propName: 'Error'
+		}),
 	},
 
 	propTypes: {
@@ -52,7 +55,7 @@ const TextFieldValidated = createClass({
 			style,
 		} = this.props;
 
-		const errorChildProps = TextFieldValidated.Error.findInAllAsProps(this.props);
+		const errorChildProps = _.map(findTypes(this.props, TextFieldValidated.Error), 'props');
 
 		return (
 			<Validation

@@ -7,8 +7,6 @@ import { default as DropMenuDumb } from './components/DropMenu/DropMenu';
 import { default as ExpanderDumb } from './components/Expander/Expander';
 import { default as SingleSelectDumb } from './components/SingleSelect/SingleSelect';
 import { default as TabsDumb } from './components/Tabs/Tabs';
-import { default as TextFieldDumb } from './components/TextField/TextField'
-import { default as TextFieldValidatedDumb } from './components/TextFieldValidated/TextFieldValidated';
 import { default as VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
 import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 
@@ -19,8 +17,6 @@ const Expander = buildHybridComponent(ExpanderDumb);
 const RadioGroup = buildHybridComponent(RadioGroupDumb);
 const SingleSelect = buildHybridComponent(SingleSelectDumb);
 const Tabs = buildHybridComponent(TabsDumb);
-const TextField = buildHybridComponent(TextFieldDumb);
-const TextFieldValidated = buildHybridComponent(TextFieldValidatedDumb);
 const VerticalListMenu = buildHybridComponent(VerticalListMenuDumb);
 
 // dumb components
@@ -58,20 +54,20 @@ import StickySection from './components/StickySection/StickySection';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import Switch from './components/Switch/Switch';
 import Table from './components/Table/Table';
+import TextField from './components/TextField/TextField';
+import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
 import Validation from './components/Validation/Validation';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
 
 // utils
-import * as childComponent from './util/child-component';
-import * as componentDefinition from './util/component-definition';
+import * as componentTypes from './util/component-types';
 import * as domHelpers from './util/dom-helpers';
 import * as stateManagement from './util/state-management';
 import * as styleHelpers from './util/style-helpers';
 import * as redux from './util/redux';
 
 export {
-	childComponent,
-	componentDefinition,
+	componentTypes,
 	domHelpers,
 	redux,
 	stateManagement,
@@ -128,9 +124,7 @@ export {
 	Tabs,
 	TabsDumb,
 	TextField,
-	TextFieldDumb,
 	TextFieldValidated,
-	TextFieldValidatedDumb,
 	Validation,
 	VerticalListMenu,
 	VerticalListMenuDumb,

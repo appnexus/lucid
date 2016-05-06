@@ -1,5 +1,5 @@
 import React from 'react';
-import { createClass } from '../../util/component-definition';
+import { createClass } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import Table from '../Table/Table';
 
@@ -21,7 +21,7 @@ const {
 const ScrollTable = createClass({
 	displayName: 'ScrollTable',
 
-	statics: {
+	components: {
 		Thead: Table.Thead,
 		Tbody: Table.Tbody,
 		Tr: Table.Tr,
