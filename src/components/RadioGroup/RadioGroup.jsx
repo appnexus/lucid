@@ -7,7 +7,7 @@ import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 import RadioButton from '../RadioButton/RadioButton';
 import reducers from './RadioGroup.reducers';
 
-const boundClassNames = lucidClassNames.bind('&-RadioGroup');
+const cx = lucidClassNames.bind('&-RadioGroup');
 
 
 const {
@@ -90,7 +90,7 @@ const RadioGroup = createClass({
 
 	getDefaultProps() {
 		return {
-			name: `${boundClassNames('&')}-${getRandom()}`,
+			name: `${cx('&')}-${getRandom()}`,
 			onSelect: _.noop,
 			selectedIndex: 0
 		};
@@ -120,7 +120,7 @@ const RadioGroup = createClass({
 		return (
 			<span
 					{...passThroughs}
-					className={boundClassNames('&', className)}
+					className={cx('&', className)}
 			>
 				{_.map(radioButtonChildProps, (radioButtonChildProp, index) => {
 					return (

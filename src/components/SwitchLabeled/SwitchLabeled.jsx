@@ -5,7 +5,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes }  from '../../util/component-types';
 import Switch from '../Switch/Switch';
 
-const boundClassNames = lucidClassNames.bind('&-SwitchLabeled');
+const cx = lucidClassNames.bind('&-LabeledSwitch');
 const {
 	any,
 	node,
@@ -92,7 +92,7 @@ const SwitchLabeled = createClass({
 
 		return (
 			<label
-					className={boundClassNames('&', {
+					className={cx('&', {
 						'&-is-disabled': isDisabled,
 						'&-is-selected': isSelected
 					}, className)}
@@ -106,11 +106,11 @@ const SwitchLabeled = createClass({
 						{..._.omit(passThroughs, 'Label')}
 				/>
 				<ReactCSSTransitionGroup
-						transitionName={boundClassNames('&-text')}
+						transitionName={cx('&-text')}
 						transitionEnterTimeout={100}
 						transitionLeaveTimeout={100}
 						style={{position: 'relative'}}
-						className={boundClassNames('&-text')}
+						className={cx('&-text')}
 				>
 					{
 						labelChildProps

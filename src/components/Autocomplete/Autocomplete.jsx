@@ -7,7 +7,7 @@ import * as KEYCODE from '../../constants/key-code';
 import DropMenu from '../DropMenu/DropMenu';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 
-const boundClassNames = lucidClassNames.bind('&-Autocomplete');
+const cx = lucidClassNames.bind('&-Autocomplete');
 
 const {
 	arrayOf,
@@ -226,19 +226,19 @@ const Autocomplete = createClass({
 				{...dropMenuProps}
 				isDisabled={isDisabled}
 				selectedIndices={[]}
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 				onSelect={this.handleSelect}
 				style={style}
 			>
 				<DropMenu.Control onClick={this.handleControlClick}>
-					<div className={boundClassNames('&-Control', {
+					<div className={cx('&-Control', {
 						'&-Control-is-expanded': isExpanded,
 						'&-Control-is-disabled': isDisabled
 					})}>
 						<input
 							{..._.omit(passThroughs, ['onChange', 'onSelect', 'onExpand', 'value', 'children'])}
 							type='text'
-							className={boundClassNames('&-Control-input')}
+							className={cx('&-Control-input')}
 							ref='inputNode'
 							onKeyDown={this.handleInputKeydown}
 							disabled={isDisabled}
@@ -253,17 +253,17 @@ const Autocomplete = createClass({
 							const formattedSuggestion = [];
 							if (pre) {
 								formattedSuggestion.push(
-									<span key={`AutocompleteOption-suggestion-pre-${suggestion}`} className={boundClassNames('&-Option-suggestion-pre')}>{pre}</span>
+									<span key={`AutocompleteOption-suggestion-pre-${suggestion}`} className={cx('&-Option-suggestion-pre')}>{pre}</span>
 								);
 							}
 							if (match) {
 								formattedSuggestion.push(
-									<span key={`AutocompleteOption-suggestion-match-${suggestion}`} className={boundClassNames('&-Option-suggestion-match')}>{match}</span>
+									<span key={`AutocompleteOption-suggestion-match-${suggestion}`} className={cx('&-Option-suggestion-match')}>{match}</span>
 								);
 							}
 							if (post) {
 								formattedSuggestion.push(
-									<span key={`AutocompleteOption-suggestion-post-${suggestion}`} className={boundClassNames('&-Option-suggestion-post')}>{post}</span>
+									<span key={`AutocompleteOption-suggestion-post-${suggestion}`} className={cx('&-Option-suggestion-post')}>{post}</span>
 								);
 							}
 							return formattedSuggestion;

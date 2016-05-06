@@ -14,7 +14,7 @@ const {
 	Td
 } = ScrollTable;
 
-const boundClassNames = lucidClassNames.bind('&-DataTable');
+const cx = lucidClassNames.bind('&-DataTable');
 
 const {
 	any,
@@ -204,7 +204,7 @@ const DataTable = createClass({
 		);
 
 		return (
-			<ScrollTable {...passThroughs} className={boundClassNames('&', className)}>
+			<ScrollTable {...passThroughs} className={cx('&', className)}>
 				<Thead>
 					<Tr>
 						{isSelectable ? (

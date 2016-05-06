@@ -5,7 +5,7 @@ import { createClass, findTypes } from '../../util/component-types';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 import { lucidClassNames } from '../../util/style-helpers';
 
-const boundClassNames = lucidClassNames.bind('&-ContextMenu');
+const cx = lucidClassNames.bind('&-ContextMenu');
 
 const {
 	PropTypes: {
@@ -201,13 +201,13 @@ const ContextMenu = createClass({
 
 
 		return (
-			<span ref='target' {...passThroughs} className={boundClassNames('&', className)} style={style}>
+			<span ref='target' {...passThroughs} className={cx('&', className)} style={style}>
 				{targetChildren}
 				{isExpanded ? (
 					<Portal
 						ref='flyOutPortal'
 						{...flyProps}
-						className={boundClassNames('&-FlyOut', {
+						className={cx('&-FlyOut', {
 							'&-FlyOut-Up': direction === ContextMenu.UP,
 							'&-FlyOut-Down': direction === ContextMenu.DOWN
 						}, flyProps.className)}

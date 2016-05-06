@@ -5,7 +5,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes }  from '../../util/component-types';
 import reducers from './ButtonGroup.reducers';
 
-const boundClassNames = lucidClassNames.bind('&-ButtonGroup');
+const cx = lucidClassNames.bind('&-ButtonGroup');
 
 const {
 	any,
@@ -98,7 +98,7 @@ const ButtonGroup = createClass({
 		return (
 			<span
 				{...others}
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 			>
 				{_.map(buttonChildProps, (buttonChildProp, index) => {
 					return (

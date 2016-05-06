@@ -9,73 +9,73 @@ describe('#bindClassNames', function() {
 		assert(_.isFunction(bindClassNames('lucid', '~')));
 	});
 
-	describe('the returned function `boundClassNames`', () => {
+	describe('the returned function `cx`', () => {
 		it('should behave like classnames if no args passed', () => {
-			const boundClassNames = bindClassNames();
+			const cx = bindClassNames();
 
-			assert.equal(boundClassNames({yolo: true, bar: false}), 'yolo');
-			assert.equal(boundClassNames({yolo: true, bar: true}), 'yolo bar');
-			assert.equal(boundClassNames('one', ['two']), 'one two');
+			assert.equal(cx({yolo: true, bar: false}), 'yolo');
+			assert.equal(cx({yolo: true, bar: true}), 'yolo bar');
+			assert.equal(cx('one', ['two']), 'one two');
 		});
 
 		it('should replace the variable `&` with the value from the 1st arg', () => {
-			const boundClassNames = bindClassNames('lucid');
+			const cx = bindClassNames('lucid');
 
-			assert.equal(boundClassNames({'yolo': true, '&-bar': true}), 'yolo lucid-bar');
-			assert.equal(boundClassNames({'yolo&': true, 'bar': true}), 'yololucid bar');
-			assert.equal(boundClassNames('&-one', ['&-two']), 'lucid-one lucid-two');
+			assert.equal(cx({'yolo': true, '&-bar': true}), 'yolo lucid-bar');
+			assert.equal(cx({'yolo&': true, 'bar': true}), 'yololucid bar');
+			assert.equal(cx('&-one', ['&-two']), 'lucid-one lucid-two');
 		});
 
 		it('should replace the variable from the 2nd arg with the value from the 1st arg', () => {
-			const boundClassNames = bindClassNames('lucid', '~');
+			const cx = bindClassNames('lucid', '~');
 
-			assert.equal(boundClassNames({'&-yolo': true, '~-bar': true}), '&-yolo lucid-bar');
-			assert.equal(boundClassNames({'yolo~': true, 'bar': true}), 'yololucid bar');
-			assert.equal(boundClassNames('~-one', ['~-two']), 'lucid-one lucid-two');
+			assert.equal(cx({'&-yolo': true, '~-bar': true}), '&-yolo lucid-bar');
+			assert.equal(cx({'yolo~': true, 'bar': true}), 'yololucid bar');
+			assert.equal(cx('~-one', ['~-two']), 'lucid-one lucid-two');
 		});
 
 		it('should be able to take a RegExp as the 2nd arg to be replaced', () => {
-			const boundClassNames = bindClassNames('lucid', /~/g);
+			const cx = bindClassNames('lucid', /~/g);
 
-			assert.equal(boundClassNames({'&-yolo': true, '~-bar': true}), '&-yolo lucid-bar');
-			assert.equal(boundClassNames({'yolo~': true, 'bar': true}), 'yololucid bar');
-			assert.equal(boundClassNames('~-one', ['~-two']), 'lucid-one lucid-two');
+			assert.equal(cx({'&-yolo': true, '~-bar': true}), '&-yolo lucid-bar');
+			assert.equal(cx({'yolo~': true, 'bar': true}), 'yololucid bar');
+			assert.equal(cx('~-one', ['~-two']), 'lucid-one lucid-two');
 		});
 
 		describe('.bind', () => {
 			it('should always return a function', () => {
-				const boundClassNames = bindClassNames('lucid');
+				const cx = bindClassNames('lucid');
 
-				assert(_.isFunction(boundClassNames.bind()));
-				assert(_.isFunction(boundClassNames.bind('&-Button')));
-				assert(_.isFunction(boundClassNames.bind('&-Button', '~')));
+				assert(_.isFunction(cx.bind()));
+				assert(_.isFunction(cx.bind('&-Button')));
+				assert(_.isFunction(cx.bind('&-Button', '~')));
 			});
 
 			it('should behave like the original function if no args passed', () => {
-				const boundClassNames = bindClassNames('lucid');
-				const boundBoundClassNames = boundClassNames.bind();
+				const cx = bindClassNames('lucid');
+				const boundBoundClassNames = cx.bind();
 
-				assert.equal(boundClassNames({'yolo': true, '&-bar': true}), 'yolo lucid-bar');
+				assert.equal(cx({'yolo': true, '&-bar': true}), 'yolo lucid-bar');
 				assert.equal(boundBoundClassNames({'yolo': true, '&-bar': true}), 'yolo lucid-bar');
 
-				assert.equal(boundClassNames({'yolo&': true, 'bar': true}), 'yololucid bar');
+				assert.equal(cx({'yolo&': true, 'bar': true}), 'yololucid bar');
 				assert.equal(boundBoundClassNames({'yolo&': true, 'bar': true}), 'yololucid bar');
 
-				assert.equal(boundClassNames('&-one', ['&-two']), 'lucid-one lucid-two');
+				assert.equal(cx('&-one', ['&-two']), 'lucid-one lucid-two');
 				assert.equal(boundBoundClassNames('&-one', ['&-two']), 'lucid-one lucid-two');
 			});
 
-			it('should return a `boundClassNames` function witch a new value to replace the variable', () => {
-				const boundClassNames = bindClassNames('lucid');
-				const buttonClassNames = boundClassNames.bind('&-Button');
+			it('should return a `cx` function witch a new value to replace the variable', () => {
+				const cx = bindClassNames('lucid');
+				const buttonClassNames = cx.bind('&-Button');
 
-				assert.equal(boundClassNames({'yolo': true, '&-bar': true}), 'yolo lucid-bar');
+				assert.equal(cx({'yolo': true, '&-bar': true}), 'yolo lucid-bar');
 				assert.equal(buttonClassNames({'yolo': true, '&-bar': true}), 'yolo lucid-Button-bar');
 
-				assert.equal(boundClassNames({'yolo&': true, 'bar': true}), 'yololucid bar');
+				assert.equal(cx({'yolo&': true, 'bar': true}), 'yololucid bar');
 				assert.equal(buttonClassNames({'yolo&': true, 'bar': true}), 'yololucid-Button bar');
 
-				assert.equal(boundClassNames('&-one', ['&-two']), 'lucid-one lucid-two');
+				assert.equal(cx('&-one', ['&-two']), 'lucid-one lucid-two');
 				assert.equal(buttonClassNames('&-one', ['&-two']), 'lucid-Button-one lucid-Button-two');
 			});
 		});
@@ -88,18 +88,18 @@ describe('#lucidClassNames', function() {
 	});
 
 	it('should be able to bind a more specific value for the variable `&`', () => {
-		const boundClassNames = lucidClassNames.bind('&-Button');
-		assert.equal(boundClassNames('&-active', '&-disabled'), 'lucid-Button-active lucid-Button-disabled');
+		const cx = lucidClassNames.bind('&-Button');
+		assert.equal(cx('&-active', '&-disabled'), 'lucid-Button-active lucid-Button-disabled');
 	});
 
 	it('should return the component base className when bound and passed only `&`', () => {
-		const boundClassNames = lucidClassNames.bind('&-Button');
-		assert.equal(boundClassNames('&'), 'lucid-Button');
+		const cx = lucidClassNames.bind('&-Button');
+		assert.equal(cx('&'), 'lucid-Button');
 	});
 
 	it('should pass thru classNames which lack `&` without changing them', () => {
-		const boundClassNames = lucidClassNames.bind('&-Button');
+		const cx = lucidClassNames.bind('&-Button');
 		const classNames = 'my-custom-class another-class';
-		assert.equal(boundClassNames('&', classNames), 'lucid-Button my-custom-class another-class');
+		assert.equal(cx('&', classNames), 'lucid-Button my-custom-class another-class');
 	});
 });

@@ -8,7 +8,7 @@ import InfoIcon from '../Icon/InfoIcon/InfoIcon';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
 import WarningIcon from '../Icon/WarningIcon/WarningIcon';
 
-const boundClassNames = lucidClassNames.bind('&-Banner');
+const cx = lucidClassNames.bind('&-Banner');
 
 const {
 	bool,
@@ -140,14 +140,14 @@ const Banner = createClass({
 
 		return (
 			<ReactCSSTransitionGroup
-				transitionName={boundClassNames('&')}
+				transitionName={cx('&')}
 				transitionEnterTimeout={300}
 				transitionLeaveTimeout={300}
 			>
 				{!isClosed ?
 					<section
 						{...passThroughs}
-						className={boundClassNames('&', {
+						className={cx('&', {
 							'&-has-icon': displayedIcon,
 							'&-has-close': isCloseable,
 							'&-has-no-roundedCorners': !hasRoundedCorners,
@@ -160,15 +160,15 @@ const Banner = createClass({
 						}, className)}
 					>
 						{displayedIcon ?
-							<span className={boundClassNames('&-icon')}>{displayedIcon}</span>
+							<span className={cx('&-icon')}>{displayedIcon}</span>
 						: null}
 
-						<span className={boundClassNames('&-content')}>
+						<span className={cx('&-content')}>
 							{children}
 						</span>
 
 						{isCloseable ?
-							<span className={boundClassNames('&-close')} onClick={this.handleClose}>
+							<span className={cx('&-close')} onClick={this.handleClose}>
 								{String.fromCharCode(0x00d7)}
 							</span>
 						: null}

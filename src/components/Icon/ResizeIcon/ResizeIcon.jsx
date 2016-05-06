@@ -3,7 +3,7 @@ import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass } from '../../../util/component-types';
 
-const boundClassNames = lucidClassNames.bind('&-ResizeIcon');
+const cx = lucidClassNames.bind('&-ResizeIcon');
 
 /**
  *
@@ -26,7 +26,7 @@ const ResizeIcon = createClass({
 		return (
 			<Icon
 				{...passThroughs}
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 			>
 				<path d='M4.5,15.5 L15.5,4.5' stroke-width='1'/>
 				<path d='M8.5,15.5 L15.5,8.5' stroke-width='1'/>

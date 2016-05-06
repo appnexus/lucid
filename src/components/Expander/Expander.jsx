@@ -6,7 +6,7 @@ import { createClass, findTypes }  from '../../util/component-types';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import * as reducers from './Expander.reducers';
 
-const boundClassNames = lucidClassNames.bind('&-Expander');
+const cx = lucidClassNames.bind('&-Expander');
 
 const {
 	any,
@@ -113,29 +113,29 @@ const Expander = createClass({
 		return (
 			<div
 				{...passThroughs}
-				className={boundClassNames('&', {
+				className={cx('&', {
 					'&-is-expanded': isExpanded,
 				}, className)}
 				style={style}
 			>
-				<header className={boundClassNames('&-header')} onClick={this.handleToggle}>
-					<span className={boundClassNames('&-icon')}>
+				<header className={cx('&-header')} onClick={this.handleToggle}>
+					<span className={cx('&-icon')}>
 						<ChevronIcon
 							direction={isExpanded ? 'up' : 'down'}
 						/>
 					</span>
 					<ReactCSSTransitionGroup
-						transitionName={boundClassNames('&-text')}
+						transitionName={cx('&-text')}
 						transitionEnterTimeout={100}
 						transitionLeaveTimeout={100}
-						className={boundClassNames('&-text')}
+						className={cx('&-text')}
 					>
 						{labelChildProp ?
 							<span key={this._labelKey}>{labelChildProp.children}</span>
 						: null}
 					</ReactCSSTransitionGroup>
 				</header>
-				<section className={boundClassNames('&-content', {
+				<section className={cx('&-content', {
 					'&-content-is-expanded': isExpanded
 				})}>
 					{children}

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { createClass } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 
-const boundClassNames = lucidClassNames.bind('&-Portal');
+const cx = lucidClassNames.bind('&-Portal');
 
 const {
 	PropTypes: {
@@ -56,7 +56,7 @@ const Portal = createClass({
 	},
 	componentDidUpdate() {
 		ReactDOM.render((
-			<div {...this.props} className={boundClassNames('&', this.props.className)}>
+			<div {...this.props} className={cx('&', this.props.className)}>
 				{this.props.children}
 			</div>
 		), this.portalElement);

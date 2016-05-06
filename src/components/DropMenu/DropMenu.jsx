@@ -17,7 +17,7 @@ function joinArray(array, getSeparator) {
 	}, []);
 }
 
-const boundClassNames = lucidClassNames.bind('&-DropMenu');
+const cx = lucidClassNames.bind('&-DropMenu');
 
 const {
 	any,
@@ -384,7 +384,7 @@ const DropMenu = createClass({
 				onMouseMove={() => this.handleMouseFocusOption(optionIndex, optionProps)}
 				onClick={(event) => this.handleSelectOption(optionIndex, optionProps, event)}
 				{...optionProps}
-				className={boundClassNames(
+				className={cx(
 					'&-Option', {
 					'&-Option-is-grouped': isGrouped,
 					'&-Option-is-focused': isFocused,
@@ -432,7 +432,7 @@ const DropMenu = createClass({
 		const controlProps = _.get(_.first(findTypes(this.props, DropMenu.Control)), 'props', {});
 
 		return (
-			<div className={boundClassNames('&', '&-base', {
+			<div className={cx('&', '&-base', {
 				'&-is-expanded': isExpanded,
 				'&-direction-down': isExpanded && direction === 'down',
 				'&-direction-up': isExpanded && direction === 'up'
@@ -446,13 +446,13 @@ const DropMenu = createClass({
 								onKeyDown: this.handleKeydown
 							} : null)}
 							{...controlProps}
-							className={boundClassNames('&-Control', _.get(controlProps, 'className'))}
+							className={cx('&-Control', _.get(controlProps, 'className'))}
 						/>
 					</ContextMenu.Target>
-					<ContextMenu.FlyOut className={boundClassNames('&', className)}>
+					<ContextMenu.FlyOut className={cx('&', className)}>
 						{
 							_.map(nullOptions, (optionProps) => this.renderOption(optionProps, null))
-							.concat(_.isEmpty(nullOptions) ? [] : [(<div key={'OptionGroup-divider-NullOption'} className={boundClassNames('&-OptionGroup-divider')} />)])
+							.concat(_.isEmpty(nullOptions) ? [] : [(<div key={'OptionGroup-divider-NullOption'} className={cx('&-OptionGroup-divider')} />)])
 						}
 						{
 							joinArray(
@@ -461,14 +461,14 @@ const DropMenu = createClass({
 									const labelElements = rejectTypes(optionGroupProps.children, [DropMenu.Control, DropMenu.OptionGroup, DropMenu.Option, DropMenu.NullOption]);
 									// render label if there is one
 									return (_.isEmpty(labelElements) ? [] : [
-										<div {...optionGroupProps} className={boundClassNames('&-label', optionGroupProps.className)}>
+										<div {...optionGroupProps} className={cx('&-label', optionGroupProps.className)}>
 											{labelElements}
 										</div>
 									// render the options in the group
 									]).concat(_.map(_.get(optionGroupDataLookup, optionGroupIndex), ({ optionProps, optionIndex }) => this.renderOption(optionProps, optionIndex, true)));
 								// append all ungrouped options as another unlabeled group
 								}).concat(_.isEmpty(ungroupedOptionData) ? [] : [_.map(ungroupedOptionData, ({ optionProps, optionIndex }) => this.renderOption(optionProps, optionIndex))]),
-								(element, index) => (<div key={`OptionGroup-divider-${index}`} className={boundClassNames('&-OptionGroup-divider')} />) // separate each group with divider
+								(element, index) => (<div key={`OptionGroup-divider-${index}`} className={cx('&-OptionGroup-divider')} />) // separate each group with divider
 							)
 						}
 					</ContextMenu.FlyOut>

@@ -3,7 +3,7 @@ import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
 
-const boundClassNames = lucidClassNames.bind('&-Icon');
+const cx = lucidClassNames.bind('&-Icon');
 
 const {
 	any,
@@ -90,7 +90,7 @@ const Icon = createClass({
 			<svg
 				{...passThroughs}
 				style={_.pickBy(actualStyle, _.negate(_.isUndefined))}
-				className={boundClassNames('&', {
+				className={cx('&', {
 					'&-is-badge': isBadge,
 				}, className)}
 				width={size}

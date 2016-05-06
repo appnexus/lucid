@@ -6,7 +6,7 @@ import * as reducers from './SingleSelect.reducers';
 import DropMenu from '../DropMenu/DropMenu';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 
-const boundClassNames = lucidClassNames.bind('&-SingleSelect');
+const cx = lucidClassNames.bind('&-SingleSelect');
 
 const {
 	any,
@@ -160,19 +160,19 @@ const SingleSelect = createClass({
 				{...dropMenuProps}
 				isDisabled={isDisabled}
 				selectedIndices={isItemSelected ? [selectedIndex] : []}
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 				onSelect={onSelect}
 				style={style}
 			>
 				<DropMenu.Control>
-					<div className={boundClassNames('&-Control', {
+					<div className={cx('&-Control', {
 						'&-Control-is-selected': !isDisabled && isItemSelected,
 						'&-Control-is-expanded': isExpanded,
 						'&-Control-is-disabled': isDisabled
 					})}>
 						<span
 							{...(!isItemSelected ? placeholderProps : null)}
-							className={boundClassNames(
+							className={cx(
 									'&-Control-content',
 									(!isItemSelected ? _.get(placeholderProps, 'className') : null)
 							)}

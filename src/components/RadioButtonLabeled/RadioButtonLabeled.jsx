@@ -4,7 +4,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes }  from '../../util/component-types';
 import RadioButton from '../RadioButton/RadioButton';
 
-const boundClassNames = lucidClassNames.bind('&-RadioButtonLabeled');
+const cx = lucidClassNames.bind('&-LabeledRadioButton');
 const {
 	any,
 	node,
@@ -78,7 +78,7 @@ const RadioButtonLabeled = createClass({
 
 		return (
 			<label
-					className={boundClassNames('&', {
+					className={cx('&', {
 						'&-is-disabled': isDisabled,
 						'&-is-selected': isSelected
 					}, className)}

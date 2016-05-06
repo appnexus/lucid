@@ -5,7 +5,7 @@ import { createClass } from '../../util/component-types';
 import reducers from './TextField.reducers';
 import * as KEYCODE from '../../constants/key-code';
 
-const boundClassNames = lucidClassNames.bind('&-TextField');
+const cx = lucidClassNames.bind('&-TextField');
 
 const {
 	bool,
@@ -216,7 +216,7 @@ const TextField = createClass({
 
 		const finalProps = {
 			..._.omit(passThroughs, 'children'),
-			className: boundClassNames('&', {
+			className: cx('&', {
 				'&-is-disabled': isDisabled,
 				'&-is-multi-line': isMultiLine,
 				'&-is-single-line': !isMultiLine

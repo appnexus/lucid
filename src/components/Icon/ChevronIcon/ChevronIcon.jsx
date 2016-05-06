@@ -3,7 +3,7 @@ import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass } from '../../../util/component-types';
 import Icon from '../Icon';
 
-const boundClassNames = lucidClassNames.bind('&-ChevronIcon');
+const cx = lucidClassNames.bind('&-ChevronIcon');
 
 const {
 	oneOf,
@@ -49,7 +49,7 @@ const ChevronIcon = createClass({
 		return (
 			<Icon
 				{...passThroughs}
-				className={boundClassNames('&', {
+				className={cx('&', {
 					'&-is-down': direction === 'down',
 					'&-is-up': direction === 'up',
 					'&-is-left': direction === 'left',
