@@ -83,32 +83,36 @@ function overwriteArrays (objValue, srcValue) {
 	}
 }
 
-export function buildHybridComponent(baseComponent, opts) {
+export function buildHybridComponent(baseComponent, opts = {
+	setStateWithNewProps: true, // if true, new props will update state, else prop has priority over existing state
+	replaceEvents: false // if true, function props replace the existing reducers, else they are invoked *after* state reducer returns
+}) {
 
-	if (baseComponent._isLucidHybridComponent) {
+	const {
+		_isLucidHybridComponent,
+		displayName,
+		propTypes,
+		statics,
+		statics: { reducers }
+	} = baseComponent;
+
+	if (_isLucidHybridComponent) {
 
 		logger.warnOnce(
-			baseComponent.displayName,
-			`Lucid: you are trying to apply buildHybridComponent to ${baseComponent.displayName}, which is already a hybdrid component. Lucid exports hybrid components by default. To access the dumb components, use the -Dumb suffix, e.g. "ComponentDumb"`
+			displayName,
+			`Lucid: you are trying to apply buildHybridComponent to ${displayName}, which is already a hybdrid component. Lucid exports hybrid components by default. To access the dumb components, use the -Dumb suffix, e.g. "ComponentDumb"`
 		);
 
 		return baseComponent;
 	}
 
-	opts = _.merge({
-		setStateWithNewProps: true, // if true, new props will update state, else prop has priority over existing state
-		replaceEvents: false // if true, function props replace the existing reducers, else they are invoked *after* state reducer returns
-	}, opts);
-
-	const { reducers } = baseComponent;
-	const otherProps = _.omit(baseComponent.propTypes, _.filter(_.keys(reducers), (propName) => _.isFunction(propName)), ['children', 'className']);
-
 	return React.createClass({
-		propTypes: otherProps,
-		statics: _.chain(baseComponent).omit(['displayName', 'propTypes', 'getDefaultProps', 'defaultProps']).assign({
-			_isLucidHybridComponent: true
-		}).value(),
-		displayName: baseComponent.displayName,
+		propTypes,
+		statics: {
+			_isLucidHybridComponent: true,
+			...statics
+		},
+		displayName,
 		getInitialState() {
 			if (opts.setStateWithNewProps) {
 				return _.mergeWith({}, omitFunctionPropsDeep(baseComponent.getDefaultProps()), omitFunctionPropsDeep(this.props), overwriteArrays);
