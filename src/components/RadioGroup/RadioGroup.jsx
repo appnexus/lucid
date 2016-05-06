@@ -3,7 +3,7 @@ import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes } from '../../util/component-types';
 import getRandom from '../../util/random';
-import LabeledRadioButton from '../LabeledRadioButton/LabeledRadioButton';
+import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 import RadioButton from '../RadioButton/RadioButton';
 import reducers from './RadioGroup.reducers';
 
@@ -124,7 +124,7 @@ const RadioGroup = createClass({
 			>
 				{_.map(radioButtonChildProps, (radioButtonChildProp, index) => {
 					return (
-						<LabeledRadioButton
+						<RadioButtonLabeled
 								{...radioButtonChildProp}
 								isSelected={actualSelectedIndex === index}
 								key={index}

@@ -10,7 +10,7 @@ import describeWithDOM from '../../util/describe-with-dom';
 import getRandom from '../../util/random';
 
 import RadioGroup from './RadioGroup';
-import LabeledRadioButton from '../LabeledRadioButton/LabeledRadioButton';
+import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 
 describe('RadioGroup', () => {
 	common(RadioGroup);
@@ -27,116 +27,116 @@ describe('RadioGroup', () => {
 					</RadioGroup>
 				);
 
-				_.forEach(wrapper.find(LabeledRadioButton).nodes, (node) => {
-					assert.equal(node.props.name, name);
-				});
-			});
-
-			it('defaults to a string that is passed along to the children.', () => {
-				const wrapper = mount(
-					<RadioGroup>
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-					</RadioGroup>
-				);
-				const name = wrapper.first().prop('name');
-
-				_.forEach(wrapper.find(LabeledRadioButton).nodes, (node) => {
-					assert.equal(node.props.name, name);
-				});
+			_.forEach(wrapper.find(RadioButtonLabeled).nodes, (node) => {
+				assert.equal(node.props.name, name);
 			});
 		});
 
-		describe('onSelect', () => {
-			it('defaults to the Lodash `noop` method.', () => {
-				const wrapper = shallow(<RadioGroup />);
+		it('defaults to a string that is passed along to the children.', () => {
+			const wrapper = mount(
+				<RadioGroup>
+					<RadioGroup.RadioButton />
+					<RadioGroup.RadioButton />
+					<RadioGroup.RadioButton />
+				</RadioGroup>
+			);
+			const name = wrapper.first().prop('name');
 
-				assert.equal(wrapper.prop('onSelect'), _.noop);
-			});
-		});
-
-		describe('selectedIndex', () => {
-			it('sets the `isSelected` prop of the child radio button at the matching index to true...', () => {
-				const wrapper= shallow(
-					<RadioGroup selectedIndex={2}>
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-					</RadioGroup>
-				);
-				const childNodes = wrapper.find(LabeledRadioButton).nodes;
-
-				assert.equal(childNodes[0].props.isSelected, false);
-				assert.equal(childNodes[1].props.isSelected, false);
-				assert.equal(childNodes[2].props.isSelected, true);
-			});
-
-			it('...except when a child component already has an explicitly defined `isSelected` prop which takes precedence.', () => {
-				const wrapper = shallow(
-					<RadioGroup selectedIndex={2}>
-						<RadioGroup.RadioButton isSelected={true} />
-						<RadioGroup.RadioButton isSelected={true} />
-						<RadioGroup.RadioButton />
-					</RadioGroup>
-				);
-				const childNodes = wrapper.find(LabeledRadioButton).nodes;
-
-				assert.equal(childNodes[0].props.isSelected, false);
-				assert.equal(childNodes[1].props.isSelected, true);
-				assert.equal(childNodes[2].props.isSelected, false);
-			});
-
-			it('defaults to 0.', () => {
-				const wrapper = shallow(
-					<RadioGroup>
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-					</RadioGroup>
-				);
-				const childNodes = wrapper.find(LabeledRadioButton).nodes;
-
-				assert.equal(childNodes[0].props.isSelected, true);
-				assert.equal(childNodes[1].props.isSelected, false);
-				assert.equal(childNodes[2].props.isSelected, false);
-			});
-		});
-
-		describe('pass throughs', () => {
-			it('passes through all props not defined in `propTypes` to the root element.', () => {
-				const wrapper = shallow(
-					<RadioGroup foo={1} bar={2} baz={3} qux={4} quux={5}>
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-						<RadioGroup.RadioButton />
-					</RadioGroup>
-				);
-				const rootProps = _.keys(wrapper.first().props());
-
-				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
-				// to the root element.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
-					assert(_.includes(rootProps, prop));
-				});
+			_.forEach(wrapper.find(RadioButtonLabeled).nodes, (node) => {
+				assert.equal(node.props.name, name);
 			});
 		});
 	});
 
-	describe('RadioGroup.Label', () => {
-		it('passes its children through as the `Label` prop for the corresponding `LabeledRadioButton`.', () => {
-			const wrapper = shallow(
-				<RadioGroup>
-					<RadioGroup.RadioButton>
-						<RadioGroup.Label>foo</RadioGroup.Label>
-					</RadioGroup.RadioButton>
-					<RadioGroup.RadioButton>
-						<RadioGroup.Label>bar</RadioGroup.Label>
-					</RadioGroup.RadioButton>
-					<RadioGroup.RadioButton></RadioGroup.RadioButton>
+	describe('onSelect', () => {
+		it('defaults to the Lodash `noop` method.', () => {
+			const wrapper = shallow(<RadioGroup />);
+
+			assert.equal(wrapper.prop('onSelect'), _.noop);
+		});
+	});
+
+	describe('selectedIndex', () => {
+		it('sets the `isSelected` prop of the child radio button at the matching index to true...', () => {
+			const wrapper= shallow(
+				<RadioGroup selectedIndex={2}>
+					<RadioGroup.RadioButton />
+					<RadioGroup.RadioButton />
+					<RadioGroup.RadioButton />
 				</RadioGroup>
 			);
-			const childNodes = wrapper.find(LabeledRadioButton).nodes;
+			const childNodes = wrapper.find(RadioButtonLabeled).nodes;
+
+			assert.equal(childNodes[0].props.isSelected, false);
+			assert.equal(childNodes[1].props.isSelected, false);
+			assert.equal(childNodes[2].props.isSelected, true);
+		});
+
+		it('...except when a child component already has an explicitly defined `isSelected` prop which takes precedence.', () => {
+			const wrapper = shallow(
+				<RadioGroup selectedIndex={2}>
+					<RadioGroup.RadioButton isSelected={true} />
+					<RadioGroup.RadioButton isSelected={true} />
+					<RadioGroup.RadioButton />
+				</RadioGroup>
+			);
+			const childNodes = wrapper.find(RadioButtonLabeled).nodes;
+
+			assert.equal(childNodes[0].props.isSelected, false);
+			assert.equal(childNodes[1].props.isSelected, true);
+			assert.equal(childNodes[2].props.isSelected, false);
+		});
+
+		it('defaults to 0.', () => {
+			const wrapper = shallow(
+				<RadioGroup>
+					<RadioGroup.RadioButton />
+					<RadioGroup.RadioButton />
+					<RadioGroup.RadioButton />
+				</RadioGroup>
+			);
+			const childNodes = wrapper.find(RadioButtonLabeled).nodes;
+
+			assert.equal(childNodes[0].props.isSelected, true);
+			assert.equal(childNodes[1].props.isSelected, false);
+			assert.equal(childNodes[2].props.isSelected, false);
+		});
+	});
+
+	describe('pass throughs', () => {
+		it('passes through all props not defined in `propTypes` to the root element.', () => {
+			const wrapper = shallow(
+				<RadioGroup foo={1} bar={2} baz={3} qux={4} quux={5}>
+					<RadioGroup.RadioButton />
+					<RadioGroup.RadioButton />
+					<RadioGroup.RadioButton />
+				</RadioGroup>
+			);
+			const rootProps = _.keys(wrapper.first().props());
+
+			// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
+			// to the root element.
+			_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
+				assert(_.includes(rootProps, prop));
+			});
+		});
+	});
+});
+
+describe('RadioGroup.Label', () => {
+	it('passes its children through as the `Label` prop for the corresponding `RadioButtonLabeled`.', () => {
+		const wrapper = shallow(
+			<RadioGroup>
+				<RadioGroup.RadioButton>
+					<RadioGroup.Label>foo</RadioGroup.Label>
+				</RadioGroup.RadioButton>
+				<RadioGroup.RadioButton>
+					<RadioGroup.Label>bar</RadioGroup.Label>
+				</RadioGroup.RadioButton>
+				<RadioGroup.RadioButton></RadioGroup.RadioButton>
+			</RadioGroup>
+		);
+		const childNodes = wrapper.find(RadioButtonLabeled).nodes;
 
 			assert.equal(childNodes[0].props.Label, 'foo');
 			assert.equal(childNodes[1].props.Label, 'bar');
