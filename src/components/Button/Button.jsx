@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Button');
-const boundClassNames = lucidClassNames.bind('&-Button');
 
 const {
 	arrayOf,

@@ -6,7 +6,7 @@ import reducers from '../TextField/TextField.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes } from '../../util/component-types';
 
-const cx = lucidClassNames.bind('&-ValidatedTextField');
+const cx = lucidClassNames.bind('&-TextFieldValidated');
 
 const {
 	object,
@@ -26,7 +26,7 @@ const TextFieldValidated = createClass({
 
 	components: {
 		Error: createClass({
-			displayName: 'ValidatedTextField.Error',
+			displayName: 'TextFieldValidated.Error',
 			propName: 'Error'
 		}),
 	},
