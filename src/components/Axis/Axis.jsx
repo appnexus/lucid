@@ -11,18 +11,23 @@ const boundClassNames = lucidClassNames.bind('&-Axis');
 const TEXT_OFFSET = 3;
 
 const {
+	array,
 	func,
 	number,
 	oneOf,
-	array,
 } = React.PropTypes;
 
 /**
  * {"categories": ["visualizations", "chart primitives"]}
  *
- * Fashion axe mixtape vegan shoreditch put a bird on it selvage banh mi franzen
+ * Axes and allies
+ *
+ * This component is a very close sister to `d3.avg.axis` and most of the logic
+ * was ported from d3.
  */
-const BarChart = React.createClass({
+const Axis = React.createClass({
+	_lucidIsPrivate: true,
+
 	propTypes: {
 		/**
 		 * Must be a D3 scale.
@@ -60,12 +65,15 @@ const BarChart = React.createClass({
 		 */
 		orient: oneOf(['top', 'bottom', 'left', 'right']),
 		/**
+		 * Control the number of ticks displayed.
+		 *
 		 * Usually when using an ordinal scale you should show a tick mark for
 		 * every value, but there are some rare cases when you want to only show a
 		 * sampling of the ticks. By passing in a number to we'll generate an
-		 * evenly spaced number of ticks and display them for ordinal scales.
+		 * evenly spaced number of ticks and display them for ordinal and
+		 * continuous scales.
 		 */
-		ordinalTickCount: number,
+		tickCount: number,
 	},
 
 	getDefaultProps() {
@@ -75,7 +83,7 @@ const BarChart = React.createClass({
 			tickPadding: 3, // same as d3
 			tickFormat: undefined, // purposefully `undefined` so we can drop through to destructuring defaults
 			orient: 'bottom',
-			ordinalTickCount: null,
+			tickCount: null,
 		};
 	},
 
@@ -83,8 +91,10 @@ const BarChart = React.createClass({
 		const {
 			scale,
 			orient,
-			ordinalTickCount,
-			ticks = scale.ticks ? scale.ticks() : discreteTicks(scale.domain(), ordinalTickCount), // ordinal scales don't have `ticks` but they do have `domains`
+			tickCount,
+			ticks = scale.ticks
+				? scale.ticks(tickCount)
+				: discreteTicks(scale.domain(), tickCount), // ordinal scales don't have `ticks` but they do have `domains`
 			innerTickSize,
 			outerTickSize,
 			tickFormat = scale.tickFormat ? scale.tickFormat() : _.identity,
@@ -156,4 +166,4 @@ const BarChart = React.createClass({
 	}
 });
 
-export default BarChart;
+export default Axis;

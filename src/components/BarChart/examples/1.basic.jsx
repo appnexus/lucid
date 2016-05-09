@@ -12,7 +12,14 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<BarChart data={data} />
+				<BarChart
+					data={data}
+					yAxisHasTitle
+					legend={{
+						x: 'Date',
+						y: 'Yield',
+					}}
+				/>
 			</div>
 		);
 	}

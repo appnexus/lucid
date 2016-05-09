@@ -5,10 +5,12 @@ import {
 	minByFields,
 	maxByFields,
 	maxByFieldsStacked,
+	formatDate,
 } from '../../util/chart-helpers';
 import d3Scale from 'd3-scale';
 
 import Axis from '../Axis/Axis';
+import AxisLabel from '../AxisLabel/AxisLabel';
 import Lines from '../Lines/Lines';
 import Points from '../Points/Points';
 
@@ -18,6 +20,7 @@ const {
 	any,
 	arrayOf,
 	func,
+	instanceOf,
 	number,
 	object,
 	shape,
@@ -29,8 +32,9 @@ const {
 /**
  * {"categories": ["visualizations", "charts"]}
  *
- * A bar chart is a chart that presents grouped data with rectangular bars with
- * lengths proportional to the values that they represent.
+ * The line chart presents data over time. Currently only dates are supported
+ * on the x axis and numeric values on the y. If you need discrete values on
+ * the x axis, consider using the `BarChart` instead.
  */
 const LineChart = React.createClass({
 	propTypes: {
@@ -47,8 +51,8 @@ const LineChart = React.createClass({
 		 */
 		width: number,
 		/**
-		 * An object defining the margins of the chart. These margins typically
-		 * contain the axis and labels.
+		 * An object defining the margins of the chart. These margins will contain
+		 * the axis and labels.
 		 */
 		margin: shape({
 			top: number,
@@ -60,35 +64,57 @@ const LineChart = React.createClass({
 		 * Data for the chart. E.g.
 		 *
 		 *     [
-		 *       { x: 'Monday', y: 1 },
-		 *       { x: 'Tuesday', y: 2 },
-		 *       { x: 'Wednesday', y: 3 },
-		 *       { x: 'Thursday', y: 2 },
-		 *       { x: 'Friday', y: 5 },
+		 *       { x: new Date('2015-01-01') , y: 1 } ,
+		 *       { x: new Date('2015-01-02') , y: 2 } ,
+		 *       { x: new Date('2015-01-03') , y: 3 } ,
+		 *       { x: new Date('2015-01-04') , y: 2 } ,
+		 *       { x: new Date('2015-01-05') , y: 5 } ,
 		 *     ]
 		 */
 		data: arrayOf(object).isRequired,
+		/**
+		 * An object with human readable names for fields that is used for legend
+		 * purposes. E.g:
+		 *
+		 *     {
+		 *       x: 'Revenue',
+		 *       y: 'Impressions',
+		 *     }
+		 *
+		 */
+		legend: object,
 
 
 		/**
-		 * The field we should look up your x data by.
+		 * The field we should look up your x data by. The data must be valid
+		 * javascript dates.
 		 */
 		xAxisField: string,
 		/**
-		 * The minimum the x axis should display. Typically this will be the
+		 * The minimum date the x axis should display. Typically this will be the
 		 * smallest items from your dataset.
 		 */
-		xAxisMin: number,
+		xAxisMin: instanceOf(Date),
 		/**
-		 * The maximum the x axis should display. This should almost always be the
-		 * largest item from your dataset.
+		 * The maximum date the x axis should display. This should almost always be
+		 * the largest date from your dataset.
 		 */
-		xAxisMax: number,
+		xAxisMax: instanceOf(Date),
 		/**
 		 * An optional function used to format your x axis data. If you don't
-		 * provide anything, we use the default D3 formatter.
+		 * provide anything, we use the default D3 date variable formatter.
 		 */
 		xAxisFormatter: func,
+		/**
+		 * There are some cases where you need to only show a "sampling" of ticks
+		 * on the x axis. This number will control that.
+		 */
+		xAxisTickCount: number,
+		/**
+		 * Show a title for the x axis. If you want to make this more readable, be
+		 * sure to provide the `legend` prop.
+		 */
+		xAxisHasTitle: bool,
 
 
 		/**
@@ -120,6 +146,16 @@ const LineChart = React.createClass({
 		 * Display points along with the y axis lines.
 		 */
 		yAxisHasPoints: bool,
+		/**
+		 * There are some cases where you need to only show a "sampling" of ticks
+		 * on the y axis. This number will control that.
+		 */
+		yAxisTickCount: number,
+		/**
+		 * Show a title for the y axis. If you want to make this more readable, be
+		 * sure to provide the `legend` prop.
+		 */
+		yAxisHasTitle: bool,
 
 
 		/**
@@ -151,18 +187,16 @@ const LineChart = React.createClass({
 		 * Display points along with the y2 axis lines.
 		 */
 		y2AxisHasPoints: bool,
-
 		/**
-		 * An object with human readable names for fields that is used for legend
-		 * purposes. E.g:
-		 *
-		 *     {
-		 *       x: 'Revenue',
-		 *       y: 'Impressions',
-		 *     }
-		 *
-		 * legend: object, // TODO: implement this
+		 * There are some cases where you need to only show a "sampling" of ticks
+		 * on the y2 axis. This number will control that.
 		 */
+		y2AxisTickCount: number,
+		/**
+		 * Show a title for the y2 axis. If you want to make this more readable, be
+		 * sure to provide the `legend` prop.
+		 */
+		y2AxisHasTitle: bool,
 	},
 
 	getDefaultProps() {
@@ -171,22 +205,31 @@ const LineChart = React.createClass({
 			width: 1000,
 			margin: {
 				top: 10,
-				right: 20,
+				right: 80,
 				bottom: 50,
 				left: 80,
 			},
 
 			xAxisField: 'x',
+			xAxisTickCount: null,
+			xAxisFormatter: undefined, // purposefully done, see Axis.jsx
+			xAxisHasTitle: false,
 
 			yAxisFields: ['y'],
 			yAxisIsStacked: false,
 			yAxisMin: 0,
 			yAxisHasPoints: true,
+			yAxisTickCount: null,
+			yAxisFormatter: undefined, // purposefully done, see Axis.jsx
+			yAxisHasTitle: false,
 
 			y2AxisFields: null,
 			y2AxisIsStacked: false,
 			y2AxisHasPoints: true,
 			y2AxisMin: 0,
+			y2AxisTickCount: null,
+			y2AxisFormatter: undefined, // purposefully done, see Axis.jsx
+			y2AxisHasTitle: false,
 		};
 	},
 
@@ -197,12 +240,18 @@ const LineChart = React.createClass({
 			width,
 			margin,
 			data,
+			legend,
 
 			xAxisField,
+			xAxisTickCount,
+			xAxisHasTitle,
+			xAxisFormatter = formatDate,
 			xAxisMin = minByFields(data, xAxisField),
 			xAxisMax = maxByFields(data, xAxisField),
 
 			yAxisFields,
+			yAxisHasTitle,
+			yAxisTickCount,
 			yAxisIsStacked,
 			yAxisHasPoints,
 			yAxisFormatter,
@@ -212,8 +261,10 @@ const LineChart = React.createClass({
 				: maxByFields(data, yAxisFields),
 
 			y2AxisFields,
+			y2AxisTickCount,
 			y2AxisIsStacked,
 			y2AxisHasPoints,
+			y2AxisHasTitle,
 			y2AxisFormatter,
 			y2AxisMin,
 			y2AxisMax = y2AxisFields && y2AxisIsStacked
@@ -223,6 +274,8 @@ const LineChart = React.createClass({
 			...passThroughs,
 		} = this.props;
 
+		// TODO: Consider displaying something specific when there is no data,
+		// perhaps a loading indicator.
 		if (_.isEmpty(data)) {
 			return null;
 		}
@@ -255,7 +308,24 @@ const LineChart = React.createClass({
 						orient='bottom'
 						scale={xScale}
 						outerTickSize={0}
+						tickFormat={xAxisFormatter}
+						tickCount={xAxisTickCount}
+						ref='xAxis'
 					/>
+				</g>
+
+				{/* x axis title */}
+				<g transform={`translate(${margin.left}, ${margin.top + innerHeight})`}>
+					{xAxisHasTitle ? (
+						<AxisLabel
+							orient='bottom'
+							width={innerWidth}
+							height={margin.bottom}
+							label={_.get(legend, xAxisField, xAxisField)}
+							color={-1}
+							ref='xAxisTitle'
+						/>
+					) : null}
 				</g>
 
 				{/* y axis */}
@@ -264,7 +334,22 @@ const LineChart = React.createClass({
 						orient='left'
 						scale={yScale}
 						tickFormat={yAxisFormatter}
+						tickCount={yAxisTickCount}
+						ref='yAxis'
 					/>
+				</g>
+
+				{/* y axis title */}
+				<g transform={`translate(0, ${margin.top})`}>
+					{yAxisHasTitle ? (
+						<AxisLabel
+							orient='left'
+							width={margin.left}
+							height={innerHeight}
+							label={_.map(yAxisFields, (field) => _.get(legend, field, field))}
+							ref='yAxisTitle'
+						/>
+					) : null}
 				</g>
 
 				{/* y2 axis */}
@@ -274,9 +359,25 @@ const LineChart = React.createClass({
 							orient='right'
 							scale={y2Scale}
 							tickFormat={y2AxisFormatter}
+							tickCount={y2AxisTickCount}
+							ref='y2Axis'
 						/>
 					</g>
 				: null}
+
+				{/* y2 axis title */}
+				<g transform={`translate(${margin.left + innerWidth}, ${margin.top})`}>
+					{y2AxisHasTitle ? (
+						<AxisLabel
+							orient='right'
+							width={margin.right}
+							height={innerHeight}
+							label={_.map(y2AxisFields, (field) => _.get(legend, field, field))}
+							color={1}
+							ref='y2AxisTitle'
+						/>
+					) : null}
+				</g>
 
 				{/* y axis lines */}
 				<Lines
@@ -288,6 +389,7 @@ const LineChart = React.createClass({
 					yFields={yAxisFields}
 					data={data}
 					isStacked={yAxisIsStacked}
+					ref='yLines'
 				/>
 
 				{/* y axis points */}
@@ -301,6 +403,7 @@ const LineChart = React.createClass({
 						yFields={yAxisFields}
 						data={data}
 						isStacked={yAxisIsStacked}
+						ref='yPoints'
 					/>
 				: null}
 
@@ -316,6 +419,7 @@ const LineChart = React.createClass({
 						data={data}
 						isStacked={y2AxisIsStacked}
 						colorOffset={1}
+						ref='y2Lines'
 					/>
 				: null}
 
@@ -331,6 +435,7 @@ const LineChart = React.createClass({
 						data={data}
 						isStacked={y2AxisIsStacked}
 						colorOffset={1}
+						ref='y2Points'
 					/>
 				: null}
 			</svg>

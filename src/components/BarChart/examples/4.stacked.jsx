@@ -16,6 +16,12 @@ export default React.createClass({
 					yAxisFields={['apples', 'pears', 'peaches']}
 					yAxisMin={0}
 					yAxisIsStacked={true}
+					yAxisHasTitle={true}
+					legend={{
+						apples: 'Apples',
+						pears: 'Pears',
+						peaches: 'Peaches',
+					}}
 				/>
 			</div>
 		);

@@ -14,6 +14,7 @@ export default React.createClass({
 			<LineChart
 				data={data}
 				yAxisFields={['apples', 'oranges', 'pears']}
+				yAxisHasTitle={true}
 			/>
 		);
 	}

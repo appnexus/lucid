@@ -15,6 +15,7 @@ export default React.createClass({
 					data={data}
 					yAxisFields={['apples', 'pears', 'peaches']}
 					yAxisMin={0}
+					yAxisHasTitle
 				/>
 			</div>
 		);

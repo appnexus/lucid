@@ -95,7 +95,7 @@ export default React.createClass({
 					</g>
 					{/* Push the x axis to the bottom margin with a translate */}
 					<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
-						<Axis scale={x} />
+						<Axis scale={x} tickCount={2} />
 					</g>
 					{/* line + scatter */}
 					<g transform={`translate(${margin.left}, ${margin.top})`}>

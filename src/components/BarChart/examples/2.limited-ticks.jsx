@@ -29,6 +29,7 @@ export default React.createClass({
 					data={data}
 					yAxisMin={0}
 					xAxisTickCount={5}
+					yAxisTickCount={4}
 				/>
 			</div>
 		);

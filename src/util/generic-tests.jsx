@@ -83,7 +83,12 @@ export function common(Component, { getDefaultProps = _.noop, selector = null } 
 
 				// If it's probably a function, and it's not `any`, then we make sure
 				// it starts with `on`
-				if (isProbablyFunction && !isAny && !_.startsWith(key, 'on')) {
+				if (
+					isProbablyFunction
+					&& !isAny
+					&& !_.startsWith(key, 'on')
+					&& !_.includes(key, 'Formatter') // we make an exception to the rule for formatters
+				) {
 					return false
 				}
 
@@ -91,9 +96,12 @@ export function common(Component, { getDefaultProps = _.noop, selector = null } 
 			}));
 		});
 
-		it('should be available as an exported module from index.js', () => {
-			assert(lucid[Component.displayName]);
-		});
+		// Only run this test if it's a public component
+		if (!Component._lucidIsPrivate) {
+			it('should be available as an exported module from index.js', () => {
+				assert(lucid[Component.displayName]);
+			});
+		}
 	});
 }
 

@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import d3TimeFormat from 'd3-time-format';
+import d3Time from 'd3-time';
 
 /**
  * groupByFields
@@ -140,22 +141,31 @@ export function transformFromCenter(x, y, xCenter, yCenter, scale) {
 	return `translate(${((1 - scale) * xCenter) + (x - xCenter)}, ${((1 - scale) * yCenter) + (y - yCenter)}) scale(${scale})`;
 }
 
-const formatMillisecond = d3TimeFormat.timeFormat('.%L');
-const formatSecond = d3TimeFormat.timeFormat(':%S');
-const formatMinute = d3TimeFormat.timeFormat('%I:%M');
-const formatHour = d3TimeFormat.timeFormat('%I %p');
-const formatDay = d3TimeFormat.timeFormat('%a %d');
-const formatWeek = d3TimeFormat.timeFormat('%b %d');
-const formatMonth = d3TimeFormat.timeFormat('%B');
-const formatYear = d3TimeFormat.timeFormat('%Y');
+const FORMAT_MILLISECOND = d3TimeFormat.timeFormat('.%L');
+const FORMAT_SECOND = d3TimeFormat.timeFormat(':%S');
+const FORMAT_MINUTE = d3TimeFormat.timeFormat('%I:%M');
+const FORMAT_HOUR = d3TimeFormat.timeFormat('%I %p');
+const FORMAT_DAY = d3TimeFormat.timeFormat('%a %d');
+const FORMAT_WEEK = d3TimeFormat.timeFormat('%b %d');
+const FORMAT_MONTH = d3TimeFormat.timeFormat('%b');
+const FORMAT_YEAR = d3TimeFormat.timeFormat('%Y');
 
-export function multiFormat(date) {
-	return (d3TimeFormat.timeSecond(date) < date ? formatMillisecond
-		: d3TimeFormat.timeMinute(date) < date ? formatSecond
-		: d3TimeFormat.timeHour(date) < date ? formatMinute
-		: d3TimeFormat.timeDay(date) < date ? formatHour
-		: d3TimeFormat.timeMonth(date) < date ? (d3TimeFormat.timeWeek(date) < date ? formatDay : formatWeek)
-		: d3TimeFormat.timeYear(date) < date ? formatMonth
-		: formatYear)(date);
+/**
+ * formatDate
+ *
+ * This function was written to be used for tick formatting with d3 time
+ * scales.
+ *
+ * @param {date} date - input date
+ * @return {string} - formatted date
+ */
+export function formatDate(date) {
+	return (d3Time.timeSecond(date) < date ? FORMAT_MILLISECOND
+		: d3Time.timeMinute(date) < date ? FORMAT_SECOND
+		: d3Time.timeHour(date) < date ? FORMAT_MINUTE
+		: d3Time.timeDay(date) < date ? FORMAT_HOUR
+		: d3Time.timeMonth(date) < date ? (d3Time.timeWeek(date) < date ? FORMAT_DAY : FORMAT_WEEK)
+		: d3Time.timeYear(date) < date ? FORMAT_MONTH
+		: FORMAT_YEAR)(date);
 }
 

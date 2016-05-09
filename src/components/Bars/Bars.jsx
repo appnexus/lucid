@@ -25,6 +25,8 @@ const {
  * Foo
  */
 const Bars = React.createClass({
+	_lucidIsPrivate: true,
+
 	propTypes: {
 		/**
 		 * Classes are appended to existing classes using the `classnames` library.

@@ -27,6 +27,8 @@ const PATHS = [
  *
  */
 const Point = React.createClass({
+	_lucidIsPrivate: true,
+
 	propTypes: {
 		/**
 		 * Class name appended to the underling element.

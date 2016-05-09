@@ -49,8 +49,8 @@ const docgenMap = _.mapValues(docgenMapRaw, (value, componentName) => {
  * file extensions then capitalizes each word and separates each with a space.
  */
 function getExampleTitleFromFilename (filename) {
-    const words = _.words(_.startCase(basename(filename, '.jsx')));
-    return (/^\d+$/.test(_.head(words)) ? _.tail(words) : words).join(' ');
+	const words = _.words(_.startCase(basename(filename, '.jsx')));
+	return (/^\d+$/.test(_.head(words)) ? _.tail(words) : words).join(' ');
 }
 
 const examplesByComponent = _.chain(reqExamples.keys())
@@ -66,13 +66,6 @@ const examplesByComponent = _.chain(reqExamples.keys())
 	})
 	.groupBy('componentName')
 	.value();
-
-const docgenGroups = _.reduce(docgenMap, (acc, value, key) => {
-	const path = value.customData.categories.join('.');
-	const newGroup = _.get(acc, path, []);
-	newGroup.push(key);
-	return _.set(acc, path, newGroup);
-}, {});
 
 function handleHighlightCode() {
 	if (window.hljs) { //eslint-disable-line
@@ -324,10 +317,10 @@ const Component = React.createClass({
 					</section>
 				) : null}
 				<h3>Examples</h3>
-				<ul className={'Component-examples '+componentName}>
+				<ul className={`Component-examples ${componentName}`}>
 					{_.map(_.get(examplesByComponent, componentName, []), (example) => {
 						return (
-							<li className={componentName+'-example-'+example.name} key={example.name}>
+							<li className={`${componentName}-example-${example.name}`} key={example.name}>
 								<div className='Component-examples-header'>
 									<h4>{example.name}</h4>
 									<a href='#' onClick={(event) => {
@@ -388,6 +381,18 @@ const App = React.createClass({
 	},
 
 	render() {
+		const showPrivateComponents = _.get(this, 'props.location.query.private', false);
+		const docgenGroups = _.reduce(docgenMap, (acc, value, key) => {
+			if (!showPrivateComponents && value.isPrivateComponent) {
+				return acc;
+			}
+
+			const path = value.customData.categories.join('.');
+			const newGroup = _.get(acc, path, []);
+			newGroup.push(key);
+			return _.set(acc, path, newGroup);
+		}, {});
+
 		return (
 			<div className='App'>
 				<div className='App-sidebar'>

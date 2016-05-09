@@ -8,6 +8,7 @@ import {
 import d3Scale from 'd3-scale';
 
 import Axis from '../Axis/Axis';
+import AxisLabel from '../AxisLabel/AxisLabel';
 import Bars from '../Bars/Bars';
 
 const boundClassNames = lucidClassNames.bind('&-BarChart');
@@ -27,8 +28,9 @@ const {
 /**
  * {"categories": ["visualizations", "charts"]}
  *
- * A bar chart is a chart that presents grouped data with rectangular bars with
- * lengths proportional to the values that they represent.
+ * Bar chart displays is great for showing data that fits neatly in to
+ * "buckets". The x axis data should be strings, and the y axis data should be
+ * numeric.
  */
 const BarChart = React.createClass({
 	propTypes: {
@@ -58,24 +60,38 @@ const BarChart = React.createClass({
 		 * Data for the chart. E.g.
 		 *
 		 *     [
-		 *       { x: 'Monday', y: 1 },
-		 *       { x: 'Tuesday', y: 2 },
-		 *       { x: 'Wednesday', y: 3 },
-		 *       { x: 'Thursday', y: 2 },
-		 *       { x: 'Friday', y: 5 },
+		 *       { x: 'Monday'    , y: 1 } ,
+		 *       { x: 'Tuesday'   , y: 2 } ,
+		 *       { x: 'Wednesday' , y: 3 } ,
+		 *       { x: 'Thursday'  , y: 2 } ,
+		 *       { x: 'Friday'    , y: 5 } ,
 		 *     ]
 		 */
 		data: arrayOf(object).isRequired,
+
+
 		/**
 		 * The field we should look up your x data by. Your actual x data must be
 		 * strings.
 		 */
 		xAxisField: string,
 		/**
-		 * It's not recommended, but there are some cases where you need to only
-		 * show a "sampling" of ticks on the x axis. This number will control that.
+		 * There are some cases where you need to only show a "sampling" of ticks
+		 * on the x axis. This number will control that.
 		 */
 		xAxisTickCount: number,
+		/**
+		 * Show a title for the x axis. If you want to make this more readable, be
+		 * sure to provide the `legend` prop.
+		 */
+		xAxisHasTitle: bool,
+		/**
+		 * An optional function used to format your x axis data. If you don't
+		 * provide anything, we'll use an identity function.
+		 */
+		xAxisFormatter: func,
+
+
 		/**
 		 * An array of your y axis fields. Typically this will just be a single
 		 * item unless you need to display grouped or stacked bars.
@@ -103,6 +119,18 @@ const BarChart = React.createClass({
 		 */
 		yAxisIsStacked: bool,
 		/**
+		 * There are some cases where you need to only show a "sampling" of ticks
+		 * on the y axis. This number will control that.
+		 */
+		yAxisTickCount: number,
+		/**
+		 * Show a title for the y axis. If you want to make this more readable, be
+		 * sure to provide the `legend` prop.
+		 */
+		yAxisHasTitle: bool,
+
+
+		/**
 		 * An object with human readable names for fields that is used for legend
 		 * purposes. E.g:
 		 *
@@ -111,8 +139,8 @@ const BarChart = React.createClass({
 		 *       y: 'Impressions',
 		 *     }
 		 *
-		 * legend: object, // TODO: implement this
 		 */
+		legend: object,
 	},
 
 	getDefaultProps() {
@@ -125,11 +153,17 @@ const BarChart = React.createClass({
 				bottom: 50,
 				left: 80,
 			},
+			legend: null,
+
 			xAxisField: 'x',
 			xAxisTickCount: null,
+			xAxisHasTitle: false,
+
 			yAxisFields: ['y'],
+			yAxisTickCount: null,
 			yAxisIsStacked: false,
 			yAxisMin: 0,
+			yAxisHasTitle: false,
 		};
 	},
 
@@ -140,15 +174,23 @@ const BarChart = React.createClass({
 			width,
 			margin,
 			data,
+			legend,
+
 			xAxisField,
+			xAxisFormatter,
+			xAxisHasTitle,
 			xAxisTickCount,
+
 			yAxisFields,
-			yAxisIsStacked,
 			yAxisFormatter,
+			yAxisHasTitle,
+			yAxisIsStacked,
+			yAxisTickCount,
 			yAxisMin,
 			yAxisMax = yAxisIsStacked
 				? maxByFieldsStacked(data, yAxisFields)
 				: maxByFields(data, yAxisFields),
+
 			...passThroughs,
 		} = this.props;
 
@@ -178,32 +220,59 @@ const BarChart = React.createClass({
 				width={width}
 				height={height}
 			>
-				{/* Push the y axis to the right margin with a translate */}
-				<g transform={`translate(${margin.left}, ${margin.top})`}>
-					<Axis
-						orient='left'
-						scale={yScale}
-						tickFormat={yAxisFormatter}
-					/>
-				</g>
-
-				{/* Push the x axis to the bottom margin with a translate */}
+				{/* x axis */}
 				<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
 					<Axis
 						orient='bottom'
 						scale={xScale}
 						outerTickSize={0}
-						ordinalTickCount={xAxisTickCount}
+						tickCount={xAxisTickCount}
+						tickFormat={xAxisFormatter}
 					/>
+				</g>
+
+				{/* x axis title */}
+				<g transform={`translate(${margin.left}, ${margin.top + innerHeight})`}>
+					{xAxisHasTitle ? (
+						<AxisLabel
+							orient='bottom'
+							width={innerWidth}
+							height={margin.bottom}
+							label={_.get(legend, xAxisField, xAxisField)}
+						/>
+					) : null}
+				</g>
+
+				{/* y axis */}
+				<g transform={`translate(${margin.left}, ${margin.top})`}>
+					<Axis
+						orient='left'
+						scale={yScale}
+						tickFormat={yAxisFormatter}
+						tickCount={yAxisTickCount}
+					/>
+				</g>
+
+				{/* y axis title */}
+				<g transform={`translate(0, ${margin.top})`}>
+					{yAxisHasTitle ? (
+						<AxisLabel
+							orient='left'
+							width={margin.left}
+							height={innerHeight}
+							label={_.map(yAxisFields, (field) => _.get(legend, field, field))}
+						/>
+					) : null}
 				</g>
 
 				{/* bars */}
 				<Bars
 					top={margin.top}
 					left={margin.left}
+					xField={xAxisField}
 					xScale={xScale}
-					yScale={yScale}
 					yFields={yAxisFields}
+					yScale={yScale}
 					data={data}
 					isStacked={yAxisIsStacked}
 				/>
