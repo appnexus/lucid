@@ -42,7 +42,7 @@ const ContextMenu = createClass({
 		/**
 		 * alignment of the FlyOut relative to Target. Defaults to `'down'`.
 		 */
-		direction: oneOf(['down', 'up']),
+		direction: oneOf(['down', 'up', 'right', 'left']),
 		/**
 		 * Indicates whether the FlyOut will render or not. Defaults to `true`.
 		 */
@@ -151,6 +151,33 @@ const ContextMenu = createClass({
 		});
 	},
 
+	getFlyoutPosition(direction, targetRect, flyOutHeight/*, alignment */) {
+
+		if (direction === ContextMenu.UP) {
+			return {
+				top: targetRect.top - flyOutHeight,
+				left: targetRect.left,
+			};
+		}
+		if (direction === ContextMenu.DOWN) {
+			return {
+				top: targetRect.bottom,
+				left: targetRect.left,
+			};
+		}
+		if (direction === ContextMenu.RIGHT) {
+			return {
+				top: targetRect.top,
+				left: targetRect.left + targetRect.width,
+			};
+		}
+		return {
+			top: targetRect.top,
+			right: window.innerWidth - targetRect.left,
+		};
+
+	},
+
 	render() {
 		const {
 			className,
@@ -186,10 +213,8 @@ const ContextMenu = createClass({
 						portalId={portalId}
 						style={_.assign({}, flyProps.style, {
 							position: 'absolute',
-							left: targetRect.left,
 							minWidth: targetRect.width,
-							top: (direction === ContextMenu.UP ? targetRect.top - flyOutHeight : targetRect.bottom)
-						})}
+						}, this.getFlyoutPosition(direction, targetRect, flyOutHeight))}
 					>
 						{flyProps.children}
 					</Portal>
