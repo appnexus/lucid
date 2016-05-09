@@ -93,9 +93,9 @@ export function buildHybridComponent(baseComponent, opts = {
 		displayName,
 		propTypes,
 		definition: {
-			statics,
-			statics: { reducers }
-		}
+			statics = {},
+			statics: { reducers } = {}
+		} = {}
 	} = baseComponent;
 
 	if (_isLucidHybridComponent) {
