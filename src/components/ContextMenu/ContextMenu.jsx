@@ -101,6 +101,9 @@ const ContextMenu = createClass({
 	componentDidMount() {
 
 		this.alignFlyOut();
+		this.updateTargetRectangleIntervalId = setInterval(() => {
+			this.alignFlyOut();
+		}, 10);
 
 		this.onClickBodyEventListener = window.addEventListener('click', (event) => {
 			if (this.props.onClickOut && this.refs.flyOutPortal) {
@@ -113,6 +116,7 @@ const ContextMenu = createClass({
 	},
 
 	componentWillUnmount() {
+		clearInterval(this.updateTargetRectangleIntervalId);
 		window.document.body.removeEventListener('click', this.onClickBodyEventListener);
 	},
 
