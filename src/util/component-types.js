@@ -13,17 +13,21 @@ export function createClass(definition={}) {
 		...restDefinition,
 	} = definition;
 
-	return React.createClass({
+	const newDefinition = {
 		...restDefinition,
 		statics: {
 			...statics,
 			...components,
 			reducers,
 			selectors,
-			propName,
+			propName
 		},
 		render,
-	});
+	};
+
+	newDefinition.statics.definition = newDefinition;
+
+	return React.createClass(newDefinition);
 }
 
 // return all elements matching the specified types

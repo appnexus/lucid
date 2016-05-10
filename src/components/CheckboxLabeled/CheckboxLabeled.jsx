@@ -4,7 +4,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes }  from '../../util/component-types';
 import Checkbox from '../Checkbox/Checkbox';
 
-const cx = lucidClassNames.bind('&-LabeledCheckbox');
+const cx = lucidClassNames.bind('&-CheckboxLabeled');
 const {
 	any,
 	node,
@@ -23,7 +23,7 @@ const CheckboxLabeled = createClass({
 
 	components: {
 		Label: createClass({
-			displayName: 'LabeledCheckbox.Label',
+			displayName: 'CheckboxLabeled.Label',
 			propName: 'Label',
 			propTypes: {
 				/**

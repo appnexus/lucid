@@ -13,6 +13,9 @@ import {
 	getStatefulPropsContext,
 	buildHybridComponent
 } from './state-management';
+import {
+	createClass
+} from './component-types';
 
 describe('#getDeepPaths', () => {
 	it('should return an empty array when arg is empty object, null, or undefined', () => {
@@ -438,7 +441,7 @@ describe('#getStatefulPropsContext', () => {
 });
 
 describeWithDOM('#buildHybridComponent', () => {
-	const Counter = React.createClass({
+	const Counter = createClass({
 		displayName: 'Counter',
 		propTypes: {
 			count: React.PropTypes.number,
@@ -450,14 +453,12 @@ describeWithDOM('#buildHybridComponent', () => {
 				count: 0
 			};
 		},
-		statics: {
-			reducers: {
-				onIncrement(state) {
-					return _.assign({}, state, { count: state.count + 1 })
-				},
-				onDecrement(state) {
-					return _.assign({}, state, { count: state.count - 1 })
-				}
+		reducers: {
+			onIncrement(state) {
+				return _.assign({}, state, { count: state.count + 1 })
+			},
+			onDecrement(state) {
+				return _.assign({}, state, { count: state.count - 1 })
 			}
 		},
 		render() {

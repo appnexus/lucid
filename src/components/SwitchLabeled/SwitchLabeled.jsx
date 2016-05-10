@@ -5,7 +5,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes }  from '../../util/component-types';
 import Switch from '../Switch/Switch';
 
-const cx = lucidClassNames.bind('&-LabeledSwitch');
+const cx = lucidClassNames.bind('&-SwitchLabeled');
 const {
 	any,
 	node,
@@ -24,7 +24,7 @@ const SwitchLabeled = createClass({
 
 	components: {
 		Label: createClass({
-			displayName: 'LabeledSwitch.Label',
+			displayName: 'SwitchLabeled.Label',
 			propName: 'Label',
 			propTypes: {
 				/**
