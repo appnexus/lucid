@@ -1,19 +1,20 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
-import { findElementsByType } from '../../util/child-component';
+import { createClass, filterTypes } from '../../util/component-types';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
-const boundClassNames = lucidClassNames.bind('&-Table');
+const cx = lucidClassNames.bind('&-Table');
 
 const {
+	any,
+	bool,
 	func,
+	node,
 	number,
 	object,
 	string,
-	bool
 } = React.PropTypes;
 
 /**
@@ -21,48 +22,78 @@ const {
  *
  * Any child `<Tr>` will have `isHeader` set to `true` unless otherwise specified.
  */
-const Thead = React.createClass(createLucidComponentDefinition({
+const Thead = createClass({
+	displayName: 'Table.Thead',
+	propTypes: {
+		/**
+		 * Appended to the component-specific class names set on the root
+		 * element. Value is run through the `classnames` library.
+		 */
+		className: any,
+		/**
+		 * any valid React children
+		 */
+		children: node,
+	},
 	render() {
 		const {
 			children
 		} = this.props;
 
 		return (
-			<thead {...this.props} className={boundClassNames('&-thead', this.props.className)}>
+			<thead {...this.props} className={cx('&-thead', this.props.className)}>
 				{_.map(
-					findElementsByType(children, [Tr]),
-					(trElement, index) => React.createElement(
-						trElement.type,
+					filterTypes(children, Tr),
+					({ props }, index) => React.createElement(
+						Tr,
 						{
 							key: 'Tr-'+index,
 							isHeader: true,
-							...trElement.props
+							...props
 						}
 					)
 				)}
 			</thead>
 		);
 	}
-}));
+});
 
 /**
  * `Tbody` renders <tbody>.
  */
-const Tbody = React.createClass(createLucidComponentDefinition({
+const Tbody = createClass({
+	displayName: 'Table.Tbody',
+	propTypes: {
+		/**
+		 * Appended to the component-specific class names set on the root
+		 * element. Value is run through the `classnames` library.
+		 */
+		className: any,
+	},
 	render() {
 		return (
-			<tbody {...this.props} className={boundClassNames('&-tbody', this.props.className)} />
+			<tbody {...this.props} className={cx('&-tbody', this.props.className)} />
 		);
 	}
-}));
+});
 
 /**
  * `Tr` renders <tr>.
  *
  * For children `<Td>`, `isAfterRowSpan` will be set to `true` on the second `<Td>` if the first `<Td>` has a `rowSpan` value greater than `1`, unless otherwise specified.
  */
-const Tr = React.createClass(createLucidComponentDefinition({
+const Tr = createClass({
+	displayName: 'Table.Tr',
 	propTypes: {
+		/**
+		 * any valid React children
+		 */
+		children: node,
+		/**
+		 * Appended to the component-specific class names set on the root
+		 * element. Value is run through the `classnames` library.
+		 */
+		className: any,
 		/**
 		 * Should be `true` when rendered inside a thead.
 		 */
@@ -131,7 +162,7 @@ const Tr = React.createClass(createLucidComponentDefinition({
 		} = this.state;
 
 		return (
-			<tr {...this.props} className={boundClassNames({
+			<tr {...this.props} className={cx({
 				'&-row': !isHeader,
 				'&-thead-row': isHeader,
 				'&-is-disabled': isDisabled,
@@ -153,19 +184,29 @@ const Tr = React.createClass(createLucidComponentDefinition({
 			</tr>
 		);
 	}
-}));
+});
 
 /**
  * `Th` renders <th>.
  *
  * Will Render a CaretIcon next to the children if `isSorted`.
  */
-const Th = React.createClass(createLucidComponentDefinition({
+const Th = createClass({
+	displayName: 'Table.Th',
 	propTypes: {
 		/**
 		 * Aligns the content of a cell. Can be `left`, `center`, or `right`.
 		 */
 		align: string,
+		/**
+		 * any valid React children
+		 */
+		children: node,
+		/**
+		 * Appended to the component-specific class names set on the root
+		 * element. Value is run through the `classnames` library.
+		 */
+		className: any,
 		/**
 		 * Should be `true` when the cell has a checkbox.
 		 */
@@ -200,6 +241,10 @@ const Th = React.createClass(createLucidComponentDefinition({
 		 * The direction of the caret in the sorted column.
 		 */
 		sortDirection: string,
+		/**
+		 * Styles that are passed through to root element.
+		 */
+		style: object,
 		/**
 		 * Width of the column atop which this table header cell sits.
 		 */
@@ -252,10 +297,10 @@ const Th = React.createClass(createLucidComponentDefinition({
 		} = this.state;
 
 		const cellContent = (isSorted ? (
-			<ul className={boundClassNames('&-is-sorted-container')}>
-				<li className={boundClassNames('&-is-sorted-title')}>{children}</li>
-				<li className={boundClassNames('&-is-sorted-caret')}>
-					<CaretIcon className={boundClassNames('&-sort-icon')} direction={sortDirection} size={6}/>
+			<ul className={cx('&-is-sorted-container')}>
+				<li className={cx('&-is-sorted-title')}>{children}</li>
+				<li className={cx('&-is-sorted-caret')}>
+					<CaretIcon className={cx('&-sort-icon')} direction={sortDirection} size={6}/>
 				</li>
 			</ul>
 		) : children);
@@ -263,7 +308,7 @@ const Th = React.createClass(createLucidComponentDefinition({
 		return (
 			<th
 				{...this.props}
-				className={boundClassNames(
+				className={cx(
 					'&-cell', {
 					'&-align-left': align === 'left',
 					'&-align-center': align === 'center',
@@ -282,8 +327,8 @@ const Th = React.createClass(createLucidComponentDefinition({
 				}) : style}
 			>
 				{isResizable ? (
-					<div className={boundClassNames('&-is-resizable-container')}>
-						<div className={boundClassNames('&-is-resizable-content')}>
+					<div className={cx('&-is-resizable-container')}>
+						<div className={cx('&-is-resizable-content')}>
 							{cellContent}
 						</div>
 						<DragCaptureZone
@@ -349,17 +394,23 @@ const Th = React.createClass(createLucidComponentDefinition({
 			});
 		}
 	}
-}));
+});
 
 /**
  * `Td` renders <td>.
  */
-const Td = React.createClass(createLucidComponentDefinition({
+const Td = createClass({
+	displayName: 'Table.Td',
 	propTypes: {
 		/**
 		 * Aligns the content of a cell. Can be `left`, `center`, or `right`.
 		 */
 		align: string,
+		/**
+		 * Appended to the component-specific class names set on the root
+		 * element. Value is run through the `classnames` library.
+		 */
+		className: any,
 		/**
 		 * Should be `true` when the cell has a checkbox.
 		 */
@@ -383,7 +434,11 @@ const Td = React.createClass(createLucidComponentDefinition({
 		/**
 		 * Should be set to `true` on the second cell in a table where the first cell has a rowspan greater than 1.
 		 */
-		isAfterRowSpan: bool
+		isAfterRowSpan: bool,
+		/**
+		 * Passed to the underlying `td`.
+		 */
+		rowSpan: number,
 	},
 	getDefaultProps() {
 		return {
@@ -409,7 +464,7 @@ const Td = React.createClass(createLucidComponentDefinition({
 		} = this.props;
 
 		return (
-			<td {...this.props} className={boundClassNames(
+			<td {...this.props} className={cx(
 				'&-cell', {
 				'&-align-left': align === 'left',
 				'&-align-center': align === 'center',
@@ -424,7 +479,7 @@ const Td = React.createClass(createLucidComponentDefinition({
 			}, className)} />
 		);
 	}
-}));
+});
 
 /**
  *
@@ -433,10 +488,10 @@ const Td = React.createClass(createLucidComponentDefinition({
  * `Table` provides the most basic components to create a lucid table.
  * It is recommended to create a wrapper around this component rather than using it directly in an app.
  */
-const Table = React.createClass(createLucidComponentDefinition({
+const Table = createClass({
 	displayName: 'Table',
 
-	statics: {
+	components: {
 		Thead,
 		Tbody,
 		Tr,
@@ -484,13 +539,13 @@ const Table = React.createClass(createLucidComponentDefinition({
 		return (
 			<table
 				{...this.props}
-				className={boundClassNames('&', {
+				className={cx('&', {
 					'&-has-extra-whitespace': hasExtraWhitespace,
 					'&-has-no-border': hasNoBorder,
 				}, className)}
 			/>
 		);
 	}
-}));
+});
 
 export default Table;

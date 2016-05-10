@@ -1,11 +1,11 @@
 import React from 'react';
-import Portal from '../Portal';
+import { Portal } from '../../../index';
 
 export default React.createClass({
 	getInitialState() {
 		return {
-			left: 180,
-			top: 340
+			left: 216,
+			top: 460
 		};
 	},
 

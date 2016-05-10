@@ -4,7 +4,7 @@ import React from 'react';
 
 import { lucidClassNames } from '../../util/style-helpers';
 
-const boundClassNames = lucidClassNames.bind('&-ColorPalette');
+const cx = lucidClassNames.bind('&-ColorPalette');
 
 const colorList = [
 	{
@@ -235,8 +235,8 @@ const ColorPalette = React.createClass({
 							<p style={{flex: '1 0 100%'}}>{group.description}</p>
 						: null}
 						{_.map(group.variables, (variable, j) => (
-							<div key={j} className={classNames(boundClassNames('&'))}>
-								<div className={boundClassNames(`&-${variable}`)}></div>
+							<div key={j} className={classNames(cx('&'))}>
+								<div className={cx(`&-${variable}`)}></div>
 								<p><code>{`@${variable};`}</code></p>
 							</div>
 						))}

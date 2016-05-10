@@ -1,9 +1,9 @@
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass, findTypes } from '../../util/component-types';
 import _ from 'lodash';
 
-const boundClassNames = lucidClassNames.bind('&-Validation');
+const cx = lucidClassNames.bind('&-Validation');
 
 const {
 	any,
@@ -17,11 +17,14 @@ const {
  * components. Wrap your form components in it and style them accordingly if
  * there's an error.
  */
-const Validation = React.createClass(createLucidComponentDefinition({
+const Validation = createClass({
 	displayName: 'Validation',
 
-	childProps: {
-		Error: {} // intentionally left blank since we only care about `children`
+	components: {
+		Error: createClass({
+			displayName: 'Validation.Error',
+			propName: 'Error'
+		})
 	},
 
 	propTypes: {
@@ -58,24 +61,24 @@ const Validation = React.createClass(createLucidComponentDefinition({
 			...passThroughs
 		} = this.props;
 
-		const errorChildProps = _.first(Validation.Error.findInAllAsProps(this.props));
+		const errorChildProps = _.first(_.map(findTypes(this.props, Validation.Error), 'props'));
 
 		return (
 			<div
 				{...passThroughs}
-				className={boundClassNames('&', {
+				className={cx('&', {
 					'&-is-error': errorChildProps,
 				}, className)}
 			>
 				{children}
 				{errorChildProps ?
-					<div className={boundClassNames('&-error-content')} >
-						{errorChildProps.children || errorChildProps}
+					<div className={cx('&-error-content')} >
+						{errorChildProps.children}
 					</div>
 				: null}
 			</div>
 		);
 	}
-}));
+});
 
 export default Validation;

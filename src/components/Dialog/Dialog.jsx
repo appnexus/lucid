@@ -2,9 +2,9 @@ import _ from 'lodash';
 import React from 'react';
 import Overlay from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition }  from '../../util/component-definition';
+import { createClass, findTypes }  from '../../util/component-types';
 
-const boundClassNames = lucidClassNames.bind('&-Dialog');
+const cx = lucidClassNames.bind('&-Dialog');
 
 const {
 	node,
@@ -21,12 +21,18 @@ const LARGE = 'large';
  * Dialog is used to pop open a window so the user doesn't lose the context of
  * the page behind it. Extra props are spread through to the underlying `Overlay`
  */
-const Dialog = React.createClass(createLucidComponentDefinition({
+const Dialog = createClass({
 	displayName: 'Dialog',
 
-	childProps: {
-		Header: null,
-		Footer: null,
+	components: {
+		Header: createClass({
+			displayName: 'Dialog.Header',
+			propName: 'Header'
+		}),
+		Footer: createClass({
+			displayName: 'Dialog.Footer',
+			propName: 'Footer'
+		}),
 	},
 
 	propTypes: {
@@ -63,16 +69,16 @@ const Dialog = React.createClass(createLucidComponentDefinition({
 			...passThroughs
 		} = this.props;
 
-		const headerChildProp = _.first(Dialog.Header.findInAllAsProps(this.props));
-		const footerChildProp = _.first(Dialog.Footer.findInAllAsProps(this.props));
+		const headerChildProp = _.get(_.first(findTypes(this.props, Dialog.Header)), 'props', {});
+		const footerChildProp = _.get(_.first(findTypes(this.props, Dialog.Footer)), 'props', {});
 
 		return (
 			<Overlay
 				{...passThroughs}
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 			>
 				<div
-					className={boundClassNames('&-window', {
+					className={cx('&-window', {
 						'&-window-is-small': size === SMALL,
 						'&-window-is-medium': size === MEDIUM,
 						'&-window-is-large': size === LARGE,
@@ -80,22 +86,22 @@ const Dialog = React.createClass(createLucidComponentDefinition({
 				>
 					<header
 						{...headerChildProp}
-						className={boundClassNames('&-header')}
+						className={cx('&-header')}
 					/>
 
-					<section className={boundClassNames('&-body')}>
+					<section className={cx('&-body')}>
 						{this.props.children}
 					</section>
 
 					<footer
 						{...footerChildProp}
-						className={boundClassNames('&-footer')}
+						className={cx('&-footer')}
 					/>
 				</div>
 			</Overlay>
 		);
 	},
-}));
+});
 
 export default Dialog;
 

@@ -1,6 +1,5 @@
 import React from 'react';
-import Autocomplete from '../Autocomplete';
-
+import { AutocompleteDumb as Autocomplete } from '../../../index';
 
 const wordlist = [
   'abaft',

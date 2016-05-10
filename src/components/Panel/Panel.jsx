@@ -1,13 +1,14 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass, findTypes } from '../../util/component-types';
 
-const boundClassNames = lucidClassNames.bind('&-Panel');
+const cx = lucidClassNames.bind('&-Panel');
 
 const {
-	node,
 	bool,
+	node,
+	object,
 	string
 } = React.PropTypes;
 
@@ -16,12 +17,18 @@ const {
  *
  * Panel is used to wrap content to better organize elements in window.
  */
-const Panel = React.createClass(createLucidComponentDefinition({
+const Panel = createClass({
 	displayName: 'Panel',
 
-	childProps: {
-		Header: null,
-		Footer: null
+	components: {
+		Header: createClass({
+			displayName: 'Panel.Header',
+			propName: 'Header'
+		}),
+		Footer: createClass({
+			displayName: 'Panel.Footer',
+			propName: 'Footer'
+		})
 	},
 
 	propTypes: {
@@ -45,7 +52,11 @@ const Panel = React.createClass(createLucidComponentDefinition({
 		/**
 		 * If set to true, creates a content section with no padding.
 		 */
-		isGutterless: bool
+		isGutterless: bool,
+		/**
+		 * Styles that are passed through to root element.
+		 */
+		style: object,
 	},
 
 	render: function() {
@@ -56,12 +67,12 @@ const Panel = React.createClass(createLucidComponentDefinition({
 			style,
 		} = this.props;
 
-		const headerChildProp = _.first(Panel.Header.findInAllAsProps(this.props));
-		const footerChildProp = _.first(Panel.Footer.findInAllAsProps(this.props));
+		const headerChildProp = _.first(_.map(findTypes(this.props, Panel.Header), 'props'));
+		const footerChildProp = _.first(_.map(findTypes(this.props, Panel.Footer), 'props'));
 
 		return (
 			<div
-				className={boundClassNames('&', className, {
+				className={cx('&', className, {
 					'&-is-not-gutterless': !isGutterless
 				})}
 				style={style}
@@ -69,23 +80,23 @@ const Panel = React.createClass(createLucidComponentDefinition({
 				{headerChildProp ? (
 					<header
 						{...headerChildProp}
-						className={boundClassNames('&-Header', headerChildProp.className)}
+						className={cx('&-Header', headerChildProp.className)}
 					/>
 				) : null}
 
-				<section className={boundClassNames('&-content')} >
+				<section className={cx('&-content')} >
 					{children}
 				</section>
 
 				{footerChildProp ? (
 					<footer
 						{...footerChildProp}
-						className={boundClassNames('&-Footer', footerChildProp.className)}
+						className={cx('&-Footer', footerChildProp.className)}
 					/>
 				) : null}
 			</div>
 		)
 	}
-}))
+})
 
 export default Panel;

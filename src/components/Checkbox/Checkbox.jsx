@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-types';
 
-const boundClassNames = lucidClassNames.bind('&-Checkbox');
+const cx = lucidClassNames.bind('&-Checkbox');
 
 const {
 	bool,
@@ -21,7 +22,8 @@ const {
  * It uses a hidden native checkbox control under the hood but leverages other
  * HTML elements to visualize its state.
  */
-const Checkbox = React.createClass({
+const Checkbox = createClass({
+	displayName: 'Checkbox',
 	propTypes: {
 		/**
 		 * Appended to the component-specific class names set on the root
@@ -78,7 +80,7 @@ const Checkbox = React.createClass({
 
 		return (
 			<div
-				className={boundClassNames('&', {
+				className={cx('&', {
 					'&-is-disabled': isDisabled,
 					'&-is-selected': isSelected
 				}, className)}
@@ -90,16 +92,16 @@ const Checkbox = React.createClass({
 					onChange={_.noop}
 					{..._.omit(passThroughs, 'children')}
 					checked={isSelected}
-					className={boundClassNames('&-native')}
+					className={cx('&-native')}
 					disabled={isDisabled}
 					ref='nativeElement'
 					type='checkbox'
 				/>
-				<span className={boundClassNames('&-visualization-glow')} />
-				<span className={boundClassNames('&-visualization-container')} />
-				<span className={boundClassNames('&-visualization-checkmark')}>
-					<span className={boundClassNames('&-visualization-checkmark-stem')}></span>
-					<span className={boundClassNames('&-visualization-checkmark-kick')}></span>
+				<span className={cx('&-visualization-glow')} />
+				<span className={cx('&-visualization-container')} />
+				<span className={cx('&-visualization-checkmark')}>
+					<span className={cx('&-visualization-checkmark-stem')}></span>
+					<span className={cx('&-visualization-checkmark-kick')}></span>
 				</span>
 			</div>
 		);

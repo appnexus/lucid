@@ -2,10 +2,10 @@ import _ from 'lodash';
 import Button from '../Button/Button';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition }  from '../../util/component-definition';
+import { createClass, findTypes }  from '../../util/component-types';
 import reducers from './ButtonGroup.reducers';
 
-const boundClassNames = lucidClassNames.bind('&-ButtonGroup');
+const cx = lucidClassNames.bind('&-ButtonGroup');
 
 const {
 	any,
@@ -21,11 +21,14 @@ const {
  * Button groups allow you to pair buttons together to form a seamless cluster.
  * Any props not explicitly called out are spread on to the root component.
  */
-const ButtonGroup = React.createClass(createLucidComponentDefinition({
+const ButtonGroup = createClass({
 	displayName: 'ButtonGroup',
 
-	childProps: {
-		Button: { ...Button.propTypes }
+	components: {
+		Button: createClass({
+			displayName: 'ButtonGroup.Button',
+			propName: 'Button'
+		})
 	},
 
 	reducers: reducers,
@@ -68,18 +71,18 @@ const ButtonGroup = React.createClass(createLucidComponentDefinition({
 		};
 	},
 
-	handleSelect({ event, props }) {
-		const { callbackId } = props;
-		const clickedButtonProps = ButtonGroup.Button.findInAllAsProps(this.props)[callbackId];
+	handleSelect({ event, props: childProps }) {
+		const { callbackId } = childProps;
+		const clickedButtonProps = findTypes(this.props, ButtonGroup.Button)[callbackId];
 
 		// If the consumer passed in an `onClick` to the child `ButtonGroup.Button`
 		// component, we should make sure to call that in addition to the
 		// `ButtonGroup`'s `onSelect`.
 		if (_.isFunction(clickedButtonProps.onClick)) {
-			clickedButtonProps.onClick({ event, props });
+			clickedButtonProps.onClick({ event, props: childProps });
 		}
 
-		this.props.onSelect(callbackId, { event, props });
+		this.props.onSelect(callbackId, { event, props: childProps });
 	},
 
 	render() {
@@ -90,12 +93,12 @@ const ButtonGroup = React.createClass(createLucidComponentDefinition({
 			...others
 		} = this.props;
 
-		const buttonChildProps = ButtonGroup.Button.findInAllAsProps(this.props);
+		const buttonChildProps = _.map(findTypes(this.props, ButtonGroup.Button), 'props');
 
 		return (
 			<span
 				{...others}
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 			>
 				{_.map(buttonChildProps, (buttonChildProp, index) => {
 					return (
@@ -118,6 +121,6 @@ const ButtonGroup = React.createClass(createLucidComponentDefinition({
 			</span>
 		);
 	}
-}));
+});
 
 export default ButtonGroup;

@@ -1,8 +1,9 @@
 import React from 'react';
 import CheckIcon from '../CheckIcon/CheckIcon';
 import { lucidClassNames } from '../../../util/style-helpers';
+import { createClass } from '../../../util/component-types';
 
-const boundClassNames = lucidClassNames.bind('&-SuccessIcon');
+const cx = lucidClassNames.bind('&-SuccessIcon');
 
 /**
  *
@@ -10,7 +11,8 @@ const boundClassNames = lucidClassNames.bind('&-SuccessIcon');
  *
  * A success icon.
  */
-const SuccessIcon = React.createClass({
+const SuccessIcon = createClass({
+	displayName: 'SuccessIcon',
 	propTypes: {
 		...CheckIcon.propTypes,
 	},
@@ -24,7 +26,7 @@ const SuccessIcon = React.createClass({
 		return (
 			<CheckIcon
 				{...passThroughs}
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 				isBadge
 			/>
 		);

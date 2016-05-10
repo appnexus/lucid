@@ -1,5 +1,5 @@
 import React from 'react';
-import ChevronIcon from '../ChevronIcon';
+import { ChevronIcon } from '../../../../index';
 
 export default React.createClass({
 	render() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import PlusIcon from '../PlusIcon';
+import { PlusIcon } from '../../../../index';
 
 export default React.createClass({
 	render() {

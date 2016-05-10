@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-types';
 
-const boundClassNames = lucidClassNames.bind('&-Switch');
+const cx = lucidClassNames.bind('&-Switch');
 const {
 	bool,
 	func,
@@ -20,7 +21,8 @@ const {
  * It uses a hidden native check box control under the hood but leverages other
  * HTML elements to visualize its state.
  */
-const Switch = React.createClass({
+const Switch = createClass({
+	displayName: 'Switch',
 	propTypes: {
 		/**
 		 * Appended to the component-specific class names set on the root
@@ -77,7 +79,7 @@ const Switch = React.createClass({
 
 		return (
 			<span
-					className={boundClassNames('&', {
+					className={cx('&', {
 						'&-is-disabled': isDisabled,
 						'&-is-selected': isSelected
 					}, className)}
@@ -89,14 +91,14 @@ const Switch = React.createClass({
 						onChange={_.noop}
 						{..._.omit(passThroughs, 'children')}
 						checked={isSelected}
-						className={boundClassNames('&-native')}
+						className={cx('&-native')}
 						disabled={isDisabled}
 						ref='nativeElement'
 						type='checkbox'
 				/>
-				<span className={boundClassNames('&-visualization-container')} />
-				<span className={boundClassNames('&-visualization-glow')} />
-				<span className={boundClassNames('&-visualization-handle')} />
+				<span className={cx('&-visualization-container')} />
+				<span className={cx('&-visualization-glow')} />
+				<span className={cx('&-visualization-handle')} />
 			</span>
 		);
 	},

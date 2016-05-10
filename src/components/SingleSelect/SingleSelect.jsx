@@ -1,12 +1,12 @@
 import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass, findTypes } from '../../util/component-types';
 import * as reducers from './SingleSelect.reducers';
 import DropMenu from '../DropMenu/DropMenu';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 
-const boundClassNames = lucidClassNames.bind('&-SingleSelect');
+const cx = lucidClassNames.bind('&-SingleSelect');
 
 const {
 	any,
@@ -27,15 +27,26 @@ const {
  * Supports option groups with and without labels.
  */
 
-const SingleSelect = React.createClass(createLucidComponentDefinition({
+const SingleSelect = createClass({
 	displayName: 'SingleSelect',
 
 	reducers,
 
-	childProps: {
-		Placeholder: null,
-		Option: DropMenu.Option.propTypes,
-		OptionGroup: DropMenu.OptionGroup.propTypes
+	components: {
+		Placeholder: createClass({
+			displayName: 'SingleSelect.Placeholder',
+			propName: 'Placeholder'
+		}),
+		Option: createClass({
+			displayName: 'SingleSelect.Option',
+			propName: 'Option',
+			propTypes: DropMenu.Option.propTypes
+		}),
+		OptionGroup: createClass({
+			displayName: 'SingleSelect.OptionGroup',
+			propName: 'OptionGroup',
+			propTypes: DropMenu.OptionGroup.propTypes
+		})
 	},
 
 	propTypes: {
@@ -140,7 +151,7 @@ const SingleSelect = React.createClass(createLucidComponentDefinition({
 			flattenedOptionsData
 		} = this.state;
 
-		const placeholderProps = _.first(SingleSelect.Placeholder.findInAllAsProps(this.props));
+		const placeholderProps = _.first(_.map(findTypes(this.props, SingleSelect.Placeholder), 'props'));
 		const placeholder = _.get(placeholderProps, 'children', 'Select');
 		const isItemSelected = _.isNumber(selectedIndex);
 
@@ -149,19 +160,19 @@ const SingleSelect = React.createClass(createLucidComponentDefinition({
 				{...dropMenuProps}
 				isDisabled={isDisabled}
 				selectedIndices={isItemSelected ? [selectedIndex] : []}
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 				onSelect={onSelect}
 				style={style}
 			>
 				<DropMenu.Control>
-					<div className={boundClassNames('&-Control', {
+					<div className={cx('&-Control', {
 						'&-Control-is-selected': !isDisabled && isItemSelected,
 						'&-Control-is-expanded': isExpanded,
 						'&-Control-is-disabled': isDisabled
 					})}>
 						<span
 							{...(!isItemSelected ? placeholderProps : null)}
-							className={boundClassNames(
+							className={cx(
 									'&-Control-content',
 									(!isItemSelected ? _.get(placeholderProps, 'className') : null)
 							)}
@@ -189,6 +200,6 @@ const SingleSelect = React.createClass(createLucidComponentDefinition({
 			</DropMenu>
 		);
 	}
-}));
+});
 
 export default SingleSelect;

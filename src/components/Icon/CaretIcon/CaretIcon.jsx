@@ -1,8 +1,9 @@
 import React from 'react';
 import { lucidClassNames } from '../../../util/style-helpers';
+import { createClass } from '../../../util/component-types';
 import Icon from '../Icon';
 
-const boundClassNames = lucidClassNames.bind('&-CaretIcon');
+const cx = lucidClassNames.bind('&-CaretIcon');
 
 const {
 	oneOf,
@@ -14,7 +15,8 @@ const {
  *
  * A caret icon.
  */
-const CaretIcon = React.createClass({
+const CaretIcon = createClass({
+	displayName: 'CaretIcon',
 	propTypes: {
 		...Icon.propTypes,
 		/**
@@ -46,7 +48,7 @@ const CaretIcon = React.createClass({
 		return (
 			<Icon
 				{...passThroughs}
-				className={boundClassNames('&', {
+				className={cx('&', {
 					'&-is-down': direction === 'down',
 					'&-is-up': direction === 'up',
 					'&-is-left': direction === 'left',

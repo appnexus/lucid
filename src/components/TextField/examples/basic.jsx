@@ -1,6 +1,5 @@
 import React from 'react';
-import TextField from '../TextField';
-import Button from '../../Button/Button';
+import { Button, TextField } from '../../../index';
 
 const style = {
 	marginBottom: '10px'

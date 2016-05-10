@@ -3,7 +3,7 @@ import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
 import describeWithDOM from '../../util/describe-with-dom';
-import { rejectNullElements } from '../../util/child-component';
+import { filterTypes, rejectTypes } from '../../util/component-types';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import SingleSelect from './SingleSelect';
@@ -153,7 +153,7 @@ describe('SingleSelect', () => {
 				);
 
 				const dropMenuWrapper = wrapper.find('DropMenu');
-				const dropMenuControlProps = _.first(DropMenu.Control.findInChildrenAsProps(dropMenuWrapper.prop('children'))); _.first(dropMenuControlProps)
+				const dropMenuControlProps = _.first(_.map(filterTypes(dropMenuWrapper.prop('children'), DropMenu.Control), 'props'));
 				const dropMenuControlWrapper = shallow(dropMenuControlProps.children);
 
 				assert.equal('option c', dropMenuControlWrapper.find('.lucid-SingleSelect-Control-content').text());
@@ -236,7 +236,7 @@ describe('SingleSelect', () => {
 				// navigate down the virutal DOM tree to find the Control content
 				const dropMenuWrapper = wrapper.find('DropMenu');
 				const dropMenuChildren = dropMenuWrapper.prop('children')
-				const controlProps = _.first(DropMenu.Control.findInChildrenAsProps(dropMenuChildren));
+				const controlProps = _.first(_.map(filterTypes(dropMenuChildren, DropMenu.Control), 'props'));
 				const dropMenuControlChildElement = _.first(React.Children.toArray(controlProps.children));
 				const singleSelectControlChildren = React.Children.toArray(dropMenuControlChildElement.props.children);
 				const singleSelectControlContent = singleSelectControlChildren[0];
@@ -257,7 +257,7 @@ describe('SingleSelect', () => {
 				// navigate down the virutal DOM tree to find the Control content
 				const dropMenuWrapper = wrapper.find('DropMenu');
 				const dropMenuChildren = dropMenuWrapper.prop('children')
-				const nullOptionProps = _.first(DropMenu.NullOption.findInChildrenAsProps(dropMenuChildren));
+				const nullOptionProps = _.first(_.map(filterTypes(dropMenuChildren, DropMenu.NullOption), 'props'));
 
 				assert.equal(React.Children.toArray(nullOptionProps.children)[0], 'select one');
 			});
@@ -276,7 +276,7 @@ describe('SingleSelect', () => {
 
 				const dropMenuWrapper = wrapper.find('DropMenu');
 				const dropMenuChildren = dropMenuWrapper.prop('children')
-				const optionsProps = DropMenu.Option.findInChildrenAsProps(dropMenuChildren);
+				const optionsProps = _.map(filterTypes(dropMenuChildren, DropMenu.Option), 'props');
 
 				assert.equal(_.size(optionsProps), 3);
 				assert(_.isEqual(optionsProps[0], {
@@ -315,8 +315,7 @@ describe('SingleSelect', () => {
 
 				dropMenuWrapper = wrapper.find('DropMenu');
 				dropMenuChildren = dropMenuWrapper.prop('children')
-				optionGroupProps = _.first(DropMenu.OptionGroup.findInChildrenAsProps(dropMenuChildren));
-
+				optionGroupProps = _.first(_.map(filterTypes(dropMenuChildren, DropMenu.OptionGroup), 'props'));
 			});
 
 			it('should pass thru all props to the underlying DropMenu OptionGroup', () => {
@@ -324,7 +323,7 @@ describe('SingleSelect', () => {
 			});
 
 			it('should pass options thru to the underlying DropMenu OptionGroup Options', () => {
-				const optionsProps = DropMenu.Option.findInChildrenAsProps(optionGroupProps.children);
+				const optionsProps = _.map(filterTypes(optionGroupProps.children, DropMenu.Option), 'props');
 
 				assert.equal(_.size(optionsProps), 3);
 				assert(_.isEqual(optionsProps[0], {
@@ -343,7 +342,7 @@ describe('SingleSelect', () => {
 			});
 
 			it('should pass all other elemens thru to the underlying DropMenu OptionGroup', () => {
-				const otherOptionGroupChildren = rejectNullElements(optionGroupProps.children)
+				const otherOptionGroupChildren = rejectTypes(optionGroupProps.children, [Placeholder, Option, OptionGroup]);
 
 				assert.equal(_.first(otherOptionGroupChildren), 'Group Label');
 			});

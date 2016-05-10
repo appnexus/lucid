@@ -1,10 +1,10 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass, findTypes } from '../../util/component-types';
 import reducers from './Tabs.reducers';
 
-const boundClassNames = lucidClassNames.bind('&-Tabs');
+const cx = lucidClassNames.bind('&-Tabs');
 
 const {
 	any,
@@ -21,20 +21,27 @@ const {
  * `Tabs` provides tabbed navigation. It has a flexible interface that allows
  * tab content to be passed as regular React children or through props.
  */
-const Tabs = React.createClass(createLucidComponentDefinition({
+const Tabs = createClass({
 	displayName: 'Tabs',
 
-	childProps: {
-		Tab: {
-			isSelected: bool,
-			/**
-			* Styles a tab as disabled.  This typically used with `isProgressive` to
-			* to disabled steps that have not been compleated and should not be
-			* selected until the current step has been compleated.
-			*/
-			isDisabled: bool,
-		},
-		Title: null, // we're only interested in children
+	components: {
+		Tab: createClass({
+			displayName: 'Tabs.Tab',
+			propName: 'Tab',
+			propTypes: {
+				isSelected: bool,
+				/**
+				* Styles a tab as disabled.  This typically used with `isProgressive` to
+				* to disabled steps that have not been compleated and should not be
+				* selected until the current step has been compleated.
+				*/
+				isDisabled: bool,
+			}
+		}),
+		Title: createClass({
+			displayName: 'Tabs.Title',
+			propName: 'Title',
+		}),
 	},
 
 	reducers,
@@ -88,7 +95,6 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 	render() {
 		const {
 			className,
-			onSelect,
 			selectedIndex,
 			style,
 			isOpen,
@@ -96,7 +102,7 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 			...passThroughs,
 		} = this.props;
 
-		const tabChildProps = Tabs.Tab.findInAllAsProps(this.props);
+		const tabChildProps = _.map(findTypes(this.props, Tabs.Tab), 'props');
 		const selectedIndexFromChildren = _.findLastIndex(tabChildProps, {
 			isSelected: true
 		});
@@ -109,39 +115,47 @@ const Tabs = React.createClass(createLucidComponentDefinition({
 			<div
 				{...passThroughs}
 				style={style}
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 			>
-				<ul className={boundClassNames('&-bar')}>
+				<ul className={cx('&-bar')}>
 					{_.map(tabChildProps, (tabChildProp, index) => {
 						return (
 							<li
-								className={boundClassNames('&-Tab', {
+								className={cx('&-Tab', {
 									'&-Tab-is-active': index === actualSelectedIndex,
 									'&-Tab-is-disabled': tabChildProp.isDisabled,
 									'&-Tab-is-active-and-open': isOpen && index === actualSelectedIndex,
 									'&-Tab-is-progressive': isProgressive && index !== tabChildProps.length - 1,
 								})}
 								key={index}
-								onClick={_.partial(onSelect, index, tabChildProp)}
+								onClick={_.partial(this.handleClicked, index, tabChildProp)}
 							>
-								{_.get(_.first(Tabs.Title.findInAllAsProps(tabChildProp)), 'children', '')}
+								{_.get(_.first(findTypes(tabChildProp, Tabs.Title)), 'props.children', '')}
 								{isProgressive && index !== tabChildProps.length - 1 ?
-									<svg className={boundClassNames('&-Tab-arrow')} xmlns='http://www.w3.org/2000/svg' width='8px' height='28px' viewBox='0 0 8 28' >
-										<polygon className={boundClassNames('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
-										<polyline className={boundClassNames('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1.7,3 0,3'/>
-										<polyline className={boundClassNames('&-Tab-arrow-line')} fill='none' stroke='#fff' strokeWidth='1' points='0,28 7.9,14 0,0'/>
+									<svg className={cx('&-Tab-arrow')} xmlns='http://www.w3.org/2000/svg' width='8px' height='28px' viewBox='0 0 8 28' >
+										<polygon className={cx('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
+										<polyline className={cx('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1.7,3 0,3'/>
+										<polyline className={cx('&-Tab-arrow-line')} fill='none' stroke='#fff' strokeWidth='1' points='0,28 7.9,14 0,0'/>
 									</svg>
 								: null}
 							</li>
 						);
 					})}
 				</ul>
-				<div className={boundClassNames('&-content')}>
+				<div className={cx('&-content')}>
 					{_.get(tabChildProps[actualSelectedIndex], 'children', '')}
 				</div>
 			</div>
 		);
+	},
+
+	handleClicked(index, tabProps, event) {
+		const {
+			onSelect,
+		} = this.props;
+
+		onSelect(index, { event, props: tabProps });
 	}
-}));
+});
 
 export default Tabs;

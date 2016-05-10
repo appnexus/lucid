@@ -1,6 +1,5 @@
 import React from 'react';
-import Panel from '../Panel';
-import Table from '../../Table/Table';
+import { Panel, Table } from '../../../index';
 
 const {
 	Thead,

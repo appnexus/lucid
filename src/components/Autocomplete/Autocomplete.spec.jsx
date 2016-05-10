@@ -3,6 +3,7 @@ import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
 import describeWithDOM from '../../util/describe-with-dom';
+import { findTypes } from '../../util/component-types';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import Autocomplete from './Autocomplete';
@@ -59,7 +60,7 @@ describe('Autocomplete', () => {
 					/>
 				);
 
-				const options = DropMenu.Option.findInAllAsProps(wrapper.find('DropMenu').props());
+				const options = _.map(findTypes(wrapper.find(DropMenu).props(), DropMenu.Option), 'props');
 
 				assert.equal('Portland', options[0].children);
 				assert.equal('portal', options[1].children);

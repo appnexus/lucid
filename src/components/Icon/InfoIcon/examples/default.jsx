@@ -1,5 +1,5 @@
 import React from 'react';
-import InfoIcon from '../InfoIcon';
+import { InfoIcon } from '../../../../index';
 
 export default React.createClass({
 	render() {

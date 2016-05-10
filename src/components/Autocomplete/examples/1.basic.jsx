@@ -1,8 +1,5 @@
 import React from 'react';
-import AutocompleteStateless from '../Autocomplete';
-import { buildStatefulComponent } from '../../../util/state-management';
-
-const Autocomplete = buildStatefulComponent(AutocompleteStateless);
+import { Autocomplete } from '../../../index';
 
 export default React.createClass({
 

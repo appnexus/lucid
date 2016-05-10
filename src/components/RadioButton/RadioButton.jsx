@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-types';
 
-const boundClassNames = lucidClassNames.bind('&-RadioButton');
+const cx = lucidClassNames.bind('&-RadioButton');
 const {
 	bool,
 	func,
@@ -27,7 +28,8 @@ const {
  * Any props that are not explicitly defined in `propTypes` are spread onto the
  * native control.
  */
-const RadioButton = React.createClass({
+const RadioButton = createClass({
+	displayName: 'RadioButton',
 	propTypes: {
 		/**
 		 * Appended to the component-specific class names set on the root
@@ -85,7 +87,7 @@ const RadioButton = React.createClass({
 
 		return (
 			<span
-					className={boundClassNames('&', {
+					className={cx('&', {
 						'&-is-disabled': isDisabled,
 						'&-is-selected': isSelected
 					}, className)}
@@ -97,14 +99,14 @@ const RadioButton = React.createClass({
 						onChange={_.noop}
 						{..._.omit(passThroughs, 'children')}
 						checked={isSelected}
-						className={boundClassNames('&-native')}
+						className={cx('&-native')}
 						disabled={isDisabled}
 						ref='nativeElement'
 						type='radio'
 				/>
-				<span className={boundClassNames('&-visualization-glow')} />
-				<span className={boundClassNames('&-visualization-container')} />
-				<span className={boundClassNames('&-visualization-dot')} />
+				<span className={cx('&-visualization-glow')} />
+				<span className={cx('&-visualization-container')} />
+				<span className={cx('&-visualization-dot')} />
 			</span>
 		);
 	},

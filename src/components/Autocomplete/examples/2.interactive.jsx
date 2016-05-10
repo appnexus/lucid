@@ -1,9 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import AutocompleteStateless from '../Autocomplete';
-import { buildStatefulComponent } from '../../../util/state-management';
-
-const Autocomplete = buildStatefulComponent(AutocompleteStateless);
+import { Autocomplete } from '../../../index';
 
 const wordlist = [
   'abaft',
