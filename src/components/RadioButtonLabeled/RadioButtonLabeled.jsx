@@ -4,7 +4,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes }  from '../../util/component-types';
 import RadioButton from '../RadioButton/RadioButton';
 
-const cx = lucidClassNames.bind('&-LabeledRadioButton');
+const cx = lucidClassNames.bind('&-RadioButtonLabeled');
 const {
 	any,
 	node,
@@ -23,7 +23,7 @@ const RadioButtonLabeled = createClass({
 
 	components: {
 		Label: createClass({
-			displayName: 'LabeledRadioButton.Label',
+			displayName: 'RadioButtonLabeled.Label',
 			propName: 'Label',
 			propTypes: {
 				/**
