@@ -5,11 +5,6 @@ import { discreteTicks } from '../../util/chart-helpers';
 
 const boundClassNames = lucidClassNames.bind('&-Axis');
 
-// For horizontal axes we choose to anchor the text to the 'end', this small
-// offset helps the letters appear nicely with the tick. This number would
-// need to change if the tick font-size changed.
-const TEXT_OFFSET = 3;
-
 const {
 	array,
 	func,
@@ -145,7 +140,7 @@ const Axis = React.createClass({
 						/>
 						<text
 							className={boundClassNames('&-tick-text')}
-							x={isH ? TEXT_OFFSET : sign * tickSpacing}
+							x={isH ? 0 : sign * tickSpacing}
 							y={isH ? sign * tickSpacing : 0}
 							dy={isH
 								? sign < 0 ? '0em' : '.71em' // magic d3 number
@@ -153,7 +148,7 @@ const Axis = React.createClass({
 							}
 							style={{
 								textAnchor: isH
-									? 'end' // differ from d3 here, works in conjunction with TEXT_OFFSET
+									? 'middle'
 									: sign < 0 ? 'end' : 'start'
 							}}
 						>

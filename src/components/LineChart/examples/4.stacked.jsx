@@ -15,7 +15,7 @@ export default React.createClass({
 				data={data}
 				yAxisFields={['apples', 'oranges', 'pears']}
 				yAxisIsStacked={true}
-				yAxisHasTitle={true}
+				yAxisTitle='Fruit Count'
 			/>
 		);
 	}

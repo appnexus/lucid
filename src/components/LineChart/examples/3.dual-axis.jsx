@@ -19,10 +19,14 @@ export default React.createClass({
 					bottom: 50,
 					left: 80,
 				}}
+
 				yAxisFields={['apples']}
-				yAxisHasTitle={true}
+				yAxisTitle='Number of Apples'
+				yAxisTitleColor={0}
+
 				y2AxisFields={['oranges']}
-				y2AxisHasTitle={true}
+				y2AxisTitle='Number of Oranges'
+				y2AxisTitleColor={1}
 			/>
 		);
 	}

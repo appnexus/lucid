@@ -25,7 +25,6 @@ const {
 	object,
 	shape,
 	string,
-	array,
 	bool,
 } = React.PropTypes;
 
@@ -111,17 +110,21 @@ const LineChart = React.createClass({
 		 */
 		xAxisTickCount: number,
 		/**
-		 * Show a title for the x axis. If you want to make this more readable, be
-		 * sure to provide the `legend` prop.
+		 * Set a title for the x axis.
 		 */
-		xAxisHasTitle: bool,
+		xAxisTitle: string,
+		/**
+		 * Set a color for the x axis title. This takes any number 0 or greater and
+		 * it converts it to a color in our color palette.
+		 */
+		xAxisTitleColor: number,
 
 
 		/**
 		 * An array of your y axis fields. Typically this will just be a single
 		 * item unless you need to display multiple lines.
 		 */
-		yAxisFields: array.isRequired,
+		yAxisFields: arrayOf(string),
 		/**
 		 * The minimum number the y axis should display. Typically this should be
 		 * `0`.
@@ -152,17 +155,21 @@ const LineChart = React.createClass({
 		 */
 		yAxisTickCount: number,
 		/**
-		 * Show a title for the y axis. If you want to make this more readable, be
-		 * sure to provide the `legend` prop.
+		 * Set a title for the y axis.
 		 */
-		yAxisHasTitle: bool,
+		yAxisTitle: string,
+		/**
+		 * Set a color for the y axis title. This takes any number 0 or greater and
+		 * it converts it to a color in our color palette.
+		 */
+		yAxisTitleColor: number,
 
 
 		/**
 		 * An array of your y2 axis fields. Typically this will just be a single
 		 * item unless you need to display multiple lines.
 		 */
-		y2AxisFields: array,
+		y2AxisFields: arrayOf(string),
 		/**
 		 * The minimum number the y2 axis should display. Typically this should be
 		 * `0`.
@@ -193,10 +200,14 @@ const LineChart = React.createClass({
 		 */
 		y2AxisTickCount: number,
 		/**
-		 * Show a title for the y2 axis. If you want to make this more readable, be
-		 * sure to provide the `legend` prop.
+		 * Set a title for the y2 axis.
 		 */
-		y2AxisHasTitle: bool,
+		y2AxisTitle: string,
+		/**
+		 * Set a color for the y2 axis title. This takes any number 0 or greater and
+		 * it converts it to a color in our color palette.
+		 */
+		y2AxisTitleColor: number,
 	},
 
 	getDefaultProps() {
@@ -206,14 +217,15 @@ const LineChart = React.createClass({
 			margin: {
 				top: 10,
 				right: 80,
-				bottom: 50,
+				bottom: 65,
 				left: 80,
 			},
 
 			xAxisField: 'x',
 			xAxisTickCount: null,
 			xAxisFormatter: undefined, // purposefully done, see Axis.jsx
-			xAxisHasTitle: false,
+			xAxisTitle: null,
+			xAxisTitleColor: -1,
 
 			yAxisFields: ['y'],
 			yAxisIsStacked: false,
@@ -221,7 +233,8 @@ const LineChart = React.createClass({
 			yAxisHasPoints: true,
 			yAxisTickCount: null,
 			yAxisFormatter: undefined, // purposefully done, see Axis.jsx
-			yAxisHasTitle: false,
+			yAxisTitle: null,
+			yAxisTitleColor: -1,
 
 			y2AxisFields: null,
 			y2AxisIsStacked: false,
@@ -229,7 +242,8 @@ const LineChart = React.createClass({
 			y2AxisMin: 0,
 			y2AxisTickCount: null,
 			y2AxisFormatter: undefined, // purposefully done, see Axis.jsx
-			y2AxisHasTitle: false,
+			y2AxisTitle: null,
+			y2AxisTitleColor: -1,
 		};
 	},
 
@@ -240,32 +254,35 @@ const LineChart = React.createClass({
 			width,
 			margin,
 			data,
-			legend,
+			// legend,
 
 			xAxisField,
 			xAxisTickCount,
-			xAxisHasTitle,
+			xAxisTitle,
+			xAxisTitleColor,
 			xAxisFormatter = formatDate,
 			xAxisMin = minByFields(data, xAxisField),
 			xAxisMax = maxByFields(data, xAxisField),
 
 			yAxisFields,
-			yAxisHasTitle,
-			yAxisTickCount,
-			yAxisIsStacked,
-			yAxisHasPoints,
 			yAxisFormatter,
+			yAxisHasPoints,
+			yAxisIsStacked,
+			yAxisTickCount,
+			yAxisTitle,
+			yAxisTitleColor,
 			yAxisMin,
 			yAxisMax = yAxisIsStacked
 				? maxByFieldsStacked(data, yAxisFields)
 				: maxByFields(data, yAxisFields),
 
 			y2AxisFields,
-			y2AxisTickCount,
-			y2AxisIsStacked,
-			y2AxisHasPoints,
-			y2AxisHasTitle,
 			y2AxisFormatter,
+			y2AxisHasPoints,
+			y2AxisIsStacked,
+			y2AxisTickCount,
+			y2AxisTitle,
+			y2AxisTitleColor,
 			y2AxisMin,
 			y2AxisMax = y2AxisFields && y2AxisIsStacked
 				? maxByFieldsStacked(data, y2AxisFields)
@@ -310,19 +327,19 @@ const LineChart = React.createClass({
 						outerTickSize={0}
 						tickFormat={xAxisFormatter}
 						tickCount={xAxisTickCount}
+						color={xAxisTitleColor}
 						ref='xAxis'
 					/>
 				</g>
 
 				{/* x axis title */}
 				<g transform={`translate(${margin.left}, ${margin.top + innerHeight})`}>
-					{xAxisHasTitle ? (
+					{xAxisTitle ? (
 						<AxisLabel
 							orient='bottom'
 							width={innerWidth}
 							height={margin.bottom}
-							label={_.get(legend, xAxisField, xAxisField)}
-							color={-1}
+							label={xAxisTitle}
 							ref='xAxisTitle'
 						/>
 					) : null}
@@ -341,12 +358,13 @@ const LineChart = React.createClass({
 
 				{/* y axis title */}
 				<g transform={`translate(0, ${margin.top})`}>
-					{yAxisHasTitle ? (
+					{yAxisTitle ? (
 						<AxisLabel
 							orient='left'
 							width={margin.left}
 							height={innerHeight}
-							label={_.map(yAxisFields, (field) => _.get(legend, field, field))}
+							label={yAxisTitle}
+							color={yAxisTitleColor}
 							ref='yAxisTitle'
 						/>
 					) : null}
@@ -367,13 +385,13 @@ const LineChart = React.createClass({
 
 				{/* y2 axis title */}
 				<g transform={`translate(${margin.left + innerWidth}, ${margin.top})`}>
-					{y2AxisHasTitle ? (
+					{y2AxisTitle ? (
 						<AxisLabel
 							orient='right'
 							width={margin.right}
 							height={innerHeight}
-							label={_.map(y2AxisFields, (field) => _.get(legend, field, field))}
-							color={1}
+							label={y2AxisTitle}
+							color={y2AxisTitleColor}
 							ref='y2AxisTitle'
 						/>
 					) : null}

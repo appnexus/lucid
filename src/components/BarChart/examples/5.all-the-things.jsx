@@ -30,12 +30,12 @@ export default React.createClass({
 				xAxisField='day'
 				xAxisFormatter={xFormatter}
 				xAxisTickCount={5}
-				xAxisHasTitle={true}
+				xAxisTitle='Weekdays'
 				xAxisTickCount={2}
 
 				yAxisFields={['apples', 'oranges']}
 				yAxisFormatter={yFormatter}
-				yAxisHasTitle={true}
+				yAxisTitle='Fruit Count'
 				yAxisTickCount={4}
 			/>
 		);

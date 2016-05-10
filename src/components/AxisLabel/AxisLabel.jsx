@@ -1,16 +1,12 @@
-import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 
 const boundClassNames = lucidClassNames.bind('&-AxisLabel');
-const SPACER = '\u00a0\u00a0\u00a0';
 
 const {
 	number,
 	string,
 	oneOf,
-	arrayOf,
-	oneOfType,
 } = React.PropTypes;
 
 /**
@@ -31,16 +27,14 @@ const AxisLabel = React.createClass({
 		 */
 		width: number,
 		/**
-		 * Zero-based color. If there are multiple labels this will act like an
-		 * offset.
+		 * Zero-based color, defaults to -1 which is black.
 		 */
 		color: number,
 		/**
 		 * Contents of the label, should only ever be a string since we use a `text`
-		 * under the hood. If you provide an array of strings we'll color them
-		 * appropriately.
+		 * under the hood.
 		 */
-		label: oneOfType([string, arrayOf(string)]),
+		label: string,
 		/**
 		 * Determine orientation of the label.
 		 */
@@ -49,7 +43,7 @@ const AxisLabel = React.createClass({
 
 	getDefaultProps() {
 		return {
-			color: 0,
+			color: -1,
 		};
 	},
 
@@ -68,20 +62,13 @@ const AxisLabel = React.createClass({
 		return (
 			<text
 				{...passThroughs}
-				className={boundClassNames('&')}
+				className={boundClassNames('&', `&-color-${color % 6}`)}
 				x={isH ? width / 2 : height / 2 * -1}
 				y={orient === 'right' ? width : orient === 'bottom' ? height : 0}
 				dy={orient === 'top' || orient === 'left' ? '1em' : '-.32em'}
 				transform={isH ? '' : `rotate(-90)`}
 			>
-				{_.map([].concat(label), (str, i) => (
-					<tspan
-						key={i}
-						className={boundClassNames(`&-color-${i + color % 6}`)}
-					>
-						{`${i === 0 ? '' : SPACER}${str}`}
-					</tspan>
-				))}
+				{label}
 			</text>
 		);
 	}

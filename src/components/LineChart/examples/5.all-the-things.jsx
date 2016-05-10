@@ -15,29 +15,25 @@ export default React.createClass({
 		return (
 			<LineChart
 				data={data}
-				legend={{
-					date: 'Dates',
-					apples: 'Number of Apples',
-					oranges: 'Number of Oranges',
-				}}
 
 				xAxisField='date'
 				xAxisFormatter={xFormatter}
-				xAxisMin={new Date('2014-12-31:00:00-08:00')}
-				xAxisMax={new Date('2015-01-05:00:00-08:00')}
+				xAxisMin={new Date('2014-12-31T00:00-08:00')}
+				xAxisMax={new Date('2015-01-05T00:00-08:00')}
 				xAxisTickCount={5}
-				xAxisHasTitle={true}
+				xAxisTitle='Date'
 
 				yAxisFields={['apples']}
 				yAxisFormatter={yFormatter}
-				yAxisHasTitle={true}
 				yAxisTickCount={5}
+				yAxisTitle='Number of Apples'
+				yAxisTitleColor={0}
 
 				y2AxisFields={['oranges']}
 				y2AxisFormatter={yFormatter}
-				y2AxisHasTitle={true}
 				y2AxisTickCount={5}
-				y2AxisHasPoints={false}
+				y2AxisTitle='Number of Oranges'
+				y2AxisTitleColor={1}
 			/>
 		);
 	}

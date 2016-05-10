@@ -81,15 +81,19 @@ const BarChart = React.createClass({
 		 */
 		xAxisTickCount: number,
 		/**
-		 * Show a title for the x axis. If you want to make this more readable, be
-		 * sure to provide the `legend` prop.
-		 */
-		xAxisHasTitle: bool,
-		/**
 		 * An optional function used to format your x axis data. If you don't
 		 * provide anything, we'll use an identity function.
 		 */
 		xAxisFormatter: func,
+		/**
+		 * Set a title for the x axis.
+		 */
+		xAxisTitle: string,
+		/**
+		 * Set a color for the x axis title. This takes any number 0 or greater and
+		 * it converts it to a color in our color palette.
+		 */
+		xAxisTitleColor: number,
 
 
 		/**
@@ -124,10 +128,14 @@ const BarChart = React.createClass({
 		 */
 		yAxisTickCount: number,
 		/**
-		 * Show a title for the y axis. If you want to make this more readable, be
-		 * sure to provide the `legend` prop.
+		 * Set a title for the y axis.
 		 */
-		yAxisHasTitle: bool,
+		yAxisTitle: string,
+		/**
+		 * Set a color for the y axis title. This takes any number 0 or greater and
+		 * it converts it to a color in our color palette.
+		 */
+		yAxisTitleColor: number,
 
 
 		/**
@@ -157,13 +165,15 @@ const BarChart = React.createClass({
 
 			xAxisField: 'x',
 			xAxisTickCount: null,
-			xAxisHasTitle: false,
+			xAxisTitle: null,
+			xAxisTitleColor: -1,
 
 			yAxisFields: ['y'],
 			yAxisTickCount: null,
 			yAxisIsStacked: false,
 			yAxisMin: 0,
-			yAxisHasTitle: false,
+			yAxisTitle: null,
+			yAxisTitleColor: -1,
 		};
 	},
 
@@ -174,16 +184,18 @@ const BarChart = React.createClass({
 			width,
 			margin,
 			data,
-			legend,
+			// legend,
 
 			xAxisField,
 			xAxisFormatter,
-			xAxisHasTitle,
+			xAxisTitle,
+			xAxisTitleColor,
 			xAxisTickCount,
 
 			yAxisFields,
 			yAxisFormatter,
-			yAxisHasTitle,
+			yAxisTitle,
+			yAxisTitleColor,
 			yAxisIsStacked,
 			yAxisTickCount,
 			yAxisMin,
@@ -233,12 +245,13 @@ const BarChart = React.createClass({
 
 				{/* x axis title */}
 				<g transform={`translate(${margin.left}, ${margin.top + innerHeight})`}>
-					{xAxisHasTitle ? (
+					{xAxisTitle ? (
 						<AxisLabel
 							orient='bottom'
 							width={innerWidth}
 							height={margin.bottom}
-							label={_.get(legend, xAxisField, xAxisField)}
+							label={xAxisTitle}
+							color={xAxisTitleColor}
 						/>
 					) : null}
 				</g>
@@ -255,12 +268,13 @@ const BarChart = React.createClass({
 
 				{/* y axis title */}
 				<g transform={`translate(0, ${margin.top})`}>
-					{yAxisHasTitle ? (
+					{yAxisTitle ? (
 						<AxisLabel
 							orient='left'
 							width={margin.left}
 							height={innerHeight}
-							label={_.map(yAxisFields, (field) => _.get(legend, field, field))}
+							label={yAxisTitle}
+							color={yAxisTitleColor}
 						/>
 					) : null}
 				</g>
