@@ -48,13 +48,6 @@ const ContextMenu = createClass({
 		 */
 		isExpanded: bool,
 		/**
-		 * Called once when one of following happens:
-		 *
-		 * - Called with `BELOW_FOLD` if direction is `down` and FlyOut clips screen bottom.
-		 * - Called with `ABOVE_FOLD` if direction is `up` and it has enough space to render down without clipping.
-		 */
-		onChangeBounds: func,
-		/**
 		 * Called when a click event happenens outside of the ContextMenu.
 		 */
 		onClickOut: func,
@@ -82,7 +75,6 @@ const ContextMenu = createClass({
 		return {
 			direction: 'down',
 			isExpanded: true,
-			onChangeBounds: null,
 			onClickOut: null,
 			portalId: null
 		};
@@ -90,8 +82,7 @@ const ContextMenu = createClass({
 
 	getInitialState() {
 		const {
-			portalId,
-			direction
+			portalId
 		} = this.props;
 		return {
 			portalId: portalId || 'ContextMenu-Portal-' + Math.random().toString(16).substr(2),
@@ -103,22 +94,18 @@ const ContextMenu = createClass({
 				height: 0,
 				width: 0
 			},
-			flyOutHeight: 0,
-			isFlyoutBelowFold: direction !== ContextMenu.DOWN
+			flyOutHeight: 0
 		};
 	},
 
 	componentDidMount() {
-		const targetDOMNode = this.refs.target;
 
-		this.updateTargetRectangleIntervalId = setInterval(() => {
-			this.alignFlyOut(targetDOMNode);
-		}, 10);
+		this.alignFlyOut();
 
 		this.onClickBodyEventListener = window.addEventListener('click', (event) => {
 			if (this.props.onClickOut && this.refs.flyOutPortal) {
 				const flyOutEl = this.refs.flyOutPortal.portalElement.firstChild;
-				if (!(flyOutEl.contains(event.target) || targetDOMNode.contains(event.target))) {
+				if (!(flyOutEl.contains(event.target) || this.refs.target.contains(event.target))) {
 					this.props.onClickOut(event);
 				}
 			}
@@ -126,55 +113,44 @@ const ContextMenu = createClass({
 	},
 
 	componentWillUnmount() {
-		clearInterval(this.updateTargetRectangleIntervalId);
 		window.document.body.removeEventListener('click', this.onClickBodyEventListener);
 	},
 
 	componentWillReceiveProps() {
-		const targetDOMNode = this.refs.target;
-
-		if (targetDOMNode) {
-			this.alignFlyOut(targetDOMNode);
-		}
+		this.alignFlyOut();
 	},
 
 	statics: {
 		DOWN: 'down',
 		UP: 'up',
-		BELOW_FOLD: 'BELOW_FOLD',
-		ABOVE_FOLD: 'ABOVE_FOLD',
-		isElementBelowFold(targetElement, yPosition) {
-			if (typeof window !== 'undefined') {
-				const bodyRect = window.document.body.getBoundingClientRect();
-				const targetElementRect = targetElement.getBoundingClientRect();
-				yPosition = (yPosition === undefined ? targetElementRect.top : yPosition);
-				return (yPosition + targetElementRect.height - bodyRect.top > window.innerHeight - bodyRect.top);
-			} else {
-				throw new Error('Browser only! Cannot access window object.');
-			}
-		}
 	},
 
-	alignFlyOut(targetDOMNode) {
-		let flyOutHeight = this.state.flyOutHeight;
-		if (this.refs.flyOutPortal) {
-			const flyOutEl = this.refs.flyOutPortal.portalElement.firstChild;
-			flyOutHeight = flyOutEl.getBoundingClientRect().height;
+	alignFlyOut() {
 
-			if (this.props.onChangeBounds) {
-				const isFlyoutBelowFold = ContextMenu.isElementBelowFold(flyOutEl, targetDOMNode.getBoundingClientRect().bottom);
-				if (this.state.isFlyoutBelowFold !== isFlyoutBelowFold) {
-					this.setState({
-						isFlyoutBelowFold
-					});
-					this.props.onChangeBounds(isFlyoutBelowFold ? ContextMenu.BELOW_FOLD : ContextMenu.ABOVE_FOLD);
-				}
+		const {
+			refs: {
+				flyOutPortal,
+				target
 			}
+		} = this;
+
+		if (!target) {
+			return;
 		}
 
+		const targetRect = getAbsoluteBoundingClientRect(target);
+
+		if (!flyOutPortal) {
+			return this.setState({
+				targetRect
+			});
+		}
+
+		const flyOutEl = this.refs.flyOutPortal.portalElement.firstChild;
+
 		this.setState({
-			targetRect: getAbsoluteBoundingClientRect(targetDOMNode),
-			flyOutHeight
+			targetRect,
+			flyOutHeight: flyOutEl.getBoundingClientRect().height
 		});
 	},
 
@@ -198,7 +174,6 @@ const ContextMenu = createClass({
 
 		const flyoutElement = _.first(findTypes(this.props, ContextMenu.FlyOut));
 		const flyProps = _.get(flyoutElement, 'props', {});
-
 
 		return (
 			<span ref='target' {...passThroughs} className={cx('&', className)} style={style}>

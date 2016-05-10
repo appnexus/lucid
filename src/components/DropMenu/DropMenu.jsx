@@ -123,14 +123,6 @@ const DropMenu = createClass({
 		 */
 		onFocusPrev: func,
 		/**
-		 * Called when `direction` is `down` and the bottom of the flyout menu is clipping the screen boundary.
-		 */
-		onBelowFold: func,
-		/**
-		 * Called when `direction` is `up` and there is enough space below the control to render the flyout menu without clipping the screen boundary.
-		 */
-		onAboveFold: func,
-		/**
 		 * Called when the mouse moves over an option.
 		 * Has the signature `(optionIndex) => {}` where optionIndex can be a number or `null`.
 		 */
@@ -324,18 +316,6 @@ const DropMenu = createClass({
 		}
 	},
 
-	handleChangeBounds(type) {
-		const {
-			onBelowFold,
-			onAboveFold
-		} = this.props;
-		if (type === ContextMenu.BELOW_FOLD) {
-			onBelowFold();
-		} else if (type === ContextMenu.ABOVE_FOLD) {
-			onAboveFold();
-		}
-	},
-
 	handleMouseFocusOption(optionIndex, optionProps) {
 		const {
 			focusedIndex,
@@ -437,7 +417,12 @@ const DropMenu = createClass({
 				'&-direction-down': isExpanded && direction === 'down',
 				'&-direction-up': isExpanded && direction === 'up'
 			}, className)} style={style}>
-				<ContextMenu portalId={portalId} isExpanded={isExpanded} direction={direction} onChangeBounds={this.handleChangeBounds} onClickOut={onCollapse}>
+				<ContextMenu
+					portalId={portalId}
+					isExpanded={isExpanded}
+					direction={direction}
+					onClickOut={onCollapse}
+					>
 					<ContextMenu.Target>
 						<div
 							{...(!isDisabled ? {
