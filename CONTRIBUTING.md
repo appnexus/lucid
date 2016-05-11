@@ -68,6 +68,7 @@ describe('MyNewComponent', () => {
 - Components should use start case e.g.:
   - "MyComponent"
   - "AnotherComponentHere.jsx"
+- We hang the `_lucidIsPrivate` boolean off our `statics` on our React classes to indicate that the component isn't intended for external consumption yet.
 
 ## Tests
 
