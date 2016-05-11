@@ -19,6 +19,14 @@ const {
 	string,
 } = React.PropTypes;
 
+function isValidSeries(series) {
+	if (_.isArray(series)) {
+		return _.isFinite(_.last(series));
+	}
+
+	return _.isFinite(series);
+}
+
 /**
  * {"categories": ["visualizations", "chart primitives"]}
  *
@@ -160,13 +168,15 @@ const Points = createClass({
 			>
 				{_.map(transformedData, (d, dIndex) => (
 					_.map(d, (series, seriesIndex) => (
-						<Point
-							x={xScale(data[seriesIndex][xField])}
-							y={yScale(_.isArray(series) ? _.last(series) : series)}
-							hasStroke={hasStroke}
-							kind={dIndex + colorOffset}
-							color={dIndex + colorOffset}
-						/>
+						isValidSeries(series) ?
+							<Point
+								x={xScale(data[seriesIndex][xField])}
+								y={yScale(_.isArray(series) ? _.last(series) : series)}
+								hasStroke={hasStroke}
+								kind={dIndex + colorOffset}
+								color={dIndex + colorOffset}
+							/>
+						: null
 					))
 				))}
 			</g>

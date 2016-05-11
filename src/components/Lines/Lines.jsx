@@ -139,10 +139,12 @@ const Lines = createClass({
 
 		const area = isStacked
 			? d3Shape.area()
+				.defined((a) => _.isFinite(a[0]) && _.isFinite(a[1]))
 				.x((a, i) => xScale(data[i][xField]))
 				.y0((a) => yScale(a[1]))
 				.y1((a) => yScale(a[0]))
 			: d3Shape.area()
+				.defined(_.isFinite)
 				.x((a, i) => xScale(data[i][xField]))
 				.y((a) => yScale(a));
 

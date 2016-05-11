@@ -1,27 +1,111 @@
 import _ from 'lodash';
 import assert from 'assert';
 import {
+	toPairs,
 	byFields,
 	minByFields,
 	maxByFields,
 	maxByFieldsStacked,
 	discreteTicks,
+	groupByFields,
+	transformFromCenter,
 } from './chart-helpers';
 
 describe('chart-helpers', () => {
-	describe('#maxByFieldsStacked', () => {
+	// Testing `formatDate` will require us to mock our time zone. Since the
+	// function was taken from d3, I'm going to leave out testing it since the
+	// value isn't worth the cost of adding a time mocking library.
+	//
+	// describe('formatDate', () => {});
+
+	describe('transformFromCenter', () => {
+		it('should work', () => {
+			assert.equal(transformFromCenter(10, 10, 20, 20, 2), 'translate(-30, -30) scale(2)');
+			assert.equal(transformFromCenter(10, 10, 12, 16, 3), 'translate(-26, -38) scale(3)');
+		});
+	});
+
+	describe('toPairs', () => {
+		it('should work', () => {
+			const data = [
+				{ a: 'one', b: 'two' },
+				{ a: 'three', b: 'four' },
+			];
+
+			assert.deepEqual(
+				toPairs(data, 'a', 'b'),
+				[
+					['one', 'two'],
+					['three', 'four'],
+				]
+			);
+		});
+	});
+
+	describe('groupByFields', () => {
+		it('should work', () => {
+			const data = [
+				{ a: 'one', b: 20, c: 30, d: 40 },
+				{ a: 'two', b: 21, c: 31, d: 41 },
+				{ a: 'two', b: 22, c: 32, d: 42 },
+			];
+
+			assert.deepEqual(
+				groupByFields(data, ['b', 'c', 'd']),
+				[
+					[20, 21, 22],
+					[30, 31, 32],
+					[40, 41, 42],
+				]
+			);
+		});
+
+		it('should handle missing and extra data points', () => {
+			const data = [
+				{ a: 'one', b: 20, c: 30, d: 40 },
+				{ a: 'two', b: 21,        d: 41 },
+				{ a: 'two', b: 22, c: 32, d: 42, e: 100 },
+			];
+
+			assert.deepEqual(
+				groupByFields(data, ['b', 'c', 'd']),
+				[
+					[20 , 21        , 22],
+					[30 , undefined , 32],
+					[40 , 41        , 42],
+				]
+			);
+		});
+
+		it('should handle non-array fields', () => {
+			const data = [
+				{ a: 'one', b: 1 },
+				{ a: 'two', b: 3 },
+				{ a: 'two', b: 10 },
+			];
+
+			assert.deepEqual(
+				groupByFields(data, 'b'),
+				[
+					[1, 3, 10],
+				]
+			);
+		});
+	});
+
+	describe('maxByFieldsStacked', () => {
 		it('should return the max for a collection', () => {
 			const data = [
-				{a: 'one', b: 1, c: 3, d: 5},
-				{a: 'two', b: 3, c: 4, d: 7},
-				{a: 'two', b: 10, c: 10, d: 10},
+				{ a: 'one', b: 1, c: 3, d: 5},
+				{ a: 'two', b: 3, c: 4, d: 7},
+				{ a: 'two', b: 10, c: 10, d: 10},
 			];
 
 			assert.equal(maxByFieldsStacked(data, ['b', 'c', 'd']), 30);
 		});
 	});
 
-	describe('#discreteTicks', () => {
+	describe('discreteTicks', () => {
 		it('should work on a myriad of ranges', () => {
 			assert.deepEqual(discreteTicks(_.times(100), 1), [0]);
 			assert.deepEqual(discreteTicks(_.times(100), 2), [0, 99]);
@@ -39,7 +123,7 @@ describe('chart-helpers', () => {
 		});
 	});
 
-	describe('#byFields', () => {
+	describe('byFields', () => {
 		it('should work with a single field', () => {
 			const data = [
 				{ rev: 1 },
@@ -62,8 +146,8 @@ describe('chart-helpers', () => {
 
 		it('should work with multiple fields', () => {
 			const data = [
-				{ rev: 1, imps: 100},
-				{ rev: 2, imps: 200},
+				{ rev: 1, imps: 100 },
+				{ rev: 2, imps: 200 },
 				{ rev: 'foo', extra: 2, imps: 300 },
 			];
 
@@ -75,7 +159,7 @@ describe('chart-helpers', () => {
 		});
 	});
 
-	describe('#minByFields', () => {
+	describe('minByFields', () => {
 		it('should take a single field and return the minimum', () => {
 			const data = [
 				{ a: 1 },
@@ -103,7 +187,7 @@ describe('chart-helpers', () => {
 		});
 	});
 
-	describe('#maxByFields', () => {
+	describe('maxByFields', () => {
 		it('should take a single field and return the maximum', () => {
 			const data = [
 				{ foo: 1 },
@@ -137,7 +221,7 @@ describe('chart-helpers', () => {
 				{ a: 10, b: 0 },
 				{ a: 3, b: 1 },
 				{ a: 2, b: 0 },
-				{ a: 1},
+				{ a: 1 },
 			];
 
 			assert.equal(maxByFields(data, ['a', 'b']), 20, 'did not get the correct max back');

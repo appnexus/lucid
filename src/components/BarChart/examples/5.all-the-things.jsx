@@ -13,59 +13,31 @@ const xFormatter = (d) => d.toUpperCase().slice(0, 3);
 export default React.createClass({
 	render() {
 		return (
-			<div>
-				<BarChart
-					data={data}
-					margin={{
-						top: 5,
-						right: 80,
-						bottom: 60,
-						left: 80,
-					}}
-					legend={{
-						day: 'Day of Week',
-						apples: 'Number of Apples',
-						oranges: 'Number of Oranges',
-					}}
+			<BarChart
+				data={data}
+				margin={{
+					top: 5,
+					right: 80,
+					bottom: 60,
+					left: 80,
+				}}
+				legend={{
+					day: 'Day of Week',
+					apples: 'Number of Apples',
+					oranges: 'Number of Oranges',
+				}}
 
-					xAxisField='day'
-					xAxisFormatter={xFormatter}
-					xAxisTickCount={5}
-					xAxisTitle='Weekdays'
-					xAxisTickCount={2}
+				xAxisField='day'
+				xAxisFormatter={xFormatter}
+				xAxisTickCount={5}
+				xAxisTitle='Weekdays'
+				xAxisTickCount={2}
 
-					yAxisFields={['apples', 'oranges']}
-					yAxisFormatter={yFormatter}
-					yAxisTitle='Fruit Count'
-					yAxisTickCount={4}
-				/>
-
-				<BarChart
-					height={500}
-					width={1000}
-					margins={{
-						top: 50,
-						right: 50,
-						bottom: 50,
-						left: 50,
-					}}
-					data={[
-						{date: '2015-01-01', rev: 100, imps: 1000},
-						{date: '2015-01-02', rev: 89, imps: 2200},
-						{date: '2015-01-03', rev: 95, imps: 3305},
-					]}
-
-					xAxisField='date'
-					xAxisTitle='Date'
-					xAxisTickCount={8}
-					xAxisFormatter={() => 'x axis tick'}
-
-					yAxisFields={['rev', 'imps']}
-					yAxisTitle='Metrics'
-					yAxisTickCount={4}
-					yAxisFormatter={() => 'y axis tick'}
-				/>
-			</div>
+				yAxisFields={['apples', 'oranges']}
+				yAxisFormatter={yFormatter}
+				yAxisTitle='Fruit Count'
+				yAxisTickCount={4}
+			/>
 		);
 	}
 });
