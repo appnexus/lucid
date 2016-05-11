@@ -1,26 +1,32 @@
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-types';
 
-const boundClassNames = lucidClassNames.bind('&-Line');
+const cx = lucidClassNames.bind('&-Line');
 
 const {
 	number,
-	any,
 	string,
+	any,
 } = React.PropTypes;
 
 /**
  * {"categories": ["visualizations", "geoms"]}
  *
- * Lines are typically used for line charts.
+ * Lines are great. If I told you they aren't, I'd by li'n.
  *
  */
-const Line = React.createClass({
-	_lucidIsPrivate: true,
+const Line = createClass({
+	displayName: 'Line',
+
+	statics: {
+		_lucidIsPrivate: true,
+	},
 
 	propTypes: {
 		/**
-		 * Classes are appended to existing classes using the `classnames` library.
+		 * Classes are appended to root element along with existing classes using
+		 * the `classnames` library.
 		 */
 		className: any,
 		/**
@@ -53,7 +59,7 @@ const Line = React.createClass({
 		return (
 			<path
 				{...passThroughs}
-				className={boundClassNames(className, '&', `&-color-${colorIndex}`)}
+				className={cx(className, '&', `&-color-${colorIndex}`)}
 				d={d}
 			/>
 		);

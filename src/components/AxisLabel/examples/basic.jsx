@@ -38,17 +38,16 @@ export default React.createClass({
 				<g transform={`translate(0,0)`}>
 					<AxisLabel
 						orient='left'
-						color={0}
 						width={margin.left}
 						height={height}
-						label={['One', 'two', 'three']}
+						label='Left'
 					/>
 				</g>
 
 				<g transform={`translate(${margin.left + innerWidth}, 0)`}>
 					<AxisLabel
 						orient='right'
-						color={1}
+						color={0}
 						width={margin.right}
 						height={height}
 						label='Right'
@@ -58,7 +57,7 @@ export default React.createClass({
 				<g transform={`translate(0, ${margin.top + innerHeight})`}>
 					<AxisLabel
 						orient='bottom'
-						color={2}
+						color={1}
 						width={width}
 						height={margin.bottom}
 						label='Bottom'
@@ -68,7 +67,7 @@ export default React.createClass({
 				<g transform={`translate(0, 0)`}>
 					<AxisLabel
 						orient='top'
-						color={3}
+						color={2}
 						width={width}
 						height={margin.top}
 						label='Top'

@@ -1,12 +1,13 @@
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-types';
 
-const boundClassNames = lucidClassNames.bind('&-Bar');
+const cx = lucidClassNames.bind('&-Bar');
 
 const {
 	number,
-	any,
 	bool,
+	any,
 } = React.PropTypes;
 
 /**
@@ -15,12 +16,17 @@ const {
  * Bars are typically used for bar charts.
  *
  */
-const Bar = React.createClass({
-	_lucidIsPrivate: true,
+const Bar = createClass({
+	displayName: 'Bar',
+
+	statics: {
+		_lucidIsPrivate: true,
+	},
 
 	propTypes: {
 		/**
-		 * Classes are appended to existing classes using the `classnames` library.
+		 * Classes are appended to root element along with existing classes using
+		 * the `classnames` library.
 		 */
 		className: any,
 		/**
@@ -77,7 +83,7 @@ const Bar = React.createClass({
 		return (
 			<rect
 				{...passThroughs}
-				className={boundClassNames(className, '&', `&-color-${colorIndex}`, {
+				className={cx(className, '&', `&-color-${colorIndex}`, {
 					'&-has-stroke': hasStroke,
 				})}
 				x={x}

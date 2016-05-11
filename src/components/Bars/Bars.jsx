@@ -2,12 +2,13 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { groupByFields } from '../../util/chart-helpers';
+import { createClass } from '../../util/component-types';
 import d3Scale from 'd3-scale';
 import d3Shape from 'd3-shape';
 
 import Bar from '../Bar/Bar';
 
-const boundClassNames = lucidClassNames.bind('&-Bars');
+const cx = lucidClassNames.bind('&-Bars');
 
 const {
 	any,
@@ -22,14 +23,19 @@ const {
 /**
  * {"categories": ["visualizations", "chart primitives"]}
  *
- * Foo
+ * Bars for your rectangular viewing pleasure.
  */
-const Bars = React.createClass({
-	_lucidIsPrivate: true,
+const Bars = createClass({
+	displayName: 'Bars',
+
+	statics: {
+		_lucidIsPrivate: true,
+	},
 
 	propTypes: {
 		/**
-		 * Classes are appended to existing classes using the `classnames` library.
+		 * Classes are appended to root element along with existing classes using
+		 * the `classnames` library.
 		 */
 		className: any,
 		/**
@@ -133,7 +139,7 @@ const Bars = React.createClass({
 		return (
 			<g
 				{...passThroughs}
-				className={boundClassNames(className, '&')}
+				className={cx(className, '&')}
 				transform={`translate(${left}, ${top})`}
 			>
 				{_.map(transformedData, (d, dIndex) => {

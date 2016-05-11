@@ -1,12 +1,14 @@
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-types';
 
-const boundClassNames = lucidClassNames.bind('&-AxisLabel');
+const cx = lucidClassNames.bind('&-AxisLabel');
 
 const {
 	number,
 	string,
 	oneOf,
+	any,
 } = React.PropTypes;
 
 /**
@@ -14,10 +16,19 @@ const {
  *
  * Labels for axes.
  */
-const AxisLabel = React.createClass({
-	_lucidIsPrivate: true,
+const AxisLabel = createClass({
+	displayName: 'AxisLabel',
+
+	statics: {
+		_lucidIsPrivate: true,
+	},
 
 	propTypes: {
+		/**
+		 * Classes are appended to root element along with existing classes using
+		 * the `classnames` library.
+		 */
+		className: any,
 		/**
 		 * Height of the margin this label should fit into.
 		 */
@@ -54,6 +65,7 @@ const AxisLabel = React.createClass({
 			orient,
 			label,
 			color,
+			className,
 			...passThroughs,
 		} = this.props;
 
@@ -62,7 +74,7 @@ const AxisLabel = React.createClass({
 		return (
 			<text
 				{...passThroughs}
-				className={boundClassNames('&', `&-color-${color % 6}`)}
+				className={cx(className, '&', `&-color-${color % 6}`)}
 				x={isH ? width / 2 : height / 2 * -1}
 				y={orient === 'right' ? width : orient === 'bottom' ? height : 0}
 				dy={orient === 'top' || orient === 'left' ? '1em' : '-.32em'}

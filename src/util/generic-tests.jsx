@@ -7,7 +7,11 @@ import _ from 'lodash';
 import * as lucid from '../index';
 
 // Common tests for all our components
-export function common(Component, { getDefaultProps = _.noop, selector = null } = {}) {
+export function common(Component, {
+	getDefaultProps = _.noop,
+	selector = null,
+	exemptFunctionProps = [],
+} = {}) {
 
 	function generateDefaultProps(props={}) {
 		return _.assign({}, getDefaultProps(), props);
@@ -87,9 +91,9 @@ export function common(Component, { getDefaultProps = _.noop, selector = null } 
 					isProbablyFunction
 					&& !isAny
 					&& !_.startsWith(key, 'on')
-					&& !_.includes(key, 'Formatter') // we make an exception to the rule for formatters
+					&& !_.includes(exemptFunctionProps, key) // we make exceptions to the rule
 				) {
-					return false
+					return false;
 				}
 
 				return true;

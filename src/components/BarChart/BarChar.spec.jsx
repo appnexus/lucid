@@ -1,3 +1,8 @@
+// Note: these tests are basically pin tests, given that we're rendering svgs,
+// these tests serve to ensure that the rendered output is exactly at the
+// author inteded. As a consequence, you may need to re-pin these tests if you
+// change things.
+
 import React from 'react';
 import { mount } from 'enzyme';
 import { common } from '../../util/generic-tests';
@@ -5,15 +10,6 @@ import describeWithDOM from '../../util/describe-with-dom';
 import assert from 'assert';
 
 import BarChart from './BarChart';
-
-const NO_MARGIN = { top: 0, right: 0, bottom: 0, left: 0 };
-const DATA = [
-	{ x: 'Monday'    , y: 1  , y2: 2}   ,
-	{ x: 'Tuesday'   , y: 4  , y2: 4 }  ,
-	{ x: 'Wednesday' , y: 8  , y2: 1 }  ,
-	{ x: 'Thursday'  , y: 20 , y2: 15 } ,
-	{ x: 'Friday'    , y: 10 , y2: 2 }  ,
-];
 
 describeWithDOM('BarChart', () => {
 	let wrapper;
@@ -25,16 +21,32 @@ describeWithDOM('BarChart', () => {
 	});
 
 	common(BarChart, {
+		exemptFunctionProps: [
+			'xAxisFormatter',
+			'yAxisFormatter',
+		],
 		getDefaultProps: () => ({
-			data: DATA,
+			data: [
+				{ x: 'Monday'    , y: 1  , y2: 2}   ,
+				{ x: 'Tuesday'   , y: 4  , y2: 4 }  ,
+				{ x: 'Wednesday' , y: 8  , y2: 1 }  ,
+				{ x: 'Thursday'  , y: 20 , y2: 15 } ,
+				{ x: 'Friday'    , y: 10 , y2: 2 }  ,
+			],
 		})
 	});
 
-	describe.only('render', () => {
+	describe('render', () => {
 		it('should render a basic chart', () => {
 			wrapper = mount(
 				<BarChart
-					data={DATA}
+					data={[
+						{ x: 'Monday'    , y: 1  , y2: 2}   ,
+						{ x: 'Tuesday'   , y: 4  , y2: 4 }  ,
+						{ x: 'Wednesday' , y: 8  , y2: 1 }  ,
+						{ x: 'Thursday'  , y: 20 , y2: 15 } ,
+						{ x: 'Friday'    , y: 10 , y2: 2 }  ,
+					]}
 				/>
 			);
 
@@ -45,7 +57,13 @@ describeWithDOM('BarChart', () => {
 		it('should render a chart with multiple series', () => {
 			wrapper = mount(
 				<BarChart
-					data={DATA}
+					data={[
+						{ x: 'Monday'    , y: 1  , y2: 2}   ,
+						{ x: 'Tuesday'   , y: 4  , y2: 4 }  ,
+						{ x: 'Wednesday' , y: 8  , y2: 1 }  ,
+						{ x: 'Thursday'  , y: 20 , y2: 15 } ,
+						{ x: 'Friday'    , y: 10 , y2: 2 }  ,
+					]}
 					yAxisFields={['y', 'y2']}
 				/>
 			);
@@ -53,89 +71,37 @@ describeWithDOM('BarChart', () => {
 			assert.equal(wrapper.find('.lucid-Bar').length, 10, 'did not find the correct number of bars');
 		});
 
-		it.skip('should render a dual axis chart', () => {
+		it('should have the correct html', () => {
 			wrapper = mount(
 				<BarChart
-					data={[
-						{x: new Date(), y: 1, y2: 1},
-						{x: new Date(), y: 2, y2: 1},
-						{x: new Date(), y: 3, y2: 1},
-					]}
-					yAxisFields={['y']}
-					y2AxisFields={['y2']}
-				/>
-			);
-
-			assert.equal(wrapper.find('.lucid-Axis').length, 3, 'did not find the correct number of axes');
-		});
-	});
-
-	describe.skip('props', () => {
-		it('height and width', () => {
-			wrapper = mount(
-				<BarChart
-					data={DATA}
-					height={100}
-					width={200}
-				/>
-			);
-
-			assert.equal(wrapper.find('svg').props().height, 100, 'svg had the wrong height');
-			assert.equal(wrapper.find('svg').props().width, 200, 'svg had the wrong width');
-		});
-
-		it('legend', () => {
-			wrapper = mount(
-				<BarChart
-					data={DATA}
-					legent={{
-						x: 'Date',
-						y: 'Revenue',
+					height={500}
+					width={1000}
+					margins={{
+						top: 50,
+						right: 50,
+						bottom: 50,
+						left: 50,
 					}}
-					xAxisHasTitle={true}
-					yAxisHasTitle={true}
-				/>
-			);
-
-			assert(wrapper.find('tspan').filterWhere(t => t.text() === 'Date'), 'unable to find x title');
-			assert(wrapper.find('tspan').filterWhere(t => t.text() === 'Revenue'), 'unable to find y title');
-		});
-
-		it('xAxisField', () => {
-			wrapper = mount(
-				<BarChart
-					margin={NO_MARGIN}
-					height={100}
-					width={200}
 					data={[
-						{ startDate: new Date('2016-01-01T00:00:00Z'), y: 1 },
-						{ startDate: new Date('2016-01-02T00:00:00Z'), y: 2 },
+						{date: '2015-01-01', rev: 100, imps: 1000},
+						{date: '2015-01-02', rev: 89, imps: 2200},
+						{date: '2015-01-03', rev: 95, imps: 3305},
 					]}
-					xAxisField='startDate'
+
+					xAxisField='date'
+					xAxisTitle='Date'
+					xAxisTickCount={2}
+					xAxisFormatter={() => 'x axis tick'}
+
+					yAxisFields={['rev', 'imps']}
+					yAxisTitle='Metrics'
+					yAxisTickCount={4}
+					yAxisFormatter={() => 'y axis tick'}
 				/>
 			);
 
-			// These tests are kinda bad. Consider removing them if they cause
-			// problems in the future. Since I use transforms that are specific to
-			// each shape, it's a bit weird to make assertions on their location
-			assert.equal(wrapper.find('.lucid-Point').length, 2, 'wrong number of points found');
-			assert.equal(wrapper.find('.lucid-Point').at(0).props().transform, 'translate(-6, 44) scale(1)', 'point location was not correct');
-			assert.equal(wrapper.find('.lucid-Point').at(1).props().transform, 'translate(194, -6) scale(1)', 'point location was not correct');
-		});
-
-		// it('xAxisMin', () => {});
-		// it('xAxisMax', () => {});
-		// it('xAxisFormatter', () => {});
-		// it('xAxisTickCount', () => {});
-		it('xAxisHasTitle', () => {
-			wrapper = mount(
-				<BarChart
-					data={DATA}
-					xAxisHasTitle={true}
-				/>
-			);
-
-			assert(wrapper.find('tspan').filterWhere(t => t.text() === 'x'), 'unable to find x title');
+			assert.equal(wrapper.html(), '<svg class="lucid-BarChart" width="1000" height="500"><g transform="translate(80, 450)"><g class="lucid-Axis"><path class="lucid-Axis-domain" d="M0,0V0H900V0"></path><g transform="translate(206.75675675675674, 0)"><line class="lucid-Axis-tick" x2="0" y2="6"></line><text class="lucid-Axis-tick-text" x="0" y="9" dy=".71em" style="text-anchor:middle;">x axis tick</text></g><g transform="translate(693.2432432432432, 0)"><line class="lucid-Axis-tick" x2="0" y2="6"></line><text class="lucid-Axis-tick-text" x="0" y="9" dy=".71em" style="text-anchor:middle;">x axis tick</text></g></g></g><g transform="translate(80, 450)"><text class="lucid-AxisLabel lucid-AxisLabel-color--1" x="450" y="50" dy="-.32em" transform="">Date</text></g><g transform="translate(80, 10)"><g class="lucid-Axis"><path class="lucid-Axis-domain" d="M-6,440H0V0H-6"></path><g transform="translate(0, 440)"><line class="lucid-Axis-tick" x2="-6" y2="0"></line><text class="lucid-Axis-tick-text" x="-9" y="0" dy=".32em" style="text-anchor:end;">y axis tick</text></g><g transform="translate(0, 306.86838124054464)"><line class="lucid-Axis-tick" x2="-6" y2="0"></line><text class="lucid-Axis-tick-text" x="-9" y="0" dy=".32em" style="text-anchor:end;">y axis tick</text></g><g transform="translate(0, 173.73676248108927)"><line class="lucid-Axis-tick" x2="-6" y2="0"></line><text class="lucid-Axis-tick-text" x="-9" y="0" dy=".32em" style="text-anchor:end;">y axis tick</text></g><g transform="translate(0, 40.60514372163391)"><line class="lucid-Axis-tick" x2="-6" y2="0"></line><text class="lucid-Axis-tick-text" x="-9" y="0" dy=".32em" style="text-anchor:end;">y axis tick</text></g></g></g><g transform="translate(0, 10)"><text class="lucid-AxisLabel lucid-AxisLabel-color--1" x="-220" y="0" dy="1em" transform="rotate(-90)">Metrics</text></g><g class="lucid-Bars" transform="translate(80, 10)"><g><rect class="lucid-Bar lucid-Bar-color-0" x="121.62162162162161" y="426.6868381240545" height="13.313161875945525" width="85"></rect><rect class="lucid-Bar lucid-Bar-color-0" x="364.86486486486484" y="428.15128593040845" height="11.848714069591551" width="85"></rect><rect class="lucid-Bar lucid-Bar-color-0" x="608.1081081081081" y="427.35249621785175" height="12.647503782148249" width="85"></rect></g><g><rect class="lucid-Bar lucid-Bar-color-1" x="206.6216216216216" y="306.86838124054464" height="133.13161875945536" width="85"></rect><rect class="lucid-Bar lucid-Bar-color-1" x="449.86486486486484" y="147.11043872919822" height="292.8895612708018" width="85"></rect><rect class="lucid-Bar lucid-Bar-color-1" x="693.1081081081081" y="0" height="440" width="85"></rect></g></g></svg>')
 		});
 	});
 });
+

@@ -194,6 +194,8 @@ const Component = React.createClass({
 
 		const descriptionAsHTML = getDescriptionAsHtml(_.get(docgenMap, `${componentName}.description`));
 
+		const privateString = _.get(docgenMap, `${componentName}.isPrivateComponent`) ? '(private)' : '';
+
 		const composesComponents = _.chain(docgenMap)
 			.get(`${componentName}.customData.madeFrom`, null)
 			.thru((componentNames) => {
@@ -221,7 +223,7 @@ const Component = React.createClass({
 
 		return (
 			<div>
-				<h2>{componentName} {composesComponents}</h2>
+				<h2>{componentName} {privateString} {composesComponents}</h2>
 				<div dangerouslySetInnerHTML={descriptionAsHTML} />
 				<h3>Props</h3>
 				<Table style={{width:'100%'}}>

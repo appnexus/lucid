@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-types';
 import {
 	maxByFields,
 	maxByFieldsStacked,
@@ -11,7 +12,7 @@ import Axis from '../Axis/Axis';
 import AxisLabel from '../AxisLabel/AxisLabel';
 import Bars from '../Bars/Bars';
 
-const boundClassNames = lucidClassNames.bind('&-BarChart');
+const cx = lucidClassNames.bind('&-BarChart');
 
 const {
 	any,
@@ -28,14 +29,16 @@ const {
 /**
  * {"categories": ["visualizations", "charts"]}
  *
- * Bar chart displays is great for showing data that fits neatly in to
- * "buckets". The x axis data should be strings, and the y axis data should be
- * numeric.
+ * Bar charts are great for showing data that fits neatly in to "buckets". The
+ * x axis data must be strings, and the y axis data must be numeric.
  */
-const BarChart = React.createClass({
+const BarChart = createClass({
+	displayName: 'BarChart',
+
 	propTypes: {
 		/**
-		 * Classes are appended to existing classes using the `classnames` library.
+		 * Classes are appended to root element along with existing classes using
+		 * the `classnames` library.
 		 */
 		className: any,
 		/**
@@ -68,6 +71,17 @@ const BarChart = React.createClass({
 		 *     ]
 		 */
 		data: arrayOf(object).isRequired,
+		/**
+		 * An object with human readable names for fields that  will be used for
+		 * tooltips and legends which are *not yet implemented*. E.g:
+		 *
+		 *     {
+		 *       x: 'Revenue',
+		 *       y: 'Impressions',
+		 *     }
+		 *
+		 * legend: object,
+		 */
 
 
 		/**
@@ -136,19 +150,6 @@ const BarChart = React.createClass({
 		 * it converts it to a color in our color palette.
 		 */
 		yAxisTitleColor: number,
-
-
-		/**
-		 * An object with human readable names for fields that is used for legend
-		 * purposes. E.g:
-		 *
-		 *     {
-		 *       x: 'Revenue',
-		 *       y: 'Impressions',
-		 *     }
-		 *
-		 */
-		legend: object,
 	},
 
 	getDefaultProps() {
@@ -161,7 +162,6 @@ const BarChart = React.createClass({
 				bottom: 50,
 				left: 80,
 			},
-			legend: null,
 
 			xAxisField: 'x',
 			xAxisTickCount: null,
@@ -184,7 +184,6 @@ const BarChart = React.createClass({
 			width,
 			margin,
 			data,
-			// legend,
 
 			xAxisField,
 			xAxisFormatter,
@@ -228,7 +227,7 @@ const BarChart = React.createClass({
 		return (
 			<svg
 				{...passThroughs}
-				className={boundClassNames(className, '&')}
+				className={cx(className, '&')}
 				width={width}
 				height={height}
 			>

@@ -1,12 +1,13 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-types';
 import { groupByFields } from '../../util/chart-helpers';
 import d3Shape from 'd3-shape';
 
 import Line from '../Line/Line';
 
-const boundClassNames = lucidClassNames.bind('&-Lines');
+const cx = lucidClassNames.bind('&-Lines');
 
 const {
 	any,
@@ -21,14 +22,19 @@ const {
 /**
  * {"categories": ["visualizations", "chart primitives"]}
  *
- * Foo
+ * Such lines. Much wow.
  */
-const Lines = React.createClass({
-	_lucidIsPrivate: true,
+const Lines = createClass({
+	displayName: 'Lines',
+
+	statics: {
+		_lucidIsPrivate: true,
+	},
 
 	propTypes: {
 		/**
-		 * Classes are appended to existing classes using the `classnames` library.
+		 * Classes are appended to root element along with existing classes using
+		 * the `classnames` library.
 		 */
 		className: any,
 		/**
@@ -152,7 +158,7 @@ const Lines = React.createClass({
 		return (
 			<g
 				{...passThroughs}
-				className={boundClassNames(className, '&')}
+				className={cx(className, '&')}
 				transform={`translate(${left}, ${top})`}
 			>
 				{_.map(transformedData, (d, dIndex) => (

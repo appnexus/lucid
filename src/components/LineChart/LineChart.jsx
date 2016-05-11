@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-types';
 import {
 	minByFields,
 	maxByFields,
@@ -14,7 +15,7 @@ import AxisLabel from '../AxisLabel/AxisLabel';
 import Lines from '../Lines/Lines';
 import Points from '../Points/Points';
 
-const boundClassNames = lucidClassNames.bind('&-LineChart');
+const cx = lucidClassNames.bind('&-LineChart');
 
 const {
 	any,
@@ -35,10 +36,13 @@ const {
  * on the x axis and numeric values on the y. If you need discrete values on
  * the x axis, consider using the `BarChart` instead.
  */
-const LineChart = React.createClass({
+const LineChart = createClass({
+	displayName: 'LineChart',
+
 	propTypes: {
 		/**
-		 * Classes are appended to existing classes using the `classnames` library.
+		 * Classes are appended to root element along with existing classes using
+		 * the `classnames` library.
 		 */
 		className: any,
 		/**
@@ -72,16 +76,16 @@ const LineChart = React.createClass({
 		 */
 		data: arrayOf(object).isRequired,
 		/**
-		 * An object with human readable names for fields that is used for legend
-		 * purposes. E.g:
+		 * An object with human readable names for fields that  will be used for
+		 * tooltips and legends which are *not yet implemented*. E.g:
 		 *
 		 *     {
 		 *       x: 'Revenue',
 		 *       y: 'Impressions',
 		 *     }
 		 *
+		 * legend: object,
 		 */
-		legend: object,
 
 
 		/**
@@ -254,7 +258,6 @@ const LineChart = React.createClass({
 			width,
 			margin,
 			data,
-			// legend,
 
 			xAxisField,
 			xAxisTickCount,
@@ -315,7 +318,7 @@ const LineChart = React.createClass({
 		return (
 			<svg
 				{...passThroughs}
-				className={boundClassNames(className, '&')}
+				className={cx(className, '&')}
 				width={width}
 				height={height}
 			>

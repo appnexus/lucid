@@ -1,12 +1,13 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-types';
 import { groupByFields } from '../../util/chart-helpers';
 import d3Shape from 'd3-shape';
 
 import Point from '../Point/Point';
 
-const boundClassNames = lucidClassNames.bind('&-Points');
+const cx = lucidClassNames.bind('&-Points');
 
 const {
 	any,
@@ -21,14 +22,19 @@ const {
 /**
  * {"categories": ["visualizations", "chart primitives"]}
  *
- * Foo
+ * Put some points on that data.
  */
-const Points = React.createClass({
-	_lucidIsPrivate: true,
+const Points = createClass({
+	displayName: 'Points',
+
+	statics: {
+		_lucidIsPrivate: true,
+	},
 
 	propTypes: {
 		/**
-		 * Classes are appended to existing classes using the `classnames` library.
+		 * Classes are appended to root element along with existing classes using
+		 * the `classnames` library.
 		 */
 		className: any,
 		/**
@@ -149,7 +155,7 @@ const Points = React.createClass({
 		return (
 			<g
 				{...passThroughs}
-				className={boundClassNames(className, '&')}
+				className={cx(className, '&')}
 				transform={`translate(${left}, ${top})`}
 			>
 				{_.map(transformedData, (d, dIndex) => (

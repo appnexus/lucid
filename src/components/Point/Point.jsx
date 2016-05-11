@@ -1,12 +1,13 @@
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-types';
 import { transformFromCenter } from '../../util/chart-helpers';
 
-const boundClassNames = lucidClassNames.bind('&-Point');
+const cx = lucidClassNames.bind('&-Point');
 
 const {
 	number,
-	string,
+	any,
 	bool,
 } = React.PropTypes;
 
@@ -23,17 +24,22 @@ const PATHS = [
 /**
  * {"categories": ["visualizations", "geoms"]}
  *
- * Points are typically used for scatter plots.
+ * Points are typically used for scatter plots. Did I get the point across?
  *
  */
-const Point = React.createClass({
-	_lucidIsPrivate: true,
+const Point = createClass({
+	displayName: 'Point',
+
+	statics: {
+		_lucidIsPrivate: true,
+	},
 
 	propTypes: {
 		/**
-		 * Class name appended to the underling element.
+		 * Classes are appended to root element along with existing classes using
+		 * the `classnames` library.
 		 */
-		className: string,
+		className: any,
 		/**
 		 * Determines if the point has a white stroke around it.
 		 */
@@ -88,7 +94,7 @@ const Point = React.createClass({
 		const kindIndex = kind % 5;
 		const colorIndex = color % 6;
 
-		const classes = boundClassNames(className, '&', `&-color-${colorIndex}`, {
+		const classes = cx(className, '&', `&-color-${colorIndex}`, {
 			'&-has-stroke': hasStroke,
 		});
 

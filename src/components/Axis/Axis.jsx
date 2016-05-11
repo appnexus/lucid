@@ -2,14 +2,16 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { discreteTicks } from '../../util/chart-helpers';
+import { createClass } from '../../util/component-types';
 
-const boundClassNames = lucidClassNames.bind('&-Axis');
+const cx = lucidClassNames.bind('&-Axis');
 
 const {
 	array,
 	func,
 	number,
 	oneOf,
+	any,
 } = React.PropTypes;
 
 /**
@@ -20,10 +22,19 @@ const {
  * This component is a very close sister to `d3.avg.axis` and most of the logic
  * was ported from d3.
  */
-const Axis = React.createClass({
-	_lucidIsPrivate: true,
+const Axis = createClass({
+	displayName: 'Axis',
+
+	statics: {
+		_lucidIsPrivate: true,
+	},
 
 	propTypes: {
+		/**
+		 * Classes are appended to root element along with existing classes using
+		 * the `classnames` library.
+		 */
+		className: any,
 		/**
 		 * Must be a D3 scale.
 		 */
@@ -85,6 +96,7 @@ const Axis = React.createClass({
 	render() {
 		const {
 			scale,
+			className,
 			orient,
 			tickCount,
 			ticks = scale.ticks
@@ -114,17 +126,17 @@ const Axis = React.createClass({
 
 		return (
 			<g
-				className={boundClassNames('&')}
 				{...passThroughs}
+				className={cx(className, '&')}
 			>
 			{isH ? (
 				<path
-					className={boundClassNames('&-domain')}
+					className={cx('&-domain')}
 					d={`M${range[0]},${sign * outerTickSize}V0H${range[1]}V${sign * outerTickSize}`}
 				/>
 			) : (
 				<path
-					className={boundClassNames('&-domain')}
+					className={cx('&-domain')}
 					d={`M${sign * outerTickSize},${range[0]}H0V${range[1]}H${sign * outerTickSize}`}
 				/>
 			)}
@@ -134,12 +146,12 @@ const Axis = React.createClass({
 						transform={`translate(${isH ? scaleNormalized(tick) : 0}, ${isH ? 0 : scaleNormalized(tick)})`}
 					>
 						<line
-							className={boundClassNames('&-tick')}
+							className={cx('&-tick')}
 							x2={isH ? 0 : sign * innerTickSize}
 							y2={isH ? sign * innerTickSize : 0}
 						/>
 						<text
-							className={boundClassNames('&-tick-text')}
+							className={cx('&-tick-text')}
 							x={isH ? 0 : sign * tickSpacing}
 							y={isH ? sign * tickSpacing : 0}
 							dy={isH
