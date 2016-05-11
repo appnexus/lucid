@@ -1,9 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import DropMenuStateless from '../DropMenu';
-import { buildStatefulComponent } from '../../../util/state-management';
-
-const DropMenu = buildStatefulComponent(DropMenuStateless);
+import { DropMenu } from '../../../index';
 
 export default React.createClass({
 	getInitialState() {

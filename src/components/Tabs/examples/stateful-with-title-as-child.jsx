@@ -1,34 +1,31 @@
 import React from 'react';
-import Tabs from '../Tabs';
-import { buildStatefulComponent } from '../../../util/state-management';
-
-var StatefulTabs = buildStatefulComponent(Tabs);
+import { Tabs } from '../../../index';
 
 export default React.createClass({
 	render() {
 		return (
 			<div>
-				<StatefulTabs>
-					<StatefulTabs.Tab>
-						<StatefulTabs.Title>One</StatefulTabs.Title>
+				<Tabs>
+					<Tabs.Tab>
+						<Tabs.Title>One</Tabs.Title>
 						One content
-					</StatefulTabs.Tab>
+					</Tabs.Tab>
 
-					<StatefulTabs.Tab>
-						<StatefulTabs.Title>Two</StatefulTabs.Title>
+					<Tabs.Tab>
+						<Tabs.Title>Two</Tabs.Title>
 						Two content
-					</StatefulTabs.Tab>
+					</Tabs.Tab>
 
-					<StatefulTabs.Tab>
-						<StatefulTabs.Title>Three</StatefulTabs.Title>
+					<Tabs.Tab>
+						<Tabs.Title>Three</Tabs.Title>
 						Three content
-					</StatefulTabs.Tab>
+					</Tabs.Tab>
 
-					<StatefulTabs.Tab isDisabled={true}>
-						<StatefulTabs.Title>Four</StatefulTabs.Title>
+					<Tabs.Tab isDisabled={true}>
+						<Tabs.Title>Four</Tabs.Title>
 						Four content
-					</StatefulTabs.Tab>
-				</StatefulTabs>
+					</Tabs.Tab>
+				</Tabs>
 			</div>
 		);
 	}

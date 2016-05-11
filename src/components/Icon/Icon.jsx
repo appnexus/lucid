@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
+import { createClass } from '../../util/component-types';
 
-const boundClassNames = lucidClassNames.bind('&-Icon');
+const cx = lucidClassNames.bind('&-Icon');
 
 const {
 	any,
@@ -19,7 +20,8 @@ const {
  * A basic svg icon. Any props that are not explicitly called out below will be
  * passed through to the native `svg` component.
  */
-const Icon = React.createClass({
+const Icon = createClass({
+	displayName: 'Icon',
 	propTypes: {
 		/**
 		 * Styles that are passed through to the `svg`.
@@ -88,7 +90,7 @@ const Icon = React.createClass({
 			<svg
 				{...passThroughs}
 				style={_.pickBy(actualStyle, _.negate(_.isUndefined))}
-				className={boundClassNames('&', {
+				className={cx('&', {
 					'&-is-badge': isBadge,
 				}, className)}
 				width={size}

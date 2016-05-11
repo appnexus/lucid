@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "repository": {
@@ -30,7 +30,8 @@
   "dependencies": {
     "classnames": "^2.2.3",
     "lodash": "^4.11.0",
-    "react-addons-css-transition-group": "^0.14.0"
+    "react-addons-css-transition-group": "^0.14.0",
+    "reselect": "^2.5.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.3",

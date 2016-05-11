@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import { logger } from './logger';
 
 export function getDeepPaths (obj, path=[]) {
 	return _.reduce(obj, (terminalKeys, value, key) => (
@@ -82,19 +83,38 @@ function overwriteArrays (objValue, srcValue) {
 	}
 }
 
-export function buildStatefulComponent(baseComponent, opts) {
-	opts = _.merge({
-		setStateWithNewProps: true, // if true, new props will update state, else prop has priority over existing state
-		replaceEvents: false // if true, function props replace the existing reducers, else they are invoked *after* state reducer returns
-	}, opts);
+export function buildHybridComponent(baseComponent, opts = {
+	setStateWithNewProps: true, // if true, new props will update state, else prop has priority over existing state
+	replaceEvents: false // if true, function props replace the existing reducers, else they are invoked *after* state reducer returns
+}) {
 
-	const { reducers } = baseComponent;
-	const otherProps = _.omit(baseComponent.propTypes, _.filter(_.keys(reducers), (propName) => _.isFunction(propName)), ['children', 'className']);
+	const {
+		_isLucidHybridComponent,
+		displayName,
+		propTypes,
+		definition: {
+			statics = {},
+			statics: { reducers } = {}
+		} = {}
+	} = baseComponent;
+
+	if (_isLucidHybridComponent) {
+
+		logger.warnOnce(
+			displayName,
+			`Lucid: you are trying to apply buildHybridComponent to ${displayName}, which is already a hybdrid component. Lucid exports hybrid components by default. To access the dumb components, use the -Dumb suffix, e.g. "ComponentDumb"`
+		);
+
+		return baseComponent;
+	}
 
 	return React.createClass({
-		propTypes: otherProps,
-		statics: _.omit(baseComponent, ['displayName', 'propTypes', 'getDefaultProps', 'defaultProps']),
-		displayName: baseComponent.displayName,
+		propTypes,
+		statics: {
+			_isLucidHybridComponent: true,
+			...statics
+		},
+		displayName,
 		getInitialState() {
 			if (opts.setStateWithNewProps) {
 				return _.mergeWith({}, omitFunctionPropsDeep(baseComponent.getDefaultProps()), omitFunctionPropsDeep(this.props), overwriteArrays);
@@ -120,4 +140,9 @@ export function buildStatefulComponent(baseComponent, opts) {
 			return React.createElement(baseComponent, this.boundContext.getProps(this.props), this.props.children);
 		}
 	});
+}
+
+export function buildStatefulComponent(...args) {
+	logger.warnOnce('buildHybridComponent-once', 'Lucid: buildStatefulComponent has been renamed to buildHybridComponent.');
+	return buildHybridComponent(...args);
 }

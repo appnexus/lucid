@@ -11,8 +11,11 @@ import {
 	bindReducerToState,
 	bindReducersToState,
 	getStatefulPropsContext,
-	buildStatefulComponent
+	buildHybridComponent
 } from './state-management';
+import {
+	createClass
+} from './component-types';
 
 describe('#getDeepPaths', () => {
 	it('should return an empty array when arg is empty object, null, or undefined', () => {
@@ -437,8 +440,8 @@ describe('#getStatefulPropsContext', () => {
 	});
 });
 
-describeWithDOM('#buildStatefulComponent', () => {
-	const Counter = React.createClass({
+describeWithDOM('#buildHybridComponent', () => {
+	const Counter = createClass({
 		displayName: 'Counter',
 		propTypes: {
 			count: React.PropTypes.number,
@@ -450,14 +453,12 @@ describeWithDOM('#buildStatefulComponent', () => {
 				count: 0
 			};
 		},
-		statics: {
-			reducers: {
-				onIncrement(state) {
-					return _.assign({}, state, { count: state.count + 1 })
-				},
-				onDecrement(state) {
-					return _.assign({}, state, { count: state.count - 1 })
-				}
+		reducers: {
+			onIncrement(state) {
+				return _.assign({}, state, { count: state.count + 1 })
+			},
+			onDecrement(state) {
+				return _.assign({}, state, { count: state.count - 1 })
 			}
 		},
 		render() {
@@ -478,7 +479,7 @@ describeWithDOM('#buildStatefulComponent', () => {
 	});
 
 	it('should generate a stateful component from stateless component + reducers', () => {
-		const StatefulCounter = buildStatefulComponent(Counter);
+		const StatefulCounter = buildHybridComponent(Counter);
 		const wrapper = mount(<StatefulCounter />);
 
 		let minusButton = wrapper.find('button.minus');
@@ -503,8 +504,13 @@ describeWithDOM('#buildStatefulComponent', () => {
 		assert.equal(countSpan.text(), '1');
 	});
 
+	it('should not wrap a wrapped component', () => {
+		const StatefulCounter = buildHybridComponent(Counter);
+		assert.equal(StatefulCounter, buildHybridComponent(StatefulCounter));
+	});
+
 	it('should prioritize passed-in prop values over internal state', () => {
-		const StatefulCounter = buildStatefulComponent(Counter);
+		const StatefulCounter = buildHybridComponent(Counter);
 		const wrapper = mount(<StatefulCounter count={36} />);
 
 		let minusButton = wrapper.find('button.minus');
@@ -532,7 +538,7 @@ describeWithDOM('#buildStatefulComponent', () => {
 	it('should call functions passed in thru props with same name as invoked reducers', () => {
 		const onIncrement = sinon.spy();
 		const onDecrement = sinon.spy();
-		const StatefulCounter = buildStatefulComponent(Counter);
+		const StatefulCounter = buildHybridComponent(Counter);
 		const wrapper = mount(<StatefulCounter onIncrement={onIncrement} onDecrement={onDecrement} />);
 
 		let minusButton = wrapper.find('button.minus');

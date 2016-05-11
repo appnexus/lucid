@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
 import { bindClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition }  from '../../util/component-definition';
+import { createClass, findTypes }  from '../../util/component-types';
 import * as reducers from './VerticalListMenu.reducers';
 import ChevronIcon  from '../Icon/ChevronIcon/ChevronIcon';
 
-const boundClassNames = bindClassNames('lucid-VerticalListMenu');
+const cx = bindClassNames('lucid-VerticalListMenu');
 
 const {
 	func,
@@ -26,19 +26,23 @@ const {
  * selected at any given time; that is easily overridden by handling `onSelect`
  * yourself.
  */
-const VerticalListMenu = React.createClass(createLucidComponentDefinition({
+const VerticalListMenu = createClass({
 	displayName: 'VerticalListMenu',
 
 	reducers,
 
-	childProps: {
-		Item: {
-			hasExpander: bool,
-			isExpanded: bool,
-			isSelected: bool,
-			onSelect: func,
-			onToggle: func,
-		}
+	components: {
+		Item: createClass({
+			displayName: 'VerticalListMenu.Item',
+			propName: 'Item',
+			propTypes: {
+				hasExpander: bool,
+				isExpanded: bool,
+				isSelected: bool,
+				onSelect: func,
+				onToggle: func,
+			}
+		})
 	},
 
 	propTypes: {
@@ -107,12 +111,12 @@ const VerticalListMenu = React.createClass(createLucidComponentDefinition({
 			...passThroughs
 		} = this.props;
 
-		const itemChildProps = VerticalListMenu.Item.findInAllAsProps(this.props);
+		const itemChildProps = _.map(findTypes(this.props, VerticalListMenu.Item), 'props');
 
 		return (
 			<ul
 				{...passThroughs}
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 				style={style}
 			>
 				{_.map(itemChildProps, (itemChildProp, index) => {
@@ -141,20 +145,20 @@ const VerticalListMenu = React.createClass(createLucidComponentDefinition({
 						<li
 							key={index}
 							{...itemChildProp.passThroughs}
-							className={boundClassNames('&-Item', itemChildProp.className)}
+							className={cx('&-Item', itemChildProp.className)}
 						>
 							<div
-								className={boundClassNames('&-Item-content', {
+								className={cx('&-Item-content', {
 									'&-Item-content-is-selected': actualIsSelected,
 								})}
 								onClick={_.partial(this.handleClickItem, index, itemChildProp)}
 							>
-							<span className={boundClassNames('&-Item-content-text')}>
+							<span className={cx('&-Item-content-text')}>
 								{otherChildren}
 							</span>
 							{hasExpander ?
 								<div
-									className={boundClassNames('&-Item-expander')}
+									className={cx('&-Item-expander')}
 									onClick={_.partial(this.handleToggle, index, itemChildProp)}
 								>
 									<ChevronIcon
@@ -164,7 +168,7 @@ const VerticalListMenu = React.createClass(createLucidComponentDefinition({
 							: null}
 							</div>
 
-							<div className={boundClassNames('&-Item-nested-list', {
+							<div className={cx('&-Item-nested-list', {
 								'&-Item-nested-list-is-expanded': actualIsExpanded,
 							})}>
 								{listChildren}
@@ -204,6 +208,6 @@ const VerticalListMenu = React.createClass(createLucidComponentDefinition({
 		}
 	}
 
-}));
+});
 
 export default VerticalListMenu;

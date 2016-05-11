@@ -4,9 +4,9 @@ import Portal from '../Portal/Portal';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import random from '../../util/random';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition }  from '../../util/component-definition';
+import { createClass }  from '../../util/component-types';
 
-const boundClassNames = lucidClassNames.bind('&-Overlay');
+const cx = lucidClassNames.bind('&-Overlay');
 
 const {
 	string,
@@ -21,7 +21,7 @@ const {
  * Overlay is used to block user interaction with the rest of the app until they
  * have completed something.
  */
-const Overlay = React.createClass(createLucidComponentDefinition({
+const Overlay = createClass({
 	displayName: 'Overlay',
 
 	propTypes: {
@@ -136,14 +136,14 @@ const Overlay = React.createClass(createLucidComponentDefinition({
 		return (
 			<Portal portalId={portalId}>
 				<ReactCSSTransitionGroup
-					transitionName={boundClassNames('&')}
+					transitionName={cx('&')}
 					transitionEnterTimeout={300}
 					transitionLeaveTimeout={300}
 				>
 					{isShown ?
 						<div
 							{...passThroughs}
-							className={boundClassNames(className, '&', {
+							className={cx(className, '&', {
 								'&-is-not-modal': !isModal
 							})}
 							onClick={this.handleBackgroundClick}
@@ -156,7 +156,7 @@ const Overlay = React.createClass(createLucidComponentDefinition({
 			</Portal>
 		);
 	},
-}));
+});
 
 export default Overlay;
 

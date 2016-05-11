@@ -1,5 +1,5 @@
 import React from 'react';
-import ResizeIcon from '../ResizeIcon';
+import { ResizeIcon } from '../../../../index';
 
 export default React.createClass({
 	render() {

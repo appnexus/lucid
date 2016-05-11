@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-const boundClassNames = lucidClassNames.bind('&-Button');
+import { createClass } from '../../util/component-types';
+
+const cx = lucidClassNames.bind('&-Button');
 
 const {
 	arrayOf,
@@ -21,7 +23,9 @@ const {
  * A basic button. Any props that are not explicitly called out below will be
  * passed through to the native `button` component.
  */
-const Button = React.createClass({
+const Button = createClass({
+	displayName: 'Button',
+	propName: 'Button',
 	propTypes: {
 		/**
 		 * disables the button by greying it out
@@ -105,7 +109,7 @@ const Button = React.createClass({
 		return (
 			<button
 				{...passThroughs}
-				className={boundClassNames('&', {
+				className={cx('&', {
 					'&-is-disabled': isDisabled,
 					'&-is-active': isActive,
 					'&-primary': kind === 'primary',
@@ -122,7 +126,7 @@ const Button = React.createClass({
 				disabled={isDisabled}
 				ref='button'
 			>
-				<span className={boundClassNames('&-content')}>
+				<span className={cx('&-content')}>
 					{children}
 				</span>
 			</button>

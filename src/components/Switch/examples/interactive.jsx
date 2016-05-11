@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-
-import Switch from '../Switch';
+import { Switch } from '../../../index';
 
 export default React.createClass({
 	getInitialState() {

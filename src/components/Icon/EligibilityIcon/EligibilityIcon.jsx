@@ -1,8 +1,9 @@
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
+import { createClass } from '../../../util/component-types';
 
-const boundClassNames = lucidClassNames.bind('&-EligibilityIcon');
+const cx = lucidClassNames.bind('&-EligibilityIcon');
 
 const {
 	oneOf,
@@ -20,7 +21,8 @@ const BOTH = 'both';
  * An eligibility icon.
  */
 
-const EligibilityIcon = React.createClass({
+const EligibilityIcon = createClass({
+	displayName: 'EligibilityIcon',
 	propTypes: {
 		...Icon.propTypes,
 		/**
@@ -50,17 +52,17 @@ const EligibilityIcon = React.createClass({
 		return (
 			<Icon
 				{...passThroughs}
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 			>
 				<g>
 					<path
-						className={boundClassNames('&-half-circle', {
+						className={cx('&-half-circle', {
 							'&-is-selected': eligibility === LEFT || eligibility === BOTH
 						})}
 						d='M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z'
 					/>
 					<path
-						className={boundClassNames('&-half-circle', {
+						className={cx('&-half-circle', {
 							'&-is-selected': eligibility === RIGHT || eligibility === BOTH
 						})}
 						d='M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z'

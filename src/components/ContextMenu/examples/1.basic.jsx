@@ -1,6 +1,5 @@
 import React from 'react';
-import ContextMenu from '../ContextMenu';
-import Button from '../../Button/Button';
+import { ContextMenu, Button } from '../../../index';
 
 export default React.createClass({
 	render() {

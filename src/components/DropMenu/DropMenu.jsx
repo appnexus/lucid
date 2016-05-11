@@ -1,9 +1,8 @@
 import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass, findTypes, rejectTypes } from '../../util/component-types';
 import { scrollParentTo } from '../../util/dom-helpers';
-import { rejectNullElements } from '../../util/child-component';
 import * as KEYCODE from '../../constants/key-code';
 import * as reducers from './DropMenu.reducers';
 import ContextMenu from '../ContextMenu/ContextMenu';
@@ -18,7 +17,7 @@ function joinArray(array, getSeparator) {
 	}, []);
 }
 
-const boundClassNames = lucidClassNames.bind('&-DropMenu');
+const cx = lucidClassNames.bind('&-DropMenu');
 
 const {
 	any,
@@ -38,18 +37,31 @@ const {
  *
  * This is a helper component used to render a menu of options attached to any control. Supports option groups with and without labels as well as special options with a `null` index for unselect.
  */
-const DropMenu = React.createClass(createLucidComponentDefinition({
+const DropMenu = createClass({
 	displayName: 'DropMenu',
 
 	reducers,
 
-	childProps: {
-		Control: {},
-		OptionGroup: {},
-		Option: {
-			isDisabled: bool
-		},
-		NullOption: {}
+	components: {
+		Control: createClass({
+			displayName: 'DropMenu.Control',
+			propName: 'Control'
+		}),
+		OptionGroup: createClass({
+			displayName: 'DropMenu.OptionGroup',
+			propName: 'OptionGroup'
+		}),
+		Option: createClass({
+			displayName: 'DropMenu.Option',
+			propName: 'Option',
+			propTypes: {
+				isDisabled: bool
+			}
+		}),
+		NullOption: createClass({
+			displayName: 'DropMenu.NullOption',
+			propName: 'NullOption'
+		})
 	},
 
 	propTypes: {
@@ -179,13 +191,14 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 				Option,
 				NullOption
 			} = ParentType;
-			const optionGroups = OptionGroup.findInAllAsProps(props); // find all OptionGroup props
-			const ungroupedOptions = Option.findInAllAsProps(props); // find all ungrouped Option props
-			const nullOptions = NullOption ? NullOption.findInAllAsProps(props) : []; // find all NullOption props
+
+			const optionGroups = _.map(findTypes(props, OptionGroup), 'props'); // find all OptionGroup props
+			const ungroupedOptions = _.map(findTypes(props, Option), 'props') // find all ungrouped Option props
+			const nullOptions = NullOption ? _.map(findTypes(props, NullOption), 'props') : []; // find all NullOption props
 
 			// flatten grouped options into array of objects to associate { index, group index, and props } for each option
 			const groupedOptionData = _.reduce(optionGroups, (memo, optionGroupProps, optionGroupIndex) => {
-				const groupedOptions = Option.findInAllAsProps(optionGroupProps); // find all Option props for current group
+				const groupedOptions = _.map(findTypes(optionGroupProps, Option), 'props'); // find all Option props for current group
 				return memo.concat(_.map(groupedOptions, (optionProps, localOptionIndex) => {
 					return {
 						localOptionIndex,
@@ -371,7 +384,7 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 				onMouseMove={() => this.handleMouseFocusOption(optionIndex, optionProps)}
 				onClick={(event) => this.handleSelectOption(optionIndex, optionProps, event)}
 				{...optionProps}
-				className={boundClassNames(
+				className={cx(
 					'&-Option', {
 					'&-Option-is-grouped': isGrouped,
 					'&-Option-is-focused': isFocused,
@@ -416,10 +429,10 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 			nullOptions
 		} = this.state;
 
-		const controlProps = _.first(DropMenu.Control.findInAllAsProps(this.props));
+		const controlProps = _.get(_.first(findTypes(this.props, DropMenu.Control)), 'props', {});
 
 		return (
-			<div className={boundClassNames('&', '&-base', {
+			<div className={cx('&', '&-base', {
 				'&-is-expanded': isExpanded,
 				'&-direction-down': isExpanded && direction === 'down',
 				'&-direction-up': isExpanded && direction === 'up'
@@ -433,29 +446,29 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 								onKeyDown: this.handleKeydown
 							} : null)}
 							{...controlProps}
-							className={boundClassNames('&-Control', _.get(controlProps, 'className'))}
+							className={cx('&-Control', _.get(controlProps, 'className'))}
 						/>
 					</ContextMenu.Target>
-					<ContextMenu.FlyOut className={boundClassNames('&', className)}>
+					<ContextMenu.FlyOut className={cx('&', className)}>
 						{
 							_.map(nullOptions, (optionProps) => this.renderOption(optionProps, null))
-							.concat(_.isEmpty(nullOptions) ? [] : [(<div key={'OptionGroup-divider-NullOption'} className={boundClassNames('&-OptionGroup-divider')} />)])
+							.concat(_.isEmpty(nullOptions) ? [] : [(<div key={'OptionGroup-divider-NullOption'} className={cx('&-OptionGroup-divider')} />)])
 						}
 						{
 							joinArray(
 								// for each option group,
 								_.map(optionGroups, (optionGroupProps, optionGroupIndex) => {
-									const labelElements = rejectNullElements(optionGroupProps.children);
+									const labelElements = rejectTypes(optionGroupProps.children, [DropMenu.Control, DropMenu.OptionGroup, DropMenu.Option, DropMenu.NullOption]);
 									// render label if there is one
 									return (_.isEmpty(labelElements) ? [] : [
-										<div {...optionGroupProps} className={boundClassNames('&-label', optionGroupProps.className)}>
+										<div {...optionGroupProps} className={cx('&-label', optionGroupProps.className)}>
 											{labelElements}
 										</div>
 									// render the options in the group
 									]).concat(_.map(_.get(optionGroupDataLookup, optionGroupIndex), ({ optionProps, optionIndex }) => this.renderOption(optionProps, optionIndex, true)));
 								// append all ungrouped options as another unlabeled group
 								}).concat(_.isEmpty(ungroupedOptionData) ? [] : [_.map(ungroupedOptionData, ({ optionProps, optionIndex }) => this.renderOption(optionProps, optionIndex))]),
-								(element, index) => (<div key={`OptionGroup-divider-${index}`} className={boundClassNames('&-OptionGroup-divider')} />) // separate each group with divider
+								(element, index) => (<div key={`OptionGroup-divider-${index}`} className={cx('&-OptionGroup-divider')} />) // separate each group with divider
 							)
 						}
 					</ContextMenu.FlyOut>
@@ -463,6 +476,6 @@ const DropMenu = React.createClass(createLucidComponentDefinition({
 			</div>
 		);
 	}
-}));
+});
 
 export default DropMenu;

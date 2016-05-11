@@ -1,11 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
 import Portal from '../Portal/Portal';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass, findTypes } from '../../util/component-types';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 import { lucidClassNames } from '../../util/style-helpers';
 
-const boundClassNames = lucidClassNames.bind('&-ContextMenu');
+const cx = lucidClassNames.bind('&-ContextMenu');
 
 const {
 	PropTypes: {
@@ -24,7 +24,7 @@ const {
  *
  * A ContextMenu component is used to render a target and a flyout which is positioned relative to the target.
  */
-const ContextMenu = React.createClass(createLucidComponentDefinition({
+const ContextMenu = createClass({
 	displayName: 'ContextMenu',
 	propTypes: {
 		/**
@@ -64,11 +64,18 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 		portalId: string
 	},
 
-	childProps: {
-		Target: {},
-		FlyOut: {
-			style: object
-		}
+	components: {
+		Target: createClass({
+			displayName: 'ContextMenu.Target',
+			propName: 'Target',
+		}),
+		FlyOut: createClass({
+			displayName: 'ContextMenu.FlyOut',
+			propName: 'FlyOut',
+			propTypes: {
+				style: object
+			}
+		})
 	},
 
 	getDefaultProps() {
@@ -186,20 +193,21 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 			flyOutHeight
 		} = this.state;
 
-		const targetProps = _.first(ContextMenu.Target.findInAllAsProps(this.props));
-		const targetChildren = targetProps.children;
-		const flyProps = _.first(ContextMenu.FlyOut.findInAllAsProps(this.props));
-		const flyChildren = flyProps.children;
+		const targetElement = _.first(findTypes(this.props, ContextMenu.Target));
+		const targetChildren = _.get(targetElement, 'props.children', null);
+
+		const flyoutElement = _.first(findTypes(this.props, ContextMenu.FlyOut));
+		const flyProps = _.get(flyoutElement, 'props', {});
 
 
 		return (
-			<span ref='target' {...passThroughs} className={boundClassNames('&', className)} style={style}>
+			<span ref='target' {...passThroughs} className={cx('&', className)} style={style}>
 				{targetChildren}
 				{isExpanded ? (
 					<Portal
 						ref='flyOutPortal'
 						{...flyProps}
-						className={boundClassNames('&-FlyOut', {
+						className={cx('&-FlyOut', {
 							'&-FlyOut-Up': direction === ContextMenu.UP,
 							'&-FlyOut-Down': direction === ContextMenu.DOWN
 						}, flyProps.className)}
@@ -211,12 +219,12 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 							top: (direction === ContextMenu.UP ? targetRect.top - flyOutHeight : targetRect.bottom)
 						})}
 					>
-						{flyChildren}
+						{flyProps.children}
 					</Portal>
 				) : null}
 			</span>
 		);
 	}
-}));
+});
 
 export default ContextMenu;

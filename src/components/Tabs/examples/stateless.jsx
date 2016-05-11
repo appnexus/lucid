@@ -1,5 +1,5 @@
 import React from 'react';
-import Tabs from '../Tabs';
+import { TabsDumb as Tabs } from '../../../index';
 
 export default React.createClass({
 	render() {

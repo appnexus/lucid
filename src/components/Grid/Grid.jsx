@@ -1,9 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition }  from '../../util/component-definition';
+import { createClass, findTypes }  from '../../util/component-types';
 
-const boundClassNames = lucidClassNames.bind('&-Grid');
+const cx = lucidClassNames.bind('&-Grid');
 
 const {
 	string,
@@ -18,81 +18,85 @@ const {
  * You can use the Grid components themselves or create your own components using the Grid styles from Grid.less.
  * Please see examples for more information.
  */
-const Grid = React.createClass(createLucidComponentDefinition({
+const Grid = createClass({
 	displayName: 'Grid',
 
-	childProps: {
-		Cell: {
-			/**
-			 * fill all twelve columns of the primary grid axis
-			 */
-			isFull: bool,
-			/**
-			 * fill six columns of the primary grid axis
-			 */
-			isHalf: bool,
-			/**
-			 * fill four columns of the primary grid axis
-			 */
-			isThird: bool,
-			/**
-			 * fill three columns of the primary grid axis
-			 */
-			isQuarter: bool,
+	components: {
+		Cell: createClass({
+			displayName: 'Grid.Cell',
+			propName: 'Cell',
+			propTypes: {
+				/**
+				 * fill all twelve columns of the primary grid axis
+				 */
+				isFull: bool,
+				/**
+				 * fill six columns of the primary grid axis
+				 */
+				isHalf: bool,
+				/**
+				 * fill four columns of the primary grid axis
+				 */
+				isThird: bool,
+				/**
+				 * fill three columns of the primary grid axis
+				 */
+				isQuarter: bool,
 
-			/**
-			 * fill 2 columns of 12
-			 */
-			is2: bool,
-			/**
-			 *  fill 3 columns of 12
-			 */
-			is3: bool,
-			/**
-			 * fill 4 columns of 12
-			 */
-			is4: bool,
-			/**
-			 * fill 5 columns of 12
-			 */
-			is5: bool,
-			/**
-			 * fill 6 columns of 12
-			 */
-			is6: bool,
-			/**
-			 * fill 7 columns of 12
-			 */
-			is7: bool,
-			/**
-			 * fill 8 columns of 12
-			 */
-			is8: bool,
-			/**
-			 * fill 9 columns of 12
-			 */
-			is9: bool,
-			/**
-			 * fill 10 columns of 12
-			 */
-			is10: bool,
-			/**
-			 * fill 11 columns of 12
-			 */
-			is11: bool,
-			/**
-			 * offset a grid cell by three columns
-			 */
-			isOffsetQuarter: bool,
-			/**
-			 * offset a grid cell by four columns
-			 */
-			isOffsetThird: bool,
-			/**
-			 * offset a grid cell by six columns
-			 */
-			isOffsetHalf: bool,
-		}
+				/**
+				 * fill 2 columns of 12
+				 */
+				is2: bool,
+				/**
+				 *  fill 3 columns of 12
+				 */
+				is3: bool,
+				/**
+				 * fill 4 columns of 12
+				 */
+				is4: bool,
+				/**
+				 * fill 5 columns of 12
+				 */
+				is5: bool,
+				/**
+				 * fill 6 columns of 12
+				 */
+				is6: bool,
+				/**
+				 * fill 7 columns of 12
+				 */
+				is7: bool,
+				/**
+				 * fill 8 columns of 12
+				 */
+				is8: bool,
+				/**
+				 * fill 9 columns of 12
+				 */
+				is9: bool,
+				/**
+				 * fill 10 columns of 12
+				 */
+				is10: bool,
+				/**
+				 * fill 11 columns of 12
+				 */
+				is11: bool,
+				/**
+				 * offset a grid cell by three columns
+				 */
+				isOffsetQuarter: bool,
+				/**
+				 * offset a grid cell by four columns
+				 */
+				isOffsetThird: bool,
+				/**
+				 * offset a grid cell by six columns
+				 */
+				isOffsetHalf: bool,
+			}
+		})
 	},
 
 	propTypes: {
@@ -139,21 +143,23 @@ const Grid = React.createClass(createLucidComponentDefinition({
 			...passThroughs
 		} = this.props;
 
-		const cellChildProps = Grid.Cell.findInAllAsProps(this.props);
+		const cellChildProps = _.map(findTypes(this.props, Grid.Cell), 'props');
 
 		return (
 			<section {...passThroughs}
-				className={boundClassNames('&', {
+				className={cx('&', {
 					'&-is-vertical': isVertical,
 					'&-is-horizontal': isHorizontal,
 					'&-is-gutterless': isGutterless,
 					'&-is-multiline': isMultiline,
 				}, className)}
 			>
-				{_.map(cellChildProps, (cellChildProp) => {
+				{_.map(cellChildProps, (cellChildProp, index) => {
 					return (
-						<article {...cellChildProp}
-							className={boundClassNames('&-Cell', {
+						<article
+							{...cellChildProp}
+							key={index}
+							className={cx('&-Cell', {
 									'&-Cell-is-full': cellChildProp.isFull,
 									'&-Cell-is-half': cellChildProp.isHalf,
 									'&-Cell-is-quarter': cellChildProp.isQuarter,
@@ -181,6 +187,6 @@ const Grid = React.createClass(createLucidComponentDefinition({
 			</section>
 		);
 	}
-}));
+});
 
 export default Grid;

@@ -2,11 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition }  from '../../util/component-definition';
+import { createClass, findTypes }  from '../../util/component-types';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import * as reducers from './Expander.reducers';
 
-const boundClassNames = lucidClassNames.bind('&-Expander');
+const cx = lucidClassNames.bind('&-Expander');
 
 const {
 	any,
@@ -23,17 +23,21 @@ const {
  * This is a container that provides a toggle that controls when the content is
  * shown.
  */
-const Expander = React.createClass(createLucidComponentDefinition({
+const Expander = createClass({
 	displayName: 'Expander',
 
-	childProps: {
-		Label: {
-			/**
-			 * Used to identify the purpose of this switch to the user -- can be
-			 * any renderable content.
-			 */
-			children: node
-		}
+	components: {
+		Label: createClass({
+			displayName: 'Expander.Label',
+			propName: 'Label',
+			propTypes: {
+				/**
+				 * Used to identify the purpose of this switch to the user -- can be
+				 * any renderable content.
+				 */
+				children: node
+			}
+		})
 	},
 
 	reducers,
@@ -87,8 +91,8 @@ const Expander = React.createClass(createLucidComponentDefinition({
 	},
 
 	componentWillReceiveProps(nextProps) {
-		const currentLabel = _.first(Expander.Label.findInAllAsProps(this.props)).children;
-		const nextLabel = _.first(Expander.Label.findInAllAsProps(nextProps)).children;
+		const currentLabel = _.get(_.first(findTypes(this.props, Expander.Label)), 'props.children', null);
+		const nextLabel = _.get(_.first(findTypes(nextProps, Expander.Label)), 'props.children', null);
 
 		if (currentLabel !== nextLabel) {
 			this._labelKey++;
@@ -104,34 +108,34 @@ const Expander = React.createClass(createLucidComponentDefinition({
 			...passThroughs
 		} = this.props;
 
-		const labelChildProp = _.first(Expander.Label.findInAllAsProps(this.props));
+		const labelChildProp = _.first(_.map(findTypes(this.props, Expander.Label), 'props'));
 
 		return (
 			<div
 				{...passThroughs}
-				className={boundClassNames('&', {
+				className={cx('&', {
 					'&-is-expanded': isExpanded,
 				}, className)}
 				style={style}
 			>
-				<header className={boundClassNames('&-header')} onClick={this.handleToggle}>
-					<span className={boundClassNames('&-icon')}>
+				<header className={cx('&-header')} onClick={this.handleToggle}>
+					<span className={cx('&-icon')}>
 						<ChevronIcon
 							direction={isExpanded ? 'up' : 'down'}
 						/>
 					</span>
 					<ReactCSSTransitionGroup
-						transitionName={boundClassNames('&-text')}
+						transitionName={cx('&-text')}
 						transitionEnterTimeout={100}
 						transitionLeaveTimeout={100}
-						className={boundClassNames('&-text')}
+						className={cx('&-text')}
 					>
 						{labelChildProp ?
 							<span key={this._labelKey}>{labelChildProp.children}</span>
 						: null}
 					</ReactCSSTransitionGroup>
 				</header>
-				<section className={boundClassNames('&-content', {
+				<section className={cx('&-content', {
 					'&-content-is-expanded': isExpanded
 				})}>
 					{children}
@@ -145,6 +149,6 @@ const Expander = React.createClass(createLucidComponentDefinition({
 			event, props: this.props
 		});
 	}
-}));
+});
 
 export default Expander;

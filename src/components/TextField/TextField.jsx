@@ -1,11 +1,11 @@
 import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass } from '../../util/component-types';
 import reducers from './TextField.reducers';
 import * as KEYCODE from '../../constants/key-code';
 
-const boundClassNames = lucidClassNames.bind('&-TextField');
+const cx = lucidClassNames.bind('&-TextField');
 
 const {
 	bool,
@@ -23,12 +23,8 @@ const {
  * TextField should cover all your text input needs. It is able to handle
  * single and multi line inputs.
  *
- * Like all other Lucid components, it is stateless by default unless you run
- * it through `buildStatefulComponent`. If you do that it will maintain
- * internal state for the `value` without losing the ability to pass a new
- * `value` through props.
  */
-const TextField = React.createClass(createLucidComponentDefinition({
+const TextField = createClass({
 	displayName: 'TextField',
 
 	reducers,
@@ -75,6 +71,13 @@ const TextField = React.createClass(createLucidComponentDefinition({
 		 * Signature: `(value, { event, props }) => {}`
 		 */
 		onChangeDebounced: func,
+
+		/**
+		 * Fires an event on every keydown
+		 *
+		 * Signature: `(event) => {}`
+		 */
+		onKeyDown: func,
 
 		/**
 		 * Fires an event when the user hits "enter" from the TextField. You
@@ -213,7 +216,7 @@ const TextField = React.createClass(createLucidComponentDefinition({
 
 		const finalProps = {
 			..._.omit(passThroughs, 'children'),
-			className: boundClassNames('&', {
+			className: cx('&', {
 				'&-is-disabled': isDisabled,
 				'&-is-multi-line': isMultiLine,
 				'&-is-single-line': !isMultiLine
@@ -230,6 +233,6 @@ const TextField = React.createClass(createLucidComponentDefinition({
 			? <textarea {...finalProps}/>
 			: <input type='text' {...finalProps}/>;
 	}
-}));
+});
 
 export default TextField;

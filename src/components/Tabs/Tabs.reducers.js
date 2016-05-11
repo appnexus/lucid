@@ -1,12 +1,12 @@
 export default {
-	onSelect(state = {}, index, props) {
-		if (props && props.isDisabled) {
+	onSelect(state = {}, selectedIndex, { props = {} } = {}) {
+		if (props.isDisabled) {
 			return state;
 		}
 
 		return {
 			...state,
-			selectedIndex: index
+			selectedIndex
 		}
 	}
 }

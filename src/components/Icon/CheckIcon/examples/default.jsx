@@ -1,5 +1,5 @@
 import React from 'react';
-import CheckIcon from '../CheckIcon';
+import { CheckIcon } from '../../../../index';
 
 export default React.createClass({
 	render() {

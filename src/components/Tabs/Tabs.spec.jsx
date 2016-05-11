@@ -80,7 +80,7 @@ describe('Tabs', () => {
 			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Yum');
 		});
 
-		it(`Tab.isSelected`, () => {
+		it('Tab.isSelected', () => {
 			const wrapper = shallow(
 				<Tabs>
 					<Tabs.Tab Title='Lollipop'>Yuck</Tabs.Tab>
@@ -92,7 +92,7 @@ describe('Tabs', () => {
 			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Yum');
 		});
 
-		it(`last Tab.isSelected beats selectedIndex`, () => {
+		it('last Tab.isSelected beats selectedIndex', () => {
 			const wrapper = shallow(
 				<Tabs selectedIndex={0}>
 					<Tabs.Tab Title='One'>One content</Tabs.Tab>
@@ -105,19 +105,42 @@ describe('Tabs', () => {
 			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Three content');
 		});
 
-		it('onSelect', () => {
-			const onSelect = sinon.spy();
-			const wrapper = shallow(
-				<Tabs onSelect={onSelect}>
-					<Tabs.Tab>One</Tabs.Tab>
-					<Tabs.Tab>Two</Tabs.Tab>
-				</Tabs>
-			);
+		describe('onSelect', () => {
 
-			wrapper.find('.lucid-Tabs-Tab').at(1).simulate('click');
+			let onSelect = sinon.spy();
+			let clickEvent;
+			let wrapper;
 
-			assert(onSelect.called);
-			assert.equal(onSelect.args[0][0], 1);
+			beforeEach(() => {
+
+				onSelect.reset();
+				clickEvent = 'event';
+				wrapper = shallow(
+					<Tabs onSelect={onSelect}>
+						<Tabs.Tab isDisabled={true}>One</Tabs.Tab>
+						<Tabs.Tab>Two</Tabs.Tab>
+					</Tabs>
+				);
+
+			});
+
+			it('should call onSelect with the correct arguments', () => {
+				wrapper.find('.lucid-Tabs-Tab').at(1).simulate('click', clickEvent);
+				const selectedIndex = onSelect.args[0][0];
+				const meta = onSelect.args[0][1];
+				assert(onSelect.called);
+				assert.equal(selectedIndex, 1);
+				assert.equal(meta.event, clickEvent);
+				assert.deepEqual(meta.props, {children: 'Two'});
+			});
+
+			it('should call onSelect with isDisabled prop', () => {
+				wrapper.find('.lucid-Tabs-Tab').at(0).simulate('click', clickEvent);
+				const meta = onSelect.args[0][1];
+				assert(onSelect.called);
+				assert(meta.props.isDisabled, 'isDisabled should be true');
+			});
+
 		});
 
 		it('isOpen', () => {

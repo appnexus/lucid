@@ -1,5 +1,5 @@
 import React from 'react';
-import SuccessIcon from '../SuccessIcon';
+import { SuccessIcon } from '../../../../index';
 
 export default React.createClass({
 	render() {

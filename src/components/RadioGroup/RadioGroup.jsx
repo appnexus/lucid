@@ -1,13 +1,13 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createLucidComponentDefinition } from '../../util/component-definition';
+import { createClass, findTypes } from '../../util/component-types';
 import getRandom from '../../util/random';
-import LabeledRadioButton from '../LabeledRadioButton/LabeledRadioButton';
+import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 import RadioButton from '../RadioButton/RadioButton';
 import reducers from './RadioGroup.reducers';
 
-const boundClassNames = lucidClassNames.bind('&-RadioGroup');
+const cx = lucidClassNames.bind('&-RadioGroup');
 
 
 const {
@@ -26,19 +26,27 @@ const {
  * Any props that are not explicitly defined in `propTypes` are spread onto the
  * root element.
  */
-const RadioGroup = React.createClass(createLucidComponentDefinition({
+const RadioGroup = createClass({
 	displayName: 'RadioGroup',
 
-	childProps: {
-		RadioButton: { ...RadioButton.propTypes },
+	components: {
+		RadioButton: createClass({
+			displayName: 'RadioGroup.RadioButton',
+			propName: 'RadioButton',
+			propTypes: RadioButton.propTypes
+		}),
 
 		/**
 		 * Support radio button labels as `RadioGroup.Label` component which can
 		 * be provided as a child of a `RadioGroup.RadioButton` component.
 		 */
-		Label: {
-			children: node
-		}
+		Label: createClass({
+			displayName: 'RadioGroup.Label',
+			propName: 'Label',
+			propTypes: {
+				children: node
+			}
+		})
 	},
 
 	reducers,
@@ -82,7 +90,7 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 
 	getDefaultProps() {
 		return {
-			name: `${boundClassNames('&')}-${getRandom()}`,
+			name: `${cx('&')}-${getRandom()}`,
 			onSelect: _.noop,
 			selectedIndex: 0
 		};
@@ -97,7 +105,7 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 			...passThroughs
 		} = this.props;
 
-		const radioButtonChildProps = RadioGroup.RadioButton.findInAllAsProps(this.props);
+		const radioButtonChildProps = _.map(findTypes(this.props, RadioGroup.RadioButton), 'props')
 		const selectedIndexFromChildren = _.findLastIndex(radioButtonChildProps, {
 			isSelected: true
 		});
@@ -112,18 +120,18 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 		return (
 			<span
 					{...passThroughs}
-					className={boundClassNames('&', className)}
+					className={cx('&', className)}
 			>
 				{_.map(radioButtonChildProps, (radioButtonChildProp, index) => {
 					return (
-						<LabeledRadioButton
+						<RadioButtonLabeled
 								{...radioButtonChildProp}
 								isSelected={actualSelectedIndex === index}
 								key={index}
 								callbackId={index}
 								name={name}
 								onSelect={this.handleSelected}
-								Label={_.get(_.first(RadioGroup.Label.findInAllAsProps(radioButtonChildProp)), 'children', '')}
+								Label={_.get(_.first(findTypes(radioButtonChildProp, RadioGroup.Label)), 'props.children', null)}
 						/>
 					);
 				})}
@@ -132,18 +140,18 @@ const RadioGroup = React.createClass(createLucidComponentDefinition({
 		);
 	},
 
-	handleSelected(isSelected, { event, props }) {
-		const { callbackId } = props;
-		const clickedRadioButtonProps = RadioGroup.RadioButton.findInAllAsProps(this.props)[callbackId];
+	handleSelected(isSelected, { event, props: childProps }) {
+		const { callbackId } = childProps;
+		const clickedRadioButtonProps = _.map(findTypes(this.props, RadioGroup.RadioButton), 'props')[callbackId];
 
 		// If the `RadioGroup.RadioButton` child has an `onSelect` prop that is
 		// a function, call that prior to calling the group's `onSelect` prop.
 		if (_.isFunction(clickedRadioButtonProps.onSelect)) {
-			clickedRadioButtonProps.onSelect(isSelected, { event, props });
+			clickedRadioButtonProps.onSelect(isSelected, { event, props: childProps });
 		}
 
-		this.props.onSelect(callbackId, { event, props });
+		this.props.onSelect(callbackId, { event, props: childProps });
 	}
-}));
+});
 
 export default RadioGroup;

@@ -1,8 +1,5 @@
 import React from 'react';
-import VerticalListMenuStateless from '../VerticalListMenu';
-import { buildStatefulComponent } from '../../../util/state-management';
-
-const VerticalListMenu = buildStatefulComponent(VerticalListMenuStateless);
+import { VerticalListMenu } from '../../../index';
 
 export default React.createClass({
 	render() {

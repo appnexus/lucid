@@ -1,0 +1,69 @@
+.lucid-SwitchLabeled {
+	align-items: center;
+	color: @color-darkGray;
+	cursor: pointer;
+	display: flex;
+	font: @font;
+	justify-content: flex-start;
+
+	> .lucid-Switch {
+		flex: 0 0 @Switch-width;
+		margin-right: @size-XXS;
+	}
+
+	&&-is-disabled {
+		color: @color-mediumGray;
+		cursor: not-allowed;
+	}
+
+	&:hover .lucid-Switch-visualization-glow {
+		.opacity();
+		transform: @Switch-glow-scale;
+	}
+
+	&:hover .lucid-Switch-visualization-handle {
+		transform: @Switch-handle-scale;
+	}
+
+	&&-is-disabled:hover .lucid-Switch-visualization-glow {
+		.opacity(0);
+		transform: none;
+	}
+
+	&&-is-disabled:hover .lucid-Switch-visualization-handle {
+		transform: none;
+	}
+
+	&-is-disabled&-is-selected:hover .lucid-Switch-visualization-handle {
+		transform: @Switch-selected-transform scale(1);
+	}
+
+
+	&-is-selected:hover .lucid-Switch-visualization-glow {
+		transform: @Switch-selected-transform @Switch-glow-scale;
+	}
+
+	&-is-selected:hover .lucid-Switch-visualization-handle {
+		transform: @Switch-selected-transform @Switch-handle-scale;
+	}
+
+	&-text {
+		.transition-group-animation-fade(100ms);
+		position: relative;
+		height: @Switch-height;
+
+		// Since we have two elements in the dom during the transition from one
+		// label to another, we want the element that's leaving to appear "over
+		// the top" of the label that coming in.
+		&-leave {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		> * {
+			white-space: nowrap;
+			line-height: @Switch-height;
+		}
+	}
+}
