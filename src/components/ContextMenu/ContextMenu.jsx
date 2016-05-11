@@ -138,18 +138,11 @@ const ContextMenu = createClass({
 			}
 		} = this;
 
-		if (!target) {
+		if (!target || !flyOutPortal) {
 			return;
 		}
 
 		const targetRect = getAbsoluteBoundingClientRect(target);
-
-		if (!flyOutPortal) {
-			return this.setState({
-				targetRect
-			});
-		}
-
 		const flyOutEl = this.refs.flyOutPortal.portalElement.firstChild;
 
 		this.setState({
