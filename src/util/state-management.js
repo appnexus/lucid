@@ -70,7 +70,7 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 	};
 };
 
-function safeMerge (objValue, srcValue) {
+export function safeMerge (objValue, srcValue) {
 	// don't merge arrays
 	if (_.isArray(srcValue) && _.isArray(objValue)) {
 		return srcValue;
@@ -81,7 +81,8 @@ function safeMerge (objValue, srcValue) {
 	// deeply clone the react children, which is really freaking slow.
 	if (isValidElement(srcValue)
 			|| (_.isArray(srcValue) && _.some(srcValue, isValidElement))
-			|| (_.isArray(srcValue) && _.isUndefined(objValue)) {
+			|| (_.isArray(srcValue) && _.isUndefined(objValue))
+		 ) {
 		return srcValue;
 	}
 
