@@ -7,8 +7,8 @@ const cx = lucidClassNames.bind('&-Point');
 
 const {
 	number,
-	any,
 	bool,
+	string,
 } = React.PropTypes;
 
 // These were originally built in a 12x12 grid, except triangles which were
@@ -36,10 +36,9 @@ const Point = createClass({
 
 	propTypes: {
 		/**
-		 * Classes are appended to root element along with existing classes using
-		 * the `classnames` library.
+		 * Appended to the component-specific class names set on the root element.
 		 */
-		className: any,
+		className: string,
 		/**
 		 * Determines if the point has a white stroke around it.
 		 */

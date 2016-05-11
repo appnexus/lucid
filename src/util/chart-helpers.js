@@ -16,22 +16,8 @@ export function groupByFields(collection, fields) {
 	const fieldsArray = [].concat(fields);
 
 	return _.map(fieldsArray, (field) => {
-		return _.map(collection, (item) => item[field]);
+		return _.map(collection, field);
 	});
-}
-
-/**
- * toPairs
- *
- * Takes a collection of data and pairs up some x and y data.
- *
- * @param {object[]} collection
- * @param {string} xField
- * @param {string} yField
- * @return {array} - E.g. [[x, y], [x, y]]
- */
-export function toPairs(collection, xField, yField) {
-	return _.map(collection, (item) => [item[xField], item[yField]]);
 }
 
 /**

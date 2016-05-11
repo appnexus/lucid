@@ -7,7 +7,7 @@ const cx = lucidClassNames.bind('&-Bar');
 const {
 	number,
 	bool,
-	any,
+	string,
 } = React.PropTypes;
 
 /**
@@ -25,10 +25,9 @@ const Bar = createClass({
 
 	propTypes: {
 		/**
-		 * Classes are appended to root element along with existing classes using
-		 * the `classnames` library.
+		 * Appended to the component-specific class names set on the root element.
 		 */
-		className: any,
+		className: string,
 		/**
 		 * x coordinate.
 		 */

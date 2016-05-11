@@ -14,8 +14,10 @@ import Bars from '../Bars/Bars';
 
 const cx = lucidClassNames.bind('&-BarChart');
 
+const PADDING = 0.05;
+const PADDING_GROUPED_OR_STACKED = 0.3;
+
 const {
-	any,
 	arrayOf,
 	func,
 	number,
@@ -37,10 +39,9 @@ const BarChart = createClass({
 
 	propTypes: {
 		/**
-		 * Classes are appended to root element along with existing classes using
-		 * the `classnames` library.
+		 * Appended to the component-specific class names set on the root element.
 		 */
-		className: any,
+		className: string,
 		/**
 		 * Height of the chart.
 		 */
@@ -212,7 +213,10 @@ const BarChart = createClass({
 		const innerWidth = width - margin.left - margin.right;
 		const innerHeight = height - margin.top - margin.bottom;
 
-		const paddingInner = yAxisFields.length > 1 ? 0.3 : 0.05;
+		// `paddingInner` determines the space between the bars or groups of bars
+		const paddingInner = yAxisFields.length > 1
+			? PADDING_GROUPED_OR_STACKED
+			: PADDING;
 
 		const xScale = d3Scale.scaleBand()
 			.domain(_.map(data, xAxisField))
@@ -243,8 +247,8 @@ const BarChart = createClass({
 				</g>
 
 				{/* x axis title */}
-				<g transform={`translate(${margin.left}, ${margin.top + innerHeight})`}>
-					{xAxisTitle ? (
+				{xAxisTitle ? (
+					<g transform={`translate(${margin.left}, ${margin.top + innerHeight})`}>
 						<AxisLabel
 							orient='bottom'
 							width={innerWidth}
@@ -252,8 +256,8 @@ const BarChart = createClass({
 							label={xAxisTitle}
 							color={xAxisTitleColor}
 						/>
-					) : null}
-				</g>
+					</g>
+				) : null}
 
 				{/* y axis */}
 				<g transform={`translate(${margin.left}, ${margin.top})`}>
@@ -266,8 +270,8 @@ const BarChart = createClass({
 				</g>
 
 				{/* y axis title */}
-				<g transform={`translate(0, ${margin.top})`}>
-					{yAxisTitle ? (
+				{yAxisTitle ? (
+					<g transform={`translate(0, ${margin.top})`}>
 						<AxisLabel
 							orient='left'
 							width={margin.left}
@@ -275,8 +279,8 @@ const BarChart = createClass({
 							label={yAxisTitle}
 							color={yAxisTitleColor}
 						/>
-					) : null}
-				</g>
+					</g>
+				) : null}
 
 				{/* bars */}
 				<Bars

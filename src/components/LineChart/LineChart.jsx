@@ -18,7 +18,6 @@ import Points from '../Points/Points';
 const cx = lucidClassNames.bind('&-LineChart');
 
 const {
-	any,
 	arrayOf,
 	func,
 	instanceOf,
@@ -41,10 +40,9 @@ const LineChart = createClass({
 
 	propTypes: {
 		/**
-		 * Classes are appended to root element along with existing classes using
-		 * the `classnames` library.
+		 * Appended to the component-specific class names set on the root element.
 		 */
-		className: any,
+		className: string,
 		/**
 		 * Height of the chart.
 		 */
@@ -227,7 +225,6 @@ const LineChart = createClass({
 
 			xAxisField: 'x',
 			xAxisTickCount: null,
-			xAxisFormatter: undefined, // purposefully done, see Axis.jsx
 			xAxisTitle: null,
 			xAxisTitleColor: -1,
 
@@ -236,7 +233,6 @@ const LineChart = createClass({
 			yAxisMin: 0,
 			yAxisHasPoints: true,
 			yAxisTickCount: null,
-			yAxisFormatter: undefined, // purposefully done, see Axis.jsx
 			yAxisTitle: null,
 			yAxisTitleColor: -1,
 
@@ -245,7 +241,6 @@ const LineChart = createClass({
 			y2AxisHasPoints: true,
 			y2AxisMin: 0,
 			y2AxisTickCount: null,
-			y2AxisFormatter: undefined, // purposefully done, see Axis.jsx
 			y2AxisTitle: null,
 			y2AxisTitleColor: -1,
 		};
@@ -336,8 +331,8 @@ const LineChart = createClass({
 				</g>
 
 				{/* x axis title */}
-				<g transform={`translate(${margin.left}, ${margin.top + innerHeight})`}>
-					{xAxisTitle ? (
+				{xAxisTitle ? (
+					<g transform={`translate(${margin.left}, ${margin.top + innerHeight})`}>
 						<AxisLabel
 							orient='bottom'
 							width={innerWidth}
@@ -345,8 +340,8 @@ const LineChart = createClass({
 							label={xAxisTitle}
 							ref='xAxisTitle'
 						/>
-					) : null}
-				</g>
+					</g>
+				) : null}
 
 				{/* y axis */}
 				<g transform={`translate(${margin.left}, ${margin.top})`}>
@@ -360,8 +355,8 @@ const LineChart = createClass({
 				</g>
 
 				{/* y axis title */}
-				<g transform={`translate(0, ${margin.top})`}>
-					{yAxisTitle ? (
+				{yAxisTitle ? (
+					<g transform={`translate(0, ${margin.top})`}>
 						<AxisLabel
 							orient='left'
 							width={margin.left}
@@ -370,8 +365,8 @@ const LineChart = createClass({
 							color={yAxisTitleColor}
 							ref='yAxisTitle'
 						/>
-					) : null}
-				</g>
+					</g>
+				) : null}
 
 				{/* y2 axis */}
 				{y2AxisFields ?
@@ -387,8 +382,8 @@ const LineChart = createClass({
 				: null}
 
 				{/* y2 axis title */}
-				<g transform={`translate(${margin.left + innerWidth}, ${margin.top})`}>
-					{y2AxisTitle ? (
+				{y2AxisTitle ? (
+					<g transform={`translate(${margin.left + innerWidth}, ${margin.top})`}>
 						<AxisLabel
 							orient='right'
 							width={margin.right}
@@ -397,8 +392,8 @@ const LineChart = createClass({
 							color={y2AxisTitleColor}
 							ref='y2AxisTitle'
 						/>
-					) : null}
-				</g>
+					</g>
+				) : null}
 
 				{/* y axis lines */}
 				<Lines
@@ -465,4 +460,3 @@ const LineChart = createClass({
 });
 
 export default LineChart;
-

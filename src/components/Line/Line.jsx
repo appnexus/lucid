@@ -7,13 +7,12 @@ const cx = lucidClassNames.bind('&-Line');
 const {
 	number,
 	string,
-	any,
 } = React.PropTypes;
 
 /**
  * {"categories": ["visualizations", "geoms"]}
  *
- * Lines are great. If I told you they aren't, I'd by li'n.
+ * Lines are great. If I told you they aren't, I'd be li'n.
  *
  */
 const Line = createClass({
@@ -25,10 +24,9 @@ const Line = createClass({
 
 	propTypes: {
 		/**
-		 * Classes are appended to root element along with existing classes using
-		 * the `classnames` library.
+		 * Appended to the component-specific class names set on the root element.
 		 */
-		className: any,
+		className: string,
 		/**
 		 * The path for the line.
 		 */

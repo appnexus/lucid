@@ -7,11 +7,11 @@ import { createClass } from '../../util/component-types';
 const cx = lucidClassNames.bind('&-Axis');
 
 const {
+	string,
 	array,
 	func,
 	number,
 	oneOf,
-	any,
 } = React.PropTypes;
 
 /**
@@ -31,10 +31,9 @@ const Axis = createClass({
 
 	propTypes: {
 		/**
-		 * Classes are appended to root element along with existing classes using
-		 * the `classnames` library.
+		 * Appended to the component-specific class names set on the root element.
 		 */
-		className: any,
+		className: string,
 		/**
 		 * Must be a D3 scale.
 		 */
@@ -73,11 +72,10 @@ const Axis = createClass({
 		/**
 		 * Control the number of ticks displayed.
 		 *
-		 * Usually when using an ordinal scale you should show a tick mark for
-		 * every value, but there are some rare cases when you want to only show a
-		 * sampling of the ticks. By passing in a number to we'll generate an
-		 * evenly spaced number of ticks and display them for ordinal and
-		 * continuous scales.
+		 * If the scale is time based or linear, this number acts a "hint" per the
+		 * default behavior of D3. If it's an ordinal scale, this number is treated
+		 * as an absolute number of ticks to display and is powered by our own
+		 * utility function `discreteTicks`.
 		 */
 		tickCount: number,
 	},
@@ -87,7 +85,6 @@ const Axis = createClass({
 			innerTickSize: 6, // same as d3
 			outerTickSize: 6, // same as d3
 			tickPadding: 3, // same as d3
-			tickFormat: undefined, // purposefully `undefined` so we can drop through to destructuring defaults
 			orient: 'bottom',
 			tickCount: null,
 		};

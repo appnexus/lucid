@@ -10,7 +10,6 @@ import Line from '../Line/Line';
 const cx = lucidClassNames.bind('&-Lines');
 
 const {
-	any,
 	arrayOf,
 	func,
 	number,
@@ -33,10 +32,9 @@ const Lines = createClass({
 
 	propTypes: {
 		/**
-		 * Classes are appended to root element along with existing classes using
-		 * the `classnames` library.
+		 * Appended to the component-specific class names set on the root element.
 		 */
-		className: any,
+		className: string,
 		/**
 		 * Top
 		 */
@@ -129,7 +127,7 @@ const Lines = createClass({
 		} = this.props;
 
 		// Copy the original so we can mutate it
-		let yScale = yScaleOriginal.copy();
+		const yScale = yScaleOriginal.copy();
 
 		// If we are stacked, we need to calculate a new domain based on the sum of
 		// the various series' y data. One row per series.

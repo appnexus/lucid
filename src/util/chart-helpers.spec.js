@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import assert from 'assert';
 import {
-	toPairs,
 	byFields,
 	minByFields,
 	maxByFields,
@@ -22,23 +21,6 @@ describe('chart-helpers', () => {
 		it('should work', () => {
 			assert.equal(transformFromCenter(10, 10, 20, 20, 2), 'translate(-30, -30) scale(2)');
 			assert.equal(transformFromCenter(10, 10, 12, 16, 3), 'translate(-26, -38) scale(3)');
-		});
-	});
-
-	describe('toPairs', () => {
-		it('should work', () => {
-			const data = [
-				{ a: 'one', b: 'two' },
-				{ a: 'three', b: 'four' },
-			];
-
-			assert.deepEqual(
-				toPairs(data, 'a', 'b'),
-				[
-					['one', 'two'],
-					['three', 'four'],
-				]
-			);
 		});
 	});
 

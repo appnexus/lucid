@@ -8,7 +8,6 @@ const {
 	number,
 	string,
 	oneOf,
-	any,
 } = React.PropTypes;
 
 /**
@@ -25,10 +24,9 @@ const AxisLabel = createClass({
 
 	propTypes: {
 		/**
-		 * Classes are appended to root element along with existing classes using
-		 * the `classnames` library.
+		 * Appended to the component-specific class names set on the root element.
 		 */
-		className: any,
+		className: string,
 		/**
 		 * Height of the margin this label should fit into.
 		 */
