@@ -49,7 +49,18 @@ const ScrollTable = createClass({
 		/**
 		 * Set the Table contents to not allow word wrapping.
 		 */
-		isNowrap: bool,
+		hasWordWrap: bool,
+		/**
+		 * render the table with borders on the outer edge
+		 */
+		hasBorder: bool,
+	},
+
+	getDefaultProps() {
+		return {
+			hasWordWrap: false,
+			hasBorder: true,
+		};
 	},
 
 	render() {
@@ -58,13 +69,16 @@ const ScrollTable = createClass({
 			className,
 			style,
 			tableWidth,
-			isNowrap,
+			hasWordWrap,
+			hasBorder,
 			...passThroughs
 		} = this.props;
 
 		return (
 			<div
-				className={cx('&', className)}
+				className={cx('&', {
+					'&-has-border': hasBorder,
+				}, className)}
 				style={style}
 			>
 				<Table
@@ -72,8 +86,8 @@ const ScrollTable = createClass({
 					style={{
 						width: tableWidth,
 					}}
-					className={cx({'&-nowrap': isNowrap})}
-					hasNoBorder={true}
+					hasWordWrap={hasWordWrap}
+					hasBorder={false}
 				>
 					{children}
 				</Table>

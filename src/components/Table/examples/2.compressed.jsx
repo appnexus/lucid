@@ -12,15 +12,15 @@ const {
 export default React.createClass({
 	render() {
 		return(
-			<Table hasExtraWhitespace>
+			<Table density='compressed'>
 				<Thead>
 					<Tr>
 						<Th rowSpan={2}>RS</Th>
-						<Th hasCheckbox rowSpan={2}>
+						<Th rowSpan={2}>
 							<Checkbox></Checkbox>
 						</Th>
 						<Th rowSpan={2} isSortable isResizable>Sortable and resizable.</Th>
-						<Th hasIcon rowSpan={2}><SuccessIcon/></Th>
+						<Th rowSpan={2}><SuccessIcon/></Th>
 						<Th rowSpan={2}>Button</Th>
 						<Th rowSpan={2} isSorted sortDirection='up' isResizable>Sorted Column</Th>
 						<Th colSpan={3} align='center'>Alignments</Th>
@@ -34,140 +34,140 @@ export default React.createClass({
 				<Tbody>
 					<Tr>
 						<Td rowSpan={14} hasBorderRight>RS</Td>
-						<Td hasCheckbox><Checkbox/></Td>
+						<Td><Checkbox/></Td>
 						<Td>Text</Td>
-						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
-						<Td hasButton><Button size='small'>button</Button></Td>
+						<Td hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td><Button size='small'>button</Button></Td>
 						<Td>Sorted Column</Td>
 						<Td align='left' hasBorderLeft>align left</Td>
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr isDisabled>
-						<Td hasCheckbox><Checkbox/></Td>
+						<Td><Checkbox/></Td>
 						<Td>isDisabled</Td>
-						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
-						<Td hasButton><Button size='small' isDisabled={true}>button</Button></Td>
+						<Td hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td><Button size='small' isDisabled={true}>button</Button></Td>
 						<Td>Sorted Column</Td>
 						<Td align='left' hasBorderLeft>align left</Td>
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
-					<Tr hasDetails>
-						<Td hasCheckbox><Checkbox/></Td>
-						<Td>Text && hasDetails</Td>
-						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
-						<Td hasButton><Button size='small'>button</Button></Td>
+					<Tr isActionable>
+						<Td><Checkbox/></Td>
+						<Td>Text && isActionable</Td>
+						<Td hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td><Button size='small'>button</Button></Td>
 						<Td>Sorted Column</Td>
 						<Td align='left' hasBorderLeft>align left</Td>
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
-					<Tr isDisabled hasDetails>
-						<Td hasCheckbox><Checkbox/></Td>
-						<Td>isDisabled && hasDetails</Td>
-						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
-						<Td hasButton><Button size='small' isDisabled={true}>button</Button></Td>
+					<Tr isDisabled isActionable>
+						<Td><Checkbox/></Td>
+						<Td>isDisabled && isActionable</Td>
+						<Td hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td><Button size='small' isDisabled={true}>button</Button></Td>
 						<Td>Sorted Column</Td>
 						<Td align='left' hasBorderLeft>align left</Td>
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr>
-						<Td hasCheckbox><Checkbox/></Td>
+						<Td><Checkbox/></Td>
 						<Td><a href='#'>Link</a></Td>
-						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
-						<Td hasButton><Button size='small'>button</Button></Td>
+						<Td hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td><Button size='small'>button</Button></Td>
 						<Td>Sorted Column</Td>
 						<Td align='left' hasBorderLeft>align left</Td>
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr isDisabled>
-						<Td hasCheckbox><Checkbox/></Td>
+						<Td><Checkbox/></Td>
 						<Td><a href='#'>isDisabled Link</a></Td>
-						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
-						<Td hasButton><Button size='small' isDisabled={true}>button</Button></Td>
+						<Td hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td><Button size='small' isDisabled={true}>button</Button></Td>
 						<Td>Sorted Column</Td>
 						<Td align='left' hasBorderLeft>align left</Td>
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
-					<Tr hasDetails>
-						<Td hasCheckbox><Checkbox/></Td>
-						<Td><a href='#'>Link && hasDetails</a></Td>
-						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
-						<Td hasButton><Button size='small'>button</Button></Td>
+					<Tr isActionable>
+						<Td><Checkbox/></Td>
+						<Td><a href='#'>Link && isActionable</a></Td>
+						<Td hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td><Button size='small'>button</Button></Td>
 						<Td>Sorted Column</Td>
 						<Td align='left' hasBorderLeft>align left</Td>
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
-					<Tr hasDetails isDisabled>
-						<Td hasCheckbox><Checkbox/></Td>
-						<Td><a href='#'>isDisabled Link && hasDetails</a></Td>
-						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
-						<Td hasButton><Button size='small' isDisabled={true}>button</Button></Td>
+					<Tr isActionable isDisabled>
+						<Td><Checkbox/></Td>
+						<Td><a href='#'>isDisabled Link && isActionable</a></Td>
+						<Td hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td><Button size='small' isDisabled={true}>button</Button></Td>
 						<Td>Sorted Column</Td>
 						<Td align='left' hasBorderLeft>align left</Td>
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr isSelected>
-						<Td hasCheckbox><Checkbox isSelected={true}/></Td>
+						<Td><Checkbox isSelected={true}/></Td>
 						<Td>isSelected</Td>
-						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
-						<Td hasButton><Button size='small'>button</Button></Td>
+						<Td hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td><Button size='small'>button</Button></Td>
 						<Td>Sorted Column</Td>
 						<Td align='left' hasBorderLeft>align left</Td>
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr isSelected isDisabled>
-						<Td hasCheckbox><Checkbox isSelected={true}/></Td>
+						<Td><Checkbox isSelected={true}/></Td>
 						<Td>isSelected && isDisabled</Td>
-						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
-						<Td hasButton><Button size='small' isDisabled={true}>button</Button></Td>
+						<Td hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td><Button size='small' isDisabled={true}>button</Button></Td>
 						<Td>Sorted Column</Td>
 						<Td align='left' hasBorderLeft>align left</Td>
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
-					<Tr isSelected hasDetails>
-						<Td hasCheckbox><Checkbox isSelected={true}/></Td>
-						<Td>isSelected && hasDetails</Td>
-						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
-						<Td hasButton><Button size='small'>button</Button></Td>
+					<Tr isSelected isActionable>
+						<Td><Checkbox isSelected={true}/></Td>
+						<Td>isSelected && isActionable</Td>
+						<Td hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td><Button size='small'>button</Button></Td>
 						<Td>Sorted Column</Td>
 						<Td align='left' hasBorderLeft>align left</Td>
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
-					<Tr isSelected isDisabled hasDetails>
-						<Td hasCheckbox><Checkbox isSelected={true}/></Td>
-						<Td>isSelected && isDisabled && hasDetails</Td>
-						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
-						<Td hasButton><Button size='small' isDisabled={true}>button</Button></Td>
+					<Tr isSelected isDisabled isActionable>
+						<Td><Checkbox isSelected={true}/></Td>
+						<Td>isSelected && isDisabled && isActionable</Td>
+						<Td hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td><Button size='small' isDisabled={true}>button</Button></Td>
 						<Td>Sorted Column</Td>
 						<Td align='left' hasBorderLeft>align left</Td>
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
-					<Tr hasDetails isActive>
-						<Td hasCheckbox><Checkbox/></Td>
+					<Tr isActionable isActive>
+						<Td><Checkbox/></Td>
 						<Td>isActive</Td>
-						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
-						<Td hasButton><Button size='small'>button</Button></Td>
+						<Td hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td><Button size='small'>button</Button></Td>
 						<Td>Sorted Column</Td>
 						<Td align='left' hasBorderLeft>align left</Td>
 						<Td align='center'>align center</Td>
 						<Td align='right'>align right</Td>
 					</Tr>
-					<Tr hasDetails isActive isDisabled>
-						<Td hasCheckbox><Checkbox/></Td>
+					<Tr isActionable isActive isDisabled>
+						<Td><Checkbox/></Td>
 						<Td>isActive && isDisabled</Td>
-						<Td hasIcon hasBorderLeft hasBorderRight><SuccessIcon/></Td>
-						<Td hasButton><Button size='small' isDisabled={true}>button</Button></Td>
+						<Td hasBorderLeft hasBorderRight><SuccessIcon/></Td>
+						<Td><Button size='small' isDisabled={true}>button</Button></Td>
 						<Td>Sorted Column</Td>
 						<Td align='left' hasBorderLeft>align left</Td>
 						<Td align='center'>align center</Td>

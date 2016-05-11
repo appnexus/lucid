@@ -1,371 +1,299 @@
 @Table-row-height: @size-standard-height - 2;
 @Table-row-heightLarge: @Table-row-height + @size-standard;
 @Table-cell-padding: @size-S;
+@Table-cell-border-color: #e3e3e3;
 @Table-header-backgroundColor: #767b7f;
 @Table-header-colorLight: #525659;
 @Table-header-colorDark: #393d40;
 @Table-header-border: 1px solid @Table-header-colorDark;
-@Table-header-cell-border: 1px solid fade(white, 30%);
+@Table-header-cell-border: 1px solid #babdbe;
+
 @Table-hover-borderWidth: 4px;
 @Table-has-checkbox-width: 41px;
 
 .lucid-Table {
-	.no-safari-flicker();
-	#normalize.lucid-table();
-	border: 1px solid @color-borderColor;
 	font: 500 @font;
 	color: @color-textColor;
 	background-color: @color-white;
+	border-collapse: collapse;
+	border-spacing: 0;
+	box-sizing: border-box;
 
-	// hide all borders on the outer edge of the table.
-	&&-has-no-border {
-		border: 0 solid @color-transparent;
+// `Table`.`hasBorder` prop
+	&-has-border {
+		border: @border-table;
+	}
 
-		.lucid-Table-thead {
-			.lucid-Table-thead-row:first-of-type {
-				.lucid-Table-cell {
-					border-top: 0 solid @color-transparent;
-				}
-			}
-
-			.lucid-Table-cell:first-of-type {
-				border-left: 0 solid @color-transparent;
-			}
-
-			.lucid-Table-cell:last-of-type {
-				border-right: 0 solid @color-transparent;
-			}
+// `Table`.`density` prop
+	&-density-extended {
+		& > .lucid-Table-Tbody > .lucid-Table-Tr > .lucid-Table-Td {
+			padding: 8px 9.4px;
 		}
+	}
 
-		.lucid-Table-tbody {
-			.lucid-Table-row {
-				.lucid-Table-cell:first-of-type {
-					border-left: 0 solid @color-transparent;
+	&-density-compressed {
+		& > .lucid-Table-Tbody > .lucid-Table-Tr > .lucid-Table-Td {
+			padding: 2.5px 9.4px;
+		}
+	}
+
+// `Table`.`hasWordWrap` prop
+	.lucid-Table-Td, .lucid-Table-Th {
+		white-space: nowrap;
+	}
+
+	&-has-word-wrap {
+		.lucid-Table-Td, .lucid-Table-Th {
+			white-space: initial;
+		}
+	}
+
+	// Table header styles
+	& > &-Thead {
+		background-color: @Table-header-backgroundColor;
+		color: @color-white;
+
+		// Table header cell styles
+		& > .lucid-Table-Tr > .lucid-Table-Th {
+			border: @Table-header-cell-border;
+			height: 27px; // effectively min height
+
+			// remove all borders from the perimeter of the header
+			&.lucid-Table-is-first-row {
+				border-top: 0 none @color-transparent;
+			}
+			&.lucid-Table-is-last-row {
+				border-bottom: 0 none @color-transparent;
+			}
+			&.lucid-Table-is-first-col {
+				border-left: 0 none @color-transparent;
+			}
+			&.lucid-Table-is-last-col {
+				border-right: 0 none @color-transparent;
+			}
+// `Th`.`isSortable` prop
+			&.lucid-Table-is-sortable {
+				cursor: pointer;
+
+				&:hover {
+					background-color: @Table-header-colorLight;
 				}
 			}
 
-			.lucid-Table-row:last-of-type {
-				.lucid-Table-cell {
-					border-bottom: 0 solid @color-transparent;
+			// header cell content
+			& > .lucid-Table-Th-inner {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: flex-end;
+
+				.lucid-Table-Th-inner-content {
+					flex: 1 0 auto;
+					display: flex;
+					align-items: center;
+					margin: 2.5px 9.4px;
 				}
+// `Th`.`isSorted` prop
+				.lucid-Table-Th-inner-caret {
+					margin-right: 9px;
+					display: flex;
+					align-items: center;
+
+					.lucid-Table-sort-icon {
+						fill: @color-white;
+						width: 8px;
+						height: 8px;
+					}
+				}
+// `Th`.`isResizable` prop
+				.lucid-Table-Th-inner-resize {
+					cursor: ew-resize;
+					width: 4px;
+					background-color: fade(@color-black, 70%);
+					opacity: 0;
+					transition: opacity 200ms;
+					&:hover {
+						opacity: 1;
+					}
+				}
+			}
+
+// `Th`.`align` prop - use flex alignments in header
+			&.lucid-Table-align-left > .lucid-Table-Th-inner .lucid-Table-Th-inner-content {
+				justify-content: flex-start;
+			}
+
+			&.lucid-Table-align-center > .lucid-Table-Th-inner .lucid-Table-Th-inner-content {
+				justify-content: center;
+			}
+
+			&.lucid-Table-align-right > .lucid-Table-Th-inner .lucid-Table-Th-inner-content {
+				justify-content: flext-end;
 			}
 		}
 	}
 
+	// Table body cell styles
+	& > &-Tbody {
+
+		& > .lucid-Table-Tr {
+
+// `Td`.`align` prop - use text alignments in body
+			& > .lucid-Table-Td {
+					background-clip: padding-box; // fixes Firefox background paints over collapsed border
+					&.lucid-Table-align-left {
+						text-align: left;
+					}
+
+					&.lucid-Table-align-center {
+						text-align: center;
+					}
+
+					&.lucid-Table-align-right {
+						text-align: right;
+					}
+			}
+
+
+			// style row cells on hover
+			&:hover {
+				.selectCellsOnRow({
+					background-color: @color-lightGray;
+				});
+			};
+
+// `Tr`.`isSelected` prop
+			// style row cells
+			&.lucid-Table-is-selected {
+				.selectCellsOnRow({
+					background-color: @color-primaryLight;
+				});
+
+				// style row cells on hover
+				&:hover {
+					.selectCellsOnRow({
+						background-color: multiply(@color-primaryLight, @color-lightGray);
+					});
+				}
+			}
+
+// `Tr`.`isActive` prop
+			// style row cells
+			&.lucid-Table-is-active {
+				.selectCellsOnRow({
+					background-color: @color-primaryMedium;
+				});
+
+				// style row cells on hover
+				&:hover {
+					.selectCellsOnRow({
+						background-color: multiply(@color-primaryMedium, @color-lightGray);
+					});
+				}
+
+				// always show marker on first cell
+				.selectFirstCellOnRow({
+					.renderLeftMarker(1);
+				});
+			}
+
+// `Tr`.`isActionable` prop
+			// style cells of rows which are only actionable but not active
+			&.lucid-Table-is-actionable:not(.lucid-Table-is-active) {
+
+				// place hidden marker on first cell
+				.selectFirstCellOnRow({
+					.renderLeftMarker(0);
+				});
+
+				// show marker on hover
+				&:hover {
+					.selectFirstCellOnRow({
+						.renderLeftMarker(1);
+					});
+				}
+			}
+		}
+
+		// Table body cell styles
+		& > .lucid-Table-Tr > .lucid-Table-Td {
+			border-bottom: 1px solid @Table-cell-border-color;
+
+			// remove all borders from the perimeter of the body
+			&.lucid-Table-is-first-row {
+				border-top: 0 none @color-transparent;
+			}
+			&.lucid-Table-is-last-row {
+				border-bottom: 0 none @color-transparent;
+			}
+			&.lucid-Table-is-first-col {
+				border-left: 0 none solid @color-transparent;
+			}
+			&.lucid-Table-is-last-col {
+				border-right: 0 none @color-transparent;
+			}
+
+// `Td`.`hasBorderRight` prop
+			&.lucid-Table-has-border-right {
+				border-right: 1px solid @Table-cell-border-color;
+			}
+
+// `Td`.`hasBorderLeft` prop
+			&.lucid-Table-has-border-left {
+				border-left: 1px solid @Table-cell-border-color;
+			}
+		}
+	}
+
+	// link styles in the Table body
 	a {
 		color: @color-linkColor;
 	}
+}
 
-	// **
-	// * `&-thead` is used to limit some styles to be only applyed to the
-	// * `<thead>`.  The `&-head` defines the header or the `.lucid-Table`
-	&-thead {
-		user-select: none;
-
-		// **
-		// * a "row" within the "thead"
-		// *
-		.lucid-Table-thead-row {
-			background-color: @Table-header-backgroundColor;
-		}
-		// **
-		// * a "cell" within the "thead"
-		// *
-		.lucid-Table-cell {
-
-			border-top: @Table-header-border;
-			border-bottom: @Table-header-border;
-			border-right: @Table-header-cell-border;
-			color: @color-white;
-			position: relative;
-
-			// **
-			// * if a cell in the `&-thead` has a `colspan` can the border bottom
-			// * color to match the vertical styling.
-			// *
-			&[colspan] {
-				border-bottom: @Table-header-cell-border;
-			}
-
-			&.lucid-Table-is-sortable:not(.lucid-Table-is-resizing) {
-				&:hover {
-					background-color: @Table-header-colorDark;
-					cursor: pointer;
-				}
-			}
-
-			// *
-			// * is applied when a column has been sorted.
-			// *
-			&.lucid-Table-is-sorted {
-				background-color: @Table-header-colorLight;
-				line-height: inherit;
-			}
-
-			&.lucid-Table-is-resizable {
-				line-height: inherit;
-				padding: 0;
-				&[rowspan='2'] {
-					.lucid-Table-is-resizable-content	{
-						line-height: 53px;
-					}
-				}
-				.lucid-Table-is-resizable-content {
-					padding: 0 (@Table-cell-padding - 4) 0 @Table-cell-padding;
-				}
-			}
-
-			// **
-			// * set the border of the first "th" to match the border of the header
-			// *
-			&:first-of-type {
-				border-left: @Table-header-border;
-			}
-			// **
-			// * set the border of the last "th" to match the border of the header
-			// *
-			&:last-of-type {
-				border-right: @Table-header-border;
-			}
-
-			.lucid-DragCaptureZone {
-				cursor: ew-resize;
-				width: 4px;
-				&:hover {
-					background-color: fade(@color-black, 70%);
-				}
-			}
-		}
-	}
-	&-tbody {
-		// **
-		// * set the border of all "td" within a '&-tbody'
-		// *
-		.lucid-Table-cell {
-			border-bottom: @border-table;
-		}
-	}
-
-	// **
-	// *A standard `<tr>` tag
-	// *
-	&-row {
-		.Table-row-hover(@color-lightGray, false);
-	}
-
-	&-is-resizable-container,
-	&-is-sorted-container {
-		display: flex;
-		justify-content: space-between;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-
-	&-is-resizable-container {
-		align-items: stretch;
-	}
-
-	&-is-sorted-container {
-		align-items: center;
-	}
-
-	&-is-sorted-title {
-		flex: 1;
-	}
-
-	&-is-sorted-caret {
-		display: flex;
-		margin-left: @Table-cell-padding;
-	}
-
-	&-is-resizable-content {
-		flex: 1;
-		line-height: @Table-row-height;
-		padding: 0 @Table-cell-padding;
-	}
-
-	// **
-	// * sort icon is used within a TH to indicate that a column can be sorted.
-	// *
-	&-sort-icon {
-		fill: @color-white;
-		width: 8px;
-		height: 8px;
-	}
-
-	// **
-	// * When `&-is-disabled` is applied to a row the row will appear disabled
-	// *
-	&-is-disabled {
-		color: @color-disabledText;
-		font-style: italic;
-		a {
-			color: fade(multiply(@color-disabledText, @color-primary), 50%);
-		}
-	}
-
-	// **
-	// * A row is `&-is-selected` when a `<Checkbox>` within that row is active
-	// *
-	&-is-selected {
-		background-color: @color-primaryLight;
-		.Table-row-hover(multiply(@color-primaryLight, @color-lightGray));
-	}
-
-	&-has-details&-is-selected {
-		background-color: @color-primaryLight;
-		.Table-row-hover(multiply(@color-primaryLight, @color-lightGray), true);
-	}
-
-	// **
-	// * A row is `&-is-active` when that row is active and a lower third panel
-	// * is displayed.
-	// *
-	//&-is-active {
-		//.Table-row-hover(multiply(@color-primaryMedium, @color-lightGray));
-	//}
-
-	&-has-details {
-		.Table-row-hover(@color-lightGray, true);
-	}
-
-	// **
-	// * A row is `&-has-details` when that row is able to be made active
-	// *
-	&-has-details&-is-active {
-		.Table-row-hover(multiply(@color-primaryMedium, @color-lightGray), true);
-		background-color: @color-primaryMedium;
-		> .lucid-Table-cell {
-			&:first-of-type, &.lucid-Table-is-after-rowspan {
-				.hardstop-gradient(to right, @color-primary, @color-primaryMedium, @Table-hover-borderWidth);
-			}
-		}
-	}
-
-
-	// **
-	// * A standard `<td>` or `<th>` tag.
-	// *
-	&-cell {
-		padding: 0 @Table-cell-padding;
-		line-height: @Table-row-height;
-		box-sizing: border-box;
-		white-space: nowrap;
-
-		&[rowspan] {
-			line-height: inherit;
-		}
-	}
-
-	// **
-	// * Apply to align the text to the left.
-	// *
-	&-align-left {
-		text-align: left;
-	}
-
-	// **
-	// * Apply to align the text to the right.
-	// *
-	&-align-right {
-		text-align: right;
-	}
-
-	// **
-	// * Apply to align the text in the center of a `&-cell`.
-	// *
-	&-align-center {
-		text-align: center;
-	}
-
-	// **
-	// * Add `&-has-checkbox` if the `&-cell` has a `<Checkbox>` as a child.  This
-	// * will change the width to fit only the `<Checkbox`> and change the
-	// * line-height to inherit to allow the `<Checkbox>` to be centered within
-	// * the cell.
-	// *
-	&-has-checkbox {
-		width: @Table-has-checkbox-width;
-		padding: 0 @Table-cell-padding;
-		line-height: inherit;
-	}
-	// **
-	// * Add `&-has-icon` if the `&-cell` has a `<Icon>` as a child.  This will
-	// * change the width to fit only the `<Icon`> and change the line-height to
-	// * inherit to allow the `<Icon>` to be centered within the cell.
-	// *
-	&-has-icon {
-		line-height: inherit;
-		width: 35px;
-	}
-
-	// **
-	// * Add `&-has-button` if the `&-cell` has a `<Button>` as a child. This class
-	// * will center the `<Button>` within the cell.
-	// *
-	&-has-button {
-		text-align: center;
-	}
-
-	// **
-	// * Add `&-has-border-left` if the `&-cell` needs to have a vertical border
-	// * line on the left.
-	// *
-	&-has-border-left {
-		border-left: @border-table;
-	}
-
-	// **
-	// * Add `&-has-border-right` if the `&-cell` needs to have a vertical border
-	// * line on the right.
-	// *
-	&-has-border-right {
-		border-right: @border-table;
-	}
-
-	&-has-rowspan {
-		background: @color-white !important;
-	}
-
-	// **
-	// * Add `&-has-extra-whitespace` increased the padding/line-height of the cells of
-	// * the the table by 50%. The increased line-height is applyed only the
-	// * `&-tbody` cells.
-	// *
-	&-has-extra-whitespace {
-		th.lucid-Table-cell {
-			&.lucid-Table-has-checkbox {
-				width: @Table-has-checkbox-width;
-				line-height: inherit;
-			}
-		}
-		td.lucid-Table-cell {
-			line-height: @Table-row-heightLarge;
-			&.lucid-Table-has-checkbox {
-				line-height: inherit;
-			}
-			&.lucid-Table-has-icon {
-				line-height: inherit;
-			}
-		}
-
+// `Tr`.`isDisabled` prop
+.lucid-Table-is-disabled {
+	color: @color-disabledText;
+	font-style: italic;
+	a {
+		color: fade(multiply(@color-disabledText, @color-linkColor), 50%);
 	}
 }
 
-// ** MIXIN
-// * This mixin is used to help with the hover state.  The designs call for a
-// * 4px line on the left of the "row".  To do this we use our `.hardstop-gradient`
-// * which is appied to the first `.lucid-Table-cell` as a background gradient.
-// * The mixin takes a single background color that is used to fill the "row"
-// *
-.Table-row-hover(@bgcolor, @hasDetails: false) {
-	&:hover {
-		background-color: @bgcolor;
-		.lucid-Table-cell when (@hasDetails = true){
-			&:first-of-type, &.lucid-Table-is-after-rowspan {
-				.hardstop-gradient(to right, @color-primary, @bgcolor, @Table-hover-borderWidth);
-			}
+// MIXINS
+
+// Select all 1-height cells on the current body row and apply the given styles
+.selectCellsOnRow(@ruleset) {
+	& > .lucid-Table-Td {
+		&:not([rowspan]), &[rowspan='1'] {
+			@ruleset();
 		}
+	}
+}
+
+// Select the first 1-height cell on the current body row and apply the given styles
+.selectFirstCellOnRow(@ruleset) {
+	& > .lucid-Table-Td {
+		&.lucid-Table-is-first-single {
+			@ruleset();
+		}
+	}
+}
+
+// Place a styled box on the left edge of the current element with the given scale and width
+.renderLeftMarker(@scale:1; @width: 4px) {
+	position: relative;
+	&::before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: @width;
+		background-color: @color-primary;
+		content: '';
+		//opacity: @scale;
+		transform-origin: 0 0;
+		transform: scaleX(@scale);
+		transition: opacity 200ms, transform 200ms;
 	}
 }

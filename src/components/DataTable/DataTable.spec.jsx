@@ -148,30 +148,6 @@ describe('DataTable', () => {
 			});
 		});
 
-		describe('hasExtraWhitespace', () => {
-			it('should pass thru to the underlying ScrollTable', () => {
-				const wrapper = shallow(
-					<DataTable hasExtraWhitespace={true} />
-				);
-
-				const scrollTableWrapper = wrapper
-					.find(ScrollTable);
-
-				assert.equal(scrollTableWrapper.prop('hasExtraWhitespace'), true, 'must pass `hasExtraWhitespace` thru to the underlying ScrollTable');
-			});
-
-			it('should default to false', () => {
-				const wrapper = shallow(
-					<DataTable />
-				);
-
-				const scrollTableWrapper = wrapper
-					.find(ScrollTable);
-
-				assert.equal(scrollTableWrapper.prop('hasExtraWhitespace'), false, 'must pass false value as `hasExtraWhitespace` to the underlying ScrollTable');
-			});
-		});
-
 		describe('isSelectable', () => {
 			it('should render a checkbox in the first column of each row', () => {
 				const wrapper = shallow(
@@ -226,10 +202,10 @@ describe('DataTable', () => {
 			});
 		});
 
-		describe('hasDetails', () => {
+		describe('isActionable', () => {
 			it('should pass thru to the underlying ScrollTable rows', () => {
 				const wrapper = shallow(
-					<DataTable hasDetails data={testData} />
+					<DataTable isActionable data={testData} />
 				);
 
 				// select the rows of the rendered table
@@ -238,9 +214,9 @@ describe('DataTable', () => {
 						.find(ScrollTable.Tbody).shallow()
 							.find(ScrollTable.Tr);
 
-				// for each row check that hasDetails matches
+				// for each row check that isActionable matches
 				trsWrapper.forEach((trWrapper) => {
-					assert.equal(trWrapper.prop('hasDetails'), true);
+					assert.equal(trWrapper.prop('isActionable'), true);
 				});
 			});
 
@@ -255,9 +231,9 @@ describe('DataTable', () => {
 						.find(ScrollTable.Tbody).shallow()
 							.find(ScrollTable.Tr);
 
-				// for each row check that hasDetails is false
+				// for each row check that isActionable is false
 				trsWrapper.forEach((trWrapper) => {
-					assert.equal(trWrapper.prop('hasDetails'), false);
+					assert.equal(trWrapper.prop('isActionable'), false);
 				});
 			});
 		});
@@ -329,7 +305,7 @@ describe('DataTable', () => {
 			it('should be triggered when row is clicked', () => {
 				const onRowClick = sinon.spy();
 				const wrapper = shallow(
-					<DataTable hasDetails onRowClick={onRowClick} data={testData}>
+					<DataTable isActionable onRowClick={onRowClick} data={testData}>
 						<Column field='id' title='ID'/>
 						<Column field='first_name' title='First'/>
 						<Column field='last_name' title='Last'/>
@@ -361,7 +337,7 @@ describe('DataTable', () => {
 			it('should be triggered when a column header with `isSortable` is clicked', () => {
 				const onSort = sinon.spy();
 				const wrapper = shallow(
-					<DataTable hasDetails onSort={onSort} data={testData}>
+					<DataTable isActionable onSort={onSort} data={testData}>
 						<Column field='id' isSortable title='ID'/>
 						<Column field='first_name' isSortable title='First'/>
 						<Column field='last_name' isSortable title='Last'/>

@@ -23,23 +23,35 @@ describe('Table', () => {
 	});
 
 	describe('props', () => {
-		describe('hasExtraWhitespace', () => {
-			it('should apply the `lucid-Table-has-extra-whitespace` class name to the rendered table', () => {
-				const wrapper = shallow(
-					<Table hasExtraWhitespace={true} />
-				);
+		describe('density', () => {
+			describe('value `compressed`', () => {
+				it('should apply the `lucid-Table-density-compressed` class name to the rendered table', () => {
+					const wrapper = shallow(
+						<Table density='compressed' />
+					);
 
-				assert.equal(wrapper.find('table.lucid-Table-has-extra-whitespace').length, 1);
+					assert.equal(wrapper.find('table.lucid-Table-density-compressed').length, 1);
+				});
+			});
+
+			describe('value `extended`', () => {
+				it('should apply the `lucid-Table-density-extended` class name to the rendered table', () => {
+					const wrapper = shallow(
+						<Table density='extended' />
+					);
+
+					assert.equal(wrapper.find('table.lucid-Table-density-extended').length, 1);
+				});
 			});
 		});
 
-		describe('hasNoBorder', () => {
-			it('should apply the `lucid-Table-has-no-border` class name to the rendered table', () => {
+		describe('hasBorder', () => {
+			it('should apply the `lucid-Table-has-border` class name to the rendered table', () => {
 				const wrapper = shallow(
-					<Table hasNoBorder={true} />
+					<Table hasBorder={true} />
 				);
 
-				assert.equal(wrapper.find('table.lucid-Table-has-no-border').length, 1, 'the className lucid-Table-has-no-border must be included');
+				assert.equal(wrapper.find('table.lucid-Table-has-border').length, 1, 'the className lucid-Table-has-border must be included');
 			});
 		});
 	});
@@ -52,32 +64,7 @@ describe('Table', () => {
 						<Thead />
 					);
 
-					assert.equal(wrapper.find('thead.lucid-Table-thead').length, 1);
-				});
-
-				it('should render child elments with the `isHeader` prop default to true', () => {
-					const wrapper = shallow(
-						<Thead>
-							<Tr />
-							<Tr />
-						</Thead>
-					);
-
-					wrapper.children().forEach((childElementWrapper) => {
-						assert(childElementWrapper.prop('isHeader'));
-					});
-				});
-
-				it('should render child elments with the `isHeader` prop with an explicit value', () => {
-					const wrapper = shallow(
-						<Thead>
-							<Tr isHeader={false} />
-							<Tr isHeader={true} />
-						</Thead>
-					);
-
-					assert.equal(false, wrapper.children().at(0).prop('isHeader'));
-					assert.equal(true, wrapper.children().at(1).prop('isHeader'));
+					assert.equal(wrapper.find('thead.lucid-Table-Thead').length, 1);
 				});
 			});
 		});
@@ -89,7 +76,7 @@ describe('Table', () => {
 						<Tbody />
 					);
 
-					assert.equal(wrapper.find('tbody.lucid-Table-tbody').length, 1);
+					assert.equal(wrapper.find('tbody.lucid-Table-Tbody').length, 1);
 				});
 
 			});
@@ -102,21 +89,11 @@ describe('Table', () => {
 						<Tr />
 					);
 
-					assert.equal(wrapper.find('tr.lucid-Table-row').length, 1);
+					assert.equal(wrapper.find('tr.lucid-Table-Tr').length, 1);
 				});
 			});
 
 			describe('props', () => {
-				describe('isHeader', () => {
-					it('should apply the class name `lucid-Table-thead-row`', () => {
-						const wrapper = shallow(
-							<Tr isHeader />
-						);
-
-						assert.equal(wrapper.find('tr.lucid-Table-thead-row').length, 1);
-					});
-				});
-
 				describe('isDisabled', () => {
 					it('should apply the class name `lucid-Table-is-disabled`', () => {
 						const wrapper = shallow(
@@ -147,13 +124,13 @@ describe('Table', () => {
 					});
 				});
 
-				describe('hasDetails', () => {
-					it('should apply the class name `lucid-Table-has-details`', () => {
+				describe('isActionable', () => {
+					it('should apply the class name `lucid-Table-is-actionable`', () => {
 						const wrapper = shallow(
-							<Tr hasDetails />
+							<Tr isActionable />
 						);
 
-						assert.equal(wrapper.find('tr.lucid-Table-has-details').length, 1);
+						assert.equal(wrapper.find('tr.lucid-Table-is-actionable').length, 1);
 					});
 				});
 			});
@@ -166,7 +143,7 @@ describe('Table', () => {
 						<Th />
 					);
 
-					assert.equal(wrapper.find('th.lucid-Table-cell').length, 1);
+					assert.equal(wrapper.find('th.lucid-Table-Th').length, 1);
 				});
 
 			});
@@ -195,36 +172,6 @@ describe('Table', () => {
 						);
 
 						assert.equal(wrapper.find('th.lucid-Table-align-right').length, 1);
-					});
-				});
-
-				describe('hasCheckbox', () => {
-					it('should apply the class name `lucid-Table-has-checkbox`', () => {
-						const wrapper = shallow(
-							<Th hasCheckbox />
-						);
-
-						assert.equal(wrapper.find('th.lucid-Table-has-checkbox').length, 1);
-					});
-				});
-
-				describe('hasIcon', () => {
-					it('should apply the class name `lucid-Table-has-icon`', () => {
-						const wrapper = shallow(
-							<Th hasIcon />
-						);
-
-						assert.equal(wrapper.find('th.lucid-Table-has-icon').length, 1);
-					});
-				});
-
-				describe('hasButton', () => {
-					it('should apply the class name `lucid-Table-has-button`', () => {
-						const wrapper = shallow(
-							<Th hasButton />
-						);
-
-						assert.equal(wrapper.find('th.lucid-Table-has-button').length, 1);
 					});
 				});
 
@@ -271,16 +218,12 @@ describe('Table', () => {
 						assert.equal(wrapper.find('th.lucid-Table-is-resizable').length, 1);
 					});
 
-					it('should render a container for resizable header content', () => {
+					it('should render a DragCaptureZone for resizable header content', () => {
 						const wrapper = shallow(
 							<Th isResizable>foo</Th>
 						);
-						const containerWrapper = wrapper.find('div.lucid-Table-is-resizable-container');
-
-						assert.equal(containerWrapper.length, 1, 'must have a container');
-						assert.equal(containerWrapper.find('div.lucid-Table-is-resizable-content').length, 1, 'container must have content');
-						assert.equal(containerWrapper.find('div.lucid-Table-is-resizable-content').text(), 'foo', 'content must match children');
-						assert.equal(containerWrapper.find(DragCaptureZone).length, 1, 'container must have a drag capture zone');
+						assert.equal(wrapper.find(DragCaptureZone).length, 1, 'must render a DragCaptureZone component');
+						assert(wrapper.find(DragCaptureZone).hasClass('lucid-Table-Th-inner-resize'), 'must have className `lucid-Table-Th-inner-resize`');
 					});
 				});
 
@@ -297,25 +240,23 @@ describe('Table', () => {
 						const wrapper = shallow(
 							<Th isSorted>foo</Th>
 						);
-						const containerWrapper = wrapper.find('ul.lucid-Table-is-sorted-container');
+						const containerWrapper = wrapper.find('.lucid-Table-Th-inner-caret');
 
 						assert.equal(containerWrapper.length, 1, 'must have a container');
-						assert.equal(containerWrapper.find('li.lucid-Table-is-sorted-title').length, 1, 'container must have a title');
-						assert.equal(containerWrapper.find('li.lucid-Table-is-sorted-title').text(), 'foo', 'title content must match children');
-						assert.equal(containerWrapper.find('li.lucid-Table-is-sorted-caret').length, 1, 'container must have a caret');
-						assert.equal(containerWrapper.find('li.lucid-Table-is-sorted-caret').find(CaretIcon).length, 1, 'CaretIcon must be rendered');
-						assert(containerWrapper.find('li.lucid-Table-is-sorted-caret').find(CaretIcon).hasClass('lucid-Table-sort-icon'), 'CaretIcon must have correct className');
+						assert.equal(containerWrapper.find(CaretIcon).length, 1, 'must render a CaretIcon');
+						assert(containerWrapper.find(CaretIcon).hasClass('lucid-Table-sort-icon'), 'must have className `lucid-Table-sort-icon`');
 					});
 				});
 
 				describe('sortDirection', () => {
 					it('should pass thru to the CaretIcon when `isSorted` is also true', () => {
 						const wrapper = shallow(
-							<Th isSorted sortDirection='up' />
+							<Th isSorted sortDirection='down' />
 						);
+						const containerWrapper = wrapper.find('.lucid-Table-Th-inner-caret');
+						console.log(containerWrapper.debug());
 
-						const containerWrapper = wrapper.find('ul.lucid-Table-is-sorted-container');
-						assert(containerWrapper.find('li.lucid-Table-is-sorted-caret').find(CaretIcon).shallow().hasClass('lucid-CaretIcon-is-up'), 'CaretIcon direction must match prop');
+						assert.equal(containerWrapper.find(CaretIcon).prop('direction'), 'down', 'CaretIcon direction must match prop value');
 					});
 				});
 			});
@@ -328,7 +269,7 @@ describe('Table', () => {
 						<Td />
 					);
 
-					assert.equal(wrapper.find('td.lucid-Table-cell').length, 1);
+					assert.equal(wrapper.find('td.lucid-Table-Td').length, 1);
 				});
 
 			});
@@ -360,36 +301,6 @@ describe('Table', () => {
 					});
 				});
 
-				describe('hasCheckbox', () => {
-					it('should apply the class name `lucid-Table-has-checkbox`', () => {
-						const wrapper = shallow(
-							<Td hasCheckbox />
-						);
-
-						assert.equal(wrapper.find('td.lucid-Table-has-checkbox').length, 1);
-					});
-				});
-
-				describe('hasIcon', () => {
-					it('should apply the class name `lucid-Table-has-icon`', () => {
-						const wrapper = shallow(
-							<Td hasIcon />
-						);
-
-						assert.equal(wrapper.find('td.lucid-Table-has-icon').length, 1);
-					});
-				});
-
-				describe('hasButton', () => {
-					it('should apply the class name `lucid-Table-has-button`', () => {
-						const wrapper = shallow(
-							<Td hasButton />
-						);
-
-						assert.equal(wrapper.find('td.lucid-Table-has-button').length, 1);
-					});
-				});
-
 				describe('hasBorderRight', () => {
 					it('should apply the class name `lucid-Table-has-border-right`', () => {
 						const wrapper = shallow(
@@ -407,16 +318,6 @@ describe('Table', () => {
 						);
 
 						assert.equal(wrapper.find('td.lucid-Table-has-border-left').length, 1);
-					});
-				});
-
-				describe('isAfterRowSpan', () => {
-					it('should apply the class name `lucid-Table-is-after-rowspan`', () => {
-						const wrapper = shallow(
-							<Td isAfterRowSpan />
-						);
-
-						assert.equal(wrapper.find('td.lucid-Table-is-after-rowspan').length, 1);
 					});
 				});
 			});
