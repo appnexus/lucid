@@ -40,9 +40,13 @@ const ContextMenu = createClass({
 		 */
 		style: object,
 		/**
-		 * alignment of the FlyOut relative to Target. Defaults to `'down'`.
+		 * direction of the FlyOut relative to Target. Defaults to `'down'`.
 		 */
 		direction: oneOf(['down', 'up', 'right', 'left']),
+		/**
+		 * alignment of the Flyout relative to Target. Defaults to `'start'`
+		 */
+		alignment: oneOf(['start', 'center', 'end']),
 		/**
 		 * Indicates whether the FlyOut will render or not. Defaults to `true`.
 		 */
@@ -73,7 +77,8 @@ const ContextMenu = createClass({
 
 	getDefaultProps() {
 		return {
-			direction: 'down',
+			direction: ContextMenu.DOWN,
+			alignment: ContextMenu.START,
 			isExpanded: true,
 			onClickOut: null,
 			portalId: null
@@ -126,6 +131,10 @@ const ContextMenu = createClass({
 
 	statics: {
 		DOWN: 'down',
+		END: 'end',
+		LEFT: 'left',
+		RIGHT: 'right',
+		START: 'start',
 		UP: 'up',
 	},
 
@@ -143,7 +152,14 @@ const ContextMenu = createClass({
 		}
 
 		const targetRect = getAbsoluteBoundingClientRect(target);
-		const flyOutEl = this.refs.flyOutPortal.portalElement.firstChild;
+
+		if (!flyOutPortal) {
+			return this.setState({
+				targetRect
+			});
+		}
+
+		const flyOutEl = flyOutPortal.portalElement.firstChild;
 
 		this.setState({
 			targetRect,
@@ -151,47 +167,76 @@ const ContextMenu = createClass({
 		});
 	},
 
-	getFlyoutPosition(direction, targetRect, flyOutHeight/*, alignment */) {
+	getFlyoutPosition(direction, alignment, position, targetRect, flyOutHeight) {
 
-		if (direction === ContextMenu.UP) {
-			return {
-				top: targetRect.top - flyOutHeight,
-				left: targetRect.left,
-			};
+		const {
+			DOWN,
+			END,
+			LEFT,
+			RIGHT,
+			START,
+			UP,
+		} = ContextMenu;
+
+		const {
+			bottom,
+			left,
+			right,
+			top,
+			width,
+			height,
+		} = targetRect;
+
+		const {
+			clientWidth,
+		} = document.body;
+
+		const matcher = _.matches({ direction, alignment });
+
+		if (matcher({ direction: UP, alignment: START })) {
+			return { top: top - flyOutHeight, left };
 		}
-		if (direction === ContextMenu.DOWN) {
-			return {
-				top: targetRect.bottom,
-				left: targetRect.left,
-			};
+		if (matcher({ direction: UP, alignment: END })) {
+			return { top: top - flyOutHeight, right: clientWidth - right };
 		}
-		if (direction === ContextMenu.RIGHT) {
-			return {
-				top: targetRect.top,
-				left: targetRect.left + targetRect.width,
-			};
+		if (matcher({ direction: DOWN, alignment: START })) {
+			return { top: bottom, left };
 		}
-		return {
-			top: targetRect.top,
-			right: window.innerWidth - targetRect.left,
-		};
+		if (matcher({ direction: DOWN, alignment: END })) {
+			return { top: bottom, right: clientWidth - right };
+		}
+		if (matcher({ direction: LEFT, alignment: START })) {
+			return { top, right: clientWidth - left };
+		}
+		if (matcher({ direction: LEFT, alignment: END })) {
+			return { top: top - flyOutHeight + height, right: clientWidth - left };
+		}
+		if (matcher({ direction: RIGHT, alignment: START })) {
+			return { top, left: left + width };
+		}
+		if (matcher({ direction: RIGHT, alignment: END })) {
+			return { top: top - flyOutHeight + height, left: left + width };
+		}
 
 	},
 
 	render() {
 		const {
-			className,
-			style,
-			isExpanded,
-			direction,
-			...passThroughs
-		} = this.props;
-
-		const {
-			portalId,
-			targetRect,
-			flyOutHeight
-		} = this.state;
+			props: {
+				className,
+				style,
+				isExpanded,
+				direction,
+				alignment,
+				position,
+				...passThroughs
+			},
+			state: {
+				portalId,
+				targetRect,
+				flyOutHeight
+			}
+		} = this;
 
 		const targetElement = _.first(findTypes(this.props, ContextMenu.Target));
 		const targetChildren = _.get(targetElement, 'props.children', null);
@@ -214,7 +259,7 @@ const ContextMenu = createClass({
 						style={_.assign({}, flyProps.style, {
 							position: 'absolute',
 							minWidth: targetRect.width,
-						}, this.getFlyoutPosition(direction, targetRect, flyOutHeight))}
+						}, this.getFlyoutPosition(direction, alignment, position, targetRect, flyOutHeight))}
 					>
 						{flyProps.children}
 					</Portal>

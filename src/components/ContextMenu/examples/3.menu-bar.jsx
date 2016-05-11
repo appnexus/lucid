@@ -51,7 +51,7 @@ export default React.createClass({
 			editDirection
 		} = this.state;
 		return (
-			<section style={{ height: 300 }}>
+			<section>
 
 				<ContextMenu
 					portalId='FileMenu-example'
