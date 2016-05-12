@@ -17,7 +17,7 @@ const WarningIcon = React.createClass({
 
 	getDefaultProps() {
 		return {
-			viewBox: '0 0 18 18',
+			viewBox: '-22.5 0.5 16 16',
 		};
 	},
 
@@ -32,9 +32,9 @@ const WarningIcon = React.createClass({
 				{...passThroughs}
 				className={boundClassNames('&', className)}
 			>
-				<path className={boundClassNames('&-triangle')} d='M9,1C8.2,1,7.4,1.6,7.1,2.3C5.9,4.3,1,12.9,0.5,13.7C-0.6,15.5,0.3,17,2.4,17h13.2 c2.1,0,3-1.5,1.9-3.3C14.9,9.2,13.7,6.9,11,2.3C10.6,1.5,9.9,1,9,1L9,1z'/>
-				<rect x='8.1' y='5.4' fill='#ffffff' width='1.8' height='6.3'/>
-				<rect x='8.1' y='12.6' fill='#ffffff' width='1.8' height='1.8'/>
+				<path className={boundClassNames('&-triangle')} d='M-14.489,0.5c-0.632,0-1.264,0.457-1.743,1.369c-1.026,1.952-5.404,10.463-5.849,11.312  c-0.959,1.822-0.191,3.318,1.705,3.318c1.062,0,8.613,0,11.753,0c1.896,0,2.664-1.493,1.707-3.318  c-2.375-4.525-3.457-6.789-5.829-11.312C-13.227,0.958-13.859,0.5-14.489,0.5L-14.489,0.5z'/>
+				<rect x='-15.5' y='4.5' fill='#ffffff' width='2' height='7'/>
+				<rect x='-15.5' y='12.5' fill='#ffffff' width='2' height='2'/>
 			</Icon>
 		);
 	}
