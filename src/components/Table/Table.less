@@ -1,15 +1,5 @@
-@Table-row-height: @size-standard-height - 2;
-@Table-row-heightLarge: @Table-row-height + @size-standard;
-@Table-cell-padding: @size-S;
-@Table-cell-border-color: #e3e3e3;
-@Table-header-backgroundColor: #767b7f;
-@Table-header-colorLight: #525659;
-@Table-header-colorDark: #393d40;
-@Table-header-border: 1px solid @Table-header-colorDark;
-@Table-header-cell-border: 1px solid #babdbe;
-
-@Table-hover-borderWidth: 4px;
-@Table-has-checkbox-width: 41px;
+@Table-cell-padding-extended: 8px 9.4px;
+@Table-cell-padding-compressed: 2.5px 9.4px;;
 
 .lucid-Table {
 	font: 500 @font;
@@ -27,13 +17,13 @@
 // `Table`.`density` prop
 	&-density-extended {
 		& > .lucid-Table-Tbody > .lucid-Table-Tr > .lucid-Table-Td {
-			padding: 8px 9.4px;
+			padding: @Table-cell-padding-extended;
 		}
 	}
 
 	&-density-compressed {
 		& > .lucid-Table-Tbody > .lucid-Table-Tr > .lucid-Table-Td {
-			padding: 2.5px 9.4px;
+			padding: @Table-cell-padding-compressed;
 		}
 	}
 
@@ -50,13 +40,13 @@
 
 	// Table header styles
 	& > &-Thead {
-		background-color: @Table-header-backgroundColor;
+		background-color: @color-table-header;
 		color: @color-white;
 
 		// Table header cell styles
 		& > .lucid-Table-Tr > .lucid-Table-Th {
-			border: @Table-header-cell-border;
-			height: 27px; // effectively min height
+			border: @border-table-header;
+			height: @size-standard-height; // effectively min height
 
 			// remove all borders from the perimeter of the header
 			&.lucid-Table-is-first-row {
@@ -76,7 +66,7 @@
 				cursor: pointer;
 
 				&:hover {
-					background-color: @Table-header-colorLight;
+					background-color: @color-table-header-sorted;
 				}
 			}
 
@@ -111,7 +101,7 @@
 					width: 4px;
 					background-color: fade(@color-black, 70%);
 					opacity: 0;
-					transition: opacity 200ms;
+					transition: opacity 100ms;
 					&:hover {
 						opacity: 1;
 					}
@@ -217,7 +207,7 @@
 
 		// Table body cell styles
 		& > .lucid-Table-Tr > .lucid-Table-Td {
-			border-bottom: 1px solid @Table-cell-border-color;
+			border-bottom: @border-table-body;
 
 			// remove all borders from the perimeter of the body
 			&.lucid-Table-is-first-row {
@@ -235,12 +225,12 @@
 
 // `Td`.`hasBorderRight` prop
 			&.lucid-Table-has-border-right {
-				border-right: 1px solid @Table-cell-border-color;
+				border-right: @border-table-body;
 			}
 
 // `Td`.`hasBorderLeft` prop
 			&.lucid-Table-has-border-left {
-				border-left: 1px solid @Table-cell-border-color;
+				border-left: @border-table-body;
 			}
 		}
 	}
@@ -291,9 +281,8 @@
 		width: @width;
 		background-color: @color-primary;
 		content: '';
-		//opacity: @scale;
 		transform-origin: 0 0;
 		transform: scaleX(@scale);
-		transition: opacity 200ms, transform 200ms;
+		transition: transform 100ms;
 	}
 }

@@ -59,7 +59,7 @@ const ScrollTable = createClass({
 	getDefaultProps() {
 		return {
 			hasWordWrap: false,
-			hasBorder: true,
+			hasBorder: false,
 		};
 	},
 
@@ -87,7 +87,6 @@ const ScrollTable = createClass({
 						width: tableWidth,
 					}}
 					hasWordWrap={hasWordWrap}
-					hasBorder={false}
 				>
 					{children}
 				</Table>

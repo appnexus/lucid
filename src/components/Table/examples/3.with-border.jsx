@@ -12,7 +12,7 @@ const {
 export default React.createClass({
 	render() {
 		return(
-			<Table hasBorder={false}>
+			<Table hasBorder>
 				<Thead>
 					<Tr>
 						<Th rowSpan={2}>

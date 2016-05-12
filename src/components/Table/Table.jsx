@@ -497,7 +497,7 @@ const Table = createClass({
 	getDefaultProps() {
 		return {
 			density: 'extended',
-			hasBorder: true,
+			hasBorder: false,
 			hasWordWrap: true,
 		};
 	},
@@ -530,7 +530,7 @@ const Table = createClass({
  *
  * Returns a 2 dimensional array of cell elements of the given component type. The map function can modify value of a cell.
  */
-const mapToGrid = function mapToGrid(trList, cellType='td', mapFn=_.property('element')) {
+function mapToGrid(trList, cellType='td', mapFn=_.property('element')) {
 	const cellRowList = _.map(trList, (trElement) => _.map(filterTypes(trElement.props.children, cellType)));
 	const grid = [];
 
@@ -549,6 +549,7 @@ const mapToGrid = function mapToGrid(trList, cellType='td', mapFn=_.property('el
 
 		const canonicalRow = rowIndex;
 
+		// build out each horizonal duplicates of each cell
 		for (let cellElementIndex=0; cellElementIndex<cellRow.length; cellElementIndex++) {
 			const cellElement = cellRow[cellElementIndex];
 
@@ -575,6 +576,7 @@ const mapToGrid = function mapToGrid(trList, cellType='td', mapFn=_.property('el
 			}
 		}
 
+		// build out each vertial duplicates of each cell using the new row in the full grid
 		for (let colIndex=0; colIndex<grid[canonicalRow].length; colIndex++) {
 			const gridCell = grid[canonicalRow][colIndex];
 			if (gridCell.isOriginal) {
@@ -596,6 +598,7 @@ const mapToGrid = function mapToGrid(trList, cellType='td', mapFn=_.property('el
 		}
 	}
 
+	// map new values to each cell in the final grid
 	const finalGrid = [];
 	for (let rowIndex=0; rowIndex<grid.length; rowIndex++) {
 		finalGrid[rowIndex] = [];
@@ -612,7 +615,7 @@ const mapToGrid = function mapToGrid(trList, cellType='td', mapFn=_.property('el
  *
  * Returns an equivalent list of Tr's where each cell on the perimeter has props set for: `isFirstRow`, `isLastRow`, `isFirstCol`, `isLastCol`, and `isFirstSingle`
  */
-const renderRowsWithIdentifiedEdges = function renderRowsWithIdentifiedEdges(trList, cellType) {
+function renderRowsWithIdentifiedEdges(trList, cellType) {
 	const duplicateReferences = [];
 	const fullCellGrid = mapToGrid(trList, cellType, ({ element: { props }, isOriginal, canonicalPosition }, currentPos, grid) => {
 		if (!isOriginal) { // if cell spans multiple positions
@@ -633,6 +636,7 @@ const renderRowsWithIdentifiedEdges = function renderRowsWithIdentifiedEdges(trL
 	const lastColIndex = _.first(fullCellGrid).length - 1;
 	const firstSingleLookup = new Map();
 
+	// decorate the props of each cell with props that indicate its role in the table
 	_.forEach(fullCellGrid, (cellList, rowIndex) => _.forEach(cellList, (cellProps, colIndex) => {
 		if (!_.isNull(cellProps)) {
 			if (rowIndex === firstRowIndex) {
@@ -662,6 +666,7 @@ const renderRowsWithIdentifiedEdges = function renderRowsWithIdentifiedEdges(trL
 		fullCellGrid[row][col] = null; // remove duplicate references from grid
 	});
 
+	// render the grid back to elements using the updated cell props
 	return _.map(trList, (trElement, rowIndex) => (
 		<Tr {...trElement.props} key={rowIndex}>
 			{_.reduce(fullCellGrid[rowIndex], (rowChildren, cellProps, colIndex) => rowChildren.concat(!_.isNull(cellProps) ? [React.createElement(cellType, _.assign({}, cellProps, {key: colIndex}))] : []), [])}

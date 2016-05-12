@@ -254,7 +254,6 @@ describe('Table', () => {
 							<Th isSorted sortDirection='down' />
 						);
 						const containerWrapper = wrapper.find('.lucid-Table-Th-inner-caret');
-						console.log(containerWrapper.debug());
 
 						assert.equal(containerWrapper.find(CaretIcon).prop('direction'), 'down', 'CaretIcon direction must match prop value');
 					});
