@@ -16,12 +16,6 @@ const TableConfigIcon = React.createClass({
 		...Icon.propTypes,
 	},
 
-	getDefaultProps() {
-		return {
-			viewBox: '0 0 16 16',
-		};
-	},
-
 	render() {
 		const {
 			className,

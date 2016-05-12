@@ -30,9 +30,7 @@ const ChevronIcon = React.createClass({
 
 	getDefaultProps() {
 		return {
-			direction: 'down',
-			viewBox: '0 0 16 16',
-			size: 16
+			direction: 'down'
 		};
 	},
 
