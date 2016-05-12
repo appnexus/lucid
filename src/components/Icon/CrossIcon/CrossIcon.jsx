@@ -15,12 +15,6 @@ const CrossIcon = React.createClass({
 		...Icon.propTypes,
 	},
 
-	getDefaultProps() {
-		return {
-			viewBox: '0 0 18 18',
-		}
-	},
-
 	render() {
 		const {
 			className,
@@ -32,7 +26,7 @@ const CrossIcon = React.createClass({
 				{...passThroughs}
 				className={boundClassNames('&', className)}
 			>
-				<path d='M8,9.25L5.25,6.48,6.53,5.16l2.8,2.78L12.1,5.16l1.32,1.31L10.63,9.25,13.42,12,12.1,13.34,9.32,10.56,6.53,13.34,5.21,12Z' />
+				<path d='M6.837,7.999 L4.388,5.536 L5.558,4.365 L8.007,6.83 L10.472,4.365 L11.642,5.536 L9.163,7.999 L11.642,10.464 L10.475,11.634 L8.008,9.155 L5.528,11.635 L4.358,10.464 L6.837,7.999 z'/>
 			</Icon>
 		);
 	}

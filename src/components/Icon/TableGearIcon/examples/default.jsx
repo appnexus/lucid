@@ -1,11 +1,11 @@
 import React from 'react';
-import InfoIcon from '../InfoIcon';
+import TableGearIcon from '../TableGearIcon';
 
 export default React.createClass({
 	render() {
 		return (
 			<div>
-				<InfoIcon />
+				<TableGearIcon />
 			</div>
 		);
 	}

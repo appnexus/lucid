@@ -25,9 +25,10 @@ const InfoIcon = React.createClass({
 			<Icon
 				{...passThroughs}
 				className={boundClassNames('&', className)}
+				isBadge
 			>
-				<path d='M6.739,6.11h2.521v7.562H6.739V6.11z' />
-				<path d='M6.739,2.328h2.521v2.521H6.739V2.328z' />
+				<rect x='7' y='3' width='2' height='2'/>
+				<rect x='7' y='6' width='2' height='7'/>
 			</Icon>
 		);
 	}
