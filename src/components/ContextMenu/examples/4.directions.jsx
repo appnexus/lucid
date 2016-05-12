@@ -14,7 +14,7 @@ export default React.createClass({
 		return (
 			<section>
 
-				{_.map(['up', 'left', 'right', 'down'], direction => _.map(['start', 'end'], alignment => {
+				{_.map(['up', 'left', 'right', 'down'], direction => _.map(['start', 'center', 'end'], alignment => {
 					return (
 						<div style={{marginTop: '60px'}}>
 							<ContextMenu

@@ -18,6 +18,16 @@ const {
 	}
 } = React;
 
+const CONSTANTS = {
+	CENTER: 'center',
+	DOWN: 'down',
+	END: 'end',
+	LEFT: 'left',
+	RIGHT: 'right',
+	START: 'start',
+	UP: 'up',
+};
+
 /**
  *
  * {"categories": ["utility"], "madeFrom": ["Portal"]}
@@ -77,8 +87,8 @@ const ContextMenu = createClass({
 
 	getDefaultProps() {
 		return {
-			direction: ContextMenu.DOWN,
-			alignment: ContextMenu.START,
+			direction: CONSTANTS.DOWN,
+			alignment: CONSTANTS.START,
 			isExpanded: true,
 			onClickOut: null,
 			portalId: null
@@ -99,7 +109,8 @@ const ContextMenu = createClass({
 				height: 0,
 				width: 0
 			},
-			flyOutHeight: 0
+			flyOutHeight: 0,
+			flyOutWidth: 0,
 		};
 	},
 
@@ -129,14 +140,7 @@ const ContextMenu = createClass({
 		this.alignFlyOut();
 	},
 
-	statics: {
-		DOWN: 'down',
-		END: 'end',
-		LEFT: 'left',
-		RIGHT: 'right',
-		START: 'start',
-		UP: 'up',
-	},
+	statics: CONSTANTS,
 
 	alignFlyOut() {
 
@@ -160,16 +164,21 @@ const ContextMenu = createClass({
 		}
 
 		const flyOutEl = flyOutPortal.portalElement.firstChild;
-
+		const {
+			height,
+			width,
+		} = flyOutEl.getBoundingClientRect();
 		this.setState({
 			targetRect,
-			flyOutHeight: flyOutEl.getBoundingClientRect().height
+			flyOutHeight: height,
+			flyOutWidth: width
 		});
 	},
 
-	getFlyoutPosition(direction, alignment, position, targetRect, flyOutHeight) {
+	getFlyoutPosition(direction, alignment, position, targetRect, flyOutHeight, flyOutWidth) {
 
 		const {
+			CENTER,
 			DOWN,
 			END,
 			LEFT,
@@ -199,11 +208,17 @@ const ContextMenu = createClass({
 		if (matcher({ direction: UP, alignment: END })) {
 			return { top: top - flyOutHeight, right: clientWidth - right };
 		}
+		if (matcher({ direction: UP, alignment: CENTER })) {
+			return { top: top - flyOutHeight, left: left + (width / 2) - (flyOutWidth / 2) };
+		}
 		if (matcher({ direction: DOWN, alignment: START })) {
 			return { top: bottom, left };
 		}
 		if (matcher({ direction: DOWN, alignment: END })) {
 			return { top: bottom, right: clientWidth - right };
+		}
+		if (matcher({ direction: DOWN, alignment: CENTER })) {
+			return { top: bottom, left: left + (width / 2) - (flyOutWidth / 2) };
 		}
 		if (matcher({ direction: LEFT, alignment: START })) {
 			return { top, right: clientWidth - left };
@@ -211,11 +226,17 @@ const ContextMenu = createClass({
 		if (matcher({ direction: LEFT, alignment: END })) {
 			return { top: top - flyOutHeight + height, right: clientWidth - left };
 		}
+		if (matcher({ direction: LEFT, alignment: CENTER })) {
+			return { top: top - (flyOutHeight / 2) + (height / 2), right: clientWidth - left };
+		}
 		if (matcher({ direction: RIGHT, alignment: START })) {
 			return { top, left: left + width };
 		}
 		if (matcher({ direction: RIGHT, alignment: END })) {
 			return { top: top - flyOutHeight + height, left: left + width };
+		}
+		if (matcher({ direction: RIGHT, alignment: CENTER })) {
+			return { top: top - (flyOutHeight / 2) + (height / 2), left: left + width };
 		}
 
 	},
@@ -234,7 +255,8 @@ const ContextMenu = createClass({
 			state: {
 				portalId,
 				targetRect,
-				flyOutHeight
+				flyOutHeight,
+				flyOutWidth
 			}
 		} = this;
 
@@ -259,7 +281,7 @@ const ContextMenu = createClass({
 						style={_.assign({}, flyProps.style, {
 							position: 'absolute',
 							minWidth: targetRect.width,
-						}, this.getFlyoutPosition(direction, alignment, position, targetRect, flyOutHeight))}
+						}, this.getFlyoutPosition(direction, alignment, position, targetRect, flyOutHeight, flyOutWidth))}
 					>
 						{flyProps.children}
 					</Portal>
