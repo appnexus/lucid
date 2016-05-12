@@ -17,7 +17,7 @@ const InfoIcon = React.createClass({
 
 	getDefaultProps() {
 		return {
-			viewBox: '-23.5 0.5 16 16',
+			viewBox: '0 0 16 16',
 		};
 	},
 
@@ -33,8 +33,8 @@ const InfoIcon = React.createClass({
 				className={boundClassNames('&', className)}
 				isBadge
 			>
-				<rect x='-16.5' y='3.5' width='2' height='2'/>
-				<rect x='-16.5' y='6.5' width='2' height='7'/>
+				<rect x='7' y='3' width='2' height='2'/>
+				<rect x='7' y='6' width='2' height='7'/>
 			</Icon>
 		);
 	}
