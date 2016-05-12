@@ -149,19 +149,22 @@ const ContextMenu = React.createClass(createLucidComponentDefinition({
 	},
 
 	alignFlyOut(targetDOMNode) {
-		let flyOutHeight = this.state.flyOutHeight;
-		if (this.refs.flyOutPortal) {
-			const flyOutEl = this.refs.flyOutPortal.portalElement.firstChild;
-			flyOutHeight = flyOutEl.getBoundingClientRect().height;
 
-			if (this.props.onChangeBounds) {
-				const isFlyoutBelowFold = ContextMenu.isElementBelowFold(flyOutEl, targetDOMNode.getBoundingClientRect().bottom);
-				if (this.state.isFlyoutBelowFold !== isFlyoutBelowFold) {
-					this.setState({
-						isFlyoutBelowFold
-					});
-					this.props.onChangeBounds(isFlyoutBelowFold ? ContextMenu.BELOW_FOLD : ContextMenu.ABOVE_FOLD);
-				}
+		if (!this.refs.flyOutPortal || !targetDOMNode) {
+			return;
+		}
+
+		let flyOutHeight = this.state.flyOutHeight;
+		const flyOutEl = this.refs.flyOutPortal.portalElement.firstChild;
+		flyOutHeight = flyOutEl.getBoundingClientRect().height;
+
+		if (this.props.onChangeBounds) {
+			const isFlyoutBelowFold = ContextMenu.isElementBelowFold(flyOutEl, targetDOMNode.getBoundingClientRect().bottom);
+			if (this.state.isFlyoutBelowFold !== isFlyoutBelowFold) {
+				this.setState({
+					isFlyoutBelowFold
+				});
+				this.props.onChangeBounds(isFlyoutBelowFold ? ContextMenu.BELOW_FOLD : ContextMenu.ABOVE_FOLD);
 			}
 		}
 
