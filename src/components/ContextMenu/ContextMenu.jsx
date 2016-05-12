@@ -12,21 +12,12 @@ const {
 		bool,
 		node,
 		func,
+		number,
 		object,
 		oneOf,
 		string
 	}
 } = React;
-
-const CONSTANTS = {
-	CENTER: 'center',
-	DOWN: 'down',
-	END: 'end',
-	LEFT: 'left',
-	RIGHT: 'right',
-	START: 'start',
-	UP: 'up',
-};
 
 /**
  *
@@ -54,9 +45,17 @@ const ContextMenu = createClass({
 		 */
 		direction: oneOf(['down', 'up', 'right', 'left']),
 		/**
-		 * alignment of the Flyout relative to Target. Defaults to `'start'`
+		 * the px offset along the axis of the direction
+		 */
+		directonOffset: number,
+		/**
+		 * alignment of the Flyout relative to Target in the cross axis from `direction` Defaults to `'start'`
 		 */
 		alignment: oneOf(['start', 'center', 'end']),
+		/**
+		 * the px offset along the axis of the alignment
+		 */
+		alignmentOffset: number,
 		/**
 		 * Indicates whether the FlyOut will render or not. Defaults to `true`.
 		 */
@@ -87,8 +86,10 @@ const ContextMenu = createClass({
 
 	getDefaultProps() {
 		return {
-			direction: CONSTANTS.DOWN,
-			alignment: CONSTANTS.START,
+			direction: 'down',
+			directonOffset: 0,
+			alignment: 'start',
+			alignmentOffset: 0,
 			isExpanded: true,
 			onClickOut: null,
 			portalId: null
@@ -140,7 +141,15 @@ const ContextMenu = createClass({
 		this.alignFlyOut();
 	},
 
-	statics: CONSTANTS,
+	statics: {
+		CENTER: 'center',
+		DOWN: 'down',
+		END: 'end',
+		LEFT: 'left',
+		RIGHT: 'right',
+		START: 'start',
+		UP: 'up',
+	},
 
 	alignFlyOut() {
 
@@ -175,7 +184,7 @@ const ContextMenu = createClass({
 		});
 	},
 
-	getFlyoutPosition(direction, alignment, position, targetRect, flyOutHeight, flyOutWidth) {
+	getFlyoutPosition(direction, alignment, position, targetRect, flyOutHeight, flyOutWidth, directonOffset, alignmentOffset) {
 
 		const {
 			CENTER,
@@ -203,40 +212,76 @@ const ContextMenu = createClass({
 		const matcher = _.matches({ direction, alignment });
 
 		if (matcher({ direction: UP, alignment: START })) {
-			return { top: top - flyOutHeight, left };
+			return {
+				top: top - flyOutHeight - directonOffset,
+				left: left - alignmentOffset
+			};
 		}
 		if (matcher({ direction: UP, alignment: END })) {
-			return { top: top - flyOutHeight, right: clientWidth - right };
+			return {
+				top: top - flyOutHeight - directonOffset,
+				right: clientWidth - right - alignmentOffset
+			};
 		}
 		if (matcher({ direction: UP, alignment: CENTER })) {
-			return { top: top - flyOutHeight, left: left + (width / 2) - (flyOutWidth / 2) };
+			return {
+				top: top - flyOutHeight - directonOffset,
+				left: left + (width / 2) - (flyOutWidth / 2)
+			};
 		}
 		if (matcher({ direction: DOWN, alignment: START })) {
-			return { top: bottom, left };
+			return {
+				top: bottom - directonOffset,
+				left: left - alignmentOffset
+			};
 		}
 		if (matcher({ direction: DOWN, alignment: END })) {
-			return { top: bottom, right: clientWidth - right };
+			return {
+				top: bottom - directonOffset,
+				right: clientWidth - right - alignmentOffset
+			};
 		}
 		if (matcher({ direction: DOWN, alignment: CENTER })) {
-			return { top: bottom, left: left + (width / 2) - (flyOutWidth / 2) };
+			return {
+				top: bottom - directonOffset,
+				left: left + (width / 2) - (flyOutWidth / 2)
+			};
 		}
 		if (matcher({ direction: LEFT, alignment: START })) {
-			return { top, right: clientWidth - left };
+			return {
+				top: top - alignmentOffset,
+				right: clientWidth - left + directonOffset
+			};
 		}
 		if (matcher({ direction: LEFT, alignment: END })) {
-			return { top: top - flyOutHeight + height, right: clientWidth - left };
+			return {
+				top: top - flyOutHeight + height + alignmentOffset,
+				right: clientWidth - left + directonOffset
+			};
 		}
 		if (matcher({ direction: LEFT, alignment: CENTER })) {
-			return { top: top - (flyOutHeight / 2) + (height / 2), right: clientWidth - left };
+			return {
+				top: top - (flyOutHeight / 2) + (height / 2),
+				right: clientWidth - left + directonOffset
+			};
 		}
 		if (matcher({ direction: RIGHT, alignment: START })) {
-			return { top, left: left + width };
+			return {
+				top: top - alignmentOffset,
+				left: left + width + directonOffset
+			};
 		}
 		if (matcher({ direction: RIGHT, alignment: END })) {
-			return { top: top - flyOutHeight + height, left: left + width };
+			return {
+				top: top - flyOutHeight + height + alignmentOffset,
+				left: left + width + directonOffset
+			};
 		}
 		if (matcher({ direction: RIGHT, alignment: CENTER })) {
-			return { top: top - (flyOutHeight / 2) + (height / 2), left: left + width };
+			return {
+				top: top - (flyOutHeight / 2) + (height / 2),
+				left: left + width + directonOffset
+			};
 		}
 
 	},
@@ -244,12 +289,14 @@ const ContextMenu = createClass({
 	render() {
 		const {
 			props: {
-				className,
-				style,
-				isExpanded,
-				direction,
 				alignment,
+				alignmentOffset,
+				className,
+				direction,
+				directonOffset,
+				isExpanded,
 				position,
+				style,
 				...passThroughs
 			},
 			state: {
@@ -281,7 +328,7 @@ const ContextMenu = createClass({
 						style={_.assign({}, flyProps.style, {
 							position: 'absolute',
 							minWidth: targetRect.width,
-						}, this.getFlyoutPosition(direction, alignment, position, targetRect, flyOutHeight, flyOutWidth))}
+						}, this.getFlyoutPosition(direction, alignment, position, targetRect, flyOutHeight, flyOutWidth, directonOffset, alignmentOffset))}
 					>
 						{flyProps.children}
 					</Portal>

@@ -43,6 +43,7 @@ import CheckboxLabeled from './components/CheckboxLabeled/CheckboxLabeled';
 import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
 import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
 import LineChart from './components/LineChart/LineChart';
+import ToolTip from './components/ToolTip/ToolTip';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import Overlay from './components/Overlay/Overlay';
 import Panel from './components/Panel/Panel';
@@ -109,6 +110,7 @@ export {
 	RadioButtonLabeled,
 	SwitchLabeled,
 	LineChart,
+	ToolTip,
 	MinusIcon,
 	Overlay,
 	PlusIcon,
