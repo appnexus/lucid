@@ -231,19 +231,19 @@ const ContextMenu = createClass({
 		}
 		if (matcher({ direction: DOWN, alignment: START })) {
 			return {
-				top: bottom - directonOffset,
+				top: bottom + directonOffset,
 				left: left - alignmentOffset
 			};
 		}
 		if (matcher({ direction: DOWN, alignment: END })) {
 			return {
-				top: bottom - directonOffset,
+				top: bottom + directonOffset,
 				right: clientWidth - right - alignmentOffset
 			};
 		}
 		if (matcher({ direction: DOWN, alignment: CENTER })) {
 			return {
-				top: bottom - directonOffset,
+				top: bottom + directonOffset,
 				left: left + (width / 2) - (flyOutWidth / 2)
 			};
 		}
