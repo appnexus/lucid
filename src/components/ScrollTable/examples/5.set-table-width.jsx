@@ -12,7 +12,9 @@ const {
 export default React.createClass({
 	render() {
 		return(
-			<ScrollTable>
+			<ScrollTable
+				tableWidth={2000}
+			>
 				<Thead>
 					<Tr>
 						<Th rowSpan={2}>RS</Th>

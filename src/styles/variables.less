@@ -76,13 +76,19 @@
 // Normalize transparent due to Safari bug
 @color-transparent: rgba(255, 255, 255, 0);
 
+// Table colors
+@color-table-header: #767b7f;
+@color-table-header-sorted: #525659;
+
 // ---------------------------------------------
 //                  Borders
 // ---------------------------------------------
 @border-standardBorder: 1px solid @color-borderColor;
 @border-lightBorder: 1px solid @color-borderColorLight;
 
-@border-table: 1px solid @color-gray;
+@border-table: 1px solid @color-table-header;
+@border-table-header: 1px solid #babdbe;
+@border-table-body: 1px solid @color-gray;
 
 // -------------------------------------
 //             Box Shadows

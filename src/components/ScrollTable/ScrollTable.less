@@ -1,15 +1,9 @@
 .lucid-ScrollTable {
-	border: @border-table;
 	max-width: 100%;
 	overflow: auto;
 	display: inline-block;
 
-	& > .lucid-Table {
-
-		&.lucid-ScrollTable-nowrap {
-			.lucid-Table-cell {
-				white-space: nowrap;
-			}
-		}
+	&-has-border {
+		border: @border-table;
 	}
 }

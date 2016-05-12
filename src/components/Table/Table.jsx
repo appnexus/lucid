@@ -15,15 +15,15 @@ const {
 	number,
 	object,
 	string,
+	oneOf,
 } = React.PropTypes;
 
 /**
  * `Thead` renders <thead>.
- *
- * Any child `<Tr>` will have `isHeader` set to `true` unless otherwise specified.
  */
 const Thead = createClass({
 	displayName: 'Table.Thead',
+
 	propTypes: {
 		/**
 		 * Appended to the component-specific class names set on the root
@@ -35,24 +35,17 @@ const Thead = createClass({
 		 */
 		children: node,
 	},
+
 	render() {
 		const {
-			children
+			children,
+			className,
+			...passThroughs
 		} = this.props;
 
 		return (
-			<thead {...this.props} className={cx('&-thead', this.props.className)}>
-				{_.map(
-					filterTypes(children, Tr),
-					({ props }, index) => React.createElement(
-						Tr,
-						{
-							key: 'Tr-'+index,
-							isHeader: true,
-							...props
-						}
-					)
-				)}
+			<thead {...passThroughs} className={cx('&-Thead', className)}>
+				{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Th)}
 			</thead>
 		);
 	}
@@ -63,27 +56,40 @@ const Thead = createClass({
  */
 const Tbody = createClass({
 	displayName: 'Table.Tbody',
+
 	propTypes: {
 		/**
 		 * Appended to the component-specific class names set on the root
 		 * element. Value is run through the `classnames` library.
 		 */
 		className: any,
+		/**
+		 * any valid React children
+		 */
+		children: node,
 	},
+
 	render() {
+		const {
+			children,
+			className,
+			...passThroughs
+		} = this.props;
+
 		return (
-			<tbody {...this.props} className={cx('&-tbody', this.props.className)} />
+			<tbody {...passThroughs} className={cx('&-Tbody', className)}>
+				{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Td)}
+			</tbody>
 		);
 	}
 });
 
 /**
  * `Tr` renders <tr>.
- *
- * For children `<Td>`, `isAfterRowSpan` will be set to `true` on the second `<Td>` if the first `<Td>` has a `rowSpan` value greater than `1`, unless otherwise specified.
  */
 const Tr = createClass({
 	displayName: 'Table.Tr',
+
 	propTypes: {
 		/**
 		 * any valid React children
@@ -94,10 +100,6 @@ const Tr = createClass({
 		 * element. Value is run through the `classnames` library.
 		 */
 		className: any,
-		/**
-		 * Should be `true` when rendered inside a thead.
-		 */
-		isHeader: bool,
 		/**
 		 * Applies disabled styles to the row.
 		 */
@@ -111,88 +113,47 @@ const Tr = createClass({
 		 */
 		isActive: bool,
 		/**
-		 * Applies the _has details_ styles to the row, used to show if a row is clickable or can be made active.
+		 * Applies styles to the row, used to show if a row is clickable / can be made active.
 		 */
-		hasDetails: bool,
+		isActionable: bool,
 	},
+
 	getDefaultProps() {
 		return {
 			isDisabled: false,
 			isSelected: false,
-			isActive: false
+			isActive: false,
+			isActionable: false,
 		};
 	},
-	getInitialState() {
-		return {
-			isFirstItemRowSpan: false
-		};
-	},
-	checkForRowSpan(props=this.props) {
-		const {
-			children
-		} = props;
-		const firstElement = _.first(React.Children.toArray(children));
-		const rowSpanValue = _.get(firstElement, 'props.rowSpan', 1);
 
-		return rowSpanValue > 1;
-	},
-	componentWillMount() {
-		this.setState({
-			isFirstItemRowSpan: this.checkForRowSpan()
-		});
-	},
-	componentWillReceiveProps(nextProps) {
-		this.setState({
-			isFirstItemRowSpan: this.checkForRowSpan(nextProps)
-		});
-	},
 	render() {
 		const {
-			children,
 			className,
-			isHeader,
 			isDisabled,
 			isSelected,
-			hasDetails,
+			isActionable,
 			isActive,
+			...passThroughs,
 		} = this.props;
 
-		const {
-			isFirstItemRowSpan
-		} = this.state;
-
 		return (
-			<tr {...this.props} className={cx({
-				'&-row': !isHeader,
-				'&-thead-row': isHeader,
+			<tr {...passThroughs} className={cx('&-Tr', {
 				'&-is-disabled': isDisabled,
 				'&-is-selected': isSelected,
-				'&-has-details': hasDetails,
+				'&-is-actionable': isActionable,
 				'&-is-active': isActive,
-			}, className)}>
-				{isFirstItemRowSpan ? React.Children.map(
-					children,
-					(childElement, index) => (
-						index === 1
-						? React.createElement(childElement.type, {
-							isAfterRowSpan: true,
-							...childElement.props
-						})
-						: childElement
-					)
-				) : children}
-			</tr>
+			}, className)} />
 		);
 	}
 });
 
 /**
  * `Th` renders <th>.
- *
- * Will Render a CaretIcon next to the children if `isSorted`.
  */
 const Th = createClass({
 	displayName: 'Table.Th',
+
 	propTypes: {
 		/**
 		 * Aligns the content of a cell. Can be `left`, `center`, or `right`.
@@ -208,18 +169,6 @@ const Th = createClass({
 		 */
 		className: any,
 		/**
-		 * Should be `true` when the cell has a checkbox.
-		 */
-		hasCheckbox: bool,
-		/**
-		 * Should be `true` when the cell has an icon.
-		 */
-		hasIcon: bool,
-		/**
-		 * Should be `true` when the cell has a button.
-		 */
-		hasButton: bool,
-		/**
 		 * Styles the cell to indicate it should be resizable and sets up drag-
 		 * related events to enable this resizing functionality.
 		 */
@@ -229,7 +178,7 @@ const Th = createClass({
 		 */
 		isSortable: bool,
 		/**
-		 * Styles the cell when a column is sorted.
+		 * Renders a caret icon to show that the column is sorted.
 		 */
 		isSorted: bool,
 		/**
@@ -238,7 +187,7 @@ const Th = createClass({
 		 */
 		onResize: func,
 		/**
-		 * The direction of the caret in the sorted column.
+		 * Sets the direction of the caret icon when `isSorted` is also set.
 		 */
 		sortDirection: string,
 		/**
@@ -246,21 +195,36 @@ const Th = createClass({
 		 */
 		style: object,
 		/**
-		 * Width of the column atop which this table header cell sits.
+		 * Sets the width of the cell.
 		 */
-		width: number
+		width: number,
+		/**
+		 * Define the cell as being in the first row.
+		 */
+		isFirstRow: bool,
+		/**
+		 * Define the cell as being in the last row.
+		 */
+		isLastRow: bool,
+		/**
+		 * Define the cell as being in the first column.
+		 */
+		isFirstCol: bool,
+		/**
+		 * Define the cell as being in the last column.
+		 */
+		isLastCol: bool,
 	},
+
 	getDefaultProps() {
 		return {
 			align: 'left',
-			hasCheckbox: false,
-			hasIcon: false,
-			hasButton: false,
 			isResizable: false,
 			isSorted: false,
 			sortDirection: 'up'
 		};
 	},
+
 	getInitialState() {
 		const { width } = this.props;
 
@@ -275,14 +239,16 @@ const Th = createClass({
 			passiveWidth: width || null
 		};
 	},
+
 	render() {
 		const {
 			children,
 			className,
+			isFirstRow,
+			isLastRow,
+			isFirstCol,
+			isLastCol,
 			align,
-			hasCheckbox,
-			hasIcon,
-			hasButton,
 			isResizable,
 			isSortable,
 			isSorted,
@@ -296,26 +262,18 @@ const Th = createClass({
 			passiveWidth
 		} = this.state;
 
-		const cellContent = (isSorted ? (
-			<ul className={cx('&-is-sorted-container')}>
-				<li className={cx('&-is-sorted-title')}>{children}</li>
-				<li className={cx('&-is-sorted-caret')}>
-					<CaretIcon className={cx('&-sort-icon')} direction={sortDirection} size={6}/>
-				</li>
-			</ul>
-		) : children);
-
 		return (
 			<th
 				{...this.props}
 				className={cx(
-					'&-cell', {
+					'&-Th', {
+					'&-is-first-row': isFirstRow,
+					'&-is-last-row': isLastRow,
+					'&-is-first-col': isFirstCol,
+					'&-is-last-col': isLastCol,
 					'&-align-left': align === 'left',
 					'&-align-center': align === 'center',
 					'&-align-right': align === 'right',
-					'&-has-checkbox': hasCheckbox,
-					'&-has-icon': hasIcon,
-					'&-has-button': hasButton,
 					'&-is-resizable': isResizable,
 					'&-is-resizing': isResizing,
 					'&-is-sortable': (isSortable === false ? isSortable : (isSorted || isSortable)),
@@ -326,21 +284,28 @@ const Th = createClass({
 					width: isResizing ? activeWidth : passiveWidth
 				}) : style}
 			>
-				{isResizable ? (
-					<div className={cx('&-is-resizable-container')}>
-						<div className={cx('&-is-resizable-content')}>
-							{cellContent}
+				<div className={cx('&-Th-inner')}>
+					<div className={cx('&-Th-inner-content')}>
+						{children}
+					</div>
+					{isSorted ? (
+						<div className={cx('&-Th-inner-caret')}>
+							<CaretIcon className={cx('&-sort-icon')} direction={sortDirection} size={6}/>
 						</div>
+					) : null}
+					{isResizable ? (
 						<DragCaptureZone
+							className={cx('&-Th-inner-resize')}
 							onDrag={this.handleDragged}
 							onDragEnd={this.handleDragEnded}
 							onDragStart={this.handleDragStarted}
 						/>
-					</div>
-				) : cellContent}
+					) : null}
+				</div>
 			</th>
 		);
 	},
+
 	getWidth() {
 		const styleWidth = _.get(this.refs.root, 'style.width');
 		if (_.endsWith(styleWidth, 'px')){
@@ -348,13 +313,14 @@ const Th = createClass({
 		}
 		return this.refs.root.getBoundingClientRect().width;
 	},
+
 	handleDragEnded(coordinates, { event }) {
 		this.setState({
 			isResizing: false,
 			passiveWidth: this.state.activeWidth
 		});
 
-		window.document.body.style.cursor = 'auto';
+		window.document.body.style.cursor = '';
 
 		if (this.props.onResize) {
 			this.props.onResize(this.state.activeWidth, {
@@ -363,6 +329,7 @@ const Th = createClass({
 			});
 		}
 	},
+
 	handleDragStarted(coordinates, { event }) {
 		const startingWidth = this.getWidth();
 
@@ -382,6 +349,7 @@ const Th = createClass({
 			});
 		}
 	},
+
 	handleDragged(coordinates, { event }) {
 		const activeWidth = this.state.passiveWidth + coordinates.dX;
 
@@ -401,6 +369,7 @@ const Th = createClass({
  */
 const Td = createClass({
 	displayName: 'Table.Td',
+
 	propTypes: {
 		/**
 		 * Aligns the content of a cell. Can be `left`, `center`, or `right`.
@@ -412,18 +381,6 @@ const Td = createClass({
 		 */
 		className: any,
 		/**
-		 * Should be `true` when the cell has a checkbox.
-		 */
-		hasCheckbox: bool,
-		/**
-		 * Should be `true` when the cell has an icon.
-		 */
-		hasIcon: bool,
-		/**
-		 * Should be `true` when the cell has a button.
-		 */
-		hasButton: bool,
-		/**
 		 * Should be `true` to render a right border.
 		 */
 		hasBorderRight: bool,
@@ -432,50 +389,61 @@ const Td = createClass({
 		 */
 		hasBorderLeft: bool,
 		/**
-		 * Should be set to `true` on the second cell in a table where the first cell has a rowspan greater than 1.
+		 * Define the cell as being in the first row.
 		 */
-		isAfterRowSpan: bool,
+		isFirstRow: bool,
 		/**
-		 * Passed to the underlying `td`.
+		 * Define the cell as being in the last row.
 		 */
-		rowSpan: number,
+		isLastRow: bool,
+		/**
+		 * Define the cell as being in the first column.
+		 */
+		isFirstCol: bool,
+		/**
+		 * Define the cell as being in the last column.
+		 */
+		isLastCol: bool,
+		/**
+		 * Define the cell as being the first 1-height cell in the row.
+		 */
+		isFirstSingle: bool,
 	},
+
 	getDefaultProps() {
 		return {
 			align: 'left',
-			hasCheckbox: false,
-			hasIcon: false,
-			hasButton: false,
 			hasBorderRight: false,
 			hasBorderLeft: false,
 		};
 	},
+
 	render() {
 		const {
 			className,
+			isFirstRow,
+			isLastRow,
+			isFirstCol,
+			isLastCol,
+			isFirstSingle,
 			align,
-			hasCheckbox,
-			hasIcon,
-			hasButton,
-			rowSpan,
 			hasBorderRight,
-			hasBorderLeft,
-			isAfterRowSpan
+			hasBorderLeft
 		} = this.props;
 
 		return (
 			<td {...this.props} className={cx(
-				'&-cell', {
+				'&-Td', {
+				'&-is-first-row': isFirstRow,
+				'&-is-last-row': isLastRow,
+				'&-is-first-col': isFirstCol,
+				'&-is-last-col': isLastCol,
+				'&-is-first-single': isFirstSingle,
 				'&-align-left': align === 'left',
 				'&-align-center': align === 'center',
 				'&-align-right': align === 'right',
-				'&-has-checkbox': hasCheckbox,
-				'&-has-icon': hasIcon,
-				'&-has-button': hasButton,
-				'&-has-rowspan': !_.isNil(rowSpan),
 				'&-has-border-right': hasBorderRight,
 				'&-has-border-left': hasBorderLeft,
-				'&-is-after-rowspan': isAfterRowSpan
 			}, className)} />
 		);
 	}
@@ -511,20 +479,26 @@ const Table = createClass({
 		className: string,
 
 		/**
-		 * Adjusts the style of the table to have more spacing within the table cells
+		 * Adjusts the row density of the table to have more or less spacing.
 		 */
-		hasExtraWhitespace: bool,
+		density: oneOf(['compressed', 'extended']),
 
 		/**
-		 * render the table without borders on the outer edge
+		 * Render the table with borders on the outer edge.
 		 */
-		hasNoBorder: bool,
+		hasBorder: bool,
+
+		/**
+		 * Enables word wrapping in tables cells.
+		 */
+		hasWordWrap: bool,
 	},
 
 	getDefaultProps() {
 		return {
-			hasNoBorder: false,
-			hasExtraWhitespace: false,
+			density: 'extended',
+			hasBorder: false,
+			hasWordWrap: true,
 		};
 	},
 
@@ -532,20 +506,172 @@ const Table = createClass({
 
 		const {
 			className,
-			hasNoBorder,
-			hasExtraWhitespace,
+			hasBorder,
+			density,
+			hasWordWrap,
 		} = this.props;
 
 		return (
 			<table
 				{...this.props}
 				className={cx('&', {
-					'&-has-extra-whitespace': hasExtraWhitespace,
-					'&-has-no-border': hasNoBorder,
+					'&-density-extended': density === 'extended',
+					'&-density-compressed': density === 'compressed',
+					'&-has-border': hasBorder,
+					'&-has-word-wrap': hasWordWrap,
 				}, className)}
 			/>
 		);
 	}
 });
+
+/**
+ * mapToGrid
+ *
+ * Returns a 2 dimensional array of cell elements of the given component type. The map function can modify value of a cell.
+ */
+function mapToGrid(trList, cellType='td', mapFn=_.property('element')) {
+	const cellRowList = _.map(trList, (trElement) => _.map(filterTypes(trElement.props.children, cellType)));
+	const grid = [];
+
+	if (_.isEmpty(cellRowList)) {
+		return [];
+	}
+
+
+	// iterate over each row
+	for (let rowIndex=0; rowIndex<cellRowList.length; rowIndex++) {
+		const cellRow = cellRowList[rowIndex];
+
+		if (_.isNil(grid[rowIndex])) {
+			grid[rowIndex] = [];
+		}
+
+		const canonicalRow = rowIndex;
+
+		// build out each horizonal duplicates of each cell
+		for (let cellElementIndex=0; cellElementIndex<cellRow.length; cellElementIndex++) {
+			const cellElement = cellRow[cellElementIndex];
+
+			let colSpan = 1;
+			let isCellIncluded = false;
+
+			if (_.isNumber(cellElement.props.colSpan)) {
+				colSpan = cellElement.props.colSpan;
+			}
+
+			const nilCellIndex = _.findIndex(grid[canonicalRow], _.isNil);
+			const originCol = nilCellIndex !== -1 ? nilCellIndex : grid[canonicalRow].length;
+
+			for (let currentColSpan=0; currentColSpan<colSpan; currentColSpan++) {
+				grid[canonicalRow][originCol + currentColSpan] = {
+					element: cellElement,
+					canonicalPosition: {
+						row: canonicalRow,
+						col: originCol,
+					},
+					isOriginal: !isCellIncluded,
+				};
+				isCellIncluded = true;
+			}
+		}
+
+		// build out each vertial duplicates of each cell using the new row in the full grid
+		for (let colIndex=0; colIndex<grid[canonicalRow].length; colIndex++) {
+			const gridCell = grid[canonicalRow][colIndex];
+			if (gridCell.isOriginal) {
+				const cellElement = _.get(gridCell, 'element');
+				let rowSpan = 1;
+
+				if (_.isNumber(_.get(cellElement, 'props.rowSpan'))) {
+					rowSpan = _.get(cellElement, 'props.rowSpan');
+				}
+
+				for (let currentRowSpan=1; currentRowSpan<rowSpan; currentRowSpan++) {
+					if (_.isNil(grid[canonicalRow + currentRowSpan])) {
+						grid[canonicalRow + currentRowSpan] = [];
+					}
+
+					grid[canonicalRow + currentRowSpan][colIndex] = _.assign({}, grid[canonicalRow + currentRowSpan-1][colIndex], { isOriginal: false });
+				}
+			}
+		}
+	}
+
+	// map new values to each cell in the final grid
+	const finalGrid = [];
+	for (let rowIndex=0; rowIndex<grid.length; rowIndex++) {
+		finalGrid[rowIndex] = [];
+		for (let colIndex=0; colIndex<grid[rowIndex].length; colIndex++) {
+			finalGrid[rowIndex][colIndex] = mapFn(grid[rowIndex][colIndex], { row: rowIndex, col: colIndex }, finalGrid);
+		}
+	}
+
+	return finalGrid;
+}
+
+/**
+ * renderRowsWithIdentifiedEdges
+ *
+ * Returns an equivalent list of Tr's where each cell on the perimeter has props set for: `isFirstRow`, `isLastRow`, `isFirstCol`, `isLastCol`, and `isFirstSingle`
+ */
+function renderRowsWithIdentifiedEdges(trList, cellType) {
+	const duplicateReferences = [];
+	const fullCellGrid = mapToGrid(trList, cellType, ({ element: { props }, isOriginal, canonicalPosition }, currentPos, grid) => {
+		if (!isOriginal) { // if cell spans multiple positions
+			// store current position and return original cell props reference
+			duplicateReferences.push(currentPos);
+			return grid[canonicalPosition.row][canonicalPosition.col];
+		}
+		return _.assign({}, props); // return a new props object based on old cell
+	});
+
+	if (_.isEmpty(fullCellGrid)) {
+		return [];
+	}
+
+	const firstRowIndex = 0;
+	const lastRowIndex = fullCellGrid.length - 1;
+	const firstColIndex = 0;
+	const lastColIndex = _.first(fullCellGrid).length - 1;
+	const firstSingleLookup = new Map();
+
+	// decorate the props of each cell with props that indicate its role in the table
+	_.forEach(fullCellGrid, (cellList, rowIndex) => _.forEach(cellList, (cellProps, colIndex) => {
+		if (!_.isNull(cellProps)) {
+			if (rowIndex === firstRowIndex) {
+				cellProps.isFirstRow = true;
+			}
+			if (rowIndex === lastRowIndex) {
+				cellProps.isLastRow = true;
+			}
+			if (colIndex === firstColIndex) {
+				cellProps.isFirstCol = true;
+			}
+			if (colIndex === lastColIndex) {
+				cellProps.isLastCol = true;
+			}
+		}
+
+		if (!firstSingleLookup.has(rowIndex)) {
+			firstSingleLookup.set(rowIndex, false);
+		}
+		if (!firstSingleLookup.get(rowIndex) && _.get(cellProps, 'rowSpan', 1) === 1) {
+			firstSingleLookup.set(rowIndex, true);
+			cellProps.isFirstSingle = true;
+		}
+	}));
+
+	_.forEach(duplicateReferences, ({ row, col }) => {
+		fullCellGrid[row][col] = null; // remove duplicate references from grid
+	});
+
+	// render the grid back to elements using the updated cell props
+	return _.map(trList, (trElement, rowIndex) => (
+		<Tr {...trElement.props} key={rowIndex}>
+			{_.reduce(fullCellGrid[rowIndex], (rowChildren, cellProps, colIndex) => rowChildren.concat(!_.isNull(cellProps) ? [React.createElement(cellType, _.assign({}, cellProps, {key: colIndex}))] : []), [])}
+		</Tr>
+	));
+}
 
 export default Table;
