@@ -226,7 +226,7 @@ const Component = React.createClass({
 				<h2>{componentName} {privateString} {composesComponents}</h2>
 				<div dangerouslySetInnerHTML={descriptionAsHTML} />
 				<h3>Props</h3>
-				<Table style={{width:'100%'}}>
+				<Table hasBorder={false} style={{width:'100%'}}>
 					<Thead>
 						<Tr>
 							<Th>Name</Th>
@@ -245,10 +245,10 @@ const Component = React.createClass({
 
 							return (
 								<Tr key={propName}>
-									<Td hasBorderRight>{propName}</Td>
-									<Td hasBorderRight><PropType type={propDetails.type} componentName={componentName} /></Td>
-									<Td hasBorderRight>{propDetails.required ? 'yes' : 'no'}</Td>
-									<Td hasBorderRight>
+									<Td>{propName}</Td>
+									<Td><PropType type={propDetails.type} componentName={componentName} /></Td>
+									<Td>{propDetails.required ? 'yes' : 'no'}</Td>
+									<Td>
 										{propDetails.defaultValue ?
 											<pre>
 												<code className='lang-javascript'>
@@ -271,7 +271,7 @@ const Component = React.createClass({
 								<h4>{childComponent.displayName}</h4>
 								<div dangerouslySetInnerHTML={getDescriptionAsHtml(childComponent.description)} />
 								{!_.isNil(childComponent.props) ? (
-									<Table style={{width:'100%'}}>
+									<Table hasBorder={false} style={{width:'100%'}}>
 										<Thead>
 											<Tr>
 												<Th>Name</Th>
@@ -295,10 +295,10 @@ const Component = React.createClass({
 
 												return (
 													<Tr key={`${childComponent.displayName}-${propName}`}>
-														<Td hasBorderRight>{propName}</Td>
-														<Td hasBorderRight><PropType type={propDetails.type} componentName={childComponent.displayName} /></Td>
-														<Td hasBorderRight>{propDetails.required ? 'yes' : 'no'}</Td>
-														<Td hasBorderRight>
+														<Td>{propName}</Td>
+														<Td><PropType type={propDetails.type} componentName={childComponent.displayName} /></Td>
+														<Td>{propDetails.required ? 'yes' : 'no'}</Td>
+														<Td>
 															{propDetails.defaultValue ?
 																<pre>
 																	<code className='lang-javascript'>

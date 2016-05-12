@@ -158,7 +158,7 @@ export default React.createClass({
 				data={_.map(data, (row, index) => (index === activeIndex ? {...row, isActive: true} : row))}
 				hasExtraWhitespace
 				isSelectable
-				hasDetails
+				isActionable
 				onRowClick={this.handleRowClick}
 				onSelect={this.handleSelect}
 				onSelectAll={this.handleSelectAll}

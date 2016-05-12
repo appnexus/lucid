@@ -84,7 +84,7 @@ export default React.createClass({
 				data={data}
 				hasExtraWhitespace
 				isSelectable
-				hasDetails
+				isActionable
 			>
 				<DataTable.Column
 					field='id'

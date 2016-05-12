@@ -84,7 +84,6 @@ export default React.createClass({
 			>
 				<DataTable.Column
 					field='id'
-					hasBorderLeft
 				>
 					ID
 				</DataTable.Column>
