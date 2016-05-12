@@ -1,8 +1,8 @@
 import { icons, common } from '../../../util/generic-tests';
 
-import WarningIcon from './WarningIcon';
+import TableConfigIcon from './TableConfigIcon';
 
-describe('WarningIcon', () => {
-	common(WarningIcon);
-	icons(WarningIcon);
+describe('TableConfigIcon', () => {
+	common(TableConfigIcon);
+	icons(TableConfigIcon);
 });
