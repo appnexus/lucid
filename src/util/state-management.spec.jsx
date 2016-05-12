@@ -11,6 +11,7 @@ import {
 	bindReducerToState,
 	bindReducersToState,
 	getStatefulPropsContext,
+	safeMerge,
 	buildHybridComponent
 } from './state-management';
 import {
@@ -437,6 +438,30 @@ describe('#getStatefulPropsContext', () => {
 				assert(overrides.setName.calledOnce);
 			});
 		});
+	});
+});
+
+describe('#safeMerge', () => {
+	it('should not merge arrays', () => {
+		const objValue = ['foo'];
+		const srcValue = ['bar'];
+		const value = safeMerge(objValue, srcValue);
+		assert.deepEqual(value, srcValue, 'must be ["bar"]');
+	});
+	it('should return valid react elements', () => {
+		const srcValue = <div>foo</div>;
+		const value = safeMerge({}, srcValue);
+		assert.equal(value, srcValue, 'must be srcValue');
+	});
+	it('should return arrays that contain react elements', () => {
+		const srcValue = [<div>foo</div>];
+		const value = safeMerge({}, srcValue);
+		assert.equal(value, srcValue, 'must be srcValue');
+	});
+	it('should return srcValue array if objValue is undefined', () => {
+		const srcValue = [];
+		const value = safeMerge(undefined, srcValue);
+		assert.equal(value, srcValue, 'must be srcValue');
 	});
 });
 

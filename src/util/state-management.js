@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { isValidElement } from 'react';
 import _ from 'lodash';
 import { logger } from './logger';
 
@@ -50,7 +50,7 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 			};
 		}
 
-		return overwriteArrays(objValue, srcValue);
+		return safeMerge(objValue, srcValue);
 	};
 
 	const bindFunctionOverwritesCustomizer = (objValue, srcValue) => {
@@ -58,7 +58,7 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 			return bindReducerToState(srcValue, { getState, setState }, objValue.path);
 		}
 
-		return overwriteArrays(objValue, srcValue);
+		return safeMerge(objValue, srcValue);
 	};
 
 	return {
@@ -71,16 +71,22 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 	};
 };
 
-function overwriteArrays (objValue, srcValue) {
+export function safeMerge (objValue, srcValue) {
+	// don't merge arrays
 	if (_.isArray(srcValue) && _.isArray(objValue)) {
 		return srcValue;
 	}
 
+	// guards against traversing react elements which can cause cyclical recursion
 	// If we don't have this clause, lodash (as of 4.7.0) will attempt to
 	// deeply clone the react children, which is really freaking slow.
-	if (_.isArray(srcValue) && _.isUndefined(objValue)) {
+	if (isValidElement(srcValue)
+			|| (_.isArray(srcValue) && _.some(srcValue, isValidElement))
+			|| (_.isArray(srcValue) && _.isUndefined(objValue))
+		 ) {
 		return srcValue;
 	}
+
 }
 
 export function buildHybridComponent(baseComponent, opts = {
@@ -117,14 +123,14 @@ export function buildHybridComponent(baseComponent, opts = {
 		displayName,
 		getInitialState() {
 			if (opts.setStateWithNewProps) {
-				return _.mergeWith({}, omitFunctionPropsDeep(baseComponent.getDefaultProps()), omitFunctionPropsDeep(this.props), overwriteArrays);
+				return _.mergeWith({}, omitFunctionPropsDeep(baseComponent.getDefaultProps()), omitFunctionPropsDeep(this.props), safeMerge);
 			}
 			return omitFunctionPropsDeep(baseComponent.getDefaultProps());
 		},
 		componentWillReceiveProps(nextProps) {
 			if (opts.setStateWithNewProps) {
 				let nextPropsData = omitFunctionPropsDeep(nextProps);
-				this.setState(_.mergeWith({}, _.pick(this.state, _.intersection(_.keys(this.state), _.keys(nextPropsData))), nextPropsData, overwriteArrays));
+				this.setState(_.mergeWith({}, _.pick(this.state, _.intersection(_.keys(this.state), _.keys(nextPropsData))), nextPropsData, safeMerge));
 			}
 		},
 		componentWillMount() {
