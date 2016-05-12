@@ -17,7 +17,7 @@ const CrossIcon = React.createClass({
 
 	getDefaultProps() {
 		return {
-			viewBox: '0 0 18 18',
+			viewBox: '-26.5 0.5 16 16',
 		}
 	},
 
@@ -32,7 +32,7 @@ const CrossIcon = React.createClass({
 				{...passThroughs}
 				className={boundClassNames('&', className)}
 			>
-				<path d='M8,9.25L5.25,6.48,6.53,5.16l2.8,2.78L12.1,5.16l1.32,1.31L10.63,9.25,13.42,12,12.1,13.34,9.32,10.56,6.53,13.34,5.21,12Z' />
+				<path d='M-19.664,8.5l-2.449-2.463l1.17-1.171l2.449,2.465l2.465-2.465l1.17,1.171L-17.337,8.5l2.479,2.465 l-1.168,1.17l-2.467-2.479l-2.48,2.48l-1.17-1.171L-19.664,8.5z'/>
 			</Icon>
 		);
 	}
