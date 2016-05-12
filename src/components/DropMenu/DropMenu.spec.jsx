@@ -8,7 +8,6 @@ import { common } from '../../util/generic-tests';
 
 import DropMenu from './DropMenu';
 import * as KEYCODE from '../../constants/key-code';
-import ContextMenu from '../ContextMenu/ContextMenu';
 
 const {
 	Control,
@@ -582,42 +581,6 @@ describe('DropMenu', () => {
 
 					assert(onFocusPrev.notCalled);
 				});
-			});
-		});
-
-		describe('onBelowFold', () => {
-			it('should be called when DropMenu [expanded, ContextMenu onChangeBounds called with `BELOW_FOLD`]', () => {
-				const onBelowFold = sinon.spy();
-				const wrapper = shallow(
-					<DropMenu isExpanded={true} onBelowFold={onBelowFold}>
-						<Control>control</Control>
-						<Option>option a</Option>
-						<Option>option b</Option>
-						<Option>option c</Option>
-					</DropMenu>
-				);
-
-				wrapper.find('ContextMenu').prop('onChangeBounds')(ContextMenu.BELOW_FOLD);
-
-				assert(onBelowFold.called);
-			});
-		});
-
-		describe('onAboveFold', () => {
-			it('should be called when DropMenu [expanded, ContextMenu onChangeBounds called with `ABOVE_FOLD`]', () => {
-				const onAboveFold = sinon.spy();
-				const wrapper = shallow(
-					<DropMenu isExpanded={true} onAboveFold={onAboveFold}>
-						<Control>control</Control>
-						<Option>option a</Option>
-						<Option>option b</Option>
-						<Option>option c</Option>
-					</DropMenu>
-				);
-
-				wrapper.find('ContextMenu').prop('onChangeBounds')(ContextMenu.ABOVE_FOLD);
-
-				assert(onAboveFold.called);
 			});
 		});
 
