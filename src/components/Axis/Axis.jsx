@@ -25,9 +25,7 @@ const {
 const Axis = createClass({
 	displayName: 'Axis',
 
-	statics: {
-		_lucidIsPrivate: true,
-	},
+	_lucidIsPrivate: true,
 
 	propTypes: {
 		/**
@@ -111,11 +109,12 @@ const Axis = createClass({
 		// Domain
 		const range = scale.range();
 		const sign = orient === 'top' || orient === 'left' ? -1 : 1;
-		const isH = orient === 'top' || orient === 'bottom';
+		const isH = orient === 'top' || orient === 'bottom'; // is horizontal
 
 		let scaleNormalized = scale;
 
-		// Only ordinal scales have `bandwidth`
+		// Only band scales have `bandwidth`, this conditional helps center the
+		// ticks on the bands
 		if (scale.bandwidth) {
 			const bandModifier = scale.bandwidth() / 2;
 			scaleNormalized = (d) => scale(d) + bandModifier;

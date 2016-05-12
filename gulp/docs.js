@@ -85,12 +85,8 @@ module.exports = {
 						recast.visit(ast, {
 							visitObjectExpression: function (path) {
 								_.forEach(path.get('properties').value, function (property) {
-									if (property.key.name === 'statics') {
-										_.forEach(property.value.properties, function (staticsProperty) {
-											if (staticsProperty.key.name === '_lucidIsPrivate') {
-												isPrivateComponent = true;
-											}
-										});
+									if (property.key.name === '_lucidIsPrivate') {
+										isPrivateComponent = true;
 									}
 
 									if (property.key.name === 'render') {

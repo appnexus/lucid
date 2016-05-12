@@ -18,9 +18,7 @@ const {
 const Line = createClass({
 	displayName: 'Line',
 
-	statics: {
-		_lucidIsPrivate: true,
-	},
+	_lucidIsPrivate: true,
 
 	propTypes: {
 		/**

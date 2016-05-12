@@ -27,9 +27,7 @@ const {
 const Bars = createClass({
 	displayName: 'Bars',
 
-	statics: {
-		_lucidIsPrivate: true,
-	},
+	_lucidIsPrivate: true,
 
 	propTypes: {
 		/**

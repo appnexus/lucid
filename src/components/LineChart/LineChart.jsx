@@ -72,7 +72,7 @@ const LineChart = createClass({
 		 *       { x: new Date('2015-01-05') , y: 5 } ,
 		 *     ]
 		 */
-		data: arrayOf(object).isRequired,
+		data: arrayOf(object),
 		/**
 		 * An object with human readable names for fields that  will be used for
 		 * tooltips and legends which are *not yet implemented*. E.g:
@@ -292,7 +292,14 @@ const LineChart = createClass({
 		// TODO: Consider displaying something specific when there is no data,
 		// perhaps a loading indicator.
 		if (_.isEmpty(data)) {
-			return null;
+			return (
+				<svg
+					{...passThroughs}
+					className={cx(className, '&')}
+					width={width}
+					height={height}
+				/>
+			);
 		}
 
 		const innerWidth = width - margin.left - margin.right;

@@ -103,6 +103,11 @@ describe('chart-helpers', () => {
 		it('should handle empty arrays', () => {
 			assert.deepEqual(discreteTicks([], 100), []);
 		});
+
+		it('should handle no count', () => {
+			assert.deepEqual(discreteTicks([1, 2, 3]), [1, 2, 3]);
+			assert.deepEqual(discreteTicks([1, 2, 3]), [1, 2, 3]);
+		});
 	});
 
 	describe('byFields', () => {

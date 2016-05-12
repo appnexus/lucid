@@ -30,9 +30,7 @@ const PATHS = [
 const Point = createClass({
 	displayName: 'Point',
 
-	statics: {
-		_lucidIsPrivate: true,
-	},
+	_lucidIsPrivate: true,
 
 	propTypes: {
 		/**

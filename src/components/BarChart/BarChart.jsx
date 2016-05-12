@@ -71,7 +71,7 @@ const BarChart = createClass({
 		 *       { x: 'Friday'    , y: 5 } ,
 		 *     ]
 		 */
-		data: arrayOf(object).isRequired,
+		data: arrayOf(object),
 		/**
 		 * An object with human readable names for fields that  will be used for
 		 * tooltips and legends which are *not yet implemented*. E.g:
@@ -115,7 +115,7 @@ const BarChart = createClass({
 		 * An array of your y axis fields. Typically this will just be a single
 		 * item unless you need to display grouped or stacked bars.
 		 */
-		yAxisFields: array.isRequired,
+		yAxisFields: array,
 		/**
 		 * The minimum number the y axis should display. Typically this
 		 * should be be `0`.
@@ -206,8 +206,17 @@ const BarChart = createClass({
 			...passThroughs,
 		} = this.props;
 
+		// TODO: Consider displaying something specific when there is no data,
+		// perhaps a loading indicator.
 		if (_.isEmpty(data)) {
-			return null;
+			return (
+				<svg
+					{...passThroughs}
+					className={cx(className, '&')}
+					width={width}
+					height={height}
+				/>
+			);
 		}
 
 		const innerWidth = width - margin.left - margin.right;

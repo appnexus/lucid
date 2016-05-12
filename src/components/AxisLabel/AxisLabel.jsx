@@ -18,9 +18,7 @@ const {
 const AxisLabel = createClass({
 	displayName: 'AxisLabel',
 
-	statics: {
-		_lucidIsPrivate: true,
-	},
+	_lucidIsPrivate: true,
 
 	propTypes: {
 		/**

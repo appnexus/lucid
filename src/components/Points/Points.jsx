@@ -34,9 +34,7 @@ function isValidSeries(series) {
 const Points = createClass({
 	displayName: 'Points',
 
-	statics: {
-		_lucidIsPrivate: true,
-	},
+	_lucidIsPrivate: true,
 
 	propTypes: {
 		/**

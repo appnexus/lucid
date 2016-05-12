@@ -13,8 +13,8 @@
     "docs-upload": "gulp docs-upload",
     "preversion": "rm -rf dist && gulp preversion",
     "postversion": "gulp docs-upload",
-    "test": "rm -rf dist && gulp test",
-    "test-tdd": "rm -rf dist && gulp test-tdd"
+    "test": "rm -rf dist && TZ=UTC gulp test",
+    "test-tdd": "rm -rf dist && TZ=UTC gulp test-tdd"
   },
   "keywords": [
     "component",
