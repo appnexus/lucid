@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 
-const boundClassNames = lucidClassNames.bind('&-TableConfigIcon');
+const boundClassNames = lucidClassNames.bind('&-TableGearIcon');
 
 /**
  *
@@ -11,7 +11,7 @@ const boundClassNames = lucidClassNames.bind('&-TableConfigIcon');
  * A table configuration Icon.
  */
 
-const TableConfigIcon = React.createClass({
+const TableGearIcon = React.createClass({
 	propTypes: {
 		...Icon.propTypes,
 	},
@@ -43,4 +43,4 @@ const TableConfigIcon = React.createClass({
 	}
 });
 
-export default TableConfigIcon;
+export default TableGearIcon;

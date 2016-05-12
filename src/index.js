@@ -39,7 +39,7 @@ import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import StickySection from './components/StickySection/StickySection';
 import Switch from './components/Switch/Switch';
 import Table from './components/Table/Table';
-import TableConfigIcon from './components/Icon/TableConfigIcon/TableConfigIcon';
+import TableGearIcon from './components/Icon/TableGearIcon/TableGearIcon';
 import Tabs from './components/Tabs/Tabs';
 import TextField from './components/TextField/TextField'
 import ValidatedTextField from './components/ValidatedTextField/ValidatedTextField';
@@ -102,7 +102,7 @@ export {
 	StickySection,
 	Switch,
 	Table,
-	TableConfigIcon,
+	TableGearIcon,
 	Tabs,
 	TextField,
 	ValidatedTextField,

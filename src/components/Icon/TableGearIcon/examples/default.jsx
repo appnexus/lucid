@@ -1,11 +1,11 @@
 import React from 'react';
-import TableConfigIcon from '../TableConfigIcon';
+import TableGearIcon from '../TableGearIcon';
 
 export default React.createClass({
 	render() {
 		return (
 			<div>
-				<TableConfigIcon />
+				<TableGearIcon />
 			</div>
 		);
 	}
