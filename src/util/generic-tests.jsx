@@ -7,7 +7,11 @@ import _ from 'lodash';
 import * as lucid from '../index';
 
 // Common tests for all our components
-export function common(Component, { getDefaultProps = _.noop, selector = null } = {}) {
+export function common(Component, {
+	getDefaultProps = _.noop,
+	selector = null,
+	exemptFunctionProps = [],
+} = {}) {
 
 	function generateDefaultProps(props={}) {
 		return _.assign({}, getDefaultProps(), props);
@@ -83,17 +87,25 @@ export function common(Component, { getDefaultProps = _.noop, selector = null } 
 
 				// If it's probably a function, and it's not `any`, then we make sure
 				// it starts with `on`
-				if (isProbablyFunction && !isAny && !_.startsWith(key, 'on')) {
-					return false
+				if (
+					isProbablyFunction
+					&& !isAny
+					&& !_.startsWith(key, 'on')
+					&& !_.includes(exemptFunctionProps, key) // we make exceptions to the rule
+				) {
+					return false;
 				}
 
 				return true;
 			}));
 		});
 
-		it('should be available as an exported module from index.js', () => {
-			assert(lucid[Component.displayName]);
-		});
+		// Only run this test if it's a public component
+		if (!Component._lucidIsPrivate) {
+			it('should be available as an exported module from index.js', () => {
+				assert(lucid[Component.displayName]);
+			});
+		}
 	});
 }
 

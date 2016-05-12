@@ -33,12 +33,12 @@ describe('ScrollTable', () => {
 			});
 		});
 
-		describe('isNowrap', () => {
-			it('should set the lucid-ScrollTable-nowrap class on the underlying Table', () => {
-				const wrapper = shallow(<ScrollTable isNowrap />);
+		describe('hasWordWrap', () => {
+			it('should set the `hasWordWrap` props of the underlying Table component', () => {
+				const wrapper = shallow(<ScrollTable hasWordWrap={true} />);
 				const tableWrapper = wrapper.find(Table);
 
-				assert(_.includes(tableWrapper.prop('className'),'lucid-ScrollTable-nowrap'), 'must include lucid-ScrollTable-nowrap in the Table className');
+				assert.equal(tableWrapper.prop('hasWordWrap'), true, 'must set Table hasWordWrap');
 			});
 		});
 	});

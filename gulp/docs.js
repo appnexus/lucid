@@ -36,10 +36,10 @@ function findParentNodeIdentifier(path) {
 }
 
 function getDocsForPath(definitionPath, name) {
-	return reactDocgen.parse('', function (ast, recast) {
+	return reactDocgen.parse('', function (/* ast, recast */) {
 		return definitionPath;
 	}, reactDocgen.defaultHandlers.concat([
-		function (documentation, definition) {
+		function (documentation /*, definition */) {
 			documentation.set('displayName', name);
 		}
 	]));
@@ -73,9 +73,8 @@ module.exports = {
 
 				var componentName = extractComponentName(file);
 
-				console.log('Docgen parsing %s...', file);
-
 				var definitionMap;
+				var isPrivateComponent = false
 				var exportIdentiferName;
 				var componentSource = fs.readFileSync(file)
 				var docs = reactDocgen.parse(
@@ -86,6 +85,10 @@ module.exports = {
 						recast.visit(ast, {
 							visitObjectExpression: function (path) {
 								_.forEach(path.get('properties').value, function (property) {
+									if (property.key.name === '_lucidIsPrivate') {
+										isPrivateComponent = true;
+									}
+
 									if (property.key.name === 'render') {
 										var identifier = findParentNodeIdentifier(path);
 										if (identifier) {
@@ -104,7 +107,7 @@ module.exports = {
 					},
 					// Handlers, a series of functions through which the documentation is
 					// built up.
-					reactDocgen.defaultHandlers.concat(function (documentation, definition) {
+					reactDocgen.defaultHandlers.concat(function (documentation /*, definition */) {
 						// TODO: determine composition from the `import` statements See
 						// existing handlers for examples:
 						// https://github.com/reactjs/react-docgen/blob/dca8ec9d57b4833f7ddb3164bedf4d74578eee1e/src/handlers/propTypeCompositionHandler.js
@@ -112,6 +115,7 @@ module.exports = {
 							return getDocsForPath(definitionMap[childComponentId], childComponentId);
 						});
 						documentation.set('childComponents', childComponentDocs);
+						documentation.set('isPrivateComponent', isPrivateComponent);
 					})
 				);
 

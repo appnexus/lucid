@@ -127,58 +127,6 @@ describe('ContextMenu', () => {
 			});
 		});
 
-		describe('onChangeBounds', () => {
-			beforeEach(() => {
-				sinon.stub(ContextMenu, 'isElementBelowFold');
-			});
-
-			afterEach(() => {
-				ContextMenu.isElementBelowFold.restore();
-			});
-
-			it('should be called with `BELOW_FOLD` if direction is down + clips screen bottom', () => {
-				ContextMenu.isElementBelowFold.returns(true);
-				const onChangeBounds = sinon.spy();
-
-				wrapper = mount(
-					<ContextMenu isExpanded direction='down' onChangeBounds={onChangeBounds}>
-						<ContextMenu.Target>
-							File
-						</ContextMenu.Target>
-						<ContextMenu.FlyOut>
-							Open
-						</ContextMenu.FlyOut>
-					</ContextMenu>
-				);
-
-				wrapper.setProps(wrapper.props()); // trigger componentWillReceiveProps to check bounds
-
-				assert(onChangeBounds.calledAfter(ContextMenu.isElementBelowFold));
-				assert.equal(onChangeBounds.firstCall.args[0], ContextMenu.BELOW_FOLD);
-			});
-
-			it('should be called with `ABOVE_FOLD` if direction is up + has space to render below', () => {
-				ContextMenu.isElementBelowFold.returns(false);
-				const onChangeBounds = sinon.spy();
-
-				wrapper = mount(
-					<ContextMenu isExpanded direction='up' onChangeBounds={onChangeBounds}>
-						<ContextMenu.Target>
-							File
-						</ContextMenu.Target>
-						<ContextMenu.FlyOut>
-							Open
-						</ContextMenu.FlyOut>
-					</ContextMenu>
-				);
-
-				wrapper.setProps(wrapper.props()); // trigger componentWillReceiveProps to check bounds
-
-				assert(onChangeBounds.calledAfter(ContextMenu.isElementBelowFold));
-				assert.equal(onChangeBounds.firstCall.args[0], ContextMenu.ABOVE_FOLD);
-			});
-		});
-
 		describe('onClickOut', () => {
 			let onClickOut;
 			let testSection;
