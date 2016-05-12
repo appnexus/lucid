@@ -49,17 +49,13 @@ const DataTable = createClass({
 		 */
 		data: arrayOf(object),
 		/**
-		 * Adjusts the style of the table to have more spacing within the table cells
-		 */
-		hasExtraWhitespace: bool,
-		/**
 		 * Render a checkbox in the first column allowing `onSelect` and `onSelectAll` to be triggered.
 		 */
 		isSelectable: bool,
 		/**
 		 * Render each row item to be navigable, allowing `onRowClick` to be triggered.
 		 */
-		hasDetails: bool,
+		isActionable: bool,
 		/**
 		 * Handler for checkbox selection. Signature is `(object, index, { props, event }) => {...}`
 		 */
@@ -97,9 +93,8 @@ const DataTable = createClass({
 
 	getDefaultProps() {
 		return {
-			hasExtraWhitespace: false,
 			isSelectable: false,
-			hasDetails: false,
+			isActionable: false,
 			onSelect: _.noop,
 			onSelectAll: _.noop,
 			onRowClick: _.noop,
@@ -176,7 +171,7 @@ const DataTable = createClass({
 		const {
 			className,
 			data,
-			hasDetails,
+			isActionable,
 			isSelectable,
 			...passThroughs
 		} = this.props;
@@ -209,7 +204,6 @@ const DataTable = createClass({
 					<Tr>
 						{isSelectable ? (
 							<Th
-								hasCheckbox
 								rowSpan={hasGroupedColumns ? 2 : null}
 							>
 								<Checkbox
@@ -263,11 +257,11 @@ const DataTable = createClass({
 							isSelected={row.isSelected}
 							isActive={row.isActive}
 							onClick={_.partial(this.handleRowClick, index)}
-							hasDetails={hasDetails}
+							isActionable={isActionable}
 							key={'row' + index}
 						>
 							{isSelectable ? (
-								<Td hasCheckbox>
+								<Td>
 									<Checkbox
 										isSelected={row.isSelected}
 										onSelect={_.partial(this.handleSelect, index)}

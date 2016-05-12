@@ -22,6 +22,7 @@ const VerticalListMenu = buildHybridComponent(VerticalListMenuDumb);
 // dumb components
 import Badge from './components/Badge/Badge';
 import Banner from './components/Banner/Banner';
+import BarChart from './components/BarChart/BarChart';
 import Button from './components/Button/Button';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
@@ -41,6 +42,7 @@ import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import CheckboxLabeled from './components/CheckboxLabeled/CheckboxLabeled';
 import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
 import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
+import LineChart from './components/LineChart/LineChart';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import Overlay from './components/Overlay/Overlay';
 import Panel from './components/Panel/Panel';
@@ -79,6 +81,7 @@ export {
 	AutocompleteDumb,
 	Badge,
 	Banner,
+	BarChart,
 	Button,
 	ButtonGroup,
 	ButtonGroupDumb,
@@ -105,6 +108,7 @@ export {
 	CheckboxLabeled,
 	RadioButtonLabeled,
 	SwitchLabeled,
+	LineChart,
 	MinusIcon,
 	Overlay,
 	PlusIcon,
@@ -130,3 +134,4 @@ export {
 	VerticalListMenuDumb,
 	WarningIcon
 };
+
