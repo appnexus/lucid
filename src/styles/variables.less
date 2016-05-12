@@ -1,14 +1,24 @@
-// font properties
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+
 @fontSize: 12px;
 @fontFamily: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 @font: @fontSize @fontFamily;
+@font-chart: 11px sans-serif;
 
-
+// -----------------------------------------------------------------------------
 // Sizes
+// -----------------------------------------------------------------------------
+
 @size-font: 12px;
 @size-font-large: 18px;
 
+// standard border radius
+@size-borderRadius: 4px;
 @size-borderWidth: 1px;
+
+@size-standard-height: 28px;
 
 @size-XXS: 3px;
 @size-XS: 6px;
@@ -18,23 +28,39 @@
 @size-XL: 24px;
 @size-XXL: 30px;
 
-@size-standard-height: 28px;
-
+// -----------------------------------------------------------------------------
 // Z Indices
+// -----------------------------------------------------------------------------
+
 @zIndexModal: 4000;
 
+// -----------------------------------------------------------------------------
 // Animations
+// -----------------------------------------------------------------------------
 @timing-animation-fade: 300ms;
 
-// Gradient values
-// used when defining a gradient (button)
+// -----------------------------------------------------------------------------
+// Gradients
+// -----------------------------------------------------------------------------
+
+// Used when defining a gradient (mostly buttons)
 @standardGradient: to bottom;
 @hoverGradient: to top;
 
-// Standard Border Radius
-@size-borderRadius: 4px;
+// -----------------------------------------------------------------------------
+// Shadows
+// -----------------------------------------------------------------------------
 
-// Standard Text color
+// Standard inset shadow
+@shadow-inset: 0 10px 10px -10px @color-gray-30 inset;
+
+@shadow-solid-outline: 0px 0px 0px 3px @color-primary-30;
+
+// -----------------------------------------------------------------------------
+// Colors
+// -----------------------------------------------------------------------------
+
+// Standard text color
 @color-textColor: @color-darkGray;
 @color-disabledText: tint(@color-textColor, 50%);
 
@@ -42,30 +68,27 @@
 @color-linkColor: @color-primary;
 @color-linkColorHover: darken(@color-linkColor, 20%);
 
-// Standard Border Color
-@color-borderColorLight: @color-gray;
-@color-borderColor: @color-mediumGray;
-
-// Standard Background Color
+// Standard background color
 @color-backgroundColor: @color-lightGray;
 
-// General color
+// General colors
 @color-white: #fff;
 @color-black: #000;
+@color-transparent: rgba(255, 255, 255, 0); // normalize transparent due to Safari bug
 
-// Primary Colors
+// Primary colors
 @color-primary: #2abbb0;
 @color-primaryMedium: tint(@color-primary, 65%);
 @color-primaryLight: tint(@color-primary, 85%);
 @color-primary-30: fade(@color-primary, 30%);
 
-// Genaral Grays
+// Grays
 @color-lightGray: #f4f4f4;
 @color-gray: #e3e3e3;
 @color-mediumGray: #c5c5c5;
 @color-darkGray: #333333;
 
-// Transparent Grays
+// Transparent grays
 @color-gray-5: fade(@color-black, 5%);
 @color-gray-10: fade(@color-black, 10%);
 @color-gray-25: fade(@color-black, 25%);
@@ -73,37 +96,25 @@
 @color-gray-50: fade(@color-black, 50%);
 @color-gray-60: fade(@color-black, 60%);
 
-// Normalize transparent due to Safari bug
-@color-transparent: rgba(255, 255, 255, 0);
+// Standard border color
+@color-borderColor: @color-mediumGray;
+@color-borderColorLight: @color-gray;
 
 // Table colors
 @color-table-header: #767b7f;
 @color-table-header-sorted: #525659;
 
-// ---------------------------------------------
-//                  Borders
-// ---------------------------------------------
-@border-standardBorder: 1px solid @color-borderColor;
-@border-lightBorder: 1px solid @color-borderColorLight;
-
-@border-table: 1px solid @color-table-header;
-@border-table-header: 1px solid #babdbe;
-@border-table-body: 1px solid @color-gray;
-
 // -------------------------------------
-//             Box Shadows
+// Featured Colors
 // -------------------------------------
-// Standard inset shadow
-@shadow-inset: 0 10px 10px -10px @color-gray-30 inset;
-@shadow-solid-outline: 0px 0px 0px 3px @color-primary-30;
-
 // Featured color variables are intended to only be used for components that
 // have "states" to them like `info`, `waring`, `danger` etc.
 
 // `@featured-color-default-borderColor` should only be used for banner or
 // button or button like components.
 
-// Do not use `@featured-color-primary` instead use `@primary-color`
+// Generally you should not use `@featured-color-primary` instead use
+// `@primary-color`
 
 // Featured colors
 @featured-color-default: #f3f3f3;
@@ -113,44 +124,107 @@
 @featured-color-warning: #feb209;
 @featured-color-danger: #f7403a;
 
-// Featured default Color
+// Featured default color
 @featured-color-default-borderColor: #c5c5c5;
 @featured-color-default-backgroundColor: #ededed;
 @featured-color-default-gradientStartColor: #f3f3f3;
 @featured-color-default-gradientEndColor: #e2e2e2;
 
-// Featured primary Color
+// Featured primary color
 @featured-color-primary-borderColor: @featured-color-primary;
 @featured-color-primary-borderColorLite: tint(@featured-color-primary, 60%);
 @featured-color-primary-backgroundColor: tint(@featured-color-primary, 70%);
 @featured-color-primary-gradientStartColor: tint(@featured-color-primary, 30%);
 @featured-color-primary-gradientEndColor: @featured-color-primary;
 
-// Featured success Color
+// Featured success color
 @featured-color-success-borderColor: @featured-color-success;
 @featured-color-success-borderColorLite: tint(@featured-color-success, 60%);
 @featured-color-success-backgroundColor: tint(@featured-color-success, 70%);
 @featured-color-success-gradientStartColor: tint(@featured-color-success, 30%);
 @featured-color-success-gradientEndColor: @featured-color-success;
 
-// Featured info Color
+// Featured info color
 @featured-color-info-borderColor: @featured-color-info;
 @featured-color-info-borderColorLite: tint(@featured-color-info, 60%);
 @featured-color-info-backgroundColor: tint(@featured-color-info, 70%);
 @featured-color-info-gradientStartColor: tint(@featured-color-info, 30%);
 @featured-color-info-gradientEndColor: @featured-color-info;
 
-// Featured warning Color
+// Featured warning color
 @featured-color-warning-borderColor: @featured-color-warning;
 @featured-color-warning-borderColorLite: tint(@featured-color-warning, 60%);
 @featured-color-warning-backgroundColor: tint(@featured-color-warning, 70%);
 @featured-color-warning-gradientStartColor: tint(@featured-color-warning, 30%);
 @featured-color-warning-gradientEndColor: @featured-color-warning;
 
-// Featured danger Color
+// Featured danger color
 @featured-color-danger-borderColor: @featured-color-danger;
 @featured-color-danger-borderColorLite: tint(@featured-color-danger, 60%);
 @featured-color-danger-backgroundColor: tint(@featured-color-danger, 70%);
 @featured-color-danger-gradientStartColor: tint(@featured-color-danger, 30%);
 @featured-color-danger-gradientEndColor: @featured-color-danger;
 
+
+// -------------------------------------
+// Chart Colors
+// -------------------------------------
+
+@color-chart-0: @featured-color-info;
+@color-chart-0-lightest: tint(@color-chart-0, 90%);
+@color-chart-0-light: tint(@color-chart-0, 65%);
+@color-chart-0-dark: shade(@color-chart-0, 35%);
+@color-chart-0-darkest: shade(@color-chart-0, 70%);
+
+@color-chart-1: #ff8700;
+@color-chart-1-lightest: tint(@color-chart-1, 90%);
+@color-chart-1-light: tint(@color-chart-1, 65%);
+@color-chart-1-dark: shade(@color-chart-1, 35%);
+@color-chart-1-darkest: shade(@color-chart-1, 70%);
+
+@color-chart-2: @color-primary;
+@color-chart-2-lightest: tint(@color-chart-2, 90%);
+@color-chart-2-light: tint(@color-chart-2, 65%);
+@color-chart-2-dark: shade(@color-chart-2, 35%);
+@color-chart-2-darkest: shade(@color-chart-2, 70%);
+
+@color-chart-3: #824bb0;
+@color-chart-3-lightest: tint(@color-chart-3, 90%);
+@color-chart-3-light: tint(@color-chart-3, 65%);
+@color-chart-3-dark: shade(@color-chart-3, 35%);
+@color-chart-3-darkest: shade(@color-chart-3, 70%);
+
+@color-chart-4: #fed100;
+@color-chart-4-lightest: tint(@color-chart-4, 90%);
+@color-chart-4-light: tint(@color-chart-4, 65%);
+@color-chart-4-dark: shade(@color-chart-4, 35%);
+@color-chart-4-darkest: shade(@color-chart-4, 70%);
+
+@color-chart-5: #d144b5;
+@color-chart-5-lightest: tint(@color-chart-5, 90%);
+@color-chart-5-light: tint(@color-chart-5, 65%);
+@color-chart-5-dark: shade(@color-chart-5, 35%);
+@color-chart-5-darkest: shade(@color-chart-5, 70%);
+
+// Semantic colors
+
+@color-chart-good: @featured-color-success;
+@color-chart-good-dark: shade(@color-chart-good, 35%);
+@color-chart-good-light: tint(@color-chart-good, 65%);
+
+@color-chart-bad: @featured-color-danger;
+@color-chart-bad-dark: shade(@color-chart-bad, 35%);
+@color-chart-bad-light: tint(@color-chart-bad, 65%);
+
+@color-chart-neutral: @color-gray;
+
+// -----------------------------------------------------------------------------
+// Borders
+// -----------------------------------------------------------------------------
+
+@border-standardBorder: 1px solid @color-borderColor;
+@border-lightBorder: 1px solid @color-borderColorLight;
+
+@border-table: 1px solid @color-table-header;
+@border-table-header: 1px solid #babdbe;
+@border-table-body: 1px solid @color-gray;

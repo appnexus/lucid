@@ -4,6 +4,7 @@ import _ from 'lodash';
 // creates a React component
 export function createClass(definition={}) {
 	const {
+		_lucidIsPrivate = false,
 		statics = {},
 		components = {},
 		reducers = {},
@@ -18,6 +19,7 @@ export function createClass(definition={}) {
 		statics: {
 			...statics,
 			...components,
+			_lucidIsPrivate,
 			reducers,
 			selectors,
 			propName
