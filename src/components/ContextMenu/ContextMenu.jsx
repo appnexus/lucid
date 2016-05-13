@@ -57,6 +57,10 @@ const ContextMenu = createClass({
 		 */
 		alignmentOffset: number,
 		/**
+		 * an alternative to `alignmentOffset`, a function that is applied with the width/height of the flyout. the result is used as the `alignmentOffset`
+		 */
+		getAlignmentOffset: func,
+		/**
 		 * Indicates whether the FlyOut will render or not. Defaults to `true`.
 		 */
 		isExpanded: bool,
@@ -89,7 +93,8 @@ const ContextMenu = createClass({
 			direction: 'down',
 			directonOffset: 0,
 			alignment: 'start',
-			alignmentOffset: 0,
+			// no default alignmentOffset so it can default to result of `getAlignmentOffset`
+			getAlignmentOffset: _.constant(0),
 			isExpanded: true,
 			onClickOut: null,
 			portalId: null
@@ -134,7 +139,7 @@ const ContextMenu = createClass({
 
 	componentWillUnmount() {
 		clearInterval(this.updateTargetRectangleIntervalId);
-		window.document.body.removeEventListener('click', this.onClickBodyEventListener);
+		document.body.removeEventListener('click', this.onClickBodyEventListener);
 	},
 
 	componentWillReceiveProps() {
@@ -184,7 +189,19 @@ const ContextMenu = createClass({
 		});
 	},
 
-	getFlyoutPosition(direction, alignment, position, targetRect, flyOutHeight, flyOutWidth, directonOffset, alignmentOffset) {
+	getFlyoutPosition({
+		direction,
+		alignment,
+		position,
+		targetRect,
+		flyOutHeight,
+		flyOutWidth,
+		directonOffset,
+		getAlignmentOffset,
+		alignmentOffset = alignment === ContextMenu.CENTER
+			? getAlignmentOffset(_.includes([ContextMenu.UP, ContextMenu.DOWN], direction) ? flyOutWidth : flyOutHeight)
+			: 0,
+	}) {
 
 		const {
 			CENTER,
@@ -226,7 +243,7 @@ const ContextMenu = createClass({
 		if (matcher({ direction: UP, alignment: CENTER })) {
 			return {
 				top: top - flyOutHeight - directonOffset,
-				left: left + (width / 2) - (flyOutWidth / 2)
+				left: left + (width / 2) - (flyOutWidth / 2) + alignmentOffset
 			};
 		}
 		if (matcher({ direction: DOWN, alignment: START })) {
@@ -244,7 +261,7 @@ const ContextMenu = createClass({
 		if (matcher({ direction: DOWN, alignment: CENTER })) {
 			return {
 				top: bottom + directonOffset,
-				left: left + (width / 2) - (flyOutWidth / 2)
+				left: left + (width / 2) - (flyOutWidth / 2) + alignmentOffset
 			};
 		}
 		if (matcher({ direction: LEFT, alignment: START })) {
@@ -261,7 +278,7 @@ const ContextMenu = createClass({
 		}
 		if (matcher({ direction: LEFT, alignment: CENTER })) {
 			return {
-				top: top - (flyOutHeight / 2) + (height / 2),
+				top: top - (flyOutHeight / 2) + (height / 2) + alignmentOffset,
 				right: clientWidth - left + directonOffset
 			};
 		}
@@ -279,7 +296,7 @@ const ContextMenu = createClass({
 		}
 		if (matcher({ direction: RIGHT, alignment: CENTER })) {
 			return {
-				top: top - (flyOutHeight / 2) + (height / 2),
+				top: top - (flyOutHeight / 2) + (height / 2) + alignmentOffset,
 				left: left + width + directonOffset
 			};
 		}
@@ -291,6 +308,7 @@ const ContextMenu = createClass({
 			props: {
 				alignment,
 				alignmentOffset,
+				getAlignmentOffset,
 				className,
 				direction,
 				directonOffset,
@@ -328,7 +346,17 @@ const ContextMenu = createClass({
 						style={_.assign({}, flyProps.style, {
 							position: 'absolute',
 							minWidth: targetRect.width,
-						}, this.getFlyoutPosition(direction, alignment, position, targetRect, flyOutHeight, flyOutWidth, directonOffset, alignmentOffset))}
+						}, this.getFlyoutPosition({
+							direction,
+							alignment,
+							position,
+							targetRect,
+							flyOutHeight,
+							flyOutWidth,
+							directonOffset,
+							getAlignmentOffset,
+							alignmentOffset,
+						}))}
 					>
 						{flyProps.children}
 					</Portal>
