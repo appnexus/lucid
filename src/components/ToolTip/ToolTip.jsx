@@ -89,28 +89,37 @@ const ToolTip = createClass({
 			className,
 			children,
 			style,
+			alignment,
+			direction,
 			...passThroughs
 		} = this.props;
 
 		const target = _.chain(findTypes(this.props, ToolTip.Target)).map('props').first().get('children').value();
 		const title = _.chain(findTypes(this.props, ToolTip.Title)).map('props').first().get('children').value();
 		const body = _.chain(findTypes(this.props, ToolTip.Body)).map('props').first().get('children').value();
+		const getAlignmentOffset = n => alignment === ContextMenu.CENTER
+			? 0
+			: alignment === ContextMenu.START
+				? n / 2 - 22.5
+				: -(n / 2 - 22.5);
 
 		return (
 			<div
 				className={cx('&', '&-base', className)}
 			>
 				<ContextMenu
+					alignment={ContextMenu.CENTER}
 					directonOffset={15}
-					alignmentOffset={15}
+					getAlignmentOffset={getAlignmentOffset}
 					{...passThroughs}
+					direction={direction}
 				>
 					<Target className={cx('&', 'target', className)}>
 						{target}
 					</Target>
 					<FlyOut
 						style={style}
-						className={cx('&-flyout', className)}
+						className={cx('&-flyout', className, direction, alignment)}
 					>
 						<h2 className={cx('&-title')}>{title}</h2>
 						{body}
