@@ -68,7 +68,10 @@ const docgenMap = _.mapValues(docgenMapRaw, (value, componentName) => {
 		return value;
 	}
 
-	const parentProps = _.get(docgenMapRaw, `${parentName}.props`);
+	// TODO: this hack only allows for one level of `extend` nesting, we'll need
+	// recursion to go deeper.
+	const parentExtend = _.get(docgenMapRaw, `${parentName}.customData.extend`);
+	const parentProps = _.get(docgenMapRaw, `${parentExtend || parentName}.props`);
 
 	if (!parentProps) {
 		throw new Error(`Looks like something is wrong with the custom metadata for ${componentName}. Please make sure the 'extend' refers to a real component that has valid props defined.`);
