@@ -17,12 +17,6 @@ const WarningIcon = createClass({
 		...Icon.propTypes,
 	},
 
-	getDefaultProps() {
-		return {
-			viewBox: '0 0 18 18',
-		};
-	},
-
 	render() {
 		const {
 			className,
@@ -34,9 +28,9 @@ const WarningIcon = createClass({
 				{...passThroughs}
 				className={cx('&', className)}
 			>
-				<path className={cx('&-triangle')} d='M9,1C8.2,1,7.4,1.6,7.1,2.3C5.9,4.3,1,12.9,0.5,13.7C-0.6,15.5,0.3,17,2.4,17h13.2 c2.1,0,3-1.5,1.9-3.3C14.9,9.2,13.7,6.9,11,2.3C10.6,1.5,9.9,1,9,1L9,1z'/>
-				<rect x='8.1' y='5.4' fill='#ffffff' width='1.8' height='6.3'/>
-				<rect x='8.1' y='12.6' fill='#ffffff' width='1.8' height='1.8'/>
+				<path className={cx('&-triangle')} d='M8.011,0 C7.379,0 6.747,0.457 6.268,1.369 C5.242,3.321 0.864,11.832 0.419,12.681 C-0.54,14.503 0.228,15.999 2.124,15.999 C3.186,15.999 10.737,15.999 13.877,15.999 C15.773,15.999 16.541,14.506 15.584,12.681 C13.209,8.156 12.127,5.892 9.755,1.369 C9.273,0.458 8.641,0 8.011,0 L8.011,0 z'/>
+				<rect x='7' y='4' fill='#FFFFFF' width='2' height='7'></rect>
+				<rect x='7' y='12' fill='#FFFFFF' width='2' height='2'></rect>
 			</Icon>
 		);
 	}
