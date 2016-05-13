@@ -2,7 +2,6 @@
 // Imports
 //
 
-@import './vendor/pure.css';
 @import '../styles/variables';
 @import './containers/colors';
 @import './containers/landing-page';
@@ -87,20 +86,18 @@ html {
 		position: fixed;
 		height: 100vh;
 		width: @App-sidebar-width;
-		padding: 15px;
-		padding-left: 0;
 		overflow: auto;
+		background-color: @color-white;
+		border-right: 1px solid @color-gray;
+
+		// Little fix for scroll bars
+		.lucid-VerticalListMenu-Item-expander {
+			margin-right: 10px;
+		}
 	}
 
 	&-body{
-		padding: 15px;
-		padding-left: @App-sidebar-width;
-	}
-
-	&-nav {
-		ul, li {
-			padding-left: 10px;
-			list-style-type: none;
-		}
+		// 1px is a hack that keeps spacing nice, I'm too lazy to figure it out
+		padding: 1px 15px 15px (@App-sidebar-width + 15);
 	}
 }

@@ -14,11 +14,17 @@ import {
 	useRouterHistory,
 } from 'react-router';
 import { createHashHistory } from 'history';
-import docgenMapRaw from './docgen.json';
 import { markdown } from 'markdown';
+import docgenMapRaw from './docgen.json';
+
 import ColorPalette from './containers/colors';
 import LandingPage from './containers/landing-page';
-import Table from '../components/Table/Table.jsx';
+
+import {
+	Table,
+	VerticalListMenuDumb,
+	stateManagement,
+} from '../index';
 
 const {
 	Thead,
@@ -27,6 +33,27 @@ const {
 	Th,
 	Td,
 } = Table;
+
+const foo = _.merge(VerticalListMenuDumb, {
+	reducers: {
+		onSelect(state = {}, i) {
+			return {
+				...state,
+				expandedIndices: _.xor(state.expandedIndices || [], [i]),
+			}
+		},
+		onToggle(state = {}, i) {
+			return {
+				...state,
+				expandedIndices: _.xor(state.expandedIndices || [], [i]),
+			}
+		}
+	}
+});
+
+const VerticalListMenu = stateManagement.buildHybridComponent(foo);
+
+const { Item } = VerticalListMenu;
 
 const hashHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
@@ -233,7 +260,7 @@ const Component = React.createClass({
 				<h2>{componentName} {privateString} {composesComponents}</h2>
 				<div dangerouslySetInnerHTML={descriptionAsHTML} />
 				<h3>Props</h3>
-				<Table hasBorder={false} style={{width:'100%'}}>
+				<Table style={{width:'100%'}}>
 					<Thead>
 						<Tr>
 							<Th>Name</Th>
@@ -278,7 +305,7 @@ const Component = React.createClass({
 								<h4>{childComponent.displayName}</h4>
 								<div dangerouslySetInnerHTML={getDescriptionAsHtml(childComponent.description)} />
 								{!_.isNil(childComponent.props) ? (
-									<Table hasBorder={false} style={{width:'100%'}}>
+									<Table style={{width:'100%'}}>
 										<Thead>
 											<Tr>
 												<Th>Name</Th>
@@ -356,36 +383,49 @@ const Component = React.createClass({
 });
 
 const App = React.createClass({
+	contextTypes: {
+		router: object,
+	},
+
 	propTypes: {
 		children: any,
+		location: any,
+	},
+
+	goToPath(path) {
+		this.context.router.push(path);
 	},
 
 	renderCategoryLinks(items) {
 		if (_.isPlainObject(items)) {
 			return (
-				<ul>
+				<VerticalListMenu selectedIndices={[]}>
 					{_.map(items, (kids, categoryName) => {
 						return (
-							<li key={categoryName}>
-								<b>{_.startCase(categoryName)}</b>
+							<Item hasExpander key={categoryName}>
+								<span>{_.startCase(categoryName)}</span>
 								{this.renderCategoryLinks(kids)}
-							</li>
+							</Item>
 						);
 					})}
-				</ul>
+				</VerticalListMenu>
 			);
 		}
 
 		return (
-			<ul>
+			<VerticalListMenu selectedIndices={[]}>
 				{_.map(items, (componentName) => {
 					return (
-						<li key={componentName}>
-							<Link to={`/components/${componentName}`}>{componentName}</Link>
-						</li>
+						<Item
+							key={componentName}
+							onSelect={_.partial(this.goToPath, `/components/${componentName}`)}
+							isSelected={this.props.location.pathname === `/components/${componentName}`}
+						>
+							{componentName}
+						</Item>
 					);
 				})}
-			</ul>
+			</VerticalListMenu>
 		);
 	},
 
@@ -406,17 +446,17 @@ const App = React.createClass({
 			<div className='App'>
 				<div className='App-sidebar'>
 					<nav className='App-nav'>
-
-						<ul>
-							<li>
-								<b>General</b>
-								<ul>
-									<li>
+						<VerticalListMenu>
+							<Item hasExpander>
+								General
+								<VerticalListMenu>
+									<Item>
 										<Link to='/colors'>Color Palette</Link>
-									</li>
-								</ul>
-							</li>
-						</ul>
+									</Item>
+								</VerticalListMenu>
+							</Item>
+						</VerticalListMenu>
+
 						{this.renderCategoryLinks(docgenGroups)}
 					</nav>
 				</div>
