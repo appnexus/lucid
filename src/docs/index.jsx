@@ -450,13 +450,11 @@ const App = React.createClass({
 				<div className='App-sidebar'>
 					<nav className='App-nav'>
 						<VerticalListMenu>
-							<Item hasExpander>
-								General
-								<VerticalListMenu>
-									<Item>
-										<Link to='/colors'>Color Palette</Link>
-									</Item>
-								</VerticalListMenu>
+							<Item
+								onSelect={_.partial(this.goToPath, '/colors')}
+								isSelected={this.props.location.pathname === '/colors'}
+							>
+								Color Palette
 							</Item>
 						</VerticalListMenu>
 
