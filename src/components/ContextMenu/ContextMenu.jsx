@@ -189,120 +189,6 @@ const ContextMenu = createClass({
 		});
 	},
 
-	getFlyoutPosition({
-		direction,
-		alignment,
-		position,
-		targetRect,
-		flyOutHeight,
-		flyOutWidth,
-		directonOffset,
-		getAlignmentOffset,
-		alignmentOffset = alignment === ContextMenu.CENTER
-			? getAlignmentOffset(_.includes([ContextMenu.UP, ContextMenu.DOWN], direction) ? flyOutWidth : flyOutHeight)
-			: 0,
-	}) {
-
-		const {
-			CENTER,
-			DOWN,
-			END,
-			LEFT,
-			RIGHT,
-			START,
-			UP,
-		} = ContextMenu;
-
-		const {
-			bottom,
-			left,
-			right,
-			top,
-			width,
-			height,
-		} = targetRect;
-
-		const {
-			clientWidth,
-		} = document.body;
-
-		const matcher = _.matches({ direction, alignment });
-
-		if (matcher({ direction: UP, alignment: START })) {
-			return {
-				top: top - flyOutHeight - directonOffset,
-				left: left - alignmentOffset
-			};
-		}
-		if (matcher({ direction: UP, alignment: END })) {
-			return {
-				top: top - flyOutHeight - directonOffset,
-				right: clientWidth - right - alignmentOffset
-			};
-		}
-		if (matcher({ direction: UP, alignment: CENTER })) {
-			return {
-				top: top - flyOutHeight - directonOffset,
-				left: left + (width / 2) - (flyOutWidth / 2) + alignmentOffset
-			};
-		}
-		if (matcher({ direction: DOWN, alignment: START })) {
-			return {
-				top: bottom + directonOffset,
-				left: left - alignmentOffset
-			};
-		}
-		if (matcher({ direction: DOWN, alignment: END })) {
-			return {
-				top: bottom + directonOffset,
-				right: clientWidth - right - alignmentOffset
-			};
-		}
-		if (matcher({ direction: DOWN, alignment: CENTER })) {
-			return {
-				top: bottom + directonOffset,
-				left: left + (width / 2) - (flyOutWidth / 2) + alignmentOffset
-			};
-		}
-		if (matcher({ direction: LEFT, alignment: START })) {
-			return {
-				top: top - alignmentOffset,
-				right: clientWidth - left + directonOffset
-			};
-		}
-		if (matcher({ direction: LEFT, alignment: END })) {
-			return {
-				top: top - flyOutHeight + height + alignmentOffset,
-				right: clientWidth - left + directonOffset
-			};
-		}
-		if (matcher({ direction: LEFT, alignment: CENTER })) {
-			return {
-				top: top - (flyOutHeight / 2) + (height / 2) + alignmentOffset,
-				right: clientWidth - left + directonOffset
-			};
-		}
-		if (matcher({ direction: RIGHT, alignment: START })) {
-			return {
-				top: top - alignmentOffset,
-				left: left + width + directonOffset
-			};
-		}
-		if (matcher({ direction: RIGHT, alignment: END })) {
-			return {
-				top: top - flyOutHeight + height + alignmentOffset,
-				left: left + width + directonOffset
-			};
-		}
-		if (matcher({ direction: RIGHT, alignment: CENTER })) {
-			return {
-				top: top - (flyOutHeight / 2) + (height / 2) + alignmentOffset,
-				left: left + width + directonOffset
-			};
-		}
-
-	},
-
 	render() {
 		const {
 			props: {
@@ -346,10 +232,9 @@ const ContextMenu = createClass({
 						style={_.assign({}, flyProps.style, {
 							position: 'absolute',
 							minWidth: targetRect.width,
-						}, this.getFlyoutPosition({
+						}, getFlyoutPosition({
 							direction,
 							alignment,
-							position,
 							targetRect,
 							flyOutHeight,
 							flyOutWidth,
@@ -367,3 +252,116 @@ const ContextMenu = createClass({
 });
 
 export default ContextMenu;
+
+function getFlyoutPosition({
+	direction,
+	alignment,
+	targetRect,
+	flyOutHeight,
+	flyOutWidth,
+	directonOffset,
+	getAlignmentOffset,
+	alignmentOffset = alignment === ContextMenu.CENTER
+		? getAlignmentOffset(_.includes([ContextMenu.UP, ContextMenu.DOWN], direction) ? flyOutWidth : flyOutHeight)
+		: 0,
+}) {
+
+	const {
+		CENTER,
+		DOWN,
+		END,
+		LEFT,
+		RIGHT,
+		START,
+		UP,
+	} = ContextMenu;
+
+	const {
+		bottom,
+		left,
+		right,
+		top,
+		width,
+		height,
+	} = targetRect;
+
+	const {
+		clientWidth,
+	} = document.body;
+
+	const matcher = _.matches({ direction, alignment });
+
+	if (matcher({ direction: UP, alignment: START })) {
+		return {
+			top: top - flyOutHeight - directonOffset,
+			left: left - alignmentOffset
+		};
+	}
+	if (matcher({ direction: UP, alignment: END })) {
+		return {
+			top: top - flyOutHeight - directonOffset,
+			right: clientWidth - right - alignmentOffset
+		};
+	}
+	if (matcher({ direction: UP, alignment: CENTER })) {
+		return {
+			top: top - flyOutHeight - directonOffset,
+			left: left + (width / 2) - (flyOutWidth / 2) + alignmentOffset
+		};
+	}
+	if (matcher({ direction: DOWN, alignment: START })) {
+		return {
+			top: bottom + directonOffset,
+			left: left - alignmentOffset
+		};
+	}
+	if (matcher({ direction: DOWN, alignment: END })) {
+		return {
+			top: bottom + directonOffset,
+			right: clientWidth - right - alignmentOffset
+		};
+	}
+	if (matcher({ direction: DOWN, alignment: CENTER })) {
+		return {
+			top: bottom + directonOffset,
+			left: left + (width / 2) - (flyOutWidth / 2) + alignmentOffset
+		};
+	}
+	if (matcher({ direction: LEFT, alignment: START })) {
+		return {
+			top: top - alignmentOffset,
+			right: clientWidth - left + directonOffset
+		};
+	}
+	if (matcher({ direction: LEFT, alignment: END })) {
+		return {
+			top: top - flyOutHeight + height + alignmentOffset,
+			right: clientWidth - left + directonOffset
+		};
+	}
+	if (matcher({ direction: LEFT, alignment: CENTER })) {
+		return {
+			top: top - (flyOutHeight / 2) + (height / 2) + alignmentOffset,
+			right: clientWidth - left + directonOffset
+		};
+	}
+	if (matcher({ direction: RIGHT, alignment: START })) {
+		return {
+			top: top - alignmentOffset,
+			left: left + width + directonOffset
+		};
+	}
+	if (matcher({ direction: RIGHT, alignment: END })) {
+		return {
+			top: top - flyOutHeight + height + alignmentOffset,
+			left: left + width + directonOffset
+		};
+	}
+	if (matcher({ direction: RIGHT, alignment: CENTER })) {
+		return {
+			top: top - (flyOutHeight / 2) + (height / 2) + alignmentOffset,
+			left: left + width + directonOffset
+		};
+	}
+
+}
