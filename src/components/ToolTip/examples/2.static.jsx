@@ -1,12 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
-import ToolTip from '../ToolTip';
+import { ToolTipDumb } from '../../../index';
 
 const {
 	Target,
 	Title,
 	Body
-} = ToolTip;
+} = ToolTipDumb;
 
 export default React.createClass({
 	render() {
@@ -14,7 +14,7 @@ export default React.createClass({
 			<section style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 				{_.map(['right', 'up', 'down', 'left'], direction => _.map(['start', 'center', 'end'], alignment =>
 					 <section key={`${direction}${alignment}`} style={{ margin: '90px' }}>
-						 <ToolTip
+						 <ToolTipDumb
 							 direction={direction}
 							 alignment={alignment}
 							 isExpanded={true}
@@ -33,7 +33,7 @@ export default React.createClass({
 									Target {direction} {alignment}
 								</div>
 							</Target>
-						</ToolTip>
+						</ToolTipDumb>
 					</section>)
 				)}
 			</section>

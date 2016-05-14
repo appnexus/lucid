@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import ToolTip from '../ToolTip';
+import { ToolTip } from '../../../index';
 
 const {
 	Target,
@@ -9,7 +9,6 @@ const {
 } = ToolTip;
 
 export default React.createClass({
-	getInitialState: () => ({ isExpanded: false }),
 	render() {
 		return (
 			<section style={{ display: 'flex', flexDirection: 'row' }}>
@@ -20,7 +19,6 @@ export default React.createClass({
 								 <ToolTip
 									 direction={direction}
 									 alignment={alignment}
-									 isExpanded={_.get(this.state, [direction, alignment, 'isExpanded'], false)}
 									 style={{ maxWidth: 400 }}
 								 >
 									<Title>
@@ -32,10 +30,7 @@ export default React.createClass({
 										My alignment is "{alignment}".
 									</Body>
 									<Target>
-										<div
-											onMouseOver={() => this.setState({ [direction]: { [alignment]: { isExpanded: true }}})}
-											onMouseOut={() => this.setState({ [direction]: { [alignment]: { isExpanded: false }}})}
-										>
+										<div>
 											Target {direction} {alignment}
 										</div>
 									</Target>

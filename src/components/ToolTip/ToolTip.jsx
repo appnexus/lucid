@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import ContextMenu from '../ContextMenu/ContextMenu';
+import * as reducers from './ToolTip.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes } from '../../util/component-types';
 
@@ -30,6 +31,9 @@ const {
 
 const ToolTip = createClass({
 	displayName: 'ToolTip',
+
+	reducers,
+
 	propTypes: {
 		/**
 		 * `children` should include exactly one ToolTip.Target and one ToolTip.FlyOut.
@@ -56,6 +60,14 @@ const ToolTip = createClass({
 		 */
 		isExpanded: bool,
 		/**
+		 * Called when cursor moves over the target
+		 */
+		onMouseOver: func,
+		/**
+		 * Called with cursor leaves the target and the tooltip
+		 */
+		onMouseOut: func,
+		/**
 		 * The `id` of the FlyOut portal element that is appended to `document.body`. Defaults to a generated `id`.
 		 */
 		portalId: string
@@ -78,10 +90,56 @@ const ToolTip = createClass({
 
 	getDefaultProps() {
 		return {
-			direction: ContextMenu.UP,
 			alignment: ContextMenu.CENTER,
-			portalId: null
+			direction: ContextMenu.UP,
+			isExpanded: false,
+			onMouseOut: _.noop,
+			onMouseOver: _.noop,
+			portalId: null,
 		};
+	},
+
+	getInitialState() {
+		return {
+			isMouseOverFlyout: false,
+			isMouseOverTarget: false,
+		};
+	},
+
+	handleMouseOut() {
+		setTimeout(() => {
+			const {
+				state: {
+					isMouseOverFlyout,
+					isMouseOverTarget
+				},
+				props: {
+					onMouseOut
+				}
+			} = this;
+			if (!isMouseOverFlyout && !isMouseOverTarget) {
+				onMouseOut();
+			}
+		}, 100);
+	},
+
+	handleMouseOverFlyout() {
+		this.setState({ isMouseOverFlyout: true });
+	},
+
+	handleMouseOutFlyout() {
+		this.setState({ isMouseOverFlyout: false });
+		this.handleMouseOut();
+	},
+
+	handleMouseOverTarget() {
+		this.setState({ isMouseOverTarget: true });
+		this.props.onMouseOver();
+	},
+
+	handleMouseOutTarget() {
+		this.setState({ isMouseOverTarget: false });
+		this.handleMouseOut();
 	},
 
 	render() {
@@ -109,17 +167,23 @@ const ToolTip = createClass({
 			>
 				<ContextMenu
 					alignment={ContextMenu.CENTER}
+					direction={direction}
 					directonOffset={15}
 					getAlignmentOffset={getAlignmentOffset}
 					{...passThroughs}
-					direction={direction}
+					onMouseOver={this.handleMouseOverTarget}
+					onMouseOut={this.handleMouseOutTarget}
 				>
-					<Target className={cx('&', 'target', className)}>
+					<Target
+						className={cx('&', 'target', className)}
+					>
 						{target}
 					</Target>
 					<FlyOut
 						style={style}
 						className={cx('&-flyout', className, direction, alignment)}
+						onMouseOver={this.handleMouseOverFlyout}
+						onMouseOut={this.handleMouseOutFlyout}
 					>
 						<h2 className={cx('&-title')}>{title}</h2>
 						{body}
