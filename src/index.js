@@ -58,7 +58,8 @@ import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import Switch from './components/Switch/Switch';
 import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
 import Table from './components/Table/Table';
-import TextField from './components/TextField/TextField';
+import TableGearIcon from './components/Icon/TableGearIcon/TableGearIcon';
+import TextField from './components/TextField/TextField'
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
 import Validation from './components/Validation/Validation';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
@@ -127,6 +128,7 @@ export {
 	Switch,
 	SwitchLabeled,
 	Table,
+	TableGearIcon,
 	Tabs,
 	TabsDumb,
 	TextField,

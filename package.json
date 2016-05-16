@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "0.2.9",
+  "version": "1.0.0-beta.3",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "repository": {
@@ -11,7 +11,7 @@
     "dev": "gulp docs-generate && webpack-dev-server --inline",
     "docs-upload-gh": "./scripts/docs-upload-gh.sh",
     "docs-upload": "gulp docs-upload",
-    "preversion": "rm -rf dist && gulp preversion",
+    "preversion": "rm -rf dist && TZ=UTC gulp preversion",
     "postversion": "gulp docs-upload",
     "test": "rm -rf dist && TZ=UTC gulp test",
     "test-tdd": "rm -rf dist && TZ=UTC gulp test-tdd"
@@ -34,7 +34,6 @@
     "d3-time": "^0.2.5",
     "d3-time-format": "^0.3.2",
     "lodash": "^4.11.0",
-    "react-addons-css-transition-group": "^0.14.0",
     "reselect": "^2.5.1"
   },
   "devDependencies": {
@@ -69,6 +68,7 @@
     "postcss-loader": "^0.8.1",
     "raw-loader": "^0.5.1",
     "react": "^0.14.0",
+    "react-addons-css-transition-group": "^0.14.0",
     "react-addons-test-utils": "^0.14.0",
     "react-docgen": "^2.7.0",
     "react-dom": "^0.14.0",
@@ -79,7 +79,8 @@
     "webpack-dev-server": "^1.14.1"
   },
   "peerDependencies": {
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "react": "^0.14.0 || ^15.0.2",
+    "react-dom": "^0.14.0 || ^15.0.2",
+    "react-addons-css-transition-group": "^0.14.0 || ^15.0.2"
   }
 }
