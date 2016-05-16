@@ -428,11 +428,12 @@ const Td = createClass({
 			isFirstSingle,
 			align,
 			hasBorderRight,
-			hasBorderLeft
+			hasBorderLeft,
+			...passThroughs,
 		} = this.props;
 
 		return (
-			<td {...this.props} className={cx(
+			<td {...passThroughs} className={cx(
 				'&-Td', {
 				'&-is-first-row': isFirstRow,
 				'&-is-last-row': isLastRow,
@@ -509,11 +510,12 @@ const Table = createClass({
 			hasBorder,
 			density,
 			hasWordWrap,
+			...passThroughs,
 		} = this.props;
 
 		return (
 			<table
-				{...this.props}
+				{...passThroughs}
 				className={cx('&', {
 					'&-density-extended': density === 'extended',
 					'&-density-compressed': density === 'compressed',
