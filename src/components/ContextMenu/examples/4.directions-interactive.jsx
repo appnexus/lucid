@@ -27,7 +27,7 @@ export default React.createClass({
 			alignment,
 			alignmentOffset,
 			getAlignmentOffset
-		} = this.state;
+		} = this.state || {};
 
 		const directions = [UP, DOWN, LEFT, RIGHT];
 		const alignments = [START, CENTER, END];
@@ -112,7 +112,5 @@ export default React.createClass({
 		</section>
 		);
 	},
-
-	getInitialState: () => ({}),
 
 });
