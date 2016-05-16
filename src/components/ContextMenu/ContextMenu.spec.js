@@ -9,6 +9,7 @@ import ContextMenu from './ContextMenu';
 
 describe('ContextMenu', () => {
 	common(ContextMenu, {
+		exemptFunctionProps: ['getAlignmentOffset'],
 		getDefaultProps: () => ({
 			children: [
 				(<ContextMenu.Target>Test</ContextMenu.Target>),
