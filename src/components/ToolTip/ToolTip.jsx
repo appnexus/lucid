@@ -64,7 +64,7 @@ const ToolTip = createClass({
 		 */
 		onMouseOver: func,
 		/**
-		 * Called with cursor leaves the target and the tooltip
+		 * Called when cursor leaves the target and the tooltip
 		 */
 		onMouseOut: func,
 		/**
