@@ -145,7 +145,6 @@ const ToolTip = createClass({
 	render() {
 		const {
 			className,
-			style,
 			alignment,
 			direction,
 			...passThroughs
@@ -161,34 +160,30 @@ const ToolTip = createClass({
 				: -(n / 2 - 22.5);
 
 		return (
-			<div
+			<ContextMenu
 				className={cx('&', '&-base', className)}
+				alignment={ContextMenu.CENTER}
+				direction={direction}
+				directonOffset={15}
+				getAlignmentOffset={getAlignmentOffset}
+				{...passThroughs}
+				onMouseOver={this.handleMouseOverTarget}
+				onMouseOut={this.handleMouseOutTarget}
 			>
-				<ContextMenu
-					alignment={ContextMenu.CENTER}
-					direction={direction}
-					directonOffset={15}
-					getAlignmentOffset={getAlignmentOffset}
-					{...passThroughs}
-					onMouseOver={this.handleMouseOverTarget}
-					onMouseOut={this.handleMouseOutTarget}
+				<Target
+					className={cx('&', className)}
 				>
-					<Target
-						className={cx('&', 'target', className)}
-					>
-						{target}
-					</Target>
-					<FlyOut
-						style={style}
-						className={cx('&-flyout', className, direction, alignment)}
-						onMouseOver={this.handleMouseOverFlyout}
-						onMouseOut={this.handleMouseOutFlyout}
-					>
-						<h2 className={cx('&-title')}>{title}</h2>
-						{body}
-					</FlyOut>
-				</ContextMenu>
-			</div>
+					{target}
+				</Target>
+				<FlyOut
+					className={cx('&-flyout', className, direction, alignment)}
+					onMouseOver={this.handleMouseOverFlyout}
+					onMouseOut={this.handleMouseOutFlyout}
+				>
+					<h2 className={cx('&-title')}>{title}</h2>
+					{body}
+				</FlyOut>
+			</ContextMenu>
 		);
 	}
 });
