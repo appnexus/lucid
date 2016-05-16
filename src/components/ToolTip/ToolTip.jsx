@@ -145,7 +145,6 @@ const ToolTip = createClass({
 	render() {
 		const {
 			className,
-			children,
 			style,
 			alignment,
 			direction,

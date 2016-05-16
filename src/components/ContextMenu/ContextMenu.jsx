@@ -199,7 +199,6 @@ const ContextMenu = createClass({
 				direction,
 				directonOffset,
 				isExpanded,
-				position,
 				style,
 				...passThroughs
 			},

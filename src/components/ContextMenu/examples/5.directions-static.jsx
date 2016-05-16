@@ -1,5 +1,6 @@
+import _ from 'lodash';
 import React from 'react';
-import { ContextMenu, Button } from '../../../index';
+import { ContextMenu } from '../../../index';
 
 const {
 	CENTER,

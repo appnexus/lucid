@@ -1,5 +1,6 @@
+import _ from 'lodash';
 import React from 'react';
-import { ContextMenu, Button, SingleSelect, TextField } from '../../../index';
+import { ContextMenu, SingleSelect, TextField } from '../../../index';
 
 const {
 	CENTER,
@@ -31,7 +32,6 @@ export default React.createClass({
 
 		const directions = [UP, DOWN, LEFT, RIGHT];
 		const alignments = [START, CENTER, END];
-		const alignmentOffsetArg = _.includes([UP, DOWN], direction) ? "flyOutHeight" : "flyOutWidth";
 
 		return (
 			<section>
