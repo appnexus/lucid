@@ -63,9 +63,9 @@ export function common(Component, {
 
 			const allClasses = parentClasses.concat(childrenClasses);
 
-			assert(_.every(allClasses, (className) => {
-				return _.includes(className, 'lucid-' + Component.displayName);
-			}));
+			_.forEach(allClasses, className => {
+				assert(_.includes(className, `lucid-${Component.displayName}`), `${className} must be scoped`);
+			});
 		});
 
 		it('should only use onX convention for function proptypes', () => {
