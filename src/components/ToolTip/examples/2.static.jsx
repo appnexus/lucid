@@ -18,7 +18,6 @@ export default React.createClass({
 							 direction={direction}
 							 alignment={alignment}
 							 isExpanded={true}
-							 style={{ maxWidth: 400 }}
 						 >
 							<Title>
 								Title: {direction} {alignment}

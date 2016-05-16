@@ -11,6 +11,7 @@ const {
 	bool,
 	func,
 	node,
+	number,
 	object,
 	oneOf,
 	string
@@ -44,9 +45,17 @@ const ToolTip = createClass({
 		 */
 		className: string,
 		/**
-		 * Passed through to the root element.
+		 * Passed through to the root target element.
 		 */
 		style: object,
+		/**
+		 * Passed through to the root FlyOut element.
+		 */
+		flyOutStyle: object,
+		/**
+		 * maximum width of the ToolTip FlyOut. Defaults to 400px.
+		 */
+		flyOutMaxWidth: number,
 		/**
 		 * direction of the FlyOut relative to Target. Defaults to `'down'`.
 		 */
@@ -92,6 +101,7 @@ const ToolTip = createClass({
 		return {
 			alignment: ContextMenu.CENTER,
 			direction: ContextMenu.UP,
+			flyOutStyle: {},
 			isExpanded: false,
 			onMouseOut: _.noop,
 			onMouseOver: _.noop,
@@ -147,6 +157,8 @@ const ToolTip = createClass({
 			className,
 			alignment,
 			direction,
+			flyOutMaxWidth,
+			flyOutStyle,
 			...passThroughs
 		} = this.props;
 
@@ -170,12 +182,14 @@ const ToolTip = createClass({
 				onMouseOver={this.handleMouseOverTarget}
 				onMouseOut={this.handleMouseOutTarget}
 			>
-				<Target
-					className={cx('&', className)}
-				>
+				<Target className={cx('&', className)}>
 					{target}
 				</Target>
 				<FlyOut
+					style={{
+						...flyOutStyle,
+						maxWidth: flyOutMaxWidth || flyOutStyle.maxWidth || 400
+					}}
 					className={cx('&-flyout', className, `&-${direction}`, `&-${alignment}`)}
 					onMouseOver={this.handleMouseOverFlyout}
 					onMouseOut={this.handleMouseOutFlyout}

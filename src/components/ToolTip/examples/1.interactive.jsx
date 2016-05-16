@@ -19,7 +19,6 @@ export default React.createClass({
 								 <ToolTip
 									 direction={direction}
 									 alignment={alignment}
-									 style={{ maxWidth: 400 }}
 								 >
 									<Title>
 										Title: {direction} {alignment}
