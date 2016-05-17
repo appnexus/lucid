@@ -190,7 +190,7 @@ const ToolTip = createClass({
 						...flyOutStyle,
 						maxWidth: flyOutMaxWidth || flyOutStyle.maxWidth || 400
 					}}
-					className={cx('&-flyout', className, `&-${direction}`, `&-${alignment}`)}
+					className={cx('&-FlyOut', className, `&-${direction}`, `&-${alignment}`)}
 					onMouseOver={this.handleMouseOverFlyout}
 					onMouseOut={this.handleMouseOutFlyout}
 				>
