@@ -240,6 +240,15 @@ const Th = createClass({
 		};
 	},
 
+	componentWillReceiveProps({ width }) {
+		if (!_.isNil(width) && width !== this.props.width) {
+			this.setState({
+				hasSetWidth: true,
+				passiveWidth: width,
+			});
+		}
+	},
+
 	render() {
 		const {
 			children,
@@ -253,7 +262,8 @@ const Th = createClass({
 			isSortable,
 			isSorted,
 			sortDirection,
-			style
+			style,
+			...passThroughs,
 		} = this.props;
 		const {
 			activeWidth,
@@ -264,7 +274,7 @@ const Th = createClass({
 
 		return (
 			<th
-				{...this.props}
+				{..._.omit(passThroughs, 'width')}
 				className={cx(
 					'&-Th', {
 					'&-is-first-row': isFirstRow,
