@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import ContextMenu from '../ContextMenu/ContextMenu';
+import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 import * as reducers from './ToolTip.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes } from '../../util/component-types';
@@ -44,6 +45,16 @@ const ToolTip = createClass({
 		 * Appended to the component-specific class names set on the root element.
 		 */
 		className: string,
+		/**
+		 * Set this to `true` if you want to have a `x` close icon.
+		 */
+		isCloseable: bool,
+		/**
+		 * Called when the user closes the `Banner`.
+		 *
+		 * Signature: `({ event, props }) => {}`
+		 */
+		onClose: func,
 		/**
 		 * Passed through to the root target element.
 		 */
@@ -102,7 +113,10 @@ const ToolTip = createClass({
 			alignment: ContextMenu.CENTER,
 			direction: ContextMenu.UP,
 			flyOutStyle: {},
+			isCloseable: false,
 			isExpanded: false,
+			kind: 'default',
+			onClose: _.noop,
 			onMouseOut: _.noop,
 			onMouseOver: _.noop,
 			portalId: null,
@@ -152,6 +166,10 @@ const ToolTip = createClass({
 		this.handleMouseOut();
 	},
 
+	handleClose(event) {
+		this.props.onClose({ event, props: this.props });
+	},
+
 	render() {
 		const {
 			className,
@@ -159,6 +177,7 @@ const ToolTip = createClass({
 			direction,
 			flyOutMaxWidth,
 			flyOutStyle,
+			isCloseable,
 			...passThroughs
 		} = this.props;
 
@@ -194,7 +213,8 @@ const ToolTip = createClass({
 					onMouseOver={this.handleMouseOverFlyout}
 					onMouseOut={this.handleMouseOutFlyout}
 				>
-					<h2 className={cx('&-title')}>{title}</h2>
+					{isCloseable ? <CrossIcon onClick={this.handleClose} className={flyOutCx('&-close')}/> : null}
+					<h2 className={flyOutCx('&-title')}>{title}</h2>
 					{body}
 				</FlyOut>
 			</ContextMenu>

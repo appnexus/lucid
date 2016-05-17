@@ -74,6 +74,31 @@ describe('ToolTip', () => {
 		});
 	});
 
+  describe('isCloseable', () => {
+    describe('true', () => {
+      it('should render a `CrossIcon`', () => {
+        const wrapper = shallow(
+          <ToolTip isExpanded isCloseable>
+            <Target>Target</Target>
+            <Body>Body</Body>
+          </ToolTip>
+        );
+        assert.equal(wrapper.find(CrossIcon).length, 1 ,'must include a CrossIcon');
+      });
+    });
+    describe('false', () => {
+      it('should not render a `CrossIcon`', () => {
+        const wrapper = shallow(
+          <ToolTip isExpanded>
+            <Target>Target</Target>
+            <Body>Body</Body>
+          </ToolTip>
+        );
+        assert.equal(wrapper.find(CrossIcon).length, 0 ,'must not include a CrossIcon');
+      });
+    });
+  });
+
 	describe('flyOutStyle', () => {
 		it('should pass flyOutStyle to the underlying ContextMenu FlyOut with a default maxWidth', () => {
 			const wrapper = shallow(
