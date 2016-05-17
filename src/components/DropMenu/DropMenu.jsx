@@ -159,7 +159,7 @@ const DropMenu = createClass({
 			selectedIndices: [],
 			focusedIndex: null,
 			portalId: 'DropMenu-Portal-' + Math.random().toString(16).substr(2),
-			flyOutStyle: { maxHeight: '20em' },
+			flyOutStyle: { maxHeight: '18em' },
 			onExpand: _.noop,
 			onCollapse: _.noop,
 			onSelect: _.noop,
