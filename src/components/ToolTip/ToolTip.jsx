@@ -7,6 +7,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ToolTip');
+const flyOutCx = cx.bind('&-FlyOut');
 
 const {
 	bool,
@@ -50,6 +51,17 @@ const ToolTip = createClass({
 		 */
 		isCloseable: bool,
 		/**
+		 * Style variations of the `ToolTip`.
+		 */
+		kind: oneOf([
+			'primary',
+			'success',
+			'warning',
+			'danger',
+			'info',
+			'default',
+		]),
+		/**
 		 * Called when the user closes the `Banner`.
 		 *
 		 * Signature: `({ event, props }) => {}`
@@ -64,7 +76,7 @@ const ToolTip = createClass({
 		 */
 		flyOutStyle: object,
 		/**
-		 * maximum width of the ToolTip FlyOut. Defaults to 400px.
+		 * maximum width of the ToolTip FlyOut. Defaults to 200px.
 		 */
 		flyOutMaxWidth: number,
 		/**
@@ -178,6 +190,7 @@ const ToolTip = createClass({
 			flyOutMaxWidth,
 			flyOutStyle,
 			isCloseable,
+			kind,
 			...passThroughs
 		} = this.props;
 
@@ -209,7 +222,7 @@ const ToolTip = createClass({
 						...flyOutStyle,
 						maxWidth: flyOutMaxWidth || flyOutStyle.maxWidth || 400
 					}}
-					className={cx('&-FlyOut', className, `&-${direction}`, `&-${alignment}`)}
+					className={flyOutCx('&', { [`${className}-FlyOut`]: className }, `&-${direction}`, `&-${alignment}`, `&-${kind}`)}
 					onMouseOver={this.handleMouseOverFlyout}
 					onMouseOut={this.handleMouseOutFlyout}
 				>
