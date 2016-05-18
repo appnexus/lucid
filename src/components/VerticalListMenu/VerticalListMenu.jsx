@@ -156,9 +156,9 @@ const VerticalListMenu = createClass({
 								})}
 								onClick={_.partial(this.handleClickItem, index, itemChildProp)}
 							>
-							<span className={cx('&-Item-content-text')}>
+							<div className={cx('&-Item-content-text')}>
 								{otherChildren}
-							</span>
+							</div>
 							{hasExpander ?
 								<div
 									className={cx('&-Item-expander')}
