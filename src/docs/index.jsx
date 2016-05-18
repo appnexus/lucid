@@ -35,24 +35,19 @@ const {
 	Td,
 } = Table;
 
-const foo = _.merge(VerticalListMenuDumb, {
+function toggleOrSelectReducer(state = {}, i) {
+	return {
+		...state,
+		expandedIndices: _.xor(state.expandedIndices || [], [i]),
+	}
+}
+
+const VerticalListMenu = stateManagement.buildHybridComponent(VerticalListMenuDumb, {
 	reducers: {
-		onSelect(state = {}, i) {
-			return {
-				...state,
-				expandedIndices: _.xor(state.expandedIndices || [], [i]),
-			}
-		},
-		onToggle(state = {}, i) {
-			return {
-				...state,
-				expandedIndices: _.xor(state.expandedIndices || [], [i]),
-			}
-		}
+		onSelect: toggleOrSelectReducer,
+		onToggle: toggleOrSelectReducer,
 	}
 });
-
-const VerticalListMenu = stateManagement.buildHybridComponent(foo);
 
 const { Item } = VerticalListMenu;
 
@@ -393,7 +388,7 @@ const App = React.createClass({
 				<VerticalListMenu selectedIndices={[]}>
 					{_.map(sortedItems, ([categoryName, kids]) => {
 						return (
-							<Item hasExpander key={categoryName}>
+							<Item hasExpander isActionable={false} key={categoryName}>
 								<span>{_.startCase(categoryName)}</span>
 								{this.renderCategoryLinks(kids)}
 							</Item>
@@ -437,7 +432,8 @@ const App = React.createClass({
 			<div className='App'>
 				<div className='App-sidebar'>
 					<Link to='/'>
-						<img src='img/logo.svg' />
+						{/* `width` helps prevent a FOUC with webpack */}
+						<img src='img/logo.svg' width={214} />
 					</Link>
 
 					<nav className='App-nav'>
