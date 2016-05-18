@@ -240,6 +240,15 @@ const Th = createClass({
 		};
 	},
 
+	componentWillReceiveProps({ width }) {
+		if (!_.isNil(width) && width !== this.props.width) {
+			this.setState({
+				hasSetWidth: true,
+				passiveWidth: width,
+			});
+		}
+	},
+
 	render() {
 		const {
 			children,
@@ -253,7 +262,8 @@ const Th = createClass({
 			isSortable,
 			isSorted,
 			sortDirection,
-			style
+			style,
+			...passThroughs,
 		} = this.props;
 		const {
 			activeWidth,
@@ -264,7 +274,7 @@ const Th = createClass({
 
 		return (
 			<th
-				{...this.props}
+				{..._.omit(passThroughs, 'width')}
 				className={cx(
 					'&-Th', {
 					'&-is-first-row': isFirstRow,
@@ -428,11 +438,12 @@ const Td = createClass({
 			isFirstSingle,
 			align,
 			hasBorderRight,
-			hasBorderLeft
+			hasBorderLeft,
+			...passThroughs,
 		} = this.props;
 
 		return (
-			<td {...this.props} className={cx(
+			<td {...passThroughs} className={cx(
 				'&-Td', {
 				'&-is-first-row': isFirstRow,
 				'&-is-last-row': isLastRow,
@@ -509,11 +520,12 @@ const Table = createClass({
 			hasBorder,
 			density,
 			hasWordWrap,
+			...passThroughs,
 		} = this.props;
 
 		return (
 			<table
-				{...this.props}
+				{...passThroughs}
 				className={cx('&', {
 					'&-density-extended': density === 'extended',
 					'&-density-compressed': density === 'compressed',
