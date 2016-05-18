@@ -73,7 +73,7 @@ const ButtonGroup = createClass({
 
 	handleSelect({ event, props: childProps }) {
 		const { callbackId } = childProps;
-		const clickedButtonProps = findTypes(this.props, ButtonGroup.Button)[callbackId];
+		const clickedButtonProps = _.get(findTypes(this.props, ButtonGroup.Button)[callbackId], 'props', {});
 
 		// If the consumer passed in an `onClick` to the child `ButtonGroup.Button`
 		// component, we should make sure to call that in addition to the
