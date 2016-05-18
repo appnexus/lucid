@@ -14,6 +14,7 @@ const colorList = [
 			'color-white',
 			'color-black',
 			'color-backgroundColor',
+			'color-pageBackgroundColor',
 			'color-borderColor',
 		]
 	},
