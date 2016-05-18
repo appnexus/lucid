@@ -7,10 +7,13 @@ const readmeRaw = require('!!raw!../../../README.md');
 
 const cx = lucidClassNames.bind('&-LandingPage');
 
+const squareDelta = -60;
+const damping = 30;
+
 const LandingPage = React.createClass({
 	getInitialState() {
 		return {
-			showCarpet: false,
+			isCarpeted: false,
 		}
 	},
 
@@ -18,14 +21,15 @@ const LandingPage = React.createClass({
 	componentDidUpdate: handleHighlightCode,
 
 	toggleCarpet() {
-		this.setState({ showCarpet: !this.state.showCarpet });
+		this.setState({ isCarpeted: !this.state.isCarpeted });
 	},
 
 	render() {
+		const { isCarpeted } = this.state;
 		return (
-		<div className={cx('&', {
-			'&-is-carpeted': this.state.showCarpet,
-		})} >
+			<div className={cx('&', {
+				'&-is-carpeted': isCarpeted,
+			})} >
 				{/* Logo */}
 				<svg viewBox='0 0 400.4 179.8' width={400}>
 					<g>
@@ -137,13 +141,21 @@ const LandingPage = React.createClass({
 						/>
 						<path d='M86.2,91.2v12.4H37.5V91.2C37.5,91.2,86.4,91.2,86.2,91.2z'/>
 						<Motion
-							defaultStyle={{opacity: 0, x: -40}}
-							style={{opacity: spring(1), x: spring(0, { damping: 30 })}}
+							defaultStyle={{
+								opacity: 0,
+								x: 37.5,
+								y: 36.7 + squareDelta,
+							}}
+							style={{
+								opacity: spring(1),
+								x: spring(37.5),
+								y: spring(36.7, { damping }),
+							}}
 						>
 							{value =>
 								<rect
-									x={37.5 + value.x}
-									y='36.7'
+									x={value.x}
+									y={value.y}
 									className={cx('&-primary')}
 									width='12.4'
 									height='12.4'
@@ -152,13 +164,21 @@ const LandingPage = React.createClass({
 							}
 						</Motion>
 						<Motion
-							defaultStyle={{opacity: 0, x: -40}}
-							style={{opacity: spring(1), x: spring(0, { damping: 25 })}}
+							defaultStyle={{
+								opacity: 0,
+								x: 37.5 - squareDelta,
+								y: 54.9,
+							}}
+							style={{
+								opacity: spring(1),
+								x: spring(37.5, { damping }),
+								y: spring(54.9),
+							}}
 						>
 							{value =>
 								<rect
-									x={37.5 + value.x}
-									y='54.9'
+									x={value.x}
+									y={value.y}
 									className={cx('&-primary')}
 									width='12.4'
 									height='12.4'
@@ -167,13 +187,21 @@ const LandingPage = React.createClass({
 							}
 						</Motion>
 						<Motion
-							defaultStyle={{opacity: 0, x: -40}}
-							style={{opacity: spring(1), x: spring(0, { damping: 20 })}}
+							defaultStyle={{
+								opacity: 0,
+								x: 37.5 + squareDelta,
+								y: 73,
+							}}
+							style={{
+								opacity: spring(1),
+								x: spring(37.5, { damping }),
+								y: spring(73),
+							}}
 						>
 							{value =>
 								<rect
-									x={37.5 + value.x}
-									y='73'
+									x={value.x}
+									y={value.y}
 									className={cx('&-primary')}
 									width='12.4'
 									height='12.4'
@@ -182,6 +210,27 @@ const LandingPage = React.createClass({
 							}
 						</Motion>
 					</g>
+					{/* put a bird on it */}
+					<Motion
+						style={{
+							opacity: spring(isCarpeted ? 1 : 0),
+							x: spring(isCarpeted ? 140 : 20),
+							y: spring(isCarpeted ? 8 : -50),
+						}}
+					>
+						{value =>
+							<g
+								transform={`translate(${value.x}, ${value.y})`}
+								className={cx('&-bird')}
+								style={{
+									opacity: value.opacity
+								}}
+							>
+								<path d='M33.49,3.228 C35.125,3.062 37.25,3.313 38.125,3.688 C39,4.062 41.327,5.479 42.184,7.029 L47.125,6.063 L47.201,6.054 C48.274,5.997 48.312,6.394 47.75,7.188 C46.562,8.563 46.312,8.563 46.312,8.563 C46.312,8.563 47.562,8.5 48.375,8.563 C49.188,8.625 49.375,9.063 48.625,9.75 C47.37,10.812 46.053,11.801 44.744,12.796 C44.917,13.329 44.785,12.897 45,14.125 C45.312,16.875 45.938,22.438 41.188,29.25 C38.224,33.523 33.806,36.715 28.564,37.371 L28.188,43.5 C28.188,43.5 29.25,43.375 30.188,43.375 C31.125,43.375 32.75,43.625 32.938,45.062 C33.125,46.5 31.562,46.8 31.562,46.8 L22.438,46.8 C20.688,46.8 20.688,45.125 20.688,45.125 L20.628,37.667 C12.595,37.018 4.732,31.957 0.996,24.75 C0.366,22.812 2.188,22.938 3.875,23.125 C5.563,23.312 10.75,23.375 14.625,21.188 C18.5,19 21.188,14.875 22.75,12.5 C24.312,10.125 27.375,6.125 28.562,5.188 C30.013,4.014 31.855,3.394 33.49,3.228 z M25.487,37.739 L24,37.812 L23.861,37.813 C23.664,39.705 23.496,41.601 23.375,43.5 C24.655,43.352 25.438,43.438 25.438,43.438 L25.487,37.739 z' fill='#000000'/>
+								<path fill='#2abbb0' d='M35,13.312 C33.688,13.312 32.625,12.249 32.625,10.938 C32.625,9.626 33.688,8.562 35,8.562 C36.312,8.562 37.375,9.626 37.375,10.938 C37.375,12.249 36.312,13.312 35,13.312 z' />
+							</g>
+						}
+					</Motion>
 				</svg>
 
 				<div
