@@ -1,3 +1,4 @@
+/*eslint no-console: 0*/
 import React from 'react';
 import { AutocompleteDumb as Autocomplete } from '../../../index';
 

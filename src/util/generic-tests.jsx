@@ -17,7 +17,7 @@ export function common(Component, {
 		return _.assign({}, getDefaultProps(), props);
 	}
 
-	describe(`[common]`, () => {
+	describe('[common]', () => {
 		it('should have a `displayName` defined', () => {
 			assert(Component.displayName);
 		});
@@ -111,7 +111,7 @@ export function common(Component, {
 
 // Common tests for all our icon components
 export function icons(Component) {
-	describeWithDOM(`[icon]`, () => {
+	describeWithDOM('[icon]', () => {
 		it('should pass through isBadge prop to underlying Icon component', () => {
 			const wrapper = mount(<Component isBadge={true} />);
 			const classNames = wrapper.find('svg').prop('className').split(' ');

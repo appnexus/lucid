@@ -129,7 +129,7 @@ const Grid = createClass({
 		/**
 		 * Any valid React component
 		 */
-		 children: node,
+		children: node,
 	},
 
 	render() {

@@ -37,7 +37,7 @@ export function bindReducersToState(reducers, { getState, setState }) {
 	return _.reduce(getDeepPaths(reducers), (memo, path) => {
 		return _.set(memo, path, bindReducerToState(_.get(reducers, path), { getState, setState }, path));
 	}, {});
-};
+}
 
 export function getStatefulPropsContext(reducers, { getState, setState }) {
 	const boundReducers = bindReducersToState(reducers, { getState, setState });
@@ -69,7 +69,7 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 			return _.mergeWith({}, boundReducers, getState(), props, combineFunctionsCustomizer);
 		}
 	};
-};
+}
 
 export function safeMerge (objValue, srcValue) {
 	// don't merge arrays
@@ -81,9 +81,9 @@ export function safeMerge (objValue, srcValue) {
 	// If we don't have this clause, lodash (as of 4.7.0) will attempt to
 	// deeply clone the react children, which is really freaking slow.
 	if (isValidElement(srcValue)
-			|| (_.isArray(srcValue) && _.some(srcValue, isValidElement))
-			|| (_.isArray(srcValue) && _.isUndefined(objValue))
-		 ) {
+		|| (_.isArray(srcValue) && _.some(srcValue, isValidElement))
+		|| (_.isArray(srcValue) && _.isUndefined(objValue))
+	) {
 		return srcValue;
 	}
 

@@ -1,3 +1,4 @@
+/*eslint no-console: 0*/
 // Allow webpack to handle less compilation here
 require('./index.less');
 require('../index.less');

@@ -121,9 +121,9 @@ describeWithDOM('Expander', () => {
 				<Expander isExpanded={false} onToggle={onToggle} />
 			);
 
-			wrapper.find(`.lucid-Expander-header`).simulate('click');
-			wrapper.find(`.lucid-Expander-icon`).simulate('click');
-			wrapper.find(`.lucid-Expander-text`).simulate('click');
+			wrapper.find('.lucid-Expander-header').simulate('click');
+			wrapper.find('.lucid-Expander-icon').simulate('click');
+			wrapper.find('.lucid-Expander-text').simulate('click');
 
 			assert.equal(onToggle.args[0][0], true);
 			assert.equal(onToggle.args[1][0], true);
@@ -138,9 +138,9 @@ describeWithDOM('Expander', () => {
 				<Expander isExpanded={true} onToggle={onToggle} />
 			);
 
-			wrapper.find(`.lucid-Expander-header`).simulate('click');
-			wrapper.find(`.lucid-Expander-icon`).simulate('click');
-			wrapper.find(`.lucid-Expander-text`).simulate('click');
+			wrapper.find('.lucid-Expander-header').simulate('click');
+			wrapper.find('.lucid-Expander-icon').simulate('click');
+			wrapper.find('.lucid-Expander-text').simulate('click');
 
 			assert.equal(onToggle.args[0][0], false);
 			assert.equal(onToggle.args[1][0], false);

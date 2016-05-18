@@ -3,4 +3,4 @@ export function onToggle(state = {}) {
 		...state,
 		isExpanded: !state.isExpanded
 	};
-};
+}

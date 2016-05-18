@@ -18,7 +18,7 @@ export function bindClassNames(value='', variable=/&/g) {
 			classNames(...args).split(' '),
 			(className) => className.replace(variable, value)
 		).join(' ');
-	};
+	}
 
 	return _.assign(cx, {
 		bind(nextValue=value, ...args) {

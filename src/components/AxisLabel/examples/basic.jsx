@@ -35,7 +35,7 @@ export default React.createClass({
 					/>
 				</g>
 
-				<g transform={`translate(0,0)`}>
+				<g transform={'translate(0,0)'}>
 					<AxisLabel
 						orient='left'
 						width={margin.left}
@@ -64,7 +64,7 @@ export default React.createClass({
 					/>
 				</g>
 
-				<g transform={`translate(0, 0)`}>
+				<g transform={'translate(0, 0)'}>
 					<AxisLabel
 						orient='top'
 						color={2}
