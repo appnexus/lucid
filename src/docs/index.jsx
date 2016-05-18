@@ -16,8 +16,9 @@ import {
 import { createHashHistory } from 'history';
 import { markdown } from 'markdown';
 import docgenMapRaw from './docgen.json';
+import { handleHighlightCode, toMarkdown } from './util';
 
-import ColorPalette from './containers/colors';
+import ColorPalette from './containers/color-palette';
 import LandingPage from './containers/landing-page';
 
 import {
@@ -103,24 +104,6 @@ const examplesByComponent = _.chain(reqExamples.keys())
 	})
 	.groupBy('componentName')
 	.value();
-
-function handleHighlightCode() {
-	if (window.hljs) { //eslint-disable-line
-		_.each(document.querySelectorAll('pre code'), (block) => {
-			hljs.highlightBlock(block); //eslint-disable-line
-		});
-	}
-}
-
-function getDescriptionAsHtml(description) {
-	return _.chain(description)
-		.thru((description) => {
-			return {
-				__html: markdown.toHTML(description)
-			};
-		})
-		.value();
-}
 
 const {
 	PropTypes: {
@@ -229,7 +212,7 @@ const Component = React.createClass({
 			.sortBy(x => x[0]) // sort by property name
 			.value()
 
-		const descriptionAsHTML = getDescriptionAsHtml(_.get(docgenMap, `${componentName}.description`));
+		const descriptionAsHTML = toMarkdown(_.get(docgenMap, `${componentName}.description`));
 
 		const privateString = _.get(docgenMap, `${componentName}.isPrivateComponent`) ? '(private)' : '';
 
@@ -259,7 +242,7 @@ const Component = React.createClass({
 			.value();
 
 		return (
-			<div>
+			<div className='Component'>
 				<h2>{componentName} {privateString} {composesComponents}</h2>
 				<div dangerouslySetInnerHTML={descriptionAsHTML} />
 				<h3>Props</h3>
@@ -306,7 +289,7 @@ const Component = React.createClass({
 						{_.map(childComponents, (childComponent) => (
 							<section key={childComponent.displayName}>
 								<h4>{childComponent.displayName}</h4>
-								<div dangerouslySetInnerHTML={getDescriptionAsHtml(childComponent.description)} />
+								<div dangerouslySetInnerHTML={toMarkdown(childComponent.description)} />
 								{!_.isNil(childComponent.props) ? (
 									<Table style={{width:'100%'}}>
 										<Thead>
@@ -401,9 +384,14 @@ const App = React.createClass({
 
 	renderCategoryLinks(items) {
 		if (_.isPlainObject(items)) {
+			const sortedItems = _.chain(items)
+				.toPairs()
+				.sortBy((pair) => pair[0])
+				.value();
+
 			return (
 				<VerticalListMenu selectedIndices={[]}>
-					{_.map(items, (kids, categoryName) => {
+					{_.map(sortedItems, ([categoryName, kids]) => {
 						return (
 							<Item hasExpander key={categoryName}>
 								<span>{_.startCase(categoryName)}</span>
@@ -417,7 +405,7 @@ const App = React.createClass({
 
 		return (
 			<VerticalListMenu selectedIndices={[]}>
-				{_.map(items, (componentName) => {
+				{_.map(_.sortBy(items), (componentName) => {
 					return (
 						<Item
 							key={componentName}
@@ -448,17 +436,21 @@ const App = React.createClass({
 		return (
 			<div className='App'>
 				<div className='App-sidebar'>
+					<Link to='/'>
+						<img src='img/logo.svg' />
+					</Link>
+
 					<nav className='App-nav'>
+						{this.renderCategoryLinks(docgenGroups)}
+
 						<VerticalListMenu>
 							<Item
-								onSelect={_.partial(this.goToPath, '/colors')}
-								isSelected={this.props.location.pathname === '/colors'}
+								onSelect={_.partial(this.goToPath, '/color-palette')}
+								isSelected={this.props.location.pathname === '/color-palette'}
 							>
 								Color Palette
 							</Item>
 						</VerticalListMenu>
-
-						{this.renderCategoryLinks(docgenGroups)}
 					</nav>
 				</div>
 				<div className='App-body'>
@@ -474,7 +466,7 @@ render((
 		<Route path='/' component={App}>
 			<IndexRoute component={LandingPage} />
 			<Route path='/components/:componentName' component={Component}/>
-			<Route path='/colors' component={ColorPalette}/>
+			<Route path='/color-palette' component={ColorPalette}/>
 		</Route>
 	</Router>
 ), document.querySelector('#docs'));

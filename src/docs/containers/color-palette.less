@@ -1,8 +1,9 @@
 @ColorPalette-variables:
+	color-white,
+	color-black,
 	color-primary,
 	color-primaryMedium,
 	color-primaryLight,
-	color-white,
 	color-textColor,
 	color-disabledText,
 	color-linkColor,
@@ -88,32 +89,30 @@
 	color-chart-bad,
 	color-chart-bad-dark,
 	color-chart-bad-light,
-	color-black;
+	color-chart-neutral;
 
 .ColorPalette-loop(@i: length(@ColorPalette-variables)) when (@i > 0) {
 	@name: extract(@ColorPalette-variables, @i);
 
-	&-@{name} { background-color: @@name }
+	&-@{name} {
+		background-color: @@name;
+		color: contrast(@@name);
+	}
 
 	// Recurse
 	.ColorPalette-loop(@i - 1);
 }
 
-.lucid-ColorPalette {
+.ColorPalette {
+	padding: 15px;
+
 	// Invoke the loop
 	.ColorPalette-loop();
-	border: 1px solid @color-borderColor;
-	background-color: @color-backgroundColor;
-	width: 200px;
-	padding: @size-standard;
-	margin-right: @size-standard;
-	margin-bottom: @size-standard;
-	border-radius: @size-borderRadius;
 
-	& > div {
-		height: 100px;
-		border-radius: @size-borderRadius;
-		border: 1px solid @color-borderColor;
+	&-item {
+		padding: @size-standard;
+		font-size: @size-font;
+		font-family: monospace;
 	}
 
 	&-hex-string {

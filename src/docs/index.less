@@ -3,9 +3,10 @@
 //
 
 @import '../styles/variables';
-@import './containers/colors';
-@import './containers/landing-page';
 @import '../styles/mixins';
+
+@import './containers/color-palette';
+@import './containers/landing-page';
 
 // Normalize Mixins
 #normalize > .html();
@@ -34,10 +35,13 @@ html {
 //
 
 .Component {
+	padding: 15px;
+
 	&-examples {
 		list-style: none;
 		padding-left: 0;
 	}
+
 	&-examples.Button {
 
 		> li > section {
@@ -89,6 +93,7 @@ html {
 		overflow: auto;
 		background-color: @color-white;
 		border-right: 1px solid @color-gray;
+		z-index: 1;
 
 		// Little fix for scroll bars
 		.lucid-VerticalListMenu-Item-expander {
@@ -97,7 +102,6 @@ html {
 	}
 
 	&-body{
-		// 1px is a hack that keeps spacing nice, I'm too lazy to figure it out
-		padding: 1px 15px 15px (@App-sidebar-width + 15);
+		padding-left: @App-sidebar-width;
 	}
 }
