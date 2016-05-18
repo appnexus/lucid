@@ -172,7 +172,7 @@ module.exports = {
 
 					var currentBranch = stdoutBranch.trim().replace(/\//g, '-'); // clean branch and replace forward slashes
 
-					var tarStream = gulp.src('dist/docs/*')
+					var tarStream = gulp.src('dist/docs/**/*')
 						.pipe(tar(currentBranch + '.tar'))
 						.pipe(gzip())
 						.pipe(gulp.dest('/tmp'));
