@@ -1,6 +1,6 @@
-@tooltip-pointer-inner-width: 8px;
-@tooltip-pointer-outer-width: 9px;
-@tooltip-pointer-offset: 13px;
+@Tooltip-pointer-inner-width: 8px;
+@Tooltip-pointer-outer-width: 9px;
+@Tooltip-pointer-offset: 13px;
 
 .lucid-ToolTip-FlyOut {
 	background-color: @color-white;
@@ -193,15 +193,15 @@
 		width: 0;
 		position: absolute;
 		pointer-events: none;
-		border: 7px solid transparent;
+		border: 7px solid @color-transparent;
 	}
 
 	&:after {
-		border-width: @tooltip-pointer-inner-width;
+		border-width: @Tooltip-pointer-inner-width;
 	}
 
 	&:before {
-		border-width: @tooltip-pointer-outer-width;
+		border-width: @Tooltip-pointer-outer-width;
 	}
 
 	&-up:after,
@@ -210,7 +210,7 @@
 	}
 
 	&-up:after {
-		margin-left: -@tooltip-pointer-inner-width;
+		margin-left: -@Tooltip-pointer-inner-width;
 	}
 
 	&-down:after,
@@ -227,12 +227,12 @@
 
 	&-up&-center:before,
 	&-down&-center:before {
-		margin-left: -@tooltip-pointer-outer-width;
+		margin-left: -@Tooltip-pointer-outer-width;
 	}
 
 	&-up&-center:after,
 	&-down&-center:after {
-		margin-left: -@tooltip-pointer-inner-width;
+		margin-left: -@Tooltip-pointer-inner-width;
 	}
 
 	&-up&-start:after,
@@ -249,14 +249,14 @@
 	&-down&-start:before,
 	&-up&-start:after,
 	&-up&-start:before {
-		left: @tooltip-pointer-offset;
+		left: @Tooltip-pointer-offset;
 	}
 
 	&-down&-end:after,
 	&-down&-end:before,
 	&-up&-end:after,
 	&-up&-end:before {
-		right: @tooltip-pointer-offset;
+		right: @Tooltip-pointer-offset;
 	}
 
 	&-left:after,
@@ -278,26 +278,26 @@
 
 	&-left&-center:before,
 	&-right&-center:before {
-		margin-top: -@tooltip-pointer-outer-width;
+		margin-top: -@Tooltip-pointer-outer-width;
 	}
 
 	&-left&-center:after,
 	&-right&-center:after {
-		margin-top: -@tooltip-pointer-inner-width;
+		margin-top: -@Tooltip-pointer-inner-width;
 	}
 
 	&-left&-start:after,
 	&-left&-start:before,
 	&-right&-start:after,
 	&-right&-start:before {
-		top: @tooltip-pointer-offset;
+		top: @Tooltip-pointer-offset;
 	}
 
 	&-left&-end:after,
 	&-left&-end:before,
 	&-right&-end:after,
 	&-right&-end:before {
-		bottom: @tooltip-pointer-offset;
+		bottom: @Tooltip-pointer-offset;
 	}
 
 	&-left&-start:after,
@@ -315,7 +315,7 @@
 		top: 6px;
 		right: 6px;
 		cursor: pointer;
-		fill: fade(@color-black, 50%);
+		fill: @color-gray-50;
 		&:hover {
 			fill: @color-black;
 		}
