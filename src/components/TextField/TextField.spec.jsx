@@ -41,6 +41,7 @@ describe('TextField', () => {
 		assert.equal(wrapper.state('value'), 'end');
 	});
 
+	// This test had value, but it's been known to be flaky.
 	it('should postpone state changes if the user recently typed something in', (done) => {
 		const wrapper = shallow(
 			<TextField value='start' lazyLevel={1} />
@@ -61,7 +62,7 @@ describe('TextField', () => {
 		setTimeout(() => {
 			assert.equal(wrapper.state('value'), 'end');
 			done();
-		}, 5);
+		}, 20);
 	});
 
 	it('should callback onSubmit when the user hits enter', () => {
