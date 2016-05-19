@@ -28,7 +28,7 @@ const {
 	number,
 	object,
 	oneOf,
-	string
+	string,
 } = React.PropTypes;
 
 /**
@@ -45,23 +45,23 @@ const DropMenu = createClass({
 	components: {
 		Control: createClass({
 			displayName: 'DropMenu.Control',
-			propName: 'Control'
+			propName: 'Control',
 		}),
 		OptionGroup: createClass({
 			displayName: 'DropMenu.OptionGroup',
-			propName: 'OptionGroup'
+			propName: 'OptionGroup',
 		}),
 		Option: createClass({
 			displayName: 'DropMenu.Option',
 			propName: 'Option',
 			propTypes: {
-				isDisabled: bool
-			}
+				isDisabled: bool,
+			},
 		}),
 		NullOption: createClass({
 			displayName: 'DropMenu.NullOption',
-			propName: 'NullOption'
-		})
+			propName: 'NullOption',
+		}),
 	},
 
 	propTypes: {
@@ -106,7 +106,7 @@ const DropMenu = createClass({
 		 */
 		flyOutStyle: object,
 		/**
-		 * Called when collapsed and the control is clicked, or when the control has focus and the Down Arrow or Space key is pressed.
+		 * Called when collapsed and the control is clicked, or when the control has focus and the Down Arrow is pressed.
 		 */
 		onExpand: func,
 		/**
@@ -114,7 +114,7 @@ const DropMenu = createClass({
 		 */
 		onCollapse: func,
 		/**
-		 * Called when an option is clicked, or when an option has focus and the Space or Enter key is pressed.
+		 * Called when an option is clicked, or when an option has focus and the Enter key is pressed.
 		 * Has the signature `(optionIndex, {props, event}) => {}` where optionIndex can be a number or `null`.
 		 */
 		onSelect: func,
@@ -148,7 +148,7 @@ const DropMenu = createClass({
 		/**
 		 * *Child Element* - A special kind of `Option` that is always rendered at the top of the menu and has an `optionIndex` of `null`. Useful for unselect.
 		 */
-		NullOption: any
+		NullOption: any,
 	},
 
 	getDefaultProps() {
@@ -167,7 +167,7 @@ const DropMenu = createClass({
 			onFocusPrev: _.noop,
 			onBelowFold: _.noop,
 			onAboveFold: _.noop,
-			onFocusOption: _.noop
+			onFocusOption: _.noop,
 		};
 	},
 
@@ -177,7 +177,7 @@ const DropMenu = createClass({
 			optionGroups: [],
 			flattenedOptionsData: [],
 			ungroupedOptionData: [],
-			optionGroupDataLookup: {}
+			optionGroupDataLookup: {},
 		}
 	},
 
@@ -186,7 +186,7 @@ const DropMenu = createClass({
 			const {
 				OptionGroup,
 				Option,
-				NullOption
+				NullOption,
 			} = ParentType;
 
 			const optionGroups = _.map(findTypes(props, OptionGroup), 'props'); // find all OptionGroup props
@@ -201,7 +201,7 @@ const DropMenu = createClass({
 						localOptionIndex,
 						optionIndex: _.size(memo) + localOptionIndex, // add current index to current array length to get final option index
 						optionGroupIndex, // store option group index to associate option back to group
-						optionProps
+						optionProps,
 					};
 				}));
 			}, []);
@@ -215,7 +215,7 @@ const DropMenu = createClass({
 						localOptionIndex,
 						optionIndex: _.size(groupedOptionData) + localOptionIndex, // add current index to grouped options array length to get final option index (grouped options rendered first)
 						optionGroupIndex: null, // ungrouped options have no `optionGroupIndex`
-						optionProps
+						optionProps,
 				};
 			});
 
@@ -227,9 +227,9 @@ const DropMenu = createClass({
 				optionGroupDataLookup,
 				ungroupedOptionData,
 				flattenedOptionsData,
-				nullOptions
+				nullOptions,
 			};
-		}
+		},
 	},
 
 	getPreprocessedOptionData(props) {
@@ -244,20 +244,20 @@ const DropMenu = createClass({
 			onCollapse,
 			onSelect,
 			onFocusPrev,
-			onFocusNext
+			onFocusNext,
 		} = this.props;
 
 		const {
 			flattenedOptionsData,
-			nullOptions
+			nullOptions,
 		} = this.state;
 
 		this.setState({
-			isMouseTriggered: false
+			isMouseTriggered: false,
 		});
 
 		if (isExpanded) {
-			if (_.includes([KEYCODE.Enter, KEYCODE.Space], e.keyCode)) {
+			if (e.keyCode === KEYCODE.Enter) {
 				e.preventDefault();
 				const focusedOptionData = _.get(flattenedOptionsData, focusedIndex, null);
 				const focusedOptionProps = _.get(focusedOptionData, 'optionProps', {});
@@ -300,7 +300,7 @@ const DropMenu = createClass({
 				}
 			}
 		} else {
-			if (_.includes([KEYCODE.Space, KEYCODE.ArrowDown], e.keyCode)) {
+			if (e.keyCode === KEYCODE.ArrowDown) {
 				e.preventDefault();
 				onExpand(e);
 			}
@@ -311,7 +311,7 @@ const DropMenu = createClass({
 		const {
 			isExpanded,
 			onExpand,
-			onCollapse
+			onCollapse,
 		} = this.props;
 
 		if (isExpanded) {
@@ -324,11 +324,11 @@ const DropMenu = createClass({
 	handleMouseFocusOption(optionIndex, optionProps) {
 		const {
 			focusedIndex,
-			onFocusOption
+			onFocusOption,
 		} = this.props;
 
 		this.setState({
-			isMouseTriggered: true
+			isMouseTriggered: true,
 		});
 
 		if (!optionProps.isDisabled && focusedIndex !== optionIndex) {
@@ -338,7 +338,7 @@ const DropMenu = createClass({
 
 	handleSelectOption(optionIndex, optionProps, event) {
 		const {
-			onSelect
+			onSelect,
 		} = this.props;
 
 		if (!optionProps.isDisabled) {
@@ -353,11 +353,11 @@ const DropMenu = createClass({
 		} = this.props;
 
 		const {
-			isMouseTriggered
+			isMouseTriggered,
 		} = this.state;
 
 		const {
-			isDisabled
+			isDisabled,
 		} = optionProps;
 
 		const isFocused = optionIndex === focusedIndex;
@@ -375,7 +375,7 @@ const DropMenu = createClass({
 					'&-Option-is-focused': isFocused,
 					'&-Option-is-selected': isSelected,
 					'&-Option-is-disabled': isDisabled,
-					'&-Option-is-null': _.isNull(optionIndex)
+					'&-Option-is-null': _.isNull(optionIndex),
 				}, optionProps.className)}
 				ref={(optionDOMNode)=> {
 					if (isFocused && !isMouseTriggered) {
@@ -412,7 +412,7 @@ const DropMenu = createClass({
 			optionGroups,
 			ungroupedOptionData,
 			optionGroupDataLookup,
-			nullOptions
+			nullOptions,
 		} = this.state;
 
 		const controlProps = _.get(_.first(findTypes(this.props, DropMenu.Control)), 'props', {});
@@ -421,7 +421,7 @@ const DropMenu = createClass({
 			<div className={cx('&', '&-base', {
 				'&-is-expanded': isExpanded,
 				'&-direction-down': isExpanded && direction === 'down',
-				'&-direction-up': isExpanded && direction === 'up'
+				'&-direction-up': isExpanded && direction === 'up',
 			}, className)} style={style}>
 				<ContextMenu
 					portalId={portalId}
@@ -434,7 +434,7 @@ const DropMenu = createClass({
 							{...(!isDisabled ? {
 								tabIndex: 0,
 								onClick: this.handleClick,
-								onKeyDown: this.handleKeydown
+								onKeyDown: this.handleKeydown,
 							} : null)}
 							{...controlProps}
 							className={cx('&-Control', _.get(controlProps, 'className'))}
@@ -454,7 +454,7 @@ const DropMenu = createClass({
 									return (_.isEmpty(labelElements) ? [] : [
 										<div {...optionGroupProps} className={cx('&-label', optionGroupProps.className)}>
 											{labelElements}
-										</div>
+										</div>,
 									// render the options in the group
 									]).concat(_.map(_.get(optionGroupDataLookup, optionGroupIndex), ({ optionProps, optionIndex }) => this.renderOption(optionProps, optionIndex, true)));
 								// append all ungrouped options as another unlabeled group
@@ -466,7 +466,7 @@ const DropMenu = createClass({
 				</ContextMenu>
 			</div>
 		);
-	}
+	},
 });
 
 export default DropMenu;

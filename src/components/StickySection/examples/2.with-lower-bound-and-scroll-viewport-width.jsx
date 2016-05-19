@@ -31,5 +31,5 @@ export default React.createClass({
 				</section>
 			</section>
 		);
-	}
+	},
 });

@@ -13,7 +13,7 @@ const gridStyle = {
 		padding: 0,
 		color: '#f3f3f3',
 	},
-	vertical: {height: '100px'}
+	vertical: {height: '100px'},
 }
 
 export default React.createClass({
@@ -55,5 +55,5 @@ export default React.createClass({
 				</Grid.Cell>
 			</Grid>
 		)
-	}
+	},
 });

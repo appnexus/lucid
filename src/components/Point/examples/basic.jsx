@@ -3,7 +3,7 @@ import Point from '../Point';
 
 const svgProps = {
 	width: 20,
-	height: 20
+	height: 20,
 };
 
 const pointProps = {
@@ -36,5 +36,5 @@ export default React.createClass({
 				</svg>
 			</div>
 		);
-	}
+	},
 });

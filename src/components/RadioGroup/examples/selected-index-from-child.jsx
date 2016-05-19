@@ -2,7 +2,7 @@ import React from 'react';
 import { RadioGroupDumb as RadioGroup } from '../../../index';
 
 const style = {
-	marginRight: '13px'
+	marginRight: '13px',
 };
 
 export default React.createClass({
@@ -12,7 +12,7 @@ export default React.createClass({
 					selectedIndex={3}
 					style={{
 						display: 'flex',
-						flexDirection: 'column'
+						flexDirection: 'column',
 					}}
 			>
 				<RadioGroup.RadioButton isSelected={true} style={style}>
@@ -32,5 +32,5 @@ export default React.createClass({
 				</RadioGroup.RadioButton>
 			</RadioGroup>
 		);
-	}
+	},
 });

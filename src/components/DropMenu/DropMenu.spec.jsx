@@ -14,7 +14,7 @@ const {
 	Control,
 	Option,
 	OptionGroup,
-	NullOption
+	NullOption,
 } = DropMenu;
 
 describe('DropMenu', () => {
@@ -109,7 +109,7 @@ describe('DropMenu', () => {
 				const dropMenuStyle = wrapper.first().prop('style');
 
 				assert(_.isEqual(dropMenuStyle, {
-					flex: 2
+					flex: 2,
 				}));
 			});
 		});
@@ -315,25 +315,6 @@ describe('DropMenu', () => {
 			});
 
 			describe('keyboard', () => {
-				it('should be called when DropMenu [not expanded, has focus, Space key pressed]', () => {
-					const onExpand = sinon.spy();
-					const wrapper = shallow(
-						<DropMenu isExpanded={false} onExpand={onExpand}>
-							<Control>control</Control>
-							<Option>option a</Option>
-							<Option>option b</Option>
-							<Option>option c</Option>
-						</DropMenu>
-					);
-
-					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
-						keyCode: KEYCODE.Space,
-						preventDefault: _.noop
-					});
-
-					assert(onExpand.called);
-				});
-
 				it('should be called when DropMenu [not expanded, has focus, Down Arrow key pressed]', () => {
 					const onExpand = sinon.spy();
 					const wrapper = shallow(
@@ -347,7 +328,7 @@ describe('DropMenu', () => {
 
 					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
 						keyCode: KEYCODE.ArrowDown,
-						preventDefault: _.noop
+						preventDefault: _.noop,
 					});
 
 					assert(onExpand.called);
@@ -420,7 +401,7 @@ describe('DropMenu', () => {
 
 					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
 						keyCode: KEYCODE.Escape,
-						preventDefault: _.noop
+						preventDefault: _.noop,
 					});
 
 					assert(onCollapse.called);
@@ -462,7 +443,7 @@ describe('DropMenu', () => {
 			});
 
 			describe('keyboard', () => {
-				it('should be called when DropMenu [expanded, option focused, Space key  pressed]', () => {
+				it('should be called when DropMenu [expanded, option focused, Enter key  pressed]', () => {
 					const onSelect = sinon.spy();
 					const wrapper = shallow(
 						<DropMenu isExpanded={true} focusedIndex={2} onSelect={onSelect}>
@@ -474,8 +455,8 @@ describe('DropMenu', () => {
 					);
 
 					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
-						keyCode: KEYCODE.Space,
-						preventDefault: _.noop
+						keyCode: KEYCODE.Enter,
+						preventDefault: _.noop,
 					});
 
 					assert(onSelect.called);
@@ -499,7 +480,7 @@ describe('DropMenu', () => {
 
 					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
 						keyCode: KEYCODE.ArrowDown,
-						preventDefault: _.noop
+						preventDefault: _.noop,
 					});
 
 					assert(onFocusNext.called);
@@ -518,7 +499,7 @@ describe('DropMenu', () => {
 
 					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
 						keyCode: KEYCODE.ArrowDown,
-						preventDefault: _.noop
+						preventDefault: _.noop,
 					});
 
 					assert(onFocusNext.called);
@@ -537,7 +518,7 @@ describe('DropMenu', () => {
 
 					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
 						keyCode: KEYCODE.ArrowDown,
-						preventDefault: _.noop
+						preventDefault: _.noop,
 					});
 
 					assert(onFocusNext.notCalled);
@@ -560,7 +541,7 @@ describe('DropMenu', () => {
 
 					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
 						keyCode: KEYCODE.ArrowUp,
-						preventDefault: _.noop
+						preventDefault: _.noop,
 					});
 
 					assert(onFocusPrev.called);
@@ -579,7 +560,7 @@ describe('DropMenu', () => {
 
 					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
 						keyCode: KEYCODE.ArrowUp,
-						preventDefault: _.noop
+						preventDefault: _.noop,
 					});
 
 					assert(onFocusPrev.notCalled);
@@ -598,7 +579,7 @@ describe('DropMenu', () => {
 
 					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
 						keyCode: KEYCODE.ArrowUp,
-						preventDefault: _.noop
+						preventDefault: _.noop,
 					});
 
 					assert(onFocusPrev.notCalled);

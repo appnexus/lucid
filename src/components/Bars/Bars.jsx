@@ -126,7 +126,7 @@ const Bars = createClass({
 		if (isStacked) {
 			yScale.domain([
 				yScale.domain()[0],
-				_.chain(transformedData).last().flatten().max().value()
+				_.chain(transformedData).last().flatten().max().value(),
 			]);
 		}
 
@@ -180,7 +180,7 @@ const Bars = createClass({
 				})}
 			</g>
 		);
-	}
+	},
 });
 
 export default Bars;

@@ -1,3 +1,4 @@
+/*eslint no-console: 0*/
 import assert from 'assert';
 import _ from 'lodash';
 import sinon from 'sinon';
@@ -5,7 +6,7 @@ import {
 	isDevMode,
 	isNode,
 	logger,
-	checkIsDev
+	checkIsDev,
 } from './logger';
 
 describe('logger', () => {

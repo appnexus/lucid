@@ -3,7 +3,7 @@ import Bar from '../Bar';
 
 const svgProps = {
 	width: 20,
-	height: 100
+	height: 100,
 };
 
 const pointProps = {
@@ -38,5 +38,5 @@ export default React.createClass({
 				</svg>
 			</div>
 		);
-	}
+	},
 });

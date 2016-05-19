@@ -20,7 +20,7 @@ const SuccessIcon = createClass({
 	render() {
 		const {
 			className,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		return (
@@ -30,7 +30,7 @@ const SuccessIcon = createClass({
 				isBadge
 			/>
 		);
-	}
+	},
 });
 
 export default SuccessIcon;

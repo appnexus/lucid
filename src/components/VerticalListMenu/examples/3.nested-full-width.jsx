@@ -58,5 +58,5 @@ export default React.createClass({
 				<VerticalListMenu.Item>Level one</VerticalListMenu.Item>
 			</VerticalListMenu>
 		);
-	}
+	},
 });

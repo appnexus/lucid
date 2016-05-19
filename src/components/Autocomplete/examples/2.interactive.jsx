@@ -258,19 +258,19 @@ const wordlist = [
   'winter',
   'worthless',
   'writer',
-  'zippy'
+  'zippy',
 ];
 
 export default React.createClass({
 	getInitialState() {
 		return {
-			value: ''
+			value: '',
 		};
 	},
 
 	handleChange(value) {
 		this.setState({
-			value
+			value,
 		});
 	},
 
@@ -294,5 +294,5 @@ export default React.createClass({
 
 			</section>
 		);
-	}
+	},
 });

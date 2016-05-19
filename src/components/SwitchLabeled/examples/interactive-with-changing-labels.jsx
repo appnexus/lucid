@@ -2,7 +2,7 @@ import React from 'react';
 import { SwitchLabeled } from '../../../index';
 
 const style = {
-	marginBottom: '3px'
+	marginBottom: '3px',
 };
 
 export default React.createClass({
@@ -11,31 +11,31 @@ export default React.createClass({
 			airplaneMode: true,
 			bluetooth: true,
 			cellularData: true,
-			spam: true
+			spam: true,
 		};
 	},
 
 	handleSelectedAirplaneMode(isSelected) {
 		this.setState({
-			airplaneMode: isSelected
+			airplaneMode: isSelected,
 		});
 	},
 
 	handleSelectedBluetooth(isSelected) {
 		this.setState({
-			bluetooth: isSelected
+			bluetooth: isSelected,
 		});
 	},
 
 	handleSelectedCellularData(isSelected) {
 		this.setState({
-			cellularData: isSelected
+			cellularData: isSelected,
 		});
 	},
 
 	handleSelectedSpam(isSelected) {
 		this.setState({
-			spam: isSelected
+			spam: isSelected,
 		});
 	},
 
@@ -76,5 +76,5 @@ export default React.createClass({
 				</SwitchLabeled>
 			</section>
 		);
-	}
+	},
 });

@@ -6,14 +6,14 @@ export function onExpand(state) {
 	return {
 		...state,
 		isExpanded: true,
-		focusedIndex: _.isEmpty(selectedIndices) ? null : _.last(selectedIndices)
+		focusedIndex: _.isEmpty(selectedIndices) ? null : _.last(selectedIndices),
 	};
 }
 
 export function onCollapse(state) {
 	return {
 		...state,
-		isExpanded: false
+		isExpanded: false,
 	};
 }
 
@@ -21,21 +21,21 @@ export function onSelect(state, optionIndex) {
 	return {
 		...state,
 		selectedIndices: [optionIndex],
-		isExpanded: false
+		isExpanded: false,
 	};
 }
 
 export function onAboveFold(state) {
 	return {
 		...state,
-		direction: 'down'
+		direction: 'down',
 	};
 }
 
 export function onBelowFold(state) {
 	return {
 		...state,
-		direction: 'up'
+		direction: 'up',
 	};
 }
 
@@ -51,7 +51,7 @@ export function onFocusNext(state) {
 
 	return {
 		...state,
-		focusedIndex: nextFocusedIndex
+		focusedIndex: nextFocusedIndex,
 	};
 }
 
@@ -67,13 +67,13 @@ export function onFocusPrev(state) {
 
 	return {
 		...state,
-		focusedIndex: nextFocusedIndex
+		focusedIndex: nextFocusedIndex,
 	};
 }
 
 export function onFocusOption(state, optionIndex) {
 	return {
 		...state,
-		focusedIndex: optionIndex
+		focusedIndex: optionIndex,
 	};
 }

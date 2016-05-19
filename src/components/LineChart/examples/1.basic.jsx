@@ -13,5 +13,5 @@ export default React.createClass({
 		return (
 			<LineChart data={data} />
 		);
-	}
+	},
 });

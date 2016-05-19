@@ -4,14 +4,14 @@ import { Checkbox } from '../../../index';
 export default React.createClass({
 	getInitialState() {
 		return {
-			isSelected: true
+			isSelected: true,
 		};
 	},
 
 	handleSelected(isSelected) {
 		this.setState({
 			...this.state,
-			isSelected
+			isSelected,
 		});
 	},
 
@@ -44,5 +44,5 @@ export default React.createClass({
 				</li>
 			</ul>
 		);
-	}
+	},
 });

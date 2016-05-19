@@ -29,5 +29,5 @@ export default React.createClass({
 				</article>
 			</section>
 		);
-	}
+	},
 });

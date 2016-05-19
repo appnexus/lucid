@@ -59,7 +59,7 @@ const Line = createClass({
 				d={d}
 			/>
 		);
-	}
+	},
 });
 
 export default Line;

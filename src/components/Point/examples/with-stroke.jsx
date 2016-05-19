@@ -5,8 +5,8 @@ const svgProps = {
 	width: 20,
 	height: 20,
 	style: {
-		backgroundColor: 'black'
-	}
+		backgroundColor: 'black',
+	},
 };
 
 const pointProps = {
@@ -40,5 +40,5 @@ export default React.createClass({
 				</svg>
 			</div>
 		);
-	}
+	},
 });

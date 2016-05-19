@@ -10,7 +10,7 @@ const {
 	any,
 	node,
 	object,
-	string
+	string,
 } = React.PropTypes;
 
 /**
@@ -31,9 +31,9 @@ const SwitchLabeled = createClass({
 				 * Used to identify the purpose of this switch to the user -- can be
 				 * any renderable content.
 				 */
-				children: node
-			}
-		})
+				children: node,
+			},
+		}),
 	},
 
 	propTypes: {
@@ -54,14 +54,14 @@ const SwitchLabeled = createClass({
 		 * Child element whose children are used to identify the purpose of this
 		 * switch to the user.
 		 */
-		Label: any
+		Label: any,
 	},
 
 	getDefaultProps() {
 		return {
 			isDisabled: false,
 			isSelected: false,
-			onSelect: _.noop
+			onSelect: _.noop,
 		};
 	},
 
@@ -85,7 +85,7 @@ const SwitchLabeled = createClass({
 			isSelected,
 			onSelect,
 			style,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		const labelChildProps = _.first(_.map(findTypes(this.props, SwitchLabeled.Label), 'props'));
@@ -94,7 +94,7 @@ const SwitchLabeled = createClass({
 			<label
 					className={cx('&', {
 						'&-is-disabled': isDisabled,
-						'&-is-selected': isSelected
+						'&-is-selected': isSelected,
 					}, className)}
 					style={style}
 			>
@@ -120,7 +120,7 @@ const SwitchLabeled = createClass({
 				</ReactCSSTransitionGroup>
 			</label>
 		);
-	}
+	},
 });
 
 export default SwitchLabeled;

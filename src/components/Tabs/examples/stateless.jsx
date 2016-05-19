@@ -10,5 +10,5 @@ export default React.createClass({
 				<Tabs.Tab Title='Three' isSelected={true}>Three Content</Tabs.Tab>
 			</Tabs>
 		);
-	}
+	},
 });

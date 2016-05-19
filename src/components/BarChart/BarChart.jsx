@@ -304,7 +304,7 @@ const BarChart = createClass({
 				/>
 			</svg>
 		);
-	}
+	},
 });
 
 export default BarChart;

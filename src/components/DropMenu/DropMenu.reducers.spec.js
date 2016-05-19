@@ -8,21 +8,21 @@ import {
 	onBelowFold,
 	onFocusNext,
 	onFocusPrev,
-	onFocusOption
+	onFocusOption,
 } from './DropMenu.reducers';
 
 describe('DropMenu reducers', () => {
 	describe('onExpand', () => {
 		it('should set isExpanded=true, focusedIndex=null if selectedIndices is empty', () => {
 			const initialState = {
-				selectedIndices: []
+				selectedIndices: [],
 			};
 
 			const nextState = onExpand(initialState);
 			const {
 				selectedIndices,
 				isExpanded,
-				focusedIndex
+				focusedIndex,
 			} = nextState;
 
 			assert(_.isEqual(selectedIndices, initialState.selectedIndices));
@@ -32,14 +32,14 @@ describe('DropMenu reducers', () => {
 
 		it('should set isExpanded=true, focusedIndex={last selectedIndices}', () => {
 			const initialState = {
-				selectedIndices: [3, 2]
+				selectedIndices: [3, 2],
 			};
 
 			const nextState = onExpand(initialState);
 			const {
 				selectedIndices,
 				isExpanded,
-				focusedIndex
+				focusedIndex,
 			} = nextState;
 
 			assert(_.isEqual(selectedIndices, initialState.selectedIndices));
@@ -54,7 +54,7 @@ describe('DropMenu reducers', () => {
 
 			const nextState = onCollapse(initialState);
 			const {
-				isExpanded
+				isExpanded,
 			} = nextState;
 
 			assert.equal(isExpanded, false);
@@ -71,7 +71,7 @@ describe('DropMenu reducers', () => {
 			const nextState = onSelect(initialState, optionIndex);
 			const {
 				isExpanded,
-				selectedIndices
+				selectedIndices,
 			} = nextState;
 
 			assert.equal(isExpanded, false);
@@ -85,7 +85,7 @@ describe('DropMenu reducers', () => {
 
 			const nextState = onAboveFold(initialState);
 			const {
-				direction
+				direction,
 			} = nextState;
 
 			assert.equal(direction, 'down');
@@ -98,7 +98,7 @@ describe('DropMenu reducers', () => {
 
 			const nextState = onBelowFold(initialState);
 			const {
-				direction
+				direction,
 			} = nextState;
 
 			assert.equal(direction, 'up');
@@ -108,12 +108,12 @@ describe('DropMenu reducers', () => {
 	describe('onFocusNext', () => {
 		it('should set focusedIndex=0 if focusedIndex=null', () => {
 			const initialState = {
-				focusedIndex: null
+				focusedIndex: null,
 			};
 
 			const nextState = onFocusNext(initialState);
 			const {
-				focusedIndex
+				focusedIndex,
 			} = nextState;
 
 			assert.equal(focusedIndex, 0);
@@ -121,12 +121,12 @@ describe('DropMenu reducers', () => {
 
 		it('should set focusedIndex+=1 if focusedIndex={number}', () => {
 			const initialState = {
-				focusedIndex: 2
+				focusedIndex: 2,
 			};
 
 			const nextState = onFocusNext(initialState);
 			const {
-				focusedIndex
+				focusedIndex,
 			} = nextState;
 
 			assert.equal(focusedIndex, 3);
@@ -136,12 +136,12 @@ describe('DropMenu reducers', () => {
 	describe('onFocusPrev', () => {
 		it('should set focusedIndex=null if focusedIndex=null', () => {
 			const initialState = {
-				focusedIndex: null
+				focusedIndex: null,
 			};
 
 			const nextState = onFocusPrev(initialState);
 			const {
-				focusedIndex
+				focusedIndex,
 			} = nextState;
 
 			assert.equal(focusedIndex, null);
@@ -149,12 +149,12 @@ describe('DropMenu reducers', () => {
 
 		it('should set focusedIndex=null if focusedIndex=0', () => {
 			const initialState = {
-				focusedIndex: 0
+				focusedIndex: 0,
 			};
 
 			const nextState = onFocusPrev(initialState);
 			const {
-				focusedIndex
+				focusedIndex,
 			} = nextState;
 
 			assert.equal(focusedIndex, null);
@@ -162,12 +162,12 @@ describe('DropMenu reducers', () => {
 
 		it('should set focusedIndex-=1 if focusedIndex={number}', () => {
 			const initialState = {
-				focusedIndex: 2
+				focusedIndex: 2,
 			};
 
 			const nextState = onFocusPrev(initialState);
 			const {
-				focusedIndex
+				focusedIndex,
 			} = nextState;
 
 			assert.equal(focusedIndex, 1);
@@ -182,7 +182,7 @@ describe('DropMenu reducers', () => {
 
 			const nextState = onFocusOption(initialState, optionIndex);
 			const {
-				focusedIndex
+				focusedIndex,
 			} = nextState;
 
 			assert.equal(focusedIndex, 3);

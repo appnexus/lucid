@@ -35,11 +35,11 @@ describe('VerticalListMenu reducers', () => {
 
 		it('should add items', () => {
 			const initialState = {
-				expandedIndices: [0,1,2,3,4]
+				expandedIndices: [0,1,2,3,4],
 			};
 
 			assert.deepEqual(onToggle(initialState, 99), {
-				expandedIndices: [0,1,2,3,4,99]
+				expandedIndices: [0,1,2,3,4,99],
 			});
 		});
 	});

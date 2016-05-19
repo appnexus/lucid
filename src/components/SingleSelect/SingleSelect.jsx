@@ -36,18 +36,18 @@ const SingleSelect = createClass({
 	components: {
 		Placeholder: createClass({
 			displayName: 'SingleSelect.Placeholder',
-			propName: 'Placeholder'
+			propName: 'Placeholder',
 		}),
 		Option: createClass({
 			displayName: 'SingleSelect.Option',
 			propName: 'Option',
-			propTypes: DropMenu.Option.propTypes
+			propTypes: DropMenu.Option.propTypes,
 		}),
 		OptionGroup: createClass({
 			displayName: 'SingleSelect.OptionGroup',
 			propName: 'OptionGroup',
-			propTypes: DropMenu.OptionGroup.propTypes
-		})
+			propTypes: DropMenu.OptionGroup.propTypes,
+		}),
 	},
 
 	propTypes: {
@@ -110,7 +110,7 @@ const SingleSelect = createClass({
 			hasReset: true,
 			isDisabled: false,
 			selectedIndex: null,
-			DropMenu: DropMenu.getDefaultProps()
+			DropMenu: DropMenu.getDefaultProps(),
 		};
 	},
 
@@ -119,7 +119,7 @@ const SingleSelect = createClass({
 			optionGroups: [],
 			flattenedOptionsData: [],
 			ungroupedOptionData: [],
-			optionGroupDataLookup: {}
+			optionGroupDataLookup: {},
 		}
 	},
 
@@ -142,7 +142,7 @@ const SingleSelect = createClass({
 			selectedIndex,
 			maxMenuHeight,
 			onSelect,
-			DropMenu: dropMenuProps
+			DropMenu: dropMenuProps,
 		} = this.props;
 
 		const {
@@ -155,7 +155,7 @@ const SingleSelect = createClass({
 			optionGroups,
 			optionGroupDataLookup,
 			ungroupedOptionData,
-			flattenedOptionsData
+			flattenedOptionsData,
 		} = this.state;
 
 		const placeholderProps = _.first(_.map(findTypes(this.props, SingleSelect.Placeholder), 'props'));
@@ -176,7 +176,7 @@ const SingleSelect = createClass({
 					<div className={cx('&-Control', {
 						'&-Control-is-selected': !isDisabled && isItemSelected,
 						'&-Control-is-expanded': isExpanded,
-						'&-Control-is-disabled': isDisabled
+						'&-Control-is-disabled': isDisabled,
 					})}>
 						<span
 							{...(!isItemSelected ? placeholderProps : null)}
@@ -207,7 +207,7 @@ const SingleSelect = createClass({
 				}
 			</DropMenu>
 		);
-	}
+	},
 });
 
 export default SingleSelect;

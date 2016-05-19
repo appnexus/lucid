@@ -34,7 +34,7 @@ const Badge = createClass({
 		const {
 			className,
 			children,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		return (
@@ -42,7 +42,7 @@ const Badge = createClass({
 				{children}
 			</span>
 		);
-	}
+	},
 });
 
 export default Badge;

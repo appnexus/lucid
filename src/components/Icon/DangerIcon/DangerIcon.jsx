@@ -20,7 +20,7 @@ const DangerIcon = createClass({
 	render() {
 		const {
 			className,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		return (
@@ -30,7 +30,7 @@ const DangerIcon = createClass({
 				isBadge
 			/>
 		);
-	}
+	},
 });
 
 export default DangerIcon;

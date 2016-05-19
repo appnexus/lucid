@@ -27,7 +27,7 @@ const TextFieldValidated = createClass({
 	components: {
 		Error: createClass({
 			displayName: 'TextFieldValidated.Error',
-			propName: 'Error'
+			propName: 'Error',
 		}),
 	},
 
@@ -66,7 +66,7 @@ const TextFieldValidated = createClass({
 				<TextField {..._.omit(this.props, ['className', 'style'])} />
 			</Validation>
 		);
-	}
+	},
 });
 
 export default TextFieldValidated;
