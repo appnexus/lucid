@@ -3,6 +3,7 @@
 var path = require('path');
 var autoprefixer = require('autoprefixer');
 var gulpConfig = require('./gulp/config');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	devtool: 'source-map',
@@ -49,4 +50,11 @@ module.exports = {
 	resolve: {
 		extensions: ['', '.js', '.jsx']
 	},
+	plugins: [
+		// Move static images over as well. This isn't normally something you do
+		// with webpack but it works fine for our case.
+		new CopyWebpackPlugin([
+			{ from: './src/docs/img', to: 'img' }
+		])
+	]
 };

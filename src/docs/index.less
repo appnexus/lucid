@@ -2,10 +2,11 @@
 // Imports
 //
 
-@import './vendor/pure.css';
 @import '../styles/variables';
-@import './containers/colors';
 @import '../styles/mixins';
+
+@import './containers/color-palette';
+@import './containers/landing-page';
 
 // Normalize Mixins
 #normalize > .html();
@@ -34,10 +35,13 @@ html {
 //
 
 .Component {
+	padding: @size-L;
+
 	&-examples {
 		list-style: none;
 		padding-left: 0;
 	}
+
 	&-examples.Button {
 
 		> li > section {
@@ -86,20 +90,32 @@ html {
 		position: fixed;
 		height: 100vh;
 		width: @App-sidebar-width;
-		padding: 15px;
-		padding-left: 0;
 		overflow: auto;
+		background-color: @color-white;
+		border-right: 1px solid @color-gray;
+		z-index: 1;
+
+		// Little fix for scroll bars
+		.lucid-VerticalListMenu-Item-expander {
+			margin-right: 10px;
+		}
+	}
+
+	&-sidebar-container {
+		padding: 0 @size-L @size-S @size-L;
+	}
+
+	&-sidebar-search > .lucid-ContextMenu {
+		// TODO: this is a hack because autocomplete can't handle 100% width
+		// correctly when used in the sidebar
+		width: 184px;
+	}
+
+	&-pages {
+		border-bottom: 1px solid @color-gray;
 	}
 
 	&-body{
-		padding: 15px;
 		padding-left: @App-sidebar-width;
-	}
-
-	&-nav {
-		ul, li {
-			padding-left: 10px;
-			list-style-type: none;
-		}
 	}
 }
