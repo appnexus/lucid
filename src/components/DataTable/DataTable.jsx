@@ -11,7 +11,7 @@ const {
 	Tbody,
 	Tr,
 	Th,
-	Td
+	Td,
 } = ScrollTable;
 
 const cx = lucidClassNames.bind('&-DataTable');
@@ -98,7 +98,7 @@ const DataTable = createClass({
 			onSelect: _.noop,
 			onSelectAll: _.noop,
 			onRowClick: _.noop,
-			onSort: _.noop
+			onSort: _.noop,
 		};
 	},
 
@@ -108,22 +108,22 @@ const DataTable = createClass({
 			propName: 'Column',
 			propTypes: {
 				field: string.isRequired,
-				title: string
-			}
+				title: string,
+			},
 		}),
 		ColumnGroup: createClass({
 			displayName: 'DataTable.ColumnGroup',
 			propName: 'ColumnGroup',
 			propTypes: {
-				title: string
-			}
-		})
+				title: string,
+			},
+		}),
 	},
 
 	statics: {
 		shouldColumnHandleSort(column) {
 			return _.isNil(column.isSortable) ? column.isSorted : column.isSortable;
-		}
+		},
 	},
 
 	handleSelect(rowIndex, { event }) {
@@ -137,7 +137,7 @@ const DataTable = createClass({
 
 	handleSelectAll({ event }) {
 		const {
-			onSelectAll
+			onSelectAll,
 		} = this.props;
 
 		onSelectAll({ props: this.props, event });
@@ -146,7 +146,7 @@ const DataTable = createClass({
 	handleRowClick(rowIndex, event) {
 		const {
 			data,
-			onRowClick
+			onRowClick,
 		} = this.props;
 
 		const targetTagName = event.target.tagName.toLowerCase();
@@ -157,7 +157,7 @@ const DataTable = createClass({
 
 	handleSort(field, event) {
 		const {
-			onSort
+			onSort,
 		} = this.props;
 
 		event.stopPropagation();
@@ -173,7 +173,7 @@ const DataTable = createClass({
 			data,
 			isActionable,
 			isSelectable,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 
@@ -187,7 +187,7 @@ const DataTable = createClass({
 					findTypes(childComponentElement.props, DataTable.Column),
 					(columnChildComponent) => ({
 						props: columnChildComponent.props,
-						columnGroupProps: childComponentElement.props
+						columnGroupProps: childComponentElement.props,
 					})
 				));
 			}
@@ -217,7 +217,7 @@ const DataTable = createClass({
 								{..._.omit(props, ['field', 'children', 'width', 'title'])}
 								onClick={DataTable.shouldColumnHandleSort(props) ? _.partial(this.handleSort, props.field) : null}
 								style={{
-									width: props.width
+									width: props.width,
 								}}
 								rowSpan={hasGroupedColumns ? 2 : null}
 								key={_.get(props, 'field', index)}
@@ -241,7 +241,7 @@ const DataTable = createClass({
 									{..._.omit(columnProps, ['field', 'children', 'width', 'title'])}
 									onClick={DataTable.shouldColumnHandleSort(columnProps) ? _.partial(this.handleSort, columnProps.field) : null}
 									style={{
-										width: columnProps.width
+										width: columnProps.width,
 									}}
 									key={_.get(columnProps, 'field', index)}
 								>
@@ -254,8 +254,7 @@ const DataTable = createClass({
 				<Tbody>
 					{_.map(data, (row, index) => (
 						<Tr
-							isSelected={row.isSelected}
-							isActive={row.isActive}
+							{..._.pick(row, ['isDisabled', 'isActive', 'isSelected'])}
 							onClick={_.partial(this.handleRowClick, index)}
 							isActionable={isActionable}
 							key={'row' + index}
@@ -272,7 +271,7 @@ const DataTable = createClass({
 								<Td
 									{..._.omit(columnProps, ['field', 'children', 'width', 'title'])}
 									style={{
-										width: columnProps.width
+										width: columnProps.width,
 									}}
 									key={'row' + index + _.get(columnProps, 'field', columnIndex)}
 								>
@@ -284,7 +283,7 @@ const DataTable = createClass({
 				</Tbody>
 			</ScrollTable>
 		);
-	}
+	},
 });
 
 export default DataTable;

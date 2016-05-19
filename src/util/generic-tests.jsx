@@ -17,14 +17,14 @@ export function common(Component, {
 		return _.assign({}, getDefaultProps(), props);
 	}
 
-	describe(`[common]`, () => {
+	describe('[common]', () => {
 		it('should have a `displayName` defined', () => {
 			assert(Component.displayName);
 		});
 
 		it('should pass through styles to the root element', () => {
 			let style = {
-				backgroundColor: '#f0f'
+				backgroundColor: '#f0f',
 			};
 			const wrapper = shallow(<Component {...generateDefaultProps()} style={style}/>);
 			const rootWrapper = selector ? wrapper.find(selector).first() : wrapper.first();
@@ -63,13 +63,14 @@ export function common(Component, {
 
 			const allClasses = parentClasses.concat(childrenClasses);
 
-			assert(_.every(allClasses, (className) => {
-				return _.includes(className, 'lucid-' + Component.displayName);
-			}));
+			_.forEach(allClasses, className => {
+				assert(_.includes(className, `lucid-${Component.displayName}`), `${className} must be scoped`);
+			});
 		});
 
 		it('should only use onX convention for function proptypes', () => {
-			assert(_.every(Component.propTypes, (value, key) => {
+
+			_.forEach(Component.propTypes, (value, key) => {
 				// See the following tests from the React source code to figure out how
 				// this works: https://github.com/facebook/react/blob/v0.14.7/src/isomorphic/classic/types/__tests__/ReactPropTypes-test.js
 				let props = {};
@@ -87,17 +88,13 @@ export function common(Component, {
 
 				// If it's probably a function, and it's not `any`, then we make sure
 				// it starts with `on`
-				if (
-					isProbablyFunction
-					&& !isAny
-					&& !_.startsWith(key, 'on')
-					&& !_.includes(exemptFunctionProps, key) // we make exceptions to the rule
-				) {
-					return false;
+
+				if (isProbablyFunction) {
+					assert(isAny || _.startsWith(key, 'on') || _.includes(exemptFunctionProps, key), `${key} must follow onX convention`);
 				}
 
-				return true;
-			}));
+			});
+
 		});
 
 		// Only run this test if it's a public component
@@ -111,7 +108,7 @@ export function common(Component, {
 
 // Common tests for all our icon components
 export function icons(Component) {
-	describeWithDOM(`[icon]`, () => {
+	describeWithDOM('[icon]', () => {
 		it('should pass through isBadge prop to underlying Icon component', () => {
 			const wrapper = mount(<Component isBadge={true} />);
 			const classNames = wrapper.find('svg').prop('className').split(' ');

@@ -37,7 +37,7 @@ export function bindReducersToState(reducers, { getState, setState }) {
 	return _.reduce(getDeepPaths(reducers), (memo, path) => {
 		return _.set(memo, path, bindReducerToState(_.get(reducers, path), { getState, setState }, path));
 	}, {});
-};
+}
 
 export function getStatefulPropsContext(reducers, { getState, setState }) {
 	const boundReducers = bindReducersToState(reducers, { getState, setState });
@@ -67,9 +67,9 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 		},
 		getProps(props) {
 			return _.mergeWith({}, boundReducers, getState(), props, combineFunctionsCustomizer);
-		}
+		},
 	};
-};
+}
 
 export function safeMerge (objValue, srcValue) {
 	// don't merge arrays
@@ -81,18 +81,19 @@ export function safeMerge (objValue, srcValue) {
 	// If we don't have this clause, lodash (as of 4.7.0) will attempt to
 	// deeply clone the react children, which is really freaking slow.
 	if (isValidElement(srcValue)
-			|| (_.isArray(srcValue) && _.some(srcValue, isValidElement))
-			|| (_.isArray(srcValue) && _.isUndefined(objValue))
-		 ) {
+		|| (_.isArray(srcValue) && _.some(srcValue, isValidElement))
+		|| (_.isArray(srcValue) && _.isUndefined(objValue))
+	) {
 		return srcValue;
 	}
 
 }
 
-export function buildHybridComponent(baseComponent, opts = {
-	setStateWithNewProps: true, // if true, new props will update state, else prop has priority over existing state
-	replaceEvents: false // if true, function props replace the existing reducers, else they are invoked *after* state reducer returns
-}) {
+export function buildHybridComponent(baseComponent, {
+	setStateWithNewProps = true, // if true, new props will update state, else prop has priority over existing state
+	replaceEvents = false, // if true, function props replace the existing reducers, else they are invoked *after* state reducer returns
+	reducers = _.get(baseComponent, 'definition.statics.reducers', {}),
+} = {}) {
 
 	const {
 		_isLucidHybridComponent,
@@ -100,8 +101,7 @@ export function buildHybridComponent(baseComponent, opts = {
 		propTypes,
 		definition: {
 			statics = {},
-			statics: { reducers } = {}
-		} = {}
+		} = {},
 	} = baseComponent;
 
 	if (_isLucidHybridComponent) {
@@ -118,17 +118,17 @@ export function buildHybridComponent(baseComponent, opts = {
 		propTypes,
 		statics: {
 			_isLucidHybridComponent: true,
-			...statics
+			...statics,
 		},
 		displayName,
 		getInitialState() {
-			if (opts.setStateWithNewProps) {
+			if (setStateWithNewProps) {
 				return _.mergeWith({}, omitFunctionPropsDeep(baseComponent.getDefaultProps()), omitFunctionPropsDeep(this.props), safeMerge);
 			}
 			return omitFunctionPropsDeep(baseComponent.getDefaultProps());
 		},
 		componentWillReceiveProps(nextProps) {
-			if (opts.setStateWithNewProps) {
+			if (setStateWithNewProps) {
 				let nextPropsData = omitFunctionPropsDeep(nextProps);
 				this.setState(_.mergeWith({}, _.pick(this.state, _.intersection(_.keys(this.state), _.keys(nextPropsData))), nextPropsData, safeMerge));
 			}
@@ -136,15 +136,15 @@ export function buildHybridComponent(baseComponent, opts = {
 		componentWillMount() {
 			this.boundContext = getStatefulPropsContext(reducers, {
 				getState: () => { return this.state; },
-				setState: (state) => { this.setState(state); }
+				setState: (state) => { this.setState(state); },
 			});
 		},
 		render() {
-			if (opts.replaceEvents) {
+			if (replaceEvents) {
 				return React.createElement(baseComponent, this.boundContext.getPropReplaceReducers(this.props), this.props.children);
 			}
 			return React.createElement(baseComponent, this.boundContext.getProps(this.props), this.props.children);
-		}
+		},
 	});
 }
 

@@ -12,10 +12,10 @@ import {
 	bindReducersToState,
 	getStatefulPropsContext,
 	safeMerge,
-	buildHybridComponent
+	buildHybridComponent,
 } from './state-management';
 import {
-	createClass
+	createClass,
 } from './component-types';
 
 describe('#getDeepPaths', () => {
@@ -33,9 +33,9 @@ describe('#getDeepPaths', () => {
 				selectedPageSize: 10,
 				dropselector: {
 					selectedIndex: 1,
-					options: [5, 10, 20]
-				}
-			}
+					options: [5, 10, 20],
+				},
+			},
 		};
 
 		const deepPaths = getDeepPaths(pagedTableObj);
@@ -44,7 +44,7 @@ describe('#getDeepPaths', () => {
 			['paginator', 'selectedPageIndex'],
 			['paginator', 'selectedPageSize'],
 			['paginator', 'dropselector', 'selectedIndex'],
-			['paginator', 'dropselector', 'options']
+			['paginator', 'dropselector', 'options'],
 		], _.isEqual)
 		assert(_.isEqual([], xorPaths))
 	});
@@ -54,7 +54,7 @@ describe('#getDeepPaths', () => {
 		const xorPaths = _.xorWith(deepPaths, [
 			[0],
 			[1, 'one'],
-			[2]
+			[2],
 		], _.isEqual)
 		assert(_.isEqual([], xorPaths))
 	});
@@ -79,9 +79,9 @@ describe('#omitFunctionPropsDeep', () => {
 				dropselector: {
 					selectedIndex: 1,
 					options: [5, 10, 20],
-					onSelect: _.noop
-				}
-			}
+					onSelect: _.noop,
+				},
+			},
 		};
 
 		const result = omitFunctionPropsDeep(pagedTableObj);
@@ -93,9 +93,9 @@ describe('#omitFunctionPropsDeep', () => {
 				selectedPageSize: 10,
 				dropselector: {
 					selectedIndex: 1,
-					options: [5, 10, 20]
-				}
-			}
+					options: [5, 10, 20],
+				},
+			},
 		}));
 	});
 });
@@ -103,7 +103,7 @@ describe('#omitFunctionPropsDeep', () => {
 describe('#bindReducerToState', () => {
 	it('should bind a single reducer function to a state management interface', () => {
 		let state = {
-			value: null
+			value: null,
 		};
 
 		const stateManager = {
@@ -112,7 +112,7 @@ describe('#bindReducerToState', () => {
 			},
 			setState(nextState) {
 				state = nextState;
-			}
+			},
 		};
 
 		function setValue(state, value) {
@@ -129,8 +129,8 @@ describe('#bindReducerToState', () => {
 	it('should bind a single, nested reducer function to a state management interface', () => {
 		let state = {
 			sub: {
-				value: null
-			}
+				value: null,
+			},
 		};
 
 		const stateManager = {
@@ -139,7 +139,7 @@ describe('#bindReducerToState', () => {
 			},
 			setState(nextState) {
 				state = nextState;
-			}
+			},
 		};
 
 		function setValue(state, value) {
@@ -157,7 +157,7 @@ describe('#bindReducerToState', () => {
 describe('#bindReducersToState', () => {
 	it('should bind an object of reducers functions to a state management interface', () => {
 		let state = {
-			counter: 0
+			counter: 0,
 		};
 
 		const stateManager = {
@@ -166,19 +166,19 @@ describe('#bindReducersToState', () => {
 			},
 			setState(nextState) {
 				state = nextState;
-			}
+			},
 		};
 
 		const reducers = {
 			increaseCounter: (state) => _.assign({}, state, {
-				counter: state.counter + 1
+				counter: state.counter + 1,
 			}),
 			decreaseCounter: (state) => _.assign({}, state, {
-				counter: state.counter - 1
+				counter: state.counter - 1,
 			}),
 			setCounter: (state, x) => _.assign({}, state, {
-				counter: x
-			})
+				counter: x,
+			}),
 		};
 
 
@@ -197,8 +197,8 @@ describe('#bindReducersToState', () => {
 		let state = {
 			name: '',
 			count: {
-				counter: 0
-			}
+				counter: 0,
+			},
 		};
 
 		const stateManager = {
@@ -207,24 +207,24 @@ describe('#bindReducersToState', () => {
 			},
 			setState(nextState) {
 				state = nextState;
-			}
+			},
 		};
 
 		const reducers = {
 			setName: (state, newName) => _.assign({}, state, {
-				name: newName
+				name: newName,
 			}),
 			count: {
 				increaseCounter: (state) => _.assign({}, state, {
-					counter: state.counter + 1
+					counter: state.counter + 1,
 				}),
 				decreaseCounter: (state) => _.assign({}, state, {
-					counter: state.counter - 1
+					counter: state.counter - 1,
 				}),
 				setCounter: (state, x) => _.assign({}, state, {
-					counter: x
-				})
-			}
+					counter: x,
+				}),
+			},
 		};
 
 
@@ -248,8 +248,8 @@ describe('#bindReducersToState', () => {
 		assert(_.isEqual(state, {
 			name: 'Neumann',
 			count: {
-				counter: 31
-			}
+				counter: 31,
+			},
 		}));
 	});
 });
@@ -279,8 +279,8 @@ describe('#getStatefulPropsContext', () => {
 			state = {
 				name: '',
 				count: {
-					counter: 0
-				}
+					counter: 0,
+				},
 			};
 
 			stateManager = {
@@ -289,24 +289,24 @@ describe('#getStatefulPropsContext', () => {
 				},
 				setState(nextState) {
 					state = nextState;
-				}
+				},
 			};
 
 			reducers = {
 				setName: (state, newName) => _.assign({}, state, {
-					name: newName
+					name: newName,
 				}),
 				count: {
 					increaseCounter: (state) => _.assign({}, state, {
-						counter: state.counter + 1
+						counter: state.counter + 1,
 					}),
 					decreaseCounter: (state) => _.assign({}, state, {
-						counter: state.counter - 1
+						counter: state.counter - 1,
 					}),
 					setCounter: (state, x) => _.assign({}, state, {
-						counter: x
-					})
-				}
+						counter: x,
+					}),
+				},
 			};
 
 			sinon.spy(reducers, 'setName');
@@ -326,7 +326,7 @@ describe('#getStatefulPropsContext', () => {
 			it('should return an object with reducers and current state merged with prop arg overrides', () => {
 				const overrides = {
 					name: 'Neumann',
-					dead: 0xbeef
+					dead: 0xbeef,
 				};
 				const props = statefulPropsContext.getProps(overrides);
 				assert(_.isEqualWith(props, _.merge({}, state, reducers, overrides), isFunctions));
@@ -334,7 +334,7 @@ describe('#getStatefulPropsContext', () => {
 
 			it('should return an object with current state applied after function call modifies state', () => {
 				const overrides = {
-					name: 'Neumann'
+					name: 'Neumann',
 				};
 				let props;
 
@@ -356,7 +356,7 @@ describe('#getStatefulPropsContext', () => {
 
 			it('should call override function after the same reducer function', () => {
 				const overrides = {
-					setName: sinon.spy()
+					setName: sinon.spy(),
 				};
 				let props;
 
@@ -376,7 +376,7 @@ describe('#getStatefulPropsContext', () => {
 			// with lodash@4.7.0 -- https://github.com/appnexus/lucid/issues/181
 			it('should not clone arrays when the source object is undefined', () => {
 				const overrides = {
-					fresh: [{a: 1}]
+					fresh: [{a: 1}],
 				};
 				const props = statefulPropsContext.getProps(overrides);
 
@@ -393,7 +393,7 @@ describe('#getStatefulPropsContext', () => {
 			it('should return an object with reducers and current state merged with prop arg overrides', () => {
 				const overrides = {
 					name: 'Neumann',
-					dead: 0xbeef
+					dead: 0xbeef,
 				};
 				const props = statefulPropsContext.getPropReplaceReducers(overrides);
 				assert(_.isEqualWith(props, _.merge({}, state, reducers, overrides), isFunctions));
@@ -401,7 +401,7 @@ describe('#getStatefulPropsContext', () => {
 
 			it('should return an object with current state applied after function call modifies state', () => {
 				const overrides = {
-					name: 'Neumann'
+					name: 'Neumann',
 				};
 				let props;
 
@@ -423,7 +423,7 @@ describe('#getStatefulPropsContext', () => {
 
 			it('should call override function instead of the reducer function', () => {
 				const overrides = {
-					setName: sinon.spy((state, name) => _.assign({}, state, { name: _.toUpper(name) }))
+					setName: sinon.spy((state, name) => _.assign({}, state, { name: _.toUpper(name) })),
 				};
 				let props;
 
@@ -471,11 +471,11 @@ describeWithDOM('#buildHybridComponent', () => {
 		propTypes: {
 			count: React.PropTypes.number,
 			onIncrement: React.PropTypes.func,
-			onDecrement: React.PropTypes.func
+			onDecrement: React.PropTypes.func,
 		},
 		getDefaultProps() {
 			return {
-				count: 0
+				count: 0,
 			};
 		},
 		reducers: {
@@ -484,13 +484,13 @@ describeWithDOM('#buildHybridComponent', () => {
 			},
 			onDecrement(state) {
 				return _.assign({}, state, { count: state.count - 1 })
-			}
+			},
 		},
 		render() {
 			const {
 				count,
 				onIncrement,
-				onDecrement
+				onDecrement,
 			} = this.props;
 
 			return (
@@ -500,7 +500,7 @@ describeWithDOM('#buildHybridComponent', () => {
 					<button className='plus' onClick={onIncrement}>+</button>
 				</section>
 			);
-		}
+		},
 	});
 
 	it('should generate a stateful component from stateless component + reducers', () => {
@@ -588,5 +588,28 @@ describeWithDOM('#buildHybridComponent', () => {
 		assert(onIncrement.calledTwice);
 		assert(onDecrement.calledOnce);
 		assert.equal(countSpan.text(), '1');
+	});
+
+	it('should allow the consumer to override reducers', () => {
+		const onIncrement = sinon.spy();
+		const onDecrement = sinon.spy();
+		const StatefulCounter = buildHybridComponent(Counter, {
+			reducers: { onIncrement, onDecrement },
+		});
+		const wrapper = mount(<StatefulCounter />);
+
+		let minusButton = wrapper.find('button.minus');
+		let plusButton = wrapper.find('button.plus');
+
+		assert(!onIncrement.called);
+		assert(!onDecrement.called);
+
+		plusButton.simulate('click');
+		assert(onIncrement.calledOnce);
+		assert(!onDecrement.called);
+
+		minusButton.simulate('click');
+		assert(onIncrement.calledOnce);
+		assert(onDecrement.calledOnce);
 	});
 });

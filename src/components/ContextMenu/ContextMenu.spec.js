@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import assert from 'assert';
 import sinon from 'sinon';
@@ -9,12 +10,13 @@ import ContextMenu from './ContextMenu';
 
 describe('ContextMenu', () => {
 	common(ContextMenu, {
+		exemptFunctionProps: ['getAlignmentOffset'],
 		getDefaultProps: () => ({
 			children: [
 				(<ContextMenu.Target>Test</ContextMenu.Target>),
-				(<ContextMenu.FlyOut>Menu</ContextMenu.FlyOut>)
-			]
-		})
+				(<ContextMenu.FlyOut>Menu</ContextMenu.FlyOut>),
+			],
+		}),
 	});
 
 	describeWithDOM('props', () => {
@@ -59,39 +61,25 @@ describe('ContextMenu', () => {
 		});
 
 		describe('direction', () => {
-			it('should apply the `lucid-ContextMenu-FlyOut-Down` className when `down`', () => {
-				wrapper = mount(
-					<ContextMenu portalId='ContextMenu-test123' isExpanded direction='down'>
-						<ContextMenu.Target>
-							File
-						</ContextMenu.Target>
-						<ContextMenu.FlyOut>
-							Open
-						</ContextMenu.FlyOut>
-					</ContextMenu>
-				);
+			_.forEach(['up', 'down', 'left', 'right'], direction => {
+				it(`should apply the 'lucid-ContextMenu-FlyOut-${direction}' className when '${direction}'`, () => {
+					wrapper = mount(
+						<ContextMenu portalId='ContextMenu-test123' isExpanded direction={direction}>
+							<ContextMenu.Target>
+								File
+							</ContextMenu.Target>
+							<ContextMenu.FlyOut>
+								Open
+							</ContextMenu.FlyOut>
+						</ContextMenu>
+					);
 
-				const flyOutPortalDomNode = document.getElementById('ContextMenu-test123');
+					const flyOutPortalDomNode = document.getElementById('ContextMenu-test123');
 
-				assert(flyOutPortalDomNode.querySelector('.lucid-ContextMenu-FlyOut-Down'));
+					assert(flyOutPortalDomNode.querySelector(`.lucid-ContextMenu-FlyOut-${direction}`));
+				});
 			});
 
-			it('should apply the `lucid-ContextMenu-FlyOut-Up` className when `up`', () => {
-				wrapper = mount(
-					<ContextMenu portalId='ContextMenu-test123' isExpanded direction='up'>
-						<ContextMenu.Target>
-							File
-						</ContextMenu.Target>
-						<ContextMenu.FlyOut>
-							Open
-						</ContextMenu.FlyOut>
-					</ContextMenu>
-				);
-
-				const flyOutPortalDomNode = document.getElementById('ContextMenu-test123');
-
-				assert(flyOutPortalDomNode.querySelector('.lucid-ContextMenu-FlyOut-Up'));
-			});
 		});
 
 		describe('portalId', () => {

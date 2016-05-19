@@ -9,7 +9,7 @@ const {
 	any,
 	node,
 	object,
-	string
+	string,
 } = React.PropTypes;
 
 /**
@@ -30,9 +30,9 @@ const CheckboxLabeled = createClass({
 				 * Used to identify the purpose of this checkbox to the user -- can
 				 * be any renderable content.
 				 */
-				children: node
-			}
-		})
+				children: node,
+			},
+		}),
 	},
 
 	propTypes: {
@@ -53,14 +53,14 @@ const CheckboxLabeled = createClass({
 		 * Child element whose children are used to identify the purpose of this
 		 * checkbox to the user.
 		 */
-		Label: any
+		Label: any,
 	},
 
 	getDefaultProps() {
 		return {
 			isDisabled: false,
 			isSelected: false,
-			onSelect: _.noop
+			onSelect: _.noop,
 		};
 	},
 
@@ -71,7 +71,7 @@ const CheckboxLabeled = createClass({
 			isSelected,
 			onSelect,
 			style,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		const labelChildProps = _.first(_.map(findTypes(this.props, CheckboxLabeled.Label), 'props'));
@@ -80,7 +80,7 @@ const CheckboxLabeled = createClass({
 			<label
 					className={cx('&', {
 						'&-is-disabled': isDisabled,
-						'&-is-selected': isSelected
+						'&-is-selected': isSelected,
 					}, className)}
 					style={style}
 			>
@@ -98,7 +98,7 @@ const CheckboxLabeled = createClass({
 				}
 			</label>
 		);
-	}
+	},
 });
 
 export default CheckboxLabeled;

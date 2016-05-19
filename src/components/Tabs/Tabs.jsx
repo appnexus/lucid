@@ -36,7 +36,7 @@ const Tabs = createClass({
 				* selected until the current step has been compleated.
 				*/
 				isDisabled: bool,
-			}
+			},
 		}),
 		Title: createClass({
 			displayName: 'Tabs.Title',
@@ -104,7 +104,7 @@ const Tabs = createClass({
 
 		const tabChildProps = _.map(findTypes(this.props, Tabs.Tab), 'props');
 		const selectedIndexFromChildren = _.findLastIndex(tabChildProps, {
-			isSelected: true
+			isSelected: true,
 		});
 
 		const actualSelectedIndex = selectedIndexFromChildren !== -1
@@ -155,7 +155,7 @@ const Tabs = createClass({
 		} = this.props;
 
 		onSelect(index, { event, props: tabProps });
-	}
+	},
 });
 
 export default Tabs;

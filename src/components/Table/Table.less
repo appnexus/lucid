@@ -183,7 +183,7 @@
 
 				// always show marker on first cell
 				.selectFirstCellOnRow({
-					.renderLeftMarker(1);
+					.left-marker(1);
 				});
 			}
 
@@ -193,13 +193,13 @@
 
 				// place hidden marker on first cell
 				.selectFirstCellOnRow({
-					.renderLeftMarker(0);
+					.left-marker(0);
 				});
 
 				// show marker on hover
 				&:hover {
 					.selectFirstCellOnRow({
-						.renderLeftMarker(1);
+						.left-marker(1);
 					});
 				}
 			}
@@ -267,22 +267,5 @@
 		&.lucid-Table-is-first-single {
 			@ruleset();
 		}
-	}
-}
-
-// Place a styled box on the left edge of the current element with the given scale and width
-.renderLeftMarker(@scale:1; @width: 4px) {
-	position: relative;
-	&::before {
-		position: absolute;
-		left: 0;
-		top: 0;
-		height: 100%;
-		width: @width;
-		background-color: @color-primary;
-		content: '';
-		transform-origin: 0 0;
-		transform: scaleX(@scale);
-		transition: transform 100ms;
 	}
 }

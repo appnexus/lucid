@@ -4,7 +4,7 @@ import { SingleSelect } from '../../../index';
 const {
 	Placeholder,
 	Option,
-	OptionGroup
+	OptionGroup,
 } = SingleSelect;
 
 export default React.createClass({
@@ -29,5 +29,5 @@ export default React.createClass({
 				</OptionGroup>
 			</SingleSelect>
 		);
-	}
+	},
 });

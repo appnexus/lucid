@@ -6,7 +6,7 @@ export default {
 
 		return {
 			...state,
-			selectedIndex
+			selectedIndex,
 		}
-	}
+	},
 }

@@ -15,7 +15,7 @@ const {
 	func,
 	object,
 	shape,
-	string
+	string,
 } = React.PropTypes;
 
 /**
@@ -80,7 +80,7 @@ const Autocomplete = createClass({
 			onChange: _.noop,
 			onSelect: _.noop,
 			onExpand: _.noop,
-			DropMenu: DropMenu.getDefaultProps()
+			DropMenu: DropMenu.getDefaultProps(),
 		};
 	},
 
@@ -100,8 +100,8 @@ const Autocomplete = createClass({
 			onChange,
 			onExpand,
 			DropMenu: {
-				onCollapse
-			}
+				onCollapse,
+			},
 		} = this.props;
 
 		onChange(event.target.value, {event, props: this.props});
@@ -129,7 +129,7 @@ const Autocomplete = createClass({
 				isExpanded,
 				focusedIndex,
 				onCollapse,
-			}
+			},
 		} = this.props;
 
 		const value = this.getInputValue();
@@ -163,8 +163,8 @@ const Autocomplete = createClass({
 			onExpand,
 			DropMenu: {
 				isExpanded,
-				onCollapse
-			}
+				onCollapse,
+			},
 		} = this.props;
 
 		if (event.target === this.refs.inputNode) {
@@ -206,12 +206,12 @@ const Autocomplete = createClass({
 			isDisabled,
 			DropMenu: dropMenuProps,
 			suggestions,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		const {
 			direction,
-			isExpanded
+			isExpanded,
 		} = dropMenuProps;
 
 		const value = this.getInputValue();
@@ -229,7 +229,7 @@ const Autocomplete = createClass({
 				<DropMenu.Control onClick={this.handleControlClick}>
 					<div className={cx('&-Control', {
 						'&-Control-is-expanded': isExpanded,
-						'&-Control-is-disabled': isDisabled
+						'&-Control-is-disabled': isDisabled,
 					})}>
 						<input
 							{..._.omit(passThroughs, ['onChange', 'onSelect', 'onExpand', 'value', 'children'])}
@@ -270,7 +270,7 @@ const Autocomplete = createClass({
 				)}
 			</DropMenu>
 		);
-	}
+	},
 });
 
 function partitionText(text, pattern, length) {

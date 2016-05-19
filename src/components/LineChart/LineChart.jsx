@@ -463,7 +463,7 @@ const LineChart = createClass({
 				: null}
 			</svg>
 		);
-	}
+	},
 });
 
 export default LineChart;

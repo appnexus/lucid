@@ -5,10 +5,11 @@ import { default as AutocompleteDumb } from './components/Autocomplete/Autocompl
 import { default as ButtonGroupDumb } from './components/ButtonGroup/ButtonGroup';
 import { default as DropMenuDumb } from './components/DropMenu/DropMenu';
 import { default as ExpanderDumb } from './components/Expander/Expander';
+import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 import { default as SingleSelectDumb } from './components/SingleSelect/SingleSelect';
 import { default as TabsDumb } from './components/Tabs/Tabs';
+import { default as ToolTipDumb } from './components/ToolTip/ToolTip';
 import { default as VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
-import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 
 const Autocomplete = buildHybridComponent(AutocompleteDumb);
 const ButtonGroup = buildHybridComponent(ButtonGroupDumb);
@@ -17,6 +18,7 @@ const Expander = buildHybridComponent(ExpanderDumb);
 const RadioGroup = buildHybridComponent(RadioGroupDumb);
 const SingleSelect = buildHybridComponent(SingleSelectDumb);
 const Tabs = buildHybridComponent(TabsDumb);
+const ToolTip = buildHybridComponent(ToolTipDumb);
 const VerticalListMenu = buildHybridComponent(VerticalListMenuDumb);
 
 // dumb components
@@ -27,6 +29,7 @@ import Button from './components/Button/Button';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
 import Checkbox from './components/Checkbox/Checkbox';
+import CheckboxLabeled from './components/CheckboxLabeled/CheckboxLabeled';
 import ChevronIcon from './components/Icon/ChevronIcon/ChevronIcon';
 import ContextMenu from './components/ContextMenu/ContextMenu';
 import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
@@ -39,9 +42,6 @@ import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
 import Grid from './components/Grid/Grid';
 import Icon from './components/Icon/Icon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
-import CheckboxLabeled from './components/CheckboxLabeled/CheckboxLabeled';
-import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
-import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
 import LineChart from './components/LineChart/LineChart';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import Overlay from './components/Overlay/Overlay';
@@ -49,12 +49,14 @@ import Panel from './components/Panel/Panel';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Portal from './components/Portal/Portal';
 import RadioButton from './components/RadioButton/RadioButton';
+import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import StickySection from './components/StickySection/StickySection';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import Switch from './components/Switch/Switch';
+import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
 import Table from './components/Table/Table';
 import TableGearIcon from './components/Icon/TableGearIcon/TableGearIcon';
 import TextField from './components/TextField/TextField'
@@ -74,7 +76,7 @@ export {
 	domHelpers,
 	redux,
 	stateManagement,
-	styleHelpers
+	styleHelpers,
 };
 
 export {
@@ -88,9 +90,9 @@ export {
 	ButtonGroupDumb,
 	CaretIcon,
 	CheckIcon,
-	ChevronIcon,
 	Checkbox,
-	Panel,
+	CheckboxLabeled,
+	ChevronIcon,
 	ContextMenu,
 	CrossIcon,
 	DangerIcon,
@@ -106,15 +108,14 @@ export {
 	Grid,
 	Icon,
 	InfoIcon,
-	CheckboxLabeled,
-	RadioButtonLabeled,
-	SwitchLabeled,
 	LineChart,
 	MinusIcon,
 	Overlay,
+	Panel,
 	PlusIcon,
 	Portal,
 	RadioButton,
+	RadioButtonLabeled,
 	RadioGroup,
 	RadioGroupDumb,
 	ResizeIcon,
@@ -122,18 +123,20 @@ export {
 	SearchIcon,
 	SingleSelect,
 	SingleSelectDumb,
-	SuccessIcon,
 	StickySection,
+	SuccessIcon,
 	Switch,
+	SwitchLabeled,
 	Table,
 	TableGearIcon,
 	Tabs,
 	TabsDumb,
 	TextField,
 	TextFieldValidated,
+	ToolTip,
+	ToolTipDumb,
 	Validation,
 	VerticalListMenu,
 	VerticalListMenuDumb,
-	WarningIcon
+	WarningIcon,
 };
-

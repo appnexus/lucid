@@ -32,7 +32,7 @@ const ChevronIcon = createClass({
 
 	getDefaultProps() {
 		return {
-			direction: 'down'
+			direction: 'down',
 		};
 	},
 
@@ -41,7 +41,7 @@ const ChevronIcon = createClass({
 			className,
 			direction,
 			size,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		return (
@@ -58,7 +58,7 @@ const ChevronIcon = createClass({
 				<path d='M3,6 L8,11 L13,6' strokeWidth='2' strokeLinejoin='round' />
 			</Icon>
 		);
-	}
+	},
 });
 
 export default ChevronIcon;

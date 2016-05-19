@@ -4,7 +4,7 @@ import { Expander } from '../../../index';
 export default React.createClass({
 	getInitialState() {
 		return {
-			isExpanded: false
+			isExpanded: false,
 		};
 	},
 
@@ -26,7 +26,7 @@ export default React.createClass({
 
 	handleExpanded(isExpanded) {
 		this.setState({
-			isExpanded
+			isExpanded,
 		});
-	}
+	},
 });

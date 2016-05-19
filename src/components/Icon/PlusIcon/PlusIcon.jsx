@@ -20,7 +20,7 @@ const PlusIcon = createClass({
 	render() {
 		const {
 			className,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		return (
@@ -32,7 +32,7 @@ const PlusIcon = createClass({
 				<path d='M6.6,1v14h2.8V1H6.6z'/>
 			</Icon>
 		);
-	}
+	},
 });
 
 export default PlusIcon;

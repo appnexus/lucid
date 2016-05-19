@@ -20,7 +20,7 @@ const WarningIcon = createClass({
 	render() {
 		const {
 			className,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		return (
@@ -33,7 +33,7 @@ const WarningIcon = createClass({
 				<rect x='7' y='12' fill='#FFFFFF' width='2' height='2'></rect>
 			</Icon>
 		);
-	}
+	},
 });
 
 export default WarningIcon;

@@ -4,7 +4,7 @@ import React from 'react';
 
 import { lucidClassNames } from '../../util/style-helpers';
 
-const cx = lucidClassNames.bind('&-ColorPalette');
+const cx = lucidClassNames.bind('ColorPalette');
 
 const colorList = [
 	{
@@ -13,62 +13,51 @@ const colorList = [
 		variables: [
 			'color-white',
 			'color-black',
-		]
+			'color-backgroundColor',
+			'color-pageBackgroundColor',
+			'color-borderColor',
+		],
 	},
 	{
 		category: 'Primary',
-		description: 'Primary Colors come in three states primary, primaryMedium and primaryLight',
+		description: 'The primary color is the most prominent color used throughout lucid. It\'s great for drawing the user\'s eye to particular components.',
 		variables: [
 			'color-primary',
 			'color-primaryMedium',
 			'color-primaryLight',
-		]
-	},
-	{
-		category: 'Container Colors',
-		description: 'Colors used to define colors of containers within components.',
-		variables: [
-			'color-backgroundColor',
-			'color-borderColor',
-		]
+		],
 	},
 	{
 		category: 'Text Colors',
-		description: 'Used to define the color of text within a component.',
 		variables: [
 			'color-textColor',
 			'color-disabledText',
 			'color-linkColor',
 			'color-linkColorHover',
-		]
+		],
 	},
 	{
 		category: 'Grays',
-		description: 'Defined gray colors to be used with a component.  Do not use ' +
-		'if a variable has been created that is more descriptive.',
+		description: 'Grays play an important role in lucid, and this set of grays forms the foundation for all the other variants. More prescriptive colors should be favored over these general grays when available.',
 		variables: [
 			'color-lightGray',
 			'color-gray',
 			'color-mediumGray',
 			'color-darkGray',
-		]
+		],
 	},
 	{
 		category: 'Transparent Grays',
-		description: 'Gray with an opacity.',
 		variables: [
 			'color-gray-5',
 			'color-gray-10',
 			'color-gray-25',
 			'color-gray-30',
-		]
+		],
 	},
 	{
 		category: 'Featured Colors',
-		description: 'A featured color should only be used for a component that has ' +
-		'multiple states like banners or buttons or button like components ' +
-		'(single select).  Featured colors should not be consumed by most components ' +
-		'instead use the color variables defined above.',
+		description: 'A featured color should only be used for a component that has multiple states like banners, buttons, or button like components (e.g. SingleSelect).',
 		variables: [
 			'featured-color-default',
 			'featured-color-primary',
@@ -76,7 +65,7 @@ const colorList = [
 			'featured-color-info',
 			'featured-color-warning',
 			'featured-color-danger',
-		]
+		],
 	},
 	{
 		category: 'Featured Default',
@@ -85,7 +74,7 @@ const colorList = [
 			'featured-color-default-backgroundColor',
 			'featured-color-default-gradientStartColor',
 			'featured-color-default-gradientEndColor',
-		]
+		],
 	},
 	{
 		category: 'Featured Primary',
@@ -95,7 +84,7 @@ const colorList = [
 			'featured-color-primary-borderColorLite',
 			'featured-color-primary-gradientStartColor',
 			'featured-color-primary-gradientEndColor',
-		]
+		],
 	},
 	{
 		category: 'Featured Success',
@@ -105,7 +94,7 @@ const colorList = [
 			'featured-color-success-borderColorLite',
 			'featured-color-success-gradientStartColor',
 			'featured-color-success-gradientEndColor',
-		]
+		],
 	},
 	{
 		category: 'Featured Info',
@@ -115,7 +104,7 @@ const colorList = [
 			'featured-color-info-borderColorLite',
 			'featured-color-info-gradientStartColor',
 			'featured-color-info-gradientEndColor',
-		]
+		],
 	},
 	{
 		category: 'Featured Warning',
@@ -125,7 +114,7 @@ const colorList = [
 			'featured-color-warning-borderColorLite',
 			'featured-color-warning-gradientStartColor',
 			'featured-color-warning-gradientEndColor',
-		]
+		],
 	},
 	{
 		category: 'Featured Danger',
@@ -135,17 +124,18 @@ const colorList = [
 			'featured-color-danger-borderColorLite',
 			'featured-color-danger-gradientStartColor',
 			'featured-color-danger-gradientEndColor',
-		]
+		],
 	},
 	{
 		category: 'Chart 0',
+		description: 'Chart colors are used for data visualizations and were designed to be used in a particular order.',
 		variables: [
 			'color-chart-0-lightest',
 			'color-chart-0-light',
 			'color-chart-0',
 			'color-chart-0-dark',
 			'color-chart-0-darkest',
-		]
+		],
 	},
 	{
 		category: 'Chart 1',
@@ -155,7 +145,7 @@ const colorList = [
 			'color-chart-1',
 			'color-chart-1-dark',
 			'color-chart-1-darkest',
-		]
+		],
 	},
 	{
 		category: 'Chart 2',
@@ -165,7 +155,7 @@ const colorList = [
 			'color-chart-2',
 			'color-chart-2-dark',
 			'color-chart-2-darkest',
-		]
+		],
 	},
 	{
 		category: 'Chart 3',
@@ -175,7 +165,7 @@ const colorList = [
 			'color-chart-3',
 			'color-chart-3-dark',
 			'color-chart-3-darkest',
-		]
+		],
 	},
 	{
 		category: 'Chart 4',
@@ -185,7 +175,7 @@ const colorList = [
 			'color-chart-4',
 			'color-chart-4-dark',
 			'color-chart-4-darkest',
-		]
+		],
 	},
 	{
 		category: 'Chart 5',
@@ -195,7 +185,7 @@ const colorList = [
 			'color-chart-5',
 			'color-chart-5-dark',
 			'color-chart-5-darkest',
-		]
+		],
 	},
 	{
 		category: 'Chart Semantic Good',
@@ -203,7 +193,7 @@ const colorList = [
 			'color-chart-good-light',
 			'color-chart-good',
 			'color-chart-good-dark',
-		]
+		],
 	},
 	{
 		category: 'Chart Semantic Bad',
@@ -211,40 +201,42 @@ const colorList = [
 			'color-chart-bad-light',
 			'color-chart-bad',
 			'color-chart-bad-dark',
-		]
+		],
 	},
 	{
 		category: 'Chart Other',
 		variables: [
 			'color-chart-neutral',
-		]
+		],
 	},
 ];
 
 const ColorPalette = React.createClass({
 	render() {
 		return (
-			<div >
+			<div className={cx('&')}>
 				<h2>Color Palette</h2>
+
 				<p>A list of all colors used.  Colors are listed by group type.</p>
-				<p></p>
+
 				{_.map(colorList, (group, i) => (
-					<div key={i} style={{display: 'flex', flexWrap: 'wrap'}}>
-						<h3 style={{flex: '1 0 100%'}}>{group.category}</h3>
+					<div key={i}>
+						<h3>{group.category}</h3>
+
 						{group.description ?
-							<p style={{flex: '1 0 100%'}}>{group.description}</p>
+							<p>{group.description}</p>
 						: null}
+
 						{_.map(group.variables, (variable, j) => (
-							<div key={j} className={classNames(cx('&'))}>
-								<div className={cx(`&-${variable}`)}></div>
-								<p><code>{`@${variable};`}</code></p>
+							<div key={j} className={classNames(cx('&-item', `&-${variable}`))}>
+								{`@${variable};`}
 							</div>
 						))}
 					</div>
 				))}
 			</div>
 		);
-	}
+	},
 });
 
 export default ColorPalette;

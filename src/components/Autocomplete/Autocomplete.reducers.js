@@ -7,8 +7,8 @@ export function onChange(state, value) {
 		value,
 		DropMenu: {
 			...state.DropMenu,
-			focusedIndex: null
-		}
+			focusedIndex: null,
+		},
 	};
 }
 
@@ -20,8 +20,8 @@ export function onSelect(state, selectedIndex) {
 		value,
 		DropMenu: {
 			...DropMenu.onSelect(state.DropMenu, selectedIndex),
-			selectedIndices: []
-		}
+			selectedIndices: [],
+		},
 	}, value);
 }
 
@@ -31,8 +31,8 @@ export function onExpand(state) {
 		DropMenu: {
 			...state.DropMenu,
 			focusedIndex: null,
-			isExpanded: !_.isEmpty(state.value) && !_.isEmpty(state.suggestions)
-		}
+			isExpanded: !_.isEmpty(state.value) && !_.isEmpty(state.suggestions),
+		},
 	};
 }
 

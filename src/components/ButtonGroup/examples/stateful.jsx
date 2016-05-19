@@ -11,5 +11,5 @@ export default React.createClass({
 				<ButtonGroup.Button>Three</ButtonGroup.Button>
 			</ButtonGroup>
 		);
-	}
+	},
 });

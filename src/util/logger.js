@@ -1,3 +1,4 @@
+/*eslint no-console: 0*/
 import _ from 'lodash';
 import React from 'react';
 
@@ -65,7 +66,7 @@ function log(...args) {
 		// This error was thrown as a convenience so that you can use this
 		// stack to find the callsite that caused this warning to fire.
 		throw new Error(args[0]);
-	} catch (x) {}
+	} catch (x) { /* */ }
 
 }
 
@@ -82,7 +83,7 @@ function warn(...args) {
 		// This error was thrown as a convenience so that you can use this
 		// stack to find the callsite that caused this warning to fire.
 		throw new Error(args[0]);
-	} catch (x) {}
+	} catch (x) { /* */ }
 
 }
 
@@ -100,7 +101,7 @@ function error(...args) {
 		// This error was thrown as a convenience so that you can use this
 		// stack to find the callsite that caused this warning to fire.
 		throw new Error(args[0]);
-	} catch (x) {}
+	} catch (x) { /* */ }
 
 }
 

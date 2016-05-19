@@ -5,26 +5,26 @@ export default React.createClass({
 	getInitialState() {
 		return {
 			left: 216,
-			top: 460
+			top: 460,
 		};
 	},
 
 	handleClick(event) {
 		const {
 			height,
-			width
+			width,
 		} = event.target.getBoundingClientRect();
 
 		this.setState({
 			left: event.pageX - (width / 2),
-			top: event.pageY - (height / 2)
+			top: event.pageY - (height / 2),
 		});
 	},
 
 	render() {
 		const {
 			left,
-			top
+			top,
 		} = this.state;
 		return (
 			<Portal portalId='example-portal123' style={{
@@ -45,7 +45,7 @@ export default React.createClass({
 			}} onClick={this.handleClick}>
 				<section style={{
 					pointerEvents: 'none',
-					textAlign: 'center'
+					textAlign: 'center',
 				}}>
 					<p>
 						click to move
@@ -59,5 +59,5 @@ export default React.createClass({
 				</section>
 			</Portal>
 		);
-	}
+	},
 });

@@ -2,7 +2,7 @@ import React from 'react';
 import { RadioButtonLabeled } from '../../../index';
 
 const style = {
-	marginBottom: '3px'
+	marginBottom: '3px',
 };
 
 export default React.createClass({
@@ -21,5 +21,5 @@ export default React.createClass({
 				</section>
 			</section>
 		);
-	}
+	},
 });

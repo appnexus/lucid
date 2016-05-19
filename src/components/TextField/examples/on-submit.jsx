@@ -2,13 +2,13 @@ import React from 'react';
 import { TextField } from '../../../index';
 
 const style = {
-	marginBottom: '10px'
+	marginBottom: '10px',
 };
 
 export default React.createClass({
 	getInitialState() {
 		return {
-			value: 'Enter some text in and hit enter'
+			value: 'Enter some text in and hit enter',
 		}
 	},
 
@@ -24,5 +24,5 @@ export default React.createClass({
 				<div style={style}>this.state.value: {this.state.value}</div>
 			</div>
 		);
-	}
+	},
 });

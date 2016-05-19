@@ -6,7 +6,7 @@ import { createClass } from '../../util/component-types';
 const cx = lucidClassNames.bind('&-DragCaptureZone');
 const {
 	func,
-	string
+	string,
 } = React.PropTypes;
 
 /**
@@ -44,21 +44,21 @@ const DragCaptureZone = createClass({
 		 *
 		 * Signature: `({ dx, dy, pageX, pageY }, { event, props }) => {}`
 		 */
-		onDragStart: func
+		onDragStart: func,
 	},
 
 	getDefaultProps() {
 		return {
 			onDrag: _.noop,
 			onDragEnd: _.noop,
-			onDragStart: _.noop
+			onDragStart: _.noop,
 		};
 	},
 
 	getInitialState() {
 		return {
 			pageX: 0,
-			pageY: 0
+			pageY: 0,
 		};
 	},
 
@@ -81,7 +81,7 @@ const DragCaptureZone = createClass({
 	handleDrag(event) {
 		const {
 			pageX,
-			pageY
+			pageY,
 		} = event;
 
 		event.preventDefault();
@@ -90,17 +90,17 @@ const DragCaptureZone = createClass({
 			dX: pageX - this.state.pageX,
 			dY: pageY - this.state.pageY,
 			pageX,
-			pageY
+			pageY,
 		}, {
 			event,
-			props: this.props
+			props: this.props,
 		});
 	},
 
 	handleDragEnd(event) {
 		const {
 			pageX,
-			pageY
+			pageY,
 		} = event;
 
 		event.preventDefault();
@@ -112,22 +112,22 @@ const DragCaptureZone = createClass({
 			dX: pageX - this.state.pageX,
 			dY: pageY - this.state.pageY,
 			pageX,
-			pageY
+			pageY,
 		}, {
 			event,
-			props: this.props
+			props: this.props,
 		});
 
 		this.setState({
 			pageX: 0,
-			pageY: 0
+			pageY: 0,
 		});
 	},
 
 	handleDragStart(event) {
 		const {
 			pageX,
-			pageY
+			pageY,
 		} = event;
 
 		event.preventDefault();
@@ -139,17 +139,17 @@ const DragCaptureZone = createClass({
 			dX: 0,
 			dY: 0,
 			pageX,
-			pageY
+			pageY,
 		}, {
 			event,
-			props: this.props
+			props: this.props,
 		});
 
 		this.setState({
 			pageX,
-			pageY
+			pageY,
 		});
-	}
+	},
 });
 
 export default DragCaptureZone;

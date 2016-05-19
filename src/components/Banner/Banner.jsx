@@ -25,12 +25,12 @@ const defaultIcons = {
 	'info': <InfoIcon isBadge />,
 	'warning': <WarningIcon />,
 	'primary': null,
-	'default': null
+	'default': null,
 };
 
 /**
  *
- * {"categories": ["controls", "banners"], "madeFrom": ["DangerIcon", "InfoIcon", "SuccessIcon", "WarningIcon"]}
+ * {"categories": ["communication"], "madeFrom": ["DangerIcon", "InfoIcon", "SuccessIcon", "WarningIcon"]}
  *
  * A basic Banner. Any props that are not explicitly called out below will be
  * passed through to the native `Banner` component.
@@ -127,7 +127,7 @@ const Banner = createClass({
 			isCloseable,
 			hasRoundedCorners,
 			isClosed,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		let displayedIcon = null;
@@ -176,7 +176,7 @@ const Banner = createClass({
 				: null}
 			</ReactCSSTransitionGroup>
 		);
-	}
+	},
 });
 
 export default Banner;

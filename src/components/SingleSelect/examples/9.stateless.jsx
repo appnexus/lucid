@@ -4,7 +4,7 @@ import { SingleSelectDumb as SingleSelect } from '../../../index';
 const {
 	Placeholder,
 	Option,
-	OptionGroup
+	OptionGroup,
 } = SingleSelect;
 
 export default React.createClass({
@@ -25,5 +25,5 @@ export default React.createClass({
 				<Option isDisabled>Brown</Option>
 			</SingleSelect>
 		);
-	}
+	},
 });

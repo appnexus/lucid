@@ -1,0 +1,60 @@
+.lucid-LandingPage {
+	text-align: center;
+
+	&-logo {
+		width: 400px;
+		margin-top: @size-L;
+	}
+
+	&-primary {
+		fill: @color-primary;
+	}
+
+	&-readme {
+		text-align: left;
+		padding: @size-L;
+	}
+
+	&-carpetize {
+		cursor: pointer;
+	}
+
+	&-is-carpeted {
+		position: relative;
+		min-height: 100vh;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background-image: data-uri('../img/pdx.svg');
+			background-size: 100px;
+			opacity: 0.1;
+			z-index: -1;
+		}
+	}
+
+	&-slide-0 { animation: 300ms 0ms slide; }
+	&-slide-1 { animation: 300ms 100ms slide; }
+	&-slide-2 { animation: 300ms 200ms slide; }
+	&-slide {
+		opacity: 0;
+		animation-fill-mode: both;
+	}
+
+	@keyframes slide {
+		from {
+			transform: translateX(-10px);
+			opacity: 0;
+		}
+
+		to {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+}
+

@@ -9,5 +9,5 @@ export default React.createClass({
 				<EditIcon isBadge />
 			</div>
 		);
-	}
+	},
 });
