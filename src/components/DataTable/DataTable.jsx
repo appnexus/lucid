@@ -235,6 +235,7 @@ const DataTable = React.createClass(createLucidComponentDefinition({
 				<Tbody>
 					{_.map(data, (row, index) => (
 						<Tr
+							isDisabled={row.isDisabled}
 							isSelected={row.isSelected}
 							isActive={row.isActive}
 							onClick={_.partial(this.handleRowClick, index)}
