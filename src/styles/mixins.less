@@ -167,6 +167,24 @@
 	cursor: not-allowed;
 }
 
+// Place a styled box on the left edge of the current element with the given scale and width
+.left-marker(@scale:1; @width: @size-XXS + 1) {
+	position: relative;
+
+	&::after {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: @width;
+		background-color: @color-primary;
+		content: '';
+		transform-origin: 0 0;
+		transform: scaleX(@scale);
+		transition: transform 100ms;
+	}
+}
+
 // -----------------------------------------------------------------------------
 // Font mixins
 // -----------------------------------------------------------------------------

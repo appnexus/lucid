@@ -89,10 +89,11 @@ export function safeMerge (objValue, srcValue) {
 
 }
 
-export function buildHybridComponent(baseComponent, opts = {
-	setStateWithNewProps: true, // if true, new props will update state, else prop has priority over existing state
-	replaceEvents: false // if true, function props replace the existing reducers, else they are invoked *after* state reducer returns
-}) {
+export function buildHybridComponent(baseComponent, {
+	setStateWithNewProps = true, // if true, new props will update state, else prop has priority over existing state
+	replaceEvents = false, // if true, function props replace the existing reducers, else they are invoked *after* state reducer returns
+	reducers = _.get(baseComponent, 'definition.statics.reducers', {}),
+} = {}) {
 
 	const {
 		_isLucidHybridComponent,
@@ -100,7 +101,6 @@ export function buildHybridComponent(baseComponent, opts = {
 		propTypes,
 		definition: {
 			statics = {},
-			statics: { reducers } = {}
 		} = {}
 	} = baseComponent;
 
@@ -122,13 +122,13 @@ export function buildHybridComponent(baseComponent, opts = {
 		},
 		displayName,
 		getInitialState() {
-			if (opts.setStateWithNewProps) {
+			if (setStateWithNewProps) {
 				return _.mergeWith({}, omitFunctionPropsDeep(baseComponent.getDefaultProps()), omitFunctionPropsDeep(this.props), safeMerge);
 			}
 			return omitFunctionPropsDeep(baseComponent.getDefaultProps());
 		},
 		componentWillReceiveProps(nextProps) {
-			if (opts.setStateWithNewProps) {
+			if (setStateWithNewProps) {
 				let nextPropsData = omitFunctionPropsDeep(nextProps);
 				this.setState(_.mergeWith({}, _.pick(this.state, _.intersection(_.keys(this.state), _.keys(nextPropsData))), nextPropsData, safeMerge));
 			}
@@ -140,7 +140,7 @@ export function buildHybridComponent(baseComponent, opts = {
 			});
 		},
 		render() {
-			if (opts.replaceEvents) {
+			if (replaceEvents) {
 				return React.createElement(baseComponent, this.boundContext.getPropReplaceReducers(this.props), this.props.children);
 			}
 			return React.createElement(baseComponent, this.boundContext.getProps(this.props), this.props.children);

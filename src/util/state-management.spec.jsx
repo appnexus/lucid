@@ -589,4 +589,27 @@ describeWithDOM('#buildHybridComponent', () => {
 		assert(onDecrement.calledOnce);
 		assert.equal(countSpan.text(), '1');
 	});
+
+	it('should allow the consumer to override reducers', () => {
+		const onIncrement = sinon.spy();
+		const onDecrement = sinon.spy();
+		const StatefulCounter = buildHybridComponent(Counter, {
+			reducers: { onIncrement, onDecrement, },
+		});
+		const wrapper = mount(<StatefulCounter />);
+
+		let minusButton = wrapper.find('button.minus');
+		let plusButton = wrapper.find('button.plus');
+
+		assert(!onIncrement.called);
+		assert(!onDecrement.called);
+
+		plusButton.simulate('click');
+		assert(onIncrement.calledOnce);
+		assert(!onDecrement.called);
+
+		minusButton.simulate('click');
+		assert(onIncrement.calledOnce);
+		assert(onDecrement.calledOnce);
+	});
 });
