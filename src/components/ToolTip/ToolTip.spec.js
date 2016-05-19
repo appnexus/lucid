@@ -22,9 +22,9 @@ describe('ToolTip', () => {
 		it('should render a ContextMenu', () => {
 			const wrapper = shallow(
 				<ToolTip>
-				<Target>ToolTip Target</Target>
-				<Title>Title</Title>
-				<Body>Body</Body>
+					<Target>ToolTip Target</Target>
+					<Title>Title</Title>
+					<Body>Body</Body>
 				</ToolTip>
 			);
 
@@ -37,11 +37,11 @@ describe('ToolTip', () => {
 			it('should not render any direct child elements which are not ToolTip-specific', () => {
 				const wrapper = shallow(
 					<ToolTip>
-					<button>button</button>
-					<Target>ToolTip Target</Target>
-					<Title>Title</Title>
-					<Body>Body</Body>
-					<h1>header</h1>
+						<button>button</button>
+						<Target>ToolTip Target</Target>
+						<Title>Title</Title>
+						<Body>Body</Body>
+						<h1>header</h1>
 					</ToolTip>
 				);
 				assert.equal(wrapper.find('button').length, 0, 'must not render button');
@@ -62,8 +62,8 @@ describe('ToolTip', () => {
 				it('should pass the className prop thru to the FlyOut (portal) element', () => {
 					wrapper = mount(
 						<ToolTip isExpanded className='MyToolTip'>
-						<Target>Target</Target>
-						<Body>Body</Body>
+							<Target>Target</Target>
+							<Body>Body</Body>
 						</ToolTip>
 					);
 
@@ -192,8 +192,8 @@ describe('ToolTip', () => {
 				it('should pass getAlignmentOffset with correct closed over values', () => {
 					const wrapper = shallow(
 						<ToolTip isExpanded alignment='end'>
-						<Target>Target</Target>
-						<Body>Body</Body>
+							<Target>Target</Target>
+							<Body>Body</Body>
 						</ToolTip>
 					);
 					const getAlignmentOffset = wrapper.find(ContextMenu).prop('getAlignmentOffset');
