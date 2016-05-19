@@ -102,6 +102,10 @@ const DropMenu = createClass({
 		 */
 		portalId: string,
 		/**
+		 * Styles that are passed through to the ContextMenu FlyOut element.
+		 */
+		flyOutStyle: object,
+		/**
 		 * Called when collapsed and the control is clicked, or when the control has focus and the Down Arrow or Space key is pressed.
 		 */
 		onExpand: func,
@@ -155,6 +159,7 @@ const DropMenu = createClass({
 			selectedIndices: [],
 			focusedIndex: null,
 			portalId: 'DropMenu-Portal-' + Math.random().toString(16).substr(2),
+			flyOutStyle: { maxHeight: '18em' },
 			onExpand: _.noop,
 			onCollapse: _.noop,
 			onSelect: _.noop,
@@ -399,7 +404,8 @@ const DropMenu = createClass({
 			isExpanded,
 			direction,
 			portalId,
-			onCollapse
+			onCollapse,
+			flyOutStyle,
 		} = this.props;
 
 		const {
@@ -434,7 +440,7 @@ const DropMenu = createClass({
 							className={cx('&-Control', _.get(controlProps, 'className'))}
 						/>
 					</ContextMenu.Target>
-					<ContextMenu.FlyOut className={cx('&', className)}>
+					<ContextMenu.FlyOut className={cx('&', className)} style={flyOutStyle}>
 						{
 							_.map(nullOptions, (optionProps) => this.renderOption(optionProps, null))
 							.concat(_.isEmpty(nullOptions) ? [] : [(<div key={'OptionGroup-divider-NullOption'} className={cx('&-OptionGroup-divider')} />)])

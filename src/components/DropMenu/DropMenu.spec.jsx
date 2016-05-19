@@ -7,6 +7,7 @@ import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 
 import DropMenu from './DropMenu';
+import ContextMenu from '../ContextMenu/ContextMenu';
 import * as KEYCODE from '../../constants/key-code';
 
 const {
@@ -254,6 +255,27 @@ describe('DropMenu', () => {
 
 				assert(_.isElement(portalDOMNode));
 				assert.equal(document.body, portalDOMNode.parentNode);
+			});
+		});
+
+		describe('flyOutStyle', () => {
+			it('should pass flyOutStyle style object to the ContextMenu.FlyOut', () => {
+				const styleObj = {
+					width: 123,
+					height: 321,
+					backgroundColor: 'tan',
+				};
+
+				const wrapper = shallow(
+					<DropMenu flyOutStyle={styleObj}>
+						<Control>control</Control>
+						<Option>option a</Option>
+						<Option>option b</Option>
+						<Option>option c</Option>
+					</DropMenu>
+				);
+
+				assert.deepEqual(styleObj, wrapper.find(ContextMenu.FlyOut).prop('style'), 'style object must be passed through to ContextMenu.FlyOut');
 			});
 		});
 

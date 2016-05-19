@@ -160,6 +160,23 @@ describe('SingleSelect', () => {
 			});
 		});
 
+		describe('maxMenuHeight', () => {
+			it('should pass through to DropMenu prop `flyOutStyle.maxHeight`', () => {
+				const wrapper = shallow(
+					<SingleSelect maxMenuHeight={123}>
+						<Placeholder>select one</Placeholder>
+						<Option>option a</Option>
+						<Option>option b</Option>
+						<Option>option c</Option>
+					</SingleSelect>
+				);
+
+				const dropMenuWrapper = wrapper.find(DropMenu);
+				const flyOutStyle = dropMenuWrapper.prop('flyOutStyle')
+				assert.equal(123, flyOutStyle.maxHeight, 'must match prop value');
+			});
+		});
+
 		describeWithDOM('onSelect', () => {
 			let wrapper;
 

@@ -16,7 +16,8 @@ const {
 	number,
 	object,
 	shape,
-	string
+	string,
+	oneOfType,
 } = React.PropTypes;
 
 /**
@@ -75,6 +76,10 @@ const SingleSelect = createClass({
 		 * The currently selected `SingleSelect.Option` index or `null` if nothing is selected.
 		 */
 		selectedIndex: number,
+		/**
+		 * The max height of the fly-out menu.
+		 */
+		maxMenuHeight: oneOfType(number, string),
 		/**
 		 * Object of DropMenu props which are passed thru to the underlying DropMenu component.
 		 */
@@ -135,13 +140,15 @@ const SingleSelect = createClass({
 			hasReset,
 			isDisabled,
 			selectedIndex,
+			maxMenuHeight,
 			onSelect,
 			DropMenu: dropMenuProps
 		} = this.props;
 
 		const {
 			direction,
-			isExpanded
+			isExpanded,
+			flyOutStyle,
 		} = dropMenuProps;
 
 		const {
@@ -163,6 +170,7 @@ const SingleSelect = createClass({
 				className={cx('&', className)}
 				onSelect={onSelect}
 				style={style}
+				flyOutStyle={_.assign({}, flyOutStyle, !_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null)}
 			>
 				<DropMenu.Control>
 					<div className={cx('&-Control', {
