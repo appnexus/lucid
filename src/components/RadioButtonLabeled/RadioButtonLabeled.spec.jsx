@@ -18,6 +18,22 @@ describeWithDOM;
 describe('RadioButtonLabeled', () => {
 	common(RadioButtonLabeled);
 
+	describe('render', () => {
+		it('should allow multiple Label children', () => {
+			const wrapper = shallow(
+				<RadioButtonLabeled>
+					<RadioButtonLabeled.Label>
+						<span>one</span>
+						<span>two</span>
+					</RadioButtonLabeled.Label>
+				</RadioButtonLabeled>
+			);
+
+			assert.equal(wrapper.find(RadioButtonLabeled.Label).children().at(0).text(), 'one', 'wrong or missing first Label child');
+			assert.equal(wrapper.find(RadioButtonLabeled.Label).children().at(1).text(), 'two', 'wrong or missing second Label child');
+		});
+	});
+
 	describe('props', () => {
 		describe('isDisabled', () => {
 			it('passes the value through to its `RadioButton` instance.', () => {
