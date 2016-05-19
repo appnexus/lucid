@@ -4,7 +4,7 @@ import React from 'react';
 
 import { lucidClassNames } from '../../util/style-helpers';
 
-const cx = lucidClassNames.bind('&-ColorPalette');
+const cx = lucidClassNames.bind('ColorPalette');
 
 const colorList = [
 	{
@@ -13,11 +13,14 @@ const colorList = [
 		variables: [
 			'color-white',
 			'color-black',
+			'color-backgroundColor',
+			'color-pageBackgroundColor',
+			'color-borderColor',
 		]
 	},
 	{
 		category: 'Primary',
-		description: 'Primary Colors come in three states primary, primaryMedium and primaryLight',
+		description: 'The primary color is the most prominent color used throughout lucid. It\'s great for drawing the user\'s eye to particular components.',
 		variables: [
 			'color-primary',
 			'color-primaryMedium',
@@ -25,16 +28,7 @@ const colorList = [
 		]
 	},
 	{
-		category: 'Container Colors',
-		description: 'Colors used to define colors of containers within components.',
-		variables: [
-			'color-backgroundColor',
-			'color-borderColor',
-		]
-	},
-	{
 		category: 'Text Colors',
-		description: 'Used to define the color of text within a component.',
 		variables: [
 			'color-textColor',
 			'color-disabledText',
@@ -44,8 +38,7 @@ const colorList = [
 	},
 	{
 		category: 'Grays',
-		description: 'Defined gray colors to be used with a component.  Do not use ' +
-		'if a variable has been created that is more descriptive.',
+		description: 'Grays play an important role in lucid, and this set of grays forms the foundation for all the other variants. More prescriptive colors should be favored over these general grays when available.',
 		variables: [
 			'color-lightGray',
 			'color-gray',
@@ -55,7 +48,6 @@ const colorList = [
 	},
 	{
 		category: 'Transparent Grays',
-		description: 'Gray with an opacity.',
 		variables: [
 			'color-gray-5',
 			'color-gray-10',
@@ -65,10 +57,7 @@ const colorList = [
 	},
 	{
 		category: 'Featured Colors',
-		description: 'A featured color should only be used for a component that has ' +
-		'multiple states like banners or buttons or button like components ' +
-		'(single select).  Featured colors should not be consumed by most components ' +
-		'instead use the color variables defined above.',
+		description: 'A featured color should only be used for a component that has multiple states like banners, buttons, or button like components (e.g. SingleSelect).',
 		variables: [
 			'featured-color-default',
 			'featured-color-primary',
@@ -139,6 +128,7 @@ const colorList = [
 	},
 	{
 		category: 'Chart 0',
+		description: 'Chart colors are used for data visualizations and were designed to be used in a particular order.',
 		variables: [
 			'color-chart-0-lightest',
 			'color-chart-0-light',
@@ -224,20 +214,22 @@ const colorList = [
 const ColorPalette = React.createClass({
 	render() {
 		return (
-			<div >
+			<div className={cx('&')}>
 				<h2>Color Palette</h2>
+
 				<p>A list of all colors used.  Colors are listed by group type.</p>
-				<p></p>
+
 				{_.map(colorList, (group, i) => (
-					<div key={i} style={{display: 'flex', flexWrap: 'wrap'}}>
-						<h3 style={{flex: '1 0 100%'}}>{group.category}</h3>
+					<div key={i}>
+						<h3>{group.category}</h3>
+
 						{group.description ?
-							<p style={{flex: '1 0 100%'}}>{group.description}</p>
+							<p>{group.description}</p>
 						: null}
+
 						{_.map(group.variables, (variable, j) => (
-							<div key={j} className={classNames(cx('&'))}>
-								<div className={cx(`&-${variable}`)}></div>
-								<p><code>{`@${variable};`}</code></p>
+							<div key={j} className={classNames(cx('&-item', `&-${variable}`))}>
+								{`@${variable};`}
 							</div>
 						))}
 					</div>

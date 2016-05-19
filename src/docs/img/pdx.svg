@@ -1,0 +1,39 @@
+<svg
+	version="1.1"
+	baseProfile="full"
+	xmlns="http://www.w3.org/2000/svg"
+	x="0px"
+	y="0px"
+	width="395px"
+	height="342px"
+	viewBox="0 0 395 342"
+>
+	<g transform="rotate(-45 197 171) translate(-35, -35)">
+		<rect x="1.204" y="186.341" style="fill: #2abbb0;" width="17" height="17"/>
+		<rect x="27.204" y="186.341" style="fill: #2abbb0;" width="17" height="17"/>
+		<rect x="53.204" y="186.341" style="fill: #2abbb0;" width="17" height="17"/>
+		<rect x="212.996" y="1" width="17" height="17"/>
+		<rect x="369.519" y="312.014" width="17" height="17"/>
+		<rect x="346.519" y="289.014" width="17" height="17"/>
+		<rect x="323.519" y="266.014" width="17" height="17"/>
+		<rect x="213.067" y="323.901" width="17" height="17"/>
+		<rect x="213.067" y="299.901" width="17" height="17"/>
+		<rect x="213.067" y="276.901" width="17" height="17"/>
+		<rect x="213.067" y="253.901" width="17" height="17"/>
+		<rect x="143.956" y="229.17" width="17" height="17"/>
+		<rect x="166.956" y="206.17" width="17" height="17"/>
+		<rect x="189.956" y="183.17" width="17" height="17"/>
+		<rect x="376.996" y="134.811" width="17" height="17"/>
+		<rect x="353.996" y="134.811" width="17" height="17"/>
+		<rect x="330.996" y="134.811" width="17" height="17"/>
+		<rect x="307.996" y="134.811" width="17" height="17"/>
+		<rect x="283.996" y="134.811" width="17" height="17"/>
+		<rect x="259.996" y="134.811" width="17" height="17"/>
+		<rect x="235.996" y="134.811" width="17" height="17"/>
+		<rect x="235.996" y="160" style="fill: #2abbb0;" width="17" height="17"/>
+		<rect x="212.996" y="23" width="17" height="130"/>
+		<rect x="1" y="160" width="206" height="17"/>
+		<rect x="212.996" y="184" width="17" height="62"/>
+		<rect x="212.996" y="160" width="17" height="17"/>
+	</g>
+</svg>
