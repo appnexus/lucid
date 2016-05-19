@@ -7,12 +7,27 @@ import { basename } from 'path';
 import _ from 'lodash';
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, Link, useRouterHistory } from 'react-router';
+import {
+	IndexRoute,
+	Link,
+	Route,
+	Router,
+	useRouterHistory,
+} from 'react-router';
 import { createHashHistory } from 'history';
-import docgenMapRaw from './docgen.json';
 import { markdown } from 'markdown';
-import ColorPalette from './containers/colors';
-import Table from '../components/Table/Table.jsx';
+import docgenMapRaw from './docgen.json';
+import { handleHighlightCode, toMarkdown } from './util';
+
+import ColorPalette from './containers/color-palette';
+import LandingPage from './containers/landing-page';
+
+import {
+	Table,
+	VerticalListMenuDumb,
+	Autocomplete,
+	stateManagement,
+} from '../index';
 
 const {
 	Thead,
@@ -21,6 +36,22 @@ const {
 	Th,
 	Td,
 } = Table;
+
+function toggleOrSelectReducer(state = {}, i) {
+	return {
+		...state,
+		expandedIndices: _.xor(state.expandedIndices || [], [i]),
+	}
+}
+
+const VerticalListMenu = stateManagement.buildHybridComponent(VerticalListMenuDumb, {
+	reducers: {
+		onSelect: toggleOrSelectReducer,
+		onToggle: toggleOrSelectReducer,
+	},
+});
+
+const { Item } = VerticalListMenu;
 
 const hashHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
@@ -70,24 +101,6 @@ const examplesByComponent = _.chain(reqExamples.keys())
 	})
 	.groupBy('componentName')
 	.value();
-
-function handleHighlightCode() {
-	if (window.hljs) { //eslint-disable-line
-		_.each(document.querySelectorAll('pre code'), (block) => {
-			hljs.highlightBlock(block); //eslint-disable-line
-		});
-	}
-}
-
-function getDescriptionAsHtml(description) {
-	return _.chain(description)
-		.thru((description) => {
-			return {
-				__html: markdown.toHTML(description),
-			};
-		})
-		.value();
-}
 
 const {
 	PropTypes: {
@@ -159,6 +172,7 @@ const Component = React.createClass({
 		params: shape({
 			componentName: string.isRequired,
 		}),
+		location: any,
 	},
 
 	getInitialState() {
@@ -196,7 +210,7 @@ const Component = React.createClass({
 			.sortBy(x => x[0]) // sort by property name
 			.value()
 
-		const descriptionAsHTML = getDescriptionAsHtml(_.get(docgenMap, `${componentName}.description`));
+		const descriptionAsHTML = toMarkdown(_.get(docgenMap, `${componentName}.description`));
 
 		const privateString = _.get(docgenMap, `${componentName}.isPrivateComponent`) ? '(private)' : '';
 
@@ -209,7 +223,7 @@ const Component = React.createClass({
 
 				const composesComponentLinks = componentNames.map((name, index) => (
 					<span key={name}>
-						<Link to={`/components/${name}`}>
+						<Link to={{ pathname: `/components/${name}`, query: this.props.location.query }}>
 							{name}
 						</Link>
 						{index == componentNames.length - 1 ? null : ', '}
@@ -226,11 +240,11 @@ const Component = React.createClass({
 			.value();
 
 		return (
-			<div>
+			<div className='Component'>
 				<h2>{componentName} {privateString} {composesComponents}</h2>
 				<div dangerouslySetInnerHTML={descriptionAsHTML} />
 				<h3>Props</h3>
-				<Table hasBorder={false} style={{width:'100%'}}>
+				<Table style={{width:'100%'}}>
 					<Thead>
 						<Tr>
 							<Th>Name</Th>
@@ -273,9 +287,9 @@ const Component = React.createClass({
 						{_.map(childComponents, (childComponent) => (
 							<section key={childComponent.displayName}>
 								<h4>{childComponent.displayName}</h4>
-								<div dangerouslySetInnerHTML={getDescriptionAsHtml(childComponent.description)} />
+								<div dangerouslySetInnerHTML={toMarkdown(childComponent.description)} />
 								{!_.isNil(childComponent.props) ? (
-									<Table hasBorder={false} style={{width:'100%'}}>
+									<Table style={{width:'100%'}}>
 										<Thead>
 											<Tr>
 												<Th>Name</Th>
@@ -353,43 +367,101 @@ const Component = React.createClass({
 });
 
 const App = React.createClass({
+	getInitialState() {
+		return {
+			search: '',
+		}
+	},
+
+	contextTypes: {
+		router: object,
+	},
+
 	propTypes: {
 		children: any,
+		location: any,
+	},
+
+	goToPath(path) {
+		this.context.router.push({
+			pathname: path,
+			query: this.props.location.query,
+		});
 	},
 
 	renderCategoryLinks(items) {
 		if (_.isPlainObject(items)) {
+			const sortedItems = _.chain(items)
+				.toPairs()
+				.sortBy((pair) => pair[0])
+				.value();
+
 			return (
-				<ul>
-					{_.map(items, (kids, categoryName) => {
+				<VerticalListMenu selectedIndices={[]}>
+					{_.map(sortedItems, ([categoryName, kids]) => {
 						return (
-							<li key={categoryName}>
-								<b>{_.startCase(categoryName)}</b>
+							<Item hasExpander isActionable={false} key={categoryName}>
+								<span>{_.startCase(categoryName)}</span>
 								{this.renderCategoryLinks(kids)}
-							</li>
+							</Item>
 						);
 					})}
-				</ul>
+				</VerticalListMenu>
 			);
 		}
 
 		return (
-			<ul>
-				{_.map(items, (componentName) => {
+			<VerticalListMenu selectedIndices={[]}>
+				{_.map(_.sortBy(items), (componentName) => {
 					return (
-						<li key={componentName}>
-							<Link to={`/components/${componentName}`}>{componentName}</Link>
-						</li>
+						<Item
+							key={componentName}
+							onSelect={_.partial(this.goToPath, `/components/${componentName}`)}
+							isSelected={this.props.location.pathname === `/components/${componentName}`}
+						>
+							{componentName}
+						</Item>
 					);
 				})}
-			</ul>
+			</VerticalListMenu>
 		);
 	},
 
+	handleSearchChange(value) {
+		this.setState({ search: value });
+	},
+
+	handleSearchSelect(index) {
+		this.goToPath(`/components/${this.searchResults()[index]}`)
+	},
+
+	showPrivateComponents() {
+		return _.get(this, 'props.location.query.private', false);
+	},
+
+	searchResults() {
+		const { search } = this.state;
+
+		return _.flatMap(docgenMap, (value, componentName) => {
+			if (!this.showPrivateComponents() && value.isPrivateComponent) {
+				return [];
+			}
+
+			if (componentName.toLowerCase().indexOf(search.toLowerCase()) !== -1) {
+				return componentName;
+			}
+
+			return [];
+		});
+	},
+
 	render() {
-		const showPrivateComponents = _.get(this, 'props.location.query.private', false);
+		const {
+			search,
+		} = this.state;
+
 		const docgenGroups = _.reduce(docgenMap, (acc, value, key) => {
-			if (!showPrivateComponents && value.isPrivateComponent) {
+			if (!this.showPrivateComponents() && value.isPrivateComponent) {
 				return acc;
 			}
 
@@ -398,22 +470,37 @@ const App = React.createClass({
 			newGroup.push(key);
 			return _.set(acc, path, newGroup);
 		}, {});
+		const suggestions = this.searchResults();
 
 		return (
 			<div className='App'>
 				<div className='App-sidebar'>
-					<nav className='App-nav'>
+					<Link to={{ pathname: '/', query: this.props.location.query }}>
+						{/* `width` helps prevent a FOUC with webpack */}
+						<img src='img/logo.svg' width={214} />
+					</Link>
 
-						<ul>
-							<li>
-								<b>General</b>
-								<ul>
-									<li>
-										<Link to='/colors'>Color Palette</Link>
-									</li>
-								</ul>
-							</li>
-						</ul>
+					<div className='App-sidebar-container'>
+						<Autocomplete
+							className='App-sidebar-search'
+							placeholder='Component search'
+							suggestions={suggestions}
+							value={search}
+							onChange={this.handleSearchChange}
+							onSelect={this.handleSearchSelect}
+						/>
+					</div>
+
+					<nav>
+						<VerticalListMenu className='App-pages'>
+							<Item
+								onSelect={_.partial(this.goToPath, '/color-palette')}
+								isSelected={this.props.location.pathname === '/color-palette'}
+							>
+								Color Palette
+							</Item>
+						</VerticalListMenu>
+
 						{this.renderCategoryLinks(docgenGroups)}
 					</nav>
 				</div>
@@ -428,8 +515,9 @@ const App = React.createClass({
 render((
 	<Router history={hashHistory}>
 		<Route path='/' component={App}>
+			<IndexRoute component={LandingPage} />
 			<Route path='/components/:componentName' component={Component}/>
-			<Route path='/colors' component={ColorPalette}/>
+			<Route path='/color-palette' component={ColorPalette}/>
 		</Route>
 	</Router>
 ), document.querySelector('#docs'));

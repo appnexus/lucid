@@ -39,6 +39,7 @@ const VerticalListMenu = createClass({
 				hasExpander: bool,
 				isExpanded: bool,
 				isSelected: bool,
+				isActionable: bool,
 				onSelect: func,
 				onToggle: func,
 			},
@@ -122,6 +123,7 @@ const VerticalListMenu = createClass({
 				{_.map(itemChildProps, (itemChildProp, index) => {
 					const {
 						hasExpander = false,
+						isActionable = true,
 					} = itemChildProp;
 
 					const itemChildrenAsArray = React.Children.toArray(itemChildProp.children);
@@ -150,12 +152,13 @@ const VerticalListMenu = createClass({
 							<div
 								className={cx('&-Item-content', {
 									'&-Item-content-is-selected': actualIsSelected,
+									'&-Item-content-is-actionable': isActionable,
 								})}
 								onClick={_.partial(this.handleClickItem, index, itemChildProp)}
 							>
-							<span className={cx('&-Item-content-text')}>
+							<div className={cx('&-Item-content-text')}>
 								{otherChildren}
-							</span>
+							</div>
 							{hasExpander ?
 								<div
 									className={cx('&-Item-expander')}

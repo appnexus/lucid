@@ -8,7 +8,7 @@
     "url": "https://github.com/appnexus/lucid.git"
   },
   "scripts": {
-    "dev": "gulp docs-generate && webpack-dev-server --inline",
+    "dev": "gulp docs-generate && webpack-dev-server --inline --content-base src/docs/",
     "docs-upload-gh": "./scripts/docs-upload-gh.sh",
     "docs-upload": "gulp docs-upload",
     "preversion": "rm -rf dist && TZ=UTC gulp preversion",
@@ -43,6 +43,7 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-2": "^6.5.0",
+    "copy-webpack-plugin": "^3.0.0",
     "css-loader": "^0.23.1",
     "enzyme": "^2.0.0-rc1",
     "eslint": "^2.10.2",
@@ -73,6 +74,7 @@
     "react-addons-test-utils": "^0.14.0",
     "react-docgen": "^2.7.0",
     "react-dom": "^0.14.0",
+    "react-motion": "^0.4.3",
     "react-router": "^2.0.0",
     "sinon": "^2.0.0-pre",
     "style-loader": "^0.13.0",

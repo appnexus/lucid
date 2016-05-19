@@ -1,0 +1,323 @@
+@Tooltip-pointer-inner-width: 8px;
+@Tooltip-pointer-outer-width: 9px;
+@Tooltip-pointer-offset: 13px;
+
+.lucid-ToolTip-FlyOut {
+	background-color: @color-white;
+	border: @border-standardBorder;
+	border-radius: @size-borderRadius;
+	padding: @size-standard;
+	font-size: @fontSize;
+	color: @color-darkGray;
+
+	&-default&-up:after {
+		border-top-color: @color-white;
+	}
+	&-default&-up:before {
+		border-top-color: @color-borderColor;
+	}
+	&-default&-left:after {
+		border-left-color: @color-white;
+	}
+	&-default&-left:before {
+		border-left-color: @color-borderColor;
+	}
+	&-default&-right:after {
+		border-right-color: @color-white;
+	}
+	&-default&-right:before {
+		border-right-color: @color-borderColor;
+	}
+	&-default&-down:after {
+		border-bottom-color: @color-white;
+	}
+	&-default&-down:before {
+		border-bottom-color: @color-borderColor;
+	}
+
+	&-primary&-up:after {
+		border-top-color: @featured-color-primary-backgroundColor;
+	}
+	&-primary&-up:before {
+		border-top-color: @featured-color-primary-borderColorLite;
+	}
+	&-primary&-left:after {
+		border-left-color: @featured-color-primary-backgroundColor;
+	}
+	&-primary&-left:before {
+		border-left-color: @featured-color-primary-borderColorLite;
+	}
+	&-primary&-right:after {
+		border-right-color: @featured-color-primary-backgroundColor;
+	}
+	&-primary&-right:before {
+		border-right-color: @featured-color-primary-borderColorLite;
+	}
+	&-primary&-down:after {
+		border-bottom-color: @featured-color-primary-backgroundColor;
+	}
+	&-primary&-down:before {
+		border-bottom-color: @featured-color-primary-borderColorLite;
+	}
+	&-primary {
+		border-color: @featured-color-primary-borderColorLite;
+		background-color: @featured-color-primary-backgroundColor;
+	}
+
+	&-success&-up:after {
+		border-top-color: @featured-color-success-backgroundColor;
+	}
+	&-success&-up:before {
+		border-top-color: @featured-color-success-borderColorLite;
+	}
+	&-success&-left:after {
+		border-left-color: @featured-color-success-backgroundColor;
+	}
+	&-success&-left:before {
+		border-left-color: @featured-color-success-borderColorLite;
+	}
+	&-success&-right:after {
+		border-right-color: @featured-color-success-backgroundColor;
+	}
+	&-success&-right:before {
+		border-right-color: @featured-color-success-borderColorLite;
+	}
+	&-success&-down:after {
+		border-bottom-color: @featured-color-success-backgroundColor;
+	}
+	&-success&-down:before {
+		border-bottom-color: @featured-color-success-borderColorLite;
+	}
+	&-success {
+		border-color: @featured-color-success-borderColorLite;
+		background-color: @featured-color-success-backgroundColor;
+	}
+
+	&-info&-up:after {
+		border-top-color: @featured-color-info-backgroundColor;
+	}
+	&-info&-up:before {
+		border-top-color: @featured-color-info-borderColorLite;
+	}
+	&-info&-left:after {
+		border-left-color: @featured-color-info-backgroundColor;
+	}
+	&-info&-left:before {
+		border-left-color: @featured-color-info-borderColorLite;
+	}
+	&-info&-right:after {
+		border-right-color: @featured-color-info-backgroundColor;
+	}
+	&-info&-right:before {
+		border-right-color: @featured-color-info-borderColorLite;
+	}
+	&-info&-down:after {
+		border-bottom-color: @featured-color-info-backgroundColor;
+	}
+	&-info&-down:before {
+		border-bottom-color: @featured-color-info-borderColorLite;
+	}
+	&-info {
+		border-color: @featured-color-info-borderColorLite;
+		background-color: @featured-color-info-backgroundColor;
+	}
+
+	&-warning&-up:after {
+		border-top-color: @featured-color-warning-backgroundColor;
+	}
+	&-warning&-up:before {
+		border-top-color: @featured-color-warning-borderColorLite;
+	}
+	&-warning&-left:after {
+		border-left-color: @featured-color-warning-backgroundColor;
+	}
+	&-warning&-left:before {
+		border-left-color: @featured-color-warning-borderColorLite;
+	}
+	&-warning&-right:after {
+		border-right-color: @featured-color-warning-backgroundColor;
+	}
+	&-warning&-right:before {
+		border-right-color: @featured-color-warning-borderColorLite;
+	}
+	&-warning&-down:after {
+		border-bottom-color: @featured-color-warning-backgroundColor;
+	}
+	&-warning&-down:before {
+		border-bottom-color: @featured-color-warning-borderColorLite;
+	}
+	&-warning {
+		border-color: @featured-color-warning-borderColorLite;
+		background-color: @featured-color-warning-backgroundColor;
+	}
+
+	&-danger&-up:after {
+		border-top-color: @featured-color-danger-backgroundColor;
+	}
+	&-danger&-up:before {
+		border-top-color: @featured-color-danger-borderColorLite;
+	}
+	&-danger&-left:after {
+		border-left-color: @featured-color-danger-backgroundColor;
+	}
+	&-danger&-left:before {
+		border-left-color: @featured-color-danger-borderColorLite;
+	}
+	&-danger&-right:after {
+		border-right-color: @featured-color-danger-backgroundColor;
+	}
+	&-danger&-right:before {
+		border-right-color: @featured-color-danger-borderColorLite;
+	}
+	&-danger&-down:after {
+		border-bottom-color: @featured-color-danger-backgroundColor;
+	}
+	&-danger&-down:before {
+		border-bottom-color: @featured-color-danger-borderColorLite;
+	}
+	&-danger {
+		border-color: @featured-color-danger-borderColorLite;
+		background-color: @featured-color-danger-backgroundColor;
+	}
+
+	&:after, &:before {
+		content: ' ';
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border: 7px solid @color-transparent;
+	}
+
+	&:after {
+		border-width: @Tooltip-pointer-inner-width;
+	}
+
+	&:before {
+		border-width: @Tooltip-pointer-outer-width;
+	}
+
+	&-up:after,
+	&-up:before {
+		top: 100%;
+	}
+
+	&-up:after {
+		margin-left: -@Tooltip-pointer-inner-width;
+	}
+
+	&-down:after,
+	&-down:before {
+		bottom: 100%;
+	}
+
+	&-up&-center:after,
+	&-up&-center:before,
+	&-down&-center:after,
+	&-down&-center:before {
+		left: 50%;
+	}
+
+	&-up&-center:before,
+	&-down&-center:before {
+		margin-left: -@Tooltip-pointer-outer-width;
+	}
+
+	&-up&-center:after,
+	&-down&-center:after {
+		margin-left: -@Tooltip-pointer-inner-width;
+	}
+
+	&-up&-start:after,
+	&-down&-start:after {
+		margin-left: 1px;
+	}
+
+	&-up&-end:after,
+	&-down&-end:after {
+		margin-right: 1px;
+	}
+
+	&-down&-start:after,
+	&-down&-start:before,
+	&-up&-start:after,
+	&-up&-start:before {
+		left: @Tooltip-pointer-offset;
+	}
+
+	&-down&-end:after,
+	&-down&-end:before,
+	&-up&-end:after,
+	&-up&-end:before {
+		right: @Tooltip-pointer-offset;
+	}
+
+	&-left:after,
+	&-left:before {
+		left: 100%;
+	}
+
+	&-right:after,
+	&-right:before {
+		right: 100%;
+	}
+
+	&-left&-center:after,
+	&-left&-center:before,
+	&-right&-center:after,
+	&-right&-center:before {
+		top: 50%;
+	}
+
+	&-left&-center:before,
+	&-right&-center:before {
+		margin-top: -@Tooltip-pointer-outer-width;
+	}
+
+	&-left&-center:after,
+	&-right&-center:after {
+		margin-top: -@Tooltip-pointer-inner-width;
+	}
+
+	&-left&-start:after,
+	&-left&-start:before,
+	&-right&-start:after,
+	&-right&-start:before {
+		top: @Tooltip-pointer-offset;
+	}
+
+	&-left&-end:after,
+	&-left&-end:before,
+	&-right&-end:after,
+	&-right&-end:before {
+		bottom: @Tooltip-pointer-offset;
+	}
+
+	&-left&-start:after,
+	&-right&-start:after {
+		margin-top: 1px;
+	}
+
+	&-left&-end:after,
+	&-right&-end:after {
+		margin-bottom: 1px;
+	}
+
+	&-Title {
+		font-size: @size-L;
+		font-weight: bold;
+		margin: 0 0 @size-XS;
+		line-height: 1em;
+	}
+
+	&-close {
+		position: absolute;
+		top: 6px;
+		right: 6px;
+		cursor: pointer;
+		fill: @color-gray-50;
+		&:hover {
+			fill: @color-black;
+		}
+	}
+}
