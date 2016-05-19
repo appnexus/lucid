@@ -1,7 +1,6 @@
 @VerticalListMenu-levels: 8;
 
 @VerticalListMenu-size-itemHeight: 29px;
-@VerticalListMenu-size-border: 4px;
 @VerticalListMenu-size-icon: 20px;
 @VerticalListMenu-size-childSpacer: 6px;
 @VerticalListMenu-size-childPadding: 15px;
@@ -38,11 +37,11 @@
 			height: @VerticalListMenu-size-icon;
 			width: @VerticalListMenu-size-icon;
 			margin: 4px;
-			margin-left: auto; // allows the expander to be flush on the right side
 		}
 
 		&-content {
 			.is-selectable();
+			.left-marker(0);
 			min-height: @VerticalListMenu-size-itemHeight;
 			display: flex;
 			font-size: 12px;
@@ -55,29 +54,25 @@
 			padding-left: 15px;
 
 			&-text {
+				width: 100%;
 				padding: @VerticalListMenu-size-childSpacer 0;
 			}
 
 			// Selected and hover state are the same for items
 			&&-is-selected,
 			&&-is-selected:hover {
-				.hardstop-gradient(
-					to right,
-					@color-primary,
-					@featured-color-primary-backgroundColor,
-					@VerticalListMenu-size-border
-				);
+				.left-marker(1);
 				color: @color-darkGray;
+			}
+
+			// Only show the left marker if the item is actionable
+			&&-is-actionable:hover,
+			&&-is-actionable:focus {
+				.left-marker(1);
 			}
 
 			&:hover,
 			&:focus {
-				.hardstop-gradient(
-					to right,
-					@color-primary,
-					@color-lightGray,
-					@VerticalListMenu-size-border
-				);
 				color: @color-darkGray;
 
 				// Style the expander button when the user hovers on the item content
