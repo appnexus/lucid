@@ -17,6 +17,9 @@ const testData = [
 		'last_name': 'Newton',
 		'email': 'inewton@example.com',
 		'occupation': 'Physicist',
+		'isDisabled': true,
+		'isSelected': true,
+		'isActive': true,
 	},
 	{
 		'id': '02',
@@ -24,6 +27,9 @@ const testData = [
 		'last_name': 'Einstein',
 		'email': 'aeinstein@example.com',
 		'occupation': 'Physicist',
+		'isDisabled': false,
+		'isSelected': false,
+		'isActive': false,
 	},
 	{
 		'id': '03',
@@ -31,6 +37,9 @@ const testData = [
 		'last_name': 'da Vinci',
 		'email': 'ldvinci@example.com',
 		'occupation': 'Engineer',
+		'isDisabled': true,
+		'isSelected': true,
+		'isActive': true,
 	},
 	{
 		'id': '04',
@@ -38,6 +47,9 @@ const testData = [
 		'last_name': '--',
 		'email': 'aristotle@example.com',
 		'occupation': 'Tutor',
+		'isDisabled': false,
+		'isSelected': false,
+		'isActive': false,
 	},
 	{
 		'id': '05',
@@ -45,6 +57,9 @@ const testData = [
 		'last_name': 'Galilei',
 		'email': 'ggalilei@example.com',
 		'occupation': 'Physicist',
+		'isDisabled': false,
+		'isSelected': true,
+		'isActive': true,
 	},
 	{
 		'id': '06',
@@ -52,6 +67,9 @@ const testData = [
 		'last_name': 'Darwin',
 		'email': 'cdarwin@example.com',
 		'occupation': 'Biologist',
+		'isDisabled': true,
+		'isSelected': false,
+		'isActive': false,
 	},
 	{
 		'id': '07',
@@ -59,6 +77,9 @@ const testData = [
 		'last_name': 'Macedon',
 		'email': 'amacedon@example.com',
 		'occupation': 'Head of State',
+		'isDisabled': true,
+		'isSelected': false,
+		'isActive': true,
 	},
 	{
 		'id': '08',
@@ -66,6 +87,9 @@ const testData = [
 		'last_name': 'Plato',
 		'email': 'plato@example.com',
 		'occupation': 'Philosopher',
+		'isDisabled': false,
+		'isSelected': true,
+		'isActive': false,
 	},
 	{
 		'id': '09',
@@ -73,6 +97,9 @@ const testData = [
 		'last_name': 'Gandhi',
 		'email': 'mgandhi@example.com',
 		'occupation': 'Politician',
+		'isDisabled': true,
+		'isSelected': true,
+		'isActive': false,
 	},
 	{
 		'id': '10',
@@ -80,6 +107,9 @@ const testData = [
 		'last_name': 'Shakespeare',
 		'email': 'wshakespear@example.com',
 		'occupation': 'Playwright',
+		'isDisabled': false,
+		'isSelected': false,
+		'isActive': true,
 	},
 ];
 
@@ -138,6 +168,10 @@ describe('DataTable', () => {
 				trsWrapper.forEach((trWrapper, index) => {
 					const tdsWrapper = trWrapper.shallow().find(ScrollTable.Td);
 					const tdArray = tdsWrapper.map((tdWrapper) => tdWrapper.shallow());
+
+					assert.equal(trWrapper.props().isDisabled, _.get(testData[index], 'isDisabled'), 'row must be passed `isDisabled`');
+					assert.equal(trWrapper.props().isSelected, _.get(testData[index], 'isSelected'), 'row must be passed `isSelected`');
+					assert.equal(trWrapper.props().isActive, _.get(testData[index], 'isActive'), 'row must be passed `isActive`');
 
 					assert.equal(tdArray[0].text(), _.get(testData[index], 'id'), 'first cell must match id of current row');
 					assert.equal(tdArray[1].text(), _.get(testData[index], 'first_name'), 'second cell must match first_name of current row');
