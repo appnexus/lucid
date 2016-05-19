@@ -223,10 +223,7 @@ const ContextMenu = createClass({
 					<Portal
 						ref='flyOutPortal'
 						{...flyProps}
-						className={cx('&-FlyOut', {
-							'&-FlyOut-Up': direction === ContextMenu.UP,
-							'&-FlyOut-Down': direction === ContextMenu.DOWN
-						}, flyProps.className)}
+						className={cx('&-FlyOut', `&-FlyOut-${direction}`, flyProps.className)}
 						portalId={portalId}
 						style={_.assign({}, flyProps.style, {
 							position: 'absolute',

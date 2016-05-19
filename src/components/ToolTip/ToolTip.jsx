@@ -205,7 +205,7 @@ const ToolTip = createClass({
 
 		return (
 			<ContextMenu
-				className={cx('&', '&-base', className)}
+				className={className}
 				alignment={ContextMenu.CENTER}
 				direction={direction}
 				directonOffset={15}
@@ -214,7 +214,7 @@ const ToolTip = createClass({
 				onMouseOver={this.handleMouseOverTarget}
 				onMouseOut={this.handleMouseOutTarget}
 			>
-				<Target className={cx('&', className)}>
+				<Target className={className}>
 					{target}
 				</Target>
 				<FlyOut
@@ -222,12 +222,12 @@ const ToolTip = createClass({
 						...flyOutStyle,
 						maxWidth: flyOutMaxWidth || flyOutStyle.maxWidth || 200
 					}}
-					className={flyOutCx('&', { [`${className}-FlyOut`]: className }, `&-${direction}`, `&-${alignment}`, `&-${kind}`)}
+					className={flyOutCx('className', '&', `&-${direction}`, `&-${alignment}`, `&-${kind}`)}
 					onMouseOver={this.handleMouseOverFlyout}
 					onMouseOut={this.handleMouseOutFlyout}
 				>
-					{isCloseable ? <CrossIcon onClick={this.handleClose} className={flyOutCx('&-close')}/> : null}
-					<h2 className={flyOutCx('&-title')}>{title}</h2>
+					{isCloseable ? <CrossIcon onClick={this.handleClose} className={flyOutCx('&-Close')}/> : null}
+					<h2 className={flyOutCx('&-Title')}>{title}</h2>
 					{body}
 				</FlyOut>
 			</ContextMenu>
