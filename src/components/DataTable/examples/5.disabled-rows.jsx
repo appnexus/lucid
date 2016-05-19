@@ -128,5 +128,5 @@ export default React.createClass({
 				</DataTable.Column>
 			</DataTable>
 		);
-	}
+	},
 });
