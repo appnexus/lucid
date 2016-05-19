@@ -9,7 +9,6 @@ import reducers from './RadioGroup.reducers';
 
 const cx = lucidClassNames.bind('&-RadioGroup');
 
-
 const {
 	func,
 	node,
@@ -114,24 +113,24 @@ const RadioGroup = createClass({
 		// equal to true, then the index of the last one should override the
 		// value of the `selectedIndex` prop.
 		const actualSelectedIndex = selectedIndexFromChildren !== -1
-				? selectedIndexFromChildren
-				: selectedIndex;
+			? selectedIndexFromChildren
+			: selectedIndex;
 
 		return (
 			<span
-					{...passThroughs}
-					className={cx('&', className)}
+				{...passThroughs}
+				className={cx('&', className)}
 			>
 				{_.map(radioButtonChildProps, (radioButtonChildProp, index) => {
 					return (
 						<RadioButtonLabeled
-								{...radioButtonChildProp}
-								isSelected={actualSelectedIndex === index}
-								key={index}
-								callbackId={index}
-								name={name}
-								onSelect={this.handleSelected}
-								Label={_.get(_.first(findTypes(radioButtonChildProp, RadioGroup.Label)), 'props.children', null)}
+							{...radioButtonChildProp}
+							isSelected={actualSelectedIndex === index}
+							key={index}
+							callbackId={index}
+							name={name}
+							onSelect={this.handleSelected}
+							Label={_.get(_.first(findTypes(radioButtonChildProp, RadioGroup.Label)), 'props', null)}
 						/>
 					);
 				})}
