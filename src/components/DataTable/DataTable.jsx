@@ -254,8 +254,7 @@ const DataTable = createClass({
 				<Tbody>
 					{_.map(data, (row, index) => (
 						<Tr
-							isSelected={row.isSelected}
-							isActive={row.isActive}
+							{..._.pick(row, ['isDisabled', 'isActive', 'isSelected'])}
 							onClick={_.partial(this.handleRowClick, index)}
 							isActionable={isActionable}
 							key={'row' + index}
