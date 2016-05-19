@@ -24,6 +24,7 @@ import LandingPage from './containers/landing-page';
 import {
 	Table,
 	VerticalListMenuDumb,
+	Autocomplete,
 	stateManagement,
 } from '../index';
 
@@ -169,7 +170,8 @@ const Component = React.createClass({
 	propTypes: {
 		params: shape({
 			componentName: string.isRequired
-		})
+		}),
+		location: any,
 	},
 
 	getInitialState() {
@@ -220,7 +222,7 @@ const Component = React.createClass({
 
 				const composesComponentLinks = componentNames.map((name, index) => (
 					<span key={name}>
-						<Link to={`/components/${name}`}>
+						<Link to={{ pathname: `/components/${name}`, query: this.props.location.query }}>
 							{name}
 						</Link>
 						{index == componentNames.length - 1 ? null : ', '}
@@ -364,6 +366,12 @@ const Component = React.createClass({
 });
 
 const App = React.createClass({
+	getInitialState() {
+		return {
+			search: ''
+		}
+	},
+
 	contextTypes: {
 		router: object,
 	},
@@ -374,7 +382,10 @@ const App = React.createClass({
 	},
 
 	goToPath(path) {
-		this.context.router.push(path);
+		this.context.router.push({
+			pathname: path,
+			query: this.props.location.query,
+		});
 	},
 
 	renderCategoryLinks(items) {
@@ -415,10 +426,41 @@ const App = React.createClass({
 		);
 	},
 
+	handleSearchChange(value) {
+		this.setState({ search: value });
+	},
+
+	handleSearchSelect(index) {
+		this.goToPath(`/components/${this.searchResults()[index]}`)
+	},
+
+	showPrivateComponents() {
+		return _.get(this, 'props.location.query.private', false);
+	},
+
+	searchResults() {
+		const { search } = this.state;
+
+		return _.flatMap(docgenMap, (value, componentName) => {
+			if (!this.showPrivateComponents() && value.isPrivateComponent) {
+				return [];
+			}
+
+			if (componentName.toLowerCase().indexOf(search.toLowerCase()) !== -1) {
+				return componentName;
+			}
+
+			return [];
+		});
+	},
+
 	render() {
-		const showPrivateComponents = _.get(this, 'props.location.query.private', false);
+		const {
+			search,
+		} = this.state;
+
 		const docgenGroups = _.reduce(docgenMap, (acc, value, key) => {
-			if (!showPrivateComponents && value.isPrivateComponent) {
+			if (!this.showPrivateComponents() && value.isPrivateComponent) {
 				return acc;
 			}
 
@@ -427,19 +469,29 @@ const App = React.createClass({
 			newGroup.push(key);
 			return _.set(acc, path, newGroup);
 		}, {});
+		const suggestions = this.searchResults();
 
 		return (
 			<div className='App'>
 				<div className='App-sidebar'>
-					<Link to='/'>
+					<Link to={{ pathname: '/', query: this.props.location.query }}>
 						{/* `width` helps prevent a FOUC with webpack */}
 						<img src='img/logo.svg' width={214} />
 					</Link>
 
-					<nav className='App-nav'>
-						{this.renderCategoryLinks(docgenGroups)}
+					<div className='App-sidebar-container'>
+						<Autocomplete
+							className='App-sidebar-search'
+							placeholder='Component search'
+							suggestions={suggestions}
+							value={search}
+							onChange={this.handleSearchChange}
+							onSelect={this.handleSearchSelect}
+						/>
+					</div>
 
-						<VerticalListMenu>
+					<nav>
+						<VerticalListMenu className='App-pages'>
 							<Item
 								onSelect={_.partial(this.goToPath, '/color-palette')}
 								isSelected={this.props.location.pathname === '/color-palette'}
@@ -447,6 +499,8 @@ const App = React.createClass({
 								Color Palette
 							</Item>
 						</VerticalListMenu>
+
+						{this.renderCategoryLinks(docgenGroups)}
 					</nav>
 				</div>
 				<div className='App-body'>

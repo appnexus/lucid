@@ -35,7 +35,7 @@ html {
 //
 
 .Component {
-	padding: 15px;
+	padding: @size-L;
 
 	&-examples {
 		list-style: none;
@@ -99,6 +99,20 @@ html {
 		.lucid-VerticalListMenu-Item-expander {
 			margin-right: 10px;
 		}
+	}
+
+	&-sidebar-container {
+		padding: 0 @size-L @size-S @size-L;
+	}
+
+	&-sidebar-search > .lucid-ContextMenu {
+		// TODO: this is a hack because autocomplete can't handle 100% width
+		// correctly when used in the sidebar
+		width: 184px;
+	}
+
+	&-pages {
+		border-bottom: 1px solid @color-gray;
 	}
 
 	&-body{
