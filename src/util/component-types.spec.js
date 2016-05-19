@@ -28,8 +28,8 @@ describe('component-types', () => {
 			const Panel = createClass({
 				components: {
 					Header: createClass(),
-					Footer: createClass()
-				}
+					Footer: createClass(),
+				},
 			});
 
 			assert(_.has(Panel, 'Header'), 'must have `Header` as a static property');
@@ -38,11 +38,11 @@ describe('component-types', () => {
 
 		it('should make `reducers` a static property.', () => {
 			const panelReducers = {
-				onExpand() {}
+				onExpand() {},
 			};
 
 			const Panel = createClass({
-				reducers: panelReducers
+				reducers: panelReducers,
 			});
 
 			assert(_.has(Panel, 'reducers'), 'must have `reducers` as a static property');
@@ -51,11 +51,11 @@ describe('component-types', () => {
 
 		it('should make `selectors` a static property.', () => {
 			const panelSelectors = {
-				isValid() {}
+				isValid() {},
 			};
 
 			const Panel = createClass({
-				selectors: panelSelectors
+				selectors: panelSelectors,
 			});
 
 			assert(_.has(Panel, 'selectors'), 'must have `selectors` as a static property');
@@ -64,7 +64,7 @@ describe('component-types', () => {
 
 		it('should make `propName` a static property.', () => {
 			const Panel = createClass({
-				propName: ['Panel', 'panel', 'panels']
+				propName: ['Panel', 'panel', 'panels'],
 			});
 
 			assert(_.has(Panel, 'propName'), 'must have `propName` as a static property');
@@ -80,7 +80,7 @@ describe('component-types', () => {
 				<Option>Hands</Option>,
 				<span>Make</span>,
 				<Option>Light</Option>,
-				<span>Work</span>
+				<span>Work</span>,
 			];
 
 			const spanElements = filterTypes(elements, 'span');
@@ -101,7 +101,7 @@ describe('component-types', () => {
 				<Option>Hands</Option>,
 				<section>Make</section>,
 				<Option>Light</Option>,
-				<section>Work</section>
+				<section>Work</section>,
 			];
 
 			const spanElements = filterTypes(elements, ['section', Option]);
@@ -126,7 +126,7 @@ describe('component-types', () => {
 				<Option>Hands</Option>,
 				<span>Make</span>,
 				<Option>Light</Option>,
-				<span>Work</span>
+				<span>Work</span>,
 			];
 
 			const nonSpanElements = rejectTypes(elements, 'span');
@@ -147,7 +147,7 @@ describe('component-types', () => {
 				<Option>Hands</Option>,
 				<section>Make</section>,
 				<Option>Light</Option>,
-				<span>Work</span>
+				<span>Work</span>,
 			];
 
 			const remainingElements = rejectTypes(elements, [Option, 'span']);
@@ -168,7 +168,7 @@ describe('component-types', () => {
 				<button />,
 				'red',
 				null,
-				{ isDisabled: true }
+				{ isDisabled: true },
 			]);
 			assert.equal(4, elements.length, 'length must be 4');
 			_.forEach(elements, (element) => {
@@ -191,7 +191,7 @@ describe('component-types', () => {
 					assert.equal(2, optionElements.length, 'length must be 2');
 					assert.equal(true, _.get(optionElements[0].props, 'isDisabled'), 'element must have prop `isDisabled`');
 					assert.equal('Select red', _.get(optionElements[1].props, 'title'), 'element must have prop `title`');
-				}
+				},
 			});
 			shallow(
 				<Selector>
@@ -215,14 +215,14 @@ describe('component-types', () => {
 					assert.equal('red', _.get(optionElements[0].props, 'children'), 'element children must match prop value');
 					assert(_.isEqual({ children: 'green', isDisabled: true }, optionElements[1].props), 'element props must match props');
 					assert.equal('blue', _.get(optionElements[2].props, 'children'), 'element children must match prop value');
-				}
+				},
 			});
 			shallow(
 				<Selector
 					option='red'
 					options={[
 						{ children: 'green', isDisabled: true },
-						'blue'
+						'blue',
 					]}
 				/>
 			);
@@ -241,14 +241,14 @@ describe('component-types', () => {
 					assert.equal('blue', _.get(optionElements[2].props, 'children'), 'element children must match prop value');
 					assert.equal(true, _.get(optionElements[3].props, 'isDisabled'), 'element must have prop `isDisabled`');
 					assert.equal('Select red', _.get(optionElements[4].props, 'title'), 'element must have prop `title`');
-				}
+				},
 			});
 			shallow(
 				<Selector
 					option='red'
 					options={[
 						{ children: 'green', isDisabled: true },
-						'blue'
+						'blue',
 					]}
 				>
 					<button />

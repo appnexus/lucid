@@ -17,14 +17,14 @@ export function common(Component, {
 		return _.assign({}, getDefaultProps(), props);
 	}
 
-	describe(`[common]`, () => {
+	describe('[common]', () => {
 		it('should have a `displayName` defined', () => {
 			assert(Component.displayName);
 		});
 
 		it('should pass through styles to the root element', () => {
 			let style = {
-				backgroundColor: '#f0f'
+				backgroundColor: '#f0f',
 			};
 			const wrapper = shallow(<Component {...generateDefaultProps()} style={style}/>);
 			const rootWrapper = selector ? wrapper.find(selector).first() : wrapper.first();
@@ -108,7 +108,7 @@ export function common(Component, {
 
 // Common tests for all our icon components
 export function icons(Component) {
-	describeWithDOM(`[icon]`, () => {
+	describeWithDOM('[icon]', () => {
 		it('should pass through isBadge prop to underlying Icon component', () => {
 			const wrapper = mount(<Component isBadge={true} />);
 			const classNames = wrapper.find('svg').prop('className').split(' ');

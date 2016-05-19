@@ -81,7 +81,7 @@ describe('StickySection', () => {
 					isAboveFold: true,
 					containerRect: {
 						width: 432,
-					}
+					},
 				});
 
 				assert.equal(_.get(wrapper.find('.lucid-StickySection-sticky-frame').prop('style'), 'width'), 432, 'sticky frame width must match the container width');

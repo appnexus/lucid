@@ -18,7 +18,7 @@ const gridStyle = {
 		margin: 0,
 		padding: 0,
 		color: '#f3f3f3',
-		flex: 1
+		flex: 1,
 	},
 }
 
@@ -61,5 +61,5 @@ export default React.createClass({
 				</Grid.Cell>
 			</Grid>
 		)
-	}
+	},
 });

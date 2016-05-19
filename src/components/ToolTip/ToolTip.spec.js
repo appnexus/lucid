@@ -12,7 +12,7 @@ import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 const {
 	Target,
 	Title,
-	Body
+	Body,
 } = ToolTip;
 
 describe('ToolTip', () => {

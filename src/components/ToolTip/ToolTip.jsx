@@ -16,12 +16,12 @@ const {
 	number,
 	object,
 	oneOf,
-	string
+	string,
 } = React.PropTypes;
 
 const {
 	Target,
-	FlyOut
+	FlyOut,
 } = ContextMenu;
 
 
@@ -102,7 +102,7 @@ const ToolTip = createClass({
 		/**
 		 * The `id` of the FlyOut portal element that is appended to `document.body`. Defaults to a generated `id`.
 		 */
-		portalId: string
+		portalId: string,
 	},
 
 	components: {
@@ -147,11 +147,11 @@ const ToolTip = createClass({
 			const {
 				state: {
 					isMouseOverFlyout,
-					isMouseOverTarget
+					isMouseOverTarget,
 				},
 				props: {
-					onMouseOut
-				}
+					onMouseOut,
+				},
 			} = this;
 			if (!isMouseOverFlyout && !isMouseOverTarget) {
 				onMouseOut();
@@ -191,7 +191,7 @@ const ToolTip = createClass({
 			flyOutStyle,
 			isCloseable,
 			kind,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		const target = _.chain(findTypes(this.props, ToolTip.Target)).map('props').first().get('children').value();
@@ -220,7 +220,7 @@ const ToolTip = createClass({
 				<FlyOut
 					style={{
 						...flyOutStyle,
-						maxWidth: flyOutMaxWidth || flyOutStyle.maxWidth || 200
+						maxWidth: flyOutMaxWidth || flyOutStyle.maxWidth || 200,
 					}}
 					className={flyOutCx(className, '&', `&-${direction}`, `&-${alignment}`, `&-${kind}`)}
 					onMouseOver={this.handleMouseOverFlyout}
@@ -232,7 +232,7 @@ const ToolTip = createClass({
 				</FlyOut>
 			</ContextMenu>
 		);
-	}
+	},
 });
 
 export default ToolTip;

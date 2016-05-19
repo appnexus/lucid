@@ -20,7 +20,7 @@ const InfoIcon = createClass({
 	render() {
 		const {
 			className,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		return (
@@ -33,7 +33,7 @@ const InfoIcon = createClass({
 				<rect x='7' y='6' width='2' height='7'/>
 			</Icon>
 		);
-	}
+	},
 });
 
 export default InfoIcon;

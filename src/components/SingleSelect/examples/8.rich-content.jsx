@@ -3,7 +3,7 @@ import { PlusIcon, SingleSelect } from '../../../index';
 
 const {
 	Placeholder,
-	Option
+	Option,
 } = SingleSelect;
 
 export default React.createClass({
@@ -18,5 +18,5 @@ export default React.createClass({
 				</SingleSelect>
 			</section>
 		);
-	}
+	},
 });

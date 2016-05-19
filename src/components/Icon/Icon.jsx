@@ -54,7 +54,7 @@ const Icon = createClass({
 		/**
 		 * Any valid React children.
 		 */
-		children: any
+		children: any,
 	},
 
 	getDefaultProps() {
@@ -62,7 +62,7 @@ const Icon = createClass({
 			size: 16,
 			aspectRatio: 'xMidYMid meet',
 			viewBox: '0 0 16 16',
-			isBadge: false
+			isBadge: false,
 		};
 	},
 
@@ -75,7 +75,7 @@ const Icon = createClass({
 			viewBox,
 			aspectRatio,
 			isBadge,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		// Because we control the icon size inline, we must also control the border
@@ -83,7 +83,7 @@ const Icon = createClass({
 		// out any `undefined` properties using lodash methods.
 		const actualStyle = {
 			...style,
-			borderRadius: _.get(style, 'borderRadius', isBadge ? `${size}px` : undefined)
+			borderRadius: _.get(style, 'borderRadius', isBadge ? `${size}px` : undefined),
 		};
 
 		return (
@@ -101,7 +101,7 @@ const Icon = createClass({
 				{children}
 			</svg>
 		);
-	}
+	},
 });
 
 export default Icon;

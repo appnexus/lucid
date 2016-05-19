@@ -157,7 +157,7 @@ const Axis = createClass({
 							style={{
 								textAnchor: isH
 									? 'middle'
-									: sign < 0 ? 'end' : 'start'
+									: sign < 0 ? 'end' : 'start',
 							}}
 						>
 							{tickFormat(tick)}
@@ -166,7 +166,7 @@ const Axis = createClass({
 				)}
 			</g>
 		);
-	}
+	},
 });
 
 export default Axis;

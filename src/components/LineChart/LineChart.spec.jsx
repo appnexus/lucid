@@ -30,8 +30,8 @@ describeWithDOM('LineChart', () => {
 			data: [
 				{x: new Date('2015-01-01T00:00:00Z'), y: 1},
 				{x: new Date('2015-01-01T00:00:00Z'), y: 2},
-			]
-		})
+			],
+		}),
 	});
 
 	describe('render', () => {

@@ -4,7 +4,7 @@ import describeWithDOM from './describe-with-dom';
 
 import {
 	getAbsoluteBoundingClientRect,
-	scrollParentTo
+	scrollParentTo,
 } from './dom-helpers';
 
 describeWithDOM('#getAbsoluteBoundingClientRect', () => {

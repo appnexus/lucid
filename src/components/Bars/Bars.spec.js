@@ -13,6 +13,6 @@ describe('Bars', () => {
 			data: [{x: 'one', y: 2}],
 			xScale: d3Scale.scaleBand(),
 			yScale: d3Scale.scaleLinear(),
-		})
+		}),
 	});
 });

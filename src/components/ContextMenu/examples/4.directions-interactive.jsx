@@ -19,7 +19,7 @@ export default React.createClass({
 		const style = {
 			background: 'white',
 			boxShadow: '1px 1px 4px black',
-			padding: 4
+			padding: 4,
 		};
 
 		const {
@@ -27,7 +27,7 @@ export default React.createClass({
 			directonOffset,
 			alignment,
 			alignmentOffset,
-			getAlignmentOffset
+			getAlignmentOffset,
 		} = this.state || {};
 
 		const directions = [UP, DOWN, LEFT, RIGHT];
@@ -39,7 +39,7 @@ export default React.createClass({
 				<section
 					style={{
 						display: 'flex',
-						flexDirection: 'column'
+						flexDirection: 'column',
 					}}
 				>
 					<SingleSelect onSelect={i => this.setState({ direction: directions[i] })} >
@@ -82,7 +82,7 @@ export default React.createClass({
 						display: 'flex',
 						flexDirection: 'row',
 						justifyContent: 'center',
-						margin: '90px'
+						margin: '90px',
 					}}
 				>
 					<ContextMenu

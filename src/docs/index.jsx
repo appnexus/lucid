@@ -1,3 +1,4 @@
+/*eslint no-console: 0*/
 // Allow webpack to handle less compilation here
 require('./index.less');
 require('../index.less');
@@ -47,7 +48,7 @@ const VerticalListMenu = stateManagement.buildHybridComponent(VerticalListMenuDu
 	reducers: {
 		onSelect: toggleOrSelectReducer,
 		onToggle: toggleOrSelectReducer,
-	}
+	},
 });
 
 const { Item } = VerticalListMenu;
@@ -95,7 +96,7 @@ const examplesByComponent = _.chain(reqExamples.keys())
 			componentName: componentName,
 			name: getExampleTitleFromFilename(items[0]),
 			source: reqExamplesRaw(path),
-			Example: reqExamples(path).default // `default` because we use es6 modules in the examples
+			Example: reqExamples(path).default, // `default` because we use es6 modules in the examples
 		};
 	})
 	.groupBy('componentName')
@@ -111,7 +112,7 @@ const {
 		node,
 		any,
 		bool,
-		}
+		},
 	} = React;
 
 const PropType = React.createClass({
@@ -127,15 +128,15 @@ const PropType = React.createClass({
 					string,
 					array,
 					object,
-				])
-			})
-		]).isRequired
+				]),
+			}),
+		]).isRequired,
 	},
 
 	render() {
 		const {
 			componentName,
-			type
+			type,
 		} = this.props;
 
 		if (!type) {
@@ -163,13 +164,13 @@ const PropType = React.createClass({
 		}
 
 		return <span>{type.name || type.value || type}</span>;
-	}
+	},
 });
 
 const Component = React.createClass({
 	propTypes: {
 		params: shape({
-			componentName: string.isRequired
+			componentName: string.isRequired,
 		}),
 		location: any,
 	},
@@ -178,9 +179,9 @@ const Component = React.createClass({
 		return {
 			examples: {
 				Foo: { // an example of the shape of this state
-					isShown: true
-				}
-			}
+					isShown: true,
+				},
+			},
 		};
 	},
 
@@ -191,13 +192,13 @@ const Component = React.createClass({
 		const path = `${componentName}.${exampleName}`;
 		const isShown = _.get(this.state.examples, path, false);
 		this.setState({
-			examples: _.set(this.state.examples, path, !isShown)
+			examples: _.set(this.state.examples, path, !isShown),
 		});
 	},
 
 	render() {
 		const {
-			componentName
+			componentName,
 		} = this.props.params;
 
 		const component = _.get(docgenMap, componentName, {});
@@ -362,13 +363,13 @@ const Component = React.createClass({
 				</ul>
 			</div>
 		);
-	}
+	},
 });
 
 const App = React.createClass({
 	getInitialState() {
 		return {
-			search: ''
+			search: '',
 		}
 	},
 
@@ -508,7 +509,7 @@ const App = React.createClass({
 				</div>
 			</div>
 		);
-	}
+	},
 });
 
 render((

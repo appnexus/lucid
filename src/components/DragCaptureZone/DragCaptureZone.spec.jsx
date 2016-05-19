@@ -54,15 +54,15 @@ describe('DragCaptureZone', () => {
 describeWithDOM('DragCaptureZone', () => {
 	const dragCoordinates = {
 		pageX: 75,
-		pageY: 25
+		pageY: 25,
 	};
 	const dragEndCoordinates = {
 		pageX: 25,
-		pageY: 50
+		pageY: 50,
 	};
 	const dragStartCoordinates = {
 		pageX: 50,
-		pageY: 75
+		pageY: 75,
 	};
 
 	describe('user presses the mouse button down over the rendered component', () => {
@@ -81,7 +81,7 @@ describeWithDOM('DragCaptureZone', () => {
 		it('...passes along a map of coordinate data as the first argument...', () => {
 			const expectedData = _.assign({
 				dX: 0,
-				dY: 0
+				dY: 0,
 			}, dragStartCoordinates);
 
 			assert.deepEqual(_.first(onDragStart.args[0]), expectedData);
@@ -114,7 +114,7 @@ describeWithDOM('DragCaptureZone', () => {
 		it('...passes along a map of coordinate data as the first argument...', () => {
 			const expectedData = _.assign({
 				dX: dragCoordinates.pageX - dragStartCoordinates.pageX,
-				dY: dragCoordinates.pageY - dragStartCoordinates.pageY
+				dY: dragCoordinates.pageY - dragStartCoordinates.pageY,
 			}, dragCoordinates)
 
 			assert.deepEqual(_.first(onDrag.args[0]), expectedData);
@@ -147,7 +147,7 @@ describeWithDOM('DragCaptureZone', () => {
 		it('...passes along a map of coordinate data as the first argument...', () => {
 			const expectedData = _.assign({
 				dX: dragEndCoordinates.pageX - dragStartCoordinates.pageX,
-				dY: dragEndCoordinates.pageY - dragStartCoordinates.pageY
+				dY: dragEndCoordinates.pageY - dragStartCoordinates.pageY,
 			}, dragEndCoordinates)
 
 			assert.deepEqual(_.first(onDragEnd.args[0]), expectedData);

@@ -2,12 +2,12 @@ import assert from 'assert';
 import sinon from 'sinon';
 import {
 	isFunction,
-	upperCase
+	upperCase,
 } from 'lodash';
 
 import {
 	thunk,
-	getReduxPrimitives
+	getReduxPrimitives,
 } from './redux';
 
 describe('redux utils', () => {
@@ -26,19 +26,19 @@ describe('redux utils', () => {
 					return ({ value: payload });
 				},
 				bar: {
-					onChange: (state, payload) => ({ value: payload })
+					onChange: (state, payload) => ({ value: payload }),
 				},
-				asyncOperation: thunk(payload => dispatchTree => Promise.resolve(payload).then(dispatchTree.onChange))
-			}
+				asyncOperation: thunk(payload => dispatchTree => Promise.resolve(payload).then(dispatchTree.onChange)),
+			},
 		};
 
 		const initialState = {
 			foo: {
 				value: 'foo',
 				bar: {
-					value: null
-				}
-			}
+					value: null,
+				},
+			},
 		};
 
 		describe('reducer', () => {
@@ -71,7 +71,7 @@ describe('redux utils', () => {
 				const { reducer: reducerWithRootPath } = getReduxPrimitives({
 					reducers,
 					initialState,
-					rootPath: ['root']
+					rootPath: ['root'],
 				});
 
 				it('should correctly apply state change', () => {
@@ -97,16 +97,16 @@ describe('redux utils', () => {
 
 				const selectors = {
 					foo: {
-						uppercase: ({ value }) => upperCase(value)
-					}
+						uppercase: ({ value }) => upperCase(value),
+					},
 				};
 
 				const {
-					connectors: [mapStateToProps]
+					connectors: [mapStateToProps],
 				} = getReduxPrimitives({
 					reducers,
 					initialState,
-					selectors
+					selectors,
 				});
 
 				it('should apply selector', () => {
@@ -117,12 +117,12 @@ describe('redux utils', () => {
 				describe('rootPath', () => {
 
 					const {
-						connectors: [mapStateToProps]
+						connectors: [mapStateToProps],
 					} = getReduxPrimitives({
 						reducers,
 						initialState,
 						selectors,
-						rootPath: ['root']
+						rootPath: ['root'],
 					});
 
 					it('should apply selector', () => {
@@ -135,15 +135,15 @@ describe('redux utils', () => {
 				describe('rootSelector', () => {
 
 					const {
-						connectors: [mapStateToProps]
+						connectors: [mapStateToProps],
 					} = getReduxPrimitives({
 						reducers,
 						initialState,
 						selectors,
 						rootSelector: state => ({
 							...state,
-							computed: state.foo.uppercase + state.foo.value
-						})
+							computed: state.foo.uppercase + state.foo.value,
+						}),
 					});
 
 					it('should apply rootSelector', () => {
@@ -157,10 +157,10 @@ describe('redux utils', () => {
 			describe('dispatchTree/mapDispatchToProps', () => {
 
 				const {
-					connectors
+					connectors,
 				} = getReduxPrimitives({
 					reducers,
-					initialState
+					initialState,
 				});
 
 				const mapDispatchToProps = connectors[1];
@@ -175,7 +175,7 @@ describe('redux utils', () => {
 					assert.deepEqual(dispatchedAction, {
 						type: 'foo.onChange',
 						payload: 'bar',
-						meta: ['baz']
+						meta: ['baz'],
 					}, 'must include path as type, first param as payload, and subsequent params as meta');
 				});
 
@@ -193,7 +193,7 @@ describe('redux utils', () => {
 						assert.deepEqual(dispatchedAction, {
 							type: 'foo.onChange',
 							payload: 'qux',
-							meta: []
+							meta: [],
 						}, 'must include path as type and param on payload');
 					});
 

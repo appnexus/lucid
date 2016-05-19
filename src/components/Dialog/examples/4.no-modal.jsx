@@ -5,7 +5,7 @@ import { Button, Dialog } from '../../../index';
 export default React.createClass({
 	getInitialState() {
 		return {
-			isShown: false
+			isShown: false,
 		};
 	},
 
@@ -48,5 +48,5 @@ export default React.createClass({
 				</Dialog>
 			</div>
 		)
-	}
+	},
 });

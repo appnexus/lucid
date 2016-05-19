@@ -10,7 +10,7 @@ const {
 		any,
 		node,
 		string,
-	}
+	},
 } = React;
 
 /**
@@ -34,12 +34,12 @@ const Portal = createClass({
 		/**
 		 * The `id` of the portal element that is appended to `document.body`.
 		 */
-		portalId: string.isRequired
+		portalId: string.isRequired,
 	},
 	render: () => null,
 	componentDidMount() {
 		const {
-			portalId
+			portalId,
 		} = this.props;
 
 		let portalElement = window.document.getElementById(portalId);
@@ -60,7 +60,7 @@ const Portal = createClass({
 				{this.props.children}
 			</div>
 		), this.portalElement);
-	}
+	},
 });
 
 export default Portal;

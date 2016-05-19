@@ -22,7 +22,7 @@ export function createClass(definition={}) {
 			_lucidIsPrivate,
 			reducers,
 			selectors,
-			propName
+			propName,
 		},
 		render,
 	};

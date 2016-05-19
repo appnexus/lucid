@@ -4,7 +4,7 @@ import { ToolTipDumb } from '../../../index';
 const {
 	Target,
 	Title,
-	Body
+	Body,
 } = ToolTipDumb;
 
 export default React.createClass({
@@ -30,5 +30,5 @@ export default React.createClass({
 				</ToolTipDumb>
 			</section>
 		);
-	}
+	},
 });

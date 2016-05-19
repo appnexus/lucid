@@ -12,7 +12,7 @@ describe('Overlay', () => {
 		selector: '.lucid-Overlay',
 		getDefaultProps: () => {
 			return { isShown: true }
-		}
+		},
 	});
 
 	it('should render body content', () => {
@@ -102,7 +102,7 @@ describeWithDOM('Overlay', () => {
 		);
 
 		const event = new window.KeyboardEvent('keydown', {
-			keyCode: 27
+			keyCode: 27,
 		});
 
 		document.dispatchEvent(event);

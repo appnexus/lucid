@@ -1,8 +1,11 @@
 {
-	"ecmaFeatures": {
-		"jsx": true,
-		"modules": true,
-		"experimentalObjectRestSpread": true
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true,
+			"experimentalObjectRestSpread": true
+		}
 	},
 	"env": {
 		"browser": true,
@@ -10,10 +13,11 @@
 		"es6": true,
 		"mocha": true
 	},
+	"extends": "eslint:recommended",
 	"rules": {
 		"quotes": [2, "single"],
 		"jsx-quotes": [2, "prefer-single"],
-		"comma-dangle": [0, "always-multiline"],
+		"comma-dangle": [2, "always-multiline"],
 		"react/prop-types": 2,
 		"no-trailing-spaces": 2,
 		"no-undef": 2,

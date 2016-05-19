@@ -61,14 +61,14 @@ const RadioButton = createClass({
 		/**
 		 * Passed through to the root element.
 		 */
-		style: object
+		style: object,
 	},
 
 	getDefaultProps() {
 		return {
 			isDisabled: false,
 			isSelected: false,
-			onSelect: _.noop
+			onSelect: _.noop,
 		};
 	},
 
@@ -82,14 +82,14 @@ const RadioButton = createClass({
 			isDisabled,
 			isSelected,
 			style,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		return (
 			<span
 					className={cx('&', {
 						'&-is-disabled': isDisabled,
-						'&-is-selected': isSelected
+						'&-is-selected': isSelected,
 					}, className)}
 					onClick={this.handleClicked}
 					onTouchEnd={this.handleClicked}
@@ -124,7 +124,7 @@ const RadioButton = createClass({
 			onSelect(true, { event, props: this.props });
 			this.nativeElement.focus();
 		}
-	}
+	},
 });
 
 export default RadioButton;

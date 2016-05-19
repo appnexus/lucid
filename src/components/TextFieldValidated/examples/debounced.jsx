@@ -2,13 +2,13 @@ import React from 'react';
 import { TextFieldValidated } from '../../../index';
 
 const style = {
-	marginBottom: '10px'
+	marginBottom: '10px',
 };
 
 export default React.createClass({
 	getInitialState() {
 		return {
-			value: ''
+			value: '',
 		}
 	},
 
@@ -24,5 +24,5 @@ export default React.createClass({
 				<div style={style}>state.value: {this.state.value}</div>
 			</div>
 		)
-	}
+	},
 });

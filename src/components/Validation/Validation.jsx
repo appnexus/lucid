@@ -23,8 +23,8 @@ const Validation = createClass({
 	components: {
 		Error: createClass({
 			displayName: 'Validation.Error',
-			propName: 'Error'
-		})
+			propName: 'Error',
+		}),
 	},
 
 	propTypes: {
@@ -58,7 +58,7 @@ const Validation = createClass({
 		const {
 			className,
 			children,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		const errorChildProps = _.first(_.map(findTypes(this.props, Validation.Error), 'props'));
@@ -78,7 +78,7 @@ const Validation = createClass({
 				: null}
 			</div>
 		);
-	}
+	},
 });
 
 export default Validation;

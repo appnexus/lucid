@@ -20,7 +20,7 @@ const ResizeIcon = createClass({
 	render() {
 		const {
 			className,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		return (
@@ -33,7 +33,7 @@ const ResizeIcon = createClass({
 				<path d='M12.5,15.5 L15.5,12.5' strokeWidth='1'/>
 			</Icon>
 		);
-	}
+	},
 });
 
 export default ResizeIcon;

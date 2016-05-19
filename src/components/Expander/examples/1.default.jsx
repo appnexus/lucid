@@ -11,5 +11,5 @@ export default React.createClass({
 				</Expander>
 			</div>
 		);
-	}
+	},
 });

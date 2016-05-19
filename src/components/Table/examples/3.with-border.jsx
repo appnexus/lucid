@@ -174,5 +174,5 @@ export default React.createClass({
 				</Tbody>
 			</Table>
 		);
-	}
+	},
 });

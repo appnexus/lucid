@@ -1,13 +1,13 @@
 export function onMouseOver(state) {
 	return {
 		...state,
-		isExpanded: true
+		isExpanded: true,
 	};
 }
 
 export function onMouseOut(state) {
 	return {
 		...state,
-		isExpanded: false
+		isExpanded: false,
 	}
 }

@@ -14,7 +14,7 @@ const {
 	func,
 	node,
 	object,
-	string
+	string,
 } = React.PropTypes;
 
 /**
@@ -35,9 +35,9 @@ const Expander = createClass({
 				 * Used to identify the purpose of this switch to the user -- can be
 				 * any renderable content.
 				 */
-				children: node
-			}
-		})
+				children: node,
+			},
+		}),
 	},
 
 	reducers,
@@ -76,13 +76,13 @@ const Expander = createClass({
 		 * Child element whose children represents content to be shown next to
 		 * the expander icon.
 		 */
-		Label: any
+		Label: any,
 	},
 
 	getDefaultProps() {
 		return {
 			isExpanded: false,
-			onToggle: _.noop
+			onToggle: _.noop,
 		};
 	},
 
@@ -105,7 +105,7 @@ const Expander = createClass({
 			className,
 			isExpanded,
 			style,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		const labelChildProp = _.first(_.map(findTypes(this.props, Expander.Label), 'props'));
@@ -136,7 +136,7 @@ const Expander = createClass({
 					</ReactCSSTransitionGroup>
 				</header>
 				<section className={cx('&-content', {
-					'&-content-is-expanded': isExpanded
+					'&-content-is-expanded': isExpanded,
 				})}>
 					{children}
 				</section>
@@ -146,9 +146,9 @@ const Expander = createClass({
 
 	handleToggle(event) {
 		this.props.onToggle(!this.props.isExpanded, {
-			event, props: this.props
+			event, props: this.props,
 		});
-	}
+	},
 });
 
 export default Expander;

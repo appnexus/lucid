@@ -5,13 +5,13 @@ import { Button, Overlay } from '../../../index';
 export default React.createClass({
 	getInitialState() {
 		return {
-			isShown: false
+			isShown: false,
 		};
 	},
 
 	handleOpenClose(isShown) {
 		this.setState({
-			isShown: isShown
+			isShown: isShown,
 		});
 	},
 
@@ -35,5 +35,5 @@ export default React.createClass({
 				</Overlay>
 			</div>
 		)
-	}
+	},
 });

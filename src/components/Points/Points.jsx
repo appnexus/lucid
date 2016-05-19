@@ -152,7 +152,7 @@ const Points = createClass({
 		if (isStacked) {
 			yScale.domain([
 				yScale.domain()[0],
-				_.chain(transformedData).last().flatten().max().value()
+				_.chain(transformedData).last().flatten().max().value(),
 			]);
 		}
 
@@ -177,7 +177,7 @@ const Points = createClass({
 				))}
 			</g>
 		);
-	}
+	},
 });
 
 export default Points;
