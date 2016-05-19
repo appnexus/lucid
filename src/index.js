@@ -76,7 +76,7 @@ export {
 	domHelpers,
 	redux,
 	stateManagement,
-	styleHelpers
+	styleHelpers,
 };
 
 export {
@@ -138,5 +138,5 @@ export {
 	Validation,
 	VerticalListMenu,
 	VerticalListMenuDumb,
-	WarningIcon
+	WarningIcon,
 };

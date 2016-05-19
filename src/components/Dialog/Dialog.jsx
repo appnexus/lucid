@@ -27,11 +27,11 @@ const Dialog = createClass({
 	components: {
 		Header: createClass({
 			displayName: 'Dialog.Header',
-			propName: 'Header'
+			propName: 'Header',
 		}),
 		Footer: createClass({
 			displayName: 'Dialog.Footer',
-			propName: 'Footer'
+			propName: 'Footer',
 		}),
 	},
 
@@ -53,7 +53,7 @@ const Dialog = createClass({
 		/**
 		 * *Child Element* - Footer contents. Only one `Footer` is used.
 		 */
-		Footer: node
+		Footer: node,
 	},
 
 	getDefaultProps() {
@@ -66,7 +66,7 @@ const Dialog = createClass({
 		const {
 			className,
 			size,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		const headerChildProp = _.get(_.first(findTypes(this.props, Dialog.Header)), 'props', {});

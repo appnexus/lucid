@@ -182,5 +182,5 @@ export default React.createClass({
 				</Tbody>
 			</ScrollTable>
 		);
-	}
+	},
 });

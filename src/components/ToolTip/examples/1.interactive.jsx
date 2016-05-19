@@ -5,7 +5,7 @@ import { ToolTip } from '../../../index';
 const {
 	Target,
 	Title,
-	Body
+	Body,
 } = ToolTip;
 
 export default React.createClass({
@@ -13,13 +13,13 @@ export default React.createClass({
 		return (
 			<section style={{ display: 'flex', flexDirection: 'row' }}>
 				{_.map(['right', 'up', 'down', 'left'], direction =>
-				   <section key={direction} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexGrow: 1 }}>
-						 {_.map(['start', 'center', 'end'], alignment =>
-							 <section key={`${direction}${alignment}`} style={{ margin: '30px' }}>
-								 <ToolTip
-									 direction={direction}
-									 alignment={alignment}
-								 >
+					<section key={direction} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexGrow: 1 }}>
+						{_.map(['start', 'center', 'end'], alignment =>
+							<section key={`${direction}${alignment}`} style={{ margin: '30px' }}>
+								<ToolTip
+									direction={direction}
+									alignment={alignment}
+								>
 									<Title>
 										Title: {direction} {alignment}
 									</Title>
@@ -35,9 +35,9 @@ export default React.createClass({
 									</Target>
 								</ToolTip>
 							</section>)}
-					 </section>
+						</section>
 				)}
 			</section>
 		);
-	}
+	},
 });

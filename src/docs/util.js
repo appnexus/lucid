@@ -3,7 +3,7 @@ import { markdown } from 'markdown';
 
 export function toMarkdown(md) {
 	return {
-		__html: markdown.toHTML(md)
+		__html: markdown.toHTML(md),
 	};
 }
 

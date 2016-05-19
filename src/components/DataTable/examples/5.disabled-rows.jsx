@@ -1,5 +1,5 @@
 import React from 'react';
-import { DataTable } from '../../../index';
+import DataTable from '../DataTable';
 
 const data = [
 	{
@@ -8,6 +8,7 @@ const data = [
 		'last_name': 'Newton',
 		'email': 'inewton@example.com',
 		'occupation': 'Physicist',
+		'isDisabled': true,
 	},
 	{
 		'id': '02',
@@ -15,6 +16,7 @@ const data = [
 		'last_name': 'Einstein',
 		'email': 'aeinstein@example.com',
 		'occupation': 'Physicist',
+		'isDisabled': false,
 	},
 	{
 		'id': '03',
@@ -22,6 +24,7 @@ const data = [
 		'last_name': 'da Vinci',
 		'email': 'ldvinci@example.com',
 		'occupation': 'Engineer',
+		'isDisabled': true,
 	},
 	{
 		'id': '04',
@@ -29,6 +32,7 @@ const data = [
 		'last_name': '--',
 		'email': 'aristotle@example.com',
 		'occupation': 'Tutor',
+		'isDisabled': false,
 	},
 	{
 		'id': '05',
@@ -36,6 +40,7 @@ const data = [
 		'last_name': 'Galilei',
 		'email': 'ggalilei@example.com',
 		'occupation': 'Physicist',
+		'isDisabled': true,
 	},
 	{
 		'id': '06',
@@ -43,6 +48,7 @@ const data = [
 		'last_name': 'Darwin',
 		'email': 'cdarwin@example.com',
 		'occupation': 'Biologist',
+		'isDisabled': false,
 	},
 	{
 		'id': '07',
@@ -50,6 +56,7 @@ const data = [
 		'last_name': 'Macedon',
 		'email': 'amacedon@example.com',
 		'occupation': 'Head of State',
+		'isDisabled': true,
 	},
 	{
 		'id': '08',
@@ -57,6 +64,7 @@ const data = [
 		'last_name': 'Plato',
 		'email': 'plato@example.com',
 		'occupation': 'Philosopher',
+		'isDisabled': false,
 	},
 	{
 		'id': '09',
@@ -64,6 +72,7 @@ const data = [
 		'last_name': 'Gandhi',
 		'email': 'mgandhi@example.com',
 		'occupation': 'Politician',
+		'isDisabled': true,
 	},
 	{
 		'id': '10',
@@ -71,6 +80,7 @@ const data = [
 		'last_name': 'Shakespeare',
 		'email': 'wshakespear@example.com',
 		'occupation': 'Playwright',
+		'isDisabled': false,
 	},
 ];
 

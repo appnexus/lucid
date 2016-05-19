@@ -5,7 +5,7 @@ import { ToolTipDumb } from '../../../index';
 const {
 	Target,
 	Title,
-	Body
+	Body,
 } = ToolTipDumb;
 
 const kinds = ['primary', 'success', 'warning', 'danger', 'info', 'default'];
@@ -17,17 +17,17 @@ export default React.createClass({
 		return (
 			<section style={{
 				display: 'flex',
-				flexDirection: 'column'
+				flexDirection: 'column',
 			}}>
 				{_.map(rows, row =>
-				 <section
-					 key={`${row}`}
-					 style={{
-						 marginTop: 150,
-						 display: 'flex',
-						 flexDirection: 'row',
-						 justifyContent: 'space-around'
-					 }}>
+					<section
+						key={`${row}`}
+						style={{
+							marginTop: 150,
+							display: 'flex',
+							flexDirection: 'row',
+							justifyContent: 'space-around',
+						}}>
 						{_.map(row, kind =>
 							<ToolTipDumb
 								key={kind}
@@ -47,5 +47,5 @@ export default React.createClass({
 						)}
 				</section>
 		);
-	}
+	},
 });

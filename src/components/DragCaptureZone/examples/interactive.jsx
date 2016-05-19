@@ -5,7 +5,7 @@ import { DragCaptureZone } from '../../../index';
 export default React.createClass({
 	getInitialState() {
 		return {
-			events: []
+			events: [],
 		}
 	},
 
@@ -13,7 +13,7 @@ export default React.createClass({
 		return (
 			<section style={{
 				alignItems: 'center',
-				display: 'flex'
+				display: 'flex',
 			}}>
 				<DragCaptureZone
 					onDrag={this.handleDragged}
@@ -30,7 +30,7 @@ export default React.createClass({
 						height: 300,
 						justifyContent: 'center',
 						textTransform: 'uppercase',
-						width: 400
+						width: 400,
 					}}>
 						Go wild!
 					</div>
@@ -39,14 +39,14 @@ export default React.createClass({
 					height: 300,
 					marginLeft: 50,
 					overflow: 'auto',
-					width: 600
+					width: 600,
 				}}>
 					{
 						_.chain(this.state.events)
 								.map(({ coordinates, type }, index) => (
 									<div key={index}>
 										<div style={{
-											fontWeight: 'bold'
+											fontWeight: 'bold',
 										}}>
 											{type}
 										</div>
@@ -70,8 +70,8 @@ export default React.createClass({
 		this.setState({
 			events: _.concat(this.state.events, {
 				type: 'end',
-				coordinates
-			})
+				coordinates,
+			}),
 		});
 	},
 
@@ -79,8 +79,8 @@ export default React.createClass({
 		this.setState({
 			events: _.concat(this.state.events, {
 				type: 'start',
-				coordinates
-			})
+				coordinates,
+			}),
 		});
 	},
 
@@ -91,8 +91,8 @@ export default React.createClass({
 		this.setState({
 			events: _.concat(alreadyDragging ? this.state.events : _.slice(this.state.events, 0, -1), {
 				type: 'drag',
-				coordinates
-			})
+				coordinates,
+			}),
 		});
-	}
+	},
 });

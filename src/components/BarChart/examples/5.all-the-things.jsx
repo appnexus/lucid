@@ -39,5 +39,5 @@ export default React.createClass({
 				yAxisTickCount={4}
 			/>
 		);
-	}
+	},
 });

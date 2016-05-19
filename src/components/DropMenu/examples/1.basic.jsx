@@ -5,14 +5,14 @@ import { DropMenu } from '../../../index';
 export default React.createClass({
 	getInitialState() {
 		return {
-		  selectedIndices: []
+			selectedIndices: [],
 		};
 	},
 
 	handleSelect(optionIndex) {
-		 this.setState({
-			selectedIndices: [optionIndex]
-		 });
+		this.setState({
+			selectedIndices: [optionIndex],
+		});
 	},
 
 	render() {
@@ -27,5 +27,5 @@ export default React.createClass({
 				))}
 			</DropMenu>
 		);
-	}
+	},
 });

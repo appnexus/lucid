@@ -3,7 +3,7 @@ import { SingleSelect } from '../../../index';
 
 const {
 	Placeholder,
-	Option
+	Option,
 } = SingleSelect;
 
 export default React.createClass({
@@ -16,5 +16,5 @@ export default React.createClass({
 				<Option isDisabled>Blue</Option>
 			</SingleSelect>
 		);
-	}
+	},
 });

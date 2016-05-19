@@ -20,7 +20,7 @@ const MinusIcon = createClass({
 	render() {
 		const {
 			className,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		return (
@@ -31,7 +31,7 @@ const MinusIcon = createClass({
 				<path d='M3,7h10v2H3V7z' />
 			</Icon>
 		);
-	}
+	},
 });
 
 export default MinusIcon;

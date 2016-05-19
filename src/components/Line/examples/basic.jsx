@@ -15,5 +15,5 @@ export default React.createClass({
 				</svg>
 			</div>
 		);
-	}
+	},
 });

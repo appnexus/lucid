@@ -59,7 +59,7 @@ const StickySection = createClass({
 
 		const {
 			isAboveFold,
-			containerRect
+			containerRect,
 		} = this.state;
 
 		const nextContainerRect = this.getContainerRect();
@@ -67,20 +67,20 @@ const StickySection = createClass({
 		if (window.pageYOffset >= nextContainerRect.top) {
 			if (!isAboveFold) {
 				this.setState({
-					isAboveFold: true
+					isAboveFold: true,
 				});
 			}
 		} else {
 			if (isAboveFold) {
 				this.setState({
-					isAboveFold: false
+					isAboveFold: false,
 				});
 			}
 		}
 
 		if (_.isNumber(lowerBound) && window.pageYOffset >= lowerBound) {
 			this.setState({
-				isAboveFold: false
+				isAboveFold: false,
 			});
 		}
 
@@ -95,7 +95,7 @@ const StickySection = createClass({
 			|| containerRect.frameLeft !== nextContainerRect.frameLeft
 		) {
 			this.setState({
-				containerRect: nextContainerRect
+				containerRect: nextContainerRect,
 			});
 		}
 	},
@@ -121,7 +121,7 @@ const StickySection = createClass({
 	componentDidMount() {
 		setTimeout(() => {
 			this.setState({
-				containerRect: this.getContainerRect()
+				containerRect: this.getContainerRect(),
 			});
 			this.handleScroll();
 		}, 1);
@@ -138,7 +138,7 @@ const StickySection = createClass({
 			className,
 			style,
 			viewportWidth,
-			...passthrus
+			...passthrus,
 		} = this.props;
 
 		const {
@@ -154,7 +154,7 @@ const StickySection = createClass({
 					...(isAboveFold ? {
 						height: containerRect.height,
 					} : {}),
-					...style
+					...style,
 				}}
 				ref='scrollContainer'
 			>
@@ -169,7 +169,7 @@ const StickySection = createClass({
 							height: containerRect.height,
 							overflow: 'hidden',
 						} : {}),
-						...style
+						...style,
 					}}
 				>
 					<div
@@ -193,7 +193,7 @@ const StickySection = createClass({
 				</div>
 			</div>
 		);
-	}
+	},
 });
 
 export default StickySection;

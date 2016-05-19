@@ -7,39 +7,39 @@ export default React.createClass({
 			isFileExpanded: false,
 			fileDirection: 'down',
 			isEditExpanded: false,
-			editDirection: 'down'
+			editDirection: 'down',
 		};
 	},
 
 	handleFileMenuToggle() {
 		const {
-			isFileExpanded
+			isFileExpanded,
 		} = this.state;
 
 		this.setState({
-			isFileExpanded: !isFileExpanded
+			isFileExpanded: !isFileExpanded,
 		});
 	},
 
 	handleEditMenuToggle() {
 		const {
-			isEditExpanded
+			isEditExpanded,
 		} = this.state;
 
 		this.setState({
-			isEditExpanded: !isEditExpanded
+			isEditExpanded: !isEditExpanded,
 		});
 	},
 
 	handleFileMenuChangeBounds(type) {
 		this.setState({
-			fileDirection: type === ContextMenu.BELOW_FOLD ? 'up' : 'down'
+			fileDirection: type === ContextMenu.BELOW_FOLD ? 'up' : 'down',
 		});
 	},
 
 	handleEditMenuChangeBounds(type) {
 		this.setState({
-			editDirection: type === ContextMenu.BELOW_FOLD ? 'up' : 'down'
+			editDirection: type === ContextMenu.BELOW_FOLD ? 'up' : 'down',
 		});
 	},
 
@@ -48,7 +48,7 @@ export default React.createClass({
 			isFileExpanded,
 			fileDirection,
 			isEditExpanded,
-			editDirection
+			editDirection,
 		} = this.state;
 		return (
 			<section>
@@ -66,7 +66,7 @@ export default React.createClass({
 							background: isFileExpanded ? '#fafafa' : '#eaeaea',
 							outline: 'solid 1px #d1d1d1',
 							padding: '4px',
-							cursor: 'pointer'
+							cursor: 'pointer',
 						}} onClick={this.handleFileMenuToggle}>
 							File
 						</div>
@@ -76,7 +76,7 @@ export default React.createClass({
 						background: '#fafafa',
 						outline: 'solid 1px #d1d1d1',
 						boxShadow:' 1px 1px 2px rgba(0, 0, 0, 0.2)',
-						padding: '8px'
+						padding: '8px',
 					}}>
 						<div>New Window</div>
 						<div>New File</div>
@@ -108,7 +108,7 @@ export default React.createClass({
 							background: isEditExpanded ? '#fafafa' : '#eaeaea',
 							outline: 'solid 1px #d1d1d1',
 							padding: '4px',
-							cursor: 'pointer'
+							cursor: 'pointer',
 						}} onClick={this.handleEditMenuToggle}>
 							Edit
 						</div>
@@ -118,7 +118,7 @@ export default React.createClass({
 						background: '#fafafa',
 						outline: 'solid 1px #d1d1d1',
 						boxShadow:' 1px 1px 2px rgba(0, 0, 0, 0.2)',
-						padding: '8px'
+						padding: '8px',
 					}}>
 						<div>Undo</div>
 						<div>Redo</div>
@@ -133,5 +133,5 @@ export default React.createClass({
 
 			</section>
 		);
-	}
+	},
 });

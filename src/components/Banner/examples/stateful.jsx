@@ -9,7 +9,7 @@ export default React.createClass({
 
 	handleChange(isClosed) {
 		this.setState({
-			isClosed: isClosed
+			isClosed,
 		})
 	},
 
@@ -30,5 +30,5 @@ export default React.createClass({
 				</Banner>
 			</div>
 		);
-	}
+	},
 });

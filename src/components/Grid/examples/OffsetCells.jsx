@@ -12,9 +12,9 @@ const gridStyle = {
 		margin: 0,
 		padding: 0,
 		color: '#f3f3f3',
-		textAlign: 'center'
+		textAlign: 'center',
 	},
-	vertical: {height: '100px'}
+	vertical: {height: '100px'},
 }
 
 export default React.createClass({
@@ -38,5 +38,5 @@ export default React.createClass({
 				</Grid>
 			</div>
 		)
-	}
+	},
 });

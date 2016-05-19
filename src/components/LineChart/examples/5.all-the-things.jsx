@@ -5,7 +5,7 @@ const data = [
 	{ date: new Date('2015-01-01T00:00:00-08:00'), apples: 2000, oranges: 3000 },
 	{ date: new Date('2015-01-02T00:00:00-08:00'), apples: 2000, oranges: 5000 },
 	{ date: new Date('2015-01-03T00:00:00-08:00'), apples: 3000, oranges: 2000 },
-	{ date: new Date('2015-01-04T00:00:00-08:00'), apples: 5000,               },
+	{ date: new Date('2015-01-04T00:00:00-08:00'), apples: 5000               },
 	{ date: new Date('2015-01-05T00:00:00-08:00'), apples: 2500, oranges: 6300 },
 	{ date: new Date('2015-01-06T00:00:00-08:00'), apples: 1500, oranges: 6100 },
 ];
@@ -38,5 +38,5 @@ export default React.createClass({
 				y2AxisTitleColor={1}
 			/>
 		);
-	}
+	},
 });

@@ -17,7 +17,7 @@ export default React.createClass({
 					<ContextMenu.FlyOut style={{
 						background: 'white',
 						boxShadow: '1px -1px 4px black',
-						padding: 4
+						padding: 4,
 					}}>
 						FlyOut
 					</ContextMenu.FlyOut>
@@ -27,5 +27,5 @@ export default React.createClass({
 
 			</section>
 		);
-	}
+	},
 });

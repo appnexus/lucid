@@ -15,8 +15,8 @@ const {
 		number,
 		object,
 		oneOf,
-		string
-	}
+		string,
+	},
 } = React;
 
 /**
@@ -71,7 +71,7 @@ const ContextMenu = createClass({
 		/**
 		 * The `id` of the FlyOut portal element that is appended to `document.body`. Defaults to a generated `id`.
 		 */
-		portalId: string
+		portalId: string,
 	},
 
 	components: {
@@ -83,9 +83,9 @@ const ContextMenu = createClass({
 			displayName: 'ContextMenu.FlyOut',
 			propName: 'FlyOut',
 			propTypes: {
-				style: object
-			}
-		})
+				style: object,
+			},
+		}),
 	},
 
 	getDefaultProps() {
@@ -97,13 +97,13 @@ const ContextMenu = createClass({
 			getAlignmentOffset: _.constant(0),
 			isExpanded: true,
 			onClickOut: null,
-			portalId: null
+			portalId: null,
 		};
 	},
 
 	getInitialState() {
 		const {
-			portalId
+			portalId,
 		} = this.props;
 		return {
 			portalId: portalId || 'ContextMenu-Portal-' + Math.random().toString(16).substr(2),
@@ -113,7 +113,7 @@ const ContextMenu = createClass({
 				left: 0,
 				right: 0,
 				height: 0,
-				width: 0
+				width: 0,
 			},
 			flyOutHeight: 0,
 			flyOutWidth: 0,
@@ -161,8 +161,8 @@ const ContextMenu = createClass({
 		const {
 			refs: {
 				flyOutPortal,
-				target
-			}
+				target,
+			},
 		} = this;
 
 		if (!target || !flyOutPortal) {
@@ -173,7 +173,7 @@ const ContextMenu = createClass({
 
 		if (!flyOutPortal) {
 			return this.setState({
-				targetRect
+				targetRect,
 			});
 		}
 
@@ -185,7 +185,7 @@ const ContextMenu = createClass({
 		this.setState({
 			targetRect,
 			flyOutHeight: height,
-			flyOutWidth: width
+			flyOutWidth: width,
 		});
 	},
 
@@ -200,14 +200,14 @@ const ContextMenu = createClass({
 				directonOffset,
 				isExpanded,
 				style,
-				...passThroughs
+				...passThroughs,
 			},
 			state: {
 				portalId,
 				targetRect,
 				flyOutHeight,
-				flyOutWidth
-			}
+				flyOutWidth,
+			},
 		} = this;
 
 		const targetElement = _.first(findTypes(this.props, ContextMenu.Target));
@@ -244,7 +244,7 @@ const ContextMenu = createClass({
 				) : null}
 			</span>
 		);
-	}
+	},
 });
 
 export default ContextMenu;
@@ -290,73 +290,73 @@ function getFlyoutPosition({
 	if (matcher({ direction: UP, alignment: START })) {
 		return {
 			top: top - flyOutHeight - directonOffset,
-			left: left - alignmentOffset
+			left: left - alignmentOffset,
 		};
 	}
 	if (matcher({ direction: UP, alignment: END })) {
 		return {
 			top: top - flyOutHeight - directonOffset,
-			right: clientWidth - right - alignmentOffset
+			right: clientWidth - right - alignmentOffset,
 		};
 	}
 	if (matcher({ direction: UP, alignment: CENTER })) {
 		return {
 			top: top - flyOutHeight - directonOffset,
-			left: left + (width / 2) - (flyOutWidth / 2) + alignmentOffset
+			left: left + (width / 2) - (flyOutWidth / 2) + alignmentOffset,
 		};
 	}
 	if (matcher({ direction: DOWN, alignment: START })) {
 		return {
 			top: bottom + directonOffset,
-			left: left - alignmentOffset
+			left: left - alignmentOffset,
 		};
 	}
 	if (matcher({ direction: DOWN, alignment: END })) {
 		return {
 			top: bottom + directonOffset,
-			right: clientWidth - right - alignmentOffset
+			right: clientWidth - right - alignmentOffset,
 		};
 	}
 	if (matcher({ direction: DOWN, alignment: CENTER })) {
 		return {
 			top: bottom + directonOffset,
-			left: left + (width / 2) - (flyOutWidth / 2) + alignmentOffset
+			left: left + (width / 2) - (flyOutWidth / 2) + alignmentOffset,
 		};
 	}
 	if (matcher({ direction: LEFT, alignment: START })) {
 		return {
 			top: top - alignmentOffset,
-			right: clientWidth - left + directonOffset
+			right: clientWidth - left + directonOffset,
 		};
 	}
 	if (matcher({ direction: LEFT, alignment: END })) {
 		return {
 			top: top - flyOutHeight + height + alignmentOffset,
-			right: clientWidth - left + directonOffset
+			right: clientWidth - left + directonOffset,
 		};
 	}
 	if (matcher({ direction: LEFT, alignment: CENTER })) {
 		return {
 			top: top - (flyOutHeight / 2) + (height / 2) + alignmentOffset,
-			right: clientWidth - left + directonOffset
+			right: clientWidth - left + directonOffset,
 		};
 	}
 	if (matcher({ direction: RIGHT, alignment: START })) {
 		return {
 			top: top - alignmentOffset,
-			left: left + width + directonOffset
+			left: left + width + directonOffset,
 		};
 	}
 	if (matcher({ direction: RIGHT, alignment: END })) {
 		return {
 			top: top - flyOutHeight + height + alignmentOffset,
-			left: left + width + directonOffset
+			left: left + width + directonOffset,
 		};
 	}
 	if (matcher({ direction: RIGHT, alignment: CENTER })) {
 		return {
 			top: top - (flyOutHeight / 2) + (height / 2) + alignmentOffset,
-			left: left + width + directonOffset
+			left: left + width + directonOffset,
 		};
 	}
 

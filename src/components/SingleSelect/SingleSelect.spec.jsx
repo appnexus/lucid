@@ -12,7 +12,7 @@ import DropMenu from '../DropMenu/DropMenu';
 const {
 	Placeholder,
 	Option,
-	OptionGroup
+	OptionGroup,
 } = SingleSelect;
 
 describe('SingleSelect', () => {
@@ -216,7 +216,7 @@ describe('SingleSelect', () => {
 				const explicitDropMenuProps = {
 					isExpanded: true,
 					direction: 'up',
-					focusedIndex: 2
+					focusedIndex: 2,
 				};
 
 				const wrapper = shallow(
@@ -298,15 +298,15 @@ describe('SingleSelect', () => {
 				assert.equal(_.size(optionsProps), 3);
 				assert(_.isEqual(optionsProps[0], {
 					name: 'OptionA',
-					children: 'option a'
+					children: 'option a',
 				}));
 				assert(_.isEqual(optionsProps[1], {
 					name: 'OptionB',
-					children: 'option b'
+					children: 'option b',
 				}));
 				assert(_.isEqual(optionsProps[2], {
 					name: 'OptionC',
-					children: 'option c'
+					children: 'option c',
 				}));
 			});
 		});
@@ -345,15 +345,15 @@ describe('SingleSelect', () => {
 				assert.equal(_.size(optionsProps), 3);
 				assert(_.isEqual(optionsProps[0], {
 					name: 'OptionA',
-					children: 'option a'
+					children: 'option a',
 				}));
 				assert(_.isEqual(optionsProps[1], {
 					name: 'OptionB',
-					children: 'option b'
+					children: 'option b',
 				}));
 				assert(_.isEqual(optionsProps[2], {
 					name: 'OptionC',
-					children: 'option c'
+					children: 'option c',
 				}));
 
 			});

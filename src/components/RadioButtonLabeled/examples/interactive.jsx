@@ -2,31 +2,31 @@ import React from 'react';
 import { RadioButtonLabeled } from '../../../index';
 
 const style = {
-	marginBottom: '3px'
+	marginBottom: '3px',
 };
 
 export default React.createClass({
 	getInitialState() {
 		return {
-			flavor: 'vanilla'
+			flavor: 'vanilla',
 		};
 	},
 
 	handleSelectedChocolate() {
 		this.setState({
-			flavor: 'chocolate'
+			flavor: 'chocolate',
 		});
 	},
 
 	handleSelectedStrawberry() {
 		this.setState({
-			flavor: 'strawberry'
+			flavor: 'strawberry',
 		});
 	},
 
 	handleSelectedVanilla() {
 		this.setState({
-			flavor: 'vanilla'
+			flavor: 'vanilla',
 		});
 	},
 
@@ -61,5 +61,5 @@ export default React.createClass({
 				</span>
 			</section>
 		);
-	}
+	},
 });

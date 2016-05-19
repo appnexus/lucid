@@ -92,7 +92,7 @@ const TextField = createClass({
 		 */
 		value: oneOfType([
 			number,
-			string
+			string,
 		]),
 
 		/**
@@ -130,7 +130,7 @@ const TextField = createClass({
 
 	getInitialState() {
 		return {
-			value: this.props.value
+			value: this.props.value,
 		}
 	},
 
@@ -186,7 +186,7 @@ const TextField = createClass({
 	handleKeyDown(event) {
 		const {
 			onSubmit,
-			onKeyDown
+			onKeyDown,
 		} = this.props;
 		const value = _.get(event, 'target.value', '');
 
@@ -207,11 +207,11 @@ const TextField = createClass({
 			isMultiLine,
 			rows,
 			style,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		const {
-			value
+			value,
 		} = this.state;
 
 		const finalProps = {
@@ -219,7 +219,7 @@ const TextField = createClass({
 			className: cx('&', {
 				'&-is-disabled': isDisabled,
 				'&-is-multi-line': isMultiLine,
-				'&-is-single-line': !isMultiLine
+				'&-is-single-line': !isMultiLine,
 			}, className),
 			disabled: isDisabled,
 			onChange: this.handleChange,
@@ -232,7 +232,7 @@ const TextField = createClass({
 		return isMultiLine
 			? <textarea {...finalProps}/>
 			: <input type='text' {...finalProps}/>;
-	}
+	},
 });
 
 export default TextField;

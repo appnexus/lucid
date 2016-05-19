@@ -22,7 +22,7 @@ export default React.createClass({
 		const style = {
 			background: 'white',
 			boxShadow: '1px 1px 4px black',
-			padding: 4
+			padding: 4,
 		};
 
 		return (
@@ -30,7 +30,7 @@ export default React.createClass({
 				style={{
 					display: 'flex',
 					flexDirection: 'row',
-					margin: '0 60px'
+					margin: '0 60px',
 				}}
 			>
 
@@ -59,12 +59,12 @@ export default React.createClass({
 											</ContextMenu.FlyOut>
 										</ContextMenu>
 									</div>
-							 ))))}
-						 </section>
-					 );
-			 })}
+								))))}
+							</section>
+						);
+				})}
 
 			</section>
 		);
-	}
+	},
 });

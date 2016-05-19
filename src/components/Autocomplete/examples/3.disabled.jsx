@@ -9,5 +9,5 @@ export default React.createClass({
 				<Autocomplete placeholder='Enter a word...' isDisabled />
 			</section>
 		);
-	}
+	},
 });

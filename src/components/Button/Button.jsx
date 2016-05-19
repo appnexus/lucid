@@ -44,7 +44,7 @@ const Button = createClass({
 		 */
 		children: oneOfType([
 			node,
-			arrayOf(node)
+			arrayOf(node),
 		]),
 		/**
 		 * style variations of the button
@@ -55,7 +55,7 @@ const Button = createClass({
 			'success',
 			'warning',
 			'danger',
-			'info'
+			'info',
 		]),
 		/**
 		 * size variations of the button
@@ -63,7 +63,7 @@ const Button = createClass({
 		size: oneOf([
 			'short',
 			'small',
-			'large'
+			'large',
 		]),
 		/**
 		 * Called when the user clicks the `Button`.
@@ -77,7 +77,7 @@ const Button = createClass({
 		return {
 			isDisabled: false,
 			isActive: false,
-			onClick: _.noop
+			onClick: _.noop,
 		};
 	},
 
@@ -103,7 +103,7 @@ const Button = createClass({
 			size,
 			className,
 			children,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		return (
@@ -131,7 +131,7 @@ const Button = createClass({
 				</span>
 			</button>
 		);
-	}
+	},
 });
 
 export default Button;

@@ -9,7 +9,7 @@ const {
 	bool,
 	node,
 	object,
-	string
+	string,
 } = React.PropTypes;
 
 /**
@@ -23,12 +23,12 @@ const Panel = createClass({
 	components: {
 		Header: createClass({
 			displayName: 'Panel.Header',
-			propName: 'Header'
+			propName: 'Header',
 		}),
 		Footer: createClass({
 			displayName: 'Panel.Footer',
-			propName: 'Footer'
-		})
+			propName: 'Footer',
+		}),
 	},
 
 	propTypes: {
@@ -73,7 +73,7 @@ const Panel = createClass({
 		return (
 			<div
 				className={cx('&', className, {
-					'&-is-not-gutterless': !isGutterless
+					'&-is-not-gutterless': !isGutterless,
 				})}
 				style={style}
 			>
@@ -96,7 +96,7 @@ const Panel = createClass({
 				) : null}
 			</div>
 		)
-	}
+	},
 })
 
 export default Panel;

@@ -28,5 +28,5 @@ export default React.createClass({
 				</Tabs>
 			</div>
 		);
-	}
+	},
 });

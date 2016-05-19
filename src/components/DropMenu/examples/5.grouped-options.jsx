@@ -4,7 +4,7 @@ import { Button, DropMenu } from '../../../index';
 const {
 	Control,
 	Option,
-	OptionGroup
+	OptionGroup,
 } = DropMenu;
 
 export default React.createClass({
@@ -35,5 +35,5 @@ export default React.createClass({
 				</OptionGroup>
 			</DropMenu>
 		);
-	}
+	},
 });

@@ -42,7 +42,7 @@ const CaretIcon = createClass({
 			className,
 			direction,
 			size,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		return (
@@ -59,7 +59,7 @@ const CaretIcon = createClass({
 				<path d='M1.234,4.408l6.718,7.184l6.813-7.184H1.234z' />
 			</Icon>
 		);
-	}
+	},
 });
 
 export default CaretIcon;

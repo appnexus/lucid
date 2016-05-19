@@ -42,8 +42,8 @@ const VerticalListMenu = createClass({
 				isActionable: bool,
 				onSelect: func,
 				onToggle: func,
-			}
-		})
+			},
+		}),
 	},
 
 	propTypes: {
@@ -109,7 +109,7 @@ const VerticalListMenu = createClass({
 			style,
 			selectedIndices,
 			expandedIndices,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		const itemChildProps = _.map(findTypes(this.props, VerticalListMenu.Item), 'props');
@@ -209,7 +209,7 @@ const VerticalListMenu = createClass({
 		if (onSelect) {
 			onSelect(index, { event, props: itemChildProp });
 		}
-	}
+	},
 
 });
 
