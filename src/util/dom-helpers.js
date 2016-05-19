@@ -9,7 +9,7 @@ export function getAbsoluteBoundingClientRect(domNode) {
 		left: elementRect.left + window.pageXOffset,
 		right: elementRect.right + window.pageXOffset,
 		height: elementRect.height,
-		width: elementRect.width
+		width: elementRect.width,
 	};
 }
 

@@ -8,5 +8,5 @@ export default React.createClass({
 				<WarningIcon />
 			</div>
 		);
-	}
+	},
 });

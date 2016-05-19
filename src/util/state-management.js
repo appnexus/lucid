@@ -67,7 +67,7 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 		},
 		getProps(props) {
 			return _.mergeWith({}, boundReducers, getState(), props, combineFunctionsCustomizer);
-		}
+		},
 	};
 }
 
@@ -91,7 +91,7 @@ export function safeMerge (objValue, srcValue) {
 
 export function buildHybridComponent(baseComponent, opts = {
 	setStateWithNewProps: true, // if true, new props will update state, else prop has priority over existing state
-	replaceEvents: false // if true, function props replace the existing reducers, else they are invoked *after* state reducer returns
+	replaceEvents: false, // if true, function props replace the existing reducers, else they are invoked *after* state reducer returns
 }) {
 
 	const {
@@ -100,8 +100,8 @@ export function buildHybridComponent(baseComponent, opts = {
 		propTypes,
 		definition: {
 			statics = {},
-			statics: { reducers } = {}
-		} = {}
+			statics: { reducers } = {},
+		} = {},
 	} = baseComponent;
 
 	if (_isLucidHybridComponent) {
@@ -118,7 +118,7 @@ export function buildHybridComponent(baseComponent, opts = {
 		propTypes,
 		statics: {
 			_isLucidHybridComponent: true,
-			...statics
+			...statics,
 		},
 		displayName,
 		getInitialState() {
@@ -136,7 +136,7 @@ export function buildHybridComponent(baseComponent, opts = {
 		componentWillMount() {
 			this.boundContext = getStatefulPropsContext(reducers, {
 				getState: () => { return this.state; },
-				setState: (state) => { this.setState(state); }
+				setState: (state) => { this.setState(state); },
 			});
 		},
 		render() {
@@ -144,7 +144,7 @@ export function buildHybridComponent(baseComponent, opts = {
 				return React.createElement(baseComponent, this.boundContext.getPropReplaceReducers(this.props), this.props.children);
 			}
 			return React.createElement(baseComponent, this.boundContext.getProps(this.props), this.props.children);
-		}
+		},
 	});
 }
 

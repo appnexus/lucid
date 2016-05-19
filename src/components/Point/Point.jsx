@@ -113,7 +113,7 @@ const Point = createClass({
 				d={PATHS[kindIndex]}
 			/>
 		);
-	}
+	},
 });
 
 export default Point;

@@ -8,7 +8,7 @@ module.exports = function lint() {
 		CONFIG.JS_GLOB.SOURCE,
 		CONFIG.TEST_GLOB.SOURCE,
 		'!node_modules/**',
-		'!/**/*.json'
+		'!/**/*.json',
 	])
 	.pipe(eslint())
 	.pipe(eslint.format())

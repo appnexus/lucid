@@ -95,8 +95,8 @@ const Grid = createClass({
 				 * offset a grid cell by six columns
 				 */
 				isOffsetHalf: bool,
-			}
-		})
+			},
+		}),
 	},
 
 	propTypes: {
@@ -140,7 +140,7 @@ const Grid = createClass({
 			isHorizontal,
 			isGutterless,
 			isMultiline,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		const cellChildProps = _.map(findTypes(this.props, Grid.Cell), 'props');
@@ -186,7 +186,7 @@ const Grid = createClass({
 				{children}
 			</section>
 		);
-	}
+	},
 });
 
 export default Grid;

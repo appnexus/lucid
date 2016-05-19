@@ -149,7 +149,7 @@ const Lines = createClass({
 		if (isStacked) {
 			yScale.domain([
 				yScale.domain()[0], // only stacks well if this is `0`
-				_.chain(transformedData).last().flatten().max().value()
+				_.chain(transformedData).last().flatten().max().value(),
 			]);
 		}
 
@@ -169,7 +169,7 @@ const Lines = createClass({
 				))}
 			</g>
 		);
-	}
+	},
 });
 
 export default Lines;

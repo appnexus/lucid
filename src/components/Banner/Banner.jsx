@@ -25,7 +25,7 @@ const defaultIcons = {
 	'info': <InfoIcon isBadge />,
 	'warning': <WarningIcon />,
 	'primary': null,
-	'default': null
+	'default': null,
 };
 
 /**
@@ -127,7 +127,7 @@ const Banner = createClass({
 			isCloseable,
 			hasRoundedCorners,
 			isClosed,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		let displayedIcon = null;
@@ -176,7 +176,7 @@ const Banner = createClass({
 				: null}
 			</ReactCSSTransitionGroup>
 		);
-	}
+	},
 });
 
 export default Banner;

@@ -7,17 +7,17 @@ describe('Tabs reducers', () => {
 
 		assert.deepEqual(reducers.onSelect(initialState, 99), {
 			foo: 1,
-			selectedIndex: 99
+			selectedIndex: 99,
 		});
 	});
 
 	it('onSelect should not set selectedIndex when isDisabled', () => {
 		const initialState = {
-			selectedIndex: 5
+			selectedIndex: 5,
 		};
 
 		const props = {
-			isDisabled: true
+			isDisabled: true,
 		};
 
 		assert.deepEqual(reducers.onSelect(initialState, 99, { props }), initialState);

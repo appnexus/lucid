@@ -12,9 +12,9 @@ describe('ContextMenu', () => {
 		getDefaultProps: () => ({
 			children: [
 				(<ContextMenu.Target>Test</ContextMenu.Target>),
-				(<ContextMenu.FlyOut>Menu</ContextMenu.FlyOut>)
-			]
-		})
+				(<ContextMenu.FlyOut>Menu</ContextMenu.FlyOut>),
+			],
+		}),
 	});
 
 	describeWithDOM('props', () => {

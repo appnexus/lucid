@@ -89,7 +89,7 @@ const Bar = createClass({
 				width={width}
 			/>
 		);
-	}
+	},
 });
 
 export default Bar;

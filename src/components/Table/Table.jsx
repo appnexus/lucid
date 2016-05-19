@@ -40,7 +40,7 @@ const Thead = createClass({
 		const {
 			children,
 			className,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		return (
@@ -48,7 +48,7 @@ const Thead = createClass({
 				{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Th)}
 			</thead>
 		);
-	}
+	},
 });
 
 /**
@@ -73,7 +73,7 @@ const Tbody = createClass({
 		const {
 			children,
 			className,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		return (
@@ -81,7 +81,7 @@ const Tbody = createClass({
 				{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Td)}
 			</tbody>
 		);
-	}
+	},
 });
 
 /**
@@ -145,7 +145,7 @@ const Tr = createClass({
 				'&-is-active': isActive,
 			}, className)} />
 		);
-	}
+	},
 });
 
 /**
@@ -221,7 +221,7 @@ const Th = createClass({
 			align: 'left',
 			isResizable: false,
 			isSorted: false,
-			sortDirection: 'up'
+			sortDirection: 'up',
 		};
 	},
 
@@ -236,7 +236,7 @@ const Th = createClass({
 			// Indicates whether the cell is currently being resized.
 			isResizing: false,
 			// Represents the width when the cell is not actively being resized.
-			passiveWidth: width || null
+			passiveWidth: width || null,
 		};
 	},
 
@@ -269,7 +269,7 @@ const Th = createClass({
 			activeWidth,
 			hasSetWidth,
 			isResizing,
-			passiveWidth
+			passiveWidth,
 		} = this.state;
 
 		return (
@@ -291,7 +291,7 @@ const Th = createClass({
 				}, className)}
 				ref='root'
 				style={hasSetWidth ? _.assign({}, style, {
-					width: isResizing ? activeWidth : passiveWidth
+					width: isResizing ? activeWidth : passiveWidth,
 				}) : style}
 			>
 				<div className={cx('&-Th-inner')}>
@@ -327,7 +327,7 @@ const Th = createClass({
 	handleDragEnded(coordinates, { event }) {
 		this.setState({
 			isResizing: false,
-			passiveWidth: this.state.activeWidth
+			passiveWidth: this.state.activeWidth,
 		});
 
 		window.document.body.style.cursor = '';
@@ -335,7 +335,7 @@ const Th = createClass({
 		if (this.props.onResize) {
 			this.props.onResize(this.state.activeWidth, {
 				event,
-				props: this.props
+				props: this.props,
 			});
 		}
 	},
@@ -347,7 +347,7 @@ const Th = createClass({
 			activeWidth: startingWidth,
 			hasSetWidth: true,
 			isResizing: true,
-			passiveWidth: startingWidth
+			passiveWidth: startingWidth,
 		});
 
 		window.document.body.style.cursor = 'ew-resize';
@@ -355,7 +355,7 @@ const Th = createClass({
 		if (this.props.onResize) {
 			this.props.onResize(startingWidth, {
 				event,
-				props: this.props
+				props: this.props,
 			});
 		}
 	},
@@ -368,10 +368,10 @@ const Th = createClass({
 		if (this.props.onResize) {
 			this.props.onResize(activeWidth, {
 				event,
-				props: this.props
+				props: this.props,
 			});
 		}
-	}
+	},
 });
 
 /**
@@ -457,7 +457,7 @@ const Td = createClass({
 				'&-has-border-left': hasBorderLeft,
 			}, className)} />
 		);
-	}
+	},
 });
 
 /**
@@ -534,7 +534,7 @@ const Table = createClass({
 				}, className)}
 			/>
 		);
-	}
+	},
 });
 
 /**

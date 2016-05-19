@@ -3,7 +3,7 @@ import _ from 'lodash';
 import {
 	onChange,
 	onSelect,
-	onExpand
+	onExpand,
 } from './Autocomplete.reducers';
 
 describe('Autocomplete reducers', () => {
@@ -12,16 +12,16 @@ describe('Autocomplete reducers', () => {
 			const initialState = {
 				value: '',
 				DropMenu: {
-					focusedIndex: 2
-				}
+					focusedIndex: 2,
+				},
 			};
 
 			const nextState = onChange(initialState, 'foo');
 			const {
 				value,
 				DropMenu: {
-					focusedIndex
-				}
+					focusedIndex,
+				},
 			} = nextState;
 
 			assert.equal(value, 'foo');
@@ -37,20 +37,20 @@ describe('Autocomplete reducers', () => {
 					'portal',
 					'porridge',
 					'potent',
-					'please'
+					'please',
 				],
 				value: '',
 				DropMenu: {
-					selectedIndices: [3,2]
-				}
+					selectedIndices: [3,2],
+				},
 			};
 
 			const nextState = onSelect(initialState, 2);
 			const {
 				value,
 				DropMenu: {
-					selectedIndices
-				}
+					selectedIndices,
+				},
 			} = nextState;
 
 			assert.equal(value, 'porridge');
@@ -64,16 +64,16 @@ describe('Autocomplete reducers', () => {
 				value: 'foo',
 				suggestions: ['foo','bar'],
 				DropMenu: {
-					focusedIndex: 2
-				}
+					focusedIndex: 2,
+				},
 			};
 
 			const nextState = onExpand(initialState, 'foo');
 			const {
 				DropMenu: {
 					focusedIndex,
-					isExpanded
-				}
+					isExpanded,
+				},
 			} = nextState;
 
 			assert.equal(isExpanded, true);
@@ -85,16 +85,16 @@ describe('Autocomplete reducers', () => {
 				value: 'foo',
 				suggestions: [],
 				DropMenu: {
-					focusedIndex: 2
-				}
+					focusedIndex: 2,
+				},
 			};
 
 			const nextState = onExpand(initialState);
 			const {
 				DropMenu: {
 					focusedIndex,
-					isExpanded
-				}
+					isExpanded,
+				},
 			} = nextState;
 
 			assert.equal(isExpanded, false);
@@ -106,16 +106,16 @@ describe('Autocomplete reducers', () => {
 				value: '',
 				suggestions: ['foo', 'bar'],
 				DropMenu: {
-					focusedIndex: 2
-				}
+					focusedIndex: 2,
+				},
 			};
 
 			const nextState = onExpand(initialState);
 			const {
 				DropMenu: {
 					focusedIndex,
-					isExpanded
-				}
+					isExpanded,
+				},
 			} = nextState;
 
 			assert.equal(isExpanded, false);

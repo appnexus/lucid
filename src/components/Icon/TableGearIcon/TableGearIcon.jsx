@@ -19,7 +19,7 @@ const TableGearIcon = React.createClass({
 	render() {
 		const {
 			className,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		return (
@@ -38,7 +38,7 @@ const TableGearIcon = React.createClass({
 				<path d='M8,12H1.25C1.112,12,1,11.888,1,11.75v-7.5C1,4.112,1.112,4,1.25,4h12.5C13.888,4,14,4.112,14,4.25V6h1V3.25 C15,2.56,14.44,2,13.75,2H1.25C0.56,2,0,2.56,0,3.25v8.5C0,12.44,0.56,13,1.25,13H8V12z'/>
 			</Icon>
 		);
-	}
+	},
 });
 
 export default TableGearIcon;

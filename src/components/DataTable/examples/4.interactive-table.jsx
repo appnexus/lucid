@@ -80,13 +80,13 @@ export default React.createClass({
 					'email': 'wshakespear@example.com',
 					'occupation': 'Playwright',
 				},
-			]
+			],
 		};
 	},
 
 	handleSelect(item, selectedIndex) {
 		const {
-			data
+			data,
 		} = this.state;
 
 		this.setState({
@@ -94,18 +94,18 @@ export default React.createClass({
 				if (rowIndex === selectedIndex) {
 					return {
 						...row,
-						isSelected: !row.isSelected
+						isSelected: !row.isSelected,
 					};
 				} else {
 					return row;
 				}
-			})
+			}),
 		});
 	},
 
 	handleSelectAll() {
 		const {
-			data
+			data,
 		} = this.state;
 
 		const allSelected = _.every(data, 'isSelected');
@@ -114,16 +114,16 @@ export default React.createClass({
 			data: _.map(data, (row) => {
 				return {
 					...row,
-					isSelected: !allSelected
+					isSelected: !allSelected,
 				};
-			})
+			}),
 		});
 
 	},
 
 	handleRowClick(item, rowIndex) {
 		this.setState({
-			activeIndex: rowIndex
+			activeIndex: rowIndex,
 		})
 	},
 
@@ -141,7 +141,7 @@ export default React.createClass({
 			currentlySortedField: field,
 			currentlySortedFieldDirection: nextCurrentlySortedFieldDirection,
 			data: nextCurrentlySortedFieldDirection === 'up' ? nextData : _.reverse(nextData),
-			activeIndex: null
+			activeIndex: null,
 		});
 	},
 
@@ -150,7 +150,7 @@ export default React.createClass({
 			activeIndex,
 			data,
 			currentlySortedField,
-			currentlySortedFieldDirection
+			currentlySortedFieldDirection,
 		} = this.state;
 
 		return(
@@ -225,5 +225,5 @@ export default React.createClass({
 				</DataTable.Column>
 			</DataTable>
 		);
-	}
+	},
 });

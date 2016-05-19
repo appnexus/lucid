@@ -13,7 +13,7 @@ const gridStyle = {
 		padding: 0,
 		color: '#f3f3f3',
 	},
-	vertical: {height: '100px'}
+	vertical: {height: '100px'},
 }
 
 const fillCells = (count) => {
@@ -48,5 +48,5 @@ export default React.createClass({
 				</Grid.Cell>
 			</Grid>
 		)
-	}
+	},
 });

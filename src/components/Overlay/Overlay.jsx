@@ -83,7 +83,7 @@ const Overlay = createClass({
 		return {
 			// This must be in state because getDefaultProps only runs once per
 			// component import which causes collisions
-			portalId: this.props.portalId || `Overlay-Portal-${random()}`
+			portalId: this.props.portalId || `Overlay-Portal-${random()}`,
 		}
 	},
 
@@ -126,11 +126,11 @@ const Overlay = createClass({
 			isShown,
 			isModal,
 			children,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		const {
-			portalId
+			portalId,
 		} = this.state;
 
 		return (
@@ -144,7 +144,7 @@ const Overlay = createClass({
 						<div
 							{...passThroughs}
 							className={cx(className, '&', {
-								'&-is-not-modal': !isModal
+								'&-is-not-modal': !isModal,
 							})}
 							onClick={this.handleBackgroundClick}
 							ref={this.handleDivRef}

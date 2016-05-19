@@ -17,5 +17,5 @@ export default React.createClass({
 				<ButtonGroup.Button>Nine</ButtonGroup.Button>
 			</ButtonGroup>
 		);
-	}
+	},
 });

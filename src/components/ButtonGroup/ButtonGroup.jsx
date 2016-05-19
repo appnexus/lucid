@@ -27,8 +27,8 @@ const ButtonGroup = createClass({
 	components: {
 		Button: createClass({
 			displayName: 'ButtonGroup.Button',
-			propName: 'Button'
-		})
+			propName: 'Button',
+		}),
 	},
 
 	reducers: reducers,
@@ -90,7 +90,7 @@ const ButtonGroup = createClass({
 			selectedIndices,
 			className,
 			children,
-			...others
+			...others,
 		} = this.props;
 
 		const buttonChildProps = _.map(findTypes(this.props, ButtonGroup.Button), 'props');
@@ -120,7 +120,7 @@ const ButtonGroup = createClass({
 				{children}
 			</span>
 		);
-	}
+	},
 });
 
 export default ButtonGroup;

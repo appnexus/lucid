@@ -8,5 +8,5 @@ export default React.createClass({
 					<Badge>Badge</Badge>
 			</div>
 		);
-	}
+	},
 });

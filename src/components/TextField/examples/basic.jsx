@@ -2,13 +2,13 @@ import React from 'react';
 import { Button, TextField } from '../../../index';
 
 const style = {
-	marginBottom: '10px'
+	marginBottom: '10px',
 };
 
 export default React.createClass({
 	getInitialState() {
 		return {
-			value: 'foo'
+			value: 'foo',
 		}
 	},
 
@@ -28,5 +28,5 @@ export default React.createClass({
 				</Button>
 			</div>
 		);
-	}
+	},
 });

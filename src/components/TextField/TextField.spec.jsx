@@ -74,8 +74,8 @@ describe('TextField', () => {
 		wrapper.find('input').simulate('keydown', {
 			keyCode: KEYCODE.Enter,
 			target: {
-				value: 'yolo'
-			}
+				value: 'yolo',
+			},
 		});
 
 		assert(onSubmit.called);

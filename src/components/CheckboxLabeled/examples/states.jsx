@@ -3,7 +3,7 @@ import { CheckboxLabeled } from '../../../index';
 
 const style = {
 	marginBottom: '3px',
-	marginRight: '13px'
+	marginRight: '13px',
 };
 
 export default React.createClass({
@@ -27,5 +27,5 @@ export default React.createClass({
 				</section>
 			</section>
 		);
-	}
+	},
 });

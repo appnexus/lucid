@@ -14,7 +14,7 @@ const {
 	func,
 	node,
 	number,
-	string
+	string,
 } = React.PropTypes;
 
 /**
@@ -33,7 +33,7 @@ const RadioGroup = createClass({
 		RadioButton: createClass({
 			displayName: 'RadioGroup.RadioButton',
 			propName: 'RadioButton',
-			propTypes: RadioButton.propTypes
+			propTypes: RadioButton.propTypes,
 		}),
 
 		/**
@@ -44,9 +44,9 @@ const RadioGroup = createClass({
 			displayName: 'RadioGroup.Label',
 			propName: 'Label',
 			propTypes: {
-				children: node
-			}
-		})
+				children: node,
+			},
+		}),
 	},
 
 	reducers,
@@ -85,14 +85,14 @@ const RadioGroup = createClass({
 		 * selected. The index of the last `RadioGroup.RadioButton` child with
 		 * `isSelected` equal to true takes precedence over this prop.
 		 */
-		selectedIndex: number
+		selectedIndex: number,
 	},
 
 	getDefaultProps() {
 		return {
 			name: `${cx('&')}-${getRandom()}`,
 			onSelect: _.noop,
-			selectedIndex: 0
+			selectedIndex: 0,
 		};
 	},
 
@@ -102,12 +102,12 @@ const RadioGroup = createClass({
 			className,
 			name,
 			selectedIndex,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		const radioButtonChildProps = _.map(findTypes(this.props, RadioGroup.RadioButton), 'props')
 		const selectedIndexFromChildren = _.findLastIndex(radioButtonChildProps, {
-			isSelected: true
+			isSelected: true,
 		});
 
 		// If there are any `RadioGroup.RadioButton` children with `isSelected`
@@ -151,7 +151,7 @@ const RadioGroup = createClass({
 		}
 
 		this.props.onSelect(callbackId, { event, props: childProps });
-	}
+	},
 });
 
 export default RadioGroup;

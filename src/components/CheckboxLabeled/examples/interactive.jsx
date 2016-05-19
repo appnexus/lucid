@@ -3,13 +3,13 @@ import React from 'react';
 import { CheckboxLabeled } from '../../../index';
 
 const style = {
-	marginBottom: '3px'
+	marginBottom: '3px',
 };
 
 export default React.createClass({
 	getInitialState() {
 		return {
-			flavors: []
+			flavors: [],
 		};
 	},
 
@@ -17,7 +17,7 @@ export default React.createClass({
 		this.setState({
 			flavors: isSelected
 					? _.concat(this.state.flavors, 'chocolate')
-					: _.without(this.state.flavors, 'chocolate')
+					: _.without(this.state.flavors, 'chocolate'),
 		});
 	},
 
@@ -25,7 +25,7 @@ export default React.createClass({
 		this.setState({
 			flavors: isSelected
 					? _.concat(this.state.flavors, 'strawberry')
-					: _.without(this.state.flavors, 'strawberry')
+					: _.without(this.state.flavors, 'strawberry'),
 		});
 	},
 
@@ -33,7 +33,7 @@ export default React.createClass({
 		this.setState({
 			flavors: isSelected
 					? _.concat(this.state.flavors, 'vanilla')
-					: _.without(this.state.flavors, 'vanilla')
+					: _.without(this.state.flavors, 'vanilla'),
 		});
 	},
 
@@ -68,5 +68,5 @@ export default React.createClass({
 				</span>
 			</section>
 		);
-	}
+	},
 });

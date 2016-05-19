@@ -28,7 +28,7 @@ export default React.createClass({
 				<g transform={`translate(${margin.left}, ${margin.top})`}>
 					<rect
 						style={{
-							fill: 'lightgrey'
+							fill: 'lightgrey',
 						}}
 						width={innerWidth}
 						height={innerHeight}
@@ -75,6 +75,6 @@ export default React.createClass({
 				</g>
 			</svg>
 		);
-	}
+	},
 });
 

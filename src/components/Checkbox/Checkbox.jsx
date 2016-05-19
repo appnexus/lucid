@@ -61,7 +61,7 @@ const Checkbox = createClass({
 		return {
 			isDisabled: false,
 			isSelected: false,
-			onSelect: _.noop
+			onSelect: _.noop,
 		};
 	},
 
@@ -75,14 +75,14 @@ const Checkbox = createClass({
 			isDisabled,
 			isSelected,
 			style,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		return (
 			<div
 				className={cx('&', {
 					'&-is-disabled': isDisabled,
-					'&-is-selected': isSelected
+					'&-is-selected': isSelected,
 				}, className)}
 				onClick={this.handleClicked}
 				onTouchEnd={this.handleClicked}
@@ -120,7 +120,7 @@ const Checkbox = createClass({
 			onSelect(!isSelected, { event, props: this.props });
 			this.nativeElement.focus();
 		}
-	}
+	},
 });
 
 export default Checkbox;

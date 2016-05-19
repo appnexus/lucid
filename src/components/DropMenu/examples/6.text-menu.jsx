@@ -3,7 +3,7 @@ import { DropMenu, TextField } from '../../../index';
 
 const {
 	Control,
-	Option
+	Option,
 } = DropMenu;
 
 export default React.createClass({
@@ -18,5 +18,5 @@ export default React.createClass({
 				<Option>Blue</Option>
 			</DropMenu>
 		);
-	}
+	},
 });

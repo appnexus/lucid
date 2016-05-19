@@ -8,6 +8,6 @@ describe('Axis', () => {
 		exemptFunctionProps: ['scale', 'tickFormat'],
 		getDefaultProps: () => ({
 			scale: d3Scale.scaleLinear(),
-		})
+		}),
 	});
 });

@@ -79,7 +79,7 @@ const AxisLabel = createClass({
 				{label}
 			</text>
 		);
-	}
+	},
 });
 
 export default AxisLabel;

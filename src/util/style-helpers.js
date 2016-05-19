@@ -23,7 +23,7 @@ export function bindClassNames(value='', variable=/&/g) {
 	return _.assign(cx, {
 		bind(nextValue=value, ...args) {
 			return bindClassNames(nextValue.replace(variable, value), ...args);
-		}
+		},
 	});
 }
 

@@ -3,21 +3,21 @@ import { SingleSelect } from '../../../index';
 
 const {
 	Placeholder,
-	Option
+	Option,
 } = SingleSelect;
 
 export default React.createClass({
 	getInitialState() {
 		return {
 			selectedIndex: null,
-			selectedOptionName: null
+			selectedOptionName: null,
 		};
 	},
 
 	handleSelect(optionIndex, {props: {name}}) {
 		this.setState({
 			selectedIndex: optionIndex,
-			selectedOptionName: name
+			selectedOptionName: name,
 		});
 	},
 
@@ -42,5 +42,5 @@ export default React.createClass({
 				</section>
 			</section>
 		);
-	}
+	},
 });

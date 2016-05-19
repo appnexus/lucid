@@ -15,7 +15,7 @@ describe('Expander', () => {
 	controls(Expander, {
 		callbackName: 'onToggle',
 		controlSelector: '.lucid-Expander-header',
-		eventType: 'click'
+		eventType: 'click',
 	});
 
 	describe('props', () => {

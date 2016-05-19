@@ -5,13 +5,13 @@ import { RadioButton } from '../../../index';
 export default React.createClass({
 	getInitialState() {
 		return {
-			isSelected: false
+			isSelected: false,
 		};
 	},
 
 	handleSelected(isSelected) {
 		this.setState(_.assign({}, this.state, {
-			isSelected
+			isSelected,
 		}));
 	},
 
@@ -29,5 +29,5 @@ export default React.createClass({
 				</li>
 			</ul>
 		);
-	}
+	},
 });

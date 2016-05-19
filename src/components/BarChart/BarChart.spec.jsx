@@ -33,7 +33,7 @@ describeWithDOM('BarChart', () => {
 				{ x: 'Thursday'  , y: 20 , y2: 15 } ,
 				{ x: 'Friday'    , y: 10 , y2: 2 }  ,
 			],
-		})
+		}),
 	});
 
 	describe('render', () => {

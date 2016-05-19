@@ -6,7 +6,7 @@ import {
 	isDevMode,
 	isNode,
 	logger,
-	checkIsDev
+	checkIsDev,
 } from './logger';
 
 describe('logger', () => {

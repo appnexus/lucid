@@ -6,27 +6,27 @@ export default React.createClass({
 	getInitialState() {
 		return {
 			disabled: {
-				isSelected: false
+				isSelected: false,
 			},
 			enabled: {
-				isSelected: false
-			}
+				isSelected: false,
+			},
 		};
 	},
 
 	handleDisabledSelected(isSelected) {
 		this.setState(_.assign({}, this.state, {
 			disabled: _.assign({}, this.state.disabled, {
-				isSelected
-			})
+				isSelected,
+			}),
 		}));
 	},
 
 	handleEnabledSelected(isSelected) {
 		this.setState(_.assign({}, this.state, {
 			enabled: _.assign({}, this.state.enabled, {
-				isSelected
-			})
+				isSelected,
+			}),
 		}));
 	},
 
@@ -53,5 +53,5 @@ export default React.createClass({
 				</li>
 			</ul>
 		);
-	}
+	},
 });

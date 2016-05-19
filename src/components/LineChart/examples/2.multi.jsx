@@ -17,5 +17,5 @@ export default React.createClass({
 				yAxisTitle='Fruit Count'
 			/>
 		);
-	}
+	},
 });

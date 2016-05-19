@@ -24,7 +24,7 @@ export function common(Component, {
 
 		it('should pass through styles to the root element', () => {
 			let style = {
-				backgroundColor: '#f0f'
+				backgroundColor: '#f0f',
 			};
 			const wrapper = shallow(<Component {...generateDefaultProps()} style={style}/>);
 			const rootWrapper = selector ? wrapper.find(selector).first() : wrapper.first();

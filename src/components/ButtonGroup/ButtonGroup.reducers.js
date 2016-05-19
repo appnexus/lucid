@@ -6,7 +6,7 @@ export default {
 
 		return {
 			...state,
-			selectedIndices: _.xor(currentIndices, [index])
+			selectedIndices: _.xor(currentIndices, [index]),
 		};
 	},
 }

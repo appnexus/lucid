@@ -1,6 +1,6 @@
 export function onToggle(state = {}) {
 	return {
 		...state,
-		isExpanded: !state.isExpanded
+		isExpanded: !state.isExpanded,
 	};
 }

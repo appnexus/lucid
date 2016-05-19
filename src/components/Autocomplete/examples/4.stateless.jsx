@@ -15,7 +15,7 @@ const wordlist = [
   'applaud',
   'appreciate',
   'awesome',
-  'abracadabra alakazam hocus pocus shazam say the magic word please if you will thank you very much'
+  'abracadabra alakazam hocus pocus shazam say the magic word please if you will thank you very much',
 ];
 
 export default React.createClass({
@@ -30,9 +30,9 @@ export default React.createClass({
 				DropMenu={{
 					isExpanded: true,
 					focusedIndex: 2,
-					onCollapse: () => {console.log('onCollapse')}
+					onCollapse: () => {console.log('onCollapse')},
 				}}
 			/>
 		);
-	}
+	},
 });

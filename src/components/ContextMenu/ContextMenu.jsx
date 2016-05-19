@@ -14,8 +14,8 @@ const {
 		func,
 		object,
 		oneOf,
-		string
-	}
+		string,
+	},
 } = React;
 
 /**
@@ -54,7 +54,7 @@ const ContextMenu = createClass({
 		/**
 		 * The `id` of the FlyOut portal element that is appended to `document.body`. Defaults to a generated `id`.
 		 */
-		portalId: string
+		portalId: string,
 	},
 
 	components: {
@@ -66,9 +66,9 @@ const ContextMenu = createClass({
 			displayName: 'ContextMenu.FlyOut',
 			propName: 'FlyOut',
 			propTypes: {
-				style: object
-			}
-		})
+				style: object,
+			},
+		}),
 	},
 
 	getDefaultProps() {
@@ -76,13 +76,13 @@ const ContextMenu = createClass({
 			direction: 'down',
 			isExpanded: true,
 			onClickOut: null,
-			portalId: null
+			portalId: null,
 		};
 	},
 
 	getInitialState() {
 		const {
-			portalId
+			portalId,
 		} = this.props;
 		return {
 			portalId: portalId || 'ContextMenu-Portal-' + Math.random().toString(16).substr(2),
@@ -92,9 +92,9 @@ const ContextMenu = createClass({
 				left: 0,
 				right: 0,
 				height: 0,
-				width: 0
+				width: 0,
 			},
-			flyOutHeight: 0
+			flyOutHeight: 0,
 		};
 	},
 
@@ -134,8 +134,8 @@ const ContextMenu = createClass({
 		const {
 			refs: {
 				flyOutPortal,
-				target
-			}
+				target,
+			},
 		} = this;
 
 		if (!target || !flyOutPortal) {
@@ -147,7 +147,7 @@ const ContextMenu = createClass({
 
 		this.setState({
 			targetRect,
-			flyOutHeight: flyOutEl.getBoundingClientRect().height
+			flyOutHeight: flyOutEl.getBoundingClientRect().height,
 		});
 	},
 
@@ -157,13 +157,13 @@ const ContextMenu = createClass({
 			style,
 			isExpanded,
 			direction,
-			...passThroughs
+			...passThroughs,
 		} = this.props;
 
 		const {
 			portalId,
 			targetRect,
-			flyOutHeight
+			flyOutHeight,
 		} = this.state;
 
 		const targetElement = _.first(findTypes(this.props, ContextMenu.Target));
@@ -181,14 +181,14 @@ const ContextMenu = createClass({
 						{...flyProps}
 						className={cx('&-FlyOut', {
 							'&-FlyOut-Up': direction === ContextMenu.UP,
-							'&-FlyOut-Down': direction === ContextMenu.DOWN
+							'&-FlyOut-Down': direction === ContextMenu.DOWN,
 						}, flyProps.className)}
 						portalId={portalId}
 						style={_.assign({}, flyProps.style, {
 							position: 'absolute',
 							left: targetRect.left,
 							minWidth: targetRect.width,
-							top: (direction === ContextMenu.UP ? targetRect.top - flyOutHeight : targetRect.bottom)
+							top: (direction === ContextMenu.UP ? targetRect.top - flyOutHeight : targetRect.bottom),
 						})}
 					>
 						{flyProps.children}
@@ -196,7 +196,7 @@ const ContextMenu = createClass({
 				) : null}
 			</span>
 		);
-	}
+	},
 });
 
 export default ContextMenu;

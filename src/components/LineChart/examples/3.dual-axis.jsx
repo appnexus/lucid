@@ -29,5 +29,5 @@ export default React.createClass({
 				y2AxisTitleColor={1}
 			/>
 		);
-	}
+	},
 });

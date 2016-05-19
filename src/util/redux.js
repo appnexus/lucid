@@ -33,7 +33,7 @@ export function getReduxPrimitives({
 	reducers,
 	rootPath = [],
 	rootSelector = _.identity,
-	selectors
+	selectors,
 }) {
 
 	// we need this in scope so actionCreators can refer to it
@@ -53,8 +53,8 @@ export function getReduxPrimitives({
 		connectors: [
 			mapStateToProps,
 			mapDispatchToProps,
-			mergeProps
-		]
+			mergeProps,
+		],
 	};
 
 	/**
@@ -80,7 +80,7 @@ export function getReduxPrimitives({
 			return {
 				type: path.join('.'),
 				payload,
-				meta
+				meta,
 			};
 		};
 	}
@@ -100,7 +100,7 @@ export function getReduxPrimitives({
 				...memo,
 				[key]: _.isFunction(node) ?
 					createActionCreator(node, rootPath, currentPath) :
-					createActionCreatorTree(node, rootPath, currentPath)
+					createActionCreatorTree(node, rootPath, currentPath),
 			};
 		}, {});
 	}
@@ -147,7 +147,7 @@ function createReduxReducerTree(reducers, path = []) {
 					}
 					return node(state, payload, ...meta);
 				} :
-				createReduxReducerTree(node, currentPath)
+				createReduxReducerTree(node, currentPath),
 		};
 	}, {});
 }
@@ -169,8 +169,8 @@ function createReducerFromReducerTree(reduxReducerTree, initialState) {
 			return {
 				...state,
 				..._.isFunction(node) ? node(state, action) : {
-					[key]: createReducerFromReducerTree(node)(state[key], action)
-				}
+					[key]: createReducerFromReducerTree(node)(state[key], action),
+				},
 			};
 		}, state);
 	};
@@ -204,7 +204,7 @@ function bindActionCreatorTree(actionCreatorTree, dispatch, path = []) {
 		[key]: _.isFunction(node) ? function boundActionCreator(...args) {
 			const action = actionCreatorTree[key](...args);
 			return dispatch(action);
-		} : bindActionCreatorTree(node, dispatch, path.concat(key))
+		} : bindActionCreatorTree(node, dispatch, path.concat(key)),
 	}), {});
 }
 
@@ -223,7 +223,7 @@ function reduceSelectors(selectors) {
 			...state,
 			[key]: _.isFunction(selector) ?
 				selector(state) :
-				reduceSelectors(selector)(state[key])
+				reduceSelectors(selector)(state[key]),
 		}), state);
 	};
 }
