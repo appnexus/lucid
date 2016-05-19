@@ -139,10 +139,6 @@ const Autocomplete = createClass({
 			event.preventDefault();
 		}
 
-		if (event.keyCode === KEYCODE.Space) {
-			event.stopPropagation();
-		}
-
 		if (event.keyCode === KEYCODE.ArrowDown && !isExpanded) {
 			event.stopPropagation();
 

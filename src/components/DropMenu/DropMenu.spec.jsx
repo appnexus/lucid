@@ -315,25 +315,6 @@ describe('DropMenu', () => {
 			});
 
 			describe('keyboard', () => {
-				it('should be called when DropMenu [not expanded, has focus, Space key pressed]', () => {
-					const onExpand = sinon.spy();
-					const wrapper = shallow(
-						<DropMenu isExpanded={false} onExpand={onExpand}>
-							<Control>control</Control>
-							<Option>option a</Option>
-							<Option>option b</Option>
-							<Option>option c</Option>
-						</DropMenu>
-					);
-
-					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
-						keyCode: KEYCODE.Space,
-						preventDefault: _.noop,
-					});
-
-					assert(onExpand.called);
-				});
-
 				it('should be called when DropMenu [not expanded, has focus, Down Arrow key pressed]', () => {
 					const onExpand = sinon.spy();
 					const wrapper = shallow(
@@ -462,7 +443,7 @@ describe('DropMenu', () => {
 			});
 
 			describe('keyboard', () => {
-				it('should be called when DropMenu [expanded, option focused, Space key  pressed]', () => {
+				it('should be called when DropMenu [expanded, option focused, Enter key  pressed]', () => {
 					const onSelect = sinon.spy();
 					const wrapper = shallow(
 						<DropMenu isExpanded={true} focusedIndex={2} onSelect={onSelect}>
@@ -474,7 +455,7 @@ describe('DropMenu', () => {
 					);
 
 					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
-						keyCode: KEYCODE.Space,
+						keyCode: KEYCODE.Enter,
 						preventDefault: _.noop,
 					});
 

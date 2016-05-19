@@ -106,7 +106,7 @@ const DropMenu = createClass({
 		 */
 		flyOutStyle: object,
 		/**
-		 * Called when collapsed and the control is clicked, or when the control has focus and the Down Arrow or Space key is pressed.
+		 * Called when collapsed and the control is clicked, or when the control has focus and the Down Arrow is pressed.
 		 */
 		onExpand: func,
 		/**
@@ -114,7 +114,7 @@ const DropMenu = createClass({
 		 */
 		onCollapse: func,
 		/**
-		 * Called when an option is clicked, or when an option has focus and the Space or Enter key is pressed.
+		 * Called when an option is clicked, or when an option has focus and the Enter key is pressed.
 		 * Has the signature `(optionIndex, {props, event}) => {}` where optionIndex can be a number or `null`.
 		 */
 		onSelect: func,
@@ -257,7 +257,7 @@ const DropMenu = createClass({
 		});
 
 		if (isExpanded) {
-			if (_.includes([KEYCODE.Enter, KEYCODE.Space], e.keyCode)) {
+			if (e.keyCode === KEYCODE.Enter) {
 				e.preventDefault();
 				const focusedOptionData = _.get(flattenedOptionsData, focusedIndex, null);
 				const focusedOptionProps = _.get(focusedOptionData, 'optionProps', {});
@@ -300,7 +300,7 @@ const DropMenu = createClass({
 				}
 			}
 		} else {
-			if (_.includes([KEYCODE.Space, KEYCODE.ArrowDown], e.keyCode)) {
+			if (e.keyCode === KEYCODE.ArrowDown) {
 				e.preventDefault();
 				onExpand(e);
 			}
