@@ -152,7 +152,7 @@ describe('RadioGroup', () => {
 });
 
 describeWithDOM('RadioGroup', () => {
-	it.only('should handle multiple children', () => {
+	it('should handle multiple children', () => {
 		const wrapper = mount(
 			<RadioGroup>
 				<RadioGroup.RadioButton>
