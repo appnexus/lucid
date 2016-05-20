@@ -4,7 +4,7 @@ A UI component library from AppNexus.
 
 ## Install
 
-Lucid can be installed with NPM.
+Lucid can be installed with npm.
 
     npm install --save lucid-ui
 
@@ -19,23 +19,25 @@ Lucid can be installed with NPM.
       mountNode
     );
 
-You must also include lucid's styles:
+Lucid uses `less` for its stylesheets. If you use `less`, you can include the
+styles like so:
 
     @import "node_modules/lucid-ui/src/index.less";
 
-Or use the precompiled CSS file `node_modules/lucid-ui/dist/index.css`.
+If you don't use `less`, you can use the precompiled css file
+`node_modules/lucid-ui/dist/index.css`.
 
 ### Dependencies
 
-`lucid-ui` has both `react` and `react-dom` as `peerDependency`s. This means
-the consuming application is responsible for declaring a dependency on a
-compatible version.
+`lucid-ui` has several react peer dependencies. This means **your application
+is responsible for declaring dependencies** on compatible versions. Currently
+we support react 14 and 15.
 
-    package.json
+Example package.json:
 
     {
       "dependencies": {
-        "lucid-ui": "^0.0.1",
+        "lucid-ui": "^1.0.0",
         "react": "^0.14.0",
         "react-dom": "^0.14.0",
         "react-css-transition-group": "^0.14.0"
