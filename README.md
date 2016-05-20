@@ -40,7 +40,7 @@ Example package.json:
         "lucid-ui": "^1.0.0",
         "react": "^0.14.0",
         "react-dom": "^0.14.0",
-        "react-css-transition-group": "^0.14.0"
+        "react-addons-css-transition-group": "^0.14.0"
       }
     }
 
