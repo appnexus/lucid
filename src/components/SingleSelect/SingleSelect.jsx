@@ -79,7 +79,7 @@ const SingleSelect = createClass({
 		/**
 		 * The max height of the fly-out menu.
 		 */
-		maxMenuHeight: oneOfType(number, string),
+		maxMenuHeight: oneOfType([number, string]),
 		/**
 		 * Object of DropMenu props which are passed thru to the underlying DropMenu component.
 		 */
