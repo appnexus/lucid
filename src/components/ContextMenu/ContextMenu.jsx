@@ -124,7 +124,9 @@ const ContextMenu = createClass({
 
 		this.alignFlyOut();
 		this.updateTargetRectangleIntervalId = setInterval(() => {
-			this.alignFlyOut();
+			if (this.props.isExpanded) {
+				this.alignFlyOut();
+			}
 		}, 10);
 
 		this.onClickBodyEventListener = window.addEventListener('click', (event) => {
