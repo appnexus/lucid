@@ -5,6 +5,7 @@ import { default as AutocompleteDumb } from './components/Autocomplete/Autocompl
 import { default as ButtonGroupDumb } from './components/ButtonGroup/ButtonGroup';
 import { default as DropMenuDumb } from './components/DropMenu/DropMenu';
 import { default as ExpanderDumb } from './components/Expander/Expander';
+import { default as PaginatorDumb } from './components/Paginator/Paginator';
 import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 import { default as SingleSelectDumb } from './components/SingleSelect/SingleSelect';
 import { default as TabsDumb } from './components/Tabs/Tabs';
@@ -15,6 +16,7 @@ const Autocomplete = buildHybridComponent(AutocompleteDumb);
 const ButtonGroup = buildHybridComponent(ButtonGroupDumb);
 const DropMenu = buildHybridComponent(DropMenuDumb);
 const Expander = buildHybridComponent(ExpanderDumb);
+const Paginator = buildHybridComponent(PaginatorDumb);
 const RadioGroup = buildHybridComponent(RadioGroupDumb);
 const SingleSelect = buildHybridComponent(SingleSelectDumb);
 const Tabs = buildHybridComponent(TabsDumb);
@@ -113,6 +115,8 @@ export {
 	LineChart,
 	MinusIcon,
 	Overlay,
+	Paginator,
+	PaginatorDumb,
 	Panel,
 	PlusIcon,
 	Portal,

@@ -1,0 +1,39 @@
+.lucid-Paginator {
+
+	font: @font;
+
+	&-rows-per-page-label {
+		margin-right: @size-standard;
+	}
+
+	&-page-size-container {
+		margin-right: @size-standard;
+		padding-right: @size-standard;
+		border-right: @border-standardBorder;
+	}
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	& > .lucid-TextField {
+		text-align: center;
+		width: 45px;
+		margin-right: @size-S;
+	}
+
+	& > .lucid-Button,
+	& > span {
+		margin-right: @size-S;
+	}
+
+	.lucid-Button {
+		.lucid-Button-content {
+			&> .lucid-Icon {
+				margin-right: -.5em;
+				fill: @color-textColor;
+			}
+		}
+	}
+
+}
