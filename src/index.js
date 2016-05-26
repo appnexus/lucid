@@ -22,6 +22,7 @@ const ToolTip = buildHybridComponent(ToolTipDumb);
 const VerticalListMenu = buildHybridComponent(VerticalListMenuDumb);
 
 // dumb components
+import ArrowIcon from './components/Icon/ArrowIcon/ArrowIcon';
 import Badge from './components/Badge/Badge';
 import Banner from './components/Banner/Banner';
 import BarChart from './components/BarChart/BarChart';
@@ -80,6 +81,7 @@ export {
 };
 
 export {
+	ArrowIcon,
 	Autocomplete,
 	AutocompleteDumb,
 	Badge,
