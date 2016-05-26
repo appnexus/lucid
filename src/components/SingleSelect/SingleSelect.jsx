@@ -64,6 +64,10 @@ const SingleSelect = createClass({
 		 */
 		style: object,
 		/**
+		 * Applies primary color styling to the control when an item is selected. Defaults to true.
+		 */
+		isSelectionHighlighted: bool,
+		/**
 		 * Allows user to reset the `optionIndex` to `null` if they select the placeholder at the top of the options list.
 		 * If `false`, it will not render the placeholder in the menu.
 		 */
@@ -108,6 +112,7 @@ const SingleSelect = createClass({
 	getDefaultProps() {
 		return {
 			hasReset: true,
+			isSelectionHighlighted: true,
 			isDisabled: false,
 			selectedIndex: null,
 			DropMenu: DropMenu.getDefaultProps(),
@@ -139,6 +144,7 @@ const SingleSelect = createClass({
 			className,
 			hasReset,
 			isDisabled,
+			isSelectionHighlighted,
 			selectedIndex,
 			maxMenuHeight,
 			onSelect,
@@ -174,7 +180,8 @@ const SingleSelect = createClass({
 			>
 				<DropMenu.Control>
 					<div className={cx('&-Control', {
-						'&-Control-is-selected': !isDisabled && isItemSelected,
+						'&-Control-is-highlighted': (!isDisabled && isItemSelected && isSelectionHighlighted) || (isExpanded && isSelectionHighlighted),
+						'&-Control-is-selected': (!isDisabled && isItemSelected && isSelectionHighlighted) || (isExpanded && isSelectionHighlighted),
 						'&-Control-is-expanded': isExpanded,
 						'&-Control-is-disabled': isDisabled,
 					})}>
