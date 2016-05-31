@@ -1,0 +1,40 @@
+.lucid-Legend {
+	display: inline-flex;
+	color: @color-darkGray;
+	font-size: @fontSize;
+	list-style-type: none;
+	margin: 0;
+
+	&-is-horizontal {
+		flex-direction: row;
+		height: @size-standard-height;
+		padding: 0 @size-S;
+	}
+	&-is-vertical {
+		flex-direction: column;
+		padding: @size-S;
+	}
+	&-has-borders {
+		border: @border-lightBorder;
+		border-radius: @size-borderRadius;
+	}
+
+	&-Item {
+		display: flex;
+		align-items: center;
+	}
+	&-is-vertical &-Item {
+		padding-top: @size-S;
+	}
+	&-is-horizontal &-Item {
+		padding-left: @size-L;
+	}
+	&-Item:first-of-type {
+		padding-left: 0;
+		padding-top: 0;
+	}
+
+	&-Item-indicator {
+		margin-right: @size-XS;
+	}
+}

@@ -227,7 +227,9 @@ const ToolTip = createClass({
 					onMouseOut={this.handleMouseOutFlyout}
 				>
 					{isCloseable ? <CrossIcon onClick={this.handleClose} className={flyOutCx('&-close')}/> : null}
-					<h2 className={flyOutCx('&-Title')}>{title}</h2>
+					{!_.isNil(title) ?
+						<h2 className={flyOutCx('&-Title')}>{title}</h2>
+					: null}
 					{body}
 				</FlyOut>
 			</ContextMenu>
