@@ -170,12 +170,12 @@ const Paginator = createClass({
 					<ArrowIcon direction='left'/>
 				</Button>
 				<TextField
+					lazyLevel={100}
 					{...textFieldProps}
-					onBlur={_.partial(this.handleTextFieldChange, totalPages)}
-					onSubmit={_.partial(this.handleTextFieldChange, totalPages)}
+					onBlur={_.partialRight(this.handleTextFieldChange, totalPages)}
+					onSubmit={_.partialRight(this.handleTextFieldChange, totalPages)}
 					isDisabled={isDisabled}
 					value={selectedPageIndex + 1}
-					lazyLevel={100}
 				/>
 				<span>of {totalPages}</span>
 				<Button
