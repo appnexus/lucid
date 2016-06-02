@@ -442,7 +442,7 @@ describe('#getStatefulPropsContext', () => {
 	});
 });
 
-describe.only('#reduceSelectors', () => {
+describe('#reduceSelectors', () => {
 	it('should create a single selector function from selector tree', () => {
 		const selectors = {
 			fooAndBar: ({ foo, bar }) => `${foo} and ${bar}`,
@@ -450,7 +450,7 @@ describe.only('#reduceSelectors', () => {
 			nested: {
 				nestedFooAndBar: ({ foo, bar }) => `${foo} & ${bar}`,
 				nestedIncrementedBaz: ({ baz }) => baz + 1,
-			}
+			},
 		};
 		const selector = reduceSelectors(selectors);
 		const state = {
@@ -460,8 +460,8 @@ describe.only('#reduceSelectors', () => {
 			nested: {
 				foo: 'nestedFoo',
 				bar: 'nestedBar',
-				baz: 10
-			}
+				baz: 10,
+			},
 		};
 		const expected = {
 			foo: 'foo',
@@ -475,7 +475,7 @@ describe.only('#reduceSelectors', () => {
 				baz: 10,
 				nestedFooAndBar: 'nestedFoo & nestedBar',
 				nestedIncrementedBaz: 11,
-			}
+			},
 		};
 		assert.deepEqual(selector(state), expected, 'must be deeply equal');
 	});
@@ -512,6 +512,8 @@ describeWithDOM('#buildHybridComponent', () => {
 			count: React.PropTypes.number,
 			onIncrement: React.PropTypes.func,
 			onDecrement: React.PropTypes.func,
+			countDisplay: React.PropTypes.string,
+			countModThree: React.PropTypes.string,
 		},
 		getDefaultProps() {
 			return {
@@ -526,9 +528,15 @@ describeWithDOM('#buildHybridComponent', () => {
 				return _.assign({}, state, { count: state.count - 1 })
 			},
 		},
+		selectors: {
+			countDisplay: state => `count: ${state.count}`,
+			countModThree: state => state.count % 3,
+		},
 		render() {
 			const {
 				count,
+				countDisplay,
+				countModThree,
 				onIncrement,
 				onDecrement,
 			} = this.props;
@@ -537,6 +545,8 @@ describeWithDOM('#buildHybridComponent', () => {
 				<section>
 					<button className='minus' onClick={onDecrement}>-</button>
 					<span className='count'>{count}</span>
+					<span className='count-display'>{countDisplay}</span>
+					<span className='count-mod-three'>{countModThree}</span>
 					<button className='plus' onClick={onIncrement}>+</button>
 				</section>
 			);
@@ -547,26 +557,40 @@ describeWithDOM('#buildHybridComponent', () => {
 		const StatefulCounter = buildHybridComponent(Counter);
 		const wrapper = mount(<StatefulCounter />);
 
-		let minusButton = wrapper.find('button.minus');
-		let countSpan = wrapper.find('.count');
-		let plusButton = wrapper.find('button.plus');
+		const minusButton = wrapper.find('button.minus');
+		const countSpan = wrapper.find('.count');
+		const countDisplaySpan = wrapper.find('.count-display');
+		const countModThreeSpan = wrapper.find('.count-mod-three');
+		const plusButton = wrapper.find('button.plus');
 
 		assert.equal(countSpan.text(), '0');
+		assert.equal(countDisplaySpan.text(), 'count: 0');
+		assert.equal(countModThreeSpan.text(), '0');
 
 		plusButton.simulate('click');
 		assert.equal(countSpan.text(), '1');
+		assert.equal(countDisplaySpan.text(), 'count: 1');
+		assert.equal(countModThreeSpan.text(), '1');
 
 		plusButton.simulate('click');
 		assert.equal(countSpan.text(), '2');
+		assert.equal(countDisplaySpan.text(), 'count: 2');
+		assert.equal(countModThreeSpan.text(), '2');
 
 		plusButton.simulate('click');
 		assert.equal(countSpan.text(), '3');
+		assert.equal(countDisplaySpan.text(), 'count: 3');
+		assert.equal(countModThreeSpan.text(), '0');
 
 		minusButton.simulate('click');
 		assert.equal(countSpan.text(), '2');
+		assert.equal(countDisplaySpan.text(), 'count: 2');
+		assert.equal(countModThreeSpan.text(), '2');
 
 		minusButton.simulate('click');
 		assert.equal(countSpan.text(), '1');
+		assert.equal(countDisplaySpan.text(), 'count: 1');
+		assert.equal(countModThreeSpan.text(), '1');
 	});
 
 	it('should not wrap a wrapped component', () => {
