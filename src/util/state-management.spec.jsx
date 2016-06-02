@@ -11,6 +11,7 @@ import {
 	bindReducerToState,
 	bindReducersToState,
 	getStatefulPropsContext,
+	reduceSelectors,
 	safeMerge,
 	buildHybridComponent,
 } from './state-management';
@@ -438,6 +439,45 @@ describe('#getStatefulPropsContext', () => {
 				assert(overrides.setName.calledOnce);
 			});
 		});
+	});
+});
+
+describe.only('#reduceSelectors', () => {
+	it('should create a single selector function from selector tree', () => {
+		const selectors = {
+			fooAndBar: ({ foo, bar }) => `${foo} and ${bar}`,
+			incrementedBaz: ({ baz }) => baz + 1,
+			nested: {
+				nestedFooAndBar: ({ foo, bar }) => `${foo} & ${bar}`,
+				nestedIncrementedBaz: ({ baz }) => baz + 1,
+			}
+		};
+		const selector = reduceSelectors(selectors);
+		const state = {
+			foo: 'foo',
+			bar: 'bar',
+			baz: 0,
+			nested: {
+				foo: 'nestedFoo',
+				bar: 'nestedBar',
+				baz: 10
+			}
+		};
+		const expected = {
+			foo: 'foo',
+			bar: 'bar',
+			baz: 0,
+			fooAndBar: 'foo and bar',
+			incrementedBaz: 1,
+			nested: {
+				foo: 'nestedFoo',
+				bar: 'nestedBar',
+				baz: 10,
+				nestedFooAndBar: 'nestedFoo & nestedBar',
+				nestedIncrementedBaz: 11,
+			}
+		};
+		assert.deepEqual(selector(state), expected, 'must be deeply equal');
 	});
 });
 

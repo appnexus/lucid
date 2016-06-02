@@ -71,6 +71,26 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 	};
 }
 
+/**
+ * reduceSelectors
+ *
+ * Generates a root selector from a tree of selectors
+ * @param {Object} selectors - a tree of selectors
+ * @returns {function} root selector that when called with state, calls each of
+ * the selectors in the tree with the state local to that selector
+ */
+
+export function reduceSelectors(selectors) {
+	return function reducedSelector(state) {
+		return _.reduce(selectors, (state, selector, key) => ({
+			...state,
+			[key]: _.isFunction(selector) ?
+				selector(state) :
+				reduceSelectors(selector)(state[key]),
+		}), state);
+	};
+}
+
 export function safeMerge (objValue, srcValue) {
 	// don't merge arrays
 	if (_.isArray(srcValue) && _.isArray(objValue)) {

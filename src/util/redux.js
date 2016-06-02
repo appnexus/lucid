@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import { createSelector } from 'reselect';
+import { reduceSelectors } from './state-management.js';
 
 /**
  * thunk
@@ -206,26 +207,6 @@ function bindActionCreatorTree(actionCreatorTree, dispatch, path = []) {
 			return dispatch(action);
 		} : bindActionCreatorTree(node, dispatch, path.concat(key)),
 	}), {});
-}
-
-/**
- * reduceSelectors
- *
- * Generates a root selector from a tree of selectors
- * @param {Object} selectors - a tree of selectors
- * @returns {function} root selector that when called with state, calls each of
- * the selectors in the tree with the state local to that selector
- */
-
-function reduceSelectors(selectors) {
-	return function reducedSelector(state) {
-		return _.reduce(selectors, (state, selector, key) => ({
-			...state,
-			[key]: _.isFunction(selector) ?
-				selector(state) :
-				reduceSelectors(selector)(state[key]),
-		}), state);
-	};
 }
 
 /**
