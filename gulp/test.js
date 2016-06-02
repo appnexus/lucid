@@ -10,11 +10,11 @@ module.exports = {
 		.pipe(mocha({
 			require: ['./gulp/beforeAll'],
 			reporter: 'spec',
-			debugBrk: debugBrk
+			debugBrk: debugBrk,
 		}));
 	},
 
 	tdd: function tdd() {
 		gulp.watch([ CONFIG.TEST_GLOB.SOURCE, CONFIG.JS_GLOB.SOURCE ], ['test'])
-	}
+	},
 }
