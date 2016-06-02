@@ -25,7 +25,7 @@ const { Option } = SingleSelect;
 
 /**
  *
- * {"categories": ["navigation"], "madeFrom": ["TextField", "Button", "SingleSelect"]}
+ * {"categories": ["navigation"], "madeFrom": ["ArrowIcon", "TextField", "Button", "SingleSelect"]}
  *
  * A paginator with page size selector.
  */
