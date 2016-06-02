@@ -4,9 +4,7 @@ import { Paginator } from '../../../index';
 export default React.createClass({
 
 	render() {
-		return (
-			<Paginator totalPages={10}/>
-		);
+		return <Paginator totalCount={100}/>;
 	},
 
 });

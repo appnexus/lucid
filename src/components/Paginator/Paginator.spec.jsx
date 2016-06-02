@@ -3,9 +3,9 @@ import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
 import describeWithDOM from '../../util/describe-with-dom';
-// import { filterTypes, rejectTypes } from '../../util/component-types';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
+import { buildHybridComponent } from '../../util/state-management';
 import SingleSelect from '../SingleSelect/SingleSelect';
 import Paginator from './Paginator';
 import Button from '../Button/Button';
@@ -43,7 +43,7 @@ describe('Paginator', () => {
 				const wrapper = shallow(
 					<Paginator
 						selectedPageIndex={1}
-						totalPages={3}
+						totalCount={30}
 						isDisabled
 					/>
 				);
@@ -58,7 +58,7 @@ describe('Paginator', () => {
 					<Paginator
 						hasPageSizeSelector
 						selectedPageIndex={1}
-						totalPages={3}
+						totalCount={30}
 						isDisabled
 					/>
 				);
@@ -136,14 +136,15 @@ describe('Paginator', () => {
 
 		describe('totalCount', () => {
 			it('should generate `totalPages` from `totalCount`', () => {
+				const HybridPaginator = buildHybridComponent(Paginator);
 				const totalCount = 100;
 				const wrapper = shallow(
-					<Paginator
+					<HybridPaginator
 						totalCount={totalCount}
 						pageSizeOptions={[10]}
 					/>
 				);
-				assert.equal(wrapper.find('span').text(), 'of 10', 'must be "of 10"');
+				assert.equal(wrapper.find(Paginator).shallow().find('span').text(), 'of 10', 'must be "of 10"');
 			});
 		});
 

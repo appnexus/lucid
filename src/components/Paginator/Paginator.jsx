@@ -103,7 +103,6 @@ const Paginator = createClass({
 			onPageSelect: _.noop,
 			selectedPageIndex: 0,
 			selectedPageSizeIndex: 0,
-			totalPages: null,
 			totalCount: null,
 			pageSizeOptions: [10, 50, 100],
 			SingleSelect: {
@@ -136,13 +135,11 @@ const Paginator = createClass({
 			pageSizeOptions,
 			selectedPageIndex,
 			selectedPageSizeIndex,
+			totalPages,
 			style,
 			SingleSelect: singleSelectProps,
 			TextField: textFieldProps,
 		} = this.props;
-
-
-		const totalPages = selectors.totalPages(this.props);
 
 		return (
 			<div style={style} className={cx('&', className)}>

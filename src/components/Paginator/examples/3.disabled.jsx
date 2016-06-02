@@ -7,13 +7,13 @@ export default React.createClass({
 		return (
 			<div>
 				<section style={{ marginBottom: '30px' }}>
-					<Paginator isDisabled />
+					<Paginator isDisabled totalCount={1} />
 				</section>
 				<section>
 					<Paginator
 						isDisabled
 						hasPageSizeSelector
-						totalPages={10}
+						totalCount={100}
 						SingleSelect={{
 							DropMenu: { direction: 'up' },
 						}}
