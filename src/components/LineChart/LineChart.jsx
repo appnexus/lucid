@@ -7,6 +7,7 @@ import {
 	maxByFields,
 	maxByFieldsStacked,
 	formatDate,
+	nearest,
 } from '../../util/chart-helpers';
 import d3Scale from 'd3-scale';
 
@@ -14,6 +15,8 @@ import Axis from '../Axis/Axis';
 import AxisLabel from '../AxisLabel/AxisLabel';
 import Lines from '../Lines/Lines';
 import Points from '../Points/Points';
+import Legend from '../Legend/Legend';
+import { ToolTip } from '../../index';
 
 const cx = lucidClassNames.bind('&-LineChart');
 
@@ -75,15 +78,19 @@ const LineChart = createClass({
 		data: arrayOf(object),
 		/**
 		 * An object with human readable names for fields that  will be used for
-		 * tooltips and legends which are *not yet implemented*. E.g:
+		 * tooltips. E.g:
 		 *
 		 *     {
 		 *       x: 'Revenue',
 		 *       y: 'Impressions',
 		 *     }
 		 *
-		 * legend: object,
 		 */
+		legend: object,
+		/**
+		 * Show tool tips on hover
+		 */
+		hasToolTips: bool,
 
 
 		/**
@@ -222,6 +229,8 @@ const LineChart = createClass({
 				bottom: 65,
 				left: 80,
 			},
+			legend: {},
+			hasToolTips: true,
 
 			xAxisField: 'x',
 			xAxisTickCount: null,
@@ -246,6 +255,12 @@ const LineChart = createClass({
 		};
 	},
 
+	getInitialState() {
+		return {
+			isHovering: false,
+		};
+	},
+
 	render() {
 		const {
 			className,
@@ -253,6 +268,8 @@ const LineChart = createClass({
 			width,
 			margin,
 			data,
+			legend,
+			hasToolTips,
 
 			xAxisField,
 			xAxisTickCount,
@@ -289,6 +306,11 @@ const LineChart = createClass({
 			...passThroughs,
 		} = this.props;
 
+		const {
+			isHovering,
+			mouseX,
+		} = this.state;
+
 		// TODO: Consider displaying something specific when there is no data,
 		// perhaps a loading indicator.
 		if (_.isEmpty(data)) {
@@ -305,6 +327,8 @@ const LineChart = createClass({
 		const innerWidth = width - margin.left - margin.right;
 		const innerHeight = height - margin.top - margin.bottom;
 
+		const allYFields = _.compact(yAxisFields.concat(y2AxisFields));
+
 		const xScale = d3Scale.scaleTime()
 			.domain([xAxisMin, xAxisMax])
 			.range([0, innerWidth]);
@@ -317,6 +341,28 @@ const LineChart = createClass({
 			? d3Scale.scaleLinear().domain([y2AxisMin, y2AxisMax]).range([innerHeight, 0])
 			: null;
 
+		const yFinalFormatter = yAxisFormatter
+			? yAxisFormatter
+			: yScale.tickFormat();
+		const y2FinalFormatter = y2AxisFormatter
+			? y2AxisFormatter
+			: y2Scale
+				? y2Scale.tickFormat()
+				: _.identity;
+
+		const xPointMap = _.reduce(data, (acc, d) => {
+			// `floor` to avoid rounding errors, it doesn't need to be super precise
+			// since we're dealing with pixels
+			const point = Math.floor(xScale(d[xAxisField]));
+
+			_.each(allYFields, (field) => {
+				_.set(acc, `${point}.${field}`, d[field]);
+			});
+
+			return acc;
+		}, {});
+		const xPoints = _.chain(xPointMap).keys().map(_.toNumber).value();
+
 		return (
 			<svg
 				{...passThroughs}
@@ -324,6 +370,47 @@ const LineChart = createClass({
 				width={width}
 				height={height}
 			>
+
+				{/* tooltips */}
+				<g transform={`translate(${margin.left}, ${margin.top})`}>
+					{hasToolTips && isHovering && !_.isNil(mouseX) ?
+						<ToolTip isExpanded={true}>
+							<ToolTip.Target elementType='g'>
+								<path
+									className={cx('&-tooltip-line')}
+									d={`M${mouseX},0 L${mouseX},${innerHeight}`}
+								/>
+							</ToolTip.Target>
+							<ToolTip.Body>
+								<Legend hasBorders={false}>
+									{_.map(yAxisFields, (field, index) => (
+										<Legend.Item
+											hasPoint={true}
+											hasLine={true}
+											color={index}
+											pointKind={index}
+										>
+											{`${_.get(legend, field, field)}: ${yFinalFormatter(_.get(xPointMap, mouseX + '.' + field))}`}
+										</Legend.Item>
+									))}
+									{_.map(y2AxisFields, (field, index) => (
+										_.get(xPointMap, mouseX + '.' + field) ?
+											<Legend.Item
+												hasPoint={true}
+												hasLine={true}
+												color={index + yAxisFields.length}
+												pointKind={index + yAxisFields.length}
+											>
+												{`${_.get(legend, field, field)}: ${y2FinalFormatter(_.get(xPointMap, mouseX + '.' + field))}`}
+											</Legend.Item>
+										: null
+									))}
+								</Legend>
+							</ToolTip.Body>
+						</ToolTip>
+					: null}
+				</g>
+
 				{/* x axis */}
 				<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
 					<Axis
@@ -461,6 +548,27 @@ const LineChart = createClass({
 						ref='y2Points'
 					/>
 				: null}
+
+				{/* hover capture zone */}
+				{hasToolTips ?
+					<g transform={`translate(${margin.left}, ${margin.top})`}>
+						<rect
+							className={cx('&-tooltip-hover-zone')}
+							width={innerWidth}
+							height={innerHeight}
+							onMouseMove={({clientX, target}) => {
+								this.setState({
+									isHovering: true,
+									mouseX: nearest(xPoints, clientX - target.getBoundingClientRect().left),
+								});
+							}}
+							onMouseOut={() => {
+								this.setState({ isHovering: false });
+							}}
+						/>
+					</g>
+				: null}
+
 			</svg>
 		);
 	},

@@ -39,6 +39,32 @@ export function byFields(collection, fields) {
 }
 
 /**
+ * nearest
+ *
+ * Divide and conquer algorithm that helps find the nearest element to `value`
+ * in `nums`
+ *
+ * @param {number[]} nums - sorted array of numbers to search through
+ * @param {number} value - value you're trying to locate the nearest array element for
+ * @return {number} - the nearest array element to the value
+ */
+export function nearest(nums, value) {
+	if (nums.length < 2) {
+		return _.first(nums);
+	}
+
+	if (nums.length === 2) {
+		return value > ((nums[0] + nums[1]) / 2) ? nums[1] : nums[0];
+	}
+
+	const mid = nums.length >>> 1;
+
+	return nums[mid] > value
+		? nearest(nums.slice(0, mid + 1), value)
+		: nearest(nums.slice(mid), value);
+}
+
+/**
  * minByFields
  *
  * Returns the minimum element from a collection by a set of fields.

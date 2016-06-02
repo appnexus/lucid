@@ -8,6 +8,7 @@ import {
 	discreteTicks,
 	groupByFields,
 	transformFromCenter,
+	nearest,
 } from './chart-helpers';
 
 describe('chart-helpers', () => {
@@ -21,6 +22,27 @@ describe('chart-helpers', () => {
 		it('should work', () => {
 			assert.equal(transformFromCenter(10, 10, 20, 20, 2), 'translate(-30, -30) scale(2)');
 			assert.equal(transformFromCenter(10, 10, 12, 16, 3), 'translate(-26, -38) scale(3)');
+		});
+	});
+
+	describe('nearest', () => {
+		it('should work with a range of inputs', () => {
+			assert.equal(nearest([0, 10, 20, 50], 12.3), 10);
+			assert.equal(nearest([0, 10, 20, 50], 15.1), 20);
+			assert.equal(nearest([0, 10, 20, 50], 49), 50);
+			assert.equal(nearest([0, 10, 20, 50], 49), 50);
+		});
+
+		it('should handle numbers smaller than the range', () => {
+			assert.equal(nearest([5, 15], -15), 5);
+		});
+
+		it('should handle numbers larger than the range', () => {
+			assert.equal(nearest([5, 15], -15), 5);
+		});
+
+		it('should should favor the left side', () => {
+			assert.equal(nearest([0, 10], 5), 0);
 		});
 	});
 

@@ -4,6 +4,7 @@
 	font-size: @fontSize;
 	list-style-type: none;
 	margin: 0;
+	padding: 0;
 
 	&-is-horizontal {
 		flex-direction: row;
@@ -12,11 +13,13 @@
 	}
 	&-is-vertical {
 		flex-direction: column;
-		padding: @size-S;
 	}
 	&-has-borders {
 		border: @border-lightBorder;
 		border-radius: @size-borderRadius;
+	}
+	&-is-vertical&-has-borders {
+		padding: @size-S;
 	}
 
 	&-Item {

@@ -17,6 +17,10 @@ export default React.createClass({
 		return (
 			<LineChart
 				data={data}
+				legend={{
+					apples: 'Apples',
+					oranges: 'Oranges',
+				}}
 
 				xAxisField='date'
 				xAxisFormatter={xFormatter}
