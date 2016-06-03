@@ -58,6 +58,39 @@ describe('ContextMenu', () => {
 
 				assert.equal(document.getElementById('ContextMenu-test123').textContent, 'Open');
 			});
+
+			it('should render the flyout with opacity 0 on initial render', () => {
+				wrapper = mount(
+					<ContextMenu portalId='ContextMenu-test456' isExpanded>
+						<ContextMenu.Target>
+							File
+						</ContextMenu.Target>
+						<ContextMenu.FlyOut>
+							Open
+						</ContextMenu.FlyOut>
+					</ContextMenu>
+				);
+				const flyout = _.first(document.getElementById('ContextMenu-test456').children);
+				assert(_.isEmpty(flyout.style.opacity));
+			});
+
+			it('should render the flyout with opacity 1 on subsequent render', done => {
+				wrapper = mount(
+					<ContextMenu portalId='ContextMenu-test456' isExpanded>
+						<ContextMenu.Target>
+							File
+						</ContextMenu.Target>
+						<ContextMenu.FlyOut>
+							Open
+						</ContextMenu.FlyOut>
+					</ContextMenu>
+				);
+				const flyout = _.first(document.getElementById('ContextMenu-test456').children);
+				_.defer(() => {
+					assert.equal(flyout.style.opacity, 1);
+					done();
+				});
+			});
 		});
 
 		describe('direction', () => {

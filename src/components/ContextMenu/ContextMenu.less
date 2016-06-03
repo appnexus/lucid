@@ -4,4 +4,12 @@
 
 .lucid-ContextMenu-FlyOut {
 	z-index: 300;
+	position: absolute;
+	// On first render, we don't have a an element to calculate measurements
+	// against so we just hide it and position at origin with max-height so it
+	// doesn't affect layout. We override all of these after initial render
+	opacity: 0;
+	top: 0;
+	left: 0;
+	max-height: 100vh;
 }
