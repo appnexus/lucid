@@ -205,105 +205,96 @@ const ContextMenu = createClass({
 
 		// default styling hides portal because its position can't be calculated
 		// properly until after 1st render so here we unhide it if the ref exists
-		const opacity = 1;
-		const maxHeight = 'none';
-
+		const style = {
+			opacity: 1,
+			maxHeight: 'none',
+			left: 'auto',
+			top: 'auto',
+		};
 		const matcher = _.matches({ direction, alignment });
 
 		if (matcher({ direction: UP, alignment: START })) {
 			return {
+				...style,
 				top: top - flyOutHeight - directonOffset,
 				left: left - alignmentOffset,
-				opacity,
-				maxHeight,
 			};
 		}
 		if (matcher({ direction: UP, alignment: END })) {
 			return {
+				...style,
 				top: top - flyOutHeight - directonOffset,
 				right: clientWidth - right - alignmentOffset,
-				opacity,
-				maxHeight,
 			};
 		}
 		if (matcher({ direction: UP, alignment: CENTER })) {
 			return {
+				...style,
 				top: top - flyOutHeight - directonOffset,
 				left: left + (width / 2) - (flyOutWidth / 2) + alignmentOffset,
-				opacity,
-				maxHeight,
 			};
 		}
 		if (matcher({ direction: DOWN, alignment: START })) {
 			return {
+				...style,
 				top: bottom + directonOffset,
 				left: left - alignmentOffset,
-				opacity,
-				maxHeight,
 			};
 		}
 		if (matcher({ direction: DOWN, alignment: END })) {
 			return {
+				...style,
 				top: bottom + directonOffset,
 				right: clientWidth - right - alignmentOffset,
-				opacity,
-				maxHeight,
 			};
 		}
 		if (matcher({ direction: DOWN, alignment: CENTER })) {
 			return {
+				...style,
 				top: bottom + directonOffset,
 				left: left + (width / 2) - (flyOutWidth / 2) + alignmentOffset,
-				opacity,
-				maxHeight,
 			};
 		}
 		if (matcher({ direction: LEFT, alignment: START })) {
 			return {
+				...style,
 				top: top - alignmentOffset,
 				right: clientWidth - left + directonOffset,
-				opacity,
-				maxHeight,
 			};
 		}
 		if (matcher({ direction: LEFT, alignment: END })) {
 			return {
+				...style,
 				top: top - flyOutHeight + height + alignmentOffset,
 				right: clientWidth - left + directonOffset,
-				opacity,
-				maxHeight,
 			};
 		}
 		if (matcher({ direction: LEFT, alignment: CENTER })) {
 			return {
+				...style,
 				top: top - (flyOutHeight / 2) + (height / 2) + alignmentOffset,
 				right: clientWidth - left + directonOffset,
-				opacity,
-				maxHeight,
 			};
 		}
 		if (matcher({ direction: RIGHT, alignment: START })) {
 			return {
+				...style,
 				top: top - alignmentOffset,
 				left: left + width + directonOffset,
-				opacity,
-				maxHeight,
 			};
 		}
 		if (matcher({ direction: RIGHT, alignment: END })) {
 			return {
+				...style,
 				top: top - flyOutHeight + height + alignmentOffset,
 				left: left + width + directonOffset,
-				opacity,
-				maxHeight,
 			};
 		}
 		if (matcher({ direction: RIGHT, alignment: CENTER })) {
 			return {
+				...style,
 				top: top - (flyOutHeight / 2) + (height / 2) + alignmentOffset,
 				left: left + width + directonOffset,
-				opacity,
-				maxHeight,
 			};
 		}
 
