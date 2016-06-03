@@ -40,6 +40,7 @@ export default React.createClass({
 				y2AxisTickCount={5}
 				y2AxisTitle='Number of Oranges'
 				y2AxisTitleColor={1}
+				y2AxisHasPoints={false}
 			/>
 		);
 	},

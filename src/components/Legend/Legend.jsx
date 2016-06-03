@@ -8,6 +8,9 @@ import Line from '../Line/Line';
 
 const cx = lucidClassNames.bind('&-Legend');
 
+const SIZE = 12;
+const LINE_WIDTH = 22;
+
 const {
 	number,
 	string,
@@ -113,20 +116,20 @@ const Legend = createClass({
 						{hasPoint || hasLine ?
 							<svg
 								className={cx('&-Item-indicator')}
-								width={hasLine || hasSomeLines ? 22 : 12}
-								height={12}
+								width={hasLine || hasSomeLines ? LINE_WIDTH : SIZE}
+								height={SIZE}
 							>
 								{hasPoint ?
 									<Point
-										x={hasLine || hasSomeLines ? 11 : 6}
-										y={6}
+										x={hasLine || hasSomeLines ? LINE_WIDTH / 2 : SIZE / 2}
+										y={SIZE / 2}
 										color={color}
 										kind={pointKind}
 									/>
 								: null}
 								{hasLine ?
 									<Line
-										d='M0,6 L22,6'
+										d={`M0,${SIZE / 2} L${LINE_WIDTH},${SIZE / 2}`}
 										color={color}
 									/>
 								: null}

@@ -11,6 +11,7 @@ import d3Scale from 'd3-scale';
 import Axis from '../Axis/Axis';
 import AxisLabel from '../AxisLabel/AxisLabel';
 import Bars from '../Bars/Bars';
+// import ToolTip from '../ToolTip/ToolTip';
 
 const cx = lucidClassNames.bind('&-BarChart');
 

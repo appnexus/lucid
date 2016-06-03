@@ -3,6 +3,53 @@ import d3TimeFormat from 'd3-time-format';
 import d3Time from 'd3-time';
 
 /**
+ * stackByFields
+ *
+ * D3's `stack` groups each series' data together but we sometimes we want the
+ * stacked groups to remain grouped as in the original normalized data. This
+ * function helps achieve that.
+ *
+ * @param {object[]} collection - normalized data you want to operate on
+ * @param {string[]} fields - fields to pluck off for the y data
+ * @return {array[]} - array of arrays, one for row in the original `collection`
+ */
+export function stackByFields(collection, fields) {
+	const fieldsArray = [].concat(fields);
+
+	return _.map(collection, (d) => {
+		return _.reduce(fieldsArray, (acc, field) => {
+			const dataPoint = _.get(d, field, 0);
+
+			if (_.isEmpty(acc)) {
+				return acc.concat([[0, dataPoint]])
+			}
+
+			const last = _.last(_.last(acc));
+
+			return acc.concat([[last, last + dataPoint]]);
+		}, []);
+	});
+}
+
+/**
+ * extractFields
+ *
+ * This will return the data in a similar format to stackByFields but without
+ * the stacking.
+ *
+ * @param {object[]} collection - normalized data you want to operate on
+ * @param {string[]} fields - fields to pluck off for the y data
+ * @return {array[]} - array of arrays, one for each field
+ */
+export function extractFields(collection, fields) {
+	const fieldsArray = [].concat(fields);
+
+	return _.map(collection, (d) => {
+		return _.map(fieldsArray, (field) => [0, _.get(d, field, 0)]);
+	});
+}
+
+/**
  * groupByFields
  *
  * This will return the data in a similar format to d3Shape.stack

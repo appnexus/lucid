@@ -1,10 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { groupByFields } from '../../util/chart-helpers';
+import {
+	extractFields,
+	stackByFields,
+} from '../../util/chart-helpers';
 import { createClass } from '../../util/component-types';
 import d3Scale from 'd3-scale';
-import d3Shape from 'd3-shape';
 
 import Bar from '../Bar/Bar';
 
@@ -56,6 +58,10 @@ const Bars = createClass({
 		 * ```
 		 */
 		data: arrayOf(object).isRequired,
+		/**
+		 * Show tool tips on hover.
+		 */
+		hasToolTips: bool,
 		/**
 		 * The scale for the x axis. This must be a d3-scale scale.
 		 */
@@ -112,25 +118,29 @@ const Bars = createClass({
 			...passThroughs,
 		} = this.props;
 
+		// This scale is used for grouped bars
+		const innerXScale = d3Scale.scaleBand()
+			.domain(_.times(yFields.length))
+			.range([0, xScale.bandwidth()])
+			.round(true);
+
 		// Copy the original so we can mutate it
 		const yScale = yScaleOriginal.copy();
 
 		// If we are stacked, we need to calculate a new domain based on the sum of
 		// the various series' y data. One row per series.
 		const transformedData = isStacked
-			? d3Shape.stack().keys(yFields)(data)
-			: groupByFields(data, yFields);
+			? stackByFields(data, yFields)
+			: extractFields(data, yFields);
 
 		// If we are stacked, we need to calculate a new domain based on the sum of
 		// the various group's y data
 		if (isStacked) {
 			yScale.domain([
 				yScale.domain()[0],
-				_.chain(transformedData).last().flatten().max().value(),
+				_.chain(transformedData).map((x) => _.last(_.last(x))).max().value(),
 			]);
 		}
-
-		const yScaleHeight = _.max(yScale.range());
 
 		return (
 			<g
@@ -138,46 +148,23 @@ const Bars = createClass({
 				className={cx(className, '&')}
 				transform={`translate(${left}, ${top})`}
 			>
-				{_.map(transformedData, (d, dIndex) => {
-					// TODO: this could probably be cleaned and DRY'd up. It's a bit odd
-					// to have an if statement in the middle of the jsx.
-					if (isStacked) {
-						return (
-							<g key={dIndex}>
-								{_.map(d, (series, seriesIndex) => (
-									<Bar
-										key={seriesIndex}
-										x={xScale(data[seriesIndex][xField])}
-										y={yScale(series[1])}
-										height={yScale(series[0]) - yScale(series[1])}
-										width={xScale.bandwidth()}
-										color={dIndex}
-									/>
-								))}
-							</g>
-						);
-					} else {
-						const innerXScale = d3Scale.scaleBand()
-							.domain(_.times(yFields.length))
-							.range([0, xScale.bandwidth()])
-							.round(true);
-
-						return (
-							<g key={dIndex}>
-								{_.map(d, (y, yIndex) => (
-									<Bar
-										key={yIndex}
-										x={innerXScale(dIndex) + xScale(data[yIndex][xField])}
-										y={yScale(y)}
-										height={yScaleHeight - yScale(y)}
-										width={innerXScale.bandwidth()}
-										color={dIndex}
-									/>
-								))}
-							</g>
-						);
-					}
-				})}
+				{_.map(transformedData, (series, seriesIndex) => (
+					<g key={seriesIndex}>
+						{_.map(series, (points, pointsIndex) => (
+							<Bar
+								key={pointsIndex}
+								x={isStacked
+									? xScale(data[seriesIndex][xField])
+									: innerXScale(pointsIndex) + xScale(data[seriesIndex][xField])
+								}
+								y={yScale(points[1])}
+								height={yScale(points[0]) - yScale(points[1])}
+								width={isStacked ? xScale.bandwidth() : innerXScale.bandwidth() }
+								color={pointsIndex}
+							/>
+						))}
+					</g>
+				))}
 			</g>
 		);
 	},

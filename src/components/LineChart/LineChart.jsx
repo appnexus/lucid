@@ -13,10 +13,10 @@ import d3Scale from 'd3-scale';
 
 import Axis from '../Axis/Axis';
 import AxisLabel from '../AxisLabel/AxisLabel';
+import Legend from '../Legend/Legend';
 import Lines from '../Lines/Lines';
 import Points from '../Points/Points';
-import Legend from '../Legend/Legend';
-import { ToolTip } from '../../index';
+import ToolTip from '../ToolTip/ToolTip';
 
 const cx = lucidClassNames.bind('&-LineChart');
 
@@ -88,7 +88,7 @@ const LineChart = createClass({
 		 */
 		legend: object,
 		/**
-		 * Show tool tips on hover
+		 * Show tool tips on hover.
 		 */
 		hasToolTips: bool,
 
@@ -384,19 +384,21 @@ const LineChart = createClass({
 							<ToolTip.Body>
 								<Legend hasBorders={false}>
 									{_.map(yAxisFields, (field, index) => (
-										<Legend.Item
-											hasPoint={true}
-											hasLine={true}
-											color={index}
-											pointKind={index}
-										>
-											{`${_.get(legend, field, field)}: ${yFinalFormatter(_.get(xPointMap, mouseX + '.' + field))}`}
-										</Legend.Item>
+										_.get(xPointMap, mouseX + '.' + field) ?
+											<Legend.Item
+												hasPoint={yAxisHasPoints}
+												hasLine={true}
+												color={index}
+												pointKind={index}
+											>
+												{`${_.get(legend, field, field)}: ${yFinalFormatter(_.get(xPointMap, mouseX + '.' + field))}`}
+											</Legend.Item>
+										: null
 									))}
 									{_.map(y2AxisFields, (field, index) => (
 										_.get(xPointMap, mouseX + '.' + field) ?
 											<Legend.Item
-												hasPoint={true}
+												hasPoint={y2AxisHasPoints}
 												hasLine={true}
 												color={index + yAxisFields.length}
 												pointKind={index + yAxisFields.length}
