@@ -126,6 +126,42 @@ describe('SingleSelect', () => {
 			});
 		});
 
+		describe('isSelectionHighlighted', () => {
+			describe('default', () => {
+				it('should apply the appropriate classNames to the control', () => {
+					const wrapper = shallow(
+						<SingleSelect selectedIndex={2}>
+							<Placeholder>select one</Placeholder>
+							<Option>option a</Option>
+							<Option>option b</Option>
+							<Option>option c</Option>
+						</SingleSelect>
+					);
+					const controlWrapper = wrapper.find('.lucid-SingleSelect-Control');
+					assert(controlWrapper.hasClass('lucid-SingleSelect-Control-is-selected'));
+					assert(controlWrapper.hasClass('lucid-SingleSelect-Control-is-highlighted'));
+				});
+			});
+			describe('false', () => {
+				it('should apply the appropriate classNames to the control', () => {
+					const wrapper = shallow(
+						<SingleSelect
+							isSelectionHighlighted={false}
+							selectedIndex={2}
+							>
+							<Placeholder>select one</Placeholder>
+							<Option>option a</Option>
+							<Option>option b</Option>
+							<Option>option c</Option>
+						</SingleSelect>
+					);
+					const controlWrapper = wrapper.find('.lucid-SingleSelect-Control');
+					assert(!controlWrapper.hasClass('lucid-SingleSelect-Control-is-selected'));
+					assert(!controlWrapper.hasClass('lucid-SingleSelect-Control-is-highlighted'));
+				});
+			});
+		});
+
 		describe('selectedIndex', () => {
 			it('should pass the selectedIndex in an array of 1 to the underlying DropMenu', () => {
 				const wrapper = shallow(

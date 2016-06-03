@@ -13,7 +13,7 @@
     "docs-upload": "gulp docs-upload",
     "preversion": "rm -rf dist && TZ=UTC gulp preversion",
     "postversion": "gulp docs-upload",
-    "test": "rm -rf dist && TZ=UTC gulp test",
+    "test": "rm -rf dist && TZ=UTC gulp lint test",
     "test-tdd": "rm -rf dist && TZ=UTC gulp test-tdd"
   },
   "keywords": [
@@ -40,6 +40,7 @@
     "autoprefixer": "^6.3.3",
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
+    "babel-plugin-rewire": "^1.0.0-rc-3",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-2": "^6.5.0",
