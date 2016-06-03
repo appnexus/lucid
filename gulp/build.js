@@ -13,8 +13,8 @@ module.exports = {
 		.pipe(less())
 		.pipe(postcss([
 			autoprefixer({
-				browsers: [CONFIG.AUTOPREFIXER_BROWSERS]
-			})
+				browsers: [CONFIG.AUTOPREFIXER_BROWSERS],
+			}),
 		]))
 		.pipe(gulp.dest(CONFIG.BUILD_DIR));
 	},
@@ -31,12 +31,14 @@ module.exports = {
 		.pipe(gulp.dest(CONFIG.BUILD_DIR));
 	},
 
-	// `test` has a dependency on `build-js` since the files it `require`s need
-	// be to built first for tests to work
 	test: function() {
-		return gulp.src(CONFIG.TEST_GLOB.SOURCE)
+		return gulp.src([
+			CONFIG.JS_GLOB.SOURCE,
+			'!/**/*.json',
+			'!' + CONFIG.EXAMPLES_GLOB.SOURCE,
+		])
 		.pipe(cache('build-test')) // only useful when using a watch task
-		.pipe(babel())
+		.pipe(babel({ plugins: ['rewire'] }))
 		.pipe(gulp.dest(CONFIG.BUILD_DIR));
-	}
+	},
 };

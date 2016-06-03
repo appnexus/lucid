@@ -64,6 +64,14 @@ const TextField = createClass({
 		 */
 		onChange: func,
 
+
+		/**
+		 * Fires an on the `input`'s onBlur.
+		 *
+		 * Signature: `(currentValue, { event, props }) => {}`
+		 */
+		onBlur: func,
+
 		/**
 		 * Fires an event, debounced by `debounceLevel`, when the user types text
 		 * into the TextField.
@@ -119,6 +127,7 @@ const TextField = createClass({
 			style: null,
 			isDisabled: false,
 			isMultiLine: false,
+			onBlur: _.noop,
 			onChange: _.noop,
 			onChangeDebounced: _.noop,
 			onSubmit: _.noop,
@@ -183,6 +192,17 @@ const TextField = createClass({
 		this._handleChangeDebounced(value, { event, props: this.props });
 	},
 
+	handleBlur(event) {
+		const {
+			onBlur,
+		} = this.props;
+
+		const value = _.get(event, 'target.value', '');
+
+		onBlur(value, { event, props: this.props });
+
+	},
+
 	handleKeyDown(event) {
 		const {
 			onSubmit,
@@ -223,6 +243,7 @@ const TextField = createClass({
 			}, className),
 			disabled: isDisabled,
 			onChange: this.handleChange,
+			onBlur: this.handleBlur,
 			onKeyDown: this.handleKeyDown,
 			style,
 			rows,
