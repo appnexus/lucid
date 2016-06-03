@@ -6,6 +6,7 @@
 
 .lucid-Button {
 	// Mixins
+	#normalize > .button();
 	.no-safari-flicker();
 	.box-sizing();
 	.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
@@ -35,6 +36,11 @@
 		> span {
 			transition: color 0.1s, fill 0.1s;
 		}
+	}
+
+	// don't show Firefox's focus ring: https://github.com/appnexus/lucid/issues/292
+	&:-moz-focusring {
+		outline: none;
 	}
 
 	// Types

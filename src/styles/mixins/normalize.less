@@ -438,6 +438,23 @@
 		}
 	}
 
+	// collecting all the button styles from .form() section
+	.button() {
+		font: inherit; /* 1 */
+		margin: 0; /* 2 */
+		overflow: visible;
+		text-transform: none;
+		-webkit-appearance: button; /* 2 */
+		cursor: pointer; /* 3 */
+		&::-moz-focus-inner {
+			border: 0;
+			padding: 0;
+		}
+		&:-moz-focusring {
+			outline: 1px dotted ButtonText;
+		}
+	}
+
 	/* Flexbox
 	   ========================================================================== */
 
