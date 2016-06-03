@@ -45,3 +45,11 @@ Example package.json:
     }
 
 To contribute to lucid, please see `CONTRIBUTING.md`.
+
+### Credits
+
+- [BrowserStack] for providing cross-browser testing infrastructure.
+- [Travis CI] for providing continuous integration infrastructure.
+
+[BrowserStack]: https://www.browserstack.com/
+[Travis CI]: https://travis-ci.org/
