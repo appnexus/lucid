@@ -5,8 +5,6 @@ import { createClass, findTypes } from '../../util/component-types';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 import { lucidClassNames } from '../../util/style-helpers';
 
-var count = 0;
-
 const cx = lucidClassNames.bind('&-ContextMenu');
 
 const {
