@@ -118,7 +118,7 @@ const RadioButton = createClass({
 			onSelect,
 		} = this.props;
 
-		event.preventDefault();
+		event.stopPropagation();
 
 		if (!isDisabled && !isSelected) {
 			onSelect(true, { event, props: this.props });

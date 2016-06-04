@@ -114,7 +114,7 @@ const Checkbox = createClass({
 			onSelect,
 		} = this.props;
 
-		event.preventDefault();
+		event.stopPropagation();
 
 		if (!isDisabled) {
 			onSelect(!isSelected, { event, props: this.props });
