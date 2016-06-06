@@ -81,7 +81,7 @@ const LineChart = createClass({
 		 * tooltips. E.g:
 		 *
 		 *     {
-		 *       x: 'Revenue',
+		 *       x: 'Date',
 		 *       y: 'Impressions',
 		 *     }
 		 *
@@ -341,6 +341,9 @@ const LineChart = createClass({
 			? d3Scale.scaleLinear().domain([y2AxisMin, y2AxisMax]).range([innerHeight, 0])
 			: null;
 
+		const xFinalFormatter = xAxisFormatter
+			? xAxisFormatter
+			: xScale.tickFormat();
 		const yFinalFormatter = yAxisFormatter
 			? yAxisFormatter
 			: yScale.tickFormat();
@@ -419,7 +422,7 @@ const LineChart = createClass({
 						orient='bottom'
 						scale={xScale}
 						outerTickSize={0}
-						tickFormat={xAxisFormatter}
+						tickFormat={xFinalFormatter}
 						tickCount={xAxisTickCount}
 						color={xAxisTitleColor}
 						ref='xAxis'

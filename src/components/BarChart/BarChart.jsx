@@ -75,15 +75,19 @@ const BarChart = createClass({
 		data: arrayOf(object),
 		/**
 		 * An object with human readable names for fields that  will be used for
-		 * tooltips and legends which are *not yet implemented*. E.g:
+		 * tooltips. E.g:
 		 *
 		 *     {
-		 *       x: 'Revenue',
+		 *       x: 'Date',
 		 *       y: 'Impressions',
 		 *     }
 		 *
-		 * legend: object,
 		 */
+		legend: object,
+		/**
+		 * Show tool tips on hover.
+		 */
+		hasToolTips: bool,
 
 
 		/**
@@ -164,11 +168,14 @@ const BarChart = createClass({
 				bottom: 50,
 				left: 80,
 			},
+			legend: {},
+			hasToolTips: true,
 
 			xAxisField: 'x',
 			xAxisTickCount: null,
 			xAxisTitle: null,
 			xAxisTitleColor: -1,
+			xAxisFormatter: _.identity,
 
 			yAxisFields: ['y'],
 			yAxisTickCount: null,
@@ -186,6 +193,8 @@ const BarChart = createClass({
 			width,
 			margin,
 			data,
+			hasToolTips,
+			legend,
 
 			xAxisField,
 			xAxisFormatter,
@@ -238,6 +247,11 @@ const BarChart = createClass({
 			.domain([yAxisMin, yAxisMax])
 			.range([innerHeight, 0]);
 
+		const xFinalFormatter = xAxisFormatter;
+		const yFinalFormatter = yAxisFormatter
+			? yAxisFormatter
+			: yScale.tickFormat();
+
 		return (
 			<svg
 				{...passThroughs}
@@ -252,7 +266,6 @@ const BarChart = createClass({
 						scale={xScale}
 						outerTickSize={0}
 						tickCount={xAxisTickCount}
-						tickFormat={xAxisFormatter}
 					/>
 				</g>
 
@@ -274,7 +287,7 @@ const BarChart = createClass({
 					<Axis
 						orient='left'
 						scale={yScale}
-						tickFormat={yAxisFormatter}
+						tickFormat={yFinalFormatter}
 						tickCount={yAxisTickCount}
 					/>
 				</g>
@@ -298,10 +311,14 @@ const BarChart = createClass({
 					left={margin.left}
 					xField={xAxisField}
 					xScale={xScale}
+					xFormatter={xFinalFormatter}
 					yFields={yAxisFields}
 					yScale={yScale}
+					yFormatter={yFinalFormatter}
 					data={data}
 					isStacked={yAxisIsStacked}
+					hasToolTips={hasToolTips}
+					legend={legend}
 				/>
 			</svg>
 		);

@@ -214,8 +214,8 @@ const ToolTip = createClass({
 				onMouseOver={this.handleMouseOverTarget}
 				onMouseOut={this.handleMouseOutTarget}
 			>
-				<Target {...targetProps} className={cx(targetProps.className, '&-Target')}>
-					{targetProps.children}
+				<Target {...targetProps} className={cx(_.get(targetProps, 'className'), '&-Target')}>
+					{_.get(targetProps, 'children')}
 				</Target>
 				<FlyOut
 					style={{

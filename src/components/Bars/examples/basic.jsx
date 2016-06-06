@@ -40,6 +40,7 @@ export default React.createClass({
 						xScale={xScale}
 						yScale={yScale}
 						yFields={yFields}
+						hasToolTips
 					/>
 				</svg>
 
@@ -50,6 +51,7 @@ export default React.createClass({
 						yScale={yScale}
 						yFields={yFields}
 						isStacked={true}
+						hasToolTips
 					/>
 				</svg>
 			</div>
