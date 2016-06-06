@@ -454,6 +454,7 @@ describe('DataTable', () => {
 		});
 
 		describe('ColumnGroup', () => {
+
 			it('should render a cell with colspan in the header for each Column defined within', () => {
 				const wrapper = shallow(
 					<DataTable data={testData}>
@@ -491,6 +492,51 @@ describe('DataTable', () => {
 				assert.equal(thFirstRowArray[3].text(), 'Occupation', 'must render correct title');
 				assert.equal(thFirstRowArray[3].prop('rowSpan'), 2, 'rowSpan must be 2');
 			});
+
+			it('should default to align=center', () => {
+				const wrapper = shallow(
+					<DataTable data={testData}>
+						<Column field='id' title='ID'/>
+						<ColumnGroup title='Name'>
+							<Column field='first_name' title='First'/>
+							<Column field='last_name' title='Last'/>
+						</ColumnGroup>
+						<Column field='email' title='Email'/>
+						<Column field='occupation' title='Occupation'/>
+					</DataTable>
+				);
+
+				const thWrapper = wrapper
+					.find(ScrollTable).shallow()
+					.find(ScrollTable.Thead).shallow()
+					.find(ScrollTable.Tr).first().shallow()
+					.find(ScrollTable.Th).at(1).shallow()
+
+				assert(thWrapper.hasClass('lucid-Table-align-center'), 'must be true');
+			});
+
+			it('should respect align prop', () => {
+				const wrapper = shallow(
+					<DataTable data={testData}>
+						<Column field='id' title='ID'/>
+						<ColumnGroup title='Name' align='right'>
+							<Column field='first_name' title='First'/>
+							<Column field='last_name' title='Last'/>
+						</ColumnGroup>
+						<Column field='email' title='Email'/>
+						<Column field='occupation' title='Occupation'/>
+					</DataTable>
+				);
+
+				const thWrapper = wrapper
+					.find(ScrollTable).shallow()
+					.find(ScrollTable.Thead).shallow()
+					.find(ScrollTable.Tr).first().shallow()
+					.find(ScrollTable.Th).at(1).shallow()
+
+				assert(thWrapper.hasClass('lucid-Table-align-right'), 'must be true');
+			});
+
 		});
 	});
 });
