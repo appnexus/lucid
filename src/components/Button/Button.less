@@ -6,7 +6,6 @@
 
 .lucid-Button {
 	// Mixins
-	#normalize > .button();
 	.no-safari-flicker();
 	.box-sizing();
 	.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
@@ -20,6 +19,18 @@
 	cursor: pointer;
 	outline: none;
 
+	// from normalize.css@4.1.1
+	font: inherit; /* 1 */
+	margin: 0; /* 2 */
+	overflow: visible;
+	text-transform: none;
+	-webkit-appearance: button; /* 2 */
+	// end normalize
+
+	// don't show Firefox's focus ring: https://github.com/appnexus/lucid/issues/292
+	&:-moz-focusring {
+		outline: none;
+	}
 
 	&:before {border-radius: @Button-size-borderRadius;}
 
@@ -36,11 +47,6 @@
 		> span {
 			transition: color 0.1s, fill 0.1s;
 		}
-	}
-
-	// don't show Firefox's focus ring: https://github.com/appnexus/lucid/issues/292
-	&:-moz-focusring {
-		outline: none;
 	}
 
 	// Types
