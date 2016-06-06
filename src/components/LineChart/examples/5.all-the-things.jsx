@@ -16,7 +16,14 @@ export default React.createClass({
 	render() {
 		return (
 			<LineChart
+				margin={{
+					top: 10,
+					right: 80,
+					bottom: 100,
+					left: 80,
+				}}
 				data={data}
+				hasLegend={true}
 				legend={{
 					apples: 'Apples',
 					oranges: 'Oranges',

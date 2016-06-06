@@ -36,6 +36,10 @@ const Legend = createClass({
 
 	_lucidIsPrivate: true,
 
+	statics: {
+		HEIGHT: 28, // exposed for consumer convenience
+	},
+
 	propTypes: {
 		/**
 		 * Appended to the component-specific class names set on the root element.
@@ -75,6 +79,10 @@ const Legend = createClass({
 	},
 
 	handleItemClick(index, props, event) {
+		if (!props.onClick) {
+			return null;
+		}
+
 		props.onClick(index, { props, event });
 	},
 
@@ -105,7 +113,7 @@ const Legend = createClass({
 					hasPoint,
 					pointKind = 1,
 					color,
-					onClick = _.noop,
+					onClick,
 					children,
 				}, index) => (
 					<li

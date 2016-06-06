@@ -11,7 +11,8 @@ import d3Scale from 'd3-scale';
 import Axis from '../Axis/Axis';
 import AxisLabel from '../AxisLabel/AxisLabel';
 import Bars from '../Bars/Bars';
-// import ToolTip from '../ToolTip/ToolTip';
+import ContextMenu from '../ContextMenu/ContextMenu';
+import Legend from '../Legend/Legend';
 
 const cx = lucidClassNames.bind('&-BarChart');
 
@@ -74,8 +75,8 @@ const BarChart = createClass({
 		 */
 		data: arrayOf(object),
 		/**
-		 * An object with human readable names for fields that  will be used for
-		 * tooltips. E.g:
+		 * An object with human readable names for fields that will be used for
+		 * legends and tooltips. E.g:
 		 *
 		 *     {
 		 *       x: 'Date',
@@ -88,6 +89,10 @@ const BarChart = createClass({
 		 * Show tool tips on hover.
 		 */
 		hasToolTips: bool,
+		/**
+		 * Show a legend at the bottom of the chart.
+		 */
+		hasLegend: bool,
 
 
 		/**
@@ -170,6 +175,7 @@ const BarChart = createClass({
 			},
 			legend: {},
 			hasToolTips: true,
+			hasLegend: false,
 
 			xAxisField: 'x',
 			xAxisTickCount: null,
@@ -193,8 +199,9 @@ const BarChart = createClass({
 			width,
 			margin,
 			data,
-			hasToolTips,
 			legend,
+			hasToolTips,
+			hasLegend,
 
 			xAxisField,
 			xAxisFormatter,
@@ -267,6 +274,39 @@ const BarChart = createClass({
 						outerTickSize={0}
 						tickCount={xAxisTickCount}
 					/>
+
+					{/* legend */}
+					{hasLegend ?
+						<ContextMenu
+							direction='down'
+							alignment='center'
+							directonOffset={((margin.bottom / 2) + (Legend.HEIGHT / 2)) * -1  /* should center the legend in the bottom margin */}
+						>
+							<ContextMenu.Target elementType='g'>
+								<rect
+									className={cx('&-invisible')}
+									width={innerWidth}
+									height={margin.bottom}
+								/>
+							</ContextMenu.Target>
+							<ContextMenu.FlyOut className={cx('&-legend-container')}>
+								<Legend orient='horizontal'>
+									{_.map(yAxisFields, (field, index) => (
+										<Legend.Item
+											key={index}
+											hasPoint={true}
+											hasLine={false}
+											color={index}
+											pointKind={1}
+										>
+											{_.get(legend, field, field)}
+										</Legend.Item>
+									))}
+								</Legend>
+							</ContextMenu.FlyOut>
+						</ContextMenu>
+					: null}
+
 				</g>
 
 				{/* x axis title */}

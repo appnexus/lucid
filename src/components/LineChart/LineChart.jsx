@@ -17,6 +17,7 @@ import Legend from '../Legend/Legend';
 import Lines from '../Lines/Lines';
 import Points from '../Points/Points';
 import ToolTip from '../ToolTip/ToolTip';
+import ContextMenu from '../ContextMenu/ContextMenu';
 
 const cx = lucidClassNames.bind('&-LineChart');
 
@@ -77,8 +78,8 @@ const LineChart = createClass({
 		 */
 		data: arrayOf(object),
 		/**
-		 * An object with human readable names for fields that  will be used for
-		 * tooltips. E.g:
+		 * An object with human readable names for fields that will be used for
+		 * legends and tooltips. E.g:
 		 *
 		 *     {
 		 *       x: 'Date',
@@ -91,6 +92,10 @@ const LineChart = createClass({
 		 * Show tool tips on hover.
 		 */
 		hasToolTips: bool,
+		/**
+		 * Show a legend at the bottom of the chart.
+		 */
+		hasLegend: bool,
 
 
 		/**
@@ -231,6 +236,7 @@ const LineChart = createClass({
 			},
 			legend: {},
 			hasToolTips: true,
+			hasLegend: false,
 
 			xAxisField: 'x',
 			xAxisTickCount: null,
@@ -270,6 +276,7 @@ const LineChart = createClass({
 			data,
 			legend,
 			hasToolTips,
+			hasLegend,
 
 			xAxisField,
 			xAxisTickCount,
@@ -389,6 +396,7 @@ const LineChart = createClass({
 									{_.map(yAxisFields, (field, index) => (
 										_.get(xPointMap, mouseX + '.' + field) ?
 											<Legend.Item
+												key={index}
 												hasPoint={yAxisHasPoints}
 												hasLine={true}
 												color={index}
@@ -401,6 +409,7 @@ const LineChart = createClass({
 									{_.map(y2AxisFields, (field, index) => (
 										_.get(xPointMap, mouseX + '.' + field) ?
 											<Legend.Item
+												key={index}
 												hasPoint={y2AxisHasPoints}
 												hasLine={true}
 												color={index + yAxisFields.length}
@@ -427,6 +436,49 @@ const LineChart = createClass({
 						color={xAxisTitleColor}
 						ref='xAxis'
 					/>
+
+					{/* legend */}
+					{hasLegend ?
+						<ContextMenu
+							direction='down'
+							alignment='center'
+							directonOffset={((margin.bottom / 2) + (Legend.HEIGHT / 2)) * -1  /* should center the legend in the bottom margin */}
+						>
+							<ContextMenu.Target elementType='g'>
+								<rect
+									className={cx('&-invisible')}
+									width={innerWidth}
+									height={margin.bottom}
+								/>
+							</ContextMenu.Target>
+							<ContextMenu.FlyOut className={cx('&-legend-container')}>
+								<Legend orient='horizontal'>
+									{_.map(yAxisFields, (field, index) => (
+										<Legend.Item
+											key={index}
+											hasPoint={yAxisHasPoints}
+											hasLine={true}
+											color={index}
+											pointKind={index}
+										>
+											{_.get(legend, field, field)}
+										</Legend.Item>
+									))}
+									{_.map(y2AxisFields, (field, index) => (
+										<Legend.Item
+											key={index}
+											hasPoint={y2AxisHasPoints}
+											hasLine={true}
+											color={index + yAxisFields.length}
+											pointKind={index + yAxisFields.length}
+										>
+											{_.get(legend, field, field)}
+										</Legend.Item>
+									))}
+								</Legend>
+							</ContextMenu.FlyOut>
+						</ContextMenu>
+					: null}
 				</g>
 
 				{/* x axis title */}
@@ -558,7 +610,7 @@ const LineChart = createClass({
 				{hasToolTips ?
 					<g transform={`translate(${margin.left}, ${margin.top})`}>
 						<rect
-							className={cx('&-tooltip-hover-zone')}
+							className={cx('&-invisible')}
 							width={innerWidth}
 							height={innerHeight}
 							onMouseMove={({clientX, target}) => {
