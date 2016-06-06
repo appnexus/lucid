@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 
-const boundClassNames = lucidClassNames.bind('&-TableGearIcon');
+const cx = lucidClassNames.bind('&-TableGearIcon');
 
 /**
  *
@@ -12,6 +12,7 @@ const boundClassNames = lucidClassNames.bind('&-TableGearIcon');
  */
 
 const TableGearIcon = React.createClass({
+	displayName: 'TableGearIcon',
 	propTypes: {
 		...Icon.propTypes,
 	},
@@ -25,9 +26,9 @@ const TableGearIcon = React.createClass({
 		return (
 			<Icon
 				{...passThroughs}
-				className={boundClassNames('&', className)}
+				className={cx('&', className)}
 			>
-				<rect className={boundClassNames('&-background')} x='1' y='4' width='13' height='8'/>
+				<rect className={cx('&-background')} x='1' y='4' width='13' height='8'/>
 				<g opacity='0.25'>
 					<rect x='3' y='4' width='1' height='8'/>
 					<rect x='6' y='4' width='1' height='8'/>

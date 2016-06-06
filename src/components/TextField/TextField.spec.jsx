@@ -82,6 +82,22 @@ describe('TextField', () => {
 		assert.equal(onSubmit.args[0][0], 'yolo');
 	});
 
+	it('should callback onBlur when the leaves input', () => {
+		const onBlur = sinon.spy();
+		const wrapper = shallow(
+			<TextField onBlur={onBlur} />
+		);
+
+		wrapper.find('input').simulate('blur', {
+			target: {
+				value: 'yolo',
+			},
+		});
+
+		assert(onBlur.calledOnce);
+		assert.equal(onBlur.args[0][0], 'yolo');
+	});
+
 	it('should respect isDisabled', () => {
 		const wrapper = shallow(
 			<TextField isDisabled={true} />

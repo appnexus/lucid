@@ -71,7 +71,27 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 	};
 }
 
-export function safeMerge (objValue, srcValue) {
+/**
+ * reduceSelectors
+ *
+ * Generates a root selector from a tree of selectors
+ * @param {Object} selectors - a tree of selectors
+ * @returns {function} root selector that when called with state, calls each of
+ * the selectors in the tree with the state local to that selector
+ */
+
+export function reduceSelectors(selectors) {
+	return function reducedSelector(state) {
+		return _.reduce(selectors, (state, selector, key) => ({
+			...state,
+			[key]: _.isFunction(selector) ?
+				selector(state) :
+				reduceSelectors(selector)(state[key]),
+		}), state);
+	};
+}
+
+export function safeMerge(objValue, srcValue) {
 	// don't merge arrays
 	if (_.isArray(srcValue) && _.isArray(objValue)) {
 		return srcValue;
@@ -93,6 +113,7 @@ export function buildHybridComponent(baseComponent, {
 	setStateWithNewProps = true, // if true, new props will update state, else prop has priority over existing state
 	replaceEvents = false, // if true, function props replace the existing reducers, else they are invoked *after* state reducer returns
 	reducers = _.get(baseComponent, 'definition.statics.reducers', {}),
+	selectors = _.get(baseComponent, 'definition.statics.selectors', {}),
 } = {}) {
 
 	const {
@@ -113,6 +134,8 @@ export function buildHybridComponent(baseComponent, {
 
 		return baseComponent;
 	}
+
+	const selector = reduceSelectors(selectors);
 
 	return React.createClass({
 		propTypes,
@@ -141,9 +164,9 @@ export function buildHybridComponent(baseComponent, {
 		},
 		render() {
 			if (replaceEvents) {
-				return React.createElement(baseComponent, this.boundContext.getPropReplaceReducers(this.props), this.props.children);
+				return React.createElement(baseComponent, selector(this.boundContext.getPropReplaceReducers(this.props)), this.props.children);
 			}
-			return React.createElement(baseComponent, this.boundContext.getProps(this.props), this.props.children);
+			return React.createElement(baseComponent, selector(this.boundContext.getProps(this.props)), this.props.children);
 		},
 	});
 }
