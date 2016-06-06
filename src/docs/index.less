@@ -8,9 +8,15 @@
 @import './containers/color-palette';
 @import './containers/landing-page';
 
-// Normalize Mixins
-#normalize > .html();
-#normalize > .body();
+html {
+	font-family: @fontFamily;
+	-ms-text-size-adjust: 100%; /* 2 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+	margin: 0;
+}
 
 // -------------------------------------
 // Globals
