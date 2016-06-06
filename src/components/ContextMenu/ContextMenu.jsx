@@ -355,8 +355,6 @@ const ContextMenu = createClass({
 		const flyoutElement = _.first(findTypes(this.props, ContextMenu.FlyOut));
 		const flyProps = _.get(flyoutElement, 'props', {});
 
-		if (_.isNaN(this.getFlyoutPosition().top)) { window.foo = true; }
-
 		return (
 			<span ref='target' {...passThroughs} className={cx('&', className)} style={style}>
 				{targetChildren}
