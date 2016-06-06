@@ -31,7 +31,7 @@ const {
 } = React.PropTypes;
 
 /**
- * {"categories": ["visualizations", "charts"]}
+ * {"categories": ["visualizations", "charts"], "madeFrom": ["ContextMenu", "ToolTip"]}
  *
  * Bar charts are great for showing data that fits neatly in to "buckets". The
  * x axis data must be strings, and the y axis data must be numeric.

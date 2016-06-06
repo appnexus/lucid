@@ -34,7 +34,7 @@ const {
 } = React.PropTypes;
 
 /**
- * {"categories": ["visualizations", "charts"]}
+ * {"categories": ["visualizations", "charts"], "madeFrom": ["ContextMenu", "ToolTip"]}
  *
  * The line chart presents data over time. Currently only dates are supported
  * on the x axis and numeric values on the y. If you need discrete values on
