@@ -228,6 +228,11 @@ const Bars = createClass({
 										}}
 									/>
 								</ToolTip.Target>
+
+								<ToolTip.Title>
+									{data[seriesIndex][xField]}
+								</ToolTip.Title>
+
 								<ToolTip.Body>
 									<Legend hasBorders={false}>
 										{_.map(yFields, (field, fieldIndex) => (

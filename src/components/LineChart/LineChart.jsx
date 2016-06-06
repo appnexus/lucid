@@ -10,6 +10,7 @@ import {
 	nearest,
 } from '../../util/chart-helpers';
 import d3Scale from 'd3-scale';
+import d3TimeFormat from 'd3-time-format';
 
 import Axis from '../Axis/Axis';
 import AxisLabel from '../AxisLabel/AxisLabel';
@@ -118,6 +119,10 @@ const LineChart = createClass({
 		 * provide anything, we use the default D3 date variable formatter.
 		 */
 		xAxisFormatter: func,
+		/**
+		 * An optional function used to format your x axis dates in the tooltips.
+		 */
+		xAxisTooltipFormatter: func,
 		/**
 		 * There are some cases where you need to only show a "sampling" of ticks
 		 * on the x axis. This number will control that.
@@ -242,6 +247,8 @@ const LineChart = createClass({
 			xAxisTickCount: null,
 			xAxisTitle: null,
 			xAxisTitleColor: -1,
+			// E.g. "Mon 06/06/2016 15:46:19"
+			xAxisTooltipFormatter: d3TimeFormat.timeFormat('%a %x %X'),
 
 			yAxisFields: ['y'],
 			yAxisIsStacked: false,
@@ -283,6 +290,7 @@ const LineChart = createClass({
 			xAxisTitle,
 			xAxisTitleColor,
 			xAxisFormatter = formatDate,
+			xAxisTooltipFormatter,
 			xAxisMin = minByFields(data, xAxisField),
 			xAxisMax = maxByFields(data, xAxisField),
 
@@ -360,13 +368,15 @@ const LineChart = createClass({
 				? y2Scale.tickFormat()
 				: _.identity;
 
+		// This is used to map x mouse values back to data points.
 		const xPointMap = _.reduce(data, (acc, d) => {
 			// `floor` to avoid rounding errors, it doesn't need to be super precise
 			// since we're dealing with pixels
 			const point = Math.floor(xScale(d[xAxisField]));
 
 			_.each(allYFields, (field) => {
-				_.set(acc, `${point}.${field}`, d[field]);
+				_.set(acc, `${point}.y.${field}`, d[field]);
+				_.set(acc, `${point}.x`, d[xAxisField]);
 			});
 
 			return acc;
@@ -391,10 +401,13 @@ const LineChart = createClass({
 									d={`M${mouseX},0 L${mouseX},${innerHeight}`}
 								/>
 							</ToolTip.Target>
+							<ToolTip.Title>
+								{xAxisTooltipFormatter(_.get(xPointMap, `${mouseX}.x`))}
+							</ToolTip.Title>
 							<ToolTip.Body>
 								<Legend hasBorders={false}>
 									{_.map(yAxisFields, (field, index) => (
-										_.get(xPointMap, mouseX + '.' + field) ?
+										_.get(xPointMap, mouseX + '.y.' + field) ?
 											<Legend.Item
 												key={index}
 												hasPoint={yAxisHasPoints}
@@ -402,12 +415,12 @@ const LineChart = createClass({
 												color={index}
 												pointKind={index}
 											>
-												{`${_.get(legend, field, field)}: ${yFinalFormatter(_.get(xPointMap, mouseX + '.' + field))}`}
+												{`${_.get(legend, field, field)}: ${yFinalFormatter(_.get(xPointMap, mouseX + '.y.' + field))}`}
 											</Legend.Item>
 										: null
 									))}
 									{_.map(y2AxisFields, (field, index) => (
-										_.get(xPointMap, mouseX + '.' + field) ?
+										_.get(xPointMap, mouseX + '.y.' + field) ?
 											<Legend.Item
 												key={index}
 												hasPoint={y2AxisHasPoints}
@@ -415,7 +428,7 @@ const LineChart = createClass({
 												color={index + yAxisFields.length}
 												pointKind={index + yAxisFields.length}
 											>
-												{`${_.get(legend, field, field)}: ${y2FinalFormatter(_.get(xPointMap, mouseX + '.' + field))}`}
+												{`${_.get(legend, field, field)}: ${y2FinalFormatter(_.get(xPointMap, mouseX + '.y.' + field))}`}
 											</Legend.Item>
 										: null
 									))}
