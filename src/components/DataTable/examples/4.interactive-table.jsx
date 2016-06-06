@@ -177,7 +177,7 @@ export default React.createClass({
 					ID
 				</DataTable.Column>
 
-				<DataTable.ColumnGroup title='Name' align='center'>
+				<DataTable.ColumnGroup title='Name'>
 					<DataTable.Column
 						field='first_name'
 						width={100}
