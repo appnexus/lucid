@@ -8,6 +8,8 @@ describe('Bars', () => {
 		exemptFunctionProps: [
 			'xScale',
 			'yScale',
+			'xFormatter',
+			'yFormatter',
 		],
 		getDefaultProps: () => ({
 			data: [{x: 'one', y: 2}],
