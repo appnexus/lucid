@@ -366,8 +366,8 @@ const ContextMenu = createClass({
 						portalId={portalId}
 						style={{
 							minWidth: targetRect.width,
-							...flyProps.style,
 							...this.getFlyoutPosition(),
+							...flyProps.style,
 						}}
 					>
 						{flyProps.children}
