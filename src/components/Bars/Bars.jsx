@@ -230,7 +230,7 @@ const Bars = createClass({
 								</ToolTip.Target>
 
 								<ToolTip.Title>
-									{data[seriesIndex][xField]}
+									{xFormatter(data[seriesIndex][xField])}
 								</ToolTip.Title>
 
 								<ToolTip.Body>
