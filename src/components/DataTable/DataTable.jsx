@@ -117,6 +117,7 @@ const DataTable = createClass({
 			propTypes: {
 				title: string,
 			},
+			getDefaultProps: () => ({ align: 'center' }),
 		}),
 	},
 
