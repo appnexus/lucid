@@ -29,10 +29,10 @@
   "license": "Apache-2.0",
   "dependencies": {
     "classnames": "^2.2.3",
-    "d3-scale": "^0.6.4",
-    "d3-shape": "^0.6.0",
-    "d3-time": "^0.2.5",
-    "d3-time-format": "^0.3.2",
+    "d3-scale": "^0.9.0",
+    "d3-shape": "^0.7.0",
+    "d3-time": "^0.3.0",
+    "d3-time-format": "^0.4.0",
     "lodash": "^4.11.0",
     "reselect": "^2.5.1"
   },

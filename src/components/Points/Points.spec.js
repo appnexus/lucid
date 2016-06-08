@@ -1,4 +1,4 @@
-import d3Scale from 'd3-scale';
+import * as d3Scale from 'd3-scale';
 import { common } from '../../util/generic-tests';
 
 import Points from './Points';
