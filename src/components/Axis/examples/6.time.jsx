@@ -1,6 +1,6 @@
 import React from 'react';
-import d3Scale from 'd3-scale';
-import d3Time from 'd3-time';
+import * as d3Scale from 'd3-scale';
+import * as d3Time from 'd3-time';
 
 import Axis from '../Axis';
 
