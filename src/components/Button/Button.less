@@ -19,6 +19,17 @@
 	cursor: pointer;
 	outline: none;
 
+	// from normalize.css@4.1.1
+	margin: 0; /* 2 */
+	overflow: visible;
+	text-transform: none;
+	-webkit-appearance: button; /* 2 */
+	// end normalize
+
+	// don't show Firefox's focus ring: https://github.com/appnexus/lucid/issues/292
+	&::-moz-focus-inner {
+		border: 0;
+	}
 
 	&:before {border-radius: @Button-size-borderRadius;}
 

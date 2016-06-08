@@ -41,7 +41,18 @@
 	}
 
 	&.lucid-ContextMenu-FlyOut {
-		#normalize > .fix-chrome-scrollbar-zindex();
+
+		/**
+		 * Chrome-specific selector at https://jeffclayton.wordpress.com/2014/07/22/the-chrome-and-safari-css-hacks-collection/
+		 *
+		 * Chrome 47+ (and Opera 34+)
+		 */
+
+		@supports (-webkit-appearance:none)
+			and (text-align-last:auto) and (not (-ms-accelerator:true)) {
+				-webkit-transform:translate3d(0,0,0); /* makes the scrollbar visible */
+		}
+
 		.box-sizing();
 		background-color: @color-white;
 		border: solid 1px @featured-color-default-borderColor;

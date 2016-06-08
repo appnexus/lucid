@@ -166,9 +166,6 @@ const ContextMenu = createClass({
 				getAlignmentOffset,
 				direction,
 				directonOffset,
-				alignmentOffset = alignment === ContextMenu.CENTER
-					? getAlignmentOffset(_.includes([ContextMenu.UP, ContextMenu.DOWN], direction) ? flyOutWidth : flyOutHeight)
-					: 0,
 			},
 			state: {
 				flyOutHeight,
@@ -184,6 +181,10 @@ const ContextMenu = createClass({
 			},
 			refs: { flyOutPortal },
 		} = this;
+
+		const alignmentOffset = (alignment === ContextMenu.CENTER)
+			? (getAlignmentOffset(_.includes([ContextMenu.UP, ContextMenu.DOWN], direction) ? flyOutWidth : flyOutHeight))
+			: 0;
 
 		if (!flyOutPortal) {
 			return {};
@@ -365,8 +366,8 @@ const ContextMenu = createClass({
 						portalId={portalId}
 						style={{
 							minWidth: targetRect.width,
-							...flyProps.style,
 							...this.getFlyoutPosition(),
+							...flyProps.style,
 						}}
 					>
 						{flyProps.children}
