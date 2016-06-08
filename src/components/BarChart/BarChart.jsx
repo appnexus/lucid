@@ -254,10 +254,7 @@ const BarChart = createClass({
 			.domain([yAxisMin, yAxisMax])
 			.range([innerHeight, 0]);
 
-		const xFinalFormatter = xAxisFormatter;
-		const yFinalFormatter = yAxisFormatter
-			? yAxisFormatter
-			: yScale.tickFormat();
+		const yFinalFormatter = yAxisFormatter || yScale.tickFormat();
 
 		return (
 			<svg
@@ -275,7 +272,6 @@ const BarChart = createClass({
 						tickCount={xAxisTickCount}
 					/>
 
-					{/* legend */}
 					{hasLegend ?
 						<ContextMenu
 							direction='down'
@@ -351,7 +347,7 @@ const BarChart = createClass({
 					left={margin.left}
 					xField={xAxisField}
 					xScale={xScale}
-					xFormatter={xFinalFormatter}
+					xFormatter={xAxisFormatter}
 					yFields={yAxisFields}
 					yScale={yScale}
 					yFormatter={yFinalFormatter}

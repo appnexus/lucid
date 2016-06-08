@@ -16,8 +16,9 @@ export default React.createClass({
 							key={n}
 							hasPoint
 							color={n}
-							children={`Partner ${n}`}
-						/>
+						>
+							{`Partner ${n}`}
+						</Item>
 					))}
 				</Legend>
 
@@ -30,8 +31,9 @@ export default React.createClass({
 							hasPoint
 							pointKind={n}
 							color={n}
-							children={`Partner ${n}`}
-						/>
+						>
+							{`Partner ${n}`}
+						</Item>
 					))}
 				</Legend>
 
@@ -43,8 +45,9 @@ export default React.createClass({
 							key={n}
 							hasLine
 							color={n}
-							children={`Partner ${n}`}
-						/>
+						>
+							{`Partner ${n}`}
+						</Item>
 					))}
 				</Legend>
 
@@ -58,8 +61,9 @@ export default React.createClass({
 							hasLine
 							pointKind={n}
 							color={n}
-							children={`Partner ${n}`}
-						/>
+						>
+							{`Partner ${n}`}
+						</Item>
 					))}
 				</Legend>
 

@@ -191,15 +191,15 @@ const Bars = createClass({
 			>
 				{_.map(transformedData, (series, seriesIndex) => (
 					<g key={seriesIndex}>
-						{_.map(series, (points, pointsIndex) => (
+						{_.map(series, ([start, end], pointsIndex) => (
 							<Bar
 								key={pointsIndex}
 								x={isStacked
 									? xScale(data[seriesIndex][xField])
 									: innerXScale(pointsIndex) + xScale(data[seriesIndex][xField])
 								}
-								y={yScale(points[1])}
-								height={yScale(points[0]) - yScale(points[1])}
+								y={yScale(end)}
+								height={yScale(start) - yScale(end)}
 								width={isStacked ? xScale.bandwidth() : innerXScale.bandwidth() }
 								color={pointsIndex}
 							/>
