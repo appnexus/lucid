@@ -3,8 +3,8 @@ import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { groupByFields } from '../../util/chart-helpers';
 import { createClass } from '../../util/component-types';
-import d3Scale from 'd3-scale';
-import d3Shape from 'd3-shape';
+import * as d3Scale from 'd3-scale';
+import * as d3Shape from 'd3-shape';
 
 import Bar from '../Bar/Bar';
 
