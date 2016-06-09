@@ -3,7 +3,7 @@ import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
 import { groupByFields } from '../../util/chart-helpers';
-import d3Shape from 'd3-shape';
+import * as d3Shape from 'd3-shape';
 
 import Point from '../Point/Point';
 

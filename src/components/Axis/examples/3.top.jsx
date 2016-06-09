@@ -1,5 +1,5 @@
 import React from 'react';
-import d3Scale from 'd3-scale';
+import * as d3Scale from 'd3-scale';
 
 import Axis from '../Axis';
 
