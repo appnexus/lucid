@@ -14,7 +14,7 @@ export function onPageSizeSelect(state, selectedPageSizeIndex) {
 		...state,
 		selectedPageIndex: 0,
 		selectedPageSizeIndex,
-		SingleSelect: SingleSelect.onSelect(selectedPageSizeIndex),
+		SingleSelect: SingleSelect.onSelect(state.SingleSelect, selectedPageSizeIndex),
 	};
 }
 

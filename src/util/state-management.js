@@ -110,7 +110,6 @@ export function safeMerge(objValue, srcValue) {
 }
 
 export function buildHybridComponent(baseComponent, {
-	setStateWithNewProps = true, // if true, new props will update state, else prop has priority over existing state
 	replaceEvents = false, // if true, function props replace the existing reducers, else they are invoked *after* state reducer returns
 	reducers = _.get(baseComponent, 'definition.statics.reducers', {}),
 	selectors = _.get(baseComponent, 'definition.statics.selectors', {}),
@@ -145,16 +144,7 @@ export function buildHybridComponent(baseComponent, {
 		},
 		displayName,
 		getInitialState() {
-			if (setStateWithNewProps) {
-				return _.mergeWith({}, omitFunctionPropsDeep(baseComponent.getDefaultProps()), omitFunctionPropsDeep(this.props), safeMerge);
-			}
 			return omitFunctionPropsDeep(baseComponent.getDefaultProps());
-		},
-		componentWillReceiveProps(nextProps) {
-			if (setStateWithNewProps) {
-				let nextPropsData = omitFunctionPropsDeep(nextProps);
-				this.setState(_.mergeWith({}, _.pick(this.state, _.intersection(_.keys(this.state), _.keys(nextPropsData))), nextPropsData, safeMerge));
-			}
 		},
 		componentWillMount() {
 			this.boundContext = getStatefulPropsContext(reducers, {

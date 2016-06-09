@@ -12,6 +12,7 @@ describe('Paginator reducers', () => {
 	const initialState = {
 		selectedPageIndex: 1,
 		selectedPageSizeIndex: 0,
+		SingleSelect: {},
 	};
 	const totalPages = 5;
 
@@ -46,10 +47,10 @@ describe('Paginator reducers', () => {
 			assert.equal(nextState.selectedPageIndex, 0, 'must be 0');
 		});
 
-		it('should call SingleSelect.onSelect with selectedPageSizeIndex', () => {
+		it('should call SingleSelect.onSelect with state.SingleSelect and selectedPageSizeIndex', () => {
 			const pageIndex = 2;
 			onPageSizeSelect(initialState, pageIndex, totalPages);
-			assert(SingleSelect.onSelect.calledWith(pageIndex), pageIndex, 'must be 2');
+			assert(SingleSelect.onSelect.calledWith(initialState.SingleSelect, pageIndex), pageIndex, 'must be 2');
 		});
 
 		it('should set state.SingleSelect to the return value of SingleSelect.onSelect', () => {
