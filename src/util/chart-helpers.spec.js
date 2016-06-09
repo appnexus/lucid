@@ -7,7 +7,10 @@ import {
 	maxByFieldsStacked,
 	discreteTicks,
 	groupByFields,
+	stackByFields,
+	extractFields,
 	transformFromCenter,
+	nearest,
 } from './chart-helpers';
 
 describe('chart-helpers', () => {
@@ -21,6 +24,87 @@ describe('chart-helpers', () => {
 		it('should work', () => {
 			assert.equal(transformFromCenter(10, 10, 20, 20, 2), 'translate(-30, -30) scale(2)');
 			assert.equal(transformFromCenter(10, 10, 12, 16, 3), 'translate(-26, -38) scale(3)');
+		});
+	});
+
+	describe('extractFields', () => {
+		it('should have a similar format to stackByFields', () => {
+			const data = [
+				{ a: 1  , b: 2  , c: 3  , d: 4 }   ,
+				{ a: 4  , b: 3  , c: 2  , d: 1 }   ,
+				{ a: 10 , b: 15 , c: 20 , d: 100 } ,
+			];
+
+			assert.deepEqual(extractFields(data, ['a', 'b', 'c', 'd']), [
+				[[0 , 1]  , [0 , 2]  , [0 , 3]   , [0 , 4]]   ,
+				[[0 , 4]  , [0 , 3]  , [0 , 2]   , [0 , 1]]   ,
+				[[0 , 10] , [0 , 15] , [0 , 20 ] , [0 , 100]] ,
+			]);
+		});
+
+		it('should handle missing data points', () => {
+			const data = [
+				{ a: 1  ,         c: 3  , d: 4 }   ,
+				{ a: 4  , b: 3  , c: 2  , d: 1 }   ,
+				{ a: 10 ,                 d: 100 } ,
+			];
+
+			assert.deepEqual(extractFields(data, ['a', 'b', 'c', 'd']), [
+				[[0 , 1]  , [0 , 0] , [0 , 3] , [0 , 4]]   ,
+				[[0 , 4]  , [0 , 3] , [0 , 2] , [0 , 1]]   ,
+				[[0 , 10] , [0 , 0] , [0 , 0] , [0 , 100]] ,
+			]);
+		});
+	});
+
+	describe('stackByFields', () => {
+		it('should stack data by fields', () => {
+			const data = [
+				{ a: 1  , b: 2  , c: 3  , d: 4 }   ,
+				{ a: 4  , b: 3  , c: 2  , d: 1 }   ,
+				{ a: 10 , b: 15 , c: 20 , d: 100 } ,
+			];
+
+			assert.deepEqual(stackByFields(data, ['a', 'b', 'c', 'd']), [
+				[[0 , 1]  , [1  , 3]  , [3  , 6]   , [6  , 10]]  ,
+				[[0 , 4]  , [4  , 7]  , [7  , 9]   , [9  , 10]]  ,
+				[[0 , 10] , [10 , 25] , [25 , 45 ] , [45 , 145]] ,
+			]);
+		});
+
+		it('should handle missing data points', () => {
+			const data = [
+				{ a: 1  ,         c: 3  , d: 4 }   ,
+				{ a: 4  , b: 3  , c: 2  , d: 1 }   ,
+				{ a: 10 ,                 d: 100 } ,
+			];
+
+			assert.deepEqual(stackByFields(data, ['a', 'b', 'c', 'd']), [
+				[[0 , 1]  , [1  , 1]  , [1  , 4]  , [4  , 8]]   ,
+				[[0 , 4]  , [4  , 7]  , [7  , 9]  , [9  , 10]]  ,
+				[[0 , 10] , [10 , 10] , [10 , 10] , [10 , 110]] ,
+			]);
+		});
+	});
+
+	describe('nearest', () => {
+		it('should work with a range of inputs', () => {
+			assert.equal(nearest([0, 10, 20, 50], 12.3), 10);
+			assert.equal(nearest([0, 10, 20, 50], 15.1), 20);
+			assert.equal(nearest([0, 10, 20, 50], 49), 50);
+			assert.equal(nearest([0, 10, 20, 50], 49), 50);
+		});
+
+		it('should handle numbers smaller than the range', () => {
+			assert.equal(nearest([5, 15], -15), 5);
+		});
+
+		it('should handle numbers larger than the range', () => {
+			assert.equal(nearest([5, 15], -15), 5);
+		});
+
+		it('should should favor the left side', () => {
+			assert.equal(nearest([0, 10], 5), 0);
 		});
 	});
 

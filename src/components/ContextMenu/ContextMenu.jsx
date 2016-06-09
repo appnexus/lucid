@@ -78,6 +78,14 @@ const ContextMenu = createClass({
 		Target: createClass({
 			displayName: 'ContextMenu.Target',
 			propName: 'Target',
+			propTypes: {
+				elementType: string,
+			},
+			getDefaultProps() {
+				return {
+					elementType: 'span',
+				};
+			},
 		}),
 		FlyOut: createClass({
 			displayName: 'ContextMenu.FlyOut',
@@ -351,12 +359,13 @@ const ContextMenu = createClass({
 
 		const targetElement = _.first(findTypes(this.props, ContextMenu.Target));
 		const targetChildren = _.get(targetElement, 'props.children', null);
+		const TargetElementType = targetElement.props.elementType;
 
 		const flyoutElement = _.first(findTypes(this.props, ContextMenu.FlyOut));
 		const flyProps = _.get(flyoutElement, 'props', {});
 
 		return (
-			<span ref='target' {...passThroughs} className={cx('&', className)} style={style}>
+			<TargetElementType ref='target' {...passThroughs} className={cx('&', className)} style={style}>
 				{targetChildren}
 				{isExpanded ? (
 					<Portal
@@ -373,7 +382,7 @@ const ContextMenu = createClass({
 						{flyProps.children}
 					</Portal>
 				) : null}
-			</span>
+			</TargetElementType>
 		);
 	},
 });

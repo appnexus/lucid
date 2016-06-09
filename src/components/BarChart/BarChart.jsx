@@ -11,6 +11,8 @@ import * as d3Scale from 'd3-scale';
 import Axis from '../Axis/Axis';
 import AxisLabel from '../AxisLabel/AxisLabel';
 import Bars from '../Bars/Bars';
+import ContextMenu from '../ContextMenu/ContextMenu';
+import Legend from '../Legend/Legend';
 
 const cx = lucidClassNames.bind('&-BarChart');
 
@@ -29,7 +31,7 @@ const {
 } = React.PropTypes;
 
 /**
- * {"categories": ["visualizations", "charts"]}
+ * {"categories": ["visualizations", "charts"], "madeFrom": ["ContextMenu", "ToolTip"]}
  *
  * Bar charts are great for showing data that fits neatly in to "buckets". The
  * x axis data must be strings, and the y axis data must be numeric.
@@ -73,16 +75,24 @@ const BarChart = createClass({
 		 */
 		data: arrayOf(object),
 		/**
-		 * An object with human readable names for fields that  will be used for
-		 * tooltips and legends which are *not yet implemented*. E.g:
+		 * An object with human readable names for fields that will be used for
+		 * legends and tooltips. E.g:
 		 *
 		 *     {
-		 *       x: 'Revenue',
+		 *       x: 'Date',
 		 *       y: 'Impressions',
 		 *     }
 		 *
-		 * legend: object,
 		 */
+		legend: object,
+		/**
+		 * Show tool tips on hover.
+		 */
+		hasToolTips: bool,
+		/**
+		 * Show a legend at the bottom of the chart.
+		 */
+		hasLegend: bool,
 
 
 		/**
@@ -163,11 +173,15 @@ const BarChart = createClass({
 				bottom: 50,
 				left: 80,
 			},
+			legend: {},
+			hasToolTips: true,
+			hasLegend: false,
 
 			xAxisField: 'x',
 			xAxisTickCount: null,
 			xAxisTitle: null,
 			xAxisTitleColor: -1,
+			xAxisFormatter: _.identity,
 
 			yAxisFields: ['y'],
 			yAxisTickCount: null,
@@ -185,6 +199,9 @@ const BarChart = createClass({
 			width,
 			margin,
 			data,
+			legend,
+			hasToolTips,
+			hasLegend,
 
 			xAxisField,
 			xAxisFormatter,
@@ -237,6 +254,8 @@ const BarChart = createClass({
 			.domain([yAxisMin, yAxisMax])
 			.range([innerHeight, 0]);
 
+		const yFinalFormatter = yAxisFormatter || yScale.tickFormat();
+
 		return (
 			<svg
 				{...passThroughs}
@@ -251,8 +270,39 @@ const BarChart = createClass({
 						scale={xScale}
 						outerTickSize={0}
 						tickCount={xAxisTickCount}
-						tickFormat={xAxisFormatter}
 					/>
+
+					{hasLegend ?
+						<ContextMenu
+							direction='down'
+							alignment='center'
+							directonOffset={((margin.bottom / 2) + (Legend.HEIGHT / 2)) * -1  /* should center the legend in the bottom margin */}
+						>
+							<ContextMenu.Target elementType='g'>
+								<rect
+									className={cx('&-invisible')}
+									width={innerWidth}
+									height={margin.bottom}
+								/>
+							</ContextMenu.Target>
+							<ContextMenu.FlyOut className={cx('&-legend-container')}>
+								<Legend orient='horizontal'>
+									{_.map(yAxisFields, (field, index) => (
+										<Legend.Item
+											key={index}
+											hasPoint={true}
+											hasLine={false}
+											color={index}
+											pointKind={1}
+										>
+											{_.get(legend, field, field)}
+										</Legend.Item>
+									))}
+								</Legend>
+							</ContextMenu.FlyOut>
+						</ContextMenu>
+					: null}
+
 				</g>
 
 				{/* x axis title */}
@@ -273,7 +323,7 @@ const BarChart = createClass({
 					<Axis
 						orient='left'
 						scale={yScale}
-						tickFormat={yAxisFormatter}
+						tickFormat={yFinalFormatter}
 						tickCount={yAxisTickCount}
 					/>
 				</g>
@@ -297,10 +347,14 @@ const BarChart = createClass({
 					left={margin.left}
 					xField={xAxisField}
 					xScale={xScale}
+					xFormatter={xAxisFormatter}
 					yFields={yAxisFields}
 					yScale={yScale}
+					yFormatter={yFinalFormatter}
 					data={data}
 					isStacked={yAxisIsStacked}
+					hasToolTips={hasToolTips}
+					legend={legend}
 				/>
 			</svg>
 		);
