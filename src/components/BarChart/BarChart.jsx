@@ -6,7 +6,7 @@ import {
 	maxByFields,
 	maxByFieldsStacked,
 } from '../../util/chart-helpers';
-import d3Scale from 'd3-scale';
+import * as d3Scale from 'd3-scale';
 
 import Axis from '../Axis/Axis';
 import AxisLabel from '../AxisLabel/AxisLabel';

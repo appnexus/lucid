@@ -1,6 +1,6 @@
 import _ from 'lodash';
-import d3TimeFormat from 'd3-time-format';
-import d3Time from 'd3-time';
+import * as d3TimeFormat from 'd3-time-format';
+import * as d3Time from 'd3-time';
 
 /**
  * stackByFields

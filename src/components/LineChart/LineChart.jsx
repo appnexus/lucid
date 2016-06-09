@@ -9,8 +9,8 @@ import {
 	formatDate,
 	nearest,
 } from '../../util/chart-helpers';
-import d3Scale from 'd3-scale';
-import d3TimeFormat from 'd3-time-format';
+import * as d3Scale from 'd3-scale';
+import * as d3TimeFormat from 'd3-time-format';
 
 import Axis from '../Axis/Axis';
 import AxisLabel from '../AxisLabel/AxisLabel';

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import Bars from '../Bars';
-import d3Scale from 'd3-scale';
+import * as d3Scale from 'd3-scale';
 
 const width = 1000;
 const height = 400;
