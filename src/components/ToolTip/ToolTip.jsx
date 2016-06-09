@@ -194,7 +194,7 @@ const ToolTip = createClass({
 			...passThroughs,
 		} = this.props;
 
-		const target = _.chain(findTypes(this.props, ToolTip.Target)).map('props').first().get('children').value();
+		const targetProps = _.first(_.map(findTypes(this.props, ToolTip.Target), 'props'));
 		const title = _.chain(findTypes(this.props, ToolTip.Title)).map('props').first().get('children').value();
 		const body = _.chain(findTypes(this.props, ToolTip.Body)).map('props').first().get('children').value();
 		const getAlignmentOffset = n => alignment === ContextMenu.CENTER
@@ -214,8 +214,8 @@ const ToolTip = createClass({
 				onMouseOver={this.handleMouseOverTarget}
 				onMouseOut={this.handleMouseOutTarget}
 			>
-				<Target className={cx('&-Target')}>
-					{target}
+				<Target {...targetProps} className={cx(_.get(targetProps, 'className'), '&-Target')}>
+					{_.get(targetProps, 'children')}
 				</Target>
 				<FlyOut
 					style={{
@@ -227,7 +227,9 @@ const ToolTip = createClass({
 					onMouseOut={this.handleMouseOutFlyout}
 				>
 					{isCloseable ? <CrossIcon onClick={this.handleClose} className={flyOutCx('&-close')}/> : null}
-					<h2 className={flyOutCx('&-Title')}>{title}</h2>
+					{!_.isNil(title) ?
+						<h2 className={flyOutCx('&-Title')}>{title}</h2>
+					: null}
 					{body}
 				</FlyOut>
 			</ContextMenu>

@@ -15,10 +15,6 @@ export default React.createClass({
 				<BarChart
 					data={data}
 					yAxisTitle='Revenue'
-					legend={{
-						x: 'Date',
-						y: 'Yield',
-					}}
 				/>
 			</div>
 		);

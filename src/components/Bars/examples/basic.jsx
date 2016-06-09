@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import Bars from '../Bars';
-import d3Scale from 'd3-scale';
+import * as d3Scale from 'd3-scale';
 
 const width = 1000;
 const height = 400;
@@ -40,6 +40,7 @@ export default React.createClass({
 						xScale={xScale}
 						yScale={yScale}
 						yFields={yFields}
+						hasToolTips
 					/>
 				</svg>
 
@@ -50,6 +51,7 @@ export default React.createClass({
 						yScale={yScale}
 						yFields={yFields}
 						isStacked={true}
+						hasToolTips
 					/>
 				</svg>
 			</div>

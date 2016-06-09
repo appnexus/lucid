@@ -114,8 +114,6 @@ const Checkbox = createClass({
 			onSelect,
 		} = this.props;
 
-		event.preventDefault();
-
 		if (!isDisabled) {
 			onSelect(!isSelected, { event, props: this.props });
 			this.nativeElement.focus();

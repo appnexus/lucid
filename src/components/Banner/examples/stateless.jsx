@@ -35,6 +35,8 @@ export default React.createClass({
 					<Banner kind='success' isCloseable={false}>Success -- No Close {String.fromCharCode(0x00d7)}</Banner>
 					<Banner kind='success' hasIcon={true}>Success -- has icon</Banner>
 					<Banner kind='success' hasIcon={true} isCloseable={false}>Success -- has icon -- No Close {String.fromCharCode(0x00d7)}</Banner>
+					<Banner kind='success' isSmall={true} hasIcon={true}>Success -- has icon -- small</Banner>
+					<Banner kind='success' isSmall={true} hasIcon={true} isCloseable={false}>Success -- has icon -- No Close {String.fromCharCode(0x00d7)} -- small</Banner>
 					<Banner kind='success' isSmall={true}>Success -- small</Banner>
 					<Banner kind='success' isSmall={true} isCloseable={false}>Success -- small -- No Close {String.fromCharCode(0x00d7)}</Banner>
 					<Banner kind='success' hasIcon={true}>
@@ -54,6 +56,8 @@ export default React.createClass({
 					<Banner kind='warning' hasIcon={true} isCloseable={false}>Warning -- has iconv</Banner>
 					<Banner kind='warning' isSmall={true}>Warning -- small</Banner>
 					<Banner kind='warning' isSmall={true} isCloseable={false}>Warning -- small -- No Close {String.fromCharCode(0x00d7)}</Banner>
+					<Banner kind='warning' hasIcon={true} isSmall={true}>Warning -- has icon -- small</Banner>
+					<Banner kind='warning' hasIcon={true} isSmall={true} isCloseable={false}>Warning -- has icon -- small -- No Close {String.fromCharCode(0x00d7)}</Banner>
 				</div>
 
 				<div>
@@ -63,6 +67,8 @@ export default React.createClass({
 					<Banner kind='danger' hasIcon={true} isCloseable={false}>Danger -- has icon -- No Close {String.fromCharCode(0x00d7)}</Banner>
 					<Banner kind='danger' isSmall={true}>Danger -- small</Banner>
 					<Banner kind='danger' isSmall={true} isCloseable={false}>Danger -- small -- No Close {String.fromCharCode(0x00d7)}</Banner>
+					<Banner kind='danger' hasIcon={true} isSmall={true}>Danger -- has icon -- small</Banner>
+					<Banner kind='danger' hasIcon={true} isSmall={true} isCloseable={false}>Danger -- has icon -- small -- No Close {String.fromCharCode(0x00d7)}</Banner>
 				</div>
 
 				<div>
@@ -72,6 +78,8 @@ export default React.createClass({
 					<Banner kind='info' hasIcon={true} isCloseable={false}>Info -- has icon -- No Close {String.fromCharCode(0x00d7)}</Banner>
 					<Banner kind='info' isSmall={true}>Info -- small</Banner>
 					<Banner kind='info' isSmall={true} isCloseable={false}>Info -- small -- No Close {String.fromCharCode(0x00d7)}</Banner>
+					<Banner kind='info' hasIcon={true} isSmall={true}>Info -- has icon -- small</Banner>
+					<Banner kind='info' hasIcon={true} isSmall={true} isCloseable={false}>Info -- has icon -- small -- No Close {String.fromCharCode(0x00d7)}</Banner>
 				</div>
 
 				<div>

@@ -1,6 +1,53 @@
 import _ from 'lodash';
-import d3TimeFormat from 'd3-time-format';
-import d3Time from 'd3-time';
+import * as d3TimeFormat from 'd3-time-format';
+import * as d3Time from 'd3-time';
+
+/**
+ * stackByFields
+ *
+ * D3's `stack` groups each series' data together but we sometimes we want the
+ * stacked groups to remain grouped as in the original normalized data. This
+ * function helps achieve that.
+ *
+ * @param {object[]} collection - normalized data you want to operate on
+ * @param {string[]} fields - fields to pluck off for the y data
+ * @return {array[]} - array of arrays, one for row in the original `collection`
+ */
+export function stackByFields(collection, fields) {
+	const fieldsArray = _.castArray(fields);
+
+	return _.map(collection, (d) => {
+		return _.reduce(fieldsArray, (acc, field) => {
+			const dataPoint = _.get(d, field, 0);
+
+			if (_.isEmpty(acc)) {
+				return acc.concat([[0, dataPoint]])
+			}
+
+			const last = _.last(_.last(acc));
+
+			return acc.concat([[last, last + dataPoint]]);
+		}, []);
+	});
+}
+
+/**
+ * extractFields
+ *
+ * This will return the data in a similar format to stackByFields but without
+ * the stacking.
+ *
+ * @param {object[]} collection - normalized data you want to operate on
+ * @param {string[]} fields - fields to pluck off for the y data
+ * @return {array[]} - array of arrays, one for each field
+ */
+export function extractFields(collection, fields) {
+	const fieldsArray = _.castArray(fields);
+
+	return _.map(collection, (d) => {
+		return _.map(fieldsArray, (field) => [0, _.get(d, field, 0)]);
+	});
+}
 
 /**
  * groupByFields
@@ -13,7 +60,7 @@ import d3Time from 'd3-time';
  * @return {array[]} - array of arrays, one for each field
  */
 export function groupByFields(collection, fields) {
-	const fieldsArray = [].concat(fields);
+	const fieldsArray = _.castArray(fields);
 
 	return _.map(fieldsArray, (field) => {
 		return _.map(collection, field);
@@ -31,11 +78,37 @@ export function groupByFields(collection, fields) {
  * @return {array}
  */
 export function byFields(collection, fields) {
-	const fieldArray = [].concat(fields);
+	const fieldArray = _.castArray(fields);
 
 	return _.reduce(fieldArray, (acc, field) => {
 		return acc.concat(_.map(collection, field));
 	}, []);
+}
+
+/**
+ * nearest
+ *
+ * Divide and conquer algorithm that helps find the nearest element to `value`
+ * in `nums`
+ *
+ * @param {number[]} nums - sorted array of numbers to search through
+ * @param {number} value - value you're trying to locate the nearest array element for
+ * @return {number} - the nearest array element to the value
+ */
+export function nearest(nums, value) {
+	if (nums.length < 2) {
+		return _.first(nums);
+	}
+
+	if (nums.length === 2) {
+		return value > ((nums[0] + nums[1]) / 2) ? nums[1] : nums[0];
+	}
+
+	const mid = nums.length >>> 1;
+
+	return nums[mid] > value
+		? nearest(nums.slice(0, mid + 1), value)
+		: nearest(nums.slice(mid), value);
 }
 
 /**
@@ -74,7 +147,7 @@ export function maxByFields(collection, fields) {
  * @return {any}
  */
 export function maxByFieldsStacked(collection, fields) {
-	const fieldArray = [].concat(fields);
+	const fieldArray = _.castArray(fields);
 
 	const sums = _.reduce(collection, (acc, item) => {
 		const sum = _.chain(item)
