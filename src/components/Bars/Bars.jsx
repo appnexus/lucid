@@ -7,7 +7,6 @@ import {
 } from '../../util/chart-helpers';
 import { createClass } from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
-import * as d3Shape from 'd3-shape';
 
 import Bar from '../Bar/Bar';
 import ToolTip from '../ToolTip/ToolTip';
