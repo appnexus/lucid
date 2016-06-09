@@ -1,6 +1,7 @@
 // banner sizes
 @Banner-size-spacing-rightLeft: @size-S;
 @Banner-size-spacing-topBottom: @size-standard;
+@Banner-size-spacing-topBottom-small: @size-XS;
 @Banner-size-borderRadius: @size-borderRadius;
 @Banner-size-iconFontSize: 16px;
 
@@ -87,9 +88,10 @@
 		background-color: @featured-color-danger-backgroundColor;
 	}
 
-	&-small {
-		.lucid-Banner-content {
-			padding: @Banner-size-spacing-topBottom - 5px 0;
-		}
+	&-small &-icon {
+		padding-top: @Banner-size-spacing-topBottom-small - 2px;
+	}
+	&-small &-content {
+		padding: @Banner-size-spacing-topBottom - 6px 0;
 	}
 }
