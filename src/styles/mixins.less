@@ -28,12 +28,14 @@
 		z-index: (@zindex - 1);
 		content: '';
 	}
+
 	&:hover:not(&-is-active):before {
 		opacity: 1;
 	}
 
-	&:active { box-shadow: @shadow-inset;}
-
+	&:active:not(&-is-disabled) {
+		box-shadow: @shadow-inset;
+	}
 	&:focus {
 		box-shadow: @shadow-solid-outline;
 	}
@@ -41,7 +43,7 @@
 		border-radius: @size-borderRadius;
 		box-shadow: @shadow-inset;
 	}
-	&:active:before{
+	&:active:before {
 		border-radius: @size-borderRadius;
 		box-shadow: @shadow-inset;
 		opacity: 1;
