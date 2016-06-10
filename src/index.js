@@ -53,6 +53,7 @@ import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Portal from './components/Portal/Portal';
 import RadioButton from './components/RadioButton/RadioButton';
 import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
+import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
@@ -124,6 +125,7 @@ export {
 	RadioButtonLabeled,
 	RadioGroup,
 	RadioGroupDumb,
+	RefreshIcon,
 	ResizeIcon,
 	ScrollTable,
 	SearchIcon,
