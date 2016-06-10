@@ -2,7 +2,6 @@ import React from 'react';
 import { SingleSelect } from '../../../index';
 
 const {
-	Placeholder,
 	Option,
 } = SingleSelect;
 
