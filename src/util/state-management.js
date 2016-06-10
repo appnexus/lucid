@@ -144,11 +144,11 @@ export function buildHybridComponent(baseComponent, {
 		},
 		displayName,
 		getInitialState() {
-			return omitFunctionPropsDeep(baseComponent.getDefaultProps());
+			return _.mergeWith({}, omitFunctionPropsDeep(baseComponent.getDefaultProps()), omitFunctionPropsDeep(this.props), safeMerge);
 		},
 		componentWillMount() {
 			this.boundContext = getStatefulPropsContext(reducers, {
-				getState: () => { return this.state; },
+				getState: () => _.mergeWith({}, omitFunctionPropsDeep(this.state), omitFunctionPropsDeep(this.props), safeMerge),
 				setState: (state) => { this.setState(state); },
 			});
 		},
