@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes } from '../../util/component-types';
 import * as reducers from './SingleSelect.reducers';
+import Button from '../Button/Button';
 import DropMenu from '../DropMenu/DropMenu';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 
@@ -167,6 +168,7 @@ const SingleSelect = createClass({
 		const placeholderProps = _.first(_.map(findTypes(this.props, SingleSelect.Placeholder), 'props'));
 		const placeholder = _.get(placeholderProps, 'children', 'Select');
 		const isItemSelected = _.isNumber(selectedIndex);
+		const controlIsActive = isSelectionHighlighted && (isItemSelected || isExpanded);
 
 		return (
 			<DropMenu
@@ -179,12 +181,11 @@ const SingleSelect = createClass({
 				flyOutStyle={_.assign({}, flyOutStyle, !_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null)}
 			>
 				<DropMenu.Control>
-					<div className={cx('&-Control', {
-						'&-Control-is-highlighted': (!isDisabled && isItemSelected && isSelectionHighlighted) || (isExpanded && isSelectionHighlighted),
-						'&-Control-is-selected': (!isDisabled && isItemSelected && isSelectionHighlighted) || (isExpanded && isSelectionHighlighted),
-						'&-Control-is-expanded': isExpanded,
-						'&-Control-is-disabled': isDisabled,
-					})}>
+					<Button
+						className={cx('&-Control')}
+						isDisabled={isDisabled}
+						isActive={controlIsActive}
+					>
 						<span
 							{...(!isItemSelected ? placeholderProps : null)}
 							className={cx(
@@ -195,7 +196,7 @@ const SingleSelect = createClass({
 							{isItemSelected ? flattenedOptionsData[selectedIndex].optionProps.children : placeholder}
 						</span>
 						<CaretIcon direction={isExpanded ? direction : 'down'} />
-					</div>
+					</Button>
 				</DropMenu.Control>
 				{hasReset && isItemSelected ? (
 					<DropMenu.NullOption {...placeholderProps}>{placeholder}</DropMenu.NullOption>
