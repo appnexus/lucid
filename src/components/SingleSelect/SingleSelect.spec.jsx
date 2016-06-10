@@ -8,6 +8,7 @@ import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import SingleSelect from './SingleSelect';
 import DropMenu from '../DropMenu/DropMenu';
+import Button from '../Button/Button';
 
 const {
 	Placeholder,
@@ -104,14 +105,14 @@ describe('SingleSelect', () => {
 					</SingleSelect>
 				);
 
-				const dropMenuWrapper = wrapper.find('DropMenu');
+				const dropMenuWrapper = wrapper.find(DropMenu);
 
 				assert.equal(dropMenuWrapper.prop('isDisabled'), true);
 			});
 
-			it('should apply the appropriate classNames to the control', () => {
+			it('should pass the `isDisabled` prop thru to the underlying Button control', () => {
 				const wrapper = shallow(
-					<SingleSelect isDisabled={true} selectedIndex={2}>
+					<SingleSelect isDisabled={true}>
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
@@ -119,16 +120,15 @@ describe('SingleSelect', () => {
 					</SingleSelect>
 				);
 
-				const controlWrapper = wrapper.find('.lucid-SingleSelect-Control');
+				const buttonWrapper = wrapper.find(Button);
 
-				assert(controlWrapper.hasClass('lucid-SingleSelect-Control-is-disabled'));
-				assert(!controlWrapper.hasClass('lucid-SingleSelect-Control-is-selected'));
+				assert.equal(buttonWrapper.prop('isDisabled'), true);
 			});
 		});
 
 		describe('isSelectionHighlighted', () => {
 			describe('default', () => {
-				it('should apply the appropriate classNames to the control', () => {
+				it('should apply the appropriate props to the Button control', () => {
 					const wrapper = shallow(
 						<SingleSelect selectedIndex={2}>
 							<Placeholder>select one</Placeholder>
@@ -137,13 +137,26 @@ describe('SingleSelect', () => {
 							<Option>option c</Option>
 						</SingleSelect>
 					);
-					const controlWrapper = wrapper.find('.lucid-SingleSelect-Control');
-					assert(controlWrapper.hasClass('lucid-SingleSelect-Control-is-selected'));
-					assert(controlWrapper.hasClass('lucid-SingleSelect-Control-is-highlighted'));
+					const controlWrapper = wrapper.find(Button);
+					assert(controlWrapper.prop('isActive'));
+				});
+			});
+			describe('default and isExpanded', () => {
+				it('should apply the appropriate props to the Button control', () => {
+					const wrapper = shallow(
+						<SingleSelect DropMenu={{ isExpanded: true }} >
+							<Placeholder>select one</Placeholder>
+							<Option>option a</Option>
+							<Option>option b</Option>
+							<Option>option c</Option>
+						</SingleSelect>
+					);
+					const controlWrapper = wrapper.find(Button);
+					assert(controlWrapper.prop('isActive'));
 				});
 			});
 			describe('false', () => {
-				it('should apply the appropriate classNames to the control', () => {
+				it('should apply the appropriate props to the Button control', () => {
 					const wrapper = shallow(
 						<SingleSelect
 							isSelectionHighlighted={false}
@@ -155,9 +168,8 @@ describe('SingleSelect', () => {
 							<Option>option c</Option>
 						</SingleSelect>
 					);
-					const controlWrapper = wrapper.find('.lucid-SingleSelect-Control');
-					assert(!controlWrapper.hasClass('lucid-SingleSelect-Control-is-selected'));
-					assert(!controlWrapper.hasClass('lucid-SingleSelect-Control-is-highlighted'));
+					const controlWrapper = wrapper.find(Button);
+					assert(!controlWrapper.prop('isActive'));
 				});
 			});
 		});
