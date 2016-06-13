@@ -14,10 +14,7 @@ export default React.createClass({
 			<LineChart
 				data={data}
 				margin={{
-					top: 10,
 					right: 80,
-					bottom: 50,
-					left: 80,
 				}}
 
 				yAxisFields={['apples']}
