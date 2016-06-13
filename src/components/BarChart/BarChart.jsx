@@ -16,9 +16,6 @@ import Legend from '../Legend/Legend';
 
 const cx = lucidClassNames.bind('&-BarChart');
 
-const PADDING = 0.05;
-const PADDING_GROUPED_OR_STACKED = 0.3;
-
 const {
 	arrayOf,
 	func,
@@ -163,11 +160,22 @@ const BarChart = createClass({
 		yAxisTitleColor: number,
 	},
 
+	statics: {
+		PADDING: 0.05,
+		PADDING_GROUPED_OR_STACKED: 0.3,
+		MARGIN: {
+			top: 10,
+			right: 20,
+			bottom: 50,
+			left: 80,
+		},
+	},
+
 	getDefaultProps() {
 		return {
 			height: 400,
 			width: 1000,
-			margin: {
+			margin: { // duplicated because `statics` aren't available during getDefaultProps
 				top: 10,
 				right: 20,
 				bottom: 50,
@@ -197,7 +205,7 @@ const BarChart = createClass({
 			className,
 			height,
 			width,
-			margin,
+			margin: marginOriginal,
 			data,
 			legend,
 			hasToolTips,
@@ -223,6 +231,11 @@ const BarChart = createClass({
 			...passThroughs,
 		} = this.props;
 
+		const margin = {
+			...BarChart.MARGIN,
+			...marginOriginal,
+		};
+
 		// TODO: Consider displaying something specific when there is no data,
 		// perhaps a loading indicator.
 		if (_.isEmpty(data)) {
@@ -241,8 +254,8 @@ const BarChart = createClass({
 
 		// `paddingInner` determines the space between the bars or groups of bars
 		const paddingInner = yAxisFields.length > 1
-			? PADDING_GROUPED_OR_STACKED
-			: PADDING;
+			? BarChart.PADDING_GROUPED_OR_STACKED
+			: BarChart.PADDING;
 
 		const xScale = d3Scale.scaleBand()
 			.domain(_.map(data, xAxisField))

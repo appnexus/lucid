@@ -16,10 +16,7 @@ export default React.createClass({
 			<BarChart
 				data={data}
 				margin={{
-					top: 5,
-					right: 80,
 					bottom: 100,
-					left: 80,
 				}}
 				hasLegend={true}
 				legend={{
