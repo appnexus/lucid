@@ -5,6 +5,7 @@ import { default as AutocompleteDumb } from './components/Autocomplete/Autocompl
 import { default as ButtonGroupDumb } from './components/ButtonGroup/ButtonGroup';
 import { default as DropMenuDumb } from './components/DropMenu/DropMenu';
 import { default as ExpanderDumb } from './components/Expander/Expander';
+import { default as ExpanderPanelDumb } from './components/ExpanderPanel/ExpanderPanel';
 import { default as PaginatorDumb } from './components/Paginator/Paginator';
 import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 import { default as SingleSelectDumb } from './components/SingleSelect/SingleSelect';
@@ -16,6 +17,7 @@ const Autocomplete = buildHybridComponent(AutocompleteDumb);
 const ButtonGroup = buildHybridComponent(ButtonGroupDumb);
 const DropMenu = buildHybridComponent(DropMenuDumb);
 const Expander = buildHybridComponent(ExpanderDumb);
+const ExpanderPanel = buildHybridComponent(ExpanderPanelDumb);
 const Paginator = buildHybridComponent(PaginatorDumb);
 const RadioGroup = buildHybridComponent(RadioGroupDumb);
 const SingleSelect = buildHybridComponent(SingleSelectDumb);
@@ -53,6 +55,7 @@ import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Portal from './components/Portal/Portal';
 import RadioButton from './components/RadioButton/RadioButton';
 import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
+import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
@@ -109,6 +112,8 @@ export {
 	EligibilityIcon,
 	Expander,
 	ExpanderDumb,
+	ExpanderPanel,
+	ExpanderPanelDumb,
 	Grid,
 	Icon,
 	InfoIcon,
@@ -124,6 +129,7 @@ export {
 	RadioButtonLabeled,
 	RadioGroup,
 	RadioGroupDumb,
+	RefreshIcon,
 	ResizeIcon,
 	ScrollTable,
 	SearchIcon,

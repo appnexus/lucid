@@ -1,14 +1,12 @@
-@Expander-size-icon: 20px;
-
 .lucid-Expander {
 	&-icon {
 		.box-sizing();
+		width: @size-expander-button;
+		height: @size-expander-button;
 		align-items: center;
 		display: flex;
-		height: @Expander-size-icon;
 		justify-content: center;
 		margin-right: @size-XS;
-		width: @Expander-size-icon;
 	}
 
 	&-header {
@@ -48,7 +46,7 @@
 	&-text {
 		.transition-group-animation-fade(100ms);
 		color: @color-linkColor;
-		height: @Expander-size-icon;
+		height: @size-expander-button;
 		position: relative;
 
 		// Since we have two elements in the dom during the transition from one
@@ -61,7 +59,7 @@
 		}
 
 		> * {
-			line-height: @Expander-size-icon;
+			line-height: @size-expander-button;
 			white-space: nowrap;
 		}
 	}

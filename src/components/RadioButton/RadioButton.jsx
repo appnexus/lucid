@@ -76,6 +76,10 @@ const RadioButton = createClass({
 		this.nativeElement = this.refs.nativeElement;
 	},
 
+	handleSpanClick(e) {
+		e.preventDefault();
+	},
+
 	render() {
 		const {
 			className,
@@ -104,9 +108,9 @@ const RadioButton = createClass({
 						ref='nativeElement'
 						type='radio'
 				/>
-				<span className={cx('&-visualization-glow')} />
-				<span className={cx('&-visualization-container')} />
-				<span className={cx('&-visualization-dot')} />
+				<span onClick={this.handleSpanClick} className={cx('&-visualization-glow')} />
+				<span onClick={this.handleSpanClick} className={cx('&-visualization-container')} />
+				<span onClick={this.handleSpanClick} className={cx('&-visualization-dot')} />
 			</span>
 		);
 	},
