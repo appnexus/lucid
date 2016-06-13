@@ -69,6 +69,10 @@ const Checkbox = createClass({
 		this.nativeElement = this.refs.nativeElement;
 	},
 
+	handleSpanClick(e) {
+		e.preventDefault();
+	},
+
 	render() {
 		const {
 			className,
@@ -97,9 +101,9 @@ const Checkbox = createClass({
 					ref='nativeElement'
 					type='checkbox'
 				/>
-				<span className={cx('&-visualization-glow')} />
-				<span className={cx('&-visualization-container')} />
-				<span className={cx('&-visualization-checkmark')}>
+				<span onClick={this.handleSpanClick} className={cx('&-visualization-glow')} />
+				<span onClick={this.handleSpanClick} className={cx('&-visualization-container')} />
+				<span onClick={this.handleSpanClick} className={cx('&-visualization-checkmark')}>
 					<span className={cx('&-visualization-checkmark-stem')}></span>
 					<span className={cx('&-visualization-checkmark-kick')}></span>
 				</span>
