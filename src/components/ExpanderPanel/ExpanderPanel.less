@@ -1,0 +1,54 @@
+
+.lucid-ExpanderPanel {
+	&-icon {
+		.box-sizing();
+		width: @size-expander-button;
+		height: @size-expander-button;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-right: @size-S;
+	}
+
+	&-header {
+		font-size: @size-font-large;
+		line-height: @size-font-large;
+		font-weight: bold;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+
+		&:hover {
+			> .lucid-ExpanderPanel-icon {
+				.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+				border: solid 1px @featured-color-default-borderColor;
+				border-radius: @size-borderRadius;
+				outline: none;
+
+				.lucid-ChevronIcon {
+					stroke: @color-darkGray;
+				}
+			}
+		}
+	}
+
+	&-content {
+		.expandable-animation-collapsed();
+	}
+	&-content-is-expanded {
+		.expandable-animation-expanded();
+	}
+
+	&-content-inner {
+		border-top: @border-lightBorder;
+		padding: @size-standard;
+	}
+
+	> .lucid-Panel-content {
+		padding: 0;
+	}
+
+	> .lucid-Panel-Header {
+		border-bottom: none;
+	}
+}
