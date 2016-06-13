@@ -229,6 +229,15 @@ const LineChart = createClass({
 		y2AxisTitleColor: number,
 	},
 
+	statics: {
+		MARGIN: {
+			top: 10,
+			right: 80,
+			bottom: 65,
+			left: 80,
+		},
+	},
+
 	getDefaultProps() {
 		return {
 			height: 400,
@@ -279,7 +288,7 @@ const LineChart = createClass({
 			className,
 			height,
 			width,
-			margin,
+			margin: marginOriginal,
 			data,
 			legend,
 			hasToolTips,
@@ -325,6 +334,11 @@ const LineChart = createClass({
 			isHovering,
 			mouseX,
 		} = this.state;
+
+		const margin = {
+			...LineChart.MARGIN,
+			...marginOriginal,
+		};
 
 		// TODO: Consider displaying something specific when there is no data,
 		// perhaps a loading indicator.
