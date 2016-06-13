@@ -13,10 +13,10 @@ const {
 
 /**
  *
- * {"categories": ["controls", "buttons"]}
+ * {"categories": ["layout"]}
  *
- * A basic button. Any props that are not explicitly called out below will be
- * passed through to the native `button` component.
+ * A basic header. Any props that are not explicitly called out below will be
+ * passed through to the native `header` component.
  */
 const Header = createClass({
 	displayName: 'Header',

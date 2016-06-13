@@ -5,7 +5,7 @@ export default React.createClass({
 	render() {
 		return (
 			<Header>
-				<h3>Header</h3>
+				<h3>This is a Header</h3>
 			</Header>
 		);
 	},
