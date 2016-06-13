@@ -179,12 +179,15 @@ const SingleSelect = createClass({
 				flyOutStyle={_.assign({}, flyOutStyle, !_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null)}
 			>
 				<DropMenu.Control>
-					<div className={cx('&-Control', {
-						'&-Control-is-highlighted': (!isDisabled && isItemSelected && isSelectionHighlighted) || (isExpanded && isSelectionHighlighted),
-						'&-Control-is-selected': (!isDisabled && isItemSelected && isSelectionHighlighted) || (isExpanded && isSelectionHighlighted),
-						'&-Control-is-expanded': isExpanded,
-						'&-Control-is-disabled': isDisabled,
-					})}>
+					<div
+						tabIndex={0}
+						className={cx('&-Control', {
+							'&-Control-is-highlighted': (!isDisabled && isItemSelected && isSelectionHighlighted) || (isExpanded && isSelectionHighlighted),
+							'&-Control-is-selected': (!isDisabled && isItemSelected && isSelectionHighlighted) || (isExpanded && isSelectionHighlighted),
+							'&-Control-is-expanded': isExpanded,
+							'&-Control-is-disabled': isDisabled,
+						})
+					}>
 						<span
 							{...(!isItemSelected ? placeholderProps : null)}
 							className={cx(
