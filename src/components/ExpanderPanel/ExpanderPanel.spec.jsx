@@ -20,19 +20,37 @@ describe('ExpanderPanel', () => {
 	describe('props', () => {
 		describe('isExpanded', () => {
 			it('sets the value of the `direction` prop on its `ChevronIcon` instance to "up" when `true`.', () => {
-				assert.equal(shallow(<ExpanderPanel isExpanded={true} />).find(ChevronIcon).prop('direction'), 'up');
+				const wrapper = shallow(<ExpanderPanel isExpanded={true} />);
+				const direction = wrapper.find(ChevronIcon).prop('direction');
+
+				assert.equal(direction, 'up', `direction was wrong, actual "${direction}", expected: "up"`);
 			});
 
 			it('sets the value of the `direction` prop on its `ChevronIcon` instance to "down" when `false`.', () => {
-				assert.equal(shallow(<ExpanderPanel isExpanded={false} />).find(ChevronIcon).prop('direction'), 'down');
+				const wrapper = shallow(<ExpanderPanel isExpanded={false} />);
+				const direction = wrapper.find(ChevronIcon).prop('direction');
+
+				assert.equal(direction, 'down', `direction was wrong, actual "${direction}", expected: "up"`);
 			});
 
 			it('adds the "lucid-ExpanderPanel-is-collapsed" class to the root element when `false`.', () => {
-				assert.equal(shallow(<ExpanderPanel isExpanded={false} />).find('.lucid-ExpanderPanel-is-collapsed').length, 1);
+				const wrapper = shallow(<ExpanderPanel isExpanded={false} />);
+
+				assert.equal(
+					wrapper.find('.lucid-ExpanderPanel-is-collapsed').length,
+					1,
+					'could not find element with ".lucid-ExpanderPanel-is-collapsed" class'
+				);
 			});
 
 			it('adds the "lucid-ExpanderPanel-content-is-expanded" class to its content container element when `true`.', () => {
-				assert.equal(shallow(<ExpanderPanel isExpanded={true} />).find('.lucid-ExpanderPanel-content-is-expanded').length, 1);
+				const wrapper = shallow(<ExpanderPanel isExpanded={true} />);
+
+				assert.equal(
+					wrapper.find('.lucid-ExpanderPanel-content-is-expanded').length,
+					1,
+					'could not find element with ".lucid-ExpanderPanel-content-is-expanded" class'
+				);
 			});
 		});
 
@@ -41,7 +59,7 @@ describe('ExpanderPanel', () => {
 				const wrapper = shallow(<ExpanderPanel Header='yolo' />);
 				const headerText = wrapper.find('.lucid-ExpanderPanel-header').children().at(1).text();
 
-				assert.equal(headerText, 'yolo');
+				assert.equal(headerText, 'yolo', `Header text was wrong, actual: "${headerText}", expected: "yolo"`);
 			});
 		});
 
@@ -59,57 +77,63 @@ describe('ExpanderPanel', () => {
 				);
 				const rootProps = wrapper.find('.lucid-ExpanderPanel').props();
 
-				assert(_.has(rootProps, 'foo'));
-				assert(_.has(rootProps, 'bar'));
+				assert(_.has(rootProps, 'foo'), 'props missing "foo" prop');
+				assert(_.has(rootProps, 'bar'), 'props missing "bar" prop');
 			});
 		});
 	});
 });
 
 describeWithDOM('ExpanderPanel', () => {
+	let wrapper;
+
+	afterEach(() => {
+		if (wrapper) {
+			wrapper.unmount();
+		}
+	});
+
 	describe('user clicks on the header', () => {
 		it('calls the function passed in as the `onToggle` prop', () => {
 			const onToggle = sinon.spy();
-			const wrapper = mount(
+			wrapper = mount(
 				<ExpanderPanel onToggle={onToggle} />
 			);
 
 			wrapper.find('.lucid-ExpanderPanel-header').simulate('click');
 			wrapper.find('.lucid-ExpanderPanel-icon').simulate('click');
 
-			assert.equal(onToggle.callCount, 2);
-
-			wrapper.unmount();
+			assert.equal(
+				onToggle.callCount,
+				2,
+				`onToggle called the wrong number of times, actual: ${onToggle.callCount}, expected: 2`
+			);
 		});
 
 		it('should call `onToggle` correctly when not `isExpanded`', () => {
 			const onToggle = sinon.spy();
-			const wrapper = mount(
+			wrapper = mount(
 				<ExpanderPanel isExpanded={false} onToggle={onToggle} />
 			);
 
 			wrapper.find('.lucid-ExpanderPanel-header').simulate('click');
 			wrapper.find('.lucid-ExpanderPanel-icon').simulate('click');
 
-			assert.equal(onToggle.args[0][0], true);
-			assert.equal(onToggle.args[1][0], true);
-
-			wrapper.unmount();
+			assert.equal(onToggle.args[0][0], true, 'onToggle not called with `true`');
+			assert.equal(onToggle.args[1][0], true, 'onToggle not called with `true`');
 		});
 
 		it('should call `onToggle` correctly when `isExpanded`', () => {
 			const onToggle = sinon.spy();
-			const wrapper = mount(
+			wrapper = mount(
 				<ExpanderPanel isExpanded={true} onToggle={onToggle} />
 			);
 
 			wrapper.find('.lucid-ExpanderPanel-header').simulate('click');
 			wrapper.find('.lucid-ExpanderPanel-icon').simulate('click');
 
-			assert.equal(onToggle.args[0][0], false);
-			assert.equal(onToggle.args[1][0], false);
-
-			wrapper.unmount();
+			assert.equal(onToggle.args[0][0], false, 'onToggle not called with `false`');
+			assert.equal(onToggle.args[1][0], false, 'onToggle not called with `false`');
 		});
 	});
 });

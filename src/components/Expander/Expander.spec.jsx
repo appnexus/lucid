@@ -99,10 +99,18 @@ describe('Expander', () => {
 });
 
 describeWithDOM('Expander', () => {
+	let wrapper;
+
+	afterEach(() => {
+		if (wrapper) {
+			wrapper.unmount();
+		}
+	});
+
 	describe('user clicks on the header', () => {
 		it('calls the function passed in as the `onToggle` prop', () => {
 			const onToggle = sinon.spy();
-			const wrapper = mount(
+			wrapper = mount(
 				<Expander onToggle={onToggle} />
 			);
 
@@ -111,13 +119,11 @@ describeWithDOM('Expander', () => {
 			wrapper.find('.lucid-Expander-text').simulate('click');
 
 			assert.equal(onToggle.callCount, 3);
-
-			wrapper.unmount();
 		});
 
 		it('should call `onToggle` correctly when not `isExpanded`', () => {
 			const onToggle = sinon.spy();
-			const wrapper = mount(
+			wrapper = mount(
 				<Expander isExpanded={false} onToggle={onToggle} />
 			);
 
@@ -128,13 +134,11 @@ describeWithDOM('Expander', () => {
 			assert.equal(onToggle.args[0][0], true);
 			assert.equal(onToggle.args[1][0], true);
 			assert.equal(onToggle.args[2][0], true);
-
-			wrapper.unmount();
 		});
 
 		it('should call `onToggle` correctly when `isExpanded`', () => {
 			const onToggle = sinon.spy();
-			const wrapper = mount(
+			wrapper = mount(
 				<Expander isExpanded={true} onToggle={onToggle} />
 			);
 
@@ -145,8 +149,6 @@ describeWithDOM('Expander', () => {
 			assert.equal(onToggle.args[0][0], false);
 			assert.equal(onToggle.args[1][0], false);
 			assert.equal(onToggle.args[2][0], false);
-
-			wrapper.unmount();
 		});
 	});
 });
