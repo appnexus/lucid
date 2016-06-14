@@ -247,7 +247,7 @@ describe('Paginator', () => {
 						const onPageSelect = sinon.spy();
 						wrapper = mount(
 							<Paginator
-								selectedPageIndex={10}
+								selectedPageIndex={1}
 								totalCount={30}
 								selectedPageSizeIndex={0}
 								onPageSelect={onPageSelect}
