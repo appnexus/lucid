@@ -113,11 +113,15 @@ const Paginator = createClass({
 		};
 	},
 
-	handleTextFieldChange(pageNum, totalPages) {
+	handleTextFieldChange(pageNum) {
 		const {
 			onPageSelect,
 			selectedPageIndex,
+			totalCount,
+			pageSizeOptions,
+			selectedPageSizeIndex,
 		} = this.props;
+		const totalPages = _.ceil(totalCount/pageSizeOptions[selectedPageSizeIndex]);
 		const parsedPageNum = _.parseInt(pageNum);
 		if (_.isNaN(parsedPageNum)) {
 			return onPageSelect(selectedPageIndex, totalPages);
