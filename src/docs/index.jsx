@@ -23,6 +23,7 @@ import ColorPalette from './containers/color-palette';
 import LandingPage from './containers/landing-page';
 
 import {
+	Header,
 	Table,
 	VerticalListMenuDumb,
 	Autocomplete,
@@ -341,7 +342,7 @@ const Component = React.createClass({
 					{_.map(_.get(examplesByComponent, componentName, []), (example) => {
 						return (
 							<li className={`${componentName}-example-${example.name}`} key={example.name}>
-								<div className='Component-examples-header'>
+								<Header className='Component-examples-header'>
 									<h4>{example.name}</h4>
 									<a href='#' onClick={(event) => {
 										event.preventDefault();
@@ -352,7 +353,7 @@ const Component = React.createClass({
 										: 'Show code'
 									}
 									</a>
-								</div>
+								</Header>
 								{_.get(this.state.examples, `${componentName}.${example.name}`) ?
 									<pre><code className='lang-javascript'>{example.source}</code></pre>
 								: null}

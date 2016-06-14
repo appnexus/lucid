@@ -28,7 +28,7 @@ export default React.createClass({
 					size='large'
 				>
 					<Dialog.Header>
-						<i>Rich Header</i>
+						<em>Rich Header</em>
 					</Dialog.Header>
 					<div key={'info'}>
 						For better UX, we recommend NOT handling onEscape and
