@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import { TransitionMotion, spring } from 'react-motion';
 import ContextMenu from '../ContextMenu/ContextMenu';
 import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 import * as reducers from './ToolTip.reducers';
@@ -182,6 +183,10 @@ const ToolTip = createClass({
 		this.props.onClose({ event, props: this.props });
 	},
 
+	willLeave() {
+		return { opacity: spring(0) };
+	},
+
 	render() {
 		const {
 			className,
@@ -190,6 +195,7 @@ const ToolTip = createClass({
 			flyOutMaxWidth,
 			flyOutStyle,
 			isCloseable,
+			isExpanded,
 			kind,
 			...passThroughs,
 		} = this.props;
@@ -210,6 +216,7 @@ const ToolTip = createClass({
 				direction={direction}
 				directonOffset={15}
 				getAlignmentOffset={getAlignmentOffset}
+				isExpanded={true}
 				{...passThroughs}
 				onMouseOver={this.handleMouseOverTarget}
 				onMouseOut={this.handleMouseOutTarget}
@@ -217,20 +224,37 @@ const ToolTip = createClass({
 				<Target {...targetProps} className={cx(_.get(targetProps, 'className'), '&-Target')}>
 					{_.get(targetProps, 'children')}
 				</Target>
-				<FlyOut
-					style={{
-						...flyOutStyle,
-						maxWidth: flyOutMaxWidth || flyOutStyle.maxWidth || 200,
-					}}
-					className={flyOutCx(className, '&', `&-${direction}`, `&-${alignment}`, `&-${kind}`)}
-					onMouseOver={this.handleMouseOverFlyout}
-					onMouseOut={this.handleMouseOutFlyout}
-				>
-					{isCloseable ? <CrossIcon onClick={this.handleClose} className={flyOutCx('&-close')}/> : null}
-					{!_.isNil(title) ?
-						<h2 className={flyOutCx('&-Title')}>{title}</h2>
-					: null}
-					{body}
+				<FlyOut>
+					<TransitionMotion
+						styles={[{
+							style: { opacity: isExpanded ? spring(1) : spring(0) },
+							key: 'tooltip',
+						}]}
+						defaultStyles={[{
+							style: { opacity: 0 },
+							key: 'tooltip',
+						}]}
+						willLeave={this.willLeave}
+					>
+						{([{style}]) => style.opacity > 0 ?
+							<div
+								style={{
+									...style,
+									...flyOutStyle,
+									maxWidth: flyOutMaxWidth || flyOutStyle.maxWidth || 200,
+								}}
+								className={flyOutCx(className, '&', `&-${direction}`, `&-${alignment}`, `&-${kind}`)}
+								onMouseOver={this.handleMouseOverFlyout}
+								onMouseOut={this.handleMouseOutFlyout}
+							>
+								{isCloseable ? <CrossIcon onClick={this.handleClose} className={flyOutCx('&-close')}/> : null}
+								{!_.isNil(title) ?
+									<h2 className={flyOutCx('&-Title')}>{title}</h2>
+								: null}
+								{body}
+							</div> : null
+						}
+					</TransitionMotion>
 				</FlyOut>
 			</ContextMenu>
 		);
