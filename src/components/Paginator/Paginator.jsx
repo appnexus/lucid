@@ -86,7 +86,7 @@ const Paginator = createClass({
 		TextField: shape(TextField.propTypes),
 		/**
 		 * Called when a page is selected.
-		 * Has the signature `(pageIndex, {props, event}) => {}` where pageIndex is a number.
+		 * Has the signature `(pageIndex, totalPages, {props, event}) => {}` where pageIndex is a number.
 		 */
 		onPageSelect: func,
 		/**
@@ -113,16 +113,17 @@ const Paginator = createClass({
 		};
 	},
 
-	handleTextFieldChange(pageNum, totalPages) {
+	handleTextFieldChange(pageNum, {props, event}) {
 		const {
 			onPageSelect,
 			selectedPageIndex,
+			totalPages,
 		} = this.props;
 		const parsedPageNum = _.parseInt(pageNum);
 		if (_.isNaN(parsedPageNum)) {
-			return onPageSelect(selectedPageIndex, totalPages);
+			return onPageSelect(selectedPageIndex, totalPages, {props, event});
 		}
-		return onPageSelect(parsedPageNum - 1, totalPages);
+		return onPageSelect(parsedPageNum - 1, totalPages, {props, event});
 	},
 
 	render() {
@@ -169,8 +170,8 @@ const Paginator = createClass({
 				<TextField
 					lazyLevel={100}
 					{...textFieldProps}
-					onBlur={_.partialRight(this.handleTextFieldChange, totalPages)}
-					onSubmit={_.partialRight(this.handleTextFieldChange, totalPages)}
+					onBlur={this.handleTextFieldChange}
+					onSubmit={this.handleTextFieldChange}
 					isDisabled={isDisabled}
 					value={selectedPageIndex + 1}
 				/>
