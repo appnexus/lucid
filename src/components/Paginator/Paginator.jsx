@@ -117,11 +117,8 @@ const Paginator = createClass({
 		const {
 			onPageSelect,
 			selectedPageIndex,
-			totalCount,
-			pageSizeOptions,
-			selectedPageSizeIndex,
+			totalPages,
 		} = this.props;
-		const totalPages = _.ceil(totalCount/pageSizeOptions[selectedPageSizeIndex]);
 		const parsedPageNum = _.parseInt(pageNum);
 		if (_.isNaN(parsedPageNum)) {
 			return onPageSelect(selectedPageIndex, totalPages);
@@ -173,8 +170,8 @@ const Paginator = createClass({
 				<TextField
 					lazyLevel={100}
 					{...textFieldProps}
-					onBlur={_.partialRight(this.handleTextFieldChange, totalPages)}
-					onSubmit={_.partialRight(this.handleTextFieldChange, totalPages)}
+					onBlur={this.handleTextFieldChange}
+					onSubmit={this.handleTextFieldChange}
 					isDisabled={isDisabled}
 					value={selectedPageIndex + 1}
 				/>

@@ -248,8 +248,7 @@ describe('Paginator', () => {
 						wrapper = mount(
 							<Paginator
 								selectedPageIndex={1}
-								totalCount={30}
-								selectedPageSizeIndex={0}
+								totalPages={3}
 								onPageSelect={onPageSelect}
 								/>
 						);
