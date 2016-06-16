@@ -1,6 +1,6 @@
-export function onChange(state = {}, index){
+export function onChange(state = {}, selectedIndex){
 	return {
 		...state,
-		index,
+		selectedIndex,
 	};
 }

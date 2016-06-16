@@ -9,39 +9,93 @@ import { common } from '../../util/generic-tests';
 import Accordion from './Accordion';
 import ExpanderPanel from '../ExpanderPanel/ExpanderPanel';
 
-let items = [
-	{
-		title: 'Peter Venkman',
-		content: 'Peter Venkman, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II and in the animated television series The Real Ghostbusters. In both live action films, he was portrayed by Bill Murray, and was voiced in the animated series first by Lorenzo Music and then by Dave Coulier. He is a parapsychologist and the leader of the Ghostbusters.',
-	},
-	{
-		title: 'Ray Stantz',
-		content: 'Raymond "Ray" Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.',
-	},
-	{
-		title: 'Egon Spengler',
-		content: 'Egon Spengler, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II, in the animated television series The Real Ghostbusters, and later in Extreme Ghostbusters. Spengler was portrayed by Harold Ramis in the films and voiced by him in Ghostbusters: The Video Game, and voiced by Maurice LaMarche in the cartoon series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Raymond Stantz.',
-	},
-];
-
 describe('Accordion', () => {
 	common(Accordion);
 
 	describe('props', () => {
-		describe('items', () => {
+
+		describe('Item', () => {
 			it('renders ExpanderPanel components on it', () => {
 				const wrapper = mount(
-					<Accordion items={items} index={1} />
+					<Accordion>
+						<Accordion.Item Header='Header One'>One</Accordion.Item>
+						<Accordion.Item Header='Header Two'>Two</Accordion.Item>
+					</Accordion>
 				);
 
-				assert(wrapper.find(ExpanderPanel), 3);
+				assert(wrapper.find(ExpanderPanel), 2);
+			});
+
+			it('Item as children', () => {
+				const wrapper = shallow(
+					<Accordion>
+						<Accordion.Item Header='Header One'>One</Accordion.Item>
+						<Accordion.Item Header='Header Two'>Two</Accordion.Item>
+					</Accordion>
+				);
+
+				assert.equal(wrapper.find('.lucid-Accordion-Item').length, 2);
+			});
+
+			it('Item as props', () => {
+				const wrapper = shallow(
+					<Accordion Item={[{children: 'One'}, {children: 'Two'}]} />
+				);
+
+				assert.equal(wrapper.find('.lucid-Accordion-Item').length, 2);
+			});
+
+			it('Item as props with Header', () => {
+				const wrapper = shallow(
+					<Accordion Item={[
+						{ Header: 'Header One', children: 'One' },
+						{ Header: 'Header Two', children: 'Two' },
+					]} />
+				);
+
+				assert.equal(wrapper.find('.lucid-Accordion-Item').length, 2);
 			});
 		});
 
-		describe('index', () => {
+		describe('Header', () => {
+			it('Header as props', () => {
+				const wrapper = mount(
+					<Accordion>
+						<Accordion.Item Header='Froyo'>Yolo fo sho</Accordion.Item>
+						<Accordion.Item>Broyoyo</Accordion.Item>
+					</Accordion>
+				);
+
+				const firstItem = wrapper.find('.lucid-Accordion-Item').first();
+
+				assert.equal(firstItem.find('.lucid-ExpanderPanel-header').text(), 'Froyo');
+			});
+
+			it('Header as children', () => {
+				const wrapper = mount(
+					<Accordion>
+						<Accordion.Item>
+							<Accordion.Header>Froyo</Accordion.Header>
+							Yolo fo sho
+						</Accordion.Item>
+						<Accordion.Item>Broyoyo</Accordion.Item>
+					</Accordion>
+				);
+
+				const firstItem = wrapper.find('.lucid-Accordion-Item').first();
+
+				assert.equal(firstItem.find('.lucid-ExpanderPanel-header').text(), 'Froyo');
+			});
+		});
+
+		describe('selectedIndex', () => {
 			it('should have an expanded item when set via props', () => {
 				const wrapper = mount(
-					<Accordion index={1} />
+					<Accordion selectedIndex={1}>
+						<Accordion.Item Header='Header Test'>test</Accordion.Item>
+						<Accordion.Item Header='Header Test'>test</Accordion.Item>
+						<Accordion.Item Header='Header Test'>test</Accordion.Item>
+					</Accordion>
 				);
 
 				assert(wrapper.find('.lucid-ExpanderPanel-content-is-expanded'), 1);
@@ -69,20 +123,20 @@ describe('Accordion', () => {
 
 describeWithDOM('Accordion', () => {
 	let wrapper;
-
-	afterEach(() => {
-		if (wrapper) {
-			wrapper.unmount();
-		}
-	});
+	let onChange = sinon.spy();
 
 	describe('user picks one of the items', () => {
-		it('calls the function passed in as the `onChange` prop', () => {
-			const onChange = sinon.spy();
+		beforeEach(() => {
+			onChange.reset();
 			wrapper = mount(
-				<Accordion onChange={onChange} items={items} />
+				<Accordion onChange={onChange}>
+					<Accordion.Item Header='Header One'>One</Accordion.Item>
+					<Accordion.Item Header='Header Two' isDisabled={true}>Two</Accordion.Item>
+				</Accordion>
 			);
+		});
 
+		it('should call the function passed in as the `onChange` prop', () => {
 			const firstPanel = wrapper.find('.lucid-ExpanderPanel').at(0);
 
 			firstPanel.find('.lucid-ExpanderPanel-header').simulate('click');
@@ -92,6 +146,19 @@ describeWithDOM('Accordion', () => {
 				onChange.callCount,
 				2,
 				`onChange called the wrong number of times, actual: ${onChange.callCount}, expected: 2`
+			);
+		});
+
+		it('should not call the function passed in as the `onChange` prop when Item is disabled', () => {
+			const firstPanel = wrapper.find('.lucid-ExpanderPanel').at(1);
+
+			firstPanel.find('.lucid-ExpanderPanel-header').simulate('click');
+			firstPanel.find('.lucid-ExpanderPanel-icon').simulate('click');
+
+			assert.equal(
+				onChange.callCount,
+				0,
+				`onChange called the wrong number of times, actual: ${onChange.callCount}, expected: 0`
 			);
 		});
 	});

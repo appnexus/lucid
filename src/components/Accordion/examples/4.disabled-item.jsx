@@ -2,25 +2,13 @@ import React from 'react';
 import { Accordion } from '../../../index';
 
 export default React.createClass({
-	getInitialState() {
-    return {
-			index: 2,
-    };
-  },
-
-	handleChange(index) {
-		this.setState({
-			index,
-		});
-	},
-
   render() {
     return (
-			<Accordion onChange={this.handleChange} selectedIndex={this.state.index}>
+			<Accordion>
 				<Accordion.Item Header='Peter Venkman'>
 					Peter Venkman, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II and in the animated television series The Real Ghostbusters. In both live action films, he was portrayed by Bill Murray, and was voiced in the animated series first by Lorenzo Music and then by Dave Coulier. He is a parapsychologist and the leader of the Ghostbusters.
 				</Accordion.Item>
-				<Accordion.Item Header='Ray Stantz'>
+				<Accordion.Item Header='Ray Stantz' isDisabled={true}>
 					Raymond "Ray" Stantz, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters, Ghostbusters II, Casper, and the animated television series The Real Ghostbusters. He was portrayed by Dan Aykroyd in both live action films, and voiced by Frank Welker in the animated series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Egon Spengler.
 				</Accordion.Item>
 				<Accordion.Item Header='Egon Spengler'>

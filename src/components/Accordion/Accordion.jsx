@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass }  from '../../util/component-types';
+import { createClass, findTypes }  from '../../util/component-types';
 
 import ExpanderPanel from '../ExpanderPanel/ExpanderPanel';
 
@@ -11,7 +11,7 @@ const cx = lucidClassNames.bind('&-Accordion');
 
 const {
 	func,
-	array,
+	bool,
 	object,
 	number,
 	string,
@@ -20,20 +20,31 @@ const {
 /**
  * {"categories": ["layout"], "madeFrom": ["ExpanderPanel"]}
  *
- * This is a container that renders panels from an array of items
- * and controls its expansion/retraction.
+ * This is a container that renders panels and controls its expansion/retraction.
  */
 const Accordion = createClass({
 	displayName: 'Accordion',
 
+	components: {
+		Item: createClass({
+			displayName: 'Accordion.Item',
+			propName: 'Item',
+			propTypes: {
+				/**
+				* Styles a item as disabled. When this property is set to true, the item can't be expanded.
+				*/
+				isDisabled: bool,
+			},
+		}),
+		Header: createClass({
+			displayName: 'Accordion.Header',
+			propName: 'Header',
+		}),
+	},
+
 	reducers,
 
 	propTypes: {
-		/**
-		 * An array of the items to be rendered on accordion
-		 */
-		items: array,
-
 		/**
 		 * Appended to the component-specific class names set on the root
 		 * element.
@@ -43,7 +54,7 @@ const Accordion = createClass({
 		/**
 		 * Indicates which item is expanded.
 		 */
-		index: number,
+		selectedIndex: number,
 
 		/**
 		 * Called when the user clicks on the component's header of an item.
@@ -60,7 +71,6 @@ const Accordion = createClass({
 
 	getDefaultProps() {
 		return {
-			items: [],
 			onChange: _.noop,
 		};
 	},
@@ -76,28 +86,35 @@ const Accordion = createClass({
 
 	render() {
 		const {
-			items,
-			className,
-			index,
 			style,
+			className,
+			selectedIndex,
 			...passThroughs,
 		} = this.props;
+
+		const itemChildProps = _.map(findTypes(this.props, Accordion.Item), 'props');
 
 		return (
 			<div
 				{...passThroughs}
 				className={cx('&', className)}
 				style={style}>
-				{items.map((item, i) => (
-					<ExpanderPanel
-						key={`expander-${i}`}
-						style={item.style}
-						onToggle={(isExpanded, { event }) => this.handleToggle(isExpanded, i, event)}
-						isExpanded={i === index}>
-						<ExpanderPanel.Header>{item.title}</ExpanderPanel.Header>
-						{item.content}
-					</ExpanderPanel>
-				))}
+				{_.map(itemChildProps, (itemChildProp, index) => {
+					let { isDisabled } = itemChildProp;
+
+					return <div
+						key={`expander-${index}`}
+						className={cx('&-Item', {
+							'&-Item-is-disabled': isDisabled,
+						})}>
+						<ExpanderPanel
+							onToggle={(isExpanded, { event }) => !isDisabled && this.handleToggle(isExpanded, index, event)}
+							isExpanded={!isDisabled && selectedIndex === index}>
+							<ExpanderPanel.Header>{_.get(_.first(findTypes(itemChildProp, Accordion.Header)), 'props.children', '')}</ExpanderPanel.Header>
+							{_.get(itemChildProp, 'children', '')}
+						</ExpanderPanel>
+					</div>;
+				})}
 			</div>
 		);
 	},
