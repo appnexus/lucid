@@ -95,7 +95,10 @@
 
 	&-Tab-is-active-and-open {
 		border-bottom: @Tabs-border-width solid @color-white;
-		z-index: 1; // Safari fix
+
+		// `z-index: -1` fixes a very minor visual bug here in IE 11, but it
+		// introduces a bigger bug when using Tabs inside Dialogs.
+
 		&:hover {
 			.Tabs-mixin-tab-arrow-background();
 		}

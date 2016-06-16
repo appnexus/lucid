@@ -6,14 +6,13 @@
 	max-height: @max;
 }
 
-// gradient animation mixin
-// takes start color, end color and transition time (set to .1s by default)
-.gradient-animation(@start, @end, @transTime: .1s, @zindex: 0) {
+// Gradient animation mixin -- basically used for buttons
+// takes a start and end color
+.gradient-animation(@start, @end) {
 	position: relative;
 	background-size: 100%;
 	background-image: linear-gradient(@start, @end);
-	transition: opacity @transTime, box-shadow (@transTime / 2);
-	z-index: @zindex;
+	transition: opacity @timing-animation-hover, box-shadow (@timing-animation-hover / 2);
 
 	&:before {
 		position: absolute;
@@ -24,8 +23,8 @@
 		background-image: linear-gradient(@end, @start);
 		box-shadow: none;
 		opacity: 0;
-		transition: opacity @transTime, box-shadow (@transTime / 2);
-		z-index: (@zindex - 1);
+		transition: opacity @timing-animation-hover, box-shadow (@timing-animation-hover / 2);
+		z-index: -1;
 		content: '';
 	}
 
@@ -50,7 +49,7 @@
 	}
 }
 
-// gradient reset take a background if different than none
+// gradient reset takes a background if different than none
 .gradient-reset(@background: none) {
 	background: @background;
 
@@ -189,7 +188,7 @@
 		content: '';
 		transform-origin: 0 0;
 		transform: scaleX(@scale);
-		transition: transform 100ms;
+		transition: transform @timing-animation-hover;
 	}
 }
 
