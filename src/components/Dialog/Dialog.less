@@ -1,4 +1,3 @@
-@Dialog-zIndex: 4000;
 @Dialog-size-spacing: @size-standard;
 @Dialog-size-borderRadius: @size-borderRadius + 2;
 @Dialog-size-maxHeight: 80vh;
@@ -17,7 +16,7 @@
 		box-shadow: 0 0 4px 0 @color-gray-50;
 		max-height: @Dialog-size-maxHeight;
 		overflow: hidden;
-		z-index: @Dialog-zIndex + 1;
+		z-index: @zindex-modal;
 	}
 
 	&-window-is-small {
