@@ -1,8 +1,23 @@
 .lucid-Header {
 	display: flex;
   align-items: center;
+	font-weight: bold;
+	font-family: @fontFamily;
 
-	&-large {}
-	&-medium {}
-	&-small {}
+	&-largexl {
+		font-size: @size-font*2;
+	}
+	&-large {
+		font-size: @size-font-large;
+	}
+	&-medium {
+		font-size: @size-font*1.2;
+	}
+	&-small {
+		font-size: @size-font;
+	}
+
+	&-has-border {
+		border-bottom: 1px solid @color-borderColorLight;
+	}
 }

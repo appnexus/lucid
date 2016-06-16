@@ -22,8 +22,8 @@ describe('Dialog', () => {
 				</Dialog.Header>
 			</Dialog>
 		);
-
-		assert.equal(wrapper.find('.lucid-Dialog-header').text(), 'Mobius');
+		const headerText = wrapper.find('.lucid-Dialog-header').children().text();
+		assert.equal(headerText, 'Mobius', `Header text was wrong, actual: "${headerText}", expected: "Mobius"`);
 	});
 
 	it('should render a Footer', () => {
@@ -100,5 +100,3 @@ describeWithDOM('Dialog', () => {
 		wrapper.unmount();
 	});
 })
-
-

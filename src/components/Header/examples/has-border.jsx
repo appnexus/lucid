@@ -4,8 +4,8 @@ import { Header } from '../../../index';
 export default React.createClass({
 	render() {
 		return (
-			<Header>
-				This is a Header
+			<Header hasBorder>
+				Header with a Border
 			</Header>
 		);
 	},

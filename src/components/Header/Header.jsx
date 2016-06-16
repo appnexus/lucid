@@ -6,7 +6,9 @@ const cx = lucidClassNames.bind('&-Header');
 
 const {
 	arrayOf,
+	bool,
 	node,
+	oneOf,
 	oneOfType,
 	string,
 } = React.PropTypes;
@@ -33,19 +35,36 @@ const Header = createClass({
 			node,
 			arrayOf(node),
 		]),
+		hasBorder: bool,
+		/**
+		 * size variations of the button
+		 */
+		size: oneOf([
+			'short',
+			'small',
+			'large',
+		]),
 	},
 
 	render() {
 		const {
 			className,
 			children,
+			hasBorder,
+			size,
 			...passThroughs,
 		} = this.props;
 
 		return (
 			<header
 				{...passThroughs}
-				className={cx('&', className)}
+				className={cx('&', {
+					'&-small': size === 'small',
+					'&-medium': size === 'medium',
+					'&-large': size === 'large',
+					'&-largexl': size === 'largeXL',
+					'&-has-border': hasBorder,
+				}, className)}
 			>
 				{children}
 			</header>
