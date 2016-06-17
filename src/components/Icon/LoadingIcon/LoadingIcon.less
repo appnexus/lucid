@@ -1,0 +1,23 @@
+.lucid-LoadingIcon {
+
+	&-spinner {
+		transform-origin: center;
+		animation: dash linear infinite;
+	}
+
+	@keyframes dash {
+		0% {
+			stroke-dashoffset: 0;
+			stroke-dasharray: 150 100;
+		}
+		50% {
+			stroke-dashoffset: 250;
+			stroke-dasharray: 10 300;
+		}
+		100% {
+			stroke-dashoffset: 500;
+			stroke-dasharray: 150 100;
+		}
+	}
+
+}
