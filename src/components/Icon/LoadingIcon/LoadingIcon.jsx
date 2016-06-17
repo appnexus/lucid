@@ -55,13 +55,10 @@ const LoadingIcon = createClass({
 					fill='none'
 				/>
 				<circle
+					className={cx('&-circle')}
 					cx='50'
 					cy='50'
 					r='40'
-					stroke='#e3e3e3'
-					fill='none'
-					strokeWidth='12'
-					strokeLinecap='round'
 				/>
 				<circle
 					style={{ animationDuration }}
@@ -69,10 +66,6 @@ const LoadingIcon = createClass({
 					cx='50'
 					cy='50'
 					r='40'
-					stroke='#2abbb0'
-					fill='none'
-					strokeWidth='12'
-					strokeLinecap='round'
 				/>
 			</Icon>
 		);
