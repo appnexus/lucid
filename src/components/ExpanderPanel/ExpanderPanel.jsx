@@ -62,6 +62,12 @@ const ExpanderPanel = createClass({
 		isExpanded: bool,
 
 		/**
+		 * Indicates that the component is in the "disabled" state when true
+		 * and in the "enabled" state when false.
+		 */
+		isDisabled: bool,
+
+		/**
 		 * Called when the user clicks on the component's header.
 		 *
 		 * Signature: `(isExpanded, { event, props }) => {}`
@@ -82,10 +88,12 @@ const ExpanderPanel = createClass({
 	},
 
 	handleToggle(event) {
-		this.props.onToggle(!this.props.isExpanded, {
-			event,
-			props: this.props,
-		});
+		if(!this.props.isDisabled){
+			this.props.onToggle(!this.props.isExpanded, {
+				event,
+				props: this.props,
+			});
+		}
 	},
 
 	render() {
@@ -93,6 +101,7 @@ const ExpanderPanel = createClass({
 			children,
 			className,
 			isExpanded,
+			isDisabled,
 			style,
 			...passThroughs,
 		} = this.props;
@@ -104,6 +113,7 @@ const ExpanderPanel = createClass({
 				{...passThroughs}
 				className={cx('&', {
 					'&-is-collapsed': !isExpanded,
+					'&-is-disabled': isDisabled,
 				}, className)}
 				style={style}
 			>

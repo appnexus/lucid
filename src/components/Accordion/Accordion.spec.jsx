@@ -48,118 +48,118 @@ describe('Accordion', () => {
 			it('Item as props with Header', () => {
 				const wrapper = shallow(
 					<Accordion Item={[
-						{ Header: 'Header One', children: 'One' },
-						{ Header: 'Header Two', children: 'Two' },
-					]} />
-				);
+							{ Header: 'Header One', children: 'One' },
+							{ Header: 'Header Two', children: 'Two' },
+						]} />
+					);
 
-				assert.equal(wrapper.find('.lucid-Accordion-Item').length, 2);
-			});
-		});
-
-		describe('Header', () => {
-			it('Header as props', () => {
-				const wrapper = mount(
-					<Accordion>
-						<Accordion.Item Header='Froyo'>Yolo fo sho</Accordion.Item>
-						<Accordion.Item>Broyoyo</Accordion.Item>
-					</Accordion>
-				);
-
-				const firstItem = wrapper.find('.lucid-Accordion-Item').first();
-
-				assert.equal(firstItem.find('.lucid-ExpanderPanel-header').text(), 'Froyo');
+					assert.equal(wrapper.find('.lucid-Accordion-Item').length, 2);
+				});
 			});
 
-			it('Header as children', () => {
-				const wrapper = mount(
-					<Accordion>
-						<Accordion.Item>
-							<Accordion.Header>Froyo</Accordion.Header>
-							Yolo fo sho
-						</Accordion.Item>
-						<Accordion.Item>Broyoyo</Accordion.Item>
-					</Accordion>
-				);
+			describe('Header', () => {
+				it('Header as props', () => {
+					const wrapper = mount(
+						<Accordion>
+							<Accordion.Item Header='Froyo'>Yolo fo sho</Accordion.Item>
+							<Accordion.Item>Broyoyo</Accordion.Item>
+						</Accordion>
+					);
 
-				const firstItem = wrapper.find('.lucid-Accordion-Item').first();
+					const firstItem = wrapper.find('.lucid-Accordion-Item').first();
 
-				assert.equal(firstItem.find('.lucid-ExpanderPanel-header').text(), 'Froyo');
+					assert.equal(firstItem.find('.lucid-ExpanderPanel-header').text(), 'Froyo');
+				});
+
+				it('Header as children', () => {
+					const wrapper = mount(
+						<Accordion>
+							<Accordion.Item>
+								<Accordion.Header>Froyo</Accordion.Header>
+								Yolo fo sho
+							</Accordion.Item>
+							<Accordion.Item>Broyoyo</Accordion.Item>
+						</Accordion>
+					);
+
+					const firstItem = wrapper.find('.lucid-Accordion-Item').first();
+
+					assert.equal(firstItem.find('.lucid-ExpanderPanel-header').text(), 'Froyo');
+				});
 			});
-		});
 
-		describe('selectedIndex', () => {
-			it('should have an expanded item when set via props', () => {
-				const wrapper = mount(
-					<Accordion selectedIndex={1}>
-						<Accordion.Item Header='Header Test'>test</Accordion.Item>
-						<Accordion.Item Header='Header Test'>test</Accordion.Item>
-						<Accordion.Item Header='Header Test'>test</Accordion.Item>
-					</Accordion>
-				);
+			describe('selectedIndex', () => {
+				it('should have an expanded item when set via props', () => {
+					const wrapper = mount(
+						<Accordion selectedIndex={1}>
+							<Accordion.Item Header='Header Test'>test</Accordion.Item>
+							<Accordion.Item Header='Header Test'>test</Accordion.Item>
+							<Accordion.Item Header='Header Test'>test</Accordion.Item>
+						</Accordion>
+					);
 
-				assert(wrapper.find('.lucid-ExpanderPanel-content-is-expanded'), 1);
+					assert(wrapper.find('.lucid-ExpanderPanel-content-is-expanded'), 1);
+				});
 			});
-		});
 
-		describe('pass throughs', () => {
-			it('passes through all props not defined in `propTypes` to the root element', () => {
-				const wrapper = shallow(
-					<Accordion
+			describe('pass throughs', () => {
+				it('passes through all props not defined in `propTypes` to the root element', () => {
+					const wrapper = shallow(
+						<Accordion
 							className='wut'
 							style={{ marginRight: 10 }}
 							foo={1}
 							bar={2}
-					/>
-				);
-				const rootProps = wrapper.find('.lucid-Accordion').props();
+							/>
+					);
+					const rootProps = wrapper.find('.lucid-Accordion').props();
 
-				assert(_.has(rootProps, 'foo'), 'props missing "foo" prop');
-				assert(_.has(rootProps, 'bar'), 'props missing "bar" prop');
+					assert(_.has(rootProps, 'foo'), 'props missing "foo" prop');
+					assert(_.has(rootProps, 'bar'), 'props missing "bar" prop');
+				});
 			});
 		});
 	});
-});
 
-describeWithDOM('Accordion', () => {
-	let wrapper;
-	let onSelect = sinon.spy();
+	describeWithDOM('Accordion', () => {
+		let wrapper;
+		let onSelect = sinon.spy();
 
-	describe('user picks one of the items', () => {
-		beforeEach(() => {
-			onSelect.reset();
-			wrapper = mount(
-				<Accordion onSelect={onSelect}>
-					<Accordion.Item Header='Header One'>One</Accordion.Item>
-					<Accordion.Item Header='Header Two' isDisabled={true}>Two</Accordion.Item>
-				</Accordion>
-			);
-		});
+		describe('user picks one of the items', () => {
+			beforeEach(() => {
+				onSelect.reset();
+				wrapper = mount(
+					<Accordion onSelect={onSelect}>
+						<Accordion.Item Header='Header One'>One</Accordion.Item>
+						<Accordion.Item Header='Header Two' isDisabled={true}>Two</Accordion.Item>
+					</Accordion>
+				);
+			});
 
-		it('should call the function passed in as the `onSelect` prop', () => {
-			const firstPanel = wrapper.find('.lucid-ExpanderPanel').at(0);
+			it('should call the function passed in as the `onSelect` prop', () => {
+				const firstPanel = wrapper.find('.lucid-ExpanderPanel').at(0);
 
-			firstPanel.find('.lucid-ExpanderPanel-header').simulate('click');
-			firstPanel.find('.lucid-ExpanderPanel-icon').simulate('click');
+				firstPanel.find('.lucid-ExpanderPanel-header').simulate('click');
+				firstPanel.find('.lucid-ExpanderPanel-icon').simulate('click');
 
-			assert.equal(
-				onSelect.callCount,
-				2,
-				`onSelect called the wrong number of times, actual: ${onSelect.callCount}, expected: 2`
-			);
-		});
+				assert.equal(
+					onSelect.callCount,
+					2,
+					`onSelect called the wrong number of times, actual: ${onSelect.callCount}, expected: 2`
+				);
+			});
 
-		it('should not call the function passed in as the `onSelect` prop when Item is disabled', () => {
-			const firstPanel = wrapper.find('.lucid-ExpanderPanel').at(1);
+			it('should not call the function passed in as the `onSelect` prop when Item is disabled', () => {
+				const firstPanel = wrapper.find('.lucid-ExpanderPanel').at(1);
 
-			firstPanel.find('.lucid-ExpanderPanel-header').simulate('click');
-			firstPanel.find('.lucid-ExpanderPanel-icon').simulate('click');
+				firstPanel.find('.lucid-ExpanderPanel-header').simulate('click');
+				firstPanel.find('.lucid-ExpanderPanel-icon').simulate('click');
 
-			assert.equal(
-				onSelect.callCount,
-				0,
-				`onSelect called the wrong number of times, actual: ${onSelect.callCount}, expected: 0`
-			);
+				assert.equal(
+					onSelect.callCount,
+					0,
+					`onSelect called the wrong number of times, actual: ${onSelect.callCount}, expected: 0`
+				);
+			});
 		});
 	});
-});

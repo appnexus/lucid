@@ -51,4 +51,17 @@
 	> .lucid-Panel-Header {
 		border-bottom: none;
 	}
+
+	&-is-disabled:after {
+		content: '';
+		position: absolute;
+		cursor: not-allowed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: @color-gray-40;
+		color: @color-disabledText;
+	}
+
 }

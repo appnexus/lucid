@@ -88,9 +88,9 @@ export {
 };
 
 export {
-	ArrowIcon,
 	Accordion,
 	AccordionDumb,
+	ArrowIcon,
 	Autocomplete,
 	AutocompleteDumb,
 	Badge,
