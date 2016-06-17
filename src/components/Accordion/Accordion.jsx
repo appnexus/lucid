@@ -31,7 +31,7 @@ const Accordion = createClass({
 			propName: 'Item',
 			propTypes: {
 				/**
-				* Styles a item as disabled. When this property is set to true, the item can't be expanded.
+				* Styles an item as disabled. When this property is set to true, the item can't be expanded.
 				*/
 				isDisabled: bool,
 			},
@@ -61,7 +61,7 @@ const Accordion = createClass({
 		 *
 		 * Signature: `(itemIndex, { event, props }) => {}`
 		 */
-		onChange: func,
+		onSelect: func,
 
 		/**
 		 * Passed through to the root element.
@@ -71,14 +71,14 @@ const Accordion = createClass({
 
 	getDefaultProps() {
 		return {
-			onChange: _.noop,
+			onSelect: _.noop,
 		};
 	},
 
 	handleToggle(isExpanded, index, event) {
 		const selectedIndex = isExpanded ? index : null;
 
-		this.props.onChange(selectedIndex, {
+		this.props.onSelect(selectedIndex, {
 			event,
 			props: this.props,
 		});

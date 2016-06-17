@@ -1,4 +1,4 @@
-export function onChange(state = {}, selectedIndex){
+export function onSelect(state = {}, selectedIndex){
 	return {
 		...state,
 		selectedIndex,

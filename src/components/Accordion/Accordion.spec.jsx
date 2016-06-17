@@ -123,42 +123,42 @@ describe('Accordion', () => {
 
 describeWithDOM('Accordion', () => {
 	let wrapper;
-	let onChange = sinon.spy();
+	let onSelect = sinon.spy();
 
 	describe('user picks one of the items', () => {
 		beforeEach(() => {
-			onChange.reset();
+			onSelect.reset();
 			wrapper = mount(
-				<Accordion onChange={onChange}>
+				<Accordion onSelect={onSelect}>
 					<Accordion.Item Header='Header One'>One</Accordion.Item>
 					<Accordion.Item Header='Header Two' isDisabled={true}>Two</Accordion.Item>
 				</Accordion>
 			);
 		});
 
-		it('should call the function passed in as the `onChange` prop', () => {
+		it('should call the function passed in as the `onSelect` prop', () => {
 			const firstPanel = wrapper.find('.lucid-ExpanderPanel').at(0);
 
 			firstPanel.find('.lucid-ExpanderPanel-header').simulate('click');
 			firstPanel.find('.lucid-ExpanderPanel-icon').simulate('click');
 
 			assert.equal(
-				onChange.callCount,
+				onSelect.callCount,
 				2,
-				`onChange called the wrong number of times, actual: ${onChange.callCount}, expected: 2`
+				`onSelect called the wrong number of times, actual: ${onSelect.callCount}, expected: 2`
 			);
 		});
 
-		it('should not call the function passed in as the `onChange` prop when Item is disabled', () => {
+		it('should not call the function passed in as the `onSelect` prop when Item is disabled', () => {
 			const firstPanel = wrapper.find('.lucid-ExpanderPanel').at(1);
 
 			firstPanel.find('.lucid-ExpanderPanel-header').simulate('click');
 			firstPanel.find('.lucid-ExpanderPanel-icon').simulate('click');
 
 			assert.equal(
-				onChange.callCount,
+				onSelect.callCount,
 				0,
-				`onChange called the wrong number of times, actual: ${onChange.callCount}, expected: 0`
+				`onSelect called the wrong number of times, actual: ${onSelect.callCount}, expected: 0`
 			);
 		});
 	});
