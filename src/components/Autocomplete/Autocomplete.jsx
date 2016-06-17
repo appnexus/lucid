@@ -5,7 +5,6 @@ import { createClass } from '../../util/component-types';
 import * as reducers from './Autocomplete.reducers';
 import * as KEYCODE from '../../constants/key-code';
 import DropMenu from '../DropMenu/DropMenu';
-import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 
 const cx = lucidClassNames.bind('&-Autocomplete');
 
@@ -20,13 +19,15 @@ const {
 
 /**
  *
- * {"categories": ["controls", "text"], "madeFrom": ["CaretIcon", "DropMenu"]}
+ * {"categories": ["controls", "text"], "madeFrom": ["DropMenu"]}
  *
  * A text input with suggested values displayed in an attached menu.
  */
 
 const Autocomplete = createClass({
 	displayName: 'Autocomplete',
+
+	_lucidIsPrivate: true,
 
 	reducers,
 
@@ -209,10 +210,7 @@ const Autocomplete = createClass({
 			...passThroughs,
 		} = this.props;
 
-		const {
-			direction,
-			isExpanded,
-		} = dropMenuProps;
+		const { isExpanded } = dropMenuProps;
 
 		const value = this.getInputValue();
 		const valuePattern = new RegExp(_.escapeRegExp(value), 'i');
@@ -239,7 +237,6 @@ const Autocomplete = createClass({
 							onKeyDown={this.handleInputKeydown}
 							disabled={isDisabled}
 						/>
-						<CaretIcon direction={isExpanded ? direction : 'down'} />
 					</div>
 				</DropMenu.Control>
 				{value ? _.map(suggestions, (suggestion) => (
