@@ -1,0 +1,20 @@
+.lucid-LoadingIcon {
+
+	circle {
+		fill: none;
+		stroke-width: 12;
+		stroke-linecap: round;
+	}
+
+	&-spinner {
+		transform-origin: center;
+		animation: dash linear infinite;
+		stroke: @color-primary;
+		stroke-dasharray: 150px 100px;
+	}
+
+	&-circle {
+		stroke: @color-gray;
+	}
+
+}
