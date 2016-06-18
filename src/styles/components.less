@@ -52,3 +52,18 @@
 @import '../components/Overlay/Overlay';
 @import '../components/Dialog/Dialog';
 @import '../components/Autocomplete/Autocomplete'; // Should import after DropMenu
+
+@keyframes dash {
+	0% {
+		stroke-dashoffset: 0;
+		stroke-dasharray: 150px 100px;
+	}
+	50% {
+		stroke-dashoffset: 250px;
+		stroke-dasharray: 10px 300px;
+	}
+	100% {
+		stroke-dashoffset: 500px;
+		stroke-dasharray: 150px 100px;
+	}
+}
