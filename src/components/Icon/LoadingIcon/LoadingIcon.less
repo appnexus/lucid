@@ -1,4 +1,5 @@
 .lucid-LoadingIcon {
+	-ms-animation: rotate-animation linear infinite;
 
 	circle {
 		fill: none;
@@ -8,27 +9,41 @@
 
 	&-spinner {
 		transform-origin: center;
-		animation: dash linear infinite;
+		animation: dash-animation linear infinite;
 		stroke: @color-primary;
+		stroke-dasharray: 150px 100px;
 	}
 
 	&-circle {
 		stroke: @color-gray;
 	}
 
-	@keyframes dash {
-		0% {
-			stroke-dashoffset: 0;
-			stroke-dasharray: 150 100;
-		}
-		50% {
-			stroke-dashoffset: 250;
-			stroke-dasharray: 10 300;
-		}
-		100% {
-			stroke-dashoffset: 500;
-			stroke-dasharray: 150 100;
-		}
-	}
-
 }
+
+@keyframes rotate-animation {
+	0% {
+		transform: rotateZ(0deg);
+	}
+	50% {
+		transform: rotateZ(180deg);
+	}
+	100% {
+		transform: rotateZ(360deg);
+	}
+}
+
+@keyframes dash-animation {
+	0% {
+		stroke-dashoffset: 0px;
+		stroke-dasharray: 150px 100px;
+	}
+	50% {
+		stroke-dashoffset: 250px;
+		stroke-dasharray: 10px 300px;
+	}
+	100% {
+		stroke-dashoffset: 500px;
+		stroke-dasharray: 150px 100px;
+	}
+}
+

@@ -36,6 +36,7 @@ const LoadingIcon = createClass({
 		const {
 			className,
 			speed,
+			style,
 			...passThroughs,
 		} = this.props;
 
@@ -46,6 +47,7 @@ const LoadingIcon = createClass({
 				{...passThroughs}
 				viewBox='0 0 100 100'
 				className={cx('&', className)}
+				style={{ animationDuration, ...style }}
 			>
 				<rect
 					x='0'
@@ -67,6 +69,7 @@ const LoadingIcon = createClass({
 					cy='50'
 					r='40'
 				/>
+
 			</Icon>
 		);
 	},
