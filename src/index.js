@@ -49,6 +49,7 @@ import Icon from './components/Icon/Icon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import LineChart from './components/LineChart/LineChart';
 import LoadingIcon from './components/Icon/LoadingIcon/LoadingIcon';
+import LoadingIndicator from './components/LoadingIndicator/LoadingIndicator';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import Overlay from './components/Overlay/Overlay';
 import Panel from './components/Panel/Panel';
@@ -120,6 +121,7 @@ export {
 	InfoIcon,
 	LineChart,
 	LoadingIcon,
+	LoadingIndicator,
 	MinusIcon,
 	Overlay,
 	Paginator,

@@ -1,0 +1,55 @@
+.lucid-LoadingIndicator {
+
+	&-container {
+		position: relative;
+	}
+
+	&-banner-container {
+		.transition-group-animation-fade();
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		background: none;
+	}
+
+	&-has-overlay {
+		background-color: @color-gray-60;
+	}
+
+	@banner-padding: @size-standard;
+	&-banner {
+		background-color: @color-white;
+		position: relative;
+		display: inline-block;
+		text-align: center;
+		border: @border-lightBorder;
+		border-radius: @size-borderRadius;
+		padding: @banner-padding;
+		max-width: 135px + (@banner-padding * 2);
+	}
+	&-title {
+		font: bold @size-L @fontFamily;
+		margin: 6px 0 0;
+	}
+	&-body {
+		font: @font;
+		margin: 6px 0 0;
+	}
+	&-close {
+		position: absolute;
+		top: 6px;
+		right: 6px;
+		cursor: pointer;
+		fill: @color-gray-50;
+		&:hover {
+			fill: @color-black;
+		}
+	}
+}
+
