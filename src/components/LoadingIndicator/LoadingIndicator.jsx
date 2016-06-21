@@ -111,7 +111,7 @@ const LoadingIndicator = createClass({
 				>
 					{isLoading && (
 						<div className={cx('&-banner-container', { '&-has-overlay': hasOverlay })}>
-							<div className={cx('&-banner')}>
+							<div className={cx('&-banner', { '&-no-content': !titleChildren && !bodyChildren })}>
 								{icon}
 								{!_.isNull(titleChildren) && <h3 className={cx('&-title')}>{titleChildren || defaultTitle}</h3>}
 								{bodyChildren && <span className={cx('&-body')}>{bodyChildren}</span>}
