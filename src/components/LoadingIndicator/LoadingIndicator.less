@@ -1,5 +1,9 @@
 .lucid-LoadingIndicator {
 
+	.lucid-Icon {
+		display: inline-block;
+	}
+
 	&-container {
 		position: relative;
 	}
@@ -24,6 +28,7 @@
 
 	@banner-padding: @size-standard;
 	&-banner {
+		line-height: 1em;
 		background-color: @color-white;
 		position: relative;
 		display: inline-block;
@@ -31,7 +36,7 @@
 		border: @border-lightBorder;
 		border-radius: @size-borderRadius;
 		padding: @banner-padding;
-		max-width: 135px + (@banner-padding * 2);
+		width: 135px + (@banner-padding * 2);
 	}
 	&-title {
 		font: bold @size-L @fontFamily;
@@ -40,6 +45,7 @@
 	&-body {
 		font: @font;
 		margin: 6px 0 0;
+		display: inline-block;
 	}
 	&-close {
 		position: absolute;
@@ -50,6 +56,9 @@
 		&:hover {
 			fill: @color-black;
 		}
+	}
+	&-no-content {
+		width: inherit;
 	}
 }
 
