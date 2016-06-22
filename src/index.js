@@ -45,6 +45,7 @@ import DragCaptureZone from './components/DragCaptureZone/DragCaptureZone';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
 import Grid from './components/Grid/Grid';
+import Header from './components/Header/Header';
 import Icon from './components/Icon/Icon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import LineChart from './components/LineChart/LineChart';
@@ -116,6 +117,7 @@ export {
 	ExpanderPanel,
 	ExpanderPanelDumb,
 	Grid,
+	Header,
 	Icon,
 	InfoIcon,
 	LineChart,

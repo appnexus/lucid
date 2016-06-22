@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes } from '../../util/component-types';
+import {Header} from '../../index';
 
 const cx = lucidClassNames.bind('&-Panel');
 
@@ -78,7 +79,7 @@ const Panel = createClass({
 				style={style}
 			>
 				{headerChildProp ? (
-					<header
+					<Header
 						{...headerChildProp}
 						className={cx('&-Header', headerChildProp.className)}
 					/>

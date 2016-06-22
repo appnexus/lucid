@@ -1,14 +1,18 @@
 import _ from 'lodash';
 import React from 'react';
-import Overlay from '../Overlay/Overlay';
+import {Header, Overlay} from '../../index';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes }  from '../../util/component-types';
+
 
 const cx = lucidClassNames.bind('&-Dialog');
 
 const {
+	arrayOf,
 	node,
 	oneOf,
+	oneOfType,
+	string,
 } = React.PropTypes;
 
 const SMALL = 'small';
@@ -16,14 +20,13 @@ const MEDIUM = 'medium';
 const LARGE = 'large';
 
 /**
- * {"categories": ["layout"], "extend": "Overlay", "madeFrom": ["Portal", "Overlay"]}
+ * {"categories": ["layout"], "extend": "Overlay", "madeFrom": ["Header", "Overlay", "Portal"]}
  *
  * Dialog is used to pop open a window so the user doesn't lose the context of
  * the page behind it. Extra props are spread through to the underlying `Overlay`
  */
 const Dialog = createClass({
 	displayName: 'Dialog',
-
 	components: {
 		Header: createClass({
 			displayName: 'Dialog.Header',
@@ -36,8 +39,17 @@ const Dialog = createClass({
 	},
 
 	propTypes: {
-		...Overlay.propTypes,
-
+		/**
+		 * any valid React children
+		 */
+		children: oneOfType([
+			node,
+			arrayOf(node),
+		]),
+		/**
+		 * class names that are appended to the defaults
+		 */
+		className: string,
 		/**
 		 * Size variations that only affect the width of the dialog. All the sizes
 		 * will grow in height until they get too big, at which point they will
@@ -64,6 +76,7 @@ const Dialog = createClass({
 
 	render() {
 		const {
+			children,
 			className,
 			size,
 			...passThroughs,
@@ -84,13 +97,12 @@ const Dialog = createClass({
 						'&-window-is-large': size === LARGE,
 					})}
 				>
-					<header
+					<Header
 						{...headerChildProp}
 						className={cx('&-header')}
-					/>
-
+						/>
 					<section className={cx('&-body')}>
-						{this.props.children}
+						{children}
 					</section>
 
 					<footer
@@ -104,4 +116,3 @@ const Dialog = createClass({
 });
 
 export default Dialog;
-
