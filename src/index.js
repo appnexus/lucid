@@ -59,6 +59,7 @@ import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
+import SplitVertical from './components/SplitVertical/SplitVertical';
 import StickySection from './components/StickySection/StickySection';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import Switch from './components/Switch/Switch';
@@ -135,6 +136,7 @@ export {
 	SearchIcon,
 	SingleSelect,
 	SingleSelectDumb,
+	SplitVertical,
 	StickySection,
 	SuccessIcon,
 	Switch,
