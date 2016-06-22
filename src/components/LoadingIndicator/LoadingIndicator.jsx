@@ -3,27 +3,21 @@ import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, rejectTypes } from '../../util/component-types';
-import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
+import LoadingMessage from '../LoadingMessage/LoadingMessage';
 
 const cx = lucidClassNames.bind('&-LoadingIndicator');
 
 const {
 	bool,
-	element,
-	func,
 	node,
 	string,
 } = React.PropTypes;
 
-const defaultIcons = {
-	default: <LoadingIcon />,
-};
-
 /**
  *
- * {"categories": ["communication"], "madeFrom": ["DangerIcon", "InfoIcon", "SuccessIcon", "WarningIcon"]}
+ * {"categories": ["communication"], "madeFrom": ["LoadingMessage"]}
  *
- * A loading indicator. Any props that are not explicitly called out below will be
+ * A loading indicator wrapper with optional overlay.
  *
  */
 const LoadingIndicator = createClass({
@@ -35,10 +29,6 @@ const LoadingIndicator = createClass({
 		 */
 		hasOverlay: bool,
 		/**
-		 * Pass in an icon component for custom icon to show in `LoadingIndicator`.
-		 */
-		icon: element,
-		/**
 		 * Class names that are appended to the defaults.
 		 */
 		className: string,
@@ -47,33 +37,16 @@ const LoadingIndicator = createClass({
 		 */
 		children: node,
 		/**
-		 * Called when the user closes the `LoadingIndicator`.
-		 *
-		 * Signature: `({ event, props }) => {}`
-		 */
-		onClose: func,
-		/**
-		 * Controls the visibility of the `LoadingIndicator`.
+		 * Controls the visibility of the `LoadingMessage` and overlay.
 		 */
 		isLoading: bool,
-
 	},
 
-	components: {
-		Title: createClass({
-			displayName: 'LoadingIndicator.Title',
-			propName: 'Title',
-		}),
-		Body: createClass({
-			displayName: 'LoadingIndicator.Body',
-			propName: 'Body',
-		}),
-	},
+	components: { LoadingMessage },
 
 	getDefaultProps() {
 		return {
 			hasOverlay: true,
-			onClose: _.noop,
 			isLoading: false,
 		};
 	},
@@ -83,7 +56,6 @@ const LoadingIndicator = createClass({
 			props,
 			props: {
 				hasOverlay,
-				icon = defaultIcons['default'],
 				className,
 				children,
 				isLoading,
@@ -91,31 +63,25 @@ const LoadingIndicator = createClass({
 			},
 		} = this;
 
-		const defaultTitle = 'Loading';
-		const titleElement = _.first(findTypes(props, LoadingIndicator.Title));
-		const titleChildren = _.get(titleElement, 'props.children');
-		const bodyElement = _.first(findTypes(props, LoadingIndicator.Body));
-		const bodyChildren = _.get(bodyElement, 'props.children', null);
-		const otherChildren = rejectTypes(children, [LoadingIndicator.Title, LoadingIndicator.Body]);
+		const { LoadingMessage } = LoadingIndicator;
+
+		const messageElement = _.first(findTypes(props, LoadingMessage)) || <LoadingMessage />;
+		const otherChildren = rejectTypes(children, [LoadingMessage]);
 
 		return (
 			<div
-				{..._.omit(passThroughs, ['Title', 'Body'])}
+				{..._.omit(passThroughs, ['Message'])}
 				className={cx('&', '&-container', className)}
 			>
 				{otherChildren}
 				<ReactCSSTransitionGroup
-					transitionName={cx('&-banner-container')}
+					transitionName={cx('&-message-container')}
 					transitionEnterTimeout={300}
 					transitionLeaveTimeout={300}
 				>
 					{isLoading && (
-						<div className={cx('&-banner-container', { '&-has-overlay': hasOverlay })}>
-							<div className={cx('&-banner', { '&-no-content': !titleChildren && !bodyChildren })}>
-								{icon}
-								{!_.isNull(titleChildren) && <h3 className={cx('&-title')}>{titleChildren || defaultTitle}</h3>}
-								{bodyChildren && <span className={cx('&-body')}>{bodyChildren}</span>}
-							</div>
+						<div className={cx('&-message-container', { '&-has-overlay': hasOverlay })}>
+							{messageElement}
 						</div>
 					)}
 				</ReactCSSTransitionGroup>

@@ -1,12 +1,12 @@
 import React from 'react';
-import { BarChart, LoadingIndicator, LoadingIcon } from '../../../index';
+import { BarChart, LoadingIndicator } from '../../../index';
 
 export default React.createClass({
 	render() {
 		return (
 			<LoadingIndicator
+				hasOverlay={false}
 				isLoading
-				icon={<LoadingIcon speed='slow'/>}
 			>
 				<BarChart
 					data={[

@@ -26,6 +26,7 @@ export default React.createClass({
 		return (
 			<LoadingIndicator isLoading={isLoading}>
 				<Button
+					style={{ margin: 10 }}
 					onClick={() => {
 						this.setState({ isLoading: true });
 						setTimeout(() => this.setState({ isLoading: false, data: getData() }), 2000);
@@ -37,7 +38,6 @@ export default React.createClass({
 					data={data}
 					yAxisTitle='Revenue'
 				/>
-				<LoadingIndicator.Title>Loading</LoadingIndicator.Title>
 			</LoadingIndicator>
 		);
 
