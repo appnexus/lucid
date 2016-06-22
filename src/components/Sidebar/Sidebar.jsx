@@ -23,7 +23,7 @@ const {
 /**
  * {"categories": ["layout"]}
  *
- * `Sidebar` renders an collapsible, resizeable side bar panel next to primary content.
+ * `Sidebar` renders a collapsible, resizeable side bar panel next to primary content.
  */
 const Sidebar = createClass({
 	displayName: 'Sidebar',

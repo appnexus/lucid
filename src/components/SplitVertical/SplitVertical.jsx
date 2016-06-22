@@ -24,6 +24,8 @@ const {
 const SplitVertical = createClass({
 	displayName: 'SplitVertical',
 
+	_lucidIsPrivate: true,
+
 	propTypes: {
 		/**
 		 * Appended to the component-specific class names set on the root
@@ -31,7 +33,7 @@ const SplitVertical = createClass({
 		 */
 		className: any,
 		/**
-		 * Direct children must be types {Splitvertical.Leftpane, Splitvertical.Divider, Splitvertical.Leftpane}.
+		 * Direct children must be types {Splitvertical.Leftpane, Splitvertical.Divider, Splitvertical.RightPane}.
 		 * All content is composed as children of these respective elements.
 		 */
 		children: node,
@@ -361,9 +363,10 @@ const SplitVertical = createClass({
 						className={cx('&-LeftPane', {
 							'&-is-secondary': leftPaneProps === secondary,
 						}, leftPaneProps.className)}
-						style={_.assign({}, {
+						style={{
 							flexBasis: _.isNil(leftPaneProps.width) ? (leftPaneProps === secondary ? 'calc(50% - 3px)' : null) : leftPaneProps.width,
-						}, leftPaneProps.style)}
+							...leftPaneProps.style,
+						}}
 						ref='leftPane'
 					>{leftPaneProps.children}</div>
 					<DragCaptureZone
@@ -378,9 +381,10 @@ const SplitVertical = createClass({
 						className={cx('&-RightPane', {
 							'&-is-secondary': rightPaneProps === secondary,
 						}, rightPaneProps.className)}
-						style={_.assign({}, {
+						style={{
 							flexBasis: _.isNil(rightPaneProps.width) ? (rightPaneProps === secondary ? 'calc(50% - 3px)' : null) : rightPaneProps.width,
-						}, rightPaneProps.style)}
+							...rightPaneProps.style,
+						}}
 						ref='rightPane'
 					>{rightPaneProps.children}</div>
 				</div>
