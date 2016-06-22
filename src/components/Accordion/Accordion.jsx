@@ -90,7 +90,7 @@ const Accordion = createClass({
 					return <ExpanderPanel
 							key={index}
 							{...itemChildProp}
-							 className={cx('&-Item')}
+							className={cx('&-Item')}
 							onToggle={(isExpanded, { event }) => this.handleToggle(isExpanded, index, event)}
 							isExpanded={!itemChildProp.isDisabled && selectedIndex === index}/>;
 				})}
