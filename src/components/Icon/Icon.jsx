@@ -88,15 +88,15 @@ const Icon = createClass({
 
 		return (
 			<svg
+				width={size}
+				height={size}
+				viewBox={viewBox}
+				preserveAspectRatio={aspectRatio}
 				{...passThroughs}
 				style={_.pickBy(actualStyle, _.negate(_.isUndefined))}
 				className={cx('&', {
 					'&-is-badge': isBadge,
 				}, className)}
-				width={size}
-				height={size}
-				viewBox={viewBox}
-				preserveAspectRatio={aspectRatio}
 			>
 				{children}
 			</svg>
