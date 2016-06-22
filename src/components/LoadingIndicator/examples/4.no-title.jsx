@@ -4,7 +4,7 @@ import { BarChart, LoadingIndicator } from '../../../index';
 export default React.createClass({
 	render() {
 		return (
-			<LoadingIndicator isLoading hasOverlay={false}>
+			<LoadingIndicator isLoading>
 				<BarChart
 					data={[
 						{ x: '2015-01-01', y: 1 },
@@ -13,6 +13,7 @@ export default React.createClass({
 						{ x: '2015-01-04', y: 5 },
 					]}
 				/>
+				<LoadingIndicator.LoadingMessage Title={null} />
 			</LoadingIndicator>
 		);
 	},

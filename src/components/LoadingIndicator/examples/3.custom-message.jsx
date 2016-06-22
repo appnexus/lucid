@@ -1,12 +1,21 @@
 import React from 'react';
-import { BarChart, LoadingIndicator } from '../../../index';
+import { BarChart, LoadingIndicator, LoadingIcon } from '../../../index';
+
+const {
+	LoadingMessage,
+	LoadingMessage: {
+		Title,
+		Body,
+		Icon,
+	},
+} = LoadingIndicator;
 
 export default React.createClass({
 	render() {
 		return (
 			<div>
 
-				<LoadingIndicator isLoading Title={null}>
+				<LoadingIndicator isLoading>
 					<BarChart
 						data={[
 							{ x: '2015-01-01', y: 1 },
@@ -15,6 +24,11 @@ export default React.createClass({
 							{ x: '2015-01-04', y: 5 },
 						]}
 					/>
+					<LoadingMessage>
+						<Icon><LoadingIcon speed='slow'/></Icon>
+						<Title>Custom Title</Title>
+						<Body>Custom Body</Body>
+					</LoadingMessage>
 				</LoadingIndicator>
 
 				<LoadingIndicator isLoading>
@@ -26,7 +40,11 @@ export default React.createClass({
 							{ x: '2015-01-04', y: 5 },
 						]}
 					/>
-					<LoadingIndicator.Title>{null}</LoadingIndicator.Title>
+					<LoadingMessage
+						Icon={<LoadingIcon speed='fast'/>}
+						Title='Enhancing...'
+						Body='Please wait'
+					/>
 				</LoadingIndicator>
 
 			</div>

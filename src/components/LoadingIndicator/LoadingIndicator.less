@@ -8,7 +8,7 @@
 		position: relative;
 	}
 
-	&-banner-container {
+	&-message-container {
 		.transition-group-animation-fade();
 		position: absolute;
 		top: 0;
@@ -25,40 +25,4 @@
 	&-has-overlay {
 		background-color: @color-gray-60;
 	}
-
-	@banner-padding: @size-standard;
-	&-banner {
-		line-height: 1em;
-		background-color: @color-white;
-		position: relative;
-		display: inline-block;
-		text-align: center;
-		border: @border-lightBorder;
-		border-radius: @size-borderRadius;
-		padding: @banner-padding;
-		width: 135px + (@banner-padding * 2);
-	}
-	&-title {
-		font: bold @size-L @fontFamily;
-		margin: 6px 0 0;
-	}
-	&-body {
-		font: @font;
-		margin: 6px 0 0;
-		display: inline-block;
-	}
-	&-close {
-		position: absolute;
-		top: 6px;
-		right: 6px;
-		cursor: pointer;
-		fill: @color-gray-50;
-		&:hover {
-			fill: @color-black;
-		}
-	}
-	&-no-content {
-		width: inherit;
-	}
 }
-
