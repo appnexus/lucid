@@ -65,6 +65,12 @@
 // Colors
 // -----------------------------------------------------------------------------
 
+// Grays
+@color-lightGray: #f4f4f4;
+@color-gray: #e3e3e3;
+@color-mediumGray: #c5c5c5;
+@color-darkGray: #333333;
+
 // Standard text color
 @color-textColor: @color-darkGray;
 @color-disabledText: tint(@color-textColor, 50%);
@@ -89,12 +95,6 @@
 @color-primaryMedium: tint(@color-primary, 65%);
 @color-primaryLight: tint(@color-primary, 85%);
 @color-primary-30: fade(@color-primary, 30%);
-
-// Grays
-@color-lightGray: #f4f4f4;
-@color-gray: #e3e3e3;
-@color-mediumGray: #c5c5c5;
-@color-darkGray: #333333;
 
 // Transparent grays
 @color-gray-5: fade(@color-black, 5%);
@@ -177,6 +177,48 @@
 // -------------------------------------
 // Chart Colors
 // -------------------------------------
+// NOTE: if you make changes to chart colors, you **must** keep their javascript
+// counterparts in sync.
+
+// This list should always be in sync with the full set of chart colors
+@color-chart-variables:
+	color-chart-0,
+	color-chart-0-lightest,
+	color-chart-0-light,
+	color-chart-0-dark,
+	color-chart-0-darkest,
+	color-chart-1,
+	color-chart-1-lightest,
+	color-chart-1-light,
+	color-chart-1-dark,
+	color-chart-1-darkest,
+	color-chart-2,
+	color-chart-2-lightest,
+	color-chart-2-light,
+	color-chart-2-dark,
+	color-chart-2-darkest,
+	color-chart-3,
+	color-chart-3-lightest,
+	color-chart-3-light,
+	color-chart-3-dark,
+	color-chart-3-darkest,
+	color-chart-4,
+	color-chart-4-lightest,
+	color-chart-4-light,
+	color-chart-4-dark,
+	color-chart-4-darkest,
+	color-chart-5,
+	color-chart-5-lightest,
+	color-chart-5-light,
+	color-chart-5-dark,
+	color-chart-5-darkest,
+	color-chart-good,
+	color-chart-good-dark,
+	color-chart-good-light,
+	color-chart-bad,
+	color-chart-bad-dark,
+	color-chart-bad-light,
+	color-chart-neutral;
 
 @color-chart-0: @featured-color-info;
 @color-chart-0-lightest: tint(@color-chart-0, 90%);
@@ -190,13 +232,13 @@
 @color-chart-1-dark: shade(@color-chart-1, 35%);
 @color-chart-1-darkest: shade(@color-chart-1, 70%);
 
-@color-chart-2: @color-primary;
+@color-chart-2: #c73774;
 @color-chart-2-lightest: tint(@color-chart-2, 90%);
 @color-chart-2-light: tint(@color-chart-2, 65%);
 @color-chart-2-dark: shade(@color-chart-2, 35%);
 @color-chart-2-darkest: shade(@color-chart-2, 70%);
 
-@color-chart-3: #824bb0;
+@color-chart-3: #00b8c8;
 @color-chart-3-lightest: tint(@color-chart-3, 90%);
 @color-chart-3-light: tint(@color-chart-3, 65%);
 @color-chart-3-dark: shade(@color-chart-3, 35%);
@@ -208,7 +250,7 @@
 @color-chart-4-dark: shade(@color-chart-4, 35%);
 @color-chart-4-darkest: shade(@color-chart-4, 70%);
 
-@color-chart-5: #d144b5;
+@color-chart-5: #824bb0;
 @color-chart-5-lightest: tint(@color-chart-5, 90%);
 @color-chart-5-light: tint(@color-chart-5, 65%);
 @color-chart-5-dark: shade(@color-chart-5, 35%);

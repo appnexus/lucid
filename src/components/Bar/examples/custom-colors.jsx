@@ -18,23 +18,11 @@ export default React.createClass({
 		return (
 			<div>
 				<svg {...svgProps}>
-					<Bar {...pointProps} color={1} />
+					<Bar {...pointProps} color='#f80' />
 				</svg>
 
 				<svg {...svgProps}>
-					<Bar {...pointProps} color={2} />
-				</svg>
-
-				<svg {...svgProps}>
-					<Bar {...pointProps} color={3} />
-				</svg>
-
-				<svg {...svgProps}>
-					<Bar {...pointProps} color={4} />
-				</svg>
-
-				<svg {...svgProps}>
-					<Bar {...pointProps} color={5} />
+					<Bar {...pointProps} color='#abc123' />
 				</svg>
 			</div>
 		);

@@ -1,12 +1,14 @@
+import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
+import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Line');
 
 const {
-	number,
 	string,
+	object,
 } = React.PropTypes;
 
 /**
@@ -22,6 +24,10 @@ const Line = createClass({
 
 	propTypes: {
 		/**
+		 * Passed through to the root element.
+		 */
+		style: object,
+		/**
 		 * Appended to the component-specific class names set on the root element.
 		 */
 		className: string,
@@ -30,15 +36,19 @@ const Line = createClass({
 		 */
 		d: string,
 		/**
-		 * Zero-based set of colors. It's recommended that you pass the index of
-		 * your array for colors.
+		 * Strings should match an existing color class unless they start with a
+		 * '#' for specific colors. E.g.:
+		 *
+		 * - `COLOR_0`
+		 * - `COLOR_GOOD`
+		 * - `'#123abc'`
 		 */
-		color: number,
+		color: string,
 	},
 
 	getDefaultProps() {
 		return {
-			color: 0,
+			color: chartConstants.COLOR_0,
 		};
 	},
 
@@ -47,15 +57,25 @@ const Line = createClass({
 			className,
 			color,
 			d,
+			style,
 			...passThroughs,
 		} = this.props;
 
-		const colorIndex = color % 6;
+		const isCustomColor = _.startsWith(color, '#');
+		const colorStyle = isCustomColor
+			? { fill: color, stroke: color }
+			: {};
 
 		return (
 			<path
 				{...passThroughs}
-				className={cx(className, '&', `&-color-${colorIndex}`)}
+				style={{
+					...style,
+					...colorStyle,
+				}}
+				className={cx(className, '&', {
+					[`&-${color}`]: !isCustomColor,
+				})}
 				d={d}
 			/>
 		);

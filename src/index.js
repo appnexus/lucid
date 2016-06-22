@@ -76,6 +76,7 @@ import * as domHelpers from './util/dom-helpers';
 import * as stateManagement from './util/state-management';
 import * as styleHelpers from './util/style-helpers';
 import * as redux from './util/redux';
+import * as chartConstants from './constants/charts';
 
 export {
 	componentTypes,
@@ -83,6 +84,7 @@ export {
 	redux,
 	stateManagement,
 	styleHelpers,
+	chartConstants,
 };
 
 export {

@@ -193,8 +193,39 @@
 }
 
 // -----------------------------------------------------------------------------
-// Font mixins
+// Typography
 // -----------------------------------------------------------------------------
-.bold(){
+
+.bold() {
 	font-weight: 500;
 }
+
+// -----------------------------------------------------------------------------
+// Charts
+// -----------------------------------------------------------------------------
+
+// This function will apply all the variables in `@color-chart-variables` as
+// `fill` or `stroke`s.
+.chart-color-loop(
+	@i: length(@color-chart-variables),
+	@fill: false,
+	@stroke: false,
+) when (@i > 0) {
+	@name: extract(@color-chart-variables, @i);
+
+	&-@{name} when(@fill = true) {
+		fill: @@name;
+	}
+
+	&-@{name} when(@stroke = true) {
+		stroke: @@name;
+	}
+
+	// Recurse
+	.chart-color-loop(
+		@i: @i - 1,
+		@fill: @fill,
+		@stroke: @stroke
+	);
+}
+

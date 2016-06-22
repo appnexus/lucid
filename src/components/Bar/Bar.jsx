@@ -1,6 +1,8 @@
+import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
+import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Bar');
 
@@ -8,6 +10,7 @@ const {
 	number,
 	bool,
 	string,
+	object,
 } = React.PropTypes;
 
 /**
@@ -22,6 +25,10 @@ const Bar = createClass({
 	_lucidIsPrivate: true,
 
 	propTypes: {
+		/**
+		 * Passed through to the root element.
+		 */
+		style: object,
 		/**
 		 * Appended to the component-specific class names set on the root element.
 		 */
@@ -47,10 +54,14 @@ const Bar = createClass({
 		 */
 		hasStroke: bool,
 		/**
-		 * Zero-based set of colors. It's recommended that you pass the index of
-		 * your array for colors.
+		 * Strings should match an existing color class unless they start with a
+		 * '#' for specific colors. E.g.:
+		 *
+		 * - `COLOR_0`
+		 * - `COLOR_GOOD`
+		 * - `'#123abc'`
 		 */
-		color: number,
+		color: string,
 	},
 
 	getDefaultProps() {
@@ -59,7 +70,7 @@ const Bar = createClass({
 			y: 0,
 			height: 0,
 			width: 0,
-			color: 0,
+			color: chartConstants.COLOR_0,
 		};
 	},
 
@@ -70,23 +81,30 @@ const Bar = createClass({
 			hasStroke,
 			height,
 			width,
+			style,
 			x,
 			y,
 			...passThroughs,
 		} = this.props;
 
-		const colorIndex = color % 6;
+		const isCustomColor = _.startsWith(color, '#');
+		const colorStyle = isCustomColor ? { fill: color } : {};
 
 		return (
 			<rect
 				{...passThroughs}
-				className={cx(className, '&', `&-color-${colorIndex}`, {
+				className={cx(className, '&', {
 					'&-has-stroke': hasStroke,
+					[`&-${color}`]: !isCustomColor,
 				})}
 				x={x}
 				y={y}
 				height={height}
 				width={width}
+				style={{
+					...style,
+					...colorStyle,
+				}}
 			/>
 		);
 	},
