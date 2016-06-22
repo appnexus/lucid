@@ -1,0 +1,213 @@
+@size-Sidebar-icon: 20px;
+@zIndex-Sidebar-Bar: 99;
+@zIndex-Sidebar-Divider: 98;
+@size-Sidebar-Divider-width: @size-XS - 1px;
+@Sidebar-transition-duration: @timing-animation-fade;
+@Sidebar-transition-half-duration: @Sidebar-transition-duration / 2;
+@Sidebar-transition-third-duration: @Sidebar-transition-duration / 3;
+@transition-timing-function-easeInOutQuint: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
+.lucid-Sidebar {
+	display: flex;
+	align-items: stretch;
+	height: 100%;
+	width: 100%;
+
+	& > .lucid-SplitVertical-inner {
+		width: 100%;
+
+		& > .lucid-Sidebar-Bar {
+			position: relative;
+			z-index: @zIndex-Sidebar-Bar;
+			background-color: @color-white;
+			overflow: auto;
+
+			.lucid-Sidebar-is-position-left& {
+				border-right: @border-standardBorder;
+			}
+
+			.lucid-Sidebar-is-position-right& {
+				border-left: @border-standardBorder;
+			}
+
+			& > .lucid-Sidebar-Bar-overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: @color-backgroundColor;
+				opacity: 1;
+
+				.lucid-Sidebar-is-expanded& {
+					opacity: 0;
+					pointer-events: none;
+				}
+			}
+
+			& > .lucid-Sidebar-Bar-header {
+				background-color: @color-backgroundColor;
+				border-bottom: @border-standardBorder;
+				color: @color-textColor;
+				font: @size-L @fontFamily;
+				font-weight: bold;
+				display: flex;
+
+				.lucid-Sidebar-is-position-left& {
+					flex-direction: row;
+				}
+				.lucid-Sidebar-is-position-right& {
+					flex-direction: row-reverse;
+				}
+
+				& > .lucid-Sidebar-Bar-Title {
+					.lucid-Sidebar-is-position-left& {
+						margin: @size-XS auto @size-XS @size-standard;
+					}
+					.lucid-Sidebar-is-position-right& {
+						margin: @size-XS auto @size-XS 0;
+					}
+				}
+
+				& > .lucid-Sidebar-expander {
+					.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+					.box-sizing();
+					align-self: flex-start;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-shrink: 0;
+					height: @size-Sidebar-icon;
+					width: @size-Sidebar-icon;
+					margin: @size-XS;
+					border: solid 1px @featured-color-default-borderColor;
+					border-radius: @size-borderRadius;
+					cursor: pointer;
+
+					.lucid-ChevronIcon {
+						stroke: @color-darkGray;
+					}
+				}
+			}
+
+			& > .lucid-Sidebar-Bar-content {
+				padding: @size-XS;
+			}
+		}
+
+		& > .lucid-SplitVertical-Divider.lucid-Sidebar-Divider {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			background-color: @color-backgroundColor;
+			width: @size-Sidebar-Divider-width;
+			z-index: @zIndex-Sidebar-Divider;
+
+			.lucid-Sidebar-is-position-left& {
+				transform: translateX(-@size-Sidebar-Divider-width);
+				border-right: @border-standardBorder;
+			}
+
+			.lucid-Sidebar-is-position-right& {
+				transform: translateX(@size-Sidebar-Divider-width);
+				border-left: @border-standardBorder;
+			}
+
+			.lucid-Sidebar-is-expanded& {
+				transform: translateX(0);
+			}
+
+			.lucid-Sidebar-is-resize-disabled& {
+				display: none;
+			}
+
+			.lucid-Sidebar-Divider-gripper {
+				margin: auto;
+			}
+
+			&:hover {
+				background-color: @color-mediumGray;
+
+				.lucid-Sidebar-Divider-gripper {
+					fill: @color-darkGray;
+				}
+			}
+		}
+
+		& > .lucid-Sidebar-Primary {
+			overflow: auto;
+			display: flex;
+			flex-direction: column;
+
+			.lucid-Sidebar-is-position-left& {
+				margin-left: -@size-Sidebar-Divider-width;
+				
+				.lucid-Sidebar-is-resize-disabled& {
+					margin-left: 0;
+				}
+
+				.lucid-Sidebar-is-expanded& {
+					margin-left: 0;
+				}
+			}
+
+			.lucid-Sidebar-is-position-right& {
+				margin-right: -@size-Sidebar-Divider-width;
+
+				.lucid-Sidebar-is-resize-disabled& {
+					margin-right: 0;
+				}
+				
+				.lucid-Sidebar-is-expanded& {
+					margin-right: 0;
+				}
+			}
+
+			& > .lucid-Sidebar {
+				flex: 1;
+			}
+		}
+	}
+
+	&&-is-animated&-is-animated { //chain with self to increase specificity
+		& > .lucid-SplitVertical-inner {
+			transition: transform @Sidebar-transition-duration;
+			transition-timing-function: @transition-timing-function-easeInOutQuint;
+
+			& > .lucid-Sidebar-Bar {
+				& > .lucid-Sidebar-Bar-overlay {
+					transition: opacity @Sidebar-transition-duration;
+					transition-timing-function: @transition-timing-function-easeInOutQuint;
+				}
+			}
+
+			& > .lucid-SplitVertical-Divider.lucid-Sidebar-Divider {
+				transition: transform @Sidebar-transition-third-duration, background-color @Sidebar-transition-third-duration;
+
+				.lucid-Sidebar-is-expanded& {
+					transition: transform @Sidebar-transition-third-duration @Sidebar-transition-duration, background-color @Sidebar-transition-third-duration;
+				}
+			}
+
+			& > .lucid-Sidebar-Primary {
+				.lucid-Sidebar-is-position-left& {
+					//transition: margin-left @Sidebar-transition-duration linear, margin-right @Sidebar-transition-half-duration;
+					transition: margin-left @Sidebar-transition-duration linear, margin-right @Sidebar-transition-duration @transition-timing-function-easeInOutQuint;
+
+					.lucid-Sidebar-is-expanded& {
+						//transition: margin-left @Sidebar-transition-duration linear, margin-right @Sidebar-transition-half-duration @Sidebar-transition-half-duration;
+						transition: margin-left @Sidebar-transition-duration linear, margin-right @Sidebar-transition-duration @transition-timing-function-easeInOutQuint;
+					}
+				}
+
+				.lucid-Sidebar-is-position-right& {
+					transition: margin-right @Sidebar-transition-duration linear, margin-left @Sidebar-transition-half-duration;
+
+					.lucid-Sidebar-is-expanded& {
+						transition: margin-right @Sidebar-transition-duration linear, margin-left @Sidebar-transition-half-duration @Sidebar-transition-half-duration;
+					}
+				}
+			}
+		}
+	}
+}
