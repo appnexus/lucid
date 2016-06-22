@@ -106,14 +106,11 @@ const ExpanderPanel = createClass({
 			...passThroughs,
 		} = this.props;
 
-		/* deleting Header from passThroughs so we can pass Header as a child below*/
-		delete passThroughs.Header;
-
 		const headerChildProps = _.get(_.first(findTypes(this.props, ExpanderPanel.Header)), 'props');
 
 		return (
 			<Panel
-				{...passThroughs}
+				{..._.omit(passThroughs, ['Header'])}
 				className={cx('&', {
 					'&-is-collapsed': !isExpanded,
 					'&-is-disabled': isDisabled,
