@@ -1,6 +1,6 @@
 .lucid-LoadingIcon {
 	// simple rotation in IE11 because IE11 doesn't support svg animations
-	-ms-animation: loading-icon-rotate-animation linear infinite;
+	-ms-animation: lucid-LoadingIcon-rotate-animation linear infinite;
 
 	circle {
 		fill: none;
@@ -10,7 +10,7 @@
 
 	&-spinner {
 		transform-origin: center;
-		animation: loading-icon-dash-animation linear infinite;
+		animation: lucid-LoadingIcon-dash-animation linear infinite;
 		stroke: @color-primary;
 		stroke-dasharray: 150px 100px;
 	}
@@ -21,13 +21,13 @@
 
 }
 
-@keyframes loading-icon-rotate-animation {
+@keyframes lucid-LoadingIcon-rotate-animation {
 	to {
 		transform: rotateZ(360deg);
 	}
 }
 
-@keyframes loading-icon-dash-animation {
+@keyframes lucid-LoadingIcon-dash-animation {
 	0% {
 		stroke-dashoffset: 0px;
 		stroke-dasharray: 151.327px 100px;
