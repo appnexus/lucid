@@ -1,0 +1,44 @@
+.lucid-LoadingIcon {
+	// simple rotation in IE11 because IE11 doesn't support svg animations
+	-ms-animation: rotate-animation linear infinite;
+
+	circle {
+		fill: none;
+		stroke-width: 12;
+		stroke-linecap: round;
+	}
+
+	&-spinner {
+		transform-origin: center;
+		animation: dash-animation linear infinite;
+		stroke: @color-primary;
+		stroke-dasharray: 150px 100px;
+	}
+
+	&-circle {
+		stroke: @color-gray;
+	}
+
+}
+
+@keyframes rotate-animation {
+	to {
+		transform: rotateZ(360deg);
+	}
+}
+
+@keyframes dash-animation {
+	0% {
+		stroke-dashoffset: 0px;
+		stroke-dasharray: 151.327px 100px;
+	}
+	50% {
+		stroke-dashoffset: -251.327px;
+		stroke-dasharray: 10px 241.327px;
+	}
+	100% {
+		stroke-dashoffset: -502.654px;
+		stroke-dasharray: 151.327px 100px;
+	}
+}
+

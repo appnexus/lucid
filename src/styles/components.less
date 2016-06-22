@@ -19,16 +19,19 @@
 @import '../components/Icon/ArrowIcon/ArrowIcon';
 @import '../components/Icon/CaretIcon/CaretIcon';
 @import '../components/Icon/ChevronIcon/ChevronIcon';
-@import '../components/Icon/PlusIcon/PlusIcon';
 @import '../components/Icon/DangerIcon/DangerIcon';
-@import '../components/Icon/InfoIcon/InfoIcon';
-@import '../components/Icon/SuccessIcon/SuccessIcon';
 @import '../components/Icon/EditIcon/EditIcon';
-@import '../components/Icon/SearchIcon/SearchIcon';
-@import '../components/Icon/TableGearIcon/TableGearIcon';
 @import '../components/Icon/EligibilityIcon/EligibilityIcon';
+@import '../components/Icon/InfoIcon/InfoIcon';
+@import '../components/Icon/LoadingIcon/LoadingIcon';
+@import '../components/Icon/PlusIcon/PlusIcon';
+@import '../components/Icon/SearchIcon/SearchIcon';
+@import '../components/Icon/SuccessIcon/SuccessIcon';
+@import '../components/Icon/TableGearIcon/TableGearIcon';
 @import '../components/Icon/WarningIcon/WarningIcon';
 @import '../components/Icon/ResizeIcon/ResizeIcon';
+@import '../components/LoadingIndicator/LoadingIndicator';
+@import '../components/LoadingMessage/LoadingMessage';
 @import '../components/CheckboxLabeled/CheckboxLabeled';
 @import '../components/RadioButtonLabeled/RadioButtonLabeled';
 @import '../components/SwitchLabeled/SwitchLabeled';
@@ -51,3 +54,18 @@
 @import '../components/Overlay/Overlay';
 @import '../components/Dialog/Dialog';
 @import '../components/Autocomplete/Autocomplete'; // Should import after DropMenu
+
+@keyframes dash {
+	0% {
+		stroke-dashoffset: 0;
+		stroke-dasharray: 150px 100px;
+	}
+	50% {
+		stroke-dashoffset: 250px;
+		stroke-dasharray: 10px 300px;
+	}
+	100% {
+		stroke-dashoffset: 500px;
+		stroke-dasharray: 150px 100px;
+	}
+}
