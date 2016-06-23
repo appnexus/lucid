@@ -61,7 +61,7 @@ describe('SplitVertical', () => {
 				}
 			});
 
-			it('should default to false', (done) => {
+			it('should default to false [mostly stable]', (done) => {
 				wrapper = mount(
 					<SplitVertical />
 				);
@@ -72,7 +72,7 @@ describe('SplitVertical', () => {
 				}, 10)
 			});
 
-			it('should apply the &-is-animated class when true, after initial render', (done) => {
+			it('should apply the &-is-animated class when true, after initial render [mostly stable]', (done) => {
 				wrapper = mount(
 					<SplitVertical isAnimated={true} />
 				);
@@ -83,7 +83,7 @@ describe('SplitVertical', () => {
 				}, 10)
 			});
 
-			it('should apply the &-is-animated class when false', (done) => {
+			it('should apply the &-is-animated class when false [mostly stable]', (done) => {
 				wrapper = mount(
 					<SplitVertical isAnimated={false} />
 				);
@@ -114,7 +114,7 @@ describe('SplitVertical', () => {
 				}
 			});
 
-			it('should translated by 64px - width when the right pane is primary', (done) => {
+			it('should translated by 64px - width when the right pane is primary [mostly stable]', (done) => {
 				wrapper = mount(
 					<SplitVertical isExpanded={false} collapseShift={64}>
 						<SplitVertical.LeftPane />
@@ -133,7 +133,7 @@ describe('SplitVertical', () => {
 				}, 10)
 			});
 
-			it('should translated by width - 64px when the left pane is primary', (done) => {
+			it('should translated by width - 64px when the left pane is primary [mostly stable]', (done) => {
 				wrapper = mount(
 					<SplitVertical isExpanded={false} collapseShift={64}>
 						<SplitVertical.LeftPane isPrimary />

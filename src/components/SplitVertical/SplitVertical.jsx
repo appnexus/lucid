@@ -135,7 +135,7 @@ const SplitVertical = createClass({
 
 	getInitialState() {
 		return {
-			isAnimated: false,
+			isAnimated: false, // to ensure first render doesn't show a collapse animation
 		};
 	},
 
@@ -173,6 +173,8 @@ const SplitVertical = createClass({
 		};
 	},
 
+	// Style changes to DOM nodes are updated here to shortcut the state -> render cycle for better performance. Also the Style updates in this
+	// function are entirely transient and can be flushed with a props update to `width`.
 	applyDeltaToSecondaryWidth(dX, isExpanded, secondaryStartRect, secondaryRef, secondary, right, innerRef, primaryRef, collapseShift=0) {
 		if (isExpanded) {
 			secondaryRef.style.flexBasis = `${secondaryStartRect.width + dX * (secondary === right ? -1 : 1)}px`;

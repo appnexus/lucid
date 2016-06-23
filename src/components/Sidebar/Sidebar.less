@@ -1,11 +1,9 @@
-@size-Sidebar-icon: 20px;
-@zIndex-Sidebar-Bar: 99;
-@zIndex-Sidebar-Divider: 98;
-@size-Sidebar-Divider-width: @size-XS - 1px;
+@Sidebar-Bar-zIndex: 99;
+@Sidebar-Divider-zIndex: 98;
+@Sidebar-Divider-width: @size-XS - 1px;
 @Sidebar-transition-duration: @timing-animation-fade;
 @Sidebar-transition-half-duration: @Sidebar-transition-duration / 2;
 @Sidebar-transition-third-duration: @Sidebar-transition-duration / 3;
-@transition-timing-function-easeInOutQuint: cubic-bezier(0.860, 0.000, 0.070, 1.000);
 
 .lucid-Sidebar {
 	display: flex;
@@ -18,7 +16,7 @@
 
 		& > .lucid-Sidebar-Bar {
 			position: relative;
-			z-index: @zIndex-Sidebar-Bar;
+			z-index: @Sidebar-Bar-zIndex;
 			background-color: @color-white;
 			overflow: auto;
 
@@ -77,8 +75,8 @@
 					justify-content: center;
 					align-items: center;
 					flex-shrink: 0;
-					height: @size-Sidebar-icon;
-					width: @size-Sidebar-icon;
+					height: @size-expander-button;
+					width: @size-expander-button;
 					margin: @size-XS;
 					border: solid 1px @featured-color-default-borderColor;
 					border-radius: @size-borderRadius;
@@ -100,16 +98,16 @@
 			display: flex;
 			flex-direction: column;
 			background-color: @color-backgroundColor;
-			width: @size-Sidebar-Divider-width;
-			z-index: @zIndex-Sidebar-Divider;
+			width: @Sidebar-Divider-width;
+			z-index: @Sidebar-Divider-zIndex;
 
 			.lucid-Sidebar-is-position-left& {
-				transform: translateX(-@size-Sidebar-Divider-width);
+				transform: translateX(-@Sidebar-Divider-width);
 				border-right: @border-standardBorder;
 			}
 
 			.lucid-Sidebar-is-position-right& {
-				transform: translateX(@size-Sidebar-Divider-width);
+				transform: translateX(@Sidebar-Divider-width);
 				border-left: @border-standardBorder;
 			}
 
@@ -140,7 +138,7 @@
 			flex-direction: column;
 
 			.lucid-Sidebar-is-position-left& {
-				margin-left: -@size-Sidebar-Divider-width;
+				margin-left: -@Sidebar-Divider-width;
 				
 				.lucid-Sidebar-is-resize-disabled& {
 					margin-left: 0;
@@ -152,7 +150,7 @@
 			}
 
 			.lucid-Sidebar-is-position-right& {
-				margin-right: -@size-Sidebar-Divider-width;
+				margin-right: -@Sidebar-Divider-width;
 
 				.lucid-Sidebar-is-resize-disabled& {
 					margin-right: 0;
@@ -172,12 +170,12 @@
 	&&-is-animated&-is-animated { //chain with self to increase specificity
 		& > .lucid-SplitVertical-inner {
 			transition: transform @Sidebar-transition-duration;
-			transition-timing-function: @transition-timing-function-easeInOutQuint;
+			transition-timing-function: @timing-function-easeInOutQuint;
 
 			& > .lucid-Sidebar-Bar {
 				& > .lucid-Sidebar-Bar-overlay {
 					transition: opacity @Sidebar-transition-duration;
-					transition-timing-function: @transition-timing-function-easeInOutQuint;
+					transition-timing-function: @timing-function-easeInOutQuint;
 				}
 			}
 
@@ -192,11 +190,11 @@
 			& > .lucid-Sidebar-Primary {
 				.lucid-Sidebar-is-position-left& {
 					//transition: margin-left @Sidebar-transition-duration linear, margin-right @Sidebar-transition-half-duration;
-					transition: margin-left @Sidebar-transition-duration linear, margin-right @Sidebar-transition-duration @transition-timing-function-easeInOutQuint;
+					transition: margin-left @Sidebar-transition-duration linear, margin-right @Sidebar-transition-duration @timing-function-easeInOutQuint;
 
 					.lucid-Sidebar-is-expanded& {
 						//transition: margin-left @Sidebar-transition-duration linear, margin-right @Sidebar-transition-half-duration @Sidebar-transition-half-duration;
-						transition: margin-left @Sidebar-transition-duration linear, margin-right @Sidebar-transition-duration @transition-timing-function-easeInOutQuint;
+						transition: margin-left @Sidebar-transition-duration linear, margin-right @Sidebar-transition-duration @timing-function-easeInOutQuint;
 					}
 				}
 
