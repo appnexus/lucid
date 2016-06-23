@@ -71,6 +71,10 @@ const Button = createClass({
 		 * Signature: `({ event, props }) => {}`
 		 */
 		onClick: func,
+		/**
+		 * form element type variations of button. Defaults to 'button' to avoid being triggered by 'Enter' anywhere on the page. Passed through to DOM button.
+		 */
+		type: string,
 	},
 
 	getDefaultProps() {
@@ -78,6 +82,7 @@ const Button = createClass({
 			isDisabled: false,
 			isActive: false,
 			onClick: _.noop,
+			type: 'button',
 		};
 	},
 
@@ -103,6 +108,7 @@ const Button = createClass({
 			size,
 			className,
 			children,
+			type,
 			...passThroughs,
 		} = this.props;
 
@@ -125,6 +131,7 @@ const Button = createClass({
 				onClick={this.handleClick}
 				disabled={isDisabled}
 				ref='button'
+				type={type}
 			>
 				<span className={cx('&-content')}>
 					{children}

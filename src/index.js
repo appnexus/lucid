@@ -50,6 +50,7 @@ import Grid from './components/Grid/Grid';
 import Icon from './components/Icon/Icon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import LineChart from './components/LineChart/LineChart';
+import LoadingIcon from './components/Icon/LoadingIcon/LoadingIcon';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import Overlay from './components/Overlay/Overlay';
 import Panel from './components/Panel/Panel';
@@ -122,6 +123,7 @@ export {
 	Icon,
 	InfoIcon,
 	LineChart,
+	LoadingIcon,
 	MinusIcon,
 	Overlay,
 	Paginator,
