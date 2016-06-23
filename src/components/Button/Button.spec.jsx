@@ -50,6 +50,18 @@ describe('Button', () => {
 			assert(_.includes(classNames, 'lucid-Button-is-active'), `'${classNames}' should include 'lucid-Button-is-active'`);
 		});
 	});
+
+	describe('type', () => {
+		it('should be a button type by default', () => {
+			const wrapper = shallow(<Button />);
+			assert.equal(wrapper.find('button').prop('type'), 'button');
+		});
+
+		it('should passthrough button type property', () => {
+			const wrapper = shallow(<Button type='submit' />);
+			assert.equal(wrapper.find('button').prop('type'), 'submit');
+		});
+	});
 });
 
 describeWithDOM('Button', () => {
