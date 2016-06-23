@@ -70,7 +70,7 @@ const LoadingIndicator = createClass({
 
 		return (
 			<div
-				{..._.omit(passThroughs, ['Message'])}
+				{...passThroughs}
 				className={cx('&', '&-container', className)}
 			>
 				{otherChildren}
