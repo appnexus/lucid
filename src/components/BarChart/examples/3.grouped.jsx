@@ -1,6 +1,8 @@
 import React from 'react';
-import BarChart from '../BarChart';
-import { chartConstants } from '../../../index';
+import {
+	BarChart,
+	chartConstants,
+} from '../../../index';
 
 const data = [
 	{ x: 'Monday'    , apples: 10 , pears: 20 , peaches: 35 , bananas: 15 , oranges: 5  } ,

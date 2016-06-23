@@ -1,5 +1,5 @@
 import React from 'react';
-import BarChart from '../BarChart';
+import { BarChart } from '../../../index';
 
 const data = [
 	{ x: '2015-01-01', y: 1 },
