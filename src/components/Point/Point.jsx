@@ -103,7 +103,7 @@ const Point = createClass({
 		const kindIndex = kind % 5;
 
 		const isCustomColor = _.startsWith(color, '#');
-		const colorStyle = isCustomColor ? { fill: color } : {};
+		const colorStyle = isCustomColor ? { fill: color } : null;
 
 		// These transforms are used to center the icon on the x y coordinate
 		// provided.

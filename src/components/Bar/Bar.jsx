@@ -88,7 +88,7 @@ const Bar = createClass({
 		} = this.props;
 
 		const isCustomColor = _.startsWith(color, '#');
-		const colorStyle = isCustomColor ? { fill: color } : {};
+		const colorStyle = isCustomColor ? { fill: color } : null;
 
 		return (
 			<rect

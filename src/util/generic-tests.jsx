@@ -28,7 +28,7 @@ export function common(Component, {
 			};
 			const wrapper = shallow(<Component {...generateDefaultProps()} style={style}/>);
 			const rootWrapper = selector ? wrapper.find(selector).first() : wrapper.first();
-			assert.deepEqual(rootWrapper.prop('style'), style);
+			assert.equal(rootWrapper.prop('style').backgroundColor, '#f0f');
 		});
 
 		it('should pass through `className`', () => {

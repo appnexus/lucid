@@ -79,7 +79,7 @@ const AxisLabel = createClass({
 
 		const isH = orient === 'top' || orient === 'bottom';
 		const isCustomColor = _.startsWith(color, '#');
-		const colorStyle = isCustomColor ? { fill: color } : {};
+		const colorStyle = isCustomColor ? { fill: color } : null;
 
 		return (
 			<text
