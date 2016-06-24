@@ -1,7 +1,6 @@
 .lucid-LoadingMessage {
 
-	@LoadingMessage-padding: @size-standard;
-
+	.box-sizing();
 	line-height: 1em;
 	background-color: @color-white;
 	position: relative;
@@ -9,8 +8,8 @@
 	text-align: center;
 	border: @border-lightBorder;
 	border-radius: @size-borderRadius;
-	padding: @LoadingMessage-padding;
-	width: 135px + (@LoadingMessage-padding * 2);
+	padding: @size-standard;
+	width: 135px;
 
 	.lucid-Icon {
 		display: inline-block;
