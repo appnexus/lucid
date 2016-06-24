@@ -316,17 +316,23 @@ const SplitVertical = createClass({
 		} = this.refs;
 
 		_.defer(() => {
-			if (!isExpanded) { // collapse secondary
-				const secondaryRect = secondaryRef.getBoundingClientRect();
-				this.collapseSecondary(inner, secondary, right, primaryRef, secondaryRect.width - collapseShift);
-			}
 			this.disableAnimation(inner, secondaryRef, primaryRef);
-
+			inner.style.visibility = 'hidden';
 			_.defer(() => {
-				if (isAnimated) {
-					this.setState({ isAnimated });
+				if (!isExpanded) { // collapse secondary
+					const secondaryRect = secondaryRef.getBoundingClientRect();
+					this.collapseSecondary(inner, secondary, right, primaryRef, secondaryRect.width - collapseShift);
 				}
-				this.resetAnimation(inner, secondaryRef, primaryRef);
+
+				_.defer(() => {
+					if (isAnimated) {
+						this.setState({ isAnimated });
+					}
+					_.defer(() => {
+						inner.style.visibility = '';
+						this.resetAnimation(inner, secondaryRef, primaryRef);
+					});
+				});
 			});
 		});
 	},

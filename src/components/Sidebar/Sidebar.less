@@ -36,8 +36,9 @@
 				height: 100%;
 				background-color: @color-backgroundColor;
 				opacity: 1;
+				z-index: @Sidebar-Bar-zIndex;
 
-				.lucid-Sidebar-is-expanded& {
+				.lucid-SplitVertical-is-expanded& {
 					opacity: 0;
 					pointer-events: none;
 				}
@@ -68,7 +69,7 @@
 				}
 
 				& > .lucid-Sidebar-expander {
-					.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+					.no-safari-flicker();
 					.box-sizing();
 					align-self: flex-start;
 					display: flex;
@@ -81,6 +82,12 @@
 					border: solid 1px @featured-color-default-borderColor;
 					border-radius: @size-borderRadius;
 					cursor: pointer;
+					z-index: @Sidebar-Bar-zIndex + 1;
+					background-image: linear-gradient(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+
+					&:hover {
+						background-image: linear-gradient(@featured-color-default-gradientEndColor, @featured-color-default-gradientStartColor);
+					}
 
 					.lucid-ChevronIcon {
 						stroke: @color-darkGray;
@@ -111,7 +118,7 @@
 				border-left: @border-standardBorder;
 			}
 
-			.lucid-Sidebar-is-expanded& {
+			.lucid-SplitVertical-is-expanded& {
 				transform: translateX(0);
 			}
 
@@ -144,7 +151,7 @@
 					margin-left: 0;
 				}
 
-				.lucid-Sidebar-is-expanded& {
+				.lucid-SplitVertical-is-expanded& {
 					margin-left: 0;
 				}
 			}
@@ -156,7 +163,7 @@
 					margin-right: 0;
 				}
 				
-				.lucid-Sidebar-is-expanded& {
+				.lucid-SplitVertical-is-expanded& {
 					margin-right: 0;
 				}
 			}
@@ -167,7 +174,7 @@
 		}
 	}
 
-	&&-is-animated&-is-animated { //chain with self to increase specificity
+	&.lucid-SplitVertical-is-animated.lucid-SplitVertical-is-animated {
 		& > .lucid-SplitVertical-inner {
 			transition: transform @Sidebar-transition-duration;
 			transition-timing-function: @timing-function-easeInOutQuint;
@@ -182,18 +189,16 @@
 			& > .lucid-SplitVertical-Divider.lucid-Sidebar-Divider {
 				transition: transform @Sidebar-transition-third-duration, background-color @Sidebar-transition-third-duration;
 
-				.lucid-Sidebar-is-expanded& {
+				.lucid-SplitVertical-is-expanded& {
 					transition: transform @Sidebar-transition-third-duration @Sidebar-transition-duration, background-color @Sidebar-transition-third-duration;
 				}
 			}
 
 			& > .lucid-Sidebar-Primary {
 				.lucid-Sidebar-is-position-left& {
-					//transition: margin-left @Sidebar-transition-duration linear, margin-right @Sidebar-transition-half-duration;
 					transition: margin-left @Sidebar-transition-duration linear, margin-right @Sidebar-transition-duration @timing-function-easeInOutQuint;
 
-					.lucid-Sidebar-is-expanded& {
-						//transition: margin-left @Sidebar-transition-duration linear, margin-right @Sidebar-transition-half-duration @Sidebar-transition-half-duration;
+					.lucid-SplitVertical-is-expanded& {
 						transition: margin-left @Sidebar-transition-duration linear, margin-right @Sidebar-transition-duration @timing-function-easeInOutQuint;
 					}
 				}
@@ -201,7 +206,7 @@
 				.lucid-Sidebar-is-position-right& {
 					transition: margin-right @Sidebar-transition-duration linear, margin-left @Sidebar-transition-half-duration;
 
-					.lucid-Sidebar-is-expanded& {
+					.lucid-SplitVertical-is-expanded& {
 						transition: margin-right @Sidebar-transition-duration linear, margin-left @Sidebar-transition-half-duration @Sidebar-transition-half-duration;
 					}
 				}

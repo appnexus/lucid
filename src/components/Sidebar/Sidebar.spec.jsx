@@ -58,7 +58,7 @@ describe('Sidebar', () => {
 				const splitVertical = wrapper.find(SplitVertical);
 
 				assert(splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical')
-				assert(splitVertical.hasClass('lucid-Sidebar-is-expanded'), 'must have the lucid-Sidebar-is-expanded className')
+				assert(splitVertical.shallow().hasClass('lucid-SplitVertical-is-expanded'), 'must have the lucid-SplitVertical-is-expanded className')
 			});
 
 			it('should pass isExpanded to the underlying SplitVertical (false)', () => {
@@ -68,7 +68,7 @@ describe('Sidebar', () => {
 				const splitVertical = wrapper.find(SplitVertical);
 
 				assert(!splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical')
-				assert(!splitVertical.hasClass('lucid-Sidebar-is-expanded'), 'must not have the lucid-Sidebar-is-expanded className')
+				assert(!splitVertical.shallow().hasClass('lucid-SplitVertical-is-expanded'), 'must not have the lucid-SplitVertical-is-expanded className')
 			});
 
 			it('should default to true', () => {
@@ -78,7 +78,7 @@ describe('Sidebar', () => {
 				const splitVertical = wrapper.find(SplitVertical);
 
 				assert(splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical')
-				assert(splitVertical.hasClass('lucid-Sidebar-is-expanded'), 'must have the lucid-Sidebar-is-expanded className')
+				assert(splitVertical.shallow().hasClass('lucid-SplitVertical-is-expanded'), 'must have the lucid-SplitVertical-is-expanded className')
 			});
 		});
 
@@ -90,7 +90,6 @@ describe('Sidebar', () => {
 				const splitVertical = wrapper.find(SplitVertical);
 
 				assert(splitVertical.prop('isAnimated'), 'must pass isAnimated to the underlying SplitVertical')
-				assert(splitVertical.hasClass('lucid-Sidebar-is-animated'), 'must have the lucid-Sidebar-is-animated className')
 			});
 
 			it('should pass isAnimated to the underlying SplitVertical (false)', () => {
@@ -100,7 +99,6 @@ describe('Sidebar', () => {
 				const splitVertical = wrapper.find(SplitVertical);
 
 				assert(!splitVertical.prop('isAnimated'), 'must pass isAnimated to the underlying SplitVertical')
-				assert(!splitVertical.hasClass('lucid-Sidebar-is-animated'), 'must not have the lucid-Sidebar-is-animated className')
 			});
 
 			it('should default to true', () => {
@@ -110,7 +108,6 @@ describe('Sidebar', () => {
 				const splitVertical = wrapper.find(SplitVertical);
 
 				assert(splitVertical.prop('isAnimated'), 'must pass isAnimated to the underlying SplitVertical')
-				assert(splitVertical.hasClass('lucid-Sidebar-is-animated'), 'must have the lucid-Sidebar-is-animated className')
 			});
 		});
 

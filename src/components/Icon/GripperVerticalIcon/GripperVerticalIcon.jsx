@@ -34,14 +34,14 @@ const GripperVerticalIcon = createClass({
 				{...passThroughs}
 				className={cx('&', className)}
 			>
-				<path d='M0,0h16v1H0V0z' />
-				<path d='M0,2h16v1H0V2z' />
-				<path d='M0,4h16v1H0V4z' />
-				<path d='M0,6h16v1H0V6z' />
-				<path d='M0,8h16v1H0V8z' />
-				<path d='M0,10h16v1H0V10z' />
-				<path d='M0,12h16v1H0V12z' />
-				<path d='M0,14h16v1H0V14z' />
+				<path d='M0,0h2v1H0V0z' />
+				<path d='M0,2h2v1H0V2z' />
+				<path d='M0,4h2v1H0V4z' />
+				<path d='M0,6h2v1H0V6z' />
+				<path d='M0,8h2v1H0V8z' />
+				<path d='M0,10h2v1H0V10z' />
+				<path d='M0,12h2v1H0V12z' />
+				<path d='M0,14h2v1H0V14z' />
 			</Icon>
 		);
 	},

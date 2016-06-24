@@ -186,8 +186,6 @@ const Sidebar = createClass({
 			<SplitVertical
 				{...omitProps(passThroughs, Sidebar)}
 				className={cx('&', {
-					'&-is-animated': isAnimated,
-					'&-is-expanded': isExpanded,
 					'&-is-resize-disabled': isResizeDisabled,
 					'&-is-position-right': position === 'right',
 					'&-is-position-left': position !== 'right',

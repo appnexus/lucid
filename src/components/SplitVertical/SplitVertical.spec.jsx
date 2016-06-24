@@ -83,7 +83,7 @@ describe('SplitVertical', () => {
 				}, 10)
 			});
 
-			it('should apply the &-is-animated class when false [mostly stable]', (done) => {
+			it('should not apply the &-is-animated class when false [mostly stable]', (done) => {
 				wrapper = mount(
 					<SplitVertical isAnimated={false} />
 				);
