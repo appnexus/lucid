@@ -1,6 +1,7 @@
 import { buildHybridComponent } from './util/state-management';
 
 // components with reducers
+import { default as AccordionDumb } from './components/Accordion/Accordion';
 import { default as AutocompleteDumb } from './components/Autocomplete/Autocomplete';
 import { default as ButtonGroupDumb } from './components/ButtonGroup/ButtonGroup';
 import { default as DropMenuDumb } from './components/DropMenu/DropMenu';
@@ -14,6 +15,7 @@ import { default as TabsDumb } from './components/Tabs/Tabs';
 import { default as ToolTipDumb } from './components/ToolTip/ToolTip';
 import { default as VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
 
+const Accordion = buildHybridComponent(AccordionDumb);
 const Autocomplete = buildHybridComponent(AutocompleteDumb);
 const ButtonGroup = buildHybridComponent(ButtonGroupDumb);
 const DropMenu = buildHybridComponent(DropMenuDumb);
@@ -90,6 +92,8 @@ export {
 };
 
 export {
+	Accordion,
+	AccordionDumb,
 	ArrowIcon,
 	Autocomplete,
 	AutocompleteDumb,
