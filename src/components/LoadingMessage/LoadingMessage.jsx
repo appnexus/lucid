@@ -1,12 +1,13 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes } from '../../util/component-types';
+import { createClass, findTypes, omitProps } from '../../util/component-types';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 
 const cx = lucidClassNames.bind('&-LoadingMessage');
 
 const {
+	any,
 	node,
 	string,
 } = React.PropTypes;
@@ -30,6 +31,18 @@ const LoadingMessage = createClass({
 		 * Any valid React children.
 		 */
 		children: node,
+		/**
+		 * Custom Icon element (alias for `LoadingMessage.Icon`)
+		 */
+		Icon: any,
+		/**
+		 * Custom Title element (alias for `LoadingMessage.Title`)
+		 */
+		Title: any,
+		/**
+		 * Custom Body element (alias for `LoadingMessage.Body`)
+		 */
+		Body: any,
 	},
 
 	components: {
@@ -72,7 +85,7 @@ const LoadingMessage = createClass({
 
 		return (
 			<div
-				{..._.omit(passThroughs, ['Icon', 'Title', 'Body', 'children'])}
+				{...omitProps(passThroughs, LoadingMessage)}
 				className={cx('&', { '&-no-content': _.isNull(titleChildren) && !bodyChildren }, className)}
 			>
 				{iconChildren}
