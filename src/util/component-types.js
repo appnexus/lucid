@@ -86,5 +86,5 @@ export function findTypes(props, types=[]) {
 
 // omit props defined in propTypes of the given type
 export function omitProps (props, type) {
-		return _.omit(props, _.keys(type.propTypes));
+	return _.omit(props, _.keys(type.propTypes));
 }
