@@ -9,6 +9,7 @@ import {
 	rejectTypes,
 	createElements,
 	findTypes,
+	omitProps,
 } from './component-types';
 
 function isReactComponentClass(componentClass) {
@@ -259,6 +260,33 @@ describe('component-types', () => {
 					<button />
 				</Selector>
 			);
+		});
+	});
+
+	describe('omitProps', () => {
+		const Button = createClass({
+			propTypes: {
+				className: React.PropTypes.any,
+				isActive: React.PropTypes.any,
+				isDisabled: React.PropTypes.any,
+				kind: React.PropTypes.any,
+				size: React.PropTypes.any,
+			},
+		});
+
+		it('should omit props which are defined in propTypes', () => {
+			const props = omitProps({
+				className: 'test-button',
+				text: 'Click Me',
+				isActive: true,
+				isPrimary: true,
+				size: 'normal',
+			}, Button);
+
+			assert.deepEqual(props, {
+				text: 'Click Me',
+				isPrimary: true,
+			}, 'must omit props defined in propTypes');
 		});
 	});
 });

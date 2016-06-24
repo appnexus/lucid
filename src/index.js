@@ -1,6 +1,7 @@
 import { buildHybridComponent } from './util/state-management';
 
 // components with reducers
+import { default as AccordionDumb } from './components/Accordion/Accordion';
 import { default as AutocompleteDumb } from './components/Autocomplete/Autocomplete';
 import { default as ButtonGroupDumb } from './components/ButtonGroup/ButtonGroup';
 import { default as DropMenuDumb } from './components/DropMenu/DropMenu';
@@ -8,11 +9,13 @@ import { default as ExpanderDumb } from './components/Expander/Expander';
 import { default as ExpanderPanelDumb } from './components/ExpanderPanel/ExpanderPanel';
 import { default as PaginatorDumb } from './components/Paginator/Paginator';
 import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
+import { default as SidebarDumb } from './components/Sidebar/Sidebar';
 import { default as SingleSelectDumb } from './components/SingleSelect/SingleSelect';
 import { default as TabsDumb } from './components/Tabs/Tabs';
 import { default as ToolTipDumb } from './components/ToolTip/ToolTip';
 import { default as VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
 
+const Accordion = buildHybridComponent(AccordionDumb);
 const Autocomplete = buildHybridComponent(AutocompleteDumb);
 const ButtonGroup = buildHybridComponent(ButtonGroupDumb);
 const DropMenu = buildHybridComponent(DropMenuDumb);
@@ -20,6 +23,7 @@ const Expander = buildHybridComponent(ExpanderDumb);
 const ExpanderPanel = buildHybridComponent(ExpanderPanelDumb);
 const Paginator = buildHybridComponent(PaginatorDumb);
 const RadioGroup = buildHybridComponent(RadioGroupDumb);
+const Sidebar = buildHybridComponent(SidebarDumb);
 const SingleSelect = buildHybridComponent(SingleSelectDumb);
 const Tabs = buildHybridComponent(TabsDumb);
 const ToolTip = buildHybridComponent(ToolTipDumb);
@@ -62,6 +66,7 @@ import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
+import SplitVertical from './components/SplitVertical/SplitVertical';
 import StickySection from './components/StickySection/StickySection';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import Switch from './components/Switch/Switch';
@@ -89,6 +94,8 @@ export {
 };
 
 export {
+	Accordion,
+	AccordionDumb,
 	ArrowIcon,
 	Autocomplete,
 	AutocompleteDumb,
@@ -141,6 +148,9 @@ export {
 	SearchIcon,
 	SingleSelect,
 	SingleSelectDumb,
+	Sidebar,
+	SidebarDumb,
+	SplitVertical,
 	StickySection,
 	SuccessIcon,
 	Switch,

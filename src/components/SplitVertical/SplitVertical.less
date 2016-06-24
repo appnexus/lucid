@@ -1,0 +1,47 @@
+@SplitVertical-transition-duration: @timing-animation-fade;
+@SplitVertical-transition-half-duration: @SplitVertical-transition-duration / 2;
+
+.lucid-SplitVertical {
+	overflow: hidden;
+
+	& > &-inner {
+		display: flex;
+
+		& > .lucid-SplitVertical-LeftPane,& > .lucid-SplitVertical-RightPane {
+			flex: 1;
+
+			&.lucid-SplitVertical-is-secondary {
+				flex: 0;
+			}
+		}
+
+		& > .lucid-SplitVertical-Divider {
+			width: 6px;
+			background: @color-gray;
+			box-sizing: border-box;
+			cursor: ew-resize;
+		}
+	}
+
+	&&-is-animated {
+		& > .lucid-SplitVertical-inner {
+			transition: transform @SplitVertical-transition-duration;
+
+			& > .lucid-SplitVertical-LeftPane {
+				transition: margin-left @SplitVertical-transition-half-duration;
+
+				.lucid-SplitVertical-is-expanded& {
+					transition: margin-left @SplitVertical-transition-half-duration @SplitVertical-transition-half-duration;
+				}
+			}
+
+			& > .lucid-SplitVertical-RightPane {
+				transition: margin-right @SplitVertical-transition-half-duration;
+
+				.lucid-SplitVertical-is-expanded& {
+					transition: margin-right @SplitVertical-transition-half-duration @SplitVertical-transition-half-duration;
+				}
+			}
+		}
+	}
+}

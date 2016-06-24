@@ -83,3 +83,8 @@ export function findTypes(props, types=[]) {
 	// return elements from props and elements from children
 	return elementsFromProps.concat(filterTypes(props.children, types));
 }
+
+// omit props defined in propTypes of the given type
+export function omitProps (props, type) {
+		return _.omit(props, _.keys(type.propTypes));
+}
