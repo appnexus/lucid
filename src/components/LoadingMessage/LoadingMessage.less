@@ -1,9 +1,5 @@
 .lucid-LoadingMessage {
 
-	.lucid-Icon {
-		display: inline-block;
-	}
-
 	@LoadingMessage-padding: @size-standard;
 
 	line-height: 1em;
@@ -15,6 +11,10 @@
 	border-radius: @size-borderRadius;
 	padding: @LoadingMessage-padding;
 	width: 135px + (@LoadingMessage-padding * 2);
+
+	.lucid-Icon {
+		display: inline-block;
+	}
 
 	&-title {
 		font: bold @size-L @fontFamily;
