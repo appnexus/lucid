@@ -19,7 +19,6 @@ const {
  *
  */
 const LoadingMessage = createClass({
-	propName: 'LoadingMessage',
 	displayName: 'LoadingMessage',
 	_lucidIsPrivate: true,
 	propTypes: {
