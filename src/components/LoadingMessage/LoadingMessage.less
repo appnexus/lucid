@@ -1,0 +1,32 @@
+.lucid-LoadingMessage {
+
+	.box-sizing();
+	line-height: 1em;
+	background-color: @color-white;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	border: @border-lightBorder;
+	border-radius: @size-borderRadius;
+	padding: @size-standard;
+	width: 135px;
+
+	.lucid-Icon {
+		display: inline-block;
+	}
+
+	&-title {
+		font: bold @size-L @fontFamily;
+		margin: @size-XS 0 0;
+	}
+
+	&-body {
+		font: @font;
+		margin: @size-XS 0 0;
+		display: inline-block;
+	}
+
+	&-no-content {
+		width: inherit;
+	}
+}
