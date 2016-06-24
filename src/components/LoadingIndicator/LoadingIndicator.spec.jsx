@@ -6,7 +6,7 @@ import LoadingIndicator from './LoadingIndicator';
 
 const { LoadingMessage } = LoadingIndicator;
 
-describe.only('LoadingIndicator', () => {
+describe('LoadingIndicator', () => {
 	common(LoadingIndicator);
 
 	describe('isLoading', () => {
