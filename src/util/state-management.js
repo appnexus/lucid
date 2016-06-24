@@ -144,7 +144,8 @@ export function buildHybridComponent(baseComponent, {
 		},
 		displayName,
 		getInitialState() {
-			return _.mergeWith({}, omitFunctionPropsDeep(baseComponent.getDefaultProps()), omitFunctionPropsDeep(this.props), safeMerge);
+			const { initialState } = this.props; //initial state overrides
+			return _.mergeWith({}, omitFunctionPropsDeep(baseComponent.getDefaultProps()), initialState, omitFunctionPropsDeep(this.props), safeMerge);
 		},
 		componentWillMount() {
 			this.boundContext = getStatefulPropsContext(reducers, {
