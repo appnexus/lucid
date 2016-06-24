@@ -71,7 +71,7 @@ const LoadingIndicator = createClass({
 		return (
 			<div
 				{...passThroughs}
-				className={cx('&', '&-container', className)}
+				className={cx('&', className)}
 			>
 				{otherChildren}
 				<ReactCSSTransitionGroup
