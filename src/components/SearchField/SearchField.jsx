@@ -22,7 +22,8 @@ const {
 /**
 * {"categories": ["controls", "text"], "madeFrom": ["TextField", "SearchIcon"]}
 *
-* This is a container that renders panels and controls its expansion/retraction.
+* This is a wrapper around TextField that styles it for a search use-case. The
+* icon and TextField are customizable through child components.
 */
 const SearchField = createClass({
 	displayName: 'SearchField',
