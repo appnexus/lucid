@@ -59,7 +59,7 @@ export function createElements(type, values=[]) {
 			return elements.concat(typeValue);
 		} else if (_.isPlainObject(typeValue) && !React.isValidElement(typeValue)) {
 			return elements.concat(React.createElement(type, typeValue));
-		} else if (_.isNil(typeValue)) {
+		} else if (_.isUndefined(typeValue)) {
 			return elements;
 		} else {
 			return elements.concat(React.createElement(type, null, typeValue));
@@ -73,7 +73,7 @@ export function findTypes(props, types=[]) {
 
 	// get elements from props (using type.propName)
 	const elementsFromProps = _.reduce(types, (acc, type) => {
-		if (!_.isEmpty(type.propName)) {
+		if (!_.isUndefined(type.propName)) {
 			const propMatches = _.flatten(_.values(_.pick(props, type.propName)));
 			return acc.concat(createElements(type, propMatches));
 		}
@@ -82,4 +82,9 @@ export function findTypes(props, types=[]) {
 
 	// return elements from props and elements from children
 	return elementsFromProps.concat(filterTypes(props.children, types));
+}
+
+// omit props defined in propTypes of the given type
+export function omitProps (props, type) {
+		return _.omit(props, _.keys(type.propTypes));
 }

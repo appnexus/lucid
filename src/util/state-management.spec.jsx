@@ -624,6 +624,32 @@ describeWithDOM('#buildHybridComponent', () => {
 		assert.equal(countSpan.text(), '36');
 	});
 
+	it('should override initial default state with data from the `initialState` prop', () => {
+		const StatefulCounter = buildHybridComponent(Counter);
+		const wrapper = mount(<StatefulCounter initialState={{ count: 36 }} />);
+
+		let minusButton = wrapper.find('button.minus');
+		let countSpan = wrapper.find('.count');
+		let plusButton = wrapper.find('button.plus');
+
+		assert.equal(countSpan.text(), '36');
+
+		plusButton.simulate('click');
+		assert.equal(countSpan.text(), '37');
+
+		plusButton.simulate('click');
+		assert.equal(countSpan.text(), '38');
+
+		plusButton.simulate('click');
+		assert.equal(countSpan.text(), '39');
+
+		minusButton.simulate('click');
+		assert.equal(countSpan.text(), '38');
+
+		minusButton.simulate('click');
+		assert.equal(countSpan.text(), '37');
+	});
+
 	it('should call functions passed in thru props with same name as invoked reducers', () => {
 		const onIncrement = sinon.spy();
 		const onDecrement = sinon.spy();

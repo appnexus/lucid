@@ -9,6 +9,7 @@ import {
 	rejectTypes,
 	createElements,
 	findTypes,
+	omitProps,
 } from './component-types';
 
 function isReactComponentClass(componentClass) {
@@ -170,13 +171,14 @@ describe('component-types', () => {
 				null,
 				{ isDisabled: true },
 			]);
-			assert.equal(4, elements.length, 'length must be 4');
-			_.forEach(elements, (element) => {
+			assert.equal(5, elements.length, 'length must be 5');
+			_.forEach(elements, element => {
 				assert.equal(Option, element.type, 'type must be Option');
 			});
 			assert.equal('button', elements[1].props.children.type, 'element must be a button');
 			assert.equal('red', elements[2].props.children, 'element children must be `red`');
-			assert(_.isEqual({ isDisabled: true }, elements[3].props), 'element props must match');
+			assert(_.isNull(elements[3].props.children), 'must pass null values through');
+			assert(_.isEqual({ isDisabled: true }, elements[4].props), 'element props must match');
 		});
 	});
 
@@ -258,6 +260,33 @@ describe('component-types', () => {
 					<button />
 				</Selector>
 			);
+		});
+	});
+
+	describe('omitProps', () => {
+		const Button = createClass({
+			propTypes: {
+				className: React.PropTypes.any,
+				isActive: React.PropTypes.any,
+				isDisabled: React.PropTypes.any,
+				kind: React.PropTypes.any,
+				size: React.PropTypes.any,
+			},
+		});
+
+		it('should omit props which are defined in propTypes', () => {
+			const props = omitProps({
+				className: 'test-button',
+				text: 'Click Me',
+				isActive: true,
+				isPrimary: true,
+				size: 'normal',
+			}, Button);
+
+			assert.deepEqual(props, {
+				text: 'Click Me',
+				isPrimary: true,
+			}, 'must omit props defined in propTypes');
 		});
 	});
 });
