@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
@@ -8,6 +9,7 @@ const {
 	number,
 	string,
 	oneOf,
+	object,
 } = React.PropTypes;
 
 /**
@@ -22,6 +24,10 @@ const AxisLabel = createClass({
 
 	propTypes: {
 		/**
+		 * Passed through to the root element.
+		 */
+		style: object,
+		/**
 		 * Appended to the component-specific class names set on the root element.
 		 */
 		className: string,
@@ -34,9 +40,14 @@ const AxisLabel = createClass({
 		 */
 		width: number,
 		/**
-		 * Zero-based color, defaults to -1 which is black.
+		 * Strings should match an existing color class unless they start with a
+		 * '#' for specific colors. E.g.:
+		 *
+		 * - `COLOR_0`
+		 * - `COLOR_GOOD`
+		 * - `'#123abc'`
 		 */
-		color: number,
+		color: string,
 		/**
 		 * Contents of the label, should only ever be a string since we use a `text`
 		 * under the hood.
@@ -50,7 +61,7 @@ const AxisLabel = createClass({
 
 	getDefaultProps() {
 		return {
-			color: -1,
+			color: '#000',
 		};
 	},
 
@@ -61,16 +72,25 @@ const AxisLabel = createClass({
 			orient,
 			label,
 			color,
+			style,
 			className,
 			...passThroughs,
 		} = this.props;
 
 		const isH = orient === 'top' || orient === 'bottom';
+		const isCustomColor = _.startsWith(color, '#');
+		const colorStyle = isCustomColor ? { fill: color } : null;
 
 		return (
 			<text
 				{...passThroughs}
-				className={cx(className, '&', `&-color-${color % 6}`)}
+				style={{
+					...colorStyle,
+					...style,
+				}}
+				className={cx(className, '&', {
+					[`&-${color}`]: !isCustomColor,
+				})}
 				x={isH ? width / 2 : height / 2 * -1}
 				y={orient === 'right' ? width : orient === 'bottom' ? height : 0}
 				dy={orient === 'top' || orient === 'left' ? '1em' : '-.32em'}

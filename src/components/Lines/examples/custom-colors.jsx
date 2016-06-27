@@ -1,7 +1,8 @@
 import _ from 'lodash';
 import React from 'react';
-import Bars from '../Bars';
+import Lines from '../Lines';
 import * as d3Scale from 'd3-scale';
+import * as chartConstants from '../../../constants/charts';
 
 const width = 1000;
 const height = 400;
@@ -20,11 +21,9 @@ const yMax = _.max(_.reduce(yFields, (acc, field) => {
 	return acc.concat(_.map(data, field));
 }, []));
 
-const xScale = d3Scale.scaleBand()
+const xScale = d3Scale.scalePoint()
 	.domain(_.map(data, 'x'))
-	.range([0, width])
-	.round(true)
-	.paddingInner(0.1);
+	.range([0, width]);
 
 const yScale = d3Scale.scaleLinear()
 	.domain([0, yMax])
@@ -35,23 +34,17 @@ export default React.createClass({
 		return (
 			<div>
 				<svg width={width} height={height}>
-					<Bars
+					<Lines
 						data={data}
 						xScale={xScale}
 						yScale={yScale}
 						yFields={yFields}
-						hasToolTips
-					/>
-				</svg>
-
-				<svg width={width} height={height}>
-					<Bars
-						data={data}
-						xScale={xScale}
-						yScale={yScale}
-						yFields={yFields}
-						isStacked={true}
-						hasToolTips
+						colorMap={{
+							y0: chartConstants.COLOR_BAD,
+							y1: chartConstants.COLOR_GOOD,
+							y2: '#ff8800',
+							y3: '#abc123',
+						}}
 					/>
 				</svg>
 			</div>

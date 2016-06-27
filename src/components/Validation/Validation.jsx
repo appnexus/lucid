@@ -67,11 +67,11 @@ const Validation = createClass({
 			<div
 				{...passThroughs}
 				className={cx('&', {
-					'&-is-error': errorChildProps,
+					'&-is-error': errorChildProps && errorChildProps.children,
 				}, className)}
 			>
 				{children}
-				{errorChildProps ?
+				{errorChildProps && errorChildProps.children ?
 					<div className={cx('&-error-content')} >
 						{errorChildProps.children}
 					</div>

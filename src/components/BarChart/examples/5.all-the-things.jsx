@@ -1,5 +1,8 @@
 import React from 'react';
-import BarChart from '../BarChart';
+import {
+	BarChart,
+	chartConstants,
+} from '../../../index';
 
 const data = [
 	{ day: 'monday'    , apples: 2000 , oranges: 3000 } ,
@@ -23,6 +26,10 @@ export default React.createClass({
 					day: 'Day of Week',
 					apples: 'Number of Apples',
 					oranges: 'Number of Oranges',
+				}}
+				colorMap={{
+					apples: chartConstants.COLOR_GOOD,
+					oranges: chartConstants.COLOR_1,
 				}}
 
 				xAxisField='day'

@@ -1,3 +1,5 @@
+/*eslint no-console:0 */
+
 var _ = require('lodash');
 var FormData = require('form-data');
 var exec = require('child_process').exec;
@@ -41,7 +43,7 @@ function getDocsForPath(definitionPath, name) {
 	}, reactDocgen.defaultHandlers.concat([
 		function (documentation /*, definition */) {
 			documentation.set('displayName', name);
-		}
+		},
 	]));
 }
 
@@ -101,7 +103,7 @@ module.exports = {
 							visitExportDefaultDeclaration: function (path) {
 								exportIdentiferName = path.value.declaration.name;
 								return false;
-							}
+							},
 						});
 						return definitionMap[exportIdentiferName];
 					},
@@ -161,7 +163,6 @@ module.exports = {
 			// succeeds if the last commit has an annotated tag and the tag is output
 			// on stdout if one is found.
 			exec('git describe --abbrev=0 --candidates=0 --tags', function(err, stdoutTag) {
-				var isTagged = !err;
 				var tag = stdoutTag.replace(/\n/g, '');
 
 				// Get the current branch
@@ -171,6 +172,10 @@ module.exports = {
 					}
 
 					var currentBranch = stdoutBranch.trim().replace(/\//g, '-'); // clean branch and replace forward slashes
+					var isTagged = !err && currentBranch === 'master';
+					var buildId = isTagged ? tag : currentBranch;
+
+					console.log('Uploading to docspot as ' + buildId);
 
 					var tarStream = gulp.src('dist/docs/**/*')
 						.pipe(tar(currentBranch + '.tar'))
@@ -181,18 +186,18 @@ module.exports = {
 						var form = new FormData();
 						form.append('file', fs.createReadStream(path.join('/tmp', currentBranch + '.tar.gz')));
 						form.append('projectId', 'lucid');
-						form.append('buildId', isTagged ? tag : currentBranch);
+						form.append('buildId', buildId);
 						form.append('isLatest', isTagged.toString());
 						form.submit({
 							host: 'docspot.devnxs.net',
 							port: 80,
-							path: '/api/projects'
+							path: '/api/projects',
 						}, callback);
 					});
 				});
 			});
 		});
-	}
+	},
 };
 
 

@@ -1,11 +1,14 @@
 import React from 'react';
-import LineChart from '../LineChart';
+import {
+	LineChart,
+	chartConstants,
+} from '../../../index';
 
 const data = [
-	{ x: new Date('2015-01-01T00:00:00-08:00'), apples: 2, oranges: 8},
-	{ x: new Date('2015-03-02T00:00:00-08:00'), apples: 2, oranges: 5},
-	{ x: new Date('2015-05-03T00:00:00-08:00'), apples: 3, oranges: 5},
-	{ x: new Date('2015-07-04T00:00:00-08:00'), apples: 5, oranges: 6},
+	{ x: new Date('2015-01-01T00:00:00-08:00'), bananas: 2, cherries: 8},
+	{ x: new Date('2015-03-02T00:00:00-08:00'), bananas: 2, cherries: 5},
+	{ x: new Date('2015-05-03T00:00:00-08:00'), bananas: 3, cherries: 5},
+	{ x: new Date('2015-07-04T00:00:00-08:00'), bananas: 5, cherries: 6},
 ];
 
 export default React.createClass({
@@ -16,14 +19,18 @@ export default React.createClass({
 				margin={{
 					right: 80,
 				}}
+				colorMap={{
+					bananas: chartConstants.COLOR_4,
+					cherries: chartConstants.COLOR_2,
+				}}
 
-				yAxisFields={['apples']}
-				yAxisTitle='Number of Apples'
-				yAxisTitleColor={0}
+				yAxisFields={['bananas']}
+				yAxisTitle='Number of Bananas'
+				yAxisTitleColor={chartConstants.COLOR_4}
 
-				y2AxisFields={['oranges']}
-				y2AxisTitle='Number of Oranges'
-				y2AxisTitleColor={1}
+				y2AxisFields={['cherries']}
+				y2AxisTitle='Number of Cherries'
+				y2AxisTitleColor={chartConstants.COLOR_2}
 			/>
 		);
 	},

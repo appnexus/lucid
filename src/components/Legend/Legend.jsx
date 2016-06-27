@@ -71,7 +71,15 @@ const Legend = createClass({
 				name: string,
 				hasPoint: bool,
 				hasLine: bool,
-				color: number,
+				/**
+				 * Strings should match an existing color class unless they start with a
+				 * '#' for specific colors. E.g.:
+				 *
+				 * - `COLOR_0`
+				 * - `COLOR_GOOD`
+				 * - `'#123abc'`
+				 */
+				color: string,
 				pointKind: number,
 				onClick: func,
 			},

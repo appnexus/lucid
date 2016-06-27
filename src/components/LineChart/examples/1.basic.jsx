@@ -1,5 +1,5 @@
 import React from 'react';
-import LineChart from '../LineChart';
+import { LineChart } from '../../../index';
 
 const data = [
 	{ x: new Date('2015-01-01T00:00:00-08:00'), y: 1 },

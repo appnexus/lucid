@@ -1,7 +1,9 @@
+import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
 import { transformFromCenter } from '../../util/chart-helpers';
+import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Point');
 
@@ -9,6 +11,7 @@ const {
 	number,
 	bool,
 	string,
+	object,
 } = React.PropTypes;
 
 // These were originally built in a 12x12 grid, except triangles which were
@@ -34,6 +37,10 @@ const Point = createClass({
 
 	propTypes: {
 		/**
+		 * Passed through to the root element.
+		 */
+		style: object,
+		/**
 		 * Appended to the component-specific class names set on the root element.
 		 */
 		className: string,
@@ -55,10 +62,14 @@ const Point = createClass({
 		 */
 		kind: number,
 		/**
-		 * Zero-based set of colors. It's recommended that you pass the index of
-		 * your array for colors.
+		 * Strings should match an existing color class unless they start with a
+		 * '#' for specific colors. E.g.:
+		 *
+		 * - `COLOR_0`
+		 * - `COLOR_GOOD`
+		 * - `'#123abc'`
 		 */
-		color: number,
+		color: string,
 		/**
 		 * Scale up the size of the symbol. 2 would be double the original size.
 		 */
@@ -70,7 +81,7 @@ const Point = createClass({
 			x: 0,
 			y: 0,
 			kind: 0,
-			color: 0,
+			color: chartConstants.COLOR_0,
 			hasStroke: false,
 			scale: 1,
 		};
@@ -81,6 +92,7 @@ const Point = createClass({
 			className,
 			color,
 			hasStroke,
+			style,
 			kind,
 			x,
 			y,
@@ -89,11 +101,9 @@ const Point = createClass({
 		} = this.props;
 
 		const kindIndex = kind % 5;
-		const colorIndex = color % 6;
 
-		const classes = cx(className, '&', `&-color-${colorIndex}`, {
-			'&-has-stroke': hasStroke,
-		});
+		const isCustomColor = _.startsWith(color, '#');
+		const colorStyle = isCustomColor ? { fill: color } : null;
 
 		// These transforms are used to center the icon on the x y coordinate
 		// provided.
@@ -108,7 +118,14 @@ const Point = createClass({
 		return (
 			<path
 				{...passThroughs}
-				className={classes}
+				style={{
+					...style,
+					...colorStyle,
+				}}
+				className={cx(className, '&', {
+					'&-has-stroke': hasStroke,
+					[`&-${color}`]: !isCustomColor,
+				})}
 				transform={transforms[kindIndex]}
 				d={PATHS[kindIndex]}
 			/>

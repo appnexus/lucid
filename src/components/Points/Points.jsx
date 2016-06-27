@@ -4,6 +4,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
 import { groupByFields } from '../../util/chart-helpers';
 import * as d3Shape from 'd3-shape';
+import * as chartConstants from '../../constants/charts';
 
 import Point from '../Point/Point';
 
@@ -49,6 +50,32 @@ const Points = createClass({
 		 * Left
 		 */
 		left: number,
+		/**
+		 * Takes one of the palettes exported from `lucid.chartConstants`.
+		 * Available palettes:
+		 *
+		 * - `PALETTE_6` (default)
+		 * - `PALETTE_30`
+		 * - `PALETTE_MONOCHROME_0_5`
+		 * - `PALETTE_MONOCHROME_1_5`
+		 * - `PALETTE_MONOCHROME_2_5`
+		 * - `PALETTE_MONOCHROME_3_5`
+		 * - `PALETTE_MONOCHROME_4_5`
+		 * - `PALETTE_MONOCHROME_5_5`
+		 *
+		 */
+		palette: arrayOf(string),
+		/**
+		 * You can pass in an object if you want to map fields to
+		 * `lucid.chartConstants` or custom colors:
+		 *
+		 *     {
+		 *       'imps': COLOR_0,
+		 *       'rev': COLOR_3,
+		 *       'clicks': '#abc123',
+		 *     }
+		 */
+		colorMap: object,
 		/**
 		 * De-normalized data, e.g.
 		 *
@@ -119,6 +146,7 @@ const Points = createClass({
 			colorOffset: 0,
 			hasStroke: true,
 			isStacked: false,
+			palette: chartConstants.PALETTE_6,
 		};
 	},
 
@@ -128,6 +156,8 @@ const Points = createClass({
 			data,
 			left,
 			top,
+			palette,
+			colorMap,
 			colorOffset,
 			xField,
 			hasStroke,
@@ -170,7 +200,7 @@ const Points = createClass({
 								y={yScale(_.isArray(series) ? _.last(series) : series)}
 								hasStroke={hasStroke}
 								kind={dIndex + colorOffset}
-								color={dIndex + colorOffset}
+								color={_.get(colorMap, yFields[dIndex], palette[(dIndex % palette.length) + colorOffset])}
 							/>
 						: null
 					))

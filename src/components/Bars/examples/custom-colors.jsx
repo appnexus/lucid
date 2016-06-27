@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Bars from '../Bars';
 import * as d3Scale from 'd3-scale';
+import * as chartConstants from '../../../constants/charts';
 
 const width = 1000;
 const height = 400;
@@ -40,17 +41,10 @@ export default React.createClass({
 						xScale={xScale}
 						yScale={yScale}
 						yFields={yFields}
-						hasToolTips
-					/>
-				</svg>
-
-				<svg width={width} height={height}>
-					<Bars
-						data={data}
-						xScale={xScale}
-						yScale={yScale}
-						yFields={yFields}
-						isStacked={true}
+						colorMap={{
+							y0: chartConstants.COLOR_GOOD,
+							y2: chartConstants.COLOR_BAD,
+						}}
 						hasToolTips
 					/>
 				</svg>
