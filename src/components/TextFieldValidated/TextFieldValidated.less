@@ -5,6 +5,9 @@
 		.lucid-TextField {
 			.inset-box-shadow(@featured-color-danger);
 			border-color: @featured-color-danger;
+			&:focus {
+				.focus-glow(@featured-color-danger-30);
+			}
 		}
 	}
 }
