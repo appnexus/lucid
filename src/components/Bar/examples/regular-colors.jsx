@@ -59,8 +59,8 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				{_.map(colors, (color, i) =>
-					<svg key={i} {...svgProps}>
+				{_.map(colors, (color) =>
+					<svg key={color} {...svgProps}>
 						<Bar {...pointProps} color={color} />
 					</svg>
 				)}

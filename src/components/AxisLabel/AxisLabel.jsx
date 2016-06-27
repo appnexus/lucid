@@ -85,8 +85,8 @@ const AxisLabel = createClass({
 			<text
 				{...passThroughs}
 				style={{
-					...style,
 					...colorStyle,
+					...style,
 				}}
 				className={cx(className, '&', {
 					[`&-${color}`]: !isCustomColor,
