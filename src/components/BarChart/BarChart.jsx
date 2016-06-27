@@ -7,6 +7,7 @@ import {
 	maxByFieldsStacked,
 } from '../../util/chart-helpers';
 import * as d3Scale from 'd3-scale';
+import * as chartConstants from '../../constants/charts';
 
 import Axis from '../Axis/Axis';
 import AxisLabel from '../AxisLabel/AxisLabel';
@@ -25,6 +26,7 @@ const {
 	string,
 	array,
 	bool,
+	oneOfType,
 } = React.PropTypes;
 
 /**
@@ -90,6 +92,32 @@ const BarChart = createClass({
 		 * Show a legend at the bottom of the chart.
 		 */
 		hasLegend: bool,
+		/**
+		 * Takes one of the palettes exported from `lucid.chartConstants`.
+		 * Available palettes:
+		 *
+		 * - `PALETTE_6` (default)
+		 * - `PALETTE_30`
+		 * - `PALETTE_MONOCHROME_0_5`
+		 * - `PALETTE_MONOCHROME_1_5`
+		 * - `PALETTE_MONOCHROME_2_5`
+		 * - `PALETTE_MONOCHROME_3_5`
+		 * - `PALETTE_MONOCHROME_4_5`
+		 * - `PALETTE_MONOCHROME_5_5`
+		 *
+		 */
+		palette: arrayOf(string),
+		/**
+		 * You can pass in an object if you want to map fields to
+		 * `lucid.chartConstants` or custom colors:
+		 *
+		 *     {
+		 *       'imps': COLOR_0,
+		 *       'rev': COLOR_3,
+		 *       'clicks': '#abc123',
+		 *     }
+		 */
+		colorMap: object,
 
 
 		/**
@@ -112,15 +140,22 @@ const BarChart = createClass({
 		 */
 		xAxisTitle: string,
 		/**
-		 * Set a color for the x axis title. This takes any number 0 or greater and
-		 * it converts it to a color in our color palette.
+		 * Set a color for the x axis title. Use the color constants exported off
+		 * `lucid.chartConstants`. E.g.:
+		 *
+		 * - `COLOR_0`
+		 * - `COLOR_GOOD`
+		 * - `'#123abc'` // custom color hex
+		 *
+		 * `number` is supported only for backwards compatability.
 		 */
-		xAxisTitleColor: number,
+		xAxisTitleColor: oneOfType([number, string]),
 
 
 		/**
 		 * An array of your y axis fields. Typically this will just be a single
-		 * item unless you need to display grouped or stacked bars.
+		 * item unless you need to display grouped or stacked bars. The order of
+		 * the array determines the series order in the chart.
 		 */
 		yAxisFields: array,
 		/**
@@ -154,10 +189,16 @@ const BarChart = createClass({
 		 */
 		yAxisTitle: string,
 		/**
-		 * Set a color for the y axis title. This takes any number 0 or greater and
-		 * it converts it to a color in our color palette.
+		 * Set a color for the y axis title. Use the color constants exported off
+		 * `lucid.chartConstants`. E.g.:
+		 *
+		 * - `COLOR_0`
+		 * - `COLOR_GOOD`
+		 * - `'#123abc'` // custom color hex
+		 *
+		 * `number` is supported only for backwards compatability.
 		 */
-		yAxisTitleColor: number,
+		yAxisTitleColor: oneOfType([number, string]),
 	},
 
 	statics: {
@@ -175,20 +216,21 @@ const BarChart = createClass({
 		return {
 			height: 400,
 			width: 1000,
-			margin: { // duplicated because `statics` aren't available during getDefaultProps
+			// duplicated because `statics` aren't available during getDefaultProps
+			margin: {
 				top: 10,
 				right: 20,
 				bottom: 50,
 				left: 80,
 			},
-			legend: {},
+			palette: chartConstants.PALETTE_6,
 			hasToolTips: true,
 			hasLegend: false,
 
 			xAxisField: 'x',
 			xAxisTickCount: null,
 			xAxisTitle: null,
-			xAxisTitleColor: -1,
+			xAxisTitleColor: '#000',
 			xAxisFormatter: _.identity,
 
 			yAxisFields: ['y'],
@@ -196,7 +238,7 @@ const BarChart = createClass({
 			yAxisIsStacked: false,
 			yAxisMin: 0,
 			yAxisTitle: null,
-			yAxisTitleColor: -1,
+			yAxisTitleColor: '#000',
 		};
 	},
 
@@ -210,6 +252,8 @@ const BarChart = createClass({
 			legend,
 			hasToolTips,
 			hasLegend,
+			palette,
+			colorMap,
 
 			xAxisField,
 			xAxisFormatter,
@@ -305,7 +349,7 @@ const BarChart = createClass({
 											key={index}
 											hasPoint={true}
 											hasLine={false}
-											color={index}
+											color={_.get(colorMap, field, palette[index % palette.length])}
 											pointKind={1}
 										>
 											{_.get(legend, field, field)}
@@ -326,7 +370,10 @@ const BarChart = createClass({
 							width={innerWidth}
 							height={margin.bottom}
 							label={xAxisTitle}
-							color={xAxisTitleColor}
+							color={_.isString(xAxisTitleColor)
+								? xAxisTitleColor
+								: palette[xAxisTitleColor % palette.length]
+							}
 						/>
 					</g>
 				) : null}
@@ -349,7 +396,10 @@ const BarChart = createClass({
 							width={margin.left}
 							height={innerHeight}
 							label={yAxisTitle}
-							color={yAxisTitleColor}
+							color={_.isString(yAxisTitleColor)
+								? yAxisTitleColor
+								: palette[yAxisTitleColor % palette.length]
+							}
 						/>
 					</g>
 				) : null}
@@ -368,6 +418,8 @@ const BarChart = createClass({
 					isStacked={yAxisIsStacked}
 					hasToolTips={hasToolTips}
 					legend={legend}
+					palette={palette}
+					colorMap={colorMap}
 				/>
 			</svg>
 		);

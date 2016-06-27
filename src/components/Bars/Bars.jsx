@@ -7,6 +7,7 @@ import {
 } from '../../util/chart-helpers';
 import { createClass } from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
+import * as chartConstants from '../../constants/charts';
 
 import Bar from '../Bar/Bar';
 import ToolTip from '../ToolTip/ToolTip';
@@ -49,15 +50,14 @@ const Bars = createClass({
 		/**
 		 * De-normalized data
 		 *
-		 * ```
-		 * [
-		 *   { x: 'one', y0: 1, y1: 2, y2: 3, y3: 5 },
-		 *   { x: 'two', y0: 2, y1: 3, y2: 4, y3: 6 },
-		 *   { x: 'three', y0: 2, y1: 4, y2: 5, y3: 6 },
-		 *   { x: 'four', y0: 3, y1: 6, y2: 7, y3: 7 },
-		 *   { x: 'five', y0: 4, y1: 8, y2: 9, y3: 8 },
-		 * ]
-		 * ```
+		 *     [
+		 *       { x: 'one', y0: 1, y1: 2, y2: 3, y3: 5 },
+		 *       { x: 'two', y0: 2, y1: 3, y2: 4, y3: 6 },
+		 *       { x: 'three', y0: 2, y1: 4, y2: 5, y3: 6 },
+		 *       { x: 'four', y0: 3, y1: 6, y2: 7, y3: 7 },
+		 *       { x: 'five', y0: 4, y1: 8, y2: 9, y3: 8 },
+		 *     ]
+		 *
 		 */
 		data: arrayOf(object).isRequired,
 		/**
@@ -75,6 +75,33 @@ const Bars = createClass({
 		 * Show tool tips on hover.
 		 */
 		hasToolTips: bool,
+		/**
+		 * Takes one of the palettes exported from `lucid.chartConstants`.
+		 * Available palettes:
+		 *
+		 * - `PALETTE_6` (default)
+		 * - `PALETTE_30`
+		 * - `PALETTE_MONOCHROME_0_5`
+		 * - `PALETTE_MONOCHROME_1_5`
+		 * - `PALETTE_MONOCHROME_2_5`
+		 * - `PALETTE_MONOCHROME_3_5`
+		 * - `PALETTE_MONOCHROME_4_5`
+		 * - `PALETTE_MONOCHROME_5_5`
+		 *
+		 */
+		palette: arrayOf(string),
+		/**
+		 * You can pass in an object if you want to map fields to
+		 * `lucid.chartConstants` or custom colors:
+		 *
+		 *     {
+		 *       'imps': COLOR_0,
+		 *       'rev': COLOR_3,
+		 *       'clicks': '#abc123',
+		 *     }
+		 */
+		colorMap: object,
+
 
 		/**
 		 * The scale for the x axis. This must be a d3-scale scale.
@@ -127,6 +154,7 @@ const Bars = createClass({
 			yFormatter: _.identity,
 			isStacked: false,
 			colorOffset: 0,
+			palette: chartConstants.PALETTE_6,
 		};
 	},
 
@@ -144,6 +172,9 @@ const Bars = createClass({
 			top,
 			legend,
 			hasToolTips,
+			palette,
+			colorMap,
+			colorOffset,
 			xScale,
 			xField,
 			xFormatter,
@@ -201,7 +232,7 @@ const Bars = createClass({
 								y={yScale(end)}
 								height={yScale(start) - yScale(end)}
 								width={isStacked ? xScale.bandwidth() : innerXScale.bandwidth() }
-								color={pointsIndex}
+								color={_.get(colorMap, yFields[pointsIndex], palette[(pointsIndex % palette.length) + colorOffset])}
 							/>
 						))}
 
@@ -240,7 +271,7 @@ const Bars = createClass({
 												key={fieldIndex}
 												hasPoint={true}
 												pointKind={1}
-												color={fieldIndex}
+												color={_.get(colorMap, field, palette[(fieldIndex % palette.length) + colorOffset])}
 											>
 												{`${_.get(legend, field, field)}: ${yFormatter(data[seriesIndex][field])}`}
 											</Legend.Item>
