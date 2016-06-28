@@ -60,6 +60,7 @@ import LineChart from './components/LineChart/LineChart';
 import LoadingIcon from './components/Icon/LoadingIcon/LoadingIcon';
 import LoadingIndicator from './components/LoadingIndicator/LoadingIndicator';
 import LoadingMessage from './components/LoadingMessage/LoadingMessage';
+import MaximizeIcon from './components/Icon/MaximizeIcon/MaximizeIcon';
 import MinimizeIcon from './components/Icon/MinimizeIcon/MinimizeIcon';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import Overlay from './components/Overlay/Overlay';
@@ -140,6 +141,7 @@ export {
 	LoadingIcon,
 	LoadingIndicator,
 	LoadingMessage,
+	MaximizeIcon,
 	MinimizeIcon,
 	MinusIcon,
 	Overlay,
