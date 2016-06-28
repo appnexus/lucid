@@ -11,6 +11,7 @@ import {
 } from '../../util/chart-helpers';
 import * as d3Scale from 'd3-scale';
 import * as d3TimeFormat from 'd3-time-format';
+import * as chartConstants from '../../constants/charts';
 
 import Axis from '../Axis/Axis';
 import AxisLabel from '../AxisLabel/AxisLabel';
@@ -31,6 +32,7 @@ const {
 	shape,
 	string,
 	bool,
+	oneOfType,
 } = React.PropTypes;
 
 /**
@@ -97,6 +99,32 @@ const LineChart = createClass({
 		 * Show a legend at the bottom of the chart.
 		 */
 		hasLegend: bool,
+		/**
+		 * Takes one of the palettes exported from `lucid.chartConstants`.
+		 * Available palettes:
+		 *
+		 * - `PALETTE_6` (default)
+		 * - `PALETTE_30`
+		 * - `PALETTE_MONOCHROME_0_5`
+		 * - `PALETTE_MONOCHROME_1_5`
+		 * - `PALETTE_MONOCHROME_2_5`
+		 * - `PALETTE_MONOCHROME_3_5`
+		 * - `PALETTE_MONOCHROME_4_5`
+		 * - `PALETTE_MONOCHROME_5_5`
+		 *
+		 */
+		palette: arrayOf(string),
+		/**
+		 * You can pass in an object if you want to map fields to
+		 * `lucid.chartConstants` or custom colors:
+		 *
+		 *     {
+		 *       'imps': COLOR_0,
+		 *       'rev': COLOR_3,
+		 *       'clicks': '#abc123',
+		 *     }
+		 */
+		colorMap: object,
 
 
 		/**
@@ -133,15 +161,22 @@ const LineChart = createClass({
 		 */
 		xAxisTitle: string,
 		/**
-		 * Set a color for the x axis title. This takes any number 0 or greater and
-		 * it converts it to a color in our color palette.
+		 * Set a color for the x axis title. Use the color constants exported off
+		 * `lucid.chartConstants`. E.g.:
+		 *
+		 * - `COLOR_0`
+		 * - `COLOR_GOOD`
+		 * - `'#123abc'` // custom color hex
+		 *
+		 * `number` is supported only for backwards compatability.
 		 */
-		xAxisTitleColor: number,
+		xAxisTitleColor: oneOfType([number, string]),
 
 
 		/**
 		 * An array of your y axis fields. Typically this will just be a single
-		 * item unless you need to display multiple lines.
+		 * item unless you need to display multiple lines. The order of the array
+		 * determines the series order in the chart.
 		 */
 		yAxisFields: arrayOf(string),
 		/**
@@ -178,15 +213,22 @@ const LineChart = createClass({
 		 */
 		yAxisTitle: string,
 		/**
-		 * Set a color for the y axis title. This takes any number 0 or greater and
-		 * it converts it to a color in our color palette.
+		 * Set a color for the y axis title. Use the color constants exported off
+		 * `lucid.chartConstants`. E.g.:
+		 *
+		 * - `COLOR_0`
+		 * - `COLOR_GOOD`
+		 * - `'#123abc'` // custom color hex
+		 *
+		 * `number` is supported only for backwards compatability.
 		 */
-		yAxisTitleColor: number,
+		yAxisTitleColor: oneOfType([number, string]),
 
 
 		/**
 		 * An array of your y2 axis fields. Typically this will just be a single
-		 * item unless you need to display multiple lines.
+		 * item unless you need to display multiple lines. The order of the array
+		 * determines the series order in the chart.
 		 */
 		y2AxisFields: arrayOf(string),
 		/**
@@ -223,10 +265,16 @@ const LineChart = createClass({
 		 */
 		y2AxisTitle: string,
 		/**
-		 * Set a color for the y2 axis title. This takes any number 0 or greater and
-		 * it converts it to a color in our color palette.
+		 * Set a color for the y2 axis title. Use the color constants exported off
+		 * `lucid.chartConstants`. E.g.:
+		 *
+		 * - `COLOR_0`
+		 * - `COLOR_GOOD`
+		 * - `'#123abc'` // custom color hex
+		 *
+		 * `number` is supported only for backwards compatability.
 		 */
-		y2AxisTitleColor: number,
+		y2AxisTitleColor: oneOfType([number, string]),
 	},
 
 	statics: {
@@ -248,14 +296,14 @@ const LineChart = createClass({
 				bottom: 65,
 				left: 80,
 			},
-			legend: {},
+			palette: chartConstants.PALETTE_6,
 			hasToolTips: true,
 			hasLegend: false,
 
 			xAxisField: 'x',
 			xAxisTickCount: null,
 			xAxisTitle: null,
-			xAxisTitleColor: -1,
+			xAxisTitleColor: '#000',
 			// E.g. "Mon 06/06/2016 15:46:19"
 			xAxisTooltipFormatter: d3TimeFormat.timeFormat('%a %x %X'),
 
@@ -265,7 +313,7 @@ const LineChart = createClass({
 			yAxisHasPoints: true,
 			yAxisTickCount: null,
 			yAxisTitle: null,
-			yAxisTitleColor: -1,
+			yAxisTitleColor: '#000',
 
 			y2AxisFields: null,
 			y2AxisIsStacked: false,
@@ -273,7 +321,7 @@ const LineChart = createClass({
 			y2AxisMin: 0,
 			y2AxisTickCount: null,
 			y2AxisTitle: null,
-			y2AxisTitleColor: -1,
+			y2AxisTitleColor: '#000',
 		};
 	},
 
@@ -293,6 +341,8 @@ const LineChart = createClass({
 			legend,
 			hasToolTips,
 			hasLegend,
+			palette,
+			colorMap,
 
 			xAxisField,
 			xAxisTickCount,
@@ -426,7 +476,7 @@ const LineChart = createClass({
 												key={index}
 												hasPoint={yAxisHasPoints}
 												hasLine={true}
-												color={index}
+												color={_.get(colorMap, field, palette[index % palette.length])}
 												pointKind={index}
 											>
 												{`${_.get(legend, field, field)}: ${yFinalFormatter(_.get(xPointMap, mouseX + '.y.' + field))}`}
@@ -439,7 +489,7 @@ const LineChart = createClass({
 												key={index}
 												hasPoint={y2AxisHasPoints}
 												hasLine={true}
-												color={index + yAxisFields.length}
+												color={_.get(colorMap, field, palette[index + yAxisFields.length % palette.length])}
 												pointKind={index + yAxisFields.length}
 											>
 												{`${_.get(legend, field, field)}: ${y2FinalFormatter(_.get(xPointMap, mouseX + '.y.' + field))}`}
@@ -460,7 +510,6 @@ const LineChart = createClass({
 						outerTickSize={0}
 						tickFormat={xFinalFormatter}
 						tickCount={xAxisTickCount}
-						color={xAxisTitleColor}
 						ref='xAxis'
 					/>
 
@@ -485,7 +534,7 @@ const LineChart = createClass({
 											key={index}
 											hasPoint={yAxisHasPoints}
 											hasLine={true}
-											color={index}
+											color={_.get(colorMap, field, palette[index % palette.length])}
 											pointKind={index}
 										>
 											{_.get(legend, field, field)}
@@ -496,7 +545,7 @@ const LineChart = createClass({
 											key={index}
 											hasPoint={y2AxisHasPoints}
 											hasLine={true}
-											color={index + yAxisFields.length}
+											color={_.get(colorMap, field, palette[index + yAxisFields.length % palette.length])}
 											pointKind={index + yAxisFields.length}
 										>
 											{_.get(legend, field, field)}
@@ -516,6 +565,10 @@ const LineChart = createClass({
 							width={innerWidth}
 							height={margin.bottom}
 							label={xAxisTitle}
+							color={_.isString(xAxisTitleColor)
+								? xAxisTitleColor
+								: palette[xAxisTitleColor % palette.length]
+							}
 							ref='xAxisTitle'
 						/>
 					</g>
@@ -540,7 +593,10 @@ const LineChart = createClass({
 							width={margin.left}
 							height={innerHeight}
 							label={yAxisTitle}
-							color={yAxisTitleColor}
+							color={_.isString(yAxisTitleColor)
+								? yAxisTitleColor
+								: palette[yAxisTitleColor % palette.length]
+							}
 							ref='yAxisTitle'
 						/>
 					</g>
@@ -567,7 +623,10 @@ const LineChart = createClass({
 							width={margin.right}
 							height={innerHeight}
 							label={y2AxisTitle}
-							color={y2AxisTitleColor}
+							color={_.isString(y2AxisTitleColor)
+								? y2AxisTitleColor
+								: palette[y2AxisTitleColor % palette.length]
+							}
 							ref='y2AxisTitle'
 						/>
 					</g>
@@ -583,6 +642,8 @@ const LineChart = createClass({
 					yFields={yAxisFields}
 					data={data}
 					isStacked={yAxisIsStacked}
+					colorMap={colorMap}
+					palette={palette}
 					ref='yLines'
 				/>
 
@@ -597,6 +658,8 @@ const LineChart = createClass({
 						yFields={yAxisFields}
 						data={data}
 						isStacked={yAxisIsStacked}
+						colorMap={colorMap}
+						palette={palette}
 						ref='yPoints'
 					/>
 				: null}
@@ -613,6 +676,8 @@ const LineChart = createClass({
 						data={data}
 						isStacked={y2AxisIsStacked}
 						colorOffset={1}
+						colorMap={colorMap}
+						palette={palette}
 						ref='y2Lines'
 					/>
 				: null}
@@ -629,6 +694,8 @@ const LineChart = createClass({
 						data={data}
 						isStacked={y2AxisIsStacked}
 						colorOffset={1}
+						colorMap={colorMap}
+						palette={palette}
 						ref='y2Points'
 					/>
 				: null}

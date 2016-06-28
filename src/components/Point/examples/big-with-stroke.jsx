@@ -4,13 +4,18 @@ import Point from '../Point';
 import * as chartConstants from '../../../constants/charts';
 
 const svgProps = {
-	width: 20,
-	height: 20,
+	width: 40,
+	height: 40,
+	style: {
+		backgroundColor: 'black',
+	},
 };
 
 const pointProps = {
-	x: 10,
-	y: 10,
+	x: 20,
+	y: 20,
+	scale: 2,
+	hasStroke: true,
 };
 
 export default React.createClass({

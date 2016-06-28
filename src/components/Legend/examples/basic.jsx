@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 
 import Legend from '../Legend';
-import { ToolTip } from '../../../index';
+import { ToolTip, chartConstants } from '../../../index';
 
 const { Item } = Legend;
 
@@ -11,13 +11,13 @@ export default React.createClass({
 		return (
 			<div>
 				<Legend>
-					{_.map(_.times(5), n => (
+					{_.map(chartConstants.PALETTE_6, (color, i) => (
 						<Item
-							key={n}
+							key={color}
 							hasPoint
-							color={n}
+							color={color}
 						>
-							{`Partner ${n}`}
+							{`Partner ${i}`}
 						</Item>
 					))}
 				</Legend>
@@ -25,14 +25,14 @@ export default React.createClass({
 				<br />
 
 				<Legend>
-					{_.map(_.times(5), n => (
+					{_.map(chartConstants.PALETTE_6, (color, i) => (
 						<Item
-							key={n}
+							key={color}
 							hasPoint
-							pointKind={n}
-							color={n}
+							pointKind={i}
+							color={color}
 						>
-							{`Partner ${n}`}
+							{`Partner ${i}`}
 						</Item>
 					))}
 				</Legend>
@@ -40,13 +40,13 @@ export default React.createClass({
 				<br />
 
 				<Legend>
-					{_.map(_.times(5), n => (
+					{_.map(chartConstants.PALETTE_6, (color, i) => (
 						<Item
-							key={n}
+							key={color}
 							hasLine
-							color={n}
+							color={color}
 						>
-							{`Partner ${n}`}
+							{`Partner ${i}`}
 						</Item>
 					))}
 				</Legend>
@@ -54,15 +54,15 @@ export default React.createClass({
 				<br />
 
 				<Legend>
-					{_.map(_.times(5), n => (
+					{_.map(chartConstants.PALETTE_6, (color, i) => (
 						<Item
-							key={n}
+							key={color}
 							hasPoint
 							hasLine
-							pointKind={n}
-							color={n}
+							pointKind={i}
+							color={color}
 						>
-							{`Partner ${n}`}
+							{`Partner ${i}`}
 						</Item>
 					))}
 				</Legend>
@@ -70,17 +70,17 @@ export default React.createClass({
 				<br />
 
 				<Legend orient='horizontal'>
-					<Item hasLine>Revenue</Item>
-					<Item hasLine>Loss</Item>
-					<Item hasPoint color={1}>Partner 1</Item>
-					<Item hasPoint color={2}>Partner 2</Item>
+					<Item hasLine color={chartConstants.COLOR_GOOD}>Revenue</Item>
+					<Item hasLine color={chartConstants.COLOR_BAD}>Loss</Item>
+					<Item hasPoint color={chartConstants.COLOR_0}>Partner 0</Item>
+					<Item hasPoint color={chartConstants.COLOR_1}>Partner 1</Item>
 				</Legend>
 
 				<Legend>
-					<Item hasLine>Revenue</Item>
-					<Item hasLine>Loss</Item>
-					<Item hasPoint color={1}>Partner 1</Item>
-					<Item hasPoint color={2}>Partner 2</Item>
+					<Item hasLine color={chartConstants.COLOR_GOOD}>Revenue</Item>
+					<Item hasLine color={chartConstants.COLOR_BAD}>Loss</Item>
+					<Item hasPoint color={chartConstants.COLOR_0}>Partner 0</Item>
+					<Item hasPoint color={chartConstants.COLOR_1}>Partner 1</Item>
 				</Legend>
 
 				<br />
@@ -94,10 +94,10 @@ export default React.createClass({
 
 					<ToolTip.Body>
 						<Legend hasBorders={false}>
-							<Item hasLine>Revenue</Item>
-							<Item hasLine>Loss</Item>
-							<Item hasPoint color={1}>Partner 1</Item>
-							<Item hasPoint color={2}>Partner 2</Item>
+							<Item hasLine color={chartConstants.COLOR_GOOD}>Revenue</Item>
+							<Item hasLine color={chartConstants.COLOR_BAD}>Loss</Item>
+							<Item hasPoint color={chartConstants.COLOR_0}>Partner 0</Item>
+							<Item hasPoint color={chartConstants.COLOR_1}>Partner 1</Item>
 						</Legend>
 					</ToolTip.Body>
 				</ToolTip>

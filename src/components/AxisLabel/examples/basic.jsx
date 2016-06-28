@@ -1,5 +1,6 @@
 import React from 'react';
 import AxisLabel from '../AxisLabel';
+import * as chartConstants from '../../../constants/charts';
 
 const width = 1000;
 const height = 400;
@@ -47,7 +48,7 @@ export default React.createClass({
 				<g transform={`translate(${margin.left + innerWidth}, 0)`}>
 					<AxisLabel
 						orient='right'
-						color={0}
+						color={chartConstants.COLOR_0}
 						width={margin.right}
 						height={height}
 						label='Right'
@@ -57,7 +58,7 @@ export default React.createClass({
 				<g transform={`translate(0, ${margin.top + innerHeight})`}>
 					<AxisLabel
 						orient='bottom'
-						color={1}
+						color={chartConstants.COLOR_1}
 						width={width}
 						height={margin.bottom}
 						label='Bottom'
@@ -67,7 +68,7 @@ export default React.createClass({
 				<g transform={'translate(0, 0)'}>
 					<AxisLabel
 						orient='top'
-						color={2}
+						color={chartConstants.COLOR_2}
 						width={width}
 						height={margin.top}
 						label='Top'

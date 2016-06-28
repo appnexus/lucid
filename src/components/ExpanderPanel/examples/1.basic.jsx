@@ -9,7 +9,7 @@ export default React.createClass({
 				<ExpanderPanel>
 					<ExpanderPanel.Header>Show More</ExpanderPanel.Header>
 					{_.times(100, (n) => (
-						<div>{_.repeat('-', 75 * Math.sin(n / 5))}</div>
+						<div key={n}>{_.repeat('-', 75 * Math.sin(n / 5))}</div>
 					))}
 				</ExpanderPanel>
 			</div>
