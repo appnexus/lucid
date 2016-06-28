@@ -8,6 +8,7 @@ export default React.createClass({
 			<div>
 				<SearchField placeholder='Name/ID'>
 					<SearchField.TextField
+						value={this.state.value}
 						onSubmit={submission => this.setState({ submission })}
 						onChange={value => this.setState({ value })}
 						onKeyDown={({ key }) => this.setState({ key })}

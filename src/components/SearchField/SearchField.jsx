@@ -111,16 +111,15 @@ const SearchField = createClass({
 			value,
 		};
 
-		const defaultIcon = <SearchIcon className={cx('&-Icon', { '&-Icon-active': !_.isEmpty(value) })} />;
-
+		const textFieldElement = getFirst(props, TextField, <TextField {...textFieldProps} />);
+		const isIconActive = !_.isEmpty(_.get(textFieldElement, 'props.value'));
+		const defaultIcon = <SearchIcon className={cx('&-Icon', { '&-Icon-active': isIconActive })} />;
 		const iconElement = getFirst(props, Icon);
 		const iconChildren = _.get(iconElement, 'props.children');
 		const icon = iconChildren ? createElement(iconChildren.type, {
 			...iconChildren.props,
-			className: cx('&-Icon', { '&-Icon-active': !_.isEmpty(value) }, iconChildren.props.className),
+			className: cx('&-Icon', { '&-Icon-active': isIconActive }, iconChildren.props.className),
 		}) : defaultIcon;
-
-		const textFieldElement = getFirst(props, TextField, <TextField {...textFieldProps} />);
 
 		return (
 			<div
