@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React, { createElement } from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import { createClass, getFirst, omitProps } from '../../util/component-types';
 
 import TextField from '../TextField/TextField';
 import SearchIcon from '../Icon/SearchIcon/SearchIcon';
@@ -113,14 +113,14 @@ const SearchField = createClass({
 
 		const defaultIcon = <SearchIcon className={cx('&-Icon', { '&-Icon-active': !_.isEmpty(value) })} />;
 
-		const iconElement = _.first(findTypes(props, Icon));
+		const iconElement = getFirst(props, Icon);
 		const iconChildren = _.get(iconElement, 'props.children');
 		const icon = iconChildren ? createElement(iconChildren.type, {
 			...iconChildren.props,
 			className: cx('&-Icon', { '&-Icon-active': !_.isEmpty(value) }, iconChildren.props.className),
 		}) : defaultIcon;
 
-		const textFieldElement = _.first(findTypes(props, TextField)) || <TextField {...textFieldProps} />;
+		const textFieldElement = getFirst(props, TextField, <TextField {...textFieldProps} />);
 
 		return (
 			<div
