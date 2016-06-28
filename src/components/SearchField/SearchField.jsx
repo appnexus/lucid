@@ -128,7 +128,9 @@ const SearchField = createClass({
 				className={cx('&', className)}
 			>
 				{textFieldElement}
-				{icon}
+				<div className={cx('&-Icon-container')}>
+					{icon}
+				</div>
 			</div>
 		);
 

@@ -13,16 +13,21 @@
 
 	}
 
-	&-Icon {
+	&-Icon-container {
 		position: absolute;
-		top: @TextField-size-height / 2 - 8;
-		right: 7px;
-		fill: @color-mediumGray;
+		top: 0;
+		right: 0;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		margin-right: 6px;
+	}
 
+	&-Icon {
+		fill: @color-mediumGray;
 		&-active {
 			fill: @color-primary;
 		}
-
 	}
 
 }
