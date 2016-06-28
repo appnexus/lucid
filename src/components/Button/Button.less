@@ -92,21 +92,16 @@
 		background: none;
 		color: @color-linkColor;
 
-		&:hover {
-			background: none;
-			color: @color-linkColorHover;
-			text-decoration: underline;
-		}
-
+		&:hover,
 		&:active,
 		&:focus {
 			background: none;
 			color: @color-linkColorHover;
 			text-decoration: underline;
-			box-shadow: none;
-
 			.lucid-Icon { fill: @color-linkColorHover; }
+			box-shadow: none;
 		}
+
 		&:active:before { opacity: 0;}
 
 		.lucid-Button-content{ line-height: 1em; }
