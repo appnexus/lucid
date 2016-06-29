@@ -24,6 +24,7 @@ const {
 
 const DONUT_WIDTH = 15;
 const HOVER_SCALE = 1.1; // duplicated in .less file
+const INNER_RADIUS = 0.5;
 
 /**
  * {"categories": ["visualizations", "charts"], "madeFrom": ["ToolTip"]}
@@ -262,7 +263,7 @@ const PieChart = createClass({
 		const outerRadius = Math.min(innerWidth, innerHeight) / 2;
 
 		const arc = d3Shape.arc()
-			.innerRadius(isDonut ? outerRadius - PieChart.DONUT_WIDTH : 0.5)
+			.innerRadius(isDonut ? outerRadius - PieChart.DONUT_WIDTH : INNER_RADIUS)
 			.outerRadius(outerRadius);
 
 		// Useful for capturing hovers when we're in donut mode
@@ -281,7 +282,7 @@ const PieChart = createClass({
 					{_.map(pieData, (pieDatum, index) => (
 						<g
 							key={index}
-							className={cx({
+							className={cx('&-slice-group', {
 								'&-slice-group-is-hovering': isHovering && hoveringIndex === index,
 							})}
 						>
