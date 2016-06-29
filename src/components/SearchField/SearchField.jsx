@@ -59,6 +59,11 @@ const SearchField = createClass({
 			string,
 		]),
 		/**
+		 * Controls the highlighting of the search icon. Should be passed `true` when
+		 * the search text is valid, e.g. contains enough characters to perform a search.
+		 */
+		isValid: bool,
+		/**
 		 * Disables the SearchField by greying it out.
 		 */
 		isDisabled: bool,
@@ -89,6 +94,7 @@ const SearchField = createClass({
 			props: {
 				className,
 				isDisabled,
+				isValid,
 				onChange,
 				onSubmit,
 				placeholder,
@@ -112,7 +118,7 @@ const SearchField = createClass({
 		};
 
 		const textFieldElement = getFirst(props, TextField, <TextField {...textFieldProps} />);
-		const isIconActive = !_.isEmpty(_.get(textFieldElement, 'props.value'));
+		const isIconActive = _.isUndefined(isValid) ? !_.isEmpty(_.get(textFieldElement, 'props.value')) : isValid;
 		const defaultIcon = <SearchIcon className={cx('&-Icon', { '&-Icon-active': isIconActive })} />;
 		const iconElement = getFirst(props, Icon);
 		const iconChildren = _.get(iconElement, 'props.children');

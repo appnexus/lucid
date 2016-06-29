@@ -84,6 +84,39 @@ describe('SearchField', () => {
 			});
 		});
 
+		describe('isValid', () => {
+			describe('default', () => {
+				it('should not set icon active when value is empty', () => {
+					const wrapper = shallow(<SearchField/>);
+					assert(!wrapper.find(SearchIcon).hasClass('lucid-SearchField-Icon-active'));
+				});
+				it('should set icon active when value is not empty', () => {
+					const wrapper = shallow(<SearchField value='foo'/>);
+					assert(wrapper.find(SearchIcon).hasClass('lucid-SearchField-Icon-active'));
+				});
+			});
+			describe('false', () => {
+				it('should not set icon active when value is empty', () => {
+					const wrapper = shallow(<SearchField isValid={false}/>);
+					assert(!wrapper.find(SearchIcon).hasClass('lucid-SearchField-Icon-active'));
+				});
+				it('should not set icon active when value is not empty', () => {
+					const wrapper = shallow(<SearchField isValid={false} value='foo'/>);
+					assert(!wrapper.find(SearchIcon).hasClass('lucid-SearchField-Icon-active'));
+				});
+			});
+			describe('true', () => {
+				it('should not set icon active when value is empty', () => {
+					const wrapper = shallow(<SearchField isValid/>);
+					assert(wrapper.find(SearchIcon).hasClass('lucid-SearchField-Icon-active'));
+				});
+				it('should not set icon active when value is not empty', () => {
+					const wrapper = shallow(<SearchField isValid value='foo'/>);
+					assert(wrapper.find(SearchIcon).hasClass('lucid-SearchField-Icon-active'));
+				});
+			});
+		});
+
 	});
 
 	describe('child components', () => {
