@@ -237,7 +237,12 @@ const Bars = createClass({
 						))}
 
 						{hasToolTips ?
-							<ToolTip isExpanded={isHovering && hoveringSeriesIndex === seriesIndex}>
+							<ToolTip
+								isExpanded={isHovering && hoveringSeriesIndex === seriesIndex}
+								flyOutStyle={{
+									maxWidth: 'none',
+								}}
+							>
 								<ToolTip.Target elementType='g'>
 									<rect
 										className={cx('&-tooltip-hover-zone')}
