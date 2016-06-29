@@ -4,6 +4,8 @@ import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import * as components from '../../index';
 
+const { object } = React.PropTypes;
+
 const { Button } = components;
 const icons = _.reduce(components, (acc, val, key) =>
 	_.assign(acc, _.endsWith(key, 'Icon') && key !== 'Icon'
@@ -14,6 +16,11 @@ const icons = _.reduce(components, (acc, val, key) =>
 const cx = lucidClassNames.bind('Icons');
 
 const Icons = React.createClass({
+
+	propTypes: {
+		router: object,
+		location: object,
+	},
 
 	render() {
 
