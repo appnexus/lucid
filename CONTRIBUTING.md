@@ -83,7 +83,7 @@ describe('MyNewComponent', () => {
 - Components should have a `Component.spec.jsx` that lives alongside the component jsx file.
 - Most tests should be shallow rendered using `enzyme`.
 - If your tests need to be functional, i.e. using button clicks, then be sure to use the `describeWithDOM` util.
-- Sometimes we have to tests that have potentially flaky timing, i.e. we're using `setTimeout`. In those rare cases we put the text `[mostly stable]` in the name of the test as a kind of tag for future reference.
+- Sometimes we have tests with flaky timing, i.e. we're using `setTimeout`. In those rare cases we put the text `[mostly stable]` in the name of the test as a kind of tag for future reference.
 - Our test files have a certain structure to them, here's an example of it:
 
 ```javascript
