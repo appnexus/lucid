@@ -6,7 +6,6 @@ export default React.createClass({
 		return (
 			<div>
 				<MaximizeIcon />
-				<MaximizeIcon isBadge />
 			</div>
 		);
 	},
