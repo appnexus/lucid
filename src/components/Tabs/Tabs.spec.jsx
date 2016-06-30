@@ -7,7 +7,9 @@ import { common } from '../../util/generic-tests';
 import Tabs from './Tabs';
 
 describe('Tabs', () => {
-	common(Tabs);
+	common(Tabs, {
+		exemptChildComponents: ['Tab', 'Title'],
+	});
 
 	describe('props', () => {
 		it('Tab as children', () => {

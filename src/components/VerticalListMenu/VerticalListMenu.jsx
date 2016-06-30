@@ -34,7 +34,6 @@ const VerticalListMenu = createClass({
 	components: {
 		Item: createClass({
 			displayName: 'VerticalListMenu.Item',
-			propName: 'Item',
 			propTypes: {
 				hasExpander: bool,
 				isExpanded: bool,

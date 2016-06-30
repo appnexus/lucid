@@ -11,6 +11,7 @@ import * as reducers from '../Expander/Expander.reducers';
 const cx = lucidClassNames.bind('&-ExpanderPanel');
 
 const {
+	any,
 	bool,
 	func,
 	node,
@@ -78,6 +79,12 @@ const ExpanderPanel = createClass({
 		 * Passed through to the root element.
 		 */
 		style: object,
+
+		/**
+		 * prop alternative to Header child component
+		 * passed through to the underlying ExpanderPanel
+		 */
+		Header: any,
 	},
 
 	getDefaultProps() {

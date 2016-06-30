@@ -27,7 +27,6 @@ const ButtonGroup = createClass({
 	components: {
 		Button: createClass({
 			displayName: 'ButtonGroup.Button',
-			propName: 'Button',
 		}),
 	},
 
