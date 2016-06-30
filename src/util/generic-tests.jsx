@@ -11,6 +11,7 @@ export function common(Component, {
 	getDefaultProps = _.noop,
 	selector = null,
 	exemptFunctionProps = [],
+	exemptChildComponents = [],
 } = {}) {
 
 	function generateDefaultProps(props={}) {
@@ -112,12 +113,13 @@ export function common(Component, {
 				_.chain(childComponents)
 				.map('propName')
 				.compact()
-				.map(_.castArray)
-				.forEach(propNames => _.forEach(propNames, propName => {
+				.flatMap(_.castArray)
+				.reject(propName => _.includes(exemptChildComponents, propName))
+				.forEach(propName => {
 					it(`should include ${propName} in propTypes`, () => {
 						assert(Component.propTypes[propName], `must include ${propName} in propTypes`);
 					});
-				}))
+				})
 				.value();
 			});
 		});
