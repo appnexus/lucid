@@ -98,6 +98,30 @@ export function common(Component, {
 
 		});
 
+		describe('child components', () => {
+
+			const childComponents = _.omit(Component.definition.statics, [
+				'_lucidIsPrivate',
+				'definition',
+				'propName',
+				'reducers',
+				'selectors',
+			]);
+
+			describe('propNames in propTypes', () => {
+				_.chain(childComponents)
+				.map('propName')
+				.compact()
+				.map(_.castArray)
+				.forEach(propNames => _.forEach(propNames, propName => {
+					it(`should include ${propName} in propTypes`, () => {
+						assert(Component.propTypes[propName], `must include ${propName} in propTypes`);
+					});
+				}))
+				.value();
+			});
+		});
+
 		// Only run this test if it's a public component
 		if (!Component._lucidIsPrivate) {
 			it('should be available as an exported module from index.js', () => {
