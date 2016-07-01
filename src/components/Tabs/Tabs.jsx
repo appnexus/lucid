@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes } from '../../util/component-types';
+import { createClass, findTypes, omitProps } from '../../util/component-types';
 import reducers from './Tabs.reducers';
 
 const cx = lucidClassNames.bind('&-Tabs');
@@ -113,7 +113,7 @@ const Tabs = createClass({
 
 		return (
 			<div
-				{...passThroughs}
+				{...omitProps(passThroughs, Tabs)}
 				style={style}
 				className={cx('&', className)}
 			>
