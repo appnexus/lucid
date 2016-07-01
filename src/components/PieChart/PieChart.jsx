@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import * as d3Shape from 'd3-shape';
 import * as chartConstants from '../../constants/charts';
 
@@ -249,7 +249,7 @@ const PieChart = createClass({
 		if (_.isEmpty(data)) {
 			return (
 				<svg
-					{..._.omit(passThroughs, ['onMouseOver', 'onMouseOut'])}
+					{...omitProps(passThroughs, ToolTip)}
 					className={cx(className, '&')}
 					width={width}
 					height={height}
@@ -276,66 +276,60 @@ const PieChart = createClass({
 			.sort(null); // needed to put the slices in proper order
 		const pieData = pie(_.map(data, yAxisField));
 
-		const renderPie = (
-			<g transform={`translate(${margin.left}, ${margin.top})`}>
-				<g transform={`translate(${innerWidth / 2}, ${innerHeight / 2})`}>
-					{_.map(pieData, (pieDatum, index) => (
-						<g
-							key={index}
-							className={cx('&-slice-group', {
-								'&-slice-group-is-hovering': isHovering && hoveringIndex === index,
-							})}
-						>
-							<Line
-								key={index}
-								className={cx('&-slice')}
-								d={arc(pieDatum)}
-								color={_.get(colorMap, data[index][xAxisField], palette[index % palette.length])}
-								hasStroke={false}
-								transform={`scale(${isHovering && hoveringIndex === index ? HOVER_SCALE : 1})`}
-							/>
-
-							{/* This hidden path is useful for capturing hovers when we're in donut mode */}
-							<path
-								className={cx('&-slice-hover')}
-								d={arcFull(pieDatum)}
-								transform={`scale(${HOVER_SCALE})`}
-								onMouseOver={_.partial(this.handleMouseOver, index)}
-								onMouseOut={hasToolTips ? _.noop : this.handleMouseOut}
-							/>
-						</g>
-					))}
-				</g>
-			</g>
-		);
-
 		return (
 			<svg
-				{..._.omit(passThroughs, ['onMouseOver', 'onMouseOut'])}
+				{...omitProps(passThroughs, ToolTip)}
 				className={cx(className, '&')}
 				width={width}
 				height={height}
 			>
-				{hasToolTips ?
-					<ToolTip
-						{...toolTipProps}
-						isExpanded={isHovering}
-						onMouseOver={_.noop}
-						onMouseOut={this.handleMouseOut}
-					>
-						<ToolTip.Target elementType='g'>
-							{renderPie}
-						</ToolTip.Target>
+				<ToolTip
+					{...toolTipProps}
+					isExpanded={hasToolTips && isHovering}
+					onMouseOver={_.noop}
+					onMouseOut={this.handleMouseOut}
+				>
+					<ToolTip.Target elementType='g'>
+						<g transform={`translate(${margin.left}, ${margin.top})`}>
+							<g transform={`translate(${innerWidth / 2}, ${innerHeight / 2})`}>
+								{_.map(pieData, (pieDatum, index) => (
+									<g
+										key={index}
+										className={cx('&-slice-group', {
+											'&-slice-group-is-hovering': isHovering && hoveringIndex === index,
+										})}
+									>
+										<Line
+											key={index}
+											className={cx('&-slice')}
+											d={arc(pieDatum)}
+											color={_.get(colorMap, data[index][xAxisField], palette[index % palette.length])}
+											hasStroke={false}
+											transform={`scale(${isHovering && hoveringIndex === index ? HOVER_SCALE : 1})`}
+										/>
 
-						<ToolTip.Title>
-							{xAxisFormatter(_.get(data, `[${hoveringIndex}].${xAxisField}`))}
-						</ToolTip.Title>
+										{/* This hidden path is useful for capturing hovers when we're in donut mode */}
+										<path
+											className={cx('&-slice-hover')}
+											d={arcFull(pieDatum)}
+											transform={`scale(${HOVER_SCALE})`}
+											onMouseOver={_.partial(this.handleMouseOver, index)}
+											onMouseOut={hasToolTips ? _.noop : this.handleMouseOut}
+										/>
+									</g>
+								))}
+							</g>
+						</g>
+					</ToolTip.Target>
 
-						<ToolTip.Body>
-							{yAxisFormatter(_.get(data, `[${hoveringIndex}].${yAxisField}`))}
-						</ToolTip.Body>
-					</ToolTip>
-				: renderPie}
+					<ToolTip.Title>
+						{xAxisFormatter(_.get(data, `[${hoveringIndex}].${xAxisField}`))}
+					</ToolTip.Title>
+
+					<ToolTip.Body>
+						{yAxisFormatter(_.get(data, `[${hoveringIndex}].${yAxisField}`))}
+					</ToolTip.Body>
+				</ToolTip>
 			</svg>
 		);
 	},
