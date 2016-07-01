@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import { createClass, getFirst, findTypes, omitProps } from '../../util/component-types';
 import reducers from './Tabs.reducers';
 
 const cx = lucidClassNames.bind('&-Tabs');
@@ -130,7 +130,7 @@ const Tabs = createClass({
 								key={index}
 								onClick={_.partial(this.handleClicked, index, tabChildProp)}
 							>
-								{_.get(_.first(findTypes(tabChildProp, Tabs.Title)), 'props.children', '')}
+								{_.get(getFirst(tabChildProp, Tabs.Title), 'props.children', '')}
 								{isProgressive && index !== tabChildProps.length - 1 ?
 									<svg className={cx('&-Tab-arrow')} xmlns='http://www.w3.org/2000/svg' width='8px' height='28px' viewBox='0 0 8 28' >
 										<polygon className={cx('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>

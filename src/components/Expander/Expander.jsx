@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes }  from '../../util/component-types';
+import { createClass, getFirst, findTypes }  from '../../util/component-types';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import * as reducers from './Expander.reducers';
 
@@ -91,8 +91,8 @@ const Expander = createClass({
 	},
 
 	componentWillReceiveProps(nextProps) {
-		const currentLabel = _.get(_.first(findTypes(this.props, Expander.Label)), 'props.children', null);
-		const nextLabel = _.get(_.first(findTypes(nextProps, Expander.Label)), 'props.children', null);
+		const currentLabel = _.get(getFirst(this.props, Expander.Label), 'props.children', null);
+		const nextLabel = _.get(getFirst(nextProps, Expander.Label), 'props.children', null);
 
 		if (currentLabel !== nextLabel) {
 			this._labelKey++;
