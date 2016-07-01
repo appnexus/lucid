@@ -97,20 +97,28 @@ describe('PieChart', () => {
 		});
 
 		describe('hasToolTips', () => {
-			it('should leverage ToolTip when true', () => {
+			it('should set isExpanded on ToolTip when true and hovering', () => {
 				const wrapper = shallow(
-					<PieChart data={sampleData} hasToolTips />
+					<PieChart
+						data={sampleData}
+						hasToolTips
+						isHovering
+					/>
 				);
 
-				assert.equal(wrapper.find(ToolTip).length, 1);
+				assert.equal(wrapper.find(ToolTip).prop('isExpanded'), true);
 			});
 
-			it('should not use ToolTip when false', () => {
+			it('should not set isExpanded on ToolTip when not hovering', () => {
 				const wrapper = shallow(
-					<PieChart data={sampleData} hasToolTips={false} />
+					<PieChart
+						data={sampleData}
+						hasToolTips={false}
+						isHovering
+					/>
 				);
 
-				assert.equal(wrapper.find(ToolTip).length, 0);
+				assert.equal(wrapper.find(ToolTip).prop('isExpanded'), false);
 			});
 		});
 

@@ -41,6 +41,10 @@ const PieChart = createClass({
 
 	propTypes: {
 		/**
+		 * Styles that are passed through to the root container.
+		 */
+		style: object,
+		/**
 		 * Appended to the component-specific class names set on the root element.
 		 */
 		className: string,
@@ -216,6 +220,7 @@ const PieChart = createClass({
 
 	render() {
 		const {
+			style,
 			className,
 			height,
 			width,
@@ -250,6 +255,7 @@ const PieChart = createClass({
 			return (
 				<svg
 					{...omitProps(passThroughs, ToolTip)}
+					style={style}
 					className={cx(className, '&')}
 					width={width}
 					height={height}
@@ -279,6 +285,7 @@ const PieChart = createClass({
 		return (
 			<svg
 				{...omitProps(passThroughs, ToolTip)}
+				style={style}
 				className={cx(className, '&')}
 				width={width}
 				height={height}
