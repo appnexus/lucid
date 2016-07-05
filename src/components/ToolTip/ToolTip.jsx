@@ -109,15 +109,12 @@ const ToolTip = createClass({
 	components: {
 		Target: createClass({
 			displayName: 'ToolTip.Target',
-			propName: 'Target',
 		}),
 		Title: createClass({
 			displayName: 'ToolTip.Title',
-			propName: 'Title',
 		}),
 		Body: createClass({
 			displayName: 'ToolTip.Body',
-			propName: 'Body',
 		}),
 	},
 

@@ -77,7 +77,6 @@ const ContextMenu = createClass({
 	components: {
 		Target: createClass({
 			displayName: 'ContextMenu.Target',
-			propName: 'Target',
 			propTypes: {
 				elementType: string,
 			},
@@ -89,7 +88,6 @@ const ContextMenu = createClass({
 		}),
 		FlyOut: createClass({
 			displayName: 'ContextMenu.FlyOut',
-			propName: 'FlyOut',
 			propTypes: {
 				style: object,
 			},

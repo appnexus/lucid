@@ -24,7 +24,6 @@ const Grid = createClass({
 	components: {
 		Cell: createClass({
 			displayName: 'Grid.Cell',
-			propName: 'Cell',
 			propTypes: {
 				/**
 				 * fill all twelve columns of the primary grid axis

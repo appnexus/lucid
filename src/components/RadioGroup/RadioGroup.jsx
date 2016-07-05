@@ -31,7 +31,6 @@ const RadioGroup = createClass({
 	components: {
 		RadioButton: createClass({
 			displayName: 'RadioGroup.RadioButton',
-			propName: 'RadioButton',
 			propTypes: RadioButton.propTypes,
 		}),
 
@@ -41,7 +40,6 @@ const RadioGroup = createClass({
 		 */
 		Label: createClass({
 			displayName: 'RadioGroup.Label',
-			propName: 'Label',
 			propTypes: {
 				children: node,
 			},

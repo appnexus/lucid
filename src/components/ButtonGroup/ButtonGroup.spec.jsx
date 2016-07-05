@@ -65,5 +65,3 @@ describeWithDOM('ButtonGroup', () => {
 		assert(_.has(onClick.args[0][0], 'props'),  '`props` missing from `onClick` callback');
 	});
 });
-
-

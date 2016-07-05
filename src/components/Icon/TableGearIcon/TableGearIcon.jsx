@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
+import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-TableGearIcon');
 
@@ -11,7 +12,7 @@ const cx = lucidClassNames.bind('&-TableGearIcon');
  * A table configuration Icon.
  */
 
-const TableGearIcon = React.createClass({
+const TableGearIcon = createClass({
 	displayName: 'TableGearIcon',
 	propTypes: {
 		...Icon.propTypes,

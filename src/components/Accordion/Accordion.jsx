@@ -10,6 +10,7 @@ import * as reducers from '../Accordion/Accordion.reducers';
 const cx = lucidClassNames.bind('&-Accordion');
 
 const {
+	any,
 	func,
 	object,
 	number,
@@ -54,6 +55,12 @@ const Accordion = createClass({
 		* Passed through to the root element.
 		*/
 		style: object,
+
+		/**
+		 * prop alternative to Header child component
+		 * passed through to the underlying ExpanderPanel
+		 */
+		Header: any,
 	},
 
 	getDefaultProps() {
