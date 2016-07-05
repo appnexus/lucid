@@ -1,8 +1,7 @@
-import _ from 'lodash';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, rejectTypes } from '../../util/component-types';
+import { createClass, getFirst, rejectTypes } from '../../util/component-types';
 import LoadingMessage from '../LoadingMessage/LoadingMessage';
 
 const cx = lucidClassNames.bind('&-LoadingIndicator');
@@ -65,7 +64,7 @@ const LoadingIndicator = createClass({
 
 		const { LoadingMessage } = LoadingIndicator;
 
-		const messageElement = _.first(findTypes(props, LoadingMessage)) || <LoadingMessage />;
+		const messageElement = getFirst(props, LoadingMessage, <LoadingMessage />);
 		const otherChildren = rejectTypes(children, [LoadingMessage]);
 
 		return (

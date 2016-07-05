@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes } from '../../util/component-types';
+import { createClass, getFirst, findTypes } from '../../util/component-types';
 import getRandom from '../../util/random';
 import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 import RadioButton from '../RadioButton/RadioButton';
@@ -130,7 +130,7 @@ const RadioGroup = createClass({
 							callbackId={index}
 							name={name}
 							onSelect={this.handleSelected}
-							Label={_.get(_.first(findTypes(radioButtonChildProp, RadioGroup.Label)), 'props', null)}
+							Label={_.get(getFirst(radioButtonChildProp, RadioGroup.Label), 'props', null)}
 						/>
 					);
 				})}

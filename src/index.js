@@ -9,6 +9,7 @@ import { default as ExpanderDumb } from './components/Expander/Expander';
 import { default as ExpanderPanelDumb } from './components/ExpanderPanel/ExpanderPanel';
 import { default as PaginatorDumb } from './components/Paginator/Paginator';
 import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
+import { default as SearchFieldDumb } from './components/SearchField/SearchField';
 import { default as SidebarDumb } from './components/Sidebar/Sidebar';
 import { default as SingleSelectDumb } from './components/SingleSelect/SingleSelect';
 import { default as TabsDumb } from './components/Tabs/Tabs';
@@ -23,6 +24,7 @@ const Expander = buildHybridComponent(ExpanderDumb);
 const ExpanderPanel = buildHybridComponent(ExpanderPanelDumb);
 const Paginator = buildHybridComponent(PaginatorDumb);
 const RadioGroup = buildHybridComponent(RadioGroupDumb);
+const SearchField = buildHybridComponent(SearchFieldDumb);
 const Sidebar = buildHybridComponent(SidebarDumb);
 const SingleSelect = buildHybridComponent(SingleSelectDumb);
 const Tabs = buildHybridComponent(TabsDumb);
@@ -55,6 +57,7 @@ import LineChart from './components/LineChart/LineChart';
 import LoadingIcon from './components/Icon/LoadingIcon/LoadingIcon';
 import LoadingIndicator from './components/LoadingIndicator/LoadingIndicator';
 import LoadingMessage from './components/LoadingMessage/LoadingMessage';
+import MinimizeIcon from './components/Icon/MinimizeIcon/MinimizeIcon';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import Overlay from './components/Overlay/Overlay';
 import Panel from './components/Panel/Panel';
@@ -133,6 +136,7 @@ export {
 	LoadingIcon,
 	LoadingIndicator,
 	LoadingMessage,
+	MinimizeIcon,
 	MinusIcon,
 	Overlay,
 	Paginator,
@@ -147,6 +151,7 @@ export {
 	RefreshIcon,
 	ResizeIcon,
 	ScrollTable,
+	SearchField,
 	SearchIcon,
 	SingleSelect,
 	SingleSelectDumb,
