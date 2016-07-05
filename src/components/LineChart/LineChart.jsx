@@ -460,9 +460,7 @@ const LineChart = createClass({
 					{hasToolTips && isHovering && !_.isNil(mouseX) ?
 						<ToolTip
 							isExpanded={true}
-							flyOutStyle={{
-								maxWidth: 'none',
-							}}
+							flyOutMaxWidth='none'
 						>
 							<ToolTip.Target elementType='g'>
 								<path

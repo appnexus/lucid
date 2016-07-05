@@ -17,6 +17,7 @@ const {
 	object,
 	oneOf,
 	string,
+	oneOfType,
 } = React.PropTypes;
 
 const {
@@ -78,7 +79,7 @@ const ToolTip = createClass({
 		/**
 		 * maximum width of the ToolTip FlyOut. Defaults to 200px.
 		 */
-		flyOutMaxWidth: number,
+		flyOutMaxWidth: oneOfType([number, string]),
 		/**
 		 * direction of the FlyOut relative to Target. Defaults to `'down'`.
 		 */
