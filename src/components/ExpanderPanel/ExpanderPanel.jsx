@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes }  from '../../util/component-types';
+import { createClass, getFirst }  from '../../util/component-types';
 
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Panel from '../Panel/Panel';
@@ -106,7 +106,7 @@ const ExpanderPanel = createClass({
 			...passThroughs,
 		} = this.props;
 
-		const headerChildProps = _.get(_.first(findTypes(this.props, ExpanderPanel.Header)), 'props');
+		const headerChildProps = _.get(getFirst(this.props, ExpanderPanel.Header), 'props');
 
 		return (
 			<Panel

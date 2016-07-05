@@ -69,10 +69,8 @@ export function createElements(type, values=[]) {
 
 // return all elements found in props and children of the specified types
 export function findTypes(props, types=[]) {
-	types = [].concat(types); // coerce to Array
-
 	// get elements from props (using type.propName)
-	const elementsFromProps = _.reduce(types, (acc, type) => {
+	const elementsFromProps = _.reduce(_.castArray(types), (acc, type) => {
 		if (!_.isUndefined(type.propName)) {
 			const propMatches = _.flatten(_.values(_.pick(props, type.propName)));
 			return acc.concat(createElements(type, propMatches));
@@ -84,7 +82,12 @@ export function findTypes(props, types=[]) {
 	return elementsFromProps.concat(filterTypes(props.children, types));
 }
 
+// return the first element found in props and children of the specificed type(s)
+export function getFirst(props, types, defaultValue) {
+	return _.first(findTypes(props, types)) || defaultValue;
+}
+
 // omit props defined in propTypes of the given type
 export function omitProps (props, type) {
-		return _.omit(props, _.keys(type.propTypes));
+	return _.omit(props, _.keys(type.propTypes));
 }
