@@ -1,0 +1,17 @@
+.lucid-PieChart {
+	// Increase specificity by 1 to beat .lucid-Line
+	&-slice&-slice {
+		stroke: @color-white;
+		transition: transform @timing-animation-hover;
+	}
+
+	&-slice-group-is-hovering &-slice {
+		// This value is duplicated in the jsx code for IE compatibility, make sure
+		// you change both if you need to change this.
+		transform: scale(1.1);
+	}
+
+	&-slice-hover {
+		fill-opacity: 0;
+	}
+}

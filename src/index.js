@@ -8,6 +8,7 @@ import { default as DropMenuDumb } from './components/DropMenu/DropMenu';
 import { default as ExpanderDumb } from './components/Expander/Expander';
 import { default as ExpanderPanelDumb } from './components/ExpanderPanel/ExpanderPanel';
 import { default as PaginatorDumb } from './components/Paginator/Paginator';
+import { default as PieChartDumb } from './components/PieChart/PieChart';
 import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 import { default as SearchFieldDumb } from './components/SearchField/SearchField';
 import { default as SidebarDumb } from './components/Sidebar/Sidebar';
@@ -23,6 +24,7 @@ const DropMenu = buildHybridComponent(DropMenuDumb);
 const Expander = buildHybridComponent(ExpanderDumb);
 const ExpanderPanel = buildHybridComponent(ExpanderPanelDumb);
 const Paginator = buildHybridComponent(PaginatorDumb);
+const PieChart = buildHybridComponent(PieChartDumb);
 const RadioGroup = buildHybridComponent(RadioGroupDumb);
 const SearchField = buildHybridComponent(SearchFieldDumb);
 const Sidebar = buildHybridComponent(SidebarDumb);
@@ -53,6 +55,7 @@ import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
 import Grid from './components/Grid/Grid';
 import Icon from './components/Icon/Icon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
+import Legend from './components/Legend/Legend';
 import LineChart from './components/LineChart/LineChart';
 import LoadingIcon from './components/Icon/LoadingIcon/LoadingIcon';
 import LoadingIndicator from './components/LoadingIndicator/LoadingIndicator';
@@ -132,6 +135,7 @@ export {
 	Grid,
 	Icon,
 	InfoIcon,
+	Legend,
 	LineChart,
 	LoadingIcon,
 	LoadingIndicator,
@@ -142,6 +146,7 @@ export {
 	Paginator,
 	PaginatorDumb,
 	Panel,
+	PieChart,
 	PlusIcon,
 	Portal,
 	RadioButton,
