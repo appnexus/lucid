@@ -1,7 +1,7 @@
 // Note: these tests are basically pin tests, given that we're rendering svgs,
-// these tests serve to ensure that the rendered output is exactly at the
-// author inteded. As a consequence, you may need to re-pin these tests if you
-// change things.
+// these tests serve to ensure that the rendered output is exactly at the author
+// intended. As a consequence, you may need to re-pin these tests if you change
+// things.
 
 import React from 'react';
 import { mount } from 'enzyme';

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes }  from '../../util/component-types';
+import { createClass, findTypes, omitProps }  from '../../util/component-types';
 
 import ExpanderPanel from '../ExpanderPanel/ExpanderPanel';
 
@@ -90,7 +90,7 @@ const Accordion = createClass({
 
 		return (
 			<div
-				{...passThroughs}
+				{...omitProps(passThroughs, Accordion)}
 				className={cx('&', className)}
 				style={style}>
 				{_.map(itemChildProps, (itemChildProp, index) => {

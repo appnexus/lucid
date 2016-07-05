@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import Portal from '../Portal/Portal';
-import { createClass, findTypes } from '../../util/component-types';
+import { createClass, getFirst } from '../../util/component-types';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 import { lucidClassNames } from '../../util/style-helpers';
 
@@ -355,11 +355,11 @@ const ContextMenu = createClass({
 			},
 		} = this;
 
-		const targetElement = _.first(findTypes(this.props, ContextMenu.Target));
+		const targetElement = getFirst(this.props, ContextMenu.Target);
 		const targetChildren = _.get(targetElement, 'props.children', null);
 		const TargetElementType = targetElement.props.elementType;
 
-		const flyoutElement = _.first(findTypes(this.props, ContextMenu.FlyOut));
+		const flyoutElement = getFirst(this.props, ContextMenu.FlyOut);
 		const flyProps = _.get(flyoutElement, 'props', {});
 
 		return (
