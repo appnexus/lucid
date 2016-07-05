@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Overlay from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes }  from '../../util/component-types';
+import { createClass, getFirst }  from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Dialog');
 
@@ -69,8 +69,8 @@ const Dialog = createClass({
 			...passThroughs,
 		} = this.props;
 
-		const headerChildProp = _.get(_.first(findTypes(this.props, Dialog.Header)), 'props', {});
-		const footerChildProp = _.get(_.first(findTypes(this.props, Dialog.Footer)), 'props', {});
+		const headerChildProp = _.get(getFirst(this.props, Dialog.Header), 'props', {});
+		const footerChildProp = _.get(getFirst(this.props, Dialog.Footer), 'props', {});
 
 		return (
 			<Overlay

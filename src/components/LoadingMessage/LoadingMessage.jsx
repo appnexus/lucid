@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import { createClass, getFirst, omitProps } from '../../util/component-types';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 
 const cx = lucidClassNames.bind('&-LoadingMessage');
@@ -76,11 +76,11 @@ const LoadingMessage = createClass({
 		} = LoadingMessage;
 
 		const defaultTitle = 'Loading';
-		const iconElement = _.first(findTypes(props, Icon));
+		const iconElement = getFirst(props, Icon);
 		const iconChildren = _.get(iconElement, 'props.children', <LoadingIcon />);
-		const titleElement = _.first(findTypes(props, Title));
+		const titleElement = getFirst(props, Title);
 		const titleChildren = _.get(titleElement, 'props.children');
-		const bodyElement = _.first(findTypes(props, Body));
+		const bodyElement = getFirst(props, Body);
 		const bodyChildren = _.get(bodyElement, 'props.children', null);
 
 		return (
