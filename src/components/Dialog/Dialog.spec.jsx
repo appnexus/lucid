@@ -7,7 +7,7 @@ import assert from 'assert';
 import Dialog from './Dialog';
 import Overlay from '../Overlay/Overlay';
 
-describe.only('Dialog', () => {
+describe('Dialog', () => {
 	common(Dialog, {
 		selector: '.lucid-Dialog',
 		getDefaultProps: () => {
