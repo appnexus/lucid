@@ -174,6 +174,7 @@ const DataTable = createClass({
 			data,
 			isActionable,
 			isSelectable,
+			style,
 			...passThroughs,
 		} = this.props;
 
@@ -200,7 +201,11 @@ const DataTable = createClass({
 		);
 
 		return (
-			<ScrollTable {...omitProps(passThroughs, DataTable)} className={cx('&', className)}>
+			<ScrollTable
+				style={style}
+				{...omitProps(passThroughs, DataTable)}
+				className={cx('&', className)}
+			>
 				<Thead>
 					<Tr>
 						{isSelectable ? (
