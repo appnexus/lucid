@@ -69,7 +69,7 @@ const TextFieldValidated = createClass({
 				style={style}
 				Error={errorChildProps}
 			>
-				<TextField {..._.omit(this.props, ['Error'])} />
+				<TextField {..._.omit(this.props, ['Error', 'style', 'className'])} />
 			</Validation>
 		);
 	},
