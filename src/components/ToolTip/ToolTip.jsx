@@ -190,6 +190,7 @@ const ToolTip = createClass({
 			isCloseable,
 			isExpanded,
 			kind,
+			portalId,
 			style,
 			...passThroughs,
 		} = this.props;
@@ -212,6 +213,7 @@ const ToolTip = createClass({
 				getAlignmentOffset={getAlignmentOffset}
 				isExpanded={isExpanded}
 				style={style}
+				portalId={portalId}
 				{...omitProps(passThroughs, ToolTip)}
 				onMouseOver={this.handleMouseOverTarget}
 				onMouseOut={this.handleMouseOutTarget}
