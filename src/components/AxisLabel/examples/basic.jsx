@@ -17,8 +17,10 @@ export default React.createClass({
 			<svg width={width} height={height}>
 				{/* dotted outline for the svg */}
 				<rect
-					width={width}
-					height={height}
+					x={1}
+					y={1}
+					width={width - 2}
+					height={height - 2}
 					style={{
 						strokeWidth: 1,
 						strokeDasharray: '2,2',
