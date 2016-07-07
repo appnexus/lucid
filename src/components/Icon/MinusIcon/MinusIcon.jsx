@@ -27,7 +27,7 @@ const MinusIcon = createClass({
 		return (
 			<Icon
 				{...omitProps(passThroughs, MinusIcon)}
-        {..._.pick(passThroughs, _.keys(Icon.propTypes))}
+				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
 				<path d='M3,7h10v2H3V7z' />

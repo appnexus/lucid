@@ -27,7 +27,7 @@ const RefreshIcon = createClass({
 		return (
 			<Icon
 				{...omitProps(passThroughs, RefreshIcon)}
-        {..._.pick(passThroughs, _.keys(Icon.propTypes))}
+				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
 				<path d='M14.666,9.824c-0.052,0.108-0.16,0.175-0.276,0.175l-1.713-0.101c-0.723,2.25-2.738,3.955-5.059,3.955

@@ -27,7 +27,7 @@ const ResizeIcon = createClass({
 		return (
 			<Icon
 				{...omitProps(passThroughs, ResizeIcon)}
-        {..._.pick(passThroughs, _.keys(Icon.propTypes))}
+				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
 				<path d='M4.5,15.5 L15.5,4.5' strokeWidth='1'/>

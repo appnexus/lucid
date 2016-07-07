@@ -28,7 +28,7 @@ const TableGearIcon = createClass({
 		return (
 			<Icon
 				{...omitProps(passThroughs, TableGearIcon)}
-        {..._.pick(passThroughs, _.keys(Icon.propTypes))}
+				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
 				<rect className={cx('&-background')} x='1' y='4' width='13' height='8'/>

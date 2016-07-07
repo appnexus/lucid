@@ -27,7 +27,7 @@ const PlusIcon = createClass({
 		return (
 			<Icon
 				{...omitProps(passThroughs, PlusIcon)}
-        {..._.pick(passThroughs, _.keys(Icon.propTypes))}
+				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
 				<path d='M1,6.6h14v2.8H1V6.6z'/>

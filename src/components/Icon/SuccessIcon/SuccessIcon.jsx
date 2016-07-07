@@ -27,7 +27,7 @@ const SuccessIcon = createClass({
 		return (
 			<CheckIcon
 				{...omitProps(passThroughs, SuccessIcon)}
-        {..._.pick(passThroughs, _.keys(CheckIcon.propTypes))}
+				{..._.pick(passThroughs, _.keys(CheckIcon.propTypes))}
 				className={cx('&', className)}
 				isBadge
 			/>
