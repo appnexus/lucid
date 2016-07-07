@@ -1,7 +1,8 @@
 import React from 'react';
-import * as d3Scale from 'd3-scale';
-
-import Axis from '../Axis';
+import {
+	Axis,
+	d3Scale,
+} from '../../../index';
 
 const margin = {top: 10, bottom: 10};
 const width = 50;

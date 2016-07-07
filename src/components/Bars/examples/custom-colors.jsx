@@ -1,8 +1,10 @@
 import _ from 'lodash';
 import React from 'react';
-import Bars from '../Bars';
-import * as d3Scale from 'd3-scale';
-import * as chartConstants from '../../../constants/charts';
+import {
+	Bars,
+	d3Scale,
+	chartConstants,
+} from '../../../index';
 
 const width = 1000;
 const height = 400;

@@ -17,15 +17,17 @@ const {
 /**
  * {"categories": ["visualizations", "chart primitives"]}
  *
- * Axes and allies
+ * *For use within an `svg`*
  *
- * This component is a very close sister to `d3.avg.axis` and most of the logic
- * was ported from d3.
+ * Axes are used to help render human-readable reference marks on charts. They
+ * can either be horizontal or vertical and really only need a scale to be able
+ * to draw properly.
+ *
+ * This component is a very close sister to d3's svg axis and most of the logic
+ * was ported from there.
  */
 const Axis = createClass({
 	displayName: 'Axis',
-
-	_lucidIsPrivate: true,
 
 	propTypes: {
 		/**
@@ -33,7 +35,8 @@ const Axis = createClass({
 		 */
 		className: string,
 		/**
-		 * Must be a D3 scale.
+		 * Must be a d3 scale. Lucid exposes the `lucid.d3Scale` library for use
+		 * here.
 		 */
 		scale: func.isRequired,
 		/**

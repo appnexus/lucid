@@ -1,6 +1,8 @@
 import React from 'react';
-import AxisLabel from '../AxisLabel';
-import * as chartConstants from '../../../constants/charts';
+import {
+	AxisLabel,
+	chartConstants,
+} from '../../../index';
 
 const width = 1000;
 const height = 400;

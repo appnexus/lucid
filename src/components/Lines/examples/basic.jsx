@@ -1,7 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
-import Lines from '../Lines';
-import * as d3Scale from 'd3-scale';
+import {
+	Lines,
+	d3Scale,
+} from '../../../index';
 
 const width = 1000;
 const height = 400;

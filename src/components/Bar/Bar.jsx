@@ -16,13 +16,14 @@ const {
 /**
  * {"categories": ["visualizations", "geoms"]}
  *
- * Bars are typically used for bar charts.
+ * *For use within an `svg`*
+ *
+ * Bars are typically used for bar charts and are pretty much a thin wrapper
+ * around svg rects.
  *
  */
 const Bar = createClass({
 	displayName: 'Bar',
-
-	_lucidIsPrivate: true,
 
 	propTypes: {
 		/**

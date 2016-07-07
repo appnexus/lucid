@@ -27,13 +27,13 @@ const PATHS = [
 /**
  * {"categories": ["visualizations", "geoms"]}
  *
- * Points are typically used for scatter plots. Did I get the point across?
+ * *For use within an `svg`*
+ *
+ * Points are typically used for scatter plots or overlaying shapes on lines.
  *
  */
 const Point = createClass({
 	displayName: 'Point',
-
-	_lucidIsPrivate: true,
 
 	propTypes: {
 		/**

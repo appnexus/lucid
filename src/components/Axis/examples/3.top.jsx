@@ -1,7 +1,8 @@
 import React from 'react';
-import * as d3Scale from 'd3-scale';
-
-import Axis from '../Axis';
+import {
+	Axis,
+	d3Scale,
+} from '../../../index';
 
 const margin = {right: 20, left: 20};
 const width = 400;
@@ -19,7 +20,7 @@ export default React.createClass({
 					<Axis
 						scale={x}
 						orient='top'
-						ticks={x.ticks(5)}
+						tickCount={6}
 					/>
 				</g>
 			</svg>

@@ -20,14 +20,14 @@ const {
 } = React.PropTypes;
 
 /**
- * {"categories": ["visualizations", "chart primitives"]}
+ * {"categories": ["visualizations", "chart primitives"], "madeFrom": ["Line"]}
  *
- * Such lines. Much wow.
+ * *For use within an `svg`*
+ *
+ * Lines are typically used to represent continuous data and can be stacked.
  */
 const Lines = createClass({
 	displayName: 'Lines',
-
-	_lucidIsPrivate: true,
 
 	propTypes: {
 		/**
@@ -95,11 +95,13 @@ const Lines = createClass({
 		 */
 		data: arrayOf(object).isRequired,
 		/**
-		 * The scale for the x axis. This must be a d3-scale scale.
+		 * The scale for the x axis. Must be a d3 scale. Lucid exposes the
+		 * `lucid.d3Scale` library for use here.
 		 */
 		xScale: func.isRequired,
 		/**
-		 * The scale for the y axis. This must be a d3-scale scale.
+		 * The scale for the y axis. Must be a d3 scale. Lucid exposes the
+		 * `lucid.d3Scale` library for use here.
 		 */
 		yScale: func.isRequired,
 		/**
@@ -127,8 +129,6 @@ const Lines = createClass({
 
 	getDefaultProps() {
 		return {
-			top: 0,
-			left: 0,
 			xField: 'x',
 			yFields: ['y'],
 			isStacked: false,
@@ -144,8 +144,6 @@ const Lines = createClass({
 			isStacked,
 			palette,
 			colorMap,
-			left,
-			top,
 			colorOffset,
 			xScale,
 			xField,
@@ -170,7 +168,7 @@ const Lines = createClass({
 				.y0((a) => yScale(a[1]))
 				.y1((a) => yScale(a[0]))
 			: d3Shape.area()
-				.defined(_.isFinite)
+				.defined((a) => _.isFinite(a) || _.isDate(a))
 				.x((a, i) => xScale(data[i][xField]))
 				.y((a) => yScale(a));
 
@@ -187,12 +185,11 @@ const Lines = createClass({
 			<g
 				{...passThroughs}
 				className={cx(className, '&')}
-				transform={`translate(${left}, ${top})`}
 			>
 				{_.map(transformedData, (d, dIndex) => (
 					<g key={dIndex}>
 						<Line
-							color={_.get(colorMap, yFields[dIndex], palette[(dIndex % palette.length) + colorOffset])}
+							color={_.get(colorMap, yFields[dIndex], palette[(dIndex + colorOffset) % palette.length])}
 							d={area(d)}
 						/>
 					</g>
