@@ -458,7 +458,10 @@ const LineChart = createClass({
 				{/* tooltips */}
 				<g transform={`translate(${margin.left}, ${margin.top})`}>
 					{hasToolTips && isHovering && !_.isNil(mouseX) ?
-						<ToolTip isExpanded={true}>
+						<ToolTip
+							isExpanded={true}
+							flyOutMaxWidth='none'
+						>
 							<ToolTip.Target elementType='g'>
 								<path
 									className={cx('&-tooltip-line')}

@@ -13,6 +13,7 @@ import {
 	Route,
 	Router,
 	useRouterHistory,
+	withRouter,
 } from 'react-router';
 import { createHashHistory } from 'history';
 import { markdown } from 'markdown';
@@ -21,6 +22,7 @@ import { handleHighlightCode, toMarkdown } from './util';
 
 import ColorPalette from './containers/color-palette';
 import LandingPage from './containers/landing-page';
+import Icons from './containers/icons';
 
 import {
 	Table,
@@ -533,6 +535,12 @@ const App = React.createClass({
 							>
 								Color Palette
 							</Item>
+							<Item
+								onSelect={_.partial(this.goToPath, '/icons')}
+								isSelected={this.props.location.pathname === '/icons'}
+							>
+								Icons
+							</Item>
 						</VerticalListMenu>
 
 						{this.renderCategoryLinks(docgenGroups)}
@@ -552,6 +560,7 @@ render((
 			<IndexRoute component={LandingPage} />
 			<Route path='/components/:componentName' component={Component}/>
 			<Route path='/color-palette' component={ColorPalette}/>
+			<Route path='/icons' component={withRouter(Icons)}/>
 		</Route>
 	</Router>
 ), document.querySelector('#docs'));

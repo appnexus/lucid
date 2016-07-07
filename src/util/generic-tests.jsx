@@ -11,6 +11,7 @@ export function common(Component, {
 	getDefaultProps = _.noop,
 	selector = null,
 	exemptFunctionProps = [],
+	exemptChildComponents = [],
 } = {}) {
 
 	function generateDefaultProps(props={}) {
@@ -96,6 +97,31 @@ export function common(Component, {
 
 			});
 
+		});
+
+		describe('child components', () => {
+
+			const childComponents = _.omit(Component.definition.statics, [
+				'_lucidIsPrivate',
+				'definition',
+				'propName',
+				'reducers',
+				'selectors',
+			]);
+
+			describe('propNames in propTypes', () => {
+				_.chain(childComponents)
+				.map('propName')
+				.compact()
+				.flatMap(_.castArray)
+				.reject(propName => _.includes(exemptChildComponents, propName))
+				.forEach(propName => {
+					it(`should include ${propName} in propTypes`, () => {
+						assert(Component.propTypes[propName], `must include ${propName} in propTypes`);
+					});
+				})
+				.value();
+			});
 		});
 
 		// Only run this test if it's a public component

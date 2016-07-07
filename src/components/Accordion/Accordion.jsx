@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes }  from '../../util/component-types';
+import { createClass, findTypes, omitProps }  from '../../util/component-types';
 
 import ExpanderPanel from '../ExpanderPanel/ExpanderPanel';
 
@@ -10,6 +10,7 @@ import * as reducers from '../Accordion/Accordion.reducers';
 const cx = lucidClassNames.bind('&-Accordion');
 
 const {
+	any,
 	func,
 	object,
 	number,
@@ -54,6 +55,12 @@ const Accordion = createClass({
 		* Passed through to the root element.
 		*/
 		style: object,
+
+		/**
+		 * prop alternative to Header child component
+		 * passed through to the underlying ExpanderPanel
+		 */
+		Header: any,
 	},
 
 	getDefaultProps() {
@@ -83,7 +90,7 @@ const Accordion = createClass({
 
 		return (
 			<div
-				{...passThroughs}
+				{...omitProps(passThroughs, Accordion)}
 				className={cx('&', className)}
 				style={style}>
 				{_.map(itemChildProps, (itemChildProp, index) => {

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes }  from '../../util/component-types';
+import { createClass, getFirst }  from '../../util/component-types';
 
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Panel from '../Panel/Panel';
@@ -11,6 +11,7 @@ import * as reducers from '../Expander/Expander.reducers';
 const cx = lucidClassNames.bind('&-ExpanderPanel');
 
 const {
+	any,
 	bool,
 	func,
 	node,
@@ -78,6 +79,12 @@ const ExpanderPanel = createClass({
 		 * Passed through to the root element.
 		 */
 		style: object,
+
+		/**
+		 * prop alternative to Header child component
+		 * passed through to the underlying ExpanderPanel
+		 */
+		Header: any,
 	},
 
 	getDefaultProps() {
@@ -106,7 +113,7 @@ const ExpanderPanel = createClass({
 			...passThroughs,
 		} = this.props;
 
-		const headerChildProps = _.get(_.first(findTypes(this.props, ExpanderPanel.Header)), 'props');
+		const headerChildProps = _.get(getFirst(this.props, ExpanderPanel.Header), 'props');
 
 		return (
 			<Panel

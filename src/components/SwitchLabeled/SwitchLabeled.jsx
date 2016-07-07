@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes }  from '../../util/component-types';
+import { createClass, getFirst }  from '../../util/component-types';
 import Switch from '../Switch/Switch';
 
 const cx = lucidClassNames.bind('&-SwitchLabeled');
@@ -70,8 +70,8 @@ const SwitchLabeled = createClass({
 	},
 
 	componentWillReceiveProps(nextProps) {
-		const currentLabel = _.get(_.first(findTypes(this.props, SwitchLabeled.Label)), 'props.children', null);
-		const nextLabel = _.get(_.first(findTypes(nextProps, SwitchLabeled.Label)), 'props.children', null);
+		const currentLabel = _.get(getFirst(this.props, SwitchLabeled.Label), 'props.children', null);
+		const nextLabel = _.get(getFirst(nextProps, SwitchLabeled.Label), 'props.children', null);
 
 		if (currentLabel !== nextLabel) {
 			this._labelKey++;
@@ -88,7 +88,7 @@ const SwitchLabeled = createClass({
 			...passThroughs,
 		} = this.props;
 
-		const labelChildProps = _.first(_.map(findTypes(this.props, SwitchLabeled.Label), 'props'));
+		const labelChildProps = _.get(getFirst(this.props, SwitchLabeled.Label), 'props');
 
 		return (
 			<label

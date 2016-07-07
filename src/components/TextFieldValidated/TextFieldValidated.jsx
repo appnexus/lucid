@@ -9,6 +9,7 @@ import { createClass, findTypes } from '../../util/component-types';
 const cx = lucidClassNames.bind('&-TextFieldValidated');
 
 const {
+	any,
 	object,
 	string,
 } = React.PropTypes;
@@ -43,6 +44,11 @@ const TextFieldValidated = createClass({
 		 * Passed to the root container.
 		 */
 		className: string,
+
+		/**
+		 * Prop alternative to Error child component
+		 */
+		Error: any,
 	},
 
 	getDefaultProps() {

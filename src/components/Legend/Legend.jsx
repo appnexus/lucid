@@ -8,7 +8,7 @@ import Line from '../Line/Line';
 
 const cx = lucidClassNames.bind('&-Legend');
 
-const SIZE = 12;
+const POINT_SIZE = 12;
 const LINE_WIDTH = 22;
 
 const {
@@ -22,8 +22,6 @@ const {
 /**
  * {"categories": ["visualizations", "chart primitives"]}
  *
- * Jon Legend
- *
  * Contrary to the other chart primitives, this component is not rendered in
  * svg. In order to sanely render horizontal legends, we need to know the width
  * of the text elements ahead of rendering time. Since we're using a variable
@@ -33,8 +31,6 @@ const {
  */
 const Legend = createClass({
 	displayName: 'Legend',
-
-	_lucidIsPrivate: true,
 
 	statics: {
 		HEIGHT: 28, // exposed for consumer convenience
@@ -68,7 +64,6 @@ const Legend = createClass({
 			displayName: 'Legend.Item',
 			propsName: 'Item',
 			propTypes: {
-				name: string,
 				hasPoint: bool,
 				hasLine: bool,
 				/**
@@ -132,20 +127,20 @@ const Legend = createClass({
 						{hasPoint || hasLine ?
 							<svg
 								className={cx('&-Item-indicator')}
-								width={hasLine || hasSomeLines ? LINE_WIDTH : SIZE}
-								height={SIZE}
+								width={hasLine || hasSomeLines ? LINE_WIDTH : POINT_SIZE}
+								height={POINT_SIZE}
 							>
 								{hasPoint ?
 									<Point
-										x={hasLine || hasSomeLines ? LINE_WIDTH / 2 : SIZE / 2}
-										y={SIZE / 2}
+										x={hasLine || hasSomeLines ? LINE_WIDTH / 2 : POINT_SIZE / 2}
+										y={POINT_SIZE / 2}
 										color={color}
 										kind={pointKind}
 									/>
 								: null}
 								{hasLine ?
 									<Line
-										d={`M0,${SIZE / 2} L${LINE_WIDTH},${SIZE / 2}`}
+										d={`M0,${POINT_SIZE / 2} L${LINE_WIDTH},${POINT_SIZE / 2}`}
 										color={color}
 									/>
 								: null}

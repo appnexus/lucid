@@ -108,7 +108,7 @@ const BarChart = createClass({
 		 */
 		palette: arrayOf(string),
 		/**
-		 * You can pass in an object if you want to map fields to
+		 * You can pass in an object if you want to map x values to
 		 * `lucid.chartConstants` or custom colors:
 		 *
 		 *     {

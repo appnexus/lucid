@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, rejectTypes } from '../../util/component-types';
+import { createClass, getFirst, findTypes, rejectTypes } from '../../util/component-types';
 import { scrollParentTo } from '../../util/dom-helpers';
 import * as KEYCODE from '../../constants/key-code';
 import * as reducers from './DropMenu.reducers';
@@ -415,7 +415,7 @@ const DropMenu = createClass({
 			nullOptions,
 		} = this.state;
 
-		const controlProps = _.get(_.first(findTypes(this.props, DropMenu.Control)), 'props', {});
+		const controlProps = _.get(getFirst(this.props, DropMenu.Control), 'props', {});
 
 		return (
 			<div className={cx('&', '&-base', {
