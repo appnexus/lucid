@@ -202,7 +202,24 @@ const Component = React.createClass({
 		} = this.props.params;
 
 		const component = _.get(docgenMap, componentName, {});
-		const childComponents = _.get(component, 'childComponents', []);
+		const childComponents = _.chain(component)
+		.get('childComponents', [])
+		// get docs for imported component references
+		.map(childComponent => {
+			if (!childComponent.componentRef) {
+				return childComponent;
+			}
+			return _.assign(
+				{},
+				childComponent,
+				_.chain(docgenMap)
+				.get(childComponent.componentRef, {})
+				.omit(['displayName'])
+				.value()
+			);
+
+		})
+		.value();
 
 		const componentProps = _.chain(docgenMap)
 			.get(`${componentName}.props`, [])
@@ -286,8 +303,25 @@ const Component = React.createClass({
 						<h3>Child Components</h3>
 						{_.map(childComponents, (childComponent) => (
 							<section key={childComponent.displayName}>
-								<h4>{childComponent.displayName}</h4>
+								<h4>
+									{childComponent.componentRef
+										? (<Link to={{ pathname: `/components/${childComponent.componentRef}`, query: this.props.location.query }}>
+												{childComponent.displayName}
+												{childComponent.displayName !== childComponent.componentRef && ` (${childComponent.componentRef})`}
+											</Link>)
+										: childComponent.displayName}
+								</h4>
 								<div dangerouslySetInnerHTML={toMarkdown(childComponent.description)} />
+								{childComponent.propName && (
+									<Table>
+										<Tbody>
+											<Tr>
+												<Td>propName</Td>
+												<Td><pre><code className='lang-javascript'>{childComponent.propName}</code></pre></Td>
+											</Tr>
+										</Tbody>
+									</Table>
+								)}
 								{!_.isNil(childComponent.props) ? (
 									<Table style={{width:'100%'}}>
 										<Thead>

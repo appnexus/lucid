@@ -9,6 +9,7 @@ var gulp = require('gulp');
 var gzip = require('gulp-gzip');
 var path = require('path');
 var reactDocgen = require('react-docgen');
+var recast = require('recast');
 var tar = require('gulp-tar');
 var webpack = require('webpack');
 var webpackConfig = require('../webpack.config.js');
@@ -37,14 +38,8 @@ function findParentNodeIdentifier(path) {
 	return null;
 }
 
-function getDocsForPath(definitionPath, name) {
-	return reactDocgen.parse('', function (/* ast, recast */) {
-		return definitionPath;
-	}, reactDocgen.defaultHandlers.concat([
-		function (documentation /*, definition */) {
-			documentation.set('displayName', name);
-		},
-	]));
+function isTopLevelDef(path) {
+	return _.get(path, ['parentPath', 'parentPath', 'parentPath', 'parentPath', 'parentPath', 'parentPath', 'name']) === 'body';
 }
 
 module.exports = {
@@ -74,74 +69,169 @@ module.exports = {
 				if (!isInComponents) { return acc; }
 
 				var componentName = extractComponentName(file);
+				var exportName;
 
-				var definitionMap;
-				var isPrivateComponent = false
-				var exportIdentiferName;
 				var componentSource = fs.readFileSync(file)
 				var docs = reactDocgen.parse(
 					componentSource,
-					// Resolver
-					function (ast, recast) {
-						definitionMap = {};
-						recast.visit(ast, {
-							visitObjectExpression: function (path) {
-								_.forEach(path.get('properties').value, function (property) {
-									if (property.key.name === '_lucidIsPrivate') {
-										isPrivateComponent = true;
-									}
+					function resolver(ast, recast) {
+						var component;
+						var childComponents = [];
+						var importLocalNames = [];
 
-									if (property.key.name === 'render') {
-										var identifier = findParentNodeIdentifier(path);
-										if (identifier) {
-											definitionMap[identifier] = path;
-										}
-									}
+						recast.visit(ast, {
+							visitImportDefaultSpecifier: function(path) {
+								importLocalNames.push(path.value.local.name);
+								return false;
+							},
+						});
+
+						recast.visit(ast, {
+							visitExportDefaultDeclaration: function(path) {
+								exportName = path.value.declaration.name;
+								recast.visit(ast, {
+									visitObjectExpression: function(path) {
+
+										path.get('properties').each(function(propertyPath) {
+
+											// top-level component definitions
+											if (propertyPath.value.key.name === 'render') {
+
+												// main component of module
+												if (findParentNodeIdentifier(path) === exportName) {
+													component = path;
+												} else {
+													// top-level child component definitions
+													childComponents.push(path);
+												}
+											}
+
+											// nested child-component definitions
+											if (propertyPath.value.key.name === 'components') {
+												propertyPath.get('value', 'properties').each(function(childComponentPropertyPath) {
+													var childComponentProperty = childComponentPropertyPath.get('value');
+
+													// reference to an imported component
+													// references to locally defined components are ignored because
+													// top-level child component defs are alread resolved above
+													if (childComponentProperty.value.type === 'Identifier') {
+														if (_.includes(importLocalNames, childComponentProperty.value.name)) {
+															childComponents.push(childComponentProperty);
+														}
+													}
+
+													// inline component definition
+													if (childComponentProperty.value.type === 'CallExpression') {
+														var definition = childComponentProperty.get('arguments', 0);
+														childComponents.push(definition);
+													}
+
+												});
+											}
+
+										});
+										return false;
+									},
 								});
 								return false;
 							},
-							visitExportDefaultDeclaration: function (path) {
-								exportIdentiferName = path.value.declaration.name;
-								return false;
-							},
 						});
-						return definitionMap[exportIdentiferName];
+						return [component].concat(childComponents);
 					},
-					// Handlers, a series of functions through which the documentation is
-					// built up.
-					reactDocgen.defaultHandlers.concat(function (documentation /*, definition */) {
-						// TODO: determine composition from the `import` statements See
-						// existing handlers for examples:
-						// https://github.com/reactjs/react-docgen/blob/dca8ec9d57b4833f7ddb3164bedf4d74578eee1e/src/handlers/propTypeCompositionHandler.js
-						var childComponentDocs = _.map(_.reject(_.keys(definitionMap), _.partial(_.isEqual, exportIdentiferName)), function (childComponentId) {
-							return getDocsForPath(definitionMap[childComponentId], childComponentId);
+					[function handler(documentation, definition) {
+
+						// component docs
+						if (findParentNodeIdentifier(definition) === exportName && isTopLevelDef(definition)) {
+
+							_.forEach(reactDocgen.defaultHandlers, function(handler) {
+								handler(documentation, definition);
+							});
+
+							return recast.visit(definition, {
+								visitObjectExpression: function (path) {
+									var isPrivateComponent = _.chain(path.get('properties').value)
+										.find(_.matchesProperty('key.name', '_lucidIsPrivate'))
+										.get('value.value', false)
+										.value();
+									documentation.set('isPrivateComponent', isPrivateComponent);
+									return false;
+								},
+							});
+
+						}
+
+						// childComponent docs
+
+						// import reference child component
+						if (definition.value.type !== 'ObjectExpression') {
+							documentation.set('displayName', definition.parentPath.value.key.name);
+							documentation.set('description', '');
+							return documentation.set('componentRef', definition.value.name);
+						}
+
+						// list of default handlers
+						_.forEach([
+							reactDocgen.handlers.propTypeHandler,
+							reactDocgen.handlers.propTypeCompositionHandler,
+							reactDocgen.handlers.propDocBlockHandler,
+							reactDocgen.handlers.flowTypeHandler,
+							reactDocgen.handlers.flowTypeDocBlockHandler,
+							reactDocgen.handlers.defaultPropsHandler,
+							// use normal component docblock handler for top-level defined child components,
+							// otherwise this custom one
+							isTopLevelDef(definition)
+							? reactDocgen.handlers.componentDocblockHandler
+							: function(documentation, definition) {
+								var description = reactDocgen.utils.docblock.getDocblock(definition.parentPath.parentPath.parentPath) || '';
+								documentation.set('description', description);
+							},
+							reactDocgen.handlers.displayNameHandler,
+							reactDocgen.handlers.componentMethodsHandler,
+							reactDocgen.handlers.componentMethodsJsDocHandler,
+						], function(handler) {
+							handler(documentation, definition);
 						});
-						documentation.set('childComponents', childComponentDocs);
-						documentation.set('isPrivateComponent', isPrivateComponent);
-					})
+
+						documentation.set(
+							'displayName',
+							_.get(definition, ['parentPath', 'parentPath', 'parentPath', 'value', 'id', 'name']) ||
+							_.get(definition, ['parentPath', 'parentPath', 'parentPath', 'value', 'key', 'name'])
+						);
+
+						// set propName
+						definition.get('properties').each(function(property) {
+							if (property.get('key', 'name').value === 'propName') {
+								documentation.set('propName', property.get('value').value.value);
+							}
+						});
+
+					}]
 				);
 
-				if (!docs.description) {
+				var doc = _.first(docs);
+				doc.childComponents = _.tail(docs);
+
+				if (!doc.description) {
 					return new Error('Missing a description from ' + file + ' - please put a comment block right above `createClass` and make sure to include the proper JSON blob in it.')
 				}
 
 				// Pull out the custom json that should be in the description of every module
-				var customJson = /\{.*\}/.exec(docs.description);
+				var customJson = /\{.*\}/.exec(doc.description);
 
 				// Strip out the custom json out of the description
-				docs.description = docs.description.replace(/\{.*\}/, '').trim();
+				doc.description = doc.description.replace(/\{.*\}/, '').trim();
 
 				if (!customJson) {
 					return new Error('Unable to find JSON in the description for %s. Every component must have JSON is in header with `categories` at minimum.', file);
 				}
 
 				try {
-					docs.customData = JSON.parse(customJson);
+					doc.customData = JSON.parse(customJson);
 				} catch(e) {
 					return new Error('Unable to parse JSON from the description of ' + file);
 				}
 
-				return _.set(acc, componentName, docs);
+				return _.set(acc, componentName, doc);
 			}, {});
 
 			if (docgenMap instanceof Error) {
@@ -199,5 +289,3 @@ module.exports = {
 		});
 	},
 };
-
-
