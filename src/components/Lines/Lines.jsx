@@ -103,6 +103,13 @@ const Lines = createClass({
 		 */
 		yScale: func.isRequired,
 		/**
+		 * Typically this number can be derived from the yScale. However when we're
+		 * `isStacked` we need to calculate a new domain for the yScale based on
+		 * the sum of the data. If you need explicit control of the y max when
+		 * stacking, pass it in here.
+		 */
+		yStackedMax: number,
+		/**
 		 * The field we should look up your x data by.
 		 */
 		xField: string,
@@ -151,6 +158,7 @@ const Lines = createClass({
 			xField,
 			yFields,
 			yScale: yScaleOriginal,
+			yStackedMax,
 			...passThroughs,
 		} = this.props;
 
@@ -179,7 +187,7 @@ const Lines = createClass({
 		if (isStacked) {
 			yScale.domain([
 				yScale.domain()[0], // only stacks well if this is `0`
-				_.chain(transformedData).last().flatten().max().value(),
+				yStackedMax || _.chain(transformedData).last().flatten().max().value(),
 			]);
 		}
 

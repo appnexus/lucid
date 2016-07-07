@@ -120,6 +120,13 @@ const Points = createClass({
 		 */
 		yFields: arrayOf(string),
 		/**
+		 * Typically this number can be derived from the yScale. However when we're
+		 * `isStacked` we need to calculate a new domain for the yScale based on
+		 * the sum of the data. If you need explicit control of the y max when
+		 * stacking, pass it in here.
+		 */
+		yStackedMax: number,
+		/**
 		 * Sometimes you might not want the colors to start rotating at the blue
 		 * color, this number will be added the line index in determining which
 		 * color the lines are.
@@ -163,6 +170,7 @@ const Points = createClass({
 			hasStroke,
 			xScale,
 			yFields,
+			yStackedMax,
 			isStacked,
 			yScale: yScaleOriginal,
 			...passThroughs,
@@ -182,7 +190,7 @@ const Points = createClass({
 		if (isStacked) {
 			yScale.domain([
 				yScale.domain()[0],
-				_.chain(transformedData).last().flatten().max().value(),
+				yStackedMax || _.chain(transformedData).last().flatten().max().value(),
 			]);
 		}
 

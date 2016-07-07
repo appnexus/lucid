@@ -129,6 +129,13 @@ const Bars = createClass({
 		 * Function to format the y data.
 		 */
 		yFormatter: func,
+		/**
+		 * Typically this number can be derived from the yScale. However when we're
+		 * `isStacked` we need to calculate a new domain for the yScale based on
+		 * the sum of the data. If you need explicit control of the y max when
+		 * stacking, pass it in here.
+		 */
+		yStackedMax: number,
 
 		/**
 		 * This will stack the data instead of grouping it. In order to stack the
@@ -181,6 +188,7 @@ const Bars = createClass({
 			yScale: yScaleOriginal,
 			yFields,
 			yFormatter,
+			yStackedMax,
 			isStacked,
 			...passThroughs,
 		} = this.props;
@@ -210,7 +218,7 @@ const Bars = createClass({
 		if (isStacked) {
 			yScale.domain([
 				yScale.domain()[0],
-				_.chain(transformedData).map((x) => _.last(_.last(x))).max().value(),
+				yStackedMax || _.chain(transformedData).map((x) => _.last(_.last(x))).max().value(),
 			]);
 		}
 

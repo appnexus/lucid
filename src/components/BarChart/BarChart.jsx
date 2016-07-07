@@ -414,6 +414,7 @@ const BarChart = createClass({
 					yFields={yAxisFields}
 					yScale={yScale}
 					yFormatter={yFinalFormatter}
+					yStackedMax={yAxisMax}
 					data={data}
 					isStacked={yAxisIsStacked}
 					hasToolTips={hasToolTips}
