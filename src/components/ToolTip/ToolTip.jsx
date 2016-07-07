@@ -4,7 +4,7 @@ import ContextMenu from '../ContextMenu/ContextMenu';
 import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 import * as reducers from './ToolTip.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes } from '../../util/component-types';
+import { createClass, findTypes, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ToolTip');
 const flyOutCx = cx.bind('&-FlyOut');
@@ -188,6 +188,7 @@ const ToolTip = createClass({
 			flyOutMaxWidth,
 			flyOutStyle,
 			isCloseable,
+			isExpanded,
 			kind,
 			...passThroughs,
 		} = this.props;
@@ -208,7 +209,8 @@ const ToolTip = createClass({
 				direction={direction}
 				directonOffset={15}
 				getAlignmentOffset={getAlignmentOffset}
-				{...passThroughs}
+				isExpanded={isExpanded}
+				{...omitProps(passThroughs, ToolTip)}
 				onMouseOver={this.handleMouseOverTarget}
 				onMouseOut={this.handleMouseOutTarget}
 			>

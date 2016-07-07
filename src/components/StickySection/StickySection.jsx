@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 
 const cx = lucidClassNames.bind('&-StickySection');
@@ -138,7 +138,7 @@ const StickySection = createClass({
 			className,
 			style,
 			viewportWidth,
-			...passthrus,
+			...passThroughs,
 		} = this.props;
 
 		const {
@@ -148,7 +148,7 @@ const StickySection = createClass({
 
 		return (
 			<div
-				{...passthrus}
+				{...omitProps(passThroughs, StickySection)}
 				className={cx('&', className)}
 				style={{
 					...(isAboveFold ? {

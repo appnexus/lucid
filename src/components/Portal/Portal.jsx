@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 
 const cx = lucidClassNames.bind('&-Portal');
@@ -56,7 +56,7 @@ const Portal = createClass({
 	},
 	componentDidUpdate() {
 		ReactDOM.render((
-			<div {...this.props} className={cx('&', this.props.className)}>
+			<div {...omitProps(this.props, Portal)} className={cx('&', this.props.className)}>
 				{this.props.children}
 			</div>
 		), this.portalElement);

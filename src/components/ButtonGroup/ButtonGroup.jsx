@@ -2,7 +2,7 @@ import _ from 'lodash';
 import Button from '../Button/Button';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes }  from '../../util/component-types';
+import { createClass, findTypes, omitProps }  from '../../util/component-types';
 import reducers from './ButtonGroup.reducers';
 
 const cx = lucidClassNames.bind('&-ButtonGroup');
@@ -89,14 +89,14 @@ const ButtonGroup = createClass({
 			selectedIndices,
 			className,
 			children,
-			...others,
+			...passThroughs,
 		} = this.props;
 
 		const buttonChildProps = _.map(findTypes(this.props, ButtonGroup.Button), 'props');
 
 		return (
 			<span
-				{...others}
+				{...omitProps(passThroughs, ButtonGroup)}
 				className={cx('&', className)}
 			>
 				{_.map(buttonChildProps, (buttonChildProp, index) => {

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, findTypes } from '../../util/component-types';
+import { createClass, getFirst, findTypes, omitProps } from '../../util/component-types';
 import getRandom from '../../util/random';
 import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 import RadioButton from '../RadioButton/RadioButton';
@@ -116,7 +116,7 @@ const RadioGroup = createClass({
 
 		return (
 			<span
-				{...passThroughs}
+				{...omitProps(passThroughs, RadioGroup)}
 				className={cx('&', className)}
 			>
 				{_.map(radioButtonChildProps, (radioButtonChildProp, index) => {

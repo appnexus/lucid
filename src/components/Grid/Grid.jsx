@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes }  from '../../util/component-types';
+import { createClass, findTypes, omitProps }  from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Grid');
 
@@ -145,7 +145,7 @@ const Grid = createClass({
 		const cellChildProps = _.map(findTypes(this.props, Grid.Cell), 'props');
 
 		return (
-			<section {...passThroughs}
+			<section {...omitProps(passThroughs, Grid)}
 				className={cx('&', {
 					'&-is-vertical': isVertical,
 					'&-is-horizontal': isHorizontal,
@@ -156,7 +156,7 @@ const Grid = createClass({
 				{_.map(cellChildProps, (cellChildProp, index) => {
 					return (
 						<article
-							{...cellChildProp}
+							{...omitProps(cellChildProp, Grid.Cell)}
 							key={index}
 							className={cx('&-Cell', {
 									'&-Cell-is-full': cellChildProp.isFull,

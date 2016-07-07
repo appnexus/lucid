@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, findTypes, rejectTypes } from '../../util/component-types';
+import { createClass, getFirst, findTypes, rejectTypes, omitProps } from '../../util/component-types';
 import { scrollParentTo } from '../../util/dom-helpers';
 import * as KEYCODE from '../../constants/key-code';
 import * as reducers from './DropMenu.reducers';
@@ -165,8 +165,6 @@ const DropMenu = createClass({
 			onSelect: _.noop,
 			onFocusNext: _.noop,
 			onFocusPrev: _.noop,
-			onBelowFold: _.noop,
-			onAboveFold: _.noop,
 			onFocusOption: _.noop,
 		};
 	},
@@ -368,7 +366,7 @@ const DropMenu = createClass({
 				key={'DropMenuOption' + optionIndex}
 				onMouseMove={() => this.handleMouseFocusOption(optionIndex, optionProps)}
 				onClick={(event) => this.handleSelectOption(optionIndex, optionProps, event)}
-				{...optionProps}
+				{...omitProps(optionProps, DropMenu.Option)}
 				className={cx(
 					'&-Option', {
 					'&-Option-is-grouped': isGrouped,

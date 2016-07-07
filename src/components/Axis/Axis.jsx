@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { discreteTicks } from '../../util/chart-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Axis');
 
@@ -122,7 +122,7 @@ const Axis = createClass({
 
 		return (
 			<g
-				{...passThroughs}
+				{...omitProps(passThroughs, Axis)}
 				className={cx(className, '&')}
 			>
 			{isH ? (

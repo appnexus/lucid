@@ -1,7 +1,8 @@
+import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-PlusIcon');
 
@@ -25,7 +26,8 @@ const PlusIcon = createClass({
 
 		return (
 			<Icon
-				{...passThroughs}
+				{...omitProps(passThroughs, PlusIcon)}
+        {..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
 				<path d='M1,6.6h14v2.8H1V6.6z'/>

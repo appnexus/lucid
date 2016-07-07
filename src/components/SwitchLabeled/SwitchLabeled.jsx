@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst }  from '../../util/component-types';
+import { createClass, getFirst, omitProps }  from '../../util/component-types';
 import Switch from '../Switch/Switch';
 
 const cx = lucidClassNames.bind('&-SwitchLabeled');
@@ -103,7 +103,7 @@ const SwitchLabeled = createClass({
 						isDisabled={isDisabled}
 						isSelected={isSelected}
 						onSelect={onSelect}
-						{..._.omit(passThroughs, 'Label')}
+						{...omitProps(passThroughs, SwitchLabeled)}
 				/>
 				<ReactCSSTransitionGroup
 						transitionName={cx('&-text')}
