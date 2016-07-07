@@ -5,13 +5,22 @@ import describeWithDOM from '../../util/describe-with-dom';
 import assert from 'assert';
 
 import Dialog from './Dialog';
+import Overlay from '../Overlay/Overlay';
 
-describe('Dialog', () => {
+describe.only('Dialog', () => {
 	common(Dialog, {
 		selector: '.lucid-Dialog',
 		getDefaultProps: () => {
 			return { isShown: true };
 		},
+	});
+
+	it('should pass `isModal` to underlying Overlay', () => {
+		const wrapper = shallow(
+			<Dialog isModal={false}/>
+		);
+
+		assert.equal(wrapper.find(Overlay).prop('isModal'), false);
 	});
 
 	it('should render a Header', () => {
