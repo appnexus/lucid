@@ -21,10 +21,11 @@ const {
 
 function isValidSeries(series) {
 	if (_.isArray(series)) {
-		return _.isFinite(_.last(series));
+		const last = _.last(series);
+		return _.isFinite(last) || _.isDate(last);
 	}
 
-	return _.isFinite(series);
+	return _.isFinite(series) || _.isDate(series);
 }
 
 /**

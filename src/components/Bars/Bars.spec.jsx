@@ -235,13 +235,11 @@ describe('Bars', () => {
 			});
 
 			it('should work with time scales', () => {
-				const xScale = d3Scale
-					.scaleBand()
+				const xScale = d3Scale.scaleBand()
 					.domain([new Date('2015-01-01T00:00:00Z'), new Date('2015-01-03T00:00:00Z')])
 					.range([0, 100]);
 
-				const yScale = d3Scale
-					.scaleTime()
+				const yScale = d3Scale.scaleTime()
 					.domain([0, 100])
 					.range([1000, 0]);
 
