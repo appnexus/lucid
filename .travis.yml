@@ -1,3 +1,4 @@
+before_install: bash ./scripts/validate-tests.sh
 after_success: bash ./scripts/docs-upload-gh.sh
 branches:
   only:
