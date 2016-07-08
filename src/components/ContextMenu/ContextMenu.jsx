@@ -75,6 +75,9 @@ const ContextMenu = createClass({
 	},
 
 	components: {
+		/**
+		 * Renders an element of `elementType` (defaults to `<span>`) that the menu `FlyOut` anchors to.
+		 */
 		Target: createClass({
 			displayName: 'ContextMenu.Target',
 			propTypes: {
@@ -86,6 +89,9 @@ const ContextMenu = createClass({
 				};
 			},
 		}),
+		/*
+		 * Renders a `<Portal>` anchored to the `Target`.
+		 */
 		FlyOut: createClass({
 			displayName: 'ContextMenu.FlyOut',
 			propTypes: {

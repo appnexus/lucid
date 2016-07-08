@@ -43,21 +43,36 @@ const DropMenu = createClass({
 	reducers,
 
 	components: {
+		/**
+		 * Renders a `<div>` that acts as the control target which the flyout menu is anchored to. Only one `Control` is used.
+		 */
 		Control: createClass({
 			displayName: 'DropMenu.Control',
 			propName: 'Control',
 		}),
+		/**
+		 * A special kind of `Option` that is always rendered at the top of the menu and has an `optionIndex` of `null`. Useful for unselect.
+		 */
 		OptionGroup: createClass({
 			displayName: 'DropMenu.OptionGroup',
 			propName: 'OptionGroup',
 		}),
+		/**
+		 * Renders a `<div>` that acts as an option in the menu.
+		 */
 		Option: createClass({
 			displayName: 'DropMenu.Option',
 			propName: 'Option',
 			propTypes: {
+				/**
+				 * disables selection of the `Option`.
+				 */
 				isDisabled: bool,
 			},
 		}),
+		/**
+		 * A special kind of `Option` that is always rendered at the top of the menu and has an `optionIndex` of `null` used for deselecting.
+		 */
 		NullOption: createClass({
 			displayName: 'DropMenu.NullOption',
 			propName: 'NullOption',

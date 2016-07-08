@@ -29,6 +29,9 @@ const ExpanderPanel = createClass({
 	displayName: 'ExpanderPanel',
 
 	components: {
+		/**
+		 * Renders a `<span>` of content next to the `ChevronIcon` in the `Panel.Header`
+		 */
 		Header: createClass({
 			displayName: 'ExpanderPanel.Header',
 			propName: 'Header',

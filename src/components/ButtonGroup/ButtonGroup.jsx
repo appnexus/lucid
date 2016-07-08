@@ -25,6 +25,9 @@ const ButtonGroup = createClass({
 	displayName: 'ButtonGroup',
 
 	components: {
+		/**
+		 * Renders a `<Button`> inside the `ButtonGroup`.
+		 */
 		Button: createClass({
 			displayName: 'ButtonGroup.Button',
 		}),

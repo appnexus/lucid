@@ -27,6 +27,9 @@ const Expander = createClass({
 	displayName: 'Expander',
 
 	components: {
+		/**
+		 * Renders a `<span>` to be shown next to the expander icon.
+		 */
 		Label: createClass({
 			displayName: 'Expander.Label',
 			propName: 'Label',

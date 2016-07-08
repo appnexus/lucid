@@ -25,10 +25,16 @@ const Dialog = createClass({
 	displayName: 'Dialog',
 
 	components: {
+		/**
+		 * Renders a `<header>`.
+		 */
 		Header: createClass({
 			displayName: 'Dialog.Header',
 			propName: 'Header',
 		}),
+		/**
+		 * Renders a `<footer>`.
+		 */
 		Footer: createClass({
 			displayName: 'Dialog.Footer',
 			propName: 'Footer',

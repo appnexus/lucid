@@ -22,6 +22,9 @@ const Grid = createClass({
 	displayName: 'Grid',
 
 	components: {
+		/**
+		 * Renders an `<article>` as the grid cell
+		 */
 		Cell: createClass({
 			displayName: 'Grid.Cell',
 			propTypes: {

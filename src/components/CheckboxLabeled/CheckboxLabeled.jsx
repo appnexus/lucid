@@ -22,6 +22,9 @@ const CheckboxLabeled = createClass({
 	displayName: 'CheckboxLabeled',
 
 	components: {
+		/*
+		 * Renders a `<label>` for the `<Checkbox>`
+		 */
 		Label: createClass({
 			displayName: 'CheckboxLabeled.Label',
 			propName: 'Label',
