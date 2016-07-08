@@ -1,7 +1,8 @@
+import _ from 'lodash';
 import React from 'react';
 import CheckIcon from '../CheckIcon/CheckIcon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SuccessIcon');
 
@@ -25,7 +26,8 @@ const SuccessIcon = createClass({
 
 		return (
 			<CheckIcon
-				{...passThroughs}
+				{...omitProps(passThroughs, SuccessIcon)}
+				{..._.pick(passThroughs, _.keys(CheckIcon.propTypes))}
 				className={cx('&', className)}
 				isBadge
 			/>

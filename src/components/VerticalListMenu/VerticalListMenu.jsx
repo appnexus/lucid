@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { bindClassNames } from '../../util/style-helpers';
-import { createClass, findTypes }  from '../../util/component-types';
+import { createClass, findTypes, omitProps }  from '../../util/component-types';
 import * as reducers from './VerticalListMenu.reducers';
 import ChevronIcon  from '../Icon/ChevronIcon/ChevronIcon';
 
@@ -115,7 +115,7 @@ const VerticalListMenu = createClass({
 
 		return (
 			<ul
-				{...passThroughs}
+				{...omitProps(passThroughs, VerticalListMenu)}
 				className={cx('&', className)}
 				style={style}
 			>

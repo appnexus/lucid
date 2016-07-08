@@ -5,7 +5,7 @@ import {
 	extractFields,
 	stackByFields,
 } from '../../util/chart-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
 import * as chartConstants from '../../constants/charts';
 
@@ -25,28 +25,22 @@ const {
 } = React.PropTypes;
 
 /**
- * {"categories": ["visualizations", "chart primitives"]}
+ * {"categories": ["visualizations", "chart primitives"], "madeFrom": ["Bar", "ToolTip", "Legend"]}
  *
- * Bars for your rectangular viewing pleasure.
+ * *For use within an `svg`*
+ *
+ * Bars are typically used to represent categorical data and can be stacked or
+ * grouped.
+ *
  */
 const Bars = createClass({
 	displayName: 'Bars',
-
-	_lucidIsPrivate: true,
 
 	propTypes: {
 		/**
 		 * Appended to the component-specific class names set on the root element.
 		 */
 		className: string,
-		/**
-		 * Top position
-		 */
-		top: number,
-		/**
-		 * Left position
-		 */
-		left: number,
 		/**
 		 * De-normalized data
 		 *
@@ -104,7 +98,8 @@ const Bars = createClass({
 
 
 		/**
-		 * The scale for the x axis. This must be a d3-scale scale.
+		 * The scale for the x axis. Must be a d3 band scale. Lucid exposes the
+		 * `lucid.d3Scale.scaleBand` library for use here.
 		 */
 		xScale: func.isRequired,
 		/**
@@ -117,7 +112,8 @@ const Bars = createClass({
 		xFormatter: func,
 
 		/**
-		 * The scale for the y axis. This must be a d3-scale scale.
+		 * The scale for the y axis. Must be a d3 scale. Lucid exposes the
+		 * `lucid.d3Scale` library for use here.
 		 */
 		yScale: func.isRequired,
 		/**
@@ -153,8 +149,7 @@ const Bars = createClass({
 
 	getDefaultProps() {
 		return {
-			top: 0,
-			left: 0,
+			hasToolTips: true,
 			xField: 'x',
 			xFormatter: _.identity,
 			yFields: ['y'],
@@ -175,8 +170,6 @@ const Bars = createClass({
 		const {
 			className,
 			data,
-			left,
-			top,
 			legend,
 			hasToolTips,
 			palette,
@@ -224,9 +217,8 @@ const Bars = createClass({
 
 		return (
 			<g
-				{...passThroughs}
+				{...omitProps(passThroughs, Bars)}
 				className={cx(className, '&')}
-				transform={`translate(${left}, ${top})`}
 			>
 				{_.map(transformedData, (series, seriesIndex) => (
 					<g key={seriesIndex}>
@@ -240,7 +232,7 @@ const Bars = createClass({
 								y={yScale(end)}
 								height={yScale(start) - yScale(end)}
 								width={isStacked ? xScale.bandwidth() : innerXScale.bandwidth() }
-								color={_.get(colorMap, yFields[pointsIndex], palette[(pointsIndex % palette.length) + colorOffset])}
+								color={_.get(colorMap, yFields[pointsIndex], palette[(pointsIndex + colorOffset) % palette.length])}
 							/>
 						))}
 
@@ -282,7 +274,7 @@ const Bars = createClass({
 												key={fieldIndex}
 												hasPoint={true}
 												pointKind={1}
-												color={_.get(colorMap, field, palette[(fieldIndex % palette.length) + colorOffset])}
+												color={_.get(colorMap, field, palette[(fieldIndex + colorOffset ) % palette.length])}
 											>
 												{`${_.get(legend, field, field)}: ${yFormatter(data[seriesIndex][field])}`}
 											</Legend.Item>

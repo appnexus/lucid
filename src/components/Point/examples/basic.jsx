@@ -1,7 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
-import Point from '../Point';
-import * as chartConstants from '../../../constants/charts';
+import {
+	Point,
+	chartConstants,
+} from '../../../index';
 
 const svgProps = {
 	width: 20,

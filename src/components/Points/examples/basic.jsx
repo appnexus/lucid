@@ -1,7 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
-import Points from '../Points';
-import * as d3Scale from 'd3-scale';
+import {
+	Points,
+	d3Scale,
+} from '../../../index';
 
 const width = 1000;
 const height = 400;
@@ -37,14 +39,14 @@ export default React.createClass({
 	render() {
 		return (
 			<svg width={width} height={height}>
-				<Points
-					top={margin.top}
-					left={margin.left}
-					data={data}
-					xScale={xScale}
-					yScale={yScale}
-					yFields={yFields}
-				/>
+				<g transform={`translate(${margin.left}, ${margin.top})`}>
+					<Points
+						data={data}
+						xScale={xScale}
+						yScale={yScale}
+						yFields={yFields}
+					/>
+				</g>
 			</svg>
 		);
 	},

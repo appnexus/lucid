@@ -1,7 +1,8 @@
+import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-GripperVerticalIcon');
 
@@ -31,7 +32,8 @@ const GripperVerticalIcon = createClass({
 				width={2}
 				height={16}
 				viewBox='0 0 2 16'
-				{...passThroughs}
+				{...omitProps(passThroughs, GripperVerticalIcon)}
+				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
 				<path d='M0,0h2v1H0V0z' />

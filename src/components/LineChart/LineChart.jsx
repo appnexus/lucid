@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import {
 	minByFields,
 	maxByFields,
@@ -395,7 +395,7 @@ const LineChart = createClass({
 		if (_.isEmpty(data)) {
 			return (
 				<svg
-					{...passThroughs}
+					{...omitProps(passThroughs, LineChart)}
 					className={cx(className, '&')}
 					width={width}
 					height={height}
@@ -449,7 +449,7 @@ const LineChart = createClass({
 
 		return (
 			<svg
-				{...passThroughs}
+				{...omitProps(passThroughs, LineChart)}
 				className={cx(className, '&')}
 				width={width}
 				height={height}
@@ -636,26 +636,8 @@ const LineChart = createClass({
 				) : null}
 
 				{/* y axis lines */}
-				<Lines
-					top={margin.top}
-					left={margin.left}
-					xScale={xScale}
-					yScale={yScale}
-					xField={xAxisField}
-					yFields={yAxisFields}
-					yStackedMax={yAxisMax}
-					data={data}
-					isStacked={yAxisIsStacked}
-					colorMap={colorMap}
-					palette={palette}
-					ref='yLines'
-				/>
-
-				{/* y axis points */}
-				{yAxisHasPoints ?
-					<Points
-						top={margin.top}
-						left={margin.left}
+				<g transform={`translate(${margin.left}, ${margin.top})`}>
+					<Lines
 						xScale={xScale}
 						yScale={yScale}
 						xField={xAxisField}
@@ -665,46 +647,64 @@ const LineChart = createClass({
 						isStacked={yAxisIsStacked}
 						colorMap={colorMap}
 						palette={palette}
-						ref='yPoints'
+						ref='yLines'
 					/>
+				</g>
+
+				{/* y axis points */}
+				{yAxisHasPoints ?
+					<g transform={`translate(${margin.left}, ${margin.top})`}>
+						<Points
+							xScale={xScale}
+							yScale={yScale}
+							xField={xAxisField}
+							yFields={yAxisFields}
+							yStackedMax={yAxisMax}
+							data={data}
+							isStacked={yAxisIsStacked}
+							colorMap={colorMap}
+							palette={palette}
+							ref='yPoints'
+						/>
+					</g>
 				: null}
 
 				{/* y2 axis lines */}
 				{y2AxisFields ?
-					<Lines
-						top={margin.top}
-						left={margin.left}
-						xScale={xScale}
-						yScale={y2Scale}
-						xField={xAxisField}
-						yFields={y2AxisFields}
-						yStackedMax={y2AxisMax}
-						data={data}
-						isStacked={y2AxisIsStacked}
-						colorOffset={1}
-						colorMap={colorMap}
-						palette={palette}
-						ref='y2Lines'
-					/>
+					<g transform={`translate(${margin.left}, ${margin.top})`}>
+						<Lines
+							xScale={xScale}
+							yScale={y2Scale}
+							xField={xAxisField}
+							yFields={y2AxisFields}
+							yStackedMax={y2AxisMax}
+							data={data}
+							isStacked={y2AxisIsStacked}
+							colorOffset={1}
+							colorMap={colorMap}
+							palette={palette}
+							ref='y2Lines'
+						/>
+					</g>
 				: null}
 
 				{/* y2 axis points */}
 				{y2AxisFields && y2AxisHasPoints ?
-					<Points
-						top={margin.top}
-						left={margin.left}
-						xScale={xScale}
-						yScale={y2Scale}
-						xField={xAxisField}
-						yFields={y2AxisFields}
-						yStackedMax={y2AxisMax}
-						data={data}
-						isStacked={y2AxisIsStacked}
-						colorOffset={1}
-						colorMap={colorMap}
-						palette={palette}
-						ref='y2Points'
-					/>
+					<g transform={`translate(${margin.left}, ${margin.top})`}>
+						<Points
+							xScale={xScale}
+							yScale={y2Scale}
+							xField={xAxisField}
+							yFields={y2AxisFields}
+							yStackedMax={y2AxisMax}
+							data={data}
+							isStacked={y2AxisIsStacked}
+							colorOffset={1}
+							colorMap={colorMap}
+							palette={palette}
+							ref='y2Points'
+						/>
+					</g>
 				: null}
 
 				{/* hover capture zone */}

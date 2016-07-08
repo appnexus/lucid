@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, rejectTypes } from '../../util/component-types';
+import { createClass, getFirst, rejectTypes, omitProps } from '../../util/component-types';
 import LoadingMessage from '../LoadingMessage/LoadingMessage';
 
 const cx = lucidClassNames.bind('&-LoadingIndicator');
@@ -69,7 +69,7 @@ const LoadingIndicator = createClass({
 
 		return (
 			<div
-				{...passThroughs}
+				{...omitProps(passThroughs, LoadingIndicator)}
 				className={cx('&', className)}
 			>
 				{otherChildren}

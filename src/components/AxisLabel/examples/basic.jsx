@@ -1,6 +1,8 @@
 import React from 'react';
-import AxisLabel from '../AxisLabel';
-import * as chartConstants from '../../../constants/charts';
+import {
+	AxisLabel,
+	chartConstants,
+} from '../../../index';
 
 const width = 1000;
 const height = 400;
@@ -15,8 +17,10 @@ export default React.createClass({
 			<svg width={width} height={height}>
 				{/* dotted outline for the svg */}
 				<rect
-					width={width}
-					height={height}
+					x={1}
+					y={1}
+					width={width - 2}
+					height={height - 2}
 					style={{
 						strokeWidth: 1,
 						strokeDasharray: '2,2',

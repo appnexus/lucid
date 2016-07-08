@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import { transformFromCenter } from '../../util/chart-helpers';
 import * as chartConstants from '../../constants/charts';
 
@@ -27,13 +27,13 @@ const PATHS = [
 /**
  * {"categories": ["visualizations", "geoms"]}
  *
- * Points are typically used for scatter plots. Did I get the point across?
+ * *For use within an `svg`*
+ *
+ * Points are typically used for scatter plots or overlaying shapes on lines.
  *
  */
 const Point = createClass({
 	displayName: 'Point',
-
-	_lucidIsPrivate: true,
 
 	propTypes: {
 		/**
@@ -117,7 +117,7 @@ const Point = createClass({
 
 		return (
 			<path
-				{...passThroughs}
+				{...omitProps(passThroughs, Point)}
 				style={{
 					...style,
 					...colorStyle,

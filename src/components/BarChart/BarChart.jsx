@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import {
 	maxByFields,
 	maxByFieldsStacked,
@@ -285,7 +285,7 @@ const BarChart = createClass({
 		if (_.isEmpty(data)) {
 			return (
 				<svg
-					{...passThroughs}
+					{...omitProps(passThroughs, BarChart)}
 					className={cx(className, '&')}
 					width={width}
 					height={height}
@@ -315,7 +315,7 @@ const BarChart = createClass({
 
 		return (
 			<svg
-				{...passThroughs}
+				{...omitProps(passThroughs, BarChart)}
 				className={cx(className, '&')}
 				width={width}
 				height={height}
@@ -405,23 +405,23 @@ const BarChart = createClass({
 				) : null}
 
 				{/* bars */}
-				<Bars
-					top={margin.top}
-					left={margin.left}
-					xField={xAxisField}
-					xScale={xScale}
-					xFormatter={xAxisFormatter}
-					yFields={yAxisFields}
-					yScale={yScale}
-					yFormatter={yFinalFormatter}
-					yStackedMax={yAxisMax}
-					data={data}
-					isStacked={yAxisIsStacked}
-					hasToolTips={hasToolTips}
-					legend={legend}
-					palette={palette}
-					colorMap={colorMap}
-				/>
+				<g transform={`translate(${margin.left}, ${margin.top})`}>
+					<Bars
+						xField={xAxisField}
+						xScale={xScale}
+						xFormatter={xAxisFormatter}
+						yFields={yAxisFields}
+						yScale={yScale}
+						yFormatter={yFinalFormatter}
+						yStackedMax={yAxisMax}
+						data={data}
+						isStacked={yAxisIsStacked}
+						hasToolTips={hasToolTips}
+						legend={legend}
+						palette={palette}
+						colorMap={colorMap}
+					/>
+				</g>
 			</svg>
 		);
 	},

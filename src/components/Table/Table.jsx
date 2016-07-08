@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, filterTypes } from '../../util/component-types';
+import { createClass, filterTypes, omitProps } from '../../util/component-types';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
@@ -44,7 +44,7 @@ const Thead = createClass({
 		} = this.props;
 
 		return (
-			<thead {...passThroughs} className={cx('&-Thead', className)}>
+			<thead {...omitProps(passThroughs, Thead)} className={cx('&-Thead', className)}>
 				{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Th)}
 			</thead>
 		);
@@ -77,7 +77,7 @@ const Tbody = createClass({
 		} = this.props;
 
 		return (
-			<tbody {...passThroughs} className={cx('&-Tbody', className)}>
+			<tbody {...omitProps(passThroughs, Tbody)} className={cx('&-Tbody', className)}>
 				{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Td)}
 			</tbody>
 		);
@@ -130,6 +130,7 @@ const Tr = createClass({
 	render() {
 		const {
 			className,
+			children,
 			isDisabled,
 			isSelected,
 			isActionable,
@@ -138,12 +139,17 @@ const Tr = createClass({
 		} = this.props;
 
 		return (
-			<tr {...passThroughs} className={cx('&-Tr', {
-				'&-is-disabled': isDisabled,
-				'&-is-selected': isSelected,
-				'&-is-actionable': isActionable,
-				'&-is-active': isActive,
-			}, className)} />
+			<tr
+				{...omitProps(passThroughs, Tr)}
+				className={cx('&-Tr', {
+					'&-is-disabled': isDisabled,
+					'&-is-selected': isSelected,
+					'&-is-actionable': isActionable,
+					'&-is-active': isActive,
+				}, className)}
+			>
+				{children}
+			</tr>
 		);
 	},
 });
@@ -168,6 +174,14 @@ const Th = createClass({
 		 * element. Value is run through the `classnames` library.
 		 */
 		className: any,
+		/**
+		 * Should be `true` to render a right border.
+		 */
+		hasBorderRight: bool,
+		/**
+		 * Should be `true` to render a left border.
+		 */
+		hasBorderLeft: bool,
 		/**
 		 * Styles the cell to indicate it should be resizable and sets up drag-
 		 * related events to enable this resizing functionality.
@@ -214,6 +228,10 @@ const Th = createClass({
 		 * Define the cell as being in the last column.
 		 */
 		isLastCol: bool,
+		/**
+		 * Define the cell as being the first 1-height cell in the row.
+		 */
+		isFirstSingle: bool,
 	},
 
 	getDefaultProps() {
@@ -253,9 +271,12 @@ const Th = createClass({
 		const {
 			children,
 			className,
+			hasBorderRight,
+			hasBorderLeft,
 			isFirstRow,
 			isLastRow,
 			isFirstCol,
+			isFirstSingle,
 			isLastCol,
 			align,
 			isResizable,
@@ -274,12 +295,13 @@ const Th = createClass({
 
 		return (
 			<th
-				{..._.omit(passThroughs, 'width')}
+				{..._.omit(passThroughs, Th)}
 				className={cx(
 					'&-Th', {
 					'&-is-first-row': isFirstRow,
 					'&-is-last-row': isLastRow,
 					'&-is-first-col': isFirstCol,
+					'&-is-first-single': isFirstSingle,
 					'&-is-last-col': isLastCol,
 					'&-align-left': align === 'left',
 					'&-align-center': align === 'center',
@@ -288,6 +310,8 @@ const Th = createClass({
 					'&-is-resizing': isResizing,
 					'&-is-sortable': (isSortable === false ? isSortable : (isSorted || isSortable)),
 					'&-is-sorted': isSorted,
+					'&-has-border-right': hasBorderRight,
+					'&-has-border-left': hasBorderLeft,
 				}, className)}
 				ref='root'
 				style={hasSetWidth ? _.assign({}, style, {
@@ -443,7 +467,7 @@ const Td = createClass({
 		} = this.props;
 
 		return (
-			<td {...passThroughs} className={cx(
+			<td {...omitProps(passThroughs, Td, ['sortDirection'])} className={cx(
 				'&-Td', {
 				'&-is-first-row': isFirstRow,
 				'&-is-last-row': isLastRow,
@@ -520,12 +544,14 @@ const Table = createClass({
 			hasBorder,
 			density,
 			hasWordWrap,
+			style,
 			...passThroughs,
 		} = this.props;
 
 		return (
 			<table
-				{...passThroughs}
+				{...omitProps(passThroughs, Table)}
+				style={style}
 				className={cx('&', {
 					'&-density-extended': density === 'extended',
 					'&-density-compressed': density === 'compressed',
