@@ -34,15 +34,24 @@ const SingleSelect = createClass({
 	reducers,
 
 	components: {
+		/**
+		 * Content this is displayed when nothing is selected.
+		 */
 		Placeholder: createClass({
 			displayName: 'SingleSelect.Placeholder',
 			propName: 'Placeholder',
 		}),
+		/**
+		 * A selectable option in the list.
+		 */
 		Option: createClass({
 			displayName: 'SingleSelect.Option',
 			propName: 'Option',
 			propTypes: DropMenu.Option.propTypes,
 		}),
+		/**
+		 * Groups `Option`s together with a non-selectable heading.
+		 */
 		OptionGroup: createClass({
 			displayName: 'SingleSelect.OptionGroup',
 			propName: 'OptionGroup',

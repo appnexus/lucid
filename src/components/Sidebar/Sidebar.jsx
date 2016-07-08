@@ -84,6 +84,9 @@ const Sidebar = createClass({
 	},
 
 	components: {
+		/**
+		 * Content to be placed alongside the Primary pane.
+		 */
 		Bar: createClass({
 			displayName: 'Sidebar.Bar',
 			propTypes: {
@@ -102,6 +105,9 @@ const Sidebar = createClass({
 			},
 		}),
 
+		/**
+		 * Main pane content that will have a paired `Bar`.
+		 */
 		Primary: createClass({
 			displayName: 'SplitVertical.Primary',
 			propTypes: {
@@ -112,6 +118,10 @@ const Sidebar = createClass({
 			},
 		}),
 
+		/**
+		 * Content that will be displayed as the title of the Bar. It's only shown
+		 * when the user has the Bar expanded.
+		 */
 		Title: createClass({
 			displayName: 'Sidebar.Title',
 			propName: ['Title', 'title'],

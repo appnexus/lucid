@@ -29,7 +29,14 @@ const SearchField = createClass({
 	displayName: 'SearchField',
 
 	components: {
+		/**
+		 * Allows for full control over the TextField that's used under the hood.
+		 */
 		TextField,
+		/**
+		 * Icon this is displayed on the right side of the SearchField. Any of the
+		 * lucid `*Icon` components should work.
+		 */
 		Icon: createClass({
 			displayName: 'SearchField.Icon',
 			propName: 'Icon',

@@ -25,19 +25,30 @@ const Tabs = createClass({
 	displayName: 'Tabs',
 
 	components: {
+		/**
+		 * Content that will be rendered in a tab. Be sure to nest a Title inside
+		 * each Tab or provide it as a prop.
+		 */
 		Tab: createClass({
 			displayName: 'Tabs.Tab',
 			propName: 'Tab',
 			propTypes: {
+				/**
+				 * Determines if the Tab is selected.
+				 */
 				isSelected: bool,
 				/**
-				* Styles a tab as disabled.  This typically used with `isProgressive` to
-				* to disabled steps that have not been compleated and should not be
-				* selected until the current step has been compleated.
-				*/
+				 * Styles a Tab as disabled. This is typically used with
+				 * `isProgressive` to to disabled steps that have not been compleated
+				 * and should not be selected until the current step has been
+				 * compleated.
+				 */
 				isDisabled: bool,
 			},
 		}),
+		/**
+		 * Titles can be provided as a child or prop to a Tab.
+		 */
 		Title: createClass({
 			displayName: 'Tabs.Title',
 			propName: 'Title',

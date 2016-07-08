@@ -23,6 +23,9 @@ const SwitchLabeled = createClass({
 	displayName: 'SwitchLabeled',
 
 	components: {
+		/**
+		 * Label to be shown alongside the switch.
+		 */
 		Label: createClass({
 			displayName: 'SwitchLabeled.Label',
 			propName: 'Label',

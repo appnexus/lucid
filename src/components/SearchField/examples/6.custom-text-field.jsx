@@ -3,8 +3,8 @@ import { SearchField } from '../../../index';
 
 export default React.createClass({
 	getInitialState: () => ({}),
-  render() {
-    return (
+	render() {
+		return (
 			<div>
 				<SearchField placeholder='Name/ID'>
 					<SearchField.TextField
@@ -25,6 +25,6 @@ export default React.createClass({
 					Value on blur: {this.state.lastValue}
 				</div>
 			</div>
-    );
-  },
+		);
+	},
 });

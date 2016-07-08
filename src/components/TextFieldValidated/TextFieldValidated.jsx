@@ -26,6 +26,9 @@ const TextFieldValidated = createClass({
 	reducers,
 
 	components: {
+		/**
+		 * Content that will be displayed as an error message.
+		 */
 		Error: createClass({
 			displayName: 'TextFieldValidated.Error',
 			propName: 'Error',
