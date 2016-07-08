@@ -1,7 +1,8 @@
+import _ from 'lodash';
 import React from 'react';
 import CrossIcon  from '../CrossIcon/CrossIcon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DangerIcon');
 
@@ -25,7 +26,8 @@ const DangerIcon = createClass({
 
 		return (
 			<CrossIcon
-				{...passThroughs}
+				{...omitProps(passThroughs, DangerIcon)}
+				{..._.pick(passThroughs, _.keys(CrossIcon.propTypes))}
 				className={cx('&', className)}
 				isBadge
 			/>

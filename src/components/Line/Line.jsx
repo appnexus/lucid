@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Line');
@@ -76,7 +76,7 @@ const Line = createClass({
 
 		return (
 			<path
-				{...passThroughs}
+				{...omitProps(passThroughs, Line)}
 				style={{
 					...style,
 					...colorStyle,

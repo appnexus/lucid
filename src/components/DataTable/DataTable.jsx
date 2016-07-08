@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, filterTypes } from '../../util/component-types';
+import { createClass, findTypes, filterTypes, omitProps } from '../../util/component-types';
 
 import Checkbox from '../Checkbox/Checkbox';
 import ScrollTable from '../ScrollTable/ScrollTable';
@@ -174,6 +174,7 @@ const DataTable = createClass({
 			data,
 			isActionable,
 			isSelectable,
+			style,
 			...passThroughs,
 		} = this.props;
 
@@ -200,7 +201,11 @@ const DataTable = createClass({
 		);
 
 		return (
-			<ScrollTable {...passThroughs} className={cx('&', className)}>
+			<ScrollTable
+				style={style}
+				{...omitProps(passThroughs, DataTable)}
+				className={cx('&', className)}
+			>
 				<Thead>
 					<Tr>
 						{isSelectable ? (
@@ -239,7 +244,7 @@ const DataTable = createClass({
 						<Tr>
 							{_.reduce(flattenedColumns, (acc, { props: columnProps, columnGroupProps }, index) => acc.concat(_.isNull(columnGroupProps) ? [] : [(
 								<Th
-									{..._.omit(columnProps, ['field', 'children', 'width', 'title'])}
+									{...omitProps(columnProps, DataTable.Column)}
 									onClick={DataTable.shouldColumnHandleSort(columnProps) ? _.partial(this.handleSort, columnProps.field) : null}
 									style={{
 										width: columnProps.width,
@@ -270,7 +275,7 @@ const DataTable = createClass({
 							) : null}
 							{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => (
 								<Td
-									{..._.omit(columnProps, ['field', 'children', 'width', 'title'])}
+									{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
 									style={{
 										width: columnProps.width,
 									}}

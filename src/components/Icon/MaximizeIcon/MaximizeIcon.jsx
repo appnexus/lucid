@@ -1,7 +1,8 @@
+import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-MaximizeIcon');
 
@@ -25,7 +26,8 @@ const MaximizeIcon = createClass({
 
 		return (
 			<Icon
-				{...passThroughs}
+				{...omitProps(passThroughs, MaximizeIcon)}
+				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
 				<path d='M1.996,11L1.984,6L0,6.003c0,0-0.002,5.236,0,5.237c-0.077,0.813,0.507,1.296,0.507,1.296s0.5,0.521,1.315,0.464C1.823,13.002,7,13,7,13v-2H1.996z'/>

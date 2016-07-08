@@ -1,7 +1,8 @@
+import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ResizeIcon');
 
@@ -25,7 +26,8 @@ const ResizeIcon = createClass({
 
 		return (
 			<Icon
-				{...passThroughs}
+				{...omitProps(passThroughs, ResizeIcon)}
+				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
 				<path d='M4.5,15.5 L15.5,4.5' strokeWidth='1'/>

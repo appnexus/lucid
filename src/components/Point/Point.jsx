@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import { transformFromCenter } from '../../util/chart-helpers';
 import * as chartConstants from '../../constants/charts';
 
@@ -117,7 +117,7 @@ const Point = createClass({
 
 		return (
 			<path
-				{...passThroughs}
+				{...omitProps(passThroughs, Point)}
 				style={{
 					...style,
 					...colorStyle,

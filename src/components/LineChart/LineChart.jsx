@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import {
 	minByFields,
 	maxByFields,
@@ -395,7 +395,7 @@ const LineChart = createClass({
 		if (_.isEmpty(data)) {
 			return (
 				<svg
-					{...passThroughs}
+					{...omitProps(passThroughs, LineChart)}
 					className={cx(className, '&')}
 					width={width}
 					height={height}
@@ -449,7 +449,7 @@ const LineChart = createClass({
 
 		return (
 			<svg
-				{...passThroughs}
+				{...omitProps(passThroughs, LineChart)}
 				className={cx(className, '&')}
 				width={width}
 				height={height}

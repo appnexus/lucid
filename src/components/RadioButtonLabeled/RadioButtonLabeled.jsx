@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes }  from '../../util/component-types';
+import { createClass, findTypes, omitProps }  from '../../util/component-types';
 import RadioButton from '../RadioButton/RadioButton';
 
 const cx = lucidClassNames.bind('&-RadioButtonLabeled');
@@ -89,7 +89,7 @@ const RadioButtonLabeled = createClass({
 						isDisabled={isDisabled}
 						isSelected={isSelected}
 						onSelect={onSelect}
-						{..._.omit(passThroughs, 'Label')}
+						{...omitProps(passThroughs, RadioButtonLabeled)}
 				/>
 				{
 					labelChildProps

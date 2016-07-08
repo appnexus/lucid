@@ -88,6 +88,7 @@ export function getFirst(props, types, defaultValue) {
 }
 
 // omit props defined in propTypes of the given type
-export function omitProps (props, type) {
-	return _.omit(props, _.keys(type.propTypes));
+// and any extra keys given in third argument
+export function omitProps(props, type, keys = []) {
+	return _.omit(props, _.keys(type.propTypes).concat(keys).concat(['initialState']));
 }

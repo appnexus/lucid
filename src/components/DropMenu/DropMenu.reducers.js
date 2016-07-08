@@ -25,20 +25,6 @@ export function onSelect(state, optionIndex) {
 	};
 }
 
-export function onAboveFold(state) {
-	return {
-		...state,
-		direction: 'down',
-	};
-}
-
-export function onBelowFold(state) {
-	return {
-		...state,
-		direction: 'up',
-	};
-}
-
 export function onFocusNext(state) {
 	const { focusedIndex } = state;
 	let nextFocusedIndex = focusedIndex;

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import {
 	maxByFields,
 	maxByFieldsStacked,
@@ -285,7 +285,7 @@ const BarChart = createClass({
 		if (_.isEmpty(data)) {
 			return (
 				<svg
-					{...passThroughs}
+					{...omitProps(passThroughs, BarChart)}
 					className={cx(className, '&')}
 					width={width}
 					height={height}
@@ -315,7 +315,7 @@ const BarChart = createClass({
 
 		return (
 			<svg
-				{...passThroughs}
+				{...omitProps(passThroughs, BarChart)}
 				className={cx(className, '&')}
 				width={width}
 				height={height}
