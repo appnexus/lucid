@@ -114,10 +114,14 @@ module.exports = {
 													// reference to an imported component
 													// references to locally defined components are ignored because
 													// top-level child component defs are alread resolved above
-													if (childComponentProperty.value.type === 'Identifier') {
-														if (_.includes(importLocalNames, childComponentProperty.value.name)) {
-															childComponents.push(childComponentProperty);
-														}
+													if (childComponentProperty.value.type === 'Identifier' &&
+															_.includes(importLocalNames, childComponentProperty.value.name)) {
+														childComponents.push(childComponentProperty);
+													}
+
+													// reference to another component's child component
+													if (childComponentProperty.value.type === 'MemberExpression') {
+														childComponents.push(childComponentProperty);
 													}
 
 													// inline component definition
@@ -162,11 +166,18 @@ module.exports = {
 
 						// childComponent docs
 
-						// import reference child component
-						if (definition.value.type !== 'ObjectExpression') {
+						// import reference component
+						if (definition.value.type === 'Identifier') {
 							documentation.set('displayName', definition.parentPath.value.key.name);
 							documentation.set('description', '');
 							return documentation.set('componentRef', definition.value.name);
+						}
+
+						// import reference component's child component
+						if (definition.value.type === 'MemberExpression') {
+							documentation.set('displayName', definition.parentPath.value.key.name);
+							documentation.set('description', '');
+							return documentation.set('componentRef', `${definition.value.object.name}.${definition.value.property.name}`);
 						}
 
 						// list of default handlers
@@ -210,6 +221,11 @@ module.exports = {
 
 				var doc = _.first(docs);
 				doc.childComponents = _.tail(docs);
+
+				// add all child components to docgen map
+				_.forEach(doc.childComponents, childComponent => {
+					acc[`${doc.displayName}.${childComponent.displayName}`] = childComponent;
+				});
 
 				if (!doc.description) {
 					return new Error('Missing a description from ' + file + ' - please put a comment block right above `createClass` and make sure to include the proper JSON blob in it.')

@@ -62,6 +62,12 @@ const reqExamples = require.context('../components/', true, /examples.*\.jsx?/i)
 const reqExamplesRaw = require.context('!!raw!../components/', true, /examples.*\.jsx?/i);
 
 const docgenMap = _.mapValues(docgenMapRaw, (value, componentName) => {
+
+	// child components don't have any custom data
+	if (_.includes(componentName, '.')) {
+		return value;
+	}
+
 	const parentName = value.customData.extend;
 
 	if (!parentName) {
@@ -307,7 +313,7 @@ const Component = React.createClass({
 							<section key={childComponent.displayName}>
 								<h4>
 									{childComponent.componentRef
-										? (<Link to={{ pathname: `/components/${childComponent.componentRef}`, query: this.props.location.query }}>
+										? (<Link to={{ pathname: `/components/${childComponent.componentRef.split('.')[0]}`, query: this.props.location.query }}>
 												{childComponent.displayName}
 												{childComponent.displayName !== childComponent.componentRef && ` (${childComponent.componentRef})`}
 											</Link>)
@@ -483,6 +489,11 @@ const App = React.createClass({
 				return [];
 			}
 
+			// exclude child components from search
+			if (_.includes(componentName, '.')) {
+				return [];
+			}
+
 			if (componentName.toLowerCase().indexOf(search.toLowerCase()) !== -1) {
 				return componentName;
 			}
@@ -498,6 +509,11 @@ const App = React.createClass({
 
 		const docgenGroups = _.reduce(docgenMap, (acc, value, key) => {
 			if (!this.showPrivateComponents() && value.isPrivateComponent) {
+				return acc;
+			}
+
+			// exclude child components from grouping
+			if (_.includes(key, '.')) {
 				return acc;
 			}
 
