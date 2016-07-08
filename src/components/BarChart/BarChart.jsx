@@ -405,22 +405,22 @@ const BarChart = createClass({
 				) : null}
 
 				{/* bars */}
-				<Bars
-					top={margin.top}
-					left={margin.left}
-					xField={xAxisField}
-					xScale={xScale}
-					xFormatter={xAxisFormatter}
-					yFields={yAxisFields}
-					yScale={yScale}
-					yFormatter={yFinalFormatter}
-					data={data}
-					isStacked={yAxisIsStacked}
-					hasToolTips={hasToolTips}
-					legend={legend}
-					palette={palette}
-					colorMap={colorMap}
-				/>
+				<g transform={`translate(${margin.left}, ${margin.top})`}>
+					<Bars
+						xField={xAxisField}
+						xScale={xScale}
+						xFormatter={xAxisFormatter}
+						yFields={yAxisFields}
+						yScale={yScale}
+						yFormatter={yFinalFormatter}
+						data={data}
+						isStacked={yAxisIsStacked}
+						hasToolTips={hasToolTips}
+						legend={legend}
+						palette={palette}
+						colorMap={colorMap}
+					/>
+				</g>
 			</svg>
 		);
 	},

@@ -15,12 +15,12 @@ const {
 /**
  * {"categories": ["visualizations", "chart primitives"]}
  *
- * Labels for axes.
+ * *For use within an `svg`*
+ *
+ * Centered labels for axes that typically are fit into the margins of a chart.
  */
 const AxisLabel = createClass({
 	displayName: 'AxisLabel',
-
-	_lucidIsPrivate: true,
 
 	propTypes: {
 		/**
@@ -34,11 +34,11 @@ const AxisLabel = createClass({
 		/**
 		 * Height of the margin this label should fit into.
 		 */
-		height: number,
+		height: number.isRequired,
 		/**
 		 * Width of the margin this label should fit into.
 		 */
-		width: number,
+		width: number.isRequired,
 		/**
 		 * Strings should match an existing color class unless they start with a
 		 * '#' for specific colors. E.g.:

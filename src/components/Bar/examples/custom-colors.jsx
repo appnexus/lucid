@@ -1,5 +1,5 @@
 import React from 'react';
-import Bar from '../Bar';
+import { Bar } from '../../../index';
 
 const svgProps = {
 	width: 20,

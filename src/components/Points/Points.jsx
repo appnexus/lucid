@@ -21,35 +21,28 @@ const {
 
 function isValidSeries(series) {
 	if (_.isArray(series)) {
-		return _.isFinite(_.last(series));
+		const last = _.last(series);
+		return _.isFinite(last) || _.isDate(last);
 	}
 
-	return _.isFinite(series);
+	return _.isFinite(series) || _.isDate(series);
 }
 
 /**
- * {"categories": ["visualizations", "chart primitives"]}
+ * {"categories": ["visualizations", "chart primitives"], "madeFrom": ["Point"]}
+ *
+ * *For use within an `svg`*
  *
  * Put some points on that data.
  */
 const Points = createClass({
 	displayName: 'Points',
 
-	_lucidIsPrivate: true,
-
 	propTypes: {
 		/**
 		 * Appended to the component-specific class names set on the root element.
 		 */
 		className: string,
-		/**
-		 * Top
-		 */
-		top: number,
-		/**
-		 * Left
-		 */
-		left: number,
 		/**
 		 * Takes one of the palettes exported from `lucid.chartConstants`.
 		 * Available palettes:
@@ -103,11 +96,13 @@ const Points = createClass({
 		 */
 		data: arrayOf(object).isRequired,
 		/**
-		 * The scale for the x axis. This must be a d3-scale scale.
+		 * The scale for the x axis. Must be a d3 scale. Lucid exposes the
+		 * `lucid.d3Scale` library for use here.
 		 */
 		xScale: func.isRequired,
 		/**
-		 * The scale for the y axis. This must be a d3-scale scale.
+		 * The scale for the y axis. Must be a d3 scale. Lucid exposes the
+		 * `lucid.d3Scale` library for use here.
 		 */
 		yScale: func.isRequired,
 		/**
@@ -139,8 +134,6 @@ const Points = createClass({
 
 	getDefaultProps() {
 		return {
-			top: 0,
-			left: 0,
 			xField: 'x',
 			yFields: ['y'],
 			colorOffset: 0,
@@ -154,8 +147,6 @@ const Points = createClass({
 		const {
 			className,
 			data,
-			left,
-			top,
 			palette,
 			colorMap,
 			colorOffset,
@@ -190,7 +181,6 @@ const Points = createClass({
 			<g
 				{...omitProps(passThroughs, Points)}
 				className={cx(className, '&')}
-				transform={`translate(${left}, ${top})`}
 			>
 				{_.map(transformedData, (d, dIndex) => (
 					_.map(d, (series, seriesIndex) => (
@@ -200,7 +190,7 @@ const Points = createClass({
 								y={yScale(_.isArray(series) ? _.last(series) : series)}
 								hasStroke={hasStroke}
 								kind={dIndex + colorOffset}
-								color={_.get(colorMap, yFields[dIndex], palette[(dIndex % palette.length) + colorOffset])}
+								color={_.get(colorMap, yFields[dIndex], palette[(dIndex + colorOffset) % palette.length])}
 							/>
 						: null
 					))

@@ -303,7 +303,7 @@ describeWithDOM('PieChart', () => {
 	});
 
 	describe('render', () => {
-		it.skip('should have the correct html', () => {
+		it('should have the correct html', () => {
 			wrapper = mount(
 				<PieChart
 					data={[
@@ -316,7 +316,7 @@ describeWithDOM('PieChart', () => {
 				/>
 			);
 
-			assert.equal(wrapper.html(), '<svg class="lucid-PieChart" width="200" height="200"><g class="lucid-ContextMenu lucid-ToolTip"><g transform="translate(10, 10)"><g transform="translate(90, 90)"><g class=""><path transform="scale(1)" class="lucid-PieChart-slice lucid-Line lucid-Line-color-chart-0" d="M5.5109105961630896e-15,-90A90,90,0,0,1,77.94228634059948,44.999999999999986L0.43301270189221935,0.24999999999999992A0.5,0.5,0,0,0,3.061616997868383e-17,-0.5Z"></path><path class="lucid-PieChart-slice-hover" d="M5.5109105961630896e-15,-90A90,90,0,0,1,77.94228634059948,44.999999999999986L0,0Z" transform="scale(1.1)"></path></g><g class=""><path transform="scale(1)" class="lucid-PieChart-slice lucid-Line lucid-Line-color-chart-1" d="M77.94228634059948,44.999999999999986A90,90,0,0,1,-88.63269777109872,15.628335990023725L-0.492403876506104,0.08682408883346514A0.5,0.5,0,0,0,0.43301270189221935,0.24999999999999992Z"></path><path class="lucid-PieChart-slice-hover" d="M77.94228634059948,44.999999999999986A90,90,0,0,1,-88.63269777109872,15.628335990023725L0,0Z" transform="scale(1.1)"></path></g><g class=""><path transform="scale(1)" class="lucid-PieChart-slice lucid-Line lucid-Line-color-chart-2" d="M-88.63269777109872,15.628335990023725A90,90,0,0,1,-1.6532731788489267e-14,-90L-9.184850993605148e-17,-0.5A0.5,0.5,0,0,0,-0.492403876506104,0.08682408883346514Z"></path><path class="lucid-PieChart-slice-hover" d="M-88.63269777109872,15.628335990023725A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z" transform="scale(1.1)"></path></g></g></g></g></svg>');
+			assert.equal(wrapper.html(), '<svg class="lucid-PieChart" width="200" height="200"><g class="lucid-ContextMenu lucid-ToolTip"><g transform="translate(10, 10)"><g transform="translate(90, 90)"><g class="lucid-PieChart-slice-group"><path transform="scale(1)" class="lucid-PieChart-slice lucid-Line lucid-Line-color-chart-0" d="M5.5109105961630896e-15,-90A90,90,0,0,1,77.94228634059948,44.999999999999986L0.43301270189221935,0.24999999999999992A0.5,0.5,0,0,0,3.061616997868383e-17,-0.5Z"></path><path class="lucid-PieChart-slice-hover" d="M5.5109105961630896e-15,-90A90,90,0,0,1,77.94228634059948,44.999999999999986L0,0Z" transform="scale(1.1)"></path></g><g class="lucid-PieChart-slice-group"><path transform="scale(1)" class="lucid-PieChart-slice lucid-Line lucid-Line-color-chart-1" d="M77.94228634059948,44.999999999999986A90,90,0,0,1,-88.63269777109872,15.628335990023725L-0.492403876506104,0.08682408883346514A0.5,0.5,0,0,0,0.43301270189221935,0.24999999999999992Z"></path><path class="lucid-PieChart-slice-hover" d="M77.94228634059948,44.999999999999986A90,90,0,0,1,-88.63269777109872,15.628335990023725L0,0Z" transform="scale(1.1)"></path></g><g class="lucid-PieChart-slice-group"><path transform="scale(1)" class="lucid-PieChart-slice lucid-Line lucid-Line-color-chart-2" d="M-88.63269777109872,15.628335990023725A90,90,0,0,1,-1.6532731788489267e-14,-90L-9.184850993605148e-17,-0.5A0.5,0.5,0,0,0,-0.492403876506104,0.08682408883346514Z"></path><path class="lucid-PieChart-slice-hover" d="M-88.63269777109872,15.628335990023725A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z" transform="scale(1.1)"></path></g></g></g></g></svg>');
 		});
 	});
 });

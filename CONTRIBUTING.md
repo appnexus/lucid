@@ -96,7 +96,7 @@ describe('MyComponent', () => {
     describe('myProp', () => { });
 
     describe('myOtherProp', () => { });
-  ));
+  });
 
   describe('child components', () => {
     describe('Foo', () => { });
@@ -108,7 +108,7 @@ describe('MyComponent', () => {
 describeWithDOM('MyComponent', () => {
   describe('render', () => { });
 
-  describe('props', () => { ));
+  describe('props', () => { });
 
   describe('child components', () => { });
 });
