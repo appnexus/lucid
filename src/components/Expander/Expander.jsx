@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, findTypes }  from '../../util/component-types';
+import { createClass, getFirst, findTypes, omitProps }  from '../../util/component-types';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import * as reducers from './Expander.reducers';
 
@@ -115,7 +115,7 @@ const Expander = createClass({
 
 		return (
 			<div
-				{...passThroughs}
+				{...omitProps(passThroughs, Expander)}
 				className={cx('&', {
 					'&-is-expanded': isExpanded,
 				}, className)}

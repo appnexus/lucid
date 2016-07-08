@@ -82,7 +82,7 @@ export default React.createClass({
 		return(
 			<DataTable
 				data={data}
-				hasExtraWhitespace
+				density='extended'
 				isSelectable
 				isActionable
 			>

@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import Portal from '../Portal/Portal';
-import { createClass, getFirst } from '../../util/component-types';
+import { createClass, getFirst, omitProps } from '../../util/component-types';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 import { lucidClassNames } from '../../util/style-helpers';
 
@@ -194,13 +194,15 @@ const ContextMenu = createClass({
 			refs: { flyOutPortal },
 		} = this;
 
-		const alignmentOffset = (alignment === ContextMenu.CENTER)
-			? (getAlignmentOffset(_.includes([ContextMenu.UP, ContextMenu.DOWN], direction) ? flyOutWidth : flyOutHeight))
-			: 0;
-
 		if (!flyOutPortal) {
 			return {};
 		}
+
+		const alignmentOffset = !_.isUndefined(this.props.alignmentOffset)
+			? this.props.alignmentOffset
+			: (alignment === ContextMenu.CENTER)
+			? (getAlignmentOffset(_.includes([ContextMenu.UP, ContextMenu.DOWN], direction) ? flyOutWidth : flyOutHeight))
+			: 0;
 
 		const {
 			CENTER,
@@ -369,7 +371,7 @@ const ContextMenu = createClass({
 		const flyProps = _.get(flyoutElement, 'props', {});
 
 		return (
-			<TargetElementType ref='target' {...passThroughs} className={cx('&', className)} style={style}>
+			<TargetElementType ref='target' {...omitProps(passThroughs, ContextMenu)} className={cx('&', className)} style={style}>
 				{targetChildren}
 				{isExpanded ? (
 					<Portal

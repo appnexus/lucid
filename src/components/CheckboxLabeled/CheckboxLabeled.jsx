@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes }  from '../../util/component-types';
+import { createClass, findTypes, omitProps }  from '../../util/component-types';
 import Checkbox from '../Checkbox/Checkbox';
 
 const cx = lucidClassNames.bind('&-CheckboxLabeled');
@@ -92,7 +92,7 @@ const CheckboxLabeled = createClass({
 						isDisabled={isDisabled}
 						isSelected={isSelected}
 						onSelect={onSelect}
-						{..._.omit(passThroughs, 'Label')}
+						{...omitProps(passThroughs, CheckboxLabeled)}
 				/>
 				{
 					labelChildProps

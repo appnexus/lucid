@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes } from '../../util/component-types';
+import { createClass, findTypes, omitProps } from '../../util/component-types';
 
 import Point from '../Point/Point';
 import Line from '../Line/Line';
@@ -107,7 +107,7 @@ const Legend = createClass({
 
 		return (
 			<ul
-				{...passThroughs}
+				{...omitProps(passThroughs, Legend)}
 				className={cx(className, '&', {
 					'&-is-horizontal': isHorizontal,
 					'&-is-vertical': isVertical,

@@ -1,6 +1,6 @@
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes } from '../../util/component-types';
+import { createClass, findTypes, omitProps } from '../../util/component-types';
 import _ from 'lodash';
 
 const cx = lucidClassNames.bind('&-Validation');
@@ -68,7 +68,7 @@ const Validation = createClass({
 
 		return (
 			<div
-				{...passThroughs}
+				{...omitProps(passThroughs, Validation)}
 				className={cx('&', {
 					'&-is-error': errorChildProps && errorChildProps.children,
 				}, className)}

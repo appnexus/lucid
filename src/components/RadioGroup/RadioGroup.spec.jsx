@@ -48,14 +48,6 @@ describe('RadioGroup', () => {
 			});
 		});
 
-		describe('onSelect', () => {
-			it('defaults to the Lodash `noop` method.', () => {
-				const wrapper = shallow(<RadioGroup />);
-
-				assert.equal(wrapper.prop('onSelect'), _.noop);
-			});
-		});
-
 		describe('selectedIndex', () => {
 			it('sets the `isSelected` prop of the child radio button at the matching index to true...', () => {
 				const wrapper= shallow(

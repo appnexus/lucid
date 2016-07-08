@@ -35,8 +35,12 @@ const VerticalListMenu = buildHybridComponent(VerticalListMenuDumb);
 
 // dumb components
 import ArrowIcon from './components/Icon/ArrowIcon/ArrowIcon';
+import Axis from './components/Axis/Axis';
+import AxisLabel from './components/AxisLabel/AxisLabel';
 import Badge from './components/Badge/Badge';
 import Banner from './components/Banner/Banner';
+import Bar from './components/Bar/Bar';
+import Bars from './components/Bars/Bars';
 import BarChart from './components/BarChart/BarChart';
 import Button from './components/Button/Button';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
@@ -56,6 +60,8 @@ import Grid from './components/Grid/Grid';
 import Icon from './components/Icon/Icon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import Legend from './components/Legend/Legend';
+import Line from './components/Line/Line';
+import Lines from './components/Lines/Lines';
 import LineChart from './components/LineChart/LineChart';
 import LoadingIcon from './components/Icon/LoadingIcon/LoadingIcon';
 import LoadingIndicator from './components/LoadingIndicator/LoadingIndicator';
@@ -66,6 +72,8 @@ import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import Overlay from './components/Overlay/Overlay';
 import Panel from './components/Panel/Panel';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
+import Point from './components/Point/Point';
+import Points from './components/Points/Points';
 import Portal from './components/Portal/Portal';
 import RadioButton from './components/RadioButton/RadioButton';
 import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
@@ -93,6 +101,9 @@ import * as styleHelpers from './util/style-helpers';
 import * as redux from './util/redux';
 import * as chartConstants from './constants/charts';
 
+import * as d3Scale from 'd3-scale';
+import * as d3Time from 'd3-time';
+
 export {
 	componentTypes,
 	domHelpers,
@@ -100,6 +111,8 @@ export {
 	stateManagement,
 	styleHelpers,
 	chartConstants,
+	d3Scale,
+	d3Time,
 };
 
 export {
@@ -108,8 +121,12 @@ export {
 	ArrowIcon,
 	Autocomplete,
 	AutocompleteDumb,
+	Axis,
+	AxisLabel,
 	Badge,
 	Banner,
+	Bar,
+	Bars,
 	BarChart,
 	Button,
 	ButtonGroup,
@@ -137,7 +154,9 @@ export {
 	Icon,
 	InfoIcon,
 	Legend,
+	Line,
 	LineChart,
+	Lines,
 	LoadingIcon,
 	LoadingIndicator,
 	LoadingMessage,
@@ -150,6 +169,8 @@ export {
 	Panel,
 	PieChart,
 	PlusIcon,
+	Point,
+	Points,
 	Portal,
 	RadioButton,
 	RadioButtonLabeled,

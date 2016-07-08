@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Line');
@@ -9,18 +9,20 @@ const cx = lucidClassNames.bind('&-Line');
 const {
 	string,
 	object,
+	bool,
 } = React.PropTypes;
 
 /**
  * {"categories": ["visualizations", "geoms"]}
  *
- * Lines are great. If I told you they aren't, I'd be li'n.
+ * *For use within an `svg`*
+ *
+ * Lines are typically used for line charts and are pretty much a thin wrapper
+ * around svg paths.
  *
  */
 const Line = createClass({
 	displayName: 'Line',
-
-	_lucidIsPrivate: true,
 
 	propTypes: {
 		/**
@@ -44,11 +46,16 @@ const Line = createClass({
 		 * - `'#123abc'`
 		 */
 		color: string,
+		/**
+		 * Display a dotted line.
+		 */
+		isDotted: bool,
 	},
 
 	getDefaultProps() {
 		return {
 			color: chartConstants.COLOR_0,
+			isDotted: false,
 		};
 	},
 
@@ -56,6 +63,7 @@ const Line = createClass({
 		const {
 			className,
 			color,
+			isDotted,
 			d,
 			style,
 			...passThroughs,
@@ -68,13 +76,14 @@ const Line = createClass({
 
 		return (
 			<path
-				{...passThroughs}
+				{...omitProps(passThroughs, Line)}
 				style={{
 					...style,
 					...colorStyle,
 				}}
 				className={cx(className, '&', {
 					[`&-${color}`]: !isCustomColor,
+					'&-is-dotted': isDotted,
 				})}
 				d={d}
 			/>

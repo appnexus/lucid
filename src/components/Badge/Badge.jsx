@@ -1,6 +1,6 @@
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Badge');
 
@@ -38,7 +38,7 @@ const Badge = createClass({
 		} = this.props;
 
 		return (
-			<span className={cx('&', className)} {...passThroughs}>
+			<span className={cx('&', className)} {...omitProps(passThroughs, Badge)}>
 				{children}
 			</span>
 		);

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Bar');
@@ -16,13 +16,14 @@ const {
 /**
  * {"categories": ["visualizations", "geoms"]}
  *
- * Bars are typically used for bar charts.
+ * *For use within an `svg`*
+ *
+ * Bars are typically used for bar charts and are pretty much a thin wrapper
+ * around svg rects.
  *
  */
 const Bar = createClass({
 	displayName: 'Bar',
-
-	_lucidIsPrivate: true,
 
 	propTypes: {
 		/**
@@ -92,7 +93,7 @@ const Bar = createClass({
 
 		return (
 			<rect
-				{...passThroughs}
+				{...omitProps(passThroughs, Bar)}
 				className={cx(className, '&', {
 					'&-has-stroke': hasStroke,
 					[`&-${color}`]: !isCustomColor,

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-RadioButton');
 const {
@@ -101,7 +101,7 @@ const RadioButton = createClass({
 			>
 				<input
 						onChange={_.noop}
-						{..._.omit(passThroughs, 'children')}
+						{...omitProps(passThroughs, RadioButton, ['children', 'callbackId'])}
 						checked={isSelected}
 						className={cx('&-native')}
 						disabled={isDisabled}

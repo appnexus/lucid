@@ -120,7 +120,7 @@ const SearchField = createClass({
 			onChange,
 			onSubmit,
 			placeholder,
-			isSingleLine: true,
+			isMultiLine: false,
 			value,
 		};
 

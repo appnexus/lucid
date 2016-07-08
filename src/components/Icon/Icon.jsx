@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Icon');
 
@@ -92,7 +92,7 @@ const Icon = createClass({
 				height={size}
 				viewBox={viewBox}
 				preserveAspectRatio={aspectRatio}
-				{...passThroughs}
+				{...omitProps(passThroughs, Icon)}
 				style={_.pickBy(actualStyle, _.negate(_.isUndefined))}
 				className={cx('&', {
 					'&-is-badge': isBadge,

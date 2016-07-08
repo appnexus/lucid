@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Checkbox');
 
@@ -94,7 +94,7 @@ const Checkbox = createClass({
 			>
 				<input
 					onChange={_.noop}
-					{..._.omit(passThroughs, 'children')}
+					{...omitProps(passThroughs, Checkbox, ['children'])}
 					checked={isSelected}
 					className={cx('&-native')}
 					disabled={isDisabled}

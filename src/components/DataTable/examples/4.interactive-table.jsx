@@ -156,7 +156,7 @@ export default React.createClass({
 		return(
 			<DataTable
 				data={_.map(data, (row, index) => (index === activeIndex ? {...row, isActive: true} : row))}
-				hasExtraWhitespace
+				density='extended'
 				isSelectable
 				isActionable
 				onRowClick={this.handleRowClick}

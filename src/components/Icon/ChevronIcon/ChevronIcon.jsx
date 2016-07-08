@@ -1,6 +1,7 @@
+import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass, omitProps } from '../../../util/component-types';
 import Icon from '../Icon';
 
 const cx = lucidClassNames.bind('&-ChevronIcon');
@@ -46,7 +47,8 @@ const ChevronIcon = createClass({
 
 		return (
 			<Icon
-				{...passThroughs}
+				{...omitProps(passThroughs, ChevronIcon)}
+				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', {
 					'&-is-down': direction === 'down',
 					'&-is-up': direction === 'up',

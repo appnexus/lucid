@@ -254,7 +254,7 @@ const PieChart = createClass({
 		if (_.isEmpty(data)) {
 			return (
 				<svg
-					{...omitProps(passThroughs, ToolTip)}
+					{...omitProps(omitProps(passThroughs, ToolTip), PieChart)}
 					style={style}
 					className={cx(className, '&')}
 					width={width}
@@ -284,7 +284,7 @@ const PieChart = createClass({
 
 		return (
 			<svg
-				{...omitProps(passThroughs, ToolTip)}
+				{...omitProps(omitProps(passThroughs, ToolTip), PieChart)}
 				style={style}
 				className={cx(className, '&')}
 				width={width}
@@ -311,7 +311,6 @@ const PieChart = createClass({
 											className={cx('&-slice')}
 											d={arc(pieDatum)}
 											color={_.get(colorMap, data[index][xAxisField], palette[index % palette.length])}
-											hasStroke={false}
 											transform={`scale(${isHovering && hoveringIndex === index ? HOVER_SCALE : 1})`}
 										/>
 

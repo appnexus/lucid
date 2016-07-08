@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Overlay from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst }  from '../../util/component-types';
+import { createClass, getFirst, omitProps }  from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Dialog');
 
@@ -72,6 +72,7 @@ const Dialog = createClass({
 		const {
 			className,
 			size,
+			isShown,
 			...passThroughs,
 		} = this.props;
 
@@ -80,7 +81,9 @@ const Dialog = createClass({
 
 		return (
 			<Overlay
-				{...passThroughs}
+				{...omitProps(passThroughs, Dialog)}
+				{..._.pick(passThroughs, _.keys(Overlay.propTypes))}
+				isShown={isShown}
 				className={cx('&', className)}
 			>
 				<div
