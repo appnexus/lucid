@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes } from '../../util/component-types';
+import { createClass, findTypes, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Panel');
 
@@ -65,6 +65,7 @@ const Panel = createClass({
 			className,
 			isGutterless,
 			style,
+			...passThroughs,
 		} = this.props;
 
 		const headerChildProp = _.first(_.map(findTypes(this.props, Panel.Header), 'props'));
@@ -72,6 +73,7 @@ const Panel = createClass({
 
 		return (
 			<div
+				{...omitProps(passThroughs, Panel)}
 				className={cx('&', className, {
 					'&-is-not-gutterless': !isGutterless,
 				})}

@@ -5,7 +5,7 @@ import {
 	extractFields,
 	stackByFields,
 } from '../../util/chart-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
 import * as chartConstants from '../../constants/charts';
 
@@ -216,7 +216,7 @@ const Bars = createClass({
 
 		return (
 			<g
-				{...passThroughs}
+				{...omitProps(passThroughs, Bars)}
 				className={cx(className, '&')}
 				transform={`translate(${left}, ${top})`}
 			>

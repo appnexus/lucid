@@ -1,7 +1,8 @@
+import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass, omitProps } from '../../../util/component-types';
 
 const { oneOf } = React.PropTypes;
 const cx = lucidClassNames.bind('&-LoadingIcon');
@@ -44,7 +45,8 @@ const LoadingIcon = createClass({
 
 		return (
 			<Icon
-				{...passThroughs}
+				{...omitProps(passThroughs, LoadingIcon)}
+				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				viewBox='0 0 100 100'
 				className={cx('&', className)}
 				style={{ animationDuration, ...style }}

@@ -31,18 +31,6 @@ export default React.createClass({
 		});
 	},
 
-	handleFileMenuChangeBounds(type) {
-		this.setState({
-			fileDirection: type === ContextMenu.BELOW_FOLD ? 'up' : 'down',
-		});
-	},
-
-	handleEditMenuChangeBounds(type) {
-		this.setState({
-			editDirection: type === ContextMenu.BELOW_FOLD ? 'up' : 'down',
-		});
-	},
-
 	render() {
 		const {
 			isFileExpanded,
@@ -58,7 +46,6 @@ export default React.createClass({
 					isExpanded={isFileExpanded}
 					direction={fileDirection}
 					onClickOut={this.handleFileMenuToggle}
-					onChangeBounds={this.handleFileMenuChangeBounds}
 				>
 
 					<ContextMenu.Target>
@@ -100,7 +87,6 @@ export default React.createClass({
 					isExpanded={isEditExpanded}
 					direction={editDirection}
 					onClickOut={this.handleEditMenuToggle}
-					onChangeBounds={this.handleEditMenuChangeBounds}
 				>
 
 					<ContextMenu.Target>

@@ -4,7 +4,7 @@ import Portal from '../Portal/Portal';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import random from '../../util/random';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass }  from '../../util/component-types';
+import { createClass, omitProps }  from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Overlay');
 
@@ -142,7 +142,7 @@ const Overlay = createClass({
 				>
 					{isShown ?
 						<div
-							{...passThroughs}
+							{...omitProps(passThroughs, Overlay)}
 							className={cx(className, '&', {
 								'&-is-not-modal': !isModal,
 							})}

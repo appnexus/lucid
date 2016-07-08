@@ -1,5 +1,5 @@
 import React from 'react';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import Table from '../Table/Table';
 
@@ -82,7 +82,7 @@ const ScrollTable = createClass({
 				style={style}
 			>
 				<Table
-					{...passThroughs}
+					{...omitProps(passThroughs, ScrollTable)}
 					style={{
 						width: tableWidth,
 					}}

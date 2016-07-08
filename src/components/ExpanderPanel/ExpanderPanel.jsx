@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst }  from '../../util/component-types';
+import { createClass, getFirst, omitProps }  from '../../util/component-types';
 
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Panel from '../Panel/Panel';
@@ -117,7 +117,7 @@ const ExpanderPanel = createClass({
 
 		return (
 			<Panel
-				{..._.omit(passThroughs, ['Header'])}
+				{...omitProps(passThroughs, ExpanderPanel)}
 				className={cx('&', {
 					'&-is-collapsed': !isExpanded,
 					'&-is-disabled': isDisabled,

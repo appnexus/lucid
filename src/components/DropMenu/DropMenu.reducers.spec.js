@@ -4,8 +4,6 @@ import {
 	onExpand,
 	onCollapse,
 	onSelect,
-	onAboveFold,
-	onBelowFold,
 	onFocusNext,
 	onFocusPrev,
 	onFocusOption,
@@ -76,32 +74,6 @@ describe('DropMenu reducers', () => {
 
 			assert.equal(isExpanded, false);
 			assert(_.isEqual(selectedIndices, [3]));
-		});
-	});
-
-	describe('onAboveFold', () => {
-		it('should set direction=down', () => {
-			const initialState = {};
-
-			const nextState = onAboveFold(initialState);
-			const {
-				direction,
-			} = nextState;
-
-			assert.equal(direction, 'down');
-		});
-	});
-
-	describe('onBelowFold', () => {
-		it('should set direction=up', () => {
-			const initialState = {};
-
-			const nextState = onBelowFold(initialState);
-			const {
-				direction,
-			} = nextState;
-
-			assert.equal(direction, 'up');
 		});
 	});
 

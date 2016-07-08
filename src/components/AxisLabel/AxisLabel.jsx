@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-AxisLabel');
 
@@ -83,7 +83,7 @@ const AxisLabel = createClass({
 
 		return (
 			<text
-				{...passThroughs}
+				{...omitProps(passThroughs, AxisLabel)}
 				style={{
 					...colorStyle,
 					...style,

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import { groupByFields } from '../../util/chart-helpers';
 import * as d3Shape from 'd3-shape';
 import * as chartConstants from '../../constants/charts';
@@ -188,7 +188,7 @@ const Points = createClass({
 
 		return (
 			<g
-				{...passThroughs}
+				{...omitProps(passThroughs, Points)}
 				className={cx(className, '&')}
 				transform={`translate(${left}, ${top})`}
 			>
