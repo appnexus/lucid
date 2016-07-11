@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "repository": {
@@ -40,7 +40,7 @@
     "autoprefixer": "^6.3.3",
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
-    "babel-plugin-rewire": "^1.0.0-rc-3",
+    "babel-plugin-rewire": "^1.0.0-rc-4",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-2": "^6.5.0",
