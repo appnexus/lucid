@@ -60,6 +60,21 @@ describe('Validation', () => {
 
 		});
 
+		describe('child components', () => {
+			describe('Error', () => {
+				it('should render an error', () => {
+					const wrapper = shallow(
+						<Validation>
+							<Validation.Error>foo</Validation.Error>
+							Content
+						</Validation>
+					);
+
+					assert.equal(wrapper.find('.lucid-Validation-error-content').text(), 'foo');
+				});
+			});
+		});
+
 	});
 
 });
