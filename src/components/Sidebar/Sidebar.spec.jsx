@@ -209,6 +209,27 @@ describe('Sidebar', () => {
 			});
 		});
 
+		describe('onResizing', () => {
+			it('should be called when onResizing event handler is called on SplitVertical', () => {
+				const onResizing = sinon.spy();
+				const wrapper = shallow(
+					<Sidebar onResizing={onResizing} />
+				);
+				const splitVertical = wrapper.find(SplitVertical);
+				const splitVerticalOnResize = splitVertical.prop('onResizing');
+				const lastArg = {
+					event: {},
+					props: wrapper.props(),
+				};
+
+				splitVerticalOnResize(123, lastArg);
+
+				assert(onResizing.called, 'must be called');
+				assert.equal(123, onResizing.lastCall.args[0], 'must pass the new width in the first arg');
+				assert.equal(lastArg.event, onResizing.lastCall.args[1].event, 'must pass event in the last arg');
+			});
+		});
+
 		describe('onResize', () => {
 			it('should be called when onResize event handler is called on SplitVertical', () => {
 				const onResize = sinon.spy();

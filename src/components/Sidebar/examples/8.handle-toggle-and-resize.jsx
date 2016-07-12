@@ -13,6 +13,10 @@ export default React.createClass({
 		this.setState({ isExpanded: !this.state.isExpanded });
 	},
 
+	handleResizing(width) {
+		this.setState({ resizeWidth: width });
+	},
+
 	handleResize(width) {
 		this.setState({ resizeWidth: width });
 	},
@@ -23,7 +27,7 @@ export default React.createClass({
 				<p>isExpanded: {`${this.state.isExpanded}`}</p>
 				<p>resizeWidth: {`${this.state.resizeWidth}`}</p>
 
-				<Sidebar onResize={this.handleResize} onToggle={this.handleToggle}>
+				<Sidebar onResizing={this.handleResizing} onResize={this.handleResize} onToggle={this.handleToggle}>
 					<Sidebar.Bar>
 						Non cliche minim normcore ullamco, iPhone etsy banh mi farm-to-table mumblecore stumptown asymmetrical wolf pour-over odio.
 					</Sidebar.Bar>
