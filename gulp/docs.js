@@ -89,53 +89,54 @@ module.exports = {
 						recast.visit(ast, {
 							visitExportDefaultDeclaration: function(path) {
 								exportName = path.value.declaration.name;
-								recast.visit(ast, {
-									visitObjectExpression: function(path) {
+								return false;
+							},
+						});
 
-										path.get('properties').each(function(propertyPath) {
+						recast.visit(ast, {
+							visitObjectExpression: function(path) {
 
-											// top-level component definitions
-											if (propertyPath.value.key.name === 'render') {
+								path.get('properties').each(function(propertyPath) {
 
-												// main component of module
-												if (findParentNodeIdentifier(path) === exportName) {
-													component = path;
-												} else {
-													// top-level child component definitions
-													childComponents.push(path);
-												}
+									// top-level component definitions
+									if (propertyPath.value.key.name === 'render') {
+
+										// main component of module
+										if (findParentNodeIdentifier(path) === exportName) {
+											component = path;
+										} else {
+											// top-level child component definitions
+											childComponents.push(path);
+										}
+									}
+
+									// nested child-component definitions
+									if (propertyPath.value.key.name === 'components') {
+										propertyPath.get('value', 'properties').each(function(childComponentPropertyPath) {
+											var childComponentProperty = childComponentPropertyPath.get('value');
+
+											// reference to an imported component
+											// references to locally defined components are ignored because
+											// top-level child component defs are alread resolved above
+											if (childComponentProperty.value.type === 'Identifier' &&
+													_.includes(importLocalNames, childComponentProperty.value.name)) {
+												childComponents.push(childComponentProperty);
 											}
 
-											// nested child-component definitions
-											if (propertyPath.value.key.name === 'components') {
-												propertyPath.get('value', 'properties').each(function(childComponentPropertyPath) {
-													var childComponentProperty = childComponentPropertyPath.get('value');
+											// reference to another component's child component
+											if (childComponentProperty.value.type === 'MemberExpression') {
+												childComponents.push(childComponentProperty);
+											}
 
-													// reference to an imported component
-													// references to locally defined components are ignored because
-													// top-level child component defs are alread resolved above
-													if (childComponentProperty.value.type === 'Identifier' &&
-															_.includes(importLocalNames, childComponentProperty.value.name)) {
-														childComponents.push(childComponentProperty);
-													}
-
-													// reference to another component's child component
-													if (childComponentProperty.value.type === 'MemberExpression') {
-														childComponents.push(childComponentProperty);
-													}
-
-													// inline component definition
-													if (childComponentProperty.value.type === 'CallExpression') {
-														var definition = childComponentProperty.get('arguments', 0);
-														childComponents.push(definition);
-													}
-
-												});
+											// inline component definition
+											if (childComponentProperty.value.type === 'CallExpression') {
+												var definition = childComponentProperty.get('arguments', 0);
+												childComponents.push(definition);
 											}
 
 										});
-										return false;
-									},
+									}
+
 								});
 								return false;
 							},
