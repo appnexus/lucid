@@ -1,6 +1,6 @@
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import { createClass, getFirst, omitProps } from '../../util/component-types';
 import _ from 'lodash';
 
 const cx = lucidClassNames.bind('&-Validation');
@@ -50,13 +50,6 @@ const Validation = createClass({
 		children: any.isRequired,
 	},
 
-	getDefaultProps() {
-		return {
-			className: null,
-			Error: null,
-		};
-	},
-
 	render() {
 		const {
 			className,
@@ -64,7 +57,7 @@ const Validation = createClass({
 			...passThroughs,
 		} = this.props;
 
-		const errorChildProps = _.first(_.map(findTypes(this.props, Validation.Error), 'props'));
+		const errorChildProps = _.get(getFirst(this.props, Validation.Error), 'props');
 
 		return (
 			<div

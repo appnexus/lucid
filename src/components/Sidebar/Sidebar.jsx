@@ -70,6 +70,12 @@ const Sidebar = createClass({
 		 */
 		Title: any,
 		/**
+		 * Called when the user is currently resizing the Sidebar.
+		 *
+		 * Signature: `(width, { event, props }) => {}`
+		 */
+		onResizing: func,
+		/**
 		 * Called when the user resizes the Sidebar.
 		 *
 		 * Signature: `(width, { event, props }) => {}`
@@ -142,6 +148,7 @@ const Sidebar = createClass({
 			width: 250,
 			position: 'left',
 			isResizeDisabled: false,
+			onResizing: _.noop,
 			onResize: _.noop,
 			onToggle: _.noop,
 		};
@@ -153,6 +160,14 @@ const Sidebar = createClass({
 		} = this.props;
 
 		onToggle({ props: this.props, event });
+	},
+
+	handleResizing(width, { event }) {
+		const {
+			onResizing,
+		} = this.props;
+
+		onResizing(width, { props: this.props, event });
 	},
 
 	handleResize(width, { event }) {
@@ -203,6 +218,7 @@ const Sidebar = createClass({
 				isAnimated={isAnimated}
 				isExpanded={isExpanded}
 				collapseShift={33} // leave 33px of sidebar to stick out when collapsed
+				onResizing={this.handleResizing}
 				onResize={this.handleResize}
 			>
 				<BarPane {...omitProps(barProps, Sidebar.Bar)} className={cx('&-Bar', barProps.className)} width={width}>

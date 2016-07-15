@@ -154,6 +154,51 @@ describe('SplitVertical', () => {
 
 		});
 
+		describeWithDOM('onResizing', () => {
+			let wrapper;
+			let mountTestDiv;
+
+			beforeEach(() => {
+				mountTestDiv = document.createElement('div');
+				document.body.appendChild(mountTestDiv);
+			});
+
+			afterEach(() => {
+				if (wrapper) {
+					wrapper.unmount();
+				}
+
+				if (mountTestDiv) {
+					mountTestDiv.parentNode.removeChild(mountTestDiv);
+				}
+			});
+
+			it('should be called when the DragCaptureZone calls the onDrag event handler', () => {
+				const onResizing = sinon.spy();
+
+				wrapper = mount(
+					<SplitVertical isExpanded={true} onResizing={onResizing} />
+				, { attachTo: mountTestDiv });
+
+				const {
+					onDragStart,
+					onDrag,
+					onDragEnd,
+				} = wrapper.find(DragCaptureZone).props();
+
+				const lastArg = { event: {} };
+
+				onDragStart(lastArg);
+				onDrag({dX: 122}, lastArg);
+				onDragEnd({dX: 123}, lastArg);
+
+				assert(onResizing.called, 'must be called');
+				assert.equal(onResizing.lastCall.args[0], 122, 'must pass the new width of the pane');
+				assert.equal(onResizing.lastCall.args[1].props, wrapper.props(), 'must pass component props in the last arg');
+				assert.equal(onResizing.lastCall.args[1].event, lastArg.event, 'must pass event reference in the last arg');
+			});
+		});
+
 		describeWithDOM('onResize', () => {
 			let wrapper;
 			let mountTestDiv;
@@ -189,7 +234,7 @@ describe('SplitVertical', () => {
 				const lastArg = { event: {} };
 
 				onDragStart(lastArg);
-				onDrag({dX: 123}, lastArg);
+				onDrag({dX: 122}, lastArg);
 				onDragEnd({dX: 123}, lastArg);
 
 				assert(onResize.called, 'must be called');
