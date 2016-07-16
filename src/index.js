@@ -81,6 +81,7 @@ import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
+import SplitHorizontal from './components/SplitHorizontal/SplitHorizontal';
 import SplitVertical from './components/SplitVertical/SplitVertical';
 import StickySection from './components/StickySection/StickySection';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
@@ -185,6 +186,7 @@ export {
 	SingleSelectDumb,
 	Sidebar,
 	SidebarDumb,
+	SplitHorizontal,
 	SplitVertical,
 	StickySection,
 	SuccessIcon,
