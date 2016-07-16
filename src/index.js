@@ -13,6 +13,7 @@ import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 import { default as SearchFieldDumb } from './components/SearchField/SearchField';
 import { default as SidebarDumb } from './components/Sidebar/Sidebar';
 import { default as SingleSelectDumb } from './components/SingleSelect/SingleSelect';
+import { default as SubmarineDumb } from './components/Submarine/Submarine';
 import { default as TabsDumb } from './components/Tabs/Tabs';
 import { default as ToolTipDumb } from './components/ToolTip/ToolTip';
 import { default as VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
@@ -29,6 +30,7 @@ const RadioGroup = buildHybridComponent(RadioGroupDumb);
 const SearchField = buildHybridComponent(SearchFieldDumb);
 const Sidebar = buildHybridComponent(SidebarDumb);
 const SingleSelect = buildHybridComponent(SingleSelectDumb);
+const Submarine = buildHybridComponent(SubmarineDumb);
 const Tabs = buildHybridComponent(TabsDumb);
 const ToolTip = buildHybridComponent(ToolTipDumb);
 const VerticalListMenu = buildHybridComponent(VerticalListMenuDumb);
@@ -189,6 +191,8 @@ export {
 	SplitHorizontal,
 	SplitVertical,
 	StickySection,
+	Submarine,
+	SubmarineDumb,
 	SuccessIcon,
 	Switch,
 	SwitchLabeled,
