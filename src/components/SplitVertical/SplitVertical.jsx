@@ -255,7 +255,7 @@ const SplitVertical = createClass({
 		onResizing(
 			this.applyDeltaToSecondaryWidth(dX, isExpanded, this.secondaryStartRect, secondaryRef, secondary, right, this.refs.inner, primaryRef, collapseShift),
 			{ props: this.props, event }
-		)
+		);
 	},
 
 	handleDragEnd({ dX }, { event }) {
