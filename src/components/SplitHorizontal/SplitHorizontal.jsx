@@ -399,7 +399,7 @@ const SplitHorizontal = createClass({
 									'&-is-secondary': topPaneProps === secondary,
 								}, topPaneProps.className)}
 								style={{
-									flexBasis: _.isNil(topPaneProps.height) ? (topPaneProps === secondary ? 'calc(50% - 3px)' : 0) : topPaneProps.height,
+									flexBasis: _.isNil(topPaneProps.height) ? (topPaneProps === secondary ? 'calc(50% - 3px)' : null) : topPaneProps.height,
 									marginTop: (isBottomSecondary ? -Math.round(tween.slideAmount) : null),
 									...topPaneProps.style,
 								}}
@@ -418,7 +418,7 @@ const SplitHorizontal = createClass({
 									'&-is-secondary': bottomPaneProps === secondary,
 								}, bottomPaneProps.className)}
 								style={{
-									flexBasis: _.isNil(bottomPaneProps.height) ? (bottomPaneProps === secondary ? 'calc(50% - 3px)' : 0) : bottomPaneProps.height,
+									flexBasis: _.isNil(bottomPaneProps.height) ? (bottomPaneProps === secondary ? 'calc(50% - 3px)' : null) : bottomPaneProps.height,
 									marginBottom: (isBottomSecondary ? null : -Math.round(tween.slideAmount)),
 									...bottomPaneProps.style,
 								}}
