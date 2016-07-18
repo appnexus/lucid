@@ -7,4 +7,3 @@ describeWithDOM.only = function (name, func) {
 };
 
 export default describeWithDOM;
-
