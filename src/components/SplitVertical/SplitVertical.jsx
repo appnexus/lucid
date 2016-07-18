@@ -46,6 +46,12 @@ const SplitVertical = createClass({
 		 */
 		isAnimated: bool,
 		/**
+		 * Called when the user is currently resizing the split with the Divider.
+		 *
+		 * Signature: `(width, { event, props }) => {}`
+		 */
+		onResizing: func,
+		/**
 		 * Called when the user resizes the split with the Divider.
 		 *
 		 * Signature: `(width, { event, props }) => {}`
@@ -129,6 +135,7 @@ const SplitVertical = createClass({
 			isExpanded: true,
 			isAnimated: false,
 			collapseShift: 0,
+			onResizing: _.noop,
 			onResize: _.noop,
 		};
 	},
@@ -231,10 +238,11 @@ const SplitVertical = createClass({
 		this.disableAnimation(this.refs.inner, secondaryRef, primaryRef);
 	},
 
-	handleDrag({ dX }) {
+	handleDrag({ dX }, { event }) {
 		const {
 			isExpanded,
 			collapseShift,
+			onResizing,
 		} = this.props;
 
 		const {
@@ -244,7 +252,10 @@ const SplitVertical = createClass({
 			primaryRef,
 		} = this.panes;
 
-		this.applyDeltaToSecondaryWidth(dX, isExpanded, this.secondaryStartRect, secondaryRef, secondary, right, this.refs.inner, primaryRef, collapseShift);
+		onResizing(
+			this.applyDeltaToSecondaryWidth(dX, isExpanded, this.secondaryStartRect, secondaryRef, secondary, right, this.refs.inner, primaryRef, collapseShift),
+			{ props: this.props, event }
+		)
 	},
 
 	handleDragEnd({ dX }, { event }) {
