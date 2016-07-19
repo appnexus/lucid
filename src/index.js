@@ -42,6 +42,7 @@ import Banner from './components/Banner/Banner';
 import Bar from './components/Bar/Bar';
 import Bars from './components/Bars/Bars';
 import BarChart from './components/BarChart/BarChart';
+import Breadcrumb from './components/Breadcrumb/Breadcrumb';
 import Button from './components/Button/Button';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
@@ -81,6 +82,7 @@ import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
+import SeparatorIcon from './components/Icon/SeparatorIcon/SeparatorIcon';
 import SplitVertical from './components/SplitVertical/SplitVertical';
 import StickySection from './components/StickySection/StickySection';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
@@ -128,6 +130,7 @@ export {
 	Bar,
 	Bars,
 	BarChart,
+	Breadcrumb,
 	Button,
 	ButtonGroup,
 	ButtonGroupDumb,
@@ -181,6 +184,7 @@ export {
 	ScrollTable,
 	SearchField,
 	SearchIcon,
+	SeparatorIcon,
 	SingleSelect,
 	SingleSelectDumb,
 	Sidebar,
