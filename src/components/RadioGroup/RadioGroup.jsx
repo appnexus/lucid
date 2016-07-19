@@ -1,11 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, findTypes, omitProps } from '../../util/component-types';
+import { createClass, getFirst, findTypes, rejectTypes, omitProps } from '../../util/component-types';
 import getRandom from '../../util/random';
+import reducers from './RadioGroup.reducers';
+
 import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 import RadioButton from '../RadioButton/RadioButton';
-import reducers from './RadioGroup.reducers';
 
 const cx = lucidClassNames.bind('&-RadioGroup');
 
@@ -29,10 +30,7 @@ const RadioGroup = createClass({
 	displayName: 'RadioGroup',
 
 	components: {
-		RadioButton: createClass({
-			displayName: 'RadioGroup.RadioButton',
-			propTypes: RadioButton.propTypes,
-		}),
+		RadioButton,
 
 		/**
 		 * Support radio button labels as `RadioGroup.Label` component which can
@@ -132,7 +130,7 @@ const RadioGroup = createClass({
 						/>
 					);
 				})}
-				{children}
+				{rejectTypes(children, RadioGroup.RadioButton)}
 			</span>
 		);
 	},
