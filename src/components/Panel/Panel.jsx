@@ -21,10 +21,16 @@ const Panel = createClass({
 	displayName: 'Panel',
 
 	components: {
+		/**
+		 * Content displayed at the top of the panel.
+		 */
 		Header: createClass({
 			displayName: 'Panel.Header',
 			propName: 'Header',
 		}),
+		/**
+		 * Content displayed at the bottom of the panel.
+		 */
 		Footer: createClass({
 			displayName: 'Panel.Footer',
 			propName: 'Footer',

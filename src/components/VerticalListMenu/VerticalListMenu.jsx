@@ -32,14 +32,43 @@ const VerticalListMenu = createClass({
 	reducers,
 
 	components: {
+		/**
+		 * A child item that can contain content or another VerticalListMenu.
+		 */
 		Item: createClass({
 			displayName: 'VerticalListMenu.Item',
 			propTypes: {
+				/**
+				 * Show or hide the expand button. Should be `true` if you want to nest
+				 * menus.
+				 */
 				hasExpander: bool,
+				/**
+				 * Determines the visibility of nested menus.
+				 */
 				isExpanded: bool,
+				/**
+				 * If `true` then a small bar on the left side of the item will be
+				 * shown indicating this item is selected.
+				 */
 				isSelected: bool,
+				/**
+				 * Determines the visibility of the small bar on the left when the user
+				 * hovers over the item. This should indicate to the user that an item
+				 * is clickable.
+				 */
 				isActionable: bool,
+				/**
+				 * Called when the user clicks the main body of the item.
+				 *
+				 * Signature: `(index, { event, props}) => {}`
+				 */
 				onSelect: func,
+				/**
+				 * Called when the user clicks the expand button.
+				 *
+				 * Signature: `(index, { event, props}) => {}`
+				 */
 				onToggle: func,
 			},
 		}),
