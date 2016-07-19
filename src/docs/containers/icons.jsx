@@ -7,11 +7,12 @@ import * as components from '../../index';
 const { object } = React.PropTypes;
 
 const { Button } = components;
-const icons = _.reduce(components, (acc, val, key) =>
-	_.assign(acc, _.endsWith(key, 'Icon') && key !== 'Icon'
-		? { [key]: val }
-		: {}
-	), {});
+const icons = _.chain(components)
+	.reduce((acc, val, key) => (
+		acc.concat(_.endsWith(key, 'Icon') && key !== 'Icon' ? [[key, val]] : [])
+	), [])
+	.sortBy(([name]) => name)
+	.value();
 
 const cx = lucidClassNames.bind('Icons');
 
@@ -32,7 +33,7 @@ const Icons = React.createClass({
 
 				<section>
 					<ul className={cx('&-list')}>
-						{_.map(icons, (Icon, name) => (
+						{_.map(icons, ([name, Icon]) => (
 							<li key={name}>
 								<Button
 									kind='link'

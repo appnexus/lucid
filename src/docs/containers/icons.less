@@ -2,13 +2,15 @@
 
 	&-list {
 		padding: 0;
+		max-height: 75vh;
 
 		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
+		align-items: flex-start;
+		flex-flow: column wrap;
+		align-content: flex-start;
 
 		& > li {
-			width: 150px;
+			// min-width: 200px;
 			list-style-type: none;
 		}
 
