@@ -57,7 +57,7 @@ const ChevronIcon = createClass({
 				}, className)}
 				size={size}
 			>
-				<path d='M3,6 L8,11 L13,6' strokeWidth='2' strokeLinejoin='round' />
+				<path d='M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z' />
 			</Icon>
 		);
 	},
