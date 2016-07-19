@@ -7,7 +7,8 @@ export default React.createClass({
 			<section>
 				<article>
 					<Button>Default</Button>
-					<Button><CheckIcon /> has icon</Button>
+					<Button><CheckIcon /></Button>
+					<Button><CheckIcon /> has icon and text</Button>
 					<Button isDisabled={true}>is disabled</Button>
 					<Button isActive={true}>is active</Button>
 				</article>
