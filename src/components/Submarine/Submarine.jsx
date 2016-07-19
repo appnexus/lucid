@@ -21,7 +21,7 @@ const {
 } = React.PropTypes;
 
 /**
- * {"categories": ["layout"]}
+ * {"categories": ["layout"], "madeFrom": ["SplitHorizontal", "ChevronIcon", "GripperHorizontalIcon"]}
  *
  * `Submarine` renders a collapsible, resizeable side bar panel next to primary content.
  */
@@ -62,11 +62,7 @@ const Submarine = createClass({
 		 */
 		isResizeDisabled: bool,
 		/**
-		 * Set the title of the Submarine. (alias for `Title` and `Submarine.Title`)
-		 */
-		title: any,
-		/**
-		 * Set the title of the Submarine. (alias for `title` and `Submarine.Title`)
+		 * Set the title of the Submarine.
 		 */
 		Title: any,
 		/**
@@ -98,11 +94,7 @@ const Submarine = createClass({
 				 */
 				children: node,
 				/**
-				 * Set the title of the Submarine. (alias for `Title` and `Submarine.Title`)
-				 */
-				title: any,
-				/**
-				 * Set the title of the Submarine. (alias for `title` and `Submarine.Title`)
+				 * Set the title of the Submarine. (alias for `Submarine.Title`)
 				 */
 				Title: any,
 			},
@@ -120,7 +112,7 @@ const Submarine = createClass({
 
 		Title: createClass({
 			displayName: 'Submarine.Title',
-			propName: ['Title', 'title'],
+			propName: ['Title'],
 			propTypes: {
 				/**
 				 * Submarine title.

@@ -1,5 +1,3 @@
-@Submarine-Bar-zIndex: 99;
-@Submarine-Divider-zIndex: 98;
 @Submarine-Divider-height: @size-XS - 1px;
 @Submarine-Bar-header-height: 33px;
 @Submarine-transition-duration: @timing-animation-fade;
@@ -18,7 +16,7 @@
 
 		& > .lucid-Submarine-Bar {
 			position: relative;
-			z-index: @Submarine-Bar-zIndex;
+			z-index: @zindex-base;
 			background-color: @color-white;
 			overflow: auto;
 			display: flex;
@@ -42,7 +40,7 @@
 				height: 100%;
 				background-color: @color-backgroundColor;
 				opacity: 1;
-				z-index: @Submarine-Bar-zIndex;
+				z-index: @zindex-base;
 
 				.lucid-SplitHorizontal-is-expanded& {
 					opacity: 0;
@@ -85,7 +83,7 @@
 					border: solid 1px @featured-color-default-borderColor;
 					border-radius: @size-borderRadius;
 					cursor: pointer;
-					z-index: @Submarine-Bar-zIndex + 1;
+					z-index: @zindex-base + 1;
 					background-image: linear-gradient(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 
 					&:hover {
@@ -93,7 +91,7 @@
 					}
 
 					.lucid-ChevronIcon {
-						stroke: @color-darkGray;
+						fill: @color-darkGray;
 					}
 				}
 			}
@@ -111,7 +109,7 @@
 			flex-direction: column;
 			background-color: @color-backgroundColor;
 			height: @Submarine-Divider-height;
-			z-index: @Submarine-Divider-zIndex;
+			z-index: @zindex-base - 1;
 
 			.lucid-Submarine-is-position-top& {
 				transform: translateY(-@Submarine-Divider-height);

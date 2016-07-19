@@ -60,7 +60,7 @@ describe('Submarine', () => {
 				}
 			});
 
-			it('should pass isExpanded to the underlying SplitHorizontal (true)', (done) => {
+			it('should pass isExpanded to the underlying SplitHorizontal (true) [mostly stable]', (done) => {
 				wrapper = shallow(
 					<Submarine isExpanded={true} />
 				);
@@ -74,7 +74,7 @@ describe('Submarine', () => {
 				}, 10);
 			});
 
-			it('should pass isExpanded to the underlying SplitHorizontal (false)', (done) => {
+			it('should pass isExpanded to the underlying SplitHorizontal (false) [mostly stable]', (done) => {
 				wrapper = mount(
 					<Submarine isExpanded={false} />
 				);
@@ -88,7 +88,7 @@ describe('Submarine', () => {
 				}, 10);
 			});
 
-			it('should default to true', (done) => {
+			it('should default to true [mostly stable]', (done) => {
 				wrapper = shallow(
 					<Submarine />
 				);
@@ -199,26 +199,6 @@ describe('Submarine', () => {
 			});
 		});
 
-		describe('title', () => {
-			it('should render the prop value in the title', () => {
-				const wrapper = shallow(
-					<Submarine title='Search Filters' />
-				);
-
-				const titleWrapper = wrapper.find('.lucid-Submarine > .lucid-Submarine-Bar > .lucid-Submarine-Bar-header .lucid-Submarine-Bar-Title');
-				assert.equal('Search Filters', titleWrapper.text(), 'must render the prop value in the title');
-			});
-
-			it('should default to empty title', () => {
-				const wrapper = shallow(
-					<Submarine />
-				);
-
-				const titleWrapper = wrapper.find('.lucid-Submarine > .lucid-Submarine-Bar > .lucid-Submarine-Bar-header .lucid-Submarine-Bar-Title');
-				assert.equal('', titleWrapper.text(), 'must render an empty title');
-			});
-		});
-
 		describe('Title', () => {
 			it('should render the prop value in the title', () => {
 				const wrapper = shallow(
@@ -304,17 +284,6 @@ describe('Submarine', () => {
 
 				const contentWrapper = wrapper.find('.lucid-Submarine > .lucid-Submarine-Bar > .lucid-Submarine-Bar-content');
 				assert.equal('Next level locavore squid', contentWrapper.text(), 'must render content in the side bar')
-			});
-
-			it('should render title from the given prop value for `title`', () => {
-				const wrapper = shallow(
-					<Submarine>
-						<Submarine.Bar title='Artisan Jean Shorts' />
-					</Submarine>
-				);
-
-				const titleWrapper = wrapper.find('.lucid-Submarine > .lucid-Submarine-Bar > .lucid-Submarine-Bar-header > .lucid-Submarine-Bar-Title');
-				assert.equal('Artisan Jean Shorts', titleWrapper.text(), 'must render title from prop value')
 			});
 
 			it('should render title from the given prop value for `Title`', () => {

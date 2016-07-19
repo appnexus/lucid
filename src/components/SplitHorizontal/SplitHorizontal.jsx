@@ -18,7 +18,7 @@ const {
 } = React.PropTypes;
 
 /**
- * {"categories": ["helpers"]}
+ * {"categories": ["helpers"], "madeFrom": ["DragCaptureZone"]}
  *
  * `SplitHorizontal` renders a vertical split.
  */
