@@ -46,14 +46,24 @@ const LoadingMessage = createClass({
 	},
 
 	components: {
+		/**
+		 * Renders the `Icon` element passed in
+		 */
 		Icon: createClass({
 			displayName: 'LoadingMessage.Icon',
 			propName: 'Icon',
 		}),
+		/**
+		 * Renders an `<h3>` that represents the title of the `LoadingMessage`.
+		 * Defaults to the string "Loading".
+		 */
 		Title: createClass({
 			displayName: 'LoadingMessage.Title',
 			propName: 'Title',
 		}),
+		/**
+		 * Renders an `<span>` that represents the body of the `LoadingMessage`.
+		 */
 		Body: createClass({
 			displayName: 'LoadingMessage.Body',
 			propName: 'Body',

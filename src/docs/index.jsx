@@ -62,6 +62,12 @@ const reqExamples = require.context('../components/', true, /examples.*\.jsx?/i)
 const reqExamplesRaw = require.context('!!raw!../components/', true, /examples.*\.jsx?/i);
 
 const docgenMap = _.mapValues(docgenMapRaw, (value, componentName) => {
+
+	// child components don't have any custom data
+	if (_.includes(componentName, '.')) {
+		return value;
+	}
+
 	const parentName = value.customData.extend;
 
 	if (!parentName) {
@@ -204,7 +210,24 @@ const Component = React.createClass({
 		} = this.props.params;
 
 		const component = _.get(docgenMap, componentName, {});
-		const childComponents = _.get(component, 'childComponents', []);
+		const childComponents = _.chain(component)
+		.get('childComponents', [])
+		// get docs for imported component references
+		.map(childComponent => {
+			if (!childComponent.componentRef) {
+				return childComponent;
+			}
+			return _.assign(
+				{},
+				childComponent,
+				_.chain(docgenMap)
+				.get(childComponent.componentRef, {})
+				.omit(['displayName'])
+				.value()
+			);
+
+		})
+		.value();
 
 		const componentProps = _.chain(docgenMap)
 			.get(`${componentName}.props`, [])
@@ -288,8 +311,25 @@ const Component = React.createClass({
 						<h3>Child Components</h3>
 						{_.map(childComponents, (childComponent) => (
 							<section key={childComponent.displayName}>
-								<h4>{childComponent.displayName}</h4>
+								<h4>
+									{childComponent.componentRef
+										? (<Link to={{ pathname: `/components/${childComponent.componentRef.split('.')[0]}`, query: this.props.location.query }}>
+												{childComponent.displayName}
+												{childComponent.displayName !== childComponent.componentRef && ` (${childComponent.componentRef})`}
+											</Link>)
+										: childComponent.displayName}
+								</h4>
 								<div dangerouslySetInnerHTML={toMarkdown(childComponent.description)} />
+								{childComponent.propName && (
+									<Table>
+										<Tbody>
+											<Tr>
+												<Td>propName</Td>
+												<Td><pre><code className='lang-javascript'>{childComponent.propName}</code></pre></Td>
+											</Tr>
+										</Tbody>
+									</Table>
+								)}
 								{!_.isNil(childComponent.props) ? (
 									<Table style={{width:'100%'}}>
 										<Thead>
@@ -449,6 +489,11 @@ const App = React.createClass({
 				return [];
 			}
 
+			// exclude child components from search
+			if (_.includes(componentName, '.')) {
+				return [];
+			}
+
 			if (componentName.toLowerCase().indexOf(search.toLowerCase()) !== -1) {
 				return componentName;
 			}
@@ -464,6 +509,11 @@ const App = React.createClass({
 
 		const docgenGroups = _.reduce(docgenMap, (acc, value, key) => {
 			if (!this.showPrivateComponents() && value.isPrivateComponent) {
+				return acc;
+			}
+
+			// exclude child components from grouping
+			if (_.includes(key, '.')) {
 				return acc;
 			}
 

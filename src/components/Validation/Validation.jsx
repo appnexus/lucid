@@ -21,6 +21,9 @@ const Validation = createClass({
 	displayName: 'Validation',
 
 	components: {
+		/**
+		 * Content that will be displayed as an error message.
+		 */
 		Error: createClass({
 			displayName: 'Validation.Error',
 			propName: 'Error',

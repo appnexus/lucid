@@ -60,6 +60,9 @@ const Legend = createClass({
 	},
 
 	components: {
+		/**
+		 * Renders a `<li>` that describes the data series.
+		 */
 		Item: createClass({
 			displayName: 'Legend.Item',
 			propsName: 'Item',

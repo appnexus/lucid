@@ -103,6 +103,9 @@ const DataTable = createClass({
 	},
 
 	components: {
+		/**
+		 * Renders a `Th` for the table.
+		 */
 		Column: createClass({
 			displayName: 'DataTable.Column',
 			propName: 'Column',
@@ -111,6 +114,9 @@ const DataTable = createClass({
 				title: string,
 			},
 		}),
+		/**
+		 * Renders a group of `Th`s.
+		 */
 		ColumnGroup: createClass({
 			displayName: 'DataTable.ColumnGroup',
 			propName: 'ColumnGroup',
