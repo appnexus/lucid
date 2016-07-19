@@ -42,13 +42,12 @@
 		align-items: center;
 		height: 100%;
 
-		> .lucid-Icon {
-			margin-left: -1em/2;
-			transition: color 0.1s, fill 0.1s;
-		}
-		> span {
-			transition: color 0.1s, fill 0.1s;
-		}
+		// .lucid-Icon {
+		// 	transition: color 0.1s, fill 0.1s;
+		// }
+		// span {
+		// 	transition: color 0.1s, fill 0.1s;
+		// }
 	}
 
 	// Types
@@ -104,11 +103,22 @@
 			box-shadow: none;
 		}
 
-		&:active:before { opacity: 0;}
+		&:active:before {
+			opacity: 0;
+		}
 
-		.lucid-Button-content{ line-height: 1em; }
-		.lucid-Icon { margin-right: 0.25em; }
-		.lucid-Icon + span { line-height: 1.4em; }
+		.lucid-Button-content{
+				line-height: 1em;
+			}
+
+		.lucid-Icon {
+			fill: @color-primary;
+			margin-right: 0.25em;
+
+			+ span {
+				line-height: 1.4em;
+			}
+		}
 	}
 
 	// Sizes
@@ -163,6 +173,11 @@
 		.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
 		.opacity();
 		.no-cursor();
+	}
+
+	// Nested Icon's
+	.lucid-Icon {
+		fill: @color-darkGray;
 	}
 
 	// Also needed in some cases to beat other libraries (e.g. pure.css)

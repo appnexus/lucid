@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import { Link } from 'react-router';
 
 import { lucidClassNames } from '../../util/style-helpers';
 import * as components from '../../index';
@@ -26,7 +27,7 @@ const Icons = React.createClass({
 	render() {
 
 		return (
-			<div className={cx('&', 'Component')}>
+			<div className={cx('&')}>
 				<h2>Icons</h2>
 
 				<p>A list of all lucid Icons.</p>
@@ -34,19 +35,58 @@ const Icons = React.createClass({
 				<section>
 					<ul className={cx('&-list')}>
 						{_.map(icons, ([name, Icon]) => (
-							<li key={name}>
-								<Button
-									kind='link'
-									onClick={() => this.props.router.push({
-										pathname: `/components/${name}`,
-										query: this.props.location.query,
-									})}
-								>
-									<Icon /> {name}
-								</Button>
+							<li className={cx('&-list-item')} key={name}>
+								<Icon className={cx('&-list-icon')} />
+								<Link to={{
+									pathname: `/components/${name}`,
+									query: this.props.location.query,
+								}}>
+									{name}
+								</Link>
 							</li>
 						))}
 					</ul>
+				</section>
+
+				<section className={cx('&-buttons')}>
+					{_.map(icons, ([name, Icon]) => (
+						<div className={cx('&-buttons-section')} key={name}>
+							<Button size='short'><Icon /></Button>
+							<Button size='small'><Icon /></Button>
+							<Button ><Icon /></Button>
+							<Button isActive ><Icon /></Button>
+							<Button size='large'><Icon /></Button>
+							<Button kind='primary' size='short'><Icon /></Button>
+							<Button kind='primary' size='small'><Icon /></Button>
+							<Button kind='primary' ><Icon /></Button>
+							<Button kind='primary' isActive ><Icon /></Button>
+							<Button kind='primary' size='large'><Icon /></Button>
+							<Button kind='link' size='short'><Icon /></Button>
+							<Button kind='link' size='small'><Icon /></Button>
+							<Button kind='link' ><Icon /></Button>
+							<Button kind='link' size='large'><Icon /></Button>
+							<Button kind='success' size='short'><Icon /></Button>
+							<Button kind='success' size='small'><Icon /></Button>
+							<Button kind='success' ><Icon /></Button>
+							<Button kind='success' isActive ><Icon /></Button>
+							<Button kind='success' size='large'><Icon /></Button>
+							<Button kind='warning' size='short'><Icon /></Button>
+							<Button kind='warning' size='small'><Icon /></Button>
+							<Button kind='warning' ><Icon /></Button>
+							<Button kind='warning' isActive ><Icon /></Button>
+							<Button kind='warning' size='large'><Icon /></Button>
+							<Button kind='danger' size='short'><Icon /></Button>
+							<Button kind='danger' size='small'><Icon /></Button>
+							<Button kind='danger' ><Icon /></Button>
+							<Button kind='danger' isActive ><Icon /></Button>
+							<Button kind='danger' size='large'><Icon /></Button>
+							<Button kind='info' size='short'><Icon /></Button>
+							<Button kind='info' size='small'><Icon /></Button>
+							<Button kind='info' ><Icon /></Button>
+							<Button kind='info' isActive ><Icon /></Button>
+							<Button kind='info' size='large'><Icon /></Button>
+						</div>
+					))}
 				</section>
 
 			</div>
