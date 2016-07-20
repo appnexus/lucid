@@ -13,6 +13,7 @@ import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 import { default as SearchFieldDumb } from './components/SearchField/SearchField';
 import { default as SidebarDumb } from './components/Sidebar/Sidebar';
 import { default as SingleSelectDumb } from './components/SingleSelect/SingleSelect';
+import { default as SubmarineDumb } from './components/Submarine/Submarine';
 import { default as TabsDumb } from './components/Tabs/Tabs';
 import { default as ToolTipDumb } from './components/ToolTip/ToolTip';
 import { default as VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
@@ -29,6 +30,7 @@ const RadioGroup = buildHybridComponent(RadioGroupDumb);
 const SearchField = buildHybridComponent(SearchFieldDumb);
 const Sidebar = buildHybridComponent(SidebarDumb);
 const SingleSelect = buildHybridComponent(SingleSelectDumb);
+const Submarine = buildHybridComponent(SubmarineDumb);
 const Tabs = buildHybridComponent(TabsDumb);
 const ToolTip = buildHybridComponent(ToolTipDumb);
 const VerticalListMenu = buildHybridComponent(VerticalListMenuDumb);
@@ -83,6 +85,7 @@ import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import SeparatorIcon from './components/Icon/SeparatorIcon/SeparatorIcon';
+import SplitHorizontal from './components/SplitHorizontal/SplitHorizontal';
 import SplitVertical from './components/SplitVertical/SplitVertical';
 import StickySection from './components/StickySection/StickySection';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
@@ -189,8 +192,11 @@ export {
 	SingleSelectDumb,
 	Sidebar,
 	SidebarDumb,
+	SplitHorizontal,
 	SplitVertical,
 	StickySection,
+	Submarine,
+	SubmarineDumb,
 	SuccessIcon,
 	Switch,
 	SwitchLabeled,

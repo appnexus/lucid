@@ -43,7 +43,7 @@ describe('SplitVertical', () => {
 				assert.equal(wrapper.find('.lucid-SplitVertical.lucid-SplitVertical-is-expanded').length, 1);
 			});
 
-			it('should apply the &-is-expanded css class when false', () => {
+			it('should not apply the &-is-expanded css class when false', () => {
 				const wrapper = shallow(
 					<SplitVertical isExpanded={false} />
 				);
