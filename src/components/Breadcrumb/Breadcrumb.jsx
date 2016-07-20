@@ -63,7 +63,7 @@ const Breadcrumb = createClass({
 				{...omitProps(passThroughs, Breadcrumb)}
 				className={cx('&', className)}
 			>
-				{!_.isEmpty(items) && (
+				{!_.isEmpty(items) ? (
 					<ul className={cx('&-List')}>
 						{_.map(initialItems, ({ props, key }) => (
 							<li
@@ -81,7 +81,7 @@ const Breadcrumb = createClass({
 							className={cx('&-Item', lastItem.props.className)}
 						/>
 					</ul>
-				)}
+				) : null}
 			</nav>
 		);
 	},
