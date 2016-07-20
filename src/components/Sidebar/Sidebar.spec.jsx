@@ -1,5 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import _ from 'lodash';
+import { shallow, mount } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
 import { common } from '../../util/generic-tests';
@@ -51,34 +52,54 @@ describe('Sidebar', () => {
 		});
 
 		describe('isExpanded', () => {
-			it('should pass isExpanded to the underlying SplitVertical (true)', () => {
+			let wrapper;
+
+			afterEach(() => {
+				if (wrapper) {
+					wrapper.unmount();
+				}
+			});
+
+			it('should pass isExpanded to the underlying SplitVertical (true) [mostly stable]', (done) => {
 				const wrapper = shallow(
 					<Sidebar isExpanded={true} />
 				);
-				const splitVertical = wrapper.find(SplitVertical);
 
-				assert(splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical')
-				assert(splitVertical.shallow().hasClass('lucid-SplitVertical-is-expanded'), 'must have the lucid-SplitVertical-is-expanded className')
+				_.delay(() => {
+					const splitVertical = wrapper.find(SplitVertical);
+
+					assert(splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical')
+					assert(splitVertical.shallow().hasClass('lucid-SplitVertical-is-expanded'), 'must have the lucid-SplitVertical-is-expanded className')
+					done()
+				}, 10);
 			});
 
-			it('should pass isExpanded to the underlying SplitVertical (false)', () => {
-				const wrapper = shallow(
+			it('should pass isExpanded to the underlying SplitVertical (false) [mostly stable]', (done) => {
+				wrapper = mount(
 					<Sidebar isExpanded={false} />
 				);
-				const splitVertical = wrapper.find(SplitVertical);
 
-				assert(!splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical')
-				assert(!splitVertical.shallow().hasClass('lucid-SplitVertical-is-expanded'), 'must not have the lucid-SplitVertical-is-expanded className')
+				_.delay(() => {
+					const splitVertical = wrapper.find(SplitVertical);
+
+					assert(!splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical')
+					assert(!splitVertical.hasClass('lucid-SplitVertical-is-expanded'), 'must not have the lucid-SplitVertical-is-expanded className')
+					done();
+				}, 10);
 			});
 
-			it('should default to true', () => {
+			it('should default to true [mostly stable]', (done) => {
 				const wrapper = shallow(
 					<Sidebar />
 				);
-				const splitVertical = wrapper.find(SplitVertical);
 
-				assert(splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical')
-				assert(splitVertical.shallow().hasClass('lucid-SplitVertical-is-expanded'), 'must have the lucid-SplitVertical-is-expanded className')
+				_.delay(() => {
+					const splitVertical = wrapper.find(SplitVertical);
+
+					assert(splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical')
+					assert(splitVertical.shallow().hasClass('lucid-SplitVertical-is-expanded'), 'must have the lucid-SplitVertical-is-expanded className')
+					done();
+				}, 10);
 			});
 		});
 

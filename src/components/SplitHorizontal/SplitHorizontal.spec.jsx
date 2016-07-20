@@ -7,6 +7,7 @@ import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import SplitHorizontal from './SplitHorizontal';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
+import { Motion } from 'react-motion';
 
 describe('SplitHorizontal', () => {
 	common(SplitHorizontal);
@@ -17,7 +18,7 @@ describe('SplitHorizontal', () => {
 				<SplitHorizontal />
 			);
 
-			const motionWrapper = wrapper.find('Motion').shallow();
+			const motionWrapper = wrapper.find(Motion).shallow();
 
 			assert.equal(wrapper.find('.lucid-SplitHorizontal').length, 1);
 			assert.equal(motionWrapper.find('.lucid-SplitHorizontal-inner').length, 1);
@@ -136,7 +137,7 @@ describe('SplitHorizontal', () => {
 				_.delay(() => {
 					const secondaryPaneDiv = mountTestDiv.querySelector('.lucid-SplitHorizontal-is-secondary');
 					const height = secondaryPaneDiv.getBoundingClientRect().height;
-					const slideAmount = wrapper.find('Motion').prop('style').slideAmount;
+					const slideAmount = wrapper.find(Motion).prop('style').slideAmount;
 					assert.equal(height - 64, slideAmount, 'must be translated by height - 64px');
 					done();
 				}, 10);
@@ -153,7 +154,7 @@ describe('SplitHorizontal', () => {
 				_.delay(() => {
 					const secondaryPaneDiv = mountTestDiv.querySelector('.lucid-SplitHorizontal-is-secondary');
 					const height = secondaryPaneDiv.getBoundingClientRect().height;
-					const slideAmount = wrapper.find('Motion').prop('style').slideAmount;
+					const slideAmount = wrapper.find(Motion).prop('style').slideAmount;
 					assert.equal(height - 64, slideAmount, 'must be translated by height - 64px');
 					done();
 				}, 10);
@@ -261,7 +262,7 @@ describe('SplitHorizontal', () => {
 					</SplitHorizontal>
 				);
 
-				const motionWrapper = wrapper.find('Motion').shallow();
+				const motionWrapper = wrapper.find(Motion).shallow();
 				const TopPane = motionWrapper.find('.lucid-SplitHorizontal-inner > .lucid-SplitHorizontal-TopPane');
 
 				assert.equal('Search Filters', TopPane.text(), 'must render children passed in');
@@ -274,7 +275,7 @@ describe('SplitHorizontal', () => {
 					</SplitHorizontal>
 				);
 
-				const motionWrapper = wrapper.find('Motion').shallow();
+				const motionWrapper = wrapper.find(Motion).shallow();
 				const BottomPane = motionWrapper.find('.lucid-SplitHorizontal-inner > .lucid-SplitHorizontal-BottomPane');
 
 				assert(BottomPane.hasClass('lucid-SplitHorizontal-is-secondary'), 'must have the secondary className');
@@ -287,7 +288,7 @@ describe('SplitHorizontal', () => {
 					</SplitHorizontal>
 				);
 
-				const motionWrapper = wrapper.find('Motion').shallow();
+				const motionWrapper = wrapper.find(Motion).shallow();
 				const TopPane = motionWrapper.find('.lucid-SplitHorizontal-inner > .lucid-SplitHorizontal-TopPane');
 
 				assert.equal(123, TopPane.prop('style').flexBasis, 'must set the flexBasis to match the given height');
@@ -302,7 +303,7 @@ describe('SplitHorizontal', () => {
 					</SplitHorizontal>
 				);
 
-				const motionWrapper = wrapper.find('Motion').shallow();
+				const motionWrapper = wrapper.find(Motion).shallow();
 				const BottomPane = motionWrapper.find('.lucid-SplitHorizontal-inner > .lucid-SplitHorizontal-BottomPane');
 
 				assert.equal('Search Filters', BottomPane.text(), 'must render children passed in');
@@ -315,7 +316,7 @@ describe('SplitHorizontal', () => {
 					</SplitHorizontal>
 				);
 
-				const motionWrapper = wrapper.find('Motion').shallow();
+				const motionWrapper = wrapper.find(Motion).shallow();
 				const TopPane = motionWrapper.find('.lucid-SplitHorizontal-inner > .lucid-SplitHorizontal-TopPane');
 
 				assert(TopPane.hasClass('lucid-SplitHorizontal-is-secondary'), 'must have the secondary className');
@@ -328,7 +329,7 @@ describe('SplitHorizontal', () => {
 					</SplitHorizontal>
 				);
 
-				const motionWrapper = wrapper.find('Motion').shallow();
+				const motionWrapper = wrapper.find(Motion).shallow();
 				const BottomPane = motionWrapper.find('.lucid-SplitHorizontal-inner > .lucid-SplitHorizontal-BottomPane');
 
 				assert.equal(123, BottomPane.prop('style').flexBasis, 'must set the flexBasis to match the given height');
@@ -343,7 +344,7 @@ describe('SplitHorizontal', () => {
 					</SplitHorizontal>
 				);
 
-				const motionWrapper = wrapper.find('Motion').shallow();
+				const motionWrapper = wrapper.find(Motion).shallow();
 				const dividerWrapper = motionWrapper.find('.lucid-SplitHorizontal-inner > .lucid-SplitHorizontal-Divider');
 
 				assert.equal('Resize', dividerWrapper.children().text(), 'must render children passed in');

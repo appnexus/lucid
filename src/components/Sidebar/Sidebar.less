@@ -1,5 +1,3 @@
-@Sidebar-Bar-zIndex: 99;
-@Sidebar-Divider-zIndex: 98;
 @Sidebar-Divider-width: @size-XS - 1px;
 @Sidebar-transition-duration: @timing-animation-fade;
 @Sidebar-transition-half-duration: @Sidebar-transition-duration / 2;
@@ -16,7 +14,7 @@
 
 		& > .lucid-Sidebar-Bar {
 			position: relative;
-			z-index: @Sidebar-Bar-zIndex;
+			z-index: @zindex-base;
 			background-color: @color-white;
 			overflow: auto;
 
@@ -36,7 +34,7 @@
 				height: 100%;
 				background-color: @color-backgroundColor;
 				opacity: 1;
-				z-index: @Sidebar-Bar-zIndex;
+				z-index: @zindex-base;
 
 				.lucid-SplitVertical-is-expanded& {
 					opacity: 0;
@@ -82,7 +80,7 @@
 					border: solid 1px @featured-color-default-borderColor;
 					border-radius: @size-borderRadius;
 					cursor: pointer;
-					z-index: @Sidebar-Bar-zIndex + 1;
+					z-index: @zindex-base + 1;
 					background-image: linear-gradient(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 
 					&:hover {
@@ -106,7 +104,7 @@
 			flex-direction: column;
 			background-color: @color-backgroundColor;
 			width: @Sidebar-Divider-width;
-			z-index: @Sidebar-Divider-zIndex;
+			z-index: @zindex-base - 1;
 
 			.lucid-Sidebar-is-position-left& {
 				transform: translateX(-@Sidebar-Divider-width);
@@ -176,13 +174,10 @@
 
 	&.lucid-SplitVertical-is-animated.lucid-SplitVertical-is-animated {
 		& > .lucid-SplitVertical-inner {
-			transition: transform @Sidebar-transition-duration;
-			transition-timing-function: @timing-function-easeInOutQuint;
 
 			& > .lucid-Sidebar-Bar {
 				& > .lucid-Sidebar-Bar-overlay {
-					transition: opacity @Sidebar-transition-duration;
-					transition-timing-function: @timing-function-easeInOutQuint;
+					transition: opacity @Sidebar-transition-half-duration;
 				}
 			}
 
@@ -196,18 +191,14 @@
 
 			& > .lucid-Sidebar-Primary {
 				.lucid-Sidebar-is-position-left& {
-					transition: margin-left @Sidebar-transition-duration linear, margin-right @Sidebar-transition-duration @timing-function-easeInOutQuint;
-
-					.lucid-SplitVertical-is-expanded& {
-						transition: margin-left @Sidebar-transition-duration linear, margin-right @Sidebar-transition-duration @timing-function-easeInOutQuint;
-					}
+					transition: margin-left @Sidebar-transition-half-duration linear;
 				}
 
 				.lucid-Sidebar-is-position-right& {
-					transition: margin-right @Sidebar-transition-duration linear, margin-left @Sidebar-transition-half-duration;
+					transition: margin-right @Sidebar-transition-third-duration;
 
 					.lucid-SplitVertical-is-expanded& {
-						transition: margin-right @Sidebar-transition-duration linear, margin-left @Sidebar-transition-half-duration @Sidebar-transition-half-duration;
+						transition: margin-right @Sidebar-transition-third-duration @Sidebar-transition-duration;
 					}
 				}
 			}
