@@ -2,7 +2,7 @@
 
 	@breadcrumb-margin: 7px;
 
-	&-List {
+	> .lucid-Breadcrumb-List {
 		list-style-type: none;
 		display: flex;
 		flex-direction: row;
@@ -11,32 +11,33 @@
 		padding: 0;
 		margin: 0;
 		height: 12px;
-	}
 
-	&-Item {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: center;
-		font-size: @size-font;
-		color: @color-textColor;
+		> .lucid-Breadcrumb-Item {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: center;
+			font-size: @size-font;
+			color: @color-textColor;
 
-		a {
-			.link();
+			> a {
+				.link();
+			}
+
+			.lucid-Icon {
+				height: @size-font;
+				width: @size-font;
+				display: block;
+			}
+
+			> .lucid-Breadcrumb-SeparatorIcon {
+				fill: @color-mediumGray;
+				// this is the width of the icon + a margin on either side of it
+				width: 3.4 + @breadcrumb-margin * 2;
+			}
+
 		}
 
-	}
-
-	.lucid-Icon {
-		height: @size-font;
-		width: @size-font;
-		display: block;
-	}
-
-	.lucid-Icon&-SeparatorIcon {
-		fill: @color-mediumGray;
-		// this is the width of the icon + a margin on either side of it
-		width: 3.4 + @breadcrumb-margin * 2;
 	}
 
 }
