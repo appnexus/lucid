@@ -52,6 +52,10 @@ const Icon = createClass({
 		 */
 		isBadge: bool,
 		/**
+		 * Adds styling that makes the icon appear clickable.
+		 */
+		isClickable: bool,
+		/**
 		 * Any valid React children.
 		 */
 		children: any,
@@ -75,6 +79,7 @@ const Icon = createClass({
 			viewBox,
 			aspectRatio,
 			isBadge,
+			isClickable,
 			...passThroughs,
 		} = this.props;
 
@@ -96,6 +101,7 @@ const Icon = createClass({
 				style={_.pickBy(actualStyle, _.negate(_.isUndefined))}
 				className={cx('&', {
 					'&-is-badge': isBadge,
+					'&-is-clickable': isClickable,
 				}, className)}
 			>
 				{children}
