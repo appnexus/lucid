@@ -34,7 +34,6 @@ const ToolTip = buildHybridComponent(ToolTipDumb);
 const VerticalListMenu = buildHybridComponent(VerticalListMenuDumb);
 
 // dumb components
-
 import AnalyzeDataIcon from './components/Icon/AnalyzeDataIcon/AnalyzeDataIcon';
 import ArrowIcon from './components/Icon/ArrowIcon/ArrowIcon';
 import Axis from './components/Axis/Axis';
@@ -56,6 +55,7 @@ import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
 import DangerLightIcon from './components/Icon/DangerLightIcon/DangerLightIcon';
 import DataTable from './components/DataTable/DataTable';
+import DataViewIcon from './components/Icon/DataViewIcon/DataViewIcon';
 import Dialog from './components/Dialog/Dialog';
 import DownloadIcon from './components/Icon/DownloadIcon/DownloadIcon';
 import DownloadTableDataIcon from './components/Icon/DownloadTableDataIcon/DownloadTableDataIcon';
@@ -169,6 +169,7 @@ export {
 	DangerIcon,
 	DangerLightIcon,
 	DataTable,
+	DataViewIcon,
 	Dialog,
 	DownloadIcon,
 	DownloadTableDataIcon,
