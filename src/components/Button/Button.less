@@ -43,7 +43,7 @@
 		height: 100%;
 
 		> .lucid-Icon {
-			transition: color 0.1s, fill 0.1s;
+			transition: color @timing-animation-hover, fill @timing-animation-hover;
 
 			// Bascially a hack to get the buttons to be square when there's only an
 			// icon in them. Went with this approach since it's css only. Obviously
@@ -52,6 +52,9 @@
 			&:only-child {
 				margin: 0 -7px;
 			}
+		}
+		> span {
+			transition: color @timing-animation-hover, fill @timing-animation-hover;
 		}
 	}
 
