@@ -4,6 +4,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, filterTypes, omitProps } from '../../util/component-types';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import { Motion, spring } from 'react-motion';
+import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 
 const cx = lucidClassNames.bind('&-SplitHorizontal');
 
@@ -386,7 +387,7 @@ const SplitHorizontal = createClass({
 					'&-is-animated': isAnimated,
 				}, className)}
 			>
-				<Motion defaultStyle={from} style={isAnimated ? _.mapValues(to, (val) => (spring(val, {stiffness: 640, damping: 37, precision: 1}))) : to}>
+				<Motion defaultStyle={from} style={isAnimated ? _.mapValues(to, (val) => (spring(val, QUICK_SLIDE_MOTION))) : to}>
 					{(tween) => (
 						<div
 							className={cx('&-inner')}
