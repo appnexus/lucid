@@ -8,7 +8,7 @@ import * as lucid from '../index';
 
 // Common tests for all our components
 export function common(Component, {
-	getDefaultProps = _.noop,
+	getDefaultProps = _.constant({}),
 	selector = null,
 	exemptFunctionProps = [],
 	exemptChildComponents = [],
