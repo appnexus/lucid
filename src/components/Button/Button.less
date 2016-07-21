@@ -42,12 +42,17 @@
 		align-items: center;
 		height: 100%;
 
-		// .lucid-Icon {
-		// 	transition: color 0.1s, fill 0.1s;
-		// }
-		// span {
-		// 	transition: color 0.1s, fill 0.1s;
-		// }
+		> .lucid-Icon {
+			transition: color 0.1s, fill 0.1s;
+
+			// Bascially a hack to get the buttons to be square when there's only an
+			// icon in them. Went with this approach since it's css only. Obviously
+			// the negative margin and the hard coded value is pretty bad, but it
+			// should suffice unless we make large changes to our buttons.
+			&:only-child {
+				margin: 0 -7px;
+			}
+		}
 	}
 
 	// Types
@@ -137,6 +142,14 @@
 		.lucid-Icon {
 			width: 1.2em;
 			height: 1.2em;
+		}
+
+		// Basically a hack to get the buttons to be square when there's only an
+		// icon in them. Went with this approach since it's css only. Obviously the
+		// negative margin and the hard coded value is pretty bad, but it should
+		// suffice unless we make large changes to our buttons.
+		> .lucid-Button-content > .lucid-Icon:only-child {
+			margin: 0 -10px;
 		}
 	}
 
