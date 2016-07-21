@@ -3,6 +3,8 @@ import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, filterTypes, omitProps } from '../../util/component-types';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
+import { Motion, spring } from 'react-motion';
+import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 
 const cx = lucidClassNames.bind('&-SplitVertical');
 
@@ -143,6 +145,8 @@ const SplitVertical = createClass({
 	getInitialState() {
 		return {
 			isAnimated: false, // to ensure first render doesn't show a collapse animation
+			isExpanded: true,
+			collapseAmount: 250,
 		};
 	},
 
@@ -151,7 +155,7 @@ const SplitVertical = createClass({
 		const {
 			leftPane: leftPaneRef,
 			rightPane: rightPaneRef,
-		} = this.refs;
+		} = this.storedRefs;
 
 		const leftPaneElement = _.get(filterTypes(children, SplitVertical.LeftPane), 0, <SplitVertical.LeftPane />)
 		const rightPaneElement = _.get(filterTypes(children, SplitVertical.RightPane), 0, <SplitVertical.RightPane />)
@@ -190,33 +194,22 @@ const SplitVertical = createClass({
 			const overlapWidth = (secondary === right ? secondaryStartRect.width + dX : secondaryStartRect.width - dX) - collapseShift;
 
 			if (overlapWidth > 0) {
-				this.collapseSecondary(innerRef, secondary, right, primaryRef, overlapWidth);
+				this.collapseSecondary(overlapWidth);
 				return (secondaryStartRect.width - overlapWidth);
 			} else {
-				this.expandSecondary(innerRef, secondary, right, primaryRef);
+				this.expandSecondary();
 				secondaryRef.style.flexBasis = `${(dX + collapseShift) * (secondary === right ? -1 : 1)}px`;
 				return ((dX + collapseShift) * (secondary === right ? -1 : 1));
 			}
 		}
 	},
 
-	expandSecondary(innerRef, secondary, right, primaryRef) {
-		innerRef.style.transform = 'translateX(0)';
-		if (secondary === right) {
-			primaryRef.style.marginLeft = '0';
-		} else{
-			primaryRef.style.marginRight = '0';
-		}
+	expandSecondary() {
+		this.setState({ isExpanded: true });
 	},
 
-	collapseSecondary(innerRef, secondary, right, primaryRef, collapseAmount) {
-		if (secondary === right) {
-			innerRef.style.transform = `translateX(${collapseAmount}px)`;
-			primaryRef.style.marginLeft = `${-collapseAmount}px`;
-		} else {
-			innerRef.style.transform = `translateX(${-collapseAmount}px)`;
-			primaryRef.style.marginRight = `${-collapseAmount}px`;
-		}
+	collapseSecondary(collapseAmount) {
+		this.setState({ isExpanded: false, collapseAmount });
 	},
 
 	disableAnimation(innerRef, secondaryRef, primaryRef) {
@@ -235,7 +228,7 @@ const SplitVertical = createClass({
 		this.panes = this.getPanes();
 		const { secondaryRef, primaryRef } = this.panes;
 		this.secondaryStartRect = secondaryRef.getBoundingClientRect();
-		this.disableAnimation(this.refs.inner, secondaryRef, primaryRef);
+		this.disableAnimation(this.storedRefs.inner, secondaryRef, primaryRef);
 	},
 
 	handleDrag({ dX }, { event }) {
@@ -253,9 +246,9 @@ const SplitVertical = createClass({
 		} = this.panes;
 
 		onResizing(
-			this.applyDeltaToSecondaryWidth(dX, isExpanded, this.secondaryStartRect, secondaryRef, secondary, right, this.refs.inner, primaryRef, collapseShift),
+			this.applyDeltaToSecondaryWidth(dX, isExpanded, this.secondaryStartRect, secondaryRef, secondary, right, this.storedRefs.inner, primaryRef, collapseShift),
 			{ props: this.props, event }
-		)
+		);
 	},
 
 	handleDragEnd({ dX }, { event }) {
@@ -273,11 +266,11 @@ const SplitVertical = createClass({
 		} = this.panes;
 
 		onResize(
-			this.applyDeltaToSecondaryWidth(dX, isExpanded, this.secondaryStartRect, secondaryRef, secondary, right, this.refs.inner, primaryRef, collapseShift),
+			this.applyDeltaToSecondaryWidth(dX, isExpanded, this.secondaryStartRect, secondaryRef, secondary, right, this.storedRefs.inner, primaryRef, collapseShift),
 			{ props: this.props, event }
 		);
 
-		this.resetAnimation(this.refs.inner, secondaryRef, primaryRef);
+		this.resetAnimation(this.storedRefs.inner, secondaryRef, primaryRef);
 	},
 
 	componentWillReceiveProps(nextProps) {
@@ -288,17 +281,14 @@ const SplitVertical = createClass({
 		} = nextProps;
 
 		const {
-			primaryRef,
 			secondaryRef,
-			secondary,
-			right,
 		} = this.getPanes();
 
 		if (this.props.isExpanded && !isExpanded) { // collapse secondary
 			const secondaryRect = secondaryRef.getBoundingClientRect();
-			this.collapseSecondary(this.refs.inner, secondary, right, primaryRef, secondaryRect.width - collapseShift);
+			this.collapseSecondary(secondaryRect.width - collapseShift);
 		} else if (!this.props.isExpanded && isExpanded) { // expand secondary
-			this.expandSecondary(this.refs.inner, secondary, right, primaryRef);
+			this.expandSecondary();
 		}
 
 		if (this.state.isAnimated !== isAnimated) {
@@ -318,13 +308,11 @@ const SplitVertical = createClass({
 		const {
 			primaryRef,
 			secondaryRef,
-			secondary,
-			right,
 		} = this.getPanes();
 
 		const {
 			inner,
-		} = this.refs;
+		} = this.storedRefs;
 
 		_.defer(() => {
 			this.disableAnimation(inner, secondaryRef, primaryRef);
@@ -332,7 +320,7 @@ const SplitVertical = createClass({
 			_.defer(() => {
 				if (!isExpanded) { // collapse secondary
 					const secondaryRect = secondaryRef.getBoundingClientRect();
-					this.collapseSecondary(inner, secondary, right, primaryRef, secondaryRect.width - collapseShift);
+					this.collapseSecondary(secondaryRect.width - collapseShift);
 				}
 
 				_.defer(() => {
@@ -348,16 +336,27 @@ const SplitVertical = createClass({
 		});
 	},
 
+	storeRef(name) {
+		return (ref) => {
+			this.storedRefs[name] = ref;
+		};
+	},
+
+	componentWillMount() {
+		this.storedRefs = {};
+	},
+
 	render() {
 		const {
 			children,
 			className,
-			isExpanded,
 			...passThroughs,
 		} = this.props;
 
 		const {
 			isAnimated,
+			isExpanded,
+			collapseAmount,
 		} = this.state;
 
 		const {
@@ -368,6 +367,18 @@ const SplitVertical = createClass({
 
 		const dividerProps = _.get(_.first(filterTypes(children, SplitVertical.Divider)), 'props', {});
 
+		let from, to;
+
+		if (!isExpanded) {
+			from = { slideAmount: 0 };
+			to = { slideAmount: collapseAmount };
+		} else {
+			from = { slideAmount: 0 };
+			to = { slideAmount: 0 };
+		}
+
+		const isRightSecondary = rightPaneProps === secondary;
+
 		return (
 			<div
 				{...omitProps(passThroughs, SplitVertical)}
@@ -376,37 +387,47 @@ const SplitVertical = createClass({
 					'&-is-animated': isAnimated,
 				}, className)}
 			>
-				<div className={cx('&-inner')} ref='inner'>
-					<div
-						{...omitProps(leftPaneProps, SplitVertical.LeftPane)}
-						className={cx('&-LeftPane', {
-							'&-is-secondary': leftPaneProps === secondary,
-						}, leftPaneProps.className)}
-						style={{
-							flexBasis: _.isNil(leftPaneProps.width) ? (leftPaneProps === secondary ? 'calc(50% - 3px)' : null) : leftPaneProps.width,
-							...leftPaneProps.style,
-						}}
-						ref='leftPane'
-					>{leftPaneProps.children}</div>
-					<DragCaptureZone
-						{...omitProps(dividerProps, SplitVertical.Divider)}
-						className={cx('&-Divider', dividerProps.className)}
-						onDragStart={this.handleDragStart}
-						onDrag={this.handleDrag}
-						onDragEnd={this.handleDragEnd}
-					>{dividerProps.children || ' '}</DragCaptureZone>
-					<div
-						{...omitProps(rightPaneProps, SplitVertical.RightPane)}
-						className={cx('&-RightPane', {
-							'&-is-secondary': rightPaneProps === secondary,
-						}, rightPaneProps.className)}
-						style={{
-							flexBasis: _.isNil(rightPaneProps.width) ? (rightPaneProps === secondary ? 'calc(50% - 3px)' : null) : rightPaneProps.width,
-							...rightPaneProps.style,
-						}}
-						ref='rightPane'
-					>{rightPaneProps.children}</div>
-				</div>
+				<Motion defaultStyle={from} style={isAnimated ? _.mapValues(to, (val) => (spring(val, QUICK_SLIDE_MOTION))) : to}>
+					{(tween) => (
+						<div
+							className={cx('&-inner')}
+							ref={this.storeRef('inner')}
+							style={{transform: `translateX(${(isRightSecondary ? 1 : -1) * Math.round(tween.slideAmount)}px)`}}
+						>
+							<div
+								{...omitProps(leftPaneProps, SplitVertical.LeftPane)}
+								className={cx('&-LeftPane', {
+									'&-is-secondary': leftPaneProps === secondary,
+								}, leftPaneProps.className)}
+								style={{
+									flexBasis: _.isNil(leftPaneProps.width) ? (leftPaneProps === secondary ? 'calc(50% - 3px)' : null) : leftPaneProps.width,
+									marginLeft: (isRightSecondary ? -Math.round(tween.slideAmount) : null),
+									...leftPaneProps.style,
+								}}
+								ref={this.storeRef('leftPane')}
+							>{leftPaneProps.children}</div>
+							<DragCaptureZone
+								{...omitProps(dividerProps, SplitVertical.Divider)}
+								className={cx('&-Divider', dividerProps.className)}
+								onDragStart={this.handleDragStart}
+								onDrag={this.handleDrag}
+								onDragEnd={this.handleDragEnd}
+							>{dividerProps.children || ' '}</DragCaptureZone>
+							<div
+								{...omitProps(rightPaneProps, SplitVertical.RightPane)}
+								className={cx('&-RightPane', {
+									'&-is-secondary': rightPaneProps === secondary,
+								}, rightPaneProps.className)}
+								style={{
+									flexBasis: _.isNil(rightPaneProps.width) ? (rightPaneProps === secondary ? 'calc(50% - 3px)' : null) : rightPaneProps.width,
+									marginRight: (isRightSecondary ? null : -Math.round(tween.slideAmount)),
+									...rightPaneProps.style,
+								}}
+								ref={this.storeRef('rightPane')}
+							>{rightPaneProps.children}</div>
+						</div>
+					)}
+				</Motion>
 			</div>
 		);
 	},

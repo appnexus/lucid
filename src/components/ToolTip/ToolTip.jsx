@@ -29,8 +29,8 @@ const {
 /**
  * {"categories": ["communication"], "madeFrom": ["ContextMenu"]}
  *
- * `ToolTip` is a utility component to create a transient message anchored
- * to another component
+ * A utility component that creates a transient message anchored to another
+ * component.
  */
 
 const ToolTip = createClass({
@@ -97,7 +97,7 @@ const ToolTip = createClass({
 		 */
 		onMouseOver: func,
 		/**
-		 * Called when cursor leaves the target and the tooltip
+		 * Called when cursor leaves the target and the ToolTip
 		 */
 		onMouseOut: func,
 		/**
@@ -107,12 +107,21 @@ const ToolTip = createClass({
 	},
 
 	components: {
+		/**
+		 * The hover target that will trigger the ToolTip to be displayed.
+		 */
 		Target: createClass({
 			displayName: 'ToolTip.Target',
 		}),
+		/**
+		 * The title displayed at the top of the ToolTip.
+		 */
 		Title: createClass({
 			displayName: 'ToolTip.Title',
 		}),
+		/**
+		 * The body of the ToolTip displayed below the Title.
+		 */
 		Body: createClass({
 			displayName: 'ToolTip.Body',
 		}),

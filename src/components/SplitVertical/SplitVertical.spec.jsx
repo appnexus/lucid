@@ -7,6 +7,7 @@ import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import SplitVertical from './SplitVertical';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
+import { Motion } from 'react-motion';
 
 describe('SplitVertical', () => {
 	common(SplitVertical);
@@ -17,22 +18,32 @@ describe('SplitVertical', () => {
 				<SplitVertical />
 			);
 
+			const motionWrapper = wrapper.find(Motion).shallow();
+
 			assert.equal(wrapper.find('.lucid-SplitVertical').length, 1);
-			assert.equal(wrapper.find('.lucid-SplitVertical > .lucid-SplitVertical-inner').length, 1);
-			assert.equal(wrapper.find('.lucid-SplitVertical > .lucid-SplitVertical-inner > .lucid-SplitVertical-LeftPane').length, 1);
-			assert.equal(wrapper.find('.lucid-SplitVertical > .lucid-SplitVertical-inner > .lucid-SplitVertical-Divider').length, 1);
-			assert.equal(wrapper.find('.lucid-SplitVertical > .lucid-SplitVertical-inner > .lucid-SplitVertical-RightPane').length, 1);
+			assert.equal(motionWrapper.find('.lucid-SplitVertical-inner').length, 1);
+			assert.equal(motionWrapper.find('.lucid-SplitVertical-inner > .lucid-SplitVertical-LeftPane').length, 1);
+			assert.equal(motionWrapper.find('.lucid-SplitVertical-inner > .lucid-SplitVertical-Divider').length, 1);
+			assert.equal(motionWrapper.find('.lucid-SplitVertical-inner > .lucid-SplitVertical-RightPane').length, 1);
 		});
 	});
 
 	describe('props', () => {
-		describe('isExpanded', () => {
+		describeWithDOM('isExpanded', () => {
+			let mountWrapper;
+
+			afterEach(() => {
+				if (mountWrapper) {
+					mountWrapper.unmount();
+				}
+			});
+
 			it('should default to true', () => {
 				const wrapper = shallow(
 					<SplitVertical />
 				);
 
-				assert.equal(wrapper.find('.lucid-SplitVertical.lucid-SplitVertical-is-expanded').length, 1);
+				assert(wrapper.hasClass('lucid-SplitVertical-is-expanded'));
 			});
 
 			it('should apply the &-is-expanded css class when true', () => {
@@ -40,15 +51,16 @@ describe('SplitVertical', () => {
 					<SplitVertical isExpanded={true} />
 				);
 
-				assert.equal(wrapper.find('.lucid-SplitVertical.lucid-SplitVertical-is-expanded').length, 1);
+				assert(wrapper.hasClass('lucid-SplitVertical-is-expanded'));
 			});
 
-			it('should apply the &-is-expanded css class when false', () => {
-				const wrapper = shallow(
+			it('should not apply the &-is-expanded css class when false [mostly stable]', (done) => {
+				mountWrapper = mount(
 					<SplitVertical isExpanded={false} />
 				);
 
-				assert.equal(wrapper.find('.lucid-SplitVertical.lucid-SplitVertical-is-expanded').length, 0);
+				assert(!mountWrapper.hasClass('lucid-SplitHorizontal-is-expanded'));
+				_.delay(done, 10);
 			});
 		});
 
@@ -114,7 +126,7 @@ describe('SplitVertical', () => {
 				}
 			});
 
-			it('should translated by 64px - width when the right pane is primary [mostly stable]', (done) => {
+			it('should translated by width - 64px when the right pane is primary [mostly stable]', (done) => {
 				wrapper = mount(
 					<SplitVertical isExpanded={false} collapseShift={64}>
 						<SplitVertical.LeftPane />
@@ -123,12 +135,10 @@ describe('SplitVertical', () => {
 				, { attachTo: mountTestDiv});
 
 				_.delay(() => {
-					const innerDiv = mountTestDiv.querySelector('.lucid-SplitVertical-inner');
 					const secondaryPaneDiv = mountTestDiv.querySelector('.lucid-SplitVertical-is-secondary');
-					const translatePX = parseInt(innerDiv.style.transform.replace(/(translateX[(]|px[)])/ig, ''), 10);
 					const width = secondaryPaneDiv.getBoundingClientRect().width;
-
-					assert.equal(64 - width, translatePX, 'must be translated by 64px - width');
+					const slideAmount = wrapper.find(Motion).prop('style').slideAmount;
+					assert.equal(width - 64, slideAmount, 'must be translated by width - 64px');
 					done();
 				}, 10)
 			});
@@ -142,14 +152,12 @@ describe('SplitVertical', () => {
 				, { attachTo: mountTestDiv});
 
 				_.delay(() => {
-					const innerDiv = mountTestDiv.querySelector('.lucid-SplitVertical-inner');
 					const secondaryPaneDiv = mountTestDiv.querySelector('.lucid-SplitVertical-is-secondary');
-					const translatePX = parseInt(innerDiv.style.transform.replace(/(translateX[(]|px[)])/ig, ''), 10);
 					const width = secondaryPaneDiv.getBoundingClientRect().width;
-
-					assert.equal(width - 64, translatePX, 'must be translated by width - 64px');
+					const slideAmount = wrapper.find(Motion).prop('style').slideAmount;
+					assert.equal(width - 64, slideAmount, 'must be translated by width - 64px');
 					done();
-				}, 10)
+				}, 10);
 			});
 
 		});
@@ -254,7 +262,8 @@ describe('SplitVertical', () => {
 					</SplitVertical>
 				);
 
-				const LeftPane = wrapper.find('.lucid-SplitVertical > .lucid-SplitVertical-inner > .lucid-SplitVertical-LeftPane');
+				const motionWrapper = wrapper.find(Motion).shallow();
+				const LeftPane = motionWrapper.find('.lucid-SplitVertical-inner > .lucid-SplitVertical-LeftPane');
 
 				assert.equal('Search Filters', LeftPane.text(), 'must render children passed in');
 			});
@@ -266,7 +275,8 @@ describe('SplitVertical', () => {
 					</SplitVertical>
 				);
 
-				const RightPane = wrapper.find('.lucid-SplitVertical > .lucid-SplitVertical-inner > .lucid-SplitVertical-RightPane');
+				const motionWrapper = wrapper.find(Motion).shallow();
+				const RightPane = motionWrapper.find('.lucid-SplitVertical-inner > .lucid-SplitVertical-RightPane');
 
 				assert(RightPane.hasClass('lucid-SplitVertical-is-secondary'), 'must have the secondary className');
 			});
@@ -278,7 +288,8 @@ describe('SplitVertical', () => {
 					</SplitVertical>
 				);
 
-				const LeftPane = wrapper.find('.lucid-SplitVertical > .lucid-SplitVertical-inner > .lucid-SplitVertical-LeftPane');
+				const motionWrapper = wrapper.find(Motion).shallow();
+				const LeftPane = motionWrapper.find('.lucid-SplitVertical-inner > .lucid-SplitVertical-LeftPane');
 
 				assert.equal(123, LeftPane.prop('style').flexBasis, 'must set the flexBasis to match the given width');
 			});
@@ -292,7 +303,8 @@ describe('SplitVertical', () => {
 					</SplitVertical>
 				);
 
-				const RightPane = wrapper.find('.lucid-SplitVertical > .lucid-SplitVertical-inner > .lucid-SplitVertical-RightPane');
+				const motionWrapper = wrapper.find(Motion).shallow();
+				const RightPane = motionWrapper.find('.lucid-SplitVertical-inner > .lucid-SplitVertical-RightPane');
 
 				assert.equal('Search Filters', RightPane.text(), 'must render children passed in');
 			});
@@ -304,7 +316,8 @@ describe('SplitVertical', () => {
 					</SplitVertical>
 				);
 
-				const LeftPane = wrapper.find('.lucid-SplitVertical > .lucid-SplitVertical-inner > .lucid-SplitVertical-LeftPane');
+				const motionWrapper = wrapper.find(Motion).shallow();
+				const LeftPane = motionWrapper.find('.lucid-SplitVertical-inner > .lucid-SplitVertical-LeftPane');
 
 				assert(LeftPane.hasClass('lucid-SplitVertical-is-secondary'), 'must have the secondary className');
 			});
@@ -316,7 +329,8 @@ describe('SplitVertical', () => {
 					</SplitVertical>
 				);
 
-				const RightPane = wrapper.find('.lucid-SplitVertical > .lucid-SplitVertical-inner > .lucid-SplitVertical-RightPane');
+				const motionWrapper = wrapper.find(Motion).shallow();
+				const RightPane = motionWrapper.find('.lucid-SplitVertical-inner > .lucid-SplitVertical-RightPane');
 
 				assert.equal(123, RightPane.prop('style').flexBasis, 'must set the flexBasis to match the given width');
 			});
@@ -330,7 +344,8 @@ describe('SplitVertical', () => {
 					</SplitVertical>
 				);
 
-				const dividerWrapper = wrapper.find('.lucid-SplitVertical > .lucid-SplitVertical-inner > .lucid-SplitVertical-Divider');
+				const motionWrapper = wrapper.find(Motion).shallow();
+				const dividerWrapper = motionWrapper.find('.lucid-SplitVertical-inner > .lucid-SplitVertical-Divider');
 
 				assert.equal('Resize', dividerWrapper.children().text(), 'must render children passed in');
 			});

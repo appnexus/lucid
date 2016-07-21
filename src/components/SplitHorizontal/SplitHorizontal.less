@@ -1,0 +1,38 @@
+.lucid-SplitHorizontal {
+	overflow: hidden;
+
+	& > &-inner {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+
+		& > .lucid-SplitHorizontal-TopPane,
+		& > .lucid-SplitHorizontal-BottomPane {
+			overflow: auto;
+			flex: 1;
+
+			&.lucid-SplitHorizontal-is-secondary {
+				flex: 0;
+			}
+		}
+
+		& > .lucid-SplitHorizontal-Divider {
+			height: 6px;
+			background: @color-gray;
+			box-sizing: border-box;
+			cursor: ns-resize;
+		}
+	}
+
+	// fixes flicker in chrome for both the animated and non-animated collapse/expand
+	& > .lucid-SplitHorizontal-inner {
+
+		& > .lucid-SplitHorizontal-TopPane {
+			.no-safari-flicker();
+		}
+
+		& > .lucid-SplitHorizontal-BottomPane {
+			.no-safari-flicker();
+		}
+	}
+}

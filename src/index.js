@@ -13,6 +13,7 @@ import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 import { default as SearchFieldDumb } from './components/SearchField/SearchField';
 import { default as SidebarDumb } from './components/Sidebar/Sidebar';
 import { default as SingleSelectDumb } from './components/SingleSelect/SingleSelect';
+import { default as SubmarineDumb } from './components/Submarine/Submarine';
 import { default as TabsDumb } from './components/Tabs/Tabs';
 import { default as ToolTipDumb } from './components/ToolTip/ToolTip';
 import { default as VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
@@ -29,6 +30,7 @@ const RadioGroup = buildHybridComponent(RadioGroupDumb);
 const SearchField = buildHybridComponent(SearchFieldDumb);
 const Sidebar = buildHybridComponent(SidebarDumb);
 const SingleSelect = buildHybridComponent(SingleSelectDumb);
+const Submarine = buildHybridComponent(SubmarineDumb);
 const Tabs = buildHybridComponent(TabsDumb);
 const ToolTip = buildHybridComponent(ToolTipDumb);
 const VerticalListMenu = buildHybridComponent(VerticalListMenuDumb);
@@ -43,6 +45,7 @@ import Banner from './components/Banner/Banner';
 import Bar from './components/Bar/Bar';
 import BarChart from './components/BarChart/BarChart';
 import Bars from './components/Bars/Bars';
+import Breadcrumb from './components/Breadcrumb/Breadcrumb';
 import Button from './components/Button/Button';
 import CalendarIcon from './components/Icon/CalendarIcon/CalendarIcon';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
@@ -96,8 +99,10 @@ import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
+import SeparatorIcon from './components/Icon/SeparatorIcon/SeparatorIcon';
 import SettingsIcon from './components/Icon/SettingsIcon/SettingsIcon';
 import ShoppingCartIcon from './components/Icon/ShoppingCartIcon/ShoppingCartIcon';
+import SplitHorizontal from './components/SplitHorizontal/SplitHorizontal';
 import SplitVertical from './components/SplitVertical/SplitVertical';
 import StarIcon from './components/Icon/StarIcon/StarIcon';
 import StarOutlineIcon from './components/Icon/StarOutlineIcon/StarOutlineIcon';
@@ -155,6 +160,7 @@ export {
 	Bar,
 	BarChart,
 	Bars,
+	Breadcrumb,
 	Button,
 	ButtonGroup,
 	ButtonGroupDumb,
@@ -222,16 +228,24 @@ export {
 	ScrollTable,
 	SearchField,
 	SearchIcon,
+	SeparatorIcon,
 	SettingsIcon,
 	ShoppingCartIcon,
 	Sidebar,
+	Sidebar,
+	SidebarDumb,
 	SidebarDumb,
 	SingleSelect,
+	SingleSelect,
 	SingleSelectDumb,
+	SingleSelectDumb,
+	SplitHorizontal,
 	SplitVertical,
 	StarIcon,
 	StarOutlineIcon,
 	StickySection,
+	Submarine,
+	SubmarineDumb,
 	SuccessIcon,
 	SuccessLightIcon,
 	Switch,
