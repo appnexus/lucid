@@ -250,7 +250,7 @@ const Component = React.createClass({
 					<span key={name}>
 						<Link to={{
 							pathname: `/components/${name}`,
-							query: this.props.location.query
+							query: this.props.location.query,
 						}}>
 							{name}
 						</Link>
