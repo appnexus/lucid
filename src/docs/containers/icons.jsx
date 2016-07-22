@@ -7,17 +7,23 @@ import * as components from '../../index';
 
 const { object } = React.PropTypes;
 
-const { Button } = components;
+const { Button, Expander } = components;
 const icons = _.chain(components)
 	.reduce((acc, val, key) => (
 		acc.concat(_.endsWith(key, 'Icon') && key !== 'Icon' ? [[key, val]] : [])
 	), [])
+	.filter(([, Icon]) => !Icon._lucidIsPrivate)
 	.sortBy(([name]) => name)
 	.value();
 
 const cx = lucidClassNames.bind('Icons');
 
 const Icons = React.createClass({
+	getInitialState() {
+		return {
+			showButtons: false,
+		};
+	},
 
 	propTypes: {
 		router: object,
@@ -25,6 +31,9 @@ const Icons = React.createClass({
 	},
 
 	render() {
+		const {
+			showButtons,
+		} = this.state;
 
 		return (
 			<div className={cx('&')}>
@@ -48,46 +57,30 @@ const Icons = React.createClass({
 					</ul>
 				</section>
 
-				<section className={cx('&-buttons')}>
-					{_.map(icons, ([name, Icon]) => (
-						<div className={cx('&-buttons-section')} key={name}>
-							<Button size='short'><Icon /></Button>
-							<Button size='small'><Icon /></Button>
-							<Button ><Icon /></Button>
-							<Button isActive ><Icon /></Button>
-							<Button size='large'><Icon /></Button>
-							<Button kind='primary' size='short'><Icon /></Button>
-							<Button kind='primary' size='small'><Icon /></Button>
-							<Button kind='primary' ><Icon /></Button>
-							<Button kind='primary' isActive ><Icon /></Button>
-							<Button kind='primary' size='large'><Icon /></Button>
-							<Button kind='link' size='short'><Icon /></Button>
-							<Button kind='link' size='small'><Icon /></Button>
-							<Button kind='link' ><Icon /></Button>
-							<Button kind='link' size='large'><Icon /></Button>
-							<Button kind='success' size='short'><Icon /></Button>
-							<Button kind='success' size='small'><Icon /></Button>
-							<Button kind='success' ><Icon /></Button>
-							<Button kind='success' isActive ><Icon /></Button>
-							<Button kind='success' size='large'><Icon /></Button>
-							<Button kind='warning' size='short'><Icon /></Button>
-							<Button kind='warning' size='small'><Icon /></Button>
-							<Button kind='warning' ><Icon /></Button>
-							<Button kind='warning' isActive ><Icon /></Button>
-							<Button kind='warning' size='large'><Icon /></Button>
-							<Button kind='danger' size='short'><Icon /></Button>
-							<Button kind='danger' size='small'><Icon /></Button>
-							<Button kind='danger' ><Icon /></Button>
-							<Button kind='danger' isActive ><Icon /></Button>
-							<Button kind='danger' size='large'><Icon /></Button>
-							<Button kind='info' size='short'><Icon /></Button>
-							<Button kind='info' size='small'><Icon /></Button>
-							<Button kind='info' ><Icon /></Button>
-							<Button kind='info' isActive ><Icon /></Button>
-							<Button kind='info' size='large'><Icon /></Button>
-						</div>
-					))}
-				</section>
+				<Expander
+					Label={`${showButtons ? 'Hide' : 'Show'} Button examples`}
+					isExpanded={showButtons}
+					onToggle={() => {
+						this.setState({ showButtons: !showButtons });
+					}}
+				>
+					<section className={cx('&-buttons')}>
+						{_.map(icons, ([name, Icon]) => (
+							<div className={cx('&-buttons-section')} key={name}>
+								<Button size='short'><Icon /></Button>
+								<Button size='small'><Icon /></Button>
+								<Button ><Icon /></Button>
+								<Button isActive ><Icon /></Button>
+								<Button size='large'><Icon /></Button>
+								<Button kind='primary' size='short'><Icon /></Button>
+								<Button kind='primary' size='small'><Icon /></Button>
+								<Button kind='primary' ><Icon /></Button>
+								<Button kind='primary' isActive ><Icon /></Button>
+								<Button kind='primary' size='large'><Icon /></Button>
+							</div>
+						))}
+					</section>
+				</Expander>
 
 			</div>
 		);
