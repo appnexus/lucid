@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-HomeIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * RUNHOME Jack! No, no, no, HOMERUN Jack!
  */
 const HomeIcon = createClass({
 	displayName: 'HomeIcon',

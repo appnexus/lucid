@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-ShoppingCartIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * Buy buy buy!
  */
 const ShoppingCartIcon = createClass({
 	displayName: 'ShoppingCartIcon',

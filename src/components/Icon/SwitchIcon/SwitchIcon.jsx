@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-SwitchIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * A swap icon.
  */
 const SwitchIcon = createClass({
 	displayName: 'SwitchIcon',

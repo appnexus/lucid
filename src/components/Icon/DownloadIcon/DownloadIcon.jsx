@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-DownloadIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * Typically used to denote that something is available for download.
  */
 const DownloadIcon = createClass({
 	displayName: 'DownloadIcon',

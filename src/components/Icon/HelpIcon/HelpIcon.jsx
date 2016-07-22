@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-HelpIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * Help me Rhonda.
  */
 const HelpIcon = createClass({
 	displayName: 'HelpIcon',

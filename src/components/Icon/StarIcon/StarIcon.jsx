@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-StarIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * You're a shooting star!
  */
 const StarIcon = createClass({
 	displayName: 'StarIcon',

@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-DangerIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "CrossIcon", "madeFrom": ["CrossIcon"]}
  *
- * A danger icon.
+ * DANGER WILL ROBINSON DANGER
  */
 const DangerIcon = createClass({
 	displayName: 'DangerIcon',

@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-NewWindowIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * A new window icon.
  */
 const NewWindowIcon = createClass({
 	displayName: 'NewWindowIcon',

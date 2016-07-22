@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-WarningLightIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * Diet version.
  */
 const WarningLightIcon = createClass({
 	displayName: 'WarningLightIcon',

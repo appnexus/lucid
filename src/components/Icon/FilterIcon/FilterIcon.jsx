@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-FilterIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * Typically used to denote that something is filterable.
  */
 const FilterIcon = createClass({
 	displayName: 'FilterIcon',

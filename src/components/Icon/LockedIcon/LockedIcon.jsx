@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-LockedIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * You shall not pass!
  */
 const LockedIcon = createClass({
 	displayName: 'LockedIcon',

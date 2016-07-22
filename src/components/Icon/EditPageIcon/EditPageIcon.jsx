@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-EditPageIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * A page edit icon.
  */
 const EditPageIcon = createClass({
 	displayName: 'EditPageIcon',

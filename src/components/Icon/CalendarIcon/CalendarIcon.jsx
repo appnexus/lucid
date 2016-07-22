@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-CalendarIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * An icon for calendar-y things.
  */
 const CalendarIcon = createClass({
 	displayName: 'CalendarIcon',

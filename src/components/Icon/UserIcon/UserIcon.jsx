@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-UserIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * You, sir.
  */
 const UserIcon = createClass({
 	displayName: 'UserIcon',

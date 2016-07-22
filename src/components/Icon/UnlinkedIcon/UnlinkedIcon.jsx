@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-UnlinkedIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * For all those times you just need to break away.
  */
 const UnlinkedIcon = createClass({
 	displayName: 'UnlinkedIcon',

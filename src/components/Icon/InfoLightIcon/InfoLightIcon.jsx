@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-InfoLightIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * A light info icon.
  */
 const InfoLightIcon = createClass({
 	displayName: 'InfoLightIcon',

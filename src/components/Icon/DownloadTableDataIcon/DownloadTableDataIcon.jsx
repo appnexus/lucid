@@ -10,7 +10,8 @@ const cx = lucidClassNames.bind('&-DownloadTableDataIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * Typically used to denote that the table has data that's available for
+ * download. Usually clicking should kick off the download.
  */
 const DownloadTableDataIcon = createClass({
 	displayName: 'DownloadTableDataIcon',

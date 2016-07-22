@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-DuplicateIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * Typically used when something can be duplicated.
  */
 const DuplicateIcon = createClass({
 	displayName: 'DuplicateIcon',

@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-SettingsIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * A settings icon.
  */
 const SettingsIcon = createClass({
 	displayName: 'SettingsIcon',

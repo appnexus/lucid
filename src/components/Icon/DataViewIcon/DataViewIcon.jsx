@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-DataViewIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * Typically used to guide users to more detailed data.
  */
 const DataViewIcon = createClass({
 	displayName: 'DataViewIcon',

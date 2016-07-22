@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-SuccessLightIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * Nothing like a mild success in the morning to get the blood flowing!
  */
 const SuccessLightIcon = createClass({
 	displayName: 'SuccessLightIcon',

@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-ViewIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * Would you just look at it?!
  */
 const ViewIcon = createClass({
 	displayName: 'ViewIcon',

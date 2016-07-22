@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-LinkedIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Description.
+ * Get linked in with this fresh new icon!
  */
 const LinkedIcon = createClass({
 	displayName: 'LinkedIcon',
