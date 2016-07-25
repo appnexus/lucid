@@ -4,7 +4,6 @@ import React from 'react';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
-import describeWithDOM from '../../util/describe-with-dom';
 import { common, controls } from '../../util/generic-tests';
 import ExpanderPanel from './ExpanderPanel';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
@@ -84,7 +83,7 @@ describe('ExpanderPanel', () => {
 	});
 });
 
-describeWithDOM('ExpanderPanel', () => {
+describe('ExpanderPanel', () => {
 	let wrapper;
 
 	afterEach(() => {

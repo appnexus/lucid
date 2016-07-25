@@ -5,7 +5,6 @@ import SyntheticEvent from 'react/lib/SyntheticEvent';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
-import describeWithDOM from '../../util/describe-with-dom';
 import { common, controls } from '../../util/generic-tests';
 
 import Switch from './Switch';
@@ -79,7 +78,7 @@ describe('Switch', () => {
 	});
 });
 
-describeWithDOM('Switch', () => {
+describe('Switch', () => {
 	function simulateEvent(reactElement, selector, event) {
 		mount(reactElement).find(selector).simulate(event);
 	}

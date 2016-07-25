@@ -1,13 +1,12 @@
 import assert from 'assert';
 import _ from 'lodash';
-import describeWithDOM from './describe-with-dom';
 
 import {
 	getAbsoluteBoundingClientRect,
 	scrollParentTo,
 } from './dom-helpers';
 
-describeWithDOM('#getAbsoluteBoundingClientRect', () => {
+describe('#getAbsoluteBoundingClientRect', () => {
 	it('should throw if not passed a domNode', () => {
 		assert.throws(() => {
 			getAbsoluteBoundingClientRect(null);
@@ -27,7 +26,7 @@ describeWithDOM('#getAbsoluteBoundingClientRect', () => {
 	});
 });
 
-describeWithDOM('#scrollParentTo', () => {
+describe('#scrollParentTo', () => {
 	let parentNode;
 	let childNode;
 

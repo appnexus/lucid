@@ -4,7 +4,6 @@ import React from 'react';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
-import describeWithDOM from '../../util/describe-with-dom';
 import { common } from '../../util/generic-tests';
 import Accordion from './Accordion';
 import ExpanderPanel from '../ExpanderPanel/ExpanderPanel';
@@ -102,7 +101,7 @@ describe('Accordion', () => {
 	});
 });
 
-describeWithDOM('Accordion', () => {
+describe('Accordion', () => {
 	let wrapper;
 	let onSelect = sinon.spy();
 

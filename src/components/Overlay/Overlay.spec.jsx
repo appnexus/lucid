@@ -1,7 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
-import describeWithDOM from '../../util/describe-with-dom';
 import sinon from 'sinon';
 import assert from 'assert';
 
@@ -46,7 +45,7 @@ describe('Overlay', () => {
 
 });
 
-describeWithDOM('Overlay', () => {
+describe('Overlay', () => {
 	it('should fire onBackgroundClick', () => {
 		const onBackgroundClick = sinon.spy();
 		const wrapper = mount(

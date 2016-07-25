@@ -2,7 +2,6 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
-import describeWithDOM from '../../util/describe-with-dom';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 
@@ -69,7 +68,7 @@ describe('DropMenu', () => {
 				assert(_.includes(dropMenuClassName, 'MyDropMenu'));
 			});
 
-			describeWithDOM('FlyOut', () => {
+			describe('FlyOut', () => {
 				let wrapper;
 
 				afterEach(() => {
@@ -184,7 +183,7 @@ describe('DropMenu', () => {
 			});
 		});
 
-		describeWithDOM('selectedIndices', () => {
+		describe('selectedIndices', () => {
 			let wrapper;
 
 			afterEach(() => {
@@ -208,7 +207,7 @@ describe('DropMenu', () => {
 			});
 		});
 
-		describeWithDOM('focusedIndex', () => {
+		describe('focusedIndex', () => {
 			let wrapper;
 
 			afterEach(() => {
@@ -232,7 +231,7 @@ describe('DropMenu', () => {
 			});
 		});
 
-		describeWithDOM('portalId', () => {
+		describe('portalId', () => {
 			let wrapper;
 
 			afterEach(() => {
@@ -410,7 +409,7 @@ describe('DropMenu', () => {
 		});
 
 		describe('onSelect', () => {
-			describeWithDOM('mouse', () => {
+			describe('mouse', () => {
 				let onSelect;
 				let wrapper;
 
@@ -588,7 +587,7 @@ describe('DropMenu', () => {
 		});
 
 		describe('onFocusOption', () => {
-			describeWithDOM('mouse', () => {
+			describe('mouse', () => {
 				let onFocusOption;
 				let wrapper;
 
@@ -635,7 +634,7 @@ describe('DropMenu', () => {
 			});
 		});
 
-		describeWithDOM('Option', () => {
+		describe('Option', () => {
 			let wrapper;
 
 			afterEach(() => {
@@ -664,7 +663,7 @@ describe('DropMenu', () => {
 			});
 		});
 
-		describeWithDOM('OptionGroup', () => {
+		describe('OptionGroup', () => {
 			let wrapper;
 
 			afterEach(() => {

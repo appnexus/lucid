@@ -1,7 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
-import describeWithDOM from '../../util/describe-with-dom';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import { dispatchDOMEvent } from '../../util/dom-helpers';
@@ -21,7 +20,7 @@ describe('StickySection', () => {
 	});
 
 	describe('props', () => {
-		describeWithDOM('lowerBound', () => {
+		describe('lowerBound', () => {
 			let wrapper;
 
 			afterEach(() => {

@@ -2,7 +2,6 @@ import _ from 'lodash';
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { common } from '../../util/generic-tests';
-import describeWithDOM from '../../util/describe-with-dom';
 import assert from 'assert';
 import sinon from 'sinon';
 
@@ -293,7 +292,7 @@ describe('PieChart', () => {
 	});
 });
 
-describeWithDOM('PieChart', () => {
+describe('PieChart', () => {
 	let wrapper;
 
 	afterEach(() => {

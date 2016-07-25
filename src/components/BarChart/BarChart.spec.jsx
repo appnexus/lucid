@@ -6,12 +6,11 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { common } from '../../util/generic-tests';
-import describeWithDOM from '../../util/describe-with-dom';
 import assert from 'assert';
 
 import BarChart from './BarChart';
 
-describeWithDOM('BarChart', () => {
+describe('BarChart', () => {
 	let wrapper;
 
 	afterEach(() => {

@@ -1,11 +1,10 @@
 import React from 'react';
 import assert from 'assert';
-import describeWithDOM from '../../util/describe-with-dom';
 import { mount } from 'enzyme';
 
 import Portal from './Portal';
 
-describeWithDOM('Portal', () => {
+describe('Portal', () => {
 
 	describe('props', () => {
 		describe('portalId', () => {

@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
-import describeWithDOM from '../../util/describe-with-dom';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import SplitHorizontal from './SplitHorizontal';
@@ -29,7 +28,7 @@ describe('SplitHorizontal', () => {
 	});
 
 	describe('props', () => {
-		describeWithDOM('isExpanded', () => {
+		describe('isExpanded', () => {
 			let mountWrapper;
 
 			afterEach(() => {
@@ -64,7 +63,7 @@ describe('SplitHorizontal', () => {
 			});
 		});
 
-		describeWithDOM('isAnimated', () => {
+		describe('isAnimated', () => {
 			let wrapper;
 
 			afterEach(() => {
@@ -107,7 +106,7 @@ describe('SplitHorizontal', () => {
 			});
 		});
 
-		describeWithDOM('collapseShift', () => {
+		describe('collapseShift', () => {
 			let wrapper;
 			let mountTestDiv;
 
@@ -162,7 +161,7 @@ describe('SplitHorizontal', () => {
 
 		});
 
-		describeWithDOM('onResizing', () => {
+		describe('onResizing', () => {
 			let wrapper;
 			let mountTestDiv;
 
@@ -207,7 +206,7 @@ describe('SplitHorizontal', () => {
 			});
 		});
 
-		describeWithDOM('onResize', () => {
+		describe('onResize', () => {
 			let wrapper;
 			let mountTestDiv;
 
