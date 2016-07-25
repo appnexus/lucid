@@ -45,11 +45,11 @@ const Icons = React.createClass({
 					<ul className={cx('&-list')}>
 						{_.map(icons, ([name, Icon]) => (
 							<li className={cx('&-list-item')} key={name}>
-								<Icon className={cx('&-list-icon')} />
 								<Link to={{
 									pathname: `/components/${name}`,
 									query: this.props.location.query,
 								}}>
+									<Icon className={cx('&-list-icon')} isClickable />
 									{name}
 								</Link>
 							</li>
