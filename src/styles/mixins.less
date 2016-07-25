@@ -108,6 +108,11 @@
 	-webkit-transform:translate3d(0,0,0);
 }
 
+// This helps prevent strange SVG aliasing in firefox
+.no-firefox-svg-aliasing() {
+	transform:translate3d(0,0,0);
+}
+
 // Creates a drop shadow using a background gradient.
 // * `@start` color at the top of the gradient
 // * `@stop` color at end and fills the rest of the container
