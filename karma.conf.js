@@ -13,8 +13,6 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-			'node_modules/react/dist/react-with-addons.js',
-			'node_modules/react-dom/dist/react-dom.js',
       'src/test-entry.js',
     ],
 
@@ -30,11 +28,22 @@ module.exports = function(config) {
     },
 
 		webpack: {
+			watch: true,
 			module: {
 				noParse: [
 					/node_modules\/sinon\//,
 				],
 				loaders: [{
+					test: /\.js$/,
+					loader: 'babel',
+					exclude: /(node_modules|src\/docs)/,
+					query: {
+						presets: ['airbnb'],
+					},
+				}, {
+					test: /\.json$/,
+					loader: 'json',
+				}, {
 					test: /\.jsx?$/,
 					loader: 'babel',
 					query: {
@@ -54,19 +63,16 @@ module.exports = function(config) {
 			externals: {
 				// enzyme deps incompatible with webpack
 				// https://github.com/airbnb/enzyme/issues/47
-				'jsdom': 'window',
 				'cheerio': 'window',
+				'react/addons': true,
 				'react/lib/ExecutionEnvironment': true,
-				'react/lib/ReactContext': 'window',
-				// to avoid duplicate import of React with react-addons-css-transition-group
-				'react': 'React',
-				'react-dom': 'ReactDOM',
-				'./React': 'React',
-				'./ReactDOM': 'ReactDOM',
+				'react/lib/ReactContext': true,
 			},
-			webpackMiddleware: {
-				noInfo: true,
-			},
+		},
+
+		webpackMiddleware: {
+			// stfu webpack
+			stats: 'errors-only',
 		},
 
     // test results reporter to use
@@ -85,7 +91,7 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO,
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+    autoWatch: true,
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
@@ -93,7 +99,7 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true,
+    singleRun: false,
 
     // Concurrency level
     // how many browser should be started simultaneous
