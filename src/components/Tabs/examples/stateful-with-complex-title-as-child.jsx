@@ -27,21 +27,17 @@ export default React.createClass({
 				<Tabs>
 					<Tabs.Tab>
 						<Tabs.Title>
-							<span>
-								One<br />
-								<Button>Button</Button>
-							</span>
+							One<br />
+							<Button>Button</Button>
 						</Tabs.Title>
 						One content
 					</Tabs.Tab>
 
 					<Tabs.Tab>
 						<Tabs.Title>
-							<span>
-								Two<br/>
-								Line Two
-								<SearchField />
-							</span>
+							Two<br/>
+							Line Two
+							<SearchField />
 						</Tabs.Title>
 						Two content
 					</Tabs.Tab>

@@ -141,13 +141,16 @@ const Tabs = createClass({
 								key={index}
 								onClick={_.partial(this.handleClicked, index, tabChildProp)}
 							>
-								{_.get(getFirst(tabChildProp, Tabs.Title), 'props.children', '')}
+								<span className={cx('&-Tab-content')}>{_.get(getFirst(tabChildProp, Tabs.Title), 'props.children', '')}</span>
+
 								{isProgressive && index !== tabChildProps.length - 1 ?
-									<svg className={cx('&-Tab-arrow')} width='8px' height='28px' viewBox='0 0 8 28' >
-										<polygon className={cx('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
-										<polyline className={cx('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1.7,3 0,3'/>
-										<polyline className={cx('&-Tab-arrow-line')} fill='none' stroke='#fff' strokeWidth='1' points='0,28 7.9,14 0,0'/>
-									</svg>
+									<span className={cx('&-Tab-arrow')} >
+										<svg width='8px' height='28px' viewBox='0 0 8 28' >
+											<polygon className={cx('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
+											<polyline className={cx('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1.7,3 0,3'/>
+											<polyline className={cx('&-Tab-arrow-line')} fill='none' stroke='#fff' strokeWidth='1' points='0,28 7.9,14 0,0'/>
+										</svg>
+									</span>
 								: null}
 							</li>
 						);

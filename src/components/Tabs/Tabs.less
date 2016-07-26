@@ -15,14 +15,15 @@
 
 	&-Tab {
 		flex: 1 1 auto;
+		height: inherit;
+		display: flex;
+		justify-content: center;
+		align-items: stretch;
+		box-sizing: border-box;
 		cursor: pointer;
 		color: @color-primary;
 		user-select: none;
 		margin-bottom: -@Tabs-border-width;
-		height: @Tabs-tab-height;
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		border: @Tabs-border-width solid @color-borderColor;
 		border-right: 0;
 		background-color: @color-white;
@@ -64,11 +65,6 @@
 		}
 		.lucid-Tabs-Tab-arrow{
 			z-index: 1;
-			height: @Tabs-tab-height;
-			width: @Tabs-arrow-width;
-			position: absolute;
-			bottom: -@Tabs-border-width;
-			right: -@Tabs-arrow-width;
 			.lucid-Tabs-Tab-arrow-line {
 				stroke: @color-borderColor;
 			}
@@ -105,9 +101,28 @@
 		.Tabs-mixin-tab-line();
 	}
 
-	&-content {
+	&-Tab-is-progressive&-Tab-is-active {
+		.lucid-Tabs-Tab-arrow { border-right: 1px solid @color-primary; }
+		.lucid-Tabs-Tab-arrow-line { stroke: @color-primary; }
+	}
+
+	&-Tab-content {
+		flex: 1;
+		padding: 5px 10px;
 		border-top: @Tabs-border-width solid @color-borderColor;
 		padding-top: @size-standard;
+	}
+
+	&-Tab-arrow {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-right: 1px solid @color-borderColor;
+
+		svg {
+			margin: -1px;
+			margin-right: -8px;
+		}
 	}
 }
 
