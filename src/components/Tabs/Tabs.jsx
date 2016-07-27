@@ -145,9 +145,9 @@ const Tabs = createClass({
 
 								{isProgressive && index !== tabChildProps.length - 1 ?
 									<span className={cx('&-Tab-arrow')} >
-										<svg width='8px' height='28px' viewBox='0 0 8 28' >
+										<svg version='1.1'  viewBox='0 0 8 28' preserveAspectRatio='none' >
 											<polygon className={cx('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
-											<polyline className={cx('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1.7,3 0,3'/>
+											<polyline className={cx('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1,1 0,1'/>
 											<polyline className={cx('&-Tab-arrow-line')} fill='none' stroke='#fff' strokeWidth='1' points='0,28 7.9,14 0,0'/>
 										</svg>
 									</span>
