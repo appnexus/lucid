@@ -8,16 +8,16 @@ import {
 
 const titleThree = (
 	<RadioGroup selectedIndex={1}>
-				<RadioGroup.RadioButton>
-					<RadioGroup.Label>Captain America</RadioGroup.Label>
-				</RadioGroup.RadioButton>
-				<RadioGroup.RadioButton>
-					<RadioGroup.Label>Iron Man</RadioGroup.Label>
-				</RadioGroup.RadioButton>
-				<RadioGroup.RadioButton>
-					<RadioGroup.Label>Thor</RadioGroup.Label>
-				</RadioGroup.RadioButton>
-			</RadioGroup>
+		<RadioGroup.RadioButton>
+			<RadioGroup.Label>Captain America</RadioGroup.Label>
+		</RadioGroup.RadioButton>
+		<RadioGroup.RadioButton>
+			<RadioGroup.Label>Iron Man</RadioGroup.Label>
+		</RadioGroup.RadioButton>
+		<RadioGroup.RadioButton>
+			<RadioGroup.Label>Thor</RadioGroup.Label>
+		</RadioGroup.RadioButton>
+	</RadioGroup>
 );
 
 export default React.createClass({
