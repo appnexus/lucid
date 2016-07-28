@@ -13,9 +13,9 @@
     "docs-upload": "gulp docs-upload",
     "preversion": "rm -rf dist && npm run test && gulp preversion",
     "postversion": "gulp docs-upload",
-    "test": "karma start karma.conf.js --singleRun --auto-watch=false",
-    "test-tdd": "karma start karma.conf.js",
-    "ci": "[ -z $BROWSER_STACK_USERNAME ] && [ -z $BROWSER_STACK_ACCESS_KEY ] && echo 'Set BROWSER_STACK_USERNAME and BROWSER_STACK_ACCESS_KEY' || karma start karma.conf.js --singleRun --auto-watch=false --browsers=bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge"
+    "test": "[ -z $BROWSER_STACK_USERNAME ] && [ -z $BROWSER_STACK_ACCESS_KEY ] && echo 'Set BROWSER_STACK_USERNAME and BROWSER_STACK_ACCESS_KEY' || karma start karma.conf.js --singleRun --auto-watch=false --browsers=bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge",
+    "test-local": "karma start karma.conf.js --singleRun --auto-watch=false",
+    "test-tdd": "karma start karma.conf.js"
   },
   "keywords": [
     "component",
