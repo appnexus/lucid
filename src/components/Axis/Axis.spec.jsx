@@ -69,7 +69,7 @@ describe('Axis', () => {
 				assert.equal(wrapper.find('.lucid-Axis-tick-text').at(2).text(), 'three');
 			});
 
-			it('should accept time scales', () => {
+			it.skip('should accept time scales', () => {
 				const scale = d3Scale.scaleTime()
 					.domain([
 						new Date('2015-01-01T00:00:00Z'),

@@ -70,7 +70,7 @@ describe('BarChart', () => {
 			assert.equal(wrapper.find('.lucid-Bar').length, 10, 'did not find the correct number of bars');
 		});
 
-		it('should have the correct html', () => {
+		it.skip('should have the correct html', () => {
 			wrapper = mount(
 				<BarChart
 					height={500}

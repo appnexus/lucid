@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
@@ -60,46 +59,37 @@ describe('Submarine', () => {
 				}
 			});
 
-			it('should pass isExpanded to the underlying SplitHorizontal (true) [mostly stable]', (done) => {
+			it('should pass isExpanded to the underlying SplitHorizontal (true)', () => {
 				wrapper = shallow(
 					<Submarine isExpanded={true} />
 				);
 
-				_.delay(() => {
-					const splitHorizontal = wrapper.find(SplitHorizontal);
+				const splitHorizontal = wrapper.find(SplitHorizontal);
 
-					assert(splitHorizontal.prop('isExpanded'), 'must pass isExpanded to the underlying SplitHorizontal')
-					assert(splitHorizontal.shallow().hasClass('lucid-SplitHorizontal-is-expanded'), 'must have the lucid-SplitHorizontal-is-expanded className')
-					done();
-				}, 10);
+				assert(splitHorizontal.prop('isExpanded'), 'must pass isExpanded to the underlying SplitHorizontal')
+				assert(splitHorizontal.shallow().hasClass('lucid-SplitHorizontal-is-expanded'), 'must have the lucid-SplitHorizontal-is-expanded className')
 			});
 
-			it('should pass isExpanded to the underlying SplitHorizontal (false) [mostly stable]', (done) => {
+			it('should pass isExpanded to the underlying SplitHorizontal (false)', () => {
 				wrapper = mount(
 					<Submarine isExpanded={false} />
 				);
 
-				_.delay(() => {
-					const splitHorizontal = wrapper.find(SplitHorizontal);
+				const splitHorizontal = wrapper.find(SplitHorizontal);
 
-					assert(!splitHorizontal.prop('isExpanded'), 'must pass isExpanded to the underlying SplitHorizontal')
-					assert(!splitHorizontal.hasClass('lucid-SplitHorizontal-is-expanded'), 'must not have the lucid-SplitHorizontal-is-expanded className')
-					done();
-				}, 10);
+				assert(!splitHorizontal.prop('isExpanded'), 'must pass isExpanded to the underlying SplitHorizontal')
+				assert(!splitHorizontal.hasClass('lucid-SplitHorizontal-is-expanded'), 'must not have the lucid-SplitHorizontal-is-expanded className')
 			});
 
-			it('should default to true [mostly stable]', (done) => {
+			it('should default to true', () => {
 				wrapper = shallow(
 					<Submarine />
 				);
 
-				_.delay(() => {
-					const splitHorizontal = wrapper.find(SplitHorizontal);
+				const splitHorizontal = wrapper.find(SplitHorizontal);
 
-					assert(splitHorizontal.prop('isExpanded'), 'must pass isExpanded to the underlying SplitHorizontal')
-					assert(splitHorizontal.shallow().hasClass('lucid-SplitHorizontal-is-expanded'), 'must have the lucid-SplitHorizontal-is-expanded className')
-					done();
-				}, 10);
+				assert(splitHorizontal.prop('isExpanded'), 'must pass isExpanded to the underlying SplitHorizontal')
+				assert(splitHorizontal.shallow().hasClass('lucid-SplitHorizontal-is-expanded'), 'must have the lucid-SplitHorizontal-is-expanded className')
 			});
 		});
 

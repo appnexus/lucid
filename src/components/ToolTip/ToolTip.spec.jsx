@@ -251,13 +251,9 @@ describe('ToolTip', () => {
 				root.simulate('mouseOver');
 				root.simulate('mouseOut');
 				// wait for timeout
-				setTimeout(() => {
-					try {
-						assert(spy.calledOnce, 'onMouseOut must be called once');
-						done();
-					} catch(e) {
-						done(e);
-					}
+				_.delay(() => {
+					assert(spy.calledOnce, 'onMouseOut must be called once');
+					done();
 				}, 100);
 			});
 
@@ -275,13 +271,9 @@ describe('ToolTip', () => {
 				wrapper.find(ContextMenu.FlyOut).prop('onMouseOver')();
 				root.simulate('mouseOut');
 				// wait for timeout
-				setTimeout(() => {
-					try {
-						assert(!spy.called, 'onMouseOut must not be called');
-						done();
-					} catch(e) {
-						done(e);
-					}
+				_.delay(() => {
+					assert(!spy.called, 'onMouseOut must not be called');
+					done();
 				}, 100);
 			});
 

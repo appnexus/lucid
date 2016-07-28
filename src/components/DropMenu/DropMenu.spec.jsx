@@ -611,11 +611,29 @@ describe('DropMenu', () => {
 
 				it('should be called when user moves mouse over option', () => {
 					const optionDOMNodes = document.querySelectorAll('.lucid-ContextMenu-FlyOut .lucid-DropMenu-Option');
-
-					optionDOMNodes[2].dispatchEvent(new window.Event('mousemove', { bubbles: true, cancellable: true}));
+					const mouseMoveEvent = document.createEvent('MouseEvents');
+					mouseMoveEvent.initMouseEvent(
+						'mousemove', //event type : click, mousedown, mouseup, mouseover, mousemove, mouseout.
+						true, //canBubble
+						false, //cancelable
+						window, //event's AbstractView : should be window
+						1, // detail : Event's mouse click count
+						50, // screenX
+						50, // screenY
+						50, // clientX
+						50, // clientY
+						false, // ctrlKey
+						false, // altKey
+						false, // shiftKey
+						false, // metaKey
+						0, // button : 0 = click, 1 = middle button, 2 = right button
+						null // relatedTarget : Only used with some event types (e.g. mouseover and mouseout). In other cases, pass null.
+					);
+					optionDOMNodes[2].dispatchEvent(mouseMoveEvent);
 
 					assert(onFocusOption.called);
 					assert(onFocusOption.calledWith(2));
+					assert(true);
 				});
 			});
 		});

@@ -80,7 +80,7 @@ describe('LineChart', () => {
 			assert.equal(wrapper.find('.lucid-Axis').length, 3, 'did not find the correct number of axes');
 		});
 
-		it('should have the correct html', () => {
+		it.skip('should have the correct html', () => {
 			wrapper = mount(
 				<LineChart
 					height={500}
