@@ -26,7 +26,7 @@ const {
 const SplitVertical = createClass({
 	displayName: 'SplitVertical',
 
-	_lucidIsPrivate: true,
+	_isPrivate: true,
 
 	propTypes: {
 		/**

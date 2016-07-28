@@ -38,7 +38,7 @@
     "reselect": "^2.5.1"
   },
   "devDependencies": {
-    "anx-docgen": "^1.0.0",
+    "anx-docgen": "^1.0.2",
     "autoprefixer": "^6.3.3",
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",

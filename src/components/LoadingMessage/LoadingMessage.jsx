@@ -21,7 +21,7 @@ const {
  */
 const LoadingMessage = createClass({
 	displayName: 'LoadingMessage',
-	_lucidIsPrivate: true,
+	_isPrivate: true,
 	propTypes: {
 		/**
 		 * Class names that are appended to the defaults.

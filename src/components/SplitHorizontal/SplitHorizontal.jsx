@@ -26,7 +26,7 @@ const {
 const SplitHorizontal = createClass({
 	displayName: 'SplitHorizontal',
 
-	_lucidIsPrivate: true,
+	_isPrivate: true,
 
 	propTypes: {
 		/**
