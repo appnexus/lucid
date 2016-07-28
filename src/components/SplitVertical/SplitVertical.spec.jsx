@@ -59,7 +59,7 @@ describe('SplitVertical', () => {
 				);
 
 				assert(!mountWrapper.hasClass('lucid-SplitHorizontal-is-expanded'));
-				_.delay(done, 10);
+				_.delay(done, 32);
 			});
 		});
 
@@ -80,7 +80,7 @@ describe('SplitVertical', () => {
 				_.delay(() => {
 					assert.equal(wrapper.find('.lucid-SplitVertical.lucid-SplitVertical-is-animated').length, 0);
 					done();
-				}, 10)
+				}, 32)
 			});
 
 			it('should apply the &-is-animated class when true, after initial render [mostly stable]', (done) => {
@@ -91,7 +91,7 @@ describe('SplitVertical', () => {
 				_.delay(() => {
 					assert.equal(wrapper.find('.lucid-SplitVertical.lucid-SplitVertical-is-animated').length, 1);
 					done();
-				}, 10)
+				}, 32)
 			});
 
 			it('should not apply the &-is-animated class when false [mostly stable]', (done) => {
@@ -102,7 +102,7 @@ describe('SplitVertical', () => {
 				_.delay(() => {
 					assert.equal(wrapper.find('.lucid-SplitVertical.lucid-SplitVertical-is-animated').length, 0);
 					done();
-				}, 10)
+				}, 32)
 			});
 		});
 
@@ -139,7 +139,7 @@ describe('SplitVertical', () => {
 					const slideAmount = wrapper.find(Motion).prop('style').slideAmount;
 					assert.equal(width - 64, slideAmount, 'must be translated by width - 64px');
 					done();
-				}, 10)
+				}, 32)
 			});
 
 			it('should translated by width - 64px when the left pane is primary [mostly stable]', (done) => {
@@ -156,7 +156,7 @@ describe('SplitVertical', () => {
 					const slideAmount = wrapper.find(Motion).prop('style').slideAmount;
 					assert.equal(width - 64, slideAmount, 'must be translated by width - 64px');
 					done();
-				}, 10);
+				}, 32);
 			});
 
 		});
