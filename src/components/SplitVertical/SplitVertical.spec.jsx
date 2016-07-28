@@ -181,10 +181,16 @@ describe('SplitVertical', () => {
 			});
 
 			it('should be called when the DragCaptureZone calls the onDrag event handler', () => {
+
+				const width = 100;
+				const dX = 122;
 				const onResizing = sinon.spy();
 
 				wrapper = mount(
-					<SplitVertical isExpanded={true} onResizing={onResizing} />
+					<SplitVertical isExpanded={true} onResizing={onResizing}>
+						<SplitVertical.LeftPane width={width}>foo</SplitVertical.LeftPane>
+						<SplitVertical.RightPane>bar</SplitVertical.RightPane>
+					</SplitVertical>
 				, { attachTo: mountTestDiv });
 
 				const {
@@ -196,13 +202,14 @@ describe('SplitVertical', () => {
 				const lastArg = { event: {} };
 
 				onDragStart(lastArg);
-				onDrag({dX: 122}, lastArg);
-				onDragEnd({dX: 123}, lastArg);
+				onDrag({dX: dX}, lastArg);
+				onDragEnd({dX: dX + 1}, lastArg);
 
 				assert(onResizing.called, 'must be called');
-				assert.equal(onResizing.lastCall.args[0], 122, 'must pass the new width of the pane');
+				assert.equal(onResizing.lastCall.args[0], width + dX, 'must pass the new width of the pane');
 				assert.equal(onResizing.lastCall.args[1].props, wrapper.props(), 'must pass component props in the last arg');
 				assert.equal(onResizing.lastCall.args[1].event, lastArg.event, 'must pass event reference in the last arg');
+
 			});
 		});
 
@@ -226,10 +233,16 @@ describe('SplitVertical', () => {
 			});
 
 			it('should be called when the DragCaptureZone calls the onDragEnd event handler', () => {
+
+				const width = 100;
+				const dX = 122;
 				const onResize = sinon.spy();
 
 				wrapper = mount(
-					<SplitVertical isExpanded={true} onResize={onResize} />
+					<SplitVertical isExpanded={true} onResize={onResize}>
+						<SplitVertical.LeftPane width={width}>foo</SplitVertical.LeftPane>
+						<SplitVertical.RightPane>bar</SplitVertical.RightPane>
+					</SplitVertical>
 				, { attachTo: mountTestDiv });
 
 				const {
@@ -241,11 +254,11 @@ describe('SplitVertical', () => {
 				const lastArg = { event: {} };
 
 				onDragStart(lastArg);
-				onDrag({dX: 122}, lastArg);
-				onDragEnd({dX: 123}, lastArg);
+				onDrag({dX: dX}, lastArg);
+				onDragEnd({dX: dX + 1}, lastArg);
 
 				assert(onResize.called, 'must be called');
-				assert.equal(onResize.lastCall.args[0], 123, 'must pass the new width of the pane');
+				assert.equal(onResize.lastCall.args[0], width + dX + 1, 'must pass the new width of the pane');
 				assert.equal(onResize.lastCall.args[1].props, wrapper.props(), 'must pass component props in the last arg');
 				assert.equal(onResize.lastCall.args[1].event, lastArg.event, 'must pass event reference in the last arg');
 			});
