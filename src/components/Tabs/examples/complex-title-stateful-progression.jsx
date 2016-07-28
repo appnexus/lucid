@@ -37,7 +37,7 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<Tabs isOpen={false} isProgressive={true}>
+				<Tabs isOpen={false} isProgressive={true} hasMultilineTitle={true}>
 					<Tabs.Tab Title={titleOne}>One content</Tabs.Tab>
 					<Tabs.Tab Title={titleTwo}>Two content</Tabs.Tab>
 					<Tabs.Tab Title={titleThree}>Three content</Tabs.Tab>

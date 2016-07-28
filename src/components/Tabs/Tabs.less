@@ -121,6 +121,33 @@
 			position: absolute
 		}
 	}
+
+	&-bar-is-multiline {
+		.lucid-Tabs-Tab {
+			background-color: @color-lightGray;
+			border-color: @color-gray;
+			.Tabs-mixin-tab-arrow-background(@color-lightGray);
+
+			&:hover {
+				background-color: @color-white;
+				.Tabs-mixin-tab-arrow-background(@color-white);
+			}
+		}
+		.lucid-Tabs-Tab-is-active {
+			.Tabs-mixin-tab-arrow-background(@color-white);
+		}
+		.lucid-Tabs-Tab + .lucid-Tabs-Tab-is-disabled {
+			background-color: @color-lightGray;
+			.Tabs-mixin-tab-arrow-background(@color-lightGray);
+			&:hover {
+				background-color: @color-lightGray;
+				.Tabs-mixin-tab-arrow-background(@color-lightGray);
+			}
+			&:active {
+				background-color: @color-lightGray;
+			}
+		}
+	}
 }
 
 .Tabs-mixin-tab-line(@color-Tab-line: @color-primary) {

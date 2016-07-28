@@ -92,6 +92,12 @@ const Tabs = createClass({
 		 * steps.
 		 */
 		isProgressive: bool,
+
+		/**
+		 * Set the multiline className. This is typically used for styling the Tab.Title bar
+		 * for improved readability when there are multiple React elements in the tab headers.
+		 */
+		hasMultilineTitle: bool,
 	},
 
 	getDefaultProps() {
@@ -100,6 +106,7 @@ const Tabs = createClass({
 			onSelect: _.noop,
 			isOpen: true,
 			isProgressive: false,
+			hasMultilineTitle: false,
 		};
 	},
 
@@ -110,10 +117,13 @@ const Tabs = createClass({
 			style,
 			isOpen,
 			isProgressive,
+			hasMultilineTitle,
 			...passThroughs,
 		} = this.props;
 
+		// Grab props array from each Tab
 		const tabChildProps = _.map(findTypes(this.props, Tabs.Tab), 'props');
+
 		const selectedIndexFromChildren = _.findLastIndex(tabChildProps, {
 			isSelected: true,
 		});
@@ -128,7 +138,9 @@ const Tabs = createClass({
 				style={style}
 				className={cx('&', className)}
 			>
-				<ul className={cx('&-bar')}>
+				<ul className={cx('&-bar', {
+						'&-bar-is-multiline': hasMultilineTitle,
+					})}>
 					{_.map(tabChildProps, (tabChildProp, index) => {
 						return (
 							<li
@@ -142,7 +154,6 @@ const Tabs = createClass({
 								onClick={_.partial(this.handleClicked, index, tabChildProp)}
 							>
 								<span className={cx('&-Tab-content')}>{_.get(getFirst(tabChildProp, Tabs.Title), 'props.children', '')}</span>
-
 								{isProgressive && index !== tabChildProps.length - 1 ?
 									<span className={cx('&-Tab-arrow')} >
 										<svg version='1.1'  viewBox='0 0 8 28' preserveAspectRatio='none' >

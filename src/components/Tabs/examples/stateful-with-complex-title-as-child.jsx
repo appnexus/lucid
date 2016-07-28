@@ -24,7 +24,7 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<Tabs>
+				<Tabs hasMultilineTitle={true}>
 					<Tabs.Tab>
 						<Tabs.Title>
 							One<br />
