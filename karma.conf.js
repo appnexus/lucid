@@ -27,6 +27,11 @@ module.exports = function(config) {
       'src/test-entry.js': ['webpack'],
     },
 
+		browserStack: {
+			username: process.env.BROWSER_STACK_USERNAME,
+			accessKey: process.env.BROWSER_STACK_ACCESS_KEY,
+		},
+
 		customLaunchers: {
 			bs_chrome: {
 				base: 'BrowserStack',
