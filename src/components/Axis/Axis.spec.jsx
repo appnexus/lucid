@@ -68,23 +68,6 @@ describe('Axis', () => {
 				assert.equal(wrapper.find('.lucid-Axis-tick-text').at(1).text(), 'two');
 				assert.equal(wrapper.find('.lucid-Axis-tick-text').at(2).text(), 'three');
 			});
-
-			it.skip('should accept time scales', () => {
-				const scale = d3Scale.scaleTime()
-					.domain([
-						new Date('2015-01-01T00:00:00Z'),
-						new Date('2015-01-02T00:00:00Z'),
-					])
-					.range([0, 10]);
-				const wrapper = shallow(
-					<Axis scale={scale} />
-				);
-
-				assert.equal(wrapper.find('.lucid-Axis-tick').length, 9, 'wrong number of ticks');
-				assert.equal(wrapper.find('.lucid-Axis-tick-text').at(0).text(), '2015');
-				assert.equal(wrapper.find('.lucid-Axis-tick-text').at(4).text(), '12 PM');
-				assert.equal(wrapper.find('.lucid-Axis-tick-text').at(8).text(), 'Fri 02');
-			});
 		});
 
 
