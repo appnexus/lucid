@@ -29,10 +29,10 @@ const InfoIcon = createClass({
 				{...omitProps(passThroughs, InfoIcon)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
-				isBadge
 			>
-				<rect x='7' y='3' width='2' height='2'/>
-				<rect x='7' y='6' width='2' height='7'/>
+				<circle className={cx('&-background')} cx='8' cy='8' r='8'/>
+				<rect className={cx('&-mark')} x='7' y='3' width='2' height='2'/>
+				<rect className={cx('&-mark')} x='7' y='6' width='2' height='7'/>
 			</Icon>
 		);
 	},

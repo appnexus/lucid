@@ -1,20 +1,29 @@
 .Icons {
+	padding: 15px;
 
 	&-list {
 		padding: 0;
+		height: 75vh;
 
 		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-
-		& > li {
-			width: 150px;
-			list-style-type: none;
-		}
-
-		.lucid-Button .lucid-Button-content > .lucid-Icon {
-			margin-right: @size-standard;
-		}
+		align-items: flex-start;
+		flex-flow: column wrap;
+		align-content: flex-start;
+	}
+	&-list-item {
+		list-style-type: none;
+		margin: @size-S;
+	}
+	&-list-icon {
+		margin-right: @size-S;
 	}
 
+	&-buttons {
+		.lucid-Button {
+			margin-right: @size-XXS;
+		}
+	}
+	&-buttons-section {
+		margin-bottom: @size-XL;
+	}
 }

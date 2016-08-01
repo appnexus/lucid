@@ -36,25 +36,5 @@
 			z-index: -1;
 		}
 	}
-
-	&-slide-0 { animation: 300ms 0ms slide; }
-	&-slide-1 { animation: 300ms 100ms slide; }
-	&-slide-2 { animation: 300ms 200ms slide; }
-	&-slide {
-		opacity: 0;
-		animation-fill-mode: both;
-	}
-
-	@keyframes slide {
-		from {
-			transform: translateX(-10px);
-			opacity: 0;
-		}
-
-		to {
-			transform: translateX(0);
-			opacity: 1;
-		}
-	}
 }
 
