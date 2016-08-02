@@ -306,6 +306,17 @@ describe('Sidebar', () => {
 				assert.equal('Next level locavore squid', contentWrapper.text(), 'must render content in the side bar')
 			});
 
+			it('should have the correct class on bar content for `hasGutters`', () => {
+				const wrapper = shallow(
+					<Sidebar>
+						<Sidebar.Bar hasGutters={true}>Next level locavore squid</Sidebar.Bar>
+					</Sidebar>
+				);
+
+				const contentWrapper = wrapper.find('.lucid-Sidebar > .lucid-Sidebar-Bar > .lucid-Sidebar-Bar-content');
+				assert(contentWrapper.hasClass('lucid-Sidebar-Bar-content-has-gutters'));
+			});
+
 			it('should render title from the given prop value for `title`', () => {
 				const wrapper = shallow(
 					<Sidebar>
