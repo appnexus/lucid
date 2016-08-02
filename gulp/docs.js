@@ -66,7 +66,7 @@ module.exports = {
 					var isTagged = !err && currentBranch === 'master';
 					var buildId = isTagged ? tag : currentBranch;
 
-					console.log('Uploading to docspot as ' + buildId);
+					console.log('Uploading to docspot at http://docspot.devnxs.net/projects/lucid/' + buildId);
 
 					var tarStream = gulp.src('dist/docs/**/*')
 						.pipe(tar(currentBranch + '.tar'))

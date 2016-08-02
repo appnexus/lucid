@@ -1,6 +1,7 @@
 @Icon-color-badgeBackground: @color-mediumGray;
 
 .lucid-Icon {
+	.no-firefox-svg-aliasing();
 	display: inline-block;
 	vertical-align: top; /* Prevents automatic addition of bottom margin. */
 	fill: @color-primary;
@@ -15,5 +16,14 @@
 		background-color: @Icon-color-badgeBackground;
 		border: 1px solid @color-transparent;
 		fill: @color-white;
+	}
+
+	&-is-clickable {
+		cursor: pointer;
+		fill: @color-linkColor;
+
+		&:hover {
+			fill: @color-linkColorHover;
+		}
 	}
 }

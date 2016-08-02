@@ -92,6 +92,12 @@ const Tabs = createClass({
 		 * steps.
 		 */
 		isProgressive: bool,
+
+		/**
+		 * Set the multiline className. This is typically used for styling the Tab.Title bar
+		 * for improved readability when there are multiple React elements in the tab headers.
+		 */
+		hasMultilineTitle: bool,
 	},
 
 	getDefaultProps() {
@@ -100,6 +106,7 @@ const Tabs = createClass({
 			onSelect: _.noop,
 			isOpen: true,
 			isProgressive: false,
+			hasMultilineTitle: false,
 		};
 	},
 
@@ -110,10 +117,13 @@ const Tabs = createClass({
 			style,
 			isOpen,
 			isProgressive,
+			hasMultilineTitle,
 			...passThroughs,
 		} = this.props;
 
+		// Grab props array from each Tab
 		const tabChildProps = _.map(findTypes(this.props, Tabs.Tab), 'props');
+
 		const selectedIndexFromChildren = _.findLastIndex(tabChildProps, {
 			isSelected: true,
 		});
@@ -128,7 +138,9 @@ const Tabs = createClass({
 				style={style}
 				className={cx('&', className)}
 			>
-				<ul className={cx('&-bar')}>
+				<ul className={cx('&-bar', {
+						'&-bar-is-multiline': hasMultilineTitle,
+					})}>
 					{_.map(tabChildProps, (tabChildProp, index) => {
 						return (
 							<li
@@ -141,13 +153,15 @@ const Tabs = createClass({
 								key={index}
 								onClick={_.partial(this.handleClicked, index, tabChildProp)}
 							>
-								{_.get(getFirst(tabChildProp, Tabs.Title), 'props.children', '')}
+								<span className={cx('&-Tab-content')}>{_.get(getFirst(tabChildProp, Tabs.Title), 'props.children', '')}</span>
 								{isProgressive && index !== tabChildProps.length - 1 ?
-									<svg className={cx('&-Tab-arrow')} width='8px' height='28px' viewBox='0 0 8 28' >
-										<polygon className={cx('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
-										<polyline className={cx('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1.7,3 0,3'/>
-										<polyline className={cx('&-Tab-arrow-line')} fill='none' stroke='#fff' strokeWidth='1' points='0,28 7.9,14 0,0'/>
-									</svg>
+									<span className={cx('&-Tab-arrow')} >
+										<svg version='1.1'  viewBox='0 0 8 28' preserveAspectRatio='none' >
+											<polygon className={cx('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
+											<polyline className={cx('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1,1 0,1'/>
+											<polyline className={cx('&-Tab-arrow-line')} fill='none' stroke='#fff' strokeWidth='1' points='0,28 7.9,14 0,0'/>
+										</svg>
+									</span>
 								: null}
 							</li>
 						);

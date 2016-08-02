@@ -136,11 +136,10 @@ export function common(Component, {
 // Common tests for all our icon components
 export function icons(Component) {
 	describeWithDOM('[icon]', () => {
-		it('should pass through isBadge prop to underlying Icon component', () => {
-			const wrapper = mount(<Component isBadge={true} />);
-			const classNames = wrapper.find('svg').prop('className').split(' ');
-			const targetClassName = 'lucid-Icon-is-badge';
-			assert(_.includes(classNames, targetClassName), `'${classNames}' should include '${targetClassName}'`);
+		it('should add the correct class for isClickable', () => {
+			const wrapper = mount(<Component isClickable={true} />);
+			const targetClassName = 'lucid-Icon-is-clickable';
+			assert(wrapper.find('svg').hasClass(targetClassName), `Missing '${targetClassName}' class`);
 		});
 	});
 }

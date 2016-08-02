@@ -248,7 +248,10 @@ const Component = React.createClass({
 
 				const composesComponentLinks = componentNames.map((name, index) => (
 					<span key={name}>
-						<Link to={{ pathname: `/components/${name}`, query: this.props.location.query }}>
+						<Link to={{
+							pathname: `/components/${name}`,
+							query: this.props.location.query,
+						}}>
 							{name}
 						</Link>
 						{index == componentNames.length - 1 ? null : ', '}
