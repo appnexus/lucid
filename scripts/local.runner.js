@@ -15,28 +15,53 @@ const server = new WebpackDevServer(compiler, {
 	stats: 'errors-only',
 });
 const local = new browserstack.Local();
+Nightwatch.bs_local = local;
 const browserStackConfig = {
 	key: process.env.BROWSERSTACK_ACCESS_KEY,
 };
 
-console.log('generate docs');
-gulp.start('docs-build', () => {
+try {
 
-	console.log('start webpack server');
-	server.listen(8080, 'localhost', () => {
+	process.mainModule.filename = './node_modules/.bin/nightwatch'
 
-		//Code to start browserstack local before start of test
-		console.log('connect local');
-		local.start(browserStackConfig, error => {
+	console.log('generate docs');
+	gulp.start('docs-build', () => {
 
-			if (error) { return console.error(error); }
-			console.log('start test setup');
-			Nightwatch.cli(argv => {
+		console.log('start webpack server');
+		server.listen(8080, 'localhost', err => {
 
-				Nightwatch.CliRunner(argv)
-					.setup(null, () => console.log('finished test setup'))
+			if (err) {
+				console.log('webpack server start error');
+				console.log(err);
+				server.close();
+				process.exit(1);
+			}
+
+			console.log('start browserstack-local');
+			local.start(browserStackConfig, err => {
+
+				if (err) {
+					console.log('browserstack-local error');
+					console.error(err);
+					local.stop(() => {
+						server.close();
+						process.exit(1);
+					});
+				}
+
+				console.log('start test setup');
+				Nightwatch.cli(argv => {
+
+					console.log('run tests');
+					Nightwatch.CliRunner(argv)
+					// Code to stop browserstack local after end of parallel test
+					.setup(null, () => {
+						local.stop(() => {
+							server.close()
+							process.exit(0);
+						});
+					})
 					.runTests(() => {
-						console.log('run tests');
 						// Code to stop browserstack local after end of single test
 						local.stop(() => {
 							server.close()
@@ -44,7 +69,16 @@ gulp.start('docs-build', () => {
 						});
 					});
 
+				});
 			});
 		});
 	});
-});
+
+} catch(e) {
+	console.error('something broke');
+	console.error(e.stack);
+	local.stop(() => {
+		server.close();
+		process.exit(1);
+	});
+}

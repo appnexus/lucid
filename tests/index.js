@@ -1,8 +1,24 @@
+const HOST = 'localhost';
+const PORT = 8080;
+const PATH = '#/test';
+const WAIT = 5000;
+
 module.exports = {
-	'first!': function(browser) {
-		browser
-      .url('http://localhost:8080')
-      .waitForElementVisible('.App-body', 1000)
-      .end();
+	setup: client =>
+		client
+			.url(`http://${HOST}:${PORT}/${PATH}`)
+			.waitForElementVisible('.App-body', WAIT),
+	ExpanderPanel: client =>
+		client
+			.click('.lucid-ExpanderPanel-header')
+			.assert.visible('.lucid-ExpanderPanel-content'),
+	CheckboxLabeled: client => {
+		const selector = '.lucid-CheckboxLabeled';
+		client
+			.waitForElementVisible(selector, WAIT)
+			.assert.cssClassNotPresent(selector, 'lucid-CheckboxLabeled-is-selected')
+			.click(selector)
+			.assert.cssClassPresent(selector, 'lucid-CheckboxLabeled-is-selected');
 	},
+	end: client => client.end(),
 };

@@ -1,40 +1,33 @@
+const _ = require('lodash');
+const browserstackConfig = require('./browserstack.conf.js');
 const HOST = 'hub-cloud.browserstack.com';
 const PORT = 80;
 
 module.exports = {
-  src_folders : ['tests'],
-  output_folder : 'reports',
-  custom_commands_path : '',
-  custom_assertions_path : '',
-  page_objects_path : '',
-  globals_path : '',
+	src_folders : ['tests'],
+	output_folder : 'reports',
+	custom_commands_path : '',
+	custom_assertions_path : '',
+	page_objects_path : '',
+	globals_path : '',
 
-  selenium : {
-    start_process : false,
+	selenium : {
+		start_process : false,
 		host: HOST,
-    port: PORT,
-  },
+		port: PORT,
+	},
 
-  test_settings : {
-    default : {
-			selenium_host: HOST,
-			selenium_port: PORT,
-      desiredCapabilities: {
-				build: 'nightwatch-browserstack',
-				'browserstack.user': process.env.BROWSERSTACK_USERNAME,
-				'browserstack.key': process.env.BROWSERSTACK_ACCESS_KEY,
-				'browserstack.debug': true,
-				'browserstack.local': true,
-				browser: 'chrome',
-      },
-    },
-
-    chrome : {
-      desiredCapabilities: {
-        browserName: 'chrome',
-        javascriptEnabled: true,
-        acceptSslCerts: true,
-      },
-    },
-  },
+	test_settings : _.mapValues(browserstackConfig, (config, env) => _.assign(config, {
+		selenium_host: HOST,
+		selenium_port: PORT,
+		desiredCapabilities: _.assign(config.desiredCapabilities, {
+			build: `nightwatch-browserstack-${env}`,
+			'browserstack.user': process.env.BROWSERSTACK_USERNAME,
+			'browserstack.key': process.env.BROWSERSTACK_ACCESS_KEY,
+			'browserstack.debug': true,
+			'browserstack.local': true,
+			javascriptEnabled: true,
+			acceptSslCerts: true,
+		}),
+	})),
 };

@@ -13,11 +13,13 @@
     "docs-upload": "gulp docs-upload",
     "preversion": "rm -rf dist && npm run test && gulp preversion",
     "postversion": "gulp docs-upload",
+    "start": "npm run dev",
     "test": "npm run test-browserstack && npm run test-acceptance",
     "test-browserstack": "./scripts/env-check.sh && karma start karma.conf.js --singleRun --auto-watch=false --browsers=bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge",
     "test-local": "karma start karma.conf.js --singleRun --auto-watch=false",
     "test-tdd": "karma start karma.conf.js",
-    "test-acceptance": "./scripts/env-check.sh && ./scripts/local.runner.js -c ./nightwatch.conf.js"
+    "test-acceptance": "./scripts/env-check.sh && ./scripts/local.runner.js -c ./nightwatch.conf.js -e bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge",
+    "test-acceptance-local": "nightwatch -c nightwatch.local.conf.js"
   },
   "keywords": [
     "component",
