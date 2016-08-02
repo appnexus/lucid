@@ -1,8 +1,3 @@
-// Karma configuration
-// Generated on Thu Jul 21 2016 11:32:03 GMT-0700 (PDT)
-//
-const browserstackConfig = require('./browserstack.conf.js');
-
 module.exports = function(config) {
   config.set({
 
@@ -34,7 +29,43 @@ module.exports = function(config) {
 			accessKey: process.env.BROWSERSTACK_ACCESS_KEY,
 		},
 
-		customLaunchers: browserstackConfig,
+		customLaunchers: {
+			bs_chrome: {
+				base: 'BrowserStack',
+				browser: 'chrome',
+				browser_version: '51.0',
+				os: 'OS X',
+				os_version: 'El Capitan',
+			},
+			bs_firefox: {
+				base: 'BrowserStack',
+				browser: 'firefox',
+				browser_version: '46.0',
+				os: 'OS X',
+				os_version: 'El Capitan',
+			},
+			bs_safari: {
+				base: 'BrowserStack',
+				browser: 'safari',
+				browser_version: 'latest',
+				os: 'OS X',
+				os_version: 'El Capitan',
+			},
+			bs_ie: {
+				base: 'BrowserStack',
+				browser: 'ie',
+				browser_version: 'latest',
+				os: 'Windows',
+				os_version: '10',
+			},
+			bs_edge: {
+				base: 'BrowserStack',
+				browser: 'edge',
+				browser_version: 'latest',
+				os: 'Windows',
+				os_version: '10',
+			},
+		},
 
 		webpack: {
 			watch: true,

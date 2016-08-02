@@ -1,5 +1,4 @@
 const _ = require('lodash');
-const browserstackConfig = require('./browserstack.conf.js');
 const HOST = 'hub-cloud.browserstack.com';
 const PORT = 80;
 
@@ -17,7 +16,40 @@ module.exports = {
 		port: PORT,
 	},
 
-	test_settings : _.mapValues(browserstackConfig, (config, env) => ({
+	test_settings : _.mapValues({
+		bs_chrome: {
+			base: 'BrowserStack',
+			browser: 'chrome',
+			browser_version: '51.0',
+			os: 'OS X',
+			os_version: 'El Capitan',
+		},
+		bs_firefox: {
+			base: 'BrowserStack',
+			browser: 'firefox',
+			browser_version: '46.0',
+			os: 'OS X',
+			os_version: 'El Capitan',
+		},
+		bs_safari: {
+			base: 'BrowserStack',
+			browser: 'safari',
+			os: 'OS X',
+			os_version: 'El Capitan',
+		},
+		bs_ie: {
+			base: 'BrowserStack',
+			browser: 'internet explorer',
+			os: 'Windows',
+			os_version: '10',
+		},
+		bs_edge: {
+			base: 'BrowserStack',
+			browser: 'edge',
+			os: 'Windows',
+			os_version: '10',
+		},
+	}, (config, env) => ({
 		selenium_host: HOST,
 		selenium_port: PORT,
 		desiredCapabilities: _.assign({}, config, {
