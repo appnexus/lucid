@@ -23,6 +23,7 @@ import { handleHighlightCode, toMarkdown } from './util';
 import ColorPalette from './containers/color-palette';
 import LandingPage from './containers/landing-page';
 import Icons from './containers/icons';
+import Test from './containers/test';
 
 import {
 	Table,
@@ -597,6 +598,7 @@ render((
 			<Route path='/components/:componentName' component={Component}/>
 			<Route path='/color-palette' component={ColorPalette}/>
 			<Route path='/icons' component={withRouter(Icons)}/>
+			<Route path='/test' component={withRouter(Test)} docGenMap={docgenMap}/>
 		</Route>
 	</Router>
 ), document.querySelector('#docs'));
