@@ -17,10 +17,10 @@ module.exports = {
 		port: PORT,
 	},
 
-	test_settings : _.mapValues(browserstackConfig, (config, env) => _.assign(config, {
+	test_settings : _.mapValues(browserstackConfig, (config, env) => ({
 		selenium_host: HOST,
 		selenium_port: PORT,
-		desiredCapabilities: _.assign(config.desiredCapabilities, {
+		desiredCapabilities: _.assign({}, config, {
 			build: `nightwatch-browserstack-${env}`,
 			'browserstack.user': process.env.BROWSERSTACK_USERNAME,
 			'browserstack.key': process.env.BROWSERSTACK_ACCESS_KEY,
