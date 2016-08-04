@@ -102,7 +102,7 @@ export function common(Component, {
 		describe('child components', () => {
 
 			const childComponents = _.omit(Component.definition.statics, [
-				'_lucidIsPrivate',
+				'_isPrivate',
 				'definition',
 				'propName',
 				'reducers',
@@ -125,7 +125,7 @@ export function common(Component, {
 		});
 
 		// Only run this test if it's a public component
-		if (!Component._lucidIsPrivate) {
+		if (!Component._isPrivate) {
 			it('should be available as an exported module from index.js', () => {
 				assert(lucid[Component.displayName]);
 			});

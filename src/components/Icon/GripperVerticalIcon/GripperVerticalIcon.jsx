@@ -15,7 +15,7 @@ const cx = lucidClassNames.bind('&-GripperVerticalIcon');
 const GripperVerticalIcon = createClass({
 	displayName: 'GripperVerticalIcon',
 
-	_lucidIsPrivate: true,
+	_isPrivate: true,
 
 	propTypes: {
 		...Icon.propTypes,
