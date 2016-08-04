@@ -139,12 +139,17 @@ const PropType = React.createClass({
 				]),
 			}),
 		]).isRequired,
+		/**
+		 * Only provided when we're dealing with a `shape`
+		 */
+		shapeKey: string,
 	},
 
 	render() {
 		const {
 			componentName,
 			type,
+			shapeKey,
 		} = this.props;
 
 		if (!type) {
@@ -157,21 +162,33 @@ const PropType = React.createClass({
 		if (_.isPlainObject(type.value) || _.isArray(type.value)) {
 			return (
 				<div>
+					{shapeKey ? `${shapeKey}: ` : null}
 					{type.name === 'union' ? 'oneOfType' : type.name}:
 					<ul>
-						{_.map(type.value, (innerType, index) => {
-							return (
-								<li key={index}>
-									<PropType type={innerType} componentName={componentName} />
-								</li>
-							);
-						})}
+						{type.name === 'arrayOf' ?
+							<PropType type={type.value} componentName={componentName} />
+						:
+							_.map(type.value, (innerType, key) => {
+								return (
+									<li key={key}>
+										<PropType
+											type={innerType}
+											componentName={componentName}
+											shapeKey={type.name === 'shape' ? key : null}
+										/>
+									</li>
+								);
+							})}
 					</ul>
 				</div>
 			)
 		}
 
-		return <span>{type.name || type.value || type}</span>;
+		return (
+			<span>
+				{shapeKey ? `${shapeKey}: ` : null}{type.name || type.value || type}
+			</span>
+		);
 	},
 });
 
