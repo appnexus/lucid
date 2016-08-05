@@ -49,6 +49,11 @@ describe('Button', () => {
 			let classNames = wrapper.find('button').prop('className').split(' ');
 			assert(_.includes(classNames, 'lucid-Button-is-active'), `'${classNames}' should include 'lucid-Button-is-active'`);
 		});
+
+		it('should have a button with the "has-only-icon" class when hasOnlyIcon is true', () => {
+			const wrapper = shallow(<Button hasOnlyIcon={true} />);
+			assert(wrapper.hasClass('lucid-Button-has-only-icon'));
+		});
 	});
 
 	describe('type', () => {
