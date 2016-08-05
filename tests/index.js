@@ -1,20 +1,20 @@
-const HOST = 'localhost';
-const PORT = 8080;
-const PATH = '#/test';
-const WAIT = 5000;
+const util = require('./util.js');
+
+const HOST = util.HOST;
+const PORT = util.PORT;
+const WAIT = util.WAIT;
 
 module.exports = {
-	setup: client =>
-		client
-			.url(`http://${HOST}:${PORT}/${PATH}`)
-			.waitForElementPresent('.App-body', WAIT),
 	ExpanderPanel: client =>
 		client
+			.url(`http://${HOST}:${PORT}/#/test/ExpanderPanel-examples-1-basic-jsx`)
+			.waitForElementPresent('.lucid-ExpanderPanel-header', WAIT)
 			.click('.lucid-ExpanderPanel-header')
 			.assert.visible('.lucid-ExpanderPanel-content'),
 	CheckboxLabeled: client => {
 		const selector = '.lucid-CheckboxLabeled';
 		client
+			.url(`http://${HOST}:${PORT}/#/test/CheckboxLabeled-examples-interactive-jsx`)
 			.waitForElementPresent(selector, WAIT)
 			.assert.cssClassNotPresent(selector, 'lucid-CheckboxLabeled-is-selected')
 			.click(selector)
