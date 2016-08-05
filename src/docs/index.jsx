@@ -23,7 +23,6 @@ import { handleHighlightCode, toMarkdown } from './util';
 import ColorPalette from './containers/color-palette';
 import LandingPage from './containers/landing-page';
 import Icons from './containers/icons';
-import Test from './containers/test';
 
 import {
 	Table,
@@ -591,14 +590,55 @@ const App = React.createClass({
 	},
 });
 
+const testExamplesMap = _.reduce(reqExamples.keys(), (acc, key) => {
+	const exampleName = _.chain(key).split('/').compact().drop().join('-').split('.').join('-').value();
+	return {
+		...acc,
+		[exampleName]: reqExamples(key).default,
+	};
+}, {});
+
+const testExampleKeys = _.keys(testExamplesMap);
+
+const TestList = React.createClass({
+	render() {
+		// gross hack to pass the list of examples to the screenshot test scaffold
+		window.examples = testExampleKeys;
+		return (
+			<ul id='examples-list'>
+				{_.map(testExampleKeys, path => (
+					<li key={path}>
+						<Link to={{ pathname: `/test/${path}`}}>
+							{path}
+						</Link>
+					</li>
+				))}
+			</ul>
+		);
+	},
+});
+
+const Test = React.createClass({
+	propTypes: { params: any },
+	render() {
+		const Example = testExamplesMap[this.props.params.exampleKey];
+		return (
+			<div id='example'>
+				<Example />
+			</div>
+		);
+	},
+});
+
 render((
 	<Router history={hashHistory}>
 		<Route path='/' component={App}>
 			<IndexRoute component={LandingPage} />
-			<Route path='/components/:componentName' component={Component}/>
-			<Route path='/color-palette' component={ColorPalette}/>
-			<Route path='/icons' component={withRouter(Icons)}/>
-			<Route path='/test' component={withRouter(Test)} docGenMap={docgenMap}/>
+			<Route path='components/:componentName' component={Component}/>
+			<Route path='color-palette' component={ColorPalette}/>
+			<Route path='icons' component={withRouter(Icons)}/>
 		</Route>
+		<Route path='test' component={TestList} />
+		<Route path='test/:exampleKey' component={Test} />
 	</Router>
 ), document.querySelector('#docs'));

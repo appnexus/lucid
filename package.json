@@ -18,8 +18,9 @@
     "test-browserstack": "./scripts/env-check.sh && karma start karma.conf.js --singleRun --auto-watch=false --browsers=bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge",
     "test-local": "karma start karma.conf.js --singleRun --auto-watch=false",
     "test-tdd": "karma start karma.conf.js",
-    "test-acceptance": "./scripts/env-check.sh && ./scripts/local.runner.js -c ./nightwatch.conf.js -e bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge",
-    "test-acceptance-local": "nightwatch -c nightwatch.local.conf.js"
+    "test-acceptance": "./scripts/env-check.sh && ./scripts/local.runner.js -c nightwatch/nightwatch.conf.js --skiptags setup -e bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge",
+    "test-acceptance-local": "nightwatch -c nightwatch/nightwatch.local.conf.js --skiptags setup",
+    "test-screenshot-setup": "./scripts/env-check.sh && ./scripts/local.runner.js -c nightwatch/nightwatch.conf.js -a setup -e bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge"
   },
   "keywords": [
     "component",
@@ -81,6 +82,7 @@
     "markdown": "^0.5.0",
     "mocha": "^2.5.3",
     "nightwatch": "^0.9.5",
+    "node-resemble-js": "0.0.5",
     "postcss-loader": "^0.8.1",
     "raw-loader": "^0.5.1",
     "react": "^0.14.0",

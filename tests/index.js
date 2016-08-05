@@ -7,7 +7,7 @@ module.exports = {
 	setup: client =>
 		client
 			.url(`http://${HOST}:${PORT}/${PATH}`)
-			.waitForElementVisible('.App-body', WAIT),
+			.waitForElementPresent('.App-body', WAIT),
 	ExpanderPanel: client =>
 		client
 			.click('.lucid-ExpanderPanel-header')
@@ -15,7 +15,7 @@ module.exports = {
 	CheckboxLabeled: client => {
 		const selector = '.lucid-CheckboxLabeled';
 		client
-			.waitForElementVisible(selector, WAIT)
+			.waitForElementPresent(selector, WAIT)
 			.assert.cssClassNotPresent(selector, 'lucid-CheckboxLabeled-is-selected')
 			.click(selector)
 			.assert.cssClassPresent(selector, 'lucid-CheckboxLabeled-is-selected');
