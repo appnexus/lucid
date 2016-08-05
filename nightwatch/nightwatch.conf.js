@@ -3,7 +3,6 @@ const HOST = 'hub-cloud.browserstack.com';
 const PORT = 80;
 
 module.exports = {
-	disable_colors: true,
 	src_folders : ['tests'],
 	exclude: ['tests/util.js'],
 	output_folder : 'reports',
