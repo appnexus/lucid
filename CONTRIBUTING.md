@@ -76,7 +76,7 @@ describe('MyNewComponent', () => {
 - Components should use start case e.g.:
   - "MyComponent"
   - "AnotherComponentHere.jsx"
-- We hang the `_lucidIsPrivate` boolean off our component definitions to indicate that the component isn't intended for external consumption yet. This will hide the component from the docs.
+- We hang the `_isPrivate` boolean off our component definitions to indicate that the component isn't intended for external consumption yet. This will hide the component from the docs.
 
 ## Tests
 
