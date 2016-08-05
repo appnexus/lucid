@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "1.7.1",
+  "version": "1.8.0",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "repository": {
@@ -38,6 +38,7 @@
     "reselect": "^2.5.1"
   },
   "devDependencies": {
+    "anx-docgen": "^1.0.2",
     "autoprefixer": "^6.3.3",
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
@@ -74,10 +75,8 @@
     "react": "^0.14.0",
     "react-addons-css-transition-group": "^0.14.0",
     "react-addons-test-utils": "^0.14.0",
-    "react-docgen": "^2.7.0",
     "react-dom": "^0.14.0",
     "react-router": "^2.0.0",
-    "recast": "^0.11.10",
     "sinon": "^2.0.0-pre",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.12",

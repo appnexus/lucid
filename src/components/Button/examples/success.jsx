@@ -7,19 +7,19 @@ export default React.createClass({
 			<section>
 				<article>
 					<Button kind='success'>Success</Button>
-					<Button kind='success' isDisabled={true}>is disabled</Button>
+					<Button kind='success' isDisabled={true}>Disabled</Button>
 				</article>
 				<article>
-					<Button kind='success' size='short'>short</Button>
-					<Button kind='success' size='short' isDisabled={true}>short is disabled</Button>
+					<Button kind='success' size='short'>Short</Button>
+					<Button kind='success' size='short' isDisabled={true}>Short disabled</Button>
 				</article>
 				<article>
-					<Button kind='success' size='small'>small</Button>
-					<Button kind='success' size='small' isDisabled={true}>small is disabled</Button>
+					<Button kind='success' size='small'>Small</Button>
+					<Button kind='success' size='small' isDisabled={true}>Small disabled</Button>
 				</article>
 				<article>
-					<Button kind='success' size='large'>large</Button>
-					<Button kind='success' size='large' isDisabled={true}>large is disabled</Button>
+					<Button kind='success' size='large'>Large</Button>
+					<Button kind='success' size='large' isDisabled={true}>Large disabled</Button>
 				</article>
 			</section>
 		);

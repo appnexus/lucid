@@ -14,7 +14,7 @@ const cx = lucidClassNames.bind('&-SeparatorIcon');
  */
 const SeparatorIcon = createClass({
 	displayName: 'SeparatorIcon',
-	_lucidIsPrivate: true,
+	_isPrivate: true,
 	propTypes: Icon.propTypes,
 
 	getDefaultProps() {

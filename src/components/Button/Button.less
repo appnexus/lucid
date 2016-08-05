@@ -36,6 +36,10 @@
 
 	&:before {border-radius: @Button-size-borderRadius;}
 
+	&&-has-only-icon {
+		padding: 0 5px;
+	}
+
 	& &-content {
 		display: flex;
 		justify-content: center;
@@ -43,11 +47,10 @@
 		height: 100%;
 
 		> .lucid-Icon {
-			margin-left: -1em/2;
-			transition: color 0.1s, fill 0.1s;
+			transition: color @timing-animation-hover, fill @timing-animation-hover;
 		}
 		> span {
-			transition: color 0.1s, fill 0.1s;
+			transition: color @timing-animation-hover, fill @timing-animation-hover;
 		}
 	}
 
@@ -104,11 +107,28 @@
 			box-shadow: none;
 		}
 
-		&:active:before { opacity: 0;}
+		&:active:before {
+			opacity: 0;
+		}
 
-		.lucid-Button-content{ line-height: 1em; }
-		.lucid-Icon { margin-right: 0.25em; }
-		.lucid-Icon + span { line-height: 1.4em; }
+		.lucid-Button-content{
+			line-height: 1em;
+		}
+
+		.lucid-Icon {
+			fill: @color-primary;
+			margin-right: 0.25em;
+
+			+ span {
+				line-height: 1.4em;
+			}
+		}
+	}
+	&&-link&-has-only-icon {
+		// Clear the right margin, only need it if the has text with it
+		.lucid-Icon {
+			margin-right: 0;
+		}
 	}
 
 	// Sizes
@@ -119,6 +139,9 @@
 		height: @Button-size-height-small;
 		padding: 0 @Button-size-padding/1.5;
 	}
+	&&-small&-has-only-icon {
+		padding: 0 1px;
+	}
 	&&-large {
 		height: @Button-size-height-large;
 		padding: 0 @Button-size-padding*1.5;
@@ -128,6 +151,9 @@
 			width: 1.2em;
 			height: 1.2em;
 		}
+	}
+	&&-large&-has-only-icon {
+		padding: 0 8px;
 	}
 
 	// States
@@ -163,6 +189,11 @@
 		.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
 		.opacity();
 		.no-cursor();
+	}
+
+	// Nested Icon's
+	.lucid-Icon {
+		fill: @color-darkGray;
 	}
 
 	// Also needed in some cases to beat other libraries (e.g. pure.css)
