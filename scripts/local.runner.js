@@ -25,7 +25,7 @@ try {
 	process.mainModule.filename = './node_modules/.bin/nightwatch'
 
 	console.log('generate docs');
-	// gulp.start('docs-build', () => {
+	gulp.start('docs-build', () => {
 
 		console.log('start webpack server');
 		server.listen(8080, 'localhost', err => {
@@ -72,7 +72,7 @@ try {
 				});
 			});
 		});
-	// });
+	});
 
 } catch(e) {
 	console.error('something broke');
