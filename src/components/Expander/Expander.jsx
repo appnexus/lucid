@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { Motion, spring } from 'react-motion';
+import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, findTypes, omitProps }  from '../../util/component-types';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
@@ -89,8 +91,10 @@ const Expander = createClass({
 		};
 	},
 
-	componentWillMount() {
-		this._labelKey = 0;
+	getInitialState() {
+		return {
+			maxHeight: null,
+		};
 	},
 
 	componentWillReceiveProps(nextProps) {
@@ -102,6 +106,44 @@ const Expander = createClass({
 		}
 	},
 
+	storeRef(name) {
+		return (ref) => {
+			this.Refs[name] = ref;
+		};
+	},
+
+	componentWillMount() {
+		this.Refs = {};
+		this.isAnimated = false;
+		this._labelKey = 0;
+	},
+
+	componentDidMount() {
+		_.delay(() => {
+			this.setState({
+				maxHeight: this.Refs.contentInner.offsetHeight,
+			});
+			this.isAnimated = true;
+		}, 32);
+	},
+
+	componentDidUpdate() {
+		if (this.isMounted()) {
+			this.isAnimated = false;
+			_.delay(() => {
+				if (this.props.isExpanded) {
+					const maxHeight = this.Refs.contentInner.offsetHeight;
+					if (maxHeight !== this.state.maxHeight) {
+						this.setState({
+							maxHeight,
+						});
+					}
+				}
+				this.isAnimated = true;
+			}, 32);
+		}
+	},
+
 	render() {
 		const {
 			children,
@@ -110,6 +152,10 @@ const Expander = createClass({
 			style,
 			...passThroughs,
 		} = this.props;
+
+		const {
+			maxHeight,
+		} = this.state;
 
 		const labelChildProp = _.first(_.map(findTypes(this.props, Expander.Label), 'props'));
 
@@ -138,11 +184,31 @@ const Expander = createClass({
 						: null}
 					</ReactCSSTransitionGroup>
 				</header>
-				<section className={cx('&-content', {
-					'&-content-is-expanded': isExpanded,
-				})}>
-					{children}
-				</section>
+				<Motion
+					style={this.isAnimated ? {
+						height: (isExpanded && !_.isNull(maxHeight) ? spring(maxHeight, QUICK_SLIDE_MOTION) : spring(0, QUICK_SLIDE_MOTION)),
+					} : {
+						height: (isExpanded && !_.isNull(maxHeight) ? maxHeight : 0),
+					}}
+				>
+					{tween => (
+						<section
+							className={cx('&-content', {
+								'&-content-is-expanded': isExpanded,
+							})}
+							style={{
+								height: tween.height < 0 ? 0 : tween.height,
+							}}
+						>
+							<div
+								ref={this.storeRef('contentInner')}
+								className={cx('&-content-inner')}
+							>
+								{_.isNull(maxHeight) || Math.abs(tween.height) > 4 ? children : null}
+							</div>
+						</section>
+					)}
+				</Motion>
 			</div>
 		);
 	},

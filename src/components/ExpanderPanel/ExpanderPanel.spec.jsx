@@ -44,9 +44,9 @@ describe('ExpanderPanel', () => {
 
 			it('adds the "lucid-ExpanderPanel-content-is-expanded" class to its content container element when `true`.', () => {
 				const wrapper = shallow(<ExpanderPanel isExpanded={true} />);
-
+				const motionWrapper = wrapper.find('Motion').shallow();
 				assert.equal(
-					wrapper.find('.lucid-ExpanderPanel-content-is-expanded').length,
+					motionWrapper.find('.lucid-ExpanderPanel-content-is-expanded').length,
 					1,
 					'could not find element with ".lucid-ExpanderPanel-content-is-expanded" class'
 				);
