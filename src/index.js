@@ -131,6 +131,7 @@ import * as stateManagement from './util/state-management';
 import * as styleHelpers from './util/style-helpers';
 import * as redux from './util/redux';
 import * as chartConstants from './constants/charts';
+import * as genericTests from './util/generic-tests';
 
 import * as d3Scale from 'd3-scale';
 import * as d3Time from 'd3-time';
@@ -138,6 +139,7 @@ import * as d3Time from 'd3-time';
 export {
 	componentTypes,
 	domHelpers,
+	genericTests,
 	redux,
 	stateManagement,
 	styleHelpers,
