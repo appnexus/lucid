@@ -6,7 +6,7 @@ exports.assertion = function(client, path) {
 
 	this.message = 'screenshot match';
 
-	this.expected = '< 1';
+	this.expected = '<= 1.1';
 
 	this.pass = function(result) {
 		return result < 1;
