@@ -15,6 +15,9 @@ module.exports = {
 			[],
 			result => {
 				_.forEach(result.value, id => {
+					if (_.includes(util.EXCLUDED_EXAMPLES, id)) {
+						return;
+					}
 					client
 						.url(`http://${HOST}:${PORT}/#/test/${id}`)
 						.waitForElementPresent('#example', WAIT)

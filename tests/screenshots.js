@@ -14,11 +14,17 @@ module.exports = {
 			function() { return window.examples; },
 			[],
 			result => {
-				_.forEach(result.value, id => {
+				_.forEach(result.value, path => {
+
+					if (_.includes(util.EXCLUDED_EXAMPLES, path)) {
+						return;
+					}
+
 					client
-						.url(`http://${HOST}:${PORT}/#/test/${id}`)
+						.url(`http://${HOST}:${PORT}/#/test/${path}`)
 						.waitForElementPresent('#example', WAIT)
-						.verify.screenshotHasNotChanged(client, id)
+						.verify.screenshotHasNotChanged(client, path)
+
 				});
 				client.end();
 			}
