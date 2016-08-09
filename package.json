@@ -19,9 +19,9 @@
     "test-local": "karma start karma.conf.js --singleRun --auto-watch=false",
     "test-tdd": "karma start karma.conf.js",
     "test-acceptance": "./scripts/env-check.sh && ./scripts/local.runner.js -c nightwatch/nightwatch.conf.js --skiptags setup,screenshots -e bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge",
-    "test-screenshots": "./scripts/env-check.sh && ./scripts/local.runner.js -c nightwatch/nightwatch.conf.js -a screenshots -e bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge --retries=2",
+    "test-screenshots": "./scripts/env-check.sh && ./scripts/local.runner.js -c nightwatch/nightwatch.conf.js -a screenshots -e bs_chrome,bs_firefox,bs_safari,bs_edge --retries=2",
     "test-acceptance-local": "nightwatch -c nightwatch/nightwatch.local.conf.js --skiptags setup",
-    "test-screenshot-setup": "./scripts/env-check.sh && ./scripts/local.runner.js -c nightwatch/nightwatch.conf.js -a setup -e bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge"
+    "test-screenshot-setup": "./scripts/env-check.sh && ./scripts/local.runner.js -c nightwatch/nightwatch.conf.js -a setup -e bs_chrome,bs_firefox,bs_safari,bs_edge"
   },
   "keywords": [
     "component",
