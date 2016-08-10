@@ -108,6 +108,15 @@ const Sidebar = createClass({
 				 * Set the title of the Sidebar. (alias for `title` and `Sidebar.Title`)
 				 */
 				Title: any,
+				/**
+				 * Adds default padding to the sidebar content.
+				 */
+				hasGutters: bool,
+			},
+			getDefaultProps () {
+				return {
+					hasGutters: true,
+				};
 			},
 		}),
 
@@ -229,7 +238,9 @@ const Sidebar = createClass({
 							<ChevronIcon direction={isExpanded && position === 'right' || !isExpanded && position !== 'right' ? 'right' : 'left'} />
 						</div>
 					</div>
-					<div className={cx('&-Bar-content')}>
+					<div className={cx('&-Bar-content', {
+						'&-Bar-content-has-gutters': barProps.hasGutters,
+					})}>
 						{barProps.children}
 					</div>
 				</BarPane>
