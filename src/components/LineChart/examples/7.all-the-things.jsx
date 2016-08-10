@@ -21,14 +21,8 @@ export default React.createClass({
 			<LineChart
 				margin={{
 					right: 80,
-					bottom: 100,
 				}}
 				data={data}
-				hasLegend={true}
-				legend={{
-					blueberries: 'Blueberries',
-					oranges: 'Oranges',
-				}}
 				colorMap={{
 					blueberries: chartConstants.COLOR_0,
 					oranges: chartConstants.COLOR_1,

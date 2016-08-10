@@ -6,7 +6,7 @@ var gulpConfig = require('./gulp/config');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-	devtool: 'eval',
+	devtool: 'cheap-module-eval-source-map',
 	context: __dirname,
 	entry: [
 		'./src/docs/index.html',
