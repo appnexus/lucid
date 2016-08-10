@@ -6,7 +6,7 @@ import { mount } from 'enzyme';
 
 import Resizer, { __RewireAPI__ as rewire } from './Resizer';
 
-describe.only('Resizer', () => {
+describe('Resizer', () => {
 	common(Resizer, {
 		exemptFunctionProps: ['children'],
 		getDefaultProps: () => {
