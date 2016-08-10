@@ -31,6 +31,7 @@ export default React.createClass({
 						<Legend.Item
 							key={field}
 							hasPoint
+							hasLine
 							color={palette[i % palette.length]}
 						>
 							{field}
