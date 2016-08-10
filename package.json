@@ -33,6 +33,7 @@
     "d3-shape": "^1.0.0",
     "d3-time": "^1.0.0",
     "d3-time-format": "^2.0.0",
+    "element-resize-detector": "^1.1.6",
     "lodash": "^4.11.0",
     "react-motion": "^0.4.3",
     "reselect": "^2.5.1"
