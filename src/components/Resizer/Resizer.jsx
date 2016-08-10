@@ -8,6 +8,7 @@ const erd = elementResizeDetectorMaker({ strategy: 'scroll' });
 
 const {
 	func,
+	string,
 } = React.PropTypes;
 
 /**
@@ -21,6 +22,10 @@ const {
 const Resizer = createClass({
 	displayName: 'Resizer',
 	propTypes: {
+		/**
+		 * Appended to the component-specific class names set on the root elements.
+		 */
+		className: string,
 		/**
 		 * A function that returns your rendered content with the signature:
 		 *
@@ -53,12 +58,21 @@ const Resizer = createClass({
 
 	render() {
 		const {
+			className,
+			...passThroughs,
+		} = this.props;
+
+		const {
 			width,
 			height,
 		} = this.state;
 
 		return (
-			<div className={cx('&')} ref={(ref) => this._element = ref}>
+			<div
+				className={cx('&', className)}
+				ref={(ref) => this._element = ref}
+				{...passThroughs}
+			>
 				{this.props.children(width, height)}
 			</div>
 		);
