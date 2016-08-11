@@ -11,6 +11,7 @@ const {
 	bool,
 	node,
 	number,
+	oneOfType,
 } = React.PropTypes;
 
 /**
@@ -45,7 +46,7 @@ const ScrollTable = createClass({
 		/**
 		 * Set the width of the Table inside the scrollable container.
 		 */
-		tableWidth: number,
+		tableWidth: oneOfType([number, string]),
 		/**
 		 * Set the Table contents to not allow word wrapping.
 		 */
