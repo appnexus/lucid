@@ -67,16 +67,16 @@ const Icons = React.createClass({
 					<section className={cx('&-buttons')}>
 						{_.map(icons, ([name, Icon]) => (
 							<div className={cx('&-buttons-section')} key={name}>
-								<Button size='short'><Icon /></Button>
-								<Button size='small'><Icon /></Button>
-								<Button ><Icon /></Button>
-								<Button isActive ><Icon /></Button>
-								<Button size='large'><Icon /></Button>
-								<Button kind='primary' size='short'><Icon /></Button>
-								<Button kind='primary' size='small'><Icon /></Button>
-								<Button kind='primary' ><Icon /></Button>
-								<Button kind='primary' isActive ><Icon /></Button>
-								<Button kind='primary' size='large'><Icon /></Button>
+								<Button hasOnlyIcon size='short'><Icon /></Button>
+								<Button hasOnlyIcon size='small'><Icon /></Button>
+								<Button hasOnlyIcon ><Icon /></Button>
+								<Button hasOnlyIcon isActive ><Icon /></Button>
+								<Button hasOnlyIcon size='large'><Icon /></Button>
+								<Button hasOnlyIcon kind='primary' size='short'><Icon /></Button>
+								<Button hasOnlyIcon kind='primary' size='small'><Icon /></Button>
+								<Button hasOnlyIcon kind='primary' ><Icon /></Button>
+								<Button hasOnlyIcon kind='primary' isActive ><Icon /></Button>
+								<Button hasOnlyIcon kind='primary' size='large'><Icon /></Button>
 							</div>
 						))}
 					</section>

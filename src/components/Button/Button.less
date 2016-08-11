@@ -36,6 +36,10 @@
 
 	&:before {border-radius: @Button-size-borderRadius;}
 
+	&&-has-only-icon {
+		padding: 0 5px;
+	}
+
 	& &-content {
 		display: flex;
 		justify-content: center;
@@ -44,14 +48,6 @@
 
 		> .lucid-Icon {
 			transition: color @timing-animation-hover, fill @timing-animation-hover;
-
-			// Bascially a hack to get the buttons to be square when there's only an
-			// icon in them. Went with this approach since it's css only. Obviously
-			// the negative margin and the hard coded value is pretty bad, but it
-			// should suffice unless we make large changes to our buttons.
-			&:only-child {
-				margin: 0 -7px;
-			}
 		}
 		> span {
 			transition: color @timing-animation-hover, fill @timing-animation-hover;
@@ -128,6 +124,12 @@
 			}
 		}
 	}
+	&&-link&-has-only-icon {
+		// Clear the right margin, only need it if the has text with it
+		.lucid-Icon {
+			margin-right: 0;
+		}
+	}
 
 	// Sizes
 	&&-short {
@@ -136,6 +138,9 @@
 	&&-small {
 		height: @Button-size-height-small;
 		padding: 0 @Button-size-padding/1.5;
+	}
+	&&-small&-has-only-icon {
+		padding: 0 1px;
 	}
 	&&-large {
 		height: @Button-size-height-large;
@@ -146,14 +151,9 @@
 			width: 1.2em;
 			height: 1.2em;
 		}
-
-		// Basically a hack to get the buttons to be square when there's only an
-		// icon in them. Went with this approach since it's css only. Obviously the
-		// negative margin and the hard coded value is pretty bad, but it should
-		// suffice unless we make large changes to our buttons.
-		> .lucid-Button-content > .lucid-Icon:only-child {
-			margin: 0 -10px;
-		}
+	}
+	&&-large&-has-only-icon {
+		padding: 0 8px;
 	}
 
 	// States

@@ -28,26 +28,31 @@ const Button = createClass({
 	propName: 'Button',
 	propTypes: {
 		/**
-		 * disables the button by greying it out
+		 * Disables the Button by greying it out
 		 */
 		isDisabled: bool,
 		/**
-		 * activates the button by giving it a "pressed down" look
+		 * Activates the Button by giving it a "pressed down" look
 		 */
 		isActive: bool,
 		/**
-		 * class names that are appended to the defaults
+		 * Class names that are appended to the defaults
 		 */
 		className: string,
 		/**
-		 * any valid React children
+		 * Set this to `true` if you want the Button to only contain
+		 * an icon.
+		 */
+		hasOnlyIcon: bool,
+		/**
+		 * Any valid React children
 		 */
 		children: oneOfType([
 			node,
 			arrayOf(node),
 		]),
 		/**
-		 * style variations of the button
+		 * Style variations of the Button
 		 */
 		kind: oneOf([
 			'primary',
@@ -58,7 +63,7 @@ const Button = createClass({
 			'info',
 		]),
 		/**
-		 * size variations of the button
+		 * Size variations of the Button
 		 */
 		size: oneOf([
 			'short',
@@ -72,7 +77,9 @@ const Button = createClass({
 		 */
 		onClick: func,
 		/**
-		 * form element type variations of button. Defaults to 'button' to avoid being triggered by 'Enter' anywhere on the page. Passed through to DOM button.
+		 * Form element type variations of Button. Defaults to 'button' to avoid
+		 * being triggered by 'Enter' anywhere on the page. Passed through to DOM
+		 * Button.
 		 */
 		type: string,
 	},
@@ -83,6 +90,7 @@ const Button = createClass({
 			isActive: false,
 			onClick: _.noop,
 			type: 'button',
+			hasOnlyIcon: false,
 		};
 	},
 
@@ -104,6 +112,7 @@ const Button = createClass({
 		const {
 			isDisabled,
 			isActive,
+			hasOnlyIcon,
 			kind,
 			size,
 			className,
@@ -127,6 +136,7 @@ const Button = createClass({
 					'&-short': size === 'short',
 					'&-small': size === 'small',
 					'&-large': size === 'large',
+					'&-has-only-icon': hasOnlyIcon,
 				}, className)}
 				onClick={this.handleClick}
 				disabled={isDisabled}
