@@ -18,15 +18,6 @@ export default React.createClass({
 		return (
 			<BarChart
 				data={data}
-				margin={{
-					bottom: 100,
-				}}
-				hasLegend={true}
-				legend={{
-					day: 'Day of Week',
-					apples: 'Number of Apples',
-					oranges: 'Number of Oranges',
-				}}
 				colorMap={{
 					apples: chartConstants.COLOR_GOOD,
 					oranges: chartConstants.COLOR_1,

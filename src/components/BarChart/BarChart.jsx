@@ -280,13 +280,15 @@ const BarChart = createClass({
 			...marginOriginal,
 		};
 
+		const svgClasses = cx(className, '&');
+
 		// TODO: Consider displaying something specific when there is no data,
 		// perhaps a loading indicator.
-		if (_.isEmpty(data)) {
+		if (_.isEmpty(data) || width < 1 || height < 1) {
 			return (
 				<svg
 					{...omitProps(passThroughs, BarChart)}
-					className={cx(className, '&')}
+					className={svgClasses}
 					width={width}
 					height={height}
 				/>
@@ -316,7 +318,7 @@ const BarChart = createClass({
 		return (
 			<svg
 				{...omitProps(passThroughs, BarChart)}
-				className={cx(className, '&')}
+				className={svgClasses}
 				width={width}
 				height={height}
 			>

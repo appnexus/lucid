@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "1.8.1",
+  "version": "1.9.0",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "repository": {
@@ -40,6 +40,7 @@
     "d3-shape": "^1.0.0",
     "d3-time": "^1.0.0",
     "d3-time-format": "^2.0.0",
+    "element-resize-detector": "^1.1.6",
     "lodash": "^4.11.0",
     "react-motion": "^0.4.3",
     "reselect": "^2.5.1"
