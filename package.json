@@ -14,7 +14,7 @@
     "preversion": "rm -rf dist && npm run test && gulp preversion",
     "postversion": "gulp docs-upload",
     "start": "npm run dev",
-    "test": "npm run test-browserstack && npm run test-acceptance && npm run test-screenshots",
+    "test": "npm run test-browserstack && npm run test-acceptance",
     "test-browserstack": "./scripts/env-check.sh && karma start karma.conf.js --singleRun --auto-watch=false --browsers=bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge --reporters failed",
     "test-local": "karma start karma.conf.js --singleRun --auto-watch=false",
     "test-tdd": "karma start karma.conf.js",
