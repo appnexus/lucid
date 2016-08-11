@@ -97,6 +97,7 @@ import RadioButton from './components/RadioButton/RadioButton';
 import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
 import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
+import Resizer from './components/Resizer/Resizer';
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import SeparatorIcon from './components/Icon/SeparatorIcon/SeparatorIcon';
@@ -225,6 +226,7 @@ export {
 	RadioGroupDumb,
 	RefreshIcon,
 	ResizeIcon,
+	Resizer,
 	ScrollTable,
 	SearchField,
 	SearchIcon,
