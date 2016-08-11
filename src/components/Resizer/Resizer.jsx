@@ -1,6 +1,6 @@
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 import elementResizeDetectorMaker from 'element-resize-detector';
 
 const cx = lucidClassNames.bind('&-Resizer');
@@ -69,9 +69,9 @@ const Resizer = createClass({
 
 		return (
 			<div
+				{...omitProps(passThroughs, Resizer)}
 				className={cx('&', className)}
 				ref={(ref) => this._element = ref}
-				{...passThroughs}
 			>
 				{this.props.children(width, height)}
 			</div>
@@ -80,4 +80,3 @@ const Resizer = createClass({
 });
 
 export default Resizer;
-

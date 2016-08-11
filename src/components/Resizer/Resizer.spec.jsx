@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import assert from 'assert';
 import React from 'react';
 import { common } from '../../util/generic-tests';
@@ -16,6 +17,30 @@ describe('Resizer', () => {
 		},
 	});
 
+	describe('render', () => {
+		it('should call the correct function when unmounted', () => {
+			const erd = {
+				listenTo: _.noop,
+				removeListener: sinon.spy(),
+			};
+			rewire.__Rewire__('erd', erd);
+
+			const wrapper = mount(
+				<Resizer>
+					{_.noop}
+				</Resizer>
+			);
+
+			assert(!erd.removeListener.called, 'removeListener was called before mounting');
+
+			wrapper.unmount();
+
+			assert(erd.removeListener.called, 'removeListener was not called after unmounting');
+
+			rewire.__ResetDependency__('erd');
+		});
+	});
+
 	describe('props', () => {
 		it('children should callback with width and height', () => {
 			const erd = {
@@ -25,7 +50,6 @@ describe('Resizer', () => {
 						offsetHeight: 100,
 					});
 				},
-				removeListener: sinon.spy(),
 			};
 			rewire.__Rewire__('erd', erd);
 
@@ -42,5 +66,5 @@ describe('Resizer', () => {
 			rewire.__ResetDependency__('erd');
 		});
 	});
-});
 
+});
