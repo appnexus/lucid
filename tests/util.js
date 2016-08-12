@@ -13,6 +13,8 @@ const EXCLUDED_EXAMPLE_PATHS = [
 
 
 module.exports = {
+	// exclude from tests
+	'@disabled': true,
 	HOST: HOST,
 	PORT: PORT,
 	WAIT: WAIT,

@@ -3,7 +3,6 @@ const PORT = 4444;
 
 module.exports = {
 	src_folders : ['tests'],
-	exclude: ['tests/util.js'],
 	output_folder : 'reports',
 	custom_commands_path : '',
 	custom_assertions_path : '',
