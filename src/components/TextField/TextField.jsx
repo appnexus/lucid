@@ -178,6 +178,7 @@ const TextField = createClass({
 	handleChange(event) {
 		const {
 			onChange,
+			onChangeDebounced,
 		} = this.props;
 
 		const value = _.get(event, 'target.value', '');
@@ -189,7 +190,10 @@ const TextField = createClass({
 
 		// Also call the debounced handler in case the user wants debounced change
 		// events.
-		this._handleChangeDebounced(value, { event, props: this.props });
+		if (onChangeDebounced !== _.noop) {
+			event.persist(); // https://facebook.github.io/react/docs/events.html#event-pooling
+			this._handleChangeDebounced(value, { event, props: this.props });
+		}
 	},
 
 	handleBlur(event) {

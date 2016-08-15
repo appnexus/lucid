@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import sinon from 'sinon';
 import { shallow } from 'enzyme';
@@ -14,13 +15,19 @@ describe('TextField', () => {
 		eventType: 'change',
 	});
 
-	it('should correctly debounce onChangeDebounced', (done) => {
+	it('should correctly debounce onChangeDebounced [mostly stable]', (done) => {
+		const event = {
+			target: {
+				value: 'yolo',
+			},
+			persist: _.noop,
+		};
 		const onChangeDebounced = sinon.spy();
 		const wrapper = shallow(
 			<TextField onChangeDebounced={onChangeDebounced} debounceLevel={0} />
 		);
 
-		wrapper.find('input').simulate('change', { target: { value: 'yolo' } });
+		wrapper.find('input').simulate('change', event);
 
 		assert(onChangeDebounced.notCalled);
 
@@ -42,7 +49,7 @@ describe('TextField', () => {
 	});
 
 	// This test had value, but it's been known to be flaky.
-	it('should postpone state changes if the user recently typed something in', (done) => {
+	it('should postpone state changes if the user recently typed something in [mostly stable]', (done) => {
 		const wrapper = shallow(
 			<TextField value='start' lazyLevel={1} />
 		);
@@ -113,6 +120,25 @@ describe('TextField', () => {
 
 		assert.equal(wrapper.find('textarea').length, 1);
 		assert.equal(wrapper.find('.lucid-TextField-is-multi-line').length, 1);
+	});
+
+	it('should call `event.persist` for `onChangeDebounced`', () => {
+		const event = {
+			target: {
+				value: 'yolo',
+			},
+			persist: sinon.spy(),
+		};
+		const onChangeDebounced = () => {}; // intentionally not _.noop
+		const wrapper = shallow(
+			<TextField onChangeDebounced={onChangeDebounced} />
+		);
+
+		assert(event.persist.notCalled);
+
+		wrapper.find('input').simulate('change', event);
+
+		assert(event.persist.called);
 	});
 });
 
