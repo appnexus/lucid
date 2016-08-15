@@ -1,7 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
-import describeWithDOM from '../../util/describe-with-dom';
 import assert from 'assert';
 
 import Dialog from './Dialog';
@@ -82,7 +81,7 @@ describe('Dialog', () => {
 	});
 });
 
-describeWithDOM('Dialog', () => {
+describe('Dialog', () => {
 	it('should render when isShown', () => {
 		const wrapper = mount(
 			<Dialog isShown={true}>

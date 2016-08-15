@@ -1,7 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
-import describeWithDOM from '../../util/describe-with-dom';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import { dispatchDOMEvent } from '../../util/dom-helpers';
@@ -21,24 +20,34 @@ describe('StickySection', () => {
 	});
 
 	describe('props', () => {
-		describeWithDOM('lowerBound', () => {
+		describe('lowerBound', () => {
 			let wrapper;
+			let mountTestdiv;
+
+			beforeEach(() => {
+				document.body.style.height = '10000px';
+				mountTestdiv = document.createElement('div');
+				document.body.appendChild(mountTestdiv);
+			});
 
 			afterEach(() => {
 				if (wrapper) {
 					wrapper.unmount();
 					wrapper = null;
 				}
+				document.body.style.height = '';
+				mountTestdiv.parentNode.removeChild(mountTestdiv);
 			});
 
 			it('render the sticky section normally (not fixed) when scrolled passed the lowerBound value', () => {
 				// set the lowerBound to 500
 				wrapper = mount(
-					<StickySection lowerBound={500} />
+					<StickySection lowerBound={500} />,
+					{ attachTo: mountTestdiv }
 				);
 
 				// scroll to position 499
-				window.pageYOffset = 499;
+				window.scrollTo(0, 499);
 				dispatchDOMEvent(window, 'scroll');
 
 				// check that the fixed position sticky section is rendered
@@ -46,7 +55,7 @@ describe('StickySection', () => {
 				assert.equal(_.get(wrapper.find('.lucid-StickySection-sticky-section').prop('style'), 'position'), 'absolute', 'sticky section must be position absolute');
 
 				// scroll to position 501, passed the lowerBound value
-				window.pageYOffset = 501;
+				window.scrollTo(0, 501);
 				dispatchDOMEvent(window, 'scroll');
 
 				// check that the sticky section is no longer fixed position

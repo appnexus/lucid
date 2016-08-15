@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
-import describeWithDOM from '../../util/describe-with-dom';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import SplitHorizontal from './SplitHorizontal';
@@ -29,7 +28,7 @@ describe('SplitHorizontal', () => {
 	});
 
 	describe('props', () => {
-		describeWithDOM('isExpanded', () => {
+		describe('isExpanded', () => {
 			let mountWrapper;
 
 			afterEach(() => {
@@ -60,11 +59,11 @@ describe('SplitHorizontal', () => {
 				);
 
 				assert(!mountWrapper.hasClass('lucid-SplitHorizontal-is-expanded'));
-				_.delay(done, 10);
+				_.delay(done, 32);
 			});
 		});
 
-		describeWithDOM('isAnimated', () => {
+		describe('isAnimated', () => {
 			let wrapper;
 
 			afterEach(() => {
@@ -81,7 +80,7 @@ describe('SplitHorizontal', () => {
 				_.delay(() => {
 					assert.equal(wrapper.find('.lucid-SplitHorizontal.lucid-SplitHorizontal-is-animated').length, 0);
 					done();
-				}, 10);
+				}, 32);
 			});
 
 			it('should apply the &-is-animated class when true, after initial render [mostly stable]', (done) => {
@@ -92,7 +91,7 @@ describe('SplitHorizontal', () => {
 				_.delay(() => {
 					assert.equal(wrapper.find('.lucid-SplitHorizontal.lucid-SplitHorizontal-is-animated').length, 1);
 					done();
-				}, 10)
+				}, 32)
 			});
 
 			it('should not apply the &-is-animated class when false [mostly stable]', (done) => {
@@ -103,11 +102,11 @@ describe('SplitHorizontal', () => {
 				_.delay(() => {
 					assert.equal(wrapper.find('.lucid-SplitHorizontal.lucid-SplitHorizontal-is-animated').length, 0);
 					done();
-				}, 10)
+				}, 32)
 			});
 		});
 
-		describeWithDOM('collapseShift', () => {
+		describe('collapseShift', () => {
 			let wrapper;
 			let mountTestDiv;
 
@@ -140,7 +139,7 @@ describe('SplitHorizontal', () => {
 					const slideAmount = wrapper.find(Motion).prop('style').slideAmount;
 					assert.equal(height - 64, slideAmount, 'must be translated by height - 64px');
 					done();
-				}, 10);
+				}, 32);
 			});
 
 			it('should translated by height - 64px when the top pane is primary [mostly stable]', (done) => {
@@ -157,12 +156,12 @@ describe('SplitHorizontal', () => {
 					const slideAmount = wrapper.find(Motion).prop('style').slideAmount;
 					assert.equal(height - 64, slideAmount, 'must be translated by height - 64px');
 					done();
-				}, 10);
+				}, 32);
 			});
 
 		});
 
-		describeWithDOM('onResizing', () => {
+		describe('onResizing', () => {
 			let wrapper;
 			let mountTestDiv;
 
@@ -207,7 +206,7 @@ describe('SplitHorizontal', () => {
 			});
 		});
 
-		describeWithDOM('onResize', () => {
+		describe('onResize', () => {
 			let wrapper;
 			let mountTestDiv;
 
