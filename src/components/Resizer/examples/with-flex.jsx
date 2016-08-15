@@ -26,7 +26,7 @@ export default React.createClass({
 							<div>
 								When using Resizer within a flexed container, its critical to
 								add <code>flexGrow: 1, overflow: 'hidden'</code> to its styles
-								in order to behave correctly.
+								so it will behave correctly.
 							</div>
 							<div>Width: {width}</div>
 							<div>Height: {width * 0.3}</div>
