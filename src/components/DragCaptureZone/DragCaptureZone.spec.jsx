@@ -5,7 +5,6 @@ import SyntheticEvent from 'react/lib/SyntheticEvent';
 import sinon from 'sinon';
 import { mount } from 'enzyme';
 
-import describeWithDOM from '../../util/describe-with-dom';
 import { common } from '../../util/generic-tests';
 
 import DragCaptureZone from './DragCaptureZone';
@@ -51,7 +50,7 @@ describe('DragCaptureZone', () => {
 	});
 });
 
-describeWithDOM('DragCaptureZone', () => {
+describe('DragCaptureZone', () => {
 	const dragCoordinates = {
 		pageX: 75,
 		pageY: 25,

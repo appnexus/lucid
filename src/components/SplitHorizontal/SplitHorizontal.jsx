@@ -386,13 +386,22 @@ const SplitHorizontal = createClass({
 					'&-is-expanded': isExpanded,
 					'&-is-animated': isAnimated,
 				}, className)}
+				style={{
+					overflow: 'hidden',
+					...passThroughs.style,
+				}}
 			>
 				<Motion defaultStyle={from} style={isAnimated ? _.mapValues(to, (val) => (spring(val, QUICK_SLIDE_MOTION))) : to}>
 					{(tween) => (
 						<div
 							className={cx('&-inner')}
 							ref={this.storeRef('inner')}
-							style={{transform: `translateY(${(isBottomSecondary ? 1 : -1) * Math.round(tween.slideAmount)}px)`}}
+							style={{
+								height: '100%',
+								display: 'flex',
+								flexDirection: 'column',
+								transform: `translateY(${(isBottomSecondary ? 1 : -1) * Math.round(tween.slideAmount)}px)`,
+							}}
 						>
 							<div
 								{...omitProps(topPaneProps, SplitHorizontal.TopPane)}
@@ -400,8 +409,11 @@ const SplitHorizontal = createClass({
 									'&-is-secondary': topPaneProps === secondary,
 								}, topPaneProps.className)}
 								style={{
-									flexBasis: _.isNil(topPaneProps.height) ? (topPaneProps === secondary ? 'calc(50% - 3px)' : null) : topPaneProps.height,
+									flexGrow: (isBottomSecondary ? 1 : 0),
+									flexShrink: (isBottomSecondary ? 1 : 0),
+									flexBasis: _.isNil(topPaneProps.height) ? (topPaneProps === secondary ? 'calc(50% - 3px)' : '0%') : topPaneProps.height,
 									marginTop: (isBottomSecondary ? -Math.round(tween.slideAmount) : null),
+									overflow: 'auto',
 									...topPaneProps.style,
 								}}
 								ref={this.storeRef('topPane')}
@@ -412,6 +424,11 @@ const SplitHorizontal = createClass({
 								onDragStart={this.handleDragStart}
 								onDrag={this.handleDrag}
 								onDragEnd={this.handleDragEnd}
+								style={{
+									height: '6px',
+									boxSizing: 'border-box',
+									...dividerProps.style,
+								}}
 							>{dividerProps.children || ' '}</DragCaptureZone>
 							<div
 								{...omitProps(bottomPaneProps, SplitHorizontal.BottomPane)}
@@ -419,8 +436,11 @@ const SplitHorizontal = createClass({
 									'&-is-secondary': bottomPaneProps === secondary,
 								}, bottomPaneProps.className)}
 								style={{
-									flexBasis: _.isNil(bottomPaneProps.height) ? (bottomPaneProps === secondary ? 'calc(50% - 3px)' : null) : bottomPaneProps.height,
+									flexGrow: (!isBottomSecondary ? 1 : 0),
+									flexShrink: (!isBottomSecondary ? 1 : 0),
+									flexBasis: _.isNil(bottomPaneProps.height) ? (bottomPaneProps === secondary ? 'calc(50% - 3px)' : '0%') : bottomPaneProps.height,
 									marginBottom: (isBottomSecondary ? null : -Math.round(tween.slideAmount)),
+									overflow: 'auto',
 									...bottomPaneProps.style,
 								}}
 								ref={this.storeRef('bottomPane')}

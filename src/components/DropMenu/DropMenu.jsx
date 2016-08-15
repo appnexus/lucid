@@ -173,7 +173,6 @@ const DropMenu = createClass({
 			direction: 'down',
 			selectedIndices: [],
 			focusedIndex: null,
-			portalId: 'DropMenu-Portal-' + Math.random().toString(16).substr(2),
 			flyOutStyle: { maxHeight: '18em' },
 			onExpand: _.noop,
 			onCollapse: _.noop,
@@ -191,6 +190,7 @@ const DropMenu = createClass({
 			flattenedOptionsData: [],
 			ungroupedOptionData: [],
 			optionGroupDataLookup: {},
+			portalId: this.props.portalId || 'DropMenu-Portal-' + Math.random().toString(16).substr(2),
 		}
 	},
 
@@ -416,7 +416,6 @@ const DropMenu = createClass({
 			isDisabled,
 			isExpanded,
 			direction,
-			portalId,
 			onCollapse,
 			flyOutStyle,
 		} = this.props;
@@ -426,6 +425,7 @@ const DropMenu = createClass({
 			ungroupedOptionData,
 			optionGroupDataLookup,
 			nullOptions,
+			portalId,
 		} = this.state;
 
 		const controlProps = _.get(getFirst(this.props, DropMenu.Control), 'props', {});

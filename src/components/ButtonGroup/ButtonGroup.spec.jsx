@@ -4,7 +4,6 @@ import assert from 'assert';
 import sinon from 'sinon';
 import { common } from '../../util/generic-tests';
 import { shallow, mount } from 'enzyme';
-import describeWithDOM from '../../util/describe-with-dom';
 
 import ButtonGroup from './ButtonGroup';
 
@@ -34,7 +33,7 @@ describe('ButtonGroup', () => {
 	});
 });
 
-describeWithDOM('ButtonGroup', () => {
+describe('ButtonGroup', () => {
 	it('prop onSelect', () => {
 		const onSelect = sinon.spy();
 		const wrapper = mount(

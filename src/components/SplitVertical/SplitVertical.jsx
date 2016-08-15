@@ -386,13 +386,20 @@ const SplitVertical = createClass({
 					'&-is-expanded': isExpanded,
 					'&-is-animated': isAnimated,
 				}, className)}
+				style={{
+					overflow: 'hidden',
+					...passThroughs.style,
+				}}
 			>
 				<Motion defaultStyle={from} style={isAnimated ? _.mapValues(to, (val) => (spring(val, QUICK_SLIDE_MOTION))) : to}>
 					{(tween) => (
 						<div
 							className={cx('&-inner')}
 							ref={this.storeRef('inner')}
-							style={{transform: `translateX(${(isRightSecondary ? 1 : -1) * Math.round(tween.slideAmount)}px)`}}
+							style={{
+								display: 'flex',
+								transform: `translateX(${(isRightSecondary ? 1 : -1) * Math.round(tween.slideAmount)}px)`,
+							}}
 						>
 							<div
 								{...omitProps(leftPaneProps, SplitVertical.LeftPane)}
@@ -400,8 +407,11 @@ const SplitVertical = createClass({
 									'&-is-secondary': leftPaneProps === secondary,
 								}, leftPaneProps.className)}
 								style={{
-									flexBasis: _.isNil(leftPaneProps.width) ? (leftPaneProps === secondary ? 'calc(50% - 3px)' : null) : leftPaneProps.width,
+									flexGrow: (isRightSecondary ? 1 : 0),
+									flexShrink: (isRightSecondary ? 1 : 0),
+									flexBasis: _.isNil(leftPaneProps.width) ? (leftPaneProps === secondary ? 'calc(50% - 3px)' : '0%') : leftPaneProps.width,
 									marginLeft: (isRightSecondary ? -Math.round(tween.slideAmount) : null),
+									overflow: 'auto',
 									...leftPaneProps.style,
 								}}
 								ref={this.storeRef('leftPane')}
@@ -412,6 +422,11 @@ const SplitVertical = createClass({
 								onDragStart={this.handleDragStart}
 								onDrag={this.handleDrag}
 								onDragEnd={this.handleDragEnd}
+								style={{
+									width: '6px',
+									boxSizing: 'border-box',
+									...dividerProps.style,
+								}}
 							>{dividerProps.children || ' '}</DragCaptureZone>
 							<div
 								{...omitProps(rightPaneProps, SplitVertical.RightPane)}
@@ -419,8 +434,11 @@ const SplitVertical = createClass({
 									'&-is-secondary': rightPaneProps === secondary,
 								}, rightPaneProps.className)}
 								style={{
-									flexBasis: _.isNil(rightPaneProps.width) ? (rightPaneProps === secondary ? 'calc(50% - 3px)' : null) : rightPaneProps.width,
+									flexGrow: (!isRightSecondary ? 1 : 0),
+									flexShrink: (!isRightSecondary ? 1 : 0),
+									flexBasis: _.isNil(rightPaneProps.width) ? (rightPaneProps === secondary ? 'calc(50% - 3px)' : '0%') : rightPaneProps.width,
 									marginRight: (isRightSecondary ? null : -Math.round(tween.slideAmount)),
+									overflow: 'auto',
 									...rightPaneProps.style,
 								}}
 								ref={this.storeRef('rightPane')}

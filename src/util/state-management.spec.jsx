@@ -3,7 +3,6 @@ import _ from 'lodash';
 import sinon from 'sinon';
 import React from 'react';
 import { mount } from 'enzyme';
-import describeWithDOM from './describe-with-dom';
 
 import {
 	getDeepPaths,
@@ -505,7 +504,7 @@ describe('#safeMerge', () => {
 	});
 });
 
-describeWithDOM('#buildHybridComponent', () => {
+describe('#buildHybridComponent', () => {
 	const Counter = createClass({
 		displayName: 'Counter',
 		propTypes: {

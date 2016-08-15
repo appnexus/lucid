@@ -2,7 +2,6 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
-import describeWithDOM from '../../util/describe-with-dom';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import SplitVertical from './SplitVertical';
@@ -29,7 +28,7 @@ describe('SplitVertical', () => {
 	});
 
 	describe('props', () => {
-		describeWithDOM('isExpanded', () => {
+		describe('isExpanded', () => {
 			let mountWrapper;
 
 			afterEach(() => {
@@ -60,11 +59,11 @@ describe('SplitVertical', () => {
 				);
 
 				assert(!mountWrapper.hasClass('lucid-SplitHorizontal-is-expanded'));
-				_.delay(done, 10);
+				_.delay(done, 32);
 			});
 		});
 
-		describeWithDOM('isAnimated', () => {
+		describe('isAnimated', () => {
 			let wrapper;
 
 			afterEach(() => {
@@ -81,7 +80,7 @@ describe('SplitVertical', () => {
 				_.delay(() => {
 					assert.equal(wrapper.find('.lucid-SplitVertical.lucid-SplitVertical-is-animated').length, 0);
 					done();
-				}, 10)
+				}, 32)
 			});
 
 			it('should apply the &-is-animated class when true, after initial render [mostly stable]', (done) => {
@@ -92,7 +91,7 @@ describe('SplitVertical', () => {
 				_.delay(() => {
 					assert.equal(wrapper.find('.lucid-SplitVertical.lucid-SplitVertical-is-animated').length, 1);
 					done();
-				}, 10)
+				}, 32)
 			});
 
 			it('should not apply the &-is-animated class when false [mostly stable]', (done) => {
@@ -103,11 +102,11 @@ describe('SplitVertical', () => {
 				_.delay(() => {
 					assert.equal(wrapper.find('.lucid-SplitVertical.lucid-SplitVertical-is-animated').length, 0);
 					done();
-				}, 10)
+				}, 32)
 			});
 		});
 
-		describeWithDOM('collapseShift', () => {
+		describe('collapseShift', () => {
 			let wrapper;
 			let mountTestDiv;
 
@@ -140,7 +139,7 @@ describe('SplitVertical', () => {
 					const slideAmount = wrapper.find(Motion).prop('style').slideAmount;
 					assert.equal(width - 64, slideAmount, 'must be translated by width - 64px');
 					done();
-				}, 10)
+				}, 32)
 			});
 
 			it('should translated by width - 64px when the left pane is primary [mostly stable]', (done) => {
@@ -157,12 +156,12 @@ describe('SplitVertical', () => {
 					const slideAmount = wrapper.find(Motion).prop('style').slideAmount;
 					assert.equal(width - 64, slideAmount, 'must be translated by width - 64px');
 					done();
-				}, 10);
+				}, 32);
 			});
 
 		});
 
-		describeWithDOM('onResizing', () => {
+		describe('onResizing', () => {
 			let wrapper;
 			let mountTestDiv;
 
@@ -182,10 +181,16 @@ describe('SplitVertical', () => {
 			});
 
 			it('should be called when the DragCaptureZone calls the onDrag event handler', () => {
+
+				const width = 100;
+				const dX = 122;
 				const onResizing = sinon.spy();
 
 				wrapper = mount(
-					<SplitVertical isExpanded={true} onResizing={onResizing} />
+					<SplitVertical isExpanded={true} onResizing={onResizing}>
+						<SplitVertical.LeftPane width={width}>foo</SplitVertical.LeftPane>
+						<SplitVertical.RightPane>bar</SplitVertical.RightPane>
+					</SplitVertical>
 				, { attachTo: mountTestDiv });
 
 				const {
@@ -197,17 +202,18 @@ describe('SplitVertical', () => {
 				const lastArg = { event: {} };
 
 				onDragStart(lastArg);
-				onDrag({dX: 122}, lastArg);
-				onDragEnd({dX: 123}, lastArg);
+				onDrag({dX: dX}, lastArg);
+				onDragEnd({dX: dX + 1}, lastArg);
 
 				assert(onResizing.called, 'must be called');
-				assert.equal(onResizing.lastCall.args[0], 122, 'must pass the new width of the pane');
+				assert.equal(onResizing.lastCall.args[0], width + dX, 'must pass the new width of the pane');
 				assert.equal(onResizing.lastCall.args[1].props, wrapper.props(), 'must pass component props in the last arg');
 				assert.equal(onResizing.lastCall.args[1].event, lastArg.event, 'must pass event reference in the last arg');
+
 			});
 		});
 
-		describeWithDOM('onResize', () => {
+		describe('onResize', () => {
 			let wrapper;
 			let mountTestDiv;
 
@@ -227,10 +233,16 @@ describe('SplitVertical', () => {
 			});
 
 			it('should be called when the DragCaptureZone calls the onDragEnd event handler', () => {
+
+				const width = 100;
+				const dX = 122;
 				const onResize = sinon.spy();
 
 				wrapper = mount(
-					<SplitVertical isExpanded={true} onResize={onResize} />
+					<SplitVertical isExpanded={true} onResize={onResize}>
+						<SplitVertical.LeftPane width={width}>foo</SplitVertical.LeftPane>
+						<SplitVertical.RightPane>bar</SplitVertical.RightPane>
+					</SplitVertical>
 				, { attachTo: mountTestDiv });
 
 				const {
@@ -242,11 +254,11 @@ describe('SplitVertical', () => {
 				const lastArg = { event: {} };
 
 				onDragStart(lastArg);
-				onDrag({dX: 122}, lastArg);
-				onDragEnd({dX: 123}, lastArg);
+				onDrag({dX: dX}, lastArg);
+				onDragEnd({dX: dX + 1}, lastArg);
 
 				assert(onResize.called, 'must be called');
-				assert.equal(onResize.lastCall.args[0], 123, 'must pass the new width of the pane');
+				assert.equal(onResize.lastCall.args[0], width + dX + 1, 'must pass the new width of the pane');
 				assert.equal(onResize.lastCall.args[1].props, wrapper.props(), 'must pass component props in the last arg');
 				assert.equal(onResize.lastCall.args[1].event, lastArg.event, 'must pass event reference in the last arg');
 			});
