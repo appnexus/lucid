@@ -2,7 +2,6 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
-import describeWithDOM from '../../util/describe-with-dom';
 import { findTypes } from '../../util/component-types';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
@@ -70,7 +69,7 @@ describe('Autocomplete', () => {
 			});
 		});
 
-		describeWithDOM('value', () => {
+		describe('value', () => {
 			let wrapper;
 			let rootMountNode;
 
@@ -138,7 +137,7 @@ describe('Autocomplete', () => {
 			});
 		});
 
-		describeWithDOM('onChange', () => {
+		describe('onChange', () => {
 			let wrapper;
 			let rootMountNode;
 
@@ -212,7 +211,7 @@ describe('Autocomplete', () => {
 			});
 		});
 
-		describeWithDOM('onSelect', () => {
+		describe('onSelect', () => {
 			let wrapper;
 
 			afterEach(() => {
@@ -252,7 +251,7 @@ describe('Autocomplete', () => {
 			});
 		});
 
-		describeWithDOM('onExpand', () => {
+		describe('onExpand', () => {
 			let wrapper;
 			let rootMountNode;
 

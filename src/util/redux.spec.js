@@ -28,7 +28,7 @@ describe('redux utils', () => {
 				bar: {
 					onChange: (state, payload) => ({ value: payload }),
 				},
-				asyncOperation: thunk(payload => dispatchTree => Promise.resolve(payload).then(dispatchTree.onChange)),
+				asyncOperation: thunk(payload => dispatchTree => dispatchTree.onChange(payload)),
 			},
 		};
 

@@ -30,15 +30,4 @@ module.exports = {
 		.pipe(babel())
 		.pipe(gulp.dest(CONFIG.BUILD_DIR));
 	},
-
-	test: function() {
-		return gulp.src([
-			CONFIG.JS_GLOB.SOURCE,
-			'!/**/*.json',
-			'!' + CONFIG.EXAMPLES_GLOB.SOURCE,
-		])
-		.pipe(cache('build-test')) // only useful when using a watch task
-		.pipe(babel({ plugins: ['rewire'] }))
-		.pipe(gulp.dest(CONFIG.BUILD_DIR));
-	},
 };

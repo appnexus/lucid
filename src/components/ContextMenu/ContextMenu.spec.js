@@ -2,7 +2,6 @@ import _ from 'lodash';
 import React from 'react';
 import assert from 'assert';
 import sinon from 'sinon';
-import describeWithDOM from '../../util/describe-with-dom';
 import { common } from '../../util/generic-tests';
 import { mount } from 'enzyme';
 
@@ -19,7 +18,7 @@ describe('ContextMenu', () => {
 		}),
 	});
 
-	describeWithDOM('props', () => {
+	describe('props', () => {
 		let wrapper;
 
 		afterEach(() => {

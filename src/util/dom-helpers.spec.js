@@ -1,21 +1,31 @@
 import assert from 'assert';
 import _ from 'lodash';
-import describeWithDOM from './describe-with-dom';
 
 import {
 	getAbsoluteBoundingClientRect,
 	scrollParentTo,
 } from './dom-helpers';
 
-describeWithDOM('#getAbsoluteBoundingClientRect', () => {
+describe('#getAbsoluteBoundingClientRect', () => {
+
+	let div;
+
 	it('should throw if not passed a domNode', () => {
 		assert.throws(() => {
 			getAbsoluteBoundingClientRect(null);
 		});
 	});
 
+	beforeEach(() => {
+		div = document.createElement('div');
+		document.body.appendChild(div);
+	});
+
+	afterEach(() => {
+		div.parentNode.removeChild(div);
+	});
+
 	it('should return an object with boundingClientRect properties', () => {
-		const div = document.createElement('div');
 		const result = getAbsoluteBoundingClientRect(div);
 		assert(_.isObject(result));
 		assert(_.has(result, 'bottom'));
@@ -27,14 +37,15 @@ describeWithDOM('#getAbsoluteBoundingClientRect', () => {
 	});
 });
 
-describeWithDOM('#scrollParentTo', () => {
+describe('#scrollParentTo', () => {
 	let parentNode;
 	let childNode;
 
 	beforeEach(() => {
 		parentNode = document.createElement('div');
+		parentNode.style.position = 'relative';
+		parentNode.style.overflowY = 'scroll';
 		childNode = document.createElement('div');
-		childNode.appendChild(document.createTextNode('foo'));
 		parentNode.appendChild(childNode);
 		document.body.appendChild(parentNode);
 	});
@@ -45,25 +56,28 @@ describeWithDOM('#scrollParentTo', () => {
 
 	it('should align to top if the top of the node is above the fold', () => {
 		parentNode.scrollTop = 5; // parent element is scrolled down by 5px
-		childNode.offsetTop = 0; // child element is located at the top of parent
 		scrollParentTo(childNode);
 		assert.equal(parentNode.scrollTop, 0); //expect parent to be scrolled to the top
 	});
 
 	it('should align to bottom if the bottom of the node is below the fold', () => {
 		parentNode.scrollTop = 0; // parent element is scrolled up to top
-		parentNode.clientHeight = 5; // parent element has height of 5px
-		childNode.offsetTop = 10; // child element is located 10px down from the top
-		childNode.offsetHeight = 8; // child element is has height of 8px
+		parentNode.style.overflowY = 'scroll';
+		parentNode.style.height = '5px';
+		childNode.style.height = '18px';
 		scrollParentTo(childNode);
 		assert.equal(parentNode.scrollTop, 13); //expect parent to be scrolled to align buttom of child with bottom of the parent scrollview
 	});
 
 	it('should not scroll if node is within the parent scrollview', () => {
+		const secondChild = document.createElement('div');
+		secondChild.style.height = '10px';
+		parentNode.appendChild(secondChild);
+
+		parentNode.style.height = '10px';
+		childNode.style.marginTop = '5px'; // child element is located 5px down from the top
+		childNode.style.height = '5px';
 		parentNode.scrollTop = 5; // parent element is scrolled down by 5px
-		parentNode.clientHeight = 10; // parent element has height of 10px
-		childNode.offsetTop = 10; // child element is located 10px down from the top
-		childNode.offsetHeight = 5; // child element is has height of 5px
 		scrollParentTo(childNode);
 		assert.equal(parentNode.scrollTop, 5); //expect no change in scrolling of parent
 	});

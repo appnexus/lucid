@@ -2,7 +2,6 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
-import describeWithDOM from '../../util/describe-with-dom';
 import _ from 'lodash';
 import { common, controls } from '../../util/generic-tests';
 
@@ -69,7 +68,7 @@ describe('Button', () => {
 	});
 });
 
-describeWithDOM('Button', () => {
+describe('Button', () => {
 	describe('click', () => {
 		it('should call the onClick handler when clicked', () => {
 			const onButtonClick = sinon.spy();
