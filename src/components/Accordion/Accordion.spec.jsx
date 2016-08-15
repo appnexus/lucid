@@ -4,7 +4,6 @@ import React from 'react';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
-import describeWithDOM from '../../util/describe-with-dom';
 import { common } from '../../util/generic-tests';
 import Accordion from './Accordion';
 import ExpanderPanel from '../ExpanderPanel/ExpanderPanel';
@@ -102,19 +101,29 @@ describe('Accordion', () => {
 	});
 });
 
-describeWithDOM('Accordion', () => {
+describe('Accordion', () => {
 	let wrapper;
 	let onSelect = sinon.spy();
+	let mountTestDiv;
 
 	describe('user picks one of the items', () => {
 		beforeEach(() => {
-			onSelect.reset();
-			wrapper = mount(
+			mountTestDiv = document.createElement('div');
+			document.body.appendChild(mountTestDiv);
+			wrapper = mount((
 				<Accordion onSelect={onSelect}>
 					<Accordion.Item Header='Header One'>One</Accordion.Item>
-					<Accordion.Item Header='Header Two' isDisabled={true}>Two</Accordion.Item>
+					<Accordion.Item Header='Header Two' isDisabled>Two</Accordion.Item>
 				</Accordion>
-			);
+			), {
+				attachTo: mountTestDiv,
+			});
+		});
+
+		afterEach(() => {
+			onSelect.reset();
+			wrapper && wrapper.unmount();
+			mountTestDiv && mountTestDiv.parentNode.removeChild(mountTestDiv);
 		});
 
 		it('should call the function passed in as the `onSelect` prop', () => {

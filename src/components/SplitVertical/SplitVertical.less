@@ -1,24 +1,8 @@
-@SplitVertical-transition-duration: @timing-animation-fade;
-@SplitVertical-transition-half-duration: @SplitVertical-transition-duration / 2;
-
 .lucid-SplitVertical {
-	overflow: hidden;
 
 	& > &-inner {
-		display: flex;
-
-		& > .lucid-SplitVertical-LeftPane,& > .lucid-SplitVertical-RightPane {
-			flex: 1;
-
-			&.lucid-SplitVertical-is-secondary {
-				flex: 0;
-			}
-		}
-
 		& > .lucid-SplitVertical-Divider {
-			width: 6px;
 			background: @color-gray;
-			box-sizing: border-box;
 			cursor: ew-resize;
 		}
 	}

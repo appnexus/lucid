@@ -1,19 +1,12 @@
 import _ from 'lodash';
 import assert from 'assert';
 import React from 'react';
-import SyntheticEvent from 'react/lib/SyntheticEvent';
-import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
-import describeWithDOM from '../../util/describe-with-dom';
 import { common } from '../../util/generic-tests';
 
 import CheckboxLabeled from './CheckboxLabeled';
 import Checkbox from '../Checkbox/Checkbox';
-
-SyntheticEvent;
-sinon;
-describeWithDOM;
 
 describe('CheckboxLabeled', () => {
 	common(CheckboxLabeled);

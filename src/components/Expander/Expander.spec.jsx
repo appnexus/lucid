@@ -5,7 +5,6 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
-import describeWithDOM from '../../util/describe-with-dom';
 import { common, controls } from '../../util/generic-tests';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Expander from './Expander';
@@ -98,7 +97,7 @@ describe('Expander', () => {
 	});
 });
 
-describeWithDOM('Expander', () => {
+describe('Expander', () => {
 	let wrapper;
 
 	afterEach(() => {
