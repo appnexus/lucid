@@ -12,3 +12,7 @@ node_modules
 
 # IntelliJ
 .idea
+
+# browserstack
+reports
+local.log

@@ -6,8 +6,6 @@ import assert from 'assert';
 import _ from 'lodash';
 import sinon from 'sinon';
 
-import describeWithDOM from '../../util/describe-with-dom';
-
 import Checkbox from './Checkbox';
 
 describe('Checkbox', () => {
@@ -38,7 +36,7 @@ describe('Checkbox', () => {
 	});
 });
 
-describeWithDOM('Checkbox', () => {
+describe('Checkbox', () => {
 	function simulateEvent(reactElement, selector, event) {
 		mount(reactElement).find(selector).simulate(event);
 	}

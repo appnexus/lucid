@@ -3,7 +3,6 @@ import React from 'react';
 import assert from 'assert';
 import { shallow, mount } from 'enzyme';
 import { common } from '../../util/generic-tests';
-import describeWithDOM from '../../util/describe-with-dom';
 import VerticalListMenu from './VerticalListMenu';
 import sinon from 'sinon';
 
@@ -114,7 +113,7 @@ describe('VerticalListMenu', () => {
 
 		// Since onToggle uses a Button under the hood, we need to do a `mount` test
 		// to make sure it's passing the `event` object around correctly
-		describeWithDOM('onToggle', () => {
+		describe('onToggle', () => {
 			let wrapper;
 
 			afterEach(() => {

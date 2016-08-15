@@ -2,7 +2,6 @@ import sinon from 'sinon';
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
-import describeWithDOM  from './describe-with-dom';
 import _ from 'lodash';
 import * as lucid from '../index';
 
@@ -135,7 +134,7 @@ export function common(Component, {
 
 // Common tests for all our icon components
 export function icons(Component) {
-	describeWithDOM('[icon]', () => {
+	describe('[icon]', () => {
 		it('should add the correct class for isClickable', () => {
 			const wrapper = mount(<Component isClickable={true} />);
 			const targetClassName = 'lucid-Icon-is-clickable';
@@ -147,7 +146,7 @@ export function icons(Component) {
 // Common tests for all control components
 export function controls(Component, { callbackName, controlSelector , eventType }) {
 	// Use DOM tests here since some of our controls use dom events under the hood
-	describeWithDOM('[control]', () => {
+	describe('[control]', () => {
 		it('should callback with `event` and `props`', () => {
 			const expectedSpecialProp = 32;
 			const props = {

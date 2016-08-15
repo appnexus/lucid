@@ -6,7 +6,6 @@ import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
 import { common } from '../../util/generic-tests';
-import describeWithDOM from '../../util/describe-with-dom';
 import getRandom from '../../util/random';
 
 import RadioGroup from './RadioGroup';
@@ -143,7 +142,7 @@ describe('RadioGroup', () => {
 	});
 });
 
-describeWithDOM('RadioGroup', () => {
+describe('RadioGroup', () => {
 	it('should handle multiple children', () => {
 		const wrapper = mount(
 			<RadioGroup>
