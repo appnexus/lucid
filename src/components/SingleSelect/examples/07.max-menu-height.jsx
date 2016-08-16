@@ -94,7 +94,7 @@ export default React.createClass({
 					<Option>Linen</Option>
 					<Option>Magenta</Option>
 					<Option>Maroon</Option>
-					<Option>Mediumaquamarine</Option>
+					<Option>Medium aquamarine</Option>
 					<Option>Mediumblue</Option>
 					<Option>Mediumorchid</Option>
 					<Option>Mediumpurple</Option>
