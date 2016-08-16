@@ -6,6 +6,7 @@ import { common, controls } from '../../util/generic-tests';
 import * as KEYCODE from '../../constants/key-code';
 import assert from 'assert';
 import TextField from './TextField';
+import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
 
 describe('TextField', () => {
 	common(TextField);
@@ -31,11 +32,11 @@ describe('TextField', () => {
 
 		assert(onChangeDebounced.notCalled);
 
-		setTimeout(() => {
+		_.delay(() => {
 			assert(onChangeDebounced.called);
 			assert.equal(onChangeDebounced.args[0][0], 'yolo');
 			done();
-		}, 5);
+		}, MOSTLY_STABLE_DELAY);
 	});
 
 	it('should accept a new `value` prop immediately if the user hasnt typed anything recently', () => {
@@ -66,10 +67,10 @@ describe('TextField', () => {
 
 		assert.equal(wrapper.state('value'), 'user typed');
 
-		setTimeout(() => {
+		_.delay(() => {
 			assert.equal(wrapper.state('value'), 'end');
 			done();
-		}, 20);
+		}, MOSTLY_STABLE_DELAY);
 	});
 
 	it('should callback onSubmit when the user hits enter', () => {
