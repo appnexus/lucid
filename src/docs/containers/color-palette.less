@@ -8,10 +8,6 @@
 	color-disabledText,
 	color-linkColor,
 	color-linkColorHover,
-	color-gray-5,
-	color-gray-10,
-	color-gray-25,
-	color-gray-30,
 	color-lightGray,
 	color-gray,
 	color-mediumGray,
@@ -29,26 +25,31 @@
 	featured-color-default-backgroundColor,
 	featured-color-default-gradientStartColor,
 	featured-color-default-gradientEndColor,
+	featured-color-primary-backgroundColorLight,
 	featured-color-primary-borderColor,
 	featured-color-primary-borderColorLite,
 	featured-color-primary-backgroundColor,
 	featured-color-primary-gradientStartColor,
 	featured-color-primary-gradientEndColor,
+	featured-color-success-backgroundColorLight,
 	featured-color-success-borderColor,
 	featured-color-success-borderColorLite,
 	featured-color-success-backgroundColor,
 	featured-color-success-gradientStartColor,
 	featured-color-success-gradientEndColor,
+	featured-color-info-backgroundColorLight,
 	featured-color-info-borderColor,
 	featured-color-info-borderColorLite,
 	featured-color-info-backgroundColor,
 	featured-color-info-gradientStartColor,
 	featured-color-info-gradientEndColor,
+	featured-color-warning-backgroundColorLight,
 	featured-color-warning-borderColor,
 	featured-color-warning-borderColorLite,
 	featured-color-warning-backgroundColor,
 	featured-color-warning-gradientStartColor,
 	featured-color-warning-gradientEndColor,
+	featured-color-danger-backgroundColorLight,
 	featured-color-danger-borderColor,
 	featured-color-danger-borderColorLite,
 	featured-color-danger-backgroundColor,
@@ -85,11 +86,15 @@
 	color-chart-5-dark,
 	color-chart-5-darkest,
 	color-chart-good,
-	color-chart-good-dark,
+	color-chart-good-lightest,
 	color-chart-good-light,
+	color-chart-good-dark,
+	color-chart-good-darkest,
 	color-chart-bad,
-	color-chart-bad-dark,
+	color-chart-bad-lightest,
 	color-chart-bad-light,
+	color-chart-bad-dark,
+	color-chart-bad-darkest,
 	color-chart-neutral;
 
 .ColorPalette-loop(@i: length(@ColorPalette-variables)) when (@i > 0) {
@@ -111,6 +116,8 @@
 	.ColorPalette-loop();
 
 	&-item {
+		display: flex;
+		justify-content: space-between;
 		padding: @size-standard;
 		font-size: @size-font;
 		font-family: monospace;
