@@ -468,8 +468,8 @@ const LineChart = createClass({
 							<ToolTip
 								isExpanded={true}
 								flyOutMaxWidth='none'
-								direction={mouseX === 0 ? 'right'
-									: mouseX === innerWidth ? 'left'
+								direction={mouseX < (innerWidth * 0.15) ? 'right'
+									: mouseX > (innerWidth * 0.85) ? 'left'
 									: 'up'
 								}
 							>
