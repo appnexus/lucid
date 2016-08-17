@@ -11,7 +11,7 @@
     "dev": "gulp docs-generate && webpack-dev-server --inline --content-base src/docs/",
     "docs-upload-gh": "./scripts/docs-upload-gh.sh",
     "docs-upload": "gulp docs-upload",
-    "preversion": "rm -rf dist && npm run test && gulp preversion",
+    "preversion": "rm -rf dist && npm run lint && npm run test && gulp preversion",
     "postversion": "gulp docs-upload",
     "start": "npm run dev",
     "test": "npm run test-browserstack && npm run test-acceptance",

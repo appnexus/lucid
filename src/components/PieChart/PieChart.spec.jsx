@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
 import assert from 'assert';
 import sinon from 'sinon';
