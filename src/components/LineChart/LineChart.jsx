@@ -460,60 +460,54 @@ const LineChart = createClass({
 				{/* tooltips */}
 				<g transform={`translate(${margin.left}, ${margin.top})`}>
 					{hasToolTips && isHovering && !_.isNil(mouseX) ?
-						<g>
-							<path
-								className={cx('&-tooltip-line')}
-								d={`M${mouseX},0 L${mouseX},${innerHeight}`}
-							/>
-							<ToolTip
-								isExpanded={true}
-								flyOutMaxWidth='none'
-								direction={mouseX < (innerWidth * 0.15) ? 'right'
-									: mouseX > (innerWidth * 0.85) ? 'left'
-									: 'up'
-								}
-							>
-								<ToolTip.Target elementType='g'>
-									<path
-										className={cx('&-tooltip-line')}
-										d={`M${mouseX},0 L${mouseX},1`}
-									/>
-								</ToolTip.Target>
-								<ToolTip.Title>
-									{xAxisTooltipFormatter(_.get(xPointMap, `${mouseX}.x`))}
-								</ToolTip.Title>
-								<ToolTip.Body>
-									<Legend hasBorders={false}>
-										{_.map(yAxisFields, (field, index) => (
-											_.get(xPointMap, mouseX + '.y.' + field) ?
-												<Legend.Item
-													key={index}
-													hasPoint={yAxisHasPoints}
-													hasLine={true}
-													color={_.get(colorMap, field, palette[index % palette.length])}
-													pointKind={index}
-												>
-													{`${_.get(legend, field, field)}: ${yFinalFormatter(_.get(xPointMap, mouseX + '.y.' + field))}`}
-												</Legend.Item>
-											: null
-										))}
-										{_.map(y2AxisFields, (field, index) => (
-											_.get(xPointMap, mouseX + '.y.' + field) ?
-												<Legend.Item
-													key={index}
-													hasPoint={y2AxisHasPoints}
-													hasLine={true}
-													color={_.get(colorMap, field, palette[index + yAxisFields.length % palette.length])}
-													pointKind={index + yAxisFields.length}
-												>
-													{`${_.get(legend, field, field)}: ${y2FinalFormatter(_.get(xPointMap, mouseX + '.y.' + field))}`}
-												</Legend.Item>
-											: null
-										))}
-									</Legend>
-								</ToolTip.Body>
-							</ToolTip>
-						</g>
+						<ToolTip
+							isExpanded={true}
+							flyOutMaxWidth='none'
+							alignment={mouseX < (innerWidth * 0.15) ? 'start'
+								: mouseX > (innerWidth * 0.85) ? 'end'
+								: 'center'
+							}
+						>
+							<ToolTip.Target elementType='g'>
+								<path
+									className={cx('&-tooltip-line')}
+									d={`M${mouseX},0 L${mouseX},${innerHeight}`}
+								/>
+							</ToolTip.Target>
+							<ToolTip.Title>
+								{xAxisTooltipFormatter(_.get(xPointMap, `${mouseX}.x`))}
+							</ToolTip.Title>
+							<ToolTip.Body>
+								<Legend hasBorders={false}>
+									{_.map(yAxisFields, (field, index) => (
+										_.get(xPointMap, mouseX + '.y.' + field) ?
+											<Legend.Item
+												key={index}
+												hasPoint={yAxisHasPoints}
+												hasLine={true}
+												color={_.get(colorMap, field, palette[index % palette.length])}
+												pointKind={index}
+											>
+												{`${_.get(legend, field, field)}: ${yFinalFormatter(_.get(xPointMap, mouseX + '.y.' + field))}`}
+											</Legend.Item>
+										: null
+									))}
+									{_.map(y2AxisFields, (field, index) => (
+										_.get(xPointMap, mouseX + '.y.' + field) ?
+											<Legend.Item
+												key={index}
+												hasPoint={y2AxisHasPoints}
+												hasLine={true}
+												color={_.get(colorMap, field, palette[index + yAxisFields.length % palette.length])}
+												pointKind={index + yAxisFields.length}
+											>
+												{`${_.get(legend, field, field)}: ${y2FinalFormatter(_.get(xPointMap, mouseX + '.y.' + field))}`}
+											</Legend.Item>
+										: null
+									))}
+								</Legend>
+							</ToolTip.Body>
+						</ToolTip>
 					: null}
 				</g>
 
