@@ -463,9 +463,11 @@ const LineChart = createClass({
 						<ToolTip
 							isExpanded={true}
 							flyOutMaxWidth='none'
-							alignment={mouseX < (innerWidth * 0.15) ? 'start'
-								: mouseX > (innerWidth * 0.85) ? 'end'
-								: 'center'
+							alignment={mouseX < (innerWidth * 0.15)
+								? 'start'
+								: mouseX > (innerWidth * 0.85)
+									? 'end'
+									: 'center'
 							}
 						>
 							<ToolTip.Target elementType='g'>
