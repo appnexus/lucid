@@ -28,7 +28,6 @@ describe('redux utils', () => {
 				bar: {
 					onChange: (state, payload) => ({ value: payload }),
 				},
-				asyncOperation: thunk(payload => dispatchTree => dispatchTree.onChange(payload)),
 			},
 		};
 
@@ -156,32 +155,102 @@ describe('redux utils', () => {
 
 			describe('dispatchTree/mapDispatchToProps', () => {
 
-				const {
-					connectors,
-				} = getReduxPrimitives({
-					reducers,
-					initialState,
-				});
+				describe('synchronous dispatch', () => {
 
-				const mapDispatchToProps = connectors[1];
-				const mockDispatch = sinon.spy(action => isFunction(action) ? action(mockDispatch) : action);
-				const dispatchTree = mapDispatchToProps(mockDispatch);
+					const rootState = {
+						qux: {
+							quux: {
+								foo: {
+									value: 'foo',
+									bar: {
+										value: null,
+									},
+								},
+							},
+						},
+					};
 
-				beforeEach(() => mockDispatch.reset());
+					const initialState = rootState.qux.quux;
 
-				it('should dispatch the correct action', () => {
-					dispatchTree.foo.onChange('bar', 'baz');
-					const dispatchedAction = mockDispatch.getCall(0).args[0];
-					assert.deepEqual(dispatchedAction, {
-						type: 'foo.onChange',
-						payload: 'bar',
-						meta: ['baz'],
-					}, 'must include path as type, first param as payload, and subsequent params as meta');
+					const {
+						connectors,
+					} = getReduxPrimitives({
+						reducers,
+						initialState,
+						rootPath: ['qux', 'quux'],
+					});
+
+					const mockDispatch = sinon.spy(action => action);
+					const mapDispatchToProps = connectors[1];
+					const dispatchTree = mapDispatchToProps(mockDispatch);
+
+					beforeEach(() => {
+						mockDispatch.reset();
+					});
+
+					it('should dispatch the correct action', () => {
+						dispatchTree.foo.onChange('bar', 'baz');
+						const dispatchedAction = mockDispatch.getCall(0).args[0];
+						assert.deepEqual(dispatchedAction, {
+							type: 'qux.quux.foo.onChange',
+							payload: 'bar',
+							meta: ['baz'],
+						}, 'must include path as type, first param as payload, and subsequent params as meta');
+					});
+
 				});
 
 				describe('thunks', () => {
 
-					beforeEach(() => dispatchTree.foo.asyncOperation('qux'));
+					const thunkSpy = sinon.spy();
+
+					const reducers = {
+						foo: {
+							onChange: (state, payload) => {
+								return ({ value: payload });
+							},
+							bar: {
+								onChange: (state, payload) => ({ value: payload }),
+							},
+							asyncOperation: thunk(payload => dispatchTree => dispatchTree.onChange(payload)),
+							thunkSpy: thunk(() => thunkSpy),
+						},
+					};
+
+					const rootState = {
+						qux: {
+							quux: {
+								foo: {
+									value: 'foo',
+									bar: {
+										value: null,
+									},
+								},
+							},
+						},
+					};
+
+					const initialState = rootState.qux.quux;
+
+					const {
+						connectors,
+					} = getReduxPrimitives({
+						reducers,
+						initialState,
+						rootPath: ['qux', 'quux'],
+					});
+
+					const extraArgs = ['rest1', 'rest2'];
+
+					const mapDispatchToProps = connectors[1];
+					const mockGetState = sinon.spy(() => rootState);
+					const mockDispatch = sinon.spy(action => isFunction(action) ? action(mockDispatch, mockGetState, ...extraArgs) : action);
+					const dispatchTree = mapDispatchToProps(mockDispatch);
+
+					beforeEach(() => {
+						thunkSpy.reset();
+						dispatchTree.foo.asyncOperation('qux');
+					});
 
 					it('should dispatch a thunk', () => {
 						const dispatchedThunk = mockDispatch.getCall(0).args[0];
@@ -191,10 +260,31 @@ describe('redux utils', () => {
 					it('should dispatch the correct action', () => {
 						const dispatchedAction = mockDispatch.getCall(1).args[0];
 						assert.deepEqual(dispatchedAction, {
-							type: 'foo.onChange',
+							type: 'qux.quux.foo.onChange',
 							payload: 'qux',
 							meta: [],
 						}, 'must include path as type and param on payload');
+					});
+
+					it('should call the thunk with the correct arguments', () => {
+
+						dispatchTree.foo.thunkSpy();
+
+						const {
+							args: [
+								localDispatchTree,
+								getLocalState,
+								dispatch,
+								getState,
+								...rest
+							],
+						} = thunkSpy.getCall(0);
+
+						assert.equal(dispatchTree.foo, localDispatchTree, 'must be called with local dispatchTree');
+						assert.equal(getLocalState(), rootState.qux.quux.foo, 'must be called with getLocalState');
+						assert.equal(dispatch, mockDispatch, 'must be called with redux.dispatch');
+						assert.equal(getState, mockGetState, 'must be called with redux.getState');
+
 					});
 
 				});
