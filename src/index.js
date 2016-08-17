@@ -45,6 +45,7 @@ import Banner from './components/Banner/Banner';
 import Bar from './components/Bar/Bar';
 import BarChart from './components/BarChart/BarChart';
 import Bars from './components/Bars/Bars';
+import BellIcon from './components/Icon/BellIcon/BellIcon';
 import Breadcrumb from './components/Breadcrumb/Breadcrumb';
 import Button from './components/Button/Button';
 import CalendarIcon from './components/Icon/CalendarIcon/CalendarIcon';
@@ -53,6 +54,7 @@ import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
 import Checkbox from './components/Checkbox/Checkbox';
 import CheckboxLabeled from './components/CheckboxLabeled/CheckboxLabeled';
 import ChevronIcon from './components/Icon/ChevronIcon/ChevronIcon';
+import ClockIcon from './components/Icon/ClockIcon/ClockIcon';
 import ContextMenu from './components/ContextMenu/ContextMenu';
 import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
@@ -68,6 +70,7 @@ import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EditPageIcon from './components/Icon/EditPageIcon/EditPageIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
+import FourSquaresIcon from'./components/Icon/FourSquaresIcon/FourSquaresIcon';
 import Grid from './components/Grid/Grid';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
@@ -85,6 +88,8 @@ import LoadingMessage from './components/LoadingMessage/LoadingMessage';
 import LockedIcon from './components/Icon/LockedIcon/LockedIcon';
 import MaximizeIcon from './components/Icon/MaximizeIcon/MaximizeIcon';
 import MinimizeIcon from './components/Icon/MinimizeIcon/MinimizeIcon';
+import MinusCircleIcon from './components/Icon/MinusCircleIcon/MinusCircleIcon';
+import MinusCircleLightIcon from './components/Icon/MinusCircleLightIcon/MinusCircleLightIcon';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import NewWindowIcon from './components/Icon/NewWindowIcon/NewWindowIcon';
 import Overlay from './components/Overlay/Overlay';
@@ -93,6 +98,7 @@ import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Point from './components/Point/Point';
 import Points from './components/Points/Points';
 import Portal from './components/Portal/Portal';
+import QuestionMarkCircleIcon from './components/Icon/QuestionMarkCircleIcon/QuestionMarkCircleIcon';
 import RadioButton from './components/RadioButton/RadioButton';
 import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
 import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
@@ -161,6 +167,7 @@ export {
 	Bar,
 	BarChart,
 	Bars,
+	BellIcon,
 	Breadcrumb,
 	Button,
 	ButtonGroup,
@@ -171,6 +178,7 @@ export {
 	Checkbox,
 	CheckboxLabeled,
 	ChevronIcon,
+	ClockIcon,
 	ContextMenu,
 	CrossIcon,
 	DangerIcon,
@@ -192,6 +200,7 @@ export {
 	ExpanderPanel,
 	ExpanderPanelDumb,
 	FilterIcon,
+	FourSquaresIcon,
 	Grid,
 	HelpIcon,
 	HomeIcon,
@@ -209,6 +218,8 @@ export {
 	LockedIcon,
 	MaximizeIcon,
 	MinimizeIcon,
+	MinusCircleIcon,
+	MinusCircleLightIcon,
 	MinusIcon,
 	NewWindowIcon,
 	Overlay,
@@ -220,6 +231,7 @@ export {
 	Point,
 	Points,
 	Portal,
+	QuestionMarkCircleIcon,
 	RadioButton,
 	RadioButtonLabeled,
 	RadioGroup,
