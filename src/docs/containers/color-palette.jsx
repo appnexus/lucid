@@ -223,38 +223,49 @@ function rgb2hex(rgb) {
 }
 
 const ColorPalette = React.createClass({
+	getInitialState() {
+		return {
+			hexMap: {},
+		}
+	},
 
 	// In order to keep our colors coming from LESS, we need to do some...
 	// interesting... dom inspection to get the actual background colors
 	// rendered.
-	injectHexDisplays() {
-		const allItems = document.querySelectorAll(`.${cx('&-item')}`);
+	getHexMap() {
+		const allItems = document.querySelectorAll('[data-less-variable]');
+		const hexMap = _.reduce(allItems, (acc, item) => {
+			const lessVariable = item.dataset.lessVariable;
+			const hexString = rgb2hex(window.getComputedStyle(item).getPropertyValue('background-color'));
 
-		_.each(allItems, (item) => {
-			const hexDisplayElement = document.createElement('span');
-			const rgbString = window.getComputedStyle(item).getPropertyValue('background-color');
+			return {
+				...acc,
+				[lessVariable]: hexString,
+			};
+		}, {});
 
-			hexDisplayElement.innerText = rgb2hex(rgbString);
-
-			item.appendChild(hexDisplayElement);
-		});
+		this.setState({ hexMap });
 	},
 
 	componentDidMount() {
 		// Because of the way we load our css with webpack, we need to make sure
 		// that the page is loaded before we try to sniff out the colors
 		if (document.readyState === 'complete') {
-			this.injectHexDisplays();
+			this.getHexMap();
 		} else {
-			window.addEventListener('load', this.injectHexDisplays);
+			window.addEventListener('load', this.getHexMap);
 		}
 	},
 
 	componentWillUnmount() {
-		window.removeEventListener('load', this.injectHexDisplays);
+		window.removeEventListener('load', this.getHexMap);
 	},
 
 	render() {
+		const {
+			hexMap,
+		} = this.state;
+
 		return (
 			<div className={cx('&')}>
 				<h2>Color Palette</h2>
@@ -270,9 +281,13 @@ const ColorPalette = React.createClass({
 						: null}
 
 						{_.map(group.variables, (variable, j) => (
-							<div key={j} className={classNames(cx('&-item', `&-${variable}`))}>
-								<span>{`@${variable};`}</span>
-								{/* another <span> injected here be `this.injectHexDisplays`*/}
+							<div
+								key={j}
+								data-less-variable={variable}
+								className={classNames(cx('&-item', `&-${variable}`))}
+							>
+								<span >{`@${variable};`}</span>
+								<span>{hexMap[variable]}</span>
 							</div>
 						))}
 					</div>
