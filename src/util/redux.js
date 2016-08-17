@@ -69,12 +69,12 @@ export function getReduxPrimitives({
 	function createActionCreator(node, rootPath, path) {
 		if (node.isThunk) {
 			return function thunk(...args) {
-				return function thunkInner(dispatch, getState) {
+				return function thunkInner(dispatch, getState, ...rest) {
 					const pathToLocalDispatchTree = _.slice(path, rootPath.length, -1);
 					const pathToLocalState = _.dropRight(path);
 					const localDispatchTree = _.isEmpty(pathToLocalDispatchTree) ? dispatchTree : _.get(dispatchTree, pathToLocalDispatchTree);
 					const getLocalState = _.isEmpty(pathToLocalState) ? getState : () => _.get(getState(), pathToLocalState);
-					return node(...args)(localDispatchTree, getLocalState, dispatch, getState);
+					return node(...args)(localDispatchTree, getLocalState, dispatch, getState, ...rest);
 				};
 			};
 		}

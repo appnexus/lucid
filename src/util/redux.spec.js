@@ -284,6 +284,7 @@ describe('redux utils', () => {
 						assert.equal(getLocalState(), rootState.qux.quux.foo, 'must be called with getLocalState');
 						assert.equal(dispatch, mockDispatch, 'must be called with redux.dispatch');
 						assert.equal(getState, mockGetState, 'must be called with redux.getState');
+						assert.deepEqual(rest, extraArgs, 'must pass through extra arguments');
 
 					});
 
