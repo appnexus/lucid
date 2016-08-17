@@ -6,6 +6,7 @@ import sinon from 'sinon';
 import { common } from '../../util/generic-tests';
 import Sidebar from './Sidebar';
 import SplitVertical from '../SplitVertical/SplitVertical';
+import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
 
 describe('Sidebar', () => {
 	common(Sidebar);
@@ -71,7 +72,7 @@ describe('Sidebar', () => {
 					assert(splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical')
 					assert(splitVertical.shallow().hasClass('lucid-SplitVertical-is-expanded'), 'must have the lucid-SplitVertical-is-expanded className')
 					done()
-				}, 10);
+				}, MOSTLY_STABLE_DELAY);
 			});
 
 			it('should pass isExpanded to the underlying SplitVertical (false) [mostly stable]', (done) => {
@@ -85,7 +86,7 @@ describe('Sidebar', () => {
 					assert(!splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical')
 					assert(!splitVertical.hasClass('lucid-SplitVertical-is-expanded'), 'must not have the lucid-SplitVertical-is-expanded className')
 					done();
-				}, 10);
+				}, MOSTLY_STABLE_DELAY);
 			});
 
 			it('should default to true [mostly stable]', (done) => {
@@ -99,7 +100,7 @@ describe('Sidebar', () => {
 					assert(splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical')
 					assert(splitVertical.shallow().hasClass('lucid-SplitVertical-is-expanded'), 'must have the lucid-SplitVertical-is-expanded className')
 					done();
-				}, 10);
+				}, MOSTLY_STABLE_DELAY);
 			});
 		});
 

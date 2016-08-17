@@ -7,6 +7,7 @@ import { common } from '../../util/generic-tests';
 import ToolTip from './ToolTip';
 import ContextMenu from '../ContextMenu/ContextMenu';
 import CrossIcon from '../Icon/CrossIcon/CrossIcon';
+import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
 
 const {
 	Target,
@@ -254,7 +255,7 @@ describe('ToolTip', () => {
 				_.delay(() => {
 					assert(spy.calledOnce, 'onMouseOut must be called once');
 					done();
-				}, 100);
+				}, MOSTLY_STABLE_DELAY * 2);
 			});
 
 			it('should not call onMouseOut if cursor enters FlyOut', done => {
@@ -274,7 +275,7 @@ describe('ToolTip', () => {
 				_.delay(() => {
 					assert(!spy.called, 'onMouseOut must not be called');
 					done();
-				}, 100);
+				}, MOSTLY_STABLE_DELAY * 2);
 			});
 
 		});
