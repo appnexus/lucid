@@ -12,19 +12,19 @@ const colorList = [
 		description: 'Basic colors',
 		variables: [
 			'color-white',
-			'color-black',
 			'color-backgroundColor',
 			'color-pageBackgroundColor',
 			'color-borderColor',
+			'color-black',
 		],
 	},
 	{
 		category: 'Primary',
 		description: 'The primary color is the most prominent color used throughout lucid. It\'s great for drawing the user\'s eye to particular components.',
 		variables: [
-			'color-primary',
-			'color-primaryMedium',
 			'color-primaryLight',
+			'color-primaryMedium',
+			'color-primary',
 		],
 	},
 	{
@@ -47,15 +47,6 @@ const colorList = [
 		],
 	},
 	{
-		category: 'Transparent Grays',
-		variables: [
-			'color-gray-5',
-			'color-gray-10',
-			'color-gray-25',
-			'color-gray-30',
-		],
-	},
-	{
 		category: 'Featured Colors',
 		description: 'A featured color should only be used for a component that has multiple states like banners, buttons, or button like components (e.g. SingleSelect).',
 		variables: [
@@ -70,60 +61,65 @@ const colorList = [
 	{
 		category: 'Featured Default',
 		variables: [
-			'featured-color-default-borderColor',
-			'featured-color-default-backgroundColor',
 			'featured-color-default-gradientStartColor',
+			'featured-color-default-backgroundColor',
 			'featured-color-default-gradientEndColor',
+			'featured-color-default-borderColor',
 		],
 	},
 	{
 		category: 'Featured Primary',
 		variables: [
-			'featured-color-primary-borderColor',
+			'featured-color-primary-backgroundColorLight',
 			'featured-color-primary-backgroundColor',
 			'featured-color-primary-borderColorLite',
 			'featured-color-primary-gradientStartColor',
 			'featured-color-primary-gradientEndColor',
+			'featured-color-primary-borderColor',
 		],
 	},
 	{
 		category: 'Featured Success',
 		variables: [
-			'featured-color-success-borderColor',
+			'featured-color-success-backgroundColorLight',
 			'featured-color-success-backgroundColor',
 			'featured-color-success-borderColorLite',
 			'featured-color-success-gradientStartColor',
 			'featured-color-success-gradientEndColor',
+			'featured-color-success-borderColor',
 		],
 	},
 	{
 		category: 'Featured Info',
 		variables: [
-			'featured-color-info-borderColor',
+			'featured-color-info-backgroundColorLight',
 			'featured-color-info-backgroundColor',
 			'featured-color-info-borderColorLite',
 			'featured-color-info-gradientStartColor',
 			'featured-color-info-gradientEndColor',
+			'featured-color-info-borderColor',
 		],
 	},
 	{
 		category: 'Featured Warning',
 		variables: [
-			'featured-color-warning-borderColor',
+			'featured-color-warning-backgroundColorLight',
 			'featured-color-warning-backgroundColor',
 			'featured-color-warning-borderColorLite',
 			'featured-color-warning-gradientStartColor',
 			'featured-color-warning-gradientEndColor',
+			'featured-color-warning-borderColor',
 		],
 	},
 	{
 		category: 'Featured Danger',
 		variables: [
-			'featured-color-danger-borderColor',
+			'featured-color-danger-backgroundColorLight',
 			'featured-color-danger-backgroundColor',
 			'featured-color-danger-borderColorLite',
 			'featured-color-danger-gradientStartColor',
 			'featured-color-danger-gradientEndColor',
+			'featured-color-danger-borderColor',
 		],
 	},
 	{
@@ -190,17 +186,21 @@ const colorList = [
 	{
 		category: 'Chart Semantic Good',
 		variables: [
+			'color-chart-good-lightest',
 			'color-chart-good-light',
 			'color-chart-good',
 			'color-chart-good-dark',
+			'color-chart-good-darkest',
 		],
 	},
 	{
 		category: 'Chart Semantic Bad',
 		variables: [
+			'color-chart-bad-lightest',
 			'color-chart-bad-light',
 			'color-chart-bad',
 			'color-chart-bad-dark',
+			'color-chart-bad-darkest',
 		],
 	},
 	{
@@ -211,13 +211,66 @@ const colorList = [
 	},
 ];
 
+// Yoinked from SO: http://stackoverflow.com/a/3627747/895558
+function hex(x) {
+	return ('0' + parseInt(x).toString(16)).slice(-2);
+}
+
+function rgb2hex(rgb) {
+	const matches = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+
+	return '#' + hex(matches[1]) + hex(matches[2]) + hex(matches[3]);
+}
+
 const ColorPalette = React.createClass({
+	getInitialState() {
+		return {
+			hexMap: {},
+		}
+	},
+
+	// In order to keep our colors coming from LESS, we need to do some...
+	// interesting... dom inspection to get the actual background colors
+	// rendered.
+	getHexMap() {
+		const allItems = document.querySelectorAll('[data-less-variable]');
+		const hexMap = _.reduce(allItems, (acc, item) => {
+			const lessVariable = item.dataset.lessVariable;
+			const hexString = rgb2hex(window.getComputedStyle(item).getPropertyValue('background-color'));
+
+			return {
+				...acc,
+				[lessVariable]: hexString,
+			};
+		}, {});
+
+		this.setState({ hexMap });
+	},
+
+	componentDidMount() {
+		// Because of the way we load our css with webpack, we need to make sure
+		// that the page is loaded before we try to sniff out the colors
+		if (document.readyState === 'complete') {
+			this.getHexMap();
+		} else {
+			window.addEventListener('load', this.getHexMap);
+		}
+	},
+
+	componentWillUnmount() {
+		window.removeEventListener('load', this.getHexMap);
+	},
+
 	render() {
+		const {
+			hexMap,
+		} = this.state;
+
 		return (
 			<div className={cx('&')}>
 				<h2>Color Palette</h2>
 
-				<p>A list of all colors used.  Colors are listed by group type.</p>
+				<p>This page documents important colors used in Lucid.</p>
 
 				{_.map(colorList, (group, i) => (
 					<div key={i}>
@@ -228,8 +281,13 @@ const ColorPalette = React.createClass({
 						: null}
 
 						{_.map(group.variables, (variable, j) => (
-							<div key={j} className={classNames(cx('&-item', `&-${variable}`))}>
-								{`@${variable};`}
+							<div
+								key={j}
+								data-less-variable={variable}
+								className={classNames(cx('&-item', `&-${variable}`))}
+							>
+								<span >{`@${variable};`}</span>
+								<span>{hexMap[variable]}</span>
 							</div>
 						))}
 					</div>

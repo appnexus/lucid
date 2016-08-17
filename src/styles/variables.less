@@ -92,8 +92,10 @@
 
 // Primary colors
 @color-primary: #2abbb0;
-@color-primaryMedium: tint(@color-primary, 65%);
 @color-primaryLight: tint(@color-primary, 85%);
+@color-primaryMedium: tint(@color-primary, 65%);
+
+// Transparent primary colors
 @color-primary-30: fade(@color-primary, 30%);
 
 // Transparent grays
@@ -141,39 +143,44 @@
 @featured-color-default-gradientEndColor: #e2e2e2;
 
 // Featured primary color
-@featured-color-primary-borderColor: @featured-color-primary;
-@featured-color-primary-borderColorLite: tint(@featured-color-primary, 60%);
+@featured-color-primary-backgroundColorLight: tint(@featured-color-primary, 90%);
 @featured-color-primary-backgroundColor: tint(@featured-color-primary, 70%);
+@featured-color-primary-borderColorLite: tint(@featured-color-primary, 60%);
 @featured-color-primary-gradientStartColor: tint(@featured-color-primary, 30%);
 @featured-color-primary-gradientEndColor: @featured-color-primary;
+@featured-color-primary-borderColor: @featured-color-primary;
 
 // Featured success color
-@featured-color-success-borderColor: @featured-color-success;
-@featured-color-success-borderColorLite: tint(@featured-color-success, 60%);
+@featured-color-success-backgroundColorLight: tint(@featured-color-success, 90%);
 @featured-color-success-backgroundColor: tint(@featured-color-success, 70%);
+@featured-color-success-borderColorLite: tint(@featured-color-success, 60%);
 @featured-color-success-gradientStartColor: tint(@featured-color-success, 30%);
 @featured-color-success-gradientEndColor: @featured-color-success;
+@featured-color-success-borderColor: @featured-color-success;
 
 // Featured info color
-@featured-color-info-borderColor: @featured-color-info;
+@featured-color-info-backgroundColorLight: tint(@featured-color-info, 90%);
 @featured-color-info-borderColorLite: tint(@featured-color-info, 60%);
 @featured-color-info-backgroundColor: tint(@featured-color-info, 70%);
 @featured-color-info-gradientStartColor: tint(@featured-color-info, 30%);
 @featured-color-info-gradientEndColor: @featured-color-info;
+@featured-color-info-borderColor: @featured-color-info;
 
 // Featured warning color
-@featured-color-warning-borderColor: @featured-color-warning;
+@featured-color-warning-backgroundColorLight: tint(@featured-color-warning, 90%);
 @featured-color-warning-borderColorLite: tint(@featured-color-warning, 60%);
 @featured-color-warning-backgroundColor: tint(@featured-color-warning, 70%);
 @featured-color-warning-gradientStartColor: tint(@featured-color-warning, 30%);
 @featured-color-warning-gradientEndColor: @featured-color-warning;
+@featured-color-warning-borderColor: @featured-color-warning;
 
 // Featured danger color
-@featured-color-danger-borderColor: @featured-color-danger;
+@featured-color-danger-backgroundColorLight: tint(@featured-color-danger, 90%);
 @featured-color-danger-borderColorLite: tint(@featured-color-danger, 60%);
 @featured-color-danger-backgroundColor: tint(@featured-color-danger, 70%);
 @featured-color-danger-gradientStartColor: tint(@featured-color-danger, 30%);
 @featured-color-danger-gradientEndColor: @featured-color-danger;
+@featured-color-danger-borderColor: @featured-color-danger;
 
 
 // -------------------------------------
@@ -215,11 +222,15 @@
 	color-chart-5-dark,
 	color-chart-5-darkest,
 	color-chart-good,
-	color-chart-good-dark,
+	color-chart-good-lightest,
 	color-chart-good-light,
+	color-chart-good-dark,
+	color-chart-good-darkest,
 	color-chart-bad,
-	color-chart-bad-dark,
+	color-chart-bad-lightest,
 	color-chart-bad-light,
+	color-chart-bad-dark,
+	color-chart-bad-darkest,
 	color-chart-neutral;
 
 @color-chart-0: @featured-color-info;
@@ -261,12 +272,16 @@
 // Semantic colors
 
 @color-chart-good: @featured-color-success;
-@color-chart-good-dark: shade(@color-chart-good, 35%);
+@color-chart-good-lightest: tint(@color-chart-good, 90%);
 @color-chart-good-light: tint(@color-chart-good, 65%);
+@color-chart-good-dark: shade(@color-chart-good, 35%);
+@color-chart-good-darkest: shade(@color-chart-good, 70%);
 
 @color-chart-bad: @featured-color-danger;
-@color-chart-bad-dark: shade(@color-chart-bad, 35%);
+@color-chart-bad-lightest: tint(@color-chart-bad, 90%);
 @color-chart-bad-light: tint(@color-chart-bad, 65%);
+@color-chart-bad-dark: shade(@color-chart-bad, 35%);
+@color-chart-bad-darkest: shade(@color-chart-bad, 70%);
 
 @color-chart-neutral: @color-gray;
 
