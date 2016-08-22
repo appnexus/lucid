@@ -8,10 +8,10 @@ import Overlay from '../Overlay/Overlay';
 
 describe('Dialog', () => {
 	common(Dialog, {
-		selector: '.lucid-Dialog',
 		getDefaultProps: () => {
 			return { isShown: true };
 		},
+		selectRoot: (wrapper) => wrapper.find('.lucid-Dialog'),
 	});
 
 	it('should pass `isModal` to underlying Overlay', () => {

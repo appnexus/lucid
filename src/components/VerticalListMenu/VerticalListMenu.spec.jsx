@@ -57,7 +57,6 @@ describe('VerticalListMenu', () => {
 				);
 
 				assert.equal(wrapper.find('.lucid-VerticalListMenu-Item-content-is-selected').length, 2);
-				assert.equal(wrapper.find('.lucid-VerticalListMenu-Item-nested-list-is-expanded').length, 2);
 			});
 		});
 

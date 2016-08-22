@@ -2,10 +2,9 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps }  from '../../util/component-types';
-import { Motion, spring } from 'react-motion';
-import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
+import Collapsible  from '../Collapsible/Collapsible';
 import Panel from '../Panel/Panel';
 
 import * as reducers from '../Expander/Expander.reducers';
@@ -99,55 +98,12 @@ const ExpanderPanel = createClass({
 		};
 	},
 
-	getInitialState() {
-		return {
-			maxHeight: null,
-		};
-	},
-
 	handleToggle(event) {
 		if(!this.props.isDisabled){
 			this.props.onToggle(!this.props.isExpanded, {
 				event,
 				props: this.props,
 			});
-		}
-	},
-
-	storeRef(name) {
-		return (ref) => {
-			this.Refs[name] = ref;
-		};
-	},
-
-	componentWillMount() {
-		this.Refs = {};
-		this.isAnimated = false;
-	},
-
-	componentDidMount() {
-		_.delay(() => {
-			this.setState({
-				maxHeight: this.Refs.contentInner.offsetHeight,
-			});
-			this.isAnimated = true;
-		}, 32);
-	},
-
-	componentDidUpdate() {
-		if (this.isMounted()) {
-			this.isAnimated = false;
-			_.delay(() => {
-				if (this.props.isExpanded) {
-					const maxHeight = this.Refs.contentInner.offsetHeight;
-					if (maxHeight !== this.state.maxHeight) {
-						this.setState({
-							maxHeight,
-						});
-					}
-				}
-				this.isAnimated = true;
-			}, 32);
 		}
 	},
 
@@ -160,10 +116,6 @@ const ExpanderPanel = createClass({
 			style,
 			...passThroughs,
 		} = this.props;
-
-		const {
-			maxHeight,
-		} = this.state;
 
 		const headerChildProps = _.get(getFirst(this.props, ExpanderPanel.Header), 'props');
 
@@ -187,32 +139,13 @@ const ExpanderPanel = createClass({
 					<span {...headerChildProps} />
 				</Panel.Header>
 
-				<Motion
-					style={this.isAnimated ? {
-						height: (isExpanded && !_.isNull(maxHeight) ? spring(maxHeight, QUICK_SLIDE_MOTION) : spring(0, QUICK_SLIDE_MOTION)),
-					} : {
-						height: (isExpanded && !_.isNull(maxHeight) ? maxHeight : 0),
-					}}
-				>
-					{tween => (
-						<div
-							ref={this.storeRef('content')}
-							className={cx('&-content', {
-								'&-content-is-expanded': isExpanded,
-							})}
-							style={{
-								height: tween.height < 0 ? 0 : tween.height,
-							}}
-						>
-							<div
-								ref={this.storeRef('contentInner')}
-								className={cx('&-content-inner')}
-							>
-								{_.isNull(maxHeight) || Math.abs(tween.height) > 4 ? children : null}
-							</div>
-						</div>
-					)}
-				</Motion>
+				<Collapsible isExpanded={isExpanded} className={cx('&-content', {
+					'&-content-is-expanded': isExpanded,
+				})}>
+					<div className={cx('&-content-inner')}>
+						{children}
+					</div>
+				</Collapsible>
 			</Panel>
 		);
 	},
