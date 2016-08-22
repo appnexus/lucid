@@ -97,6 +97,19 @@ describe('Accordion', () => {
 				assert(_.has(rootProps, 'foo'), 'props missing "foo" prop');
 				assert(_.has(rootProps, 'bar'), 'props missing "bar" prop');
 			});
+
+			it('passes through Item className to the rendered item element', () => {
+				const wrapper = shallow(
+					<Accordion>
+						<Accordion.Item className='TestOne'>One</Accordion.Item>
+						<Accordion.Item className='TestTwo'>Two</Accordion.Item>
+					</Accordion>
+				);
+				const itemsWrapper = wrapper.find('.lucid-Accordion-Item');
+
+				assert.equal(itemsWrapper.find('.TestOne').length, 1, 'must find one item with className `TestOne`');
+				assert.equal(itemsWrapper.find('.TestTwo').length, 1, 'must find one item with className `TestTwo`');
+			});
 		});
 	});
 });
