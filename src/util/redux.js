@@ -228,18 +228,7 @@ function mergeProps(state, dispatchTree, ownProps) {
 }
 
 function cleanArgs(args) {
-	return hasEvent(_.last(args))
+	return _.chain(args).last().has('event').value()
 		? _.dropRight(args)
 		: args;
-}
-
-function hasEvent(obj) {
-	return obj && obj.event
-		? isEvent(obj.event)
-		: isEvent(obj);
-}
-
-function isEvent(obj) {
-	const proto = Object.getPrototypeOf(Object.getPrototypeOf(obj));
-	return proto && proto.constructor && proto.constructor.name === 'SyntheticUIEvent';
 }
