@@ -30,8 +30,8 @@ export default React.createClass({
 					<div style={{ display: 'flex', justifyContent: 'center' }}>
 						<SingleSelect DropMenu={{ isExpanded: true }}>
 							<SingleSelect.Option>Will</SingleSelect.Option>
-							<SingleSelect.Option>Not</SingleSelect.Option>
-							<SingleSelect.Option>Remain</SingleSelect.Option>
+							<SingleSelect.Option>Stay</SingleSelect.Option>
+							<SingleSelect.Option>Rendered</SingleSelect.Option>
 						</SingleSelect>
 					</div>
 					<p>Flexitarian gentrify taxidermy, bitters chambray swag etsy brunch kogi pork belly authentic. Direct trade put a bird on it ad bespoke, occaecat marfa cliche nisi aliquip kale chips synth readymade. Odio austin keytar pour-over fugiat. Pickled everyday carry laborum sartorial pinterest labore, organic voluptate banh mi kitsch. Leggings austin thundercats cliche. Neutra typewriter sapiente, intelligentsia semiotics +1 esse ex authentic aesthetic banh mi drinking vinegar knausgaard. Id tousled culpa, ut chia cillum actually fashion axe cronut forage assumenda tilde ramps.</p>
