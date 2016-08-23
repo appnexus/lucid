@@ -227,7 +227,7 @@ function mergeProps(state, dispatchTree, ownProps) {
 	return _.merge({}, state, dispatchTree, ownProps);
 }
 
-function cleanArgs(args) {
+export function cleanArgs(args) {
 	return _.chain(args).last().has('event').value()
 		? _.dropRight(args)
 		: args;
