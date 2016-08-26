@@ -85,9 +85,13 @@ const BarChart = createClass({
 		 */
 		legend: object,
 		/**
-		 * Show tool tips on hover.
+		 * Show tooltips on hover.
 		 */
 		hasToolTips: bool,
+		/**
+		 * Controls the visibility of series' titles within the tooltips.
+		 */
+		hasToolTipTitles: bool,
 		/**
 		 * Show a legend at the bottom of the chart.
 		 */
@@ -225,6 +229,7 @@ const BarChart = createClass({
 			},
 			palette: chartConstants.PALETTE_6,
 			hasToolTips: true,
+			hasToolTipTitles: true,
 			hasLegend: false,
 
 			xAxisField: 'x',
@@ -251,6 +256,7 @@ const BarChart = createClass({
 			data,
 			legend,
 			hasToolTips,
+			hasToolTipTitles,
 			hasLegend,
 			palette,
 			colorMap,
@@ -419,6 +425,7 @@ const BarChart = createClass({
 						data={data}
 						isStacked={yAxisIsStacked}
 						hasToolTips={hasToolTips}
+						hasToolTipTitles={hasToolTipTitles}
 						legend={legend}
 						palette={palette}
 						colorMap={colorMap}
