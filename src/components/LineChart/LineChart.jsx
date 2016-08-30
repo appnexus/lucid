@@ -482,7 +482,7 @@ const LineChart = createClass({
 							<ToolTip.Body>
 								<Legend hasBorders={false}>
 									{_.map(yAxisFields, (field, index) => (
-										_.get(xPointMap, mouseX + '.y.' + field) ?
+										!_.isNil(_.get(xPointMap, mouseX + '.y.' + field)) ?
 											<Legend.Item
 												key={index}
 												hasPoint={yAxisHasPoints}
@@ -495,7 +495,7 @@ const LineChart = createClass({
 										: null
 									))}
 									{_.map(y2AxisFields, (field, index) => (
-										_.get(xPointMap, mouseX + '.y.' + field) ?
+										!_.isNil(_.get(xPointMap, mouseX + '.y.' + field)) ?
 											<Legend.Item
 												key={index}
 												hasPoint={y2AxisHasPoints}
