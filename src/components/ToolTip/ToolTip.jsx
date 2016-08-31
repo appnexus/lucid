@@ -94,10 +94,12 @@ const ToolTip = createClass({
 		isExpanded: bool,
 		/**
 		 * Called when cursor moves over the target
+		 * Signature: `({ props, event }) => {}`
 		 */
 		onMouseOver: func,
 		/**
 		 * Called when cursor leaves the target and the ToolTip
+		 * Signature: `({ props, event }) => {}`
 		 */
 		onMouseOut: func,
 		/**
@@ -149,9 +151,10 @@ const ToolTip = createClass({
 		};
 	},
 
-	handleMouseOut() {
+	handleMouseOut(event) {
 		setTimeout(() => {
 			const {
+				props,
 				state: {
 					isMouseOverFlyout,
 					isMouseOverTarget,
@@ -161,7 +164,7 @@ const ToolTip = createClass({
 				},
 			} = this;
 			if (!isMouseOverFlyout && !isMouseOverTarget) {
-				onMouseOut();
+				onMouseOut({ props, event });
 			}
 		}, 100);
 	},
@@ -175,9 +178,9 @@ const ToolTip = createClass({
 		this.handleMouseOut();
 	},
 
-	handleMouseOverTarget() {
+	handleMouseOverTarget(event) {
 		this.setState({ isMouseOverTarget: true });
-		this.props.onMouseOver();
+		this.props.onMouseOver({ props: this.props, event });
 	},
 
 	handleMouseOutTarget() {

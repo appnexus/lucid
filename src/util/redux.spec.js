@@ -6,11 +6,23 @@ import {
 } from 'lodash';
 
 import {
+	cleanArgs,
 	thunk,
 	getReduxPrimitives,
 } from './redux';
 
 describe('redux utils', () => {
+
+	describe('#cleanArgs', () => {
+		it('it should remove the last element if it has an `event` property', () => {
+			assert.deepEqual(cleanArgs(['foo', 'bar', { event: 'event' }]), ['foo', 'bar']);
+			assert.deepEqual(cleanArgs(['foo', 'bar', { event: null }]), ['foo', 'bar']);
+		});
+
+		it('it should not remove the last element if it has no `event` property', () => {
+			assert.deepEqual(cleanArgs(['foo', 'bar']), ['foo', 'bar']);
+		});
+	});
 
 	describe('#thunk', () => {
 		it('should set `isThunk` property on the input function to `true`', () => {
