@@ -65,7 +65,7 @@ const ContextMenu = createClass({
 		 */
 		isExpanded: bool,
 		/**
-		 * Called when a click event happenens outside of the ContextMenu.
+		 * Called when a click event happenens outside of the ContextMenu, with the signature `({ props, event }) => { ... }`
 		 */
 		onClickOut: func,
 		/**
@@ -145,7 +145,7 @@ const ContextMenu = createClass({
 			if (this.props.onClickOut && this.refs.flyOutPortal) {
 				const flyOutEl = this.refs.flyOutPortal.portalElement.firstChild;
 				if (!(flyOutEl.contains(event.target) || this.refs.target.contains(event.target))) {
-					this.props.onClickOut(event);
+					this.props.onClickOut({ props: this.props, event });
 				}
 			}
 		});
