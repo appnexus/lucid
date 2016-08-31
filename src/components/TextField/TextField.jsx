@@ -83,7 +83,7 @@ const TextField = createClass({
 		/**
 		 * Fires an event on every keydown
 		 *
-		 * Signature: `(event) => {}`
+		 * Signature: `({ event, props }) => {}`
 		 */
 		onKeyDown: func,
 
@@ -209,14 +209,17 @@ const TextField = createClass({
 
 	handleKeyDown(event) {
 		const {
-			onSubmit,
-			onKeyDown,
-		} = this.props;
+			props,
+			props: {
+				onSubmit,
+				onKeyDown,
+			},
+		} = this;
 		const value = _.get(event, 'target.value', '');
 
 		// If the consumer passed an onKeyDown, we call it
 		if (onKeyDown) {
-			onKeyDown(event);
+			onKeyDown({ event, props });
 		}
 
 		if (event.keyCode === KEYCODE.Enter) {
