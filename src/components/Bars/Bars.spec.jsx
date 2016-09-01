@@ -30,6 +30,7 @@ describe('Bars', () => {
 			'yScale',
 			'xFormatter',
 			'yFormatter',
+			'yTooltipFormatter',
 		],
 		getDefaultProps: () => ({
 			data: defaultData,
