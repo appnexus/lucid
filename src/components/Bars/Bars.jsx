@@ -278,7 +278,7 @@ const Bars = createClass({
 								</ToolTip.Title>
 
 								<ToolTip.Body>
-									<Legend hasBorders={false}>
+									<Legend hasBorders={false} isReversed={isStacked}>
 										{_.map(yFields, (field, fieldIndex) => (
 											<Legend.Item
 												key={fieldIndex}

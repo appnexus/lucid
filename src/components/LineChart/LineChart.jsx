@@ -497,7 +497,7 @@ const LineChart = createClass({
 								{xAxisTooltipFormatter(_.get(xPointMap, `${mouseX}.x`))}
 							</ToolTip.Title>
 							<ToolTip.Body>
-								<Legend hasBorders={false}>
+								<Legend hasBorders={false} isReversed={yAxisIsStacked}>
 									{_.map(yAxisFields, (field, index) => (
 										_.get(xPointMap, mouseX + '.y.' + field) ?
 											<Legend.Item
