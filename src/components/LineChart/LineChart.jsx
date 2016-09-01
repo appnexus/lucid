@@ -92,13 +92,9 @@ const LineChart = createClass({
 		 */
 		legend: object,
 		/**
-		 * Show tooltips on hover.
+		 * Show tool tips on hover.
 		 */
 		hasToolTips: bool,
-		/**
-		 * Controls the visibility of series' titles within the tooltips.
-		 */
-		hasToolTipTitles: bool,
 		/**
 		 * Show a legend at the bottom of the chart.
 		 */
@@ -227,6 +223,14 @@ const LineChart = createClass({
 		 * `number` is supported only for backwards compatability.
 		 */
 		yAxisTitleColor: oneOfType([number, string]),
+		/**
+		 * An optional function used to format your y axis titles and data in the
+		 * tooltips. The first value is the name of your y field, the second value
+		 * is your post-formatted y value.
+		 *
+		 * Signature: `(yField, yValueFormatted) => {}`
+		 */
+		yAxisTooltipFormatter: func,
 
 
 		/**
@@ -302,7 +306,6 @@ const LineChart = createClass({
 			},
 			palette: chartConstants.PALETTE_6,
 			hasToolTips: true,
-			hasToolTipTitles: true,
 			hasLegend: false,
 
 			xAxisField: 'x',
@@ -319,6 +322,7 @@ const LineChart = createClass({
 			yAxisTickCount: null,
 			yAxisTitle: null,
 			yAxisTitleColor: '#000',
+			yAxisTooltipFormatter: (yField, yValueFormatted) => `${yField}: ${yValueFormatted}`,
 
 			y2AxisFields: null,
 			y2AxisIsStacked: false,
@@ -345,7 +349,6 @@ const LineChart = createClass({
 			data,
 			legend,
 			hasToolTips,
-			hasToolTipTitles,
 			hasLegend,
 			palette,
 			colorMap,
@@ -367,6 +370,7 @@ const LineChart = createClass({
 			yAxisTitle,
 			yAxisTitleColor,
 			yAxisMin,
+			yAxisTooltipFormatter,
 			yAxisMax = yAxisIsStacked
 				? maxByFieldsStacked(data, yAxisFields)
 				: maxByFields(data, yAxisFields),
@@ -496,10 +500,7 @@ const LineChart = createClass({
 												color={_.get(colorMap, field, palette[index % palette.length])}
 												pointKind={index}
 											>
-												{hasToolTipTitles ?
-													<span>{`${_.get(legend, field, field)}:\u00a0`}</span>
-												: null}
-												<span>{`${yFinalFormatter(_.get(xPointMap, mouseX + '.y.' + field))}`}</span>
+												{yAxisTooltipFormatter(_.get(legend, field, field), yFinalFormatter(_.get(xPointMap, mouseX + '.y.' + field)))}
 											</Legend.Item>
 										: null
 									))}
@@ -512,10 +513,7 @@ const LineChart = createClass({
 												color={_.get(colorMap, field, palette[index + yAxisFields.length % palette.length])}
 												pointKind={index + yAxisFields.length}
 											>
-												{hasToolTipTitles ?
-													<span>{`${_.get(legend, field, field)}:\u00a0`}</span>
-												: null}
-												<span>{`${y2FinalFormatter(_.get(xPointMap, mouseX + '.y.' + field))}`}</span>
+												{yAxisTooltipFormatter(_.get(legend, field, field), y2FinalFormatter(_.get(xPointMap, mouseX + '.y.' + field)))}
 											</Legend.Item>
 										: null
 									))}

@@ -85,13 +85,9 @@ const BarChart = createClass({
 		 */
 		legend: object,
 		/**
-		 * Show tooltips on hover.
+		 * Show tool tips on hover.
 		 */
 		hasToolTips: bool,
-		/**
-		 * Controls the visibility of series' titles within the tooltips.
-		 */
-		hasToolTipTitles: bool,
 		/**
 		 * Show a legend at the bottom of the chart.
 		 */
@@ -203,6 +199,14 @@ const BarChart = createClass({
 		 * `number` is supported only for backwards compatability.
 		 */
 		yAxisTitleColor: oneOfType([number, string]),
+		/**
+		 * An optional function used to format your y axis titles and data in the
+		 * tooltips. The first value is the name of your y field, the second value
+		 * is your post-formatted y value.
+		 *
+		 * Signature: `(yField, yValueFormatted) => {}`
+		 */
+		yAxisTooltipFormatter: func,
 	},
 
 	statics: {
@@ -229,7 +233,6 @@ const BarChart = createClass({
 			},
 			palette: chartConstants.PALETTE_6,
 			hasToolTips: true,
-			hasToolTipTitles: true,
 			hasLegend: false,
 
 			xAxisField: 'x',
@@ -244,6 +247,7 @@ const BarChart = createClass({
 			yAxisMin: 0,
 			yAxisTitle: null,
 			yAxisTitleColor: '#000',
+			yAxisTooltipFormatter: (yField, yValueFormatted) => `${yField}: ${yValueFormatted}`,
 		};
 	},
 
@@ -256,7 +260,6 @@ const BarChart = createClass({
 			data,
 			legend,
 			hasToolTips,
-			hasToolTipTitles,
 			hasLegend,
 			palette,
 			colorMap,
@@ -274,6 +277,7 @@ const BarChart = createClass({
 			yAxisIsStacked,
 			yAxisTickCount,
 			yAxisMin,
+			yAxisTooltipFormatter,
 			yAxisMax = yAxisIsStacked
 				? maxByFieldsStacked(data, yAxisFields)
 				: maxByFields(data, yAxisFields),
@@ -424,8 +428,8 @@ const BarChart = createClass({
 						yStackedMax={yAxisMax}
 						data={data}
 						isStacked={yAxisIsStacked}
+						yTooltipFormatter={yAxisTooltipFormatter}
 						hasToolTips={hasToolTips}
-						hasToolTipTitles={hasToolTipTitles}
 						legend={legend}
 						palette={palette}
 						colorMap={colorMap}
