@@ -444,6 +444,13 @@ const LineChart = createClass({
 				? y2Scale.tickFormat()
 				: _.identity;
 
+		// This logic is getting a bit complicated
+		const yAxisHasPointsFinal = yAxisHasPoints || yAxisIsStacked;
+		const yAxisHasLinesFinal = !(yAxisIsStacked && !yAxisHasPoints);
+
+		const y2AxisHasPointsFinal = y2AxisHasPoints || y2AxisIsStacked;
+		const y2AxisHasLinesFinal = !(y2AxisIsStacked && !y2AxisHasPoints);
+
 		// This is used to map x mouse values back to data points.
 		const xPointMap = _.reduce(data, (acc, d) => {
 			// `floor` to avoid rounding errors, it doesn't need to be super precise
@@ -495,10 +502,10 @@ const LineChart = createClass({
 										_.get(xPointMap, mouseX + '.y.' + field) ?
 											<Legend.Item
 												key={index}
-												hasPoint={yAxisHasPoints}
-												hasLine={true}
+												hasPoint={yAxisHasPointsFinal}
+												hasLine={yAxisHasLinesFinal}
 												color={_.get(colorMap, field, palette[index % palette.length])}
-												pointKind={index}
+												pointKind={yAxisHasPoints ? index : 1}
 											>
 												{yAxisTooltipFormatter(_.get(legend, field, field), yFinalFormatter(_.get(xPointMap, mouseX + '.y.' + field)))}
 											</Legend.Item>
@@ -508,10 +515,10 @@ const LineChart = createClass({
 										_.get(xPointMap, mouseX + '.y.' + field) ?
 											<Legend.Item
 												key={index}
-												hasPoint={y2AxisHasPoints}
-												hasLine={true}
+												hasPoint={y2AxisHasPointsFinal}
+												hasLine={y2AxisHasLinesFinal}
 												color={_.get(colorMap, field, palette[index + yAxisFields.length % palette.length])}
-												pointKind={index + yAxisFields.length}
+												pointKind={y2AxisHasPoints ? index + yAxisFields.length : 1}
 											>
 												{yAxisTooltipFormatter(_.get(legend, field, field), y2FinalFormatter(_.get(xPointMap, mouseX + '.y.' + field)))}
 											</Legend.Item>
@@ -553,10 +560,10 @@ const LineChart = createClass({
 									{_.map(yAxisFields, (field, index) => (
 										<Legend.Item
 											key={index}
-											hasPoint={yAxisHasPoints}
-											hasLine={true}
+											hasPoint={yAxisHasPointsFinal}
+											hasLine={yAxisHasLinesFinal}
 											color={_.get(colorMap, field, palette[index % palette.length])}
-											pointKind={index}
+											pointKind={yAxisHasPoints ? index : 1}
 										>
 											{_.get(legend, field, field)}
 										</Legend.Item>
@@ -564,10 +571,10 @@ const LineChart = createClass({
 									{_.map(y2AxisFields, (field, index) => (
 										<Legend.Item
 											key={index}
-											hasPoint={y2AxisHasPoints}
-											hasLine={true}
+											hasPoint={y2AxisHasPointsFinal}
+											hasLine={y2AxisHasLinesFinal}
 											color={_.get(colorMap, field, palette[index + yAxisFields.length % palette.length])}
-											pointKind={index + yAxisFields.length}
+											pointKind={y2AxisHasPoints ? index + yAxisFields.length : 1}
 										>
 											{_.get(legend, field, field)}
 										</Legend.Item>
