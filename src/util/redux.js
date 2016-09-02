@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import { createSelector } from 'reselect';
 import { reduceSelectors } from './state-management.js';
+import { isDevMode } from './logger.js';
 
 /**
  * thunk
@@ -78,7 +79,10 @@ export function getReduxPrimitives({
 				};
 			};
 		}
-		return function actionCreator(payload, ...meta) {
+		return function actionCreator(...args) {
+
+			const [payload, ...meta] = isDevMode ? cleanArgs(args) : args;
+
 			return {
 				type: path.join('.'),
 				payload,
@@ -221,4 +225,10 @@ function bindActionCreatorTree(actionCreatorTree, dispatch, path = []) {
  */
 function mergeProps(state, dispatchTree, ownProps) {
 	return _.merge({}, state, dispatchTree, ownProps);
+}
+
+export function cleanArgs(args) {
+	return _.chain(args).last().has('event').value()
+		? _.dropRight(args)
+		: args;
 }
