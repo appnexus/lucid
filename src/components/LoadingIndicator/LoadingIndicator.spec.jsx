@@ -85,19 +85,19 @@ describe('LoadingIndicator', () => {
 	describe('hasOverlay', () => {
 
 		describe('default', () => {
-			it('should add `&-has-overlay-dark` class', () => {
+			it('should add `&-has-overlay` class', () => {
 				const wrapper = shallow(
 					<LoadingIndicator isLoading>
 						<div>Some content</div>
 					</LoadingIndicator>
 				);
 				const messageContainer = wrapper.find('.lucid-LoadingIndicator-message-container');
-				assert(messageContainer.hasClass('lucid-LoadingIndicator-has-overlay-dark'));
+				assert(messageContainer.hasClass('lucid-LoadingIndicator-has-overlay'));
 			});
 		});
 
 		describe('true', () => {
-			it('should add `&-has-overlay-dark` class', () => {
+			it('should add `&-has-overlay` class', () => {
 				const wrapper = shallow(
 					<LoadingIndicator
 						isLoading
@@ -107,12 +107,12 @@ describe('LoadingIndicator', () => {
 					</LoadingIndicator>
 				);
 				const messageContainer = wrapper.find('.lucid-LoadingIndicator-message-container');
-				assert(messageContainer.hasClass('lucid-LoadingIndicator-has-overlay-dark'));
+				assert(messageContainer.hasClass('lucid-LoadingIndicator-has-overlay'));
 			});
 		});
 
 		describe('false', () => {
-			it('should not add `&-has-overlay-dark` class', () => {
+			it('should not add `&-has-overlay` class', () => {
 				const wrapper = shallow(
 					<LoadingIndicator
 						isLoading
@@ -122,7 +122,7 @@ describe('LoadingIndicator', () => {
 					</LoadingIndicator>
 				);
 				const messageContainer = wrapper.find('.lucid-LoadingIndicator-message-container');
-				assert(!messageContainer.hasClass('lucid-LoadingIndicator-has-overlay-dark'));
+				assert(!messageContainer.hasClass('lucid-LoadingIndicator-has-overlay'));
 			});
 		});
 
@@ -142,35 +142,8 @@ describe('LoadingIndicator', () => {
 	});
 
 	describe('overlayKind', () => {
-		describe('default', () => {
-			it('should add `&-has-overlay-dark` class', () => {
-				const wrapper = shallow(
-					<LoadingIndicator isLoading>
-						<div>Some content</div>
-					</LoadingIndicator>
-				);
-				const messageContainer = wrapper.find('.lucid-LoadingIndicator-message-container');
-				assert(messageContainer.hasClass('lucid-LoadingIndicator-has-overlay-dark'));
-			});
-		});
-
-		describe('dark', () => {
-			it('should add `&-has-overlay-dark` class', () => {
-				const wrapper = shallow(
-					<LoadingIndicator
-						isLoading
-						overlayKind='dark'
-					>
-						<div>Some content</div>
-					</LoadingIndicator>
-				);
-				const messageContainer = wrapper.find('.lucid-LoadingIndicator-message-container');
-				assert(messageContainer.hasClass('lucid-LoadingIndicator-has-overlay-dark'));
-			});
-		});
-
 		describe('light', () => {
-			it('should add `&-has-overlay-light` class', () => {
+			it('should add `&-kind-light` class', () => {
 				const wrapper = shallow(
 					<LoadingIndicator
 						isLoading
@@ -180,7 +153,7 @@ describe('LoadingIndicator', () => {
 					</LoadingIndicator>
 				);
 				const messageContainer = wrapper.find('.lucid-LoadingIndicator-message-container');
-				assert(messageContainer.hasClass('lucid-LoadingIndicator-has-overlay-light'));
+				assert(messageContainer.hasClass('lucid-LoadingIndicator-kind-light'));
 			});
 		});
 	});

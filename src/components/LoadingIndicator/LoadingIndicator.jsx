@@ -89,7 +89,10 @@ const LoadingIndicator = createClass({
 					transitionLeaveTimeout={300}
 				>
 					{isLoading && (
-						<div className={cx('&-message-container', { [`&-has-overlay-${overlayKind}`]: hasOverlay })}>
+						<div className={cx('&-message-container', {
+							'&-has-overlay': hasOverlay,
+							'&-kind-light': overlayKind === 'light',
+						})}>
 							{messageElement}
 						</div>
 					)}
