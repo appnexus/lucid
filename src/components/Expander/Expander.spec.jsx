@@ -32,7 +32,8 @@ describe('Expander', () => {
 			});
 
 			it('adds the "lucid-Expander-content-is-expanded" class to its content container element when `true`.', () => {
-				assert.equal(shallow(<Expander isExpanded={true} />).find('.lucid-Expander-content-is-expanded').length, 1);
+				const wrapper = shallow(<Expander isExpanded={true} />);
+				assert.equal(wrapper.find('.lucid-Expander-is-expanded').length, 1);
 			});
 
 			it('defaults to `false`.', () => {

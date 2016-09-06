@@ -4,6 +4,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps }  from '../../util/component-types';
 
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
+import Collapsible  from '../Collapsible/Collapsible';
 import Panel from '../Panel/Panel';
 
 import * as reducers from '../Expander/Expander.reducers';
@@ -138,13 +139,13 @@ const ExpanderPanel = createClass({
 					<span {...headerChildProps} />
 				</Panel.Header>
 
-				<div className={cx('&-content', {
+				<Collapsible isExpanded={isExpanded} className={cx('&-content', {
 					'&-content-is-expanded': isExpanded,
 				})}>
 					<div className={cx('&-content-inner')}>
 						{children}
 					</div>
-				</div>
+				</Collapsible>
 			</Panel>
 		);
 	},

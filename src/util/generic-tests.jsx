@@ -4,6 +4,7 @@ import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import _ from 'lodash';
 import * as lucid from '../index';
+import { Motion } from 'react-motion';
 
 // Common tests for all our components
 export function common(Component, {
@@ -11,6 +12,7 @@ export function common(Component, {
 	selector = null,
 	exemptFunctionProps = [],
 	exemptChildComponents = [],
+	selectRoot = _.identity,
 } = {}) {
 
 	function generateDefaultProps(props={}) {
@@ -27,7 +29,8 @@ export function common(Component, {
 				backgroundColor: '#f0f',
 			};
 			const wrapper = shallow(<Component {...generateDefaultProps()} style={style}/>);
-			const rootWrapper = selector ? wrapper.find(selector).first() : wrapper.first();
+
+			const rootWrapper = selectRoot(wrapper).first();
 			const rootStyle = rootWrapper.prop('style');
 			assert(_.every(style, (val, key) => val === rootStyle[key]), 'root style must contain passed styles');
 		});
@@ -35,7 +38,7 @@ export function common(Component, {
 		it('should pass through `className`', () => {
 			const expectedClass = 'rAnDoM';
 			const wrapper = shallow(<Component {...generateDefaultProps()} className={expectedClass}/>);
-			const rootWrapper = selector ? wrapper.find(selector).first() : wrapper.first();
+			const rootWrapper = selectRoot(wrapper).first();
 			const classNames = rootWrapper.prop('className').split(' ');
 
 			assert(_.includes(classNames, expectedClass), `'${classNames}' should include '${expectedClass}'`);
@@ -44,7 +47,7 @@ export function common(Component, {
 		it('should have an application scoped base class', () => {
 			const expectedClass = 'lucid-' + Component.displayName;
 			const wrapper = shallow(<Component {...generateDefaultProps()} />);
-			const rootWrapper = selector ? wrapper.find(selector).first() : wrapper.first();
+			const rootWrapper = selectRoot(wrapper).first();
 			const classNames = rootWrapper.prop('className').split(' ');
 
 			assert(_.includes(classNames, expectedClass), `'${classNames}' should include '${Component.displayName}'`);
@@ -52,7 +55,7 @@ export function common(Component, {
 
 		it('should have only application scoped classes', () => {
 			const wrapper = shallow(<Component {...generateDefaultProps()} />);
-			const rootWrapper = selector ? wrapper.find(selector).first() : wrapper.first();
+			const rootWrapper = selectRoot(wrapper).first();
 			const parentClasses = rootWrapper.prop('className').split(' ');
 			const childrenClasses = rootWrapper.children().reduce((acc, node) => {
 				if (!node.prop('className')) {

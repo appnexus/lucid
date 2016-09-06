@@ -8,10 +8,10 @@ import Overlay from './Overlay';
 
 describe('Overlay', () => {
 	common(Overlay, {
-		selector: '.lucid-Overlay',
 		getDefaultProps: () => {
 			return { isShown: true }
 		},
+		selectRoot: (wrapper) => wrapper.find('.lucid-Overlay'),
 	});
 
 	it('should render body content', () => {

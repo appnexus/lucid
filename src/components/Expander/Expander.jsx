@@ -4,6 +4,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, findTypes, omitProps }  from '../../util/component-types';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
+import Collapsible  from '../Collapsible/Collapsible';
 import * as reducers from './Expander.reducers';
 
 const cx = lucidClassNames.bind('&-Expander');
@@ -89,10 +90,6 @@ const Expander = createClass({
 		};
 	},
 
-	componentWillMount() {
-		this._labelKey = 0;
-	},
-
 	componentWillReceiveProps(nextProps) {
 		const currentLabel = _.get(getFirst(this.props, Expander.Label), 'props.children', null);
 		const nextLabel = _.get(getFirst(nextProps, Expander.Label), 'props.children', null);
@@ -100,6 +97,10 @@ const Expander = createClass({
 		if (currentLabel !== nextLabel) {
 			this._labelKey++;
 		}
+	},
+
+	componentWillMount() {
+		this._labelKey = 0;
 	},
 
 	render() {
@@ -138,11 +139,9 @@ const Expander = createClass({
 						: null}
 					</ReactCSSTransitionGroup>
 				</header>
-				<section className={cx('&-content', {
-					'&-content-is-expanded': isExpanded,
-				})}>
+				<Collapsible isExpanded={isExpanded} rootType='section' className={cx('&-content')}>
 					{children}
-				</section>
+				</Collapsible>
 			</div>
 		);
 	},

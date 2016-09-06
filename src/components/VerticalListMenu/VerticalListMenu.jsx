@@ -4,6 +4,7 @@ import { bindClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps }  from '../../util/component-types';
 import * as reducers from './VerticalListMenu.reducers';
 import ChevronIcon  from '../Icon/ChevronIcon/ChevronIcon';
+import Collapsible  from '../Collapsible/Collapsible';
 
 const cx = bindClassNames('lucid-VerticalListMenu');
 
@@ -199,11 +200,14 @@ const VerticalListMenu = createClass({
 							: null}
 							</div>
 
-							<div className={cx('&-Item-nested-list', {
-								'&-Item-nested-list-is-expanded': actualIsExpanded,
-							})}>
-								{listChildren}
-							</div>
+							{!_.isEmpty(listChildren) ? (
+								<Collapsible
+									className={cx('&-Item-nested-list')}
+									isExpanded={actualIsExpanded}
+								>
+									{listChildren}
+								</Collapsible>
+							) : null}
 						</li>
 					);
 				})}

@@ -55,6 +55,7 @@ import Checkbox from './components/Checkbox/Checkbox';
 import CheckboxLabeled from './components/CheckboxLabeled/CheckboxLabeled';
 import ChevronIcon from './components/Icon/ChevronIcon/ChevronIcon';
 import ClockIcon from './components/Icon/ClockIcon/ClockIcon';
+import Collapsible from './components/Collapsible/Collapsible';
 import ContextMenu from './components/ContextMenu/ContextMenu';
 import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
@@ -179,6 +180,7 @@ export {
 	CheckboxLabeled,
 	ChevronIcon,
 	ClockIcon,
+	Collapsible,
 	ContextMenu,
 	CrossIcon,
 	DangerIcon,
