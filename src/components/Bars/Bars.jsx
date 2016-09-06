@@ -132,6 +132,14 @@ const Bars = createClass({
 		 * stacking, pass it in here.
 		 */
 		yStackedMax: number,
+		/**
+		 * An optional function used to format your y axis titles and data in the
+		 * tooltips. The first value is the name of your y field, the second value
+		 * is your post-formatted y value.
+		 *
+		 * Signature: `(yField, yValueFormatted) => {}`
+		 */
+		yTooltipFormatter: func,
 
 		/**
 		 * This will stack the data instead of grouping it. In order to stack the
@@ -154,6 +162,7 @@ const Bars = createClass({
 			xFormatter: _.identity,
 			yFields: ['y'],
 			yFormatter: _.identity,
+			yTooltipFormatter: (yField, yValueFormatted) => `${yField}: ${yValueFormatted}`,
 			isStacked: false,
 			colorOffset: 0,
 			palette: chartConstants.PALETTE_6,
@@ -182,6 +191,7 @@ const Bars = createClass({
 			yFields,
 			yFormatter,
 			yStackedMax,
+			yTooltipFormatter,
 			isStacked,
 			...passThroughs,
 		} = this.props;
@@ -268,7 +278,7 @@ const Bars = createClass({
 								</ToolTip.Title>
 
 								<ToolTip.Body>
-									<Legend hasBorders={false}>
+									<Legend hasBorders={false} isReversed={isStacked}>
 										{_.map(yFields, (field, fieldIndex) => (
 											<Legend.Item
 												key={fieldIndex}
@@ -276,7 +286,7 @@ const Bars = createClass({
 												pointKind={1}
 												color={_.get(colorMap, field, palette[(fieldIndex + colorOffset ) % palette.length])}
 											>
-												{`${_.get(legend, field, field)}: ${yFormatter(data[seriesIndex][field])}`}
+												{yTooltipFormatter(_.get(legend, field, field), yFormatter(data[seriesIndex][field]))}
 											</Legend.Item>
 										))}
 									</Legend>

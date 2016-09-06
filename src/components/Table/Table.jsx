@@ -578,7 +578,7 @@ function mapToGrid(trList, cellType='td', mapFn=_.property('element')) {
 
 
 	// iterate over each row
-	for (let rowIndex=0; rowIndex<cellRowList.length; rowIndex++) {
+	for (let rowIndex=0; rowIndex < cellRowList.length; rowIndex++) {
 		const cellRow = cellRowList[rowIndex];
 
 		if (_.isNil(grid[rowIndex])) {
@@ -588,7 +588,7 @@ function mapToGrid(trList, cellType='td', mapFn=_.property('element')) {
 		const canonicalRow = rowIndex;
 
 		// build out each horizonal duplicates of each cell
-		for (let cellElementIndex=0; cellElementIndex<cellRow.length; cellElementIndex++) {
+		for (let cellElementIndex=0; cellElementIndex < cellRow.length; cellElementIndex++) {
 			const cellElement = cellRow[cellElementIndex];
 
 			let colSpan = 1;
@@ -601,7 +601,7 @@ function mapToGrid(trList, cellType='td', mapFn=_.property('element')) {
 			const nilCellIndex = _.findIndex(grid[canonicalRow], _.isNil);
 			const originCol = nilCellIndex !== -1 ? nilCellIndex : grid[canonicalRow].length;
 
-			for (let currentColSpan=0; currentColSpan<colSpan; currentColSpan++) {
+			for (let currentColSpan=0; currentColSpan < colSpan; currentColSpan++) {
 				grid[canonicalRow][originCol + currentColSpan] = {
 					element: cellElement,
 					canonicalPosition: {
@@ -615,7 +615,7 @@ function mapToGrid(trList, cellType='td', mapFn=_.property('element')) {
 		}
 
 		// build out each vertial duplicates of each cell using the new row in the full grid
-		for (let colIndex=0; colIndex<grid[canonicalRow].length; colIndex++) {
+		for (let colIndex=0; colIndex < grid[canonicalRow].length; colIndex++) {
 			const gridCell = grid[canonicalRow][colIndex];
 			if (gridCell.isOriginal) {
 				const cellElement = _.get(gridCell, 'element');
@@ -625,7 +625,7 @@ function mapToGrid(trList, cellType='td', mapFn=_.property('element')) {
 					rowSpan = _.get(cellElement, 'props.rowSpan');
 				}
 
-				for (let currentRowSpan=1; currentRowSpan<rowSpan; currentRowSpan++) {
+				for (let currentRowSpan=1; currentRowSpan < rowSpan; currentRowSpan++) {
 					if (_.isNil(grid[canonicalRow + currentRowSpan])) {
 						grid[canonicalRow + currentRowSpan] = [];
 					}
@@ -638,9 +638,9 @@ function mapToGrid(trList, cellType='td', mapFn=_.property('element')) {
 
 	// map new values to each cell in the final grid
 	const finalGrid = [];
-	for (let rowIndex=0; rowIndex<grid.length; rowIndex++) {
+	for (let rowIndex=0; rowIndex < grid.length; rowIndex++) {
 		finalGrid[rowIndex] = [];
-		for (let colIndex=0; colIndex<grid[rowIndex].length; colIndex++) {
+		for (let colIndex=0; colIndex < grid[rowIndex].length; colIndex++) {
 			finalGrid[rowIndex][colIndex] = mapFn(grid[rowIndex][colIndex], { row: rowIndex, col: colIndex }, finalGrid);
 		}
 	}
@@ -672,7 +672,7 @@ function renderRowsWithIdentifiedEdges(trList, cellType) {
 	const lastRowIndex = fullCellGrid.length - 1;
 	const firstColIndex = 0;
 	const lastColIndex = _.first(fullCellGrid).length - 1;
-	const firstSingleLookup = new Map();
+	const firstSingleLookup = {};
 
 	// decorate the props of each cell with props that indicate its role in the table
 	_.forEach(fullCellGrid, (cellList, rowIndex) => _.forEach(cellList, (cellProps, colIndex) => {
@@ -691,11 +691,11 @@ function renderRowsWithIdentifiedEdges(trList, cellType) {
 			}
 		}
 
-		if (!firstSingleLookup.has(rowIndex)) {
-			firstSingleLookup.set(rowIndex, false);
+		if (!_.has(firstSingleLookup, rowIndex)) {
+			_.set(firstSingleLookup, rowIndex, false);
 		}
-		if (!firstSingleLookup.get(rowIndex) && _.get(cellProps, 'rowSpan', 1) === 1) {
-			firstSingleLookup.set(rowIndex, true);
+		if (!_.get(firstSingleLookup, rowIndex) && _.get(cellProps, 'rowSpan', 1) === 1) {
+			_.set(firstSingleLookup, rowIndex, true);
 			cellProps.isFirstSingle = true;
 		}
 	}));

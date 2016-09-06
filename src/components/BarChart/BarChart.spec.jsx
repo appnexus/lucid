@@ -23,6 +23,7 @@ describe('BarChart', () => {
 		exemptFunctionProps: [
 			'xAxisFormatter',
 			'yAxisFormatter',
+			'yAxisTooltipFormatter',
 		],
 		getDefaultProps: () => ({
 			data: [

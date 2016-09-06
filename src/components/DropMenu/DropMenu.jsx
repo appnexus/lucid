@@ -122,10 +122,12 @@ const DropMenu = createClass({
 		flyOutStyle: object,
 		/**
 		 * Called when collapsed and the control is clicked, or when the control has focus and the Down Arrow is pressed.
+		 * Has the signature `({ props, event }) => {}`
 		 */
 		onExpand: func,
 		/**
-		 * Called when expanded and the user clicks the control or outside of the menu, or when the control has focus and the Escape key is pressed.
+		 * Called when expanded and the user clicks the control or outside of the menu, or when the control has focus and the Escape key is pressed
+		 * Has the signature `({ props, event }) => {}`
 		 */
 		onCollapse: func,
 		/**
@@ -135,10 +137,12 @@ const DropMenu = createClass({
 		onSelect: func,
 		/**
 		 * Called when expanded and the the Down Arrow key is pressed. Not called when focus is on the last option.
+		 * Has the signature `({ props, event }) => {}`
 		 */
 		onFocusNext: func,
 		/**
 		 * Called when expanded and the the Up Arrow key is pressed. Not called when focus is on the first option.
+		 * Has the signature `({ props, event }) => {}`
 		 */
 		onFocusPrev: func,
 		/**
@@ -249,16 +253,19 @@ const DropMenu = createClass({
 		return DropMenu.preprocessOptionData(props, DropMenu);
 	},
 
-	handleKeydown(e) {
+	handleKeydown(event) {
 		const {
-			isExpanded,
-			focusedIndex,
-			onExpand,
-			onCollapse,
-			onSelect,
-			onFocusPrev,
-			onFocusNext,
-		} = this.props;
+			props,
+			props: {
+				isExpanded,
+				focusedIndex,
+				onExpand,
+				onCollapse,
+				onSelect,
+				onFocusPrev,
+				onFocusNext,
+			},
+		} = this;
 
 		const {
 			flattenedOptionsData,
@@ -270,71 +277,74 @@ const DropMenu = createClass({
 		});
 
 		if (isExpanded) {
-			if (e.keyCode === KEYCODE.Enter) {
-				e.preventDefault();
+			if (event.keyCode === KEYCODE.Enter) {
+				event.preventDefault();
 				const focusedOptionData = _.get(flattenedOptionsData, focusedIndex, null);
 				const focusedOptionProps = _.get(focusedOptionData, 'optionProps', {});
 				if (focusedOptionData && !focusedOptionProps.isDisabled) {
-					onSelect(focusedIndex, {props: focusedOptionProps, event: e});
+					onSelect(focusedIndex, {props: focusedOptionProps, event});
 				} else if (_.isNull(focusedIndex)) {
-					onSelect(null, {props: _.first(nullOptions), event: e});
+					onSelect(null, {props: _.first(nullOptions), event});
 				}
 			}
-			if (e.keyCode === KEYCODE.Escape) {
-				e.preventDefault();
-				onCollapse(e);
+			if (event.keyCode === KEYCODE.Escape) {
+				event.preventDefault();
+				onCollapse({ props, event });
 			}
-			if (e.keyCode === KEYCODE.ArrowUp) {
+			if (event.keyCode === KEYCODE.ArrowUp) {
 				if (_.isNumber(focusedIndex) || _.isNull(focusedIndex)) {
 					if (focusedIndex === 0) {
 						if (!_.isEmpty(nullOptions)) {
-							e.preventDefault();
-							onFocusPrev(e);
+							event.preventDefault();
+							onFocusPrev({ props, event });
 						}
 					}
 					if (focusedIndex > 0) {
-						e.preventDefault();
-						onFocusPrev(e);
+						event.preventDefault();
+						onFocusPrev({ props, event });
 					}
 				} else {
-					e.preventDefault();
-					onFocusPrev(e);
+					event.preventDefault();
+					onFocusPrev({ props, event });
 				}
 			}
-			if (e.keyCode === KEYCODE.ArrowDown) {
+			if (event.keyCode === KEYCODE.ArrowDown) {
 				if (_.isNumber(focusedIndex)) {
 					if (focusedIndex < _.size(flattenedOptionsData) - 1) {
-						e.preventDefault();
-						onFocusNext(e);
+						event.preventDefault();
+						onFocusNext({ props, event });
 					}
 				} else {
-					e.preventDefault();
-					onFocusNext(e);
+					event.preventDefault();
+					onFocusNext({ props, event });
 				}
 			}
 		} else {
-			if (e.keyCode === KEYCODE.ArrowDown) {
-				e.preventDefault();
-				onExpand(e);
+			if (event.keyCode === KEYCODE.ArrowDown) {
+				event.preventDefault();
+				onExpand({ props, event });
 			}
 		}
 	},
 
-	handleClick(e) {
+	handleClick(event) {
 		const {
-			isExpanded,
-			onExpand,
-			onCollapse,
-		} = this.props;
+			props,
+			props: {
+				isExpanded,
+				onExpand,
+				onCollapse,
+			},
+		} = this;
 
 		if (isExpanded) {
-			onCollapse(e);
+			onCollapse({ props, event });
 		} else {
-			onExpand(e);
+			onExpand({ props, event });
 		}
 	},
 
-	handleMouseFocusOption(optionIndex, optionProps) {
+	handleMouseFocusOption(optionIndex, optionProps, event) {
 		const {
 			focusedIndex,
 			onFocusOption,
@@ -345,7 +355,7 @@ const DropMenu = createClass({
 		});
 
 		if (!optionProps.isDisabled && focusedIndex !== optionIndex) {
-			onFocusOption(optionIndex);
+			onFocusOption(optionIndex, { props: optionProps, event });
 		}
 	},
 
@@ -355,7 +365,7 @@ const DropMenu = createClass({
 		} = this.props;
 
 		if (!optionProps.isDisabled) {
-			onSelect(optionIndex, { props: optionProps, event: event });
+			onSelect(optionIndex, { props: optionProps, event });
 		}
 	},
 
@@ -379,7 +389,7 @@ const DropMenu = createClass({
 		return (
 			<div
 				key={'DropMenuOption' + optionIndex}
-				onMouseMove={() => this.handleMouseFocusOption(optionIndex, optionProps)}
+				onMouseMove={(event) => this.handleMouseFocusOption(optionIndex, optionProps, event)}
 				onClick={(event) => this.handleSelectOption(optionIndex, optionProps, event)}
 				{...omitProps(optionProps, DropMenu.Option)}
 				className={cx(

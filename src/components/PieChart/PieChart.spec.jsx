@@ -134,6 +134,30 @@ describe('PieChart', () => {
 			});
 		});
 
+		describe('hasStroke', () => {
+			it('should add the correct class', () => {
+				const wrapper = shallow(
+					<PieChart
+						data={sampleData}
+						hasStroke={true}
+					/>
+				);
+
+				assert.equal(wrapper.find('.lucid-PieChart-slice-has-stroke').length, 3);
+			});
+
+			it('should not add the class when false', () => {
+				const wrapper = shallow(
+					<PieChart
+						data={sampleData}
+						hasStroke={false}
+					/>
+				);
+
+				assert.equal(wrapper.find('.lucid-PieChart-slice-has-stroke').length, 0);
+			});
+		});
+
 		describe('isHovering and hoveringIndex', () => {
 			it('should put the right class on the right slice', () => {
 				const wrapper = shallow(

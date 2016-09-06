@@ -50,12 +50,17 @@ const Legend = createClass({
 		 * a `ToolTip` for example.
 		 */
 		hasBorders: bool,
+		/**
+		 * Reverse the order of items in the legend.
+		 */
+		isReversed: bool,
 	},
 
 	getDefaultProps() {
 		return {
 			orient: 'vertical',
 			hasBorders: true,
+			isReversed: false,
 		};
 	},
 
@@ -97,6 +102,7 @@ const Legend = createClass({
 			orient,
 			className,
 			hasBorders,
+			isReversed,
 			...passThroughs,
 		} = this.props;
 
@@ -112,6 +118,7 @@ const Legend = createClass({
 					'&-is-horizontal': isHorizontal,
 					'&-is-vertical': isVertical,
 					'&-has-borders': hasBorders,
+					'&-is-reversed': isReversed,
 				})}
 			>
 				{_.map(itemProps, ({
