@@ -3,18 +3,15 @@ import React from 'react';
 import { Motion, spring } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps }  from '../../util/component-types';
+import { createClass }  from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Collapsible');
 
 const {
 	any,
-	arrayOf,
 	bool,
-	func,
 	node,
 	number,
-	object,
 	string,
 } = React.PropTypes;
 
@@ -157,11 +154,11 @@ const Collapsible = createClass({
 							...passThroughs.style,
 						},
 					}, [
-						<div key='content' className={cx('&-content')} style={{ margin: 0 }}>
+						(<div key='content' className={cx('&-content')} style={{ margin: 0 }}>
 							{isMountControlled ? (
 								_.isNull(maxHeight) || Math.abs(tween.height) > mountControlThreshold ? children : null
 							) : children}
-						</div>
+						</div>),
 					])
 				)}
 			</Motion>

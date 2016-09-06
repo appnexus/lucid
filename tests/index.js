@@ -5,12 +5,6 @@ const PORT = util.PORT;
 const WAIT = util.WAIT;
 
 module.exports = {
-	ExpanderPanel: client =>
-		client
-			.url(`http://${HOST}:${PORT}/#/test/ExpanderPanel-examples-1-basic-jsx`)
-			.waitForElementPresent('.lucid-ExpanderPanel-header', WAIT)
-			.click('.lucid-ExpanderPanel-header')
-			.assert.visible('.lucid-ExpanderPanel-content'),
 	CheckboxLabeled: client => {
 		const selector = '.lucid-CheckboxLabeled';
 		client
