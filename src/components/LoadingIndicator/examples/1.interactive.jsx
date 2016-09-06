@@ -47,7 +47,7 @@ export default React.createClass({
 				<Button
 					onClick={this.handleKindClick}
 				>
-					Switch Overlay Color
+					Switch overlay color
 				</Button>
 				<BarChart
 					data={data}
