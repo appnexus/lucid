@@ -36,17 +36,17 @@ export const logger = (function() {
 	};
 })();
 
-const onceMap = new Map();
+const onceMap = {};
 
 function once(key, fn) {
-	if(!onceMap.has(key)) {
-		onceMap.set(key, true);
+	if(!_.has(onceMap, key)) {
+		_.set(onceMap, key, true);
 		fn();
 	}
 }
 
 function resetOnce(key) {
-	onceMap.delete(key);
+	_.unset(onceMap, key);
 }
 
 export function checkIsDev() {
