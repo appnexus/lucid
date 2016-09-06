@@ -1,12 +1,12 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-//import { shallow } from 'enzyme';
+//import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import assert from 'assert';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import Collapsible from './Collapsible';
 import { Motion } from 'react-motion';
-import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
+//import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
 
 describe('Collapsible', () => {
 	common(Collapsible, {
@@ -35,10 +35,11 @@ describe('Collapsible', () => {
 		 * assertions between transitions.
 		 * */
 		describe('isExpanded', () => {
+			/*
 			let wrapper;
 			let testDomElement;
 
-			/*// only needed for the skipped tests:
+			// only needed for the skipped tests:
 			beforeEach(() => {
 				testDomElement = document.createElement('div');
 				document.body.appendChild(testDomElement);
@@ -57,6 +58,7 @@ describe('Collapsible', () => {
 				assert.equal(true, _.get(Collapsible.getDefaultProps(), 'isExpanded'));
 			});
 
+			/*
 			it.skip('should transition the container height when the prop alternates between boolean values [mostly stable]', (done) => {
 				wrapper = mount(
 					<Collapsible isExpanded={true} isAnimated={false}>
@@ -95,6 +97,7 @@ describe('Collapsible', () => {
 				}, MOSTLY_STABLE_DELAY);
 
 			});
+			*/
 
 		});
 
@@ -108,10 +111,11 @@ describe('Collapsible', () => {
 		 * `isAnimated` so that subsequent re-renders can be animated if desired.
 		 * */
 		describe('isAnimated', () => {
+			/*
 			let wrapper;
 			let testDomElement;
 
-			/*// only needed for the skipped tests:
+			/* only needed for the skipped tests:
 			beforeEach(() => {
 				testDomElement = document.createElement('div');
 				document.body.appendChild(testDomElement);
@@ -130,6 +134,7 @@ describe('Collapsible', () => {
 				assert.equal(true, _.get(Collapsible.getDefaultProps(), 'isAnimated'));
 			});
 
+			/*
 			it.skip('should set value of instance property `isAnimated` after initial render [mostly stable]', (done) => {
 				wrapper = mount(
 					<Collapsible isExpanded={true} isAnimated={true}>
@@ -157,13 +162,15 @@ describe('Collapsible', () => {
 					done();
 				}, MOSTLY_STABLE_DELAY);
 			});
+			*/
 		});
 
 		describe('isMountControlled', () => {
+			/*
 			let wrapper;
 			let testDomElement;
 
-			/*// only needed for the skipped tests:
+			// only needed for the skipped tests:
 			beforeEach(() => {
 				testDomElement = document.createElement('div');
 				document.body.appendChild(testDomElement);
@@ -182,6 +189,7 @@ describe('Collapsible', () => {
 				assert.equal(true, _.get(Collapsible.getDefaultProps(), 'isMountControlled'));
 			});
 
+			/*
 			it.skip('should not render children after initial render when true and collapsed [mostly stable]', (done) => {
 				wrapper = mount(
 					<Collapsible isMountControlled={true} isExpanded={false} isAnimated={false}>
@@ -233,6 +241,7 @@ describe('Collapsible', () => {
 					done();
 				}, MOSTLY_STABLE_DELAY);
 			});
+			*/
 		});
 
 		describe('rootType', () => {
