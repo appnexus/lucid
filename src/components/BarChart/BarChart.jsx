@@ -199,6 +199,14 @@ const BarChart = createClass({
 		 * `number` is supported only for backwards compatability.
 		 */
 		yAxisTitleColor: oneOfType([number, string]),
+		/**
+		 * An optional function used to format your y axis titles and data in the
+		 * tooltips. The first value is the name of your y field, the second value
+		 * is your post-formatted y value.
+		 *
+		 * Signature: `(yField, yValueFormatted) => {}`
+		 */
+		yAxisTooltipFormatter: func,
 	},
 
 	statics: {
@@ -239,6 +247,7 @@ const BarChart = createClass({
 			yAxisMin: 0,
 			yAxisTitle: null,
 			yAxisTitleColor: '#000',
+			yAxisTooltipFormatter: (yField, yValueFormatted) => `${yField}: ${yValueFormatted}`,
 		};
 	},
 
@@ -268,6 +277,7 @@ const BarChart = createClass({
 			yAxisIsStacked,
 			yAxisTickCount,
 			yAxisMin,
+			yAxisTooltipFormatter,
 			yAxisMax = yAxisIsStacked
 				? maxByFieldsStacked(data, yAxisFields)
 				: maxByFields(data, yAxisFields),
@@ -418,6 +428,7 @@ const BarChart = createClass({
 						yStackedMax={yAxisMax}
 						data={data}
 						isStacked={yAxisIsStacked}
+						yTooltipFormatter={yAxisTooltipFormatter}
 						hasToolTips={hasToolTips}
 						legend={legend}
 						palette={palette}

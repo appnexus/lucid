@@ -23,6 +23,7 @@ describe('LineChart', () => {
 		exemptFunctionProps: [
 			'xAxisFormatter',
 			'xAxisTooltipFormatter',
+			'yAxisTooltipFormatter',
 			'yAxisFormatter',
 			'y2AxisFormatter',
 		],

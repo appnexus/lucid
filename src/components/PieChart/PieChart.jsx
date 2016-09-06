@@ -83,6 +83,10 @@ const PieChart = createClass({
 		 */
 		hasToolTips: bool,
 		/**
+		 * Determines if the pie slices have a stroke around them.
+		 */
+		hasStroke: bool,
+		/**
 		 * Takes one of the palettes exported from `lucid.chartConstants`.
 		 * Available palettes:
 		 *
@@ -187,6 +191,7 @@ const PieChart = createClass({
 			},
 			palette: chartConstants.PALETTE_6,
 			hasToolTips: true,
+			hasStroke: true,
 			isDonut: false,
 			donutWidth: DONUT_WIDTH,
 			ToolTip: ToolTip.getDefaultProps(),
@@ -227,6 +232,7 @@ const PieChart = createClass({
 			margin: marginOriginal,
 			data,
 			hasToolTips,
+			hasStroke,
 			palette,
 			colorMap,
 			isDonut,
@@ -310,7 +316,9 @@ const PieChart = createClass({
 									>
 										<Line
 											key={index}
-											className={cx('&-slice')}
+											className={cx('&-slice', {
+												'&-slice-has-stroke': hasStroke,
+											})}
 											d={arc(pieDatum)}
 											color={_.get(colorMap, data[index][xAxisField], palette[index % palette.length])}
 											transform={`scale(${isHovering && hoveringIndex === index ? HOVER_SCALE : 1})`}

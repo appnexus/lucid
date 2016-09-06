@@ -69,12 +69,39 @@ export default React.createClass({
 
 				<br />
 
+				<Legend isReversed >
+					{_.map(chartConstants.PALETTE_6, (color, i) => (
+						<Item
+							key={color}
+							hasPoint
+							hasLine
+							pointKind={i}
+							color={color}
+						>
+							{`Partner ${i}`}
+						</Item>
+					))}
+				</Legend>
+
+				<br />
+
 				<Legend orient='horizontal'>
 					<Item hasLine color={chartConstants.COLOR_GOOD}>Revenue</Item>
 					<Item hasLine color={chartConstants.COLOR_BAD}>Loss</Item>
 					<Item hasPoint color={chartConstants.COLOR_0}>Partner 0</Item>
 					<Item hasPoint color={chartConstants.COLOR_1}>Partner 1</Item>
 				</Legend>
+
+				<br />
+
+				<Legend orient='horizontal' isReversed >
+					<Item hasLine color={chartConstants.COLOR_GOOD}>Revenue</Item>
+					<Item hasLine color={chartConstants.COLOR_BAD}>Loss</Item>
+					<Item hasPoint color={chartConstants.COLOR_0}>Partner 0</Item>
+					<Item hasPoint color={chartConstants.COLOR_1}>Partner 1</Item>
+				</Legend>
+
+				<br />
 
 				<Legend>
 					<Item hasLine color={chartConstants.COLOR_GOOD}>Revenue</Item>

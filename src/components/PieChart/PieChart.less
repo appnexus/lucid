@@ -1,8 +1,11 @@
 .lucid-PieChart {
 	// Increase specificity by 1 to beat .lucid-Line
 	&-slice&-slice {
-		stroke: @color-white;
+		stroke: none;
 		transition: transform @timing-animation-hover;
+	}
+	&-slice-has-stroke&-slice-has-stroke {
+		stroke: @color-white;
 	}
 
 	&-slice-group-is-hovering &-slice {
