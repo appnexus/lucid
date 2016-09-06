@@ -9,6 +9,7 @@ const cx = lucidClassNames.bind('&-LoadingIndicator');
 const {
 	bool,
 	node,
+	oneOf,
 	string,
 } = React.PropTypes;
 
@@ -39,6 +40,13 @@ const LoadingIndicator = createClass({
 		 * Controls the visibility of the `LoadingMessage` and overlay.
 		 */
 		isLoading: bool,
+		/**
+		 * Style variations for the overlay behind the loading indicator.
+		 */
+		overlayKind: oneOf([
+			'light',
+			'dark',
+		]),
 	},
 
 	components: { LoadingMessage },
@@ -47,6 +55,7 @@ const LoadingIndicator = createClass({
 		return {
 			hasOverlay: true,
 			isLoading: false,
+			overlayKind: 'dark',
 		};
 	},
 
@@ -58,6 +67,7 @@ const LoadingIndicator = createClass({
 				className,
 				children,
 				isLoading,
+				overlayKind,
 				...passThroughs,
 			},
 		} = this;
@@ -79,7 +89,10 @@ const LoadingIndicator = createClass({
 					transitionLeaveTimeout={300}
 				>
 					{isLoading && (
-						<div className={cx('&-message-container', { '&-has-overlay': hasOverlay })}>
+						<div className={cx('&-message-container', {
+							'&-has-overlay': hasOverlay,
+							'&-kind-light': overlayKind === 'light',
+						})}>
 							{messageElement}
 						</div>
 					)}

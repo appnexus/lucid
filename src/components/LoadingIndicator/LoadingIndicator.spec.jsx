@@ -141,4 +141,21 @@ describe('LoadingIndicator', () => {
 		});
 	});
 
+	describe('overlayKind', () => {
+		describe('light', () => {
+			it('should add `&-kind-light` class', () => {
+				const wrapper = shallow(
+					<LoadingIndicator
+						isLoading
+						overlayKind='light'
+					>
+						<div>Some content</div>
+					</LoadingIndicator>
+				);
+				const messageContainer = wrapper.find('.lucid-LoadingIndicator-message-container');
+				assert(messageContainer.hasClass('lucid-LoadingIndicator-kind-light'));
+			});
+		});
+	});
+
 });
