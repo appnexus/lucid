@@ -10,7 +10,14 @@ export default React.createClass({
 	getInitialState: () => ({
 		isLoading: true,
 		data: _.map(dates, date => ({ x: date, y: 0 })),
+		overlayKind: 'dark',
 	}),
+
+	handleKindClick() {
+		this.setState({
+			overlayKind: this.state.overlayKind === 'dark' ? 'light' : 'dark',
+		});
+	},
 
 	componentDidMount() {
 		setTimeout(() => this.setState({ isLoading: false, data: getData() }), 1000);
@@ -24,7 +31,10 @@ export default React.createClass({
 		} = this.state;
 
 		return (
-			<LoadingIndicator isLoading={isLoading}>
+			<LoadingIndicator
+				isLoading={isLoading}
+				overlayKind={this.state.overlayKind}
+			>
 				<Button
 					style={{ margin: 10 }}
 					onClick={() => {
@@ -33,6 +43,11 @@ export default React.createClass({
 					}}
 					>
 					Get more data
+				</Button>
+				<Button
+					onClick={this.handleKindClick}
+				>
+					Switch Overlay Color
 				</Button>
 				<BarChart
 					data={data}
