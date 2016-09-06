@@ -21,7 +21,7 @@ const {
 /**
  * {"categories": ["helpers"], "madeFrom": ["DragCaptureZone"]}
  *
- * `SplitHorizontal` renders a horizontal split.
+ * `SplitHorizontal` renders a vertical split.
  */
 const SplitHorizontal = createClass({
 	displayName: 'SplitHorizontal',
@@ -387,7 +387,6 @@ const SplitHorizontal = createClass({
 					'&-is-animated': isAnimated,
 				}, className)}
 				style={{
-					display: 'flex',
 					overflow: 'hidden',
 					...passThroughs.style,
 				}}
@@ -401,7 +400,6 @@ const SplitHorizontal = createClass({
 								height: '100%',
 								display: 'flex',
 								flexDirection: 'column',
-								overflow: 'auto',
 								transform: `translateY(${(isBottomSecondary ? 1 : -1) * Math.round(tween.slideAmount)}px)`,
 							}}
 						>
