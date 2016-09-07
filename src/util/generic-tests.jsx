@@ -4,12 +4,10 @@ import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import _ from 'lodash';
 import * as lucid from '../index';
-import { Motion } from 'react-motion';
 
 // Common tests for all our components
 export function common(Component, {
 	getDefaultProps = _.constant({}),
-	selector = null,
 	exemptFunctionProps = [],
 	exemptChildComponents = [],
 	selectRoot = _.identity,
