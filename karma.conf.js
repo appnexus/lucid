@@ -3,6 +3,9 @@ module.exports = function(config) {
 
 		client: {
 			captureConsole: false,
+
+			// ignore tests with '[mostly stable]' in the title
+			args: ['--grep', '^(?!.*\\[mostly stable\\])'],
 		},
 
 		// base path that will be used to resolve all patterns (eg. files, exclude)
