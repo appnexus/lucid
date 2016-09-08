@@ -387,6 +387,7 @@ const SplitHorizontal = createClass({
 					'&-is-animated': isAnimated,
 				}, className)}
 				style={{
+					flex: 1,
 					overflow: 'hidden',
 					...passThroughs.style,
 				}}
