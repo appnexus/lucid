@@ -169,6 +169,12 @@
 			& > .lucid-Sidebar {
 				flex: 1;
 			}
+
+			// Addresses a Firefox specific rendering issue with a Submarine nested in a Sidebar.
+			& > .lucid-Submarine, x:-moz-any-link, x:default { 
+				display: block;
+				height: 100%;
+			}
 		}
 	}
 
