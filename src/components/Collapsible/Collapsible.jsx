@@ -94,7 +94,7 @@ const Collapsible = createClass({
 	componentDidMount() {
 		_.delay(() => {
 			this.setState({
-				maxHeight: this.Refs.root.scrollHeight,
+				maxHeight: _.get(this.Refs, 'root.scrollHeight'),
 			});
 			this.isAnimated = this.props.isAnimated;
 		}, 32);
@@ -105,7 +105,7 @@ const Collapsible = createClass({
 			this.isAnimated = false;
 			_.delay(() => {
 				if (this.props.isExpanded) {
-					const maxHeight = this.Refs.root.scrollHeight;
+					const maxHeight = _.get(this.Refs, 'root.scrollHeight');
 					if (maxHeight !== this.state.maxHeight) {
 						this.setState({
 							maxHeight,
