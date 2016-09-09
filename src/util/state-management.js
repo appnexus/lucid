@@ -128,7 +128,7 @@ export function buildHybridComponent(baseComponent, {
 
 		logger.warnOnce(
 			displayName,
-			`Lucid: you are trying to apply buildHybridComponent to ${displayName}, which is already a hybdrid component. Lucid exports hybrid components by default. To access the dumb components, use the -Dumb suffix, e.g. "ComponentDumb"`
+			`Lucid: you are trying to apply buildHybridComponent to ${displayName}, which is already a hybrid component. Lucid exports hybrid components by default. To access the dumb components, use the -Dumb suffix, e.g. "ComponentDumb"`
 		);
 
 		return baseComponent;
