@@ -1,5 +1,6 @@
 import React from 'react';
-import { createClass, omitProps } from '../../util/component-types';
+import _ from 'lodash';
+import { createClass, getFirst, omitProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import Table from '../Table/Table';
 
@@ -23,6 +24,9 @@ const ScrollTable = createClass({
 	displayName: 'ScrollTable',
 
 	components: {
+		OverlayContainer: createClass({
+			displayName: 'ScrollTable.OverlayContainer',
+		}),
 		Thead: Table.Thead,
 		Tbody: Table.Tbody,
 		Tr: Table.Tr,
@@ -55,6 +59,10 @@ const ScrollTable = createClass({
 		 * render the table with borders on the outer edge
 		 */
 		hasBorder: bool,
+		/**
+		 * Container for any overlay to be displayed on top of the table.
+		 */
+		OverlayContainer: node,
 	},
 
 	getDefaultProps() {
@@ -75,6 +83,8 @@ const ScrollTable = createClass({
 			...passThroughs,
 		} = this.props;
 
+		const overlayChildProp = _.get(getFirst(this.props, ScrollTable.OverlayContainer), 'props', {});
+
 		return (
 			<div
 				className={cx('&', {
@@ -82,6 +92,7 @@ const ScrollTable = createClass({
 				}, className)}
 				style={style}
 			>
+				<div {...overlayChildProp} />
 				<Table
 					{...omitProps(passThroughs, ScrollTable)}
 					style={{
@@ -89,7 +100,7 @@ const ScrollTable = createClass({
 					}}
 					hasWordWrap={hasWordWrap}
 				>
-					{children}
+					{_.slice(children, 1)}
 				</Table>
 			</div>
 		);

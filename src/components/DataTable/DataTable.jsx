@@ -5,6 +5,7 @@ import { createClass, findTypes, filterTypes, omitProps } from '../../util/compo
 
 import Checkbox from '../Checkbox/Checkbox';
 import ScrollTable from '../ScrollTable/ScrollTable';
+import EmptyIndicator from './EmptyIndicator';
 
 const {
 	Thead,
@@ -39,7 +40,6 @@ const DataTable = createClass({
 		 * Styles that are passed through to the root container.
 		 */
 		style: object,
-
 		/**
 		 * Class names that are appended to the defaults.
 		 */
@@ -48,6 +48,9 @@ const DataTable = createClass({
 		 * Array of objects to be rendered in the table. Object keys match the `field` of each defined `DataTable.Column`.
 		 */
 		data: arrayOf(object),
+		emptyMessageBody: string,
+		emptyMessageTitle: string,
+		emptyMessageImageUrl: string,
 		/**
 		 * Render a checkbox in the first column allowing `onSelect` and `onSelectAll` to be triggered.
 		 */
@@ -178,6 +181,9 @@ const DataTable = createClass({
 		const {
 			className,
 			data,
+			emptyMessageBody,
+			emptyMessageTitle,
+			emptyMessageImageUrl,
 			isActionable,
 			isSelectable,
 			style,
@@ -212,6 +218,15 @@ const DataTable = createClass({
 				{...omitProps(passThroughs, DataTable)}
 				className={cx('&', className)}
 			>
+				{!data.length &&
+					<ScrollTable.OverlayContainer>
+						<EmptyIndicator
+							body={emptyMessageBody}
+							imageUrl={emptyMessageImageUrl}
+							title={emptyMessageTitle}
+						/>
+					</ScrollTable.OverlayContainer>
+				}
 				<Thead>
 					<Tr>
 						{isSelectable ? (
@@ -264,34 +279,58 @@ const DataTable = createClass({
 					) : null}
 				</Thead>
 				<Tbody>
-					{_.map(data, (row, index) => (
+					{data.length ?
+						_.map(data, (row, index) => (
+							<Tr
+								{..._.pick(row, ['isDisabled', 'isActive', 'isSelected'])}
+								onClick={_.partial(this.handleRowClick, index)}
+								isActionable={isActionable}
+								key={'row' + index}
+							>
+								{isSelectable ? (
+									<Td>
+										<Checkbox
+											isSelected={row.isSelected}
+											onSelect={_.partial(this.handleSelect, index)}
+										/>
+									</Td>
+								) : null}
+								{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => (
+									<Td
+										{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
+										style={{
+											width: columnProps.width,
+										}}
+										key={'row' + index + _.get(columnProps, 'field', columnIndex)}
+									>
+										{_.get(row, columnProps.field, '')}
+									</Td>
+								))}
+							</Tr>
+					))
+					:
+					_.times(10, (index) => (
 						<Tr
-							{..._.pick(row, ['isDisabled', 'isActive', 'isSelected'])}
-							onClick={_.partial(this.handleRowClick, index)}
-							isActionable={isActionable}
+							isDisabled
 							key={'row' + index}
+							style={{height: '32px'}}
 						>
-							{isSelectable ? (
-								<Td>
-									<Checkbox
-										isSelected={row.isSelected}
-										onSelect={_.partial(this.handleSelect, index)}
+								{isSelectable ? (
+									<Td>
+									</Td>
+								) : null}
+								{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => (
+									<Td
+										{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
+										style={{
+											width: columnProps.width,
+										}}
+										key={'row' + index + _.get(columnProps, 'field', columnIndex)}
 									/>
-								</Td>
-							) : null}
-							{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => (
-								<Td
-									{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
-									style={{
-										width: columnProps.width,
-									}}
-									key={'row' + index + _.get(columnProps, 'field', columnIndex)}
-								>
-									{_.get(row, columnProps.field, '')}
-								</Td>
-							))}
+								))}
 						</Tr>
-					))}
+					))
+				}
 				</Tbody>
 			</ScrollTable>
 		);

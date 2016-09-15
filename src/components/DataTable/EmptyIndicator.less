@@ -1,0 +1,43 @@
+.lucid-EmptyIndicator {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	&-message-content {
+		max-width: 401px;
+		background-color: white;
+		border: @border-lightBorder;
+		border-radius: @size-borderRadius;
+	}
+
+	&-message-title {
+		font-size: 15px;
+		font-weight: bold;
+		color: @color-darkGray;
+		display: block;
+		margin-bottom: 6px;
+		margin-top: 10px;
+	}
+
+	&-message-body {
+		padding: 12px;
+		// line-height: 0;
+		text-align: center;
+	}
+
+	&-message-body-text {
+		font-size: 12px;
+		color: @color-darkGray;
+	}
+
+	&-message-content-header {
+		height: 15px;
+		width: 100%;
+	}
+}

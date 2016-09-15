@@ -1,7 +1,8 @@
 import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, rejectTypes, omitProps } from '../../util/component-types';
+import { createClass, getFirst, rejectTypes } from '../../util/component-types';
+import OverlayWrapper from '../OverlayWrapper/OverlayWrapper';
 import LoadingMessage from '../LoadingMessage/LoadingMessage';
 
 const cx = lucidClassNames.bind('&-LoadingIndicator');
@@ -15,7 +16,7 @@ const {
 
 /**
  *
- * {"categories": ["communication"], "madeFrom": ["LoadingMessage"]}
+ * {"categories": ["communication"], "madeFrom": ["OverlayWrapper", "LoadingMessage"]}
  *
  * A loading indicator wrapper with optional overlay.
  *
@@ -63,41 +64,25 @@ const LoadingIndicator = createClass({
 		const {
 			props,
 			props: {
-				hasOverlay,
-				className,
 				children,
 				isLoading,
-				overlayKind,
-				...passThroughs,
 			},
 		} = this;
 
 		const { LoadingMessage } = LoadingIndicator;
 
 		const messageElement = getFirst(props, LoadingMessage, <LoadingMessage />);
-		const otherChildren = rejectTypes(children, [LoadingMessage]);
+		const otherChildren = rejectTypes(children, LoadingMessage);
 
 		return (
-			<div
-				{...omitProps(passThroughs, LoadingIndicator)}
-				className={cx('&', className)}
+			<OverlayWrapper
+				{..._.omit(props, ['children', 'isLoading'])}
+				className={cx('&')}
+				isVisible={isLoading}
 			>
 				{otherChildren}
-				<ReactCSSTransitionGroup
-					transitionName={cx('&-message-container')}
-					transitionEnterTimeout={300}
-					transitionLeaveTimeout={300}
-				>
-					{isLoading && (
-						<div className={cx('&-message-container', {
-							'&-has-overlay': hasOverlay,
-							'&-kind-light': overlayKind === 'light',
-						})}>
-							{messageElement}
-						</div>
-					)}
-				</ReactCSSTransitionGroup>
-			</div>
+				<OverlayWrapper.Message>{messageElement}</OverlayWrapper.Message>
+			</OverlayWrapper>
 		);
 	},
 });
