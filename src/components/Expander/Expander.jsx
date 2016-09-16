@@ -15,6 +15,7 @@ const {
 	func,
 	node,
 	object,
+	oneOf,
 	string,
 } = React.PropTypes;
 
@@ -81,12 +82,21 @@ const Expander = createClass({
 		 * the expander icon.
 		 */
 		Label: any,
+
+		/**
+		 * Kind of expander this should be
+		 */
+		kind: oneOf([
+			'normal',
+			'emphasis',
+		]),
 	},
 
 	getDefaultProps() {
 		return {
 			isExpanded: false,
 			onToggle: _.noop,
+			kind: 'normal',
 		};
 	},
 
@@ -109,25 +119,28 @@ const Expander = createClass({
 			className,
 			isExpanded,
 			style,
+			kind,
 			...passThroughs,
 		} = this.props;
 
 		const labelChildProp = _.first(_.map(findTypes(this.props, Expander.Label), 'props'));
+		const withEmphasis = kind === 'emphasis';
 
 		return (
 			<div
 				{...omitProps(passThroughs, Expander)}
 				className={cx('&', {
 					'&-is-expanded': isExpanded,
+					'&-with-emphasis': withEmphasis,
 				}, className)}
 				style={style}
 			>
 				<header className={cx('&-header')} onClick={this.handleToggle}>
-					<span className={cx('&-icon')}>
+					{!withEmphasis ? (<span className={cx('&-icon')}>
 						<ChevronIcon
 							direction={isExpanded ? 'up' : 'down'}
 						/>
-					</span>
+					</span>) : null}
 					<ReactCSSTransitionGroup
 						transitionName={cx('&-text')}
 						transitionEnterTimeout={100}
@@ -138,6 +151,11 @@ const Expander = createClass({
 							<span key={this._labelKey}>{labelChildProp.children}</span>
 						: null}
 					</ReactCSSTransitionGroup>
+					{withEmphasis ? (<span className={cx('&-icon')}>
+						<ChevronIcon
+							direction={isExpanded ? 'up' : 'down'}
+						/>
+					</span>) : null}
 				</header>
 				<Collapsible isExpanded={isExpanded} rootType='section' className={cx('&-content')}>
 					{children}
