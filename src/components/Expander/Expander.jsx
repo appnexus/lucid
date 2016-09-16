@@ -2,9 +2,9 @@ import _ from 'lodash';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, findTypes, omitProps }  from '../../util/component-types';
+import { createClass, getFirst, findTypes, omitProps } from '../../util/component-types';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
-import Collapsible  from '../Collapsible/Collapsible';
+import Collapsible from '../Collapsible/Collapsible';
 import * as reducers from './Expander.reducers';
 
 const cx = lucidClassNames.bind('&-Expander');
@@ -18,6 +18,22 @@ const {
 	oneOf,
 	string,
 } = React.PropTypes;
+
+const ChevronButton = createClass({
+	propTypes: {
+		isExpanded: bool,
+	},
+
+	render() {
+		return (
+			<span className={cx('&-icon')}>
+				<ChevronIcon
+					direction={this.props.isExpanded ? 'up' : 'down'}
+				/>
+			</span>
+		);
+	},
+});
 
 /**
  * {"categories": ["layout"], "madeFrom": ["ChevronIcon"]}
@@ -136,11 +152,7 @@ const Expander = createClass({
 				style={style}
 			>
 				<header className={cx('&-header')} onClick={this.handleToggle}>
-					{!withEmphasis ? (<span className={cx('&-icon')}>
-						<ChevronIcon
-							direction={isExpanded ? 'up' : 'down'}
-						/>
-					</span>) : null}
+					{!withEmphasis ? (<ChevronButton isExpanded={isExpanded} />) : null}
 					<ReactCSSTransitionGroup
 						transitionName={cx('&-text')}
 						transitionEnterTimeout={100}
@@ -151,11 +163,7 @@ const Expander = createClass({
 							<span key={this._labelKey}>{labelChildProp.children}</span>
 						: null}
 					</ReactCSSTransitionGroup>
-					{withEmphasis ? (<span className={cx('&-icon')}>
-						<ChevronIcon
-							direction={isExpanded ? 'up' : 'down'}
-						/>
-					</span>) : null}
+					{withEmphasis ? (<ChevronButton isExpanded={isExpanded} />) : null}
 				</header>
 				<Collapsible isExpanded={isExpanded} rootType='section' className={cx('&-content')}>
 					{children}
