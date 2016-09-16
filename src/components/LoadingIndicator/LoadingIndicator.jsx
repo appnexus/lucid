@@ -55,7 +55,7 @@ const LoadingIndicator = createClass({
 		return {
 			hasOverlay: true,
 			isLoading: false,
-			overlayKind: 'dark',
+			overlayKind: 'light',
 		};
 	},
 
