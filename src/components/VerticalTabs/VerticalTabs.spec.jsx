@@ -7,7 +7,7 @@ import { common } from '../../util/generic-tests';
 import VerticalTabs from './VerticalTabs';
 import VerticalListMenu from '../VerticalListMenu/VerticalListMenu';
 
-describe.only('VerticalTabs', () => {
+describe('VerticalTabs', () => {
 	common(VerticalTabs, {
 		exemptChildComponents: ['Tab', 'Title'],
 	});
