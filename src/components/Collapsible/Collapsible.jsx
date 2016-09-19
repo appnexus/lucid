@@ -155,7 +155,7 @@ const Collapsible = createClass({
 						},
 					}, [
 						(<div key='content' className={cx('&-content')} style={{ margin: 0 }}>
-							{isMountControlled ? (
+							{isMountControlled && !isExpanded ? (
 								_.isNull(maxHeight) || Math.abs(tween.height) > mountControlThreshold ? children : null
 							) : children}
 						</div>),
