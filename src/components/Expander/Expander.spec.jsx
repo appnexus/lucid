@@ -6,8 +6,7 @@ import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
 import { common, controls } from '../../util/generic-tests';
-import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
-import Expander from './Expander';
+import Expander, {ChevronButton} from './Expander';
 
 describe('Expander', () => {
 	common(Expander);
@@ -20,11 +19,11 @@ describe('Expander', () => {
 	describe('props', () => {
 		describe('isExpanded', () => {
 			it('sets the value of the `direction` prop on its `ChevronIcon` instance to "up" when `true`.', () => {
-				assert.equal(shallow(<Expander isExpanded={true} />).find(ChevronIcon).prop('direction'), 'up');
+				assert.equal(shallow(<Expander isExpanded={true} />).find(ChevronButton).prop('isExpanded'), true);
 			});
 
 			it('sets the value of the `direction` prop on its `ChevronIcon` instance to "down" when `false`.', () => {
-				assert.equal(shallow(<Expander isExpanded={false} />).find(ChevronIcon).prop('direction'), 'down');
+				assert.equal(shallow(<Expander isExpanded={false} />).find(ChevronButton).prop('isExpanded'), false);
 			});
 
 			it('adds the "lucid-Expander-is-expanded" class to the root element when `true`.', () => {
@@ -44,6 +43,19 @@ describe('Expander', () => {
 		describe('onToggle', () => {
 			it('defaults to the Lodash `noop` method.', () => {
 				assert.equal(mount(<Expander />).prop('onToggle'), _.noop);
+			});
+		});
+
+		describe('kind', () => {
+			it('defaults "normal".', () => {
+				assert.equal(mount(<Expander />).prop('kind'), 'normal');
+			});
+			it('accepts "emphasis".', () => {
+				assert.equal(mount(<Expander kind='emphasis' />).prop('kind'), 'emphasis');
+			});
+			it('`kind=emphasis` adds the "lucid-Expander-with-emphasis" class.', () => {
+				const wrapper = shallow(<Expander isExpanded={true} kind='emphasis' />);
+				assert.equal(wrapper.find('.lucid-Expander-with-emphasis').length, 1);
 			});
 		});
 

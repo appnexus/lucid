@@ -19,9 +19,17 @@ const {
 	string,
 } = React.PropTypes;
 
-const ChevronButton = createClass({
+export const ChevronButton = createClass({
+	displayName: 'ChevronButton',
+
 	propTypes: {
 		isExpanded: bool,
+	},
+
+	getDefaultProps() {
+		return {
+			isExpanded: false,
+		};
 	},
 
 	render() {
