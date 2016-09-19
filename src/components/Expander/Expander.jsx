@@ -19,30 +19,6 @@ const {
 	string,
 } = React.PropTypes;
 
-export const ChevronButton = createClass({
-	displayName: 'ChevronButton',
-
-	propTypes: {
-		isExpanded: bool,
-	},
-
-	getDefaultProps() {
-		return {
-			isExpanded: false,
-		};
-	},
-
-	render() {
-		return (
-			<span className={cx('&-icon')}>
-				<ChevronIcon
-					direction={this.props.isExpanded ? 'up' : 'down'}
-				/>
-			</span>
-		);
-	},
-});
-
 /**
  * {"categories": ["layout"], "madeFrom": ["ChevronIcon"]}
  *
@@ -108,11 +84,11 @@ const Expander = createClass({
 		Label: any,
 
 		/**
-		 * Kind of expander this should be
+		 * Renders different variants of Expander. 'simple' is default. 'highlighted' is more prominant.
 		 */
 		kind: oneOf([
-			'normal',
-			'emphasis',
+			'simple',
+			'highlighted',
 		]),
 	},
 
@@ -120,7 +96,7 @@ const Expander = createClass({
 		return {
 			isExpanded: false,
 			onToggle: _.noop,
-			kind: 'normal',
+			kind: 'simple',
 		};
 	},
 
@@ -148,19 +124,22 @@ const Expander = createClass({
 		} = this.props;
 
 		const labelChildProp = _.first(_.map(findTypes(this.props, Expander.Label), 'props'));
-		const withEmphasis = kind === 'emphasis';
 
 		return (
 			<div
 				{...omitProps(passThroughs, Expander)}
 				className={cx('&', {
 					'&-is-expanded': isExpanded,
-					'&-with-emphasis': withEmphasis,
+					'&-kind-highlighted': kind === 'highlighted',
 				}, className)}
 				style={style}
 			>
 				<header className={cx('&-header')} onClick={this.handleToggle}>
-					{!withEmphasis ? (<ChevronButton isExpanded={isExpanded} />) : null}
+					<span className={cx('&-icon')}>
+						<ChevronIcon
+							direction={isExpanded ? 'up' : 'down'}
+						/>
+					</span>
 					<ReactCSSTransitionGroup
 						transitionName={cx('&-text')}
 						transitionEnterTimeout={100}
@@ -171,7 +150,6 @@ const Expander = createClass({
 							<span key={this._labelKey}>{labelChildProp.children}</span>
 						: null}
 					</ReactCSSTransitionGroup>
-					{withEmphasis ? (<ChevronButton isExpanded={isExpanded} />) : null}
 				</header>
 				<Collapsible isExpanded={isExpanded} rootType='section' className={cx('&-content')}>
 					{children}

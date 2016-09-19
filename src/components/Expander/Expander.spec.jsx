@@ -6,7 +6,8 @@ import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
 import { common, controls } from '../../util/generic-tests';
-import Expander, {ChevronButton} from './Expander';
+import Expander from './Expander';
+import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 
 describe('Expander', () => {
 	common(Expander);
@@ -19,11 +20,11 @@ describe('Expander', () => {
 	describe('props', () => {
 		describe('isExpanded', () => {
 			it('sets the value of the `direction` prop on its `ChevronIcon` instance to "up" when `true`.', () => {
-				assert.equal(shallow(<Expander isExpanded={true} />).find(ChevronButton).prop('isExpanded'), true);
+				assert.equal(shallow(<Expander isExpanded={true} />).find(ChevronIcon).prop('direction'), 'up');
 			});
 
 			it('sets the value of the `direction` prop on its `ChevronIcon` instance to "down" when `false`.', () => {
-				assert.equal(shallow(<Expander isExpanded={false} />).find(ChevronButton).prop('isExpanded'), false);
+				assert.equal(shallow(<Expander isExpanded={false} />).find(ChevronIcon).prop('direction'), 'down');
 			});
 
 			it('adds the "lucid-Expander-is-expanded" class to the root element when `true`.', () => {
@@ -47,15 +48,15 @@ describe('Expander', () => {
 		});
 
 		describe('kind', () => {
-			it('defaults "normal".', () => {
-				assert.equal(mount(<Expander />).prop('kind'), 'normal');
+			it('defaults "simple".', () => {
+				assert.equal(mount(<Expander />).prop('kind'), 'simple');
 			});
-			it('accepts "emphasis".', () => {
-				assert.equal(mount(<Expander kind='emphasis' />).prop('kind'), 'emphasis');
+			it('accepts "highlighted".', () => {
+				assert.equal(mount(<Expander kind='highlighted' />).prop('kind'), 'highlighted');
 			});
-			it('`kind=emphasis` adds the "lucid-Expander-with-emphasis" class.', () => {
-				const wrapper = shallow(<Expander isExpanded={true} kind='emphasis' />);
-				assert.equal(wrapper.find('.lucid-Expander-with-emphasis').length, 1);
+			it('`kind=highlighted` adds the "lucid-Expander-kind-highlighted" class.', () => {
+				const wrapper = shallow(<Expander isExpanded={true} kind='highlighted' />);
+				assert.equal(wrapper.find('.lucid-Expander-kind-highlighted').length, 1);
 			});
 		});
 
