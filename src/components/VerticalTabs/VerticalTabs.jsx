@@ -19,8 +19,9 @@ const {
  *
  * {"categories": ["navigation"], "madeFrom": ["VerticalListMenu"]}
  *
- * `Tabs` provides tabbed navigation. It has a flexible interface that allows
- * tab content to be passed as regular React children or through props.
+ * `VerticalTabs` provides vertically tabbed navigation. It has a flexible
+ * interface that allows tab content to be passed as regular React children or
+ * through props.
  */
 const VerticalTabs = createClass({
 	displayName: 'VerticalTabs',
@@ -63,15 +64,17 @@ const VerticalTabs = createClass({
 		className: string,
 
 		/**
-		 * Indicates which of the `Tabs.Tab` children is currently selected. The
-		 * index of the last `Tabs.Tab` child with `isSelected` equal to `true`
-		 * takes precedence over this prop.
+		 * Indicates which of the `VerticalTabs.Tab` children is currently
+		 * selected. The index of the last `VerticalTabs.Tab` child with
+		 * `isSelected` equal to `true` takes precedence over this prop.
 		 */
 		selectedIndex: number,
 
 		/**
 		 * Callback for when the user clicks a tab. Called with the index of the
 		 * tab that was clicked.
+		 *
+		 * Signature: `(index, { event, props}) => {}`
 		 */
 		onSelect: func,
 	},
@@ -86,6 +89,7 @@ const VerticalTabs = createClass({
 	render() {
 		const {
 			className,
+			onSelect,
 			selectedIndex,
 			style,
 			...passThroughs,
@@ -110,13 +114,13 @@ const VerticalTabs = createClass({
 			>
 				<VerticalListMenu
 					selectedIndices={[actualSelectedIndex]}
+					onSelect={onSelect}
 				>
 					{_.map(tabChildProps, (tabChildProp, index) => {
 						return (
 							<VerticalListMenu.Item
-								className={cx('&-Tab')}
+								className={cx('&-Tab', {'&-Tab-is-active': actualSelectedIndex === index})}
 								key={index}
-								onSelect={_.partial(this.handleClicked, index, tabChildProp)}
 							>
 								<span className={cx('&-Tab-content')}>{_.get(getFirst(tabChildProp, VerticalTabs.Title), 'props.children', '')}</span>
 							</VerticalListMenu.Item>
@@ -128,14 +132,6 @@ const VerticalTabs = createClass({
 				</div>
 			</div>
 		);
-	},
-
-	handleClicked(index, tabProps, event) {
-		const {
-			onSelect,
-		} = this.props;
-
-		onSelect(index, { event, props: tabProps });
 	},
 });
 

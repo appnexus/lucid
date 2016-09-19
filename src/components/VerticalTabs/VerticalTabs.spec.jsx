@@ -4,156 +4,133 @@ import assert from 'assert';
 import { shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
 
-import Tabs from './Tabs';
+import VerticalTabs from './VerticalTabs';
+import VerticalListMenu from '../VerticalListMenu/VerticalListMenu';
 
-describe('Tabs', () => {
-	common(Tabs, {
+describe.only('VerticalTabs', () => {
+	common(VerticalTabs, {
 		exemptChildComponents: ['Tab', 'Title'],
 	});
 
 	describe('props', () => {
 		it('Tab as children', () => {
 			const wrapper = shallow(
-				<Tabs>
-					<Tabs.Tab>Foo Content</Tabs.Tab>
-					<Tabs.Tab>Two</Tabs.Tab>
-				</Tabs>
+				<VerticalTabs>
+					<VerticalTabs.Tab>Foo Content</VerticalTabs.Tab>
+					<VerticalTabs.Tab>Two</VerticalTabs.Tab>
+				</VerticalTabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Foo Content')
+			assert.equal(wrapper.find('.lucid-VerticalTabs-content').text(), 'Foo Content')
 		});
 
 		it('Tab as props', () => {
 			const wrapper = shallow(
-				<Tabs Tab={[{children: 'Bert'}, {children: 'Ernie'}]} />
+				<VerticalTabs Tab={[{children: 'Bert'}, {children: 'Ernie'}]} />
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-Tab').length, 2);
-			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Bert');
+			assert.equal(wrapper.find('.lucid-VerticalTabs-Tab').length, 2);
+			assert.equal(wrapper.find('.lucid-VerticalTabs-content').text(), 'Bert');
 		});
 
 		it('Tab as props with Title', () => {
 			const wrapper = shallow(
-				<Tabs Tab={[
+				<VerticalTabs Tab={[
 					{ Title: 'Coolest', children: 'Bert' },
 					{ Title: 'Not so cool', children: 'Ernie' },
 				]} />
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-Tab').length, 2);
-			assert.equal(wrapper.find('.lucid-Tabs-Tab-is-active').text(), 'Coolest');
-			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Bert');
+			assert.equal(wrapper.find('.lucid-VerticalTabs-Tab').length, 2);
+			assert.equal(wrapper.find('.lucid-VerticalTabs-Tab-is-active').children().text(), 'Coolest');
+			assert.equal(wrapper.find('.lucid-VerticalTabs-content').text(), 'Bert');
 		});
 
 		it('Title as props', () => {
 			const wrapper = shallow(
-				<Tabs>
-					<Tabs.Tab Title='Froyo'>Yolo fo sho</Tabs.Tab>
-					<Tabs.Tab>Broyoyo</Tabs.Tab>
-				</Tabs>
+				<VerticalTabs>
+					<VerticalTabs.Tab Title='Froyo'>Yolo fo sho</VerticalTabs.Tab>
+					<VerticalTabs.Tab>Broyoyo</VerticalTabs.Tab>
+				</VerticalTabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-Tab').first().text(), 'Froyo');
+			assert.equal(wrapper.find('.lucid-VerticalTabs-Tab').first().children().text(), 'Froyo');
 		});
 
 		it('Title as children', () => {
 			const wrapper = shallow(
-				<Tabs>
-					<Tabs.Tab>
-						<Tabs.Title>Froyo</Tabs.Title>
+				<VerticalTabs>
+					<VerticalTabs.Tab>
+						<VerticalTabs.Title>Froyo</VerticalTabs.Title>
 						Yolo fo sho
-					</Tabs.Tab>
-					<Tabs.Tab>Broyoyo</Tabs.Tab>
-				</Tabs>
+					</VerticalTabs.Tab>
+					<VerticalTabs.Tab>Broyoyo</VerticalTabs.Tab>
+				</VerticalTabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-Tab').first().text(), 'Froyo');
+			assert.equal(wrapper.find('.lucid-VerticalTabs-Tab').first().children().text(), 'Froyo');
 		});
 
 		it('selectedIndex', () => {
 			const wrapper = shallow(
-				<Tabs selectedIndex={1}>
-					<Tabs.Tab Title='Lollipop'>Yuck</Tabs.Tab>
-					<Tabs.Tab Title='Slurpee'>Yum</Tabs.Tab>
-				</Tabs>
+				<VerticalTabs selectedIndex={1}>
+					<VerticalTabs.Tab Title='Lollipop'>Yuck</VerticalTabs.Tab>
+					<VerticalTabs.Tab Title='Slurpee'>Yum</VerticalTabs.Tab>
+				</VerticalTabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-Tab-is-active').text(), 'Slurpee');
-			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Yum');
+			assert.equal(wrapper.find('.lucid-VerticalTabs-Tab-is-active').children().text(), 'Slurpee');
+			assert.equal(wrapper.find('.lucid-VerticalTabs-content').text(), 'Yum');
 		});
 
 		it('Tab.isSelected', () => {
 			const wrapper = shallow(
-				<Tabs>
-					<Tabs.Tab Title='Lollipop'>Yuck</Tabs.Tab>
-					<Tabs.Tab isSelected={true} Title='Slurpee'>Yum</Tabs.Tab>
-				</Tabs>
+				<VerticalTabs>
+					<VerticalTabs.Tab Title='Lollipop'>Yuck</VerticalTabs.Tab>
+					<VerticalTabs.Tab isSelected={true} Title='Slurpee'>Yum</VerticalTabs.Tab>
+				</VerticalTabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-Tab-is-active').text(), 'Slurpee');
-			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Yum');
+			assert.equal(wrapper.find('.lucid-VerticalTabs-Tab-is-active').children().text(), 'Slurpee');
+			assert.equal(wrapper.find('.lucid-VerticalTabs-content').text(), 'Yum');
 		});
 
 		it('last Tab.isSelected beats selectedIndex', () => {
 			const wrapper = shallow(
-				<Tabs selectedIndex={0}>
-					<Tabs.Tab Title='One'>One content</Tabs.Tab>
-					<Tabs.Tab isSelected={true} Title='Two'>Two content</Tabs.Tab>
-					<Tabs.Tab isSelected={true} Title='Three'>Three content</Tabs.Tab>
-				</Tabs>
+				<VerticalTabs selectedIndex={0}>
+					<VerticalTabs.Tab Title='One'>One content</VerticalTabs.Tab>
+					<VerticalTabs.Tab isSelected={true} Title='Two'>Two content</VerticalTabs.Tab>
+					<VerticalTabs.Tab isSelected={true} Title='Three'>Three content</VerticalTabs.Tab>
+				</VerticalTabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-Tab-is-active').text(), 'Three');
-			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Three content');
+			assert.equal(wrapper.find('.lucid-VerticalTabs-Tab-is-active').children().text(), 'Three');
+			assert.equal(wrapper.find('.lucid-VerticalTabs-content').text(), 'Three content');
 		});
 
 		describe('onSelect', () => {
 
 			let onSelect = sinon.spy();
-			let clickEvent;
 			let wrapper;
 
 			beforeEach(() => {
 
 				onSelect.reset();
-				clickEvent = 'event';
 				wrapper = shallow(
-					<Tabs onSelect={onSelect}>
-						<Tabs.Tab isDisabled={true}>One</Tabs.Tab>
-						<Tabs.Tab>Two</Tabs.Tab>
-					</Tabs>
+					<VerticalTabs onSelect={onSelect}>
+						<VerticalTabs.Tab>One</VerticalTabs.Tab>
+						<VerticalTabs.Tab>Two</VerticalTabs.Tab>
+					</VerticalTabs>
 				);
 
 			});
 
-			it('should call onSelect with the correct arguments', () => {
-				wrapper.find('.lucid-Tabs-Tab').at(1).simulate('click', clickEvent);
-				const selectedIndex = onSelect.args[0][0];
-				const meta = onSelect.args[0][1];
+			it('should pass props onto `VerticalListMenu`', () => {
+				wrapper.find(VerticalListMenu).props().onSelect('stuff');
 				assert(onSelect.called);
-				assert.equal(selectedIndex, 1);
-				assert.equal(meta.event, clickEvent);
-				assert.deepEqual(meta.props, {children: 'Two'});
+				assert.equal(onSelect.args[0], 'stuff');
 			});
 
-			it('should call onSelect with isDisabled prop', () => {
-				wrapper.find('.lucid-Tabs-Tab').at(0).simulate('click', clickEvent);
-				const meta = onSelect.args[0][1];
-				assert(onSelect.called);
-				assert(meta.props.isDisabled, 'isDisabled should be true');
-			});
-
-		});
-
-		it('isOpen', () => {
-			const wrapper = shallow(
-				<Tabs isOpen={false} selectedIndex={0}>
-					<Tabs.Tab Title='Lollipop'>Yuck</Tabs.Tab>
-					<Tabs.Tab Title='Slurpee'>Yum</Tabs.Tab>
-				</Tabs>
-			);
-
-			assert.equal(wrapper.find('.lucid-Tabs-Tab-is-active-and-open').length, 0);
 		});
 	});
 });
