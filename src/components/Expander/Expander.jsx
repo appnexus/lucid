@@ -2,9 +2,9 @@ import _ from 'lodash';
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, findTypes, omitProps }  from '../../util/component-types';
+import { createClass, getFirst, findTypes, omitProps } from '../../util/component-types';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
-import Collapsible  from '../Collapsible/Collapsible';
+import Collapsible from '../Collapsible/Collapsible';
 import * as reducers from './Expander.reducers';
 
 const cx = lucidClassNames.bind('&-Expander');
@@ -15,6 +15,7 @@ const {
 	func,
 	node,
 	object,
+	oneOf,
 	string,
 } = React.PropTypes;
 
@@ -81,12 +82,21 @@ const Expander = createClass({
 		 * the expander icon.
 		 */
 		Label: any,
+
+		/**
+		 * Renders different variants of Expander. 'simple' is default. 'highlighted' is more prominant.
+		 */
+		kind: oneOf([
+			'simple',
+			'highlighted',
+		]),
 	},
 
 	getDefaultProps() {
 		return {
 			isExpanded: false,
 			onToggle: _.noop,
+			kind: 'simple',
 		};
 	},
 
@@ -109,6 +119,7 @@ const Expander = createClass({
 			className,
 			isExpanded,
 			style,
+			kind,
 			...passThroughs,
 		} = this.props;
 
@@ -119,6 +130,7 @@ const Expander = createClass({
 				{...omitProps(passThroughs, Expander)}
 				className={cx('&', {
 					'&-is-expanded': isExpanded,
+					'&-kind-highlighted': kind === 'highlighted',
 				}, className)}
 				style={style}
 			>
