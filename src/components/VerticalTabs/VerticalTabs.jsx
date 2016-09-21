@@ -2,13 +2,12 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, findTypes, omitProps } from '../../util/component-types';
-import reducers from './VerticalTabs.reducers';
+import * as reducers from './VerticalTabs.reducers';
 import VerticalListMenu from '../VerticalListMenu/VerticalListMenu';
 
 const cx = lucidClassNames.bind('&-VerticalTabs');
 
 const {
-	any,
 	string,
 	number,
 	bool,
@@ -54,11 +53,6 @@ const VerticalTabs = createClass({
 
 	propTypes: {
 		/**
-		 * Styles that are passed through to the root container.
-		 */
-		style: any,
-
-		/**
 		 * Class names that are appended to the defaults.
 		 */
 		className: string,
@@ -91,7 +85,6 @@ const VerticalTabs = createClass({
 			className,
 			onSelect,
 			selectedIndex,
-			style,
 			...passThroughs,
 		} = this.props;
 
@@ -109,26 +102,23 @@ const VerticalTabs = createClass({
 		return (
 			<div
 				{...omitProps(passThroughs, VerticalTabs)}
-				style={style}
 				className={cx('&', className)}
 			>
 				<VerticalListMenu
 					selectedIndices={[actualSelectedIndex]}
 					onSelect={onSelect}
 				>
-					{_.map(tabChildProps, (tabChildProp, index) => {
-						return (
-							<VerticalListMenu.Item
-								className={cx('&-Tab', {'&-Tab-is-active': actualSelectedIndex === index})}
-								key={index}
-							>
-								<span className={cx('&-Tab-content')}>{_.get(getFirst(tabChildProp, VerticalTabs.Title), 'props.children', '')}</span>
-							</VerticalListMenu.Item>
-						);
-					})}
+					{_.map(tabChildProps, (tabChildProp, index) => (
+						<VerticalListMenu.Item
+							className={cx('&-Tab', {'&-Tab-is-active': actualSelectedIndex === index})}
+							key={index}
+						>
+							<span className={cx('&-Tab-content')}>{_.get(getFirst(tabChildProp, VerticalTabs.Title), 'props.children', '')}</span>
+						</VerticalListMenu.Item>
+					))}
 				</VerticalListMenu>
 				<div className={cx('&-content')}>
-					{_.get(tabChildProps[actualSelectedIndex], 'children', '')}
+					{_.get(tabChildProps, [actualSelectedIndex, 'children'])}
 				</div>
 			</div>
 		);

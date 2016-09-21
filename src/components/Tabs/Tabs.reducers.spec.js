@@ -1,5 +1,5 @@
 import assert from 'assert';
-import reducers from './Tabs.reducers.js';
+import * as reducers from './Tabs.reducers.js';
 
 describe('Tabs reducers', () => {
 	it('onSelect should set selectedIndex properly', () => {
@@ -9,17 +9,5 @@ describe('Tabs reducers', () => {
 			foo: 1,
 			selectedIndex: 99,
 		});
-	});
-
-	it('onSelect should not set selectedIndex when isDisabled', () => {
-		const initialState = {
-			selectedIndex: 5,
-		};
-
-		const props = {
-			isDisabled: true,
-		};
-
-		assert.deepEqual(reducers.onSelect(initialState, 99, { props }), initialState);
 	});
 });
