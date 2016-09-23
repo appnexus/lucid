@@ -253,7 +253,6 @@ export {
 	ShoppingCartIcon,
 	Sidebar,
 	SidebarDumb,
-	SidebarDumb,
 	SingleSelect,
 	SingleSelectDumb,
 	SplitHorizontal,
