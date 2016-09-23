@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, filterTypes, omitProps } from '../../util/component-types';
+import { createClass, findTypes, filterTypes, getFirst, omitProps } from '../../util/component-types';
 
 import Checkbox from '../Checkbox/Checkbox';
+import OverlayWrapper from '../OverlayWrapper/OverlayWrapper';
 import ScrollTable from '../ScrollTable/ScrollTable';
-import EmptyIndicator from './EmptyIndicator';
 
 const {
 	Thead,
@@ -16,6 +16,48 @@ const {
 } = ScrollTable;
 
 const cx = lucidClassNames.bind('&-DataTable');
+
+//SUBCOMPONENT - HatchPattern
+const HatchPattern = createClass({
+	displayName: 'HatchPattern',
+
+	_isPrivate: true,
+
+	getInitialState() {
+		return {
+			patternId: _.uniqueId('diagonalHatch'),
+		};
+	},
+
+	render() {
+		const {patternId} = this.state;
+
+		return (
+			<svg className={cx('&-message-header')}>
+				<rect
+					fill={`url(#${patternId})`}
+					height='15px'
+					width='100%'
+					x='0'
+					y='0'
+				/>
+				<defs>
+					<pattern
+						className={cx('&-message-pattern')}
+						height='4'
+						id={patternId}
+						patternUnits='userSpaceOnUse'
+						width='4'
+					>
+						<path d='M-1,1 l2,-2
+										M0,4 l4,-4
+										M3,5 l2,-2' />
+					</pattern>
+				</defs>
+			</svg>
+		);
+	},
+});
 
 const {
 	any,
@@ -48,9 +90,6 @@ const DataTable = createClass({
 		 * Array of objects to be rendered in the table. Object keys match the `field` of each defined `DataTable.Column`.
 		 */
 		data: arrayOf(object),
-		emptyMessageBody: string,
-		emptyMessageTitle: string,
-		emptyMessageImageUrl: string,
 		/**
 		 * Render a checkbox in the first column allowing `onSelect` and `onSelectAll` to be triggered.
 		 */
@@ -92,6 +131,18 @@ const DataTable = createClass({
 		 * - the optional prop `title`
 		 */
 		ColumnGroup: any,
+		/**
+		 * *Child Element*
+		 *
+		 * The element to display in the body of the overlay for an empty data table.
+		 */
+		EmptyMessageBody: any,
+		/**
+		 * *Child Element*
+		 *
+		 * The element to display in the title of the overlay for an empty data table.
+		 */
+		EmptyMessageTitle: any,
 	},
 
 	getDefaultProps() {
@@ -127,6 +178,20 @@ const DataTable = createClass({
 				title: string,
 			},
 			getDefaultProps: () => ({ align: 'center' }),
+		}),
+		/**
+		 * Body content for the message to display when the data table has no data.
+		 */
+		EmptyMessageBody: createClass({
+			displayName: 'DataTable.EmptyMessageBody',
+			propName: 'EmptyMessageBody',
+		}),
+		/**
+		 * Title text for the message to display when the data table has no data.
+		 */
+		EmptyMessageTitle: createClass({
+			displayName: 'DataTable.EmptyMessageTitle',
+			propName: 'EmptyMessageTitle',
 		}),
 	},
 
@@ -181,9 +246,6 @@ const DataTable = createClass({
 		const {
 			className,
 			data,
-			emptyMessageBody,
-			emptyMessageTitle,
-			emptyMessageImageUrl,
 			isActionable,
 			isSelectable,
 			style,
@@ -212,113 +274,115 @@ const DataTable = createClass({
 			(childComponentElement) => childComponentElement.type === DataTable.ColumnGroup
 		);
 
+		const emptyMessageBodyProp = _.get(getFirst(this.props, DataTable.EmptyMessageBody), 'props');
+		const emptyMessageTitleProp = _.get(getFirst(this.props, DataTable.EmptyMessageTitle), 'props', {children: 'You have no Line Items.'});
+
 		return (
-			<ScrollTable
-				style={style}
-				{...omitProps(passThroughs, DataTable)}
-				className={cx('&', className)}
+			<OverlayWrapper
+				hasOverlay={false}
+				isVisible={!data || data.length === 0}
 			>
-				{!data.length &&
-					<ScrollTable.OverlayContainer>
-						<EmptyIndicator
-							body={emptyMessageBody}
-							imageUrl={emptyMessageImageUrl}
-							title={emptyMessageTitle}
-						/>
-					</ScrollTable.OverlayContainer>
-				}
-				<Thead>
-					<Tr>
-						{isSelectable ? (
-							<Th
-								rowSpan={hasGroupedColumns ? 2 : null}
-							>
-								<Checkbox
-									isSelected={_.every(data, 'isSelected')}
-									onSelect={this.handleSelectAll}
-								/>
-							</Th>
-						) : null}
-						{_.map(childComponentElements, ({ props, type }, index) => type === DataTable.Column ? (
-							<Th
-								{..._.omit(props, ['field', 'children', 'width', 'title'])}
-								onClick={DataTable.shouldColumnHandleSort(props) ? _.partial(this.handleSort, props.field) : null}
-								style={{
-									width: props.width,
-								}}
-								rowSpan={hasGroupedColumns ? 2 : null}
-								key={_.get(props, 'field', index)}
-							>
-								{props.title || props.children}
-							</Th>
-						) : (
-							<Th
-								colSpan={_.size(filterTypes(props.children, DataTable.Column))}
-								{..._.omit(props, ['field', 'children', 'width', 'title'])}
-								key={_.get(props, 'field', index)}
-							>
-								{props.title || props.children}
-							</Th>
-						))}
-					</Tr>
-					{hasGroupedColumns ? (
+				<OverlayWrapper.Message className={cx('&-message-container')}>
+					<HatchPattern />
+					<div className={cx('&-message-contents')}>
+						<header {...emptyMessageTitleProp} className={cx('&-message-title', emptyMessageTitleProp.className)} />
+						{emptyMessageBodyProp && <div {...emptyMessageBodyProp} />}
+					</div>
+				</OverlayWrapper.Message>
+				<ScrollTable
+					style={style}
+					{...omitProps(passThroughs, DataTable)}
+					className={cx('&', className)}
+				>
+					<Thead>
 						<Tr>
-							{_.reduce(flattenedColumns, (acc, { props: columnProps, columnGroupProps }, index) => acc.concat(_.isNull(columnGroupProps) ? [] : [(
+							{isSelectable ? (
 								<Th
-									{...omitProps(columnProps, DataTable.Column)}
-									onClick={DataTable.shouldColumnHandleSort(columnProps) ? _.partial(this.handleSort, columnProps.field) : null}
-									style={{
-										width: columnProps.width,
-									}}
-									key={_.get(columnProps, 'field', index)}
+									rowSpan={hasGroupedColumns ? 2 : null}
 								>
-									{columnProps.title || columnProps.children}
+									<Checkbox
+										isSelected={_.every(data, 'isSelected')}
+										onSelect={this.handleSelectAll}
+									/>
 								</Th>
-							)]), [])}
+							) : null}
+							{_.map(childComponentElements, ({ props, type }, index) => type === DataTable.Column ? (
+								<Th
+									{..._.omit(props, ['field', 'children', 'width', 'title'])}
+									onClick={DataTable.shouldColumnHandleSort(props) ? _.partial(this.handleSort, props.field) : null}
+									style={{
+										width: props.width,
+									}}
+									rowSpan={hasGroupedColumns ? 2 : null}
+									key={_.get(props, 'field', index)}
+								>
+									{props.title || props.children}
+								</Th>
+							) : (
+								<Th
+									colSpan={_.size(filterTypes(props.children, DataTable.Column))}
+									{..._.omit(props, ['field', 'children', 'width', 'title'])}
+									key={_.get(props, 'field', index)}
+								>
+									{props.title || props.children}
+								</Th>
+							))}
 						</Tr>
-					) : null}
-				</Thead>
-				<Tbody>
-					{data.length ?
-						_.map(data, (row, index) => (
-							<Tr
-								{..._.pick(row, ['isDisabled', 'isActive', 'isSelected'])}
-								onClick={_.partial(this.handleRowClick, index)}
-								isActionable={isActionable}
-								key={'row' + index}
-							>
-								{isSelectable ? (
-									<Td>
-										<Checkbox
-											isSelected={row.isSelected}
-											onSelect={_.partial(this.handleSelect, index)}
-										/>
-									</Td>
-								) : null}
-								{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => (
-									<Td
-										{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
+						{hasGroupedColumns ? (
+							<Tr>
+								{_.reduce(flattenedColumns, (acc, { props: columnProps, columnGroupProps }, index) => acc.concat(_.isNull(columnGroupProps) ? [] : [(
+									<Th
+										{...omitProps(columnProps, DataTable.Column)}
+										onClick={DataTable.shouldColumnHandleSort(columnProps) ? _.partial(this.handleSort, columnProps.field) : null}
 										style={{
 											width: columnProps.width,
 										}}
-										key={'row' + index + _.get(columnProps, 'field', columnIndex)}
+										key={_.get(columnProps, 'field', index)}
 									>
-										{_.get(row, columnProps.field, '')}
-									</Td>
-								))}
+										{columnProps.title || columnProps.children}
+									</Th>
+								)]), [])}
 							</Tr>
-					))
-					:
-					_.times(10, (index) => (
-						<Tr
-							isDisabled
-							key={'row' + index}
-							style={{height: '32px'}}
-						>
-								{isSelectable ? (
-									<Td>
-									</Td>
-								) : null}
+						) : null}
+					</Thead>
+					<Tbody>
+						{data && data.length > 0 ?
+							_.map(data, (row, index) => (
+								<Tr
+									{..._.pick(row, ['isDisabled', 'isActive', 'isSelected'])}
+									onClick={_.partial(this.handleRowClick, index)}
+									isActionable={isActionable}
+									key={'row' + index}
+								>
+									{isSelectable ? (
+										<Td>
+											<Checkbox
+												isSelected={row.isSelected}
+												onSelect={_.partial(this.handleSelect, index)}
+											/>
+										</Td>
+									) : null}
+									{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => (
+										<Td
+											{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
+											style={{
+												width: columnProps.width,
+											}}
+											key={'row' + index + _.get(columnProps, 'field', columnIndex)}
+										>
+											{_.get(row, columnProps.field, '')}
+										</Td>
+									))}
+								</Tr>
+						))
+						:
+						_.times(10, (index) => (
+							<Tr
+								isDisabled
+								key={'row' + index}
+								style={{height: '32px'}}
+							>
+								{isSelectable ? (<Td />) : null}
 								{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => (
 									<Td
 										{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
@@ -328,11 +392,12 @@ const DataTable = createClass({
 										key={'row' + index + _.get(columnProps, 'field', columnIndex)}
 									/>
 								))}
-						</Tr>
-					))
-				}
-				</Tbody>
-			</ScrollTable>
+							</Tr>
+						))
+					}
+					</Tbody>
+				</ScrollTable>
+			</OverlayWrapper>
 		);
 	},
 });

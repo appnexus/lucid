@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, rejectTypes, omitProps } from '../../util/component-types';
-// import LoadingMessage from '../LoadingMessage/LoadingMessage';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const cx = lucidClassNames.bind('&-OverlayWrapper');
 
@@ -47,11 +47,18 @@ const OverlayWrapper = createClass({
 			'light',
 			'dark',
 		]),
+		/**
+		 * *Child Element*
+		 *
+		 * The Message to display in the overlay.
+		 */
+		Message: node,
 	},
 
 	components: {
 		Message: createClass({
 			displayName: 'OverlayWrapper.Message',
+			propName: 'Message',
 			propTypes: {
 				/**
 				 * Any valid React children.
@@ -83,25 +90,28 @@ const OverlayWrapper = createClass({
 
 		const { Message } = OverlayWrapper;
 
-		console.log('props', props);
-		const messageElement = getFirst(props, Message, <div />);
-		const otherChildren = rejectTypes(children, [OverlayWrapper.Message]);
+		const messageElementProp = _.get(getFirst(props, Message), 'props', {});
+		const otherChildren = rejectTypes(children, [Message]);
 
-		console.log('messageElement', messageElement);
-		console.log('isVisible', isVisible);
 		return (
 			<div
 				{...omitProps(passThroughs, OverlayWrapper)}
 				className={cx('&', className)}
 			>
 				{otherChildren}
+				<ReactCSSTransitionGroup
+					transitionName={cx('&-message-container')}
+					transitionEnterTimeout={300}
+					transitionLeaveTimeout={300}
+				>
 				{isVisible &&
 					(<div className={cx('&-message-container', {
 						'&-has-overlay': hasOverlay,
-						'&-kind-light': overlayKind === 'light',
+						'&-kind-light': hasOverlay && overlayKind === 'light',
 					})}>
-						{messageElement}
+						<div {...messageElementProp} />
 					</div>)}
+				</ReactCSSTransitionGroup>
 			</div>
 		);
 	},

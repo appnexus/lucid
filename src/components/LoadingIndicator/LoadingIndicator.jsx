@@ -65,6 +65,7 @@ const LoadingIndicator = createClass({
 			props,
 			props: {
 				children,
+				className,
 				isLoading,
 			},
 		} = this;
@@ -76,8 +77,8 @@ const LoadingIndicator = createClass({
 
 		return (
 			<OverlayWrapper
-				{..._.omit(props, ['children', 'isLoading'])}
-				className={cx('&')}
+				{..._.omit(props, ['children', 'className', 'isLoading'])}
+				className={cx('&', className)}
 				isVisible={isLoading}
 			>
 				{otherChildren}

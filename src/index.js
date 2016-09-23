@@ -94,6 +94,7 @@ import MinusCircleLightIcon from './components/Icon/MinusCircleLightIcon/MinusCi
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import NewWindowIcon from './components/Icon/NewWindowIcon/NewWindowIcon';
 import Overlay from './components/Overlay/Overlay';
+import OverlayWrapper from './components/OverlayWrapper/OverlayWrapper';
 import Panel from './components/Panel/Panel';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Point from './components/Point/Point';
@@ -227,6 +228,7 @@ export {
 	MinusIcon,
 	NewWindowIcon,
 	Overlay,
+	OverlayWrapper,
 	Paginator,
 	PaginatorDumb,
 	Panel,

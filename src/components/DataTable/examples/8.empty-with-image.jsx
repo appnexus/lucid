@@ -1,98 +1,25 @@
 import React from 'react';
-import _ from 'lodash';
 import { DataTable } from '../../../index';
 
 export default React.createClass({
 	getInitialState() {
 		return {
-			activeIndex: 1,
-			currentlySortedField: 'id',
-			currentlySortedFieldDirection: 'up',
 			data: [],
 		};
 	},
 
-	handleSelect(item, selectedIndex) {
-		const {
-			data,
-		} = this.state;
-
-		this.setState({
-			data: _.map(data, (row, rowIndex) => {
-				if (rowIndex === selectedIndex) {
-					return {
-						...row,
-						isSelected: !row.isSelected,
-					};
-				} else {
-					return row;
-				}
-			}),
-		});
-	},
-
-	handleSelectAll() {
-		const {
-			data,
-		} = this.state;
-
-		const allSelected = _.every(data, 'isSelected');
-
-		this.setState({
-			data: _.map(data, (row) => {
-				return {
-					...row,
-					isSelected: !allSelected,
-				};
-			}),
-		});
-
-	},
-
-	handleRowClick(item, rowIndex) {
-		this.setState({
-			activeIndex: rowIndex,
-		})
-	},
-
-	handleSort(field) {
-		const {
-			currentlySortedField,
-			currentlySortedFieldDirection,
-			data,
-		} = this.state;
-
-		const nextCurrentlySortedFieldDirection = (currentlySortedField === field && currentlySortedFieldDirection === 'up' ? 'down' : 'up');
-		const nextData = _.sortBy(data, field);
-
-		this.setState({
-			currentlySortedField: field,
-			currentlySortedFieldDirection: nextCurrentlySortedFieldDirection,
-			data: nextCurrentlySortedFieldDirection === 'up' ? nextData : _.reverse(nextData),
-			activeIndex: null,
-		});
-	},
-
 	render() {
-		const {
-			activeIndex,
-			data,
-			currentlySortedField,
-			currentlySortedFieldDirection,
-		} = this.state;
+		const {data} = this.state;
 
 		return(
 			<DataTable
-				data={_.map(data, (row, index) => (index === activeIndex ? {...row, isActive: true} : row))}
+				data={data}
 				density='extended'
-				emptyMessageImageUrl='https://dummyimage.com/375x200/ff69/fff'
-				isSelectable
-				isActionable
-				onRowClick={this.handleRowClick}
-				onSelect={this.handleSelect}
-				onSelectAll={this.handleSelectAll}
-				onSort={this.handleSort}
 			>
+				<DataTable.EmptyMessageTitle>This empty message has a large image in it.</DataTable.EmptyMessageTitle>
+				<DataTable.EmptyMessageBody>
+					<img src='https://dummyimage.com/375x200/ff69/fff' />
+				</DataTable.EmptyMessageBody>
 				<DataTable.Column
 					field='id'
 					width={41}
@@ -100,8 +27,6 @@ export default React.createClass({
 					hasBorderLeft
 					hasBorderLeft
 					isSortable
-					isSorted={currentlySortedField === 'id'}
-					sortDirection={currentlySortedFieldDirection}
 				>
 					ID
 				</DataTable.Column>
@@ -111,9 +36,6 @@ export default React.createClass({
 						field='first_name'
 						width={100}
 						hasBorderLeft
-						isSortable
-						isSorted={currentlySortedField === 'first_name'}
-						sortDirection={currentlySortedFieldDirection}
 					>
 						First
 					</DataTable.Column>
@@ -123,9 +45,6 @@ export default React.createClass({
 						align='left'
 						width={100}
 						hasBorderRight
-						isSortable
-						isSorted={currentlySortedField === 'last_name'}
-						sortDirection={currentlySortedFieldDirection}
 					>
 						Last
 					</DataTable.Column>
@@ -134,9 +53,6 @@ export default React.createClass({
 				<DataTable.Column
 					field='email'
 					align='center'
-					isSortable
-					isSorted={currentlySortedField === 'email'}
-					sortDirection={currentlySortedFieldDirection}
 				>
 					E-Mail
 				</DataTable.Column>
@@ -146,9 +62,6 @@ export default React.createClass({
 					align='right'
 					width={100}
 					hasBorderLeft
-					isSortable
-					isSorted={currentlySortedField === 'occupation'}
-					sortDirection={currentlySortedFieldDirection}
 				>
 					Occupation
 				</DataTable.Column>
