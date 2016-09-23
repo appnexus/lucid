@@ -17,6 +17,7 @@ import { default as SubmarineDumb } from './components/Submarine/Submarine';
 import { default as TabsDumb } from './components/Tabs/Tabs';
 import { default as ToolTipDumb } from './components/ToolTip/ToolTip';
 import { default as VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
+import { default as VerticalTabsDumb } from './components/VerticalTabs/VerticalTabs';
 
 const Accordion = buildHybridComponent(AccordionDumb);
 const Autocomplete = buildHybridComponent(AutocompleteDumb);
@@ -34,6 +35,7 @@ const Submarine = buildHybridComponent(SubmarineDumb);
 const Tabs = buildHybridComponent(TabsDumb);
 const ToolTip = buildHybridComponent(ToolTipDumb);
 const VerticalListMenu = buildHybridComponent(VerticalListMenuDumb);
+const VerticalTabs = buildHybridComponent(VerticalTabsDumb);
 
 // dumb components
 import AnalyzeDataIcon from './components/Icon/AnalyzeDataIcon/AnalyzeDataIcon';
@@ -281,6 +283,8 @@ export {
 	Validation,
 	VerticalListMenu,
 	VerticalListMenuDumb,
+	VerticalTabs,
+	VerticalTabsDumb,
 	ViewIcon,
 	WarningIcon,
 	WarningLightIcon,

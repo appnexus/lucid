@@ -2,12 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, findTypes, omitProps } from '../../util/component-types';
-import reducers from './Tabs.reducers';
+import * as reducers from './Tabs.reducers';
 
 const cx = lucidClassNames.bind('&-Tabs');
 
 const {
-	any,
 	string,
 	number,
 	bool,
@@ -59,11 +58,6 @@ const Tabs = createClass({
 
 	propTypes: {
 		/**
-		 * Styles that are passed through to the root container.
-		 */
-		style: any,
-
-		/**
 		 * Class names that are appended to the defaults.
 		 */
 		className: string,
@@ -114,7 +108,6 @@ const Tabs = createClass({
 		const {
 			className,
 			selectedIndex,
-			style,
 			isOpen,
 			isProgressive,
 			hasMultilineTitle,
@@ -135,40 +128,37 @@ const Tabs = createClass({
 		return (
 			<div
 				{...omitProps(passThroughs, Tabs)}
-				style={style}
 				className={cx('&', className)}
 			>
 				<ul className={cx('&-bar', {
 						'&-bar-is-multiline': hasMultilineTitle,
 					})}>
-					{_.map(tabChildProps, (tabChildProp, index) => {
-						return (
-							<li
-								className={cx('&-Tab', {
-									'&-Tab-is-active': index === actualSelectedIndex,
-									'&-Tab-is-disabled': tabChildProp.isDisabled,
-									'&-Tab-is-active-and-open': isOpen && index === actualSelectedIndex,
-									'&-Tab-is-progressive': isProgressive && index !== tabChildProps.length - 1,
-								})}
-								key={index}
-								onClick={_.partial(this.handleClicked, index, tabChildProp)}
-							>
-								<span className={cx('&-Tab-content')}>{_.get(getFirst(tabChildProp, Tabs.Title), 'props.children', '')}</span>
-								{isProgressive && index !== tabChildProps.length - 1 ?
-									<span className={cx('&-Tab-arrow')} >
-										<svg version='1.1'  viewBox='0 0 8 28' preserveAspectRatio='none' >
-											<polygon className={cx('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
-											<polyline className={cx('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1,1 0,1'/>
-											<polyline className={cx('&-Tab-arrow-line')} fill='none' stroke='#fff' strokeWidth='1' points='0,28 7.9,14 0,0'/>
-										</svg>
-									</span>
-								: null}
-							</li>
-						);
-					})}
+					{_.map(tabChildProps, (tabChildProp, index) => (
+						<li
+							className={cx('&-Tab', {
+								'&-Tab-is-active': index === actualSelectedIndex,
+								'&-Tab-is-disabled': tabChildProp.isDisabled,
+								'&-Tab-is-active-and-open': isOpen && index === actualSelectedIndex,
+								'&-Tab-is-progressive': isProgressive && index !== tabChildProps.length - 1,
+							})}
+							key={index}
+							onClick={_.partial(this.handleClicked, index, tabChildProp)}
+						>
+							<span className={cx('&-Tab-content')}>{_.get(getFirst(tabChildProp, Tabs.Title), 'props.children', '')}</span>
+							{isProgressive && index !== tabChildProps.length - 1 ?
+								<span className={cx('&-Tab-arrow')} >
+									<svg version='1.1'  viewBox='0 0 8 28' preserveAspectRatio='none' >
+										<polygon className={cx('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
+										<polyline className={cx('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1,1 0,1'/>
+										<polyline className={cx('&-Tab-arrow-line')} fill='none' stroke='#fff' strokeWidth='1' points='0,28 7.9,14 0,0'/>
+									</svg>
+								</span>
+							: null}
+						</li>
+					))}
 				</ul>
 				<div className={cx('&-content')}>
-					{_.get(tabChildProps[actualSelectedIndex], 'children', '')}
+					{_.get(tabChildProps, [actualSelectedIndex, 'children'])}
 				</div>
 			</div>
 		);
