@@ -139,6 +139,7 @@ import * as stateManagement from './util/state-management';
 import * as styleHelpers from './util/style-helpers';
 import * as redux from './util/redux';
 import * as chartConstants from './constants/charts';
+import * as formatters from './constants/formatters';
 import * as logger from './util/logger';
 
 import * as d3Scale from 'd3-scale';
@@ -151,6 +152,7 @@ export {
 	stateManagement,
 	styleHelpers,
 	chartConstants,
+	formatters,
 	logger,
 	d3Scale,
 	d3Time,

@@ -137,7 +137,7 @@ const Bars = createClass({
 		 * tooltips. The first value is the name of your y field, the second value
 		 * is your post-formatted y value.
 		 *
-		 * Signature: `(yField, yValueFormatted) => {}`
+		 * Signature: `(yField, yValueFormatted, yValue) => {}`
 		 */
 		yTooltipFormatter: func,
 
@@ -286,7 +286,11 @@ const Bars = createClass({
 												pointKind={1}
 												color={_.get(colorMap, field, palette[(fieldIndex + colorOffset ) % palette.length])}
 											>
-												{yTooltipFormatter(_.get(legend, field, field), yFormatter(data[seriesIndex][field]))}
+												{
+													yTooltipFormatter(_.get(legend, field, field),
+													yFormatter(data[seriesIndex][field])),
+													(data[seriesIndex][field])
+												}
 											</Legend.Item>
 										))}
 									</Legend>
