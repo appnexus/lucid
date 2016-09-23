@@ -204,7 +204,7 @@ const BarChart = createClass({
 		 * tooltips. The first value is the name of your y field, the second value
 		 * is your post-formatted y value.
 		 *
-		 * Signature: `(yField, yValueFormatted) => {}`
+		 * Signature: `(yField, yValueFormatted, yValue) => {}`
 		 */
 		yAxisTooltipFormatter: func,
 	},
