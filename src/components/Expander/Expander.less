@@ -67,4 +67,36 @@
 	&-content {
 		overflow: hidden;
 	}
+
+	// kind
+	&-kind-highlighted {
+
+		.lucid-Expander-header {
+			background: @color-backgroundColor;
+			border: @border-lightBorder;
+			padding: @size-standard;
+			display: flex;
+			flex-direction: row-reverse;
+
+			.lucid-Expander-text {
+				font-size: 15px;
+				color: @color-textColor;
+				font-weight: bold;
+				flex: 1;
+			}
+
+			.lucid-Expander-icon {
+				margin: 0;
+				flex-shrink: 0;
+			}
+
+			&:hover .lucid-Expander-text > span {
+				text-decoration: none;
+			}
+		}
+
+		.lucid-Collapsible-content {
+			padding: @size-standard;
+		}
+	}
 }

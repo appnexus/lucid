@@ -6,8 +6,8 @@ import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
 import { common, controls } from '../../util/generic-tests';
-import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Expander from './Expander';
+import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 
 describe('Expander', () => {
 	common(Expander);
@@ -44,6 +44,19 @@ describe('Expander', () => {
 		describe('onToggle', () => {
 			it('defaults to the Lodash `noop` method.', () => {
 				assert.equal(mount(<Expander />).prop('onToggle'), _.noop);
+			});
+		});
+
+		describe('kind', () => {
+			it('defaults "simple".', () => {
+				assert.equal(mount(<Expander />).prop('kind'), 'simple');
+			});
+			it('accepts "highlighted".', () => {
+				assert.equal(mount(<Expander kind='highlighted' />).prop('kind'), 'highlighted');
+			});
+			it('`kind=highlighted` adds the "lucid-Expander-kind-highlighted" class.', () => {
+				const wrapper = shallow(<Expander isExpanded={true} kind='highlighted' />);
+				assert.equal(wrapper.find('.lucid-Expander-kind-highlighted').length, 1);
 			});
 		});
 

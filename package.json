@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "1.11.1",
+  "version": "1.12.0",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "repository": {
@@ -8,21 +8,22 @@
     "url": "https://github.com/appnexus/lucid.git"
   },
   "scripts": {
+    "build-bundle": "scripts/build-bundle.sh",
     "dev": "gulp docs-generate && webpack-dev-server --inline --content-base src/docs/",
-    "docs-upload-gh": "./scripts/docs-upload-gh.sh",
+    "docs-upload-gh": "scripts/docs-upload-gh.sh",
     "docs-upload": "gulp docs-upload",
     "lint": "gulp lint",
-    "preversion": "rm -rf dist && gulp lint && npm run test && gulp preversion",
+    "preversion": "rm -rf dist && gulp lint && gulp preversion && npm run build-bundle",
     "postversion": "gulp docs-upload",
     "start": "npm run dev",
     "test": "npm run test-browserstack && npm run test-acceptance",
-    "test-browserstack": "./scripts/env-check.sh && karma start karma.conf.js --singleRun --auto-watch=false --browsers=bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge --reporters failed",
+    "test-browserstack": "scripts/env-check.sh && karma start karma.conf.js --singleRun --auto-watch=false --browsers=bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge --reporters failed",
     "test-local": "karma start karma.conf.js --singleRun --auto-watch=false",
     "test-tdd": "karma start karma.conf.js",
-    "test-acceptance": "./scripts/env-check.sh && ./scripts/local.runner.js -c nightwatch/nightwatch.conf.js --skiptags setup,screenshots -e bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge",
-    "test-screenshots": "./scripts/env-check.sh && ./scripts/local.runner.js -c nightwatch/nightwatch.conf.js -a screenshots -e bs_chrome,bs_firefox,bs_safari,bs_edge --retries=2",
+    "test-acceptance": "scripts/env-check.sh && scripts/local.runner.js -c nightwatch/nightwatch.conf.js --skiptags setup,screenshots -e bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge",
+    "test-screenshots": "scripts/env-check.sh && scripts/local.runner.js -c nightwatch/nightwatch.conf.js -a screenshots -e bs_chrome,bs_firefox,bs_safari,bs_edge --retries=2",
     "test-acceptance-local": "nightwatch -c nightwatch/nightwatch.local.conf.js --skiptags setup,screenshots",
-    "test-screenshot-setup": "./scripts/env-check.sh && ./scripts/local.runner.js -c nightwatch/nightwatch.conf.js -a setup -e bs_chrome,bs_firefox,bs_safari,bs_edge"
+    "test-screenshot-setup": "scripts/env-check.sh && scripts/local.runner.js -c nightwatch/nightwatch.conf.js -a setup -e bs_chrome,bs_firefox,bs_safari,bs_edge"
   },
   "keywords": [
     "component",

@@ -1,5 +1,5 @@
 import assert from 'assert';
-import * as reducers from './Tabs.reducers.js';
+import * as reducers from './VerticalTabs.reducers.js';
 
 describe('Tabs reducers', () => {
 	it('onSelect should set selectedIndex properly', () => {
