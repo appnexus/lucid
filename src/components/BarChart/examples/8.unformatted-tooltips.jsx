@@ -15,7 +15,7 @@ export default React.createClass({
 				<BarChart
 					data={data}
 					yAxisTitle='Revenue'
-					yAxisTooltipFormatter={(yField, yValueFormatted, yValue) => {yValue}}
+					yAxisTooltipFormatter={(yField, yValueFormatted, yValue) => yValue}
 				/>
 			</div>
 		);
