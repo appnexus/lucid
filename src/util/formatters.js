@@ -5,5 +5,5 @@ export function formatAbbreviatedNumber(value) {
 }
 
 export function formatNumberNoDecimal(value) {
-    return d3Format.format(',')(value);
+    return d3Format.format('.0f')(value);
 }
