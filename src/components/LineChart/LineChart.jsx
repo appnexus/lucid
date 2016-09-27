@@ -226,11 +226,16 @@ const LineChart = createClass({
 		/**
 		 * An optional function used to format your y axis titles and data in the
 		 * tooltips. The first value is the name of your y field, the second value
-		 * is your post-formatted y value.
+		 * is your post-formatted y value, and the third value is your non-formatted
+		 * y-value.
 		 *
-		 * Signature: `(yField, yValueFormatted) => {}`
+		 * Signature: `(yField, yValueFormatted, yValue) => {}`
 		 */
 		yAxisTooltipFormatter: func,
+		/**
+		 * An optional function used to format data in the tooltips.
+		 */
+		yAxisTooltipDataFormatter: func,
 
 
 		/**
@@ -254,6 +259,10 @@ const LineChart = createClass({
 		 * provide anything, we use the default D3 formatter.
 		 */
 		y2AxisFormatter: func,
+		/**
+		 * An optional function used to format data in the tooltips.
+		 */
+		y2AxisTooltipDataFormatter: func,
 		/**
 		 * Stack the y2 axis data. This is only useful if you have multiple
 		 * `y2AxisFields`. Stacking will cause the chart to be aggregated by sum.
@@ -371,12 +380,14 @@ const LineChart = createClass({
 			yAxisTitleColor,
 			yAxisMin,
 			yAxisTooltipFormatter,
+			yAxisTooltipDataFormatter,
 			yAxisMax = yAxisIsStacked
 				? maxByFieldsStacked(data, yAxisFields)
 				: maxByFields(data, yAxisFields),
 
 			y2AxisFields,
 			y2AxisFormatter,
+			y2AxisTooltipDataFormatter,
 			y2AxisHasPoints,
 			y2AxisIsStacked,
 			y2AxisTickCount,
@@ -435,14 +446,18 @@ const LineChart = createClass({
 		const xFinalFormatter = xAxisFormatter
 			? xAxisFormatter
 			: xScale.tickFormat();
-		const yFinalFormatter = yAxisFormatter
-			? yAxisFormatter
-			: yScale.tickFormat();
-		const y2FinalFormatter = y2AxisFormatter
-			? y2AxisFormatter
-			: y2Scale
-				? y2Scale.tickFormat()
-				: _.identity;
+		const yFinalFormatter = yAxisTooltipDataFormatter
+			? yAxisTooltipDataFormatter
+			: yAxisFormatter
+				? yAxisFormatter
+				: yScale.tickFormat();
+		const y2FinalFormatter = y2AxisTooltipDataFormatter
+			? y2AxisTooltipDataFormatter
+				: y2AxisFormatter
+				? y2AxisFormatter
+				: y2Scale
+					? y2Scale.tickFormat()
+					: _.identity;
 
 		// This logic is getting a bit complicated
 		const yAxisHasPointsFinal = yAxisHasPoints || yAxisIsStacked;
@@ -507,7 +522,11 @@ const LineChart = createClass({
 												color={_.get(colorMap, field, palette[index % palette.length])}
 												pointKind={yAxisHasPoints ? index : 1}
 											>
-												{yAxisTooltipFormatter(_.get(legend, field, field), yFinalFormatter(_.get(xPointMap, mouseX + '.y.' + field)))}
+												{
+													yAxisTooltipFormatter(_.get(legend, field, field),
+													yFinalFormatter(_.get(xPointMap, mouseX + '.y.' + field)),
+													_.get(xPointMap, mouseX + '.y.' + field))
+												}
 											</Legend.Item>
 										: null
 									))}
@@ -520,7 +539,11 @@ const LineChart = createClass({
 												color={_.get(colorMap, field, palette[index + yAxisFields.length % palette.length])}
 												pointKind={y2AxisHasPoints ? index + yAxisFields.length : 1}
 											>
-												{yAxisTooltipFormatter(_.get(legend, field, field), y2FinalFormatter(_.get(xPointMap, mouseX + '.y.' + field)))}
+												{
+													yAxisTooltipFormatter(_.get(legend, field, field),
+													y2FinalFormatter(_.get(xPointMap, mouseX + '.y.' + field)),
+													_.get(xPointMap, mouseX + '.y.' + field))
+												}
 											</Legend.Item>
 										: null
 									))}
