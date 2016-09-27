@@ -72,6 +72,7 @@ import DuplicateIcon from './components/Icon/DuplicateIcon/DuplicateIcon';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EditPageIcon from './components/Icon/EditPageIcon/EditPageIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
+import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
 import FourSquaresIcon from'./components/Icon/FourSquaresIcon/FourSquaresIcon';
 import Grid from './components/Grid/Grid';
@@ -142,6 +143,7 @@ import * as stateManagement from './util/state-management';
 import * as styleHelpers from './util/style-helpers';
 import * as redux from './util/redux';
 import * as chartConstants from './constants/charts';
+import * as formatters from './util/formatters';
 import * as logger from './util/logger';
 
 import * as d3Scale from 'd3-scale';
@@ -154,6 +156,7 @@ export {
 	stateManagement,
 	styleHelpers,
 	chartConstants,
+	formatters,
 	logger,
 	d3Scale,
 	d3Time,
@@ -206,6 +209,7 @@ export {
 	ExpanderDumb,
 	ExpanderPanel,
 	ExpanderPanelDumb,
+	EqualsIcon,
 	FilterIcon,
 	FourSquaresIcon,
 	Grid,

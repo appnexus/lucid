@@ -24,8 +24,10 @@ describe('LineChart', () => {
 			'xAxisFormatter',
 			'xAxisTooltipFormatter',
 			'yAxisTooltipFormatter',
+			'yAxisTooltipDataFormatter',
 			'yAxisFormatter',
 			'y2AxisFormatter',
+			'y2AxisTooltipDataFormatter',
 		],
 		getDefaultProps: () => ({
 			data: [
