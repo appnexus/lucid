@@ -30,7 +30,7 @@ const EqualsIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path fill-rule='evenodd' clip-rule='evenodd' d='M3,5v2h10V5H3z M3,11h10V9H3V11z'/>
+				<path d='M3,5L3,7L13,7L13,5L3,5z M3,11L13,11L13,9L3,9L3,11z' />
 			</Icon>
 		);
 	},
