@@ -5,7 +5,7 @@ import {
 	formatThousands,
 } from './formatters';
 
-describe.only('formatters', () => {
+describe('formatters', () => {
 	describe('formatAbbreviatedNumber', () => {
 		const tests = [
 			['negative tens'     , -10             , '-10'],
