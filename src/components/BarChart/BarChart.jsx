@@ -202,9 +202,10 @@ const BarChart = createClass({
 		/**
 		 * An optional function used to format your y axis titles and data in the
 		 * tooltips. The first value is the name of your y field, the second value
-		 * is your post-formatted y value.
+		 * is your post-formatted y value, and the third value is your non-formatted
+		 * y-value.
 		 *
-		 * Signature: `(yField, yValueFormatted) => {}`
+		 * Signature: `(yField, yValueFormatted, yValue) => {}`
 		 */
 		yAxisTooltipFormatter: func,
 	},
