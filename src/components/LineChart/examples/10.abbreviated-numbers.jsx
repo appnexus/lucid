@@ -19,7 +19,7 @@ export default React.createClass({
 
 				yAxisFields={['blueberries']}
 				yAxisFormatter={formatters.formatAbbreviatedNumber}
-				yAxisTooltipDataFormatter={formatters.formatNumberNoDecimal}
+				yAxisTooltipDataFormatter={formatters.formatThousands}
 			/>
 		);
 	},
