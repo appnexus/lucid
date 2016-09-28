@@ -135,9 +135,10 @@ const Bars = createClass({
 		/**
 		 * An optional function used to format your y axis titles and data in the
 		 * tooltips. The first value is the name of your y field, the second value
-		 * is your post-formatted y value.
+		 * is your post-formatted y value, and the third value is your non-formatted
+		 * y-value.
 		 *
-		 * Signature: `(yField, yValueFormatted) => {}`
+		 * Signature: `(yField, yValueFormatted, yValue) => {}`
 		 */
 		yTooltipFormatter: func,
 
@@ -286,7 +287,11 @@ const Bars = createClass({
 												pointKind={1}
 												color={_.get(colorMap, field, palette[(fieldIndex + colorOffset ) % palette.length])}
 											>
-												{yTooltipFormatter(_.get(legend, field, field), yFormatter(data[seriesIndex][field]))}
+												{
+													yTooltipFormatter(_.get(legend, field, field),
+													yFormatter(data[seriesIndex][field]),
+													data[seriesIndex][field])
+												}
 											</Legend.Item>
 										))}
 									</Legend>

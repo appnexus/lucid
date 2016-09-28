@@ -6,22 +6,22 @@ First of all, thank you for contributing. It’s appreciated.
 2. Make a GitHub issue before doing any significant amount of work. Make sure the core team approves your idea. This step is really important. If you skip this, your PR might be rejected.
   - Be sure to check out our [Waffle board][waffle] for a kanban view of all our issues.
 3. Below are some important commands for developing. Don't commit before fixing all errors and warnings.
-  - `npm run dev` hosts the docs page and watches for changes
-  - `npm test` runs tests and lints
+  - `npm start` hosts the docs page and watches for changes
   - `npm test-tdd` runs tests and watches for changes, optimized for speed
 4. Ensure your changes work properly on the latest versions of Chrome, Firefox, Safari, IE11, and IE Edge. Currently this step is manual.
 5. Reference the issue's number in your commit. E.g.: "Did this #12".
 6. Make a pull request.
 
+Currently our tests rely on private credentials for Browserstack, therefore **Travis will fail for personal forks**.
+
 ## Process
 
 - All PRs should at minimum have a label _semver-major/minor/patch/none_. This helps identify what kind of version bump the PR represents.
-- Branches should follow this convention (where 1234 is either a GitHub PR or an ANXR ticket):
-  - feature/1234-added-something
-  - quality/1234-refactored-something
-  - bugfix/1234-fixed-something
+- Branches should follow this convention (where 1234 is a GitHub issue):
+  - 1234-added-something
+  - 1234-fixed-something
   - release/2.0.0
-- We use an issue template that provides a check list of tasks to think about for every PR.
+- We use an issue template that provides a check list of tasks to consider for every PR.
 
 ## Component structure
 
@@ -59,11 +59,12 @@ describe('MyNewComponent', () => {
 - We have a naming convention for our props. Below is a list of examples that are valid. Please see the `variables.less` file for real world examples.
 
 ```
+// In `variables.less`
 @type-propName
 @type-subType-propName
 
-// Component specific variables should be scoped
-.lucid-Component {
+// In `MyExampleComponent.less` specific variables should be scoped
+.lucid-MyExampleComponent {
   @type-propName
   @type-subType-propName
 }
