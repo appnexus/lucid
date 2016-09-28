@@ -4,6 +4,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, filterTypes, getFirst, omitProps } from '../../util/component-types';
 
 import Checkbox from '../Checkbox/Checkbox';
+import HatchPattern from '../HatchPattern/HatchPattern';
 import OverlayWrapper from '../OverlayWrapper/OverlayWrapper';
 import ScrollTable from '../ScrollTable/ScrollTable';
 
@@ -16,48 +17,6 @@ const {
 } = ScrollTable;
 
 const cx = lucidClassNames.bind('&-DataTable');
-
-//SUBCOMPONENT - HatchPattern
-const HatchPattern = createClass({
-	displayName: 'HatchPattern',
-
-	_isPrivate: true,
-
-	getInitialState() {
-		return {
-			patternId: _.uniqueId('diagonalHatch'),
-		};
-	},
-
-	render() {
-		const {patternId} = this.state;
-
-		return (
-			<svg className={cx('&-message-header')}>
-				<rect
-					fill={`url(#${patternId})`}
-					height='15px'
-					width='100%'
-					x='0'
-					y='0'
-				/>
-				<defs>
-					<pattern
-						className={cx('&-message-pattern')}
-						height='4'
-						id={patternId}
-						patternUnits='userSpaceOnUse'
-						width='4'
-					>
-						<path d='M-1,1 l2,-2
-										M0,4 l4,-4
-										M3,5 l2,-2' />
-					</pattern>
-				</defs>
-			</svg>
-		);
-	},
-});
 
 const {
 	any,

@@ -76,6 +76,7 @@ import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
 import FourSquaresIcon from'./components/Icon/FourSquaresIcon/FourSquaresIcon';
 import Grid from './components/Grid/Grid';
+import HatchPattern from './components/HatchPattern/HatchPattern';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
 import Icon from './components/Icon/Icon';
@@ -213,6 +214,7 @@ export {
 	FilterIcon,
 	FourSquaresIcon,
 	Grid,
+	HatchPattern,
 	HelpIcon,
 	HomeIcon,
 	Icon,
