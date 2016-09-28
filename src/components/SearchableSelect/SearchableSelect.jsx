@@ -185,7 +185,7 @@ const SearchableSelect = createClass({
 			return node.children
 							.filter(child => !_.isString(child))
 							.map(child => this.getCombinedChildText(child.props))
-							.reduce(((combinedText, childText) => combinedText + childText), node.children.find(_.isString) || '');
+							.reduce(((combinedText, childText) => combinedText + childText), _.find(node.children, _.isString) || '');
 		},
 
 		defaultOptionFilter(searchText, optionProps, optionIndex, state) {
