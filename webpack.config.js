@@ -3,6 +3,7 @@
 var path = require('path');
 var autoprefixer = require('autoprefixer');
 var gulpConfig = require('./gulp/config');
+var webpack = require('webpack');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -17,13 +18,13 @@ module.exports = {
 		filename: 'bundle.js',
 	},
 	devServer: {
-		contentBase: 'dist/docs'
+		contentBase: 'dist/docs',
 	},
 	postcss: function() {
 		return [
 			autoprefixer({
-				browsers: gulpConfig.AUTOPREFIXER_BROWSERS
-			})
+				browsers: gulpConfig.AUTOPREFIXER_BROWSERS,
+			}),
 		];
 	},
 	module: {
@@ -44,17 +45,20 @@ module.exports = {
 			{
 				test: /\.json/,
 				loader: 'json',
-			}
-		]
+			},
+		],
 	},
 	resolve: {
-		extensions: ['', '.js', '.jsx']
+		extensions: ['', '.js', '.jsx'],
 	},
 	plugins: [
 		// Move static images over as well. This isn't normally something you do
 		// with webpack but it works fine for our case.
 		new CopyWebpackPlugin([
-			{ from: './src/docs/img', to: 'img' }
-		])
-	]
+			{ from: './src/docs/img', to: 'img' },
+		]),
+		new webpack.DefinePlugin({
+			PRODUCTION : process.env.NODE_ENV === 'production',
+		}),
+	],
 };
