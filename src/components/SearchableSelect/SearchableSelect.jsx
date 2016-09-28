@@ -25,9 +25,9 @@ const {
 
 /**
  *
- * {"categories": ["controls", "selectors"], "madeFrom": ["DropMenu"]}
+ * {"categories": ["controls", "selectors"], "madeFrom": ["DropMenu", "SearchField"]}
  *
- * A selector control (like native `<select>`) which is used to select a single option from a dropdown list.
+ * A selector control (like native `<select>`) which is used to select a single option from a dropdown list using a SearchField.
  * Supports option groups with and without labels.
  */
 const SearchableSelect = createClass({
