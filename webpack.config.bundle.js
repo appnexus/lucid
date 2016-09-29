@@ -42,7 +42,6 @@ module.exports = {
 	},
 	plugins: [
 		isMinified ? new webpack.DefinePlugin({
-			PRODUCTION: true,
 			'process.env': {
 				'NODE_ENV': '"production"',
 			},
