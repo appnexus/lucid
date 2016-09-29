@@ -3,7 +3,7 @@ import _ from 'lodash';
 
 export const isDevMode = (function isReactInDev() {
 	// This property gets injected via Webpack.
-	return !PRODUCTION; // eslint-disable-line no-undef
+	return process.env.NODE_ENV !== 'production'; // eslint-disable-line no-undef
 })();
 
 export const isNode = typeof process === 'object' && process.title === 'node';
