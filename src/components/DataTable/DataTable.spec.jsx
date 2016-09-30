@@ -7,6 +7,7 @@ import { common } from '../../util/generic-tests';
 import DataTable from './DataTable';
 import ScrollTable from '../ScrollTable/ScrollTable';
 import Checkbox from '../Checkbox/Checkbox';
+import OverlayWrapper from '../OverlayWrapper/OverlayWrapper';
 
 const { Column, ColumnGroup } = DataTable;
 
@@ -114,10 +115,12 @@ const testData = [
 ];
 
 describe('DataTable', () => {
-	common(DataTable);
+	common(DataTable, {
+		selectRoot: (wrapper) => wrapper.find(ScrollTable),
+	});
 
 	describe('render', () => {
-		it('should render an minimal ScrollTable', () => {
+		it('should render a minimal ScrollTable', () => {
 			const wrapper = shallow(
 				<DataTable />
 			);
@@ -125,8 +128,7 @@ describe('DataTable', () => {
 			const scrollTableWrapper = wrapper
 				.find(ScrollTable).shallow();
 
-			assert(wrapper.is(ScrollTable), 'must render a ScrollTable');
-			assert(wrapper.is('.lucid-DataTable'), 'must have the component className');
+			assert(scrollTableWrapper.is('.lucid-DataTable'), 'must have the component className');
 			assert.equal(scrollTableWrapper.find(ScrollTable.Thead).length, 1, 'must contain a Thead');
 			assert.equal(scrollTableWrapper.find(ScrollTable.Tbody).length, 1, 'must contain a Tbody');
 		});
@@ -134,6 +136,19 @@ describe('DataTable', () => {
 
 	describe('props', () => {
 		describe('data', () => {
+			it('should render 10 rows if data is an empty array', () => {
+				const wrapper = shallow(
+					<DataTable />
+				);
+
+				const TrWrapper = wrapper
+					.find(ScrollTable).shallow()
+						.find(ScrollTable.Tbody).shallow()
+							.find(ScrollTable.Tr);
+
+				assert.equal(TrWrapper.length, 10, 'should render 10 empty rows');
+			});
+
 			it('should render a row for each element in the array', () => {
 				const wrapper = shallow(
 					<DataTable data={testData} />
@@ -536,7 +551,39 @@ describe('DataTable', () => {
 
 				assert(thWrapper.hasClass('lucid-Table-align-right'), 'must be true');
 			});
+		});
 
+		describe('EmptyMessageTitle', () => {
+			it('should render the message title element', () => {
+				const titleText = 'Here is the Title Text';
+				const wrapper = shallow(
+					<DataTable>
+						<DataTable.EmptyMessageTitle>{titleText}</DataTable.EmptyMessageTitle>
+					</DataTable>
+				);
+
+				const messageTitleWrapper = wrapper
+					.find(OverlayWrapper).shallow()
+					.find('.lucid-DataTable-message-title').shallow();
+
+				assert.equal(messageTitleWrapper.text(), titleText, 'must contain the title text');
+			});
+		});
+
+		describe('EmptyMessageBody', () => {
+			it('should render the message body element', () => {
+				const bodyElement = <div className='parent-div'><div className='nested-div'></div></div>;
+				const wrapper = shallow(
+					<DataTable>
+						<DataTable.EmptyMessageBody>{bodyElement}}</DataTable.EmptyMessageBody>
+					</DataTable>
+				);
+
+				const messageBodyWrapper = wrapper
+					.find(OverlayWrapper).shallow();
+
+				assert(messageBodyWrapper.contains(bodyElement), 'must contain the body element');
+			});
 		});
 	});
 });
