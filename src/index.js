@@ -78,6 +78,7 @@ import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
 import FourSquaresIcon from'./components/Icon/FourSquaresIcon/FourSquaresIcon';
 import Grid from './components/Grid/Grid';
+import HatchPattern from './components/HatchPattern/HatchPattern';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
 import Icon from './components/Icon/Icon';
@@ -99,6 +100,7 @@ import MinusCircleLightIcon from './components/Icon/MinusCircleLightIcon/MinusCi
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import NewWindowIcon from './components/Icon/NewWindowIcon/NewWindowIcon';
 import Overlay from './components/Overlay/Overlay';
+import OverlayWrapper from './components/OverlayWrapper/OverlayWrapper';
 import Panel from './components/Panel/Panel';
 import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Point from './components/Point/Point';
@@ -216,6 +218,7 @@ export {
 	FilterIcon,
 	FourSquaresIcon,
 	Grid,
+	HatchPattern,
 	HelpIcon,
 	HomeIcon,
 	Icon,
@@ -237,6 +240,7 @@ export {
 	MinusIcon,
 	NewWindowIcon,
 	Overlay,
+	OverlayWrapper,
 	Paginator,
 	PaginatorDumb,
 	Panel,
