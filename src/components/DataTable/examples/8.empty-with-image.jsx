@@ -18,7 +18,7 @@ export default React.createClass({
 			>
 				<DataTable.EmptyMessageTitle>This empty message has a large image in it.</DataTable.EmptyMessageTitle>
 				<DataTable.EmptyMessageBody>
-					<img src='https://dummyimage.com/375x200/ff69/fff' />
+					<img src='https://dummyimage.com/375x150/ff69/fff' />
 				</DataTable.EmptyMessageBody>
 				<DataTable.Column
 					field='id'
@@ -31,24 +31,22 @@ export default React.createClass({
 					ID
 				</DataTable.Column>
 
-				<DataTable.ColumnGroup title='Name'>
-					<DataTable.Column
-						field='first_name'
-						width={100}
-						hasBorderLeft
-					>
-						First
-					</DataTable.Column>
+				<DataTable.Column
+					field='first_name'
+					width={100}
+					hasBorderLeft
+				>
+					First
+				</DataTable.Column>
 
-					<DataTable.Column
-						field='last_name'
-						align='left'
-						width={100}
-						hasBorderRight
-					>
-						Last
-					</DataTable.Column>
-				</DataTable.ColumnGroup>
+				<DataTable.Column
+					field='last_name'
+					align='left'
+					width={100}
+					hasBorderRight
+				>
+					Last
+				</DataTable.Column>
 
 				<DataTable.Column
 					field='email'
