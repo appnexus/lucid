@@ -18,6 +18,12 @@ export default React.createClass({
 		});
 	},
 
+	handleSelectedHipsum() {
+		this.setState({
+			flavor: 'hipsum',
+		});
+	},
+
 	handleSelectedStrawberry() {
 		this.setState({
 			flavor: 'strawberry',
@@ -57,6 +63,14 @@ export default React.createClass({
 							style={style}
 					>
 						<RadioButtonLabeled.Label>Strawberry</RadioButtonLabeled.Label>
+					</RadioButtonLabeled>
+					<RadioButtonLabeled
+							isSelected={this.state.flavor === 'hipsum'}
+							name='interactive-radio-buttons'
+							onSelect={this.handleSelectedHipsum}
+							style={style}
+					>
+						<RadioButtonLabeled.Label>Polaroid four dollar toast bespoke succulents. Kickstarter truffaut PBR&B fashion axe, lyft actually viral everyday carry iPhone tote bag mumblecore umami. Skateboard you probably haven't heard of them before they sold out, edison bulb paleo poutine jianbing blue bottle mixtape. Normcore farm-to-table coloring book cliche before they sold out. Roof party authentic hoodie paleo next level, bicycle rights selvage you probably haven't heard of them leggings venmo etsy cronut williamsburg. Dreamcatcher vice gastropub austin fam. Actually subway tile kickstarter, messenger bag shabby chic activated charcoal lomo.</RadioButtonLabeled.Label>
 					</RadioButtonLabeled>
 				</span>
 			</section>

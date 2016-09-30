@@ -94,11 +94,10 @@ const CheckboxLabeled = createClass({
 						onSelect={onSelect}
 						{...omitProps(passThroughs, CheckboxLabeled)}
 				/>
-				{
-					labelChildProps
-							? labelChildProps.children || labelChildProps
-							: null
-				}
+				<div
+					{...labelChildProps}
+					className={cx('&-label')}
+				/>
 			</label>
 		);
 	},
