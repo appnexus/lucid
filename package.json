@@ -12,6 +12,7 @@
     "dev": "gulp docs-generate && webpack-dev-server --inline --content-base src/docs/",
     "docs-upload-gh": "scripts/docs-upload-gh.sh",
     "docs-upload": "gulp docs-upload",
+    "lint": "gulp lint",
     "preversion": "rm -rf dist && gulp lint && gulp preversion && npm run build-bundle",
     "postversion": "gulp docs-upload",
     "start": "npm run dev",
