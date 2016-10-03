@@ -114,13 +114,6 @@ const SearchableSelect = createClass({
 		 */
 		optionFilter: func,
 		/**
-		 * This function will be run against Options with Rich Content for children to allow for special 'underlining' behavior.
-		 * The default behavior of the function is to just return the rich content as is.
-		 *
-		 * Has the signature `(children, searchText)`
-		 */
-		richChildRenderer: func,
-		/**
 		 * The current search text to filter the list of options by.
 		 */
 		searchText: string,
@@ -155,7 +148,6 @@ const SearchableSelect = createClass({
 			isDisabled: false,
 			isLoading: false,
 			optionFilter: this.defaultOptionFilter,
-			richChildRenderer: _.identity,
 			searchText: null,
 			selectedIndex: null,
 			DropMenu: DropMenu.getDefaultProps(),
@@ -168,7 +160,6 @@ const SearchableSelect = createClass({
 			flattenedOptionsData: [],
 			ungroupedOptionData: [],
 			optionGroupDataLookup: {},
-			searchCache: {},
 		}
 	},
 
@@ -188,81 +179,47 @@ const SearchableSelect = createClass({
 							.reduce(((combinedText, childText) => combinedText + childText), _.find(node.children, _.isString) || '');
 		},
 
-		defaultOptionFilter(searchText, optionProps, optionIndex, state) {
+		defaultOptionFilter(searchText, optionProps) {
 			if (!searchText) {
 				return true;
 			}
 
-			return state.searchCache[optionIndex].visible;
+			return new RegExp(_.escapeRegExp(searchText), 'i').test(SearchableSelect.getCombinedChildText(optionProps));
+		},
+
+		getFilteredFlattenedOptionsData(searchText, optionFilter, flattenedOptionsData) {
+			if (!searchText) {
+				return flattenedOptionsData;
+			}
+
+			return _.filter(flattenedOptionsData, (option) => {
+				return optionFilter(searchText, option.optionProps);
+			});
 		},
 
 		preprocessOptionData(props) {
 			const {
 				searchText,
+				optionFilter,
 			} = props;
 
-			const {
-				flattenedOptionsData,
-				nullOptions,
-				optionGroupDataLookup,
-				optionGroups,
-				ungroupedOptionData,
-			} = DropMenu.preprocessOptionData(props, SearchableSelect);
-
-			const searchCache = _.keyBy(_.map(flattenedOptionsData, ({optionIndex, optionProps}) => {
-				return {
-					optionIndex,
-					combinedText: this.getCombinedChildText(optionProps),
-				};
-			}), 'optionIndex');
-
-			// If there isn't any searchText, just return the existing list of options.
-			if (_.isEmpty(searchText)) {
-				return {
-					flattenedOptionsData,
-					nullOptions,
-					optionGroupDataLookup,
-					optionGroups,
-					searchCache,
-					ungroupedOptionData,
-				};
-			}
-
-			const searchPattern = new RegExp(_.escapeRegExp(searchText), 'i');
-
-			const filteredFlattenedOptionsData = _.filter(flattenedOptionsData, ({optionIndex}) => {
-				const visible = searchPattern.test(searchCache[optionIndex].combinedText);
-				searchCache[optionIndex].visible = visible;
-				return visible;
-			});
+			const processedState = DropMenu.preprocessOptionData(props, SearchableSelect);
 
 			return {
-				flattenedOptionsData: filteredFlattenedOptionsData,
-				nullOptions,
-				optionGroupDataLookup,
-				optionGroups,
-				searchCache,
-				ungroupedOptionData,
+				...processedState,
+				flattenedOptionsData: SearchableSelect.getFilteredFlattenedOptionsData(searchText, optionFilter, processedState.flattenedOptionsData),
 			};
 		},
 	},
 
 	componentWillMount() {
 		// preprocess the options data before rendering
-		const preProcessedOptionData = SearchableSelect.preprocessOptionData(this.props);
-		this.setState({
-			...preProcessedOptionData,
-		});
+		this.setState(SearchableSelect.preprocessOptionData(this.props));
 	},
 
 	componentWillReceiveProps(nextProps) {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
-		if (this.props.children !== nextProps.children || this.props.searchText !== nextProps.searchText) {
-			const preProcessedOptionData = SearchableSelect.preprocessOptionData(nextProps);
-			this.setState({
-				...preProcessedOptionData,
-			});
-		}
+		this.setState(SearchableSelect.preprocessOptionData(nextProps));
 	},
 
 	handleClickSearchField(event) {
@@ -285,16 +242,15 @@ const SearchableSelect = createClass({
 		const {
 			isLoading,
 			optionFilter,
-			richChildRenderer,
 			searchText,
 		} = this.props;
 
 		if (searchText) {
-			return optionFilter(searchText, optionProps, optionIndex, this.state) && (
+			return optionFilter(searchText, optionProps) && (
 				<DropMenu.Option isDisabled={isLoading} key={'SearchableSelectOption' + optionIndex} {..._.omit(optionProps, ['children'])}>
 					{_.isString(optionProps.children) ?
 						this.renderUnderlinedChildren(optionProps.children, searchText)
-						: richChildRenderer(optionProps.children, searchText)}
+						: optionProps.children}
 				</DropMenu.Option>
 			);
 		}

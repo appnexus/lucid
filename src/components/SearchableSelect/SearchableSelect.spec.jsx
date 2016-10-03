@@ -450,4 +450,57 @@ describe('SearchableSelect', () => {
 			});
 		});
 	});
+
+	describe('statics', () => {
+		describe('#getCombinedChildText', () => {
+			it('should return \'\' if the passed in node has no children', () => {
+				assert.equal(SearchableSelect.getCombinedChildText({}), '');
+			});
+
+			it('should return the node\'s `children` if it is a string', () => {
+				const children = 'child';
+				assert.equal(SearchableSelect.getCombinedChildText({children}), 'child');
+			});
+
+			it('should recursively combine children', () => {
+				const node = {children: [{props: {children: '1'}}, {props: {children: [{props: {children: '2'}}, {props: {children: '3'}}]}}]}
+				assert.equal(SearchableSelect.getCombinedChildText(node), '123');
+			});
+		});
+
+		describe('#defaultOptionFilter', () => {
+			it('should return true if the searchText is undefined', () => {
+				assert(SearchableSelect.defaultOptionFilter());
+			});
+
+			it('should return true if the searchText is null', () => {
+				assert(SearchableSelect.defaultOptionFilter(null));
+			});
+
+			it('should return true if the searchText is empty string', () => {
+				assert(SearchableSelect.defaultOptionFilter(''));
+			});
+
+			it('should return true if the searchText matches the option\'s text', () => {
+				assert(SearchableSelect.defaultOptionFilter('search', {children: 'search'}));
+			});
+
+			it('should return false if the searchText does not match the option\'s text', () => {
+				assert(!SearchableSelect.defaultOptionFilter('search', {children: 'miss'}));
+			});
+		});
+
+		describe('#getFilteredFlattenedOptionsData', () => {
+			const flattenedOptions = [{optionProps: {children: 'ab'}}, {optionProps: {children: 'ac'}}, {optionProps: {children: 'ad'}}, {optionProps: {children: 'bc'}}, {optionProps: {children: 'bd'}}];
+			const optionFilter = (searchText, optionProps) => optionProps.children.startsWith(searchText);
+
+			it('should pass through the flattenedOptions if searchText isEmpty', () => {
+				assert.equal(SearchableSelect.getFilteredFlattenedOptionsData('', optionFilter, flattenedOptions), flattenedOptions);
+			});
+
+			it('should return only options that pass the optionFilter', () => {
+				assert(_.isEqual(SearchableSelect.getFilteredFlattenedOptionsData('a', optionFilter, flattenedOptions), flattenedOptions.slice(0, 3)));
+			});
+		});
+	});
 });
