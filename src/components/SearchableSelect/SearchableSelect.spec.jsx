@@ -511,7 +511,7 @@ describe('SearchableSelect', () => {
 
 		describe('#getFilteredFlattenedOptionsData', () => {
 			const flattenedOptions = [{optionProps: {children: 'ab'}}, {optionProps: {children: 'ac'}}, {optionProps: {children: 'ad'}}, {optionProps: {children: 'bc'}}, {optionProps: {children: 'bd'}}];
-			const optionFilter = (searchText, optionProps) => optionProps.children.startsWith(searchText);
+			const optionFilter = (searchText, optionProps) => _.startsWith(optionProps.children, searchText);
 
 			it('should pass through the flattenedOptions if searchText isEmpty', () => {
 				assert.equal(SearchableSelect.getFilteredFlattenedOptionsData('', optionFilter, flattenedOptions), flattenedOptions);
