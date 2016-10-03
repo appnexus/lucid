@@ -7,12 +7,12 @@ import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import SearchableSelect from './SearchableSelect';
 import DropMenu from '../DropMenu/DropMenu';
-import SearchField from '../SearchField/SearchField';
 
 const {
 	Placeholder,
 	Option,
 	OptionGroup,
+	SearchField,
 } = SearchableSelect;
 
 describe('SearchableSelect', () => {
@@ -318,6 +318,25 @@ describe('SearchableSelect', () => {
 	});
 
 	describe('child elements', () => {
+		describe('SearchField', () => {
+			it('should pass the searchfield props through to the underlying SearchField element', () => {
+				const wrapper = shallow(
+					<SearchableSelect DropMenu={{isExpanded: true}}>
+						<SearchField placeholder='custom' />
+						<Option name='OptionA'>option a</Option>
+						<Option name='OptionB'>option b</Option>
+						<Option name='OptionC'>option c</Option>
+					</SearchableSelect>
+				);
+
+				const dropMenuControl = wrapper.childAt(0);
+				const searchContainer = dropMenuControl.children('.lucid-SearchableSelect-Search-container');
+				const searchFieldWrapper = searchContainer.childAt(0);
+
+				assert.equal(searchFieldWrapper.prop('placeholder'), 'custom');
+			});
+		});
+
 		describe('Placeholder', () => {
 			it('should pass the placeholder thru to the underlying DropMenu Control when no option is selected', () => {
 				const wrapper = shallow(

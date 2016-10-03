@@ -24,7 +24,7 @@ export default React.createClass({
 		return (
 			<section style={{marginBottom: '20px'}}>
 				<SearchableSelect onSelect={this.handleSelect} maxMenuHeight='200'>
-					<Placeholder>Select Color</Placeholder>
+					<Placeholder>Select State</Placeholder>
 					<Option value='AK'>Alaska</Option>
 					<Option value='HI'>Hawaii</Option>
 					<OptionGroup>

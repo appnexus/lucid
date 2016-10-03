@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { createClass, findTypes } from '../../util/component-types';
+import { createClass, findTypes, getFirst } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { partitionText } from '../../util/text-manipulation';
 import * as reducers from './SearchableSelect.reducers';
@@ -59,6 +59,7 @@ const SearchableSelect = createClass({
 			propName: 'OptionGroup',
 			propTypes: DropMenu.OptionGroup.propTypes,
 		}),
+		SearchField,
 	},
 
 	propTypes: {
@@ -296,19 +297,22 @@ const SearchableSelect = createClass({
 
 	render() {
 		const {
-			style,
-			className,
-			hasReset,
-			isDisabled,
-			isLoading,
-			isSelectionHighlighted,
-			maxMenuHeight,
-			searchText,
-			selectedIndex,
-			onSearch,
-			onSelect,
-			DropMenu: dropMenuProps,
-		} = this.props;
+			props,
+				props: {
+				style,
+				className,
+				hasReset,
+				isDisabled,
+				isLoading,
+				isSelectionHighlighted,
+				maxMenuHeight,
+				searchText,
+				selectedIndex,
+				onSearch,
+				onSelect,
+				DropMenu: dropMenuProps,
+			},
+		} = this;
 
 		const {
 			direction,
@@ -320,6 +324,7 @@ const SearchableSelect = createClass({
 			flattenedOptionsData,
 		} = this.state;
 
+		const searchFieldProps = _.get(getFirst(props, SearchField, <SearchField />), 'props');
 		const placeholderProps = _.first(_.map(findTypes(this.props, SearchableSelect.Placeholder), 'props'));
 		const placeholder = _.get(placeholderProps, 'children', 'Select');
 		const isItemSelected = _.isNumber(selectedIndex);
@@ -362,13 +367,16 @@ const SearchableSelect = createClass({
 							<SearchField
 								onChange={onSearch}
 								value={searchText}
+								{...searchFieldProps}
 							/>
 						</div>
 					}
 				</DropMenu.Control>
 				{
 					isLoading &&
-					<DropMenu.Option key='SearchableSelectLoading' className={cx('&-Loading')} isDisabled><LoadingIcon /></DropMenu.Option>
+					<DropMenu.Option key='SearchableSelectLoading' className={cx('&-Loading')} isDisabled>
+						<LoadingIcon />
+					</DropMenu.Option>
 				}
 				{
 					hasReset && isItemSelected &&
