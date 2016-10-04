@@ -71,7 +71,7 @@ describe('SingleSelect', () => {
 					</SingleSelect>
 				);
 
-				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut');
+				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
 
 				assert(_.includes(menuDOMNode.children[0].className, 'lucid-DropMenu-Option-is-null'));
 			});
@@ -234,7 +234,7 @@ describe('SingleSelect', () => {
 					</SingleSelect>
 				);
 
-				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut');
+				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
 				menuDOMNode.children[2].click();
 
 				assert(onSelect.called);

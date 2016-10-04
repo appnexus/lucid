@@ -77,7 +77,7 @@ describe('SearchableSelect', () => {
 					</SearchableSelect>
 				);
 
-				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut');
+				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
 
 				assert(_.includes(menuDOMNode.children[0].className, 'lucid-DropMenu-Option-is-null'));
 			});
@@ -92,7 +92,7 @@ describe('SearchableSelect', () => {
 					</SearchableSelect>
 				);
 
-				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut');
+				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
 
 				assert(!_.includes(menuDOMNode.children[0].className, 'lucid-DropMenu-Option-is-null'));
 			});
@@ -220,7 +220,7 @@ describe('SearchableSelect', () => {
 		});
 
 		describe('maxMenuHeight', () => {
-			it('should pass through to DropMenu prop `flyOutStyle.maxHeight`', () => {
+			it('should pass through to DropMenu prop `optionContainerStyle.maxHeight`', () => {
 				const wrapper = shallow(
 					<SearchableSelect maxMenuHeight={123}>
 						<Placeholder>select one</Placeholder>
@@ -231,8 +231,8 @@ describe('SearchableSelect', () => {
 				);
 
 				const dropMenuWrapper = wrapper.find(DropMenu);
-				const flyOutStyle = dropMenuWrapper.prop('flyOutStyle')
-				assert.equal(123, flyOutStyle.maxHeight, 'must match prop value');
+				const optionContainerStyle = dropMenuWrapper.prop('optionContainerStyle')
+				assert.equal(123, optionContainerStyle.maxHeight, 'must match prop value');
 			});
 		});
 
@@ -258,7 +258,7 @@ describe('SearchableSelect', () => {
 					</SearchableSelect>
 				);
 
-				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut');
+				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
 				menuDOMNode.children[2].click();
 
 				assert(onSelect.called);
@@ -329,9 +329,8 @@ describe('SearchableSelect', () => {
 					</SearchableSelect>
 				);
 
-				const dropMenuControl = wrapper.childAt(0);
-				const searchContainer = dropMenuControl.children('.lucid-SearchableSelect-Search-container');
-				const searchFieldWrapper = searchContainer.childAt(0);
+				const dropMenuHeader = wrapper.childAt(1);
+				const searchFieldWrapper = dropMenuHeader.childAt(0);
 
 				assert.equal(searchFieldWrapper.prop('placeholder'), 'custom');
 			});

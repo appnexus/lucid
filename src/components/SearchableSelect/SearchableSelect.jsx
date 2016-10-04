@@ -223,10 +223,6 @@ const SearchableSelect = createClass({
 		this.setState(SearchableSelect.preprocessOptionData(nextProps));
 	},
 
-	handleClickSearchField(event) {
-		event.stopPropagation();
-	},
-
 	renderUnderlinedChildren(childText, searchText) {
 		const [pre, match, post] = partitionText(childText, new RegExp(_.escapeRegExp(searchText), 'i'), searchText.length);
 
@@ -316,7 +312,7 @@ const SearchableSelect = createClass({
 
 		const {
 			direction,
-			flyOutStyle,
+			optionContainerStyle,
 			isExpanded,
 		} = dropMenuProps;
 
@@ -333,7 +329,7 @@ const SearchableSelect = createClass({
 			<DropMenu
 				{...dropMenuProps}
 				className={cx('&', className)}
-				flyOutStyle={_.assign({}, flyOutStyle, !_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null)}
+				optionContainerStyle={_.assign({}, optionContainerStyle, !_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null)}
 				isDisabled={isDisabled}
 				isLoading={isLoading}
 				onSelect={onSelect}
@@ -361,17 +357,14 @@ const SearchableSelect = createClass({
 						</span>
 						<CaretIcon direction={isExpanded ? direction : 'down'} />
 					</div>
-					{
-						isExpanded &&
-						<div className={cx('&-Search-container')} onClick={this.handleClickSearchField}>
-							<SearchField
-								onChange={onSearch}
-								value={searchText}
-								{...searchFieldProps}
-							/>
-						</div>
-					}
 				</DropMenu.Control>
+				<DropMenu.Header className={cx('&-Search-container')}>
+					<SearchField
+						onChange={onSearch}
+						value={searchText}
+						{...searchFieldProps}
+					/>
+				</DropMenu.Header>
 				{
 					isLoading &&
 					<DropMenu.Option key='SearchableSelectLoading' className={cx('&-Loading')} isDisabled>

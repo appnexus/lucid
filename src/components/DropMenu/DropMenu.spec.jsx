@@ -11,6 +11,7 @@ import * as KEYCODE from '../../constants/key-code';
 
 const {
 	Control,
+	Header,
 	Option,
 	OptionGroup,
 	NullOption,
@@ -711,7 +712,7 @@ describe('DropMenu', () => {
 					</DropMenu>
 				);
 
-				const flyOutDOMNode = document.querySelector('.lucid-DropMenu.lucid-ContextMenu-FlyOut');
+				const flyOutDOMNode = document.querySelector('.lucid-DropMenu.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
 				assert.equal(flyOutDOMNode.children.length, 10);
 				assert.equal(flyOutDOMNode.children[0].innerHTML, 'option a');
 				assert.equal(flyOutDOMNode.children[1].innerHTML, 'option b');
@@ -751,7 +752,7 @@ describe('DropMenu', () => {
 					</DropMenu>
 				);
 
-				const flyOutDOMNode = document.querySelector('.lucid-DropMenu.lucid-ContextMenu-FlyOut');
+				const flyOutDOMNode = document.querySelector('.lucid-DropMenu.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
 				assert.equal(flyOutDOMNode.children.length, 7);
 				assert.equal(flyOutDOMNode.children[0].innerHTML, 'option a');
 				assert.equal(flyOutDOMNode.children[1].innerHTML, 'option b');
@@ -790,7 +791,7 @@ describe('DropMenu', () => {
 					</DropMenu>
 				);
 
-				const flyOutDOMNode = document.querySelector('.lucid-DropMenu.lucid-ContextMenu-FlyOut');
+				const flyOutDOMNode = document.querySelector('.lucid-DropMenu.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
 				assert.equal(flyOutDOMNode.children.length, 9);
 				assert.equal(flyOutDOMNode.children[0].firstChild.innerHTML, 'Preferred');
 				assert.equal(flyOutDOMNode.children[1].innerHTML, 'option a');
@@ -827,7 +828,7 @@ describe('DropMenu', () => {
 					</DropMenu>
 				);
 
-				const flyOutDOMNode = document.querySelector('.lucid-DropMenu.lucid-ContextMenu-FlyOut');
+				const flyOutDOMNode = document.querySelector('.lucid-DropMenu.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
 
 				assert.equal(flyOutDOMNode.children.length, 5);
 				assert.equal(flyOutDOMNode.children[0].innerHTML, 'unselect');
@@ -841,6 +842,35 @@ describe('DropMenu', () => {
 				assert(_.includes(flyOutDOMNode.children[2].className, 'lucid-DropMenu-Option'));
 				assert(_.includes(flyOutDOMNode.children[3].className, 'lucid-DropMenu-Option'));
 				assert(_.includes(flyOutDOMNode.children[4].className, 'lucid-DropMenu-Option'));
+			});
+		});
+
+		describe('Header', () => {
+			let wrapper;
+
+			afterEach(() => {
+				if (wrapper) {
+					wrapper.unmount();
+				}
+			});
+
+			it('should render Header first if it is provided, followed by the option-container', () => {
+				wrapper = mount(
+					<DropMenu isExpanded>
+						<Header>HeyDer</Header>
+						<Control>control</Control>
+						<NullOption>unselect</NullOption>
+						<Option>option a</Option>
+						<Option>option b</Option>
+						<Option>option c</Option>
+					</DropMenu>
+				);
+
+				const flyOutDOMNode = document.querySelector('.lucid-DropMenu.lucid-ContextMenu-FlyOut');
+
+				assert.equal(flyOutDOMNode.children.length, 2);
+				assert.equal(flyOutDOMNode.children[0].innerHTML, 'HeyDer');
+				assert.equal(flyOutDOMNode.children[1].className, 'lucid-DropMenu-option-container');
 			});
 		});
 	});
