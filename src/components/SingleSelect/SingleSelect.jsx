@@ -99,7 +99,7 @@ const SingleSelect = createClass({
 		DropMenu: shape(DropMenu.propTypes),
 		/**
 		 * Called when an option is selected.
-		 * Has the signature `(optionIndex, {props, event}) => {}` where `optionIndex` is the new `selectedIndex` or `null`.
+		 * Has the signature `(optionIndex, {props, event}) => {}` where `optionIndex` is the new `selectedIndex` or `null` and `props` are the `props` for the selected `Option`.
 		 */
 		onSelect: func,
 		/**
