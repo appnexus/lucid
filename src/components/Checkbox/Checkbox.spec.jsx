@@ -8,7 +8,7 @@ import sinon from 'sinon';
 
 import Checkbox from './Checkbox';
 
-describe.only('Checkbox', () => {
+describe('Checkbox', () => {
 	common(Checkbox);
 	controls(Checkbox, {
 		callbackName: 'onSelect',
