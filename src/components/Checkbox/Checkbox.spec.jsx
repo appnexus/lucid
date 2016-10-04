@@ -8,7 +8,7 @@ import sinon from 'sinon';
 
 import Checkbox from './Checkbox';
 
-describe('Checkbox', () => {
+describe.only('Checkbox', () => {
 	common(Checkbox);
 	controls(Checkbox, {
 		callbackName: 'onSelect',
@@ -17,77 +17,81 @@ describe('Checkbox', () => {
 	});
 
 	describe('props', () => {
-		it('`isDisabled` sets the `disabled` attribute of the native checkbox element', () => {
-			const trueWrapper = shallow(<Checkbox isDisabled={true} />);
-			const falseWrapper = shallow(<Checkbox isDisabled={false} />);
 
-			assert.equal(trueWrapper.find('.lucid-Checkbox-native').prop('disabled'), true);
-			assert.equal(falseWrapper.find('.lucid-Checkbox-native').prop('disabled'), false);
+		describe('isDisabled', () => {
+
+			it('should set `disabled` attribute to true', () => {
+				const trueWrapper = mount(<Checkbox isDisabled={true} />);
+				assert.equal(trueWrapper.find('.lucid-Checkbox-native').prop('disabled'), true);
+			});
+
+			it('should set `disabled` attribute to false', () => {
+				const falseWrapper = mount(<Checkbox isDisabled={false} />);
+				assert.equal(falseWrapper.find('.lucid-Checkbox-native').prop('disabled'), false);
+			});
+
+			it('`isDisabled` defaults to `false`', () => {
+				const wrapper = mount(<Checkbox />);
+				assert.equal(wrapper.prop('isDisabled'), false);
+			});
+
 		});
 
-		it('`isSelected` sets the `checked` attribute of the native check box element', () => {
-			const trueWrapper = shallow(<Checkbox isSelected={true} />);
-			const falseWrapper = shallow(<Checkbox isSelected={false} />);
+		describe('isSelected', () => {
 
-			assert.equal(trueWrapper.find('.lucid-Checkbox-native').prop('checked'), true);
-			assert.equal(falseWrapper.find('.lucid-Checkbox-native').prop('checked'), false);
+			it('`isSelected` defaults to `false`', () => {
+				const wrapper = mount(<Checkbox />);
+				assert.equal(wrapper.prop('isSelected'), false);
+			});
+
+			it('should set `checked` attribute to true', () => {
+				const trueWrapper = mount(<Checkbox isSelected={true} />);
+				assert.equal(trueWrapper.find('.lucid-Checkbox-native').prop('checked'), true);
+			});
+
+			it('should set `checked` attribute to false', () => {
+				const falseWrapper = mount(<Checkbox isSelected={false} />);
+				assert.equal(falseWrapper.find('.lucid-Checkbox-native').prop('checked'), false);
+			});
+
 		});
 
-	});
-});
-
-describe('Checkbox', () => {
-	function simulateEvent(reactElement, selector, event) {
-		mount(reactElement).find(selector).simulate(event);
-	}
-
-	function verifyArgumentsWhenFalse(event) {
-		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-checkmark'], (classSubString) => {
-			const onSelect = sinon.spy();
-
-			simulateEvent(<Checkbox isSelected={false} onSelect={onSelect} />, `.lucid-Checkbox${classSubString}`, event);
-			assert.equal(onSelect.args[0][0], true);
-			assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
-		});
-	}
-
-	function verifyArgumentsWhenTrue(event) {
-		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-checkmark'], (classSubString) => {
-			const onSelect = sinon.spy();
-
-			simulateEvent(<Checkbox isSelected={true} onSelect={onSelect} />, `.lucid-Checkbox${classSubString}`, event);
-			assert.equal(onSelect.args[0][0], false);
-			assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
-		});
-	}
-
-	function verifyOnSelect(event) {
-		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-checkmark'], (classSubString) => {
-			const onSelect = sinon.spy();
-
-			simulateEvent(<Checkbox onSelect={onSelect} />, `.lucid-Checkbox${classSubString}`, event);
-			assert(onSelect.calledOnce);
-		});
-	}
-
-	describe('props', () => {
-		it('`isDisabled` defaults to `false`', () => {
-			const wrapper = mount(<Checkbox />);
-
-			assert.equal(wrapper.prop('isDisabled'), false);
+		describe('onSelect', () => {
+			it('`onSelect` defaults to the Lodash `noop` method', () => {
+				const wrapper = mount(<Checkbox />);
+				assert.equal(wrapper.prop('onSelect'), _.noop);
+			});
 		});
 
-		it('`isSelected` defaults to `false`', () => {
-			const wrapper = mount(<Checkbox />);
+		describe('isIndeterminate', () => {
 
-			assert.equal(wrapper.prop('isSelected'), false);
+			it('`isIndeterminate` default to `false`', () => {
+				const wrapper = mount(<Checkbox />);
+				assert.equal(wrapper.prop('isIndeterminate'), false);
+			});
+
+			it('should set the top-level classname `&-is-selected`', () => {
+				const wrapper = shallow(<Checkbox isIndeterminate/>);
+				assert(wrapper.hasClass('lucid-Checkbox-is-selected'));
+			});
+
+			it('should not contain a `span.&-visualization-checkmark`', () => {
+				const wrapper = shallow(<Checkbox isIndeterminate/>);
+				assert.equal(wrapper.find('span.lucid-Checkbox-visualization-checkmark').length, 0);
+			});
+
+			it('should contain a `span.&-visualization-indeterminate`', () => {
+				const wrapper = shallow(<Checkbox isIndeterminate/>);
+				assert.equal(wrapper.find('span.lucid-Checkbox-visualization-indeterminate').length, 1);
+			});
+
+			it('should contain a `span.&-visualization-indeterminate-line`', () => {
+				const wrapper = shallow(<Checkbox isIndeterminate/>);
+				assert.equal(wrapper.find('span.lucid-Checkbox-visualization-indeterminate-line').length, 1);
+			});
+
 		});
 
-		it('`onSelect` defaults to the Lodash `noop` method', () => {
-			const wrapper = mount(<Checkbox />);
-
-			assert.equal(wrapper.prop('onSelect'), _.noop);
-		});
 	});
 
 	describe('pass throughs', () => {
@@ -146,3 +150,35 @@ describe('Checkbox', () => {
 	});
 });
 
+function simulateEvent(reactElement, selector, event) {
+	mount(reactElement).find(selector).simulate(event);
+}
+
+function verifyArgumentsWhenFalse(event) {
+	_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-checkmark'], (classSubString) => {
+		const onSelect = sinon.spy();
+
+		simulateEvent(<Checkbox isSelected={false} onSelect={onSelect} />, `.lucid-Checkbox${classSubString}`, event);
+		assert.equal(onSelect.args[0][0], true);
+		assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
+	});
+}
+
+function verifyArgumentsWhenTrue(event) {
+	_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-checkmark'], (classSubString) => {
+		const onSelect = sinon.spy();
+
+		simulateEvent(<Checkbox isSelected={true} onSelect={onSelect} />, `.lucid-Checkbox${classSubString}`, event);
+		assert.equal(onSelect.args[0][0], false);
+		assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
+	});
+}
+
+function verifyOnSelect(event) {
+	_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-checkmark'], (classSubString) => {
+		const onSelect = sinon.spy();
+
+		simulateEvent(<Checkbox onSelect={onSelect} />, `.lucid-Checkbox${classSubString}`, event);
+		assert(onSelect.calledOnce);
+	});
+}
