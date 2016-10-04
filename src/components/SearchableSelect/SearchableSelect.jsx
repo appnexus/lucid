@@ -93,7 +93,7 @@ const SearchableSelect = createClass({
 		 */
 		isSelectionHighlighted: bool,
 		/**
-		 * The max height of the fly-out menu.
+		 * The max height of section of the fly-out menu that contains the search results.
 		 */
 		maxMenuHeight: oneOfType([number, string]),
 		/**
@@ -316,8 +316,8 @@ const SearchableSelect = createClass({
 
 		const {
 			direction,
-			flyOutStyle,
 			isExpanded,
+			optionContainerStyle,
 		} = dropMenuProps;
 
 		const {
@@ -333,13 +333,23 @@ const SearchableSelect = createClass({
 			<DropMenu
 				{...dropMenuProps}
 				className={cx('&', className)}
-				flyOutStyle={_.assign({}, flyOutStyle, !_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null)}
+				optionContainerStyle={_.assign({}, optionContainerStyle, !_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null)}
 				isDisabled={isDisabled}
 				isLoading={isLoading}
 				onSelect={onSelect}
 				selectedIndices={isItemSelected ? [selectedIndex] : []}
 				style={style}
 			>
+				{
+					isExpanded &&
+					<DropMenu.Header className={cx('&-Search-container')} onClick={this.handleClickSearchField}>
+						<SearchField
+							onChange={onSearch}
+							value={searchText}
+							{...searchFieldProps}
+						/>
+					</DropMenu.Header>
+				}
 				<DropMenu.Control>
 					<div
 						tabIndex={0}
@@ -361,16 +371,6 @@ const SearchableSelect = createClass({
 						</span>
 						<CaretIcon direction={isExpanded ? direction : 'down'} />
 					</div>
-					{
-						isExpanded &&
-						<div className={cx('&-Search-container')} onClick={this.handleClickSearchField}>
-							<SearchField
-								onChange={onSearch}
-								value={searchText}
-								{...searchFieldProps}
-							/>
-						</div>
-					}
 				</DropMenu.Control>
 				{
 					isLoading &&

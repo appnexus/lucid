@@ -1,10 +1,13 @@
-@DropMenu-size-maxHeight: 420px;
 @DropMenu-size-optionHeight: 25px;
 
 .lucid-DropMenu {
 
 	&&-base {
 		display: inline-block;
+	}
+
+	&-Header {
+
 	}
 
 	&-Control {
@@ -40,24 +43,21 @@
 		}
 	}
 
+	&-option-container {
+		overflow-y: auto;
+
+		// TODO: do we stil need this?
+		// @supports (-webkit-appearance:none)
+		// 	and (text-align-last:auto) and (not (-ms-accelerator:true)) {
+		// 		-webkit-transform:translate3d(0,0,0); /* makes the scrollbar visible */
+		// }
+	}
+
 	&.lucid-ContextMenu-FlyOut {
-
-		/**
-		 * Chrome-specific selector at https://jeffclayton.wordpress.com/2014/07/22/the-chrome-and-safari-css-hacks-collection/
-		 *
-		 * Chrome 47+ (and Opera 34+)
-		 */
-
-		@supports (-webkit-appearance:none)
-			and (text-align-last:auto) and (not (-ms-accelerator:true)) {
-				-webkit-transform:translate3d(0,0,0); /* makes the scrollbar visible */
-		}
 
 		.box-sizing();
 		background-color: @color-white;
 		border: solid 1px @featured-color-default-borderColor;
-		overflow-y: auto;
-		max-height: @DropMenu-size-maxHeight;
 
 		&&-Up {
 			border-width: 1px 1px 0 1px;
