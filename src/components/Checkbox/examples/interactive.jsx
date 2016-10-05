@@ -4,14 +4,14 @@ import { Checkbox } from '../../../index';
 export default React.createClass({
 	getInitialState() {
 		return {
-			isSelected: true,
+			isSelected: 0,
 		};
 	},
 
-	handleSelected(isSelected) {
+	handleSelected() {
 		this.setState({
 			...this.state,
-			isSelected,
+			isSelected: (this.state.isSelected + 1) % 3,
 		});
 	},
 
@@ -21,7 +21,8 @@ export default React.createClass({
 				<li>
 					<label>Plain</label>
 					<Checkbox
-						isSelected={this.state.isSelected}
+						isIndeterminate={this.state.isSelected === 1}
+						isSelected={this.state.isSelected === 0}
 						onSelect={this.handleSelected}
 						tabIndex={20}
 					/>
@@ -38,6 +39,14 @@ export default React.createClass({
 					<label>Disabled selected</label>
 					<Checkbox
 						isSelected={true}
+						isDisabled={true}
+						tabIndex={20}
+					/>
+				</li>
+				<li>
+					<label>Disabled indeterminate</label>
+					<Checkbox
+						isIndeterminate={true}
 						isDisabled={true}
 						tabIndex={20}
 					/>

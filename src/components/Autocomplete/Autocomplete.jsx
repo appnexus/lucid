@@ -1,7 +1,8 @@
 import React from 'react';
 import _ from 'lodash';
-import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
+import { lucidClassNames } from '../../util/style-helpers';
+import { partitionText } from '../../util/text-manipulation';
 import * as reducers from './Autocomplete.reducers';
 import * as KEYCODE from '../../constants/key-code';
 import DropMenu from '../DropMenu/DropMenu';
@@ -269,16 +270,5 @@ const Autocomplete = createClass({
 		);
 	},
 });
-
-function partitionText(text, pattern, length) {
-	const index = text.search(pattern);
-	if (index === -1) {
-		return ['', '', text];
-	} else if (index === 0) {
-		return ['', text.substr(0, length), text.substring(length)];
-	} else {
-		return [text.substring(0, index), text.substr(index, length), text.substring(index + length)];
-	}
-}
 
 export default Autocomplete;

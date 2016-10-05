@@ -61,6 +61,7 @@ const CheckboxLabeled = createClass({
 
 	getDefaultProps() {
 		return {
+			isIndeterminate: false,
 			isDisabled: false,
 			isSelected: false,
 			onSelect: _.noop,
@@ -70,6 +71,7 @@ const CheckboxLabeled = createClass({
 	render() {
 		const {
 			className,
+			isIndeterminate,
 			isDisabled,
 			isSelected,
 			onSelect,
@@ -83,13 +85,14 @@ const CheckboxLabeled = createClass({
 			<label
 					className={cx('&', {
 						'&-is-disabled': isDisabled,
-						'&-is-selected': isSelected,
+						'&-is-selected': isIndeterminate || isSelected,
 					}, className)}
 					style={style}
 			>
 				<Checkbox
 						className={className}
 						isDisabled={isDisabled}
+						isIndeterminate={isIndeterminate}
 						isSelected={isSelected}
 						onSelect={onSelect}
 						{...omitProps(passThroughs, CheckboxLabeled)}
