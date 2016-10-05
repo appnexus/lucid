@@ -253,6 +253,8 @@ const Th = createClass({
 			hasSetWidth: !!width,
 			// Indicates whether the cell is currently being resized.
 			isResizing: false,
+			// Indicates a mouse drag is in progress
+			isDragging: false,
 			// Represents the width when the cell is not actively being resized.
 			passiveWidth: width || null,
 		};
@@ -314,6 +316,9 @@ const Th = createClass({
 					'&-has-border-left': hasBorderLeft,
 				}, className)}
 				ref='root'
+				onClickCapture={this.handleClickCapture}
+				onMouseEnter={this.handleMouseEnter}
+				onMouseUp={this.handleMouseUp}
 				style={hasSetWidth ? _.assign({}, style, {
 					width: isResizing ? activeWidth : passiveWidth,
 				}) : style}
@@ -348,6 +353,27 @@ const Th = createClass({
 		return this.refs.root.getBoundingClientRect().width;
 	},
 
+	handleClickCapture(event){
+		if (this.state.isDragging){
+			event.stopPropagation();
+			this.setState({
+				isDragging: false
+			});
+		}
+	},
+
+	handleMouseEnter(){
+		this.setState({
+			isDragging: this.state.isResizing
+		});
+	},
+
+	handleMouseUp(){
+		this.setState({
+			isDragging: this.state.isResizing
+		});
+	},
+
 	handleDragEnded(coordinates, { event }) {
 		this.setState({
 			isResizing: false,
@@ -371,6 +397,7 @@ const Th = createClass({
 			activeWidth: startingWidth,
 			hasSetWidth: true,
 			isResizing: true,
+			isDragging: true,
 			passiveWidth: startingWidth,
 		});
 
