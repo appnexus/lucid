@@ -5,27 +5,33 @@ import sinon from 'sinon';
 import { filterTypes, rejectTypes } from '../../util/component-types';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
-import SingleSelect from './SingleSelect';
+import SearchableSelect from './SearchableSelect';
 import DropMenu from '../DropMenu/DropMenu';
 
 const {
 	Placeholder,
 	Option,
 	OptionGroup,
-} = SingleSelect;
+	SearchField,
+} = SearchableSelect;
 
-describe('SingleSelect', () => {
-	common(SingleSelect);
+describe('SearchableSelect', () => {
+	common(SearchableSelect, {
+		exemptFunctionProps: [
+			'optionFilter',
+			'richChildRenderer',
+		],
+	});
 
 	describe('render', () => {
 		it('should render a DropMenu', () => {
 			const wrapper = shallow(
-				<SingleSelect>
+				<SearchableSelect>
 					<Placeholder>control</Placeholder>
 					<Option>option a</Option>
 					<Option>option b</Option>
 					<Option>option c</Option>
-				</SingleSelect>
+				</SearchableSelect>
 			);
 
 			assert.equal(wrapper.find('DropMenu').length, 1);
@@ -34,16 +40,16 @@ describe('SingleSelect', () => {
 
 	describe('props', () => {
 		describe('children', () => {
-			it('should not render any direct child elements which are not SingleSelect-specific', () => {
+			it('should not render any direct child elements which are not SearchableSelect-specific', () => {
 				const wrapper = shallow(
-					<SingleSelect>
+					<SearchableSelect>
 						<button>button</button>
 						<Placeholder>control<i>italic</i></Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
 						<Option>option c</Option>
 						<h1>header</h1>
-					</SingleSelect>
+					</SearchableSelect>
 				);
 
 				assert.equal(wrapper.find('button').length, 0);
@@ -63,12 +69,12 @@ describe('SingleSelect', () => {
 
 			it('should render the placeholder option as the first one in the menu and be a null option', () => {
 				wrapper = mount(
-					<SingleSelect hasReset={true} selectedIndex={1} DropMenu={{ isExpanded: true }}>
+					<SearchableSelect hasReset={true} selectedIndex={1} DropMenu={{ isExpanded: true }}>
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
 						<Option>option c</Option>
-					</SingleSelect>
+					</SearchableSelect>
 				);
 
 				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
@@ -78,15 +84,15 @@ describe('SingleSelect', () => {
 
 			it('should not render the placeholder null option as the first one in the menu', () => {
 				wrapper = mount(
-					<SingleSelect hasReset={false} selectedIndex={1} DropMenu={{ isExpanded: true }}>
+					<SearchableSelect hasReset={false} selectedIndex={1} DropMenu={{ isExpanded: true }}>
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
 						<Option>option c</Option>
-					</SingleSelect>
+					</SearchableSelect>
 				);
 
-				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut');
+				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
 
 				assert(!_.includes(menuDOMNode.children[0].className, 'lucid-DropMenu-Option-is-null'));
 			});
@@ -95,12 +101,12 @@ describe('SingleSelect', () => {
 		describe('isDisabled', () => {
 			it('should pass the `isDisabled` prop thru to the underlying DropMenu', () => {
 				const wrapper = shallow(
-					<SingleSelect isDisabled={true}>
+					<SearchableSelect isDisabled={true}>
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
 						<Option>option c</Option>
-					</SingleSelect>
+					</SearchableSelect>
 				);
 
 				const dropMenuWrapper = wrapper.find('DropMenu');
@@ -110,18 +116,37 @@ describe('SingleSelect', () => {
 
 			it('should apply the appropriate classNames to the control', () => {
 				const wrapper = shallow(
-					<SingleSelect isDisabled={true} selectedIndex={2}>
+					<SearchableSelect isDisabled={true} selectedIndex={2}>
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
 						<Option>option c</Option>
-					</SingleSelect>
+					</SearchableSelect>
 				);
 
-				const controlWrapper = wrapper.find('.lucid-SingleSelect-Control');
+				const controlWrapper = wrapper.find('.lucid-SearchableSelect-Control');
 
-				assert(controlWrapper.hasClass('lucid-SingleSelect-Control-is-disabled'));
-				assert(!controlWrapper.hasClass('lucid-SingleSelect-Control-is-selected'));
+				assert(controlWrapper.hasClass('lucid-SearchableSelect-Control-is-disabled'));
+				assert(!controlWrapper.hasClass('lucid-SearchableSelect-Control-is-selected'));
+			});
+		});
+
+		describe('isLoading', () => {
+			it('should render a &-Loading Option and disable all Options', () => {
+				const wrapper = shallow(
+					<SearchableSelect isLoading>
+						<Placeholder>select one</Placeholder>
+						<Option>option a</Option>
+						<Option>option b</Option>
+						<Option>option c</Option>
+					</SearchableSelect>
+				);
+
+				const options = wrapper.find(DropMenu).shallow().find('.lucid-DropMenu-Option');
+
+				// first option should be the loading indicator.
+				assert(options.at(0).hasClass('lucid-SearchableSelect-Loading'));
+				assert(options.every('.lucid-DropMenu-Option-is-disabled'));
 			});
 		});
 
@@ -129,22 +154,23 @@ describe('SingleSelect', () => {
 			describe('default', () => {
 				it('should apply the appropriate classNames to the control', () => {
 					const wrapper = shallow(
-						<SingleSelect selectedIndex={2}>
+						<SearchableSelect selectedIndex={2}>
 							<Placeholder>select one</Placeholder>
 							<Option>option a</Option>
 							<Option>option b</Option>
 							<Option>option c</Option>
-						</SingleSelect>
+						</SearchableSelect>
 					);
-					const controlWrapper = wrapper.find('.lucid-SingleSelect-Control');
-					assert(controlWrapper.hasClass('lucid-SingleSelect-Control-is-selected'));
-					assert(controlWrapper.hasClass('lucid-SingleSelect-Control-is-highlighted'));
+					const controlWrapper = wrapper.find('.lucid-SearchableSelect-Control');
+					assert(controlWrapper.hasClass('lucid-SearchableSelect-Control-is-selected'));
+					assert(controlWrapper.hasClass('lucid-SearchableSelect-Control-is-highlighted'));
 				});
 			});
+
 			describe('false', () => {
 				it('should apply the appropriate classNames to the control', () => {
 					const wrapper = shallow(
-						<SingleSelect
+						<SearchableSelect
 							isSelectionHighlighted={false}
 							selectedIndex={2}
 							>
@@ -152,11 +178,11 @@ describe('SingleSelect', () => {
 							<Option>option a</Option>
 							<Option>option b</Option>
 							<Option>option c</Option>
-						</SingleSelect>
+						</SearchableSelect>
 					);
-					const controlWrapper = wrapper.find('.lucid-SingleSelect-Control');
-					assert(!controlWrapper.hasClass('lucid-SingleSelect-Control-is-selected'));
-					assert(!controlWrapper.hasClass('lucid-SingleSelect-Control-is-highlighted'));
+					const controlWrapper = wrapper.find('.lucid-SearchableSelect-Control');
+					assert(!controlWrapper.hasClass('lucid-SearchableSelect-Control-is-selected'));
+					assert(!controlWrapper.hasClass('lucid-SearchableSelect-Control-is-highlighted'));
 				});
 			});
 		});
@@ -164,12 +190,12 @@ describe('SingleSelect', () => {
 		describe('selectedIndex', () => {
 			it('should pass the selectedIndex in an array of 1 to the underlying DropMenu', () => {
 				const wrapper = shallow(
-					<SingleSelect selectedIndex={2}>
+					<SearchableSelect selectedIndex={2}>
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
 						<Option>option c</Option>
-					</SingleSelect>
+					</SearchableSelect>
 				);
 
 				const dropMenuWrapper = wrapper.find('DropMenu');
@@ -179,36 +205,34 @@ describe('SingleSelect', () => {
 
 			it('should render selected option in the control', () => {
 				const wrapper = shallow(
-					<SingleSelect selectedIndex={2}>
+					<SearchableSelect selectedIndex={2}>
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
 						<Option>option c</Option>
-					</SingleSelect>
+					</SearchableSelect>
 				);
 
-				const dropMenuWrapper = wrapper.find('DropMenu');
-				const dropMenuControlProps = _.first(_.map(filterTypes(dropMenuWrapper.prop('children'), DropMenu.Control), 'props'));
-				const dropMenuControlWrapper = shallow(dropMenuControlProps.children);
+				const dropMenuControlWrapper = wrapper.find('DropMenu').childAt(0);
 
-				assert.equal('option c', dropMenuControlWrapper.find('.lucid-SingleSelect-Control-content').text());
+				assert.equal('option c', dropMenuControlWrapper.find('.lucid-SearchableSelect-Control-content').text());
 			});
 		});
 
 		describe('maxMenuHeight', () => {
-			it('should pass through to DropMenu prop `flyOutStyle.maxHeight`', () => {
+			it('should pass through to DropMenu prop `optionContainerStyle.maxHeight`', () => {
 				const wrapper = shallow(
-					<SingleSelect maxMenuHeight={123}>
+					<SearchableSelect maxMenuHeight={123}>
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
 						<Option>option c</Option>
-					</SingleSelect>
+					</SearchableSelect>
 				);
 
 				const dropMenuWrapper = wrapper.find(DropMenu);
-				const flyOutStyle = dropMenuWrapper.prop('flyOutStyle')
-				assert.equal(123, flyOutStyle.maxHeight, 'must match prop value');
+				const optionContainerStyle = dropMenuWrapper.prop('optionContainerStyle')
+				assert.equal(123, optionContainerStyle.maxHeight, 'must match prop value');
 			});
 		});
 
@@ -226,12 +250,12 @@ describe('SingleSelect', () => {
 				const onSelect = sinon.spy();
 
 				wrapper = mount(
-					<SingleSelect onSelect={onSelect} DropMenu={{ isExpanded: true }}>
+					<SearchableSelect onSelect={onSelect} DropMenu={{ isExpanded: true }}>
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
 						<Option testProp='foo'>option c</Option>
-					</SingleSelect>
+					</SearchableSelect>
 				);
 
 				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
@@ -246,6 +270,26 @@ describe('SingleSelect', () => {
 			});
 		});
 
+		describe('onSearch', () => {
+			it('should be called when a new value is entered into the search input', () => {
+				const onSearch = sinon.spy();
+
+				const wrapper = shallow(
+					<SearchableSelect onSearch={onSearch} DropMenu={{ isExpanded: true }}>
+						<Placeholder>select one</Placeholder>
+						<Option>option a</Option>
+						<Option>option b</Option>
+						<Option testProp='foo'>option c</Option>
+					</SearchableSelect>
+				);
+
+				const searchFieldWrapper = wrapper.find(SearchField);
+
+				searchFieldWrapper.simulate('change', 'asdf', {event: {}});
+				assert(onSearch.calledWith('asdf'));
+			});
+		});
+
 		describe('DropMenu', () => {
 			it('should pass thru all DropMenu props to the underlying DropMenu', () => {
 				const explicitDropMenuProps = {
@@ -255,12 +299,12 @@ describe('SingleSelect', () => {
 				};
 
 				const wrapper = shallow(
-					<SingleSelect DropMenu={explicitDropMenuProps}>
+					<SearchableSelect DropMenu={explicitDropMenuProps}>
 						<Placeholder>control</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
 						<Option>option c</Option>
-					</SingleSelect>
+					</SearchableSelect>
 				);
 
 				const dropMenuProps = wrapper.find('DropMenu').props();
@@ -274,15 +318,33 @@ describe('SingleSelect', () => {
 	});
 
 	describe('child elements', () => {
+		describe('SearchField', () => {
+			it('should pass the searchfield props through to the underlying SearchField element', () => {
+				const wrapper = shallow(
+					<SearchableSelect DropMenu={{isExpanded: true}}>
+						<SearchField placeholder='custom' />
+						<Option name='OptionA'>option a</Option>
+						<Option name='OptionB'>option b</Option>
+						<Option name='OptionC'>option c</Option>
+					</SearchableSelect>
+				);
+
+				const dropMenuHeader = wrapper.childAt(1);
+				const searchFieldWrapper = dropMenuHeader.childAt(0);
+
+				assert.equal(searchFieldWrapper.prop('placeholder'), 'custom');
+			});
+		});
+
 		describe('Placeholder', () => {
 			it('should pass the placeholder thru to the underlying DropMenu Control when no option is selected', () => {
 				const wrapper = shallow(
-					<SingleSelect selectedIndex={null}>
+					<SearchableSelect selectedIndex={null}>
 						<Placeholder>select one</Placeholder>
 						<Option name='OptionA'>option a</Option>
 						<Option name='OptionB'>option b</Option>
 						<Option name='OptionC'>option c</Option>
-					</SingleSelect>
+					</SearchableSelect>
 				);
 
 				// navigate down the virutal DOM tree to find the Control content
@@ -290,20 +352,20 @@ describe('SingleSelect', () => {
 				const dropMenuChildren = dropMenuWrapper.prop('children')
 				const controlProps = _.first(_.map(filterTypes(dropMenuChildren, DropMenu.Control), 'props'));
 				const dropMenuControlChildElement = _.first(React.Children.toArray(controlProps.children));
-				const singleSelectControlChildren = React.Children.toArray(dropMenuControlChildElement.props.children);
-				const singleSelectControlContent = singleSelectControlChildren[0];
+				const SearchableSelectControlChildren = React.Children.toArray(dropMenuControlChildElement.props.children);
+				const SearchableSelectControlContent = SearchableSelectControlChildren[0];
 
-				assert.equal(React.Children.toArray(singleSelectControlContent.props.children)[0], 'select one');
+				assert.equal(React.Children.toArray(SearchableSelectControlContent.props.children)[0], 'select one');
 			});
 
 			it('should pass the placeholder thru to the underlying DropMenu NullOption when an option is selected', () => {
 				const wrapper = shallow(
-					<SingleSelect selectedIndex={1}>
+					<SearchableSelect selectedIndex={1}>
 						<Placeholder>select one</Placeholder>
 						<Option name='OptionA'>option a</Option>
 						<Option name='OptionB'>option b</Option>
 						<Option name='OptionC'>option c</Option>
-					</SingleSelect>
+					</SearchableSelect>
 				);
 
 				// navigate down the virutal DOM tree to find the Control content
@@ -318,12 +380,12 @@ describe('SingleSelect', () => {
 		describe('Option', () => {
 			it('should pass options thru to the underlying DropMenu', () => {
 				const wrapper = shallow(
-					<SingleSelect>
+					<SearchableSelect>
 						<Placeholder>select one</Placeholder>
 						<Option name='OptionA'>option a</Option>
 						<Option name='OptionB'>option b</Option>
 						<Option name='OptionC'>option c</Option>
-					</SingleSelect>
+					</SearchableSelect>
 				);
 
 				const dropMenuWrapper = wrapper.find('DropMenu');
@@ -334,14 +396,17 @@ describe('SingleSelect', () => {
 				assert(_.isEqual(optionsProps[0], {
 					name: 'OptionA',
 					children: 'option a',
+					isDisabled: false,
 				}));
 				assert(_.isEqual(optionsProps[1], {
 					name: 'OptionB',
 					children: 'option b',
+					isDisabled: false,
 				}));
 				assert(_.isEqual(optionsProps[2], {
 					name: 'OptionC',
 					children: 'option c',
+					isDisabled: false,
 				}));
 			});
 		});
@@ -354,7 +419,7 @@ describe('SingleSelect', () => {
 
 			beforeEach(() => {
 				wrapper = shallow(
-					<SingleSelect>
+					<SearchableSelect>
 						<Placeholder>select one</Placeholder>
 						<OptionGroup name='TestGroup'>
 							Group Label
@@ -362,7 +427,7 @@ describe('SingleSelect', () => {
 							<Option name='OptionB'>option b</Option>
 							<Option name='OptionC'>option c</Option>
 						</OptionGroup>
-					</SingleSelect>
+					</SearchableSelect>
 				);
 
 				dropMenuWrapper = wrapper.find('DropMenu');
@@ -381,14 +446,17 @@ describe('SingleSelect', () => {
 				assert(_.isEqual(optionsProps[0], {
 					name: 'OptionA',
 					children: 'option a',
+					isDisabled: false,
 				}));
 				assert(_.isEqual(optionsProps[1], {
 					name: 'OptionB',
 					children: 'option b',
+					isDisabled: false,
 				}));
 				assert(_.isEqual(optionsProps[2], {
 					name: 'OptionC',
 					children: 'option c',
+					isDisabled: false,
 				}));
 
 			});
@@ -397,6 +465,46 @@ describe('SingleSelect', () => {
 				const otherOptionGroupChildren = rejectTypes(optionGroupProps.children, [Placeholder, Option, OptionGroup]);
 
 				assert.equal(_.first(otherOptionGroupChildren), 'Group Label');
+			});
+		});
+	});
+
+	describe('statics', () => {
+		describe('#getCombinedChildText', () => {
+			it('should return \'\' if the passed in node has no children', () => {
+				assert.equal(SearchableSelect.getCombinedChildText({}), '');
+			});
+
+			it('should return the node\'s `children` if it is a string', () => {
+				const children = 'child';
+				assert.equal(SearchableSelect.getCombinedChildText({children}), 'child');
+			});
+
+			it('should recursively combine children', () => {
+				const node = {children: [{props: {children: '1'}}, {props: {children: [{props: {children: '2'}}, {props: {children: '3'}}]}}]}
+				assert.equal(SearchableSelect.getCombinedChildText(node), '123');
+			});
+		});
+
+		describe('#defaultOptionFilter', () => {
+			it('should return true if the searchText is undefined', () => {
+				assert(SearchableSelect.defaultOptionFilter());
+			});
+
+			it('should return true if the searchText is null', () => {
+				assert(SearchableSelect.defaultOptionFilter(null));
+			});
+
+			it('should return true if the searchText is empty string', () => {
+				assert(SearchableSelect.defaultOptionFilter(''));
+			});
+
+			it('should return true if the searchText matches the option\'s text', () => {
+				assert(SearchableSelect.defaultOptionFilter('search', {children: 'search'}));
+			});
+
+			it('should return false if the searchText does not match the option\'s text', () => {
+				assert(!SearchableSelect.defaultOptionFilter('search', {children: 'miss'}));
 			});
 		});
 	});
