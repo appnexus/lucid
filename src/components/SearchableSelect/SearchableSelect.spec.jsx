@@ -285,7 +285,7 @@ describe('SearchableSelect', () => {
 
 				const searchFieldWrapper = wrapper.find(SearchField);
 
-				searchFieldWrapper.simulate('change', 'asdf');
+				searchFieldWrapper.simulate('change', 'asdf', {event: {}});
 				assert(onSearch.calledWith('asdf'));
 			});
 		});
@@ -505,19 +505,6 @@ describe('SearchableSelect', () => {
 
 			it('should return false if the searchText does not match the option\'s text', () => {
 				assert(!SearchableSelect.defaultOptionFilter('search', {children: 'miss'}));
-			});
-		});
-
-		describe('#getFilteredFlattenedOptionsData', () => {
-			const flattenedOptions = [{optionProps: {children: 'ab'}}, {optionProps: {children: 'ac'}}, {optionProps: {children: 'ad'}}, {optionProps: {children: 'bc'}}, {optionProps: {children: 'bd'}}];
-			const optionFilter = (searchText, optionProps) => _.startsWith(optionProps.children, searchText);
-
-			it('should pass through the flattenedOptions if searchText isEmpty', () => {
-				assert.equal(SearchableSelect.getFilteredFlattenedOptionsData('', optionFilter, flattenedOptions), flattenedOptions);
-			});
-
-			it('should return only options that pass the optionFilter', () => {
-				assert(_.isEqual(SearchableSelect.getFilteredFlattenedOptionsData('a', optionFilter, flattenedOptions), flattenedOptions.slice(0, 3)));
 			});
 		});
 	});

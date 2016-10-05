@@ -465,12 +465,12 @@ describe('DropMenu', () => {
 			});
 		});
 
-		describe('onFocusNext', () => {
+		describe('onFocusOption', () => {
 			describe('keyboard', () => {
 				it('should be called when DropMenu [expanded, focusedIndex=null, Down Arrow key pressed]', () => {
-					const onFocusNext = sinon.spy();
+					const onFocusOption = sinon.spy();
 					const wrapper = shallow(
-						<DropMenu isExpanded={true} focusedIndex={null} onFocusNext={onFocusNext}>
+						<DropMenu isExpanded={true} focusedIndex={null} onFocusOption={onFocusOption}>
 							<Control>control</Control>
 							<Option>option a</Option>
 							<Option>option b</Option>
@@ -483,13 +483,13 @@ describe('DropMenu', () => {
 						preventDefault: _.noop,
 					});
 
-					assert(onFocusNext.called);
+					assert(onFocusOption.called);
 				});
 
 				it('should be called when DropMenu [expanded, focusedIndex={not last option}, Down Arrow key pressed]', () => {
-					const onFocusNext = sinon.spy();
+					const onFocusOption = sinon.spy();
 					const wrapper = shallow(
-						<DropMenu isExpanded={true} focusedIndex={1} onFocusNext={onFocusNext}>
+						<DropMenu isExpanded={true} focusedIndex={1} onFocusOption={onFocusOption}>
 							<Control>control</Control>
 							<Option>option a</Option>
 							<Option>option b</Option>
@@ -502,13 +502,13 @@ describe('DropMenu', () => {
 						preventDefault: _.noop,
 					});
 
-					assert(onFocusNext.called);
+					assert(onFocusOption.called);
 				});
 
 				it('should not be called when DropMenu [expanded, focusedIndex={last option}, Down Arrow key pressed]', () => {
-					const onFocusNext = sinon.spy();
+					const onFocusOption = sinon.spy();
 					const wrapper = shallow(
-						<DropMenu isExpanded={true} focusedIndex={2} onFocusNext={onFocusNext}>
+						<DropMenu isExpanded={true} focusedIndex={2} onFocusOption={onFocusOption}>
 							<Control>control</Control>
 							<Option>option a</Option>
 							<Option>option b</Option>
@@ -521,73 +521,67 @@ describe('DropMenu', () => {
 						preventDefault: _.noop,
 					});
 
-					assert(onFocusNext.notCalled);
+					assert(onFocusOption.notCalled);
+				});
+
+				it('should be called when DropMenu [expanded, focusedIndex={not first option}, Up Arrow key pressed]', () => {
+					const onFocusOption = sinon.spy();
+					const wrapper = shallow(
+						<DropMenu isExpanded={true} focusedIndex={2} onFocusOption={onFocusOption}>
+							<Control>control</Control>
+							<Option>option a</Option>
+							<Option>option b</Option>
+							<Option>option c</Option>
+						</DropMenu>
+					);
+
+					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
+						keyCode: KEYCODE.ArrowUp,
+						preventDefault: _.noop,
+					});
+
+					assert(onFocusOption.called);
+				});
+
+				it('should not be called when DropMenu [expanded, focusedIndex={first option}, Up Arrow key pressed]', () => {
+					const onFocusOption = sinon.spy();
+					const wrapper = shallow(
+						<DropMenu isExpanded={true} focusedIndex={0} onFocusOption={onFocusOption}>
+							<Control>control</Control>
+							<Option>option a</Option>
+							<Option>option b</Option>
+							<Option>option c</Option>
+						</DropMenu>
+					);
+
+					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
+						keyCode: KEYCODE.ArrowUp,
+						preventDefault: _.noop,
+					});
+
+					assert(onFocusOption.notCalled);
+				});
+
+				it('should not be called when DropMenu [expanded, focusedIndex={null}, Up Arrow key pressed]', () => {
+					const onFocusOption = sinon.spy();
+					const wrapper = shallow(
+						<DropMenu isExpanded={true} focusedIndex={null} onFocusOption={onFocusOption}>
+							<Control>control</Control>
+							<Option>option a</Option>
+							<Option>option b</Option>
+							<Option>option c</Option>
+						</DropMenu>
+					);
+
+					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
+						keyCode: KEYCODE.ArrowUp,
+						preventDefault: _.noop,
+					});
+
+					assert(onFocusOption.notCalled);
 				});
 			});
-		});
 
-		describe('onFocusPrev', () => {
-			describe('keyboard', () => {
-				it('should be called when DropMenu [expanded, focusedIndex={not first option}, Down Arrow key pressed]', () => {
-					const onFocusPrev = sinon.spy();
-					const wrapper = shallow(
-						<DropMenu isExpanded={true} focusedIndex={2} onFocusPrev={onFocusPrev}>
-							<Control>control</Control>
-							<Option>option a</Option>
-							<Option>option b</Option>
-							<Option>option c</Option>
-						</DropMenu>
-					);
-
-					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
-						keyCode: KEYCODE.ArrowUp,
-						preventDefault: _.noop,
-					});
-
-					assert(onFocusPrev.called);
-				});
-
-				it('should not be called when DropMenu [expanded, focusedIndex={first option}, Down Arrow key pressed]', () => {
-					const onFocusPrev = sinon.spy();
-					const wrapper = shallow(
-						<DropMenu isExpanded={true} focusedIndex={0} onFocusPrev={onFocusPrev}>
-							<Control>control</Control>
-							<Option>option a</Option>
-							<Option>option b</Option>
-							<Option>option c</Option>
-						</DropMenu>
-					);
-
-					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
-						keyCode: KEYCODE.ArrowUp,
-						preventDefault: _.noop,
-					});
-
-					assert(onFocusPrev.notCalled);
-				});
-
-				it('should not be called when DropMenu [expanded, focusedIndex={null}, Down Arrow key pressed]', () => {
-					const onFocusPrev = sinon.spy();
-					const wrapper = shallow(
-						<DropMenu isExpanded={true} focusedIndex={null} onFocusPrev={onFocusPrev}>
-							<Control>control</Control>
-							<Option>option a</Option>
-							<Option>option b</Option>
-							<Option>option c</Option>
-						</DropMenu>
-					);
-
-					wrapper.find('.lucid-DropMenu-Control').simulate('keydown', {
-						keyCode: KEYCODE.ArrowUp,
-						preventDefault: _.noop,
-					});
-
-					assert(onFocusPrev.notCalled);
-				});
-			});
-		});
-
-		describe('onFocusOption', () => {
 			describe('mouse', () => {
 				let onFocusOption;
 				let wrapper;
@@ -679,6 +673,24 @@ describe('DropMenu', () => {
 				assert.equal(optionDOMNodes[0].innerHTML, 'option a');
 				assert.equal(optionDOMNodes[1].innerHTML, 'option b');
 				assert.equal(optionDOMNodes[2].innerHTML, 'option c');
+			});
+
+			it('should not render children with `isHidden`', () => {
+				wrapper = mount(
+					<DropMenu isExpanded>
+							<Control>control</Control>
+							<Option isHidden>option a</Option>
+							<Option>option b</Option>
+							<Option>option c</Option>
+					</DropMenu>
+				);
+
+				const flyOutDOMNode = document.querySelector('.lucid-DropMenu.lucid-ContextMenu-FlyOut');
+				const optionDOMNodes = flyOutDOMNode.querySelectorAll('.lucid-DropMenu-Option');
+
+				assert.equal(optionDOMNodes.length, 2);
+				assert.equal(optionDOMNodes[0].innerHTML, 'option b');
+				assert.equal(optionDOMNodes[1].innerHTML, 'option c');
 			});
 		});
 
@@ -805,6 +817,37 @@ describe('DropMenu', () => {
 
 				assert(_.includes(flyOutDOMNode.children[0].className, 'lucid-DropMenu-label'));
 				assert(_.includes(flyOutDOMNode.children[5].className, 'lucid-DropMenu-label'));
+			});
+
+			it('should not render OptionGroups with `isHidden`', () => {
+				wrapper = mount(
+					<DropMenu isExpanded>
+							<Control>control</Control>
+
+							<OptionGroup isHidden>
+								Preferred
+								<Option>option a</Option>
+								<Option>option b</Option>
+								<Option>option c</Option>
+							</OptionGroup>
+
+							<OptionGroup>
+								Available
+								<Option>option x</Option>
+								<Option>option y</Option>
+								<Option>option z</Option>
+							</OptionGroup>
+					</DropMenu>
+				);
+
+				const flyOutDOMNode = document.querySelector('.lucid-DropMenu.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
+				assert.equal(flyOutDOMNode.children.length, 4);
+				assert.equal(flyOutDOMNode.children[0].firstChild.innerHTML, 'Available');
+				assert.equal(flyOutDOMNode.children[1].innerHTML, 'option x');
+				assert.equal(flyOutDOMNode.children[2].innerHTML, 'option y');
+				assert.equal(flyOutDOMNode.children[3].innerHTML, 'option z');
+
+				assert(_.includes(flyOutDOMNode.children[0].className, 'lucid-DropMenu-label'));
 			});
 		});
 

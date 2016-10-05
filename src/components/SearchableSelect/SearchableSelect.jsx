@@ -98,7 +98,7 @@ const SearchableSelect = createClass({
 		maxMenuHeight: oneOfType([number, string]),
 		/**
 		 * Called when the user enters a value to search for; the set of visible Options will be filtered using the value.
-		 * Has the signature `(searchText, {props, event}) => {}` where `searchText` is the new `searchText` or `null`.
+		 * Has the signature `(searchText, flattenedOptionsData, {props, event}) => {}` where `searchText` is the value from the `SearchField` and `flattenedOptionsData` is the full, flat list of `Option`s.
 		 */
 		onSearch: func,
 		/**
@@ -187,40 +187,31 @@ const SearchableSelect = createClass({
 
 			return new RegExp(_.escapeRegExp(searchText), 'i').test(SearchableSelect.getCombinedChildText(optionProps));
 		},
-
-		getFilteredFlattenedOptionsData(searchText, optionFilter, flattenedOptionsData) {
-			if (!searchText) {
-				return flattenedOptionsData;
-			}
-
-			return _.filter(flattenedOptionsData, (option) => {
-				return optionFilter(searchText, option.optionProps);
-			});
-		},
-
-		preprocessOptionData(props) {
-			const {
-				searchText,
-				optionFilter,
-			} = props;
-
-			const processedState = DropMenu.preprocessOptionData(props, SearchableSelect);
-
-			return {
-				...processedState,
-				flattenedOptionsData: SearchableSelect.getFilteredFlattenedOptionsData(searchText, optionFilter, processedState.flattenedOptionsData),
-			};
-		},
 	},
 
 	componentWillMount() {
 		// preprocess the options data before rendering
-		this.setState(SearchableSelect.preprocessOptionData(this.props));
+		this.setState(DropMenu.preprocessOptionData(this.props, SearchableSelect));
 	},
 
 	componentWillReceiveProps(nextProps) {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
-		this.setState(SearchableSelect.preprocessOptionData(nextProps));
+		this.setState(DropMenu.preprocessOptionData(nextProps, SearchableSelect));
+	},
+
+	handleSearch(searchText, {event}) {
+		const {
+			props,
+			props: {
+				onSearch,
+			},
+		} = this;
+
+		const {
+			flattenedOptionsData,
+		} = this.state;
+
+		onSearch(searchText, flattenedOptionsData, {props, event});
 	},
 
 	renderUnderlinedChildren(childText, searchText) {
@@ -243,8 +234,13 @@ const SearchableSelect = createClass({
 		} = this.props;
 
 		if (searchText) {
-			return optionFilter(searchText, optionProps) && (
-				<DropMenu.Option isDisabled={isLoading} key={'SearchableSelectOption' + optionIndex} {..._.omit(optionProps, ['children'])}>
+			return (
+				<DropMenu.Option
+					isDisabled={isLoading}
+					isHidden={!optionFilter(searchText, optionProps)}
+					key={'SearchableSelectOption' + optionIndex}
+					{..._.omit(optionProps, ['children'])}
+				>
 					{_.isString(optionProps.children) ?
 						this.renderUnderlinedChildren(optionProps.children, searchText)
 						: optionProps.children}
@@ -253,7 +249,11 @@ const SearchableSelect = createClass({
 		}
 
 		return (
-			<DropMenu.Option isDisabled={isLoading} key={'SearchableSelectOption' + optionIndex} {...optionProps} />
+			<DropMenu.Option
+				isDisabled={isLoading}
+				key={'SearchableSelectOption' + optionIndex}
+				{...optionProps}
+			/>
 		);
 	},
 
@@ -272,11 +272,15 @@ const SearchableSelect = createClass({
 		const options = _.map(optionGroups, (optionGroupProps, optionGroupIndex) => {
 			const childOptions = _.map(_.get(optionGroupDataLookup, optionGroupIndex), ({ optionProps, optionIndex }) => (
 				this.renderOption(optionProps, optionIndex)
-			)).filter(childOption => childOption);
+			));
+			const visibleChildrenCount = _.filter(childOptions, option => !option.props.isHidden).length;
 
 			return (
-				childOptions.length > 0 &&
-				<DropMenu.OptionGroup key={'SearchableSelectOptionGroup' + optionGroupIndex} {...optionGroupProps}>
+				<DropMenu.OptionGroup
+					isHidden={visibleChildrenCount === 0}
+					key={'SearchableSelectOptionGroup' + optionGroupIndex}
+					{...optionGroupProps}
+				>
 					{optionGroupProps.children}
 					{childOptions}
 				</DropMenu.OptionGroup>
@@ -284,10 +288,12 @@ const SearchableSelect = createClass({
 		// then render all the ungrouped options at the end
 		}).concat(_.map(ungroupedOptionData, ({ optionProps, optionIndex }) => (
 			this.renderOption(optionProps, optionIndex)
-		))).filter(option => option);
+		)));
+
+		const visibleOptionsCount = _.filter(options, option => !option.props.isHidden).length;
 
 		return (
-			options.length > 0 ? options : <DropMenu.Option isDisabled><span className={cx('&-noresults')}>No results match "{searchText}"</span></DropMenu.Option>
+			visibleOptionsCount > 0 ? options : <DropMenu.Option isDisabled><span className={cx('&-noresults')}>No results match "{searchText}"</span></DropMenu.Option>
 		);
 	},
 
@@ -304,7 +310,6 @@ const SearchableSelect = createClass({
 				maxMenuHeight,
 				searchText,
 				selectedIndex,
-				onSearch,
 				onSelect,
 				DropMenu: dropMenuProps,
 			},
@@ -360,7 +365,7 @@ const SearchableSelect = createClass({
 				</DropMenu.Control>
 				<DropMenu.Header className={cx('&-Search-container')}>
 					<SearchField
-						onChange={onSearch}
+						onChange={this.handleSearch}
 						value={searchText}
 						{...searchFieldProps}
 					/>

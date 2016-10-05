@@ -17,6 +17,10 @@ function joinArray(array, getSeparator) {
 	}, []);
 }
 
+function isOptionVisible(option) {
+	return !option.optionProps.isHidden;
+}
+
 const cx = lucidClassNames.bind('&-DropMenu');
 
 const {
@@ -63,6 +67,12 @@ const DropMenu = createClass({
 		OptionGroup: createClass({
 			displayName: 'DropMenu.OptionGroup',
 			propName: 'OptionGroup',
+			propTypes: {
+				/**
+				 * hides the `OptionGroup` from the list.
+				 */
+				isHidden: bool,
+			},
 		}),
 		/**
 		 * Renders a `<div>` that acts as an option in the menu.
@@ -75,6 +85,10 @@ const DropMenu = createClass({
 				 * disables selection of the `Option`.
 				 */
 				isDisabled: bool,
+				/**
+				 * hides the `Option` from the list.
+				 */
+				isHidden: bool,
 			},
 		}),
 		/**
@@ -277,8 +291,7 @@ const DropMenu = createClass({
 				onExpand,
 				onCollapse,
 				onSelect,
-				onFocusPrev,
-				onFocusNext,
+				onFocusOption,
 			},
 		} = this;
 
@@ -311,27 +324,27 @@ const DropMenu = createClass({
 					if (focusedIndex === 0) {
 						if (!_.isEmpty(nullOptions)) {
 							event.preventDefault();
-							onFocusPrev({ props, event });
+							onFocusOption(null, { props, event });
 						}
 					}
 					if (focusedIndex > 0) {
 						event.preventDefault();
-						onFocusPrev({ props, event });
+						onFocusOption(_.findLastIndex(flattenedOptionsData, isOptionVisible, focusedIndex - 1), { props, event });
 					}
 				} else {
 					event.preventDefault();
-					onFocusPrev({ props, event });
+					onFocusOption(_.findLastIndex(flattenedOptionsData, isOptionVisible, focusedIndex - 1), { props, event });
 				}
 			}
 			if (event.keyCode === KEYCODE.ArrowDown) {
 				if (_.isNumber(focusedIndex)) {
 					if (focusedIndex < _.size(flattenedOptionsData) - 1) {
 						event.preventDefault();
-						onFocusNext({ props, event });
+						onFocusOption(_.findIndex(flattenedOptionsData, isOptionVisible, focusedIndex + 1), { props, event });
 					}
 				} else {
 					event.preventDefault();
-					onFocusNext({ props, event });
+					onFocusOption(_.findIndex(flattenedOptionsData, isOptionVisible, focusedIndex), { props, event });
 				}
 			}
 		} else {
@@ -396,12 +409,14 @@ const DropMenu = createClass({
 
 		const {
 			isDisabled,
+			isHidden,
 		} = optionProps;
 
 		const isFocused = optionIndex === focusedIndex;
 		const isSelected = _.includes(selectedIndices, optionIndex);
 
 		return (
+			!isHidden &&
 			<div
 				key={'DropMenuOption' + optionIndex}
 				onMouseMove={(event) => this.handleMouseFocusOption(optionIndex, optionProps, event)}
@@ -501,6 +516,10 @@ const DropMenu = createClass({
 								joinArray(
 									// for each option group,
 									_.map(optionGroups, (optionGroupProps, optionGroupIndex) => {
+										if (optionGroupProps.isHidden) {
+											return null;
+										}
+
 										const labelElements = rejectTypes(optionGroupProps.children, [DropMenu.Control, DropMenu.OptionGroup, DropMenu.Option, DropMenu.NullOption]);
 										// render label if there is one
 										return (_.isEmpty(labelElements) ? [] : [
@@ -511,7 +530,7 @@ const DropMenu = createClass({
 										]).concat(_.map(_.get(optionGroupDataLookup, optionGroupIndex), ({ optionProps, optionIndex }) => this.renderOption(optionProps, optionIndex, true)));
 									// append all ungrouped options as another unlabeled group
 									}).concat(_.isEmpty(ungroupedOptionData) ? [] : [_.map(ungroupedOptionData, ({ optionProps, optionIndex }) => this.renderOption(optionProps, optionIndex))]),
-									(element, index) => (<div key={`OptionGroup-divider-${index}`} className={cx('&-OptionGroup-divider')} />) // separate each group with divider
+									(element, index) => (element && <div key={`OptionGroup-divider-${index}`} className={cx('&-OptionGroup-divider')} />) // separate each group with divider
 								)
 							}
 						</div>
