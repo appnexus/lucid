@@ -98,7 +98,7 @@ const SearchableSelect = createClass({
 		maxMenuHeight: oneOfType([number, string]),
 		/**
 		 * Called when the user enters a value to search for; the set of visible Options will be filtered using the value.
-		 * Has the signature `(searchText, flattenedOptionsData, {props, event}) => {}` where `searchText` is the value from the `SearchField` and `flattenedOptionsData` is the full, flat list of `Option`s.
+		 * Has the signature `(searchText, firstVisibleIndex, {props, event}) => {}` where `searchText` is the value from the `SearchField` and `firstVisibleIndex` is the index of the first option that will be visible after filtering.
 		 */
 		onSearch: func,
 		/**
@@ -199,11 +199,11 @@ const SearchableSelect = createClass({
 		this.setState(DropMenu.preprocessOptionData(nextProps, SearchableSelect));
 	},
 
-	handleSearch(searchText, {event}) {
+	handleSearch(searchText) {
 		const {
-			props,
 			props: {
 				onSearch,
+				optionFilter,
 			},
 		} = this;
 
@@ -211,7 +211,11 @@ const SearchableSelect = createClass({
 			flattenedOptionsData,
 		} = this.state;
 
-		onSearch(searchText, flattenedOptionsData, {props, event});
+		const firstVisibleIndex = _.get(_.find(flattenedOptionsData, ({optionProps}) => {
+			return optionFilter(searchText, optionProps);
+		}), 'optionIndex');
+
+		onSearch(searchText, firstVisibleIndex);
 	},
 
 	renderUnderlinedChildren(childText, searchText) {

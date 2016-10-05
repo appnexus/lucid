@@ -9,15 +9,7 @@ export function onSelect(state, selectedIndex) {
 	};
 }
 
-export function onSearch(state, searchText, flattenedOptions, {props}) {
-	const {
-		optionFilter,
-	} = props;
-
-	const firstVisibleIndex = _.get(_.find(flattenedOptions, ({optionProps}) => {
-		return optionFilter(searchText, optionProps);
-	}), 'optionIndex');
-
+export function onSearch(state, searchText, firstVisibleIndex) {
 	return {
 		...state,
 		searchText,

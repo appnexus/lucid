@@ -30,10 +30,9 @@ describe('SearchableSelect reducers', () => {
 			};
 
 			const inputText = 'search';
-			const options = [{optionProps: 'merch', optionIndex: 10}, {optionProps: 'lurch', optionIndex: 20}, {optionProps: 'search', optionIndex: 30}];
-			const optionFilter = (searchText, optionProps) => optionProps.startsWith(searchText);
+			const firstVisibleIndex = 41;
 
-			const nextState = onSearch(initialState, inputText, options, {props: {optionFilter}});
+			const nextState = onSearch(initialState, inputText, firstVisibleIndex);
 			const {
 				searchText,
 				selectedIndex,
@@ -42,7 +41,7 @@ describe('SearchableSelect reducers', () => {
 
 			assert.equal(searchText, inputText);
 			assert.equal(selectedIndex, null);
-			assert(_.isEqual(DropMenu, {focusedIndex: 30}));
+			assert(_.isEqual(DropMenu, {focusedIndex: firstVisibleIndex}));
 		});
 	});
 });
