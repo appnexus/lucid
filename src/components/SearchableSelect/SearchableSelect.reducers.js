@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import * as DropMenu from '../DropMenu/DropMenu.reducers';
 
 export function onSelect(state, selectedIndex) {
