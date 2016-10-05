@@ -1,17 +1,9 @@
 /*eslint no-console: 0*/
 import _ from 'lodash';
-import React from 'react';
 
 export const isDevMode = (function isReactInDev() {
-	try {
-		React.createClass({});
-	} catch(e) {
-		if (e.message.indexOf('render') !== 0) {
-			return true;  // A nice, specific error message
-		}
-	}
-
-	return false;  // should never happen, but play it safe.
+	// This property gets injected via Webpack.
+	return process.env.NODE_ENV !== 'production'; // eslint-disable-line no-undef
 })();
 
 export const isNode = typeof process === 'object' && process.title === 'node';
