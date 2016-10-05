@@ -40,6 +40,25 @@
 		width: @Checkbox-container-size;
 	}
 
+	&-visualization-indeterminate {
+		opacity: 0;
+		width: @Checkbox-size;
+		height: @Checkbox-size;
+		transform: rotate(0deg);
+		top: 0;
+		left: 0;
+		position: absolute;
+	}
+
+	&-visualization-indeterminate-line {
+		top: 10px;
+		left: 7px;
+		width: 8px;
+		height: 2px;
+		background-color: white;
+		position: absolute;
+	}
+
 	&-visualization-checkmark {
 		opacity: 0;
 		width: @Checkbox-size;
@@ -119,7 +138,7 @@
 		border-color: @Checkbox-disabled-borderColor;
 	}
 
-	&-is-selected &-visualization-checkmark {
+	&-is-selected &-visualization-checkmark, &-visualization-indeterminate {
 		opacity: 1;
 		transition: @Checkbox-animation-timing;
 	}

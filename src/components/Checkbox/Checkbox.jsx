@@ -32,6 +32,13 @@ const Checkbox = createClass({
 		className: string,
 
 		/**
+		 * Indicates whether the component should appear in an "indeterminate"
+		 * or "partially checked" state. This prop takes precedence over
+		 * `isSelected`.
+		 */
+		isIndeterminate: bool,
+
+		/**
 		 * Indicates whether the component should appear and act disabled by
 		 * having a "greyed out" palette and ignoring user interactions.
 		 */
@@ -39,7 +46,8 @@ const Checkbox = createClass({
 
 		/**
 		 * Indicates that the component is in the "selected" state when true
-		 * and in the "unselected" state when false.
+		 * and in the "unselected" state when false. This props is ignored if
+		 * `isIndeterminate` is `true`.
 		 */
 		isSelected: bool,
 
@@ -59,6 +67,7 @@ const Checkbox = createClass({
 
 	getDefaultProps() {
 		return {
+			isIndeterminate: false,
 			isDisabled: false,
 			isSelected: false,
 			onSelect: _.noop,
@@ -76,8 +85,9 @@ const Checkbox = createClass({
 	render() {
 		const {
 			className,
-			isDisabled,
+			isIndeterminate,
 			isSelected,
+			isDisabled,
 			style,
 			...passThroughs,
 		} = this.props;
@@ -86,7 +96,7 @@ const Checkbox = createClass({
 			<div
 				className={cx('&', {
 					'&-is-disabled': isDisabled,
-					'&-is-selected': isSelected,
+					'&-is-selected': isIndeterminate || isSelected,
 				}, className)}
 				onClick={this.handleClicked}
 				onTouchEnd={this.handleClicked}
@@ -103,10 +113,17 @@ const Checkbox = createClass({
 				/>
 				<span onClick={this.handleSpanClick} className={cx('&-visualization-glow')} />
 				<span onClick={this.handleSpanClick} className={cx('&-visualization-container')} />
-				<span onClick={this.handleSpanClick} className={cx('&-visualization-checkmark')}>
-					<span className={cx('&-visualization-checkmark-stem')}></span>
-					<span className={cx('&-visualization-checkmark-kick')}></span>
-				</span>
+				{isIndeterminate ? (
+					<span onClick={this.handleSpanClick} className={cx('&-visualization-indeterminate')}>
+						<span className={cx('&-visualization-indeterminate-line')}></span>
+					</span>
+				) : (
+					<span onClick={this.handleSpanClick} className={cx('&-visualization-checkmark')}>
+						<span className={cx('&-visualization-checkmark-stem')}></span>
+						<span className={cx('&-visualization-checkmark-kick')}></span>
+					</span>
+				)
+				}
 			</div>
 		);
 	},
