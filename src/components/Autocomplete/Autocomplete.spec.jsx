@@ -173,7 +173,7 @@ describe('Autocomplete', () => {
 					/>
 				);
 
-				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut');
+				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
 				menuDOMNode.children[2].click();
 
 				assert(onChange.called);
@@ -239,7 +239,7 @@ describe('Autocomplete', () => {
 					/>
 				);
 
-				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut');
+				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
 				menuDOMNode.children[2].click();
 
 				assert(onSelect.called, 'onSelect must be called');

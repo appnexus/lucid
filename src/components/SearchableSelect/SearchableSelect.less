@@ -1,0 +1,119 @@
+@SearchableSelect-size-controlHeight: @size-standard-height;
+
+.lucid-SearchableSelect {
+
+	&-Control {
+		.no-safari-flicker();
+		.box-sizing();
+		.gradient-animation( @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+		cursor: pointer;
+		height: @SearchableSelect-size-controlHeight;
+		display: flex;
+		outline: none;
+		border: 1px solid @featured-color-default-borderColor;
+		border-radius: @size-borderRadius;
+		font: @font;
+		color: @color-black;
+		letter-spacing: .05em;
+		line-height: @size-standard-height;
+		padding: 0 @size-standard;
+		align-items: center;
+		white-space: nowrap;
+
+		&:before {
+			border-radius: @size-borderRadius;
+		}
+
+		&-content {
+			display: flex;
+			align-items: center;
+			margin-right: @size-standard;
+		}
+
+		.lucid-CaretIcon {
+			fill: @color-black;
+			width: 8px;
+			height: 8px;
+			margin-left: auto;
+		}
+
+		// States
+		&-is-highlighted, &-is-selected {
+			color: @color-white;
+			border-color: @featured-color-primary-borderColor;
+			.gradient-animation(@featured-color-primary, @featured-color-primary);
+
+			.lucid-CaretIcon {
+				fill: @color-white;
+			}
+		}
+
+		&-is-expanded {
+			z-index: @zindex-tooltip;
+		}
+
+		&-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
+			cursor: not-allowed;
+			.opacity();
+		}
+	}
+
+	&.lucid-DropMenu-is-expanded {
+		&.lucid-DropMenu-direction-up {
+			.lucid-SearchableSelect-Control {
+				border-radius: 0 0 @size-borderRadius @size-borderRadius;
+			}
+		}
+
+		&.lucid-DropMenu-direction-down {
+			.lucid-SearchableSelect-Control {
+				border-radius: @size-borderRadius @size-borderRadius 0 0;
+			}
+		}
+	}
+
+	&-Search-container {
+		background-color: @color-lightGray;
+
+		.lucid-SearchField {
+			padding: 8px;
+
+			.lucid-SearchField-Icon-container {
+				right: 8px;
+			}
+		}
+	}
+
+	&-Loading {
+		justify-content: center;
+
+		&.lucid-DropMenu-Option.lucid-DropMenu-Option-is-focused {
+			background: none;
+		}
+	}
+
+	.lucid-LoadingIndicator-message-container {
+		align-items: flex-start;
+
+		.lucid-LoadingMessage {
+			border: none;
+			padding: @size-XS;
+		}
+	}
+
+	&-Option-underline-match,
+	&-Option-underline-post,
+	&-Option-underline-pre {
+		white-space: pre;
+	}
+
+	&-Option-underline-match {
+		text-decoration: underline;
+	}
+
+	&-noresults {
+		color: @color-disabledText;
+		font-style: italic;
+	}
+}

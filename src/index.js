@@ -4,6 +4,7 @@ import { buildHybridComponent } from './util/state-management';
 import { default as AccordionDumb } from './components/Accordion/Accordion';
 import { default as AutocompleteDumb } from './components/Autocomplete/Autocomplete';
 import { default as ButtonGroupDumb } from './components/ButtonGroup/ButtonGroup';
+import { default as SearchableSelectDumb } from './components/SearchableSelect/SearchableSelect';
 import { default as DropMenuDumb } from './components/DropMenu/DropMenu';
 import { default as ExpanderDumb } from './components/Expander/Expander';
 import { default as ExpanderPanelDumb } from './components/ExpanderPanel/ExpanderPanel';
@@ -22,6 +23,7 @@ import { default as VerticalTabsDumb } from './components/VerticalTabs/VerticalT
 const Accordion = buildHybridComponent(AccordionDumb);
 const Autocomplete = buildHybridComponent(AutocompleteDumb);
 const ButtonGroup = buildHybridComponent(ButtonGroupDumb);
+const SearchableSelect = buildHybridComponent(SearchableSelectDumb);
 const DropMenu = buildHybridComponent(DropMenuDumb);
 const Expander = buildHybridComponent(ExpanderDumb);
 const ExpanderPanel = buildHybridComponent(ExpanderPanelDumb);
@@ -190,6 +192,8 @@ export {
 	ChevronIcon,
 	ClockIcon,
 	Collapsible,
+	SearchableSelect,
+	SearchableSelectDumb,
 	ContextMenu,
 	CrossIcon,
 	DangerIcon,
