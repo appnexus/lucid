@@ -4,8 +4,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, filterTypes, getFirst, omitProps } from '../../util/component-types';
 
 import Checkbox from '../Checkbox/Checkbox';
-import HatchPattern from '../HatchPattern/HatchPattern';
-import OverlayWrapper from '../OverlayWrapper/OverlayWrapper';
+import DataTableWrapper from '../DataTableWrapper/DataTableWrapper';
 import ScrollTable from '../ScrollTable/ScrollTable';
 
 const {
@@ -29,7 +28,7 @@ const {
 
 /**
  *
- * {"categories": ["table"], "madeFrom": ["ScrollTable", "Checkbox"]}
+ * {"categories": ["table"], "madeFrom": ["Checkbox", "DataTableWrapper", "ScrollTable"]}
  *
  * `DataTable` provides a simple abstraction over the `Table` component to make it easier to define data-driven tables and render an array of objects.
  */
@@ -57,6 +56,10 @@ const DataTable = createClass({
 		 * Render each row item to be navigable, allowing `onRowClick` to be triggered.
 		 */
 		isActionable: bool,
+		/**
+		 * Controls the visibility of the `LoadingMessage`.
+		 */
+		isLoading: bool,
 		/**
 		 * Handler for checkbox selection. Signature is `(object, index, { props, event }) => {...}`
 		 */
@@ -201,11 +204,11 @@ const DataTable = createClass({
 	},
 
 	render() {
-
 		const {
 			className,
 			data,
 			isActionable,
+			isLoading,
 			isSelectable,
 			style,
 			...passThroughs,
@@ -237,17 +240,12 @@ const DataTable = createClass({
 		const emptyMessageTitleProp = _.get(getFirst(this.props, DataTable.EmptyMessageTitle), 'props', {children: 'You have no Line Items.'});
 
 		return (
-			<OverlayWrapper
-				hasOverlay={false}
-				isVisible={!data || data.length === 0}
+			<DataTableWrapper
+				isLoading={isLoading}
+				isEmpty={!data || data.length === 0}
 			>
-				<OverlayWrapper.Message className={cx('&-message-container')}>
-					<HatchPattern />
-					<div className={cx('&-message-contents')}>
-						<header {...emptyMessageTitleProp} className={cx('&-message-title', emptyMessageTitleProp.className)} />
-						{emptyMessageBodyProp && <div {...emptyMessageBodyProp} />}
-					</div>
-				</OverlayWrapper.Message>
+				<DataTableWrapper.EmptyMessageBody {...emptyMessageBodyProp} />
+				<DataTableWrapper.EmptyMessageTitle {...emptyMessageTitleProp} />
 				<ScrollTable
 					style={style}
 					{...omitProps(passThroughs, DataTable)}
@@ -356,7 +354,7 @@ const DataTable = createClass({
 					}
 					</Tbody>
 				</ScrollTable>
-			</OverlayWrapper>
+			</DataTableWrapper>
 		);
 	},
 });
