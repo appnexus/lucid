@@ -237,7 +237,7 @@ const DataTable = createClass({
 		);
 
 		const emptyMessageBodyProp = _.get(getFirst(this.props, DataTable.EmptyMessageBody), 'props');
-		const emptyMessageTitleProp = _.get(getFirst(this.props, DataTable.EmptyMessageTitle), 'props', {children: 'You have no Line Items.'});
+		const emptyMessageTitleProp = _.get(getFirst(this.props, DataTable.EmptyMessageTitle), 'props', {children: 'You have no items.'});
 
 		return (
 			<DataTableWrapper
