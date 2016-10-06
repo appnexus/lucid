@@ -242,7 +242,7 @@ const DataTable = createClass({
 		return (
 			<DataTableWrapper
 				isLoading={isLoading}
-				isEmpty={!data || data.length === 0}
+				isEmpty={_.isEmpty(data)}
 			>
 				<DataTableWrapper.EmptyMessageBody {...emptyMessageBodyProp} />
 				<DataTableWrapper.EmptyMessageTitle {...emptyMessageTitleProp} />
