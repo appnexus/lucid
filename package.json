@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "1.14.0",
+  "version": "1.15.0",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "repository": {
@@ -16,7 +16,7 @@
     "preversion": "rm -rf dist && gulp lint && gulp preversion && npm run build-bundle",
     "postversion": "gulp docs-upload",
     "start": "npm run dev",
-    "test": "npm run test-browserstack && npm run test-acceptance",
+    "test": "gulp lint && npm run test-browserstack && npm run test-acceptance",
     "test-browserstack": "scripts/env-check.sh && karma start karma.conf.js --singleRun --auto-watch=false --browsers=bs_chrome,bs_firefox,bs_safari,bs_ie,bs_edge --reporters failed",
     "test-local": "karma start karma.conf.js --singleRun --auto-watch=false",
     "test-tdd": "karma start karma.conf.js",

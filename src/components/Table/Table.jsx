@@ -357,20 +357,20 @@ const Th = createClass({
 		if (this.state.isDragging){
 			event.stopPropagation();
 			this.setState({
-				isDragging: false
+				isDragging: false,
 			});
 		}
 	},
 
 	handleMouseEnter(){
 		this.setState({
-			isDragging: this.state.isResizing
+			isDragging: this.state.isResizing,
 		});
 	},
 
 	handleMouseUp(){
 		this.setState({
-			isDragging: this.state.isResizing
+			isDragging: this.state.isResizing,
 		});
 	},
 
