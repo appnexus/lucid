@@ -236,6 +236,11 @@ const LineChart = createClass({
 		 * An optional function used to format data in the tooltips.
 		 */
 		yAxisTooltipDataFormatter: func,
+		/**
+		 * Set the starting index where colors start rotating for points and lines
+		 * along the y axis.
+		 */
+		yAxisColorOffset: number,
 
 
 		/**
@@ -292,6 +297,11 @@ const LineChart = createClass({
 		 * `number` is supported only for backwards compatability.
 		 */
 		y2AxisTitleColor: oneOfType([number, string]),
+		/**
+		 * Set the starting index where colors start rotating for points and lines
+		 * along the y2 axis.
+		 */
+		y2AxisColorOffset: number,
 	},
 
 	statics: {
@@ -332,6 +342,7 @@ const LineChart = createClass({
 			yAxisTitle: null,
 			yAxisTitleColor: '#000',
 			yAxisTooltipFormatter: (yField, yValueFormatted) => `${yField}: ${yValueFormatted}`,
+			yAxisColorOffset: 0,
 
 			y2AxisFields: null,
 			y2AxisIsStacked: false,
@@ -340,6 +351,7 @@ const LineChart = createClass({
 			y2AxisTickCount: null,
 			y2AxisTitle: null,
 			y2AxisTitleColor: '#000',
+			y2AxisColorOffset: 1,
 		};
 	},
 
@@ -384,6 +396,7 @@ const LineChart = createClass({
 			yAxisMax = yAxisIsStacked
 				? maxByFieldsStacked(data, yAxisFields)
 				: maxByFields(data, yAxisFields),
+			yAxisColorOffset,
 
 			y2AxisFields,
 			y2AxisFormatter,
@@ -397,6 +410,7 @@ const LineChart = createClass({
 			y2AxisMax = y2AxisFields && y2AxisIsStacked
 				? maxByFieldsStacked(data, y2AxisFields)
 				: maxByFields(data, y2AxisFields),
+			y2AxisColorOffset,
 
 			...passThroughs,
 		} = this.props;
@@ -695,6 +709,7 @@ const LineChart = createClass({
 						isStacked={yAxisIsStacked}
 						colorMap={colorMap}
 						palette={palette}
+						colorOffset={yAxisColorOffset}
 						ref='yLines'
 					/>
 				</g>
@@ -712,6 +727,7 @@ const LineChart = createClass({
 							isStacked={yAxisIsStacked}
 							colorMap={colorMap}
 							palette={palette}
+							colorOffset={yAxisColorOffset}
 							ref='yPoints'
 						/>
 					</g>
@@ -728,7 +744,7 @@ const LineChart = createClass({
 							yStackedMax={y2AxisMax}
 							data={data}
 							isStacked={y2AxisIsStacked}
-							colorOffset={1}
+							colorOffset={y2AxisColorOffset}
 							colorMap={colorMap}
 							palette={palette}
 							ref='y2Lines'
@@ -747,7 +763,7 @@ const LineChart = createClass({
 							yStackedMax={y2AxisMax}
 							data={data}
 							isStacked={y2AxisIsStacked}
-							colorOffset={1}
+							colorOffset={y2AxisColorOffset}
 							colorMap={colorMap}
 							palette={palette}
 							ref='y2Points'
