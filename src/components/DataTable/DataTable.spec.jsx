@@ -7,7 +7,7 @@ import { common } from '../../util/generic-tests';
 import DataTable from './DataTable';
 import ScrollTable from '../ScrollTable/ScrollTable';
 import Checkbox from '../Checkbox/Checkbox';
-import OverlayWrapper from '../OverlayWrapper/OverlayWrapper';
+import DataTableWrapper from '../DataTableWrapper/DataTableWrapper';
 
 const { Column, ColumnGroup } = DataTable;
 
@@ -436,6 +436,18 @@ describe('DataTable', () => {
 				assert(_.has(onSort.getCall(4).args[1], 'event'), 'last arg must be passed event');
 			});
 		});
+
+		describe('isLoading', () => {
+			it('should show a `LoadingIndicator` if `isLoading`', () => {
+				const wrapper = shallow(
+					<DataTable isLoading />
+				);
+
+				const loadingIndicatorWrapper = wrapper.find(DataTableWrapper).shallow().find('LoadingIndicator');
+
+				assert(loadingIndicatorWrapper.prop('isLoading'));
+			});
+		});
 	});
 
 	describe('child components', () => {
@@ -563,8 +575,8 @@ describe('DataTable', () => {
 				);
 
 				const messageTitleWrapper = wrapper
-					.find(OverlayWrapper).shallow()
-					.find('.lucid-DataTable-message-title').shallow();
+					.find(DataTableWrapper).shallow()
+					.find('.lucid-DataTableWrapper-message-title').shallow();
 
 				assert.equal(messageTitleWrapper.text(), titleText, 'must contain the title text');
 			});
@@ -580,7 +592,7 @@ describe('DataTable', () => {
 				);
 
 				const messageBodyWrapper = wrapper
-					.find(OverlayWrapper).shallow();
+					.find(DataTableWrapper).shallow();
 
 				assert(messageBodyWrapper.contains(bodyElement), 'must contain the body element');
 			});

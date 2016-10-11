@@ -65,6 +65,7 @@ import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
 import DangerLightIcon from './components/Icon/DangerLightIcon/DangerLightIcon';
 import DataTable from './components/DataTable/DataTable';
+import DataTableWrapper from './components/DataTableWrapper/DataTableWrapper';
 import DataViewIcon from './components/Icon/DataViewIcon/DataViewIcon';
 import Dialog from './components/Dialog/Dialog';
 import DownloadIcon from './components/Icon/DownloadIcon/DownloadIcon';
@@ -199,6 +200,7 @@ export {
 	DangerIcon,
 	DangerLightIcon,
 	DataTable,
+	DataTableWrapper,
 	DataViewIcon,
 	Dialog,
 	DownloadIcon,
