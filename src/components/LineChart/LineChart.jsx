@@ -533,8 +533,8 @@ const LineChart = createClass({
 												key={index}
 												hasPoint={yAxisHasPointsFinal}
 												hasLine={yAxisHasLinesFinal}
-												color={_.get(colorMap, field, palette[index % palette.length])}
-												pointKind={yAxisHasPoints ? index : 1}
+												color={_.get(colorMap, field, palette[(index + yAxisColorOffset) % palette.length])}
+												pointKind={yAxisHasPoints ? index + yAxisColorOffset : 1}
 											>
 												{
 													yAxisTooltipFormatter(_.get(legend, field, field),
@@ -550,8 +550,8 @@ const LineChart = createClass({
 												key={index}
 												hasPoint={y2AxisHasPointsFinal}
 												hasLine={y2AxisHasLinesFinal}
-												color={_.get(colorMap, field, palette[index + yAxisFields.length % palette.length])}
-												pointKind={y2AxisHasPoints ? index + yAxisFields.length : 1}
+												color={_.get(colorMap, field, palette[y2AxisColorOffset + index + yAxisFields.length  % palette.length])}
+												pointKind={y2AxisHasPoints ? y2AxisColorOffset + index + yAxisFields.length : 1}
 											>
 												{
 													yAxisTooltipFormatter(_.get(legend, field, field),
@@ -599,8 +599,8 @@ const LineChart = createClass({
 											key={index}
 											hasPoint={yAxisHasPointsFinal}
 											hasLine={yAxisHasLinesFinal}
-											color={_.get(colorMap, field, palette[index % palette.length])}
-											pointKind={yAxisHasPoints ? index : 1}
+											color={_.get(colorMap, field, palette[index + yAxisColorOffset % palette.length])}
+											pointKind={yAxisHasPoints ? index + yAxisColorOffset : 1}
 										>
 											{_.get(legend, field, field)}
 										</Legend.Item>
@@ -610,8 +610,8 @@ const LineChart = createClass({
 											key={index}
 											hasPoint={y2AxisHasPointsFinal}
 											hasLine={y2AxisHasLinesFinal}
-											color={_.get(colorMap, field, palette[index + yAxisFields.length % palette.length])}
-											pointKind={y2AxisHasPoints ? index + yAxisFields.length : 1}
+											color={_.get(colorMap, field, palette[y2AxisColorOffset + index + yAxisFields.length  % palette.length])}
+											pointKind={y2AxisHasPoints ? y2AxisColorOffset + index + yAxisFields.length  : 1}
 										>
 											{_.get(legend, field, field)}
 										</Legend.Item>
@@ -744,7 +744,7 @@ const LineChart = createClass({
 							yStackedMax={y2AxisMax}
 							data={data}
 							isStacked={y2AxisIsStacked}
-							colorOffset={y2AxisColorOffset}
+							colorOffset={y2AxisColorOffset + yAxisFields.length}
 							colorMap={colorMap}
 							palette={palette}
 							ref='y2Lines'
@@ -763,7 +763,7 @@ const LineChart = createClass({
 							yStackedMax={y2AxisMax}
 							data={data}
 							isStacked={y2AxisIsStacked}
-							colorOffset={y2AxisColorOffset}
+							colorOffset={y2AxisColorOffset + yAxisFields.length}
 							colorMap={colorMap}
 							palette={palette}
 							ref='y2Points'
