@@ -25,6 +25,7 @@ describe('BarChart', () => {
 			'xAxisFormatter',
 			'yAxisFormatter',
 			'yAxisTooltipFormatter',
+			'yAxisTooltipDataFormatter',
 		],
 		getDefaultProps: () => ({
 			data: [

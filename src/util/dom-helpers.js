@@ -14,13 +14,13 @@ export function getAbsoluteBoundingClientRect(domNode) {
 }
 
 
-export function scrollParentTo(domNode) {
+export function scrollParentTo(domNode, additionalOffset = 0) {
 	if (domNode) {
-		let parentNode = domNode.parentNode;
-		if (parentNode.scrollTop > domNode.offsetTop) {
+		const parentNode = domNode.parentNode;
+		if (parentNode.scrollTop > domNode.offsetTop - additionalOffset) {
 			// if the top of the node is above the scroll line,
 			// align to top
-			parentNode.scrollTop = domNode.offsetTop;
+			parentNode.scrollTop = domNode.offsetTop - additionalOffset;
 		} else if ( parentNode.scrollTop + parentNode.clientHeight < domNode.offsetTop + domNode.offsetHeight) {
 			// else if the bottom of the node is below the fold,
 			// align to bottom

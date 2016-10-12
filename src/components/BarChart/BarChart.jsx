@@ -215,6 +215,10 @@ const BarChart = createClass({
 		 */
 		yAxisTooltipFormatter: func,
 		/**
+		 * An optional function used to format data in the tooltips.
+		 */
+		yAxisTooltipDataFormatter: func,
+		/**
 		 * *Child Element*
 		 *
 		 * The element to display in the body of the overlay for an empty chart.
@@ -315,6 +319,7 @@ const BarChart = createClass({
 			yAxisTickCount,
 			yAxisMin,
 			yAxisTooltipFormatter,
+			yAxisTooltipDataFormatter,
 			yAxisMax = yAxisIsStacked
 				? maxByFieldsStacked(data, yAxisFields)
 				: maxByFields(data, yAxisFields),
@@ -347,7 +352,11 @@ const BarChart = createClass({
 			.domain([yAxisMin, yAxisMax])
 			.range([innerHeight, 0]);
 
-		const yFinalFormatter = yAxisFormatter || yScale.tickFormat();
+		const yAxisFinalFormatter = yAxisFormatter || yScale.tickFormat();
+
+		const yFinalFormatter = yAxisTooltipDataFormatter
+			? yAxisTooltipDataFormatter
+			: yAxisFinalFormatter;
 
 		if (_.isEmpty(data) || width < 1 || height < 1) {
 			const emptyMessageBodyProp = _.get(getFirst(this.props, BarChart.EmptyMessageBody), 'props');
@@ -459,7 +468,7 @@ const BarChart = createClass({
 					<Axis
 						orient='left'
 						scale={yScale}
-						tickFormat={yFinalFormatter}
+						tickFormat={yAxisFinalFormatter}
 						tickCount={yAxisTickCount}
 					/>
 				</g>
