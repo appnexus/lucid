@@ -1,5 +1,5 @@
 .lucid-RadioButtonLabeled {
-	align-items: center;
+	align-items: flex-start;
 	color: @color-darkGray;
 	cursor: pointer;
 	display: flex;
@@ -9,6 +9,10 @@
 	> .lucid-RadioButton {
 		flex: 0 0 @RadioButton-size;
 		margin-right: @size-XXS;
+	}
+
+	&-label {
+		padding-top: @size-XXS;
 	}
 
 	&&-is-disabled {
