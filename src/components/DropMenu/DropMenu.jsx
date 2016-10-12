@@ -432,7 +432,7 @@ const DropMenu = createClass({
 				}, optionProps.className)}
 				ref={(optionDOMNode)=> {
 					if (isFocused && !isMouseTriggered) {
-						scrollParentTo(optionDOMNode);
+						scrollParentTo(optionDOMNode, this._header && this._header.offsetHeight);
 					}
 				}}
 			/>
@@ -502,6 +502,7 @@ const DropMenu = createClass({
 								{...headerProps}
 								className={cx('&-Header', headerProps.className)}
 								onKeyDown={this.handleKeydown}
+								ref={(header) => this._header = header}
 							/>
 						}
 						<div
