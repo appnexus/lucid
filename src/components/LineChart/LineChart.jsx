@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import { createClass, getFirst, omitProps } from '../../util/component-types';
 import {
 	minByFields,
 	maxByFields,
@@ -20,10 +20,12 @@ import Lines from '../Lines/Lines';
 import Points from '../Points/Points';
 import ToolTip from '../ToolTip/ToolTip';
 import ContextMenu from '../ContextMenu/ContextMenu';
+import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
 const cx = lucidClassNames.bind('&-LineChart');
 
 const {
+	any,
 	arrayOf,
 	func,
 	instanceOf,
@@ -91,6 +93,10 @@ const LineChart = createClass({
 		 *
 		 */
 		legend: object,
+		/**
+		 * Controls the visibility of the `LoadingMessage`.
+		 */
+		isLoading: bool,
 		/**
 		 * Show tool tips on hover.
 		 */
@@ -292,6 +298,18 @@ const LineChart = createClass({
 		 * `number` is supported only for backwards compatability.
 		 */
 		y2AxisTitleColor: oneOfType([number, string]),
+		/**
+		 * *Child Element*
+		 *
+		 * The element to display in the body of the overlay for an empty chart.
+		 */
+		EmptyMessageBody: any,
+		/**
+		 * *Child Element*
+		 *
+		 * The element to display in the title of the overlay for an empty chart.
+		 */
+		EmptyMessageTitle: any,
 	},
 
 	statics: {
@@ -349,6 +367,23 @@ const LineChart = createClass({
 		};
 	},
 
+	components: {
+		/**
+		 * Body content for the message to display when the data table has no data.
+		 */
+		EmptyMessageBody: createClass({
+			displayName: 'DataTable.EmptyMessageBody',
+			propName: 'EmptyMessageBody',
+		}),
+		/**
+		 * Title text for the message to display when the data table has no data.
+		 */
+		EmptyMessageTitle: createClass({
+			displayName: 'DataTable.EmptyMessageTitle',
+			propName: 'EmptyMessageTitle',
+		}),
+	},
+
 	render() {
 		const {
 			className,
@@ -357,6 +392,7 @@ const LineChart = createClass({
 			margin: marginOriginal,
 			data,
 			legend,
+			isLoading,
 			hasToolTips,
 			hasLegend,
 			palette,
@@ -413,19 +449,6 @@ const LineChart = createClass({
 
 		const svgClasses = cx(className, '&');
 
-		// TODO: Consider displaying something specific when there is no data,
-		// perhaps a loading indicator.
-		if (_.isEmpty(data) || width < 1 || height < 1) {
-			return (
-				<svg
-					{...omitProps(passThroughs, LineChart)}
-					className={svgClasses}
-					width={width}
-					height={height}
-				/>
-			);
-		}
-
 		const innerWidth = width - margin.left - margin.right;
 		const innerHeight = height - margin.top - margin.bottom;
 
@@ -481,301 +504,340 @@ const LineChart = createClass({
 		}, {});
 		const xPoints = _.chain(xPointMap).keys().map(_.toNumber).value();
 
+		if (_.isEmpty(data) || width < 1 || height < 1 || isLoading) {
+			const emptyMessageBodyProp = _.get(getFirst(this.props, LineChart.EmptyMessageBody), 'props');
+			const emptyMessageTitleProp = _.get(getFirst(this.props, LineChart.EmptyMessageTitle), 'props', {children: 'You have no items.'});
+
+			return (
+				<EmptyStateWrapper
+					isEmpty={_.isEmpty(data)}
+					isLoading={isLoading}
+				>
+					<EmptyStateWrapper.EmptyMessageBody {...emptyMessageBodyProp} />
+					<EmptyStateWrapper.EmptyMessageTitle {...emptyMessageTitleProp} />
+					<svg
+						{...omitProps(passThroughs, LineChart)}
+						className={svgClasses}
+						width={width}
+						height={height}
+					>
+						{/* y axis */}
+						<g transform={`translate(${margin.left}, ${margin.top})`}>
+							<Axis
+								orient='left'
+								scale={yScale}
+								tickFormat={yAxisFormatter}
+								ref='yAxis'
+							/>
+						</g>
+						{/* x axis */}
+						<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
+							<Axis
+								orient='bottom'
+								scale={xScale}
+								tickFormat={xFinalFormatter}
+								ref='xAxis'
+							/>
+						</g>
+					</svg>
+				</EmptyStateWrapper>
+			);
+		}
+
 		return (
-			<svg
-				{...omitProps(passThroughs, LineChart)}
-				className={svgClasses}
-				width={width}
-				height={height}
-			>
+					<svg
+						{...omitProps(passThroughs, LineChart)}
+						className={svgClasses}
+						width={width}
+						height={height}
+					>
+						{/* tooltips */}
+						<g transform={`translate(${margin.left}, ${margin.top})`}>
+							{hasToolTips && isHovering && !_.isNil(mouseX) ?
+								<ToolTip
+									isExpanded={true}
+									flyOutMaxWidth='none'
+									alignment={mouseX < (innerWidth * 0.15)
+										? 'start'
+										: mouseX > (innerWidth * 0.85)
+											? 'end'
+											: 'center'
+									}
+								>
+									<ToolTip.Target elementType='g'>
+										<path
+											className={cx('&-tooltip-line')}
+											d={`M${mouseX},0 L${mouseX},${innerHeight}`}
+										/>
+									</ToolTip.Target>
+									<ToolTip.Title>
+										{xAxisTooltipFormatter(_.get(xPointMap, `${mouseX}.x`))}
+									</ToolTip.Title>
+									<ToolTip.Body>
+										<Legend hasBorders={false} isReversed={yAxisIsStacked}>
+											{_.map(yAxisFields, (field, index) => (
+												!_.isNil(_.get(xPointMap, mouseX + '.y.' + field)) ?
+													<Legend.Item
+														key={index}
+														hasPoint={yAxisHasPointsFinal}
+														hasLine={yAxisHasLinesFinal}
+														color={_.get(colorMap, field, palette[index % palette.length])}
+														pointKind={yAxisHasPoints ? index : 1}
+													>
+														{
+															yAxisTooltipFormatter(_.get(legend, field, field),
+															yFinalFormatter(_.get(xPointMap, mouseX + '.y.' + field)),
+															_.get(xPointMap, mouseX + '.y.' + field))
+														}
+													</Legend.Item>
+												: null
+											))}
+											{_.map(y2AxisFields, (field, index) => (
+												!_.isNil(_.get(xPointMap, mouseX + '.y.' + field)) ?
+													<Legend.Item
+														key={index}
+														hasPoint={y2AxisHasPointsFinal}
+														hasLine={y2AxisHasLinesFinal}
+														color={_.get(colorMap, field, palette[index + yAxisFields.length % palette.length])}
+														pointKind={y2AxisHasPoints ? index + yAxisFields.length : 1}
+													>
+														{
+															yAxisTooltipFormatter(_.get(legend, field, field),
+															y2FinalFormatter(_.get(xPointMap, mouseX + '.y.' + field)),
+															_.get(xPointMap, mouseX + '.y.' + field))
+														}
+													</Legend.Item>
+												: null
+											))}
+										</Legend>
+									</ToolTip.Body>
+								</ToolTip>
+							: null}
+						</g>
 
-				{/* tooltips */}
-				<g transform={`translate(${margin.left}, ${margin.top})`}>
-					{hasToolTips && isHovering && !_.isNil(mouseX) ?
-						<ToolTip
-							isExpanded={true}
-							flyOutMaxWidth='none'
-							alignment={mouseX < (innerWidth * 0.15)
-								? 'start'
-								: mouseX > (innerWidth * 0.85)
-									? 'end'
-									: 'center'
-							}
-						>
-							<ToolTip.Target elementType='g'>
-								<path
-									className={cx('&-tooltip-line')}
-									d={`M${mouseX},0 L${mouseX},${innerHeight}`}
+						{/* x axis */}
+						<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
+							<Axis
+								orient='bottom'
+								scale={xScale}
+								outerTickSize={0}
+								tickFormat={xFinalFormatter}
+								tickCount={xAxisTickCount}
+								ref='xAxis'
+							/>
+
+							{/* legend */}
+							{hasLegend ?
+								<ContextMenu
+									direction='down'
+									alignment='center'
+									directonOffset={((margin.bottom / 2) + (Legend.HEIGHT / 2)) * -1  /* should center the legend in the bottom margin */}
+								>
+									<ContextMenu.Target elementType='g'>
+										<rect
+											className={cx('&-invisible')}
+											width={innerWidth}
+											height={margin.bottom}
+										/>
+									</ContextMenu.Target>
+									<ContextMenu.FlyOut className={cx('&-legend-container')}>
+										<Legend orient='horizontal'>
+											{_.map(yAxisFields, (field, index) => (
+												<Legend.Item
+													key={index}
+													hasPoint={yAxisHasPointsFinal}
+													hasLine={yAxisHasLinesFinal}
+													color={_.get(colorMap, field, palette[index % palette.length])}
+													pointKind={yAxisHasPoints ? index : 1}
+												>
+													{_.get(legend, field, field)}
+												</Legend.Item>
+											))}
+											{_.map(y2AxisFields, (field, index) => (
+												<Legend.Item
+													key={index}
+													hasPoint={y2AxisHasPointsFinal}
+													hasLine={y2AxisHasLinesFinal}
+													color={_.get(colorMap, field, palette[index + yAxisFields.length % palette.length])}
+													pointKind={y2AxisHasPoints ? index + yAxisFields.length : 1}
+												>
+													{_.get(legend, field, field)}
+												</Legend.Item>
+											))}
+										</Legend>
+									</ContextMenu.FlyOut>
+								</ContextMenu>
+							: null}
+						</g>
+
+						{/* x axis title */}
+						{xAxisTitle ? (
+							<g transform={`translate(${margin.left}, ${margin.top + innerHeight})`}>
+								<AxisLabel
+									orient='bottom'
+									width={innerWidth}
+									height={margin.bottom}
+									label={xAxisTitle}
+									color={_.isString(xAxisTitleColor)
+										? xAxisTitleColor
+										: palette[xAxisTitleColor % palette.length]
+									}
+									ref='xAxisTitle'
 								/>
-							</ToolTip.Target>
-							<ToolTip.Title>
-								{xAxisTooltipFormatter(_.get(xPointMap, `${mouseX}.x`))}
-							</ToolTip.Title>
-							<ToolTip.Body>
-								<Legend hasBorders={false} isReversed={yAxisIsStacked}>
-									{_.map(yAxisFields, (field, index) => (
-										!_.isNil(_.get(xPointMap, mouseX + '.y.' + field)) ?
-											<Legend.Item
-												key={index}
-												hasPoint={yAxisHasPointsFinal}
-												hasLine={yAxisHasLinesFinal}
-												color={_.get(colorMap, field, palette[index % palette.length])}
-												pointKind={yAxisHasPoints ? index : 1}
-											>
-												{
-													yAxisTooltipFormatter(_.get(legend, field, field),
-													yFinalFormatter(_.get(xPointMap, mouseX + '.y.' + field)),
-													_.get(xPointMap, mouseX + '.y.' + field))
-												}
-											</Legend.Item>
-										: null
-									))}
-									{_.map(y2AxisFields, (field, index) => (
-										!_.isNil(_.get(xPointMap, mouseX + '.y.' + field)) ?
-											<Legend.Item
-												key={index}
-												hasPoint={y2AxisHasPointsFinal}
-												hasLine={y2AxisHasLinesFinal}
-												color={_.get(colorMap, field, palette[index + yAxisFields.length % palette.length])}
-												pointKind={y2AxisHasPoints ? index + yAxisFields.length : 1}
-											>
-												{
-													yAxisTooltipFormatter(_.get(legend, field, field),
-													y2FinalFormatter(_.get(xPointMap, mouseX + '.y.' + field)),
-													_.get(xPointMap, mouseX + '.y.' + field))
-												}
-											</Legend.Item>
-										: null
-									))}
-								</Legend>
-							</ToolTip.Body>
-						</ToolTip>
-					: null}
-				</g>
+							</g>
+						) : null}
 
-				{/* x axis */}
-				<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
-					<Axis
-						orient='bottom'
-						scale={xScale}
-						outerTickSize={0}
-						tickFormat={xFinalFormatter}
-						tickCount={xAxisTickCount}
-						ref='xAxis'
-					/>
+						{/* y axis */}
+						<g transform={`translate(${margin.left}, ${margin.top})`}>
+							<Axis
+								orient='left'
+								scale={yScale}
+								tickFormat={yAxisFormatter}
+								tickCount={yAxisTickCount}
+								ref='yAxis'
+							/>
+						</g>
 
-					{/* legend */}
-					{hasLegend ?
-						<ContextMenu
-							direction='down'
-							alignment='center'
-							directonOffset={((margin.bottom / 2) + (Legend.HEIGHT / 2)) * -1  /* should center the legend in the bottom margin */}
-						>
-							<ContextMenu.Target elementType='g'>
+						{/* y axis title */}
+						{yAxisTitle ? (
+							<g transform={`translate(0, ${margin.top})`}>
+								<AxisLabel
+									orient='left'
+									width={margin.left}
+									height={innerHeight}
+									label={yAxisTitle}
+									color={_.isString(yAxisTitleColor)
+										? yAxisTitleColor
+										: palette[yAxisTitleColor % palette.length]
+									}
+									ref='yAxisTitle'
+								/>
+							</g>
+						) : null}
+
+						{/* y2 axis */}
+						{y2AxisFields ?
+							<g transform={`translate(${margin.left + innerWidth}, ${margin.top})`}>
+								<Axis
+									orient='right'
+									scale={y2Scale}
+									tickFormat={y2AxisFormatter}
+									tickCount={y2AxisTickCount}
+									ref='y2Axis'
+								/>
+							</g>
+						: null}
+
+						{/* y2 axis title */}
+						{y2AxisTitle ? (
+							<g transform={`translate(${margin.left + innerWidth}, ${margin.top})`}>
+								<AxisLabel
+									orient='right'
+									width={margin.right}
+									height={innerHeight}
+									label={y2AxisTitle}
+									color={_.isString(y2AxisTitleColor)
+										? y2AxisTitleColor
+										: palette[y2AxisTitleColor % palette.length]
+									}
+									ref='y2AxisTitle'
+								/>
+							</g>
+						) : null}
+
+						{/* y axis lines */}
+						<g transform={`translate(${margin.left}, ${margin.top})`}>
+							<Lines
+								xScale={xScale}
+								yScale={yScale}
+								xField={xAxisField}
+								yFields={yAxisFields}
+								yStackedMax={yAxisMax}
+								data={data}
+								isStacked={yAxisIsStacked}
+								colorMap={colorMap}
+								palette={palette}
+								ref='yLines'
+							/>
+						</g>
+
+						{/* y axis points */}
+						{yAxisHasPoints ?
+							<g transform={`translate(${margin.left}, ${margin.top})`}>
+								<Points
+									xScale={xScale}
+									yScale={yScale}
+									xField={xAxisField}
+									yFields={yAxisFields}
+									yStackedMax={yAxisMax}
+									data={data}
+									isStacked={yAxisIsStacked}
+									colorMap={colorMap}
+									palette={palette}
+									ref='yPoints'
+								/>
+							</g>
+						: null}
+
+						{/* y2 axis lines */}
+						{y2AxisFields ?
+							<g transform={`translate(${margin.left}, ${margin.top})`}>
+								<Lines
+									xScale={xScale}
+									yScale={y2Scale}
+									xField={xAxisField}
+									yFields={y2AxisFields}
+									yStackedMax={y2AxisMax}
+									data={data}
+									isStacked={y2AxisIsStacked}
+									colorOffset={1}
+									colorMap={colorMap}
+									palette={palette}
+									ref='y2Lines'
+								/>
+							</g>
+						: null}
+
+						{/* y2 axis points */}
+						{y2AxisFields && y2AxisHasPoints ?
+							<g transform={`translate(${margin.left}, ${margin.top})`}>
+								<Points
+									xScale={xScale}
+									yScale={y2Scale}
+									xField={xAxisField}
+									yFields={y2AxisFields}
+									yStackedMax={y2AxisMax}
+									data={data}
+									isStacked={y2AxisIsStacked}
+									colorOffset={1}
+									colorMap={colorMap}
+									palette={palette}
+									ref='y2Points'
+								/>
+							</g>
+						: null}
+
+						{/* hover capture zone */}
+						{hasToolTips ?
+							<g transform={`translate(${margin.left}, ${margin.top})`}>
 								<rect
 									className={cx('&-invisible')}
 									width={innerWidth}
-									height={margin.bottom}
+									height={innerHeight}
+									onMouseMove={({clientX, target}) => {
+										this.setState({
+											isHovering: true,
+											mouseX: nearest(xPoints, clientX - target.getBoundingClientRect().left),
+										});
+									}}
+									onMouseOut={() => {
+										this.setState({ isHovering: false });
+									}}
 								/>
-							</ContextMenu.Target>
-							<ContextMenu.FlyOut className={cx('&-legend-container')}>
-								<Legend orient='horizontal'>
-									{_.map(yAxisFields, (field, index) => (
-										<Legend.Item
-											key={index}
-											hasPoint={yAxisHasPointsFinal}
-											hasLine={yAxisHasLinesFinal}
-											color={_.get(colorMap, field, palette[index % palette.length])}
-											pointKind={yAxisHasPoints ? index : 1}
-										>
-											{_.get(legend, field, field)}
-										</Legend.Item>
-									))}
-									{_.map(y2AxisFields, (field, index) => (
-										<Legend.Item
-											key={index}
-											hasPoint={y2AxisHasPointsFinal}
-											hasLine={y2AxisHasLinesFinal}
-											color={_.get(colorMap, field, palette[index + yAxisFields.length % palette.length])}
-											pointKind={y2AxisHasPoints ? index + yAxisFields.length : 1}
-										>
-											{_.get(legend, field, field)}
-										</Legend.Item>
-									))}
-								</Legend>
-							</ContextMenu.FlyOut>
-						</ContextMenu>
-					: null}
-				</g>
+							</g>
+						: null}
 
-				{/* x axis title */}
-				{xAxisTitle ? (
-					<g transform={`translate(${margin.left}, ${margin.top + innerHeight})`}>
-						<AxisLabel
-							orient='bottom'
-							width={innerWidth}
-							height={margin.bottom}
-							label={xAxisTitle}
-							color={_.isString(xAxisTitleColor)
-								? xAxisTitleColor
-								: palette[xAxisTitleColor % palette.length]
-							}
-							ref='xAxisTitle'
-						/>
-					</g>
-				) : null}
-
-				{/* y axis */}
-				<g transform={`translate(${margin.left}, ${margin.top})`}>
-					<Axis
-						orient='left'
-						scale={yScale}
-						tickFormat={yAxisFormatter}
-						tickCount={yAxisTickCount}
-						ref='yAxis'
-					/>
-				</g>
-
-				{/* y axis title */}
-				{yAxisTitle ? (
-					<g transform={`translate(0, ${margin.top})`}>
-						<AxisLabel
-							orient='left'
-							width={margin.left}
-							height={innerHeight}
-							label={yAxisTitle}
-							color={_.isString(yAxisTitleColor)
-								? yAxisTitleColor
-								: palette[yAxisTitleColor % palette.length]
-							}
-							ref='yAxisTitle'
-						/>
-					</g>
-				) : null}
-
-				{/* y2 axis */}
-				{y2AxisFields ?
-					<g transform={`translate(${margin.left + innerWidth}, ${margin.top})`}>
-						<Axis
-							orient='right'
-							scale={y2Scale}
-							tickFormat={y2AxisFormatter}
-							tickCount={y2AxisTickCount}
-							ref='y2Axis'
-						/>
-					</g>
-				: null}
-
-				{/* y2 axis title */}
-				{y2AxisTitle ? (
-					<g transform={`translate(${margin.left + innerWidth}, ${margin.top})`}>
-						<AxisLabel
-							orient='right'
-							width={margin.right}
-							height={innerHeight}
-							label={y2AxisTitle}
-							color={_.isString(y2AxisTitleColor)
-								? y2AxisTitleColor
-								: palette[y2AxisTitleColor % palette.length]
-							}
-							ref='y2AxisTitle'
-						/>
-					</g>
-				) : null}
-
-				{/* y axis lines */}
-				<g transform={`translate(${margin.left}, ${margin.top})`}>
-					<Lines
-						xScale={xScale}
-						yScale={yScale}
-						xField={xAxisField}
-						yFields={yAxisFields}
-						yStackedMax={yAxisMax}
-						data={data}
-						isStacked={yAxisIsStacked}
-						colorMap={colorMap}
-						palette={palette}
-						ref='yLines'
-					/>
-				</g>
-
-				{/* y axis points */}
-				{yAxisHasPoints ?
-					<g transform={`translate(${margin.left}, ${margin.top})`}>
-						<Points
-							xScale={xScale}
-							yScale={yScale}
-							xField={xAxisField}
-							yFields={yAxisFields}
-							yStackedMax={yAxisMax}
-							data={data}
-							isStacked={yAxisIsStacked}
-							colorMap={colorMap}
-							palette={palette}
-							ref='yPoints'
-						/>
-					</g>
-				: null}
-
-				{/* y2 axis lines */}
-				{y2AxisFields ?
-					<g transform={`translate(${margin.left}, ${margin.top})`}>
-						<Lines
-							xScale={xScale}
-							yScale={y2Scale}
-							xField={xAxisField}
-							yFields={y2AxisFields}
-							yStackedMax={y2AxisMax}
-							data={data}
-							isStacked={y2AxisIsStacked}
-							colorOffset={1}
-							colorMap={colorMap}
-							palette={palette}
-							ref='y2Lines'
-						/>
-					</g>
-				: null}
-
-				{/* y2 axis points */}
-				{y2AxisFields && y2AxisHasPoints ?
-					<g transform={`translate(${margin.left}, ${margin.top})`}>
-						<Points
-							xScale={xScale}
-							yScale={y2Scale}
-							xField={xAxisField}
-							yFields={y2AxisFields}
-							yStackedMax={y2AxisMax}
-							data={data}
-							isStacked={y2AxisIsStacked}
-							colorOffset={1}
-							colorMap={colorMap}
-							palette={palette}
-							ref='y2Points'
-						/>
-					</g>
-				: null}
-
-				{/* hover capture zone */}
-				{hasToolTips ?
-					<g transform={`translate(${margin.left}, ${margin.top})`}>
-						<rect
-							className={cx('&-invisible')}
-							width={innerWidth}
-							height={innerHeight}
-							onMouseMove={({clientX, target}) => {
-								this.setState({
-									isHovering: true,
-									mouseX: nearest(xPoints, clientX - target.getBoundingClientRect().left),
-								});
-							}}
-							onMouseOut={() => {
-								this.setState({ isHovering: false });
-							}}
-						/>
-					</g>
-				: null}
-
-			</svg>
+					</svg>
 		);
 	},
 });

@@ -4,7 +4,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, filterTypes, getFirst, omitProps } from '../../util/component-types';
 
 import Checkbox from '../Checkbox/Checkbox';
-import DataTableWrapper from '../DataTableWrapper/DataTableWrapper';
+import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 import ScrollTable from '../ScrollTable/ScrollTable';
 
 const {
@@ -28,7 +28,7 @@ const {
 
 /**
  *
- * {"categories": ["table"], "madeFrom": ["Checkbox", "DataTableWrapper", "ScrollTable"]}
+ * {"categories": ["table"], "madeFrom": ["Checkbox", "EmptyStateWrapper", "ScrollTable"]}
  *
  * `DataTable` provides a simple abstraction over the `Table` component to make it easier to define data-driven tables and render an array of objects.
  */
@@ -240,12 +240,12 @@ const DataTable = createClass({
 		const emptyMessageTitleProp = _.get(getFirst(this.props, DataTable.EmptyMessageTitle), 'props', {children: 'You have no items.'});
 
 		return (
-			<DataTableWrapper
+			<EmptyStateWrapper
 				isLoading={isLoading}
 				isEmpty={_.isEmpty(data)}
 			>
-				<DataTableWrapper.EmptyMessageBody {...emptyMessageBodyProp} />
-				<DataTableWrapper.EmptyMessageTitle {...emptyMessageTitleProp} />
+				<EmptyStateWrapper.EmptyMessageBody {...emptyMessageBodyProp} />
+				<EmptyStateWrapper.EmptyMessageTitle {...emptyMessageTitleProp} />
 				<ScrollTable
 					style={style}
 					{...omitProps(passThroughs, DataTable)}
@@ -354,7 +354,7 @@ const DataTable = createClass({
 					}
 					</Tbody>
 				</ScrollTable>
-			</DataTableWrapper>
+			</EmptyStateWrapper>
 		);
 	},
 });

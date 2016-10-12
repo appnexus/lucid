@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import { createClass, omitProps, getFirst } from '../../util/component-types';
 import {
 	maxByFields,
 	maxByFieldsStacked,
@@ -14,10 +14,12 @@ import AxisLabel from '../AxisLabel/AxisLabel';
 import Bars from '../Bars/Bars';
 import ContextMenu from '../ContextMenu/ContextMenu';
 import Legend from '../Legend/Legend';
+import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
 const cx = lucidClassNames.bind('&-BarChart');
 
 const {
+	any,
 	arrayOf,
 	func,
 	number,
@@ -84,6 +86,10 @@ const BarChart = createClass({
 		 *
 		 */
 		legend: object,
+		/**
+		 * Controls the visibility of the `LoadingMessage`.
+		 */
+		isLoading: bool,
 		/**
 		 * Show tool tips on hover.
 		 */
@@ -208,6 +214,18 @@ const BarChart = createClass({
 		 * Signature: `(yField, yValueFormatted, yValue) => {}`
 		 */
 		yAxisTooltipFormatter: func,
+		/**
+		 * *Child Element*
+		 *
+		 * The element to display in the body of the overlay for an empty chart.
+		 */
+		EmptyMessageBody: any,
+		/**
+		 * *Child Element*
+		 *
+		 * The element to display in the title of the overlay for an empty chart.
+		 */
+		EmptyMessageTitle: any,
 	},
 
 	statics: {
@@ -252,6 +270,23 @@ const BarChart = createClass({
 		};
 	},
 
+	components: {
+		/**
+		 * Body content for the message to display when the data table has no data.
+		 */
+		EmptyMessageBody: createClass({
+			displayName: 'DataTable.EmptyMessageBody',
+			propName: 'EmptyMessageBody',
+		}),
+		/**
+		 * Title text for the message to display when the data table has no data.
+		 */
+		EmptyMessageTitle: createClass({
+			displayName: 'DataTable.EmptyMessageTitle',
+			propName: 'EmptyMessageTitle',
+		}),
+	},
+
 	render() {
 		const {
 			className,
@@ -260,6 +295,7 @@ const BarChart = createClass({
 			margin: marginOriginal,
 			data,
 			legend,
+			isLoading,
 			hasToolTips,
 			hasLegend,
 			palette,
@@ -293,19 +329,6 @@ const BarChart = createClass({
 
 		const svgClasses = cx(className, '&');
 
-		// TODO: Consider displaying something specific when there is no data,
-		// perhaps a loading indicator.
-		if (_.isEmpty(data) || width < 1 || height < 1) {
-			return (
-				<svg
-					{...omitProps(passThroughs, BarChart)}
-					className={svgClasses}
-					width={width}
-					height={height}
-				/>
-			);
-		}
-
 		const innerWidth = width - margin.left - margin.right;
 		const innerHeight = height - margin.top - margin.bottom;
 
@@ -325,6 +348,46 @@ const BarChart = createClass({
 			.range([innerHeight, 0]);
 
 		const yFinalFormatter = yAxisFormatter || yScale.tickFormat();
+
+		if (_.isEmpty(data) || width < 1 || height < 1) {
+			const emptyMessageBodyProp = _.get(getFirst(this.props, BarChart.EmptyMessageBody), 'props');
+			const emptyMessageTitleProp = _.get(getFirst(this.props, BarChart.EmptyMessageTitle), 'props', {children: 'You have no items.'});
+
+			return (
+				<EmptyStateWrapper
+					isEmpty={_.isEmpty(data)}
+					isLoading={isLoading}
+				>
+					<EmptyStateWrapper.EmptyMessageBody {...emptyMessageBodyProp}/>
+					<EmptyStateWrapper.EmptyMessageTitle {...emptyMessageTitleProp}/>
+					<svg
+						{...omitProps(passThroughs, BarChart)}
+						className={svgClasses}
+						width={width}
+						height={height}
+					>
+						{/* x axis */}
+						<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
+							<Axis
+								orient='bottom'
+								scale={xScale}
+								tickCount={xAxisTickCount}
+							/>
+						</g>
+
+						{/* y axis */}
+						<g transform={`translate(${margin.left}, ${margin.top})`}>
+							<Axis
+								orient='left'
+								scale={yScale}
+								tickFormat={yFinalFormatter}
+								tickCount={yAxisTickCount}
+							/>
+						</g>
+					</svg>
+				</EmptyStateWrapper>
+			);
+		}
 
 		return (
 			<svg

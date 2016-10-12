@@ -9,6 +9,7 @@ import { common } from '../../util/generic-tests';
 import assert from 'assert';
 
 import LineChart from './LineChart';
+import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
 describe('LineChart', () => {
 	let wrapper;
@@ -35,6 +36,54 @@ describe('LineChart', () => {
 				{x: new Date('2015-01-01T00:00:00Z'), y: 2},
 			],
 		}),
+	});
+
+	describe('props', () => {
+		describe('isLoading', () => {
+			it('should show a `LoadingIndicator` if `isLoading`', () => {
+				wrapper = mount(
+					<LineChart isLoading />
+				);
+
+				const loadingIndicatorWrapper = wrapper.find(EmptyStateWrapper).find('LoadingIndicator');
+
+				assert(loadingIndicatorWrapper.prop('isLoading'));
+			});
+		});
+	});
+
+	describe('child components', () => {
+		describe('EmptyMessageTitle', () => {
+			it('should render the message title element', () => {
+				const titleText = 'Here is the Title Text';
+				wrapper = mount(
+					<LineChart>
+						<LineChart.EmptyMessageTitle>{titleText}</LineChart.EmptyMessageTitle>
+					</LineChart>
+				);
+
+				const messageTitleWrapper = wrapper
+					.find(EmptyStateWrapper)
+					.find('.lucid-EmptyStateWrapper-message-title');
+
+				assert.equal(messageTitleWrapper.text(), titleText, 'must contain the title text');
+			});
+		});
+
+		describe('EmptyMessageBody', () => {
+			it('should render the message body element', () => {
+				const bodyElement = <div className='parent-div'><div className='nested-div'></div></div>;
+				wrapper = mount(
+					<LineChart>
+						<LineChart.EmptyMessageBody>{bodyElement}}</LineChart.EmptyMessageBody>
+					</LineChart>
+				);
+
+				const messageBodyWrapper = wrapper.find(EmptyStateWrapper);
+
+				assert(messageBodyWrapper.contains(bodyElement), 'must contain the body element');
+			});
+		});
 	});
 
 	describe('render', () => {

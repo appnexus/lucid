@@ -7,7 +7,7 @@ import { common } from '../../util/generic-tests';
 import DataTable from './DataTable';
 import ScrollTable from '../ScrollTable/ScrollTable';
 import Checkbox from '../Checkbox/Checkbox';
-import DataTableWrapper from '../DataTableWrapper/DataTableWrapper';
+import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
 const { Column, ColumnGroup } = DataTable;
 
@@ -443,7 +443,7 @@ describe('DataTable', () => {
 					<DataTable isLoading />
 				);
 
-				const loadingIndicatorWrapper = wrapper.find(DataTableWrapper).shallow().find('LoadingIndicator');
+				const loadingIndicatorWrapper = wrapper.find(EmptyStateWrapper).shallow().find('LoadingIndicator');
 
 				assert(loadingIndicatorWrapper.prop('isLoading'));
 			});
@@ -575,8 +575,8 @@ describe('DataTable', () => {
 				);
 
 				const messageTitleWrapper = wrapper
-					.find(DataTableWrapper).shallow()
-					.find('.lucid-DataTableWrapper-message-title').shallow();
+					.find(EmptyStateWrapper).shallow()
+					.find('.lucid-EmptyStateWrapper-message-title').shallow();
 
 				assert.equal(messageTitleWrapper.text(), titleText, 'must contain the title text');
 			});
@@ -592,7 +592,7 @@ describe('DataTable', () => {
 				);
 
 				const messageBodyWrapper = wrapper
-					.find(DataTableWrapper).shallow();
+					.find(EmptyStateWrapper).shallow();
 
 				assert(messageBodyWrapper.contains(bodyElement), 'must contain the body element');
 			});
