@@ -60,6 +60,14 @@ describe('#scrollParentTo', () => {
 		assert.equal(parentNode.scrollTop, 0); //expect parent to be scrolled to the top
 	});
 
+	it('should align using the additionalOffset', () => {
+		// just using plain objects here to avoid having to deal with weird dom positioning
+		const parent = {scrollTop: 10};
+		const child = {parentNode: parent, offsetTop: 15};
+		scrollParentTo(child, 10);
+		assert.equal(parent.scrollTop, 5);
+	});
+
 	it('should align to bottom if the bottom of the node is below the fold', () => {
 		parentNode.scrollTop = 0; // parent element is scrolled up to top
 		parentNode.style.overflowY = 'scroll';
@@ -81,5 +89,4 @@ describe('#scrollParentTo', () => {
 		scrollParentTo(childNode);
 		assert.equal(parentNode.scrollTop, 5); //expect no change in scrolling of parent
 	});
-
 });
