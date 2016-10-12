@@ -91,11 +91,10 @@ const RadioButtonLabeled = createClass({
 						onSelect={onSelect}
 						{...omitProps(passThroughs, RadioButtonLabeled)}
 				/>
-				{
-					labelChildProps
-							? labelChildProps.children
-							: null
-				}
+				<div
+					{...labelChildProps}
+					className={cx('&-label')}
+				/>
 			</label>
 		);
 	},
