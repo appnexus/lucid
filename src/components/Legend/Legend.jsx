@@ -85,6 +85,10 @@ const Legend = createClass({
 				color: string,
 				pointKind: number,
 				onClick: func,
+				/**
+				 * Class names that are appended to the defaults.
+				 */
+				className: string,
 			},
 		}),
 	},
@@ -128,11 +132,12 @@ const Legend = createClass({
 					color,
 					onClick,
 					children,
+					className: itemClass,
 				}, index) => (
 					<li
 						key={index}
-						className={cx('&-Item')}
-						onClick={_.partial(this.handleItemClick, index, itemProps)}
+						className={cx(itemClass, '&-Item')}
+						onClick={_.partial(this.handleItemClick, index, itemProps[index])}
 					>
 						{hasPoint || hasLine ?
 							<svg
