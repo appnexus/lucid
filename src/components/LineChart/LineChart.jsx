@@ -443,21 +443,22 @@ const LineChart = createClass({
 			? d3Scale.scaleLinear().domain([y2AxisMin, y2AxisMax]).range([innerHeight, 0])
 			: null;
 
+		const yAxisFinalFormatter = yAxisFormatter || yScale.tickFormat();
+		const y2AxisFinalFormatter = y2AxisFormatter
+			? y2AxisFormatter
+			: y2Scale
+				? y2Scale.tickFormat()
+				: _.identity;
+
 		const xFinalFormatter = xAxisFormatter
 			? xAxisFormatter
 			: xScale.tickFormat();
 		const yFinalFormatter = yAxisTooltipDataFormatter
 			? yAxisTooltipDataFormatter
-			: yAxisFormatter
-				? yAxisFormatter
-				: yScale.tickFormat();
+			: yAxisFinalFormatter;
 		const y2FinalFormatter = y2AxisTooltipDataFormatter
 			? y2AxisTooltipDataFormatter
-				: y2AxisFormatter
-				? y2AxisFormatter
-				: y2Scale
-					? y2Scale.tickFormat()
-					: _.identity;
+				: y2AxisFinalFormatter;
 
 		// This logic is getting a bit complicated
 		const yAxisHasPointsFinal = yAxisHasPoints || yAxisIsStacked;
@@ -630,7 +631,7 @@ const LineChart = createClass({
 					<Axis
 						orient='left'
 						scale={yScale}
-						tickFormat={yAxisFormatter}
+						tickFormat={yAxisFinalFormatter}
 						tickCount={yAxisTickCount}
 						ref='yAxis'
 					/>
@@ -659,7 +660,7 @@ const LineChart = createClass({
 						<Axis
 							orient='right'
 							scale={y2Scale}
-							tickFormat={y2AxisFormatter}
+							tickFormat={y2AxisFinalFormatter}
 							tickCount={y2AxisTickCount}
 							ref='y2Axis'
 						/>

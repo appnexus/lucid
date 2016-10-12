@@ -208,6 +208,10 @@ const BarChart = createClass({
 		 * Signature: `(yField, yValueFormatted, yValue) => {}`
 		 */
 		yAxisTooltipFormatter: func,
+		/**
+		 * An optional function used to format data in the tooltips.
+		 */
+		yAxisTooltipDataFormatter: func,
 	},
 
 	statics: {
@@ -279,6 +283,7 @@ const BarChart = createClass({
 			yAxisTickCount,
 			yAxisMin,
 			yAxisTooltipFormatter,
+			yAxisTooltipDataFormatter,
 			yAxisMax = yAxisIsStacked
 				? maxByFieldsStacked(data, yAxisFields)
 				: maxByFields(data, yAxisFields),
@@ -324,7 +329,11 @@ const BarChart = createClass({
 			.domain([yAxisMin, yAxisMax])
 			.range([innerHeight, 0]);
 
-		const yFinalFormatter = yAxisFormatter || yScale.tickFormat();
+		const yAxisFinalFormatter = yAxisFormatter || yScale.tickFormat();
+
+		const yFinalFormatter = yAxisTooltipDataFormatter
+			? yAxisTooltipDataFormatter
+			: yAxisFinalFormatter;
 
 		return (
 			<svg
@@ -396,7 +405,7 @@ const BarChart = createClass({
 					<Axis
 						orient='left'
 						scale={yScale}
-						tickFormat={yFinalFormatter}
+						tickFormat={yAxisFinalFormatter}
 						tickCount={yAxisTickCount}
 					/>
 				</g>
