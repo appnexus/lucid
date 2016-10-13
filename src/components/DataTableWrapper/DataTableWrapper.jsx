@@ -3,7 +3,6 @@ import React from 'react';
 import { createClass, getFirst } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 
-import HatchPattern from '../HatchPattern/HatchPattern';
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 import OverlayWrapper from '../OverlayWrapper/OverlayWrapper';
 
@@ -18,7 +17,7 @@ const {
 
 /**
  *
- * {"categories": ["utility"], "madeFrom": ["HatchPattern", "LoadingIndicator", "OverlayWrapper"]}
+ * {"categories": ["utility"], "madeFrom": ["LoadingIndicator", "OverlayWrapper"]}
  *
  * A wrapper for the DataTable which can display either a `LoadingIndicator` or `OverlayWrapper`.
  *
@@ -97,7 +96,7 @@ const DataTableWrapper = createClass({
 					isVisible={isEmpty}
 				>
 					<OverlayWrapper.Message className={cx('&-message-container')}>
-						<HatchPattern />
+						<div className={cx('&-message-header')} />
 						<div className={cx('&-message-contents')}>
 							<header {...emptyMessageTitleProp} className={cx('&-message-title', emptyMessageTitleProp.className)} />
 							{emptyMessageBodyProp && <div {...emptyMessageBodyProp} />}

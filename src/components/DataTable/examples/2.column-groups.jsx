@@ -26,15 +26,11 @@ const data = [
 	{
 		'id': '04',
 		'first_name': 'Aristotle',
-		'last_name': '--',
-		'email': 'aristotle@example.com',
 		'occupation': 'Tutor',
 	},
 	{
 		'id': '05',
-		'first_name': 'Galileo',
 		'last_name': 'Galilei',
-		'email': 'ggalilei@example.com',
 		'occupation': 'Physicist',
 	},
 	{
