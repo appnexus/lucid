@@ -20,7 +20,7 @@ const {
  *
  * {"categories": ["utility"], "madeFrom": ["HatchPattern", "LoadingIndicator", "OverlayWrapper"]}
  *
- * A wrapper for Charts which can display either a `LoadingIndicator` or `OverlayWrapper`.
+ * A wrapper which can display either a `LoadingIndicator` or `OverlayWrapper`.
  *
  */
 const EmptyStateWrapper = createClass({
@@ -48,27 +48,27 @@ const EmptyStateWrapper = createClass({
 		/**
 		 * *Child Element*
 		 *
-		 * The element to display in the body of the overlay for an empty chart.
+		 * The element to display in the body of the overlay.
 		 */
 		EmptyMessageBody: any,
 		/**
 		 * *Child Element*
 		 *
-		 * The element to display in the title of the overlay for an empty chart.
+		 * The element to display in the title of the overlay.
 		 */
 		EmptyMessageTitle: any,
 	},
 
 	components: {
 		/**
-		 * Body content for the message to display when the chart has no data.
+		 * Body content for the message to display when there is no data.
 		 */
 		EmptyMessageBody: createClass({
 			displayName: 'EmptyStateWrapper.EmptyMessageBody',
 			propName: 'EmptyMessageBody',
 		}),
 		/**
-		 * Title text for the message to display when the chart has no data.
+		 * Title text for the message to display when there is no data.
 		 */
 		EmptyMessageTitle: createClass({
 			displayName: 'EmptyStateWrapper.EmptyMessageTitle',
@@ -84,7 +84,7 @@ const EmptyStateWrapper = createClass({
 		} = this.props;
 
 		const emptyMessageBodyProp = _.get(getFirst(this.props, EmptyStateWrapper.EmptyMessageBody), 'props');
-		const emptyMessageTitleProp = _.get(getFirst(this.props, EmptyStateWrapper.EmptyMessageTitle), 'props', {children: 'You have no Line Items.'});
+		const emptyMessageTitleProp = _.get(getFirst(this.props, EmptyStateWrapper.EmptyMessageTitle), 'props', {children: 'You have no data.'});
 
 		return (
 			isLoading ?
