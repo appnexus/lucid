@@ -381,17 +381,17 @@ const LineChart = createClass({
 
 	components: {
 		/**
-		 * Body content for the message to display when the data table has no data.
+		 * Body content for the message to display when the chart has no data.
 		 */
 		EmptyMessageBody: createClass({
-			displayName: 'DataTable.EmptyMessageBody',
+			displayName: 'LineChart.EmptyMessageBody',
 			propName: 'EmptyMessageBody',
 		}),
 		/**
-		 * Title text for the message to display when the data table has no data.
+		 * Title text for the message to display when the chart has no data.
 		 */
 		EmptyMessageTitle: createClass({
-			displayName: 'DataTable.EmptyMessageTitle',
+			displayName: 'LineChart.EmptyMessageTitle',
 			propName: 'EmptyMessageTitle',
 		}),
 	},
@@ -521,7 +521,7 @@ const LineChart = createClass({
 
 		if (_.isEmpty(data) || width < 1 || height < 1 || isLoading) {
 			const emptyMessageBodyProp = _.get(getFirst(this.props, LineChart.EmptyMessageBody), 'props');
-			const emptyMessageTitleProp = _.get(getFirst(this.props, LineChart.EmptyMessageTitle), 'props', {children: 'You have no items.'});
+			const emptyMessageTitleProp = _.get(getFirst(this.props, LineChart.EmptyMessageTitle), 'props', {children: 'You have no data.'});
 
 			return (
 				<EmptyStateWrapper

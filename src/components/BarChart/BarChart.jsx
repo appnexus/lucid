@@ -276,17 +276,17 @@ const BarChart = createClass({
 
 	components: {
 		/**
-		 * Body content for the message to display when the data table has no data.
+		 * Body content for the message to display when the chart has no data.
 		 */
 		EmptyMessageBody: createClass({
-			displayName: 'DataTable.EmptyMessageBody',
+			displayName: 'BarChart.EmptyMessageBody',
 			propName: 'EmptyMessageBody',
 		}),
 		/**
-		 * Title text for the message to display when the data table has no data.
+		 * Title text for the message to display when the chart has no data.
 		 */
 		EmptyMessageTitle: createClass({
-			displayName: 'DataTable.EmptyMessageTitle',
+			displayName: 'BarChart.EmptyMessageTitle',
 			propName: 'EmptyMessageTitle',
 		}),
 	},
@@ -358,9 +358,9 @@ const BarChart = createClass({
 			? yAxisTooltipDataFormatter
 			: yAxisFinalFormatter;
 
-		if (_.isEmpty(data) || width < 1 || height < 1) {
+		if (_.isEmpty(data) || width < 1 || height < 1 || isLoading) {
 			const emptyMessageBodyProp = _.get(getFirst(this.props, BarChart.EmptyMessageBody), 'props');
-			const emptyMessageTitleProp = _.get(getFirst(this.props, BarChart.EmptyMessageTitle), 'props', {children: 'You have no items.'});
+			const emptyMessageTitleProp = _.get(getFirst(this.props, BarChart.EmptyMessageTitle), 'props', {children: 'You have no data.'});
 
 			return (
 				<EmptyStateWrapper
