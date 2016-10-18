@@ -353,14 +353,15 @@ const BarChart = createClass({
 			: yAxisFinalFormatter;
 
 		if (_.isEmpty(data) || width < 1 || height < 1 || isLoading) {
-			const emptyStateWrapperProps = _.get(getFirst(this.props, BarChart.EmptyStateWrapper), 'props', {Title: 'You have no data.'});
+			const emptyStateWrapper = getFirst(this.props, BarChart.EmptyStateWrapper, <BarChart.EmptyStateWrapper Title='You have no data.' />);
 
 			return (
 				<EmptyStateWrapper
-					{...emptyStateWrapperProps}
+					{...emptyStateWrapper.props}
 					isEmpty={_.isEmpty(data)}
 					isLoading={isLoading}
 				>
+					{emptyStateWrapper.props.children}
 					<svg
 						{...omitProps(passThroughs, BarChart)}
 						className={svgClasses}
