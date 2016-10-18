@@ -19,7 +19,6 @@ import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 const cx = lucidClassNames.bind('&-BarChart');
 
 const {
-	any,
 	arrayOf,
 	func,
 	number,
@@ -218,18 +217,6 @@ const BarChart = createClass({
 		 * An optional function used to format data in the tooltips.
 		 */
 		yAxisTooltipDataFormatter: func,
-		/**
-		 * *Child Element*
-		 *
-		 * The element to display in the body of the overlay for an empty chart.
-		 */
-		EmptyMessageBody: any,
-		/**
-		 * *Child Element*
-		 *
-		 * The element to display in the title of the overlay for an empty chart.
-		 */
-		EmptyMessageTitle: any,
 	},
 
 	statics: {
@@ -275,20 +262,7 @@ const BarChart = createClass({
 	},
 
 	components: {
-		/**
-		 * Body content for the message to display when the chart has no data.
-		 */
-		EmptyMessageBody: createClass({
-			displayName: 'BarChart.EmptyMessageBody',
-			propName: 'EmptyMessageBody',
-		}),
-		/**
-		 * Title text for the message to display when the chart has no data.
-		 */
-		EmptyMessageTitle: createClass({
-			displayName: 'BarChart.EmptyMessageTitle',
-			propName: 'EmptyMessageTitle',
-		}),
+		EmptyStateWrapper: EmptyStateWrapper,
 	},
 
 	render() {
@@ -359,16 +333,15 @@ const BarChart = createClass({
 			: yAxisFinalFormatter;
 
 		if (_.isEmpty(data) || width < 1 || height < 1 || isLoading) {
-			const emptyMessageBodyProp = _.get(getFirst(this.props, BarChart.EmptyMessageBody), 'props');
-			const emptyMessageTitleProp = _.get(getFirst(this.props, BarChart.EmptyMessageTitle), 'props', {children: 'You have no data.'});
+			const emptyWrapperBody = getFirst(this.props, BarChart.EmptyStateWrapper, <BarChart.EmptyStateWrapper Title='You have no data'/>);
 
 			return (
 				<EmptyStateWrapper
+					{...emptyWrapperBody}
 					isEmpty={_.isEmpty(data)}
 					isLoading={isLoading}
 				>
-					<EmptyStateWrapper.EmptyMessageBody {...emptyMessageBodyProp}/>
-					<EmptyStateWrapper.EmptyMessageTitle {...emptyMessageTitleProp}/>
+					{emptyWrapperBody.props.children}
 					<svg
 						{...omitProps(passThroughs, BarChart)}
 						className={svgClasses}
