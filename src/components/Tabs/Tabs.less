@@ -14,7 +14,7 @@
 	}
 
 	&-Tab {
-		flex: 1 1 auto;
+		flex: 1 1 0px;
 		height: inherit;
 		display: flex;
 		justify-content: center;
@@ -135,6 +135,7 @@
 			}
 		}
 		.lucid-Tabs-Tab-is-active {
+			border-bottom: @Tabs-border-width solid @color-white;
 			.Tabs-mixin-tab-arrow-background(@color-white);
 		}
 		.lucid-Tabs-Tab + .lucid-Tabs-Tab-is-disabled {
