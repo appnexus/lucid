@@ -25,7 +25,6 @@ import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 const cx = lucidClassNames.bind('&-LineChart');
 
 const {
-	any,
 	arrayOf,
 	func,
 	instanceOf,
