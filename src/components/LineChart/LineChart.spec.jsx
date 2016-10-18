@@ -11,6 +11,10 @@ import assert from 'assert';
 import LineChart from './LineChart';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
+const {
+  EmptyStateWrapper: { Title, Body },
+} = LineChart;
+
 describe('LineChart', () => {
 	let wrapper;
 
@@ -53,12 +57,14 @@ describe('LineChart', () => {
 	});
 
 	describe('child components', () => {
-		describe('EmptyMessageTitle', () => {
+		describe('EmptyStateWrapper Title', () => {
 			it('should render the message title element', () => {
 				const titleText = 'Here is the Title Text';
 				wrapper = mount(
 					<LineChart>
-						<LineChart.EmptyMessageTitle>{titleText}</LineChart.EmptyMessageTitle>
+						<EmptyStateWrapper>
+								<Title>{titleText}</Title>
+						</EmptyStateWrapper>
 					</LineChart>
 				);
 
@@ -70,12 +76,14 @@ describe('LineChart', () => {
 			});
 		});
 
-		describe('EmptyMessageBody', () => {
+		describe('EmptyStateWrapper Body', () => {
 			it('should render the message body element', () => {
 				const bodyElement = <div className='parent-div'><div className='nested-div'></div></div>;
 				wrapper = mount(
 					<LineChart>
-						<LineChart.EmptyMessageBody>{bodyElement}}</LineChart.EmptyMessageBody>
+						<EmptyStateWrapper>
+							<Body>{bodyElement}}</Body>
+						</EmptyStateWrapper>
 					</LineChart>
 				);
 

@@ -11,6 +11,10 @@ import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
 const { Column, ColumnGroup } = DataTable;
 
+const {
+  EmptyStateWrapper: { Title, Body },
+} = DataTable;
+
 const testData = [
 	{
 		'id': '01',
@@ -565,12 +569,14 @@ describe('DataTable', () => {
 			});
 		});
 
-		describe('EmptyMessageTitle', () => {
+		describe('EmptyStateWrapper Title', () => {
 			it('should render the message title element', () => {
 				const titleText = 'Here is the Title Text';
 				const wrapper = shallow(
 					<DataTable>
-						<DataTable.EmptyMessageTitle>{titleText}</DataTable.EmptyMessageTitle>
+						<EmptyStateWrapper>
+							<Title>{titleText}</Title>
+						</EmptyStateWrapper>
 					</DataTable>
 				);
 
@@ -582,12 +588,14 @@ describe('DataTable', () => {
 			});
 		});
 
-		describe('EmptyMessageBody', () => {
+		describe('EmptyStateWrapper Body', () => {
 			it('should render the message body element', () => {
 				const bodyElement = <div className='parent-div'><div className='nested-div'></div></div>;
 				const wrapper = shallow(
 					<DataTable>
-						<DataTable.EmptyMessageBody>{bodyElement}}</DataTable.EmptyMessageBody>
+						<EmptyStateWrapper>
+							<Body>{bodyElement}}</Body>
+						</EmptyStateWrapper>
 					</DataTable>
 				);
 

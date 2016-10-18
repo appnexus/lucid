@@ -11,6 +11,10 @@ import assert from 'assert';
 import BarChart from './BarChart';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper'
 
+const {
+  EmptyStateWrapper: { Title, Body },
+} = BarChart;
+
 describe('BarChart', () => {
 	let wrapper;
 
@@ -53,12 +57,14 @@ describe('BarChart', () => {
 	});
 
 	describe('child components', () => {
-		describe('EmptyMessageTitle', () => {
+		describe('EmptyStateWrapper Title', () => {
 			it('should render the message title element', () => {
 				const titleText = 'Here is the Title Text';
 				wrapper = mount(
 					<BarChart>
-						<BarChart.EmptyMessageTitle>{titleText}</BarChart.EmptyMessageTitle>
+						<EmptyStateWrapper>
+							<Title>{titleText}</Title>
+						</EmptyStateWrapper>
 					</BarChart>
 				);
 
@@ -70,12 +76,14 @@ describe('BarChart', () => {
 			});
 		});
 
-		describe('EmptyMessageBody', () => {
+		describe('EmptyStateWrapper Body', () => {
 			it('should render the message body element', () => {
 				const bodyElement = <div className='parent-div'><div className='nested-div'></div></div>;
 				wrapper = mount(
 					<BarChart>
-						<BarChart.EmptyMessageBody>{bodyElement}}</BarChart.EmptyMessageBody>
+						<EmptyStateWrapper>
+							<Body>{bodyElement}}</Body>
+						</EmptyStateWrapper>
 					</BarChart>
 				);
 
