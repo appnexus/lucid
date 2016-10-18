@@ -322,11 +322,11 @@ const DataTable = createClass({
 									{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => (
 										<Td
 											{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
-											className={cx({'&-empty-cell': _.isEmpty(_.get(row, columnProps.field))})}
 											style={{
 												width: columnProps.width,
 											}}
 											key={'row' + index + _.get(columnProps, 'field', columnIndex)}
+											isEmpty={_.isEmpty(_.get(row, columnProps.field))}
 										>
 											{_.get(row, columnProps.field, 'No Data')}
 										</Td>

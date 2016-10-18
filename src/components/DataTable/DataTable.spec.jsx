@@ -237,18 +237,17 @@ describe('DataTable', () => {
 				// for each row check that the correct cells are rendered in order
 				trsWrapper.forEach((trWrapper, index) => {
 					const tdsWrapper = trWrapper.shallow().find(ScrollTable.Td);
-					const tdArray = tdsWrapper.map((tdWrapper) => tdWrapper.shallow());
 
 					assert.equal(trWrapper.props().isDisabled, _.get(testData[index], 'isDisabled'), 'row must be passed `isDisabled`');
 					assert.equal(trWrapper.props().isSelected, _.get(testData[index], 'isSelected'), 'row must be passed `isSelected`');
 					assert.equal(trWrapper.props().isActive, _.get(testData[index], 'isActive'), 'row must be passed `isActive`');
 
-					assert.equal(tdArray[0].text(), _.get(testData[index], 'id'), 'first cell must match id of current row');
-					assert.equal(tdArray[1].text(), _.get(testData[index], 'first_name'), 'second cell must match first_name of current row');
-					assert(tdArray[2].hasClass('lucid-DataTable-empty-cell'), 'should be marked as an empty-cell');
-					assert.equal(tdArray[2].text(), 'No Data', 'third (empty) cell should be `No Data`');
-					assert.equal(tdArray[3].text(), _.get(testData[index], 'email'), 'fourth cell must match email of current row');
-					assert.equal(tdArray[4].text(), _.get(testData[index], 'occupation'), 'fifth cell must match occupation of current row');
+					assert.equal(tdsWrapper[0].children().text(), _.get(testData[index], 'id'), 'first cell must match id of current row');
+					assert.equal(tdsWrapper[1].children().text(), _.get(testData[index], 'first_name'), 'second cell must match first_name of current row');
+					assert(tdsWrapper[2].props().isEmpty, 'should be marked as an empty-cell');
+					assert.equal(tdsWrapper[2].children().text(), 'No Data', 'third (empty) cell should be `No Data`');
+					assert.equal(tdsWrapper[3].children().text(), _.get(testData[index], 'email'), 'fourth cell must match email of current row');
+					assert.equal(tdsWrapper[4].children().text(), _.get(testData[index], 'occupation'), 'fifth cell must match occupation of current row');
 				});
 			});
 		});
