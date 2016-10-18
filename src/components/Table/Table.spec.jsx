@@ -319,6 +319,16 @@ describe('Table', () => {
 						assert.equal(wrapper.find('td.lucid-Table-has-border-left').length, 1);
 					});
 				});
+
+				describe('isEmpty', () => {
+					it('should apply the class name `lucid-Table-is-empty`', () => {
+						const wrapper = shallow(
+							<Td isEmpty />
+						);
+
+						assert.equal(wrapper.find('td.lucid-Table-is-empty').length, 1);
+					});
+				});
 			});
 		});
 	});

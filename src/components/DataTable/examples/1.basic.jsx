@@ -26,7 +26,6 @@ const data = [
 	{
 		'id': '04',
 		'first_name': 'Aristotle',
-		'last_name': '--',
 		'email': 'aristotle@example.com',
 		'occupation': 'Tutor',
 	},

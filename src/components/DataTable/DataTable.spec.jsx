@@ -167,8 +167,29 @@ describe('DataTable', () => {
 			});
 
 			it('should render a cell in each row for each object property in the array elements', () => {
+				const testDataWithEmptyCells = [
+					{
+						'id': '01',
+						'first_name': 'Isaac',
+						'email': 'inewton@example.com',
+						'occupation': 'Physicist',
+						'isDisabled': true,
+						'isSelected': true,
+						'isActive': true,
+					},
+					{
+						'id': '02',
+						'first_name': 'Albert',
+						'email': 'aeinstein@example.com',
+						'occupation': 'Physicist',
+						'isDisabled': false,
+						'isSelected': false,
+						'isActive': false,
+					},
+				];
+
 				const wrapper = shallow(
-					<DataTable data={testData}>
+					<DataTable data={testDataWithEmptyCells}>
 						<Column field='id' title='ID'/>
 						<Column field='first_name' title='First'/>
 						<Column field='last_name' title='Last'/>
@@ -186,17 +207,17 @@ describe('DataTable', () => {
 				// for each row check that the correct cells are rendered in order
 				trsWrapper.forEach((trWrapper, index) => {
 					const tdsWrapper = trWrapper.shallow().find(ScrollTable.Td);
-					const tdArray = tdsWrapper.map((tdWrapper) => tdWrapper.shallow());
 
 					assert.equal(trWrapper.props().isDisabled, _.get(testData[index], 'isDisabled'), 'row must be passed `isDisabled`');
 					assert.equal(trWrapper.props().isSelected, _.get(testData[index], 'isSelected'), 'row must be passed `isSelected`');
 					assert.equal(trWrapper.props().isActive, _.get(testData[index], 'isActive'), 'row must be passed `isActive`');
 
-					assert.equal(tdArray[0].text(), _.get(testData[index], 'id'), 'first cell must match id of current row');
-					assert.equal(tdArray[1].text(), _.get(testData[index], 'first_name'), 'second cell must match first_name of current row');
-					assert.equal(tdArray[2].text(), _.get(testData[index], 'last_name'), 'third cell must match last_name of current row');
-					assert.equal(tdArray[3].text(), _.get(testData[index], 'email'), 'fourth cell must match email of current row');
-					assert.equal(tdArray[4].text(), _.get(testData[index], 'occupation'), 'fifth cell must match occupation of current row');
+					assert.equal(tdsWrapper.at(0).children().text(), _.get(testData[index], 'id'), 'first cell must match id of current row');
+					assert.equal(tdsWrapper.at(1).children().text(), _.get(testData[index], 'first_name'), 'second cell must match first_name of current row');
+					assert(tdsWrapper.at(2).props().isEmpty, 'should be marked as an empty-cell');
+					assert.equal(tdsWrapper.at(2).children().text(), 'No Data', 'third (empty) cell should be `No Data`');
+					assert.equal(tdsWrapper.at(3).children().text(), _.get(testData[index], 'email'), 'fourth cell must match email of current row');
+					assert.equal(tdsWrapper.at(4).children().text(), _.get(testData[index], 'occupation'), 'fifth cell must match occupation of current row');
 				});
 			});
 		});

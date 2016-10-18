@@ -303,8 +303,9 @@ const DataTable = createClass({
 												width: columnProps.width,
 											}}
 											key={'row' + index + _.get(columnProps, 'field', columnIndex)}
+											isEmpty={_.isEmpty(_.get(row, columnProps.field))}
 										>
-											{_.get(row, columnProps.field, '')}
+											{_.get(row, columnProps.field, 'No Data')}
 										</Td>
 									))}
 								</Tr>
