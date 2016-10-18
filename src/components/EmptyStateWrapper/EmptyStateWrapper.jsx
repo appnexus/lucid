@@ -10,7 +10,6 @@ import OverlayWrapper from '../OverlayWrapper/OverlayWrapper';
 const cx = lucidClassNames.bind('&-EmptyStateWrapper');
 
 const {
-	any,
 	bool,
 	node,
 	string,
@@ -50,29 +49,29 @@ const EmptyStateWrapper = createClass({
 		 *
 		 * The element to display in the body of the overlay.
 		 */
-		EmptyMessageBody: any,
+		Body: node,
 		/**
 		 * *Child Element*
 		 *
 		 * The element to display in the title of the overlay.
 		 */
-		EmptyMessageTitle: any,
+		Title: node,
 	},
 
 	components: {
 		/**
 		 * Body content for the message to display when there is no data.
 		 */
-		EmptyMessageBody: createClass({
-			displayName: 'EmptyStateWrapper.EmptyMessageBody',
-			propName: 'EmptyMessageBody',
+		Body: createClass({
+			displayName: 'EmptyStateWrapper.Body',
+			propName: 'Body',
 		}),
 		/**
 		 * Title text for the message to display when there is no data.
 		 */
-		EmptyMessageTitle: createClass({
-			displayName: 'EmptyStateWrapper.EmptyMessageTitle',
-			propName: 'EmptyMessageTitle',
+		Title: createClass({
+			displayName: 'EmptyStateWrapper.Title',
+			propName: 'Title',
 		}),
 	},
 
@@ -83,8 +82,8 @@ const EmptyStateWrapper = createClass({
 			isLoading,
 		} = this.props;
 
-		const emptyMessageBodyProp = _.get(getFirst(this.props, EmptyStateWrapper.EmptyMessageBody), 'props');
-		const emptyMessageTitleProp = _.get(getFirst(this.props, EmptyStateWrapper.EmptyMessageTitle), 'props', {children: 'You have no data.'});
+		const emptyMessageBodyProp = _.get(getFirst(this.props, EmptyStateWrapper.Body), 'props');
+		const emptyMessageTitleProp = _.get(getFirst(this.props, EmptyStateWrapper.Title), 'props', {children: 'You have no data.'});
 
 		return (
 			isLoading ?

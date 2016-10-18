@@ -19,7 +19,6 @@ import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 const cx = lucidClassNames.bind('&-BarChart');
 
 const {
-	any,
 	arrayOf,
 	func,
 	number,
@@ -223,13 +222,13 @@ const BarChart = createClass({
 		 *
 		 * The element to display in the body of the overlay for an empty chart.
 		 */
-		EmptyMessageBody: any,
+		EmptyMessageBody: React.PropTypes.shape(EmptyStateWrapper.Body.propTypes),
 		/**
 		 * *Child Element*
 		 *
 		 * The element to display in the title of the overlay for an empty chart.
 		 */
-		EmptyMessageTitle: any,
+		EmptyMessageTitle: React.PropTypes.shape(EmptyStateWrapper.Title.propTypes),
 	},
 
 	statics: {
@@ -275,20 +274,15 @@ const BarChart = createClass({
 	},
 
 	components: {
-		/**
-		 * Body content for the message to display when the chart has no data.
-		 */
-		EmptyMessageBody: createClass({
-			displayName: 'BarChart.EmptyMessageBody',
-			propName: 'EmptyMessageBody',
-		}),
-		/**
-		 * Title text for the message to display when the chart has no data.
-		 */
-		EmptyMessageTitle: createClass({
-			displayName: 'BarChart.EmptyMessageTitle',
-			propName: 'EmptyMessageTitle',
-		}),
+		// /**
+		//  * Body content for the message to display when the chart has no data.
+		//  */
+		// EmptyMessageBody: EmptyStateWrapper.Body,
+		// /**
+		//  * Title text for the message to display when the chart has no data.
+		//  */
+		// EmptyMessageTitle: EmptyStateWrapper.Title,
+		EmptyStateWrapper: EmptyStateWrapper,
 	},
 
 	render() {
@@ -359,16 +353,14 @@ const BarChart = createClass({
 			: yAxisFinalFormatter;
 
 		if (_.isEmpty(data) || width < 1 || height < 1 || isLoading) {
-			const emptyMessageBodyProp = _.get(getFirst(this.props, BarChart.EmptyMessageBody), 'props');
-			const emptyMessageTitleProp = _.get(getFirst(this.props, BarChart.EmptyMessageTitle), 'props', {children: 'You have no data.'});
+			const emptyStateWrapperProps = _.get(getFirst(this.props, BarChart.EmptyStateWrapper), 'props', {Title: 'You have no data.'});
 
 			return (
 				<EmptyStateWrapper
+					{...emptyStateWrapperProps}
 					isEmpty={_.isEmpty(data)}
 					isLoading={isLoading}
 				>
-					<EmptyStateWrapper.EmptyMessageBody {...emptyMessageBodyProp}/>
-					<EmptyStateWrapper.EmptyMessageTitle {...emptyMessageTitleProp}/>
 					<svg
 						{...omitProps(passThroughs, BarChart)}
 						className={svgClasses}
