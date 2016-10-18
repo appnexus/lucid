@@ -42,6 +42,7 @@ const VerticalTabs = buildHybridComponent(VerticalTabsDumb);
 // dumb components
 import AnalyzeDataIcon from './components/Icon/AnalyzeDataIcon/AnalyzeDataIcon';
 import ArrowIcon from './components/Icon/ArrowIcon/ArrowIcon';
+import AsteriskIcon from './components/Icon/AsteriskIcon/AsteriskIcon';
 import Axis from './components/Axis/Axis';
 import AxisLabel from './components/AxisLabel/AxisLabel';
 import Badge from './components/Badge/Badge';
@@ -170,6 +171,7 @@ export {
 	AccordionDumb,
 	AnalyzeDataIcon,
 	ArrowIcon,
+	AsteriskIcon,
 	Autocomplete,
 	AutocompleteDumb,
 	Axis,
