@@ -93,18 +93,6 @@ const DataTable = createClass({
 		 * - the optional prop `title`
 		 */
 		ColumnGroup: any,
-		/**
-		 * *Child Element*
-		 *
-		 * The element to display in the body of the overlay for an empty data table.
-		 */
-		EmptyMessageBody: any,
-		/**
-		 * *Child Element*
-		 *
-		 * The element to display in the title of the overlay for an empty data table.
-		 */
-		EmptyMessageTitle: any,
 	},
 
 	getDefaultProps() {
@@ -142,19 +130,9 @@ const DataTable = createClass({
 			getDefaultProps: () => ({ align: 'center' }),
 		}),
 		/**
-		 * Body content for the message to display when the data table has no data.
+		 * Renders wrapper when the data table has no data.
 		 */
-		EmptyMessageBody: createClass({
-			displayName: 'DataTable.EmptyMessageBody',
-			propName: 'EmptyMessageBody',
-		}),
-		/**
-		 * Title text for the message to display when the data table has no data.
-		 */
-		EmptyMessageTitle: createClass({
-			displayName: 'DataTable.EmptyMessageTitle',
-			propName: 'EmptyMessageTitle',
-		}),
+		EmptyStateWrapper: EmptyStateWrapper,
 	},
 
 	statics: {
@@ -236,16 +214,15 @@ const DataTable = createClass({
 			(childComponentElement) => childComponentElement.type === DataTable.ColumnGroup
 		);
 
-		const emptyMessageBodyProp = _.get(getFirst(this.props, DataTable.EmptyMessageBody), 'props');
-		const emptyMessageTitleProp = _.get(getFirst(this.props, DataTable.EmptyMessageTitle), 'props', {children: 'You have no items.'});
+		const emptyStateWrapper = getFirst(this.props, DataTable.EmptyStateWrapper, <DataTable.EmptyStateWrapper Title='You have no items.' />);
 
 		return (
 			<EmptyStateWrapper
-				isLoading={isLoading}
+				{...emptyStateWrapper.props}
 				isEmpty={_.isEmpty(data)}
+				isLoading={isLoading}
 			>
-				<EmptyStateWrapper.EmptyMessageBody {...emptyMessageBodyProp} />
-				<EmptyStateWrapper.EmptyMessageTitle {...emptyMessageTitleProp} />
+				{emptyStateWrapper.props.children}
 				<ScrollTable
 					style={style}
 					{...omitProps(passThroughs, DataTable)}

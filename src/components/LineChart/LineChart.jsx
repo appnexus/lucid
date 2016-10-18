@@ -308,18 +308,6 @@ const LineChart = createClass({
 		 * along the y2 axis.
 		 */
 		y2AxisColorOffset: number,
-		/**
-		 * *Child Element*
-		 *
-		 * The element to display in the body of the overlay for an empty chart.
-		 */
-		EmptyMessageBody: any,
-		/**
-		 * *Child Element*
-		 *
-		 * The element to display in the title of the overlay for an empty chart.
-		 */
-		EmptyMessageTitle: any,
 	},
 
 	statics: {
@@ -381,19 +369,9 @@ const LineChart = createClass({
 
 	components: {
 		/**
-		 * Body content for the message to display when the chart has no data.
+		 * Renders wrapper when the data table has no data.
 		 */
-		EmptyMessageBody: createClass({
-			displayName: 'LineChart.EmptyMessageBody',
-			propName: 'EmptyMessageBody',
-		}),
-		/**
-		 * Title text for the message to display when the chart has no data.
-		 */
-		EmptyMessageTitle: createClass({
-			displayName: 'LineChart.EmptyMessageTitle',
-			propName: 'EmptyMessageTitle',
-		}),
+		EmptyStateWrapper: EmptyStateWrapper,
 	},
 
 	render() {
@@ -520,16 +498,15 @@ const LineChart = createClass({
 		const xPoints = _.chain(xPointMap).keys().map(_.toNumber).value();
 
 		if (_.isEmpty(data) || width < 1 || height < 1 || isLoading) {
-			const emptyMessageBodyProp = _.get(getFirst(this.props, LineChart.EmptyMessageBody), 'props');
-			const emptyMessageTitleProp = _.get(getFirst(this.props, LineChart.EmptyMessageTitle), 'props', {children: 'You have no data.'});
+			const emptyStateWrapper = getFirst(this.props, LineChart.EmptyStateWrapper, <LineChart.EmptyStateWrapper Title='You have no data.' />);
 
 			return (
 				<EmptyStateWrapper
+					{...emptyStateWrapper.props}
 					isEmpty={_.isEmpty(data)}
 					isLoading={isLoading}
 				>
-					<EmptyStateWrapper.EmptyMessageBody {...emptyMessageBodyProp} />
-					<EmptyStateWrapper.EmptyMessageTitle {...emptyMessageTitleProp} />
+					{emptyStateWrapper.props.children}
 					<svg
 						{...omitProps(passThroughs, LineChart)}
 						className={svgClasses}

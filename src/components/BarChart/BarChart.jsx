@@ -262,6 +262,9 @@ const BarChart = createClass({
 	},
 
 	components: {
+		/**
+		 * Renders wrapper when the data table has no data.
+		 */
 		EmptyStateWrapper: EmptyStateWrapper,
 	},
 
@@ -333,15 +336,15 @@ const BarChart = createClass({
 			: yAxisFinalFormatter;
 
 		if (_.isEmpty(data) || width < 1 || height < 1 || isLoading) {
-			const emptyWrapperBody = getFirst(this.props, BarChart.EmptyStateWrapper, <BarChart.EmptyStateWrapper Title='You have no data'/>);
+			const emptyStateWrapper = getFirst(this.props, BarChart.EmptyStateWrapper, <BarChart.EmptyStateWrapper Title='You have no data.' />);
 
 			return (
 				<EmptyStateWrapper
-					{...emptyWrapperBody}
+					{...emptyStateWrapper.props}
 					isEmpty={_.isEmpty(data)}
 					isLoading={isLoading}
 				>
-					{emptyWrapperBody.props.children}
+					{emptyStateWrapper.props.children}
 					<svg
 						{...omitProps(passThroughs, BarChart)}
 						className={svgClasses}

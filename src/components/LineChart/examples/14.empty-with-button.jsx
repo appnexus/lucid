@@ -1,6 +1,11 @@
 import React from 'react';
 import { LineChart, Button } from '../../../index';
 
+const {
+  EmptyStateWrapper,
+  EmptyStateWrapper: { Title, Body },
+} = LineChart;
+
 export default React.createClass({
 	render() {
 		return (
@@ -9,16 +14,18 @@ export default React.createClass({
 
 				yAxisFields={['blueberries']}
 			>
-				<LineChart.EmptyMessageTitle>
-					Something went wrong.
-				</LineChart.EmptyMessageTitle>
-				<LineChart.EmptyMessageBody
-					style={{
-						fontSize: '12px',
-					}}
-				>
-                    <Button>Action</Button>
-				</LineChart.EmptyMessageBody>
+				<EmptyStateWrapper>
+					<Title>
+						Something went wrong.
+					</Title>
+					<Body
+						style={{
+							fontSize: '12px',
+						}}
+					>
+						<Button>Action</Button>
+					</Body>
+				</EmptyStateWrapper>
 			</LineChart>
 		);
 	},
