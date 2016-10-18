@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import { createClass, getFirst, omitProps } from '../../util/component-types';
 import {
 	minByFields,
 	maxByFields,
@@ -20,6 +20,7 @@ import Lines from '../Lines/Lines';
 import Points from '../Points/Points';
 import ToolTip from '../ToolTip/ToolTip';
 import ContextMenu from '../ContextMenu/ContextMenu';
+import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
 const cx = lucidClassNames.bind('&-LineChart');
 
@@ -91,6 +92,10 @@ const LineChart = createClass({
 		 *
 		 */
 		legend: object,
+		/**
+		 * Controls the visibility of the `LoadingMessage`.
+		 */
+		isLoading: bool,
 		/**
 		 * Show tool tips on hover.
 		 */
@@ -361,6 +366,13 @@ const LineChart = createClass({
 		};
 	},
 
+	components: {
+		/**
+		 * Renders wrapper when the data table has no data.
+		 */
+		EmptyStateWrapper: EmptyStateWrapper,
+	},
+
 	render() {
 		const {
 			className,
@@ -369,6 +381,7 @@ const LineChart = createClass({
 			margin: marginOriginal,
 			data,
 			legend,
+			isLoading,
 			hasToolTips,
 			hasLegend,
 			palette,
@@ -427,19 +440,6 @@ const LineChart = createClass({
 
 		const svgClasses = cx(className, '&');
 
-		// TODO: Consider displaying something specific when there is no data,
-		// perhaps a loading indicator.
-		if (_.isEmpty(data) || width < 1 || height < 1) {
-			return (
-				<svg
-					{...omitProps(passThroughs, LineChart)}
-					className={svgClasses}
-					width={width}
-					height={height}
-				/>
-			);
-		}
-
 		const innerWidth = width - margin.left - margin.right;
 		const innerHeight = height - margin.top - margin.bottom;
 
@@ -496,6 +496,45 @@ const LineChart = createClass({
 		}, {});
 		const xPoints = _.chain(xPointMap).keys().map(_.toNumber).value();
 
+		if (_.isEmpty(data) || width < 1 || height < 1 || isLoading) {
+			const emptyStateWrapper = getFirst(this.props, LineChart.EmptyStateWrapper, <LineChart.EmptyStateWrapper Title='You have no data.' />);
+
+			return (
+				<EmptyStateWrapper
+					{...emptyStateWrapper.props}
+					isEmpty={_.isEmpty(data)}
+					isLoading={isLoading}
+				>
+					{emptyStateWrapper.props.children}
+					<svg
+						{...omitProps(passThroughs, LineChart)}
+						className={svgClasses}
+						width={width}
+						height={height}
+					>
+						{/* y axis */}
+						<g transform={`translate(${margin.left}, ${margin.top})`}>
+							<Axis
+								orient='left'
+								scale={yScale}
+								tickFormat={yAxisFormatter}
+								ref='yAxis'
+							/>
+						</g>
+						{/* x axis */}
+						<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
+							<Axis
+								orient='bottom'
+								scale={xScale}
+								tickFormat={xFinalFormatter}
+								ref='xAxis'
+							/>
+						</g>
+					</svg>
+				</EmptyStateWrapper>
+			);
+		}
+
 		return (
 			<svg
 				{...omitProps(passThroughs, LineChart)}
@@ -503,7 +542,6 @@ const LineChart = createClass({
 				width={width}
 				height={height}
 			>
-
 				{/* tooltips */}
 				<g transform={`translate(${margin.left}, ${margin.top})`}>
 					{hasToolTips && isHovering && !_.isNil(mouseX) ?

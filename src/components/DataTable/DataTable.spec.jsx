@@ -7,9 +7,13 @@ import { common } from '../../util/generic-tests';
 import DataTable from './DataTable';
 import ScrollTable from '../ScrollTable/ScrollTable';
 import Checkbox from '../Checkbox/Checkbox';
-import DataTableWrapper from '../DataTableWrapper/DataTableWrapper';
+import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
 const { Column, ColumnGroup } = DataTable;
+
+const {
+  EmptyStateWrapper: { Title, Body },
+} = DataTable;
 
 const testData = [
 	{
@@ -464,7 +468,7 @@ describe('DataTable', () => {
 					<DataTable isLoading />
 				);
 
-				const loadingIndicatorWrapper = wrapper.find(DataTableWrapper).shallow().find('LoadingIndicator');
+				const loadingIndicatorWrapper = wrapper.find(EmptyStateWrapper).shallow().find('LoadingIndicator');
 
 				assert(loadingIndicatorWrapper.prop('isLoading'));
 			});
@@ -586,34 +590,38 @@ describe('DataTable', () => {
 			});
 		});
 
-		describe('EmptyMessageTitle', () => {
+		describe('EmptyStateWrapper Title', () => {
 			it('should render the message title element', () => {
 				const titleText = 'Here is the Title Text';
 				const wrapper = shallow(
 					<DataTable>
-						<DataTable.EmptyMessageTitle>{titleText}</DataTable.EmptyMessageTitle>
+						<EmptyStateWrapper>
+							<Title>{titleText}</Title>
+						</EmptyStateWrapper>
 					</DataTable>
 				);
 
 				const messageTitleWrapper = wrapper
-					.find(DataTableWrapper).shallow()
-					.find('.lucid-DataTableWrapper-message-title').shallow();
+					.find(EmptyStateWrapper).shallow()
+					.find('.lucid-EmptyStateWrapper-message-title').shallow();
 
 				assert.equal(messageTitleWrapper.text(), titleText, 'must contain the title text');
 			});
 		});
 
-		describe('EmptyMessageBody', () => {
+		describe('EmptyStateWrapper Body', () => {
 			it('should render the message body element', () => {
 				const bodyElement = <div className='parent-div'><div className='nested-div'></div></div>;
 				const wrapper = shallow(
 					<DataTable>
-						<DataTable.EmptyMessageBody>{bodyElement}}</DataTable.EmptyMessageBody>
+						<EmptyStateWrapper>
+							<Body>{bodyElement}}</Body>
+						</EmptyStateWrapper>
 					</DataTable>
 				);
 
 				const messageBodyWrapper = wrapper
-					.find(DataTableWrapper).shallow();
+					.find(EmptyStateWrapper).shallow();
 
 				assert(messageBodyWrapper.contains(bodyElement), 'must contain the body element');
 			});
