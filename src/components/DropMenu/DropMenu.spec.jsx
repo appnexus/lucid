@@ -805,12 +805,12 @@ describe('DropMenu', () => {
 
 				const flyOutDOMNode = document.querySelector('.lucid-DropMenu.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
 				assert.equal(flyOutDOMNode.children.length, 9);
-				assert.equal(flyOutDOMNode.children[0].firstChild.innerHTML, 'Preferred');
+				assert.equal(flyOutDOMNode.children[0].innerText, 'Preferred');
 				assert.equal(flyOutDOMNode.children[1].innerHTML, 'option a');
 				assert.equal(flyOutDOMNode.children[2].innerHTML, 'option b');
 				assert.equal(flyOutDOMNode.children[3].innerHTML, 'option c');
 				assert.equal(flyOutDOMNode.children[4].className, 'lucid-DropMenu-OptionGroup-divider');
-				assert.equal(flyOutDOMNode.children[5].firstChild.innerHTML, 'Available');
+				assert.equal(flyOutDOMNode.children[5].innerText, 'Available');
 				assert.equal(flyOutDOMNode.children[6].innerHTML, 'option x');
 				assert.equal(flyOutDOMNode.children[7].innerHTML, 'option y');
 				assert.equal(flyOutDOMNode.children[8].innerHTML, 'option z');
@@ -842,7 +842,7 @@ describe('DropMenu', () => {
 
 				const flyOutDOMNode = document.querySelector('.lucid-DropMenu.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
 				assert.equal(flyOutDOMNode.children.length, 4);
-				assert.equal(flyOutDOMNode.children[0].firstChild.innerHTML, 'Available');
+				assert.equal(flyOutDOMNode.children[0].innerText, 'Available');
 				assert.equal(flyOutDOMNode.children[1].innerHTML, 'option x');
 				assert.equal(flyOutDOMNode.children[2].innerHTML, 'option y');
 				assert.equal(flyOutDOMNode.children[3].innerHTML, 'option z');

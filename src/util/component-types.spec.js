@@ -183,7 +183,7 @@ describe('component-types', () => {
 	});
 
 	describe('findTypes', () => {
-		it('should find all elements of the same type from children', () => {
+		it('should find all elements of the same type from children', (done) => {
 			const Option = createClass({ propName: 'option' });
 
 			const Selector = createClass({
@@ -193,8 +193,10 @@ describe('component-types', () => {
 					assert.equal(2, optionElements.length, 'length must be 2');
 					assert.equal(true, _.get(optionElements[0].props, 'isDisabled'), 'element must have prop `isDisabled`');
 					assert.equal('Select red', _.get(optionElements[1].props, 'title'), 'element must have prop `title`');
+					done();
 				},
 			});
+
 			shallow(
 				<Selector>
 					<button />
@@ -206,7 +208,7 @@ describe('component-types', () => {
 			);
 		});
 
-		it('should find all elements of the same type from props if type has `propName` defined', () => {
+		it('should find all elements of the same type from props if type has `propName` defined', (done) => {
 			const Option = createClass({ propName: ['option', 'options'] });
 
 			const Selector = createClass({
@@ -217,8 +219,10 @@ describe('component-types', () => {
 					assert.equal('red', _.get(optionElements[0].props, 'children'), 'element children must match prop value');
 					assert(_.isEqual({ children: 'green', isDisabled: true }, optionElements[1].props), 'element props must match props');
 					assert.equal('blue', _.get(optionElements[2].props, 'children'), 'element children must match prop value');
+					done();
 				},
 			});
+
 			shallow(
 				<Selector
 					option='red'
@@ -230,7 +234,7 @@ describe('component-types', () => {
 			);
 		});
 
-		it('should find all elements of the same type from props and children', () => {
+		it('should find all elements of the same type from props and children', (done) => {
 			const Option = createClass({ propName: ['option', 'options'] });
 
 			const Selector = createClass({
@@ -243,8 +247,10 @@ describe('component-types', () => {
 					assert.equal('blue', _.get(optionElements[2].props, 'children'), 'element children must match prop value');
 					assert.equal(true, _.get(optionElements[3].props, 'isDisabled'), 'element must have prop `isDisabled`');
 					assert.equal('Select red', _.get(optionElements[4].props, 'title'), 'element must have prop `title`');
+					done();
 				},
 			});
+
 			shallow(
 				<Selector
 					option='red'
