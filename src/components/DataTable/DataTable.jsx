@@ -296,18 +296,22 @@ const DataTable = createClass({
 											/>
 										</Td>
 									) : null}
-									{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => (
-										<Td
-											{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
-											style={{
-												width: columnProps.width,
-											}}
-											key={'row' + index + _.get(columnProps, 'field', columnIndex)}
-											isEmpty={_.isEmpty(_.get(row, columnProps.field))}
-										>
-											{_.get(row, columnProps.field, 'No Data')}
-										</Td>
-									))}
+									{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => {
+										const cellValue = _.get(row, columnProps.field);
+										const isEmpty = _.isEmpty(_.toString(cellValue));
+
+										return (
+											<Td
+												{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
+												style={{
+													width: columnProps.width,
+												}}
+												key={'row' + index + _.get(columnProps, 'field', columnIndex)}
+												isEmpty={isEmpty}
+											>
+												{isEmpty ? 'No Data' : cellValue}
+											</Td>
+									)})}
 								</Tr>
 						))
 						:
