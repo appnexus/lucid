@@ -4,7 +4,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, filterTypes, getFirst, omitProps } from '../../util/component-types';
 
 import Checkbox from '../Checkbox/Checkbox';
-import DataTableWrapper from '../DataTableWrapper/DataTableWrapper';
+import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 import ScrollTable from '../ScrollTable/ScrollTable';
 
 const {
@@ -28,7 +28,7 @@ const {
 
 /**
  *
- * {"categories": ["table"], "madeFrom": ["Checkbox", "DataTableWrapper", "ScrollTable"]}
+ * {"categories": ["table"], "madeFrom": ["Checkbox", "EmptyStateWrapper", "ScrollTable"]}
  *
  * `DataTable` provides a simple abstraction over the `Table` component to make it easier to define data-driven tables and render an array of objects.
  */
@@ -93,18 +93,6 @@ const DataTable = createClass({
 		 * - the optional prop `title`
 		 */
 		ColumnGroup: any,
-		/**
-		 * *Child Element*
-		 *
-		 * The element to display in the body of the overlay for an empty data table.
-		 */
-		EmptyMessageBody: any,
-		/**
-		 * *Child Element*
-		 *
-		 * The element to display in the title of the overlay for an empty data table.
-		 */
-		EmptyMessageTitle: any,
 	},
 
 	getDefaultProps() {
@@ -142,19 +130,9 @@ const DataTable = createClass({
 			getDefaultProps: () => ({ align: 'center' }),
 		}),
 		/**
-		 * Body content for the message to display when the data table has no data.
+		 * Renders wrapper when the data table has no data.
 		 */
-		EmptyMessageBody: createClass({
-			displayName: 'DataTable.EmptyMessageBody',
-			propName: 'EmptyMessageBody',
-		}),
-		/**
-		 * Title text for the message to display when the data table has no data.
-		 */
-		EmptyMessageTitle: createClass({
-			displayName: 'DataTable.EmptyMessageTitle',
-			propName: 'EmptyMessageTitle',
-		}),
+		EmptyStateWrapper: EmptyStateWrapper,
 	},
 
 	statics: {
@@ -236,16 +214,15 @@ const DataTable = createClass({
 			(childComponentElement) => childComponentElement.type === DataTable.ColumnGroup
 		);
 
-		const emptyMessageBodyProp = _.get(getFirst(this.props, DataTable.EmptyMessageBody), 'props');
-		const emptyMessageTitleProp = _.get(getFirst(this.props, DataTable.EmptyMessageTitle), 'props', {children: 'You have no items.'});
+		const emptyStateWrapper = getFirst(this.props, DataTable.EmptyStateWrapper, <DataTable.EmptyStateWrapper Title='You have no items.' />);
 
 		return (
-			<DataTableWrapper
-				isLoading={isLoading}
+			<EmptyStateWrapper
+				{...emptyStateWrapper.props}
 				isEmpty={_.isEmpty(data)}
+				isLoading={isLoading}
 			>
-				<DataTableWrapper.EmptyMessageBody {...emptyMessageBodyProp} />
-				<DataTableWrapper.EmptyMessageTitle {...emptyMessageTitleProp} />
+				{emptyStateWrapper.props.children}
 				<ScrollTable
 					style={style}
 					{...omitProps(passThroughs, DataTable)}
@@ -319,17 +296,22 @@ const DataTable = createClass({
 											/>
 										</Td>
 									) : null}
-									{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => (
-										<Td
-											{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
-											style={{
-												width: columnProps.width,
-											}}
-											key={'row' + index + _.get(columnProps, 'field', columnIndex)}
-										>
-											{_.get(row, columnProps.field, '')}
-										</Td>
-									))}
+									{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => {
+										const cellValue = _.get(row, columnProps.field);
+										const isEmpty = _.isEmpty(_.toString(cellValue));
+
+										return (
+											<Td
+												{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
+												style={{
+													width: columnProps.width,
+												}}
+												key={'row' + index + _.get(columnProps, 'field', columnIndex)}
+												isEmpty={isEmpty}
+											>
+												{isEmpty ? 'No Data' : cellValue}
+											</Td>
+									)})}
 								</Tr>
 						))
 						:
@@ -354,7 +336,7 @@ const DataTable = createClass({
 					}
 					</Tbody>
 				</ScrollTable>
-			</DataTableWrapper>
+			</EmptyStateWrapper>
 		);
 	},
 });

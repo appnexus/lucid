@@ -42,6 +42,7 @@ const VerticalTabs = buildHybridComponent(VerticalTabsDumb);
 // dumb components
 import AnalyzeDataIcon from './components/Icon/AnalyzeDataIcon/AnalyzeDataIcon';
 import ArrowIcon from './components/Icon/ArrowIcon/ArrowIcon';
+import AsteriskIcon from './components/Icon/AsteriskIcon/AsteriskIcon';
 import Axis from './components/Axis/Axis';
 import AxisLabel from './components/AxisLabel/AxisLabel';
 import Badge from './components/Badge/Badge';
@@ -65,7 +66,7 @@ import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
 import DangerLightIcon from './components/Icon/DangerLightIcon/DangerLightIcon';
 import DataTable from './components/DataTable/DataTable';
-import DataTableWrapper from './components/DataTableWrapper/DataTableWrapper';
+import EmptyStateWrapper from './components/EmptyStateWrapper/EmptyStateWrapper';
 import DataViewIcon from './components/Icon/DataViewIcon/DataViewIcon';
 import Dialog from './components/Dialog/Dialog';
 import DownloadIcon from './components/Icon/DownloadIcon/DownloadIcon';
@@ -79,7 +80,6 @@ import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
 import FourSquaresIcon from'./components/Icon/FourSquaresIcon/FourSquaresIcon';
 import Grid from './components/Grid/Grid';
-import HatchPattern from './components/HatchPattern/HatchPattern';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
 import Icon from './components/Icon/Icon';
@@ -171,6 +171,7 @@ export {
 	AccordionDumb,
 	AnalyzeDataIcon,
 	ArrowIcon,
+	AsteriskIcon,
 	Autocomplete,
 	AutocompleteDumb,
 	Axis,
@@ -200,7 +201,7 @@ export {
 	DangerIcon,
 	DangerLightIcon,
 	DataTable,
-	DataTableWrapper,
+	EmptyStateWrapper,
 	DataViewIcon,
 	Dialog,
 	DownloadIcon,
@@ -220,7 +221,6 @@ export {
 	FilterIcon,
 	FourSquaresIcon,
 	Grid,
-	HatchPattern,
 	HelpIcon,
 	HomeIcon,
 	Icon,

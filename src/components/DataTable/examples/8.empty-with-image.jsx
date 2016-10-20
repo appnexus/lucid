@@ -1,6 +1,11 @@
 import React from 'react';
 import { DataTable } from '../../../index';
 
+const {
+  EmptyStateWrapper,
+  EmptyStateWrapper: { Title, Body },
+} = DataTable;
+
 export default React.createClass({
 	getInitialState() {
 		return {
@@ -16,10 +21,14 @@ export default React.createClass({
 				data={data}
 				density='extended'
 			>
-				<DataTable.EmptyMessageTitle>This empty message has a large image in it.</DataTable.EmptyMessageTitle>
-				<DataTable.EmptyMessageBody>
-					<img src='https://dummyimage.com/375x150/ff69/fff' />
-				</DataTable.EmptyMessageBody>
+				<EmptyStateWrapper>
+					<Title>
+						This empty message has a large image in it.
+					</Title>
+					<Body>
+						<img src='https://dummyimage.com/375x150/ff69/fff' />
+					</Body>
+				</EmptyStateWrapper>
 				<DataTable.Column
 					field='id'
 					width={41}

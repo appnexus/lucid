@@ -3,11 +3,10 @@ import React from 'react';
 import { createClass, getFirst } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 
-import HatchPattern from '../HatchPattern/HatchPattern';
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 import OverlayWrapper from '../OverlayWrapper/OverlayWrapper';
 
-const cx = lucidClassNames.bind('&-DataTableWrapper');
+const cx = lucidClassNames.bind('&-EmptyStateWrapper');
 
 const {
 	any,
@@ -18,15 +17,15 @@ const {
 
 /**
  *
- * {"categories": ["utility"], "madeFrom": ["HatchPattern", "LoadingIndicator", "OverlayWrapper"]}
+ * {"categories": ["utility"], "madeFrom": ["LoadingIndicator", "OverlayWrapper"]}
  *
- * A wrapper for the DataTable which can display either a `LoadingIndicator` or `OverlayWrapper`.
+ * A wrapper which can display either a `LoadingIndicator` or `OverlayWrapper`.
  *
  */
-const DataTableWrapper = createClass({
+const EmptyStateWrapper = createClass({
 	_isPrivate: true,
 
-	displayName: 'DataTableWrapper',
+	displayName: 'EmptyStateWrapper',
 
 	propTypes: {
 		/**
@@ -48,31 +47,31 @@ const DataTableWrapper = createClass({
 		/**
 		 * *Child Element*
 		 *
-		 * The element to display in the body of the overlay for an empty data table.
+		 * The element to display in the body of the overlay.
 		 */
-		EmptyMessageBody: any,
+		Body: any,
 		/**
 		 * *Child Element*
 		 *
-		 * The element to display in the title of the overlay for an empty data table.
+		 * The element to display in the title of the overlay.
 		 */
-		EmptyMessageTitle: any,
+		Title: any,
 	},
 
 	components: {
 		/**
-		 * Body content for the message to display when the data table has no data.
+		 * Body content for the message to display when there is no data.
 		 */
-		EmptyMessageBody: createClass({
-			displayName: 'DataTableWrapper.EmptyMessageBody',
-			propName: 'EmptyMessageBody',
+		Body: createClass({
+			displayName: 'EmptyStateWrapper.Body',
+			propName: 'Body',
 		}),
 		/**
-		 * Title text for the message to display when the data table has no data.
+		 * Title text for the message to display when there is no data.
 		 */
-		EmptyMessageTitle: createClass({
-			displayName: 'DataTableWrapper.EmptyMessageTitle',
-			propName: 'EmptyMessageTitle',
+		Title: createClass({
+			displayName: 'EmptyStateWrapper.Title',
+			propName: 'Title',
 		}),
 	},
 
@@ -83,8 +82,8 @@ const DataTableWrapper = createClass({
 			isLoading,
 		} = this.props;
 
-		const emptyMessageBodyProp = _.get(getFirst(this.props, DataTableWrapper.EmptyMessageBody), 'props');
-		const emptyMessageTitleProp = _.get(getFirst(this.props, DataTableWrapper.EmptyMessageTitle), 'props', {children: 'You have no Line Items.'});
+		const emptyMessageBodyProp = _.get(getFirst(this.props, EmptyStateWrapper.Body), 'props');
+		const emptyMessageTitleProp = _.get(getFirst(this.props, EmptyStateWrapper.Title), 'props', {children: 'You have no data.'});
 
 		return (
 			isLoading ?
@@ -97,7 +96,7 @@ const DataTableWrapper = createClass({
 					isVisible={isEmpty}
 				>
 					<OverlayWrapper.Message className={cx('&-message-container')}>
-						<HatchPattern />
+						<div className={cx('&-message-header')} />
 						<div className={cx('&-message-contents')}>
 							<header {...emptyMessageTitleProp} className={cx('&-message-title', emptyMessageTitleProp.className)} />
 							{emptyMessageBodyProp && <div {...emptyMessageBodyProp} />}
@@ -110,4 +109,4 @@ const DataTableWrapper = createClass({
 	},
 })
 
-export default DataTableWrapper;
+export default EmptyStateWrapper;

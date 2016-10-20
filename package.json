@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "1.17.0",
+  "version": "2.0.0",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "repository": {
@@ -91,10 +91,10 @@
     "node-resemble-js": "0.0.5",
     "postcss-loader": "^0.8.1",
     "raw-loader": "^0.5.1",
-    "react": "^0.14.0",
-    "react-addons-css-transition-group": "^0.14.0",
-    "react-addons-test-utils": "^0.14.0",
-    "react-dom": "^0.14.0",
+    "react": "^15.3.2",
+    "react-addons-css-transition-group": "^15.3.2",
+    "react-addons-test-utils": "^15.3.2",
+    "react-dom": "^15.3.2",
     "react-router": "^2.0.0",
     "sinon": "^2.0.0-pre",
     "style-loader": "^0.13.0",
@@ -102,8 +102,8 @@
     "webpack-dev-server": "^1.14.1"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.2",
-    "react-dom": "^0.14.0 || ^15.0.2",
-    "react-addons-css-transition-group": "^0.14.0 || ^15.0.2"
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-addons-css-transition-group": "^15.0.2"
   }
 }

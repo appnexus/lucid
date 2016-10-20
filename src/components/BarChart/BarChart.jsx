@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import { createClass, omitProps, getFirst } from '../../util/component-types';
 import {
 	maxByFields,
 	maxByFieldsStacked,
@@ -14,6 +14,7 @@ import AxisLabel from '../AxisLabel/AxisLabel';
 import Bars from '../Bars/Bars';
 import ContextMenu from '../ContextMenu/ContextMenu';
 import Legend from '../Legend/Legend';
+import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
 const cx = lucidClassNames.bind('&-BarChart');
 
@@ -84,6 +85,10 @@ const BarChart = createClass({
 		 *
 		 */
 		legend: object,
+		/**
+		 * Controls the visibility of the `LoadingMessage`.
+		 */
+		isLoading: bool,
 		/**
 		 * Show tool tips on hover.
 		 */
@@ -256,6 +261,13 @@ const BarChart = createClass({
 		};
 	},
 
+	components: {
+		/**
+		 * Renders wrapper when the data table has no data.
+		 */
+		EmptyStateWrapper: EmptyStateWrapper,
+	},
+
 	render() {
 		const {
 			className,
@@ -264,6 +276,7 @@ const BarChart = createClass({
 			margin: marginOriginal,
 			data,
 			legend,
+			isLoading,
 			hasToolTips,
 			hasLegend,
 			palette,
@@ -298,19 +311,6 @@ const BarChart = createClass({
 
 		const svgClasses = cx(className, '&');
 
-		// TODO: Consider displaying something specific when there is no data,
-		// perhaps a loading indicator.
-		if (_.isEmpty(data) || width < 1 || height < 1) {
-			return (
-				<svg
-					{...omitProps(passThroughs, BarChart)}
-					className={svgClasses}
-					width={width}
-					height={height}
-				/>
-			);
-		}
-
 		const innerWidth = width - margin.left - margin.right;
 		const innerHeight = height - margin.top - margin.bottom;
 
@@ -334,6 +334,45 @@ const BarChart = createClass({
 		const yFinalFormatter = yAxisTooltipDataFormatter
 			? yAxisTooltipDataFormatter
 			: yAxisFinalFormatter;
+
+		if (_.isEmpty(data) || width < 1 || height < 1 || isLoading) {
+			const emptyStateWrapper = getFirst(this.props, BarChart.EmptyStateWrapper, <BarChart.EmptyStateWrapper Title='You have no data.' />);
+
+			return (
+				<EmptyStateWrapper
+					{...emptyStateWrapper.props}
+					isEmpty={_.isEmpty(data)}
+					isLoading={isLoading}
+				>
+					{emptyStateWrapper.props.children}
+					<svg
+						{...omitProps(passThroughs, BarChart)}
+						className={svgClasses}
+						width={width}
+						height={height}
+					>
+						{/* x axis */}
+						<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
+							<Axis
+								orient='bottom'
+								scale={xScale}
+								tickCount={xAxisTickCount}
+							/>
+						</g>
+
+						{/* y axis */}
+						<g transform={`translate(${margin.left}, ${margin.top})`}>
+							<Axis
+								orient='left'
+								scale={yScale}
+								tickFormat={yFinalFormatter}
+								tickCount={yAxisTickCount}
+							/>
+						</g>
+					</svg>
+				</EmptyStateWrapper>
+			);
+		}
 
 		return (
 			<svg

@@ -469,6 +469,10 @@ const Td = createClass({
 		 * Define the cell as being the first 1-height cell in the row.
 		 */
 		isFirstSingle: bool,
+		/**
+		 * Should be `true` to render with a `No Data` indicator.
+		 */
+		isEmpty: bool,
 	},
 
 	getDefaultProps() {
@@ -490,6 +494,7 @@ const Td = createClass({
 			align,
 			hasBorderRight,
 			hasBorderLeft,
+			isEmpty,
 			...passThroughs,
 		} = this.props;
 
@@ -506,6 +511,7 @@ const Td = createClass({
 				'&-align-right': align === 'right',
 				'&-has-border-right': hasBorderRight,
 				'&-has-border-left': hasBorderLeft,
+				'&-is-empty': isEmpty,
 			}, className)} />
 		);
 	},

@@ -7,9 +7,13 @@ import { common } from '../../util/generic-tests';
 import DataTable from './DataTable';
 import ScrollTable from '../ScrollTable/ScrollTable';
 import Checkbox from '../Checkbox/Checkbox';
-import DataTableWrapper from '../DataTableWrapper/DataTableWrapper';
+import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
 const { Column, ColumnGroup } = DataTable;
+
+const {
+  EmptyStateWrapper: { Title, Body },
+} = DataTable;
 
 const testData = [
 	{
@@ -163,8 +167,30 @@ describe('DataTable', () => {
 			});
 
 			it('should render a cell in each row for each object property in the array elements', () => {
+				const testDataWithEmptyCells = [
+					{
+						'id': 1,
+						'first_name': 'Isaac',
+						'email': 'inewton@example.com',
+						'occupation': 'Physicist',
+						'isDisabled': true,
+						'isSelected': true,
+						'isActive': true,
+					},
+					{
+						'id': 2,
+						'first_name': 'Albert',
+						'last_name': null,
+						'email': 'aeinstein@example.com',
+						'occupation': 'Physicist',
+						'isDisabled': false,
+						'isSelected': false,
+						'isActive': false,
+					},
+				];
+
 				const wrapper = shallow(
-					<DataTable data={testData}>
+					<DataTable data={testDataWithEmptyCells}>
 						<Column field='id' title='ID'/>
 						<Column field='first_name' title='First'/>
 						<Column field='last_name' title='Last'/>
@@ -182,17 +208,18 @@ describe('DataTable', () => {
 				// for each row check that the correct cells are rendered in order
 				trsWrapper.forEach((trWrapper, index) => {
 					const tdsWrapper = trWrapper.shallow().find(ScrollTable.Td);
-					const tdArray = tdsWrapper.map((tdWrapper) => tdWrapper.shallow());
 
-					assert.equal(trWrapper.props().isDisabled, _.get(testData[index], 'isDisabled'), 'row must be passed `isDisabled`');
-					assert.equal(trWrapper.props().isSelected, _.get(testData[index], 'isSelected'), 'row must be passed `isSelected`');
-					assert.equal(trWrapper.props().isActive, _.get(testData[index], 'isActive'), 'row must be passed `isActive`');
+					assert.equal(trWrapper.props().isDisabled, _.get(testDataWithEmptyCells[index], 'isDisabled'), 'row must be passed `isDisabled`');
+					assert.equal(trWrapper.props().isSelected, _.get(testDataWithEmptyCells[index], 'isSelected'), 'row must be passed `isSelected`');
+					assert.equal(trWrapper.props().isActive, _.get(testDataWithEmptyCells[index], 'isActive'), 'row must be passed `isActive`');
 
-					assert.equal(tdArray[0].text(), _.get(testData[index], 'id'), 'first cell must match id of current row');
-					assert.equal(tdArray[1].text(), _.get(testData[index], 'first_name'), 'second cell must match first_name of current row');
-					assert.equal(tdArray[2].text(), _.get(testData[index], 'last_name'), 'third cell must match last_name of current row');
-					assert.equal(tdArray[3].text(), _.get(testData[index], 'email'), 'fourth cell must match email of current row');
-					assert.equal(tdArray[4].text(), _.get(testData[index], 'occupation'), 'fifth cell must match occupation of current row');
+					assert.equal(tdsWrapper.at(0).children().text(), _.get(testDataWithEmptyCells[index], 'id'), 'first cell must match id of current row');
+					assert(!tdsWrapper.at(0).prop('isEmpty'), 'should not be marked as empty, despite not being a string');
+					assert.equal(tdsWrapper.at(1).children().text(), _.get(testDataWithEmptyCells[index], 'first_name'), 'second cell must match first_name of current row');
+					assert(tdsWrapper.at(2).props().isEmpty, 'should be marked as an empty-cell');
+					assert.equal(tdsWrapper.at(2).children().text(), 'No Data', 'third (empty) cell should be `No Data`');
+					assert.equal(tdsWrapper.at(3).children().text(), _.get(testDataWithEmptyCells[index], 'email'), 'fourth cell must match email of current row');
+					assert.equal(tdsWrapper.at(4).children().text(), _.get(testDataWithEmptyCells[index], 'occupation'), 'fifth cell must match occupation of current row');
 				});
 			});
 		});
@@ -443,7 +470,7 @@ describe('DataTable', () => {
 					<DataTable isLoading />
 				);
 
-				const loadingIndicatorWrapper = wrapper.find(DataTableWrapper).shallow().find('LoadingIndicator');
+				const loadingIndicatorWrapper = wrapper.find(EmptyStateWrapper).shallow().find('LoadingIndicator');
 
 				assert(loadingIndicatorWrapper.prop('isLoading'));
 			});
@@ -565,34 +592,38 @@ describe('DataTable', () => {
 			});
 		});
 
-		describe('EmptyMessageTitle', () => {
+		describe('EmptyStateWrapper Title', () => {
 			it('should render the message title element', () => {
 				const titleText = 'Here is the Title Text';
 				const wrapper = shallow(
 					<DataTable>
-						<DataTable.EmptyMessageTitle>{titleText}</DataTable.EmptyMessageTitle>
+						<EmptyStateWrapper>
+							<Title>{titleText}</Title>
+						</EmptyStateWrapper>
 					</DataTable>
 				);
 
 				const messageTitleWrapper = wrapper
-					.find(DataTableWrapper).shallow()
-					.find('.lucid-DataTableWrapper-message-title').shallow();
+					.find(EmptyStateWrapper).shallow()
+					.find('.lucid-EmptyStateWrapper-message-title').shallow();
 
 				assert.equal(messageTitleWrapper.text(), titleText, 'must contain the title text');
 			});
 		});
 
-		describe('EmptyMessageBody', () => {
+		describe('EmptyStateWrapper Body', () => {
 			it('should render the message body element', () => {
 				const bodyElement = <div className='parent-div'><div className='nested-div'></div></div>;
 				const wrapper = shallow(
 					<DataTable>
-						<DataTable.EmptyMessageBody>{bodyElement}}</DataTable.EmptyMessageBody>
+						<EmptyStateWrapper>
+							<Body>{bodyElement}}</Body>
+						</EmptyStateWrapper>
 					</DataTable>
 				);
 
 				const messageBodyWrapper = wrapper
-					.find(DataTableWrapper).shallow();
+					.find(EmptyStateWrapper).shallow();
 
 				assert(messageBodyWrapper.contains(bodyElement), 'must contain the body element');
 			});

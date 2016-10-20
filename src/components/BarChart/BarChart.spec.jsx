@@ -9,6 +9,11 @@ import { common } from '../../util/generic-tests';
 import assert from 'assert';
 
 import BarChart from './BarChart';
+import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper'
+
+const {
+  EmptyStateWrapper: { Title, Body },
+} = BarChart;
 
 describe('BarChart', () => {
 	let wrapper;
@@ -35,6 +40,58 @@ describe('BarChart', () => {
 				{ x: 'Friday'    , y: 10 , y2: 2 }  ,
 			],
 		}),
+	});
+
+	describe('props', () => {
+		describe('isLoading', () => {
+			it('should show a `LoadingIndicator` if `isLoading`', () => {
+				wrapper = mount(
+					<BarChart isLoading />
+				);
+
+				const loadingIndicatorWrapper = wrapper.find(EmptyStateWrapper).find('LoadingIndicator');
+
+				assert(loadingIndicatorWrapper.prop('isLoading'));
+			});
+		});
+	});
+
+	describe('child components', () => {
+		describe('EmptyStateWrapper Title', () => {
+			it('should render the message title element', () => {
+				const titleText = 'Here is the Title Text';
+				wrapper = mount(
+					<BarChart>
+						<EmptyStateWrapper>
+							<Title>{titleText}</Title>
+						</EmptyStateWrapper>
+					</BarChart>
+				);
+
+				const messageTitleWrapper = wrapper
+					.find(EmptyStateWrapper)
+					.find('.lucid-EmptyStateWrapper-message-title');
+
+				assert.equal(messageTitleWrapper.text(), titleText, 'must contain the title text');
+			});
+		});
+
+		describe('EmptyStateWrapper Body', () => {
+			it('should render the message body element', () => {
+				const bodyElement = <div className='parent-div'><div className='nested-div'></div></div>;
+				wrapper = mount(
+					<BarChart>
+						<EmptyStateWrapper>
+							<Body>{bodyElement}}</Body>
+						</EmptyStateWrapper>
+					</BarChart>
+				);
+
+				const messageBodyWrapper = wrapper.find(EmptyStateWrapper);
+
+				assert(messageBodyWrapper.contains(bodyElement), 'must contain the body element');
+			});
+		});
 	});
 
 	describe('render', () => {
