@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import { createClass, getFirst } from '../../util/component-types';
+import { createClass, getFirst, omitProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
@@ -78,8 +78,10 @@ const EmptyStateWrapper = createClass({
 	render() {
 		const {
 			children,
+			className,
 			isEmpty,
 			isLoading,
+			...passThroughs,
 		} = this.props;
 
 		const emptyMessageBodyProp = _.get(getFirst(this.props, EmptyStateWrapper.Body), 'props');
@@ -87,13 +89,19 @@ const EmptyStateWrapper = createClass({
 
 		return (
 			isLoading ?
-				<LoadingIndicator isLoading>
+				<LoadingIndicator
+					className={cx('&', className)}
+					isLoading
+					{...omitProps(passThroughs, EmptyStateWrapper)}
+				>
 					{children}
 				</LoadingIndicator>
 			:
 				<OverlayWrapper
+					className={cx('&', className)}
 					hasOverlay={false}
 					isVisible={isEmpty}
+					{...omitProps(passThroughs, EmptyStateWrapper)}
 				>
 					<OverlayWrapper.Message className={cx('&-message-container')}>
 						<div className={cx('&-message-header')} />

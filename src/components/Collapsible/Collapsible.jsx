@@ -3,7 +3,7 @@ import React from 'react';
 import { Motion, spring } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass }  from '../../util/component-types';
+import { createClass, omitProps }  from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Collapsible');
 
@@ -142,7 +142,7 @@ const Collapsible = createClass({
 			>
 				{tween => (
 					React.createElement(rootType, {
-						...passThroughs,
+						...omitProps(passThroughs, Collapsible),
 						ref: this.storeRef('root'),
 						className: cx('&', className),
 						style: {
