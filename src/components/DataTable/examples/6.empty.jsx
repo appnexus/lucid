@@ -20,6 +20,7 @@ export default React.createClass({
 			<DataTable
 				data={_.map(data, (row, index) => (index === activeIndex ? {...row, isActive: true} : row))}
 				density='extended'
+				isFullWidth
 			>
 				<DataTable.Column
 					field='id'
