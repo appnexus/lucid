@@ -475,6 +475,16 @@ describe('DataTable', () => {
 				assert(loadingIndicatorWrapper.prop('isLoading'));
 			});
 		});
+
+		describe('isFullWidth', () => {
+			it('should apply the `&-full-width` class if `isFullWidth` is true', () => {
+				const wrapper = shallow(
+					<DataTable isFullWidth />
+				);
+
+				assert(wrapper.find(ScrollTable).hasClass('lucid-DataTable-full-width'));
+			});
+		});
 	});
 
 	describe('child components', () => {

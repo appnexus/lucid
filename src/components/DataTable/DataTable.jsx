@@ -37,10 +37,6 @@ const DataTable = createClass({
 
 	propTypes: {
 		/**
-		 * Styles that are passed through to the root container.
-		 */
-		style: object,
-		/**
 		 * Class names that are appended to the defaults.
 		 */
 		className: string,
@@ -49,17 +45,29 @@ const DataTable = createClass({
 		 */
 		data: arrayOf(object),
 		/**
-		 * Render a checkbox in the first column allowing `onSelect` and `onSelectAll` to be triggered.
-		 */
-		isSelectable: bool,
-		/**
 		 * Render each row item to be navigable, allowing `onRowClick` to be triggered.
 		 */
 		isActionable: bool,
 		/**
+		 * If `true`, the table will be set to fill the width of its parent container.
+		 */
+		isFullWidth: bool,
+		/**
 		 * Controls the visibility of the `LoadingMessage`.
 		 */
 		isLoading: bool,
+		/**
+		 * Render a checkbox in the first column allowing `onSelect` and `onSelectAll` to be triggered.
+		 */
+		isSelectable: bool,
+		/**
+		 * Styles that are passed through to the root container.
+		 */
+		style: object,
+		/**
+		 * Handler for row click. Signature is `(object, index, { props, event }) => {...}`
+		 */
+		onRowClick: func,
 		/**
 		 * Handler for checkbox selection. Signature is `(object, index, { props, event }) => {...}`
 		 */
@@ -68,10 +76,6 @@ const DataTable = createClass({
 		 * Handler for checkbox selection in the table header. Signature is `({ props, event }) => {...}`
 		 */
 		onSelectAll: func,
-		/**
-		 * Handler for row click. Signature is `(object, index, { props, event }) => {...}`
-		 */
-		onRowClick: func,
 		/**
 		 * Handler for column header click (for sorting). Signature is `(field, { props, event }) => {...}`
 		 */
@@ -97,11 +101,11 @@ const DataTable = createClass({
 
 	getDefaultProps() {
 		return {
-			isSelectable: false,
 			isActionable: false,
+			isSelectable: false,
+			onRowClick: _.noop,
 			onSelect: _.noop,
 			onSelectAll: _.noop,
-			onRowClick: _.noop,
 			onSort: _.noop,
 		};
 	},
@@ -186,6 +190,7 @@ const DataTable = createClass({
 			className,
 			data,
 			isActionable,
+			isFullWidth,
 			isLoading,
 			isSelectable,
 			style,
@@ -225,8 +230,11 @@ const DataTable = createClass({
 				{emptyStateWrapper.props.children}
 				<ScrollTable
 					style={style}
+					tableWidth={isFullWidth ? '100%' : null}
 					{...omitProps(passThroughs, DataTable)}
-					className={cx('&', className)}
+					className={cx('&', {
+						'&-full-width': isFullWidth,
+					}, className)}
 				>
 					<Thead>
 						<Tr>
