@@ -227,6 +227,10 @@ const TextField = createClass({
 		}
 	},
 
+	focus() {
+		this.refs.nativeElement.focus();
+	},
+
 	render() {
 		const {
 			className,
@@ -255,6 +259,7 @@ const TextField = createClass({
 			style,
 			rows,
 			value,
+			ref: ref => this.refs = { nativeElement: ref },
 		};
 
 		return isMultiLine

@@ -4,7 +4,7 @@ import Validation from '../Validation/Validation';
 import TextField from '../TextField/TextField';
 import reducers from '../TextField/TextField.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes } from '../../util/component-types';
+import { createClass, findTypes, omitProps }  from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-TextFieldValidated');
 
@@ -58,10 +58,15 @@ const TextFieldValidated = createClass({
 		return TextField.getDefaultProps();
 	},
 
+	focus() {
+		this.refs.TextField.focus();
+	},
+
 	render() {
 		const {
 			className,
 			style,
+			...passThroughs,
 		} = this.props;
 
 		const errorChildProps = _.map(findTypes(this.props, TextFieldValidated.Error), 'props');
@@ -72,7 +77,10 @@ const TextFieldValidated = createClass({
 				style={style}
 				Error={errorChildProps}
 			>
-				<TextField {..._.omit(this.props, ['Error', 'style', 'className'])} />
+				<TextField
+					{...omitProps(passThroughs, TextFieldValidated)}
+					ref={ref => this.refs = { TextField: ref }}
+				/>
 			</Validation>
 		);
 	},
