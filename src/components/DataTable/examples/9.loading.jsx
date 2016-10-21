@@ -6,6 +6,7 @@ export default React.createClass({
 
 		return(
 			<DataTable
+				isFullWidth
 				isLoading
 				data={[]}
 			>
