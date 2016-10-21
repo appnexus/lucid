@@ -22,6 +22,7 @@ export default React.createClass({
 			<DataTable
 				data={data}
 				density='extended'
+				isFullWidth
 			>
 				<EmptyStateWrapper>
 					<Title>

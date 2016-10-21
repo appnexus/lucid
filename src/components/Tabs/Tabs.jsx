@@ -7,11 +7,121 @@ import * as reducers from './Tabs.reducers';
 const cx = lucidClassNames.bind('&-Tabs');
 
 const {
-	string,
-	number,
+	any,
 	bool,
 	func,
+	node,
+	number,
+	string,
 } = React.PropTypes;
+
+/**
+ *
+ * Content that will be rendered in a tab. Be sure to nest a Title inside
+ * each Tab or provide it as a prop. Props other than `isDisabled`, `isSelected`,
+ * and `Title` can be inferred from the parent `Tabs` component, but directly
+ * provided `props` will take precedence.
+ */
+const Tab = createClass({
+	displayName: 'Tabs.Tab',
+
+	propName: 'Tab',
+
+	propTypes: {
+		/**
+		 * The index of this `Tab` within the list of `Tabs`.
+		 */
+		index: number,
+
+		/**
+		 * Styles a `Tab` as disabled. This is typically used with
+		 * `isProgressive` to disable steps that have not been completed
+		 * and should not be selected until the current step has been
+		 * completed.
+		 */
+		isDisabled: bool,
+
+		/**
+		 * If `true`, this `Tab` is the last `Tab` in the list of `Tabs`.
+		 */
+		isLastTab: bool,
+
+		/**
+		 * If `true` then the active `Tab` will appear open on the bottom.
+		 */
+		isOpen: bool,
+
+		/**
+		 * If `true`, the `Tab` will appear as a `Progressive` tab.
+		 */
+		isProgressive: bool,
+
+		/**
+		 * If `true`, the `Tab` will appear selected.
+		 */
+		isSelected: bool,
+
+		/**
+		 * Callback for when the user clicks a `Tab`. Called with the index of the
+		 * `Tab` that was clicked.
+		 */
+		onSelect: func,
+
+		/**
+		 * The content to be rendered as the `Title` of the `Tab`.
+		 */
+		Title: node,
+	},
+
+	handleClick(event) {
+		const {
+			props,
+			props: {
+				index,
+				onSelect,
+				...passThroughs,
+			},
+		} = this;
+
+		if (!props.isDisabled) {
+			onSelect(index, passThroughs, event);
+		}
+	},
+
+	render() {
+		const {
+			isDisabled,
+			isLastTab,
+			isOpen,
+			isProgressive,
+			isSelected,
+			Title,
+		} = this.props;
+
+		return (
+			<li
+				className={cx('&-Tab', {
+					'&-Tab-is-active': isSelected,
+					'&-Tab-is-disabled': isDisabled,
+					'&-Tab-is-active-and-open': isOpen && isSelected,
+					'&-Tab-is-progressive': isProgressive && !isLastTab,
+				})}
+				onClick={this.handleClick}
+			>
+				<span className={cx('&-Tab-content')}>{Title}</span>
+				{isProgressive && !isLastTab &&
+					<span className={cx('&-Tab-arrow')} >
+						<svg version='1.1'  viewBox='0 0 8 28' preserveAspectRatio='none' >
+							<polygon className={cx('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
+							<polyline className={cx('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1,1 0,1'/>
+							<polyline className={cx('&-Tab-arrow-line')} fill='none' stroke='#fff' strokeWidth='1' points='0,28 7.9,14 0,0'/>
+						</svg>
+					</span>
+				}
+			</li>
+		);
+	},
+});
 
 /**
  *
@@ -24,27 +134,7 @@ const Tabs = createClass({
 	displayName: 'Tabs',
 
 	components: {
-		/**
-		 * Content that will be rendered in a tab. Be sure to nest a Title inside
-		 * each Tab or provide it as a prop.
-		 */
-		Tab: createClass({
-			displayName: 'Tabs.Tab',
-			propName: 'Tab',
-			propTypes: {
-				/**
-				 * Determines if the Tab is selected.
-				 */
-				isSelected: bool,
-				/**
-				 * Styles a Tab as disabled. This is typically used with
-				 * `isProgressive` to to disabled steps that have not been compleated
-				 * and should not be selected until the current step has been
-				 * compleated.
-				 */
-				isDisabled: bool,
-			},
-		}),
+		Tab,
 		/**
 		 * Titles can be provided as a child or prop to a Tab.
 		 */
@@ -92,6 +182,14 @@ const Tabs = createClass({
 		 * for improved readability when there are multiple React elements in the tab headers.
 		 */
 		hasMultilineTitle: bool,
+
+		/**
+		 * *Child Element*
+		 *
+		 * Can be used to define one or more individual `Tab`s in the sequence of `Tabs`.
+		 *
+		 */
+		Tab: any,
 	},
 
 	getDefaultProps() {
@@ -104,18 +202,26 @@ const Tabs = createClass({
 		};
 	},
 
+	handleClicked(index, tabProps, event) {
+		const {
+			onSelect,
+		} = this.props;
+
+		onSelect(index, { event, props: tabProps });
+	},
+
 	render() {
 		const {
 			className,
-			selectedIndex,
+			hasMultilineTitle,
 			isOpen,
 			isProgressive,
-			hasMultilineTitle,
+			selectedIndex,
 			...passThroughs,
 		} = this.props;
 
 		// Grab props array from each Tab
-		const tabChildProps = _.map(findTypes(this.props, Tabs.Tab), 'props');
+		const tabChildProps = _.map(findTypes(this.props, Tab), 'props');
 
 		const selectedIndexFromChildren = _.findLastIndex(tabChildProps, {
 			isSelected: true,
@@ -133,28 +239,18 @@ const Tabs = createClass({
 				<ul className={cx('&-bar', {
 						'&-bar-is-multiline': hasMultilineTitle,
 					})}>
-					{_.map(tabChildProps, (tabChildProp, index) => (
-						<li
-							className={cx('&-Tab', {
-								'&-Tab-is-active': index === actualSelectedIndex,
-								'&-Tab-is-disabled': tabChildProp.isDisabled,
-								'&-Tab-is-active-and-open': isOpen && index === actualSelectedIndex,
-								'&-Tab-is-progressive': isProgressive && index !== tabChildProps.length - 1,
-							})}
+					{_.map(tabChildProps, (tabProps, index) => (
+						<Tab
 							key={index}
-							onClick={_.partial(this.handleClicked, index, tabChildProp)}
-						>
-							<span className={cx('&-Tab-content')}>{_.get(getFirst(tabChildProp, Tabs.Title), 'props.children', '')}</span>
-							{isProgressive && index !== tabChildProps.length - 1 ?
-								<span className={cx('&-Tab-arrow')} >
-									<svg version='1.1'  viewBox='0 0 8 28' preserveAspectRatio='none' >
-										<polygon className={cx('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
-										<polyline className={cx('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1,1 0,1'/>
-										<polyline className={cx('&-Tab-arrow-line')} fill='none' stroke='#fff' strokeWidth='1' points='0,28 7.9,14 0,0'/>
-									</svg>
-								</span>
-							: null}
-						</li>
+							index={index}
+							isLastTab={index === tabChildProps.length - 1}
+							isOpen={isOpen}
+							isProgressive={isProgressive}
+							isSelected={index === actualSelectedIndex}
+							onSelect={this.handleClicked}
+							Title={_.get(getFirst(tabProps, Tabs.Title), 'props.children', '')}
+							{...tabProps}
+						/>
 					))}
 				</ul>
 				<div className={cx('&-content')}>
@@ -162,14 +258,6 @@ const Tabs = createClass({
 				</div>
 			</div>
 		);
-	},
-
-	handleClicked(index, tabProps, event) {
-		const {
-			onSelect,
-		} = this.props;
-
-		onSelect(index, { event, props: tabProps });
 	},
 });
 
