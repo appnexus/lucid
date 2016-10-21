@@ -28,7 +28,7 @@ describe('Tabs', () => {
 				<Tabs Tab={[{children: 'Bert'}, {children: 'Ernie'}]} />
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-Tab').length, 2);
+			assert.equal(wrapper.find('.lucid-Tabs-bar').children().length, 2);
 			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Bert');
 		});
 
@@ -40,8 +40,11 @@ describe('Tabs', () => {
 				]} />
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-Tab').length, 2);
-			assert.equal(wrapper.find('.lucid-Tabs-Tab-is-active').text(), 'Coolest');
+			const tabBar = wrapper.find('.lucid-Tabs-bar').shallow();
+
+			assert.equal(tabBar.children().length, 2);
+			assert.equal(tabBar.childAt(0).prop('Title'), 'Coolest');
+			assert(tabBar.childAt(0).prop('isSelected'));
 			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Bert');
 		});
 
@@ -53,7 +56,9 @@ describe('Tabs', () => {
 				</Tabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-Tab').first().text(), 'Froyo');
+			const tabBar = wrapper.find('.lucid-Tabs-bar').shallow();
+
+			assert.equal(tabBar.childAt(0).prop('Title'), 'Froyo');
 		});
 
 		it('Title as children', () => {
@@ -67,7 +72,9 @@ describe('Tabs', () => {
 				</Tabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-Tab').first().text(), 'Froyo');
+			const tabBar = wrapper.find('.lucid-Tabs-bar').shallow();
+
+			assert.equal(tabBar.childAt(0).prop('Title'), 'Froyo');
 		});
 
 		it('selectedIndex', () => {
@@ -78,8 +85,10 @@ describe('Tabs', () => {
 				</Tabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-Tab-is-active').text(), 'Slurpee');
-			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Yum');
+			const tabBar = wrapper.find('.lucid-Tabs-bar').shallow();
+
+			assert(!tabBar.childAt(0).prop('isSelected'));
+			assert(tabBar.childAt(1).prop('isSelected'));
 		});
 
 		it('Tab.isSelected', () => {
@@ -90,8 +99,10 @@ describe('Tabs', () => {
 				</Tabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-Tab-is-active').text(), 'Slurpee');
-			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Yum');
+			const tabBar = wrapper.find('.lucid-Tabs-bar').shallow();
+
+			assert(!tabBar.childAt(0).prop('isSelected'));
+			assert(tabBar.childAt(1).prop('isSelected'));
 		});
 
 		it('last Tab.isSelected beats selectedIndex', () => {
@@ -103,8 +114,11 @@ describe('Tabs', () => {
 				</Tabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-Tab-is-active').text(), 'Three');
-			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Three content');
+			const tabBar = wrapper.find('.lucid-Tabs-bar').shallow();
+
+			assert(!tabBar.childAt(0).prop('isSelected'));
+			assert(tabBar.childAt(1).prop('isSelected'));
+			assert(tabBar.childAt(2).prop('isSelected'));
 		});
 
 		describe('onSelect', () => {
@@ -112,6 +126,7 @@ describe('Tabs', () => {
 			let onSelect = sinon.spy();
 			let clickEvent;
 			let wrapper;
+			let tabBar;
 
 			beforeEach(() => {
 
@@ -123,24 +138,23 @@ describe('Tabs', () => {
 						<Tabs.Tab>Two</Tabs.Tab>
 					</Tabs>
 				);
+				tabBar = wrapper.find('.lucid-Tabs-bar').shallow();
 
 			});
 
 			it('should call onSelect with the correct arguments', () => {
-				wrapper.find('.lucid-Tabs-Tab').at(1).simulate('click', clickEvent);
+				tabBar.childAt(1).shallow().simulate('click', clickEvent);
 				const selectedIndex = onSelect.args[0][0];
 				const meta = onSelect.args[0][1];
 				assert(onSelect.called);
 				assert.equal(selectedIndex, 1);
 				assert.equal(meta.event, clickEvent);
-				assert.deepEqual(meta.props, {children: 'Two'});
+				assert.deepEqual(meta.props, {isLastTab: true, isOpen: true, isProgressive: false, isSelected: false, Title: '', children: 'Two'});
 			});
 
-			it('should call onSelect with isDisabled prop', () => {
-				wrapper.find('.lucid-Tabs-Tab').at(0).simulate('click', clickEvent);
-				const meta = onSelect.args[0][1];
-				assert(onSelect.called);
-				assert(meta.props.isDisabled, 'isDisabled should be true');
+			it('should not call onSelect if the `Tab` isDisabled', () => {
+				tabBar.childAt(0).shallow().simulate('click', clickEvent);
+				assert(!onSelect.called);
 			});
 
 		});

@@ -83,23 +83,23 @@ const CheckboxLabeled = createClass({
 
 		return (
 			<label
-					className={cx('&', {
-						'&-is-disabled': isDisabled,
-						'&-is-selected': isIndeterminate || isSelected,
-					}, className)}
-					style={style}
+				className={cx('&', {
+					'&-is-disabled': isDisabled,
+					'&-is-selected': isIndeterminate || isSelected,
+				}, className)}
+				style={style}
 			>
 				<Checkbox
-						className={className}
-						isDisabled={isDisabled}
-						isIndeterminate={isIndeterminate}
-						isSelected={isSelected}
-						onSelect={onSelect}
-						{...omitProps(passThroughs, CheckboxLabeled)}
+					className={cx('&-Checkbox', className)}
+					isDisabled={isDisabled}
+					isIndeterminate={isIndeterminate}
+					isSelected={isSelected}
+					onSelect={onSelect}
+					{...omitProps(passThroughs, CheckboxLabeled)}
 				/>
 				<div
 					{...labelChildProps}
-					className={cx('&-label')}
+					className={cx('&-label', _.get(labelChildProps, 'className', null))}
 				/>
 			</label>
 		);

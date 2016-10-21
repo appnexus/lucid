@@ -35,6 +35,9 @@ const Validation = createClass({
 		 * In most cases this will be a string, but it also accepts any valid React
 		 * element. If this is a falsey value, then no error message will be
 		 * displayed.
+		 *
+		 * If this is the literal `true`, it will add the `-is-error` class to the
+		 * wrapper div, but not render the `-error-content` `div`.
 		 */
 		Error: any,
 
@@ -67,8 +70,11 @@ const Validation = createClass({
 				}, className)}
 			>
 				{children}
-				{errorChildProps && errorChildProps.children ?
-					<div className={cx('&-error-content')} >
+				{errorChildProps && errorChildProps.children && errorChildProps.children !== true ?
+					<div
+						{...omitProps(errorChildProps, Validation.Error)}
+						className={cx('&-error-content', errorChildProps.className)}
+					>
 						{errorChildProps.children}
 					</div>
 				: null}
