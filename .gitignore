@@ -6,6 +6,9 @@ src/docs/docgen.json
 npm-debug.log*
 node_modules
 
+# Yarn
+yarn.lock
+
 # Vim
 **/*.swp
 **/*.swo
