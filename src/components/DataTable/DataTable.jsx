@@ -315,9 +315,8 @@ const DataTable = createClass({
 													width: columnProps.width,
 												}}
 												key={'row' + index + _.get(columnProps, 'field', columnIndex)}
-												isEmpty={isEmpty}
 											>
-												{isEmpty ? 'No Data' : cellValue}
+												{isEmpty ? '--' : cellValue}
 											</Td>
 									)})}
 								</Tr>
