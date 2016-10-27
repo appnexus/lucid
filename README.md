@@ -29,18 +29,18 @@ If you don't use `less`, you can use the precompiled css file
 
 ### Dependencies
 
-`lucid-ui` has several react peer dependencies. This means **your application
+`lucid-ui` has several React peer dependencies. This means **your application
 is responsible for declaring dependencies** on compatible versions. Currently
-we support react 14 and 15.
+we support React 15.
 
 Example package.json:
 
     {
       "dependencies": {
-        "lucid-ui": "^1.0.0",
-        "react": "^0.14.0",
-        "react-dom": "^0.14.0",
-        "react-addons-css-transition-group": "^0.14.0"
+        "lucid-ui": "^2.0.0",
+        "react": "^15.0.0",
+        "react-dom": "^15.0.0",
+        "react-addons-css-transition-group": "^15.0.0"
       }
     }
 
