@@ -36,8 +36,6 @@ const TextFieldValidated = createClass({
 	},
 
 	propTypes: {
-		...TextField.propTypes,
-
 		/**
 		 * Passed to the root container.
 		 */
