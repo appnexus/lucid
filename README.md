@@ -15,7 +15,7 @@ Lucid can be installed with npm.
     import { Button } from 'lucid-ui';
 
     ReactDOM.render(
-      <Button>Hello World<Button/>,
+      <Button>Hello World</Button>,
       mountNode
     );
 
