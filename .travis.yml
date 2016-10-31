@@ -23,4 +23,7 @@ cache:
   directories:
   - $HOME/.yarn-cache
 addons:
-  browserstack
+  browserstack:
+    username: "natanlafontaine1"
+    access_key:
+      secure: "Hg8TKFo0wgnPxQ1jhYmPMtwSeWF5sbQRa3bB0Ts9SkLOVmrhFx18QuA4or4B1JLDT1U1aC7E3xV3bbgsOhsTUx5Ww4FLK8AjVjAp3ut2dNmLOYMRNNbdD/62oKSPGK2R/GEE1F+C1QJi7GVUqYPda/ye0ab2N1RTZTYXuonmU/b0A1m/r07QGD1EhpBJ6Nt67eNwi8ReVKaH/sOV5SM1qw+aRjZsQFqE4eQx5QKB3Jvex5xWsKJTBMBYMHxvGA06lIkceLpsVswoH5NUyuJ3I94CJTfY7u6yXRhWiynPZeQiGwWYL4R45ahBQUNm4HhPyTne2vehYrsW/4n4OFpCOF7a1UaP4Gpx7W44GemSnAKax/w/JnMs1p25imhVLjzuLp3/UPVwUivJFXLm4AknVvX+RF0/vmlJpt/fLxjcu2u/+UbnUCPUO3W7BAKrY4yXidHmnlDGI8h4UZgElGvjCtcIken2kan1dxYTkvdfDqncma3LzeRcByCHk9NELNChkawozp32LQ98xVB5RPAM72abhofrFxYYijo8xvav5ssj0UG/CW4YMcOIji7mqjyOv1RFCNhEDJ5iFRxL/1+bEZN1vyS70VF0afNUdVfYa56PO9PUqlE0wZ53T126JvsLMayfXHtjqef6jM7ItTh1NwuqQkDQ/pMIYEkH5+VJU08="
