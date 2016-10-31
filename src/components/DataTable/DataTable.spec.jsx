@@ -216,8 +216,7 @@ describe('DataTable', () => {
 					assert.equal(tdsWrapper.at(0).children().text(), _.get(testDataWithEmptyCells[index], 'id'), 'first cell must match id of current row');
 					assert(!tdsWrapper.at(0).prop('isEmpty'), 'should not be marked as empty, despite not being a string');
 					assert.equal(tdsWrapper.at(1).children().text(), _.get(testDataWithEmptyCells[index], 'first_name'), 'second cell must match first_name of current row');
-					assert(tdsWrapper.at(2).props().isEmpty, 'should be marked as an empty-cell');
-					assert.equal(tdsWrapper.at(2).children().text(), 'No Data', 'third (empty) cell should be `No Data`');
+					assert.equal(tdsWrapper.at(2).children().text(), '--', 'third (empty) cell should be `--`');
 					assert.equal(tdsWrapper.at(3).children().text(), _.get(testDataWithEmptyCells[index], 'email'), 'fourth cell must match email of current row');
 					assert.equal(tdsWrapper.at(4).children().text(), _.get(testDataWithEmptyCells[index], 'occupation'), 'fifth cell must match occupation of current row');
 				});
