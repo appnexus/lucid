@@ -11,14 +11,19 @@ after_success:
   - bash ./scripts/docs-upload-gh.sh
 branches:
   only:
-    - master
-    - /^release\/.*$/
+  - master
+  - "/^release\\/.*$/"
 env:
   global:
-    - secure: "Recue3+sPDb4kQtKftZuYa0zwg6/+H+QO5tJP8WGa+Xq7OZBGzAt/bADW0Q7KvUPxtK6qUCynuWrnaBlEWc+UKIHlrcHCpFPn0zkpzGvzX6a+tvhjHAQNDB7x/VYORvYEQqMzWC5t+qLj6C9ffjXP+6uCo+o+y/5K5ydEyqa2e42LQblSJmiiCG754CqV1LxmasklGAC90+ldR6d7PFFpqXDc/BIsyDAIuS4FXfjyli+VnvCza7PQJ4XGkCoywmBNg8bcR82UwduA854/Gr7oYKZRUamMpBuQY25EupjwZ/GV2OyDSK3UcO3blEVrjRnP3gC9Ljd+WvcBqy7d1FJTCk0Vsy/pstxjVpP19H3I6xOU41buB3Pw1aLTkIp+PFmhoab5fu03bWfwUp/N1Xl1URKWcIKokwh/98NSA8OZ16VbMhFkxuUCs5bsFR+DB6SLdc2XNpzzdxdoe3XZHB5LxVOIoJY6CiskfYdNBPsEo+NZTrv+eUk+l4gMNTIYwgCWEbbIvXE6CwFITg9ERQhY7fvGJ37DOWfvLfxKnDc0jFqnlUnWgrtDppx7akE1vgfFu9W8jWRF4phGU/O4BwWUNhLtoGUgTH6RR4+4xoNv3LB1g6fnd50jUin4f6o2KSOkdPZFPmv74MygC7WyPERWR2IjpT2x+yfPIa6TetlY/c="
+  - secure: Recue3+sPDb4kQtKftZuYa0zwg6/+H+QO5tJP8WGa+Xq7OZBGzAt/bADW0Q7KvUPxtK6qUCynuWrnaBlEWc+UKIHlrcHCpFPn0zkpzGvzX6a+tvhjHAQNDB7x/VYORvYEQqMzWC5t+qLj6C9ffjXP+6uCo+o+y/5K5ydEyqa2e42LQblSJmiiCG754CqV1LxmasklGAC90+ldR6d7PFFpqXDc/BIsyDAIuS4FXfjyli+VnvCza7PQJ4XGkCoywmBNg8bcR82UwduA854/Gr7oYKZRUamMpBuQY25EupjwZ/GV2OyDSK3UcO3blEVrjRnP3gC9Ljd+WvcBqy7d1FJTCk0Vsy/pstxjVpP19H3I6xOU41buB3Pw1aLTkIp+PFmhoab5fu03bWfwUp/N1Xl1URKWcIKokwh/98NSA8OZ16VbMhFkxuUCs5bsFR+DB6SLdc2XNpzzdxdoe3XZHB5LxVOIoJY6CiskfYdNBPsEo+NZTrv+eUk+l4gMNTIYwgCWEbbIvXE6CwFITg9ERQhY7fvGJ37DOWfvLfxKnDc0jFqnlUnWgrtDppx7akE1vgfFu9W8jWRF4phGU/O4BwWUNhLtoGUgTH6RR4+4xoNv3LB1g6fnd50jUin4f6o2KSOkdPZFPmv74MygC7WyPERWR2IjpT2x+yfPIa6TetlY/c=
 language: node_js
 node_js:
   - "6"
 cache:
   directories:
   - $HOME/.yarn-cache
+addons:
+  browserstack:
+    username: "natanlafontaine1"
+    access_key:
+      secure: FyUtc5zl30meQQZiQOXlqQTLY88hhUliGp9PTguW+9dt8DXs54eiLIdkM2xsenaXU5aKlR2ypzNszR6fzfJ9lGFJRZI0aWR2G4tDYu6wX2WVFbqDWFWHxAB9keMfq0+fOb2sWxnCiYXrsNOEMB8jyVmFM5pBFNeIFTDCqcGs75Sp8/ICPaaoodyf6GmKgSS15sAEnoucd59CtAvLOCtzsSUE8IjycyYVTD8YYH89I117k2AtJfdbDMm/52SRjN2Lu51Vfs5VIi4lG7M27LUevApuJEGIuv0ABKEnELrK2+4ECZWPDeIaFLAVQqu/1XpMGVmo1RFPcEF2F8xslYg1P5rl1Doo2wjxIqpiwK82XaBa8hMlpsgmXV/E6HAsWZEd2zLq3zOO7yFBFNxumYmkGrUh9ihrQWlpMTiu9ZqD4rUGXPiQeo6AEVIKlZIOnHbdfI+XR2hbAFjwwKXdK1jX/9PNbp+N+4ml0YR1BdZAoBR3xO+Hj9pRFPNxmgMxFgyTtlWhrIjSw7wqQ866yJxQjfj0GhAUEJBA3Nil4SDA/VFfq8VMBZ+Lx1Ya3CVIAWJcXZ5ybDHL9AxTU4lottyW+V7QfoJZT0JCb/sR/OULalTeQTQfNGJdyVc8+0e4cvayHvupa2z2gZ0fJMCF5dJ2FPwBVslGS7fw5btY/SDBFts=
