@@ -45,6 +45,10 @@ const DataTable = createClass({
 		 */
 		data: arrayOf(object),
 		/**
+		 * The text to display in cells which have no data.
+		 */
+		emptyCellText: string,
+		/**
 		 * Render each row item to be navigable, allowing `onRowClick` to be triggered.
 		 */
 		isActionable: bool,
@@ -101,6 +105,7 @@ const DataTable = createClass({
 
 	getDefaultProps() {
 		return {
+			emptyCellText: '--',
 			isActionable: false,
 			isSelectable: false,
 			onRowClick: _.noop,
@@ -189,6 +194,7 @@ const DataTable = createClass({
 		const {
 			className,
 			data,
+			emptyCellText,
 			isActionable,
 			isFullWidth,
 			isLoading,
@@ -316,7 +322,7 @@ const DataTable = createClass({
 												}}
 												key={'row' + index + _.get(columnProps, 'field', columnIndex)}
 											>
-												{isEmpty ? '--' : cellValue}
+												{isEmpty ? emptyCellText : cellValue}
 											</Td>
 									)})}
 								</Tr>
