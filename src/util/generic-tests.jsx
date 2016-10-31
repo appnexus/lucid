@@ -70,31 +70,14 @@ export function common(Component, {
 			});
 		});
 
-		it('should only use onX convention for function proptypes', () => {
+		describe('function propTypes', () => {
 
-			_.forEach(Component.propTypes, (value, key) => {
-				// See the following tests from the React source code to figure out how
-				// this works: https://github.com/facebook/react/blob/v0.14.7/src/isomorphic/classic/types/__tests__/ReactPropTypes-test.js
-				let props = {};
-				props[key] = _.noop;
+			const funcProps = _.pickBy(Component.propTypes, propType => propType === React.PropTypes.func);
 
-				// Here we test the validation against a noop function, if it doesn't
-				// have an error, then it's probably a function. The other possible is
-				// that it's an `any`, so we'll test for that below
-				const isProbablyFunction = !(value(props, key) instanceof Error);
-
-				// We'll also test out a string to see if that valid
-				props[key] = '';
-
-				const isAny = isProbablyFunction && !(value(props, key) instanceof Error);
-
-				// If it's probably a function, and it's not `any`, then we make sure
-				// it starts with `on`
-
-				if (isProbablyFunction) {
-					assert(isAny || _.startsWith(key, 'on') || _.includes(exemptFunctionProps, key), `${key} must follow onX convention`);
-				}
-
+			_.forEach(funcProps, (propType, propName) => {
+				it(`${propName} should only use onX convention for function proptypes`, () => {
+					assert(_.startsWith(propName, 'on') || _.includes(exemptFunctionProps, propName), `${propName} must follow onX convention`);
+				});
 			});
 
 		});
