@@ -1,7 +1,8 @@
-before_install: bash ./scripts/validate-tests.sh
+before_install:
+  - bash ./scripts/validate-tests.sh
 after_success:
- - bash ./scripts/run-browserstack.sh
- - bash ./scripts/docs-upload-gh.sh
+  - bash ./scripts/run-browserstack.sh
+  - bash ./scripts/docs-upload-gh.sh
 branches:
   only:
     - master
