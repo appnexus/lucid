@@ -1,8 +1,8 @@
 import React from 'react';
-import { AnalyzeDataIcon } from '../../../../index';
+import { AddURLIcon } from '../../../../index';
 
 export default React.createClass({
 	render() {
-		return <AnalyzeDataIcon />;
+		return <AddURLIcon />;
 	},
 });

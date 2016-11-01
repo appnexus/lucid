@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-UploadIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Typically used to show the user that further data analysis is available.
+ * Upload files
  */
 const UploadIcon = createClass({
 	displayName: 'UploadIcon',

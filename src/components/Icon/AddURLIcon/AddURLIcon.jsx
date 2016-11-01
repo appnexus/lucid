@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-AddURLIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * Typically used to show the user that further data analysis is available.
+ * Add URL
  */
 const AddURLIcon = createClass({
 	displayName: 'AddURLIcon',
