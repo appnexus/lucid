@@ -14,3 +14,14 @@ export function handleHighlightCode() {
 		});
 	}
 }
+
+export function sanitizeExamplePath(path) {
+	return _.chain(path)
+		.split('/')
+		.compact()
+		.drop()
+		.join('-')
+		.split('.')
+		.join('-')
+		.value();
+}

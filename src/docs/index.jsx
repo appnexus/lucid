@@ -18,8 +18,7 @@ import {
 import { createHashHistory } from 'history';
 import { markdown } from 'markdown';
 import docgenMapRaw from './docgen.json';
-import { handleHighlightCode, toMarkdown } from './util';
-import testUtils from '../../tests/util';
+import { handleHighlightCode, toMarkdown, sanitizeExamplePath } from './util';
 
 import ColorPalette from './containers/color-palette';
 import LandingPage from './containers/landing-page';
@@ -592,7 +591,7 @@ const App = React.createClass({
 });
 
 const testExamplesMap = _.reduce(reqExamples.keys(), (acc, key) => {
-	const exampleName = testUtils.sanitizeExamplePath(key);
+	const exampleName = sanitizeExamplePath(key);
 	return {
 		...acc,
 		[exampleName]: reqExamples(key).default,
