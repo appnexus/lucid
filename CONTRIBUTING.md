@@ -12,8 +12,6 @@ First of all, thank you for contributing. It’s appreciated.
 5. Reference the issue's number in your commit. E.g.: "Did this #12".
 6. Make a pull request.
 
-Currently our tests rely on private credentials for Browserstack, therefore **Travis will fail for personal forks**.
-
 ## Process
 
 - All PRs should at minimum have a label _semver-major/minor/patch/none_. This helps identify what kind of version bump the PR represents.
