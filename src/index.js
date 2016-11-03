@@ -40,6 +40,7 @@ const VerticalListMenu = buildHybridComponent(VerticalListMenuDumb);
 const VerticalTabs = buildHybridComponent(VerticalTabsDumb);
 
 // dumb components
+import AddURLIcon from './components/Icon/AddURLIcon/AddURLIcon';
 import AnalyzeDataIcon from './components/Icon/AnalyzeDataIcon/AnalyzeDataIcon';
 import ArrowIcon from './components/Icon/ArrowIcon/ArrowIcon';
 import AsteriskIcon from './components/Icon/AsteriskIcon/AsteriskIcon';
@@ -78,7 +79,7 @@ import EditPageIcon from './components/Icon/EditPageIcon/EditPageIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
 import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
-import FourSquaresIcon from'./components/Icon/FourSquaresIcon/FourSquaresIcon';
+import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
 import Grid from './components/Grid/Grid';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
@@ -134,6 +135,7 @@ import TextField from './components/TextField/TextField'
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
 import UnlinkedIcon from './components/Icon/UnlinkedIcon/UnlinkedIcon';
 import UnlockedIcon from './components/Icon/UnlockedIcon/UnlockedIcon';
+import UploadIcon from './components/Icon/UploadIcon/UploadIcon';
 import UserIcon from './components/Icon/UserIcon/UserIcon';
 import Validation from './components/Validation/Validation';
 import ViewIcon from './components/Icon/ViewIcon/ViewIcon';
@@ -169,6 +171,7 @@ export {
 export {
 	Accordion,
 	AccordionDumb,
+	AddURLIcon,
 	AnalyzeDataIcon,
 	ArrowIcon,
 	AsteriskIcon,
@@ -291,6 +294,7 @@ export {
 	ToolTipDumb,
 	UnlinkedIcon,
 	UnlockedIcon,
+	UploadIcon,
 	UserIcon,
 	Validation,
 	VerticalListMenu,
