@@ -3,6 +3,9 @@ import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
+import Anime from 'react-anime';
+import Animate from '../Animate/Animate';
+
 
 const cx = lucidClassNames.bind('&-Line');
 
@@ -75,18 +78,24 @@ const Line = createClass({
 			: null;
 
 		return (
-			<path
-				{...omitProps(passThroughs, Line)}
-				style={{
-					...style,
-					...colorStyle,
-				}}
-				className={cx(className, '&', {
-					[`&-${color}`]: !isCustomColor,
-					'&-is-dotted': isDotted,
-				})}
+			<Animate
+				easing='linear'
+				duration={1000}
 				d={d}
-			/>
+			>
+				<path
+					{...omitProps(passThroughs, Line)}
+					style={{
+						...style,
+						...colorStyle,
+					}}
+					className={cx(className, '&', {
+						[`&-${color}`]: !isCustomColor,
+						'&-is-dotted': isDotted,
+					})}
+					d={d}
+				/>
+			</Animate>
 		);
 	},
 });
