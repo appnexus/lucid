@@ -271,7 +271,6 @@ describe('SplitVertical', () => {
 						<SplitVertical />
 					);
 
-					const dragCaptureZoneWrapper = wrapper.find(Motion).shallow().find(DragCaptureZone);
 					const dividerDivWrapper = wrapper.find(Motion).shallow().find(DragCaptureZone).shallow().first();
 					assert(dividerDivWrapper.hasClass('lucid-SplitVertical-Divider-is-resizeable'));
 
