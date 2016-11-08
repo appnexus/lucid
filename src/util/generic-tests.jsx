@@ -3,6 +3,8 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import _ from 'lodash';
+import glob from 'glob';
+import { shallowToJson } from 'enzyme-to-json';
 import * as lucid from '../index';
 
 // Common tests for all our components
@@ -107,6 +109,16 @@ export function common(Component, {
 			});
 		});
 
+		describe('example testing', () => {
+			const examples = glob.sync(`./src/components/${Component.displayName}/examples/*.jsx`).map(path => require('../../' + path).default);
+
+			_.each(examples, Example => {
+				it(`should match snapshot for ${Example.displayName}`, () => {
+					expect(shallowToJson(shallow(<Example />))).toMatchSnapshot();
+				});
+			});
+		});
+
 		// Only run this test if it's a public component
 		if (!Component._isPrivate) {
 			it('should be available as an exported module from index.js', () => {
@@ -128,7 +140,7 @@ export function icons(Component) {
 }
 
 // Common tests for all control components
-export function controls(Component, { callbackName, controlSelector , eventType }) {
+export function controls(Component, { callbackName, controlSelector , eventType, additionalProps={} }) {
 	// Use DOM tests here since some of our controls use dom events under the hood
 	describe('[control]', () => {
 		it('should callback with `event` and `props`', () => {
@@ -136,6 +148,7 @@ export function controls(Component, { callbackName, controlSelector , eventType 
 			const props = {
 				specialProp: expectedSpecialProp,
 				[callbackName]: sinon.spy(),
+				...additionalProps,
 			};
 			const wrapper = mount(<Component {...props} />);
 

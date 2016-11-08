@@ -1,0 +1,808 @@
+exports[`DataTable [common] example testing should match snapshot for 1.basic 1`] = `
+<DataTable
+  data={
+    Array [
+      Object {
+        "email": "inewton@example.com",
+        "first_name": "Isaac",
+        "id": 1,
+        "last_name": "Newton",
+        "occupation": "Physicist",
+      },
+      Object {
+        "email": "aeinstein@example.com",
+        "first_name": "Albert",
+        "id": 2,
+        "last_name": "Einstein",
+        "occupation": "Physicist",
+      },
+      Object {
+        "email": "ldvinci@example.com",
+        "first_name": "Leonardo",
+        "id": 3,
+        "last_name": "da Vinci",
+        "occupation": "Engineer",
+      },
+      Object {
+        "email": "aristotle@example.com",
+        "first_name": "Aristotle",
+        "id": 4,
+        "last_name": null,
+        "occupation": "Tutor",
+      },
+      Object {
+        "email": "ggalilei@example.com",
+        "first_name": "Galileo",
+        "id": 5,
+        "occupation": "Physicist",
+      },
+      Object {
+        "email": "cdarwin@example.com",
+        "first_name": "Charles",
+        "id": 6,
+        "last_name": "Darwin",
+        "occupation": "Biologist",
+      },
+      Object {
+        "email": "amacedon@example.com",
+        "first_name": "Alexander",
+        "id": 7,
+        "last_name": "Macedon",
+        "occupation": "Head of State",
+      },
+      Object {
+        "email": "plato@example.com",
+        "first_name": "Plato",
+        "id": 8,
+        "last_name": "Plato",
+        "occupation": "Philosopher",
+      },
+      Object {
+        "email": "mgandhi@example.com",
+        "first_name": "Mahatma",
+        "id": 9,
+        "last_name": "Gandhi",
+        "occupation": "Politician",
+      },
+      Object {
+        "email": "wshakespear@example.com",
+        "first_name": "William",
+        "id": 10,
+        "last_name": "Shakespeare",
+        "occupation": "Playwright",
+      },
+    ]
+  }
+  emptyCellText="--"
+  isActionable={false}
+  isSelectable={false}
+  onRowClick={[Function]}
+  onSelect={[Function]}
+  onSelectAll={[Function]}
+  onSort={[Function]}>
+  <DataTable.Column
+    field="id">
+    ID
+  </DataTable.Column>
+  <DataTable.Column
+    field="first_name"
+    width={100}>
+    First
+  </DataTable.Column>
+  <DataTable.Column
+    align="left"
+    field="last_name"
+    width={100}>
+    Last
+  </DataTable.Column>
+  <DataTable.Column
+    align="center"
+    field="email">
+    E-Mail
+  </DataTable.Column>
+  <DataTable.Column
+    align="right"
+    field="occupation"
+    width={100}>
+    Occupation
+  </DataTable.Column>
+</DataTable>
+`;
+
+exports[`DataTable [common] example testing should match snapshot for 2.column-groups 1`] = `
+<DataTable
+  data={
+    Array [
+      Object {
+        "email": "inewton@example.com",
+        "first_name": "Isaac",
+        "id": 1,
+        "last_name": "Newton",
+        "occupation": "Physicist",
+      },
+      Object {
+        "email": "aeinstein@example.com",
+        "first_name": "Albert",
+        "id": 2,
+        "last_name": "Einstein",
+        "occupation": "Physicist",
+      },
+      Object {
+        "email": "ldvinci@example.com",
+        "first_name": "Leonardo",
+        "id": 3,
+        "last_name": "da Vinci",
+        "occupation": "Engineer",
+      },
+      Object {
+        "first_name": "Aristotle",
+        "id": 4,
+        "occupation": "Tutor",
+      },
+      Object {
+        "id": 5,
+        "last_name": "Galilei",
+        "occupation": "Physicist",
+      },
+      Object {
+        "email": "cdarwin@example.com",
+        "first_name": "Charles",
+        "id": 6,
+        "last_name": "Darwin",
+        "occupation": "Biologist",
+      },
+      Object {
+        "email": "amacedon@example.com",
+        "first_name": "Alexander",
+        "id": 7,
+        "last_name": "Macedon",
+        "occupation": "Head of State",
+      },
+      Object {
+        "email": "plato@example.com",
+        "first_name": "Plato",
+        "id": 8,
+        "last_name": "Plato",
+        "occupation": "Philosopher",
+      },
+      Object {
+        "email": "mgandhi@example.com",
+        "first_name": "Mahatma",
+        "id": 9,
+        "last_name": "Gandhi",
+        "occupation": "Politician",
+      },
+      Object {
+        "email": "wshakespear@example.com",
+        "first_name": "William",
+        "id": 10,
+        "last_name": "Shakespeare",
+        "occupation": "Playwright",
+      },
+    ]
+  }
+  density="extended"
+  emptyCellText="--"
+  isActionable={false}
+  isSelectable={false}
+  onRowClick={[Function]}
+  onSelect={[Function]}
+  onSelectAll={[Function]}
+  onSort={[Function]}>
+  <DataTable.Column
+    field="id">
+    ID
+  </DataTable.Column>
+  <DataTable.ColumnGroup
+    align="center"
+    title="Name">
+    <DataTable.Column
+      field="first_name"
+      hasBorderLeft={true}
+      isSortable={true}
+      width={100}>
+      First
+    </DataTable.Column>
+    <DataTable.Column
+      align="left"
+      field="last_name"
+      hasBorderRight={true}
+      isSortable={true}
+      width={100}>
+      Last
+    </DataTable.Column>
+  </DataTable.ColumnGroup>
+  <DataTable.Column
+    align="center"
+    field="email">
+    E-Mail
+  </DataTable.Column>
+  <DataTable.Column
+    align="right"
+    field="occupation"
+    hasBorderLeft={true}
+    width={100}>
+    Occupation
+  </DataTable.Column>
+</DataTable>
+`;
+
+exports[`DataTable [common] example testing should match snapshot for 3.selectable-and-navigable-rows 1`] = `
+<DataTable
+  data={
+    Array [
+      Object {
+        "email": "inewton@example.com",
+        "first_name": "Isaac",
+        "id": "01",
+        "isSelected": true,
+        "last_name": "Newton",
+        "occupation": "Physicist",
+      },
+      Object {
+        "email": "aeinstein@example.com",
+        "first_name": "Albert",
+        "id": "02",
+        "isActive": true,
+        "last_name": "Einstein",
+        "occupation": "Physicist",
+      },
+      Object {
+        "email": "ldvinci@example.com",
+        "first_name": "Leonardo",
+        "id": "03",
+        "last_name": "da Vinci",
+        "occupation": "Engineer",
+      },
+      Object {
+        "email": "aristotle@example.com",
+        "first_name": "Aristotle",
+        "id": "04",
+        "last_name": "--",
+        "occupation": "Tutor",
+      },
+      Object {
+        "email": "ggalilei@example.com",
+        "first_name": "Galileo",
+        "id": "05",
+        "last_name": "Galilei",
+        "occupation": "Physicist",
+      },
+      Object {
+        "email": "cdarwin@example.com",
+        "first_name": "Charles",
+        "id": "06",
+        "last_name": "Darwin",
+        "occupation": "Biologist",
+      },
+      Object {
+        "email": "amacedon@example.com",
+        "first_name": "Alexander",
+        "id": "07",
+        "last_name": "Macedon",
+        "occupation": "Head of State",
+      },
+      Object {
+        "email": "plato@example.com",
+        "first_name": "Plato",
+        "id": "08",
+        "last_name": "Plato",
+        "occupation": "Philosopher",
+      },
+      Object {
+        "email": "mgandhi@example.com",
+        "first_name": "Mahatma",
+        "id": "09",
+        "last_name": "Gandhi",
+        "occupation": "Politician",
+      },
+      Object {
+        "email": "wshakespear@example.com",
+        "first_name": "William",
+        "id": "10",
+        "last_name": "Shakespeare",
+        "occupation": "Playwright",
+      },
+    ]
+  }
+  density="extended"
+  emptyCellText="--"
+  isActionable={true}
+  isSelectable={true}
+  onRowClick={[Function]}
+  onSelect={[Function]}
+  onSelectAll={[Function]}
+  onSort={[Function]}>
+  <DataTable.Column
+    field="id"
+    hasBorderLeft={true}>
+    ID
+  </DataTable.Column>
+  <DataTable.ColumnGroup
+    align="left"
+    title="Name">
+    <DataTable.Column
+      field="first_name"
+      hasBorderLeft={true}
+      isSortable={true}
+      width={100}>
+      First
+    </DataTable.Column>
+    <DataTable.Column
+      align="left"
+      field="last_name"
+      hasBorderRight={true}
+      isSortable={true}
+      width={100}>
+      Last
+    </DataTable.Column>
+  </DataTable.ColumnGroup>
+  <DataTable.Column
+    align="center"
+    field="email">
+    E-Mail
+  </DataTable.Column>
+  <DataTable.Column
+    align="right"
+    field="occupation"
+    hasBorderLeft={true}
+    width={100}>
+    Occupation
+  </DataTable.Column>
+</DataTable>
+`;
+
+exports[`DataTable [common] example testing should match snapshot for 4.interactive-table 1`] = `
+<DataTable
+  data={
+    Array [
+      Object {
+        "email": "inewton@example.com",
+        "first_name": "Isaac",
+        "id": "01",
+        "isSelected": true,
+        "last_name": "Newton",
+        "occupation": "Physicist",
+      },
+      Object {
+        "email": "aeinstein@example.com",
+        "first_name": "Albert",
+        "id": "02",
+        "isActive": true,
+        "last_name": "Einstein",
+        "occupation": "Physicist",
+      },
+      Object {
+        "email": "ldvinci@example.com",
+        "first_name": "Leonardo",
+        "id": "03",
+        "last_name": "da Vinci",
+        "occupation": "Engineer",
+      },
+      Object {
+        "email": "aristotle@example.com",
+        "first_name": "Aristotle",
+        "id": "04",
+        "last_name": "--",
+        "occupation": "Tutor",
+      },
+      Object {
+        "email": "ggalilei@example.com",
+        "first_name": "Galileo",
+        "id": "05",
+        "last_name": "Galilei",
+        "occupation": "Physicist",
+      },
+      Object {
+        "email": "cdarwin@example.com",
+        "first_name": "Charles",
+        "id": "06",
+        "last_name": "Darwin",
+        "occupation": "Biologist",
+      },
+      Object {
+        "email": "amacedon@example.com",
+        "first_name": "Alexander",
+        "id": "07",
+        "last_name": "Macedon",
+        "occupation": "Head of State",
+      },
+      Object {
+        "email": "plato@example.com",
+        "first_name": "Plato",
+        "id": "08",
+        "last_name": "Plato",
+        "occupation": "Philosopher",
+      },
+      Object {
+        "email": "mgandhi@example.com",
+        "first_name": "Mahatma",
+        "id": "09",
+        "last_name": "Gandhi",
+        "occupation": "Politician",
+      },
+      Object {
+        "email": "wshakespear@example.com",
+        "first_name": "William",
+        "id": "10",
+        "last_name": "Shakespeare",
+        "occupation": "Playwright",
+      },
+    ]
+  }
+  density="extended"
+  emptyCellText="--"
+  isActionable={true}
+  isSelectable={true}
+  onRowClick={[Function]}
+  onSelect={[Function]}
+  onSelectAll={[Function]}
+  onSort={[Function]}>
+  <DataTable.Column
+    align="center"
+    field="id"
+    hasBorderLeft={true}
+    isSortable={true}
+    isSorted={true}
+    sortDirection="up"
+    width={41}>
+    ID
+  </DataTable.Column>
+  <DataTable.ColumnGroup
+    align="center"
+    title="Name">
+    <DataTable.Column
+      field="first_name"
+      hasBorderLeft={true}
+      isSortable={true}
+      isSorted={false}
+      sortDirection="up"
+      width={100}>
+      First
+    </DataTable.Column>
+    <DataTable.Column
+      align="left"
+      field="last_name"
+      hasBorderRight={true}
+      isSortable={true}
+      isSorted={false}
+      sortDirection="up"
+      width={100}>
+      Last
+    </DataTable.Column>
+  </DataTable.ColumnGroup>
+  <DataTable.Column
+    align="center"
+    field="email"
+    isSortable={true}
+    isSorted={false}
+    sortDirection="up">
+    E-Mail
+  </DataTable.Column>
+  <DataTable.Column
+    align="right"
+    field="occupation"
+    hasBorderLeft={true}
+    isSortable={true}
+    isSorted={false}
+    sortDirection="up"
+    width={100}>
+    Occupation
+  </DataTable.Column>
+</DataTable>
+`;
+
+exports[`DataTable [common] example testing should match snapshot for 5.disabled-rows 1`] = `
+<DataTable
+  data={
+    Array [
+      Object {
+        "email": "inewton@example.com",
+        "first_name": "Isaac",
+        "id": "01",
+        "isDisabled": true,
+        "last_name": "Newton",
+        "occupation": "Physicist",
+      },
+      Object {
+        "email": "aeinstein@example.com",
+        "first_name": "Albert",
+        "id": "02",
+        "isDisabled": false,
+        "last_name": "Einstein",
+        "occupation": "Physicist",
+      },
+      Object {
+        "email": "ldvinci@example.com",
+        "first_name": "Leonardo",
+        "id": "03",
+        "isDisabled": true,
+        "last_name": "da Vinci",
+        "occupation": "Engineer",
+      },
+      Object {
+        "email": "aristotle@example.com",
+        "first_name": "Aristotle",
+        "id": "04",
+        "isDisabled": false,
+        "last_name": "--",
+        "occupation": "Tutor",
+      },
+      Object {
+        "email": "ggalilei@example.com",
+        "first_name": "Galileo",
+        "id": "05",
+        "isDisabled": true,
+        "last_name": "Galilei",
+        "occupation": "Physicist",
+      },
+      Object {
+        "email": "cdarwin@example.com",
+        "first_name": "Charles",
+        "id": "06",
+        "isDisabled": false,
+        "last_name": "Darwin",
+        "occupation": "Biologist",
+      },
+      Object {
+        "email": "amacedon@example.com",
+        "first_name": "Alexander",
+        "id": "07",
+        "isDisabled": true,
+        "last_name": "Macedon",
+        "occupation": "Head of State",
+      },
+      Object {
+        "email": "plato@example.com",
+        "first_name": "Plato",
+        "id": "08",
+        "isDisabled": false,
+        "last_name": "Plato",
+        "occupation": "Philosopher",
+      },
+      Object {
+        "email": "mgandhi@example.com",
+        "first_name": "Mahatma",
+        "id": "09",
+        "isDisabled": true,
+        "last_name": "Gandhi",
+        "occupation": "Politician",
+      },
+      Object {
+        "email": "wshakespear@example.com",
+        "first_name": "William",
+        "id": "10",
+        "isDisabled": false,
+        "last_name": "Shakespeare",
+        "occupation": "Playwright",
+      },
+    ]
+  }
+  emptyCellText="--"
+  isActionable={false}
+  isSelectable={false}
+  onRowClick={[Function]}
+  onSelect={[Function]}
+  onSelectAll={[Function]}
+  onSort={[Function]}>
+  <DataTable.Column
+    field="id">
+    ID
+  </DataTable.Column>
+  <DataTable.Column
+    field="first_name"
+    width={100}>
+    First
+  </DataTable.Column>
+  <DataTable.Column
+    align="left"
+    field="last_name"
+    width={100}>
+    Last
+  </DataTable.Column>
+  <DataTable.Column
+    align="center"
+    field="email">
+    E-Mail
+  </DataTable.Column>
+  <DataTable.Column
+    align="right"
+    field="occupation"
+    width={100}>
+    Occupation
+  </DataTable.Column>
+</DataTable>
+`;
+
+exports[`DataTable [common] example testing should match snapshot for 6.empty 1`] = `
+<DataTable
+  data={Array []}
+  density="extended"
+  emptyCellText="--"
+  isActionable={false}
+  isFullWidth={true}
+  isSelectable={false}
+  onRowClick={[Function]}
+  onSelect={[Function]}
+  onSelectAll={[Function]}
+  onSort={[Function]}>
+  <DataTable.Column
+    field="id">
+    ID
+  </DataTable.Column>
+  <DataTable.Column
+    field="first_name"
+    width={100}>
+    First
+  </DataTable.Column>
+  <DataTable.Column
+    align="left"
+    field="last_name"
+    width={100}>
+    Last
+  </DataTable.Column>
+  <DataTable.Column
+    align="center"
+    field="email">
+    E-Mail
+  </DataTable.Column>
+  <DataTable.Column
+    align="right"
+    field="occupation"
+    width={100}>
+    Occupation
+  </DataTable.Column>
+</DataTable>
+`;
+
+exports[`DataTable [common] example testing should match snapshot for 7.empty-with-custom-title-and-body 1`] = `
+<DataTable
+  data={Array []}
+  density="extended"
+  emptyCellText="--"
+  isActionable={false}
+  isFullWidth={true}
+  isSelectable={false}
+  onRowClick={[Function]}
+  onSelect={[Function]}
+  onSelectAll={[Function]}
+  onSort={[Function]}>
+  <EmptyStateWrapper>
+    <EmptyStateWrapper.Title>
+      Something went wrong.
+    </EmptyStateWrapper.Title>
+    <EmptyStateWrapper.Body
+      style={
+        Object {
+          "fontSize": "12px",
+        }
+      }>
+      Echo park poutine esse tempor squid do. Lo-fi ramps XOXO chicharrones laboris, portland fugiat locavore. Fap four dollar toast keytar, cronut kogi fingerstache distillery microdosing everyday carry austin DIY dreamcatcher. Distillery flexitarian meditation laboris roof party. Cred raclette gastropub tilde PBR&B. Shoreditch poke adipisicing, reprehenderit lumbersexual succulents mustache officia franzen vinyl nostrud af. Hashtag bitters organic, before they sold out butcher cronut sapiente.
+    </EmptyStateWrapper.Body>
+  </EmptyStateWrapper>
+  <DataTable.Column
+    field="id">
+    ID
+  </DataTable.Column>
+  <DataTable.Column
+    field="first_name"
+    width={100}>
+    First
+  </DataTable.Column>
+  <DataTable.Column
+    align="left"
+    field="last_name"
+    width={100}>
+    Last
+  </DataTable.Column>
+  <DataTable.Column
+    align="center"
+    field="email">
+    E-Mail
+  </DataTable.Column>
+  <DataTable.Column
+    align="right"
+    field="occupation"
+    width={100}>
+    Occupation
+  </DataTable.Column>
+</DataTable>
+`;
+
+exports[`DataTable [common] example testing should match snapshot for 8.empty-with-image 1`] = `
+<DataTable
+  data={Array []}
+  density="extended"
+  emptyCellText="--"
+  isActionable={false}
+  isFullWidth={true}
+  isSelectable={false}
+  onRowClick={[Function]}
+  onSelect={[Function]}
+  onSelectAll={[Function]}
+  onSort={[Function]}>
+  <EmptyStateWrapper>
+    <EmptyStateWrapper.Title>
+      This empty message has a large image in it.
+    </EmptyStateWrapper.Title>
+    <EmptyStateWrapper.Body>
+      <img
+        src="https://dummyimage.com/375x150/ff69/fff" />
+    </EmptyStateWrapper.Body>
+  </EmptyStateWrapper>
+  <DataTable.Column
+    align="center"
+    field="id"
+    hasBorderLeft={true}
+    isSortable={true}
+    width={41}>
+    ID
+  </DataTable.Column>
+  <DataTable.Column
+    field="first_name"
+    hasBorderLeft={true}
+    width={100}>
+    First
+  </DataTable.Column>
+  <DataTable.Column
+    align="left"
+    field="last_name"
+    hasBorderRight={true}
+    width={100}>
+    Last
+  </DataTable.Column>
+  <DataTable.Column
+    align="center"
+    field="email">
+    E-Mail
+  </DataTable.Column>
+  <DataTable.Column
+    align="right"
+    field="occupation"
+    hasBorderLeft={true}
+    width={100}>
+    Occupation
+  </DataTable.Column>
+</DataTable>
+`;
+
+exports[`DataTable [common] example testing should match snapshot for 9.loading 1`] = `
+<DataTable
+  data={Array []}
+  emptyCellText="--"
+  isActionable={false}
+  isFullWidth={true}
+  isLoading={true}
+  isSelectable={false}
+  onRowClick={[Function]}
+  onSelect={[Function]}
+  onSelectAll={[Function]}
+  onSort={[Function]}>
+  <DataTable.Column
+    field="id">
+    ID
+  </DataTable.Column>
+  <DataTable.Column
+    field="first_name"
+    width={100}>
+    First
+  </DataTable.Column>
+  <DataTable.Column
+    align="left"
+    field="last_name"
+    width={100}>
+    Last
+  </DataTable.Column>
+  <DataTable.Column
+    align="center"
+    field="email">
+    E-Mail
+  </DataTable.Column>
+  <DataTable.Column
+    align="right"
+    field="occupation"
+    width={100}>
+    Occupation
+  </DataTable.Column>
+</DataTable>
+`;

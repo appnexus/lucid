@@ -1,0 +1,1380 @@
+exports[`Grid [common] example testing should match snapshot for GridColumns 1`] = `
+<div>
+  <Grid>
+    <Grid.Cell
+      isFull={true}>
+      <p
+        style={
+          Object {
+            "background": "#333333",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        full
+      </p>
+    </Grid.Cell>
+  </Grid>
+  <Grid>
+    <Grid.Cell
+      is2={true}>
+      <p
+        style={
+          Object {
+            "background": "#feb209",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        2
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+  </Grid>
+  <Grid>
+    <Grid.Cell
+      is3={true}>
+      <p
+        style={
+          Object {
+            "background": "#feb209",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        3
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+  </Grid>
+  <Grid>
+    <Grid.Cell
+      is4={true}>
+      <p
+        style={
+          Object {
+            "background": "#feb209",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        4
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+  </Grid>
+  <Grid>
+    <Grid.Cell
+      is5={true}>
+      <p
+        style={
+          Object {
+            "background": "#feb209",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        5
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+  </Grid>
+  <Grid>
+    <Grid.Cell
+      is6={true}>
+      <p
+        style={
+          Object {
+            "background": "#feb209",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        6
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+  </Grid>
+  <Grid>
+    <Grid.Cell
+      is7={true}>
+      <p
+        style={
+          Object {
+            "background": "#feb209",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        7
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+  </Grid>
+  <Grid>
+    <Grid.Cell
+      is8={true}>
+      <p
+        style={
+          Object {
+            "background": "#feb209",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        8
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+  </Grid>
+  <Grid>
+    <Grid.Cell
+      is9={true}>
+      <p
+        style={
+          Object {
+            "background": "#feb209",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        9
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+  </Grid>
+  <Grid>
+    <Grid.Cell
+      is10={true}>
+      <p
+        style={
+          Object {
+            "background": "#feb209",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        10
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+  </Grid>
+  <Grid>
+    <Grid.Cell
+      is11={true}>
+      <p
+        style={
+          Object {
+            "background": "#feb209",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        11
+      </p>
+    </Grid.Cell>
+    <Grid.Cell>
+      <p
+        style={
+          Object {
+            "background": "#999999",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+          }
+        }>
+        auto
+      </p>
+    </Grid.Cell>
+  </Grid>
+</div>
+`;
+
+exports[`Grid [common] example testing should match snapshot for GutterlessGrid 1`] = `
+<Grid
+  isGutterless={true}
+  isMultiline={true}>
+  <Grid.Cell
+    isHalf={true}>
+    <p
+      style={
+        Object {
+          "background": "#0089c4",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      gutterless half
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isQuarter={true}
+    style={
+      Object {
+        "background": "#f7403a",
+        "color": "#f3f3f3",
+        "margin": 0,
+        "padding": 0,
+      }
+    }>
+    gutterless quarter
+  </Grid.Cell>
+  <Grid.Cell>
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      auto
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isQuarter={true}>
+    <p
+      style={
+        Object {
+          "background": "#f7403a",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      gutterless quarter
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isQuarter={true}>
+    <p
+      style={
+        Object {
+          "background": "#f7403a",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      gutterless quarter
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isHalf={true}>
+    <p
+      style={
+        Object {
+          "background": "#0089c4",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      gutterless half
+    </p>
+  </Grid.Cell>
+</Grid>
+`;
+
+exports[`Grid [common] example testing should match snapshot for HorizontalMultilineGrid 1`] = `
+<Grid
+  isHorizontal={true}
+  isMultiline={true}>
+  <Grid.Cell
+    isHalf={true}>
+    <p
+      style={
+        Object {
+          "background": "#0089c4",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      half
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isHalf={true}>
+    <p
+      style={
+        Object {
+          "background": "#0089c4",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      half
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isHalf={true}>
+    <p
+      style={
+        Object {
+          "background": "#0089c4",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      half
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isFull={true}>
+    <p
+      style={
+        Object {
+          "background": "#333333",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      full
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isThird={true}>
+    <p
+      style={
+        Object {
+          "background": "#3fa516",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      third
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isThird={true}>
+    <p
+      style={
+        Object {
+          "background": "#3fa516",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      third
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isThird={true}>
+    <p
+      style={
+        Object {
+          "background": "#3fa516",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      third
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isThird={true}>
+    <p
+      style={
+        Object {
+          "background": "#3fa516",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      third
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isQuarter={true}>
+    <p
+      style={
+        Object {
+          "background": "#f7403a",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      quarter
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isQuarter={true}>
+    <p
+      style={
+        Object {
+          "background": "#f7403a",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      quarter
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isQuarter={true}>
+    <p
+      style={
+        Object {
+          "background": "#f7403a",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      quarter
+    </p>
+  </Grid.Cell>
+</Grid>
+`;
+
+exports[`Grid [common] example testing should match snapshot for OffsetCells 1`] = `
+<div>
+  <Grid>
+    <Grid.Cell
+      isHalf={true}
+      isOffsetHalf={true}>
+      <p
+        style={
+          Object {
+            "background": "#0089c4",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+            "textAlign": "center",
+          }
+        }>
+        half with offset half
+      </p>
+    </Grid.Cell>
+  </Grid>
+  <Grid>
+    <Grid.Cell
+      isOffsetQuarter={true}
+      isQuarter={true}>
+      <p
+        style={
+          Object {
+            "background": "#f7403a",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+            "textAlign": "center",
+          }
+        }>
+        quarter with offset quarter
+      </p>
+    </Grid.Cell>
+  </Grid>
+  <Grid>
+    <Grid.Cell
+      isOffsetThird={true}
+      isThird={true}>
+      <p
+        style={
+          Object {
+            "background": "#3fa516",
+            "color": "#f3f3f3",
+            "margin": 0,
+            "padding": 0,
+            "textAlign": "center",
+          }
+        }>
+        third with offset third
+      </p>
+    </Grid.Cell>
+  </Grid>
+</div>
+`;
+
+exports[`Grid [common] example testing should match snapshot for VerticalMultilineGrid 1`] = `
+<Grid
+  isMultiline={true}
+  isVertical={true}
+  style={
+    Object {
+      "height": "200px",
+    }
+  }>
+  <Grid.Cell
+    isHalf={true}>
+    <p
+      style={
+        Object {
+          "background": "#0089c4",
+          "color": "#f3f3f3",
+          "flex": 1,
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      half
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isHalf={true}>
+    <p
+      style={
+        Object {
+          "background": "#0089c4",
+          "color": "#f3f3f3",
+          "flex": 1,
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      half
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isHalf={true}>
+    <p
+      style={
+        Object {
+          "background": "#0089c4",
+          "color": "#f3f3f3",
+          "flex": 1,
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      half
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isFull={true}>
+    <p
+      style={
+        Object {
+          "background": "#333333",
+          "color": "#f3f3f3",
+          "flex": 1,
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      full
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isThird={true}>
+    <p
+      style={
+        Object {
+          "background": "#3fa516",
+          "color": "#f3f3f3",
+          "flex": 1,
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      third
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isThird={true}>
+    <p
+      style={
+        Object {
+          "background": "#3fa516",
+          "color": "#f3f3f3",
+          "flex": 1,
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      third
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isThird={true}>
+    <p
+      style={
+        Object {
+          "background": "#3fa516",
+          "color": "#f3f3f3",
+          "flex": 1,
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      third
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isThird={true}>
+    <p
+      style={
+        Object {
+          "background": "#3fa516",
+          "color": "#f3f3f3",
+          "flex": 1,
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      third
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isQuarter={true}>
+    <p
+      style={
+        Object {
+          "background": "#f7403a",
+          "color": "#f3f3f3",
+          "flex": 1,
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      quarter
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isQuarter={true}>
+    <p
+      style={
+        Object {
+          "background": "#f7403a",
+          "color": "#f3f3f3",
+          "flex": 1,
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      quarter
+    </p>
+  </Grid.Cell>
+  <Grid.Cell
+    isQuarter={true}>
+    <p
+      style={
+        Object {
+          "background": "#f7403a",
+          "color": "#f3f3f3",
+          "flex": 1,
+          "margin": 0,
+          "padding": 0,
+        }
+      }>
+      quarter
+    </p>
+  </Grid.Cell>
+</Grid>
+`;

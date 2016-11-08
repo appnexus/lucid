@@ -1,0 +1,105 @@
+exports[`TextField [common] example testing should match snapshot for basic 1`] = `
+<div>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={
+      Object {
+        "marginBottom": "10px",
+      }
+    }
+    value="foo" />
+  <div
+    style={
+      Object {
+        "marginBottom": "10px",
+      }
+    }>
+    this.state.value: 
+    foo
+  </div>
+  <Button
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Set TextField to \"foo\"
+  </Button>
+</div>
+`;
+
+exports[`TextField [common] example testing should match snapshot for debounced 1`] = `
+<div>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={
+      Object {
+        "marginBottom": "10px",
+      }
+    }
+    value="foo" />
+  <div
+    style={
+      Object {
+        "marginBottom": "10px",
+      }
+    }>
+    this.state.value: 
+    foo
+  </div>
+  <Button
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Set TextField to \"foo\"
+  </Button>
+</div>
+`;
+
+exports[`TextField [common] example testing should match snapshot for on-submit 1`] = `
+<div>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={
+      Object {
+        "marginBottom": "10px",
+      }
+    }
+    value="Enter some text in and hit enter" />
+  <div
+    style={
+      Object {
+        "marginBottom": "10px",
+      }
+    }>
+    this.state.value: 
+    Enter some text in and hit enter
+  </div>
+</div>
+`;

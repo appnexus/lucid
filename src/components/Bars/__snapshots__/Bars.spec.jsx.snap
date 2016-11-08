@@ -1,0 +1,249 @@
+exports[`Bars [common] example testing should match snapshot for basic 1`] = `
+<div>
+  <svg
+    height={400}
+    width={1000}>
+    <Bars
+      colorOffset={0}
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      hasToolTips={true}
+      isStacked={false}
+      palette={
+        Array [
+          "color-chart-0",
+          "color-chart-1",
+          "color-chart-2",
+          "color-chart-3",
+          "color-chart-4",
+          "color-chart-5",
+        ]
+      }
+      xField="x"
+      xFormatter={[Function]}
+      xScale={[Function]}
+      yFields={
+        Array [
+          "y0",
+          "y1",
+          "y2",
+          "y3",
+        ]
+      }
+      yFormatter={[Function]}
+      yScale={[Function]}
+      yTooltipFormatter={[Function]} />
+  </svg>
+  <svg
+    height={400}
+    width={1000}>
+    <Bars
+      colorOffset={0}
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      hasToolTips={true}
+      isStacked={true}
+      palette={
+        Array [
+          "color-chart-0",
+          "color-chart-1",
+          "color-chart-2",
+          "color-chart-3",
+          "color-chart-4",
+          "color-chart-5",
+        ]
+      }
+      xField="x"
+      xFormatter={[Function]}
+      xScale={[Function]}
+      yFields={
+        Array [
+          "y0",
+          "y1",
+          "y2",
+          "y3",
+        ]
+      }
+      yFormatter={[Function]}
+      yScale={[Function]}
+      yTooltipFormatter={[Function]} />
+  </svg>
+</div>
+`;
+
+exports[`Bars [common] example testing should match snapshot for custom-colors 1`] = `
+<div>
+  <svg
+    height={400}
+    width={1000}>
+    <Bars
+      colorMap={
+        Object {
+          "y0": "color-chart-good",
+          "y2": "color-chart-bad",
+        }
+      }
+      colorOffset={0}
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      hasToolTips={true}
+      isStacked={false}
+      palette={
+        Array [
+          "color-chart-0",
+          "color-chart-1",
+          "color-chart-2",
+          "color-chart-3",
+          "color-chart-4",
+          "color-chart-5",
+        ]
+      }
+      xField="x"
+      xFormatter={[Function]}
+      xScale={[Function]}
+      yFields={
+        Array [
+          "y0",
+          "y1",
+          "y2",
+          "y3",
+        ]
+      }
+      yFormatter={[Function]}
+      yScale={[Function]}
+      yTooltipFormatter={[Function]} />
+  </svg>
+</div>
+`;

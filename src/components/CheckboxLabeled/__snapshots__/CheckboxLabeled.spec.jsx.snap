@@ -1,0 +1,278 @@
+exports[`CheckboxLabeled [common] example testing should match snapshot for interactive 1`] = `
+<section>
+  <span>
+    <CheckboxLabeled
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={false}
+      name="interactive-checkboxes"
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+        }
+      }>
+      <CheckboxLabeled.Label>
+        Vanilla
+      </CheckboxLabeled.Label>
+    </CheckboxLabeled>
+    <CheckboxLabeled
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={false}
+      name="interactive-checkboxes"
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+        }
+      }>
+      <CheckboxLabeled.Label>
+        Chocolate
+      </CheckboxLabeled.Label>
+    </CheckboxLabeled>
+    <CheckboxLabeled
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={false}
+      name="interactive-checkboxes"
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+        }
+      }>
+      <CheckboxLabeled.Label>
+        Strawberry
+      </CheckboxLabeled.Label>
+    </CheckboxLabeled>
+    <CheckboxLabeled
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={false}
+      name="interactive-checkboxes"
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+        }
+      }>
+      <CheckboxLabeled.Label>
+        Polaroid four dollar toast bespoke succulents. Kickstarter truffaut PBR&B fashion axe, lyft actually viral everyday carry iPhone tote bag mumblecore umami. Skateboard you probably haven\'t heard of them before they sold out, edison bulb paleo poutine jianbing blue bottle mixtape. Normcore farm-to-table coloring book cliche before they sold out. Roof party authentic hoodie paleo next level, bicycle rights selvage you probably haven\'t heard of them leggings venmo etsy cronut williamsburg. Dreamcatcher vice gastropub austin fam. Actually subway tile kickstarter, messenger bag shabby chic activated charcoal lomo.
+      </CheckboxLabeled.Label>
+    </CheckboxLabeled>
+    <CheckboxLabeled
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={false}
+      name="interactive-checkboxes"
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+        }
+      }>
+      <CheckboxLabeled.Label>
+        Unicorn helvetica glossier pop-up letterpress snackwave raw denim. Lomo blog tattooed helvetica seitan DIY. Tbh kombucha shabby chic cornhole, microdosing seitan snackwave gastropub celiac. Biodiesel 90\'s fixie drinking vinegar literally unicorn readymade fap, vape wolf direct trade kickstarter pickled disrupt fashion axe. Heirloom subway tile hell of, austin portland meditation PBR&B tacos raclette. Prism fanny pack banh mi trust fund unicorn, thundercats chicharrones salvia pour-over VHS. Distillery organic pork belly squid.
+      </CheckboxLabeled.Label>
+    </CheckboxLabeled>
+    <CheckboxLabeled
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={false}
+      name="interactive-checkboxes"
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+        }
+      }>
+      <CheckboxLabeled.Label>
+        Heirloom keffiyeh schlitz cray. Keytar tumblr dreamcatcher art party polaroid, sriracha etsy pinterest typewriter. IPhone ugh williamsburg man bun waistcoat literally paleo direct trade. Taxidermy cold-pressed pabst green juice, freegan tumblr post-ironic everyday carry disrupt distillery. Hell of lumbersexual cliche, whatever tilde raclette pop-up blue bottle skateboard butcher meditation four dollar toast tattooed health goth pinterest. Poutine polaroid YOLO, biodiesel chambray gentrify microdosing kickstarter bushwick humblebrag yr cred intelligentsia you probably haven\'t heard of them. Blog meditation locavore tousled, edison bulb cronut occupy +1 you probably haven\'t heard of them echo park distillery chambray.
+      </CheckboxLabeled.Label>
+    </CheckboxLabeled>
+  </span>
+</section>
+`;
+
+exports[`CheckboxLabeled [common] example testing should match snapshot for label-as-child 1`] = `
+<section>
+  <section>
+    <CheckboxLabeled
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={false}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+        }
+      }>
+      <CheckboxLabeled.Label>
+        Just text
+      </CheckboxLabeled.Label>
+    </CheckboxLabeled>
+    <CheckboxLabeled
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={false}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+        }
+      }>
+      <CheckboxLabeled.Label>
+        <span>
+          HTML element
+        </span>
+      </CheckboxLabeled.Label>
+    </CheckboxLabeled>
+  </section>
+</section>
+`;
+
+exports[`CheckboxLabeled [common] example testing should match snapshot for label-as-prop 1`] = `
+<section>
+  <section>
+    <CheckboxLabeled
+      Label="Just text"
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={false}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginRight": "5px",
+        }
+      } />
+    <CheckboxLabeled
+      Label={
+        <span>
+          HTML element
+        </span>
+      }
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={false}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginRight": "5px",
+        }
+      } />
+    <CheckboxLabeled
+      Label={
+        Array [
+          "Text in an array",
+          "Only the first value in the array is used",
+          "The rest of these should be ignored",
+        ]
+      }
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={false}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginRight": "5px",
+        }
+      } />
+    <CheckboxLabeled
+      Label={
+        Array [
+          <span>
+            HTML element in an array
+        </span>,
+          <span>
+            Again only the first value in the array is used
+        </span>,
+          <span>
+            The rest should not be rendered
+        </span>,
+        ]
+      }
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={false}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginRight": "5px",
+        }
+      } />
+  </section>
+</section>
+`;
+
+exports[`CheckboxLabeled [common] example testing should match snapshot for states 1`] = `
+<section>
+  <CheckboxLabeled
+    isDisabled={false}
+    isIndeterminate={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginBottom": "3px",
+        "marginRight": "13px",
+      }
+    }>
+    <CheckboxLabeled.Label>
+      (default props)
+    </CheckboxLabeled.Label>
+  </CheckboxLabeled>
+  <section
+    style={
+      Object {
+        "display": "flex",
+      }
+    }>
+    <CheckboxLabeled
+      isDisabled={true}
+      isIndeterminate={false}
+      isSelected={false}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+          "marginRight": "13px",
+        }
+      }>
+      <CheckboxLabeled.Label>
+        Disabled
+      </CheckboxLabeled.Label>
+    </CheckboxLabeled>
+    <CheckboxLabeled
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={true}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+          "marginRight": "13px",
+        }
+      }>
+      <CheckboxLabeled.Label>
+        Selected
+      </CheckboxLabeled.Label>
+    </CheckboxLabeled>
+    <CheckboxLabeled
+      isDisabled={true}
+      isIndeterminate={false}
+      isSelected={true}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+          "marginRight": "13px",
+        }
+      }>
+      <CheckboxLabeled.Label>
+        Disabled & selected
+      </CheckboxLabeled.Label>
+    </CheckboxLabeled>
+  </section>
+</section>
+`;

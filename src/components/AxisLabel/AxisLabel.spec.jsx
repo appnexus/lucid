@@ -6,7 +6,12 @@ import { shallow } from 'enzyme';
 import AxisLabel from './AxisLabel';
 
 describe('AxisLabel', () => {
-	common(AxisLabel);
+	common(AxisLabel, {
+		getDefaultProps: () => ({
+			height: 100,
+			width: 100,
+		}),
+	});
 
 	describe('props', () => {
 		describe('width, height, and orient', () => {
@@ -102,7 +107,11 @@ describe('AxisLabel', () => {
 		describe('label', () => {
 			it('should render a label', () => {
 				const wrapper = shallow(
-					<AxisLabel label='Foo' />
+					<AxisLabel
+						width={0}
+						height={0}
+						label='Foo'
+					/>
 				);
 
 				assert.equal(wrapper.text(), 'Foo');

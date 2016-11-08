@@ -1,0 +1,60 @@
+exports[`RadioButton [common] example testing should match snapshot for interactive 1`] = `
+<ul>
+  <li>
+    <label>
+      Enabled
+    </label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={false}
+      name="interactive-radio-buttons"
+      onSelect={[Function]}
+      tabIndex={20} />
+  </li>
+</ul>
+`;
+
+exports[`RadioButton [common] example testing should match snapshot for states 1`] = `
+<ul>
+  <li>
+    <label>
+      Unselected
+    </label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+      tabIndex={20} />
+  </li>
+  <li>
+    <label>
+      Selected
+    </label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={true}
+      onSelect={[Function]}
+      tabIndex={21} />
+  </li>
+  <li>
+    <label>
+      Disabled
+    </label>
+    <RadioButton
+      isDisabled={true}
+      isSelected={false}
+      onSelect={[Function]}
+      tabIndex={22} />
+  </li>
+  <li>
+    <label>
+      Disabled & selected
+    </label>
+    <RadioButton
+      isDisabled={true}
+      isSelected={true}
+      onSelect={[Function]}
+      tabIndex={23} />
+  </li>
+</ul>
+`;

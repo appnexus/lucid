@@ -1,0 +1,228 @@
+exports[`SwitchLabeled [common] example testing should match snapshot for interactive-default 1`] = `
+<section>
+  <span>
+    <SwitchLabeled
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+        }
+      }>
+      <SwitchLabeled.Label>
+        Airplane Mode
+      </SwitchLabeled.Label>
+    </SwitchLabeled>
+    <SwitchLabeled
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+        }
+      }>
+      <SwitchLabeled.Label>
+        Bluetooth
+      </SwitchLabeled.Label>
+    </SwitchLabeled>
+    <SwitchLabeled
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+        }
+      }>
+      <SwitchLabeled.Label>
+        Cellular Data
+      </SwitchLabeled.Label>
+    </SwitchLabeled>
+  </span>
+</section>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot for interactive-with-changing-labels 1`] = `
+<section>
+  <span>
+    <SwitchLabeled
+      Label="Airplane Mode Activated"
+      isDisabled={false}
+      isSelected={true}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+        }
+      } />
+    <SwitchLabeled
+      Label="Bluetooth Enabled"
+      isDisabled={false}
+      isSelected={true}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+        }
+      } />
+    <SwitchLabeled
+      Label="Use Cellular Data"
+      isDisabled={false}
+      isSelected={true}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+        }
+      } />
+  </span>
+  <br />
+  <SwitchLabeled
+    isDisabled={false}
+    isSelected={true}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginBottom": "3px",
+      }
+    }>
+    <SwitchLabeled.Label>
+      Yes! I would like to receive updates, special offers, and other information from AppNexus and its subsidiaries.
+    </SwitchLabeled.Label>
+  </SwitchLabeled>
+</section>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot for label-as-prop 1`] = `
+<section>
+  <section>
+    <SwitchLabeled
+      Label="Just text"
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginRight": "5px",
+        }
+      } />
+    <SwitchLabeled
+      Label={
+        <span>
+          HTML element
+        </span>
+      }
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginRight": "5px",
+        }
+      } />
+    <SwitchLabeled
+      Label={
+        Array [
+          "Text in an array",
+          "Only the first value in the array is used",
+          "The rest of these should be ignored",
+        ]
+      }
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginRight": "5px",
+        }
+      } />
+    <SwitchLabeled
+      Label={
+        Array [
+          <span>
+            HTML element in an array
+        </span>,
+          <span>
+            Again only the first value in the array is used
+        </span>,
+          <span>
+            The rest should not be rendered
+        </span>,
+        ]
+      }
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginRight": "5px",
+        }
+      } />
+  </section>
+</section>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot for states 1`] = `
+<section>
+  <SwitchLabeled
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginBottom": "3px",
+        "marginRight": "13px",
+      }
+    }>
+    <SwitchLabeled.Label>
+      (default props)
+    </SwitchLabeled.Label>
+  </SwitchLabeled>
+  <section>
+    <SwitchLabeled
+      isDisabled={true}
+      isSelected={false}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+          "marginRight": "13px",
+        }
+      }>
+      <SwitchLabeled.Label>
+        Disabled
+      </SwitchLabeled.Label>
+    </SwitchLabeled>
+    <SwitchLabeled
+      isDisabled={false}
+      isSelected={true}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+          "marginRight": "13px",
+        }
+      }>
+      <SwitchLabeled.Label>
+        Selected
+      </SwitchLabeled.Label>
+    </SwitchLabeled>
+    <SwitchLabeled
+      isDisabled={true}
+      isSelected={true}
+      onSelect={[Function]}
+      style={
+        Object {
+          "marginBottom": "3px",
+          "marginRight": "13px",
+        }
+      }>
+      <SwitchLabeled.Label>
+        Disabled & selected
+      </SwitchLabeled.Label>
+    </SwitchLabeled>
+  </section>
+</section>
+`;

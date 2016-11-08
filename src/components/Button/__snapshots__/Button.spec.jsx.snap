@@ -1,0 +1,690 @@
+exports[`Button [common] example testing should match snapshot for basic 1`] = `
+<section>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      type="button">
+      Default
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      type="button">
+      <CheckIcon />
+      Default
+    </Button>
+    <Button
+      hasOnlyIcon={true}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      type="button">
+      <CheckIcon />
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      onClick={[Function]}
+      type="button">
+      Default disabled
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={true}
+      isDisabled={false}
+      onClick={[Function]}
+      type="button">
+      Default active
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      size="short"
+      type="button">
+      Short
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      size="short"
+      type="button">
+      <CheckIcon />
+      Short
+    </Button>
+    <Button
+      hasOnlyIcon={true}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      size="short"
+      type="button">
+      <CheckIcon />
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      onClick={[Function]}
+      size="short"
+      type="button">
+      Short disabled
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={true}
+      isDisabled={false}
+      onClick={[Function]}
+      size="short"
+      type="button">
+      Short active
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      size="small"
+      type="button">
+      Small
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      size="small"
+      type="button">
+      <CheckIcon />
+      Small
+    </Button>
+    <Button
+      hasOnlyIcon={true}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      size="small"
+      type="button">
+      <CheckIcon />
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      onClick={[Function]}
+      size="small"
+      type="button">
+      Small disabled
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={true}
+      isDisabled={false}
+      onClick={[Function]}
+      size="small"
+      type="button">
+      Small active
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      size="large"
+      type="button">
+      Large
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      size="large"
+      type="button">
+      <CheckIcon />
+      Large
+    </Button>
+    <Button
+      hasOnlyIcon={true}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      size="large"
+      type="button">
+      <CheckIcon />
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      onClick={[Function]}
+      size="large"
+      type="button">
+      Large disabled
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={true}
+      isDisabled={false}
+      onClick={[Function]}
+      size="large"
+      type="button">
+      Large active
+    </Button>
+  </article>
+</section>
+`;
+
+exports[`Button [common] example testing should match snapshot for danger 1`] = `
+<section>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="danger"
+      onClick={[Function]}
+      type="button">
+      Danger
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="danger"
+      onClick={[Function]}
+      type="button">
+      Disabled
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="danger"
+      onClick={[Function]}
+      size="short"
+      type="button">
+      Short
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="danger"
+      onClick={[Function]}
+      size="short"
+      type="button">
+      Short disabled
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="danger"
+      onClick={[Function]}
+      size="small"
+      type="button">
+      Small
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="danger"
+      onClick={[Function]}
+      size="small"
+      type="button">
+      Small disabled
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="danger"
+      onClick={[Function]}
+      size="large"
+      type="button">
+      Large
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="danger"
+      onClick={[Function]}
+      size="large"
+      type="button">
+      Large disabled
+    </Button>
+  </article>
+</section>
+`;
+
+exports[`Button [common] example testing should match snapshot for info 1`] = `
+<section>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="info"
+      onClick={[Function]}
+      type="button">
+      Info
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="info"
+      onClick={[Function]}
+      type="button">
+      Disabled
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="info"
+      onClick={[Function]}
+      size="short"
+      type="button">
+      Short
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="info"
+      onClick={[Function]}
+      size="short"
+      type="button">
+      Short disabled
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="info"
+      onClick={[Function]}
+      size="small"
+      type="button">
+      Small
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="info"
+      onClick={[Function]}
+      size="small"
+      type="button">
+      Small disabled
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="info"
+      onClick={[Function]}
+      size="large"
+      type="button">
+      Large
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="info"
+      onClick={[Function]}
+      size="large"
+      type="button">
+      Large disabled
+    </Button>
+  </article>
+</section>
+`;
+
+exports[`Button [common] example testing should match snapshot for link 1`] = `
+<section>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="link"
+      onClick={[Function]}
+      type="button">
+      Link
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="link"
+      onClick={[Function]}
+      type="button">
+      Link disabled
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="link"
+      onClick={[Function]}
+      type="button">
+      <PlusIcon />
+      Link
+    </Button>
+    <Button
+      hasOnlyIcon={true}
+      isActive={false}
+      isDisabled={false}
+      kind="link"
+      onClick={[Function]}
+      type="button">
+      <PlusIcon />
+    </Button>
+  </article>
+</section>
+`;
+
+exports[`Button [common] example testing should match snapshot for primary 1`] = `
+<section>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="primary"
+      onClick={[Function]}
+      type="button">
+      Primary
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="primary"
+      onClick={[Function]}
+      type="button">
+      Disabled
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="primary"
+      onClick={[Function]}
+      size="short"
+      type="button">
+      Short
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="primary"
+      onClick={[Function]}
+      size="short"
+      type="button">
+      Short disabled
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="primary"
+      onClick={[Function]}
+      size="small"
+      type="button">
+      Small
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="primary"
+      onClick={[Function]}
+      size="small"
+      type="button">
+      Small disabled
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="primary"
+      onClick={[Function]}
+      size="large"
+      type="button">
+      Large
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="primary"
+      onClick={[Function]}
+      size="large"
+      type="button">
+      Large disabled
+    </Button>
+  </article>
+</section>
+`;
+
+exports[`Button [common] example testing should match snapshot for success 1`] = `
+<section>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="success"
+      onClick={[Function]}
+      type="button">
+      Success
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="success"
+      onClick={[Function]}
+      type="button">
+      Disabled
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="success"
+      onClick={[Function]}
+      size="short"
+      type="button">
+      Short
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="success"
+      onClick={[Function]}
+      size="short"
+      type="button">
+      Short disabled
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="success"
+      onClick={[Function]}
+      size="small"
+      type="button">
+      Small
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="success"
+      onClick={[Function]}
+      size="small"
+      type="button">
+      Small disabled
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="success"
+      onClick={[Function]}
+      size="large"
+      type="button">
+      Large
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="success"
+      onClick={[Function]}
+      size="large"
+      type="button">
+      Large disabled
+    </Button>
+  </article>
+</section>
+`;
+
+exports[`Button [common] example testing should match snapshot for warning 1`] = `
+<section>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="warning"
+      onClick={[Function]}
+      type="button">
+      Warning
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="warning"
+      onClick={[Function]}
+      type="button">
+      Disabled
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="warning"
+      onClick={[Function]}
+      size="short"
+      type="button">
+      Short
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="warning"
+      onClick={[Function]}
+      size="short"
+      type="button">
+      Short disabled
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="warning"
+      onClick={[Function]}
+      size="small"
+      type="button">
+      Small
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="warning"
+      onClick={[Function]}
+      size="small"
+      type="button">
+      Small disabled
+    </Button>
+  </article>
+  <article>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="warning"
+      onClick={[Function]}
+      size="large"
+      type="button">
+      Large
+    </Button>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={true}
+      kind="warning"
+      onClick={[Function]}
+      size="large"
+      type="button">
+      Large disabled
+    </Button>
+  </article>
+</section>
+`;

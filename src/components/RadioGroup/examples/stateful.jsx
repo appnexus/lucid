@@ -8,7 +8,7 @@ const style = {
 export default React.createClass({
 	render() {
 		return (
-			<RadioGroup>
+			<RadioGroup name='name'>
 				<RadioGroup.RadioButton style={style}>
 					<RadioGroup.Label>Alvin</RadioGroup.Label>
 				</RadioGroup.RadioButton>

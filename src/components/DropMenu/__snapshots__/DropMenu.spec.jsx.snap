@@ -1,0 +1,246 @@
+exports[`DropMenu [common] example testing should match snapshot for 1.basic 1`] = `
+<DropMenu
+  onSelect={[Function]}>
+  <DropMenu.Control>
+    Select
+  </DropMenu.Control>
+  <DropMenu.Option>
+    Red
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Green
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Blue
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`DropMenu [common] example testing should match snapshot for 2.button-menu 1`] = `
+<DropMenu>
+  <DropMenu.Control>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      type="button">
+      Select Color
+    </Button>
+  </DropMenu.Control>
+  <DropMenu.Option>
+    Red
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Green
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Blue
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`DropMenu [common] example testing should match snapshot for 3.disabled 1`] = `
+<DropMenu
+  isDisabled={true}>
+  <DropMenu.Control>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      tabIndex={-1}
+      type="button">
+      Select Color
+    </Button>
+  </DropMenu.Control>
+  <DropMenu.Option>
+    Red
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Green
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Blue
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`DropMenu [common] example testing should match snapshot for 4.disabled-options 1`] = `
+<DropMenu>
+  <DropMenu.Control>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      type="button">
+      Select Color
+    </Button>
+  </DropMenu.Control>
+  <DropMenu.Option
+    isDisabled={true}>
+    Red
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Green
+  </DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={true}>
+    Blue
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`DropMenu [common] example testing should match snapshot for 5.grouped-options 1`] = `
+<DropMenu>
+  <DropMenu.Control>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      type="button">
+      Select Color
+    </Button>
+  </DropMenu.Control>
+  <DropMenu.OptionGroup>
+    <DropMenu.Option>
+      Select Color
+    </DropMenu.Option>
+  </DropMenu.OptionGroup>
+  <DropMenu.OptionGroup>
+    Screen
+    <DropMenu.Option>
+      Red
+    </DropMenu.Option>
+    <DropMenu.Option>
+      Green
+    </DropMenu.Option>
+    <DropMenu.Option>
+      Blue
+    </DropMenu.Option>
+  </DropMenu.OptionGroup>
+  <DropMenu.OptionGroup>
+    Print
+    <DropMenu.Option>
+      Cyan
+    </DropMenu.Option>
+    <DropMenu.Option>
+      Yellow
+    </DropMenu.Option>
+    <DropMenu.Option>
+      Magenta
+    </DropMenu.Option>
+    <DropMenu.Option>
+      Black
+    </DropMenu.Option>
+  </DropMenu.OptionGroup>
+</DropMenu>
+`;
+
+exports[`DropMenu [common] example testing should match snapshot for 6.text-menu 1`] = `
+<DropMenu>
+  <DropMenu.Control>
+    <TextField
+      debounceLevel={500}
+      isDisabled={false}
+      isMultiLine={false}
+      lazyLevel={1000}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeDebounced={[Function]}
+      onSubmit={[Function]}
+      placeholder="Text DropMenu"
+      rows={5}
+      style={null} />
+  </DropMenu.Control>
+  <DropMenu.Option>
+    Red
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Green
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Blue
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`DropMenu [common] example testing should match snapshot for 7.action-menu 1`] = `
+<DropMenu>
+  <DropMenu.Control>
+    Colors
+    <CaretIcon
+      direction="down"
+      viewBox="0 3 16 8" />
+  </DropMenu.Control>
+  <DropMenu.Option>
+    Red
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Green
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Blue
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`DropMenu [common] example testing should match snapshot for 8.stateless 1`] = `
+<DropMenu
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={3}
+  isDisabled={false}
+  isExpanded={true}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={
+    Array [
+      0,
+    ]
+  }>
+  <DropMenu.Control>
+    <Button
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      onClick={[Function]}
+      type="button">
+      Select Color
+    </Button>
+  </DropMenu.Control>
+  <DropMenu.OptionGroup>
+    Preferred
+    <DropMenu.Option>
+      Red
+    </DropMenu.Option>
+    <DropMenu.Option>
+      Green
+    </DropMenu.Option>
+    <DropMenu.Option>
+      Blue
+    </DropMenu.Option>
+  </DropMenu.OptionGroup>
+  <DropMenu.Option>
+    Orange
+  </DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={true}>
+    Violet
+  </DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={true}>
+    Brown
+  </DropMenu.Option>
+</DropMenu>
+`;

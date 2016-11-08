@@ -10,6 +10,7 @@ export function createClass(definition={}) {
 		reducers = {},
 		selectors = {},
 		propName = null,
+		propTypes = {},
 		render = () => null,
 		...restDefinition,
 	} = definition;
@@ -24,6 +25,7 @@ export function createClass(definition={}) {
 			selectors,
 			propName,
 		},
+		propTypes: _.assign({}, propTypes, _.mapValues(definition.components, () => React.PropTypes.any)),
 		render,
 	};
 

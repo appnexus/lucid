@@ -1,0 +1,69 @@
+exports[`Switch [common] example testing should match snapshot for interactive 1`] = `
+<ul>
+  <li>
+    <label>
+      Enabled
+    </label>
+    <Switch
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+      tabIndex={10} />
+  </li>
+  <li>
+    <label>
+      Disabled
+    </label>
+    <Switch
+      isDisabled={true}
+      isSelected={false}
+      onSelect={[Function]}
+      tabIndex={11} />
+  </li>
+</ul>
+`;
+
+exports[`Switch [common] example testing should match snapshot for states 1`] = `
+<ul>
+  <li>
+    <label>
+      Unselected
+    </label>
+    <Switch
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+      tabIndex={20} />
+  </li>
+  <li>
+    <label>
+      Selected
+    </label>
+    <Switch
+      isDisabled={false}
+      isSelected={true}
+      onSelect={[Function]}
+      tabIndex={21} />
+  </li>
+  <li>
+    <label>
+      Disabled
+    </label>
+    <Switch
+      isDisabled={true}
+      isSelected={false}
+      onSelect={[Function]}
+      tabIndex={22} />
+  </li>
+  <li>
+    <label>
+      Disabled & selected
+    </label>
+    <Switch
+      isDisabled={true}
+      isSelected={true}
+      onSelect={[Function]}
+      tabIndex={23} />
+  </li>
+</ul>
+`;

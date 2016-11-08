@@ -1,0 +1,538 @@
+exports[`Banner [common] example testing should match snapshot for stateful 1`] = `
+<div>
+  <Button
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Open/Close
+  </Button>
+  <br />
+  <Banner
+    hasIcon={false}
+    hasRoundedCorners={true}
+    icon={null}
+    isCloseable={true}
+    isClosed={false}
+    isSmall={false}
+    kind="default"
+    onClose={[Function]}>
+    Default
+  </Banner>
+</div>
+`;
+
+exports[`Banner [common] example testing should match snapshot for stateless 1`] = `
+<div>
+  <div>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={false}
+      kind="default"
+      onClose={[Function]}>
+      Default
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={false}
+      icon={null}
+      isCloseable={true}
+      isSmall={false}
+      kind="default"
+      onClose={[Function]}>
+      Default no rounded corners
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={false}
+      kind="default"
+      onClose={[Function]}>
+      Default -- No Close 
+      ×
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={true}
+      kind="default"
+      onClose={[Function]}>
+      Default -- small
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={true}
+      kind="default"
+      onClose={[Function]}>
+      Default -- small -- No Close 
+      ×
+    </Banner>
+  </div>
+  <div>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={false}
+      kind="primary"
+      onClose={[Function]}>
+      Primary
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={false}
+      kind="primary"
+      onClose={[Function]}>
+      Primary -- No Close 
+      ×
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={true}
+      kind="primary"
+      onClose={[Function]}>
+      Primary -- small
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={true}
+      kind="primary"
+      onClose={[Function]}>
+      Primary -- small -- No Close 
+      ×
+    </Banner>
+  </div>
+  <div>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={false}
+      kind="success"
+      onClose={[Function]}>
+      Success
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={false}
+      kind="success"
+      onClose={[Function]}>
+      Success -- No Close 
+      ×
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={false}
+      kind="success"
+      onClose={[Function]}>
+      Success -- has icon
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={false}
+      kind="success"
+      onClose={[Function]}>
+      Success -- has icon -- No Close 
+      ×
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={true}
+      kind="success"
+      onClose={[Function]}>
+      Success -- has icon -- small
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={true}
+      kind="success"
+      onClose={[Function]}>
+      Success -- has icon -- No Close 
+      ×
+       -- small
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={true}
+      kind="success"
+      onClose={[Function]}>
+      Success -- small
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={true}
+      kind="success"
+      onClose={[Function]}>
+      Success -- small -- No Close 
+      ×
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={false}
+      kind="success"
+      onClose={[Function]}>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius neque veniam nisi aspernatur, quos dolorem aut praesentium eaque consequatur inventore adipisci, architecto atque ipsa, laudantium laboriosam ipsam non vitae, cum maiores hic. Laboriosam fugiat eveniet quos assumenda delectus aperiam excepturi vel, officia sint reiciendis expedita consequuntur, a sed deleniti commodi rerum natus quam veniam earum quibusdam! Nemo iusto asperiores sit velit eveniet quod nam. Voluptatibus beatae maxime, quia a velit praesentium vel vitae consectetur, libero nulla magni voluptatum facilis ea facere, minus doloribus. Excepturi veniam, mollitia esse aut illum ad tenetur facere quidem. Ipsum odio, dolore, error rem assumenda debitis.
+      </p>
+      <p>
+        Culpa a facilis facere, ipsum eveniet, minima nisi ipsam perspiciatis aut nostrum autem delectus natus, error obcaecati. Deleniti, illo, nulla. Maiores similique accusantium sint ullam deleniti provident, ratione debitis neque a iusto placeat, explicabo quia assumenda minus amet suscipit modi odit voluptatem soluta. Quas consectetur accusantium iure magni velit, rem quasi sunt corrupti nisi, fugit quos beatae. Laborum impedit cum soluta facere consequuntur nisi nostrum enim. Eius incidunt ratione excepturi harum explicabo quos recusandae sequi, facere tenetur in ducimus impedit sunt sapiente accusamus laborum quae velit minus neque. Perferendis, ducimus nihil dolor placeat libero nisi adipisci autem et fugit commodi?
+      </p>
+      <p>
+        Eos ut odio, perspiciatis ad delectus. Inventore officiis rem quisquam magni. Amet, doloremque? Eveniet laborum labore, quod enim repellat, omnis voluptates, quasi non nostrum dolores ut perspiciatis facilis sint dolorum, minima reprehenderit? Vitae ipsam, similique et quisquam. Molestias, eaque. Expedita eligendi, saepe facere tempore doloremque earum incidunt esse labore nobis amet odio, deserunt voluptate eius blanditiis ullam consequuntur maxime reprehenderit dolorem recusandae eos voluptas! Harum dolorum in, quo, dolore minima commodi laudantium beatae enim dolorem, aspernatur quaerat libero cupiditate repellendus. Ullam perferendis tempore autem quos officiis, natus a accusamus odit ut sint culpa. Quos sunt eos, magnam aliquam, adipisci consectetur.
+      </p>
+    </Banner>
+  </div>
+  <div>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={false}
+      kind="warning"
+      onClose={[Function]}>
+      Warning
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={false}
+      kind="warning"
+      onClose={[Function]}>
+      Warning -- No Close 
+      ×
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={false}
+      kind="warning"
+      onClose={[Function]}>
+      Warning -- has icon
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={false}
+      kind="warning"
+      onClose={[Function]}>
+      Warning -- has iconv
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={true}
+      kind="warning"
+      onClose={[Function]}>
+      Warning -- small
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={true}
+      kind="warning"
+      onClose={[Function]}>
+      Warning -- small -- No Close 
+      ×
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={true}
+      kind="warning"
+      onClose={[Function]}>
+      Warning -- has icon -- small
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={true}
+      kind="warning"
+      onClose={[Function]}>
+      Warning -- has icon -- small -- No Close 
+      ×
+    </Banner>
+  </div>
+  <div>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={false}
+      kind="danger"
+      onClose={[Function]}>
+      Danger
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={false}
+      kind="danger"
+      onClose={[Function]}>
+      Danger -- No Close 
+      ×
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={false}
+      kind="danger"
+      onClose={[Function]}>
+      Danger -- has icon
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={false}
+      kind="danger"
+      onClose={[Function]}>
+      Danger -- has icon -- No Close 
+      ×
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={true}
+      kind="danger"
+      onClose={[Function]}>
+      Danger -- small
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={true}
+      kind="danger"
+      onClose={[Function]}>
+      Danger -- small -- No Close 
+      ×
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={true}
+      kind="danger"
+      onClose={[Function]}>
+      Danger -- has icon -- small
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={true}
+      kind="danger"
+      onClose={[Function]}>
+      Danger -- has icon -- small -- No Close 
+      ×
+    </Banner>
+  </div>
+  <div>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={false}
+      kind="info"
+      onClose={[Function]}>
+      Info
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={false}
+      kind="info"
+      onClose={[Function]}>
+      Info -- No Close 
+      ×
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={false}
+      kind="info"
+      onClose={[Function]}>
+      Info -- has icon
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={false}
+      kind="info"
+      onClose={[Function]}>
+      Info -- has icon -- No Close 
+      ×
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={true}
+      kind="info"
+      onClose={[Function]}>
+      Info -- small
+    </Banner>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={true}
+      kind="info"
+      onClose={[Function]}>
+      Info -- small -- No Close 
+      ×
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={true}
+      isSmall={true}
+      kind="info"
+      onClose={[Function]}>
+      Info -- has icon -- small
+    </Banner>
+    <Banner
+      hasIcon={true}
+      hasRoundedCorners={true}
+      icon={null}
+      isCloseable={false}
+      isSmall={true}
+      kind="info"
+      onClose={[Function]}>
+      Info -- has icon -- small -- No Close 
+      ×
+    </Banner>
+  </div>
+  <div>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={<CustomIcon />}
+      isCloseable={true}
+      isSmall={false}
+      kind="danger"
+      onClose={[Function]}>
+      Has Custom Icon
+    </Banner>
+  </div>
+  <div>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={<CustomIcon />}
+      isCloseable={true}
+      isSmall={false}
+      kind="default"
+      onClose={[Function]}>
+      <p>
+        <strong>
+          Has Custom Icon
+        </strong>
+         ipsum dolor sit amet, consectetur adipisicing elit. A doloribus, fugit atque. Impedit neque perferendis libero nam, deserunt inventore aliquid quis molestiae est! In perferendis dignissimos ex optio cupiditate quae!
+      </p>
+    </Banner>
+  </div>
+  <div>
+    <Banner
+      hasIcon={false}
+      hasRoundedCorners={true}
+      icon={<CustomIcon />}
+      isCloseable={true}
+      isSmall={false}
+      kind="default"
+      onClose={[Function]}>
+      <p>
+        <strong>
+          Has Custom Icon
+        </strong>
+         ipsum dolor sit amet, consectetur adipisicing elit. A doloribus, fugit atque. Impedit neque perferendis libero nam, deserunt inventore aliquid quis molestiae est! In perferendis dignissimos ex optio cupiditate quae!
+      </p>
+      <p>
+        Velit, architecto, commodi. Non porro cupiditate rerum obcaecati veniam alias fugiat nam similique, labore a quis magni vero consequatur consequuntur veritatis est quibusdam tempora tempore ex, deleniti dicta inventore. Quas.
+      </p>
+    </Banner>
+  </div>
+</div>
+`;

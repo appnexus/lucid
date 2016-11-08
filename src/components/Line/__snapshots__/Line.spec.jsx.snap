@@ -1,0 +1,60 @@
+exports[`Line [common] example testing should match snapshot for basic 1`] = `
+<div>
+  <svg
+    height={100}
+    width={200}>
+    <Line
+      color="color-chart-0"
+      d="M0,0 L100,100"
+      isDotted={false} />
+    <Line
+      color="color-chart-1"
+      d="M0,20 L100,80"
+      isDotted={false} />
+    <Line
+      color="color-chart-2"
+      d="M0,40 L100,60"
+      isDotted={false} />
+    <Line
+      color="color-chart-3"
+      d="M0,60 L100,40"
+      isDotted={false} />
+    <Line
+      color="color-chart-4"
+      d="M0,80 L100,20"
+      isDotted={false} />
+    <Line
+      color="color-chart-5"
+      d="M0,100 L100,0"
+      isDotted={false} />
+  </svg>
+  <svg
+    height={100}
+    width={200}>
+    <Line
+      color="color-chart-0"
+      d="M0,0 L100,100"
+      isDotted={true} />
+    <Line
+      color="color-chart-1"
+      d="M0,20 L100,80"
+      isDotted={true} />
+    <Line
+      color="color-chart-2"
+      d="M0,40 L100,60"
+      isDotted={true} />
+    <Line
+      color="color-chart-3"
+      d="M0,60 L100,40"
+      isDotted={true} />
+    <Line
+      color="color-chart-4"
+      d="M0,80 L100,20"
+      isDotted={true} />
+    <Line
+      color="color-chart-5"
+      d="M0,100 L100,0"
+      isDotted={true} />
+  </svg>
+</div>
+`;

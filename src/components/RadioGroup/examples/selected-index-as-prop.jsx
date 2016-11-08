@@ -9,6 +9,7 @@ export default React.createClass({
 	render() {
 		return (
 			<RadioGroup
+					name='name'
 					selectedIndex={3}
 					style={{
 						display: 'flex',

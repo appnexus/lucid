@@ -1,0 +1,45 @@
+exports[`Breadcrumb [common] example testing should match snapshot for 1.basic 1`] = `
+<Breadcrumb>
+  <Breadcrumb.Item>
+    <a
+      href="#">
+      <HomeIcon />
+    </a>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item>
+    <a
+      href="#">
+      List
+    </a>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item>
+    Item
+  </Breadcrumb.Item>
+</Breadcrumb>
+`;
+
+exports[`Breadcrumb [common] example testing should match snapshot for 2.map 1`] = `
+<Breadcrumb>
+  <Breadcrumb.Item>
+    <a
+      href="#">
+      Foo
+    </a>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item>
+    <a
+      href="#">
+      Bar
+    </a>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item>
+    <a
+      href="#">
+      Baz
+    </a>
+  </Breadcrumb.Item>
+  <Breadcrumb.Item>
+    Qux
+  </Breadcrumb.Item>
+</Breadcrumb>
+`;

@@ -207,7 +207,7 @@ describe('SplitVertical', () => {
 				onDragEnd({dX: dX + 1}, lastArg);
 
 				assert(onResizing.called, 'must be called');
-				assert.equal(onResizing.lastCall.args[0], width + dX, 'must pass the new width of the pane');
+				assert.equal(onResizing.lastCall.args[0], dX, 'must pass the new width of the pane');
 				assert.equal(onResizing.lastCall.args[1].props, wrapper.props(), 'must pass component props in the last arg');
 				assert.equal(onResizing.lastCall.args[1].event, lastArg.event, 'must pass event reference in the last arg');
 
@@ -259,7 +259,7 @@ describe('SplitVertical', () => {
 				onDragEnd({dX: dX + 1}, lastArg);
 
 				assert(onResize.called, 'must be called');
-				assert.equal(onResize.lastCall.args[0], width + dX + 1, 'must pass the new width of the pane');
+				assert.equal(onResize.lastCall.args[0], dX + 1, 'must pass the new width of the pane');
 				assert.equal(onResize.lastCall.args[1].props, wrapper.props(), 'must pass component props in the last arg');
 				assert.equal(onResize.lastCall.args[1].event, lastArg.event, 'must pass event reference in the last arg');
 			});

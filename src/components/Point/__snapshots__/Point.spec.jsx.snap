@@ -1,0 +1,171 @@
+exports[`Point [common] example testing should match snapshot for basic 1`] = `
+<div>
+  <svg
+    height={20}
+    width={20}>
+    <Point
+      color="color-chart-0"
+      hasStroke={false}
+      kind={0}
+      scale={1}
+      x={10}
+      y={10} />
+  </svg>
+  <svg
+    height={20}
+    width={20}>
+    <Point
+      color="color-chart-1"
+      hasStroke={false}
+      kind={1}
+      scale={1}
+      x={10}
+      y={10} />
+  </svg>
+  <svg
+    height={20}
+    width={20}>
+    <Point
+      color="color-chart-2"
+      hasStroke={false}
+      kind={2}
+      scale={1}
+      x={10}
+      y={10} />
+  </svg>
+  <svg
+    height={20}
+    width={20}>
+    <Point
+      color="color-chart-3"
+      hasStroke={false}
+      kind={3}
+      scale={1}
+      x={10}
+      y={10} />
+  </svg>
+  <svg
+    height={20}
+    width={20}>
+    <Point
+      color="color-chart-4"
+      hasStroke={false}
+      kind={4}
+      scale={1}
+      x={10}
+      y={10} />
+  </svg>
+  <svg
+    height={20}
+    width={20}>
+    <Point
+      color="color-chart-5"
+      hasStroke={false}
+      kind={5}
+      scale={1}
+      x={10}
+      y={10} />
+  </svg>
+</div>
+`;
+
+exports[`Point [common] example testing should match snapshot for big-with-stroke 1`] = `
+<div>
+  <svg
+    height={40}
+    style={
+      Object {
+        "backgroundColor": "black",
+      }
+    }
+    width={40}>
+    <Point
+      color="color-chart-0"
+      hasStroke={true}
+      kind={0}
+      scale={2}
+      x={20}
+      y={20} />
+  </svg>
+  <svg
+    height={40}
+    style={
+      Object {
+        "backgroundColor": "black",
+      }
+    }
+    width={40}>
+    <Point
+      color="color-chart-1"
+      hasStroke={true}
+      kind={1}
+      scale={2}
+      x={20}
+      y={20} />
+  </svg>
+  <svg
+    height={40}
+    style={
+      Object {
+        "backgroundColor": "black",
+      }
+    }
+    width={40}>
+    <Point
+      color="color-chart-2"
+      hasStroke={true}
+      kind={2}
+      scale={2}
+      x={20}
+      y={20} />
+  </svg>
+  <svg
+    height={40}
+    style={
+      Object {
+        "backgroundColor": "black",
+      }
+    }
+    width={40}>
+    <Point
+      color="color-chart-3"
+      hasStroke={true}
+      kind={3}
+      scale={2}
+      x={20}
+      y={20} />
+  </svg>
+  <svg
+    height={40}
+    style={
+      Object {
+        "backgroundColor": "black",
+      }
+    }
+    width={40}>
+    <Point
+      color="color-chart-4"
+      hasStroke={true}
+      kind={4}
+      scale={2}
+      x={20}
+      y={20} />
+  </svg>
+  <svg
+    height={40}
+    style={
+      Object {
+        "backgroundColor": "black",
+      }
+    }
+    width={40}>
+    <Point
+      color="color-chart-5"
+      hasStroke={true}
+      kind={5}
+      scale={2}
+      x={20}
+      y={20} />
+  </svg>
+</div>
+`;

@@ -1,0 +1,4186 @@
+exports[`Table [common] example testing should match snapshot for 1.standard 1`] = `
+<Table
+  density="extended"
+  hasBorder={false}
+  hasWordWrap={true}>
+  <Table.Thead>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        RS
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSortable={true}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        Lorem.
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        <SuccessIcon />
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        Button
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={true}
+        rowSpan={2}
+        sortDirection="up">
+        Sorted Column
+      </Table.Th>
+      <Table.Th
+        align="center"
+        colSpan={3}
+        isResizable={false}
+        isSorted={false}
+        sortDirection="up">
+        Alignments
+      </Table.Th>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        sortDirection="up">
+        align left
+      </Table.Th>
+      <Table.Th
+        align="center"
+        isResizable={false}
+        isSorted={false}
+        sortDirection="up">
+        align center
+      </Table.Th>
+      <Table.Th
+        align="right"
+        isResizable={false}
+        isSortable={true}
+        isSorted={true}
+        sortDirection="up">
+        align right
+      </Table.Th>
+    </Table.Tr>
+  </Table.Thead>
+  <Table.Tbody>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={true}
+        rowSpan={14}>
+        RS
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Text
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isDisabled
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Text && isActionable
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isDisabled && isActionable
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <a
+          href="#">
+          Link
+        </a>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <a
+          href="#">
+          isDisabled Link
+        </a>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <a
+          href="#">
+          Link && isActionable
+        </a>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <a
+          href="#">
+          isDisabled Link && isActionable
+        </a>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={true}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isSelected
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={true}
+      isSelected={true}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isSelected && isDisabled
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={false}
+      isSelected={true}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isSelected && isActionable
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={true}
+      isSelected={true}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isSelected && isDisabled && isActionable
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={true}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isActive
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={true}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isActive && isDisabled
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+  </Table.Tbody>
+</Table>
+`;
+
+exports[`Table [common] example testing should match snapshot for 2.compressed 1`] = `
+<Table
+  density="compressed"
+  hasBorder={false}
+  hasWordWrap={true}>
+  <Table.Thead>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        RS
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={true}
+        isSortable={true}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        Sortable and resizable.
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        <SuccessIcon />
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        Button
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={true}
+        isSorted={true}
+        rowSpan={2}
+        sortDirection="up">
+        Sorted Column
+      </Table.Th>
+      <Table.Th
+        align="center"
+        colSpan={3}
+        isResizable={false}
+        isSorted={false}
+        sortDirection="up">
+        Alignments
+      </Table.Th>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        sortDirection="up">
+        align left
+      </Table.Th>
+      <Table.Th
+        align="center"
+        isResizable={true}
+        isSorted={false}
+        sortDirection="up">
+        align center
+      </Table.Th>
+      <Table.Th
+        align="right"
+        isResizable={false}
+        isSortable={true}
+        isSorted={true}
+        sortDirection="up">
+        align right
+      </Table.Th>
+    </Table.Tr>
+  </Table.Thead>
+  <Table.Tbody>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={true}
+        rowSpan={14}>
+        RS
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Text
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isDisabled
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Text && isActionable
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isDisabled && isActionable
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <a
+          href="#">
+          Link
+        </a>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <a
+          href="#">
+          isDisabled Link
+        </a>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <a
+          href="#">
+          Link && isActionable
+        </a>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <a
+          href="#">
+          isDisabled Link && isActionable
+        </a>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={true}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isSelected
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={true}
+      isSelected={true}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isSelected && isDisabled
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={false}
+      isSelected={true}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isSelected && isActionable
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={true}
+      isSelected={true}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isSelected && isDisabled && isActionable
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={true}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isActive
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={true}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isActive && isDisabled
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+  </Table.Tbody>
+</Table>
+`;
+
+exports[`Table [common] example testing should match snapshot for 3.with-border 1`] = `
+<Table
+  density="extended"
+  hasBorder={true}
+  hasWordWrap={true}>
+  <Table.Thead>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSortable={true}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        Lorem.
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        <SuccessIcon />
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        Button
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={true}
+        rowSpan={2}
+        sortDirection="up">
+        Sorted Column
+      </Table.Th>
+      <Table.Th
+        align="center"
+        colSpan={3}
+        isResizable={false}
+        isSorted={false}
+        sortDirection="up">
+        Alignments
+      </Table.Th>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        sortDirection="up">
+        align left
+      </Table.Th>
+      <Table.Th
+        align="center"
+        isResizable={false}
+        isSorted={false}
+        sortDirection="up">
+        align center
+      </Table.Th>
+      <Table.Th
+        align="right"
+        isResizable={false}
+        isSortable={true}
+        isSorted={true}
+        sortDirection="up">
+        align right
+      </Table.Th>
+    </Table.Tr>
+  </Table.Thead>
+  <Table.Tbody>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Text
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isDisabled
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Text && isActionable
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isDisabled && isActionable
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <a
+          href="#">
+          Link
+        </a>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <a
+          href="#">
+          isDisabled Link
+        </a>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <a
+          href="#">
+          Link && isActionable
+        </a>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <a
+          href="#">
+          isDisabled Link && isActionable
+        </a>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={true}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isSelected
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={true}
+      isSelected={true}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isSelected && isDisabled
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={false}
+      isSelected={true}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isSelected && isActionable
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={true}
+      isSelected={true}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isSelected && isDisabled && isActionable
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={true}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isActive
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={true}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        isActive && isDisabled
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+  </Table.Tbody>
+</Table>
+`;
+
+exports[`Table [common] example testing should match snapshot for 4.with-empty-column 1`] = `
+<Table
+  density="extended"
+  hasBorder={false}
+  hasWordWrap={true}>
+  <Table.Thead>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        RS
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSortable={true}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        Empty
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        <SuccessIcon />
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        rowSpan={2}
+        sortDirection="up">
+        Button
+      </Table.Th>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={true}
+        rowSpan={2}
+        sortDirection="up">
+        Sorted Column
+      </Table.Th>
+      <Table.Th
+        align="center"
+        colSpan={3}
+        isResizable={false}
+        isSorted={false}
+        sortDirection="up">
+        Alignments
+      </Table.Th>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Th
+        align="left"
+        isResizable={false}
+        isSorted={false}
+        sortDirection="up">
+        align left
+      </Table.Th>
+      <Table.Th
+        align="center"
+        isResizable={false}
+        isSorted={false}
+        sortDirection="up">
+        align center
+      </Table.Th>
+      <Table.Th
+        align="right"
+        isResizable={false}
+        isSortable={true}
+        isSorted={true}
+        sortDirection="up">
+        align right
+      </Table.Th>
+    </Table.Tr>
+  </Table.Thead>
+  <Table.Tbody>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={true}
+        rowSpan={14}>
+        RS
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}>
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}>
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}>
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}>
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}>
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}>
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}>
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}>
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={true}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}>
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={true}
+      isSelected={true}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}>
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={false}
+      isSelected={true}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}>
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={true}
+      isSelected={true}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}>
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={true}
+      isDisabled={false}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}>
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={true}
+      isDisabled={true}
+      isSelected={false}>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]} />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}>
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}>
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button">
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}>
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}>
+        align right
+      </Table.Td>
+    </Table.Tr>
+  </Table.Tbody>
+</Table>
+`;

@@ -1,0 +1,66 @@
+exports[`AxisLabel [common] example testing should match snapshot for basic 1`] = `
+<svg
+  height={400}
+  width={1000}>
+  <rect
+    height={398}
+    style={
+      Object {
+        "fill": "none",
+        "stroke": "black",
+        "strokeDasharray": "2,2",
+        "strokeWidth": 1,
+      }
+    }
+    width={998}
+    x={1}
+    y={1} />
+  <g
+    transform="translate(50, 50)">
+    <rect
+      height={300}
+      style={
+        Object {
+          "fill": "lightgrey",
+        }
+      }
+      width={900} />
+  </g>
+  <g
+    transform="translate(0,0)">
+    <AxisLabel
+      color="#000"
+      height={400}
+      label="Left"
+      orient="left"
+      width={50} />
+  </g>
+  <g
+    transform="translate(950, 0)">
+    <AxisLabel
+      color="color-chart-0"
+      height={400}
+      label="Right"
+      orient="right"
+      width={50} />
+  </g>
+  <g
+    transform="translate(0, 350)">
+    <AxisLabel
+      color="color-chart-1"
+      height={50}
+      label="Bottom"
+      orient="bottom"
+      width={1000} />
+  </g>
+  <g
+    transform="translate(0, 0)">
+    <AxisLabel
+      color="color-chart-2"
+      height={50}
+      label="Top"
+      orient="top"
+      width={1000} />
+  </g>
+</svg>
+`;

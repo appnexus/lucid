@@ -1,0 +1,16 @@
+exports[`Validation [common] example testing should match snapshot for basic 1`] = `
+<div>
+  <Validation
+    Error="Method one">
+    Content
+  </Validation>
+  <Validation>
+    <Validation.Error>
+      <i>
+        Method two
+      </i>
+    </Validation.Error>
+    Content
+  </Validation>
+</div>
+`;

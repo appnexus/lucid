@@ -11,6 +11,7 @@ install:
   - yarn
 after_success:
   - bash ./scripts/docs-upload-gh.sh
+  - bash <(curl -s https://codecov.io/bash)
 branches:
   only:
     - master

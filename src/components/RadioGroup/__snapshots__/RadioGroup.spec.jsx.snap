@@ -1,0 +1,288 @@
+exports[`RadioGroup [common] example testing should match snapshot for default 1`] = `
+<RadioGroup
+  name="name"
+  onSelect={[Function]}
+  selectedIndex={0}>
+  <RadioButton
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Superman
+    </RadioGroup.Label>
+  </RadioButton>
+  <RadioButton
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Batman
+    </RadioGroup.Label>
+  </RadioButton>
+  <RadioButton
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Wonder Woman
+    </RadioGroup.Label>
+  </RadioButton>
+  <RadioButton
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Aquaman
+    </RadioGroup.Label>
+  </RadioButton>
+  <RadioButton
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Robin
+    </RadioGroup.Label>
+  </RadioButton>
+</RadioGroup>
+`;
+
+exports[`RadioGroup [common] example testing should match snapshot for selected-index-as-prop 1`] = `
+<RadioGroup
+  name="name"
+  onSelect={[Function]}
+  selectedIndex={3}
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+    }
+  }>
+  <RadioButton
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Captain America
+    </RadioGroup.Label>
+  </RadioButton>
+  <RadioButton
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Iron Man
+    </RadioGroup.Label>
+  </RadioButton>
+  <RadioButton
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Thor
+    </RadioGroup.Label>
+  </RadioButton>
+  <RadioButton
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Hulk
+    </RadioGroup.Label>
+  </RadioButton>
+  <RadioButton
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Black Widow
+    </RadioGroup.Label>
+  </RadioButton>
+  <RadioButton
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Hawkeye
+    </RadioGroup.Label>
+  </RadioButton>
+</RadioGroup>
+`;
+
+exports[`RadioGroup [common] example testing should match snapshot for selected-index-from-child 1`] = `
+<RadioGroup
+  name="name"
+  onSelect={[Function]}
+  selectedIndex={3}
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+    }
+  }>
+  <RadioButton
+    isDisabled={false}
+    isSelected={true}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Leonardo
+    </RadioGroup.Label>
+  </RadioButton>
+  <RadioButton
+    isDisabled={false}
+    isSelected={true}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Raphael
+    </RadioGroup.Label>
+  </RadioButton>
+  <RadioButton
+    isDisabled={false}
+    isSelected={true}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Donatello
+    </RadioGroup.Label>
+  </RadioButton>
+  <RadioButton
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Michelangelo
+    </RadioGroup.Label>
+  </RadioButton>
+  <RadioButton
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Venus
+    </RadioGroup.Label>
+  </RadioButton>
+</RadioGroup>
+`;
+
+exports[`RadioGroup [common] example testing should match snapshot for stateful 1`] = `
+<RadioGroup
+  name="name">
+  <RadioButton
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Alvin
+    </RadioGroup.Label>
+  </RadioButton>
+  <RadioButton
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Simon
+    </RadioGroup.Label>
+  </RadioButton>
+  <RadioButton
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }>
+    <RadioGroup.Label>
+      Theodore
+    </RadioGroup.Label>
+  </RadioButton>
+</RadioGroup>
+`;

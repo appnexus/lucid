@@ -56,6 +56,7 @@ describe('#scrollParentTo', () => {
 
 	it('should align to top if the top of the node is above the fold', () => {
 		parentNode.scrollTop = 5; // parent element is scrolled down by 5px
+		childNode.offsetTop = 0; // child element is located at the top of parent
 		scrollParentTo(childNode);
 		assert.equal(parentNode.scrollTop, 0); //expect parent to be scrolled to the top
 	});
@@ -70,6 +71,9 @@ describe('#scrollParentTo', () => {
 
 	it('should align to bottom if the bottom of the node is below the fold', () => {
 		parentNode.scrollTop = 0; // parent element is scrolled up to top
+		parentNode.clientHeight = 5; // parent element has height of 5px
+		childNode.offsetTop = 10; // child element is located 10px down from the top
+		childNode.offsetHeight = 8; // child element is has height of 8px
 		parentNode.style.overflowY = 'scroll';
 		parentNode.style.height = '5px';
 		childNode.style.height = '18px';

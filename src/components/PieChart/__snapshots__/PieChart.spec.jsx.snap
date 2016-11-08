@@ -1,0 +1,650 @@
+exports[`PieChart [common] example testing should match snapshot for 1.basic 1`] = `
+<div>
+  <PieChart
+    data={
+      Array [
+        Object {
+          "x": "Leslie",
+          "y": 60,
+        },
+        Object {
+          "x": "Ron",
+          "y": 40,
+        },
+        Object {
+          "x": "Tom",
+          "y": 30,
+        },
+        Object {
+          "x": "Gary",
+          "y": 20,
+        },
+        Object {
+          "x": "Ben",
+          "y": 15,
+        },
+      ]
+    } />
+  <PieChart
+    data={
+      Array [
+        Object {
+          "x": "Leslie",
+          "y": 60,
+        },
+        Object {
+          "x": "Ron",
+          "y": 40,
+        },
+        Object {
+          "x": "Tom",
+          "y": 30,
+        },
+        Object {
+          "x": "Gary",
+          "y": 20,
+        },
+        Object {
+          "x": "Ben",
+          "y": 15,
+        },
+      ]
+    }
+    palette={
+      Array [
+        "color-chart-0-lightest",
+        "color-chart-0-light",
+        "color-chart-0",
+        "color-chart-0-dark",
+        "color-chart-0-darkest",
+      ]
+    } />
+  <PieChart
+    data={
+      Array [
+        Object {
+          "x": "Leslie",
+          "y": 60,
+        },
+        Object {
+          "x": "Ron",
+          "y": 40,
+        },
+        Object {
+          "x": "Tom",
+          "y": 30,
+        },
+        Object {
+          "x": "Gary",
+          "y": 20,
+        },
+        Object {
+          "x": "Ben",
+          "y": 15,
+        },
+      ]
+    }
+    palette={
+      Array [
+        "color-chart-1-lightest",
+        "color-chart-1-light",
+        "color-chart-1",
+        "color-chart-1-dark",
+        "color-chart-1-darkest",
+      ]
+    } />
+  <PieChart
+    data={
+      Array [
+        Object {
+          "x": "Leslie",
+          "y": 60,
+        },
+        Object {
+          "x": "Ron",
+          "y": 40,
+        },
+        Object {
+          "x": "Tom",
+          "y": 30,
+        },
+        Object {
+          "x": "Gary",
+          "y": 20,
+        },
+        Object {
+          "x": "Ben",
+          "y": 15,
+        },
+      ]
+    }
+    palette={
+      Array [
+        "color-chart-2-lightest",
+        "color-chart-2-light",
+        "color-chart-2",
+        "color-chart-2-dark",
+        "color-chart-2-darkest",
+      ]
+    } />
+  <PieChart
+    data={
+      Array [
+        Object {
+          "x": "Leslie",
+          "y": 60,
+        },
+        Object {
+          "x": "Ron",
+          "y": 40,
+        },
+        Object {
+          "x": "Tom",
+          "y": 30,
+        },
+        Object {
+          "x": "Gary",
+          "y": 20,
+        },
+        Object {
+          "x": "Ben",
+          "y": 15,
+        },
+      ]
+    }
+    palette={
+      Array [
+        "color-chart-3-lightest",
+        "color-chart-3-light",
+        "color-chart-3",
+        "color-chart-3-dark",
+        "color-chart-3-darkest",
+      ]
+    } />
+  <PieChart
+    data={
+      Array [
+        Object {
+          "x": "Leslie",
+          "y": 60,
+        },
+        Object {
+          "x": "Ron",
+          "y": 40,
+        },
+        Object {
+          "x": "Tom",
+          "y": 30,
+        },
+        Object {
+          "x": "Gary",
+          "y": 20,
+        },
+        Object {
+          "x": "Ben",
+          "y": 15,
+        },
+      ]
+    }
+    palette={
+      Array [
+        "color-chart-4-lightest",
+        "color-chart-4-light",
+        "color-chart-4",
+        "color-chart-4-dark",
+        "color-chart-4-darkest",
+      ]
+    } />
+  <PieChart
+    data={
+      Array [
+        Object {
+          "x": "Leslie",
+          "y": 60,
+        },
+        Object {
+          "x": "Ron",
+          "y": 40,
+        },
+        Object {
+          "x": "Tom",
+          "y": 30,
+        },
+        Object {
+          "x": "Gary",
+          "y": 20,
+        },
+        Object {
+          "x": "Ben",
+          "y": 15,
+        },
+      ]
+    }
+    palette={
+      Array [
+        "color-chart-5-lightest",
+        "color-chart-5-light",
+        "color-chart-5",
+        "color-chart-5-dark",
+        "color-chart-5-darkest",
+      ]
+    } />
+</div>
+`;
+
+exports[`PieChart [common] example testing should match snapshot for 2.basic-donuts 1`] = `
+<div>
+  <PieChart
+    data={
+      Array [
+        Object {
+          "x": "Leslie",
+          "y": 60,
+        },
+        Object {
+          "x": "Ron",
+          "y": 40,
+        },
+        Object {
+          "x": "Tom",
+          "y": 30,
+        },
+        Object {
+          "x": "Gary",
+          "y": 20,
+        },
+        Object {
+          "x": "Ben",
+          "y": 15,
+        },
+      ]
+    }
+    isDonut={true} />
+  <PieChart
+    data={
+      Array [
+        Object {
+          "x": "Leslie",
+          "y": 60,
+        },
+        Object {
+          "x": "Ron",
+          "y": 40,
+        },
+        Object {
+          "x": "Tom",
+          "y": 30,
+        },
+        Object {
+          "x": "Gary",
+          "y": 20,
+        },
+        Object {
+          "x": "Ben",
+          "y": 15,
+        },
+      ]
+    }
+    isDonut={true}
+    palette={
+      Array [
+        "color-chart-0-lightest",
+        "color-chart-0-light",
+        "color-chart-0",
+        "color-chart-0-dark",
+        "color-chart-0-darkest",
+      ]
+    } />
+  <PieChart
+    data={
+      Array [
+        Object {
+          "x": "Leslie",
+          "y": 60,
+        },
+        Object {
+          "x": "Ron",
+          "y": 40,
+        },
+        Object {
+          "x": "Tom",
+          "y": 30,
+        },
+        Object {
+          "x": "Gary",
+          "y": 20,
+        },
+        Object {
+          "x": "Ben",
+          "y": 15,
+        },
+      ]
+    }
+    isDonut={true}
+    palette={
+      Array [
+        "color-chart-1-lightest",
+        "color-chart-1-light",
+        "color-chart-1",
+        "color-chart-1-dark",
+        "color-chart-1-darkest",
+      ]
+    } />
+  <PieChart
+    data={
+      Array [
+        Object {
+          "x": "Leslie",
+          "y": 60,
+        },
+        Object {
+          "x": "Ron",
+          "y": 40,
+        },
+        Object {
+          "x": "Tom",
+          "y": 30,
+        },
+        Object {
+          "x": "Gary",
+          "y": 20,
+        },
+        Object {
+          "x": "Ben",
+          "y": 15,
+        },
+      ]
+    }
+    isDonut={true}
+    palette={
+      Array [
+        "color-chart-2-lightest",
+        "color-chart-2-light",
+        "color-chart-2",
+        "color-chart-2-dark",
+        "color-chart-2-darkest",
+      ]
+    } />
+  <PieChart
+    data={
+      Array [
+        Object {
+          "x": "Leslie",
+          "y": 60,
+        },
+        Object {
+          "x": "Ron",
+          "y": 40,
+        },
+        Object {
+          "x": "Tom",
+          "y": 30,
+        },
+        Object {
+          "x": "Gary",
+          "y": 20,
+        },
+        Object {
+          "x": "Ben",
+          "y": 15,
+        },
+      ]
+    }
+    isDonut={true}
+    palette={
+      Array [
+        "color-chart-3-lightest",
+        "color-chart-3-light",
+        "color-chart-3",
+        "color-chart-3-dark",
+        "color-chart-3-darkest",
+      ]
+    } />
+  <PieChart
+    data={
+      Array [
+        Object {
+          "x": "Leslie",
+          "y": 60,
+        },
+        Object {
+          "x": "Ron",
+          "y": 40,
+        },
+        Object {
+          "x": "Tom",
+          "y": 30,
+        },
+        Object {
+          "x": "Gary",
+          "y": 20,
+        },
+        Object {
+          "x": "Ben",
+          "y": 15,
+        },
+      ]
+    }
+    isDonut={true}
+    palette={
+      Array [
+        "color-chart-4-lightest",
+        "color-chart-4-light",
+        "color-chart-4",
+        "color-chart-4-dark",
+        "color-chart-4-darkest",
+      ]
+    } />
+  <PieChart
+    data={
+      Array [
+        Object {
+          "x": "Leslie",
+          "y": 60,
+        },
+        Object {
+          "x": "Ron",
+          "y": 40,
+        },
+        Object {
+          "x": "Tom",
+          "y": 30,
+        },
+        Object {
+          "x": "Gary",
+          "y": 20,
+        },
+        Object {
+          "x": "Ben",
+          "y": 15,
+        },
+      ]
+    }
+    isDonut={true}
+    palette={
+      Array [
+        "color-chart-5-lightest",
+        "color-chart-5-light",
+        "color-chart-5",
+        "color-chart-5-dark",
+        "color-chart-5-darkest",
+      ]
+    } />
+</div>
+`;
+
+exports[`PieChart [common] example testing should match snapshot for 3.legend 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+    }
+  }>
+  <PieChart
+    data={
+      Array [
+        Object {
+          "x": "Leslie",
+          "y": 80,
+        },
+        Object {
+          "x": "Tom",
+          "y": 20,
+        },
+        Object {
+          "x": "Ron",
+          "y": 10,
+        },
+        Object {
+          "x": "Ann",
+          "y": 30,
+        },
+      ]
+    }
+    palette={
+      Array [
+        "color-chart-0",
+        "color-chart-1",
+        "color-chart-2",
+        "color-chart-3",
+        "color-chart-4",
+        "color-chart-5",
+      ]
+    } />
+  <Legend
+    hasBorders={true}
+    isReversed={false}
+    orient="vertical">
+    <Legend.Item
+      color="color-chart-0"
+      hasPoint={true}
+      pointKind={1}>
+      Leslie
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-1"
+      hasPoint={true}
+      pointKind={1}>
+      Tom
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-2"
+      hasPoint={true}
+      pointKind={1}>
+      Ron
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-3"
+      hasPoint={true}
+      pointKind={1}>
+      Ann
+    </Legend.Item>
+  </Legend>
+</div>
+`;
+
+exports[`PieChart [common] example testing should match snapshot for 4.color-map 1`] = `
+<PieChart
+  colorMap={
+    Object {
+      "Leslie": "color-chart-good",
+      "Tammy": "color-chart-bad",
+    }
+  }
+  data={
+    Array [
+      Object {
+        "x": "Leslie",
+        "y": 100,
+      },
+      Object {
+        "x": "Tom",
+        "y": 20,
+      },
+      Object {
+        "x": "Ron",
+        "y": 10,
+      },
+      Object {
+        "x": "Ann",
+        "y": 30,
+      },
+      Object {
+        "x": "Tammy",
+        "y": 40,
+      },
+    ]
+  } />
+`;
+
+exports[`PieChart [common] example testing should match snapshot for 5.percents 1`] = `
+<div>
+  <PieChart
+    data={
+      Array [
+        Object {
+          "x": "Leslie",
+          "y": 60,
+        },
+        Object {
+          "x": "Ron",
+          "y": 40,
+        },
+        Object {
+          "x": "Tom",
+          "y": 30,
+        },
+        Object {
+          "x": "Gary",
+          "y": 20,
+        },
+        Object {
+          "x": "Ben",
+          "y": 15,
+        },
+      ]
+    }
+    yAxisFormatter={[Function]} />
+</div>
+`;
+
+exports[`PieChart [common] example testing should match snapshot for 6.small-with-no-stroke-or-hover 1`] = `
+<PieChart
+  data={
+    Array [
+      Object {
+        "x": "Leslie",
+        "y": 60,
+      },
+      Object {
+        "x": "Ron",
+        "y": 40,
+      },
+      Object {
+        "x": "Tom",
+        "y": 30,
+      },
+      Object {
+        "x": "Gary",
+        "y": 20,
+      },
+      Object {
+        "x": "Ben",
+        "y": 15,
+      },
+    ]
+  }
+  hasStroke={false}
+  height={25}
+  isHovering={false}
+  margin={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "right": 0,
+      "top": 0,
+    }
+  }
+  width={25} />
+`;

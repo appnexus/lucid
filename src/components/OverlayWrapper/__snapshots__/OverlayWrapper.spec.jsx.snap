@@ -1,0 +1,69 @@
+exports[`OverlayWrapper [common] example testing should match snapshot for 1.default 1`] = `
+<OverlayWrapper
+  hasOverlay={true}
+  isVisible={true}
+  overlayKind="light">
+  <OverlayWrapper.Message>
+    Message Goes Here
+  </OverlayWrapper.Message>
+  <BarChart
+    data={
+      Array [
+        Object {
+          "x": "2015-01-01",
+          "y": 1,
+        },
+        Object {
+          "x": "2015-01-02",
+          "y": 2,
+        },
+        Object {
+          "x": "2015-01-03",
+          "y": 3,
+        },
+        Object {
+          "x": "2015-01-04",
+          "y": 5,
+        },
+      ]
+    }
+    hasLegend={false}
+    hasToolTips={true}
+    height={400}
+    margin={
+      Object {
+        "bottom": 50,
+        "left": 80,
+        "right": 20,
+        "top": 10,
+      }
+    }
+    palette={
+      Array [
+        "color-chart-0",
+        "color-chart-1",
+        "color-chart-2",
+        "color-chart-3",
+        "color-chart-4",
+        "color-chart-5",
+      ]
+    }
+    width={1000}
+    xAxisField="x"
+    xAxisFormatter={[Function]}
+    xAxisTickCount={null}
+    xAxisTitle={null}
+    xAxisTitleColor="#000"
+    yAxisFields={
+      Array [
+        "y",
+      ]
+    }
+    yAxisIsStacked={false}
+    yAxisMin={0}
+    yAxisTickCount={null}
+    yAxisTitle={null}
+    yAxisTitleColor="#000"
+    yAxisTooltipFormatter={[Function]} />
+</OverlayWrapper>
+`;

@@ -126,11 +126,11 @@ describe('PieChart', () => {
 				const wrapper = shallow(
 					<PieChart
 						data={sampleData}
-						ToolTip={{ foo: 'bar' }}
+						ToolTip={{ kind: 'info' }}
 					/>
 				);
 
-				assert.equal(wrapper.find(ToolTip).prop('foo'), 'bar');
+				assert.equal(wrapper.find(ToolTip).prop('kind'), 'info');
 			});
 		});
 
@@ -185,7 +185,7 @@ describe('PieChart', () => {
 						data={sampleData}
 						onMouseOver={onMouseOver}
 						hasToolTips
-						foo='bar'
+						palette={['foo']}
 					/>
 				);
 
@@ -195,7 +195,7 @@ describe('PieChart', () => {
 
 				assert(onMouseOver.called, 'onMouseOver was not called');
 				assert.equal(onMouseOver.args[0][0], 1, 'wrong index on onMouseOut');
-				assert.equal(onMouseOver.args[0][1].props.foo, 'bar');
+				assert.equal(onMouseOver.args[0][1].props.palette[0], 'foo');
 				assert(_.has(onMouseOver.args[0][1], 'event'))
 			});
 		});
@@ -208,7 +208,7 @@ describe('PieChart', () => {
 						data={sampleData}
 						onMouseOut={onMouseOut}
 						hasToolTips={false}
-						foo='bar'
+						palette={['bar']}
 					/>
 				);
 
@@ -217,7 +217,7 @@ describe('PieChart', () => {
 				target.simulate('mouseOut');
 
 				assert(onMouseOut.called, 'onMouseOut was not called');
-				assert.equal(onMouseOut.args[0][0].props.foo, 'bar');
+				assert.equal(onMouseOut.args[0][0].props.palette[0], 'bar');
 				assert(_.has(onMouseOut.args[0][0], 'event'));
 			});
 		});

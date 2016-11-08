@@ -39,7 +39,7 @@ describe('StickySection', () => {
 				mountTestdiv.parentNode.removeChild(mountTestdiv);
 			});
 
-			it('render the sticky section normally (not fixed) when scrolled passed the lowerBound value', () => {
+			it('render the sticky section normally (not fixed) when scrolled past the lowerBound value', () => {
 				// set the lowerBound to 500
 				wrapper = mount(
 					<StickySection lowerBound={500} />,
@@ -47,15 +47,15 @@ describe('StickySection', () => {
 				);
 
 				// scroll to position 499
-				window.scrollTo(0, 499);
+				window.pageYOffset = 499;
 				dispatchDOMEvent(window, 'scroll');
 
 				// check that the fixed position sticky section is rendered
 				assert.equal(_.get(wrapper.find('.lucid-StickySection-sticky-frame').prop('style'), 'position'), 'fixed', 'sticky frame must be position fixed');
 				assert.equal(_.get(wrapper.find('.lucid-StickySection-sticky-section').prop('style'), 'position'), 'absolute', 'sticky section must be position absolute');
 
-				// scroll to position 501, passed the lowerBound value
-				window.scrollTo(0, 501);
+				// scroll to position 501, past the lowerBound value
+				window.pageYOffset = 501;
 				dispatchDOMEvent(window, 'scroll');
 
 				// check that the sticky section is no longer fixed position

@@ -1,0 +1,175 @@
+exports[`Tabs [common] example testing should match snapshot for 1-title-as-prop 1`] = `
+<div>
+  <Tabs>
+    <Tabs.Tab
+      Title="One">
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two"
+      isDisabled={true}>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three">
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Five">
+      Four content
+    </Tabs.Tab>
+  </Tabs>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot for 2-title-as-child 1`] = `
+<div>
+  <Tabs>
+    <Tabs.Tab>
+      <Tabs.Title>
+        One
+      </Tabs.Title>
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab>
+      <Tabs.Title>
+        Two
+      </Tabs.Title>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab>
+      <Tabs.Title>
+        Three
+      </Tabs.Title>
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      isDisabled={true}>
+      <Tabs.Title>
+        Four
+      </Tabs.Title>
+      Four content
+    </Tabs.Tab>
+  </Tabs>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot for 3-progression 1`] = `
+<div>
+  <Tabs
+    isOpen={false}
+    isProgressive={true}>
+    <Tabs.Tab
+      Title="One">
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two">
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three">
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Disabled"
+      isDisabled={true}>
+      Disabled Content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Five"
+      isDisabled={true}>
+      Four content
+    </Tabs.Tab>
+  </Tabs>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot for 4-complex-title-as-child 1`] = `
+<div>
+  <Tabs
+    hasMultilineTitle={true}>
+    <Tabs.Tab>
+      <Tabs.Title>
+        One
+        <br />
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          type="button">
+          Button
+        </Button>
+      </Tabs.Title>
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab>
+      <Tabs.Title>
+        Two
+        <br />
+        Line Two
+        <SearchField />
+      </Tabs.Title>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab>
+      <Tabs.Title>
+        <RadioGroup
+          selectedIndex={1}>
+          <RadioButton
+            isDisabled={false}
+            isSelected={false}
+            onSelect={[Function]}>
+            <RadioGroup.Label>
+              Captain America
+            </RadioGroup.Label>
+          </RadioButton>
+          <RadioButton
+            isDisabled={false}
+            isSelected={false}
+            onSelect={[Function]}>
+            <RadioGroup.Label>
+              Iron Man
+            </RadioGroup.Label>
+          </RadioButton>
+          <RadioButton
+            isDisabled={false}
+            isSelected={false}
+            onSelect={[Function]}>
+            <RadioGroup.Label>
+              Thor
+            </RadioGroup.Label>
+          </RadioButton>
+        </RadioGroup>
+      </Tabs.Title>
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      isDisabled={true}>
+      <Tabs.Title>
+        Four
+      </Tabs.Title>
+      Four content
+    </Tabs.Tab>
+  </Tabs>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot for 5-tab-as-prop 1`] = `
+<div>
+  <Tabs
+    Tab={
+      Array [
+        Object {
+          "Title": "Bert",
+          "children": "Bert",
+        },
+        Object {
+          "Title": "Ernie",
+          "children": "Ernie",
+        },
+      ]
+    } />
+</div>
+`;

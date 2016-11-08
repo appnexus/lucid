@@ -1,0 +1,1352 @@
+exports[`LineChart [common] example testing should match snapshot for 01.basic 1`] = `
+<LineChart
+  data={
+    Array [
+      Object {
+        "x": 2015-01-01T08:00:00.000Z,
+        "y": 1,
+      },
+      Object {
+        "x": 2015-01-02T08:00:00.000Z,
+        "y": 0,
+      },
+      Object {
+        "x": 2015-01-03T08:00:00.000Z,
+        "y": 3,
+      },
+      Object {
+        "x": 2015-01-04T08:00:00.000Z,
+        "y": 5,
+      },
+    ]
+  }
+  hasLegend={false}
+  hasToolTips={true}
+  height={400}
+  margin={
+    Object {
+      "bottom": 65,
+      "left": 80,
+      "right": 80,
+      "top": 10,
+    }
+  }
+  palette={
+    Array [
+      "color-chart-0",
+      "color-chart-1",
+      "color-chart-2",
+      "color-chart-3",
+      "color-chart-4",
+      "color-chart-5",
+    ]
+  }
+  width={1000}
+  xAxisField="x"
+  xAxisTickCount={null}
+  xAxisTitle={null}
+  xAxisTitleColor="#000"
+  xAxisTooltipFormatter={[Function]}
+  y2AxisColorOffset={1}
+  y2AxisFields={null}
+  y2AxisHasPoints={true}
+  y2AxisIsStacked={false}
+  y2AxisMin={0}
+  y2AxisTickCount={null}
+  y2AxisTitle={null}
+  y2AxisTitleColor="#000"
+  yAxisColorOffset={0}
+  yAxisFields={
+    Array [
+      "y",
+    ]
+  }
+  yAxisHasPoints={true}
+  yAxisIsStacked={false}
+  yAxisMin={0}
+  yAxisTickCount={null}
+  yAxisTitle={null}
+  yAxisTitleColor="#000"
+  yAxisTooltipFormatter={[Function]} />
+`;
+
+exports[`LineChart [common] example testing should match snapshot for 02.responsive 1`] = `<Resizer />`;
+
+exports[`LineChart [common] example testing should match snapshot for 03.multi 1`] = `
+<LineChart
+  data={
+    Array [
+      Object {
+        "apples": 184,
+        "oranges": 142,
+        "pears": 117,
+        "x": 2015-01-01T08:00:00.000Z,
+      },
+      Object {
+        "apples": 191,
+        "oranges": 145,
+        "pears": 118,
+        "x": 2015-01-02T08:00:00.000Z,
+      },
+      Object {
+        "apples": 114,
+        "oranges": 107,
+        "pears": 103,
+        "x": 2015-01-03T08:00:00.000Z,
+      },
+      Object {
+        "apples": 24,
+        "oranges": 62,
+        "pears": 85,
+        "x": 2015-01-04T08:00:00.000Z,
+      },
+      Object {
+        "apples": 4,
+        "oranges": 52,
+        "pears": 81,
+        "x": 2015-01-05T08:00:00.000Z,
+      },
+      Object {
+        "apples": 72,
+        "oranges": 86,
+        "pears": 94,
+        "x": 2015-01-06T08:00:00.000Z,
+      },
+      Object {
+        "apples": 166,
+        "oranges": 133,
+        "pears": 113,
+        "x": 2015-01-07T08:00:00.000Z,
+      },
+      Object {
+        "apples": 199,
+        "oranges": 149,
+        "pears": 120,
+        "x": 2015-01-08T08:00:00.000Z,
+      },
+      Object {
+        "apples": 141,
+        "oranges": 121,
+        "pears": 108,
+        "x": 2015-01-09T08:00:00.000Z,
+      },
+      Object {
+        "apples": 46,
+        "oranges": 73,
+        "pears": 89,
+        "x": 2015-01-10T08:00:00.000Z,
+      },
+      Object {
+        "apples": 0,
+        "oranges": 50,
+        "pears": 80,
+        "x": 2015-01-11T08:00:00.000Z,
+      },
+      Object {
+        "apples": 46,
+        "oranges": 73,
+        "pears": 89,
+        "x": 2015-01-12T08:00:00.000Z,
+      },
+      Object {
+        "apples": 142,
+        "oranges": 121,
+        "pears": 108,
+        "x": 2015-01-13T08:00:00.000Z,
+      },
+      Object {
+        "apples": 199,
+        "oranges": 150,
+        "pears": 120,
+        "x": 2015-01-14T08:00:00.000Z,
+      },
+      Object {
+        "apples": 165,
+        "oranges": 133,
+        "pears": 113,
+        "x": 2015-01-15T08:00:00.000Z,
+      },
+      Object {
+        "apples": 71,
+        "oranges": 86,
+        "pears": 94,
+        "x": 2015-01-16T08:00:00.000Z,
+      },
+      Object {
+        "apples": 4,
+        "oranges": 52,
+        "pears": 81,
+        "x": 2015-01-17T08:00:00.000Z,
+      },
+      Object {
+        "apples": 25,
+        "oranges": 62,
+        "pears": 85,
+        "x": 2015-01-18T08:00:00.000Z,
+      },
+      Object {
+        "apples": 115,
+        "oranges": 107,
+        "pears": 103,
+        "x": 2015-01-19T08:00:00.000Z,
+      },
+      Object {
+        "apples": 191,
+        "oranges": 146,
+        "pears": 118,
+        "x": 2015-01-20T08:00:00.000Z,
+      },
+      Object {
+        "apples": 184,
+        "oranges": 142,
+        "pears": 117,
+        "x": 2015-01-21T08:00:00.000Z,
+      },
+      Object {
+        "apples": 99,
+        "oranges": 100,
+        "pears": 100,
+        "x": 2015-01-22T08:00:00.000Z,
+      },
+      Object {
+        "apples": 15,
+        "oranges": 58,
+        "pears": 83,
+        "x": 2015-01-23T08:00:00.000Z,
+      },
+      Object {
+        "apples": 9,
+        "oranges": 55,
+        "pears": 82,
+        "x": 2015-01-24T08:00:00.000Z,
+      },
+      Object {
+        "apples": 87,
+        "oranges": 93,
+        "pears": 97,
+        "x": 2015-01-25T08:00:00.000Z,
+      },
+      Object {
+        "apples": 176,
+        "oranges": 138,
+        "pears": 115,
+        "x": 2015-01-26T08:00:00.000Z,
+      },
+      Object {
+        "apples": 196,
+        "oranges": 148,
+        "pears": 119,
+        "x": 2015-01-27T08:00:00.000Z,
+      },
+      Object {
+        "apples": 127,
+        "oranges": 114,
+        "pears": 105,
+        "x": 2015-01-28T08:00:00.000Z,
+      },
+      Object {
+        "apples": 3,
+        "oranges": 67,
+        "pears": 87,
+        "x": 2015-01-29T08:00:00.000Z,
+      },
+    ]
+  }
+  hasLegend={false}
+  hasToolTips={true}
+  height={400}
+  margin={
+    Object {
+      "bottom": 65,
+      "left": 80,
+      "right": 80,
+      "top": 10,
+    }
+  }
+  palette={
+    Array [
+      "color-chart-0",
+      "color-chart-1",
+      "color-chart-2",
+      "color-chart-3",
+      "color-chart-4",
+      "color-chart-5",
+    ]
+  }
+  width={1000}
+  xAxisField="x"
+  xAxisTickCount={null}
+  xAxisTitle={null}
+  xAxisTitleColor="#000"
+  xAxisTooltipFormatter={[Function]}
+  y2AxisColorOffset={1}
+  y2AxisFields={null}
+  y2AxisHasPoints={true}
+  y2AxisIsStacked={false}
+  y2AxisMin={0}
+  y2AxisTickCount={null}
+  y2AxisTitle={null}
+  y2AxisTitleColor="#000"
+  yAxisColorOffset={0}
+  yAxisFields={
+    Array [
+      "apples",
+      "oranges",
+      "pears",
+    ]
+  }
+  yAxisHasPoints={true}
+  yAxisIsStacked={false}
+  yAxisMin={0}
+  yAxisTickCount={null}
+  yAxisTitle="Fruit Count"
+  yAxisTitleColor="#000"
+  yAxisTooltipFormatter={[Function]} />
+`;
+
+exports[`LineChart [common] example testing should match snapshot for 04.multi-with-legend 1`] = `
+<div>
+  <LineChart
+    data={
+      Array [
+        Object {
+          "apples": 2,
+          "oranges": 3,
+          "pears": 1,
+          "x": 2015-01-01T08:00:00.000Z,
+        },
+        Object {
+          "apples": 2,
+          "oranges": 5,
+          "pears": 6,
+          "x": 2015-01-02T08:00:00.000Z,
+        },
+        Object {
+          "apples": 3,
+          "oranges": 2,
+          "pears": 4,
+          "x": 2015-01-03T08:00:00.000Z,
+        },
+        Object {
+          "apples": 5,
+          "oranges": 6,
+          "pears": 1,
+          "x": 2015-01-04T08:00:00.000Z,
+        },
+      ]
+    }
+    hasLegend={false}
+    hasToolTips={true}
+    height={400}
+    margin={
+      Object {
+        "bottom": 65,
+        "left": 80,
+        "right": 80,
+        "top": 10,
+      }
+    }
+    palette={
+      Array [
+        "color-chart-2-lightest",
+        "color-chart-2-light",
+        "color-chart-2",
+        "color-chart-2-dark",
+        "color-chart-2-darkest",
+      ]
+    }
+    width={1000}
+    xAxisField="x"
+    xAxisTickCount={null}
+    xAxisTitle={null}
+    xAxisTitleColor="#000"
+    xAxisTooltipFormatter={[Function]}
+    y2AxisColorOffset={1}
+    y2AxisFields={null}
+    y2AxisHasPoints={true}
+    y2AxisIsStacked={false}
+    y2AxisMin={0}
+    y2AxisTickCount={null}
+    y2AxisTitle={null}
+    y2AxisTitleColor="#000"
+    yAxisColorOffset={0}
+    yAxisFields={
+      Array [
+        "apples",
+        "oranges",
+        "pears",
+      ]
+    }
+    yAxisHasPoints={true}
+    yAxisIsStacked={false}
+    yAxisMin={0}
+    yAxisTickCount={null}
+    yAxisTitle="Fruit Count"
+    yAxisTitleColor="#000"
+    yAxisTooltipFormatter={[Function]} />
+  <Legend
+    hasBorders={true}
+    isReversed={false}
+    orient="vertical"
+    style={
+      Object {
+        "verticalAlign": "top",
+      }
+    }>
+    <Legend.Item
+      color="color-chart-2-lightest"
+      hasLine={true}
+      hasPoint={true}
+      pointKind={0}>
+      apples
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-2-light"
+      hasLine={true}
+      hasPoint={true}
+      pointKind={1}>
+      oranges
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-2"
+      hasLine={true}
+      hasPoint={true}
+      pointKind={2}>
+      pears
+    </Legend.Item>
+  </Legend>
+</div>
+`;
+
+exports[`LineChart [common] example testing should match snapshot for 05.stacked 1`] = `
+<LineChart
+  data={
+    Array [
+      Object {
+        "apples": 2,
+        "bananas": 7,
+        "cherries": 3,
+        "kiwis": 5,
+        "oranges": 3,
+        "pears": 1,
+        "x": 2015-01-01T08:00:00.000Z,
+      },
+      Object {
+        "apples": 2,
+        "bananas": 7,
+        "cherries": 5,
+        "kiwis": 5,
+        "oranges": 5,
+        "pears": 6,
+        "x": 2015-01-02T08:00:00.000Z,
+      },
+      Object {
+        "apples": 3,
+        "bananas": 7,
+        "cherries": 2,
+        "kiwis": 5,
+        "oranges": 2,
+        "pears": 4,
+        "x": 2015-01-03T08:00:00.000Z,
+      },
+      Object {
+        "apples": 5,
+        "bananas": 7,
+        "cherries": 1,
+        "kiwis": 5,
+        "oranges": 6,
+        "pears": 1,
+        "x": 2015-01-04T08:00:00.000Z,
+      },
+      Object {
+        "apples": 4,
+        "bananas": 7,
+        "cherries": 3,
+        "kiwis": 5,
+        "oranges": 3,
+        "pears": 2,
+        "x": 2015-01-05T08:00:00.000Z,
+      },
+      Object {
+        "apples": 3,
+        "bananas": 7,
+        "cherries": 5,
+        "kiwis": 5,
+        "oranges": 4,
+        "pears": 4,
+        "x": 2015-01-06T08:00:00.000Z,
+      },
+    ]
+  }
+  hasLegend={false}
+  hasToolTips={true}
+  height={400}
+  margin={
+    Object {
+      "bottom": 65,
+      "left": 80,
+      "right": 80,
+      "top": 10,
+    }
+  }
+  palette={
+    Array [
+      "color-chart-0",
+      "color-chart-1",
+      "color-chart-2",
+      "color-chart-3",
+      "color-chart-4",
+      "color-chart-5",
+    ]
+  }
+  width={1000}
+  xAxisField="x"
+  xAxisTickCount={null}
+  xAxisTitle={null}
+  xAxisTitleColor="#000"
+  xAxisTooltipFormatter={[Function]}
+  y2AxisColorOffset={1}
+  y2AxisFields={null}
+  y2AxisHasPoints={true}
+  y2AxisIsStacked={false}
+  y2AxisMin={0}
+  y2AxisTickCount={null}
+  y2AxisTitle={null}
+  y2AxisTitleColor="#000"
+  yAxisColorOffset={0}
+  yAxisFields={
+    Array [
+      "apples",
+      "oranges",
+      "pears",
+      "bananas",
+      "kiwis",
+      "cherries",
+    ]
+  }
+  yAxisHasPoints={true}
+  yAxisIsStacked={true}
+  yAxisMin={0}
+  yAxisTickCount={null}
+  yAxisTitle="Fruit Count"
+  yAxisTitleColor="#000"
+  yAxisTooltipFormatter={[Function]} />
+`;
+
+exports[`LineChart [common] example testing should match snapshot for 06.dual-axis 1`] = `
+<LineChart
+  colorMap={
+    Object {
+      "bananas": "color-chart-4",
+      "cherries": "color-chart-2",
+    }
+  }
+  data={
+    Array [
+      Object {
+        "bananas": 2,
+        "cherries": 8,
+        "x": 2015-01-01T08:00:00.000Z,
+      },
+      Object {
+        "bananas": 2,
+        "cherries": 5,
+        "x": 2015-03-02T08:00:00.000Z,
+      },
+      Object {
+        "bananas": 3,
+        "cherries": 5,
+        "x": 2015-05-03T08:00:00.000Z,
+      },
+      Object {
+        "bananas": 5,
+        "cherries": 6,
+        "x": 2015-07-04T08:00:00.000Z,
+      },
+    ]
+  }
+  hasLegend={false}
+  hasToolTips={true}
+  height={400}
+  margin={
+    Object {
+      "right": 80,
+    }
+  }
+  palette={
+    Array [
+      "color-chart-0",
+      "color-chart-1",
+      "color-chart-2",
+      "color-chart-3",
+      "color-chart-4",
+      "color-chart-5",
+    ]
+  }
+  width={1000}
+  xAxisField="x"
+  xAxisTickCount={null}
+  xAxisTitle={null}
+  xAxisTitleColor="#000"
+  xAxisTooltipFormatter={[Function]}
+  y2AxisColorOffset={1}
+  y2AxisFields={
+    Array [
+      "cherries",
+    ]
+  }
+  y2AxisHasPoints={true}
+  y2AxisIsStacked={false}
+  y2AxisMin={0}
+  y2AxisTickCount={null}
+  y2AxisTitle="Number of Cherries"
+  y2AxisTitleColor="color-chart-2"
+  yAxisColorOffset={0}
+  yAxisFields={
+    Array [
+      "bananas",
+    ]
+  }
+  yAxisHasPoints={true}
+  yAxisIsStacked={false}
+  yAxisMin={0}
+  yAxisTickCount={null}
+  yAxisTitle="Number of Bananas"
+  yAxisTitleColor="color-chart-4"
+  yAxisTooltipFormatter={[Function]} />
+`;
+
+exports[`LineChart [common] example testing should match snapshot for 07.all-the-things 1`] = `
+<LineChart
+  colorMap={
+    Object {
+      "blueberries": "color-chart-0",
+      "oranges": "color-chart-1",
+    }
+  }
+  data={
+    Array [
+      Object {
+        "blueberries": 2000,
+        "date": 2015-01-01T08:00:00.000Z,
+        "oranges": 3000,
+      },
+      Object {
+        "blueberries": 2000,
+        "date": 2015-01-02T08:00:00.000Z,
+        "oranges": 5000,
+      },
+      Object {
+        "blueberries": 3000,
+        "date": 2015-01-03T08:00:00.000Z,
+        "oranges": 2000,
+      },
+      Object {
+        "blueberries": 5000,
+        "date": 2015-01-04T08:00:00.000Z,
+      },
+      Object {
+        "blueberries": 2500,
+        "date": 2015-01-05T08:00:00.000Z,
+        "oranges": 6300,
+      },
+      Object {
+        "blueberries": 1500,
+        "date": 2015-01-06T08:00:00.000Z,
+        "oranges": 6100,
+      },
+    ]
+  }
+  hasLegend={false}
+  hasToolTips={true}
+  height={400}
+  margin={
+    Object {
+      "right": 80,
+    }
+  }
+  palette={
+    Array [
+      "color-chart-0",
+      "color-chart-1",
+      "color-chart-2",
+      "color-chart-3",
+      "color-chart-4",
+      "color-chart-5",
+    ]
+  }
+  width={1000}
+  xAxisField="date"
+  xAxisFormatter={[Function]}
+  xAxisMax={2015-01-07T08:00:00.000Z}
+  xAxisMin={2014-12-31T08:00:00.000Z}
+  xAxisTickCount={5}
+  xAxisTitle="Date"
+  xAxisTitleColor="#000"
+  xAxisTooltipFormatter={[Function]}
+  y2AxisColorOffset={1}
+  y2AxisFields={
+    Array [
+      "oranges",
+    ]
+  }
+  y2AxisFormatter={[Function]}
+  y2AxisHasPoints={false}
+  y2AxisIsStacked={false}
+  y2AxisMin={0}
+  y2AxisTickCount={5}
+  y2AxisTitle="Number of Oranges"
+  y2AxisTitleColor="color-chart-1"
+  yAxisColorOffset={0}
+  yAxisFields={
+    Array [
+      "blueberries",
+    ]
+  }
+  yAxisFormatter={[Function]}
+  yAxisHasPoints={true}
+  yAxisIsStacked={false}
+  yAxisMin={0}
+  yAxisTickCount={5}
+  yAxisTitle="Number of Blueberries"
+  yAxisTitleColor="color-chart-0"
+  yAxisTooltipFormatter={[Function]} />
+`;
+
+exports[`LineChart [common] example testing should match snapshot for 08.stacked-single-series-with-formatters 1`] = `
+<LineChart
+  data={
+    Array [
+      Object {
+        "x": 2015-01-01T08:00:00.000Z,
+        "y": 1.55,
+      },
+      Object {
+        "x": 2015-01-02T08:00:00.000Z,
+        "y": 2.67,
+      },
+      Object {
+        "x": 2015-01-03T08:00:00.000Z,
+        "y": 3.31,
+      },
+      Object {
+        "x": 2015-01-04T08:00:00.000Z,
+        "y": 5.99,
+      },
+    ]
+  }
+  hasLegend={false}
+  hasToolTips={true}
+  height={400}
+  margin={
+    Object {
+      "bottom": 65,
+      "left": 80,
+      "right": 80,
+      "top": 10,
+    }
+  }
+  palette={
+    Array [
+      "color-chart-0",
+      "color-chart-1",
+      "color-chart-2",
+      "color-chart-3",
+      "color-chart-4",
+      "color-chart-5",
+    ]
+  }
+  width={1000}
+  xAxisField="x"
+  xAxisTickCount={null}
+  xAxisTitle={null}
+  xAxisTitleColor="#000"
+  xAxisTooltipFormatter={[Function]}
+  y2AxisColorOffset={1}
+  y2AxisFields={null}
+  y2AxisHasPoints={true}
+  y2AxisIsStacked={false}
+  y2AxisMin={0}
+  y2AxisTickCount={null}
+  y2AxisTitle={null}
+  y2AxisTitleColor="#000"
+  yAxisColorOffset={0}
+  yAxisFields={
+    Array [
+      "y",
+    ]
+  }
+  yAxisFormatter={[Function]}
+  yAxisHasPoints={true}
+  yAxisIsStacked={true}
+  yAxisMin={0}
+  yAxisTickCount={null}
+  yAxisTitle={null}
+  yAxisTitleColor="#000"
+  yAxisTooltipFormatter={[Function]} />
+`;
+
+exports[`LineChart [common] example testing should match snapshot for 09.stacked-monochrome-no-shapes 1`] = `
+<LineChart
+  data={
+    Array [
+      Object {
+        "apples": 2,
+        "bananas": 7,
+        "kiwis": 5,
+        "oranges": 3,
+        "pears": 1,
+        "x": 2015-01-01T08:00:00.000Z,
+      },
+      Object {
+        "apples": 2,
+        "bananas": 7,
+        "kiwis": 5,
+        "oranges": 5,
+        "pears": 6,
+        "x": 2015-01-02T08:00:00.000Z,
+      },
+      Object {
+        "apples": 3,
+        "bananas": 7,
+        "kiwis": 5,
+        "oranges": 2,
+        "pears": 4,
+        "x": 2015-01-03T08:00:00.000Z,
+      },
+      Object {
+        "apples": 5,
+        "bananas": 7,
+        "kiwis": 5,
+        "oranges": 6,
+        "pears": 1,
+        "x": 2015-01-04T08:00:00.000Z,
+      },
+      Object {
+        "apples": 4,
+        "bananas": 7,
+        "kiwis": 5,
+        "oranges": 3,
+        "pears": 2,
+        "x": 2015-01-05T08:00:00.000Z,
+      },
+      Object {
+        "apples": 3,
+        "bananas": 7,
+        "kiwis": 5,
+        "oranges": 4,
+        "pears": 4,
+        "x": 2015-01-06T08:00:00.000Z,
+      },
+    ]
+  }
+  hasLegend={false}
+  hasToolTips={true}
+  height={400}
+  margin={
+    Object {
+      "bottom": 65,
+      "left": 80,
+      "right": 80,
+      "top": 10,
+    }
+  }
+  palette={
+    Array [
+      "color-chart-0-lightest",
+      "color-chart-0-light",
+      "color-chart-0",
+      "color-chart-0-dark",
+      "color-chart-0-darkest",
+    ]
+  }
+  width={1000}
+  xAxisField="x"
+  xAxisTickCount={null}
+  xAxisTitle={null}
+  xAxisTitleColor="#000"
+  xAxisTooltipFormatter={[Function]}
+  y2AxisColorOffset={1}
+  y2AxisFields={null}
+  y2AxisHasPoints={true}
+  y2AxisIsStacked={false}
+  y2AxisMin={0}
+  y2AxisTickCount={null}
+  y2AxisTitle={null}
+  y2AxisTitleColor="#000"
+  yAxisColorOffset={0}
+  yAxisFields={
+    Array [
+      "apples",
+      "oranges",
+      "pears",
+      "bananas",
+      "kiwis",
+    ]
+  }
+  yAxisHasPoints={false}
+  yAxisIsStacked={true}
+  yAxisMin={0}
+  yAxisTickCount={null}
+  yAxisTitle="Fruit Count"
+  yAxisTitleColor="#000"
+  yAxisTooltipFormatter={[Function]} />
+`;
+
+exports[`LineChart [common] example testing should match snapshot for 10.abbreviated-numbers 1`] = `
+<LineChart
+  data={
+    Array [
+      Object {
+        "blueberries": 1030872156,
+        "x": 2015-01-07T08:00:00.000Z,
+      },
+      Object {
+        "blueberries": 4002156,
+        "x": 2015-01-08T08:00:00.000Z,
+      },
+      Object {
+        "blueberries": 214872156,
+        "x": 2015-01-09T08:00:00.000Z,
+      },
+      Object {
+        "blueberries": 42872156,
+        "x": 2015-01-10T08:00:00.000Z,
+      },
+      Object {
+        "blueberries": 4230872156,
+        "x": 2015-01-11T08:00:00.000Z,
+      },
+    ]
+  }
+  hasLegend={false}
+  hasToolTips={true}
+  height={400}
+  margin={
+    Object {
+      "bottom": 65,
+      "left": 80,
+      "right": 80,
+      "top": 10,
+    }
+  }
+  palette={
+    Array [
+      "color-chart-0",
+      "color-chart-1",
+      "color-chart-2",
+      "color-chart-3",
+      "color-chart-4",
+      "color-chart-5",
+    ]
+  }
+  width={1000}
+  xAxisField="x"
+  xAxisTickCount={null}
+  xAxisTitle={null}
+  xAxisTitleColor="#000"
+  xAxisTooltipFormatter={[Function]}
+  y2AxisColorOffset={1}
+  y2AxisFields={null}
+  y2AxisHasPoints={true}
+  y2AxisIsStacked={false}
+  y2AxisMin={0}
+  y2AxisTickCount={null}
+  y2AxisTitle={null}
+  y2AxisTitleColor="#000"
+  yAxisColorOffset={0}
+  yAxisFields={
+    Array [
+      "blueberries",
+    ]
+  }
+  yAxisFormatter={[Function]}
+  yAxisHasPoints={true}
+  yAxisIsStacked={false}
+  yAxisMin={0}
+  yAxisTickCount={null}
+  yAxisTitle={null}
+  yAxisTitleColor="#000"
+  yAxisTooltipDataFormatter={[Function]}
+  yAxisTooltipFormatter={[Function]} />
+`;
+
+exports[`LineChart [common] example testing should match snapshot for 11.color-offset 1`] = `
+<LineChart
+  data={
+    Array [
+      Object {
+        "apples": 184,
+        "pears": 117,
+        "x": 2015-01-01T08:00:00.000Z,
+      },
+      Object {
+        "apples": 191,
+        "pears": 118,
+        "x": 2015-01-02T08:00:00.000Z,
+      },
+      Object {
+        "apples": 114,
+        "pears": 103,
+        "x": 2015-01-03T08:00:00.000Z,
+      },
+      Object {
+        "apples": 24,
+        "pears": 85,
+        "x": 2015-01-04T08:00:00.000Z,
+      },
+      Object {
+        "apples": 4,
+        "pears": 81,
+        "x": 2015-01-05T08:00:00.000Z,
+      },
+      Object {
+        "apples": 72,
+        "pears": 94,
+        "x": 2015-01-06T08:00:00.000Z,
+      },
+      Object {
+        "apples": 166,
+        "pears": 113,
+        "x": 2015-01-07T08:00:00.000Z,
+      },
+      Object {
+        "apples": 199,
+        "pears": 120,
+        "x": 2015-01-08T08:00:00.000Z,
+      },
+      Object {
+        "apples": 141,
+        "pears": 108,
+        "x": 2015-01-09T08:00:00.000Z,
+      },
+      Object {
+        "apples": 46,
+        "pears": 89,
+        "x": 2015-01-10T08:00:00.000Z,
+      },
+      Object {
+        "apples": 0,
+        "pears": 80,
+        "x": 2015-01-11T08:00:00.000Z,
+      },
+      Object {
+        "apples": 46,
+        "pears": 89,
+        "x": 2015-01-12T08:00:00.000Z,
+      },
+      Object {
+        "apples": 142,
+        "pears": 108,
+        "x": 2015-01-13T08:00:00.000Z,
+      },
+      Object {
+        "apples": 199,
+        "pears": 120,
+        "x": 2015-01-14T08:00:00.000Z,
+      },
+      Object {
+        "apples": 165,
+        "pears": 113,
+        "x": 2015-01-15T08:00:00.000Z,
+      },
+    ]
+  }
+  hasLegend={true}
+  hasToolTips={true}
+  height={400}
+  margin={
+    Object {
+      "right": 80,
+    }
+  }
+  palette={
+    Array [
+      "color-chart-0",
+      "color-chart-1",
+      "color-chart-2",
+      "color-chart-3",
+      "color-chart-4",
+      "color-chart-5",
+    ]
+  }
+  width={1000}
+  xAxisField="x"
+  xAxisTickCount={null}
+  xAxisTitle={null}
+  xAxisTitleColor="#000"
+  xAxisTooltipFormatter={[Function]}
+  y2AxisColorOffset={4}
+  y2AxisFields={
+    Array [
+      "pears",
+    ]
+  }
+  y2AxisHasPoints={true}
+  y2AxisIsStacked={false}
+  y2AxisMin={0}
+  y2AxisTickCount={null}
+  y2AxisTitle={null}
+  y2AxisTitleColor="#000"
+  yAxisColorOffset={3}
+  yAxisFields={
+    Array [
+      "apples",
+    ]
+  }
+  yAxisHasPoints={true}
+  yAxisIsStacked={false}
+  yAxisMin={0}
+  yAxisTickCount={null}
+  yAxisTitle={null}
+  yAxisTitleColor="#000"
+  yAxisTooltipFormatter={[Function]} />
+`;
+
+exports[`LineChart [common] example testing should match snapshot for 12.empty 1`] = `
+<LineChart
+  data={Array []}
+  hasLegend={false}
+  hasToolTips={true}
+  height={400}
+  margin={
+    Object {
+      "bottom": 65,
+      "left": 80,
+      "right": 80,
+      "top": 10,
+    }
+  }
+  palette={
+    Array [
+      "color-chart-0",
+      "color-chart-1",
+      "color-chart-2",
+      "color-chart-3",
+      "color-chart-4",
+      "color-chart-5",
+    ]
+  }
+  width={1000}
+  xAxisField="x"
+  xAxisTickCount={null}
+  xAxisTitle={null}
+  xAxisTitleColor="#000"
+  xAxisTooltipFormatter={[Function]}
+  y2AxisColorOffset={1}
+  y2AxisFields={null}
+  y2AxisHasPoints={true}
+  y2AxisIsStacked={false}
+  y2AxisMin={0}
+  y2AxisTickCount={null}
+  y2AxisTitle={null}
+  y2AxisTitleColor="#000"
+  yAxisColorOffset={0}
+  yAxisFields={
+    Array [
+      "blueberries",
+    ]
+  }
+  yAxisHasPoints={true}
+  yAxisIsStacked={false}
+  yAxisMin={0}
+  yAxisTickCount={null}
+  yAxisTitle={null}
+  yAxisTitleColor="#000"
+  yAxisTooltipFormatter={[Function]} />
+`;
+
+exports[`LineChart [common] example testing should match snapshot for 13.empty-with-custom-title-and-body 1`] = `
+<LineChart
+  data={Array []}
+  hasLegend={false}
+  hasToolTips={true}
+  height={400}
+  margin={
+    Object {
+      "bottom": 65,
+      "left": 80,
+      "right": 80,
+      "top": 10,
+    }
+  }
+  palette={
+    Array [
+      "color-chart-0",
+      "color-chart-1",
+      "color-chart-2",
+      "color-chart-3",
+      "color-chart-4",
+      "color-chart-5",
+    ]
+  }
+  width={1000}
+  xAxisField="x"
+  xAxisTickCount={null}
+  xAxisTitle={null}
+  xAxisTitleColor="#000"
+  xAxisTooltipFormatter={[Function]}
+  y2AxisColorOffset={1}
+  y2AxisFields={null}
+  y2AxisHasPoints={true}
+  y2AxisIsStacked={false}
+  y2AxisMin={0}
+  y2AxisTickCount={null}
+  y2AxisTitle={null}
+  y2AxisTitleColor="#000"
+  yAxisColorOffset={0}
+  yAxisFields={
+    Array [
+      "blueberries",
+    ]
+  }
+  yAxisHasPoints={true}
+  yAxisIsStacked={false}
+  yAxisMin={0}
+  yAxisTickCount={null}
+  yAxisTitle={null}
+  yAxisTitleColor="#000"
+  yAxisTooltipFormatter={[Function]}>
+  <EmptyStateWrapper>
+    <EmptyStateWrapper.Title>
+      Something went wrong.
+    </EmptyStateWrapper.Title>
+    <EmptyStateWrapper.Body
+      style={
+        Object {
+          "fontSize": "12px",
+        }
+      }>
+      Echo park poutine esse tempor squid do. Lo-fi ramps XOXO chicharrones laboris, portland fugiat locavore. Fap four dollar toast keytar, cronut kogi fingerstache distillery microdosing everyday carry austin DIY dreamcatcher. Distillery flexitarian meditation laboris roof party. Cred raclette gastropub tilde PBR&B. Shoreditch poke adipisicing, reprehenderit lumbersexual succulents mustache officia franzen vinyl nostrud af. Hashtag bitters organic, before they sold out butcher cronut sapiente.
+    </EmptyStateWrapper.Body>
+  </EmptyStateWrapper>
+</LineChart>
+`;
+
+exports[`LineChart [common] example testing should match snapshot for 14.empty-with-button 1`] = `
+<LineChart
+  data={Array []}
+  hasLegend={false}
+  hasToolTips={true}
+  height={400}
+  margin={
+    Object {
+      "bottom": 65,
+      "left": 80,
+      "right": 80,
+      "top": 10,
+    }
+  }
+  palette={
+    Array [
+      "color-chart-0",
+      "color-chart-1",
+      "color-chart-2",
+      "color-chart-3",
+      "color-chart-4",
+      "color-chart-5",
+    ]
+  }
+  width={1000}
+  xAxisField="x"
+  xAxisTickCount={null}
+  xAxisTitle={null}
+  xAxisTitleColor="#000"
+  xAxisTooltipFormatter={[Function]}
+  y2AxisColorOffset={1}
+  y2AxisFields={null}
+  y2AxisHasPoints={true}
+  y2AxisIsStacked={false}
+  y2AxisMin={0}
+  y2AxisTickCount={null}
+  y2AxisTitle={null}
+  y2AxisTitleColor="#000"
+  yAxisColorOffset={0}
+  yAxisFields={
+    Array [
+      "blueberries",
+    ]
+  }
+  yAxisHasPoints={true}
+  yAxisIsStacked={false}
+  yAxisMin={0}
+  yAxisTickCount={null}
+  yAxisTitle={null}
+  yAxisTitleColor="#000"
+  yAxisTooltipFormatter={[Function]}>
+  <EmptyStateWrapper>
+    <EmptyStateWrapper.Title>
+      Something went wrong.
+    </EmptyStateWrapper.Title>
+    <EmptyStateWrapper.Body
+      style={
+        Object {
+          "fontSize": "12px",
+        }
+      }>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        onClick={[Function]}
+        type="button">
+        Action
+      </Button>
+    </EmptyStateWrapper.Body>
+  </EmptyStateWrapper>
+</LineChart>
+`;
+
+exports[`LineChart [common] example testing should match snapshot for 15.loading 1`] = `
+<LineChart
+  data={Array []}
+  hasLegend={false}
+  hasToolTips={true}
+  height={400}
+  isLoading={true}
+  margin={
+    Object {
+      "bottom": 65,
+      "left": 80,
+      "right": 80,
+      "top": 10,
+    }
+  }
+  palette={
+    Array [
+      "color-chart-0",
+      "color-chart-1",
+      "color-chart-2",
+      "color-chart-3",
+      "color-chart-4",
+      "color-chart-5",
+    ]
+  }
+  width={1000}
+  xAxisField="x"
+  xAxisTickCount={null}
+  xAxisTitle={null}
+  xAxisTitleColor="#000"
+  xAxisTooltipFormatter={[Function]}
+  y2AxisColorOffset={1}
+  y2AxisFields={null}
+  y2AxisHasPoints={true}
+  y2AxisIsStacked={false}
+  y2AxisMin={0}
+  y2AxisTickCount={null}
+  y2AxisTitle={null}
+  y2AxisTitleColor="#000"
+  yAxisColorOffset={0}
+  yAxisFields={
+    Array [
+      "y",
+    ]
+  }
+  yAxisHasPoints={true}
+  yAxisIsStacked={false}
+  yAxisMin={0}
+  yAxisTickCount={null}
+  yAxisTitle={null}
+  yAxisTitleColor="#000"
+  yAxisTooltipFormatter={[Function]} />
+`;

@@ -1,0 +1,7 @@
+exports[`Badge [common] example testing should match snapshot for default 1`] = `
+<div>
+  <Badge>
+    Badge
+  </Badge>
+</div>
+`;

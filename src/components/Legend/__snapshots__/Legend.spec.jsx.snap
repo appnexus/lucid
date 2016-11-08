@@ -1,0 +1,329 @@
+exports[`Legend [common] example testing should match snapshot for basic 1`] = `
+<div>
+  <Legend
+    hasBorders={true}
+    isReversed={false}
+    orient="vertical">
+    <Legend.Item
+      color="color-chart-0"
+      hasPoint={true}>
+      Partner 0
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-1"
+      hasPoint={true}>
+      Partner 1
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-2"
+      hasPoint={true}>
+      Partner 2
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-3"
+      hasPoint={true}>
+      Partner 3
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-4"
+      hasPoint={true}>
+      Partner 4
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-5"
+      hasPoint={true}>
+      Partner 5
+    </Legend.Item>
+  </Legend>
+  <br />
+  <Legend
+    hasBorders={true}
+    isReversed={false}
+    orient="vertical">
+    <Legend.Item
+      color="color-chart-0"
+      hasPoint={true}
+      pointKind={0}>
+      Partner 0
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-1"
+      hasPoint={true}
+      pointKind={1}>
+      Partner 1
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-2"
+      hasPoint={true}
+      pointKind={2}>
+      Partner 2
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-3"
+      hasPoint={true}
+      pointKind={3}>
+      Partner 3
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-4"
+      hasPoint={true}
+      pointKind={4}>
+      Partner 4
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-5"
+      hasPoint={true}
+      pointKind={5}>
+      Partner 5
+    </Legend.Item>
+  </Legend>
+  <br />
+  <Legend
+    hasBorders={true}
+    isReversed={false}
+    orient="vertical">
+    <Legend.Item
+      color="color-chart-0"
+      hasLine={true}>
+      Partner 0
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-1"
+      hasLine={true}>
+      Partner 1
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-2"
+      hasLine={true}>
+      Partner 2
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-3"
+      hasLine={true}>
+      Partner 3
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-4"
+      hasLine={true}>
+      Partner 4
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-5"
+      hasLine={true}>
+      Partner 5
+    </Legend.Item>
+  </Legend>
+  <br />
+  <Legend
+    hasBorders={true}
+    isReversed={false}
+    orient="vertical">
+    <Legend.Item
+      color="color-chart-0"
+      hasLine={true}
+      hasPoint={true}
+      pointKind={0}>
+      Partner 0
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-1"
+      hasLine={true}
+      hasPoint={true}
+      pointKind={1}>
+      Partner 1
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-2"
+      hasLine={true}
+      hasPoint={true}
+      pointKind={2}>
+      Partner 2
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-3"
+      hasLine={true}
+      hasPoint={true}
+      pointKind={3}>
+      Partner 3
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-4"
+      hasLine={true}
+      hasPoint={true}
+      pointKind={4}>
+      Partner 4
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-5"
+      hasLine={true}
+      hasPoint={true}
+      pointKind={5}>
+      Partner 5
+    </Legend.Item>
+  </Legend>
+  <br />
+  <Legend
+    hasBorders={true}
+    isReversed={true}
+    orient="vertical">
+    <Legend.Item
+      color="color-chart-0"
+      hasLine={true}
+      hasPoint={true}
+      pointKind={0}>
+      Partner 0
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-1"
+      hasLine={true}
+      hasPoint={true}
+      pointKind={1}>
+      Partner 1
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-2"
+      hasLine={true}
+      hasPoint={true}
+      pointKind={2}>
+      Partner 2
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-3"
+      hasLine={true}
+      hasPoint={true}
+      pointKind={3}>
+      Partner 3
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-4"
+      hasLine={true}
+      hasPoint={true}
+      pointKind={4}>
+      Partner 4
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-5"
+      hasLine={true}
+      hasPoint={true}
+      pointKind={5}>
+      Partner 5
+    </Legend.Item>
+  </Legend>
+  <br />
+  <Legend
+    hasBorders={true}
+    isReversed={false}
+    orient="horizontal">
+    <Legend.Item
+      color="color-chart-good"
+      hasLine={true}>
+      Revenue
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-bad"
+      hasLine={true}>
+      Loss
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-0"
+      hasPoint={true}>
+      Partner 0
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-1"
+      hasPoint={true}>
+      Partner 1
+    </Legend.Item>
+  </Legend>
+  <br />
+  <Legend
+    hasBorders={true}
+    isReversed={true}
+    orient="horizontal">
+    <Legend.Item
+      color="color-chart-good"
+      hasLine={true}>
+      Revenue
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-bad"
+      hasLine={true}>
+      Loss
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-0"
+      hasPoint={true}>
+      Partner 0
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-1"
+      hasPoint={true}>
+      Partner 1
+    </Legend.Item>
+  </Legend>
+  <br />
+  <Legend
+    hasBorders={true}
+    isReversed={false}
+    orient="vertical">
+    <Legend.Item
+      color="color-chart-good"
+      hasLine={true}>
+      Revenue
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-bad"
+      hasLine={true}>
+      Loss
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-0"
+      hasPoint={true}>
+      Partner 0
+    </Legend.Item>
+    <Legend.Item
+      color="color-chart-1"
+      hasPoint={true}>
+      Partner 1
+    </Legend.Item>
+  </Legend>
+  <br />
+  <br />
+  <br />
+  <ToolTip
+    alignment="end"
+    direction="right"
+    isExpanded={true}>
+    <ToolTip.Target>
+      Tooltip example
+    </ToolTip.Target>
+    <ToolTip.Body>
+      <Legend
+        hasBorders={false}
+        isReversed={false}
+        orient="vertical">
+        <Legend.Item
+          color="color-chart-good"
+          hasLine={true}>
+          Revenue
+        </Legend.Item>
+        <Legend.Item
+          color="color-chart-bad"
+          hasLine={true}>
+          Loss
+        </Legend.Item>
+        <Legend.Item
+          color="color-chart-0"
+          hasPoint={true}>
+          Partner 0
+        </Legend.Item>
+        <Legend.Item
+          color="color-chart-1"
+          hasPoint={true}>
+          Partner 1
+        </Legend.Item>
+      </Legend>
+    </ToolTip.Body>
+  </ToolTip>
+</div>
+`;

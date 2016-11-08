@@ -1,0 +1,496 @@
+exports[`SearchableSelect [common] example testing should match snapshot for 01.basic 1`] = `
+<section
+  style={
+    Object {
+      "marginBottom": "20px",
+    }
+  }>
+  <SearchableSelect
+    maxMenuHeight="200"
+    onSelect={[Function]}>
+    <SearchableSelect.Placeholder>
+      Select State
+    </SearchableSelect.Placeholder>
+    <SearchableSelect.Option
+      value="AK">
+      Alaska
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="HI">
+      Hawaii
+    </SearchableSelect.Option>
+    <SearchableSelect.OptionGroup>
+      PST
+      <SearchableSelect.Option
+        value="CA">
+        California
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="NV">
+        Nevada
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="OR">
+        Oregon
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="WA">
+        Washington
+      </SearchableSelect.Option>
+    </SearchableSelect.OptionGroup>
+    <SearchableSelect.OptionGroup>
+      MST
+      <SearchableSelect.Option
+        value="CO">
+        Colorado
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="ID">
+        Idaho
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="MT">
+        Montana
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="NM">
+        New Mexico
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="ND">
+        North Dakota
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="SD">
+        South Dakota
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="WI">
+        Wisconsin
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="WY">
+        Wyoming
+      </SearchableSelect.Option>
+    </SearchableSelect.OptionGroup>
+    <SearchableSelect.OptionGroup>
+      CST
+      <SearchableSelect.Option
+        value="AR">
+        Arkansas
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="IL">
+        Illinois
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="IN">
+        Indiana
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="IA">
+        Iowa
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="KS">
+        Kansas
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="KY">
+        Kentucky
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="MI">
+        Michigan
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="MN">
+        Minnesota
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="MS">
+        Mississippi
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="MO">
+        Missouri
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="NE">
+        Nebraska
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="OH">
+        Ohio
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="OK">
+        Oklahoma
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="TN">
+        Tennessee
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="TX">
+        Texas
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="UT">
+        Utah
+      </SearchableSelect.Option>
+    </SearchableSelect.OptionGroup>
+    <SearchableSelect.OptionGroup>
+      EST
+      <SearchableSelect.Option
+        value="AL">
+        <span>
+          USA: 
+        </span>
+        Alabama
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="AZ">
+        Arizona
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="CT">
+        Connecticut
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="DE">
+        Delaware
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="DC">
+        District Of Columbia
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="FL">
+        Florida
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="GA">
+        Georgia
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="LA">
+        Louisiana
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="ME">
+        Maine
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="MD">
+        Maryland
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="MA">
+        Massachusetts
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="NH">
+        New Hampshire
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="NJ">
+        New Jersey
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="NY">
+        New York
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="NC">
+        North Carolina
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="PA">
+        Pennsylvania
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="RI">
+        Rhode Island
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="SC">
+        South Carolina
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="VT">
+        Vermont
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="VA">
+        Virginia
+      </SearchableSelect.Option>
+      <SearchableSelect.Option
+        value="WV">
+        West Virginia
+      </SearchableSelect.Option>
+    </SearchableSelect.OptionGroup>
+  </SearchableSelect>
+  <section>
+    Selected Index: 
+    null
+  </section>
+</section>
+`;
+
+exports[`SearchableSelect [common] example testing should match snapshot for 02.loading 1`] = `
+<section
+  style={
+    Object {
+      "marginBottom": "20px",
+    }
+  }>
+  <SearchableSelect
+    isLoading={true}
+    maxMenuHeight="200"
+    onSelect={[Function]}>
+    <SearchableSelect.Placeholder>
+      Select State
+    </SearchableSelect.Placeholder>
+    <SearchableSelect.Option
+      value="AL">
+      Alabama
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="AK">
+      Alaska
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="AZ">
+      Arizona
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="AR">
+      Arkansas
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="CA">
+      California
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="CO">
+      Colorado
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="CT">
+      Connecticut
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="DE">
+      Delaware
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="DC">
+      District Of Columbia
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="FL">
+      Florida
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="GA">
+      Georgia
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="HI">
+      Hawaii
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="ID">
+      Idaho
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="IL">
+      Illinois
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="IN">
+      Indiana
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="IA">
+      Iowa
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="KS">
+      Kansas
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="KY">
+      Kentucky
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="LA">
+      Louisiana
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="ME">
+      Maine
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="MD">
+      Maryland
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="MA">
+      Massachusetts
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="MI">
+      Michigan
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="MN">
+      Minnesota
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="MS">
+      Mississippi
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="MO">
+      Missouri
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="MT">
+      Montana
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="NE">
+      Nebraska
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="NV">
+      Nevada
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="NH">
+      New Hampshire
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="NJ">
+      New Jersey
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="NM">
+      New Mexico
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="NY">
+      New York
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="NC">
+      North Carolina
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="ND">
+      North Dakota
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="OH">
+      Ohio
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="OK">
+      Oklahoma
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="OR">
+      Oregon
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="PA">
+      Pennsylvania
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="RI">
+      Rhode Island
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="SC">
+      South Carolina
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="SD">
+      South Dakota
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="TN">
+      Tennessee
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="TX">
+      Texas
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="UT">
+      Utah
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="VT">
+      Vermont
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="VA">
+      Virginia
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="WA">
+      Washington
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="WV">
+      West Virginia
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="WI">
+      Wisconsin
+    </SearchableSelect.Option>
+    <SearchableSelect.Option
+      value="WY">
+      Wyoming
+    </SearchableSelect.Option>
+  </SearchableSelect>
+  <section>
+    Selected Index: 
+    null
+  </section>
+</section>
+`;
+
+exports[`SearchableSelect [common] example testing should match snapshot for 03.custom-search-placeholder 1`] = `
+<section
+  style={
+    Object {
+      "marginBottom": "20px",
+    }
+  }>
+  <SearchableSelect
+    maxMenuHeight="200"
+    onSelect={[Function]}>
+    <SearchField
+      placeholder="Type here to filter..." />
+    <SearchableSelect.Placeholder>
+      Select Color
+    </SearchableSelect.Placeholder>
+    <SearchableSelect.Option>
+      Blue
+    </SearchableSelect.Option>
+    <SearchableSelect.Option>
+      Green
+    </SearchableSelect.Option>
+    <SearchableSelect.Option>
+      Orange
+    </SearchableSelect.Option>
+    <SearchableSelect.Option>
+      Red
+    </SearchableSelect.Option>
+  </SearchableSelect>
+</section>
+`;

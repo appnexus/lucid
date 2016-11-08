@@ -1,0 +1,48 @@
+exports[`Checkbox [common] example testing should match snapshot for interactive 1`] = `
+<ul>
+  <li>
+    <label>
+      Plain
+    </label>
+    <Checkbox
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={true}
+      onSelect={[Function]}
+      tabIndex={20} />
+  </li>
+  <li>
+    <label>
+      Disabled unselected
+    </label>
+    <Checkbox
+      isDisabled={true}
+      isIndeterminate={false}
+      isSelected={false}
+      onSelect={[Function]}
+      tabIndex={20} />
+  </li>
+  <li>
+    <label>
+      Disabled selected
+    </label>
+    <Checkbox
+      isDisabled={true}
+      isIndeterminate={false}
+      isSelected={true}
+      onSelect={[Function]}
+      tabIndex={20} />
+  </li>
+  <li>
+    <label>
+      Disabled indeterminate
+    </label>
+    <Checkbox
+      isDisabled={true}
+      isIndeterminate={true}
+      isSelected={false}
+      onSelect={[Function]}
+      tabIndex={20} />
+  </li>
+</ul>
+`;

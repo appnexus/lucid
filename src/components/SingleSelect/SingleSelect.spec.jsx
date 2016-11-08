@@ -1,7 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
-import sinon from 'sinon';
 import { filterTypes, rejectTypes } from '../../util/component-types';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
@@ -209,40 +208,6 @@ describe('SingleSelect', () => {
 				const dropMenuWrapper = wrapper.find(DropMenu);
 				const flyOutStyle = dropMenuWrapper.prop('flyOutStyle')
 				assert.equal(123, flyOutStyle.maxHeight, 'must match prop value');
-			});
-		});
-
-		describe('onSelect', () => {
-			let wrapper;
-
-			afterEach(() => {
-				if (wrapper) {
-					wrapper.unmount();
-				}
-			});
-
-
-			it('should be called when an option is selected with the appropriate arguments', () => {
-				const onSelect = sinon.spy();
-
-				wrapper = mount(
-					<SingleSelect onSelect={onSelect} DropMenu={{ isExpanded: true }}>
-						<Placeholder>select one</Placeholder>
-						<Option>option a</Option>
-						<Option>option b</Option>
-						<Option testProp='foo'>option c</Option>
-					</SingleSelect>
-				);
-
-				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
-				menuDOMNode.children[2].click();
-
-				assert(onSelect.called);
-				const [optionIndex, { props, event }] = onSelect.lastCall.args;
-				assert.equal(optionIndex, 2);
-				assert(props);
-				assert.equal(props.testProp, 'foo');
-				assert(event);
 			});
 		});
 

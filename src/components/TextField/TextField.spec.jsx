@@ -14,6 +14,9 @@ describe('TextField', () => {
 		callbackName: 'onChange',
 		controlSelector: '.lucid-TextField',
 		eventType: 'change',
+		additionalProps: {
+			value: '123',
+		},
 	});
 
 	it('should correctly debounce onChangeDebounced [mostly stable]', (done) => {

@@ -149,7 +149,7 @@ const SearchableSelect = createClass({
 			isDisabled: false,
 			isLoading: false,
 			optionFilter: this.defaultOptionFilter,
-			searchText: null,
+			searchText: '',
 			selectedIndex: null,
 			DropMenu: DropMenu.getDefaultProps(),
 		};

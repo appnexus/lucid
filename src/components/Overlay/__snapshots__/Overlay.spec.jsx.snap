@@ -1,0 +1,62 @@
+exports[`Overlay [common] example testing should match snapshot for basic 1`] = `
+<div>
+  <Button
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Toggle
+  </Button>
+  <Overlay
+    isModal={true}
+    isShown={false}
+    onBackgroundClick={[Function]}
+    onEscape={[Function]}>
+    <div
+      style={
+        Object {
+          "color": "#fff",
+        }
+      }>
+      User cannot interact with the background (except scrolling).
+    </div>
+  </Overlay>
+</div>
+`;
+
+exports[`Overlay [common] example testing should match snapshot for no-modal 1`] = `
+<div>
+  <Button
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Toggle
+  </Button>
+  <Overlay
+    isModal={false}
+    isShown={false}
+    onBackgroundClick={[Function]}
+    onEscape={[Function]}>
+    <div
+      style={
+        Object {
+          "backgroundColor": "#eee",
+          "padding": "100px",
+        }
+      }>
+      User can still interact with the background.
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        onClick={[Function]}
+        type="button">
+        Close
+      </Button>
+    </div>
+  </Overlay>
+</div>
+`;
