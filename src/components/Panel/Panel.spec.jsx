@@ -23,12 +23,28 @@ describe('Panel', () => {
 	});
 
 	describe('props', () => {
+
 		describe('isGutterless', () => {
 			it('should apply the correct class', () => {
 				const wrapper = shallow(<Panel />);
 				assert.equal(wrapper.find('.lucid-Panel-is-not-gutterless').length, 1);
 			});
 		});
+
+		describe('hasMargin', () => {
+
+			it('should apply the correct class', () => {
+				const wrapper = shallow(<Panel />);
+				assert(wrapper.hasClass('lucid-Panel-has-margin'));
+			});
+
+			it('should not apply the class', () => {
+				const wrapper = shallow(<Panel hasMargin={false} />);
+				assert(!wrapper.hasClass('lucid-Panel-has-margin'));
+			});
+
+		});
+
 	});
 
 	describe('childComponents', () => {

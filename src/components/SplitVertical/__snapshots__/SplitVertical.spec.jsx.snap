@@ -3,6 +3,7 @@ exports[`SplitVertical [common] example testing should match snapshot for 1.defa
   collapseShift={0}
   isAnimated={false}
   isExpanded={true}
+  isResizeable={true}
   onResize={[Function]}
   onResizing={[Function]}>
   <SplitVertical.LeftPane
@@ -30,6 +31,7 @@ exports[`SplitVertical [common] example testing should match snapshot for 2.anim
     collapseShift={0}
     isAnimated={true}
     isExpanded={true}
+    isResizeable={true}
     onResize={[Function]}
     onResizing={[Function]}>
     <SplitVertical.LeftPane
@@ -61,6 +63,7 @@ exports[`SplitVertical [common] example testing should match snapshot for 3.set-
     collapseShift={0}
     isAnimated={true}
     isExpanded={true}
+    isResizeable={true}
     onResize={[Function]}
     onResizing={[Function]}>
     <SplitVertical.LeftPane
@@ -90,6 +93,7 @@ exports[`SplitVertical [common] example testing should match snapshot for 4.set-
   collapseShift={0}
   isAnimated={false}
   isExpanded={true}
+  isResizeable={true}
   onResize={[Function]}
   onResizing={[Function]}>
   <SplitVertical.LeftPane
@@ -113,6 +117,7 @@ exports[`SplitVertical [common] example testing should match snapshot for 5.cust
   collapseShift={0}
   isAnimated={false}
   isExpanded={true}
+  isResizeable={true}
   onResize={[Function]}
   onResizing={[Function]}>
   <SplitVertical.LeftPane
@@ -151,6 +156,7 @@ exports[`SplitVertical [common] example testing should match snapshot for 6.no-a
     collapseShift={0}
     isAnimated={false}
     isExpanded={true}
+    isResizeable={true}
     onResize={[Function]}
     onResizing={[Function]}>
     <SplitVertical.LeftPane
@@ -180,6 +186,7 @@ exports[`SplitVertical [common] example testing should match snapshot for 7.coll
     collapseShift={64}
     isAnimated={true}
     isExpanded={true}
+    isResizeable={true}
     onResize={[Function]}
     onResizing={[Function]}>
     <SplitVertical.LeftPane
@@ -213,6 +220,7 @@ exports[`SplitVertical [common] example testing should match snapshot for 8.hand
     collapseShift={0}
     isAnimated={false}
     isExpanded={true}
+    isResizeable={true}
     onResize={[Function]}
     onResizing={[Function]}>
     <SplitVertical.LeftPane
@@ -230,4 +238,27 @@ exports[`SplitVertical [common] example testing should match snapshot for 8.hand
     </SplitVertical.RightPane>
   </SplitVertical>
 </section>
+`;
+
+exports[`SplitVertical [common] example testing should match snapshot for 9.no-resize 1`] = `
+<SplitVertical
+  collapseShift={0}
+  isAnimated={false}
+  isExpanded={true}
+  isResizeable={false}
+  onResize={[Function]}
+  onResizing={[Function]}>
+  <SplitVertical.LeftPane
+    isPrimary={false}>
+    <p>
+      Occupy biodiesel nesciunt pug fugiat. VHS accusamus intelligentsia, chartreuse raw denim kogi bushwick cold-pressed chia heirloom sint forage. Cornhole affogato swag duis hella, pabst bitters trust fund heirloom viral blog selfies green juice commodo nulla. Single-origin coffee 8-bit ugh jean shorts proident, tote bag small batch meditation poutine next level lo-fi. Ethical before they sold out shoreditch, etsy man braid semiotics ea health goth squid aliquip drinking vinegar kinfolk excepteur polaroid. Meh schlitz cred tattooed chartreuse 3 wolf moon. Lumbersexual poutine kinfolk hella chartreuse thundercats.
+    </p>
+  </SplitVertical.LeftPane>
+  <SplitVertical.RightPane
+    isPrimary={false}>
+    <p>
+      Bitters jean shorts trust fund, typewriter assumenda lomo kickstarter waistcoat kombucha officia semiotics fanny pack yr. Ex quinoa nulla franzen, mollit enim kinfolk deep v pop-up consequat. Drinking vinegar beard cillum portland. Beard chambray sartorial est, enim mumblecore craft beer irony paleo pork belly typewriter ugh trust fund blog elit. Nostrud green juice fingerstache, adipisicing art party kitsch gochujang try-hard eu you probably haven\'t heard of them sed cornhole thundercats iPhone food truck. Scenester poutine tote bag, pug humblebrag 90\'s ullamco craft beer vice sed actually fanny pack gentrify. Flexitarian kale chips odio minim.
+    </p>
+  </SplitVertical.RightPane>
+</SplitVertical>
 `;

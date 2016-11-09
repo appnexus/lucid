@@ -60,9 +60,20 @@ const Panel = createClass({
 		 */
 		isGutterless: bool,
 		/**
+		 * If set to false, removes margin around the Panel
+		 */
+		hasMargin: bool,
+		/**
 		 * Styles that are passed through to root element.
 		 */
 		style: object,
+	},
+
+	getDefaultProps() {
+		return {
+			isGutterless: false,
+			hasMargin: true,
+		};
 	},
 
 	render: function() {
@@ -70,6 +81,7 @@ const Panel = createClass({
 			children,
 			className,
 			isGutterless,
+			hasMargin,
 			style,
 			...passThroughs,
 		} = this.props;
@@ -82,6 +94,7 @@ const Panel = createClass({
 				{...omitProps(passThroughs, Panel)}
 				className={cx('&', className, {
 					'&-is-not-gutterless': !isGutterless,
+					'&-has-margin': hasMargin,
 				})}
 				style={style}
 			>

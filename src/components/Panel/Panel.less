@@ -1,17 +1,21 @@
 .lucid-Panel {
 	overflow: hidden;
 	border-radius: @size-borderRadius;
-	margin: 0 @size-standard @size-standard @size-standard;
+	margin: 0;
 	position: relative;
 	background-color: @color-white;
 	border: @border-standardBorder;
+
+	&-has-margin {
+		margin: 0 @size-standard @size-standard @size-standard;
+	}
 
 	&-Header {
 		padding: @size-standard;
 		border-bottom: @border-lightBorder;
 	}
 
-	&-is-not-gutterless &-content{
+	&-is-not-gutterless &-content {
 		padding: @size-standard;
 		overflow: auto;
 	}
