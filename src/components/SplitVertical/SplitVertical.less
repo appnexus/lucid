@@ -2,8 +2,15 @@
 
 	& > &-inner {
 		& > .lucid-SplitVertical-Divider {
-			background: @color-gray;
-			cursor: ew-resize;
+
+			background: @color-borderColor;
+			box-sizing: border-box;
+			width: 1px;
+
+			&.lucid-SplitVertical-Divider-is-resizeable {
+				background: @color-gray;
+				cursor: ew-resize;
+			}
 		}
 	}
 }

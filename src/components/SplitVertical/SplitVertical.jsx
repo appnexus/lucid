@@ -40,6 +40,10 @@ const SplitVertical = createClass({
 		 */
 		children: node,
 		/**
+		 * Allows draggable resizing of the SplitVertical
+		 */
+		isResizeable: bool,
+		/**
 		 * Render as expanded or collapsed.
 		 */
 		isExpanded: bool,
@@ -139,6 +143,7 @@ const SplitVertical = createClass({
 			collapseShift: 0,
 			onResizing: _.noop,
 			onResize: _.noop,
+			isResizeable: true,
 		};
 	},
 
@@ -350,6 +355,7 @@ const SplitVertical = createClass({
 		const {
 			children,
 			className,
+			isResizeable,
 			...passThroughs,
 		} = this.props;
 
@@ -416,18 +422,27 @@ const SplitVertical = createClass({
 								}}
 								ref={this.storeRef('leftPane')}
 							>{leftPaneProps.children}</div>
-							<DragCaptureZone
+							{isResizeable ? (
+								<DragCaptureZone
+									{...omitProps(dividerProps, SplitVertical.Divider)}
+									className={cx('&-Divider', '&-Divider-is-resizeable', dividerProps.className)}
+									onDragStart={this.handleDragStart}
+									onDrag={this.handleDrag}
+									onDragEnd={this.handleDragEnd}
+									style={{
+										width: '6px',
+										boxSizing: 'border-box',
+										...dividerProps.style,
+									}}
+								>{dividerProps.children || ' '}</DragCaptureZone>
+							) : (
+							<div
 								{...omitProps(dividerProps, SplitVertical.Divider)}
 								className={cx('&-Divider', dividerProps.className)}
-								onDragStart={this.handleDragStart}
-								onDrag={this.handleDrag}
-								onDragEnd={this.handleDragEnd}
-								style={{
-									width: '6px',
-									boxSizing: 'border-box',
-									...dividerProps.style,
-								}}
-							>{dividerProps.children || ' '}</DragCaptureZone>
+							>
+									{dividerProps.children || ' '}
+								</div>
+							)}
 							<div
 								{...omitProps(rightPaneProps, SplitVertical.RightPane)}
 								className={cx('&-RightPane', {
