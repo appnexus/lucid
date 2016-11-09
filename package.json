@@ -19,9 +19,7 @@
     "postversion": "gulp docs-upload",
     "start": "npm run dev",
     "test": "npm run lint && npm run cover",
-    "test-local": "npm run jest",
-    "test-tdd": "npm run jest -- --watch",
-    "watch": "npm run test-tdd"
+    "watch": "npm run jest -- --watch"
   },
   "keywords": [
     "component",
