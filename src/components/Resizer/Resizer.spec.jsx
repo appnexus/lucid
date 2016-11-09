@@ -1,9 +1,17 @@
+jest.mock('./Resizer.util');
 import _ from 'lodash';
 import React from 'react';
 import { common } from '../../util/generic-tests';
 import { mount } from 'enzyme';
+import Resizer from './Resizer';
+import { erd } from './Resizer.util';
 
-import Resizer, { ResizerBase } from './Resizer';
+erd.listenTo = jest.fn((_element, handleResize) => {
+	handleResize({
+		offsetWidth: 50,
+		offsetHeight: 100,
+	});
+});
 
 describe('Resizer', () => {
 	common(Resizer, {
@@ -11,45 +19,36 @@ describe('Resizer', () => {
 		getDefaultProps: () => {
 			return {
 				children: () => (<div />),
-			}
+			};
 		},
 	});
 
 	describe('render', () => {
 		it('should call the correct function when unmounted', () => {
-			const removeListener = jest.fn();
-
 			const wrapper = mount(
-				<ResizerBase removeListener={removeListener}>
+				<Resizer>
 					{_.noop}
-				</ResizerBase>
+				</Resizer>
 			);
 
-			expect(removeListener).not.toHaveBeenCalled();
+			expect(erd.removeListener).not.toHaveBeenCalled();
 
 			wrapper.unmount();
 
-			expect(removeListener).toHaveBeenCalled();
+			expect(erd.removeListener).toHaveBeenCalled();
 		});
 	});
 
 	describe('props', () => {
 		it('children should callback with width and height', () => {
-			const listenTo = jest.fn((_element, handleResize) => {
-				handleResize({
-					offsetWidth: 50,
-					offsetHeight: 100,
-				});
-			});
 			const children = jest.fn();
 			mount(
-				<ResizerBase listenTo={listenTo}>
+				<Resizer>
 					{children}
-				</ResizerBase>
+				</Resizer>
 			);
 
 			expect(children).toHaveBeenCalledWith(50, 100);
 		});
 	});
-
 });
