@@ -244,24 +244,48 @@ describe('SplitVertical', () => {
 						<SplitVertical.LeftPane width={width}>foo</SplitVertical.LeftPane>
 						<SplitVertical.RightPane>bar</SplitVertical.RightPane>
 					</SplitVertical>
-				, { attachTo: mountTestDiv });
+					, { attachTo: mountTestDiv });
 
-				const {
-					onDragStart,
-					onDrag,
-					onDragEnd,
-				} = wrapper.find(DragCaptureZone).props();
+					const {
+						onDragStart,
+						onDrag,
+						onDragEnd,
+					} = wrapper.find(DragCaptureZone).props();
 
-				const lastArg = { event: {} };
+					const lastArg = { event: {} };
 
-				onDragStart(lastArg);
-				onDrag({dX: dX}, lastArg);
-				onDragEnd({dX: dX + 1}, lastArg);
+					onDragStart(lastArg);
+					onDrag({dX: dX}, lastArg);
+					onDragEnd({dX: dX + 1}, lastArg);
 
-				assert(onResize.called, 'must be called');
-				assert.equal(onResize.lastCall.args[0], width + dX + 1, 'must pass the new width of the pane');
-				assert.equal(onResize.lastCall.args[1].props, wrapper.props(), 'must pass component props in the last arg');
-				assert.equal(onResize.lastCall.args[1].event, lastArg.event, 'must pass event reference in the last arg');
+					assert(onResize.called, 'must be called');
+					assert.equal(onResize.lastCall.args[0], width + dX + 1, 'must pass the new width of the pane');
+					assert.equal(onResize.lastCall.args[1].props, wrapper.props(), 'must pass component props in the last arg');
+					assert.equal(onResize.lastCall.args[1].event, lastArg.event, 'must pass event reference in the last arg');
+			});
+
+			describe('isResizeable', () => {
+
+				it('shoult set -is-resizeable class on divider', () => {
+					const wrapper = shallow(
+						<SplitVertical />
+					);
+
+					const dividerDivWrapper = wrapper.find(Motion).shallow().find(DragCaptureZone).shallow().first();
+					assert(dividerDivWrapper.hasClass('lucid-SplitVertical-Divider-is-resizeable'));
+
+				});
+
+				it('should not set -is-resizeable class on divider', () => {
+					const wrapper = shallow(
+						<SplitVertical isResizeable={false} />
+					);
+
+					const motionWrapper = wrapper.find(Motion).shallow();
+					assert(!motionWrapper.find('.lucid-SplitVertical-Divider').hasClass('.lucid-SplitVertical-Divider-is-resizeable'));
+
+				});
+
 			});
 		});
 	});
