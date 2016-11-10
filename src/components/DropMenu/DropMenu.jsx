@@ -223,7 +223,7 @@ const DropMenu = createClass({
 			flattenedOptionsData: [],
 			ungroupedOptionData: [],
 			optionGroupDataLookup: {},
-			portalId: this.props.portalId || 'DropMenu-Portal-' + Math.random().toString(16).substr(2),
+			portalId: this.props.portalId || _.uniqueId('DropMenu-Portal-'),
 		}
 	},
 

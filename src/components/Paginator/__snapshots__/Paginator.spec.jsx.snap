@@ -1,83 +1,40 @@
-exports[`Paginator [common] example testing should match snapshot for 1.basic 1`] = `
-<Paginator
-  totalCount={100} />
-`;
-
-exports[`Paginator [common] example testing should match snapshot for 2.page-size-selector 1`] = `
-<div>
-  <div
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "flexDirection": "row",
-        "marginBottom": 10,
-      }
-    }>
-    Total number of items:
-    <TextField
-      debounceLevel={500}
-      isDisabled={false}
-      isMultiLine={false}
-      lazyLevel={1000}
-      onBlur={[Function]}
-      onChange={[Function]}
-      onChangeDebounced={[Function]}
-      onSubmit={[Function]}
-      rows={5}
-      style={
-        Object {
-          "marginLeft": 6,
-          "textAlign": "center",
-          "width": 45,
-        }
-      }
-      value={45} />
-  </div>
-  <Paginator
-    SingleSelect={
-      Object {
-        "DropMenu": Object {
-          "direction": "up",
-        },
-      }
-    }
-    hasPageSizeSelector={true}
-    pageSizeOptions={
-      Array [
-        10,
-        25,
-        50,
-      ]
-    }
-    totalCount={45} />
-</div>
-`;
-
-exports[`Paginator [common] example testing should match snapshot for 3.disabled 1`] = `
-<div>
-  <section
-    style={
-      Object {
-        "marginBottom": "30px",
-      }
-    }>
-    <Paginator
-      isDisabled={true}
-      totalCount={1} />
-  </section>
-  <section>
-    <Paginator
-      SingleSelect={
-        Object {
-          "DropMenu": Object {
-            "direction": "up",
-          },
-        }
-      }
-      hasPageSizeSelector={true}
-      isDisabled={true}
-      totalCount={100} />
-  </section>
+exports[`Paginator [common] example testing should match snapshot(s) for 1.basic 1`] = `
+<div
+  className="lucid-Paginator">
+  <Button
+    hasOnlyIcon={true}
+    isActive={false}
+    isDisabled={true}
+    onClick={[Function]}
+    type="button">
+    <ArrowIcon
+      direction="left"
+      viewBox="0 0 16 16" />
+  </Button>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value={1} />
+  <span>
+    of 
+  </span>
+  <Button
+    hasOnlyIcon={true}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    <ArrowIcon
+      direction="right"
+      viewBox="0 0 16 16" />
+  </Button>
 </div>
 `;

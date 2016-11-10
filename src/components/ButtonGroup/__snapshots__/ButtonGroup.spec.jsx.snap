@@ -1,5 +1,42 @@
-exports[`ButtonGroup [common] example testing should match snapshot for stateful 1`] = `
-<ButtonGroup>
+exports[`ButtonGroup [common] example testing should match snapshot(s) for stateful 1`] = `
+<span
+  className="lucid-ButtonGroup">
+  <Button
+    callbackId={0}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Zero
+  </Button>
+  <Button
+    callbackId={1}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    One
+  </Button>
+  <Button
+    callbackId={2}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Two
+  </Button>
+  <Button
+    callbackId={3}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Three
+  </Button>
   <ButtonGroup.Button>
     Zero
   </ButtonGroup.Button>
@@ -12,19 +49,102 @@ exports[`ButtonGroup [common] example testing should match snapshot for stateful
   <ButtonGroup.Button>
     Three
   </ButtonGroup.Button>
-</ButtonGroup>
+</span>
 `;
 
-exports[`ButtonGroup [common] example testing should match snapshot for stateless 1`] = `
-<ButtonGroup
-  className={null}
-  onSelect={[Function]}
-  selectedIndices={
-    Array [
-      7,
-      8,
-    ]
-  }>
+exports[`ButtonGroup [common] example testing should match snapshot(s) for stateless 1`] = `
+<span
+  className="lucid-ButtonGroup">
+  <Button
+    callbackId={0}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Zero
+  </Button>
+  <Button
+    callbackId={1}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    One
+  </Button>
+  <Button
+    callbackId={2}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Two
+  </Button>
+  <Button
+    callbackId={3}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Three
+  </Button>
+  <Button
+    callbackId={4}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Four
+  </Button>
+  <Button
+    callbackId={5}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={true}
+    onClick={[Function]}
+    type="button">
+    Five
+  </Button>
+  <Button
+    callbackId={6}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Six
+  </Button>
+  <Button
+    callbackId={7}
+    hasOnlyIcon={false}
+    isActive={true}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Seven
+  </Button>
+  <Button
+    callbackId={8}
+    hasOnlyIcon={false}
+    isActive={true}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Eight
+  </Button>
+  <Button
+    callbackId={9}
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Nine
+  </Button>
   <ButtonGroup.Button>
     Zero
   </ButtonGroup.Button>
@@ -56,5 +176,5 @@ exports[`ButtonGroup [common] example testing should match snapshot for stateles
   <ButtonGroup.Button>
     Nine
   </ButtonGroup.Button>
-</ButtonGroup>
+</span>
 `;

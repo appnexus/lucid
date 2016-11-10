@@ -1,7 +1,8 @@
-exports[`LoadingIndicator [common] example testing should match snapshot for 1.interactive 1`] = `
-<LoadingIndicator
+exports[`LoadingIndicator [common] example testing should match snapshot(s) for 1.interactive 1`] = `
+<OverlayWrapper
+  className="lucid-LoadingIndicator"
   hasOverlay={true}
-  isLoading={true}
+  isVisible={true}
   overlayKind="dark">
   <Button
     hasOnlyIcon={false}
@@ -83,13 +84,17 @@ exports[`LoadingIndicator [common] example testing should match snapshot for 1.i
     yAxisTitle="Revenue"
     yAxisTitleColor="#000"
     yAxisTooltipFormatter={[Function]} />
-</LoadingIndicator>
+  <OverlayWrapper.Message>
+    <LoadingMessage />
+  </OverlayWrapper.Message>
+</OverlayWrapper>
 `;
 
-exports[`LoadingIndicator [common] example testing should match snapshot for 2.default 1`] = `
-<LoadingIndicator
+exports[`LoadingIndicator [common] example testing should match snapshot(s) for 2.default 1`] = `
+<OverlayWrapper
+  className="lucid-LoadingIndicator"
   hasOverlay={true}
-  isLoading={true}
+  isVisible={true}
   overlayKind="light">
   <BarChart
     data={
@@ -150,74 +155,78 @@ exports[`LoadingIndicator [common] example testing should match snapshot for 2.d
     yAxisTitle={null}
     yAxisTitleColor="#000"
     yAxisTooltipFormatter={[Function]} />
-</LoadingIndicator>
+  <OverlayWrapper.Message>
+    <LoadingMessage />
+  </OverlayWrapper.Message>
+</OverlayWrapper>
 `;
 
-exports[`LoadingIndicator [common] example testing should match snapshot for 3.custom-message 1`] = `
-<div>
-  <LoadingIndicator
-    hasOverlay={true}
-    isLoading={true}
-    overlayKind="light">
-    <BarChart
-      data={
-        Array [
-          Object {
-            "x": "2015-01-01",
-            "y": 1,
-          },
-          Object {
-            "x": "2015-01-02",
-            "y": 2,
-          },
-          Object {
-            "x": "2015-01-03",
-            "y": 3,
-          },
-          Object {
-            "x": "2015-01-04",
-            "y": 5,
-          },
-        ]
-      }
-      hasLegend={false}
-      hasToolTips={true}
-      height={400}
-      margin={
+exports[`LoadingIndicator [common] example testing should match snapshot(s) for 3.custom-message 1`] = `
+<OverlayWrapper
+  className="lucid-LoadingIndicator"
+  hasOverlay={true}
+  isVisible={true}
+  overlayKind="light">
+  <BarChart
+    data={
+      Array [
         Object {
-          "bottom": 50,
-          "left": 80,
-          "right": 20,
-          "top": 10,
-        }
+          "x": "2015-01-01",
+          "y": 1,
+        },
+        Object {
+          "x": "2015-01-02",
+          "y": 2,
+        },
+        Object {
+          "x": "2015-01-03",
+          "y": 3,
+        },
+        Object {
+          "x": "2015-01-04",
+          "y": 5,
+        },
+      ]
+    }
+    hasLegend={false}
+    hasToolTips={true}
+    height={400}
+    margin={
+      Object {
+        "bottom": 50,
+        "left": 80,
+        "right": 20,
+        "top": 10,
       }
-      palette={
-        Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
-          "color-chart-3",
-          "color-chart-4",
-          "color-chart-5",
-        ]
-      }
-      width={1000}
-      xAxisField="x"
-      xAxisFormatter={[Function]}
-      xAxisTickCount={null}
-      xAxisTitle={null}
-      xAxisTitleColor="#000"
-      yAxisFields={
-        Array [
-          "y",
-        ]
-      }
-      yAxisIsStacked={false}
-      yAxisMin={0}
-      yAxisTickCount={null}
-      yAxisTitle={null}
-      yAxisTitleColor="#000"
-      yAxisTooltipFormatter={[Function]} />
+    }
+    palette={
+      Array [
+        "color-chart-0",
+        "color-chart-1",
+        "color-chart-2",
+        "color-chart-3",
+        "color-chart-4",
+        "color-chart-5",
+      ]
+    }
+    width={1000}
+    xAxisField="x"
+    xAxisFormatter={[Function]}
+    xAxisTickCount={null}
+    xAxisTitle={null}
+    xAxisTitleColor="#000"
+    yAxisFields={
+      Array [
+        "y",
+      ]
+    }
+    yAxisIsStacked={false}
+    yAxisMin={0}
+    yAxisTickCount={null}
+    yAxisTitle={null}
+    yAxisTitleColor="#000"
+    yAxisTooltipFormatter={[Function]} />
+  <OverlayWrapper.Message>
     <LoadingMessage>
       <LoadingMessage.Icon>
         <LoadingIcon
@@ -234,70 +243,76 @@ exports[`LoadingIndicator [common] example testing should match snapshot for 3.c
         Custom Body
       </LoadingMessage.Body>
     </LoadingMessage>
-  </LoadingIndicator>
-  <LoadingIndicator
-    hasOverlay={true}
-    isLoading={true}
-    overlayKind="light">
-    <BarChart
-      data={
-        Array [
-          Object {
-            "x": "2015-01-01",
-            "y": 1,
-          },
-          Object {
-            "x": "2015-01-02",
-            "y": 2,
-          },
-          Object {
-            "x": "2015-01-03",
-            "y": 3,
-          },
-          Object {
-            "x": "2015-01-04",
-            "y": 5,
-          },
-        ]
-      }
-      hasLegend={false}
-      hasToolTips={true}
-      height={400}
-      margin={
+  </OverlayWrapper.Message>
+</OverlayWrapper>
+`;
+
+exports[`LoadingIndicator [common] example testing should match snapshot(s) for 3.custom-message 2`] = `
+<OverlayWrapper
+  className="lucid-LoadingIndicator"
+  hasOverlay={true}
+  isVisible={true}
+  overlayKind="light">
+  <BarChart
+    data={
+      Array [
         Object {
-          "bottom": 50,
-          "left": 80,
-          "right": 20,
-          "top": 10,
-        }
+          "x": "2015-01-01",
+          "y": 1,
+        },
+        Object {
+          "x": "2015-01-02",
+          "y": 2,
+        },
+        Object {
+          "x": "2015-01-03",
+          "y": 3,
+        },
+        Object {
+          "x": "2015-01-04",
+          "y": 5,
+        },
+      ]
+    }
+    hasLegend={false}
+    hasToolTips={true}
+    height={400}
+    margin={
+      Object {
+        "bottom": 50,
+        "left": 80,
+        "right": 20,
+        "top": 10,
       }
-      palette={
-        Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
-          "color-chart-3",
-          "color-chart-4",
-          "color-chart-5",
-        ]
-      }
-      width={1000}
-      xAxisField="x"
-      xAxisFormatter={[Function]}
-      xAxisTickCount={null}
-      xAxisTitle={null}
-      xAxisTitleColor="#000"
-      yAxisFields={
-        Array [
-          "y",
-        ]
-      }
-      yAxisIsStacked={false}
-      yAxisMin={0}
-      yAxisTickCount={null}
-      yAxisTitle={null}
-      yAxisTitleColor="#000"
-      yAxisTooltipFormatter={[Function]} />
+    }
+    palette={
+      Array [
+        "color-chart-0",
+        "color-chart-1",
+        "color-chart-2",
+        "color-chart-3",
+        "color-chart-4",
+        "color-chart-5",
+      ]
+    }
+    width={1000}
+    xAxisField="x"
+    xAxisFormatter={[Function]}
+    xAxisTickCount={null}
+    xAxisTitle={null}
+    xAxisTitleColor="#000"
+    yAxisFields={
+      Array [
+        "y",
+      ]
+    }
+    yAxisIsStacked={false}
+    yAxisMin={0}
+    yAxisTickCount={null}
+    yAxisTitle={null}
+    yAxisTitleColor="#000"
+    yAxisTooltipFormatter={[Function]} />
+  <OverlayWrapper.Message>
     <LoadingMessage
       Body="Please wait"
       Icon={
@@ -309,14 +324,15 @@ exports[`LoadingIndicator [common] example testing should match snapshot for 3.c
           viewBox="0 0 16 16" />
       }
       Title="Enhancing..." />
-  </LoadingIndicator>
-</div>
+  </OverlayWrapper.Message>
+</OverlayWrapper>
 `;
 
-exports[`LoadingIndicator [common] example testing should match snapshot for 4.no-title 1`] = `
-<LoadingIndicator
+exports[`LoadingIndicator [common] example testing should match snapshot(s) for 4.no-title 1`] = `
+<OverlayWrapper
+  className="lucid-LoadingIndicator"
   hasOverlay={true}
-  isLoading={true}
+  isVisible={true}
   overlayKind="light">
   <BarChart
     data={
@@ -377,15 +393,18 @@ exports[`LoadingIndicator [common] example testing should match snapshot for 4.n
     yAxisTitle={null}
     yAxisTitleColor="#000"
     yAxisTooltipFormatter={[Function]} />
-  <LoadingMessage
-    Title={null} />
-</LoadingIndicator>
+  <OverlayWrapper.Message>
+    <LoadingMessage
+      Title={null} />
+  </OverlayWrapper.Message>
+</OverlayWrapper>
 `;
 
-exports[`LoadingIndicator [common] example testing should match snapshot for 5.no-overlay 1`] = `
-<LoadingIndicator
+exports[`LoadingIndicator [common] example testing should match snapshot(s) for 5.no-overlay 1`] = `
+<OverlayWrapper
+  className="lucid-LoadingIndicator"
   hasOverlay={false}
-  isLoading={true}
+  isVisible={true}
   overlayKind="light">
   <BarChart
     data={
@@ -446,13 +465,17 @@ exports[`LoadingIndicator [common] example testing should match snapshot for 5.n
     yAxisTitle={null}
     yAxisTitleColor="#000"
     yAxisTooltipFormatter={[Function]} />
-</LoadingIndicator>
+  <OverlayWrapper.Message>
+    <LoadingMessage />
+  </OverlayWrapper.Message>
+</OverlayWrapper>
 `;
 
-exports[`LoadingIndicator [common] example testing should match snapshot for 6.light-overlay 1`] = `
-<LoadingIndicator
+exports[`LoadingIndicator [common] example testing should match snapshot(s) for 6.light-overlay 1`] = `
+<OverlayWrapper
+  className="lucid-LoadingIndicator"
   hasOverlay={true}
-  isLoading={true}
+  isVisible={true}
   overlayKind="light">
   <BarChart
     data={
@@ -513,5 +536,8 @@ exports[`LoadingIndicator [common] example testing should match snapshot for 6.l
     yAxisTitle={null}
     yAxisTitleColor="#000"
     yAxisTooltipFormatter={[Function]} />
-</LoadingIndicator>
+  <OverlayWrapper.Message>
+    <LoadingMessage />
+  </OverlayWrapper.Message>
+</OverlayWrapper>
 `;

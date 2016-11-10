@@ -1,103 +1,126 @@
-exports[`SingleSelect [common] example testing should match snapshot for 01.basic 1`] = `
-<section>
-  <SingleSelect
-    onSelect={[Function]}>
-    <SingleSelect.Placeholder>
-      Select Color
-    </SingleSelect.Placeholder>
-    <SingleSelect.Option>
-      Red
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Green
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Blue
-    </SingleSelect.Option>
-  </SingleSelect>
-  <section>
-    Selected Index: 
-    null
-  </section>
-</section>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot for 02.named-options 1`] = `
-<section>
-  <SingleSelect
-    onSelect={[Function]}>
-    <SingleSelect.Placeholder>
-      Select Color
-    </SingleSelect.Placeholder>
-    <SingleSelect.Option
-      name="red">
-      Red
-    </SingleSelect.Option>
-    <SingleSelect.Option
-      name="green">
-      Green
-    </SingleSelect.Option>
-    <SingleSelect.Option
-      name="blue">
-      Blue
-    </SingleSelect.Option>
-  </SingleSelect>
-  <section>
-    <p>
-      Selected Index: 
-      null
-    </p>
-    <p>
-      Selected Option Name: 
-      null
-    </p>
-  </section>
-</section>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot for 03.disabled-options 1`] = `
-<SingleSelect>
-  <SingleSelect.Placeholder>
-    Select Color
-  </SingleSelect.Placeholder>
-  <SingleSelect.Option
+exports[`SingleSelect [common] example testing should match snapshot(s) for 03.disabled-options 1`] = `
+<DropMenu
+  className="lucid-SingleSelect"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}>
+  <DropMenu.Control>
+    <div
+      className="lucid-SingleSelect-Control"
+      tabIndex={0}>
+      <span
+        className="lucid-SingleSelect-Control-content">
+        Select Color
+      </span>
+      <CaretIcon
+        direction="down"
+        viewBox="0 3 16 8" />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option
     isDisabled={true}>
     Red
-  </SingleSelect.Option>
-  <SingleSelect.Option>
+  </DropMenu.Option>
+  <DropMenu.Option>
     Green
-  </SingleSelect.Option>
-  <SingleSelect.Option
+  </DropMenu.Option>
+  <DropMenu.Option
     isDisabled={true}>
     Blue
-  </SingleSelect.Option>
-</SingleSelect>
+  </DropMenu.Option>
+</DropMenu>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot for 04.disabled-select 1`] = `
-<SingleSelect
-  isDisabled={true}>
-  <SingleSelect.Placeholder>
-    Select Color
-  </SingleSelect.Placeholder>
-  <SingleSelect.Option>
+exports[`SingleSelect [common] example testing should match snapshot(s) for 04.disabled-select 1`] = `
+<DropMenu
+  className="lucid-SingleSelect"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={true}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}>
+  <DropMenu.Control>
+    <div
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-disabled"
+      tabIndex={0}>
+      <span
+        className="lucid-SingleSelect-Control-content">
+        Select Color
+      </span>
+      <CaretIcon
+        direction="down"
+        viewBox="0 3 16 8" />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option>
     Red
-  </SingleSelect.Option>
-  <SingleSelect.Option>
+  </DropMenu.Option>
+  <DropMenu.Option>
     Green
-  </SingleSelect.Option>
-  <SingleSelect.Option>
+  </DropMenu.Option>
+  <DropMenu.Option>
     Blue
-  </SingleSelect.Option>
-</SingleSelect>
+  </DropMenu.Option>
+</DropMenu>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot for 05.grouped-options 1`] = `
-<SingleSelect>
-  <SingleSelect.Placeholder>
-    Select Color
-  </SingleSelect.Placeholder>
-  <SingleSelect.OptionGroup>
+exports[`SingleSelect [common] example testing should match snapshot(s) for 05.grouped-options 1`] = `
+<DropMenu
+  className="lucid-SingleSelect"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}>
+  <DropMenu.Control>
+    <div
+      className="lucid-SingleSelect-Control"
+      tabIndex={0}>
+      <span
+        className="lucid-SingleSelect-Control-content">
+        Select Color
+      </span>
+      <CaretIcon
+        direction="down"
+        viewBox="0 3 16 8" />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.OptionGroup>
     Screen
     <SingleSelect.Option>
       Red
@@ -108,8 +131,17 @@ exports[`SingleSelect [common] example testing should match snapshot for 05.grou
     <SingleSelect.Option>
       Blue
     </SingleSelect.Option>
-  </SingleSelect.OptionGroup>
-  <SingleSelect.OptionGroup>
+    <DropMenu.Option>
+      Red
+    </DropMenu.Option>
+    <DropMenu.Option>
+      Green
+    </DropMenu.Option>
+    <DropMenu.Option>
+      Blue
+    </DropMenu.Option>
+  </DropMenu.OptionGroup>
+  <DropMenu.OptionGroup>
     Print
     <SingleSelect.Option>
       Cyan
@@ -123,476 +155,107 @@ exports[`SingleSelect [common] example testing should match snapshot for 05.grou
     <SingleSelect.Option>
       Black
     </SingleSelect.Option>
-  </SingleSelect.OptionGroup>
-</SingleSelect>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot for 06.no-unselect 1`] = `
-<SingleSelect
-  hasReset={false}>
-  <SingleSelect.Placeholder>
-    Select Foo
-  </SingleSelect.Placeholder>
-  <SingleSelect.Option>
-    Red
-  </SingleSelect.Option>
-  <SingleSelect.Option>
-    Green
-  </SingleSelect.Option>
-  <SingleSelect.Option>
-    Blue
-  </SingleSelect.Option>
-</SingleSelect>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot for 07.max-menu-height 1`] = `
-<section>
-  <SingleSelect
-    maxMenuHeight="12em">
-    <SingleSelect.Placeholder>
-      Select Color
-    </SingleSelect.Placeholder>
-    <SingleSelect.Option>
-      Aliceblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Antiquewhite
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Aqua
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Aquamarine
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Azure
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Beige
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Bisque
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Black
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Blanchedalmond
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Blue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Blueviolet
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Brown
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Burlywood
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Cadetblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Chartreuse
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Chocolate
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Coral
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Cornflowerblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Cornsilk
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Crimson
-    </SingleSelect.Option>
-    <SingleSelect.Option>
+    <DropMenu.Option>
       Cyan
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darkblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darkcyan
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darkgoldenrod
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darkgray
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darkgreen
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darkkhaki
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darkmagenta
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darkolivegreen
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darkorange
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darkorchid
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darkred
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darksalmon
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darkseagreen
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darkslateblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darkslategray
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darkturquoise
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Darkviolet
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Deeppink
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Deepskyblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Dimgray
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Dodgerblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Firebrick
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Floralwhite
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Forestgreen
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Fuchsia
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Gainsboro
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Ghostwhite
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Gold
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Goldenrod
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Gray
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Green
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Greenyellow
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Honeydew
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Hotpink
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Indianred
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Indigo
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Ivory
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Khaki
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lavender
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lavenderblush
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lawngreen
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lemonchiffon
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lightblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lightcoral
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lightcyan
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lightgoldenrodyellow
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lightgray
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lightgreen
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lightpink
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lightsalmon
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lightseagreen
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lightskyblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lightslategray
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lightsteelblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lightyellow
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Lime
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Limegreen
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Linen
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Magenta
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Maroon
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Medium aquamarine
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Mediumblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Mediumorchid
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Mediumpurple
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Mediumseagreen
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Mediumslateblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Mediumspringgreen
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Mediumturquoise
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Mediumvioletred
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Midnightblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Mintcream
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Mistyrose
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Moccasin
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Navajowhite
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Navy
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Oldlace
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Olive
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Olivedrab
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Orange
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Orangered
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Orchid
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Palegoldenrod
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Palegreen
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Paleturquoise
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Palevioletred
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Papayawhip
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Peachpuff
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Peru
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Pink
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Plum
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Powderblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Purple
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Rebeccapurple
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Red
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Rosybrown
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Royalblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Saddlebrown
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Salmon
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Sandybrown
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Seagreen
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Seashell
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Sienna
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Silver
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Skyblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Slateblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Slategray
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Snow
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Springgreen
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Steelblue
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Tan
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Teal
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Thistle
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Tomato
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Turquoise
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Violet
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Wheat
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      White
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Whitesmoke
-    </SingleSelect.Option>
-    <SingleSelect.Option>
+    </DropMenu.Option>
+    <DropMenu.Option>
       Yellow
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Yellowgreen
-    </SingleSelect.Option>
-  </SingleSelect>
-</section>
+    </DropMenu.Option>
+    <DropMenu.Option>
+      Magenta
+    </DropMenu.Option>
+    <DropMenu.Option>
+      Black
+    </DropMenu.Option>
+  </DropMenu.OptionGroup>
+</DropMenu>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot for 08.rich-content 1`] = `
-<SingleSelect>
-  <SingleSelect.Placeholder>
-    <PlusIcon
-      isBadge={true}
-      style={
-        Object {
-          "backgroundColor": "gray",
-          "marginRight": 4,
-        }
-      } />
-     Add Color
-  </SingleSelect.Placeholder>
-  <SingleSelect.Option>
+exports[`SingleSelect [common] example testing should match snapshot(s) for 06.no-unselect 1`] = `
+<DropMenu
+  className="lucid-SingleSelect"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}>
+  <DropMenu.Control>
+    <div
+      className="lucid-SingleSelect-Control"
+      tabIndex={0}>
+      <span
+        className="lucid-SingleSelect-Control-content">
+        Select Foo
+      </span>
+      <CaretIcon
+        direction="down"
+        viewBox="0 3 16 8" />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option>
+    Red
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Green
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Blue
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for 08.rich-content 1`] = `
+<DropMenu
+  className="lucid-SingleSelect"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}>
+  <DropMenu.Control>
+    <div
+      className="lucid-SingleSelect-Control"
+      tabIndex={0}>
+      <span
+        className="lucid-SingleSelect-Control-content">
+        <PlusIcon
+          isBadge={true}
+          style={
+            Object {
+              "backgroundColor": "gray",
+              "marginRight": 4,
+            }
+          } />
+         Add Color
+      </span>
+      <CaretIcon
+        direction="down"
+        viewBox="0 3 16 8" />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option>
     <PlusIcon
       isBadge={true}
       style={
@@ -602,8 +265,8 @@ exports[`SingleSelect [common] example testing should match snapshot for 08.rich
         }
       } />
      Red
-  </SingleSelect.Option>
-  <SingleSelect.Option>
+  </DropMenu.Option>
+  <DropMenu.Option>
     <PlusIcon
       isBadge={true}
       style={
@@ -613,8 +276,8 @@ exports[`SingleSelect [common] example testing should match snapshot for 08.rich
         }
       } />
      Green
-  </SingleSelect.Option>
-  <SingleSelect.Option>
+  </DropMenu.Option>
+  <DropMenu.Option>
     <PlusIcon
       isBadge={true}
       style={
@@ -624,70 +287,46 @@ exports[`SingleSelect [common] example testing should match snapshot for 08.rich
         }
       } />
      Blue
-  </SingleSelect.Option>
-</SingleSelect>
+  </DropMenu.Option>
+</DropMenu>
 `;
 
-exports[`SingleSelect [common] example testing should match snapshot for 09.no-selection-highlighting 1`] = `
-<section
-  style={
-    Object {
-      "minHeight": 90,
-    }
-  }>
-  <SingleSelect
-    isSelectionHighlighted={false}>
-    <SingleSelect.Placeholder>
-      Select Foo
-    </SingleSelect.Placeholder>
-    <SingleSelect.Option>
-      Red
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Green
-    </SingleSelect.Option>
-    <SingleSelect.Option>
-      Blue
-    </SingleSelect.Option>
-  </SingleSelect>
-</section>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot for 10.array-options 1`] = `
-<section
-  style={
-    Object {
-      "minHeight": 90,
-    }
-  }>
-  <SingleSelect
-    Option={
-      Array [
-        1,
-        2,
-        3,
-      ]
-    }
-    Placeholder="Select a number" />
-</section>
-`;
-
-exports[`SingleSelect [common] example testing should match snapshot for 11.stateless 1`] = `
-<SingleSelect
-  DropMenu={
-    Object {
-      "focusedIndex": 2,
-      "isExpanded": true,
-    }
-  }
-  hasReset={true}
+exports[`SingleSelect [common] example testing should match snapshot(s) for 11.stateless 1`] = `
+<DropMenu
+  className="lucid-SingleSelect"
+  direction="down"
+  flyOutStyle={Object {}}
+  focusedIndex={2}
   isDisabled={false}
-  isSelectionHighlighted={true}
-  selectedIndex={1}>
-  <SingleSelect.Placeholder>
+  isExpanded={true}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={
+    Array [
+      1,
+    ]
+  }>
+  <DropMenu.Control>
+    <div
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-highlighted lucid-SingleSelect-Control-is-selected lucid-SingleSelect-Control-is-expanded"
+      tabIndex={0}>
+      <span
+        className="lucid-SingleSelect-Control-content">
+        Green
+      </span>
+      <CaretIcon
+        direction="down"
+        viewBox="0 3 16 8" />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.NullOption>
     Select Color
-  </SingleSelect.Placeholder>
-  <SingleSelect.OptionGroup>
+  </DropMenu.NullOption>
+  <DropMenu.OptionGroup>
     Preferred
     <SingleSelect.Option>
       Red
@@ -698,17 +337,26 @@ exports[`SingleSelect [common] example testing should match snapshot for 11.stat
     <SingleSelect.Option>
       Blue
     </SingleSelect.Option>
-  </SingleSelect.OptionGroup>
-  <SingleSelect.Option>
+    <DropMenu.Option>
+      Red
+    </DropMenu.Option>
+    <DropMenu.Option>
+      Green
+    </DropMenu.Option>
+    <DropMenu.Option>
+      Blue
+    </DropMenu.Option>
+  </DropMenu.OptionGroup>
+  <DropMenu.Option>
     Orange
-  </SingleSelect.Option>
-  <SingleSelect.Option
+  </DropMenu.Option>
+  <DropMenu.Option
     isDisabled={true}>
     Violet
-  </SingleSelect.Option>
-  <SingleSelect.Option
+  </DropMenu.Option>
+  <DropMenu.Option
     isDisabled={true}>
     Brown
-  </SingleSelect.Option>
-</SingleSelect>
+  </DropMenu.Option>
+</DropMenu>
 `;

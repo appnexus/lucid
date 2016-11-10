@@ -1,8 +1,6 @@
-exports[`Table [common] example testing should match snapshot for 1.standard 1`] = `
-<Table
-  density="extended"
-  hasBorder={false}
-  hasWordWrap={true}>
+exports[`Table [common] example testing should match snapshot(s) for 1.standard 1`] = `
+<table
+  className="lucid-Table lucid-Table-density-extended lucid-Table-has-word-wrap">
   <Table.Thead>
     <Table.Tr
       isActionable={false}
@@ -1045,14 +1043,12 @@ exports[`Table [common] example testing should match snapshot for 1.standard 1`]
       </Table.Td>
     </Table.Tr>
   </Table.Tbody>
-</Table>
+</table>
 `;
 
-exports[`Table [common] example testing should match snapshot for 2.compressed 1`] = `
-<Table
-  density="compressed"
-  hasBorder={false}
-  hasWordWrap={true}>
+exports[`Table [common] example testing should match snapshot(s) for 2.compressed 1`] = `
+<table
+  className="lucid-Table lucid-Table-density-compressed lucid-Table-has-word-wrap">
   <Table.Thead>
     <Table.Tr
       isActionable={false}
@@ -2095,14 +2091,12 @@ exports[`Table [common] example testing should match snapshot for 2.compressed 1
       </Table.Td>
     </Table.Tr>
   </Table.Tbody>
-</Table>
+</table>
 `;
 
-exports[`Table [common] example testing should match snapshot for 3.with-border 1`] = `
-<Table
-  density="extended"
-  hasBorder={true}
-  hasWordWrap={true}>
+exports[`Table [common] example testing should match snapshot(s) for 3.with-border 1`] = `
+<table
+  className="lucid-Table lucid-Table-density-extended lucid-Table-has-border lucid-Table-has-word-wrap">
   <Table.Thead>
     <Table.Tr
       isActionable={false}
@@ -3130,14 +3124,12 @@ exports[`Table [common] example testing should match snapshot for 3.with-border 
       </Table.Td>
     </Table.Tr>
   </Table.Tbody>
-</Table>
+</table>
 `;
 
-exports[`Table [common] example testing should match snapshot for 4.with-empty-column 1`] = `
-<Table
-  density="extended"
-  hasBorder={false}
-  hasWordWrap={true}>
+exports[`Table [common] example testing should match snapshot(s) for 4.with-empty-column 1`] = `
+<table
+  className="lucid-Table lucid-Table-density-extended lucid-Table-has-word-wrap">
   <Table.Thead>
     <Table.Tr
       isActionable={false}
@@ -4182,5 +4174,5 @@ exports[`Table [common] example testing should match snapshot for 4.with-empty-c
       </Table.Td>
     </Table.Tr>
   </Table.Tbody>
-</Table>
+</table>
 `;

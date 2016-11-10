@@ -1,16 +1,28 @@
-exports[`Validation [common] example testing should match snapshot for basic 1`] = `
-<div>
-  <Validation
-    Error="Method one">
-    Content
-  </Validation>
-  <Validation>
-    <Validation.Error>
-      <i>
-        Method two
-      </i>
-    </Validation.Error>
-    Content
-  </Validation>
+exports[`Validation [common] example testing should match snapshot(s) for basic 1`] = `
+<div
+  className="lucid-Validation lucid-Validation-is-error">
+  Content
+  <div
+    className="lucid-Validation-error-content">
+    Method one
+  </div>
+</div>
+`;
+
+exports[`Validation [common] example testing should match snapshot(s) for basic 2`] = `
+<div
+  className="lucid-Validation lucid-Validation-is-error">
+  <Validation.Error>
+    <i>
+      Method two
+    </i>
+  </Validation.Error>
+  Content
+  <div
+    className="lucid-Validation-error-content">
+    <i>
+      Method two
+    </i>
+  </div>
 </div>
 `;

@@ -1,21 +1,47 @@
-exports[`Resizer [common] example testing should match snapshot for basic 1`] = `<Resizer />`;
-
-exports[`Resizer [common] example testing should match snapshot for with-flex 1`] = `
+exports[`Resizer [common] example testing should match snapshot(s) for basic 1`] = `
 <div
+  className="lucid-Resizer">
+  <div>
+    <div>
+      Width: 
+    </div>
+    <div>
+      Height: 
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Resizer [common] example testing should match snapshot(s) for with-flex 1`] = `
+<div
+  className="lucid-Resizer"
   style={
     Object {
-      "display": "flex",
+      "flexGrow": 1,
+      "overflow": "hidden",
     }
   }>
-  <div>
-    Other content
-  </div>
-  <Resizer
+  <div
     style={
       Object {
-        "flexGrow": 1,
-        "overflow": "hidden",
+        "border": "1px solid black",
+        "height": 0,
+        "width": 0,
       }
-    } />
+    }>
+    <div>
+      When using Resizer within a flexed container, its critical to add 
+      <code>
+        flexGrow: 1, overflow: \'hidden\'
+      </code>
+       to its styles so it will behave correctly.
+    </div>
+    <div>
+      Width: 
+    </div>
+    <div>
+      Height: 
+    </div>
+  </div>
 </div>
 `;

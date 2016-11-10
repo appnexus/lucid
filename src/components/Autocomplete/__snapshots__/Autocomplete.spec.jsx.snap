@@ -1,333 +1,182 @@
-exports[`Autocomplete [common] example testing should match snapshot for 1.basic 1`] = `
-<Autocomplete
-  placeholder="Enter a word..."
-  suggestions={
-    Array [
-      "Portland",
-      "pinky and the brain",
-      "playa please",
-      "porridge",
-      "portal",
-      "potent potables",
-      "potent",
-    ]
-  } />
-`;
-
-exports[`Autocomplete [common] example testing should match snapshot for 2.interactive 1`] = `
-<section>
-  <section>
-    Current Value: 
-  </section>
-  <Autocomplete
-    onChange={[Function]}
-    placeholder="Enter a word..."
-    suggestions={
-      Array [
-        "abaft",
-        "abounding",
-        "abrasive",
-        "accidental",
-        "actor",
-        "addition",
-        "adhesive",
-        "adjustment",
-        "advertisement",
-        "applaud",
-        "appreciate",
-        "awesome",
-        "ball",
-        "beautiful",
-        "beef",
-        "bell",
-        "bent",
-        "bite-sized",
-        "bitter",
-        "black",
-        "bloody",
-        "bulb",
-        "bump",
-        "calculator",
-        "camp",
-        "care",
-        "care",
-        "caring",
-        "celery",
-        "challenge",
-        "chase",
-        "cherries",
-        "chew",
-        "choke",
-        "circle",
-        "clean",
-        "club",
-        "coat",
-        "cold",
-        "colossal",
-        "command",
-        "competition",
-        "confuse",
-        "continue",
-        "crawl",
-        "curve",
-        "cute",
-        "dad",
-        "damaged",
-        "death",
-        "debonair",
-        "decorate",
-        "deeply",
-        "delicious",
-        "destroy",
-        "destruction",
-        "diligent",
-        "disapprove",
-        "discussion",
-        "doubtful",
-        "dress",
-        "drop",
-        "dust",
-        "eatable",
-        "educate",
-        "efficacious",
-        "elegant",
-        "elfin",
-        "embarrassed",
-        "enjoy",
-        "envious",
-        "exchange",
-        "excited",
-        "existence",
-        "fast",
-        "fear",
-        "flight",
-        "float",
-        "food",
-        "force",
-        "fork",
-        "frightening",
-        "geese",
-        "ghost",
-        "giant",
-        "gigantic",
-        "glow",
-        "goofy",
-        "grandiose",
-        "great",
-        "grumpy",
-        "guide",
-        "hair",
-        "hall",
-        "head",
-        "heat",
-        "hesitant",
-        "hill",
-        "home",
-        "horn",
-        "hospital",
-        "hurt",
-        "idea",
-        "ill-informed",
-        "immense",
-        "imminent",
-        "insect",
-        "insurance",
-        "intelligent",
-        "iron",
-        "jaded",
-        "jagged",
-        "jeans",
-        "jelly",
-        "judge",
-        "kitty",
-        "kneel",
-        "knot",
-        "knotty",
-        "letter",
-        "level",
-        "lie",
-        "lip",
-        "literate",
-        "loaf",
-        "lovely",
-        "madly",
-        "meaty",
-        "men",
-        "merciful",
-        "messy",
-        "minister",
-        "modern",
-        "multiply",
-        "muscle",
-        "mysterious",
-        "natural",
-        "naughty",
-        "neat",
-        "note",
-        "nut",
-        "nutritious",
-        "obedient",
-        "obsolete",
-        "old-fashioned",
-        "onerous",
-        "opposite",
-        "order",
-        "oval",
-        "painstaking",
-        "paint",
-        "pale",
-        "parallel",
-        "parched",
-        "park",
-        "past",
-        "pencil",
-        "perfect",
-        "permit",
-        "phobic",
-        "picture",
-        "pin",
-        "pink",
-        "please",
-        "plug",
-        "pop",
-        "possess",
-        "preserve",
-        "pretty",
-        "print",
-        "puffy",
-        "pushy",
-        "quarter",
-        "race",
-        "racial",
-        "raise",
-        "rampant",
-        "rare",
-        "record",
-        "release",
-        "retire",
-        "rhetorical",
-        "rhyme",
-        "ring",
-        "road",
-        "rub",
-        "rule",
-        "savory",
-        "scared",
-        "screw",
-        "seemly",
-        "selfish",
-        "shape",
-        "shiver",
-        "shrill",
-        "sign",
-        "signal",
-        "silk",
-        "silky",
-        "silly",
-        "simplistic",
-        "sister",
-        "skillful",
-        "sleep",
-        "small",
-        "smash",
-        "society",
-        "sofa",
-        "soggy",
-        "song",
-        "sound",
-        "soup",
-        "sparkling",
-        "spiders",
-        "spot",
-        "stage",
-        "standing",
-        "stare",
-        "steep",
-        "stiff",
-        "store",
-        "stranger",
-        "swanky",
-        "taste",
-        "tasteless",
-        "tax",
-        "telling",
-        "territory",
-        "third",
-        "thirsty",
-        "thumb",
-        "tiny",
-        "toe",
-        "touch",
-        "transport",
-        "tremble",
-        "trite",
-        "twist",
-        "two",
-        "umbrella",
-        "unkempt",
-        "unlock",
-        "unnatural",
-        "unsightly",
-        "uttermost",
-        "wait",
-        "walk",
-        "wander",
-        "warn",
-        "weary",
-        "wholesale",
-        "willing",
-        "winter",
-        "worthless",
-        "writer",
-        "zippy",
-      ]
-    } />
-</section>
-`;
-
-exports[`Autocomplete [common] example testing should match snapshot for 3.disabled 1`] = `
-<section
-  style={
+exports[`Autocomplete [common] example testing should match snapshot(s) for 1.basic 1`] = `
+<DropMenu
+  className="lucid-Autocomplete"
+  direction="down"
+  flyOutStyle={
     Object {
-      "minHeight": 100,
-    }
-  }>
-  <Autocomplete
-    isDisabled={true}
-    placeholder="Enter a word..." />
-</section>
-`;
-
-exports[`Autocomplete [common] example testing should match snapshot for 4.stateless 1`] = `
-<Autocomplete
-  DropMenu={
-    Object {
-      "focusedIndex": 2,
-      "isExpanded": true,
-      "onCollapse": [Function],
+      "maxHeight": "18em",
     }
   }
+  focusedIndex={null}
   isDisabled={false}
-  onChange={[Function]}
+  isExpanded={false}
+  onCollapse={[Function]}
   onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
   onSelect={[Function]}
-  placeholder="Enter a word..."
-  suggestions={
-    Array [
-      "abaft",
-      "abounding",
-      "abrasive",
-      "accidental",
-      "actor",
-      "addition",
-      "adhesive",
-      "adjustment",
-      "advertisement",
-      "applaud",
-      "appreciate",
-      "awesome",
-      "abracadabra alakazam hocus pocus shazam say the magic word please if you will thank you very much",
-    ]
+  selectedIndices={Array []}>
+  <DropMenu.Control
+    onClick={[Function]}>
+    <div
+      className="lucid-Autocomplete-Control">
+      <input
+        className="lucid-Autocomplete-Control-input"
+        disabled={false}
+        onKeyDown={[Function]}
+        placeholder="Enter a word..."
+        type="text" />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option>
+    Portland
+  </DropMenu.Option>
+  <DropMenu.Option>
+    pinky and the brain
+  </DropMenu.Option>
+  <DropMenu.Option>
+    playa please
+  </DropMenu.Option>
+  <DropMenu.Option>
+    porridge
+  </DropMenu.Option>
+  <DropMenu.Option>
+    portal
+  </DropMenu.Option>
+  <DropMenu.Option>
+    potent potables
+  </DropMenu.Option>
+  <DropMenu.Option>
+    potent
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`Autocomplete [common] example testing should match snapshot(s) for 4.stateless 1`] = `
+<DropMenu
+  className="lucid-Autocomplete"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
   }
-  value="ab" />
+  focusedIndex={2}
+  isDisabled={false}
+  isExpanded={true}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}>
+  <DropMenu.Control
+    onClick={[Function]}>
+    <div
+      className="lucid-Autocomplete-Control lucid-Autocomplete-Control-is-expanded">
+      <input
+        className="lucid-Autocomplete-Control-input"
+        disabled={false}
+        onKeyDown={[Function]}
+        placeholder="Enter a word..."
+        type="text" />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-match">
+      ab
+    </span>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      aft
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-match">
+      ab
+    </span>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      ounding
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-match">
+      ab
+    </span>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      rasive
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      accidental
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      actor
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      addition
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      adhesive
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      adjustment
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      advertisement
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      applaud
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      appreciate
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      awesome
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-match">
+      ab
+    </span>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      racadabra alakazam hocus pocus shazam say the magic word please if you will thank you very much
+    </span>
+  </DropMenu.Option>
+</DropMenu>
 `;

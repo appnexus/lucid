@@ -1,650 +1,219 @@
-exports[`PieChart [common] example testing should match snapshot for 1.basic 1`] = `
-<div>
-  <PieChart
-    data={
-      Array [
-        Object {
-          "x": "Leslie",
-          "y": 60,
-        },
-        Object {
-          "x": "Ron",
-          "y": 40,
-        },
-        Object {
-          "x": "Tom",
-          "y": 30,
-        },
-        Object {
-          "x": "Gary",
-          "y": 20,
-        },
-        Object {
-          "x": "Ben",
-          "y": 15,
-        },
-      ]
-    } />
-  <PieChart
-    data={
-      Array [
-        Object {
-          "x": "Leslie",
-          "y": 60,
-        },
-        Object {
-          "x": "Ron",
-          "y": 40,
-        },
-        Object {
-          "x": "Tom",
-          "y": 30,
-        },
-        Object {
-          "x": "Gary",
-          "y": 20,
-        },
-        Object {
-          "x": "Ben",
-          "y": 15,
-        },
-      ]
-    }
-    palette={
-      Array [
-        "color-chart-0-lightest",
-        "color-chart-0-light",
-        "color-chart-0",
-        "color-chart-0-dark",
-        "color-chart-0-darkest",
-      ]
-    } />
-  <PieChart
-    data={
-      Array [
-        Object {
-          "x": "Leslie",
-          "y": 60,
-        },
-        Object {
-          "x": "Ron",
-          "y": 40,
-        },
-        Object {
-          "x": "Tom",
-          "y": 30,
-        },
-        Object {
-          "x": "Gary",
-          "y": 20,
-        },
-        Object {
-          "x": "Ben",
-          "y": 15,
-        },
-      ]
-    }
-    palette={
-      Array [
-        "color-chart-1-lightest",
-        "color-chart-1-light",
-        "color-chart-1",
-        "color-chart-1-dark",
-        "color-chart-1-darkest",
-      ]
-    } />
-  <PieChart
-    data={
-      Array [
-        Object {
-          "x": "Leslie",
-          "y": 60,
-        },
-        Object {
-          "x": "Ron",
-          "y": 40,
-        },
-        Object {
-          "x": "Tom",
-          "y": 30,
-        },
-        Object {
-          "x": "Gary",
-          "y": 20,
-        },
-        Object {
-          "x": "Ben",
-          "y": 15,
-        },
-      ]
-    }
-    palette={
-      Array [
-        "color-chart-2-lightest",
-        "color-chart-2-light",
-        "color-chart-2",
-        "color-chart-2-dark",
-        "color-chart-2-darkest",
-      ]
-    } />
-  <PieChart
-    data={
-      Array [
-        Object {
-          "x": "Leslie",
-          "y": 60,
-        },
-        Object {
-          "x": "Ron",
-          "y": 40,
-        },
-        Object {
-          "x": "Tom",
-          "y": 30,
-        },
-        Object {
-          "x": "Gary",
-          "y": 20,
-        },
-        Object {
-          "x": "Ben",
-          "y": 15,
-        },
-      ]
-    }
-    palette={
-      Array [
-        "color-chart-3-lightest",
-        "color-chart-3-light",
-        "color-chart-3",
-        "color-chart-3-dark",
-        "color-chart-3-darkest",
-      ]
-    } />
-  <PieChart
-    data={
-      Array [
-        Object {
-          "x": "Leslie",
-          "y": 60,
-        },
-        Object {
-          "x": "Ron",
-          "y": 40,
-        },
-        Object {
-          "x": "Tom",
-          "y": 30,
-        },
-        Object {
-          "x": "Gary",
-          "y": 20,
-        },
-        Object {
-          "x": "Ben",
-          "y": 15,
-        },
-      ]
-    }
-    palette={
-      Array [
-        "color-chart-4-lightest",
-        "color-chart-4-light",
-        "color-chart-4",
-        "color-chart-4-dark",
-        "color-chart-4-darkest",
-      ]
-    } />
-  <PieChart
-    data={
-      Array [
-        Object {
-          "x": "Leslie",
-          "y": 60,
-        },
-        Object {
-          "x": "Ron",
-          "y": 40,
-        },
-        Object {
-          "x": "Tom",
-          "y": 30,
-        },
-        Object {
-          "x": "Gary",
-          "y": 20,
-        },
-        Object {
-          "x": "Ben",
-          "y": 15,
-        },
-      ]
-    }
-    palette={
-      Array [
-        "color-chart-5-lightest",
-        "color-chart-5-light",
-        "color-chart-5",
-        "color-chart-5-dark",
-        "color-chart-5-darkest",
-      ]
-    } />
-</div>
-`;
-
-exports[`PieChart [common] example testing should match snapshot for 2.basic-donuts 1`] = `
-<div>
-  <PieChart
-    data={
-      Array [
-        Object {
-          "x": "Leslie",
-          "y": 60,
-        },
-        Object {
-          "x": "Ron",
-          "y": 40,
-        },
-        Object {
-          "x": "Tom",
-          "y": 30,
-        },
-        Object {
-          "x": "Gary",
-          "y": 20,
-        },
-        Object {
-          "x": "Ben",
-          "y": 15,
-        },
-      ]
-    }
-    isDonut={true} />
-  <PieChart
-    data={
-      Array [
-        Object {
-          "x": "Leslie",
-          "y": 60,
-        },
-        Object {
-          "x": "Ron",
-          "y": 40,
-        },
-        Object {
-          "x": "Tom",
-          "y": 30,
-        },
-        Object {
-          "x": "Gary",
-          "y": 20,
-        },
-        Object {
-          "x": "Ben",
-          "y": 15,
-        },
-      ]
-    }
-    isDonut={true}
-    palette={
-      Array [
-        "color-chart-0-lightest",
-        "color-chart-0-light",
-        "color-chart-0",
-        "color-chart-0-dark",
-        "color-chart-0-darkest",
-      ]
-    } />
-  <PieChart
-    data={
-      Array [
-        Object {
-          "x": "Leslie",
-          "y": 60,
-        },
-        Object {
-          "x": "Ron",
-          "y": 40,
-        },
-        Object {
-          "x": "Tom",
-          "y": 30,
-        },
-        Object {
-          "x": "Gary",
-          "y": 20,
-        },
-        Object {
-          "x": "Ben",
-          "y": 15,
-        },
-      ]
-    }
-    isDonut={true}
-    palette={
-      Array [
-        "color-chart-1-lightest",
-        "color-chart-1-light",
-        "color-chart-1",
-        "color-chart-1-dark",
-        "color-chart-1-darkest",
-      ]
-    } />
-  <PieChart
-    data={
-      Array [
-        Object {
-          "x": "Leslie",
-          "y": 60,
-        },
-        Object {
-          "x": "Ron",
-          "y": 40,
-        },
-        Object {
-          "x": "Tom",
-          "y": 30,
-        },
-        Object {
-          "x": "Gary",
-          "y": 20,
-        },
-        Object {
-          "x": "Ben",
-          "y": 15,
-        },
-      ]
-    }
-    isDonut={true}
-    palette={
-      Array [
-        "color-chart-2-lightest",
-        "color-chart-2-light",
-        "color-chart-2",
-        "color-chart-2-dark",
-        "color-chart-2-darkest",
-      ]
-    } />
-  <PieChart
-    data={
-      Array [
-        Object {
-          "x": "Leslie",
-          "y": 60,
-        },
-        Object {
-          "x": "Ron",
-          "y": 40,
-        },
-        Object {
-          "x": "Tom",
-          "y": 30,
-        },
-        Object {
-          "x": "Gary",
-          "y": 20,
-        },
-        Object {
-          "x": "Ben",
-          "y": 15,
-        },
-      ]
-    }
-    isDonut={true}
-    palette={
-      Array [
-        "color-chart-3-lightest",
-        "color-chart-3-light",
-        "color-chart-3",
-        "color-chart-3-dark",
-        "color-chart-3-darkest",
-      ]
-    } />
-  <PieChart
-    data={
-      Array [
-        Object {
-          "x": "Leslie",
-          "y": 60,
-        },
-        Object {
-          "x": "Ron",
-          "y": 40,
-        },
-        Object {
-          "x": "Tom",
-          "y": 30,
-        },
-        Object {
-          "x": "Gary",
-          "y": 20,
-        },
-        Object {
-          "x": "Ben",
-          "y": 15,
-        },
-      ]
-    }
-    isDonut={true}
-    palette={
-      Array [
-        "color-chart-4-lightest",
-        "color-chart-4-light",
-        "color-chart-4",
-        "color-chart-4-dark",
-        "color-chart-4-darkest",
-      ]
-    } />
-  <PieChart
-    data={
-      Array [
-        Object {
-          "x": "Leslie",
-          "y": 60,
-        },
-        Object {
-          "x": "Ron",
-          "y": 40,
-        },
-        Object {
-          "x": "Tom",
-          "y": 30,
-        },
-        Object {
-          "x": "Gary",
-          "y": 20,
-        },
-        Object {
-          "x": "Ben",
-          "y": 15,
-        },
-      ]
-    }
-    isDonut={true}
-    palette={
-      Array [
-        "color-chart-5-lightest",
-        "color-chart-5-light",
-        "color-chart-5",
-        "color-chart-5-dark",
-        "color-chart-5-darkest",
-      ]
-    } />
-</div>
-`;
-
-exports[`PieChart [common] example testing should match snapshot for 3.legend 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "display": "flex",
-    }
-  }>
-  <PieChart
-    data={
-      Array [
-        Object {
-          "x": "Leslie",
-          "y": 80,
-        },
-        Object {
-          "x": "Tom",
-          "y": 20,
-        },
-        Object {
-          "x": "Ron",
-          "y": 10,
-        },
-        Object {
-          "x": "Ann",
-          "y": 30,
-        },
-      ]
-    }
-    palette={
-      Array [
-        "color-chart-0",
-        "color-chart-1",
-        "color-chart-2",
-        "color-chart-3",
-        "color-chart-4",
-        "color-chart-5",
-      ]
-    } />
-  <Legend
-    hasBorders={true}
-    isReversed={false}
-    orient="vertical">
-    <Legend.Item
-      color="color-chart-0"
-      hasPoint={true}
-      pointKind={1}>
+exports[`PieChart [common] example testing should match snapshot(s) for 4.color-map 1`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-good"
+              d="M5.5109105961630896e-15,-90A90,90,0,1,1,-3.445711829034255e-14,90L-1.9142843494634747e-16,0.5A0.5,0.5,0,1,0,3.061616997868383e-17,-0.5Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,1,1,-3.445711829034255e-14,90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-1"
+              d="M-3.445711829034255e-14,90A90,90,0,0,1,-52.9006727063226,72.81152949374525L-0.2938926261462367,0.4045084971874736A0.5,0.5,0,0,0,-1.9142843494634747e-16,0.5Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-3.445711829034255e-14,90A90,90,0,0,1,-52.9006727063226,72.81152949374525L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-2"
+              d="M-52.9006727063226,72.81152949374525A90,90,0,0,1,-72.81152949374527,52.900672706322595L-0.4045084971874737,0.2938926261462366A0.5,0.5,0,0,0,-0.2938926261462367,0.4045084971874736Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-52.9006727063226,72.81152949374525A90,90,0,0,1,-72.81152949374527,52.900672706322595L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-3"
+              d="M-72.81152949374527,52.900672706322595A90,90,0,0,1,-85.59508646656383,-27.811529493745255L-0.4755282581475768,-0.15450849718747364A0.5,0.5,0,0,0,-0.4045084971874737,0.2938926261462366Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-72.81152949374527,52.900672706322595A90,90,0,0,1,-85.59508646656383,-27.811529493745255L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-bad"
+              d="M-85.59508646656383,-27.811529493745255A90,90,0,0,1,-1.6532731788489267e-14,-90L-9.184850993605148e-17,-0.5A0.5,0.5,0,0,0,-0.4755282581475768,-0.15450849718747364Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-85.59508646656383,-27.811529493745255A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
       Leslie
-    </Legend.Item>
-    <Legend.Item
-      color="color-chart-1"
-      hasPoint={true}
-      pointKind={1}>
-      Tom
-    </Legend.Item>
-    <Legend.Item
-      color="color-chart-2"
-      hasPoint={true}
-      pointKind={1}>
-      Ron
-    </Legend.Item>
-    <Legend.Item
-      color="color-chart-3"
-      hasPoint={true}
-      pointKind={1}>
-      Ann
-    </Legend.Item>
-  </Legend>
-</div>
+    </ToolTip.Title>
+    <ToolTip.Body>
+      100
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
 `;
 
-exports[`PieChart [common] example testing should match snapshot for 4.color-map 1`] = `
-<PieChart
-  colorMap={
-    Object {
-      "Leslie": "color-chart-good",
-      "Tammy": "color-chart-bad",
-    }
-  }
-  data={
-    Array [
-      Object {
-        "x": "Leslie",
-        "y": 100,
-      },
-      Object {
-        "x": "Tom",
-        "y": 20,
-      },
-      Object {
-        "x": "Ron",
-        "y": 10,
-      },
-      Object {
-        "x": "Ann",
-        "y": 30,
-      },
-      Object {
-        "x": "Tammy",
-        "y": 40,
-      },
-    ]
-  } />
-`;
-
-exports[`PieChart [common] example testing should match snapshot for 5.percents 1`] = `
-<div>
-  <PieChart
-    data={
-      Array [
-        Object {
-          "x": "Leslie",
-          "y": 60,
-        },
-        Object {
-          "x": "Ron",
-          "y": 40,
-        },
-        Object {
-          "x": "Tom",
-          "y": 30,
-        },
-        Object {
-          "x": "Gary",
-          "y": 20,
-        },
-        Object {
-          "x": "Ben",
-          "y": 15,
-        },
-      ]
-    }
-    yAxisFormatter={[Function]} />
-</div>
-`;
-
-exports[`PieChart [common] example testing should match snapshot for 6.small-with-no-stroke-or-hover 1`] = `
-<PieChart
-  data={
-    Array [
-      Object {
-        "x": "Leslie",
-        "y": 60,
-      },
-      Object {
-        "x": "Ron",
-        "y": 40,
-      },
-      Object {
-        "x": "Tom",
-        "y": 30,
-      },
-      Object {
-        "x": "Gary",
-        "y": 20,
-      },
-      Object {
-        "x": "Ben",
-        "y": 15,
-      },
-    ]
-  }
-  hasStroke={false}
+exports[`PieChart [common] example testing should match snapshot(s) for 6.small-with-no-stroke-or-hover 1`] = `
+<svg
+  className="lucid-PieChart"
   height={25}
-  isHovering={false}
-  margin={
-    Object {
-      "bottom": 0,
-      "left": 0,
-      "right": 0,
-      "top": 0,
-    }
-  }
-  width={25} />
+  width={25}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(0, 0)">
+        <g
+          transform="translate(12.5, 12.5)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice"
+              color="color-chart-0"
+              d="M7.654042494670958e-16,-12.5A12.5,12.5,0,0,1,9.446869679428229,8.185759174316063L0.37787478717712913,0.32743036697264255A0.5,0.5,0,0,0,3.061616997868383e-17,-0.5Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M7.654042494670958e-16,-12.5A12.5,12.5,0,0,1,9.446869679428229,8.185759174316063L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice"
+              color="color-chart-1"
+              d="M9.446869679428229,8.185759174316063A12.5,12.5,0,0,1,-7.726987327757566,9.825663684284843L-0.30907949311030264,0.3930265473713937A0.5,0.5,0,0,0,0.37787478717712913,0.32743036697264255Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M9.446869679428229,8.185759174316063A12.5,12.5,0,0,1,-7.726987327757566,9.825663684284843L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice"
+              color="color-chart-2"
+              d="M-7.726987327757566,9.825663684284843A12.5,12.5,0,0,1,-12.14764460404427,-2.9469866938678444L-0.4859057841617708,-0.11787946775471378A0.5,0.5,0,0,0,-0.30907949311030264,0.3930265473713937Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-7.726987327757566,9.825663684284843A12.5,12.5,0,0,1,-12.14764460404427,-2.9469866938678444L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice"
+              color="color-chart-3"
+              d="M-12.14764460404427,-2.9469866938678444A12.5,12.5,0,0,1,-6.758010218194968,-10.515669160389766L-0.2703204087277987,-0.42062676641559066A0.5,0.5,0,0,0,-0.4859057841617708,-0.11787946775471378Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-12.14764460404427,-2.9469866938678444A12.5,12.5,0,0,1,-6.758010218194968,-10.515669160389766L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice"
+              color="color-chart-4"
+              d="M-6.758010218194968,-10.515669160389766A12.5,12.5,0,0,1,-2.296212748401287e-15,-12.5L-9.184850993605148e-17,-0.5A0.5,0.5,0,0,0,-0.2703204087277987,-0.42062676641559066Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-6.758010218194968,-10.515669160389766A12.5,12.5,0,0,1,-2.296212748401287e-15,-12.5L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      60
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
 `;

@@ -113,8 +113,18 @@ export function common(Component, {
 			const examples = glob.sync(`./src/components/${Component.displayName}/examples/*.jsx`).map(path => require('../../' + path).default);
 
 			_.each(examples, Example => {
-				it(`should match snapshot for ${Example.displayName}`, () => {
-					expect(shallowToJson(shallow(<Example />))).toMatchSnapshot();
+				it(`should match snapshot(s) for ${Example.displayName}`, () => {
+					const shallowExample = shallow(<Example />);
+
+					// If the root of the example is an instance of the Component under test, snapshot it.
+					// Otherwise, look under the root for instances of the Component and snapshot those.
+					if (shallowExample.is(Component.displayName)) {
+						expect(shallowToJson(shallow(<Component {...shallowExample.props()} />))).toMatchSnapshot();
+					} else {
+						shallowExample.find(Component).forEach(example => {
+							expect(shallowToJson(shallow(<Component {...example.props()} />))).toMatchSnapshot();
+						});
+					}
 				});
 			});
 		});

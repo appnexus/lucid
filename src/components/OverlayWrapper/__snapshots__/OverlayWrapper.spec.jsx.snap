@@ -1,11 +1,6 @@
-exports[`OverlayWrapper [common] example testing should match snapshot for 1.default 1`] = `
-<OverlayWrapper
-  hasOverlay={true}
-  isVisible={true}
-  overlayKind="light">
-  <OverlayWrapper.Message>
-    Message Goes Here
-  </OverlayWrapper.Message>
+exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.default 1`] = `
+<div
+  className="lucid-OverlayWrapper">
   <BarChart
     data={
       Array [
@@ -65,5 +60,19 @@ exports[`OverlayWrapper [common] example testing should match snapshot for 1.def
     yAxisTitle={null}
     yAxisTitleColor="#000"
     yAxisTooltipFormatter={[Function]} />
-</OverlayWrapper>
+  <ReactCSSTransitionGroup
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={300}
+    transitionLeave={true}
+    transitionLeaveTimeout={300}
+    transitionName="lucid-OverlayWrapper-message-container">
+    <div
+      className="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light">
+      <div>
+        Message Goes Here
+      </div>
+    </div>
+  </ReactCSSTransitionGroup>
+</div>
 `;

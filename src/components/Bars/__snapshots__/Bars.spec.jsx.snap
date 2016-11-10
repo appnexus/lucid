@@ -1,249 +1,1529 @@
-exports[`Bars [common] example testing should match snapshot for basic 1`] = `
-<div>
-  <svg
-    height={400}
-    width={1000}>
-    <Bars
-      colorOffset={0}
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 20,
-            "y1": 8,
-            "y2": 9,
-            "y3": 1,
-          },
-        ]
-      }
-      hasToolTips={true}
-      isStacked={false}
-      palette={
-        Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
-          "color-chart-3",
-          "color-chart-4",
-          "color-chart-5",
-        ]
-      }
-      xField="x"
-      xFormatter={[Function]}
-      xScale={[Function]}
-      yFields={
-        Array [
-          "y0",
-          "y1",
-          "y2",
-          "y3",
-        ]
-      }
-      yFormatter={[Function]}
-      yScale={[Function]}
-      yTooltipFormatter={[Function]} />
-  </svg>
-  <svg
-    height={400}
-    width={1000}>
-    <Bars
-      colorOffset={0}
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 20,
-            "y1": 8,
-            "y2": 9,
-            "y3": 1,
-          },
-        ]
-      }
-      hasToolTips={true}
-      isStacked={true}
-      palette={
-        Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
-          "color-chart-3",
-          "color-chart-4",
-          "color-chart-5",
-        ]
-      }
-      xField="x"
-      xFormatter={[Function]}
-      xScale={[Function]}
-      yFields={
-        Array [
-          "y0",
-          "y1",
-          "y2",
-          "y3",
-        ]
-      }
-      yFormatter={[Function]}
-      yScale={[Function]}
-      yTooltipFormatter={[Function]} />
-  </svg>
-</div>
+exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = `
+<g
+  className="lucid-Bars">
+  <g>
+    <Bar
+      color="color-chart-0"
+      height={20}
+      width={38}
+      x={1}
+      y={380} />
+    <Bar
+      color="color-chart-1"
+      height={40}
+      width={38}
+      x={39}
+      y={360} />
+    <Bar
+      color="color-chart-2"
+      height={60}
+      width={38}
+      x={77}
+      y={340} />
+    <Bar
+      color="color-chart-3"
+      height={100}
+      width={38}
+      x={115}
+      y={300} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={100}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={1}
+          y={300} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        one
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={false}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-0"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 1
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 2
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-2"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 3
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 5
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+  <g>
+    <Bar
+      color="color-chart-0"
+      height={40}
+      width={38}
+      x={170}
+      y={360} />
+    <Bar
+      color="color-chart-1"
+      height={60}
+      width={38}
+      x={208}
+      y={340} />
+    <Bar
+      color="color-chart-2"
+      height={80}
+      width={38}
+      x={246}
+      y={320} />
+    <Bar
+      color="color-chart-3"
+      height={120}
+      width={38}
+      x={284}
+      y={280} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={120}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={170}
+          y={280} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        two
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={false}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-0"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 2
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 3
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-2"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 4
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 6
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+  <g>
+    <Bar
+      color="color-chart-0"
+      height={40}
+      width={38}
+      x={339}
+      y={360} />
+    <Bar
+      color="color-chart-1"
+      height={80}
+      width={38}
+      x={377}
+      y={320} />
+    <Bar
+      color="color-chart-2"
+      height={100}
+      width={38}
+      x={415}
+      y={300} />
+    <Bar
+      color="color-chart-3"
+      height={120}
+      width={38}
+      x={453}
+      y={280} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={120}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={339}
+          y={280} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        three
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={false}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-0"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 2
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 4
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-2"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 5
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 6
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+  <g>
+    <Bar
+      color="color-chart-0"
+      height={60}
+      width={38}
+      x={508}
+      y={340} />
+    <Bar
+      color="color-chart-1"
+      height={120}
+      width={38}
+      x={546}
+      y={280} />
+    <Bar
+      color="color-chart-2"
+      height={140}
+      width={38}
+      x={584}
+      y={260} />
+    <Bar
+      color="color-chart-3"
+      height={140}
+      width={38}
+      x={622}
+      y={260} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={140}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={508}
+          y={260} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        four
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={false}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-0"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 3
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 6
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-2"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 7
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 7
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+  <g>
+    <Bar
+      color="color-chart-0"
+      height={80}
+      width={38}
+      x={677}
+      y={320} />
+    <Bar
+      color="color-chart-1"
+      height={160}
+      width={38}
+      x={715}
+      y={240} />
+    <Bar
+      color="color-chart-2"
+      height={180}
+      width={38}
+      x={753}
+      y={220} />
+    <Bar
+      color="color-chart-3"
+      height={160}
+      width={38}
+      x={791}
+      y={240} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={180}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={677}
+          y={220} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        five
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={false}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-0"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 4
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 8
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-2"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 9
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 8
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+  <g>
+    <Bar
+      color="color-chart-0"
+      height={400}
+      width={38}
+      x={846}
+      y={0} />
+    <Bar
+      color="color-chart-1"
+      height={160}
+      width={38}
+      x={884}
+      y={240} />
+    <Bar
+      color="color-chart-2"
+      height={180}
+      width={38}
+      x={922}
+      y={220} />
+    <Bar
+      color="color-chart-3"
+      height={20}
+      width={38}
+      x={960}
+      y={380} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={400}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={846}
+          y={0} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        six
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={false}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-0"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 20
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 8
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-2"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 9
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 1
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+</g>
 `;
 
-exports[`Bars [common] example testing should match snapshot for custom-colors 1`] = `
-<div>
-  <svg
-    height={400}
-    width={1000}>
-    <Bars
-      colorMap={
-        Object {
-          "y0": "color-chart-good",
-          "y2": "color-chart-bad",
-        }
-      }
-      colorOffset={0}
-      data={
-        Array [
-          Object {
-            "x": "one",
-            "y0": 1,
-            "y1": 2,
-            "y2": 3,
-            "y3": 5,
-          },
-          Object {
-            "x": "two",
-            "y0": 2,
-            "y1": 3,
-            "y2": 4,
-            "y3": 6,
-          },
-          Object {
-            "x": "three",
-            "y0": 2,
-            "y1": 4,
-            "y2": 5,
-            "y3": 6,
-          },
-          Object {
-            "x": "four",
-            "y0": 3,
-            "y1": 6,
-            "y2": 7,
-            "y3": 7,
-          },
-          Object {
-            "x": "five",
-            "y0": 4,
-            "y1": 8,
-            "y2": 9,
-            "y3": 8,
-          },
-          Object {
-            "x": "six",
-            "y0": 20,
-            "y1": 8,
-            "y2": 9,
-            "y3": 1,
-          },
-        ]
-      }
-      hasToolTips={true}
-      isStacked={false}
-      palette={
-        Array [
-          "color-chart-0",
-          "color-chart-1",
-          "color-chart-2",
-          "color-chart-3",
-          "color-chart-4",
-          "color-chart-5",
-        ]
-      }
-      xField="x"
-      xFormatter={[Function]}
-      xScale={[Function]}
-      yFields={
-        Array [
-          "y0",
-          "y1",
-          "y2",
-          "y3",
-        ]
-      }
-      yFormatter={[Function]}
-      yScale={[Function]}
-      yTooltipFormatter={[Function]} />
-  </svg>
-</div>
+exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = `
+<g
+  className="lucid-Bars">
+  <g>
+    <Bar
+      color="color-chart-0"
+      height={10.5263157894737}
+      width={152}
+      x={1}
+      y={389.4736842105263} />
+    <Bar
+      color="color-chart-1"
+      height={21.05263157894734}
+      width={152}
+      x={1}
+      y={368.42105263157896} />
+    <Bar
+      color="color-chart-2"
+      height={31.57894736842104}
+      width={152}
+      x={1}
+      y={336.8421052631579} />
+    <Bar
+      color="color-chart-3"
+      height={52.63157894736844}
+      width={152}
+      x={1}
+      y={284.2105263157895} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={115.78947368421052}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={1}
+          y={284.2105263157895} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        one
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={true}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-0"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 1
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 2
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-2"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 3
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 5
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+  <g>
+    <Bar
+      color="color-chart-0"
+      height={21.05263157894734}
+      width={152}
+      x={170}
+      y={378.94736842105266} />
+    <Bar
+      color="color-chart-1"
+      height={31.578947368421098}
+      width={152}
+      x={170}
+      y={347.36842105263156} />
+    <Bar
+      color="color-chart-2"
+      height={42.10526315789468}
+      width={152}
+      x={170}
+      y={305.2631578947369} />
+    <Bar
+      color="color-chart-3"
+      height={63.15789473684214}
+      width={152}
+      x={170}
+      y={242.10526315789474} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={157.89473684210526}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={170}
+          y={242.10526315789474} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        two
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={true}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-0"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 2
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 3
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-2"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 4
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 6
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+  <g>
+    <Bar
+      color="color-chart-0"
+      height={21.05263157894734}
+      width={152}
+      x={339}
+      y={378.94736842105266} />
+    <Bar
+      color="color-chart-1"
+      height={42.10526315789474}
+      width={152}
+      x={339}
+      y={336.8421052631579} />
+    <Bar
+      color="color-chart-2"
+      height={52.63157894736844}
+      width={152}
+      x={339}
+      y={284.2105263157895} />
+    <Bar
+      color="color-chart-3"
+      height={63.15789473684211}
+      width={152}
+      x={339}
+      y={221.05263157894737} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={178.94736842105263}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={339}
+          y={221.05263157894737} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        three
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={true}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-0"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 2
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 4
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-2"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 5
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 6
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+  <g>
+    <Bar
+      color="color-chart-0"
+      height={31.57894736842104}
+      width={152}
+      x={508}
+      y={368.42105263157896} />
+    <Bar
+      color="color-chart-1"
+      height={63.15789473684208}
+      width={152}
+      x={508}
+      y={305.2631578947369} />
+    <Bar
+      color="color-chart-2"
+      height={73.68421052631581}
+      width={152}
+      x={508}
+      y={231.57894736842107} />
+    <Bar
+      color="color-chart-3"
+      height={73.68421052631581}
+      width={152}
+      x={508}
+      y={157.89473684210526} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={242.10526315789474}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={508}
+          y={157.89473684210526} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        four
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={true}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-0"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 3
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 6
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-2"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 7
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 7
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+  <g>
+    <Bar
+      color="color-chart-0"
+      height={42.10526315789474}
+      width={152}
+      x={677}
+      y={357.89473684210526} />
+    <Bar
+      color="color-chart-1"
+      height={84.21052631578948}
+      width={152}
+      x={677}
+      y={273.6842105263158} />
+    <Bar
+      color="color-chart-2"
+      height={94.73684210526318}
+      width={152}
+      x={677}
+      y={178.9473684210526} />
+    <Bar
+      color="color-chart-3"
+      height={84.21052631578948}
+      width={152}
+      x={677}
+      y={94.73684210526312} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={305.2631578947369}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={677}
+          y={94.73684210526312} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        five
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={true}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-0"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 4
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 8
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-2"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 9
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 8
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+  <g>
+    <Bar
+      color="color-chart-0"
+      height={210.52631578947367}
+      width={152}
+      x={846}
+      y={189.47368421052633} />
+    <Bar
+      color="color-chart-1"
+      height={84.21052631578945}
+      width={152}
+      x={846}
+      y={105.26315789473688} />
+    <Bar
+      color="color-chart-2"
+      height={94.73684210526318}
+      width={152}
+      x={846}
+      y={10.5263157894737} />
+    <Bar
+      color="color-chart-3"
+      height={10.5263157894737}
+      width={152}
+      x={846}
+      y={0} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={400}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={846}
+          y={0} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        six
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={true}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-0"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 20
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 8
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-2"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 9
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 1
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+</g>
+`;
+
+exports[`Bars [common] example testing should match snapshot(s) for custom-colors 1`] = `
+<g
+  className="lucid-Bars">
+  <g>
+    <Bar
+      color="color-chart-good"
+      height={20}
+      width={38}
+      x={1}
+      y={380} />
+    <Bar
+      color="color-chart-1"
+      height={40}
+      width={38}
+      x={39}
+      y={360} />
+    <Bar
+      color="color-chart-bad"
+      height={60}
+      width={38}
+      x={77}
+      y={340} />
+    <Bar
+      color="color-chart-3"
+      height={100}
+      width={38}
+      x={115}
+      y={300} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={100}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={1}
+          y={300} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        one
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={false}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-good"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 1
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 2
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-bad"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 3
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 5
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+  <g>
+    <Bar
+      color="color-chart-good"
+      height={40}
+      width={38}
+      x={170}
+      y={360} />
+    <Bar
+      color="color-chart-1"
+      height={60}
+      width={38}
+      x={208}
+      y={340} />
+    <Bar
+      color="color-chart-bad"
+      height={80}
+      width={38}
+      x={246}
+      y={320} />
+    <Bar
+      color="color-chart-3"
+      height={120}
+      width={38}
+      x={284}
+      y={280} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={120}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={170}
+          y={280} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        two
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={false}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-good"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 2
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 3
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-bad"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 4
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 6
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+  <g>
+    <Bar
+      color="color-chart-good"
+      height={40}
+      width={38}
+      x={339}
+      y={360} />
+    <Bar
+      color="color-chart-1"
+      height={80}
+      width={38}
+      x={377}
+      y={320} />
+    <Bar
+      color="color-chart-bad"
+      height={100}
+      width={38}
+      x={415}
+      y={300} />
+    <Bar
+      color="color-chart-3"
+      height={120}
+      width={38}
+      x={453}
+      y={280} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={120}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={339}
+          y={280} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        three
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={false}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-good"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 2
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 4
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-bad"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 5
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 6
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+  <g>
+    <Bar
+      color="color-chart-good"
+      height={60}
+      width={38}
+      x={508}
+      y={340} />
+    <Bar
+      color="color-chart-1"
+      height={120}
+      width={38}
+      x={546}
+      y={280} />
+    <Bar
+      color="color-chart-bad"
+      height={140}
+      width={38}
+      x={584}
+      y={260} />
+    <Bar
+      color="color-chart-3"
+      height={140}
+      width={38}
+      x={622}
+      y={260} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={140}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={508}
+          y={260} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        four
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={false}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-good"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 3
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 6
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-bad"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 7
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 7
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+  <g>
+    <Bar
+      color="color-chart-good"
+      height={80}
+      width={38}
+      x={677}
+      y={320} />
+    <Bar
+      color="color-chart-1"
+      height={160}
+      width={38}
+      x={715}
+      y={240} />
+    <Bar
+      color="color-chart-bad"
+      height={180}
+      width={38}
+      x={753}
+      y={220} />
+    <Bar
+      color="color-chart-3"
+      height={160}
+      width={38}
+      x={791}
+      y={240} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={180}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={677}
+          y={220} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        five
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={false}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-good"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 4
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 8
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-bad"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 9
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 8
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+  <g>
+    <Bar
+      color="color-chart-good"
+      height={400}
+      width={38}
+      x={846}
+      y={0} />
+    <Bar
+      color="color-chart-1"
+      height={160}
+      width={38}
+      x={884}
+      y={240} />
+    <Bar
+      color="color-chart-bad"
+      height={180}
+      width={38}
+      x={922}
+      y={220} />
+    <Bar
+      color="color-chart-3"
+      height={20}
+      width={38}
+      x={960}
+      y={380} />
+    <ToolTip
+      alignment="center"
+      direction="up"
+      flyOutMaxWidth="none"
+      flyOutStyle={Object {}}
+      isCloseable={false}
+      isExpanded={false}
+      kind="default"
+      onClose={[Function]}
+      onMouseOut={[Function]}
+      onMouseOver={[Function]}
+      portalId={null}>
+      <ToolTip.Target
+        elementType="g">
+        <rect
+          className="lucid-Bars-tooltip-hover-zone"
+          height={400}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          width={152}
+          x={846}
+          y={0} />
+      </ToolTip.Target>
+      <ToolTip.Title>
+        six
+      </ToolTip.Title>
+      <ToolTip.Body>
+        <Legend
+          hasBorders={false}
+          isReversed={false}
+          orient="vertical">
+          <Legend.Item
+            color="color-chart-good"
+            hasPoint={true}
+            pointKind={1}>
+            y0: 20
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-1"
+            hasPoint={true}
+            pointKind={1}>
+            y1: 8
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-bad"
+            hasPoint={true}
+            pointKind={1}>
+            y2: 9
+          </Legend.Item>
+          <Legend.Item
+            color="color-chart-3"
+            hasPoint={true}
+            pointKind={1}>
+            y3: 1
+          </Legend.Item>
+        </Legend>
+      </ToolTip.Body>
+    </ToolTip>
+  </g>
+</g>
 `;

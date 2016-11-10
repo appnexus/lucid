@@ -1,41 +1,26 @@
-exports[`DragCaptureZone [common] example testing should match snapshot for interactive 1`] = `
-<section
-  style={
-    Object {
-      "alignItems": "center",
-      "display": "flex",
-    }
-  }>
-  <DragCaptureZone
-    onDrag={[Function]}
-    onDragEnd={[Function]}
-    onDragStart={[Function]}>
-    <div
-      style={
-        Object {
-          "alignItems": "center",
-          "backgroundColor": "#b7b7b7",
-          "display": "flex",
-          "fontFamily": "Helvetica, sans-serif",
-          "fontSize": "24px",
-          "fontWeight": 300,
-          "height": 300,
-          "justifyContent": "center",
-          "textTransform": "uppercase",
-          "width": 400,
-        }
-      }>
-      Go wild!
-    </div>
-  </DragCaptureZone>
+exports[`DragCaptureZone [common] example testing should match snapshot(s) for interactive 1`] = `
+<div
+  className="lucid-DragCaptureZone"
+  onDrag={[Function]}
+  onDragEnd={[Function]}
+  onDragStart={[Function]}
+  onMouseDown={[Function]}>
   <div
     style={
       Object {
+        "alignItems": "center",
+        "backgroundColor": "#b7b7b7",
+        "display": "flex",
+        "fontFamily": "Helvetica, sans-serif",
+        "fontSize": "24px",
+        "fontWeight": 300,
         "height": 300,
-        "marginLeft": 50,
-        "overflow": "auto",
-        "width": 600,
+        "justifyContent": "center",
+        "textTransform": "uppercase",
+        "width": 400,
       }
-    } />
-</section>
+    }>
+    Go wild!
+  </div>
+</div>
 `;

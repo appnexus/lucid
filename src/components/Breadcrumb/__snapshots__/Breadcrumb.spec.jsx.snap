@@ -1,45 +1,75 @@
-exports[`Breadcrumb [common] example testing should match snapshot for 1.basic 1`] = `
-<Breadcrumb>
-  <Breadcrumb.Item>
-    <a
-      href="#">
-      <HomeIcon />
-    </a>
-  </Breadcrumb.Item>
-  <Breadcrumb.Item>
-    <a
-      href="#">
-      List
-    </a>
-  </Breadcrumb.Item>
-  <Breadcrumb.Item>
-    Item
-  </Breadcrumb.Item>
-</Breadcrumb>
+exports[`Breadcrumb [common] example testing should match snapshot(s) for 1.basic 1`] = `
+<nav
+  className="lucid-Breadcrumb">
+  <ul
+    className="lucid-Breadcrumb-List">
+    <li
+      className="lucid-Breadcrumb-Item">
+      <a
+        href="#">
+        <HomeIcon />
+      </a>
+      <SeparatorIcon
+        className="lucid-Breadcrumb-SeparatorIcon"
+        viewBox="0 0 4.5 16" />
+    </li>
+    <li
+      className="lucid-Breadcrumb-Item">
+      <a
+        href="#">
+        List
+      </a>
+      <SeparatorIcon
+        className="lucid-Breadcrumb-SeparatorIcon"
+        viewBox="0 0 4.5 16" />
+    </li>
+    <li
+      className="lucid-Breadcrumb-Item">
+      Item
+    </li>
+  </ul>
+</nav>
 `;
 
-exports[`Breadcrumb [common] example testing should match snapshot for 2.map 1`] = `
-<Breadcrumb>
-  <Breadcrumb.Item>
-    <a
-      href="#">
-      Foo
-    </a>
-  </Breadcrumb.Item>
-  <Breadcrumb.Item>
-    <a
-      href="#">
-      Bar
-    </a>
-  </Breadcrumb.Item>
-  <Breadcrumb.Item>
-    <a
-      href="#">
-      Baz
-    </a>
-  </Breadcrumb.Item>
-  <Breadcrumb.Item>
-    Qux
-  </Breadcrumb.Item>
-</Breadcrumb>
+exports[`Breadcrumb [common] example testing should match snapshot(s) for 2.map 1`] = `
+<nav
+  className="lucid-Breadcrumb">
+  <ul
+    className="lucid-Breadcrumb-List">
+    <li
+      className="lucid-Breadcrumb-Item">
+      <a
+        href="#">
+        Foo
+      </a>
+      <SeparatorIcon
+        className="lucid-Breadcrumb-SeparatorIcon"
+        viewBox="0 0 4.5 16" />
+    </li>
+    <li
+      className="lucid-Breadcrumb-Item">
+      <a
+        href="#">
+        Bar
+      </a>
+      <SeparatorIcon
+        className="lucid-Breadcrumb-SeparatorIcon"
+        viewBox="0 0 4.5 16" />
+    </li>
+    <li
+      className="lucid-Breadcrumb-Item">
+      <a
+        href="#">
+        Baz
+      </a>
+      <SeparatorIcon
+        className="lucid-Breadcrumb-SeparatorIcon"
+        viewBox="0 0 4.5 16" />
+    </li>
+    <li
+      className="lucid-Breadcrumb-Item">
+      Qux
+    </li>
+  </ul>
+</nav>
 `;

@@ -1,74 +1,119 @@
-exports[`SearchField [common] example testing should match snapshot for 1.default 1`] = `<SearchField />`;
-
-exports[`SearchField [common] example testing should match snapshot for 2.interactive 1`] = `
-<div>
-  <SearchField
-    onSubmit={[Function]} />
-  <div>
-    Hit \"enter\" to submit: 
+exports[`SearchField [common] example testing should match snapshot(s) for 1.default 1`] = `
+<div
+  className="lucid-SearchField">
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null} />
+  <div
+    className="lucid-SearchField-Icon-container">
+    <SearchIcon
+      className="lucid-SearchField-Icon" />
   </div>
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot for 3.placeholder 1`] = `
-<SearchField
-  placeholder="Name/ID" />
+exports[`SearchField [common] example testing should match snapshot(s) for 3.placeholder 1`] = `
+<div
+  className="lucid-SearchField">
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    placeholder="Name/ID"
+    rows={5}
+    style={null} />
+  <div
+    className="lucid-SearchField-Icon-container">
+    <SearchIcon
+      className="lucid-SearchField-Icon" />
+  </div>
+</div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot for 4.disabled 1`] = `
-<SearchField
-  isDisabled={true} />
+exports[`SearchField [common] example testing should match snapshot(s) for 4.disabled 1`] = `
+<div
+  className="lucid-SearchField">
+  <TextField
+    debounceLevel={500}
+    isDisabled={true}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null} />
+  <div
+    className="lucid-SearchField-Icon-container">
+    <SearchIcon
+      className="lucid-SearchField-Icon" />
+  </div>
+</div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot for 5.custom-icon 1`] = `
-<SearchField>
-  <SearchField.Icon>
+exports[`SearchField [common] example testing should match snapshot(s) for 5.custom-icon 1`] = `
+<div
+  className="lucid-SearchField">
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null} />
+  <div
+    className="lucid-SearchField-Icon-container">
     <LoadingIcon
       aspectRatio="xMidYMid meet"
+      className="lucid-SearchField-Icon"
       isBadge={false}
       size={16}
       speed="normal"
       viewBox="0 0 16 16" />
-  </SearchField.Icon>
-</SearchField>
-`;
-
-exports[`SearchField [common] example testing should match snapshot for 6.custom-text-field 1`] = `
-<div>
-  <SearchField
-    placeholder="Name/ID">
-    <TextField
-      debounceLevel={500}
-      isDisabled={false}
-      isMultiLine={false}
-      lazyLevel={1000}
-      onBlur={[Function]}
-      onChange={[Function]}
-      onChangeDebounced={[Function]}
-      onKeyDown={[Function]}
-      onSubmit={[Function]}
-      rows={5}
-      style={null} />
-  </SearchField>
-  <div>
-    Hit \"enter\" to submit: 
-  </div>
-  <div>
-    Last keydown: 
-  </div>
-  <div>
-    Value on blur: 
   </div>
 </div>
 `;
 
-exports[`SearchField [common] example testing should match snapshot for 7.valid-search 1`] = `
-<SearchField
-  isValid={false}
+exports[`SearchField [common] example testing should match snapshot(s) for 7.valid-search 1`] = `
+<div
+  className="lucid-SearchField"
   onBlur={[Function]}
-  onChange={[Function]}
-  onKeyDown={[Function]}
-  onSubmit={[Function]}
-  placeholder="icon doesn\'t become active until you type at least three characters ----->"
-  value="" />
+  onKeyDown={[Function]}>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    placeholder="icon doesn\'t become active until you type at least three characters ----->"
+    rows={5}
+    style={null}
+    value="" />
+  <div
+    className="lucid-SearchField-Icon-container">
+    <SearchIcon
+      className="lucid-SearchField-Icon" />
+  </div>
+</div>
 `;

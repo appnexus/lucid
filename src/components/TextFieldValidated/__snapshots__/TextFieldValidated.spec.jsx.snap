@@ -1,22 +1,40 @@
-exports[`TextFieldValidated [common] example testing should match snapshot for basic 1`] = `
-<TextFieldValidated
-  Error="Nope, not even close!"
-  debounceLevel={500}
-  isDisabled={false}
-  isMultiLine={false}
-  lazyLevel={1000}
-  onBlur={[Function]}
-  onChange={[Function]}
-  onChangeDebounced={[Function]}
-  onSubmit={[Function]}
-  rows={5}
-  style={null} />
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for basic 1`] = `
+<Validation
+  Error={
+    Array [
+      Object {
+        "children": "Nope, not even close!",
+      },
+    ]
+  }
+  className="lucid-TextFieldValidated"
+  style={null}>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null} />
+</Validation>
 `;
 
-exports[`TextFieldValidated [common] example testing should match snapshot for debounced 1`] = `
-<div>
-  <TextFieldValidated
-    Error="Please enter \"foo\""
+exports[`TextFieldValidated [common] example testing should match snapshot(s) for debounced 1`] = `
+<Validation
+  Error={
+    Array [
+      Object {
+        "children": "Please enter \"foo\"",
+      },
+    ]
+  }
+  className="lucid-TextFieldValidated"
+  style={null}>
+  <TextField
     debounceLevel={500}
     isDisabled={false}
     isMultiLine={false}
@@ -28,13 +46,5 @@ exports[`TextFieldValidated [common] example testing should match snapshot for d
     rows={5}
     style={null}
     value="" />
-  <div
-    style={
-      Object {
-        "marginBottom": "10px",
-      }
-    }>
-    state.value: 
-  </div>
-</div>
+</Validation>
 `;

@@ -1,222 +1,418 @@
-exports[`Banner [common] example testing should match snapshot for stateful 1`] = `
-<div>
-  <Button
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
-    Open/Close
-  </Button>
-  <br />
-  <Banner
-    hasIcon={false}
-    hasRoundedCorners={true}
-    icon={null}
-    isCloseable={true}
-    isClosed={false}
-    isSmall={false}
-    kind="default"
-    onClose={[Function]}>
-    Default
-  </Banner>
-</div>
+exports[`Banner [common] example testing should match snapshot(s) for stateful 1`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-close">
+    <span
+      className="lucid-Banner-content">
+      Default
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
 `;
 
-exports[`Banner [common] example testing should match snapshot for stateless 1`] = `
-<div>
-  <div>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={false}
-      kind="default"
-      onClose={[Function]}>
+exports[`Banner [common] example testing should match snapshot(s) for stateless 1`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-close">
+    <span
+      className="lucid-Banner-content">
       Default
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={false}
-      icon={null}
-      isCloseable={true}
-      isSmall={false}
-      kind="default"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 2`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-has-no-roundedCorners">
+    <span
+      className="lucid-Banner-content">
       Default no rounded corners
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={false}
-      kind="default"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 3`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner">
+    <span
+      className="lucid-Banner-content">
       Default -- No Close 
       ×
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={true}
-      kind="default"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 4`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-small">
+    <span
+      className="lucid-Banner-content">
       Default -- small
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={true}
-      kind="default"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 5`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-small">
+    <span
+      className="lucid-Banner-content">
       Default -- small -- No Close 
       ×
-    </Banner>
-  </div>
-  <div>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={false}
-      kind="primary"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 6`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-primary">
+    <span
+      className="lucid-Banner-content">
       Primary
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={false}
-      kind="primary"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 7`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-primary">
+    <span
+      className="lucid-Banner-content">
       Primary -- No Close 
       ×
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={true}
-      kind="primary"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 8`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-primary lucid-Banner-small">
+    <span
+      className="lucid-Banner-content">
       Primary -- small
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={true}
-      kind="primary"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 9`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-primary lucid-Banner-small">
+    <span
+      className="lucid-Banner-content">
       Primary -- small -- No Close 
       ×
-    </Banner>
-  </div>
-  <div>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={false}
-      kind="success"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 10`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success">
+    <span
+      className="lucid-Banner-content">
       Success
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={false}
-      kind="success"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 11`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-success">
+    <span
+      className="lucid-Banner-content">
       Success -- No Close 
       ×
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={false}
-      kind="success"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 12`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-success">
+    <span
+      className="lucid-Banner-icon">
+      <SuccessIcon />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Success -- has icon
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={false}
-      kind="success"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 13`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-success">
+    <span
+      className="lucid-Banner-icon">
+      <SuccessIcon />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Success -- has icon -- No Close 
       ×
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={true}
-      kind="success"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 14`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-success lucid-Banner-small">
+    <span
+      className="lucid-Banner-icon">
+      <SuccessIcon />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Success -- has icon -- small
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={true}
-      kind="success"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 15`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-success lucid-Banner-small">
+    <span
+      className="lucid-Banner-icon">
+      <SuccessIcon />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Success -- has icon -- No Close 
       ×
        -- small
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={true}
-      kind="success"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 16`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small">
+    <span
+      className="lucid-Banner-content">
       Success -- small
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={true}
-      kind="success"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 17`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-success lucid-Banner-small">
+    <span
+      className="lucid-Banner-content">
       Success -- small -- No Close 
       ×
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={false}
-      kind="success"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 18`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-success">
+    <span
+      className="lucid-Banner-icon">
+      <SuccessIcon />
+    </span>
+    <span
+      className="lucid-Banner-content">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius neque veniam nisi aspernatur, quos dolorem aut praesentium eaque consequatur inventore adipisci, architecto atque ipsa, laudantium laboriosam ipsam non vitae, cum maiores hic. Laboriosam fugiat eveniet quos assumenda delectus aperiam excepturi vel, officia sint reiciendis expedita consequuntur, a sed deleniti commodi rerum natus quam veniam earum quibusdam! Nemo iusto asperiores sit velit eveniet quod nam. Voluptatibus beatae maxime, quia a velit praesentium vel vitae consectetur, libero nulla magni voluptatum facilis ea facere, minus doloribus. Excepturi veniam, mollitia esse aut illum ad tenetur facere quidem. Ipsum odio, dolore, error rem assumenda debitis.
       </p>
@@ -226,303 +422,646 @@ exports[`Banner [common] example testing should match snapshot for stateless 1`]
       <p>
         Eos ut odio, perspiciatis ad delectus. Inventore officiis rem quisquam magni. Amet, doloremque? Eveniet laborum labore, quod enim repellat, omnis voluptates, quasi non nostrum dolores ut perspiciatis facilis sint dolorum, minima reprehenderit? Vitae ipsam, similique et quisquam. Molestias, eaque. Expedita eligendi, saepe facere tempore doloremque earum incidunt esse labore nobis amet odio, deserunt voluptate eius blanditiis ullam consequuntur maxime reprehenderit dolorem recusandae eos voluptas! Harum dolorum in, quo, dolore minima commodi laudantium beatae enim dolorem, aspernatur quaerat libero cupiditate repellendus. Ullam perferendis tempore autem quos officiis, natus a accusamus odit ut sint culpa. Quos sunt eos, magnam aliquam, adipisci consectetur.
       </p>
-    </Banner>
-  </div>
-  <div>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={false}
-      kind="warning"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 19`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning">
+    <span
+      className="lucid-Banner-content">
       Warning
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={false}
-      kind="warning"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 20`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-warning">
+    <span
+      className="lucid-Banner-content">
       Warning -- No Close 
       ×
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={false}
-      kind="warning"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 21`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-warning">
+    <span
+      className="lucid-Banner-icon">
+      <WarningIcon />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Warning -- has icon
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={false}
-      kind="warning"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 22`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-warning">
+    <span
+      className="lucid-Banner-icon">
+      <WarningIcon />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Warning -- has iconv
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={true}
-      kind="warning"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 23`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small">
+    <span
+      className="lucid-Banner-content">
       Warning -- small
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={true}
-      kind="warning"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 24`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-warning lucid-Banner-small">
+    <span
+      className="lucid-Banner-content">
       Warning -- small -- No Close 
       ×
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={true}
-      kind="warning"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 25`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small">
+    <span
+      className="lucid-Banner-icon">
+      <WarningIcon />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Warning -- has icon -- small
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={true}
-      kind="warning"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 26`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-warning lucid-Banner-small">
+    <span
+      className="lucid-Banner-icon">
+      <WarningIcon />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Warning -- has icon -- small -- No Close 
       ×
-    </Banner>
-  </div>
-  <div>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={false}
-      kind="danger"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 27`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger">
+    <span
+      className="lucid-Banner-content">
       Danger
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={false}
-      kind="danger"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 28`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-danger">
+    <span
+      className="lucid-Banner-content">
       Danger -- No Close 
       ×
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={false}
-      kind="danger"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 29`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger">
+    <span
+      className="lucid-Banner-icon">
+      <DangerIcon />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Danger -- has icon
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={false}
-      kind="danger"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 30`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-danger">
+    <span
+      className="lucid-Banner-icon">
+      <DangerIcon />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Danger -- has icon -- No Close 
       ×
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={true}
-      kind="danger"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 31`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small">
+    <span
+      className="lucid-Banner-content">
       Danger -- small
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={true}
-      kind="danger"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 32`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-danger lucid-Banner-small">
+    <span
+      className="lucid-Banner-content">
       Danger -- small -- No Close 
       ×
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={true}
-      kind="danger"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 33`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small">
+    <span
+      className="lucid-Banner-icon">
+      <DangerIcon />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Danger -- has icon -- small
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={true}
-      kind="danger"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 34`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-danger lucid-Banner-small">
+    <span
+      className="lucid-Banner-icon">
+      <DangerIcon />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Danger -- has icon -- small -- No Close 
       ×
-    </Banner>
-  </div>
-  <div>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={false}
-      kind="info"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 35`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info">
+    <span
+      className="lucid-Banner-content">
       Info
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={false}
-      kind="info"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 36`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-info">
+    <span
+      className="lucid-Banner-content">
       Info -- No Close 
       ×
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={false}
-      kind="info"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 37`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-info">
+    <span
+      className="lucid-Banner-icon">
+      <InfoIcon
+        isBadge={true} />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Info -- has icon
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={false}
-      kind="info"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 38`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-info">
+    <span
+      className="lucid-Banner-icon">
+      <InfoIcon
+        isBadge={true} />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Info -- has icon -- No Close 
       ×
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={true}
-      kind="info"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 39`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small">
+    <span
+      className="lucid-Banner-content">
       Info -- small
-    </Banner>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={true}
-      kind="info"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 40`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-info lucid-Banner-small">
+    <span
+      className="lucid-Banner-content">
       Info -- small -- No Close 
       ×
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={true}
-      isSmall={true}
-      kind="info"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 41`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-info lucid-Banner-small">
+    <span
+      className="lucid-Banner-icon">
+      <InfoIcon
+        isBadge={true} />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Info -- has icon -- small
-    </Banner>
-    <Banner
-      hasIcon={true}
-      hasRoundedCorners={true}
-      icon={null}
-      isCloseable={false}
-      isSmall={true}
-      kind="info"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 42`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-info lucid-Banner-small">
+    <span
+      className="lucid-Banner-icon">
+      <InfoIcon
+        isBadge={true} />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Info -- has icon -- small -- No Close 
       ×
-    </Banner>
-  </div>
-  <div>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={<CustomIcon />}
-      isCloseable={true}
-      isSmall={false}
-      kind="danger"
-      onClose={[Function]}>
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 43`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger">
+    <span
+      className="lucid-Banner-icon">
+      <CustomIcon />
+    </span>
+    <span
+      className="lucid-Banner-content">
       Has Custom Icon
-    </Banner>
-  </div>
-  <div>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={<CustomIcon />}
-      isCloseable={true}
-      isSmall={false}
-      kind="default"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 44`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close">
+    <span
+      className="lucid-Banner-icon">
+      <CustomIcon />
+    </span>
+    <span
+      className="lucid-Banner-content">
       <p>
         <strong>
           Has Custom Icon
         </strong>
          ipsum dolor sit amet, consectetur adipisicing elit. A doloribus, fugit atque. Impedit neque perferendis libero nam, deserunt inventore aliquid quis molestiae est! In perferendis dignissimos ex optio cupiditate quae!
       </p>
-    </Banner>
-  </div>
-  <div>
-    <Banner
-      hasIcon={false}
-      hasRoundedCorners={true}
-      icon={<CustomIcon />}
-      isCloseable={true}
-      isSmall={false}
-      kind="default"
-      onClose={[Function]}>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for stateless 45`] = `
+<ReactCSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner">
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close">
+    <span
+      className="lucid-Banner-icon">
+      <CustomIcon />
+    </span>
+    <span
+      className="lucid-Banner-content">
       <p>
         <strong>
           Has Custom Icon
@@ -532,7 +1071,12 @@ exports[`Banner [common] example testing should match snapshot for stateless 1`]
       <p>
         Velit, architecto, commodi. Non porro cupiditate rerum obcaecati veniam alias fugiat nam similique, labore a quis magni vero consequatur consequuntur veritatis est quibusdam tempora tempore ex, deleniti dicta inventore. Quas.
       </p>
-    </Banner>
-  </div>
-</div>
+    </span>
+    <span
+      className="lucid-Banner-close"
+      onClick={[Function]}>
+      ×
+    </span>
+  </section>
+</ReactCSSTransitionGroup>
 `;

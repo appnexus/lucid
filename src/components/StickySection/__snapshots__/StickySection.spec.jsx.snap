@@ -1,76 +1,95 @@
-exports[`StickySection [common] example testing should match snapshot for 1.with-lower-bound 1`] = `
-<section
+exports[`StickySection [common] example testing should match snapshot(s) for 1.with-lower-bound 1`] = `
+<div
+  className="lucid-StickySection"
   style={
     Object {
-      "color": "rgba(128,128,128,.25)",
-      "width": 800,
+      "backgroundColor": "#2abbb0",
+      "color": "white",
     }
   }>
-  Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray.
-  <StickySection
-    lowerBound={1021}
+  <div
+    className="lucid-StickySection-sticky-frame"
     style={
       Object {
         "backgroundColor": "#2abbb0",
         "color": "white",
       }
     }>
-    This section sticks to top!
-  </StickySection>
-  Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray.
-</section>
-`;
-
-exports[`StickySection [common] example testing should match snapshot for 2.with-lower-bound-and-scroll-viewport-width 1`] = `
-<section
-  style={
-    Object {
-      "color": "rgba(128,128,128,.25)",
-      "overflow": "auto",
-      "width": 800,
-    }
-  }>
-  <section
-    style={
-      Object {
-        "width": 1000,
-      }
-    }>
-    Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray.
-    <StickySection
-      lowerBound={1838}
+    <div
+      className="lucid-StickySection-sticky-section"
       style={
         Object {
           "backgroundColor": "#2abbb0",
           "color": "white",
+          "position": "relative",
         }
-      }
-      viewportWidth={800}>
-      I scroll horizontally to match the content!
-    </StickySection>
-    Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray.
-  </section>
-</section>
+      }>
+      This section sticks to top!
+    </div>
+  </div>
+</div>
 `;
 
-exports[`StickySection [common] example testing should match snapshot for 3.standard 1`] = `
-<section
+exports[`StickySection [common] example testing should match snapshot(s) for 2.with-lower-bound-and-scroll-viewport-width 1`] = `
+<div
+  className="lucid-StickySection"
   style={
     Object {
-      "color": "rgba(128,128,128,.25)",
-      "marginBottom": 700,
+      "backgroundColor": "#2abbb0",
+      "color": "white",
     }
   }>
-  Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray.
-  <StickySection
+  <div
+    className="lucid-StickySection-sticky-frame"
     style={
       Object {
         "backgroundColor": "#2abbb0",
         "color": "white",
       }
     }>
-    This section has no lower bounds!
-  </StickySection>
-  Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray. Post-ironic health goth austin mixtape mlkshk. Cold-pressed ennui messenger bag viral migas. Artisan freegan cold-pressed offal, flexitarian shabby chic polaroid banjo four dollar toast four loko williamsburg. Taxidermy ramps fap vegan bushwick pug, kickstarter scenester actually cornhole locavore man bun chambray.
-</section>
+    <div
+      className="lucid-StickySection-sticky-section"
+      style={
+        Object {
+          "backgroundColor": "#2abbb0",
+          "color": "white",
+          "position": "relative",
+        }
+      }>
+      I scroll horizontally to match the content!
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StickySection [common] example testing should match snapshot(s) for 3.standard 1`] = `
+<div
+  className="lucid-StickySection"
+  style={
+    Object {
+      "backgroundColor": "#2abbb0",
+      "color": "white",
+    }
+  }>
+  <div
+    className="lucid-StickySection-sticky-frame"
+    style={
+      Object {
+        "backgroundColor": "#2abbb0",
+        "color": "white",
+      }
+    }>
+    <div
+      className="lucid-StickySection-sticky-section"
+      style={
+        Object {
+          "backgroundColor": "#2abbb0",
+          "color": "white",
+          "position": "relative",
+        }
+      }>
+      This section has no lower bounds!
+    </div>
+  </div>
+</div>
 `;

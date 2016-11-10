@@ -1,11 +1,16 @@
-exports[`RadioGroup [common] example testing should match snapshot for default 1`] = `
-<RadioGroup
-  name="name"
-  onSelect={[Function]}
-  selectedIndex={0}>
-  <RadioButton
+exports[`RadioGroup [common] example testing should match snapshot(s) for default 1`] = `
+<span
+  className="lucid-RadioGroup">
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Superman",
+      }
+    }
+    callbackId={0}
     isDisabled={false}
-    isSelected={false}
+    isSelected={true}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -15,10 +20,17 @@ exports[`RadioGroup [common] example testing should match snapshot for default 1
     <RadioGroup.Label>
       Superman
     </RadioGroup.Label>
-  </RadioButton>
-  <RadioButton
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Batman",
+      }
+    }
+    callbackId={1}
     isDisabled={false}
     isSelected={false}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -28,10 +40,17 @@ exports[`RadioGroup [common] example testing should match snapshot for default 1
     <RadioGroup.Label>
       Batman
     </RadioGroup.Label>
-  </RadioButton>
-  <RadioButton
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Wonder Woman",
+      }
+    }
+    callbackId={2}
     isDisabled={false}
     isSelected={false}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -41,10 +60,17 @@ exports[`RadioGroup [common] example testing should match snapshot for default 1
     <RadioGroup.Label>
       Wonder Woman
     </RadioGroup.Label>
-  </RadioButton>
-  <RadioButton
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Aquaman",
+      }
+    }
+    callbackId={3}
     isDisabled={false}
     isSelected={false}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -54,10 +80,17 @@ exports[`RadioGroup [common] example testing should match snapshot for default 1
     <RadioGroup.Label>
       Aquaman
     </RadioGroup.Label>
-  </RadioButton>
-  <RadioButton
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Robin",
+      }
+    }
+    callbackId={4}
     isDisabled={false}
     isSelected={false}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -67,24 +100,29 @@ exports[`RadioGroup [common] example testing should match snapshot for default 1
     <RadioGroup.Label>
       Robin
     </RadioGroup.Label>
-  </RadioButton>
-</RadioGroup>
+  </RadioButtonLabeled>
+</span>
 `;
 
-exports[`RadioGroup [common] example testing should match snapshot for selected-index-as-prop 1`] = `
-<RadioGroup
-  name="name"
-  onSelect={[Function]}
-  selectedIndex={3}
+exports[`RadioGroup [common] example testing should match snapshot(s) for selected-index-as-prop 1`] = `
+<span
+  className="lucid-RadioGroup"
   style={
     Object {
       "display": "flex",
       "flexDirection": "column",
     }
   }>
-  <RadioButton
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Captain America",
+      }
+    }
+    callbackId={0}
     isDisabled={false}
     isSelected={false}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -94,10 +132,17 @@ exports[`RadioGroup [common] example testing should match snapshot for selected-
     <RadioGroup.Label>
       Captain America
     </RadioGroup.Label>
-  </RadioButton>
-  <RadioButton
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Iron Man",
+      }
+    }
+    callbackId={1}
     isDisabled={false}
     isSelected={false}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -107,10 +152,17 @@ exports[`RadioGroup [common] example testing should match snapshot for selected-
     <RadioGroup.Label>
       Iron Man
     </RadioGroup.Label>
-  </RadioButton>
-  <RadioButton
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Thor",
+      }
+    }
+    callbackId={2}
     isDisabled={false}
     isSelected={false}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -120,10 +172,17 @@ exports[`RadioGroup [common] example testing should match snapshot for selected-
     <RadioGroup.Label>
       Thor
     </RadioGroup.Label>
-  </RadioButton>
-  <RadioButton
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Hulk",
+      }
+    }
+    callbackId={3}
     isDisabled={false}
-    isSelected={false}
+    isSelected={true}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -133,10 +192,17 @@ exports[`RadioGroup [common] example testing should match snapshot for selected-
     <RadioGroup.Label>
       Hulk
     </RadioGroup.Label>
-  </RadioButton>
-  <RadioButton
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Black Widow",
+      }
+    }
+    callbackId={4}
     isDisabled={false}
     isSelected={false}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -146,10 +212,17 @@ exports[`RadioGroup [common] example testing should match snapshot for selected-
     <RadioGroup.Label>
       Black Widow
     </RadioGroup.Label>
-  </RadioButton>
-  <RadioButton
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Hawkeye",
+      }
+    }
+    callbackId={5}
     isDisabled={false}
     isSelected={false}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -159,24 +232,29 @@ exports[`RadioGroup [common] example testing should match snapshot for selected-
     <RadioGroup.Label>
       Hawkeye
     </RadioGroup.Label>
-  </RadioButton>
-</RadioGroup>
+  </RadioButtonLabeled>
+</span>
 `;
 
-exports[`RadioGroup [common] example testing should match snapshot for selected-index-from-child 1`] = `
-<RadioGroup
-  name="name"
-  onSelect={[Function]}
-  selectedIndex={3}
+exports[`RadioGroup [common] example testing should match snapshot(s) for selected-index-from-child 1`] = `
+<span
+  className="lucid-RadioGroup"
   style={
     Object {
       "display": "flex",
       "flexDirection": "column",
     }
   }>
-  <RadioButton
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Leonardo",
+      }
+    }
+    callbackId={0}
     isDisabled={false}
-    isSelected={true}
+    isSelected={false}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -186,10 +264,17 @@ exports[`RadioGroup [common] example testing should match snapshot for selected-
     <RadioGroup.Label>
       Leonardo
     </RadioGroup.Label>
-  </RadioButton>
-  <RadioButton
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Raphael",
+      }
+    }
+    callbackId={1}
     isDisabled={false}
-    isSelected={true}
+    isSelected={false}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -199,10 +284,17 @@ exports[`RadioGroup [common] example testing should match snapshot for selected-
     <RadioGroup.Label>
       Raphael
     </RadioGroup.Label>
-  </RadioButton>
-  <RadioButton
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Donatello",
+      }
+    }
+    callbackId={2}
     isDisabled={false}
     isSelected={true}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -212,10 +304,17 @@ exports[`RadioGroup [common] example testing should match snapshot for selected-
     <RadioGroup.Label>
       Donatello
     </RadioGroup.Label>
-  </RadioButton>
-  <RadioButton
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Michelangelo",
+      }
+    }
+    callbackId={3}
     isDisabled={false}
     isSelected={false}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -225,10 +324,17 @@ exports[`RadioGroup [common] example testing should match snapshot for selected-
     <RadioGroup.Label>
       Michelangelo
     </RadioGroup.Label>
-  </RadioButton>
-  <RadioButton
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Venus",
+      }
+    }
+    callbackId={4}
     isDisabled={false}
     isSelected={false}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -238,16 +344,23 @@ exports[`RadioGroup [common] example testing should match snapshot for selected-
     <RadioGroup.Label>
       Venus
     </RadioGroup.Label>
-  </RadioButton>
-</RadioGroup>
+  </RadioButtonLabeled>
+</span>
 `;
 
-exports[`RadioGroup [common] example testing should match snapshot for stateful 1`] = `
-<RadioGroup
-  name="name">
-  <RadioButton
+exports[`RadioGroup [common] example testing should match snapshot(s) for stateful 1`] = `
+<span
+  className="lucid-RadioGroup">
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Alvin",
+      }
+    }
+    callbackId={0}
     isDisabled={false}
-    isSelected={false}
+    isSelected={true}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -257,10 +370,17 @@ exports[`RadioGroup [common] example testing should match snapshot for stateful 
     <RadioGroup.Label>
       Alvin
     </RadioGroup.Label>
-  </RadioButton>
-  <RadioButton
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Simon",
+      }
+    }
+    callbackId={1}
     isDisabled={false}
     isSelected={false}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -270,10 +390,17 @@ exports[`RadioGroup [common] example testing should match snapshot for stateful 
     <RadioGroup.Label>
       Simon
     </RadioGroup.Label>
-  </RadioButton>
-  <RadioButton
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Theodore",
+      }
+    }
+    callbackId={2}
     isDisabled={false}
     isSelected={false}
+    name="name"
     onSelect={[Function]}
     style={
       Object {
@@ -283,6 +410,6 @@ exports[`RadioGroup [common] example testing should match snapshot for stateful 
     <RadioGroup.Label>
       Theodore
     </RadioGroup.Label>
-  </RadioButton>
-</RadioGroup>
+  </RadioButtonLabeled>
+</span>
 `;

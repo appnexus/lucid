@@ -2,7 +2,6 @@ import _ from 'lodash';
 import React from 'react';
 import Portal from '../Portal/Portal';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import random from '../../util/random';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps }  from '../../util/component-types';
 
@@ -83,7 +82,7 @@ const Overlay = createClass({
 		return {
 			// This must be in state because getDefaultProps only runs once per
 			// component import which causes collisions
-			portalId: this.props.portalId || `Overlay-Portal-${random()}`,
+			portalId: this.props.portalId || _.uniqueId('Overlay-Portal-'),
 		}
 	},
 

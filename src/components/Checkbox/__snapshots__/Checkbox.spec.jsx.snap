@@ -1,48 +1,113 @@
-exports[`Checkbox [common] example testing should match snapshot for interactive 1`] = `
-<ul>
-  <li>
-    <label>
-      Plain
-    </label>
-    <Checkbox
-      isDisabled={false}
-      isIndeterminate={false}
-      isSelected={true}
-      onSelect={[Function]}
-      tabIndex={20} />
-  </li>
-  <li>
-    <label>
-      Disabled unselected
-    </label>
-    <Checkbox
-      isDisabled={true}
-      isIndeterminate={false}
-      isSelected={false}
-      onSelect={[Function]}
-      tabIndex={20} />
-  </li>
-  <li>
-    <label>
-      Disabled selected
-    </label>
-    <Checkbox
-      isDisabled={true}
-      isIndeterminate={false}
-      isSelected={true}
-      onSelect={[Function]}
-      tabIndex={20} />
-  </li>
-  <li>
-    <label>
-      Disabled indeterminate
-    </label>
-    <Checkbox
-      isDisabled={true}
-      isIndeterminate={true}
-      isSelected={false}
-      onSelect={[Function]}
-      tabIndex={20} />
-  </li>
-</ul>
+exports[`Checkbox [common] example testing should match snapshot(s) for interactive 1`] = `
+<div
+  className="lucid-Checkbox lucid-Checkbox-is-selected"
+  onClick={[Function]}
+  onTouchEnd={[Function]}>
+  <input
+    checked={true}
+    className="lucid-Checkbox-native"
+    disabled={false}
+    onChange={[Function]}
+    tabIndex={20}
+    type="checkbox" />
+  <span
+    className="lucid-Checkbox-visualization-glow"
+    onClick={[Function]} />
+  <span
+    className="lucid-Checkbox-visualization-container"
+    onClick={[Function]} />
+  <span
+    className="lucid-Checkbox-visualization-checkmark"
+    onClick={[Function]}>
+    <span
+      className="lucid-Checkbox-visualization-checkmark-stem" />
+    <span
+      className="lucid-Checkbox-visualization-checkmark-kick" />
+  </span>
+</div>
+`;
+
+exports[`Checkbox [common] example testing should match snapshot(s) for interactive 2`] = `
+<div
+  className="lucid-Checkbox lucid-Checkbox-is-disabled"
+  onClick={[Function]}
+  onTouchEnd={[Function]}>
+  <input
+    checked={false}
+    className="lucid-Checkbox-native"
+    disabled={true}
+    onChange={[Function]}
+    tabIndex={20}
+    type="checkbox" />
+  <span
+    className="lucid-Checkbox-visualization-glow"
+    onClick={[Function]} />
+  <span
+    className="lucid-Checkbox-visualization-container"
+    onClick={[Function]} />
+  <span
+    className="lucid-Checkbox-visualization-checkmark"
+    onClick={[Function]}>
+    <span
+      className="lucid-Checkbox-visualization-checkmark-stem" />
+    <span
+      className="lucid-Checkbox-visualization-checkmark-kick" />
+  </span>
+</div>
+`;
+
+exports[`Checkbox [common] example testing should match snapshot(s) for interactive 3`] = `
+<div
+  className="lucid-Checkbox lucid-Checkbox-is-disabled lucid-Checkbox-is-selected"
+  onClick={[Function]}
+  onTouchEnd={[Function]}>
+  <input
+    checked={true}
+    className="lucid-Checkbox-native"
+    disabled={true}
+    onChange={[Function]}
+    tabIndex={20}
+    type="checkbox" />
+  <span
+    className="lucid-Checkbox-visualization-glow"
+    onClick={[Function]} />
+  <span
+    className="lucid-Checkbox-visualization-container"
+    onClick={[Function]} />
+  <span
+    className="lucid-Checkbox-visualization-checkmark"
+    onClick={[Function]}>
+    <span
+      className="lucid-Checkbox-visualization-checkmark-stem" />
+    <span
+      className="lucid-Checkbox-visualization-checkmark-kick" />
+  </span>
+</div>
+`;
+
+exports[`Checkbox [common] example testing should match snapshot(s) for interactive 4`] = `
+<div
+  className="lucid-Checkbox lucid-Checkbox-is-disabled lucid-Checkbox-is-selected"
+  onClick={[Function]}
+  onTouchEnd={[Function]}>
+  <input
+    checked={false}
+    className="lucid-Checkbox-native"
+    disabled={true}
+    onChange={[Function]}
+    tabIndex={20}
+    type="checkbox" />
+  <span
+    className="lucid-Checkbox-visualization-glow"
+    onClick={[Function]} />
+  <span
+    className="lucid-Checkbox-visualization-container"
+    onClick={[Function]} />
+  <span
+    className="lucid-Checkbox-visualization-indeterminate"
+    onClick={[Function]}>
+    <span
+      className="lucid-Checkbox-visualization-indeterminate-line" />
+  </span>
+</div>
 `;
