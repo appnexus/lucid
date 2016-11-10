@@ -10,7 +10,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
     callbackId={0}
     isDisabled={false}
     isSelected={true}
-    name="name"
+    name="lucid-RadioGroup-1"
     onSelect={[Function]}
     style={
       Object {
@@ -30,7 +30,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
     callbackId={1}
     isDisabled={false}
     isSelected={false}
-    name="name"
+    name="lucid-RadioGroup-1"
     onSelect={[Function]}
     style={
       Object {
@@ -50,7 +50,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
     callbackId={2}
     isDisabled={false}
     isSelected={false}
-    name="name"
+    name="lucid-RadioGroup-1"
     onSelect={[Function]}
     style={
       Object {
@@ -70,7 +70,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
     callbackId={3}
     isDisabled={false}
     isSelected={false}
-    name="name"
+    name="lucid-RadioGroup-1"
     onSelect={[Function]}
     style={
       Object {
@@ -90,7 +90,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
     callbackId={4}
     isDisabled={false}
     isSelected={false}
-    name="name"
+    name="lucid-RadioGroup-1"
     onSelect={[Function]}
     style={
       Object {
@@ -360,7 +360,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for statef
     callbackId={0}
     isDisabled={false}
     isSelected={true}
-    name="name"
+    name="lucid-RadioGroup-1"
     onSelect={[Function]}
     style={
       Object {
@@ -380,7 +380,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for statef
     callbackId={1}
     isDisabled={false}
     isSelected={false}
-    name="name"
+    name="lucid-RadioGroup-1"
     onSelect={[Function]}
     style={
       Object {
@@ -400,7 +400,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for statef
     callbackId={2}
     isDisabled={false}
     isSelected={false}
-    name="name"
+    name="lucid-RadioGroup-1"
     onSelect={[Function]}
     style={
       Object {
