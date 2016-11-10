@@ -4,9 +4,9 @@ import React from 'react';
 import { common } from '../../util/generic-tests';
 import { mount } from 'enzyme';
 import Resizer from './Resizer';
-import { erd } from './Resizer.util';
+import { elementResizeDetector } from './Resizer.util';
 
-erd.listenTo = jest.fn((_element, handleResize) => {
+elementResizeDetector.listenTo = jest.fn((_element, handleResize) => {
 	handleResize({
 		offsetWidth: 50,
 		offsetHeight: 100,
@@ -31,11 +31,11 @@ describe('Resizer', () => {
 				</Resizer>
 			);
 
-			expect(erd.removeListener).not.toHaveBeenCalled();
+			expect(elementResizeDetector.removeListener).not.toHaveBeenCalled();
 
 			wrapper.unmount();
 
-			expect(erd.removeListener).toHaveBeenCalled();
+			expect(elementResizeDetector.removeListener).toHaveBeenCalled();
 		});
 	});
 
