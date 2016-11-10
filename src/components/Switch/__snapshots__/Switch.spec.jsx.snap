@@ -1,0 +1,125 @@
+exports[`Switch [common] example testing should match snapshot(s) for interactive 1`] = `
+<span
+  className="lucid-Switch"
+  onClick={[Function]}
+  onTouchEnd={[Function]}>
+  <input
+    checked={false}
+    className="lucid-Switch-native"
+    disabled={false}
+    onChange={[Function]}
+    tabIndex={10}
+    type="checkbox" />
+  <span
+    className="lucid-Switch-visualization-container" />
+  <span
+    className="lucid-Switch-visualization-glow" />
+  <span
+    className="lucid-Switch-visualization-handle" />
+</span>
+`;
+
+exports[`Switch [common] example testing should match snapshot(s) for interactive 2`] = `
+<span
+  className="lucid-Switch lucid-Switch-is-disabled"
+  onClick={[Function]}
+  onTouchEnd={[Function]}>
+  <input
+    checked={false}
+    className="lucid-Switch-native"
+    disabled={true}
+    onChange={[Function]}
+    tabIndex={11}
+    type="checkbox" />
+  <span
+    className="lucid-Switch-visualization-container" />
+  <span
+    className="lucid-Switch-visualization-glow" />
+  <span
+    className="lucid-Switch-visualization-handle" />
+</span>
+`;
+
+exports[`Switch [common] example testing should match snapshot(s) for states 1`] = `
+<span
+  className="lucid-Switch"
+  onClick={[Function]}
+  onTouchEnd={[Function]}>
+  <input
+    checked={false}
+    className="lucid-Switch-native"
+    disabled={false}
+    onChange={[Function]}
+    tabIndex={20}
+    type="checkbox" />
+  <span
+    className="lucid-Switch-visualization-container" />
+  <span
+    className="lucid-Switch-visualization-glow" />
+  <span
+    className="lucid-Switch-visualization-handle" />
+</span>
+`;
+
+exports[`Switch [common] example testing should match snapshot(s) for states 2`] = `
+<span
+  className="lucid-Switch lucid-Switch-is-selected"
+  onClick={[Function]}
+  onTouchEnd={[Function]}>
+  <input
+    checked={true}
+    className="lucid-Switch-native"
+    disabled={false}
+    onChange={[Function]}
+    tabIndex={21}
+    type="checkbox" />
+  <span
+    className="lucid-Switch-visualization-container" />
+  <span
+    className="lucid-Switch-visualization-glow" />
+  <span
+    className="lucid-Switch-visualization-handle" />
+</span>
+`;
+
+exports[`Switch [common] example testing should match snapshot(s) for states 3`] = `
+<span
+  className="lucid-Switch lucid-Switch-is-disabled"
+  onClick={[Function]}
+  onTouchEnd={[Function]}>
+  <input
+    checked={false}
+    className="lucid-Switch-native"
+    disabled={true}
+    onChange={[Function]}
+    tabIndex={22}
+    type="checkbox" />
+  <span
+    className="lucid-Switch-visualization-container" />
+  <span
+    className="lucid-Switch-visualization-glow" />
+  <span
+    className="lucid-Switch-visualization-handle" />
+</span>
+`;
+
+exports[`Switch [common] example testing should match snapshot(s) for states 4`] = `
+<span
+  className="lucid-Switch lucid-Switch-is-disabled lucid-Switch-is-selected"
+  onClick={[Function]}
+  onTouchEnd={[Function]}>
+  <input
+    checked={true}
+    className="lucid-Switch-native"
+    disabled={true}
+    onChange={[Function]}
+    tabIndex={23}
+    type="checkbox" />
+  <span
+    className="lucid-Switch-visualization-container" />
+  <span
+    className="lucid-Switch-visualization-glow" />
+  <span
+    className="lucid-Switch-visualization-handle" />
+</span>
+`;

@@ -1,0 +1,519 @@
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for interactive-default 1`] = `
+<label
+  className="lucid-SwitchLabeled"
+  style={
+    Object {
+      "marginBottom": "3px",
+    }
+  }>
+  <Switch
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}>
+    <SwitchLabeled.Label>
+      Airplane Mode
+    </SwitchLabeled.Label>
+  </Switch>
+  <ReactCSSTransitionGroup
+    className="lucid-SwitchLabeled-text"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={100}
+    transitionLeave={true}
+    transitionLeaveTimeout={100}
+    transitionName="lucid-SwitchLabeled-text">
+    <span>
+      Airplane Mode
+    </span>
+  </ReactCSSTransitionGroup>
+</label>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for interactive-default 2`] = `
+<label
+  className="lucid-SwitchLabeled"
+  style={
+    Object {
+      "marginBottom": "3px",
+    }
+  }>
+  <Switch
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}>
+    <SwitchLabeled.Label>
+      Bluetooth
+    </SwitchLabeled.Label>
+  </Switch>
+  <ReactCSSTransitionGroup
+    className="lucid-SwitchLabeled-text"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={100}
+    transitionLeave={true}
+    transitionLeaveTimeout={100}
+    transitionName="lucid-SwitchLabeled-text">
+    <span>
+      Bluetooth
+    </span>
+  </ReactCSSTransitionGroup>
+</label>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for interactive-default 3`] = `
+<label
+  className="lucid-SwitchLabeled"
+  style={
+    Object {
+      "marginBottom": "3px",
+    }
+  }>
+  <Switch
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}>
+    <SwitchLabeled.Label>
+      Cellular Data
+    </SwitchLabeled.Label>
+  </Switch>
+  <ReactCSSTransitionGroup
+    className="lucid-SwitchLabeled-text"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={100}
+    transitionLeave={true}
+    transitionLeaveTimeout={100}
+    transitionName="lucid-SwitchLabeled-text">
+    <span>
+      Cellular Data
+    </span>
+  </ReactCSSTransitionGroup>
+</label>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for interactive-with-changing-labels 1`] = `
+<label
+  className="lucid-SwitchLabeled lucid-SwitchLabeled-is-selected"
+  style={
+    Object {
+      "marginBottom": "3px",
+    }
+  }>
+  <Switch
+    isDisabled={false}
+    isSelected={true}
+    onSelect={[Function]} />
+  <ReactCSSTransitionGroup
+    className="lucid-SwitchLabeled-text"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={100}
+    transitionLeave={true}
+    transitionLeaveTimeout={100}
+    transitionName="lucid-SwitchLabeled-text">
+    <span>
+      Airplane Mode Activated
+    </span>
+  </ReactCSSTransitionGroup>
+</label>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for interactive-with-changing-labels 2`] = `
+<label
+  className="lucid-SwitchLabeled lucid-SwitchLabeled-is-selected"
+  style={
+    Object {
+      "marginBottom": "3px",
+    }
+  }>
+  <Switch
+    isDisabled={false}
+    isSelected={true}
+    onSelect={[Function]} />
+  <ReactCSSTransitionGroup
+    className="lucid-SwitchLabeled-text"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={100}
+    transitionLeave={true}
+    transitionLeaveTimeout={100}
+    transitionName="lucid-SwitchLabeled-text">
+    <span>
+      Bluetooth Enabled
+    </span>
+  </ReactCSSTransitionGroup>
+</label>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for interactive-with-changing-labels 3`] = `
+<label
+  className="lucid-SwitchLabeled lucid-SwitchLabeled-is-selected"
+  style={
+    Object {
+      "marginBottom": "3px",
+    }
+  }>
+  <Switch
+    isDisabled={false}
+    isSelected={true}
+    onSelect={[Function]} />
+  <ReactCSSTransitionGroup
+    className="lucid-SwitchLabeled-text"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={100}
+    transitionLeave={true}
+    transitionLeaveTimeout={100}
+    transitionName="lucid-SwitchLabeled-text">
+    <span>
+      Use Cellular Data
+    </span>
+  </ReactCSSTransitionGroup>
+</label>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for interactive-with-changing-labels 4`] = `
+<label
+  className="lucid-SwitchLabeled lucid-SwitchLabeled-is-selected"
+  style={
+    Object {
+      "marginBottom": "3px",
+    }
+  }>
+  <Switch
+    isDisabled={false}
+    isSelected={true}
+    onSelect={[Function]}>
+    <SwitchLabeled.Label>
+      Yes! I would like to receive updates, special offers, and other information from AppNexus and its subsidiaries.
+    </SwitchLabeled.Label>
+  </Switch>
+  <ReactCSSTransitionGroup
+    className="lucid-SwitchLabeled-text"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={100}
+    transitionLeave={true}
+    transitionLeaveTimeout={100}
+    transitionName="lucid-SwitchLabeled-text">
+    <span>
+      Yes! I would like to receive updates, special offers, and other information from AppNexus and its subsidiaries.
+    </span>
+  </ReactCSSTransitionGroup>
+</label>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for label-as-prop 1`] = `
+<label
+  className="lucid-SwitchLabeled"
+  style={
+    Object {
+      "marginRight": "5px",
+    }
+  }>
+  <Switch
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]} />
+  <ReactCSSTransitionGroup
+    className="lucid-SwitchLabeled-text"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={100}
+    transitionLeave={true}
+    transitionLeaveTimeout={100}
+    transitionName="lucid-SwitchLabeled-text">
+    <span>
+      Just text
+    </span>
+  </ReactCSSTransitionGroup>
+</label>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for label-as-prop 2`] = `
+<label
+  className="lucid-SwitchLabeled"
+  style={
+    Object {
+      "marginRight": "5px",
+    }
+  }>
+  <Switch
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]} />
+  <ReactCSSTransitionGroup
+    className="lucid-SwitchLabeled-text"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={100}
+    transitionLeave={true}
+    transitionLeaveTimeout={100}
+    transitionName="lucid-SwitchLabeled-text">
+    <span>
+      <span>
+        HTML element
+      </span>
+    </span>
+  </ReactCSSTransitionGroup>
+</label>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for label-as-prop 3`] = `
+<label
+  className="lucid-SwitchLabeled"
+  style={
+    Object {
+      "marginRight": "5px",
+    }
+  }>
+  <Switch
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]} />
+  <ReactCSSTransitionGroup
+    className="lucid-SwitchLabeled-text"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={100}
+    transitionLeave={true}
+    transitionLeaveTimeout={100}
+    transitionName="lucid-SwitchLabeled-text">
+    <span>
+      Text in an array
+    </span>
+  </ReactCSSTransitionGroup>
+</label>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for label-as-prop 4`] = `
+<label
+  className="lucid-SwitchLabeled"
+  style={
+    Object {
+      "marginRight": "5px",
+    }
+  }>
+  <Switch
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]} />
+  <ReactCSSTransitionGroup
+    className="lucid-SwitchLabeled-text"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={100}
+    transitionLeave={true}
+    transitionLeaveTimeout={100}
+    transitionName="lucid-SwitchLabeled-text">
+    <span>
+      <span>
+        HTML element in an array
+      </span>
+    </span>
+  </ReactCSSTransitionGroup>
+</label>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for states 1`] = `
+<label
+  className="lucid-SwitchLabeled"
+  style={
+    Object {
+      "marginBottom": "3px",
+      "marginRight": "13px",
+    }
+  }>
+  <Switch
+    isDisabled={false}
+    isSelected={false}
+    onSelect={[Function]}>
+    <SwitchLabeled.Label>
+      (default props)
+    </SwitchLabeled.Label>
+  </Switch>
+  <ReactCSSTransitionGroup
+    className="lucid-SwitchLabeled-text"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={100}
+    transitionLeave={true}
+    transitionLeaveTimeout={100}
+    transitionName="lucid-SwitchLabeled-text">
+    <span>
+      (default props)
+    </span>
+  </ReactCSSTransitionGroup>
+</label>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for states 2`] = `
+<label
+  className="lucid-SwitchLabeled lucid-SwitchLabeled-is-disabled"
+  style={
+    Object {
+      "marginBottom": "3px",
+      "marginRight": "13px",
+    }
+  }>
+  <Switch
+    isDisabled={true}
+    isSelected={false}
+    onSelect={[Function]}>
+    <SwitchLabeled.Label>
+      Disabled
+    </SwitchLabeled.Label>
+  </Switch>
+  <ReactCSSTransitionGroup
+    className="lucid-SwitchLabeled-text"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={100}
+    transitionLeave={true}
+    transitionLeaveTimeout={100}
+    transitionName="lucid-SwitchLabeled-text">
+    <span>
+      Disabled
+    </span>
+  </ReactCSSTransitionGroup>
+</label>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for states 3`] = `
+<label
+  className="lucid-SwitchLabeled lucid-SwitchLabeled-is-selected"
+  style={
+    Object {
+      "marginBottom": "3px",
+      "marginRight": "13px",
+    }
+  }>
+  <Switch
+    isDisabled={false}
+    isSelected={true}
+    onSelect={[Function]}>
+    <SwitchLabeled.Label>
+      Selected
+    </SwitchLabeled.Label>
+  </Switch>
+  <ReactCSSTransitionGroup
+    className="lucid-SwitchLabeled-text"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={100}
+    transitionLeave={true}
+    transitionLeaveTimeout={100}
+    transitionName="lucid-SwitchLabeled-text">
+    <span>
+      Selected
+    </span>
+  </ReactCSSTransitionGroup>
+</label>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for states 4`] = `
+<label
+  className="lucid-SwitchLabeled lucid-SwitchLabeled-is-disabled lucid-SwitchLabeled-is-selected"
+  style={
+    Object {
+      "marginBottom": "3px",
+      "marginRight": "13px",
+    }
+  }>
+  <Switch
+    isDisabled={true}
+    isSelected={true}
+    onSelect={[Function]}>
+    <SwitchLabeled.Label>
+      Disabled & selected
+    </SwitchLabeled.Label>
+  </Switch>
+  <ReactCSSTransitionGroup
+    className="lucid-SwitchLabeled-text"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={100}
+    transitionLeave={true}
+    transitionLeaveTimeout={100}
+    transitionName="lucid-SwitchLabeled-text">
+    <span>
+      Disabled & selected
+    </span>
+  </ReactCSSTransitionGroup>
+</label>
+`;

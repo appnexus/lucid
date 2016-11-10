@@ -5,8 +5,11 @@ import { shallow } from 'enzyme';
 import Validation from './Validation';
 
 describe('Validation', () => {
-
-	common(Validation);
+	common(Validation, {
+		getDefaultProps: () => ({
+			children: <span>foo</span>,
+		}),
+	});
 
 	describe('render', () => {
 		it('should render children', () => {

@@ -1,0 +1,95 @@
+exports[`StickySection [common] example testing should match snapshot(s) for 1.with-lower-bound 1`] = `
+<div
+  className="lucid-StickySection"
+  style={
+    Object {
+      "backgroundColor": "#2abbb0",
+      "color": "white",
+    }
+  }>
+  <div
+    className="lucid-StickySection-sticky-frame"
+    style={
+      Object {
+        "backgroundColor": "#2abbb0",
+        "color": "white",
+      }
+    }>
+    <div
+      className="lucid-StickySection-sticky-section"
+      style={
+        Object {
+          "backgroundColor": "#2abbb0",
+          "color": "white",
+          "position": "relative",
+        }
+      }>
+      This section sticks to top!
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StickySection [common] example testing should match snapshot(s) for 2.with-lower-bound-and-scroll-viewport-width 1`] = `
+<div
+  className="lucid-StickySection"
+  style={
+    Object {
+      "backgroundColor": "#2abbb0",
+      "color": "white",
+    }
+  }>
+  <div
+    className="lucid-StickySection-sticky-frame"
+    style={
+      Object {
+        "backgroundColor": "#2abbb0",
+        "color": "white",
+      }
+    }>
+    <div
+      className="lucid-StickySection-sticky-section"
+      style={
+        Object {
+          "backgroundColor": "#2abbb0",
+          "color": "white",
+          "position": "relative",
+        }
+      }>
+      I scroll horizontally to match the content!
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StickySection [common] example testing should match snapshot(s) for 3.standard 1`] = `
+<div
+  className="lucid-StickySection"
+  style={
+    Object {
+      "backgroundColor": "#2abbb0",
+      "color": "white",
+    }
+  }>
+  <div
+    className="lucid-StickySection-sticky-frame"
+    style={
+      Object {
+        "backgroundColor": "#2abbb0",
+        "color": "white",
+      }
+    }>
+    <div
+      className="lucid-StickySection-sticky-section"
+      style={
+        Object {
+          "backgroundColor": "#2abbb0",
+          "color": "white",
+          "position": "relative",
+        }
+      }>
+      This section has no lower bounds!
+    </div>
+  </div>
+</div>
+`;

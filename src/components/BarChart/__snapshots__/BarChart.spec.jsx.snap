@@ -1,0 +1,886 @@
+exports[`BarChart [common] example testing should match snapshot(s) for 01.basic 1`] = `
+<svg
+  className="lucid-BarChart"
+  height={400}
+  width={1000}>
+  <g
+    transform="translate(80, 350)">
+    <Axis
+      innerTickSize={6}
+      orient="bottom"
+      outerTickSize={0}
+      scale={[Function]}
+      tickCount={null}
+      tickPadding={3} />
+  </g>
+  <g
+    transform="translate(80, 10)">
+    <Axis
+      innerTickSize={6}
+      orient="left"
+      outerTickSize={6}
+      scale={[Function]}
+      tickCount={null}
+      tickFormat={[Function]}
+      tickPadding={3} />
+  </g>
+  <g
+    transform="translate(0, 10)">
+    <AxisLabel
+      color="#000"
+      height={340}
+      label="Revenue"
+      orient="left"
+      width={80} />
+  </g>
+  <g
+    transform="translate(80, 10)">
+    <Bars
+      colorOffset={0}
+      data={
+        Array [
+          Object {
+            "x": "2015-01-01",
+            "y": 1,
+          },
+          Object {
+            "x": "2015-01-02",
+            "y": 2,
+          },
+          Object {
+            "x": "2015-01-03",
+            "y": 3,
+          },
+          Object {
+            "x": "2015-01-04",
+            "y": 5,
+          },
+        ]
+      }
+      hasToolTips={true}
+      isStacked={false}
+      palette={
+        Array [
+          "color-chart-0",
+          "color-chart-1",
+          "color-chart-2",
+          "color-chart-3",
+          "color-chart-4",
+          "color-chart-5",
+        ]
+      }
+      xField="x"
+      xFormatter={[Function]}
+      xScale={[Function]}
+      yFields={
+        Array [
+          "y",
+        ]
+      }
+      yFormatter={[Function]}
+      yScale={[Function]}
+      yStackedMax={5}
+      yTooltipFormatter={[Function]} />
+  </g>
+</svg>
+`;
+
+exports[`BarChart [common] example testing should match snapshot(s) for 03.grouped 1`] = `
+<svg
+  className="lucid-BarChart"
+  height={400}
+  width={1000}>
+  <g
+    transform="translate(80, 350)">
+    <Axis
+      innerTickSize={6}
+      orient="bottom"
+      outerTickSize={0}
+      scale={[Function]}
+      tickCount={null}
+      tickPadding={3} />
+  </g>
+  <g
+    transform="translate(80, 10)">
+    <Axis
+      innerTickSize={6}
+      orient="left"
+      outerTickSize={6}
+      scale={[Function]}
+      tickCount={null}
+      tickFormat={[Function]}
+      tickPadding={3} />
+  </g>
+  <g
+    transform="translate(0, 10)">
+    <AxisLabel
+      color="#000"
+      height={340}
+      label="Fruit Count"
+      orient="left"
+      width={80} />
+  </g>
+  <g
+    transform="translate(80, 10)">
+    <Bars
+      colorOffset={0}
+      data={
+        Array [
+          Object {
+            "apples": 10,
+            "bananas": 15,
+            "oranges": 5,
+            "peaches": 35,
+            "pears": 20,
+            "x": "Monday",
+          },
+          Object {
+            "apples": 20,
+            "bananas": 25,
+            "oranges": 27,
+            "peaches": 20,
+            "pears": 5,
+            "x": "Tuesday",
+          },
+          Object {
+            "apples": 5,
+            "bananas": 20,
+            "oranges": 35,
+            "peaches": 5,
+            "pears": 15,
+            "x": "Wednesday",
+          },
+        ]
+      }
+      hasToolTips={true}
+      isStacked={false}
+      palette={
+        Array [
+          "color-chart-0-lightest",
+          "color-chart-0-light",
+          "color-chart-0",
+          "color-chart-0-dark",
+          "color-chart-0-darkest",
+          "color-chart-1-lightest",
+          "color-chart-1-light",
+          "color-chart-1",
+          "color-chart-1-dark",
+          "color-chart-1-darkest",
+          "color-chart-2-lightest",
+          "color-chart-2-light",
+          "color-chart-2",
+          "color-chart-2-dark",
+          "color-chart-2-darkest",
+          "color-chart-3-lightest",
+          "color-chart-3-light",
+          "color-chart-3",
+          "color-chart-3-dark",
+          "color-chart-3-darkest",
+          "color-chart-4-lightest",
+          "color-chart-4-light",
+          "color-chart-4",
+          "color-chart-4-dark",
+          "color-chart-4-darkest",
+          "color-chart-5-lightest",
+          "color-chart-5-light",
+          "color-chart-5",
+          "color-chart-5-dark",
+          "color-chart-5-darkest",
+        ]
+      }
+      xField="x"
+      xFormatter={[Function]}
+      xScale={[Function]}
+      yFields={
+        Array [
+          "apples",
+          "pears",
+          "peaches",
+          "bananas",
+          "oranges",
+        ]
+      }
+      yFormatter={[Function]}
+      yScale={[Function]}
+      yStackedMax={35}
+      yTooltipFormatter={[Function]} />
+  </g>
+</svg>
+`;
+
+exports[`BarChart [common] example testing should match snapshot(s) for 04.grouped-with-legend 1`] = `
+<svg
+  className="lucid-BarChart"
+  height={400}
+  width={1000}>
+  <g
+    transform="translate(80, 350)">
+    <Axis
+      innerTickSize={6}
+      orient="bottom"
+      outerTickSize={0}
+      scale={[Function]}
+      tickCount={null}
+      tickPadding={3} />
+  </g>
+  <g
+    transform="translate(80, 10)">
+    <Axis
+      innerTickSize={6}
+      orient="left"
+      outerTickSize={6}
+      scale={[Function]}
+      tickCount={null}
+      tickFormat={[Function]}
+      tickPadding={3} />
+  </g>
+  <g
+    transform="translate(0, 10)">
+    <AxisLabel
+      color="#000"
+      height={340}
+      label="Fruit Count"
+      orient="left"
+      width={80} />
+  </g>
+  <g
+    transform="translate(80, 10)">
+    <Bars
+      colorOffset={0}
+      data={
+        Array [
+          Object {
+            "apples": 10,
+            "bananas": 15,
+            "oranges": 5,
+            "peaches": 35,
+            "pears": 20,
+            "x": "Monday",
+          },
+          Object {
+            "apples": 20,
+            "bananas": 25,
+            "oranges": 27,
+            "peaches": 20,
+            "pears": 5,
+            "x": "Tuesday",
+          },
+          Object {
+            "apples": 5,
+            "bananas": 20,
+            "oranges": 35,
+            "peaches": 5,
+            "pears": 15,
+            "x": "Wednesday",
+          },
+        ]
+      }
+      hasToolTips={true}
+      isStacked={false}
+      palette={
+        Array [
+          "color-chart-0",
+          "color-chart-1",
+          "color-chart-2",
+          "color-chart-3",
+          "color-chart-4",
+          "color-chart-5",
+        ]
+      }
+      xField="x"
+      xFormatter={[Function]}
+      xScale={[Function]}
+      yFields={
+        Array [
+          "apples",
+          "pears",
+          "peaches",
+          "bananas",
+          "oranges",
+        ]
+      }
+      yFormatter={[Function]}
+      yScale={[Function]}
+      yStackedMax={35}
+      yTooltipFormatter={[Function]} />
+  </g>
+</svg>
+`;
+
+exports[`BarChart [common] example testing should match snapshot(s) for 05.limited-ticks 1`] = `
+<svg
+  className="lucid-BarChart"
+  height={400}
+  width={1000}>
+  <g
+    transform="translate(80, 350)">
+    <Axis
+      innerTickSize={6}
+      orient="bottom"
+      outerTickSize={0}
+      scale={[Function]}
+      tickCount={5}
+      tickPadding={3} />
+  </g>
+  <g
+    transform="translate(80, 10)">
+    <Axis
+      innerTickSize={6}
+      orient="left"
+      outerTickSize={6}
+      scale={[Function]}
+      tickCount={4}
+      tickFormat={[Function]}
+      tickPadding={3} />
+  </g>
+  <g
+    transform="translate(80, 10)">
+    <Bars
+      colorOffset={0}
+      data={
+        Array [
+          Object {
+            "x": "2015-01-01",
+            "y": 1,
+          },
+          Object {
+            "x": "2015-01-02",
+            "y": 2,
+          },
+          Object {
+            "x": "2015-01-03",
+            "y": 3,
+          },
+          Object {
+            "x": "2015-01-04",
+            "y": 5,
+          },
+          Object {
+            "x": "2015-01-05",
+            "y": 2,
+          },
+          Object {
+            "x": "2015-01-06",
+            "y": 3,
+          },
+          Object {
+            "x": "2015-01-07",
+            "y": 2,
+          },
+          Object {
+            "x": "2015-01-08",
+            "y": 2,
+          },
+          Object {
+            "x": "2015-01-09",
+            "y": 5,
+          },
+          Object {
+            "x": "2015-01-10",
+            "y": 3,
+          },
+          Object {
+            "x": "2015-01-11",
+            "y": 4,
+          },
+          Object {
+            "x": "2015-01-12",
+            "y": 4,
+          },
+          Object {
+            "x": "2015-01-13",
+            "y": 5,
+          },
+          Object {
+            "x": "2015-01-14",
+            "y": 3,
+          },
+          Object {
+            "x": "2015-01-15",
+            "y": 4,
+          },
+          Object {
+            "x": "2015-01-16",
+            "y": 3,
+          },
+          Object {
+            "x": "2015-01-17",
+            "y": 6,
+          },
+        ]
+      }
+      hasToolTips={true}
+      isStacked={false}
+      palette={
+        Array [
+          "color-chart-0",
+          "color-chart-1",
+          "color-chart-2",
+          "color-chart-3",
+          "color-chart-4",
+          "color-chart-5",
+        ]
+      }
+      xField="x"
+      xFormatter={[Function]}
+      xScale={[Function]}
+      yFields={
+        Array [
+          "y",
+        ]
+      }
+      yFormatter={[Function]}
+      yScale={[Function]}
+      yStackedMax={6}
+      yTooltipFormatter={[Function]} />
+  </g>
+</svg>
+`;
+
+exports[`BarChart [common] example testing should match snapshot(s) for 06.all-the-things 1`] = `
+<svg
+  className="lucid-BarChart"
+  height={400}
+  width={1000}>
+  <g
+    transform="translate(80, 350)">
+    <Axis
+      innerTickSize={6}
+      orient="bottom"
+      outerTickSize={0}
+      scale={[Function]}
+      tickCount={2}
+      tickPadding={3} />
+  </g>
+  <g
+    transform="translate(80, 350)">
+    <AxisLabel
+      color="#000"
+      height={50}
+      label="Weekdays"
+      orient="bottom"
+      width={900} />
+  </g>
+  <g
+    transform="translate(80, 10)">
+    <Axis
+      innerTickSize={6}
+      orient="left"
+      outerTickSize={6}
+      scale={[Function]}
+      tickCount={4}
+      tickFormat={[Function]}
+      tickPadding={3} />
+  </g>
+  <g
+    transform="translate(0, 10)">
+    <AxisLabel
+      color="#000"
+      height={340}
+      label="Fruit Count"
+      orient="left"
+      width={80} />
+  </g>
+  <g
+    transform="translate(80, 10)">
+    <Bars
+      colorMap={
+        Object {
+          "apples": "color-chart-good",
+          "oranges": "color-chart-1",
+        }
+      }
+      colorOffset={0}
+      data={
+        Array [
+          Object {
+            "apples": 2000,
+            "day": "monday",
+            "oranges": 3000,
+          },
+          Object {
+            "apples": 2000,
+            "day": "tuesday",
+            "oranges": 5000,
+          },
+          Object {
+            "apples": 3000,
+            "day": "wednesday",
+            "oranges": 2000,
+          },
+          Object {
+            "apples": 5000,
+            "day": "thursday",
+            "oranges": 6000,
+          },
+        ]
+      }
+      hasToolTips={true}
+      isStacked={false}
+      palette={
+        Array [
+          "color-chart-0",
+          "color-chart-1",
+          "color-chart-2",
+          "color-chart-3",
+          "color-chart-4",
+          "color-chart-5",
+        ]
+      }
+      xField="day"
+      xFormatter={[Function]}
+      xScale={[Function]}
+      yFields={
+        Array [
+          "apples",
+          "oranges",
+        ]
+      }
+      yFormatter={[Function]}
+      yScale={[Function]}
+      yStackedMax={6000}
+      yTooltipFormatter={[Function]} />
+  </g>
+</svg>
+`;
+
+exports[`BarChart [common] example testing should match snapshot(s) for 07.stacked 1`] = `
+<svg
+  className="lucid-BarChart"
+  height={400}
+  width={1000}>
+  <g
+    transform="translate(80, 350)">
+    <Axis
+      innerTickSize={6}
+      orient="bottom"
+      outerTickSize={0}
+      scale={[Function]}
+      tickCount={null}
+      tickPadding={3} />
+  </g>
+  <g
+    transform="translate(80, 10)">
+    <Axis
+      innerTickSize={6}
+      orient="left"
+      outerTickSize={6}
+      scale={[Function]}
+      tickCount={null}
+      tickFormat={[Function]}
+      tickPadding={3} />
+  </g>
+  <g
+    transform="translate(0, 10)">
+    <AxisLabel
+      color="#000"
+      height={340}
+      label="Fruit Count"
+      orient="left"
+      width={80} />
+  </g>
+  <g
+    transform="translate(80, 10)">
+    <Bars
+      colorOffset={0}
+      data={
+        Array [
+          Object {
+            "apples": 10,
+            "peaches": 35,
+            "pears": 20,
+            "x": "Monday",
+          },
+          Object {
+            "apples": 20,
+            "peaches": 20,
+            "pears": 5,
+            "x": "Tuesday",
+          },
+          Object {
+            "apples": 5,
+            "peaches": 5,
+            "pears": 15,
+            "x": "Wednesday",
+          },
+        ]
+      }
+      hasToolTips={true}
+      isStacked={true}
+      palette={
+        Array [
+          "color-chart-0",
+          "color-chart-1",
+          "color-chart-2",
+          "color-chart-3",
+          "color-chart-4",
+          "color-chart-5",
+        ]
+      }
+      xField="x"
+      xFormatter={[Function]}
+      xScale={[Function]}
+      yFields={
+        Array [
+          "apples",
+          "pears",
+          "peaches",
+        ]
+      }
+      yFormatter={[Function]}
+      yScale={[Function]}
+      yStackedMax={65}
+      yTooltipFormatter={[Function]} />
+  </g>
+</svg>
+`;
+
+exports[`BarChart [common] example testing should match snapshot(s) for 08.unformatted-tooltips 1`] = `
+<svg
+  className="lucid-BarChart"
+  height={400}
+  width={1000}>
+  <g
+    transform="translate(80, 350)">
+    <Axis
+      innerTickSize={6}
+      orient="bottom"
+      outerTickSize={0}
+      scale={[Function]}
+      tickCount={null}
+      tickPadding={3} />
+  </g>
+  <g
+    transform="translate(80, 10)">
+    <Axis
+      innerTickSize={6}
+      orient="left"
+      outerTickSize={6}
+      scale={[Function]}
+      tickCount={null}
+      tickFormat={[Function]}
+      tickPadding={3} />
+  </g>
+  <g
+    transform="translate(0, 10)">
+    <AxisLabel
+      color="#000"
+      height={340}
+      label="Revenue"
+      orient="left"
+      width={80} />
+  </g>
+  <g
+    transform="translate(80, 10)">
+    <Bars
+      colorOffset={0}
+      data={
+        Array [
+          Object {
+            "x": "2015-01-01",
+            "y": 1200,
+          },
+          Object {
+            "x": "2015-01-02",
+            "y": 900,
+          },
+          Object {
+            "x": "2015-01-03",
+            "y": 1800,
+          },
+          Object {
+            "x": "2015-01-04",
+            "y": 3000,
+          },
+        ]
+      }
+      hasToolTips={true}
+      isStacked={false}
+      palette={
+        Array [
+          "color-chart-0",
+          "color-chart-1",
+          "color-chart-2",
+          "color-chart-3",
+          "color-chart-4",
+          "color-chart-5",
+        ]
+      }
+      xField="x"
+      xFormatter={[Function]}
+      xScale={[Function]}
+      yFields={
+        Array [
+          "y",
+        ]
+      }
+      yFormatter={[Function]}
+      yScale={[Function]}
+      yStackedMax={3000}
+      yTooltipFormatter={[Function]} />
+  </g>
+</svg>
+`;
+
+exports[`BarChart [common] example testing should match snapshot(s) for 09.formatted-tooltips 1`] = `
+<svg
+  className="lucid-BarChart"
+  height={400}
+  width={1000}>
+  <g
+    transform="translate(80, 350)">
+    <Axis
+      innerTickSize={6}
+      orient="bottom"
+      outerTickSize={0}
+      scale={[Function]}
+      tickCount={null}
+      tickPadding={3} />
+  </g>
+  <g
+    transform="translate(80, 10)">
+    <Axis
+      innerTickSize={6}
+      orient="left"
+      outerTickSize={6}
+      scale={[Function]}
+      tickCount={null}
+      tickFormat={[Function]}
+      tickPadding={3} />
+  </g>
+  <g
+    transform="translate(0, 10)">
+    <AxisLabel
+      color="#000"
+      height={340}
+      label="Revenue"
+      orient="left"
+      width={80} />
+  </g>
+  <g
+    transform="translate(80, 10)">
+    <Bars
+      colorOffset={0}
+      data={
+        Array [
+          Object {
+            "x": "2015-01-01",
+            "y": 1200,
+          },
+          Object {
+            "x": "2015-01-02",
+            "y": 900,
+          },
+          Object {
+            "x": "2015-01-03",
+            "y": 1800,
+          },
+          Object {
+            "x": "2015-01-04",
+            "y": 3000,
+          },
+        ]
+      }
+      hasToolTips={true}
+      isStacked={false}
+      palette={
+        Array [
+          "color-chart-0",
+          "color-chart-1",
+          "color-chart-2",
+          "color-chart-3",
+          "color-chart-4",
+          "color-chart-5",
+        ]
+      }
+      xField="x"
+      xFormatter={[Function]}
+      xScale={[Function]}
+      yFields={
+        Array [
+          "y",
+        ]
+      }
+      yFormatter={[Function]}
+      yScale={[Function]}
+      yStackedMax={3000}
+      yTooltipFormatter={[Function]} />
+  </g>
+</svg>
+`;
+
+exports[`BarChart [common] example testing should match snapshot(s) for 10.empty 1`] = `
+<EmptyStateWrapper
+  Title="You have no data."
+  isEmpty={true}>
+  <svg
+    className="lucid-BarChart"
+    height={400}
+    width={1000}>
+    <g
+      transform="translate(80, 350)">
+      <Axis
+        innerTickSize={6}
+        orient="bottom"
+        outerTickSize={6}
+        scale={[Function]}
+        tickCount={null}
+        tickPadding={3} />
+    </g>
+    <g
+      transform="translate(80, 10)">
+      <Axis
+        innerTickSize={6}
+        orient="left"
+        outerTickSize={6}
+        scale={[Function]}
+        tickCount={null}
+        tickFormat={[Function]}
+        tickPadding={3} />
+    </g>
+  </svg>
+</EmptyStateWrapper>
+`;
+
+exports[`BarChart [common] example testing should match snapshot(s) for 11.empty-with-custom-title-and-body 1`] = `
+<EmptyStateWrapper
+  isEmpty={true}>
+  <EmptyStateWrapper.Title>
+    Something went wrong.
+  </EmptyStateWrapper.Title>
+  <EmptyStateWrapper.Body
+    style={
+      Object {
+        "fontSize": "12px",
+      }
+    }>
+    Echo park poutine esse tempor squid do. Lo-fi ramps XOXO chicharrones laboris, portland fugiat locavore. Fap four dollar toast keytar, cronut kogi fingerstache distillery microdosing everyday carry austin DIY dreamcatcher. Distillery flexitarian meditation laboris roof party. Cred raclette gastropub tilde PBR&B. Shoreditch poke adipisicing, reprehenderit lumbersexual succulents mustache officia franzen vinyl nostrud af. Hashtag bitters organic, before they sold out butcher cronut sapiente.
+  </EmptyStateWrapper.Body>
+  <svg
+    className="lucid-BarChart"
+    height={400}
+    width={1000}>
+    <g
+      transform="translate(80, 350)">
+      <Axis
+        innerTickSize={6}
+        orient="bottom"
+        outerTickSize={6}
+        scale={[Function]}
+        tickCount={null}
+        tickPadding={3} />
+    </g>
+    <g
+      transform="translate(80, 10)">
+      <Axis
+        innerTickSize={6}
+        orient="left"
+        outerTickSize={6}
+        scale={[Function]}
+        tickCount={null}
+        tickFormat={[Function]}
+        tickPadding={3} />
+    </g>
+  </svg>
+</EmptyStateWrapper>
+`;

@@ -44,7 +44,6 @@ function resetOnce(key) {
 export function checkIsDev() {
 	return isDevMode &&
 		typeof window !== 'undefined' &&
-		!isNode &&
 		typeof console !== 'undefined';
 }
 

@@ -1,0 +1,40 @@
+exports[`Paginator [common] example testing should match snapshot(s) for 1.basic 1`] = `
+<div
+  className="lucid-Paginator">
+  <Button
+    hasOnlyIcon={true}
+    isActive={false}
+    isDisabled={true}
+    onClick={[Function]}
+    type="button">
+    <ArrowIcon
+      direction="left"
+      viewBox="0 0 16 16" />
+  </Button>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value={1} />
+  <span>
+    of 
+  </span>
+  <Button
+    hasOnlyIcon={true}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    <ArrowIcon
+      direction="right"
+      viewBox="0 0 16 16" />
+  </Button>
+</div>
+`;

@@ -4,9 +4,7 @@ import React from 'react';
 import SyntheticEvent from 'react/lib/SyntheticEvent';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
-
 import { common } from '../../util/generic-tests';
-import getRandom from '../../util/random';
 
 import RadioGroup from './RadioGroup';
 import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
@@ -17,7 +15,7 @@ describe('RadioGroup', () => {
 	describe('props', () => {
 		describe('name', () => {
 			it('sets the `name` attribute of the child radio buttons.', () => {
-					const name = getRandom();
+					const name = 'radio';
 					const wrapper = shallow(
 						<RadioGroup name={name}>
 							<RadioGroup.RadioButton />

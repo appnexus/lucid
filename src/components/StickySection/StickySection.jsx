@@ -179,7 +179,7 @@ const StickySection = createClass({
 							...(isAboveFold ? {
 								position: 'absolute',
 								top: 0,
-								left: containerRect.left - containerRect.frameLeft,
+								left: (containerRect.left - containerRect.frameLeft) || 0,
 								width: containerRect.scrollWidth,
 								height: containerRect.height,
 							} : {

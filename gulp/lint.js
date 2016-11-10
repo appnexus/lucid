@@ -9,6 +9,7 @@ module.exports = function lint() {
 		CONFIG.TEST_GLOB.SOURCE,
 		'!node_modules/**',
 		'!/**/*.json',
+		'!**/*.spec.jsx.snap',
 	])
 	.pipe(eslint())
 	.pipe(eslint.format())

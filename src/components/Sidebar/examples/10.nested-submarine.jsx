@@ -14,7 +14,7 @@ export default React.createClass({
 					<Sidebar.Bar>
 						<div>
 							{_.times(100, (n) => (
-								<CheckboxLabeled>
+								<CheckboxLabeled key={n}>
 									<CheckboxLabeled.Label>Filter #{n}</CheckboxLabeled.Label>
 								</CheckboxLabeled>
 							))}

@@ -118,7 +118,7 @@ const ContextMenu = createClass({
 			portalId,
 		} = this.props;
 		return {
-			portalId: portalId || 'ContextMenu-Portal-' + Math.random().toString(16).substr(2),
+			portalId: portalId || _.uniqueId('ContextMenu-Portal-'),
 			targetRect: {
 				bottom: 0,
 				top: 0,

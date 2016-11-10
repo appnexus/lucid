@@ -1,0 +1,182 @@
+exports[`Autocomplete [common] example testing should match snapshot(s) for 1.basic 1`] = `
+<DropMenu
+  className="lucid-Autocomplete"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}>
+  <DropMenu.Control
+    onClick={[Function]}>
+    <div
+      className="lucid-Autocomplete-Control">
+      <input
+        className="lucid-Autocomplete-Control-input"
+        disabled={false}
+        onKeyDown={[Function]}
+        placeholder="Enter a word..."
+        type="text" />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option>
+    Portland
+  </DropMenu.Option>
+  <DropMenu.Option>
+    pinky and the brain
+  </DropMenu.Option>
+  <DropMenu.Option>
+    playa please
+  </DropMenu.Option>
+  <DropMenu.Option>
+    porridge
+  </DropMenu.Option>
+  <DropMenu.Option>
+    portal
+  </DropMenu.Option>
+  <DropMenu.Option>
+    potent potables
+  </DropMenu.Option>
+  <DropMenu.Option>
+    potent
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`Autocomplete [common] example testing should match snapshot(s) for 4.stateless 1`] = `
+<DropMenu
+  className="lucid-Autocomplete"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={2}
+  isDisabled={false}
+  isExpanded={true}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}>
+  <DropMenu.Control
+    onClick={[Function]}>
+    <div
+      className="lucid-Autocomplete-Control lucid-Autocomplete-Control-is-expanded">
+      <input
+        className="lucid-Autocomplete-Control-input"
+        disabled={false}
+        onKeyDown={[Function]}
+        placeholder="Enter a word..."
+        type="text" />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-match">
+      ab
+    </span>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      aft
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-match">
+      ab
+    </span>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      ounding
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-match">
+      ab
+    </span>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      rasive
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      accidental
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      actor
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      addition
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      adhesive
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      adjustment
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      advertisement
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      applaud
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      appreciate
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      awesome
+    </span>
+  </DropMenu.Option>
+  <DropMenu.Option>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-match">
+      ab
+    </span>
+    <span
+      className="lucid-Autocomplete-Option-suggestion-post">
+      racadabra alakazam hocus pocus shazam say the magic word please if you will thank you very much
+    </span>
+  </DropMenu.Option>
+</DropMenu>
+`;

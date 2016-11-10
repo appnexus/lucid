@@ -2,7 +2,6 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, findTypes, rejectTypes, omitProps } from '../../util/component-types';
-import getRandom from '../../util/random';
 import reducers from './RadioGroup.reducers';
 
 import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
@@ -85,7 +84,7 @@ const RadioGroup = createClass({
 
 	getDefaultProps() {
 		return {
-			name: `${cx('&')}-${getRandom()}`,
+			name: _.uniqueId(`${cx('&')}-`),
 			onSelect: _.noop,
 			selectedIndex: 0,
 		};

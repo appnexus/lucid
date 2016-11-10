@@ -1,0 +1,25 @@
+exports[`Overlay [common] example testing should match snapshot(s) for basic 1`] = `
+<Portal
+  portalId="Overlay-Portal-6">
+  <ReactCSSTransitionGroup
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={300}
+    transitionLeave={true}
+    transitionLeaveTimeout={300}
+    transitionName="lucid-Overlay" />
+</Portal>
+`;
+
+exports[`Overlay [common] example testing should match snapshot(s) for no-modal 1`] = `
+<Portal
+  portalId="Overlay-Portal-7">
+  <ReactCSSTransitionGroup
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={300}
+    transitionLeave={true}
+    transitionLeaveTimeout={300}
+    transitionName="lucid-Overlay" />
+</Portal>
+`;

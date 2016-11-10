@@ -505,14 +505,14 @@ describe('#safeMerge', () => {
 });
 
 describe('#buildHybridComponent', () => {
-	const Counter = createClass({
+	const CounterDumb = createClass({
 		displayName: 'Counter',
 		propTypes: {
 			count: React.PropTypes.number,
 			onIncrement: React.PropTypes.func,
 			onDecrement: React.PropTypes.func,
 			countDisplay: React.PropTypes.string,
-			countModThree: React.PropTypes.string,
+			countModThree: React.PropTypes.number,
 		},
 		getDefaultProps() {
 			return {
@@ -553,7 +553,7 @@ describe('#buildHybridComponent', () => {
 	});
 
 	it('should generate a stateful component from stateless component + reducers', () => {
-		const StatefulCounter = buildHybridComponent(Counter);
+		const StatefulCounter = buildHybridComponent(CounterDumb);
 		const wrapper = mount(<StatefulCounter />);
 
 		const minusButton = wrapper.find('button.minus');
@@ -593,12 +593,12 @@ describe('#buildHybridComponent', () => {
 	});
 
 	it('should not wrap a wrapped component', () => {
-		const StatefulCounter = buildHybridComponent(Counter);
+		const StatefulCounter = buildHybridComponent(CounterDumb);
 		assert.equal(StatefulCounter, buildHybridComponent(StatefulCounter));
 	});
 
 	it('should prioritize passed-in prop values over internal state', () => {
-		const StatefulCounter = buildHybridComponent(Counter);
+		const StatefulCounter = buildHybridComponent(CounterDumb);
 		const wrapper = mount(<StatefulCounter count={36} />);
 
 		let minusButton = wrapper.find('button.minus');
@@ -624,7 +624,7 @@ describe('#buildHybridComponent', () => {
 	});
 
 	it('should override initial default state with data from the `initialState` prop', () => {
-		const StatefulCounter = buildHybridComponent(Counter);
+		const StatefulCounter = buildHybridComponent(CounterDumb);
 		const wrapper = mount(<StatefulCounter initialState={{ count: 36 }} />);
 
 		let minusButton = wrapper.find('button.minus');
@@ -652,7 +652,7 @@ describe('#buildHybridComponent', () => {
 	it('should call functions passed in thru props with same name as invoked reducers', () => {
 		const onIncrement = sinon.spy();
 		const onDecrement = sinon.spy();
-		const StatefulCounter = buildHybridComponent(Counter);
+		const StatefulCounter = buildHybridComponent(CounterDumb);
 		const wrapper = mount(<StatefulCounter onIncrement={onIncrement} onDecrement={onDecrement} />);
 
 		let minusButton = wrapper.find('button.minus');
@@ -682,7 +682,7 @@ describe('#buildHybridComponent', () => {
 	it('should allow the consumer to override reducers', () => {
 		const onIncrement = sinon.spy();
 		const onDecrement = sinon.spy();
-		const StatefulCounter = buildHybridComponent(Counter, {
+		const StatefulCounter = buildHybridComponent(CounterDumb, {
 			reducers: { onIncrement, onDecrement },
 		});
 		const wrapper = mount(<StatefulCounter />);

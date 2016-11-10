@@ -1,0 +1,120 @@
+exports[`RadioButton [common] example testing should match snapshot(s) for interactive 1`] = `
+<span
+  className="lucid-RadioButton"
+  onClick={[Function]}
+  onTouchEnd={[Function]}>
+  <input
+    checked={false}
+    className="lucid-RadioButton-native"
+    disabled={false}
+    name="interactive-radio-buttons"
+    onChange={[Function]}
+    tabIndex={20}
+    type="radio" />
+  <span
+    className="lucid-RadioButton-visualization-glow"
+    onClick={[Function]} />
+  <span
+    className="lucid-RadioButton-visualization-container"
+    onClick={[Function]} />
+  <span
+    className="lucid-RadioButton-visualization-dot"
+    onClick={[Function]} />
+</span>
+`;
+
+exports[`RadioButton [common] example testing should match snapshot(s) for states 1`] = `
+<span
+  className="lucid-RadioButton"
+  onClick={[Function]}
+  onTouchEnd={[Function]}>
+  <input
+    checked={false}
+    className="lucid-RadioButton-native"
+    disabled={false}
+    onChange={[Function]}
+    tabIndex={20}
+    type="radio" />
+  <span
+    className="lucid-RadioButton-visualization-glow"
+    onClick={[Function]} />
+  <span
+    className="lucid-RadioButton-visualization-container"
+    onClick={[Function]} />
+  <span
+    className="lucid-RadioButton-visualization-dot"
+    onClick={[Function]} />
+</span>
+`;
+
+exports[`RadioButton [common] example testing should match snapshot(s) for states 2`] = `
+<span
+  className="lucid-RadioButton lucid-RadioButton-is-selected"
+  onClick={[Function]}
+  onTouchEnd={[Function]}>
+  <input
+    checked={true}
+    className="lucid-RadioButton-native"
+    disabled={false}
+    onChange={[Function]}
+    tabIndex={21}
+    type="radio" />
+  <span
+    className="lucid-RadioButton-visualization-glow"
+    onClick={[Function]} />
+  <span
+    className="lucid-RadioButton-visualization-container"
+    onClick={[Function]} />
+  <span
+    className="lucid-RadioButton-visualization-dot"
+    onClick={[Function]} />
+</span>
+`;
+
+exports[`RadioButton [common] example testing should match snapshot(s) for states 3`] = `
+<span
+  className="lucid-RadioButton lucid-RadioButton-is-disabled"
+  onClick={[Function]}
+  onTouchEnd={[Function]}>
+  <input
+    checked={false}
+    className="lucid-RadioButton-native"
+    disabled={true}
+    onChange={[Function]}
+    tabIndex={22}
+    type="radio" />
+  <span
+    className="lucid-RadioButton-visualization-glow"
+    onClick={[Function]} />
+  <span
+    className="lucid-RadioButton-visualization-container"
+    onClick={[Function]} />
+  <span
+    className="lucid-RadioButton-visualization-dot"
+    onClick={[Function]} />
+</span>
+`;
+
+exports[`RadioButton [common] example testing should match snapshot(s) for states 4`] = `
+<span
+  className="lucid-RadioButton lucid-RadioButton-is-disabled lucid-RadioButton-is-selected"
+  onClick={[Function]}
+  onTouchEnd={[Function]}>
+  <input
+    checked={true}
+    className="lucid-RadioButton-native"
+    disabled={true}
+    onChange={[Function]}
+    tabIndex={23}
+    type="radio" />
+  <span
+    className="lucid-RadioButton-visualization-glow"
+    onClick={[Function]} />
+  <span
+    className="lucid-RadioButton-visualization-container"
+    onClick={[Function]} />
+  <span
+    className="lucid-RadioButton-visualization-dot"
+    onClick={[Function]} />
+</span>
+`;

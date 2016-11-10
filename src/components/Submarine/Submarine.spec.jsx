@@ -1,5 +1,5 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
 import { common } from '../../util/generic-tests';
@@ -51,16 +51,8 @@ describe('Submarine', () => {
 		});
 
 		describe('isExpanded', () => {
-			let wrapper;
-
-			afterEach(() => {
-				if (wrapper) {
-					wrapper.unmount();
-				}
-			});
-
 			it('should pass isExpanded to the underlying SplitHorizontal (true)', () => {
-				wrapper = shallow(
+				const wrapper = shallow(
 					<Submarine isExpanded={true} />
 				);
 
@@ -71,7 +63,7 @@ describe('Submarine', () => {
 			});
 
 			it('should pass isExpanded to the underlying SplitHorizontal (false)', () => {
-				wrapper = mount(
+				const wrapper = shallow(
 					<Submarine isExpanded={false} />
 				);
 
@@ -82,7 +74,7 @@ describe('Submarine', () => {
 			});
 
 			it('should default to true', () => {
-				wrapper = shallow(
+				const wrapper = shallow(
 					<Submarine />
 				);
 

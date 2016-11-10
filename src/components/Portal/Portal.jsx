@@ -21,6 +21,7 @@ const {
  * to `document.body`.
  */
 const Portal = createClass({
+	displayName: 'Portal',
 	propTypes: {
 		/**
 		 * any valid React children

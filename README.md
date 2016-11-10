@@ -1,4 +1,4 @@
-# Lucid [![Build Status](https://travis-ci.org/appnexus/lucid.svg?branch=master)](https://travis-ci.org/appnexus/lucid) [![Stories in Ready](https://badge.waffle.io/appnexus/lucid.png?label=ready&title=Ready)](https://waffle.io/appnexus/lucid)
+# Lucid  [![Build Status](https://travis-ci.org/appnexus/lucid.svg?branch=master)](https://travis-ci.org/appnexus/lucid) [![codecov](https://codecov.io/gh/appnexus/lucid/branch/master/graph/badge.svg)](https://codecov.io/gh/appnexus/lucid) [![Stories in Ready](https://badge.waffle.io/appnexus/lucid.png?label=ready&title=Ready)](https://waffle.io/appnexus/lucid)
 
 A UI component library from AppNexus.
 
@@ -50,6 +50,8 @@ To contribute to lucid, please see `CONTRIBUTING.md`.
 
 - [BrowserStack] for providing cross-browser testing infrastructure.
 - [Travis CI] for providing continuous integration infrastructure.
+- [CodeCov] for providing code coverage analysis infrastructure.
 
 [BrowserStack]: https://www.browserstack.com/
 [Travis CI]: https://travis-ci.org/
+[CodeCov]: https://codecov.io

@@ -1,10 +1,9 @@
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
-import elementResizeDetectorMaker from 'element-resize-detector';
+import { elementResizeDetector } from './Resizer.util';
 
 const cx = lucidClassNames.bind('&-Resizer');
-const erd = elementResizeDetectorMaker({ strategy: 'scroll' });
 
 const {
 	func,
@@ -49,11 +48,11 @@ const Resizer = createClass({
 	},
 
 	componentDidMount() {
-		erd.listenTo(this._element, this.handleResize);
+		elementResizeDetector.listenTo(this._element, this.handleResize);
 	},
 
 	componentWillUnmount() {
-		erd.removeListener(this._element, this.handleResize);
+		elementResizeDetector.removeListener(this._element, this.handleResize);
 	},
 
 	render() {

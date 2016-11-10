@@ -1,0 +1,26 @@
+exports[`DragCaptureZone [common] example testing should match snapshot(s) for interactive 1`] = `
+<div
+  className="lucid-DragCaptureZone"
+  onDrag={[Function]}
+  onDragEnd={[Function]}
+  onDragStart={[Function]}
+  onMouseDown={[Function]}>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#b7b7b7",
+        "display": "flex",
+        "fontFamily": "Helvetica, sans-serif",
+        "fontSize": "24px",
+        "fontWeight": 300,
+        "height": 300,
+        "justifyContent": "center",
+        "textTransform": "uppercase",
+        "width": 400,
+      }
+    }>
+    Go wild!
+  </div>
+</div>
+`;
