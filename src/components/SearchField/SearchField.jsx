@@ -91,6 +91,10 @@ const SearchField = createClass({
 
 	getDefaultProps() {
 		return {
+			isDisabled: false,
+			onChange: _.noop,
+			onSubmit: _.noop,
+			value: '',
 		};
 	},
 

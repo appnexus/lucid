@@ -264,6 +264,7 @@ export {
 	Resizer,
 	ScrollTable,
 	SearchField,
+	SearchFieldDumb,
 	SearchIcon,
 	SeparatorIcon,
 	SettingsIcon,
