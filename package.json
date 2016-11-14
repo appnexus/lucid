@@ -71,7 +71,7 @@
     "gulp-postcss": "^6.1.0",
     "gulp-tar": "^1.8.0",
     "history": "^2.0.0",
-    "jest": "^16.0.2",
+    "jest": "^17.0.1",
     "json-loader": "^0.5.4",
     "less": "^2.3.1",
     "less-loader": "^2.2.2",
