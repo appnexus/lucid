@@ -1,6 +1,0 @@
-exports[`Badge [common] example testing should match snapshot(s) for default 1`] = `
-<span
-  className="lucid-Badge">
-  Badge
-</span>
-`;
