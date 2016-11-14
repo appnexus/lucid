@@ -3,8 +3,8 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import _ from 'lodash';
-import glob from 'glob';
-import { shallowToJson } from 'enzyme-to-json';
+// import glob from 'glob';
+// import { shallowToJson } from 'enzyme-to-json';
 import * as lucid from '../index';
 
 // Common tests for all our components
