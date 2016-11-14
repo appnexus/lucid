@@ -369,9 +369,9 @@ const SearchableSelect = createClass({
 				</DropMenu.Control>
 				<DropMenu.Header className={cx('&-Search-container')}>
 					<SearchField
+						{...searchFieldProps}
 						onChange={this.handleSearch}
 						value={searchText}
-						{...searchFieldProps}
 					/>
 				</DropMenu.Header>
 				{

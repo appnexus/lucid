@@ -11,7 +11,8 @@ exports[`SearchField [common] example testing should match snapshot(s) for 1.def
     onChangeDebounced={[Function]}
     onSubmit={[Function]}
     rows={5}
-    style={null} />
+    style={null}
+    value="" />
   <div
     className="lucid-SearchField-Icon-container">
     <SearchIcon
@@ -34,7 +35,8 @@ exports[`SearchField [common] example testing should match snapshot(s) for 3.pla
     onSubmit={[Function]}
     placeholder="Name/ID"
     rows={5}
-    style={null} />
+    style={null}
+    value="" />
   <div
     className="lucid-SearchField-Icon-container">
     <SearchIcon
@@ -56,7 +58,8 @@ exports[`SearchField [common] example testing should match snapshot(s) for 4.dis
     onChangeDebounced={[Function]}
     onSubmit={[Function]}
     rows={5}
-    style={null} />
+    style={null}
+    value="" />
   <div
     className="lucid-SearchField-Icon-container">
     <SearchIcon
@@ -78,7 +81,8 @@ exports[`SearchField [common] example testing should match snapshot(s) for 5.cus
     onChangeDebounced={[Function]}
     onSubmit={[Function]}
     rows={5}
-    style={null} />
+    style={null}
+    value="" />
   <div
     className="lucid-SearchField-Icon-container">
     <LoadingIcon
@@ -114,6 +118,178 @@ exports[`SearchField [common] example testing should match snapshot(s) for 7.val
     className="lucid-SearchField-Icon-container">
     <SearchIcon
       className="lucid-SearchField-Icon" />
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for 8.props 1`] = `
+<div
+  className="lucid-SearchField">
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value="foo" />
+  <div
+    className="lucid-SearchField-Icon-container">
+    <SearchIcon
+      className="lucid-SearchField-Icon lucid-SearchField-Icon-active" />
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for 8.props 2`] = `
+<div
+  className="lucid-SearchField">
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    placeholder="bar"
+    rows={5}
+    style={null}
+    value="" />
+  <div
+    className="lucid-SearchField-Icon-container">
+    <SearchIcon
+      className="lucid-SearchField-Icon" />
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for 8.props 3`] = `
+<div
+  className="lucid-SearchField">
+  <TextField
+    debounceLevel={500}
+    isDisabled={true}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value="" />
+  <div
+    className="lucid-SearchField-Icon-container">
+    <SearchIcon
+      className="lucid-SearchField-Icon" />
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for 8.props 4`] = `
+<div
+  className="lucid-SearchField">
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value="" />
+  <div
+    className="lucid-SearchField-Icon-container">
+    <SearchIcon
+      className="lucid-SearchField-Icon" />
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for 8.props 5`] = `
+<div
+  className="lucid-SearchField">
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value="" />
+  <div
+    className="lucid-SearchField-Icon-container">
+    <LoadingIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-SearchField-Icon"
+      isBadge={false}
+      size={16}
+      speed="normal"
+      viewBox="0 0 16 16" />
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for 8.props 6`] = `
+<div
+  className="lucid-SearchField">
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value="foo" />
+  <div
+    className="lucid-SearchField-Icon-container">
+    <LoadingIcon
+      aspectRatio="xMidYMid meet"
+      className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
+      isBadge={false}
+      size={16}
+      speed="normal"
+      viewBox="0 0 16 16" />
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for 8.props 7`] = `
+<div
+  className="lucid-SearchField">
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value="bar" />
+  <div
+    className="lucid-SearchField-Icon-container">
+    <SearchIcon
+      className="lucid-SearchField-Icon lucid-SearchField-Icon-active" />
   </div>
 </div>
 `;
