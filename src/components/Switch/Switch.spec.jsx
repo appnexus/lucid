@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import assert from 'assert';
 import React from 'react';
-import SyntheticEvent from 'react/lib/SyntheticEvent';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
@@ -89,7 +88,7 @@ describe('Switch', () => {
 
 			simulateEvent(<Switch isSelected={false} onSelect={onSelect} />, `.lucid-Switch${classSubString}`, event);
 			assert.equal(onSelect.args[0][0], true);
-			assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
+			assert(_.last(onSelect.args[0]).event);
 		});
 	}
 
@@ -99,7 +98,7 @@ describe('Switch', () => {
 
 			simulateEvent(<Switch isSelected={true} onSelect={onSelect} />, `.lucid-Switch${classSubString}`, event);
 			assert.equal(onSelect.args[0][0], false);
-			assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
+			assert(_.last(onSelect.args[0]).event);
 		});
 	}
 

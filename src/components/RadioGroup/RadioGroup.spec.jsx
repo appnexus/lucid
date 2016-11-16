@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import assert from 'assert';
 import React from 'react';
-import SyntheticEvent from 'react/lib/SyntheticEvent';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
@@ -184,7 +183,7 @@ describe('RadioGroup', () => {
 
 			wrapper.childAt(1).childAt(0).simulate('click');
 			assert.equal(onSelect.args[0][0], 1);
-			assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
+			assert(_.last(onSelect.args[0]).event);
 		});
 
 		it('calls the `onSelect` prop, if a function, of the child prior to calling its own.', () => {
