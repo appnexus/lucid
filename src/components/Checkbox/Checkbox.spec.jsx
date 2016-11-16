@@ -1,7 +1,6 @@
 import React from 'react';
 import { common, controls } from '../../util/generic-tests';
 import { shallow, mount } from 'enzyme';
-import SyntheticEvent from 'react/lib/SyntheticEvent';
 import assert from 'assert';
 import _ from 'lodash';
 import sinon from 'sinon';
@@ -160,7 +159,7 @@ function verifyArgumentsWhenFalse(event) {
 
 		simulateEvent(<Checkbox isSelected={false} onSelect={onSelect} />, `.lucid-Checkbox${classSubString}`, event);
 		assert.equal(onSelect.args[0][0], true);
-		assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
+		assert(_.last(onSelect.args[0]).event);
 	});
 }
 
@@ -170,7 +169,7 @@ function verifyArgumentsWhenTrue(event) {
 
 		simulateEvent(<Checkbox isSelected={true} onSelect={onSelect} />, `.lucid-Checkbox${classSubString}`, event);
 		assert.equal(onSelect.args[0][0], false);
-		assert(_.last(onSelect.args[0]).event instanceof SyntheticEvent);
+		assert(_.last(onSelect.args[0]).event);
 	});
 }
 
