@@ -1,0 +1,39 @@
+exports[`EqualsIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EqualsIcon"
+  isBadge={false}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <path
+    d="M3,5L3,7L13,7L13,5L3,5z M3,11L13,11L13,9L3,9L3,11z" />
+</Icon>
+`;
+
+exports[`EqualsIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EqualsIcon"
+  isBadge={false}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <path
+    d="M3,5L3,7L13,7L13,5L3,5z M3,11L13,11L13,9L3,9L3,11z" />
+</Icon>
+`;
+
+exports[`EqualsIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EqualsIcon"
+  isBadge={false}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16">
+  <path
+    d="M3,5L3,7L13,7L13,5L3,5z M3,11L13,11L13,9L3,9L3,11z" />
+</Icon>
+`;

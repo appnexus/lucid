@@ -1,0 +1,39 @@
+exports[`MaximizeIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-MaximizeIcon"
+  isBadge={false}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <path
+    d="M4,12h4v1.996c0,0-4.17,0.002-4.172,0c-0.814,0.057-1.314-0.465-1.314-0.465s-0.584-0.482-0.507-1.295 c-0.002-0.002,0-4.233,0-4.233L4,8V12z M13.996,3.828c0.057-0.814-0.465-1.314-0.465-1.314s-0.482-0.584-1.295-0.507 c-0.002-0.002-4.233,0-4.233,0L8,4h4v4h1.996C13.996,8,13.998,3.83,13.996,3.828z" />
+</Icon>
+`;
+
+exports[`MaximizeIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-MaximizeIcon"
+  isBadge={false}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <path
+    d="M4,12h4v1.996c0,0-4.17,0.002-4.172,0c-0.814,0.057-1.314-0.465-1.314-0.465s-0.584-0.482-0.507-1.295 c-0.002-0.002,0-4.233,0-4.233L4,8V12z M13.996,3.828c0.057-0.814-0.465-1.314-0.465-1.314s-0.482-0.584-1.295-0.507 c-0.002-0.002-4.233,0-4.233,0L8,4h4v4h1.996C13.996,8,13.998,3.83,13.996,3.828z" />
+</Icon>
+`;
+
+exports[`MaximizeIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-MaximizeIcon"
+  isBadge={false}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16">
+  <path
+    d="M4,12h4v1.996c0,0-4.17,0.002-4.172,0c-0.814,0.057-1.314-0.465-1.314-0.465s-0.584-0.482-0.507-1.295 c-0.002-0.002,0-4.233,0-4.233L4,8V12z M13.996,3.828c0.057-0.814-0.465-1.314-0.465-1.314s-0.482-0.584-1.295-0.507 c-0.002-0.002-4.233,0-4.233,0L8,4h4v4h1.996C13.996,8,13.998,3.83,13.996,3.828z" />
+</Icon>
+`;

@@ -110,7 +110,7 @@ export function common(Component, {
 		});
 
 		describe('example testing', () => {
-			const examples = glob.sync(`./src/components/${Component.displayName}/examples/*.jsx`).map(path => require('../../' + path).default);
+			const examples = glob.sync(`./src/components/**/${Component.displayName}/examples/*.jsx`).map(path => require('../../' + path).default);
 
 			_.each(examples, Example => {
 				it(`should match snapshot(s) for ${Example.displayName}`, () => {
