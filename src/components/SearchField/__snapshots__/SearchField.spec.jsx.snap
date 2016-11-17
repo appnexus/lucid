@@ -89,6 +89,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 5.cus
       aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
       isBadge={false}
+      isDisabled={false}
       size={16}
       speed="normal"
       viewBox="0 0 16 16" />
@@ -236,6 +237,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
       aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
       isBadge={false}
+      isDisabled={false}
       size={16}
       speed="normal"
       viewBox="0 0 16 16" />
@@ -264,6 +266,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
       aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
       isBadge={false}
+      isDisabled={false}
       size={16}
       speed="normal"
       viewBox="0 0 16 16" />

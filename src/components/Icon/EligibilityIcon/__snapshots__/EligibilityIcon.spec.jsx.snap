@@ -1,0 +1,521 @@
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={false}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={false}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={false}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1.default 4`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={false}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1.default 5`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={false}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1.default 6`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1.default 7`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1.default 8`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1.default 9`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={false}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2.clickable 2`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={false}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2.clickable 3`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={false}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2.clickable 4`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={false}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2.clickable 5`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={false}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2.clickable 6`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={true}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2.clickable 7`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={true}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2.clickable 8`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={true}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2.clickable 9`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={true}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={false}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3.disabled 2`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={false}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3.disabled 3`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={false}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3.disabled 4`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={false}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3.disabled 5`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={false}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3.disabled 6`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={true}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3.disabled 7`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={true}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3.disabled 8`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={true}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
+
+exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3.disabled 9`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-EligibilityIcon"
+  isBadge={true}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16">
+  <g>
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+    <path
+      className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected lucid-EligibilityIcon-half-circle-is-disabled"
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+  </g>
+</Icon>
+`;
