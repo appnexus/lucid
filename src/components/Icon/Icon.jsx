@@ -56,6 +56,11 @@ const Icon = createClass({
 		 */
 		isClickable: bool,
 		/**
+		 * Adds styling that makes the icon appear disabled.
+		 * Also forces isClickable to be false.
+		 */
+		isDisabled: bool,
+		/**
 		 * Any valid React children.
 		 */
 		children: any,
@@ -67,6 +72,7 @@ const Icon = createClass({
 			aspectRatio: 'xMidYMid meet',
 			viewBox: '0 0 16 16',
 			isBadge: false,
+			isDisabled: false,
 		};
 	},
 
@@ -80,6 +86,7 @@ const Icon = createClass({
 			aspectRatio,
 			isBadge,
 			isClickable,
+			isDisabled,
 			...passThroughs,
 		} = this.props;
 
@@ -101,7 +108,8 @@ const Icon = createClass({
 				style={_.pickBy(actualStyle, _.negate(_.isUndefined))}
 				className={cx('&', {
 					'&-is-badge': isBadge,
-					'&-is-clickable': isClickable,
+					'&-is-clickable': !isDisabled && isClickable,
+					'&-is-disabled': isDisabled,
 				}, className)}
 			>
 				{children}
