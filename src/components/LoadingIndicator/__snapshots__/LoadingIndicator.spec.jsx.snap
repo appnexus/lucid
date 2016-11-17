@@ -232,6 +232,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
         <LoadingIcon
           aspectRatio="xMidYMid meet"
           isBadge={false}
+          isDisabled={false}
           size={16}
           speed="slow"
           viewBox="0 0 16 16" />
@@ -319,6 +320,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
         <LoadingIcon
           aspectRatio="xMidYMid meet"
           isBadge={false}
+          isDisabled={false}
           size={16}
           speed="fast"
           viewBox="0 0 16 16" />
