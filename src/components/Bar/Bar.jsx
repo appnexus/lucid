@@ -85,7 +85,7 @@ const Bar = createClass({
 			style,
 			x,
 			y,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const isCustomColor = _.startsWith(color, '#');

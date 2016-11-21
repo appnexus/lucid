@@ -21,7 +21,7 @@ const ShoppingCartIcon = createClass({
 	render() {
 		const {
 			className,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		return (

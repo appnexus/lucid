@@ -350,7 +350,7 @@ const SplitHorizontal = createClass({
 		const {
 			children,
 			className,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const {

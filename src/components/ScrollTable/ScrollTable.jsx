@@ -72,7 +72,7 @@ const ScrollTable = createClass({
 			tableWidth,
 			hasWordWrap,
 			hasBorder,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		return (

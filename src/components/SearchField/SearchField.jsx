@@ -110,7 +110,7 @@ const SearchField = createClass({
 				onSubmit,
 				placeholder,
 				value,
-				...passThroughs,
+				...passThroughs
 			},
 		} = this;
 

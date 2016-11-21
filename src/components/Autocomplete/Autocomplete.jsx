@@ -208,7 +208,7 @@ const Autocomplete = createClass({
 			isDisabled,
 			DropMenu: dropMenuProps,
 			suggestions,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const { isExpanded } = dropMenuProps;

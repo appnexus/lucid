@@ -81,7 +81,7 @@ const EmptyStateWrapper = createClass({
 			className,
 			isEmpty,
 			isLoading,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const emptyMessageBodyProp = _.get(getFirst(this.props, EmptyStateWrapper.Body), 'props');

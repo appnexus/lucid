@@ -83,7 +83,7 @@ const Accordion = createClass({
 			style,
 			className,
 			selectedIndex,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const itemChildProps = _.map(findTypes(this.props, Accordion.Item), 'props');

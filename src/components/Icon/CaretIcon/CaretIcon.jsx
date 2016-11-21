@@ -43,7 +43,7 @@ const CaretIcon = createClass({
 			className,
 			direction,
 			size,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		return (

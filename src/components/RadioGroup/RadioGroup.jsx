@@ -96,7 +96,7 @@ const RadioGroup = createClass({
 			className,
 			name,
 			selectedIndex,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const radioButtonChildProps = _.map(findTypes(this.props, RadioGroup.RadioButton), 'props')

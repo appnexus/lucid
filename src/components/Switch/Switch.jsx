@@ -74,7 +74,7 @@ const Switch = createClass({
 			isDisabled,
 			isSelected,
 			style,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		return (

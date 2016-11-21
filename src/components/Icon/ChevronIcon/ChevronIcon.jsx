@@ -42,7 +42,7 @@ const ChevronIcon = createClass({
 			className,
 			direction,
 			size,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		return (

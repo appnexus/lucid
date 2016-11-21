@@ -196,7 +196,7 @@ const Sidebar = createClass({
 			position,
 			isResizeDisabled,
 			width,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const primaryProps = _.get(_.first(filterTypes(children, Sidebar.Primary)), 'props', {}); // props from first Primary

@@ -104,7 +104,7 @@ const Axis = createClass({
 			outerTickSize,
 			tickFormat = scale.tickFormat ? scale.tickFormat() : _.identity,
 			tickPadding,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const tickSpacing = Math.max(innerTickSize, 0) + tickPadding;

@@ -40,7 +40,7 @@ const Thead = createClass({
 		const {
 			children,
 			className,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		return (
@@ -73,7 +73,7 @@ const Tbody = createClass({
 		const {
 			children,
 			className,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		return (
@@ -135,7 +135,7 @@ const Tr = createClass({
 			isSelected,
 			isActionable,
 			isActive,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		return (
@@ -286,7 +286,7 @@ const Th = createClass({
 			isSorted,
 			sortDirection,
 			style,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 		const {
 			activeWidth,
@@ -490,7 +490,7 @@ const Td = createClass({
 			align,
 			hasBorderRight,
 			hasBorderLeft,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		return (
@@ -572,7 +572,7 @@ const Table = createClass({
 			density,
 			hasWordWrap,
 			style,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		return (

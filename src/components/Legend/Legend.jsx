@@ -107,7 +107,7 @@ const Legend = createClass({
 			className,
 			hasBorders,
 			isReversed,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const isHorizontal = orient === 'horizontal';

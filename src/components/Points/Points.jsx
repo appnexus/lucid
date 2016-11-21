@@ -164,7 +164,7 @@ const Points = createClass({
 			yStackedMax,
 			isStacked,
 			yScale: yScaleOriginal,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		// Copy the original so we can mutate it

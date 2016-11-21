@@ -204,7 +204,7 @@ const ToolTip = createClass({
 			kind,
 			portalId,
 			style,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const targetProps = _.first(_.map(findTypes(this.props, ToolTip.Target), 'props'));

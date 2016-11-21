@@ -88,7 +88,7 @@ const SwitchLabeled = createClass({
 			isSelected,
 			onSelect,
 			style,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const labelChildProps = _.get(getFirst(this.props, SwitchLabeled.Label), 'props');

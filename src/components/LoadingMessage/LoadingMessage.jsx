@@ -75,7 +75,7 @@ const LoadingMessage = createClass({
 			props,
 			props: {
 				className,
-				...passThroughs,
+				...passThroughs
 			},
 		} = this;
 

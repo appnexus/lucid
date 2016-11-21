@@ -51,7 +51,7 @@ const Breadcrumb = createClass({
 
 		const {
 			className,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const items = findTypes(this.props, Breadcrumb.Item);

@@ -76,7 +76,7 @@ const CheckboxLabeled = createClass({
 			isSelected,
 			onSelect,
 			style,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const labelChildProps = _.first(_.map(findTypes(this.props, CheckboxLabeled.Label), 'props'));

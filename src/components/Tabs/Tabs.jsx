@@ -79,7 +79,7 @@ const Tab = createClass({
 			props: {
 				index,
 				onSelect,
-				...passThroughs,
+				...passThroughs
 			},
 		} = this;
 
@@ -217,7 +217,7 @@ const Tabs = createClass({
 			isOpen,
 			isProgressive,
 			selectedIndex,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		// Grab props array from each Tab
