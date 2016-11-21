@@ -125,7 +125,7 @@ const Overlay = createClass({
 			isShown,
 			isModal,
 			children,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const {

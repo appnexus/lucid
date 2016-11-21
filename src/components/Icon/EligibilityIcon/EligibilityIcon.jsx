@@ -49,7 +49,7 @@ const EligibilityIcon = createClass({
 			className,
 			eligibility,
 			isDisabled,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		return (

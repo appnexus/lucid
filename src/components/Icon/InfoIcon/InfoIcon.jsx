@@ -22,7 +22,7 @@ const InfoIcon = createClass({
 		const {
 			className,
 			isDisabled,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		return (

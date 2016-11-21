@@ -138,7 +138,7 @@ const VerticalListMenu = createClass({
 			style,
 			selectedIndices,
 			expandedIndices,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const itemChildProps = _.map(findTypes(this.props, VerticalListMenu.Item), 'props');

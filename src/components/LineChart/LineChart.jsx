@@ -425,7 +425,7 @@ const LineChart = createClass({
 				: maxByFields(data, y2AxisFields),
 			y2AxisColorOffset,
 
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const {

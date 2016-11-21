@@ -194,7 +194,7 @@ const Bars = createClass({
 			yStackedMax,
 			yTooltipFormatter,
 			isStacked,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const {

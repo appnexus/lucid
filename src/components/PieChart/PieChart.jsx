@@ -247,7 +247,7 @@ const PieChart = createClass({
 			yAxisField,
 			yAxisFormatter,
 
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const margin = {

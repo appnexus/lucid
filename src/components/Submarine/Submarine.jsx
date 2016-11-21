@@ -169,7 +169,7 @@ const Submarine = createClass({
 			position,
 			isResizeDisabled,
 			height,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const primaryProps = _.get(_.first(filterTypes(children, Submarine.Primary)), 'props', {}); // props from first Primary

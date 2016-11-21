@@ -356,7 +356,7 @@ const SplitVertical = createClass({
 			children,
 			className,
 			isResizeable,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const {

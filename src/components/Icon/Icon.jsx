@@ -87,7 +87,7 @@ const Icon = createClass({
 			isBadge,
 			isClickable,
 			isDisabled,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		// Because we control the icon size inline, we must also control the border

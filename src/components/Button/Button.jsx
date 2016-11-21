@@ -118,7 +118,7 @@ const Button = createClass({
 			className,
 			children,
 			type,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		return (

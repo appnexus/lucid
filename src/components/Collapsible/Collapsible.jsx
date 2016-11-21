@@ -125,7 +125,7 @@ const Collapsible = createClass({
 			isMountControlled,
 			mountControlThreshold,
 			rootType,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const {

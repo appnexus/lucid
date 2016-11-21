@@ -64,7 +64,7 @@ const TextFieldValidated = createClass({
 		const {
 			className,
 			style,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const errorChildProps = _.map(findTypes(this.props, TextFieldValidated.Error), 'props');

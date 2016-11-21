@@ -42,7 +42,7 @@ const ArrowIcon = createClass({
 		const {
 			className,
 			direction,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		return (

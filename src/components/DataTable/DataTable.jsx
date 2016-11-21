@@ -200,7 +200,7 @@ const DataTable = createClass({
 			isLoading,
 			isSelectable,
 			style,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 

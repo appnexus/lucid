@@ -355,7 +355,7 @@ const ContextMenu = createClass({
 				direction,
 				isExpanded,
 				style,
-				...passThroughs,
+				...passThroughs
 			},
 			state: {
 				portalId,

@@ -238,7 +238,7 @@ const TextField = createClass({
 			isMultiLine,
 			rows,
 			style,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const {

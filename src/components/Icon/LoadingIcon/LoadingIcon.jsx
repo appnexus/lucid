@@ -39,7 +39,7 @@ const LoadingIcon = createClass({
 			speed,
 			style,
 			isDisabled,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const animationDuration = `${durations[speed] || durations.normal}`;

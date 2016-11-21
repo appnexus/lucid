@@ -157,7 +157,7 @@ const Lines = createClass({
 			yFields,
 			yScale: yScaleOriginal,
 			yStackedMax,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		// Copy the original so we can mutate it
