@@ -332,26 +332,25 @@ const DataTable = createClass({
 										</Td>
 								)})}
 							</Tr>
-						)).concat(
-							_.times(minRows - _.size(data), (index) => (
-								<Tr
-									isDisabled
-									key={'row' + index}
-									style={{height: '32px'}}
-								>
-									{isSelectable ? (<Td />) : null}
-									{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => (
-										<Td
-											{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
-											style={{
-												width: columnProps.width,
-											}}
-											key={'row' + index + _.get(columnProps, 'field', columnIndex)}
-										/>
-									))}
-								</Tr>
-							))
-						)}
+						))}
+						{_.times(minRows - _.size(data), (index) => (
+							<Tr
+								isDisabled
+								key={'row' + index}
+								style={{height: '32px'}}
+							>
+								{isSelectable ? (<Td />) : null}
+								{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => (
+									<Td
+										{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
+										style={{
+											width: columnProps.width,
+										}}
+										key={'row' + index + _.get(columnProps, 'field', columnIndex)}
+									/>
+								))}
+							</Tr>
+						))}
 					</Tbody>
 				</ScrollTable>
 			</EmptyStateWrapper>
