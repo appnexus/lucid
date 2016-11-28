@@ -98,7 +98,8 @@
 			}
 		}
 
-		& > .lucid-SplitVertical-Divider.lucid-Sidebar-Divider {
+		// Triple specificity to beat some styles in SplitVertical.less
+		& > .lucid-SplitVertical-Divider.lucid-Sidebar-Divider.lucid-Sidebar-Divider {
 			position: relative;
 			display: flex;
 			flex-direction: column;

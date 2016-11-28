@@ -140,7 +140,7 @@ describe('DataTable', () => {
 
 	describe('props', () => {
 		describe('data', () => {
-			it('should render 10 rows if data is an empty array', () => {
+			it('should render 10 empty rows by default if data is an empty array', () => {
 				const wrapper = shallow(
 					<DataTable />
 				);
@@ -153,7 +153,7 @@ describe('DataTable', () => {
 				assert.equal(TrWrapper.length, 10, 'should render 10 empty rows');
 			});
 
-			it('should render a row for each element in the array', () => {
+			it('should render a row for each element in the array if data size is greater than or equal to 10', () => {
 				const wrapper = shallow(
 					<DataTable data={testData} />
 				);
@@ -207,19 +207,62 @@ describe('DataTable', () => {
 
 				// for each row check that the correct cells are rendered in order
 				trsWrapper.forEach((trWrapper, index) => {
-					const tdsWrapper = trWrapper.shallow().find(ScrollTable.Td);
+					if (index < 2) {
+						const tdsWrapper = trWrapper.shallow().find(ScrollTable.Td);
 
-					assert.equal(trWrapper.props().isDisabled, _.get(testDataWithEmptyCells[index], 'isDisabled'), 'row must be passed `isDisabled`');
-					assert.equal(trWrapper.props().isSelected, _.get(testDataWithEmptyCells[index], 'isSelected'), 'row must be passed `isSelected`');
-					assert.equal(trWrapper.props().isActive, _.get(testDataWithEmptyCells[index], 'isActive'), 'row must be passed `isActive`');
+						assert.equal(trWrapper.props().isDisabled, _.get(testDataWithEmptyCells[index], 'isDisabled'), 'row must be passed `isDisabled`');
+						assert.equal(trWrapper.props().isSelected, _.get(testDataWithEmptyCells[index], 'isSelected'), 'row must be passed `isSelected`');
+						assert.equal(trWrapper.props().isActive, _.get(testDataWithEmptyCells[index], 'isActive'), 'row must be passed `isActive`');
 
-					assert.equal(tdsWrapper.at(0).children().text(), _.get(testDataWithEmptyCells[index], 'id'), 'first cell must match id of current row');
-					assert(!tdsWrapper.at(0).prop('isEmpty'), 'should not be marked as empty, despite not being a string');
-					assert.equal(tdsWrapper.at(1).children().text(), _.get(testDataWithEmptyCells[index], 'first_name'), 'second cell must match first_name of current row');
-					assert.equal(tdsWrapper.at(2).children().text(), '--', 'third (empty) cell should be `--`');
-					assert.equal(tdsWrapper.at(3).children().text(), _.get(testDataWithEmptyCells[index], 'email'), 'fourth cell must match email of current row');
-					assert.equal(tdsWrapper.at(4).children().text(), _.get(testDataWithEmptyCells[index], 'occupation'), 'fifth cell must match occupation of current row');
+						assert.equal(tdsWrapper.at(0).children().text(), _.get(testDataWithEmptyCells[index], 'id'), 'first cell must match id of current row');
+						assert(!tdsWrapper.at(0).prop('isEmpty'), 'should not be marked as empty, despite not being a string');
+						assert.equal(tdsWrapper.at(1).children().text(), _.get(testDataWithEmptyCells[index], 'first_name'), 'second cell must match first_name of current row');
+						assert.equal(tdsWrapper.at(2).children().text(), '--', 'third (empty) cell should be `--`');
+						assert.equal(tdsWrapper.at(3).children().text(), _.get(testDataWithEmptyCells[index], 'email'), 'fourth cell must match email of current row');
+						assert.equal(tdsWrapper.at(4).children().text(), _.get(testDataWithEmptyCells[index], 'occupation'), 'fifth cell must match occupation of current row');
+					}
 				});
+			});
+		});
+
+		describe('minRows', () => {
+			it('should render the number of `minRows` if data is an empty array', () => {
+				const wrapper = shallow(
+					<DataTable minRows={7} />
+				);
+
+				const TrWrapper = wrapper
+					.find(ScrollTable).shallow()
+						.find(ScrollTable.Tbody).shallow()
+							.find(ScrollTable.Tr);
+
+				assert.equal(TrWrapper.length, 7, 'should render 7 empty rows');
+			});
+
+			it('should render a row for each element in the array if there is more data than `minRows`', () => {
+				const wrapper = shallow(
+					<DataTable data={testData} minRows={7} />
+				);
+
+				const TrWrapper = wrapper
+					.find(ScrollTable).shallow()
+						.find(ScrollTable.Tbody).shallow()
+							.find(ScrollTable.Tr);
+
+				assert.equal(TrWrapper.length, testData.length, 'number of rendered rows must match size of the data array');
+			});
+
+			it('should render at least the number of `minRows` if there is less data than `minRows`', () => {
+				const wrapper = shallow(
+					<DataTable data={testData} minRows={14} />
+				);
+
+				const TrWrapper = wrapper
+					.find(ScrollTable).shallow()
+						.find(ScrollTable.Tbody).shallow()
+							.find(ScrollTable.Tr);
+
+				assert.equal(TrWrapper.length, 14, 'number of rendered rows must match `minRows` value');
 			});
 		});
 
