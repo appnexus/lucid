@@ -20,6 +20,7 @@ const cx = lucidClassNames.bind('&-DataTable');
 const {
 	any,
 	func,
+	number,
 	object,
 	string,
 	bool,
@@ -69,6 +70,10 @@ const DataTable = createClass({
 		 */
 		style: object,
 		/**
+		 * The minimum number of rows to rendered. If not enough data is provided, the remainder will be shown as empty rows.
+		 */
+		minRows: number,
+		/**
 		 * Handler for row click. Signature is `(object, index, { props, event }) => {...}`
 		 */
 		onRowClick: func,
@@ -112,6 +117,7 @@ const DataTable = createClass({
 			onSelect: _.noop,
 			onSelectAll: _.noop,
 			onSort: _.noop,
+			minRows: 10,
 		};
 	},
 
@@ -200,6 +206,7 @@ const DataTable = createClass({
 			isLoading,
 			isSelectable,
 			style,
+			minRows,
 			...passThroughs
 		} = this.props;
 
@@ -294,41 +301,39 @@ const DataTable = createClass({
 						) : null}
 					</Thead>
 					<Tbody>
-						{data && data.length > 0 ?
-							_.map(data, (row, index) => (
-								<Tr
-									{..._.pick(row, ['isDisabled', 'isActive', 'isSelected'])}
-									onClick={_.partial(this.handleRowClick, index)}
-									isActionable={isActionable}
-									key={'row' + index}
-								>
-									{isSelectable ? (
-										<Td>
-											<Checkbox
-												isSelected={row.isSelected}
-												onSelect={_.partial(this.handleSelect, index)}
-											/>
-										</Td>
-									) : null}
-									{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => {
-										const cellValue = _.get(row, columnProps.field);
-										const isEmpty = _.isEmpty(_.toString(cellValue));
+						{_.map(data, (row, index) => (
+							<Tr
+								{..._.pick(row, ['isDisabled', 'isActive', 'isSelected'])}
+								onClick={_.partial(this.handleRowClick, index)}
+								isActionable={isActionable}
+								key={'row' + index}
+							>
+								{isSelectable ? (
+									<Td>
+										<Checkbox
+											isSelected={row.isSelected}
+											onSelect={_.partial(this.handleSelect, index)}
+										/>
+									</Td>
+								) : null}
+								{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => {
+									const cellValue = _.get(row, columnProps.field);
+									const isEmpty = _.isEmpty(_.toString(cellValue));
 
-										return (
-											<Td
-												{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
-												style={{
-													width: columnProps.width,
-												}}
-												key={'row' + index + _.get(columnProps, 'field', columnIndex)}
-											>
-												{isEmpty ? emptyCellText : cellValue}
-											</Td>
-									)})}
-								</Tr>
-						))
-						:
-						_.times(10, (index) => (
+									return (
+										<Td
+											{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
+											style={{
+												width: columnProps.width,
+											}}
+											key={'row' + index + _.get(columnProps, 'field', columnIndex)}
+										>
+											{isEmpty ? emptyCellText : cellValue}
+										</Td>
+								)})}
+							</Tr>
+						))}
+						{_.times(minRows - _.size(data), (index) => (
 							<Tr
 								isDisabled
 								key={'row' + index}
@@ -345,8 +350,7 @@ const DataTable = createClass({
 									/>
 								))}
 							</Tr>
-						))
-					}
+						))}
 					</Tbody>
 				</ScrollTable>
 			</EmptyStateWrapper>

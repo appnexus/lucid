@@ -1,4 +1,4 @@
-exports[`DataTable [common] example testing should match snapshot(s) for 1.basic 1`] = `
+exports[`DataTable [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <EmptyStateWrapper
   Title="You have no items."
   isEmpty={false}>
@@ -711,7 +711,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 1.basic
 </EmptyStateWrapper>
 `;
 
-exports[`DataTable [common] example testing should match snapshot(s) for 2.column-groups 1`] = `
+exports[`DataTable [common] example testing should match snapshot(s) for 02.column-groups 1`] = `
 <EmptyStateWrapper
   Title="You have no items."
   isEmpty={false}>
@@ -1444,7 +1444,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 2.colum
 </EmptyStateWrapper>
 `;
 
-exports[`DataTable [common] example testing should match snapshot(s) for 3.selectable-and-navigable-rows 1`] = `
+exports[`DataTable [common] example testing should match snapshot(s) for 03.selectable-and-navigable-rows 1`] = `
 <EmptyStateWrapper
   Title="You have no items."
   isEmpty={false}>
@@ -2290,7 +2290,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 3.selec
 </EmptyStateWrapper>
 `;
 
-exports[`DataTable [common] example testing should match snapshot(s) for 4.interactive-table 1`] = `
+exports[`DataTable [common] example testing should match snapshot(s) for 04.interactive-table 1`] = `
 <EmptyStateWrapper
   Title="You have no items."
   isEmpty={false}>
@@ -3189,7 +3189,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 4.inter
 </EmptyStateWrapper>
 `;
 
-exports[`DataTable [common] example testing should match snapshot(s) for 5.disabled-rows 1`] = `
+exports[`DataTable [common] example testing should match snapshot(s) for 05.disabled-rows 1`] = `
 <EmptyStateWrapper
   Title="You have no items."
   isEmpty={false}>
@@ -3902,7 +3902,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 5.disab
 </EmptyStateWrapper>
 `;
 
-exports[`DataTable [common] example testing should match snapshot(s) for 6.empty 1`] = `
+exports[`DataTable [common] example testing should match snapshot(s) for 06.empty 1`] = `
 <EmptyStateWrapper
   Title="You have no items."
   isEmpty={true}>
@@ -4556,7 +4556,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 6.empty
 </EmptyStateWrapper>
 `;
 
-exports[`DataTable [common] example testing should match snapshot(s) for 7.empty-with-custom-title-and-body 1`] = `
+exports[`DataTable [common] example testing should match snapshot(s) for 07.empty-with-custom-title-and-body 1`] = `
 <EmptyStateWrapper
   isEmpty={true}>
   <EmptyStateWrapper.Title>
@@ -5220,7 +5220,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 7.empty
 </EmptyStateWrapper>
 `;
 
-exports[`DataTable [common] example testing should match snapshot(s) for 8.empty-with-image 1`] = `
+exports[`DataTable [common] example testing should match snapshot(s) for 08.empty-with-image 1`] = `
 <EmptyStateWrapper
   isEmpty={true}>
   <EmptyStateWrapper.Title>
@@ -5885,7 +5885,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 8.empty
 </EmptyStateWrapper>
 `;
 
-exports[`DataTable [common] example testing should match snapshot(s) for 9.loading 1`] = `
+exports[`DataTable [common] example testing should match snapshot(s) for 09.loading 1`] = `
 <EmptyStateWrapper
   Title="You have no items."
   isEmpty={true}
@@ -6488,6 +6488,580 @@ exports[`DataTable [common] example testing should match snapshot(s) for 9.loadi
             "height": "32px",
           }
         }>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          } />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          } />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          } />
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          } />
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          } />
+      </Table.Tr>
+    </Table.Tbody>
+  </ScrollTable>
+</EmptyStateWrapper>
+`;
+
+exports[`DataTable [common] example testing should match snapshot(s) for 10.min-rows 1`] = `
+<EmptyStateWrapper
+  Title="You have no items."
+  isEmpty={false}>
+  <ScrollTable
+    className="lucid-DataTable lucid-DataTable-full-width"
+    density="extended"
+    hasBorder={false}
+    hasWordWrap={false}
+    tableWidth="100%">
+    <Table.Thead>
+      <Table.Tr
+        isActionable={false}
+        isActive={false}
+        isDisabled={false}
+        isSelected={false}>
+        <Table.Th
+          align="left"
+          isResizable={false}
+          isSorted={false}
+          rowSpan={null}
+          sortDirection="up">
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]} />
+        </Table.Th>
+        <Table.Th
+          align="left"
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }>
+          ID
+        </Table.Th>
+        <Table.Th
+          align="left"
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }>
+          First
+        </Table.Th>
+        <Table.Th
+          align="left"
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }>
+          Last
+        </Table.Th>
+        <Table.Th
+          align="center"
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }>
+          E-Mail
+        </Table.Th>
+        <Table.Th
+          align="right"
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }>
+          Occupation
+        </Table.Th>
+      </Table.Tr>
+    </Table.Thead>
+    <Table.Tbody>
+      <Table.Tr
+        isActionable={true}
+        isActive={false}
+        isDisabled={false}
+        isSelected={true}
+        onClick={[Function]}>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}>
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={true}
+            onSelect={[Function]} />
+        </Table.Td>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }>
+          01
+        </Table.Td>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }>
+          Isaac
+        </Table.Td>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }>
+          Newton
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }>
+          inewton@example.com
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }>
+          Physicist
+        </Table.Td>
+      </Table.Tr>
+      <Table.Tr
+        isActionable={true}
+        isActive={true}
+        isDisabled={false}
+        isSelected={false}
+        onClick={[Function]}>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}>
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]} />
+        </Table.Td>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }>
+          02
+        </Table.Td>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }>
+          Albert
+        </Table.Td>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }>
+          Einstein
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }>
+          aeinstein@example.com
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }>
+          Physicist
+        </Table.Td>
+      </Table.Tr>
+      <Table.Tr
+        isActionable={true}
+        isActive={false}
+        isDisabled={false}
+        isSelected={false}
+        onClick={[Function]}>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}>
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]} />
+        </Table.Td>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }>
+          03
+        </Table.Td>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }>
+          Leonardo
+        </Table.Td>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }>
+          da Vinci
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }>
+          ldvinci@example.com
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }>
+          Engineer
+        </Table.Td>
+      </Table.Tr>
+      <Table.Tr
+        isActionable={true}
+        isActive={false}
+        isDisabled={false}
+        isSelected={false}
+        onClick={[Function]}>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}>
+          <Checkbox
+            isDisabled={false}
+            isIndeterminate={false}
+            isSelected={false}
+            onSelect={[Function]} />
+        </Table.Td>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }>
+          04
+        </Table.Td>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }>
+          Aristotle
+        </Table.Td>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }>
+          --
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }>
+          aristotle@example.com
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }>
+          Tutor
+        </Table.Td>
+      </Table.Tr>
+      <Table.Tr
+        isActionable={false}
+        isActive={false}
+        isDisabled={true}
+        isSelected={false}
+        style={
+          Object {
+            "height": "32px",
+          }
+        }>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false} />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          } />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          } />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          } />
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          } />
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          } />
+      </Table.Tr>
+      <Table.Tr
+        isActionable={false}
+        isActive={false}
+        isDisabled={true}
+        isSelected={false}
+        style={
+          Object {
+            "height": "32px",
+          }
+        }>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false} />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          } />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          } />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          } />
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          } />
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          } />
+      </Table.Tr>
+      <Table.Tr
+        isActionable={false}
+        isActive={false}
+        isDisabled={true}
+        isSelected={false}
+        style={
+          Object {
+            "height": "32px",
+          }
+        }>
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false} />
         <Table.Td
           align="left"
           hasBorderLeft={false}
