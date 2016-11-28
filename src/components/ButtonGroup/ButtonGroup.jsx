@@ -92,7 +92,7 @@ const ButtonGroup = createClass({
 			selectedIndices,
 			className,
 			children,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const buttonChildProps = _.map(findTypes(this.props, ButtonGroup.Button), 'props');

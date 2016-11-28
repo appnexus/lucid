@@ -97,7 +97,7 @@ const Point = createClass({
 			x,
 			y,
 			scale,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const kindIndex = kind % 5;

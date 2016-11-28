@@ -142,7 +142,7 @@ const Grid = createClass({
 			isHorizontal,
 			isGutterless,
 			isMultiline,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const cellChildProps = _.map(findTypes(this.props, Grid.Cell), 'props');

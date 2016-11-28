@@ -127,7 +127,7 @@ const Banner = createClass({
 			isCloseable,
 			hasRoundedCorners,
 			isClosed,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		let displayedIcon = null;

@@ -1,0 +1,51 @@
+exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-DangerLightIcon"
+  isBadge={false}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <path
+    className="lucid-DangerLightIcon-background"
+    d="M8,15c-3.859,0-7-3.141-7-7c0-3.86,3.141-7,7-7s7,3.14,7,7C15,11.859,11.859,15,8,15z" />
+  <path
+    className="lucid-DangerLightIcon-x"
+    d="M9.163,8l2.479,2.465l-1.168,1.17L8.007,9.156l-2.48,2.479l-1.17-1.171L6.836,8L4.387,5.537l1.17-1.171 l2.449,2.465l2.465-2.465l1.17,1.171L9.163,8z M16,8c0,4.418-3.582,8-8,8s-8-3.582-8-8s3.582-8,8-8S16,3.582,16,8z M15,8 c0-3.86-3.141-7-7-7S1,4.14,1,8c0,3.859,3.141,7,7,7S15,11.859,15,8z" />
+</Icon>
+`;
+
+exports[`DangerLightIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-DangerLightIcon"
+  isBadge={false}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <path
+    className="lucid-DangerLightIcon-background"
+    d="M8,15c-3.859,0-7-3.141-7-7c0-3.86,3.141-7,7-7s7,3.14,7,7C15,11.859,11.859,15,8,15z" />
+  <path
+    className="lucid-DangerLightIcon-x"
+    d="M9.163,8l2.479,2.465l-1.168,1.17L8.007,9.156l-2.48,2.479l-1.17-1.171L6.836,8L4.387,5.537l1.17-1.171 l2.449,2.465l2.465-2.465l1.17,1.171L9.163,8z M16,8c0,4.418-3.582,8-8,8s-8-3.582-8-8s3.582-8,8-8S16,3.582,16,8z M15,8 c0-3.86-3.141-7-7-7S1,4.14,1,8c0,3.859,3.141,7,7,7S15,11.859,15,8z" />
+</Icon>
+`;
+
+exports[`DangerLightIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-DangerLightIcon"
+  isBadge={false}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16">
+  <path
+    className="lucid-DangerLightIcon-background"
+    d="M8,15c-3.859,0-7-3.141-7-7c0-3.86,3.141-7,7-7s7,3.14,7,7C15,11.859,11.859,15,8,15z" />
+  <path
+    className="lucid-DangerLightIcon-x lucid-DangerLightIcon-x-is-disabled"
+    d="M9.163,8l2.479,2.465l-1.168,1.17L8.007,9.156l-2.48,2.479l-1.17-1.171L6.836,8L4.387,5.537l1.17-1.171 l2.449,2.465l2.465-2.465l1.17,1.171L9.163,8z M16,8c0,4.418-3.582,8-8,8s-8-3.582-8-8s3.582-8,8-8S16,3.582,16,8z M15,8 c0-3.86-3.141-7-7-7S1,4.14,1,8c0,3.859,3.141,7,7,7S15,11.859,15,8z" />
+</Icon>
+`;

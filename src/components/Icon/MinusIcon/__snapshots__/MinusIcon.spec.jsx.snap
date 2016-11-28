@@ -1,0 +1,79 @@
+exports[`MinusIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-MinusIcon"
+  isBadge={false}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <path
+    d="M3,7h10v2H3V7z" />
+</Icon>
+`;
+
+exports[`MinusIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-MinusIcon"
+  isBadge={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <path
+    d="M3,7h10v2H3V7z" />
+</Icon>
+`;
+
+exports[`MinusIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-MinusIcon"
+  isBadge={false}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <path
+    d="M3,7h10v2H3V7z" />
+</Icon>
+`;
+
+exports[`MinusIcon [common] example testing should match snapshot(s) for 2.clickable 2`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-MinusIcon"
+  isBadge={true}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16">
+  <path
+    d="M3,7h10v2H3V7z" />
+</Icon>
+`;
+
+exports[`MinusIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-MinusIcon"
+  isBadge={false}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16">
+  <path
+    d="M3,7h10v2H3V7z" />
+</Icon>
+`;
+
+exports[`MinusIcon [common] example testing should match snapshot(s) for 3.disabled 2`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-MinusIcon"
+  isBadge={true}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16">
+  <path
+    d="M3,7h10v2H3V7z" />
+</Icon>
+`;

@@ -73,7 +73,7 @@ const Dialog = createClass({
 			className,
 			size,
 			isShown,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const headerChildProp = _.get(getFirst(this.props, Dialog.Header), 'props', {});

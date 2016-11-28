@@ -85,7 +85,7 @@ const VerticalTabs = createClass({
 			className,
 			onSelect,
 			selectedIndex,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		// Grab props array from each Tab

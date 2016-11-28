@@ -66,7 +66,7 @@ const Line = createClass({
 			isDotted,
 			d,
 			style,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const isCustomColor = _.startsWith(color, '#');

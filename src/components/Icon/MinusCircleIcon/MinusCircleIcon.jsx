@@ -20,15 +20,17 @@ const MinusCircleIcon = createClass({
 	render() {
 		const {
 			className,
-			...passThroughs,
+			isDisabled,
+			...passThroughs
 		} = this.props;
 
 		return (
 			<Icon
 				{...passThroughs}
+				isDisabled={isDisabled}
 				className={cx('&', className)}
 			>
-				<circle className={cx('&-background')} cx='8' cy='8' r='8'/>
+				<circle className={cx('&-background', { '&-background-is-disabled': isDisabled })} cx='8' cy='8' r='8'/>
 				<rect className={cx('&-minus')} x='3' y='7' width='10' height='2'/>
 			</Icon>
 		);

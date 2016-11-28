@@ -38,7 +38,8 @@ const LoadingIcon = createClass({
 			className,
 			speed,
 			style,
-			...passThroughs,
+			isDisabled,
+			...passThroughs
 		} = this.props;
 
 		const animationDuration = `${durations[speed] || durations.normal}`;
@@ -50,6 +51,7 @@ const LoadingIcon = createClass({
 				viewBox='0 0 100 100'
 				className={cx('&', className)}
 				style={{ animationDuration, ...style }}
+				isDisabled={isDisabled}
 			>
 				<rect
 					x='0'
@@ -66,7 +68,7 @@ const LoadingIcon = createClass({
 				/>
 				<circle
 					style={{ animationDuration }}
-					className={cx('&-spinner')}
+					className={cx('&-spinner', { '&-spinner-is-disabled': isDisabled })}
 					cx='50'
 					cy='50'
 					r='40'

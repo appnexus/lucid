@@ -57,7 +57,7 @@ const Validation = createClass({
 		const {
 			className,
 			children,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const errorChildProps = _.get(getFirst(this.props, Validation.Error), 'props');

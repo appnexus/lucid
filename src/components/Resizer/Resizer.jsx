@@ -58,7 +58,7 @@ const Resizer = createClass({
 	render() {
 		const {
 			className,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const {

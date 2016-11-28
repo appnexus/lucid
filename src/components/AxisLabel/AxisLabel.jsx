@@ -74,7 +74,7 @@ const AxisLabel = createClass({
 			color,
 			style,
 			className,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const isH = orient === 'top' || orient === 'bottom';

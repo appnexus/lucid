@@ -114,7 +114,7 @@ const ExpanderPanel = createClass({
 			isExpanded,
 			isDisabled,
 			style,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const headerChildProps = _.get(getFirst(this.props, ExpanderPanel.Header), 'props');

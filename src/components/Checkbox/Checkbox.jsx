@@ -89,7 +89,7 @@ const Checkbox = createClass({
 			isSelected,
 			isDisabled,
 			style,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		return (

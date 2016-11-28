@@ -138,7 +138,7 @@ const StickySection = createClass({
 			className,
 			style,
 			viewportWidth,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const {

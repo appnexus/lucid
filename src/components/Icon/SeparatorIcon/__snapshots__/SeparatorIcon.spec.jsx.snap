@@ -1,0 +1,39 @@
+exports[`SeparatorIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-SeparatorIcon"
+  isBadge={false}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 4.5 16">
+  <polygon
+    points="4.5,8 1.5,0 0,0 3,8 0,16 1.5,16 4.5,8" />
+</Icon>
+`;
+
+exports[`SeparatorIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-SeparatorIcon"
+  isBadge={false}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 4.5 16">
+  <polygon
+    points="4.5,8 1.5,0 0,0 3,8 0,16 1.5,16 4.5,8" />
+</Icon>
+`;
+
+exports[`SeparatorIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-SeparatorIcon"
+  isBadge={false}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 4.5 16">
+  <polygon
+    points="4.5,8 1.5,0 0,0 3,8 0,16 1.5,16 4.5,8" />
+</Icon>
+`;

@@ -120,7 +120,7 @@ const Expander = createClass({
 			isExpanded,
 			style,
 			kind,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const labelChildProp = _.first(_.map(findTypes(this.props, Expander.Label), 'props'));

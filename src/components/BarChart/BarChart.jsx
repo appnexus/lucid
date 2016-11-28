@@ -301,7 +301,7 @@ const BarChart = createClass({
 				? maxByFieldsStacked(data, yAxisFields)
 				: maxByFields(data, yAxisFields),
 
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const margin = {

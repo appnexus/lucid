@@ -84,7 +84,7 @@ const OverlayWrapper = createClass({
 				className,
 				children,
 				overlayKind,
-				...passThroughs,
+				...passThroughs
 			},
 		} = this;
 

@@ -83,7 +83,7 @@ const Panel = createClass({
 			isGutterless,
 			hasMargin,
 			style,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const headerChildProp = _.first(_.map(findTypes(this.props, Panel.Header), 'props'));

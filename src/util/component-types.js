@@ -12,7 +12,7 @@ export function createClass(definition={}) {
 		propName = null,
 		propTypes = {},
 		render = () => null,
-		...restDefinition,
+		...restDefinition
 	} = definition;
 
 	const newDefinition = {

@@ -21,7 +21,7 @@ const CheckIcon = createClass({
 	render() {
 		const {
 			className,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		return (
