@@ -5,3 +5,4 @@ node_modules
 .idea
 .babelrc
 yarn.lock
+**/__snapshots__
