@@ -16,7 +16,7 @@
     "jest": "TZ=UTC jest",
     "lint": "eslint . --ext .js,.jsx",
     "lint-fix": "eslint . --ext .js,.jsx --fix",
-    "preversion": "rm -rf dist && gulp lint && gulp preversion && npm run build-bundle",
+    "preversion": "rm -rf dist && npm run lint && gulp preversion && npm run build-bundle",
     "postversion": "gulp docs-upload",
     "start": "npm run dev",
     "test": "npm run lint && npm run cover",
