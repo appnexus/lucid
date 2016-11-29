@@ -62,7 +62,7 @@ export default React.createClass({
 					<ContextMenu.FlyOut style={{
 						background: '#fafafa',
 						outline: 'solid 1px #d1d1d1',
-						boxShadow:' 1px 1px 2px rgba(0, 0, 0, 0.2)',
+						boxShadow: ' 1px 1px 2px rgba(0, 0, 0, 0.2)',
 						padding: '8px',
 					}}>
 						<div>New Window</div>
@@ -103,7 +103,7 @@ export default React.createClass({
 					<ContextMenu.FlyOut style={{
 						background: '#fafafa',
 						outline: 'solid 1px #d1d1d1',
-						boxShadow:' 1px 1px 2px rgba(0, 0, 0, 0.2)',
+						boxShadow: ' 1px 1px 2px rgba(0, 0, 0, 0.2)',
 						padding: '8px',
 					}}>
 						<div>Undo</div>

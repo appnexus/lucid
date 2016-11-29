@@ -10,7 +10,7 @@ const {
 export default React.createClass({
 	render() {
 		return (
-			<SingleSelect selectedIndex={1} DropMenu={{ focusedIndex:2, isExpanded:true }}>
+			<SingleSelect selectedIndex={1} DropMenu={{ focusedIndex: 2, isExpanded: true }}>
 				<Placeholder>Select Color</Placeholder>
 
 				<OptionGroup>

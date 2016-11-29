@@ -9,7 +9,7 @@ import {
 export default React.createClass({
 	render() {
 		return (
-			<div style={{display: 'flex', flexDirection: 'column', height:600}}>
+			<div style={{display: 'flex', flexDirection: 'column', height: 600}}>
 				<Sidebar>
 					<Sidebar.Bar>
 						<div>

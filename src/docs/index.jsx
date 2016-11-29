@@ -289,7 +289,7 @@ const Component = React.createClass({
 				<h2>{componentName} {privateString} {composesComponents}</h2>
 				<div dangerouslySetInnerHTML={descriptionAsHTML} />
 				<h3>Props</h3>
-				<Table style={{width:'100%'}}>
+				<Table style={{width: '100%'}}>
 					<Thead>
 						<Tr>
 							<Th>Name</Th>
@@ -351,7 +351,7 @@ const Component = React.createClass({
 									</Table>
 								)}
 								{!_.isNil(childComponent.props) ? (
-									<Table style={{width:'100%'}}>
+									<Table style={{width: '100%'}}>
 										<Thead>
 											<Tr>
 												<Th>Name</Th>
