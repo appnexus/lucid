@@ -601,9 +601,9 @@ describe('#buildHybridComponent', () => {
 		const StatefulCounter = buildHybridComponent(CounterDumb);
 		const wrapper = mount(<StatefulCounter count={36} />);
 
-		let minusButton = wrapper.find('button.minus');
-		let countSpan = wrapper.find('.count');
-		let plusButton = wrapper.find('button.plus');
+		const minusButton = wrapper.find('button.minus');
+		const countSpan = wrapper.find('.count');
+		const plusButton = wrapper.find('button.plus');
 
 		assert.equal(countSpan.text(), '36');
 
@@ -627,9 +627,9 @@ describe('#buildHybridComponent', () => {
 		const StatefulCounter = buildHybridComponent(CounterDumb);
 		const wrapper = mount(<StatefulCounter initialState={{ count: 36 }} />);
 
-		let minusButton = wrapper.find('button.minus');
-		let countSpan = wrapper.find('.count');
-		let plusButton = wrapper.find('button.plus');
+		const minusButton = wrapper.find('button.minus');
+		const countSpan = wrapper.find('.count');
+		const plusButton = wrapper.find('button.plus');
 
 		assert.equal(countSpan.text(), '36');
 
@@ -655,9 +655,9 @@ describe('#buildHybridComponent', () => {
 		const StatefulCounter = buildHybridComponent(CounterDumb);
 		const wrapper = mount(<StatefulCounter onIncrement={onIncrement} onDecrement={onDecrement} />);
 
-		let minusButton = wrapper.find('button.minus');
-		let countSpan = wrapper.find('.count');
-		let plusButton = wrapper.find('button.plus');
+		const minusButton = wrapper.find('button.minus');
+		const countSpan = wrapper.find('.count');
+		const plusButton = wrapper.find('button.plus');
 
 		assert(!onIncrement.called);
 		assert(!onDecrement.called);
@@ -687,8 +687,8 @@ describe('#buildHybridComponent', () => {
 		});
 		const wrapper = mount(<StatefulCounter />);
 
-		let minusButton = wrapper.find('button.minus');
-		let plusButton = wrapper.find('button.plus');
+		const minusButton = wrapper.find('button.minus');
+		const plusButton = wrapper.find('button.plus');
 
 		assert(!onIncrement.called);
 		assert(!onDecrement.called);

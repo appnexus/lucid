@@ -110,7 +110,7 @@ describe('VerticalTabs', () => {
 
 		describe('onSelect', () => {
 
-			let onSelect = sinon.spy();
+			const onSelect = sinon.spy();
 			let wrapper;
 
 			beforeEach(() => {

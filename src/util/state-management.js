@@ -22,12 +22,12 @@ export function omitFunctionPropsDeep(obj) {
 }
 
 export function bindReducerToState(reducerFunction, { getState, setState }, path=[]) {
-	let localPath = _.take(path, _.size(path) - 1);
+	const localPath = _.take(path, _.size(path) - 1);
 	return _.assign(function (...args) {
 		if (_.isEmpty(localPath)) {
 			setState(reducerFunction(getState(), ...args));
 		} else {
-			let localNextState = reducerFunction(_.get(getState(), localPath), ...args);
+			const localNextState = reducerFunction(_.get(getState(), localPath), ...args);
 			setState(_.set(_.clone(getState()), localPath, localNextState));
 		}
 	}, { path });
