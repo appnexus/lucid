@@ -4,7 +4,7 @@ import { Sidebar } from '../../../index';
 export default React.createClass({
 
 	render() {
-		return(
+		return (
 			<Sidebar isResizeDisabled={true}>
 				<Sidebar.Bar>
 					Cold-pressed aesthetic biodiesel twee, heirloom vice iPhone austin. Truffaut wolf offal roof party, neutra yr drinking vinegar bitters single-origin coffee austin mlkshk mixtape semiotics blog. Pickled squid asymmetrical locavore before they sold out whatever.

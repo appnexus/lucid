@@ -11,7 +11,7 @@ const {
 
 export default React.createClass({
 	render() {
-		return(
+		return (
 			<Table>
 				<Thead>
 					<Tr>

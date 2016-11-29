@@ -4,7 +4,7 @@ import { Submarine } from '../../../index';
 export default React.createClass({
 
 	render() {
-		return(
+		return (
 			<section style={{ height: 300, background: 'lightgray', outline: '1px solid lightgray' }}>
 				<Submarine isResizeDisabled={true}>
 					<Submarine.Bar>

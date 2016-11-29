@@ -3,7 +3,7 @@ import { SplitVertical } from '../../../index';
 
 export default React.createClass({
 	render() {
-		return(
+		return (
 			<SplitVertical>
 				<SplitVertical.LeftPane width={250}>
 					<p>Jean shorts reprehenderit in, commodo godard skateboard retro heirloom street art church-key. Gochujang sint hella food truck, officia next level sriracha listicle knausgaard try-hard 3 wolf moon kale chips. Offal scenester quinoa, hammock qui sint direct trade heirloom. Bushwick letterpress pabst, odio nihil sapiente ex cold-pressed flannel laboris wayfarers retro marfa jean shorts. Chia next level cardigan, deserunt church-key asymmetrical ennui messenger bag portland. Aute selvage cred gastropub freegan literally. Readymade artisan distillery occaecat qui.</p>

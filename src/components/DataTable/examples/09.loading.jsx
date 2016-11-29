@@ -4,7 +4,7 @@ import { DataTable } from '../../../index';
 export default React.createClass({
 	render() {
 
-		return(
+		return (
 			<DataTable
 				isFullWidth
 				isLoading

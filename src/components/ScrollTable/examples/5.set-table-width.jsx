@@ -11,7 +11,7 @@ const {
 
 export default React.createClass({
 	render() {
-		return(
+		return (
 			<ScrollTable
 				tableWidth={2000}
 			>

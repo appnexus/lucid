@@ -3,7 +3,7 @@ import { SplitHorizontal } from '../../../index';
 
 export default React.createClass({
 	render() {
-		return(
+		return (
 			<SplitHorizontal>
 				<SplitHorizontal.TopPane>
 					<p>Waistcoat man bun sartorial, PBR&B artisan blue bottle laboris disrupt pug dreamcatcher readymade gluten-free fingerstache placeat. Enim salvia celiac, veniam polaroid stumptown velit PBR&B. Ramps delectus cupidatat dolore. Portland try-hard slow-carb cronut, drinking vinegar readymade nulla pug aliqua cray VHS eiusmod odio incididunt wolf. 3 wolf moon gentrify mustache blog freegan, literally ut helvetica stumptown godard synth direct trade. Sapiente slow-carb deep v, YOLO direct trade irony before they sold out tempor. Sunt aliqua seitan banjo.</p>

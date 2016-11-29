@@ -18,6 +18,7 @@
 	"rules": {
 		"quotes": [2, "single"],
 		"jsx-quotes": [2, "prefer-single"],
+		"keyword-spacing": 0,
 		"comma-dangle": [2, "always-multiline"],
 		"react/prop-types": 2,
 		"no-trailing-spaces": 2,

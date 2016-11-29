@@ -22,7 +22,7 @@ export default React.createClass({
 	},
 
 	render() {
-		return(
+		return (
 			<section>
 				<p>isExpanded: {`${this.state.isExpanded}`}</p>
 				<p>resizeWidth: {`${this.state.resizeWidth}`}</p>

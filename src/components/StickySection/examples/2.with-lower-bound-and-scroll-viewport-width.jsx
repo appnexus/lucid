@@ -3,7 +3,7 @@ import { StickySection } from '../../../index';
 
 export default React.createClass({
 	render() {
-		return(
+		return (
 			<section style={{
 				color: 'rgba(128,128,128,.25)',
 				width: 800,

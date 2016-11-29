@@ -153,7 +153,7 @@ export default React.createClass({
 			currentlySortedFieldDirection,
 		} = this.state;
 
-		return(
+		return (
 			<DataTable
 				data={_.map(data, (row, index) => (index === activeIndex ? {...row, isActive: true} : row))}
 				density='extended'

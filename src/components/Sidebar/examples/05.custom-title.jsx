@@ -3,7 +3,7 @@ import { Sidebar } from '../../../index';
 
 export default React.createClass({
 	render() {
-		return(
+		return (
 			<Sidebar>
 				<Sidebar.Title>Sidebar Title <button>Edit</button></Sidebar.Title>
 				<Sidebar.Bar>

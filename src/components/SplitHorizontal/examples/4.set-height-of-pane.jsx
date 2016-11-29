@@ -3,7 +3,7 @@ import { SplitHorizontal } from '../../../index';
 
 export default React.createClass({
 	render() {
-		return(
+		return (
 			<section style={{ height: 300, outline: '1px solid #e3e3e3' }}>
 
 				<SplitHorizontal>

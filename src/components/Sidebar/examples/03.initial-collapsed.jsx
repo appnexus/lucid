@@ -3,7 +3,7 @@ import { Sidebar } from '../../../index';
 
 export default React.createClass({
 	render() {
-		return(
+		return (
 			<Sidebar initialState={{isExpanded: false}}>
 				<Sidebar.Bar>
 					Try-hard cornhole ea artisan, laborum wolf eiusmod chillwave irure. Lomo chicharrones taxidermy narwhal. Cronut deep v PBR&B photo booth tilde. Asymmetrical waistcoat williamsburg 3 wolf moon, poutine magna dreamcatcher disrupt eiusmod thundercats farm-to-table lumbersexual nisi mlkshk tote bag.

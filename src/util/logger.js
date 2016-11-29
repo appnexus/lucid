@@ -31,7 +31,7 @@ export const logger = (function() {
 const onceMap = {};
 
 function once(key, fn) {
-	if(!_.has(onceMap, key)) {
+	if (!_.has(onceMap, key)) {
 		_.set(onceMap, key, true);
 		fn();
 	}

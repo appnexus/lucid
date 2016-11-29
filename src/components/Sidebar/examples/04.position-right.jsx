@@ -3,7 +3,7 @@ import { Sidebar } from '../../../index';
 
 export default React.createClass({
 	render() {
-		return(
+		return (
 			<Sidebar position='right'>
 				<Sidebar.Bar>
 					Paleo art party disrupt, consequat kogi fashion axe tofu trust fund raw denim readymade. Seitan banjo salvia organic ethical. Next level pork belly sustainable tumblr nostrud.

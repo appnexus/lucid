@@ -3,7 +3,7 @@ import { SplitHorizontal } from '../../../index';
 
 export default React.createClass({
 	render() {
-		return(
+		return (
 			<SplitHorizontal>
 				<SplitHorizontal.TopPane>
 					<p>Bicycle rights tofu hashtag blue bottle viral. Mixtape kinfolk mustache, iPhone godard voluptate direct trade pork belly truffaut duis sunt. 8-bit microdosing retro, excepteur direct trade offal listicle kale chips selvage master cleanse sustainable laborum migas helvetica. Man bun esse synth man braid fashion axe post-ironic id, fanny pack PBR&B. Scenester truffaut culpa yr heirloom, fanny pack intelligentsia dreamcatcher dolore nisi green juice ad you probably haven't heard of them raw denim. Before they sold out laborum poutine 90's, blog voluptate chambray whatever. Excepteur ea kinfolk, irure photo booth brooklyn art party master cleanse mlkshk pug.</p>
