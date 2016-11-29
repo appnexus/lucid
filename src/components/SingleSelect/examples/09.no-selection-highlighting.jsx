@@ -9,7 +9,7 @@ const {
 export default React.createClass({
 	render() {
 		return (
-			<section style={{ minHeight:90 }}>
+			<section style={{ minHeight: 90 }}>
 				<SingleSelect isSelectionHighlighted={false}>
 					<Placeholder>Select Foo</Placeholder>
 					<Option>Red</Option>

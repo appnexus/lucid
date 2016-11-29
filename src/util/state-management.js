@@ -2,7 +2,7 @@ import React, { isValidElement } from 'react';
 import _ from 'lodash';
 import { logger } from './logger';
 
-export function getDeepPaths (obj, path=[]) {
+export function getDeepPaths(obj, path=[]) {
 	return _.reduce(obj, (terminalKeys, value, key) => (
 		_.isPlainObject(value) ?
 			terminalKeys.concat(getDeepPaths(value, path.concat(key))) :
@@ -23,7 +23,7 @@ export function omitFunctionPropsDeep(obj) {
 
 export function bindReducerToState(reducerFunction, { getState, setState }, path=[]) {
 	const localPath = _.take(path, _.size(path) - 1);
-	return _.assign(function (...args) {
+	return _.assign(function(...args) {
 		if (_.isEmpty(localPath)) {
 			setState(reducerFunction(getState(), ...args));
 		} else {
@@ -44,7 +44,7 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
 
 	const combineFunctionsCustomizer = (objValue, srcValue) => {
 		if (_.isFunction(srcValue) && _.isFunction(objValue)) {
-			return function (...args) {
+			return function(...args) {
 				objValue(...args);
 				return srcValue(...args);
 			};

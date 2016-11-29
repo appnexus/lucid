@@ -285,7 +285,7 @@ const Bars = createClass({
 												key={fieldIndex}
 												hasPoint={true}
 												pointKind={1}
-												color={_.get(colorMap, field, palette[(fieldIndex + colorOffset ) % palette.length])}
+												color={_.get(colorMap, field, palette[(fieldIndex + colorOffset) % palette.length])}
 											>
 												{
 													yTooltipFormatter(_.get(legend, field, field),
