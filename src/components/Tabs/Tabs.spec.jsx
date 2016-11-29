@@ -123,7 +123,7 @@ describe('Tabs', () => {
 
 		describe('onSelect', () => {
 
-			let onSelect = sinon.spy();
+			const onSelect = sinon.spy();
 			let clickEvent;
 			let wrapper;
 			let tabBar;

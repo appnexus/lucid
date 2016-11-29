@@ -116,7 +116,7 @@ describe('Accordion', () => {
 
 describe('Accordion', () => {
 	let wrapper;
-	let onSelect = sinon.spy();
+	const onSelect = sinon.spy();
 	let mountTestDiv;
 
 	describe('user picks one of the items', () => {

@@ -17,7 +17,7 @@ describe('Button', () => {
 
 	describe('text', () => {
 		it('should allow children as content', () => {
-			let text = 'Hello';
+			const text = 'Hello';
 			const wrapper = shallow(<Button>{text}</Button>);
 			assert.equal(wrapper.text(), text);
 		});
@@ -39,13 +39,13 @@ describe('Button', () => {
 		// TODO: make this a generic test
 		it('should have the Button class', () => {
 			const wrapper = shallow(<Button />);
-			let classNames = wrapper.find('button').prop('className').split(' ');
+			const classNames = wrapper.find('button').prop('className').split(' ');
 			assert(_.includes(classNames, 'lucid-Button'), `'${classNames}' should include 'lucid-Button'`);
 		});
 
 		it('should have a button with the "active" class when active is true', () => {
 			const wrapper = shallow(<Button isActive={true} />);
-			let classNames = wrapper.find('button').prop('className').split(' ');
+			const classNames = wrapper.find('button').prop('className').split(' ');
 			assert(_.includes(classNames, 'lucid-Button-is-active'), `'${classNames}' should include 'lucid-Button-is-active'`);
 		});
 

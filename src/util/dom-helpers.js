@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 export function getAbsoluteBoundingClientRect(domNode) {
-	let elementRect = domNode.getBoundingClientRect();
+	const elementRect = domNode.getBoundingClientRect();
 
 	return {
 		bottom: elementRect.bottom + window.pageYOffset,
