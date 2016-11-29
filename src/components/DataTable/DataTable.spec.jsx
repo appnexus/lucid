@@ -616,7 +616,7 @@ describe('DataTable', () => {
 					.find(ScrollTable).shallow()
 					.find(ScrollTable.Thead).shallow()
 					.find(ScrollTable.Tr).first().shallow()
-					.find(ScrollTable.Th).at(1).shallow()
+					.find(ScrollTable.Th).at(1).shallow();
 
 				assert(thWrapper.hasClass('lucid-Table-align-center'), 'must be true');
 			});
@@ -638,7 +638,7 @@ describe('DataTable', () => {
 					.find(ScrollTable).shallow()
 					.find(ScrollTable.Thead).shallow()
 					.find(ScrollTable.Tr).first().shallow()
-					.find(ScrollTable.Th).at(1).shallow()
+					.find(ScrollTable.Th).at(1).shallow();
 
 				assert(thWrapper.hasClass('lucid-Table-align-right'), 'must be true');
 			});

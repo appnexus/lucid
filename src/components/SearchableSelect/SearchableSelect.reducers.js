@@ -16,7 +16,7 @@ export function onSearch(state, searchText, firstVisibleIndex) {
 		DropMenu: {
 			...DropMenu.onFocusOption(state.DropMenu, firstVisibleIndex),
 		},
-	}
+	};
 }
 
 export { DropMenu };

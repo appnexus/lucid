@@ -15,7 +15,7 @@ const gridStyle = {
 		textAlign: 'center',
 	},
 	vertical: {height: '100px'},
-}
+};
 
 export default React.createClass({
 	render() {
@@ -37,6 +37,6 @@ export default React.createClass({
 					</Grid.Cell>
 				</Grid>
 			</div>
-		)
+		);
 	},
 });

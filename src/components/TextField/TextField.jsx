@@ -140,7 +140,7 @@ const TextField = createClass({
 	getInitialState() {
 		return {
 			value: this.props.value,
-		}
+		};
 	},
 
 	componentWillMount() {

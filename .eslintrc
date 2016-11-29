@@ -24,9 +24,11 @@
 		"no-trailing-spaces": 2,
 		"no-undef": 2,
 		"no-unused-vars": 2,
+		"prefer-const": 2,
 		"react/jsx-uses-react": 2,
 		"react/jsx-uses-vars": 2,
-		"react/react-in-jsx-scope": 2
+		"react/react-in-jsx-scope": 2,
+		"semi": 2
 	},
 	"plugins": [
 		"react"

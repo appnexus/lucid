@@ -115,6 +115,6 @@ const EmptyStateWrapper = createClass({
 				</OverlayWrapper>
 		);
 	},
-})
+});
 
 export default EmptyStateWrapper;

@@ -99,7 +99,7 @@ const RadioGroup = createClass({
 			...passThroughs
 		} = this.props;
 
-		const radioButtonChildProps = _.map(findTypes(this.props, RadioGroup.RadioButton), 'props')
+		const radioButtonChildProps = _.map(findTypes(this.props, RadioGroup.RadioButton), 'props');
 		const selectedIndexFromChildren = _.findLastIndex(radioButtonChildProps, {
 			isSelected: true,
 		});

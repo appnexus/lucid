@@ -211,7 +211,7 @@ describe('ToolTip', () => {
 						<Body>Body</Body>
 					</ToolTip>
 				);
-				assert(wrapper.find(ContextMenu).prop('isExpanded'), 'isExpanded must be true')
+				assert(wrapper.find(ContextMenu).prop('isExpanded'), 'isExpanded must be true');
 			});
 
 			it('should be false by default', () => {
@@ -221,7 +221,7 @@ describe('ToolTip', () => {
 						<Body>Body</Body>
 					</ToolTip>
 				);
-				assert(!wrapper.find(ContextMenu).prop('isExpanded'), 'isExpanded must be false')
+				assert(!wrapper.find(ContextMenu).prop('isExpanded'), 'isExpanded must be false');
 			});
 		});
 

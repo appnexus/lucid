@@ -26,11 +26,11 @@ export default React.createClass({
 				placeholder='Enter a word...'
 				suggestions={wordlist}
 				value='ab'
-				onSelect={(index) => {console.log(`selected: ${wordlist[index]}`)}}
+				onSelect={(index) => {console.log(`selected: ${wordlist[index]}`);}}
 				DropMenu={{
 					isExpanded: true,
 					focusedIndex: 2,
-					onCollapse: () => {console.log('onCollapse')},
+					onCollapse: () => {console.log('onCollapse');},
 				}}
 			/>
 		);

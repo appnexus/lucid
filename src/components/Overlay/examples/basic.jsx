@@ -34,6 +34,6 @@ export default React.createClass({
 					</div>
 				</Overlay>
 			</div>
-		)
+		);
 	},
 });

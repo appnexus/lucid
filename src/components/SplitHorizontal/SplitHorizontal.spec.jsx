@@ -92,7 +92,7 @@ describe('SplitHorizontal', () => {
 				_.delay(() => {
 					assert.equal(wrapper.find('.lucid-SplitHorizontal.lucid-SplitHorizontal-is-animated').length, 1);
 					done();
-				}, MOSTLY_STABLE_DELAY)
+				}, MOSTLY_STABLE_DELAY);
 			});
 
 			it('should not apply the &-is-animated class when false [mostly stable]', (done) => {
@@ -103,7 +103,7 @@ describe('SplitHorizontal', () => {
 				_.delay(() => {
 					assert.equal(wrapper.find('.lucid-SplitHorizontal.lucid-SplitHorizontal-is-animated').length, 0);
 					done();
-				}, MOSTLY_STABLE_DELAY)
+				}, MOSTLY_STABLE_DELAY);
 			});
 		});
 

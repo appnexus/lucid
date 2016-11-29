@@ -21,7 +21,7 @@ describe('VerticalTabs', () => {
 				</VerticalTabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-VerticalTabs-content').text(), 'Foo Content')
+			assert.equal(wrapper.find('.lucid-VerticalTabs-content').text(), 'Foo Content');
 		});
 
 		it('Tab as props', () => {
@@ -110,7 +110,7 @@ describe('VerticalTabs', () => {
 
 		describe('onSelect', () => {
 
-			let onSelect = sinon.spy();
+			const onSelect = sinon.spy();
 			let wrapper;
 
 			beforeEach(() => {

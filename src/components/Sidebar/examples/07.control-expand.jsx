@@ -10,7 +10,7 @@ export default React.createClass({
 	},
 
 	handleToggle() {
-		this.setState({ isExpanded: !this.state.isExpanded })
+		this.setState({ isExpanded: !this.state.isExpanded });
 	},
 
 	render() {

@@ -43,7 +43,7 @@ function toggleOrSelectReducer(state = {}, i) {
 	return {
 		...state,
 		expandedIndices: _.xor(state.expandedIndices || [], [i]),
-	}
+	};
 }
 
 const VerticalListMenu = stateManagement.buildHybridComponent(VerticalListMenuDumb, {
@@ -181,7 +181,7 @@ const PropType = React.createClass({
 							})}
 					</ul>
 				</div>
-			)
+			);
 		}
 
 		return (
@@ -250,7 +250,7 @@ const Component = React.createClass({
 			.get(`${componentName}.props`, [])
 			.toPairs() // this turns the object into an array of [propName, propDetails] so we can sort
 			.sortBy(x => x[0]) // sort by property name
-			.value()
+			.value();
 
 		const descriptionAsHTML = toMarkdown(_.get(docgenMap, `${componentName}.description`));
 
@@ -432,7 +432,7 @@ const App = React.createClass({
 	getInitialState() {
 		return {
 			search: '',
-		}
+		};
 	},
 
 	contextTypes: {
@@ -494,7 +494,7 @@ const App = React.createClass({
 	},
 
 	handleSearchSelect(index) {
-		this.goToPath(`/components/${this.searchResults()[index]}`)
+		this.goToPath(`/components/${this.searchResults()[index]}`);
 	},
 
 	showPrivateComponents() {

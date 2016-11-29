@@ -35,18 +35,18 @@ describe('Submarine', () => {
 				const wrapper = shallow(
 					<Submarine height={123} />
 				);
-				const barWrapper = wrapper.find('.lucid-Submarine > .lucid-Submarine-Bar')
+				const barWrapper = wrapper.find('.lucid-Submarine > .lucid-Submarine-Bar');
 
-				assert.equal(123, barWrapper.prop('height'), 'must pass height to the bar pane')
+				assert.equal(123, barWrapper.prop('height'), 'must pass height to the bar pane');
 			});
 
 			it('should default to 250', () => {
 				const wrapper = shallow(
 					<Submarine />
 				);
-				const barWrapper = wrapper.find('.lucid-Submarine > .lucid-Submarine-Bar')
+				const barWrapper = wrapper.find('.lucid-Submarine > .lucid-Submarine-Bar');
 
-				assert.equal(250, barWrapper.prop('height'), 'must pass height to the bar pane')
+				assert.equal(250, barWrapper.prop('height'), 'must pass height to the bar pane');
 			});
 		});
 
@@ -58,8 +58,8 @@ describe('Submarine', () => {
 
 				const splitHorizontal = wrapper.find(SplitHorizontal);
 
-				assert(splitHorizontal.prop('isExpanded'), 'must pass isExpanded to the underlying SplitHorizontal')
-				assert(splitHorizontal.shallow().hasClass('lucid-SplitHorizontal-is-expanded'), 'must have the lucid-SplitHorizontal-is-expanded className')
+				assert(splitHorizontal.prop('isExpanded'), 'must pass isExpanded to the underlying SplitHorizontal');
+				assert(splitHorizontal.shallow().hasClass('lucid-SplitHorizontal-is-expanded'), 'must have the lucid-SplitHorizontal-is-expanded className');
 			});
 
 			it('should pass isExpanded to the underlying SplitHorizontal (false)', () => {
@@ -69,8 +69,8 @@ describe('Submarine', () => {
 
 				const splitHorizontal = wrapper.find(SplitHorizontal);
 
-				assert(!splitHorizontal.prop('isExpanded'), 'must pass isExpanded to the underlying SplitHorizontal')
-				assert(!splitHorizontal.hasClass('lucid-SplitHorizontal-is-expanded'), 'must not have the lucid-SplitHorizontal-is-expanded className')
+				assert(!splitHorizontal.prop('isExpanded'), 'must pass isExpanded to the underlying SplitHorizontal');
+				assert(!splitHorizontal.hasClass('lucid-SplitHorizontal-is-expanded'), 'must not have the lucid-SplitHorizontal-is-expanded className');
 			});
 
 			it('should default to true', () => {
@@ -80,8 +80,8 @@ describe('Submarine', () => {
 
 				const splitHorizontal = wrapper.find(SplitHorizontal);
 
-				assert(splitHorizontal.prop('isExpanded'), 'must pass isExpanded to the underlying SplitHorizontal')
-				assert(splitHorizontal.shallow().hasClass('lucid-SplitHorizontal-is-expanded'), 'must have the lucid-SplitHorizontal-is-expanded className')
+				assert(splitHorizontal.prop('isExpanded'), 'must pass isExpanded to the underlying SplitHorizontal');
+				assert(splitHorizontal.shallow().hasClass('lucid-SplitHorizontal-is-expanded'), 'must have the lucid-SplitHorizontal-is-expanded className');
 			});
 		});
 
@@ -92,7 +92,7 @@ describe('Submarine', () => {
 				);
 				const splitHorizontal = wrapper.find(SplitHorizontal);
 
-				assert(splitHorizontal.prop('isAnimated'), 'must pass isAnimated to the underlying SplitHorizontal')
+				assert(splitHorizontal.prop('isAnimated'), 'must pass isAnimated to the underlying SplitHorizontal');
 			});
 
 			it('should pass isAnimated to the underlying SplitHorizontal (false)', () => {
@@ -101,7 +101,7 @@ describe('Submarine', () => {
 				);
 				const splitHorizontal = wrapper.find(SplitHorizontal);
 
-				assert(!splitHorizontal.prop('isAnimated'), 'must pass isAnimated to the underlying SplitHorizontal')
+				assert(!splitHorizontal.prop('isAnimated'), 'must pass isAnimated to the underlying SplitHorizontal');
 			});
 
 			it('should default to true', () => {
@@ -110,7 +110,7 @@ describe('Submarine', () => {
 				);
 				const splitHorizontal = wrapper.find(SplitHorizontal);
 
-				assert(splitHorizontal.prop('isAnimated'), 'must pass isAnimated to the underlying SplitHorizontal')
+				assert(splitHorizontal.prop('isAnimated'), 'must pass isAnimated to the underlying SplitHorizontal');
 			});
 		});
 
@@ -122,10 +122,10 @@ describe('Submarine', () => {
 				const splitHorizontalTopPane = wrapper.find(SplitHorizontal.TopPane);
 				const splitHorizontalBottomPane = wrapper.find(SplitHorizontal.BottomPane);
 
-				assert(!splitHorizontalTopPane.prop('isPrimary'), 'must not be primary')
-				assert(splitHorizontalTopPane.hasClass('lucid-Submarine-Bar'), 'must have the className lucid-Submarine-Bar')
-				assert(splitHorizontalBottomPane.prop('isPrimary'), 'must be primary')
-				assert(splitHorizontalBottomPane.hasClass('lucid-Submarine-Primary'), 'must have the className lucid-Submarine-Primary')
+				assert(!splitHorizontalTopPane.prop('isPrimary'), 'must not be primary');
+				assert(splitHorizontalTopPane.hasClass('lucid-Submarine-Bar'), 'must have the className lucid-Submarine-Bar');
+				assert(splitHorizontalBottomPane.prop('isPrimary'), 'must be primary');
+				assert(splitHorizontalBottomPane.hasClass('lucid-Submarine-Primary'), 'must have the className lucid-Submarine-Primary');
 			});
 
 			it('should render the Primary content in the TopPane and the Bar in the BottomPane when set to `bottom`', () => {
@@ -135,10 +135,10 @@ describe('Submarine', () => {
 				const splitHorizontalTopPane = wrapper.find(SplitHorizontal.TopPane);
 				const splitHorizontalBottomPane = wrapper.find(SplitHorizontal.BottomPane);
 
-				assert(splitHorizontalTopPane.prop('isPrimary'), 'must not be primary')
-				assert(splitHorizontalTopPane.hasClass('lucid-Submarine-Primary'), 'must have the className lucid-Submarine-Primary')
-				assert(!splitHorizontalBottomPane.prop('isPrimary'), 'must be primary')
-				assert(splitHorizontalBottomPane.hasClass('lucid-Submarine-Bar'), 'must have the className lucid-Submarine-Bar')
+				assert(splitHorizontalTopPane.prop('isPrimary'), 'must not be primary');
+				assert(splitHorizontalTopPane.hasClass('lucid-Submarine-Primary'), 'must have the className lucid-Submarine-Primary');
+				assert(!splitHorizontalBottomPane.prop('isPrimary'), 'must be primary');
+				assert(splitHorizontalBottomPane.hasClass('lucid-Submarine-Bar'), 'must have the className lucid-Submarine-Bar');
 			});
 
 			it('should default to `bottom`', () => {
@@ -148,10 +148,10 @@ describe('Submarine', () => {
 				const splitHorizontalTopPane = wrapper.find(SplitHorizontal.TopPane);
 				const splitHorizontalBottomPane = wrapper.find(SplitHorizontal.BottomPane);
 
-				assert(splitHorizontalTopPane.prop('isPrimary'), 'must be primary')
-				assert(splitHorizontalTopPane.hasClass('lucid-Submarine-Primary'), 'must have the className lucid-Submarine-Primary')
-				assert(!splitHorizontalBottomPane.prop('isPrimary'), 'must not be primary')
-				assert(splitHorizontalBottomPane.hasClass('lucid-Submarine-Bar'), 'must have the className lucid-Submarine-Bar')
+				assert(splitHorizontalTopPane.prop('isPrimary'), 'must be primary');
+				assert(splitHorizontalTopPane.hasClass('lucid-Submarine-Primary'), 'must have the className lucid-Submarine-Primary');
+				assert(!splitHorizontalBottomPane.prop('isPrimary'), 'must not be primary');
+				assert(splitHorizontalBottomPane.hasClass('lucid-Submarine-Bar'), 'must have the className lucid-Submarine-Bar');
 			});
 		});
 
@@ -161,7 +161,7 @@ describe('Submarine', () => {
 					<Submarine isResizeDisabled={true} />
 				);
 
-				assert(wrapper.hasClass('lucid-Submarine-is-resize-disabled'), 'must have className lucid-Submarine-is-resize-disabled')
+				assert(wrapper.hasClass('lucid-Submarine-is-resize-disabled'), 'must have className lucid-Submarine-is-resize-disabled');
 			});
 
 			it('should not set the className lucid-Submarine-is-resize-disabled (false)', () => {
@@ -169,7 +169,7 @@ describe('Submarine', () => {
 					<Submarine isResizeDisabled={false} />
 				);
 
-				assert(!wrapper.hasClass('lucid-Submarine-is-resize-disabled'), 'must not have className lucid-Submarine-is-resize-disabled')
+				assert(!wrapper.hasClass('lucid-Submarine-is-resize-disabled'), 'must not have className lucid-Submarine-is-resize-disabled');
 			});
 
 			it('should default to false', () => {
@@ -177,7 +177,7 @@ describe('Submarine', () => {
 					<Submarine />
 				);
 
-				assert(!wrapper.hasClass('lucid-Submarine-is-resize-disabled'), 'must not have className lucid-Submarine-is-resize-disabled')
+				assert(!wrapper.hasClass('lucid-Submarine-is-resize-disabled'), 'must not have className lucid-Submarine-is-resize-disabled');
 			});
 		});
 
@@ -265,7 +265,7 @@ describe('Submarine', () => {
 				);
 
 				const contentWrapper = wrapper.find('.lucid-Submarine > .lucid-Submarine-Bar > .lucid-Submarine-Bar-content');
-				assert.equal('Next level locavore squid', contentWrapper.text(), 'must render content in the side bar')
+				assert.equal('Next level locavore squid', contentWrapper.text(), 'must render content in the side bar');
 			});
 
 			it('should render title from the given prop value for `Title`', () => {
@@ -276,7 +276,7 @@ describe('Submarine', () => {
 				);
 
 				const titleWrapper = wrapper.find('.lucid-Submarine > .lucid-Submarine-Bar > .lucid-Submarine-Bar-header > .lucid-Submarine-Bar-Title');
-				assert.equal('Authentic pork belly', titleWrapper.text(), 'must render title from prop value')
+				assert.equal('Authentic pork belly', titleWrapper.text(), 'must render title from prop value');
 			});
 
 			it('should render title from the `<Submarine.Title>` composed with children', () => {
@@ -289,7 +289,7 @@ describe('Submarine', () => {
 				);
 
 				const titleWrapper = wrapper.find('.lucid-Submarine > .lucid-Submarine-Bar > .lucid-Submarine-Bar-header > .lucid-Submarine-Bar-Title');
-				assert.equal('Shabby Chic Dreamcatcher', titleWrapper.text(), 'must render title from composed children')
+				assert.equal('Shabby Chic Dreamcatcher', titleWrapper.text(), 'must render title from composed children');
 			});
 		});
 
@@ -302,7 +302,7 @@ describe('Submarine', () => {
 				);
 
 				const primaryWrapper = wrapper.find('.lucid-Submarine > .lucid-Submarine-Primary');
-				assert.equal('You probably havent heard of them', primaryWrapper.children().text(), 'must render content in the primary section')
+				assert.equal('You probably havent heard of them', primaryWrapper.children().text(), 'must render content in the primary section');
 			});
 		});
 
@@ -315,7 +315,7 @@ describe('Submarine', () => {
 				);
 
 				const titleWrapper = wrapper.find('.lucid-Submarine > .lucid-Submarine-Bar > .lucid-Submarine-Bar-header > .lucid-Submarine-Bar-Title');
-				assert.equal('Roof Party Green Juice Mustache', titleWrapper.text(), 'must render title from composed children')
+				assert.equal('Roof Party Green Juice Mustache', titleWrapper.text(), 'must render title from composed children');
 			});
 		});
 	});

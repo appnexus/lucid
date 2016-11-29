@@ -3,7 +3,7 @@ export default {
 		return {
 			...state,
 			value: value,
-		}
+		};
 	},
-}
+};
 

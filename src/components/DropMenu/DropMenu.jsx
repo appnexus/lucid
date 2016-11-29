@@ -224,7 +224,7 @@ const DropMenu = createClass({
 			ungroupedOptionData: [],
 			optionGroupDataLookup: {},
 			portalId: this.props.portalId || _.uniqueId('DropMenu-Portal-'),
-		}
+		};
 	},
 
 	statics: {
@@ -236,7 +236,7 @@ const DropMenu = createClass({
 			} = ParentType;
 
 			const optionGroups = _.map(findTypes(props, OptionGroup), 'props'); // find all OptionGroup props
-			const ungroupedOptions = _.map(findTypes(props, Option), 'props') // find all ungrouped Option props
+			const ungroupedOptions = _.map(findTypes(props, Option), 'props'); // find all ungrouped Option props
 			const nullOptions = NullOption ? _.map(findTypes(props, NullOption), 'props') : []; // find all NullOption props
 
 			// flatten grouped options into array of objects to associate { index, group index, and props } for each option

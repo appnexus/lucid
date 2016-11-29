@@ -20,7 +20,7 @@ describe('Tabs', () => {
 				</Tabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Foo Content')
+			assert.equal(wrapper.find('.lucid-Tabs-content').text(), 'Foo Content');
 		});
 
 		it('Tab as props', () => {
@@ -123,7 +123,7 @@ describe('Tabs', () => {
 
 		describe('onSelect', () => {
 
-			let onSelect = sinon.spy();
+			const onSelect = sinon.spy();
 			let clickEvent;
 			let wrapper;
 			let tabBar;
