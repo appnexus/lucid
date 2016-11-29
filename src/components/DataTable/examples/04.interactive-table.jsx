@@ -124,7 +124,7 @@ export default React.createClass({
 	handleRowClick(item, rowIndex) {
 		this.setState({
 			activeIndex: rowIndex,
-		})
+		});
 	},
 
 	handleSort(field) {

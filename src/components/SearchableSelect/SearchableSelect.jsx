@@ -161,7 +161,7 @@ const SearchableSelect = createClass({
 			flattenedOptionsData: [],
 			ungroupedOptionData: [],
 			optionGroupDataLookup: {},
-		}
+		};
 	},
 
 	statics: {

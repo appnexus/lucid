@@ -9,4 +9,4 @@ export default {
 			selectedIndices: _.xor(currentIndices, [index]),
 		};
 	},
-}
+};

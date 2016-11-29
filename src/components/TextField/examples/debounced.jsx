@@ -9,7 +9,7 @@ export default React.createClass({
 	getInitialState() {
 		return {
 			value: 'foo',
-		}
+		};
 	},
 
 	render() {

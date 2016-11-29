@@ -47,6 +47,6 @@ export default React.createClass({
 
 				</Dialog>
 			</div>
-		)
+		);
 	},
 });

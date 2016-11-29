@@ -266,7 +266,7 @@ describe('redux utils', () => {
 
 					it('should dispatch a thunk', () => {
 						const dispatchedThunk = mockDispatch.getCall(0).args[0];
-						assert(isFunction(dispatchedThunk), 'must be a function')
+						assert(isFunction(dispatchedThunk), 'must be a function');
 					});
 
 					it('should dispatch the correct action', () => {

@@ -9,5 +9,5 @@ export function onMouseOut(state) {
 	return {
 		...state,
 		isExpanded: false,
-	}
+	};
 }

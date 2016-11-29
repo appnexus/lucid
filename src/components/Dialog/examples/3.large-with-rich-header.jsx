@@ -37,7 +37,7 @@ export default React.createClass({
 						exit the dialog.
 					</div>
 					{_.times(50).map((i) => {
-						return <div key={i}>Body</div>
+						return <div key={i}>Body</div>;
 					})}
 					<Dialog.Footer>
 						<Button
@@ -50,6 +50,6 @@ export default React.createClass({
 					</Dialog.Footer>
 				</Dialog>
 			</div>
-		)
+		);
 	},
 });

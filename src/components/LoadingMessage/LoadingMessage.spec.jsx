@@ -58,7 +58,7 @@ describe('LoadingMessage', () => {
 					<LoadingMessage Icon={<SuccessIcon/>}/>
 				);
 				assert.equal(wrapper.find(SuccessIcon).length, 1);
-			})
+			});
 
 		});
 

@@ -62,7 +62,7 @@ export function common(Component, {
 					return acc;
 				}
 
-				return acc.concat(node.prop('className').split(' '))
+				return acc.concat(node.prop('className').split(' '));
 			}, []);
 
 			const allClasses = parentClasses.concat(childrenClasses);

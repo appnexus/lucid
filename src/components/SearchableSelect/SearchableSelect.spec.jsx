@@ -231,7 +231,7 @@ describe('SearchableSelect', () => {
 				);
 
 				const dropMenuWrapper = wrapper.find(DropMenu);
-				const optionContainerStyle = dropMenuWrapper.prop('optionContainerStyle')
+				const optionContainerStyle = dropMenuWrapper.prop('optionContainerStyle');
 				assert.equal(123, optionContainerStyle.maxHeight, 'must match prop value');
 			});
 		});
@@ -349,7 +349,7 @@ describe('SearchableSelect', () => {
 
 				// navigate down the virutal DOM tree to find the Control content
 				const dropMenuWrapper = wrapper.find('DropMenu');
-				const dropMenuChildren = dropMenuWrapper.prop('children')
+				const dropMenuChildren = dropMenuWrapper.prop('children');
 				const controlProps = _.first(_.map(filterTypes(dropMenuChildren, DropMenu.Control), 'props'));
 				const dropMenuControlChildElement = _.first(React.Children.toArray(controlProps.children));
 				const SearchableSelectControlChildren = React.Children.toArray(dropMenuControlChildElement.props.children);
@@ -370,7 +370,7 @@ describe('SearchableSelect', () => {
 
 				// navigate down the virutal DOM tree to find the Control content
 				const dropMenuWrapper = wrapper.find('DropMenu');
-				const dropMenuChildren = dropMenuWrapper.prop('children')
+				const dropMenuChildren = dropMenuWrapper.prop('children');
 				const nullOptionProps = _.first(_.map(filterTypes(dropMenuChildren, DropMenu.NullOption), 'props'));
 
 				assert.equal(React.Children.toArray(nullOptionProps.children)[0], 'select one');
@@ -389,7 +389,7 @@ describe('SearchableSelect', () => {
 				);
 
 				const dropMenuWrapper = wrapper.find('DropMenu');
-				const dropMenuChildren = dropMenuWrapper.prop('children')
+				const dropMenuChildren = dropMenuWrapper.prop('children');
 				const optionsProps = _.map(filterTypes(dropMenuChildren, DropMenu.Option), 'props');
 
 				assert.equal(_.size(optionsProps), 3);
@@ -431,7 +431,7 @@ describe('SearchableSelect', () => {
 				);
 
 				dropMenuWrapper = wrapper.find('DropMenu');
-				dropMenuChildren = dropMenuWrapper.prop('children')
+				dropMenuChildren = dropMenuWrapper.prop('children');
 				optionGroupProps = _.first(_.map(filterTypes(dropMenuChildren, DropMenu.OptionGroup), 'props'));
 			});
 
@@ -481,7 +481,7 @@ describe('SearchableSelect', () => {
 			});
 
 			it('should recursively combine children', () => {
-				const node = {children: [{props: {children: '1'}}, {props: {children: [{props: {children: '2'}}, {props: {children: '3'}}]}}]}
+				const node = {children: [{props: {children: '1'}}, {props: {children: [{props: {children: '2'}}, {props: {children: '3'}}]}}]};
 				assert.equal(SearchableSelect.getCombinedChildText(node), '123');
 			});
 		});

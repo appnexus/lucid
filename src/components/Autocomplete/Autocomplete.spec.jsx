@@ -108,7 +108,7 @@ describe('Autocomplete', () => {
 				wrapper.setProps({
 					...wrapper.props(),
 					value: 'Boston',
-				})
+				});
 				const inputDOMNode = document.querySelector('.lucid-Autocomplete-Control-input');
 
 				assert.equal(inputDOMNode.value, 'Boston', 'input value must match bew prop value');
