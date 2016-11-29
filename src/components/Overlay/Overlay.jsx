@@ -83,7 +83,7 @@ const Overlay = createClass({
 			// This must be in state because getDefaultProps only runs once per
 			// component import which causes collisions
 			portalId: this.props.portalId || _.uniqueId('Overlay-Portal-'),
-		}
+		};
 	},
 
 	componentDidMount() {

@@ -14,7 +14,7 @@ const LandingPage = React.createClass({
 	getInitialState() {
 		return {
 			isCarpeted: false,
-		}
+		};
 	},
 
 	componentDidMount: handleHighlightCode,

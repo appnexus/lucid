@@ -116,8 +116,8 @@ const Panel = createClass({
 					/>
 				) : null}
 			</div>
-		)
+		);
 	},
-})
+});
 
 export default Panel;

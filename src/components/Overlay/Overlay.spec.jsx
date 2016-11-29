@@ -9,7 +9,7 @@ import Overlay from './Overlay';
 describe('Overlay', () => {
 	common(Overlay, {
 		getDefaultProps: () => {
-			return { isShown: true }
+			return { isShown: true };
 		},
 		selectRoot: (wrapper) => wrapper.find('.lucid-Overlay'),
 	});

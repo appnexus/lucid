@@ -157,8 +157,8 @@ const SplitHorizontal = createClass({
 			bottomPane: bottomPaneRef,
 		} = this.storedRefs;
 
-		const topPaneElement = _.get(filterTypes(children, SplitHorizontal.TopPane), 0, <SplitHorizontal.TopPane />)
-		const bottomPaneElement = _.get(filterTypes(children, SplitHorizontal.BottomPane), 0, <SplitHorizontal.BottomPane />)
+		const topPaneElement = _.get(filterTypes(children, SplitHorizontal.TopPane), 0, <SplitHorizontal.TopPane />);
+		const bottomPaneElement = _.get(filterTypes(children, SplitHorizontal.BottomPane), 0, <SplitHorizontal.BottomPane />);
 		let primaryElement, primaryRef;
 		let secondaryElement, secondaryRef;
 

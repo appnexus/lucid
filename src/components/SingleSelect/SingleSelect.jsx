@@ -134,7 +134,7 @@ const SingleSelect = createClass({
 			flattenedOptionsData: [],
 			ungroupedOptionData: [],
 			optionGroupDataLookup: {},
-		}
+		};
 	},
 
 	componentWillMount() {

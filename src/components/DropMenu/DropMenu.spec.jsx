@@ -643,7 +643,7 @@ describe('DropMenu', () => {
 					</DropMenu>
 				);
 
-				assert.equal('control', wrapper.find('.lucid-DropMenu-Control').text())
+				assert.equal('control', wrapper.find('.lucid-DropMenu-Control').text());
 			});
 		});
 

@@ -107,6 +107,6 @@ describe('Dialog', () => {
 		assert.equal(document.querySelectorAll('#flux').length, 0);
 		wrapper.unmount();
 	});
-})
+});
 
 

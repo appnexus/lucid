@@ -21,7 +21,7 @@ export function stackByFields(collection, fields) {
 			const dataPoint = _.get(d, field, 0);
 
 			if (_.isEmpty(acc)) {
-				return acc.concat([[0, dataPoint]])
+				return acc.concat([[0, dataPoint]]);
 			}
 
 			const last = _.last(_.last(acc));

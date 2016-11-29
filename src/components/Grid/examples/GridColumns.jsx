@@ -14,7 +14,7 @@ const gridStyle = {
 		color: '#f3f3f3',
 	},
 	vertical: {height: '100px'},
-}
+};
 
 const fillCells = (count) => {
 	const cells = [];
@@ -26,7 +26,7 @@ const fillCells = (count) => {
 		);
 	}
 	return cells;
-}
+};
 
 export default React.createClass({
 	render() {
@@ -98,6 +98,6 @@ export default React.createClass({
 					{fillCells(12-11)}
 				</Grid>
 			</div>
-		)
+		);
 	},
 });

@@ -173,7 +173,7 @@ const Bars = createClass({
 	getInitialState() {
 		return {
 			isHovering: false,
-		}
+		};
 	},
 
 	render() {

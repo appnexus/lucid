@@ -41,7 +41,7 @@ module.exports = {
 				fs.writeFileSync('./src/docs/docgen.json', JSON.stringify(docgenMap, null, 2));
 				return callback();
 			}).catch(callback);
-		})
+		});
 	},
 
 	build: function(callback) {

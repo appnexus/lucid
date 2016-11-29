@@ -9,7 +9,7 @@ export default React.createClass({
 	getInitialState() {
 		return {
 			value: '',
-		}
+		};
 	},
 
 	render() {
@@ -23,6 +23,6 @@ export default React.createClass({
 
 				<div style={style}>state.value: {this.state.value}</div>
 			</div>
-		)
+		);
 	},
 });

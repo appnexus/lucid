@@ -45,8 +45,8 @@ describe('#getDeepPaths', () => {
 			['paginator', 'selectedPageSize'],
 			['paginator', 'dropselector', 'selectedIndex'],
 			['paginator', 'dropselector', 'options'],
-		], _.isEqual)
-		assert(_.isEqual([], xorPaths))
+		], _.isEqual);
+		assert(_.isEqual([], xorPaths));
 	});
 
 	it('should return an array of paths for each node with non-plain object value if arg is array', () => {
@@ -55,8 +55,8 @@ describe('#getDeepPaths', () => {
 			[0],
 			[1, 'one'],
 			[2],
-		], _.isEqual)
-		assert(_.isEqual([], xorPaths))
+		], _.isEqual);
+		assert(_.isEqual([], xorPaths));
 	});
 });
 
@@ -521,10 +521,10 @@ describe('#buildHybridComponent', () => {
 		},
 		reducers: {
 			onIncrement(state) {
-				return _.assign({}, state, { count: state.count + 1 })
+				return _.assign({}, state, { count: state.count + 1 });
 			},
 			onDecrement(state) {
-				return _.assign({}, state, { count: state.count - 1 })
+				return _.assign({}, state, { count: state.count - 1 });
 			},
 		},
 		selectors: {

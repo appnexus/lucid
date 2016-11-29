@@ -20,7 +20,7 @@ const gridStyle = {
 		color: '#f3f3f3',
 		flex: 1,
 	},
-}
+};
 
 export default React.createClass({
 	render() {
@@ -60,6 +60,6 @@ export default React.createClass({
 					<p  style={{...gridStyle.quarter, ...gridStyle.verticalSharedStyles}}>quarter</p>
 				</Grid.Cell>
 			</Grid>
-		)
+		);
 	},
 });

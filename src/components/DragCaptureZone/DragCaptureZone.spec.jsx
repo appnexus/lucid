@@ -113,7 +113,7 @@ describe('DragCaptureZone', () => {
 			const expectedData = _.assign({
 				dX: dragCoordinates.pageX - dragStartCoordinates.pageX,
 				dY: dragCoordinates.pageY - dragStartCoordinates.pageY,
-			}, dragCoordinates)
+			}, dragCoordinates);
 
 			assert.deepEqual(_.first(onDrag.args[0]), expectedData);
 		});
@@ -146,7 +146,7 @@ describe('DragCaptureZone', () => {
 			const expectedData = _.assign({
 				dX: dragEndCoordinates.pageX - dragStartCoordinates.pageX,
 				dY: dragEndCoordinates.pageY - dragStartCoordinates.pageY,
-			}, dragEndCoordinates)
+			}, dragEndCoordinates);
 
 			assert.deepEqual(_.first(onDragEnd.args[0]), expectedData);
 		});
