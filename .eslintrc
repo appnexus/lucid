@@ -16,6 +16,7 @@
 	},
 	"extends": "eslint:recommended",
 	"rules": {
+		"arrow-spacing": 2,
 		"quotes": [2, "single"],
 		"jsx-quotes": [2, "prefer-single"],
 		"key-spacing": 2,

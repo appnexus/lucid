@@ -430,7 +430,7 @@ const DropMenu = createClass({
 					'&-Option-is-disabled': isDisabled,
 					'&-Option-is-null': _.isNull(optionIndex),
 				}, optionProps.className)}
-				ref={(optionDOMNode)=> {
+				ref={(optionDOMNode) => {
 					if (isFocused && !isMouseTriggered) {
 						scrollParentTo(optionDOMNode, this._header && this._header.offsetHeight);
 					}
