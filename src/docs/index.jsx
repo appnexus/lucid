@@ -91,7 +91,7 @@ const docgenMap = _.mapValues(docgenMapRaw, (value, componentName) => {
  * Transforms an example filename to an example title. Remove leading numbers and
  * file extensions then capitalizes each word and separates each with a space.
  */
-function getExampleTitleFromFilename (filename) {
+function getExampleTitleFromFilename(filename) {
 	const words = _.words(_.startCase(basename(filename, '.jsx')));
 	return (/^\d+$/.test(_.head(words)) ? _.tail(words) : words).join(' ');
 }

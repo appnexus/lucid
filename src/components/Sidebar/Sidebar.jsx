@@ -113,7 +113,7 @@ const Sidebar = createClass({
 				 */
 				hasGutters: bool,
 			},
-			getDefaultProps () {
+			getDefaultProps() {
 				return {
 					hasGutters: true,
 				};

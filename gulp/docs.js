@@ -37,7 +37,7 @@ module.exports = {
 				return true;
 			});
 
-			anxDocgen.fromPaths(componentPaths).then(function (docgenMap) {
+			anxDocgen.fromPaths(componentPaths).then(function(docgenMap) {
 				fs.writeFileSync('./src/docs/docgen.json', JSON.stringify(docgenMap, null, 2));
 				return callback();
 			}).catch(callback);
