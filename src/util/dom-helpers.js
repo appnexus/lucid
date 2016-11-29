@@ -21,7 +21,7 @@ export function scrollParentTo(domNode, additionalOffset = 0) {
 			// if the top of the node is above the scroll line,
 			// align to top
 			parentNode.scrollTop = domNode.offsetTop - additionalOffset;
-		} else if ( parentNode.scrollTop + parentNode.clientHeight < domNode.offsetTop + domNode.offsetHeight) {
+		} else if (parentNode.scrollTop + parentNode.clientHeight < domNode.offsetTop + domNode.offsetHeight) {
 			// else if the bottom of the node is below the fold,
 			// align to bottom
 			parentNode.scrollTop = domNode.offsetHeight - (parentNode.clientHeight - domNode.offsetTop);

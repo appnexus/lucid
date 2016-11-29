@@ -21,6 +21,7 @@
 		"keyword-spacing": 0,
 		"comma-dangle": [2, "always-multiline"],
 		"react/prop-types": 2,
+		"space-in-parens": 2,
 		"no-trailing-spaces": 2,
 		"no-undef": 2,
 		"no-unused-vars": 2,
