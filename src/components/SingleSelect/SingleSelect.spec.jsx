@@ -206,7 +206,7 @@ describe('SingleSelect', () => {
 				);
 
 				const dropMenuWrapper = wrapper.find(DropMenu);
-				const flyOutStyle = dropMenuWrapper.prop('flyOutStyle')
+				const flyOutStyle = dropMenuWrapper.prop('flyOutStyle');
 				assert.equal(123, flyOutStyle.maxHeight, 'must match prop value');
 			});
 		});
@@ -252,7 +252,7 @@ describe('SingleSelect', () => {
 
 				// navigate down the virutal DOM tree to find the Control content
 				const dropMenuWrapper = wrapper.find('DropMenu');
-				const dropMenuChildren = dropMenuWrapper.prop('children')
+				const dropMenuChildren = dropMenuWrapper.prop('children');
 				const controlProps = _.first(_.map(filterTypes(dropMenuChildren, DropMenu.Control), 'props'));
 				const dropMenuControlChildElement = _.first(React.Children.toArray(controlProps.children));
 				const singleSelectControlChildren = React.Children.toArray(dropMenuControlChildElement.props.children);
@@ -273,7 +273,7 @@ describe('SingleSelect', () => {
 
 				// navigate down the virutal DOM tree to find the Control content
 				const dropMenuWrapper = wrapper.find('DropMenu');
-				const dropMenuChildren = dropMenuWrapper.prop('children')
+				const dropMenuChildren = dropMenuWrapper.prop('children');
 				const nullOptionProps = _.first(_.map(filterTypes(dropMenuChildren, DropMenu.NullOption), 'props'));
 
 				assert.equal(React.Children.toArray(nullOptionProps.children)[0], 'select one');
@@ -292,7 +292,7 @@ describe('SingleSelect', () => {
 				);
 
 				const dropMenuWrapper = wrapper.find('DropMenu');
-				const dropMenuChildren = dropMenuWrapper.prop('children')
+				const dropMenuChildren = dropMenuWrapper.prop('children');
 				const optionsProps = _.map(filterTypes(dropMenuChildren, DropMenu.Option), 'props');
 
 				assert.equal(_.size(optionsProps), 3);
@@ -331,7 +331,7 @@ describe('SingleSelect', () => {
 				);
 
 				dropMenuWrapper = wrapper.find('DropMenu');
-				dropMenuChildren = dropMenuWrapper.prop('children')
+				dropMenuChildren = dropMenuWrapper.prop('children');
 				optionGroupProps = _.first(_.map(filterTypes(dropMenuChildren, DropMenu.OptionGroup), 'props'));
 			});
 

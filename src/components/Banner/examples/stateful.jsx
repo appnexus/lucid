@@ -10,7 +10,7 @@ export default React.createClass({
 	handleChange(isClosed) {
 		this.setState({
 			isClosed,
-		})
+		});
 	},
 
 	render() {

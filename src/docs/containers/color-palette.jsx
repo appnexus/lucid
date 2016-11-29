@@ -226,7 +226,7 @@ const ColorPalette = React.createClass({
 	getInitialState() {
 		return {
 			hexMap: {},
-		}
+		};
 	},
 
 	// In order to keep our colors coming from LESS, we need to do some...

@@ -6,7 +6,7 @@ export default React.createClass({
 	getInitialState() {
 		return {
 			events: [],
-		}
+		};
 	},
 
 	render() {

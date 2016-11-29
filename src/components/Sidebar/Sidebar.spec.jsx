@@ -37,18 +37,18 @@ describe('Sidebar', () => {
 				const wrapper = shallow(
 					<Sidebar width={123} />
 				);
-				const barWrapper = wrapper.find('.lucid-Sidebar > .lucid-Sidebar-Bar')
+				const barWrapper = wrapper.find('.lucid-Sidebar > .lucid-Sidebar-Bar');
 
-				assert.equal(123, barWrapper.prop('width'), 'must pass width to the bar pane')
+				assert.equal(123, barWrapper.prop('width'), 'must pass width to the bar pane');
 			});
 
 			it('should default to 250', () => {
 				const wrapper = shallow(
 					<Sidebar />
 				);
-				const barWrapper = wrapper.find('.lucid-Sidebar > .lucid-Sidebar-Bar')
+				const barWrapper = wrapper.find('.lucid-Sidebar > .lucid-Sidebar-Bar');
 
-				assert.equal(250, barWrapper.prop('width'), 'must pass width to the bar pane')
+				assert.equal(250, barWrapper.prop('width'), 'must pass width to the bar pane');
 			});
 		});
 
@@ -69,9 +69,9 @@ describe('Sidebar', () => {
 				_.delay(() => {
 					const splitVertical = wrapper.find(SplitVertical);
 
-					assert(splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical')
-					assert(splitVertical.shallow().hasClass('lucid-SplitVertical-is-expanded'), 'must have the lucid-SplitVertical-is-expanded className')
-					done()
+					assert(splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical');
+					assert(splitVertical.shallow().hasClass('lucid-SplitVertical-is-expanded'), 'must have the lucid-SplitVertical-is-expanded className');
+					done();
 				}, MOSTLY_STABLE_DELAY);
 			});
 
@@ -83,8 +83,8 @@ describe('Sidebar', () => {
 				_.delay(() => {
 					const splitVertical = wrapper.find(SplitVertical);
 
-					assert(!splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical')
-					assert(!splitVertical.hasClass('lucid-SplitVertical-is-expanded'), 'must not have the lucid-SplitVertical-is-expanded className')
+					assert(!splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical');
+					assert(!splitVertical.hasClass('lucid-SplitVertical-is-expanded'), 'must not have the lucid-SplitVertical-is-expanded className');
 					done();
 				}, MOSTLY_STABLE_DELAY);
 			});
@@ -97,8 +97,8 @@ describe('Sidebar', () => {
 				_.delay(() => {
 					const splitVertical = wrapper.find(SplitVertical);
 
-					assert(splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical')
-					assert(splitVertical.shallow().hasClass('lucid-SplitVertical-is-expanded'), 'must have the lucid-SplitVertical-is-expanded className')
+					assert(splitVertical.prop('isExpanded'), 'must pass isExpanded to the underlying SplitVertical');
+					assert(splitVertical.shallow().hasClass('lucid-SplitVertical-is-expanded'), 'must have the lucid-SplitVertical-is-expanded className');
 					done();
 				}, MOSTLY_STABLE_DELAY);
 			});
@@ -111,7 +111,7 @@ describe('Sidebar', () => {
 				);
 				const splitVertical = wrapper.find(SplitVertical);
 
-				assert(splitVertical.prop('isAnimated'), 'must pass isAnimated to the underlying SplitVertical')
+				assert(splitVertical.prop('isAnimated'), 'must pass isAnimated to the underlying SplitVertical');
 			});
 
 			it('should pass isAnimated to the underlying SplitVertical (false)', () => {
@@ -120,7 +120,7 @@ describe('Sidebar', () => {
 				);
 				const splitVertical = wrapper.find(SplitVertical);
 
-				assert(!splitVertical.prop('isAnimated'), 'must pass isAnimated to the underlying SplitVertical')
+				assert(!splitVertical.prop('isAnimated'), 'must pass isAnimated to the underlying SplitVertical');
 			});
 
 			it('should default to true', () => {
@@ -129,7 +129,7 @@ describe('Sidebar', () => {
 				);
 				const splitVertical = wrapper.find(SplitVertical);
 
-				assert(splitVertical.prop('isAnimated'), 'must pass isAnimated to the underlying SplitVertical')
+				assert(splitVertical.prop('isAnimated'), 'must pass isAnimated to the underlying SplitVertical');
 			});
 		});
 
@@ -141,10 +141,10 @@ describe('Sidebar', () => {
 				const splitVerticalLeftPane = wrapper.find(SplitVertical.LeftPane);
 				const splitVerticalRightPane = wrapper.find(SplitVertical.RightPane);
 
-				assert(!splitVerticalLeftPane.prop('isPrimary'), 'must not be primary')
-				assert(splitVerticalLeftPane.hasClass('lucid-Sidebar-Bar'), 'must have the className lucid-Sidebar-Bar')
-				assert(splitVerticalRightPane.prop('isPrimary'), 'must be primary')
-				assert(splitVerticalRightPane.hasClass('lucid-Sidebar-Primary'), 'must have the className lucid-Sidebar-Primary')
+				assert(!splitVerticalLeftPane.prop('isPrimary'), 'must not be primary');
+				assert(splitVerticalLeftPane.hasClass('lucid-Sidebar-Bar'), 'must have the className lucid-Sidebar-Bar');
+				assert(splitVerticalRightPane.prop('isPrimary'), 'must be primary');
+				assert(splitVerticalRightPane.hasClass('lucid-Sidebar-Primary'), 'must have the className lucid-Sidebar-Primary');
 			});
 
 			it('should render the Primary content in the LeftPane and the Bar in the RightPane when set to `right`', () => {
@@ -154,10 +154,10 @@ describe('Sidebar', () => {
 				const splitVerticalLeftPane = wrapper.find(SplitVertical.LeftPane);
 				const splitVerticalRightPane = wrapper.find(SplitVertical.RightPane);
 
-				assert(splitVerticalLeftPane.prop('isPrimary'), 'must not be primary')
-				assert(splitVerticalLeftPane.hasClass('lucid-Sidebar-Primary'), 'must have the className lucid-Sidebar-Primary')
-				assert(!splitVerticalRightPane.prop('isPrimary'), 'must be primary')
-				assert(splitVerticalRightPane.hasClass('lucid-Sidebar-Bar'), 'must have the className lucid-Sidebar-Bar')
+				assert(splitVerticalLeftPane.prop('isPrimary'), 'must not be primary');
+				assert(splitVerticalLeftPane.hasClass('lucid-Sidebar-Primary'), 'must have the className lucid-Sidebar-Primary');
+				assert(!splitVerticalRightPane.prop('isPrimary'), 'must be primary');
+				assert(splitVerticalRightPane.hasClass('lucid-Sidebar-Bar'), 'must have the className lucid-Sidebar-Bar');
 			});
 
 			it('should default to `left`', () => {
@@ -167,10 +167,10 @@ describe('Sidebar', () => {
 				const splitVerticalLeftPane = wrapper.find(SplitVertical.LeftPane);
 				const splitVerticalRightPane = wrapper.find(SplitVertical.RightPane);
 
-				assert(!splitVerticalLeftPane.prop('isPrimary'), 'must not be primary')
-				assert(splitVerticalLeftPane.hasClass('lucid-Sidebar-Bar'), 'must have the className lucid-Sidebar-Bar')
-				assert(splitVerticalRightPane.prop('isPrimary'), 'must be primary')
-				assert(splitVerticalRightPane.hasClass('lucid-Sidebar-Primary'), 'must have the className lucid-Sidebar-Primary')
+				assert(!splitVerticalLeftPane.prop('isPrimary'), 'must not be primary');
+				assert(splitVerticalLeftPane.hasClass('lucid-Sidebar-Bar'), 'must have the className lucid-Sidebar-Bar');
+				assert(splitVerticalRightPane.prop('isPrimary'), 'must be primary');
+				assert(splitVerticalRightPane.hasClass('lucid-Sidebar-Primary'), 'must have the className lucid-Sidebar-Primary');
 			});
 		});
 
@@ -180,7 +180,7 @@ describe('Sidebar', () => {
 					<Sidebar isResizeDisabled={true} />
 				);
 
-				assert(wrapper.hasClass('lucid-Sidebar-is-resize-disabled'), 'must have className lucid-Sidebar-is-resize-disabled')
+				assert(wrapper.hasClass('lucid-Sidebar-is-resize-disabled'), 'must have className lucid-Sidebar-is-resize-disabled');
 			});
 
 			it('should not set the className lucid-Sidebar-is-resize-disabled (false)', () => {
@@ -188,7 +188,7 @@ describe('Sidebar', () => {
 					<Sidebar isResizeDisabled={false} />
 				);
 
-				assert(!wrapper.hasClass('lucid-Sidebar-is-resize-disabled'), 'must not have className lucid-Sidebar-is-resize-disabled')
+				assert(!wrapper.hasClass('lucid-Sidebar-is-resize-disabled'), 'must not have className lucid-Sidebar-is-resize-disabled');
 			});
 
 			it('should default to false', () => {
@@ -196,7 +196,7 @@ describe('Sidebar', () => {
 					<Sidebar />
 				);
 
-				assert(!wrapper.hasClass('lucid-Sidebar-is-resize-disabled'), 'must not have className lucid-Sidebar-is-resize-disabled')
+				assert(!wrapper.hasClass('lucid-Sidebar-is-resize-disabled'), 'must not have className lucid-Sidebar-is-resize-disabled');
 			});
 		});
 
@@ -304,7 +304,7 @@ describe('Sidebar', () => {
 				);
 
 				const contentWrapper = wrapper.find('.lucid-Sidebar > .lucid-Sidebar-Bar > .lucid-Sidebar-Bar-content');
-				assert.equal('Next level locavore squid', contentWrapper.text(), 'must render content in the side bar')
+				assert.equal('Next level locavore squid', contentWrapper.text(), 'must render content in the side bar');
 			});
 
 			it('should have the correct class on bar content for `hasGutters`', () => {
@@ -326,7 +326,7 @@ describe('Sidebar', () => {
 				);
 
 				const titleWrapper = wrapper.find('.lucid-Sidebar > .lucid-Sidebar-Bar > .lucid-Sidebar-Bar-header > .lucid-Sidebar-Bar-Title');
-				assert.equal('Artisan Jean Shorts', titleWrapper.text(), 'must render title from prop value')
+				assert.equal('Artisan Jean Shorts', titleWrapper.text(), 'must render title from prop value');
 			});
 
 			it('should render title from the given prop value for `Title`', () => {
@@ -337,7 +337,7 @@ describe('Sidebar', () => {
 				);
 
 				const titleWrapper = wrapper.find('.lucid-Sidebar > .lucid-Sidebar-Bar > .lucid-Sidebar-Bar-header > .lucid-Sidebar-Bar-Title');
-				assert.equal('Authentic pork belly', titleWrapper.text(), 'must render title from prop value')
+				assert.equal('Authentic pork belly', titleWrapper.text(), 'must render title from prop value');
 			});
 
 			it('should render title from the `<Sidebar.Title>` composed with children', () => {
@@ -350,7 +350,7 @@ describe('Sidebar', () => {
 				);
 
 				const titleWrapper = wrapper.find('.lucid-Sidebar > .lucid-Sidebar-Bar > .lucid-Sidebar-Bar-header > .lucid-Sidebar-Bar-Title');
-				assert.equal('Shabby Chic Dreamcatcher', titleWrapper.text(), 'must render title from composed children')
+				assert.equal('Shabby Chic Dreamcatcher', titleWrapper.text(), 'must render title from composed children');
 			});
 		});
 
@@ -363,7 +363,7 @@ describe('Sidebar', () => {
 				);
 
 				const primaryWrapper = wrapper.find('.lucid-Sidebar > .lucid-Sidebar-Primary');
-				assert.equal('You probably havent heard of them', primaryWrapper.children().text(), 'must render content in the primary section')
+				assert.equal('You probably havent heard of them', primaryWrapper.children().text(), 'must render content in the primary section');
 			});
 		});
 
@@ -376,7 +376,7 @@ describe('Sidebar', () => {
 				);
 
 				const titleWrapper = wrapper.find('.lucid-Sidebar > .lucid-Sidebar-Bar > .lucid-Sidebar-Bar-header > .lucid-Sidebar-Bar-Title');
-				assert.equal('Roof Party Green Juice Mustache', titleWrapper.text(), 'must render title from composed children')
+				assert.equal('Roof Party Green Juice Mustache', titleWrapper.text(), 'must render title from composed children');
 			});
 		});
 	});

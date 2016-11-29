@@ -4,7 +4,7 @@ export function onSelect(state = {}, index) {
 	return {
 		...state,
 		selectedIndices: [index],
-	}
+	};
 }
 
 export function onToggle(state = {}, index) {
@@ -13,5 +13,5 @@ export function onToggle(state = {}, index) {
 	return {
 		...state,
 		expandedIndices: _.xor(expandedIndices, [index]),
-	}
+	};
 }

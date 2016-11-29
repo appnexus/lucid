@@ -21,7 +21,7 @@ describe('VerticalTabs', () => {
 				</VerticalTabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-VerticalTabs-content').text(), 'Foo Content')
+			assert.equal(wrapper.find('.lucid-VerticalTabs-content').text(), 'Foo Content');
 		});
 
 		it('Tab as props', () => {

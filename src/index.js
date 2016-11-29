@@ -131,7 +131,7 @@ import SwitchIcon from './components/Icon/SwitchIcon/SwitchIcon';
 import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
 import Table from './components/Table/Table';
 import TableGearIcon from './components/Icon/TableGearIcon/TableGearIcon';
-import TextField from './components/TextField/TextField'
+import TextField from './components/TextField/TextField';
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
 import UnlinkedIcon from './components/Icon/UnlinkedIcon/UnlinkedIcon';
 import UnlockedIcon from './components/Icon/UnlockedIcon/UnlockedIcon';

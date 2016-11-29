@@ -162,8 +162,8 @@ const SplitVertical = createClass({
 			rightPane: rightPaneRef,
 		} = this.storedRefs;
 
-		const leftPaneElement = _.get(filterTypes(children, SplitVertical.LeftPane), 0, <SplitVertical.LeftPane />)
-		const rightPaneElement = _.get(filterTypes(children, SplitVertical.RightPane), 0, <SplitVertical.RightPane />)
+		const leftPaneElement = _.get(filterTypes(children, SplitVertical.LeftPane), 0, <SplitVertical.LeftPane />);
+		const rightPaneElement = _.get(filterTypes(children, SplitVertical.RightPane), 0, <SplitVertical.RightPane />);
 		let primaryElement, primaryRef;
 		let secondaryElement, secondaryRef;
 

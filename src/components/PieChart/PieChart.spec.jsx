@@ -196,7 +196,7 @@ describe('PieChart', () => {
 				assert(onMouseOver.called, 'onMouseOver was not called');
 				assert.equal(onMouseOver.args[0][0], 1, 'wrong index on onMouseOut');
 				assert.equal(onMouseOver.args[0][1].props.palette[0], 'foo');
-				assert(_.has(onMouseOver.args[0][1], 'event'))
+				assert(_.has(onMouseOver.args[0][1], 'event'));
 			});
 		});
 
@@ -233,7 +233,7 @@ describe('PieChart', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(ToolTip.Title).prop('children'), 'ONE')
+				assert.equal(wrapper.find(ToolTip.Title).prop('children'), 'ONE');
 			});
 		});
 
