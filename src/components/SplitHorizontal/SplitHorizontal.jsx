@@ -85,7 +85,7 @@ const SplitHorizontal = createClass({
 				 */
 				isPrimary: bool,
 			},
-			getDefaultProps(){
+			getDefaultProps() {
 				return {
 					isPrimary: false,
 				};
@@ -111,7 +111,7 @@ const SplitHorizontal = createClass({
 				 */
 				isPrimary: bool,
 			},
-			getDefaultProps(){
+			getDefaultProps() {
 				return {
 					isPrimary: false,
 				};

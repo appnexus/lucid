@@ -347,14 +347,14 @@ const Th = createClass({
 
 	getWidth() {
 		const styleWidth = _.get(this.refs.root, 'style.width');
-		if (_.endsWith(styleWidth, 'px')){
+		if (_.endsWith(styleWidth, 'px')) {
 			return parseInt(styleWidth);
 		}
 		return this.refs.root.getBoundingClientRect().width;
 	},
 
-	handleClickCapture(event){
-		if (this.state.isDragging){
+	handleClickCapture(event) {
+		if (this.state.isDragging) {
 			event.stopPropagation();
 			this.setState({
 				isDragging: false,
@@ -362,13 +362,13 @@ const Th = createClass({
 		}
 	},
 
-	handleMouseEnter(){
+	handleMouseEnter() {
 		this.setState({
 			isDragging: this.state.isResizing,
 		});
 	},
 
-	handleMouseUp(){
+	handleMouseUp() {
 		this.setState({
 			isDragging: this.state.isResizing,
 		});
