@@ -16,7 +16,7 @@ export default React.createClass({
 	render() {
 		const {data} = this.state;
 
-		return(
+		return (
 			<DataTable
 				data={data}
 				density='extended'

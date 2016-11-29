@@ -3,7 +3,7 @@ import { Submarine } from '../../../index';
 
 export default React.createClass({
 	render() {
-		return(
+		return (
 			<section style={{ height: 600, background: 'lightgray', outline: '1px solid lightgray' }}>
 
 				<Submarine position='top'>

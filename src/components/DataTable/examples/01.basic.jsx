@@ -76,7 +76,7 @@ const data = [
 export default React.createClass({
 	render() {
 
-		return(
+		return (
 			<DataTable
 				data={data}
 			>

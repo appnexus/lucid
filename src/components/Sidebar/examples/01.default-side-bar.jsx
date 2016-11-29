@@ -3,7 +3,7 @@ import { Sidebar } from '../../../index';
 
 export default React.createClass({
 	render() {
-		return(
+		return (
 			<Sidebar>
 				<Sidebar.Bar>
 					Minim 90's paleo retro, fugiat aliqua hashtag enim photo booth listicle next level. Consectetur fap proident magna culpa. Art party meh ad, four loko slow-carb venmo distillery wolf cornhole nisi.

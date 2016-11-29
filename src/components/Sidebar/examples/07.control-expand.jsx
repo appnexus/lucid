@@ -14,7 +14,7 @@ export default React.createClass({
 	},
 
 	render() {
-		return(
+		return (
 			<section>
 				<button onClick={this.handleToggle}>toggle</button>
 				<Sidebar isExpanded={this.state.isExpanded} onToggle={this.handleToggle}>

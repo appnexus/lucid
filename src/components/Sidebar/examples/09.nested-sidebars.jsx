@@ -3,7 +3,7 @@ import { Sidebar } from '../../../index';
 
 export default React.createClass({
 	render() {
-		return(
+		return (
 			<Sidebar>
 				<Sidebar.Bar>
 					Bitters shabby chic tacos, sapiente drinking vinegar readymade gochujang typewriter. Gluten-free cred sartorial pop-up commodo.

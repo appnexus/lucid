@@ -17,7 +17,7 @@ export default React.createClass({
 	},
 
 	render() {
-		return(
+		return (
 			<section>
 
 			New Width: {`${this.state.newWidth}`}

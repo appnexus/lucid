@@ -17,7 +17,7 @@ export default React.createClass({
 	},
 
 	render() {
-		return(
+		return (
 			<section>
 
 			New Height: {`${this.state.newHeight}`}

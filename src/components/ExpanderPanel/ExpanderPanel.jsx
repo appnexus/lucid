@@ -99,7 +99,7 @@ const ExpanderPanel = createClass({
 	},
 
 	handleToggle(event) {
-		if(!this.props.isDisabled){
+		if (!this.props.isDisabled){
 			this.props.onToggle(!this.props.isExpanded, {
 				event,
 				props: this.props,

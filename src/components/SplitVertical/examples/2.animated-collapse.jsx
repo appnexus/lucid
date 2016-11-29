@@ -12,7 +12,7 @@ export default React.createClass({
 		this.setState({isExpanded: !this.state.isExpanded});
 	},
 	render() {
-		return(
+		return (
 			<section>
 
 				<button onClick={this.handleToggle}>toggle</button>

@@ -3,7 +3,7 @@ import { SplitVertical } from '../../../index';
 
 export default React.createClass({
 	render() {
-		return(
+		return (
 			<SplitVertical isResizeable={false}>
 				<SplitVertical.LeftPane>
 					<p>Occupy biodiesel nesciunt pug fugiat. VHS accusamus intelligentsia, chartreuse raw denim kogi bushwick cold-pressed chia heirloom sint forage. Cornhole affogato swag duis hella, pabst bitters trust fund heirloom viral blog selfies green juice commodo nulla. Single-origin coffee 8-bit ugh jean shorts proident, tote bag small batch meditation poutine next level lo-fi. Ethical before they sold out shoreditch, etsy man braid semiotics ea health goth squid aliquip drinking vinegar kinfolk excepteur polaroid. Meh schlitz cred tattooed chartreuse 3 wolf moon. Lumbersexual poutine kinfolk hella chartreuse thundercats.</p>
