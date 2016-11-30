@@ -5,8 +5,8 @@ import {
 } from '../../../index';
 
 export default React.createClass({
-  render() {
-    return (
+	render() {
+		return (
 			<div>
 				<SearchField value='foo' />
 				<SearchField placeholder='bar' />
@@ -26,6 +26,6 @@ export default React.createClass({
 					<SearchField.TextField value='bar' />
 				</SearchField>
 			</div>
-    );
-  },
+		);
+	},
 });

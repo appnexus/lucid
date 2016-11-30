@@ -5,8 +5,8 @@ import { Breadcrumb } from '../../../index';
 const { Item } = Breadcrumb;
 
 export default React.createClass({
-  render() {
-    return (
+	render() {
+		return (
 			<Breadcrumb>
 				{_.map(['Foo', 'Bar', 'Baz'], item => (
 					<Item key={item}>
@@ -15,6 +15,6 @@ export default React.createClass({
 				))}
 				<Item key='qux'>Qux</Item>
 			</Breadcrumb>
-    );
-  },
+		);
+	},
 });

@@ -222,11 +222,11 @@ const SearchableSelect = createClass({
 		const [pre, match, post] = partitionText(childText, new RegExp(_.escapeRegExp(searchText), 'i'), searchText.length);
 
 		return (
-			[
-				pre && <span key='pre' className={cx('&-Option-underline-pre')}>{pre}</span>,
-				match && <span key='match' className={cx('&-Option-underline-match')}>{match}</span>,
-				post && <span key='post' className={cx('&-Option-underline-post')}>{post}</span>,
-			]
+		[
+			pre && <span key='pre' className={cx('&-Option-underline-pre')}>{pre}</span>,
+			match && <span key='match' className={cx('&-Option-underline-match')}>{match}</span>,
+			post && <span key='post' className={cx('&-Option-underline-post')}>{post}</span>,
+		]
 		);
 	},
 

@@ -4,8 +4,8 @@ import { Breadcrumb, HomeIcon } from '../../../index';
 const { Item } = Breadcrumb;
 
 export default React.createClass({
-  render() {
-    return (
+	render() {
+		return (
 			<Breadcrumb>
 				<Item key='home'>
 					<a href='#'><HomeIcon /></a>
@@ -17,6 +17,6 @@ export default React.createClass({
 					Item
 				</Item>
 			</Breadcrumb>
-    );
-  },
+		);
+	},
 });

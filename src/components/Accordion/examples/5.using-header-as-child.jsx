@@ -2,8 +2,8 @@ import React from 'react';
 import { Accordion } from '../../../index';
 
 export default React.createClass({
-  render() {
-    return (
+	render() {
+		return (
       <Accordion>
         <Accordion.Item>
           <Accordion.Header>Peter Venkman</Accordion.Header>
@@ -18,6 +18,6 @@ export default React.createClass({
           Egon Spengler, Ph.D. is a fictional character from the Ghostbusters franchise. He appears in the films Ghostbusters and Ghostbusters II, in the animated television series The Real Ghostbusters, and later in Extreme Ghostbusters. Spengler was portrayed by Harold Ramis in the films and voiced by him in Ghostbusters: The Video Game, and voiced by Maurice LaMarche in the cartoon series. He is a member of the Ghostbusters and one of the three doctors of parapsychology, along with Dr. Peter Venkman and Dr. Raymond Stantz.
         </Accordion.Item>
       </Accordion>
-    );
-  },
+		);
+	},
 });

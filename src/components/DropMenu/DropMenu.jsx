@@ -258,10 +258,10 @@ const DropMenu = createClass({
 			// store ungrouped options into array of objects to associate { index, and props } for each option
 			const ungroupedOptionData = _.map(ungroupedOptions, (optionProps, localOptionIndex) => {
 				return {
-						localOptionIndex,
-						optionIndex: _.size(groupedOptionData) + localOptionIndex, // add current index to grouped options array length to get final option index (grouped options rendered first)
-						optionGroupIndex: null, // ungrouped options have no `optionGroupIndex`
-						optionProps,
+					localOptionIndex,
+					optionIndex: _.size(groupedOptionData) + localOptionIndex, // add current index to grouped options array length to get final option index (grouped options rendered first)
+					optionGroupIndex: null, // ungrouped options have no `optionGroupIndex`
+					optionProps,
 				};
 			});
 
@@ -424,12 +424,12 @@ const DropMenu = createClass({
 				{...omitProps(optionProps, DropMenu.Option)}
 				className={cx(
 					'&-Option', {
-					'&-Option-is-grouped': isGrouped,
-					'&-Option-is-focused': isFocused,
-					'&-Option-is-selected': isSelected,
-					'&-Option-is-disabled': isDisabled,
-					'&-Option-is-null': _.isNull(optionIndex),
-				}, optionProps.className)}
+						'&-Option-is-grouped': isGrouped,
+						'&-Option-is-focused': isFocused,
+						'&-Option-is-selected': isSelected,
+						'&-Option-is-disabled': isDisabled,
+						'&-Option-is-null': _.isNull(optionIndex),
+					}, optionProps.className)}
 				ref={(optionDOMNode) => {
 					if (isFocused && !isMouseTriggered) {
 						scrollParentTo(optionDOMNode, this._header && this._header.offsetHeight);
