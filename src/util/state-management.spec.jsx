@@ -528,8 +528,8 @@ describe('#buildHybridComponent', () => {
 			},
 		},
 		selectors: {
-			countDisplay: state => `count: ${state.count}`,
-			countModThree: state => state.count % 3,
+			countDisplay: (state) => `count: ${state.count}`,
+			countModThree: (state) => state.count % 3,
 		},
 		render() {
 			const {

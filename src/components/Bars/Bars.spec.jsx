@@ -209,7 +209,7 @@ describe('Bars', () => {
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						hasToolTips
-						xFormatter={str => str.toUpperCase()}
+						xFormatter={(str) => str.toUpperCase()}
 					/>
 				);
 
@@ -253,7 +253,7 @@ describe('Bars', () => {
 						]}
 						xScale={xScale}
 						yScale={yScale}
-						xFormatter={d => d.toISOString()}
+						xFormatter={(d) => d.toISOString()}
 					/>
 				);
 
@@ -326,7 +326,7 @@ describe('Bars', () => {
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						hasToolTips
-						xFormatter={str => str.toUpperCase()}
+						xFormatter={(str) => str.toUpperCase()}
 					/>
 				);
 

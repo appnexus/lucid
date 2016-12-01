@@ -13,7 +13,7 @@ export default React.createClass({
 		return (
 			<LineChart
 				yAxisIsStacked
-				yAxisFormatter={yValue => `$ ${yValue}`}
+				yAxisFormatter={(yValue) => `$ ${yValue}`}
 				yAxisTooltipFormatter={(yField, yValueFormatted) => yValueFormatted}
 				data={data}
 			/>

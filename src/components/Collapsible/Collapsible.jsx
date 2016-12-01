@@ -140,7 +140,7 @@ const Collapsible = createClass({
 					height: (isExpanded && !_.isNull(maxHeight) ? maxHeight : 0),
 				}}
 			>
-				{tween => (
+				{(tween) => (
 					React.createElement(rootType, {
 						...omitProps(passThroughs, Collapsible),
 						ref: this.storeRef('root'),

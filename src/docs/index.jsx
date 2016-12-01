@@ -230,7 +230,7 @@ const Component = React.createClass({
 		const childComponents = _.chain(component)
 		.get('childComponents', [])
 		// get docs for imported component references
-		.map(childComponent => {
+		.map((childComponent) => {
 			if (!childComponent.componentRef) {
 				return childComponent;
 			}
@@ -249,7 +249,7 @@ const Component = React.createClass({
 		const componentProps = _.chain(docgenMap)
 			.get(`${componentName}.props`, [])
 			.toPairs() // this turns the object into an array of [propName, propDetails] so we can sort
-			.sortBy(x => x[0]) // sort by property name
+			.sortBy((x) => x[0]) // sort by property name
 			.value();
 
 		const descriptionAsHTML = toMarkdown(_.get(docgenMap, `${componentName}.description`));
@@ -365,7 +365,7 @@ const Component = React.createClass({
 											{_.map((_.chain(childComponent)
 												.get('props', [])
 												.toPairs() // this turns the object into an array of [propName, propDetails] so we can sort
-												.sortBy(x => x[0]) // sort by property name
+												.sortBy((x) => x[0]) // sort by property name
 												.value()
 											), ([propName, propDetails]) => {
 												if (!propDetails || _.isNil(propDetails.description)) {
@@ -606,7 +606,7 @@ const TestList = React.createClass({
 		window.examples = testExampleKeys;
 		return (
 			<ul id='examples-list'>
-				{_.map(testExampleKeys, path => (
+				{_.map(testExampleKeys, (path) => (
 					<li key={path}>
 						<Link to={{ pathname: `/test/${path}`}}>
 							{path}

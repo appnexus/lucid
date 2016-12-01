@@ -73,7 +73,7 @@ describe('ContextMenu', () => {
 				assert(_.isEmpty(flyout.style.opacity));
 			});
 
-			it('should render the flyout with opacity 1 on subsequent render', done => {
+			it('should render the flyout with opacity 1 on subsequent render', (done) => {
 				wrapper = mount(
 					<ContextMenu portalId='ContextMenu-test456' isExpanded>
 						<ContextMenu.Target>
@@ -93,7 +93,7 @@ describe('ContextMenu', () => {
 		});
 
 		describe('direction', () => {
-			_.forEach(['up', 'down', 'left', 'right'], direction => {
+			_.forEach(['up', 'down', 'left', 'right'], (direction) => {
 				it(`should apply the 'lucid-ContextMenu-FlyOut-${direction}' className when '${direction}'`, () => {
 					wrapper = mount(
 						<ContextMenu portalId='ContextMenu-test123' isExpanded direction={direction}>

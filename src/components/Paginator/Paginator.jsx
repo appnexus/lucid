@@ -156,7 +156,7 @@ const Paginator = createClass({
 							selectedIndex={selectedPageSizeIndex}
 							onSelect={onPageSizeSelect}
 						>
-							{_.map(pageSizeOptions, option => <Option key={option}>{option}</Option>)}
+							{_.map(pageSizeOptions, (option) => <Option key={option}>{option}</Option>)}
 						</SingleSelect>
 					</div>
 				) : null }

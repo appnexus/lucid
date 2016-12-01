@@ -67,14 +67,14 @@ export function common(Component, {
 
 			const allClasses = parentClasses.concat(childrenClasses);
 
-			_.forEach(allClasses, className => {
+			_.forEach(allClasses, (className) => {
 				assert(_.includes(className, `lucid-${Component.displayName}`), `${className} must be scoped`);
 			});
 		});
 
 		describe('function propTypes', () => {
 
-			const funcProps = _.pickBy(Component.propTypes, propType => propType === React.PropTypes.func);
+			const funcProps = _.pickBy(Component.propTypes, (propType) => propType === React.PropTypes.func);
 
 			_.forEach(funcProps, (propType, propName) => {
 				it(`${propName} should only use onX convention for function proptypes`, () => {
@@ -99,8 +99,8 @@ export function common(Component, {
 				.map('propName')
 				.compact()
 				.flatMap(_.castArray)
-				.reject(propName => _.includes(exemptChildComponents, propName))
-				.forEach(propName => {
+				.reject((propName) => _.includes(exemptChildComponents, propName))
+				.forEach((propName) => {
 					it(`should include ${propName} in propTypes`, () => {
 						assert(Component.propTypes[propName], `must include ${propName} in propTypes`);
 					});
@@ -110,9 +110,9 @@ export function common(Component, {
 		});
 
 		describe('example testing', () => {
-			const examples = glob.sync(`./src/components/**/${Component.displayName}/examples/*.jsx`).map(path => require('../../' + path).default);
+			const examples = glob.sync(`./src/components/**/${Component.displayName}/examples/*.jsx`).map((path) => require('../../' + path).default);
 
-			_.each(examples, Example => {
+			_.each(examples, (Example) => {
 				it(`should match snapshot(s) for ${Example.displayName}`, () => {
 					const shallowExample = shallow(<Example />);
 
@@ -121,7 +121,7 @@ export function common(Component, {
 					if (shallowExample.is(Component.displayName)) {
 						expect(shallowToJson(shallow(<Component {...shallowExample.props()} />))).toMatchSnapshot();
 					} else {
-						shallowExample.find(Component).forEach(example => {
+						shallowExample.find(Component).forEach((example) => {
 							expect(shallowToJson(shallow(<Component {...example.props()} />))).toMatchSnapshot();
 						});
 					}

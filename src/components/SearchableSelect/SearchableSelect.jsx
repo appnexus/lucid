@@ -175,8 +175,8 @@ const SearchableSelect = createClass({
 			}
 
 			return node.children
-							.filter(child => !_.isString(child))
-							.map(child => this.getCombinedChildText(child.props))
+							.filter((child) => !_.isString(child))
+							.map((child) => this.getCombinedChildText(child.props))
 							.reduce(((combinedText, childText) => combinedText + childText), _.find(node.children, _.isString) || '');
 		},
 
@@ -277,7 +277,7 @@ const SearchableSelect = createClass({
 			const childOptions = _.map(_.get(optionGroupDataLookup, optionGroupIndex), ({ optionProps, optionIndex }) => (
 				this.renderOption(optionProps, optionIndex)
 			));
-			const visibleChildrenCount = _.filter(childOptions, option => !option.props.isHidden).length;
+			const visibleChildrenCount = _.filter(childOptions, (option) => !option.props.isHidden).length;
 
 			return (
 				<DropMenu.OptionGroup
@@ -294,7 +294,7 @@ const SearchableSelect = createClass({
 			this.renderOption(optionProps, optionIndex)
 		)));
 
-		const visibleOptionsCount = _.filter(options, option => !option.props.isHidden).length;
+		const visibleOptionsCount = _.filter(options, (option) => !option.props.isHidden).length;
 
 		return (
 			visibleOptionsCount > 0 ? options : <DropMenu.Option isDisabled><span className={cx('&-noresults')}>No results match "{searchText}"</span></DropMenu.Option>

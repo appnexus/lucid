@@ -19,7 +19,7 @@ export default React.createClass({
 				display: 'flex',
 				flexDirection: 'column',
 			}}>
-				{_.map(rows, row =>
+				{_.map(rows, (row) =>
 					<section
 						key={`${row}`}
 						style={{
@@ -28,7 +28,7 @@ export default React.createClass({
 							flexDirection: 'row',
 							justifyContent: 'space-around',
 						}}>
-						{_.map(row, kind =>
+						{_.map(row, (kind) =>
 							<ToolTipDumb
 								key={kind}
 								isExpanded

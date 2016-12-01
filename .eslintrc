@@ -16,6 +16,7 @@
 	},
 	"extends": "eslint:recommended",
 	"rules": {
+		"arrow-parens": 2,
 		"arrow-spacing": 2,
 		"comma-dangle": [2, "always-multiline"],
 		"indent": [2, "tab"],

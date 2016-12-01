@@ -24,7 +24,7 @@ export default React.createClass({
 							textAlign: 'center',
 							marginLeft: 6,
 						}}
-						onSubmit={count => this.setState({ count })}
+						onSubmit={(count) => this.setState({ count })}
 						value={this.state.count}
 					/>
 				</div>
