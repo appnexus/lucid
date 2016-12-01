@@ -300,21 +300,21 @@ const Th = createClass({
 				{..._.omit(passThroughs, Th)}
 				className={cx(
 					'&-Th', {
-					'&-is-first-row': isFirstRow,
-					'&-is-last-row': isLastRow,
-					'&-is-first-col': isFirstCol,
-					'&-is-first-single': isFirstSingle,
-					'&-is-last-col': isLastCol,
-					'&-align-left': align === 'left',
-					'&-align-center': align === 'center',
-					'&-align-right': align === 'right',
-					'&-is-resizable': isResizable,
-					'&-is-resizing': isResizing,
-					'&-is-sortable': (isSortable === false ? isSortable : (isSorted || isSortable)),
-					'&-is-sorted': isSorted,
-					'&-has-border-right': hasBorderRight,
-					'&-has-border-left': hasBorderLeft,
-				}, className)}
+						'&-is-first-row': isFirstRow,
+						'&-is-last-row': isLastRow,
+						'&-is-first-col': isFirstCol,
+						'&-is-first-single': isFirstSingle,
+						'&-is-last-col': isLastCol,
+						'&-align-left': align === 'left',
+						'&-align-center': align === 'center',
+						'&-align-right': align === 'right',
+						'&-is-resizable': isResizable,
+						'&-is-resizing': isResizing,
+						'&-is-sortable': (isSortable === false ? isSortable : (isSorted || isSortable)),
+						'&-is-sorted': isSorted,
+						'&-has-border-right': hasBorderRight,
+						'&-has-border-left': hasBorderLeft,
+					}, className)}
 				ref='root'
 				onClickCapture={this.handleClickCapture}
 				onMouseEnter={this.handleMouseEnter}
@@ -496,17 +496,17 @@ const Td = createClass({
 		return (
 			<td {...omitProps(passThroughs, Td, ['sortDirection'])} className={cx(
 				'&-Td', {
-				'&-is-first-row': isFirstRow,
-				'&-is-last-row': isLastRow,
-				'&-is-first-col': isFirstCol,
-				'&-is-last-col': isLastCol,
-				'&-is-first-single': isFirstSingle,
-				'&-align-left': align === 'left',
-				'&-align-center': align === 'center',
-				'&-align-right': align === 'right',
-				'&-has-border-right': hasBorderRight,
-				'&-has-border-left': hasBorderLeft,
-			}, className)} />
+					'&-is-first-row': isFirstRow,
+					'&-is-last-row': isLastRow,
+					'&-is-first-col': isFirstCol,
+					'&-is-last-col': isLastCol,
+					'&-is-first-single': isFirstSingle,
+					'&-align-left': align === 'left',
+					'&-align-center': align === 'center',
+					'&-align-right': align === 'right',
+					'&-has-border-right': hasBorderRight,
+					'&-has-border-left': hasBorderLeft,
+				}, className)} />
 		);
 	},
 });

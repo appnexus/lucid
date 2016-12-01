@@ -330,7 +330,7 @@ const DataTable = createClass({
 										>
 											{isEmpty ? emptyCellText : cellValue}
 										</Td>
-								);})}
+									);})}
 							</Tr>
 						))}
 						{_.times(minRows - _.size(data), (index) => (

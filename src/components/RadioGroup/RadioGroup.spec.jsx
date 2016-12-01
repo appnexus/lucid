@@ -14,8 +14,8 @@ describe('RadioGroup', () => {
 	describe('props', () => {
 		describe('name', () => {
 			it('sets the `name` attribute of the child radio buttons.', () => {
-					const name = 'radio';
-					const wrapper = shallow(
+				const name = 'radio';
+				const wrapper = shallow(
 						<RadioGroup name={name}>
 							<RadioGroup.RadioButton />
 							<RadioGroup.RadioButton />

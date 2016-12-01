@@ -246,22 +246,22 @@ describe('SplitVertical', () => {
 					</SplitVertical>
 					, { attachTo: mountTestDiv });
 
-					const {
+				const {
 						onDragStart,
 						onDrag,
 						onDragEnd,
 					} = wrapper.find(DragCaptureZone).props();
 
-					const lastArg = { event: {} };
+				const lastArg = { event: {} };
 
-					onDragStart(lastArg);
-					onDrag({dX: dX}, lastArg);
-					onDragEnd({dX: dX + 1}, lastArg);
+				onDragStart(lastArg);
+				onDrag({dX: dX}, lastArg);
+				onDragEnd({dX: dX + 1}, lastArg);
 
-					assert(onResize.called, 'must be called');
-					assert.equal(onResize.lastCall.args[0], dX + 1, 'must pass the new width of the pane');
-					assert.equal(onResize.lastCall.args[1].props, wrapper.props(), 'must pass component props in the last arg');
-					assert.equal(onResize.lastCall.args[1].event, lastArg.event, 'must pass event reference in the last arg');
+				assert(onResize.called, 'must be called');
+				assert.equal(onResize.lastCall.args[0], dX + 1, 'must pass the new width of the pane');
+				assert.equal(onResize.lastCall.args[1].props, wrapper.props(), 'must pass component props in the last arg');
+				assert.equal(onResize.lastCall.args[1].event, lastArg.event, 'must pass event reference in the last arg');
 			});
 
 			describe('isResizeable', () => {

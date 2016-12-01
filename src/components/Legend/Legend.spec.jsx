@@ -13,11 +13,11 @@ describe('Legend', () => {
 
 	describe('render', () => {
 		it('should render a legend', () => {
-				const wrapper = shallow(
+			const wrapper = shallow(
 					<Legend />
 				);
 
-				assert.equal(wrapper.find('.lucid-Legend').length, 1, 'missing legend');
+			assert.equal(wrapper.find('.lucid-Legend').length, 1, 'missing legend');
 		});
 	});
 

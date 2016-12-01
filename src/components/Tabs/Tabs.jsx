@@ -237,8 +237,8 @@ const Tabs = createClass({
 				className={cx('&', className)}
 			>
 				<ul className={cx('&-bar', {
-						'&-bar-is-multiline': hasMultilineTitle,
-					})}>
+					'&-bar-is-multiline': hasMultilineTitle,
+				})}>
 					{_.map(tabChildProps, (tabProps, index) => (
 						<Tab
 							key={index}
