@@ -43,7 +43,7 @@ export function getReduxPrimitives({
 
 	const reducer = createReduxReducer(reducers, initialState, rootPath);
 	const selector = selectors ? reduceSelectors(selectors) : _.identity;
-	const rootPathSelector = state => _.isEmpty(rootPath) ? state : _.get(state, rootPath);
+	const rootPathSelector = state => (_.isEmpty(rootPath) ? state : _.get(state, rootPath));
 	const mapStateToProps = createSelector(
 		[rootPathSelector],
 		rootState => rootSelector(selector(rootState))

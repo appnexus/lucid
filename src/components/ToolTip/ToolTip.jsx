@@ -210,11 +210,11 @@ const ToolTip = createClass({
 		const targetProps = _.first(_.map(findTypes(this.props, ToolTip.Target), 'props'));
 		const title = _.chain(findTypes(this.props, ToolTip.Title)).map('props').first().get('children').value();
 		const body = _.chain(findTypes(this.props, ToolTip.Body)).map('props').first().get('children').value();
-		const getAlignmentOffset = n => alignment === ContextMenu.CENTER
+		const getAlignmentOffset = n => (alignment === ContextMenu.CENTER
 			? 0
 			: alignment === ContextMenu.START
 				? n / 2 - 22.5
-				: -(n / 2 - 22.5);
+				: -(n / 2 - 22.5));
 
 		return (
 			<ContextMenu
