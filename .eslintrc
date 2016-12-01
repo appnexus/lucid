@@ -22,6 +22,7 @@
 		"jsx-quotes": [2, "prefer-single"],
 		"key-spacing": 2,
 		"keyword-spacing": 0,
+		"no-confusing-arrow": [2, {"allowParens": true}],
 		"no-trailing-spaces": 2,
 		"no-undef": 2,
 		"no-unused-vars": 2,

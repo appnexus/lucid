@@ -256,7 +256,7 @@ describe('redux utils', () => {
 
 					const mapDispatchToProps = connectors[1];
 					const mockGetState = sinon.spy(() => rootState);
-					const mockDispatch = sinon.spy(action => isFunction(action) ? action(mockDispatch, mockGetState, ...extraArgs) : action);
+					const mockDispatch = sinon.spy(action => (isFunction(action) ? action(mockDispatch, mockGetState, ...extraArgs) : action));
 					const dispatchTree = mapDispatchToProps(mockDispatch);
 
 					beforeEach(() => {

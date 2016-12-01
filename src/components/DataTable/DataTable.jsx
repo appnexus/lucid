@@ -261,7 +261,7 @@ const DataTable = createClass({
 									/>
 								</Th>
 							) : null}
-							{_.map(childComponentElements, ({ props, type }, index) => type === DataTable.Column ? (
+							{_.map(childComponentElements, ({ props, type }, index) => (type === DataTable.Column ? (
 								<Th
 									{..._.omit(props, ['field', 'children', 'width', 'title'])}
 									onClick={DataTable.shouldColumnHandleSort(props) ? _.partial(this.handleSort, props.field) : null}
@@ -281,7 +281,7 @@ const DataTable = createClass({
 								>
 									{props.title || props.children}
 								</Th>
-							))}
+							)))}
 						</Tr>
 						{hasGroupedColumns ? (
 							<Tr>
