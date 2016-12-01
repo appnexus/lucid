@@ -1,5 +1,6 @@
 var SOURCE_DIR = 'src';
 var BUILD_DIR = 'dist';
+var BUILD_DIR_JSNEXT = 'dist-jsnext';
 
 module.exports = {
 	LESS_ENTRY: SOURCE_DIR + '/index.less',
@@ -17,4 +18,5 @@ module.exports = {
 	AUTOPREFIXER_BROWSERS: 'last 3 versions',
 	SOURCE_DIR: SOURCE_DIR,
 	BUILD_DIR: BUILD_DIR,
+	BUILD_DIR_JSNEXT: BUILD_DIR_JSNEXT,
 };

@@ -1,5 +1,6 @@
 # Built files
 dist
+dist-jsnext
 src/docs/docgen.json
 
 # Npm

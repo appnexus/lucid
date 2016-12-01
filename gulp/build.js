@@ -27,7 +27,31 @@ module.exports = {
 			CONFIG.JS_GLOB.SOURCE,
 		])
 		.pipe(cache('build-js')) // only useful when using a watch task
-		.pipe(babel())
+		.pipe(babel({
+			presets: [
+				'stage-2',
+				'es2015',
+				'react',
+			],
+		}))
 		.pipe(gulp.dest(CONFIG.BUILD_DIR));
+	},
+
+	jsnext: function() {
+		return gulp.src([
+			'!/**/*.json',
+			'!' + CONFIG.TEST_GLOB.SOURCE,
+			'!' + CONFIG.EXAMPLES_GLOB.SOURCE,
+			CONFIG.JS_GLOB.SOURCE,
+		])
+		.pipe(cache('build-jsnext')) // only useful when using a watch task
+		.pipe(babel({
+			presets: [
+				'stage-2',
+				['es2015', { modules: false }], // TODO: for some reason `.babelrc` always beats this config, I can't figure out why
+				'react',
+			],
+		}))
+		.pipe(gulp.dest(CONFIG.BUILD_DIR_JSNEXT));
 	},
 };
