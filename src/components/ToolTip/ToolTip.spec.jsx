@@ -83,7 +83,7 @@ describe('ToolTip', () => {
 							<Body>Body</Body>
 						</ToolTip>
 					);
-					assert.equal(wrapper.find(CrossIcon).length, 1 ,'must include a CrossIcon');
+					assert.equal(wrapper.find(CrossIcon).length, 1, 'must include a CrossIcon');
 				});
 			});
 			describe('false', () => {
@@ -94,7 +94,7 @@ describe('ToolTip', () => {
 							<Body>Body</Body>
 						</ToolTip>
 					);
-					assert.equal(wrapper.find(CrossIcon).length, 0 ,'must not include a CrossIcon');
+					assert.equal(wrapper.find(CrossIcon).length, 0, 'must not include a CrossIcon');
 				});
 			});
 		});

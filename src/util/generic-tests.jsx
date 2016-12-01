@@ -150,7 +150,7 @@ export function icons(Component) {
 }
 
 // Common tests for all control components
-export function controls(Component, { callbackName, controlSelector , eventType, additionalProps={} }) {
+export function controls(Component, { callbackName, controlSelector, eventType, additionalProps={} }) {
 	// Use DOM tests here since some of our controls use dom events under the hood
 	describe('[control]', () => {
 		it('should callback with `event` and `props`', () => {

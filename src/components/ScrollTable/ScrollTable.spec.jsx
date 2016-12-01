@@ -29,7 +29,7 @@ describe('ScrollTable', () => {
 				const wrapper = shallow(<ScrollTable tableWidth={789} />);
 				const tableWrapper = wrapper.find(Table);
 
-				assert.equal(_.get(tableWrapper.prop('style'),'width'), 789, 'must set Table style.width');
+				assert.equal(_.get(tableWrapper.prop('style'), 'width'), 789, 'must set Table style.width');
 			});
 		});
 
