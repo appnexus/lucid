@@ -1,3 +1,5 @@
+/* eslint-disable comma-spacing */
+
 import React from 'react';
 import {
 	BarChart,

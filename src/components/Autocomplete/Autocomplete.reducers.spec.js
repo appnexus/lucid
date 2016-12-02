@@ -1,3 +1,5 @@
+/* eslint-disable comma-spacing */
+
 import assert from 'assert';
 import _ from 'lodash';
 import {

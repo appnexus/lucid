@@ -1,3 +1,5 @@
+/* eslint-disable comma-spacing */
+
 import React from 'react';
 import assert from 'assert';
 import * as d3Scale from 'd3-scale';
@@ -254,4 +256,3 @@ describe('Lines', () => {
 		});
 	});
 });
-
