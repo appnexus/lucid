@@ -27,13 +27,7 @@ module.exports = {
 			CONFIG.JS_GLOB.SOURCE,
 		])
 		.pipe(cache('build-js')) // only useful when using a watch task
-		.pipe(babel({
-			presets: [
-				'stage-2',
-				'es2015',
-				'react',
-			],
-		}))
+		.pipe(babel())
 		.pipe(gulp.dest(CONFIG.BUILD_DIR));
 	},
 
@@ -46,9 +40,10 @@ module.exports = {
 		])
 		.pipe(cache('build-jsnext')) // only useful when using a watch task
 		.pipe(babel({
+			babelrc: false, // ignore .babelrc
 			presets: [
 				'stage-2',
-				['es2015', { modules: false }], // TODO: for some reason `.babelrc` always beats this config, I can't figure out why
+				['es2015', { modules: false }],
 				'react',
 			],
 		}))
