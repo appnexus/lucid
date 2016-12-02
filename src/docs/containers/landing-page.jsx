@@ -121,7 +121,7 @@ const LandingPage = React.createClass({
 							defaultStyle={{opacity: 0}}
 							style={{opacity: spring(1, { damping: 4 })}}
 						>
-							{value =>
+							{(value) =>
 								<rect
 									className={cx('&-primary', '&-carpetize')}
 									onClick={this.toggleCarpet}
@@ -152,7 +152,7 @@ const LandingPage = React.createClass({
 								y: spring(36.7, { damping }),
 							}}
 						>
-							{value =>
+							{(value) =>
 								<rect
 									x={value.x}
 									y={value.y}
@@ -175,7 +175,7 @@ const LandingPage = React.createClass({
 								y: spring(54.9),
 							}}
 						>
-							{value =>
+							{(value) =>
 								<rect
 									x={value.x}
 									y={value.y}
@@ -198,7 +198,7 @@ const LandingPage = React.createClass({
 								y: spring(73),
 							}}
 						>
-							{value =>
+							{(value) =>
 								<rect
 									x={value.x}
 									y={value.y}
@@ -218,7 +218,7 @@ const LandingPage = React.createClass({
 							y: spring(isCarpeted ? 8 : -50),
 						}}
 					>
-						{value =>
+						{(value) =>
 							<g
 								transform={`translate(${value.x}, ${value.y})`}
 								className={cx('&-bird')}

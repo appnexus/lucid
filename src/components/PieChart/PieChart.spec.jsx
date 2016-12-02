@@ -242,7 +242,7 @@ describe('PieChart', () => {
 				const wrapper = shallow(
 					<PieChart
 						data={sampleData}
-						yAxisFormatter={x => x * 10}
+						yAxisFormatter={(x) => x * 10}
 						isHovering
 						hoveringIndex={1}
 					/>

@@ -42,28 +42,28 @@ export default React.createClass({
 						flexDirection: 'column',
 					}}
 				>
-					<SingleSelect onSelect={i => this.setState({ direction: directions[i] })} >
+					<SingleSelect onSelect={(i) => this.setState({ direction: directions[i] })} >
 						<SingleSelect.Placeholder>Select a direction</SingleSelect.Placeholder>
-						{_.map(directions, direction => <SingleSelect.Option key={direction}>{direction}</SingleSelect.Option>)}
+						{_.map(directions, (direction) => <SingleSelect.Option key={direction}>{direction}</SingleSelect.Option>)}
 					</SingleSelect>
 
 					directonOffset:
 					<TextField
 						style={{ width: 100 }}
 						value={directonOffset}
-						onChange={directonOffset => this.setState({ directonOffset })}
+						onChange={(directonOffset) => this.setState({ directonOffset })}
 					/>
 
-					<SingleSelect onSelect={i => this.setState({ alignment: alignments[i] })} >
+					<SingleSelect onSelect={(i) => this.setState({ alignment: alignments[i] })} >
 						<SingleSelect.Placeholder>Select an alignment</SingleSelect.Placeholder>
-						{_.map(alignments, alignment => <SingleSelect.Option key={alignment}>{alignment}</SingleSelect.Option>)}
+						{_.map(alignments, (alignment) => <SingleSelect.Option key={alignment}>{alignment}</SingleSelect.Option>)}
 					</SingleSelect>
 
 					alignmentOffset:
 					<TextField
 						style={{ width: 100 }}
 						value={alignmentOffset}
-						onChange={alignmentOffset => this.setState({ alignmentOffset })}
+						onChange={(alignmentOffset) => this.setState({ alignmentOffset })}
 					/>
 
 					getAlignmentOffset:
@@ -71,7 +71,7 @@ export default React.createClass({
 						isDisabled={alignment !== CENTER}
 						style={{ width: 100 }}
 						value={getAlignmentOffset}
-						onSubmit={getAlignmentOffset => this.setState({ getAlignmentOffset })}
+						onSubmit={(getAlignmentOffset) => this.setState({ getAlignmentOffset })}
 					/>
 					<code>{getAlignmentOffset || null}</code>
 

@@ -34,10 +34,10 @@ export default React.createClass({
 				}}
 			>
 
-				{_.map(directions, direction => {
+				{_.map(directions, (direction) => {
 					return (
 						<section key={direction} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', flexGrow: 1 }}>
-							{_.map(alignments, alignment => _.map([0, 15, -15], directonOffset => _.map([0, 15, -15], alignmentOffset => (
+							{_.map(alignments, (alignment) => _.map([0, 15, -15], (directonOffset) => _.map([0, 15, -15], (alignmentOffset) => (
 								<div key={`${alignment}${alignmentOffset}${directonOffset}`} style={{marginTop: '120px'}}>
 									<ContextMenu
 										{...{

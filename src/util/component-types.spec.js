@@ -172,7 +172,7 @@ describe('component-types', () => {
 				{ isDisabled: true },
 			]);
 			assert.equal(5, elements.length, 'length must be 5');
-			_.forEach(elements, element => {
+			_.forEach(elements, (element) => {
 				assert.equal(Option, element.type, 'type must be Option');
 			});
 			assert.equal('button', elements[1].props.children.type, 'element must be a button');
