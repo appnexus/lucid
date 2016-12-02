@@ -114,9 +114,6 @@ describe('Panel', () => {
 
 	});
 
-
-
-
 	describe('any other children', () => {
 	});
 });
