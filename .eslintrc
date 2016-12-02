@@ -19,6 +19,7 @@
 		"arrow-parens": 2,
 		"arrow-spacing": 2,
 		"comma-dangle": [2, "always-multiline"],
+		"comma-spacing": 2,
 		"indent": [2, "tab"],
 		"jsx-quotes": [2, "prefer-single"],
 		"key-spacing": 2,

@@ -23,25 +23,24 @@ describe('VerticalListMenu reducers', () => {
 	describe('onToggle', () => {
 		it('should remove items', () => {
 			const initialState = {
-				expandedIndices: [0,1,2,3,4],
+				expandedIndices: [0, 1, 2, 3, 4],
 				bar: 'mert',
 			};
 
 			assert.deepEqual(onToggle(initialState, 2), {
-				expandedIndices: [0,1,3,4],
+				expandedIndices: [0, 1, 3, 4],
 				bar: 'mert',
 			});
 		});
 
 		it('should add items', () => {
 			const initialState = {
-				expandedIndices: [0,1,2,3,4],
+				expandedIndices: [0, 1, 2, 3, 4],
 			};
 
 			assert.deepEqual(onToggle(initialState, 99), {
-				expandedIndices: [0,1,2,3,4,99],
+				expandedIndices: [0, 1, 2, 3, 4, 99],
 			});
 		});
 	});
 });
-

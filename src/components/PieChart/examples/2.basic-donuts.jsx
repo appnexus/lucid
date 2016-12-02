@@ -1,6 +1,8 @@
+/* eslint-disable comma-spacing */
+
 import React from 'react';
 import {
-	PieChart ,
+	PieChart,
 	chartConstants,
 } from '../../../index';
 

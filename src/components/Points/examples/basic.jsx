@@ -1,3 +1,5 @@
+/* eslint-disable comma-spacing */
+
 import _ from 'lodash';
 import React from 'react';
 import {
