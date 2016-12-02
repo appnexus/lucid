@@ -116,7 +116,6 @@ describe('Autocomplete', () => {
 		});
 
 
-
 		describe('DropMenu', () => {
 			it('should pass thru all DropMenu props to the underlying DropMenu', () => {
 				const explicitDropMenuProps = {
@@ -267,7 +266,6 @@ describe('Autocomplete', () => {
 
 				document.body.removeChild(rootMountNode);
 			});
-
 
 			it('should be called when the input value changes to a non-empty value', () => {
 				const onExpand = sinon.spy();

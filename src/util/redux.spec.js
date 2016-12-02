@@ -151,7 +151,7 @@ describe('redux utils', () => {
 						reducers,
 						initialState,
 						selectors,
-						rootSelector: state => ({
+						rootSelector: (state) => ({
 							...state,
 							computed: state.foo.uppercase + state.foo.value,
 						}),
@@ -192,7 +192,7 @@ describe('redux utils', () => {
 						rootPath: ['qux', 'quux'],
 					});
 
-					const mockDispatch = sinon.spy(action => action);
+					const mockDispatch = sinon.spy((action) => action);
 					const mapDispatchToProps = connectors[1];
 					const dispatchTree = mapDispatchToProps(mockDispatch);
 
@@ -224,7 +224,7 @@ describe('redux utils', () => {
 							bar: {
 								onChange: (state, payload) => ({ value: payload }),
 							},
-							asyncOperation: thunk(payload => dispatchTree => dispatchTree.onChange(payload)),
+							asyncOperation: thunk((payload) => (dispatchTree) => dispatchTree.onChange(payload)),
 							thunkSpy: thunk(() => thunkSpy),
 						},
 					};
@@ -256,7 +256,7 @@ describe('redux utils', () => {
 
 					const mapDispatchToProps = connectors[1];
 					const mockGetState = sinon.spy(() => rootState);
-					const mockDispatch = sinon.spy(action => (isFunction(action) ? action(mockDispatch, mockGetState, ...extraArgs) : action));
+					const mockDispatch = sinon.spy((action) => (isFunction(action) ? action(mockDispatch, mockGetState, ...extraArgs) : action));
 					const dispatchTree = mapDispatchToProps(mockDispatch);
 
 					beforeEach(() => {

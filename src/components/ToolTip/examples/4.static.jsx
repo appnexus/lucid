@@ -12,7 +12,7 @@ export default React.createClass({
 	render() {
 		return (
 			<section style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-				{_.map(['right', 'up', 'down', 'left'], direction => _.map(['start', 'center', 'end'], alignment =>
+				{_.map(['right', 'up', 'down', 'left'], (direction) => _.map(['start', 'center', 'end'], (alignment) =>
 					<section key={`${direction}${alignment}`} style={{ margin: '90px' }}>
 						<ToolTipDumb
 							direction={direction}

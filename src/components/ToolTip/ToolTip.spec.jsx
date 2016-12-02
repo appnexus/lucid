@@ -240,7 +240,7 @@ describe('ToolTip', () => {
 		});
 
 		describe('onMouseOut', () => {
-			it('should call onMouseOut when cursor leaves target', done => {
+			it('should call onMouseOut when cursor leaves target', (done) => {
 				const spy = sinon.spy();
 				const wrapper = shallow(
 					<ToolTip onMouseOut={spy}>
@@ -258,7 +258,7 @@ describe('ToolTip', () => {
 				}, MOSTLY_STABLE_DELAY * 2);
 			});
 
-			it('should not call onMouseOut if cursor enters FlyOut', done => {
+			it('should not call onMouseOut if cursor enters FlyOut', (done) => {
 				const spy = sinon.spy();
 				const wrapper = shallow(
 					<ToolTip isExpanded onMouseOut={spy}>

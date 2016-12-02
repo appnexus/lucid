@@ -47,7 +47,7 @@ describe('Paginator', () => {
 					/>
 				);
 				const buttons = wrapper.find(Button);
-				buttons.forEach(button => {
+				buttons.forEach((button) => {
 					assert(button.prop('isDisabled'), 'must be true');
 				});
 			});
@@ -241,7 +241,7 @@ describe('Paginator', () => {
 			});
 
 			describe('input', () => {
-				_.forEach(['onBlur', 'onSubmit'], propName => {
+				_.forEach(['onBlur', 'onSubmit'], (propName) => {
 					it(`should get called with the correct args ${propName}`, () => {
 						const onPageSelect = sinon.spy();
 						wrapper = mount(
