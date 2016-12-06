@@ -117,7 +117,7 @@ const DataTable = createClass({
 			onSelect: _.noop,
 			onSelectAll: _.noop,
 			onSort: _.noop,
-			minRows: 10,
+			minRows: 0,
 		};
 	},
 
@@ -333,7 +333,7 @@ const DataTable = createClass({
 									);})}
 							</Tr>
 						))}
-						{_.times(minRows - _.size(data), (index) => (
+						{_.times(_.size(data) === 0 ? 10 : minRows - _.size(data), (index) => (
 							<Tr
 								isDisabled
 								key={'row' + index}

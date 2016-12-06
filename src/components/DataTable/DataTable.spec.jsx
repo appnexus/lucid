@@ -226,7 +226,7 @@ describe('DataTable', () => {
 		});
 
 		describe('minRows', () => {
-			it('should render the number of `minRows` if data is an empty array', () => {
+			it('should render 10 empty rows if data is an empty array', () => {
 				const wrapper = shallow(
 					<DataTable minRows={7} />
 				);
@@ -236,7 +236,7 @@ describe('DataTable', () => {
 						.find(ScrollTable.Tbody).shallow()
 							.find(ScrollTable.Tr);
 
-				assert.equal(TrWrapper.length, 7, 'should render 7 empty rows');
+				assert.equal(TrWrapper.length, 10, 'should render 10 empty rows');
 			});
 
 			it('should render a row for each element in the array if there is more data than `minRows`', () => {
