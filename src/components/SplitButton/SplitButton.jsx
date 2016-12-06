@@ -19,8 +19,9 @@ const {
  *
  * {"categories": ["controls", "buttons"], "madeFrom": ["Button", "DropMenu"]}
  *
- * `SplitButton`s allow you to a single main `Button` together with a list of
- * additional `Button`s which will be rendered within a `DropMenu`.
+ * SplitButtons allow you to combine a single main `Button` together with a
+ * list of additional Buttons with actions which will be rendered within a
+ * DropMenu.
  */
 const SplitButton = createClass({
 	displayName: 'SplitButton',
