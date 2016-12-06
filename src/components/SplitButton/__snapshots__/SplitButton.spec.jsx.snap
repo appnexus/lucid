@@ -28,6 +28,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
+        className="lucid-SplitButton-Primary-Button"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
@@ -36,12 +37,14 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         Primary
       </Button>
       <Button
+        className="lucid-SplitButton-Drop-Button"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
         onClick={[Function]}
         type="button">
         <CaretIcon
+          className="lucid-SplitButton-CaretIcon"
           direction="down"
           size={8}
           viewBox="0 3 16 8" />
@@ -97,6 +100,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
+        className="lucid-SplitButton-Primary-Button"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
@@ -106,6 +110,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         Primary
       </Button>
       <Button
+        className="lucid-SplitButton-Drop-Button"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
@@ -113,6 +118,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         onClick={[Function]}
         type="button">
         <CaretIcon
+          className="lucid-SplitButton-CaretIcon"
           direction="down"
           size={8}
           viewBox="0 3 16 8" />
@@ -168,6 +174,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
+        className="lucid-SplitButton-Primary-Button"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
@@ -177,6 +184,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         Link
       </Button>
       <Button
+        className="lucid-SplitButton-Drop-Button"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
@@ -184,6 +192,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         onClick={[Function]}
         type="button">
         <CaretIcon
+          className="lucid-SplitButton-CaretIcon"
           direction="down"
           size={8}
           viewBox="0 3 16 8" />
@@ -239,6 +248,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
+        className="lucid-SplitButton-Primary-Button"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
@@ -248,6 +258,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         Success
       </Button>
       <Button
+        className="lucid-SplitButton-Drop-Button"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
@@ -255,6 +266,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         onClick={[Function]}
         type="button">
         <CaretIcon
+          className="lucid-SplitButton-CaretIcon"
           direction="down"
           size={8}
           viewBox="0 3 16 8" />
@@ -310,6 +322,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
+        className="lucid-SplitButton-Primary-Button"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
@@ -319,6 +332,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         Warning
       </Button>
       <Button
+        className="lucid-SplitButton-Drop-Button"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
@@ -326,6 +340,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         onClick={[Function]}
         type="button">
         <CaretIcon
+          className="lucid-SplitButton-CaretIcon"
           direction="down"
           size={8}
           viewBox="0 3 16 8" />
@@ -381,6 +396,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
+        className="lucid-SplitButton-Primary-Button"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
@@ -390,6 +406,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         Danger
       </Button>
       <Button
+        className="lucid-SplitButton-Drop-Button"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
@@ -397,6 +414,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         onClick={[Function]}
         type="button">
         <CaretIcon
+          className="lucid-SplitButton-CaretIcon"
           direction="down"
           size={8}
           viewBox="0 3 16 8" />
@@ -452,6 +470,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
+        className="lucid-SplitButton-Primary-Button"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
@@ -461,6 +480,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         Info
       </Button>
       <Button
+        className="lucid-SplitButton-Drop-Button"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
@@ -468,6 +488,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         onClick={[Function]}
         type="button">
         <CaretIcon
+          className="lucid-SplitButton-CaretIcon"
           direction="down"
           size={8}
           viewBox="0 3 16 8" />
@@ -523,6 +544,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
+        className="lucid-SplitButton-Primary-Button"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
@@ -532,6 +554,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
         Save
       </Button>
       <Button
+        className="lucid-SplitButton-Drop-Button"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
@@ -539,7 +562,170 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
         onClick={[Function]}
         type="button">
         <CaretIcon
+          className="lucid-SplitButton-CaretIcon"
           direction="down"
+          size={8}
+          viewBox="0 3 16 8" />
+      </Button>
+    </ButtonGroup>
+  </DropMenu.Control>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Action 01
+  </DropMenu.Option>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Here\'s Another Action
+  </DropMenu.Option>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    And Another Action
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SplitButton [common] example testing should match snapshot(s) for 03.disabled 1`] = `
+<DropMenu
+  className="lucid-SplitButton"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}
+  style={
+    Object {
+      "height": 100,
+    }
+  }>
+  <DropMenu.Control>
+    <ButtonGroup
+      className={null}
+      onSelect={[Function]}
+      selectedIndices={Array []}>
+      <Button
+        className="lucid-SplitButton-Primary-Button"
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={true}
+        onClick={[Function]}
+        type="button">
+        Save
+      </Button>
+      <Button
+        className="lucid-SplitButton-Drop-Button"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        onClick={[Function]}
+        type="button">
+        <CaretIcon
+          className="lucid-SplitButton-CaretIcon"
+          direction="down"
+          size={8}
+          viewBox="0 3 16 8" />
+      </Button>
+    </ButtonGroup>
+  </DropMenu.Control>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={true}
+    onClick={[Function]}
+    type="button">
+    This action should be disabled
+  </DropMenu.Option>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    This one should be enabled
+  </DropMenu.Option>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={true}
+    onClick={[Function]}
+    type="button">
+    This should be disabled, too
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SplitButton [common] example testing should match snapshot(s) for 04.up 1`] = `
+<DropMenu
+  className="lucid-SplitButton"
+  direction="up"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}
+  style={
+    Object {
+      "height": 100,
+    }
+  }>
+  <DropMenu.Control>
+    <ButtonGroup
+      className={null}
+      onSelect={[Function]}
+      selectedIndices={Array []}>
+      <Button
+        className="lucid-SplitButton-Primary-Button"
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="success"
+        onClick={[Function]}
+        type="button">
+        Save
+      </Button>
+      <Button
+        className="lucid-SplitButton-Drop-Button"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="success"
+        onClick={[Function]}
+        type="button">
+        <CaretIcon
+          className="lucid-SplitButton-CaretIcon"
+          direction="up"
           size={8}
           viewBox="0 3 16 8" />
       </Button>

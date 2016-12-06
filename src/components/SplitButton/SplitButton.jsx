@@ -123,13 +123,19 @@ const SplitButton = createClass({
 						<Button
 							{...primaryButtonProps}
 							onClick={this.handleClick}
+							className={cx('&-Primary-Button')}
 						/>
 						<Button
 							hasOnlyIcon
 							isActive={isExpanded}
 							kind={_.get(primaryButtonProps, 'kind')}
+							className={cx('&-Drop-Button')}
 						>
-							<CaretIcon size={8} />
+							<CaretIcon
+								className={cx('&-CaretIcon')}
+								direction={dropMenuProps.direction}
+								size={8}
+							/>
 						</Button>
 					</ButtonGroup>
 				</DropMenu.Control>

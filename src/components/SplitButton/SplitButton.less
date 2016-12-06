@@ -1,12 +1,26 @@
 .lucid-SplitButton {
-	.lucid-CaretIcon {
+	&-CaretIcon {
 		margin-left: @size-XXS;
 		margin-right: @size-XXS;
 	}
 
 	.lucid-Button-primary, .lucid-Button-success, .lucid-Button-warning, .lucid-Button-danger, .lucid-Button-info {
-		.lucid-CaretIcon {
+		.lucid-SplitButton-CaretIcon {
 			fill: @color-white;
+		}
+	}
+
+	&.lucid-DropMenu-is-expanded {
+		&.lucid-DropMenu-direction-up {
+			.lucid-SplitButton-Primary-Button, .lucid-SplitButton-Drop-Button {
+				border-radius: 0 0 @size-borderRadius @size-borderRadius;
+			}
+		}
+
+		&.lucid-DropMenu-direction-down {
+			.lucid-SplitButton-Primary-Button, .lucid-SplitButton-Drop-Button {
+				border-radius: @size-borderRadius @size-borderRadius 0 0;
+			}
 		}
 	}
 }

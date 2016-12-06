@@ -27,6 +27,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
       </span>
       <CaretIcon
         direction="down"
+        size={8}
         viewBox="0 3 16 8" />
     </div>
   </DropMenu.Control>
@@ -71,6 +72,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
       </span>
       <CaretIcon
         direction="down"
+        size={8}
         viewBox="0 3 16 8" />
     </div>
   </DropMenu.Control>
@@ -339,6 +341,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
       </span>
       <CaretIcon
         direction="down"
+        size={8}
         viewBox="0 3 16 8" />
     </div>
   </DropMenu.Control>
@@ -874,6 +877,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.n
       </span>
       <CaretIcon
         direction="down"
+        size={8}
         viewBox="0 3 16 8" />
     </div>
   </DropMenu.Control>
@@ -918,6 +922,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.a
       </span>
       <CaretIcon
         direction="down"
+        size={8}
         viewBox="0 3 16 8" />
     </div>
   </DropMenu.Control>

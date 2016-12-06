@@ -33,6 +33,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       </span>
       <CaretIcon
         direction="down"
+        size={8}
         viewBox="0 3 16 8" />
     </div>
   </DropMenu.Control>
@@ -555,6 +556,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       </span>
       <CaretIcon
         direction="down"
+        size={8}
         viewBox="0 3 16 8" />
     </div>
   </DropMenu.Control>
@@ -870,6 +872,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       </span>
       <CaretIcon
         direction="down"
+        size={8}
         viewBox="0 3 16 8" />
     </div>
   </DropMenu.Control>
