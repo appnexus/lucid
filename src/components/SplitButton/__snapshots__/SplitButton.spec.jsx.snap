@@ -511,7 +511,12 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
-  selectedIndices={Array []}>
+  selectedIndices={Array []}
+  style={
+    Object {
+      "height": 100,
+    }
+  }>
   <DropMenu.Control>
     <ButtonGroup
       className={null}
