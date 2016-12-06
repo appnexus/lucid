@@ -79,6 +79,15 @@ const SplitButton = createClass({
 		className: any,
 
 		/**
+		 * Sets the direction the flyout menu will render relative to the
+		 * SplitButton.
+		 */
+		direction: oneOf([
+			'up',
+			'down',
+		]),
+
+		/**
 		 * Style variations of the SplitButton.
 		 */
 		kind: oneOf([
@@ -108,6 +117,7 @@ const SplitButton = createClass({
 
 	getDefaultProps() {
 		return {
+			direction: 'down',
 			type: 'button',
 			DropMenu: DropMenu.getDefaultProps(),
 		};
@@ -146,6 +156,7 @@ const SplitButton = createClass({
 		const {
 			className,
 			kind,
+			direction,
 			type,
 			size,
 			DropMenu: dropMenuProps,
@@ -162,6 +173,7 @@ const SplitButton = createClass({
 			<DropMenu
 				{...dropMenuProps}
 				{...omitProps(passThroughs, SplitButton)}
+				direction={direction}
 				className={cx('&', className)}
 				onSelect={this.handleSelect}
 			>
@@ -183,7 +195,7 @@ const SplitButton = createClass({
 						>
 							<CaretIcon
 								className={cx('&-CaretIcon')}
-								direction={dropMenuProps.direction}
+								direction={direction}
 								size={8}
 							/>
 						</Button>
