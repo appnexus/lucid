@@ -67,12 +67,17 @@ const Panel = createClass({
 		 * Styles that are passed through to root element.
 		 */
 		style: object,
+		/**
+		 * If set to true, makes content overflow scrollable, when Panel has a set height.
+		 */
+		isScrollable: bool,
 	},
 
 	getDefaultProps() {
 		return {
 			isGutterless: false,
 			hasMargin: true,
+			isScrollable: true,
 		};
 	},
 
@@ -83,6 +88,7 @@ const Panel = createClass({
 			isGutterless,
 			hasMargin,
 			style,
+			isScrollable,
 			...passThroughs
 		} = this.props;
 
@@ -95,6 +101,7 @@ const Panel = createClass({
 				className={cx('&', className, {
 					'&-is-not-gutterless': !isGutterless,
 					'&-has-margin': hasMargin,
+					'&-is-scrollable': isScrollable,
 				})}
 				style={style}
 			>

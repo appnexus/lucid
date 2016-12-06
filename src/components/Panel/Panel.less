@@ -6,23 +6,36 @@
 	background-color: @color-white;
 	border: @border-standardBorder;
 
-	&-has-margin {
+	.lucid-Panel-has-margin& {
 		margin: 0 @size-standard @size-standard @size-standard;
 	}
+	
+	.lucid-Panel-is-scrollable& {
+		display: flex;
+		flex-direction: column;
+	}
 
-	&-Header {
+	& > &-Header {
 		padding: @size-standard;
 		border-bottom: @border-lightBorder;
 	}
 
-	&-is-not-gutterless &-content {
-		padding: @size-standard;
-		overflow: auto;
+	& > &-content {
+		.lucid-Panel-is-not-gutterless& {
+			overflow: auto;
+			padding: @size-standard;
+		}
+
+		.lucid-Panel-is-scrollable& {
+			overflow: auto;
+			flex: 1;
+		}
 	}
 
-	&-Footer {
+	& > &-Footer {
 		text-align: right;
 		padding: @size-standard;
 		border-top: @border-lightBorder;
 	}
+
 }
