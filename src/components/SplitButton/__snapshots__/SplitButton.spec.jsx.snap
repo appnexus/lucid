@@ -51,20 +51,10 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     One
   </DropMenu.Option>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -125,100 +115,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     One
   </DropMenu.Option>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     Two
   </DropMenu.Option>
 </DropMenu>
 `;
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 3`] = `
-<DropMenu
-  className="lucid-SplitButton"
-  direction="down"
-  flyOutStyle={
-    Object {
-      "maxHeight": "18em",
-    }
-  }
-  focusedIndex={null}
-  isDisabled={false}
-  isExpanded={false}
-  onCollapse={[Function]}
-  onExpand={[Function]}
-  onFocusNext={[Function]}
-  onFocusOption={[Function]}
-  onFocusPrev={[Function]}
-  onSelect={[Function]}
-  selectedIndices={Array []}
-  style={
-    Object {
-      "marginRight": "20px",
-    }
-  }>
-  <DropMenu.Control>
-    <ButtonGroup
-      className={null}
-      onSelect={[Function]}
-      selectedIndices={Array []}>
-      <Button
-        className="lucid-SplitButton-Primary-Button"
-        hasOnlyIcon={false}
-        isActive={false}
-        isDisabled={false}
-        kind="link"
-        onClick={[Function]}
-        type="button">
-        Link
-      </Button>
-      <Button
-        className="lucid-SplitButton-Drop-Button"
-        hasOnlyIcon={true}
-        isActive={false}
-        isDisabled={false}
-        kind="link"
-        onClick={[Function]}
-        type="button">
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
-          direction="down"
-          size={8}
-          viewBox="0 3 16 8" />
-      </Button>
-    </ButtonGroup>
-  </DropMenu.Control>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
-    One
-  </DropMenu.Option>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
-    Two
-  </DropMenu.Option>
-</DropMenu>
-`;
-
-exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 4`] = `
 <DropMenu
   className="lucid-SplitButton"
   direction="down"
@@ -273,26 +179,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     One
   </DropMenu.Option>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     Two
   </DropMenu.Option>
 </DropMenu>
 `;
 
-exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 5`] = `
+exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 4`] = `
 <DropMenu
   className="lucid-SplitButton"
   direction="down"
@@ -347,26 +243,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     One
   </DropMenu.Option>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     Two
   </DropMenu.Option>
 </DropMenu>
 `;
 
-exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 6`] = `
+exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 5`] = `
 <DropMenu
   className="lucid-SplitButton"
   direction="down"
@@ -421,26 +307,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     One
   </DropMenu.Option>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     Two
   </DropMenu.Option>
 </DropMenu>
 `;
 
-exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 7`] = `
+exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 6`] = `
 <DropMenu
   className="lucid-SplitButton"
   direction="down"
@@ -495,20 +371,10 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     One
   </DropMenu.Option>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -569,28 +435,13 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     Action 01
   </DropMenu.Option>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     Here\'s Another Action
   </DropMenu.Option>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     And Another Action
   </DropMenu.Option>
 </DropMenu>
@@ -650,27 +501,14 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
     </ButtonGroup>
   </DropMenu.Control>
   <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={true}
-    onClick={[Function]}
-    type="button">
+    isDisabled={true}>
     This action should be disabled
   </DropMenu.Option>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     This one should be enabled
   </DropMenu.Option>
   <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={true}
-    onClick={[Function]}
-    type="button">
+    isDisabled={true}>
     This should be disabled, too
   </DropMenu.Option>
 </DropMenu>
@@ -731,28 +569,13 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     Action 01
   </DropMenu.Option>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     Here\'s Another Action
   </DropMenu.Option>
-  <DropMenu.Option
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    onClick={[Function]}
-    type="button">
+  <DropMenu.Option>
     And Another Action
   </DropMenu.Option>
 </DropMenu>
@@ -764,11 +587,7 @@ Object {
     "stopPropagation": [Function],
   },
   "props": Object {
-    "hasOnlyIcon": false,
-    "isActive": false,
-    "isDisabled": false,
     "onClick": [Function],
-    "type": "button",
   },
 }
 `;
@@ -777,11 +596,7 @@ exports[`SplitButton click handlers secondary buttons should call the click hand
 Object {
   "event": Object {},
   "props": Object {
-    "hasOnlyIcon": false,
-    "isActive": false,
-    "isDisabled": false,
     "onClick": [Function],
-    "type": "button",
   },
 }
 `;
@@ -790,11 +605,7 @@ exports[`SplitButton click handlers secondary buttons should call the click hand
 Object {
   "event": Object {},
   "props": Object {
-    "hasOnlyIcon": false,
-    "isActive": false,
-    "isDisabled": false,
     "onClick": [Function],
-    "type": "button",
   },
 }
 `;

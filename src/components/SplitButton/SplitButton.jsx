@@ -12,7 +12,11 @@ const cx = lucidClassNames.bind('&-SplitButton');
 
 const {
 	any,
+	bool,
+	func,
+	oneOf,
 	shape,
+	string,
 } = React.PropTypes;
 
 /**
@@ -32,7 +36,25 @@ const SplitButton = createClass({
 		 * first `Button` will be used as the Primary button, while all others will
 		 * be rendered within the `DropMenu` below.
 		 */
-		Button,
+		Button: createClass({
+			displayName: 'SplitButton.Button',
+			propTypes: {
+				/**
+				 * The children to render within the `Button`.
+				 */
+				children: any,
+				/**
+				 * Disables selection of the `Button`.
+				 */
+				isDisabled: bool,
+				/**
+				 * Called when the user clicks the `Button`.
+				 *
+				 * Signature: `({ event, props }) => {}`
+				 */
+				onClick: func,
+			},
+		}),
 	},
 
 	reducers,
@@ -45,61 +67,87 @@ const SplitButton = createClass({
 		DropMenu: shape(DropMenu.propTypes),
 
 		/**
+		 * All children should be `ButtonGroup.Button`s and they support the same
+		 * props as `Button`s.
+		 */
+		children: any,
+
+		/**
 		 * Appended to the component-specific class names set on the root
 		 * element. Value is run through the `classnames` library.
 		 */
 		className: any,
 
 		/**
-		 * All children should be `ButtonGroup.Button`s and they support the same
-		 * props as `Button`s.
+		 * Style variations of the SplitButton.
 		 */
-		children: any,
+		kind: oneOf([
+			'primary',
+			'success',
+			'warning',
+			'danger',
+			'info',
+		]),
+
+		/**
+		 * Size variations of the SplitButton.
+		 */
+		size: oneOf([
+			'short',
+			'small',
+			'large',
+		]),
+
+		/**
+		 * Form element type variations of SplitButton. Defaults to 'button' to avoid
+		 * being triggered by 'Enter' anywhere on the page. Passed through to DOM
+		 * Button.
+		 */
+		type: string,
 	},
 
 	getDefaultProps() {
 		return {
+			type: 'button',
 			DropMenu: DropMenu.getDefaultProps(),
 		};
 	},
 
 	// Handles clicks on the Primary Button
 	handleClick({event}) {
-		const {
-			DropMenu: {
-				onCollapse,
-			},
-		} = this.props;
-
 		const clickedButtonProps = _.get(getFirst(this.props, SplitButton.Button), 'props');
 
 		// Stop propagation to prevent this `Click` from expanding the `DropMenu`
 		event.stopPropagation();
-		onCollapse();
-		clickedButtonProps.onClick({event, props: clickedButtonProps});
+		this.handleButtonClick(clickedButtonProps, event);
 	},
 
 	// Handles clicks in the DropMenu
 	handleSelect(optionIndex, {event}) {
+		const buttonChildProps = _.map(filterTypes(this.props.children, SplitButton.Button), 'props');
+		this.handleButtonClick(buttonChildProps[optionIndex + 1], event);
+	},
+
+	handleButtonClick(buttonProps, event) {
 		const {
 			DropMenu: {
 				onCollapse,
 			},
 		} = this.props;
 
-		const buttonChildProps = _.map(filterTypes(this.props.children, SplitButton.Button), 'props');
-		const clickedButtonProps = buttonChildProps[optionIndex + 1];
-
 		onCollapse();
 
-		if (_.has(clickedButtonProps, 'onClick')) {
-			clickedButtonProps.onClick({event, props: clickedButtonProps});
+		if (_.has(buttonProps, 'onClick')) {
+			buttonProps.onClick({event, props: buttonProps});
 		}
 	},
 
 	render() {
 		const {
 			className,
+			kind,
+			type,
+			size,
 			DropMenu: dropMenuProps,
 			...passThroughs
 		} = this.props;
@@ -108,8 +156,7 @@ const SplitButton = createClass({
 			isExpanded,
 		} = dropMenuProps;
 
-		const buttonChildProps = _.map(filterTypes(this.props.children, SplitButton.Button), 'props');
-		const primaryButtonProps = _.first(buttonChildProps);
+		const [primaryButtonProps, ...buttonChildProps] = _.map(filterTypes(this.props.children, SplitButton.Button), 'props');
 
 		return (
 			<DropMenu
@@ -123,13 +170,16 @@ const SplitButton = createClass({
 						<Button
 							{...primaryButtonProps}
 							className={cx('&-Primary-Button')}
+							kind={kind}
+							type={type}
+							size={size}
 							onClick={this.handleClick}
 						/>
 						<Button
 							className={cx('&-Drop-Button')}
 							hasOnlyIcon
 							isActive={isExpanded}
-							kind={_.get(primaryButtonProps, 'kind')}
+							kind={kind}
 						>
 							<CaretIcon
 								className={cx('&-CaretIcon')}
@@ -139,9 +189,9 @@ const SplitButton = createClass({
 						</Button>
 					</ButtonGroup>
 				</DropMenu.Control>
-				{_.map(_.slice(buttonChildProps, 1), (buttonChildProp, index) => (
+				{_.map(buttonChildProps, (buttonChildProp, index) => (
 					<DropMenu.Option
-						{..._.omit(buttonChildProp, ['onClick'])}
+						{...buttonChildProp}
 						key={index}
 					/>
 				))}

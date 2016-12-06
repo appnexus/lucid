@@ -12,14 +12,30 @@
 
 	&.lucid-DropMenu-is-expanded {
 		&.lucid-DropMenu-direction-up {
-			.lucid-SplitButton-Primary-Button, .lucid-SplitButton-Drop-Button {
-				border-radius: 0 0 @size-borderRadius @size-borderRadius;
+			.lucid-SplitButton-Primary-Button {
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+
+			.lucid-SplitButton-Drop-Button {
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+				border-bottom-left-radius: 0;
 			}
 		}
 
 		&.lucid-DropMenu-direction-down {
-			.lucid-SplitButton-Primary-Button, .lucid-SplitButton-Drop-Button {
-				border-radius: @size-borderRadius @size-borderRadius 0 0;
+			.lucid-SplitButton-Primary-Button {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+
+			.lucid-SplitButton-Drop-Button {
+				border-top-left-radius: 0;
+				border-bottom-right-radius: 0;
+				border-bottom-left-radius: 0;
 			}
 		}
 	}
