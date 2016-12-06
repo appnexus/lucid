@@ -39,7 +39,8 @@ const SplitButton = createClass({
 
 	propTypes: {
 		/**
-		 * Object of DropMenu props which are passed thru to the underlying DropMenu component.
+		 * Object of DropMenu props which are passed through to the underlying
+		 * DropMenu component.
 		 */
 		DropMenu: shape(DropMenu.propTypes),
 
