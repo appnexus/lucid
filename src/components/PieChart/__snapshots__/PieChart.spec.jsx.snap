@@ -1,3 +1,1638 @@
+exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 1`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-0"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0.37787478717712913,0.32743036697264255A0.5,0.5,0,0,0,3.061616997868383e-17,-0.5Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-1"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L-0.30907949311030264,0.3930265473713937A0.5,0.5,0,0,0,0.37787478717712913,0.32743036697264255Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-2"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L-0.4859057841617708,-0.11787946775471378A0.5,0.5,0,0,0,-0.30907949311030264,0.3930265473713937Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-3"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L-0.2703204087277987,-0.42062676641559066A0.5,0.5,0,0,0,-0.4859057841617708,-0.11787946775471378Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-4"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L-9.184850993605148e-17,-0.5A0.5,0.5,0,0,0,-0.2703204087277987,-0.42062676641559066Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      60
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 2`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-0-lightest"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0.37787478717712913,0.32743036697264255A0.5,0.5,0,0,0,3.061616997868383e-17,-0.5Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-0-light"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L-0.30907949311030264,0.3930265473713937A0.5,0.5,0,0,0,0.37787478717712913,0.32743036697264255Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-0"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L-0.4859057841617708,-0.11787946775471378A0.5,0.5,0,0,0,-0.30907949311030264,0.3930265473713937Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-0-dark"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L-0.2703204087277987,-0.42062676641559066A0.5,0.5,0,0,0,-0.4859057841617708,-0.11787946775471378Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-0-darkest"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L-9.184850993605148e-17,-0.5A0.5,0.5,0,0,0,-0.2703204087277987,-0.42062676641559066Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      60
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 3`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-1-lightest"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0.37787478717712913,0.32743036697264255A0.5,0.5,0,0,0,3.061616997868383e-17,-0.5Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-1-light"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L-0.30907949311030264,0.3930265473713937A0.5,0.5,0,0,0,0.37787478717712913,0.32743036697264255Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-1"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L-0.4859057841617708,-0.11787946775471378A0.5,0.5,0,0,0,-0.30907949311030264,0.3930265473713937Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-1-dark"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L-0.2703204087277987,-0.42062676641559066A0.5,0.5,0,0,0,-0.4859057841617708,-0.11787946775471378Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-1-darkest"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L-9.184850993605148e-17,-0.5A0.5,0.5,0,0,0,-0.2703204087277987,-0.42062676641559066Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      60
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 4`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-2-lightest"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0.37787478717712913,0.32743036697264255A0.5,0.5,0,0,0,3.061616997868383e-17,-0.5Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-2-light"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L-0.30907949311030264,0.3930265473713937A0.5,0.5,0,0,0,0.37787478717712913,0.32743036697264255Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-2"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L-0.4859057841617708,-0.11787946775471378A0.5,0.5,0,0,0,-0.30907949311030264,0.3930265473713937Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-2-dark"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L-0.2703204087277987,-0.42062676641559066A0.5,0.5,0,0,0,-0.4859057841617708,-0.11787946775471378Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-2-darkest"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L-9.184850993605148e-17,-0.5A0.5,0.5,0,0,0,-0.2703204087277987,-0.42062676641559066Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      60
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 5`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-3-lightest"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0.37787478717712913,0.32743036697264255A0.5,0.5,0,0,0,3.061616997868383e-17,-0.5Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-3-light"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L-0.30907949311030264,0.3930265473713937A0.5,0.5,0,0,0,0.37787478717712913,0.32743036697264255Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-3"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L-0.4859057841617708,-0.11787946775471378A0.5,0.5,0,0,0,-0.30907949311030264,0.3930265473713937Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-3-dark"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L-0.2703204087277987,-0.42062676641559066A0.5,0.5,0,0,0,-0.4859057841617708,-0.11787946775471378Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-3-darkest"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L-9.184850993605148e-17,-0.5A0.5,0.5,0,0,0,-0.2703204087277987,-0.42062676641559066Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      60
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 6`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-4-lightest"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0.37787478717712913,0.32743036697264255A0.5,0.5,0,0,0,3.061616997868383e-17,-0.5Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-4-light"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L-0.30907949311030264,0.3930265473713937A0.5,0.5,0,0,0,0.37787478717712913,0.32743036697264255Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-4"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L-0.4859057841617708,-0.11787946775471378A0.5,0.5,0,0,0,-0.30907949311030264,0.3930265473713937Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-4-dark"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L-0.2703204087277987,-0.42062676641559066A0.5,0.5,0,0,0,-0.4859057841617708,-0.11787946775471378Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-4-darkest"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L-9.184850993605148e-17,-0.5A0.5,0.5,0,0,0,-0.2703204087277987,-0.42062676641559066Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      60
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 7`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-5-lightest"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0.37787478717712913,0.32743036697264255A0.5,0.5,0,0,0,3.061616997868383e-17,-0.5Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-5-light"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L-0.30907949311030264,0.3930265473713937A0.5,0.5,0,0,0,0.37787478717712913,0.32743036697264255Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-5"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L-0.4859057841617708,-0.11787946775471378A0.5,0.5,0,0,0,-0.30907949311030264,0.3930265473713937Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-5-dark"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L-0.2703204087277987,-0.42062676641559066A0.5,0.5,0,0,0,-0.4859057841617708,-0.11787946775471378Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-5-darkest"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L-9.184850993605148e-17,-0.5A0.5,0.5,0,0,0,-0.2703204087277987,-0.42062676641559066Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      60
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-donuts 1`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-0"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L56.68121807656937,49.11455504589638A75,75,0,0,0,4.592425496802574e-15,-75Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-1"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L-46.3619239665454,58.95398210570905A75,75,0,0,0,56.68121807656937,49.11455504589638Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-2"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L-72.88586762426563,-17.681920163207067A75,75,0,0,0,-46.3619239665454,58.95398210570905Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-3"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L-40.54806130916981,-63.0940149623386A75,75,0,0,0,-72.88586762426563,-17.681920163207067Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-4"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L-1.3777276490407723e-14,-75A75,75,0,0,0,-40.54806130916981,-63.0940149623386Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      60
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-donuts 2`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-0-lightest"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L56.68121807656937,49.11455504589638A75,75,0,0,0,4.592425496802574e-15,-75Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-0-light"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L-46.3619239665454,58.95398210570905A75,75,0,0,0,56.68121807656937,49.11455504589638Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-0"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L-72.88586762426563,-17.681920163207067A75,75,0,0,0,-46.3619239665454,58.95398210570905Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-0-dark"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L-40.54806130916981,-63.0940149623386A75,75,0,0,0,-72.88586762426563,-17.681920163207067Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-0-darkest"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L-1.3777276490407723e-14,-75A75,75,0,0,0,-40.54806130916981,-63.0940149623386Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      60
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-donuts 3`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-1-lightest"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L56.68121807656937,49.11455504589638A75,75,0,0,0,4.592425496802574e-15,-75Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-1-light"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L-46.3619239665454,58.95398210570905A75,75,0,0,0,56.68121807656937,49.11455504589638Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-1"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L-72.88586762426563,-17.681920163207067A75,75,0,0,0,-46.3619239665454,58.95398210570905Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-1-dark"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L-40.54806130916981,-63.0940149623386A75,75,0,0,0,-72.88586762426563,-17.681920163207067Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-1-darkest"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L-1.3777276490407723e-14,-75A75,75,0,0,0,-40.54806130916981,-63.0940149623386Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      60
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-donuts 4`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-2-lightest"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L56.68121807656937,49.11455504589638A75,75,0,0,0,4.592425496802574e-15,-75Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-2-light"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L-46.3619239665454,58.95398210570905A75,75,0,0,0,56.68121807656937,49.11455504589638Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-2"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L-72.88586762426563,-17.681920163207067A75,75,0,0,0,-46.3619239665454,58.95398210570905Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-2-dark"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L-40.54806130916981,-63.0940149623386A75,75,0,0,0,-72.88586762426563,-17.681920163207067Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-2-darkest"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L-1.3777276490407723e-14,-75A75,75,0,0,0,-40.54806130916981,-63.0940149623386Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      60
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-donuts 5`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-3-lightest"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L56.68121807656937,49.11455504589638A75,75,0,0,0,4.592425496802574e-15,-75Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-3-light"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L-46.3619239665454,58.95398210570905A75,75,0,0,0,56.68121807656937,49.11455504589638Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-3"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L-72.88586762426563,-17.681920163207067A75,75,0,0,0,-46.3619239665454,58.95398210570905Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-3-dark"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L-40.54806130916981,-63.0940149623386A75,75,0,0,0,-72.88586762426563,-17.681920163207067Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-3-darkest"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L-1.3777276490407723e-14,-75A75,75,0,0,0,-40.54806130916981,-63.0940149623386Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      60
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-donuts 6`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-4-lightest"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L56.68121807656937,49.11455504589638A75,75,0,0,0,4.592425496802574e-15,-75Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-4-light"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L-46.3619239665454,58.95398210570905A75,75,0,0,0,56.68121807656937,49.11455504589638Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-4"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L-72.88586762426563,-17.681920163207067A75,75,0,0,0,-46.3619239665454,58.95398210570905Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-4-dark"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L-40.54806130916981,-63.0940149623386A75,75,0,0,0,-72.88586762426563,-17.681920163207067Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-4-darkest"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L-1.3777276490407723e-14,-75A75,75,0,0,0,-40.54806130916981,-63.0940149623386Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      60
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-donuts 7`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-5-lightest"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L56.68121807656937,49.11455504589638A75,75,0,0,0,4.592425496802574e-15,-75Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-5-light"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L-46.3619239665454,58.95398210570905A75,75,0,0,0,56.68121807656937,49.11455504589638Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-5"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L-72.88586762426563,-17.681920163207067A75,75,0,0,0,-46.3619239665454,58.95398210570905Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-5-dark"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L-40.54806130916981,-63.0940149623386A75,75,0,0,0,-72.88586762426563,-17.681920163207067Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-5-darkest"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L-1.3777276490407723e-14,-75A75,75,0,0,0,-40.54806130916981,-63.0940149623386Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      60
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for 3.legend 1`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-0"
+              d="M5.5109105961630896e-15,-90A90,90,0,1,1,-39.049536520580226,81.08719811121772L-0.21694186955877903,0.4504844339512096A0.5,0.5,0,1,0,3.061616997868383e-17,-0.5Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,1,1,-39.049536520580226,81.08719811121772L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-1"
+              d="M-39.049536520580226,81.08719811121772A90,90,0,0,1,-87.74351209636413,20.026884056068305L-0.4874639560909118,0.11126046697815725A0.5,0.5,0,0,0,-0.21694186955877903,0.4504844339512096Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-39.049536520580226,81.08719811121772A90,90,0,0,1,-87.74351209636413,20.026884056068305L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-2"
+              d="M-87.74351209636413,20.026884056068305A90,90,0,0,1,-87.74351209636413,-20.026884056068287L-0.4874639560909118,-0.11126046697815714A0.5,0.5,0,0,0,-0.4874639560909118,0.11126046697815725Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.74351209636413,20.026884056068305A90,90,0,0,1,-87.74351209636413,-20.026884056068287L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-3"
+              d="M-87.74351209636413,-20.026884056068287A90,90,0,0,1,-1.6532731788489267e-14,-90L-9.184850993605148e-17,-0.5A0.5,0.5,0,0,0,-0.4874639560909118,-0.11126046697815714Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.74351209636413,-20.026884056068287A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      80
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
+`;
+
 exports[`PieChart [common] example testing should match snapshot(s) for 4.color-map 1`] = `
 <svg
   className="lucid-PieChart"
@@ -103,6 +1738,116 @@ exports[`PieChart [common] example testing should match snapshot(s) for 4.color-
     </ToolTip.Title>
     <ToolTip.Body>
       100
+    </ToolTip.Body>
+  </ToolTip>
+</svg>
+`;
+
+exports[`PieChart [common] example testing should match snapshot(s) for 5.percents 1`] = `
+<svg
+  className="lucid-PieChart"
+  height={200}
+  width={200}>
+  <ToolTip
+    alignment="center"
+    direction="up"
+    flyOutStyle={Object {}}
+    isCloseable={false}
+    isExpanded={false}
+    kind="default"
+    onClose={[Function]}
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    portalId={null}>
+    <ToolTip.Target
+      elementType="g">
+      <g
+        transform="translate(10, 10)">
+        <g
+          transform="translate(90, 90)">
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-0"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0.37787478717712913,0.32743036697264255A0.5,0.5,0,0,0,3.061616997868383e-17,-0.5Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M5.5109105961630896e-15,-90A90,90,0,0,1,68.01746169188324,58.93746605507566L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-1"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L-0.30907949311030264,0.3930265473713937A0.5,0.5,0,0,0,0.37787478717712913,0.32743036697264255Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M68.01746169188324,58.93746605507566A90,90,0,0,1,-55.63430875985448,70.74477852685087L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-2"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L-0.4859057841617708,-0.11787946775471378A0.5,0.5,0,0,0,-0.30907949311030264,0.3930265473713937Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-55.63430875985448,70.74477852685087A90,90,0,0,1,-87.46304114911875,-21.21830419584848L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-3"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L-0.2703204087277987,-0.42062676641559066A0.5,0.5,0,0,0,-0.4859057841617708,-0.11787946775471378Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-87.46304114911875,-21.21830419584848A90,90,0,0,1,-48.65767357100377,-75.71281795480631L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+          <g
+            className="lucid-PieChart-slice-group">
+            <Line
+              className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
+              color="color-chart-4"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L-9.184850993605148e-17,-0.5A0.5,0.5,0,0,0,-0.2703204087277987,-0.42062676641559066Z"
+              isDotted={false}
+              transform="scale(1)" />
+            <path
+              className="lucid-PieChart-slice-hover"
+              d="M-48.65767357100377,-75.71281795480631A90,90,0,0,1,-1.6532731788489267e-14,-90L0,0Z"
+              onMouseOut={[Function]}
+              onMouseOver={[Function]}
+              transform="scale(1.1)" />
+          </g>
+        </g>
+      </g>
+    </ToolTip.Target>
+    <ToolTip.Title>
+      Leslie
+    </ToolTip.Title>
+    <ToolTip.Body>
+      36.4%
     </ToolTip.Body>
   </ToolTip>
 </svg>

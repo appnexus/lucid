@@ -1,0 +1,609 @@
+exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 1`] = `
+<DropMenu
+  className="lucid-SplitButton"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}
+  style={
+    Object {
+      "marginRight": "20px",
+    }
+  }>
+  <DropMenu.Control>
+    <ButtonGroup
+      className={null}
+      onSelect={[Function]}
+      selectedIndices={Array []}>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        onClick={[Function]}
+        type="button">
+        Primary
+      </Button>
+      <Button
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        onClick={[Function]}
+        type="button">
+        <CaretIcon
+          direction="down"
+          size={8}
+          viewBox="0 3 16 8" />
+      </Button>
+    </ButtonGroup>
+  </DropMenu.Control>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    One
+  </DropMenu.Option>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Two
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 2`] = `
+<DropMenu
+  className="lucid-SplitButton"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}
+  style={
+    Object {
+      "marginRight": "20px",
+    }
+  }>
+  <DropMenu.Control>
+    <ButtonGroup
+      className={null}
+      onSelect={[Function]}
+      selectedIndices={Array []}>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="primary"
+        onClick={[Function]}
+        type="button">
+        Primary
+      </Button>
+      <Button
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="primary"
+        onClick={[Function]}
+        type="button">
+        <CaretIcon
+          direction="down"
+          size={8}
+          viewBox="0 3 16 8" />
+      </Button>
+    </ButtonGroup>
+  </DropMenu.Control>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    One
+  </DropMenu.Option>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Two
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 3`] = `
+<DropMenu
+  className="lucid-SplitButton"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}
+  style={
+    Object {
+      "marginRight": "20px",
+    }
+  }>
+  <DropMenu.Control>
+    <ButtonGroup
+      className={null}
+      onSelect={[Function]}
+      selectedIndices={Array []}>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="link"
+        onClick={[Function]}
+        type="button">
+        Link
+      </Button>
+      <Button
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="link"
+        onClick={[Function]}
+        type="button">
+        <CaretIcon
+          direction="down"
+          size={8}
+          viewBox="0 3 16 8" />
+      </Button>
+    </ButtonGroup>
+  </DropMenu.Control>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    One
+  </DropMenu.Option>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Two
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 4`] = `
+<DropMenu
+  className="lucid-SplitButton"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}
+  style={
+    Object {
+      "marginRight": "20px",
+    }
+  }>
+  <DropMenu.Control>
+    <ButtonGroup
+      className={null}
+      onSelect={[Function]}
+      selectedIndices={Array []}>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="success"
+        onClick={[Function]}
+        type="button">
+        Success
+      </Button>
+      <Button
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="success"
+        onClick={[Function]}
+        type="button">
+        <CaretIcon
+          direction="down"
+          size={8}
+          viewBox="0 3 16 8" />
+      </Button>
+    </ButtonGroup>
+  </DropMenu.Control>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    One
+  </DropMenu.Option>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Two
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 5`] = `
+<DropMenu
+  className="lucid-SplitButton"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}
+  style={
+    Object {
+      "marginRight": "20px",
+    }
+  }>
+  <DropMenu.Control>
+    <ButtonGroup
+      className={null}
+      onSelect={[Function]}
+      selectedIndices={Array []}>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="warning"
+        onClick={[Function]}
+        type="button">
+        Warning
+      </Button>
+      <Button
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="warning"
+        onClick={[Function]}
+        type="button">
+        <CaretIcon
+          direction="down"
+          size={8}
+          viewBox="0 3 16 8" />
+      </Button>
+    </ButtonGroup>
+  </DropMenu.Control>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    One
+  </DropMenu.Option>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Two
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 6`] = `
+<DropMenu
+  className="lucid-SplitButton"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}
+  style={
+    Object {
+      "marginRight": "20px",
+    }
+  }>
+  <DropMenu.Control>
+    <ButtonGroup
+      className={null}
+      onSelect={[Function]}
+      selectedIndices={Array []}>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="danger"
+        onClick={[Function]}
+        type="button">
+        Danger
+      </Button>
+      <Button
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="danger"
+        onClick={[Function]}
+        type="button">
+        <CaretIcon
+          direction="down"
+          size={8}
+          viewBox="0 3 16 8" />
+      </Button>
+    </ButtonGroup>
+  </DropMenu.Control>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    One
+  </DropMenu.Option>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Two
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 7`] = `
+<DropMenu
+  className="lucid-SplitButton"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}
+  style={
+    Object {
+      "marginRight": "20px",
+    }
+  }>
+  <DropMenu.Control>
+    <ButtonGroup
+      className={null}
+      onSelect={[Function]}
+      selectedIndices={Array []}>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="info"
+        onClick={[Function]}
+        type="button">
+        Info
+      </Button>
+      <Button
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="info"
+        onClick={[Function]}
+        type="button">
+        <CaretIcon
+          direction="down"
+          size={8}
+          viewBox="0 3 16 8" />
+      </Button>
+    </ButtonGroup>
+  </DropMenu.Control>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    One
+  </DropMenu.Option>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Two
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SplitButton [common] example testing should match snapshot(s) for 02.success 1`] = `
+<DropMenu
+  className="lucid-SplitButton"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}>
+  <DropMenu.Control>
+    <ButtonGroup
+      className={null}
+      onSelect={[Function]}
+      selectedIndices={Array []}>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="success"
+        onClick={[Function]}
+        type="button">
+        Save
+      </Button>
+      <Button
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="success"
+        onClick={[Function]}
+        type="button">
+        <CaretIcon
+          direction="down"
+          size={8}
+          viewBox="0 3 16 8" />
+      </Button>
+    </ButtonGroup>
+  </DropMenu.Control>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Action 01
+  </DropMenu.Option>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    Here\'s Another Action
+  </DropMenu.Option>
+  <DropMenu.Option
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    And Another Action
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SplitButton click handlers primary button should trigger \`handleClick\` 1`] = `
+Object {
+  "event": Object {
+    "stopPropagation": [Function],
+  },
+  "props": Object {
+    "hasOnlyIcon": false,
+    "isActive": false,
+    "isDisabled": false,
+    "onClick": [Function],
+    "type": "button",
+  },
+}
+`;
+
+exports[`SplitButton click handlers secondary buttons should call the click handler for the second button when it is selected 1`] = `
+Object {
+  "event": Object {},
+  "props": Object {
+    "hasOnlyIcon": false,
+    "isActive": false,
+    "isDisabled": false,
+    "onClick": [Function],
+    "type": "button",
+  },
+}
+`;
+
+exports[`SplitButton click handlers secondary buttons should call the click handler for the third button when it is selected 1`] = `
+Object {
+  "event": Object {},
+  "props": Object {
+    "hasOnlyIcon": false,
+    "isActive": false,
+    "isDisabled": false,
+    "onClick": [Function],
+    "type": "button",
+  },
+}
+`;
