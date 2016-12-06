@@ -364,7 +364,10 @@ const SearchableSelect = createClass({
 						>
 							{isItemSelected ? flattenedOptionsData[selectedIndex].optionProps.children : placeholder}
 						</span>
-						<CaretIcon direction={isExpanded ? direction : 'down'} />
+						<CaretIcon
+							direction={isExpanded ? direction : 'down'}
+							size={8}
+						/>
 					</div>
 				</DropMenu.Control>
 				<DropMenu.Header className={cx('&-Search-container')}>
