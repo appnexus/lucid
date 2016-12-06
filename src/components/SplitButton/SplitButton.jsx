@@ -122,14 +122,14 @@ const SplitButton = createClass({
 					<ButtonGroup>
 						<Button
 							{...primaryButtonProps}
-							onClick={this.handleClick}
 							className={cx('&-Primary-Button')}
+							onClick={this.handleClick}
 						/>
 						<Button
+							className={cx('&-Drop-Button')}
 							hasOnlyIcon
 							isActive={isExpanded}
 							kind={_.get(primaryButtonProps, 'kind')}
-							className={cx('&-Drop-Button')}
 						>
 							<CaretIcon
 								className={cx('&-CaretIcon')}
@@ -141,7 +141,7 @@ const SplitButton = createClass({
 				</DropMenu.Control>
 				{_.map(_.slice(buttonChildProps, 1), (buttonChildProp, index) => (
 					<DropMenu.Option
-						{...buttonChildProp}
+						{..._.omit(buttonChildProp, ['onClick'])}
 						key={index}
 					/>
 				))}
