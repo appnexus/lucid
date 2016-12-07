@@ -20,12 +20,12 @@ const {
 } = React.PropTypes;
 
 const defaultIcons = {
-	'success': <SuccessIcon />,
-	'danger': <DangerIcon />,
-	'info': <InfoIcon isBadge />,
-	'warning': <WarningIcon />,
-	'primary': null,
-	'default': null,
+	success: <SuccessIcon />,
+	danger: <DangerIcon />,
+	info: <InfoIcon isBadge />,
+	warning: <WarningIcon />,
+	primary: null,
+	default: null,
 };
 
 /**

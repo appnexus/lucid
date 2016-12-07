@@ -20,8 +20,8 @@ export default React.createClass({
 			<PieChart
 				data={data}
 				colorMap={{
-					'Tammy': chartConstants.COLOR_BAD,
-					'Leslie': chartConstants.COLOR_GOOD,
+					Tammy: chartConstants.COLOR_BAD,
+					Leslie: chartConstants.COLOR_GOOD,
 				}}
 			/>
 		);

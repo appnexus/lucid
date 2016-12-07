@@ -30,6 +30,7 @@
 		"no-undef": 2,
 		"no-unused-vars": 2,
 		"prefer-const": 2,
+		"quote-props": [2, "consistent-as-needed"],
 		"quotes": [2, "single"],
 		"react/jsx-uses-react": 2,
 		"react/jsx-uses-vars": 2,
