@@ -1,0 +1,384 @@
+exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-prop 1`] = `
+<div
+  className="lucid-Tabs">
+  <ul
+    className="lucid-Tabs-bar">
+    <Tabs.Tab
+      Title="One"
+      index={0}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={true}
+      onSelect={[Function]}>
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two"
+      index={1}
+      isDisabled={true}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      onSelect={[Function]}>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      index={2}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      onSelect={[Function]}>
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Five"
+      index={3}
+      isLastTab={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      onSelect={[Function]}>
+      Four content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content">
+    One content
+  </div>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-child 1`] = `
+<div
+  className="lucid-Tabs">
+  <ul
+    className="lucid-Tabs-bar">
+    <Tabs.Tab
+      Title="One"
+      index={0}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={true}
+      onSelect={[Function]}>
+      <Tabs.Title>
+        One
+      </Tabs.Title>
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two"
+      index={1}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      onSelect={[Function]}>
+      <Tabs.Title>
+        Two
+      </Tabs.Title>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      index={2}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      onSelect={[Function]}>
+      <Tabs.Title>
+        Three
+      </Tabs.Title>
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Four"
+      index={3}
+      isDisabled={true}
+      isLastTab={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      onSelect={[Function]}>
+      <Tabs.Title>
+        Four
+      </Tabs.Title>
+      Four content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content">
+    <Tabs.Title>
+      One
+    </Tabs.Title>
+    One content
+  </div>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot(s) for 3-progression 1`] = `
+<div
+  className="lucid-Tabs">
+  <ul
+    className="lucid-Tabs-bar">
+    <Tabs.Tab
+      Title="One"
+      index={0}
+      isLastTab={false}
+      isOpen={false}
+      isProgressive={true}
+      isSelected={true}
+      onSelect={[Function]}>
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two"
+      index={1}
+      isLastTab={false}
+      isOpen={false}
+      isProgressive={true}
+      isSelected={false}
+      onSelect={[Function]}>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      index={2}
+      isLastTab={false}
+      isOpen={false}
+      isProgressive={true}
+      isSelected={false}
+      onSelect={[Function]}>
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Disabled"
+      index={3}
+      isDisabled={true}
+      isLastTab={false}
+      isOpen={false}
+      isProgressive={true}
+      isSelected={false}
+      onSelect={[Function]}>
+      Disabled Content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Five"
+      index={4}
+      isDisabled={true}
+      isLastTab={true}
+      isOpen={false}
+      isProgressive={true}
+      isSelected={false}
+      onSelect={[Function]}>
+      Four content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content">
+    One content
+  </div>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-title-as-child 1`] = `
+<div
+  className="lucid-Tabs">
+  <ul
+    className="lucid-Tabs-bar lucid-Tabs-bar-is-multiline">
+    <Tabs.Tab
+      Title={
+        Array [
+          "One",
+          <br />,
+          <Button
+            hasOnlyIcon={false}
+            isActive={false}
+            isDisabled={false}
+            onClick={[Function]}
+            type="button">
+            Button
+        </Button>,
+        ]
+      }
+      index={0}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={true}
+      onSelect={[Function]}>
+      <Tabs.Title>
+        One
+        <br />
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          type="button">
+          Button
+        </Button>
+      </Tabs.Title>
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title={
+        Array [
+          "Two",
+          <br />,
+          "Line Two",
+          <SearchField />,
+        ]
+      }
+      index={1}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      onSelect={[Function]}>
+      <Tabs.Title>
+        Two
+        <br />
+        Line Two
+        <SearchField />
+      </Tabs.Title>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title={
+        <RadioGroup
+          selectedIndex={1}>
+          <RadioButton
+            isDisabled={false}
+            isSelected={false}
+            onSelect={[Function]}>
+            <RadioGroup.Label>
+              Captain America
+            </RadioGroup.Label>
+          </RadioButton>
+          <RadioButton
+            isDisabled={false}
+            isSelected={false}
+            onSelect={[Function]}>
+            <RadioGroup.Label>
+              Iron Man
+            </RadioGroup.Label>
+          </RadioButton>
+          <RadioButton
+            isDisabled={false}
+            isSelected={false}
+            onSelect={[Function]}>
+            <RadioGroup.Label>
+              Thor
+            </RadioGroup.Label>
+          </RadioButton>
+        </RadioGroup>
+      }
+      index={2}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      onSelect={[Function]}>
+      <Tabs.Title>
+        <RadioGroup
+          selectedIndex={1}>
+          <RadioButton
+            isDisabled={false}
+            isSelected={false}
+            onSelect={[Function]}>
+            <RadioGroup.Label>
+              Captain America
+            </RadioGroup.Label>
+          </RadioButton>
+          <RadioButton
+            isDisabled={false}
+            isSelected={false}
+            onSelect={[Function]}>
+            <RadioGroup.Label>
+              Iron Man
+            </RadioGroup.Label>
+          </RadioButton>
+          <RadioButton
+            isDisabled={false}
+            isSelected={false}
+            onSelect={[Function]}>
+            <RadioGroup.Label>
+              Thor
+            </RadioGroup.Label>
+          </RadioButton>
+        </RadioGroup>
+      </Tabs.Title>
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Four"
+      index={3}
+      isDisabled={true}
+      isLastTab={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      onSelect={[Function]}>
+      <Tabs.Title>
+        Four
+      </Tabs.Title>
+      Four content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content">
+    <Tabs.Title>
+      One
+      <br />
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        onClick={[Function]}
+        type="button">
+        Button
+      </Button>
+    </Tabs.Title>
+    One content
+  </div>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot(s) for 5-tab-as-prop 1`] = `
+<div
+  className="lucid-Tabs">
+  <ul
+    className="lucid-Tabs-bar">
+    <Tabs.Tab
+      Title="Bert"
+      index={0}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={true}
+      onSelect={[Function]}>
+      Bert
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Ernie"
+      index={1}
+      isLastTab={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      onSelect={[Function]}>
+      Ernie
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content">
+    Bert
+  </div>
+</div>
+`;

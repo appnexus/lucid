@@ -14,6 +14,7 @@ import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
 import { default as SearchFieldDumb } from './components/SearchField/SearchField';
 import { default as SidebarDumb } from './components/Sidebar/Sidebar';
 import { default as SingleSelectDumb } from './components/SingleSelect/SingleSelect';
+import { default as SplitButtonDumb } from './components/SplitButton/SplitButton';
 import { default as SubmarineDumb } from './components/Submarine/Submarine';
 import { default as TabsDumb } from './components/Tabs/Tabs';
 import { default as ToolTipDumb } from './components/ToolTip/ToolTip';
@@ -33,6 +34,7 @@ const RadioGroup = buildHybridComponent(RadioGroupDumb);
 const SearchField = buildHybridComponent(SearchFieldDumb);
 const Sidebar = buildHybridComponent(SidebarDumb);
 const SingleSelect = buildHybridComponent(SingleSelectDumb);
+const SplitButton = buildHybridComponent(SplitButtonDumb);
 const Submarine = buildHybridComponent(SubmarineDumb);
 const Tabs = buildHybridComponent(TabsDumb);
 const ToolTip = buildHybridComponent(ToolTipDumb);
@@ -273,6 +275,8 @@ export {
 	SidebarDumb,
 	SingleSelect,
 	SingleSelectDumb,
+	SplitButton,
+	SplitButtonDumb,
 	SplitHorizontal,
 	SplitVertical,
 	StarIcon,

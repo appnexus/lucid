@@ -21,6 +21,29 @@ exports[`SearchField [common] example testing should match snapshot(s) for 1.def
 </div>
 `;
 
+exports[`SearchField [common] example testing should match snapshot(s) for 2.interactive 1`] = `
+<div
+  className="lucid-SearchField">
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value="" />
+  <div
+    className="lucid-SearchField-Icon-container">
+    <SearchIcon
+      className="lucid-SearchField-Icon" />
+  </div>
+</div>
+`;
+
 exports[`SearchField [common] example testing should match snapshot(s) for 3.placeholder 1`] = `
 <div
   className="lucid-SearchField">
@@ -93,6 +116,29 @@ exports[`SearchField [common] example testing should match snapshot(s) for 5.cus
       size={16}
       speed="normal"
       viewBox="0 0 16 16" />
+  </div>
+</div>
+`;
+
+exports[`SearchField [common] example testing should match snapshot(s) for 6.custom-text-field 1`] = `
+<div
+  className="lucid-SearchField">
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onKeyDown={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null} />
+  <div
+    className="lucid-SearchField-Icon-container">
+    <SearchIcon
+      className="lucid-SearchField-Icon" />
   </div>
 </div>
 `;
