@@ -14,6 +14,7 @@ const {
 	any,
 	bool,
 	func,
+	node,
 	oneOf,
 	shape,
 	string,
@@ -70,13 +71,13 @@ const SplitButton = createClass({
 		 * All children should be `ButtonGroup.Button`s and they support the same
 		 * props as `Button`s.
 		 */
-		children: any,
+		children: node,
 
 		/**
 		 * Appended to the component-specific class names set on the root
 		 * element. Value is run through the `classnames` library.
 		 */
-		className: any,
+		className: string,
 
 		/**
 		 * Sets the direction the flyout menu will render relative to the
@@ -181,14 +182,14 @@ const SplitButton = createClass({
 					<ButtonGroup>
 						<Button
 							{...primaryButtonProps}
-							className={cx('&-Primary-Button')}
+							className={cx('&-Button-primary')}
 							kind={kind}
 							type={type}
 							size={size}
 							onClick={this.handleClick}
 						/>
 						<Button
-							className={cx('&-Drop-Button')}
+							className={cx('&-Button-drop')}
 							hasOnlyIcon
 							isActive={isExpanded}
 							kind={kind}

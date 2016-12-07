@@ -28,7 +28,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
-        className="lucid-SplitButton-Primary-Button"
+        className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
@@ -37,7 +37,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         Primary
       </Button>
       <Button
-        className="lucid-SplitButton-Drop-Button"
+        className="lucid-SplitButton-Button-drop"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
@@ -90,7 +90,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
-        className="lucid-SplitButton-Primary-Button"
+        className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
@@ -100,7 +100,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         Primary
       </Button>
       <Button
-        className="lucid-SplitButton-Drop-Button"
+        className="lucid-SplitButton-Button-drop"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
@@ -154,7 +154,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
-        className="lucid-SplitButton-Primary-Button"
+        className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
@@ -164,7 +164,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         Success
       </Button>
       <Button
-        className="lucid-SplitButton-Drop-Button"
+        className="lucid-SplitButton-Button-drop"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
@@ -218,7 +218,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
-        className="lucid-SplitButton-Primary-Button"
+        className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
@@ -228,7 +228,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         Warning
       </Button>
       <Button
-        className="lucid-SplitButton-Drop-Button"
+        className="lucid-SplitButton-Button-drop"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
@@ -282,7 +282,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
-        className="lucid-SplitButton-Primary-Button"
+        className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
@@ -292,7 +292,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         Danger
       </Button>
       <Button
-        className="lucid-SplitButton-Drop-Button"
+        className="lucid-SplitButton-Button-drop"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
@@ -346,7 +346,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
-        className="lucid-SplitButton-Primary-Button"
+        className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
@@ -356,7 +356,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         Info
       </Button>
       <Button
-        className="lucid-SplitButton-Drop-Button"
+        className="lucid-SplitButton-Button-drop"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
@@ -410,7 +410,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
-        className="lucid-SplitButton-Primary-Button"
+        className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
@@ -420,7 +420,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
         Save
       </Button>
       <Button
-        className="lucid-SplitButton-Drop-Button"
+        className="lucid-SplitButton-Button-drop"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
@@ -477,7 +477,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
-        className="lucid-SplitButton-Primary-Button"
+        className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={true}
@@ -486,7 +486,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
         Save
       </Button>
       <Button
-        className="lucid-SplitButton-Drop-Button"
+        className="lucid-SplitButton-Button-drop"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
@@ -544,7 +544,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
       onSelect={[Function]}
       selectedIndices={Array []}>
       <Button
-        className="lucid-SplitButton-Primary-Button"
+        className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
@@ -554,7 +554,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
         Save
       </Button>
       <Button
-        className="lucid-SplitButton-Drop-Button"
+        className="lucid-SplitButton-Button-drop"
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
