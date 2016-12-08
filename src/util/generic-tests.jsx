@@ -121,7 +121,7 @@ export function common(Component, {
 					if (shallowExample.is(Component.displayName)) {
 						expect(shallowToJson(shallow(<Component {...shallowExample.props()} />))).toMatchSnapshot();
 					} else {
-						shallowExample.find(Component).forEach((example) => {
+						shallowExample.find(Component.displayName).forEach((example) => {
 							expect(shallowToJson(shallow(<Component {...example.props()} />))).toMatchSnapshot();
 						});
 					}

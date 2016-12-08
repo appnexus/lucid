@@ -1,3 +1,96 @@
+exports[`SingleSelect [common] example testing should match snapshot(s) for 01.basic 1`] = `
+<DropMenu
+  className="lucid-SingleSelect"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}>
+  <DropMenu.Control>
+    <div
+      className="lucid-SingleSelect-Control"
+      tabIndex={0}>
+      <span
+        className="lucid-SingleSelect-Control-content">
+        Select Color
+      </span>
+      <CaretIcon
+        direction="down"
+        size={8}
+        viewBox="0 3 16 8" />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option>
+    Red
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Green
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Blue
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for 02.named-options 1`] = `
+<DropMenu
+  className="lucid-SingleSelect"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}>
+  <DropMenu.Control>
+    <div
+      className="lucid-SingleSelect-Control"
+      tabIndex={0}>
+      <span
+        className="lucid-SingleSelect-Control-content">
+        Select Color
+      </span>
+      <CaretIcon
+        direction="down"
+        size={8}
+        viewBox="0 3 16 8" />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option
+    name="red">
+    Red
+  </DropMenu.Option>
+  <DropMenu.Option
+    name="green">
+    Green
+  </DropMenu.Option>
+  <DropMenu.Option
+    name="blue">
+    Blue
+  </DropMenu.Option>
+</DropMenu>
+`;
+
 exports[`SingleSelect [common] example testing should match snapshot(s) for 03.disabled-options 1`] = `
 <DropMenu
   className="lucid-SingleSelect"
@@ -219,6 +312,465 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.n
 </DropMenu>
 `;
 
+exports[`SingleSelect [common] example testing should match snapshot(s) for 07.max-menu-height 1`] = `
+<DropMenu
+  className="lucid-SingleSelect"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "12em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}>
+  <DropMenu.Control>
+    <div
+      className="lucid-SingleSelect-Control"
+      tabIndex={0}>
+      <span
+        className="lucid-SingleSelect-Control-content">
+        Select Color
+      </span>
+      <CaretIcon
+        direction="down"
+        size={8}
+        viewBox="0 3 16 8" />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option>
+    Aliceblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Antiquewhite
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Aqua
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Aquamarine
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Azure
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Beige
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Bisque
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Black
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Blanchedalmond
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Blue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Blueviolet
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Brown
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Burlywood
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Cadetblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Chartreuse
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Chocolate
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Coral
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Cornflowerblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Cornsilk
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Crimson
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Cyan
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darkblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darkcyan
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darkgoldenrod
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darkgray
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darkgreen
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darkkhaki
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darkmagenta
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darkolivegreen
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darkorange
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darkorchid
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darkred
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darksalmon
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darkseagreen
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darkslateblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darkslategray
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darkturquoise
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Darkviolet
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Deeppink
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Deepskyblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Dimgray
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Dodgerblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Firebrick
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Floralwhite
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Forestgreen
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Fuchsia
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Gainsboro
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Ghostwhite
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Gold
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Goldenrod
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Gray
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Green
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Greenyellow
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Honeydew
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Hotpink
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Indianred
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Indigo
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Ivory
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Khaki
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lavender
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lavenderblush
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lawngreen
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lemonchiffon
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lightblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lightcoral
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lightcyan
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lightgoldenrodyellow
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lightgray
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lightgreen
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lightpink
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lightsalmon
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lightseagreen
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lightskyblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lightslategray
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lightsteelblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lightyellow
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Lime
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Limegreen
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Linen
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Magenta
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Maroon
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Medium aquamarine
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Mediumblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Mediumorchid
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Mediumpurple
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Mediumseagreen
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Mediumslateblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Mediumspringgreen
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Mediumturquoise
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Mediumvioletred
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Midnightblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Mintcream
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Mistyrose
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Moccasin
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Navajowhite
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Navy
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Oldlace
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Olive
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Olivedrab
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Orange
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Orangered
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Orchid
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Palegoldenrod
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Palegreen
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Paleturquoise
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Palevioletred
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Papayawhip
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Peachpuff
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Peru
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Pink
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Plum
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Powderblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Purple
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Rebeccapurple
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Red
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Rosybrown
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Royalblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Saddlebrown
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Salmon
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Sandybrown
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Seagreen
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Seashell
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Sienna
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Silver
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Skyblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Slateblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Slategray
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Snow
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Springgreen
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Steelblue
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Tan
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Teal
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Thistle
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Tomato
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Turquoise
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Violet
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Wheat
+  </DropMenu.Option>
+  <DropMenu.Option>
+    White
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Whitesmoke
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Yellow
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Yellowgreen
+  </DropMenu.Option>
+</DropMenu>
+`;
+
 exports[`SingleSelect [common] example testing should match snapshot(s) for 08.rich-content 1`] = `
 <DropMenu
   className="lucid-SingleSelect"
@@ -292,6 +844,96 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
         }
       } />
      Blue
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for 09.no-selection-highlighting 1`] = `
+<DropMenu
+  className="lucid-SingleSelect"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}>
+  <DropMenu.Control>
+    <div
+      className="lucid-SingleSelect-Control"
+      tabIndex={0}>
+      <span
+        className="lucid-SingleSelect-Control-content">
+        Select Foo
+      </span>
+      <CaretIcon
+        direction="down"
+        size={8}
+        viewBox="0 3 16 8" />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option>
+    Red
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Green
+  </DropMenu.Option>
+  <DropMenu.Option>
+    Blue
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SingleSelect [common] example testing should match snapshot(s) for 10.array-options 1`] = `
+<DropMenu
+  className="lucid-SingleSelect"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}>
+  <DropMenu.Control>
+    <div
+      className="lucid-SingleSelect-Control"
+      tabIndex={0}>
+      <span
+        className="lucid-SingleSelect-Control-content">
+        Select a number
+      </span>
+      <CaretIcon
+        direction="down"
+        size={8}
+        viewBox="0 3 16 8" />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option>
+    1
+  </DropMenu.Option>
+  <DropMenu.Option>
+    2
+  </DropMenu.Option>
+  <DropMenu.Option>
+    3
   </DropMenu.Option>
 </DropMenu>
 `;

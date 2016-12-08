@@ -38,3 +38,180 @@ exports[`Paginator [common] example testing should match snapshot(s) for 1.basic
   </Button>
 </div>
 `;
+
+exports[`Paginator [common] example testing should match snapshot(s) for 2.page-size-selector 1`] = `
+<div
+  className="lucid-Paginator">
+  <div
+    className="lucid-Paginator-page-size-container">
+    <span
+      className="lucid-Paginator-rows-per-page-label">
+      Rows per page:
+    </span>
+    <SingleSelect
+      DropMenu={
+        Object {
+          "direction": "up",
+        }
+      }
+      hasReset={false}
+      isDisabled={false}
+      isSelectionHighlighted={false}
+      selectedIndex={0}>
+      <SingleSelect.Option>
+        10
+      </SingleSelect.Option>
+      <SingleSelect.Option>
+        25
+      </SingleSelect.Option>
+      <SingleSelect.Option>
+        50
+      </SingleSelect.Option>
+    </SingleSelect>
+  </div>
+  <Button
+    hasOnlyIcon={true}
+    isActive={false}
+    isDisabled={true}
+    onClick={[Function]}
+    type="button">
+    <ArrowIcon
+      direction="left"
+      viewBox="0 0 16 16" />
+  </Button>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value={1} />
+  <span>
+    of 
+  </span>
+  <Button
+    hasOnlyIcon={true}
+    isActive={false}
+    isDisabled={false}
+    onClick={[Function]}
+    type="button">
+    <ArrowIcon
+      direction="right"
+      viewBox="0 0 16 16" />
+  </Button>
+</div>
+`;
+
+exports[`Paginator [common] example testing should match snapshot(s) for 3.disabled 1`] = `
+<div
+  className="lucid-Paginator">
+  <Button
+    hasOnlyIcon={true}
+    isActive={false}
+    isDisabled={true}
+    onClick={[Function]}
+    type="button">
+    <ArrowIcon
+      direction="left"
+      viewBox="0 0 16 16" />
+  </Button>
+  <TextField
+    debounceLevel={500}
+    isDisabled={true}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value={1} />
+  <span>
+    of 
+  </span>
+  <Button
+    hasOnlyIcon={true}
+    isActive={false}
+    isDisabled={true}
+    onClick={[Function]}
+    type="button">
+    <ArrowIcon
+      direction="right"
+      viewBox="0 0 16 16" />
+  </Button>
+</div>
+`;
+
+exports[`Paginator [common] example testing should match snapshot(s) for 3.disabled 2`] = `
+<div
+  className="lucid-Paginator">
+  <div
+    className="lucid-Paginator-page-size-container">
+    <span
+      className="lucid-Paginator-rows-per-page-label">
+      Rows per page:
+    </span>
+    <SingleSelect
+      DropMenu={
+        Object {
+          "direction": "up",
+        }
+      }
+      hasReset={false}
+      isDisabled={true}
+      isSelectionHighlighted={false}
+      selectedIndex={0}>
+      <SingleSelect.Option>
+        10
+      </SingleSelect.Option>
+      <SingleSelect.Option>
+        50
+      </SingleSelect.Option>
+      <SingleSelect.Option>
+        100
+      </SingleSelect.Option>
+    </SingleSelect>
+  </div>
+  <Button
+    hasOnlyIcon={true}
+    isActive={false}
+    isDisabled={true}
+    onClick={[Function]}
+    type="button">
+    <ArrowIcon
+      direction="left"
+      viewBox="0 0 16 16" />
+  </Button>
+  <TextField
+    debounceLevel={500}
+    isDisabled={true}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value={1} />
+  <span>
+    of 
+  </span>
+  <Button
+    hasOnlyIcon={true}
+    isActive={false}
+    isDisabled={true}
+    onClick={[Function]}
+    type="button">
+    <ArrowIcon
+      direction="right"
+      viewBox="0 0 16 16" />
+  </Button>
+</div>
+`;

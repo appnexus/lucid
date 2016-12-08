@@ -1,0 +1,265 @@
+exports[`VerticalTabs [common] example testing should match snapshot(s) for 1-title-as-prop 1`] = `
+<div
+  className="lucid-VerticalTabs">
+  <VerticalListMenu
+    expandedIndices={Array []}
+    onSelect={[Function]}
+    onToggle={[Function]}
+    selectedIndices={
+      Array [
+        0,
+      ]
+    }>
+    <VerticalListMenu.Item
+      className="lucid-VerticalTabs-Tab lucid-VerticalTabs-Tab-is-active">
+      <span
+        className="lucid-VerticalTabs-Tab-content">
+        One
+      </span>
+    </VerticalListMenu.Item>
+    <VerticalListMenu.Item
+      className="lucid-VerticalTabs-Tab">
+      <span
+        className="lucid-VerticalTabs-Tab-content">
+        Two
+      </span>
+    </VerticalListMenu.Item>
+    <VerticalListMenu.Item
+      className="lucid-VerticalTabs-Tab">
+      <span
+        className="lucid-VerticalTabs-Tab-content">
+        Three
+      </span>
+    </VerticalListMenu.Item>
+    <VerticalListMenu.Item
+      className="lucid-VerticalTabs-Tab">
+      <span
+        className="lucid-VerticalTabs-Tab-content">
+        Five
+      </span>
+    </VerticalListMenu.Item>
+  </VerticalListMenu>
+  <div
+    className="lucid-VerticalTabs-content">
+    One content
+  </div>
+</div>
+`;
+
+exports[`VerticalTabs [common] example testing should match snapshot(s) for 2-title-as-child 1`] = `
+<div
+  className="lucid-VerticalTabs">
+  <VerticalListMenu
+    expandedIndices={Array []}
+    onSelect={[Function]}
+    onToggle={[Function]}
+    selectedIndices={
+      Array [
+        0,
+      ]
+    }>
+    <VerticalListMenu.Item
+      className="lucid-VerticalTabs-Tab lucid-VerticalTabs-Tab-is-active">
+      <span
+        className="lucid-VerticalTabs-Tab-content">
+        One
+      </span>
+    </VerticalListMenu.Item>
+    <VerticalListMenu.Item
+      className="lucid-VerticalTabs-Tab">
+      <span
+        className="lucid-VerticalTabs-Tab-content">
+        Two
+      </span>
+    </VerticalListMenu.Item>
+    <VerticalListMenu.Item
+      className="lucid-VerticalTabs-Tab">
+      <span
+        className="lucid-VerticalTabs-Tab-content">
+        Three
+      </span>
+    </VerticalListMenu.Item>
+    <VerticalListMenu.Item
+      className="lucid-VerticalTabs-Tab">
+      <span
+        className="lucid-VerticalTabs-Tab-content">
+        Four
+      </span>
+    </VerticalListMenu.Item>
+  </VerticalListMenu>
+  <div
+    className="lucid-VerticalTabs-content">
+    <VerticalTabs.Title>
+      One
+    </VerticalTabs.Title>
+    One content
+  </div>
+</div>
+`;
+
+exports[`VerticalTabs [common] example testing should match snapshot(s) for 3-complex-title-as-child 1`] = `
+<div
+  className="lucid-VerticalTabs">
+  <VerticalListMenu
+    expandedIndices={Array []}
+    onSelect={[Function]}
+    onToggle={[Function]}
+    selectedIndices={
+      Array [
+        0,
+      ]
+    }>
+    <VerticalListMenu.Item
+      className="lucid-VerticalTabs-Tab lucid-VerticalTabs-Tab-is-active">
+      <span
+        className="lucid-VerticalTabs-Tab-content">
+        <h2
+          style={
+            Object {
+              "margin": 0,
+            }
+          }>
+          One
+        </h2>
+        <SuccessIcon />
+        <span
+          style={
+            Object {
+              "color": "#333",
+              "fontWeight": "normal",
+              "marginLeft": "5px",
+            }
+          }>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </span>
+      </span>
+    </VerticalListMenu.Item>
+    <VerticalListMenu.Item
+      className="lucid-VerticalTabs-Tab">
+      <span
+        className="lucid-VerticalTabs-Tab-content">
+        <h2
+          style={
+            Object {
+              "margin": 0,
+            }
+          }>
+          Two
+        </h2>
+        <WarningIcon />
+        <span
+          style={
+            Object {
+              "color": "#333",
+              "fontWeight": "normal",
+              "marginLeft": "5px",
+            }
+          }>
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </span>
+      </span>
+    </VerticalListMenu.Item>
+    <VerticalListMenu.Item
+      className="lucid-VerticalTabs-Tab">
+      <span
+        className="lucid-VerticalTabs-Tab-content">
+        <span>
+          <h2
+            style={
+              Object {
+                "margin": 0,
+              }
+            }>
+            Performance
+          </h2>
+          <svg
+            height={50}
+            width={200}>
+            <Lines
+              colorOffset={0}
+              data={
+                Array [
+                  Object {
+                    "x": 1,
+                    "y": 1,
+                  },
+                  Object {
+                    "x": 2,
+                    "y": 0,
+                  },
+                  Object {
+                    "x": 3,
+                    "y": 3,
+                  },
+                  Object {
+                    "x": 4,
+                    "y": 2,
+                  },
+                  Object {
+                    "x": 5,
+                    "y": 1,
+                  },
+                  Object {
+                    "x": 6,
+                    "y": 3,
+                  },
+                ]
+              }
+              isStacked={false}
+              palette={
+                Array [
+                  "color-chart-0",
+                  "color-chart-1",
+                  "color-chart-2",
+                  "color-chart-3",
+                  "color-chart-4",
+                  "color-chart-5",
+                ]
+              }
+              xField="x"
+              xScale={[Function]}
+              yFields={
+                Array [
+                  "y",
+                ]
+              }
+              yScale={[Function]} />
+          </svg>
+        </span>
+      </span>
+    </VerticalListMenu.Item>
+    <VerticalListMenu.Item
+      className="lucid-VerticalTabs-Tab">
+      <span
+        className="lucid-VerticalTabs-Tab-content">
+        Four
+      </span>
+    </VerticalListMenu.Item>
+  </VerticalListMenu>
+  <div
+    className="lucid-VerticalTabs-content">
+    <VerticalTabs.Title>
+      <h2
+        style={
+          Object {
+            "margin": 0,
+          }
+        }>
+        One
+      </h2>
+      <SuccessIcon />
+      <span
+        style={
+          Object {
+            "color": "#333",
+            "fontWeight": "normal",
+            "marginLeft": "5px",
+          }
+        }>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </span>
+    </VerticalTabs.Title>
+    One content
+  </div>
+</div>
+`;
