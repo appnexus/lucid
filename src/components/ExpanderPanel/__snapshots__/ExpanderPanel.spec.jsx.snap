@@ -2,7 +2,8 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 1.b
 <Panel
   className="lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed"
   hasMargin={true}
-  isGutterless={false}>
+  isGutterless={false}
+  isScrollable={true}>
   <Panel.Header
     className="lucid-ExpanderPanel-header"
     onClick={[Function]}>
