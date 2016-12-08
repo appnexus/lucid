@@ -45,6 +45,20 @@ describe('Panel', () => {
 
 		});
 
+		describe('isScrollable', () => {
+
+			it('should apply the correct class', () => {
+				const wrapper = shallow(<Panel />);
+				assert(wrapper.hasClass('lucid-Panel-is-scrollable'));
+			});
+
+			it('should not apply the class', () => {
+				const wrapper = shallow(<Panel isScrollable={false} />);
+				assert(!wrapper.hasClass('lucid-Panel-is-scrollable'));
+			});
+
+		});
+
 	});
 
 	describe('childComponents', () => {
