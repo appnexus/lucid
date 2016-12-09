@@ -76,6 +76,7 @@ const colorList = [
 			'featured-color-primary-gradientStartColor',
 			'featured-color-primary-gradientEndColor',
 			'featured-color-primary-borderColor',
+			'featured-color-primary-colorHover',
 		],
 	},
 	{
@@ -87,6 +88,7 @@ const colorList = [
 			'featured-color-success-gradientStartColor',
 			'featured-color-success-gradientEndColor',
 			'featured-color-success-borderColor',
+			'featured-color-success-colorHover',
 		],
 	},
 	{
@@ -98,6 +100,7 @@ const colorList = [
 			'featured-color-info-gradientStartColor',
 			'featured-color-info-gradientEndColor',
 			'featured-color-info-borderColor',
+			'featured-color-info-colorHover',
 		],
 	},
 	{
@@ -109,6 +112,7 @@ const colorList = [
 			'featured-color-warning-gradientStartColor',
 			'featured-color-warning-gradientEndColor',
 			'featured-color-warning-borderColor',
+			'featured-color-warning-colorHover',
 		],
 	},
 	{
@@ -120,6 +124,7 @@ const colorList = [
 			'featured-color-danger-gradientStartColor',
 			'featured-color-danger-gradientEndColor',
 			'featured-color-danger-borderColor',
+			'featured-color-danger-colorHover',
 		],
 	},
 	{
