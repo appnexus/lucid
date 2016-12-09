@@ -18,6 +18,10 @@
 	& > &-Header {
 		padding: @size-standard;
 		border-bottom: @border-lightBorder;
+
+		.lucid-Panel-is-scrollable& {
+			flex-shrink: 0;
+		}
 	}
 
 	& > &-content {
@@ -36,6 +40,10 @@
 		text-align: right;
 		padding: @size-standard;
 		border-top: @border-lightBorder;
+
+		.lucid-Panel-is-scrollable& {
+			flex-shrink: 0;
+		}
 	}
 
 }
