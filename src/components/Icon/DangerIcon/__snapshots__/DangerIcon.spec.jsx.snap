@@ -20,7 +20,7 @@ exports[`DangerIcon [common] example testing should match snapshot(s) for 1.defa
 exports[`DangerIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
-  className="lucid-DangerIcon"
+  className="lucid-DangerIcon lucid-DangerIcon-is-clickable"
   isBadge={false}
   isClickable={true}
   isDisabled={false}

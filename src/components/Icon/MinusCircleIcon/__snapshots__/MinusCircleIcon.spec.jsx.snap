@@ -23,7 +23,7 @@ exports[`MinusCircleIcon [common] example testing should match snapshot(s) for 1
 exports[`MinusCircleIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
-  className="lucid-MinusCircleIcon"
+  className="lucid-MinusCircleIcon lucid-MinusCircleIcon-is-clickable"
   isBadge={false}
   isClickable={true}
   isDisabled={false}
