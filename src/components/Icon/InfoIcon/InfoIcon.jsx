@@ -22,6 +22,7 @@ const InfoIcon = createClass({
 		const {
 			className,
 			isDisabled,
+			isClickable,
 			...passThroughs
 		} = this.props;
 
@@ -29,8 +30,9 @@ const InfoIcon = createClass({
 			<Icon
 				{...omitProps(passThroughs, InfoIcon)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+				isClickable={isClickable}
 				isDisabled={isDisabled}
-				className={cx('&', className)}
+				className={cx('&', className, isClickable && '&-is-clickable')}
 			>
 				<circle className={cx('&-background', { '&-background-is-disabled': isDisabled })} cx='8' cy='8' r='8'/>
 				<rect className={cx('&-mark')} x='7' y='3' width='2' height='2'/>

@@ -18,7 +18,7 @@ exports[`InfoLightIcon [common] example testing should match snapshot(s) for 1.d
 exports[`InfoLightIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
-  className="lucid-InfoLightIcon"
+  className="lucid-InfoLightIcon lucid-InfoLightIcon-is-clickable"
   isBadge={false}
   isClickable={true}
   isDisabled={false}

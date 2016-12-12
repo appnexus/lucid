@@ -20,7 +20,7 @@ exports[`SuccessIcon [common] example testing should match snapshot(s) for 1.def
 exports[`SuccessIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
-  className="lucid-SuccessIcon"
+  className="lucid-SuccessIcon lucid-SuccessIcon-is-clickable"
   isBadge={false}
   isClickable={true}
   isDisabled={false}

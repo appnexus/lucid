@@ -21,7 +21,7 @@ exports[`WarningLightIcon [common] example testing should match snapshot(s) for 
 exports[`WarningLightIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
-  className="lucid-WarningLightIcon"
+  className="lucid-WarningLightIcon lucid-WarningLightIcon-is-clickable"
   isBadge={false}
   isClickable={true}
   isDisabled={false}
