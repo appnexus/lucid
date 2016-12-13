@@ -63,6 +63,28 @@ describe('component-types', () => {
 			assert.equal(_.get(Panel, 'selectors'), panelSelectors, 'static `selectors` must equal defined selectors');
 		});
 
+		it('should make `initialState` a static property.', () => {
+			const initialState = { foo: 'bar' };
+
+			const Panel = createClass({
+				initialState,
+			});
+
+			assert(_.has(Panel, 'initialState'), 'must have `initialState` as a static property');
+			assert.equal(_.get(Panel, 'initialState'), initialState, 'static `initialState` must equal defined initialState');
+		});
+
+		it('should use `getDefaultProps` for default initialState', () => {
+			const defaultProps = { baz: 'qux' };
+
+			const Panel = createClass({
+				getDefaultProps: () => defaultProps,
+			});
+
+			assert(_.has(Panel, 'initialState'), 'must have `initialState` as a static property');
+			assert.deepEqual(_.get(Panel, 'initialState'), defaultProps, 'static `initialState` must equal return value of `getDefaultProps`');
+		});
+
 		it('should make `propName` a static property.', () => {
 			const Panel = createClass({
 				propName: ['Panel', 'panel', 'panels'],

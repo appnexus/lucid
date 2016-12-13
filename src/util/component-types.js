@@ -1,14 +1,17 @@
 import React from 'react';
 import _ from 'lodash';
+import { omitFunctionPropsDeep } from './state-management';
 
 // creates a React component
 export function createClass(definition={}) {
 	const {
 		_isPrivate = false,
+		getDefaultProps,
 		statics = {},
 		components = {},
 		reducers = {},
 		selectors = {},
+		initialState = getDefaultProps && omitFunctionPropsDeep(getDefaultProps.apply(definition)),
 		propName = null,
 		propTypes = {},
 		render = () => null,
@@ -16,6 +19,7 @@ export function createClass(definition={}) {
 	} = definition;
 
 	const newDefinition = {
+		getDefaultProps,
 		...restDefinition,
 		statics: {
 			...statics,
@@ -23,6 +27,7 @@ export function createClass(definition={}) {
 			_isPrivate,
 			reducers,
 			selectors,
+			initialState,
 			propName,
 		},
 		propTypes: _.assign({}, propTypes, _.mapValues(definition.components, () => React.PropTypes.any)),
