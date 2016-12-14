@@ -122,6 +122,13 @@ export function getReduxPrimitives({
 	function getDispatchTree(reducers, rootPath, dispatch) {
 		const actionCreatorTree = createActionCreatorTree(reducers, rootPath);
 		dispatchTree = bindActionCreatorTree(actionCreatorTree, dispatch);
+		if (isDevMode) {
+			window.lucidReduxUtil = window.lucidReduxUtil || {};
+			window.lucidReduxUtil[rootPath] = {
+				actionCreatorTree,
+				dispatchTree,
+			};
+		}
 		return dispatchTree;
 	}
 
