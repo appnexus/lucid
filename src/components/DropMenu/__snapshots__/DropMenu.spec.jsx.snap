@@ -8,7 +8,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 1.basic 
     getAlignmentOffset={[Function]}
     isExpanded={false}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-6">
+    portalId="DropMenu-Portal-7">
     <ContextMenu.Target
       elementType="span">
       <div
@@ -67,7 +67,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 2.button
     getAlignmentOffset={[Function]}
     isExpanded={false}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-7">
+    portalId="DropMenu-Portal-8">
     <ContextMenu.Target
       elementType="span">
       <div
@@ -133,7 +133,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 3.disabl
     getAlignmentOffset={[Function]}
     isExpanded={false}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-8">
+    portalId="DropMenu-Portal-9">
     <ContextMenu.Target
       elementType="span">
       <div
@@ -197,7 +197,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 4.disabl
     getAlignmentOffset={[Function]}
     isExpanded={false}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-9">
+    portalId="DropMenu-Portal-10">
     <ContextMenu.Target
       elementType="span">
       <div
@@ -263,7 +263,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 5.groupe
     getAlignmentOffset={[Function]}
     isExpanded={false}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-10">
+    portalId="DropMenu-Portal-11">
     <ContextMenu.Target
       elementType="span">
       <div
@@ -371,7 +371,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 6.text-m
     getAlignmentOffset={[Function]}
     isExpanded={false}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-11">
+    portalId="DropMenu-Portal-12">
     <ContextMenu.Target
       elementType="span">
       <div
@@ -441,7 +441,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 7.action
     getAlignmentOffset={[Function]}
     isExpanded={false}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-12">
+    portalId="DropMenu-Portal-13">
     <ContextMenu.Target
       elementType="span">
       <div
@@ -503,7 +503,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 8.statel
     getAlignmentOffset={[Function]}
     isExpanded={true}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-13">
+    portalId="DropMenu-Portal-14">
     <ContextMenu.Target
       elementType="span">
       <div
