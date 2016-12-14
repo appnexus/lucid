@@ -1,6 +1,6 @@
 exports[`Overlay [common] example testing should match snapshot(s) for basic 1`] = `
 <Portal
-  portalId="Overlay-Portal-6">
+  portalId="Overlay-Portal-7">
   <ReactCSSTransitionGroup
     transitionAppear={false}
     transitionEnter={true}
@@ -13,7 +13,7 @@ exports[`Overlay [common] example testing should match snapshot(s) for basic 1`]
 
 exports[`Overlay [common] example testing should match snapshot(s) for no-modal 1`] = `
 <Portal
-  portalId="Overlay-Portal-7">
+  portalId="Overlay-Portal-8">
   <ReactCSSTransitionGroup
     transitionAppear={false}
     transitionEnter={true}
