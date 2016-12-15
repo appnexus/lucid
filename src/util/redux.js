@@ -38,6 +38,7 @@ export function getReduxPrimitives({
 	selectors,
 }) {
 
+	/* istanbul ignore if */
 	if (_.isEmpty(rootPath)) {
 		logger.warn(
 			`\`getReduxPrimitives\` warning:
@@ -45,6 +46,7 @@ export function getReduxPrimitives({
 		);
 	}
 
+	/* istanbul ignore if */
 	if (!initialState) {
 		logger.warn(
 			`\`getReduxPrimitives\` warning:
@@ -66,6 +68,7 @@ Components should have an \`initialState\` property or a \`getDefaultProps\` def
 	);
 	const mapDispatchToProps = (dispatch) => getDispatchTree(reducers, rootPath, dispatch);
 	const devModeMapStateToProps = (rootState) => {
+		/* istanbul ignore if */
 		if (!_.has(rootState, rootPath)) {
 			logger.warn(
 				`\`getReduxPrimitives\` warning:
@@ -149,6 +152,7 @@ Make sure your \`rootPath\` is correct.
 	function getDispatchTree(reducers, rootPath, dispatch) {
 		const actionCreatorTree = createActionCreatorTree(reducers, rootPath);
 		dispatchTree = bindActionCreatorTree(actionCreatorTree, dispatch);
+		/* istanbul ignore if */
 		if (isDevMode) {
 			window.lucidReduxUtil = window.lucidReduxUtil || {};
 			window.lucidReduxUtil[rootPath] = {
