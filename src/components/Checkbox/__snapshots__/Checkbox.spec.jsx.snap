@@ -1,8 +1,7 @@
 exports[`Checkbox [common] example testing should match snapshot(s) for interactive 1`] = `
 <div
   className="lucid-Checkbox lucid-Checkbox-is-selected"
-  onClick={[Function]}
-  onTouchEnd={[Function]}>
+  onClick={[Function]}>
   <input
     checked={true}
     className="lucid-Checkbox-native"
@@ -30,8 +29,7 @@ exports[`Checkbox [common] example testing should match snapshot(s) for interact
 exports[`Checkbox [common] example testing should match snapshot(s) for interactive 2`] = `
 <div
   className="lucid-Checkbox lucid-Checkbox-is-disabled"
-  onClick={[Function]}
-  onTouchEnd={[Function]}>
+  onClick={[Function]}>
   <input
     checked={false}
     className="lucid-Checkbox-native"
@@ -59,8 +57,7 @@ exports[`Checkbox [common] example testing should match snapshot(s) for interact
 exports[`Checkbox [common] example testing should match snapshot(s) for interactive 3`] = `
 <div
   className="lucid-Checkbox lucid-Checkbox-is-disabled lucid-Checkbox-is-selected"
-  onClick={[Function]}
-  onTouchEnd={[Function]}>
+  onClick={[Function]}>
   <input
     checked={true}
     className="lucid-Checkbox-native"
@@ -88,8 +85,7 @@ exports[`Checkbox [common] example testing should match snapshot(s) for interact
 exports[`Checkbox [common] example testing should match snapshot(s) for interactive 4`] = `
 <div
   className="lucid-Checkbox lucid-Checkbox-is-disabled lucid-Checkbox-is-selected"
-  onClick={[Function]}
-  onTouchEnd={[Function]}>
+  onClick={[Function]}>
   <input
     checked={false}
     className="lucid-Checkbox-native"
