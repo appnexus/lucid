@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { createSelector } from 'reselect';
 import { reduceSelectors } from './state-management.js';
-import { isDevMode } from './logger.js';
+import { logger, isDevMode } from './logger.js';
 
 /**
  * thunk
@@ -38,6 +38,24 @@ export function getReduxPrimitives({
 	selectors,
 }) {
 
+	/* istanbul ignore if */
+	if (isDevMode && _.isEmpty(rootPath)) {
+		logger.warn(
+			`\`getReduxPrimitives\` warning:
+\`rootPath\` is empty`
+		);
+	}
+
+	/* istanbul ignore if */
+	if (isDevMode && !initialState) {
+		logger.warn(
+			`\`getReduxPrimitives\` warning:
+Missing \`initialState\` for component at \`rootPath\` ${_.isArray(rootPath) ? rootPath.join(',') : rootPath}
+Components should have an \`initialState\` property or a \`getDefaultProps\` defined.
+`
+		);
+	}
+
 	// we need this in scope so actionCreators can refer to it
 	let dispatchTree;
 
@@ -49,11 +67,23 @@ export function getReduxPrimitives({
 		(rootState) => rootSelector(selector(rootState))
 	);
 	const mapDispatchToProps = (dispatch) => getDispatchTree(reducers, rootPath, dispatch);
+	const devModeMapStateToProps = (rootState) => {
+		/* istanbul ignore if */
+		if (isDevMode && !_.has(rootState, rootPath)) {
+			logger.warn(
+				`\`getReduxPrimitives\` warning:
+\`rootPath\` ${rootPath} does not exist in the redux store.
+Make sure your \`rootPath\` is correct.
+`
+			);
+		}
+		return mapStateToProps(rootState);
+	};
 
 	return {
 		reducer,
 		connectors: [
-			mapStateToProps,
+			isDevMode ? devModeMapStateToProps : mapStateToProps,
 			mapDispatchToProps,
 			mergeProps,
 		],
@@ -122,6 +152,7 @@ export function getReduxPrimitives({
 	function getDispatchTree(reducers, rootPath, dispatch) {
 		const actionCreatorTree = createActionCreatorTree(reducers, rootPath);
 		dispatchTree = bindActionCreatorTree(actionCreatorTree, dispatch);
+		/* istanbul ignore if */
 		if (isDevMode) {
 			window.lucidReduxUtil = window.lucidReduxUtil || {};
 			window.lucidReduxUtil[rootPath] = {
