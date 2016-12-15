@@ -133,20 +133,6 @@ describe('Checkbox', () => {
 			verifyArgumentsWhenFalse('click');
 		});
 	});
-
-	describe('user taps on the rendered control', () => {
-		it('calls the function passed in as the `onSelect` prop...', () => {
-			verifyOnSelect('touchend');
-		});
-
-		it('...and when `isSelected` is true passes along false as the first argument and a React synthetic event as the second argument.', () => {
-			verifyArgumentsWhenTrue('touchend');
-		});
-
-		it('...and when `isSelected` is false passes along true as the first argument and a React synthetic event as the second argument.', () => {
-			verifyArgumentsWhenFalse('touchend');
-		});
-	});
 });
 
 function simulateEvent(reactElement, selector, event) {

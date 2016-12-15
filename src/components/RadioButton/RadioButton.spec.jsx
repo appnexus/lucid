@@ -123,18 +123,4 @@ describe('RadioButton', () => {
 			verifyNoOnSelect('click');
 		});
 	});
-
-	describe('user taps on the rendered control', () => {
-		it('calls the function passed in as the `onSelect` prop if `isSelected` is false...', () => {
-			verifyOnSelect('touchend');
-		});
-
-		it('...and passes along true as the first argument and a React synthetic event as the second argument.', () => {
-			verifyArguments('touchend');
-		});
-
-		it('does not call the function passed in as the `onSelect` prop if `isSelected` is true.', () => {
-			verifyNoOnSelect('touchend');
-		});
-	});
 });
