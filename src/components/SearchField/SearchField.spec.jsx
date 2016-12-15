@@ -21,6 +21,14 @@ describe('SearchField', () => {
 			});
 		});
 
+		describe('onChangeDebounced', () => {
+			it('should pass onChangeDebounced to the text input', () => {
+				const wrapper = shallow(<SearchField onChangeDebounced={fn} />);
+				const textFieldWrapper = wrapper.find(TextField).first();
+				assert.equal(textFieldWrapper.props().onChangeDebounced, fn);
+			});
+		});
+
 		describe('onSubmit', () => {
 			it('should pass onSubmit to the text input', () => {
 				const wrapper = shallow(<SearchField onSubmit={fn} />);

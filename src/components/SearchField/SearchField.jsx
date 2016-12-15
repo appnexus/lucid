@@ -53,6 +53,18 @@ const SearchField = createClass({
 		 */
 		onChange: func,
 		/**
+		 * Fires an event, debounced by `debounceLevel`, when the user types text
+		 * into the TextField.
+		 *
+		 * Signature: `(value, { event, props }) => {}`
+		 */
+		onChangeDebounced: func,
+		/**
+		 * Number of milliseconds to debounce the `onChangeDebounced` callback.
+		 * Only useful if you provide an `onChangeDebounced` handler.
+		 */
+		debounceLevel: number,
+		/**
 		 * Fires an event when the user hits "enter" from the SearchField.
 		 *
 		 * Signature: `(value, { event, props }) => {}`
@@ -93,6 +105,8 @@ const SearchField = createClass({
 		return {
 			isDisabled: false,
 			onChange: _.noop,
+			onChangeDebounced: _.noop,
+			debounceLevel: 500,
 			onSubmit: _.noop,
 			value: '',
 		};
@@ -107,6 +121,8 @@ const SearchField = createClass({
 				isDisabled,
 				isValid,
 				onChange,
+				onChangeDebounced,
+				debounceLevel,
 				onSubmit,
 				placeholder,
 				value,
@@ -122,6 +138,8 @@ const SearchField = createClass({
 		const textFieldProps = {
 			isDisabled,
 			onChange,
+			onChangeDebounced,
+			debounceLevel,
 			onSubmit,
 			placeholder,
 			isMultiLine: false,
