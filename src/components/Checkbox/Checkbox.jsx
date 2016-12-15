@@ -99,7 +99,6 @@ const Checkbox = createClass({
 					'&-is-selected': isIndeterminate || isSelected,
 				}, className)}
 				onClick={this.handleClicked}
-				onTouchEnd={this.handleClicked}
 				style={style}
 			>
 				<input

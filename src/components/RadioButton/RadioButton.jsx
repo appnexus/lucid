@@ -96,7 +96,6 @@ const RadioButton = createClass({
 						'&-is-selected': isSelected,
 					}, className)}
 					onClick={this.handleClicked}
-					onTouchEnd={this.handleClicked}
 					style={style}
 			>
 				<input
