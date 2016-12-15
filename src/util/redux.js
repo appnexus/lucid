@@ -39,7 +39,7 @@ export function getReduxPrimitives({
 }) {
 
 	/* istanbul ignore if */
-	if (_.isEmpty(rootPath)) {
+	if (isDevMode && _.isEmpty(rootPath)) {
 		logger.warn(
 			`\`getReduxPrimitives\` warning:
 \`rootPath\` is empty`
@@ -47,7 +47,7 @@ export function getReduxPrimitives({
 	}
 
 	/* istanbul ignore if */
-	if (!initialState) {
+	if (isDevMode && !initialState) {
 		logger.warn(
 			`\`getReduxPrimitives\` warning:
 Missing \`initialState\` for component at \`rootPath\` ${_.isArray(rootPath) ? rootPath.join(',') : rootPath}
@@ -69,7 +69,7 @@ Components should have an \`initialState\` property or a \`getDefaultProps\` def
 	const mapDispatchToProps = (dispatch) => getDispatchTree(reducers, rootPath, dispatch);
 	const devModeMapStateToProps = (rootState) => {
 		/* istanbul ignore if */
-		if (!_.has(rootState, rootPath)) {
+		if (isDevMode && !_.has(rootState, rootPath)) {
 			logger.warn(
 				`\`getReduxPrimitives\` warning:
 \`rootPath\` ${rootPath} does not exist in the redux store.
