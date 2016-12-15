@@ -40,8 +40,10 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
   <DropMenu.Header
     className="lucid-SearchableSelect-Search-container">
     <SearchField
+      debounceLevel={500}
       isDisabled={false}
       onChange={[Function]}
+      onChangeDebounced={[Function]}
       onSubmit={[Function]}
       value={null} />
   </DropMenu.Header>
@@ -563,8 +565,10 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
   <DropMenu.Header
     className="lucid-SearchableSelect-Search-container">
     <SearchField
+      debounceLevel={500}
       isDisabled={false}
       onChange={[Function]}
+      onChangeDebounced={[Function]}
       onSubmit={[Function]}
       value={null} />
   </DropMenu.Header>
@@ -879,8 +883,10 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
   <DropMenu.Header
     className="lucid-SearchableSelect-Search-container">
     <SearchField
+      debounceLevel={500}
       isDisabled={false}
       onChange={[Function]}
+      onChangeDebounced={[Function]}
       onSubmit={[Function]}
       placeholder="Type here to filter..."
       value={null} />
