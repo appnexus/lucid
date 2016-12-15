@@ -342,3 +342,31 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   </div>
 </div>
 `;
+
+exports[`SearchField [common] example testing should match snapshot(s) for 9.debounced 1`] = `
+<div
+  className="lucid-SearchField"
+  style={
+    Object {
+      "marginBottom": "10px",
+    }
+  }>
+  <TextField
+    debounceLevel={500}
+    isDisabled={false}
+    isMultiLine={false}
+    lazyLevel={1000}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onChangeDebounced={[Function]}
+    onSubmit={[Function]}
+    rows={5}
+    style={null}
+    value="foo" />
+  <div
+    className="lucid-SearchField-Icon-container">
+    <SearchIcon
+      className="lucid-SearchField-Icon lucid-SearchField-Icon-active" />
+  </div>
+</div>
+`;
