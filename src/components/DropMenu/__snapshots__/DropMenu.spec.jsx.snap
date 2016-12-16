@@ -541,7 +541,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 08.no-wr
           className="lucid-DropMenu-Option"
           onClick={[Function]}
           onMouseMove={[Function]}>
-          Adipisicing totam saepe officia repellat quo cupiditate ducimus hic? Quod temporibus corrupti eaque ullam quo nulla corporis non quas itaque iusto earum!
+          Intentionally run off screen -- Adipisicing totam saepe officia repellat quo cupiditate ducimus hic? Quod temporibus corrupti eaque ullam quo nulla corporis !
         </div>
         <div
           className="lucid-DropMenu-Option"
