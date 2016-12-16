@@ -397,16 +397,22 @@ describe('SearchableSelect', () => {
 					name: 'OptionA',
 					children: 'option a',
 					isDisabled: false,
+					isHidden: false,
+					isWrapped: true,
 				}));
 				assert(_.isEqual(optionsProps[1], {
 					name: 'OptionB',
 					children: 'option b',
 					isDisabled: false,
+					isHidden: false,
+					isWrapped: true,
 				}));
 				assert(_.isEqual(optionsProps[2], {
 					name: 'OptionC',
 					children: 'option c',
 					isDisabled: false,
+					isHidden: false,
+					isWrapped: true,
 				}));
 			});
 		});
@@ -447,16 +453,22 @@ describe('SearchableSelect', () => {
 					name: 'OptionA',
 					children: 'option a',
 					isDisabled: false,
+					isHidden: false,
+					isWrapped: true,
 				}));
 				assert(_.isEqual(optionsProps[1], {
 					name: 'OptionB',
 					children: 'option b',
 					isDisabled: false,
+					isHidden: false,
+					isWrapped: true,
 				}));
 				assert(_.isEqual(optionsProps[2], {
 					name: 'OptionC',
 					children: 'option c',
 					isDisabled: false,
+					isHidden: false,
+					isWrapped: true,
 				}));
 
 			});

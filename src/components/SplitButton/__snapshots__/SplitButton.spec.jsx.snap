@@ -1,5 +1,6 @@
 exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 1`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SplitButton"
   direction="down"
   flyOutStyle={
@@ -51,10 +52,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     One
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -62,6 +69,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 2`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SplitButton"
   direction="down"
   flyOutStyle={
@@ -115,10 +123,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     One
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -126,6 +140,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 3`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SplitButton"
   direction="down"
   flyOutStyle={
@@ -179,10 +194,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     One
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -190,6 +211,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 4`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SplitButton"
   direction="down"
   flyOutStyle={
@@ -243,10 +265,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     One
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -254,6 +282,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 5`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SplitButton"
   direction="down"
   flyOutStyle={
@@ -307,10 +336,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     One
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -318,6 +353,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 6`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SplitButton"
   direction="down"
   flyOutStyle={
@@ -371,10 +407,16 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     One
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -382,6 +424,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 02.success 1`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SplitButton"
   direction="down"
   flyOutStyle={
@@ -435,13 +478,22 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     Action 01
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     Here\'s Another Action
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     And Another Action
   </DropMenu.Option>
 </DropMenu>
@@ -449,6 +501,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 03.disabled 1`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SplitButton"
   direction="down"
   flyOutStyle={
@@ -501,14 +554,21 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
     </ButtonGroup>
   </DropMenu.Control>
   <DropMenu.Option
-    isDisabled={true}>
+    isDisabled={true}
+    isHidden={false}
+    isWrapped={true}>
     This action should be disabled
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     This one should be enabled
   </DropMenu.Option>
   <DropMenu.Option
-    isDisabled={true}>
+    isDisabled={true}
+    isHidden={false}
+    isWrapped={true}>
     This should be disabled, too
   </DropMenu.Option>
 </DropMenu>
@@ -516,6 +576,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 04.up 1`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SplitButton"
   direction="up"
   flyOutStyle={
@@ -569,13 +630,22 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     Action 01
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     Here\'s Another Action
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}>
     And Another Action
   </DropMenu.Option>
 </DropMenu>

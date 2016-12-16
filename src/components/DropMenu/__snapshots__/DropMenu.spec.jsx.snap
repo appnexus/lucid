@@ -1,4 +1,4 @@
-exports[`DropMenu [common] example testing should match snapshot(s) for 1.basic 1`] = `
+exports[`DropMenu [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <div
   className="lucid-DropMenu lucid-DropMenu-base">
   <ContextMenu
@@ -34,19 +34,19 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 1.basic 
           }
         }>
         <div
-          className="lucid-DropMenu-Option"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Red
         </div>
         <div
-          className="lucid-DropMenu-Option"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Green
         </div>
         <div
-          className="lucid-DropMenu-Option"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Blue
@@ -57,7 +57,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 1.basic 
 </div>
 `;
 
-exports[`DropMenu [common] example testing should match snapshot(s) for 2.button-menu 1`] = `
+exports[`DropMenu [common] example testing should match snapshot(s) for 02.button-menu 1`] = `
 <div
   className="lucid-DropMenu lucid-DropMenu-base">
   <ContextMenu
@@ -100,19 +100,19 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 2.button
           }
         }>
         <div
-          className="lucid-DropMenu-Option"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Red
         </div>
         <div
-          className="lucid-DropMenu-Option"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Green
         </div>
         <div
-          className="lucid-DropMenu-Option"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Blue
@@ -123,7 +123,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 2.button
 </div>
 `;
 
-exports[`DropMenu [common] example testing should match snapshot(s) for 3.disabled 1`] = `
+exports[`DropMenu [common] example testing should match snapshot(s) for 03.disabled 1`] = `
 <div
   className="lucid-DropMenu lucid-DropMenu-base">
   <ContextMenu
@@ -164,19 +164,19 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 3.disabl
           }
         }>
         <div
-          className="lucid-DropMenu-Option"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Red
         </div>
         <div
-          className="lucid-DropMenu-Option"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Green
         </div>
         <div
-          className="lucid-DropMenu-Option"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Blue
@@ -187,7 +187,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 3.disabl
 </div>
 `;
 
-exports[`DropMenu [common] example testing should match snapshot(s) for 4.disabled-options 1`] = `
+exports[`DropMenu [common] example testing should match snapshot(s) for 04.disabled-options 1`] = `
 <div
   className="lucid-DropMenu lucid-DropMenu-base">
   <ContextMenu
@@ -230,19 +230,19 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 4.disabl
           }
         }>
         <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-disabled"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-disabled lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Red
         </div>
         <div
-          className="lucid-DropMenu-Option"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Green
         </div>
         <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-disabled"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-disabled lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Blue
@@ -253,7 +253,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 4.disabl
 </div>
 `;
 
-exports[`DropMenu [common] example testing should match snapshot(s) for 5.grouped-options 1`] = `
+exports[`DropMenu [common] example testing should match snapshot(s) for 05.grouped-options 1`] = `
 <div
   className="lucid-DropMenu lucid-DropMenu-base">
   <ContextMenu
@@ -296,7 +296,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 5.groupe
           }
         }>
         <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Select Color
@@ -304,23 +304,24 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 5.groupe
         <div
           className="lucid-DropMenu-OptionGroup-divider" />
         <div
-          className="lucid-DropMenu-label">
+          className="lucid-DropMenu-label"
+          isHidden={false}>
           Screen
         </div>
         <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Red
         </div>
         <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Green
         </div>
         <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Blue
@@ -328,29 +329,30 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 5.groupe
         <div
           className="lucid-DropMenu-OptionGroup-divider" />
         <div
-          className="lucid-DropMenu-label">
+          className="lucid-DropMenu-label"
+          isHidden={false}>
           Print
         </div>
         <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Cyan
         </div>
         <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Yellow
         </div>
         <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Magenta
         </div>
         <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Black
@@ -361,7 +363,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 5.groupe
 </div>
 `;
 
-exports[`DropMenu [common] example testing should match snapshot(s) for 6.text-menu 1`] = `
+exports[`DropMenu [common] example testing should match snapshot(s) for 06.text-menu 1`] = `
 <div
   className="lucid-DropMenu lucid-DropMenu-base">
   <ContextMenu
@@ -408,19 +410,19 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 6.text-m
           }
         }>
         <div
-          className="lucid-DropMenu-Option"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Red
         </div>
         <div
-          className="lucid-DropMenu-Option"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Green
         </div>
         <div
-          className="lucid-DropMenu-Option"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Blue
@@ -431,7 +433,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 6.text-m
 </div>
 `;
 
-exports[`DropMenu [common] example testing should match snapshot(s) for 7.action-menu 1`] = `
+exports[`DropMenu [common] example testing should match snapshot(s) for 07.action-menu 1`] = `
 <div
   className="lucid-DropMenu lucid-DropMenu-base">
   <ContextMenu
@@ -470,19 +472,19 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 7.action
           }
         }>
         <div
-          className="lucid-DropMenu-Option"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Red
         </div>
         <div
-          className="lucid-DropMenu-Option"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Green
         </div>
         <div
-          className="lucid-DropMenu-Option"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Blue
@@ -493,7 +495,73 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 7.action
 </div>
 `;
 
-exports[`DropMenu [common] example testing should match snapshot(s) for 8.stateless 1`] = `
+exports[`DropMenu [common] example testing should match snapshot(s) for 08.no-wrapping 1`] = `
+<div
+  className="lucid-DropMenu lucid-DropMenu-base">
+  <ContextMenu
+    alignment="center"
+    direction="down"
+    directonOffset={0}
+    getAlignmentOffset={[Function]}
+    isExpanded={false}
+    onClickOut={[Function]}
+    portalId="DropMenu-Portal-14">
+    <ContextMenu.Target
+      elementType="span">
+      <div
+        className="lucid-DropMenu-Control"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex={0}>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          type="button">
+          Click me
+        </Button>
+      </div>
+    </ContextMenu.Target>
+    <ContextMenu.FlyOut
+      className="lucid-DropMenu"
+      style={
+        Object {
+          "maxHeight": "18em",
+        }
+      }>
+      <div
+        className="lucid-DropMenu-option-container"
+        style={
+          Object {
+            "maxHeight": "18em",
+          }
+        }>
+        <div
+          className="lucid-DropMenu-Option"
+          onClick={[Function]}
+          onMouseMove={[Function]}>
+          Intentionally run off screen -- Adipisicing totam saepe officia repellat quo cupiditate ducimus hic? Quod temporibus corrupti eaque ullam quo nulla corporis !
+        </div>
+        <div
+          className="lucid-DropMenu-Option"
+          onClick={[Function]}
+          onMouseMove={[Function]}>
+          Adipisicing totam provident excepturi officia non cum alias? Labore possimus adipisci id eveniet numquam tempora totam est. Explicabo recusandae quo tempore
+        </div>
+        <div
+          className="lucid-DropMenu-Option"
+          onClick={[Function]}
+          onMouseMove={[Function]}>
+          Consectetur doloribus dignissimos exercitationem vel tempora praesentium nostrum eveniet inventore. Odit inventore quas optio id eum nisi. Minima consequuntur
+        </div>
+      </div>
+    </ContextMenu.FlyOut>
+  </ContextMenu>
+</div>
+`;
+
+exports[`DropMenu [common] example testing should match snapshot(s) for 09.stateless 1`] = `
 <div
   className="lucid-DropMenu lucid-DropMenu-base lucid-DropMenu-is-expanded lucid-DropMenu-direction-down">
   <ContextMenu
@@ -503,7 +571,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 8.statel
     getAlignmentOffset={[Function]}
     isExpanded={true}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-14">
+    portalId="DropMenu-Portal-15">
     <ContextMenu.Target
       elementType="span">
       <div
@@ -536,23 +604,24 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 8.statel
           }
         }>
         <div
-          className="lucid-DropMenu-label">
+          className="lucid-DropMenu-label"
+          isHidden={false}>
           Preferred
         </div>
         <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-selected"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-selected lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Red
         </div>
         <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Green
         </div>
         <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Blue
@@ -560,19 +629,19 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 8.statel
         <div
           className="lucid-DropMenu-OptionGroup-divider" />
         <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-focused"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-focused lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Orange
         </div>
         <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-disabled"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-disabled lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Violet
         </div>
         <div
-          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-disabled"
+          className="lucid-DropMenu-Option lucid-DropMenu-Option-is-disabled lucid-DropMenu-Option-is-wrapped"
           onClick={[Function]}
           onMouseMove={[Function]}>
           Brown

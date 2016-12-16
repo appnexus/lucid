@@ -25,6 +25,7 @@
 		height: @DropMenu-size-optionHeight;
 		display: flex;
 		align-items: center;
+		white-space: nowrap;
 
 		&&-is-disabled {
 			color: @color-disabledText;
@@ -42,6 +43,10 @@
 
 		&&-is-null {
 			color: @color-disabledText;
+		}
+
+		&&-is-wrapped {
+			white-space: normal;
 		}
 	}
 
