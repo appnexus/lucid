@@ -301,21 +301,21 @@ describe('SingleSelect', () => {
 					children: 'option a',
 					isDisabled: false,
 					isHidden: false,
-					isWrapped: false,
+					isWrapped: true,
 				}));
 				assert(_.isEqual(optionsProps[1], {
 					name: 'OptionB',
 					children: 'option b',
 					isDisabled: false,
 					isHidden: false,
-					isWrapped: false,
+					isWrapped: true,
 				}));
 				assert(_.isEqual(optionsProps[2], {
 					name: 'OptionC',
 					children: 'option c',
 					isDisabled: false,
 					isHidden: false,
-					isWrapped: false,
+					isWrapped: true,
 				}));
 			});
 		});
@@ -357,21 +357,21 @@ describe('SingleSelect', () => {
 					children: 'option a',
 					isDisabled: false,
 					isHidden: false,
-					isWrapped: false,
+					isWrapped: true,
 				}));
 				assert(_.isEqual(optionsProps[1], {
 					name: 'OptionB',
 					children: 'option b',
 					isDisabled: false,
 					isHidden: false,
-					isWrapped: false,
+					isWrapped: true,
 				}));
 				assert(_.isEqual(optionsProps[2], {
 					name: 'OptionC',
 					children: 'option c',
 					isDisabled: false,
 					isHidden: false,
-					isWrapped: false,
+					isWrapped: true,
 				}));
 
 			});

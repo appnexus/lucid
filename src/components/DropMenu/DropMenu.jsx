@@ -103,7 +103,7 @@ const DropMenu = createClass({
 				return {
 					isDisabled: false,
 					isHidden: false,
-					isWrapped: false,
+					isWrapped: true,
 				};
 			},
 		}),

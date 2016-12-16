@@ -33,43 +33,43 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 1.ba
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     Portland
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     pinky and the brain
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     playa please
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     porridge
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     portal
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     potent potables
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     potent
   </DropMenu.Option>
 </DropMenu>
@@ -110,1537 +110,1537 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 2.in
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     abaft
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     abounding
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     abrasive
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     accidental
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     actor
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     addition
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     adhesive
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     adjustment
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     advertisement
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     applaud
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     appreciate
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     awesome
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     ball
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     beautiful
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     beef
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     bell
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     bent
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     bite-sized
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     bitter
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     black
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     bloody
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     bulb
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     bump
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     calculator
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     camp
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     care
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     care
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     caring
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     celery
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     challenge
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     chase
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     cherries
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     chew
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     choke
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     circle
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     clean
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     club
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     coat
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     cold
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     colossal
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     command
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     competition
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     confuse
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     continue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     crawl
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     curve
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     cute
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     dad
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     damaged
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     death
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     debonair
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     decorate
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     deeply
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     delicious
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     destroy
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     destruction
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     diligent
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     disapprove
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     discussion
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     doubtful
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     dress
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     drop
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     dust
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     eatable
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     educate
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     efficacious
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     elegant
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     elfin
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     embarrassed
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     enjoy
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     envious
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     exchange
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     excited
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     existence
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     fast
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     fear
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     flight
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     float
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     food
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     force
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     fork
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     frightening
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     geese
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     ghost
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     giant
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     gigantic
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     glow
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     goofy
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     grandiose
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     great
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     grumpy
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     guide
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     hair
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     hall
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     head
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     heat
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     hesitant
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     hill
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     home
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     horn
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     hospital
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     hurt
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     idea
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     ill-informed
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     immense
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     imminent
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     insect
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     insurance
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     intelligent
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     iron
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     jaded
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     jagged
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     jeans
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     jelly
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     judge
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     kitty
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     kneel
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     knot
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     knotty
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     letter
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     level
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     lie
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     lip
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     literate
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     loaf
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     lovely
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     madly
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     meaty
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     men
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     merciful
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     messy
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     minister
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     modern
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     multiply
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     muscle
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     mysterious
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     natural
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     naughty
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     neat
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     note
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     nut
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     nutritious
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     obedient
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     obsolete
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     old-fashioned
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     onerous
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     opposite
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     order
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     oval
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     painstaking
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     paint
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     pale
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     parallel
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     parched
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     park
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     past
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     pencil
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     perfect
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     permit
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     phobic
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     picture
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     pin
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     pink
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     please
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     plug
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     pop
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     possess
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     preserve
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     pretty
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     print
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     puffy
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     pushy
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     quarter
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     race
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     racial
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     raise
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     rampant
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     rare
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     record
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     release
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     retire
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     rhetorical
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     rhyme
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     ring
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     road
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     rub
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     rule
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     savory
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     scared
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     screw
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     seemly
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     selfish
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     shape
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     shiver
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     shrill
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     sign
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     signal
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     silk
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     silky
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     silly
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     simplistic
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     sister
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     skillful
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     sleep
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     small
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     smash
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     society
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     sofa
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     soggy
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     song
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     sound
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     soup
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     sparkling
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     spiders
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     spot
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     stage
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     standing
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     stare
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     steep
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     stiff
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     store
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     stranger
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     swanky
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     taste
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     tasteless
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     tax
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     telling
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     territory
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     third
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     thirsty
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     thumb
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     tiny
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     toe
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     touch
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     transport
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     tremble
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     trite
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     twist
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     two
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     umbrella
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     unkempt
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     unlock
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     unnatural
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     unsightly
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     uttermost
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     wait
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     walk
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     wander
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     warn
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     weary
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     wholesale
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     willing
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     winter
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     worthless
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     writer
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     zippy
   </DropMenu.Option>
 </DropMenu>
@@ -1716,7 +1716,7 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 4.st
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     <span
       className="lucid-Autocomplete-Option-suggestion-match">
       ab
@@ -1729,7 +1729,7 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 4.st
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     <span
       className="lucid-Autocomplete-Option-suggestion-match">
       ab
@@ -1742,7 +1742,7 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 4.st
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     <span
       className="lucid-Autocomplete-Option-suggestion-match">
       ab
@@ -1755,7 +1755,7 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 4.st
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     <span
       className="lucid-Autocomplete-Option-suggestion-post">
       accidental
@@ -1764,7 +1764,7 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 4.st
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     <span
       className="lucid-Autocomplete-Option-suggestion-post">
       actor
@@ -1773,7 +1773,7 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 4.st
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     <span
       className="lucid-Autocomplete-Option-suggestion-post">
       addition
@@ -1782,7 +1782,7 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 4.st
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     <span
       className="lucid-Autocomplete-Option-suggestion-post">
       adhesive
@@ -1791,7 +1791,7 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 4.st
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     <span
       className="lucid-Autocomplete-Option-suggestion-post">
       adjustment
@@ -1800,7 +1800,7 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 4.st
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     <span
       className="lucid-Autocomplete-Option-suggestion-post">
       advertisement
@@ -1809,7 +1809,7 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 4.st
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     <span
       className="lucid-Autocomplete-Option-suggestion-post">
       applaud
@@ -1818,7 +1818,7 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 4.st
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     <span
       className="lucid-Autocomplete-Option-suggestion-post">
       appreciate
@@ -1827,7 +1827,7 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 4.st
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     <span
       className="lucid-Autocomplete-Option-suggestion-post">
       awesome
@@ -1836,7 +1836,7 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 4.st
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     <span
       className="lucid-Autocomplete-Option-suggestion-match">
       ab

@@ -55,13 +55,13 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     One
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -126,13 +126,13 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     One
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -197,13 +197,13 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     One
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -268,13 +268,13 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     One
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -339,13 +339,13 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     One
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -410,13 +410,13 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     One
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -481,19 +481,19 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     Action 01
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     Here\'s Another Action
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     And Another Action
   </DropMenu.Option>
 </DropMenu>
@@ -556,19 +556,19 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     This action should be disabled
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     This one should be enabled
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     This should be disabled, too
   </DropMenu.Option>
 </DropMenu>
@@ -633,19 +633,19 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     Action 01
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     Here\'s Another Action
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={false}>
+    isWrapped={true}>
     And Another Action
   </DropMenu.Option>
 </DropMenu>

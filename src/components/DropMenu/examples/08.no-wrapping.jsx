@@ -5,13 +5,13 @@ import { DropMenu, Button } from '../../../index';
 export default React.createClass({
 	render() {
 		const options = [
-			'Adipisicing totam saepe officia repellat quo cupiditate ducimus hic? Quod temporibus corrupti eaque ullam quo nulla corporis non quas itaque iusto earum!',
+			'Intentionally run off screen -- Adipisicing totam saepe officia repellat quo cupiditate ducimus hic? Quod temporibus corrupti eaque ullam quo nulla corporis !',
 			'Adipisicing totam provident excepturi officia non cum alias? Labore possimus adipisci id eveniet numquam tempora totam est. Explicabo recusandae quo tempore',
 			'Consectetur doloribus dignissimos exercitationem vel tempora praesentium nostrum eveniet inventore. Odit inventore quas optio id eum nisi. Minima consequuntur',
 		];
 
 		return (
-			<div style={{ textAlign: 'center' }}>
+			<div style={{ textAlign: 'right' }}>
 				<DropMenu onSelect={this.handleSelect} alignment='center'>
 					<DropMenu.Control>
 						<Button>Click me</Button>
@@ -19,7 +19,7 @@ export default React.createClass({
 
 					{_.map(options, (optionText, index) => (
 						<DropMenu.Option
-							isWrapped={true}
+							isWrapped={false}
 							key={'Option-' + index}
 						>
 							{optionText}
