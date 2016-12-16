@@ -1,5 +1,6 @@
 exports[`SingleSelect [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SingleSelect"
   direction="down"
   flyOutStyle={
@@ -31,13 +32,22 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
         viewBox="0 3 16 8" />
     </div>
   </DropMenu.Control>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Red
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Green
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Blue
   </DropMenu.Option>
 </DropMenu>
@@ -45,6 +55,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 02.named-options 1`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SingleSelect"
   direction="down"
   flyOutStyle={
@@ -77,14 +88,23 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
     </div>
   </DropMenu.Control>
   <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}
     name="red">
     Red
   </DropMenu.Option>
   <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}
     name="green">
     Green
   </DropMenu.Option>
   <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}
     name="blue">
     Blue
   </DropMenu.Option>
@@ -93,6 +113,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 03.disabled-options 1`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SingleSelect"
   direction="down"
   flyOutStyle={
@@ -125,14 +146,21 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.d
     </div>
   </DropMenu.Control>
   <DropMenu.Option
-    isDisabled={true}>
+    isDisabled={true}
+    isHidden={false}
+    isWrapped={false}>
     Red
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Green
   </DropMenu.Option>
   <DropMenu.Option
-    isDisabled={true}>
+    isDisabled={true}
+    isHidden={false}
+    isWrapped={false}>
     Blue
   </DropMenu.Option>
 </DropMenu>
@@ -140,6 +168,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.d
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 04.disabled-select 1`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SingleSelect"
   direction="down"
   flyOutStyle={
@@ -171,13 +200,22 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.d
         viewBox="0 3 16 8" />
     </div>
   </DropMenu.Control>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Red
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Green
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Blue
   </DropMenu.Option>
 </DropMenu>
@@ -185,6 +223,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.d
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 05.grouped-options 1`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SingleSelect"
   direction="down"
   flyOutStyle={
@@ -216,7 +255,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
         viewBox="0 3 16 8" />
     </div>
   </DropMenu.Control>
-  <DropMenu.OptionGroup>
+  <DropMenu.OptionGroup
+    isHidden={false}>
     Screen
     <SingleSelect.Option>
       Red
@@ -227,17 +267,27 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
     <SingleSelect.Option>
       Blue
     </SingleSelect.Option>
-    <DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={false}>
       Red
     </DropMenu.Option>
-    <DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={false}>
       Green
     </DropMenu.Option>
-    <DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={false}>
       Blue
     </DropMenu.Option>
   </DropMenu.OptionGroup>
-  <DropMenu.OptionGroup>
+  <DropMenu.OptionGroup
+    isHidden={false}>
     Print
     <SingleSelect.Option>
       Cyan
@@ -251,16 +301,28 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
     <SingleSelect.Option>
       Black
     </SingleSelect.Option>
-    <DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={false}>
       Cyan
     </DropMenu.Option>
-    <DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={false}>
       Yellow
     </DropMenu.Option>
-    <DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={false}>
       Magenta
     </DropMenu.Option>
-    <DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={false}>
       Black
     </DropMenu.Option>
   </DropMenu.OptionGroup>
@@ -269,6 +331,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 06.no-unselect 1`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SingleSelect"
   direction="down"
   flyOutStyle={
@@ -300,13 +363,22 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.n
         viewBox="0 3 16 8" />
     </div>
   </DropMenu.Control>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Red
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Green
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Blue
   </DropMenu.Option>
 </DropMenu>
@@ -314,6 +386,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.n
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 07.max-menu-height 1`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SingleSelect"
   direction="down"
   flyOutStyle={
@@ -345,427 +418,850 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
         viewBox="0 3 16 8" />
     </div>
   </DropMenu.Control>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Aliceblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Antiquewhite
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Aqua
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Aquamarine
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Azure
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Beige
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Bisque
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Black
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Blanchedalmond
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Blue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Blueviolet
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Brown
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Burlywood
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Cadetblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Chartreuse
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Chocolate
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Coral
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Cornflowerblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Cornsilk
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Crimson
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Cyan
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darkblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darkcyan
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darkgoldenrod
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darkgray
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darkgreen
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darkkhaki
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darkmagenta
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darkolivegreen
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darkorange
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darkorchid
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darkred
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darksalmon
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darkseagreen
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darkslateblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darkslategray
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darkturquoise
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Darkviolet
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Deeppink
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Deepskyblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Dimgray
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Dodgerblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Firebrick
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Floralwhite
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Forestgreen
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Fuchsia
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Gainsboro
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Ghostwhite
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Gold
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Goldenrod
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Gray
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Green
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Greenyellow
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Honeydew
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Hotpink
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Indianred
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Indigo
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Ivory
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Khaki
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lavender
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lavenderblush
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lawngreen
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lemonchiffon
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lightblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lightcoral
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lightcyan
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lightgoldenrodyellow
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lightgray
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lightgreen
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lightpink
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lightsalmon
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lightseagreen
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lightskyblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lightslategray
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lightsteelblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lightyellow
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Lime
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Limegreen
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Linen
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Magenta
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Maroon
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Medium aquamarine
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Mediumblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Mediumorchid
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Mediumpurple
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Mediumseagreen
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Mediumslateblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Mediumspringgreen
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Mediumturquoise
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Mediumvioletred
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Midnightblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Mintcream
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Mistyrose
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Moccasin
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Navajowhite
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Navy
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Oldlace
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Olive
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Olivedrab
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Orange
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Orangered
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Orchid
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Palegoldenrod
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Palegreen
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Paleturquoise
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Palevioletred
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Papayawhip
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Peachpuff
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Peru
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Pink
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Plum
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Powderblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Purple
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Rebeccapurple
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Red
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Rosybrown
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Royalblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Saddlebrown
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Salmon
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Sandybrown
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Seagreen
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Seashell
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Sienna
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Silver
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Skyblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Slateblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Slategray
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Snow
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Springgreen
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Steelblue
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Tan
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Teal
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Thistle
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Tomato
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Turquoise
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Violet
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Wheat
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     White
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Whitesmoke
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Yellow
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Yellowgreen
   </DropMenu.Option>
 </DropMenu>
@@ -773,6 +1269,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 08.rich-content 1`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SingleSelect"
   direction="down"
   flyOutStyle={
@@ -812,7 +1309,10 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
         viewBox="0 3 16 8" />
     </div>
   </DropMenu.Control>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     <PlusIcon
       isBadge={true}
       style={
@@ -823,7 +1323,10 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
       } />
      Red
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     <PlusIcon
       isBadge={true}
       style={
@@ -834,7 +1337,10 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
       } />
      Green
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     <PlusIcon
       isBadge={true}
       style={
@@ -850,6 +1356,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 09.no-selection-highlighting 1`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SingleSelect"
   direction="down"
   flyOutStyle={
@@ -881,13 +1388,22 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.n
         viewBox="0 3 16 8" />
     </div>
   </DropMenu.Control>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Red
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Green
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Blue
   </DropMenu.Option>
 </DropMenu>
@@ -895,6 +1411,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.n
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 10.array-options 1`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SingleSelect"
   direction="down"
   flyOutStyle={
@@ -926,13 +1443,22 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.a
         viewBox="0 3 16 8" />
     </div>
   </DropMenu.Control>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     1
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     2
   </DropMenu.Option>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     3
   </DropMenu.Option>
 </DropMenu>
@@ -940,6 +1466,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.a
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 11.stateless 1`] = `
 <DropMenu
+  alignment="start"
   className="lucid-SingleSelect"
   direction="down"
   flyOutStyle={Object {}}
@@ -974,7 +1501,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
   <DropMenu.NullOption>
     Select Color
   </DropMenu.NullOption>
-  <DropMenu.OptionGroup>
+  <DropMenu.OptionGroup
+    isHidden={false}>
     Preferred
     <SingleSelect.Option>
       Red
@@ -985,25 +1513,41 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
     <SingleSelect.Option>
       Blue
     </SingleSelect.Option>
-    <DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={false}>
       Red
     </DropMenu.Option>
-    <DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={false}>
       Green
     </DropMenu.Option>
-    <DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={false}>
       Blue
     </DropMenu.Option>
   </DropMenu.OptionGroup>
-  <DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={false}>
     Orange
   </DropMenu.Option>
   <DropMenu.Option
-    isDisabled={true}>
+    isDisabled={true}
+    isHidden={false}
+    isWrapped={false}>
     Violet
   </DropMenu.Option>
   <DropMenu.Option
-    isDisabled={true}>
+    isDisabled={true}
+    isHidden={false}
+    isWrapped={false}>
     Brown
   </DropMenu.Option>
 </DropMenu>

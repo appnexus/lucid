@@ -73,6 +73,11 @@ const DropMenu = createClass({
 				 */
 				isHidden: bool,
 			},
+			getDefaultProps() {
+				return {
+					isHidden: false,
+				};
+			},
 		}),
 		/**
 		 * Renders a `<div>` that acts as an option in the menu.
@@ -89,6 +94,17 @@ const DropMenu = createClass({
 				 * hides the `Option` from the list.
 				 */
 				isHidden: bool,
+				/**
+				 * controls wrapping of the text.
+				 */
+				isWrapped: bool,
+			},
+			getDefaultProps() {
+				return {
+					isDisabled: false,
+					isHidden: false,
+					isWrapped: false,
+				};
 			},
 		}),
 		/**
@@ -125,6 +141,10 @@ const DropMenu = createClass({
 		 * Sets the direction the flyout menu will render relative to the control.
 		 */
 		direction: oneOf(['down', 'up']),
+		/**
+		 * Sets the alignment the flyout menu will render relative to the control.
+		 */
+		alignment: oneOf(['start', 'center', 'end']),
 		/**
 		 * An array of currently selected `DropMenu.Option` indices.
 		 */
@@ -204,6 +224,7 @@ const DropMenu = createClass({
 			isDisabled: false,
 			isExpanded: false,
 			direction: 'down',
+			alignment: 'start',
 			selectedIndices: [],
 			focusedIndex: null,
 			flyOutStyle: { maxHeight: '18em' },
@@ -410,6 +431,7 @@ const DropMenu = createClass({
 		const {
 			isDisabled,
 			isHidden,
+			isWrapped,
 		} = optionProps;
 
 		const isFocused = optionIndex === focusedIndex;
@@ -429,6 +451,7 @@ const DropMenu = createClass({
 						'&-Option-is-selected': isSelected,
 						'&-Option-is-disabled': isDisabled,
 						'&-Option-is-null': _.isNull(optionIndex),
+						'&-Option-is-wrapped': isWrapped,
 					}, optionProps.className)}
 				ref={(optionDOMNode) => {
 					if (isFocused && !isMouseTriggered) {
@@ -456,6 +479,7 @@ const DropMenu = createClass({
 			isDisabled,
 			isExpanded,
 			direction,
+			alignment,
 			onCollapse,
 			flyOutStyle,
 			optionContainerStyle,
@@ -482,6 +506,7 @@ const DropMenu = createClass({
 					portalId={portalId}
 					isExpanded={isExpanded}
 					direction={direction}
+					alignment={alignment}
 					onClickOut={onCollapse}
 					>
 					<ContextMenu.Target>
