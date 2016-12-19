@@ -43,7 +43,6 @@ const defaultMapDate = (calendarDay, props) => {
 	const highlightedRangeStart = highlightedStart && moment(highlightedStart).startOf('day');
 	const highlightedRangeEnd = highlightedEnd && moment(highlightedEnd).startOf('day');
 	const hasHighlightedDateRange = !_.isNil(highlightedRangeStart) && !_.isNil(highlightedRangeEnd);
-	debugger;
 
 	const enabledRangeStart = enabledStart && moment(enabledStart).startOf('day');
 	const enabledRangeEnd = enabledEnd && moment(enabledEnd).startOf('day');
@@ -52,7 +51,7 @@ const defaultMapDate = (calendarDay, props) => {
 	return {
 		isSelected: _.some(selectedDates, (selectedDate) => (selectedDate.startOf('day').isSame(calendarDay))) || hasSelectedDateRange && calendarDay.isBetween(selectedRangeStart, selectedRangeEnd, null, '[]'),
 		isHighlighted: _.some(highlightedDates, (highlightedDate) => (highlightedDate.startOf('day').isSame(calendarDay))) || hasHighlightedDateRange && calendarDay.isBetween(highlightedRangeStart, highlightedRangeEnd, null, '[]'),
-		isDisabled: calendarDay.isBefore(enabledRangeStart) || calendarDay.isAfter(enabledRangeEnd.endOf('day')),
+		isDisabled: hasEnabledDateRange && (calendarDay.isBefore(enabledRangeStart) || calendarDay.isAfter(enabledRangeEnd.endOf('day'))),
 		isEndPoint: calendarDay.isSame(selectedRangeStart) || calendarDay.isSame(selectedRangeEnd),
 	};
 };
@@ -181,8 +180,6 @@ const CalendarMonth = createClass({
 				}, className)}
 				style={style}
 			>
-				{targetDate.format('MMMM YYYY')}
-				<br />
 				{showDayOfWeekLabels ? (
 					<div className={cx('&-day-of-week-labels')}>
 						<div className={cx('&-day-of-week')}>SUN</div>
