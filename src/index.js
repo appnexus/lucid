@@ -57,6 +57,7 @@ import BellIcon from './components/Icon/BellIcon/BellIcon';
 import Breadcrumb from './components/Breadcrumb/Breadcrumb';
 import Button from './components/Button/Button';
 import CalendarIcon from './components/Icon/CalendarIcon/CalendarIcon';
+import CalendarMonth from './components/CalendarMonth/CalendarMonth';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
 import Checkbox from './components/Checkbox/Checkbox';
@@ -192,6 +193,7 @@ export {
 	ButtonGroup,
 	ButtonGroupDumb,
 	CalendarIcon,
+	CalendarMonth,
 	CaretIcon,
 	CheckIcon,
 	Checkbox,

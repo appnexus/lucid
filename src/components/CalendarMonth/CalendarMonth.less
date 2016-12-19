@@ -1,0 +1,66 @@
+.lucid-CalendarMonth {
+	.lucid-CalendarMonth-day-of-week-labels {
+		display: flex;
+		background: @featured-color-default-borderColor;
+		color: white;
+
+		.lucid-CalendarMonth-day-of-week {
+			flex: 1;
+			height: 18px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: smaller;
+		}
+	}
+
+	.lucid-CalendarMonth-week {
+		display: flex;
+
+		.lucid-CalendarMonth-day {
+			flex: 1;
+			min-height: 32px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: @color-gray;
+			font-size: smaller;
+			cursor: pointer;
+			visibility: hidden;
+			.lucid-CalendarMonth-show-adjacent-month-dates& {
+				visibility: visible;
+			}
+
+			&:hover {
+				outline: 1px solid @featured-color-default-borderColor;
+				z-index: 1;
+			}
+
+			&-in-month {
+				color: @color-textColor;
+				visibility: visible;
+			}
+
+			&-is-today {
+				font-weight: bold;
+			}
+
+			&-is-selected {
+				background: @featured-color-primary;
+				color: white;
+
+				&-range {
+					background: @featured-color-primary-backgroundColor;
+				}
+			}
+
+			&-is-highlighted:not(.lucid-CalendarMonth-day-is-selected) {
+				background: @featured-color-primary-backgroundColor;
+			}
+
+			&-is-highlighted-range:not(.lucid-CalendarMonth-day-is-selected):not(.lucid-CalendarMonth-day-is-selected-range) {
+				background: @featured-color-primary-backgroundColorLight;
+			}
+		}
+	}
+}

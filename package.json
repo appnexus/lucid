@@ -35,13 +35,14 @@
   "license": "Apache-2.0",
   "dependencies": {
     "classnames": "^2.2.3",
-    "d3-scale": "^1.0.0",
     "d3-format": "^1.0.2",
+    "d3-scale": "^1.0.0",
     "d3-shape": "^1.0.0",
     "d3-time": "^1.0.0",
     "d3-time-format": "^2.0.0",
     "element-resize-detector": "^1.1.6",
     "lodash": "^4.11.0",
+    "moment": "^2.17.1",
     "react-motion": "^0.4.3",
     "reselect": "^2.5.1"
   },
