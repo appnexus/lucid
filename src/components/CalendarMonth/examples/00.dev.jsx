@@ -87,13 +87,14 @@ export default React.createClass({
 						style={{width: 240}}
 						date={[year, month]}
 						selectedStart='2016-12-19'
-						//selectedEnd={selectedDate}
-						selectedEnd={'2016-12-25'}
+						selectedEnd={selectedDate}
 						//selected={['2016-12-24', '2016-12-25']}
 						//selected={this.isSelectedDay}
 						//highlighted={['2016-12-24', '2016-12-25']}
-						//highlightedStart='2016-12-19'
-						//highlightedEnd={hoverDate}
+						highlightedStart='2016-12-19'
+						highlightedEnd={hoverDate}
+						enabledStart='2016-12-2'
+						enabledEnd='2017-1-2'
 						//mapDate={(date) => ({
 						//	isSelected: date.day() === 4,
 						//	isHighlighted: false,

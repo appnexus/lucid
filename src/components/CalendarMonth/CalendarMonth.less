@@ -46,12 +46,16 @@
 			}
 
 			&-is-selected {
-				background: @featured-color-primary;
+				background: @featured-color-primary-gradientStartColor;
 				color: white;
 
 				&-range {
 					background: @featured-color-primary-backgroundColor;
 				}
+			}
+
+			&-is-endpoint {
+				background: @featured-color-primary;
 			}
 
 			&-is-highlighted:not(.lucid-CalendarMonth-day-is-selected) {
@@ -61,6 +65,17 @@
 			&-is-highlighted-range:not(.lucid-CalendarMonth-day-is-selected):not(.lucid-CalendarMonth-day-is-selected-range) {
 				background: @featured-color-primary-backgroundColorLight;
 			}
+
+			&-is-disabled {
+				opacity: .3;
+				color: black;
+				cursor: default;
+
+				&:hover {
+					outline: none;
+				}
+			}
+
 		}
 	}
 }

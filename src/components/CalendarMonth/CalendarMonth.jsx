@@ -24,28 +24,36 @@ const defaultMapDate = (calendarDay, props) => {
 		highlighted,
 		highlightedStart,
 		highlightedEnd,
+		enabledStart,
+		enabledEnd,
 	} = props;
 
 	let selectedDates = [];
 	if (!_.isNil(selected)) {
 		selectedDates = _.map(_.castArray(selected), (date) => (moment(date)));
 	}
-	const selectedRangeStart = moment(selectedStart).startOf('day');
-	const selectedRangeEnd = moment(selectedEnd).startOf('day');
+	const selectedRangeStart = selectedStart && moment(selectedStart).startOf('day');
+	const selectedRangeEnd = selectedEnd && moment(selectedEnd).startOf('day');
 	const hasSelectedDateRange = !_.isNil(selectedRangeStart) && !_.isNil(selectedRangeEnd);
 
 	let highlightedDates = [];
 	if (!_.isNil(highlighted)) {
 		highlightedDates = _.map(_.castArray(highlighted), (date) => (moment(date)));
 	}
-	const highlightedRangeStart = moment(highlightedStart).startOf('day');
-	const highlightedRangeEnd = moment(highlightedEnd).startOf('day');
+	const highlightedRangeStart = highlightedStart && moment(highlightedStart).startOf('day');
+	const highlightedRangeEnd = highlightedEnd && moment(highlightedEnd).startOf('day');
 	const hasHighlightedDateRange = !_.isNil(highlightedRangeStart) && !_.isNil(highlightedRangeEnd);
+	debugger;
+
+	const enabledRangeStart = enabledStart && moment(enabledStart).startOf('day');
+	const enabledRangeEnd = enabledEnd && moment(enabledEnd).startOf('day');
+	const hasEnabledDateRange = !_.isNil(enabledRangeStart) && !_.isNil(enabledRangeEnd);
 
 	return {
 		isSelected: _.some(selectedDates, (selectedDate) => (selectedDate.startOf('day').isSame(calendarDay))) || hasSelectedDateRange && calendarDay.isBetween(selectedRangeStart, selectedRangeEnd, null, '[]'),
 		isHighlighted: _.some(highlightedDates, (highlightedDate) => (highlightedDate.startOf('day').isSame(calendarDay))) || hasHighlightedDateRange && calendarDay.isBetween(highlightedRangeStart, highlightedRangeEnd, null, '[]'),
-		isDisabled: false,
+		isDisabled: calendarDay.isBefore(enabledRangeStart) || calendarDay.isAfter(enabledRangeEnd.endOf('day')),
+		isEndPoint: calendarDay.isSame(selectedRangeStart) || calendarDay.isSame(selectedRangeEnd),
 	};
 };
 
@@ -80,6 +88,10 @@ const CalendarMonth = createClass({
 		highlightedEnd: any,
 		/** highlighted */
 		highlighted: any,
+		/** enabledStart */
+		enabledStart: any,
+		/** enabledEnd */
+		enabledEnd: any,
 		/** showAdjacentMonthDates */
 		showAdjacentMonthDates: bool,
 		/** showDayOfWeekLabels */
@@ -102,6 +114,8 @@ const CalendarMonth = createClass({
 			highlightedStart: null,
 			highlightedEnd: null,
 			highlighted: null,
+			enabledStart: null,
+			enabledEnd: null,
 			showAdjacentMonthDates: true,
 			showDayOfWeekLabels: true,
 			onSelectDate: _.noop,
@@ -194,9 +208,10 @@ const CalendarMonth = createClass({
 										'&-day-is-selected': dayProperties.isSelected,
 										'&-day-is-highlighted': dayProperties.isHighlighted,
 										'&-day-is-disabled': dayProperties.isDisabled,
+										'&-day-is-endpoint': dayProperties.isEndPoint,
 									})}
-									onClick={this.handleSelectDay(calendarDay)}
-									onMouseOver={this.handleHoverDay(calendarDay)}
+									onClick={dayProperties.isDisabled ? _.noop : this.handleSelectDay(calendarDay)}
+									onMouseOver={dayProperties.isDisabled ? _.noop : this.handleHoverDay(calendarDay)}
 								>
 									{calendarDay.date()}
 								</div>
