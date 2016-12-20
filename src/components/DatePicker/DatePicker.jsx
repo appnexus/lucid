@@ -13,7 +13,6 @@ const cx = lucidClassNames.bind('&-DatePicker');
 
 const {
 	any,
-	bool,
 	func,
 	object,
 	string,
@@ -28,7 +27,7 @@ const {
 const DatePicker = createClass({
 	displayName: 'DatePicker',
 
-	reducers: reducers,
+	reducers,
 
 	propTypes: {
 		/**
@@ -39,6 +38,14 @@ const DatePicker = createClass({
 		style: object,
 		/** date */
 		date: any,
+		/** selectedDate */
+		selectedDate: any,
+		/** onPrevMonth */
+		onPrevMonth: func,
+		/** onNextMonth */
+		onNextMonth: func,
+		/** onSelect */
+		onSelect: func,
 	},
 
 	getDefaultProps() {
@@ -46,6 +53,10 @@ const DatePicker = createClass({
 			className: null,
 			style: null,
 			date: moment(),
+			selectedDate: null,
+			onPrevMonth: _.noop,
+			onNextMonth: _.noop,
+			onSelect: _.noop,
 		};
 	},
 
@@ -54,15 +65,17 @@ const DatePicker = createClass({
 			className,
 			style,
 			date,
+			selectedDate,
 			onPrevMonth,
 			onNextMonth,
+			onSelect,
 			...passThroughs
 		} = this.props;
 
 		return (
 			<div
 				{...omitProps(passThroughs, DatePicker)}
-				className={className}
+				className={cx('&', className)}
 				style={style}
 			>
 				<div className={cx('&-header')}>
@@ -74,6 +87,8 @@ const DatePicker = createClass({
 				</div>
 				<CalendarMonth
 					date={date}
+					onSelectDate={onSelect}
+					selected={selectedDate}
 				/>
 			</div>
 		);

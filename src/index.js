@@ -6,6 +6,7 @@ import { default as AutocompleteDumb } from './components/Autocomplete/Autocompl
 import { default as ButtonGroupDumb } from './components/ButtonGroup/ButtonGroup';
 import { default as SearchableSelectDumb } from './components/SearchableSelect/SearchableSelect';
 import { default as DatePickerDumb } from './components/DatePicker/DatePicker';
+import { default as DateInputDumb } from './components/DateInput/DateInput';
 import { default as DropMenuDumb } from './components/DropMenu/DropMenu';
 import { default as ExpanderDumb } from './components/Expander/Expander';
 import { default as ExpanderPanelDumb } from './components/ExpanderPanel/ExpanderPanel';
@@ -28,6 +29,7 @@ const ButtonGroup = buildHybridComponent(ButtonGroupDumb);
 const SearchableSelect = buildHybridComponent(SearchableSelectDumb);
 const DropMenu = buildHybridComponent(DropMenuDumb);
 const DatePicker = buildHybridComponent(DatePickerDumb);
+const DateInput = buildHybridComponent(DateInputDumb);
 const Expander = buildHybridComponent(ExpanderDumb);
 const ExpanderPanel = buildHybridComponent(ExpanderPanelDumb);
 const Paginator = buildHybridComponent(PaginatorDumb);
@@ -210,6 +212,8 @@ export {
 	DangerIcon,
 	DangerLightIcon,
 	DataTable,
+	DateInput,
+	DateInputDumb,
 	DatePicker,
 	DatePickerDumb,
 	EmptyStateWrapper,

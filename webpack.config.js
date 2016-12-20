@@ -19,6 +19,7 @@ module.exports = {
 	},
 	devServer: {
 		contentBase: 'dist/docs',
+		port: 8081,
 	},
 	postcss: function() {
 		return [

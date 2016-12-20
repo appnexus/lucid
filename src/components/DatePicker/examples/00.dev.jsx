@@ -9,9 +9,11 @@ export default React.createClass({
 	render() {
 
 		return (
-			<section>
+			<section style={{width: 300}}>
 				<DatePicker
-				 initialState={{date: '2016-12-27'}}
+					initialState={{
+						date: '2016-12-27',
+					}}
 				/>
 			</section>
 		);
