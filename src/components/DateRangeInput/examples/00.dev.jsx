@@ -12,7 +12,10 @@ export default React.createClass({
 				direction='up'
 				enabledStart={new Date()}
 				enabledEnd='2017-01-20'
-			/>
+			>
+				<DateRangeInput.TextFieldStart placeholder='Start Date' />
+				<DateRangeInput.TextFieldEnd placeholder='End Date' />
+			</DateRangeInput>
 		);
 	},
 });

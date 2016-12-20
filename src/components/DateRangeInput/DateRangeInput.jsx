@@ -9,7 +9,7 @@ import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
 
 import { ToolTip } from '../../index';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import { createClass, omitProps, getFirst } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DateRangeInput');
 
@@ -30,6 +30,15 @@ const DateRangeInput = createClass({
 	displayName: 'DateRangeInput',
 
 	reducers,
+
+	components: {
+		TextFieldStart: createClass({
+			displayName: 'DateRangeInput.TextFieldStart',
+		}),
+		TextFieldEnd: createClass({
+			displayName: 'DateRangeInput.TextFieldEnd',
+		}),
+	},
 
 	propTypes: {
 		/**
@@ -131,6 +140,9 @@ const DateRangeInput = createClass({
 			...passThroughs
 		} = this.props;
 
+		const textFieldStart = getFirst(this.props, DateRangeInput.TextFieldStart, <DateRangeInput.TextFieldStart />);
+		const textFieldEnd = getFirst(this.props, DateRangeInput.TextFieldEnd, <DateRangeInput.TextFieldEnd />);
+
 		return (
 			<div
 				{...omitProps(passThroughs, DateRangeInput)}
@@ -140,15 +152,18 @@ const DateRangeInput = createClass({
 				<ToolTip direction={direction}>
 					<ToolTip.Target>
 						<span className={cx('&-inputs')}>
-							<TextField onFocus={this.setFocus('start')} value={_.isNil(textValueStart) ? '' : textValueStart} />
+							<TextField onFocus={this.setFocus('start')} value={_.isNil(textValueStart) ? '' : textValueStart} {...textFieldStart.props} />
 							<ArrowIcon direction='right'/>
-							<TextField ref={(ref) => {this.inputEnd = ref;}} onFocus={this.setFocus('end')} value={_.isNil(textValueEnd) ? '' : textValueEnd} />
+							<TextField ref={(ref) => {this.inputEnd = ref;}} onFocus={this.setFocus('end')} value={_.isNil(textValueEnd) ? '' : textValueEnd} {...textFieldEnd.props} />
 						</span>
 					</ToolTip.Target>
 					<ToolTip.Body>
 						<DatePicker
 							date={date}
-							{...DatePickerProps}
+							{...{
+								...DatePickerProps,
+								selectedDate: null,
+							}}
 							selectedStart={textValueStart}
 							selectedEnd={textValueEnd}
 							enabledStart={enabledStart}
