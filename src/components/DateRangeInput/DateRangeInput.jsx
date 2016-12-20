@@ -152,9 +152,9 @@ const DateRangeInput = createClass({
 				<ToolTip direction={direction}>
 					<ToolTip.Target>
 						<span className={cx('&-inputs')}>
-							<TextField onFocus={this.setFocus('start')} value={_.isNil(textValueStart) ? '' : textValueStart} {...textFieldStart.props} />
+							<TextField onFocus={this.setFocus('start')} value={_.isEmpty(textValueStart) ? '' : textValueStart} {...textFieldStart.props} />
 							<ArrowIcon direction='right'/>
-							<TextField ref={(ref) => {this.inputEnd = ref;}} onFocus={this.setFocus('end')} value={_.isNil(textValueEnd) ? '' : textValueEnd} {...textFieldEnd.props} />
+							<TextField ref={(ref) => {this.inputEnd = ref;}} onFocus={this.setFocus('end')} value={_.isEmpty(textValueEnd) ? '' : textValueEnd} {...textFieldEnd.props} />
 						</span>
 					</ToolTip.Target>
 					<ToolTip.Body>
