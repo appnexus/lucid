@@ -9,8 +9,6 @@ export default React.createClass({
 				initialState={{
 					date: '2016-12-27',
 				}}
-				onSelectStart={(...args) => {console.log(...args);}}
-				onSelectEnd={(...args) => {console.log(...args);}}
 			/>
 		);
 	},
