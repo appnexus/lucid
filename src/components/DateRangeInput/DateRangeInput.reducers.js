@@ -6,7 +6,7 @@ export const onSelectStart = (state, selectedDate) => {
 	if (selectedDate.isAfter(state.textValueEnd)) {
 		return {
 			...state,
-			DatePicker: DatePicker.onSelect(state.DatePicker, selectedDate),
+			DatePicker: DatePicker.onSelect(DatePicker.onReset(state.DatePicker), selectedDate),
 			textValueStart: selectedDate.format('YYYY-MM-DD'),
 			textValueEnd: null,
 		};
@@ -23,7 +23,7 @@ export const onSelectEnd = (state, selectedDate) => {
 	if (selectedDate.isBefore(state.textValueStart)) {
 		return {
 			...state,
-			DatePicker: DatePicker.onSelect(state.DatePicker, selectedDate),
+			DatePicker: DatePicker.onSelect(DatePicker.onReset(state.DatePicker), selectedDate),
 			textValueStart: selectedDate.format('YYYY-MM-DD'),
 			textValueEnd: null,
 		};

@@ -14,3 +14,8 @@ export const onSelect = (state, selectedDate) => ({
 	...state,
 	selectedDate: selectedDate.toISOString(),
 });
+
+export const onReset = (state) => ({
+	...state,
+	selectedDate: null,
+});
