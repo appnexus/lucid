@@ -95,11 +95,11 @@ const DatePicker = createClass({
 				style={style}
 			>
 				<div className={cx('&-header')}>
-					<Button size='small' onClick={onPrevMonth}><CaretIcon direction='left' /></Button>
+					<Button className={cx('&-Button-prev-month')} size='small' kind='primary' onClick={onPrevMonth}><CaretIcon direction='left' /></Button>
 						<span className={cx('&-month-name')}>
 							{moment(date).format('MMMM YYYY')}
 						</span>
-					<Button size='small' onClick={onNextMonth}><CaretIcon direction='right' /></Button>
+					<Button className={cx('&-Button-next-month')} size='small' kind='primary' onClick={onNextMonth}><CaretIcon direction='right' /></Button>
 				</div>
 				<CalendarMonth
 					date={date}

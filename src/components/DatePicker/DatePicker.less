@@ -1,6 +1,19 @@
 .lucid-DatePicker {
 	&-header {
 		display: flex;
+		align-items: center;
+		background: @color-primary;
+		color: @color-white;
+		font-weight: bold;
+		background-image: linear-gradient(@featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
+
+		.lucid-DatePicker-Button-prev-month, .lucid-DatePicker-Button-next-month {
+			border: none;
+
+			.lucid-CaretIcon {
+				fill: @color-white;
+			}
+		}
 	}
 
 	&-month-name {
@@ -8,5 +21,11 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.lucid-CalendarMonth {
+		& >	.lucid-CalendarMonth-day-of-week-labels {
+			background: @color-primary;
+		}
 	}
 }
