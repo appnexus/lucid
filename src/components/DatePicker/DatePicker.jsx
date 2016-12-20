@@ -44,6 +44,10 @@ const DatePicker = createClass({
 		selectedStart: any,
 		/** selectedEnd */
 		selectedEnd: any,
+		/** enabledStart */
+		enabledStart: any,
+		/** enabledEnd */
+		enabledEnd: any,
 		/** onPrevMonth */
 		onPrevMonth: func,
 		/** onNextMonth */
@@ -59,6 +63,8 @@ const DatePicker = createClass({
 			date: moment(),
 			selectedDate: null,
 			selectedStart: null,
+			enabledStart: null,
+			enabledEnd: null,
 			selectedEnd: null,
 			onPrevMonth: _.noop,
 			onNextMonth: _.noop,
@@ -74,6 +80,8 @@ const DatePicker = createClass({
 			selectedDate,
 			selectedStart,
 			selectedEnd,
+			enabledStart,
+			enabledEnd,
 			onPrevMonth,
 			onNextMonth,
 			onSelect,
@@ -99,6 +107,8 @@ const DatePicker = createClass({
 					selected={selectedDate}
 					selectedStart={selectedStart}
 					selectedEnd={selectedEnd}
+					enabledStart={enabledStart}
+					enabledEnd={enabledEnd}
 				/>
 			</div>
 		);

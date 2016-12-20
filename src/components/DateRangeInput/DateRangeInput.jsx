@@ -40,16 +40,24 @@ const DateRangeInput = createClass({
 		style: object,
 		/** date */
 		date: any,
+		/** direction */
+		direction: string,
 		/** textValueStart */
 		textValueStart: string,
 		/** textValueEnd */
 		textValueEnd: string,
+		/** enabledStart */
+		enabledStart: any,
+		/** enabledEnd */
+		enabledEnd: any,
 		/** DatePicker */
 		DatePicker: any,
 		/** onSelectStart */
 		onSelectStart: func,
 		/** onSelectEnd */
 		onSelectEnd: func,
+		/** onFocusMonth */
+		onFocusMonth: func,
 	},
 
 	getDefaultProps() {
@@ -57,17 +65,38 @@ const DateRangeInput = createClass({
 			className: null,
 			style: null,
 			date: moment(),
+			direction: 'down',
 			textValueStart: null,
 			textValueEnd: null,
+			enabledStart: null,
+			enabledEnd: null,
 			DatePicker: DatePicker.definition.getDefaultProps(),
 			onSelectStart: _.noop,
 			onSelectEnd: _.noop,
+			onFocusMonth: _.noop,
 		};
 	},
 
 	setFocus(type) {
+		const {
+			textValueStart,
+			textValueEnd,
+			onFocusMonth,
+		} = this.props;
+
 		return () => {
-			this.focusedInput = type;
+			this.focusedInput = type; // store the focused input type
+
+			// call onFocusMonth with date
+			if (type === 'start' && !_.isEmpty(textValueStart)) {
+				if (!this.doNotCaptureOnFocus) {
+					onFocusMonth(moment(textValueStart));
+				}
+			} else if (type === 'end' && !_.isEmpty(textValueEnd)) {
+				if (!this.doNotCaptureOnFocus) {
+					onFocusMonth(moment(textValueEnd));
+				}
+			}
 		};
 	},
 
@@ -83,7 +112,9 @@ const DateRangeInput = createClass({
 			onSelectStart(...args);
 		}
 
+		this.doNotCaptureOnFocus = true;
 		this.inputEnd.focus();
+		this.doNotCaptureOnFocus = false;
 	},
 
 	render() {
@@ -91,8 +122,11 @@ const DateRangeInput = createClass({
 			className,
 			style,
 			date,
+			direction,
 			textValueStart,
 			textValueEnd,
+			enabledStart,
+			enabledEnd,
 			DatePicker: DatePickerProps,
 			...passThroughs
 		} = this.props;
@@ -103,7 +137,7 @@ const DateRangeInput = createClass({
 				className={cx('&', className)}
 				style={style}
 			>
-				<ToolTip direction='down'>
+				<ToolTip direction={direction}>
 					<ToolTip.Target>
 						<span className={cx('&-inputs')}>
 							<TextField onFocus={this.setFocus('start')} value={_.isNil(textValueStart) ? '' : textValueStart} />
@@ -117,6 +151,8 @@ const DateRangeInput = createClass({
 							{...DatePickerProps}
 							selectedStart={textValueStart}
 							selectedEnd={textValueEnd}
+							enabledStart={enabledStart}
+							enabledEnd={enabledEnd}
 							onSelect={this.handleSelect}
 						/>
 					</ToolTip.Body>

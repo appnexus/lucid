@@ -9,6 +9,9 @@ export default React.createClass({
 				initialState={{
 					date: '2016-12-27',
 				}}
+				direction='up'
+				enabledStart={new Date()}
+				enabledEnd='2017-01-20'
 			/>
 		);
 	},

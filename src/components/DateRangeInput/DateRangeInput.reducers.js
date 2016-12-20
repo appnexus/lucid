@@ -1,3 +1,4 @@
+import moment from 'moment';
 import * as DatePickerReducers from '../DatePicker/DatePicker.reducers';
 
 export const DatePicker = DatePickerReducers;
@@ -36,3 +37,13 @@ export const onSelectEnd = (state, selectedDate) => {
 	};
 };
 
+export const onFocusMonth = (state, date) => {
+	return {
+		...state,
+		date: moment(date).toISOString(),
+		DatePicker: {
+			...state.DatePicker,
+			date: moment(date).toISOString(),
+		},
+	};
+};
