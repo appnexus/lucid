@@ -5,6 +5,8 @@ import moment from 'moment';
 import * as reducers from './DateRangeInput.reducers';
 import DatePicker from '../DatePicker/DatePicker';
 import TextField from '../TextField/TextField';
+import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
+
 import { ToolTip } from '../../index';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
@@ -55,8 +57,8 @@ const DateRangeInput = createClass({
 			className: null,
 			style: null,
 			date: moment(),
-			textValueStart: '',
-			textValueEnd: '',
+			textValueStart: null,
+			textValueEnd: null,
 			DatePicker: DatePicker.definition.getDefaultProps(),
 			onSelectStart: _.noop,
 			onSelectEnd: _.noop,
@@ -69,6 +71,21 @@ const DateRangeInput = createClass({
 		};
 	},
 
+	handleSelect(...args) {
+		const {
+			onSelectStart,
+			onSelectEnd,
+		} = this.props;
+
+		if (this.focusedInput === 'end') {
+			onSelectEnd(...args);
+		} else {
+			onSelectStart(...args);
+		}
+
+		this.inputEnd.focus();
+	},
+
 	render() {
 		const {
 			className,
@@ -77,8 +94,6 @@ const DateRangeInput = createClass({
 			textValueStart,
 			textValueEnd,
 			DatePicker: DatePickerProps,
-			onSelectStart,
-			onSelectEnd,
 			...passThroughs
 		} = this.props;
 
@@ -88,17 +103,21 @@ const DateRangeInput = createClass({
 				className={cx('&', className)}
 				style={style}
 			>
-				<ToolTip>
+				<ToolTip direction='down'>
 					<ToolTip.Target>
 						<span className={cx('&-inputs')}>
-							<TextField onFocus={this.setFocus('start')} value={textValueStart} /> To <TextField onFocus={this.setFocus('end')} value={textValueEnd} />
+							<TextField onFocus={this.setFocus('start')} value={_.isNil(textValueStart) ? '' : textValueStart} />
+							<ArrowIcon direction='right'/>
+							<TextField ref={(ref) => {this.inputEnd = ref;}} onFocus={this.setFocus('end')} value={_.isNil(textValueEnd) ? '' : textValueEnd} />
 						</span>
 					</ToolTip.Target>
 					<ToolTip.Body>
 						<DatePicker
 							date={date}
 							{...DatePickerProps}
-							onSelect={(...args) => (this.focusedInput === 'end' ? onSelectEnd(...args) : onSelectStart(...args))}
+							selectedStart={textValueStart}
+							selectedEnd={textValueEnd}
+							onSelect={this.handleSelect}
 						/>
 					</ToolTip.Body>
 				</ToolTip>
