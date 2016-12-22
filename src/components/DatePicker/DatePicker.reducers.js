@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import moment from 'moment';
 
 export const onPrevMonth= (state) => ({
@@ -10,12 +11,23 @@ export const onNextMonth= (state) => ({
 	date: moment(state.date).add(1, 'month').toISOString(),
 });
 
-export const onSelect = (state, selectedDate) => ({
+export const onSelect = (state, selected) => ({
 	...state,
-	selectedDate: selectedDate.toISOString(),
+	selected: selected.toISOString(),
+	selectedStart: null,
+	selectedEnd: null,
 });
 
 export const onReset = (state) => ({
 	...state,
-	selectedDate: null,
+	selected: null,
+	selectedStart: null,
+	selectedEnd: null,
+});
+
+export const onSelectRange = (state, selectedStart, selectedEnd) => ({
+	...state,
+	selected: null,
+	selectedStart: _.isEmpty(selectedStart) ? null : moment(selectedStart).toISOString(),
+	selectedEnd: _.isEmpty(selectedEnd) ? null : moment(selectedEnd).toISOString(),
 });

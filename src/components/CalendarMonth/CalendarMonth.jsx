@@ -14,8 +14,9 @@ const {
 	string,
 } = React.PropTypes;
 
-//const MAX_DATE = new Date(8640000000000000);
-//const MIN_DATE = new Date(-8640000000000000);
+const MAX_DATE = new Date(8640000000000000);
+const MIN_DATE = new Date(-8640000000000000);
+
 const defaultMapDate = (calendarDay, props) => {
 	const {
 		selected,
@@ -124,6 +125,8 @@ const CalendarMonth = createClass({
 
 	statics: {
 		defaultMapDate,
+		MAX_DATE,
+		MIN_DATE,
 	},
 
 	handleSelectDay(calendarDay) {
@@ -153,24 +156,10 @@ const CalendarMonth = createClass({
 		const startOfMonth = moment(targetDate).startOf('month');
 		const endOfMonth = moment(targetDate).endOf('month');
 		const startDay = moment(startOfMonth).weekday(0);
-		//const endDay = moment(endOfMonth).weekday(6);
 		const weeks = endOfMonth.weeks() - startDay.weeks() + 1;
 		const fixedWeeks = (weeks < 0 ? weeks + targetDate.weeksInYear() : weeks);
 
 		const todaysDate = moment().startOf('day');
-
-		//const hasSelectRange = selectedStart || selectedEnd;
-		//const selectStartDate = selectStart ? moment(selectStart) : moment(MIN_DATE);
-		//const selectEndDate = selectEnd ? moment(selectEnd) : moment(MAX_DATE);
-
-		//const selectDates = _.isFunction(select) || _.isNil(select) ? [] : _.map(_.castArray(select), (date) => (moment(date)));
-
-
-		//const hasHightlightRange = highlightStart || highlightEnd;
-		//const highlightStartDate = highlightStart ? moment(highlightStart) : moment(MIN_DATE);
-		//const highlightEndDate = highlightEnd ? moment(highlightEnd) : moment(MAX_DATE);
-
-		//const highlightDates = _.map(_.castArray(highlight), (date) => (moment(date)));
 
 		return (
 			<div

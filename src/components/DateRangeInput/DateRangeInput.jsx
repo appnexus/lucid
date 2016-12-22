@@ -16,6 +16,7 @@ const cx = lucidClassNames.bind('&-DateRangeInput');
 const {
 	any,
 	func,
+	number,
 	object,
 	string,
 } = React.PropTypes;
@@ -49,6 +50,10 @@ const DateRangeInput = createClass({
 		style: object,
 		/** date */
 		date: any,
+		/** size */
+		size: number,
+		/** maxMonthWidth */
+		maxMonthWidth: number,
 		/** direction */
 		direction: string,
 		/** textValueStart */
@@ -67,6 +72,10 @@ const DateRangeInput = createClass({
 		onSelectEnd: func,
 		/** onFocusMonth */
 		onFocusMonth: func,
+		/** onPrevMonth */
+		onPrevMonth: func,
+		/** onNextMonth */
+		onNextMonth: func,
 	},
 
 	getDefaultProps() {
@@ -74,6 +83,8 @@ const DateRangeInput = createClass({
 			className: null,
 			style: null,
 			date: moment(),
+			size: 1,
+			maxMonthWidth: 3,
 			direction: 'down',
 			textValueStart: null,
 			textValueEnd: null,
@@ -83,6 +94,8 @@ const DateRangeInput = createClass({
 			onSelectStart: _.noop,
 			onSelectEnd: _.noop,
 			onFocusMonth: _.noop,
+			onPrevMonth: _.noop,
+			onNextMonth: _.noop,
 		};
 	},
 
@@ -109,16 +122,16 @@ const DateRangeInput = createClass({
 		};
 	},
 
-	handleSelect(...args) {
+	handleSelectRange(startDate, endDate) {
 		const {
 			onSelectStart,
 			onSelectEnd,
 		} = this.props;
 
 		if (this.focusedInput === 'end') {
-			onSelectEnd(...args);
+			onSelectEnd(endDate);
 		} else {
-			onSelectStart(...args);
+			onSelectStart(startDate);
 		}
 
 		this.doNotCaptureOnFocus = true;
@@ -131,12 +144,16 @@ const DateRangeInput = createClass({
 			className,
 			style,
 			date,
+			size,
+			maxMonthWidth,
 			direction,
 			textValueStart,
 			textValueEnd,
 			enabledStart,
 			enabledEnd,
 			DatePicker: DatePickerProps,
+			onPrevMonth,
+			onNextMonth,
 			...passThroughs
 		} = this.props;
 
@@ -149,7 +166,7 @@ const DateRangeInput = createClass({
 				className={cx('&', className)}
 				style={style}
 			>
-				<ToolTip direction={direction} flyOutStyle={{padding: 0}}>
+				<ToolTip direction={direction} isExpanded flyOutStyle={{minWidth: 'initial', maxWidth: 'initial', padding: 0}}>
 					<ToolTip.Target>
 						<span className={cx('&-inputs')}>
 							<TextField onFocus={this.setFocus('start')} value={_.isEmpty(textValueStart) ? '' : textValueStart} {...textFieldStart.props} />
@@ -159,16 +176,23 @@ const DateRangeInput = createClass({
 					</ToolTip.Target>
 					<ToolTip.Body style={{margin: 0}}>
 						<DatePicker
+							style={{width: 255 * _.min([size, maxMonthWidth])}}
 							date={date}
 							{...{
 								...DatePickerProps,
-								selectedDate: null,
+								selected: null,
 							}}
+							size={size}
+							maxMonthWidth={maxMonthWidth}
 							selectedStart={textValueStart}
 							selectedEnd={textValueEnd}
 							enabledStart={enabledStart}
 							enabledEnd={enabledEnd}
-							onSelect={this.handleSelect}
+							isDateRange={true}
+							targetDateRangeBoundary={this.focusedInput === 'end' ? 'end' : 'start'}
+							onSelectRange={this.handleSelectRange}
+							onPrevMonth={onPrevMonth}
+							onNextMonth={onNextMonth}
 						/>
 					</ToolTip.Body>
 				</ToolTip>

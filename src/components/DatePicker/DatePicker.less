@@ -1,32 +1,49 @@
 .lucid-DatePicker {
-	&-header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+	& > &-month {
+		flex: 0;
 		display: flex;
-		align-items: center;
-		background: @color-primary;
-		color: @color-white;
-		font-weight: bold;
-		background-image: linear-gradient(@featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
-		border-radius: 3px 3px 0px 0px;
+		flex-direction: column;
+		align-items: stretch;
 
-		.lucid-DatePicker-Button-prev-month, .lucid-DatePicker-Button-next-month {
-			border: none;
-
-			.lucid-CaretIcon {
-				fill: @color-white;
-			}
+		.lucid-DatePicker-has-stretched-months& {
+			flex: 1;
 		}
-	}
 
-	&-month-name {
-		flex: 1;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.lucid-CalendarMonth {
-		& >	.lucid-CalendarMonth-day-of-week-labels {
+		& > .lucid-DatePicker-month-header {
+			width: 100%;
+			display: flex;
+			align-items: center;
 			background: @color-primary;
+			color: @color-white;
+			font-weight: bold;
+			background-image: linear-gradient(@featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
+
+			.lucid-DatePicker-Button-prev-month, .lucid-DatePicker-Button-next-month {
+				border: none;
+
+				.lucid-CaretIcon {
+					fill: @color-white;
+				}
+			}
+
+			.lucid-DatePicker-month-name {
+				flex: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+		}
+
+
+		.lucid-CalendarMonth {
+			& >	.lucid-CalendarMonth-day-of-week-labels {
+				background: @color-primary;
+			}
 		}
 	}
 }
