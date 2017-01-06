@@ -80,12 +80,14 @@ import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EditPageIcon from './components/Icon/EditPageIcon/EditPageIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
 import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
+import FileIcon from './components/Icon/FileIcon/FileIcon';
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
 import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
 import Grid from './components/Grid/Grid';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
 import Icon from './components/Icon/Icon';
+import ImageIcon from './components/Icon/ImageIcon/ImageIcon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import InfoLightIcon from './components/Icon/InfoLightIcon/InfoLightIcon';
 import Legend from './components/Legend/Legend';
@@ -223,12 +225,14 @@ export {
 	ExpanderPanel,
 	ExpanderPanelDumb,
 	EqualsIcon,
+	FileIcon,
 	FilterIcon,
 	FourSquaresIcon,
 	Grid,
 	HelpIcon,
 	HomeIcon,
 	Icon,
+	ImageIcon,
 	InfoIcon,
 	InfoLightIcon,
 	Legend,

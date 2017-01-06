@@ -54,7 +54,7 @@ describe('SplitHorizontal', () => {
 				assert(wrapper.hasClass('lucid-SplitHorizontal-is-expanded'));
 			});
 
-			it('should not apply the &-is-expanded css class when false [mostly stable]', (done) => {
+			it.skip('should not apply the &-is-expanded css class when false [mostly stable]', (done) => {
 				mountWrapper = mount(
 					<SplitHorizontal isExpanded={false} />
 				);
