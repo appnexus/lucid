@@ -87,6 +87,7 @@ import Grid from './components/Grid/Grid';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
 import Icon from './components/Icon/Icon';
+import ImageIcon from './components/Icon/ImageIcon/ImageIcon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import InfoLightIcon from './components/Icon/InfoLightIcon/InfoLightIcon';
 import Legend from './components/Legend/Legend';
@@ -231,6 +232,7 @@ export {
 	HelpIcon,
 	HomeIcon,
 	Icon,
+	ImageIcon,
 	InfoIcon,
 	InfoLightIcon,
 	Legend,
