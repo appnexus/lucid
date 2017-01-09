@@ -4,7 +4,6 @@ import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import _ from 'lodash';
 import glob from 'glob';
-import { shallowToJson } from 'enzyme-to-json';
 import * as lucid from '../index';
 
 // Common tests for all our components
@@ -119,10 +118,10 @@ export function common(Component, {
 					// If the root of the example is an instance of the Component under test, snapshot it.
 					// Otherwise, look under the root for instances of the Component and snapshot those.
 					if (shallowExample.is(Component.displayName)) {
-						expect(shallowToJson(shallow(<Component {...shallowExample.props()} />))).toMatchSnapshot();
+						expect(shallow(<Component {...shallowExample.props()} />)).toMatchSnapshot();
 					} else {
 						shallowExample.find(Component.displayName).forEach((example) => {
-							expect(shallowToJson(shallow(<Component {...example.props()} />))).toMatchSnapshot();
+							expect(shallow(<Component {...example.props()} />)).toMatchSnapshot();
 						});
 					}
 				});
