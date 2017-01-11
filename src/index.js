@@ -53,6 +53,7 @@ import Banner from './components/Banner/Banner';
 import Bar from './components/Bar/Bar';
 import BarChart from './components/BarChart/BarChart';
 import Bars from './components/Bars/Bars';
+import BeakerIcon from './components/Icon/BeakerIcon/BeakerIcon';
 import BellIcon from './components/Icon/BellIcon/BellIcon';
 import Breadcrumb from './components/Breadcrumb/Breadcrumb';
 import Button from './components/Button/Button';
@@ -188,6 +189,7 @@ export {
 	Bar,
 	BarChart,
 	Bars,
+	BeakerIcon,
 	BellIcon,
 	Breadcrumb,
 	Button,
