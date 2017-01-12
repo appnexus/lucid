@@ -16,6 +16,7 @@ const {
 	number,
 	node,
 	object,
+	shape,
 } = React.PropTypes;
 
 /**
@@ -71,6 +72,11 @@ const VerticalListMenu = createClass({
 				 * Signature: `(index, { event, props}) => {}`
 				 */
 				onToggle: func,
+				/**
+				 * Props that are passed through to the underlying Collapsible
+				 * component if the item has children.
+				 */
+				Collapsible: shape(Collapsible.propTypes),
 			},
 		}),
 	},
@@ -153,6 +159,7 @@ const VerticalListMenu = createClass({
 					const {
 						hasExpander = false,
 						isActionable = true,
+						Collapsible: collapsibleProps = Collapsible.getDefaultProps(),
 					} = itemChildProp;
 
 					const itemChildrenAsArray = React.Children.toArray(itemChildProp.children);
@@ -202,6 +209,7 @@ const VerticalListMenu = createClass({
 
 							{!_.isEmpty(listChildren) ? (
 								<Collapsible
+									{...collapsibleProps}
 									className={cx('&-Item-nested-list')}
 									isExpanded={actualIsExpanded}
 								>
