@@ -22,6 +22,10 @@
     "test": "npm run lint && npm run cover",
     "watch": "npm run jest -- --watch"
   },
+  "pre-push": [
+    "lint",
+    "test"
+  ],
   "keywords": [
     "component",
     "ecosystem-react",
@@ -77,6 +81,7 @@
     "less-loader": "^2.2.2",
     "markdown": "^0.5.0",
     "postcss-loader": "^0.8.1",
+    "pre-push": "^0.1.1",
     "raw-loader": "^0.5.1",
     "react": "^15.3.2",
     "react-addons-css-transition-group": "^15.3.2",
