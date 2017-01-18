@@ -14,7 +14,7 @@ const {
 /**
  * {"categories": ["layout"]}
  *
- * This component is designed to be used in Composits as a layout tool.
+ * This component is designed to be used in Composites as a layout tool.
  * You can use the Grid components themselves or create your own components using the Grid styles from Grid.less.
  * Please see examples for more information.
  */
