@@ -608,3 +608,381 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
   </VerticalListMenu.Item>
 </ul>
 `;
+
+exports[`VerticalListMenu [common] example testing should match snapshot(s) for 4.no-animations 1`] = `
+<ul
+  className="lucid-VerticalListMenu"
+  style={
+    Object {
+      "width": 250,
+    }
+  }>
+  <li
+    className="lucid-VerticalListMenu-Item">
+    <div
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      onClick={[Function]}>
+      <div
+        className="lucid-VerticalListMenu-Item-content-text">
+        Level one
+      </div>
+    </div>
+  </li>
+  <li
+    className="lucid-VerticalListMenu-Item">
+    <div
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      onClick={[Function]}>
+      <div
+        className="lucid-VerticalListMenu-Item-content-text">
+        Level one with VerticalListMenu
+      </div>
+      <div
+        className="lucid-VerticalListMenu-Item-expander"
+        onClick={[Function]}>
+        <ChevronIcon
+          direction="down" />
+      </div>
+    </div>
+    <Collapsible
+      className="lucid-VerticalListMenu-Item-nested-list"
+      isAnimated={false}
+      isExpanded={false}
+      isMountControlled={false}
+      mountControlThreshold={4}
+      rootType="div">
+      <VerticalListMenu>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+        <VerticalListMenu.Item>
+          Level two
+        </VerticalListMenu.Item>
+      </VerticalListMenu>
+    </Collapsible>
+  </li>
+  <li
+    className="lucid-VerticalListMenu-Item">
+    <div
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      onClick={[Function]}>
+      <div
+        className="lucid-VerticalListMenu-Item-content-text">
+        Level one
+      </div>
+    </div>
+  </li>
+  <VerticalListMenu.Item>
+    Level one
+  </VerticalListMenu.Item>
+  <VerticalListMenu.Item
+    Collapsible={
+      Object {
+        "isAnimated": false,
+        "isMountControlled": false,
+      }
+    }
+    hasExpander={true}>
+    Level one with VerticalListMenu
+    <VerticalListMenu>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+      <VerticalListMenu.Item>
+        Level two
+      </VerticalListMenu.Item>
+    </VerticalListMenu>
+  </VerticalListMenu.Item>
+  <VerticalListMenu.Item>
+    Level one
+  </VerticalListMenu.Item>
+</ul>
+`;
