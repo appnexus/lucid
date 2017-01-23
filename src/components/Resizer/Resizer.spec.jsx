@@ -1,17 +1,21 @@
-jest.mock('./Resizer.util');
+jest.mock('element-resize-detector', () => {
+	return function() {
+		return {
+			listenTo: jest.fn((_element, handleResize) => {
+				handleResize({
+					offsetWidth: 50,
+					offsetHeight: 100,
+				});
+			}),
+			removeListener: jest.fn(),
+		};
+	};
+});
 import _ from 'lodash';
 import React from 'react';
 import { common } from '../../util/generic-tests';
 import { mount } from 'enzyme';
 import Resizer from './Resizer';
-import { elementResizeDetector } from './Resizer.util';
-
-elementResizeDetector.listenTo = jest.fn((_element, handleResize) => {
-	handleResize({
-		offsetWidth: 50,
-		offsetHeight: 100,
-	});
-});
 
 describe('Resizer', () => {
 	common(Resizer, {
@@ -31,11 +35,10 @@ describe('Resizer', () => {
 				</Resizer>
 			);
 
-			expect(elementResizeDetector.removeListener).not.toHaveBeenCalled();
+			expect(wrapper.node.resizeDetector.removeListener).not.toHaveBeenCalled();
 
 			wrapper.unmount();
-
-			expect(elementResizeDetector.removeListener).toHaveBeenCalled();
+			expect(wrapper.node.resizeDetector.removeListener).toHaveBeenCalled();
 		});
 	});
 
