@@ -17,7 +17,7 @@
     "lint": "eslint . --ext .js,.jsx",
     "lint-fix": "eslint . --ext .js,.jsx --fix",
     "preversion": "rm -rf dist && npm run lint && gulp preversion && npm run build-bundle",
-    "postversion": "gulp docs-upload",
+    "postversion": "gulp build-js-clean-path-imports && gulp docs-upload",
     "start": "npm run dev",
     "test": "npm run lint && npm run cover",
     "watch": "npm run jest -- --watch"
@@ -50,7 +50,7 @@
     "reselect": "^2.5.1"
   },
   "devDependencies": {
-    "anx-docgen": "^1.0.2",
+    "anx-docgen": "^1.1.0",
     "autoprefixer": "^6.3.3",
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
