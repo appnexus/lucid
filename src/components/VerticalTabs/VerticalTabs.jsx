@@ -2,8 +2,9 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, findTypes, omitProps } from '../../util/component-types';
+import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './VerticalTabs.reducers';
-import VerticalListMenu from '../VerticalListMenu/VerticalListMenu';
+import { VerticalListMenuDumb as VerticalListMenu } from '../VerticalListMenu/VerticalListMenu';
 
 const cx = lucidClassNames.bind('&-VerticalTabs');
 
@@ -125,4 +126,5 @@ const VerticalTabs = createClass({
 	},
 });
 
-export default VerticalTabs;
+export default buildHybridComponent(VerticalTabs);
+export { VerticalTabs as VerticalTabsDumb };

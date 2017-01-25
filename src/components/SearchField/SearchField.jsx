@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React, { createElement } from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
+import { buildHybridComponent } from '../../util/state-management';
 
 import TextField from '../TextField/TextField';
 import SearchIcon from '../Icon/SearchIcon/SearchIcon';
@@ -171,4 +172,5 @@ const SearchField = createClass({
 	},
 });
 
-export default SearchField;
+export default buildHybridComponent(SearchField);
+export { SearchField as SearchFieldDumb };

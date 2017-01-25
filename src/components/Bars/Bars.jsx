@@ -10,7 +10,7 @@ import * as d3Scale from 'd3-scale';
 import * as chartConstants from '../../constants/charts';
 
 import Bar from '../Bar/Bar';
-import ToolTip from '../ToolTip/ToolTip';
+import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
 import Legend from '../Legend/Legend';
 
 const cx = lucidClassNames.bind('&-Bars');

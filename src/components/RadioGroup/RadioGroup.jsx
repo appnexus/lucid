@@ -3,6 +3,7 @@ import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, findTypes, rejectTypes, omitProps } from '../../util/component-types';
 import reducers from './RadioGroup.reducers';
+import { buildHybridComponent } from '../../util/state-management';
 
 import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 import RadioButton from '../RadioButton/RadioButton';
@@ -148,4 +149,5 @@ const RadioGroup = createClass({
 	},
 });
 
-export default RadioGroup;
+export default buildHybridComponent(RadioGroup);
+export { RadioGroup as RadioGroupDumb };

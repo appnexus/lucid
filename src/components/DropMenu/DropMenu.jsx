@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, findTypes, rejectTypes, omitProps } from '../../util/component-types';
 import { scrollParentTo } from '../../util/dom-helpers';
+import { buildHybridComponent } from '../../util/state-management';
 import * as KEYCODE from '../../constants/key-code';
 import * as reducers from './DropMenu.reducers';
 import ContextMenu from '../ContextMenu/ContextMenu';
@@ -567,4 +568,5 @@ const DropMenu = createClass({
 	},
 });
 
-export default DropMenu;
+export default buildHybridComponent(DropMenu);
+export { DropMenu as DropMenuDumb };

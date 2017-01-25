@@ -5,6 +5,7 @@ import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 import * as reducers from './ToolTip.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
+import { buildHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-ToolTip');
 const flyOutCx = cx.bind('&-FlyOut');
@@ -253,4 +254,5 @@ const ToolTip = createClass({
 	},
 });
 
-export default ToolTip;
+export default buildHybridComponent(ToolTip);
+export { ToolTip as ToolTipDumb };

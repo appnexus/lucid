@@ -3,11 +3,12 @@ import _ from 'lodash';
 import { createClass, findTypes, getFirst } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { partitionText } from '../../util/text-manipulation';
+import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './SearchableSelect.reducers';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
-import DropMenu from '../DropMenu/DropMenu';
+import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
-import SearchField from '../SearchField/SearchField';
+import { SearchFieldDumb as SearchField } from '../SearchField/SearchField';
 
 const cx = lucidClassNames.bind('&-SearchableSelect');
 
@@ -393,4 +394,5 @@ const SearchableSelect = createClass({
 	},
 });
 
-export default SearchableSelect;
+export default buildHybridComponent(SearchableSelect);
+export { SearchableSelect as SearchableSelectDumb };

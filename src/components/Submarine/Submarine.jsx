@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, filterTypes, findTypes, omitProps } from '../../util/component-types';
+import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './Submarine.reducers';
 import SplitHorizontal from '../SplitHorizontal/SplitHorizontal';
 import ChevronIcon  from '../Icon/ChevronIcon/ChevronIcon';
@@ -224,4 +225,5 @@ const Submarine = createClass({
 	},
 });
 
-export default Submarine;
+export default buildHybridComponent(Submarine);
+export { Submarine as SubmarineDumb };

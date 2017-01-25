@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps }  from '../../util/component-types';
+import { buildHybridComponent } from '../../util/state-management';
 
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible  from '../Collapsible/Collapsible';
@@ -151,4 +152,5 @@ const ExpanderPanel = createClass({
 	},
 });
 
-export default ExpanderPanel;
+export default buildHybridComponent(ExpanderPanel);
+export { ExpanderPanel as ExpanderPanelDumb };

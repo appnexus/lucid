@@ -2,8 +2,9 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps }  from '../../util/component-types';
+import { buildHybridComponent } from '../../util/state-management';
 
-import ExpanderPanel from '../ExpanderPanel/ExpanderPanel';
+import { ExpanderPanelDumb as ExpanderPanel } from '../ExpanderPanel/ExpanderPanel';
 
 import * as reducers from '../Accordion/Accordion.reducers';
 
@@ -106,4 +107,5 @@ const Accordion = createClass({
 	},
 });
 
-export default Accordion;
+export default buildHybridComponent(Accordion);
+export { Accordion as AccordionDumb };

@@ -18,7 +18,7 @@ import AxisLabel from '../AxisLabel/AxisLabel';
 import Legend from '../Legend/Legend';
 import Lines from '../Lines/Lines';
 import Points from '../Points/Points';
-import ToolTip from '../ToolTip/ToolTip';
+import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
 import ContextMenu from '../ContextMenu/ContextMenu';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 

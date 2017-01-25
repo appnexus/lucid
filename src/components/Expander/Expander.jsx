@@ -3,6 +3,7 @@ import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, findTypes, omitProps } from '../../util/component-types';
+import { buildHybridComponent } from '../../util/state-management';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible from '../Collapsible/Collapsible';
 import * as reducers from './Expander.reducers';
@@ -165,4 +166,5 @@ const Expander = createClass({
 	},
 });
 
-export default Expander;
+export default buildHybridComponent(Expander);
+export { Expander as ExpanderDumb };
