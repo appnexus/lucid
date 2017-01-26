@@ -21,10 +21,16 @@ function imports() {
 	const importDeclarations = _.filter(indexAst().program.body, (node) => node.type === 'ImportDeclaration');
 	return _.flatMap(importDeclarations, (node) => {
 		const moduleId = node.source.value;
+		// Slightly clever way to detect if we're doing a path import vs a module
+		// import. `import x from './foo'` vs `import _ from 'lodash'`
+		const isPath = path.basename(moduleId) !== moduleId;
+		// If we're doing a path import, we need to make the import relative to the
+		// root directory instead of `dist`
+		const newPath = isPath ? './' + path.join(CONFIG.BUILD_DIR, moduleId) : null;
 
 		return _.map(node.specifiers, ((specifier) => ([
 			specifier.local.name,
-			moduleId,
+			newPath || moduleId,
 		])));
 	});
 }
@@ -60,6 +66,19 @@ module.exports = {
 		.pipe(gulp.dest(CONFIG.BUILD_DIR));
 	},
 
+	/**
+	 * This is a task that reads our `index.js` and statically analyzes it for
+	 * imports/exports. Based on that, it writes a single file for each of the
+	 * exports to the root directory. The whole purpose is to make path imports,
+	 * i.e. `import Button from 'lucid-ui/Button'`, easy.
+	 *
+	 * Because there is a potential for file system collisions, we have to
+	 * perform a check to make sure none of the files we're going to write
+	 * already exist. If they do, we'll bail out and log a waring.
+	 *
+	 * There is a sister task `jsCleanPathImports` that will remove the files
+	 * created by this task once the npm publishing is complete.
+	 */
 	jsPathImports: function() {
 		const importMap = _.fromPairs(imports());
 		const allExports = exports();
