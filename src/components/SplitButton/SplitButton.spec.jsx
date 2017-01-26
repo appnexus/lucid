@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 import { common } from '../../util/generic-tests';
-import SplitButton from './SplitButton';
+import { SplitButtonDumb as SplitButton } from './SplitButton';
 
 describe('SplitButton', () => {
 	common(SplitButton);

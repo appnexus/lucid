@@ -5,8 +5,8 @@ import sinon from 'sinon';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import { buildHybridComponent } from '../../util/state-management';
-import SingleSelect from '../SingleSelect/SingleSelect';
-import Paginator from './Paginator';
+import { SingleSelectDumb as SingleSelect } from '../SingleSelect/SingleSelect';
+import { PaginatorDumb as Paginator } from './Paginator';
 import Button from '../Button/Button';
 import TextField from '../TextField/TextField';
 

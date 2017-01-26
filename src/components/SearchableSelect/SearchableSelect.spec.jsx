@@ -5,8 +5,8 @@ import sinon from 'sinon';
 import { filterTypes, rejectTypes } from '../../util/component-types';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
-import SearchableSelect from './SearchableSelect';
-import DropMenu from '../DropMenu/DropMenu';
+import { SearchableSelectDumb as SearchableSelect } from './SearchableSelect';
+import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 
 const {
 	Placeholder,

@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
 import { common, controls } from '../../util/generic-tests';
-import Expander from './Expander';
+import { ExpanderDumb as Expander } from './Expander';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 
 describe('Expander', () => {

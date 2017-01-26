@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import { common } from '../../util/generic-tests';
 import { shallow, mount } from 'enzyme';
 
-import ButtonGroup from './ButtonGroup';
+import { ButtonGroupDumb as ButtonGroup } from './ButtonGroup';
 
 describe('ButtonGroup', () => {
 	common(ButtonGroup);

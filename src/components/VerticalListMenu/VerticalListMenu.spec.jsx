@@ -3,7 +3,7 @@ import React from 'react';
 import assert from 'assert';
 import { shallow, mount } from 'enzyme';
 import { common } from '../../util/generic-tests';
-import VerticalListMenu from './VerticalListMenu';
+import { VerticalListMenuDumb as VerticalListMenu } from './VerticalListMenu';
 import sinon from 'sinon';
 
 describe('VerticalListMenu', () => {

@@ -4,8 +4,8 @@ import assert from 'assert';
 import { filterTypes, rejectTypes } from '../../util/component-types';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
-import SingleSelect from './SingleSelect';
-import DropMenu from '../DropMenu/DropMenu';
+import { SingleSelectDumb as SingleSelect } from './SingleSelect';
+import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 
 const {
 	Placeholder,

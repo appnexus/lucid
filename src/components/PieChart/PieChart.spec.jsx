@@ -7,9 +7,9 @@ import { common } from '../../util/generic-tests';
 import assert from 'assert';
 import sinon from 'sinon';
 
-import PieChart from './PieChart';
+import { PieChartDumb as PieChart } from './PieChart';
 import Line from '../Line/Line';
-import ToolTip from '../ToolTip/ToolTip';
+import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
 
 const sampleData = [
 	{ x: 'One'   , y: 30 } ,
