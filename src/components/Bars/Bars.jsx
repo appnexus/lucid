@@ -222,7 +222,7 @@ const Bars = createClass({
 		if (isStacked) {
 			yScale.domain([
 				yScale.domain()[0],
-				yStackedMax || _.chain(transformedData).map((x) => _.last(_.last(x))).max().value(),
+				yStackedMax || _.max(_.map(transformedData, (x) => _.last(_.last(x)))),
 			]);
 		}
 
@@ -257,11 +257,11 @@ const Bars = createClass({
 										className={cx('&-tooltip-hover-zone')}
 										height={isStacked
 											? yScale.range()[0] - yScale(_.last(series)[1])
-											: yScale.range()[0] - yScale(_.chain(series).flatten().max().value())
+											: yScale.range()[0] - yScale(_.max(_.flatten(series)))
 										}
 										width={xScale.bandwidth()}
 										x={xScale(data[seriesIndex][xField])}
-										y={yScale(_.chain(series).flatten().max().value())}
+										y={yScale(_.max(_.flatten(series)))}
 										onMouseOver={() => {
 											this.setState({
 												isHovering: true,

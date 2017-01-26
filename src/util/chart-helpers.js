@@ -150,12 +150,7 @@ export function maxByFieldsStacked(collection, fields) {
 	const fieldArray = _.castArray(fields);
 
 	const sums = _.reduce(collection, (acc, item) => {
-		const sum = _.chain(item)
-			.pick(fieldArray)
-			.toArray()
-			.sum()
-			.value();
-		return acc.concat(sum);
+		return acc.concat(_.sum(_.toArray(_.pick(item, fieldArray))));
 	}, []);
 
 	return _.max(sums);

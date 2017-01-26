@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _  from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps, getFirst } from '../../util/component-types';
@@ -249,7 +249,7 @@ const BarChart = createClass({
 			xAxisTickCount: null,
 			xAxisTitle: null,
 			xAxisTitleColor: '#000',
-			xAxisFormatter: _.identity,
+			xAxisFormatter: (x) => x,
 
 			yAxisFields: ['y'],
 			yAxisTickCount: null,

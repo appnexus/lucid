@@ -157,7 +157,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 7.val
     onChange={[Function]}
     onChangeDebounced={[Function]}
     onSubmit={[Function]}
-    placeholder="icon doesn\'t become active until you type at least three characters ----->"
+    placeholder="icon doesn't become active until you type at least three characters ----->"
     rows={5}
     style={null}
     value="" />

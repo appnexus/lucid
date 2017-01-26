@@ -494,7 +494,7 @@ const LineChart = createClass({
 
 			return acc;
 		}, {});
-		const xPoints = _.chain(xPointMap).keys().map(_.toNumber).value();
+		const xPoints = _.map(_.keys(xPointMap), _.toNumber);
 
 		if (_.isEmpty(data) || width < 1 || height < 1 || isLoading) {
 			const emptyStateWrapper = getFirst(this.props, LineChart.EmptyStateWrapper, <LineChart.EmptyStateWrapper Title='You have no data.' />);

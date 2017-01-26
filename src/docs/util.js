@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import flow  from 'lodash/fp/flow';
 import { markdown } from 'markdown';
 
 export function toMarkdown(md) {
@@ -16,12 +17,12 @@ export function handleHighlightCode() {
 }
 
 export function sanitizeExamplePath(path) {
-	return _.chain(path)
-		.split('/')
-		.compact()
-		.drop()
-		.join('-')
-		.split('.')
-		.join('-')
-		.value();
+	return flow(
+		(x) => _.split(x, '/'),
+		(x) => _.compact(x),
+		(x) => _.drop(x),
+		(x) => _.join(x, '-'),
+		(x) => _.split(x, '.'),
+		(x) => _.join(x, '-')
+	)(path);
 }

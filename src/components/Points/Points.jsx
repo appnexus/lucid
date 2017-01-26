@@ -181,7 +181,7 @@ const Points = createClass({
 		if (isStacked) {
 			yScale.domain([
 				yScale.domain()[0],
-				yStackedMax || _.chain(transformedData).last().flatten().max().value(),
+				yStackedMax || _.max(_.flatten(_.last(transformedData))),
 			]);
 		}
 

@@ -3,6 +3,7 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import _ from 'lodash';
+import flow from 'lodash/fp/flow';
 import glob from 'glob';
 import * as lucid from '../index';
 
@@ -94,17 +95,17 @@ export function common(Component, {
 			]);
 
 			describe('propNames in propTypes', () => {
-				_.chain(childComponents)
-				.map('propName')
-				.compact()
-				.flatMap(_.castArray)
-				.reject((propName) => _.includes(exemptChildComponents, propName))
-				.forEach((propName) => {
-					it(`should include ${propName} in propTypes`, () => {
-						assert(Component.propTypes[propName], `must include ${propName} in propTypes`);
-					});
-				})
-				.value();
+				flow(
+					(x) => _.map(x, 'propName'),
+					(x) => _.compact(x),
+					(x) => _.flatMap(x, _.castArray),
+					(x) => _.reject(x, (propName) => _.includes(exemptChildComponents, propName)),
+					(x) => _.forEach(x, (propName) => {
+						it(`should include ${propName} in propTypes`, () => {
+							assert(Component.propTypes[propName], `must include ${propName} in propTypes`);
+						});
+					})
+				)(childComponents);
 			});
 		});
 
