@@ -249,7 +249,7 @@ const BarChart = createClass({
 			xAxisTickCount: null,
 			xAxisTitle: null,
 			xAxisTitleColor: '#000',
-			xAxisFormatter: (x) => x,
+			xAxisFormatter: _.identity,
 
 			yAxisFields: ['y'],
 			yAxisTickCount: null,
