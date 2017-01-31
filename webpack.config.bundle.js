@@ -43,7 +43,7 @@ module.exports = {
 	plugins: [
 		isMinified ? new webpack.DefinePlugin({
 			'process.env': {
-				'NODE_ENV': '"production"',
+				NODE_ENV: '"production"',
 			},
 		}) : function() {},
 		isMinified ? new webpack.optimize.UglifyJsPlugin({
