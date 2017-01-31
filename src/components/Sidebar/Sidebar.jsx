@@ -231,7 +231,14 @@ const Sidebar = createClass({
 				onResizing={this.handleResizing}
 				onResize={this.handleResize}
 			>
-				<BarPane {...omitProps(barProps, Sidebar.Bar)} className={cx('&-Bar', barProps.className)} width={width}>
+				<BarPane
+					{...omitProps(barProps, Sidebar.Bar)}
+					className={cx('&-Bar', barProps.className)}
+					width={width}
+					style={{
+						overflow: isExpanded ? 'auto' : 'hidden',
+					}}
+				>
 					<div className={cx('&-Bar-overlay')} />
 					<div className={cx('&-Bar-header')}>
 						<div {...titleProps} className={cx('&-Bar-Title', titleProps.className)} />
