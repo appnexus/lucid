@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
 import { Link } from 'react-router';
-import flow from 'lodash/fp/flow';
 
 import { lucidClassNames } from '../../util/style-helpers';
 import * as components from '../../index';
@@ -9,7 +8,7 @@ import * as components from '../../index';
 const { object } = React.PropTypes;
 
 const { Button, Expander } = components;
-const icons = flow(
+const icons = _.flow(
 	(x) => _.reduce(x, (acc, val, key) => (
 		acc.concat(_.endsWith(key, 'Icon') && key !== 'Icon' ? [[key, val]] : [])
 	), []),

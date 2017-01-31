@@ -3,7 +3,6 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import _ from 'lodash';
-import flow from 'lodash/fp/flow';
 import glob from 'glob';
 import * as lucid from '../index';
 
@@ -95,7 +94,7 @@ export function common(Component, {
 			]);
 
 			describe('propNames in propTypes', () => {
-				flow(
+				_.flow(
 					(x) => _.map(x, 'propName'),
 					(x) => _.compact(x),
 					(x) => _.flatMap(x, _.castArray),

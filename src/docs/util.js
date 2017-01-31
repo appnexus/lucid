@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import flow  from 'lodash/fp/flow';
 import { markdown } from 'markdown';
 
 export function toMarkdown(md) {
@@ -17,7 +16,7 @@ export function handleHighlightCode() {
 }
 
 export function sanitizeExamplePath(path) {
-	return flow(
+	return _.flow(
 		(x) => _.split(x, '/'),
 		(x) => _.compact(x),
 		(x) => _.drop(x),

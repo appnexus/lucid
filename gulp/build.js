@@ -74,7 +74,7 @@ module.exports = {
 	 *
 	 * Because there is a potential for file system collisions, we have to
 	 * perform a check to make sure none of the files we're going to write
-	 * already exist. If they do, we'll bail out and log a waring.
+	 * already exist. If they do, we'll bail out and log a warning.
 	 *
 	 * There is a sister task `jsCleanPathImports` that will remove the files
 	 * created by this task once the npm publishing is complete.

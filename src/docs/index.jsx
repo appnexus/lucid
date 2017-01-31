@@ -5,7 +5,6 @@ require('../index.less');
 
 import { basename } from 'path';
 import _ from 'lodash';
-import flow from 'lodash/fp/flow';
 import React from 'react';
 import { render } from 'react-dom';
 import {
@@ -97,7 +96,7 @@ function getExampleTitleFromFilename(filename) {
 	return (/^\d+$/.test(_.head(words)) ? _.tail(words) : words).join(' ');
 }
 
-const examplesByComponent = flow(
+const examplesByComponent = _.flow(
 	(x) => _.map(x, (path) => {
 		const items = path.split('/').reverse(); // e.g. ['default.jsx', 'examples', 'Button', '.']
 		const componentName = items[2];
@@ -239,7 +238,7 @@ const Component = React.createClass({
 			);
 		});
 
-		const componentProps = flow(
+		const componentProps = _.flow(
 			(x) => _.get(x, `${componentName}.props`, []),
 			(x) => _.toPairs(x), // this turns the object into an array of [propName, propDetails] so we can sort
 			(x) => _.sortBy(x, (x) => x[0]) // sort by property name
