@@ -12,7 +12,8 @@ Lucid can be installed with npm.
 
     import React from 'react';
     import ReactDOM from 'react-dom';
-    import { Button } from 'lucid-ui';
+    import Button from 'lucid-ui/Button';
+    // `import { Button } from 'lucid-ui'` also works but will result in larger bundle sizes
 
     ReactDOM.render(
       <Button>Hello World</Button>,
