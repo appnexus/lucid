@@ -4,8 +4,8 @@ import assert from 'assert';
 import { shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
 
-import VerticalTabs from './VerticalTabs';
-import VerticalListMenu from '../VerticalListMenu/VerticalListMenu';
+import { VerticalTabsDumb as VerticalTabs } from './VerticalTabs';
+import { VerticalListMenuDumb as VerticalListMenu } from '../VerticalListMenu/VerticalListMenu';
 
 describe('VerticalTabs', () => {
 	common(VerticalTabs, {

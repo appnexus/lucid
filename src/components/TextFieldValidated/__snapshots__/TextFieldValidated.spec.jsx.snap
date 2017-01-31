@@ -28,7 +28,7 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
   Error={
     Array [
       Object {
-        "children": "Please enter \"foo\"",
+        "children": "Please enter "foo"",
       },
     ]
   }

@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
 import { common, controls } from '../../util/generic-tests';
-import ExpanderPanel from './ExpanderPanel';
+import { ExpanderPanelDumb as ExpanderPanel } from './ExpanderPanel';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 
 describe('ExpanderPanel', () => {

@@ -1,4 +1,15 @@
 {
+	"env": {
+		"test": {
+			"plugins": []
+		},
+		"development": {
+			"plugins": ["lodash"]
+		},
+		"production": {
+			"plugins": ["lodash"]
+		}
+	},
 	"presets": [
 		"stage-2",
 		"es2015",

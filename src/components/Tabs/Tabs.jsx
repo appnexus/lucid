@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, findTypes, omitProps } from '../../util/component-types';
+import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './Tabs.reducers';
 
 const cx = lucidClassNames.bind('&-Tabs');
@@ -261,4 +262,5 @@ const Tabs = createClass({
 	},
 });
 
-export default Tabs;
+export default buildHybridComponent(Tabs);
+export { Tabs as TabsDumb };

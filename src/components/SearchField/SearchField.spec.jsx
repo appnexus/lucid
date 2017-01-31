@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import assert from 'assert';
 import { common } from '../../util/generic-tests';
-import SearchField from './SearchField';
+import { SearchFieldDumb as SearchField } from './SearchField';
 import TextField from '../TextField/TextField';
 
 describe('SearchField', () => {

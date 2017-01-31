@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { bindClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps }  from '../../util/component-types';
+import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './VerticalListMenu.reducers';
 import ChevronIcon  from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible  from '../Collapsible/Collapsible';
@@ -253,4 +254,5 @@ const VerticalListMenu = createClass({
 
 });
 
-export default VerticalListMenu;
+export default buildHybridComponent(VerticalListMenu);
+export { VerticalListMenu as VerticalListMenuDumb };

@@ -4,6 +4,7 @@ import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps }  from '../../util/component-types';
 import reducers from './ButtonGroup.reducers';
+import { buildHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-ButtonGroup');
 
@@ -125,4 +126,5 @@ const ButtonGroup = createClass({
 	},
 });
 
-export default ButtonGroup;
+export default buildHybridComponent(ButtonGroup);
+export { ButtonGroup as ButtonGroupDumb };

@@ -2,10 +2,11 @@ import React from 'react';
 import _ from 'lodash';
 import { createClass } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
+import { buildHybridComponent } from '../../util/state-management';
 import { partitionText } from '../../util/text-manipulation';
 import * as reducers from './Autocomplete.reducers';
 import * as KEYCODE from '../../constants/key-code';
-import DropMenu from '../DropMenu/DropMenu';
+import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 
 const cx = lucidClassNames.bind('&-Autocomplete');
 
@@ -271,4 +272,5 @@ const Autocomplete = createClass({
 	},
 });
 
-export default Autocomplete;
+export default buildHybridComponent(Autocomplete);
+export { Autocomplete as AutocompleteDumb };

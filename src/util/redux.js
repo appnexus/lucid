@@ -266,7 +266,7 @@ function mergeProps(state, dispatchTree, ownProps) {
 }
 
 export function cleanArgs(args) {
-	return _.chain(args).last().has('event').value()
+	return _.has(_.last(args), 'event')
 		? _.dropRight(args)
 		: args;
 }

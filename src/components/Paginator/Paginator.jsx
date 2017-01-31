@@ -4,10 +4,11 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
 import * as reducers from './Paginator.reducers';
 import selectors from './Paginator.selectors';
-import SingleSelect from '../SingleSelect/SingleSelect';
+import { SingleSelectDumb as SingleSelect } from '../SingleSelect/SingleSelect';
 import TextField from '../TextField/TextField';
 import Button from '../Button/Button';
 import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
+import { buildHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-Paginator');
 
@@ -189,4 +190,5 @@ const Paginator = createClass({
 	},
 });
 
-export default Paginator;
+export default buildHybridComponent(Paginator);
+export { Paginator as PaginatorDumb };

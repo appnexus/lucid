@@ -9,7 +9,7 @@ import { shallow } from 'enzyme';
 import Bars from './Bars';
 import Bar from '../Bar/Bar';
 import Legend from '../Legend/Legend';
-import ToolTip from '../ToolTip/ToolTip';
+import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
 
 const defaultData = [
 	{ x: 'aye', y: 10, y2: 20 },

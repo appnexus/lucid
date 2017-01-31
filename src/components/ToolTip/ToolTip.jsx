@@ -5,6 +5,7 @@ import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 import * as reducers from './ToolTip.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
+import { buildHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-ToolTip');
 const flyOutCx = cx.bind('&-FlyOut');
@@ -208,8 +209,8 @@ const ToolTip = createClass({
 		} = this.props;
 
 		const targetProps = _.first(_.map(findTypes(this.props, ToolTip.Target), 'props'));
-		const title = _.chain(findTypes(this.props, ToolTip.Title)).map('props').first().get('children').value();
-		const body = _.chain(findTypes(this.props, ToolTip.Body)).map('props').first().get('children').value();
+		const title = _.get(_.first(_.map(findTypes(this.props, ToolTip.Title), 'props')), 'children');
+		const body = _.get(_.first(_.map(findTypes(this.props, ToolTip.Body), 'props')), 'children');
 		const getAlignmentOffset = (n) => (alignment === ContextMenu.CENTER
 			? 0
 			: alignment === ContextMenu.START
@@ -253,4 +254,5 @@ const ToolTip = createClass({
 	},
 });
 
-export default ToolTip;
+export default buildHybridComponent(ToolTip);
+export { ToolTip as ToolTipDumb };

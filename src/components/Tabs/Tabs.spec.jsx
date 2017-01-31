@@ -4,7 +4,7 @@ import assert from 'assert';
 import { shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
 
-import Tabs from './Tabs';
+import { TabsDumb as Tabs } from './Tabs';
 
 describe('Tabs', () => {
 	common(Tabs, {

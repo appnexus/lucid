@@ -4,9 +4,10 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 import * as d3Shape from 'd3-shape';
 import * as chartConstants from '../../constants/charts';
+import { buildHybridComponent } from '../../util/state-management';
 
 import Line from '../../components/Line/Line';
-import ToolTip from '../../components/ToolTip/ToolTip';
+import { ToolTipDumb as ToolTip } from '../../components/ToolTip/ToolTip';
 
 import * as reducers from './PieChart.reducers';
 
@@ -351,4 +352,5 @@ const PieChart = createClass({
 	},
 });
 
-export default PieChart;
+export default buildHybridComponent(PieChart);
+export { PieChart as PieChartDumb };

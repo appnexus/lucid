@@ -8,13 +8,13 @@ import * as components from '../../index';
 const { object } = React.PropTypes;
 
 const { Button, Expander } = components;
-const icons = _.chain(components)
-	.reduce((acc, val, key) => (
+const icons = _.flow(
+	(x) => _.reduce(x, (acc, val, key) => (
 		acc.concat(_.endsWith(key, 'Icon') && key !== 'Icon' ? [[key, val]] : [])
-	), [])
-	.filter(([, Icon]) => !Icon._lucidIsPrivate)
-	.sortBy(([name]) => name)
-	.value();
+	), []),
+	(x) => _.filter(x, ([, Icon]) => !Icon._lucidIsPrivate),
+	(x) => _.sortBy(x, ([name]) => name)
+)(components);
 
 const cx = lucidClassNames.bind('Icons');
 

@@ -18,7 +18,7 @@ import AxisLabel from '../AxisLabel/AxisLabel';
 import Legend from '../Legend/Legend';
 import Lines from '../Lines/Lines';
 import Points from '../Points/Points';
-import ToolTip from '../ToolTip/ToolTip';
+import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
 import ContextMenu from '../ContextMenu/ContextMenu';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
@@ -494,7 +494,7 @@ const LineChart = createClass({
 
 			return acc;
 		}, {});
-		const xPoints = _.chain(xPointMap).keys().map(_.toNumber).value();
+		const xPoints = _.map(_.keys(xPointMap), _.toNumber);
 
 		if (_.isEmpty(data) || width < 1 || height < 1 || isLoading) {
 			const emptyStateWrapper = getFirst(this.props, LineChart.EmptyStateWrapper, <LineChart.EmptyStateWrapper Title='You have no data.' />);

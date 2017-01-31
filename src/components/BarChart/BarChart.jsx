@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _  from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps, getFirst } from '../../util/component-types';

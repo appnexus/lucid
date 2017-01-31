@@ -4,7 +4,7 @@ import assert from 'assert';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
-import ToolTip from './ToolTip';
+import { ToolTipDumb as ToolTip } from './ToolTip';
 import ContextMenu from '../ContextMenu/ContextMenu';
 import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';

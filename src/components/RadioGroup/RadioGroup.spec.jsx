@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
 
-import RadioGroup from './RadioGroup';
+import { RadioGroupDumb as RadioGroup } from './RadioGroup';
 import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 
 describe('RadioGroup', () => {

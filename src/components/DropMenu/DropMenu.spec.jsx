@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 
-import DropMenu from './DropMenu';
+import { DropMenuDumb as DropMenu } from './DropMenu';
 import ContextMenu from '../ContextMenu/ContextMenu';
 import * as KEYCODE from '../../constants/key-code';
 

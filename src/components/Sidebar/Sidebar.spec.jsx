@@ -4,7 +4,7 @@ import { shallow, mount } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
 import { common } from '../../util/generic-tests';
-import Sidebar from './Sidebar';
+import { SidebarDumb as Sidebar } from './Sidebar';
 import SplitVertical from '../SplitVertical/SplitVertical';
 import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
 

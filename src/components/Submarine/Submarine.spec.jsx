@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import assert from 'assert';
 import sinon from 'sinon';
 import { common } from '../../util/generic-tests';
-import Submarine from './Submarine';
+import { SubmarineDumb as Submarine } from './Submarine';
 import SplitHorizontal from '../SplitHorizontal/SplitHorizontal';
 
 describe('Submarine', () => {

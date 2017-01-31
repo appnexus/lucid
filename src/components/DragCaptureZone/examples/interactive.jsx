@@ -41,26 +41,21 @@ export default React.createClass({
 					overflow: 'auto',
 					width: 600,
 				}}>
-					{
-						_.chain(this.state.events)
-								.map(({ coordinates, type }, index) => (
-									<div key={index}>
-										<div style={{
-											fontWeight: 'bold',
-										}}>
-											{type}
-										</div>
-										<div>
-											{
-												`dx: ${coordinates.dX}, dy: ${coordinates.dY},
-												px: ${coordinates.pageX}, py: ${coordinates.pageY}`
-											}
-										</div>
-									</div>
-								))
-								.reverse()
-								.value()
-					}
+					{_.reverse(_.map(({ coordinates, type }, index) => (
+						<div key={index}>
+							<div style={{
+								fontWeight: 'bold',
+							}}>
+								{type}
+							</div>
+							<div>
+								{
+									`dx: ${coordinates.dX}, dy: ${coordinates.dY},
+									px: ${coordinates.pageX}, py: ${coordinates.pageY}`
+								}
+							</div>
+						</div>
+					))) }
 				</div>
 			</section>
 		);

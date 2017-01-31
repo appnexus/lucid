@@ -185,7 +185,7 @@ const Lines = createClass({
 		if (isStacked) {
 			yScale.domain([
 				yScale.domain()[0], // only stacks well if this is `0`
-				yStackedMax || _.chain(transformedData).last().flatten().max().value(),
+				yStackedMax || _.max(_.flatten(_.last(transformedData))),
 			]);
 		}
 

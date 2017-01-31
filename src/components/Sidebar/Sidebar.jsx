@@ -2,6 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, filterTypes, findTypes, omitProps } from '../../util/component-types';
+import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './Sidebar.reducers';
 import SplitVertical from '../SplitVertical/SplitVertical';
 import ChevronIcon  from '../Icon/ChevronIcon/ChevronIcon';
@@ -253,4 +254,5 @@ const Sidebar = createClass({
 	},
 });
 
-export default Sidebar;
+export default buildHybridComponent(Sidebar);
+export { Sidebar as SidebarDumb };

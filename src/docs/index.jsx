@@ -96,8 +96,8 @@ function getExampleTitleFromFilename(filename) {
 	return (/^\d+$/.test(_.head(words)) ? _.tail(words) : words).join(' ');
 }
 
-const examplesByComponent = _.chain(reqExamples.keys())
-	.map((path) => {
+const examplesByComponent = _.flow(
+	(x) => _.map(x, (path) => {
 		const items = path.split('/').reverse(); // e.g. ['default.jsx', 'examples', 'Button', '.']
 		const componentName = items[2];
 		return {
@@ -106,9 +106,9 @@ const examplesByComponent = _.chain(reqExamples.keys())
 			source: reqExamplesRaw(path),
 			Example: reqExamples(path).default, // `default` because we use es6 modules in the examples
 		};
-	})
-	.groupBy('componentName')
-	.value();
+	}),
+	(x) => _.groupBy(x, 'componentName')
+)(reqExamples.keys());
 
 const {
 	PropTypes: {
@@ -227,62 +227,47 @@ const Component = React.createClass({
 		} = this.props.params;
 
 		const component = _.get(docgenMap, componentName, {});
-		const childComponents = _.chain(component)
-		.get('childComponents', [])
-		// get docs for imported component references
-		.map((childComponent) => {
+		const childComponents = _.map(_.get(component, 'childComponents', []), (childComponent) => {
 			if (!childComponent.componentRef) {
 				return childComponent;
 			}
 			return _.assign(
 				{},
 				childComponent,
-				_.chain(docgenMap)
-				.get(childComponent.componentRef, {})
-				.omit(['displayName'])
-				.value()
+				_.omit(_.get(docgenMap, childComponent.componentRef, {}), ['displayName'])
 			);
+		});
 
-		})
-		.value();
-
-		const componentProps = _.chain(docgenMap)
-			.get(`${componentName}.props`, [])
-			.toPairs() // this turns the object into an array of [propName, propDetails] so we can sort
-			.sortBy((x) => x[0]) // sort by property name
-			.value();
+		const componentProps = _.flow(
+			(x) => _.get(x, `${componentName}.props`, []),
+			(x) => _.toPairs(x), // this turns the object into an array of [propName, propDetails] so we can sort
+			(x) => _.sortBy(x, (x) => x[0]) // sort by property name
+		)(docgenMap);
 
 		const descriptionAsHTML = toMarkdown(_.get(docgenMap, `${componentName}.description`));
 
 		const privateString = _.get(docgenMap, `${componentName}.isPrivateComponent`) ? '(private)' : '';
 
-		const composesComponents = _.chain(docgenMap)
-			.get(`${componentName}.customData.madeFrom`, null)
-			.thru((componentNames) => {
-				if (_.isEmpty(componentNames)) {
-					return '';
-				}
-
-				const composesComponentLinks = componentNames.map((name, index) => (
-					<span key={name}>
-						<Link to={{
-							pathname: `/components/${name}`,
-							query: this.props.location.query,
-						}}>
-							{name}
-						</Link>
-						{index == componentNames.length - 1 ? null : ', '}
-					</span>
-				));
-
-				return (
-					<span className='Component-made-from'>
-						<span>made from: </span>
-						{composesComponentLinks}
-					</span>
-				);
-			})
-			.value();
+		const componentNames = _.get(docgenMap, `${componentName}.customData.madeFrom`, []);
+		const composesComponents = _.isEmpty(componentNames)
+			? null
+			: (
+				<span className='Component-made-from'>
+					<span>made from: </span>
+					{_.map(componentNames, (name, index) => (
+							<span key={name}>
+								<Link to={{
+									pathname: `/components/${name}`,
+									query: this.props.location.query,
+								}}>
+									{name}
+								</Link>
+								{index == componentNames.length - 1 ? null : ', '}
+							</span>
+						)
+					)}
+				</span>
+			);
 
 		return (
 			<div className='Component'>
@@ -362,12 +347,7 @@ const Component = React.createClass({
 											</Tr>
 										</Thead>
 										<Tbody>
-											{_.map((_.chain(childComponent)
-												.get('props', [])
-												.toPairs() // this turns the object into an array of [propName, propDetails] so we can sort
-												.sortBy((x) => x[0]) // sort by property name
-												.value()
-											), ([propName, propDetails]) => {
+											{_.map(_.sortBy(_.toPairs(_.get(childComponent, 'props', [])), (x) => x[0]), ([propName, propDetails]) => {
 												if (!propDetails || _.isNil(propDetails.description)) {
 													console.error(`Warning: There was an issue with the docs that were generated for component "${componentName}.${childComponent.displayName}" and prop "${propName}". One reason might be that you have a default value for something that was never declared in propTypes.`);
 													return null;
@@ -453,10 +433,7 @@ const App = React.createClass({
 
 	renderCategoryLinks(items) {
 		if (_.isPlainObject(items)) {
-			const sortedItems = _.chain(items)
-				.toPairs()
-				.sortBy((pair) => pair[0])
-				.value();
+			const sortedItems = _.sortBy(_.toPairs(items), (pair) => pair[0]);
 
 			return (
 				<VerticalListMenu selectedIndices={[]}>

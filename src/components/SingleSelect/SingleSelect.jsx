@@ -2,8 +2,9 @@ import React from 'react';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes } from '../../util/component-types';
+import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './SingleSelect.reducers';
-import DropMenu from '../DropMenu/DropMenu';
+import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 
 const cx = lucidClassNames.bind('&-SingleSelect');
@@ -232,4 +233,5 @@ const SingleSelect = createClass({
 	},
 });
 
-export default SingleSelect;
+export default buildHybridComponent(SingleSelect);
+export { SingleSelect as SingleSelectDumb };

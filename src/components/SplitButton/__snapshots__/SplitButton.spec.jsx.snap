@@ -488,7 +488,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
     isDisabled={false}
     isHidden={false}
     isWrapped={true}>
-    Here\'s Another Action
+    Here's Another Action
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
@@ -640,7 +640,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
     isDisabled={false}
     isHidden={false}
     isWrapped={true}>
-    Here\'s Another Action
+    Here's Another Action
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}

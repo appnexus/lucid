@@ -1,45 +1,23 @@
-import { buildHybridComponent } from './util/state-management';
-
 // components with reducers
-import { default as AccordionDumb } from './components/Accordion/Accordion';
-import { default as AutocompleteDumb } from './components/Autocomplete/Autocomplete';
-import { default as ButtonGroupDumb } from './components/ButtonGroup/ButtonGroup';
-import { default as SearchableSelectDumb } from './components/SearchableSelect/SearchableSelect';
-import { default as DropMenuDumb } from './components/DropMenu/DropMenu';
-import { default as ExpanderDumb } from './components/Expander/Expander';
-import { default as ExpanderPanelDumb } from './components/ExpanderPanel/ExpanderPanel';
-import { default as PaginatorDumb } from './components/Paginator/Paginator';
-import { default as PieChartDumb } from './components/PieChart/PieChart';
-import { default as RadioGroupDumb } from './components/RadioGroup/RadioGroup';
-import { default as SearchFieldDumb } from './components/SearchField/SearchField';
-import { default as SidebarDumb } from './components/Sidebar/Sidebar';
-import { default as SingleSelectDumb } from './components/SingleSelect/SingleSelect';
-import { default as SplitButtonDumb } from './components/SplitButton/SplitButton';
-import { default as SubmarineDumb } from './components/Submarine/Submarine';
-import { default as TabsDumb } from './components/Tabs/Tabs';
-import { default as ToolTipDumb } from './components/ToolTip/ToolTip';
-import { default as VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
-import { default as VerticalTabsDumb } from './components/VerticalTabs/VerticalTabs';
-
-const Accordion = buildHybridComponent(AccordionDumb);
-const Autocomplete = buildHybridComponent(AutocompleteDumb);
-const ButtonGroup = buildHybridComponent(ButtonGroupDumb);
-const SearchableSelect = buildHybridComponent(SearchableSelectDumb);
-const DropMenu = buildHybridComponent(DropMenuDumb);
-const Expander = buildHybridComponent(ExpanderDumb);
-const ExpanderPanel = buildHybridComponent(ExpanderPanelDumb);
-const Paginator = buildHybridComponent(PaginatorDumb);
-const PieChart = buildHybridComponent(PieChartDumb);
-const RadioGroup = buildHybridComponent(RadioGroupDumb);
-const SearchField = buildHybridComponent(SearchFieldDumb);
-const Sidebar = buildHybridComponent(SidebarDumb);
-const SingleSelect = buildHybridComponent(SingleSelectDumb);
-const SplitButton = buildHybridComponent(SplitButtonDumb);
-const Submarine = buildHybridComponent(SubmarineDumb);
-const Tabs = buildHybridComponent(TabsDumb);
-const ToolTip = buildHybridComponent(ToolTipDumb);
-const VerticalListMenu = buildHybridComponent(VerticalListMenuDumb);
-const VerticalTabs = buildHybridComponent(VerticalTabsDumb);
+import Accordion, { AccordionDumb } from './components/Accordion/Accordion';
+import Autocomplete, { AutocompleteDumb } from './components/Autocomplete/Autocomplete';
+import ButtonGroup, { ButtonGroupDumb } from './components/ButtonGroup/ButtonGroup';
+import SearchableSelect, { SearchableSelectDumb } from './components/SearchableSelect/SearchableSelect';
+import DropMenu, { DropMenuDumb } from './components/DropMenu/DropMenu';
+import Expander, { ExpanderDumb } from './components/Expander/Expander';
+import ExpanderPanel, { ExpanderPanelDumb } from './components/ExpanderPanel/ExpanderPanel';
+import Paginator, { PaginatorDumb } from './components/Paginator/Paginator';
+import PieChart, { PieChartDumb } from './components/PieChart/PieChart';
+import RadioGroup, { RadioGroupDumb } from './components/RadioGroup/RadioGroup';
+import SearchField, { SearchFieldDumb } from './components/SearchField/SearchField';
+import Sidebar, { SidebarDumb } from './components/Sidebar/Sidebar';
+import SingleSelect, { SingleSelectDumb } from './components/SingleSelect/SingleSelect';
+import SplitButton, { SplitButtonDumb } from './components/SplitButton/SplitButton';
+import Submarine, { SubmarineDumb } from './components/Submarine/Submarine';
+import Tabs, { TabsDumb } from './components/Tabs/Tabs';
+import ToolTip, { ToolTipDumb } from './components/ToolTip/ToolTip';
+import VerticalListMenu, { VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
+import VerticalTabs, { VerticalTabsDumb } from './components/VerticalTabs/VerticalTabs';
 
 // dumb components
 import AddURLIcon from './components/Icon/AddURLIcon/AddURLIcon';
@@ -258,6 +236,7 @@ export {
 	PaginatorDumb,
 	Panel,
 	PieChart,
+	PieChartDumb,
 	PlusIcon,
 	Point,
 	Points,

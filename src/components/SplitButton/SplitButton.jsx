@@ -2,10 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, filterTypes, getFirst, omitProps }  from '../../util/component-types';
+import { buildHybridComponent } from '../../util/state-management';
 import Button from '../Button/Button';
-import ButtonGroup from '../ButtonGroup/ButtonGroup';
+import { ButtonGroupDumb as ButtonGroup } from '../ButtonGroup/ButtonGroup';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
-import DropMenu from '../DropMenu/DropMenu';
+import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import * as reducers from './SplitButton.reducers';
 
 const cx = lucidClassNames.bind('&-SplitButton');
@@ -213,4 +214,5 @@ const SplitButton = createClass({
 	},
 });
 
-export default SplitButton;
+export default buildHybridComponent(SplitButton);
+export { SplitButton as SplitButtonDumb };

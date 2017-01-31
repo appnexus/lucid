@@ -36,11 +36,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
        
       start
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     right
-    \". My alignment is \"
+    ". My alignment is "
     start
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -83,11 +83,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
        
       center
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     right
-    \". My alignment is \"
+    ". My alignment is "
     center
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -130,11 +130,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
        
       end
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     right
-    \". My alignment is \"
+    ". My alignment is "
     end
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -177,11 +177,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
        
       start
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     up
-    \". My alignment is \"
+    ". My alignment is "
     start
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -224,11 +224,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
        
       center
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     up
-    \". My alignment is \"
+    ". My alignment is "
     center
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -271,11 +271,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
        
       end
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     up
-    \". My alignment is \"
+    ". My alignment is "
     end
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -318,11 +318,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
        
       start
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     down
-    \". My alignment is \"
+    ". My alignment is "
     start
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -365,11 +365,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
        
       center
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     down
-    \". My alignment is \"
+    ". My alignment is "
     center
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -412,11 +412,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
        
       end
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     down
-    \". My alignment is \"
+    ". My alignment is "
     end
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -459,11 +459,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
        
       start
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     left
-    \". My alignment is \"
+    ". My alignment is "
     start
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -506,11 +506,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
        
       center
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     left
-    \". My alignment is \"
+    ". My alignment is "
     center
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -553,11 +553,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
        
       end
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     left
-    \". My alignment is \"
+    ". My alignment is "
     end
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -868,11 +868,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
        
       start
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     right
-    \". My alignment is \"
+    ". My alignment is "
     start
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -915,11 +915,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
        
       center
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     right
-    \". My alignment is \"
+    ". My alignment is "
     center
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -962,11 +962,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
        
       end
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     right
-    \". My alignment is \"
+    ". My alignment is "
     end
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -1009,11 +1009,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
        
       start
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     up
-    \". My alignment is \"
+    ". My alignment is "
     start
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -1056,11 +1056,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
        
       center
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     up
-    \". My alignment is \"
+    ". My alignment is "
     center
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -1103,11 +1103,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
        
       end
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     up
-    \". My alignment is \"
+    ". My alignment is "
     end
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -1150,11 +1150,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
        
       start
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     down
-    \". My alignment is \"
+    ". My alignment is "
     start
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -1197,11 +1197,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
        
       center
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     down
-    \". My alignment is \"
+    ". My alignment is "
     center
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -1244,11 +1244,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
        
       end
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     down
-    \". My alignment is \"
+    ". My alignment is "
     end
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -1291,11 +1291,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
        
       start
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     left
-    \". My alignment is \"
+    ". My alignment is "
     start
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -1338,11 +1338,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
        
       center
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     left
-    \". My alignment is \"
+    ". My alignment is "
     center
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
@@ -1385,11 +1385,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
        
       end
     </h2>
-    ToolTip is a utility component to create a transient message anchored to another component. My direction is \"
+    ToolTip is a utility component to create a transient message anchored to another component. My direction is "
     left
-    \". My alignment is \"
+    ". My alignment is "
     end
-    \".
+    ".
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
