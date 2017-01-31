@@ -134,6 +134,7 @@ const TextField = createClass({
 			rows: 5,
 			debounceLevel: 500,
 			lazyLevel: 1000,
+			value: '',
 		};
 	},
 

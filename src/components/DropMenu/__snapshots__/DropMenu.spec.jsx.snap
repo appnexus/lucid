@@ -392,7 +392,8 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 06.text-
           onSubmit={[Function]}
           placeholder="Text DropMenu"
           rows={5}
-          style={null} />
+          style={null}
+          value="" />
       </div>
     </ContextMenu.Target>
     <ContextMenu.FlyOut

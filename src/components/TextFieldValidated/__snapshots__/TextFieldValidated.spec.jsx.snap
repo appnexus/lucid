@@ -19,7 +19,8 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
     onChangeDebounced={[Function]}
     onSubmit={[Function]}
     rows={5}
-    style={null} />
+    style={null}
+    value="" />
 </Validation>
 `;
 
@@ -28,7 +29,7 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
   Error={
     Array [
       Object {
-        "children": "Please enter "foo"",
+        "children": "Please enter \"foo\"",
       },
     ]
   }
