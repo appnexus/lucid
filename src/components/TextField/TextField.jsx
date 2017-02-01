@@ -229,6 +229,7 @@ const TextField = createClass({
 	},
 
 	focus() {
+		/* istanbul ignore next */
 		this.refs.nativeElement.focus();
 	},
 
