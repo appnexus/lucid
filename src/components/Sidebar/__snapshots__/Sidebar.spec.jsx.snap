@@ -66,6 +66,11 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 01.defaul
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
+    style={
+      Object {
+        "overflow": "auto",
+      }
+    }
     width={250}>
     <div
       className="lucid-Sidebar-Bar-overlay" />
@@ -117,6 +122,11 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 02.disabl
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
+    style={
+      Object {
+        "overflow": "auto",
+      }
+    }
     width={250}>
     <div
       className="lucid-Sidebar-Bar-overlay" />
@@ -168,6 +178,11 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 03.initia
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
+    style={
+      Object {
+        "overflow": "auto",
+      }
+    }
     width={250}>
     <div
       className="lucid-Sidebar-Bar-overlay" />
@@ -219,6 +234,11 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 04.positi
   <SplitVertical.RightPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
+    style={
+      Object {
+        "overflow": "auto",
+      }
+    }
     width={250}>
     <div
       className="lucid-Sidebar-Bar-overlay" />
@@ -270,6 +290,11 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 05.custom
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
+    style={
+      Object {
+        "overflow": "auto",
+      }
+    }
     width={250}>
     <div
       className="lucid-Sidebar-Bar-overlay" />
@@ -340,6 +365,11 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 06.custom
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
+    style={
+      Object {
+        "overflow": "auto",
+      }
+    }
     width={400}>
     <div
       className="lucid-Sidebar-Bar-overlay" />
@@ -391,6 +421,11 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 07.contro
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
+    style={
+      Object {
+        "overflow": "hidden",
+      }
+    }
     width={250}>
     <div
       className="lucid-Sidebar-Bar-overlay" />
@@ -442,6 +477,11 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 08.handle
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
+    style={
+      Object {
+        "overflow": "auto",
+      }
+    }
     width={250}>
     <div
       className="lucid-Sidebar-Bar-overlay" />
@@ -493,6 +533,11 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 09.nested
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
+    style={
+      Object {
+        "overflow": "auto",
+      }
+    }
     width={250}>
     <div
       className="lucid-Sidebar-Bar-overlay" />
@@ -553,6 +598,11 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
+    style={
+      Object {
+        "overflow": "auto",
+      }
+    }
     width={250}>
     <div
       className="lucid-Sidebar-Bar-overlay" />
