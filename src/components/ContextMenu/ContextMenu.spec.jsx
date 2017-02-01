@@ -158,6 +158,7 @@ describe('ContextMenu', () => {
 			});
 
 			afterEach(() => {
+				wrapper.unmount();
 				testSection.parentNode.removeChild(testSection);
 			});
 
@@ -196,7 +197,7 @@ describe('ContextMenu', () => {
 				assert(onClickOut.notCalled);
 			});
 
-			it('should be called when expanded and click happens outside of the component', () => {
+			it('should be called once when expanded and click happens outside of the component', () => {
 				wrapper = mount(
 					<ContextMenu isExpanded onClickOut={onClickOut}>
 						<ContextMenu.Target>
@@ -210,7 +211,7 @@ describe('ContextMenu', () => {
 
 				document.body.click();
 
-				assert(onClickOut.called);
+				assert(onClickOut.calledOnce);
 			});
 		});
 	});
