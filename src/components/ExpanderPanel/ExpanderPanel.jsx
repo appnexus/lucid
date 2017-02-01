@@ -74,6 +74,11 @@ const ExpanderPanel = createClass({
 		isDisabled: bool,
 
 		/**
+		 * Controls the presence of padding on the inner content.
+		 */
+		hasPadding: bool,
+
+		/**
 		 * Called when the user clicks on the component's header.
 		 *
 		 * Signature: `(isExpanded, { event, props }) => {}`
@@ -96,6 +101,7 @@ const ExpanderPanel = createClass({
 		return {
 			isExpanded: false,
 			onToggle: _.noop,
+			hasPadding: true,
 		};
 	},
 
@@ -114,6 +120,7 @@ const ExpanderPanel = createClass({
 			className,
 			isExpanded,
 			isDisabled,
+			hasPadding,
 			style,
 			...passThroughs
 		} = this.props;
@@ -143,7 +150,9 @@ const ExpanderPanel = createClass({
 				<Collapsible isExpanded={isExpanded} className={cx('&-content', {
 					'&-content-is-expanded': isExpanded,
 				})}>
-					<div className={cx('&-content-inner')}>
+					<div className={cx('&-content-inner', {
+						'&-content-inner-has-padding': hasPadding,
+					})}>
 						{children}
 					</div>
 				</Collapsible>
