@@ -588,3 +588,24 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.no-modal
   </div>
 </Overlay>
 `;
+
+exports[`Dialog [common] example testing should match snapshot(s) for 5.no-footer 1`] = `
+<Overlay
+  className="lucid-Dialog"
+  isModal={true}
+  isShown={false}
+  onBackgroundClick={[Function]}
+  onEscape={[Function]}>
+  <div
+    className="lucid-Dialog-window lucid-Dialog-window-is-small">
+    <header
+      className="lucid-Dialog-header">
+      Header
+    </header>
+    <section
+      className="lucid-Dialog-body">
+      This \`Dialog\` has no footer!
+    </section>
+  </div>
+</Overlay>
+`;

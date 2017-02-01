@@ -77,7 +77,7 @@ const Dialog = createClass({
 		} = this.props;
 
 		const headerChildProp = _.get(getFirst(this.props, Dialog.Header), 'props', {});
-		const footerChildProp = _.get(getFirst(this.props, Dialog.Footer), 'props', {});
+		const footerChildProp = _.get(getFirst(this.props, Dialog.Footer), 'props', null);
 
 		return (
 			<Overlay
@@ -102,10 +102,12 @@ const Dialog = createClass({
 						{this.props.children}
 					</section>
 
-					<footer
-						{...footerChildProp}
-						className={cx('&-footer')}
-					/>
+					{footerChildProp && (
+						<footer
+							{...footerChildProp}
+							className={cx('&-footer')}
+						/>
+					)}
 				</div>
 			</Overlay>
 		);
