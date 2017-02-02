@@ -104,9 +104,17 @@ module.exports = {
 				const specifierPath = importMap[exportName].path;
 				const specifierType = importMap[exportName].type;
 
-				// Sorry, this is a little hard to read
-				const exportCode = specifierType === 'ImportSpecifier' ? `export * from '${specifierPath}';`
-					: specifierType === 'ImportDefaultSpecifier' ? `export * from '${specifierPath}';`
+				// Sorry, this is a little hard to read, it was hard for me to figure
+				// out :facepalm:
+				const exportCode = specifierType === 'ImportSpecifier' ? `
+import def from '${specifierPath}';
+export default def;
+export * from '${specifierPath}';
+`
+					: specifierType === 'ImportDefaultSpecifier' ? `
+import def from '${specifierPath}';
+export default def;
+`
 					: specifierType === 'ImportNamespaceSpecifier' ? `
 import * as def from '${specifierPath}';
 export default def;
