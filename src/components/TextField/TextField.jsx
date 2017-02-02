@@ -134,6 +134,7 @@ const TextField = createClass({
 			rows: 5,
 			debounceLevel: 500,
 			lazyLevel: 1000,
+			value: '',
 		};
 	},
 
@@ -228,6 +229,7 @@ const TextField = createClass({
 	},
 
 	focus() {
+		/* istanbul ignore next */
 		this.refs.nativeElement.focus();
 	},
 
