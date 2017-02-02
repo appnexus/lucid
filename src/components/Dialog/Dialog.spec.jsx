@@ -46,6 +46,14 @@ describe('Dialog', () => {
 		assert.equal(wrapper.find('.lucid-Dialog-footer').text(), 'Groober');
 	});
 
+	it('should not render a Footer', () => {
+		const wrapper = shallow(
+			<Dialog isShown={true} />
+		);
+
+		assert(!wrapper.contains('.lucid-Dialog-footer'));
+	});
+
 	it('should render body content', () => {
 		const wrapper = shallow(
 			<Dialog isShown={true}>
