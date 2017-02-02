@@ -107,8 +107,8 @@ module.exports = {
 				// Sorry, this is a little hard to read, it was hard for me to figure
 				// out :facepalm:
 				const exportCode = specifierType === 'ImportSpecifier' ? `
-import def from '${specifierPath}';
-export default def;
+import { ${exportName} } from '${specifierPath}';
+export default ${exportName};
 export * from '${specifierPath}';
 `
 					: specifierType === 'ImportDefaultSpecifier' ? `
