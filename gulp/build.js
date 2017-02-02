@@ -28,10 +28,15 @@ function imports() {
 		// root directory instead of `dist`
 		const newPath = isPath ? './' + path.join(CONFIG.BUILD_DIR, moduleId) : null;
 
-		return _.map(node.specifiers, ((specifier) => ([
-			specifier.local.name,
-			newPath || moduleId,
-		])));
+		return _.map(node.specifiers, ((specifier) => {
+			return [
+				specifier.local.name,
+				{
+					type: specifier.type,
+					path: newPath || moduleId,
+				},
+			];
+		}));
 	});
 }
 
@@ -96,8 +101,20 @@ module.exports = {
 
 		const writeFilesPromise = Promise.all(_.map(allExports, (exportName) => {
 			return new Promise((resolve, reject) => {
-				const exportCode = `export * from '${importMap[exportName]}';`;
-				// for some reason this doesn't pickup our .babelrc even though it's supposed to
+				const specifierPath = importMap[exportName].path;
+				const specifierType = importMap[exportName].type;
+
+				// Sorry, this is a little hard to read
+				const exportCode = specifierType === 'ImportSpecifier' ? `export * from '${specifierPath}';`
+					: specifierType === 'ImportDefaultSpecifier' ? `export * from '${specifierPath}';`
+					: specifierType === 'ImportNamespaceSpecifier' ? `
+import * as def from '${specifierPath}';
+export default def;
+export * from '${specifierPath}'
+`
+					: null; // default, should never happen according to babel's AST syntax
+
+				// For some reason this doesn't pickup our .babelrc even though it's supposed to
 				const transpiledCode = babelCore.transform(exportCode, { presets: [ 'es2015' ] }).code;
 
 				fs.writeFile(`${exportName}.js`, transpiledCode, (err) => {
