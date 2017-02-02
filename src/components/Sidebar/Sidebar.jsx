@@ -17,6 +17,7 @@ const {
 	node,
 	number,
 	string,
+	object,
 	oneOf,
 	oneOfType,
 } = React.PropTypes;
@@ -32,6 +33,11 @@ const Sidebar = createClass({
 	reducers,
 
 	propTypes: {
+		/**
+		 * Style object that gets applied to the outer element.
+		 */
+		style: object,
+
 		/**
 		 * Appended to the component-specific class names set on the root
 		 * element. Value is run through the `classnames` library.
@@ -191,6 +197,7 @@ const Sidebar = createClass({
 	render() {
 		const {
 			children,
+			style,
 			className,
 			isExpanded,
 			isAnimated,
@@ -220,6 +227,10 @@ const Sidebar = createClass({
 		return (
 			<SplitVertical
 				{...omitProps(passThroughs, Sidebar)}
+				style={{
+					minWidth: isExpanded ? (_.isNumber(width) ? width + 6 : `calc(${width} + 6px)`) : null,
+					...style,
+				}}
 				className={cx('&', {
 					'&-is-resize-disabled': isResizeDisabled,
 					'&-is-position-right': position === 'right',

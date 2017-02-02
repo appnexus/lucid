@@ -49,6 +49,7 @@ describe('TextField', () => {
 
 		wrapper.setProps({ value: 'end' });
 
+
 		assert.equal(wrapper.state('value'), 'end');
 	});
 
@@ -124,6 +125,17 @@ describe('TextField', () => {
 
 		assert.equal(wrapper.find('textarea').length, 1);
 		assert.equal(wrapper.find('.lucid-TextField-is-multi-line').length, 1);
+	});
+
+	it('should respect onKeyDown if passed in', () => {
+		const onKeyDown = jest.fn();
+		const wrapper = shallow(
+			<TextField onKeyDown={onKeyDown} />
+		);
+
+		wrapper.find('input').simulate('keydown', {});
+
+		expect(onKeyDown).toBeCalled();
 	});
 
 	it('should call `event.persist` for `onChangeDebounced`', () => {

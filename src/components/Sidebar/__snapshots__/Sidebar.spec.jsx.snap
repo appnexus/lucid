@@ -6,7 +6,12 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 01.defaul
   isExpanded={true}
   isResizeable={true}
   onResize={[Function]}
-  onResizing={[Function]}>
+  onResizing={[Function]}
+  style={
+    Object {
+      "minWidth": 256,
+    }
+  }>
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
@@ -57,7 +62,12 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 02.disabl
   isExpanded={true}
   isResizeable={true}
   onResize={[Function]}
-  onResizing={[Function]}>
+  onResizing={[Function]}
+  style={
+    Object {
+      "minWidth": 256,
+    }
+  }>
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
@@ -108,7 +118,12 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 03.initia
   isExpanded={true}
   isResizeable={true}
   onResize={[Function]}
-  onResizing={[Function]}>
+  onResizing={[Function]}
+  style={
+    Object {
+      "minWidth": 256,
+    }
+  }>
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
@@ -159,7 +174,12 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 04.positi
   isExpanded={true}
   isResizeable={true}
   onResize={[Function]}
-  onResizing={[Function]}>
+  onResizing={[Function]}
+  style={
+    Object {
+      "minWidth": 256,
+    }
+  }>
   <SplitVertical.RightPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
@@ -210,7 +230,12 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 05.custom
   isExpanded={true}
   isResizeable={true}
   onResize={[Function]}
-  onResizing={[Function]}>
+  onResizing={[Function]}
+  style={
+    Object {
+      "minWidth": 256,
+    }
+  }>
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
@@ -280,7 +305,12 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 06.custom
   isExpanded={true}
   isResizeable={true}
   onResize={[Function]}
-  onResizing={[Function]}>
+  onResizing={[Function]}
+  style={
+    Object {
+      "minWidth": 406,
+    }
+  }>
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
@@ -331,7 +361,12 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 07.contro
   isExpanded={false}
   isResizeable={true}
   onResize={[Function]}
-  onResizing={[Function]}>
+  onResizing={[Function]}
+  style={
+    Object {
+      "minWidth": null,
+    }
+  }>
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
@@ -382,7 +417,12 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 08.handle
   isExpanded={true}
   isResizeable={true}
   onResize={[Function]}
-  onResizing={[Function]}>
+  onResizing={[Function]}
+  style={
+    Object {
+      "minWidth": 256,
+    }
+  }>
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
@@ -433,7 +473,12 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 09.nested
   isExpanded={true}
   isResizeable={true}
   onResize={[Function]}
-  onResizing={[Function]}>
+  onResizing={[Function]}
+  style={
+    Object {
+      "minWidth": 256,
+    }
+  }>
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
@@ -493,7 +538,12 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
   isExpanded={true}
   isResizeable={true}
   onResize={[Function]}
-  onResizing={[Function]}>
+  onResizing={[Function]}
+  style={
+    Object {
+      "minWidth": 256,
+    }
+  }>
   <SplitVertical.LeftPane
     className="lucid-Sidebar-Bar"
     isPrimary={false}
