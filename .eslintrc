@@ -1,46 +1,16 @@
 {
-	"parserOptions": {
-		"ecmaVersion": 6,
-		"sourceType": "module",
-		"ecmaFeatures": {
-			"jsx": true,
-			"experimentalObjectRestSpread": true
-		}
-	},
-	"env": {
-		"browser": true,
-		"node": true,
-		"es6": true,
-		"mocha": true,
-		"jest": true
-	},
-	"extends": "eslint:recommended",
-	"rules": {
-		"arrow-parens": 2,
-		"arrow-spacing": 2,
-		"comma-dangle": [2, "always-multiline"],
-		"comma-spacing": 2,
-		"indent": [2, "tab"],
-		"jsx-quotes": [2, "prefer-single"],
-		"key-spacing": 2,
-		"keyword-spacing": 0,
-		"no-confusing-arrow": [2, {"allowParens": true}],
-		"no-multiple-empty-lines": 2,
-		"no-trailing-spaces": 2,
-		"no-undef": 2,
-		"no-unused-vars": 2,
-		"prefer-const": 2,
-		"quotes": [2, "single"],
-		"react/jsx-uses-react": 2,
-		"react/jsx-uses-vars": 2,
-		"react/prop-types": 2,
-		"react/react-in-jsx-scope": 2,
-		"semi": 2,
-		"space-before-blocks": 2,
-		"space-before-function-paren": [2, "never"],
-		"space-in-parens": 2
-	},
-	"plugins": [
-		"react"
-	]
+  "extends": "appnexus/frontend",
+  "rules": {
+    # These can be removed with the next major version of eslint-config-appnexus.
+    "jsx-quotes": [2, "prefer-single"],
+    "no-undef": 2,
+    "quotes": [2, "single"],
+    "react/prop-types": 2,
+
+    # eslint-config-appnexus overrides, these should be removed and code fixed.
+    "import/imports-first": "off",
+    "import/newline-after-import": "off",
+    "import/no-unresolved": "off",
+    "no-extra-parens": "off",
+  }
 }
