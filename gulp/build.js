@@ -104,8 +104,8 @@ module.exports = {
 				const specifierPath = importMap[exportName].path;
 				const specifierType = importMap[exportName].type;
 
-				// Sorry, this is a little hard to read, it was hard for me to figure
-				// out :facepalm:
+				// Sorry, this is a little hard to read, it's effectively a switch
+				// statement on specifierType
 				const exportCode = specifierType === 'ImportSpecifier' ? `
 import { ${exportName} } from '${specifierPath}';
 export default ${exportName};
