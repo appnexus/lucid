@@ -47,6 +47,28 @@ function exports() {
 	);
 }
 
+function exportCode(specifierType, specifierPath, exportName) {
+	const codeMap = {
+		ImportSpecifier: `
+			import { ${exportName} } from '${specifierPath}';
+			export default ${exportName};
+			export * from '${specifierPath}';
+		`,
+		ImportDefaultSpecifier: `
+			import def from '${specifierPath}';
+			export default def;
+		`,
+		ImportNamespaceSpecifier: `
+			import * as def from '${specifierPath}';
+			export default def;
+			export * from '${specifierPath}'
+		`,
+	};
+
+	// For some reason this doesn't pickup our .babelrc even though it's supposed to
+	return babelCore.transform(codeMap[specifierType], { presets: [ 'es2015' ] }).code;
+}
+
 module.exports = {
 	css: function() {
 		return gulp.src([CONFIG.LESS_ENTRY])
@@ -104,26 +126,7 @@ module.exports = {
 				const specifierPath = importMap[exportName].path;
 				const specifierType = importMap[exportName].type;
 
-				// Sorry, this is a little hard to read, it's effectively a switch
-				// statement on specifierType
-				const exportCode = specifierType === 'ImportSpecifier' ? `
-import { ${exportName} } from '${specifierPath}';
-export default ${exportName};
-export * from '${specifierPath}';
-`
-					: specifierType === 'ImportDefaultSpecifier' ? `
-import def from '${specifierPath}';
-export default def;
-`
-					: specifierType === 'ImportNamespaceSpecifier' ? `
-import * as def from '${specifierPath}';
-export default def;
-export * from '${specifierPath}'
-`
-					: null; // default, should never happen according to babel's AST syntax
-
-				// For some reason this doesn't pickup our .babelrc even though it's supposed to
-				const transpiledCode = babelCore.transform(exportCode, { presets: [ 'es2015' ] }).code;
+				const transpiledCode = exportCode(specifierType, specifierPath, exportName);
 
 				fs.writeFile(`${exportName}.js`, transpiledCode, (err) => {
 					if (err) {
