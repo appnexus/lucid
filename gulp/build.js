@@ -28,10 +28,15 @@ function imports() {
 		// root directory instead of `dist`
 		const newPath = isPath ? './' + path.join(CONFIG.BUILD_DIR, moduleId) : null;
 
-		return _.map(node.specifiers, ((specifier) => ([
-			specifier.local.name,
-			newPath || moduleId,
-		])));
+		return _.map(node.specifiers, ((specifier) => {
+			return [
+				specifier.local.name,
+				{
+					type: specifier.type,
+					path: newPath || moduleId,
+				},
+			];
+		}));
 	});
 }
 
@@ -40,6 +45,28 @@ function exports() {
 	return _.flatMap(exportNamedDeclarations, (node) => (
 		_.map(node.specifiers, (specifier) => specifier.exported.name))
 	);
+}
+
+function exportCode(specifierType, specifierPath, exportName) {
+	const codeMap = {
+		ImportSpecifier: `
+			import { ${exportName} } from '${specifierPath}';
+			export default ${exportName};
+			export * from '${specifierPath}';
+		`,
+		ImportDefaultSpecifier: `
+			import def from '${specifierPath}';
+			export default def;
+		`,
+		ImportNamespaceSpecifier: `
+			import * as def from '${specifierPath}';
+			export default def;
+			export * from '${specifierPath}'
+		`,
+	};
+
+	// For some reason this doesn't pickup our .babelrc even though it's supposed to
+	return babelCore.transform(codeMap[specifierType], { presets: [ 'es2015' ] }).code;
 }
 
 module.exports = {
@@ -96,9 +123,10 @@ module.exports = {
 
 		const writeFilesPromise = Promise.all(_.map(allExports, (exportName) => {
 			return new Promise((resolve, reject) => {
-				const exportCode = `export * from '${importMap[exportName]}';`;
-				// for some reason this doesn't pickup our .babelrc even though it's supposed to
-				const transpiledCode = babelCore.transform(exportCode, { presets: [ 'es2015' ] }).code;
+				const specifierPath = importMap[exportName].path;
+				const specifierType = importMap[exportName].type;
+
+				const transpiledCode = exportCode(specifierType, specifierPath, exportName);
 
 				fs.writeFile(`${exportName}.js`, transpiledCode, (err) => {
 					if (err) {
