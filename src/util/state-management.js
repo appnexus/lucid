@@ -148,9 +148,13 @@ export function buildHybridComponent(baseComponent, {
 			return _.mergeWith({}, omitFunctionPropsDeep(baseComponent.getDefaultProps()), initialState, omitFunctionPropsDeep(this.props), safeMerge);
 		},
 		componentWillMount() {
+			let synchronousState = this.state; //store reference to state, use in place of `this.state` in `getState`
 			this.boundContext = getStatefulPropsContext(reducers, {
-				getState: () => _.mergeWith({}, omitFunctionPropsDeep(this.state), omitFunctionPropsDeep(this.props), safeMerge),
-				setState: (state) => { this.setState(state); },
+				getState: () => _.mergeWith({}, omitFunctionPropsDeep(synchronousState), omitFunctionPropsDeep(this.props), safeMerge),
+				setState: (state) => {
+					synchronousState = state; //synchronously update the state reference
+					this.setState(state);
+				},
 			});
 		},
 		render() {
