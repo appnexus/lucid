@@ -6,6 +6,7 @@ import {
 	createClass,
 	filterTypes,
 	rejectTypes,
+	omitProps,
 } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Tag');
@@ -68,6 +69,7 @@ const Tag = createClass({
 			children,
 			className,
 			style,
+			...passThroughs
 		} = this.props;
 
 		const subTags = filterTypes(children, Tag);
@@ -75,7 +77,11 @@ const Tag = createClass({
 		const isLeaf = _.isEmpty(subTags);
 
 		return (
-			<div className={cx('&', {'&-leaf': isLeaf}, className)} style={style}>
+			<div
+				{...omitProps(passThroughs, Tag)}
+				className={cx('&', { '&-leaf': isLeaf }, className)}
+				style={style}
+			>
 				<div className={cx('&-inner')}>
 					<div className={cx('&-inner-content')}>
 						{!_.isEmpty(otherChildren) ? (

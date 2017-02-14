@@ -1,5 +1,6 @@
 .lucid-Tag {
-	display: flex;
+	display: inline-flex;
+	margin: @size-XXS @size-XXS 0 0;
 
 	&.lucid-Tag-leaf {
 		min-height: @size-tag;
@@ -21,6 +22,7 @@
 
 			.lucid-Tag-remove {
 				margin-left: auto;
+				padding-left: @size-XXS;
 				display: flex;
 				align-items: center;
 
@@ -39,15 +41,7 @@
 		.lucid-Tag-subgroup {
 			display: flex;
 			flex-wrap: wrap;
-			padding: 0 @size-XS @size-XS @size-XS;
-
-			& > .lucid-Tag {
-				margin: @size-XXS @size-XXS 0 0;
-			}
-
-			& > .lucid-Tag:last-of-type {
-				margin-right: 0;
-			}
+			padding: 0 @size-XXS @size-XS @size-XS;
 		}
 
 		.lucid-Tag-leaf& {
@@ -62,8 +56,6 @@
 				height: 100%;
 
 				.lucid-Tag-remove {
-					margin-left: @size-XS;
-
 					.lucid-Tag-remove-button {
 						fill: @color-white-50;
 					}

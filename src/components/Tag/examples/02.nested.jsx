@@ -8,13 +8,25 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<Tag showXButton={true}>
-					Lorem ipsum
+				{_.times(25, (n) => (
+					<Tag key={n}>
+						{words[n % words.length]}
+					</Tag>
+				))}
+
+				<Tag>
+					Grouped items
 					{_.times(25, (n) => (
-						<Tag
-							key={n}
-							showXButton={true}
-						>
+						<Tag key={n}>
+							{words[n % words.length]}
+						</Tag>
+					))}
+				</Tag>
+
+				<Tag>
+					Grouped items
+					{_.times(25, (n) => (
+						<Tag key={n}>
 							{words[n % words.length]}
 						</Tag>
 					))}
