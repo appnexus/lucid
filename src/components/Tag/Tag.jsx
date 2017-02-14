@@ -25,6 +25,8 @@ const {
  * grouping.
  */
 const Tag = createClass({
+	displayName: 'Tag',
+
 	propTypes: {
 		/**
 		 * Shows or hides the little "x" for a given tag.

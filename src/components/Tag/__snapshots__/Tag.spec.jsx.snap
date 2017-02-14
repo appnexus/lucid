@@ -1,0 +1,793 @@
+exports[`Tag [common] example testing should match snapshot(s) for 01.default 1`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        I\'m a tag!
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 1`] = `
+<div
+  className="lucid-Tag">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        Lorem ipsum
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+    <div
+      className="lucid-Tag-subgroup">
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        Fashion
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        The
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        Vexillologist
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        Cold Brew
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        Fashion
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        The
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        Vexillologist
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        Cold Brew
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        Fashion
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        The
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        Vexillologist
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        Cold Brew
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        Fashion
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        The
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        Vexillologist
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        Cold Brew
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        Fashion
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        The
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        Vexillologist
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        Cold Brew
+      </Tag>
+      <Tag
+        onRemove={[Function]}
+        showXButton={true}>
+        This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
+      </Tag>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 2`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        Fashion
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 3`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        The
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 4`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        Vexillologist
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 5`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        Cold Brew
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 6`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 7`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        Fashion
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 8`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        The
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 9`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        Vexillologist
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 10`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        Cold Brew
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 11`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 12`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        Fashion
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 13`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        The
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 14`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        Vexillologist
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 15`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        Cold Brew
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 16`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 17`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        Fashion
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 18`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        The
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 19`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        Vexillologist
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 20`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        Cold Brew
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 21`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 22`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        Fashion
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 23`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        The
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 24`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        Vexillologist
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 25`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        Cold Brew
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf">
+  <div
+    className="lucid-Tag-inner">
+    <div
+      className="lucid-Tag-inner-content">
+      <span
+        className="lucid-Tag-inner-children">
+        This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
+      </span>
+      <span
+        className="lucid-Tag-remove"
+        onClick={[Function]}>
+        <CrossIcon
+          className="lucid-Tag-remove-button"
+          isClickable={true}
+          size={9}
+          viewBox="4 4 8 8" />
+      </span>
+    </div>
+  </div>
+</div>
+`;
