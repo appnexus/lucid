@@ -55,10 +55,8 @@ If you're starting a new project it's best to simply import all your components
 by their paths. This will make sure that only the components you need will be
 included in your bundle:
 
-```
-import Button from 'lucid-ui/Button';
-import DataTable from 'lucid-ui/DataTable';
-```
+    import Button from 'lucid-ui/Button';
+    import DataTable from 'lucid-ui/DataTable';
 
 #### Babel plugin
 
@@ -66,30 +64,24 @@ If you have an existing project using lucid you should consider using [babel
 plugin import][bpi] that can automatically transform your ES6 module imports
 into path imports. Under the hood it will transform import code like this:
 
-```
-import { Button } from 'lucid-ui';
-```
+    import { Button } from 'lucid-ui';
 
 into
 
-```
-import Button from 'lucid-ui/Button';
-```
+    import Button from 'lucid-ui/Button';
 
 Here's a `.babelrc` plugin configuration that works with lucid:
 
-```
-"plugins": [
-  [
-    "import",
-    {
-      "libraryName": "lucid-ui",
-      "libraryDirectory": "",
-      "camel2DashComponentName": false
-    }
-  ]
-]
-```
+    "plugins": [
+      [
+        "import",
+        {
+          "libraryName": "lucid-ui",
+          "libraryDirectory": "",
+          "camel2DashComponentName": false
+        }
+      ]
+    ]
 
 ### Credits
 

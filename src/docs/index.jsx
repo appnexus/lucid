@@ -16,7 +16,6 @@ import {
 	withRouter,
 } from 'react-router';
 import { createHashHistory } from 'history';
-import { markdown } from 'markdown';
 import docgenMapRaw from './docgen.json';
 import { handleHighlightCode, toMarkdown, sanitizeExamplePath } from './util';
 
@@ -244,7 +243,13 @@ const Component = React.createClass({
 			(x) => _.sortBy(x, (x) => x[0]) // sort by property name
 		)(docgenMap);
 
-		const descriptionAsHTML = toMarkdown(_.get(docgenMap, `${componentName}.description`));
+		const descriptionMarkdown = _.get(docgenMap, `${componentName}.description`);
+
+		if (!descriptionMarkdown) {
+			throw new Error(`Unable to find ${componentName}'s description in src/docs/docgen.json. Are you on a bad URL? Did you forget to run \`gulp docs-generate\`? Did you remember to give ${componentName} a description block?`);
+		}
+
+		const descriptionHTML = toMarkdown(_.get(docgenMap, `${componentName}.description`));
 
 		const privateString = _.get(docgenMap, `${componentName}.isPrivateComponent`) ? '(private)' : '';
 
@@ -272,45 +277,47 @@ const Component = React.createClass({
 		return (
 			<div className='Component'>
 				<h2>{componentName} {privateString} {composesComponents}</h2>
-				<div dangerouslySetInnerHTML={descriptionAsHTML} />
+				<div dangerouslySetInnerHTML={descriptionHTML} />
 				<h3>Props</h3>
-				<Table style={{width: '100%'}}>
-					<Thead>
-						<Tr>
-							<Th>Name</Th>
-							<Th>Type</Th>
-							<Th>Required</Th>
-							<Th>Default</Th>
-							<Th>Description</Th>
-						</Tr>
-					</Thead>
-					<Tbody>
-						{_.map(componentProps, ([propName, propDetails]) => {
-							if (!propDetails || !propDetails.description) {
-								console.error(`Warning: There was an issue with the docs that were generated for component "${componentName}" and prop "${propName}". One reason might be that you have a default value for something that was never declared in propTypes.`);
-								return null;
-							}
+				<div className='Component-table-wrapper'>
+					<Table style={{width: '100%'}}>
+						<Thead>
+							<Tr>
+								<Th>Name</Th>
+								<Th>Type</Th>
+								<Th>Required</Th>
+								<Th>Default</Th>
+								<Th>Description</Th>
+							</Tr>
+						</Thead>
+						<Tbody>
+							{_.map(componentProps, ([propName, propDetails]) => {
+								if (!propDetails || !propDetails.description) {
+									console.error(`Warning: There was an issue with the docs that were generated for component "${componentName}" and prop "${propName}". One reason might be that you have a default value for something that was never declared in propTypes.`);
+									return null;
+								}
 
-							return (
-								<Tr key={propName}>
-									<Td>{propName}</Td>
-									<Td><PropType type={propDetails.type} componentName={componentName} /></Td>
-									<Td>{propDetails.required ? 'yes' : 'no'}</Td>
-									<Td>
-										{propDetails.defaultValue ?
-											<pre>
-												<code className='lang-javascript'>
-													{_.get(propDetails, 'defaultValue.value', '')}
-												</code>
-											</pre>
-										: null}
-									</Td>
-									<Td dangerouslySetInnerHTML={{ __html: markdown.toHTML(propDetails.description)}} />
-								</Tr>
-							);
-						})}
-					</Tbody>
-				</Table>
+								return (
+									<Tr key={propName}>
+										<Td>{propName}</Td>
+										<Td><PropType type={propDetails.type} componentName={componentName} /></Td>
+										<Td>{propDetails.required ? 'yes' : 'no'}</Td>
+										<Td>
+											{propDetails.defaultValue ?
+												<pre>
+													<code className='lang-javascript'>
+														{_.get(propDetails, 'defaultValue.value', '')}
+													</code>
+												</pre>
+											: null}
+										</Td>
+										<Td dangerouslySetInnerHTML={toMarkdown(propDetails.description)} />
+									</Tr>
+								);
+							})}
+						</Tbody>
+					</Table>
+				</div>
 				{!_.isEmpty(childComponents) ? (
 					<section>
 						<h3>Child Components</h3>
@@ -367,7 +374,7 @@ const Component = React.createClass({
 																</pre>
 															: null}
 														</Td>
-														<Td dangerouslySetInnerHTML={{ __html: markdown.toHTML(propDetails.description)}} />
+														<Td dangerouslySetInnerHTML={toMarkdown(propDetails.description)} />
 													</Tr>
 												);
 											})}
@@ -524,9 +531,9 @@ const App = React.createClass({
 		return (
 			<div className='App'>
 				<div className='App-sidebar'>
-					<Link to={{ pathname: '/', query: this.props.location.query }}>
+					<Link className='App-sidebar-logo' to={{ pathname: '/', query: this.props.location.query }}>
 						{/* `width` helps prevent a FOUC with webpack */}
-						<img src='img/logo.svg' width={214} />
+						<img src='img/logo.svg' style={{maxWidth: '100%'}} />
 					</Link>
 
 					<div className='App-sidebar-container'>

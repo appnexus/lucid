@@ -1,4 +1,11 @@
 // -------------------------------------
+// Variables
+//
+
+// Assume small screens are the base
+@large: ~"(min-width: 768px)";
+
+// -------------------------------------
 // Imports
 //
 
@@ -9,6 +16,10 @@
 @import './containers/landing-page';
 @import './containers/icons';
 
+// -------------------------------------
+// Globals
+//
+//
 html {
 	font-family: @fontFamily;
 	-ms-text-size-adjust: 100%; /* 2 */
@@ -18,10 +29,6 @@ html {
 body {
 	margin: 0;
 }
-
-// -------------------------------------
-// Globals
-//
 
 pre code {
 	font-family: monospace;
@@ -51,6 +58,11 @@ a {
 
 .Component {
 	padding: @size-L;
+
+	&-table-wrapper {
+		max-width: 100%;
+		overflow: auto;
+	}
 
 	&-examples {
 		list-style: none;
@@ -98,17 +110,23 @@ a {
 // App
 //
 
-@App-sidebar-width: 215px;
-
 .App {
+	@sidebar-width: 215px;
+
 	&-sidebar {
-		position: fixed;
-		height: 100vh;
-		width: @App-sidebar-width;
-		overflow: auto;
 		background-color: @color-white;
-		border-right: 1px solid @color-gray;
-		z-index: 1;
+		border-bottom: 1px solid @color-gray;
+
+		@media @large {
+			width: @sidebar-width;
+			overflow: auto;
+			height: 100vh;
+			position: fixed;
+			left: 0;
+			border-bottom: initial;
+			border-right: 1px solid @color-gray;
+			z-index: 1;
+		}
 
 		// Little fix for scroll bars
 		.lucid-VerticalListMenu-Item-expander {
@@ -130,7 +148,11 @@ a {
 		border-bottom: 1px solid @color-gray;
 	}
 
-	&-body{
-		padding-left: @App-sidebar-width;
+	&-body {
+		max-width: 100%;
+
+		@media @large {
+			padding-left: @sidebar-width;
+		}
 	}
 }
