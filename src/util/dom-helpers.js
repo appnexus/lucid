@@ -35,3 +35,15 @@ export function dispatchDOMEvent(node, eventName, assignedEventProps) {
 	node.dispatchEvent(_.assign(event, assignedEventProps));
 	return event;
 }
+
+export function shiftChildren(parent, n=1) {
+	if (n < 0) {
+		_.times(Math.abs(n), () => {
+			parent.appendChild(parent.children[0]);
+		});
+	} else if (n > 0) {
+		_.times(n, () => {
+			parent.insertBefore(parent.children[parent.children.length-1], parent.children[0]);
+		});
+	}
+}

@@ -67,6 +67,7 @@ import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
 import Icon from './components/Icon/Icon';
 import ImageIcon from './components/Icon/ImageIcon/ImageIcon';
+import InfiniteSlidePanel from './components/InfiniteSlidePanel/InfiniteSlidePanel';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import InfoLightIcon from './components/Icon/InfoLightIcon/InfoLightIcon';
 import Legend from './components/Legend/Legend';
@@ -102,6 +103,7 @@ import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import SeparatorIcon from './components/Icon/SeparatorIcon/SeparatorIcon';
 import SettingsIcon from './components/Icon/SettingsIcon/SettingsIcon';
 import ShoppingCartIcon from './components/Icon/ShoppingCartIcon/ShoppingCartIcon';
+import SlidePanel from './components/SlidePanel/SlidePanel';
 import SplitHorizontal from './components/SplitHorizontal/SplitHorizontal';
 import SplitVertical from './components/SplitVertical/SplitVertical';
 import StarIcon from './components/Icon/StarIcon/StarIcon';
@@ -213,6 +215,7 @@ export {
 	HomeIcon,
 	Icon,
 	ImageIcon,
+	InfiniteSlidePanel,
 	InfoIcon,
 	InfoLightIcon,
 	Legend,
@@ -260,6 +263,7 @@ export {
 	SidebarDumb,
 	SingleSelect,
 	SingleSelectDumb,
+	SlidePanel,
 	SplitButton,
 	SplitButtonDumb,
 	SplitHorizontal,
