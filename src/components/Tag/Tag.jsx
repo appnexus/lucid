@@ -93,7 +93,7 @@ const Tag = createClass({
 							<span className={cx('&-remove')} onClick={this.handleRemove}>
 								<CrossIcon
 									className={cx('&-remove-button')}
-									size={9}
+									size={10}
 									viewBox='4 4 8 8'
 									isClickable
 								/>
