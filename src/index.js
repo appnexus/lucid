@@ -99,6 +99,7 @@ import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import Resizer from './components/Resizer/Resizer';
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
+import Selection from './components/Selection/Selection';
 import SeparatorIcon from './components/Icon/SeparatorIcon/SeparatorIcon';
 import SettingsIcon from './components/Icon/SettingsIcon/SettingsIcon';
 import ShoppingCartIcon from './components/Icon/ShoppingCartIcon/ShoppingCartIcon';
@@ -253,6 +254,7 @@ export {
 	SearchField,
 	SearchFieldDumb,
 	SearchIcon,
+	Selection,
 	SeparatorIcon,
 	SettingsIcon,
 	ShoppingCartIcon,

@@ -1,0 +1,80 @@
+.lucid-Selection {
+	display: flex;
+
+	min-height: @size-standard-height;
+	font: @font;
+	color: @color-darkGray;
+	background-color: @color-white;
+	border-radius: @size-borderRadius;
+	border: 1px solid @featured-color-primary-borderColorLite;
+	padding-left: @size-S;
+	margin-bottom: @size-XS;
+
+	&-has-nested-selections {
+		background-color: @color-backgroundColor;
+	}
+
+	// Kinds
+
+	&-success {
+		border-color: @featured-color-success-borderColorLite;
+		padding-left: @size-XS;
+	}
+
+	&-danger {
+		border-color: @featured-color-danger-borderColorLite;
+		padding-left: @size-XS;
+	}
+
+	&-info {
+		border-color: @featured-color-info-borderColorLite;
+		padding-left: @size-XS;
+	}
+
+	&-warning {
+		border-color: @featured-color-warning-borderColorLite;
+		padding-left: @size-XS;
+	}
+
+	&-container {
+		border-color: @color-borderColorLight;
+	}
+
+	// Others
+
+	&-Icon {
+		margin-top: 5px; // line those suckers up juuust right
+		margin-right: @size-XS;
+	}
+
+	&-label {
+		flex: 1;
+	}
+
+	&-close-button {
+		fill: @color-mediumGray;
+		&:hover {
+			fill: @color-darkGray;
+		}
+	}
+
+	&-content {
+		flex: 1;
+	}
+
+	&-label-container {
+		flex: 1;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	&-children-container {
+		padding-top: 5px;
+
+		& > .lucid-Selection {
+			margin-right: @size-XS;
+		}
+	}
+
+}
