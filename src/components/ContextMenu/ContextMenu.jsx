@@ -7,13 +7,6 @@ import { lucidClassNames } from '../../util/style-helpers';
 
 const cx = lucidClassNames.bind('&-ContextMenu');
 
-/*
- * This is used to keep track of the event-handlers that are called twice with
- * the same event, such as when a `label` wraps an `input`. See
- * `componentDidMount` below.
- */
-let lastEvent;
-
 const {
 	PropTypes: {
 		bool,
@@ -148,37 +141,19 @@ const ContextMenu = createClass({
 			}
 		}, 10);
 
-		this.onClickBodyEventListener = (event) => {
-
-			/*
-			 * Check to see if we've already handled this event, and ignore it if we
-			 * have.
-			 */
-			if (lastEvent === event) {
-				return;
-			}
-
-			/*
-			 * Store the reference to the event so we can check against it for
-			 * redundant calls.
-			 */
-			lastEvent = event;
-
+		this.onClickBodyEventListener = window.addEventListener('click', (event) => {
 			if (this.props.onClickOut && this.refs.flyOutPortal) {
 				const flyOutEl = this.refs.flyOutPortal.portalElement.firstChild;
 				if (!(flyOutEl.contains(event.target) || this.refs.target.contains(event.target))) {
 					this.props.onClickOut({ props: this.props, event });
 				}
 			}
-		};
-
-		window.addEventListener('click', this.onClickBodyEventListener);
-
+		});
 	},
 
 	componentWillUnmount() {
 		clearInterval(this.updateTargetRectangleIntervalId);
-		window.removeEventListener('click', this.onClickBodyEventListener);
+		document.body.removeEventListener('click', this.onClickBodyEventListener);
 	},
 
 	componentWillReceiveProps() {
