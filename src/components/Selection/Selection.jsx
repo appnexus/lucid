@@ -39,7 +39,7 @@ const defaultIcons = {
  *
  * {"categories": ["communication"]}
  *
- * Used to indicate selections. It's very similar to `Tag`s but is meant to be
+ * Used to indicate selections. It's very similar to `Tag` but is meant to be
  * used in areas of the UI that have more space available to them.
  */
 const Selection = createClass({
@@ -71,6 +71,16 @@ const Selection = createClass({
 		 */
 		isRemovable: bool,
 		/**
+		 * Gives the selection a background. This is desirable when you only have
+		 * one level of nested selections.
+		 */
+		hasBackground: bool,
+		/**
+		 * Make the content text bold. This is desirable when you only have
+		 * one level of nested selections.
+		 */
+		isBold: bool,
+		/**
 		 * Called when the close button is clicked.
 		 *
 		 * Signature: `({ props, event }) => {}`
@@ -96,6 +106,8 @@ const Selection = createClass({
 			kind: 'default',
 			isRemovable: true,
 			onRemove: _.noop,
+			hasBackground: false,
+			isBold: false,
 		};
 	},
 
@@ -105,6 +117,8 @@ const Selection = createClass({
 			kind,
 			isRemovable,
 			children,
+			hasBackground,
+			isBold,
 			...passThroughs
 		} = this.props;
 
@@ -124,15 +138,14 @@ const Selection = createClass({
 			<div
 				{...omitProps(passThroughs, Selection)}
 				className={cx('&', kind && `&-${kind}`, {
-					'&-has-nested-selections': !_.isEmpty(selectionChildren),
+					'&-has-background': hasBackground,
+					'&-is-bold': isBold,
 				}, className)}
 			>
 				{icon}
 
 				<div className={cx('&-content')}>
 					<div className={cx('&-label-container')}>
-						foo
-
 						<span
 							{...labelProps}
 							className={cx('&-label')}

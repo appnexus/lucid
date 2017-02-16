@@ -10,7 +10,11 @@
 	padding-left: @size-S;
 	margin-bottom: @size-XS;
 
-	&-has-nested-selections {
+	&-is-bold {
+		.bold();
+	}
+
+	&-has-background {
 		background-color: @color-backgroundColor;
 	}
 
@@ -49,6 +53,7 @@
 
 	&-label {
 		flex: 1;
+		margin: @size-XS 0;
 	}
 
 	&-close-button {
@@ -74,6 +79,11 @@
 
 		& > .lucid-Selection {
 			margin-right: @size-XS;
+			margin-bottom: @size-XXS;
+		}
+
+		& > .lucid-Selection:last-of-type {
+			margin-bottom: @size-S;
 		}
 	}
 
