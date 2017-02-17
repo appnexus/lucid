@@ -2382,7 +2382,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Th
           align="left"
           hasBorderLeft={true}
-          isResizable={false}
+          isResizable={true}
           isSortable={true}
           isSorted={false}
           onClick={[Function]}
@@ -2398,7 +2398,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Th
           align="left"
           hasBorderRight={true}
-          isResizable={false}
+          isResizable={true}
           isSortable={true}
           isSorted={false}
           onClick={[Function]}
