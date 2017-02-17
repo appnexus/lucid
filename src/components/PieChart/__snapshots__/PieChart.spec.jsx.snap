@@ -1690,12 +1690,12 @@ exports[`PieChart [common] example testing should match snapshot(s) for 4.color-
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-2"
-              d="M-52.9006727063226,72.81152949374525A90,90,0,0,1,-72.81152949374527,52.900672706322595L-0.4045084971874737,0.2938926261462366A0.5,0.5,0,0,0,-0.2938926261462367,0.4045084971874736Z"
+              d="M-52.9006727063226,72.81152949374525A90,90,0,0,1,-72.81152949374525,52.900672706322595L-0.40450849718747367,0.2938926261462366A0.5,0.5,0,0,0,-0.2938926261462367,0.4045084971874736Z"
               isDotted={false}
               transform="scale(1)" />
             <path
               className="lucid-PieChart-slice-hover"
-              d="M-52.9006727063226,72.81152949374525A90,90,0,0,1,-72.81152949374527,52.900672706322595L0,0Z"
+              d="M-52.9006727063226,72.81152949374525A90,90,0,0,1,-72.81152949374525,52.900672706322595L0,0Z"
               onMouseOut={[Function]}
               onMouseOver={[Function]}
               transform="scale(1.1)" />
@@ -1705,12 +1705,12 @@ exports[`PieChart [common] example testing should match snapshot(s) for 4.color-
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-3"
-              d="M-72.81152949374527,52.900672706322595A90,90,0,0,1,-85.59508646656383,-27.811529493745255L-0.4755282581475768,-0.15450849718747364A0.5,0.5,0,0,0,-0.4045084971874737,0.2938926261462366Z"
+              d="M-72.81152949374525,52.900672706322595A90,90,0,0,1,-85.59508646656383,-27.811529493745255L-0.4755282581475768,-0.15450849718747364A0.5,0.5,0,0,0,-0.40450849718747367,0.2938926261462366Z"
               isDotted={false}
               transform="scale(1)" />
             <path
               className="lucid-PieChart-slice-hover"
-              d="M-72.81152949374527,52.900672706322595A90,90,0,0,1,-85.59508646656383,-27.811529493745255L0,0Z"
+              d="M-72.81152949374525,52.900672706322595A90,90,0,0,1,-85.59508646656383,-27.811529493745255L0,0Z"
               onMouseOut={[Function]}
               onMouseOver={[Function]}
               transform="scale(1.1)" />
