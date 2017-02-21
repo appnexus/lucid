@@ -1,13 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`ButtonGroup [common] example testing should match snapshot(s) for stateful 1`] = `
 <span
-  className="lucid-ButtonGroup">
+  className="lucid-ButtonGroup"
+>
   <Button
     callbackId={0}
     hasOnlyIcon={false}
     isActive={false}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     Zero
   </Button>
   <Button
@@ -16,7 +20,8 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
     isActive={false}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     One
   </Button>
   <Button
@@ -25,7 +30,8 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
     isActive={false}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     Two
   </Button>
   <Button
@@ -34,7 +40,8 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
     isActive={false}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     Three
   </Button>
   <ButtonGroup.Button>
@@ -54,14 +61,16 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
 
 exports[`ButtonGroup [common] example testing should match snapshot(s) for stateless 1`] = `
 <span
-  className="lucid-ButtonGroup">
+  className="lucid-ButtonGroup"
+>
   <Button
     callbackId={0}
     hasOnlyIcon={false}
     isActive={false}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     Zero
   </Button>
   <Button
@@ -70,7 +79,8 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
     isActive={false}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     One
   </Button>
   <Button
@@ -79,7 +89,8 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
     isActive={false}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     Two
   </Button>
   <Button
@@ -88,7 +99,8 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
     isActive={false}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     Three
   </Button>
   <Button
@@ -97,7 +109,8 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
     isActive={false}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     Four
   </Button>
   <Button
@@ -106,7 +119,8 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
     isActive={false}
     isDisabled={true}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     Five
   </Button>
   <Button
@@ -115,7 +129,8 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
     isActive={false}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     Six
   </Button>
   <Button
@@ -124,7 +139,8 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
     isActive={true}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     Seven
   </Button>
   <Button
@@ -133,7 +149,8 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
     isActive={true}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     Eight
   </Button>
   <Button
@@ -142,7 +159,8 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
     isActive={false}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     Nine
   </Button>
   <ButtonGroup.Button>
@@ -161,7 +179,8 @@ exports[`ButtonGroup [common] example testing should match snapshot(s) for state
     Four
   </ButtonGroup.Button>
   <ButtonGroup.Button
-    isDisabled={true}>
+    isDisabled={true}
+  >
     Five
   </ButtonGroup.Button>
   <ButtonGroup.Button>

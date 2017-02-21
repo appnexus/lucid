@@ -1,403 +1,463 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Points [common] example testing should match snapshot(s) for basic 1`] = `
 <g
-  className="lucid-Points">
+  className="lucid-Points"
+>
   <Point
     color="color-chart-0"
     hasStroke={true}
     kind={0}
     scale={1}
     x={0}
-    y={162.85714285714286} />
+    y={162.85714285714286}
+  />
   <Point
     color="color-chart-0"
     hasStroke={true}
     kind={0}
     scale={1}
     x={163.33333333333334}
-    y={217.14285714285714} />
+    y={217.14285714285714}
+  />
   <Point
     color="color-chart-0"
     hasStroke={true}
     kind={0}
     scale={1}
     x={326.6666666666667}
-    y={271.42857142857144} />
+    y={271.42857142857144}
+  />
   <Point
     color="color-chart-0"
     hasStroke={true}
     kind={0}
     scale={1}
     x={490}
-    y={325.7142857142857} />
+    y={325.7142857142857}
+  />
   <Point
     color="color-chart-0"
     hasStroke={true}
     kind={0}
     scale={1}
     x={653.3333333333334}
-    y={271.42857142857144} />
+    y={271.42857142857144}
+  />
   <Point
     color="color-chart-0"
     hasStroke={true}
     kind={0}
     scale={1}
     x={816.6666666666667}
-    y={217.14285714285714} />
+    y={217.14285714285714}
+  />
   <Point
     color="color-chart-0"
     hasStroke={true}
     kind={0}
     scale={1}
     x={980}
-    y={162.85714285714286} />
+    y={162.85714285714286}
+  />
   <Point
     color="color-chart-1"
     hasStroke={true}
     kind={1}
     scale={1}
     x={0}
-    y={108.57142857142856} />
+    y={108.57142857142856}
+  />
   <Point
     color="color-chart-1"
     hasStroke={true}
     kind={1}
     scale={1}
     x={163.33333333333334}
-    y={162.85714285714286} />
+    y={162.85714285714286}
+  />
   <Point
     color="color-chart-1"
     hasStroke={true}
     kind={1}
     scale={1}
     x={326.6666666666667}
-    y={217.14285714285714} />
+    y={217.14285714285714}
+  />
   <Point
     color="color-chart-1"
     hasStroke={true}
     kind={1}
     scale={1}
     x={490}
-    y={271.42857142857144} />
+    y={271.42857142857144}
+  />
   <Point
     color="color-chart-1"
     hasStroke={true}
     kind={1}
     scale={1}
     x={653.3333333333334}
-    y={217.14285714285714} />
+    y={217.14285714285714}
+  />
   <Point
     color="color-chart-1"
     hasStroke={true}
     kind={1}
     scale={1}
     x={816.6666666666667}
-    y={162.85714285714286} />
+    y={162.85714285714286}
+  />
   <Point
     color="color-chart-1"
     hasStroke={true}
     kind={1}
     scale={1}
     x={980}
-    y={108.57142857142856} />
+    y={108.57142857142856}
+  />
   <Point
     color="color-chart-2"
     hasStroke={true}
     kind={2}
     scale={1}
     x={0}
-    y={54.28571428571428} />
+    y={54.28571428571428}
+  />
   <Point
     color="color-chart-2"
     hasStroke={true}
     kind={2}
     scale={1}
     x={163.33333333333334}
-    y={108.57142857142856} />
+    y={108.57142857142856}
+  />
   <Point
     color="color-chart-2"
     hasStroke={true}
     kind={2}
     scale={1}
     x={326.6666666666667}
-    y={162.85714285714286} />
+    y={162.85714285714286}
+  />
   <Point
     color="color-chart-2"
     hasStroke={true}
     kind={2}
     scale={1}
     x={490}
-    y={217.14285714285714} />
+    y={217.14285714285714}
+  />
   <Point
     color="color-chart-2"
     hasStroke={true}
     kind={2}
     scale={1}
     x={653.3333333333334}
-    y={162.85714285714286} />
+    y={162.85714285714286}
+  />
   <Point
     color="color-chart-2"
     hasStroke={true}
     kind={2}
     scale={1}
     x={816.6666666666667}
-    y={108.57142857142856} />
+    y={108.57142857142856}
+  />
   <Point
     color="color-chart-2"
     hasStroke={true}
     kind={2}
     scale={1}
     x={980}
-    y={54.28571428571428} />
+    y={54.28571428571428}
+  />
   <Point
     color="color-chart-3"
     hasStroke={true}
     kind={3}
     scale={1}
     x={0}
-    y={0} />
+    y={0}
+  />
   <Point
     color="color-chart-3"
     hasStroke={true}
     kind={3}
     scale={1}
     x={163.33333333333334}
-    y={54.28571428571428} />
+    y={54.28571428571428}
+  />
   <Point
     color="color-chart-3"
     hasStroke={true}
     kind={3}
     scale={1}
     x={326.6666666666667}
-    y={108.57142857142856} />
+    y={108.57142857142856}
+  />
   <Point
     color="color-chart-3"
     hasStroke={true}
     kind={3}
     scale={1}
     x={490}
-    y={162.85714285714286} />
+    y={162.85714285714286}
+  />
   <Point
     color="color-chart-3"
     hasStroke={true}
     kind={3}
     scale={1}
     x={653.3333333333334}
-    y={108.57142857142856} />
+    y={108.57142857142856}
+  />
   <Point
     color="color-chart-3"
     hasStroke={true}
     kind={3}
     scale={1}
     x={816.6666666666667}
-    y={54.28571428571428} />
+    y={54.28571428571428}
+  />
   <Point
     color="color-chart-3"
     hasStroke={true}
     kind={3}
     scale={1}
     x={980}
-    y={0} />
+    y={0}
+  />
 </g>
 `;
 
 exports[`Points [common] example testing should match snapshot(s) for custom-colors 1`] = `
 <g
-  className="lucid-Points">
+  className="lucid-Points"
+>
   <Point
     color="color-chart-bad"
     hasStroke={true}
     kind={0}
     scale={1}
     x={0}
-    y={162.85714285714286} />
+    y={162.85714285714286}
+  />
   <Point
     color="color-chart-bad"
     hasStroke={true}
     kind={0}
     scale={1}
     x={163.33333333333334}
-    y={217.14285714285714} />
+    y={217.14285714285714}
+  />
   <Point
     color="color-chart-bad"
     hasStroke={true}
     kind={0}
     scale={1}
     x={326.6666666666667}
-    y={271.42857142857144} />
+    y={271.42857142857144}
+  />
   <Point
     color="color-chart-bad"
     hasStroke={true}
     kind={0}
     scale={1}
     x={490}
-    y={325.7142857142857} />
+    y={325.7142857142857}
+  />
   <Point
     color="color-chart-bad"
     hasStroke={true}
     kind={0}
     scale={1}
     x={653.3333333333334}
-    y={271.42857142857144} />
+    y={271.42857142857144}
+  />
   <Point
     color="color-chart-bad"
     hasStroke={true}
     kind={0}
     scale={1}
     x={816.6666666666667}
-    y={217.14285714285714} />
+    y={217.14285714285714}
+  />
   <Point
     color="color-chart-bad"
     hasStroke={true}
     kind={0}
     scale={1}
     x={980}
-    y={162.85714285714286} />
+    y={162.85714285714286}
+  />
   <Point
     color="color-chart-good"
     hasStroke={true}
     kind={1}
     scale={1}
     x={0}
-    y={108.57142857142856} />
+    y={108.57142857142856}
+  />
   <Point
     color="color-chart-good"
     hasStroke={true}
     kind={1}
     scale={1}
     x={163.33333333333334}
-    y={162.85714285714286} />
+    y={162.85714285714286}
+  />
   <Point
     color="color-chart-good"
     hasStroke={true}
     kind={1}
     scale={1}
     x={326.6666666666667}
-    y={217.14285714285714} />
+    y={217.14285714285714}
+  />
   <Point
     color="color-chart-good"
     hasStroke={true}
     kind={1}
     scale={1}
     x={490}
-    y={271.42857142857144} />
+    y={271.42857142857144}
+  />
   <Point
     color="color-chart-good"
     hasStroke={true}
     kind={1}
     scale={1}
     x={653.3333333333334}
-    y={217.14285714285714} />
+    y={217.14285714285714}
+  />
   <Point
     color="color-chart-good"
     hasStroke={true}
     kind={1}
     scale={1}
     x={816.6666666666667}
-    y={162.85714285714286} />
+    y={162.85714285714286}
+  />
   <Point
     color="color-chart-good"
     hasStroke={true}
     kind={1}
     scale={1}
     x={980}
-    y={108.57142857142856} />
+    y={108.57142857142856}
+  />
   <Point
     color="#ff8800"
     hasStroke={true}
     kind={2}
     scale={1}
     x={0}
-    y={54.28571428571428} />
+    y={54.28571428571428}
+  />
   <Point
     color="#ff8800"
     hasStroke={true}
     kind={2}
     scale={1}
     x={163.33333333333334}
-    y={108.57142857142856} />
+    y={108.57142857142856}
+  />
   <Point
     color="#ff8800"
     hasStroke={true}
     kind={2}
     scale={1}
     x={326.6666666666667}
-    y={162.85714285714286} />
+    y={162.85714285714286}
+  />
   <Point
     color="#ff8800"
     hasStroke={true}
     kind={2}
     scale={1}
     x={490}
-    y={217.14285714285714} />
+    y={217.14285714285714}
+  />
   <Point
     color="#ff8800"
     hasStroke={true}
     kind={2}
     scale={1}
     x={653.3333333333334}
-    y={162.85714285714286} />
+    y={162.85714285714286}
+  />
   <Point
     color="#ff8800"
     hasStroke={true}
     kind={2}
     scale={1}
     x={816.6666666666667}
-    y={108.57142857142856} />
+    y={108.57142857142856}
+  />
   <Point
     color="#ff8800"
     hasStroke={true}
     kind={2}
     scale={1}
     x={980}
-    y={54.28571428571428} />
+    y={54.28571428571428}
+  />
   <Point
     color="#abc123"
     hasStroke={true}
     kind={3}
     scale={1}
     x={0}
-    y={0} />
+    y={0}
+  />
   <Point
     color="#abc123"
     hasStroke={true}
     kind={3}
     scale={1}
     x={163.33333333333334}
-    y={54.28571428571428} />
+    y={54.28571428571428}
+  />
   <Point
     color="#abc123"
     hasStroke={true}
     kind={3}
     scale={1}
     x={326.6666666666667}
-    y={108.57142857142856} />
+    y={108.57142857142856}
+  />
   <Point
     color="#abc123"
     hasStroke={true}
     kind={3}
     scale={1}
     x={490}
-    y={162.85714285714286} />
+    y={162.85714285714286}
+  />
   <Point
     color="#abc123"
     hasStroke={true}
     kind={3}
     scale={1}
     x={653.3333333333334}
-    y={108.57142857142856} />
+    y={108.57142857142856}
+  />
   <Point
     color="#abc123"
     hasStroke={true}
     kind={3}
     scale={1}
     x={816.6666666666667}
-    y={54.28571428571428} />
+    y={54.28571428571428}
+  />
   <Point
     color="#abc123"
     hasStroke={true}
     kind={3}
     scale={1}
     x={980}
-    y={0} />
+    y={0}
+  />
 </g>
 `;

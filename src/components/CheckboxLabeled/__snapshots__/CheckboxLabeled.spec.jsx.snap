@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`CheckboxLabeled [common] example testing should match snapshot(s) for interactive 1`] = `
 <label
   className="lucid-CheckboxLabeled"
@@ -5,20 +7,23 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for i
     Object {
       "marginBottom": "3px",
     }
-  }>
+  }
+>
   <Checkbox
     className="lucid-CheckboxLabeled-Checkbox"
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
     name="interactive-checkboxes"
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <CheckboxLabeled.Label>
       Vanilla
     </CheckboxLabeled.Label>
   </Checkbox>
   <div
-    className="lucid-CheckboxLabeled-label">
+    className="lucid-CheckboxLabeled-label"
+  >
     Vanilla
   </div>
 </label>
@@ -31,20 +36,23 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for i
     Object {
       "marginBottom": "3px",
     }
-  }>
+  }
+>
   <Checkbox
     className="lucid-CheckboxLabeled-Checkbox"
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
     name="interactive-checkboxes"
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <CheckboxLabeled.Label>
       Chocolate
     </CheckboxLabeled.Label>
   </Checkbox>
   <div
-    className="lucid-CheckboxLabeled-label">
+    className="lucid-CheckboxLabeled-label"
+  >
     Chocolate
   </div>
 </label>
@@ -57,20 +65,23 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for i
     Object {
       "marginBottom": "3px",
     }
-  }>
+  }
+>
   <Checkbox
     className="lucid-CheckboxLabeled-Checkbox"
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
     name="interactive-checkboxes"
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <CheckboxLabeled.Label>
       Strawberry
     </CheckboxLabeled.Label>
   </Checkbox>
   <div
-    className="lucid-CheckboxLabeled-label">
+    className="lucid-CheckboxLabeled-label"
+  >
     Strawberry
   </div>
 </label>
@@ -83,20 +94,23 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for i
     Object {
       "marginBottom": "3px",
     }
-  }>
+  }
+>
   <Checkbox
     className="lucid-CheckboxLabeled-Checkbox"
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
     name="interactive-checkboxes"
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <CheckboxLabeled.Label>
       Polaroid four dollar toast bespoke succulents. Kickstarter truffaut PBR&B fashion axe, lyft actually viral everyday carry iPhone tote bag mumblecore umami. Skateboard you probably haven't heard of them before they sold out, edison bulb paleo poutine jianbing blue bottle mixtape. Normcore farm-to-table coloring book cliche before they sold out. Roof party authentic hoodie paleo next level, bicycle rights selvage you probably haven't heard of them leggings venmo etsy cronut williamsburg. Dreamcatcher vice gastropub austin fam. Actually subway tile kickstarter, messenger bag shabby chic activated charcoal lomo.
     </CheckboxLabeled.Label>
   </Checkbox>
   <div
-    className="lucid-CheckboxLabeled-label">
+    className="lucid-CheckboxLabeled-label"
+  >
     Polaroid four dollar toast bespoke succulents. Kickstarter truffaut PBR&B fashion axe, lyft actually viral everyday carry iPhone tote bag mumblecore umami. Skateboard you probably haven't heard of them before they sold out, edison bulb paleo poutine jianbing blue bottle mixtape. Normcore farm-to-table coloring book cliche before they sold out. Roof party authentic hoodie paleo next level, bicycle rights selvage you probably haven't heard of them leggings venmo etsy cronut williamsburg. Dreamcatcher vice gastropub austin fam. Actually subway tile kickstarter, messenger bag shabby chic activated charcoal lomo.
   </div>
 </label>
@@ -109,20 +123,23 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for i
     Object {
       "marginBottom": "3px",
     }
-  }>
+  }
+>
   <Checkbox
     className="lucid-CheckboxLabeled-Checkbox"
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
     name="interactive-checkboxes"
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <CheckboxLabeled.Label>
       Unicorn helvetica glossier pop-up letterpress snackwave raw denim. Lomo blog tattooed helvetica seitan DIY. Tbh kombucha shabby chic cornhole, microdosing seitan snackwave gastropub celiac. Biodiesel 90's fixie drinking vinegar literally unicorn readymade fap, vape wolf direct trade kickstarter pickled disrupt fashion axe. Heirloom subway tile hell of, austin portland meditation PBR&B tacos raclette. Prism fanny pack banh mi trust fund unicorn, thundercats chicharrones salvia pour-over VHS. Distillery organic pork belly squid.
     </CheckboxLabeled.Label>
   </Checkbox>
   <div
-    className="lucid-CheckboxLabeled-label">
+    className="lucid-CheckboxLabeled-label"
+  >
     Unicorn helvetica glossier pop-up letterpress snackwave raw denim. Lomo blog tattooed helvetica seitan DIY. Tbh kombucha shabby chic cornhole, microdosing seitan snackwave gastropub celiac. Biodiesel 90's fixie drinking vinegar literally unicorn readymade fap, vape wolf direct trade kickstarter pickled disrupt fashion axe. Heirloom subway tile hell of, austin portland meditation PBR&B tacos raclette. Prism fanny pack banh mi trust fund unicorn, thundercats chicharrones salvia pour-over VHS. Distillery organic pork belly squid.
   </div>
 </label>
@@ -135,20 +152,23 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for i
     Object {
       "marginBottom": "3px",
     }
-  }>
+  }
+>
   <Checkbox
     className="lucid-CheckboxLabeled-Checkbox"
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
     name="interactive-checkboxes"
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <CheckboxLabeled.Label>
       Heirloom keffiyeh schlitz cray. Keytar tumblr dreamcatcher art party polaroid, sriracha etsy pinterest typewriter. IPhone ugh williamsburg man bun waistcoat literally paleo direct trade. Taxidermy cold-pressed pabst green juice, freegan tumblr post-ironic everyday carry disrupt distillery. Hell of lumbersexual cliche, whatever tilde raclette pop-up blue bottle skateboard butcher meditation four dollar toast tattooed health goth pinterest. Poutine polaroid YOLO, biodiesel chambray gentrify microdosing kickstarter bushwick humblebrag yr cred intelligentsia you probably haven't heard of them. Blog meditation locavore tousled, edison bulb cronut occupy +1 you probably haven't heard of them echo park distillery chambray.
     </CheckboxLabeled.Label>
   </Checkbox>
   <div
-    className="lucid-CheckboxLabeled-label">
+    className="lucid-CheckboxLabeled-label"
+  >
     Heirloom keffiyeh schlitz cray. Keytar tumblr dreamcatcher art party polaroid, sriracha etsy pinterest typewriter. IPhone ugh williamsburg man bun waistcoat literally paleo direct trade. Taxidermy cold-pressed pabst green juice, freegan tumblr post-ironic everyday carry disrupt distillery. Hell of lumbersexual cliche, whatever tilde raclette pop-up blue bottle skateboard butcher meditation four dollar toast tattooed health goth pinterest. Poutine polaroid YOLO, biodiesel chambray gentrify microdosing kickstarter bushwick humblebrag yr cred intelligentsia you probably haven't heard of them. Blog meditation locavore tousled, edison bulb cronut occupy +1 you probably haven't heard of them echo park distillery chambray.
   </div>
 </label>
@@ -161,19 +181,22 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for l
     Object {
       "marginBottom": "3px",
     }
-  }>
+  }
+>
   <Checkbox
     className="lucid-CheckboxLabeled-Checkbox"
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <CheckboxLabeled.Label>
       Just text
     </CheckboxLabeled.Label>
   </Checkbox>
   <div
-    className="lucid-CheckboxLabeled-label">
+    className="lucid-CheckboxLabeled-label"
+  >
     Just text
   </div>
 </label>
@@ -186,13 +209,15 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for l
     Object {
       "marginBottom": "3px",
     }
-  }>
+  }
+>
   <Checkbox
     className="lucid-CheckboxLabeled-Checkbox"
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <CheckboxLabeled.Label>
       <span>
         HTML element
@@ -200,7 +225,8 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for l
     </CheckboxLabeled.Label>
   </Checkbox>
   <div
-    className="lucid-CheckboxLabeled-label">
+    className="lucid-CheckboxLabeled-label"
+  >
     <span>
       HTML element
     </span>
@@ -215,15 +241,18 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for l
     Object {
       "marginRight": "5px",
     }
-  }>
+  }
+>
   <Checkbox
     className="lucid-CheckboxLabeled-Checkbox"
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
-    onSelect={[Function]} />
+    onSelect={[Function]}
+  />
   <div
-    className="lucid-CheckboxLabeled-label">
+    className="lucid-CheckboxLabeled-label"
+  >
     Just text
   </div>
 </label>
@@ -236,15 +265,18 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for l
     Object {
       "marginRight": "5px",
     }
-  }>
+  }
+>
   <Checkbox
     className="lucid-CheckboxLabeled-Checkbox"
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
-    onSelect={[Function]} />
+    onSelect={[Function]}
+  />
   <div
-    className="lucid-CheckboxLabeled-label">
+    className="lucid-CheckboxLabeled-label"
+  >
     <span>
       HTML element
     </span>
@@ -259,15 +291,18 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for l
     Object {
       "marginRight": "5px",
     }
-  }>
+  }
+>
   <Checkbox
     className="lucid-CheckboxLabeled-Checkbox"
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
-    onSelect={[Function]} />
+    onSelect={[Function]}
+  />
   <div
-    className="lucid-CheckboxLabeled-label">
+    className="lucid-CheckboxLabeled-label"
+  >
     Text in an array
   </div>
 </label>
@@ -280,15 +315,18 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for l
     Object {
       "marginRight": "5px",
     }
-  }>
+  }
+>
   <Checkbox
     className="lucid-CheckboxLabeled-Checkbox"
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
-    onSelect={[Function]} />
+    onSelect={[Function]}
+  />
   <div
-    className="lucid-CheckboxLabeled-label">
+    className="lucid-CheckboxLabeled-label"
+  >
     <span>
       HTML element in an array
     </span>
@@ -304,19 +342,22 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for s
       "marginBottom": "3px",
       "marginRight": "13px",
     }
-  }>
+  }
+>
   <Checkbox
     className="lucid-CheckboxLabeled-Checkbox"
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <CheckboxLabeled.Label>
       (default props)
     </CheckboxLabeled.Label>
   </Checkbox>
   <div
-    className="lucid-CheckboxLabeled-label">
+    className="lucid-CheckboxLabeled-label"
+  >
     (default props)
   </div>
 </label>
@@ -330,19 +371,22 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for s
       "marginBottom": "3px",
       "marginRight": "13px",
     }
-  }>
+  }
+>
   <Checkbox
     className="lucid-CheckboxLabeled-Checkbox"
     isDisabled={true}
     isIndeterminate={false}
     isSelected={false}
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <CheckboxLabeled.Label>
       Disabled
     </CheckboxLabeled.Label>
   </Checkbox>
   <div
-    className="lucid-CheckboxLabeled-label">
+    className="lucid-CheckboxLabeled-label"
+  >
     Disabled
   </div>
 </label>
@@ -356,19 +400,22 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for s
       "marginBottom": "3px",
       "marginRight": "13px",
     }
-  }>
+  }
+>
   <Checkbox
     className="lucid-CheckboxLabeled-Checkbox"
     isDisabled={false}
     isIndeterminate={false}
     isSelected={true}
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <CheckboxLabeled.Label>
       Selected
     </CheckboxLabeled.Label>
   </Checkbox>
   <div
-    className="lucid-CheckboxLabeled-label">
+    className="lucid-CheckboxLabeled-label"
+  >
     Selected
   </div>
 </label>
@@ -382,19 +429,22 @@ exports[`CheckboxLabeled [common] example testing should match snapshot(s) for s
       "marginBottom": "3px",
       "marginRight": "13px",
     }
-  }>
+  }
+>
   <Checkbox
     className="lucid-CheckboxLabeled-Checkbox"
     isDisabled={true}
     isIndeterminate={false}
     isSelected={true}
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <CheckboxLabeled.Label>
       Disabled & selected
     </CheckboxLabeled.Label>
   </Checkbox>
   <div
-    className="lucid-CheckboxLabeled-label">
+    className="lucid-CheckboxLabeled-label"
+  >
     Disabled & selected
   </div>
 </label>

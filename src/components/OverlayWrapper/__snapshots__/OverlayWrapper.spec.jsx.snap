@@ -1,6 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.default 1`] = `
 <div
-  className="lucid-OverlayWrapper">
+  className="lucid-OverlayWrapper"
+>
   <BarChart
     data={
       Array [
@@ -59,16 +62,19 @@ exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.
     yAxisTickCount={null}
     yAxisTitle={null}
     yAxisTitleColor="#000"
-    yAxisTooltipFormatter={[Function]} />
+    yAxisTooltipFormatter={[Function]}
+  />
   <ReactCSSTransitionGroup
     transitionAppear={false}
     transitionEnter={true}
     transitionEnterTimeout={300}
     transitionLeave={true}
     transitionLeaveTimeout={300}
-    transitionName="lucid-OverlayWrapper-message-container">
+    transitionName="lucid-OverlayWrapper-message-container"
+  >
     <div
-      className="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light">
+      className="lucid-OverlayWrapper-message-container lucid-OverlayWrapper-has-overlay lucid-OverlayWrapper-kind-light"
+    >
       <div>
         Message Goes Here
       </div>

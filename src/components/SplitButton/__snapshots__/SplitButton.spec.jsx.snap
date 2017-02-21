@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 1`] = `
 <DropMenu
   alignment="start"
@@ -22,19 +24,22 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     Object {
       "marginRight": "20px",
     }
-  }>
+  }
+>
   <DropMenu.Control>
     <ButtonGroup
       className={null}
       onSelect={[Function]}
-      selectedIndices={Array []}>
+      selectedIndices={Array []}
+    >
       <Button
         className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         Primary
       </Button>
       <Button
@@ -43,25 +48,29 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         isActive={false}
         isDisabled={false}
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         <CaretIcon
           className="lucid-SplitButton-CaretIcon"
           direction="down"
           size={8}
-          viewBox="0 3 16 8" />
+          viewBox="0 3 16 8"
+        />
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     One
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -91,12 +100,14 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     Object {
       "marginRight": "20px",
     }
-  }>
+  }
+>
   <DropMenu.Control>
     <ButtonGroup
       className={null}
       onSelect={[Function]}
-      selectedIndices={Array []}>
+      selectedIndices={Array []}
+    >
       <Button
         className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
@@ -104,7 +115,8 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         isDisabled={false}
         kind="primary"
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         Primary
       </Button>
       <Button
@@ -114,25 +126,29 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         isDisabled={false}
         kind="primary"
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         <CaretIcon
           className="lucid-SplitButton-CaretIcon"
           direction="down"
           size={8}
-          viewBox="0 3 16 8" />
+          viewBox="0 3 16 8"
+        />
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     One
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -162,12 +178,14 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     Object {
       "marginRight": "20px",
     }
-  }>
+  }
+>
   <DropMenu.Control>
     <ButtonGroup
       className={null}
       onSelect={[Function]}
-      selectedIndices={Array []}>
+      selectedIndices={Array []}
+    >
       <Button
         className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
@@ -175,7 +193,8 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         isDisabled={false}
         kind="success"
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         Success
       </Button>
       <Button
@@ -185,25 +204,29 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         isDisabled={false}
         kind="success"
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         <CaretIcon
           className="lucid-SplitButton-CaretIcon"
           direction="down"
           size={8}
-          viewBox="0 3 16 8" />
+          viewBox="0 3 16 8"
+        />
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     One
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -233,12 +256,14 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     Object {
       "marginRight": "20px",
     }
-  }>
+  }
+>
   <DropMenu.Control>
     <ButtonGroup
       className={null}
       onSelect={[Function]}
-      selectedIndices={Array []}>
+      selectedIndices={Array []}
+    >
       <Button
         className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
@@ -246,7 +271,8 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         isDisabled={false}
         kind="warning"
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         Warning
       </Button>
       <Button
@@ -256,25 +282,29 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         isDisabled={false}
         kind="warning"
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         <CaretIcon
           className="lucid-SplitButton-CaretIcon"
           direction="down"
           size={8}
-          viewBox="0 3 16 8" />
+          viewBox="0 3 16 8"
+        />
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     One
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -304,12 +334,14 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     Object {
       "marginRight": "20px",
     }
-  }>
+  }
+>
   <DropMenu.Control>
     <ButtonGroup
       className={null}
       onSelect={[Function]}
-      selectedIndices={Array []}>
+      selectedIndices={Array []}
+    >
       <Button
         className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
@@ -317,7 +349,8 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         isDisabled={false}
         kind="danger"
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         Danger
       </Button>
       <Button
@@ -327,25 +360,29 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         isDisabled={false}
         kind="danger"
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         <CaretIcon
           className="lucid-SplitButton-CaretIcon"
           direction="down"
           size={8}
-          viewBox="0 3 16 8" />
+          viewBox="0 3 16 8"
+        />
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     One
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -375,12 +412,14 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     Object {
       "marginRight": "20px",
     }
-  }>
+  }
+>
   <DropMenu.Control>
     <ButtonGroup
       className={null}
       onSelect={[Function]}
-      selectedIndices={Array []}>
+      selectedIndices={Array []}
+    >
       <Button
         className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
@@ -388,7 +427,8 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         isDisabled={false}
         kind="info"
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         Info
       </Button>
       <Button
@@ -398,25 +438,29 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         isDisabled={false}
         kind="info"
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         <CaretIcon
           className="lucid-SplitButton-CaretIcon"
           direction="down"
           size={8}
-          viewBox="0 3 16 8" />
+          viewBox="0 3 16 8"
+        />
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     One
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Two
   </DropMenu.Option>
 </DropMenu>
@@ -446,12 +490,14 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
     Object {
       "height": 100,
     }
-  }>
+  }
+>
   <DropMenu.Control>
     <ButtonGroup
       className={null}
       onSelect={[Function]}
-      selectedIndices={Array []}>
+      selectedIndices={Array []}
+    >
       <Button
         className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
@@ -459,7 +505,8 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
         isDisabled={false}
         kind="success"
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         Save
       </Button>
       <Button
@@ -469,31 +516,36 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
         isDisabled={false}
         kind="success"
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         <CaretIcon
           className="lucid-SplitButton-CaretIcon"
           direction="down"
           size={8}
-          viewBox="0 3 16 8" />
+          viewBox="0 3 16 8"
+        />
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Action 01
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Here's Another Action
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     And Another Action
   </DropMenu.Option>
 </DropMenu>
@@ -523,19 +575,22 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
     Object {
       "height": 100,
     }
-  }>
+  }
+>
   <DropMenu.Control>
     <ButtonGroup
       className={null}
       onSelect={[Function]}
-      selectedIndices={Array []}>
+      selectedIndices={Array []}
+    >
       <Button
         className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={true}
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         Save
       </Button>
       <Button
@@ -544,31 +599,36 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
         isActive={false}
         isDisabled={false}
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         <CaretIcon
           className="lucid-SplitButton-CaretIcon"
           direction="down"
           size={8}
-          viewBox="0 3 16 8" />
+          viewBox="0 3 16 8"
+        />
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     This action should be disabled
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     This one should be enabled
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     This should be disabled, too
   </DropMenu.Option>
 </DropMenu>
@@ -598,12 +658,14 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
     Object {
       "height": 100,
     }
-  }>
+  }
+>
   <DropMenu.Control>
     <ButtonGroup
       className={null}
       onSelect={[Function]}
-      selectedIndices={Array []}>
+      selectedIndices={Array []}
+    >
       <Button
         className="lucid-SplitButton-Button-primary"
         hasOnlyIcon={false}
@@ -611,7 +673,8 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
         isDisabled={false}
         kind="success"
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         Save
       </Button>
       <Button
@@ -621,31 +684,36 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
         isDisabled={false}
         kind="success"
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         <CaretIcon
           className="lucid-SplitButton-CaretIcon"
           direction="up"
           size={8}
-          viewBox="0 3 16 8" />
+          viewBox="0 3 16 8"
+        />
       </Button>
     </ButtonGroup>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Action 01
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Here's Another Action
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     And Another Action
   </DropMenu.Option>
 </DropMenu>
