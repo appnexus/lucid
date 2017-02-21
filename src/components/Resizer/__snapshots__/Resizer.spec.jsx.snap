@@ -4,9 +4,11 @@ exports[`Resizer [common] example testing should match snapshot(s) for basic 1`]
   <div>
     <div>
       Width: 
+      0
     </div>
     <div>
       Height: 
+      0
     </div>
   </div>
 </div>
@@ -32,15 +34,17 @@ exports[`Resizer [common] example testing should match snapshot(s) for with-flex
     <div>
       When using Resizer within a flexed container, its critical to add 
       <code>
-        flexGrow: 1, overflow: 'hidden'
+        flexGrow: 1, overflow: \'hidden\'
       </code>
        to its styles so it will behave correctly.
     </div>
     <div>
       Width: 
+      0
     </div>
     <div>
       Height: 
+      0
     </div>
   </div>
 </div>
