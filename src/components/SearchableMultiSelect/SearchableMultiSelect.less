@@ -1,0 +1,27 @@
+.lucid-SearchableMultiSelect {
+	// Increase specificity to minimum necessary to beat DropMenu
+	&-DropMenu&-DropMenu&-DropMenu {
+		display: block;
+	}
+
+	.lucid-ContextMenu {
+		display: block;
+	}
+
+	&-search {
+		margin-bottom: @size-standard;
+
+		.lucid-TextField {
+			font-size: 16px;
+		}
+	}
+
+	&-checkbox {
+		display: flex;
+		align-items: center;
+	}
+	&-checkbox-label {
+		margin-left: @size-XXS;
+	}
+
+}

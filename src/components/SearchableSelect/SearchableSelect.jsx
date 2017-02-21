@@ -2,7 +2,10 @@ import React from 'react';
 import _ from 'lodash';
 import { createClass, findTypes, getFirst } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { partitionText } from '../../util/text-manipulation';
+import {
+	partitionText,
+	searchText,
+} from '../../util/text-manipulation';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './SearchableSelect.reducers';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
@@ -108,8 +111,10 @@ const SearchableSelect = createClass({
 		 */
 		onSelect: func,
 		/**
-		 * The function that will be run against each Option's props to determine whether it should be visible or not.
-		 * The default behavior of the function is to match, ignoring case, against any text node descendant of the `Option`.
+		 * The function that will be run against each Option's props to determine
+		 * whether it should be visible or not. The default behavior of the
+		 * function is to match, ignoring case, against any text node descendant of
+		 * the `Option`.
 		 *
 		 * Has the signature `(searchText, optionProps)`
 		 * If `true`, option will be visible. If `false`, the option will not be visible.
@@ -149,7 +154,7 @@ const SearchableSelect = createClass({
 			isSelectionHighlighted: true,
 			isDisabled: false,
 			isLoading: false,
-			optionFilter: this.defaultOptionFilter,
+			optionFilter: searchText,
 			searchText: null,
 			selectedIndex: null,
 			DropMenu: DropMenu.getDefaultProps(),
@@ -163,31 +168,6 @@ const SearchableSelect = createClass({
 			ungroupedOptionData: [],
 			optionGroupDataLookup: {},
 		};
-	},
-
-	statics: {
-		getCombinedChildText(node) {
-			if (!node.children) {
-				return '';
-			}
-
-			if (_.isString(node.children)) {
-				return node.children;
-			}
-
-			return node.children
-							.filter((child) => !_.isString(child))
-							.map((child) => this.getCombinedChildText(child.props))
-							.reduce(((combinedText, childText) => combinedText + childText), _.find(node.children, _.isString) || '');
-		},
-
-		defaultOptionFilter(searchText, optionProps) {
-			if (!searchText) {
-				return true;
-			}
-
-			return new RegExp(_.escapeRegExp(searchText), 'i').test(SearchableSelect.getCombinedChildText(optionProps));
-		},
 	},
 
 	componentWillMount() {
@@ -222,13 +202,11 @@ const SearchableSelect = createClass({
 	renderUnderlinedChildren(childText, searchText) {
 		const [pre, match, post] = partitionText(childText, new RegExp(_.escapeRegExp(searchText), 'i'), searchText.length);
 
-		return (
-		[
+		return [
 			pre && <span key='pre' className={cx('&-Option-underline-pre')}>{pre}</span>,
 			match && <span key='match' className={cx('&-Option-underline-match')}>{match}</span>,
 			post && <span key='post' className={cx('&-Option-underline-post')}>{post}</span>,
-		]
-		);
+		];
 	},
 
 	renderOption(optionProps, optionIndex) {
@@ -273,7 +251,9 @@ const SearchableSelect = createClass({
 			ungroupedOptionData,
 		} = this.state;
 
-		// for each option group passed in, render a DropMenu.OptionGroup, any label will be included in it's children, render each option inside the group
+		// for each option group passed in, render a DropMenu.OptionGroup, any
+		// label will be included in it's children, render each option inside the
+		// group
 		const options = _.map(optionGroups, (optionGroupProps, optionGroupIndex) => {
 			const childOptions = _.map(_.get(optionGroupDataLookup, optionGroupIndex), ({ optionProps, optionIndex }) => (
 				this.renderOption(optionProps, optionIndex)
@@ -329,6 +309,7 @@ const SearchableSelect = createClass({
 		const {
 			flattenedOptionsData,
 		} = this.state;
+
 
 		const searchFieldProps = _.get(getFirst(props, SearchField, <SearchField />), 'props');
 		const placeholderProps = _.first(_.map(findTypes(this.props, SearchableSelect.Placeholder), 'props'));

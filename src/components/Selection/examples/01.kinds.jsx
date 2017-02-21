@@ -1,17 +1,27 @@
 import React from 'react';
-import { Selection } from '../../../index';
+import { Selection, Resizer } from '../../../index';
 
 export default React.createClass({
 	render() {
 		return (
-			<div>
-				<Selection Label='Default' />
-				<Selection kind='container' Label='Container' />
-				<Selection kind='success' Label='Success' />
-				<Selection kind='danger' Label='Danger' />
-				<Selection kind='info' Label='Info' />
-				<Selection kind='warning' Label='Warning' />
-			</div>
+			<Resizer>
+				{(width) => {
+					const responsiveMode = width >= 768 ? 'large' : 'small';
+
+					return (
+						<div>
+							<Selection responsiveMode={responsiveMode} Label='Default' />
+							<Selection responsiveMode={responsiveMode} Label='Default medium' />
+							<Selection responsiveMode={responsiveMode} Label='Default small' />
+							<Selection responsiveMode={responsiveMode} kind='container' Label='Container' />
+							<Selection responsiveMode={responsiveMode} kind='success' Label='Success' />
+							<Selection responsiveMode={responsiveMode} kind='danger' Label='Danger' />
+							<Selection responsiveMode={responsiveMode} kind='info' Label='Info' />
+							<Selection responsiveMode={responsiveMode} kind='warning' Label='Warning' />
+						</div>
+					);
+				}}
+			</Resizer>
 		);
 	},
 });

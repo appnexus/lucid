@@ -3,6 +3,7 @@ import Accordion, { AccordionDumb } from './components/Accordion/Accordion';
 import Autocomplete, { AutocompleteDumb } from './components/Autocomplete/Autocomplete';
 import ButtonGroup, { ButtonGroupDumb } from './components/ButtonGroup/ButtonGroup';
 import SearchableSelect, { SearchableSelectDumb } from './components/SearchableSelect/SearchableSelect';
+import SearchableMultiSelect, { SearchableMultiSelectDumb } from './components/SearchableMultiSelect/SearchableMultiSelect';
 import DropMenu, { DropMenuDumb } from './components/DropMenu/DropMenu';
 import Expander, { ExpanderDumb } from './components/Expander/Expander';
 import ExpanderPanel, { ExpanderPanelDumb } from './components/ExpanderPanel/ExpanderPanel';
@@ -184,6 +185,8 @@ export {
 	Collapsible,
 	SearchableSelect,
 	SearchableSelectDumb,
+	SearchableMultiSelect,
+	SearchableMultiSelectDumb,
 	ContextMenu,
 	CrossIcon,
 	DangerIcon,

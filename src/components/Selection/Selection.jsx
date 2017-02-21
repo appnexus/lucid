@@ -26,14 +26,21 @@ const {
 
 const cx = lucidClassNames.bind('&-Selection');
 
-const defaultIcons = {
-	'default': null,
-	'container': null,
-	'success': <SuccessIcon className={cx('&-Icon')} />,
-	'danger': <MinusCircleIcon className={cx('&-Icon')} />,
-	'info': <InfoIcon className={cx('&-Icon')} />,
-	'warning': <WarningIcon className={cx('&-Icon')} />,
+const responsiveMap = {
+	small: 'small',
+	medium: 'small',
+	large: 'large',
 };
+
+function defaultIcon(kind, responsiveMode) {
+	return kind === 'default' ? null
+		: kind === 'container' ? null
+		: kind === 'success' ? <SuccessIcon className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)} />
+		: kind === 'danger' ? <MinusCircleIcon className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)} />
+		: kind === 'info' ? <InfoIcon className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)} />
+		: kind === 'warning' ? <WarningIcon className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)} />
+		: null;
+}
 
 /**
  *
@@ -99,6 +106,18 @@ const Selection = createClass({
 		 * Arbitrary children.
 		 */
 		children: node,
+		/**
+		 * Adjusts the display of this component based on screen size typically.
+		 * Currently `small` and `large` are explicitly handled by this component.
+		 *
+		 * | Input  | Actual  |
+		 * | -----  | ------  |
+		 * | small  | small   |
+		 * | medium | small   |
+		 * | large  | large   |
+		 *
+		 */
+		responsiveMode: oneOf(['small', 'medium', 'large']),
 	},
 
 	getDefaultProps() {
@@ -108,7 +127,12 @@ const Selection = createClass({
 			onRemove: _.noop,
 			hasBackground: false,
 			isBold: false,
+			responsiveMode: 'large',
 		};
+	},
+
+	handleRemove(event) {
+		this.props.onRemove({ props: this.props, event });
 	},
 
 	render() {
@@ -119,8 +143,12 @@ const Selection = createClass({
 			children,
 			hasBackground,
 			isBold,
+			responsiveMode: responsiveModeInput,
 			...passThroughs
 		} = this.props;
+
+		const responsiveMode = responsiveMap[responsiveModeInput];
+		const isSmall = responsiveMode === 'small';
 
 		const selectionChildren = filterTypes(children, Selection);
 		const otherChildren = rejectTypes(children, Selection);
@@ -132,12 +160,12 @@ const Selection = createClass({
 				...iconChildren.props,
 				className: cx('&-Icon', iconChildren.props.className),
 			})
-			: defaultIcons[kind];
+			: defaultIcon(kind, responsiveMode);
 
 		return (
 			<div
 				{...omitProps(passThroughs, Selection)}
-				className={cx('&', kind && `&-${kind}`, {
+				className={cx('&', `&-is-${responsiveMode}`, kind && `&-${kind}`, {
 					'&-has-background': hasBackground,
 					'&-is-bold': isBold,
 				}, className)}
@@ -148,16 +176,16 @@ const Selection = createClass({
 					<div className={cx('&-label-container')}>
 						<span
 							{...labelProps}
-							className={cx('&-label')}
+							className={cx('&-label', isSmall && '&-label-is-small')}
 						/>
 
 						{isRemovable ? (
 							<CrossIcon
 								isClickable
-								size={26}
-								viewBox='-3 -2 20 20'
+								size={isSmall ? 44 : 26}
+								viewBox={isSmall ?  '-6 -6 28 28' : '-3 -2 20 20'}
 								className={cx('&-close-button')}
-								onClick={this.handleRemoveClick}
+								onClick={this.handleRemove}
 							/>
 						) : null}
 					</div>
