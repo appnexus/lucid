@@ -1,25 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Overlay [common] example testing should match snapshot(s) for basic 1`] = `
 <Portal
-  portalId="Overlay-Portal-7">
+  portalId="Overlay-Portal-7"
+>
   <ReactCSSTransitionGroup
     transitionAppear={false}
     transitionEnter={true}
     transitionEnterTimeout={300}
     transitionLeave={true}
     transitionLeaveTimeout={300}
-    transitionName="lucid-Overlay" />
+    transitionName="lucid-Overlay"
+  />
 </Portal>
 `;
 
 exports[`Overlay [common] example testing should match snapshot(s) for no-modal 1`] = `
 <Portal
-  portalId="Overlay-Portal-8">
+  portalId="Overlay-Portal-8"
+>
   <ReactCSSTransitionGroup
     transitionAppear={false}
     transitionEnter={true}
     transitionEnterTimeout={300}
     transitionLeave={true}
     transitionLeaveTimeout={300}
-    transitionName="lucid-Overlay" />
+    transitionName="lucid-Overlay"
+  />
 </Portal>
 `;

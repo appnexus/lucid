@@ -1,105 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Legend [common] example testing should match snapshot(s) for basic 1`] = `
 <ul
-  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders">
+  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
+>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={12}>
+      width={12}
+    >
       <Point
         color="color-chart-0"
         hasStroke={false}
         kind={1}
         scale={1}
         x={6}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 0
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={12}>
+      width={12}
+    >
       <Point
         color="color-chart-1"
         hasStroke={false}
         kind={1}
         scale={1}
         x={6}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 1
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={12}>
+      width={12}
+    >
       <Point
         color="color-chart-2"
         hasStroke={false}
         kind={1}
         scale={1}
         x={6}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 2
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={12}>
+      width={12}
+    >
       <Point
         color="color-chart-3"
         hasStroke={false}
         kind={1}
         scale={1}
         x={6}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 3
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={12}>
+      width={12}
+    >
       <Point
         color="color-chart-4"
         hasStroke={false}
         kind={1}
         scale={1}
         x={6}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 4
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={12}>
+      width={12}
+    >
       <Point
         color="color-chart-5"
         hasStroke={false}
         kind={1}
         scale={1}
         x={6}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 5
   </li>
@@ -108,106 +129,125 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
 
 exports[`Legend [common] example testing should match snapshot(s) for basic 2`] = `
 <ul
-  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders">
+  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
+>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={12}>
+      width={12}
+    >
       <Point
         color="color-chart-0"
         hasStroke={false}
         kind={0}
         scale={1}
         x={6}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 0
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={12}>
+      width={12}
+    >
       <Point
         color="color-chart-1"
         hasStroke={false}
         kind={1}
         scale={1}
         x={6}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 1
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={12}>
+      width={12}
+    >
       <Point
         color="color-chart-2"
         hasStroke={false}
         kind={2}
         scale={1}
         x={6}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 2
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={12}>
+      width={12}
+    >
       <Point
         color="color-chart-3"
         hasStroke={false}
         kind={3}
         scale={1}
         x={6}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 3
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={12}>
+      width={12}
+    >
       <Point
         color="color-chart-4"
         hasStroke={false}
         kind={4}
         scale={1}
         x={6}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 4
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={12}>
+      width={12}
+    >
       <Point
         color="color-chart-5"
         hasStroke={false}
         kind={5}
         scale={1}
         x={6}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 5
   </li>
@@ -216,88 +256,107 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
 
 exports[`Legend [common] example testing should match snapshot(s) for basic 3`] = `
 <ul
-  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders">
+  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
+>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Line
         color="color-chart-0"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 0
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Line
         color="color-chart-1"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 1
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Line
         color="color-chart-2"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 2
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Line
         color="color-chart-3"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 3
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Line
         color="color-chart-4"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 4
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Line
         color="color-chart-5"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 5
   </li>
@@ -306,130 +365,155 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 3`] 
 
 exports[`Legend [common] example testing should match snapshot(s) for basic 4`] = `
 <ul
-  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders">
+  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
+>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Point
         color="color-chart-0"
         hasStroke={false}
         kind={0}
         scale={1}
         x={11}
-        y={6} />
+        y={6}
+      />
       <Line
         color="color-chart-0"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 0
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Point
         color="color-chart-1"
         hasStroke={false}
         kind={1}
         scale={1}
         x={11}
-        y={6} />
+        y={6}
+      />
       <Line
         color="color-chart-1"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 1
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Point
         color="color-chart-2"
         hasStroke={false}
         kind={2}
         scale={1}
         x={11}
-        y={6} />
+        y={6}
+      />
       <Line
         color="color-chart-2"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 2
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Point
         color="color-chart-3"
         hasStroke={false}
         kind={3}
         scale={1}
         x={11}
-        y={6} />
+        y={6}
+      />
       <Line
         color="color-chart-3"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 3
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Point
         color="color-chart-4"
         hasStroke={false}
         kind={4}
         scale={1}
         x={11}
-        y={6} />
+        y={6}
+      />
       <Line
         color="color-chart-4"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 4
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Point
         color="color-chart-5"
         hasStroke={false}
         kind={5}
         scale={1}
         x={11}
-        y={6} />
+        y={6}
+      />
       <Line
         color="color-chart-5"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 5
   </li>
@@ -438,130 +522,155 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
 
 exports[`Legend [common] example testing should match snapshot(s) for basic 5`] = `
 <ul
-  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders lucid-Legend-is-reversed">
+  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders lucid-Legend-is-reversed"
+>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Point
         color="color-chart-0"
         hasStroke={false}
         kind={0}
         scale={1}
         x={11}
-        y={6} />
+        y={6}
+      />
       <Line
         color="color-chart-0"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 0
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Point
         color="color-chart-1"
         hasStroke={false}
         kind={1}
         scale={1}
         x={11}
-        y={6} />
+        y={6}
+      />
       <Line
         color="color-chart-1"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 1
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Point
         color="color-chart-2"
         hasStroke={false}
         kind={2}
         scale={1}
         x={11}
-        y={6} />
+        y={6}
+      />
       <Line
         color="color-chart-2"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 2
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Point
         color="color-chart-3"
         hasStroke={false}
         kind={3}
         scale={1}
         x={11}
-        y={6} />
+        y={6}
+      />
       <Line
         color="color-chart-3"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 3
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Point
         color="color-chart-4"
         hasStroke={false}
         kind={4}
         scale={1}
         x={11}
-        y={6} />
+        y={6}
+      />
       <Line
         color="color-chart-4"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 4
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Point
         color="color-chart-5"
         hasStroke={false}
         kind={5}
         scale={1}
         x={11}
-        y={6} />
+        y={6}
+      />
       <Line
         color="color-chart-5"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Partner 5
   </li>
@@ -570,66 +679,79 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
 
 exports[`Legend [common] example testing should match snapshot(s) for basic 6`] = `
 <ul
-  className="lucid-Legend lucid-Legend-is-horizontal lucid-Legend-has-borders">
+  className="lucid-Legend lucid-Legend-is-horizontal lucid-Legend-has-borders"
+>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Line
         color="color-chart-good"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Revenue
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Line
         color="color-chart-bad"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Loss
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={12}>
+      width={12}
+    >
       <Point
         color="color-chart-0"
         hasStroke={false}
         kind={1}
         scale={1}
         x={6}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 0
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={12}>
+      width={12}
+    >
       <Point
         color="color-chart-1"
         hasStroke={false}
         kind={1}
         scale={1}
         x={6}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 1
   </li>
@@ -638,66 +760,79 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 6`] 
 
 exports[`Legend [common] example testing should match snapshot(s) for basic 7`] = `
 <ul
-  className="lucid-Legend lucid-Legend-is-horizontal lucid-Legend-has-borders lucid-Legend-is-reversed">
+  className="lucid-Legend lucid-Legend-is-horizontal lucid-Legend-has-borders lucid-Legend-is-reversed"
+>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Line
         color="color-chart-good"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Revenue
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Line
         color="color-chart-bad"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Loss
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={12}>
+      width={12}
+    >
       <Point
         color="color-chart-0"
         hasStroke={false}
         kind={1}
         scale={1}
         x={6}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 0
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={12}>
+      width={12}
+    >
       <Point
         color="color-chart-1"
         hasStroke={false}
         kind={1}
         scale={1}
         x={6}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 1
   </li>
@@ -706,66 +841,79 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 7`] 
 
 exports[`Legend [common] example testing should match snapshot(s) for basic 8`] = `
 <ul
-  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders">
+  className="lucid-Legend lucid-Legend-is-vertical lucid-Legend-has-borders"
+>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Line
         color="color-chart-good"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Revenue
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Line
         color="color-chart-bad"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Loss
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Point
         color="color-chart-0"
         hasStroke={false}
         kind={1}
         scale={1}
         x={11}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 0
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Point
         color="color-chart-1"
         hasStroke={false}
         kind={1}
         scale={1}
         x={11}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 1
   </li>
@@ -774,66 +922,79 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 8`] 
 
 exports[`Legend [common] example testing should match snapshot(s) for basic 9`] = `
 <ul
-  className="lucid-Legend lucid-Legend-is-vertical">
+  className="lucid-Legend lucid-Legend-is-vertical"
+>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Line
         color="color-chart-good"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Revenue
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Line
         color="color-chart-bad"
         d="M0,6 L22,6"
-        isDotted={false} />
+        isDotted={false}
+      />
     </svg>
     Loss
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Point
         color="color-chart-0"
         hasStroke={false}
         kind={1}
         scale={1}
         x={11}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 0
   </li>
   <li
     className="lucid-Legend-Item"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <svg
       className="lucid-Legend-Item-indicator"
       height={12}
-      width={22}>
+      width={22}
+    >
       <Point
         color="color-chart-1"
         hasStroke={false}
         kind={1}
         scale={1}
         x={11}
-        y={6} />
+        y={6}
+      />
     </svg>
     Partner 1
   </li>

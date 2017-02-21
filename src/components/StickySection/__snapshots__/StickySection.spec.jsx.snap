@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`StickySection [common] example testing should match snapshot(s) for 1.with-lower-bound 1`] = `
 <div
   className="lucid-StickySection"
@@ -6,7 +8,8 @@ exports[`StickySection [common] example testing should match snapshot(s) for 1.w
       "backgroundColor": "#2abbb0",
       "color": "white",
     }
-  }>
+  }
+>
   <div
     className="lucid-StickySection-sticky-frame"
     style={
@@ -14,7 +17,8 @@ exports[`StickySection [common] example testing should match snapshot(s) for 1.w
         "backgroundColor": "#2abbb0",
         "color": "white",
       }
-    }>
+    }
+  >
     <div
       className="lucid-StickySection-sticky-section"
       style={
@@ -23,7 +27,8 @@ exports[`StickySection [common] example testing should match snapshot(s) for 1.w
           "color": "white",
           "position": "relative",
         }
-      }>
+      }
+    >
       This section sticks to top!
     </div>
   </div>
@@ -38,7 +43,8 @@ exports[`StickySection [common] example testing should match snapshot(s) for 2.w
       "backgroundColor": "#2abbb0",
       "color": "white",
     }
-  }>
+  }
+>
   <div
     className="lucid-StickySection-sticky-frame"
     style={
@@ -46,7 +52,8 @@ exports[`StickySection [common] example testing should match snapshot(s) for 2.w
         "backgroundColor": "#2abbb0",
         "color": "white",
       }
-    }>
+    }
+  >
     <div
       className="lucid-StickySection-sticky-section"
       style={
@@ -55,7 +62,8 @@ exports[`StickySection [common] example testing should match snapshot(s) for 2.w
           "color": "white",
           "position": "relative",
         }
-      }>
+      }
+    >
       I scroll horizontally to match the content!
     </div>
   </div>
@@ -70,7 +78,8 @@ exports[`StickySection [common] example testing should match snapshot(s) for 3.s
       "backgroundColor": "#2abbb0",
       "color": "white",
     }
-  }>
+  }
+>
   <div
     className="lucid-StickySection-sticky-frame"
     style={
@@ -78,7 +87,8 @@ exports[`StickySection [common] example testing should match snapshot(s) for 3.s
         "backgroundColor": "#2abbb0",
         "color": "white",
       }
-    }>
+    }
+  >
     <div
       className="lucid-StickySection-sticky-section"
       style={
@@ -87,7 +97,8 @@ exports[`StickySection [common] example testing should match snapshot(s) for 3.s
           "color": "white",
           "position": "relative",
         }
-      }>
+      }
+    >
       This section has no lower bounds!
     </div>
   </div>

@@ -1,10 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`DragCaptureZone [common] example testing should match snapshot(s) for interactive 1`] = `
 <div
   className="lucid-DragCaptureZone"
   onDrag={[Function]}
   onDragEnd={[Function]}
   onDragStart={[Function]}
-  onMouseDown={[Function]}>
+  onMouseDown={[Function]}
+>
   <div
     style={
       Object {
@@ -19,7 +22,8 @@ exports[`DragCaptureZone [common] example testing should match snapshot(s) for i
         "textTransform": "uppercase",
         "width": 400,
       }
-    }>
+    }
+  >
     Go wild!
   </div>
 </div>

@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`SearchableSelect [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <DropMenu
   alignment="start"
@@ -23,446 +25,534 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       "maxHeight": "200",
     }
   }
-  selectedIndices={Array []}>
+  selectedIndices={Array []}
+>
   <DropMenu.Control>
     <div
       className="lucid-SearchableSelect-Control"
-      tabIndex={0}>
+      tabIndex={0}
+    >
       <span
-        className="lucid-SearchableSelect-Control-content">
+        className="lucid-SearchableSelect-Control-content"
+      >
         Select State
       </span>
       <CaretIcon
         direction="down"
         size={8}
-        viewBox="0 3 16 8" />
+        viewBox="0 3 16 8"
+      />
     </div>
   </DropMenu.Control>
   <DropMenu.Header
-    className="lucid-SearchableSelect-Search-container">
+    className="lucid-SearchableSelect-Search-container"
+  >
     <SearchField
       debounceLevel={500}
       isDisabled={false}
       onChange={[Function]}
       onChangeDebounced={[Function]}
       onSubmit={[Function]}
-      value={null} />
+      value={null}
+    />
   </DropMenu.Header>
   <DropMenu.OptionGroup
-    isHidden={false}>
+    isHidden={false}
+  >
     PST
     <SearchableSelect.Option
-      value="CA">
+      value="CA"
+    >
       California
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="NV">
+      value="NV"
+    >
       Nevada
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="OR">
+      value="OR"
+    >
       Oregon
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="WA">
+      value="WA"
+    >
       Washington
     </SearchableSelect.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="CA">
+      value="CA"
+    >
       California
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="NV">
+      value="NV"
+    >
       Nevada
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="OR">
+      value="OR"
+    >
       Oregon
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="WA">
+      value="WA"
+    >
       Washington
     </DropMenu.Option>
   </DropMenu.OptionGroup>
   <DropMenu.OptionGroup
-    isHidden={false}>
+    isHidden={false}
+  >
     MST
     <SearchableSelect.Option
-      value="CO">
+      value="CO"
+    >
       Colorado
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="ID">
+      value="ID"
+    >
       Idaho
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="MT">
+      value="MT"
+    >
       Montana
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="NM">
+      value="NM"
+    >
       New Mexico
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="ND">
+      value="ND"
+    >
       North Dakota
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="SD">
+      value="SD"
+    >
       South Dakota
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="WI">
+      value="WI"
+    >
       Wisconsin
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="WY">
+      value="WY"
+    >
       Wyoming
     </SearchableSelect.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="CO">
+      value="CO"
+    >
       Colorado
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="ID">
+      value="ID"
+    >
       Idaho
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="MT">
+      value="MT"
+    >
       Montana
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="NM">
+      value="NM"
+    >
       New Mexico
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="ND">
+      value="ND"
+    >
       North Dakota
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="SD">
+      value="SD"
+    >
       South Dakota
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="WI">
+      value="WI"
+    >
       Wisconsin
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="WY">
+      value="WY"
+    >
       Wyoming
     </DropMenu.Option>
   </DropMenu.OptionGroup>
   <DropMenu.OptionGroup
-    isHidden={false}>
+    isHidden={false}
+  >
     CST
     <SearchableSelect.Option
-      value="AR">
+      value="AR"
+    >
       Arkansas
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="IL">
+      value="IL"
+    >
       Illinois
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="IN">
+      value="IN"
+    >
       Indiana
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="IA">
+      value="IA"
+    >
       Iowa
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="KS">
+      value="KS"
+    >
       Kansas
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="KY">
+      value="KY"
+    >
       Kentucky
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="MI">
+      value="MI"
+    >
       Michigan
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="MN">
+      value="MN"
+    >
       Minnesota
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="MS">
+      value="MS"
+    >
       Mississippi
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="MO">
+      value="MO"
+    >
       Missouri
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="NE">
+      value="NE"
+    >
       Nebraska
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="OH">
+      value="OH"
+    >
       Ohio
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="OK">
+      value="OK"
+    >
       Oklahoma
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="TN">
+      value="TN"
+    >
       Tennessee
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="TX">
+      value="TX"
+    >
       Texas
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="UT">
+      value="UT"
+    >
       Utah
     </SearchableSelect.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="AR">
+      value="AR"
+    >
       Arkansas
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="IL">
+      value="IL"
+    >
       Illinois
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="IN">
+      value="IN"
+    >
       Indiana
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="IA">
+      value="IA"
+    >
       Iowa
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="KS">
+      value="KS"
+    >
       Kansas
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="KY">
+      value="KY"
+    >
       Kentucky
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="MI">
+      value="MI"
+    >
       Michigan
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="MN">
+      value="MN"
+    >
       Minnesota
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="MS">
+      value="MS"
+    >
       Mississippi
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="MO">
+      value="MO"
+    >
       Missouri
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="NE">
+      value="NE"
+    >
       Nebraska
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="OH">
+      value="OH"
+    >
       Ohio
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="OK">
+      value="OK"
+    >
       Oklahoma
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="TN">
+      value="TN"
+    >
       Tennessee
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="TX">
+      value="TX"
+    >
       Texas
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="UT">
+      value="UT"
+    >
       Utah
     </DropMenu.Option>
   </DropMenu.OptionGroup>
   <DropMenu.OptionGroup
-    isHidden={false}>
+    isHidden={false}
+  >
     EST
     <SearchableSelect.Option
-      value="AL">
+      value="AL"
+    >
       <span>
         USA: 
       </span>
       Alabama
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="AZ">
+      value="AZ"
+    >
       Arizona
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="CT">
+      value="CT"
+    >
       Connecticut
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="DE">
+      value="DE"
+    >
       Delaware
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="DC">
+      value="DC"
+    >
       District Of Columbia
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="FL">
+      value="FL"
+    >
       Florida
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="GA">
+      value="GA"
+    >
       Georgia
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="LA">
+      value="LA"
+    >
       Louisiana
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="ME">
+      value="ME"
+    >
       Maine
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="MD">
+      value="MD"
+    >
       Maryland
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="MA">
+      value="MA"
+    >
       Massachusetts
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="NH">
+      value="NH"
+    >
       New Hampshire
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="NJ">
+      value="NJ"
+    >
       New Jersey
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="NY">
+      value="NY"
+    >
       New York
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="NC">
+      value="NC"
+    >
       North Carolina
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="PA">
+      value="PA"
+    >
       Pennsylvania
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="RI">
+      value="RI"
+    >
       Rhode Island
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="SC">
+      value="SC"
+    >
       South Carolina
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="VT">
+      value="VT"
+    >
       Vermont
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="VA">
+      value="VA"
+    >
       Virginia
     </SearchableSelect.Option>
     <SearchableSelect.Option
-      value="WV">
+      value="WV"
+    >
       West Virginia
     </SearchableSelect.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="AL">
+      value="AL"
+    >
       <span>
         USA: 
       </span>
@@ -472,140 +562,160 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="AZ">
+      value="AZ"
+    >
       Arizona
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="CT">
+      value="CT"
+    >
       Connecticut
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="DE">
+      value="DE"
+    >
       Delaware
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="DC">
+      value="DC"
+    >
       District Of Columbia
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="FL">
+      value="FL"
+    >
       Florida
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="GA">
+      value="GA"
+    >
       Georgia
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="LA">
+      value="LA"
+    >
       Louisiana
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="ME">
+      value="ME"
+    >
       Maine
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="MD">
+      value="MD"
+    >
       Maryland
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="MA">
+      value="MA"
+    >
       Massachusetts
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="NH">
+      value="NH"
+    >
       New Hampshire
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="NJ">
+      value="NJ"
+    >
       New Jersey
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="NY">
+      value="NY"
+    >
       New York
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="NC">
+      value="NC"
+    >
       North Carolina
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="PA">
+      value="PA"
+    >
       Pennsylvania
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="RI">
+      value="RI"
+    >
       Rhode Island
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="SC">
+      value="SC"
+    >
       South Carolina
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="VT">
+      value="VT"
+    >
       Vermont
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="VA">
+      value="VA"
+    >
       Virginia
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
-      value="WV">
+      value="WV"
+    >
       West Virginia
     </DropMenu.Option>
   </DropMenu.OptionGroup>
@@ -613,14 +723,16 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
-    value="AK">
+    value="AK"
+  >
     Alaska
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
-    value="HI">
+    value="HI"
+  >
     Hawaii
   </DropMenu.Option>
 </DropMenu>
@@ -651,399 +763,458 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       "maxHeight": "200",
     }
   }
-  selectedIndices={Array []}>
+  selectedIndices={Array []}
+>
   <DropMenu.Control>
     <div
       className="lucid-SearchableSelect-Control"
-      tabIndex={0}>
+      tabIndex={0}
+    >
       <span
-        className="lucid-SearchableSelect-Control-content">
+        className="lucid-SearchableSelect-Control-content"
+      >
         Select State
       </span>
       <CaretIcon
         direction="down"
         size={8}
-        viewBox="0 3 16 8" />
+        viewBox="0 3 16 8"
+      />
     </div>
   </DropMenu.Control>
   <DropMenu.Header
-    className="lucid-SearchableSelect-Search-container">
+    className="lucid-SearchableSelect-Search-container"
+  >
     <SearchField
       debounceLevel={500}
       isDisabled={false}
       onChange={[Function]}
       onChangeDebounced={[Function]}
       onSubmit={[Function]}
-      value={null} />
+      value={null}
+    />
   </DropMenu.Header>
   <DropMenu.Option
     className="lucid-SearchableSelect-Loading"
     isDisabled={true}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     <LoadingIcon
       aspectRatio="xMidYMid meet"
       isBadge={false}
       isDisabled={false}
       size={16}
       speed="normal"
-      viewBox="0 0 16 16" />
+      viewBox="0 0 16 16"
+    />
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="AL">
+    value="AL"
+  >
     Alabama
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="AK">
+    value="AK"
+  >
     Alaska
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="AZ">
+    value="AZ"
+  >
     Arizona
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="AR">
+    value="AR"
+  >
     Arkansas
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="CA">
+    value="CA"
+  >
     California
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="CO">
+    value="CO"
+  >
     Colorado
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="CT">
+    value="CT"
+  >
     Connecticut
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="DE">
+    value="DE"
+  >
     Delaware
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="DC">
+    value="DC"
+  >
     District Of Columbia
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="FL">
+    value="FL"
+  >
     Florida
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="GA">
+    value="GA"
+  >
     Georgia
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="HI">
+    value="HI"
+  >
     Hawaii
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="ID">
+    value="ID"
+  >
     Idaho
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="IL">
+    value="IL"
+  >
     Illinois
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="IN">
+    value="IN"
+  >
     Indiana
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="IA">
+    value="IA"
+  >
     Iowa
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="KS">
+    value="KS"
+  >
     Kansas
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="KY">
+    value="KY"
+  >
     Kentucky
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="LA">
+    value="LA"
+  >
     Louisiana
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="ME">
+    value="ME"
+  >
     Maine
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="MD">
+    value="MD"
+  >
     Maryland
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="MA">
+    value="MA"
+  >
     Massachusetts
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="MI">
+    value="MI"
+  >
     Michigan
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="MN">
+    value="MN"
+  >
     Minnesota
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="MS">
+    value="MS"
+  >
     Mississippi
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="MO">
+    value="MO"
+  >
     Missouri
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="MT">
+    value="MT"
+  >
     Montana
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="NE">
+    value="NE"
+  >
     Nebraska
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="NV">
+    value="NV"
+  >
     Nevada
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="NH">
+    value="NH"
+  >
     New Hampshire
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="NJ">
+    value="NJ"
+  >
     New Jersey
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="NM">
+    value="NM"
+  >
     New Mexico
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="NY">
+    value="NY"
+  >
     New York
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="NC">
+    value="NC"
+  >
     North Carolina
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="ND">
+    value="ND"
+  >
     North Dakota
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="OH">
+    value="OH"
+  >
     Ohio
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="OK">
+    value="OK"
+  >
     Oklahoma
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="OR">
+    value="OR"
+  >
     Oregon
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="PA">
+    value="PA"
+  >
     Pennsylvania
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="RI">
+    value="RI"
+  >
     Rhode Island
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="SC">
+    value="SC"
+  >
     South Carolina
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="SD">
+    value="SD"
+  >
     South Dakota
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="TN">
+    value="TN"
+  >
     Tennessee
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="TX">
+    value="TX"
+  >
     Texas
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="UT">
+    value="UT"
+  >
     Utah
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="VT">
+    value="VT"
+  >
     Vermont
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="VA">
+    value="VA"
+  >
     Virginia
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="WA">
+    value="WA"
+  >
     Washington
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="WV">
+    value="WV"
+  >
     West Virginia
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="WI">
+    value="WI"
+  >
     Wisconsin
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
-    value="WY">
+    value="WY"
+  >
     Wyoming
   </DropMenu.Option>
 </DropMenu>
@@ -1074,23 +1245,28 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       "maxHeight": "200",
     }
   }
-  selectedIndices={Array []}>
+  selectedIndices={Array []}
+>
   <DropMenu.Control>
     <div
       className="lucid-SearchableSelect-Control"
-      tabIndex={0}>
+      tabIndex={0}
+    >
       <span
-        className="lucid-SearchableSelect-Control-content">
+        className="lucid-SearchableSelect-Control-content"
+      >
         Select Color
       </span>
       <CaretIcon
         direction="down"
         size={8}
-        viewBox="0 3 16 8" />
+        viewBox="0 3 16 8"
+      />
     </div>
   </DropMenu.Control>
   <DropMenu.Header
-    className="lucid-SearchableSelect-Search-container">
+    className="lucid-SearchableSelect-Search-container"
+  >
     <SearchField
       debounceLevel={500}
       isDisabled={false}
@@ -1098,30 +1274,35 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       onChangeDebounced={[Function]}
       onSubmit={[Function]}
       placeholder="Type here to filter..."
-      value={null} />
+      value={null}
+    />
   </DropMenu.Header>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Blue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Green
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Orange
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Red
   </DropMenu.Option>
 </DropMenu>

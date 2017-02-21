@@ -1,6 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Resizer [common] example testing should match snapshot(s) for basic 1`] = `
 <div
-  className="lucid-Resizer">
+  className="lucid-Resizer"
+>
   <div>
     <div>
       Width: 
@@ -20,7 +23,8 @@ exports[`Resizer [common] example testing should match snapshot(s) for with-flex
       "flexGrow": 1,
       "overflow": "hidden",
     }
-  }>
+  }
+>
   <div
     style={
       Object {
@@ -28,7 +32,8 @@ exports[`Resizer [common] example testing should match snapshot(s) for with-flex
         "height": 0,
         "width": 0,
       }
-    }>
+    }
+  >
     <div>
       When using Resizer within a flexed container, its critical to add 
       <code>

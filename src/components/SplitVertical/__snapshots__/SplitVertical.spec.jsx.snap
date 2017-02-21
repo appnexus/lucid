@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`SplitVertical [common] example testing should match snapshot(s) for 1.default-split 1`] = `
 <div
   className="lucid-SplitVertical lucid-SplitVertical-is-expanded"
@@ -5,7 +7,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 1.d
     Object {
       "overflow": "hidden",
     }
-  }>
+  }
+>
   <Motion
     defaultStyle={
       Object {
@@ -16,7 +19,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 1.d
       Object {
         "slideAmount": 0,
       }
-    } />
+    }
+  />
 </div>
 `;
 
@@ -27,7 +31,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 2.a
     Object {
       "overflow": "hidden",
     }
-  }>
+  }
+>
   <Motion
     defaultStyle={
       Object {
@@ -38,7 +43,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 2.a
       Object {
         "slideAmount": 0,
       }
-    } />
+    }
+  />
 </div>
 `;
 
@@ -49,7 +55,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 3.s
     Object {
       "overflow": "hidden",
     }
-  }>
+  }
+>
   <Motion
     defaultStyle={
       Object {
@@ -60,7 +67,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 3.s
       Object {
         "slideAmount": 0,
       }
-    } />
+    }
+  />
 </div>
 `;
 
@@ -71,7 +79,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 4.s
     Object {
       "overflow": "hidden",
     }
-  }>
+  }
+>
   <Motion
     defaultStyle={
       Object {
@@ -82,7 +91,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 4.s
       Object {
         "slideAmount": 0,
       }
-    } />
+    }
+  />
 </div>
 `;
 
@@ -93,7 +103,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 5.c
     Object {
       "overflow": "hidden",
     }
-  }>
+  }
+>
   <Motion
     defaultStyle={
       Object {
@@ -104,7 +115,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 5.c
       Object {
         "slideAmount": 0,
       }
-    } />
+    }
+  />
 </div>
 `;
 
@@ -115,7 +127,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 6.n
     Object {
       "overflow": "hidden",
     }
-  }>
+  }
+>
   <Motion
     defaultStyle={
       Object {
@@ -126,7 +139,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 6.n
       Object {
         "slideAmount": 0,
       }
-    } />
+    }
+  />
 </div>
 `;
 
@@ -137,7 +151,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 7.c
     Object {
       "overflow": "hidden",
     }
-  }>
+  }
+>
   <Motion
     defaultStyle={
       Object {
@@ -148,7 +163,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 7.c
       Object {
         "slideAmount": 0,
       }
-    } />
+    }
+  />
 </div>
 `;
 
@@ -159,7 +175,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 8.h
     Object {
       "overflow": "hidden",
     }
-  }>
+  }
+>
   <Motion
     defaultStyle={
       Object {
@@ -170,7 +187,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 8.h
       Object {
         "slideAmount": 0,
       }
-    } />
+    }
+  />
 </div>
 `;
 
@@ -181,7 +199,8 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 9.n
     Object {
       "overflow": "hidden",
     }
-  }>
+  }
+>
   <Motion
     defaultStyle={
       Object {
@@ -192,6 +211,7 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 9.n
       Object {
         "slideAmount": 0,
       }
-    } />
+    }
+  />
 </div>
 `;

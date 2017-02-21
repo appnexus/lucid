@@ -1,12 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`ContextMenu [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   <Button
     hasOnlyIcon={false}
     isActive={false}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     Target
   </Button>
   <Portal
@@ -19,7 +23,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 1.bas
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     FlyOut
   </Portal>
 </span>
@@ -27,13 +32,15 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 1.bas
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 2.basic-with-text 1`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   <Button
     hasOnlyIcon={false}
     isActive={false}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     Target
   </Button>
   <Portal
@@ -46,7 +53,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 2.bas
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     FlyOut
   </Portal>
 </span>
@@ -54,7 +62,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 2.bas
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 3.menu-bar 1`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   <div
     onClick={[Function]}
     style={
@@ -64,7 +73,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 3.men
         "outline": "solid 1px #d1d1d1",
         "padding": "4px",
       }
-    }>
+    }
+  >
     File
   </div>
 </span>
@@ -72,7 +82,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 3.men
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 3.menu-bar 2`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   <div
     onClick={[Function]}
     style={
@@ -82,7 +93,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 3.men
         "outline": "solid 1px #d1d1d1",
         "padding": "4px",
       }
-    }>
+    }
+  >
     Edit
   </div>
 </span>
@@ -90,7 +102,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 3.men
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 4.directions-interactive 1`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -103,7 +116,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 4.dir
         "padding": 4,
         "width": 210,
       }
-    }>
+    }
+  >
     <div>
       direction: default
     </div>
@@ -125,7 +139,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 4.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 1`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -137,7 +152,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -156,7 +172,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 2`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -168,7 +185,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -187,7 +205,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 3`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -199,7 +218,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -218,7 +238,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 4`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -230,7 +251,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -249,7 +271,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 5`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -261,7 +284,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -280,7 +304,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 6`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -292,7 +317,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -311,7 +337,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 7`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -323,7 +350,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -342,7 +370,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 8`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -354,7 +383,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -373,7 +403,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 9`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -385,7 +416,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -404,7 +436,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 10`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -416,7 +449,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -435,7 +469,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 11`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -447,7 +482,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -466,7 +502,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 12`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -478,7 +515,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -497,7 +535,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 13`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -509,7 +548,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -528,7 +568,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 14`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -540,7 +581,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -559,7 +601,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 15`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -571,7 +614,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -590,7 +634,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 16`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -602,7 +647,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -621,7 +667,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 17`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -633,7 +680,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -652,7 +700,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 18`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -664,7 +713,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -683,7 +733,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 19`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -695,7 +746,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -714,7 +766,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 20`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -726,7 +779,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -745,7 +799,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 21`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -757,7 +812,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -776,7 +832,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 22`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -788,7 +845,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -807,7 +865,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 23`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -819,7 +878,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -838,7 +898,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 24`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -850,7 +911,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -869,7 +931,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 25`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -881,7 +944,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -900,7 +964,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 26`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -912,7 +977,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -931,7 +997,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 27`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-up"
@@ -943,7 +1010,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: up
     </div>
@@ -962,7 +1030,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 28`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -974,7 +1043,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -993,7 +1063,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 29`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1005,7 +1076,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1024,7 +1096,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 30`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1036,7 +1109,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1055,7 +1129,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 31`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1067,7 +1142,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1086,7 +1162,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 32`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1098,7 +1175,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1117,7 +1195,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 33`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1129,7 +1208,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1148,7 +1228,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 34`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1160,7 +1241,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1179,7 +1261,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 35`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1191,7 +1274,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1210,7 +1294,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 36`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1222,7 +1307,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1241,7 +1327,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 37`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1253,7 +1340,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1272,7 +1360,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 38`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1284,7 +1373,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1303,7 +1393,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 39`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1315,7 +1406,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1334,7 +1426,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 40`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1346,7 +1439,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1365,7 +1459,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 41`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1377,7 +1472,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1396,7 +1492,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 42`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1408,7 +1505,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1427,7 +1525,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 43`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1439,7 +1538,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1458,7 +1558,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 44`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1470,7 +1571,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1489,7 +1591,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 45`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1501,7 +1604,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1520,7 +1624,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 46`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1532,7 +1637,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1551,7 +1657,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 47`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1563,7 +1670,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1582,7 +1690,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 48`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1594,7 +1703,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1613,7 +1723,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 49`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1625,7 +1736,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1644,7 +1756,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 50`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1656,7 +1769,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1675,7 +1789,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 51`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1687,7 +1802,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1706,7 +1822,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 52`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1718,7 +1835,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1737,7 +1855,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 53`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1749,7 +1868,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1768,7 +1888,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 54`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-down"
@@ -1780,7 +1901,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: down
     </div>
@@ -1799,7 +1921,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 55`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -1811,7 +1934,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -1830,7 +1954,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 56`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -1842,7 +1967,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -1861,7 +1987,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 57`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -1873,7 +2000,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -1892,7 +2020,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 58`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -1904,7 +2033,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -1923,7 +2053,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 59`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -1935,7 +2066,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -1954,7 +2086,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 60`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -1966,7 +2099,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -1985,7 +2119,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 61`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -1997,7 +2132,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2016,7 +2152,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 62`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2028,7 +2165,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2047,7 +2185,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 63`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2059,7 +2198,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2078,7 +2218,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 64`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2090,7 +2231,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2109,7 +2251,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 65`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2121,7 +2264,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2140,7 +2284,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 66`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2152,7 +2297,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2171,7 +2317,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 67`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2183,7 +2330,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2202,7 +2350,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 68`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2214,7 +2363,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2233,7 +2383,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 69`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2245,7 +2396,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2264,7 +2416,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 70`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2276,7 +2429,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2295,7 +2449,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 71`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2307,7 +2462,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2326,7 +2482,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 72`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2338,7 +2495,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2357,7 +2515,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 73`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2369,7 +2528,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2388,7 +2548,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 74`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2400,7 +2561,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2419,7 +2581,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 75`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2431,7 +2594,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2450,7 +2614,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 76`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2462,7 +2627,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2481,7 +2647,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 77`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2493,7 +2660,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2512,7 +2680,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 78`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2524,7 +2693,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2543,7 +2713,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 79`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2555,7 +2726,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2574,7 +2746,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 80`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2586,7 +2759,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2605,7 +2779,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 81`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-left"
@@ -2617,7 +2792,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: left
     </div>
@@ -2636,7 +2812,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 82`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -2648,7 +2825,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -2667,7 +2845,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 83`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -2679,7 +2858,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -2698,7 +2878,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 84`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -2710,7 +2891,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -2729,7 +2911,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 85`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -2741,7 +2924,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -2760,7 +2944,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 86`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -2772,7 +2957,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -2791,7 +2977,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 87`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -2803,7 +2990,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -2822,7 +3010,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 88`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -2834,7 +3023,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -2853,7 +3043,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 89`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -2865,7 +3056,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -2884,7 +3076,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 90`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -2896,7 +3089,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -2915,7 +3109,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 91`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -2927,7 +3122,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -2946,7 +3142,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 92`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -2958,7 +3155,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -2977,7 +3175,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 93`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -2989,7 +3188,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -3008,7 +3208,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 94`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -3020,7 +3221,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -3039,7 +3241,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 95`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -3051,7 +3254,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -3070,7 +3274,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 96`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -3082,7 +3287,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -3101,7 +3307,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 97`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -3113,7 +3320,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -3132,7 +3340,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 98`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -3144,7 +3353,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -3163,7 +3373,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 99`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -3175,7 +3386,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -3194,7 +3406,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 100`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -3206,7 +3419,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -3225,7 +3439,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 101`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -3237,7 +3452,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -3256,7 +3472,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 102`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -3268,7 +3485,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -3287,7 +3505,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 103`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -3299,7 +3518,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -3318,7 +3538,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 104`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -3330,7 +3551,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -3349,7 +3571,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 105`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -3361,7 +3584,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -3380,7 +3604,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 106`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -3392,7 +3617,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -3411,7 +3637,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 107`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -3423,7 +3650,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>
@@ -3442,7 +3670,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
 
 exports[`ContextMenu [common] example testing should match snapshot(s) for 5.directions-static 108`] = `
 <span
-  className="lucid-ContextMenu">
+  className="lucid-ContextMenu"
+>
   Target
   <Portal
     className="lucid-ContextMenu-FlyOut lucid-ContextMenu-FlyOut-right"
@@ -3454,7 +3683,8 @@ exports[`ContextMenu [common] example testing should match snapshot(s) for 5.dir
         "minWidth": 0,
         "padding": 4,
       }
-    }>
+    }
+  >
     <div>
       direction: right
     </div>

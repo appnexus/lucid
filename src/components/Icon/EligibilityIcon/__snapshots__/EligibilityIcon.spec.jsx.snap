@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
@@ -5,14 +7,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -24,14 +29,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -43,14 +51,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -62,14 +73,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -81,14 +95,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -100,14 +117,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
   isBadge={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -119,14 +139,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
   isBadge={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -138,14 +161,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
   isBadge={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -157,14 +183,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 1
   isBadge={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -177,14 +206,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -197,14 +229,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -217,14 +252,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -237,14 +275,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -257,14 +298,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -277,14 +321,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -297,14 +344,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -317,14 +367,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -337,14 +390,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 2
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -356,14 +412,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -375,14 +434,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -394,14 +456,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -413,14 +478,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -432,14 +500,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -451,14 +522,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3
   isBadge={true}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -470,14 +544,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3
   isBadge={true}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -489,14 +566,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3
   isBadge={true}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;
@@ -508,14 +588,17 @@ exports[`EligibilityIcon [common] example testing should match snapshot(s) for 3
   isBadge={true}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <g>
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z" />
+      d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
+    />
     <path
       className="lucid-EligibilityIcon-half-circle lucid-EligibilityIcon-is-selected lucid-EligibilityIcon-half-circle-is-disabled"
-      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z" />
+      d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
+    />
   </g>
 </Icon>
 `;

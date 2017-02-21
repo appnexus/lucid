@@ -1,6 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`RadioGroup [common] example testing should match snapshot(s) for default 1`] = `
 <span
-  className="lucid-RadioGroup">
+  className="lucid-RadioGroup"
+>
   <RadioButtonLabeled
     Label={
       Object {
@@ -16,7 +19,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Superman
     </RadioGroup.Label>
@@ -36,7 +40,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Batman
     </RadioGroup.Label>
@@ -56,7 +61,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Wonder Woman
     </RadioGroup.Label>
@@ -76,7 +82,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Aquaman
     </RadioGroup.Label>
@@ -96,7 +103,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Robin
     </RadioGroup.Label>
@@ -112,7 +120,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       "display": "flex",
       "flexDirection": "column",
     }
-  }>
+  }
+>
   <RadioButtonLabeled
     Label={
       Object {
@@ -128,7 +137,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Captain America
     </RadioGroup.Label>
@@ -148,7 +158,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Iron Man
     </RadioGroup.Label>
@@ -168,7 +179,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Thor
     </RadioGroup.Label>
@@ -188,7 +200,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Hulk
     </RadioGroup.Label>
@@ -208,7 +221,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Black Widow
     </RadioGroup.Label>
@@ -228,7 +242,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Hawkeye
     </RadioGroup.Label>
@@ -244,7 +259,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       "display": "flex",
       "flexDirection": "column",
     }
-  }>
+  }
+>
   <RadioButtonLabeled
     Label={
       Object {
@@ -260,7 +276,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Leonardo
     </RadioGroup.Label>
@@ -280,7 +297,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Raphael
     </RadioGroup.Label>
@@ -300,7 +318,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Donatello
     </RadioGroup.Label>
@@ -320,7 +339,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Michelangelo
     </RadioGroup.Label>
@@ -340,7 +360,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Venus
     </RadioGroup.Label>
@@ -350,7 +371,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
 
 exports[`RadioGroup [common] example testing should match snapshot(s) for stateful 1`] = `
 <span
-  className="lucid-RadioGroup">
+  className="lucid-RadioGroup"
+>
   <RadioButtonLabeled
     Label={
       Object {
@@ -366,7 +388,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for statef
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Alvin
     </RadioGroup.Label>
@@ -386,7 +409,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for statef
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Simon
     </RadioGroup.Label>
@@ -406,7 +430,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for statef
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Theodore
     </RadioGroup.Label>

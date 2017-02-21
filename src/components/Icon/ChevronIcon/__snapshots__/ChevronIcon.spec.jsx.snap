@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
@@ -5,9 +7,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -18,9 +22,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -31,9 +37,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -44,9 +52,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -57,9 +67,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -70,9 +82,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
   isBadge={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -83,9 +97,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
   isBadge={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -96,9 +112,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
   isBadge={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -109,9 +127,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
   isBadge={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -123,9 +143,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.cli
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -137,9 +159,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.cli
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -151,9 +175,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.cli
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -165,9 +191,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.cli
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -179,9 +207,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.cli
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -193,9 +223,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.cli
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -207,9 +239,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.cli
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -221,9 +255,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.cli
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -235,9 +271,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.cli
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -248,9 +286,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.dis
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -261,9 +301,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.dis
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -274,9 +316,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.dis
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -287,9 +331,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.dis
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -300,9 +346,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.dis
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -313,9 +361,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.dis
   isBadge={true}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -326,9 +376,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.dis
   isBadge={true}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -339,9 +391,11 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.dis
   isBadge={true}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;
 
@@ -352,8 +406,10 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.dis
   isBadge={true}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z" />
+    d="M12.293,5.293 L13.707,6.707 L8.707,11.707 C8.317,12.098 7.683,12.098 7.293,11.707 L2.293,6.707 L3.707,5.293 L8,9.586 L12.293,5.293 z"
+  />
 </Icon>
 `;

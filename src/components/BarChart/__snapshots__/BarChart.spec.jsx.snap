@@ -1,20 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`BarChart [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 350)">
+    transform="translate(80, 350)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       tickCount={null}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -22,19 +28,23 @@ exports[`BarChart [common] example testing should match snapshot(s) for 01.basic
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(0, 10)">
+    transform="translate(0, 10)"
+  >
     <AxisLabel
       color="#000"
       height={340}
       label="Revenue"
       orient="left"
-      width={80} />
+      width={80}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Bars
       colorOffset={0}
       data={
@@ -80,7 +90,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 01.basic
       yFormatter={[Function]}
       yScale={[Function]}
       yStackedMax={5}
-      yTooltipFormatter={[Function]} />
+      yTooltipFormatter={[Function]}
+    />
   </g>
 </svg>
 `;
@@ -89,19 +100,23 @@ exports[`BarChart [common] example testing should match snapshot(s) for 03.group
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 350)">
+    transform="translate(80, 350)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       tickCount={null}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -109,19 +124,23 @@ exports[`BarChart [common] example testing should match snapshot(s) for 03.group
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(0, 10)">
+    transform="translate(0, 10)"
+  >
     <AxisLabel
       color="#000"
       height={340}
       label="Fruit Count"
       orient="left"
-      width={80} />
+      width={80}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Bars
       colorOffset={0}
       data={
@@ -203,7 +222,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 03.group
       yFormatter={[Function]}
       yScale={[Function]}
       yStackedMax={35}
-      yTooltipFormatter={[Function]} />
+      yTooltipFormatter={[Function]}
+    />
   </g>
 </svg>
 `;
@@ -212,19 +232,23 @@ exports[`BarChart [common] example testing should match snapshot(s) for 04.group
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 350)">
+    transform="translate(80, 350)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       tickCount={null}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -232,19 +256,23 @@ exports[`BarChart [common] example testing should match snapshot(s) for 04.group
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(0, 10)">
+    transform="translate(0, 10)"
+  >
     <AxisLabel
       color="#000"
       height={340}
       label="Fruit Count"
       orient="left"
-      width={80} />
+      width={80}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Bars
       colorOffset={0}
       data={
@@ -302,7 +330,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 04.group
       yFormatter={[Function]}
       yScale={[Function]}
       yStackedMax={35}
-      yTooltipFormatter={[Function]} />
+      yTooltipFormatter={[Function]}
+    />
   </g>
 </svg>
 `;
@@ -311,19 +340,23 @@ exports[`BarChart [common] example testing should match snapshot(s) for 05.limit
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 350)">
+    transform="translate(80, 350)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       tickCount={5}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -331,10 +364,12 @@ exports[`BarChart [common] example testing should match snapshot(s) for 05.limit
       scale={[Function]}
       tickCount={4}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Bars
       colorOffset={0}
       data={
@@ -432,7 +467,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 05.limit
       yFormatter={[Function]}
       yScale={[Function]}
       yStackedMax={6}
-      yTooltipFormatter={[Function]} />
+      yTooltipFormatter={[Function]}
+    />
   </g>
 </svg>
 `;
@@ -441,28 +477,34 @@ exports[`BarChart [common] example testing should match snapshot(s) for 06.all-t
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 350)">
+    transform="translate(80, 350)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       tickCount={2}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 350)">
+    transform="translate(80, 350)"
+  >
     <AxisLabel
       color="#000"
       height={50}
       label="Weekdays"
       orient="bottom"
-      width={900} />
+      width={900}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -470,19 +512,23 @@ exports[`BarChart [common] example testing should match snapshot(s) for 06.all-t
       scale={[Function]}
       tickCount={4}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(0, 10)">
+    transform="translate(0, 10)"
+  >
     <AxisLabel
       color="#000"
       height={340}
       label="Fruit Count"
       orient="left"
-      width={80} />
+      width={80}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Bars
       colorMap={
         Object {
@@ -539,7 +585,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 06.all-t
       yFormatter={[Function]}
       yScale={[Function]}
       yStackedMax={6000}
-      yTooltipFormatter={[Function]} />
+      yTooltipFormatter={[Function]}
+    />
   </g>
 </svg>
 `;
@@ -548,19 +595,23 @@ exports[`BarChart [common] example testing should match snapshot(s) for 07.stack
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 350)">
+    transform="translate(80, 350)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       tickCount={null}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -568,19 +619,23 @@ exports[`BarChart [common] example testing should match snapshot(s) for 07.stack
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(0, 10)">
+    transform="translate(0, 10)"
+  >
     <AxisLabel
       color="#000"
       height={340}
       label="Fruit Count"
       orient="left"
-      width={80} />
+      width={80}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Bars
       colorOffset={0}
       data={
@@ -630,7 +685,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 07.stack
       yFormatter={[Function]}
       yScale={[Function]}
       yStackedMax={65}
-      yTooltipFormatter={[Function]} />
+      yTooltipFormatter={[Function]}
+    />
   </g>
 </svg>
 `;
@@ -639,19 +695,23 @@ exports[`BarChart [common] example testing should match snapshot(s) for 08.unfor
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 350)">
+    transform="translate(80, 350)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       tickCount={null}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -659,19 +719,23 @@ exports[`BarChart [common] example testing should match snapshot(s) for 08.unfor
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(0, 10)">
+    transform="translate(0, 10)"
+  >
     <AxisLabel
       color="#000"
       height={340}
       label="Revenue"
       orient="left"
-      width={80} />
+      width={80}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Bars
       colorOffset={0}
       data={
@@ -717,7 +781,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 08.unfor
       yFormatter={[Function]}
       yScale={[Function]}
       yStackedMax={3000}
-      yTooltipFormatter={[Function]} />
+      yTooltipFormatter={[Function]}
+    />
   </g>
 </svg>
 `;
@@ -726,19 +791,23 @@ exports[`BarChart [common] example testing should match snapshot(s) for 09.forma
 <svg
   className="lucid-BarChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 350)">
+    transform="translate(80, 350)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
       tickCount={null}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -746,19 +815,23 @@ exports[`BarChart [common] example testing should match snapshot(s) for 09.forma
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(0, 10)">
+    transform="translate(0, 10)"
+  >
     <AxisLabel
       color="#000"
       height={340}
       label="Revenue"
       orient="left"
-      width={80} />
+      width={80}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Bars
       colorOffset={0}
       data={
@@ -804,7 +877,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 09.forma
       yFormatter={[Function]}
       yScale={[Function]}
       yStackedMax={3000}
-      yTooltipFormatter={[Function]} />
+      yTooltipFormatter={[Function]}
+    />
   </g>
 </svg>
 `;
@@ -812,23 +886,28 @@ exports[`BarChart [common] example testing should match snapshot(s) for 09.forma
 exports[`BarChart [common] example testing should match snapshot(s) for 10.empty 1`] = `
 <EmptyStateWrapper
   Title="You have no data."
-  isEmpty={true}>
+  isEmpty={true}
+>
   <svg
     className="lucid-BarChart"
     height={400}
-    width={1000}>
+    width={1000}
+  >
     <g
-      transform="translate(80, 350)">
+      transform="translate(80, 350)"
+    >
       <Axis
         innerTickSize={6}
         orient="bottom"
         outerTickSize={6}
         scale={[Function]}
         tickCount={null}
-        tickPadding={3} />
+        tickPadding={3}
+      />
     </g>
     <g
-      transform="translate(80, 10)">
+      transform="translate(80, 10)"
+    >
       <Axis
         innerTickSize={6}
         orient="left"
@@ -836,7 +915,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 10.empty
         scale={[Function]}
         tickCount={null}
         tickFormat={[Function]}
-        tickPadding={3} />
+        tickPadding={3}
+      />
     </g>
   </svg>
 </EmptyStateWrapper>
@@ -844,7 +924,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 10.empty
 
 exports[`BarChart [common] example testing should match snapshot(s) for 11.empty-with-custom-title-and-body 1`] = `
 <EmptyStateWrapper
-  isEmpty={true}>
+  isEmpty={true}
+>
   <EmptyStateWrapper.Title>
     Something went wrong.
   </EmptyStateWrapper.Title>
@@ -853,25 +934,30 @@ exports[`BarChart [common] example testing should match snapshot(s) for 11.empty
       Object {
         "fontSize": "12px",
       }
-    }>
+    }
+  >
     Echo park poutine esse tempor squid do. Lo-fi ramps XOXO chicharrones laboris, portland fugiat locavore. Fap four dollar toast keytar, cronut kogi fingerstache distillery microdosing everyday carry austin DIY dreamcatcher. Distillery flexitarian meditation laboris roof party. Cred raclette gastropub tilde PBR&B. Shoreditch poke adipisicing, reprehenderit lumbersexual succulents mustache officia franzen vinyl nostrud af. Hashtag bitters organic, before they sold out butcher cronut sapiente.
   </EmptyStateWrapper.Body>
   <svg
     className="lucid-BarChart"
     height={400}
-    width={1000}>
+    width={1000}
+  >
     <g
-      transform="translate(80, 350)">
+      transform="translate(80, 350)"
+    >
       <Axis
         innerTickSize={6}
         orient="bottom"
         outerTickSize={6}
         scale={[Function]}
         tickCount={null}
-        tickPadding={3} />
+        tickPadding={3}
+      />
     </g>
     <g
-      transform="translate(80, 10)">
+      transform="translate(80, 10)"
+    >
       <Axis
         innerTickSize={6}
         orient="left"
@@ -879,7 +965,8 @@ exports[`BarChart [common] example testing should match snapshot(s) for 11.empty
         scale={[Function]}
         tickCount={null}
         tickFormat={[Function]}
-        tickPadding={3} />
+        tickPadding={3}
+      />
     </g>
   </svg>
 </EmptyStateWrapper>

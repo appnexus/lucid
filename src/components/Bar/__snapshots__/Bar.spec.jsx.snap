@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Bar [common] example testing should match snapshot(s) for custom-colors 1`] = `
 <rect
   className="lucid-Bar"
@@ -9,7 +11,8 @@ exports[`Bar [common] example testing should match snapshot(s) for custom-colors
   }
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for custom-colors 2`] = `
@@ -23,7 +26,8 @@ exports[`Bar [common] example testing should match snapshot(s) for custom-colors
   }
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 1`] = `
@@ -33,7 +37,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 2`] = `
@@ -43,7 +48,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 3`] = `
@@ -53,7 +59,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 4`] = `
@@ -63,7 +70,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 5`] = `
@@ -73,7 +81,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 6`] = `
@@ -83,7 +92,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 7`] = `
@@ -93,7 +103,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 8`] = `
@@ -103,7 +114,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 9`] = `
@@ -113,7 +125,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 10`] = `
@@ -123,7 +136,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 11`] = `
@@ -133,7 +147,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 12`] = `
@@ -143,7 +158,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 13`] = `
@@ -153,7 +169,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 14`] = `
@@ -163,7 +180,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 15`] = `
@@ -173,7 +191,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 16`] = `
@@ -183,7 +202,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 17`] = `
@@ -193,7 +213,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 18`] = `
@@ -203,7 +224,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 19`] = `
@@ -213,7 +235,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 20`] = `
@@ -223,7 +246,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 21`] = `
@@ -233,7 +257,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 22`] = `
@@ -243,7 +268,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 23`] = `
@@ -253,7 +279,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 24`] = `
@@ -263,7 +290,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 25`] = `
@@ -273,7 +301,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 26`] = `
@@ -283,7 +312,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 27`] = `
@@ -293,7 +323,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 28`] = `
@@ -303,7 +334,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 29`] = `
@@ -313,7 +345,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 30`] = `
@@ -323,7 +356,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 31`] = `
@@ -333,7 +367,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 32`] = `
@@ -343,7 +378,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 33`] = `
@@ -353,7 +389,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 34`] = `
@@ -363,7 +400,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 35`] = `
@@ -373,7 +411,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 36`] = `
@@ -383,7 +422,8 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
 
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 37`] = `
@@ -393,5 +433,6 @@ exports[`Bar [common] example testing should match snapshot(s) for regular-color
   style={Object {}}
   width={10}
   x={5}
-  y={0} />
+  y={0}
+/>
 `;
