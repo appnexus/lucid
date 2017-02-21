@@ -690,6 +690,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
         >
           <CheckboxLabeled.Label>
             Filter #
+            0
           </CheckboxLabeled.Label>
         </CheckboxLabeled>
         <CheckboxLabeled
