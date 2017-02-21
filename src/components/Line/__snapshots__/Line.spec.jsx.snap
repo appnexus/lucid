@@ -1,83 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Line [common] example testing should match snapshot(s) for basic 1`] = `
 <path
   className="lucid-Line lucid-Line-color-chart-0"
   d="M0,0 L100,100"
-  style={Object {}} />
+  style={Object {}}
+/>
 `;
 
 exports[`Line [common] example testing should match snapshot(s) for basic 2`] = `
 <path
   className="lucid-Line lucid-Line-color-chart-1"
   d="M0,20 L100,80"
-  style={Object {}} />
+  style={Object {}}
+/>
 `;
 
 exports[`Line [common] example testing should match snapshot(s) for basic 3`] = `
 <path
   className="lucid-Line lucid-Line-color-chart-2"
   d="M0,40 L100,60"
-  style={Object {}} />
+  style={Object {}}
+/>
 `;
 
 exports[`Line [common] example testing should match snapshot(s) for basic 4`] = `
 <path
   className="lucid-Line lucid-Line-color-chart-3"
   d="M0,60 L100,40"
-  style={Object {}} />
+  style={Object {}}
+/>
 `;
 
 exports[`Line [common] example testing should match snapshot(s) for basic 5`] = `
 <path
   className="lucid-Line lucid-Line-color-chart-4"
   d="M0,80 L100,20"
-  style={Object {}} />
+  style={Object {}}
+/>
 `;
 
 exports[`Line [common] example testing should match snapshot(s) for basic 6`] = `
 <path
   className="lucid-Line lucid-Line-color-chart-5"
   d="M0,100 L100,0"
-  style={Object {}} />
+  style={Object {}}
+/>
 `;
 
 exports[`Line [common] example testing should match snapshot(s) for basic 7`] = `
 <path
   className="lucid-Line lucid-Line-color-chart-0 lucid-Line-is-dotted"
   d="M0,0 L100,100"
-  style={Object {}} />
+  style={Object {}}
+/>
 `;
 
 exports[`Line [common] example testing should match snapshot(s) for basic 8`] = `
 <path
   className="lucid-Line lucid-Line-color-chart-1 lucid-Line-is-dotted"
   d="M0,20 L100,80"
-  style={Object {}} />
+  style={Object {}}
+/>
 `;
 
 exports[`Line [common] example testing should match snapshot(s) for basic 9`] = `
 <path
   className="lucid-Line lucid-Line-color-chart-2 lucid-Line-is-dotted"
   d="M0,40 L100,60"
-  style={Object {}} />
+  style={Object {}}
+/>
 `;
 
 exports[`Line [common] example testing should match snapshot(s) for basic 10`] = `
 <path
   className="lucid-Line lucid-Line-color-chart-3 lucid-Line-is-dotted"
   d="M0,60 L100,40"
-  style={Object {}} />
+  style={Object {}}
+/>
 `;
 
 exports[`Line [common] example testing should match snapshot(s) for basic 11`] = `
 <path
   className="lucid-Line lucid-Line-color-chart-4 lucid-Line-is-dotted"
   d="M0,80 L100,20"
-  style={Object {}} />
+  style={Object {}}
+/>
 `;
 
 exports[`Line [common] example testing should match snapshot(s) for basic 12`] = `
 <path
   className="lucid-Line lucid-Line-color-chart-5 lucid-Line-is-dotted"
   d="M0,100 L100,0"
-  style={Object {}} />
+  style={Object {}}
+/>
 `;

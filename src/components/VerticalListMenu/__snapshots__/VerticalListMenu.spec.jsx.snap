@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`VerticalListMenu [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <ul
   className="lucid-VerticalListMenu"
@@ -5,36 +7,46 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     Object {
       "width": 250,
     }
-  }>
+  }
+>
   <li
-    className="lucid-VerticalListMenu-Item">
+    className="lucid-VerticalListMenu-Item"
+  >
     <div
       className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       <div
-        className="lucid-VerticalListMenu-Item-content-text">
+        className="lucid-VerticalListMenu-Item-content-text"
+      >
         Level one
       </div>
     </div>
   </li>
   <li
-    className="lucid-VerticalListMenu-Item">
+    className="lucid-VerticalListMenu-Item"
+  >
     <div
       className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       <div
-        className="lucid-VerticalListMenu-Item-content-text">
+        className="lucid-VerticalListMenu-Item-content-text"
+      >
         Level one
       </div>
     </div>
   </li>
   <li
-    className="lucid-VerticalListMenu-Item">
+    className="lucid-VerticalListMenu-Item"
+  >
     <div
       className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       <div
-        className="lucid-VerticalListMenu-Item-content-text">
+        className="lucid-VerticalListMenu-Item-content-text"
+      >
         Level one
       </div>
     </div>
@@ -58,32 +70,41 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     Object {
       "width": 250,
     }
-  }>
+  }
+>
   <li
-    className="lucid-VerticalListMenu-Item">
+    className="lucid-VerticalListMenu-Item"
+  >
     <div
       className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-selected lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       <div
-        className="lucid-VerticalListMenu-Item-content-text">
+        className="lucid-VerticalListMenu-Item-content-text"
+      >
         Level one
       </div>
     </div>
   </li>
   <li
-    className="lucid-VerticalListMenu-Item">
+    className="lucid-VerticalListMenu-Item"
+  >
     <div
       className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       <div
-        className="lucid-VerticalListMenu-Item-content-text">
+        className="lucid-VerticalListMenu-Item-content-text"
+      >
         Level one with VerticalListMenu
       </div>
       <div
         className="lucid-VerticalListMenu-Item-expander"
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <ChevronIcon
-          direction="down" />
+          direction="down"
+        />
       </div>
     </div>
     <Collapsible
@@ -92,19 +113,23 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       isExpanded={false}
       isMountControlled={true}
       mountControlThreshold={4}
-      rootType="div">
+      rootType="div"
+    >
       <VerticalListMenu
         onSelect={[Function]}
-        selectedIndices={Array []}>
+        selectedIndices={Array []}
+      >
         <VerticalListMenu.Item>
           Level two
         </VerticalListMenu.Item>
         <VerticalListMenu.Item
-          hasExpander={true}>
+          hasExpander={true}
+        >
           Level two with VerticalListMenu and lots of text. Lorem quos natus mollitia nihil quasi! Necessitatibus corporis aliquam quam laborum nesciunt quaerat. Nostrum distinctio officiis adipisci nulla unde repellat. Soluta eaque ex obcaecati molestiae provident aspernatur sit! Expedita et.
           <VerticalListMenu
             onSelect={[Function]}
-            selectedIndices={Array []}>
+            selectedIndices={Array []}
+          >
             <VerticalListMenu.Item>
               Level three
             </VerticalListMenu.Item>
@@ -264,12 +289,15 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     </Collapsible>
   </li>
   <li
-    className="lucid-VerticalListMenu-Item">
+    className="lucid-VerticalListMenu-Item"
+  >
     <div
       className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       <div
-        className="lucid-VerticalListMenu-Item-content-text">
+        className="lucid-VerticalListMenu-Item-content-text"
+      >
         Level one
       </div>
     </div>
@@ -278,20 +306,24 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     Level one
   </VerticalListMenu.Item>
   <VerticalListMenu.Item
-    hasExpander={true}>
+    hasExpander={true}
+  >
     Level one with VerticalListMenu
     <VerticalListMenu
       onSelect={[Function]}
-      selectedIndices={Array []}>
+      selectedIndices={Array []}
+    >
       <VerticalListMenu.Item>
         Level two
       </VerticalListMenu.Item>
       <VerticalListMenu.Item
-        hasExpander={true}>
+        hasExpander={true}
+      >
         Level two with VerticalListMenu and lots of text. Lorem quos natus mollitia nihil quasi! Necessitatibus corporis aliquam quam laborum nesciunt quaerat. Nostrum distinctio officiis adipisci nulla unde repellat. Soluta eaque ex obcaecati molestiae provident aspernatur sit! Expedita et.
         <VerticalListMenu
           onSelect={[Function]}
-          selectedIndices={Array []}>
+          selectedIndices={Array []}
+        >
           <VerticalListMenu.Item>
             Level three
           </VerticalListMenu.Item>
@@ -457,25 +489,32 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
 
 exports[`VerticalListMenu [common] example testing should match snapshot(s) for 3.nested-full-width 1`] = `
 <ul
-  className="lucid-VerticalListMenu">
+  className="lucid-VerticalListMenu"
+>
   <li
-    className="lucid-VerticalListMenu-Item">
+    className="lucid-VerticalListMenu-Item"
+  >
     <div
       className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-selected lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       <div
-        className="lucid-VerticalListMenu-Item-content-text">
+        className="lucid-VerticalListMenu-Item-content-text"
+      >
         Level one
       </div>
     </div>
   </li>
   <li
-    className="lucid-VerticalListMenu-Item">
+    className="lucid-VerticalListMenu-Item"
+  >
     <div
       className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       <div
-        className="lucid-VerticalListMenu-Item-content-text">
+        className="lucid-VerticalListMenu-Item-content-text"
+      >
         Level one with VerticalListMenu
       </div>
     </div>
@@ -485,10 +524,12 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       isExpanded={true}
       isMountControlled={true}
       mountControlThreshold={4}
-      rootType="div">
+      rootType="div"
+    >
       <VerticalListMenu
         onSelect={[Function]}
-        selectedIndices={Array []}>
+        selectedIndices={Array []}
+      >
         <VerticalListMenu.Item>
           Level two
         </VerticalListMenu.Item>
@@ -499,12 +540,15 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     </Collapsible>
   </li>
   <li
-    className="lucid-VerticalListMenu-Item">
+    className="lucid-VerticalListMenu-Item"
+  >
     <div
       className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       <div
-        className="lucid-VerticalListMenu-Item-content-text">
+        className="lucid-VerticalListMenu-Item-content-text"
+      >
         Level one with VerticalListMenu
       </div>
     </div>
@@ -514,19 +558,23 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       isExpanded={true}
       isMountControlled={true}
       mountControlThreshold={4}
-      rootType="div">
+      rootType="div"
+    >
       <VerticalListMenu
         onSelect={[Function]}
-        selectedIndices={Array []}>
+        selectedIndices={Array []}
+      >
         <VerticalListMenu.Item>
           Level two
         </VerticalListMenu.Item>
         <VerticalListMenu.Item
-          isExpanded={false}>
+          isExpanded={false}
+        >
           Level two with closed VerticalListMenu
           <VerticalListMenu
             onSelect={[Function]}
-            selectedIndices={Array []}>
+            selectedIndices={Array []}
+          >
             <VerticalListMenu.Item>
               Level three
             </VerticalListMenu.Item>
@@ -545,12 +593,15 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     </Collapsible>
   </li>
   <li
-    className="lucid-VerticalListMenu-Item">
+    className="lucid-VerticalListMenu-Item"
+  >
     <div
       className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       <div
-        className="lucid-VerticalListMenu-Item-content-text">
+        className="lucid-VerticalListMenu-Item-content-text"
+      >
         Level one
       </div>
     </div>
@@ -559,11 +610,13 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     Level one
   </VerticalListMenu.Item>
   <VerticalListMenu.Item
-    isExpanded={true}>
+    isExpanded={true}
+  >
     Level one with VerticalListMenu
     <VerticalListMenu
       onSelect={[Function]}
-      selectedIndices={Array []}>
+      selectedIndices={Array []}
+    >
       <VerticalListMenu.Item>
         Level two
       </VerticalListMenu.Item>
@@ -573,20 +626,24 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     </VerticalListMenu>
   </VerticalListMenu.Item>
   <VerticalListMenu.Item
-    isExpanded={true}>
+    isExpanded={true}
+  >
     Level one with VerticalListMenu
     <VerticalListMenu
       onSelect={[Function]}
-      selectedIndices={Array []}>
+      selectedIndices={Array []}
+    >
       <VerticalListMenu.Item>
         Level two
       </VerticalListMenu.Item>
       <VerticalListMenu.Item
-        isExpanded={false}>
+        isExpanded={false}
+      >
         Level two with closed VerticalListMenu
         <VerticalListMenu
           onSelect={[Function]}
-          selectedIndices={Array []}>
+          selectedIndices={Array []}
+        >
           <VerticalListMenu.Item>
             Level three
           </VerticalListMenu.Item>
@@ -616,32 +673,41 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     Object {
       "width": 250,
     }
-  }>
+  }
+>
   <li
-    className="lucid-VerticalListMenu-Item">
+    className="lucid-VerticalListMenu-Item"
+  >
     <div
       className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       <div
-        className="lucid-VerticalListMenu-Item-content-text">
+        className="lucid-VerticalListMenu-Item-content-text"
+      >
         Level one
       </div>
     </div>
   </li>
   <li
-    className="lucid-VerticalListMenu-Item">
+    className="lucid-VerticalListMenu-Item"
+  >
     <div
       className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       <div
-        className="lucid-VerticalListMenu-Item-content-text">
+        className="lucid-VerticalListMenu-Item-content-text"
+      >
         Level one with VerticalListMenu
       </div>
       <div
         className="lucid-VerticalListMenu-Item-expander"
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <ChevronIcon
-          direction="down" />
+          direction="down"
+        />
       </div>
     </div>
     <Collapsible
@@ -650,7 +716,8 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       isExpanded={false}
       isMountControlled={false}
       mountControlThreshold={4}
-      rootType="div">
+      rootType="div"
+    >
       <VerticalListMenu>
         <VerticalListMenu.Item>
           Level two
@@ -806,12 +873,15 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     </Collapsible>
   </li>
   <li
-    className="lucid-VerticalListMenu-Item">
+    className="lucid-VerticalListMenu-Item"
+  >
     <div
       className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       <div
-        className="lucid-VerticalListMenu-Item-content-text">
+        className="lucid-VerticalListMenu-Item-content-text"
+      >
         Level one
       </div>
     </div>
@@ -826,7 +896,8 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
         "isMountControlled": false,
       }
     }
-    hasExpander={true}>
+    hasExpander={true}
+  >
     Level one with VerticalListMenu
     <VerticalListMenu>
       <VerticalListMenu.Item>

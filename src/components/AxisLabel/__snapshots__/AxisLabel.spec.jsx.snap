@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`AxisLabel [common] example testing should match snapshot(s) for basic 1`] = `
 <text
   className="lucid-AxisLabel"
@@ -9,7 +11,8 @@ exports[`AxisLabel [common] example testing should match snapshot(s) for basic 1
   }
   transform="rotate(-90)"
   x={-200}
-  y={0}>
+  y={0}
+>
   Left
 </text>
 `;
@@ -21,7 +24,8 @@ exports[`AxisLabel [common] example testing should match snapshot(s) for basic 2
   style={Object {}}
   transform="rotate(-90)"
   x={-200}
-  y={50}>
+  y={50}
+>
   Right
 </text>
 `;
@@ -33,7 +37,8 @@ exports[`AxisLabel [common] example testing should match snapshot(s) for basic 3
   style={Object {}}
   transform=""
   x={500}
-  y={50}>
+  y={50}
+>
   Bottom
 </text>
 `;
@@ -45,7 +50,8 @@ exports[`AxisLabel [common] example testing should match snapshot(s) for basic 4
   style={Object {}}
   transform=""
   x={500}
-  y={0}>
+  y={0}
+>
   Top
 </text>
 `;

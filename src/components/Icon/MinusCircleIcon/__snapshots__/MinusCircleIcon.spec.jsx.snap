@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`MinusCircleIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
@@ -5,18 +7,21 @@ exports[`MinusCircleIcon [common] example testing should match snapshot(s) for 1
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <circle
     className="lucid-MinusCircleIcon-background"
     cx="8"
     cy="8"
-    r="8" />
+    r="8"
+  />
   <rect
     className="lucid-MinusCircleIcon-minus"
     height="2"
     width="10"
     x="3"
-    y="7" />
+    y="7"
+  />
 </Icon>
 `;
 
@@ -28,18 +33,21 @@ exports[`MinusCircleIcon [common] example testing should match snapshot(s) for 2
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <circle
     className="lucid-MinusCircleIcon-background"
     cx="8"
     cy="8"
-    r="8" />
+    r="8"
+  />
   <rect
     className="lucid-MinusCircleIcon-minus"
     height="2"
     width="10"
     x="3"
-    y="7" />
+    y="7"
+  />
 </Icon>
 `;
 
@@ -50,17 +58,20 @@ exports[`MinusCircleIcon [common] example testing should match snapshot(s) for 3
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <circle
     className="lucid-MinusCircleIcon-background lucid-MinusCircleIcon-background-is-disabled"
     cx="8"
     cy="8"
-    r="8" />
+    r="8"
+  />
   <rect
     className="lucid-MinusCircleIcon-minus"
     height="2"
     width="10"
     x="3"
-    y="7" />
+    y="7"
+  />
 </Icon>
 `;

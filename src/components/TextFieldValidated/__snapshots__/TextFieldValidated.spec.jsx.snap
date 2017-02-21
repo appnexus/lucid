@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`TextFieldValidated [common] example testing should match snapshot(s) for basic 1`] = `
 <Validation
   Error={
@@ -8,7 +10,8 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
     ]
   }
   className="lucid-TextFieldValidated"
-  style={null}>
+  style={null}
+>
   <TextField
     debounceLevel={500}
     isDisabled={false}
@@ -20,7 +23,8 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value="" />
+    value=""
+  />
 </Validation>
 `;
 
@@ -29,12 +33,13 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
   Error={
     Array [
       Object {
-        "children": "Please enter \"foo\"",
+        "children": "Please enter \\"foo\\"",
       },
     ]
   }
   className="lucid-TextFieldValidated"
-  style={null}>
+  style={null}
+>
   <TextField
     debounceLevel={500}
     isDisabled={false}
@@ -46,6 +51,7 @@ exports[`TextFieldValidated [common] example testing should match snapshot(s) fo
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value="" />
+    value=""
+  />
 </Validation>
 `;

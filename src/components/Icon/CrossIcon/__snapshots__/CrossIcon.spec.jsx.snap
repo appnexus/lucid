@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`CrossIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
@@ -5,9 +7,11 @@ exports[`CrossIcon [common] example testing should match snapshot(s) for 1.defau
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M6.837,7.999 L4.388,5.536 L5.558,4.365 L8.007,6.83 L10.472,4.365 L11.642,5.536 L9.163,7.999 L11.642,10.464 L10.475,11.634 L8.008,9.155 L5.528,11.635 L4.358,10.464 L6.837,7.999 z" />
+    d="M6.837,7.999 L4.388,5.536 L5.558,4.365 L8.007,6.83 L10.472,4.365 L11.642,5.536 L9.163,7.999 L11.642,10.464 L10.475,11.634 L8.008,9.155 L5.528,11.635 L4.358,10.464 L6.837,7.999 z"
+  />
 </Icon>
 `;
 
@@ -18,9 +22,11 @@ exports[`CrossIcon [common] example testing should match snapshot(s) for 1.defau
   isBadge={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M6.837,7.999 L4.388,5.536 L5.558,4.365 L8.007,6.83 L10.472,4.365 L11.642,5.536 L9.163,7.999 L11.642,10.464 L10.475,11.634 L8.008,9.155 L5.528,11.635 L4.358,10.464 L6.837,7.999 z" />
+    d="M6.837,7.999 L4.388,5.536 L5.558,4.365 L8.007,6.83 L10.472,4.365 L11.642,5.536 L9.163,7.999 L11.642,10.464 L10.475,11.634 L8.008,9.155 L5.528,11.635 L4.358,10.464 L6.837,7.999 z"
+  />
 </Icon>
 `;
 
@@ -32,9 +38,11 @@ exports[`CrossIcon [common] example testing should match snapshot(s) for 2.click
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M6.837,7.999 L4.388,5.536 L5.558,4.365 L8.007,6.83 L10.472,4.365 L11.642,5.536 L9.163,7.999 L11.642,10.464 L10.475,11.634 L8.008,9.155 L5.528,11.635 L4.358,10.464 L6.837,7.999 z" />
+    d="M6.837,7.999 L4.388,5.536 L5.558,4.365 L8.007,6.83 L10.472,4.365 L11.642,5.536 L9.163,7.999 L11.642,10.464 L10.475,11.634 L8.008,9.155 L5.528,11.635 L4.358,10.464 L6.837,7.999 z"
+  />
 </Icon>
 `;
 
@@ -46,9 +54,11 @@ exports[`CrossIcon [common] example testing should match snapshot(s) for 2.click
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M6.837,7.999 L4.388,5.536 L5.558,4.365 L8.007,6.83 L10.472,4.365 L11.642,5.536 L9.163,7.999 L11.642,10.464 L10.475,11.634 L8.008,9.155 L5.528,11.635 L4.358,10.464 L6.837,7.999 z" />
+    d="M6.837,7.999 L4.388,5.536 L5.558,4.365 L8.007,6.83 L10.472,4.365 L11.642,5.536 L9.163,7.999 L11.642,10.464 L10.475,11.634 L8.008,9.155 L5.528,11.635 L4.358,10.464 L6.837,7.999 z"
+  />
 </Icon>
 `;
 
@@ -59,9 +69,11 @@ exports[`CrossIcon [common] example testing should match snapshot(s) for 3.disab
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M6.837,7.999 L4.388,5.536 L5.558,4.365 L8.007,6.83 L10.472,4.365 L11.642,5.536 L9.163,7.999 L11.642,10.464 L10.475,11.634 L8.008,9.155 L5.528,11.635 L4.358,10.464 L6.837,7.999 z" />
+    d="M6.837,7.999 L4.388,5.536 L5.558,4.365 L8.007,6.83 L10.472,4.365 L11.642,5.536 L9.163,7.999 L11.642,10.464 L10.475,11.634 L8.008,9.155 L5.528,11.635 L4.358,10.464 L6.837,7.999 z"
+  />
 </Icon>
 `;
 
@@ -72,8 +84,10 @@ exports[`CrossIcon [common] example testing should match snapshot(s) for 3.disab
   isBadge={true}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M6.837,7.999 L4.388,5.536 L5.558,4.365 L8.007,6.83 L10.472,4.365 L11.642,5.536 L9.163,7.999 L11.642,10.464 L10.475,11.634 L8.008,9.155 L5.528,11.635 L4.358,10.464 L6.837,7.999 z" />
+    d="M6.837,7.999 L4.388,5.536 L5.558,4.365 L8.007,6.83 L10.472,4.365 L11.642,5.536 L9.163,7.999 L11.642,10.464 L10.475,11.634 L8.008,9.155 L5.528,11.635 L4.358,10.464 L6.837,7.999 z"
+  />
 </Icon>
 `;

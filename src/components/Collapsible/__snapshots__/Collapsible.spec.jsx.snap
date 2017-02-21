@@ -1,10 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Collapsible [common] example testing should match snapshot(s) for 1.toggle-expand 1`] = `
 <Motion
   style={
     Object {
       "height": 0,
     }
-  } />
+  }
+/>
 `;
 
 exports[`Collapsible [common] example testing should match snapshot(s) for 2.not-animated 1`] = `
@@ -13,7 +16,8 @@ exports[`Collapsible [common] example testing should match snapshot(s) for 2.not
     Object {
       "height": 0,
     }
-  } />
+  }
+/>
 `;
 
 exports[`Collapsible [common] example testing should match snapshot(s) for 3.unmount-children-on-collapse 1`] = `
@@ -22,7 +26,8 @@ exports[`Collapsible [common] example testing should match snapshot(s) for 3.unm
     Object {
       "height": 0,
     }
-  } />
+  }
+/>
 `;
 
 exports[`Collapsible [common] example testing should match snapshot(s) for 4.render-children-on-collapse 1`] = `
@@ -31,5 +36,6 @@ exports[`Collapsible [common] example testing should match snapshot(s) for 4.ren
     Object {
       "height": 0,
     }
-  } />
+  }
+/>
 `;
