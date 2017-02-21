@@ -1,6 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`SearchField [common] example testing should match snapshot(s) for 1.default 1`] = `
 <div
-  className="lucid-SearchField">
+  className="lucid-SearchField"
+>
   <TextField
     debounceLevel={500}
     isDisabled={false}
@@ -12,18 +15,22 @@ exports[`SearchField [common] example testing should match snapshot(s) for 1.def
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value="" />
+    value=""
+  />
   <div
-    className="lucid-SearchField-Icon-container">
+    className="lucid-SearchField-Icon-container"
+  >
     <SearchIcon
-      className="lucid-SearchField-Icon" />
+      className="lucid-SearchField-Icon"
+    />
   </div>
 </div>
 `;
 
 exports[`SearchField [common] example testing should match snapshot(s) for 2.interactive 1`] = `
 <div
-  className="lucid-SearchField">
+  className="lucid-SearchField"
+>
   <TextField
     debounceLevel={500}
     isDisabled={false}
@@ -35,18 +42,22 @@ exports[`SearchField [common] example testing should match snapshot(s) for 2.int
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value="" />
+    value=""
+  />
   <div
-    className="lucid-SearchField-Icon-container">
+    className="lucid-SearchField-Icon-container"
+  >
     <SearchIcon
-      className="lucid-SearchField-Icon" />
+      className="lucid-SearchField-Icon"
+    />
   </div>
 </div>
 `;
 
 exports[`SearchField [common] example testing should match snapshot(s) for 3.placeholder 1`] = `
 <div
-  className="lucid-SearchField">
+  className="lucid-SearchField"
+>
   <TextField
     debounceLevel={500}
     isDisabled={false}
@@ -59,18 +70,22 @@ exports[`SearchField [common] example testing should match snapshot(s) for 3.pla
     placeholder="Name/ID"
     rows={5}
     style={null}
-    value="" />
+    value=""
+  />
   <div
-    className="lucid-SearchField-Icon-container">
+    className="lucid-SearchField-Icon-container"
+  >
     <SearchIcon
-      className="lucid-SearchField-Icon" />
+      className="lucid-SearchField-Icon"
+    />
   </div>
 </div>
 `;
 
 exports[`SearchField [common] example testing should match snapshot(s) for 4.disabled 1`] = `
 <div
-  className="lucid-SearchField">
+  className="lucid-SearchField"
+>
   <TextField
     debounceLevel={500}
     isDisabled={true}
@@ -82,18 +97,22 @@ exports[`SearchField [common] example testing should match snapshot(s) for 4.dis
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value="" />
+    value=""
+  />
   <div
-    className="lucid-SearchField-Icon-container">
+    className="lucid-SearchField-Icon-container"
+  >
     <SearchIcon
-      className="lucid-SearchField-Icon" />
+      className="lucid-SearchField-Icon"
+    />
   </div>
 </div>
 `;
 
 exports[`SearchField [common] example testing should match snapshot(s) for 5.custom-icon 1`] = `
 <div
-  className="lucid-SearchField">
+  className="lucid-SearchField"
+>
   <TextField
     debounceLevel={500}
     isDisabled={false}
@@ -105,9 +124,11 @@ exports[`SearchField [common] example testing should match snapshot(s) for 5.cus
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value="" />
+    value=""
+  />
   <div
-    className="lucid-SearchField-Icon-container">
+    className="lucid-SearchField-Icon-container"
+  >
     <LoadingIcon
       aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
@@ -115,14 +136,16 @@ exports[`SearchField [common] example testing should match snapshot(s) for 5.cus
       isDisabled={false}
       size={16}
       speed="normal"
-      viewBox="0 0 16 16" />
+      viewBox="0 0 16 16"
+    />
   </div>
 </div>
 `;
 
 exports[`SearchField [common] example testing should match snapshot(s) for 6.custom-text-field 1`] = `
 <div
-  className="lucid-SearchField">
+  className="lucid-SearchField"
+>
   <TextField
     debounceLevel={500}
     isDisabled={false}
@@ -135,11 +158,14 @@ exports[`SearchField [common] example testing should match snapshot(s) for 6.cus
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value="" />
+    value=""
+  />
   <div
-    className="lucid-SearchField-Icon-container">
+    className="lucid-SearchField-Icon-container"
+  >
     <SearchIcon
-      className="lucid-SearchField-Icon" />
+      className="lucid-SearchField-Icon"
+    />
   </div>
 </div>
 `;
@@ -148,7 +174,8 @@ exports[`SearchField [common] example testing should match snapshot(s) for 7.val
 <div
   className="lucid-SearchField"
   onBlur={[Function]}
-  onKeyDown={[Function]}>
+  onKeyDown={[Function]}
+>
   <TextField
     debounceLevel={500}
     isDisabled={false}
@@ -158,21 +185,25 @@ exports[`SearchField [common] example testing should match snapshot(s) for 7.val
     onChange={[Function]}
     onChangeDebounced={[Function]}
     onSubmit={[Function]}
-    placeholder="icon doesn\'t become active until you type at least three characters ----->"
+    placeholder="icon doesn't become active until you type at least three characters ----->"
     rows={5}
     style={null}
-    value="" />
+    value=""
+  />
   <div
-    className="lucid-SearchField-Icon-container">
+    className="lucid-SearchField-Icon-container"
+  >
     <SearchIcon
-      className="lucid-SearchField-Icon" />
+      className="lucid-SearchField-Icon"
+    />
   </div>
 </div>
 `;
 
 exports[`SearchField [common] example testing should match snapshot(s) for 8.props 1`] = `
 <div
-  className="lucid-SearchField">
+  className="lucid-SearchField"
+>
   <TextField
     debounceLevel={500}
     isDisabled={false}
@@ -184,18 +215,22 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value="foo" />
+    value="foo"
+  />
   <div
-    className="lucid-SearchField-Icon-container">
+    className="lucid-SearchField-Icon-container"
+  >
     <SearchIcon
-      className="lucid-SearchField-Icon lucid-SearchField-Icon-active" />
+      className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
+    />
   </div>
 </div>
 `;
 
 exports[`SearchField [common] example testing should match snapshot(s) for 8.props 2`] = `
 <div
-  className="lucid-SearchField">
+  className="lucid-SearchField"
+>
   <TextField
     debounceLevel={500}
     isDisabled={false}
@@ -208,18 +243,22 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     placeholder="bar"
     rows={5}
     style={null}
-    value="" />
+    value=""
+  />
   <div
-    className="lucid-SearchField-Icon-container">
+    className="lucid-SearchField-Icon-container"
+  >
     <SearchIcon
-      className="lucid-SearchField-Icon" />
+      className="lucid-SearchField-Icon"
+    />
   </div>
 </div>
 `;
 
 exports[`SearchField [common] example testing should match snapshot(s) for 8.props 3`] = `
 <div
-  className="lucid-SearchField">
+  className="lucid-SearchField"
+>
   <TextField
     debounceLevel={500}
     isDisabled={true}
@@ -231,18 +270,22 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value="" />
+    value=""
+  />
   <div
-    className="lucid-SearchField-Icon-container">
+    className="lucid-SearchField-Icon-container"
+  >
     <SearchIcon
-      className="lucid-SearchField-Icon" />
+      className="lucid-SearchField-Icon"
+    />
   </div>
 </div>
 `;
 
 exports[`SearchField [common] example testing should match snapshot(s) for 8.props 4`] = `
 <div
-  className="lucid-SearchField">
+  className="lucid-SearchField"
+>
   <TextField
     debounceLevel={500}
     isDisabled={false}
@@ -254,18 +297,22 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value="" />
+    value=""
+  />
   <div
-    className="lucid-SearchField-Icon-container">
+    className="lucid-SearchField-Icon-container"
+  >
     <SearchIcon
-      className="lucid-SearchField-Icon" />
+      className="lucid-SearchField-Icon"
+    />
   </div>
 </div>
 `;
 
 exports[`SearchField [common] example testing should match snapshot(s) for 8.props 5`] = `
 <div
-  className="lucid-SearchField">
+  className="lucid-SearchField"
+>
   <TextField
     debounceLevel={500}
     isDisabled={false}
@@ -277,9 +324,11 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value="" />
+    value=""
+  />
   <div
-    className="lucid-SearchField-Icon-container">
+    className="lucid-SearchField-Icon-container"
+  >
     <LoadingIcon
       aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
@@ -287,14 +336,16 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
       isDisabled={false}
       size={16}
       speed="normal"
-      viewBox="0 0 16 16" />
+      viewBox="0 0 16 16"
+    />
   </div>
 </div>
 `;
 
 exports[`SearchField [common] example testing should match snapshot(s) for 8.props 6`] = `
 <div
-  className="lucid-SearchField">
+  className="lucid-SearchField"
+>
   <TextField
     debounceLevel={500}
     isDisabled={false}
@@ -306,9 +357,11 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value="foo" />
+    value="foo"
+  />
   <div
-    className="lucid-SearchField-Icon-container">
+    className="lucid-SearchField-Icon-container"
+  >
     <LoadingIcon
       aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
@@ -316,14 +369,16 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
       isDisabled={false}
       size={16}
       speed="normal"
-      viewBox="0 0 16 16" />
+      viewBox="0 0 16 16"
+    />
   </div>
 </div>
 `;
 
 exports[`SearchField [common] example testing should match snapshot(s) for 8.props 7`] = `
 <div
-  className="lucid-SearchField">
+  className="lucid-SearchField"
+>
   <TextField
     debounceLevel={500}
     isDisabled={false}
@@ -335,11 +390,14 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value="bar" />
+    value="bar"
+  />
   <div
-    className="lucid-SearchField-Icon-container">
+    className="lucid-SearchField-Icon-container"
+  >
     <SearchIcon
-      className="lucid-SearchField-Icon lucid-SearchField-Icon-active" />
+      className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
+    />
   </div>
 </div>
 `;
@@ -351,7 +409,8 @@ exports[`SearchField [common] example testing should match snapshot(s) for 9.deb
     Object {
       "marginBottom": "10px",
     }
-  }>
+  }
+>
   <TextField
     debounceLevel={500}
     isDisabled={false}
@@ -363,11 +422,14 @@ exports[`SearchField [common] example testing should match snapshot(s) for 9.deb
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value="foo" />
+    value="foo"
+  />
   <div
-    className="lucid-SearchField-Icon-container">
+    className="lucid-SearchField-Icon-container"
+  >
     <SearchIcon
-      className="lucid-SearchField-Icon lucid-SearchField-Icon-active" />
+      className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
+    />
   </div>
 </div>
 `;

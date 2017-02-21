@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`CaretIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
@@ -5,9 +7,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 1.defau
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -18,9 +22,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 1.defau
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -31,9 +37,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 1.defau
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -44,9 +52,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 1.defau
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -57,9 +67,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 1.defau
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -70,9 +82,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 1.defau
   isBadge={true}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -83,9 +97,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 1.defau
   isBadge={true}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -96,9 +112,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 1.defau
   isBadge={true}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -109,9 +127,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 1.defau
   isBadge={true}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -123,9 +143,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 2.click
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -137,9 +159,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 2.click
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -151,9 +175,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 2.click
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -165,9 +191,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 2.click
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -179,9 +207,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 2.click
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -193,9 +223,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 2.click
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -207,9 +239,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 2.click
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -221,9 +255,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 2.click
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -235,9 +271,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 2.click
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -248,9 +286,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 3.disab
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -261,9 +301,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 3.disab
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -274,9 +316,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 3.disab
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -287,9 +331,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 3.disab
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -300,9 +346,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 3.disab
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -313,9 +361,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 3.disab
   isBadge={true}
   isDisabled={true}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -326,9 +376,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 3.disab
   isBadge={true}
   isDisabled={true}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -339,9 +391,11 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 3.disab
   isBadge={true}
   isDisabled={true}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;
 
@@ -352,8 +406,10 @@ exports[`CaretIcon [common] example testing should match snapshot(s) for 3.disab
   isBadge={true}
   isDisabled={true}
   size={16}
-  viewBox="0 3 16 8">
+  viewBox="0 3 16 8"
+>
   <path
-    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
+    d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z"
+  />
 </Icon>
 `;

@@ -1,15 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Axis [common] example testing should match snapshot(s) for 2.bottom 1`] = `
 <g
-  className="lucid-Axis">
+  className="lucid-Axis"
+>
   <path
     className="lucid-Axis-domain"
-    d="M0,6V0H360V6" />
+    d="M0,6V0H360V6"
+  />
   <g
-    transform="translate(0, 0)">
+    transform="translate(0, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -19,16 +25,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 2.bottom 1`]
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       0
     </text>
   </g>
   <g
-    transform="translate(72, 0)">
+    transform="translate(72, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -38,16 +47,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 2.bottom 1`]
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       20,000
     </text>
   </g>
   <g
-    transform="translate(144, 0)">
+    transform="translate(144, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -57,16 +69,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 2.bottom 1`]
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       40,000
     </text>
   </g>
   <g
-    transform="translate(216, 0)">
+    transform="translate(216, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -76,16 +91,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 2.bottom 1`]
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       60,000
     </text>
   </g>
   <g
-    transform="translate(288, 0)">
+    transform="translate(288, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -95,16 +113,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 2.bottom 1`]
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       80,000
     </text>
   </g>
   <g
-    transform="translate(360, 0)">
+    transform="translate(360, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -114,7 +135,8 @@ exports[`Axis [common] example testing should match snapshot(s) for 2.bottom 1`]
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       100,000
     </text>
   </g>
@@ -123,16 +145,20 @@ exports[`Axis [common] example testing should match snapshot(s) for 2.bottom 1`]
 
 exports[`Axis [common] example testing should match snapshot(s) for 3.top 1`] = `
 <g
-  className="lucid-Axis">
+  className="lucid-Axis"
+>
   <path
     className="lucid-Axis-domain"
-    d="M0,-6V0H360V-6" />
+    d="M0,-6V0H360V-6"
+  />
   <g
-    transform="translate(0, 0)">
+    transform="translate(0, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={-6} />
+      y2={-6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy="0em"
@@ -142,16 +168,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 3.top 1`] = 
         }
       }
       x={0}
-      y={-9}>
+      y={-9}
+    >
       0
     </text>
   </g>
   <g
-    transform="translate(72, 0)">
+    transform="translate(72, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={-6} />
+      y2={-6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy="0em"
@@ -161,16 +190,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 3.top 1`] = 
         }
       }
       x={0}
-      y={-9}>
+      y={-9}
+    >
       20,000
     </text>
   </g>
   <g
-    transform="translate(144, 0)">
+    transform="translate(144, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={-6} />
+      y2={-6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy="0em"
@@ -180,16 +212,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 3.top 1`] = 
         }
       }
       x={0}
-      y={-9}>
+      y={-9}
+    >
       40,000
     </text>
   </g>
   <g
-    transform="translate(216, 0)">
+    transform="translate(216, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={-6} />
+      y2={-6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy="0em"
@@ -199,16 +234,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 3.top 1`] = 
         }
       }
       x={0}
-      y={-9}>
+      y={-9}
+    >
       60,000
     </text>
   </g>
   <g
-    transform="translate(288, 0)">
+    transform="translate(288, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={-6} />
+      y2={-6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy="0em"
@@ -218,16 +256,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 3.top 1`] = 
         }
       }
       x={0}
-      y={-9}>
+      y={-9}
+    >
       80,000
     </text>
   </g>
   <g
-    transform="translate(360, 0)">
+    transform="translate(360, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={-6} />
+      y2={-6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy="0em"
@@ -237,7 +278,8 @@ exports[`Axis [common] example testing should match snapshot(s) for 3.top 1`] = 
         }
       }
       x={0}
-      y={-9}>
+      y={-9}
+    >
       100,000
     </text>
   </g>
@@ -246,16 +288,20 @@ exports[`Axis [common] example testing should match snapshot(s) for 3.top 1`] = 
 
 exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] = `
 <g
-  className="lucid-Axis">
+  className="lucid-Axis"
+>
   <path
     className="lucid-Axis-domain"
-    d="M-6,180H0V0H-6" />
+    d="M-6,180H0V0H-6"
+  />
   <g
-    transform="translate(0, 180)">
+    transform="translate(0, 180)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={-6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -265,16 +311,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] =
         }
       }
       x={-9}
-      y={0}>
+      y={0}
+    >
       0
     </text>
   </g>
   <g
-    transform="translate(0, 162)">
+    transform="translate(0, 162)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={-6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -284,16 +333,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] =
         }
       }
       x={-9}
-      y={0}>
+      y={0}
+    >
       10,000
     </text>
   </g>
   <g
-    transform="translate(0, 144)">
+    transform="translate(0, 144)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={-6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -303,16 +355,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] =
         }
       }
       x={-9}
-      y={0}>
+      y={0}
+    >
       20,000
     </text>
   </g>
   <g
-    transform="translate(0, 126)">
+    transform="translate(0, 126)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={-6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -322,16 +377,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] =
         }
       }
       x={-9}
-      y={0}>
+      y={0}
+    >
       30,000
     </text>
   </g>
   <g
-    transform="translate(0, 108)">
+    transform="translate(0, 108)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={-6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -341,16 +399,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] =
         }
       }
       x={-9}
-      y={0}>
+      y={0}
+    >
       40,000
     </text>
   </g>
   <g
-    transform="translate(0, 90)">
+    transform="translate(0, 90)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={-6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -360,16 +421,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] =
         }
       }
       x={-9}
-      y={0}>
+      y={0}
+    >
       50,000
     </text>
   </g>
   <g
-    transform="translate(0, 72)">
+    transform="translate(0, 72)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={-6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -379,16 +443,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] =
         }
       }
       x={-9}
-      y={0}>
+      y={0}
+    >
       60,000
     </text>
   </g>
   <g
-    transform="translate(0, 54.000000000000014)">
+    transform="translate(0, 54.000000000000014)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={-6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -398,16 +465,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] =
         }
       }
       x={-9}
-      y={0}>
+      y={0}
+    >
       70,000
     </text>
   </g>
   <g
-    transform="translate(0, 36)">
+    transform="translate(0, 36)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={-6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -417,16 +487,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] =
         }
       }
       x={-9}
-      y={0}>
+      y={0}
+    >
       80,000
     </text>
   </g>
   <g
-    transform="translate(0, 18)">
+    transform="translate(0, 18)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={-6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -436,16 +509,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] =
         }
       }
       x={-9}
-      y={0}>
+      y={0}
+    >
       90,000
     </text>
   </g>
   <g
-    transform="translate(0, 0)">
+    transform="translate(0, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={-6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -455,7 +531,8 @@ exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] =
         }
       }
       x={-9}
-      y={0}>
+      y={0}
+    >
       100,000
     </text>
   </g>
@@ -464,16 +541,20 @@ exports[`Axis [common] example testing should match snapshot(s) for 4.left 1`] =
 
 exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] = `
 <g
-  className="lucid-Axis">
+  className="lucid-Axis"
+>
   <path
     className="lucid-Axis-domain"
-    d="M6,180H0V0H6" />
+    d="M6,180H0V0H6"
+  />
   <g
-    transform="translate(0, 180)">
+    transform="translate(0, 180)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -483,16 +564,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] 
         }
       }
       x={9}
-      y={0}>
+      y={0}
+    >
       0
     </text>
   </g>
   <g
-    transform="translate(0, 162)">
+    transform="translate(0, 162)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -502,16 +586,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] 
         }
       }
       x={9}
-      y={0}>
+      y={0}
+    >
       10,000
     </text>
   </g>
   <g
-    transform="translate(0, 144)">
+    transform="translate(0, 144)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -521,16 +608,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] 
         }
       }
       x={9}
-      y={0}>
+      y={0}
+    >
       20,000
     </text>
   </g>
   <g
-    transform="translate(0, 126)">
+    transform="translate(0, 126)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -540,16 +630,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] 
         }
       }
       x={9}
-      y={0}>
+      y={0}
+    >
       30,000
     </text>
   </g>
   <g
-    transform="translate(0, 108)">
+    transform="translate(0, 108)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -559,16 +652,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] 
         }
       }
       x={9}
-      y={0}>
+      y={0}
+    >
       40,000
     </text>
   </g>
   <g
-    transform="translate(0, 90)">
+    transform="translate(0, 90)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -578,16 +674,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] 
         }
       }
       x={9}
-      y={0}>
+      y={0}
+    >
       50,000
     </text>
   </g>
   <g
-    transform="translate(0, 72)">
+    transform="translate(0, 72)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -597,16 +696,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] 
         }
       }
       x={9}
-      y={0}>
+      y={0}
+    >
       60,000
     </text>
   </g>
   <g
-    transform="translate(0, 54.000000000000014)">
+    transform="translate(0, 54.000000000000014)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -616,16 +718,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] 
         }
       }
       x={9}
-      y={0}>
+      y={0}
+    >
       70,000
     </text>
   </g>
   <g
-    transform="translate(0, 36)">
+    transform="translate(0, 36)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -635,16 +740,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] 
         }
       }
       x={9}
-      y={0}>
+      y={0}
+    >
       80,000
     </text>
   </g>
   <g
-    transform="translate(0, 18)">
+    transform="translate(0, 18)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -654,16 +762,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] 
         }
       }
       x={9}
-      y={0}>
+      y={0}
+    >
       90,000
     </text>
   </g>
   <g
-    transform="translate(0, 0)">
+    transform="translate(0, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={6}
-      y2={0} />
+      y2={0}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".32em"
@@ -673,7 +784,8 @@ exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] 
         }
       }
       x={9}
-      y={0}>
+      y={0}
+    >
       100,000
     </text>
   </g>
@@ -682,16 +794,20 @@ exports[`Axis [common] example testing should match snapshot(s) for 5.right 1`] 
 
 exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] = `
 <g
-  className="lucid-Axis">
+  className="lucid-Axis"
+>
   <path
     className="lucid-Axis-domain"
-    d="M0,6V0H360V6" />
+    d="M0,6V0H360V6"
+  />
   <g
-    transform="translate(0, 0)">
+    transform="translate(0, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -701,16 +817,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       2015
     </text>
   </g>
   <g
-    transform="translate(42.51968503937008, 0)">
+    transform="translate(42.51968503937008, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -720,16 +839,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       April
     </text>
   </g>
   <g
-    transform="translate(85.51181102362204, 0)">
+    transform="translate(85.51181102362204, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -739,16 +861,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       July
     </text>
   </g>
   <g
-    transform="translate(128.97637795275588, 0)">
+    transform="translate(128.97637795275588, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -758,16 +883,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       October
     </text>
   </g>
   <g
-    transform="translate(172.44094488188978, 0)">
+    transform="translate(172.44094488188978, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -777,16 +905,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       2016
     </text>
   </g>
   <g
-    transform="translate(215.43307086614175, 0)">
+    transform="translate(215.43307086614175, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -796,16 +927,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       April
     </text>
   </g>
   <g
-    transform="translate(258.4251968503937, 0)">
+    transform="translate(258.4251968503937, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -815,16 +949,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       July
     </text>
   </g>
   <g
-    transform="translate(301.8897637795275, 0)">
+    transform="translate(301.8897637795275, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -834,16 +971,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       October
     </text>
   </g>
   <g
-    transform="translate(345.35433070866145, 0)">
+    transform="translate(345.35433070866145, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -853,7 +993,8 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       2017
     </text>
   </g>
@@ -862,16 +1003,20 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
 
 exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] = `
 <g
-  className="lucid-Axis">
+  className="lucid-Axis"
+>
   <path
     className="lucid-Axis-domain"
-    d="M0,6V0H360V6" />
+    d="M0,6V0H360V6"
+  />
   <g
-    transform="translate(0, 0)">
+    transform="translate(0, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -881,16 +1026,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       2015
     </text>
   </g>
   <g
-    transform="translate(85.51181102362204, 0)">
+    transform="translate(85.51181102362204, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -900,16 +1048,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       July
     </text>
   </g>
   <g
-    transform="translate(172.44094488188978, 0)">
+    transform="translate(172.44094488188978, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -919,16 +1070,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       2016
     </text>
   </g>
   <g
-    transform="translate(258.4251968503937, 0)">
+    transform="translate(258.4251968503937, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -938,16 +1092,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       July
     </text>
   </g>
   <g
-    transform="translate(345.35433070866145, 0)">
+    transform="translate(345.35433070866145, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -957,7 +1114,8 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       2017
     </text>
   </g>
@@ -966,16 +1124,20 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] =
 
 exports[`Axis [common] example testing should match snapshot(s) for 6.time 3`] = `
 <g
-  className="lucid-Axis">
+  className="lucid-Axis"
+>
   <path
     className="lucid-Axis-domain"
-    d="M0,6V0H360V6" />
+    d="M0,6V0H360V6"
+  />
   <g
-    transform="translate(0, 0)">
+    transform="translate(0, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -985,16 +1147,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 3`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       2015
     </text>
   </g>
   <g
-    transform="translate(172.44094488188978, 0)">
+    transform="translate(172.44094488188978, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -1004,16 +1169,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 3`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       2016
     </text>
   </g>
   <g
-    transform="translate(345.35433070866145, 0)">
+    transform="translate(345.35433070866145, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -1023,7 +1191,8 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 3`] =
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       2017
     </text>
   </g>
@@ -1032,16 +1201,20 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 3`] =
 
 exports[`Axis [common] example testing should match snapshot(s) for 7.ordinal 1`] = `
 <g
-  className="lucid-Axis">
+  className="lucid-Axis"
+>
   <path
     className="lucid-Axis-domain"
-    d="M0,6V0H360V6" />
+    d="M0,6V0H360V6"
+  />
   <g
-    transform="translate(45, 0)">
+    transform="translate(45, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -1051,16 +1224,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 7.ordinal 1`
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       a
     </text>
   </g>
   <g
-    transform="translate(135, 0)">
+    transform="translate(135, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -1070,16 +1246,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 7.ordinal 1`
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       b
     </text>
   </g>
   <g
-    transform="translate(225, 0)">
+    transform="translate(225, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -1089,16 +1268,19 @@ exports[`Axis [common] example testing should match snapshot(s) for 7.ordinal 1`
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       c
     </text>
   </g>
   <g
-    transform="translate(315, 0)">
+    transform="translate(315, 0)"
+  >
     <line
       className="lucid-Axis-tick"
       x2={0}
-      y2={6} />
+      y2={6}
+    />
     <text
       className="lucid-Axis-tick-text"
       dy=".71em"
@@ -1108,7 +1290,8 @@ exports[`Axis [common] example testing should match snapshot(s) for 7.ordinal 1`
         }
       }
       x={0}
-      y={9}>
+      y={9}
+    >
       d
     </text>
   </g>

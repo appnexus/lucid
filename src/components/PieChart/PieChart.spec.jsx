@@ -1,4 +1,14 @@
 /* eslint-disable comma-spacing */
+jest.mock('d3-shape', () => ({
+	arc: jest.fn(() => ({
+		innerRadius: jest.fn(() => ({
+			outerRadius: jest.fn(() => (arg) => `${arg}`),
+		})),
+	})),
+	pie: jest.fn(() => ({
+		sort: jest.fn(() => (arg) => arg),
+	})),
+}));
 
 import _ from 'lodash';
 import React from 'react';

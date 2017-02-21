@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`PlusIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
@@ -5,11 +7,14 @@ exports[`PlusIcon [common] example testing should match snapshot(s) for 1.defaul
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M1,6.6h14v2.8H1V6.6z" />
+    d="M1,6.6h14v2.8H1V6.6z"
+  />
   <path
-    d="M6.6,1v14h2.8V1H6.6z" />
+    d="M6.6,1v14h2.8V1H6.6z"
+  />
 </Icon>
 `;
 
@@ -20,11 +25,14 @@ exports[`PlusIcon [common] example testing should match snapshot(s) for 1.defaul
   isBadge={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M1,6.6h14v2.8H1V6.6z" />
+    d="M1,6.6h14v2.8H1V6.6z"
+  />
   <path
-    d="M6.6,1v14h2.8V1H6.6z" />
+    d="M6.6,1v14h2.8V1H6.6z"
+  />
 </Icon>
 `;
 
@@ -36,11 +44,14 @@ exports[`PlusIcon [common] example testing should match snapshot(s) for 2.clicka
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M1,6.6h14v2.8H1V6.6z" />
+    d="M1,6.6h14v2.8H1V6.6z"
+  />
   <path
-    d="M6.6,1v14h2.8V1H6.6z" />
+    d="M6.6,1v14h2.8V1H6.6z"
+  />
 </Icon>
 `;
 
@@ -52,11 +63,14 @@ exports[`PlusIcon [common] example testing should match snapshot(s) for 2.clicka
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M1,6.6h14v2.8H1V6.6z" />
+    d="M1,6.6h14v2.8H1V6.6z"
+  />
   <path
-    d="M6.6,1v14h2.8V1H6.6z" />
+    d="M6.6,1v14h2.8V1H6.6z"
+  />
 </Icon>
 `;
 
@@ -67,11 +81,14 @@ exports[`PlusIcon [common] example testing should match snapshot(s) for 3.disabl
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M1,6.6h14v2.8H1V6.6z" />
+    d="M1,6.6h14v2.8H1V6.6z"
+  />
   <path
-    d="M6.6,1v14h2.8V1H6.6z" />
+    d="M6.6,1v14h2.8V1H6.6z"
+  />
 </Icon>
 `;
 
@@ -82,10 +99,13 @@ exports[`PlusIcon [common] example testing should match snapshot(s) for 3.disabl
   isBadge={true}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <path
-    d="M1,6.6h14v2.8H1V6.6z" />
+    d="M1,6.6h14v2.8H1V6.6z"
+  />
   <path
-    d="M6.6,1v14h2.8V1H6.6z" />
+    d="M6.6,1v14h2.8V1H6.6z"
+  />
 </Icon>
 `;

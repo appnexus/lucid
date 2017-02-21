@@ -1,9 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Validation [common] example testing should match snapshot(s) for basic 1`] = `
 <div
-  className="lucid-Validation lucid-Validation-is-error">
+  className="lucid-Validation lucid-Validation-is-error"
+>
   Content
   <div
-    className="lucid-Validation-error-content">
+    className="lucid-Validation-error-content"
+  >
     Method one
   </div>
 </div>
@@ -11,7 +15,8 @@ exports[`Validation [common] example testing should match snapshot(s) for basic 
 
 exports[`Validation [common] example testing should match snapshot(s) for basic 2`] = `
 <div
-  className="lucid-Validation lucid-Validation-is-error">
+  className="lucid-Validation lucid-Validation-is-error"
+>
   <Validation.Error>
     <i>
       Method two
@@ -19,7 +24,8 @@ exports[`Validation [common] example testing should match snapshot(s) for basic 
   </Validation.Error>
   Content
   <div
-    className="lucid-Validation-error-content">
+    className="lucid-Validation-error-content"
+  >
     <i>
       Method two
     </i>

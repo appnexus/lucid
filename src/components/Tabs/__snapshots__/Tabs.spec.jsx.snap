@@ -1,8 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-prop 1`] = `
 <div
-  className="lucid-Tabs">
+  className="lucid-Tabs"
+>
   <ul
-    className="lucid-Tabs-bar">
+    className="lucid-Tabs-bar"
+  >
     <Tabs.Tab
       Title="One"
       index={0}
@@ -10,7 +14,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-p
       isOpen={true}
       isProgressive={false}
       isSelected={true}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       One content
     </Tabs.Tab>
     <Tabs.Tab
@@ -21,7 +26,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-p
       isOpen={true}
       isProgressive={false}
       isSelected={false}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       Two content
     </Tabs.Tab>
     <Tabs.Tab
@@ -31,7 +37,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-p
       isOpen={true}
       isProgressive={false}
       isSelected={false}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       Three content
     </Tabs.Tab>
     <Tabs.Tab
@@ -41,12 +48,14 @@ exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-p
       isOpen={true}
       isProgressive={false}
       isSelected={false}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       Four content
     </Tabs.Tab>
   </ul>
   <div
-    className="lucid-Tabs-content">
+    className="lucid-Tabs-content"
+  >
     One content
   </div>
 </div>
@@ -54,9 +63,11 @@ exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-p
 
 exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-child 1`] = `
 <div
-  className="lucid-Tabs">
+  className="lucid-Tabs"
+>
   <ul
-    className="lucid-Tabs-bar">
+    className="lucid-Tabs-bar"
+  >
     <Tabs.Tab
       Title="One"
       index={0}
@@ -64,7 +75,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-c
       isOpen={true}
       isProgressive={false}
       isSelected={true}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       <Tabs.Title>
         One
       </Tabs.Title>
@@ -77,7 +89,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-c
       isOpen={true}
       isProgressive={false}
       isSelected={false}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       <Tabs.Title>
         Two
       </Tabs.Title>
@@ -90,7 +103,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-c
       isOpen={true}
       isProgressive={false}
       isSelected={false}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       <Tabs.Title>
         Three
       </Tabs.Title>
@@ -104,7 +118,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-c
       isOpen={true}
       isProgressive={false}
       isSelected={false}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       <Tabs.Title>
         Four
       </Tabs.Title>
@@ -112,7 +127,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-c
     </Tabs.Tab>
   </ul>
   <div
-    className="lucid-Tabs-content">
+    className="lucid-Tabs-content"
+  >
     <Tabs.Title>
       One
     </Tabs.Title>
@@ -123,9 +139,11 @@ exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-c
 
 exports[`Tabs [common] example testing should match snapshot(s) for 3-progression 1`] = `
 <div
-  className="lucid-Tabs">
+  className="lucid-Tabs"
+>
   <ul
-    className="lucid-Tabs-bar">
+    className="lucid-Tabs-bar"
+  >
     <Tabs.Tab
       Title="One"
       index={0}
@@ -133,7 +151,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
       isOpen={false}
       isProgressive={true}
       isSelected={true}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       One content
     </Tabs.Tab>
     <Tabs.Tab
@@ -143,7 +162,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
       isOpen={false}
       isProgressive={true}
       isSelected={false}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       Two content
     </Tabs.Tab>
     <Tabs.Tab
@@ -153,7 +173,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
       isOpen={false}
       isProgressive={true}
       isSelected={false}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       Three content
     </Tabs.Tab>
     <Tabs.Tab
@@ -164,7 +185,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
       isOpen={false}
       isProgressive={true}
       isSelected={false}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       Disabled Content
     </Tabs.Tab>
     <Tabs.Tab
@@ -175,12 +197,14 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
       isOpen={false}
       isProgressive={true}
       isSelected={false}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       Four content
     </Tabs.Tab>
   </ul>
   <div
-    className="lucid-Tabs-content">
+    className="lucid-Tabs-content"
+  >
     One content
   </div>
 </div>
@@ -188,9 +212,11 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
 
 exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-title-as-child 1`] = `
 <div
-  className="lucid-Tabs">
+  className="lucid-Tabs"
+>
   <ul
-    className="lucid-Tabs-bar lucid-Tabs-bar-is-multiline">
+    className="lucid-Tabs-bar lucid-Tabs-bar-is-multiline"
+  >
     <Tabs.Tab
       Title={
         Array [
@@ -201,7 +227,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
             isActive={false}
             isDisabled={false}
             onClick={[Function]}
-            type="button">
+            type="button"
+        >
             Button
         </Button>,
         ]
@@ -211,7 +238,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
       isOpen={true}
       isProgressive={false}
       isSelected={true}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       <Tabs.Title>
         One
         <br />
@@ -220,7 +248,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
-          type="button">
+          type="button"
+        >
           Button
         </Button>
       </Tabs.Title>
@@ -240,7 +269,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
       isOpen={true}
       isProgressive={false}
       isSelected={false}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       <Tabs.Title>
         Two
         <br />
@@ -252,11 +282,13 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
     <Tabs.Tab
       Title={
         <RadioGroup
-          selectedIndex={1}>
+          selectedIndex={1}
+        >
           <RadioButton
             isDisabled={false}
             isSelected={false}
-            onSelect={[Function]}>
+            onSelect={[Function]}
+          >
             <RadioGroup.Label>
               Captain America
             </RadioGroup.Label>
@@ -264,7 +296,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
           <RadioButton
             isDisabled={false}
             isSelected={false}
-            onSelect={[Function]}>
+            onSelect={[Function]}
+          >
             <RadioGroup.Label>
               Iron Man
             </RadioGroup.Label>
@@ -272,7 +305,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
           <RadioButton
             isDisabled={false}
             isSelected={false}
-            onSelect={[Function]}>
+            onSelect={[Function]}
+          >
             <RadioGroup.Label>
               Thor
             </RadioGroup.Label>
@@ -284,14 +318,17 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
       isOpen={true}
       isProgressive={false}
       isSelected={false}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       <Tabs.Title>
         <RadioGroup
-          selectedIndex={1}>
+          selectedIndex={1}
+        >
           <RadioButton
             isDisabled={false}
             isSelected={false}
-            onSelect={[Function]}>
+            onSelect={[Function]}
+          >
             <RadioGroup.Label>
               Captain America
             </RadioGroup.Label>
@@ -299,7 +336,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
           <RadioButton
             isDisabled={false}
             isSelected={false}
-            onSelect={[Function]}>
+            onSelect={[Function]}
+          >
             <RadioGroup.Label>
               Iron Man
             </RadioGroup.Label>
@@ -307,7 +345,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
           <RadioButton
             isDisabled={false}
             isSelected={false}
-            onSelect={[Function]}>
+            onSelect={[Function]}
+          >
             <RadioGroup.Label>
               Thor
             </RadioGroup.Label>
@@ -324,7 +363,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
       isOpen={true}
       isProgressive={false}
       isSelected={false}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       <Tabs.Title>
         Four
       </Tabs.Title>
@@ -332,7 +372,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
     </Tabs.Tab>
   </ul>
   <div
-    className="lucid-Tabs-content">
+    className="lucid-Tabs-content"
+  >
     <Tabs.Title>
       One
       <br />
@@ -341,7 +382,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
         isActive={false}
         isDisabled={false}
         onClick={[Function]}
-        type="button">
+        type="button"
+      >
         Button
       </Button>
     </Tabs.Title>
@@ -352,9 +394,11 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
 
 exports[`Tabs [common] example testing should match snapshot(s) for 5-tab-as-prop 1`] = `
 <div
-  className="lucid-Tabs">
+  className="lucid-Tabs"
+>
   <ul
-    className="lucid-Tabs-bar">
+    className="lucid-Tabs-bar"
+  >
     <Tabs.Tab
       Title="Bert"
       index={0}
@@ -362,7 +406,8 @@ exports[`Tabs [common] example testing should match snapshot(s) for 5-tab-as-pro
       isOpen={true}
       isProgressive={false}
       isSelected={true}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       Bert
     </Tabs.Tab>
     <Tabs.Tab
@@ -372,12 +417,14 @@ exports[`Tabs [common] example testing should match snapshot(s) for 5-tab-as-pro
       isOpen={true}
       isProgressive={false}
       isSelected={false}
-      onSelect={[Function]}>
+      onSelect={[Function]}
+    >
       Ernie
     </Tabs.Tab>
   </ul>
   <div
-    className="lucid-Tabs-content">
+    className="lucid-Tabs-content"
+  >
     Bert
   </div>
 </div>

@@ -1,13 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Expander [common] example testing should match snapshot(s) for 1.expanded 1`] = `
 <div
-  className="lucid-Expander lucid-Expander-is-expanded">
+  className="lucid-Expander lucid-Expander-is-expanded"
+>
   <header
     className="lucid-Expander-header"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span
-      className="lucid-Expander-icon">
+      className="lucid-Expander-icon"
+    >
       <ChevronIcon
-        direction="up" />
+        direction="up"
+      />
     </span>
     <ReactCSSTransitionGroup
       className="lucid-Expander-text"
@@ -16,7 +22,8 @@ exports[`Expander [common] example testing should match snapshot(s) for 1.expand
       transitionEnterTimeout={100}
       transitionLeave={true}
       transitionLeaveTimeout={100}
-      transitionName="lucid-Expander-text">
+      transitionName="lucid-Expander-text"
+    >
       <span>
         Show Less
       </span>
@@ -28,7 +35,8 @@ exports[`Expander [common] example testing should match snapshot(s) for 1.expand
     isExpanded={true}
     isMountControlled={true}
     mountControlThreshold={4}
-    rootType="section">
+    rootType="section"
+  >
     <Expander.Label>
       Show Less
     </Expander.Label>
@@ -41,14 +49,18 @@ exports[`Expander [common] example testing should match snapshot(s) for 1.expand
 
 exports[`Expander [common] example testing should match snapshot(s) for 2.interactive-with-changing-labels 1`] = `
 <div
-  className="lucid-Expander">
+  className="lucid-Expander"
+>
   <header
     className="lucid-Expander-header"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span
-      className="lucid-Expander-icon">
+      className="lucid-Expander-icon"
+    >
       <ChevronIcon
-        direction="down" />
+        direction="down"
+      />
     </span>
     <ReactCSSTransitionGroup
       className="lucid-Expander-text"
@@ -57,7 +69,8 @@ exports[`Expander [common] example testing should match snapshot(s) for 2.intera
       transitionEnterTimeout={100}
       transitionLeave={true}
       transitionLeaveTimeout={100}
-      transitionName="lucid-Expander-text">
+      transitionName="lucid-Expander-text"
+    >
       <span>
         Show More
       </span>
@@ -69,7 +82,8 @@ exports[`Expander [common] example testing should match snapshot(s) for 2.intera
     isExpanded={false}
     isMountControlled={true}
     mountControlThreshold={4}
-    rootType="section">
+    rootType="section"
+  >
     <Expander.Label>
       Show More
     </Expander.Label>
@@ -97,14 +111,18 @@ exports[`Expander [common] example testing should match snapshot(s) for 2.intera
 
 exports[`Expander [common] example testing should match snapshot(s) for 3.interactive-without-changing-labels 1`] = `
 <div
-  className="lucid-Expander">
+  className="lucid-Expander"
+>
   <header
     className="lucid-Expander-header"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span
-      className="lucid-Expander-icon">
+      className="lucid-Expander-icon"
+    >
       <ChevronIcon
-        direction="down" />
+        direction="down"
+      />
     </span>
     <ReactCSSTransitionGroup
       className="lucid-Expander-text"
@@ -113,7 +131,8 @@ exports[`Expander [common] example testing should match snapshot(s) for 3.intera
       transitionEnterTimeout={100}
       transitionLeave={true}
       transitionLeaveTimeout={100}
-      transitionName="lucid-Expander-text">
+      transitionName="lucid-Expander-text"
+    >
       <span>
         Show Stuff
       </span>
@@ -125,7 +144,8 @@ exports[`Expander [common] example testing should match snapshot(s) for 3.intera
     isExpanded={false}
     isMountControlled={true}
     mountControlThreshold={4}
-    rootType="section">
+    rootType="section"
+  >
     <Expander.Label>
       Show Stuff
     </Expander.Label>
@@ -153,14 +173,18 @@ exports[`Expander [common] example testing should match snapshot(s) for 3.intera
 
 exports[`Expander [common] example testing should match snapshot(s) for 4.highlighted 1`] = `
 <div
-  className="lucid-Expander lucid-Expander-is-expanded lucid-Expander-kind-highlighted">
+  className="lucid-Expander lucid-Expander-is-expanded lucid-Expander-kind-highlighted"
+>
   <header
     className="lucid-Expander-header"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span
-      className="lucid-Expander-icon">
+      className="lucid-Expander-icon"
+    >
       <ChevronIcon
-        direction="up" />
+        direction="up"
+      />
     </span>
     <ReactCSSTransitionGroup
       className="lucid-Expander-text"
@@ -169,7 +193,8 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.highli
       transitionEnterTimeout={100}
       transitionLeave={true}
       transitionLeaveTimeout={100}
-      transitionName="lucid-Expander-text">
+      transitionName="lucid-Expander-text"
+    >
       <span>
         Show Less
       </span>
@@ -181,7 +206,8 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.highli
     isExpanded={true}
     isMountControlled={true}
     mountControlThreshold={4}
-    rootType="section">
+    rootType="section"
+  >
     <Expander.Label>
       Show Less
     </Expander.Label>
@@ -194,14 +220,18 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.highli
 
 exports[`Expander [common] example testing should match snapshot(s) for 5.highlighted-with-changing-labels 1`] = `
 <div
-  className="lucid-Expander lucid-Expander-kind-highlighted">
+  className="lucid-Expander lucid-Expander-kind-highlighted"
+>
   <header
     className="lucid-Expander-header"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span
-      className="lucid-Expander-icon">
+      className="lucid-Expander-icon"
+    >
       <ChevronIcon
-        direction="down" />
+        direction="down"
+      />
     </span>
     <ReactCSSTransitionGroup
       className="lucid-Expander-text"
@@ -210,7 +240,8 @@ exports[`Expander [common] example testing should match snapshot(s) for 5.highli
       transitionEnterTimeout={100}
       transitionLeave={true}
       transitionLeaveTimeout={100}
-      transitionName="lucid-Expander-text">
+      transitionName="lucid-Expander-text"
+    >
       <span>
         Show More
       </span>
@@ -222,7 +253,8 @@ exports[`Expander [common] example testing should match snapshot(s) for 5.highli
     isExpanded={false}
     isMountControlled={true}
     mountControlThreshold={4}
-    rootType="section">
+    rootType="section"
+  >
     <Expander.Label>
       Show More
     </Expander.Label>
@@ -250,14 +282,18 @@ exports[`Expander [common] example testing should match snapshot(s) for 5.highli
 
 exports[`Expander [common] example testing should match snapshot(s) for 6.highlighted-without-changing-labels 1`] = `
 <div
-  className="lucid-Expander lucid-Expander-kind-highlighted">
+  className="lucid-Expander lucid-Expander-kind-highlighted"
+>
   <header
     className="lucid-Expander-header"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span
-      className="lucid-Expander-icon">
+      className="lucid-Expander-icon"
+    >
       <ChevronIcon
-        direction="down" />
+        direction="down"
+      />
     </span>
     <ReactCSSTransitionGroup
       className="lucid-Expander-text"
@@ -266,7 +302,8 @@ exports[`Expander [common] example testing should match snapshot(s) for 6.highli
       transitionEnterTimeout={100}
       transitionLeave={true}
       transitionLeaveTimeout={100}
-      transitionName="lucid-Expander-text">
+      transitionName="lucid-Expander-text"
+    >
       <span>
         Show Stuff
       </span>
@@ -278,7 +315,8 @@ exports[`Expander [common] example testing should match snapshot(s) for 6.highli
     isExpanded={false}
     isMountControlled={true}
     mountControlThreshold={4}
-    rootType="section">
+    rootType="section"
+  >
     <Expander.Label>
       Show Stuff
     </Expander.Label>

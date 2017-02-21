@@ -1,6 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Badge [common] example testing should match snapshot(s) for default 1`] = `
 <span
-  className="lucid-Badge">
+  className="lucid-Badge"
+>
   Badge
 </span>
 `;

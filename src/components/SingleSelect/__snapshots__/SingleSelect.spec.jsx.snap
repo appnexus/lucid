@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`SingleSelect [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <DropMenu
   alignment="start"
@@ -17,37 +19,44 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
-  selectedIndices={Array []}>
+  selectedIndices={Array []}
+>
   <DropMenu.Control>
     <div
       className="lucid-SingleSelect-Control"
-      tabIndex={0}>
+      tabIndex={0}
+    >
       <span
-        className="lucid-SingleSelect-Control-content">
+        className="lucid-SingleSelect-Control-content"
+      >
         Select Color
       </span>
       <CaretIcon
         direction="down"
         size={8}
-        viewBox="0 3 16 8" />
+        viewBox="0 3 16 8"
+      />
     </div>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Red
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Green
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Blue
   </DropMenu.Option>
 </DropMenu>
@@ -72,40 +81,47 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
-  selectedIndices={Array []}>
+  selectedIndices={Array []}
+>
   <DropMenu.Control>
     <div
       className="lucid-SingleSelect-Control"
-      tabIndex={0}>
+      tabIndex={0}
+    >
       <span
-        className="lucid-SingleSelect-Control-content">
+        className="lucid-SingleSelect-Control-content"
+      >
         Select Color
       </span>
       <CaretIcon
         direction="down"
         size={8}
-        viewBox="0 3 16 8" />
+        viewBox="0 3 16 8"
+      />
     </div>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
-    name="red">
+    name="red"
+  >
     Red
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
-    name="green">
+    name="green"
+  >
     Green
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
-    name="blue">
+    name="blue"
+  >
     Blue
   </DropMenu.Option>
 </DropMenu>
@@ -130,37 +146,44 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.d
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
-  selectedIndices={Array []}>
+  selectedIndices={Array []}
+>
   <DropMenu.Control>
     <div
       className="lucid-SingleSelect-Control"
-      tabIndex={0}>
+      tabIndex={0}
+    >
       <span
-        className="lucid-SingleSelect-Control-content">
+        className="lucid-SingleSelect-Control-content"
+      >
         Select Color
       </span>
       <CaretIcon
         direction="down"
         size={8}
-        viewBox="0 3 16 8" />
+        viewBox="0 3 16 8"
+      />
     </div>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Red
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Green
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Blue
   </DropMenu.Option>
 </DropMenu>
@@ -185,37 +208,44 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.d
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
-  selectedIndices={Array []}>
+  selectedIndices={Array []}
+>
   <DropMenu.Control>
     <div
       className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-disabled"
-      tabIndex={0}>
+      tabIndex={0}
+    >
       <span
-        className="lucid-SingleSelect-Control-content">
+        className="lucid-SingleSelect-Control-content"
+      >
         Select Color
       </span>
       <CaretIcon
         direction="down"
         size={8}
-        viewBox="0 3 16 8" />
+        viewBox="0 3 16 8"
+      />
     </div>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Red
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Green
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Blue
   </DropMenu.Option>
 </DropMenu>
@@ -240,23 +270,28 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
-  selectedIndices={Array []}>
+  selectedIndices={Array []}
+>
   <DropMenu.Control>
     <div
       className="lucid-SingleSelect-Control"
-      tabIndex={0}>
+      tabIndex={0}
+    >
       <span
-        className="lucid-SingleSelect-Control-content">
+        className="lucid-SingleSelect-Control-content"
+      >
         Select Color
       </span>
       <CaretIcon
         direction="down"
         size={8}
-        viewBox="0 3 16 8" />
+        viewBox="0 3 16 8"
+      />
     </div>
   </DropMenu.Control>
   <DropMenu.OptionGroup
-    isHidden={false}>
+    isHidden={false}
+  >
     Screen
     <SingleSelect.Option>
       Red
@@ -270,24 +305,28 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
-      isWrapped={true}>
+      isWrapped={true}
+    >
       Red
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
-      isWrapped={true}>
+      isWrapped={true}
+    >
       Green
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
-      isWrapped={true}>
+      isWrapped={true}
+    >
       Blue
     </DropMenu.Option>
   </DropMenu.OptionGroup>
   <DropMenu.OptionGroup
-    isHidden={false}>
+    isHidden={false}
+  >
     Print
     <SingleSelect.Option>
       Cyan
@@ -304,25 +343,29 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
-      isWrapped={true}>
+      isWrapped={true}
+    >
       Cyan
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
-      isWrapped={true}>
+      isWrapped={true}
+    >
       Yellow
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
-      isWrapped={true}>
+      isWrapped={true}
+    >
       Magenta
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
-      isWrapped={true}>
+      isWrapped={true}
+    >
       Black
     </DropMenu.Option>
   </DropMenu.OptionGroup>
@@ -348,37 +391,44 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.n
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
-  selectedIndices={Array []}>
+  selectedIndices={Array []}
+>
   <DropMenu.Control>
     <div
       className="lucid-SingleSelect-Control"
-      tabIndex={0}>
+      tabIndex={0}
+    >
       <span
-        className="lucid-SingleSelect-Control-content">
+        className="lucid-SingleSelect-Control-content"
+      >
         Select Foo
       </span>
       <CaretIcon
         direction="down"
         size={8}
-        viewBox="0 3 16 8" />
+        viewBox="0 3 16 8"
+      />
     </div>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Red
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Green
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Blue
   </DropMenu.Option>
 </DropMenu>
@@ -403,865 +453,1010 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
-  selectedIndices={Array []}>
+  selectedIndices={Array []}
+>
   <DropMenu.Control>
     <div
       className="lucid-SingleSelect-Control"
-      tabIndex={0}>
+      tabIndex={0}
+    >
       <span
-        className="lucid-SingleSelect-Control-content">
+        className="lucid-SingleSelect-Control-content"
+      >
         Select Color
       </span>
       <CaretIcon
         direction="down"
         size={8}
-        viewBox="0 3 16 8" />
+        viewBox="0 3 16 8"
+      />
     </div>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Aliceblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Antiquewhite
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Aqua
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Aquamarine
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Azure
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Beige
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Bisque
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Black
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Blanchedalmond
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Blue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Blueviolet
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Brown
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Burlywood
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Cadetblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Chartreuse
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Chocolate
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Coral
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Cornflowerblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Cornsilk
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Crimson
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Cyan
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darkblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darkcyan
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darkgoldenrod
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darkgray
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darkgreen
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darkkhaki
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darkmagenta
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darkolivegreen
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darkorange
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darkorchid
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darkred
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darksalmon
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darkseagreen
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darkslateblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darkslategray
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darkturquoise
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Darkviolet
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Deeppink
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Deepskyblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Dimgray
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Dodgerblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Firebrick
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Floralwhite
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Forestgreen
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Fuchsia
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Gainsboro
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Ghostwhite
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Gold
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Goldenrod
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Gray
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Green
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Greenyellow
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Honeydew
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Hotpink
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Indianred
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Indigo
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Ivory
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Khaki
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lavender
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lavenderblush
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lawngreen
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lemonchiffon
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lightblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lightcoral
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lightcyan
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lightgoldenrodyellow
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lightgray
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lightgreen
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lightpink
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lightsalmon
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lightseagreen
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lightskyblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lightslategray
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lightsteelblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lightyellow
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Lime
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Limegreen
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Linen
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Magenta
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Maroon
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Medium aquamarine
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Mediumblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Mediumorchid
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Mediumpurple
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Mediumseagreen
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Mediumslateblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Mediumspringgreen
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Mediumturquoise
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Mediumvioletred
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Midnightblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Mintcream
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Mistyrose
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Moccasin
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Navajowhite
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Navy
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Oldlace
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Olive
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Olivedrab
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Orange
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Orangered
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Orchid
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Palegoldenrod
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Palegreen
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Paleturquoise
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Palevioletred
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Papayawhip
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Peachpuff
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Peru
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Pink
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Plum
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Powderblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Purple
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Rebeccapurple
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Red
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Rosybrown
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Royalblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Saddlebrown
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Salmon
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Sandybrown
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Seagreen
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Seashell
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Sienna
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Silver
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Skyblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Slateblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Slategray
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Snow
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Springgreen
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Steelblue
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Tan
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Teal
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Thistle
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Tomato
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Turquoise
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Violet
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Wheat
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     White
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Whitesmoke
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Yellow
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Yellowgreen
   </DropMenu.Option>
 </DropMenu>
@@ -1286,13 +1481,16 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
-  selectedIndices={Array []}>
+  selectedIndices={Array []}
+>
   <DropMenu.Control>
     <div
       className="lucid-SingleSelect-Control"
-      tabIndex={0}>
+      tabIndex={0}
+    >
       <span
-        className="lucid-SingleSelect-Control-content">
+        className="lucid-SingleSelect-Control-content"
+      >
         <PlusIcon
           isBadge={true}
           style={
@@ -1300,19 +1498,22 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
               "backgroundColor": "gray",
               "marginRight": 4,
             }
-          } />
+          }
+        />
          Add Color
       </span>
       <CaretIcon
         direction="down"
         size={8}
-        viewBox="0 3 16 8" />
+        viewBox="0 3 16 8"
+      />
     </div>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     <PlusIcon
       isBadge={true}
       style={
@@ -1320,13 +1521,15 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
           "backgroundColor": "red",
           "marginRight": 4,
         }
-      } />
+      }
+    />
      Red
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     <PlusIcon
       isBadge={true}
       style={
@@ -1334,13 +1537,15 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
           "backgroundColor": "green",
           "marginRight": 4,
         }
-      } />
+      }
+    />
      Green
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     <PlusIcon
       isBadge={true}
       style={
@@ -1348,7 +1553,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
           "backgroundColor": "blue",
           "marginRight": 4,
         }
-      } />
+      }
+    />
      Blue
   </DropMenu.Option>
 </DropMenu>
@@ -1373,37 +1579,44 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.n
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
-  selectedIndices={Array []}>
+  selectedIndices={Array []}
+>
   <DropMenu.Control>
     <div
       className="lucid-SingleSelect-Control"
-      tabIndex={0}>
+      tabIndex={0}
+    >
       <span
-        className="lucid-SingleSelect-Control-content">
+        className="lucid-SingleSelect-Control-content"
+      >
         Select Foo
       </span>
       <CaretIcon
         direction="down"
         size={8}
-        viewBox="0 3 16 8" />
+        viewBox="0 3 16 8"
+      />
     </div>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Red
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Green
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Blue
   </DropMenu.Option>
 </DropMenu>
@@ -1428,37 +1641,44 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.a
   onFocusOption={[Function]}
   onFocusPrev={[Function]}
   onSelect={[Function]}
-  selectedIndices={Array []}>
+  selectedIndices={Array []}
+>
   <DropMenu.Control>
     <div
       className="lucid-SingleSelect-Control"
-      tabIndex={0}>
+      tabIndex={0}
+    >
       <span
-        className="lucid-SingleSelect-Control-content">
+        className="lucid-SingleSelect-Control-content"
+      >
         Select a number
       </span>
       <CaretIcon
         direction="down"
         size={8}
-        viewBox="0 3 16 8" />
+        viewBox="0 3 16 8"
+      />
     </div>
   </DropMenu.Control>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     1
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     2
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     3
   </DropMenu.Option>
 </DropMenu>
@@ -1483,26 +1703,31 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
     Array [
       1,
     ]
-  }>
+  }
+>
   <DropMenu.Control>
     <div
       className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-highlighted lucid-SingleSelect-Control-is-selected lucid-SingleSelect-Control-is-expanded"
-      tabIndex={0}>
+      tabIndex={0}
+    >
       <span
-        className="lucid-SingleSelect-Control-content">
+        className="lucid-SingleSelect-Control-content"
+      >
         Green
       </span>
       <CaretIcon
         direction="down"
         size={8}
-        viewBox="0 3 16 8" />
+        viewBox="0 3 16 8"
+      />
     </div>
   </DropMenu.Control>
   <DropMenu.NullOption>
     Select Color
   </DropMenu.NullOption>
   <DropMenu.OptionGroup
-    isHidden={false}>
+    isHidden={false}
+  >
     Preferred
     <SingleSelect.Option>
       Red
@@ -1516,38 +1741,44 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
-      isWrapped={true}>
+      isWrapped={true}
+    >
       Red
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
-      isWrapped={true}>
+      isWrapped={true}
+    >
       Green
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
-      isWrapped={true}>
+      isWrapped={true}
+    >
       Blue
     </DropMenu.Option>
   </DropMenu.OptionGroup>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Orange
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Violet
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={true}
     isHidden={false}
-    isWrapped={true}>
+    isWrapped={true}
+  >
     Brown
   </DropMenu.Option>
 </DropMenu>
