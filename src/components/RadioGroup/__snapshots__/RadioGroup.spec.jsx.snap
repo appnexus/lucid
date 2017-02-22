@@ -112,6 +112,90 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
 </span>
 `;
 
+exports[`RadioGroup [common] example testing should match snapshot(s) for nested-select 1`] = `
+<span
+  className="lucid-RadioGroup"
+>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Alvin",
+      }
+    }
+    callbackId={0}
+    isDisabled={false}
+    isSelected={true}
+    name="lucid-RadioGroup-2"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Alvin
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Simon",
+      }
+    }
+    callbackId={1}
+    isDisabled={false}
+    isSelected={false}
+    name="lucid-RadioGroup-2"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Simon
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": <SingleSelect>
+          <SingleSelect.Option>
+              One
+          </SingleSelect.Option>
+          <SingleSelect.Option>
+              Two
+          </SingleSelect.Option>
+      </SingleSelect>,
+      }
+    }
+    callbackId={2}
+    isDisabled={false}
+    isSelected={false}
+    name="lucid-RadioGroup-2"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      <SingleSelect>
+        <SingleSelect.Option>
+          One
+        </SingleSelect.Option>
+        <SingleSelect.Option>
+          Two
+        </SingleSelect.Option>
+      </SingleSelect>
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+</span>
+`;
+
 exports[`RadioGroup [common] example testing should match snapshot(s) for selected-index-as-prop 1`] = `
 <span
   className="lucid-RadioGroup"

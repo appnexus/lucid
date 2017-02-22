@@ -35,3 +35,30 @@ export function dispatchDOMEvent(node, eventName, assignedEventProps) {
 	node.dispatchEvent(_.assign(event, assignedEventProps));
 	return event;
 }
+
+
+/**
+ * sharesAncestor
+ *
+ * Recursively looks at `node` and its parents for `nodeName` and makes
+ * sure it contains `siblingNode`.
+ *
+ * @param {element} node - dom node to check if any of its ancestors are a `<label>`
+ * @param {element} siblingNode - dom node to see if it shares an ancestor
+ * @param {string} nodeName - dom node name, should be uppercased, e.g. `LABEL` or `SPAN`
+ * @returns {boolean}
+ */
+export function sharesAncestor(node, siblingNode, nodeName) {
+	const currentNodeName = _.get(node, 'nodeName');
+	const parentNode = _.get(node, 'parentNode');
+
+	if (currentNodeName === nodeName) {
+		return node.contains(siblingNode);
+	}
+
+	if (parentNode) {
+		return sharesAncestor(parentNode, siblingNode, nodeName);
+	}
+
+	return false;
+}
