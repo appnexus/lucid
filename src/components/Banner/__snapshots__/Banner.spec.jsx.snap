@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Banner [common] example testing should match snapshot(s) for stateful 1`] = `
 <ReactCSSTransitionGroup
   transitionAppear={false}
@@ -5,16 +7,20 @@ exports[`Banner [common] example testing should match snapshot(s) for stateful 1
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-close">
+    className="lucid-Banner lucid-Banner-has-close"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Default
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -28,16 +34,20 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-close">
+    className="lucid-Banner lucid-Banner-has-close"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Default
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -51,16 +61,20 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-has-no-roundedCorners">
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-has-no-roundedCorners"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Default no rounded corners
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -74,11 +88,14 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner">
+    className="lucid-Banner"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Default -- No Close 
       ×
     </span>
@@ -93,16 +110,20 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Default -- small
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -116,11 +137,14 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Default -- small -- No Close 
       ×
     </span>
@@ -135,16 +159,20 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-primary">
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-primary"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Primary
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -158,11 +186,14 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-primary">
+    className="lucid-Banner lucid-Banner-primary"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Primary -- No Close 
       ×
     </span>
@@ -177,16 +208,20 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-primary lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-primary lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Primary -- small
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -200,11 +235,14 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-primary lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-primary lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Primary -- small -- No Close 
       ×
     </span>
@@ -219,16 +257,20 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success">
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Success
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -242,11 +284,14 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-success">
+    className="lucid-Banner lucid-Banner-success"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Success -- No Close 
       ×
     </span>
@@ -261,20 +306,25 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-success">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-success"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <SuccessIcon />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Success -- has icon
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -288,15 +338,19 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-success">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-success"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <SuccessIcon />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Success -- has icon -- No Close 
       ×
     </span>
@@ -311,20 +365,25 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-success lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-success lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <SuccessIcon />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Success -- has icon -- small
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -338,15 +397,19 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-success lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-success lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <SuccessIcon />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Success -- has icon -- No Close 
       ×
        -- small
@@ -362,16 +425,20 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Success -- small
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -385,11 +452,14 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-success lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-success lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Success -- small -- No Close 
       ×
     </span>
@@ -404,15 +474,19 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-success">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-success"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <SuccessIcon />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius neque veniam nisi aspernatur, quos dolorem aut praesentium eaque consequatur inventore adipisci, architecto atque ipsa, laudantium laboriosam ipsam non vitae, cum maiores hic. Laboriosam fugiat eveniet quos assumenda delectus aperiam excepturi vel, officia sint reiciendis expedita consequuntur, a sed deleniti commodi rerum natus quam veniam earum quibusdam! Nemo iusto asperiores sit velit eveniet quod nam. Voluptatibus beatae maxime, quia a velit praesentium vel vitae consectetur, libero nulla magni voluptatum facilis ea facere, minus doloribus. Excepturi veniam, mollitia esse aut illum ad tenetur facere quidem. Ipsum odio, dolore, error rem assumenda debitis.
       </p>
@@ -425,7 +499,8 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -439,16 +514,20 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning">
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Warning
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -462,11 +541,14 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-warning">
+    className="lucid-Banner lucid-Banner-warning"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Warning -- No Close 
       ×
     </span>
@@ -481,20 +563,25 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-warning">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-warning"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <WarningIcon />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Warning -- has icon
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -508,15 +595,19 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-warning">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-warning"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <WarningIcon />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Warning -- has iconv
     </span>
   </section>
@@ -530,16 +621,20 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Warning -- small
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -553,11 +648,14 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-warning lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-warning lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Warning -- small -- No Close 
       ×
     </span>
@@ -572,20 +670,25 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <WarningIcon />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Warning -- has icon -- small
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -599,15 +702,19 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-warning lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-warning lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <WarningIcon />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Warning -- has icon -- small -- No Close 
       ×
     </span>
@@ -622,16 +729,20 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger">
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Danger
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -645,11 +756,14 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-danger">
+    className="lucid-Banner lucid-Banner-danger"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Danger -- No Close 
       ×
     </span>
@@ -664,20 +778,25 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <DangerIcon />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Danger -- has icon
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -691,15 +810,19 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-danger">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-danger"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <DangerIcon />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Danger -- has icon -- No Close 
       ×
     </span>
@@ -714,16 +837,20 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Danger -- small
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -737,11 +864,14 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-danger lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-danger lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Danger -- small -- No Close 
       ×
     </span>
@@ -756,20 +886,25 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <DangerIcon />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Danger -- has icon -- small
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -783,15 +918,19 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-danger lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-danger lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <DangerIcon />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Danger -- has icon -- small -- No Close 
       ×
     </span>
@@ -806,16 +945,20 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info">
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Info
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -829,11 +972,14 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-info">
+    className="lucid-Banner lucid-Banner-info"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Info -- No Close 
       ×
     </span>
@@ -848,21 +994,27 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-info">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-info"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <InfoIcon
-        isBadge={true} />
+        isBadge={true}
+      />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Info -- has icon
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -876,16 +1028,21 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-info">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-info"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <InfoIcon
-        isBadge={true} />
+        isBadge={true}
+      />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Info -- has icon -- No Close 
       ×
     </span>
@@ -900,16 +1057,20 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Info -- small
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -923,11 +1084,14 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-info lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-info lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Info -- small -- No Close 
       ×
     </span>
@@ -942,21 +1106,27 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-info lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-info lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <InfoIcon
-        isBadge={true} />
+        isBadge={true}
+      />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Info -- has icon -- small
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -970,16 +1140,21 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-info lucid-Banner-small">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-info lucid-Banner-small"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <InfoIcon
-        isBadge={true} />
+        isBadge={true}
+      />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Info -- has icon -- small -- No Close 
       ×
     </span>
@@ -994,20 +1169,25 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <CustomIcon />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       Has Custom Icon
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -1021,15 +1201,19 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <CustomIcon />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       <p>
         <strong>
           Has Custom Icon
@@ -1039,7 +1223,8 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>
@@ -1053,15 +1238,19 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
   transitionEnterTimeout={300}
   transitionLeave={true}
   transitionLeaveTimeout={300}
-  transitionName="lucid-Banner">
+  transitionName="lucid-Banner"
+>
   <section
-    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close">
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close"
+  >
     <span
-      className="lucid-Banner-icon">
+      className="lucid-Banner-icon"
+    >
       <CustomIcon />
     </span>
     <span
-      className="lucid-Banner-content">
+      className="lucid-Banner-content"
+    >
       <p>
         <strong>
           Has Custom Icon
@@ -1074,7 +1263,8 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     </span>
     <span
       className="lucid-Banner-close"
-      onClick={[Function]}>
+      onClick={[Function]}
+    >
       ×
     </span>
   </section>

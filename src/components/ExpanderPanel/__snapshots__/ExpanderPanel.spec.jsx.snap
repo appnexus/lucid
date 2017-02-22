@@ -1,16 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`ExpanderPanel [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <Panel
   className="lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed"
   hasMargin={true}
   isGutterless={false}
-  isScrollable={true}>
+  isScrollable={true}
+>
   <Panel.Header
     className="lucid-ExpanderPanel-header"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span
-      className="lucid-ExpanderPanel-icon">
+      className="lucid-ExpanderPanel-icon"
+    >
       <ChevronIcon
-        direction="down" />
+        direction="down"
+      />
     </span>
     <span>
       Show More
@@ -22,9 +28,11 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 1.b
     isExpanded={false}
     isMountControlled={true}
     mountControlThreshold={4}
-    rootType="div">
+    rootType="div"
+  >
     <div
-      className="lucid-ExpanderPanel-content-inner lucid-ExpanderPanel-content-inner-has-padding">
+      className="lucid-ExpanderPanel-content-inner lucid-ExpanderPanel-content-inner-has-padding"
+    >
       <ExpanderPanel.Header>
         Show More
       </ExpanderPanel.Header>
@@ -242,14 +250,18 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 2.n
   className="lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed"
   hasMargin={true}
   isGutterless={false}
-  isScrollable={true}>
+  isScrollable={true}
+>
   <Panel.Header
     className="lucid-ExpanderPanel-header"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span
-      className="lucid-ExpanderPanel-icon">
+      className="lucid-ExpanderPanel-icon"
+    >
       <ChevronIcon
-        direction="down" />
+        direction="down"
+      />
     </span>
     <span>
       Show More
@@ -261,9 +273,11 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 2.n
     isExpanded={false}
     isMountControlled={true}
     mountControlThreshold={4}
-    rootType="div">
+    rootType="div"
+  >
     <div
-      className="lucid-ExpanderPanel-content-inner">
+      className="lucid-ExpanderPanel-content-inner"
+    >
       <ExpanderPanel.Header>
         Show More
       </ExpanderPanel.Header>

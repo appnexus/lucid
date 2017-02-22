@@ -1,27 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Checkbox [common] example testing should match snapshot(s) for interactive 1`] = `
 <div
   className="lucid-Checkbox lucid-Checkbox-is-selected"
-  onClick={[Function]}>
+  onClick={[Function]}
+>
   <input
     checked={true}
     className="lucid-Checkbox-native"
     disabled={false}
     onChange={[Function]}
     tabIndex={20}
-    type="checkbox" />
+    type="checkbox"
+  />
   <span
     className="lucid-Checkbox-visualization-glow"
-    onClick={[Function]} />
+    onClick={[Function]}
+  />
   <span
     className="lucid-Checkbox-visualization-container"
-    onClick={[Function]} />
+    onClick={[Function]}
+  />
   <span
     className="lucid-Checkbox-visualization-checkmark"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span
-      className="lucid-Checkbox-visualization-checkmark-stem" />
+      className="lucid-Checkbox-visualization-checkmark-stem"
+    />
     <span
-      className="lucid-Checkbox-visualization-checkmark-kick" />
+      className="lucid-Checkbox-visualization-checkmark-kick"
+    />
   </span>
 </div>
 `;
@@ -29,27 +38,34 @@ exports[`Checkbox [common] example testing should match snapshot(s) for interact
 exports[`Checkbox [common] example testing should match snapshot(s) for interactive 2`] = `
 <div
   className="lucid-Checkbox lucid-Checkbox-is-disabled"
-  onClick={[Function]}>
+  onClick={[Function]}
+>
   <input
     checked={false}
     className="lucid-Checkbox-native"
     disabled={true}
     onChange={[Function]}
     tabIndex={20}
-    type="checkbox" />
+    type="checkbox"
+  />
   <span
     className="lucid-Checkbox-visualization-glow"
-    onClick={[Function]} />
+    onClick={[Function]}
+  />
   <span
     className="lucid-Checkbox-visualization-container"
-    onClick={[Function]} />
+    onClick={[Function]}
+  />
   <span
     className="lucid-Checkbox-visualization-checkmark"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span
-      className="lucid-Checkbox-visualization-checkmark-stem" />
+      className="lucid-Checkbox-visualization-checkmark-stem"
+    />
     <span
-      className="lucid-Checkbox-visualization-checkmark-kick" />
+      className="lucid-Checkbox-visualization-checkmark-kick"
+    />
   </span>
 </div>
 `;
@@ -57,27 +73,34 @@ exports[`Checkbox [common] example testing should match snapshot(s) for interact
 exports[`Checkbox [common] example testing should match snapshot(s) for interactive 3`] = `
 <div
   className="lucid-Checkbox lucid-Checkbox-is-disabled lucid-Checkbox-is-selected"
-  onClick={[Function]}>
+  onClick={[Function]}
+>
   <input
     checked={true}
     className="lucid-Checkbox-native"
     disabled={true}
     onChange={[Function]}
     tabIndex={20}
-    type="checkbox" />
+    type="checkbox"
+  />
   <span
     className="lucid-Checkbox-visualization-glow"
-    onClick={[Function]} />
+    onClick={[Function]}
+  />
   <span
     className="lucid-Checkbox-visualization-container"
-    onClick={[Function]} />
+    onClick={[Function]}
+  />
   <span
     className="lucid-Checkbox-visualization-checkmark"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span
-      className="lucid-Checkbox-visualization-checkmark-stem" />
+      className="lucid-Checkbox-visualization-checkmark-stem"
+    />
     <span
-      className="lucid-Checkbox-visualization-checkmark-kick" />
+      className="lucid-Checkbox-visualization-checkmark-kick"
+    />
   </span>
 </div>
 `;
@@ -85,25 +108,31 @@ exports[`Checkbox [common] example testing should match snapshot(s) for interact
 exports[`Checkbox [common] example testing should match snapshot(s) for interactive 4`] = `
 <div
   className="lucid-Checkbox lucid-Checkbox-is-disabled lucid-Checkbox-is-selected"
-  onClick={[Function]}>
+  onClick={[Function]}
+>
   <input
     checked={false}
     className="lucid-Checkbox-native"
     disabled={true}
     onChange={[Function]}
     tabIndex={20}
-    type="checkbox" />
+    type="checkbox"
+  />
   <span
     className="lucid-Checkbox-visualization-glow"
-    onClick={[Function]} />
+    onClick={[Function]}
+  />
   <span
     className="lucid-Checkbox-visualization-container"
-    onClick={[Function]} />
+    onClick={[Function]}
+  />
   <span
     className="lucid-Checkbox-visualization-indeterminate"
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span
-      className="lucid-Checkbox-visualization-indeterminate-line" />
+      className="lucid-Checkbox-visualization-indeterminate-line"
+    />
   </span>
 </div>
 `;

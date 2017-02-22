@@ -1,6 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`RadioGroup [common] example testing should match snapshot(s) for default 1`] = `
 <span
-  className="lucid-RadioGroup">
+  className="lucid-RadioGroup"
+>
   <RadioButtonLabeled
     Label={
       Object {
@@ -16,7 +19,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Superman
     </RadioGroup.Label>
@@ -36,7 +40,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Batman
     </RadioGroup.Label>
@@ -56,7 +61,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Wonder Woman
     </RadioGroup.Label>
@@ -76,7 +82,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Aquaman
     </RadioGroup.Label>
@@ -96,7 +103,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Robin
     </RadioGroup.Label>
@@ -104,253 +112,10 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
 </span>
 `;
 
-exports[`RadioGroup [common] example testing should match snapshot(s) for selected-index-as-prop 1`] = `
+exports[`RadioGroup [common] example testing should match snapshot(s) for nested-select 1`] = `
 <span
   className="lucid-RadioGroup"
-  style={
-    Object {
-      "display": "flex",
-      "flexDirection": "column",
-    }
-  }>
-  <RadioButtonLabeled
-    Label={
-      Object {
-        "children": "Captain America",
-      }
-    }
-    callbackId={0}
-    isDisabled={false}
-    isSelected={false}
-    name="name"
-    onSelect={[Function]}
-    style={
-      Object {
-        "marginRight": "13px",
-      }
-    }>
-    <RadioGroup.Label>
-      Captain America
-    </RadioGroup.Label>
-  </RadioButtonLabeled>
-  <RadioButtonLabeled
-    Label={
-      Object {
-        "children": "Iron Man",
-      }
-    }
-    callbackId={1}
-    isDisabled={false}
-    isSelected={false}
-    name="name"
-    onSelect={[Function]}
-    style={
-      Object {
-        "marginRight": "13px",
-      }
-    }>
-    <RadioGroup.Label>
-      Iron Man
-    </RadioGroup.Label>
-  </RadioButtonLabeled>
-  <RadioButtonLabeled
-    Label={
-      Object {
-        "children": "Thor",
-      }
-    }
-    callbackId={2}
-    isDisabled={false}
-    isSelected={false}
-    name="name"
-    onSelect={[Function]}
-    style={
-      Object {
-        "marginRight": "13px",
-      }
-    }>
-    <RadioGroup.Label>
-      Thor
-    </RadioGroup.Label>
-  </RadioButtonLabeled>
-  <RadioButtonLabeled
-    Label={
-      Object {
-        "children": "Hulk",
-      }
-    }
-    callbackId={3}
-    isDisabled={false}
-    isSelected={true}
-    name="name"
-    onSelect={[Function]}
-    style={
-      Object {
-        "marginRight": "13px",
-      }
-    }>
-    <RadioGroup.Label>
-      Hulk
-    </RadioGroup.Label>
-  </RadioButtonLabeled>
-  <RadioButtonLabeled
-    Label={
-      Object {
-        "children": "Black Widow",
-      }
-    }
-    callbackId={4}
-    isDisabled={false}
-    isSelected={false}
-    name="name"
-    onSelect={[Function]}
-    style={
-      Object {
-        "marginRight": "13px",
-      }
-    }>
-    <RadioGroup.Label>
-      Black Widow
-    </RadioGroup.Label>
-  </RadioButtonLabeled>
-  <RadioButtonLabeled
-    Label={
-      Object {
-        "children": "Hawkeye",
-      }
-    }
-    callbackId={5}
-    isDisabled={false}
-    isSelected={false}
-    name="name"
-    onSelect={[Function]}
-    style={
-      Object {
-        "marginRight": "13px",
-      }
-    }>
-    <RadioGroup.Label>
-      Hawkeye
-    </RadioGroup.Label>
-  </RadioButtonLabeled>
-</span>
-`;
-
-exports[`RadioGroup [common] example testing should match snapshot(s) for selected-index-from-child 1`] = `
-<span
-  className="lucid-RadioGroup"
-  style={
-    Object {
-      "display": "flex",
-      "flexDirection": "column",
-    }
-  }>
-  <RadioButtonLabeled
-    Label={
-      Object {
-        "children": "Leonardo",
-      }
-    }
-    callbackId={0}
-    isDisabled={false}
-    isSelected={false}
-    name="name"
-    onSelect={[Function]}
-    style={
-      Object {
-        "marginRight": "13px",
-      }
-    }>
-    <RadioGroup.Label>
-      Leonardo
-    </RadioGroup.Label>
-  </RadioButtonLabeled>
-  <RadioButtonLabeled
-    Label={
-      Object {
-        "children": "Raphael",
-      }
-    }
-    callbackId={1}
-    isDisabled={false}
-    isSelected={false}
-    name="name"
-    onSelect={[Function]}
-    style={
-      Object {
-        "marginRight": "13px",
-      }
-    }>
-    <RadioGroup.Label>
-      Raphael
-    </RadioGroup.Label>
-  </RadioButtonLabeled>
-  <RadioButtonLabeled
-    Label={
-      Object {
-        "children": "Donatello",
-      }
-    }
-    callbackId={2}
-    isDisabled={false}
-    isSelected={true}
-    name="name"
-    onSelect={[Function]}
-    style={
-      Object {
-        "marginRight": "13px",
-      }
-    }>
-    <RadioGroup.Label>
-      Donatello
-    </RadioGroup.Label>
-  </RadioButtonLabeled>
-  <RadioButtonLabeled
-    Label={
-      Object {
-        "children": "Michelangelo",
-      }
-    }
-    callbackId={3}
-    isDisabled={false}
-    isSelected={false}
-    name="name"
-    onSelect={[Function]}
-    style={
-      Object {
-        "marginRight": "13px",
-      }
-    }>
-    <RadioGroup.Label>
-      Michelangelo
-    </RadioGroup.Label>
-  </RadioButtonLabeled>
-  <RadioButtonLabeled
-    Label={
-      Object {
-        "children": "Venus",
-      }
-    }
-    callbackId={4}
-    isDisabled={false}
-    isSelected={false}
-    name="name"
-    onSelect={[Function]}
-    style={
-      Object {
-        "marginRight": "13px",
-      }
-    }>
-    <RadioGroup.Label>
-      Venus
-    </RadioGroup.Label>
-  </RadioButtonLabeled>
-</span>
-`;
-
-exports[`RadioGroup [common] example testing should match snapshot(s) for stateful 1`] = `
-<span
-  className="lucid-RadioGroup">
+>
   <RadioButtonLabeled
     Label={
       Object {
@@ -366,7 +131,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for statef
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Alvin
     </RadioGroup.Label>
@@ -386,7 +152,349 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for statef
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
+    <RadioGroup.Label>
+      Simon
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": <SingleSelect>
+          <SingleSelect.Option>
+              One
+          </SingleSelect.Option>
+          <SingleSelect.Option>
+              Two
+          </SingleSelect.Option>
+      </SingleSelect>,
+      }
+    }
+    callbackId={2}
+    isDisabled={false}
+    isSelected={false}
+    name="lucid-RadioGroup-2"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      <SingleSelect>
+        <SingleSelect.Option>
+          One
+        </SingleSelect.Option>
+        <SingleSelect.Option>
+          Two
+        </SingleSelect.Option>
+      </SingleSelect>
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+</span>
+`;
+
+exports[`RadioGroup [common] example testing should match snapshot(s) for selected-index-as-prop 1`] = `
+<span
+  className="lucid-RadioGroup"
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+    }
+  }
+>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Captain America",
+      }
+    }
+    callbackId={0}
+    isDisabled={false}
+    isSelected={false}
+    name="name"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Captain America
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Iron Man",
+      }
+    }
+    callbackId={1}
+    isDisabled={false}
+    isSelected={false}
+    name="name"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Iron Man
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Thor",
+      }
+    }
+    callbackId={2}
+    isDisabled={false}
+    isSelected={false}
+    name="name"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Thor
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Hulk",
+      }
+    }
+    callbackId={3}
+    isDisabled={false}
+    isSelected={true}
+    name="name"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Hulk
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Black Widow",
+      }
+    }
+    callbackId={4}
+    isDisabled={false}
+    isSelected={false}
+    name="name"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Black Widow
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Hawkeye",
+      }
+    }
+    callbackId={5}
+    isDisabled={false}
+    isSelected={false}
+    name="name"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Hawkeye
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+</span>
+`;
+
+exports[`RadioGroup [common] example testing should match snapshot(s) for selected-index-from-child 1`] = `
+<span
+  className="lucid-RadioGroup"
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+    }
+  }
+>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Leonardo",
+      }
+    }
+    callbackId={0}
+    isDisabled={false}
+    isSelected={false}
+    name="name"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Leonardo
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Raphael",
+      }
+    }
+    callbackId={1}
+    isDisabled={false}
+    isSelected={false}
+    name="name"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Raphael
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Donatello",
+      }
+    }
+    callbackId={2}
+    isDisabled={false}
+    isSelected={true}
+    name="name"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Donatello
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Michelangelo",
+      }
+    }
+    callbackId={3}
+    isDisabled={false}
+    isSelected={false}
+    name="name"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Michelangelo
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Venus",
+      }
+    }
+    callbackId={4}
+    isDisabled={false}
+    isSelected={false}
+    name="name"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Venus
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+</span>
+`;
+
+exports[`RadioGroup [common] example testing should match snapshot(s) for stateful 1`] = `
+<span
+  className="lucid-RadioGroup"
+>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Alvin",
+      }
+    }
+    callbackId={0}
+    isDisabled={false}
+    isSelected={true}
+    name="lucid-RadioGroup-2"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Alvin
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Simon",
+      }
+    }
+    callbackId={1}
+    isDisabled={false}
+    isSelected={false}
+    name="lucid-RadioGroup-2"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
     <RadioGroup.Label>
       Simon
     </RadioGroup.Label>
@@ -406,7 +514,8 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for statef
       Object {
         "marginRight": "13px",
       }
-    }>
+    }
+  >
     <RadioGroup.Label>
       Theodore
     </RadioGroup.Label>

@@ -4,6 +4,7 @@ import _ from 'lodash';
 import {
 	getAbsoluteBoundingClientRect,
 	scrollParentTo,
+	sharesAncestor,
 } from './dom-helpers';
 
 describe('#getAbsoluteBoundingClientRect', () => {
@@ -98,5 +99,43 @@ describe('#scrollParentTo', () => {
 		parentNode.scrollTop = 5; // parent element is scrolled down by 5px
 		scrollParentTo(childNode);
 		assert.equal(parentNode.scrollTop, 5); //expect no change in scrolling of parent
+	});
+});
+
+describe('#sharesAncestor', () => {
+	it('should correctly find an ancestor', () => {
+		const siblingNode = {};
+		const contains = jest.fn().mockReturnValue(true);
+
+		const node = {
+			nodeName: 'DIV',
+			parentNode: {
+				nodeName: 'SPAN',
+				parentNode: {
+					nodeName: 'SECTION',
+					contains,
+				},
+			},
+		};
+
+		expect(sharesAncestor(node, siblingNode, 'SECTION')).toBe(true);
+		expect(contains).toHaveBeenCalledWith(siblingNode);
+	});
+
+	it('should correctly find not an ancestor', () => {
+		const node = {
+			nodeName: 'DIV',
+			parentNode: {
+				nodeName: 'SPAN',
+				parentNode: {
+					nodeName: 'DIV',
+					parentNode: {
+						nodeName: 'SPAN',
+					},
+				},
+			},
+		};
+
+		expect(sharesAncestor(node, null, 'SECTION')).toBe(false);
 	});
 });

@@ -16,6 +16,7 @@ import {
 } from '../../util/component-types';
 import { SearchFieldDumb as SearchField } from '../SearchField/SearchField';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
+import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 import Checkbox from '../Checkbox/Checkbox';
 import Selection from '../Selection/Selection';
 
@@ -32,6 +33,7 @@ const {
 	shape,
 	string,
 	oneOf,
+	node,
 } = React.PropTypes;
 
 const cx = lucidClassNames.bind('&-SearchableMultiSelect');
@@ -60,6 +62,10 @@ const SearchableMultiSelect = createClass({
 	},
 
 	propTypes: {
+		/**
+		 * Should be instances of {`SearchableMultiSelect.Option`}. Other direct child elements will not render.
+		 */
+		children: node,
 		/**
 		 * Styles that are passed through to root element.
 		 */
@@ -153,8 +159,6 @@ const SearchableMultiSelect = createClass({
 
 	getDefaultProps() {
 		return {
-			hasReset: true,
-			isSelectionHighlighted: true,
 			isDisabled: false,
 			isLoading: false,
 			onRemoveAll: _.noop,
@@ -229,6 +233,7 @@ const SearchableMultiSelect = createClass({
 			optionFilter,
 			searchText,
 			selectedIndices,
+			isLoading,
 		} = this.props;
 
 		const options = _.map(optionsProps, (optionProps, optionIndex) => (
@@ -236,6 +241,7 @@ const SearchableMultiSelect = createClass({
 				{..._.omit(optionProps, 'children')}
 				isHidden={!optionFilter(searchText, optionProps)}
 				key={optionIndex}
+				isDisabled={isLoading}
 			>
 				<div className={cx('&-checkbox')}>
 					<Checkbox
@@ -277,8 +283,6 @@ const SearchableMultiSelect = createClass({
 		} = this;
 
 		const {
-			onExpand,
-			onCollapse,
 			optionContainerStyle,
 		} = dropMenuProps;
 
@@ -294,7 +298,9 @@ const SearchableMultiSelect = createClass({
 				<DropMenu
 					{...dropMenuProps}
 					selectedIndices={null}
-					className={cx('&-DropMenu', dropMenuProps.className)}
+					className={cx('&-DropMenu', {
+						'&-DropMenu-is-small': isSmall,
+					}, dropMenuProps.className)}
 					optionContainerStyle={_.assign({}, optionContainerStyle, !_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null)}
 					isDisabled={isDisabled}
 					isLoading={isLoading}
@@ -304,13 +310,25 @@ const SearchableMultiSelect = createClass({
 					<DropMenu.Control>
 						<SearchField
 							{...searchFieldProps}
+							isDisabled={isDisabled}
 							className={cx('&-search', {
 								'&-search-is-small': isSmall,
 							}, searchFieldProps.className)}
 							value={searchText}
 							onChange={this.handleSearch}
-						/>
+						>
+							{isLoading ?
+								<SearchField.Icon>
+									<LoadingIcon />
+								</SearchField.Icon>
+							: null}
+						</SearchField>
 					</DropMenu.Control>
+					{isLoading ?
+						<DropMenu.Option key='SearchableMultiSelectLoading' className={cx('&-loading')} isDisabled>
+							<LoadingIcon />
+						</DropMenu.Option>
+					: null}
 					{this.renderOptions(optionsProps)}
 				</DropMenu>
 

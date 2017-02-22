@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`DangerIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
@@ -5,15 +7,18 @@ exports[`DangerIcon [common] example testing should match snapshot(s) for 1.defa
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <circle
     className="lucid-DangerIcon-background"
     cx="8"
     cy="8"
-    r="8" />
+    r="8"
+  />
   <path
     className="lucid-DangerIcon-x"
-    d="M6.836,8L4.387,5.537l1.17-1.171l2.449,2.465l2.465-2.465l1.17,1.171L9.163,8l2.479,2.465l-1.168,1.17 L8.007,9.156l-2.48,2.479l-1.17-1.171L6.836,8z" />
+    d="M6.836,8L4.387,5.537l1.17-1.171l2.449,2.465l2.465-2.465l1.17,1.171L9.163,8l2.479,2.465l-1.168,1.17 L8.007,9.156l-2.48,2.479l-1.17-1.171L6.836,8z"
+  />
 </Icon>
 `;
 
@@ -25,15 +30,18 @@ exports[`DangerIcon [common] example testing should match snapshot(s) for 2.clic
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <circle
     className="lucid-DangerIcon-background"
     cx="8"
     cy="8"
-    r="8" />
+    r="8"
+  />
   <path
     className="lucid-DangerIcon-x"
-    d="M6.836,8L4.387,5.537l1.17-1.171l2.449,2.465l2.465-2.465l1.17,1.171L9.163,8l2.479,2.465l-1.168,1.17 L8.007,9.156l-2.48,2.479l-1.17-1.171L6.836,8z" />
+    d="M6.836,8L4.387,5.537l1.17-1.171l2.449,2.465l2.465-2.465l1.17,1.171L9.163,8l2.479,2.465l-1.168,1.17 L8.007,9.156l-2.48,2.479l-1.17-1.171L6.836,8z"
+  />
 </Icon>
 `;
 
@@ -44,14 +52,17 @@ exports[`DangerIcon [common] example testing should match snapshot(s) for 3.disa
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 0 16 16">
+  viewBox="0 0 16 16"
+>
   <circle
     className="lucid-DangerIcon-background lucid-DangerIcon-background-is-disabled"
     cx="8"
     cy="8"
-    r="8" />
+    r="8"
+  />
   <path
     className="lucid-DangerIcon-x"
-    d="M6.836,8L4.387,5.537l1.17-1.171l2.449,2.465l2.465-2.465l1.17,1.171L9.163,8l2.479,2.465l-1.168,1.17 L8.007,9.156l-2.48,2.479l-1.17-1.171L6.836,8z" />
+    d="M6.836,8L4.387,5.537l1.17-1.171l2.449,2.465l2.465-2.465l1.17,1.171L9.163,8l2.479,2.465l-1.168,1.17 L8.007,9.156l-2.48,2.479l-1.17-1.171L6.836,8z"
+  />
 </Icon>
 `;

@@ -4,6 +4,13 @@
 		display: block;
 	}
 
+	&-DropMenu-is-small {
+		// TODO
+		.lucid-DropMenu-Option {
+			height: @size-height-L;
+		}
+	}
+
 	.lucid-ContextMenu {
 		display: block;
 	}
@@ -40,5 +47,13 @@
 
 	&-Option-underline-match {
 		text-decoration: underline;
+	}
+
+	&-loading {
+		justify-content: center;
+
+		&.lucid-DropMenu-Option.lucid-DropMenu-Option-is-focused {
+			background: none;
+		}
 	}
 }
