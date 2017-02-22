@@ -4,7 +4,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { buildHybridComponent } from '../../util/state-management';
 import {
 	partitionText,
-	searchText,
+	propsSearch,
 } from '../../util/text-manipulation';
 import {
 	createClass,
@@ -31,6 +31,7 @@ const {
 	oneOfType,
 	shape,
 	string,
+	oneOf,
 } = React.PropTypes;
 
 const cx = lucidClassNames.bind('&-SearchableMultiSelect');
@@ -98,6 +99,12 @@ const SearchableMultiSelect = createClass({
 		 */
 		onSelect: func,
 		/**
+		 * Called when the user clicks to remove all selections.
+		 *
+		 * Signature: `({props, event}) => {}`
+		 */
+		onRemoveAll: func,
+		/**
 		 * The function that will be run against each Option's props to determine
 		 * whether it should be visible or not. The default behavior of the
 		 * function is to match, ignoring case, against any text node descendant of
@@ -136,6 +143,12 @@ const SearchableMultiSelect = createClass({
 		 * the `onSelect` handler.
 		 */
 		Option: any,
+		/**
+		 * Adjusts the display of this component. This should typically be driven
+		 * by screen size. Currently `small` and `large` are explicitly handled
+		 * by this component.
+		 */
+		responsiveMode: oneOf(['small', 'medium', 'large']),
 	},
 
 	getDefaultProps() {
@@ -144,16 +157,17 @@ const SearchableMultiSelect = createClass({
 			isSelectionHighlighted: true,
 			isDisabled: false,
 			isLoading: false,
-			optionFilter: searchText,
-			searchText: null,
+			onRemoveAll: _.noop,
+			optionFilter: propsSearch,
+			searchText: '',
 			selectedIndices: [],
 			DropMenu: DropMenu.getDefaultProps(),
 			SearchField: SearchField.getDefaultProps(),
+			responsiveMode: 'large',
 		};
 	},
 
 	handleDropMenuSelect(optionIndex, { event }) {
-		console.log('handleDropMenuSelect', event.target);
 		const { onSelect } = this.props;
 
 		return onSelect(optionIndex);
@@ -164,13 +178,85 @@ const SearchableMultiSelect = createClass({
 		event,
 		props: { callbackId: optionIndex },
 	}) {
-		console.log('handleCheckboxSelect', event.target);
-		event.stopPropagation();
-		event.preventDefault();
+		// TODO: are these needed?
+		// event.stopPropagation();
+		// event.preventDefault();
 
-		const { onSelect } = this.props;
+		return this.props.onSelect(optionIndex);
+	},
 
-		return onSelect(optionIndex);
+	handleSelectionRemove({ props: { callbackId: optionIndex } }) {
+		return this.props.onSelect(optionIndex);
+	},
+
+	handleRemoveAll({ event }) {
+		this.props.onRemoveAll({ event, props: this.props });
+	},
+
+	handleSearch(searchText) {
+		const {
+			props,
+			props: {
+				onSearch,
+				optionFilter,
+				DropMenu: {
+					onExpand,
+				},
+			},
+		} = this;
+
+		const options = _.map(findTypes(props, SearchableMultiSelect.Option), 'props');
+		const firstVisibleIndex = _.findIndex(options, (option) => {
+			return optionFilter(searchText, option);
+		});
+
+		onExpand();
+		return onSearch(searchText, firstVisibleIndex);
+	},
+
+	renderUnderlinedChildren(childText, searchText) {
+		const [pre, match, post] = partitionText(childText, new RegExp(_.escapeRegExp(searchText), 'i'), searchText.length);
+
+		return [
+			pre && <span key='pre' className={cx('&-Option-underline-pre')}>{pre}</span>,
+			match && <span key='match' className={cx('&-Option-underline-match')}>{match}</span>,
+			post && <span key='post' className={cx('&-Option-underline-post')}>{post}</span>,
+		];
+	},
+
+	renderOptions(optionsProps) {
+		const {
+			optionFilter,
+			searchText,
+			selectedIndices,
+		} = this.props;
+
+		const options = _.map(optionsProps, (optionProps, optionIndex) => (
+			<DropMenu.Option
+				{..._.omit(optionProps, 'children')}
+				isHidden={!optionFilter(searchText, optionProps)}
+				key={optionIndex}
+			>
+				<div className={cx('&-checkbox')}>
+					<Checkbox
+						onSelect={this.handleCheckboxSelect}
+						callbackId={optionIndex}
+						isSelected={_.includes(selectedIndices, optionIndex)}
+					/>
+					<div className={cx('&-checkbox-label')}>
+						{_.isString(optionProps.children) ?
+							this.renderUnderlinedChildren(optionProps.children, searchText)
+						: optionProps.children}
+					</div>
+				</div>
+			</DropMenu.Option>
+		));
+
+		const visibleOptionsCount = _.filter(options, (option) => !option.props.isHidden).length;
+
+		return visibleOptionsCount > 0
+			? options
+			: <DropMenu.Option isDisabled><span className={cx('&-noresults')}>No results match "{searchText}"</span></DropMenu.Option>;
 	},
 
 	render() {
@@ -181,24 +267,30 @@ const SearchableMultiSelect = createClass({
 				isLoading,
 				isDisabled,
 				maxMenuHeight,
-				onSelect,
 				style,
 				selectedIndices,
 				DropMenu: dropMenuProps,
+				responsiveMode,
+				searchText,
+				...passThroughs
 			},
 		} = this;
 
 		const {
-			direction,
+			onExpand,
+			onCollapse,
 			optionContainerStyle,
-			isExpanded,
 		} = dropMenuProps;
 
-		const searchFieldProps = _.get(getFirst(props, SearchField, <SearchField />), 'props');
+		const searchFieldProps = _.get(getFirst(props, SearchField), 'props', {});
 		const optionsProps = _.map(findTypes(props, SearchableMultiSelect.Option), 'props');
+		const isSmall = responsiveMode === 'small';
 
 		return (
-			<div className={cx('&')}>
+			<div
+				{...omitProps(passThroughs, SearchableMultiSelect)}
+				className={cx('&', className)}
+			>
 				<DropMenu
 					{...dropMenuProps}
 					selectedIndices={null}
@@ -212,28 +304,32 @@ const SearchableMultiSelect = createClass({
 					<DropMenu.Control>
 						<SearchField
 							{...searchFieldProps}
-							className={cx('&-search', searchFieldProps.className)}
+							className={cx('&-search', {
+								'&-search-is-small': isSmall,
+							}, searchFieldProps.className)}
+							value={searchText}
+							onChange={this.handleSearch}
 						/>
 					</DropMenu.Control>
-					{_.map(optionsProps, (optionProps, optionIndex) => (
-						<DropMenu.Option {..._.omit(optionProps, 'children')}>
-							<div className={cx('&-checkbox')}>
-								<Checkbox
-									onSelect={this.handleCheckboxSelect}
-									callbackId={optionIndex}
-									isSelected={_.includes(selectedIndices, optionIndex)}
-								/>
-								<div className={cx('&-checkbox-label')}>
-									{optionProps.children}
-								</div>
-							</div>
-						</DropMenu.Option>
-					))}
+					{this.renderOptions(optionsProps)}
 				</DropMenu>
+
 				{!_.isEmpty(selectedIndices) ?
-					<Selection isBold hasBackground Label='Selected' kind='container'>
+					<Selection
+						isBold
+						hasBackground
+						Label='Selected'
+						kind='container'
+						onRemove={this.handleRemoveAll}
+						responsiveMode={responsiveMode}
+					>
 						{_.map(selectedIndices, (selectedIndex) => (
-							<Selection>
+							<Selection
+								key={selectedIndex}
+								callbackId={selectedIndex}
+								responsiveMode={responsiveMode}
+								onRemove={this.handleSelectionRemove}
+							>
 								<Selection.Label>
 									{optionsProps[selectedIndex].children}
 								</Selection.Label>

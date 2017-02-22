@@ -107,15 +107,9 @@ const Selection = createClass({
 		 */
 		children: node,
 		/**
-		 * Adjusts the display of this component based on screen size typically.
-		 * Currently `small` and `large` are explicitly handled by this component.
-		 *
-		 * | Input  | Actual  |
-		 * | -----  | ------  |
-		 * | small  | small   |
-		 * | medium | small   |
-		 * | large  | large   |
-		 *
+		 * Adjusts the display of this component. This should typically be driven
+		 * by screen size. Currently `small` and `large` are explicitly handled
+		 * by this component.
 		 */
 		responsiveMode: oneOf(['small', 'medium', 'large']),
 	},

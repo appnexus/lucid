@@ -13,10 +13,16 @@ export function onSearch(state, searchText, firstVisibleIndex) {
 	return {
 		...state,
 		searchText,
-		selectedIndex: null,
 		DropMenu: {
 			...DropMenu.onFocusOption(state.DropMenu, firstVisibleIndex),
 		},
+	};
+}
+
+export function onRemoveAll(state) {
+	return {
+		...state,
+		selectedIndices: [],
 	};
 }
 

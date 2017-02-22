@@ -141,14 +141,17 @@ const ContextMenu = createClass({
 			}
 		}, 10);
 
-		this.onClickBodyEventListener = window.addEventListener('click', (event) => {
-			if (this.props.onClickOut && this.refs.flyOutPortal) {
-				const flyOutEl = this.refs.flyOutPortal.portalElement.firstChild;
-				if (!(flyOutEl.contains(event.target) || this.refs.target.contains(event.target))) {
-					this.props.onClickOut({ props: this.props, event });
-				}
+		this.onTouchStartBodyEventListener = document.body.addEventListener('touchstart', this.handleBodyTapOrClick);
+		this.onClickBodyEventListener = document.body.addEventListener('click', this.handleBodyTapOrClick);
+	},
+
+	handleBodyTapOrClick(event) {
+		if (this.props.onClickOut && this.refs.flyOutPortal) {
+			const flyOutEl = this.refs.flyOutPortal.portalElement.firstChild;
+			if (!(flyOutEl.contains(event.target) || this.refs.target.contains(event.target))) {
+				this.props.onClickOut({ props: this.props, event });
 			}
-		});
+		}
 	},
 
 	componentWillUnmount() {

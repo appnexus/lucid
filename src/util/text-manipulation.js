@@ -27,7 +27,7 @@ export function getCombinedChildText(node) {
 		.reduce(((combinedText, childText) => combinedText + childText), _.find(node.children, _.isString) || '');
 }
 
-export function searchText(text, node) {
+export function propsSearch(text, node) {
 	if (!text) {
 		return true;
 	}

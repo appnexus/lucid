@@ -11,8 +11,11 @@
 	&-search {
 		margin-bottom: @size-standard;
 
-		.lucid-TextField {
-			font-size: 16px;
+		&-is-small {
+			// Prevents zooming on focus
+			.lucid-TextField {
+				font-size: 16px;
+			}
 		}
 	}
 
@@ -24,4 +27,18 @@
 		margin-left: @size-XXS;
 	}
 
+	&-noresults {
+		color: @color-disabledText;
+		font-style: italic;
+	}
+
+	&-Option-underline-match,
+	&-Option-underline-post,
+	&-Option-underline-pre {
+		white-space: pre;
+	}
+
+	&-Option-underline-match {
+		text-decoration: underline;
+	}
 }

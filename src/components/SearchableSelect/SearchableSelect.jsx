@@ -4,7 +4,7 @@ import { createClass, findTypes, getFirst } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	partitionText,
-	searchText,
+	propsSearch,
 } from '../../util/text-manipulation';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './SearchableSelect.reducers';
@@ -154,7 +154,7 @@ const SearchableSelect = createClass({
 			isSelectionHighlighted: true,
 			isDisabled: false,
 			isLoading: false,
-			optionFilter: searchText,
+			optionFilter: propsSearch,
 			searchText: null,
 			selectedIndex: null,
 			DropMenu: DropMenu.getDefaultProps(),
