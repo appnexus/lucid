@@ -11,8 +11,6 @@ export default React.createClass({
 					return (
 						<div>
 							<Selection responsiveMode={responsiveMode} Label='Default' />
-							<Selection responsiveMode={responsiveMode} Label='Default medium' />
-							<Selection responsiveMode={responsiveMode} Label='Default small' />
 							<Selection responsiveMode={responsiveMode} kind='container' Label='Container' />
 							<Selection responsiveMode={responsiveMode} kind='success' Label='Success' />
 							<Selection responsiveMode={responsiveMode} kind='danger' Label='Danger' />

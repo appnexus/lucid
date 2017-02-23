@@ -26,7 +26,8 @@ export default React.createClass({
 							<Option>Georgia</Option>
 							<Option>Hawaii</Option>
 							<Option>Idaho</Option>
-							<Option>Illinois Indiana</Option>
+							<Option>Illinois</Option>
+							<Option>Indiana</Option>
 							<Option>Iowa</Option>
 							<Option>Kansas</Option>
 							<Option>Kentucky</Option>

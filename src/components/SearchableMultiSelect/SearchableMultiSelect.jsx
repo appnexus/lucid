@@ -11,8 +11,6 @@ import {
 	omitProps,
 	getFirst,
 	findTypes,
-	// filterTypes,
-	// rejectTypes,
 } from '../../util/component-types';
 import { SearchFieldDumb as SearchField } from '../SearchField/SearchField';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
@@ -28,7 +26,6 @@ const {
 	bool,
 	func,
 	number,
-	object,
 	oneOfType,
 	shape,
 	string,
@@ -40,9 +37,9 @@ const cx = lucidClassNames.bind('&-SearchableMultiSelect');
 
 /**
  *
- * {"categories": ["controls", "selectors"]}
+ * {"categories": ["controls", "selectors"], "madeFrom": ["Checkbox", "SearchField", "DropMenu", "LoadingIcon", "Selection"]}
  *
- * A control used to select a multiple option from a dropdown list using a
+ * A control used to select multiple options from a dropdown list using a
  * SearchField.
  */
 const SearchableMultiSelect = createClass({
@@ -58,6 +55,13 @@ const SearchableMultiSelect = createClass({
 			displayName: 'SearchableMultiSelect.Option',
 			propName: 'Option',
 			propTypes: DropMenu.Option.propTypes,
+			components: {
+				Selection: createClass({
+					displayName: 'SearchableMultiSelect.Option.Selection',
+					propName: 'Selection',
+					propTypes: Selection.propTypes,
+				}),
+			},
 		}),
 	},
 
@@ -66,10 +70,6 @@ const SearchableMultiSelect = createClass({
 		 * Should be instances of {`SearchableMultiSelect.Option`}. Other direct child elements will not render.
 		 */
 		children: node,
-		/**
-		 * Styles that are passed through to root element.
-		 */
-		style: object,
 		/**
 		 * Appended to the component-specific class names set on the root element.
 		 */
@@ -142,11 +142,13 @@ const SearchableMultiSelect = createClass({
 		 */
 		SearchField: shape(SearchField.propTypes),
 		/**
-		 * *Child Element* - These are menu options. The `optionIndex` is in-order
-		 * of rendering regardless of group nesting, starting with index `0`. Each
-		 * `Option` may be passed a prop called `isDisabled` to disable selection
-		 * of that `Option`. Any other props pass to Option will be available from
-		 * the `onSelect` handler.
+		 * *Child Element* - These are menu options. Each `Option` may be passed a
+		 * prop called `isDisabled` to disable selection of that `Option`. Any
+		 * other props pass to Option will be available from the `onSelect`
+		 * handler.
+		 *
+		 * It also support the `Selection` prop that can be used to forward along
+		 * props to the underlying `Selection` component.
 		 */
 		Option: any,
 		/**
@@ -155,6 +157,11 @@ const SearchableMultiSelect = createClass({
 		 * by this component.
 		 */
 		responsiveMode: oneOf(['small', 'medium', 'large']),
+		/**
+		 * Controls the visibility of the "remove all" button that's shown with the
+		 * selected items.
+		 */
+		hasRemoveAll: bool,
 	},
 
 	getDefaultProps() {
@@ -168,13 +175,14 @@ const SearchableMultiSelect = createClass({
 			DropMenu: DropMenu.getDefaultProps(),
 			SearchField: SearchField.getDefaultProps(),
 			responsiveMode: 'large',
+			hasRemoveAll: true,
 		};
 	},
 
-	handleDropMenuSelect(optionIndex, { event }) {
+	handleDropMenuSelect(optionIndex, { event, props }) {
 		const { onSelect } = this.props;
 
-		return onSelect(optionIndex);
+		return onSelect(optionIndex, { event, props });
 	},
 
 	handleCheckboxSelect(_isSelected, {
@@ -182,22 +190,36 @@ const SearchableMultiSelect = createClass({
 		event,
 		props: { callbackId: optionIndex },
 	}) {
-		// TODO: are these needed?
-		// event.stopPropagation();
-		// event.preventDefault();
+		// This is needed otherwise clicking the checkbox will double fire this
+		// event _and_ the `handleDropMenuSelect` handler
+		event.stopPropagation();
 
-		return this.props.onSelect(optionIndex);
+		// We don't want to send the consumer the checkbox's props so we have to
+		// lookup the option they clicked and send its props along
+		const selectedOptionProps = _.get(findTypes(this.props, SearchableMultiSelect.Option), `[${optionIndex}].props`);
+
+		return this.props.onSelect(optionIndex, { event, props: selectedOptionProps });
 	},
 
-	handleSelectionRemove({ props: { callbackId: optionIndex } }) {
-		return this.props.onSelect(optionIndex);
+	handleSelectionRemove({
+		event,
+		props,
+		props: {
+			callbackId: optionIndex,
+		},
+	}) {
+		// We don't want to send the consumer the selection's props so we have to
+		// lookup the option they clicked and send its props along
+		const selectedOptionProps = _.get(findTypes(this.props, SearchableMultiSelect.Option), `[${optionIndex}].props`);
+
+		return this.props.onSelect(optionIndex, { event, props: selectedOptionProps });
 	},
 
 	handleRemoveAll({ event }) {
 		this.props.onRemoveAll({ event, props: this.props });
 	},
 
-	handleSearch(searchText) {
+	handleSearch(searchText, { event }) {
 		const {
 			props,
 			props: {
@@ -213,9 +235,13 @@ const SearchableMultiSelect = createClass({
 		const firstVisibleIndex = _.findIndex(options, (option) => {
 			return optionFilter(searchText, option);
 		});
+		const firstVisibleProps = options[firstVisibleIndex];
 
+		// Just an extra call to make sure the search results show up when a user
+		// is typing
 		onExpand();
-		return onSearch(searchText, firstVisibleIndex);
+
+		return onSearch(searchText, firstVisibleIndex, { event, props: firstVisibleProps });
 	},
 
 	renderUnderlinedChildren(childText, searchText) {
@@ -262,7 +288,9 @@ const SearchableMultiSelect = createClass({
 
 		return visibleOptionsCount > 0
 			? options
-			: <DropMenu.Option isDisabled><span className={cx('&-noresults')}>No results match "{searchText}"</span></DropMenu.Option>;
+			: <DropMenu.Option isDisabled>
+				<span className={cx('&-noresults')}>No results match "{searchText}"</span>
+			</DropMenu.Option>;
 	},
 
 	render() {
@@ -273,11 +301,11 @@ const SearchableMultiSelect = createClass({
 				isLoading,
 				isDisabled,
 				maxMenuHeight,
-				style,
 				selectedIndices,
 				DropMenu: dropMenuProps,
 				responsiveMode,
 				searchText,
+				hasRemoveAll,
 				...passThroughs
 			},
 		} = this;
@@ -290,6 +318,7 @@ const SearchableMultiSelect = createClass({
 		const optionsProps = _.map(findTypes(props, SearchableMultiSelect.Option), 'props');
 		const isSmall = responsiveMode === 'small';
 
+		console.log(maxMenuHeight, _.assign({}, optionContainerStyle, !_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null));
 		return (
 			<div
 				{...omitProps(passThroughs, SearchableMultiSelect)}
@@ -305,7 +334,11 @@ const SearchableMultiSelect = createClass({
 					isDisabled={isDisabled}
 					isLoading={isLoading}
 					onSelect={this.handleDropMenuSelect}
-					style={style}
+					ContextMenu={{
+						alignmentOffset: -13,
+						directonOffset: -1,
+						minWidthOffset: -28,
+					}}
 				>
 					<DropMenu.Control>
 						<SearchField
@@ -316,13 +349,7 @@ const SearchableMultiSelect = createClass({
 							}, searchFieldProps.className)}
 							value={searchText}
 							onChange={this.handleSearch}
-						>
-							{isLoading ?
-								<SearchField.Icon>
-									<LoadingIcon />
-								</SearchField.Icon>
-							: null}
-						</SearchField>
+						/>
 					</DropMenu.Control>
 					{isLoading ?
 						<DropMenu.Option key='SearchableMultiSelectLoading' className={cx('&-loading')} isDisabled>
@@ -340,19 +367,26 @@ const SearchableMultiSelect = createClass({
 						kind='container'
 						onRemove={this.handleRemoveAll}
 						responsiveMode={responsiveMode}
+						isRemovable={hasRemoveAll}
 					>
-						{_.map(selectedIndices, (selectedIndex) => (
-							<Selection
-								key={selectedIndex}
-								callbackId={selectedIndex}
-								responsiveMode={responsiveMode}
-								onRemove={this.handleSelectionRemove}
-							>
-								<Selection.Label>
-									{optionsProps[selectedIndex].children}
-								</Selection.Label>
-							</Selection>
-						))}
+						{_.map(selectedIndices, (selectedIndex) => {
+							const optionProps = optionsProps[selectedIndex];
+							const selectionProps = _.get(getFirst(optionProps, SearchableMultiSelect.Option.Selection), 'props');
+
+							return (
+								<Selection
+									key={selectedIndex}
+									{...selectionProps}
+									callbackId={selectedIndex}
+									responsiveMode={responsiveMode}
+									onRemove={this.handleSelectionRemove}
+								>
+									<Selection.Label>
+										{optionProps.children}
+									</Selection.Label>
+								</Selection>
+							);
+						})}
 					</Selection>
 				: null}
 			</div>
@@ -361,4 +395,4 @@ const SearchableMultiSelect = createClass({
 });
 
 export default buildHybridComponent(SearchableMultiSelect);
-export { SearchableMultiSelect as SearchableSelectDumb };
+export { SearchableMultiSelect as SearchableMultiSelectDumb };
