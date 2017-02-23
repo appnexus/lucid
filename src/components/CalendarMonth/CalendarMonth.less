@@ -1,0 +1,89 @@
+.lucid-CalendarMonth {
+	color: @color-textColor;
+	text-align: center;
+
+	.DayPicker-Month {
+		width: 100%;
+		display: table;
+		border-collapse: collapse;
+		border-spacing: 0;
+		user-select: none;
+		margin: 0;
+
+		.DayPicker-Caption {
+			display: table-caption;
+			font-weight: bold;
+			font-size: @size-font-L;
+			margin-bottom: @size-standard;
+		}
+
+		.DayPicker-Weekdays {
+			display: table-header-group;
+
+			.DayPicker-WeekdaysRow {
+				display: table-row;
+
+				.DayPicker-Weekday {
+					display: table-cell;
+					text-transform: uppercase;
+					color: @color-mediumGray;
+					font-size: @size-font;
+					width: calc(1/7*100%);
+				}
+			}
+		}
+
+		.DayPicker-Body {
+			display: table-row-group;
+
+			.DayPicker-Week {
+				display: table-row;
+
+				.DayPicker-Day {
+					display: table-cell;
+					line-height: 26px;
+					font-size: @size-font;
+					cursor: pointer;
+
+					&.DayPicker-Day:focus {
+						outline: none;
+
+						&:not(.DayPicker-Day--selected):not(.DayPicker-Day--from):not(.DayPicker-Day--to) {
+							outline: 1px solid multiply(@featured-color-primary-backgroundColor, #ccc);
+						}
+					}
+
+					&--today:not(.DayPicker-Day--outside) {
+						font-weight: bold;
+					}
+
+					&--selected:not(.DayPicker-Day--outside) {
+						color: @color-white;
+						background-color: @color-primary;
+					}
+
+					&--disabled {
+						color: @color-disabledText;
+						cursor: default;
+					}
+
+					&--range:not(.DayPicker-Day--outside):not(.DayPicker-Day--selected) {
+						background-color: @featured-color-primary-backgroundColor;
+					}
+
+					&--from:not(.DayPicker-Day--outside) {
+						color: @color-white;
+						background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="100%" viewBox="0 0 16 16" preserveAspectRatio="none"><path d="M 0 0 H 12 L 16 8 L 12 16 H 0" fill="@{color-primary}" /></svg>');
+						background-size: cover;
+					}
+
+					&--to:not(.DayPicker-Day--outside) {
+						color: @color-white;
+						background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="100%" viewBox="0 0 16 16" preserveAspectRatio="none"><path d="M 16 16 H 4 L 0 8 L 4 0 H 16" fill="@{color-primary}" /></svg>');
+						background-size: cover;
+					}
+				}
+			}
+		}
+	}
+}
