@@ -10,7 +10,7 @@ import {
 export default React.createClass({
 	getInitialState() {
 		return {
-			index: 0,
+			offset: 0,
 			selectedDays: [],
 			cursor: null,
 		};
@@ -18,13 +18,13 @@ export default React.createClass({
 
 	handlePrev() {
 		this.setState({
-			index: this.state.index - 1,
+			offset: this.state.offset - 1,
 		});
 	},
 
 	handleNext() {
 		this.setState({
-			index: this.state.index + 1,
+			offset: this.state.offset + 1,
 		});
 	},
 
@@ -65,7 +65,7 @@ export default React.createClass({
 		const {
 			selectedDays,
 			cursor,
-			index,
+			offset,
 		} = this.state;
 
 		return (
@@ -75,7 +75,7 @@ export default React.createClass({
 					<Button onClick={this.handlePrev}>{'<'}</Button>
 
 					<CalendarMonth
-						currentMonthIndex={index}
+						monthOffset={offset}
 						selectedDays={selectedDays}
 						cursor={cursor}
 						onDayClick={this.handleDayClick}

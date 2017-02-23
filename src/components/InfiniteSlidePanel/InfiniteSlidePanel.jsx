@@ -19,8 +19,8 @@ const modulo = (n, a) => (a - (n * Math.floor(a/n)));
 /** {"categories": ["helpers"], "madeFrom": ["SlidePanel"]}
  *
  * A container for rendering an infinite set of horizontal slides. Translation
- * between slides is controlled by passing in a new `index`.  Can hook into
- * touch events to update the `index`. This component is made from SlidePanel,
+ * between slides is controlled by passing in a new `offset`.  Can hook into
+ * touch events to update the `offset`. This component is made from SlidePanel,
  * so it accepts the same props.
  */
 const InfiniteSlidePanel = createClass({ displayName: 'InfiniteSlidePanel',
@@ -42,8 +42,8 @@ const InfiniteSlidePanel = createClass({ displayName: 'InfiniteSlidePanel',
 
 		/**
 		 * The only allowed child is a render function which is passed the current
-		 * slide's index and returns the slide contents:
-		 *   `(slideIndex) => { //returns React.PropTypes.node }`
+		 * slide's offset and returns the slide contents:
+		 *   `(slideOffset) => { //returns React.PropTypes.node }`
 		 * Alternatively, you could pass one <InfiniteSlidePanel.Slide {...}>
 		 * element with the render function. The only reason do to the latter is to
 		 * pass addiontal props to the slide element.
@@ -51,12 +51,12 @@ const InfiniteSlidePanel = createClass({ displayName: 'InfiniteSlidePanel',
 		children: oneOfType([node, func]),
 
 		/**
-		 * The zero-index of the left-most rendered slide.
+		 * The offset of the left-most rendered slide.
 		 */
-		index: number,
+		offset: number,
 
 		/**
-		 * Called when a user's swipe would change the index. Callback passes
+		 * Called when a user's swipe would change the offset. Callback passes
 		 * number of slides by the user (positive for forward swipes, negative for
 		 * backwards swipes).
 		 *
@@ -73,7 +73,7 @@ const InfiniteSlidePanel = createClass({ displayName: 'InfiniteSlidePanel',
 
 	getDefaultProps() {
 		return {
-			index: 0,
+			offset: 0,
 			onSwipe: _.noop,
 			totalSlides: 8,
 		};
@@ -83,7 +83,7 @@ const InfiniteSlidePanel = createClass({ displayName: 'InfiniteSlidePanel',
 		const {
 			children,
 			className,
-			index,
+			offset,
 			onSwipe,
 			totalSlides,
 			...passThroughs
@@ -92,26 +92,26 @@ const InfiniteSlidePanel = createClass({ displayName: 'InfiniteSlidePanel',
 		const slide = getFirst(this.props, InfiniteSlidePanel.Slide, <InfiniteSlidePanel.Slide>{children}</InfiniteSlidePanel.Slide>);
 		const slideChildRenderFunction = slide.props.children;
 		if (!_.isFunction(slideChildRenderFunction)) {
-			throw new Error('InfiniteSlidePanel children must be a single function `(slideIndex) => { /* returns React.PropTypes.node */ }`');
+			throw new Error('InfiniteSlidePanel children must be a single function `(slideOffset) => { /* returns React.PropTypes.node */ }`');
 		}
 
 		const halfSlides = Math.floor(totalSlides / 2);
-		const circularOffset = modulo(totalSlides, index);
-		const forwardSlideIndices = _.times(totalSlides - halfSlides, (n) => (index + n));
-		const backwardSlideIndices = _.times(halfSlides, (n) => (index + n - halfSlides));
-		const transposedSlideIndices = forwardSlideIndices.concat(backwardSlideIndices);
-		const slideIndexArray = _.takeRight(transposedSlideIndices, circularOffset).concat(_.take(transposedSlideIndices, totalSlides-circularOffset));
+		const circularOffset = modulo(totalSlides, offset);
+		const forwardSlideOffsets = _.times(totalSlides - halfSlides, (n) => (offset + n));
+		const backwardSlideOffsets = _.times(halfSlides, (n) => (offset + n - halfSlides));
+		const transposedSlideOffsets = forwardSlideOffsets.concat(backwardSlideOffsets);
+		const slideOffsetArray = _.takeRight(transposedSlideOffsets, circularOffset).concat(_.take(transposedSlideOffsets, totalSlides-circularOffset));
 
 		return (
 			<SlidePanel
 				{...omitProps(passThroughs, InfiniteSlidePanel)}
 				className={cx('&', className)}
-				index={index}
+				offset={offset}
 				onSwipe={onSwipe}
 				isLooped
 			>
-				{_.map(slideIndexArray, (slideIndex, elementIndex) => (
-					<SlidePanel.Slide key={elementIndex} {...slide.props}>{slideChildRenderFunction(slideIndex)}</SlidePanel.Slide>
+				{_.map(slideOffsetArray, (slideOffset, elementOffset) => (
+					<SlidePanel.Slide key={elementOffset} {...slide.props}>{slideChildRenderFunction(slideOffset)}</SlidePanel.Slide>
 				))}
 			</SlidePanel>
 		);

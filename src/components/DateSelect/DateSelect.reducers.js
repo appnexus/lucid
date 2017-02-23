@@ -1,14 +1,14 @@
 export const onSwipe = (state, slidesSwiped) => ({
 	...state,
-	index: state.index + slidesSwiped,
+	offset: state.offset + slidesSwiped,
 });
 
 export const onPrev = (state) => ({
 	...state,
-	index: state.index - 1,
+	offset: state.offset - 1,
 });
 
 export const onNext = (state) => ({
 	...state,
-	index: state.index + 1,
+	offset: state.offset + 1,
 });

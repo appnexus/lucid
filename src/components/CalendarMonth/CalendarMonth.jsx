@@ -27,13 +27,13 @@ const CalendarMonth = createClass({
 
 	propTypes: {
 		/**
-		 * The index of the rendered month, where 0 is the `initialMonth`. Negative
+		 * The offset of the rendered month, where 0 is the `initialMonth`. Negative
 		 * values will show previous months.
 		 */
-		currentMonthIndex: number,
+		monthOffset: number,
 
 		/**
-		 * Sets the month of the calendar. The 0 value for the `currentMonthIndex`
+		 * Sets the month of the calendar. The 0 value for the `monthOffset`
 		 * prop refers to this month.
 		 */
 		initialMonth: instanceOf(Date),
@@ -69,7 +69,7 @@ const CalendarMonth = createClass({
 
 	getDefaultProps() {
 		return {
-			currentMonthIndex: 0,
+			monthOffset: 0,
 			initialMonth: new Date(),
 			cursor: null,
 			from: null,
@@ -127,16 +127,16 @@ const CalendarMonth = createClass({
 
 	render() {
 		const {
-			currentMonthIndex,
+			monthOffset,
 			initialMonth,
 			...passThroughs
 		} = this.props;
 
-		const monthDate = moment(initialMonth).add(currentMonthIndex, 'months');
+		const monthDate = moment(initialMonth).add(monthOffset, 'months');
 
 		return (
 			<DayPicker
-				key={currentMonthIndex}
+				key={monthOffset}
 				className={cx('&')}
 				initialMonth={monthDate.toDate()}
 				canChangeMonth={false}

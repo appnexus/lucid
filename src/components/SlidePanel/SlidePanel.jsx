@@ -22,8 +22,8 @@ const modulo = (n, a) => (a - (n * Math.floor(a/n)));
  * {"categories": ["helpers"]}
  *
  * A container for rendering a set of horizontal slides at at a particular
- * index. Translation between slides is controlled by passing in a new `index`.
- * Can hook into touch events to update the `index`.
+ * offset. Translation between slides is controlled by passing in a new `offset`.
+ * Can hook into touch events to update the `offset`.
  */
 const SlidePanel = createClass({
 	displayName: 'SlidePanel',
@@ -53,12 +53,12 @@ const SlidePanel = createClass({
 		slidesToShow: number,
 
 		/**
-		 * The zero-index of the left-most rendered slide.
+		 * The offset of the left-most rendered slide.
 		 */
-		index: number,
+		offset: number,
 
 		/**
-		 * Animate slides transitions from changes in `index`.
+		 * Animate slides transitions from changes in `offset`.
 		 */
 		isAnimated: bool,
 
@@ -70,7 +70,7 @@ const SlidePanel = createClass({
 		isLooped: bool,
 
 		/**
-		 * Called when a user's swipe would change the index. Callback passes
+		 * Called when a user's swipe would change the offset. Callback passes
 		 * number of slides by the user (positive for forward swipes, negative for
 		 * backwards swipes).
 		 *
@@ -82,7 +82,7 @@ const SlidePanel = createClass({
 	getDefaultProps() {
 		return {
 			slidesToShow: 1,
-			index: 0,
+			offset: 0,
 			isAnimated: true,
 			onSwipe: _.noop,
 			isLooped: false,
@@ -127,7 +127,7 @@ const SlidePanel = createClass({
 		const slides = findTypes(this.props, SlidePanel.Slide);
 		this.isAnimated = this.props.isAnimated;
 		this.isDragging = false;
-		this.indexOffset = this.props.isLooped ? Math.floor(_.size(slides) / 2) : 0;
+		this.offsetTranslate = this.props.isLooped ? Math.floor(_.size(slides) / 2) : 0;
 	},
 
 	componentDidMount() {
@@ -140,12 +140,12 @@ const SlidePanel = createClass({
 
 	componentDidUpdate(prevProps, prevState) {
 		const slides = findTypes(this.props, SlidePanel.Slide);
-		const indexDiff = this.props.index - prevProps.index;
-		if (indexDiff !== 0) {
+		const offsetDiff = this.props.offset - prevProps.offset;
+		if (offsetDiff !== 0) {
 			if (this.props.isLooped) {
-				this.indexOffset = modulo(_.size(slides), this.indexOffset - indexDiff);
+				this.offsetTranslate = modulo(_.size(slides), this.offsetTranslate - offsetDiff);
 				_.delay(() => {
-					shiftChildren(this.slideStrip, -indexDiff);
+					shiftChildren(this.slideStrip, -offsetDiff);
 					this.isAnimated = false;
 					this.forceUpdate();
 					this.isAnimated = this.props.isAnimated;
@@ -158,14 +158,14 @@ const SlidePanel = createClass({
 		const {
 			className,
 			slidesToShow,
-			index: realIndex,
+			offset: realOffset,
 			isLooped,
 			...passThroughs
 		} = this.props;
-		const index = realIndex + this.indexOffset;
+		const offset = realOffset + this.offsetTranslate;
 
 		const slides = findTypes(this.props, SlidePanel.Slide);
-		const translateXPercentage = -1 * (100 / slidesToShow) * (isLooped ? modulo(_.size(slides), index) : index);
+		const translateXPercentage = -1 * (100 / slidesToShow) * (isLooped ? modulo(_.size(slides), offset) : offset);
 
 		return (
 			<Motion
@@ -196,9 +196,9 @@ const SlidePanel = createClass({
 							onTouchEnd={this.handleTouchEnd}
 							onTouchCancel={_.noop}
 						>
-							{_.map(slides, (slide, index) => (
+							{_.map(slides, (slide, offset) => (
 								<div
-									key={index}
+									key={offset}
 									{...slide.props}
 									className={cx('&-Slide')}
 									style={{

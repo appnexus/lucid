@@ -11,25 +11,25 @@ const generateRGB = (n) => {
 export default React.createClass({
 	getInitialState() {
 		return {
-			index: 0,
+			offset: 0,
 		};
 	},
 
 	handlePrev() {
 		this.setState({
-			index: this.state.index - 1,
+			offset: this.state.offset - 1,
 		});
 	},
 
 	handleNext() {
 		this.setState({
-			index: this.state.index + 1,
+			offset: this.state.offset + 1,
 		});
 	},
 
 	handleSwipe(slidesSwiped) {
 		this.setState({
-			index: this.state.index + slidesSwiped,
+			offset: this.state.offset + slidesSwiped,
 		});
 	},
 
@@ -38,24 +38,24 @@ export default React.createClass({
 			<section>
 				<Button onClick={this.handlePrev}>Backward</Button>
 				<Button onClick={this.handleNext}>Forward</Button>
-				Current Index: {this.state.index}
+				Current offset: {this.state.offset}
 
 				<InfiniteSlidePanel
 					totalSlides={12}
 					slidesToShow={3}
-					index={this.state.index}
+					offset={this.state.offset}
 					onSwipe={this.handleSwipe}
 				>
-					{(slideIndex) => (
+					{(slideOffset) => (
 						<div style={{
 							width: '100%',
 							height: '30vh',
-							background: generateRGB(slideIndex),
+							background: generateRGB(slideOffset),
 							display: 'flex',
 							justifyContent: 'center',
 							alignItems: 'center',
 						}}>
-							{slideIndex}
+							{slideOffset}
 						</div>
 					)}
 				</InfiniteSlidePanel>

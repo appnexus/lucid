@@ -9,7 +9,7 @@ import {
 export default React.createClass({
 	getInitialState() {
 		return {
-			index: 0,
+			offset: 0,
 			selectMode: 'from',
 			from: null,
 			to: null,
@@ -19,13 +19,13 @@ export default React.createClass({
 
 	handlePrev() {
 		this.setState({
-			index: this.state.index - 1,
+			offset: this.state.offset - 1,
 		});
 	},
 
 	handleNext() {
 		this.setState({
-			index: this.state.index + 1,
+			offset: this.state.offset + 1,
 		});
 	},
 
@@ -76,7 +76,7 @@ export default React.createClass({
 			from,
 			to,
 			cursor,
-			index,
+			offset,
 		} = this.state;
 
 		return (
@@ -86,7 +86,7 @@ export default React.createClass({
 					<Button onClick={this.handlePrev}>{'<'}</Button>
 
 					<CalendarMonth
-						currentMonthIndex={index}
+						monthOffset={offset}
 						selectMode={selectMode}
 						from={from}
 						to={to}
@@ -98,7 +98,7 @@ export default React.createClass({
 					/>
 
 					<CalendarMonth
-						currentMonthIndex={index + 1}
+						monthOffset={offset + 1}
 						selectMode={selectMode}
 						from={from}
 						to={to}

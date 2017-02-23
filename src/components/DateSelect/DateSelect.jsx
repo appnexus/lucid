@@ -59,10 +59,10 @@ const DateSelect = createClass({
 		calendarsRendered: number,
 
 		/**
-		 * The index of the leftmost month in view, where 0 is the `initialMonth`.
+		 * The offset of the leftmost month in view, where 0 is the `initialMonth`.
 		 * Negative values will show previous months.
 		 */
-		index: number,
+		offset: number,
 
 		/**
 		 * Sets the start date in a date range.
@@ -81,7 +81,7 @@ const DateSelect = createClass({
 		selectMode: oneOf(['day', 'from', 'to']),
 
 		/**
-		 * Sets first month in view on render. The 0 value for the `index` prop
+		 * Sets first month in view on render. The 0 value for the `offset` prop
 		 * refers to this month.
 		 */
 		initialMonth: instanceOf(Date),
@@ -101,7 +101,7 @@ const DateSelect = createClass({
 		disabledDays: any,
 
 		/**
-		 * Called when user's swipe would change the month `index`. Callback
+		 * Called when user's swipe would change the month `offset`. Callback
 		 * passes number of months swiped by the user (positive for forward swipes,
 		 * negative for backwards swipes).
 		 *
@@ -136,7 +136,7 @@ const DateSelect = createClass({
 		return {
 			monthsShown: 1,
 			calendarsRendered: 12,
-			index: 0,
+			offset: 0,
 			from: null,
 			to: null,
 			initialMonth: new Date(),
@@ -194,7 +194,7 @@ const DateSelect = createClass({
 			className,
 			monthsShown,
 			calendarsRendered,
-			index,
+			offset,
 			from,
 			to,
 			selectMode,
@@ -227,15 +227,15 @@ const DateSelect = createClass({
 				<InfiniteSlidePanel
 					totalSlides={calendarsRendered}
 					slidesToShow={monthsShown}
-					index={index}
+					offset={offset}
 					onSwipe={onSwipe}
 				>
-					{(slideIndex) => (
+					{(slideOffset) => (
 						<div
 							className={cx('&-slide-content')}
 						>
 							<CalendarMonth
-								currentMonthIndex={slideIndex}
+								monthOffset={slideOffset}
 								initialMonth={this.initialMonth}
 								cursor={cursor}
 								from={from}
@@ -248,7 +248,7 @@ const DateSelect = createClass({
 								onDayMouseLeave={this.handleDayMouseLeave}
 
 								// Only update CalendarMonths within frame or one position away:
-								shouldComponentUpdate={slideIndex - index >= -1 && slideIndex - index < monthsShown + 1}
+								shouldComponentUpdate={slideOffset - offset >= -1 && slideOffset - offset < monthsShown + 1}
 
 								{...calendarMonth.props}
 							/>
