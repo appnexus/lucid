@@ -10,7 +10,7 @@ export default React.createClass({
 				</div>
 
 				<div>
-					<Tag showXButton={true}>I have an X!</Tag>
+					<Tag isRemovable={true}>I have an X!</Tag>
 				</div>
 			</div>
 		);

@@ -32,7 +32,7 @@ const Tag = createClass({
 		/**
 		 * Shows or hides the little "x" for a given tag.
 		 */
-		showXButton: bool,
+		isRemovable: bool,
 		/**
 		 * Called when the user clicks to remove a tag.
 		 *
@@ -65,7 +65,7 @@ const Tag = createClass({
 
 	render() {
 		const {
-			showXButton,
+			isRemovable,
 			children,
 			className,
 			style,
@@ -89,7 +89,7 @@ const Tag = createClass({
 								{otherChildren}
 							</span>
 						) : null}
-						{showXButton ? (
+						{isRemovable ? (
 							<span className={cx('&-remove')} onClick={this.handleRemove}>
 								<CrossIcon
 									className={cx('&-remove-button')}

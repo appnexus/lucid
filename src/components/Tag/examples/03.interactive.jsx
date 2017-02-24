@@ -124,7 +124,7 @@ export default React.createClass({
 					return (
 						<Tag
 							key={groupCallbackId}
-							showXButton={true}
+							isRemovable={true}
 							onRemove={this.handleRemove}
 							callbackId={groupCallbackId}
 						>
@@ -139,7 +139,7 @@ export default React.createClass({
 								return (
 									<Tag
 										key={nameCallbackId}
-										showXButton={true}
+										isRemovable={true}
 										onRemove={this.handleRemove}
 										callbackId={nameCallbackId}
 									>
