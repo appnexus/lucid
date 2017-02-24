@@ -8,11 +8,8 @@ const cx = lucidClassNames.bind('&-CalendarMonth');
 
 const {
 	bool,
-	func,
 	instanceOf,
 	number,
-	object,
-	string,
 	oneOf,
 } = React.PropTypes;
 
@@ -62,7 +59,7 @@ const CalendarMonth = createClass({
 
 		/**
 		 * Used to skip re-rendering of this component when true. Primarily used
-		 * for CalendarMonths which are renderend out of view.
+		 * for CalendarMonths which are rendered out of view.
 		 */
 		shouldComponentUpdate: bool,
 	},
@@ -146,7 +143,7 @@ const CalendarMonth = createClass({
 					range: this.modifierRange,
 					from: this.modifierFrom,
 					to: this.modifierTo,
-					...passThroughs.modifiers
+					...passThroughs.modifiers,
 				}}
 			/>
 		);

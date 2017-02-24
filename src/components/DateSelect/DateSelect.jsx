@@ -1,9 +1,8 @@
 import _ from 'lodash';
 import React from 'react';
-import moment from 'moment';
 import { buildHybridComponent } from '../../util/state-management';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, findTypes, omitProps } from '../../util/component-types';
+import { createClass, getFirst, omitProps } from '../../util/component-types';
 import * as reducers from './DateSelect.reducers';
 import InfiniteSlidePanel from '../InfiniteSlidePanel/InfiniteSlidePanel';
 import CalendarMonth from '../CalendarMonth/CalendarMonth';
@@ -15,9 +14,7 @@ const {
 	any,
 	func,
 	instanceOf,
-	node,
 	number,
-	object,
 	oneOf,
 	string,
 } = React.PropTypes;
@@ -203,7 +200,7 @@ const DateSelect = createClass({
 			onSwipe,
 			onPrev,
 			onNext,
-			...passThroughs,
+			...passThroughs
 		} = this.props;
 
 		const {

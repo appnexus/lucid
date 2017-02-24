@@ -23,7 +23,7 @@ const modulo = (n, a) => (a - (n * Math.floor(a/n)));
  * touch events to update the `offset`. This component is made from SlidePanel,
  * so it accepts the same props.
  */
-const InfiniteSlidePanel = createClass({ displayName: 'InfiniteSlidePanel',
+const InfiniteSlidePanel = createClass({
 	displayName: 'InfiniteSlidePanel',
 	_isPrivate: true,
 

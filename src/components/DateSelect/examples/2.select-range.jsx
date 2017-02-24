@@ -10,7 +10,7 @@ export default React.createClass({
 		return {
 			selectMode: 'from',
 			from: null,
-			to: null
+			to: null,
 		};
 	},
 
