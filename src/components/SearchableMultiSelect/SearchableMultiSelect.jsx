@@ -318,7 +318,6 @@ const SearchableMultiSelect = createClass({
 		const optionsProps = _.map(findTypes(props, SearchableMultiSelect.Option), 'props');
 		const isSmall = responsiveMode === 'small';
 
-		console.log(maxMenuHeight, _.assign({}, optionContainerStyle, !_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null));
 		return (
 			<div
 				{...omitProps(passThroughs, SearchableMultiSelect)}
