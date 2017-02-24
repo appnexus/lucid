@@ -1,18 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Table [common] example testing should match snapshot(s) for 1.standard 1`] = `
 <table
-  className="lucid-Table lucid-Table-density-extended lucid-Table-has-word-wrap">
+  className="lucid-Table lucid-Table-density-extended lucid-Table-has-word-wrap"
+>
   <Table.Thead>
     <Table.Tr
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Th
         align="left"
         isResizable={false}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         RS
       </Table.Th>
       <Table.Th
@@ -20,12 +25,14 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         isResizable={false}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Th>
       <Table.Th
         align="left"
@@ -33,7 +40,8 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         isSortable={true}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         Lorem.
       </Table.Th>
       <Table.Th
@@ -41,7 +49,8 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         isResizable={false}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         <SuccessIcon />
       </Table.Th>
       <Table.Th
@@ -49,7 +58,8 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         isResizable={false}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         Button
       </Table.Th>
       <Table.Th
@@ -57,7 +67,8 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         isResizable={false}
         isSorted={true}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         Sorted Column
       </Table.Th>
       <Table.Th
@@ -65,7 +76,8 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         colSpan={3}
         isResizable={false}
         isSorted={false}
-        sortDirection="up">
+        sortDirection="up"
+      >
         Alignments
       </Table.Th>
     </Table.Tr>
@@ -73,19 +85,22 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Th
         align="left"
         isResizable={false}
         isSorted={false}
-        sortDirection="up">
+        sortDirection="up"
+      >
         align left
       </Table.Th>
       <Table.Th
         align="center"
         isResizable={false}
         isSorted={false}
-        sortDirection="up">
+        sortDirection="up"
+      >
         align center
       </Table.Th>
       <Table.Th
@@ -93,7 +108,8 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
         isResizable={false}
         isSortable={true}
         isSorted={true}
-        sortDirection="up">
+        sortDirection="up"
+      >
         align right
       </Table.Th>
     </Table.Tr>
@@ -103,72 +119,84 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
         hasBorderRight={true}
-        rowSpan={14}>
+        rowSpan={14}
+      >
         RS
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Text
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -176,65 +204,76 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
       isActionable={false}
       isActive={false}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isDisabled
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -242,65 +281,76 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
       isActionable={true}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Text && isActionable
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -308,65 +358,76 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
       isActionable={true}
       isActive={false}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isDisabled && isActionable
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -374,68 +435,80 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <a
-          href="#">
+          href="#"
+        >
           Link
         </a>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -443,68 +516,80 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
       isActionable={false}
       isActive={false}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <a
-          href="#">
+          href="#"
+        >
           isDisabled Link
         </a>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -512,68 +597,80 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
       isActionable={true}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <a
-          href="#">
+          href="#"
+        >
           Link && isActionable
         </a>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -581,68 +678,80 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
       isActionable={true}
       isActive={false}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <a
-          href="#">
+          href="#"
+        >
           isDisabled Link && isActionable
         </a>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -650,65 +759,76 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={true}>
+      isSelected={true}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isSelected
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -716,65 +836,76 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
       isActionable={false}
       isActive={false}
       isDisabled={true}
-      isSelected={true}>
+      isSelected={true}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isSelected && isDisabled
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -782,65 +913,76 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
       isActionable={true}
       isActive={false}
       isDisabled={false}
-      isSelected={true}>
+      isSelected={true}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isSelected && isActionable
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -848,65 +990,76 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
       isActionable={true}
       isActive={false}
       isDisabled={true}
-      isSelected={true}>
+      isSelected={true}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isSelected && isDisabled && isActionable
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -914,65 +1067,76 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
       isActionable={true}
       isActive={true}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isActive
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -980,65 +1144,76 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
       isActionable={true}
       isActive={true}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isActive && isDisabled
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -1048,19 +1223,22 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
 
 exports[`Table [common] example testing should match snapshot(s) for 2.compressed 1`] = `
 <table
-  className="lucid-Table lucid-Table-density-compressed lucid-Table-has-word-wrap">
+  className="lucid-Table lucid-Table-density-compressed lucid-Table-has-word-wrap"
+>
   <Table.Thead>
     <Table.Tr
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Th
         align="left"
         isResizable={false}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         RS
       </Table.Th>
       <Table.Th
@@ -1068,12 +1246,14 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
         isResizable={false}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Th>
       <Table.Th
         align="left"
@@ -1081,7 +1261,8 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
         isSortable={true}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         Sortable and resizable.
       </Table.Th>
       <Table.Th
@@ -1089,7 +1270,8 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
         isResizable={false}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         <SuccessIcon />
       </Table.Th>
       <Table.Th
@@ -1097,7 +1279,8 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
         isResizable={false}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         Button
       </Table.Th>
       <Table.Th
@@ -1105,7 +1288,8 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
         isResizable={true}
         isSorted={true}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         Sorted Column
       </Table.Th>
       <Table.Th
@@ -1113,7 +1297,8 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
         colSpan={3}
         isResizable={false}
         isSorted={false}
-        sortDirection="up">
+        sortDirection="up"
+      >
         Alignments
       </Table.Th>
     </Table.Tr>
@@ -1121,19 +1306,22 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Th
         align="left"
         isResizable={false}
         isSorted={false}
-        sortDirection="up">
+        sortDirection="up"
+      >
         align left
       </Table.Th>
       <Table.Th
         align="center"
         isResizable={true}
         isSorted={false}
-        sortDirection="up">
+        sortDirection="up"
+      >
         align center
       </Table.Th>
       <Table.Th
@@ -1141,7 +1329,8 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
         isResizable={false}
         isSortable={true}
         isSorted={true}
-        sortDirection="up">
+        sortDirection="up"
+      >
         align right
       </Table.Th>
     </Table.Tr>
@@ -1151,72 +1340,84 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
         hasBorderRight={true}
-        rowSpan={14}>
+        rowSpan={14}
+      >
         RS
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Text
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -1224,65 +1425,76 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
       isActionable={false}
       isActive={false}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isDisabled
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -1290,65 +1502,76 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
       isActionable={true}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Text && isActionable
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -1356,65 +1579,76 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
       isActionable={true}
       isActive={false}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isDisabled && isActionable
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -1422,68 +1656,80 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <a
-          href="#">
+          href="#"
+        >
           Link
         </a>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -1491,68 +1737,80 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
       isActionable={false}
       isActive={false}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <a
-          href="#">
+          href="#"
+        >
           isDisabled Link
         </a>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -1560,68 +1818,80 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
       isActionable={true}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <a
-          href="#">
+          href="#"
+        >
           Link && isActionable
         </a>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -1629,68 +1899,80 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
       isActionable={true}
       isActive={false}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <a
-          href="#">
+          href="#"
+        >
           isDisabled Link && isActionable
         </a>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -1698,65 +1980,76 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={true}>
+      isSelected={true}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isSelected
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -1764,65 +2057,76 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
       isActionable={false}
       isActive={false}
       isDisabled={true}
-      isSelected={true}>
+      isSelected={true}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isSelected && isDisabled
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -1830,65 +2134,76 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
       isActionable={true}
       isActive={false}
       isDisabled={false}
-      isSelected={true}>
+      isSelected={true}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isSelected && isActionable
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -1896,65 +2211,76 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
       isActionable={true}
       isActive={false}
       isDisabled={true}
-      isSelected={true}>
+      isSelected={true}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isSelected && isDisabled && isActionable
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -1962,65 +2288,76 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
       isActionable={true}
       isActive={true}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isActive
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -2028,65 +2365,76 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
       isActionable={true}
       isActive={true}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isActive && isDisabled
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -2096,24 +2444,28 @@ exports[`Table [common] example testing should match snapshot(s) for 2.compresse
 
 exports[`Table [common] example testing should match snapshot(s) for 3.with-border 1`] = `
 <table
-  className="lucid-Table lucid-Table-density-extended lucid-Table-has-border lucid-Table-has-word-wrap">
+  className="lucid-Table lucid-Table-density-extended lucid-Table-has-border lucid-Table-has-word-wrap"
+>
   <Table.Thead>
     <Table.Tr
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Th
         align="left"
         isResizable={false}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Th>
       <Table.Th
         align="left"
@@ -2121,7 +2473,8 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
         isSortable={true}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         Lorem.
       </Table.Th>
       <Table.Th
@@ -2129,7 +2482,8 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
         isResizable={false}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         <SuccessIcon />
       </Table.Th>
       <Table.Th
@@ -2137,7 +2491,8 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
         isResizable={false}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         Button
       </Table.Th>
       <Table.Th
@@ -2145,7 +2500,8 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
         isResizable={false}
         isSorted={true}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         Sorted Column
       </Table.Th>
       <Table.Th
@@ -2153,7 +2509,8 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
         colSpan={3}
         isResizable={false}
         isSorted={false}
-        sortDirection="up">
+        sortDirection="up"
+      >
         Alignments
       </Table.Th>
     </Table.Tr>
@@ -2161,19 +2518,22 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Th
         align="left"
         isResizable={false}
         isSorted={false}
-        sortDirection="up">
+        sortDirection="up"
+      >
         align left
       </Table.Th>
       <Table.Th
         align="center"
         isResizable={false}
         isSorted={false}
-        sortDirection="up">
+        sortDirection="up"
+      >
         align center
       </Table.Th>
       <Table.Th
@@ -2181,7 +2541,8 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
         isResizable={false}
         isSortable={true}
         isSorted={true}
-        sortDirection="up">
+        sortDirection="up"
+      >
         align right
       </Table.Th>
     </Table.Tr>
@@ -2191,65 +2552,76 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Text
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -2257,65 +2629,76 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
       isActionable={false}
       isActive={false}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isDisabled
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -2323,65 +2706,76 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
       isActionable={true}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Text && isActionable
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -2389,65 +2783,76 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
       isActionable={true}
       isActive={false}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isDisabled && isActionable
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -2455,68 +2860,80 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <a
-          href="#">
+          href="#"
+        >
           Link
         </a>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -2524,68 +2941,80 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
       isActionable={false}
       isActive={false}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <a
-          href="#">
+          href="#"
+        >
           isDisabled Link
         </a>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -2593,68 +3022,80 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
       isActionable={true}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <a
-          href="#">
+          href="#"
+        >
           Link && isActionable
         </a>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -2662,68 +3103,80 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
       isActionable={true}
       isActive={false}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <a
-          href="#">
+          href="#"
+        >
           isDisabled Link && isActionable
         </a>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -2731,65 +3184,76 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={true}>
+      isSelected={true}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isSelected
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -2797,65 +3261,76 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
       isActionable={false}
       isActive={false}
       isDisabled={true}
-      isSelected={true}>
+      isSelected={true}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isSelected && isDisabled
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -2863,65 +3338,76 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
       isActionable={true}
       isActive={false}
       isDisabled={false}
-      isSelected={true}>
+      isSelected={true}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isSelected && isActionable
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -2929,65 +3415,76 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
       isActionable={true}
       isActive={false}
       isDisabled={true}
-      isSelected={true}>
+      isSelected={true}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isSelected && isDisabled && isActionable
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -2995,65 +3492,76 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
       isActionable={true}
       isActive={true}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isActive
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -3061,65 +3569,76 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
       isActionable={true}
       isActive={true}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         isActive && isDisabled
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -3129,19 +3648,22 @@ exports[`Table [common] example testing should match snapshot(s) for 3.with-bord
 
 exports[`Table [common] example testing should match snapshot(s) for 4.with-empty-column 1`] = `
 <table
-  className="lucid-Table lucid-Table-density-extended lucid-Table-has-word-wrap">
+  className="lucid-Table lucid-Table-density-extended lucid-Table-has-word-wrap"
+>
   <Table.Thead>
     <Table.Tr
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Th
         align="left"
         isResizable={false}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         RS
       </Table.Th>
       <Table.Th
@@ -3149,12 +3671,14 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
         isResizable={false}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Th>
       <Table.Th
         align="left"
@@ -3162,7 +3686,8 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
         isSortable={true}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         Empty
       </Table.Th>
       <Table.Th
@@ -3170,7 +3695,8 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
         isResizable={false}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         <SuccessIcon />
       </Table.Th>
       <Table.Th
@@ -3178,7 +3704,8 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
         isResizable={false}
         isSorted={false}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         Button
       </Table.Th>
       <Table.Th
@@ -3186,7 +3713,8 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
         isResizable={false}
         isSorted={true}
         rowSpan={2}
-        sortDirection="up">
+        sortDirection="up"
+      >
         Sorted Column
       </Table.Th>
       <Table.Th
@@ -3194,7 +3722,8 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
         colSpan={3}
         isResizable={false}
         isSorted={false}
-        sortDirection="up">
+        sortDirection="up"
+      >
         Alignments
       </Table.Th>
     </Table.Tr>
@@ -3202,19 +3731,22 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Th
         align="left"
         isResizable={false}
         isSorted={false}
-        sortDirection="up">
+        sortDirection="up"
+      >
         align left
       </Table.Th>
       <Table.Th
         align="center"
         isResizable={false}
         isSorted={false}
-        sortDirection="up">
+        sortDirection="up"
+      >
         align center
       </Table.Th>
       <Table.Th
@@ -3222,7 +3754,8 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
         isResizable={false}
         isSortable={true}
         isSorted={true}
-        sortDirection="up">
+        sortDirection="up"
+      >
         align right
       </Table.Th>
     </Table.Tr>
@@ -3232,73 +3765,85 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
         hasBorderRight={true}
-        rowSpan={14}>
+        rowSpan={14}
+      >
         RS
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
-        isEmpty={true}>
+        isEmpty={true}
+      >
         No Data
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -3306,66 +3851,77 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
       isActionable={false}
       isActive={false}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
-        isEmpty={true}>
+        isEmpty={true}
+      >
         No Data
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -3373,334 +3929,77 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
       isActionable={true}
       isActive={false}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
-        isEmpty={true}>
+        isEmpty={true}
+      >
         No Data
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        Sorted Column
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={true}
-        hasBorderRight={false}>
-        align left
-      </Table.Td>
-      <Table.Td
-        align="center"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        align center
-      </Table.Td>
-      <Table.Td
-        align="right"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        align right
-      </Table.Td>
-    </Table.Tr>
-    <Table.Tr
-      isActionable={true}
-      isActive={false}
-      isDisabled={true}
-      isSelected={false}>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]} />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
-        isEmpty={true}>
-        No Data
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={true}
-        hasBorderRight={true}>
-        <SuccessIcon />
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={true}
-          onClick={[Function]}
-          size="small"
-          type="button">
-          button
-        </Button>
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        align center
-      </Table.Td>
-      <Table.Td
-        align="right"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        align right
-      </Table.Td>
-    </Table.Tr>
-    <Table.Tr
-      isActionable={false}
-      isActive={false}
-      isDisabled={false}
-      isSelected={false}>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]} />
-      </Table.Td>
-      <Table.Td
-        align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
-        isEmpty={true}>
-        No Data
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={true}
-        hasBorderRight={true}>
-        <SuccessIcon />
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
-          size="small"
-          type="button">
-          button
-        </Button>
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        Sorted Column
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={true}
-        hasBorderRight={false}>
-        align left
-      </Table.Td>
-      <Table.Td
-        align="center"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        align right
-      </Table.Td>
-    </Table.Tr>
-    <Table.Tr
-      isActionable={false}
-      isActive={false}
-      isDisabled={true}
-      isSelected={false}>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]} />
-      </Table.Td>
-      <Table.Td
-        align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
-        isEmpty={true}>
-        No Data
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={true}
-        hasBorderRight={true}>
-        <SuccessIcon />
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={true}
-          onClick={[Function]}
-          size="small"
-          type="button">
-          button
-        </Button>
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        Sorted Column
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={true}
-        hasBorderRight={false}>
-        align left
-      </Table.Td>
-      <Table.Td
-        align="center"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        align center
-      </Table.Td>
-      <Table.Td
-        align="right"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        align right
-      </Table.Td>
-    </Table.Tr>
-    <Table.Tr
-      isActionable={true}
-      isActive={false}
-      isDisabled={false}
-      isSelected={false}>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]} />
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}
-        isEmpty={true}>
-        No Data
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={true}
-        hasBorderRight={true}>
-        <SuccessIcon />
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          onClick={[Function]}
-          size="small"
-          type="button">
-          button
-        </Button>
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        Sorted Column
-      </Table.Td>
-      <Table.Td
-        align="left"
-        hasBorderLeft={true}
-        hasBorderRight={false}>
-        align left
-      </Table.Td>
-      <Table.Td
-        align="center"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
-        align center
-      </Table.Td>
-      <Table.Td
-        align="right"
-        hasBorderLeft={false}
-        hasBorderRight={false}>
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -3708,66 +4007,77 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
       isActionable={true}
       isActive={false}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
-        isEmpty={true}>
+        isEmpty={true}
+      >
         No Data
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -3775,66 +4085,389 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
       isActionable={false}
       isActive={false}
       isDisabled={false}
-      isSelected={true}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
+        />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}
+      >
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}
+      >
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button"
+        >
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}
+      >
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}
+    >
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
+        />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}
+      >
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}
+      >
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button"
+        >
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}
+      >
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={false}
+      isSelected={false}
+    >
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
+        />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}
+      >
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}
+      >
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          onClick={[Function]}
+          size="small"
+          type="button"
+        >
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}
+      >
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={true}
+      isActive={false}
+      isDisabled={true}
+      isSelected={false}
+    >
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
+        />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+        isEmpty={true}
+      >
+        No Data
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={true}
+      >
+        <SuccessIcon />
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={true}
+          onClick={[Function]}
+          size="small"
+          type="button"
+        >
+          button
+        </Button>
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        Sorted Column
+      </Table.Td>
+      <Table.Td
+        align="left"
+        hasBorderLeft={true}
+        hasBorderRight={false}
+      >
+        align left
+      </Table.Td>
+      <Table.Td
+        align="center"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        align center
+      </Table.Td>
+      <Table.Td
+        align="right"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
+        align right
+      </Table.Td>
+    </Table.Tr>
+    <Table.Tr
+      isActionable={false}
+      isActive={false}
+      isDisabled={false}
+      isSelected={true}
+    >
+      <Table.Td
+        align="left"
+        hasBorderLeft={false}
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
-        isEmpty={true}>
+        isEmpty={true}
+      >
         No Data
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -3842,66 +4475,77 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
       isActionable={false}
       isActive={false}
       isDisabled={true}
-      isSelected={true}>
+      isSelected={true}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
-        isEmpty={true}>
+        isEmpty={true}
+      >
         No Data
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -3909,66 +4553,77 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
       isActionable={true}
       isActive={false}
       isDisabled={false}
-      isSelected={true}>
+      isSelected={true}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
-        isEmpty={true}>
+        isEmpty={true}
+      >
         No Data
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -3976,66 +4631,77 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
       isActionable={true}
       isActive={false}
       isDisabled={true}
-      isSelected={true}>
+      isSelected={true}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={true}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
-        isEmpty={true}>
+        isEmpty={true}
+      >
         No Data
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -4043,66 +4709,77 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
       isActionable={true}
       isActive={true}
       isDisabled={false}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
-        isEmpty={true}>
+        isEmpty={true}
+      >
         No Data
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>
@@ -4110,66 +4787,77 @@ exports[`Table [common] example testing should match snapshot(s) for 4.with-empt
       isActionable={true}
       isActive={true}
       isDisabled={true}
-      isSelected={false}>
+      isSelected={false}
+    >
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Checkbox
           isDisabled={false}
           isIndeterminate={false}
           isSelected={false}
-          onSelect={[Function]} />
+          onSelect={[Function]}
+        />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
         hasBorderRight={false}
-        isEmpty={true}>
+        isEmpty={true}
+      >
         No Data
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={true}>
+        hasBorderRight={true}
+      >
         <SuccessIcon />
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         <Button
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={true}
           onClick={[Function]}
           size="small"
-          type="button">
+          type="button"
+        >
           button
         </Button>
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         Sorted Column
       </Table.Td>
       <Table.Td
         align="left"
         hasBorderLeft={true}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align left
       </Table.Td>
       <Table.Td
         align="center"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align center
       </Table.Td>
       <Table.Td
         align="right"
         hasBorderLeft={false}
-        hasBorderRight={false}>
+        hasBorderRight={false}
+      >
         align right
       </Table.Td>
     </Table.Tr>

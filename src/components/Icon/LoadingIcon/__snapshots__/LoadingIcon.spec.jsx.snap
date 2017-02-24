@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
@@ -10,18 +12,21 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
       "animationDuration": "1.25s",
     }
   }
-  viewBox="0 0 100 100">
+  viewBox="0 0 100 100"
+>
   <rect
     fill="none"
     height="100"
     width="100"
     x="0"
-    y="0" />
+    y="0"
+  />
   <circle
     className="lucid-LoadingIcon-circle"
     cx="50"
     cy="50"
-    r="40" />
+    r="40"
+  />
   <circle
     className="lucid-LoadingIcon-spinner"
     cx="50"
@@ -31,7 +36,8 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
       Object {
         "animationDuration": "1.25s",
       }
-    } />
+    }
+  />
 </Icon>
 `;
 
@@ -47,18 +53,21 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
       "animationDuration": "4s",
     }
   }
-  viewBox="0 0 100 100">
+  viewBox="0 0 100 100"
+>
   <rect
     fill="none"
     height="100"
     width="100"
     x="0"
-    y="0" />
+    y="0"
+  />
   <circle
     className="lucid-LoadingIcon-circle"
     cx="50"
     cy="50"
-    r="40" />
+    r="40"
+  />
   <circle
     className="lucid-LoadingIcon-spinner"
     cx="50"
@@ -68,7 +77,8 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
       Object {
         "animationDuration": "4s",
       }
-    } />
+    }
+  />
 </Icon>
 `;
 
@@ -84,18 +94,21 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
       "animationDuration": "0.75s",
     }
   }
-  viewBox="0 0 100 100">
+  viewBox="0 0 100 100"
+>
   <rect
     fill="none"
     height="100"
     width="100"
     x="0"
-    y="0" />
+    y="0"
+  />
   <circle
     className="lucid-LoadingIcon-circle"
     cx="50"
     cy="50"
-    r="40" />
+    r="40"
+  />
   <circle
     className="lucid-LoadingIcon-spinner"
     cx="50"
@@ -105,7 +118,8 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
       Object {
         "animationDuration": "0.75s",
       }
-    } />
+    }
+  />
 </Icon>
 `;
 
@@ -122,18 +136,21 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 2.cli
       "animationDuration": "1.25s",
     }
   }
-  viewBox="0 0 100 100">
+  viewBox="0 0 100 100"
+>
   <rect
     fill="none"
     height="100"
     width="100"
     x="0"
-    y="0" />
+    y="0"
+  />
   <circle
     className="lucid-LoadingIcon-circle"
     cx="50"
     cy="50"
-    r="40" />
+    r="40"
+  />
   <circle
     className="lucid-LoadingIcon-spinner"
     cx="50"
@@ -143,7 +160,8 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 2.cli
       Object {
         "animationDuration": "1.25s",
       }
-    } />
+    }
+  />
 </Icon>
 `;
 
@@ -160,18 +178,21 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 2.cli
       "animationDuration": "4s",
     }
   }
-  viewBox="0 0 100 100">
+  viewBox="0 0 100 100"
+>
   <rect
     fill="none"
     height="100"
     width="100"
     x="0"
-    y="0" />
+    y="0"
+  />
   <circle
     className="lucid-LoadingIcon-circle"
     cx="50"
     cy="50"
-    r="40" />
+    r="40"
+  />
   <circle
     className="lucid-LoadingIcon-spinner"
     cx="50"
@@ -181,7 +202,8 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 2.cli
       Object {
         "animationDuration": "4s",
       }
-    } />
+    }
+  />
 </Icon>
 `;
 
@@ -198,18 +220,21 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 2.cli
       "animationDuration": "0.75s",
     }
   }
-  viewBox="0 0 100 100">
+  viewBox="0 0 100 100"
+>
   <rect
     fill="none"
     height="100"
     width="100"
     x="0"
-    y="0" />
+    y="0"
+  />
   <circle
     className="lucid-LoadingIcon-circle"
     cx="50"
     cy="50"
-    r="40" />
+    r="40"
+  />
   <circle
     className="lucid-LoadingIcon-spinner"
     cx="50"
@@ -219,7 +244,8 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 2.cli
       Object {
         "animationDuration": "0.75s",
       }
-    } />
+    }
+  />
 </Icon>
 `;
 
@@ -235,18 +261,21 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 3.dis
       "animationDuration": "1.25s",
     }
   }
-  viewBox="0 0 100 100">
+  viewBox="0 0 100 100"
+>
   <rect
     fill="none"
     height="100"
     width="100"
     x="0"
-    y="0" />
+    y="0"
+  />
   <circle
     className="lucid-LoadingIcon-circle"
     cx="50"
     cy="50"
-    r="40" />
+    r="40"
+  />
   <circle
     className="lucid-LoadingIcon-spinner lucid-LoadingIcon-spinner-is-disabled"
     cx="50"
@@ -256,7 +285,8 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 3.dis
       Object {
         "animationDuration": "1.25s",
       }
-    } />
+    }
+  />
 </Icon>
 `;
 
@@ -272,18 +302,21 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 3.dis
       "animationDuration": "4s",
     }
   }
-  viewBox="0 0 100 100">
+  viewBox="0 0 100 100"
+>
   <rect
     fill="none"
     height="100"
     width="100"
     x="0"
-    y="0" />
+    y="0"
+  />
   <circle
     className="lucid-LoadingIcon-circle"
     cx="50"
     cy="50"
-    r="40" />
+    r="40"
+  />
   <circle
     className="lucid-LoadingIcon-spinner lucid-LoadingIcon-spinner-is-disabled"
     cx="50"
@@ -293,7 +326,8 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 3.dis
       Object {
         "animationDuration": "4s",
       }
-    } />
+    }
+  />
 </Icon>
 `;
 
@@ -309,18 +343,21 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 3.dis
       "animationDuration": "0.75s",
     }
   }
-  viewBox="0 0 100 100">
+  viewBox="0 0 100 100"
+>
   <rect
     fill="none"
     height="100"
     width="100"
     x="0"
-    y="0" />
+    y="0"
+  />
   <circle
     className="lucid-LoadingIcon-circle"
     cx="50"
     cy="50"
-    r="40" />
+    r="40"
+  />
   <circle
     className="lucid-LoadingIcon-spinner lucid-LoadingIcon-spinner-is-disabled"
     cx="50"
@@ -330,6 +367,7 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 3.dis
       Object {
         "animationDuration": "0.75s",
       }
-    } />
+    }
+  />
 </Icon>
 `;

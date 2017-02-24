@@ -322,7 +322,7 @@ const DataTable = createClass({
 
 									return (
 										<Td
-											{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
+											{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted', 'isResizable'])}
 											style={{
 												width: columnProps.width,
 											}}
@@ -342,7 +342,7 @@ const DataTable = createClass({
 								{isSelectable ? (<Td />) : null}
 								{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => (
 									<Td
-										{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted'])}
+										{..._.omit(columnProps, ['field', 'children', 'width', 'title', 'isSortable', 'isSorted', 'isResizable'])}
 										style={{
 											width: columnProps.width,
 										}}

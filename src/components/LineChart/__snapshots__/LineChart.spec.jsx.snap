@@ -1,12 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`LineChart [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 10)" />
+    transform="translate(80, 10)"
+  />
   <g
-    transform="translate(80, 335)">
+    transform="translate(80, 335)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
@@ -14,10 +19,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 01.basi
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -25,10 +32,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 01.basi
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Lines
       colorOffset={0}
       data={
@@ -70,10 +79,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 01.basi
         ]
       }
       yScale={[Function]}
-      yStackedMax={5} />
+      yStackedMax={5}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Points
       colorOffset={0}
       data={
@@ -116,16 +127,19 @@ exports[`LineChart [common] example testing should match snapshot(s) for 01.basi
         ]
       }
       yScale={[Function]}
-      yStackedMax={5} />
+      yStackedMax={5}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <rect
       className="lucid-LineChart-invisible"
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840} />
+      width={840}
+    />
   </g>
 </svg>
 `;
@@ -134,11 +148,14 @@ exports[`LineChart [common] example testing should match snapshot(s) for 03.mult
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 10)" />
+    transform="translate(80, 10)"
+  />
   <g
-    transform="translate(80, 335)">
+    transform="translate(80, 335)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
@@ -146,10 +163,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 03.mult
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -157,19 +176,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 03.mult
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(0, 10)">
+    transform="translate(0, 10)"
+  >
     <AxisLabel
       color="#000"
       height={325}
       label="Fruit Count"
       orient="left"
-      width={80} />
+      width={80}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Lines
       colorOffset={0}
       data={
@@ -371,10 +394,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 03.mult
         ]
       }
       yScale={[Function]}
-      yStackedMax={199} />
+      yStackedMax={199}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Points
       colorOffset={0}
       data={
@@ -577,16 +602,19 @@ exports[`LineChart [common] example testing should match snapshot(s) for 03.mult
         ]
       }
       yScale={[Function]}
-      yStackedMax={199} />
+      yStackedMax={199}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <rect
       className="lucid-LineChart-invisible"
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840} />
+      width={840}
+    />
   </g>
 </svg>
 `;
@@ -595,11 +623,14 @@ exports[`LineChart [common] example testing should match snapshot(s) for 04.mult
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 10)" />
+    transform="translate(80, 10)"
+  />
   <g
-    transform="translate(80, 335)">
+    transform="translate(80, 335)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
@@ -607,10 +638,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 04.mult
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -618,19 +651,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 04.mult
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(0, 10)">
+    transform="translate(0, 10)"
+  >
     <AxisLabel
       color="#000"
       height={325}
       label="Fruit Count"
       orient="left"
-      width={80} />
+      width={80}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Lines
       colorOffset={0}
       data={
@@ -681,10 +718,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 04.mult
         ]
       }
       yScale={[Function]}
-      yStackedMax={6} />
+      yStackedMax={6}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Points
       colorOffset={0}
       data={
@@ -736,16 +775,19 @@ exports[`LineChart [common] example testing should match snapshot(s) for 04.mult
         ]
       }
       yScale={[Function]}
-      yStackedMax={6} />
+      yStackedMax={6}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <rect
       className="lucid-LineChart-invisible"
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840} />
+      width={840}
+    />
   </g>
 </svg>
 `;
@@ -754,11 +796,14 @@ exports[`LineChart [common] example testing should match snapshot(s) for 05.stac
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 10)" />
+    transform="translate(80, 10)"
+  />
   <g
-    transform="translate(80, 335)">
+    transform="translate(80, 335)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
@@ -766,10 +811,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 05.stac
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -777,19 +824,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 05.stac
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(0, 10)">
+    transform="translate(0, 10)"
+  >
     <AxisLabel
       color="#000"
       height={325}
       label="Fruit Count"
       orient="left"
-      width={80} />
+      width={80}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Lines
       colorOffset={0}
       data={
@@ -874,10 +925,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 05.stac
         ]
       }
       yScale={[Function]}
-      yStackedMax={30} />
+      yStackedMax={30}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Points
       colorOffset={0}
       data={
@@ -963,16 +1016,19 @@ exports[`LineChart [common] example testing should match snapshot(s) for 05.stac
         ]
       }
       yScale={[Function]}
-      yStackedMax={30} />
+      yStackedMax={30}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <rect
       className="lucid-LineChart-invisible"
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840} />
+      width={840}
+    />
   </g>
 </svg>
 `;
@@ -981,11 +1037,14 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 10)" />
+    transform="translate(80, 10)"
+  />
   <g
-    transform="translate(80, 335)">
+    transform="translate(80, 335)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
@@ -993,10 +1052,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -1004,19 +1065,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(0, 10)">
+    transform="translate(0, 10)"
+  >
     <AxisLabel
       color="color-chart-4"
       height={325}
       label="Number of Bananas"
       orient="left"
-      width={80} />
+      width={80}
+    />
   </g>
   <g
-    transform="translate(920, 10)">
+    transform="translate(920, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="right"
@@ -1024,19 +1089,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(920, 10)">
+    transform="translate(920, 10)"
+  >
     <AxisLabel
       color="color-chart-2"
       height={325}
       label="Number of Cherries"
       orient="right"
-      width={80} />
+      width={80}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Lines
       colorMap={
         Object {
@@ -1088,10 +1157,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
         ]
       }
       yScale={[Function]}
-      yStackedMax={5} />
+      yStackedMax={5}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Points
       colorMap={
         Object {
@@ -1144,10 +1215,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
         ]
       }
       yScale={[Function]}
-      yStackedMax={5} />
+      yStackedMax={5}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Lines
       colorMap={
         Object {
@@ -1199,10 +1272,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
         ]
       }
       yScale={[Function]}
-      yStackedMax={8} />
+      yStackedMax={8}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Points
       colorMap={
         Object {
@@ -1255,16 +1330,19 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
         ]
       }
       yScale={[Function]}
-      yStackedMax={8} />
+      yStackedMax={8}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <rect
       className="lucid-LineChart-invisible"
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840} />
+      width={840}
+    />
   </g>
 </svg>
 `;
@@ -1273,11 +1351,14 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 10)" />
+    transform="translate(80, 10)"
+  />
   <g
-    transform="translate(80, 335)">
+    transform="translate(80, 335)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
@@ -1285,19 +1366,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
       scale={[Function]}
       tickCount={5}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 335)">
+    transform="translate(80, 335)"
+  >
     <AxisLabel
       color="#000"
       height={65}
       label="Date"
       orient="bottom"
-      width={840} />
+      width={840}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -1305,19 +1390,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
       scale={[Function]}
       tickCount={5}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(0, 10)">
+    transform="translate(0, 10)"
+  >
     <AxisLabel
       color="color-chart-0"
       height={325}
       label="Number of Blueberries"
       orient="left"
-      width={80} />
+      width={80}
+    />
   </g>
   <g
-    transform="translate(920, 10)">
+    transform="translate(920, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="right"
@@ -1325,19 +1414,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
       scale={[Function]}
       tickCount={5}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(920, 10)">
+    transform="translate(920, 10)"
+  >
     <AxisLabel
       color="color-chart-1"
       height={325}
       label="Number of Oranges"
       orient="right"
-      width={80} />
+      width={80}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Lines
       colorMap={
         Object {
@@ -1398,10 +1491,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
         ]
       }
       yScale={[Function]}
-      yStackedMax={5000} />
+      yStackedMax={5000}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Points
       colorMap={
         Object {
@@ -1463,10 +1558,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
         ]
       }
       yScale={[Function]}
-      yStackedMax={5000} />
+      yStackedMax={5000}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Lines
       colorMap={
         Object {
@@ -1527,16 +1624,19 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
         ]
       }
       yScale={[Function]}
-      yStackedMax={6300} />
+      yStackedMax={6300}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <rect
       className="lucid-LineChart-invisible"
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840} />
+      width={840}
+    />
   </g>
 </svg>
 `;
@@ -1545,11 +1645,14 @@ exports[`LineChart [common] example testing should match snapshot(s) for 08.stac
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 10)" />
+    transform="translate(80, 10)"
+  />
   <g
-    transform="translate(80, 335)">
+    transform="translate(80, 335)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
@@ -1557,10 +1660,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 08.stac
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -1568,10 +1673,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 08.stac
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Lines
       colorOffset={0}
       data={
@@ -1613,10 +1720,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 08.stac
         ]
       }
       yScale={[Function]}
-      yStackedMax={5.99} />
+      yStackedMax={5.99}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Points
       colorOffset={0}
       data={
@@ -1659,16 +1768,19 @@ exports[`LineChart [common] example testing should match snapshot(s) for 08.stac
         ]
       }
       yScale={[Function]}
-      yStackedMax={5.99} />
+      yStackedMax={5.99}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <rect
       className="lucid-LineChart-invisible"
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840} />
+      width={840}
+    />
   </g>
 </svg>
 `;
@@ -1677,11 +1789,14 @@ exports[`LineChart [common] example testing should match snapshot(s) for 09.stac
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 10)" />
+    transform="translate(80, 10)"
+  />
   <g
-    transform="translate(80, 335)">
+    transform="translate(80, 335)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
@@ -1689,10 +1804,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 09.stac
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -1700,19 +1817,23 @@ exports[`LineChart [common] example testing should match snapshot(s) for 09.stac
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(0, 10)">
+    transform="translate(0, 10)"
+  >
     <AxisLabel
       color="#000"
       height={325}
       label="Fruit Count"
       orient="left"
-      width={80} />
+      width={80}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Lines
       colorOffset={0}
       data={
@@ -1789,16 +1910,19 @@ exports[`LineChart [common] example testing should match snapshot(s) for 09.stac
         ]
       }
       yScale={[Function]}
-      yStackedMax={25} />
+      yStackedMax={25}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <rect
       className="lucid-LineChart-invisible"
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840} />
+      width={840}
+    />
   </g>
 </svg>
 `;
@@ -1807,11 +1931,14 @@ exports[`LineChart [common] example testing should match snapshot(s) for 10.abbr
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 10)" />
+    transform="translate(80, 10)"
+  />
   <g
-    transform="translate(80, 335)">
+    transform="translate(80, 335)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
@@ -1819,10 +1946,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 10.abbr
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -1830,10 +1959,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 10.abbr
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Lines
       colorOffset={0}
       data={
@@ -1879,10 +2010,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 10.abbr
         ]
       }
       yScale={[Function]}
-      yStackedMax={4230872156} />
+      yStackedMax={4230872156}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Points
       colorOffset={0}
       data={
@@ -1929,16 +2062,19 @@ exports[`LineChart [common] example testing should match snapshot(s) for 10.abbr
         ]
       }
       yScale={[Function]}
-      yStackedMax={4230872156} />
+      yStackedMax={4230872156}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <rect
       className="lucid-LineChart-invisible"
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840} />
+      width={840}
+    />
   </g>
 </svg>
 `;
@@ -1947,11 +2083,14 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
 <svg
   className="lucid-LineChart"
   height={400}
-  width={1000}>
+  width={1000}
+>
   <g
-    transform="translate(80, 10)" />
+    transform="translate(80, 10)"
+  />
   <g
-    transform="translate(80, 335)">
+    transform="translate(80, 335)"
+  >
     <Axis
       innerTickSize={6}
       orient="bottom"
@@ -1959,7 +2098,8 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
     <ContextMenu
       alignment="center"
       direction="down"
@@ -1967,32 +2107,39 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
       getAlignmentOffset={[Function]}
       isExpanded={true}
       onClickOut={null}
-      portalId={null}>
+      portalId={null}
+    >
       <ContextMenu.Target
-        elementType="g">
+        elementType="g"
+      >
         <rect
           className="lucid-LineChart-invisible"
           height={65}
-          width={840} />
+          width={840}
+        />
       </ContextMenu.Target>
       <ContextMenu.FlyOut
-        className="lucid-LineChart-legend-container">
+        className="lucid-LineChart-legend-container"
+      >
         <Legend
           hasBorders={true}
           isReversed={false}
-          orient="horizontal">
+          orient="horizontal"
+        >
           <Legend.Item
             color="color-chart-3"
             hasLine={true}
             hasPoint={true}
-            pointKind={3}>
+            pointKind={3}
+          >
             apples
           </Legend.Item>
           <Legend.Item
             color="color-chart-5"
             hasLine={true}
             hasPoint={true}
-            pointKind={5}>
+            pointKind={5}
+          >
             pears
           </Legend.Item>
         </Legend>
@@ -2000,7 +2147,8 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
     </ContextMenu>
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="left"
@@ -2008,10 +2156,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(920, 10)">
+    transform="translate(920, 10)"
+  >
     <Axis
       innerTickSize={6}
       orient="right"
@@ -2019,10 +2169,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
       scale={[Function]}
       tickCount={null}
       tickFormat={[Function]}
-      tickPadding={3} />
+      tickPadding={3}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Lines
       colorOffset={3}
       data={
@@ -2123,10 +2275,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
         ]
       }
       yScale={[Function]}
-      yStackedMax={199} />
+      yStackedMax={199}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Points
       colorOffset={3}
       data={
@@ -2228,10 +2382,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
         ]
       }
       yScale={[Function]}
-      yStackedMax={199} />
+      yStackedMax={199}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Lines
       colorOffset={5}
       data={
@@ -2332,10 +2488,12 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
         ]
       }
       yScale={[Function]}
-      yStackedMax={120} />
+      yStackedMax={120}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <Points
       colorOffset={5}
       data={
@@ -2437,16 +2595,19 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
         ]
       }
       yScale={[Function]}
-      yStackedMax={120} />
+      yStackedMax={120}
+    />
   </g>
   <g
-    transform="translate(80, 10)">
+    transform="translate(80, 10)"
+  >
     <rect
       className="lucid-LineChart-invisible"
       height={325}
       onMouseMove={[Function]}
       onMouseOut={[Function]}
-      width={840} />
+      width={840}
+    />
   </g>
 </svg>
 `;
@@ -2454,23 +2615,28 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
 exports[`LineChart [common] example testing should match snapshot(s) for 12.empty 1`] = `
 <EmptyStateWrapper
   Title="You have no data."
-  isEmpty={true}>
+  isEmpty={true}
+>
   <svg
     className="lucid-LineChart"
     height={400}
-    width={1000}>
+    width={1000}
+  >
     <g
-      transform="translate(80, 10)">
+      transform="translate(80, 10)"
+    >
       <Axis
         innerTickSize={6}
         orient="left"
         outerTickSize={6}
         scale={[Function]}
         tickCount={null}
-        tickPadding={3} />
+        tickPadding={3}
+      />
     </g>
     <g
-      transform="translate(80, 335)">
+      transform="translate(80, 335)"
+    >
       <Axis
         innerTickSize={6}
         orient="bottom"
@@ -2478,7 +2644,8 @@ exports[`LineChart [common] example testing should match snapshot(s) for 12.empt
         scale={[Function]}
         tickCount={null}
         tickFormat={[Function]}
-        tickPadding={3} />
+        tickPadding={3}
+      />
     </g>
   </svg>
 </EmptyStateWrapper>
@@ -2486,7 +2653,8 @@ exports[`LineChart [common] example testing should match snapshot(s) for 12.empt
 
 exports[`LineChart [common] example testing should match snapshot(s) for 13.empty-with-custom-title-and-body 1`] = `
 <EmptyStateWrapper
-  isEmpty={true}>
+  isEmpty={true}
+>
   <EmptyStateWrapper.Title>
     Something went wrong.
   </EmptyStateWrapper.Title>
@@ -2495,25 +2663,30 @@ exports[`LineChart [common] example testing should match snapshot(s) for 13.empt
       Object {
         "fontSize": "12px",
       }
-    }>
+    }
+  >
     Echo park poutine esse tempor squid do. Lo-fi ramps XOXO chicharrones laboris, portland fugiat locavore. Fap four dollar toast keytar, cronut kogi fingerstache distillery microdosing everyday carry austin DIY dreamcatcher. Distillery flexitarian meditation laboris roof party. Cred raclette gastropub tilde PBR&B. Shoreditch poke adipisicing, reprehenderit lumbersexual succulents mustache officia franzen vinyl nostrud af. Hashtag bitters organic, before they sold out butcher cronut sapiente.
   </EmptyStateWrapper.Body>
   <svg
     className="lucid-LineChart"
     height={400}
-    width={1000}>
+    width={1000}
+  >
     <g
-      transform="translate(80, 10)">
+      transform="translate(80, 10)"
+    >
       <Axis
         innerTickSize={6}
         orient="left"
         outerTickSize={6}
         scale={[Function]}
         tickCount={null}
-        tickPadding={3} />
+        tickPadding={3}
+      />
     </g>
     <g
-      transform="translate(80, 335)">
+      transform="translate(80, 335)"
+    >
       <Axis
         innerTickSize={6}
         orient="bottom"
@@ -2521,7 +2694,8 @@ exports[`LineChart [common] example testing should match snapshot(s) for 13.empt
         scale={[Function]}
         tickCount={null}
         tickFormat={[Function]}
-        tickPadding={3} />
+        tickPadding={3}
+      />
     </g>
   </svg>
 </EmptyStateWrapper>
@@ -2529,7 +2703,8 @@ exports[`LineChart [common] example testing should match snapshot(s) for 13.empt
 
 exports[`LineChart [common] example testing should match snapshot(s) for 14.empty-with-button 1`] = `
 <EmptyStateWrapper
-  isEmpty={true}>
+  isEmpty={true}
+>
   <EmptyStateWrapper.Title>
     Something went wrong.
   </EmptyStateWrapper.Title>
@@ -2538,32 +2713,38 @@ exports[`LineChart [common] example testing should match snapshot(s) for 14.empt
       Object {
         "fontSize": "12px",
       }
-    }>
+    }
+  >
     <Button
       hasOnlyIcon={false}
       isActive={false}
       isDisabled={false}
       onClick={[Function]}
-      type="button">
+      type="button"
+    >
       Action
     </Button>
   </EmptyStateWrapper.Body>
   <svg
     className="lucid-LineChart"
     height={400}
-    width={1000}>
+    width={1000}
+  >
     <g
-      transform="translate(80, 10)">
+      transform="translate(80, 10)"
+    >
       <Axis
         innerTickSize={6}
         orient="left"
         outerTickSize={6}
         scale={[Function]}
         tickCount={null}
-        tickPadding={3} />
+        tickPadding={3}
+      />
     </g>
     <g
-      transform="translate(80, 335)">
+      transform="translate(80, 335)"
+    >
       <Axis
         innerTickSize={6}
         orient="bottom"
@@ -2571,7 +2752,8 @@ exports[`LineChart [common] example testing should match snapshot(s) for 14.empt
         scale={[Function]}
         tickCount={null}
         tickFormat={[Function]}
-        tickPadding={3} />
+        tickPadding={3}
+      />
     </g>
   </svg>
 </EmptyStateWrapper>
@@ -2581,23 +2763,28 @@ exports[`LineChart [common] example testing should match snapshot(s) for 15.load
 <EmptyStateWrapper
   Title="You have no data."
   isEmpty={true}
-  isLoading={true}>
+  isLoading={true}
+>
   <svg
     className="lucid-LineChart"
     height={400}
-    width={1000}>
+    width={1000}
+  >
     <g
-      transform="translate(80, 10)">
+      transform="translate(80, 10)"
+    >
       <Axis
         innerTickSize={6}
         orient="left"
         outerTickSize={6}
         scale={[Function]}
         tickCount={null}
-        tickPadding={3} />
+        tickPadding={3}
+      />
     </g>
     <g
-      transform="translate(80, 335)">
+      transform="translate(80, 335)"
+    >
       <Axis
         innerTickSize={6}
         orient="bottom"
@@ -2605,7 +2792,8 @@ exports[`LineChart [common] example testing should match snapshot(s) for 15.load
         scale={[Function]}
         tickCount={null}
         tickFormat={[Function]}
-        tickPadding={3} />
+        tickPadding={3}
+      />
     </g>
   </svg>
 </EmptyStateWrapper>

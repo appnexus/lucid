@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`SwitchLabeled [common] example testing should match snapshot(s) for interactive-default 1`] = `
 <label
   className="lucid-SwitchLabeled"
@@ -5,11 +7,13 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     Object {
       "marginBottom": "3px",
     }
-  }>
+  }
+>
   <Switch
     isDisabled={false}
     isSelected={false}
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <SwitchLabeled.Label>
       Airplane Mode
     </SwitchLabeled.Label>
@@ -26,7 +30,8 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     transitionEnterTimeout={100}
     transitionLeave={true}
     transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text">
+    transitionName="lucid-SwitchLabeled-text"
+  >
     <span>
       Airplane Mode
     </span>
@@ -41,11 +46,13 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     Object {
       "marginBottom": "3px",
     }
-  }>
+  }
+>
   <Switch
     isDisabled={false}
     isSelected={false}
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <SwitchLabeled.Label>
       Bluetooth
     </SwitchLabeled.Label>
@@ -62,7 +69,8 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     transitionEnterTimeout={100}
     transitionLeave={true}
     transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text">
+    transitionName="lucid-SwitchLabeled-text"
+  >
     <span>
       Bluetooth
     </span>
@@ -77,11 +85,13 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     Object {
       "marginBottom": "3px",
     }
-  }>
+  }
+>
   <Switch
     isDisabled={false}
     isSelected={false}
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <SwitchLabeled.Label>
       Cellular Data
     </SwitchLabeled.Label>
@@ -98,7 +108,8 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     transitionEnterTimeout={100}
     transitionLeave={true}
     transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text">
+    transitionName="lucid-SwitchLabeled-text"
+  >
     <span>
       Cellular Data
     </span>
@@ -113,11 +124,13 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     Object {
       "marginBottom": "3px",
     }
-  }>
+  }
+>
   <Switch
     isDisabled={false}
     isSelected={true}
-    onSelect={[Function]} />
+    onSelect={[Function]}
+  />
   <ReactCSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
@@ -130,7 +143,8 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     transitionEnterTimeout={100}
     transitionLeave={true}
     transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text">
+    transitionName="lucid-SwitchLabeled-text"
+  >
     <span>
       Airplane Mode Activated
     </span>
@@ -145,11 +159,13 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     Object {
       "marginBottom": "3px",
     }
-  }>
+  }
+>
   <Switch
     isDisabled={false}
     isSelected={true}
-    onSelect={[Function]} />
+    onSelect={[Function]}
+  />
   <ReactCSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
@@ -162,7 +178,8 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     transitionEnterTimeout={100}
     transitionLeave={true}
     transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text">
+    transitionName="lucid-SwitchLabeled-text"
+  >
     <span>
       Bluetooth Enabled
     </span>
@@ -177,11 +194,13 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     Object {
       "marginBottom": "3px",
     }
-  }>
+  }
+>
   <Switch
     isDisabled={false}
     isSelected={true}
-    onSelect={[Function]} />
+    onSelect={[Function]}
+  />
   <ReactCSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
@@ -194,7 +213,8 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     transitionEnterTimeout={100}
     transitionLeave={true}
     transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text">
+    transitionName="lucid-SwitchLabeled-text"
+  >
     <span>
       Use Cellular Data
     </span>
@@ -209,11 +229,13 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     Object {
       "marginBottom": "3px",
     }
-  }>
+  }
+>
   <Switch
     isDisabled={false}
     isSelected={true}
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <SwitchLabeled.Label>
       Yes! I would like to receive updates, special offers, and other information from AppNexus and its subsidiaries.
     </SwitchLabeled.Label>
@@ -230,7 +252,8 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     transitionEnterTimeout={100}
     transitionLeave={true}
     transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text">
+    transitionName="lucid-SwitchLabeled-text"
+  >
     <span>
       Yes! I would like to receive updates, special offers, and other information from AppNexus and its subsidiaries.
     </span>
@@ -245,11 +268,13 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     Object {
       "marginRight": "5px",
     }
-  }>
+  }
+>
   <Switch
     isDisabled={false}
     isSelected={false}
-    onSelect={[Function]} />
+    onSelect={[Function]}
+  />
   <ReactCSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
@@ -262,7 +287,8 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     transitionEnterTimeout={100}
     transitionLeave={true}
     transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text">
+    transitionName="lucid-SwitchLabeled-text"
+  >
     <span>
       Just text
     </span>
@@ -277,11 +303,13 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     Object {
       "marginRight": "5px",
     }
-  }>
+  }
+>
   <Switch
     isDisabled={false}
     isSelected={false}
-    onSelect={[Function]} />
+    onSelect={[Function]}
+  />
   <ReactCSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
@@ -294,7 +322,8 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     transitionEnterTimeout={100}
     transitionLeave={true}
     transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text">
+    transitionName="lucid-SwitchLabeled-text"
+  >
     <span>
       <span>
         HTML element
@@ -311,11 +340,13 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     Object {
       "marginRight": "5px",
     }
-  }>
+  }
+>
   <Switch
     isDisabled={false}
     isSelected={false}
-    onSelect={[Function]} />
+    onSelect={[Function]}
+  />
   <ReactCSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
@@ -328,7 +359,8 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     transitionEnterTimeout={100}
     transitionLeave={true}
     transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text">
+    transitionName="lucid-SwitchLabeled-text"
+  >
     <span>
       Text in an array
     </span>
@@ -343,11 +375,13 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     Object {
       "marginRight": "5px",
     }
-  }>
+  }
+>
   <Switch
     isDisabled={false}
     isSelected={false}
-    onSelect={[Function]} />
+    onSelect={[Function]}
+  />
   <ReactCSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
@@ -360,7 +394,8 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     transitionEnterTimeout={100}
     transitionLeave={true}
     transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text">
+    transitionName="lucid-SwitchLabeled-text"
+  >
     <span>
       <span>
         HTML element in an array
@@ -378,11 +413,13 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
       "marginBottom": "3px",
       "marginRight": "13px",
     }
-  }>
+  }
+>
   <Switch
     isDisabled={false}
     isSelected={false}
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <SwitchLabeled.Label>
       (default props)
     </SwitchLabeled.Label>
@@ -399,7 +436,8 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
     transitionEnterTimeout={100}
     transitionLeave={true}
     transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text">
+    transitionName="lucid-SwitchLabeled-text"
+  >
     <span>
       (default props)
     </span>
@@ -415,11 +453,13 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
       "marginBottom": "3px",
       "marginRight": "13px",
     }
-  }>
+  }
+>
   <Switch
     isDisabled={true}
     isSelected={false}
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <SwitchLabeled.Label>
       Disabled
     </SwitchLabeled.Label>
@@ -436,7 +476,8 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
     transitionEnterTimeout={100}
     transitionLeave={true}
     transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text">
+    transitionName="lucid-SwitchLabeled-text"
+  >
     <span>
       Disabled
     </span>
@@ -452,11 +493,13 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
       "marginBottom": "3px",
       "marginRight": "13px",
     }
-  }>
+  }
+>
   <Switch
     isDisabled={false}
     isSelected={true}
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <SwitchLabeled.Label>
       Selected
     </SwitchLabeled.Label>
@@ -473,7 +516,8 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
     transitionEnterTimeout={100}
     transitionLeave={true}
     transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text">
+    transitionName="lucid-SwitchLabeled-text"
+  >
     <span>
       Selected
     </span>
@@ -489,11 +533,13 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
       "marginBottom": "3px",
       "marginRight": "13px",
     }
-  }>
+  }
+>
   <Switch
     isDisabled={true}
     isSelected={true}
-    onSelect={[Function]}>
+    onSelect={[Function]}
+  >
     <SwitchLabeled.Label>
       Disabled & selected
     </SwitchLabeled.Label>
@@ -510,7 +556,8 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
     transitionEnterTimeout={100}
     transitionLeave={true}
     transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text">
+    transitionName="lucid-SwitchLabeled-text"
+  >
     <span>
       Disabled & selected
     </span>

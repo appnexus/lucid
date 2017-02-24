@@ -1,15 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Paginator [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <div
-  className="lucid-Paginator">
+  className="lucid-Paginator"
+>
   <Button
     hasOnlyIcon={true}
     isActive={false}
     isDisabled={true}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     <ArrowIcon
       direction="left"
-      viewBox="0 0 16 16" />
+      viewBox="0 0 16 16"
+    />
   </Button>
   <TextField
     debounceLevel={500}
@@ -22,7 +27,8 @@ exports[`Paginator [common] example testing should match snapshot(s) for 1.basic
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value={1} />
+    value={1}
+  />
   <span>
     of 
   </span>
@@ -31,21 +37,26 @@ exports[`Paginator [common] example testing should match snapshot(s) for 1.basic
     isActive={false}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     <ArrowIcon
       direction="right"
-      viewBox="0 0 16 16" />
+      viewBox="0 0 16 16"
+    />
   </Button>
 </div>
 `;
 
 exports[`Paginator [common] example testing should match snapshot(s) for 2.page-size-selector 1`] = `
 <div
-  className="lucid-Paginator">
+  className="lucid-Paginator"
+>
   <div
-    className="lucid-Paginator-page-size-container">
+    className="lucid-Paginator-page-size-container"
+  >
     <span
-      className="lucid-Paginator-rows-per-page-label">
+      className="lucid-Paginator-rows-per-page-label"
+    >
       Rows per page:
     </span>
     <SingleSelect
@@ -57,7 +68,8 @@ exports[`Paginator [common] example testing should match snapshot(s) for 2.page-
       hasReset={false}
       isDisabled={false}
       isSelectionHighlighted={false}
-      selectedIndex={0}>
+      selectedIndex={0}
+    >
       <SingleSelect.Option>
         10
       </SingleSelect.Option>
@@ -74,10 +86,12 @@ exports[`Paginator [common] example testing should match snapshot(s) for 2.page-
     isActive={false}
     isDisabled={true}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     <ArrowIcon
       direction="left"
-      viewBox="0 0 16 16" />
+      viewBox="0 0 16 16"
+    />
   </Button>
   <TextField
     debounceLevel={500}
@@ -90,7 +104,8 @@ exports[`Paginator [common] example testing should match snapshot(s) for 2.page-
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value={1} />
+    value={1}
+  />
   <span>
     of 
   </span>
@@ -99,26 +114,31 @@ exports[`Paginator [common] example testing should match snapshot(s) for 2.page-
     isActive={false}
     isDisabled={false}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     <ArrowIcon
       direction="right"
-      viewBox="0 0 16 16" />
+      viewBox="0 0 16 16"
+    />
   </Button>
 </div>
 `;
 
 exports[`Paginator [common] example testing should match snapshot(s) for 3.disabled 1`] = `
 <div
-  className="lucid-Paginator">
+  className="lucid-Paginator"
+>
   <Button
     hasOnlyIcon={true}
     isActive={false}
     isDisabled={true}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     <ArrowIcon
       direction="left"
-      viewBox="0 0 16 16" />
+      viewBox="0 0 16 16"
+    />
   </Button>
   <TextField
     debounceLevel={500}
@@ -131,7 +151,8 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value={1} />
+    value={1}
+  />
   <span>
     of 
   </span>
@@ -140,21 +161,26 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
     isActive={false}
     isDisabled={true}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     <ArrowIcon
       direction="right"
-      viewBox="0 0 16 16" />
+      viewBox="0 0 16 16"
+    />
   </Button>
 </div>
 `;
 
 exports[`Paginator [common] example testing should match snapshot(s) for 3.disabled 2`] = `
 <div
-  className="lucid-Paginator">
+  className="lucid-Paginator"
+>
   <div
-    className="lucid-Paginator-page-size-container">
+    className="lucid-Paginator-page-size-container"
+  >
     <span
-      className="lucid-Paginator-rows-per-page-label">
+      className="lucid-Paginator-rows-per-page-label"
+    >
       Rows per page:
     </span>
     <SingleSelect
@@ -166,7 +192,8 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
       hasReset={false}
       isDisabled={true}
       isSelectionHighlighted={false}
-      selectedIndex={0}>
+      selectedIndex={0}
+    >
       <SingleSelect.Option>
         10
       </SingleSelect.Option>
@@ -183,10 +210,12 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
     isActive={false}
     isDisabled={true}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     <ArrowIcon
       direction="left"
-      viewBox="0 0 16 16" />
+      viewBox="0 0 16 16"
+    />
   </Button>
   <TextField
     debounceLevel={500}
@@ -199,7 +228,8 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
     onSubmit={[Function]}
     rows={5}
     style={null}
-    value={1} />
+    value={1}
+  />
   <span>
     of 
   </span>
@@ -208,10 +238,12 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
     isActive={false}
     isDisabled={true}
     onClick={[Function]}
-    type="button">
+    type="button"
+  >
     <ArrowIcon
       direction="right"
-      viewBox="0 0 16 16" />
+      viewBox="0 0 16 16"
+    />
   </Button>
 </div>
 `;

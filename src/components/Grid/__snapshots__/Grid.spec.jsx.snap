@@ -1,8 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Grid [common] example testing should match snapshot(s) for GridColumns 1`] = `
 <section
-  className="lucid-Grid">
+  className="lucid-Grid"
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-full">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-full"
+  >
     <p
       style={
         Object {
@@ -11,12 +15,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       full
     </p>
   </article>
   <Grid.Cell
-    isFull={true}>
+    isFull={true}
+  >
     <p
       style={
         Object {
@@ -25,7 +31,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       full
     </p>
   </Grid.Cell>
@@ -34,9 +41,11 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
 
 exports[`Grid [common] example testing should match snapshot(s) for GridColumns 2`] = `
 <section
-  className="lucid-Grid">
+  className="lucid-Grid"
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-2">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-2"
+  >
     <p
       style={
         Object {
@@ -45,12 +54,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       2
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -59,12 +70,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -73,12 +86,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -87,12 +102,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -101,12 +118,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -115,12 +134,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -129,12 +150,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -143,12 +166,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -157,12 +182,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -171,12 +198,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -185,12 +214,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <Grid.Cell
-    is2={true}>
+    is2={true}
+  >
     <p
       style={
         Object {
@@ -199,7 +230,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       2
     </p>
   </Grid.Cell>
@@ -212,7 +244,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -225,7 +258,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -238,7 +272,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -251,7 +286,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -264,7 +300,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -277,7 +314,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -290,7 +328,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -303,7 +342,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -316,7 +356,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -329,7 +370,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -338,9 +380,11 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
 
 exports[`Grid [common] example testing should match snapshot(s) for GridColumns 3`] = `
 <section
-  className="lucid-Grid">
+  className="lucid-Grid"
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-3">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-3"
+  >
     <p
       style={
         Object {
@@ -349,12 +393,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       3
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -363,12 +409,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -377,12 +425,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -391,12 +441,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -405,12 +457,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -419,12 +473,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -433,12 +489,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -447,12 +505,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -461,12 +521,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -475,12 +537,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <Grid.Cell
-    is3={true}>
+    is3={true}
+  >
     <p
       style={
         Object {
@@ -489,7 +553,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       3
     </p>
   </Grid.Cell>
@@ -502,7 +567,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -515,7 +581,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -528,7 +595,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -541,7 +609,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -554,7 +623,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -567,7 +637,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -580,7 +651,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -593,7 +665,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -606,7 +679,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -615,9 +689,11 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
 
 exports[`Grid [common] example testing should match snapshot(s) for GridColumns 4`] = `
 <section
-  className="lucid-Grid">
+  className="lucid-Grid"
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-4">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-4"
+  >
     <p
       style={
         Object {
@@ -626,12 +702,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       4
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -640,12 +718,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -654,12 +734,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -668,12 +750,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -682,12 +766,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -696,12 +782,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -710,12 +798,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -724,12 +814,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -738,12 +830,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <Grid.Cell
-    is4={true}>
+    is4={true}
+  >
     <p
       style={
         Object {
@@ -752,7 +846,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       4
     </p>
   </Grid.Cell>
@@ -765,7 +860,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -778,7 +874,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -791,7 +888,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -804,7 +902,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -817,7 +916,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -830,7 +930,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -843,7 +944,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -856,7 +958,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -865,9 +968,11 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
 
 exports[`Grid [common] example testing should match snapshot(s) for GridColumns 5`] = `
 <section
-  className="lucid-Grid">
+  className="lucid-Grid"
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-5">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-5"
+  >
     <p
       style={
         Object {
@@ -876,12 +981,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       5
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -890,12 +997,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -904,12 +1013,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -918,12 +1029,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -932,12 +1045,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -946,12 +1061,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -960,12 +1077,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -974,12 +1093,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <Grid.Cell
-    is5={true}>
+    is5={true}
+  >
     <p
       style={
         Object {
@@ -988,7 +1109,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       5
     </p>
   </Grid.Cell>
@@ -1001,7 +1123,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1014,7 +1137,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1027,7 +1151,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1040,7 +1165,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1053,7 +1179,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1066,7 +1193,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1079,7 +1207,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1088,9 +1217,11 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
 
 exports[`Grid [common] example testing should match snapshot(s) for GridColumns 6`] = `
 <section
-  className="lucid-Grid">
+  className="lucid-Grid"
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-6">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-6"
+  >
     <p
       style={
         Object {
@@ -1099,12 +1230,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       6
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1113,12 +1246,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1127,12 +1262,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1141,12 +1278,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1155,12 +1294,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1169,12 +1310,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1183,12 +1326,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <Grid.Cell
-    is6={true}>
+    is6={true}
+  >
     <p
       style={
         Object {
@@ -1197,7 +1342,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       6
     </p>
   </Grid.Cell>
@@ -1210,7 +1356,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1223,7 +1370,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1236,7 +1384,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1249,7 +1398,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1262,7 +1412,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1275,7 +1426,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1284,9 +1436,11 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
 
 exports[`Grid [common] example testing should match snapshot(s) for GridColumns 7`] = `
 <section
-  className="lucid-Grid">
+  className="lucid-Grid"
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-7">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-7"
+  >
     <p
       style={
         Object {
@@ -1295,12 +1449,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       7
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1309,12 +1465,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1323,12 +1481,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1337,12 +1497,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1351,12 +1513,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1365,12 +1529,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <Grid.Cell
-    is7={true}>
+    is7={true}
+  >
     <p
       style={
         Object {
@@ -1379,7 +1545,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       7
     </p>
   </Grid.Cell>
@@ -1392,7 +1559,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1405,7 +1573,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1418,7 +1587,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1431,7 +1601,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1444,7 +1615,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1453,9 +1625,11 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
 
 exports[`Grid [common] example testing should match snapshot(s) for GridColumns 8`] = `
 <section
-  className="lucid-Grid">
+  className="lucid-Grid"
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-8">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-8"
+  >
     <p
       style={
         Object {
@@ -1464,12 +1638,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       8
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1478,12 +1654,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1492,12 +1670,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1506,12 +1686,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1520,12 +1702,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <Grid.Cell
-    is8={true}>
+    is8={true}
+  >
     <p
       style={
         Object {
@@ -1534,7 +1718,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       8
     </p>
   </Grid.Cell>
@@ -1547,7 +1732,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1560,7 +1746,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1573,7 +1760,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1586,7 +1774,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1595,9 +1784,11 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
 
 exports[`Grid [common] example testing should match snapshot(s) for GridColumns 9`] = `
 <section
-  className="lucid-Grid">
+  className="lucid-Grid"
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-9">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-9"
+  >
     <p
       style={
         Object {
@@ -1606,12 +1797,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       9
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1620,12 +1813,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1634,12 +1829,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1648,12 +1845,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <Grid.Cell
-    is9={true}>
+    is9={true}
+  >
     <p
       style={
         Object {
@@ -1662,7 +1861,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       9
     </p>
   </Grid.Cell>
@@ -1675,7 +1875,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1688,7 +1889,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1701,7 +1903,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1710,9 +1913,11 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
 
 exports[`Grid [common] example testing should match snapshot(s) for GridColumns 10`] = `
 <section
-  className="lucid-Grid">
+  className="lucid-Grid"
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-10">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-10"
+  >
     <p
       style={
         Object {
@@ -1721,12 +1926,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       10
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1735,12 +1942,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1749,12 +1958,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <Grid.Cell
-    is10={true}>
+    is10={true}
+  >
     <p
       style={
         Object {
@@ -1763,7 +1974,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       10
     </p>
   </Grid.Cell>
@@ -1776,7 +1988,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1789,7 +2002,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1798,9 +2012,11 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
 
 exports[`Grid [common] example testing should match snapshot(s) for GridColumns 11`] = `
 <section
-  className="lucid-Grid">
+  className="lucid-Grid"
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-11">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-11"
+  >
     <p
       style={
         Object {
@@ -1809,12 +2025,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       11
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1823,12 +2041,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <Grid.Cell
-    is11={true}>
+    is11={true}
+  >
     <p
       style={
         Object {
@@ -1837,7 +2057,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       11
     </p>
   </Grid.Cell>
@@ -1850,7 +2071,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
@@ -1859,9 +2081,11 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
 
 exports[`Grid [common] example testing should match snapshot(s) for GutterlessGrid 1`] = `
 <section
-  className="lucid-Grid lucid-Grid-is-gutterless lucid-Grid-is-multiline">
+  className="lucid-Grid lucid-Grid-is-gutterless lucid-Grid-is-multiline"
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-half"
+  >
     <p
       style={
         Object {
@@ -1870,7 +2094,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GutterlessGr
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       gutterless half
     </p>
   </article>
@@ -1883,11 +2108,13 @@ exports[`Grid [common] example testing should match snapshot(s) for GutterlessGr
         "margin": 0,
         "padding": 0,
       }
-    }>
+    }
+  >
     gutterless quarter
   </article>
   <article
-    className="lucid-Grid-Cell">
+    className="lucid-Grid-Cell"
+  >
     <p
       style={
         Object {
@@ -1896,12 +2123,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GutterlessGr
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
+  >
     <p
       style={
         Object {
@@ -1910,12 +2139,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GutterlessGr
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       gutterless quarter
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
+  >
     <p
       style={
         Object {
@@ -1924,12 +2155,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GutterlessGr
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       gutterless quarter
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-half"
+  >
     <p
       style={
         Object {
@@ -1938,12 +2171,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GutterlessGr
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       gutterless half
     </p>
   </article>
   <Grid.Cell
-    isHalf={true}>
+    isHalf={true}
+  >
     <p
       style={
         Object {
@@ -1952,7 +2187,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GutterlessGr
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       gutterless half
     </p>
   </Grid.Cell>
@@ -1965,7 +2201,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GutterlessGr
         "margin": 0,
         "padding": 0,
       }
-    }>
+    }
+  >
     gutterless quarter
   </Grid.Cell>
   <Grid.Cell>
@@ -1977,12 +2214,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GutterlessGr
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       auto
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isQuarter={true}>
+    isQuarter={true}
+  >
     <p
       style={
         Object {
@@ -1991,12 +2230,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GutterlessGr
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       gutterless quarter
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isQuarter={true}>
+    isQuarter={true}
+  >
     <p
       style={
         Object {
@@ -2005,12 +2246,14 @@ exports[`Grid [common] example testing should match snapshot(s) for GutterlessGr
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       gutterless quarter
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isHalf={true}>
+    isHalf={true}
+  >
     <p
       style={
         Object {
@@ -2019,7 +2262,8 @@ exports[`Grid [common] example testing should match snapshot(s) for GutterlessGr
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       gutterless half
     </p>
   </Grid.Cell>
@@ -2028,9 +2272,11 @@ exports[`Grid [common] example testing should match snapshot(s) for GutterlessGr
 
 exports[`Grid [common] example testing should match snapshot(s) for HorizontalMultilineGrid 1`] = `
 <section
-  className="lucid-Grid lucid-Grid-is-horizontal lucid-Grid-is-multiline">
+  className="lucid-Grid lucid-Grid-is-horizontal lucid-Grid-is-multiline"
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-half"
+  >
     <p
       style={
         Object {
@@ -2039,12 +2285,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       half
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-half"
+  >
     <p
       style={
         Object {
@@ -2053,12 +2301,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       half
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-half"
+  >
     <p
       style={
         Object {
@@ -2067,12 +2317,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       half
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-full">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-full"
+  >
     <p
       style={
         Object {
@@ -2081,12 +2333,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       full
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-third"
+  >
     <p
       style={
         Object {
@@ -2095,12 +2349,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       third
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-third"
+  >
     <p
       style={
         Object {
@@ -2109,12 +2365,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       third
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-third"
+  >
     <p
       style={
         Object {
@@ -2123,12 +2381,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       third
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-third"
+  >
     <p
       style={
         Object {
@@ -2137,12 +2397,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       third
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
+  >
     <p
       style={
         Object {
@@ -2151,12 +2413,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       quarter
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
+  >
     <p
       style={
         Object {
@@ -2165,12 +2429,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       quarter
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
+  >
     <p
       style={
         Object {
@@ -2179,12 +2445,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       quarter
     </p>
   </article>
   <Grid.Cell
-    isHalf={true}>
+    isHalf={true}
+  >
     <p
       style={
         Object {
@@ -2193,12 +2461,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       half
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isHalf={true}>
+    isHalf={true}
+  >
     <p
       style={
         Object {
@@ -2207,12 +2477,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       half
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isHalf={true}>
+    isHalf={true}
+  >
     <p
       style={
         Object {
@@ -2221,12 +2493,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       half
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isFull={true}>
+    isFull={true}
+  >
     <p
       style={
         Object {
@@ -2235,12 +2509,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       full
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isThird={true}>
+    isThird={true}
+  >
     <p
       style={
         Object {
@@ -2249,12 +2525,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       third
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isThird={true}>
+    isThird={true}
+  >
     <p
       style={
         Object {
@@ -2263,12 +2541,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       third
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isThird={true}>
+    isThird={true}
+  >
     <p
       style={
         Object {
@@ -2277,12 +2557,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       third
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isThird={true}>
+    isThird={true}
+  >
     <p
       style={
         Object {
@@ -2291,12 +2573,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       third
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isQuarter={true}>
+    isQuarter={true}
+  >
     <p
       style={
         Object {
@@ -2305,12 +2589,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       quarter
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isQuarter={true}>
+    isQuarter={true}
+  >
     <p
       style={
         Object {
@@ -2319,12 +2605,14 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       quarter
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isQuarter={true}>
+    isQuarter={true}
+  >
     <p
       style={
         Object {
@@ -2333,7 +2621,8 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       quarter
     </p>
   </Grid.Cell>
@@ -2342,9 +2631,11 @@ exports[`Grid [common] example testing should match snapshot(s) for HorizontalMu
 
 exports[`Grid [common] example testing should match snapshot(s) for OffsetCells 1`] = `
 <section
-  className="lucid-Grid">
+  className="lucid-Grid"
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half lucid-Grid-Cell-is-offset-half">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-half lucid-Grid-Cell-is-offset-half"
+  >
     <p
       style={
         Object {
@@ -2354,13 +2645,15 @@ exports[`Grid [common] example testing should match snapshot(s) for OffsetCells 
           "padding": 0,
           "textAlign": "center",
         }
-      }>
+      }
+    >
       half with offset half
     </p>
   </article>
   <Grid.Cell
     isHalf={true}
-    isOffsetHalf={true}>
+    isOffsetHalf={true}
+  >
     <p
       style={
         Object {
@@ -2370,7 +2663,8 @@ exports[`Grid [common] example testing should match snapshot(s) for OffsetCells 
           "padding": 0,
           "textAlign": "center",
         }
-      }>
+      }
+    >
       half with offset half
     </p>
   </Grid.Cell>
@@ -2379,9 +2673,11 @@ exports[`Grid [common] example testing should match snapshot(s) for OffsetCells 
 
 exports[`Grid [common] example testing should match snapshot(s) for OffsetCells 2`] = `
 <section
-  className="lucid-Grid">
+  className="lucid-Grid"
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter lucid-Grid-Cell-is-offset-quarter">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter lucid-Grid-Cell-is-offset-quarter"
+  >
     <p
       style={
         Object {
@@ -2391,13 +2687,15 @@ exports[`Grid [common] example testing should match snapshot(s) for OffsetCells 
           "padding": 0,
           "textAlign": "center",
         }
-      }>
+      }
+    >
       quarter with offset quarter
     </p>
   </article>
   <Grid.Cell
     isOffsetQuarter={true}
-    isQuarter={true}>
+    isQuarter={true}
+  >
     <p
       style={
         Object {
@@ -2407,7 +2705,8 @@ exports[`Grid [common] example testing should match snapshot(s) for OffsetCells 
           "padding": 0,
           "textAlign": "center",
         }
-      }>
+      }
+    >
       quarter with offset quarter
     </p>
   </Grid.Cell>
@@ -2416,9 +2715,11 @@ exports[`Grid [common] example testing should match snapshot(s) for OffsetCells 
 
 exports[`Grid [common] example testing should match snapshot(s) for OffsetCells 3`] = `
 <section
-  className="lucid-Grid">
+  className="lucid-Grid"
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third lucid-Grid-Cell-is-offset-third">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-third lucid-Grid-Cell-is-offset-third"
+  >
     <p
       style={
         Object {
@@ -2428,13 +2729,15 @@ exports[`Grid [common] example testing should match snapshot(s) for OffsetCells 
           "padding": 0,
           "textAlign": "center",
         }
-      }>
+      }
+    >
       third with offset third
     </p>
   </article>
   <Grid.Cell
     isOffsetThird={true}
-    isThird={true}>
+    isThird={true}
+  >
     <p
       style={
         Object {
@@ -2444,7 +2747,8 @@ exports[`Grid [common] example testing should match snapshot(s) for OffsetCells 
           "padding": 0,
           "textAlign": "center",
         }
-      }>
+      }
+    >
       third with offset third
     </p>
   </Grid.Cell>
@@ -2458,9 +2762,11 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
     Object {
       "height": "200px",
     }
-  }>
+  }
+>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-half"
+  >
     <p
       style={
         Object {
@@ -2470,12 +2776,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       half
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-half"
+  >
     <p
       style={
         Object {
@@ -2485,12 +2793,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       half
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-half">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-half"
+  >
     <p
       style={
         Object {
@@ -2500,12 +2810,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       half
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-full">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-full"
+  >
     <p
       style={
         Object {
@@ -2515,12 +2827,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       full
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-third"
+  >
     <p
       style={
         Object {
@@ -2530,12 +2844,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       third
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-third"
+  >
     <p
       style={
         Object {
@@ -2545,12 +2861,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       third
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-third"
+  >
     <p
       style={
         Object {
@@ -2560,12 +2878,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       third
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-third">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-third"
+  >
     <p
       style={
         Object {
@@ -2575,12 +2895,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       third
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
+  >
     <p
       style={
         Object {
@@ -2590,12 +2912,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       quarter
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
+  >
     <p
       style={
         Object {
@@ -2605,12 +2929,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       quarter
     </p>
   </article>
   <article
-    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter">
+    className="lucid-Grid-Cell lucid-Grid-Cell-is-quarter"
+  >
     <p
       style={
         Object {
@@ -2620,12 +2946,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       quarter
     </p>
   </article>
   <Grid.Cell
-    isHalf={true}>
+    isHalf={true}
+  >
     <p
       style={
         Object {
@@ -2635,12 +2963,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       half
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isHalf={true}>
+    isHalf={true}
+  >
     <p
       style={
         Object {
@@ -2650,12 +2980,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       half
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isHalf={true}>
+    isHalf={true}
+  >
     <p
       style={
         Object {
@@ -2665,12 +2997,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       half
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isFull={true}>
+    isFull={true}
+  >
     <p
       style={
         Object {
@@ -2680,12 +3014,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       full
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isThird={true}>
+    isThird={true}
+  >
     <p
       style={
         Object {
@@ -2695,12 +3031,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       third
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isThird={true}>
+    isThird={true}
+  >
     <p
       style={
         Object {
@@ -2710,12 +3048,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       third
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isThird={true}>
+    isThird={true}
+  >
     <p
       style={
         Object {
@@ -2725,12 +3065,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       third
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isThird={true}>
+    isThird={true}
+  >
     <p
       style={
         Object {
@@ -2740,12 +3082,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       third
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isQuarter={true}>
+    isQuarter={true}
+  >
     <p
       style={
         Object {
@@ -2755,12 +3099,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       quarter
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isQuarter={true}>
+    isQuarter={true}
+  >
     <p
       style={
         Object {
@@ -2770,12 +3116,14 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       quarter
     </p>
   </Grid.Cell>
   <Grid.Cell
-    isQuarter={true}>
+    isQuarter={true}
+  >
     <p
       style={
         Object {
@@ -2785,7 +3133,8 @@ exports[`Grid [common] example testing should match snapshot(s) for VerticalMult
           "margin": 0,
           "padding": 0,
         }
-      }>
+      }
+    >
       quarter
     </p>
   </Grid.Cell>

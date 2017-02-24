@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`TextField [common] example testing should match snapshot(s) for basic 1`] = `
 <input
   className="lucid-TextField lucid-TextField-is-single-line"
@@ -12,7 +14,8 @@ exports[`TextField [common] example testing should match snapshot(s) for basic 1
     }
   }
   type="text"
-  value="foo" />
+  value="foo"
+/>
 `;
 
 exports[`TextField [common] example testing should match snapshot(s) for debounced 1`] = `
@@ -29,7 +32,8 @@ exports[`TextField [common] example testing should match snapshot(s) for debounc
     }
   }
   type="text"
-  value="foo" />
+  value="foo"
+/>
 `;
 
 exports[`TextField [common] example testing should match snapshot(s) for on-submit 1`] = `
@@ -46,5 +50,6 @@ exports[`TextField [common] example testing should match snapshot(s) for on-subm
     }
   }
   type="text"
-  value="Enter some text in and hit enter" />
+  value="Enter some text in and hit enter"
+/>
 `;

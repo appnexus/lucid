@@ -1,18 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`DataTable [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <EmptyStateWrapper
   Title="You have no items."
-  isEmpty={false}>
+  isEmpty={false}
+>
   <ScrollTable
     className="lucid-DataTable"
     hasBorder={false}
     hasWordWrap={false}
-    tableWidth={null}>
+    tableWidth={null}
+  >
     <Table.Thead>
       <Table.Tr
         isActionable={false}
         isActive={false}
         isDisabled={false}
-        isSelected={false}>
+        isSelected={false}
+      >
         <Table.Th
           align="left"
           isResizable={false}
@@ -24,7 +29,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ID
         </Table.Th>
         <Table.Th
@@ -38,7 +44,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           First
         </Table.Th>
         <Table.Th
@@ -52,7 +59,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Last
         </Table.Th>
         <Table.Th
@@ -66,7 +74,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           E-Mail
         </Table.Th>
         <Table.Th
@@ -80,7 +89,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Occupation
         </Table.Th>
       </Table.Tr>
@@ -91,7 +101,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -100,7 +111,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           1
         </Table.Td>
         <Table.Td
@@ -111,7 +123,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Isaac
         </Table.Td>
         <Table.Td
@@ -122,7 +135,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Newton
         </Table.Td>
         <Table.Td
@@ -133,7 +147,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           inewton@example.com
         </Table.Td>
         <Table.Td
@@ -144,7 +159,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -153,7 +169,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -162,7 +179,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           2
         </Table.Td>
         <Table.Td
@@ -173,7 +191,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Albert
         </Table.Td>
         <Table.Td
@@ -184,7 +203,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Einstein
         </Table.Td>
         <Table.Td
@@ -195,7 +215,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           aeinstein@example.com
         </Table.Td>
         <Table.Td
@@ -206,7 +227,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -215,7 +237,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -224,7 +247,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           3
         </Table.Td>
         <Table.Td
@@ -235,7 +259,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Leonardo
         </Table.Td>
         <Table.Td
@@ -246,7 +271,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           da Vinci
         </Table.Td>
         <Table.Td
@@ -257,7 +283,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ldvinci@example.com
         </Table.Td>
         <Table.Td
@@ -268,7 +295,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Engineer
         </Table.Td>
       </Table.Tr>
@@ -277,7 +305,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -286,7 +315,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           4
         </Table.Td>
         <Table.Td
@@ -297,7 +327,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Aristotle
         </Table.Td>
         <Table.Td
@@ -308,7 +339,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           --
         </Table.Td>
         <Table.Td
@@ -319,7 +351,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           aristotle@example.com
         </Table.Td>
         <Table.Td
@@ -330,7 +363,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Tutor
         </Table.Td>
       </Table.Tr>
@@ -339,7 +373,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -348,7 +383,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           5
         </Table.Td>
         <Table.Td
@@ -359,7 +395,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Galileo
         </Table.Td>
         <Table.Td
@@ -370,7 +407,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           --
         </Table.Td>
         <Table.Td
@@ -381,7 +419,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ggalilei@example.com
         </Table.Td>
         <Table.Td
@@ -392,7 +431,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -401,7 +441,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -410,7 +451,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           6
         </Table.Td>
         <Table.Td
@@ -421,7 +463,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Charles
         </Table.Td>
         <Table.Td
@@ -432,7 +475,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Darwin
         </Table.Td>
         <Table.Td
@@ -443,7 +487,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           cdarwin@example.com
         </Table.Td>
         <Table.Td
@@ -454,7 +499,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Biologist
         </Table.Td>
       </Table.Tr>
@@ -463,7 +509,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -472,7 +519,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           7
         </Table.Td>
         <Table.Td
@@ -483,7 +531,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Alexander
         </Table.Td>
         <Table.Td
@@ -494,7 +543,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Macedon
         </Table.Td>
         <Table.Td
@@ -505,7 +555,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           amacedon@example.com
         </Table.Td>
         <Table.Td
@@ -516,7 +567,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Head of State
         </Table.Td>
       </Table.Tr>
@@ -525,7 +577,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -534,7 +587,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           8
         </Table.Td>
         <Table.Td
@@ -545,7 +599,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Plato
         </Table.Td>
         <Table.Td
@@ -556,7 +611,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Plato
         </Table.Td>
         <Table.Td
@@ -567,7 +623,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           plato@example.com
         </Table.Td>
         <Table.Td
@@ -578,7 +635,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Philosopher
         </Table.Td>
       </Table.Tr>
@@ -587,7 +645,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -596,7 +655,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           9
         </Table.Td>
         <Table.Td
@@ -607,7 +667,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Mahatma
         </Table.Td>
         <Table.Td
@@ -618,7 +679,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Gandhi
         </Table.Td>
         <Table.Td
@@ -629,7 +691,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           mgandhi@example.com
         </Table.Td>
         <Table.Td
@@ -640,7 +703,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Politician
         </Table.Td>
       </Table.Tr>
@@ -649,7 +713,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -658,7 +723,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           10
         </Table.Td>
         <Table.Td
@@ -669,7 +735,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           William
         </Table.Td>
         <Table.Td
@@ -680,7 +747,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Shakespeare
         </Table.Td>
         <Table.Td
@@ -691,7 +759,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           wshakespear@example.com
         </Table.Td>
         <Table.Td
@@ -702,7 +771,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Playwright
         </Table.Td>
       </Table.Tr>
@@ -714,19 +784,22 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
 exports[`DataTable [common] example testing should match snapshot(s) for 02.column-groups 1`] = `
 <EmptyStateWrapper
   Title="You have no items."
-  isEmpty={false}>
+  isEmpty={false}
+>
   <ScrollTable
     className="lucid-DataTable"
     density="extended"
     hasBorder={false}
     hasWordWrap={false}
-    tableWidth={null}>
+    tableWidth={null}
+  >
     <Table.Thead>
       <Table.Tr
         isActionable={false}
         isActive={false}
         isDisabled={false}
-        isSelected={false}>
+        isSelected={false}
+      >
         <Table.Th
           align="left"
           isResizable={false}
@@ -738,7 +811,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ID
         </Table.Th>
         <Table.Th
@@ -746,7 +820,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           colSpan={2}
           isResizable={false}
           isSorted={false}
-          sortDirection="up">
+          sortDirection="up"
+        >
           Name
         </Table.Th>
         <Table.Th
@@ -760,7 +835,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           E-Mail
         </Table.Th>
         <Table.Th
@@ -775,7 +851,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Occupation
         </Table.Th>
       </Table.Tr>
@@ -783,7 +860,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         isActionable={false}
         isActive={false}
         isDisabled={false}
-        isSelected={false}>
+        isSelected={false}
+      >
         <Table.Th
           align="left"
           hasBorderLeft={true}
@@ -797,7 +875,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
               "width": 100,
             }
           }
-          width={100}>
+          width={100}
+        >
           First
         </Table.Th>
         <Table.Th
@@ -813,7 +892,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
               "width": 100,
             }
           }
-          width={100}>
+          width={100}
+        >
           Last
         </Table.Th>
       </Table.Tr>
@@ -824,7 +904,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -833,7 +914,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           1
         </Table.Td>
         <Table.Td
@@ -844,7 +926,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Isaac
         </Table.Td>
         <Table.Td
@@ -855,7 +938,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Newton
         </Table.Td>
         <Table.Td
@@ -866,7 +950,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           inewton@example.com
         </Table.Td>
         <Table.Td
@@ -877,7 +962,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -886,7 +972,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -895,7 +982,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           2
         </Table.Td>
         <Table.Td
@@ -906,7 +994,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Albert
         </Table.Td>
         <Table.Td
@@ -917,7 +1006,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Einstein
         </Table.Td>
         <Table.Td
@@ -928,7 +1018,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           aeinstein@example.com
         </Table.Td>
         <Table.Td
@@ -939,7 +1030,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -948,7 +1040,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -957,7 +1050,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           3
         </Table.Td>
         <Table.Td
@@ -968,7 +1062,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Leonardo
         </Table.Td>
         <Table.Td
@@ -979,7 +1074,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           da Vinci
         </Table.Td>
         <Table.Td
@@ -990,7 +1086,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ldvinci@example.com
         </Table.Td>
         <Table.Td
@@ -1001,7 +1098,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Engineer
         </Table.Td>
       </Table.Tr>
@@ -1010,7 +1108,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -1019,7 +1118,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           4
         </Table.Td>
         <Table.Td
@@ -1030,7 +1130,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Aristotle
         </Table.Td>
         <Table.Td
@@ -1041,7 +1142,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           --
         </Table.Td>
         <Table.Td
@@ -1052,7 +1154,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           --
         </Table.Td>
         <Table.Td
@@ -1063,7 +1166,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Tutor
         </Table.Td>
       </Table.Tr>
@@ -1072,7 +1176,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -1081,7 +1186,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           5
         </Table.Td>
         <Table.Td
@@ -1092,7 +1198,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           --
         </Table.Td>
         <Table.Td
@@ -1103,7 +1210,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Galilei
         </Table.Td>
         <Table.Td
@@ -1114,7 +1222,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           --
         </Table.Td>
         <Table.Td
@@ -1125,7 +1234,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -1134,7 +1244,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -1143,7 +1254,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           6
         </Table.Td>
         <Table.Td
@@ -1154,7 +1266,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Charles
         </Table.Td>
         <Table.Td
@@ -1165,7 +1278,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Darwin
         </Table.Td>
         <Table.Td
@@ -1176,7 +1290,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           cdarwin@example.com
         </Table.Td>
         <Table.Td
@@ -1187,7 +1302,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Biologist
         </Table.Td>
       </Table.Tr>
@@ -1196,7 +1312,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -1205,7 +1322,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           7
         </Table.Td>
         <Table.Td
@@ -1216,7 +1334,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Alexander
         </Table.Td>
         <Table.Td
@@ -1227,7 +1346,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Macedon
         </Table.Td>
         <Table.Td
@@ -1238,7 +1358,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           amacedon@example.com
         </Table.Td>
         <Table.Td
@@ -1249,7 +1370,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Head of State
         </Table.Td>
       </Table.Tr>
@@ -1258,7 +1380,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -1267,7 +1390,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           8
         </Table.Td>
         <Table.Td
@@ -1278,7 +1402,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Plato
         </Table.Td>
         <Table.Td
@@ -1289,7 +1414,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Plato
         </Table.Td>
         <Table.Td
@@ -1300,7 +1426,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           plato@example.com
         </Table.Td>
         <Table.Td
@@ -1311,7 +1438,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Philosopher
         </Table.Td>
       </Table.Tr>
@@ -1320,7 +1448,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -1329,7 +1458,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           9
         </Table.Td>
         <Table.Td
@@ -1340,7 +1470,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Mahatma
         </Table.Td>
         <Table.Td
@@ -1351,7 +1482,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Gandhi
         </Table.Td>
         <Table.Td
@@ -1362,7 +1494,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           mgandhi@example.com
         </Table.Td>
         <Table.Td
@@ -1373,7 +1506,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Politician
         </Table.Td>
       </Table.Tr>
@@ -1382,7 +1516,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -1391,7 +1526,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           10
         </Table.Td>
         <Table.Td
@@ -1402,7 +1538,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           William
         </Table.Td>
         <Table.Td
@@ -1413,7 +1550,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Shakespeare
         </Table.Td>
         <Table.Td
@@ -1424,7 +1562,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           wshakespear@example.com
         </Table.Td>
         <Table.Td
@@ -1435,7 +1574,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Playwright
         </Table.Td>
       </Table.Tr>
@@ -1447,30 +1587,35 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
 exports[`DataTable [common] example testing should match snapshot(s) for 03.selectable-and-navigable-rows 1`] = `
 <EmptyStateWrapper
   Title="You have no items."
-  isEmpty={false}>
+  isEmpty={false}
+>
   <ScrollTable
     className="lucid-DataTable"
     density="extended"
     hasBorder={false}
     hasWordWrap={false}
-    tableWidth={null}>
+    tableWidth={null}
+  >
     <Table.Thead>
       <Table.Tr
         isActionable={false}
         isActive={false}
         isDisabled={false}
-        isSelected={false}>
+        isSelected={false}
+      >
         <Table.Th
           align="left"
           isResizable={false}
           isSorted={false}
           rowSpan={2}
-          sortDirection="up">
+          sortDirection="up"
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Th>
         <Table.Th
           align="left"
@@ -1484,7 +1629,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ID
         </Table.Th>
         <Table.Th
@@ -1492,7 +1638,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           colSpan={2}
           isResizable={false}
           isSorted={false}
-          sortDirection="up">
+          sortDirection="up"
+        >
           Name
         </Table.Th>
         <Table.Th
@@ -1506,7 +1653,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           E-Mail
         </Table.Th>
         <Table.Th
@@ -1521,7 +1669,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Occupation
         </Table.Th>
       </Table.Tr>
@@ -1529,7 +1678,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         isActionable={false}
         isActive={false}
         isDisabled={false}
-        isSelected={false}>
+        isSelected={false}
+      >
         <Table.Th
           align="left"
           hasBorderLeft={true}
@@ -1543,7 +1693,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
               "width": 100,
             }
           }
-          width={100}>
+          width={100}
+        >
           First
         </Table.Th>
         <Table.Th
@@ -1559,7 +1710,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
               "width": 100,
             }
           }
-          width={100}>
+          width={100}
+        >
           Last
         </Table.Th>
       </Table.Tr>
@@ -1570,16 +1722,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         isActive={false}
         isDisabled={false}
         isSelected={true}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={true}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1589,7 +1744,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           01
         </Table.Td>
         <Table.Td
@@ -1600,7 +1756,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Isaac
         </Table.Td>
         <Table.Td
@@ -1611,7 +1768,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Newton
         </Table.Td>
         <Table.Td
@@ -1622,7 +1780,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           inewton@example.com
         </Table.Td>
         <Table.Td
@@ -1633,7 +1792,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -1642,16 +1802,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         isActive={true}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1661,7 +1824,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           02
         </Table.Td>
         <Table.Td
@@ -1672,7 +1836,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Albert
         </Table.Td>
         <Table.Td
@@ -1683,7 +1848,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Einstein
         </Table.Td>
         <Table.Td
@@ -1694,7 +1860,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           aeinstein@example.com
         </Table.Td>
         <Table.Td
@@ -1705,7 +1872,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -1714,16 +1882,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1733,7 +1904,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           03
         </Table.Td>
         <Table.Td
@@ -1744,7 +1916,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Leonardo
         </Table.Td>
         <Table.Td
@@ -1755,7 +1928,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           da Vinci
         </Table.Td>
         <Table.Td
@@ -1766,7 +1940,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ldvinci@example.com
         </Table.Td>
         <Table.Td
@@ -1777,7 +1952,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Engineer
         </Table.Td>
       </Table.Tr>
@@ -1786,16 +1962,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1805,7 +1984,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           04
         </Table.Td>
         <Table.Td
@@ -1816,7 +1996,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Aristotle
         </Table.Td>
         <Table.Td
@@ -1827,7 +2008,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           --
         </Table.Td>
         <Table.Td
@@ -1838,7 +2020,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           aristotle@example.com
         </Table.Td>
         <Table.Td
@@ -1849,7 +2032,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Tutor
         </Table.Td>
       </Table.Tr>
@@ -1858,16 +2042,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1877,7 +2064,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           05
         </Table.Td>
         <Table.Td
@@ -1888,7 +2076,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Galileo
         </Table.Td>
         <Table.Td
@@ -1899,7 +2088,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Galilei
         </Table.Td>
         <Table.Td
@@ -1910,7 +2100,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ggalilei@example.com
         </Table.Td>
         <Table.Td
@@ -1921,7 +2112,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -1930,16 +2122,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -1949,7 +2144,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           06
         </Table.Td>
         <Table.Td
@@ -1960,7 +2156,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Charles
         </Table.Td>
         <Table.Td
@@ -1971,7 +2168,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Darwin
         </Table.Td>
         <Table.Td
@@ -1982,7 +2180,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           cdarwin@example.com
         </Table.Td>
         <Table.Td
@@ -1993,7 +2192,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Biologist
         </Table.Td>
       </Table.Tr>
@@ -2002,16 +2202,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2021,7 +2224,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           07
         </Table.Td>
         <Table.Td
@@ -2032,7 +2236,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Alexander
         </Table.Td>
         <Table.Td
@@ -2043,7 +2248,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Macedon
         </Table.Td>
         <Table.Td
@@ -2054,7 +2260,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           amacedon@example.com
         </Table.Td>
         <Table.Td
@@ -2065,7 +2272,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Head of State
         </Table.Td>
       </Table.Tr>
@@ -2074,16 +2282,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2093,7 +2304,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           08
         </Table.Td>
         <Table.Td
@@ -2104,7 +2316,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Plato
         </Table.Td>
         <Table.Td
@@ -2115,7 +2328,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Plato
         </Table.Td>
         <Table.Td
@@ -2126,7 +2340,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           plato@example.com
         </Table.Td>
         <Table.Td
@@ -2137,7 +2352,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Philosopher
         </Table.Td>
       </Table.Tr>
@@ -2146,16 +2362,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2165,7 +2384,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           09
         </Table.Td>
         <Table.Td
@@ -2176,7 +2396,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Mahatma
         </Table.Td>
         <Table.Td
@@ -2187,7 +2408,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Gandhi
         </Table.Td>
         <Table.Td
@@ -2198,7 +2420,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           mgandhi@example.com
         </Table.Td>
         <Table.Td
@@ -2209,7 +2432,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Politician
         </Table.Td>
       </Table.Tr>
@@ -2218,16 +2442,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -2237,7 +2464,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           10
         </Table.Td>
         <Table.Td
@@ -2248,7 +2476,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           William
         </Table.Td>
         <Table.Td
@@ -2259,7 +2488,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Shakespeare
         </Table.Td>
         <Table.Td
@@ -2270,7 +2500,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           wshakespear@example.com
         </Table.Td>
         <Table.Td
@@ -2281,7 +2512,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Playwright
         </Table.Td>
       </Table.Tr>
@@ -2293,30 +2525,35 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
 exports[`DataTable [common] example testing should match snapshot(s) for 04.interactive-table 1`] = `
 <EmptyStateWrapper
   Title="You have no items."
-  isEmpty={false}>
+  isEmpty={false}
+>
   <ScrollTable
     className="lucid-DataTable"
     density="extended"
     hasBorder={false}
     hasWordWrap={false}
-    tableWidth={null}>
+    tableWidth={null}
+  >
     <Table.Thead>
       <Table.Tr
         isActionable={false}
         isActive={false}
         isDisabled={false}
-        isSelected={false}>
+        isSelected={false}
+      >
         <Table.Th
           align="left"
           isResizable={false}
           isSorted={false}
           rowSpan={2}
-          sortDirection="up">
+          sortDirection="up"
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Th>
         <Table.Th
           align="center"
@@ -2331,7 +2568,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 41,
             }
-          }>
+          }
+        >
           ID
         </Table.Th>
         <Table.Th
@@ -2339,7 +2577,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           colSpan={2}
           isResizable={false}
           isSorted={false}
-          sortDirection="up">
+          sortDirection="up"
+        >
           Name
         </Table.Th>
         <Table.Th
@@ -2354,7 +2593,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           E-Mail
         </Table.Th>
         <Table.Th
@@ -2370,7 +2610,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Occupation
         </Table.Th>
       </Table.Tr>
@@ -2378,11 +2619,12 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         isActionable={false}
         isActive={false}
         isDisabled={false}
-        isSelected={false}>
+        isSelected={false}
+      >
         <Table.Th
           align="left"
           hasBorderLeft={true}
-          isResizable={false}
+          isResizable={true}
           isSortable={true}
           isSorted={false}
           onClick={[Function]}
@@ -2392,13 +2634,14 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
               "width": 100,
             }
           }
-          width={100}>
+          width={100}
+        >
           First
         </Table.Th>
         <Table.Th
           align="left"
           hasBorderRight={true}
-          isResizable={false}
+          isResizable={true}
           isSortable={true}
           isSorted={false}
           onClick={[Function]}
@@ -2408,7 +2651,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
               "width": 100,
             }
           }
-          width={100}>
+          width={100}
+        >
           Last
         </Table.Th>
       </Table.Tr>
@@ -2419,16 +2663,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         isActive={false}
         isDisabled={false}
         isSelected={true}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={true}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="center"
@@ -2439,7 +2686,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 41,
             }
-          }>
+          }
+        >
           01
         </Table.Td>
         <Table.Td
@@ -2451,7 +2699,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Isaac
         </Table.Td>
         <Table.Td
@@ -2463,7 +2712,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Newton
         </Table.Td>
         <Table.Td
@@ -2475,7 +2725,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           inewton@example.com
         </Table.Td>
         <Table.Td
@@ -2487,7 +2738,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -2496,16 +2748,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         isActive={true}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="center"
@@ -2516,7 +2771,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 41,
             }
-          }>
+          }
+        >
           02
         </Table.Td>
         <Table.Td
@@ -2528,7 +2784,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Albert
         </Table.Td>
         <Table.Td
@@ -2540,7 +2797,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Einstein
         </Table.Td>
         <Table.Td
@@ -2552,7 +2810,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           aeinstein@example.com
         </Table.Td>
         <Table.Td
@@ -2564,7 +2823,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -2573,16 +2833,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="center"
@@ -2593,7 +2856,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 41,
             }
-          }>
+          }
+        >
           03
         </Table.Td>
         <Table.Td
@@ -2605,7 +2869,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Leonardo
         </Table.Td>
         <Table.Td
@@ -2617,7 +2882,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           da Vinci
         </Table.Td>
         <Table.Td
@@ -2629,7 +2895,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ldvinci@example.com
         </Table.Td>
         <Table.Td
@@ -2641,7 +2908,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Engineer
         </Table.Td>
       </Table.Tr>
@@ -2650,16 +2918,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="center"
@@ -2670,7 +2941,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 41,
             }
-          }>
+          }
+        >
           04
         </Table.Td>
         <Table.Td
@@ -2682,7 +2954,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Aristotle
         </Table.Td>
         <Table.Td
@@ -2694,7 +2967,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           --
         </Table.Td>
         <Table.Td
@@ -2706,7 +2980,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           aristotle@example.com
         </Table.Td>
         <Table.Td
@@ -2718,7 +2993,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Tutor
         </Table.Td>
       </Table.Tr>
@@ -2727,16 +3003,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="center"
@@ -2747,7 +3026,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 41,
             }
-          }>
+          }
+        >
           05
         </Table.Td>
         <Table.Td
@@ -2759,7 +3039,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Galileo
         </Table.Td>
         <Table.Td
@@ -2771,7 +3052,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Galilei
         </Table.Td>
         <Table.Td
@@ -2783,7 +3065,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ggalilei@example.com
         </Table.Td>
         <Table.Td
@@ -2795,7 +3078,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -2804,16 +3088,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="center"
@@ -2824,7 +3111,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 41,
             }
-          }>
+          }
+        >
           06
         </Table.Td>
         <Table.Td
@@ -2836,7 +3124,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Charles
         </Table.Td>
         <Table.Td
@@ -2848,7 +3137,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Darwin
         </Table.Td>
         <Table.Td
@@ -2860,7 +3150,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           cdarwin@example.com
         </Table.Td>
         <Table.Td
@@ -2872,7 +3163,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Biologist
         </Table.Td>
       </Table.Tr>
@@ -2881,16 +3173,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="center"
@@ -2901,7 +3196,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 41,
             }
-          }>
+          }
+        >
           07
         </Table.Td>
         <Table.Td
@@ -2913,7 +3209,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Alexander
         </Table.Td>
         <Table.Td
@@ -2925,7 +3222,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Macedon
         </Table.Td>
         <Table.Td
@@ -2937,7 +3235,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           amacedon@example.com
         </Table.Td>
         <Table.Td
@@ -2949,7 +3248,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Head of State
         </Table.Td>
       </Table.Tr>
@@ -2958,16 +3258,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="center"
@@ -2978,7 +3281,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 41,
             }
-          }>
+          }
+        >
           08
         </Table.Td>
         <Table.Td
@@ -2990,7 +3294,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Plato
         </Table.Td>
         <Table.Td
@@ -3002,7 +3307,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Plato
         </Table.Td>
         <Table.Td
@@ -3014,7 +3320,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           plato@example.com
         </Table.Td>
         <Table.Td
@@ -3026,7 +3333,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Philosopher
         </Table.Td>
       </Table.Tr>
@@ -3035,16 +3343,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="center"
@@ -3055,7 +3366,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 41,
             }
-          }>
+          }
+        >
           09
         </Table.Td>
         <Table.Td
@@ -3067,7 +3379,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Mahatma
         </Table.Td>
         <Table.Td
@@ -3079,7 +3392,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Gandhi
         </Table.Td>
         <Table.Td
@@ -3091,7 +3405,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           mgandhi@example.com
         </Table.Td>
         <Table.Td
@@ -3103,7 +3418,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Politician
         </Table.Td>
       </Table.Tr>
@@ -3112,16 +3428,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="center"
@@ -3132,7 +3451,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 41,
             }
-          }>
+          }
+        >
           10
         </Table.Td>
         <Table.Td
@@ -3144,7 +3464,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           William
         </Table.Td>
         <Table.Td
@@ -3156,7 +3477,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Shakespeare
         </Table.Td>
         <Table.Td
@@ -3168,7 +3490,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           wshakespear@example.com
         </Table.Td>
         <Table.Td
@@ -3180,7 +3503,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Playwright
         </Table.Td>
       </Table.Tr>
@@ -3192,18 +3516,21 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
 exports[`DataTable [common] example testing should match snapshot(s) for 05.disabled-rows 1`] = `
 <EmptyStateWrapper
   Title="You have no items."
-  isEmpty={false}>
+  isEmpty={false}
+>
   <ScrollTable
     className="lucid-DataTable"
     hasBorder={false}
     hasWordWrap={false}
-    tableWidth={null}>
+    tableWidth={null}
+  >
     <Table.Thead>
       <Table.Tr
         isActionable={false}
         isActive={false}
         isDisabled={false}
-        isSelected={false}>
+        isSelected={false}
+      >
         <Table.Th
           align="left"
           isResizable={false}
@@ -3215,7 +3542,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ID
         </Table.Th>
         <Table.Th
@@ -3229,7 +3557,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           First
         </Table.Th>
         <Table.Th
@@ -3243,7 +3572,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Last
         </Table.Th>
         <Table.Th
@@ -3257,7 +3587,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           E-Mail
         </Table.Th>
         <Table.Th
@@ -3271,7 +3602,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Occupation
         </Table.Th>
       </Table.Tr>
@@ -3282,7 +3614,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         isActive={false}
         isDisabled={true}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -3291,7 +3624,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           01
         </Table.Td>
         <Table.Td
@@ -3302,7 +3636,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Isaac
         </Table.Td>
         <Table.Td
@@ -3313,7 +3648,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Newton
         </Table.Td>
         <Table.Td
@@ -3324,7 +3660,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           inewton@example.com
         </Table.Td>
         <Table.Td
@@ -3335,7 +3672,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -3344,7 +3682,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -3353,7 +3692,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           02
         </Table.Td>
         <Table.Td
@@ -3364,7 +3704,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Albert
         </Table.Td>
         <Table.Td
@@ -3375,7 +3716,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Einstein
         </Table.Td>
         <Table.Td
@@ -3386,7 +3728,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           aeinstein@example.com
         </Table.Td>
         <Table.Td
@@ -3397,7 +3740,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -3406,7 +3750,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         isActive={false}
         isDisabled={true}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -3415,7 +3760,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           03
         </Table.Td>
         <Table.Td
@@ -3426,7 +3772,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Leonardo
         </Table.Td>
         <Table.Td
@@ -3437,7 +3784,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           da Vinci
         </Table.Td>
         <Table.Td
@@ -3448,7 +3796,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ldvinci@example.com
         </Table.Td>
         <Table.Td
@@ -3459,7 +3808,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Engineer
         </Table.Td>
       </Table.Tr>
@@ -3468,7 +3818,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -3477,7 +3828,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           04
         </Table.Td>
         <Table.Td
@@ -3488,7 +3840,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Aristotle
         </Table.Td>
         <Table.Td
@@ -3499,7 +3852,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           --
         </Table.Td>
         <Table.Td
@@ -3510,7 +3864,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           aristotle@example.com
         </Table.Td>
         <Table.Td
@@ -3521,7 +3876,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Tutor
         </Table.Td>
       </Table.Tr>
@@ -3530,7 +3886,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         isActive={false}
         isDisabled={true}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -3539,7 +3896,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           05
         </Table.Td>
         <Table.Td
@@ -3550,7 +3908,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Galileo
         </Table.Td>
         <Table.Td
@@ -3561,7 +3920,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Galilei
         </Table.Td>
         <Table.Td
@@ -3572,7 +3932,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ggalilei@example.com
         </Table.Td>
         <Table.Td
@@ -3583,7 +3944,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -3592,7 +3954,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -3601,7 +3964,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           06
         </Table.Td>
         <Table.Td
@@ -3612,7 +3976,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Charles
         </Table.Td>
         <Table.Td
@@ -3623,7 +3988,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Darwin
         </Table.Td>
         <Table.Td
@@ -3634,7 +4000,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           cdarwin@example.com
         </Table.Td>
         <Table.Td
@@ -3645,7 +4012,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Biologist
         </Table.Td>
       </Table.Tr>
@@ -3654,7 +4022,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         isActive={false}
         isDisabled={true}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -3663,7 +4032,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           07
         </Table.Td>
         <Table.Td
@@ -3674,7 +4044,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Alexander
         </Table.Td>
         <Table.Td
@@ -3685,7 +4056,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Macedon
         </Table.Td>
         <Table.Td
@@ -3696,7 +4068,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           amacedon@example.com
         </Table.Td>
         <Table.Td
@@ -3707,7 +4080,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Head of State
         </Table.Td>
       </Table.Tr>
@@ -3716,7 +4090,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -3725,7 +4100,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           08
         </Table.Td>
         <Table.Td
@@ -3736,7 +4112,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Plato
         </Table.Td>
         <Table.Td
@@ -3747,7 +4124,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Plato
         </Table.Td>
         <Table.Td
@@ -3758,7 +4136,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           plato@example.com
         </Table.Td>
         <Table.Td
@@ -3769,7 +4148,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Philosopher
         </Table.Td>
       </Table.Tr>
@@ -3778,7 +4158,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         isActive={false}
         isDisabled={true}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -3787,7 +4168,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           09
         </Table.Td>
         <Table.Td
@@ -3798,7 +4180,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Mahatma
         </Table.Td>
         <Table.Td
@@ -3809,7 +4192,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Gandhi
         </Table.Td>
         <Table.Td
@@ -3820,7 +4204,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           mgandhi@example.com
         </Table.Td>
         <Table.Td
@@ -3831,7 +4216,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Politician
         </Table.Td>
       </Table.Tr>
@@ -3840,7 +4226,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -3849,7 +4236,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           10
         </Table.Td>
         <Table.Td
@@ -3860,7 +4248,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           William
         </Table.Td>
         <Table.Td
@@ -3871,7 +4260,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Shakespeare
         </Table.Td>
         <Table.Td
@@ -3882,7 +4272,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           wshakespear@example.com
         </Table.Td>
         <Table.Td
@@ -3893,7 +4284,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Playwright
         </Table.Td>
       </Table.Tr>
@@ -3905,19 +4297,22 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
 exports[`DataTable [common] example testing should match snapshot(s) for 06.empty 1`] = `
 <EmptyStateWrapper
   Title="You have no items."
-  isEmpty={true}>
+  isEmpty={true}
+>
   <ScrollTable
     className="lucid-DataTable lucid-DataTable-full-width"
     density="extended"
     hasBorder={false}
     hasWordWrap={false}
-    tableWidth="100%">
+    tableWidth="100%"
+  >
     <Table.Thead>
       <Table.Tr
         isActionable={false}
         isActive={false}
         isDisabled={false}
-        isSelected={false}>
+        isSelected={false}
+      >
         <Table.Th
           align="left"
           isResizable={false}
@@ -3929,7 +4324,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ID
         </Table.Th>
         <Table.Th
@@ -3943,7 +4339,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           First
         </Table.Th>
         <Table.Th
@@ -3957,7 +4354,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Last
         </Table.Th>
         <Table.Th
@@ -3971,7 +4369,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           E-Mail
         </Table.Th>
         <Table.Th
@@ -3985,7 +4384,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Occupation
         </Table.Th>
       </Table.Tr>
@@ -4000,7 +4400,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4009,7 +4410,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4018,7 +4420,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4027,7 +4430,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -4036,7 +4440,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -4045,7 +4450,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -4056,7 +4462,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4065,7 +4472,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4074,7 +4482,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4083,7 +4492,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -4092,7 +4502,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -4101,7 +4512,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -4112,7 +4524,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4121,7 +4534,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4130,7 +4544,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4139,7 +4554,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -4148,7 +4564,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -4157,7 +4574,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -4168,7 +4586,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4177,7 +4596,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4186,7 +4606,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4195,7 +4616,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -4204,7 +4626,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -4213,7 +4636,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -4224,7 +4648,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4233,7 +4658,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4242,7 +4668,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4251,7 +4678,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -4260,7 +4688,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -4269,7 +4698,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -4280,7 +4710,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4289,7 +4720,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4298,7 +4730,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4307,7 +4740,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -4316,7 +4750,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -4325,7 +4760,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -4336,7 +4772,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4345,7 +4782,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4354,7 +4792,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4363,7 +4802,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -4372,7 +4812,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -4381,7 +4822,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -4392,7 +4834,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4401,7 +4844,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4410,7 +4854,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4419,7 +4864,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -4428,7 +4874,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -4437,7 +4884,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -4448,7 +4896,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4457,7 +4906,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4466,7 +4916,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4475,7 +4926,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -4484,7 +4936,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -4493,7 +4946,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -4504,7 +4958,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4513,7 +4968,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4522,7 +4978,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4531,7 +4988,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -4540,7 +4998,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -4549,7 +5008,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
     </Table.Tbody>
   </ScrollTable>
@@ -4558,7 +5018,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
 
 exports[`DataTable [common] example testing should match snapshot(s) for 07.empty-with-custom-title-and-body 1`] = `
 <EmptyStateWrapper
-  isEmpty={true}>
+  isEmpty={true}
+>
   <EmptyStateWrapper.Title>
     Something went wrong.
   </EmptyStateWrapper.Title>
@@ -4567,7 +5028,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
       Object {
         "fontSize": "12px",
       }
-    }>
+    }
+  >
     Echo park poutine esse tempor squid do. Lo-fi ramps XOXO chicharrones laboris, portland fugiat locavore. Fap four dollar toast keytar, cronut kogi fingerstache distillery microdosing everyday carry austin DIY dreamcatcher. Distillery flexitarian meditation laboris roof party. Cred raclette gastropub tilde PBR&B. Shoreditch poke adipisicing, reprehenderit lumbersexual succulents mustache officia franzen vinyl nostrud af. Hashtag bitters organic, before they sold out butcher cronut sapiente.
   </EmptyStateWrapper.Body>
   <ScrollTable
@@ -4575,13 +5037,15 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
     density="extended"
     hasBorder={false}
     hasWordWrap={false}
-    tableWidth="100%">
+    tableWidth="100%"
+  >
     <Table.Thead>
       <Table.Tr
         isActionable={false}
         isActive={false}
         isDisabled={false}
-        isSelected={false}>
+        isSelected={false}
+      >
         <Table.Th
           align="left"
           isResizable={false}
@@ -4593,7 +5057,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ID
         </Table.Th>
         <Table.Th
@@ -4607,7 +5072,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           First
         </Table.Th>
         <Table.Th
@@ -4621,7 +5087,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Last
         </Table.Th>
         <Table.Th
@@ -4635,7 +5102,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           E-Mail
         </Table.Th>
         <Table.Th
@@ -4649,7 +5117,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Occupation
         </Table.Th>
       </Table.Tr>
@@ -4664,7 +5133,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4673,7 +5143,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4682,7 +5153,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4691,7 +5163,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -4700,7 +5173,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -4709,7 +5183,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -4720,7 +5195,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4729,7 +5205,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4738,7 +5215,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4747,7 +5225,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -4756,7 +5235,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -4765,7 +5245,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -4776,7 +5257,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4785,7 +5267,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4794,7 +5277,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4803,7 +5287,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -4812,7 +5297,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -4821,7 +5307,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -4832,7 +5319,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4841,7 +5329,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4850,7 +5339,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4859,7 +5349,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -4868,7 +5359,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -4877,7 +5369,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -4888,7 +5381,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4897,7 +5391,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4906,7 +5401,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4915,7 +5411,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -4924,7 +5421,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -4933,7 +5431,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -4944,7 +5443,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4953,7 +5453,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4962,7 +5463,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -4971,7 +5473,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -4980,7 +5483,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -4989,7 +5493,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -5000,7 +5505,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5009,7 +5515,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5018,7 +5525,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5027,7 +5535,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -5036,7 +5545,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -5045,7 +5555,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -5056,7 +5567,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5065,7 +5577,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5074,7 +5587,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5083,7 +5597,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -5092,7 +5607,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -5101,7 +5617,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -5112,7 +5629,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5121,7 +5639,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5130,7 +5649,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5139,7 +5659,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -5148,7 +5669,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -5157,7 +5679,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -5168,7 +5691,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5177,7 +5701,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5186,7 +5711,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5195,7 +5721,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -5204,7 +5731,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -5213,7 +5741,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
     </Table.Tbody>
   </ScrollTable>
@@ -5222,26 +5751,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
 
 exports[`DataTable [common] example testing should match snapshot(s) for 08.empty-with-image 1`] = `
 <EmptyStateWrapper
-  isEmpty={true}>
+  isEmpty={true}
+>
   <EmptyStateWrapper.Title>
     This empty message has a large image in it.
   </EmptyStateWrapper.Title>
   <EmptyStateWrapper.Body>
     <img
-      src="https://dummyimage.com/375x150/ff69/fff" />
+      src="https://dummyimage.com/375x150/ff69/fff"
+    />
   </EmptyStateWrapper.Body>
   <ScrollTable
     className="lucid-DataTable lucid-DataTable-full-width"
     density="extended"
     hasBorder={false}
     hasWordWrap={false}
-    tableWidth="100%">
+    tableWidth="100%"
+  >
     <Table.Thead>
       <Table.Tr
         isActionable={false}
         isActive={false}
         isDisabled={false}
-        isSelected={false}>
+        isSelected={false}
+      >
         <Table.Th
           align="center"
           hasBorderLeft={true}
@@ -5255,7 +5788,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 41,
             }
-          }>
+          }
+        >
           ID
         </Table.Th>
         <Table.Th
@@ -5270,7 +5804,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           First
         </Table.Th>
         <Table.Th
@@ -5285,7 +5820,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Last
         </Table.Th>
         <Table.Th
@@ -5299,7 +5835,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           E-Mail
         </Table.Th>
         <Table.Th
@@ -5314,7 +5851,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Occupation
         </Table.Th>
       </Table.Tr>
@@ -5329,7 +5867,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="center"
           hasBorderLeft={true}
@@ -5338,7 +5877,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 41,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={true}
@@ -5347,7 +5887,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5356,7 +5897,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -5365,7 +5907,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={true}
@@ -5374,7 +5917,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -5385,7 +5929,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="center"
           hasBorderLeft={true}
@@ -5394,7 +5939,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 41,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={true}
@@ -5403,7 +5949,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5412,7 +5959,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -5421,7 +5969,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={true}
@@ -5430,7 +5979,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -5441,7 +5991,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="center"
           hasBorderLeft={true}
@@ -5450,7 +6001,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 41,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={true}
@@ -5459,7 +6011,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5468,7 +6021,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -5477,7 +6031,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={true}
@@ -5486,7 +6041,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -5497,7 +6053,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="center"
           hasBorderLeft={true}
@@ -5506,7 +6063,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 41,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={true}
@@ -5515,7 +6073,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5524,7 +6083,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -5533,7 +6093,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={true}
@@ -5542,7 +6103,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -5553,7 +6115,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="center"
           hasBorderLeft={true}
@@ -5562,7 +6125,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 41,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={true}
@@ -5571,7 +6135,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5580,7 +6145,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -5589,7 +6155,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={true}
@@ -5598,7 +6165,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -5609,7 +6177,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="center"
           hasBorderLeft={true}
@@ -5618,7 +6187,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 41,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={true}
@@ -5627,7 +6197,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5636,7 +6207,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -5645,7 +6217,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={true}
@@ -5654,7 +6227,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -5665,7 +6239,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="center"
           hasBorderLeft={true}
@@ -5674,7 +6249,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 41,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={true}
@@ -5683,7 +6259,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5692,7 +6269,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -5701,7 +6279,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={true}
@@ -5710,7 +6289,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -5721,7 +6301,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="center"
           hasBorderLeft={true}
@@ -5730,7 +6311,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 41,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={true}
@@ -5739,7 +6321,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5748,7 +6331,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -5757,7 +6341,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={true}
@@ -5766,7 +6351,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -5777,7 +6363,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="center"
           hasBorderLeft={true}
@@ -5786,7 +6373,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 41,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={true}
@@ -5795,7 +6383,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5804,7 +6393,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -5813,7 +6403,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={true}
@@ -5822,7 +6413,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -5833,7 +6425,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="center"
           hasBorderLeft={true}
@@ -5842,7 +6435,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 41,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={true}
@@ -5851,7 +6445,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5860,7 +6455,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -5869,7 +6465,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={true}
@@ -5878,7 +6475,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
     </Table.Tbody>
   </ScrollTable>
@@ -5889,18 +6487,21 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
 <EmptyStateWrapper
   Title="You have no items."
   isEmpty={true}
-  isLoading={true}>
+  isLoading={true}
+>
   <ScrollTable
     className="lucid-DataTable lucid-DataTable-full-width"
     hasBorder={false}
     hasWordWrap={false}
-    tableWidth="100%">
+    tableWidth="100%"
+  >
     <Table.Thead>
       <Table.Tr
         isActionable={false}
         isActive={false}
         isDisabled={false}
-        isSelected={false}>
+        isSelected={false}
+      >
         <Table.Th
           align="left"
           isResizable={false}
@@ -5912,7 +6513,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ID
         </Table.Th>
         <Table.Th
@@ -5926,7 +6528,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           First
         </Table.Th>
         <Table.Th
@@ -5940,7 +6543,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Last
         </Table.Th>
         <Table.Th
@@ -5954,7 +6558,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           E-Mail
         </Table.Th>
         <Table.Th
@@ -5968,7 +6573,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Occupation
         </Table.Th>
       </Table.Tr>
@@ -5983,7 +6589,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -5992,7 +6599,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6001,7 +6609,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6010,7 +6619,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -6019,7 +6629,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -6028,7 +6639,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -6039,7 +6651,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6048,7 +6661,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6057,7 +6671,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6066,7 +6681,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -6075,7 +6691,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -6084,7 +6701,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -6095,7 +6713,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6104,7 +6723,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6113,7 +6733,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6122,7 +6743,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -6131,7 +6753,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -6140,7 +6763,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -6151,7 +6775,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6160,7 +6785,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6169,7 +6795,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6178,7 +6805,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -6187,7 +6815,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -6196,7 +6825,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -6207,7 +6837,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6216,7 +6847,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6225,7 +6857,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6234,7 +6867,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -6243,7 +6877,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -6252,7 +6887,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -6263,7 +6899,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6272,7 +6909,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6281,7 +6919,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6290,7 +6929,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -6299,7 +6939,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -6308,7 +6949,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -6319,7 +6961,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6328,7 +6971,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6337,7 +6981,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6346,7 +6991,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -6355,7 +7001,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -6364,7 +7011,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -6375,7 +7023,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6384,7 +7033,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6393,7 +7043,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6402,7 +7053,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -6411,7 +7063,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -6420,7 +7073,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -6431,7 +7085,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6440,7 +7095,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6449,7 +7105,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6458,7 +7115,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -6467,7 +7125,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -6476,7 +7135,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -6487,7 +7147,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6496,7 +7157,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6505,7 +7167,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6514,7 +7177,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -6523,7 +7187,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -6532,7 +7197,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
     </Table.Tbody>
   </ScrollTable>
@@ -6542,30 +7208,35 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
 exports[`DataTable [common] example testing should match snapshot(s) for 10.min-rows 1`] = `
 <EmptyStateWrapper
   Title="You have no items."
-  isEmpty={false}>
+  isEmpty={false}
+>
   <ScrollTable
     className="lucid-DataTable lucid-DataTable-full-width"
     density="extended"
     hasBorder={false}
     hasWordWrap={false}
-    tableWidth="100%">
+    tableWidth="100%"
+  >
     <Table.Thead>
       <Table.Tr
         isActionable={false}
         isActive={false}
         isDisabled={false}
-        isSelected={false}>
+        isSelected={false}
+      >
         <Table.Th
           align="left"
           isResizable={false}
           isSorted={false}
           rowSpan={null}
-          sortDirection="up">
+          sortDirection="up"
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Th>
         <Table.Th
           align="left"
@@ -6578,7 +7249,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ID
         </Table.Th>
         <Table.Th
@@ -6592,7 +7264,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           First
         </Table.Th>
         <Table.Th
@@ -6606,7 +7279,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Last
         </Table.Th>
         <Table.Th
@@ -6620,7 +7294,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           E-Mail
         </Table.Th>
         <Table.Th
@@ -6634,7 +7309,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Occupation
         </Table.Th>
       </Table.Tr>
@@ -6645,16 +7321,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         isActive={false}
         isDisabled={false}
         isSelected={true}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={true}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6664,7 +7343,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           01
         </Table.Td>
         <Table.Td
@@ -6675,7 +7355,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Isaac
         </Table.Td>
         <Table.Td
@@ -6686,7 +7367,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Newton
         </Table.Td>
         <Table.Td
@@ -6697,7 +7379,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           inewton@example.com
         </Table.Td>
         <Table.Td
@@ -6708,7 +7391,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -6717,16 +7401,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         isActive={true}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6736,7 +7423,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           02
         </Table.Td>
         <Table.Td
@@ -6747,7 +7435,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Albert
         </Table.Td>
         <Table.Td
@@ -6758,7 +7447,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Einstein
         </Table.Td>
         <Table.Td
@@ -6769,7 +7459,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           aeinstein@example.com
         </Table.Td>
         <Table.Td
@@ -6780,7 +7471,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Physicist
         </Table.Td>
       </Table.Tr>
@@ -6789,16 +7481,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6808,7 +7503,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           03
         </Table.Td>
         <Table.Td
@@ -6819,7 +7515,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Leonardo
         </Table.Td>
         <Table.Td
@@ -6830,7 +7527,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           da Vinci
         </Table.Td>
         <Table.Td
@@ -6841,7 +7539,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           ldvinci@example.com
         </Table.Td>
         <Table.Td
@@ -6852,7 +7551,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Engineer
         </Table.Td>
       </Table.Tr>
@@ -6861,16 +7561,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         isActive={false}
         isDisabled={false}
         isSelected={false}
-        onClick={[Function]}>
+        onClick={[Function]}
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false}>
+          hasBorderRight={false}
+        >
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
             isSelected={false}
-            onSelect={[Function]} />
+            onSelect={[Function]}
+          />
         </Table.Td>
         <Table.Td
           align="left"
@@ -6880,7 +7583,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           04
         </Table.Td>
         <Table.Td
@@ -6891,7 +7595,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Aristotle
         </Table.Td>
         <Table.Td
@@ -6902,7 +7607,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           --
         </Table.Td>
         <Table.Td
@@ -6913,7 +7619,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": undefined,
             }
-          }>
+          }
+        >
           aristotle@example.com
         </Table.Td>
         <Table.Td
@@ -6924,7 +7631,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          }>
+          }
+        >
           Tutor
         </Table.Td>
       </Table.Tr>
@@ -6937,11 +7645,13 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false} />
+          hasBorderRight={false}
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6950,7 +7660,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6959,7 +7670,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -6968,7 +7680,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -6977,7 +7690,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -6986,7 +7700,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -6997,11 +7712,13 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false} />
+          hasBorderRight={false}
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -7010,7 +7727,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -7019,7 +7737,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -7028,7 +7747,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -7037,7 +7757,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -7046,7 +7767,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
       <Table.Tr
         isActionable={false}
@@ -7057,11 +7779,13 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           Object {
             "height": "32px",
           }
-        }>
+        }
+      >
         <Table.Td
           align="left"
           hasBorderLeft={false}
-          hasBorderRight={false} />
+          hasBorderRight={false}
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -7070,7 +7794,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -7079,7 +7804,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="left"
           hasBorderLeft={false}
@@ -7088,7 +7814,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
         <Table.Td
           align="center"
           hasBorderLeft={false}
@@ -7097,7 +7824,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": undefined,
             }
-          } />
+          }
+        />
         <Table.Td
           align="right"
           hasBorderLeft={false}
@@ -7106,7 +7834,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             Object {
               "width": 100,
             }
-          } />
+          }
+        />
       </Table.Tr>
     </Table.Tbody>
   </ScrollTable>
