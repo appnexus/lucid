@@ -182,6 +182,7 @@ export default React.createClass({
 						field='first_name'
 						width={100}
 						hasBorderLeft
+						isResizable
 						isSortable
 						isSorted={currentlySortedField === 'first_name'}
 						sortDirection={currentlySortedFieldDirection}
@@ -194,6 +195,7 @@ export default React.createClass({
 						align='left'
 						width={100}
 						hasBorderRight
+						isResizable
 						isSortable
 						isSorted={currentlySortedField === 'last_name'}
 						sortDirection={currentlySortedFieldDirection}

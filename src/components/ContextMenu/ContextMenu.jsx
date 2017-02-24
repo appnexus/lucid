@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import Portal from '../Portal/Portal';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
-import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
+import { getAbsoluteBoundingClientRect, sharesAncestor } from '../../util/dom-helpers';
 import { lucidClassNames } from '../../util/style-helpers';
 
 const cx = lucidClassNames.bind('&-ContextMenu');
@@ -133,7 +133,6 @@ const ContextMenu = createClass({
 	},
 
 	componentDidMount() {
-
 		_.defer(() => this.alignFlyOut());
 		this.updateTargetRectangleIntervalId = setInterval(() => {
 			if (this.props.isExpanded) {
@@ -141,19 +140,39 @@ const ContextMenu = createClass({
 			}
 		}, 10);
 
-		this.onClickBodyEventListener = window.addEventListener('click', (event) => {
-			if (this.props.onClickOut && this.refs.flyOutPortal) {
-				const flyOutEl = this.refs.flyOutPortal.portalElement.firstChild;
-				if (!(flyOutEl.contains(event.target) || this.refs.target.contains(event.target))) {
-					this.props.onClickOut({ props: this.props, event });
-				}
-			}
-		});
+		document.body.addEventListener('click', this.handleBodyClick);
 	},
 
 	componentWillUnmount() {
 		clearInterval(this.updateTargetRectangleIntervalId);
-		document.body.removeEventListener('click', this.onClickBodyEventListener);
+		document.body.removeEventListener('click', this.handleBodyClick);
+	},
+
+	handleBodyClick(event) {
+		const {
+			props,
+			props: {
+				onClickOut,
+			},
+			refs: {
+				flyOutPortal,
+				target,
+			},
+		} = this;
+
+		if (onClickOut && flyOutPortal) {
+			const flyOutEl = flyOutPortal.portalElement.firstChild;
+			const wasALabelClick = event.target.nodeName === 'INPUT' && sharesAncestor(event.target, target, 'LABEL');
+
+			// Attempt to detect <label> click and ignore it
+			if (wasALabelClick) {
+				return;
+			}
+
+			if (!(flyOutEl.contains(event.target) || target.contains(event.target))) {
+				onClickOut({ props, event });
+			}
+		}
 	},
 
 	componentWillReceiveProps() {
