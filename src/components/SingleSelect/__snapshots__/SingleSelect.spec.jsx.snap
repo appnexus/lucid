@@ -2,6 +2,18 @@
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SingleSelect"
   direction="down"
@@ -64,6 +76,18 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 02.named-options 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SingleSelect"
   direction="down"
@@ -129,6 +153,18 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 03.disabled-options 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SingleSelect"
   direction="down"
@@ -191,6 +227,18 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.d
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 04.disabled-select 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SingleSelect"
   direction="down"
@@ -253,6 +301,18 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.d
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 05.grouped-options 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SingleSelect"
   direction="down"
@@ -374,6 +434,18 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 06.no-unselect 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SingleSelect"
   direction="down"
@@ -436,6 +508,18 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.n
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 07.max-menu-height 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SingleSelect"
   direction="down"
@@ -1464,6 +1548,18 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 08.rich-content 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SingleSelect"
   direction="down"
@@ -1562,6 +1658,18 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 09.no-selection-highlighting 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SingleSelect"
   direction="down"
@@ -1624,6 +1732,18 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.n
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 10.array-options 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SingleSelect"
   direction="down"
@@ -1686,6 +1806,18 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.a
 
 exports[`SingleSelect [common] example testing should match snapshot(s) for 11.stateless 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SingleSelect"
   direction="down"

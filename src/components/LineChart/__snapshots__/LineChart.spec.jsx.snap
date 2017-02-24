@@ -2106,6 +2106,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
       directonOffset={-46.5}
       getAlignmentOffset={[Function]}
       isExpanded={true}
+      minWidthOffset={0}
       onClickOut={null}
       portalId={null}
     >
