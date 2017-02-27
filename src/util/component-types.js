@@ -103,8 +103,8 @@ export function getFirst(props, types, defaultValue) {
 export function omitProps(props, type, keys = []) {
 	const isLucidComponent = _.has(type, '_isPrivate');
 
-	// We only want to exclude the `callbackId` component when we're omitting
-	// props destined for a non-lucid component
+	// We only want to exclude the `callbackId` key when we're omitting props
+	// destined for a non-lucid component
 	const additionalOmittedKeys = isLucidComponent ? ['initialState'] : ['initialState', 'callbackId'];
 
 	return _.omit(props, _.keys(type.propTypes).concat(keys).concat(additionalOmittedKeys));
