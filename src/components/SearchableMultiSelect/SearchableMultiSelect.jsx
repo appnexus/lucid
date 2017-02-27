@@ -303,16 +303,15 @@ const SearchableMultiSelect = createClass({
 				maxMenuHeight,
 				selectedIndices,
 				DropMenu: dropMenuProps,
+				DropMenu: {
+					optionContainerStyle,
+				},
 				responsiveMode,
 				searchText,
 				hasRemoveAll,
 				...passThroughs
 			},
 		} = this;
-
-		const {
-			optionContainerStyle,
-		} = dropMenuProps;
 
 		const searchFieldProps = _.get(getFirst(props, SearchField), 'props', {});
 		const optionsProps = _.map(findTypes(props, SearchableMultiSelect.Option), 'props');
