@@ -16,7 +16,6 @@ const {
 	func,
 	node,
 	string,
-	object,
 } = React.PropTypes;
 
 /**
@@ -47,10 +46,6 @@ const Tag = createClass({
 		 * Appended to the component-specific class names set on the root element.
 		 */
 		className: string,
-		/**
-		 * Styles that are passed through to the root container.
-		 */
-		style: object,
 	},
 
 	getDefaultProps() {
@@ -68,7 +63,6 @@ const Tag = createClass({
 			isRemovable,
 			children,
 			className,
-			style,
 			...passThroughs
 		} = this.props;
 
@@ -80,7 +74,6 @@ const Tag = createClass({
 			<div
 				{...omitProps(passThroughs, Tag)}
 				className={cx('&', { '&-leaf': isLeaf }, className)}
-				style={style}
 			>
 				<div className={cx('&-inner')}>
 					<div className={cx('&-inner-content')}>
