@@ -49,7 +49,6 @@ import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
 import DangerLightIcon from './components/Icon/DangerLightIcon/DangerLightIcon';
 import DataTable from './components/DataTable/DataTable';
-import EmptyStateWrapper from './components/EmptyStateWrapper/EmptyStateWrapper';
 import DataViewIcon from './components/Icon/DataViewIcon/DataViewIcon';
 import Dialog from './components/Dialog/Dialog';
 import DownloadIcon from './components/Icon/DownloadIcon/DownloadIcon';
@@ -59,6 +58,7 @@ import DuplicateIcon from './components/Icon/DuplicateIcon/DuplicateIcon';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EditPageIcon from './components/Icon/EditPageIcon/EditPageIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
+import EmptyStateWrapper from './components/EmptyStateWrapper/EmptyStateWrapper';
 import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
 import FileIcon from './components/Icon/FileIcon/FileIcon';
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
@@ -85,6 +85,7 @@ import MinusCircleIcon from './components/Icon/MinusCircleIcon/MinusCircleIcon';
 import MinusCircleLightIcon from './components/Icon/MinusCircleLightIcon/MinusCircleLightIcon';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import NewWindowIcon from './components/Icon/NewWindowIcon/NewWindowIcon';
+import OutwardArrowsIcon from './components/Icon/OutwardArrowsIcon/OutwardArrowsIcon';
 import Overlay from './components/Overlay/Overlay';
 import OverlayWrapper from './components/OverlayWrapper/OverlayWrapper';
 import Panel from './components/Panel/Panel';
@@ -235,6 +236,7 @@ export {
 	MinusCircleLightIcon,
 	MinusIcon,
 	NewWindowIcon,
+	OutwardArrowsIcon,
 	Overlay,
 	OverlayWrapper,
 	Paginator,
