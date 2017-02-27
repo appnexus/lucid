@@ -2,6 +2,18 @@
 
 exports[`Autocomplete [common] example testing should match snapshot(s) for 1.basic 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-Autocomplete"
   direction="down"
@@ -90,6 +102,18 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 1.ba
 
 exports[`Autocomplete [common] example testing should match snapshot(s) for 2.interactive 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-Autocomplete"
   direction="down"
@@ -1921,6 +1945,18 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 2.in
 
 exports[`Autocomplete [common] example testing should match snapshot(s) for 3.disabled 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-Autocomplete"
   direction="down"
@@ -1960,6 +1996,18 @@ exports[`Autocomplete [common] example testing should match snapshot(s) for 3.di
 
 exports[`Autocomplete [common] example testing should match snapshot(s) for 4.stateless 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-Autocomplete"
   direction="down"

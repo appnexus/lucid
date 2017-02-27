@@ -1,0 +1,64 @@
+.lucid-SearchableMultiSelect {
+	// Increase specificity to minimum necessary to beat DropMenu
+	&-DropMenu&-DropMenu&-DropMenu {
+		display: block;
+	}
+
+	&-DropMenu {
+		.lucid-DropMenu-Option {
+			padding: 0 @size-XXS;
+		}
+	}
+	&-DropMenu-is-small {
+		.lucid-DropMenu-Option {
+			height: @size-height-L;
+			padding: 0 @size-S;
+		}
+	}
+
+	.lucid-ContextMenu {
+		display: block;
+	}
+
+	&-search {
+		margin-bottom: @size-standard;
+
+		&-is-small {
+			// Prevents zooming on focus
+			.lucid-TextField {
+				font-size: 16px;
+			}
+		}
+	}
+
+	&-checkbox {
+		display: flex;
+		align-items: center;
+	}
+	&-checkbox-label {
+		margin-left: @size-XXS;
+	}
+
+	&-noresults {
+		color: @color-disabledText;
+		font-style: italic;
+	}
+
+	&-Option-underline-match,
+	&-Option-underline-post,
+	&-Option-underline-pre {
+		white-space: pre;
+	}
+
+	&-Option-underline-match {
+		text-decoration: underline;
+	}
+
+	&-loading {
+		justify-content: center;
+
+		&.lucid-DropMenu-Option.lucid-DropMenu-Option-is-focused {
+			background: none;
+		}
+	}
+}

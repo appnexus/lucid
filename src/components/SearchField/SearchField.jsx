@@ -97,8 +97,9 @@ const SearchField = createClass({
 		*/
 		className: string,
 		/**
-		* Passed through to the root element.
-		*/
+		 * Icon this is displayed on the right side of the SearchField. Any of the
+		 * lucid `*Icon` components should work.
+		 */
 		Icon: node,
 	},
 

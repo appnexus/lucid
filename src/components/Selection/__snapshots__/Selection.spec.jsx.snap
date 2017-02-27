@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Selection render should match snapshot for container 1`] = `
+<div
+  className="lucid-Selection lucid-Selection-is-large lucid-Selection-container"
+>
+  <div
+    className="lucid-Selection-content"
+  >
+    <div
+      className="lucid-Selection-label-container"
+    >
+      <span
+        className="lucid-Selection-label"
+      />
+      <CrossIcon
+        className="lucid-Selection-close-button"
+        isClickable={true}
+        onClick={[Function]}
+        size={26}
+        viewBox="-3 -2 20 20"
+      />
+    </div>
+    cont
+  </div>
+</div>
+`;
+
+exports[`Selection render should match snapshot for custom icons 1`] = `
+<div
+  className="lucid-Selection lucid-Selection-is-large lucid-Selection-default"
+>
+  <div
+    className="lucid-Selection-Icon fake-icon"
+  />
+  <div
+    className="lucid-Selection-content"
+  >
+    <div
+      className="lucid-Selection-label-container"
+    >
+      <span
+        className="lucid-Selection-label"
+      />
+      <CrossIcon
+        className="lucid-Selection-close-button"
+        isClickable={true}
+        onClick={[Function]}
+        size={26}
+        viewBox="-3 -2 20 20"
+      />
+    </div>
+    <Selection.Icon>
+      <div
+        className="fake-icon"
+      />
+    </Selection.Icon>
+  </div>
+</div>
+`;
+
+exports[`Selection render should match snapshot for danger 1`] = `
+<div
+  className="lucid-Selection lucid-Selection-is-large lucid-Selection-danger"
+>
+  <MinusCircleIcon
+    className="lucid-Selection-Icon lucid-Selection-Icon-is-large"
+  />
+  <div
+    className="lucid-Selection-content"
+  >
+    <div
+      className="lucid-Selection-label-container"
+    >
+      <span
+        className="lucid-Selection-label"
+      />
+      <CrossIcon
+        className="lucid-Selection-close-button"
+        isClickable={true}
+        onClick={[Function]}
+        size={26}
+        viewBox="-3 -2 20 20"
+      />
+    </div>
+    cont
+  </div>
+</div>
+`;
+
+exports[`Selection render should match snapshot for info 1`] = `
+<div
+  className="lucid-Selection lucid-Selection-is-large lucid-Selection-info"
+>
+  <InfoIcon
+    className="lucid-Selection-Icon lucid-Selection-Icon-is-large"
+  />
+  <div
+    className="lucid-Selection-content"
+  >
+    <div
+      className="lucid-Selection-label-container"
+    >
+      <span
+        className="lucid-Selection-label"
+      />
+      <CrossIcon
+        className="lucid-Selection-close-button"
+        isClickable={true}
+        onClick={[Function]}
+        size={26}
+        viewBox="-3 -2 20 20"
+      />
+    </div>
+    cont
+  </div>
+</div>
+`;
+
+exports[`Selection render should match snapshot for nested selections 1`] = `
+<div
+  className="lucid-Selection lucid-Selection-is-large lucid-Selection-default"
+>
+  <div
+    className="lucid-Selection-content"
+  >
+    <div
+      className="lucid-Selection-label-container"
+    >
+      <span
+        className="lucid-Selection-label"
+      />
+      <CrossIcon
+        className="lucid-Selection-close-button"
+        isClickable={true}
+        onClick={[Function]}
+        size={26}
+        viewBox="-3 -2 20 20"
+      />
+    </div>
+    <div
+      className="lucid-Selection-children-container"
+    >
+      <Selection
+        hasBackground={false}
+        isBold={false}
+        isRemovable={true}
+        kind="default"
+        onRemove={[Function]}
+        responsiveMode="large"
+      >
+        There
+      </Selection>
+    </div>
+    Hello
+  </div>
+</div>
+`;
+
+exports[`Selection render should match snapshot for non removable 1`] = `
+<div
+  className="lucid-Selection lucid-Selection-is-large lucid-Selection-default"
+>
+  <div
+    className="lucid-Selection-content"
+  >
+    <div
+      className="lucid-Selection-label-container"
+    >
+      <span
+        className="lucid-Selection-label"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Selection render should match snapshot for responsiveMode small 1`] = `
+<div
+  className="lucid-Selection lucid-Selection-is-small lucid-Selection-default"
+>
+  <div
+    className="lucid-Selection-content"
+  >
+    <div
+      className="lucid-Selection-label-container"
+    >
+      <span
+        className="lucid-Selection-label lucid-Selection-label-is-small"
+      />
+      <CrossIcon
+        className="lucid-Selection-close-button"
+        isClickable={true}
+        onClick={[Function]}
+        size={44}
+        viewBox="-6 -6 28 28"
+      />
+    </div>
+    Yolo
+  </div>
+</div>
+`;
+
+exports[`Selection render should match snapshot for success 1`] = `
+<div
+  className="lucid-Selection lucid-Selection-is-large lucid-Selection-success"
+>
+  <SuccessIcon
+    className="lucid-Selection-Icon lucid-Selection-Icon-is-large"
+  />
+  <div
+    className="lucid-Selection-content"
+  >
+    <div
+      className="lucid-Selection-label-container"
+    >
+      <span
+        className="lucid-Selection-label"
+      />
+      <CrossIcon
+        className="lucid-Selection-close-button"
+        isClickable={true}
+        onClick={[Function]}
+        size={26}
+        viewBox="-3 -2 20 20"
+      />
+    </div>
+    cont
+  </div>
+</div>
+`;
+
+exports[`Selection render should match snapshot for warning 1`] = `
+<div
+  className="lucid-Selection lucid-Selection-is-large lucid-Selection-warning"
+>
+  <WarningIcon
+    className="lucid-Selection-Icon lucid-Selection-Icon-is-large"
+  />
+  <div
+    className="lucid-Selection-content"
+  >
+    <div
+      className="lucid-Selection-label-container"
+    >
+      <span
+        className="lucid-Selection-label"
+      />
+      <CrossIcon
+        className="lucid-Selection-close-button"
+        isClickable={true}
+        onClick={[Function]}
+        size={26}
+        viewBox="-3 -2 20 20"
+      />
+    </div>
+    cont
+  </div>
+</div>
+`;
