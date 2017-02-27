@@ -10,6 +10,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 01.basic
     directonOffset={0}
     getAlignmentOffset={[Function]}
     isExpanded={false}
+    minWidthOffset={0}
     onClickOut={[Function]}
     portalId="DropMenu-Portal-7"
   >
@@ -78,6 +79,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 02.butto
     directonOffset={0}
     getAlignmentOffset={[Function]}
     isExpanded={false}
+    minWidthOffset={0}
     onClickOut={[Function]}
     portalId="DropMenu-Portal-8"
   >
@@ -154,6 +156,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 03.disab
     directonOffset={0}
     getAlignmentOffset={[Function]}
     isExpanded={false}
+    minWidthOffset={0}
     onClickOut={[Function]}
     portalId="DropMenu-Portal-9"
   >
@@ -228,6 +231,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 04.disab
     directonOffset={0}
     getAlignmentOffset={[Function]}
     isExpanded={false}
+    minWidthOffset={0}
     onClickOut={[Function]}
     portalId="DropMenu-Portal-10"
   >
@@ -304,6 +308,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 05.group
     directonOffset={0}
     getAlignmentOffset={[Function]}
     isExpanded={false}
+    minWidthOffset={0}
     onClickOut={[Function]}
     portalId="DropMenu-Portal-11"
   >
@@ -433,6 +438,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 06.text-
     directonOffset={0}
     getAlignmentOffset={[Function]}
     isExpanded={false}
+    minWidthOffset={0}
     onClickOut={[Function]}
     portalId="DropMenu-Portal-12"
   >
@@ -514,6 +520,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 07.actio
     directonOffset={0}
     getAlignmentOffset={[Function]}
     isExpanded={false}
+    minWidthOffset={0}
     onClickOut={[Function]}
     portalId="DropMenu-Portal-13"
   >
@@ -586,6 +593,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 08.no-wr
     directonOffset={0}
     getAlignmentOffset={[Function]}
     isExpanded={false}
+    minWidthOffset={0}
     onClickOut={[Function]}
     portalId="DropMenu-Portal-14"
   >
@@ -662,6 +670,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 09.state
     directonOffset={0}
     getAlignmentOffset={[Function]}
     isExpanded={true}
+    minWidthOffset={0}
     onClickOut={[Function]}
     portalId="DropMenu-Portal-15"
   >

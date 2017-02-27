@@ -2,6 +2,18 @@
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SplitButton"
   direction="down"
@@ -78,6 +90,18 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 2`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SplitButton"
   direction="down"
@@ -156,6 +180,18 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 3`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SplitButton"
   direction="down"
@@ -234,6 +270,18 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 4`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SplitButton"
   direction="down"
@@ -312,6 +360,18 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 5`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SplitButton"
   direction="down"
@@ -390,6 +450,18 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 01.default 6`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SplitButton"
   direction="down"
@@ -468,6 +540,18 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 02.success 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SplitButton"
   direction="down"
@@ -553,6 +637,18 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 03.disabled 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SplitButton"
   direction="down"
@@ -636,6 +732,18 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
 
 exports[`SplitButton [common] example testing should match snapshot(s) for 04.up 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SplitButton"
   direction="up"

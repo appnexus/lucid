@@ -3,6 +3,7 @@ import Accordion, { AccordionDumb } from './components/Accordion/Accordion';
 import Autocomplete, { AutocompleteDumb } from './components/Autocomplete/Autocomplete';
 import ButtonGroup, { ButtonGroupDumb } from './components/ButtonGroup/ButtonGroup';
 import SearchableSelect, { SearchableSelectDumb } from './components/SearchableSelect/SearchableSelect';
+import SearchableMultiSelect, { SearchableMultiSelectDumb } from './components/SearchableMultiSelect/SearchableMultiSelect';
 import DropMenu, { DropMenuDumb } from './components/DropMenu/DropMenu';
 import Expander, { ExpanderDumb } from './components/Expander/Expander';
 import ExpanderPanel, { ExpanderPanelDumb } from './components/ExpanderPanel/ExpanderPanel';
@@ -99,6 +100,7 @@ import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import Resizer from './components/Resizer/Resizer';
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
+import Selection from './components/Selection/Selection';
 import SeparatorIcon from './components/Icon/SeparatorIcon/SeparatorIcon';
 import SettingsIcon from './components/Icon/SettingsIcon/SettingsIcon';
 import ShoppingCartIcon from './components/Icon/ShoppingCartIcon/ShoppingCartIcon';
@@ -184,6 +186,8 @@ export {
 	Collapsible,
 	SearchableSelect,
 	SearchableSelectDumb,
+	SearchableMultiSelect,
+	SearchableMultiSelectDumb,
 	ContextMenu,
 	CrossIcon,
 	DangerIcon,
@@ -254,6 +258,7 @@ export {
 	SearchField,
 	SearchFieldDumb,
 	SearchIcon,
+	Selection,
 	SeparatorIcon,
 	SettingsIcon,
 	ShoppingCartIcon,

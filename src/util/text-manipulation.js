@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 export function partitionText(text, pattern, length) {
 	const index = text.search(pattern);
 
@@ -8,4 +10,27 @@ export function partitionText(text, pattern, length) {
 	} else {
 		return [text.substring(0, index), text.substr(index, length), text.substring(index + length)];
 	}
+}
+
+export function getCombinedChildText(node) {
+	if (!node.children) {
+		return '';
+	}
+
+	if (_.isString(node.children)) {
+		return node.children;
+	}
+
+	return node.children
+		.filter((child) => !_.isString(child))
+		.map((child) => getCombinedChildText(child.props))
+		.reduce(((combinedText, childText) => combinedText + childText), _.find(node.children, _.isString) || '');
+}
+
+export function propsSearch(text, node) {
+	if (!text) {
+		return true;
+	}
+
+	return new RegExp(_.escapeRegExp(text), 'i').test(getCombinedChildText(node));
 }

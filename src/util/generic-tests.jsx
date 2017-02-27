@@ -19,6 +19,15 @@ export function common(Component, {
 	}
 
 	describe('[common]', () => {
+
+		if (!Component) {
+			throw new Error('An undefined component was passed to generic tests.');
+		}
+
+		if (Component._isLucidHybridComponent) {
+			throw new Error(`You're trying to run generic tests on a hybrid component which is bad and won't work and will make you cry. Check your spec files for ${Component.displayName} and import the raw component instead of the hybrid version.`);
+		}
+
 		it('should have a `displayName` defined', () => {
 			assert(Component.displayName);
 		});
