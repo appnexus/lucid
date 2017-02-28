@@ -13,7 +13,7 @@ export default React.createClass({
 					const responsiveMode = width >= 768 ? 'large' : 'small';
 
 					return (
-						<div style={{ marginBottom: '300px' }}>
+						<div>
 							<h5>Loading</h5>
 							<SearchableMultiSelect
 								responsiveMode={responsiveMode}
