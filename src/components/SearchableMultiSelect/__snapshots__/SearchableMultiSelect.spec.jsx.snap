@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchableMultiSelect [common] example testing should match snapshot(s) for 03.asynchronous 1`] = `
+<div
+  className="lucid-SearchableMultiSelect"
+>
+  <DropMenu
+    ContextMenu={
+      Object {
+        "alignmentOffset": -13,
+        "directonOffset": -1,
+        "minWidthOffset": -28,
+      }
+    }
+    alignment="start"
+    className="lucid-SearchableMultiSelect-DropMenu"
+    direction="down"
+    flyOutStyle={
+      Object {
+        "maxHeight": "18em",
+      }
+    }
+    focusedIndex={null}
+    isDisabled={false}
+    isExpanded={false}
+    isLoading={false}
+    onCollapse={[Function]}
+    onExpand={[Function]}
+    onFocusNext={[Function]}
+    onFocusOption={[Function]}
+    onFocusPrev={[Function]}
+    onSelect={[Function]}
+    optionContainerStyle={Object {}}
+    selectedIndices={null}
+  >
+    <DropMenu.Control>
+      <SearchField
+        className="lucid-SearchableMultiSelect-search"
+        debounceLevel={500}
+        isDisabled={false}
+        onChange={[Function]}
+        onChangeDebounced={[Function]}
+        onSubmit={[Function]}
+        value=""
+      />
+    </DropMenu.Control>
+    <DropMenu.Option
+      isDisabled={true}
+      isHidden={false}
+      isWrapped={true}
+    >
+      <span
+        className="lucid-SearchableMultiSelect-noresults"
+      >
+        No results match "
+        "
+      </span>
+    </DropMenu.Option>
+  </DropMenu>
+</div>
+`;
