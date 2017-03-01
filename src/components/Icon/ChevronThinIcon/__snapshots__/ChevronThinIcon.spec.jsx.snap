@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-ChevronThinIcon"
+  isBadge={false}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M 5,0 L 13,8 L 5,16 L 4.25,15.25 L 11.50,8 L 4.25,0.75 Z"
+  />
+</Icon>
+`;
+
+exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-ChevronThinIcon"
+  isBadge={false}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M 12,0 L 4,8 L 12,16 L 12.75,15.25 L 5.50,8 L 12.75,0.75 Z"
+  />
+</Icon>
+`;
+
+exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-ChevronThinIcon"
+  isBadge={false}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M 5,0 L 13,8 L 5,16 L 4.25,15.25 L 11.50,8 L 4.25,0.75 Z"
+  />
+</Icon>
+`;
+
+exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-ChevronThinIcon"
+  isBadge={false}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M 5,0 L 13,8 L 5,16 L 4.25,15.25 L 11.50,8 L 4.25,0.75 Z"
+  />
+</Icon>
+`;
+
+exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 2.clickable 2`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-ChevronThinIcon"
+  isBadge={false}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M 12,0 L 4,8 L 12,16 L 12.75,15.25 L 5.50,8 L 12.75,0.75 Z"
+  />
+</Icon>
+`;
+
+exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 2.clickable 3`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-ChevronThinIcon"
+  isBadge={false}
+  isClickable={true}
+  isDisabled={false}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M 5,0 L 13,8 L 5,16 L 4.25,15.25 L 11.50,8 L 4.25,0.75 Z"
+  />
+</Icon>
+`;
+
+exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-ChevronThinIcon"
+  isBadge={false}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M 5,0 L 13,8 L 5,16 L 4.25,15.25 L 11.50,8 L 4.25,0.75 Z"
+  />
+</Icon>
+`;
+
+exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 3.disabled 2`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-ChevronThinIcon"
+  isBadge={false}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M 12,0 L 4,8 L 12,16 L 12.75,15.25 L 5.50,8 L 12.75,0.75 Z"
+  />
+</Icon>
+`;
+
+exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 3.disabled 3`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-ChevronThinIcon"
+  isBadge={false}
+  isDisabled={true}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <path
+    d="M 5,0 L 13,8 L 5,16 L 4.25,15.25 L 11.50,8 L 4.25,0.75 Z"
+  />
+</Icon>
+`;

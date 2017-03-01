@@ -3,6 +3,7 @@ import Accordion, { AccordionDumb } from './components/Accordion/Accordion';
 import Autocomplete, { AutocompleteDumb } from './components/Autocomplete/Autocomplete';
 import ButtonGroup, { ButtonGroupDumb } from './components/ButtonGroup/ButtonGroup';
 import SearchableSelect, { SearchableSelectDumb } from './components/SearchableSelect/SearchableSelect';
+import DateSelect, { DateSelectDumb }  from './components/DateSelect/DateSelect';
 import SearchableMultiSelect, { SearchableMultiSelectDumb } from './components/SearchableMultiSelect/SearchableMultiSelect';
 import DropMenu, { DropMenuDumb } from './components/DropMenu/DropMenu';
 import Expander, { ExpanderDumb } from './components/Expander/Expander';
@@ -194,6 +195,8 @@ export {
 	DangerIcon,
 	DangerLightIcon,
 	DataTable,
+	DateSelect,
+	DateSelectDumb,
 	EmptyStateWrapper,
 	DataViewIcon,
 	Dialog,

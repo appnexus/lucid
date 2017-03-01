@@ -180,3 +180,22 @@ export function controls(Component, { callbackName, controlSelector, eventType, 
 		});
 	});
 }
+
+const NativeDate = global.Date;
+const createMockDateClass = (...args) => _.assign(
+	function MockDate() { return new NativeDate(...args); },
+	{
+		UTC: NativeDate.UTC,
+		parse: NativeDate.parse,
+		now: () => new NativeDate(...args).getTime(),
+		prototype: NativeDate.prototype,
+	}
+);
+
+export const mockDate = _.assign((...args) => {
+	global.Date = createMockDateClass(...args);
+}, {
+	restore() {
+		global.Date = NativeDate;
+	},
+});
