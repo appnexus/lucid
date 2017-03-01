@@ -1,0 +1,3261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for 1.selected-day 1`] = `
+<DayPicker
+  canChangeMonth={false}
+  captionElement={
+    <Caption
+      classNames={
+        Object {
+          "body": "DayPicker-Body",
+          "caption": "DayPicker-Caption",
+          "container": "DayPicker",
+          "day": "DayPicker-Day",
+          "disabled": "disabled",
+          "interactionDisabled": "DayPicker--interactionDisabled",
+          "month": "DayPicker-Month",
+          "navBar": "DayPicker-NavBar",
+          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+          "outside": "outside",
+          "selected": "selected",
+          "today": "today",
+          "week": "DayPicker-Week",
+          "weekday": "DayPicker-Weekday",
+          "weekdays": "DayPicker-Weekdays",
+          "weekdaysRow": "DayPicker-WeekdaysRow",
+        }
+      }
+    />
+  }
+  className="lucid-CalendarMonth"
+  classNames={
+    Object {
+      "body": "DayPicker-Body",
+      "caption": "DayPicker-Caption",
+      "container": "DayPicker",
+      "day": "DayPicker-Day",
+      "disabled": "disabled",
+      "interactionDisabled": "DayPicker--interactionDisabled",
+      "month": "DayPicker-Month",
+      "navBar": "DayPicker-NavBar",
+      "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+      "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+      "outside": "outside",
+      "selected": "selected",
+      "today": "today",
+      "week": "DayPicker-Week",
+      "weekday": "DayPicker-Weekday",
+      "weekdays": "DayPicker-Weekdays",
+      "weekdaysRow": "DayPicker-WeekdaysRow",
+    }
+  }
+  cursor={null}
+  enableOutsideDays={false}
+  fixedWeeks={false}
+  from={null}
+  initialMonth={2016-02-17T22:25:23.000Z}
+  locale="en"
+  localeUtils={
+    Object {
+      "default": Object {
+        "formatDay": [Function],
+        "formatMonthTitle": [Function],
+        "formatWeekdayLong": [Function],
+        "formatWeekdayShort": [Function],
+        "getFirstDayOfWeek": [Function],
+        "getMonths": [Function],
+      },
+      "formatDay": [Function],
+      "formatMonthTitle": [Function],
+      "formatWeekdayLong": [Function],
+      "formatWeekdayShort": [Function],
+      "getFirstDayOfWeek": [Function],
+      "getMonths": [Function],
+    }
+  }
+  modifiers={
+    Object {
+      "from": [Function],
+      "range": [Function],
+      "to": [Function],
+    }
+  }
+  navbarElement={
+    <Navbar
+      classNames={
+        Object {
+          "body": "DayPicker-Body",
+          "caption": "DayPicker-Caption",
+          "container": "DayPicker",
+          "day": "DayPicker-Day",
+          "disabled": "disabled",
+          "interactionDisabled": "DayPicker--interactionDisabled",
+          "month": "DayPicker-Month",
+          "navBar": "DayPicker-NavBar",
+          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+          "outside": "outside",
+          "selected": "selected",
+          "today": "today",
+          "week": "DayPicker-Week",
+          "weekday": "DayPicker-Weekday",
+          "weekdays": "DayPicker-Weekdays",
+          "weekdaysRow": "DayPicker-WeekdaysRow",
+        }
+      }
+      dir="ltr"
+      showNextButton={true}
+      showPreviousButton={true}
+    />
+  }
+  numberOfMonths={1}
+  pagedNavigation={false}
+  renderDay={[Function]}
+  reverseMonths={false}
+  selectMode="day"
+  selectedDays={2016-02-17T22:25:23.000Z}
+  shouldComponentUpdate={true}
+  tabIndex={0}
+  to={null}
+  weekdayElement={<Weekday />}
+  weekdaysShort={
+    Array [
+      "Sun",
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+    ]
+  }
+/>
+`;
+
+exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for 2.disabled-days 1`] = `
+<DayPicker
+  canChangeMonth={false}
+  captionElement={
+    <Caption
+      classNames={
+        Object {
+          "body": "DayPicker-Body",
+          "caption": "DayPicker-Caption",
+          "container": "DayPicker",
+          "day": "DayPicker-Day",
+          "disabled": "disabled",
+          "interactionDisabled": "DayPicker--interactionDisabled",
+          "month": "DayPicker-Month",
+          "navBar": "DayPicker-NavBar",
+          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+          "outside": "outside",
+          "selected": "selected",
+          "today": "today",
+          "week": "DayPicker-Week",
+          "weekday": "DayPicker-Weekday",
+          "weekdays": "DayPicker-Weekdays",
+          "weekdaysRow": "DayPicker-WeekdaysRow",
+        }
+      }
+    />
+  }
+  className="lucid-CalendarMonth"
+  classNames={
+    Object {
+      "body": "DayPicker-Body",
+      "caption": "DayPicker-Caption",
+      "container": "DayPicker",
+      "day": "DayPicker-Day",
+      "disabled": "disabled",
+      "interactionDisabled": "DayPicker--interactionDisabled",
+      "month": "DayPicker-Month",
+      "navBar": "DayPicker-NavBar",
+      "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+      "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+      "outside": "outside",
+      "selected": "selected",
+      "today": "today",
+      "week": "DayPicker-Week",
+      "weekday": "DayPicker-Weekday",
+      "weekdays": "DayPicker-Weekdays",
+      "weekdaysRow": "DayPicker-WeekdaysRow",
+    }
+  }
+  cursor={null}
+  disabledDays={[Function]}
+  enableOutsideDays={false}
+  fixedWeeks={false}
+  from={null}
+  initialMonth={2016-02-17T22:25:23.000Z}
+  locale="en"
+  localeUtils={
+    Object {
+      "default": Object {
+        "formatDay": [Function],
+        "formatMonthTitle": [Function],
+        "formatWeekdayLong": [Function],
+        "formatWeekdayShort": [Function],
+        "getFirstDayOfWeek": [Function],
+        "getMonths": [Function],
+      },
+      "formatDay": [Function],
+      "formatMonthTitle": [Function],
+      "formatWeekdayLong": [Function],
+      "formatWeekdayShort": [Function],
+      "getFirstDayOfWeek": [Function],
+      "getMonths": [Function],
+    }
+  }
+  modifiers={
+    Object {
+      "from": [Function],
+      "range": [Function],
+      "to": [Function],
+    }
+  }
+  navbarElement={
+    <Navbar
+      classNames={
+        Object {
+          "body": "DayPicker-Body",
+          "caption": "DayPicker-Caption",
+          "container": "DayPicker",
+          "day": "DayPicker-Day",
+          "disabled": "disabled",
+          "interactionDisabled": "DayPicker--interactionDisabled",
+          "month": "DayPicker-Month",
+          "navBar": "DayPicker-NavBar",
+          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+          "outside": "outside",
+          "selected": "selected",
+          "today": "today",
+          "week": "DayPicker-Week",
+          "weekday": "DayPicker-Weekday",
+          "weekdays": "DayPicker-Weekdays",
+          "weekdaysRow": "DayPicker-WeekdaysRow",
+        }
+      }
+      dir="ltr"
+      showNextButton={true}
+      showPreviousButton={true}
+    />
+  }
+  numberOfMonths={1}
+  pagedNavigation={false}
+  renderDay={[Function]}
+  reverseMonths={false}
+  selectMode="day"
+  shouldComponentUpdate={true}
+  tabIndex={0}
+  to={null}
+  weekdayElement={<Weekday />}
+  weekdaysShort={
+    Array [
+      "Sun",
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+    ]
+  }
+/>
+`;
+
+exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for 3.custom-daypicker-modifiers 1`] = `
+<DayPicker
+  canChangeMonth={false}
+  captionElement={
+    <Caption
+      classNames={
+        Object {
+          "body": "DayPicker-Body",
+          "caption": "DayPicker-Caption",
+          "container": "DayPicker",
+          "day": "DayPicker-Day",
+          "disabled": "disabled",
+          "interactionDisabled": "DayPicker--interactionDisabled",
+          "month": "DayPicker-Month",
+          "navBar": "DayPicker-NavBar",
+          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+          "outside": "outside",
+          "selected": "selected",
+          "today": "today",
+          "week": "DayPicker-Week",
+          "weekday": "DayPicker-Weekday",
+          "weekdays": "DayPicker-Weekdays",
+          "weekdaysRow": "DayPicker-WeekdaysRow",
+        }
+      }
+    />
+  }
+  className="lucid-CalendarMonth"
+  classNames={
+    Object {
+      "body": "DayPicker-Body",
+      "caption": "DayPicker-Caption",
+      "container": "DayPicker",
+      "day": "DayPicker-Day",
+      "disabled": "disabled",
+      "interactionDisabled": "DayPicker--interactionDisabled",
+      "month": "DayPicker-Month",
+      "navBar": "DayPicker-NavBar",
+      "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+      "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+      "outside": "outside",
+      "selected": "selected",
+      "today": "today",
+      "week": "DayPicker-Week",
+      "weekday": "DayPicker-Weekday",
+      "weekdays": "DayPicker-Weekdays",
+      "weekdaysRow": "DayPicker-WeekdaysRow",
+    }
+  }
+  cursor={null}
+  enableOutsideDays={false}
+  fixedWeeks={false}
+  from={null}
+  initialMonth={2016-02-17T22:25:23.000Z}
+  locale="en"
+  localeUtils={
+    Object {
+      "default": Object {
+        "formatDay": [Function],
+        "formatMonthTitle": [Function],
+        "formatWeekdayLong": [Function],
+        "formatWeekdayShort": [Function],
+        "getFirstDayOfWeek": [Function],
+        "getMonths": [Function],
+      },
+      "formatDay": [Function],
+      "formatMonthTitle": [Function],
+      "formatWeekdayLong": [Function],
+      "formatWeekdayShort": [Function],
+      "getFirstDayOfWeek": [Function],
+      "getMonths": [Function],
+    }
+  }
+  modifiers={
+    Object {
+      "from": [Function],
+      "range": [Function],
+      "to": [Function],
+      "tuesday": [Function],
+    }
+  }
+  navbarElement={
+    <Navbar
+      classNames={
+        Object {
+          "body": "DayPicker-Body",
+          "caption": "DayPicker-Caption",
+          "container": "DayPicker",
+          "day": "DayPicker-Day",
+          "disabled": "disabled",
+          "interactionDisabled": "DayPicker--interactionDisabled",
+          "month": "DayPicker-Month",
+          "navBar": "DayPicker-NavBar",
+          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+          "outside": "outside",
+          "selected": "selected",
+          "today": "today",
+          "week": "DayPicker-Week",
+          "weekday": "DayPicker-Weekday",
+          "weekdays": "DayPicker-Weekdays",
+          "weekdaysRow": "DayPicker-WeekdaysRow",
+        }
+      }
+      dir="ltr"
+      showNextButton={true}
+      showPreviousButton={true}
+    />
+  }
+  numberOfMonths={1}
+  pagedNavigation={false}
+  renderDay={[Function]}
+  reverseMonths={false}
+  selectMode="day"
+  shouldComponentUpdate={true}
+  tabIndex={0}
+  to={null}
+  weekdayElement={<Weekday />}
+  weekdaysShort={
+    Array [
+      "Sun",
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+    ]
+  }
+/>
+`;
+
+exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for 4.select-dates 1`] = `
+<DayPicker
+  canChangeMonth={false}
+  captionElement={
+    <Caption
+      classNames={
+        Object {
+          "body": "DayPicker-Body",
+          "caption": "DayPicker-Caption",
+          "container": "DayPicker",
+          "day": "DayPicker-Day",
+          "disabled": "disabled",
+          "interactionDisabled": "DayPicker--interactionDisabled",
+          "month": "DayPicker-Month",
+          "navBar": "DayPicker-NavBar",
+          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+          "outside": "outside",
+          "selected": "selected",
+          "today": "today",
+          "week": "DayPicker-Week",
+          "weekday": "DayPicker-Weekday",
+          "weekdays": "DayPicker-Weekdays",
+          "weekdaysRow": "DayPicker-WeekdaysRow",
+        }
+      }
+    />
+  }
+  className="lucid-CalendarMonth"
+  classNames={
+    Object {
+      "body": "DayPicker-Body",
+      "caption": "DayPicker-Caption",
+      "container": "DayPicker",
+      "day": "DayPicker-Day",
+      "disabled": "disabled",
+      "interactionDisabled": "DayPicker--interactionDisabled",
+      "month": "DayPicker-Month",
+      "navBar": "DayPicker-NavBar",
+      "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+      "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+      "outside": "outside",
+      "selected": "selected",
+      "today": "today",
+      "week": "DayPicker-Week",
+      "weekday": "DayPicker-Weekday",
+      "weekdays": "DayPicker-Weekdays",
+      "weekdaysRow": "DayPicker-WeekdaysRow",
+    }
+  }
+  cursor={null}
+  disabledDays={[Function]}
+  enableOutsideDays={false}
+  fixedWeeks={false}
+  from={null}
+  initialMonth={2016-02-17T22:25:23.000Z}
+  locale="en"
+  localeUtils={
+    Object {
+      "default": Object {
+        "formatDay": [Function],
+        "formatMonthTitle": [Function],
+        "formatWeekdayLong": [Function],
+        "formatWeekdayShort": [Function],
+        "getFirstDayOfWeek": [Function],
+        "getMonths": [Function],
+      },
+      "formatDay": [Function],
+      "formatMonthTitle": [Function],
+      "formatWeekdayLong": [Function],
+      "formatWeekdayShort": [Function],
+      "getFirstDayOfWeek": [Function],
+      "getMonths": [Function],
+    }
+  }
+  modifiers={
+    Object {
+      "from": [Function],
+      "range": [Function],
+      "to": [Function],
+    }
+  }
+  navbarElement={
+    <Navbar
+      classNames={
+        Object {
+          "body": "DayPicker-Body",
+          "caption": "DayPicker-Caption",
+          "container": "DayPicker",
+          "day": "DayPicker-Day",
+          "disabled": "disabled",
+          "interactionDisabled": "DayPicker--interactionDisabled",
+          "month": "DayPicker-Month",
+          "navBar": "DayPicker-NavBar",
+          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+          "outside": "outside",
+          "selected": "selected",
+          "today": "today",
+          "week": "DayPicker-Week",
+          "weekday": "DayPicker-Weekday",
+          "weekdays": "DayPicker-Weekdays",
+          "weekdaysRow": "DayPicker-WeekdaysRow",
+        }
+      }
+      dir="ltr"
+      showNextButton={true}
+      showPreviousButton={true}
+    />
+  }
+  numberOfMonths={1}
+  onDayClick={[Function]}
+  onDayMouseEnter={[Function]}
+  onDayMouseLeave={[Function]}
+  pagedNavigation={false}
+  renderDay={[Function]}
+  reverseMonths={false}
+  selectMode="day"
+  selectedDays={Array []}
+  shouldComponentUpdate={true}
+  tabIndex={0}
+  to={null}
+  weekdayElement={<Weekday />}
+  weekdaysShort={
+    Array [
+      "Sun",
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+    ]
+  }
+/>
+`;
+
+exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for 5.select-range 1`] = `
+<DayPicker
+  canChangeMonth={false}
+  captionElement={
+    <Caption
+      classNames={
+        Object {
+          "body": "DayPicker-Body",
+          "caption": "DayPicker-Caption",
+          "container": "DayPicker",
+          "day": "DayPicker-Day",
+          "disabled": "disabled",
+          "interactionDisabled": "DayPicker--interactionDisabled",
+          "month": "DayPicker-Month",
+          "navBar": "DayPicker-NavBar",
+          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+          "outside": "outside",
+          "selected": "selected",
+          "today": "today",
+          "week": "DayPicker-Week",
+          "weekday": "DayPicker-Weekday",
+          "weekdays": "DayPicker-Weekdays",
+          "weekdaysRow": "DayPicker-WeekdaysRow",
+        }
+      }
+    />
+  }
+  className="lucid-CalendarMonth"
+  classNames={
+    Object {
+      "body": "DayPicker-Body",
+      "caption": "DayPicker-Caption",
+      "container": "DayPicker",
+      "day": "DayPicker-Day",
+      "disabled": "disabled",
+      "interactionDisabled": "DayPicker--interactionDisabled",
+      "month": "DayPicker-Month",
+      "navBar": "DayPicker-NavBar",
+      "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+      "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+      "outside": "outside",
+      "selected": "selected",
+      "today": "today",
+      "week": "DayPicker-Week",
+      "weekday": "DayPicker-Weekday",
+      "weekdays": "DayPicker-Weekdays",
+      "weekdaysRow": "DayPicker-WeekdaysRow",
+    }
+  }
+  cursor={null}
+  disabledDays={[Function]}
+  enableOutsideDays={false}
+  fixedWeeks={false}
+  from={null}
+  initialMonth={2016-02-17T22:25:23.000Z}
+  locale="en"
+  localeUtils={
+    Object {
+      "default": Object {
+        "formatDay": [Function],
+        "formatMonthTitle": [Function],
+        "formatWeekdayLong": [Function],
+        "formatWeekdayShort": [Function],
+        "getFirstDayOfWeek": [Function],
+        "getMonths": [Function],
+      },
+      "formatDay": [Function],
+      "formatMonthTitle": [Function],
+      "formatWeekdayLong": [Function],
+      "formatWeekdayShort": [Function],
+      "getFirstDayOfWeek": [Function],
+      "getMonths": [Function],
+    }
+  }
+  modifiers={
+    Object {
+      "from": [Function],
+      "range": [Function],
+      "to": [Function],
+    }
+  }
+  navbarElement={
+    <Navbar
+      classNames={
+        Object {
+          "body": "DayPicker-Body",
+          "caption": "DayPicker-Caption",
+          "container": "DayPicker",
+          "day": "DayPicker-Day",
+          "disabled": "disabled",
+          "interactionDisabled": "DayPicker--interactionDisabled",
+          "month": "DayPicker-Month",
+          "navBar": "DayPicker-NavBar",
+          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+          "outside": "outside",
+          "selected": "selected",
+          "today": "today",
+          "week": "DayPicker-Week",
+          "weekday": "DayPicker-Weekday",
+          "weekdays": "DayPicker-Weekdays",
+          "weekdaysRow": "DayPicker-WeekdaysRow",
+        }
+      }
+      dir="ltr"
+      showNextButton={true}
+      showPreviousButton={true}
+    />
+  }
+  numberOfMonths={1}
+  onDayClick={[Function]}
+  onDayMouseEnter={[Function]}
+  onDayMouseLeave={[Function]}
+  pagedNavigation={false}
+  renderDay={[Function]}
+  reverseMonths={false}
+  selectMode="from"
+  shouldComponentUpdate={true}
+  tabIndex={0}
+  to={null}
+  weekdayElement={<Weekday />}
+  weekdaysShort={
+    Array [
+      "Sun",
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+    ]
+  }
+/>
+`;
+
+exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for 5.select-range 2`] = `
+<DayPicker
+  canChangeMonth={false}
+  captionElement={
+    <Caption
+      classNames={
+        Object {
+          "body": "DayPicker-Body",
+          "caption": "DayPicker-Caption",
+          "container": "DayPicker",
+          "day": "DayPicker-Day",
+          "disabled": "disabled",
+          "interactionDisabled": "DayPicker--interactionDisabled",
+          "month": "DayPicker-Month",
+          "navBar": "DayPicker-NavBar",
+          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+          "outside": "outside",
+          "selected": "selected",
+          "today": "today",
+          "week": "DayPicker-Week",
+          "weekday": "DayPicker-Weekday",
+          "weekdays": "DayPicker-Weekdays",
+          "weekdaysRow": "DayPicker-WeekdaysRow",
+        }
+      }
+    />
+  }
+  className="lucid-CalendarMonth"
+  classNames={
+    Object {
+      "body": "DayPicker-Body",
+      "caption": "DayPicker-Caption",
+      "container": "DayPicker",
+      "day": "DayPicker-Day",
+      "disabled": "disabled",
+      "interactionDisabled": "DayPicker--interactionDisabled",
+      "month": "DayPicker-Month",
+      "navBar": "DayPicker-NavBar",
+      "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+      "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+      "outside": "outside",
+      "selected": "selected",
+      "today": "today",
+      "week": "DayPicker-Week",
+      "weekday": "DayPicker-Weekday",
+      "weekdays": "DayPicker-Weekdays",
+      "weekdaysRow": "DayPicker-WeekdaysRow",
+    }
+  }
+  cursor={null}
+  disabledDays={[Function]}
+  enableOutsideDays={false}
+  fixedWeeks={false}
+  from={null}
+  initialMonth={2016-02-17T22:25:23.000Z}
+  locale="en"
+  localeUtils={
+    Object {
+      "default": Object {
+        "formatDay": [Function],
+        "formatMonthTitle": [Function],
+        "formatWeekdayLong": [Function],
+        "formatWeekdayShort": [Function],
+        "getFirstDayOfWeek": [Function],
+        "getMonths": [Function],
+      },
+      "formatDay": [Function],
+      "formatMonthTitle": [Function],
+      "formatWeekdayLong": [Function],
+      "formatWeekdayShort": [Function],
+      "getFirstDayOfWeek": [Function],
+      "getMonths": [Function],
+    }
+  }
+  modifiers={
+    Object {
+      "from": [Function],
+      "range": [Function],
+      "to": [Function],
+    }
+  }
+  navbarElement={
+    <Navbar
+      classNames={
+        Object {
+          "body": "DayPicker-Body",
+          "caption": "DayPicker-Caption",
+          "container": "DayPicker",
+          "day": "DayPicker-Day",
+          "disabled": "disabled",
+          "interactionDisabled": "DayPicker--interactionDisabled",
+          "month": "DayPicker-Month",
+          "navBar": "DayPicker-NavBar",
+          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+          "outside": "outside",
+          "selected": "selected",
+          "today": "today",
+          "week": "DayPicker-Week",
+          "weekday": "DayPicker-Weekday",
+          "weekdays": "DayPicker-Weekdays",
+          "weekdaysRow": "DayPicker-WeekdaysRow",
+        }
+      }
+      dir="ltr"
+      showNextButton={true}
+      showPreviousButton={true}
+    />
+  }
+  numberOfMonths={1}
+  onDayClick={[Function]}
+  onDayMouseEnter={[Function]}
+  onDayMouseLeave={[Function]}
+  pagedNavigation={false}
+  renderDay={[Function]}
+  reverseMonths={false}
+  selectMode="from"
+  shouldComponentUpdate={true}
+  tabIndex={0}
+  to={null}
+  weekdayElement={<Weekday />}
+  weekdaysShort={
+    Array [
+      "Sun",
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+    ]
+  }
+/>
+`;
+
+exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for 6.show-cursor 1`] = `
+<DayPicker
+  canChangeMonth={false}
+  captionElement={
+    <Caption
+      classNames={
+        Object {
+          "body": "DayPicker-Body",
+          "caption": "DayPicker-Caption",
+          "container": "DayPicker",
+          "day": "DayPicker-Day",
+          "disabled": "disabled",
+          "interactionDisabled": "DayPicker--interactionDisabled",
+          "month": "DayPicker-Month",
+          "navBar": "DayPicker-NavBar",
+          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+          "outside": "outside",
+          "selected": "selected",
+          "today": "today",
+          "week": "DayPicker-Week",
+          "weekday": "DayPicker-Weekday",
+          "weekdays": "DayPicker-Weekdays",
+          "weekdaysRow": "DayPicker-WeekdaysRow",
+        }
+      }
+    />
+  }
+  className="lucid-CalendarMonth"
+  classNames={
+    Object {
+      "body": "DayPicker-Body",
+      "caption": "DayPicker-Caption",
+      "container": "DayPicker",
+      "day": "DayPicker-Day",
+      "disabled": "disabled",
+      "interactionDisabled": "DayPicker--interactionDisabled",
+      "month": "DayPicker-Month",
+      "navBar": "DayPicker-NavBar",
+      "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+      "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+      "outside": "outside",
+      "selected": "selected",
+      "today": "today",
+      "week": "DayPicker-Week",
+      "weekday": "DayPicker-Weekday",
+      "weekdays": "DayPicker-Weekdays",
+      "weekdaysRow": "DayPicker-WeekdaysRow",
+    }
+  }
+  cursor={2016-02-17T22:25:23.000Z}
+  enableOutsideDays={false}
+  fixedWeeks={false}
+  from={null}
+  initialMonth={2016-02-17T22:25:23.000Z}
+  locale="en"
+  localeUtils={
+    Object {
+      "default": Object {
+        "formatDay": [Function],
+        "formatMonthTitle": [Function],
+        "formatWeekdayLong": [Function],
+        "formatWeekdayShort": [Function],
+        "getFirstDayOfWeek": [Function],
+        "getMonths": [Function],
+      },
+      "formatDay": [Function],
+      "formatMonthTitle": [Function],
+      "formatWeekdayLong": [Function],
+      "formatWeekdayShort": [Function],
+      "getFirstDayOfWeek": [Function],
+      "getMonths": [Function],
+    }
+  }
+  modifiers={
+    Object {
+      "from": [Function],
+      "range": [Function],
+      "to": [Function],
+    }
+  }
+  navbarElement={
+    <Navbar
+      classNames={
+        Object {
+          "body": "DayPicker-Body",
+          "caption": "DayPicker-Caption",
+          "container": "DayPicker",
+          "day": "DayPicker-Day",
+          "disabled": "disabled",
+          "interactionDisabled": "DayPicker--interactionDisabled",
+          "month": "DayPicker-Month",
+          "navBar": "DayPicker-NavBar",
+          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+          "outside": "outside",
+          "selected": "selected",
+          "today": "today",
+          "week": "DayPicker-Week",
+          "weekday": "DayPicker-Weekday",
+          "weekdays": "DayPicker-Weekdays",
+          "weekdaysRow": "DayPicker-WeekdaysRow",
+        }
+      }
+      dir="ltr"
+      showNextButton={true}
+      showPreviousButton={true}
+    />
+  }
+  numberOfMonths={1}
+  pagedNavigation={false}
+  renderDay={[Function]}
+  reverseMonths={false}
+  selectMode="day"
+  shouldComponentUpdate={true}
+  tabIndex={0}
+  to={null}
+  weekdayElement={<Weekday />}
+  weekdaysShort={
+    Array [
+      "Sun",
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+    ]
+  }
+/>
+`;
+
+exports[`CalendarMonth common tests [common] example testing should match snapshot(s) for 6.show-cursor 2`] = `
+<DayPicker
+  canChangeMonth={false}
+  captionElement={
+    <Caption
+      classNames={
+        Object {
+          "body": "DayPicker-Body",
+          "caption": "DayPicker-Caption",
+          "container": "DayPicker",
+          "day": "DayPicker-Day",
+          "disabled": "disabled",
+          "interactionDisabled": "DayPicker--interactionDisabled",
+          "month": "DayPicker-Month",
+          "navBar": "DayPicker-NavBar",
+          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+          "outside": "outside",
+          "selected": "selected",
+          "today": "today",
+          "week": "DayPicker-Week",
+          "weekday": "DayPicker-Weekday",
+          "weekdays": "DayPicker-Weekdays",
+          "weekdaysRow": "DayPicker-WeekdaysRow",
+        }
+      }
+    />
+  }
+  className="lucid-CalendarMonth"
+  classNames={
+    Object {
+      "body": "DayPicker-Body",
+      "caption": "DayPicker-Caption",
+      "container": "DayPicker",
+      "day": "DayPicker-Day",
+      "disabled": "disabled",
+      "interactionDisabled": "DayPicker--interactionDisabled",
+      "month": "DayPicker-Month",
+      "navBar": "DayPicker-NavBar",
+      "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+      "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+      "outside": "outside",
+      "selected": "selected",
+      "today": "today",
+      "week": "DayPicker-Week",
+      "weekday": "DayPicker-Weekday",
+      "weekdays": "DayPicker-Weekdays",
+      "weekdaysRow": "DayPicker-WeekdaysRow",
+    }
+  }
+  cursor={2016-02-17T22:25:23.000Z}
+  enableOutsideDays={false}
+  fixedWeeks={false}
+  from={2016-02-01T22:25:23.000Z}
+  initialMonth={2016-02-17T22:25:23.000Z}
+  locale="en"
+  localeUtils={
+    Object {
+      "default": Object {
+        "formatDay": [Function],
+        "formatMonthTitle": [Function],
+        "formatWeekdayLong": [Function],
+        "formatWeekdayShort": [Function],
+        "getFirstDayOfWeek": [Function],
+        "getMonths": [Function],
+      },
+      "formatDay": [Function],
+      "formatMonthTitle": [Function],
+      "formatWeekdayLong": [Function],
+      "formatWeekdayShort": [Function],
+      "getFirstDayOfWeek": [Function],
+      "getMonths": [Function],
+    }
+  }
+  modifiers={
+    Object {
+      "from": [Function],
+      "range": [Function],
+      "to": [Function],
+    }
+  }
+  navbarElement={
+    <Navbar
+      classNames={
+        Object {
+          "body": "DayPicker-Body",
+          "caption": "DayPicker-Caption",
+          "container": "DayPicker",
+          "day": "DayPicker-Day",
+          "disabled": "disabled",
+          "interactionDisabled": "DayPicker--interactionDisabled",
+          "month": "DayPicker-Month",
+          "navBar": "DayPicker-NavBar",
+          "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+          "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+          "outside": "outside",
+          "selected": "selected",
+          "today": "today",
+          "week": "DayPicker-Week",
+          "weekday": "DayPicker-Weekday",
+          "weekdays": "DayPicker-Weekdays",
+          "weekdaysRow": "DayPicker-WeekdaysRow",
+        }
+      }
+      dir="ltr"
+      showNextButton={true}
+      showPreviousButton={true}
+    />
+  }
+  numberOfMonths={1}
+  pagedNavigation={false}
+  renderDay={[Function]}
+  reverseMonths={false}
+  selectMode="to"
+  shouldComponentUpdate={true}
+  tabIndex={0}
+  to={null}
+  weekdayElement={<Weekday />}
+  weekdaysShort={
+    Array [
+      "Sun",
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+    ]
+  }
+/>
+`;
+
+exports[`CalendarMonth should render deeply 1`] = `
+<CalendarMonth
+  cursor={2017-02-28T00:00:00.000Z}
+  from={null}
+  initialMonth={2017-02-01T00:00:00.000Z}
+  monthOffset={0}
+  selectMode="day"
+  shouldComponentUpdate={true}
+  to={null}
+>
+  <DayPicker
+    canChangeMonth={false}
+    captionElement={
+      <Caption
+        classNames={
+          Object {
+            "body": "DayPicker-Body",
+            "caption": "DayPicker-Caption",
+            "container": "DayPicker",
+            "day": "DayPicker-Day",
+            "disabled": "disabled",
+            "interactionDisabled": "DayPicker--interactionDisabled",
+            "month": "DayPicker-Month",
+            "navBar": "DayPicker-NavBar",
+            "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+            "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+            "outside": "outside",
+            "selected": "selected",
+            "today": "today",
+            "week": "DayPicker-Week",
+            "weekday": "DayPicker-Weekday",
+            "weekdays": "DayPicker-Weekdays",
+            "weekdaysRow": "DayPicker-WeekdaysRow",
+          }
+        }
+      />
+    }
+    className="lucid-CalendarMonth"
+    classNames={
+      Object {
+        "body": "DayPicker-Body",
+        "caption": "DayPicker-Caption",
+        "container": "DayPicker",
+        "day": "DayPicker-Day",
+        "disabled": "disabled",
+        "interactionDisabled": "DayPicker--interactionDisabled",
+        "month": "DayPicker-Month",
+        "navBar": "DayPicker-NavBar",
+        "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+        "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+        "outside": "outside",
+        "selected": "selected",
+        "today": "today",
+        "week": "DayPicker-Week",
+        "weekday": "DayPicker-Weekday",
+        "weekdays": "DayPicker-Weekdays",
+        "weekdaysRow": "DayPicker-WeekdaysRow",
+      }
+    }
+    cursor={2017-02-28T00:00:00.000Z}
+    enableOutsideDays={false}
+    fixedWeeks={false}
+    from={null}
+    initialMonth={2017-02-01T00:00:00.000Z}
+    locale="en"
+    localeUtils={
+      Object {
+        "default": Object {
+          "formatDay": [Function],
+          "formatMonthTitle": [Function],
+          "formatWeekdayLong": [Function],
+          "formatWeekdayShort": [Function],
+          "getFirstDayOfWeek": [Function],
+          "getMonths": [Function],
+        },
+        "formatDay": [Function],
+        "formatMonthTitle": [Function],
+        "formatWeekdayLong": [Function],
+        "formatWeekdayShort": [Function],
+        "getFirstDayOfWeek": [Function],
+        "getMonths": [Function],
+      }
+    }
+    modifiers={
+      Object {
+        "from": [Function],
+        "range": [Function],
+        "to": [Function],
+      }
+    }
+    navbarElement={
+      <Navbar
+        classNames={
+          Object {
+            "body": "DayPicker-Body",
+            "caption": "DayPicker-Caption",
+            "container": "DayPicker",
+            "day": "DayPicker-Day",
+            "disabled": "disabled",
+            "interactionDisabled": "DayPicker--interactionDisabled",
+            "month": "DayPicker-Month",
+            "navBar": "DayPicker-NavBar",
+            "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+            "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+            "outside": "outside",
+            "selected": "selected",
+            "today": "today",
+            "week": "DayPicker-Week",
+            "weekday": "DayPicker-Weekday",
+            "weekdays": "DayPicker-Weekdays",
+            "weekdaysRow": "DayPicker-WeekdaysRow",
+          }
+        }
+        dir="ltr"
+        showNextButton={true}
+        showPreviousButton={true}
+      />
+    }
+    numberOfMonths={1}
+    pagedNavigation={false}
+    renderDay={[Function]}
+    reverseMonths={false}
+    selectMode="day"
+    shouldComponentUpdate={true}
+    tabIndex={0}
+    to={null}
+    weekdayElement={<Weekday />}
+    weekdaysShort={
+      Array [
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+      ]
+    }
+  >
+    <div
+      className="DayPicker DayPicker--interactionDisabled lucid-CalendarMonth"
+      lang="en"
+      onKeyDown={[Function]}
+      role="application"
+      tabIndex={false}
+    >
+      <Month
+        captionElement={
+          <Caption
+            classNames={
+              Object {
+                "body": "DayPicker-Body",
+                "caption": "DayPicker-Caption",
+                "container": "DayPicker",
+                "day": "DayPicker-Day",
+                "disabled": "disabled",
+                "interactionDisabled": "DayPicker--interactionDisabled",
+                "month": "DayPicker-Month",
+                "navBar": "DayPicker-NavBar",
+                "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                "outside": "outside",
+                "selected": "selected",
+                "today": "today",
+                "week": "DayPicker-Week",
+                "weekday": "DayPicker-Weekday",
+                "weekdays": "DayPicker-Weekdays",
+                "weekdaysRow": "DayPicker-WeekdaysRow",
+              }
+            }
+          />
+        }
+        classNames={
+          Object {
+            "body": "DayPicker-Body",
+            "caption": "DayPicker-Caption",
+            "container": "DayPicker",
+            "day": "DayPicker-Day",
+            "disabled": "disabled",
+            "interactionDisabled": "DayPicker--interactionDisabled",
+            "month": "DayPicker-Month",
+            "navBar": "DayPicker-NavBar",
+            "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+            "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+            "outside": "outside",
+            "selected": "selected",
+            "today": "today",
+            "week": "DayPicker-Week",
+            "weekday": "DayPicker-Weekday",
+            "weekdays": "DayPicker-Weekdays",
+            "weekdaysRow": "DayPicker-WeekdaysRow",
+          }
+        }
+        firstDayOfWeek={0}
+        fixedWeeks={false}
+        locale="en"
+        localeUtils={
+          Object {
+            "default": Object {
+              "formatDay": [Function],
+              "formatMonthTitle": [Function],
+              "formatWeekdayLong": [Function],
+              "formatWeekdayShort": [Function],
+              "getFirstDayOfWeek": [Function],
+              "getMonths": [Function],
+            },
+            "formatDay": [Function],
+            "formatMonthTitle": [Function],
+            "formatWeekdayLong": [Function],
+            "formatWeekdayShort": [Function],
+            "getFirstDayOfWeek": [Function],
+            "getMonths": [Function],
+          }
+        }
+        month={2017-02-01T12:00:00.000Z}
+        weekdayElement={<Weekday />}
+        weekdaysShort={
+          Array [
+            "Sun",
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat",
+          ]
+        }
+      >
+        <div
+          className="DayPicker-Month"
+        >
+          <Caption
+            classNames={
+              Object {
+                "body": "DayPicker-Body",
+                "caption": "DayPicker-Caption",
+                "container": "DayPicker",
+                "day": "DayPicker-Day",
+                "disabled": "disabled",
+                "interactionDisabled": "DayPicker--interactionDisabled",
+                "month": "DayPicker-Month",
+                "navBar": "DayPicker-NavBar",
+                "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                "outside": "outside",
+                "selected": "selected",
+                "today": "today",
+                "week": "DayPicker-Week",
+                "weekday": "DayPicker-Weekday",
+                "weekdays": "DayPicker-Weekdays",
+                "weekdaysRow": "DayPicker-WeekdaysRow",
+              }
+            }
+            date={2017-02-01T12:00:00.000Z}
+            locale="en"
+            localeUtils={
+              Object {
+                "default": Object {
+                  "formatDay": [Function],
+                  "formatMonthTitle": [Function],
+                  "formatWeekdayLong": [Function],
+                  "formatWeekdayShort": [Function],
+                  "getFirstDayOfWeek": [Function],
+                  "getMonths": [Function],
+                },
+                "formatDay": [Function],
+                "formatMonthTitle": [Function],
+                "formatWeekdayLong": [Function],
+                "formatWeekdayShort": [Function],
+                "getFirstDayOfWeek": [Function],
+                "getMonths": [Function],
+              }
+            }
+          >
+            <div
+              className="DayPicker-Caption"
+              role="heading"
+            >
+              February 2017
+            </div>
+          </Caption>
+          <Weekdays
+            classNames={
+              Object {
+                "body": "DayPicker-Body",
+                "caption": "DayPicker-Caption",
+                "container": "DayPicker",
+                "day": "DayPicker-Day",
+                "disabled": "disabled",
+                "interactionDisabled": "DayPicker--interactionDisabled",
+                "month": "DayPicker-Month",
+                "navBar": "DayPicker-NavBar",
+                "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                "outside": "outside",
+                "selected": "selected",
+                "today": "today",
+                "week": "DayPicker-Week",
+                "weekday": "DayPicker-Weekday",
+                "weekdays": "DayPicker-Weekdays",
+                "weekdaysRow": "DayPicker-WeekdaysRow",
+              }
+            }
+            firstDayOfWeek={0}
+            locale="en"
+            localeUtils={
+              Object {
+                "default": Object {
+                  "formatDay": [Function],
+                  "formatMonthTitle": [Function],
+                  "formatWeekdayLong": [Function],
+                  "formatWeekdayShort": [Function],
+                  "getFirstDayOfWeek": [Function],
+                  "getMonths": [Function],
+                },
+                "formatDay": [Function],
+                "formatMonthTitle": [Function],
+                "formatWeekdayLong": [Function],
+                "formatWeekdayShort": [Function],
+                "getFirstDayOfWeek": [Function],
+                "getMonths": [Function],
+              }
+            }
+            weekdayElement={<Weekday />}
+            weekdaysShort={
+              Array [
+                "Sun",
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat",
+              ]
+            }
+          >
+            <div
+              className="DayPicker-Weekdays"
+              role="rowgroup"
+            >
+              <div
+                className="DayPicker-WeekdaysRow"
+                role="columnheader"
+              >
+                <Weekday
+                  className="DayPicker-Weekday"
+                  locale="en"
+                  localeUtils={
+                    Object {
+                      "default": Object {
+                        "formatDay": [Function],
+                        "formatMonthTitle": [Function],
+                        "formatWeekdayLong": [Function],
+                        "formatWeekdayShort": [Function],
+                        "getFirstDayOfWeek": [Function],
+                        "getMonths": [Function],
+                      },
+                      "formatDay": [Function],
+                      "formatMonthTitle": [Function],
+                      "formatWeekdayLong": [Function],
+                      "formatWeekdayShort": [Function],
+                      "getFirstDayOfWeek": [Function],
+                      "getMonths": [Function],
+                    }
+                  }
+                  weekday={0}
+                  weekdaysShort={
+                    Array [
+                      "Sun",
+                      "Mon",
+                      "Tue",
+                      "Wed",
+                      "Thu",
+                      "Fri",
+                      "Sat",
+                    ]
+                  }
+                >
+                  <div
+                    className="DayPicker-Weekday"
+                  >
+                    <abbr
+                      title="Sunday"
+                    >
+                      Sun
+                    </abbr>
+                  </div>
+                </Weekday>
+                <Weekday
+                  className="DayPicker-Weekday"
+                  locale="en"
+                  localeUtils={
+                    Object {
+                      "default": Object {
+                        "formatDay": [Function],
+                        "formatMonthTitle": [Function],
+                        "formatWeekdayLong": [Function],
+                        "formatWeekdayShort": [Function],
+                        "getFirstDayOfWeek": [Function],
+                        "getMonths": [Function],
+                      },
+                      "formatDay": [Function],
+                      "formatMonthTitle": [Function],
+                      "formatWeekdayLong": [Function],
+                      "formatWeekdayShort": [Function],
+                      "getFirstDayOfWeek": [Function],
+                      "getMonths": [Function],
+                    }
+                  }
+                  weekday={1}
+                  weekdaysShort={
+                    Array [
+                      "Sun",
+                      "Mon",
+                      "Tue",
+                      "Wed",
+                      "Thu",
+                      "Fri",
+                      "Sat",
+                    ]
+                  }
+                >
+                  <div
+                    className="DayPicker-Weekday"
+                  >
+                    <abbr
+                      title="Monday"
+                    >
+                      Mon
+                    </abbr>
+                  </div>
+                </Weekday>
+                <Weekday
+                  className="DayPicker-Weekday"
+                  locale="en"
+                  localeUtils={
+                    Object {
+                      "default": Object {
+                        "formatDay": [Function],
+                        "formatMonthTitle": [Function],
+                        "formatWeekdayLong": [Function],
+                        "formatWeekdayShort": [Function],
+                        "getFirstDayOfWeek": [Function],
+                        "getMonths": [Function],
+                      },
+                      "formatDay": [Function],
+                      "formatMonthTitle": [Function],
+                      "formatWeekdayLong": [Function],
+                      "formatWeekdayShort": [Function],
+                      "getFirstDayOfWeek": [Function],
+                      "getMonths": [Function],
+                    }
+                  }
+                  weekday={2}
+                  weekdaysShort={
+                    Array [
+                      "Sun",
+                      "Mon",
+                      "Tue",
+                      "Wed",
+                      "Thu",
+                      "Fri",
+                      "Sat",
+                    ]
+                  }
+                >
+                  <div
+                    className="DayPicker-Weekday"
+                  >
+                    <abbr
+                      title="Tuesday"
+                    >
+                      Tue
+                    </abbr>
+                  </div>
+                </Weekday>
+                <Weekday
+                  className="DayPicker-Weekday"
+                  locale="en"
+                  localeUtils={
+                    Object {
+                      "default": Object {
+                        "formatDay": [Function],
+                        "formatMonthTitle": [Function],
+                        "formatWeekdayLong": [Function],
+                        "formatWeekdayShort": [Function],
+                        "getFirstDayOfWeek": [Function],
+                        "getMonths": [Function],
+                      },
+                      "formatDay": [Function],
+                      "formatMonthTitle": [Function],
+                      "formatWeekdayLong": [Function],
+                      "formatWeekdayShort": [Function],
+                      "getFirstDayOfWeek": [Function],
+                      "getMonths": [Function],
+                    }
+                  }
+                  weekday={3}
+                  weekdaysShort={
+                    Array [
+                      "Sun",
+                      "Mon",
+                      "Tue",
+                      "Wed",
+                      "Thu",
+                      "Fri",
+                      "Sat",
+                    ]
+                  }
+                >
+                  <div
+                    className="DayPicker-Weekday"
+                  >
+                    <abbr
+                      title="Wednesday"
+                    >
+                      Wed
+                    </abbr>
+                  </div>
+                </Weekday>
+                <Weekday
+                  className="DayPicker-Weekday"
+                  locale="en"
+                  localeUtils={
+                    Object {
+                      "default": Object {
+                        "formatDay": [Function],
+                        "formatMonthTitle": [Function],
+                        "formatWeekdayLong": [Function],
+                        "formatWeekdayShort": [Function],
+                        "getFirstDayOfWeek": [Function],
+                        "getMonths": [Function],
+                      },
+                      "formatDay": [Function],
+                      "formatMonthTitle": [Function],
+                      "formatWeekdayLong": [Function],
+                      "formatWeekdayShort": [Function],
+                      "getFirstDayOfWeek": [Function],
+                      "getMonths": [Function],
+                    }
+                  }
+                  weekday={4}
+                  weekdaysShort={
+                    Array [
+                      "Sun",
+                      "Mon",
+                      "Tue",
+                      "Wed",
+                      "Thu",
+                      "Fri",
+                      "Sat",
+                    ]
+                  }
+                >
+                  <div
+                    className="DayPicker-Weekday"
+                  >
+                    <abbr
+                      title="Thursday"
+                    >
+                      Thu
+                    </abbr>
+                  </div>
+                </Weekday>
+                <Weekday
+                  className="DayPicker-Weekday"
+                  locale="en"
+                  localeUtils={
+                    Object {
+                      "default": Object {
+                        "formatDay": [Function],
+                        "formatMonthTitle": [Function],
+                        "formatWeekdayLong": [Function],
+                        "formatWeekdayShort": [Function],
+                        "getFirstDayOfWeek": [Function],
+                        "getMonths": [Function],
+                      },
+                      "formatDay": [Function],
+                      "formatMonthTitle": [Function],
+                      "formatWeekdayLong": [Function],
+                      "formatWeekdayShort": [Function],
+                      "getFirstDayOfWeek": [Function],
+                      "getMonths": [Function],
+                    }
+                  }
+                  weekday={5}
+                  weekdaysShort={
+                    Array [
+                      "Sun",
+                      "Mon",
+                      "Tue",
+                      "Wed",
+                      "Thu",
+                      "Fri",
+                      "Sat",
+                    ]
+                  }
+                >
+                  <div
+                    className="DayPicker-Weekday"
+                  >
+                    <abbr
+                      title="Friday"
+                    >
+                      Fri
+                    </abbr>
+                  </div>
+                </Weekday>
+                <Weekday
+                  className="DayPicker-Weekday"
+                  locale="en"
+                  localeUtils={
+                    Object {
+                      "default": Object {
+                        "formatDay": [Function],
+                        "formatMonthTitle": [Function],
+                        "formatWeekdayLong": [Function],
+                        "formatWeekdayShort": [Function],
+                        "getFirstDayOfWeek": [Function],
+                        "getMonths": [Function],
+                      },
+                      "formatDay": [Function],
+                      "formatMonthTitle": [Function],
+                      "formatWeekdayLong": [Function],
+                      "formatWeekdayShort": [Function],
+                      "getFirstDayOfWeek": [Function],
+                      "getMonths": [Function],
+                    }
+                  }
+                  weekday={6}
+                  weekdaysShort={
+                    Array [
+                      "Sun",
+                      "Mon",
+                      "Tue",
+                      "Wed",
+                      "Thu",
+                      "Fri",
+                      "Sat",
+                    ]
+                  }
+                >
+                  <div
+                    className="DayPicker-Weekday"
+                  >
+                    <abbr
+                      title="Saturday"
+                    >
+                      Sat
+                    </abbr>
+                  </div>
+                </Weekday>
+              </div>
+            </div>
+          </Weekdays>
+          <div
+            className="DayPicker-Body"
+            role="grid"
+          >
+            <div
+              className="DayPicker-Week"
+              role="gridcell"
+            >
+              <Day
+                ariaDisabled={true}
+                ariaLabel="Sun Jan 29 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-01-29T12:00:00.000Z}
+                empty={true}
+                modifiers={
+                  Object {
+                    "outside": true,
+                  }
+                }
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled={true}
+                  className="DayPicker-Day DayPicker-Day--outside"
+                  role="gridcell"
+                />
+              </Day>
+              <Day
+                ariaDisabled={true}
+                ariaLabel="Mon Jan 30 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-01-30T12:00:00.000Z}
+                empty={true}
+                modifiers={
+                  Object {
+                    "outside": true,
+                  }
+                }
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled={true}
+                  className="DayPicker-Day DayPicker-Day--outside"
+                  role="gridcell"
+                />
+              </Day>
+              <Day
+                ariaDisabled={true}
+                ariaLabel="Tue Jan 31 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-01-31T12:00:00.000Z}
+                empty={true}
+                modifiers={
+                  Object {
+                    "outside": true,
+                  }
+                }
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled={true}
+                  className="DayPicker-Day DayPicker-Day--outside"
+                  role="gridcell"
+                />
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Wed Feb 01 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-01T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Wed Feb 01 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  1
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Thu Feb 02 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-02T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Thu Feb 02 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  2
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Fri Feb 03 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-03T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Fri Feb 03 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  3
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Sat Feb 04 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-04T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Sat Feb 04 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  4
+                </div>
+              </Day>
+            </div>
+            <div
+              className="DayPicker-Week"
+              role="gridcell"
+            >
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Sun Feb 05 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-05T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Sun Feb 05 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  5
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Mon Feb 06 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-06T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Mon Feb 06 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  6
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Tue Feb 07 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-07T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Tue Feb 07 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  7
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Wed Feb 08 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-08T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Wed Feb 08 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  8
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Thu Feb 09 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-09T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Thu Feb 09 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  9
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Fri Feb 10 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-10T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Fri Feb 10 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  10
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Sat Feb 11 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-11T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Sat Feb 11 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  11
+                </div>
+              </Day>
+            </div>
+            <div
+              className="DayPicker-Week"
+              role="gridcell"
+            >
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Sun Feb 12 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-12T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Sun Feb 12 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  12
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Mon Feb 13 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-13T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Mon Feb 13 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  13
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Tue Feb 14 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-14T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Tue Feb 14 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  14
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Wed Feb 15 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-15T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Wed Feb 15 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  15
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Thu Feb 16 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-16T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Thu Feb 16 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  16
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Fri Feb 17 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-17T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Fri Feb 17 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  17
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Sat Feb 18 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-18T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Sat Feb 18 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  18
+                </div>
+              </Day>
+            </div>
+            <div
+              className="DayPicker-Week"
+              role="gridcell"
+            >
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Sun Feb 19 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-19T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Sun Feb 19 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  19
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Mon Feb 20 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-20T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Mon Feb 20 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  20
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Tue Feb 21 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-21T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Tue Feb 21 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  21
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Wed Feb 22 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-22T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Wed Feb 22 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  22
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Thu Feb 23 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-23T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Thu Feb 23 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  23
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Fri Feb 24 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-24T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Fri Feb 24 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  24
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Sat Feb 25 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-25T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Sat Feb 25 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  25
+                </div>
+              </Day>
+            </div>
+            <div
+              className="DayPicker-Week"
+              role="gridcell"
+            >
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Sun Feb 26 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-26T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Sun Feb 26 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  26
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Mon Feb 27 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-27T12:00:00.000Z}
+                empty={false}
+                modifiers={Object {}}
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Mon Feb 27 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  27
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={false}
+                ariaLabel="Tue Feb 28 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-02-28T12:00:00.000Z}
+                empty={false}
+                modifiers={
+                  Object {
+                    "range": true,
+                  }
+                }
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled="false"
+                  aria-label="Tue Feb 28 2017"
+                  aria-selected="false"
+                  className="DayPicker-Day DayPicker-Day--range"
+                  onKeyDown={[Function]}
+                  role="gridcell"
+                  tabIndex={null}
+                >
+                  28
+                </div>
+              </Day>
+              <Day
+                ariaDisabled={true}
+                ariaLabel="Wed Mar 01 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-03-01T12:00:00.000Z}
+                empty={true}
+                modifiers={
+                  Object {
+                    "outside": true,
+                    "today": true,
+                  }
+                }
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled={true}
+                  className="DayPicker-Day DayPicker-Day--today DayPicker-Day--outside"
+                  role="gridcell"
+                />
+              </Day>
+              <Day
+                ariaDisabled={true}
+                ariaLabel="Thu Mar 02 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-03-02T12:00:00.000Z}
+                empty={true}
+                modifiers={
+                  Object {
+                    "outside": true,
+                  }
+                }
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled={true}
+                  className="DayPicker-Day DayPicker-Day--outside"
+                  role="gridcell"
+                />
+              </Day>
+              <Day
+                ariaDisabled={true}
+                ariaLabel="Fri Mar 03 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-03-03T12:00:00.000Z}
+                empty={true}
+                modifiers={
+                  Object {
+                    "outside": true,
+                  }
+                }
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled={true}
+                  className="DayPicker-Day DayPicker-Day--outside"
+                  role="gridcell"
+                />
+              </Day>
+              <Day
+                ariaDisabled={true}
+                ariaLabel="Sat Mar 04 2017"
+                ariaSelected={false}
+                classNames={
+                  Object {
+                    "body": "DayPicker-Body",
+                    "caption": "DayPicker-Caption",
+                    "container": "DayPicker",
+                    "day": "DayPicker-Day",
+                    "disabled": "disabled",
+                    "interactionDisabled": "DayPicker--interactionDisabled",
+                    "month": "DayPicker-Month",
+                    "navBar": "DayPicker-NavBar",
+                    "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
+                    "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
+                    "outside": "outside",
+                    "selected": "selected",
+                    "today": "today",
+                    "week": "DayPicker-Week",
+                    "weekday": "DayPicker-Weekday",
+                    "weekdays": "DayPicker-Weekdays",
+                    "weekdaysRow": "DayPicker-WeekdaysRow",
+                  }
+                }
+                day={2017-03-04T12:00:00.000Z}
+                empty={true}
+                modifiers={
+                  Object {
+                    "outside": true,
+                  }
+                }
+                onKeyDown={[Function]}
+                tabIndex={null}
+              >
+                <div
+                  aria-disabled={true}
+                  className="DayPicker-Day DayPicker-Day--outside"
+                  role="gridcell"
+                />
+              </Day>
+            </div>
+          </div>
+        </div>
+      </Month>
+    </div>
+  </DayPicker>
+</CalendarMonth>
+`;

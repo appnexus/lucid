@@ -168,21 +168,21 @@ const SlidePanel = createClass({
 		const translateXPercentage = -1 * (100 / slidesToShow) * (isLooped ? modulo(_.size(slides), offset) : offset);
 
 		return (
-			<Motion
-				style={this.isAnimated ? {
-					translateXPercentage: (spring(translateXPercentage, QUICK_SLIDE_MOTION)),
-					translateXPixel: (spring(this.state.translateXPixel, QUICK_SLIDE_MOTION)),
-				} : {
-					translateXPercentage: translateXPercentage,
-					translateXPixel: this.state.translateXPixel,
-				}}
+			<div
+				{...omitProps(passThroughs, SlidePanel)}
+				ref={(domNode) => {this.rootNode = domNode;}}
+				className={cx('&', className)}
 			>
-				{(tween) => (
-					<div
-						{...omitProps(passThroughs, SlidePanel)}
-						ref={(domNode) => {this.rootNode = domNode;}}
-						className={cx('&', className)}
-					>
+				<Motion
+					style={this.isAnimated ? {
+						translateXPercentage: (spring(translateXPercentage, QUICK_SLIDE_MOTION)),
+						translateXPixel: (spring(this.state.translateXPixel, QUICK_SLIDE_MOTION)),
+					} : {
+						translateXPercentage: translateXPercentage,
+						translateXPixel: this.state.translateXPixel,
+					}}
+				>
+					{(tween) => (
 						<div
 							{...omitProps(passThroughs, SlidePanel)}
 							className={cx('&-slidestrip', className)}
@@ -210,9 +210,9 @@ const SlidePanel = createClass({
 								/>
 							))}
 						</div>
-					</div>
-				)}
-			</Motion>
+					)}
+				</Motion>
+			</div>
 		);
 	},
 });

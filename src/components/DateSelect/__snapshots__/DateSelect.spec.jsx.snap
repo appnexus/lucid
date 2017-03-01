@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateSelect common tests [common] example testing should match snapshot(s) for 1.select-date 1`] = `
+<section
+  className="lucid-DateSelect"
+  style={
+    Object {
+      "minWidth": 249,
+    }
+  }
+>
+  <div>
+    <ChevronThinIcon
+      direction="left"
+      isClickable={true}
+      onClick={[Function]}
+      size={32}
+    />
+  </div>
+  <InfiniteSlidePanel
+    offset={0}
+    onSwipe={[Function]}
+    slidesToShow={1}
+    totalSlides={12}
+  />
+  <div>
+    <ChevronThinIcon
+      direction="right"
+      isClickable={true}
+      onClick={[Function]}
+      size={32}
+    />
+  </div>
+</section>
+`;
+
+exports[`DateSelect common tests [common] example testing should match snapshot(s) for 2.select-range 1`] = `
+<section
+  className="lucid-DateSelect"
+  style={
+    Object {
+      "minWidth": 249,
+    }
+  }
+>
+  <div>
+    <ChevronThinIcon
+      direction="left"
+      isClickable={true}
+      onClick={[Function]}
+      size={32}
+    />
+  </div>
+  <InfiniteSlidePanel
+    offset={0}
+    onSwipe={[Function]}
+    slidesToShow={1}
+    totalSlides={12}
+  />
+  <div>
+    <ChevronThinIcon
+      direction="right"
+      isClickable={true}
+      onClick={[Function]}
+      size={32}
+    />
+  </div>
+</section>
+`;
+
+exports[`DateSelect common tests [common] example testing should match snapshot(s) for 3.disabled-days 1`] = `
+<section
+  className="lucid-DateSelect"
+  style={
+    Object {
+      "minWidth": 249,
+    }
+  }
+>
+  <div>
+    <ChevronThinIcon
+      direction="left"
+      isClickable={true}
+      onClick={[Function]}
+      size={32}
+    />
+  </div>
+  <InfiniteSlidePanel
+    offset={0}
+    onSwipe={[Function]}
+    slidesToShow={1}
+    totalSlides={12}
+  />
+  <div>
+    <ChevronThinIcon
+      direction="right"
+      isClickable={true}
+      onClick={[Function]}
+      size={32}
+    />
+  </div>
+</section>
+`;
+
+exports[`DateSelect common tests [common] example testing should match snapshot(s) for 4.initial-month 1`] = `
+<section
+  className="lucid-DateSelect"
+  style={
+    Object {
+      "minWidth": 249,
+    }
+  }
+>
+  <div>
+    <ChevronThinIcon
+      direction="left"
+      isClickable={true}
+      onClick={[Function]}
+      size={32}
+    />
+  </div>
+  <InfiniteSlidePanel
+    offset={0}
+    onSwipe={[Function]}
+    slidesToShow={1}
+    totalSlides={12}
+  />
+  <div>
+    <ChevronThinIcon
+      direction="right"
+      isClickable={true}
+      onClick={[Function]}
+      size={32}
+    />
+  </div>
+</section>
+`;
+
+exports[`DateSelect common tests [common] example testing should match snapshot(s) for 5.mutiple-months 1`] = `
+<section
+  className="lucid-DateSelect"
+  style={
+    Object {
+      "minWidth": 434,
+    }
+  }
+>
+  <div>
+    <ChevronThinIcon
+      direction="left"
+      isClickable={true}
+      onClick={[Function]}
+      size={32}
+    />
+  </div>
+  <InfiniteSlidePanel
+    offset={0}
+    onSwipe={[Function]}
+    slidesToShow={2}
+    totalSlides={12}
+  />
+  <div>
+    <ChevronThinIcon
+      direction="right"
+      isClickable={true}
+      onClick={[Function]}
+      size={32}
+    />
+  </div>
+</section>
+`;
+
+exports[`DateSelect common tests [common] example testing should match snapshot(s) for 6.custom-modifiers 1`] = `
+<section
+  className="lucid-DateSelect"
+  style={
+    Object {
+      "minWidth": 249,
+    }
+  }
+>
+  <div>
+    <ChevronThinIcon
+      direction="left"
+      isClickable={true}
+      onClick={[Function]}
+      size={32}
+    />
+  </div>
+  <InfiniteSlidePanel
+    offset={0}
+    onSwipe={[Function]}
+    slidesToShow={1}
+    totalSlides={12}
+  />
+  <div>
+    <ChevronThinIcon
+      direction="right"
+      isClickable={true}
+      onClick={[Function]}
+      size={32}
+    />
+  </div>
+</section>
+`;

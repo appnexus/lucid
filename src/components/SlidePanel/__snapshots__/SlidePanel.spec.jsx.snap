@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SlidePanel [common] example testing should match snapshot(s) for 1.looped-slides 1`] = `
+<div
+  className="lucid-SlidePanel"
+>
+  <Motion
+    style={
+      Object {
+        "translateXPercentage": Object {
+          "damping": 37,
+          "precision": 1,
+          "stiffness": 640,
+          "val": -200,
+        },
+        "translateXPixel": Object {
+          "damping": 37,
+          "precision": 1,
+          "stiffness": 640,
+          "val": 0,
+        },
+      }
+    }
+  />
+</div>
+`;
