@@ -1,8 +1,5 @@
 import React from 'react';
-import moment from 'moment';
-import {
-	DateSelect,
-} from '../../../index';
+import { DateSelect } from '../../../index';
 
 export default React.createClass({
 	getInitialState() {
@@ -30,7 +27,7 @@ export default React.createClass({
 					onSelectDate={this.handleSelectDate}
 				/>
 
-				selected date: {moment(selectedDate).format('MMM-DD-YYYY')}
+				selected date: {selectedDate && selectedDate.toString()}
 
 			</section>
 		);

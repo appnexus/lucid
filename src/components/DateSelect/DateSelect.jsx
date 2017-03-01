@@ -154,13 +154,13 @@ const DateSelect = createClass({
 		};
 	},
 
-	handleDayClick(day, { disabled }) {
+	handleDayClick(day, { disabled }, event) {
 		const {
 			onSelectDate,
 		} = this.props;
 
 		if (!disabled) {
-			onSelectDate(day);
+			onSelectDate(day, {event, props: this.props});
 		}
 	},
 
@@ -182,6 +182,14 @@ const DateSelect = createClass({
 		});
 	},
 
+	handlePrev(event) {
+		this.props.onPrev({event, props: this.props});
+	},
+
+	handleNext(event) {
+		this.props.onNext({event, props: this.props});
+	},
+
 	componentWillMount() {
 		this.initialMonth = new Date(this.props.initialMonth);
 	},
@@ -198,8 +206,6 @@ const DateSelect = createClass({
 			selectedDays,
 			disabledDays,
 			onSwipe,
-			onPrev,
-			onNext,
 			...passThroughs
 		} = this.props;
 
@@ -219,7 +225,7 @@ const DateSelect = createClass({
 				{...omitProps(passThroughs, DateSelect)}
 			>
 				<div>
-					<ChevronThinIcon size={32} isClickable direction='left' onClick={onPrev} />
+					<ChevronThinIcon size={32} isClickable direction='left' onClick={this.handlePrev} />
 				</div>
 				<InfiniteSlidePanel
 					totalSlides={calendarsRendered}
@@ -253,7 +259,7 @@ const DateSelect = createClass({
 					)}
 				</InfiniteSlidePanel>
 				<div>
-					<ChevronThinIcon size={32} isClickable direction='right' onClick={onNext} />
+					<ChevronThinIcon size={32} isClickable direction='right' onClick={this.handleNext} />
 				</div>
 			</section>
 		);

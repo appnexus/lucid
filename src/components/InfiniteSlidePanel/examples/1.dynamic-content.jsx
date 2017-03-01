@@ -1,5 +1,6 @@
 import React from 'react';
-import { InfiniteSlidePanel, Button } from '../../../index';
+import { Button } from '../../../index';
+import InfiniteSlidePanel from '../InfiniteSlidePanel';
 
 const generateRGB = (n) => {
 	const R = Math.floor((Math.sin(n/Math.PI) + 1) * 128);

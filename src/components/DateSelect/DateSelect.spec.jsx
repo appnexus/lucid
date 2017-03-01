@@ -20,24 +20,26 @@ describe('DateSelect', () => {
 	describe('event handlers', () => {
 		it('should trigger `onSelectDate` when a non-disabled day is clicked', () => {
 			const onSelectDate = jest.fn();
+			const mockEvent = {};
 			const selectDate = new Date('2017-02-28T00:00:00Z');
 			const wrapper = shallow(
 				<DateSelect onSelectDate={onSelectDate} />
 			);
 			const dateSelectInstance = wrapper.instance();
-			dateSelectInstance.handleDayClick(selectDate, { disabled: false });
+			dateSelectInstance.handleDayClick(selectDate, { disabled: false }, mockEvent);
 
-			expect(onSelectDate).toHaveBeenCalledWith(selectDate);
+			expect(onSelectDate).toHaveBeenCalledWith(selectDate, {event: mockEvent, props: dateSelectInstance.props});
 		});
 
 		it('should not trigger `onSelectDate` when a disabled day is clicked', () => {
 			const onSelectDate = jest.fn();
+			const mockEvent = {};
 			const selectDate = new Date('2017-02-28T00:00:00Z');
 			const wrapper = shallow(
 				<DateSelect onSelectDate={onSelectDate} />
 			);
 			const dateSelectInstance = wrapper.instance();
-			dateSelectInstance.handleDayClick(selectDate, { disabled: true });
+			dateSelectInstance.handleDayClick(selectDate, { disabled: true }, mockEvent);
 
 			expect(onSelectDate).not.toHaveBeenCalled();
 		});

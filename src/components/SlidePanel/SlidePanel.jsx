@@ -114,7 +114,7 @@ const SlidePanel = createClass({
 		const slidesSwiped = Math.round(dX / slideWidth);
 
 		if (slidesSwiped !== 0) {
-			this.props.onSwipe(-1 * slidesSwiped);
+			this.props.onSwipe(-1 * slidesSwiped, {event, props: this.props});
 		}
 		this.setState({
 			translateXPixel: 0,

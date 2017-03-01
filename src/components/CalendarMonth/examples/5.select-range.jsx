@@ -1,10 +1,7 @@
 import React from 'react';
-import moment from 'moment';
 import { DateUtils } from 'react-day-picker';
-import {
-	CalendarMonth,
-	Button,
-} from '../../../index';
+import { Button } from '../../../index';
+import CalendarMonth from '../CalendarMonth';
 
 export default React.createClass({
 	getInitialState() {
@@ -112,8 +109,8 @@ export default React.createClass({
 					<Button onClick={this.handleNext}>{'>'}</Button>
 				</div>
 
-				from: {moment(this.state.from).format('MMM-DD-YYYY')},
-				to: {moment(this.state.to).format('MMM-DD-YYYY')}
+				from: {from && from.toString()},
+				to: {to && to.toString()}
 			</section>
 		);
 	},

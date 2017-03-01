@@ -38,7 +38,6 @@ import BellIcon from './components/Icon/BellIcon/BellIcon';
 import Breadcrumb from './components/Breadcrumb/Breadcrumb';
 import Button from './components/Button/Button';
 import CalendarIcon from './components/Icon/CalendarIcon/CalendarIcon';
-import CalendarMonth from './components/CalendarMonth/CalendarMonth';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
 import Checkbox from './components/Checkbox/Checkbox';
@@ -70,7 +69,6 @@ import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
 import Icon from './components/Icon/Icon';
 import ImageIcon from './components/Icon/ImageIcon/ImageIcon';
-import InfiniteSlidePanel from './components/InfiniteSlidePanel/InfiniteSlidePanel';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import InfoLightIcon from './components/Icon/InfoLightIcon/InfoLightIcon';
 import Legend from './components/Legend/Legend';
@@ -108,7 +106,6 @@ import Selection from './components/Selection/Selection';
 import SeparatorIcon from './components/Icon/SeparatorIcon/SeparatorIcon';
 import SettingsIcon from './components/Icon/SettingsIcon/SettingsIcon';
 import ShoppingCartIcon from './components/Icon/ShoppingCartIcon/ShoppingCartIcon';
-import SlidePanel from './components/SlidePanel/SlidePanel';
 import SplitHorizontal from './components/SplitHorizontal/SplitHorizontal';
 import SplitVertical from './components/SplitVertical/SplitVertical';
 import StarIcon from './components/Icon/StarIcon/StarIcon';
@@ -182,7 +179,6 @@ export {
 	ButtonGroup,
 	ButtonGroupDumb,
 	CalendarIcon,
-	CalendarMonth,
 	CaretIcon,
 	CheckIcon,
 	Checkbox,
@@ -226,7 +222,6 @@ export {
 	HomeIcon,
 	Icon,
 	ImageIcon,
-	InfiniteSlidePanel,
 	InfoIcon,
 	InfoLightIcon,
 	Legend,
@@ -276,7 +271,6 @@ export {
 	SidebarDumb,
 	SingleSelect,
 	SingleSelectDumb,
-	SlidePanel,
 	SplitButton,
 	SplitButtonDumb,
 	SplitHorizontal,

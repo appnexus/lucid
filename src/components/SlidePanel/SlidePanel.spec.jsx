@@ -25,10 +25,12 @@ describe('SlidePanel', () => {
 				getBoundingClientRect: jest.fn(() => ({ width: 100 })),
 			};
 
-			slidePanelInstance.handleTouchStart({ touches: [ { screenX: 100 } ] });
-			slidePanelInstance.handleTouchEnd({ changedTouches: [ { screenX: 0 } ] });
+			const touchStartEvent = { touches: [ { screenX: 100 } ] };
+			const touchEndEvent = { changedTouches: [ { screenX: 0 } ] };
+			slidePanelInstance.handleTouchStart(touchStartEvent);
+			slidePanelInstance.handleTouchEnd(touchEndEvent);
 
-			expect(onSwipe).toHaveBeenCalledWith(2);
+			expect(onSwipe).toHaveBeenCalledWith(2, {event: touchEndEvent, props: slidePanelInstance.props});
 		});
 
 		it('should update component when while being swiped', () => {

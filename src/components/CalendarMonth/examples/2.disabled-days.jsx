@@ -1,8 +1,6 @@
 import React from 'react';
 import { DateUtils } from 'react-day-picker';
-import {
-	CalendarMonth,
-} from '../../../index';
+import CalendarMonth from '../CalendarMonth';
 
 export default React.createClass({
 	render() {

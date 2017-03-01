@@ -1,11 +1,8 @@
 import _ from 'lodash';
 import React from 'react';
-import moment from 'moment';
 import { DateUtils } from 'react-day-picker';
-import {
-	CalendarMonth,
-	Button,
-} from '../../../index';
+import { Button } from '../../../index';
+import CalendarMonth from '../CalendarMonth';
 
 export default React.createClass({
 	getInitialState() {
@@ -87,7 +84,7 @@ export default React.createClass({
 					<Button onClick={this.handleNext}>{'>'}</Button>
 				</div>
 
-				selectedDays: {_.map(selectedDays, (selected) => moment(selected).format('MMM-DD-YYYY')).join(', ')}
+				selectedDays: {_.map(selectedDays, (selected) => selected.toString()).join(', ')}
 			</section>
 		);
 	},

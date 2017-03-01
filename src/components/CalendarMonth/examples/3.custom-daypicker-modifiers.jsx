@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-	CalendarMonth,
-} from '../../../index';
+import CalendarMonth from '../CalendarMonth';
 
 export default React.createClass({
 	render() {

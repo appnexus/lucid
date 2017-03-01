@@ -1,7 +1,7 @@
 import React from 'react';
-import {
-	SlidePanel,
+import SlidePanel from '../SlidePanel';
 
+import {
 	AnalyzeDataIcon,
 	Button,
 	CalendarIcon,

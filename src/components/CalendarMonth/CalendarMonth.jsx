@@ -1,5 +1,4 @@
 import React from 'react';
-import moment from 'moment';
 import DayPicker, { DateUtils } from 'react-day-picker';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
@@ -86,20 +85,20 @@ const CalendarMonth = createClass({
 
 		if (cursor) {
 			if (selectMode === 'day') {
-				return DateUtils.isSameDay(day, moment(cursor).toDate());
+				return DateUtils.isSameDay(day, new Date(cursor));
 			} else if (from || to) {
-				return DateUtils.isSameDay(day, moment(from).toDate()) ||
-					DateUtils.isSameDay(day, moment(cursor).toDate()) ||
-					DateUtils.isDayBetween(day, moment(selectMode === 'to' ? from : to).toDate(), moment(cursor).toDate());
+				return DateUtils.isDayInRange(day, {
+					from: new Date(selectMode === 'to' ? from : to),
+					to: new Date(cursor),
+				});
 			}
-			return DateUtils.isSameDay(day, moment(cursor).toDate());
-		} else {
-			if (from && to) {
-				return DateUtils.isSameDay(day, moment(from).toDate()) ||
-					DateUtils.isSameDay(day, moment(to).toDate()) ||
-					DateUtils.isDayBetween(day, moment(from).toDate(), moment(to).toDate());
-			}
+			return DateUtils.isSameDay(day, new Date(cursor));
 		}
+
+		return DateUtils.isDayInRange(day, {
+			from: new Date(from),
+			to: new Date(to),
+		});
 	},
 
 	modifierFrom(day) {
@@ -107,7 +106,7 @@ const CalendarMonth = createClass({
 			from,
 		} = this.props;
 
-		return DateUtils.isSameDay(day, moment(from).toDate());
+		return DateUtils.isSameDay(day, new Date(from));
 	},
 
 	modifierTo(day) {
@@ -115,7 +114,7 @@ const CalendarMonth = createClass({
 			to,
 		} = this.props;
 
-		return DateUtils.isSameDay(day, moment(to).toDate());
+		return DateUtils.isSameDay(day, new Date(to));
 	},
 
 	shouldComponentUpdate() {
@@ -129,13 +128,14 @@ const CalendarMonth = createClass({
 			...passThroughs
 		} = this.props;
 
-		const monthDate = moment(initialMonth).add(monthOffset, 'months');
+		const monthDate = new Date(initialMonth);
+		monthDate.setMonth(monthDate.getMonth() + monthOffset);
 
 		return (
 			<DayPicker
 				key={monthOffset}
 				className={cx('&')}
-				initialMonth={monthDate.toDate()}
+				initialMonth={monthDate}
 				canChangeMonth={false}
 				weekdaysShort={['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']}
 				{...passThroughs}
