@@ -162,6 +162,11 @@ const SearchableMultiSelect = createClass({
 		 * selected items.
 		 */
 		hasRemoveAll: bool,
+		/**
+		 * Controls the visibility of the `Selection` component that appears below
+		 * the search field.
+		 */
+		hasSelections: bool,
 	},
 
 	getDefaultProps() {
@@ -176,6 +181,7 @@ const SearchableMultiSelect = createClass({
 			SearchField: SearchField.getDefaultProps(),
 			responsiveMode: 'large',
 			hasRemoveAll: true,
+			hasSelections: true,
 		};
 	},
 
@@ -309,6 +315,7 @@ const SearchableMultiSelect = createClass({
 				responsiveMode,
 				searchText,
 				hasRemoveAll,
+				hasSelections,
 				...passThroughs
 			},
 		} = this;
@@ -357,7 +364,7 @@ const SearchableMultiSelect = createClass({
 					{this.renderOptions(optionsProps)}
 				</DropMenu>
 
-				{!_.isEmpty(selectedIndices) ?
+				{hasSelections && !_.isEmpty(selectedIndices) ?
 					<Selection
 						isBold
 						hasBackground
