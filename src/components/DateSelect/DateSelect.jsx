@@ -238,6 +238,7 @@ const DateSelect = createClass({
 					<ChevronThinIcon size={32} isClickable direction='left' onClick={this.handlePrev} />
 				</div>
 				<InfiniteSlidePanel
+					className={cx('&-InfiniteSlidePanel')}
 					totalSlides={calendarsRendered}
 					slidesToShow={monthsShown}
 					offset={offset}

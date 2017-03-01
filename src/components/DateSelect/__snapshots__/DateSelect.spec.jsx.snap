@@ -18,6 +18,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     />
   </div>
   <InfiniteSlidePanel
+    className="lucid-DateSelect-InfiniteSlidePanel"
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}
@@ -56,6 +57,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     />
   </div>
   <InfiniteSlidePanel
+    className="lucid-DateSelect-InfiniteSlidePanel"
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}
@@ -94,6 +96,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     />
   </div>
   <InfiniteSlidePanel
+    className="lucid-DateSelect-InfiniteSlidePanel"
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}
@@ -132,6 +135,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     />
   </div>
   <InfiniteSlidePanel
+    className="lucid-DateSelect-InfiniteSlidePanel"
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}
@@ -170,6 +174,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     />
   </div>
   <InfiniteSlidePanel
+    className="lucid-DateSelect-InfiniteSlidePanel"
     offset={0}
     onSwipe={[Function]}
     slidesToShow={2}
@@ -208,6 +213,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     />
   </div>
   <InfiniteSlidePanel
+    className="lucid-DateSelect-InfiniteSlidePanel"
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}

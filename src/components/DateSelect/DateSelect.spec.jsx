@@ -43,6 +43,31 @@ describe('DateSelect', () => {
 
 			expect(onSelectDate).not.toHaveBeenCalled();
 		});
+
+		it('should trigger onPrev handler', () => {
+			const onPrev = jest.fn();
+			const mockEvent = {};
+			const wrapper = shallow(
+				<DateSelect initialMonth={new Date('2017-02-00T00:00:00Z')} onPrev={onPrev}/>
+			);
+			const dateSelectInstance = wrapper.instance();
+			dateSelectInstance.handlePrev(mockEvent);
+
+			expect(onPrev).toHaveBeenCalledWith({event: mockEvent, props: dateSelectInstance.props});
+		});
+
+		it('should trigger onNext handler', () => {
+			const onNext = jest.fn();
+			const mockEvent = {};
+			const wrapper = shallow(
+				<DateSelect initialMonth={new Date('2017-02-00T00:00:00Z')} onNext={onNext}/>
+			);
+			const dateSelectInstance = wrapper.instance();
+			dateSelectInstance.handleNext(mockEvent);
+
+			expect(onNext).toHaveBeenCalledWith({event: mockEvent, props: dateSelectInstance.props});
+		});
+
 	});
 
 	describe('handling cursor state events', () => {
