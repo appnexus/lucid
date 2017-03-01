@@ -8,6 +8,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={false}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -59,6 +60,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={false}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -110,6 +112,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={false}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -161,6 +164,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={false}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -212,6 +216,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={false}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -263,6 +268,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={false}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -314,6 +320,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={false}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -365,6 +372,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={false}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -416,6 +424,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={false}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -467,6 +476,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={false}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -518,6 +528,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={false}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -569,6 +580,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={false}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -620,6 +632,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.close-b
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -665,6 +678,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.variant
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -707,6 +721,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.variant
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -749,6 +764,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.variant
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -791,6 +807,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.variant
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -833,6 +850,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.variant
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -875,6 +893,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.variant
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -917,6 +936,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -968,6 +988,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -1019,6 +1040,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -1070,6 +1092,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -1121,6 +1144,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -1172,6 +1196,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -1223,6 +1248,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -1274,6 +1300,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -1325,6 +1352,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -1376,6 +1404,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -1427,6 +1456,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}
@@ -1478,6 +1508,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
+  minWidthOffset={0}
   onClickOut={null}
   onMouseOut={[Function]}
   onMouseOver={[Function]}

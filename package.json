@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "2.13.4",
+  "version": "2.14.0",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "repository": {
@@ -10,7 +10,7 @@
   "scripts": {
     "build-bundle": "scripts/build-bundle.sh",
     "cover": "npm run jest -- --coverage",
-    "dev": "gulp docs-generate && webpack-dev-server --inline --content-base src/docs/",
+    "dev": "gulp docs-generate && webpack-dev-server --inline --hot --content-base src/docs/",
     "docs-upload-gh": "scripts/docs-upload-gh.sh",
     "docs-upload": "gulp docs-upload",
     "jest": "NODE_ENV=test TZ=UTC jest",
@@ -22,10 +22,6 @@
     "test": "npm run lint && npm run cover",
     "watch": "npm run jest -- --watch"
   },
-  "pre-push": [
-    "lint",
-    "test"
-  ],
   "keywords": [
     "component",
     "ecosystem-react",
@@ -90,7 +86,6 @@
     "less-loader": "^2.2.2",
     "markdown": "^0.5.0",
     "postcss-loader": "^0.8.1",
-    "pre-push": "^0.1.1",
     "raw-loader": "^0.5.1",
     "react": "^15.3.2",
     "react-addons-css-transition-group": "^15.3.2",

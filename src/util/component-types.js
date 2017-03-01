@@ -94,8 +94,16 @@ export function getFirst(props, types, defaultValue) {
 	return _.first(findTypes(props, types)) || defaultValue;
 }
 
-// omit props defined in propTypes of the given type
-// and any extra keys given in third argument
-export function omitProps(props, type, keys = []) {
-	return _.omit(props, _.keys(type.propTypes).concat(keys).concat(['initialState']));
+// Omit props defined in propTypes of the given type and any extra keys given
+// in third argument
+//
+// We also have a "magic" prop that's always excluded called `callbackId`. That
+// prop can be used to identify a component in a list without having to create
+// extra closures.
+export function omitProps(props, type, keys = [], excludeCallbackId = true) {
+	// We only want to include the `callbackId` key when we're omitting props
+	// destined for a lucid component
+	const additionalOmittedKeys = excludeCallbackId ? [ 'initialState', 'callbackId' ] : [ 'initialState' ];
+
+	return _.omit(props, _.keys(type.propTypes).concat(keys).concat(additionalOmittedKeys));
 }

@@ -89,7 +89,7 @@ const RadioButtonLabeled = createClass({
 						isDisabled={isDisabled}
 						isSelected={isSelected}
 						onSelect={onSelect}
-						{...omitProps(passThroughs, RadioButtonLabeled)}
+						{...omitProps(passThroughs, RadioButtonLabeled, [], false)}
 				/>
 				<div
 					{...labelChildProps}

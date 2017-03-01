@@ -61,6 +61,10 @@ const ContextMenu = createClass({
 		 */
 		getAlignmentOffset: func,
 		/**
+		 * The number of px's to grow or shrink the minWidth of the FlyOut
+		 */
+		minWidthOffset: number,
+		/**
 		 * Indicates whether the FlyOut will render or not. Defaults to `true`.
 		 */
 		isExpanded: bool,
@@ -104,6 +108,7 @@ const ContextMenu = createClass({
 		return {
 			direction: 'down',
 			directonOffset: 0,
+			minWidthOffset: 0,
 			alignment: 'start',
 			// no default alignmentOffset so it can default to result of `getAlignmentOffset`
 			getAlignmentOffset: _.constant(0),
@@ -140,6 +145,7 @@ const ContextMenu = createClass({
 			}
 		}, 10);
 
+		document.body.addEventListener('touchstart', this.handleBodyClick);
 		document.body.addEventListener('click', this.handleBodyClick);
 	},
 
@@ -374,6 +380,7 @@ const ContextMenu = createClass({
 				direction,
 				isExpanded,
 				style,
+				minWidthOffset,
 				...passThroughs
 			},
 			state: {
@@ -399,7 +406,7 @@ const ContextMenu = createClass({
 						className={cx('&-FlyOut', `&-FlyOut-${direction}`, flyProps.className)}
 						portalId={portalId}
 						style={{
-							minWidth: targetRect.width,
+							minWidth: targetRect.width + minWidthOffset,
 							...this.getFlyoutPosition(),
 							...flyProps.style,
 						}}
