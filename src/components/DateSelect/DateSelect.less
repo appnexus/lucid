@@ -2,6 +2,28 @@
 	display: flex;
 	align-items: center;
 
+	.lucid-DateSelect-show-divider& {
+		.lucid-DateSelect-slide {
+			position: relative;
+
+			&:after {
+				position: absolute;
+				top: 0;
+				right: 0;
+				content: '';
+				width: 1px;
+				height: 100%;
+				background-color: @color-gray-10;
+			}
+
+			&.lucid-InfiniteSlidePanel-Slide-in-frame {
+				&:after {
+					right: -1px;
+				}
+			}
+		}
+	}
+
 	& &-slide-content {
 		margin: @size-XS;
 	}

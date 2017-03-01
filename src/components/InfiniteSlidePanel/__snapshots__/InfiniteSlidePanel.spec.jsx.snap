@@ -9,7 +9,9 @@ exports[`InfiniteSlidePanel [common] example testing should match snapshot(s) fo
   onSwipe={[Function]}
   slidesToShow={3}
 >
-  <SlidePanel.Slide>
+  <SlidePanel.Slide
+    className="lucid-InfiniteSlidePanel-Slide-in-frame"
+  >
     <div
       style={
         Object {
@@ -25,7 +27,9 @@ exports[`InfiniteSlidePanel [common] example testing should match snapshot(s) fo
       0
     </div>
   </SlidePanel.Slide>
-  <SlidePanel.Slide>
+  <SlidePanel.Slide
+    className="lucid-InfiniteSlidePanel-Slide-in-frame"
+  >
     <div
       style={
         Object {
@@ -41,7 +45,9 @@ exports[`InfiniteSlidePanel [common] example testing should match snapshot(s) fo
       1
     </div>
   </SlidePanel.Slide>
-  <SlidePanel.Slide>
+  <SlidePanel.Slide
+    className="lucid-InfiniteSlidePanel-Slide-in-frame"
+  >
     <div
       style={
         Object {
@@ -57,7 +63,9 @@ exports[`InfiniteSlidePanel [common] example testing should match snapshot(s) fo
       2
     </div>
   </SlidePanel.Slide>
-  <SlidePanel.Slide>
+  <SlidePanel.Slide
+    className=""
+  >
     <div
       style={
         Object {
@@ -73,7 +81,9 @@ exports[`InfiniteSlidePanel [common] example testing should match snapshot(s) fo
       3
     </div>
   </SlidePanel.Slide>
-  <SlidePanel.Slide>
+  <SlidePanel.Slide
+    className=""
+  >
     <div
       style={
         Object {
@@ -89,7 +99,9 @@ exports[`InfiniteSlidePanel [common] example testing should match snapshot(s) fo
       4
     </div>
   </SlidePanel.Slide>
-  <SlidePanel.Slide>
+  <SlidePanel.Slide
+    className=""
+  >
     <div
       style={
         Object {
@@ -105,7 +117,9 @@ exports[`InfiniteSlidePanel [common] example testing should match snapshot(s) fo
       5
     </div>
   </SlidePanel.Slide>
-  <SlidePanel.Slide>
+  <SlidePanel.Slide
+    className=""
+  >
     <div
       style={
         Object {
@@ -121,7 +135,9 @@ exports[`InfiniteSlidePanel [common] example testing should match snapshot(s) fo
       -6
     </div>
   </SlidePanel.Slide>
-  <SlidePanel.Slide>
+  <SlidePanel.Slide
+    className=""
+  >
     <div
       style={
         Object {
@@ -137,7 +153,9 @@ exports[`InfiniteSlidePanel [common] example testing should match snapshot(s) fo
       -5
     </div>
   </SlidePanel.Slide>
-  <SlidePanel.Slide>
+  <SlidePanel.Slide
+    className=""
+  >
     <div
       style={
         Object {
@@ -153,7 +171,9 @@ exports[`InfiniteSlidePanel [common] example testing should match snapshot(s) fo
       -4
     </div>
   </SlidePanel.Slide>
-  <SlidePanel.Slide>
+  <SlidePanel.Slide
+    className=""
+  >
     <div
       style={
         Object {
@@ -169,7 +189,9 @@ exports[`InfiniteSlidePanel [common] example testing should match snapshot(s) fo
       -3
     </div>
   </SlidePanel.Slide>
-  <SlidePanel.Slide>
+  <SlidePanel.Slide
+    className=""
+  >
     <div
       style={
         Object {
@@ -185,7 +207,9 @@ exports[`InfiniteSlidePanel [common] example testing should match snapshot(s) fo
       -2
     </div>
   </SlidePanel.Slide>
-  <SlidePanel.Slide>
+  <SlidePanel.Slide
+    className=""
+  >
     <div
       style={
         Object {

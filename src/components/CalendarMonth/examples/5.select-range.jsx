@@ -79,7 +79,7 @@ export default React.createClass({
 		return (
 			<section>
 
-				<div style={{ display: 'flex' }}>
+				<div style={{ display: 'flex', maxWidth: 800 }}>
 					<Button onClick={this.handlePrev}>{'<'}</Button>
 
 					<CalendarMonth
@@ -109,8 +109,8 @@ export default React.createClass({
 					<Button onClick={this.handleNext}>{'>'}</Button>
 				</div>
 
-				from: {from && from.toString()},
-				to: {to && to.toString()}
+				from: {from && from.toLocaleDateString('en-US')},
+				to: {to && to.toLocaleDateString('en-US')}
 			</section>
 		);
 	},

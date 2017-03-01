@@ -11,6 +11,7 @@ export default React.createClass({
 				<DateSelect
 					selectedDays={new Date()}
 					monthsShown={2}
+					showDivider
 				/>
 
 			</section>

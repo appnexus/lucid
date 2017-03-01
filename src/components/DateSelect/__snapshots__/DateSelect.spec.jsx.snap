@@ -22,7 +22,11 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     onSwipe={[Function]}
     slidesToShow={1}
     totalSlides={12}
-  />
+  >
+    <InfiniteSlidePanel.Slide
+      className="lucid-DateSelect-slide"
+    />
+  </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
       direction="right"
@@ -56,7 +60,11 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     onSwipe={[Function]}
     slidesToShow={1}
     totalSlides={12}
-  />
+  >
+    <InfiniteSlidePanel.Slide
+      className="lucid-DateSelect-slide"
+    />
+  </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
       direction="right"
@@ -90,7 +98,11 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     onSwipe={[Function]}
     slidesToShow={1}
     totalSlides={12}
-  />
+  >
+    <InfiniteSlidePanel.Slide
+      className="lucid-DateSelect-slide"
+    />
+  </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
       direction="right"
@@ -124,7 +136,11 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     onSwipe={[Function]}
     slidesToShow={1}
     totalSlides={12}
-  />
+  >
+    <InfiniteSlidePanel.Slide
+      className="lucid-DateSelect-slide"
+    />
+  </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
       direction="right"
@@ -138,7 +154,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 
 exports[`DateSelect common tests [common] example testing should match snapshot(s) for 5.mutiple-months 1`] = `
 <section
-  className="lucid-DateSelect"
+  className="lucid-DateSelect lucid-DateSelect-show-divider"
   style={
     Object {
       "minWidth": 434,
@@ -158,7 +174,11 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     onSwipe={[Function]}
     slidesToShow={2}
     totalSlides={12}
-  />
+  >
+    <InfiniteSlidePanel.Slide
+      className="lucid-DateSelect-slide"
+    />
+  </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
       direction="right"
@@ -192,7 +212,11 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     onSwipe={[Function]}
     slidesToShow={1}
     totalSlides={12}
-  />
+  >
+    <InfiniteSlidePanel.Slide
+      className="lucid-DateSelect-slide"
+    />
+  </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
       direction="right"

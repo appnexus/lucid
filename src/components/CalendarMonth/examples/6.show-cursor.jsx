@@ -9,23 +9,19 @@ export default React.createClass({
 
 	render() {
 		return (
-			<section>
+			<section style={{ maxWidth: 400 }}>
 
 				Cursor for day selectMode:
-				<section style={{ display: 'flex' }}>
-					<CalendarMonth
-						cursor={new Date()}
-					/>
-				</section>
+				<CalendarMonth
+					cursor={new Date()}
+				/>
 
 				Cursor for range selectMode:
-				<section style={{ display: 'flex' }}>
-					<CalendarMonth
-						selectMode='to'
-						from={this.fromDate}
-						cursor={new Date()}
-					/>
-				</section>
+				<CalendarMonth
+					selectMode='to'
+					from={this.fromDate}
+					cursor={new Date()}
+				/>
 
 			</section>
 		);

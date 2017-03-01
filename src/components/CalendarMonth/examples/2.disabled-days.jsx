@@ -5,7 +5,7 @@ import CalendarMonth from '../CalendarMonth';
 export default React.createClass({
 	render() {
 		return (
-			<section style={{ display: 'flex' }}>
+			<section style={{ maxWidth: 400 }}>
 
 				<CalendarMonth
 					disabledDays={DateUtils.isPastDay}

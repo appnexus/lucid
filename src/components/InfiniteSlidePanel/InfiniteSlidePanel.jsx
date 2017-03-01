@@ -56,6 +56,11 @@ const InfiniteSlidePanel = createClass({
 		offset: number,
 
 		/**
+		 * Max number of viewable slides to show simultaneously.
+		 */
+		slidesToShow: number,
+
+		/**
 		 * Called when a user's swipe would change the offset. Callback passes
 		 * number of slides by the user (positive for forward swipes, negative for
 		 * backwards swipes).
@@ -74,6 +79,7 @@ const InfiniteSlidePanel = createClass({
 	getDefaultProps() {
 		return {
 			offset: 0,
+			slidesToShow: 1,
 			onSwipe: _.noop,
 			totalSlides: 8,
 		};
@@ -84,6 +90,7 @@ const InfiniteSlidePanel = createClass({
 			children,
 			className,
 			offset,
+			slidesToShow,
 			onSwipe,
 			totalSlides,
 			...passThroughs
@@ -107,11 +114,20 @@ const InfiniteSlidePanel = createClass({
 				{...omitProps(passThroughs, InfiniteSlidePanel)}
 				className={cx('&', className)}
 				offset={offset}
+				slidesToShow={slidesToShow}
 				onSwipe={onSwipe}
 				isLooped
 			>
 				{_.map(slideOffsetArray, (slideOffset, elementOffset) => (
-					<SlidePanel.Slide key={elementOffset} {...slide.props}>{slideChildRenderFunction(slideOffset)}</SlidePanel.Slide>
+					<SlidePanel.Slide
+						key={elementOffset}
+						{...slide.props}
+						className={cx({
+							'&-Slide-in-frame': slideOffset - offset < slidesToShow && slideOffset - offset >= 0,
+						}, slide.props.className)}
+					>
+						{slideChildRenderFunction(slideOffset)}
+					</SlidePanel.Slide>
 				))}
 			</SlidePanel>
 		);

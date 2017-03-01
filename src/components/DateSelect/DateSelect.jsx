@@ -12,6 +12,7 @@ const cx = lucidClassNames.bind('&-DateSelect');
 
 const {
 	any,
+	bool,
 	func,
 	instanceOf,
 	number,
@@ -98,6 +99,11 @@ const DateSelect = createClass({
 		disabledDays: any,
 
 		/**
+		 * Display a divider between each month.
+		 */
+		showDivider: bool,
+
+		/**
 		 * Called when user's swipe would change the month `offset`. Callback
 		 * passes number of months swiped by the user (positive for forward swipes,
 		 * negative for backwards swipes).
@@ -139,6 +145,7 @@ const DateSelect = createClass({
 			initialMonth: new Date(),
 			selectedDays: null,
 			disabledDays: null,
+			showDivider: false,
 			onSwipe: _.noop,
 			onPrev: _.noop,
 			onNext: _.noop,
@@ -205,6 +212,7 @@ const DateSelect = createClass({
 			selectMode,
 			selectedDays,
 			disabledDays,
+			showDivider,
 			onSwipe,
 			...passThroughs
 		} = this.props;
@@ -217,7 +225,9 @@ const DateSelect = createClass({
 
 		return (
 			<section
-				className={cx('&', className)}
+				className={cx('&', className, {
+					'&-show-divider': showDivider,
+				})}
 				style={{
 					minWidth: 64 + 185 * monthsShown,
 					...passThroughs.style,
@@ -233,30 +243,32 @@ const DateSelect = createClass({
 					offset={offset}
 					onSwipe={onSwipe}
 				>
-					{(slideOffset) => (
-						<div
-							className={cx('&-slide-content')}
-						>
-							<CalendarMonth
-								monthOffset={slideOffset}
-								initialMonth={this.initialMonth}
-								cursor={cursor}
-								from={from}
-								to={to}
-								selectedDays={selectedDays}
-								disabledDays={disabledDays}
-								selectMode={selectMode}
-								onDayClick={this.handleDayClick}
-								onDayMouseEnter={this.handleDayMouseEnter}
-								onDayMouseLeave={this.handleDayMouseLeave}
+					<InfiniteSlidePanel.Slide className={cx('&-slide')}>
+						{(slideOffset) => (
+							<div
+								className={cx('&-slide-content')}
+							>
+								<CalendarMonth
+									monthOffset={slideOffset}
+									initialMonth={this.initialMonth}
+									cursor={cursor}
+									from={from}
+									to={to}
+									selectedDays={selectedDays}
+									disabledDays={disabledDays}
+									selectMode={selectMode}
+									onDayClick={this.handleDayClick}
+									onDayMouseEnter={this.handleDayMouseEnter}
+									onDayMouseLeave={this.handleDayMouseLeave}
 
-								// Only update CalendarMonths within frame or one position away:
-								shouldComponentUpdate={slideOffset - offset >= -1 && slideOffset - offset < monthsShown + 1}
+									// Only update CalendarMonths within frame or one position away:
+									shouldComponentUpdate={slideOffset - offset >= -1 && slideOffset - offset < monthsShown + 1}
 
-								{...calendarMonth.props}
-							/>
-						</div>
-					)}
+									{...calendarMonth.props}
+								/>
+							</div>
+						)}
+					</InfiniteSlidePanel.Slide>
 				</InfiniteSlidePanel>
 				<div>
 					<ChevronThinIcon size={32} isClickable direction='right' onClick={this.handleNext} />

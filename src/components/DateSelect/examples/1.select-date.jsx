@@ -27,7 +27,7 @@ export default React.createClass({
 					onSelectDate={this.handleSelectDate}
 				/>
 
-				selected date: {selectedDate && selectedDate.toString()}
+				selected date: {selectedDate && selectedDate.toLocaleDateString('en-US')}
 
 			</section>
 		);

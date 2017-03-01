@@ -47,8 +47,8 @@ export default React.createClass({
 				/>
 
 				<div>
-					from: {from && from.toString()},
-					to: {to && to.toString()}
+					from: {from && from.toLocaleDateString('en-US')},
+					to: {to && to.toLocaleDateString('en-US')}
 				</div>
 
 				<Button onClick={this.handleReset}>Reset</Button>

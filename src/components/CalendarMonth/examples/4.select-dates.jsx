@@ -68,7 +68,7 @@ export default React.createClass({
 		return (
 			<section>
 
-				<div style={{ display: 'flex' }}>
+				<div style={{ display: 'flex', maxWidth: 468 }}>
 					<Button onClick={this.handlePrev}>{'<'}</Button>
 
 					<CalendarMonth
@@ -84,7 +84,7 @@ export default React.createClass({
 					<Button onClick={this.handleNext}>{'>'}</Button>
 				</div>
 
-				selectedDays: {_.map(selectedDays, (selected) => selected.toString()).join(', ')}
+				selectedDays: {_.map(selectedDays, (selected) => selected.toLocaleDateString('en-US')).join(', ')}
 			</section>
 		);
 	},

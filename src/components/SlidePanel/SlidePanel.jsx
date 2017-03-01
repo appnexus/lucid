@@ -200,7 +200,7 @@ const SlidePanel = createClass({
 								<div
 									key={offset}
 									{...slide.props}
-									className={cx('&-Slide')}
+									className={cx('&-Slide', slide.props.className)}
 									style={{
 										flexGrow: 1,
 										flexShrink: 0,
