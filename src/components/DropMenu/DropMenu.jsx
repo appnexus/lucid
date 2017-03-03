@@ -442,9 +442,9 @@ const DropMenu = createClass({
 			!isHidden &&
 			<div
 				key={'DropMenuOption' + optionIndex}
-				onMouseMove={(event) => this.handleMouseFocusOption(optionIndex, optionProps, event)}
-				onClick={(event) => this.handleSelectOption(optionIndex, optionProps, event)}
 				{...omitProps(optionProps, DropMenu.Option)}
+				onClick={(event) => this.handleSelectOption(optionIndex, optionProps, event)}
+				onMouseMove={(event) => this.handleMouseFocusOption(optionIndex, optionProps, event)}
 				className={cx(
 					'&-Option', {
 						'&-Option-is-grouped': isGrouped,
