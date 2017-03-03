@@ -115,6 +115,13 @@ const DropMenu = createClass({
 			displayName: 'DropMenu.NullOption',
 			propName: 'NullOption',
 		}),
+		/**
+		 * Props that are passed through to the underling ContextMenu.
+		 */
+		ContextMenu: createClass({
+			displayName: 'DropMenu.ContextMenu',
+			propName: 'ContextMenu',
+		}),
 	},
 
 	propTypes: {
@@ -235,6 +242,7 @@ const DropMenu = createClass({
 			onFocusNext: _.noop,
 			onFocusPrev: _.noop,
 			onFocusOption: _.noop,
+			ContextMenu: ContextMenu.getDefaultProps(),
 		};
 	},
 
@@ -494,6 +502,7 @@ const DropMenu = createClass({
 			portalId,
 		} = this.state;
 
+		const contextMenuProps = _.get(getFirst(this.props, DropMenu.ContextMenu), 'props', {});
 		const controlProps = _.get(getFirst(this.props, DropMenu.Control), 'props', {});
 		const headerProps = _.get(getFirst(this.props, DropMenu.Header), 'props', {});
 
@@ -504,6 +513,7 @@ const DropMenu = createClass({
 				'&-direction-up': isExpanded && direction === 'up',
 			}, className)} style={style}>
 				<ContextMenu
+					{...contextMenuProps}
 					portalId={portalId}
 					isExpanded={isExpanded}
 					direction={direction}

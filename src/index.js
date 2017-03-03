@@ -3,6 +3,8 @@ import Accordion, { AccordionDumb } from './components/Accordion/Accordion';
 import Autocomplete, { AutocompleteDumb } from './components/Autocomplete/Autocomplete';
 import ButtonGroup, { ButtonGroupDumb } from './components/ButtonGroup/ButtonGroup';
 import SearchableSelect, { SearchableSelectDumb } from './components/SearchableSelect/SearchableSelect';
+import DateSelect, { DateSelectDumb }  from './components/DateSelect/DateSelect';
+import SearchableMultiSelect, { SearchableMultiSelectDumb } from './components/SearchableMultiSelect/SearchableMultiSelect';
 import DropMenu, { DropMenuDumb } from './components/DropMenu/DropMenu';
 import Expander, { ExpanderDumb } from './components/Expander/Expander';
 import ExpanderPanel, { ExpanderPanelDumb } from './components/ExpanderPanel/ExpanderPanel';
@@ -48,7 +50,6 @@ import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
 import DangerLightIcon from './components/Icon/DangerLightIcon/DangerLightIcon';
 import DataTable from './components/DataTable/DataTable';
-import EmptyStateWrapper from './components/EmptyStateWrapper/EmptyStateWrapper';
 import DataViewIcon from './components/Icon/DataViewIcon/DataViewIcon';
 import Dialog from './components/Dialog/Dialog';
 import DownloadIcon from './components/Icon/DownloadIcon/DownloadIcon';
@@ -58,6 +59,7 @@ import DuplicateIcon from './components/Icon/DuplicateIcon/DuplicateIcon';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EditPageIcon from './components/Icon/EditPageIcon/EditPageIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
+import EmptyStateWrapper from './components/EmptyStateWrapper/EmptyStateWrapper';
 import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
 import FileIcon from './components/Icon/FileIcon/FileIcon';
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
@@ -84,6 +86,7 @@ import MinusCircleIcon from './components/Icon/MinusCircleIcon/MinusCircleIcon';
 import MinusCircleLightIcon from './components/Icon/MinusCircleLightIcon/MinusCircleLightIcon';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import NewWindowIcon from './components/Icon/NewWindowIcon/NewWindowIcon';
+import OutwardArrowsIcon from './components/Icon/OutwardArrowsIcon/OutwardArrowsIcon';
 import Overlay from './components/Overlay/Overlay';
 import OverlayWrapper from './components/OverlayWrapper/OverlayWrapper';
 import Panel from './components/Panel/Panel';
@@ -99,6 +102,7 @@ import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import Resizer from './components/Resizer/Resizer';
 import ScrollTable from './components/ScrollTable/ScrollTable';
 import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
+import Selection from './components/Selection/Selection';
 import SeparatorIcon from './components/Icon/SeparatorIcon/SeparatorIcon';
 import SettingsIcon from './components/Icon/SettingsIcon/SettingsIcon';
 import ShoppingCartIcon from './components/Icon/ShoppingCartIcon/ShoppingCartIcon';
@@ -114,6 +118,7 @@ import SwitchIcon from './components/Icon/SwitchIcon/SwitchIcon';
 import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
 import Table from './components/Table/Table';
 import TableGearIcon from './components/Icon/TableGearIcon/TableGearIcon';
+import Tag from './components/Tag/Tag';
 import TextField from './components/TextField/TextField';
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
 import UnlinkedIcon from './components/Icon/UnlinkedIcon/UnlinkedIcon';
@@ -183,11 +188,15 @@ export {
 	Collapsible,
 	SearchableSelect,
 	SearchableSelectDumb,
+	SearchableMultiSelect,
+	SearchableMultiSelectDumb,
 	ContextMenu,
 	CrossIcon,
 	DangerIcon,
 	DangerLightIcon,
 	DataTable,
+	DateSelect,
+	DateSelectDumb,
 	EmptyStateWrapper,
 	DataViewIcon,
 	Dialog,
@@ -230,6 +239,7 @@ export {
 	MinusCircleLightIcon,
 	MinusIcon,
 	NewWindowIcon,
+	OutwardArrowsIcon,
 	Overlay,
 	OverlayWrapper,
 	Paginator,
@@ -253,6 +263,7 @@ export {
 	SearchField,
 	SearchFieldDumb,
 	SearchIcon,
+	Selection,
 	SeparatorIcon,
 	SettingsIcon,
 	ShoppingCartIcon,
@@ -276,6 +287,7 @@ export {
 	SwitchLabeled,
 	Table,
 	TableGearIcon,
+	Tag,
 	Tabs,
 	TabsDumb,
 	TextField,

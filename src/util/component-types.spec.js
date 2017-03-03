@@ -316,5 +316,38 @@ describe('component-types', () => {
 				isPrimary: true,
 			}, 'must omit props defined in propTypes');
 		});
+
+		it('should omit `callbackId` from props by default', () => {
+			const props = omitProps({
+				className: 'test-button',
+				text: 'Click Me',
+				isActive: true,
+				isPrimary: true,
+				size: 'normal',
+				callbackId: 'cant find me',
+			}, Button);
+
+			assert.deepEqual(props, {
+				text: 'Click Me',
+				isPrimary: true,
+			}, 'must omit props defined in propTypes');
+		});
+
+		it('should not omit `callbackId` from props when specified', () => {
+			const props = omitProps({
+				className: 'test-button',
+				text: 'Click Me',
+				isActive: true,
+				isPrimary: true,
+				size: 'normal',
+				callbackId: 'can find me',
+			}, Button, [], false);
+
+			assert.deepEqual(props, {
+				text: 'Click Me',
+				isPrimary: true,
+				callbackId: 'can find me',
+			}, 'must omit props defined in propTypes');
+		});
 	});
 });

@@ -19,6 +19,15 @@ export function common(Component, {
 	}
 
 	describe('[common]', () => {
+
+		if (!Component) {
+			throw new Error('An undefined component was passed to generic tests.');
+		}
+
+		if (Component._isLucidHybridComponent) {
+			throw new Error(`You're trying to run generic tests on a hybrid component which is bad and won't work and will make you cry. Check your spec files for ${Component.displayName} and import the raw component instead of the hybrid version.`);
+		}
+
 		it('should have a `displayName` defined', () => {
 			assert(Component.displayName);
 		});
@@ -171,3 +180,22 @@ export function controls(Component, { callbackName, controlSelector, eventType, 
 		});
 	});
 }
+
+const NativeDate = global.Date;
+const createMockDateClass = (...args) => _.assign(
+	function MockDate() { return new NativeDate(...args); },
+	{
+		UTC: NativeDate.UTC,
+		parse: NativeDate.parse,
+		now: () => new NativeDate(...args).getTime(),
+		prototype: NativeDate.prototype,
+	}
+);
+
+export const mockDate = _.assign((...args) => {
+	global.Date = createMockDateClass(...args);
+}, {
+	restore() {
+		global.Date = NativeDate;
+	},
+});

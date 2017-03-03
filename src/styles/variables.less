@@ -11,6 +11,7 @@
 // Sizes
 // -----------------------------------------------------------------------------
 
+@size-font-S: 9px;
 @size-font: 12px;
 @size-font-L: 15px;
 @size-font-XL: 18px;
@@ -19,7 +20,8 @@
 @size-borderRadius: 4px;
 @size-borderWidth: 1px;
 
-@size-standard-height: 28px;
+@size-standard-height: 28px; // should have been `@size-height-standard`
+@size-height-L: 46px;
 
 @size-XXS: 3px;
 @size-XS: 6px;
@@ -30,6 +32,7 @@
 @size-XXL: 30px;
 
 @size-expander-button: 20px;
+@size-tag: 20px;
 
 // -----------------------------------------------------------------------------
 // Z Indices
@@ -97,6 +100,7 @@
 @color-primaryMedium: tint(@color-primary, 65%);
 
 // Transparent primary colors
+@color-primary-10: fade(@color-primary, 10%);
 @color-primary-30: fade(@color-primary, 30%);
 
 // Transparent grays
@@ -109,6 +113,7 @@
 @color-gray-60: fade(@color-black, 60%);
 
 // Transparent whites
+@color-white-50: fade(@color-white, 50%);
 @color-white-85: fade(@color-white, 85%);
 
 // Standard border color

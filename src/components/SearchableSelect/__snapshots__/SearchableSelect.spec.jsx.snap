@@ -2,6 +2,18 @@
 
 exports[`SearchableSelect [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SearchableSelect"
   direction="down"
@@ -740,6 +752,18 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
 
 exports[`SearchableSelect [common] example testing should match snapshot(s) for 02.loading 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SearchableSelect"
   direction="down"
@@ -1222,6 +1246,18 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
 
 exports[`SearchableSelect [common] example testing should match snapshot(s) for 03.custom-search-placeholder 1`] = `
 <DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
   alignment="start"
   className="lucid-SearchableSelect"
   direction="down"
