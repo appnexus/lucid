@@ -63,6 +63,14 @@ const SearchableMultiSelect = createClass({
 				}),
 			},
 		}),
+		/**
+		 * Passes props through to the `SearchField` component.
+		 */
+		SearchField: createClass({
+			displayName: 'SearchableMultiSelect.SearchField',
+			propName: 'SearchField',
+			propTypes: SearchField.propTypes,
+		}),
 	},
 
 	propTypes: {
@@ -137,11 +145,6 @@ const SearchableMultiSelect = createClass({
 		 */
 		DropMenu: shape(DropMenu.propTypes),
 		/**
-		 * Object of SearchField props which are passed through to the underlying
-		 * SearchField component.
-		 */
-		SearchField: shape(SearchField.propTypes),
-		/**
 		 * *Child Element* - These are menu options. Each `Option` may be passed a
 		 * prop called `isDisabled` to disable selection of that `Option`. Any
 		 * other props pass to Option will be available from the `onSelect`
@@ -178,7 +181,6 @@ const SearchableMultiSelect = createClass({
 			searchText: '',
 			selectedIndices: [],
 			DropMenu: DropMenu.getDefaultProps(),
-			SearchField: SearchField.getDefaultProps(),
 			responsiveMode: 'large',
 			hasRemoveAll: true,
 			hasSelections: true,
@@ -270,7 +272,7 @@ const SearchableMultiSelect = createClass({
 
 		const options = _.map(optionsProps, (optionProps, optionIndex) => (
 			<DropMenu.Option
-				{..._.omit(optionProps, 'children')}
+				{...omitProps(optionProps, SearchableMultiSelect.Option, ['children'], false)}
 				isHidden={!optionFilter(searchText, optionProps)}
 				key={optionIndex}
 				isDisabled={isLoading}
@@ -320,7 +322,7 @@ const SearchableMultiSelect = createClass({
 			},
 		} = this;
 
-		const searchFieldProps = _.get(getFirst(props, SearchField), 'props', {});
+		const searchFieldProps = _.get(getFirst(props, SearchableMultiSelect.SearchField), 'props', {});
 		const optionsProps = _.map(findTypes(props, SearchableMultiSelect.Option), 'props');
 		const isSmall = responsiveMode === 'small';
 

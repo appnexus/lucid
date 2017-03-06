@@ -41,6 +41,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         onChange={[Function]}
         onChangeDebounced={[Function]}
         onSubmit={[Function]}
+        placeholder="Type here to simulate an API backed search"
         value=""
       />
     </DropMenu.Control>

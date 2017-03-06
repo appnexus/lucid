@@ -90,6 +90,7 @@ export default React.createClass({
 					onSearch={this.handleSearch}
 					selectedIndices={selectedIndices}
 					optionFilter={_.constant(true)}
+					SearchField={{ placeholder: 'Type here to simulate an API backed search' }}
 				>
 					{_.map(visibleIds, (id) => (
 						<Option key={id} callbackId={id}>{allData[id].name}</Option>
