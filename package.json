@@ -13,7 +13,7 @@
     "dev": "gulp docs-generate && webpack-dev-server --inline --hot --content-base src/docs/",
     "docs-upload-gh": "scripts/docs-upload-gh.sh",
     "docs-upload": "gulp docs-upload",
-    "jest": "NODE_ENV=test TZ=UTC jest",
+    "jest": "NODE_ENV=test TZ=UTC jest --runInBand",
     "lint": "eslint . --ext .js,.jsx",
     "lint-fix": "eslint . --ext .js,.jsx --fix",
     "preversion": "rm -rf dist && npm run lint && gulp preversion && npm run build-bundle",
