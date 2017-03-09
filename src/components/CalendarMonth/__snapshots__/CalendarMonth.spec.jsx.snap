@@ -55,6 +55,12 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   fixedWeeks={false}
   from={null}
   initialMonth={2016-02-17T22:25:23.000Z}
+  labels={
+    Object {
+      "nextMonth": "Next Month",
+      "previousMonth": "Previous Month",
+    }
+  }
   locale="en"
   localeUtils={
     Object {
@@ -105,6 +111,12 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
         }
       }
       dir="ltr"
+      labels={
+        Object {
+          "nextMonth": "Next Month",
+          "previousMonth": "Previous Month",
+        }
+      }
       showNextButton={true}
       showPreviousButton={true}
     />
@@ -189,6 +201,12 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   fixedWeeks={false}
   from={null}
   initialMonth={2016-02-17T22:25:23.000Z}
+  labels={
+    Object {
+      "nextMonth": "Next Month",
+      "previousMonth": "Previous Month",
+    }
+  }
   locale="en"
   localeUtils={
     Object {
@@ -239,6 +257,12 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
         }
       }
       dir="ltr"
+      labels={
+        Object {
+          "nextMonth": "Next Month",
+          "previousMonth": "Previous Month",
+        }
+      }
       showNextButton={true}
       showPreviousButton={true}
     />
@@ -321,6 +345,12 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   fixedWeeks={false}
   from={null}
   initialMonth={2016-02-17T22:25:23.000Z}
+  labels={
+    Object {
+      "nextMonth": "Next Month",
+      "previousMonth": "Previous Month",
+    }
+  }
   locale="en"
   localeUtils={
     Object {
@@ -372,6 +402,12 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
         }
       }
       dir="ltr"
+      labels={
+        Object {
+          "nextMonth": "Next Month",
+          "previousMonth": "Previous Month",
+        }
+      }
       showNextButton={true}
       showPreviousButton={true}
     />
@@ -455,6 +491,12 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   fixedWeeks={false}
   from={null}
   initialMonth={2016-02-17T22:25:23.000Z}
+  labels={
+    Object {
+      "nextMonth": "Next Month",
+      "previousMonth": "Previous Month",
+    }
+  }
   locale="en"
   localeUtils={
     Object {
@@ -505,6 +547,12 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
         }
       }
       dir="ltr"
+      labels={
+        Object {
+          "nextMonth": "Next Month",
+          "previousMonth": "Previous Month",
+        }
+      }
       showNextButton={true}
       showPreviousButton={true}
     />
@@ -592,6 +640,12 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   fixedWeeks={false}
   from={null}
   initialMonth={2016-02-17T22:25:23.000Z}
+  labels={
+    Object {
+      "nextMonth": "Next Month",
+      "previousMonth": "Previous Month",
+    }
+  }
   locale="en"
   localeUtils={
     Object {
@@ -642,6 +696,12 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
         }
       }
       dir="ltr"
+      labels={
+        Object {
+          "nextMonth": "Next Month",
+          "previousMonth": "Previous Month",
+        }
+      }
       showNextButton={true}
       showPreviousButton={true}
     />
@@ -728,6 +788,12 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   fixedWeeks={false}
   from={null}
   initialMonth={2016-03-17T22:25:23.000Z}
+  labels={
+    Object {
+      "nextMonth": "Next Month",
+      "previousMonth": "Previous Month",
+    }
+  }
   locale="en"
   localeUtils={
     Object {
@@ -778,6 +844,12 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
         }
       }
       dir="ltr"
+      labels={
+        Object {
+          "nextMonth": "Next Month",
+          "previousMonth": "Previous Month",
+        }
+      }
       showNextButton={true}
       showPreviousButton={true}
     />
@@ -863,6 +935,12 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   fixedWeeks={false}
   from={null}
   initialMonth={2016-02-17T22:25:23.000Z}
+  labels={
+    Object {
+      "nextMonth": "Next Month",
+      "previousMonth": "Previous Month",
+    }
+  }
   locale="en"
   localeUtils={
     Object {
@@ -913,6 +991,12 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
         }
       }
       dir="ltr"
+      labels={
+        Object {
+          "nextMonth": "Next Month",
+          "previousMonth": "Previous Month",
+        }
+      }
       showNextButton={true}
       showPreviousButton={true}
     />
@@ -995,6 +1079,12 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   fixedWeeks={false}
   from={2016-02-01T22:25:23.000Z}
   initialMonth={2016-02-17T22:25:23.000Z}
+  labels={
+    Object {
+      "nextMonth": "Next Month",
+      "previousMonth": "Previous Month",
+    }
+  }
   locale="en"
   localeUtils={
     Object {
@@ -1045,6 +1135,12 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
         }
       }
       dir="ltr"
+      labels={
+        Object {
+          "nextMonth": "Next Month",
+          "previousMonth": "Previous Month",
+        }
+      }
       showNextButton={true}
       showPreviousButton={true}
     />

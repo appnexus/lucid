@@ -1,14 +1,5 @@
 before_install:
-  # Repo for Yarn
-  - sudo apt-key adv --fetch-keys http://dl.yarnpkg.com/debian/pubkey.gpg
-  - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  - sudo apt-get update -qq
-  - sudo apt-get install -y -qq yarn
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
   - bash ./scripts/validate-tests.sh
-install:
-  - yarn
 after_success:
   - bash ./scripts/docs-upload-gh.sh
   - bash <(curl -s https://codecov.io/bash)
@@ -22,6 +13,4 @@ env:
 language: node_js
 node_js:
   - "6"
-cache:
-  directories:
-  - $HOME/.yarn-cache
+cache: yarn
