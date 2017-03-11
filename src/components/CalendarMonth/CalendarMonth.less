@@ -4,7 +4,7 @@
 @CalendarMonth-DayPicker-Month-less-height: 
 	@CalendarMonth-DayPicker-Caption-height +
 	@CalendarMonth-DayPicker-Caption-margin +
-	@CalendarMonth-DayPicker-WeekdaysRow-height +
+	@CalendarMonth-DayPicker-WeekdaysRow-height -
 	8px;
 
 .lucid-CalendarMonth {
@@ -13,7 +13,7 @@
 
 	.DayPicker-Month {
 		width: 100%;
-		height: calc(100% - @CalendarMonth-DayPicker-Month-less-height);
+		height: calc(~"100% - "@CalendarMonth-DayPicker-Month-less-height);
 		display: table;
 		table-layout: fixed;
 		border-collapse: collapse;
