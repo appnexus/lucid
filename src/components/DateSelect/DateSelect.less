@@ -7,10 +7,10 @@
 		height: 100%;
 	}
 
-	.lucid-DateSelect-show-divider& {
-		.lucid-DateSelect-slide {
-			position: relative;
+	.lucid-DateSelect-slide {
+		position: relative;
 
+		.lucid-DateSelect-show-divider& {
 			&:after {
 				position: absolute;
 				top: 0;
@@ -27,15 +27,21 @@
 				}
 			}
 		}
-	}
 
-	& &-slide-content {
-		margin: @size-XS;
-		height: 100%;
-
-		.lucid-DateSelect-CalendarMonth {
+		.lucid-DateSelect-slide-content {
+			margin: @size-XS;
 			height: 100%;
+			min-height: 200px;
+
+			.lucid-DateSelect-CalendarMonth {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+			}
 		}
 	}
+
 }
 
