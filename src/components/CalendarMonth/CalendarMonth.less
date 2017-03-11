@@ -1,9 +1,19 @@
+@CalendarMonth-DayPicker-Caption-height: 18px;
+@CalendarMonth-DayPicker-Caption-margin: @size-standard;
+@CalendarMonth-DayPicker-WeekdaysRow-height: 14px;
+@CalendarMonth-DayPicker-Month-less-height: 
+	@CalendarMonth-DayPicker-Caption-height +
+	@CalendarMonth-DayPicker-Caption-margin +
+	@CalendarMonth-DayPicker-WeekdaysRow-height +
+	8px;
+
 .lucid-CalendarMonth {
 	color: @color-textColor;
 	text-align: center;
 
 	.DayPicker-Month {
 		width: 100%;
+		height: calc(100% - @CalendarMonth-DayPicker-Month-less-height);
 		display: table;
 		table-layout: fixed;
 		border-collapse: collapse;
@@ -15,7 +25,8 @@
 			display: table-caption;
 			font-weight: bold;
 			font-size: @size-font-L;
-			margin-bottom: @size-standard;
+			height: @CalendarMonth-DayPicker-Caption-height;
+			margin-bottom: @CalendarMonth-DayPicker-Caption-margin;
 		}
 
 		.DayPicker-Weekdays {
@@ -23,6 +34,7 @@
 
 			.DayPicker-WeekdaysRow {
 				display: table-row;
+				height: @CalendarMonth-DayPicker-WeekdaysRow-height;
 
 				.DayPicker-Weekday {
 					display: table-cell;
@@ -45,6 +57,7 @@
 					line-height: 26px;
 					font-size: @size-font;
 					cursor: pointer;
+					vertical-align: middle;
 
 					&.DayPicker-Day:focus {
 						outline: none;

@@ -250,6 +250,7 @@ const DateSelect = createClass({
 								className={cx('&-slide-content')}
 							>
 								<CalendarMonth
+									className={cx('&-CalendarMonth')}
 									monthOffset={slideOffset}
 									initialMonth={this.initialMonth}
 									cursor={cursor}

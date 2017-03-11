@@ -10,6 +10,7 @@ const {
 	instanceOf,
 	number,
 	oneOf,
+	string,
 } = React.PropTypes;
 
 /**
@@ -22,6 +23,10 @@ const CalendarMonth = createClass({
 	_isPrivate: true,
 
 	propTypes: {
+		/**
+		 * Appended to the component-specific class names set on the root element.
+		 */
+		className: string,
 		/**
 		 * The offset of the rendered month, where 0 is the `initialMonth`. Negative
 		 * values will show previous months.
@@ -123,6 +128,7 @@ const CalendarMonth = createClass({
 
 	render() {
 		const {
+			className,
 			monthOffset,
 			initialMonth,
 			...passThroughs
@@ -134,7 +140,7 @@ const CalendarMonth = createClass({
 		return (
 			<DayPicker
 				key={monthOffset}
-				className={cx('&')}
+				className={cx('&', className)}
 				initialMonth={monthDate}
 				canChangeMonth={false}
 				weekdaysShort={['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']}
