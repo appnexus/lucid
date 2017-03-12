@@ -100,10 +100,14 @@ const CalendarMonth = createClass({
 			return DateUtils.isSameDay(day, new Date(cursor));
 		}
 
-		return DateUtils.isDayInRange(day, {
-			from: new Date(from),
-			to: new Date(to),
-		});
+		if (from && to) {
+			return DateUtils.isDayInRange(day, {
+				from: new Date(from),
+				to: new Date(to),
+			});
+		}
+
+		return false;
 	},
 
 	modifierFrom(day) {
