@@ -141,6 +141,11 @@ const DateSelect = createClass({
 		 * Render initial font size relative to size of the component so it scales with the calendar size.
 		 */
 		isFontSizeRelative: bool,
+
+		/**
+		 * Highlight dates and ranges based on cursor position.
+		 */
+		showCursorHighlight: bool,
 	},
 
 	getDefaultProps() {
@@ -159,6 +164,7 @@ const DateSelect = createClass({
 			onNext: _.noop,
 			onSelectDate: _.noop,
 			isFontSizeRelative: false,
+			showCursorHighlight: true,
 		};
 	},
 
@@ -247,6 +253,7 @@ const DateSelect = createClass({
 			disabledDays,
 			showDivider,
 			onSwipe,
+			showCursorHighlight,
 			...passThroughs
 		} = this.props;
 
@@ -294,8 +301,8 @@ const DateSelect = createClass({
 									disabledDays={disabledDays}
 									selectMode={selectMode}
 									onDayClick={this.handleDayClick}
-									onDayMouseEnter={this.handleDayMouseEnter}
-									onDayMouseLeave={this.handleDayMouseLeave}
+									onDayMouseEnter={showCursorHighlight ? this.handleDayMouseEnter : null}
+									onDayMouseLeave={showCursorHighlight ? this.handleDayMouseLeave : null}
 
 									// Only update CalendarMonths within frame or one position away:
 									shouldComponentUpdate={slideOffset - offset >= -1 && slideOffset - offset < monthsShown + 1}
