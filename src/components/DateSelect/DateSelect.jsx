@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { buildHybridComponent } from '../../util/state-management';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
@@ -9,6 +10,8 @@ import CalendarMonth from '../CalendarMonth/CalendarMonth';
 import ChevronThinIcon from '../Icon/ChevronThinIcon/ChevronThinIcon';
 
 const cx = lucidClassNames.bind('&-DateSelect');
+
+const NAV_BUTTON_SIZE = 32;
 
 const {
 	any,
@@ -133,6 +136,11 @@ const DateSelect = createClass({
 		 * Signature: `(selectedDate, { event, props }) => {}`
 		 */
 		onSelectDate: func,
+
+		/**
+		 * Render initial font size relative to size of the component so it scales with the calendar size.
+		 */
+		isFontSizeRelative: bool,
 	},
 
 	getDefaultProps() {
@@ -150,6 +158,7 @@ const DateSelect = createClass({
 			onPrev: _.noop,
 			onNext: _.noop,
 			onSelectDate: _.noop,
+			isFontSizeRelative: false,
 		};
 	},
 
@@ -201,6 +210,30 @@ const DateSelect = createClass({
 		this.initialMonth = new Date(this.props.initialMonth);
 	},
 
+	componentDidMount() {
+		const {
+			isFontSizeRelative,
+			monthsShown,
+		} = this.props;
+
+		if (isFontSizeRelative) {
+			const rootElement = ReactDOM.findDOMNode(this.rootRef);
+			const {
+				width,
+				height,
+			} = rootElement.getBoundingClientRect();
+			const navButtonsWidth = NAV_BUTTON_SIZE * 2;
+			const oneMonthShownWidth = (width - navButtonsWidth) / monthsShown + navButtonsWidth;
+			const size = Math.sqrt(oneMonthShownWidth * height);
+			const relativeFontSize = Math.round(size / 24);
+			const relativeMinWidth = (((width - navButtonsWidth) / monthsShown) * 10.1075 / relativeFontSize) * monthsShown + navButtonsWidth;
+
+			rootElement.style.fontSize = `${relativeFontSize}px`;
+			rootElement.style.minWidth = `${relativeMinWidth}px`;
+		}
+	},
+
+
 	render() {
 		const {
 			className,
@@ -225,17 +258,18 @@ const DateSelect = createClass({
 
 		return (
 			<section
+				ref={(ref) => {this.rootRef = ref;}}
 				className={cx('&', className, {
 					'&-show-divider': showDivider,
 				})}
 				style={{
-					minWidth: 64 + 185 * monthsShown,
+					minWidth: (NAV_BUTTON_SIZE * 2) + 185 * monthsShown,
 					...passThroughs.style,
 				}}
 				{...omitProps(passThroughs, DateSelect)}
 			>
 				<div>
-					<ChevronThinIcon size={32} isClickable direction='left' onClick={this.handlePrev} />
+					<ChevronThinIcon size={NAV_BUTTON_SIZE} isClickable direction='left' onClick={this.handlePrev} />
 				</div>
 				<InfiniteSlidePanel
 					className={cx('&-InfiniteSlidePanel')}
@@ -273,7 +307,7 @@ const DateSelect = createClass({
 					</InfiniteSlidePanel.Slide>
 				</InfiniteSlidePanel>
 				<div>
-					<ChevronThinIcon size={32} isClickable direction='right' onClick={this.handleNext} />
+					<ChevronThinIcon size={NAV_BUTTON_SIZE} isClickable direction='right' onClick={this.handleNext} />
 				</div>
 			</section>
 		);

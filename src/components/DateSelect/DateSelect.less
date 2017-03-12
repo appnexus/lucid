@@ -1,6 +1,7 @@
 .lucid-DateSelect {
 	display: flex;
 	align-items: center;
+	font-size: @size-font;
 
 	&-InfiniteSlidePanel {
 		flex: 1;
@@ -9,6 +10,8 @@
 
 	.lucid-DateSelect-slide {
 		position: relative;
+		display: flex;
+		align-items: stretch;
 
 		.lucid-DateSelect-show-divider& {
 			&:after {
@@ -30,18 +33,15 @@
 
 		.lucid-DateSelect-slide-content {
 			margin: @size-XS;
-			height: 100%;
-			min-height: 200px;
+			flex: 1;
+			display: flex;
+			align-items: stretch;
 
 			.lucid-DateSelect-CalendarMonth {
-				position: absolute;
-				height: 100%;
-				width: 100%;
-				top: 0;
-				left: 0;
+				flex: 1;
+				font-size: 100%;
 			}
 		}
 	}
-
 }
 
