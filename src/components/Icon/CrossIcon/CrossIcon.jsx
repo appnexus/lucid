@@ -26,7 +26,7 @@ const CrossIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, CrossIcon)}
+				{...omitProps(passThroughs, CrossIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>

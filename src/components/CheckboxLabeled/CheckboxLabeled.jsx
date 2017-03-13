@@ -95,7 +95,7 @@ const CheckboxLabeled = createClass({
 					isIndeterminate={isIndeterminate}
 					isSelected={isSelected}
 					onSelect={onSelect}
-					{...omitProps(passThroughs, CheckboxLabeled)}
+					{...omitProps(passThroughs, CheckboxLabeled, [], false)}
 				/>
 				<div
 					{...labelChildProps}

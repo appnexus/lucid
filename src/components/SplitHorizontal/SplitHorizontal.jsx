@@ -420,7 +420,7 @@ const SplitHorizontal = createClass({
 								ref={this.storeRef('topPane')}
 							>{topPaneProps.children}</div>
 							<DragCaptureZone
-								{...omitProps(dividerProps, SplitHorizontal.Divider)}
+								{...omitProps(dividerProps, SplitHorizontal.Divider, [], false)}
 								className={cx('&-Divider', dividerProps.className)}
 								onDragStart={this.handleDragStart}
 								onDrag={this.handleDrag}

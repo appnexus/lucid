@@ -81,7 +81,7 @@ const Dialog = createClass({
 
 		return (
 			<Overlay
-				{...omitProps(passThroughs, Dialog)}
+				{...omitProps(passThroughs, Dialog, [], false)}
 				{..._.pick(passThroughs, _.keys(Overlay.propTypes))}
 				isShown={isShown}
 				className={cx('&', className)}

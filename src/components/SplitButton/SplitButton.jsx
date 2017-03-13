@@ -174,7 +174,7 @@ const SplitButton = createClass({
 		return (
 			<DropMenu
 				{...dropMenuProps}
-				{...omitProps(passThroughs, SplitButton)}
+				{...omitProps(passThroughs, SplitButton, [], false)}
 				direction={direction}
 				className={cx('&', className)}
 				onSelect={this.handleSelect}

@@ -76,7 +76,7 @@ const TextFieldValidated = createClass({
 				Error={errorChildProps}
 			>
 				<TextField
-					{...omitProps(passThroughs, TextFieldValidated)}
+					{...omitProps(passThroughs, TextFieldValidated, [], false)}
 					ref={(ref) => this.refs = { TextField: ref }}
 				/>
 			</Validation>

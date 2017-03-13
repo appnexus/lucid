@@ -47,7 +47,7 @@ const ArrowIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, ArrowIcon)}
+				{...omitProps(passThroughs, ArrowIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', {
 					'&-is-down': direction === 'down',

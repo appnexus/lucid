@@ -28,7 +28,7 @@ const InfoIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, InfoIcon)}
+				{...omitProps(passThroughs, InfoIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				isClickable={isClickable}
 				isDisabled={isDisabled}

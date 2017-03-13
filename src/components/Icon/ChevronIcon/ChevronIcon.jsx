@@ -47,7 +47,7 @@ const ChevronIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, ChevronIcon)}
+				{...omitProps(passThroughs, ChevronIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', {
 					'&-is-down': direction === 'down',

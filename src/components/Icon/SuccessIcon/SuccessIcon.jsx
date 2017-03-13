@@ -28,7 +28,7 @@ const SuccessIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, SuccessIcon)}
+				{...omitProps(passThroughs, SuccessIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				isClickable={isClickable}
 				isDisabled={isDisabled}

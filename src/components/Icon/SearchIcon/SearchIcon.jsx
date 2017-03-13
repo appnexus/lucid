@@ -26,7 +26,7 @@ const SearchIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, SearchIcon)}
+				{...omitProps(passThroughs, SearchIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>

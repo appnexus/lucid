@@ -31,7 +31,7 @@ const SeparatorIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, SeparatorIcon)}
+				{...omitProps(passThroughs, SeparatorIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>

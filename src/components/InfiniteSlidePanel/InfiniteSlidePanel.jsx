@@ -111,7 +111,7 @@ const InfiniteSlidePanel = createClass({
 
 		return (
 			<SlidePanel
-				{...omitProps(passThroughs, InfiniteSlidePanel)}
+				{...omitProps(passThroughs, InfiniteSlidePanel, [], false)}
 				className={cx('&', className)}
 				offset={offset}
 				slidesToShow={slidesToShow}
