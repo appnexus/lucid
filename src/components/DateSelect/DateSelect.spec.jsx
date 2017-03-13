@@ -1,5 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { common, mockDate } from '../../util/generic-tests';
 import { DateSelectDumb as DateSelect } from './DateSelect';
 
@@ -106,6 +107,38 @@ describe('DateSelect', () => {
 					done();
 				});
 			});
+		});
+	});
+
+	describe('relative font size on mount', () => {
+		const findDOMNode = ReactDOM.findDOMNode;
+		let rootElementMock;
+
+		beforeEach(() => {
+			rootElementMock = {
+				getBoundingClientRect() {
+					return {
+						width: 400,
+						height: 400,
+					};
+				},
+				style: {},
+			};
+
+			ReactDOM.findDOMNode = () => rootElementMock;
+		});
+
+		afterEach(() => {
+			ReactDOM.findDOMNode = findDOMNode;
+		});
+
+		it('should set the correct font-size relative to size of the root element', () => {
+			const wrapper = shallow(
+				<DateSelect isFontSizeRelative={true} />
+			);
+			const dateSelectInstance = wrapper.instance();
+			dateSelectInstance.componentDidMount();
+			expect(rootElementMock.style.fontSize).toBe('17px');
 		});
 	});
 
