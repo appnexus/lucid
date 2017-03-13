@@ -1,50 +1,55 @@
+@CalendarMonth-DayPicker-Caption-margin: @size-standard;
+
 .lucid-CalendarMonth {
 	color: @color-textColor;
 	text-align: center;
+	display: flex;
+	align-items: stretch;
+	font-size: @size-font;
 
 	.DayPicker-Month {
-		width: 100%;
-		display: table;
-		table-layout: fixed;
-		border-collapse: collapse;
-		border-spacing: 0;
 		user-select: none;
 		margin: 0;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
 
 		.DayPicker-Caption {
-			display: table-caption;
 			font-weight: bold;
-			font-size: @size-font-L;
-			margin-bottom: @size-standard;
+			font-size: 120%;
+			margin-bottom: @CalendarMonth-DayPicker-Caption-margin;
 		}
 
 		.DayPicker-Weekdays {
-			display: table-header-group;
-
 			.DayPicker-WeekdaysRow {
-				display: table-row;
+				display: flex;
 
 				.DayPicker-Weekday {
-					display: table-cell;
 					text-transform: uppercase;
 					color: @color-mediumGray;
-					font-size: @size-font;
-					width: percentage(1/7);
+					flex: 1;
+					font-size: 100%;
 				}
 			}
 		}
 
 		.DayPicker-Body {
-			display: table-row-group;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
 
 			.DayPicker-Week {
-				display: table-row;
+				flex: 1;
+				display: flex;
 
 				.DayPicker-Day {
-					display: table-cell;
 					line-height: 26px;
-					font-size: @size-font;
+					font-size: 100%;
 					cursor: pointer;
+					flex: 1;
+					display: flex;
+					justify-content: center;
+					align-items: center;
 
 					&.DayPicker-Day:focus {
 						outline: none;

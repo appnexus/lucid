@@ -1,15 +1,19 @@
 .lucid-DateSelect {
 	display: flex;
 	align-items: center;
+	font-size: @size-font;
 
 	&-InfiniteSlidePanel {
 		flex: 1;
+		height: 100%;
 	}
 
-	.lucid-DateSelect-show-divider& {
-		.lucid-DateSelect-slide {
-			position: relative;
+	.lucid-DateSelect-slide {
+		position: relative;
+		display: flex;
+		align-items: stretch;
 
+		.lucid-DateSelect-show-divider& {
 			&:after {
 				position: absolute;
 				top: 0;
@@ -26,10 +30,18 @@
 				}
 			}
 		}
-	}
 
-	& &-slide-content {
-		margin: @size-XS;
+		.lucid-DateSelect-slide-content {
+			margin: @size-XS;
+			flex: 1;
+			display: flex;
+			align-items: stretch;
+
+			.lucid-DateSelect-CalendarMonth {
+				flex: 1;
+				font-size: 100%;
+			}
+		}
 	}
 }
 
