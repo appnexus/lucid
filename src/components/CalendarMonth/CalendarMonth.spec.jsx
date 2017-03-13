@@ -93,6 +93,18 @@ describe('CalendarMonth', () => {
 			expect(isInRange14).toBe(true);
 			expect(isInRange15).toBeFalsy();
 		});
+
+		it('should return false if no cursor or range dates', () => {
+			const wrapper = shallow(
+				<CalendarMonth
+					initialMonth={new Date('2017-02-01:00:00Z')}
+					cursor={null}
+				/>
+			);
+			const calendarMonthInstance = wrapper.instance();
+			const isInRange = calendarMonthInstance.modifierRange(new Date('2017-02-14T00:00:00Z'));
+			expect(isInRange).toBe(false);
+		});
 	});
 
 	describe('modifierFrom', () => {
