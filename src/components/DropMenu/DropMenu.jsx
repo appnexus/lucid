@@ -414,6 +414,7 @@ const DropMenu = createClass({
 
 		if (!optionProps.isDisabled && focusedIndex !== optionIndex) {
 			onFocusOption(optionIndex, { props: optionProps, event });
+			optionProps.onClick({{ props: optionProps, event }});
 		}
 	},
 
