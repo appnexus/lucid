@@ -92,7 +92,7 @@ const EmptyStateWrapper = createClass({
 				<LoadingIndicator
 					className={cx('&', className)}
 					isLoading
-					{...omitProps(passThroughs, EmptyStateWrapper)}
+					{...omitProps(passThroughs, EmptyStateWrapper, [], false)}
 				>
 					{children}
 				</LoadingIndicator>
@@ -101,7 +101,7 @@ const EmptyStateWrapper = createClass({
 					className={cx('&', className)}
 					hasOverlay={false}
 					isVisible={isEmpty}
-					{...omitProps(passThroughs, EmptyStateWrapper)}
+					{...omitProps(passThroughs, EmptyStateWrapper, [], false)}
 				>
 					<OverlayWrapper.Message className={cx('&-message-container')}>
 						<div className={cx('&-message-header')} />

@@ -26,7 +26,7 @@ const RefreshIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, RefreshIcon)}
+				{...omitProps(passThroughs, RefreshIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>

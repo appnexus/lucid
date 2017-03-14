@@ -106,7 +106,7 @@ const SwitchLabeled = createClass({
 						isDisabled={isDisabled}
 						isSelected={isSelected}
 						onSelect={onSelect}
-						{...omitProps(passThroughs, SwitchLabeled)}
+						{...omitProps(passThroughs, SwitchLabeled, [], false)}
 				/>
 				<ReactCSSTransitionGroup
 						transitionName={cx('&-text')}

@@ -424,7 +424,7 @@ const SplitVertical = createClass({
 							>{leftPaneProps.children}</div>
 							{isResizeable ? (
 								<DragCaptureZone
-									{...omitProps(dividerProps, SplitVertical.Divider)}
+									{...omitProps(dividerProps, SplitVertical.Divider, [], false)}
 									className={cx('&-Divider', '&-Divider-is-resizeable', dividerProps.className)}
 									onDragStart={this.handleDragStart}
 									onDrag={this.handleDrag}

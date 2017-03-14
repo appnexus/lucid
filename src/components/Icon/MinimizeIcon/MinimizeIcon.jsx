@@ -26,7 +26,7 @@ const MinimizeIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, MinimizeIcon)}
+				{...omitProps(passThroughs, MinimizeIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>

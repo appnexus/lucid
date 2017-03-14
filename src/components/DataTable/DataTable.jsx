@@ -244,7 +244,7 @@ const DataTable = createClass({
 				<ScrollTable
 					style={style}
 					tableWidth={isFullWidth ? '100%' : null}
-					{...omitProps(passThroughs, DataTable)}
+					{...omitProps(passThroughs, DataTable, [], false)}
 					className={cx('&', {
 						'&-full-width': isFullWidth,
 					}, className)}
@@ -287,7 +287,7 @@ const DataTable = createClass({
 							<Tr>
 								{_.reduce(flattenedColumns, (acc, { props: columnProps, columnGroupProps }, index) => acc.concat(_.isNull(columnGroupProps) ? [] : [(
 									<Th
-										{...omitProps(columnProps, DataTable.Column)}
+										{...omitProps(columnProps, DataTable.Column, [], false)}
 										onClick={DataTable.shouldColumnHandleSort(columnProps) ? _.partial(this.handleSort, columnProps.field) : null}
 										style={{
 											width: columnProps.width,

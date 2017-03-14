@@ -26,7 +26,7 @@ const EditIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, EditIcon)}
+				{...omitProps(passThroughs, EditIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>

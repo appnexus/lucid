@@ -192,7 +192,7 @@ const Submarine = createClass({
 
 		return (
 			<SplitHorizontal
-				{...omitProps(passThroughs, Submarine)}
+				{...omitProps(passThroughs, Submarine, [], false)}
 				className={cx('&', {
 					'&-is-resize-disabled': isResizeDisabled,
 					'&-is-position-bottom': position === 'bottom',
@@ -204,7 +204,7 @@ const Submarine = createClass({
 				onResizing={this.handleResizing}
 				onResize={this.handleResize}
 			>
-				<BarPane {...omitProps(barProps, Submarine.Bar)} className={cx('&-Bar', barProps.className)} height={height}>
+				<BarPane {...omitProps(barProps, Submarine.Bar, [], false)} className={cx('&-Bar', barProps.className)} height={height}>
 					<div className={cx('&-Bar-overlay')} />
 					<div className={cx('&-Bar-header')}>
 						<div {...titleProps} className={cx('&-Bar-Title', titleProps.className)} />

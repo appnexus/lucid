@@ -27,7 +27,7 @@ const TableGearIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, TableGearIcon)}
+				{...omitProps(passThroughs, TableGearIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>

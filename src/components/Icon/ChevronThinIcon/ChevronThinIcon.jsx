@@ -46,7 +46,7 @@ const ChevronThinIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, ChevronThinIcon)}
+				{...omitProps(passThroughs, ChevronThinIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 				size={size}

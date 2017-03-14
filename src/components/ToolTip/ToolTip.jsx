@@ -227,7 +227,7 @@ const ToolTip = createClass({
 				isExpanded={isExpanded}
 				style={style}
 				portalId={portalId}
-				{...omitProps(passThroughs, ToolTip)}
+				{...omitProps(passThroughs, ToolTip, [], false)}
 				onMouseOver={this.handleMouseOverTarget}
 				onMouseOut={this.handleMouseOutTarget}
 			>

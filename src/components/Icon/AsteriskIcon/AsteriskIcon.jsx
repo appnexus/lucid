@@ -33,7 +33,7 @@ const AsteriskIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, AsteriskIcon)}
+				{...omitProps(passThroughs, AsteriskIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>

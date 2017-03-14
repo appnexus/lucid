@@ -54,7 +54,7 @@ const EligibilityIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, EligibilityIcon)}
+				{...omitProps(passThroughs, EligibilityIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				isDisabled={isDisabled}
 				className={cx('&', className)}

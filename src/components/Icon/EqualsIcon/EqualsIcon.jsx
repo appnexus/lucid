@@ -26,7 +26,7 @@ const EqualsIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, EqualsIcon)}
+				{...omitProps(passThroughs, EqualsIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>

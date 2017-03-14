@@ -83,7 +83,7 @@ const ScrollTable = createClass({
 				style={style}
 			>
 				<Table
-					{...omitProps(passThroughs, ScrollTable)}
+					{...omitProps(passThroughs, ScrollTable, [], false)}
 					style={{
 						width: tableWidth,
 					}}

@@ -26,7 +26,7 @@ const ResizeIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, ResizeIcon)}
+				{...omitProps(passThroughs, ResizeIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>

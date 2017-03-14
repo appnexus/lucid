@@ -32,7 +32,7 @@ const GripperVerticalIcon = createClass({
 				width={2}
 				height={16}
 				viewBox='0 0 2 16'
-				{...omitProps(passThroughs, GripperVerticalIcon)}
+				{...omitProps(passThroughs, GripperVerticalIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>

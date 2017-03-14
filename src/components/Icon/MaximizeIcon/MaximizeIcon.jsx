@@ -26,7 +26,7 @@ const MaximizeIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, MaximizeIcon)}
+				{...omitProps(passThroughs, MaximizeIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>

@@ -28,7 +28,7 @@ const WarningIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, WarningIcon)}
+				{...omitProps(passThroughs, WarningIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				isClickable={isClickable}
 				isDisabled={isDisabled}

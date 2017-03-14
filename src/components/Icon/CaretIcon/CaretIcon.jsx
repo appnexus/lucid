@@ -48,7 +48,7 @@ const CaretIcon = createClass({
 
 		return (
 			<Icon
-				{...omitProps(passThroughs, CaretIcon)}
+				{...omitProps(passThroughs, CaretIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', {
 					'&-is-down': direction === 'down',

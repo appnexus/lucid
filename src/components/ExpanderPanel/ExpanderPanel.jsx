@@ -129,7 +129,7 @@ const ExpanderPanel = createClass({
 
 		return (
 			<Panel
-				{...omitProps(passThroughs, ExpanderPanel)}
+				{...omitProps(passThroughs, ExpanderPanel, [], false)}
 				className={cx('&', {
 					'&-is-collapsed': !isExpanded,
 					'&-is-disabled': isDisabled,
