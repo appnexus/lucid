@@ -41,7 +41,7 @@ export default React.createClass({
 					overflow: 'auto',
 					width: 600,
 				}}>
-					{_.reverse(_.map(({ coordinates, type }, index) => (
+					{_.reverse(_.map(this.state.events, ({ coordinates, type }, index) => (
 						<div key={index}>
 							<div style={{
 								fontWeight: 'bold',

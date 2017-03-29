@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DragCaptureZone');
 const {
@@ -45,6 +45,12 @@ const DragCaptureZone = createClass({
 		 * Signature: `({ dx, dy, pageX, pageY }, { event, props }) => {}`
 		 */
 		onDragStart: func,
+		/**
+		 * Called when the drag event is canceled dur to user interaction
+		 *
+		 * Signature: `({ event, props }) => {}`
+		 */
+		onDragCancel: func,
 	},
 
 	getDefaultProps() {
@@ -52,6 +58,7 @@ const DragCaptureZone = createClass({
 			onDrag: _.noop,
 			onDragEnd: _.noop,
 			onDragStart: _.noop,
+			onDragCancel: _.noop,
 		};
 	},
 
@@ -65,12 +72,22 @@ const DragCaptureZone = createClass({
 	render() {
 		return (
 			<div
-				{...this.props}
+				{...omitProps(this.props, DragCaptureZone)}
 				className={cx('&', this.props.className)}
 				key='DragCaptureZone'
 				onMouseDown={this.handleDragStart}
+				ref={(ref) => {this.elementRef = ref;}}
 			/>
 		);
+	},
+
+	componentDidMount() {
+		//add event listeners directly on the DOM elemnt to allow preventDefault
+		//calls which are not honored due to react's event delegation
+		this.elementRef.addEventListener('touchstart', this.handleDragStart);
+		this.elementRef.addEventListener('touchmove', this.handleDrag);
+		this.elementRef.addEventListener('touchend', this.handleDragEnd);
+		this.elementRef.addEventListener('touchcancel', this.handleDragCancel);
 	},
 
 	componentWillUnmount() {
@@ -79,10 +96,16 @@ const DragCaptureZone = createClass({
 	},
 
 	handleDrag(event) {
-		const {
-			pageX,
-			pageY,
-		} = event;
+		let pageX;
+		let pageY;
+
+		if (event.touches) {
+			pageX = event.touches[0].pageX;
+			pageY = event.touches[0].pageY;
+		} else {
+			pageX = event.pageX;
+			pageY = event.pageY;
+		}
 
 		event.preventDefault();
 
@@ -98,15 +121,21 @@ const DragCaptureZone = createClass({
 	},
 
 	handleDragEnd(event) {
-		const {
-			pageX,
-			pageY,
-		} = event;
+		let pageX;
+		let pageY;
+
+		if (event.changedTouches) {
+			pageX = event.changedTouches[0].pageX;
+			pageY = event.changedTouches[0].pageY;
+		} else {
+			pageX = event.pageX;
+			pageY = event.pageY;
+
+			window.document.removeEventListener('mousemove', this.handleDrag);
+			window.document.removeEventListener('mouseup', this.handleDragEnd);
+		}
 
 		event.preventDefault();
-
-		window.document.removeEventListener('mousemove', this.handleDrag);
-		window.document.removeEventListener('mouseup', this.handleDragEnd);
 
 		this.props.onDragEnd({
 			dX: pageX - this.state.pageX,
@@ -125,15 +154,21 @@ const DragCaptureZone = createClass({
 	},
 
 	handleDragStart(event) {
-		const {
-			pageX,
-			pageY,
-		} = event;
+		let pageX;
+		let pageY;
+
+		if (event.touches) {
+			pageX = event.touches[0].pageX;
+			pageY = event.touches[0].pageY;
+		} else {
+			pageX = event.pageX;
+			pageY = event.pageY;
+
+			window.document.addEventListener('mousemove', this.handleDrag);
+			window.document.addEventListener('mouseup', this.handleDragEnd);
+		}
 
 		event.preventDefault();
-
-		window.document.addEventListener('mousemove', this.handleDrag);
-		window.document.addEventListener('mouseup', this.handleDragEnd);
 
 		this.props.onDragStart({
 			dX: 0,
@@ -148,6 +183,18 @@ const DragCaptureZone = createClass({
 		this.setState({
 			pageX,
 			pageY,
+		});
+	},
+
+	handleDragCancel(event) {
+		this.props.onDragCancel({
+			event,
+			props: this.props,
+		});
+
+		this.setState({
+			pageX: 0,
+			pageY: 0,
 		});
 	},
 });
