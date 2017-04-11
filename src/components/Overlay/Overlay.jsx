@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Portal from '../Portal/Portal';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -12,7 +13,7 @@ const {
 	bool,
 	func,
 	node,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  * {"categories": ["utility"], "madeFrom": ["Portal"]}

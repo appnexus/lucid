@@ -1,11 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 
 import { lucidClassNames } from '../../util/style-helpers';
 import * as components from '../../index';
 
-const { object } = React.PropTypes;
+const { object } = PropTypes;
 
 const { Button, Expander } = components;
 const icons = _.flow(

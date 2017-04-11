@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { buildHybridComponent } from '../../util/state-management';
 import {
@@ -31,7 +32,7 @@ const {
 	string,
 	oneOf,
 	node,
-} = React.PropTypes;
+} = PropTypes;
 
 const cx = lucidClassNames.bind('&-SearchableMultiSelect');
 

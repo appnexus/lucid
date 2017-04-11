@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Motion, spring } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -13,7 +14,7 @@ const {
 	node,
 	number,
 	string,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  * {"categories": ["utility"]}

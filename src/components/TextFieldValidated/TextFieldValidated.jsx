@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Validation from '../Validation/Validation';
 import TextField from '../TextField/TextField';
 import reducers from '../TextField/TextField.reducers';
@@ -12,7 +13,7 @@ const {
 	any,
 	object,
 	string,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  *

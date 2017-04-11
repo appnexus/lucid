@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { omitFunctionPropsDeep } from './state-management';
 
@@ -30,7 +31,7 @@ export function createClass(definition={}) {
 			initialState,
 			propName,
 		},
-		propTypes: _.assign({}, propTypes, _.mapValues(definition.components, () => React.PropTypes.any)),
+		propTypes: _.assign({}, propTypes, _.mapValues(definition.components, () => PropTypes.any)),
 		render,
 	};
 

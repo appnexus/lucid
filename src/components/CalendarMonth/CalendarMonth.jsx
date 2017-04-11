@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import DayPicker, { DateUtils } from 'react-day-picker';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
@@ -11,7 +12,7 @@ const {
 	number,
 	oneOf,
 	string,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  * {"categories": ["helpers"]}

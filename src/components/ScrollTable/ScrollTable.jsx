@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { createClass, omitProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import Table from '../Table/Table';
@@ -12,7 +13,7 @@ const {
 	node,
 	number,
 	oneOfType,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  * {"categories": ["table"], "madeFrom": ["Table"]}

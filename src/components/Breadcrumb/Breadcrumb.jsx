@@ -1,5 +1,6 @@
 import _ from 'lodash';
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps }  from '../../util/component-types';
 import SeparatorIcon from '../Icon/SeparatorIcon/SeparatorIcon';

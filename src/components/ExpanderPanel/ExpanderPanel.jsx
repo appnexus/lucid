@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps }  from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
@@ -19,7 +20,7 @@ const {
 	node,
 	object,
 	string,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  * {"categories": ["layout"], "madeFrom": ["ChevronIcon", "Expander", "Panel"]}

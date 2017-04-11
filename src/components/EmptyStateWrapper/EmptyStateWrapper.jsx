@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 
@@ -13,7 +14,7 @@ const {
 	bool,
 	node,
 	string,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  *

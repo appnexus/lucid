@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes } from '../../util/component-types';
@@ -19,7 +20,7 @@ const {
 	shape,
 	string,
 	oneOfType,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  *

@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import Button from '../Button/Button';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps }  from '../../util/component-types';
 import reducers from './ButtonGroup.reducers';
@@ -13,7 +14,7 @@ const {
 	func,
 	arrayOf,
 	number,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  *

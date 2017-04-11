@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
 import Icon from '../Icon';
@@ -8,7 +9,7 @@ const cx = lucidClassNames.bind('&-ChevronThinIcon');
 
 const {
 	oneOf,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}

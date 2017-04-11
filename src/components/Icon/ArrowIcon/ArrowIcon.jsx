@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
@@ -8,7 +9,7 @@ const cx = lucidClassNames.bind('&-ArrowIcon');
 
 const {
 	oneOf,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  *
