@@ -441,27 +441,38 @@ describe('#getStatefulPropsContext', () => {
 	});
 });
 
-describe('#reduceSelectors', () => {
+describe.only('#reduceSelectors', () => {
+
+	const selectors = {
+		fooAndBar: ({ foo, bar }) => `${foo} and ${bar}`,
+		incrementedBaz: ({ baz }) => baz + 1,
+		nested: {
+			nestedFooAndBar: ({ foo, bar }) => `${foo} & ${bar}`,
+			nestedIncrementedBaz: ({ baz }) => baz + 1,
+			moreNested: {
+				moreNestedFooAndBar: ({ foo, bar }) => `${foo} & ${bar}`,
+			},
+		},
+	};
+
+	const state = {
+		foo: 'foo',
+		bar: 'bar',
+		baz: 0,
+		nested: {
+			foo: 'nestedFoo',
+			bar: 'nestedBar',
+			baz: 10,
+			moreNested: {
+				foo: 'foo',
+				bar: 'bar',
+			},
+		},
+	};
+
+	const selector = reduceSelectors(selectors);
+
 	it('should create a single selector function from selector tree', () => {
-		const selectors = {
-			fooAndBar: ({ foo, bar }) => `${foo} and ${bar}`,
-			incrementedBaz: ({ baz }) => baz + 1,
-			nested: {
-				nestedFooAndBar: ({ foo, bar }) => `${foo} & ${bar}`,
-				nestedIncrementedBaz: ({ baz }) => baz + 1,
-			},
-		};
-		const selector = reduceSelectors(selectors);
-		const state = {
-			foo: 'foo',
-			bar: 'bar',
-			baz: 0,
-			nested: {
-				foo: 'nestedFoo',
-				bar: 'nestedBar',
-				baz: 10,
-			},
-		};
 		const expected = {
 			foo: 'foo',
 			bar: 'bar',
@@ -474,9 +485,36 @@ describe('#reduceSelectors', () => {
 				baz: 10,
 				nestedFooAndBar: 'nestedFoo & nestedBar',
 				nestedIncrementedBaz: 11,
+				moreNested: {
+					foo: 'foo',
+					bar: 'bar',
+					moreNestedFooAndBar: 'foo & bar',
+				},
 			},
 		};
 		assert.deepEqual(selector(state), expected, 'must be deeply equal');
+	});
+
+	it('should maintain referential equality if source does', () => {
+		assert.equal(selector(state), selector(state));
+	});
+
+	it('should maintain referential equality of branches if source does', () => {
+		assert.equal(
+			selector(state).nested,
+			selector({ ...state, foo: 'bar', bar: 'foo' }).nested
+		);
+		assert.equal(
+			selector(state).nested.moreNested,
+			selector({
+				...state,
+				nested: {
+					...state.nested,
+					foo: 'bar',
+					bar: 'foo',
+				},
+			}).nested.moreNested
+		);
 	});
 });
 
