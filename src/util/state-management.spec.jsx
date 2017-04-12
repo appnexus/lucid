@@ -441,7 +441,7 @@ describe('#getStatefulPropsContext', () => {
 	});
 });
 
-describe.only('#reduceSelectors', () => {
+describe('#reduceSelectors', () => {
 
 	const selectors = {
 		fooAndBar: ({ foo, bar }) => `${foo} and ${bar}`,
