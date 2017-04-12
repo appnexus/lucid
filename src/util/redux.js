@@ -261,9 +261,9 @@ function bindActionCreatorTree(actionCreatorTree, dispatch, path = []) {
  * @param {Object} ownProps
  * @return {Object}
  */
-function mergeProps(state, dispatchTree, ownProps) {
+const mergeProps = _.memoize((state, dispatchTree, ownProps) => {
 	return _.merge({}, state, dispatchTree, ownProps);
-}
+});
 
 export function cleanArgs(args) {
 	return _.has(_.last(args), 'event')
