@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { createSelector } from 'reselect';
-import { reduceSelectors } from './state-management.js';
+import { reduceSelectors, safeMerge } from './state-management.js';
 import { logger, isDevMode } from './logger.js';
 
 /**
@@ -262,7 +262,7 @@ function bindActionCreatorTree(actionCreatorTree, dispatch, path = []) {
  * @return {Object}
  */
 const mergeProps = _.memoize((state, dispatchTree, ownProps) => {
-	return _.merge({}, state, dispatchTree, ownProps);
+	return _.mergeWith({}, state, dispatchTree, ownProps, safeMerge);
 });
 
 export function cleanArgs(args) {
