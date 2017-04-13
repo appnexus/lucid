@@ -81,8 +81,9 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
  * the selectors in the tree with the state local to that selector.
  *
  * This function is memoized because it's recursive, and we want it to reuse
- * the functions created in the recursive reduce (because those functions are
- * also memoized and we want to maintain their caches).
+ * the functions created in the recursive reduce because those functions are
+ * also memoized (reselect selectors are memoized with a cache of 1) and we want
+ * to maintain their caches.
  */
 export const reduceSelectors = _.memoize((selectors) => {
 
@@ -90,6 +91,11 @@ export const reduceSelectors = _.memoize((selectors) => {
 		throw new Error('Selectors must be a plain object with function or plain object values');
 	}
 
+	/**
+	 * For each iteration of `reduceSelectors`, we return a memoized selector so
+	 * that individual branches maintain reference equality if they haven't been
+	 * modified, even if a sibling (and therefore the parent) has been modified.
+	 */
 	return createSelector(
 		_.identity,
 		(state) => _.reduce(selectors, (acc, selector, key) => ({
