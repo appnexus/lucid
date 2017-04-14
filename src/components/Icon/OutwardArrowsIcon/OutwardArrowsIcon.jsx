@@ -40,18 +40,11 @@ const OutwardArrowsIcon = createClass({
 	},
 
 	render() {
-		const {
-			className,
-			kind,
-			...passThroughs
-		} = this.props;
+		const { className, kind, ...passThroughs } = this.props;
 
 		return (
-			<Icon
-				{...passThroughs}
-				className={cx('&', className)}
-			>
-				<path d={paths[kind]}/>
+			<Icon {...passThroughs} className={cx('&', className)}>
+				<path d={paths[kind]} />
 			</Icon>
 		);
 	},

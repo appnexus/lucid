@@ -7,7 +7,7 @@ describe('InfiniteSlidePanel', () => {
 	common(InfiniteSlidePanel, {
 		getDefaultProps() {
 			return {
-				children: (slideOffset) => (<span>{slideOffset}</span>),
+				children: slideOffset => <span>{slideOffset}</span>,
 			};
 		},
 	});
@@ -15,9 +15,7 @@ describe('InfiniteSlidePanel', () => {
 	describe('required children', () => {
 		it('should throw if not passed a function or Slide as children', () => {
 			expect(() => {
-				shallow(
-					<InfiniteSlidePanel />
-				);
+				shallow(<InfiniteSlidePanel />);
 			}).toThrowErrorMatchingSnapshot();
 		});
 

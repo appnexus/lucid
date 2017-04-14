@@ -1,9 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import {
-	Bar,
-	chartConstants,
-} from '../../../index';
+import { Bar, chartConstants } from '../../../index';
 
 const svgProps = {
 	width: 20,
@@ -61,11 +58,11 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				{_.map(colors, (color) =>
+				{_.map(colors, color => (
 					<svg key={color} {...svgProps}>
 						<Bar {...pointProps} color={color} />
 					</svg>
-				)}
+				))}
 			</div>
 		);
 	},

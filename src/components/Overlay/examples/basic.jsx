@@ -18,9 +18,7 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<Button
-					onClick={_.partial(this.handleOpenClose, !this.state.isShown)}
-				>
+				<Button onClick={_.partial(this.handleOpenClose, !this.state.isShown)}>
 					Toggle
 				</Button>
 

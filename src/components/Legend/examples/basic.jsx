@@ -12,11 +12,7 @@ export default React.createClass({
 			<div>
 				<Legend>
 					{_.map(chartConstants.PALETTE_6, (color, i) => (
-						<Item
-							key={color}
-							hasPoint
-							color={color}
-						>
+						<Item key={color} hasPoint color={color}>
 							{`Partner ${i}`}
 						</Item>
 					))}
@@ -26,12 +22,7 @@ export default React.createClass({
 
 				<Legend>
 					{_.map(chartConstants.PALETTE_6, (color, i) => (
-						<Item
-							key={color}
-							hasPoint
-							pointKind={i}
-							color={color}
-						>
+						<Item key={color} hasPoint pointKind={i} color={color}>
 							{`Partner ${i}`}
 						</Item>
 					))}
@@ -41,11 +32,7 @@ export default React.createClass({
 
 				<Legend>
 					{_.map(chartConstants.PALETTE_6, (color, i) => (
-						<Item
-							key={color}
-							hasLine
-							color={color}
-						>
+						<Item key={color} hasLine color={color}>
 							{`Partner ${i}`}
 						</Item>
 					))}
@@ -55,13 +42,7 @@ export default React.createClass({
 
 				<Legend>
 					{_.map(chartConstants.PALETTE_6, (color, i) => (
-						<Item
-							key={color}
-							hasPoint
-							hasLine
-							pointKind={i}
-							color={color}
-						>
+						<Item key={color} hasPoint hasLine pointKind={i} color={color}>
 							{`Partner ${i}`}
 						</Item>
 					))}
@@ -69,15 +50,9 @@ export default React.createClass({
 
 				<br />
 
-				<Legend isReversed >
+				<Legend isReversed>
 					{_.map(chartConstants.PALETTE_6, (color, i) => (
-						<Item
-							key={color}
-							hasPoint
-							hasLine
-							pointKind={i}
-							color={color}
-						>
+						<Item key={color} hasPoint hasLine pointKind={i} color={color}>
 							{`Partner ${i}`}
 						</Item>
 					))}
@@ -85,7 +60,7 @@ export default React.createClass({
 
 				<br />
 
-				<Legend orient='horizontal'>
+				<Legend orient="horizontal">
 					<Item hasLine color={chartConstants.COLOR_GOOD}>Revenue</Item>
 					<Item hasLine color={chartConstants.COLOR_BAD}>Loss</Item>
 					<Item hasPoint color={chartConstants.COLOR_0}>Partner 0</Item>
@@ -94,7 +69,7 @@ export default React.createClass({
 
 				<br />
 
-				<Legend orient='horizontal' isReversed >
+				<Legend orient="horizontal" isReversed>
 					<Item hasLine color={chartConstants.COLOR_GOOD}>Revenue</Item>
 					<Item hasLine color={chartConstants.COLOR_BAD}>Loss</Item>
 					<Item hasPoint color={chartConstants.COLOR_0}>Partner 0</Item>
@@ -114,7 +89,7 @@ export default React.createClass({
 				<br />
 				<br />
 
-				<ToolTip isExpanded={true} direction='right' alignment='end'>
+				<ToolTip isExpanded={true} direction="right" alignment="end">
 					<ToolTip.Target>
 						Tooltip example
 					</ToolTip.Target>
@@ -133,4 +108,3 @@ export default React.createClass({
 		);
 	},
 });
-

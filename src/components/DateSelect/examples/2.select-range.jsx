@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-	Button,
-	DateSelect,
-} from '../../../index';
+import { Button, DateSelect } from '../../../index';
 
 export default React.createClass({
 	getInitialState() {
@@ -31,11 +28,7 @@ export default React.createClass({
 	},
 
 	render() {
-		const {
-			selectMode,
-			from,
-			to,
-		} = this.state;
+		const { selectMode, from, to } = this.state;
 
 		return (
 			<section style={{ maxWidth: 400 }}>

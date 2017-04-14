@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, filterTypes, omitProps } from '../../util/component-types';
+import {
+	createClass,
+	filterTypes,
+	omitProps,
+} from '../../util/component-types';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
@@ -38,14 +42,13 @@ const Thead = createClass({
 	},
 
 	render() {
-		const {
-			children,
-			className,
-			...passThroughs
-		} = this.props;
+		const { children, className, ...passThroughs } = this.props;
 
 		return (
-			<thead {...omitProps(passThroughs, Thead)} className={cx('&-Thead', className)}>
+			<thead
+				{...omitProps(passThroughs, Thead)}
+				className={cx('&-Thead', className)}
+			>
 				{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Th)}
 			</thead>
 		);
@@ -71,14 +74,13 @@ const Tbody = createClass({
 	},
 
 	render() {
-		const {
-			children,
-			className,
-			...passThroughs
-		} = this.props;
+		const { children, className, ...passThroughs } = this.props;
 
 		return (
-			<tbody {...omitProps(passThroughs, Tbody)} className={cx('&-Tbody', className)}>
+			<tbody
+				{...omitProps(passThroughs, Tbody)}
+				className={cx('&-Tbody', className)}
+			>
 				{renderRowsWithIdentifiedEdges(filterTypes(children, Tr), Td)}
 			</tbody>
 		);
@@ -142,12 +144,16 @@ const Tr = createClass({
 		return (
 			<tr
 				{...omitProps(passThroughs, Tr)}
-				className={cx('&-Tr', {
-					'&-is-disabled': isDisabled,
-					'&-is-selected': isSelected,
-					'&-is-actionable': isActionable,
-					'&-is-active': isActive,
-				}, className)}
+				className={cx(
+					'&-Tr',
+					{
+						'&-is-disabled': isDisabled,
+						'&-is-selected': isSelected,
+						'&-is-actionable': isActionable,
+						'&-is-active': isActive,
+					},
+					className
+				)}
 			>
 				{children}
 			</tr>
@@ -289,18 +295,14 @@ const Th = createClass({
 			style,
 			...passThroughs
 		} = this.props;
-		const {
-			activeWidth,
-			hasSetWidth,
-			isResizing,
-			passiveWidth,
-		} = this.state;
+		const { activeWidth, hasSetWidth, isResizing, passiveWidth } = this.state;
 
 		return (
 			<th
 				{..._.omit(passThroughs, Th)}
 				className={cx(
-					'&-Th', {
+					'&-Th',
+					{
 						'&-is-first-row': isFirstRow,
 						'&-is-last-row': isLastRow,
 						'&-is-first-col': isFirstCol,
@@ -311,36 +313,48 @@ const Th = createClass({
 						'&-align-right': align === 'right',
 						'&-is-resizable': isResizable,
 						'&-is-resizing': isResizing,
-						'&-is-sortable': (isSortable === false ? isSortable : (isSorted || isSortable)),
+						'&-is-sortable': isSortable === false
+							? isSortable
+							: isSorted || isSortable,
 						'&-is-sorted': isSorted,
 						'&-has-border-right': hasBorderRight,
 						'&-has-border-left': hasBorderLeft,
-					}, className)}
-				ref='root'
+					},
+					className
+				)}
+				ref="root"
 				onClickCapture={this.handleClickCapture}
 				onMouseEnter={this.handleMouseEnter}
 				onMouseUp={this.handleMouseUp}
-				style={hasSetWidth ? _.assign({}, style, {
-					width: isResizing ? activeWidth : passiveWidth,
-				}) : style}
+				style={
+					hasSetWidth
+						? _.assign({}, style, {
+								width: isResizing ? activeWidth : passiveWidth,
+							})
+						: style
+				}
 			>
 				<div className={cx('&-Th-inner')}>
 					<div className={cx('&-Th-inner-content')}>
 						{children}
 					</div>
-					{isSorted ? (
-						<div className={cx('&-Th-inner-caret')}>
-							<CaretIcon className={cx('&-sort-icon')} direction={sortDirection} size={6}/>
-						</div>
-					) : null}
-					{isResizable ? (
-						<DragCaptureZone
-							className={cx('&-Th-inner-resize')}
-							onDrag={this.handleDragged}
-							onDragEnd={this.handleDragEnded}
-							onDragStart={this.handleDragStarted}
-						/>
-					) : null}
+					{isSorted
+						? <div className={cx('&-Th-inner-caret')}>
+								<CaretIcon
+									className={cx('&-sort-icon')}
+									direction={sortDirection}
+									size={6}
+								/>
+							</div>
+						: null}
+					{isResizable
+						? <DragCaptureZone
+								className={cx('&-Th-inner-resize')}
+								onDrag={this.handleDragged}
+								onDragEnd={this.handleDragEnded}
+								onDragStart={this.handleDragStarted}
+							/>
+						: null}
 				</div>
 			</th>
 		);
@@ -495,19 +509,25 @@ const Td = createClass({
 		} = this.props;
 
 		return (
-			<td {...omitProps(passThroughs, Td, ['sortDirection'])} className={cx(
-				'&-Td', {
-					'&-is-first-row': isFirstRow,
-					'&-is-last-row': isLastRow,
-					'&-is-first-col': isFirstCol,
-					'&-is-last-col': isLastCol,
-					'&-is-first-single': isFirstSingle,
-					'&-align-left': align === 'left',
-					'&-align-center': align === 'center',
-					'&-align-right': align === 'right',
-					'&-has-border-right': hasBorderRight,
-					'&-has-border-left': hasBorderLeft,
-				}, className)} />
+			<td
+				{...omitProps(passThroughs, Td, ['sortDirection'])}
+				className={cx(
+					'&-Td',
+					{
+						'&-is-first-row': isFirstRow,
+						'&-is-last-row': isLastRow,
+						'&-is-first-col': isFirstCol,
+						'&-is-last-col': isLastCol,
+						'&-is-first-single': isFirstSingle,
+						'&-align-left': align === 'left',
+						'&-align-center': align === 'center',
+						'&-align-right': align === 'right',
+						'&-has-border-right': hasBorderRight,
+						'&-has-border-left': hasBorderLeft,
+					},
+					className
+				)}
+			/>
 		);
 	},
 });
@@ -566,7 +586,6 @@ const Table = createClass({
 	},
 
 	render() {
-
 		const {
 			className,
 			hasBorder,
@@ -580,12 +599,16 @@ const Table = createClass({
 			<table
 				{...omitProps(passThroughs, Table)}
 				style={style}
-				className={cx('&', {
-					'&-density-extended': density === 'extended',
-					'&-density-compressed': density === 'compressed',
-					'&-has-border': hasBorder,
-					'&-has-word-wrap': hasWordWrap,
-				}, className)}
+				className={cx(
+					'&',
+					{
+						'&-density-extended': density === 'extended',
+						'&-density-compressed': density === 'compressed',
+						'&-has-border': hasBorder,
+						'&-has-word-wrap': hasWordWrap,
+					},
+					className
+				)}
 			/>
 		);
 	},
@@ -596,17 +619,18 @@ const Table = createClass({
  *
  * Returns a 2 dimensional array of cell elements of the given component type. The map function can modify value of a cell.
  */
-function mapToGrid(trList, cellType='td', mapFn=_.property('element')) {
-	const cellRowList = _.map(trList, (trElement) => _.map(filterTypes(trElement.props.children, cellType)));
+function mapToGrid(trList, cellType = 'td', mapFn = _.property('element')) {
+	const cellRowList = _.map(trList, trElement =>
+		_.map(filterTypes(trElement.props.children, cellType))
+	);
 	const grid = [];
 
 	if (_.isEmpty(cellRowList)) {
 		return [];
 	}
 
-
 	// iterate over each row
-	for (let rowIndex=0; rowIndex < cellRowList.length; rowIndex++) {
+	for (let rowIndex = 0; rowIndex < cellRowList.length; rowIndex++) {
 		const cellRow = cellRowList[rowIndex];
 
 		if (_.isNil(grid[rowIndex])) {
@@ -616,7 +640,11 @@ function mapToGrid(trList, cellType='td', mapFn=_.property('element')) {
 		const canonicalRow = rowIndex;
 
 		// build out each horizonal duplicates of each cell
-		for (let cellElementIndex=0; cellElementIndex < cellRow.length; cellElementIndex++) {
+		for (
+			let cellElementIndex = 0;
+			cellElementIndex < cellRow.length;
+			cellElementIndex++
+		) {
 			const cellElement = cellRow[cellElementIndex];
 
 			let colSpan = 1;
@@ -627,9 +655,11 @@ function mapToGrid(trList, cellType='td', mapFn=_.property('element')) {
 			}
 
 			const nilCellIndex = _.findIndex(grid[canonicalRow], _.isNil);
-			const originCol = nilCellIndex !== -1 ? nilCellIndex : grid[canonicalRow].length;
+			const originCol = nilCellIndex !== -1
+				? nilCellIndex
+				: grid[canonicalRow].length;
 
-			for (let currentColSpan=0; currentColSpan < colSpan; currentColSpan++) {
+			for (let currentColSpan = 0; currentColSpan < colSpan; currentColSpan++) {
 				grid[canonicalRow][originCol + currentColSpan] = {
 					element: cellElement,
 					canonicalPosition: {
@@ -643,7 +673,7 @@ function mapToGrid(trList, cellType='td', mapFn=_.property('element')) {
 		}
 
 		// build out each vertial duplicates of each cell using the new row in the full grid
-		for (let colIndex=0; colIndex < grid[canonicalRow].length; colIndex++) {
+		for (let colIndex = 0; colIndex < grid[canonicalRow].length; colIndex++) {
 			const gridCell = grid[canonicalRow][colIndex];
 			if (gridCell.isOriginal) {
 				const cellElement = _.get(gridCell, 'element');
@@ -653,12 +683,20 @@ function mapToGrid(trList, cellType='td', mapFn=_.property('element')) {
 					rowSpan = _.get(cellElement, 'props.rowSpan');
 				}
 
-				for (let currentRowSpan=1; currentRowSpan < rowSpan; currentRowSpan++) {
+				for (
+					let currentRowSpan = 1;
+					currentRowSpan < rowSpan;
+					currentRowSpan++
+				) {
 					if (_.isNil(grid[canonicalRow + currentRowSpan])) {
 						grid[canonicalRow + currentRowSpan] = [];
 					}
 
-					grid[canonicalRow + currentRowSpan][colIndex] = _.assign({}, grid[canonicalRow + currentRowSpan-1][colIndex], { isOriginal: false });
+					grid[canonicalRow + currentRowSpan][colIndex] = _.assign(
+						{},
+						grid[canonicalRow + currentRowSpan - 1][colIndex],
+						{ isOriginal: false }
+					);
 				}
 			}
 		}
@@ -666,10 +704,14 @@ function mapToGrid(trList, cellType='td', mapFn=_.property('element')) {
 
 	// map new values to each cell in the final grid
 	const finalGrid = [];
-	for (let rowIndex=0; rowIndex < grid.length; rowIndex++) {
+	for (let rowIndex = 0; rowIndex < grid.length; rowIndex++) {
 		finalGrid[rowIndex] = [];
-		for (let colIndex=0; colIndex < grid[rowIndex].length; colIndex++) {
-			finalGrid[rowIndex][colIndex] = mapFn(grid[rowIndex][colIndex], { row: rowIndex, col: colIndex }, finalGrid);
+		for (let colIndex = 0; colIndex < grid[rowIndex].length; colIndex++) {
+			finalGrid[rowIndex][colIndex] = mapFn(
+				grid[rowIndex][colIndex],
+				{ row: rowIndex, col: colIndex },
+				finalGrid
+			);
 		}
 	}
 
@@ -683,8 +725,13 @@ function mapToGrid(trList, cellType='td', mapFn=_.property('element')) {
  */
 function renderRowsWithIdentifiedEdges(trList, cellType) {
 	const duplicateReferences = [];
-	const fullCellGrid = mapToGrid(trList, cellType, ({ element: { props }, isOriginal, canonicalPosition }, currentPos, grid) => {
-		if (!isOriginal) { // if cell spans multiple positions
+	const fullCellGrid = mapToGrid(trList, cellType, ({
+		element: { props },
+		isOriginal,
+		canonicalPosition,
+	}, currentPos, grid) => {
+		if (!isOriginal) {
+			// if cell spans multiple positions
 			// store current position and return original cell props reference
 			duplicateReferences.push(currentPos);
 			return grid[canonicalPosition.row][canonicalPosition.col];
@@ -703,30 +750,35 @@ function renderRowsWithIdentifiedEdges(trList, cellType) {
 	const firstSingleLookup = {};
 
 	// decorate the props of each cell with props that indicate its role in the table
-	_.forEach(fullCellGrid, (cellList, rowIndex) => _.forEach(cellList, (cellProps, colIndex) => {
-		if (!_.isNull(cellProps)) {
-			if (rowIndex === firstRowIndex) {
-				cellProps.isFirstRow = true;
+	_.forEach(fullCellGrid, (cellList, rowIndex) =>
+		_.forEach(cellList, (cellProps, colIndex) => {
+			if (!_.isNull(cellProps)) {
+				if (rowIndex === firstRowIndex) {
+					cellProps.isFirstRow = true;
+				}
+				if (rowIndex === lastRowIndex) {
+					cellProps.isLastRow = true;
+				}
+				if (colIndex === firstColIndex) {
+					cellProps.isFirstCol = true;
+				}
+				if (colIndex === lastColIndex) {
+					cellProps.isLastCol = true;
+				}
 			}
-			if (rowIndex === lastRowIndex) {
-				cellProps.isLastRow = true;
-			}
-			if (colIndex === firstColIndex) {
-				cellProps.isFirstCol = true;
-			}
-			if (colIndex === lastColIndex) {
-				cellProps.isLastCol = true;
-			}
-		}
 
-		if (!_.has(firstSingleLookup, rowIndex)) {
-			_.set(firstSingleLookup, rowIndex, false);
-		}
-		if (!_.get(firstSingleLookup, rowIndex) && _.get(cellProps, 'rowSpan', 1) === 1) {
-			_.set(firstSingleLookup, rowIndex, true);
-			cellProps.isFirstSingle = true;
-		}
-	}));
+			if (!_.has(firstSingleLookup, rowIndex)) {
+				_.set(firstSingleLookup, rowIndex, false);
+			}
+			if (
+				!_.get(firstSingleLookup, rowIndex) &&
+				_.get(cellProps, 'rowSpan', 1) === 1
+			) {
+				_.set(firstSingleLookup, rowIndex, true);
+				cellProps.isFirstSingle = true;
+			}
+		})
+	);
 
 	_.forEach(duplicateReferences, ({ row, col }) => {
 		fullCellGrid[row][col] = null; // remove duplicate references from grid
@@ -735,7 +787,21 @@ function renderRowsWithIdentifiedEdges(trList, cellType) {
 	// render the grid back to elements using the updated cell props
 	return _.map(trList, (trElement, rowIndex) => (
 		<Tr {...trElement.props} key={rowIndex}>
-			{_.reduce(fullCellGrid[rowIndex], (rowChildren, cellProps, colIndex) => rowChildren.concat(!_.isNull(cellProps) ? [React.createElement(cellType, _.assign({}, cellProps, {key: colIndex}))] : []), [])}
+			{_.reduce(
+				fullCellGrid[rowIndex],
+				(rowChildren, cellProps, colIndex) =>
+					rowChildren.concat(
+						!_.isNull(cellProps)
+							? [
+									React.createElement(
+										cellType,
+										_.assign({}, cellProps, { key: colIndex })
+									),
+								]
+							: []
+					),
+				[]
+			)}
 		</Tr>
 	));
 }

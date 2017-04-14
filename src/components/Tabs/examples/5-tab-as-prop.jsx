@@ -5,7 +5,12 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<Tabs Tab={[{Title: 'Bert', children: 'Bert'}, {Title: 'Ernie', children: 'Ernie'}]} />
+				<Tabs
+					Tab={[
+						{ Title: 'Bert', children: 'Bert' },
+						{ Title: 'Ernie', children: 'Ernie' },
+					]}
+				/>
 			</div>
 		);
 	},

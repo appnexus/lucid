@@ -19,10 +19,7 @@ const ResizeIcon = createClass({
 	},
 
 	render() {
-		const {
-			className,
-			...passThroughs
-		} = this.props;
+		const { className, ...passThroughs } = this.props;
 
 		return (
 			<Icon
@@ -30,9 +27,9 @@ const ResizeIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path d='M15.146,4.178 L15.853,4.885 L4.853,15.885 L4.146,15.178 L15.146,4.178 z' />
-				<path d='M15.146,8.178 L15.853,8.885 L8.853,15.885 L8.146,15.178 L15.146,8.178 z' />
-				<path d='M15.146,12.178 L15.853,12.885 L12.853,15.885 L12.146,15.178 L15.146,12.178 z' />
+				<path d="M15.146,4.178 L15.853,4.885 L4.853,15.885 L4.146,15.178 L15.146,4.178 z" />
+				<path d="M15.146,8.178 L15.853,8.885 L8.853,15.885 L8.146,15.178 L15.146,8.178 z" />
+				<path d="M15.146,12.178 L15.853,12.885 L12.853,15.885 L12.146,15.178 L15.146,12.178 z" />
 			</Icon>
 		);
 	},

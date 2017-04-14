@@ -115,17 +115,13 @@ const Paginator = createClass({
 		};
 	},
 
-	handleTextFieldChange(pageNum, {props, event}) {
-		const {
-			onPageSelect,
-			selectedPageIndex,
-			totalPages,
-		} = this.props;
+	handleTextFieldChange(pageNum, { props, event }) {
+		const { onPageSelect, selectedPageIndex, totalPages } = this.props;
 		const parsedPageNum = _.parseInt(pageNum);
 		if (_.isNaN(parsedPageNum)) {
-			return onPageSelect(selectedPageIndex, totalPages, {props, event});
+			return onPageSelect(selectedPageIndex, totalPages, { props, event });
 		}
-		return onPageSelect(parsedPageNum - 1, totalPages, {props, event});
+		return onPageSelect(parsedPageNum - 1, totalPages, { props, event });
 	},
 
 	render() {
@@ -147,28 +143,32 @@ const Paginator = createClass({
 		return (
 			<div style={style} className={cx('&', className)}>
 
-				{ hasPageSizeSelector ? (
-					<div className={cx('&-page-size-container')}>
-						<span className={cx('&-rows-per-page-label')}>Rows per page:</span>
-						<SingleSelect
-							{...singleSelectProps}
-							hasReset={false}
-							isSelectionHighlighted={false}
-							isDisabled={isDisabled}
-							selectedIndex={selectedPageSizeIndex}
-							onSelect={onPageSizeSelect}
-						>
-							{_.map(pageSizeOptions, (option) => <Option key={option}>{option}</Option>)}
-						</SingleSelect>
-					</div>
-				) : null }
+				{hasPageSizeSelector
+					? <div className={cx('&-page-size-container')}>
+							<span className={cx('&-rows-per-page-label')}>
+								Rows per page:
+							</span>
+							<SingleSelect
+								{...singleSelectProps}
+								hasReset={false}
+								isSelectionHighlighted={false}
+								isDisabled={isDisabled}
+								selectedIndex={selectedPageSizeIndex}
+								onSelect={onPageSizeSelect}
+							>
+								{_.map(pageSizeOptions, option => (
+									<Option key={option}>{option}</Option>
+								))}
+							</SingleSelect>
+						</div>
+					: null}
 
 				<Button
 					onClick={_.partial(onPageSelect, selectedPageIndex - 1, totalPages)}
 					isDisabled={isDisabled || selectedPageIndex === 0}
 					hasOnlyIcon
 				>
-					<ArrowIcon direction='left'/>
+					<ArrowIcon direction="left" />
 				</Button>
 				<TextField
 					lazyLevel={100}
@@ -184,7 +184,7 @@ const Paginator = createClass({
 					isDisabled={isDisabled || selectedPageIndex === totalPages - 1}
 					hasOnlyIcon
 				>
-					<ArrowIcon direction='right'/>
+					<ArrowIcon direction="right" />
 				</Button>
 			</div>
 		);

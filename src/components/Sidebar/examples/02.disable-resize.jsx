@@ -2,7 +2,6 @@ import React from 'react';
 import { Sidebar } from '../../../index';
 
 export default React.createClass({
-
 	render() {
 		return (
 			<Sidebar isResizeDisabled={true}>

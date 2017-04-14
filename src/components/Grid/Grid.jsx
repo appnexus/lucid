@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps }  from '../../util/component-types';
+import { createClass, findTypes, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Grid');
 
@@ -149,39 +149,48 @@ const Grid = createClass({
 		const cellChildProps = _.map(findTypes(this.props, Grid.Cell), 'props');
 
 		return (
-			<section {...omitProps(passThroughs, Grid)}
-				className={cx('&', {
-					'&-is-vertical': isVertical,
-					'&-is-horizontal': isHorizontal,
-					'&-is-gutterless': isGutterless,
-					'&-is-multiline': isMultiline,
-				}, className)}
+			<section
+				{...omitProps(passThroughs, Grid)}
+				className={cx(
+					'&',
+					{
+						'&-is-vertical': isVertical,
+						'&-is-horizontal': isHorizontal,
+						'&-is-gutterless': isGutterless,
+						'&-is-multiline': isMultiline,
+					},
+					className
+				)}
 			>
 				{_.map(cellChildProps, (cellChildProp, index) => {
 					return (
 						<article
 							{...omitProps(cellChildProp, Grid.Cell)}
 							key={index}
-							className={cx('&-Cell', {
-								'&-Cell-is-full': cellChildProp.isFull,
-								'&-Cell-is-half': cellChildProp.isHalf,
-								'&-Cell-is-quarter': cellChildProp.isQuarter,
-								'&-Cell-is-third': cellChildProp.isThird,
-								'&-Cell-is-2': cellChildProp.is2,
-								'&-Cell-is-3': cellChildProp.is3,
-								'&-Cell-is-4': cellChildProp.is4,
-								'&-Cell-is-5': cellChildProp.is5,
-								'&-Cell-is-6': cellChildProp.is6,
-								'&-Cell-is-7': cellChildProp.is7,
-								'&-Cell-is-8': cellChildProp.is8,
-								'&-Cell-is-9': cellChildProp.is9,
-								'&-Cell-is-10': cellChildProp.is10,
-								'&-Cell-is-11': cellChildProp.is11,
-								'&-Cell-is-offset-quarter': cellChildProp.isOffsetQuarter,
-								'&-Cell-is-offset-third': cellChildProp.isOffsetThird,
-								'&-Cell-is-offset-half': cellChildProp.isOffsetHalf,
-							}, cellChildProp.className)}
-							>
+							className={cx(
+								'&-Cell',
+								{
+									'&-Cell-is-full': cellChildProp.isFull,
+									'&-Cell-is-half': cellChildProp.isHalf,
+									'&-Cell-is-quarter': cellChildProp.isQuarter,
+									'&-Cell-is-third': cellChildProp.isThird,
+									'&-Cell-is-2': cellChildProp.is2,
+									'&-Cell-is-3': cellChildProp.is3,
+									'&-Cell-is-4': cellChildProp.is4,
+									'&-Cell-is-5': cellChildProp.is5,
+									'&-Cell-is-6': cellChildProp.is6,
+									'&-Cell-is-7': cellChildProp.is7,
+									'&-Cell-is-8': cellChildProp.is8,
+									'&-Cell-is-9': cellChildProp.is9,
+									'&-Cell-is-10': cellChildProp.is10,
+									'&-Cell-is-11': cellChildProp.is11,
+									'&-Cell-is-offset-quarter': cellChildProp.isOffsetQuarter,
+									'&-Cell-is-offset-third': cellChildProp.isOffsetThird,
+									'&-Cell-is-offset-half': cellChildProp.isOffsetHalf,
+								},
+								cellChildProp.className
+							)}
+						>
 							{cellChildProp.children}
 						</article>
 					);

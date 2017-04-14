@@ -6,4 +6,3 @@ describe('AnalyzeDataIcon', () => {
 	common(AnalyzeDataIcon);
 	icons(AnalyzeDataIcon);
 });
-

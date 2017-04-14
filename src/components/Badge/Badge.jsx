@@ -32,11 +32,7 @@ const Badge = createClass({
 	},
 
 	render() {
-		const {
-			className,
-			children,
-			...passThroughs
-		} = this.props;
+		const { className, children, ...passThroughs } = this.props;
 
 		return (
 			<span className={cx('&', className)} {...omitProps(passThroughs, Badge)}>

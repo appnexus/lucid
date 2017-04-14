@@ -93,8 +93,12 @@ const Panel = createClass({
 			...passThroughs
 		} = this.props;
 
-		const headerChildProp = _.first(_.map(findTypes(this.props, Panel.Header), 'props'));
-		const footerChildProp = _.first(_.map(findTypes(this.props, Panel.Footer), 'props'));
+		const headerChildProp = _.first(
+			_.map(findTypes(this.props, Panel.Header), 'props')
+		);
+		const footerChildProp = _.first(
+			_.map(findTypes(this.props, Panel.Footer), 'props')
+		);
 
 		return (
 			<div
@@ -106,23 +110,23 @@ const Panel = createClass({
 				})}
 				style={style}
 			>
-				{headerChildProp ? (
-					<header
-						{...headerChildProp}
-						className={cx('&-Header', headerChildProp.className)}
-					/>
-				) : null}
+				{headerChildProp
+					? <header
+							{...headerChildProp}
+							className={cx('&-Header', headerChildProp.className)}
+						/>
+					: null}
 
-				<section className={cx('&-content')} >
+				<section className={cx('&-content')}>
 					{children}
 				</section>
 
-				{footerChildProp ? (
-					<footer
-						{...footerChildProp}
-						className={cx('&-Footer', footerChildProp.className)}
-					/>
-				) : null}
+				{footerChildProp
+					? <footer
+							{...footerChildProp}
+							className={cx('&-Footer', footerChildProp.className)}
+						/>
+					: null}
 			</div>
 		);
 	},

@@ -55,30 +55,35 @@ const Validation = createClass({
 	},
 
 	render() {
-		const {
-			className,
-			children,
-			...passThroughs
-		} = this.props;
+		const { className, children, ...passThroughs } = this.props;
 
-		const errorChildProps = _.get(getFirst(this.props, Validation.Error), 'props');
+		const errorChildProps = _.get(
+			getFirst(this.props, Validation.Error),
+			'props'
+		);
 
 		return (
 			<div
 				{...omitProps(passThroughs, Validation)}
-				className={cx('&', {
-					'&-is-error': errorChildProps && errorChildProps.children,
-				}, className)}
+				className={cx(
+					'&',
+					{
+						'&-is-error': errorChildProps && errorChildProps.children,
+					},
+					className
+				)}
 			>
 				{children}
-				{errorChildProps && errorChildProps.children && errorChildProps.children !== true ?
-					<div
-						{...omitProps(errorChildProps, Validation.Error)}
-						className={cx('&-error-content', errorChildProps.className)}
-					>
-						{errorChildProps.children}
-					</div>
-				: null}
+				{errorChildProps &&
+					errorChildProps.children &&
+					errorChildProps.children !== true
+					? <div
+							{...omitProps(errorChildProps, Validation.Error)}
+							className={cx('&-error-content', errorChildProps.className)}
+						>
+							{errorChildProps.children}
+						</div>
+					: null}
 			</div>
 		);
 	},

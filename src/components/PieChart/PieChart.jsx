@@ -166,7 +166,6 @@ const PieChart = createClass({
 		 * An optional function used to format your y axis data.
 		 */
 		yAxisFormatter: func,
-
 	},
 
 	statics: {
@@ -278,18 +277,15 @@ const PieChart = createClass({
 
 		const outerRadius = Math.min(innerWidth, innerHeight) / 2;
 
-		const arc = d3Shape.arc()
+		const arc = d3Shape
+			.arc()
 			.innerRadius(isDonut ? outerRadius - PieChart.DONUT_WIDTH : INNER_RADIUS)
 			.outerRadius(outerRadius);
 
 		// Useful for capturing hovers when we're in donut mode
-		const arcFull = d3Shape.arc()
-			.innerRadius(0)
-			.outerRadius(outerRadius);
+		const arcFull = d3Shape.arc().innerRadius(0).outerRadius(outerRadius);
 
-		const pie = d3Shape
-			.pie()
-			.sort(null); // needed to put the slices in proper order
+		const pie = d3Shape.pie().sort(null); // needed to put the slices in proper order
 		const pieData = pie(_.map(data, yAxisField));
 
 		return (
@@ -306,14 +302,15 @@ const PieChart = createClass({
 					onMouseOver={_.noop}
 					onMouseOut={this.handleMouseOut}
 				>
-					<ToolTip.Target elementType='g'>
+					<ToolTip.Target elementType="g">
 						<g transform={`translate(${margin.left}, ${margin.top})`}>
 							<g transform={`translate(${innerWidth / 2}, ${innerHeight / 2})`}>
 								{_.map(pieData, (pieDatum, index) => (
 									<g
 										key={index}
 										className={cx('&-slice-group', {
-											'&-slice-group-is-hovering': isHovering && hoveringIndex === index,
+											'&-slice-group-is-hovering': isHovering &&
+												hoveringIndex === index,
 										})}
 									>
 										<Line
@@ -322,7 +319,11 @@ const PieChart = createClass({
 												'&-slice-has-stroke': hasStroke,
 											})}
 											d={arc(pieDatum)}
-											color={_.get(colorMap, data[index][xAxisField], palette[index % palette.length])}
+											color={_.get(
+												colorMap,
+												data[index][xAxisField],
+												palette[index % palette.length]
+											)}
 											transform={`scale(${isHovering && hoveringIndex === index ? HOVER_SCALE : 1})`}
 										/>
 

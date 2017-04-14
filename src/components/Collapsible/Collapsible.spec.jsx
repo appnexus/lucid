@@ -10,20 +10,33 @@ import { Motion } from 'react-motion';
 
 describe('Collapsible', () => {
 	common(Collapsible, {
-		selectRoot: (wrapper) => wrapper.find(Motion).shallow(),
+		selectRoot: wrapper => wrapper.find(Motion).shallow(),
 	});
 
 	describe('render', () => {
 		it('should render a root element wrapping a content element', () => {
-			const wrapper = shallow(
-				<Collapsible />
-			);
+			const wrapper = shallow(<Collapsible />);
 
 			const motionWrapper = wrapper.find(Motion).shallow();
 
-			assert.equal(motionWrapper.find('.lucid-Collapsible').length, 1, 'must render root element');
-			assert.equal(motionWrapper.find('.lucid-Collapsible > .lucid-Collapsible-content').length, 1, 'must render a content element');
-			assert.equal(motionWrapper.find('.lucid-Collapsible > .lucid-Collapsible-content').children().length, 0, 'must not render children');
+			assert.equal(
+				motionWrapper.find('.lucid-Collapsible').length,
+				1,
+				'must render root element'
+			);
+			assert.equal(
+				motionWrapper.find('.lucid-Collapsible > .lucid-Collapsible-content')
+					.length,
+				1,
+				'must render a content element'
+			);
+			assert.equal(
+				motionWrapper
+					.find('.lucid-Collapsible > .lucid-Collapsible-content')
+					.children().length,
+				0,
+				'must not render children'
+			);
 		});
 	});
 
@@ -98,7 +111,6 @@ describe('Collapsible', () => {
 
 			});
 			*/
-
 		});
 
 		/*
@@ -186,7 +198,10 @@ describe('Collapsible', () => {
 			*/
 
 			it('should default to true', () => {
-				assert.equal(true, _.get(Collapsible.getDefaultProps(), 'isMountControlled'));
+				assert.equal(
+					true,
+					_.get(Collapsible.getDefaultProps(), 'isMountControlled')
+				);
 			});
 
 			/*
@@ -250,15 +265,16 @@ describe('Collapsible', () => {
 			});
 
 			it('should render a root container of the passed in type', () => {
-				const wrapper = shallow(
-					<Collapsible rootType='section' />
-				);
+				const wrapper = shallow(<Collapsible rootType="section" />);
 
 				const motionWrapper = wrapper.find(Motion).shallow();
 
-				assert.equal(motionWrapper.find('section.lucid-Collapsible').length, 1, 'must render root element of the specified type');
+				assert.equal(
+					motionWrapper.find('section.lucid-Collapsible').length,
+					1,
+					'must render root element of the specified type'
+				);
 			});
 		});
-
 	});
 });

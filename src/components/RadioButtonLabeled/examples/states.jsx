@@ -22,7 +22,9 @@ export default React.createClass({
 						<RadioButtonLabeled.Label>Selected</RadioButtonLabeled.Label>
 					</RadioButtonLabeled>
 					<RadioButtonLabeled isDisabled={true} isSelected={true} style={style}>
-						<RadioButtonLabeled.Label>Disabled & selected</RadioButtonLabeled.Label>
+						<RadioButtonLabeled.Label>
+							Disabled & selected
+						</RadioButtonLabeled.Label>
 					</RadioButtonLabeled>
 				</section>
 			</section>

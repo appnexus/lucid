@@ -16,7 +16,6 @@ export default React.createClass({
 		return (
 			<LineChart
 				data={data}
-
 				yAxisFields={['blueberries']}
 				yAxisFormatter={formatters.formatAbbreviatedNumber}
 				yAxisTooltipDataFormatter={formatters.formatThousands}

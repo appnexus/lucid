@@ -11,7 +11,7 @@ describe('LoadingIndicator', () => {
 
 	describe('custom loading message', () => {
 		it('should use custom loading message', () => {
-			const message = <LoadingMessage Title='Foo' Body='Bar'/>;
+			const message = <LoadingMessage Title="Foo" Body="Bar" />;
 			const wrapper = shallow(
 				<LoadingIndicator isLoading>
 					<div>Some content</div>

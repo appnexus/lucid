@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-	Button,
-	RadioGroup,
-	SearchField,
-	Tabs,
-} from '../../../index';
+import { Button, RadioGroup, SearchField, Tabs } from '../../../index';
 
 const titleThree = (
 	<RadioGroup selectedIndex={1}>
@@ -35,7 +30,7 @@ export default React.createClass({
 
 					<Tabs.Tab>
 						<Tabs.Title>
-							Two<br/>
+							Two<br />
 							Line Two
 							<SearchField />
 						</Tabs.Title>

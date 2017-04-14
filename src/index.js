@@ -1,25 +1,45 @@
 // components with reducers
 import Accordion, { AccordionDumb } from './components/Accordion/Accordion';
-import Autocomplete, { AutocompleteDumb } from './components/Autocomplete/Autocomplete';
-import ButtonGroup, { ButtonGroupDumb } from './components/ButtonGroup/ButtonGroup';
-import SearchableSelect, { SearchableSelectDumb } from './components/SearchableSelect/SearchableSelect';
-import DateSelect, { DateSelectDumb }  from './components/DateSelect/DateSelect';
-import SearchableMultiSelect, { SearchableMultiSelectDumb } from './components/SearchableMultiSelect/SearchableMultiSelect';
+import Autocomplete, {
+	AutocompleteDumb,
+} from './components/Autocomplete/Autocomplete';
+import ButtonGroup, {
+	ButtonGroupDumb,
+} from './components/ButtonGroup/ButtonGroup';
+import SearchableSelect, {
+	SearchableSelectDumb,
+} from './components/SearchableSelect/SearchableSelect';
+import DateSelect, { DateSelectDumb } from './components/DateSelect/DateSelect';
+import SearchableMultiSelect, {
+	SearchableMultiSelectDumb,
+} from './components/SearchableMultiSelect/SearchableMultiSelect';
 import DropMenu, { DropMenuDumb } from './components/DropMenu/DropMenu';
 import Expander, { ExpanderDumb } from './components/Expander/Expander';
-import ExpanderPanel, { ExpanderPanelDumb } from './components/ExpanderPanel/ExpanderPanel';
+import ExpanderPanel, {
+	ExpanderPanelDumb,
+} from './components/ExpanderPanel/ExpanderPanel';
 import Paginator, { PaginatorDumb } from './components/Paginator/Paginator';
 import PieChart, { PieChartDumb } from './components/PieChart/PieChart';
 import RadioGroup, { RadioGroupDumb } from './components/RadioGroup/RadioGroup';
-import SearchField, { SearchFieldDumb } from './components/SearchField/SearchField';
+import SearchField, {
+	SearchFieldDumb,
+} from './components/SearchField/SearchField';
 import Sidebar, { SidebarDumb } from './components/Sidebar/Sidebar';
-import SingleSelect, { SingleSelectDumb } from './components/SingleSelect/SingleSelect';
-import SplitButton, { SplitButtonDumb } from './components/SplitButton/SplitButton';
+import SingleSelect, {
+	SingleSelectDumb,
+} from './components/SingleSelect/SingleSelect';
+import SplitButton, {
+	SplitButtonDumb,
+} from './components/SplitButton/SplitButton';
 import Submarine, { SubmarineDumb } from './components/Submarine/Submarine';
 import Tabs, { TabsDumb } from './components/Tabs/Tabs';
 import ToolTip, { ToolTipDumb } from './components/ToolTip/ToolTip';
-import VerticalListMenu, { VerticalListMenuDumb } from './components/VerticalListMenu/VerticalListMenu';
-import VerticalTabs, { VerticalTabsDumb } from './components/VerticalTabs/VerticalTabs';
+import VerticalListMenu, {
+	VerticalListMenuDumb,
+} from './components/VerticalListMenu/VerticalListMenu';
+import VerticalTabs, {
+	VerticalTabsDumb,
+} from './components/VerticalTabs/VerticalTabs';
 
 // dumb components
 import AddURLIcon from './components/Icon/AddURLIcon/AddURLIcon';
@@ -53,13 +73,15 @@ import DataTable from './components/DataTable/DataTable';
 import DataViewIcon from './components/Icon/DataViewIcon/DataViewIcon';
 import Dialog from './components/Dialog/Dialog';
 import DownloadIcon from './components/Icon/DownloadIcon/DownloadIcon';
-import DownloadTableDataIcon from './components/Icon/DownloadTableDataIcon/DownloadTableDataIcon';
+import DownloadTableDataIcon
+	from './components/Icon/DownloadTableDataIcon/DownloadTableDataIcon';
 import DragCaptureZone from './components/DragCaptureZone/DragCaptureZone';
 import DuplicateIcon from './components/Icon/DuplicateIcon/DuplicateIcon';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EditPageIcon from './components/Icon/EditPageIcon/EditPageIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
-import EmptyStateWrapper from './components/EmptyStateWrapper/EmptyStateWrapper';
+import EmptyStateWrapper
+	from './components/EmptyStateWrapper/EmptyStateWrapper';
 import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
 import FileIcon from './components/Icon/FileIcon/FileIcon';
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
@@ -83,10 +105,12 @@ import LockedIcon from './components/Icon/LockedIcon/LockedIcon';
 import MaximizeIcon from './components/Icon/MaximizeIcon/MaximizeIcon';
 import MinimizeIcon from './components/Icon/MinimizeIcon/MinimizeIcon';
 import MinusCircleIcon from './components/Icon/MinusCircleIcon/MinusCircleIcon';
-import MinusCircleLightIcon from './components/Icon/MinusCircleLightIcon/MinusCircleLightIcon';
+import MinusCircleLightIcon
+	from './components/Icon/MinusCircleLightIcon/MinusCircleLightIcon';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import NewWindowIcon from './components/Icon/NewWindowIcon/NewWindowIcon';
-import OutwardArrowsIcon from './components/Icon/OutwardArrowsIcon/OutwardArrowsIcon';
+import OutwardArrowsIcon
+	from './components/Icon/OutwardArrowsIcon/OutwardArrowsIcon';
 import Overlay from './components/Overlay/Overlay';
 import OverlayWrapper from './components/OverlayWrapper/OverlayWrapper';
 import Panel from './components/Panel/Panel';
@@ -94,9 +118,11 @@ import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Point from './components/Point/Point';
 import Points from './components/Points/Points';
 import Portal from './components/Portal/Portal';
-import QuestionMarkCircleIcon from './components/Icon/QuestionMarkCircleIcon/QuestionMarkCircleIcon';
+import QuestionMarkCircleIcon
+	from './components/Icon/QuestionMarkCircleIcon/QuestionMarkCircleIcon';
 import RadioButton from './components/RadioButton/RadioButton';
-import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
+import RadioButtonLabeled
+	from './components/RadioButtonLabeled/RadioButtonLabeled';
 import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
 import ResizeIcon from './components/Icon/ResizeIcon/ResizeIcon';
 import Resizer from './components/Resizer/Resizer';
@@ -105,14 +131,16 @@ import SearchIcon from './components/Icon/SearchIcon/SearchIcon';
 import Selection from './components/Selection/Selection';
 import SeparatorIcon from './components/Icon/SeparatorIcon/SeparatorIcon';
 import SettingsIcon from './components/Icon/SettingsIcon/SettingsIcon';
-import ShoppingCartIcon from './components/Icon/ShoppingCartIcon/ShoppingCartIcon';
+import ShoppingCartIcon
+	from './components/Icon/ShoppingCartIcon/ShoppingCartIcon';
 import SplitHorizontal from './components/SplitHorizontal/SplitHorizontal';
 import SplitVertical from './components/SplitVertical/SplitVertical';
 import StarIcon from './components/Icon/StarIcon/StarIcon';
 import StarOutlineIcon from './components/Icon/StarOutlineIcon/StarOutlineIcon';
 import StickySection from './components/StickySection/StickySection';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
-import SuccessLightIcon from './components/Icon/SuccessLightIcon/SuccessLightIcon';
+import SuccessLightIcon
+	from './components/Icon/SuccessLightIcon/SuccessLightIcon';
 import Switch from './components/Switch/Switch';
 import SwitchIcon from './components/Icon/SwitchIcon/SwitchIcon';
 import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
@@ -120,7 +148,8 @@ import Table from './components/Table/Table';
 import TableGearIcon from './components/Icon/TableGearIcon/TableGearIcon';
 import Tag from './components/Tag/Tag';
 import TextField from './components/TextField/TextField';
-import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
+import TextFieldValidated
+	from './components/TextFieldValidated/TextFieldValidated';
 import UnlinkedIcon from './components/Icon/UnlinkedIcon/UnlinkedIcon';
 import UnlockedIcon from './components/Icon/UnlockedIcon/UnlockedIcon';
 import UploadIcon from './components/Icon/UploadIcon/UploadIcon';
@@ -128,7 +157,8 @@ import UserIcon from './components/Icon/UserIcon/UserIcon';
 import Validation from './components/Validation/Validation';
 import ViewIcon from './components/Icon/ViewIcon/ViewIcon';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
-import WarningLightIcon from './components/Icon/WarningLightIcon/WarningLightIcon';
+import WarningLightIcon
+	from './components/Icon/WarningLightIcon/WarningLightIcon';
 
 // utils
 import * as componentTypes from './util/component-types';

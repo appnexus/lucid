@@ -9,23 +9,25 @@ export const isDevMode = (function isReactInDev() {
 export const isNode = typeof process === 'object' && process.title === 'node';
 
 export const logger = (function() {
-	return checkIsDev() ? {
-		log,
-		logOnce,
-		warn,
-		warnOnce,
-		error,
-		errorOnce,
-		resetOnce,
-	} : {
-		log: _.noop,
-		logOnce: _.noop,
-		warn: _.noop,
-		warnOnce: _.noop,
-		error: _.noop,
-		errorOnce: _.noop,
-		resetOnce: _.noop,
-	};
+	return checkIsDev()
+		? {
+				log,
+				logOnce,
+				warn,
+				warnOnce,
+				error,
+				errorOnce,
+				resetOnce,
+			}
+		: {
+				log: _.noop,
+				logOnce: _.noop,
+				warn: _.noop,
+				warnOnce: _.noop,
+				error: _.noop,
+				errorOnce: _.noop,
+				resetOnce: _.noop,
+			};
 })();
 
 const onceMap = {};
@@ -42,14 +44,12 @@ function resetOnce(key) {
 }
 
 export function checkIsDev() {
-	return isDevMode &&
-		typeof window !== 'undefined' &&
-		typeof console !== 'undefined';
+	return (
+		isDevMode && typeof window !== 'undefined' && typeof console !== 'undefined'
+	);
 }
 
-
 function log(...args) {
-
 	console.log(...args);
 
 	try {
@@ -57,8 +57,9 @@ function log(...args) {
 		// This error was thrown as a convenience so that you can use this
 		// stack to find the callsite that caused this warning to fire.
 		throw new Error(args[0]);
-	} catch (x) { /* */ }
-
+	} catch (x) {
+		/* */
+	}
 }
 
 function logOnce(key, ...args) {
@@ -66,7 +67,6 @@ function logOnce(key, ...args) {
 }
 
 function warn(...args) {
-
 	console.warn(...args);
 
 	try {
@@ -74,17 +74,16 @@ function warn(...args) {
 		// This error was thrown as a convenience so that you can use this
 		// stack to find the callsite that caused this warning to fire.
 		throw new Error(args[0]);
-	} catch (x) { /* */ }
-
+	} catch (x) {
+		/* */
+	}
 }
 
 function warnOnce(key, ...args) {
 	once(key, () => warn(...args));
 }
 
-
 function error(...args) {
-
 	console.error(...args);
 
 	try {
@@ -92,8 +91,9 @@ function error(...args) {
 		// This error was thrown as a convenience so that you can use this
 		// stack to find the callsite that caused this warning to fire.
 		throw new Error(args[0]);
-	} catch (x) { /* */ }
-
+	} catch (x) {
+		/* */
+	}
 }
 
 function errorOnce(key, ...args) {

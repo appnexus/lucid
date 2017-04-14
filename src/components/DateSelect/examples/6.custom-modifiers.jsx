@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-	DateSelect,
-} from '../../../index';
+import { DateSelect } from '../../../index';
 
 export default React.createClass({
 	render() {
@@ -11,7 +9,7 @@ export default React.createClass({
 				<DateSelect>
 					<DateSelect.CalendarMonth
 						modifiers={{
-							tuesday: (date) => date.getDay() === 2,
+							tuesday: date => date.getDay() === 2,
 						}}
 					/>
 				</DateSelect>

@@ -30,7 +30,7 @@ export default React.createClass({
 	getInitialState() {
 		return {
 			selectedIds: [], // aka our full set of selections regardless of currently search
-			visibleIds: [],  // aka current search results
+			visibleIds: [], // aka current search results
 			isLoading: false,
 		};
 	},
@@ -44,11 +44,15 @@ export default React.createClass({
 
 		// Fake an API call
 		setTimeout(() => {
-			const visibleIds = _.reduce(allData, (acc, { name }, id)  => {
-				return _.includes(name.toLowerCase(), searchText.toLowerCase())
-					? acc.concat(id)
-					: acc;
-			}, []);
+			const visibleIds = _.reduce(
+				allData,
+				(acc, { name }, id) => {
+					return _.includes(name.toLowerCase(), searchText.toLowerCase())
+						? acc.concat(id)
+						: acc;
+				},
+				[]
+			);
 
 			this.setState({
 				visibleIds,
@@ -57,29 +61,29 @@ export default React.createClass({
 		}, 750);
 	},
 
-	handleRemove({ props: { callbackId }}) {
+	handleRemove({ props: { callbackId } }) {
 		this.setState({
 			selectedIds: _.without(this.state.selectedIds, callbackId),
 		});
 	},
 
-	handleSelect(index, { props: { callbackId }}) {
+	handleSelect(index, { props: { callbackId } }) {
 		this.setState({
 			selectedIds: _.xor(this.state.selectedIds, [callbackId]),
 		});
 	},
 
 	render() {
-		const {
-			isLoading,
-			visibleIds,
-			selectedIds,
-		} = this.state;
+		const { isLoading, visibleIds, selectedIds } = this.state;
 
 		// Calculate selected indices based on selected ids
-		const selectedIndices = _.reduce(visibleIds, (acc, id, index) => {
-			return _.includes(selectedIds, id) ? acc.concat(index) : acc;
-		}, []);
+		const selectedIndices = _.reduce(
+			visibleIds,
+			(acc, id, index) => {
+				return _.includes(selectedIds, id) ? acc.concat(index) : acc;
+			},
+			[]
+		);
 
 		return (
 			<div style={{ marginBottom: '300px' }}>
@@ -90,31 +94,33 @@ export default React.createClass({
 					onSearch={this.handleSearch}
 					selectedIndices={selectedIndices}
 					optionFilter={_.constant(true)}
-					SearchField={{ placeholder: 'Type here to simulate an API backed search' }}
+					SearchField={{
+						placeholder: 'Type here to simulate an API backed search',
+					}}
 				>
-					{_.map(visibleIds, (id) => (
+					{_.map(visibleIds, id => (
 						<Option key={id} callbackId={id}>{allData[id].name}</Option>
 					))}
 				</SearchableMultiSelect>
 
-				{!_.isEmpty(selectedIds) ?
-					<Selection
-						isBold
-						hasBackground
-						Label='Selected'
-						kind='container'
-						isRemovable={false}
-					>
-						{_.map(selectedIds, (id) => (
-							<Selection
-								key={id}
-								Label={allData[id].name}
-								callbackId={id}
-								onRemove={this.handleRemove}
-							/>
-						))}
-					</Selection>
-				: null}
+				{!_.isEmpty(selectedIds)
+					? <Selection
+							isBold
+							hasBackground
+							Label="Selected"
+							kind="container"
+							isRemovable={false}
+						>
+							{_.map(selectedIds, id => (
+								<Selection
+									key={id}
+									Label={allData[id].name}
+									callbackId={id}
+									onRemove={this.handleRemove}
+								/>
+							))}
+						</Selection>
+					: null}
 			</div>
 		);
 	},

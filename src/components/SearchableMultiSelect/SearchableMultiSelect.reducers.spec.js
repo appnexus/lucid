@@ -30,7 +30,6 @@ describe('SearchableMultiSelect reducers', () => {
 
 			expect(onSearch({}, 'wat', 0)).toEqual(expected);
 		});
-
 	});
 
 	describe('onRemoveAll', () => {

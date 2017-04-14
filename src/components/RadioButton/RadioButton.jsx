@@ -92,35 +92,44 @@ const RadioButton = createClass({
 
 		return (
 			<span
-					className={cx('&', {
+				className={cx(
+					'&',
+					{
 						'&-is-disabled': isDisabled,
 						'&-is-selected': isSelected,
-					}, className)}
-					onClick={this.handleClicked}
-					style={style}
+					},
+					className
+				)}
+				onClick={this.handleClicked}
+				style={style}
 			>
 				<input
-						onChange={_.noop}
-						{...omitProps(passThroughs, RadioButton, ['children', 'callbackId'])}
-						checked={isSelected}
-						className={cx('&-native')}
-						disabled={isDisabled}
-						ref='nativeElement'
-						type='radio'
+					onChange={_.noop}
+					{...omitProps(passThroughs, RadioButton, ['children', 'callbackId'])}
+					checked={isSelected}
+					className={cx('&-native')}
+					disabled={isDisabled}
+					ref="nativeElement"
+					type="radio"
 				/>
-				<span onClick={this.handleSpanClick} className={cx('&-visualization-glow')} />
-				<span onClick={this.handleSpanClick} className={cx('&-visualization-container')} />
-				<span onClick={this.handleSpanClick} className={cx('&-visualization-dot')} />
+				<span
+					onClick={this.handleSpanClick}
+					className={cx('&-visualization-glow')}
+				/>
+				<span
+					onClick={this.handleSpanClick}
+					className={cx('&-visualization-container')}
+				/>
+				<span
+					onClick={this.handleSpanClick}
+					className={cx('&-visualization-dot')}
+				/>
 			</span>
 		);
 	},
 
 	handleClicked(event) {
-		const {
-			isDisabled,
-			isSelected,
-			onSelect,
-		} = this.props;
+		const { isDisabled, isSelected, onSelect } = this.props;
 
 		if (!isDisabled && !isSelected) {
 			onSelect(true, { event, props: this.props });

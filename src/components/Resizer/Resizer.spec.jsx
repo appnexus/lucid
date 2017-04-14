@@ -22,7 +22,7 @@ describe('Resizer', () => {
 		exemptFunctionProps: ['children'],
 		getDefaultProps: () => {
 			return {
-				children: () => (<div />),
+				children: () => <div />,
 			};
 		},
 	});

@@ -18,7 +18,7 @@ export default React.createClass({
 				<TextField
 					style={style}
 					value={this.state.value}
-					onSubmit={(value) => this.setState({value})}
+					onSubmit={value => this.setState({ value })}
 				/>
 
 				<div style={style}>this.state.value: {this.state.value}</div>

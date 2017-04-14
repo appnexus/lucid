@@ -9,30 +9,40 @@ describe('Selection', () => {
 	describe('render', () => {
 		it('should match snapshot for responsiveMode small', () => {
 			const wrapper = shallow(
-				<Selection responsiveMode='small'>Yolo</Selection>
+				<Selection responsiveMode="small">Yolo</Selection>
 			);
 
 			expect(wrapper).toMatchSnapshot();
 		});
 
 		it('should match snapshot for container', () => {
-			expect(shallow(<Selection kind='container'>cont</Selection>)).toMatchSnapshot();
+			expect(
+				shallow(<Selection kind="container">cont</Selection>)
+			).toMatchSnapshot();
 		});
 
 		it('should match snapshot for success', () => {
-			expect(shallow(<Selection kind='success'>cont</Selection>)).toMatchSnapshot();
+			expect(
+				shallow(<Selection kind="success">cont</Selection>)
+			).toMatchSnapshot();
 		});
 
 		it('should match snapshot for danger', () => {
-			expect(shallow(<Selection kind='danger'>cont</Selection>)).toMatchSnapshot();
+			expect(
+				shallow(<Selection kind="danger">cont</Selection>)
+			).toMatchSnapshot();
 		});
 
 		it('should match snapshot for info', () => {
-			expect(shallow(<Selection kind='info'>cont</Selection>)).toMatchSnapshot();
+			expect(
+				shallow(<Selection kind="info">cont</Selection>)
+			).toMatchSnapshot();
 		});
 
 		it('should match snapshot for warning', () => {
-			expect(shallow(<Selection kind='warning'>cont</Selection>)).toMatchSnapshot();
+			expect(
+				shallow(<Selection kind="warning">cont</Selection>)
+			).toMatchSnapshot();
 		});
 
 		it('should match snapshot for non removable', () => {
@@ -56,7 +66,7 @@ describe('Selection', () => {
 			const wrapper = shallow(
 				<Selection>
 					<Selection.Icon>
-						<div className='fake-icon' />
+						<div className="fake-icon" />
 					</Selection.Icon>
 				</Selection>
 			);
@@ -68,9 +78,7 @@ describe('Selection', () => {
 	describe('props', () => {
 		it('onRemove', () => {
 			const onRemove = jest.fn();
-			const wrapper = shallow(
-				<Selection onRemove={onRemove} />
-			);
+			const wrapper = shallow(<Selection onRemove={onRemove} />);
 
 			wrapper.find('CrossIcon').prop('onClick')({});
 			expect(onRemove).toHaveBeenCalled();

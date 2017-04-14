@@ -1,10 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import {
-	PieChart,
-	Legend,
-	chartConstants,
-} from '../../../index';
+import { PieChart, Legend, chartConstants } from '../../../index';
 
 const data = [
 	{ x: 'Leslie', y: 80 },
@@ -24,10 +20,7 @@ export default React.createClass({
 					alignItems: 'center',
 				}}
 			>
-				<PieChart
-					data={data}
-					palette={palette}
-				/>
+				<PieChart data={data} palette={palette} />
 				<Legend>
 					{_.map(data, (d, index) => (
 						<Legend.Item

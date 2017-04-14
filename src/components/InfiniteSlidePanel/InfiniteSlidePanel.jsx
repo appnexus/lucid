@@ -15,7 +15,7 @@ const {
 	string,
 } = PropTypes;
 
-const modulo = (n, a) => (a - (n * Math.floor(a/n)));
+const modulo = (n, a) => a - n * Math.floor(a / n);
 
 /** {"categories": ["helpers"], "madeFrom": ["SlidePanel"]}
  *
@@ -97,18 +97,35 @@ const InfiniteSlidePanel = createClass({
 			...passThroughs
 		} = this.props;
 
-		const slide = getFirst(this.props, InfiniteSlidePanel.Slide, <InfiniteSlidePanel.Slide>{children}</InfiniteSlidePanel.Slide>);
+		const slide = getFirst(
+			this.props,
+			InfiniteSlidePanel.Slide,
+			<InfiniteSlidePanel.Slide>{children}</InfiniteSlidePanel.Slide>
+		);
 		const slideChildRenderFunction = slide.props.children;
 		if (!_.isFunction(slideChildRenderFunction)) {
-			throw new Error('InfiniteSlidePanel children must be a single function `(slideOffset) => { /* returns React.PropTypes.node */ }`');
+			throw new Error(
+				'InfiniteSlidePanel children must be a single function `(slideOffset) => { /* returns React.PropTypes.node */ }`'
+			);
 		}
 
 		const halfSlides = Math.floor(totalSlides / 2);
 		const circularOffset = modulo(totalSlides, offset);
-		const forwardSlideOffsets = _.times(totalSlides - halfSlides, (n) => (offset + n));
-		const backwardSlideOffsets = _.times(halfSlides, (n) => (offset + n - halfSlides));
-		const transposedSlideOffsets = forwardSlideOffsets.concat(backwardSlideOffsets);
-		const slideOffsetArray = _.takeRight(transposedSlideOffsets, circularOffset).concat(_.take(transposedSlideOffsets, totalSlides-circularOffset));
+		const forwardSlideOffsets = _.times(
+			totalSlides - halfSlides,
+			n => offset + n
+		);
+		const backwardSlideOffsets = _.times(
+			halfSlides,
+			n => offset + n - halfSlides
+		);
+		const transposedSlideOffsets = forwardSlideOffsets.concat(
+			backwardSlideOffsets
+		);
+		const slideOffsetArray = _.takeRight(
+			transposedSlideOffsets,
+			circularOffset
+		).concat(_.take(transposedSlideOffsets, totalSlides - circularOffset));
 
 		return (
 			<SlidePanel
@@ -123,9 +140,13 @@ const InfiniteSlidePanel = createClass({
 					<SlidePanel.Slide
 						key={elementOffset}
 						{...slide.props}
-						className={cx({
-							'&-Slide-in-frame': slideOffset - offset < slidesToShow && slideOffset - offset >= 0,
-						}, slide.props.className)}
+						className={cx(
+							{
+								'&-Slide-in-frame': slideOffset - offset < slidesToShow &&
+									slideOffset - offset >= 0,
+							},
+							slide.props.className
+						)}
 					>
 						{slideChildRenderFunction(slideOffset)}
 					</SlidePanel.Slide>

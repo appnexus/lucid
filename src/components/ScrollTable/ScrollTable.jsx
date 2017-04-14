@@ -78,9 +78,13 @@ const ScrollTable = createClass({
 
 		return (
 			<div
-				className={cx('&', {
-					'&-has-border': hasBorder,
-				}, className)}
+				className={cx(
+					'&',
+					{
+						'&-has-border': hasBorder,
+					},
+					className
+				)}
 				style={style}
 			>
 				<Table

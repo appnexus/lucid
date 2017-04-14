@@ -7,9 +7,7 @@ export default React.createClass({
 		return (
 			<section style={{ maxWidth: 400 }}>
 
-				<CalendarMonth
-					disabledDays={DateUtils.isPastDay}
-				/>
+				<CalendarMonth disabledDays={DateUtils.isPastDay} />
 
 			</section>
 		);

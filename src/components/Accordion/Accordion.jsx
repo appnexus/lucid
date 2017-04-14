@@ -2,10 +2,12 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps }  from '../../util/component-types';
+import { createClass, findTypes, omitProps } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 
-import { ExpanderPanelDumb as ExpanderPanel } from '../ExpanderPanel/ExpanderPanel';
+import {
+	ExpanderPanelDumb as ExpanderPanel,
+} from '../ExpanderPanel/ExpanderPanel';
 
 import * as reducers from '../Accordion/Accordion.reducers';
 
@@ -81,27 +83,30 @@ const Accordion = createClass({
 	},
 
 	render() {
-		const {
-			style,
-			className,
-			selectedIndex,
-			...passThroughs
-		} = this.props;
+		const { style, className, selectedIndex, ...passThroughs } = this.props;
 
-		const itemChildProps = _.map(findTypes(this.props, Accordion.Item), 'props');
+		const itemChildProps = _.map(
+			findTypes(this.props, Accordion.Item),
+			'props'
+		);
 
 		return (
 			<div
 				{...omitProps(passThroughs, Accordion)}
 				className={cx('&', className)}
-				style={style}>
+				style={style}
+			>
 				{_.map(itemChildProps, (itemChildProp, index) => {
-					return <ExpanderPanel
+					return (
+						<ExpanderPanel
 							key={index}
 							{...itemChildProp}
 							className={cx('&-Item', itemChildProp.className)}
-							onToggle={(isExpanded, { event }) => this.handleToggle(isExpanded, index, event)}
-							isExpanded={!itemChildProp.isDisabled && selectedIndex === index}/>;
+							onToggle={(isExpanded, { event }) =>
+								this.handleToggle(isExpanded, index, event)}
+							isExpanded={!itemChildProp.isDisabled && selectedIndex === index}
+						/>
+					);
 				})}
 			</div>
 		);

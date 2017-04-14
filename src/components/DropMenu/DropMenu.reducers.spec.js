@@ -17,11 +17,7 @@ describe('DropMenu reducers', () => {
 			};
 
 			const nextState = onExpand(initialState);
-			const {
-				selectedIndices,
-				isExpanded,
-				focusedIndex,
-			} = nextState;
+			const { selectedIndices, isExpanded, focusedIndex } = nextState;
 
 			assert(_.isEqual(selectedIndices, initialState.selectedIndices));
 			assert.equal(isExpanded, true);
@@ -34,11 +30,7 @@ describe('DropMenu reducers', () => {
 			};
 
 			const nextState = onExpand(initialState);
-			const {
-				selectedIndices,
-				isExpanded,
-				focusedIndex,
-			} = nextState;
+			const { selectedIndices, isExpanded, focusedIndex } = nextState;
 
 			assert(_.isEqual(selectedIndices, initialState.selectedIndices));
 			assert.equal(isExpanded, true);
@@ -51,9 +43,7 @@ describe('DropMenu reducers', () => {
 			const initialState = {};
 
 			const nextState = onCollapse(initialState);
-			const {
-				isExpanded,
-			} = nextState;
+			const { isExpanded } = nextState;
 
 			assert.equal(isExpanded, false);
 		});
@@ -61,16 +51,12 @@ describe('DropMenu reducers', () => {
 
 	describe('onSelect', () => {
 		it('should set isExpanded=false, selectedIndices=[optionIndex]', () => {
-			const initialState = {
-			};
+			const initialState = {};
 
 			const optionIndex = 3;
 
 			const nextState = onSelect(initialState, optionIndex);
-			const {
-				isExpanded,
-				selectedIndices,
-			} = nextState;
+			const { isExpanded, selectedIndices } = nextState;
 
 			assert.equal(isExpanded, false);
 			assert(_.isEqual(selectedIndices, [3]));
@@ -84,9 +70,7 @@ describe('DropMenu reducers', () => {
 			};
 
 			const nextState = onFocusNext(initialState);
-			const {
-				focusedIndex,
-			} = nextState;
+			const { focusedIndex } = nextState;
 
 			assert.equal(focusedIndex, 0);
 		});
@@ -97,9 +81,7 @@ describe('DropMenu reducers', () => {
 			};
 
 			const nextState = onFocusNext(initialState);
-			const {
-				focusedIndex,
-			} = nextState;
+			const { focusedIndex } = nextState;
 
 			assert.equal(focusedIndex, 3);
 		});
@@ -112,9 +94,7 @@ describe('DropMenu reducers', () => {
 			};
 
 			const nextState = onFocusPrev(initialState);
-			const {
-				focusedIndex,
-			} = nextState;
+			const { focusedIndex } = nextState;
 
 			assert.equal(focusedIndex, null);
 		});
@@ -125,9 +105,7 @@ describe('DropMenu reducers', () => {
 			};
 
 			const nextState = onFocusPrev(initialState);
-			const {
-				focusedIndex,
-			} = nextState;
+			const { focusedIndex } = nextState;
 
 			assert.equal(focusedIndex, null);
 		});
@@ -138,9 +116,7 @@ describe('DropMenu reducers', () => {
 			};
 
 			const nextState = onFocusPrev(initialState);
-			const {
-				focusedIndex,
-			} = nextState;
+			const { focusedIndex } = nextState;
 
 			assert.equal(focusedIndex, 1);
 		});
@@ -153,9 +129,7 @@ describe('DropMenu reducers', () => {
 			const optionIndex = 3;
 
 			const nextState = onFocusOption(initialState, optionIndex);
-			const {
-				focusedIndex,
-			} = nextState;
+			const { focusedIndex } = nextState;
 
 			assert.equal(focusedIndex, 3);
 		});

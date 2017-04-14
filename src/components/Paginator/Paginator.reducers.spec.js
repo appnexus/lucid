@@ -3,13 +3,9 @@ jest.mock('../SingleSelect/SingleSelect.reducers');
 import assert from 'assert';
 import * as SingleSelect from '../SingleSelect/SingleSelect.reducers';
 
-import {
-	onPageSelect,
-	onPageSizeSelect,
-} from './Paginator.reducers.js';
+import { onPageSelect, onPageSizeSelect } from './Paginator.reducers.js';
 
 describe('Paginator reducers', () => {
-
 	const initialState = {
 		selectedPageIndex: 1,
 		selectedPageSizeIndex: 0,
@@ -21,7 +17,11 @@ describe('Paginator reducers', () => {
 		it('should set the selectedPageIndex to the payload', () => {
 			const pageIndex = 2;
 			const nextState = onPageSelect(initialState, pageIndex, totalPages);
-			assert.equal(nextState.selectedPageIndex, pageIndex, `must be ${pageIndex}`);
+			assert.equal(
+				nextState.selectedPageIndex,
+				pageIndex,
+				`must be ${pageIndex}`
+			);
 		});
 
 		it('should set the selectedPageIndex to 0 if payload < 0', () => {
@@ -38,7 +38,6 @@ describe('Paginator reducers', () => {
 	});
 
 	describe('onPageSizeSelect', () => {
-
 		beforeEach(() => SingleSelect.onSelect.mockClear());
 
 		it('should set the selectedPageIndex to 0', () => {
@@ -50,7 +49,10 @@ describe('Paginator reducers', () => {
 		it('should call SingleSelect.onSelect with state.SingleSelect and selectedPageSizeIndex', () => {
 			const pageIndex = 2;
 			onPageSizeSelect(initialState, pageIndex, totalPages);
-			expect(SingleSelect.onSelect).toHaveBeenCalledWith(initialState.SingleSelect, pageIndex);
+			expect(SingleSelect.onSelect).toHaveBeenCalledWith(
+				initialState.SingleSelect,
+				pageIndex
+			);
 		});
 
 		it('should set state.SingleSelect to the return value of SingleSelect.onSelect', () => {
@@ -58,9 +60,11 @@ describe('Paginator reducers', () => {
 			const pageIndex = 2;
 			SingleSelect.onSelect = () => mockValue;
 			const nextState = onPageSizeSelect(initialState, pageIndex, totalPages);
-			assert.strictEqual(nextState.SingleSelect, mockValue, 'must be `mockValue`');
+			assert.strictEqual(
+				nextState.SingleSelect,
+				mockValue,
+				'must be `mockValue`'
+			);
 		});
-
 	});
-
 });

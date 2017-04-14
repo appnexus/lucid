@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Motion, spring } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps }  from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Collapsible');
 
@@ -82,7 +82,7 @@ const Collapsible = createClass({
 	},
 
 	storeRef(name) {
-		return (ref) => {
+		return ref => {
 			this.Refs[name] = ref;
 		};
 	},
@@ -129,39 +129,53 @@ const Collapsible = createClass({
 			...passThroughs
 		} = this.props;
 
-		const {
-			maxHeight,
-		} = this.state;
+		const { maxHeight } = this.state;
 
 		return (
 			<Motion
-				style={this.isAnimated ? {
-					height: (isExpanded && !_.isNull(maxHeight) ? spring(maxHeight, QUICK_SLIDE_MOTION) : spring(0, QUICK_SLIDE_MOTION)),
-				} : {
-					height: (isExpanded && !_.isNull(maxHeight) ? maxHeight : 0),
-				}}
+				style={
+					this.isAnimated
+						? {
+								height: isExpanded && !_.isNull(maxHeight)
+									? spring(maxHeight, QUICK_SLIDE_MOTION)
+									: spring(0, QUICK_SLIDE_MOTION),
+							}
+						: {
+								height: isExpanded && !_.isNull(maxHeight) ? maxHeight : 0,
+							}
+				}
 			>
-				{(tween) => (
-					React.createElement(rootType, {
-						...omitProps(passThroughs, Collapsible),
-						ref: this.storeRef('root'),
-						className: cx('&', className),
-						style: {
-							height: (tween.height !== maxHeight ? (
-								tween.height < 0 ? 0 : tween.height
-							) : null),
-							overflow: 'hidden',
-							padding: 0,
-							...passThroughs.style,
+				{tween =>
+					React.createElement(
+						rootType,
+						{
+							...omitProps(passThroughs, Collapsible),
+							ref: this.storeRef('root'),
+							className: cx('&', className),
+							style: {
+								height: tween.height !== maxHeight
+									? tween.height < 0 ? 0 : tween.height
+									: null,
+								overflow: 'hidden',
+								padding: 0,
+								...passThroughs.style,
+							},
 						},
-					}, [
-						(<div key='content' className={cx('&-content')} style={{ margin: 0 }}>
-							{isMountControlled && !isExpanded ? (
-								_.isNull(maxHeight) || Math.abs(tween.height) > mountControlThreshold ? children : null
-							) : children}
-						</div>),
-					])
-				)}
+						[
+							<div
+								key="content"
+								className={cx('&-content')}
+								style={{ margin: 0 }}
+							>
+								{isMountControlled && !isExpanded
+									? _.isNull(maxHeight) ||
+											Math.abs(tween.height) > mountControlThreshold
+											? children
+											: null
+									: children}
+							</div>,
+						]
+					)}
 			</Motion>
 		);
 	},

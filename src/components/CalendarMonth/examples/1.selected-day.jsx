@@ -6,9 +6,7 @@ export default React.createClass({
 		return (
 			<section style={{ maxWidth: 400 }}>
 
-				<CalendarMonth
-					selectedDays={new Date()}
-				/>
+				<CalendarMonth selectedDays={new Date()} />
 
 			</section>
 		);

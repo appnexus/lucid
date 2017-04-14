@@ -3,9 +3,7 @@ import React from 'react';
 import { common } from '../../util/generic-tests';
 import * as domHelpers from '../../util/dom-helpers';
 import SlidePanel from './SlidePanel';
-const {
-	Slide,
-} = SlidePanel;
+const { Slide } = SlidePanel;
 
 describe('SlidePanel', () => {
 	common(SlidePanel);
@@ -25,12 +23,15 @@ describe('SlidePanel', () => {
 				getBoundingClientRect: jest.fn(() => ({ width: 100 })),
 			};
 
-			const touchStartEvent = { touches: [ { screenX: 100 } ] };
-			const touchEndEvent = { changedTouches: [ { screenX: 0 } ] };
+			const touchStartEvent = { touches: [{ screenX: 100 }] };
+			const touchEndEvent = { changedTouches: [{ screenX: 0 }] };
 			slidePanelInstance.handleTouchStart(touchStartEvent);
 			slidePanelInstance.handleTouchEnd(touchEndEvent);
 
-			expect(onSwipe).toHaveBeenCalledWith(2, {event: touchEndEvent, props: slidePanelInstance.props});
+			expect(onSwipe).toHaveBeenCalledWith(2, {
+				event: touchEndEvent,
+				props: slidePanelInstance.props,
+			});
 		});
 
 		it('should update component when while being swiped', () => {
@@ -47,8 +48,8 @@ describe('SlidePanel', () => {
 				getBoundingClientRect: jest.fn(() => ({ width: 100 })),
 			};
 
-			slidePanelInstance.handleTouchStart({ touches: [ { screenX: 100 } ] });
-			slidePanelInstance.handleTouchMove({ touches: [ { screenX: 50 } ] });
+			slidePanelInstance.handleTouchStart({ touches: [{ screenX: 100 }] });
+			slidePanelInstance.handleTouchMove({ touches: [{ screenX: 50 }] });
 
 			expect(slidePanelInstance.state.translateXPixel).toBe(-50);
 		});
@@ -89,7 +90,10 @@ describe('SlidePanel', () => {
 			it('should shift child elements in slidestrip by half the total number of slides with `offset` 0', () => {
 				slidePanelInstance.componentDidMount();
 
-				expect(domHelpers.shiftChildren).toHaveBeenCalledWith(slidestripElement, 3);
+				expect(domHelpers.shiftChildren).toHaveBeenCalledWith(
+					slidestripElement,
+					3
+				);
 			});
 
 			it('should shift child elements in slidestrip relative to number of slides and `offset` value', () => {

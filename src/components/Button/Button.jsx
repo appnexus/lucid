@@ -48,29 +48,15 @@ const Button = createClass({
 		/**
 		 * Any valid React children
 		 */
-		children: oneOfType([
-			node,
-			arrayOf(node),
-		]),
+		children: oneOfType([node, arrayOf(node)]),
 		/**
 		 * Style variations of the Button
 		 */
-		kind: oneOf([
-			'primary',
-			'link',
-			'success',
-			'warning',
-			'danger',
-			'info',
-		]),
+		kind: oneOf(['primary', 'link', 'success', 'warning', 'danger', 'info']),
 		/**
 		 * Size variations of the Button
 		 */
-		size: oneOf([
-			'short',
-			'small',
-			'large',
-		]),
+		size: oneOf(['short', 'small', 'large']),
 		/**
 		 * Called when the user clicks the `Button`.
 		 *
@@ -96,10 +82,7 @@ const Button = createClass({
 	},
 
 	handleClick(event) {
-		const {
-			isDisabled,
-			onClick,
-		} = this.props;
+		const { isDisabled, onClick } = this.props;
 		const domNode = ReactDOM.findDOMNode(this);
 
 		if (!isDisabled) {
@@ -125,23 +108,27 @@ const Button = createClass({
 		return (
 			<button
 				{...omitProps(passThroughs, Button, ['callbackId'])}
-				className={cx('&', {
-					'&-is-disabled': isDisabled,
-					'&-is-active': isActive,
-					'&-primary': kind === 'primary',
-					'&-link': kind === 'link',
-					'&-success': kind === 'success',
-					'&-warning': kind === 'warning',
-					'&-danger': kind === 'danger',
-					'&-info': kind === 'info',
-					'&-short': size === 'short',
-					'&-small': size === 'small',
-					'&-large': size === 'large',
-					'&-has-only-icon': hasOnlyIcon,
-				}, className)}
+				className={cx(
+					'&',
+					{
+						'&-is-disabled': isDisabled,
+						'&-is-active': isActive,
+						'&-primary': kind === 'primary',
+						'&-link': kind === 'link',
+						'&-success': kind === 'success',
+						'&-warning': kind === 'warning',
+						'&-danger': kind === 'danger',
+						'&-info': kind === 'info',
+						'&-short': size === 'short',
+						'&-small': size === 'small',
+						'&-large': size === 'large',
+						'&-has-only-icon': hasOnlyIcon,
+					},
+					className
+				)}
 				onClick={this.handleClick}
 				disabled={isDisabled}
-				ref='button'
+				ref="button"
 				type={type}
 			>
 				<span className={cx('&-content')}>

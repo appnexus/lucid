@@ -22,7 +22,10 @@ describe('OverlayWrapper', () => {
 			});
 
 			it('should not show the overlay message', () => {
-				assert.equal(wrapper.find('.lucid-OverlayWrapper-message-container').length, 0);
+				assert.equal(
+					wrapper.find('.lucid-OverlayWrapper-message-container').length,
+					0
+				);
 				assert.equal(wrapper.find(Message).length, 0);
 			});
 
@@ -43,7 +46,10 @@ describe('OverlayWrapper', () => {
 			});
 
 			it('should not show the overlay message', () => {
-				assert.equal(wrapper.find('.lucid-OverlayWrapper-message-container').length, 0);
+				assert.equal(
+					wrapper.find('.lucid-OverlayWrapper-message-container').length,
+					0
+				);
 				assert.equal(wrapper.find(Message).length, 0);
 			});
 
@@ -58,14 +64,17 @@ describe('OverlayWrapper', () => {
 			beforeEach(() => {
 				wrapper = shallow(
 					<OverlayWrapper isVisible>
-						<Message className='overlay-message'>Danger!</Message>
+						<Message className="overlay-message">Danger!</Message>
 						<div>Some content</div>
 					</OverlayWrapper>
 				);
 			});
 
 			it('should show the overlay message', () => {
-				assert.equal(wrapper.find('.lucid-OverlayWrapper-message-container').length, 1);
+				assert.equal(
+					wrapper.find('.lucid-OverlayWrapper-message-container').length,
+					1
+				);
 				assert.equal(wrapper.find('.overlay-message').length, 1);
 			});
 
@@ -83,7 +92,9 @@ describe('OverlayWrapper', () => {
 						<div>Some content</div>
 					</OverlayWrapper>
 				);
-				const messageContainer = wrapper.find('.lucid-OverlayWrapper-message-container');
+				const messageContainer = wrapper.find(
+					'.lucid-OverlayWrapper-message-container'
+				);
 				assert(messageContainer.hasClass('lucid-OverlayWrapper-has-overlay'));
 			});
 		});
@@ -91,14 +102,13 @@ describe('OverlayWrapper', () => {
 		describe('true', () => {
 			it('should add `&-has-overlay` class', () => {
 				const wrapper = shallow(
-					<OverlayWrapper
-						isVisible
-						hasOverlay
-					>
+					<OverlayWrapper isVisible hasOverlay>
 						<div>Some content</div>
 					</OverlayWrapper>
 				);
-				const messageContainer = wrapper.find('.lucid-OverlayWrapper-message-container');
+				const messageContainer = wrapper.find(
+					'.lucid-OverlayWrapper-message-container'
+				);
 				assert(messageContainer.hasClass('lucid-OverlayWrapper-has-overlay'));
 			});
 		});
@@ -106,14 +116,13 @@ describe('OverlayWrapper', () => {
 		describe('false', () => {
 			it('should not add `&-has-overlay` class', () => {
 				const wrapper = shallow(
-					<OverlayWrapper
-						isVisible
-						hasOverlay={false}
-					>
+					<OverlayWrapper isVisible hasOverlay={false}>
 						<div>Some content</div>
 					</OverlayWrapper>
 				);
-				const messageContainer = wrapper.find('.lucid-OverlayWrapper-message-container');
+				const messageContainer = wrapper.find(
+					'.lucid-OverlayWrapper-message-container'
+				);
 				assert(!messageContainer.hasClass('lucid-OverlayWrapper-has-overlay'));
 			});
 		});
@@ -123,17 +132,15 @@ describe('OverlayWrapper', () => {
 		describe('light', () => {
 			it('should add `&-kind-light` class', () => {
 				const wrapper = shallow(
-					<OverlayWrapper
-						isVisible
-						overlayKind='light'
-					>
+					<OverlayWrapper isVisible overlayKind="light">
 						<div>Some content</div>
 					</OverlayWrapper>
 				);
-				const messageContainer = wrapper.find('.lucid-OverlayWrapper-message-container');
+				const messageContainer = wrapper.find(
+					'.lucid-OverlayWrapper-message-container'
+				);
 				assert(messageContainer.hasClass('lucid-OverlayWrapper-kind-light'));
 			});
 		});
 	});
-
 });

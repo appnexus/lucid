@@ -71,9 +71,7 @@ const Line = createClass({
 		} = this.props;
 
 		const isCustomColor = _.startsWith(color, '#');
-		const colorStyle = isCustomColor
-			? { fill: color, stroke: color }
-			: null;
+		const colorStyle = isCustomColor ? { fill: color, stroke: color } : null;
 
 		return (
 			<path

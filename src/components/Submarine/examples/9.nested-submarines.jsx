@@ -4,15 +4,21 @@ import { Submarine } from '../../../index';
 export default React.createClass({
 	render() {
 		return (
-			<section style={{ height: 600, background: 'lightgray', outline: '1px solid lightgray' }}>
+			<section
+				style={{
+					height: 600,
+					background: 'lightgray',
+					outline: '1px solid lightgray',
+				}}
+			>
 
-				<Submarine position='top'>
+				<Submarine position="top">
 					<Submarine.Bar>
 						Bitters shabby chic tacos, sapiente drinking vinegar readymade gochujang typewriter. Gluten-free cred sartorial pop-up commodo.
 					</Submarine.Bar>
 					<Submarine.Primary>
 
-						<Submarine position='bottom'>
+						<Submarine position="bottom">
 							<Submarine.Bar>
 								Id mumblecore blue bottle vegan, fingerstache commodo health goth man bun bitters. Ad ennui authentic, offal humblebrag paleo minim vero hammock kickstarter reprehenderit gastropub.
 							</Submarine.Bar>

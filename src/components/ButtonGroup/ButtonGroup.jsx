@@ -3,7 +3,7 @@ import Button from '../Button/Button';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps }  from '../../util/component-types';
+import { createClass, findTypes, omitProps } from '../../util/component-types';
 import reducers from './ButtonGroup.reducers';
 import { buildHybridComponent } from '../../util/state-management';
 
@@ -77,7 +77,11 @@ const ButtonGroup = createClass({
 
 	handleSelect({ event, props: childProps }) {
 		const { callbackId } = childProps;
-		const clickedButtonProps = _.get(findTypes(this.props, ButtonGroup.Button)[callbackId], 'props', {});
+		const clickedButtonProps = _.get(
+			findTypes(this.props, ButtonGroup.Button)[callbackId],
+			'props',
+			{}
+		);
 
 		// If the consumer passed in an `onClick` to the child `ButtonGroup.Button`
 		// component, we should make sure to call that in addition to the
@@ -97,7 +101,10 @@ const ButtonGroup = createClass({
 			...passThroughs
 		} = this.props;
 
-		const buttonChildProps = _.map(findTypes(this.props, ButtonGroup.Button), 'props');
+		const buttonChildProps = _.map(
+			findTypes(this.props, ButtonGroup.Button),
+			'props'
+		);
 
 		return (
 			<span
@@ -112,13 +119,15 @@ const ButtonGroup = createClass({
 						// the parent `ButtonGroup`. However, we want our `onClick` at the
 						// bottom because we manually handle passing the event to the
 						// `ButtonGroup.Button`'s `onClick` if it exists.
-						<Button
-							isActive={_.includes(selectedIndices, index)}
-							{...buttonChildProp}
-							key={index}
-							callbackId={index}
-							onClick={this.handleSelect}
-						/>
+						(
+							<Button
+								isActive={_.includes(selectedIndices, index)}
+								{...buttonChildProp}
+								key={index}
+								callbackId={index}
+								onClick={this.handleSelect}
+							/>
+						)
 					);
 				})}
 				{children}

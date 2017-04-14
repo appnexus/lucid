@@ -21,9 +21,15 @@ export default React.createClass({
 
 		return (
 			<DropMenu onSelect={this.handleSelect}>
-				<DropMenu.Control>{_.isEmpty(selectedIndices) ? 'Select' : options[_.last(selectedIndices)]}</DropMenu.Control>
+				<DropMenu.Control>
+					{_.isEmpty(selectedIndices)
+						? 'Select'
+						: options[_.last(selectedIndices)]}
+				</DropMenu.Control>
 				{_.map(options, (optionText, index) => (
-					<DropMenu.Option key={'Option-' + index}>{optionText}</DropMenu.Option>
+					<DropMenu.Option key={'Option-' + index}>
+						{optionText}
+					</DropMenu.Option>
 				))}
 			</DropMenu>
 		);

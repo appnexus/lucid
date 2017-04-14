@@ -85,20 +85,25 @@ const EmptyStateWrapper = createClass({
 			...passThroughs
 		} = this.props;
 
-		const emptyMessageBodyProp = _.get(getFirst(this.props, EmptyStateWrapper.Body), 'props');
-		const emptyMessageTitleProp = _.get(getFirst(this.props, EmptyStateWrapper.Title), 'props', {children: 'You have no data.'});
+		const emptyMessageBodyProp = _.get(
+			getFirst(this.props, EmptyStateWrapper.Body),
+			'props'
+		);
+		const emptyMessageTitleProp = _.get(
+			getFirst(this.props, EmptyStateWrapper.Title),
+			'props',
+			{ children: 'You have no data.' }
+		);
 
-		return (
-			isLoading ?
-				<LoadingIndicator
+		return isLoading
+			? <LoadingIndicator
 					className={cx('&', className)}
 					isLoading
 					{...omitProps(passThroughs, EmptyStateWrapper, [], false)}
 				>
 					{children}
 				</LoadingIndicator>
-			:
-				<OverlayWrapper
+			: <OverlayWrapper
 					className={cx('&', className)}
 					hasOverlay={false}
 					isVisible={isEmpty}
@@ -107,14 +112,19 @@ const EmptyStateWrapper = createClass({
 					<OverlayWrapper.Message className={cx('&-message-container')}>
 						<div className={cx('&-message-header')} />
 						<div className={cx('&-message-contents')}>
-							<header {...emptyMessageTitleProp} className={cx('&-message-title', emptyMessageTitleProp.className)} />
+							<header
+								{...emptyMessageTitleProp}
+								className={cx(
+									'&-message-title',
+									emptyMessageTitleProp.className
+								)}
+							/>
 							{emptyMessageBodyProp && <div {...emptyMessageBodyProp} />}
 						</div>
 					</OverlayWrapper.Message>
 
 					{children}
-				</OverlayWrapper>
-		);
+				</OverlayWrapper>;
 	},
 });
 

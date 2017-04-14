@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, filterTypes, omitProps } from '../../util/component-types';
+import {
+	createClass,
+	filterTypes,
+	omitProps,
+} from '../../util/component-types';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import { Motion, spring } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
@@ -153,13 +157,18 @@ const SplitHorizontal = createClass({
 
 	getPanes() {
 		const { children } = this.props;
-		const {
-			topPane: topPaneRef,
-			bottomPane: bottomPaneRef,
-		} = this.storedRefs;
+		const { topPane: topPaneRef, bottomPane: bottomPaneRef } = this.storedRefs;
 
-		const topPaneElement = _.get(filterTypes(children, SplitHorizontal.TopPane), 0, <SplitHorizontal.TopPane />);
-		const bottomPaneElement = _.get(filterTypes(children, SplitHorizontal.BottomPane), 0, <SplitHorizontal.BottomPane />);
+		const topPaneElement = _.get(
+			filterTypes(children, SplitHorizontal.TopPane),
+			0,
+			<SplitHorizontal.TopPane />
+		);
+		const bottomPaneElement = _.get(
+			filterTypes(children, SplitHorizontal.BottomPane),
+			0,
+			<SplitHorizontal.BottomPane />
+		);
 		let primaryElement, primaryRef;
 		let secondaryElement, secondaryRef;
 
@@ -187,20 +196,33 @@ const SplitHorizontal = createClass({
 
 	// Style changes to DOM nodes are updated here to shortcut the state -> render cycle for better performance. Also the Style updates in this
 	// function are entirely transient and can be flushed with a props update to `height`.
-	applyDeltaToSecondaryHeight(dY, isExpanded, secondaryStartRect, secondaryRef, secondary, bottom, innerRef, primaryRef, collapseShift=0) {
+	applyDeltaToSecondaryHeight(
+		dY,
+		isExpanded,
+		secondaryStartRect,
+		secondaryRef,
+		secondary,
+		bottom,
+		innerRef,
+		primaryRef,
+		collapseShift = 0
+	) {
 		if (isExpanded) {
 			secondaryRef.style.flexBasis = `${secondaryStartRect.height + dY * (secondary === bottom ? -1 : 1)}px`;
-			return (secondaryStartRect.height + dY * (secondary === bottom ? -1 : 1));
+			return secondaryStartRect.height + dY * (secondary === bottom ? -1 : 1);
 		} else {
-			const overlapHeight = (secondary === bottom ? secondaryStartRect.height + dY : secondaryStartRect.height - dY) - collapseShift;
+			const overlapHeight =
+				(secondary === bottom
+					? secondaryStartRect.height + dY
+					: secondaryStartRect.height - dY) - collapseShift;
 
 			if (overlapHeight > 0) {
 				this.collapseSecondary(overlapHeight);
-				return (secondaryStartRect.height - overlapHeight);
+				return secondaryStartRect.height - overlapHeight;
 			} else {
 				this.expandSecondary();
 				secondaryRef.style.flexBasis = `${(dY + collapseShift) * (secondary === bottom ? -1 : 1)}px`;
-				return ((dY + collapseShift) * (secondary === bottom ? -1 : 1));
+				return (dY + collapseShift) * (secondary === bottom ? -1 : 1);
 			}
 		}
 	},
@@ -233,41 +255,43 @@ const SplitHorizontal = createClass({
 	},
 
 	handleDrag({ dY }, { event }) {
-		const {
-			isExpanded,
-			collapseShift,
-			onResizing,
-		} = this.props;
+		const { isExpanded, collapseShift, onResizing } = this.props;
 
-		const {
-			secondaryRef,
-			secondary,
-			bottom,
-			primaryRef,
-		} = this.panes;
+		const { secondaryRef, secondary, bottom, primaryRef } = this.panes;
 
 		onResizing(
-			this.applyDeltaToSecondaryHeight(dY, isExpanded, this.secondaryStartRect, secondaryRef, secondary, bottom, this.storedRefs.inner, primaryRef, collapseShift),
+			this.applyDeltaToSecondaryHeight(
+				dY,
+				isExpanded,
+				this.secondaryStartRect,
+				secondaryRef,
+				secondary,
+				bottom,
+				this.storedRefs.inner,
+				primaryRef,
+				collapseShift
+			),
 			{ props: this.props, event }
 		);
 	},
 
 	handleDragEnd({ dY }, { event }) {
-		const {
-			isExpanded,
-			collapseShift,
-			onResize,
-		} = this.props;
+		const { isExpanded, collapseShift, onResize } = this.props;
 
-		const {
-			secondaryRef,
-			secondary,
-			bottom,
-			primaryRef,
-		} = this.panes;
+		const { secondaryRef, secondary, bottom, primaryRef } = this.panes;
 
 		onResize(
-			this.applyDeltaToSecondaryHeight(dY, isExpanded, this.secondaryStartRect, secondaryRef, secondary, bottom, this.storedRefs.inner, primaryRef, collapseShift),
+			this.applyDeltaToSecondaryHeight(
+				dY,
+				isExpanded,
+				this.secondaryStartRect,
+				secondaryRef,
+				secondary,
+				bottom,
+				this.storedRefs.inner,
+				primaryRef,
+				collapseShift
+			),
 			{ props: this.props, event }
 		);
 
@@ -275,20 +299,16 @@ const SplitHorizontal = createClass({
 	},
 
 	componentWillReceiveProps(nextProps) {
-		const {
-			isAnimated,
-			isExpanded,
-			collapseShift,
-		} = nextProps;
+		const { isAnimated, isExpanded, collapseShift } = nextProps;
 
-		const {
-			secondaryRef,
-		} = this.getPanes();
+		const { secondaryRef } = this.getPanes();
 
-		if (this.props.isExpanded && !isExpanded) { // collapse secondary
+		if (this.props.isExpanded && !isExpanded) {
+			// collapse secondary
 			const secondaryRect = secondaryRef.getBoundingClientRect();
 			this.collapseSecondary(secondaryRect.height - collapseShift);
-		} else if (!this.props.isExpanded && isExpanded) { // expand secondary
+		} else if (!this.props.isExpanded && isExpanded) {
+			// expand secondary
 			this.expandSecondary();
 		}
 
@@ -300,26 +320,18 @@ const SplitHorizontal = createClass({
 	},
 
 	componentDidMount() {
-		const {
-			isExpanded,
-			isAnimated,
-			collapseShift,
-		} = this.props;
+		const { isExpanded, isAnimated, collapseShift } = this.props;
 
-		const {
-			primaryRef,
-			secondaryRef,
-		} = this.getPanes();
+		const { primaryRef, secondaryRef } = this.getPanes();
 
-		const {
-			inner,
-		} = this.storedRefs;
+		const { inner } = this.storedRefs;
 
 		_.defer(() => {
 			this.disableAnimation(inner, secondaryRef, primaryRef);
 			inner.style.visibility = 'hidden';
 			_.defer(() => {
-				if (!isExpanded) { // collapse secondary
+				if (!isExpanded) {
+					// collapse secondary
 					const secondaryRect = secondaryRef.getBoundingClientRect();
 					this.collapseSecondary(secondaryRect.height - collapseShift);
 				}
@@ -338,7 +350,7 @@ const SplitHorizontal = createClass({
 	},
 
 	storeRef(name) {
-		return (ref) => {
+		return ref => {
 			this.storedRefs[name] = ref;
 		};
 	},
@@ -348,17 +360,9 @@ const SplitHorizontal = createClass({
 	},
 
 	render() {
-		const {
-			children,
-			className,
-			...passThroughs
-		} = this.props;
+		const { children, className, ...passThroughs } = this.props;
 
-		const {
-			isAnimated,
-			isExpanded,
-			collapseAmount,
-		} = this.state;
+		const { isAnimated, isExpanded, collapseAmount } = this.state;
 
 		const {
 			top: topPaneProps,
@@ -366,7 +370,11 @@ const SplitHorizontal = createClass({
 			secondary,
 		} = this.getPanes();
 
-		const dividerProps = _.get(_.first(filterTypes(children, SplitHorizontal.Divider)), 'props', {});
+		const dividerProps = _.get(
+			_.first(filterTypes(children, SplitHorizontal.Divider)),
+			'props',
+			{}
+		);
 
 		let from, to;
 
@@ -383,18 +391,29 @@ const SplitHorizontal = createClass({
 		return (
 			<div
 				{...omitProps(passThroughs, SplitHorizontal)}
-				className={cx('&', {
-					'&-is-expanded': isExpanded,
-					'&-is-animated': isAnimated,
-				}, className)}
+				className={cx(
+					'&',
+					{
+						'&-is-expanded': isExpanded,
+						'&-is-animated': isAnimated,
+					},
+					className
+				)}
 				style={{
 					flex: 1,
 					overflow: 'hidden',
 					...passThroughs.style,
 				}}
 			>
-				<Motion defaultStyle={from} style={isAnimated ? _.mapValues(to, (val) => (spring(val, QUICK_SLIDE_MOTION))) : to}>
-					{(tween) => (
+				<Motion
+					defaultStyle={from}
+					style={
+						isAnimated
+							? _.mapValues(to, val => spring(val, QUICK_SLIDE_MOTION))
+							: to
+					}
+				>
+					{tween => (
 						<div
 							className={cx('&-inner')}
 							ref={this.storeRef('inner')}
@@ -407,19 +426,29 @@ const SplitHorizontal = createClass({
 						>
 							<div
 								{...omitProps(topPaneProps, SplitHorizontal.TopPane)}
-								className={cx('&-TopPane', {
-									'&-is-secondary': topPaneProps === secondary,
-								}, topPaneProps.className)}
+								className={cx(
+									'&-TopPane',
+									{
+										'&-is-secondary': topPaneProps === secondary,
+									},
+									topPaneProps.className
+								)}
 								style={{
-									flexGrow: (isBottomSecondary ? 1 : 0),
-									flexShrink: (isBottomSecondary ? 1 : 0),
-									flexBasis: _.isNil(topPaneProps.height) ? (topPaneProps === secondary ? 'calc(50% - 3px)' : '0%') : topPaneProps.height,
-									marginTop: (isBottomSecondary ? -Math.round(tween.slideAmount) : null),
+									flexGrow: isBottomSecondary ? 1 : 0,
+									flexShrink: isBottomSecondary ? 1 : 0,
+									flexBasis: _.isNil(topPaneProps.height)
+										? topPaneProps === secondary ? 'calc(50% - 3px)' : '0%'
+										: topPaneProps.height,
+									marginTop: isBottomSecondary
+										? -Math.round(tween.slideAmount)
+										: null,
 									overflow: 'auto',
 									...topPaneProps.style,
 								}}
 								ref={this.storeRef('topPane')}
-							>{topPaneProps.children}</div>
+							>
+								{topPaneProps.children}
+							</div>
 							<DragCaptureZone
 								{...omitProps(dividerProps, SplitHorizontal.Divider, [], false)}
 								className={cx('&-Divider', dividerProps.className)}
@@ -431,22 +460,34 @@ const SplitHorizontal = createClass({
 									boxSizing: 'border-box',
 									...dividerProps.style,
 								}}
-							>{dividerProps.children || ' '}</DragCaptureZone>
+							>
+								{dividerProps.children || ' '}
+							</DragCaptureZone>
 							<div
 								{...omitProps(bottomPaneProps, SplitHorizontal.BottomPane)}
-								className={cx('&-BottomPane', {
-									'&-is-secondary': bottomPaneProps === secondary,
-								}, bottomPaneProps.className)}
+								className={cx(
+									'&-BottomPane',
+									{
+										'&-is-secondary': bottomPaneProps === secondary,
+									},
+									bottomPaneProps.className
+								)}
 								style={{
-									flexGrow: (!isBottomSecondary ? 1 : 0),
-									flexShrink: (!isBottomSecondary ? 1 : 0),
-									flexBasis: _.isNil(bottomPaneProps.height) ? (bottomPaneProps === secondary ? 'calc(50% - 3px)' : '0%') : bottomPaneProps.height,
-									marginBottom: (isBottomSecondary ? null : -Math.round(tween.slideAmount)),
+									flexGrow: !isBottomSecondary ? 1 : 0,
+									flexShrink: !isBottomSecondary ? 1 : 0,
+									flexBasis: _.isNil(bottomPaneProps.height)
+										? bottomPaneProps === secondary ? 'calc(50% - 3px)' : '0%'
+										: bottomPaneProps.height,
+									marginBottom: isBottomSecondary
+										? null
+										: -Math.round(tween.slideAmount),
 									overflow: 'auto',
 									...bottomPaneProps.style,
 								}}
 								ref={this.storeRef('bottomPane')}
-							>{bottomPaneProps.children}</div>
+							>
+								{bottomPaneProps.children}
+							</div>
 						</div>
 					)}
 				</Motion>

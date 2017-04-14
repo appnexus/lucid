@@ -24,12 +24,7 @@ const CaretIcon = createClass({
 		/**
 		 * direction variations of the icon
 		 */
-		direction: oneOf([
-			'up',
-			'down',
-			'left',
-			'right',
-		]),
+		direction: oneOf(['up', 'down', 'left', 'right']),
 	},
 
 	getDefaultProps() {
@@ -40,26 +35,25 @@ const CaretIcon = createClass({
 	},
 
 	render() {
-		const {
-			className,
-			direction,
-			size,
-			...passThroughs
-		} = this.props;
+		const { className, direction, size, ...passThroughs } = this.props;
 
 		return (
 			<Icon
 				{...omitProps(passThroughs, CaretIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
-				className={cx('&', {
-					'&-is-down': direction === 'down',
-					'&-is-up': direction === 'up',
-					'&-is-left': direction === 'left',
-					'&-is-right': direction === 'right',
-				}, className)}
+				className={cx(
+					'&',
+					{
+						'&-is-down': direction === 'down',
+						'&-is-up': direction === 'up',
+						'&-is-left': direction === 'left',
+						'&-is-right': direction === 'right',
+					},
+					className
+				)}
 				size={size}
 			>
-				<path d='M1.234,4.408l6.718,7.184l6.813-7.184H1.234z' />
+				<path d="M1.234,4.408l6.718,7.184l6.813-7.184H1.234z" />
 			</Icon>
 		);
 	},

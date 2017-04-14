@@ -4,7 +4,13 @@ import { Submarine } from '../../../index';
 export default React.createClass({
 	render() {
 		return (
-			<section style={{ height: 300, background: 'lightgray', outline: '1px solid lightgray' }}>
+			<section
+				style={{
+					height: 300,
+					background: 'lightgray',
+					outline: '1px solid lightgray',
+				}}
+			>
 				<Submarine>
 					<Submarine.Bar>
 						Minim 90's paleo retro, fugiat aliqua hashtag enim photo booth listicle next level. Consectetur fap proident magna culpa. Art party meh ad, four loko slow-carb venmo distillery wolf cornhole nisi.

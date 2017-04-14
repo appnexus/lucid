@@ -1,8 +1,6 @@
 import reducers from './TextField.reducers';
 
-const {
-	onChange,
-} = reducers;
+const { onChange } = reducers;
 
 describe('TextField reducers', () => {
 	describe('onChange', () => {

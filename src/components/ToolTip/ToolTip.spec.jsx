@@ -9,11 +9,7 @@ import ContextMenu from '../ContextMenu/ContextMenu';
 import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
 
-const {
-	Target,
-	Title,
-	Body,
-} = ToolTip;
+const { Target, Title, Body } = ToolTip;
 
 describe('ToolTip', () => {
 	common(ToolTip);
@@ -44,7 +40,11 @@ describe('ToolTip', () => {
 						<h1>header</h1>
 					</ToolTip>
 				);
-				assert.equal(wrapper.find('button').length, 0, 'must not render button');
+				assert.equal(
+					wrapper.find('button').length,
+					0,
+					'must not render button'
+				);
 				assert.equal(wrapper.find('h1').length, 0, 'must not render h1');
 			});
 		});
@@ -61,15 +61,20 @@ describe('ToolTip', () => {
 
 				it('should pass the className prop thru to the FlyOut (portal) element', () => {
 					wrapper = mount(
-						<ToolTip isExpanded className='MyToolTip'>
+						<ToolTip isExpanded className="MyToolTip">
 							<Target>Target</Target>
 							<Body>Body</Body>
 						</ToolTip>
 					);
 
-					const flyOutClassName = document.querySelector('.lucid-ToolTip-FlyOut.lucid-ContextMenu-FlyOut').className;
+					const flyOutClassName = document.querySelector(
+						'.lucid-ToolTip-FlyOut.lucid-ContextMenu-FlyOut'
+					).className;
 
-					assert(_.includes(flyOutClassName, 'MyToolTip'), 'must include `MyToolTip`');
+					assert(
+						_.includes(flyOutClassName, 'MyToolTip'),
+						'must include `MyToolTip`'
+					);
 				});
 			});
 		});
@@ -83,7 +88,11 @@ describe('ToolTip', () => {
 							<Body>Body</Body>
 						</ToolTip>
 					);
-					assert.equal(wrapper.find(CrossIcon).length, 1, 'must include a CrossIcon');
+					assert.equal(
+						wrapper.find(CrossIcon).length,
+						1,
+						'must include a CrossIcon'
+					);
 				});
 			});
 			describe('false', () => {
@@ -94,7 +103,11 @@ describe('ToolTip', () => {
 							<Body>Body</Body>
 						</ToolTip>
 					);
-					assert.equal(wrapper.find(CrossIcon).length, 0, 'must not include a CrossIcon');
+					assert.equal(
+						wrapper.find(CrossIcon).length,
+						0,
+						'must not include a CrossIcon'
+					);
 				});
 			});
 		});
@@ -108,69 +121,93 @@ describe('ToolTip', () => {
 					</ToolTip>
 				);
 				const flyOutStyle = wrapper.find(ContextMenu.FlyOut).prop('style');
-				assert.deepEqual(flyOutStyle, { flex: 2, maxWidth: 200 }, 'must have flex:2 and maxWidth: 200');
+				assert.deepEqual(
+					flyOutStyle,
+					{ flex: 2, maxWidth: 200 },
+					'must have flex:2 and maxWidth: 200'
+				);
 			});
 		});
 
 		describe('flyOutMaxWidth', () => {
 			it('should pass maxWidth to the underlying ContextMenu FlyOut style', () => {
 				const wrapper = shallow(
-					<ToolTip isExpanded flyOutMaxWidth={100} flyOutStyle={{ flex: 2, maxWidth: 200 }}>
+					<ToolTip
+						isExpanded
+						flyOutMaxWidth={100}
+						flyOutStyle={{ flex: 2, maxWidth: 200 }}
+					>
 						<Target>Target</Target>
 						<Body>Body</Body>
 					</ToolTip>
 				);
 				const flyOutStyle = wrapper.find(ContextMenu.FlyOut).prop('style');
-				assert.deepEqual(flyOutStyle, { flex: 2, maxWidth: 100 }, 'must have flex:2 and maxWidth: 400');
+				assert.deepEqual(
+					flyOutStyle,
+					{ flex: 2, maxWidth: 100 },
+					'must have flex:2 and maxWidth: 400'
+				);
 			});
 		});
 
 		describe('kind', () => {
 			it('should pass the correct className to the Flyout', () => {
 				const wrapper = shallow(
-					<ToolTip isExpanded kind='primary'>
+					<ToolTip isExpanded kind="primary">
 						<Target>Target</Target>
 						<Body>Body</Body>
 					</ToolTip>
 				);
 				const className = wrapper.find(ContextMenu.FlyOut).prop('className');
-				assert(_.includes(className, 'lucid-ToolTip-FlyOut-primary'), 'must include className');
+				assert(
+					_.includes(className, 'lucid-ToolTip-FlyOut-primary'),
+					'must include className'
+				);
 			});
 		});
 
 		describe('direction', () => {
 			it('should pass direction to the underlying ContextMenu', () => {
 				const wrapper = shallow(
-					<ToolTip isExpanded direction='right'>
+					<ToolTip isExpanded direction="right">
 						<Target>Target</Target>
 						<Body>Body</Body>
 					</ToolTip>
 				);
-				assert.equal(wrapper.find(ContextMenu).prop('direction'), 'right', 'must be "right"');
+				assert.equal(
+					wrapper.find(ContextMenu).prop('direction'),
+					'right',
+					'must be "right"'
+				);
 			});
 		});
 
 		describe('alignment', () => {
-
 			it('should pass alignment center to the underlying ContextMenu', () => {
 				const wrapper = shallow(
-					<ToolTip isExpanded alignment='start'>
+					<ToolTip isExpanded alignment="start">
 						<Target>Target</Target>
 						<Body>Body</Body>
 					</ToolTip>
 				);
-				assert.equal(wrapper.find(ContextMenu).prop('alignment'), 'center', 'must be "center"');
+				assert.equal(
+					wrapper.find(ContextMenu).prop('alignment'),
+					'center',
+					'must be "center"'
+				);
 			});
 
 			describe('center', () => {
 				it('should pass getAlignmentOffset with correct closed over values', () => {
 					const wrapper = shallow(
-						<ToolTip isExpanded alignment='center'>
+						<ToolTip isExpanded alignment="center">
 							<Target>Target</Target>
 							<Body>Body</Body>
 						</ToolTip>
 					);
-					const getAlignmentOffset = wrapper.find(ContextMenu).prop('getAlignmentOffset');
+					const getAlignmentOffset = wrapper
+						.find(ContextMenu)
+						.prop('getAlignmentOffset');
 					assert.equal(getAlignmentOffset(400), 0, 'must be 0');
 				});
 			});
@@ -178,12 +215,14 @@ describe('ToolTip', () => {
 			describe('start', () => {
 				it('should pass getAlignmentOffset with correct closed over values', () => {
 					const wrapper = shallow(
-						<ToolTip isExpanded alignment='start'>
+						<ToolTip isExpanded alignment="start">
 							<Target>Target</Target>
 							<Body>Body</Body>
 						</ToolTip>
 					);
-					const getAlignmentOffset = wrapper.find(ContextMenu).prop('getAlignmentOffset');
+					const getAlignmentOffset = wrapper
+						.find(ContextMenu)
+						.prop('getAlignmentOffset');
 					assert.equal(getAlignmentOffset(400), 177.5, 'must be 177.5');
 				});
 			});
@@ -191,16 +230,17 @@ describe('ToolTip', () => {
 			describe('end', () => {
 				it('should pass getAlignmentOffset with correct closed over values', () => {
 					const wrapper = shallow(
-						<ToolTip isExpanded alignment='end'>
+						<ToolTip isExpanded alignment="end">
 							<Target>Target</Target>
 							<Body>Body</Body>
 						</ToolTip>
 					);
-					const getAlignmentOffset = wrapper.find(ContextMenu).prop('getAlignmentOffset');
+					const getAlignmentOffset = wrapper
+						.find(ContextMenu)
+						.prop('getAlignmentOffset');
 					assert.equal(getAlignmentOffset(400), -177.5, 'must be -177.5');
 				});
 			});
-
 		});
 
 		describe('isExpanded', () => {
@@ -211,7 +251,10 @@ describe('ToolTip', () => {
 						<Body>Body</Body>
 					</ToolTip>
 				);
-				assert(wrapper.find(ContextMenu).prop('isExpanded'), 'isExpanded must be true');
+				assert(
+					wrapper.find(ContextMenu).prop('isExpanded'),
+					'isExpanded must be true'
+				);
 			});
 
 			it('should be false by default', () => {
@@ -221,7 +264,10 @@ describe('ToolTip', () => {
 						<Body>Body</Body>
 					</ToolTip>
 				);
-				assert(!wrapper.find(ContextMenu).prop('isExpanded'), 'isExpanded must be false');
+				assert(
+					!wrapper.find(ContextMenu).prop('isExpanded'),
+					'isExpanded must be false'
+				);
 			});
 		});
 
@@ -240,7 +286,7 @@ describe('ToolTip', () => {
 		});
 
 		describe('onMouseOut', () => {
-			it('should call onMouseOut when cursor leaves target', (done) => {
+			it('should call onMouseOut when cursor leaves target', done => {
 				const spy = sinon.spy();
 				const wrapper = shallow(
 					<ToolTip onMouseOut={spy}>
@@ -258,7 +304,7 @@ describe('ToolTip', () => {
 				}, MOSTLY_STABLE_DELAY * 2);
 			});
 
-			it('should not call onMouseOut if cursor enters FlyOut', (done) => {
+			it('should not call onMouseOut if cursor enters FlyOut', done => {
 				const spy = sinon.spy();
 				const wrapper = shallow(
 					<ToolTip isExpanded onMouseOut={spy}>
@@ -277,21 +323,22 @@ describe('ToolTip', () => {
 					done();
 				}, MOSTLY_STABLE_DELAY * 2);
 			});
-
 		});
 
 		describe('portalId', () => {
 			it('should pass portalId to underlying ContextMenu', () => {
 				const wrapper = shallow(
-					<ToolTip portalId='foo-portal-id'>
+					<ToolTip portalId="foo-portal-id">
 						<Target>Target</Target>
 						<Body>Body</Body>
 					</ToolTip>
 				);
-				assert.equal(wrapper.find(ContextMenu).prop('portalId'), 'foo-portal-id', 'must equal "foo-portal-id"');
+				assert.equal(
+					wrapper.find(ContextMenu).prop('portalId'),
+					'foo-portal-id',
+					'must equal "foo-portal-id"'
+				);
 			});
 		});
-
 	});
-
 });

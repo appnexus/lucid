@@ -1,16 +1,17 @@
 import React from 'react';
 import { Button, DropMenuDumb as DropMenu } from '../../../index';
 
-const {
-	Control,
-	Option,
-	OptionGroup,
-} = DropMenu;
+const { Control, Option, OptionGroup } = DropMenu;
 
 export default React.createClass({
 	render() {
 		return (
-			<DropMenu selectedIndices={[0]} focusedIndex={3} isExpanded direction='down'>
+			<DropMenu
+				selectedIndices={[0]}
+				focusedIndex={3}
+				isExpanded
+				direction="down"
+			>
 				<Control>
 					<Button>Select Color</Button>
 				</Control>

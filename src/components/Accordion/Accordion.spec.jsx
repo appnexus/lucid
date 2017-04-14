@@ -6,19 +6,20 @@ import { mount, shallow } from 'enzyme';
 
 import { common } from '../../util/generic-tests';
 import { AccordionDumb as Accordion } from './Accordion';
-import { ExpanderPanelDumb as ExpanderPanel } from '../ExpanderPanel/ExpanderPanel';
+import {
+	ExpanderPanelDumb as ExpanderPanel,
+} from '../ExpanderPanel/ExpanderPanel';
 
 describe('Accordion', () => {
 	common(Accordion);
 
 	describe('props', () => {
-
 		describe('Item', () => {
 			it('renders ExpanderPanel components on it', () => {
 				const wrapper = mount(
 					<Accordion>
-						<Accordion.Item Header='Header One'>One</Accordion.Item>
-						<Accordion.Item Header='Header Two'>Two</Accordion.Item>
+						<Accordion.Item Header="Header One">One</Accordion.Item>
+						<Accordion.Item Header="Header Two">Two</Accordion.Item>
 					</Accordion>
 				);
 
@@ -28,8 +29,8 @@ describe('Accordion', () => {
 			it('Item as children', () => {
 				const wrapper = shallow(
 					<Accordion>
-						<Accordion.Item Header='Header One'>One</Accordion.Item>
-						<Accordion.Item Header='Header Two'>Two</Accordion.Item>
+						<Accordion.Item Header="Header One">One</Accordion.Item>
+						<Accordion.Item Header="Header Two">Two</Accordion.Item>
 					</Accordion>
 				);
 
@@ -41,14 +42,17 @@ describe('Accordion', () => {
 			it('Header as props', () => {
 				const wrapper = mount(
 					<Accordion>
-						<Accordion.Item Header='Froyo'>Yolo fo sho</Accordion.Item>
+						<Accordion.Item Header="Froyo">Yolo fo sho</Accordion.Item>
 						<Accordion.Item>Broyoyo</Accordion.Item>
 					</Accordion>
 				);
 
 				const firstItem = wrapper.find('.lucid-Accordion-Item').first();
 
-				assert.equal(firstItem.find('.lucid-ExpanderPanel-header').text(), 'Froyo');
+				assert.equal(
+					firstItem.find('.lucid-ExpanderPanel-header').text(),
+					'Froyo'
+				);
 			});
 
 			it('Header as children', () => {
@@ -64,7 +68,10 @@ describe('Accordion', () => {
 
 				const firstItem = wrapper.find('.lucid-Accordion-Item').first();
 
-				assert.equal(firstItem.find('.lucid-ExpanderPanel-header').text(), 'Froyo');
+				assert.equal(
+					firstItem.find('.lucid-ExpanderPanel-header').text(),
+					'Froyo'
+				);
 			});
 		});
 
@@ -72,9 +79,9 @@ describe('Accordion', () => {
 			it('should have an expanded item when set via props', () => {
 				const wrapper = mount(
 					<Accordion selectedIndex={1}>
-						<Accordion.Item Header='Header Test'>test</Accordion.Item>
-						<Accordion.Item Header='Header Test'>test</Accordion.Item>
-						<Accordion.Item Header='Header Test'>test</Accordion.Item>
+						<Accordion.Item Header="Header Test">test</Accordion.Item>
+						<Accordion.Item Header="Header Test">test</Accordion.Item>
+						<Accordion.Item Header="Header Test">test</Accordion.Item>
 					</Accordion>
 				);
 
@@ -86,11 +93,11 @@ describe('Accordion', () => {
 			it('passes through all props not defined in `propTypes` to the root element', () => {
 				const wrapper = shallow(
 					<Accordion
-						className='wut'
+						className="wut"
 						style={{ marginRight: 10 }}
 						foo={1}
 						bar={2}
-						/>
+					/>
 				);
 				const rootProps = wrapper.find('.lucid-Accordion').props();
 
@@ -101,14 +108,22 @@ describe('Accordion', () => {
 			it('passes through Item className to the rendered item element', () => {
 				const wrapper = shallow(
 					<Accordion>
-						<Accordion.Item className='TestOne'>One</Accordion.Item>
-						<Accordion.Item className='TestTwo'>Two</Accordion.Item>
+						<Accordion.Item className="TestOne">One</Accordion.Item>
+						<Accordion.Item className="TestTwo">Two</Accordion.Item>
 					</Accordion>
 				);
 				const itemsWrapper = wrapper.find('.lucid-Accordion-Item');
 
-				assert.equal(itemsWrapper.find('.TestOne').length, 1, 'must find one item with className `TestOne`');
-				assert.equal(itemsWrapper.find('.TestTwo').length, 1, 'must find one item with className `TestTwo`');
+				assert.equal(
+					itemsWrapper.find('.TestOne').length,
+					1,
+					'must find one item with className `TestOne`'
+				);
+				assert.equal(
+					itemsWrapper.find('.TestTwo').length,
+					1,
+					'must find one item with className `TestTwo`'
+				);
 			});
 		});
 	});
@@ -123,14 +138,15 @@ describe('Accordion', () => {
 		beforeEach(() => {
 			mountTestDiv = document.createElement('div');
 			document.body.appendChild(mountTestDiv);
-			wrapper = mount((
+			wrapper = mount(
 				<Accordion onSelect={onSelect}>
-					<Accordion.Item Header='Header One'>One</Accordion.Item>
-					<Accordion.Item Header='Header Two' isDisabled>Two</Accordion.Item>
-				</Accordion>
-			), {
-				attachTo: mountTestDiv,
-			});
+					<Accordion.Item Header="Header One">One</Accordion.Item>
+					<Accordion.Item Header="Header Two" isDisabled>Two</Accordion.Item>
+				</Accordion>,
+				{
+					attachTo: mountTestDiv,
+				}
+			);
 		});
 
 		afterEach(() => {

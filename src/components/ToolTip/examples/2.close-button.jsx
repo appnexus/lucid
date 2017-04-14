@@ -1,11 +1,7 @@
 import React from 'react';
 import { ToolTipDumb } from '../../../index';
 
-const {
-	Target,
-	Title,
-	Body,
-} = ToolTipDumb;
+const { Target, Title, Body } = ToolTipDumb;
 
 export default React.createClass({
 	getInitialState: () => ({ isExpanded: true }),
@@ -13,7 +9,7 @@ export default React.createClass({
 		return (
 			<section style={{ marginTop: 60, marginBottom: 60 }}>
 				<ToolTipDumb
-					direction='right'
+					direction="right"
 					isCloseable
 					onClose={() => this.setState({ isExpanded: false })}
 					isExpanded={this.state.isExpanded}

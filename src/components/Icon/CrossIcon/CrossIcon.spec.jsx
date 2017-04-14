@@ -6,4 +6,3 @@ describe('CrossIcon', () => {
 	common(CrossIcon);
 	icons(CrossIcon);
 });
-

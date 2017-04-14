@@ -18,23 +18,15 @@ const data = [
 ];
 const width = 200;
 const height = 50;
-const xScale = d3Scale.scalePoint()
-	.domain(_.map(data, 'x'))
-	.range([0, width]);
+const xScale = d3Scale.scalePoint().domain(_.map(data, 'x')).range([0, width]);
 
-const yScale = d3Scale.scaleLinear()
-	.domain([0, 4])
-	.range([height, 0]);
+const yScale = d3Scale.scaleLinear().domain([0, 4]).range([height, 0]);
 
 const titleThree = (
 	<span>
-		<h2 style={{margin: 0}}>Performance</h2>
+		<h2 style={{ margin: 0 }}>Performance</h2>
 		<svg width={width} height={height}>
-			<Lines
-				data={data}
-				xScale={xScale}
-				yScale={yScale}
-			/>
+			<Lines data={data} xScale={xScale} yScale={yScale} />
 		</svg>
 	</span>
 );
@@ -46,18 +38,34 @@ export default React.createClass({
 				<VerticalTabs>
 					<VerticalTabs.Tab>
 						<VerticalTabs.Title>
-							<h2 style={{margin: 0}}>One</h2>
+							<h2 style={{ margin: 0 }}>One</h2>
 							<SuccessIcon />
-							<span style={{fontWeight: 'normal', color: '#333', marginLeft: '5px'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+							<span
+								style={{
+									fontWeight: 'normal',
+									color: '#333',
+									marginLeft: '5px',
+								}}
+							>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							</span>
 						</VerticalTabs.Title>
 						One content
 					</VerticalTabs.Tab>
 
 					<VerticalTabs.Tab>
 						<VerticalTabs.Title>
-							<h2 style={{margin: 0}}>Two</h2>
+							<h2 style={{ margin: 0 }}>Two</h2>
 							<WarningIcon />
-							<span style={{fontWeight: 'normal', color: '#333', marginLeft: '5px'}}>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+							<span
+								style={{
+									fontWeight: 'normal',
+									color: '#333',
+									marginLeft: '5px',
+								}}
+							>
+								Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</span>
 						</VerticalTabs.Title>
 						Two content
 					</VerticalTabs.Tab>

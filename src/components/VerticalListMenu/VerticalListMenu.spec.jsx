@@ -29,7 +29,10 @@ describe('VerticalListMenu', () => {
 				</VerticalListMenu>
 			);
 
-			assert.equal(wrapper.find('.lucid-VerticalListMenu-Item').text(), 'blarg');
+			assert.equal(
+				wrapper.find('.lucid-VerticalListMenu-Item').text(),
+				'blarg'
+			);
 		});
 	});
 
@@ -56,7 +59,11 @@ describe('VerticalListMenu', () => {
 					</VerticalListMenu>
 				);
 
-				assert.equal(wrapper.find('.lucid-VerticalListMenu-Item-content-is-selected').length, 2);
+				assert.equal(
+					wrapper.find('.lucid-VerticalListMenu-Item-content-is-selected')
+						.length,
+					2
+				);
 			});
 		});
 
@@ -70,12 +77,25 @@ describe('VerticalListMenu', () => {
 					</VerticalListMenu>
 				);
 
-				wrapper.find('.lucid-VerticalListMenu-Item-content').at(1).simulate('click');
+				wrapper
+					.find('.lucid-VerticalListMenu-Item-content')
+					.at(1)
+					.simulate('click');
 
 				assert(onSelect.called);
-				assert.equal(onSelect.args[0][0], 1, 'wrong index on the onSelect callback');
-				assert(_.has(onSelect.args[0][1], 'event'), 'missing `event` on the onSelect callback');
-				assert(_.has(onSelect.args[0][1], 'props'), 'missing `props` on the onSelect callback');
+				assert.equal(
+					onSelect.args[0][0],
+					1,
+					'wrong index on the onSelect callback'
+				);
+				assert(
+					_.has(onSelect.args[0][1], 'event'),
+					'missing `event` on the onSelect callback'
+				);
+				assert(
+					_.has(onSelect.args[0][1], 'props'),
+					'missing `props` on the onSelect callback'
+				);
 			});
 
 			it('should fire on the child', () => {
@@ -83,16 +103,31 @@ describe('VerticalListMenu', () => {
 				const wrapper = shallow(
 					<VerticalListMenu>
 						<VerticalListMenu.Item>One</VerticalListMenu.Item>
-						<VerticalListMenu.Item onSelect={onSelect}>Two</VerticalListMenu.Item>
+						<VerticalListMenu.Item onSelect={onSelect}>
+							Two
+						</VerticalListMenu.Item>
 					</VerticalListMenu>
 				);
 
-				wrapper.find('.lucid-VerticalListMenu-Item-content').at(1).simulate('click');
+				wrapper
+					.find('.lucid-VerticalListMenu-Item-content')
+					.at(1)
+					.simulate('click');
 
 				assert(onSelect.called);
-				assert.equal(onSelect.args[0][0], 1, 'wrong index on the onSelect callback');
-				assert(_.has(onSelect.args[0][1], 'event'), 'missing `event` on the onSelect callback');
-				assert(_.has(onSelect.args[0][1], 'props'), 'missing `props` on the onSelect callback');
+				assert.equal(
+					onSelect.args[0][0],
+					1,
+					'wrong index on the onSelect callback'
+				);
+				assert(
+					_.has(onSelect.args[0][1], 'event'),
+					'missing `event` on the onSelect callback'
+				);
+				assert(
+					_.has(onSelect.args[0][1], 'props'),
+					'missing `props` on the onSelect callback'
+				);
 			});
 		});
 
@@ -106,7 +141,10 @@ describe('VerticalListMenu', () => {
 					</VerticalListMenu>
 				);
 
-				assert.equal(wrapper.find('.lucid-VerticalListMenu-Item-expander').length, 2);
+				assert.equal(
+					wrapper.find('.lucid-VerticalListMenu-Item-expander').length,
+					2
+				);
 			});
 		});
 
@@ -130,12 +168,25 @@ describe('VerticalListMenu', () => {
 					</VerticalListMenu>
 				);
 
-				wrapper.find('.lucid-VerticalListMenu-Item-expander').at(0).simulate('click');
+				wrapper
+					.find('.lucid-VerticalListMenu-Item-expander')
+					.at(0)
+					.simulate('click');
 
 				assert(onToggle.called);
-				assert.equal(onToggle.args[0][0], 0, 'wrong index on the onToggle callback');
-				assert(_.has(onToggle.args[0][1], 'event'), 'missing `event` on the onToggle callback');
-				assert(_.has(onToggle.args[0][1], 'props'), 'missing `props` on the onToggle callback');
+				assert.equal(
+					onToggle.args[0][0],
+					0,
+					'wrong index on the onToggle callback'
+				);
+				assert(
+					_.has(onToggle.args[0][1], 'event'),
+					'missing `event` on the onToggle callback'
+				);
+				assert(
+					_.has(onToggle.args[0][1], 'props'),
+					'missing `props` on the onToggle callback'
+				);
 			});
 
 			it('should fire on the child', () => {
@@ -147,18 +198,31 @@ describe('VerticalListMenu', () => {
 					</VerticalListMenu>
 				);
 
-				wrapper.find('.lucid-VerticalListMenu-Item-expander').at(0).simulate('click');
+				wrapper
+					.find('.lucid-VerticalListMenu-Item-expander')
+					.at(0)
+					.simulate('click');
 
 				assert(onToggle.called);
-				assert.equal(onToggle.args[0][0], 0, 'wrong index on the onToggle callback');
-				assert(_.has(onToggle.args[0][1], 'event'), 'missing `event` on the onToggle callback');
-				assert(_.has(onToggle.args[0][1], 'props'), 'missing `props` on the onToggle callback');
+				assert.equal(
+					onToggle.args[0][0],
+					0,
+					'wrong index on the onToggle callback'
+				);
+				assert(
+					_.has(onToggle.args[0][1], 'event'),
+					'missing `event` on the onToggle callback'
+				);
+				assert(
+					_.has(onToggle.args[0][1], 'props'),
+					'missing `props` on the onToggle callback'
+				);
 			});
 		});
 	});
 
 	describe('childComponents', () => {
-		it('should correctly recognize other VerticalListMenu\'s as children', () => {
+		it("should correctly recognize other VerticalListMenu's as children", () => {
 			const wrapper = shallow(
 				<VerticalListMenu>
 					<VerticalListMenu.Item>
@@ -170,8 +234,11 @@ describe('VerticalListMenu', () => {
 				</VerticalListMenu>
 			);
 
-			assert.equal(wrapper.find('.lucid-VerticalListMenu-Item-nested-list').children().length, 1);
+			assert.equal(
+				wrapper.find('.lucid-VerticalListMenu-Item-nested-list').children()
+					.length,
+				1
+			);
 		});
 	});
 });
-

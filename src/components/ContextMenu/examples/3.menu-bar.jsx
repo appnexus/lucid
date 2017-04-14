@@ -12,9 +12,7 @@ export default React.createClass({
 	},
 
 	handleFileMenuToggle() {
-		const {
-			isFileExpanded,
-		} = this.state;
+		const { isFileExpanded } = this.state;
 
 		this.setState({
 			isFileExpanded: !isFileExpanded,
@@ -22,9 +20,7 @@ export default React.createClass({
 	},
 
 	handleEditMenuToggle() {
-		const {
-			isEditExpanded,
-		} = this.state;
+		const { isEditExpanded } = this.state;
 
 		this.setState({
 			isEditExpanded: !isEditExpanded,
@@ -42,29 +38,34 @@ export default React.createClass({
 			<section>
 
 				<ContextMenu
-					portalId='FileMenu-example'
+					portalId="FileMenu-example"
 					isExpanded={isFileExpanded}
 					direction={fileDirection}
 					onClickOut={this.handleFileMenuToggle}
 				>
 
 					<ContextMenu.Target>
-						<div style={{
-							background: isFileExpanded ? '#fafafa' : '#eaeaea',
-							outline: 'solid 1px #d1d1d1',
-							padding: '4px',
-							cursor: 'pointer',
-						}} onClick={this.handleFileMenuToggle}>
+						<div
+							style={{
+								background: isFileExpanded ? '#fafafa' : '#eaeaea',
+								outline: 'solid 1px #d1d1d1',
+								padding: '4px',
+								cursor: 'pointer',
+							}}
+							onClick={this.handleFileMenuToggle}
+						>
 							File
 						</div>
 					</ContextMenu.Target>
 
-					<ContextMenu.FlyOut style={{
-						background: '#fafafa',
-						outline: 'solid 1px #d1d1d1',
-						boxShadow: ' 1px 1px 2px rgba(0, 0, 0, 0.2)',
-						padding: '8px',
-					}}>
+					<ContextMenu.FlyOut
+						style={{
+							background: '#fafafa',
+							outline: 'solid 1px #d1d1d1',
+							boxShadow: ' 1px 1px 2px rgba(0, 0, 0, 0.2)',
+							padding: '8px',
+						}}
+					>
 						<div>New Window</div>
 						<div>New File</div>
 						<div>Open...</div>
@@ -83,29 +84,34 @@ export default React.createClass({
 				</ContextMenu>
 
 				<ContextMenu
-					portalId='EditMenu-example'
+					portalId="EditMenu-example"
 					isExpanded={isEditExpanded}
 					direction={editDirection}
 					onClickOut={this.handleEditMenuToggle}
 				>
 
 					<ContextMenu.Target>
-						<div style={{
-							background: isEditExpanded ? '#fafafa' : '#eaeaea',
-							outline: 'solid 1px #d1d1d1',
-							padding: '4px',
-							cursor: 'pointer',
-						}} onClick={this.handleEditMenuToggle}>
+						<div
+							style={{
+								background: isEditExpanded ? '#fafafa' : '#eaeaea',
+								outline: 'solid 1px #d1d1d1',
+								padding: '4px',
+								cursor: 'pointer',
+							}}
+							onClick={this.handleEditMenuToggle}
+						>
 							Edit
 						</div>
 					</ContextMenu.Target>
 
-					<ContextMenu.FlyOut style={{
-						background: '#fafafa',
-						outline: 'solid 1px #d1d1d1',
-						boxShadow: ' 1px 1px 2px rgba(0, 0, 0, 0.2)',
-						padding: '8px',
-					}}>
+					<ContextMenu.FlyOut
+						style={{
+							background: '#fafafa',
+							outline: 'solid 1px #d1d1d1',
+							boxShadow: ' 1px 1px 2px rgba(0, 0, 0, 0.2)',
+							padding: '8px',
+						}}
+					>
 						<div>Undo</div>
 						<div>Redo</div>
 						<hr />

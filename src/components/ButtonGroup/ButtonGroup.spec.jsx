@@ -14,11 +14,11 @@ describe('ButtonGroup', () => {
 		const wrapper = shallow(
 			<ButtonGroup>
 				<ButtonGroup.Button />
-				<div className='jim' />
+				<div className="jim" />
 			</ButtonGroup>
 		);
 
-		assert(wrapper.contains(<div className='jim' />));
+		assert(wrapper.contains(<div className="jim" />));
 	});
 
 	it('prop selectedIndices', () => {
@@ -53,14 +53,20 @@ describe('ButtonGroup', () => {
 		const wrapper = mount(
 			<ButtonGroup>
 				<ButtonGroup.Button />
-				<ButtonGroup.Button onClick={onClick}/>
+				<ButtonGroup.Button onClick={onClick} />
 			</ButtonGroup>
 		);
 
 		wrapper.children().at(1).simulate('click'); // second button
 
 		assert(onClick.called, 'onClick was not called');
-		assert(_.has(onClick.args[0][0], 'event'), '`event` missing from `onClick` callback');
-		assert(_.has(onClick.args[0][0], 'props'),  '`props` missing from `onClick` callback');
+		assert(
+			_.has(onClick.args[0][0], 'event'),
+			'`event` missing from `onClick` callback'
+		);
+		assert(
+			_.has(onClick.args[0][0], 'props'),
+			'`props` missing from `onClick` callback'
+		);
 	});
 });

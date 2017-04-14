@@ -10,27 +10,23 @@ import Points from './Points';
 import Point from '../Point/Point';
 
 const defaultData = [
-	{ x: 'aye' , y: 10  , y2: 20 } ,
-	{ x: 'bee' , y: 55  , y2: 35 } ,
-	{ x: 'see' , y: 100 , y2: 3  } ,
+	{ x: 'aye', y: 10, y2: 20 },
+	{ x: 'bee', y: 55, y2: 35 },
+	{ x: 'see', y: 100, y2: 3 },
 ];
 
-const defaultXScale = d3Scale.scalePoint()
+const defaultXScale = d3Scale
+	.scalePoint()
 	.domain(['aye', 'bee', 'see'])
 	.range([0, 100]);
 
-const defaultYScale = d3Scale.scaleLinear()
-	.domain([0, 100])
-	.range([1000, 0]);
+const defaultYScale = d3Scale.scaleLinear().domain([0, 100]).range([1000, 0]);
 
 describe('Points', () => {
 	common(Points, {
-		exemptFunctionProps: [
-			'xScale',
-			'yScale',
-		],
+		exemptFunctionProps: ['xScale', 'yScale'],
 		getDefaultProps: () => ({
-			data: [{x: new Date('2015-01-01T00:00:00Z'), y: 1}],
+			data: [{ x: new Date('2015-01-01T00:00:00Z'), y: 1 }],
 			xScale: d3Scale.scaleTime(),
 			yScale: d3Scale.scaleLinear(),
 		}),
@@ -56,10 +52,8 @@ describe('Points', () => {
 				const palette = ['r', 'g'];
 				const wrapper = shallow(
 					<Points
-						data={[
-							{ x: 'one', rev: 1, imp: 2, click: 3 },
-						]}
-						yFields={[ 'rev', 'imp', 'click' ]}
+						data={[{ x: 'one', rev: 1, imp: 2, click: 3 }]}
+						yFields={['rev', 'imp', 'click']}
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						palette={palette}
@@ -75,10 +69,8 @@ describe('Points', () => {
 				const palette = ['r', 'g'];
 				const wrapper = shallow(
 					<Points
-						data={[
-							{ x: 'one', rev: 1, imp: 2, click: 3 },
-						]}
-						yFields={[ 'rev', 'imp', 'click' ]}
+						data={[{ x: 'one', rev: 1, imp: 2, click: 3 }]}
+						yFields={['rev', 'imp', 'click']}
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						palette={palette}
@@ -132,15 +124,10 @@ describe('Points', () => {
 			});
 
 			it('should work with linear scales', () => {
-				const xScale = d3Scale.scaleLinear()
-					.domain([0, 10])
-					.range([0, 100]);
+				const xScale = d3Scale.scaleLinear().domain([0, 10]).range([0, 100]);
 				const wrapper = shallow(
 					<Points
-						data={[
-							{ x: 2, y: 20 },
-							{ x: 6, y: 50 },
-						]}
+						data={[{ x: 2, y: 20 }, { x: 6, y: 50 }]}
 						xScale={xScale}
 						yScale={defaultYScale}
 					/>
@@ -175,20 +162,22 @@ describe('Points', () => {
 			});
 
 			it('should work with time scales', () => {
-				const xScale = d3Scale.scalePoint()
-					.domain([new Date('2015-01-01T00:00:00Z'), new Date('2015-01-03T00:00:00Z')])
+				const xScale = d3Scale
+					.scalePoint()
+					.domain([
+						new Date('2015-01-01T00:00:00Z'),
+						new Date('2015-01-03T00:00:00Z'),
+					])
 					.range([0, 100]);
 
-				const yScale = d3Scale.scaleTime()
-					.domain([0, 100])
-					.range([1000, 0]);
+				const yScale = d3Scale.scaleTime().domain([0, 100]).range([1000, 0]);
 
 				const wrapper = shallow(
 					<Points
 						data={[
-							{ x: new Date('2015-01-01T00:00:00Z') , y: 0 }   ,
-							{ x: new Date('2015-01-02T00:00:00Z') , y: 50 }  ,
-							{ x: new Date('2015-01-03T00:00:00Z') , y: 100 } ,
+							{ x: new Date('2015-01-01T00:00:00Z'), y: 0 },
+							{ x: new Date('2015-01-02T00:00:00Z'), y: 50 },
+							{ x: new Date('2015-01-03T00:00:00Z'), y: 100 },
 						]}
 						xScale={xScale}
 						yScale={yScale}
@@ -213,13 +202,13 @@ describe('Points', () => {
 				const wrapper = shallow(
 					<Points
 						data={[
-							{ axe: 'aye' , y: 10  } ,
-							{ axe: 'bee' , y: 55  } ,
-							{ axe: 'see' , y: 100 } ,
+							{ axe: 'aye', y: 10 },
+							{ axe: 'bee', y: 55 },
+							{ axe: 'see', y: 100 },
 						]}
 						xScale={defaultXScale}
 						yScale={defaultYScale}
-						xField='axe'
+						xField="axe"
 					/>
 				);
 
@@ -290,10 +279,8 @@ describe('Points', () => {
 				const palette = ['r', 'g'];
 				const wrapper = shallow(
 					<Points
-						data={[
-							{ x: 'one', rev: 1, imp: 2, click: 3 },
-						]}
-						yFields={[ 'rev', 'imp', 'click' ]}
+						data={[{ x: 'one', rev: 1, imp: 2, click: 3 }]}
+						yFields={['rev', 'imp', 'click']}
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						palette={palette}
