@@ -6,12 +6,7 @@ import { createClass, findTypes, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Panel');
 
-const {
-	bool,
-	node,
-	object,
-	string,
-} = PropTypes;
+const { bool, node, object, string } = PropTypes;
 
 /**
  * {"categories": ["layout"]}

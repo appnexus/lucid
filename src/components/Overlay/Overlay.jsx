@@ -8,12 +8,7 @@ import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Overlay');
 
-const {
-	string,
-	bool,
-	func,
-	node,
-} = PropTypes;
+const { string, bool, func, node } = PropTypes;
 
 /**
  * {"categories": ["utility"], "madeFrom": ["Portal"]}

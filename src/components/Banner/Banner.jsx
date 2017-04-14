@@ -11,14 +11,7 @@ import WarningIcon from '../Icon/WarningIcon/WarningIcon';
 
 const cx = lucidClassNames.bind('&-Banner');
 
-const {
-	bool,
-	element,
-	func,
-	node,
-	oneOf,
-	string,
-} = PropTypes;
+const { bool, element, func, node, oneOf, string } = PropTypes;
 
 const defaultIcons = {
 	success: <SuccessIcon />,

@@ -7,11 +7,7 @@ import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Line');
 
-const {
-	string,
-	object,
-	bool,
-} = PropTypes;
+const { string, object, bool } = PropTypes;
 
 /**
  * {"categories": ["visualizations", "geoms"]}

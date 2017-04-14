@@ -7,13 +7,7 @@ import SlidePanel from '../SlidePanel/SlidePanel';
 
 const cx = lucidClassNames.bind('&-InfiniteSlidePanel');
 
-const {
-	func,
-	node,
-	number,
-	oneOfType,
-	string,
-} = PropTypes;
+const { func, node, number, oneOfType, string } = PropTypes;
 
 const modulo = (n, a) => a - n * Math.floor(a / n);
 

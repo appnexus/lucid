@@ -17,16 +17,7 @@ import GripperHorizontalIcon
 
 const cx = lucidClassNames.bind('&-Submarine');
 
-const {
-	any,
-	bool,
-	func,
-	node,
-	number,
-	string,
-	oneOf,
-	oneOfType,
-} = PropTypes;
+const { any, bool, func, node, number, string, oneOf, oneOfType } = PropTypes;
 
 /**
  * {"categories": ["layout"], "madeFrom": ["SplitHorizontal", "ChevronIcon", "GripperHorizontalIcon"]}

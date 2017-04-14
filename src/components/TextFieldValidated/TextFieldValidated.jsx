@@ -9,11 +9,7 @@ import { createClass, findTypes, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-TextFieldValidated');
 
-const {
-	any,
-	object,
-	string,
-} = PropTypes;
+const { any, object, string } = PropTypes;
 
 /**
  *

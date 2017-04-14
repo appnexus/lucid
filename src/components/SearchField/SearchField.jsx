@@ -12,14 +12,7 @@ import reducers from './SearchField.reducers';
 
 const cx = lucidClassNames.bind('&-SearchField');
 
-const {
-	bool,
-	func,
-	node,
-	number,
-	oneOfType,
-	string,
-} = PropTypes;
+const { bool, func, node, number, oneOfType, string } = PropTypes;
 
 /**
 * {"categories": ["controls", "text"], "madeFrom": ["TextField", "SearchIcon"]}

@@ -7,13 +7,7 @@ import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Axis');
 
-const {
-	string,
-	array,
-	func,
-	number,
-	oneOf,
-} = PropTypes;
+const { string, array, func, number, oneOf } = PropTypes;
 
 /**
  * {"categories": ["visualizations", "chart primitives"]}

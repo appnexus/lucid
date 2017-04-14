@@ -6,12 +6,7 @@ import { createClass, findTypes, omitProps } from '../../util/component-types';
 import Checkbox from '../Checkbox/Checkbox';
 
 const cx = lucidClassNames.bind('&-CheckboxLabeled');
-const {
-	any,
-	node,
-	object,
-	string,
-} = PropTypes;
+const { any, node, object, string } = PropTypes;
 
 /**
  * {"categories": ["controls", "toggles"], "extend": "Checkbox", "madeFrom": ["Checkbox"]}

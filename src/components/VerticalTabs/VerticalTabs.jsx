@@ -16,12 +16,7 @@ import {
 
 const cx = lucidClassNames.bind('&-VerticalTabs');
 
-const {
-	string,
-	number,
-	bool,
-	func,
-} = PropTypes;
+const { string, number, bool, func } = PropTypes;
 
 /**
  *

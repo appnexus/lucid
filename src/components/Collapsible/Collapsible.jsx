@@ -8,13 +8,7 @@ import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Collapsible');
 
-const {
-	any,
-	bool,
-	node,
-	number,
-	string,
-} = PropTypes;
+const { any, bool, node, number, string } = PropTypes;
 
 /**
  * {"categories": ["utility"]}

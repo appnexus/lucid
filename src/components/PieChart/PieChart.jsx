@@ -14,15 +14,7 @@ import * as reducers from './PieChart.reducers';
 
 const cx = lucidClassNames.bind('&-PieChart');
 
-const {
-	string,
-	number,
-	arrayOf,
-	bool,
-	shape,
-	object,
-	func,
-} = PropTypes;
+const { string, number, arrayOf, bool, shape, object, func } = PropTypes;
 
 const DONUT_WIDTH = 15;
 const HOVER_SCALE = 1.1; // duplicated in .less file

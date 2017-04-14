@@ -13,14 +13,7 @@ import Legend from '../Legend/Legend';
 
 const cx = lucidClassNames.bind('&-Bars');
 
-const {
-	arrayOf,
-	func,
-	number,
-	object,
-	bool,
-	string,
-} = PropTypes;
+const { arrayOf, func, number, object, bool, string } = PropTypes;
 
 /**
  * {"categories": ["visualizations", "chart primitives"], "madeFrom": ["Bar", "ToolTip", "Legend"]}

@@ -13,14 +13,7 @@ import * as reducers from '../Expander/Expander.reducers';
 
 const cx = lucidClassNames.bind('&-ExpanderPanel');
 
-const {
-	any,
-	bool,
-	func,
-	node,
-	object,
-	string,
-} = PropTypes;
+const { any, bool, func, node, object, string } = PropTypes;
 
 /**
  * {"categories": ["layout"], "madeFrom": ["ChevronIcon", "Expander", "Panel"]}

@@ -13,14 +13,7 @@ import * as reducers from './Tabs.reducers';
 
 const cx = lucidClassNames.bind('&-Tabs');
 
-const {
-	any,
-	bool,
-	func,
-	node,
-	number,
-	string,
-} = PropTypes;
+const { any, bool, func, node, number, string } = PropTypes;
 
 /**
  *

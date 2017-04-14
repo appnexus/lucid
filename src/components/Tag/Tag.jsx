@@ -12,12 +12,7 @@ import {
 
 const cx = lucidClassNames.bind('&-Tag');
 
-const {
-	bool,
-	func,
-	node,
-	string,
-} = PropTypes;
+const { bool, func, node, string } = PropTypes;
 
 /**
  * {"categories": ["communication"]}

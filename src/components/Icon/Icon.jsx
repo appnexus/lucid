@@ -6,13 +6,7 @@ import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Icon');
 
-const {
-	any,
-	string,
-	number,
-	object,
-	bool,
-} = PropTypes;
+const { any, string, number, object, bool } = PropTypes;
 
 /**
  *

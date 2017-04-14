@@ -10,16 +10,7 @@ import Collapsible from '../Collapsible/Collapsible';
 
 const cx = bindClassNames('lucid-VerticalListMenu');
 
-const {
-	func,
-	arrayOf,
-	bool,
-	string,
-	number,
-	node,
-	object,
-	shape,
-} = PropTypes;
+const { func, arrayOf, bool, string, number, node, object, shape } = PropTypes;
 
 /**
  * {"categories": ["navigation"], "madeFrom": ["ChevronIcon"]}

@@ -12,16 +12,7 @@ import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
 const cx = lucidClassNames.bind('&-Table');
 
-const {
-	any,
-	bool,
-	func,
-	node,
-	number,
-	object,
-	string,
-	oneOf,
-} = PropTypes;
+const { any, bool, func, node, number, object, string, oneOf } = PropTypes;
 
 /**
  * `Thead` renders <thead>.

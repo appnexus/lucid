@@ -7,12 +7,7 @@ import { createClass, getFirst, omitProps } from '../../util/component-types';
 import Switch from '../Switch/Switch';
 
 const cx = lucidClassNames.bind('&-SwitchLabeled');
-const {
-	any,
-	node,
-	object,
-	string,
-} = PropTypes;
+const { any, node, object, string } = PropTypes;
 
 /**
  * {"categories": ["controls", "toggles"], "extend": "Switch", "madeFrom": ["Switch"]}

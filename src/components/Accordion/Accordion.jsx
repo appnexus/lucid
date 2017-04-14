@@ -13,13 +13,7 @@ import * as reducers from '../Accordion/Accordion.reducers';
 
 const cx = lucidClassNames.bind('&-Accordion');
 
-const {
-	any,
-	func,
-	object,
-	number,
-	string,
-} = PropTypes;
+const { any, func, object, number, string } = PropTypes;
 
 /**
 * {"categories": ["layout"], "madeFrom": ["ExpanderPanel"]}

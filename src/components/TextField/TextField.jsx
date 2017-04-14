@@ -8,14 +8,7 @@ import * as KEYCODE from '../../constants/key-code';
 
 const cx = lucidClassNames.bind('&-TextField');
 
-const {
-	bool,
-	string,
-	func,
-	number,
-	object,
-	oneOfType,
-} = PropTypes;
+const { bool, string, func, number, object, oneOfType } = PropTypes;
 
 /**
  *

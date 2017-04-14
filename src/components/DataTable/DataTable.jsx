@@ -18,15 +18,7 @@ const { Thead, Tbody, Tr, Th, Td } = ScrollTable;
 
 const cx = lucidClassNames.bind('&-DataTable');
 
-const {
-	any,
-	func,
-	number,
-	object,
-	string,
-	bool,
-	arrayOf,
-} = PropTypes;
+const { any, func, number, object, string, bool, arrayOf } = PropTypes;
 
 /**
  *

@@ -7,15 +7,7 @@ import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Button');
 
-const {
-	arrayOf,
-	bool,
-	func,
-	node,
-	oneOf,
-	oneOfType,
-	string,
-} = PropTypes;
+const { arrayOf, bool, func, node, oneOf, oneOfType, string } = PropTypes;
 
 /**
  *

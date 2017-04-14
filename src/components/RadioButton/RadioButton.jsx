@@ -5,12 +5,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-RadioButton');
-const {
-	bool,
-	func,
-	object,
-	string,
-} = PropTypes;
+const { bool, func, object, string } = PropTypes;
 
 /**
  * {"categories": ["controls", "toggles"]}

@@ -7,9 +7,7 @@ import Icon from '../Icon';
 
 const cx = lucidClassNames.bind('&-CaretIcon');
 
-const {
-	oneOf,
-} = PropTypes;
+const { oneOf } = PropTypes;
 
 /**
  *

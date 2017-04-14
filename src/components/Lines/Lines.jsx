@@ -11,14 +11,7 @@ import Line from '../Line/Line';
 
 const cx = lucidClassNames.bind('&-Lines');
 
-const {
-	arrayOf,
-	func,
-	number,
-	object,
-	bool,
-	string,
-} = PropTypes;
+const { arrayOf, func, number, object, bool, string } = PropTypes;
 
 /**
  * {"categories": ["visualizations", "chart primitives"], "madeFrom": ["Line"]}

@@ -101,8 +101,10 @@ export function common(
 		});
 
 		describe('function propTypes', () => {
-
-			const funcProps = _.pickBy(Component.propTypes, (propType) => propType === PropTypes.func);
+			const funcProps = _.pickBy(
+				Component.propTypes,
+				propType => propType === PropTypes.func
+			);
 
 			_.forEach(funcProps, (propType, propName) => {
 				it(`${propName} should only use onX convention for function proptypes`, () => {

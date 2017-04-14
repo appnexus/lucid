@@ -12,12 +12,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const cx = lucidClassNames.bind('&-OverlayWrapper');
 
-const {
-	bool,
-	node,
-	oneOf,
-	string,
-} = PropTypes;
+const { bool, node, oneOf, string } = PropTypes;
 
 /**
  *

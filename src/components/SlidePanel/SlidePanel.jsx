@@ -9,13 +9,7 @@ import { createClass, findTypes, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SlidePanel');
 
-const {
-	bool,
-	func,
-	node,
-	number,
-	string,
-} = PropTypes;
+const { bool, func, node, number, string } = PropTypes;
 
 const modulo = (n, a) => a - n * Math.floor(a / n);
 

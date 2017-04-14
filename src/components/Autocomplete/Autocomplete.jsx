@@ -11,14 +11,7 @@ import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 
 const cx = lucidClassNames.bind('&-Autocomplete');
 
-const {
-	arrayOf,
-	bool,
-	func,
-	object,
-	shape,
-	string,
-} = PropTypes;
+const { arrayOf, bool, func, object, shape, string } = PropTypes;
 
 /**
  *

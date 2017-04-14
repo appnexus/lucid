@@ -7,9 +7,7 @@ import Icon from '../Icon';
 
 const cx = lucidClassNames.bind('&-ChevronThinIcon');
 
-const {
-	oneOf,
-} = PropTypes;
+const { oneOf } = PropTypes;
 
 /**
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}

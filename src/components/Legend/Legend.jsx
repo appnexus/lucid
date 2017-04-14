@@ -12,13 +12,7 @@ const cx = lucidClassNames.bind('&-Legend');
 const POINT_SIZE = 12;
 const LINE_WIDTH = 22;
 
-const {
-	number,
-	string,
-	oneOf,
-	bool,
-	func,
-} = PropTypes;
+const { number, string, oneOf, bool, func } = PropTypes;
 
 /**
  * {"categories": ["visualizations", "chart primitives"]}

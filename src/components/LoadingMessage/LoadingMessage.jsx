@@ -7,11 +7,7 @@ import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 
 const cx = lucidClassNames.bind('&-LoadingMessage');
 
-const {
-	any,
-	node,
-	string,
-} = PropTypes;
+const { any, node, string } = PropTypes;
 
 /**
  *

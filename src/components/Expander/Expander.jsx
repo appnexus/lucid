@@ -16,15 +16,7 @@ import * as reducers from './Expander.reducers';
 
 const cx = lucidClassNames.bind('&-Expander');
 
-const {
-	any,
-	bool,
-	func,
-	node,
-	object,
-	oneOf,
-	string,
-} = PropTypes;
+const { any, bool, func, node, object, oneOf, string } = PropTypes;
 
 /**
  * {"categories": ["layout"], "madeFrom": ["ChevronIcon"]}

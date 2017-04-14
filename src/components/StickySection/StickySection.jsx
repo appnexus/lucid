@@ -6,12 +6,7 @@ import { createClass, omitProps } from '../../util/component-types';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 
 const cx = lucidClassNames.bind('&-StickySection');
-const {
-	node,
-	number,
-	object,
-	string,
-} = PropTypes;
+const { node, number, object, string } = PropTypes;
 
 /**
  * {"categories": ["helpers"]}

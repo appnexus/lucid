@@ -8,12 +8,7 @@ import LoadingMessage from '../LoadingMessage/LoadingMessage';
 
 const cx = lucidClassNames.bind('&-LoadingIndicator');
 
-const {
-	bool,
-	node,
-	oneOf,
-	string,
-} = PropTypes;
+const { bool, node, oneOf, string } = PropTypes;
 
 /**
  *

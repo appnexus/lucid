@@ -8,12 +8,7 @@ import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Point');
 
-const {
-	number,
-	bool,
-	string,
-	object,
-} = PropTypes;
+const { number, bool, string, object } = PropTypes;
 
 // These were originally built in a 12x12 grid, except triangles which were
 // 14x12 cause triangles are poo.

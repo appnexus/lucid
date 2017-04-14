@@ -17,15 +17,7 @@ import * as reducers from './SplitButton.reducers';
 
 const cx = lucidClassNames.bind('&-SplitButton');
 
-const {
-	any,
-	bool,
-	func,
-	node,
-	oneOf,
-	shape,
-	string,
-} = PropTypes;
+const { any, bool, func, node, oneOf, shape, string } = PropTypes;
 
 /**
  *

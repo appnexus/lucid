@@ -14,15 +14,7 @@ const cx = lucidClassNames.bind('&-DateSelect');
 
 const NAV_BUTTON_SIZE = 32;
 
-const {
-	any,
-	bool,
-	func,
-	instanceOf,
-	number,
-	oneOf,
-	string,
-} = PropTypes;
+const { any, bool, func, instanceOf, number, oneOf, string } = PropTypes;
 
 /**
  * {"categories": ["controls", "selectors"], "madeFrom": ["InfiniteSlidePanel", "CalendarMonth"]}

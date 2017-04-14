@@ -5,10 +5,7 @@ import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Badge');
 
-const {
-	node,
-	string,
-} = PropTypes;
+const { node, string } = PropTypes;
 
 /**
  *

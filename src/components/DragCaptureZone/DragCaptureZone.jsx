@@ -5,10 +5,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DragCaptureZone');
-const {
-	func,
-	string,
-} = PropTypes;
+const { func, string } = PropTypes;
 
 /**
  * {"categories": ["utility"]}

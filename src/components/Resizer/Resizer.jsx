@@ -6,10 +6,7 @@ import elementResizeDetectorMaker from 'element-resize-detector';
 
 const cx = lucidClassNames.bind('&-Resizer');
 
-const {
-	func,
-	string,
-} = PropTypes;
+const { func, string } = PropTypes;
 
 /**
  * {"categories": ["utility"]}

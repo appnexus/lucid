@@ -6,12 +6,7 @@ import { createClass, findTypes, omitProps } from '../../util/component-types';
 import RadioButton from '../RadioButton/RadioButton';
 
 const cx = lucidClassNames.bind('&-RadioButtonLabeled');
-const {
-	any,
-	node,
-	object,
-	string,
-} = PropTypes;
+const { any, node, object, string } = PropTypes;
 
 /**
  * {"categories": ["controls", "toggles"], "extend": "RadioButton", "madeFrom": ["RadioButton"]}

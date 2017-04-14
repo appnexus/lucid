@@ -11,15 +11,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 
 const cx = lucidClassNames.bind('&-ContextMenu');
 
-const {
-	bool,
-	node,
-	func,
-	number,
-	object,
-	oneOf,
-	string,
-} = PropTypes;
+const { bool, node, func, number, object, oneOf, string } = PropTypes;
 
 /**
  *

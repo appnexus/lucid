@@ -6,11 +6,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 
 const cx = lucidClassNames.bind('&-Portal');
 
-const {
-	any,
-	node,
-	string,
-} = PropTypes;
+const { any, node, string } = PropTypes;
 
 /**
  *

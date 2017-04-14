@@ -11,14 +11,7 @@ import Point from '../Point/Point';
 
 const cx = lucidClassNames.bind('&-Points');
 
-const {
-	arrayOf,
-	func,
-	number,
-	object,
-	bool,
-	string,
-} = PropTypes;
+const { arrayOf, func, number, object, bool, string } = PropTypes;
 
 function isValidSeries(series) {
 	if (_.isArray(series)) {

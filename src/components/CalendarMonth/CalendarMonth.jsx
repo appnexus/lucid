@@ -6,13 +6,7 @@ import { createClass } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-CalendarMonth');
 
-const {
-	bool,
-	instanceOf,
-	number,
-	oneOf,
-	string,
-} = PropTypes;
+const { bool, instanceOf, number, oneOf, string } = PropTypes;
 
 /**
  * {"categories": ["helpers"]}

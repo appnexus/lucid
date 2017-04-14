@@ -17,12 +17,7 @@ import RadioButton from '../RadioButton/RadioButton';
 
 const cx = lucidClassNames.bind('&-RadioGroup');
 
-const {
-	func,
-	node,
-	number,
-	string,
-} = PropTypes;
+const { func, node, number, string } = PropTypes;
 
 /**
  * {"categories": ["controls", "toggles"], "madeFrom": ["RadioButton"]}

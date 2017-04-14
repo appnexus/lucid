@@ -7,9 +7,7 @@ import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ArrowIcon');
 
-const {
-	oneOf,
-} = PropTypes;
+const { oneOf } = PropTypes;
 
 /**
  *

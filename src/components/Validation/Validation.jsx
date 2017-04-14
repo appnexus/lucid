@@ -6,9 +6,7 @@ import _ from 'lodash';
 
 const cx = lucidClassNames.bind('&-Validation');
 
-const {
-	any,
-} = PropTypes;
+const { any } = PropTypes;
 
 /**
  *

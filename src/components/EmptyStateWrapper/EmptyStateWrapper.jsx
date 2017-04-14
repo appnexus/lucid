@@ -9,12 +9,7 @@ import OverlayWrapper from '../OverlayWrapper/OverlayWrapper';
 
 const cx = lucidClassNames.bind('&-EmptyStateWrapper');
 
-const {
-	any,
-	bool,
-	node,
-	string,
-} = PropTypes;
+const { any, bool, node, string } = PropTypes;
 
 /**
  *

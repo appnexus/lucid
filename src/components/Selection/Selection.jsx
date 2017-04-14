@@ -17,13 +17,7 @@ import {
 
 const { createElement } = React;
 
-const {
-	bool,
-	func,
-	string,
-	node,
-	oneOf,
-} = PropTypes;
+const { bool, func, string, node, oneOf } = PropTypes;
 
 const cx = lucidClassNames.bind('&-Selection');
 

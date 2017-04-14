@@ -9,12 +9,7 @@ import { buildHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-ButtonGroup');
 
-const {
-	any,
-	func,
-	arrayOf,
-	number,
-} = PropTypes;
+const { any, func, arrayOf, number } = PropTypes;
 
 /**
  *

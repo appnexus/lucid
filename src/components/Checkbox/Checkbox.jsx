@@ -6,12 +6,7 @@ import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Checkbox');
 
-const {
-	bool,
-	func,
-	object,
-	string,
-} = PropTypes;
+const { bool, func, object, string } = PropTypes;
 
 /**
  * {"categories": ["controls", "toggles"]}

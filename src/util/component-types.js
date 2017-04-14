@@ -32,7 +32,11 @@ export function createClass(definition = {}) {
 			initialState,
 			propName,
 		},
-		propTypes: _.assign({}, propTypes, _.mapValues(definition.components, () => PropTypes.any)),
+		propTypes: _.assign(
+			{},
+			propTypes,
+			_.mapValues(definition.components, () => PropTypes.any)
+		),
 		render,
 	};
 

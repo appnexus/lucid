@@ -13,15 +13,7 @@ import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 
 const cx = lucidClassNames.bind('&-SplitVertical');
 
-const {
-	any,
-	bool,
-	func,
-	node,
-	number,
-	string,
-	oneOfType,
-} = PropTypes;
+const { any, bool, func, node, number, string, oneOfType } = PropTypes;
 
 /**
  * {"categories": ["helpers"]}
