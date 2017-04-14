@@ -123,7 +123,7 @@
     ]
   },
   "lint-staged": {
-    "*.js": [
+    "*.{js,jsx}": [
       "prettier --write --single-quote --use-tabs --trailing-comma es5",
       "git add"
     ]

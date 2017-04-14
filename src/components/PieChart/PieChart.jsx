@@ -226,7 +226,6 @@ const PieChart = createClass({
 
 	render() {
 		const {
-			
 			style,
 			className,
 			height,
