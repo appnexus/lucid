@@ -22,8 +22,7 @@
     "postpublish": "gulp build-js-clean-path-imports && gulp docs-upload",
     "start": "npm run dev",
     "test": "npm run lint && npm run cover",
-    "watch": "npm run jest -- --watch",
-    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
+    "watch": "npm run jest -- --watch"
   },
   "keywords": [
     "component",
