@@ -2156,6 +2156,12 @@ eslint-config-appnexus@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/eslint-config-appnexus/-/eslint-config-appnexus-1.6.0.tgz#c05fdb47c896492dd365cd130fd3d7d7673aebbe"
 
+eslint-config-prettier@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-1.6.0.tgz#56e53a8eb461c06eced20cec40d765c185100fd5"
+  dependencies:
+    get-stdin "^5.0.1"
+
 eslint-import-resolver-node@^0.2.0:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-node/-/eslint-import-resolver-node-0.2.3.tgz#5add8106e8c928db2cba232bcd9efa846e3da16c"
@@ -2716,7 +2722,7 @@ get-caller-file@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.2.tgz#f702e63127e7e231c160a80c1554acb70d5047e5"
 
-get-stdin@5.0.1:
+get-stdin@5.0.1, get-stdin@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-5.0.1.tgz#122e161591e21ff4c52530305693f20e6393a398"
 
@@ -5758,6 +5764,10 @@ require-uncached@^1.0.2:
   dependencies:
     caller-path "^0.1.0"
     resolve-from "^1.0.0"
+
+requireindex@~1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/requireindex/-/requireindex-1.1.0.tgz#e5404b81557ef75db6e49c5a72004893fe03e162"
 
 requires-port@1.0.x, requires-port@1.x.x:
   version "1.0.0"

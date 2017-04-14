@@ -2,10 +2,10 @@ import React from 'react';
 import { common } from '../../util/generic-tests';
 import { shallow } from 'enzyme';
 import assert from 'assert';
-
 import Point from '../Point/Point';
 import Line from '../Line/Line';
 import Legend from './Legend';
+
 const { Item } = Legend;
 
 describe('Legend', () => {

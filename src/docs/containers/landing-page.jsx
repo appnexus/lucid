@@ -3,7 +3,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { toMarkdown, handleHighlightCode } from '../util';
 import { Motion, spring } from 'react-motion';
 
-const readmeRaw = require('!!raw!../../../README.md');
+const readmeRaw = require('!!raw!../../../README.md'); // eslint-disable-line
 
 const cx = lucidClassNames.bind('&-LandingPage');
 

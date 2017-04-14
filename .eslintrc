@@ -1,16 +1,13 @@
 {
-  "extends": "appnexus/frontend",
+  "extends": [
+		"appnexus/frontend",
+		"prettier",
+		"prettier/react"
+	],
+	"plugins": [
+		"prettier"
+	],
   "rules": {
-    # These can be removed with the next major version of eslint-config-appnexus.
-    "jsx-quotes": [2, "prefer-single"],
-    "no-undef": 2,
-    "quotes": [2, "single"],
-    "react/prop-types": 2,
-
-    # eslint-config-appnexus overrides, these should be removed and code fixed.
-    "import/imports-first": "off",
-    "import/newline-after-import": "off",
-    "import/no-unresolved": "off",
-    "no-extra-parens": "off",
+		"prettier/prettier": ["error", {"trailingComma": "es5", "singleQuote": true, "useTabs": true}]
   }
 }

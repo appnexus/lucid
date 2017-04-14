@@ -1,8 +1,4 @@
 /*eslint no-console: 0*/
-// Allow webpack to handle less compilation here
-require('./index.less');
-require('../index.less');
-
 import { basename } from 'path';
 import _ from 'lodash';
 import React from 'react';
@@ -29,6 +25,10 @@ import {
 	Autocomplete,
 	stateManagement,
 } from '../index';
+
+// Allow webpack to handle less compilation here
+require('./index.less');
+require('../index.less');
 
 const { Thead, Tbody, Tr, Th, Td } = Table;
 

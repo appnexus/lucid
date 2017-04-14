@@ -1,15 +1,4 @@
 /* eslint-disable comma-spacing */
-jest.mock('d3-shape', () => ({
-	arc: jest.fn(() => ({
-		innerRadius: jest.fn(() => ({
-			outerRadius: jest.fn(() => arg => `${arg}`),
-		})),
-	})),
-	pie: jest.fn(() => ({
-		sort: jest.fn(() => arg => arg),
-	})),
-}));
-
 import _ from 'lodash';
 import React from 'react';
 import { shallow } from 'enzyme';
@@ -20,6 +9,17 @@ import sinon from 'sinon';
 import { PieChartDumb as PieChart } from './PieChart';
 import Line from '../Line/Line';
 import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
+
+jest.mock('d3-shape', () => ({
+	arc: jest.fn(() => ({
+		innerRadius: jest.fn(() => ({
+			outerRadius: jest.fn(() => arg => `${arg}`),
+		})),
+	})),
+	pie: jest.fn(() => ({
+		sort: jest.fn(() => arg => arg),
+	})),
+}));
 
 const sampleData = [
 	{ x: 'One', y: 30 },

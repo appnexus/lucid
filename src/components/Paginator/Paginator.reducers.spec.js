@@ -1,9 +1,8 @@
-jest.mock('../SingleSelect/SingleSelect.reducers');
-
 import assert from 'assert';
 import * as SingleSelect from '../SingleSelect/SingleSelect.reducers';
-
 import { onPageSelect, onPageSizeSelect } from './Paginator.reducers.js';
+
+jest.mock('../SingleSelect/SingleSelect.reducers');
 
 describe('Paginator reducers', () => {
 	const initialState = {

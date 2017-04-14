@@ -1,3 +1,9 @@
+import _ from 'lodash';
+import React from 'react';
+import { common } from '../../util/generic-tests';
+import { mount } from 'enzyme';
+import Resizer from './Resizer';
+
 jest.mock('element-resize-detector', () => {
 	return function() {
 		return {
@@ -11,11 +17,6 @@ jest.mock('element-resize-detector', () => {
 		};
 	};
 });
-import _ from 'lodash';
-import React from 'react';
-import { common } from '../../util/generic-tests';
-import { mount } from 'enzyme';
-import Resizer from './Resizer';
 
 describe('Resizer', () => {
 	common(Resizer, {

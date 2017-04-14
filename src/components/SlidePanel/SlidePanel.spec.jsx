@@ -3,6 +3,7 @@ import React from 'react';
 import { common } from '../../util/generic-tests';
 import * as domHelpers from '../../util/dom-helpers';
 import SlidePanel from './SlidePanel';
+
 const { Slide } = SlidePanel;
 
 describe('SlidePanel', () => {
