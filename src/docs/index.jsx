@@ -12,7 +12,7 @@ import {
 	withRouter,
 } from 'react-router';
 import { createHashHistory } from 'history';
-import docgenMapRaw from './docgen.json';
+import docgenMapRaw from './docgen.json'; // eslint-disable-line
 import { handleHighlightCode, toMarkdown, sanitizeExamplePath } from './util';
 
 import ColorPalette from './containers/color-palette';
