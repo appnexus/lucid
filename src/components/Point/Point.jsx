@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 import { transformFromCenter } from '../../util/chart-helpers';
@@ -12,7 +13,7 @@ const {
 	bool,
 	string,
 	object,
-} = React.PropTypes;
+} = PropTypes;
 
 // These were originally built in a 12x12 grid, except triangles which were
 // 14x12 cause triangles are poo.

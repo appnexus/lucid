@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, findTypes, rejectTypes, omitProps } from '../../util/component-types';
 import reducers from './RadioGroup.reducers';
@@ -15,7 +16,7 @@ const {
 	node,
 	number,
 	string,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  * {"categories": ["controls", "toggles"], "madeFrom": ["RadioButton"]}

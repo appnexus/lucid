@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps }  from '../../util/component-types';
 import Checkbox from '../Checkbox/Checkbox';
@@ -10,7 +11,7 @@ const {
 	node,
 	object,
 	string,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  * {"categories": ["controls", "toggles"], "extend": "Checkbox", "madeFrom": ["Checkbox"]}

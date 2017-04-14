@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 import elementResizeDetectorMaker from 'element-resize-detector';
@@ -8,7 +9,7 @@ const cx = lucidClassNames.bind('&-Resizer');
 const {
 	func,
 	string,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  * {"categories": ["utility"]}

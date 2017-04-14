@@ -1,6 +1,7 @@
 import assert from 'assert';
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { shallow } from 'enzyme';
 
 import {
@@ -294,11 +295,11 @@ describe('component-types', () => {
 	describe('omitProps', () => {
 		const Button = createClass({
 			propTypes: {
-				className: React.PropTypes.any,
-				isActive: React.PropTypes.any,
-				isDisabled: React.PropTypes.any,
-				kind: React.PropTypes.any,
-				size: React.PropTypes.any,
+				className: PropTypes.any,
+				isActive: PropTypes.any,
+				isDisabled: PropTypes.any,
+				kind: PropTypes.any,
+				size: PropTypes.any,
 			},
 		});
 

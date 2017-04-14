@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import ContextMenu from '../ContextMenu/ContextMenu';
 import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 import * as reducers from './ToolTip.reducers';
@@ -19,7 +20,7 @@ const {
 	oneOf,
 	string,
 	oneOfType,
-} = React.PropTypes;
+} = PropTypes;
 
 const {
 	Target,

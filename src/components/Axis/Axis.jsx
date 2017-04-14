@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { discreteTicks } from '../../util/chart-helpers';
 import { createClass, omitProps } from '../../util/component-types';
@@ -12,7 +13,7 @@ const {
 	func,
 	number,
 	oneOf,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  * {"categories": ["visualizations", "chart primitives"]}

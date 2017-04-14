@@ -2,6 +2,7 @@ import assert from 'assert';
 import _ from 'lodash';
 import sinon from 'sinon';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { mount } from 'enzyme';
 
 import {
@@ -546,11 +547,11 @@ describe('#buildHybridComponent', () => {
 	const CounterDumb = createClass({
 		displayName: 'Counter',
 		propTypes: {
-			count: React.PropTypes.number,
-			onIncrement: React.PropTypes.func,
-			onDecrement: React.PropTypes.func,
-			countDisplay: React.PropTypes.string,
-			countModThree: React.PropTypes.number,
+			count: PropTypes.number,
+			onIncrement: PropTypes.func,
+			onDecrement: PropTypes.func,
+			countDisplay: PropTypes.string,
+			countModThree: PropTypes.number,
 		},
 		getDefaultProps() {
 			return {

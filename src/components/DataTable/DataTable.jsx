@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, filterTypes, getFirst, omitProps } from '../../util/component-types';
 
@@ -25,7 +26,7 @@ const {
 	string,
 	bool,
 	arrayOf,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  *

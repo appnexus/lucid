@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Overlay from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps }  from '../../util/component-types';
@@ -9,7 +10,7 @@ const cx = lucidClassNames.bind('&-Dialog');
 const {
 	node,
 	oneOf,
-} = React.PropTypes;
+} = PropTypes;
 
 const SMALL = 'small';
 const MEDIUM = 'medium';

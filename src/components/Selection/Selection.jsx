@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import MinusCircleIcon from '../Icon/MinusCircleIcon/MinusCircleIcon';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
 import CrossIcon from '../Icon/CrossIcon/CrossIcon';
@@ -22,7 +23,7 @@ const {
 	string,
 	node,
 	oneOf,
-} = React.PropTypes;
+} = PropTypes;
 
 const cx = lucidClassNames.bind('&-Selection');
 
