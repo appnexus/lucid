@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 
@@ -17,7 +18,7 @@ const {
 	oneOf,
 	bool,
 	func,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  * {"categories": ["visualizations", "chart primitives"]}

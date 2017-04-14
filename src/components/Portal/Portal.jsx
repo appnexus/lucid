@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { createClass, omitProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -6,12 +7,10 @@ import { lucidClassNames } from '../../util/style-helpers';
 const cx = lucidClassNames.bind('&-Portal');
 
 const {
-	PropTypes: {
-		any,
-		node,
-		string,
-	},
-} = React;
+	any,
+	node,
+	string,
+} = PropTypes;
 
 /**
  *

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -14,7 +15,7 @@ const {
 	oneOf,
 	oneOfType,
 	string,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  *

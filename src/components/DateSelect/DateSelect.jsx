@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { buildHybridComponent } from '../../util/state-management';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -21,7 +22,7 @@ const {
 	number,
 	oneOf,
 	string,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  * {"categories": ["controls", "selectors"], "madeFrom": ["InfiniteSlidePanel", "CalendarMonth"]}

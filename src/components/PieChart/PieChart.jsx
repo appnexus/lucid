@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 import * as d3Shape from 'd3-shape';
@@ -21,7 +22,7 @@ const {
 	shape,
 	object,
 	func,
-} = React.PropTypes;
+} = PropTypes;
 
 const DONUT_WIDTH = 15;
 const HOVER_SCALE = 1.1; // duplicated in .less file

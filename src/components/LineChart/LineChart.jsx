@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
 import {
@@ -34,7 +35,7 @@ const {
 	string,
 	bool,
 	oneOfType,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  * {"categories": ["visualizations", "charts"], "madeFrom": ["ContextMenu", "ToolTip"]}

@@ -1,5 +1,6 @@
 import sinon from 'sinon';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { mount, shallow } from 'enzyme';
 import assert from 'assert';
 import _ from 'lodash';
@@ -82,7 +83,7 @@ export function common(Component, {
 
 		describe('function propTypes', () => {
 
-			const funcProps = _.pickBy(Component.propTypes, (propType) => propType === React.PropTypes.func);
+			const funcProps = _.pickBy(Component.propTypes, (propType) => propType === PropTypes.func);
 
 			_.forEach(funcProps, (propType, propName) => {
 				it(`${propName} should only use onX convention for function proptypes`, () => {

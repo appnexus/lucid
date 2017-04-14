@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	extractFields,
@@ -22,7 +23,7 @@ const {
 	object,
 	bool,
 	string,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  * {"categories": ["visualizations", "chart primitives"], "madeFrom": ["Bar", "ToolTip", "Legend"]}

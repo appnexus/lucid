@@ -1,10 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
 
-const { oneOf } = React.PropTypes;
+const { oneOf } = PropTypes;
 const cx = lucidClassNames.bind('&-LoadingIcon');
 const durations = {
 	fast: '0.75s',

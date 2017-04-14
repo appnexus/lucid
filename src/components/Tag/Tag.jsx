@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import CrossIcon from '../Icon/CrossIcon/CrossIcon';
@@ -16,7 +17,7 @@ const {
 	func,
 	node,
 	string,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  * {"categories": ["communication"]}

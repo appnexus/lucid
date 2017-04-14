@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, findTypes, omitProps } from '../../util/component-types';
@@ -18,7 +19,7 @@ const {
 	object,
 	oneOf,
 	string,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  * {"categories": ["layout"], "madeFrom": ["ChevronIcon"]}

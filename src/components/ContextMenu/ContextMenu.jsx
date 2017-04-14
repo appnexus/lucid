@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import Portal from '../Portal/Portal';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
@@ -8,16 +9,14 @@ import { lucidClassNames } from '../../util/style-helpers';
 const cx = lucidClassNames.bind('&-ContextMenu');
 
 const {
-	PropTypes: {
-		bool,
-		node,
-		func,
-		number,
-		object,
-		oneOf,
-		string,
-	},
-} = React;
+	bool,
+	node,
+	func,
+	number,
+	object,
+	oneOf,
+	string,
+} = PropTypes;
 
 /**
  *
