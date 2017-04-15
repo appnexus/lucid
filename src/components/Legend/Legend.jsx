@@ -12,13 +12,7 @@ const cx = lucidClassNames.bind('&-Legend');
 const POINT_SIZE = 12;
 const LINE_WIDTH = 22;
 
-const {
-	number,
-	string,
-	oneOf,
-	bool,
-	func,
-} = PropTypes;
+const { number, string, oneOf, bool, func } = PropTypes;
 
 /**
  * {"categories": ["visualizations", "chart primitives"]}
@@ -114,7 +108,8 @@ const Legend = createClass({
 		const isHorizontal = orient === 'horizontal';
 		const isVertical = orient === 'vertical';
 		const itemProps = _.map(findTypes(this.props, Legend.Item), 'props');
-		const hasSomeLines = isVertical && _.some(itemProps, ({ hasLine }) => hasLine);
+		const hasSomeLines =
+			isVertical && _.some(itemProps, ({ hasLine }) => hasLine);
 
 		return (
 			<ul
@@ -140,28 +135,32 @@ const Legend = createClass({
 						className={cx(itemClass, '&-Item')}
 						onClick={_.partial(this.handleItemClick, index, itemProps[index])}
 					>
-						{hasPoint || hasLine ?
-							<svg
-								className={cx('&-Item-indicator')}
-								width={hasLine || hasSomeLines ? LINE_WIDTH : POINT_SIZE}
-								height={POINT_SIZE}
-							>
-								{hasPoint ?
-									<Point
-										x={hasLine || hasSomeLines ? LINE_WIDTH / 2 : POINT_SIZE / 2}
-										y={POINT_SIZE / 2}
-										color={color}
-										kind={pointKind}
-									/>
-								: null}
-								{hasLine ?
-									<Line
-										d={`M0,${POINT_SIZE / 2} L${LINE_WIDTH},${POINT_SIZE / 2}`}
-										color={color}
-									/>
-								: null}
-							</svg>
-						: null}
+						{hasPoint || hasLine
+							? <svg
+									className={cx('&-Item-indicator')}
+									width={hasLine || hasSomeLines ? LINE_WIDTH : POINT_SIZE}
+									height={POINT_SIZE}
+								>
+									{hasPoint
+										? <Point
+												x={
+													hasLine || hasSomeLines
+														? LINE_WIDTH / 2
+														: POINT_SIZE / 2
+												}
+												y={POINT_SIZE / 2}
+												color={color}
+												kind={pointKind}
+											/>
+										: null}
+									{hasLine
+										? <Line
+												d={`M0,${POINT_SIZE / 2} L${LINE_WIDTH},${POINT_SIZE / 2}`}
+												color={color}
+											/>
+										: null}
+								</svg>
+							: null}
 						{children}
 					</li>
 				))}

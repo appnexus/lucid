@@ -22,8 +22,16 @@ describe('RadioButtonLabeled', () => {
 				</RadioButtonLabeled>
 			);
 
-			assert.equal(wrapper.find(RadioButtonLabeled.Label).children().at(0).text(), 'one', 'wrong or missing first Label child');
-			assert.equal(wrapper.find(RadioButtonLabeled.Label).children().at(1).text(), 'two', 'wrong or missing second Label child');
+			assert.equal(
+				wrapper.find(RadioButtonLabeled.Label).children().at(0).text(),
+				'one',
+				'wrong or missing first Label child'
+			);
+			assert.equal(
+				wrapper.find(RadioButtonLabeled.Label).children().at(1).text(),
+				'two',
+				'wrong or missing second Label child'
+			);
 		});
 	});
 
@@ -75,23 +83,23 @@ describe('RadioButtonLabeled', () => {
 			it('passes through all props not defined in `propTypes` to its `RadioButton` instance.', () => {
 				const wrapper = shallow(
 					<RadioButtonLabeled
-							className='wut'
-							isDisabled={true}
-							isSelected={true}
-							style={{ fontWeight: 'bold' }}
-							onSelect={_.noop}
-							foo={1}
-							bar={2}
-							baz={3}
-							qux={4}
-							quux={5}
+						className="wut"
+						isDisabled={true}
+						isSelected={true}
+						style={{ fontWeight: 'bold' }}
+						onSelect={_.noop}
+						foo={1}
+						bar={2}
+						baz={3}
+						qux={4}
+						quux={5}
 					/>
 				);
 				const radioButtonProps = wrapper.find(RadioButton).props();
 
 				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
 				// to the `RadioButton` instance.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
+				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], prop => {
 					assert(_.has(radioButtonProps, prop));
 				});
 			});

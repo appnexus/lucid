@@ -3,12 +3,6 @@ import { LineChart } from '../../../index';
 
 export default React.createClass({
 	render() {
-		return (
-			<LineChart
-				data={[]}
-
-				yAxisFields={['blueberries']}
-			/>
-		);
+		return <LineChart data={[]} yAxisFields={['blueberries']} />;
 	},
 });

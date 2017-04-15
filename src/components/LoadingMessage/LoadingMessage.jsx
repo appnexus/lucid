@@ -7,11 +7,7 @@ import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 
 const cx = lucidClassNames.bind('&-LoadingMessage');
 
-const {
-	any,
-	node,
-	string,
-} = PropTypes;
+const { any, node, string } = PropTypes;
 
 /**
  *
@@ -72,19 +68,9 @@ const LoadingMessage = createClass({
 	},
 
 	render() {
-		const {
-			props,
-			props: {
-				className,
-				...passThroughs
-			},
-		} = this;
+		const { props, props: { className, ...passThroughs } } = this;
 
-		const {
-			Icon,
-			Title,
-			Body,
-		} = LoadingMessage;
+		const { Icon, Title, Body } = LoadingMessage;
 
 		const defaultTitle = 'Loading';
 		const iconElement = getFirst(props, Icon);
@@ -97,10 +83,15 @@ const LoadingMessage = createClass({
 		return (
 			<div
 				{...omitProps(passThroughs, LoadingMessage)}
-				className={cx('&', { '&-no-content': _.isNull(titleChildren) && !bodyChildren }, className)}
+				className={cx(
+					'&',
+					{ '&-no-content': _.isNull(titleChildren) && !bodyChildren },
+					className
+				)}
 			>
 				{iconChildren}
-				{!_.isNull(titleChildren) && <h3 className={cx('&-title')}>{titleChildren || defaultTitle}</h3>}
+				{!_.isNull(titleChildren) &&
+					<h3 className={cx('&-title')}>{titleChildren || defaultTitle}</h3>}
 				{bodyChildren && <span className={cx('&-body')}>{bodyChildren}</span>}
 			</div>
 		);

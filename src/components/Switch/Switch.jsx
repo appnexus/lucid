@@ -5,12 +5,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Switch');
-const {
-	bool,
-	func,
-	object,
-	string,
-} = PropTypes;
+const { bool, func, object, string } = PropTypes;
 
 /**
  * {"categories": ["controls", "toggles"]}
@@ -80,22 +75,26 @@ const Switch = createClass({
 
 		return (
 			<span
-					className={cx('&', {
+				className={cx(
+					'&',
+					{
 						'&-is-disabled': isDisabled,
 						'&-is-selected': isSelected,
-					}, className)}
-					onClick={this.handleClicked}
-					onTouchEnd={this.handleClicked}
-					style={style}
+					},
+					className
+				)}
+				onClick={this.handleClicked}
+				onTouchEnd={this.handleClicked}
+				style={style}
 			>
 				<input
-						onChange={_.noop}
-						{...omitProps(passThroughs, Switch, 'children')}
-						checked={isSelected}
-						className={cx('&-native')}
-						disabled={isDisabled}
-						ref='nativeElement'
-						type='checkbox'
+					onChange={_.noop}
+					{...omitProps(passThroughs, Switch, 'children')}
+					checked={isSelected}
+					className={cx('&-native')}
+					disabled={isDisabled}
+					ref="nativeElement"
+					type="checkbox"
 				/>
 				<span className={cx('&-visualization-container')} />
 				<span className={cx('&-visualization-glow')} />
@@ -105,11 +104,7 @@ const Switch = createClass({
 	},
 
 	handleClicked(event) {
-		const {
-			isDisabled,
-			isSelected,
-			onSelect,
-		} = this.props;
+		const { isDisabled, isSelected, onSelect } = this.props;
 
 		event.preventDefault();
 

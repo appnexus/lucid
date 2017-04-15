@@ -11,22 +11,15 @@ import WarningIcon from '../Icon/WarningIcon/WarningIcon';
 
 const cx = lucidClassNames.bind('&-Banner');
 
-const {
-	bool,
-	element,
-	func,
-	node,
-	oneOf,
-	string,
-} = PropTypes;
+const { bool, element, func, node, oneOf, string } = PropTypes;
 
 const defaultIcons = {
-	'success': <SuccessIcon />,
-	'danger': <DangerIcon />,
-	'info': <InfoIcon isBadge />,
-	'warning': <WarningIcon />,
-	'primary': null,
-	'default': null,
+	success: <SuccessIcon />,
+	danger: <DangerIcon />,
+	info: <InfoIcon isBadge />,
+	warning: <WarningIcon />,
+	primary: null,
+	default: null,
 };
 
 /**
@@ -72,14 +65,7 @@ const Banner = createClass({
 		/**
 		 * Style variations of the `Banner`.
 		 */
-		kind: oneOf([
-			'primary',
-			'success',
-			'warning',
-			'danger',
-			'info',
-			'default',
-		]),
+		kind: oneOf(['primary', 'success', 'warning', 'danger', 'info', 'default']),
 		/**
 		 * If set to `true` the banner have smaller padding on the inside.
 		 */
@@ -94,7 +80,6 @@ const Banner = createClass({
 		 * Controls the visibility of the `Banner`.
 		 */
 		isClosed: bool,
-
 	},
 
 	getDefaultProps() {
@@ -110,9 +95,7 @@ const Banner = createClass({
 	},
 
 	handleClose(event) {
-		const {
-			onClose,
-		} = this.props;
+		const { onClose } = this.props;
 
 		onClose({ event, props: this.props });
 	},
@@ -145,36 +128,40 @@ const Banner = createClass({
 				transitionEnterTimeout={300}
 				transitionLeaveTimeout={300}
 			>
-				{!isClosed ?
-					<section
-						{...omitProps(passThroughs, Banner)}
-						className={cx('&', {
-							'&-has-icon': displayedIcon,
-							'&-has-close': isCloseable,
-							'&-has-no-roundedCorners': !hasRoundedCorners,
-							'&-primary': kind === 'primary',
-							'&-success': kind === 'success',
-							'&-warning': kind === 'warning',
-							'&-danger': kind === 'danger',
-							'&-info': kind === 'info',
-							'&-small': isSmall,
-						}, className)}
-					>
-						{displayedIcon ?
-							<span className={cx('&-icon')}>{displayedIcon}</span>
-						: null}
+				{!isClosed
+					? <section
+							{...omitProps(passThroughs, Banner)}
+							className={cx(
+								'&',
+								{
+									'&-has-icon': displayedIcon,
+									'&-has-close': isCloseable,
+									'&-has-no-roundedCorners': !hasRoundedCorners,
+									'&-primary': kind === 'primary',
+									'&-success': kind === 'success',
+									'&-warning': kind === 'warning',
+									'&-danger': kind === 'danger',
+									'&-info': kind === 'info',
+									'&-small': isSmall,
+								},
+								className
+							)}
+						>
+							{displayedIcon
+								? <span className={cx('&-icon')}>{displayedIcon}</span>
+								: null}
 
-						<span className={cx('&-content')}>
-							{children}
-						</span>
-
-						{isCloseable ?
-							<span className={cx('&-close')} onClick={this.handleClose}>
-								{String.fromCharCode(0x00d7)}
+							<span className={cx('&-content')}>
+								{children}
 							</span>
-						: null}
-					</section>
-				: null}
+
+							{isCloseable
+								? <span className={cx('&-close')} onClick={this.handleClose}>
+										{String.fromCharCode(0x00d7)}
+									</span>
+								: null}
+						</section>
+					: null}
 			</ReactCSSTransitionGroup>
 		);
 	},

@@ -19,10 +19,7 @@ const EqualsIcon = createClass({
 	},
 
 	render() {
-		const {
-			className,
-			...passThroughs
-		} = this.props;
+		const { className, ...passThroughs } = this.props;
 
 		return (
 			<Icon
@@ -30,7 +27,7 @@ const EqualsIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path d='M3,5L3,7L13,7L13,5L3,5z M3,11L13,11L13,9L3,9L3,11z' />
+				<path d="M3,5L3,7L13,7L13,5L3,5z M3,11L13,11L13,9L3,9L3,11z" />
 			</Icon>
 		);
 	},

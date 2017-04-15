@@ -16,18 +16,22 @@ import * as d3Time from 'd3-time';
 export function stackByFields(collection, fields) {
 	const fieldsArray = _.castArray(fields);
 
-	return _.map(collection, (d) => {
-		return _.reduce(fieldsArray, (acc, field) => {
-			const dataPoint = _.get(d, field, 0);
+	return _.map(collection, d => {
+		return _.reduce(
+			fieldsArray,
+			(acc, field) => {
+				const dataPoint = _.get(d, field, 0);
 
-			if (_.isEmpty(acc)) {
-				return acc.concat([[0, dataPoint]]);
-			}
+				if (_.isEmpty(acc)) {
+					return acc.concat([[0, dataPoint]]);
+				}
 
-			const last = _.last(_.last(acc));
+				const last = _.last(_.last(acc));
 
-			return acc.concat([[last, last + dataPoint]]);
-		}, []);
+				return acc.concat([[last, last + dataPoint]]);
+			},
+			[]
+		);
 	});
 }
 
@@ -44,8 +48,8 @@ export function stackByFields(collection, fields) {
 export function extractFields(collection, fields) {
 	const fieldsArray = _.castArray(fields);
 
-	return _.map(collection, (d) => {
-		return _.map(fieldsArray, (field) => [0, _.get(d, field, 0)]);
+	return _.map(collection, d => {
+		return _.map(fieldsArray, field => [0, _.get(d, field, 0)]);
 	});
 }
 
@@ -62,7 +66,7 @@ export function extractFields(collection, fields) {
 export function groupByFields(collection, fields) {
 	const fieldsArray = _.castArray(fields);
 
-	return _.map(fieldsArray, (field) => {
+	return _.map(fieldsArray, field => {
 		return _.map(collection, field);
 	});
 }
@@ -80,9 +84,13 @@ export function groupByFields(collection, fields) {
 export function byFields(collection, fields) {
 	const fieldArray = _.castArray(fields);
 
-	return _.reduce(fieldArray, (acc, field) => {
-		return acc.concat(_.map(collection, field));
-	}, []);
+	return _.reduce(
+		fieldArray,
+		(acc, field) => {
+			return acc.concat(_.map(collection, field));
+		},
+		[]
+	);
 }
 
 /**
@@ -101,7 +109,7 @@ export function nearest(nums, value) {
 	}
 
 	if (nums.length === 2) {
-		return value > ((nums[0] + nums[1]) / 2) ? nums[1] : nums[0];
+		return value > (nums[0] + nums[1]) / 2 ? nums[1] : nums[0];
 	}
 
 	const mid = nums.length >>> 1;
@@ -149,9 +157,13 @@ export function maxByFields(collection, fields) {
 export function maxByFieldsStacked(collection, fields) {
 	const fieldArray = _.castArray(fields);
 
-	const sums = _.reduce(collection, (acc, item) => {
-		return acc.concat(_.sum(_.toArray(_.pick(item, fieldArray))));
-	}, []);
+	const sums = _.reduce(
+		collection,
+		(acc, item) => {
+			return acc.concat(_.sum(_.toArray(_.pick(item, fieldArray))));
+		},
+		[]
+	);
 
 	return _.max(sums);
 }
@@ -172,9 +184,13 @@ export function discreteTicks(array, count) {
 
 	const step = (array.length - 1) / Math.max(1, count - 1);
 
-	return _.reduce(_.times(count), (acc, n) => {
-		return acc.concat(array[Math.round(n  * step)]);
-	}, []);
+	return _.reduce(
+		_.times(count),
+		(acc, n) => {
+			return acc.concat(array[Math.round(n * step)]);
+		},
+		[]
+	);
 }
 
 /**
@@ -192,7 +208,7 @@ export function discreteTicks(array, count) {
  * @return {string} - transform string
  */
 export function transformFromCenter(x, y, xCenter, yCenter, scale) {
-	return `translate(${((1 - scale) * xCenter) + (x - xCenter)}, ${((1 - scale) * yCenter) + (y - yCenter)}) scale(${scale})`;
+	return `translate(${(1 - scale) * xCenter + (x - xCenter)}, ${(1 - scale) * yCenter + (y - yCenter)}) scale(${scale})`;
 }
 
 const FORMAT_MILLISECOND = d3TimeFormat.timeFormat('.%L');
@@ -214,12 +230,17 @@ const FORMAT_YEAR = d3TimeFormat.timeFormat('%Y');
  * @return {string} - formatted date
  */
 export function formatDate(date) {
-	return (d3Time.timeSecond(date) < date ? FORMAT_MILLISECOND
-		: d3Time.timeMinute(date) < date ? FORMAT_SECOND
-		: d3Time.timeHour(date) < date ? FORMAT_MINUTE
-		: d3Time.timeDay(date) < date ? FORMAT_HOUR
-		: d3Time.timeMonth(date) < date ? (d3Time.timeWeek(date) < date ? FORMAT_DAY : FORMAT_WEEK)
-		: d3Time.timeYear(date) < date ? FORMAT_MONTH
-		: FORMAT_YEAR)(date);
+	return (d3Time.timeSecond(date) < date
+		? FORMAT_MILLISECOND
+		: d3Time.timeMinute(date) < date
+				? FORMAT_SECOND
+				: d3Time.timeHour(date) < date
+						? FORMAT_MINUTE
+						: d3Time.timeDay(date) < date
+								? FORMAT_HOUR
+								: d3Time.timeMonth(date) < date
+										? d3Time.timeWeek(date) < date ? FORMAT_DAY : FORMAT_WEEK
+										: d3Time.timeYear(date) < date
+												? FORMAT_MONTH
+												: FORMAT_YEAR)(date);
 }
-

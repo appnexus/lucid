@@ -1,11 +1,7 @@
 import React from 'react';
 import { Button, DropMenu } from '../../../index';
 
-const {
-	Control,
-	Option,
-	OptionGroup,
-} = DropMenu;
+const { Control, Option, OptionGroup } = DropMenu;
 
 export default React.createClass({
 	render() {

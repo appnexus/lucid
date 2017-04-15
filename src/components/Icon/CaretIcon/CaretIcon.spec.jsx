@@ -6,4 +6,3 @@ describe('CaretIcon', () => {
 	common(CaretIcon);
 	icons(CaretIcon);
 });
-

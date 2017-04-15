@@ -7,11 +7,7 @@ import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Line');
 
-const {
-	string,
-	object,
-	bool,
-} = PropTypes;
+const { string, object, bool } = PropTypes;
 
 /**
  * {"categories": ["visualizations", "geoms"]}
@@ -71,9 +67,7 @@ const Line = createClass({
 		} = this.props;
 
 		const isCustomColor = _.startsWith(color, '#');
-		const colorStyle = isCustomColor
-			? { fill: color, stroke: color }
-			: null;
+		const colorStyle = isCustomColor ? { fill: color, stroke: color } : null;
 
 		return (
 			<path

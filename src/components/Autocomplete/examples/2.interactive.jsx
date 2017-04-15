@@ -277,7 +277,9 @@ export default React.createClass({
 	render() {
 		const { value } = this.state;
 		const valuePattern = new RegExp(_.escapeRegExp(value), 'i');
-		const filteredWordList = value !== '' ? _.filter(wordlist, (word) => valuePattern.test(word)) : wordlist;
+		const filteredWordList = value !== ''
+			? _.filter(wordlist, word => valuePattern.test(word))
+			: wordlist;
 
 		return (
 			<section>
@@ -287,8 +289,12 @@ export default React.createClass({
 				</section>
 
 				<Autocomplete
-					placeholder='Enter a word...'
-					suggestions={_.size(filteredWordList) <= 1 && _.first(filteredWordList) === value ? [] : filteredWordList}
+					placeholder="Enter a word..."
+					suggestions={
+						_.size(filteredWordList) <= 1 && _.first(filteredWordList) === value
+							? []
+							: filteredWordList
+					}
 					onChange={this.handleChange}
 				/>
 

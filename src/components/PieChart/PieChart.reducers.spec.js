@@ -1,12 +1,8 @@
 import assert from 'assert';
 
-import {
-	onMouseOver,
-	onMouseOut,
-} from './PieChart.reducers';
+import { onMouseOver, onMouseOut } from './PieChart.reducers';
 
 describe('PieChart reducers', () => {
-
 	describe('onMouseOver', () => {
 		it('should should set isHovering and hoveringIndex', () => {
 			const initialState = {
@@ -32,5 +28,4 @@ describe('PieChart reducers', () => {
 			});
 		});
 	});
-
 });

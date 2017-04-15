@@ -2,25 +2,22 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, filterTypes, findTypes, omitProps } from '../../util/component-types';
+import {
+	createClass,
+	filterTypes,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './Submarine.reducers';
 import SplitHorizontal from '../SplitHorizontal/SplitHorizontal';
-import ChevronIcon  from '../Icon/ChevronIcon/ChevronIcon';
-import GripperHorizontalIcon  from '../Icon/GripperHorizontalIcon/GripperHorizontalIcon';
+import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
+import GripperHorizontalIcon
+	from '../Icon/GripperHorizontalIcon/GripperHorizontalIcon';
 
 const cx = lucidClassNames.bind('&-Submarine');
 
-const {
-	any,
-	bool,
-	func,
-	node,
-	number,
-	string,
-	oneOf,
-	oneOfType,
-} = PropTypes;
+const { any, bool, func, node, number, string, oneOf, oneOfType } = PropTypes;
 
 /**
  * {"categories": ["layout"], "madeFrom": ["SplitHorizontal", "ChevronIcon", "GripperHorizontalIcon"]}
@@ -122,7 +119,6 @@ const Submarine = createClass({
 				children: node,
 			},
 		}),
-
 	},
 
 	getDefaultProps() {
@@ -139,25 +135,19 @@ const Submarine = createClass({
 	},
 
 	handleExpanderClick(event) {
-		const {
-			onToggle,
-		} = this.props;
+		const { onToggle } = this.props;
 
 		onToggle({ props: this.props, event });
 	},
 
 	handleResizing(height, { event }) {
-		const {
-			onResizing,
-		} = this.props;
+		const { onResizing } = this.props;
 
 		onResizing(height, { props: this.props, event });
 	},
 
 	handleResize(height, { event }) {
-		const {
-			onResize,
-		} = this.props;
+		const { onResize } = this.props;
 
 		onResize(height, { props: this.props, event });
 	},
@@ -174,12 +164,22 @@ const Submarine = createClass({
 			...passThroughs
 		} = this.props;
 
-		const primaryProps = _.get(_.first(filterTypes(children, Submarine.Primary)), 'props', {}); // props from first Primary
-		const barProps = _.get(_.first(filterTypes(children, Submarine.Bar)), 'props', {}); // props from first Bar
+		const primaryProps = _.get(
+			_.first(filterTypes(children, Submarine.Primary)),
+			'props',
+			{}
+		); // props from first Primary
+		const barProps = _.get(
+			_.first(filterTypes(children, Submarine.Bar)),
+			'props',
+			{}
+		); // props from first Bar
 		const titleProps = _.get(
-			findTypes(barProps, Submarine.Title).concat(findTypes(this.props, Submarine.Title)), // get titles from Bar and parent Submarine
+			findTypes(barProps, Submarine.Title).concat(
+				findTypes(this.props, Submarine.Title)
+			), // get titles from Bar and parent Submarine
 			'[0].props', // select props from the first title element
-			(<Submarine.Title />).props // default props
+			<Submarine.Title />.props // default props
 		);
 
 		let PrimaryPane, BarPane; // using Left/Right Pane as primary depends on position
@@ -194,23 +194,44 @@ const Submarine = createClass({
 		return (
 			<SplitHorizontal
 				{...omitProps(passThroughs, Submarine, [], false)}
-				className={cx('&', {
-					'&-is-resize-disabled': isResizeDisabled,
-					'&-is-position-bottom': position === 'bottom',
-					'&-is-position-top': position !== 'bottom',
-				}, className)}
+				className={cx(
+					'&',
+					{
+						'&-is-resize-disabled': isResizeDisabled,
+						'&-is-position-bottom': position === 'bottom',
+						'&-is-position-top': position !== 'bottom',
+					},
+					className
+				)}
 				isAnimated={isAnimated}
 				isExpanded={isExpanded}
 				collapseShift={33} // leave 33px of sidebar to stick out when collapsed
 				onResizing={this.handleResizing}
 				onResize={this.handleResize}
 			>
-				<BarPane {...omitProps(barProps, Submarine.Bar, [], false)} className={cx('&-Bar', barProps.className)} height={height}>
+				<BarPane
+					{...omitProps(barProps, Submarine.Bar, [], false)}
+					className={cx('&-Bar', barProps.className)}
+					height={height}
+				>
 					<div className={cx('&-Bar-overlay')} />
 					<div className={cx('&-Bar-header')}>
-						<div {...titleProps} className={cx('&-Bar-Title', titleProps.className)} />
-						<div className={cx('&-expander')} onMouseDown={this.handleExpanderClick}>
-							<ChevronIcon direction={isExpanded && position === 'bottom' || !isExpanded && position !== 'bottom' ? 'down' : 'up'} />
+						<div
+							{...titleProps}
+							className={cx('&-Bar-Title', titleProps.className)}
+						/>
+						<div
+							className={cx('&-expander')}
+							onMouseDown={this.handleExpanderClick}
+						>
+							<ChevronIcon
+								direction={
+									(isExpanded && position === 'bottom') ||
+										(!isExpanded && position !== 'bottom')
+										? 'down'
+										: 'up'
+								}
+							/>
 						</div>
 					</div>
 					<div className={cx('&-Bar-content')}>
@@ -220,7 +241,11 @@ const Submarine = createClass({
 				<SplitHorizontal.Divider className={cx('&-Divider')}>
 					<GripperHorizontalIcon className={cx('&-Divider-gripper')} />
 				</SplitHorizontal.Divider>
-				<PrimaryPane {...primaryProps} className={cx('&-Primary', primaryProps.className)} isPrimary />
+				<PrimaryPane
+					{...primaryProps}
+					className={cx('&-Primary', primaryProps.className)}
+					isPrimary
+				/>
 			</SplitHorizontal>
 		);
 	},

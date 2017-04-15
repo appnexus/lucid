@@ -9,7 +9,7 @@ export default React.createClass({
 					Bitters shabby chic tacos, sapiente drinking vinegar readymade gochujang typewriter. Gluten-free cred sartorial pop-up commodo.
 				</Sidebar.Bar>
 				<Sidebar.Primary>
-					<Sidebar position='right'>
+					<Sidebar position="right">
 						<Sidebar.Bar>
 							Id mumblecore blue bottle vegan, fingerstache commodo health goth man bun bitters. Ad ennui authentic, offal humblebrag paleo minim vero hammock kickstarter reprehenderit gastropub.
 						</Sidebar.Bar>

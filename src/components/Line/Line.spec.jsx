@@ -11,9 +11,7 @@ describe('Line', () => {
 	describe('props', () => {
 		describe('d', () => {
 			it('should pass through', () => {
-				const wrapper = shallow(
-					<Line d='foo' />
-				);
+				const wrapper = shallow(<Line d="foo" />);
 
 				assert.equal(wrapper.find('path').prop('d'), 'foo');
 			});
@@ -21,21 +19,16 @@ describe('Line', () => {
 
 		describe('color', () => {
 			it('should apply color strings as a class', () => {
-				const wrapper = shallow(
-					<Line
-						color='wat'
-					/>
-				);
+				const wrapper = shallow(<Line color="wat" />);
 
-				assert(wrapper.find('path').hasClass('lucid-Line-wat'), 'missing color class');
+				assert(
+					wrapper.find('path').hasClass('lucid-Line-wat'),
+					'missing color class'
+				);
 			});
 
 			it('should apply custom colors to `style`', () => {
-				const wrapper = shallow(
-					<Line
-						color='#A00B00'
-					/>
-				);
+				const wrapper = shallow(<Line color="#A00B00" />);
 
 				assert.deepEqual(wrapper.find('path').prop('style'), {
 					fill: '#A00B00',
@@ -46,13 +39,10 @@ describe('Line', () => {
 
 		describe('isDotted', () => {
 			it('should apply the correct class', () => {
-				const wrapper = shallow(
-					<Line isDotted />
-				);
+				const wrapper = shallow(<Line isDotted />);
 
 				assert(wrapper.find('path').hasClass('lucid-Line-is-dotted'));
 			});
 		});
 	});
 });
-

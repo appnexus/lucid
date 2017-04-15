@@ -21,14 +21,18 @@ export default React.createClass({
 		return (
 			<VerticalListMenu
 				onSelect={_.partial(this.handleSelect, 'one')}
-				selectedIndices={this.state.currentList === 'one' ? this.state.selectedIndices : []}
+				selectedIndices={
+					this.state.currentList === 'one' ? this.state.selectedIndices : []
+				}
 			>
 				<VerticalListMenu.Item>Level one</VerticalListMenu.Item>
 				<VerticalListMenu.Item isExpanded={true}>
 					Level one with VerticalListMenu
 					<VerticalListMenu
 						onSelect={_.partial(this.handleSelect, 'two')}
-						selectedIndices={this.state.currentList === 'two' ? this.state.selectedIndices : []}
+						selectedIndices={
+							this.state.currentList === 'two' ? this.state.selectedIndices : []
+						}
 					>
 						<VerticalListMenu.Item>Level two</VerticalListMenu.Item>
 						<VerticalListMenu.Item>Level two</VerticalListMenu.Item>
@@ -38,14 +42,22 @@ export default React.createClass({
 					Level one with VerticalListMenu
 					<VerticalListMenu
 						onSelect={_.partial(this.handleSelect, 'three')}
-						selectedIndices={this.state.currentList === 'three' ? this.state.selectedIndices : []}
+						selectedIndices={
+							this.state.currentList === 'three'
+								? this.state.selectedIndices
+								: []
+						}
 					>
 						<VerticalListMenu.Item>Level two</VerticalListMenu.Item>
 						<VerticalListMenu.Item isExpanded={false}>
 							Level two with closed VerticalListMenu
 							<VerticalListMenu
 								onSelect={_.partial(this.handleSelect, 'four')}
-								selectedIndices={this.state.currentList === 'four' ? this.state.selectedIndices : []}
+								selectedIndices={
+									this.state.currentList === 'four'
+										? this.state.selectedIndices
+										: []
+								}
 							>
 								<VerticalListMenu.Item>Level three</VerticalListMenu.Item>
 								<VerticalListMenu.Item>Level three</VerticalListMenu.Item>

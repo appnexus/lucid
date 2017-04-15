@@ -9,16 +9,16 @@ export default React.createClass({
 					<EligibilityIcon isClickable />
 				</div>
 				<div>
-					<EligibilityIcon isClickable eligibility='both' />
-					<EligibilityIcon isClickable eligibility='neither' />
-					<EligibilityIcon isClickable eligibility='left' />
-					<EligibilityIcon isClickable eligibility='right' />
+					<EligibilityIcon isClickable eligibility="both" />
+					<EligibilityIcon isClickable eligibility="neither" />
+					<EligibilityIcon isClickable eligibility="left" />
+					<EligibilityIcon isClickable eligibility="right" />
 				</div>
 				<div>
-					<EligibilityIcon isClickable eligibility='both' isBadge />
-					<EligibilityIcon isClickable eligibility='neither' isBadge />
-					<EligibilityIcon isClickable eligibility='left' isBadge />
-					<EligibilityIcon isClickable eligibility='right' isBadge />
+					<EligibilityIcon isClickable eligibility="both" isBadge />
+					<EligibilityIcon isClickable eligibility="neither" isBadge />
+					<EligibilityIcon isClickable eligibility="left" isBadge />
+					<EligibilityIcon isClickable eligibility="right" isBadge />
 				</div>
 			</div>
 		);

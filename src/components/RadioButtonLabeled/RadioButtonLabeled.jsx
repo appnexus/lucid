@@ -2,16 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps }  from '../../util/component-types';
+import { createClass, findTypes, omitProps } from '../../util/component-types';
 import RadioButton from '../RadioButton/RadioButton';
 
 const cx = lucidClassNames.bind('&-RadioButtonLabeled');
-const {
-	any,
-	node,
-	object,
-	string,
-} = PropTypes;
+const { any, node, object, string } = PropTypes;
 
 /**
  * {"categories": ["controls", "toggles"], "extend": "RadioButton", "madeFrom": ["RadioButton"]}
@@ -75,27 +70,30 @@ const RadioButtonLabeled = createClass({
 			...passThroughs
 		} = this.props;
 
-		const labelChildProps = _.first(_.map(findTypes(this.props, RadioButtonLabeled.Label), 'props'));
+		const labelChildProps = _.first(
+			_.map(findTypes(this.props, RadioButtonLabeled.Label), 'props')
+		);
 
 		return (
 			<label
-					className={cx('&', {
+				className={cx(
+					'&',
+					{
 						'&-is-disabled': isDisabled,
 						'&-is-selected': isSelected,
-					}, className)}
-					style={style}
+					},
+					className
+				)}
+				style={style}
 			>
 				<RadioButton
-						className={className}
-						isDisabled={isDisabled}
-						isSelected={isSelected}
-						onSelect={onSelect}
-						{...omitProps(passThroughs, RadioButtonLabeled, [], false)}
+					className={className}
+					isDisabled={isDisabled}
+					isSelected={isSelected}
+					onSelect={onSelect}
+					{...omitProps(passThroughs, RadioButtonLabeled, [], false)}
 				/>
-				<div
-					{...labelChildProps}
-					className={cx('&-label')}
-				/>
+				<div {...labelChildProps} className={cx('&-label')} />
 			</label>
 		);
 	},

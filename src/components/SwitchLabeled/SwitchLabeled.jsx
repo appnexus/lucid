@@ -3,16 +3,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, omitProps }  from '../../util/component-types';
+import { createClass, getFirst, omitProps } from '../../util/component-types';
 import Switch from '../Switch/Switch';
 
 const cx = lucidClassNames.bind('&-SwitchLabeled');
-const {
-	any,
-	node,
-	object,
-	string,
-} = PropTypes;
+const { any, node, object, string } = PropTypes;
 
 /**
  * {"categories": ["controls", "toggles"], "extend": "Switch", "madeFrom": ["Switch"]}
@@ -74,8 +69,16 @@ const SwitchLabeled = createClass({
 	},
 
 	componentWillReceiveProps(nextProps) {
-		const currentLabel = _.get(getFirst(this.props, SwitchLabeled.Label), 'props.children', null);
-		const nextLabel = _.get(getFirst(nextProps, SwitchLabeled.Label), 'props.children', null);
+		const currentLabel = _.get(
+			getFirst(this.props, SwitchLabeled.Label),
+			'props.children',
+			null
+		);
+		const nextLabel = _.get(
+			getFirst(nextProps, SwitchLabeled.Label),
+			'props.children',
+			null
+		);
 
 		if (currentLabel !== nextLabel) {
 			this._labelKey++;
@@ -92,35 +95,42 @@ const SwitchLabeled = createClass({
 			...passThroughs
 		} = this.props;
 
-		const labelChildProps = _.get(getFirst(this.props, SwitchLabeled.Label), 'props');
+		const labelChildProps = _.get(
+			getFirst(this.props, SwitchLabeled.Label),
+			'props'
+		);
 
 		return (
 			<label
-					className={cx('&', {
+				className={cx(
+					'&',
+					{
 						'&-is-disabled': isDisabled,
 						'&-is-selected': isSelected,
-					}, className)}
-					style={style}
+					},
+					className
+				)}
+				style={style}
 			>
 				<Switch
-						className={className}
-						isDisabled={isDisabled}
-						isSelected={isSelected}
-						onSelect={onSelect}
-						{...omitProps(passThroughs, SwitchLabeled, [], false)}
+					className={className}
+					isDisabled={isDisabled}
+					isSelected={isSelected}
+					onSelect={onSelect}
+					{...omitProps(passThroughs, SwitchLabeled, [], false)}
 				/>
 				<ReactCSSTransitionGroup
-						transitionName={cx('&-text')}
-						transitionEnterTimeout={100}
-						transitionLeaveTimeout={100}
-						style={{position: 'relative'}}
-						className={cx('&-text')}
+					transitionName={cx('&-text')}
+					transitionEnterTimeout={100}
+					transitionLeaveTimeout={100}
+					style={{ position: 'relative' }}
+					className={cx('&-text')}
 				>
-					{
-						labelChildProps
-								? <span key={this._labelKey}>{labelChildProps.children || labelChildProps}</span>
-								: null
-					}
+					{labelChildProps
+						? <span key={this._labelKey}>
+								{labelChildProps.children || labelChildProps}
+							</span>
+						: null}
 				</ReactCSSTransitionGroup>
 			</label>
 		);

@@ -13,7 +13,6 @@ export function getAbsoluteBoundingClientRect(domNode) {
 	};
 }
 
-
 export function scrollParentTo(domNode, additionalOffset = 0) {
 	if (domNode) {
 		const parentNode = domNode.parentNode;
@@ -21,10 +20,14 @@ export function scrollParentTo(domNode, additionalOffset = 0) {
 			// if the top of the node is above the scroll line,
 			// align to top
 			parentNode.scrollTop = domNode.offsetTop - additionalOffset;
-		} else if (parentNode.scrollTop + parentNode.clientHeight < domNode.offsetTop + domNode.offsetHeight) {
+		} else if (
+			parentNode.scrollTop + parentNode.clientHeight <
+			domNode.offsetTop + domNode.offsetHeight
+		) {
 			// else if the bottom of the node is below the fold,
 			// align to bottom
-			parentNode.scrollTop = domNode.offsetHeight - (parentNode.clientHeight - domNode.offsetTop);
+			parentNode.scrollTop =
+				domNode.offsetHeight - (parentNode.clientHeight - domNode.offsetTop);
 		} // else don't need to align anything
 	}
 }
@@ -62,14 +65,17 @@ export function sharesAncestor(node, siblingNode, nodeName) {
 	return false;
 }
 
-export function shiftChildren(parent, n=1) {
+export function shiftChildren(parent, n = 1) {
 	if (n < 0) {
 		_.times(Math.abs(n), () => {
 			parent.appendChild(parent.children[0]);
 		});
 	} else if (n > 0) {
 		_.times(n, () => {
-			parent.insertBefore(parent.children[parent.children.length-1], parent.children[0]);
+			parent.insertBefore(
+				parent.children[parent.children.length - 1],
+				parent.children[0]
+			);
 		});
 	}
 }

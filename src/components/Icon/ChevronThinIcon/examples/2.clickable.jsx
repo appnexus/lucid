@@ -9,8 +9,8 @@ export default React.createClass({
 					<ChevronThinIcon isClickable />
 				</div>
 				<div>
-					<ChevronThinIcon isClickable direction='left' />
-					<ChevronThinIcon isClickable direction='right' />
+					<ChevronThinIcon isClickable direction="left" />
+					<ChevronThinIcon isClickable direction="right" />
 				</div>
 			</div>
 		);

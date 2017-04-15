@@ -4,7 +4,7 @@ import { Panel } from '../../../index';
 export default React.createClass({
 	render() {
 		return (
-			<Panel style={{height: 240}}>
+			<Panel style={{ height: 240 }}>
 
 				<Panel.Header>
 					<strong>Header</strong>

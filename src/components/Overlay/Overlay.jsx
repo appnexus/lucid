@@ -4,16 +4,11 @@ import PropTypes from 'prop-types';
 import Portal from '../Portal/Portal';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps }  from '../../util/component-types';
+import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Overlay');
 
-const {
-	string,
-	bool,
-	func,
-	node,
-} = PropTypes;
+const { string, bool, func, node } = PropTypes;
 
 /**
  * {"categories": ["utility"], "madeFrom": ["Portal"]}
@@ -95,7 +90,10 @@ const Overlay = createClass({
 
 	componentWillUnmount() {
 		if (window && window.document) {
-			window.document.removeEventListener('keydown', this.handleDocumentKeyDown);
+			window.document.removeEventListener(
+				'keydown',
+				this.handleDocumentKeyDown
+			);
 		}
 	},
 
@@ -103,7 +101,7 @@ const Overlay = createClass({
 		// If the user hits the "escape" key, then fire an `onEscape`
 		// TODO: use key helpers
 		if (event.keyCode === 27) {
-			this.props.onEscape({event, props: this.props });
+			this.props.onEscape({ event, props: this.props });
 		}
 	},
 
@@ -116,7 +114,7 @@ const Overlay = createClass({
 		// Use the reference we previously stored from the `ref` to check what
 		// element was clicked on.
 		if (this._divDOMNode && event.target === this._divDOMNode) {
-			this.props.onBackgroundClick({event, props: this.props });
+			this.props.onBackgroundClick({ event, props: this.props });
 		}
 	},
 
@@ -129,9 +127,7 @@ const Overlay = createClass({
 			...passThroughs
 		} = this.props;
 
-		const {
-			portalId,
-		} = this.state;
+		const { portalId } = this.state;
 
 		return (
 			<Portal portalId={portalId}>
@@ -140,18 +136,18 @@ const Overlay = createClass({
 					transitionEnterTimeout={300}
 					transitionLeaveTimeout={300}
 				>
-					{isShown ?
-						<div
-							{...omitProps(passThroughs, Overlay)}
-							className={cx(className, '&', {
-								'&-is-not-modal': !isModal,
-							})}
-							onClick={this.handleBackgroundClick}
-							ref={this.handleDivRef}
-						>
-							{children}
-						</div>
-					: null}
+					{isShown
+						? <div
+								{...omitProps(passThroughs, Overlay)}
+								className={cx(className, '&', {
+									'&-is-not-modal': !isModal,
+								})}
+								onClick={this.handleBackgroundClick}
+								ref={this.handleDivRef}
+							>
+								{children}
+							</div>
+						: null}
 				</ReactCSSTransitionGroup>
 			</Portal>
 		);
@@ -159,4 +155,3 @@ const Overlay = createClass({
 });
 
 export default Overlay;
-

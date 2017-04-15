@@ -3,8 +3,6 @@ import { SearchField } from '../../../index';
 
 export default React.createClass({
 	render() {
-		return (
-			<SearchField placeholder='Name/ID'/>
-		);
+		return <SearchField placeholder="Name/ID" />;
 	},
 });

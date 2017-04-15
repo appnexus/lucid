@@ -11,14 +11,7 @@ import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 
 const cx = lucidClassNames.bind('&-Autocomplete');
 
-const {
-	arrayOf,
-	bool,
-	func,
-	object,
-	shape,
-	string,
-} = PropTypes;
+const { arrayOf, bool, func, object, shape, string } = PropTypes;
 
 /**
  *
@@ -89,28 +82,18 @@ const Autocomplete = createClass({
 	},
 
 	handleSelect(optionIndex, { event }) {
-		const {
-			suggestions,
-			onChange,
-			onSelect,
-		} = this.props;
+		const { suggestions, onChange, onSelect } = this.props;
 
-		onChange(suggestions[optionIndex], { event, props: this.props});
-		onSelect(optionIndex, { event, props: this.props});
+		onChange(suggestions[optionIndex], { event, props: this.props });
+		onSelect(optionIndex, { event, props: this.props });
 	},
 
 	handleInput(event) {
-		const {
-			onChange,
-			onExpand,
-			DropMenu: {
-				onCollapse,
-			},
-		} = this.props;
+		const { onChange, onExpand, DropMenu: { onCollapse } } = this.props;
 
-		onChange(event.target.value, {event, props: this.props});
+		onChange(event.target.value, { event, props: this.props });
 		if (!_.isEmpty(event.target.value)) {
-			onExpand({event, props: this.props});
+			onExpand({ event, props: this.props });
 		} else {
 			onCollapse();
 		}
@@ -129,17 +112,13 @@ const Autocomplete = createClass({
 	handleInputKeydown(event) {
 		const {
 			onExpand,
-			DropMenu: {
-				isExpanded,
-				focusedIndex,
-				onCollapse,
-			},
+			DropMenu: { isExpanded, focusedIndex, onCollapse },
 		} = this.props;
 
 		const value = this.getInputValue();
 
 		if (event.keyCode === KEYCODE.Tab && isExpanded && focusedIndex !== null) {
-			this.handleSelect(focusedIndex, {event, props: this.props});
+			this.handleSelect(focusedIndex, { event, props: this.props });
 			event.preventDefault();
 		}
 
@@ -147,7 +126,7 @@ const Autocomplete = createClass({
 			event.stopPropagation();
 
 			if (_.isEmpty(value)) {
-				onExpand({event, props: this.props});
+				onExpand({ event, props: this.props });
 			}
 		}
 
@@ -163,21 +142,15 @@ const Autocomplete = createClass({
 	},
 
 	handleControlClick(event) {
-		const {
-			onExpand,
-			DropMenu: {
-				isExpanded,
-				onCollapse,
-			},
-		} = this.props;
+		const { onExpand, DropMenu: { isExpanded, onCollapse } } = this.props;
 
 		if (event.target === this.refs.inputNode) {
-			onExpand({event, props: this.props});
+			onExpand({ event, props: this.props });
 		} else {
 			if (isExpanded) {
 				onCollapse(event);
 			} else {
-				onExpand({event, props: this.props});
+				onExpand({ event, props: this.props });
 			}
 
 			this.refs.inputNode.focus();
@@ -228,46 +201,77 @@ const Autocomplete = createClass({
 				style={style}
 			>
 				<DropMenu.Control onClick={this.handleControlClick}>
-					<div className={cx('&-Control', {
-						'&-Control-is-expanded': isExpanded,
-						'&-Control-is-disabled': isDisabled,
-					})}>
+					<div
+						className={cx('&-Control', {
+							'&-Control-is-expanded': isExpanded,
+							'&-Control-is-disabled': isDisabled,
+						})}
+					>
 						<input
-							{..._.omit(passThroughs, ['onChange', 'onSelect', 'onExpand', 'value', 'children'])}
-							type='text'
+							{..._.omit(passThroughs, [
+								'onChange',
+								'onSelect',
+								'onExpand',
+								'value',
+								'children',
+							])}
+							type="text"
 							className={cx('&-Control-input')}
-							ref='inputNode'
+							ref="inputNode"
 							onKeyDown={this.handleInputKeydown}
 							disabled={isDisabled}
 						/>
 					</div>
 				</DropMenu.Control>
-				{value ? _.map(suggestions, (suggestion) => (
-					<DropMenu.Option key={'AutocompleteOption' + suggestion} >
-						{(() => {
-							const [pre, match, post] = partitionText(suggestion, valuePattern, value.length);
-							const formattedSuggestion = [];
-							if (pre) {
-								formattedSuggestion.push(
-									<span key={`AutocompleteOption-suggestion-pre-${suggestion}`} className={cx('&-Option-suggestion-pre')}>{pre}</span>
-								);
-							}
-							if (match) {
-								formattedSuggestion.push(
-									<span key={`AutocompleteOption-suggestion-match-${suggestion}`} className={cx('&-Option-suggestion-match')}>{match}</span>
-								);
-							}
-							if (post) {
-								formattedSuggestion.push(
-									<span key={`AutocompleteOption-suggestion-post-${suggestion}`} className={cx('&-Option-suggestion-post')}>{post}</span>
-								);
-							}
-							return formattedSuggestion;
-						})()}
-					</DropMenu.Option>)
-				) : _.map(suggestions, (suggestion) => (
-					<DropMenu.Option key={'AutocompleteOption' + suggestion} >{suggestion}</DropMenu.Option>)
-				)}
+				{value
+					? _.map(suggestions, suggestion => (
+							<DropMenu.Option key={'AutocompleteOption' + suggestion}>
+								{(() => {
+									const [pre, match, post] = partitionText(
+										suggestion,
+										valuePattern,
+										value.length
+									);
+									const formattedSuggestion = [];
+									if (pre) {
+										formattedSuggestion.push(
+											<span
+												key={`AutocompleteOption-suggestion-pre-${suggestion}`}
+												className={cx('&-Option-suggestion-pre')}
+											>
+												{pre}
+											</span>
+										);
+									}
+									if (match) {
+										formattedSuggestion.push(
+											<span
+												key={`AutocompleteOption-suggestion-match-${suggestion}`}
+												className={cx('&-Option-suggestion-match')}
+											>
+												{match}
+											</span>
+										);
+									}
+									if (post) {
+										formattedSuggestion.push(
+											<span
+												key={`AutocompleteOption-suggestion-post-${suggestion}`}
+												className={cx('&-Option-suggestion-post')}
+											>
+												{post}
+											</span>
+										);
+									}
+									return formattedSuggestion;
+								})()}
+							</DropMenu.Option>
+						))
+					: _.map(suggestions, suggestion => (
+							<DropMenu.Option key={'AutocompleteOption' + suggestion}>
+								{suggestion}
+							</DropMenu.Option>
+						))}
 			</DropMenu>
 		);
 	},

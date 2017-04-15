@@ -2,16 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps }  from '../../util/component-types';
+import { createClass, findTypes, omitProps } from '../../util/component-types';
 import Checkbox from '../Checkbox/Checkbox';
 
 const cx = lucidClassNames.bind('&-CheckboxLabeled');
-const {
-	any,
-	node,
-	object,
-	string,
-} = PropTypes;
+const { any, node, object, string } = PropTypes;
 
 /**
  * {"categories": ["controls", "toggles"], "extend": "Checkbox", "madeFrom": ["Checkbox"]}
@@ -80,14 +75,20 @@ const CheckboxLabeled = createClass({
 			...passThroughs
 		} = this.props;
 
-		const labelChildProps = _.first(_.map(findTypes(this.props, CheckboxLabeled.Label), 'props'));
+		const labelChildProps = _.first(
+			_.map(findTypes(this.props, CheckboxLabeled.Label), 'props')
+		);
 
 		return (
 			<label
-				className={cx('&', {
-					'&-is-disabled': isDisabled,
-					'&-is-selected': isIndeterminate || isSelected,
-				}, className)}
+				className={cx(
+					'&',
+					{
+						'&-is-disabled': isDisabled,
+						'&-is-selected': isIndeterminate || isSelected,
+					},
+					className
+				)}
 				style={style}
 			>
 				<Checkbox

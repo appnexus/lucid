@@ -11,7 +11,7 @@ describe('Overlay', () => {
 		getDefaultProps: () => {
 			return { isShown: true };
 		},
-		selectRoot: (wrapper) => wrapper.find('.lucid-Overlay'),
+		selectRoot: wrapper => wrapper.find('.lucid-Overlay'),
 	});
 
 	it('should render body content', () => {
@@ -41,8 +41,6 @@ describe('Overlay', () => {
 
 		assert.equal(wrapper.find('.lucid-Overlay-is-not-modal').length, 1);
 	});
-
-
 });
 
 describe('Overlay', () => {
@@ -91,7 +89,7 @@ describe('Overlay', () => {
 				onBackgroundClick={onBackgroundClick}
 				portalId={'regiewat'}
 			>
-				<div id='foo'>Nope</div>
+				<div id="foo">Nope</div>
 			</Overlay>
 		);
 
@@ -122,9 +120,7 @@ describe('Overlay', () => {
 
 	it('should fire the onEscape handler when escape is typed', () => {
 		const onEscape = sinon.spy();
-		const wrapper = mount(
-			<Overlay isShown={true} onEscape={onEscape} />
-		);
+		const wrapper = mount(<Overlay isShown={true} onEscape={onEscape} />);
 
 		const event = document.createEvent('Event');
 		event.initEvent('keydown', true, true);

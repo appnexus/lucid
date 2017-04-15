@@ -2,10 +2,15 @@ import React from 'react';
 import { Submarine } from '../../../index';
 
 export default React.createClass({
-
 	render() {
 		return (
-			<section style={{ height: 300, background: 'lightgray', outline: '1px solid lightgray' }}>
+			<section
+				style={{
+					height: 300,
+					background: 'lightgray',
+					outline: '1px solid lightgray',
+				}}
+			>
 				<Submarine isResizeDisabled={true}>
 					<Submarine.Bar>
 						Cold-pressed aesthetic biodiesel twee, heirloom vice iPhone austin. Truffaut wolf offal roof party, neutra yr drinking vinegar bitters single-origin coffee austin mlkshk mixtape semiotics blog. Pickled squid asymmetrical locavore before they sold out whatever.

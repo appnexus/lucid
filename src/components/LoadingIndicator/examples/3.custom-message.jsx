@@ -3,11 +3,7 @@ import { BarChart, LoadingIndicator, LoadingIcon } from '../../../index';
 
 const {
 	LoadingMessage,
-	LoadingMessage: {
-		Title,
-		Body,
-		Icon,
-	},
+	LoadingMessage: { Title, Body, Icon },
 } = LoadingIndicator;
 
 export default React.createClass({
@@ -25,7 +21,7 @@ export default React.createClass({
 						]}
 					/>
 					<LoadingMessage>
-						<Icon><LoadingIcon speed='slow'/></Icon>
+						<Icon><LoadingIcon speed="slow" /></Icon>
 						<Title>Custom Title</Title>
 						<Body>Custom Body</Body>
 					</LoadingMessage>
@@ -41,9 +37,9 @@ export default React.createClass({
 						]}
 					/>
 					<LoadingMessage
-						Icon={<LoadingIcon speed='fast'/>}
-						Title='Enhancing...'
-						Body='Please wait'
+						Icon={<LoadingIcon speed="fast" />}
+						Title="Enhancing..."
+						Body="Please wait"
 					/>
 				</LoadingIndicator>
 

@@ -3,10 +3,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { createClass, findTypes, getFirst } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	partitionText,
-	propsSearch,
-} from '../../util/text-manipulation';
+import { partitionText, propsSearch } from '../../util/text-manipulation';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './SearchableSelect.reducers';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
@@ -182,40 +179,43 @@ const SearchableSelect = createClass({
 	},
 
 	handleSearch(searchText) {
-		const {
-			props: {
-				onSearch,
-				optionFilter,
-			},
-		} = this;
+		const { props: { onSearch, optionFilter } } = this;
 
-		const {
-			flattenedOptionsData,
-		} = this.state;
+		const { flattenedOptionsData } = this.state;
 
-		const firstVisibleIndex = _.get(_.find(flattenedOptionsData, ({optionProps}) => {
-			return optionFilter(searchText, optionProps);
-		}), 'optionIndex');
+		const firstVisibleIndex = _.get(
+			_.find(flattenedOptionsData, ({ optionProps }) => {
+				return optionFilter(searchText, optionProps);
+			}),
+			'optionIndex'
+		);
 
 		onSearch(searchText, firstVisibleIndex);
 	},
 
 	renderUnderlinedChildren(childText, searchText) {
-		const [pre, match, post] = partitionText(childText, new RegExp(_.escapeRegExp(searchText), 'i'), searchText.length);
+		const [pre, match, post] = partitionText(
+			childText,
+			new RegExp(_.escapeRegExp(searchText), 'i'),
+			searchText.length
+		);
 
 		return [
-			pre && <span key='pre' className={cx('&-Option-underline-pre')}>{pre}</span>,
-			match && <span key='match' className={cx('&-Option-underline-match')}>{match}</span>,
-			post && <span key='post' className={cx('&-Option-underline-post')}>{post}</span>,
+			pre &&
+				<span key="pre" className={cx('&-Option-underline-pre')}>{pre}</span>,
+			match &&
+				<span key="match" className={cx('&-Option-underline-match')}>
+					{match}
+				</span>,
+			post &&
+				<span key="post" className={cx('&-Option-underline-post')}>
+					{post}
+				</span>,
 		];
 	},
 
 	renderOption(optionProps, optionIndex) {
-		const {
-			isLoading,
-			optionFilter,
-			searchText,
-		} = this.props;
+		const { isLoading, optionFilter, searchText } = this.props;
 
 		if (searchText) {
 			return (
@@ -225,8 +225,8 @@ const SearchableSelect = createClass({
 					key={'SearchableSelectOption' + optionIndex}
 					{..._.omit(optionProps, ['children'])}
 				>
-					{_.isString(optionProps.children) ?
-						this.renderUnderlinedChildren(optionProps.children, searchText)
+					{_.isString(optionProps.children)
+						? this.renderUnderlinedChildren(optionProps.children, searchText)
 						: optionProps.children}
 				</DropMenu.Option>
 			);
@@ -242,9 +242,7 @@ const SearchableSelect = createClass({
 	},
 
 	renderOptions() {
-		const {
-			searchText,
-		} = this.props;
+		const { searchText } = this.props;
 
 		const {
 			optionGroups,
@@ -255,38 +253,55 @@ const SearchableSelect = createClass({
 		// for each option group passed in, render a DropMenu.OptionGroup, any
 		// label will be included in it's children, render each option inside the
 		// group
-		const options = _.map(optionGroups, (optionGroupProps, optionGroupIndex) => {
-			const childOptions = _.map(_.get(optionGroupDataLookup, optionGroupIndex), ({ optionProps, optionIndex }) => (
+		const options = _.map(
+			optionGroups,
+			(optionGroupProps, optionGroupIndex) => {
+				const childOptions = _.map(
+					_.get(optionGroupDataLookup, optionGroupIndex),
+					({ optionProps, optionIndex }) =>
+						this.renderOption(optionProps, optionIndex)
+				);
+				const visibleChildrenCount = _.filter(
+					childOptions,
+					option => !option.props.isHidden
+				).length;
+
+				return (
+					<DropMenu.OptionGroup
+						isHidden={visibleChildrenCount === 0}
+						key={'SearchableSelectOptionGroup' + optionGroupIndex}
+						{...optionGroupProps}
+					>
+						{optionGroupProps.children}
+						{childOptions}
+					</DropMenu.OptionGroup>
+				);
+				// then render all the ungrouped options at the end
+			}
+		).concat(
+			_.map(ungroupedOptionData, ({ optionProps, optionIndex }) =>
 				this.renderOption(optionProps, optionIndex)
-			));
-			const visibleChildrenCount = _.filter(childOptions, (option) => !option.props.isHidden).length;
-
-			return (
-				<DropMenu.OptionGroup
-					isHidden={visibleChildrenCount === 0}
-					key={'SearchableSelectOptionGroup' + optionGroupIndex}
-					{...optionGroupProps}
-				>
-					{optionGroupProps.children}
-					{childOptions}
-				</DropMenu.OptionGroup>
-			);
-		// then render all the ungrouped options at the end
-		}).concat(_.map(ungroupedOptionData, ({ optionProps, optionIndex }) => (
-			this.renderOption(optionProps, optionIndex)
-		)));
-
-		const visibleOptionsCount = _.filter(options, (option) => !option.props.isHidden).length;
-
-		return (
-			visibleOptionsCount > 0 ? options : <DropMenu.Option isDisabled><span className={cx('&-noresults')}>No results match "{searchText}"</span></DropMenu.Option>
+			)
 		);
+
+		const visibleOptionsCount = _.filter(
+			options,
+			option => !option.props.isHidden
+		).length;
+
+		return visibleOptionsCount > 0
+			? options
+			: <DropMenu.Option isDisabled>
+					<span className={cx('&-noresults')}>
+						No results match "{searchText}"
+					</span>
+				</DropMenu.Option>;
 	},
 
 	render() {
 		const {
 			props,
-				props: {
+			props: {
 				style,
 				className,
 				hasReset,
@@ -301,19 +316,17 @@ const SearchableSelect = createClass({
 			},
 		} = this;
 
-		const {
-			direction,
-			optionContainerStyle,
-			isExpanded,
-		} = dropMenuProps;
+		const { direction, optionContainerStyle, isExpanded } = dropMenuProps;
 
-		const {
-			flattenedOptionsData,
-		} = this.state;
+		const { flattenedOptionsData } = this.state;
 
-
-		const searchFieldProps = _.get(getFirst(props, SearchField, <SearchField />), 'props');
-		const placeholderProps = _.first(_.map(findTypes(this.props, SearchableSelect.Placeholder), 'props'));
+		const searchFieldProps = _.get(
+			getFirst(props, SearchField, <SearchField />),
+			'props'
+		);
+		const placeholderProps = _.first(
+			_.map(findTypes(this.props, SearchableSelect.Placeholder), 'props')
+		);
 		const placeholder = _.get(placeholderProps, 'children', 'Select');
 		const isItemSelected = _.isNumber(selectedIndex);
 
@@ -321,7 +334,11 @@ const SearchableSelect = createClass({
 			<DropMenu
 				{...dropMenuProps}
 				className={cx('&', className)}
-				optionContainerStyle={_.assign({}, optionContainerStyle, !_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null)}
+				optionContainerStyle={_.assign(
+					{},
+					optionContainerStyle,
+					!_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null
+				)}
 				isDisabled={isDisabled}
 				isLoading={isLoading}
 				onSelect={onSelect}
@@ -332,25 +349,30 @@ const SearchableSelect = createClass({
 					<div
 						tabIndex={0}
 						className={cx('&-Control', {
-							'&-Control-is-highlighted': (!isDisabled && isItemSelected && isSelectionHighlighted) || (isExpanded && isSelectionHighlighted),
-							'&-Control-is-selected': (!isDisabled && isItemSelected && isSelectionHighlighted) || (isExpanded && isSelectionHighlighted),
+							'&-Control-is-highlighted': (!isDisabled &&
+								isItemSelected &&
+								isSelectionHighlighted) ||
+								(isExpanded && isSelectionHighlighted),
+							'&-Control-is-selected': (!isDisabled &&
+								isItemSelected &&
+								isSelectionHighlighted) ||
+								(isExpanded && isSelectionHighlighted),
 							'&-Control-is-expanded': isExpanded,
 							'&-Control-is-disabled': isDisabled,
-						})
-					}>
+						})}
+					>
 						<span
 							{...(!isItemSelected ? placeholderProps : null)}
 							className={cx(
-									'&-Control-content',
-									(!isItemSelected ? _.get(placeholderProps, 'className') : null)
+								'&-Control-content',
+								!isItemSelected ? _.get(placeholderProps, 'className') : null
 							)}
 						>
-							{isItemSelected ? flattenedOptionsData[selectedIndex].optionProps.children : placeholder}
+							{isItemSelected
+								? flattenedOptionsData[selectedIndex].optionProps.children
+								: placeholder}
 						</span>
-						<CaretIcon
-							direction={isExpanded ? direction : 'down'}
-							size={8}
-						/>
+						<CaretIcon direction={isExpanded ? direction : 'down'} size={8} />
 					</div>
 				</DropMenu.Control>
 				<DropMenu.Header className={cx('&-Search-container')}>
@@ -360,16 +382,19 @@ const SearchableSelect = createClass({
 						value={searchText}
 					/>
 				</DropMenu.Header>
-				{
-					isLoading &&
-					<DropMenu.Option key='SearchableSelectLoading' className={cx('&-Loading')} isDisabled>
+				{isLoading &&
+					<DropMenu.Option
+						key="SearchableSelectLoading"
+						className={cx('&-Loading')}
+						isDisabled
+					>
 						<LoadingIcon />
-					</DropMenu.Option>
-				}
-				{
-					hasReset && isItemSelected &&
-					<DropMenu.NullOption {...placeholderProps}>{placeholder}</DropMenu.NullOption>
-				}
+					</DropMenu.Option>}
+				{hasReset &&
+					isItemSelected &&
+					<DropMenu.NullOption {...placeholderProps}>
+						{placeholder}
+					</DropMenu.NullOption>}
 				{this.renderOptions()}
 			</DropMenu>
 		);

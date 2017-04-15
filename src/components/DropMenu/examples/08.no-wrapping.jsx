@@ -12,16 +12,13 @@ export default React.createClass({
 
 		return (
 			<div style={{ textAlign: 'right' }}>
-				<DropMenu onSelect={this.handleSelect} alignment='center'>
+				<DropMenu onSelect={this.handleSelect} alignment="center">
 					<DropMenu.Control>
 						<Button>Click me</Button>
 					</DropMenu.Control>
 
 					{_.map(options, (optionText, index) => (
-						<DropMenu.Option
-							isWrapped={false}
-							key={'Option-' + index}
-						>
+						<DropMenu.Option isWrapped={false} key={'Option-' + index}>
 							{optionText}
 						</DropMenu.Option>
 					))}

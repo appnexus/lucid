@@ -6,13 +6,7 @@ import { createClass } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-CalendarMonth');
 
-const {
-	bool,
-	instanceOf,
-	number,
-	oneOf,
-	string,
-} = PropTypes;
+const { bool, instanceOf, number, oneOf, string } = PropTypes;
 
 /**
  * {"categories": ["helpers"]}
@@ -82,12 +76,7 @@ const CalendarMonth = createClass({
 	},
 
 	modifierRange(day) {
-		const {
-			cursor,
-			from,
-			to,
-			selectMode,
-		} = this.props;
+		const { cursor, from, to, selectMode } = this.props;
 
 		if (cursor) {
 			if (selectMode === 'day') {
@@ -112,17 +101,13 @@ const CalendarMonth = createClass({
 	},
 
 	modifierFrom(day) {
-		const {
-			from,
-		} = this.props;
+		const { from } = this.props;
 
 		return DateUtils.isSameDay(day, new Date(from));
 	},
 
 	modifierTo(day) {
-		const {
-			to,
-		} = this.props;
+		const { to } = this.props;
 
 		return DateUtils.isSameDay(day, new Date(to));
 	},

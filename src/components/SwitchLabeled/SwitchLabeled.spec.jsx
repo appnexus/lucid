@@ -58,13 +58,12 @@ describe('SwitchLabeled', () => {
 
 		describe('Label (as a prop)', () => {
 			it('renders the value in a `span` neighboring its `Switch` instance.', () => {
-				const wrapper = shallow(
-					<SwitchLabeled
-							Label={'foo'}
-					/>
-				);
+				const wrapper = shallow(<SwitchLabeled Label={'foo'} />);
 
-				assert.equal(wrapper.find(ReactCSSTransitionGroup).find('span').prop('children'), 'foo');
+				assert.equal(
+					wrapper.find(ReactCSSTransitionGroup).find('span').prop('children'),
+					'foo'
+				);
 			});
 		});
 
@@ -76,7 +75,10 @@ describe('SwitchLabeled', () => {
 					</SwitchLabeled>
 				);
 
-				assert.equal(wrapper.find(ReactCSSTransitionGroup).find('span').prop('children'), 'foo');
+				assert.equal(
+					wrapper.find(ReactCSSTransitionGroup).find('span').prop('children'),
+					'foo'
+				);
 			});
 		});
 
@@ -84,23 +86,23 @@ describe('SwitchLabeled', () => {
 			it('passes through all props not defined in `propTypes` to its `Switch` instance.', () => {
 				const wrapper = shallow(
 					<SwitchLabeled
-							className='wut'
-							isDisabled={true}
-							isSelected={true}
-							style={{ fontWeight: 'bold' }}
-							onSelect={_.noop}
-							foo={1}
-							bar={2}
-							baz={3}
-							qux={4}
-							quux={5}
+						className="wut"
+						isDisabled={true}
+						isSelected={true}
+						style={{ fontWeight: 'bold' }}
+						onSelect={_.noop}
+						foo={1}
+						bar={2}
+						baz={3}
+						qux={4}
+						quux={5}
 					/>
 				);
 				const switchProps = wrapper.find(Switch).props();
 
 				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
 				// to the `Switch` instance.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
+				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], prop => {
 					assert(_.has(switchProps, prop));
 				});
 			});

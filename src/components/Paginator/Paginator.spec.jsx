@@ -17,11 +17,18 @@ describe('Paginator', () => {
 		describe('hasPageSizeSelector', () => {
 			it('should not render page size selector', () => {
 				const wrapper = shallow(<Paginator />);
-				assert(wrapper.find('.lucid-Paginator-page-size-container').isEmpty(), 'must be true');
+				assert(
+					wrapper.find('.lucid-Paginator-page-size-container').isEmpty(),
+					'must be true'
+				);
 			});
 			it('should render page size selector', () => {
-				const wrapper = shallow(<Paginator hasPageSizeSelector/>);
-				assert.equal(wrapper.find('.lucid-Paginator-page-size-container').length, 1, 'must be 1');
+				const wrapper = shallow(<Paginator hasPageSizeSelector />);
+				assert.equal(
+					wrapper.find('.lucid-Paginator-page-size-container').length,
+					1,
+					'must be 1'
+				);
 			});
 			it('should render a TextField', () => {
 				const wrapper = shallow(<Paginator />);
@@ -35,19 +42,13 @@ describe('Paginator', () => {
 	});
 
 	describe('props', () => {
-
 		describe('isDisabled', () => {
-
 			it('should set isDisabled on next and previous buttons', () => {
 				const wrapper = shallow(
-					<Paginator
-						selectedPageIndex={1}
-						totalCount={30}
-						isDisabled
-					/>
+					<Paginator selectedPageIndex={1} totalCount={30} isDisabled />
 				);
 				const buttons = wrapper.find(Button);
-				buttons.forEach((button) => {
+				buttons.forEach(button => {
 					assert(button.prop('isDisabled'), 'must be true');
 				});
 			});
@@ -61,23 +62,20 @@ describe('Paginator', () => {
 						isDisabled
 					/>
 				);
-				const pageSizeSelectorWrapper = wrapper.find('.lucid-Paginator-page-size-container')
+				const pageSizeSelectorWrapper = wrapper
+					.find('.lucid-Paginator-page-size-container')
 					.first()
 					.shallow()
 					.find(SingleSelect)
 					.shallow();
 				assert(pageSizeSelectorWrapper.prop('isDisabled'), 'must be true');
 			});
-
 		});
 
 		describe('selectedPageIndex', () => {
 			it('should set the value of the TextField to selectedPageIndex + 1', () => {
 				const wrapper = shallow(<Paginator selectedPageIndex={1} />);
-				const textFieldWrapper = wrapper
-					.find(TextField)
-					.first()
-					.shallow();
+				const textFieldWrapper = wrapper.find(TextField).first().shallow();
 				assert.equal(textFieldWrapper.prop('value'), 2, 'must be 2');
 			});
 		});
@@ -91,11 +89,16 @@ describe('Paginator', () => {
 						selectedPageSizeIndex={selectedPageSizeIndex}
 					/>
 				);
-				const pageSizeSelectorWrapper = wrapper.find('.lucid-Paginator-page-size-container')
+				const pageSizeSelectorWrapper = wrapper
+					.find('.lucid-Paginator-page-size-container')
 					.first()
 					.shallow()
 					.find(SingleSelect);
-				assert.equal(pageSizeSelectorWrapper.prop('selectedIndex'), selectedPageSizeIndex, 'must be 1');
+				assert.equal(
+					pageSizeSelectorWrapper.prop('selectedIndex'),
+					selectedPageSizeIndex,
+					'must be 1'
+				);
 			});
 		});
 
@@ -112,7 +115,8 @@ describe('Paginator', () => {
 						SingleSelect={explicitSingleSelectProps}
 					/>
 				);
-				const singleSelectProps = wrapper.find('.lucid-Paginator-page-size-container')
+				const singleSelectProps = wrapper
+					.find('.lucid-Paginator-page-size-container')
 					.first()
 					.shallow()
 					.find(SingleSelect)
@@ -121,7 +125,6 @@ describe('Paginator', () => {
 				_.forEach(explicitSingleSelectProps, (prop, name) => {
 					assert.strictEqual(singleSelectProps[name], prop);
 				});
-
 			});
 		});
 
@@ -129,7 +132,11 @@ describe('Paginator', () => {
 			it('should appear in "of {totalPages}" span', () => {
 				const totalPages = 5;
 				const wrapper = shallow(<Paginator totalPages={totalPages} />);
-				assert.equal(wrapper.find('span').text(), `of ${totalPages}`, 'must be "of 5"');
+				assert.equal(
+					wrapper.find('span').text(),
+					`of ${totalPages}`,
+					'must be "of 5"'
+				);
 			});
 		});
 
@@ -138,12 +145,13 @@ describe('Paginator', () => {
 				const HybridPaginator = buildHybridComponent(Paginator);
 				const totalCount = 100;
 				const wrapper = shallow(
-					<HybridPaginator
-						totalCount={totalCount}
-						pageSizeOptions={[10]}
-					/>
+					<HybridPaginator totalCount={totalCount} pageSizeOptions={[10]} />
 				);
-				assert.equal(wrapper.find(Paginator).shallow().find('span').text(), 'of 10', 'must be "of 10"');
+				assert.equal(
+					wrapper.find(Paginator).shallow().find('span').text(),
+					'of 10',
+					'must be "of 10"'
+				);
 			});
 		});
 
@@ -151,29 +159,25 @@ describe('Paginator', () => {
 			it('should propagate to `SingleSelect` as `SingleSelect.Option`s', () => {
 				const pageSizeOptions = [1, 2, 3, 4, 5];
 				const wrapper = shallow(
-					<Paginator
-						hasPageSizeSelector
-						pageSizeOptions={pageSizeOptions}
-					/>
+					<Paginator hasPageSizeSelector pageSizeOptions={pageSizeOptions} />
 				);
-				const options = wrapper.find('.lucid-Paginator-page-size-container')
-				.first()
-				.find(SingleSelect)
-				.first()
-				.children();
+				const options = wrapper
+					.find('.lucid-Paginator-page-size-container')
+					.first()
+					.find(SingleSelect)
+					.first()
+					.children();
 
 				assert.equal(options.length, 5, 'must be 5');
 				options.forEach((option, i) => {
 					assert(option.is(SingleSelect.Option), 'must be true');
 					assert.equal(option.children().text(), pageSizeOptions[i]);
 				});
-
 			});
 		});
 
 		describe('TextField', () => {
 			it('should propagate TextField props through to TextField component', () => {
-
 				const explicitTextFieldProps = {
 					style: {},
 					isMultiline: true,
@@ -182,20 +186,18 @@ describe('Paginator', () => {
 					debounceLevel: 50,
 				};
 
-				const wrapper = shallow(<Paginator TextField={explicitTextFieldProps} />);
-				const textFieldProps = wrapper.find(TextField)
-					.first()
-					.props();
+				const wrapper = shallow(
+					<Paginator TextField={explicitTextFieldProps} />
+				);
+				const textFieldProps = wrapper.find(TextField).first().props();
 
 				_.forEach(explicitTextFieldProps, (prop, name) => {
 					assert.strictEqual(textFieldProps[name], prop);
 				});
-
 			});
 		});
 
 		describe('onPageSelect', () => {
-
 			let wrapper;
 
 			afterEach(() => {
@@ -241,7 +243,7 @@ describe('Paginator', () => {
 			});
 
 			describe('input', () => {
-				_.forEach(['onBlur', 'onSubmit'], (propName) => {
+				_.forEach(['onBlur', 'onSubmit'], propName => {
 					it(`should get called with the correct args ${propName}`, () => {
 						const onPageSelect = sinon.spy();
 						wrapper = mount(
@@ -249,7 +251,7 @@ describe('Paginator', () => {
 								selectedPageIndex={1}
 								totalPages={3}
 								onPageSelect={onPageSelect}
-								/>
+							/>
 						);
 						wrapper.find(TextField).prop(propName)(1, 3);
 						assert(onPageSelect.calledOnce);
@@ -265,15 +267,13 @@ describe('Paginator', () => {
 			it('should be passed through to SingleSelect as `onSelect`', () => {
 				const onPageSizeSelect = function() {};
 				const wrapper = shallow(
-					<Paginator
-						hasPageSizeSelector
-						onPageSizeSelect={onPageSizeSelect}
-					/>
+					<Paginator hasPageSizeSelector onPageSizeSelect={onPageSizeSelect} />
 				);
-				assert.strictEqual(wrapper.find(SingleSelect).prop('onSelect'), onPageSizeSelect);
+				assert.strictEqual(
+					wrapper.find(SingleSelect).prop('onSelect'),
+					onPageSizeSelect
+				);
 			});
 		});
-
 	});
-
 });

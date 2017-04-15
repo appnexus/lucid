@@ -5,7 +5,7 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<Validation Error='Method one'>Content</Validation>
+				<Validation Error="Method one">Content</Validation>
 				<Validation>
 					<Validation.Error>
 						<i>Method two</i>

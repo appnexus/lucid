@@ -20,15 +20,30 @@ describe('Expander', () => {
 	describe('props', () => {
 		describe('isExpanded', () => {
 			it('sets the value of the `direction` prop on its `ChevronIcon` instance to "up" when `true`.', () => {
-				assert.equal(shallow(<Expander isExpanded={true} />).find(ChevronIcon).prop('direction'), 'up');
+				assert.equal(
+					shallow(<Expander isExpanded={true} />)
+						.find(ChevronIcon)
+						.prop('direction'),
+					'up'
+				);
 			});
 
 			it('sets the value of the `direction` prop on its `ChevronIcon` instance to "down" when `false`.', () => {
-				assert.equal(shallow(<Expander isExpanded={false} />).find(ChevronIcon).prop('direction'), 'down');
+				assert.equal(
+					shallow(<Expander isExpanded={false} />)
+						.find(ChevronIcon)
+						.prop('direction'),
+					'down'
+				);
 			});
 
 			it('adds the "lucid-Expander-is-expanded" class to the root element when `true`.', () => {
-				assert.equal(shallow(<Expander isExpanded={true} />).find('.lucid-Expander-is-expanded').length, 1);
+				assert.equal(
+					shallow(<Expander isExpanded={true} />).find(
+						'.lucid-Expander-is-expanded'
+					).length,
+					1
+				);
 			});
 
 			it('adds the "lucid-Expander-content-is-expanded" class to its content container element when `true`.', () => {
@@ -52,21 +67,29 @@ describe('Expander', () => {
 				assert.equal(mount(<Expander />).prop('kind'), 'simple');
 			});
 			it('accepts "highlighted".', () => {
-				assert.equal(mount(<Expander kind='highlighted' />).prop('kind'), 'highlighted');
+				assert.equal(
+					mount(<Expander kind="highlighted" />).prop('kind'),
+					'highlighted'
+				);
 			});
 			it('`kind=highlighted` adds the "lucid-Expander-kind-highlighted" class.', () => {
-				const wrapper = shallow(<Expander isExpanded={true} kind='highlighted' />);
-				assert.equal(wrapper.find('.lucid-Expander-kind-highlighted').length, 1);
+				const wrapper = shallow(
+					<Expander isExpanded={true} kind="highlighted" />
+				);
+				assert.equal(
+					wrapper.find('.lucid-Expander-kind-highlighted').length,
+					1
+				);
 			});
 		});
 
 		describe('Label (as a prop)', () => {
 			it('renders the value in the header in a `SPAN` element neighboring its `ChevronIcon` instance.', () => {
 				assert.equal(
-					shallow(<Expander Label='foo' />)
-							.find(ReactCSSTransitionGroup)
-							.find('span')
-							.prop('children'),
+					shallow(<Expander Label="foo" />)
+						.find(ReactCSSTransitionGroup)
+						.find('span')
+						.prop('children'),
 					'foo'
 				);
 			});
@@ -81,10 +104,7 @@ describe('Expander', () => {
 				);
 
 				assert.equal(
-					wrapper
-							.find(ReactCSSTransitionGroup)
-							.find('span')
-							.prop('children'),
+					wrapper.find(ReactCSSTransitionGroup).find('span').prop('children'),
 					'foo'
 				);
 			});
@@ -94,12 +114,12 @@ describe('Expander', () => {
 			it('passes through all props not defined in `propTypes` to the root element.', () => {
 				const wrapper = shallow(
 					<Expander
-							className='wut'
-							isExpanded={true}
-							onToggle={_.noop}
-							style={{ marginRight: 10 }}
-							foo={1}
-							bar={2}
+						className="wut"
+						isExpanded={true}
+						onToggle={_.noop}
+						style={{ marginRight: 10 }}
+						foo={1}
+						bar={2}
 					/>
 				);
 				const rootProps = wrapper.find('.lucid-Expander').props();
@@ -123,9 +143,7 @@ describe('Expander', () => {
 	describe('user clicks on the header', () => {
 		it('calls the function passed in as the `onToggle` prop', () => {
 			const onToggle = sinon.spy();
-			wrapper = mount(
-				<Expander onToggle={onToggle} />
-			);
+			wrapper = mount(<Expander onToggle={onToggle} />);
 
 			wrapper.find('.lucid-Expander-header').simulate('click');
 			wrapper.find('.lucid-Expander-icon').simulate('click');
@@ -136,9 +154,7 @@ describe('Expander', () => {
 
 		it('should call `onToggle` correctly when not `isExpanded`', () => {
 			const onToggle = sinon.spy();
-			wrapper = mount(
-				<Expander isExpanded={false} onToggle={onToggle} />
-			);
+			wrapper = mount(<Expander isExpanded={false} onToggle={onToggle} />);
 
 			wrapper.find('.lucid-Expander-header').simulate('click');
 			wrapper.find('.lucid-Expander-icon').simulate('click');
@@ -151,9 +167,7 @@ describe('Expander', () => {
 
 		it('should call `onToggle` correctly when `isExpanded`', () => {
 			const onToggle = sinon.spy();
-			wrapper = mount(
-				<Expander isExpanded={true} onToggle={onToggle} />
-			);
+			wrapper = mount(<Expander isExpanded={true} onToggle={onToggle} />);
 
 			wrapper.find('.lucid-Expander-header').simulate('click');
 			wrapper.find('.lucid-Expander-icon').simulate('click');

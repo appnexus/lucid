@@ -8,12 +8,7 @@ import LoadingMessage from '../LoadingMessage/LoadingMessage';
 
 const cx = lucidClassNames.bind('&-LoadingIndicator');
 
-const {
-	bool,
-	node,
-	oneOf,
-	string,
-} = PropTypes;
+const { bool, node, oneOf, string } = PropTypes;
 
 /**
  *
@@ -45,10 +40,7 @@ const LoadingIndicator = createClass({
 		/**
 		 * Style variations for the overlay behind the loading indicator.
 		 */
-		overlayKind: oneOf([
-			'light',
-			'dark',
-		]),
+		overlayKind: oneOf(['light', 'dark']),
 	},
 
 	components: { LoadingMessage },
@@ -62,14 +54,7 @@ const LoadingIndicator = createClass({
 	},
 
 	render() {
-		const {
-			props,
-			props: {
-				children,
-				className,
-				isLoading,
-			},
-		} = this;
+		const { props, props: { children, className, isLoading } } = this;
 
 		const { LoadingMessage } = LoadingIndicator;
 

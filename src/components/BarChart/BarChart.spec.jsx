@@ -13,9 +13,7 @@ import assert from 'assert';
 import BarChart from './BarChart';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
-const {
-  EmptyStateWrapper: { Title, Body },
-} = BarChart;
+const { EmptyStateWrapper: { Title, Body } } = BarChart;
 
 describe('BarChart', () => {
 	let wrapper;
@@ -35,11 +33,11 @@ describe('BarChart', () => {
 		],
 		getDefaultProps: () => ({
 			data: [
-				{ x: 'Monday'    , y: 1  , y2: 2}   ,
-				{ x: 'Tuesday'   , y: 4  , y2: 4 }  ,
-				{ x: 'Wednesday' , y: 8  , y2: 1 }  ,
-				{ x: 'Thursday'  , y: 20 , y2: 15 } ,
-				{ x: 'Friday'    , y: 10 , y2: 2 }  ,
+				{ x: 'Monday', y: 1, y2: 2 },
+				{ x: 'Tuesday', y: 4, y2: 4 },
+				{ x: 'Wednesday', y: 8, y2: 1 },
+				{ x: 'Thursday', y: 20, y2: 15 },
+				{ x: 'Friday', y: 10, y2: 2 },
 			],
 		}),
 	});
@@ -47,11 +45,11 @@ describe('BarChart', () => {
 	describe('props', () => {
 		describe('isLoading', () => {
 			it('should show a `LoadingIndicator` if `isLoading`', () => {
-				wrapper = mount(
-					<BarChart isLoading />
-				);
+				wrapper = mount(<BarChart isLoading />);
 
-				const loadingIndicatorWrapper = wrapper.find(EmptyStateWrapper).find('LoadingIndicator');
+				const loadingIndicatorWrapper = wrapper
+					.find(EmptyStateWrapper)
+					.find('LoadingIndicator');
 
 				assert(loadingIndicatorWrapper.prop('isLoading'));
 			});
@@ -74,13 +72,19 @@ describe('BarChart', () => {
 					.find(EmptyStateWrapper)
 					.find('.lucid-EmptyStateWrapper-message-title');
 
-				assert.equal(messageTitleWrapper.text(), titleText, 'must contain the title text');
+				assert.equal(
+					messageTitleWrapper.text(),
+					titleText,
+					'must contain the title text'
+				);
 			});
 		});
 
 		describe('EmptyStateWrapper Body', () => {
 			it('should render the message body element', () => {
-				const bodyElement = <div className='parent-div'><div className='nested-div'></div></div>;
+				const bodyElement = (
+					<div className="parent-div"><div className="nested-div" /></div>
+				);
 				wrapper = mount(
 					<BarChart>
 						<EmptyStateWrapper>
@@ -91,7 +95,10 @@ describe('BarChart', () => {
 
 				const messageBodyWrapper = wrapper.find(EmptyStateWrapper);
 
-				assert(messageBodyWrapper.contains(bodyElement), 'must contain the body element');
+				assert(
+					messageBodyWrapper.contains(bodyElement),
+					'must contain the body element'
+				);
 			});
 		});
 	});
@@ -101,34 +108,46 @@ describe('BarChart', () => {
 			wrapper = mount(
 				<BarChart
 					data={[
-						{ x: 'Monday'    , y: 1  , y2: 2}   ,
-						{ x: 'Tuesday'   , y: 4  , y2: 4 }  ,
-						{ x: 'Wednesday' , y: 8  , y2: 1 }  ,
-						{ x: 'Thursday'  , y: 20 , y2: 15 } ,
-						{ x: 'Friday'    , y: 10 , y2: 2 }  ,
+						{ x: 'Monday', y: 1, y2: 2 },
+						{ x: 'Tuesday', y: 4, y2: 4 },
+						{ x: 'Wednesday', y: 8, y2: 1 },
+						{ x: 'Thursday', y: 20, y2: 15 },
+						{ x: 'Friday', y: 10, y2: 2 },
 					]}
 				/>
 			);
 
-			assert.equal(wrapper.find('.lucid-Bar').length, 5, 'did not find the correct number of bars');
-			assert.equal(wrapper.find('.lucid-Axis').length, 2, 'did not find the correct number of axes');
+			assert.equal(
+				wrapper.find('.lucid-Bar').length,
+				5,
+				'did not find the correct number of bars'
+			);
+			assert.equal(
+				wrapper.find('.lucid-Axis').length,
+				2,
+				'did not find the correct number of axes'
+			);
 		});
 
 		it('should render a chart with multiple series', () => {
 			wrapper = mount(
 				<BarChart
 					data={[
-						{ x: 'Monday'    , y: 1  , y2: 2}   ,
-						{ x: 'Tuesday'   , y: 4  , y2: 4 }  ,
-						{ x: 'Wednesday' , y: 8  , y2: 1 }  ,
-						{ x: 'Thursday'  , y: 20 , y2: 15 } ,
-						{ x: 'Friday'    , y: 10 , y2: 2 }  ,
+						{ x: 'Monday', y: 1, y2: 2 },
+						{ x: 'Tuesday', y: 4, y2: 4 },
+						{ x: 'Wednesday', y: 8, y2: 1 },
+						{ x: 'Thursday', y: 20, y2: 15 },
+						{ x: 'Friday', y: 10, y2: 2 },
 					]}
 					yAxisFields={['y', 'y2']}
 				/>
 			);
 
-			assert.equal(wrapper.find('.lucid-Bar').length, 10, 'did not find the correct number of bars');
+			assert.equal(
+				wrapper.find('.lucid-Bar').length,
+				10,
+				'did not find the correct number of bars'
+			);
 		});
 	});
 });

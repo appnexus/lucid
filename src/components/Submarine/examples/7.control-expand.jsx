@@ -2,7 +2,6 @@ import React from 'react';
 import { Submarine } from '../../../index';
 
 export default React.createClass({
-
 	getInitialState() {
 		return {
 			isExpanded: false,
@@ -18,9 +17,18 @@ export default React.createClass({
 			<section>
 				<button onClick={this.handleToggle}>toggle</button>
 
-				<section style={{ height: 300, background: 'lightgray', outline: '1px solid lightgray' }}>
+				<section
+					style={{
+						height: 300,
+						background: 'lightgray',
+						outline: '1px solid lightgray',
+					}}
+				>
 
-					<Submarine isExpanded={this.state.isExpanded} onToggle={this.handleToggle}>
+					<Submarine
+						isExpanded={this.state.isExpanded}
+						onToggle={this.handleToggle}
+					>
 						<Submarine.Bar>
 							Paleo williamsburg retro, mumblecore deserunt typewriter magna raw denim taxidermy. Quinoa incididunt hoodie, ea synth four loko everyday carry lomo vice humblebrag forage assumenda ad small batch reprehenderit.
 						</Submarine.Bar>

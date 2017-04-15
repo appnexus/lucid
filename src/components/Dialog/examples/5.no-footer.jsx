@@ -16,9 +16,7 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<Button
-					onClick={_.partial(this.handleShow, !this.state.isShown)}
-				>
+				<Button onClick={_.partial(this.handleShow, !this.state.isShown)}>
 					Toggle
 				</Button>
 
@@ -26,8 +24,8 @@ export default React.createClass({
 					isShown={this.state.isShown}
 					onBackgroundClick={_.partial(this.handleShow, false)}
 					onEscape={_.partial(this.handleShow, false)}
-					Header='Header'
-					size='small'
+					Header="Header"
+					size="small"
 				>
 					This `Dialog` has no footer!
 				</Dialog>

@@ -11,14 +11,7 @@ import Point from '../Point/Point';
 
 const cx = lucidClassNames.bind('&-Points');
 
-const {
-	arrayOf,
-	func,
-	number,
-	object,
-	bool,
-	string,
-} = PropTypes;
+const { arrayOf, func, number, object, bool, string } = PropTypes;
 
 function isValidSeries(series) {
 	if (_.isArray(series)) {
@@ -187,23 +180,26 @@ const Points = createClass({
 		}
 
 		return (
-			<g
-				{...omitProps(passThroughs, Points)}
-				className={cx(className, '&')}
-			>
-				{_.map(transformedData, (d, dIndex) => (
-					_.map(d, (series, seriesIndex) => (
-						isValidSeries(series) ?
-							<Point
-								x={xScale(data[seriesIndex][xField])}
-								y={yScale(_.isArray(series) ? _.last(series) : series)}
-								hasStroke={hasStroke}
-								kind={dIndex + colorOffset}
-								color={_.get(colorMap, yFields[dIndex], palette[(dIndex + colorOffset) % palette.length])}
-							/>
-						: null
-					))
-				))}
+			<g {...omitProps(passThroughs, Points)} className={cx(className, '&')}>
+				{_.map(transformedData, (d, dIndex) =>
+					_.map(
+						d,
+						(series, seriesIndex) =>
+							(isValidSeries(series)
+								? <Point
+										x={xScale(data[seriesIndex][xField])}
+										y={yScale(_.isArray(series) ? _.last(series) : series)}
+										hasStroke={hasStroke}
+										kind={dIndex + colorOffset}
+										color={_.get(
+											colorMap,
+											yFields[dIndex],
+											palette[(dIndex + colorOffset) % palette.length]
+										)}
+									/>
+								: null)
+					)
+				)}
 			</g>
 		);
 	},

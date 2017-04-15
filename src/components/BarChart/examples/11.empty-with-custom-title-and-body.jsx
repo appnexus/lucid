@@ -1,19 +1,12 @@
 import React from 'react';
 import { BarChart } from '../../../index';
 
-const {
-  EmptyStateWrapper,
-  EmptyStateWrapper: { Title, Body },
-} = BarChart;
+const { EmptyStateWrapper, EmptyStateWrapper: { Title, Body } } = BarChart;
 
 export default React.createClass({
 	render() {
 		return (
-			<BarChart
-				data={[]}
-
-				yAxisTitle='Revenue'
-			>
+			<BarChart data={[]} yAxisTitle="Revenue">
 				<EmptyStateWrapper>
 					<Title>
 						Something went wrong.

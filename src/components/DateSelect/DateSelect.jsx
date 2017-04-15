@@ -14,15 +14,7 @@ const cx = lucidClassNames.bind('&-DateSelect');
 
 const NAV_BUTTON_SIZE = 32;
 
-const {
-	any,
-	bool,
-	func,
-	instanceOf,
-	number,
-	oneOf,
-	string,
-} = PropTypes;
+const { any, bool, func, instanceOf, number, oneOf, string } = PropTypes;
 
 /**
  * {"categories": ["controls", "selectors"], "madeFrom": ["InfiniteSlidePanel", "CalendarMonth"]}
@@ -178,12 +170,10 @@ const DateSelect = createClass({
 	},
 
 	handleDayClick(day, { disabled }, event) {
-		const {
-			onSelectDate,
-		} = this.props;
+		const { onSelectDate } = this.props;
 
 		if (!disabled) {
-			onSelectDate(day, {event, props: this.props});
+			onSelectDate(day, { event, props: this.props });
 		}
 	},
 
@@ -206,11 +196,11 @@ const DateSelect = createClass({
 	},
 
 	handlePrev(event) {
-		this.props.onPrev({event, props: this.props});
+		this.props.onPrev({ event, props: this.props });
 	},
 
 	handleNext(event) {
-		this.props.onNext({event, props: this.props});
+		this.props.onNext({ event, props: this.props });
 	},
 
 	componentWillMount() {
@@ -218,28 +208,28 @@ const DateSelect = createClass({
 	},
 
 	componentDidMount() {
-		const {
-			isFontSizeRelative,
-			monthsShown,
-		} = this.props;
+		const { isFontSizeRelative, monthsShown } = this.props;
 
 		if (isFontSizeRelative) {
 			const rootElement = ReactDOM.findDOMNode(this.rootRef);
-			const {
-				width,
-				height,
-			} = rootElement.getBoundingClientRect();
+			const { width, height } = rootElement.getBoundingClientRect();
 			const navButtonsWidth = NAV_BUTTON_SIZE * 2;
-			const oneMonthShownWidth = (width - navButtonsWidth) / monthsShown + navButtonsWidth;
+			const oneMonthShownWidth =
+				(width - navButtonsWidth) / monthsShown + navButtonsWidth;
 			const size = Math.sqrt(oneMonthShownWidth * height);
 			const relativeFontSize = Math.round(size / 24);
-			const relativeMinWidth = (((width - navButtonsWidth) / monthsShown) * 10.1075 / relativeFontSize) * monthsShown + navButtonsWidth;
+			const relativeMinWidth =
+				(width - navButtonsWidth) /
+					monthsShown *
+					10.1075 /
+					relativeFontSize *
+					monthsShown +
+				navButtonsWidth;
 
 			rootElement.style.fontSize = `${relativeFontSize}px`;
 			rootElement.style.minWidth = `${relativeMinWidth}px`;
 		}
 	},
-
 
 	render() {
 		const {
@@ -258,26 +248,35 @@ const DateSelect = createClass({
 			...passThroughs
 		} = this.props;
 
-		const {
-			cursor,
-		} = this.state;
+		const { cursor } = this.state;
 
-		const calendarMonth = getFirst(this.props, DateSelect.CalendarMonth, <DateSelect.CalendarMonth />);
+		const calendarMonth = getFirst(
+			this.props,
+			DateSelect.CalendarMonth,
+			<DateSelect.CalendarMonth />
+		);
 
 		return (
 			<section
-				ref={(ref) => {this.rootRef = ref;}}
+				ref={ref => {
+					this.rootRef = ref;
+				}}
 				className={cx('&', className, {
 					'&-show-divider': showDivider,
 				})}
 				style={{
-					minWidth: (NAV_BUTTON_SIZE * 2) + 185 * monthsShown,
+					minWidth: NAV_BUTTON_SIZE * 2 + 185 * monthsShown,
 					...passThroughs.style,
 				}}
 				{...omitProps(passThroughs, DateSelect)}
 			>
 				<div>
-					<ChevronThinIcon size={NAV_BUTTON_SIZE} isClickable direction='left' onClick={this.handlePrev} />
+					<ChevronThinIcon
+						size={NAV_BUTTON_SIZE}
+						isClickable
+						direction="left"
+						onClick={this.handlePrev}
+					/>
 				</div>
 				<InfiniteSlidePanel
 					className={cx('&-InfiniteSlidePanel')}
@@ -287,10 +286,8 @@ const DateSelect = createClass({
 					onSwipe={onSwipe}
 				>
 					<InfiniteSlidePanel.Slide className={cx('&-slide')}>
-						{(slideOffset) => (
-							<div
-								className={cx('&-slide-content')}
-							>
+						{slideOffset => (
+							<div className={cx('&-slide-content')}>
 								<CalendarMonth
 									className={cx('&-CalendarMonth')}
 									monthOffset={slideOffset}
@@ -302,12 +299,17 @@ const DateSelect = createClass({
 									disabledDays={disabledDays}
 									selectMode={selectMode}
 									onDayClick={this.handleDayClick}
-									onDayMouseEnter={showCursorHighlight ? this.handleDayMouseEnter : null}
-									onDayMouseLeave={showCursorHighlight ? this.handleDayMouseLeave : null}
-
+									onDayMouseEnter={
+										showCursorHighlight ? this.handleDayMouseEnter : null
+									}
+									onDayMouseLeave={
+										showCursorHighlight ? this.handleDayMouseLeave : null
+									}
 									// Only update CalendarMonths within frame or one position away:
-									shouldComponentUpdate={slideOffset - offset >= -1 && slideOffset - offset < monthsShown + 1}
-
+									shouldComponentUpdate={
+										slideOffset - offset >= -1 &&
+											slideOffset - offset < monthsShown + 1
+									}
 									{...calendarMonth.props}
 								/>
 							</div>
@@ -315,7 +317,12 @@ const DateSelect = createClass({
 					</InfiniteSlidePanel.Slide>
 				</InfiniteSlidePanel>
 				<div>
-					<ChevronThinIcon size={NAV_BUTTON_SIZE} isClickable direction='right' onClick={this.handleNext} />
+					<ChevronThinIcon
+						size={NAV_BUTTON_SIZE}
+						isClickable
+						direction="right"
+						onClick={this.handleNext}
+					/>
 				</div>
 			</section>
 		);

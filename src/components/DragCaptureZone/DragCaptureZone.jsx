@@ -5,10 +5,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DragCaptureZone');
-const {
-	func,
-	string,
-} = PropTypes;
+const { func, string } = PropTypes;
 
 /**
  * {"categories": ["utility"]}
@@ -68,7 +65,7 @@ const DragCaptureZone = createClass({
 			<div
 				{...this.props}
 				className={cx('&', this.props.className)}
-				key='DragCaptureZone'
+				key="DragCaptureZone"
 				onMouseDown={this.handleDragStart}
 			/>
 		);
@@ -80,44 +77,44 @@ const DragCaptureZone = createClass({
 	},
 
 	handleDrag(event) {
-		const {
-			pageX,
-			pageY,
-		} = event;
+		const { pageX, pageY } = event;
 
 		event.preventDefault();
 
-		this.props.onDrag({
-			dX: pageX - this.state.pageX,
-			dY: pageY - this.state.pageY,
-			pageX,
-			pageY,
-		}, {
-			event,
-			props: this.props,
-		});
+		this.props.onDrag(
+			{
+				dX: pageX - this.state.pageX,
+				dY: pageY - this.state.pageY,
+				pageX,
+				pageY,
+			},
+			{
+				event,
+				props: this.props,
+			}
+		);
 	},
 
 	handleDragEnd(event) {
-		const {
-			pageX,
-			pageY,
-		} = event;
+		const { pageX, pageY } = event;
 
 		event.preventDefault();
 
 		window.document.removeEventListener('mousemove', this.handleDrag);
 		window.document.removeEventListener('mouseup', this.handleDragEnd);
 
-		this.props.onDragEnd({
-			dX: pageX - this.state.pageX,
-			dY: pageY - this.state.pageY,
-			pageX,
-			pageY,
-		}, {
-			event,
-			props: this.props,
-		});
+		this.props.onDragEnd(
+			{
+				dX: pageX - this.state.pageX,
+				dY: pageY - this.state.pageY,
+				pageX,
+				pageY,
+			},
+			{
+				event,
+				props: this.props,
+			}
+		);
 
 		this.setState({
 			pageX: 0,
@@ -126,25 +123,25 @@ const DragCaptureZone = createClass({
 	},
 
 	handleDragStart(event) {
-		const {
-			pageX,
-			pageY,
-		} = event;
+		const { pageX, pageY } = event;
 
 		event.preventDefault();
 
 		window.document.addEventListener('mousemove', this.handleDrag);
 		window.document.addEventListener('mouseup', this.handleDragEnd);
 
-		this.props.onDragStart({
-			dX: 0,
-			dY: 0,
-			pageX,
-			pageY,
-		}, {
-			event,
-			props: this.props,
-		});
+		this.props.onDragStart(
+			{
+				dX: 0,
+				dY: 0,
+				pageX,
+				pageY,
+			},
+			{
+				event,
+				props: this.props,
+			}
+		);
 
 		this.setState({
 			pageX,

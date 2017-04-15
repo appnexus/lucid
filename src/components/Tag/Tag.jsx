@@ -12,12 +12,7 @@ import {
 
 const cx = lucidClassNames.bind('&-Tag');
 
-const {
-	bool,
-	func,
-	node,
-	string,
-} = PropTypes;
+const { bool, func, node, string } = PropTypes;
 
 /**
  * {"categories": ["communication"]}
@@ -60,12 +55,7 @@ const Tag = createClass({
 	},
 
 	render() {
-		const {
-			isRemovable,
-			children,
-			className,
-			...passThroughs
-		} = this.props;
+		const { isRemovable, children, className, ...passThroughs } = this.props;
 
 		const subTags = filterTypes(children, Tag);
 		const otherChildren = rejectTypes(children, Tag);
@@ -78,27 +68,27 @@ const Tag = createClass({
 			>
 				<div className={cx('&-inner')}>
 					<div className={cx('&-inner-content')}>
-						{!_.isEmpty(otherChildren) ? (
-							<span className={cx('&-inner-children')}>
-								{otherChildren}
-							</span>
-						) : null}
-						{isRemovable ? (
-							<span className={cx('&-remove')} onClick={this.handleRemove}>
-								<CrossIcon
-									className={cx('&-remove-button')}
-									size={10}
-									viewBox='4 4 8 8'
-									isClickable
-								/>
-							</span>
-						) : null}
+						{!_.isEmpty(otherChildren)
+							? <span className={cx('&-inner-children')}>
+									{otherChildren}
+								</span>
+							: null}
+						{isRemovable
+							? <span className={cx('&-remove')} onClick={this.handleRemove}>
+									<CrossIcon
+										className={cx('&-remove-button')}
+										size={10}
+										viewBox="4 4 8 8"
+										isClickable
+									/>
+								</span>
+							: null}
 					</div>
-					{!isLeaf ? (
-						<div className={cx('&-subgroup')}>
-							{subTags}
-						</div>
-					) : null}
+					{!isLeaf
+						? <div className={cx('&-subgroup')}>
+								{subTags}
+							</div>
+						: null}
 				</div>
 			</div>
 		);
