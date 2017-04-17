@@ -11,51 +11,59 @@ export default React.createClass({
 
 	render() {
 		return (
-			<section style={{
-				alignItems: 'center',
-				display: 'flex',
-			}}>
+			<section
+				style={{
+					alignItems: 'center',
+					display: 'flex',
+				}}
+			>
 				<DragCaptureZone
 					onDrag={this.handleDragged}
 					onDragEnd={this.handleDragEnded}
 					onDragStart={this.handleDragStarted}
 				>
-					<div style={{
-						alignItems: 'center',
-						backgroundColor: '#b7b7b7',
-						display: 'flex',
-						fontFamily: 'Helvetica, sans-serif',
-						fontSize: '24px',
-						fontWeight: 300,
-						height: 300,
-						justifyContent: 'center',
-						textTransform: 'uppercase',
-						width: 400,
-					}}>
+					<div
+						style={{
+							alignItems: 'center',
+							backgroundColor: '#b7b7b7',
+							display: 'flex',
+							fontFamily: 'Helvetica, sans-serif',
+							fontSize: '24px',
+							fontWeight: 300,
+							height: 300,
+							justifyContent: 'center',
+							textTransform: 'uppercase',
+							width: 400,
+						}}
+					>
 						Go wild!
 					</div>
 				</DragCaptureZone>
-				<div style={{
-					height: 300,
-					marginLeft: 50,
-					overflow: 'auto',
-					width: 600,
-				}}>
-					{_.reverse(_.map(({ coordinates, type }, index) => (
-						<div key={index}>
-							<div style={{
-								fontWeight: 'bold',
-							}}>
-								{type}
+				<div
+					style={{
+						height: 300,
+						marginLeft: 50,
+						overflow: 'auto',
+						width: 600,
+					}}
+				>
+					{_.reverse(
+						_.map(({ coordinates, type }, index) => (
+							<div key={index}>
+								<div
+									style={{
+										fontWeight: 'bold',
+									}}
+								>
+									{type}
+								</div>
+								<div>
+									{`dx: ${coordinates.dX}, dy: ${coordinates.dY},
+									px: ${coordinates.pageX}, py: ${coordinates.pageY}`}
+								</div>
 							</div>
-							<div>
-								{
-									`dx: ${coordinates.dX}, dy: ${coordinates.dY},
-									px: ${coordinates.pageX}, py: ${coordinates.pageY}`
-								}
-							</div>
-						</div>
-					))) }
+						))
+					)}
 				</div>
 			</section>
 		);
@@ -84,10 +92,13 @@ export default React.createClass({
 		const alreadyDragging = lastEvent.type === 'start';
 
 		this.setState({
-			events: _.concat(alreadyDragging ? this.state.events : _.slice(this.state.events, 0, -1), {
-				type: 'drag',
-				coordinates,
-			}),
+			events: _.concat(
+				alreadyDragging ? this.state.events : _.slice(this.state.events, 0, -1),
+				{
+					type: 'drag',
+					coordinates,
+				}
+			),
 		});
 	},
 });

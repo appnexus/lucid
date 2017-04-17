@@ -16,14 +16,14 @@ describe('RadioGroup', () => {
 			it('sets the `name` attribute of the child radio buttons.', () => {
 				const name = 'radio';
 				const wrapper = shallow(
-						<RadioGroup name={name}>
-							<RadioGroup.RadioButton />
-							<RadioGroup.RadioButton />
-							<RadioGroup.RadioButton />
-						</RadioGroup>
-					);
+					<RadioGroup name={name}>
+						<RadioGroup.RadioButton />
+						<RadioGroup.RadioButton />
+						<RadioGroup.RadioButton />
+					</RadioGroup>
+				);
 
-				_.forEach(wrapper.find(RadioButtonLabeled).nodes, (node) => {
+				_.forEach(wrapper.find(RadioButtonLabeled).nodes, node => {
 					assert.equal(node.props.name, name);
 				});
 			});
@@ -38,7 +38,7 @@ describe('RadioGroup', () => {
 				);
 				const name = wrapper.first().prop('name');
 
-				_.forEach(wrapper.find(RadioButtonLabeled).nodes, (node) => {
+				_.forEach(wrapper.find(RadioButtonLabeled).nodes, node => {
 					assert.equal(node.props.name, name);
 				});
 			});
@@ -46,7 +46,7 @@ describe('RadioGroup', () => {
 
 		describe('selectedIndex', () => {
 			it('sets the `isSelected` prop of the child radio button at the matching index to true...', () => {
-				const wrapper= shallow(
+				const wrapper = shallow(
 					<RadioGroup selectedIndex={2}>
 						<RadioGroup.RadioButton />
 						<RadioGroup.RadioButton />
@@ -104,7 +104,7 @@ describe('RadioGroup', () => {
 
 				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
 				// to the root element.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
+				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], prop => {
 					assert(_.includes(rootProps, prop));
 				});
 			});
@@ -145,8 +145,8 @@ describe('RadioGroup', () => {
 			<RadioGroup>
 				<RadioGroup.RadioButton>
 					<RadioGroup.Label>
-						<span id='foo'>foo</span>
-						<span id='bar'>bar</span>
+						<span id="foo">foo</span>
+						<span id="bar">bar</span>
 					</RadioGroup.Label>
 				</RadioGroup.RadioButton>
 			</RadioGroup>

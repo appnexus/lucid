@@ -1,17 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
-import { SearchableMultiSelectDumb as SearchableMultiSelect } from './SearchableMultiSelect';
+import {
+	SearchableMultiSelectDumb as SearchableMultiSelect,
+} from './SearchableMultiSelect';
 
-const {
-	Option,
-} = SearchableMultiSelect;
+const { Option } = SearchableMultiSelect;
 
 describe('SearchableMultiSelect', () => {
 	common(SearchableMultiSelect, {
-		exemptFunctionProps: [
-			'optionFilter',
-		],
+		exemptFunctionProps: ['optionFilter'],
 	});
 
 	describe('render', () => {
@@ -26,7 +24,6 @@ describe('SearchableMultiSelect', () => {
 
 			expect(wrapper.find('DropMenu').length).toBe(1);
 		});
-
 	});
 
 	describe('props', () => {
@@ -81,7 +78,10 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				wrapper.find('DropMenu').first().prop('onSelect')(10, mockSelectionCallback);
+				wrapper.find('DropMenu').first().prop('onSelect')(
+					10,
+					mockSelectionCallback
+				);
 
 				expect(onSelect).toHaveBeenCalledWith(10, mockSelectionCallback);
 			});
@@ -112,7 +112,10 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				wrapper.find('Checkbox').first().prop('onSelect')(true, mockSelectionCallback);
+				wrapper.find('Checkbox').first().prop('onSelect')(
+					true,
+					mockSelectionCallback
+				);
 
 				expect(onSelect).toHaveBeenCalledWith(0, expected);
 			});
@@ -135,7 +138,7 @@ describe('SearchableMultiSelect', () => {
 				const wrapper = shallow(
 					<SearchableMultiSelect onSelect={onSelect} selectedIndices={[0, 1]}>
 						<Option>option a</Option>
-						<Option callbackId='custom' />
+						<Option callbackId="custom" />
 					</SearchableMultiSelect>
 				);
 
@@ -144,6 +147,5 @@ describe('SearchableMultiSelect', () => {
 				expect(onSelect).toHaveBeenCalledWith(1, expected);
 			});
 		});
-
 	});
 });

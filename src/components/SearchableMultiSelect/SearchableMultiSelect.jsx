@@ -1,11 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { buildHybridComponent } from '../../util/state-management';
-import {
-	partitionText,
-	propsSearch,
-} from '../../util/text-manipulation';
+import { partitionText, propsSearch } from '../../util/text-manipulation';
 import {
 	createClass,
 	omitProps,
@@ -31,7 +29,7 @@ const {
 	string,
 	oneOf,
 	node,
-} = React.PropTypes;
+} = PropTypes;
 
 const cx = lucidClassNames.bind('&-SearchableMultiSelect');
 
@@ -193,34 +191,43 @@ const SearchableMultiSelect = createClass({
 		return onSelect(optionIndex, { event, props });
 	},
 
-	handleCheckboxSelect(_isSelected, {
-		// TODO: make sure the consumer can do callbackId somehow
-		event,
-		props: { callbackId: optionIndex },
-	}) {
+	handleCheckboxSelect(
+		_isSelected,
+		{
+			// TODO: make sure the consumer can do callbackId somehow
+			event,
+			props: { callbackId: optionIndex },
+		}
+	) {
 		// This is needed otherwise clicking the checkbox will double fire this
 		// event _and_ the `handleDropMenuSelect` handler
 		event.stopPropagation();
 
 		// We don't want to send the consumer the checkbox's props so we have to
 		// lookup the option they clicked and send its props along
-		const selectedOptionProps = _.get(findTypes(this.props, SearchableMultiSelect.Option), `[${optionIndex}].props`);
+		const selectedOptionProps = _.get(
+			findTypes(this.props, SearchableMultiSelect.Option),
+			`[${optionIndex}].props`
+		);
 
-		return this.props.onSelect(optionIndex, { event, props: selectedOptionProps });
+		return this.props.onSelect(optionIndex, {
+			event,
+			props: selectedOptionProps,
+		});
 	},
 
-	handleSelectionRemove({
-		event,
-		props,
-		props: {
-			callbackId: optionIndex,
-		},
-	}) {
+	handleSelectionRemove({ event, props, props: { callbackId: optionIndex } }) {
 		// We don't want to send the consumer the selection's props so we have to
 		// lookup the option they clicked and send its props along
-		const selectedOptionProps = _.get(findTypes(this.props, SearchableMultiSelect.Option), `[${optionIndex}].props`);
+		const selectedOptionProps = _.get(
+			findTypes(this.props, SearchableMultiSelect.Option),
+			`[${optionIndex}].props`
+		);
 
-		return this.props.onSelect(optionIndex, { event, props: selectedOptionProps });
+		return this.props.onSelect(optionIndex, {
+			event,
+			props: selectedOptionProps,
+		});
 	},
 
 	handleRemoveAll({ event }) {
@@ -230,17 +237,14 @@ const SearchableMultiSelect = createClass({
 	handleSearch(searchText, { event }) {
 		const {
 			props,
-			props: {
-				onSearch,
-				optionFilter,
-				DropMenu: {
-					onExpand,
-				},
-			},
+			props: { onSearch, optionFilter, DropMenu: { onExpand } },
 		} = this;
 
-		const options = _.map(findTypes(props, SearchableMultiSelect.Option), 'props');
-		const firstVisibleIndex = _.findIndex(options, (option) => {
+		const options = _.map(
+			findTypes(props, SearchableMultiSelect.Option),
+			'props'
+		);
+		const firstVisibleIndex = _.findIndex(options, option => {
 			return optionFilter(searchText, option);
 		});
 		const firstVisibleProps = options[firstVisibleIndex];
@@ -249,30 +253,44 @@ const SearchableMultiSelect = createClass({
 		// is typing
 		onExpand();
 
-		return onSearch(searchText, firstVisibleIndex, { event, props: firstVisibleProps });
+		return onSearch(searchText, firstVisibleIndex, {
+			event,
+			props: firstVisibleProps,
+		});
 	},
 
 	renderUnderlinedChildren(childText, searchText) {
-		const [pre, match, post] = partitionText(childText, new RegExp(_.escapeRegExp(searchText), 'i'), searchText.length);
+		const [pre, match, post] = partitionText(
+			childText,
+			new RegExp(_.escapeRegExp(searchText), 'i'),
+			searchText.length
+		);
 
 		return [
-			pre && <span key='pre' className={cx('&-Option-underline-pre')}>{pre}</span>,
-			match && <span key='match' className={cx('&-Option-underline-match')}>{match}</span>,
-			post && <span key='post' className={cx('&-Option-underline-post')}>{post}</span>,
+			pre &&
+				<span key="pre" className={cx('&-Option-underline-pre')}>{pre}</span>,
+			match &&
+				<span key="match" className={cx('&-Option-underline-match')}>
+					{match}
+				</span>,
+			post &&
+				<span key="post" className={cx('&-Option-underline-post')}>
+					{post}
+				</span>,
 		];
 	},
 
 	renderOptions(optionsProps) {
-		const {
-			optionFilter,
-			searchText,
-			selectedIndices,
-			isLoading,
-		} = this.props;
+		const { optionFilter, searchText, selectedIndices, isLoading } = this.props;
 
 		const options = _.map(optionsProps, (optionProps, optionIndex) => (
 			<DropMenu.Option
-				{...omitProps(optionProps, SearchableMultiSelect.Option, ['children'], false)}
+				{...omitProps(
+					optionProps,
+					SearchableMultiSelect.Option,
+					['children'],
+					false
+				)}
 				isHidden={!optionFilter(searchText, optionProps)}
 				key={optionIndex}
 				isDisabled={isLoading}
@@ -284,21 +302,26 @@ const SearchableMultiSelect = createClass({
 						isSelected={_.includes(selectedIndices, optionIndex)}
 					/>
 					<div className={cx('&-checkbox-label')}>
-						{_.isString(optionProps.children) ?
-							this.renderUnderlinedChildren(optionProps.children, searchText)
-						: optionProps.children}
+						{_.isString(optionProps.children)
+							? this.renderUnderlinedChildren(optionProps.children, searchText)
+							: optionProps.children}
 					</div>
 				</div>
 			</DropMenu.Option>
 		));
 
-		const visibleOptionsCount = _.filter(options, (option) => !option.props.isHidden).length;
+		const visibleOptionsCount = _.filter(
+			options,
+			option => !option.props.isHidden
+		).length;
 
 		return visibleOptionsCount > 0
 			? options
 			: <DropMenu.Option isDisabled>
-				<span className={cx('&-noresults')}>No results match "{searchText}"</span>
-			</DropMenu.Option>;
+					<span className={cx('&-noresults')}>
+						No results match "{searchText}"
+					</span>
+				</DropMenu.Option>;
 	},
 
 	render() {
@@ -311,9 +334,7 @@ const SearchableMultiSelect = createClass({
 				maxMenuHeight,
 				selectedIndices,
 				DropMenu: dropMenuProps,
-				DropMenu: {
-					optionContainerStyle,
-				},
+				DropMenu: { optionContainerStyle },
 				responsiveMode,
 				searchText,
 				hasRemoveAll,
@@ -322,8 +343,15 @@ const SearchableMultiSelect = createClass({
 			},
 		} = this;
 
-		const searchFieldProps = _.get(getFirst(props, SearchableMultiSelect.SearchField), 'props', {});
-		const optionsProps = _.map(findTypes(props, SearchableMultiSelect.Option), 'props');
+		const searchFieldProps = _.get(
+			getFirst(props, SearchableMultiSelect.SearchField),
+			'props',
+			{}
+		);
+		const optionsProps = _.map(
+			findTypes(props, SearchableMultiSelect.Option),
+			'props'
+		);
 		const isSmall = responsiveMode === 'small';
 
 		return (
@@ -334,10 +362,18 @@ const SearchableMultiSelect = createClass({
 				<DropMenu
 					{...dropMenuProps}
 					selectedIndices={null}
-					className={cx('&-DropMenu', {
-						'&-DropMenu-is-small': isSmall,
-					}, dropMenuProps.className)}
-					optionContainerStyle={_.assign({}, optionContainerStyle, !_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null)}
+					className={cx(
+						'&-DropMenu',
+						{
+							'&-DropMenu-is-small': isSmall,
+						},
+						dropMenuProps.className
+					)}
+					optionContainerStyle={_.assign(
+						{},
+						optionContainerStyle,
+						!_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null
+					)}
 					isDisabled={isDisabled}
 					isLoading={isLoading}
 					onSelect={this.handleDropMenuSelect}
@@ -351,51 +387,62 @@ const SearchableMultiSelect = createClass({
 						<SearchField
 							{...searchFieldProps}
 							isDisabled={isDisabled}
-							className={cx('&-search', {
-								'&-search-is-small': isSmall,
-							}, searchFieldProps.className)}
+							className={cx(
+								'&-search',
+								{
+									'&-search-is-small': isSmall,
+								},
+								searchFieldProps.className
+							)}
 							value={searchText}
 							onChange={this.handleSearch}
 						/>
 					</DropMenu.Control>
-					{isLoading ?
-						<DropMenu.Option key='SearchableMultiSelectLoading' className={cx('&-loading')} isDisabled>
-							<LoadingIcon />
-						</DropMenu.Option>
-					: null}
+					{isLoading
+						? <DropMenu.Option
+								key="SearchableMultiSelectLoading"
+								className={cx('&-loading')}
+								isDisabled
+							>
+								<LoadingIcon />
+							</DropMenu.Option>
+						: null}
 					{this.renderOptions(optionsProps)}
 				</DropMenu>
 
-				{hasSelections && !_.isEmpty(selectedIndices) ?
-					<Selection
-						isBold
-						hasBackground
-						Label='Selected'
-						kind='container'
-						onRemove={this.handleRemoveAll}
-						responsiveMode={responsiveMode}
-						isRemovable={hasRemoveAll}
-					>
-						{_.map(selectedIndices, (selectedIndex) => {
-							const optionProps = optionsProps[selectedIndex];
-							const selectionProps = _.get(getFirst(optionProps, SearchableMultiSelect.Option.Selection), 'props');
+				{hasSelections && !_.isEmpty(selectedIndices)
+					? <Selection
+							isBold
+							hasBackground
+							Label="Selected"
+							kind="container"
+							onRemove={this.handleRemoveAll}
+							responsiveMode={responsiveMode}
+							isRemovable={hasRemoveAll}
+						>
+							{_.map(selectedIndices, selectedIndex => {
+								const optionProps = optionsProps[selectedIndex];
+								const selectionProps = _.get(
+									getFirst(optionProps, SearchableMultiSelect.Option.Selection),
+									'props'
+								);
 
-							return (
-								<Selection
-									key={selectedIndex}
-									{...selectionProps}
-									callbackId={selectedIndex}
-									responsiveMode={responsiveMode}
-									onRemove={this.handleSelectionRemove}
-								>
-									<Selection.Label>
-										{optionProps.children}
-									</Selection.Label>
-								</Selection>
-							);
-						})}
-					</Selection>
-				: null}
+								return (
+									<Selection
+										key={selectedIndex}
+										{...selectionProps}
+										callbackId={selectedIndex}
+										responsiveMode={responsiveMode}
+										onRemove={this.handleSelectionRemove}
+									>
+										<Selection.Label>
+											{optionProps.children}
+										</Selection.Label>
+									</Selection>
+								);
+							})}
+						</Selection>
+					: null}
 			</div>
 		);
 	},

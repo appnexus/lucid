@@ -6,4 +6,3 @@ describe('RefreshIcon', () => {
 	common(RefreshIcon);
 	icons(RefreshIcon);
 });
-

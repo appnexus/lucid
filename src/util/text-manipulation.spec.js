@@ -16,26 +16,50 @@ describe('text-manipulation', () => {
 		});
 
 		it('should return the matched text as `match`, and the remaining text as `post`, if there is a match at the beginning of the string', () => {
-			assert(_.isEqual(partitionText('patternpost', pattern, 7), ['', 'pattern', 'post']));
+			assert(
+				_.isEqual(partitionText('patternpost', pattern, 7), [
+					'',
+					'pattern',
+					'post',
+				])
+			);
 		});
 
 		it('should return the prefix text as `pre`, the matched text as `match`, and the remaining text as `post`, if there is a match mid-string', () => {
-			assert(_.isEqual(partitionText('prepatternpost', pattern, 7), ['pre', 'pattern', 'post']));
+			assert(
+				_.isEqual(partitionText('prepatternpost', pattern, 7), [
+					'pre',
+					'pattern',
+					'post',
+				])
+			);
 		});
 	});
 
 	describe('#getCombinedChildText', () => {
-		it('should return \'\' if the passed in node has no children', () => {
+		it("should return '' if the passed in node has no children", () => {
 			assert.equal(getCombinedChildText({}), '');
 		});
 
-		it('should return the node\'s `children` if it is a string', () => {
+		it("should return the node's `children` if it is a string", () => {
 			const children = 'child';
-			assert.equal(getCombinedChildText({children}), 'child');
+			assert.equal(getCombinedChildText({ children }), 'child');
 		});
 
 		it('should recursively combine children', () => {
-			const node = {children: [{props: {children: '1'}}, {props: {children: [{props: {children: '2'}}, {props: {children: '3'}}]}}]};
+			const node = {
+				children: [
+					{ props: { children: '1' } },
+					{
+						props: {
+							children: [
+								{ props: { children: '2' } },
+								{ props: { children: '3' } },
+							],
+						},
+					},
+				],
+			};
 			assert.equal(getCombinedChildText(node), '123');
 		});
 	});
@@ -53,13 +77,12 @@ describe('text-manipulation', () => {
 			assert(propsSearch(''));
 		});
 
-		it('should return true if the searchText matches the option\'s text', () => {
-			assert(propsSearch('search', {children: 'search'}));
+		it("should return true if the searchText matches the option's text", () => {
+			assert(propsSearch('search', { children: 'search' }));
 		});
 
-		it('should return false if the searchText does not match the option\'s text', () => {
-			assert(!propsSearch('search', {children: 'miss'}));
+		it("should return false if the searchText does not match the option's text", () => {
+			assert(!propsSearch('search', { children: 'miss' }));
 		});
 	});
-
 });

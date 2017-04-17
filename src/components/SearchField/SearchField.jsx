@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React, { createElement } from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
@@ -11,14 +12,7 @@ import reducers from './SearchField.reducers';
 
 const cx = lucidClassNames.bind('&-SearchField');
 
-const {
-	bool,
-	func,
-	node,
-	number,
-	oneOfType,
-	string,
-} = React.PropTypes;
+const { bool, func, node, number, oneOfType, string } = PropTypes;
 
 /**
 * {"categories": ["controls", "text"], "madeFrom": ["TextField", "SearchIcon"]}
@@ -74,10 +68,7 @@ const SearchField = createClass({
 		/**
 		 * Set the value of the input.
 		 */
-		value: oneOfType([
-			number,
-			string,
-		]),
+		value: oneOfType([number, string]),
 		/**
 		 * Controls the highlighting of the search icon. Should be passed `true` when
 		 * the search text is valid, e.g. contains enough characters to perform a search.
@@ -115,7 +106,6 @@ const SearchField = createClass({
 	},
 
 	render() {
-
 		const {
 			props,
 			props: {
@@ -132,10 +122,7 @@ const SearchField = createClass({
 			},
 		} = this;
 
-		const {
-			Icon,
-			TextField,
-		} = SearchField;
+		const { Icon, TextField } = SearchField;
 
 		const textFieldProps = {
 			isDisabled,
@@ -148,15 +135,29 @@ const SearchField = createClass({
 			value,
 		};
 
-		const textFieldElement = getFirst(props, TextField, <TextField {...textFieldProps} />);
-		const isIconActive = _.isUndefined(isValid) ? !_.isEmpty(_.get(textFieldElement, 'props.value')) : isValid;
-		const defaultIcon = <SearchIcon className={cx('&-Icon', { '&-Icon-active': isIconActive })} />;
+		const textFieldElement = getFirst(
+			props,
+			TextField,
+			<TextField {...textFieldProps} />
+		);
+		const isIconActive = _.isUndefined(isValid)
+			? !_.isEmpty(_.get(textFieldElement, 'props.value'))
+			: isValid;
+		const defaultIcon = (
+			<SearchIcon className={cx('&-Icon', { '&-Icon-active': isIconActive })} />
+		);
 		const iconElement = getFirst(props, Icon);
 		const iconChildren = _.get(iconElement, 'props.children');
-		const icon = iconChildren ? createElement(iconChildren.type, {
-			...iconChildren.props,
-			className: cx('&-Icon', { '&-Icon-active': isIconActive }, iconChildren.props.className),
-		}) : defaultIcon;
+		const icon = iconChildren
+			? createElement(iconChildren.type, {
+					...iconChildren.props,
+					className: cx(
+						'&-Icon',
+						{ '&-Icon-active': isIconActive },
+						iconChildren.props.className
+					),
+				})
+			: defaultIcon;
 
 		return (
 			<div
@@ -169,7 +170,6 @@ const SearchField = createClass({
 				</div>
 			</div>
 		);
-
 	},
 });
 

@@ -1,11 +1,6 @@
-import {
-	onSwipe,
-	onPrev,
-	onNext,
-} from './DateSelect.reducers';
+import { onSwipe, onPrev, onNext } from './DateSelect.reducers';
 
 describe('DateSelect reducers', () => {
-
 	const initialState = {
 		offset: 0,
 	};
@@ -31,5 +26,4 @@ describe('DateSelect reducers', () => {
 			expect(nextState.offset).toBe(1);
 		});
 	});
-
 });

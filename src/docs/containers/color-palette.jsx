@@ -20,12 +20,8 @@ const colorList = [
 	},
 	{
 		category: 'Primary',
-		description: 'The primary color is the most prominent color used throughout lucid. It\'s great for drawing the user\'s eye to particular components.',
-		variables: [
-			'color-primaryLight',
-			'color-primaryMedium',
-			'color-primary',
-		],
+		description: "The primary color is the most prominent color used throughout lucid. It's great for drawing the user's eye to particular components.",
+		variables: ['color-primaryLight', 'color-primaryMedium', 'color-primary'],
 	},
 	{
 		category: 'Text Colors',
@@ -210,9 +206,7 @@ const colorList = [
 	},
 	{
 		category: 'Chart Other',
-		variables: [
-			'color-chart-neutral',
-		],
+		variables: ['color-chart-neutral'],
 	},
 ];
 
@@ -239,15 +233,21 @@ const ColorPalette = React.createClass({
 	// rendered.
 	getHexMap() {
 		const allItems = document.querySelectorAll('[data-less-variable]');
-		const hexMap = _.reduce(allItems, (acc, item) => {
-			const lessVariable = item.dataset.lessVariable;
-			const hexString = rgb2hex(window.getComputedStyle(item).getPropertyValue('background-color'));
+		const hexMap = _.reduce(
+			allItems,
+			(acc, item) => {
+				const lessVariable = item.dataset.lessVariable;
+				const hexString = rgb2hex(
+					window.getComputedStyle(item).getPropertyValue('background-color')
+				);
 
-			return {
-				...acc,
-				[lessVariable]: hexString,
-			};
-		}, {});
+				return {
+					...acc,
+					[lessVariable]: hexString,
+				};
+			},
+			{}
+		);
 
 		this.setState({ hexMap });
 	},
@@ -267,9 +267,7 @@ const ColorPalette = React.createClass({
 	},
 
 	render() {
-		const {
-			hexMap,
-		} = this.state;
+		const { hexMap } = this.state;
 
 		return (
 			<div className={cx('&')}>
@@ -281,9 +279,7 @@ const ColorPalette = React.createClass({
 					<div key={i}>
 						<h3>{group.category}</h3>
 
-						{group.description ?
-							<p>{group.description}</p>
-						: null}
+						{group.description ? <p>{group.description}</p> : null}
 
 						{_.map(group.variables, (variable, j) => (
 							<div
@@ -291,7 +287,7 @@ const ColorPalette = React.createClass({
 								data-less-variable={variable}
 								className={classNames(cx('&-item', `&-${variable}`))}
 							>
-								<span >{`@${variable};`}</span>
+								<span>{`@${variable};`}</span>
 								<span>{hexMap[variable]}</span>
 							</div>
 						))}

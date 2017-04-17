@@ -1,7 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, findTypes, rejectTypes, omitProps } from '../../util/component-types';
+import {
+	createClass,
+	getFirst,
+	findTypes,
+	rejectTypes,
+	omitProps,
+} from '../../util/component-types';
 import { scrollParentTo } from '../../util/dom-helpers';
 import { buildHybridComponent } from '../../util/state-management';
 import * as KEYCODE from '../../constants/key-code';
@@ -9,13 +16,17 @@ import * as reducers from './DropMenu.reducers';
 import ContextMenu from '../ContextMenu/ContextMenu';
 
 function joinArray(array, getSeparator) {
-	return _.reduce(array, (newArray, element, index) => {
-		newArray.push(element);
-		if (index < _.size(array) - 1) {
-			newArray.push(getSeparator(element, index, array));
-		}
-		return newArray;
-	}, []);
+	return _.reduce(
+		array,
+		(newArray, element, index) => {
+			newArray.push(element);
+			if (index < _.size(array) - 1) {
+				newArray.push(getSeparator(element, index, array));
+			}
+			return newArray;
+		},
+		[]
+	);
 }
 
 function isOptionVisible(option) {
@@ -34,7 +45,7 @@ const {
 	object,
 	oneOf,
 	string,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  *
@@ -258,45 +269,60 @@ const DropMenu = createClass({
 	},
 
 	statics: {
-		preprocessOptionData(props, ParentType=DropMenu) {
-			const {
-				OptionGroup,
-				Option,
-				NullOption,
-			} = ParentType;
+		preprocessOptionData(props, ParentType = DropMenu) {
+			const { OptionGroup, Option, NullOption } = ParentType;
 
 			const optionGroups = _.map(findTypes(props, OptionGroup), 'props'); // find all OptionGroup props
 			const ungroupedOptions = _.map(findTypes(props, Option), 'props'); // find all ungrouped Option props
-			const nullOptions = NullOption ? _.map(findTypes(props, NullOption), 'props') : []; // find all NullOption props
+			const nullOptions = NullOption
+				? _.map(findTypes(props, NullOption), 'props')
+				: []; // find all NullOption props
 
 			// flatten grouped options into array of objects to associate { index, group index, and props } for each option
-			const groupedOptionData = _.reduce(optionGroups, (memo, optionGroupProps, optionGroupIndex) => {
-				const groupedOptions = _.map(findTypes(optionGroupProps, Option), 'props'); // find all Option props for current group
-				return memo.concat(_.map(groupedOptions, (optionProps, localOptionIndex) => {
-					return {
-						localOptionIndex,
-						optionIndex: _.size(memo) + localOptionIndex, // add current index to current array length to get final option index
-						optionGroupIndex, // store option group index to associate option back to group
-						optionProps,
-					};
-				}));
-			}, []);
+			const groupedOptionData = _.reduce(
+				optionGroups,
+				(memo, optionGroupProps, optionGroupIndex) => {
+					const groupedOptions = _.map(
+						findTypes(optionGroupProps, Option),
+						'props'
+					); // find all Option props for current group
+					return memo.concat(
+						_.map(groupedOptions, (optionProps, localOptionIndex) => {
+							return {
+								localOptionIndex,
+								optionIndex: _.size(memo) + localOptionIndex, // add current index to current array length to get final option index
+								optionGroupIndex, // store option group index to associate option back to group
+								optionProps,
+							};
+						})
+					);
+				},
+				[]
+			);
 
 			// create lookup object for options by their group index
-			const optionGroupDataLookup = _.groupBy(groupedOptionData, 'optionGroupIndex');
+			const optionGroupDataLookup = _.groupBy(
+				groupedOptionData,
+				'optionGroupIndex'
+			);
 
 			// store ungrouped options into array of objects to associate { index, and props } for each option
-			const ungroupedOptionData = _.map(ungroupedOptions, (optionProps, localOptionIndex) => {
-				return {
-					localOptionIndex,
-					optionIndex: _.size(groupedOptionData) + localOptionIndex, // add current index to grouped options array length to get final option index (grouped options rendered first)
-					optionGroupIndex: null, // ungrouped options have no `optionGroupIndex`
-					optionProps,
-				};
-			});
+			const ungroupedOptionData = _.map(
+				ungroupedOptions,
+				(optionProps, localOptionIndex) => {
+					return {
+						localOptionIndex,
+						optionIndex: _.size(groupedOptionData) + localOptionIndex, // add current index to grouped options array length to get final option index (grouped options rendered first)
+						optionGroupIndex: null, // ungrouped options have no `optionGroupIndex`
+						optionProps,
+					};
+				}
+			);
 
 			// concatenate grouped options array with ungrouped options array to get flat list of all options
-			const flattenedOptionsData = groupedOptionData.concat(ungroupedOptionData);
+			const flattenedOptionsData = groupedOptionData.concat(
+				ungroupedOptionData
+			);
 
 			return {
 				optionGroups,
@@ -325,10 +351,7 @@ const DropMenu = createClass({
 			},
 		} = this;
 
-		const {
-			flattenedOptionsData,
-			nullOptions,
-		} = this.state;
+		const { flattenedOptionsData, nullOptions } = this.state;
 
 		this.setState({
 			isMouseTriggered: false,
@@ -337,12 +360,16 @@ const DropMenu = createClass({
 		if (isExpanded) {
 			if (event.keyCode === KEYCODE.Enter) {
 				event.preventDefault();
-				const focusedOptionData = _.get(flattenedOptionsData, focusedIndex, null);
+				const focusedOptionData = _.get(
+					flattenedOptionsData,
+					focusedIndex,
+					null
+				);
 				const focusedOptionProps = _.get(focusedOptionData, 'optionProps', {});
 				if (focusedOptionData && !focusedOptionProps.isDisabled) {
-					onSelect(focusedIndex, {props: focusedOptionProps, event});
+					onSelect(focusedIndex, { props: focusedOptionProps, event });
 				} else if (_.isNull(focusedIndex)) {
-					onSelect(null, {props: _.first(nullOptions), event});
+					onSelect(null, { props: _.first(nullOptions), event });
 				}
 			}
 			if (event.keyCode === KEYCODE.Escape) {
@@ -359,22 +386,46 @@ const DropMenu = createClass({
 					}
 					if (focusedIndex > 0) {
 						event.preventDefault();
-						onFocusOption(_.findLastIndex(flattenedOptionsData, isOptionVisible, focusedIndex - 1), { props, event });
+						onFocusOption(
+							_.findLastIndex(
+								flattenedOptionsData,
+								isOptionVisible,
+								focusedIndex - 1
+							),
+							{ props, event }
+						);
 					}
 				} else {
 					event.preventDefault();
-					onFocusOption(_.findLastIndex(flattenedOptionsData, isOptionVisible, focusedIndex - 1), { props, event });
+					onFocusOption(
+						_.findLastIndex(
+							flattenedOptionsData,
+							isOptionVisible,
+							focusedIndex - 1
+						),
+						{ props, event }
+					);
 				}
 			}
 			if (event.keyCode === KEYCODE.ArrowDown) {
 				if (_.isNumber(focusedIndex)) {
 					if (focusedIndex < _.size(flattenedOptionsData) - 1) {
 						event.preventDefault();
-						onFocusOption(_.findIndex(flattenedOptionsData, isOptionVisible, focusedIndex + 1), { props, event });
+						onFocusOption(
+							_.findIndex(
+								flattenedOptionsData,
+								isOptionVisible,
+								focusedIndex + 1
+							),
+							{ props, event }
+						);
 					}
 				} else {
 					event.preventDefault();
-					onFocusOption(_.findIndex(flattenedOptionsData, isOptionVisible, focusedIndex), { props, event });
+					onFocusOption(
+						_.findIndex(flattenedOptionsData, isOptionVisible, focusedIndex),
+						{ props, event }
+					);
 				}
 			}
 		} else {
@@ -386,14 +437,7 @@ const DropMenu = createClass({
 	},
 
 	handleClick(event) {
-		const {
-			props,
-			props: {
-				isExpanded,
-				onExpand,
-				onCollapse,
-			},
-		} = this;
+		const { props, props: { isExpanded, onExpand, onCollapse } } = this;
 
 		if (isExpanded) {
 			onCollapse({ props, event });
@@ -403,10 +447,7 @@ const DropMenu = createClass({
 	},
 
 	handleMouseFocusOption(optionIndex, optionProps, event) {
-		const {
-			focusedIndex,
-			onFocusOption,
-		} = this.props;
+		const { focusedIndex, onFocusOption } = this.props;
 
 		this.setState({
 			isMouseTriggered: true,
@@ -418,9 +459,7 @@ const DropMenu = createClass({
 	},
 
 	handleSelectOption(optionIndex, optionProps, event) {
-		const {
-			onSelect,
-		} = this.props;
+		const { onSelect } = this.props;
 
 		if (!optionProps.isDisabled) {
 			onSelect(optionIndex, { props: optionProps, event });
@@ -428,20 +467,11 @@ const DropMenu = createClass({
 	},
 
 	renderOption(optionProps, optionIndex, isGrouped) {
-		const {
-			selectedIndices,
-			focusedIndex,
-		} = this.props;
+		const { selectedIndices, focusedIndex } = this.props;
 
-		const {
-			isMouseTriggered,
-		} = this.state;
+		const { isMouseTriggered } = this.state;
 
-		const {
-			isDisabled,
-			isHidden,
-			isWrapped,
-		} = optionProps;
+		const { isDisabled, isHidden, isWrapped } = optionProps;
 
 		const isFocused = optionIndex === focusedIndex;
 		const isSelected = _.includes(selectedIndices, optionIndex);
@@ -451,20 +481,28 @@ const DropMenu = createClass({
 			<div
 				key={'DropMenuOption' + optionIndex}
 				{...omitProps(optionProps, DropMenu.Option)}
-				onClick={(event) => this.handleSelectOption(optionIndex, optionProps, event)}
-				onMouseMove={(event) => this.handleMouseFocusOption(optionIndex, optionProps, event)}
+				onClick={event =>
+					this.handleSelectOption(optionIndex, optionProps, event)}
+				onMouseMove={event =>
+					this.handleMouseFocusOption(optionIndex, optionProps, event)}
 				className={cx(
-					'&-Option', {
+					'&-Option',
+					{
 						'&-Option-is-grouped': isGrouped,
 						'&-Option-is-focused': isFocused,
 						'&-Option-is-selected': isSelected,
 						'&-Option-is-disabled': isDisabled,
 						'&-Option-is-null': _.isNull(optionIndex),
 						'&-Option-is-wrapped': isWrapped,
-					}, optionProps.className)}
-				ref={(optionDOMNode) => {
+					},
+					optionProps.className
+				)}
+				ref={optionDOMNode => {
 					if (isFocused && !isMouseTriggered) {
-						scrollParentTo(optionDOMNode, this._header && this._header.offsetHeight);
+						scrollParentTo(
+							optionDOMNode,
+							this._header && this._header.offsetHeight
+						);
 					}
 				}}
 			/>
@@ -502,16 +540,36 @@ const DropMenu = createClass({
 			portalId,
 		} = this.state;
 
-		const contextMenuProps = _.get(getFirst(this.props, DropMenu.ContextMenu), 'props', {});
-		const controlProps = _.get(getFirst(this.props, DropMenu.Control), 'props', {});
-		const headerProps = _.get(getFirst(this.props, DropMenu.Header), 'props', {});
+		const contextMenuProps = _.get(
+			getFirst(this.props, DropMenu.ContextMenu),
+			'props',
+			{}
+		);
+		const controlProps = _.get(
+			getFirst(this.props, DropMenu.Control),
+			'props',
+			{}
+		);
+		const headerProps = _.get(
+			getFirst(this.props, DropMenu.Header),
+			'props',
+			{}
+		);
 
 		return (
-			<div className={cx('&', '&-base', {
-				'&-is-expanded': isExpanded,
-				'&-direction-down': isExpanded && direction === 'down',
-				'&-direction-up': isExpanded && direction === 'up',
-			}, className)} style={style}>
+			<div
+				className={cx(
+					'&',
+					'&-base',
+					{
+						'&-is-expanded': isExpanded,
+						'&-direction-down': isExpanded && direction === 'down',
+						'&-direction-up': isExpanded && direction === 'up',
+					},
+					className
+				)}
+				style={style}
+			>
 				<ContextMenu
 					{...contextMenuProps}
 					portalId={portalId}
@@ -519,57 +577,95 @@ const DropMenu = createClass({
 					direction={direction}
 					alignment={alignment}
 					onClickOut={onCollapse}
-					>
+				>
 					<ContextMenu.Target>
 						<div
-							{...(!isDisabled ? {
-								tabIndex: 0,
-								onClick: this.handleClick,
-								onKeyDown: this.handleKeydown,
-							} : null)}
+							{...(!isDisabled
+								? {
+										tabIndex: 0,
+										onClick: this.handleClick,
+										onKeyDown: this.handleKeydown,
+									}
+								: null)}
 							{...controlProps}
 							className={cx('&-Control', _.get(controlProps, 'className'))}
 						/>
 					</ContextMenu.Target>
-					<ContextMenu.FlyOut className={cx('&', className)} style={flyOutStyle}>
-						{
-							!_.isEmpty(headerProps) &&
+					<ContextMenu.FlyOut
+						className={cx('&', className)}
+						style={flyOutStyle}
+					>
+						{!_.isEmpty(headerProps) &&
 							<div
 								{...headerProps}
 								className={cx('&-Header', headerProps.className)}
 								onKeyDown={this.handleKeydown}
-								ref={(header) => this._header = header}
-							/>
-						}
+								ref={header => this._header = header}
+							/>}
 						<div
 							className={cx('&-option-container')}
 							style={_.assign({}, flyOutStyle, optionContainerStyle)}
 						>
-							{
-								_.map(nullOptions, (optionProps) => this.renderOption(optionProps, null))
-								.concat(_.isEmpty(nullOptions) ? [] : [(<div key={'OptionGroup-divider-NullOption'} className={cx('&-OptionGroup-divider')} />)])
-							}
-							{
-								joinArray(
-									// for each option group,
-									_.map(optionGroups, (optionGroupProps, optionGroupIndex) => {
-										if (optionGroupProps.isHidden) {
-											return null;
-										}
+							{_.map(nullOptions, optionProps =>
+								this.renderOption(optionProps, null)
+							).concat(
+								_.isEmpty(nullOptions)
+									? []
+									: [
+											<div
+												key={'OptionGroup-divider-NullOption'}
+												className={cx('&-OptionGroup-divider')}
+											/>,
+										]
+							)}
+							{joinArray(
+								// for each option group,
+								_.map(optionGroups, (optionGroupProps, optionGroupIndex) => {
+									if (optionGroupProps.isHidden) {
+										return null;
+									}
 
-										const labelElements = rejectTypes(optionGroupProps.children, [DropMenu.Control, DropMenu.OptionGroup, DropMenu.Option, DropMenu.NullOption]);
-										// render label if there is one
-										return (_.isEmpty(labelElements) ? [] : [
-											<div {...optionGroupProps} className={cx('&-label', optionGroupProps.className)}>
-												{labelElements}
-											</div>,
-										// render the options in the group
-										]).concat(_.map(_.get(optionGroupDataLookup, optionGroupIndex), ({ optionProps, optionIndex }) => this.renderOption(optionProps, optionIndex, true)));
+									const labelElements = rejectTypes(optionGroupProps.children, [
+										DropMenu.Control,
+										DropMenu.OptionGroup,
+										DropMenu.Option,
+										DropMenu.NullOption,
+									]);
+									// render label if there is one
+									return (_.isEmpty(labelElements)
+										? []
+										: [
+												<div
+													{...optionGroupProps}
+													className={cx('&-label', optionGroupProps.className)}
+												>
+													{labelElements}
+												</div>,
+												// render the options in the group
+											]).concat(
+										_.map(_.get(optionGroupDataLookup, optionGroupIndex), ({
+											optionProps,
+											optionIndex,
+										}) => this.renderOption(optionProps, optionIndex, true))
+									);
 									// append all ungrouped options as another unlabeled group
-									}).concat(_.isEmpty(ungroupedOptionData) ? [] : [_.map(ungroupedOptionData, ({ optionProps, optionIndex }) => this.renderOption(optionProps, optionIndex))]),
-									(element, index) => (element && <div key={`OptionGroup-divider-${index}`} className={cx('&-OptionGroup-divider')} />) // separate each group with divider
-								)
-							}
+								}).concat(
+									_.isEmpty(ungroupedOptionData)
+										? []
+										: [
+												_.map(ungroupedOptionData, ({
+													optionProps,
+													optionIndex,
+												}) => this.renderOption(optionProps, optionIndex)),
+											]
+								),
+								(element, index) =>
+									element &&
+									<div
+										key={`OptionGroup-divider-${index}`}
+										className={cx('&-OptionGroup-divider')}
+									/> // separate each group with divider
+							)}
 						</div>
 					</ContextMenu.FlyOut>
 				</ContextMenu>

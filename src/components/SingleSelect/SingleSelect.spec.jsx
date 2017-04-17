@@ -7,11 +7,7 @@ import { common } from '../../util/generic-tests';
 import { SingleSelectDumb as SingleSelect } from './SingleSelect';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 
-const {
-	Placeholder,
-	Option,
-	OptionGroup,
-} = SingleSelect;
+const { Placeholder, Option, OptionGroup } = SingleSelect;
 
 describe('SingleSelect', () => {
 	common(SingleSelect);
@@ -62,7 +58,11 @@ describe('SingleSelect', () => {
 
 			it('should render the placeholder option as the first one in the menu and be a null option', () => {
 				wrapper = mount(
-					<SingleSelect hasReset={true} selectedIndex={1} DropMenu={{ isExpanded: true }}>
+					<SingleSelect
+						hasReset={true}
+						selectedIndex={1}
+						DropMenu={{ isExpanded: true }}
+					>
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
@@ -70,14 +70,25 @@ describe('SingleSelect', () => {
 					</SingleSelect>
 				);
 
-				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
+				const menuDOMNode = document.querySelector(
+					'.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
+				);
 
-				assert(_.includes(menuDOMNode.children[0].className, 'lucid-DropMenu-Option-is-null'));
+				assert(
+					_.includes(
+						menuDOMNode.children[0].className,
+						'lucid-DropMenu-Option-is-null'
+					)
+				);
 			});
 
 			it('should not render the placeholder null option as the first one in the menu', () => {
 				wrapper = mount(
-					<SingleSelect hasReset={false} selectedIndex={1} DropMenu={{ isExpanded: true }}>
+					<SingleSelect
+						hasReset={false}
+						selectedIndex={1}
+						DropMenu={{ isExpanded: true }}
+					>
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
@@ -87,7 +98,12 @@ describe('SingleSelect', () => {
 
 				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut');
 
-				assert(!_.includes(menuDOMNode.children[0].className, 'lucid-DropMenu-Option-is-null'));
+				assert(
+					!_.includes(
+						menuDOMNode.children[0].className,
+						'lucid-DropMenu-Option-is-null'
+					)
+				);
 			});
 		});
 
@@ -119,8 +135,12 @@ describe('SingleSelect', () => {
 
 				const controlWrapper = wrapper.find('.lucid-SingleSelect-Control');
 
-				assert(controlWrapper.hasClass('lucid-SingleSelect-Control-is-disabled'));
-				assert(!controlWrapper.hasClass('lucid-SingleSelect-Control-is-selected'));
+				assert(
+					controlWrapper.hasClass('lucid-SingleSelect-Control-is-disabled')
+				);
+				assert(
+					!controlWrapper.hasClass('lucid-SingleSelect-Control-is-selected')
+				);
 			});
 		});
 
@@ -136,17 +156,18 @@ describe('SingleSelect', () => {
 						</SingleSelect>
 					);
 					const controlWrapper = wrapper.find('.lucid-SingleSelect-Control');
-					assert(controlWrapper.hasClass('lucid-SingleSelect-Control-is-selected'));
-					assert(controlWrapper.hasClass('lucid-SingleSelect-Control-is-highlighted'));
+					assert(
+						controlWrapper.hasClass('lucid-SingleSelect-Control-is-selected')
+					);
+					assert(
+						controlWrapper.hasClass('lucid-SingleSelect-Control-is-highlighted')
+					);
 				});
 			});
 			describe('false', () => {
 				it('should apply the appropriate classNames to the control', () => {
 					const wrapper = shallow(
-						<SingleSelect
-							isSelectionHighlighted={false}
-							selectedIndex={2}
-							>
+						<SingleSelect isSelectionHighlighted={false} selectedIndex={2}>
 							<Placeholder>select one</Placeholder>
 							<Option>option a</Option>
 							<Option>option b</Option>
@@ -154,8 +175,14 @@ describe('SingleSelect', () => {
 						</SingleSelect>
 					);
 					const controlWrapper = wrapper.find('.lucid-SingleSelect-Control');
-					assert(!controlWrapper.hasClass('lucid-SingleSelect-Control-is-selected'));
-					assert(!controlWrapper.hasClass('lucid-SingleSelect-Control-is-highlighted'));
+					assert(
+						!controlWrapper.hasClass('lucid-SingleSelect-Control-is-selected')
+					);
+					assert(
+						!controlWrapper.hasClass(
+							'lucid-SingleSelect-Control-is-highlighted'
+						)
+					);
 				});
 			});
 		});
@@ -187,10 +214,20 @@ describe('SingleSelect', () => {
 				);
 
 				const dropMenuWrapper = wrapper.find('DropMenu');
-				const dropMenuControlProps = _.first(_.map(filterTypes(dropMenuWrapper.prop('children'), DropMenu.Control), 'props'));
+				const dropMenuControlProps = _.first(
+					_.map(
+						filterTypes(dropMenuWrapper.prop('children'), DropMenu.Control),
+						'props'
+					)
+				);
 				const dropMenuControlWrapper = shallow(dropMenuControlProps.children);
 
-				assert.equal('option c', dropMenuControlWrapper.find('.lucid-SingleSelect-Control-content').text());
+				assert.equal(
+					'option c',
+					dropMenuControlWrapper
+						.find('.lucid-SingleSelect-Control-content')
+						.text()
+				);
 			});
 		});
 
@@ -235,7 +272,6 @@ describe('SingleSelect', () => {
 				});
 			});
 		});
-
 	});
 
 	describe('child elements', () => {
@@ -244,39 +280,53 @@ describe('SingleSelect', () => {
 				const wrapper = shallow(
 					<SingleSelect selectedIndex={null}>
 						<Placeholder>select one</Placeholder>
-						<Option name='OptionA'>option a</Option>
-						<Option name='OptionB'>option b</Option>
-						<Option name='OptionC'>option c</Option>
+						<Option name="OptionA">option a</Option>
+						<Option name="OptionB">option b</Option>
+						<Option name="OptionC">option c</Option>
 					</SingleSelect>
 				);
 
 				// navigate down the virutal DOM tree to find the Control content
 				const dropMenuWrapper = wrapper.find('DropMenu');
 				const dropMenuChildren = dropMenuWrapper.prop('children');
-				const controlProps = _.first(_.map(filterTypes(dropMenuChildren, DropMenu.Control), 'props'));
-				const dropMenuControlChildElement = _.first(React.Children.toArray(controlProps.children));
-				const singleSelectControlChildren = React.Children.toArray(dropMenuControlChildElement.props.children);
+				const controlProps = _.first(
+					_.map(filterTypes(dropMenuChildren, DropMenu.Control), 'props')
+				);
+				const dropMenuControlChildElement = _.first(
+					React.Children.toArray(controlProps.children)
+				);
+				const singleSelectControlChildren = React.Children.toArray(
+					dropMenuControlChildElement.props.children
+				);
 				const singleSelectControlContent = singleSelectControlChildren[0];
 
-				assert.equal(React.Children.toArray(singleSelectControlContent.props.children)[0], 'select one');
+				assert.equal(
+					React.Children.toArray(singleSelectControlContent.props.children)[0],
+					'select one'
+				);
 			});
 
 			it('should pass the placeholder thru to the underlying DropMenu NullOption when an option is selected', () => {
 				const wrapper = shallow(
 					<SingleSelect selectedIndex={1}>
 						<Placeholder>select one</Placeholder>
-						<Option name='OptionA'>option a</Option>
-						<Option name='OptionB'>option b</Option>
-						<Option name='OptionC'>option c</Option>
+						<Option name="OptionA">option a</Option>
+						<Option name="OptionB">option b</Option>
+						<Option name="OptionC">option c</Option>
 					</SingleSelect>
 				);
 
 				// navigate down the virutal DOM tree to find the Control content
 				const dropMenuWrapper = wrapper.find('DropMenu');
 				const dropMenuChildren = dropMenuWrapper.prop('children');
-				const nullOptionProps = _.first(_.map(filterTypes(dropMenuChildren, DropMenu.NullOption), 'props'));
+				const nullOptionProps = _.first(
+					_.map(filterTypes(dropMenuChildren, DropMenu.NullOption), 'props')
+				);
 
-				assert.equal(React.Children.toArray(nullOptionProps.children)[0], 'select one');
+				assert.equal(
+					React.Children.toArray(nullOptionProps.children)[0],
+					'select one'
+				);
 			});
 		});
 
@@ -285,38 +335,47 @@ describe('SingleSelect', () => {
 				const wrapper = shallow(
 					<SingleSelect>
 						<Placeholder>select one</Placeholder>
-						<Option name='OptionA'>option a</Option>
-						<Option name='OptionB'>option b</Option>
-						<Option name='OptionC'>option c</Option>
+						<Option name="OptionA">option a</Option>
+						<Option name="OptionB">option b</Option>
+						<Option name="OptionC">option c</Option>
 					</SingleSelect>
 				);
 
 				const dropMenuWrapper = wrapper.find('DropMenu');
 				const dropMenuChildren = dropMenuWrapper.prop('children');
-				const optionsProps = _.map(filterTypes(dropMenuChildren, DropMenu.Option), 'props');
+				const optionsProps = _.map(
+					filterTypes(dropMenuChildren, DropMenu.Option),
+					'props'
+				);
 
 				assert.equal(_.size(optionsProps), 3);
-				assert(_.isEqual(optionsProps[0], {
-					name: 'OptionA',
-					children: 'option a',
-					isDisabled: false,
-					isHidden: false,
-					isWrapped: true,
-				}));
-				assert(_.isEqual(optionsProps[1], {
-					name: 'OptionB',
-					children: 'option b',
-					isDisabled: false,
-					isHidden: false,
-					isWrapped: true,
-				}));
-				assert(_.isEqual(optionsProps[2], {
-					name: 'OptionC',
-					children: 'option c',
-					isDisabled: false,
-					isHidden: false,
-					isWrapped: true,
-				}));
+				assert(
+					_.isEqual(optionsProps[0], {
+						name: 'OptionA',
+						children: 'option a',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true,
+					})
+				);
+				assert(
+					_.isEqual(optionsProps[1], {
+						name: 'OptionB',
+						children: 'option b',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true,
+					})
+				);
+				assert(
+					_.isEqual(optionsProps[2], {
+						name: 'OptionC',
+						children: 'option c',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true,
+					})
+				);
 			});
 		});
 
@@ -330,18 +389,20 @@ describe('SingleSelect', () => {
 				wrapper = shallow(
 					<SingleSelect>
 						<Placeholder>select one</Placeholder>
-						<OptionGroup name='TestGroup'>
+						<OptionGroup name="TestGroup">
 							Group Label
-							<Option name='OptionA'>option a</Option>
-							<Option name='OptionB'>option b</Option>
-							<Option name='OptionC'>option c</Option>
+							<Option name="OptionA">option a</Option>
+							<Option name="OptionB">option b</Option>
+							<Option name="OptionC">option c</Option>
 						</OptionGroup>
 					</SingleSelect>
 				);
 
 				dropMenuWrapper = wrapper.find('DropMenu');
 				dropMenuChildren = dropMenuWrapper.prop('children');
-				optionGroupProps = _.first(_.map(filterTypes(dropMenuChildren, DropMenu.OptionGroup), 'props'));
+				optionGroupProps = _.first(
+					_.map(filterTypes(dropMenuChildren, DropMenu.OptionGroup), 'props')
+				);
 			});
 
 			it('should pass thru all props to the underlying DropMenu OptionGroup', () => {
@@ -349,35 +410,46 @@ describe('SingleSelect', () => {
 			});
 
 			it('should pass options thru to the underlying DropMenu OptionGroup Options', () => {
-				const optionsProps = _.map(filterTypes(optionGroupProps.children, DropMenu.Option), 'props');
+				const optionsProps = _.map(
+					filterTypes(optionGroupProps.children, DropMenu.Option),
+					'props'
+				);
 
 				assert.equal(_.size(optionsProps), 3);
-				assert(_.isEqual(optionsProps[0], {
-					name: 'OptionA',
-					children: 'option a',
-					isDisabled: false,
-					isHidden: false,
-					isWrapped: true,
-				}));
-				assert(_.isEqual(optionsProps[1], {
-					name: 'OptionB',
-					children: 'option b',
-					isDisabled: false,
-					isHidden: false,
-					isWrapped: true,
-				}));
-				assert(_.isEqual(optionsProps[2], {
-					name: 'OptionC',
-					children: 'option c',
-					isDisabled: false,
-					isHidden: false,
-					isWrapped: true,
-				}));
-
+				assert(
+					_.isEqual(optionsProps[0], {
+						name: 'OptionA',
+						children: 'option a',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true,
+					})
+				);
+				assert(
+					_.isEqual(optionsProps[1], {
+						name: 'OptionB',
+						children: 'option b',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true,
+					})
+				);
+				assert(
+					_.isEqual(optionsProps[2], {
+						name: 'OptionC',
+						children: 'option c',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true,
+					})
+				);
 			});
 
 			it('should pass all other elemens thru to the underlying DropMenu OptionGroup', () => {
-				const otherOptionGroupChildren = rejectTypes(optionGroupProps.children, [Placeholder, Option, OptionGroup]);
+				const otherOptionGroupChildren = rejectTypes(
+					optionGroupProps.children,
+					[Placeholder, Option, OptionGroup]
+				);
 
 				assert.equal(_.first(otherOptionGroupChildren), 'Group Label');
 			});

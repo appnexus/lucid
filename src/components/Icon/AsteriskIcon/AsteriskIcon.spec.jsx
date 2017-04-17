@@ -6,4 +6,3 @@ describe('AsteriskIcon', () => {
 	common(AsteriskIcon);
 	icons(AsteriskIcon);
 });
-

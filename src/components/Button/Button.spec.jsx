@@ -40,13 +40,19 @@ describe('Button', () => {
 		it('should have the Button class', () => {
 			const wrapper = shallow(<Button />);
 			const classNames = wrapper.find('button').prop('className').split(' ');
-			assert(_.includes(classNames, 'lucid-Button'), `'${classNames}' should include 'lucid-Button'`);
+			assert(
+				_.includes(classNames, 'lucid-Button'),
+				`'${classNames}' should include 'lucid-Button'`
+			);
 		});
 
 		it('should have a button with the "active" class when active is true', () => {
 			const wrapper = shallow(<Button isActive={true} />);
 			const classNames = wrapper.find('button').prop('className').split(' ');
-			assert(_.includes(classNames, 'lucid-Button-is-active'), `'${classNames}' should include 'lucid-Button-is-active'`);
+			assert(
+				_.includes(classNames, 'lucid-Button-is-active'),
+				`'${classNames}' should include 'lucid-Button-is-active'`
+			);
 		});
 
 		it('should have a button with the "has-only-icon" class when hasOnlyIcon is true', () => {
@@ -62,7 +68,7 @@ describe('Button', () => {
 		});
 
 		it('should passthrough button type property', () => {
-			const wrapper = shallow(<Button type='submit' />);
+			const wrapper = shallow(<Button type="submit" />);
 			assert.equal(wrapper.find('button').prop('type'), 'submit');
 		});
 	});
@@ -72,9 +78,7 @@ describe('Button', () => {
 	describe('click', () => {
 		it('should call the onClick handler when clicked', () => {
 			const onButtonClick = sinon.spy();
-			const wrapper = mount(
-				<Button onClick={onButtonClick} />
-			);
+			const wrapper = mount(<Button onClick={onButtonClick} />);
 			wrapper.find('button').simulate('click');
 			assert(onButtonClick.calledOnce);
 		});

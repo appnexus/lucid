@@ -1,10 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
 
-const { oneOf } = React.PropTypes;
+const { oneOf } = PropTypes;
 const cx = lucidClassNames.bind('&-LoadingIcon');
 const durations = {
 	fast: '0.75s',
@@ -34,13 +35,7 @@ const LoadingIcon = createClass({
 		};
 	},
 	render() {
-		const {
-			className,
-			speed,
-			style,
-			isDisabled,
-			...passThroughs
-		} = this.props;
+		const { className, speed, style, isDisabled, ...passThroughs } = this.props;
 
 		const animationDuration = `${durations[speed] || durations.normal}`;
 
@@ -48,30 +43,19 @@ const LoadingIcon = createClass({
 			<Icon
 				{...omitProps(passThroughs, LoadingIcon)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
-				viewBox='0 0 100 100'
+				viewBox="0 0 100 100"
 				className={cx('&', className)}
 				style={{ animationDuration, ...style }}
 				isDisabled={isDisabled}
 			>
-				<rect
-					x='0'
-					y='0'
-					width='100'
-					height='100'
-					fill='none'
-				/>
-				<circle
-					className={cx('&-circle')}
-					cx='50'
-					cy='50'
-					r='40'
-				/>
+				<rect x="0" y="0" width="100" height="100" fill="none" />
+				<circle className={cx('&-circle')} cx="50" cy="50" r="40" />
 				<circle
 					style={{ animationDuration }}
 					className={cx('&-spinner', { '&-spinner-is-disabled': isDisabled })}
-					cx='50'
-					cy='50'
-					r='40'
+					cx="50"
+					cy="50"
+					r="40"
 				/>
 
 			</Icon>

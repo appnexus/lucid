@@ -27,9 +27,19 @@ export default React.createClass({
 				<p>isExpanded: {`${this.state.isExpanded}`}</p>
 				<p>resizeHeight: {`${this.state.resizeHeight}`}</p>
 
-				<section style={{ height: 300, background: 'lightgray', outline: '1px solid lightgray' }}>
+				<section
+					style={{
+						height: 300,
+						background: 'lightgray',
+						outline: '1px solid lightgray',
+					}}
+				>
 
-					<Submarine onResizing={this.handleResizing} onResize={this.handleResize} onToggle={this.handleToggle}>
+					<Submarine
+						onResizing={this.handleResizing}
+						onResize={this.handleResize}
+						onToggle={this.handleToggle}
+					>
 						<Submarine.Bar>
 							Non cliche minim normcore ullamco, iPhone etsy banh mi farm-to-table mumblecore stumptown asymmetrical wolf pour-over odio.
 						</Submarine.Bar>

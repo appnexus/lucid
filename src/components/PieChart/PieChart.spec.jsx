@@ -1,15 +1,4 @@
 /* eslint-disable comma-spacing */
-jest.mock('d3-shape', () => ({
-	arc: jest.fn(() => ({
-		innerRadius: jest.fn(() => ({
-			outerRadius: jest.fn(() => (arg) => `${arg}`),
-		})),
-	})),
-	pie: jest.fn(() => ({
-		sort: jest.fn(() => (arg) => arg),
-	})),
-}));
-
 import _ from 'lodash';
 import React from 'react';
 import { shallow } from 'enzyme';
@@ -21,36 +10,44 @@ import { PieChartDumb as PieChart } from './PieChart';
 import Line from '../Line/Line';
 import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
 
+jest.mock('d3-shape', () => ({
+	arc: jest.fn(() => ({
+		innerRadius: jest.fn(() => ({
+			outerRadius: jest.fn(() => arg => `${arg}`),
+		})),
+	})),
+	pie: jest.fn(() => ({
+		sort: jest.fn(() => arg => arg),
+	})),
+}));
+
 const sampleData = [
-	{ x: 'One'   , y: 30 } ,
-	{ x: 'Two'   , y: 20 } ,
-	{ x: 'Three' , y: 50 } ,
+	{ x: 'One', y: 30 },
+	{ x: 'Two', y: 20 },
+	{ x: 'Three', y: 50 },
 ];
 
 describe('PieChart', () => {
 	common(PieChart, {
-		exemptFunctionProps: [
-			'xAxisFormatter',
-			'yAxisFormatter',
-		],
+		exemptFunctionProps: ['xAxisFormatter', 'yAxisFormatter'],
 	});
 
 	describe('render', () => {
 		it('should render a basic chart', () => {
-			const wrapper = shallow(
-				<PieChart data={sampleData}/>
-			);
+			const wrapper = shallow(<PieChart data={sampleData} />);
 
-			assert.equal(wrapper.find(Line).length, 3, 'missing Line\'s');
-			assert.equal(wrapper.find('.lucid-PieChart-slice-hover').length, 3, 'missing the hover slices');
+			assert.equal(wrapper.find(Line).length, 3, "missing Line's");
+			assert.equal(
+				wrapper.find('.lucid-PieChart-slice-hover').length,
+				3,
+				'missing the hover slices'
+			);
 		});
 	});
 
 	describe('props', () => {
 		it('height and width', () => {
-			const wrapper = shallow(
-				<PieChart height={150} width={250} />
-			);
+			const wrapper = shallow(<PieChart height={150} width={250} />);
 
 			const svg = wrapper.find('.lucid-PieChart');
 
@@ -71,18 +68,17 @@ describe('PieChart', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find('g').at(0).prop('transform'), 'translate(10, 50)');
+				assert.equal(
+					wrapper.find('g').at(0).prop('transform'),
+					'translate(10, 50)'
+				);
 			});
 		});
 
 		describe('hasToolTips', () => {
 			it('should set isExpanded on ToolTip when true and hovering', () => {
 				const wrapper = shallow(
-					<PieChart
-						data={sampleData}
-						hasToolTips
-						isHovering
-					/>
+					<PieChart data={sampleData} hasToolTips isHovering />
 				);
 
 				assert.equal(wrapper.find(ToolTip).prop('isExpanded'), true);
@@ -90,11 +86,7 @@ describe('PieChart', () => {
 
 			it('should not set isExpanded on ToolTip when not hovering', () => {
 				const wrapper = shallow(
-					<PieChart
-						data={sampleData}
-						hasToolTips={false}
-						isHovering
-					/>
+					<PieChart data={sampleData} hasToolTips={false} isHovering />
 				);
 
 				assert.equal(wrapper.find(ToolTip).prop('isExpanded'), false);
@@ -104,10 +96,7 @@ describe('PieChart', () => {
 		describe('palette', () => {
 			it('should pass through to Line and handle wrapping values', () => {
 				const wrapper = shallow(
-					<PieChart
-						data={sampleData}
-						palette={['foo', 'bar']}
-					/>
+					<PieChart data={sampleData} palette={['foo', 'bar']} />
 				);
 
 				assert.equal(wrapper.find(Line).at(0).prop('color'), 'foo');
@@ -136,10 +125,7 @@ describe('PieChart', () => {
 		describe('ToolTip', () => {
 			it('should pass through props to ToolTip', () => {
 				const wrapper = shallow(
-					<PieChart
-						data={sampleData}
-						ToolTip={{ kind: 'info' }}
-					/>
+					<PieChart data={sampleData} ToolTip={{ kind: 'info' }} />
 				);
 
 				assert.equal(wrapper.find(ToolTip).prop('kind'), 'info');
@@ -149,42 +135,38 @@ describe('PieChart', () => {
 		describe('hasStroke', () => {
 			it('should add the correct class', () => {
 				const wrapper = shallow(
-					<PieChart
-						data={sampleData}
-						hasStroke={true}
-					/>
+					<PieChart data={sampleData} hasStroke={true} />
 				);
 
-				assert.equal(wrapper.find('.lucid-PieChart-slice-has-stroke').length, 3);
+				assert.equal(
+					wrapper.find('.lucid-PieChart-slice-has-stroke').length,
+					3
+				);
 			});
 
 			it('should not add the class when false', () => {
 				const wrapper = shallow(
-					<PieChart
-						data={sampleData}
-						hasStroke={false}
-					/>
+					<PieChart data={sampleData} hasStroke={false} />
 				);
 
-				assert.equal(wrapper.find('.lucid-PieChart-slice-has-stroke').length, 0);
+				assert.equal(
+					wrapper.find('.lucid-PieChart-slice-has-stroke').length,
+					0
+				);
 			});
 		});
 
 		describe('isHovering and hoveringIndex', () => {
 			it('should put the right class on the right slice', () => {
 				const wrapper = shallow(
-					<PieChart
-						data={sampleData}
-						isHovering={true}
-						hoveringIndex={1}
-					/>
+					<PieChart data={sampleData} isHovering={true} hoveringIndex={1} />
 				);
 
 				assert(
 					wrapper
-					.find('.lucid-PieChart-slice-group')
-					.at(1)
-					.hasClass('lucid-PieChart-slice-group-is-hovering')
+						.find('.lucid-PieChart-slice-group')
+						.at(1)
+						.hasClass('lucid-PieChart-slice-group-is-hovering')
 				);
 			});
 		});
@@ -213,7 +195,7 @@ describe('PieChart', () => {
 		});
 
 		describe('onMouseOut', () => {
-			it('should fire when hovering out when we\' not using tooltips', () => {
+			it("should fire when hovering out when we' not using tooltips", () => {
 				const onMouseOut = sinon.spy();
 				const wrapper = shallow(
 					<PieChart
@@ -254,7 +236,7 @@ describe('PieChart', () => {
 				const wrapper = shallow(
 					<PieChart
 						data={sampleData}
-						yAxisFormatter={(x) => x * 10}
+						yAxisFormatter={x => x * 10}
 						isHovering
 						hoveringIndex={1}
 					/>

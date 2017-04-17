@@ -1,14 +1,13 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
 import Icon from '../Icon';
 
 const cx = lucidClassNames.bind('&-ChevronThinIcon');
 
-const {
-	oneOf,
-} = React.PropTypes;
+const { oneOf } = PropTypes;
 
 /**
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
@@ -24,10 +23,7 @@ const ChevronThinIcon = createClass({
 		/**
 		 * direction variations of the icon
 		 */
-		direction: oneOf([
-			'left',
-			'right',
-		]),
+		direction: oneOf(['left', 'right']),
 	},
 
 	getDefaultProps() {
@@ -37,12 +33,7 @@ const ChevronThinIcon = createClass({
 	},
 
 	render() {
-		const {
-			className,
-			direction,
-			size,
-			...passThroughs
-		} = this.props;
+		const { className, direction, size, ...passThroughs } = this.props;
 
 		return (
 			<Icon
@@ -51,11 +42,9 @@ const ChevronThinIcon = createClass({
 				className={cx('&', className)}
 				size={size}
 			>
-				{direction === 'right' ? (
-					<path d='M 5,0 L 13,8 L 5,16 L 4.25,15.25 L 11.50,8 L 4.25,0.75 Z' />
-				) : (
-					<path d='M 12,0 L 4,8 L 12,16 L 12.75,15.25 L 5.50,8 L 12.75,0.75 Z' />
-				)}
+				{direction === 'right'
+					? <path d="M 5,0 L 13,8 L 5,16 L 4.25,15.25 L 11.50,8 L 4.25,0.75 Z" />
+					: <path d="M 12,0 L 4,8 L 12,16 L 12.75,15.25 L 5.50,8 L 12.75,0.75 Z" />}
 			</Icon>
 		);
 	},

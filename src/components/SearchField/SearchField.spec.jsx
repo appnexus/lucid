@@ -6,11 +6,9 @@ import { SearchFieldDumb as SearchField } from './SearchField';
 import TextField from '../TextField/TextField';
 
 describe('SearchField', () => {
-
 	common(SearchField);
 
 	describe('props', () => {
-
 		const fn = () => {};
 
 		describe('onChange', () => {
@@ -36,7 +34,5 @@ describe('SearchField', () => {
 				assert.equal(textFieldWrapper.props().onSubmit, fn);
 			});
 		});
-
 	});
-
 });

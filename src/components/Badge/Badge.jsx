@@ -1,13 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Badge');
 
-const {
-	node,
-	string,
-} = React.PropTypes;
+const { node, string } = PropTypes;
 
 /**
  *
@@ -31,11 +29,7 @@ const Badge = createClass({
 	},
 
 	render() {
-		const {
-			className,
-			children,
-			...passThroughs
-		} = this.props;
+		const { className, children, ...passThroughs } = this.props;
 
 		return (
 			<span className={cx('&', className)} {...omitProps(passThroughs, Badge)}>

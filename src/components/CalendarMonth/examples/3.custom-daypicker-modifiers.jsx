@@ -8,7 +8,7 @@ export default React.createClass({
 
 				<CalendarMonth
 					modifiers={{
-						tuesday: (day) => day.getDay() === 2,
+						tuesday: day => day.getDay() === 2,
 					}}
 				/>
 

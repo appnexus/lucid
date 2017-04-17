@@ -3,18 +3,8 @@ import React from 'react';
 import { Selection, Resizer } from '../../../index';
 
 const groups = [
-	[
-		'Last Man on Earth',
-		[
-			'Phil',
-		],
-	],
-	[
-		'Last Woman on Earth',
-		[
-			'Carol',
-		],
-	],
+	['Last Man on Earth', ['Phil']],
+	['Last Woman on Earth', ['Carol']],
 	[
 		'Star Wars',
 		[
@@ -29,13 +19,7 @@ const groups = [
 	],
 	[
 		'Lord of the Rings',
-		[
-			'Adrahil',
-			'Adrahil II',
-			'Araglas',
-			'Aragorn I',
-			'Aragorn II Elessar',
-		],
+		['Adrahil', 'Adrahil II', 'Araglas', 'Aragorn I', 'Aragorn II Elessar'],
 	],
 	[
 		'Star Trek',
@@ -58,20 +42,18 @@ export default React.createClass({
 		};
 	},
 
-	handleRemove({ props: { callbackId }}) {
+	handleRemove({ props: { callbackId } }) {
 		this.setState({
 			removedItems: _.set(this.state.removedItems, callbackId, true),
 		});
 	},
 
 	render() {
-		const {
-			removedItems,
-		} = this.state;
+		const { removedItems } = this.state;
 
 		return (
 			<Resizer>
-				{(width) => {
+				{width => {
 					const responsiveMode = width >= 768 ? 'large' : 'small';
 
 					return (
@@ -88,7 +70,7 @@ export default React.createClass({
 										isRemovable={true}
 										isBold
 										hasBackground
-										kind='container'
+										kind="container"
 										onRemove={this.handleRemove}
 										callbackId={groupCallbackId}
 										Label={group}

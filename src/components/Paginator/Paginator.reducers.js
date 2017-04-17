@@ -14,11 +14,11 @@ export function onPageSizeSelect(state, selectedPageSizeIndex) {
 		...state,
 		selectedPageIndex: 0,
 		selectedPageSizeIndex,
-		SingleSelect: SingleSelect.onSelect(state.SingleSelect, selectedPageSizeIndex),
+		SingleSelect: SingleSelect.onSelect(
+			state.SingleSelect,
+			selectedPageSizeIndex
+		),
 	};
 }
 
-export {
-	SingleSelect,
-	TextField,
-};
+export { SingleSelect, TextField };

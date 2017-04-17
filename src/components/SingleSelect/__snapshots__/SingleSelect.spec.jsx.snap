@@ -1596,7 +1596,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
             }
           }
         />
-         Add Color
+         
+        Add Color
       </span>
       <CaretIcon
         direction="down"
@@ -1619,7 +1620,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
         }
       }
     />
-     Red
+     
+    Red
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
@@ -1635,7 +1637,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
         }
       }
     />
-     Green
+     
+    Green
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
@@ -1651,7 +1654,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
         }
       }
     />
-     Blue
+     
+    Blue
   </DropMenu.Option>
 </DropMenu>
 `;

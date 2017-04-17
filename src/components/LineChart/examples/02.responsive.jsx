@@ -13,11 +13,7 @@ export default React.createClass({
 		return (
 			<Resizer>
 				{(width /*, height */) => (
-					<LineChart
-						width={width}
-						height={width * 0.3}
-						data={data}
-					/>
+					<LineChart width={width} height={width * 0.3} data={data} />
 				)}
 			</Resizer>
 		);

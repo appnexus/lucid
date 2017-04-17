@@ -2,10 +2,10 @@ import React from 'react';
 import { Button } from '../../../index';
 import InfiniteSlidePanel from '../InfiniteSlidePanel';
 
-const generateRGB = (n) => {
-	const R = Math.floor((Math.sin(n/Math.PI) + 1) * 128);
-	const G = Math.floor((Math.sin(2*n/Math.PI) + 1) * 128);
-	const B = Math.floor((Math.sin(3*n/Math.PI) + 1) * 128);
+const generateRGB = n => {
+	const R = Math.floor((Math.sin(n / Math.PI) + 1) * 128);
+	const G = Math.floor((Math.sin(2 * n / Math.PI) + 1) * 128);
+	const B = Math.floor((Math.sin(3 * n / Math.PI) + 1) * 128);
 	return `rgb(${R},${G},${B})`;
 };
 
@@ -47,15 +47,17 @@ export default React.createClass({
 					offset={this.state.offset}
 					onSwipe={this.handleSwipe}
 				>
-					{(slideOffset) => (
-						<div style={{
-							width: '100%',
-							height: '30vh',
-							background: generateRGB(slideOffset),
-							display: 'flex',
-							justifyContent: 'center',
-							alignItems: 'center',
-						}}>
+					{slideOffset => (
+						<div
+							style={{
+								width: '100%',
+								height: '30vh',
+								background: generateRGB(slideOffset),
+								display: 'flex',
+								justifyContent: 'center',
+								alignItems: 'center',
+							}}
+						>
 							{slideOffset}
 						</div>
 					)}

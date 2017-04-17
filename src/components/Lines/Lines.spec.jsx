@@ -10,28 +10,21 @@ import Lines from './Lines';
 import Line from '../Line/Line';
 
 const defaultData = [
-	{ x: 0  , y: 10  , y2: 20 } ,
-	{ x: 5  , y: 55  , y2: 35 } ,
-	{ x: 10 , y: 100 , y2: 0  } ,
+	{ x: 0, y: 10, y2: 20 },
+	{ x: 5, y: 55, y2: 35 },
+	{ x: 10, y: 100, y2: 0 },
 ];
 
 // The scales are functions to guard against inadvertent scale mutation
-const defaultXScale = d3Scale.scaleLinear()
-	.domain([0, 10])
-	.range([0, 100]);
+const defaultXScale = d3Scale.scaleLinear().domain([0, 10]).range([0, 100]);
 
-const defaultYScale = d3Scale.scaleLinear()
-	.domain([0, 100])
-	.range([1000, 0]);
+const defaultYScale = d3Scale.scaleLinear().domain([0, 100]).range([1000, 0]);
 
 describe('Lines', () => {
 	common(Lines, {
-		exemptFunctionProps: [
-			'xScale',
-			'yScale',
-		],
+		exemptFunctionProps: ['xScale', 'yScale'],
 		getDefaultProps: () => ({
-			data: [{x: new Date('2015-01-01T00:00:00Z'), y: 1}],
+			data: [{ x: new Date('2015-01-01T00:00:00Z'), y: 1 }],
 			xScale: d3Scale.scaleTime(),
 			yScale: d3Scale.scaleLinear(),
 		}),
@@ -43,10 +36,8 @@ describe('Lines', () => {
 				const palette = ['bling', 'blang'];
 				const wrapper = shallow(
 					<Lines
-						data={[
-							{ x: 1, rev: 1, imp: 2, click: 3 },
-						]}
-						yFields={[ 'rev', 'imp', 'click' ]}
+						data={[{ x: 1, rev: 1, imp: 2, click: 3 }]}
+						yFields={['rev', 'imp', 'click']}
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						palette={palette}
@@ -62,10 +53,8 @@ describe('Lines', () => {
 				const palette = ['bling', 'blang'];
 				const wrapper = shallow(
 					<Lines
-						data={[
-							{ x: 1, rev: 1, imp: 2, click: 3 },
-						]}
-						yFields={[ 'rev', 'imp', 'click' ]}
+						data={[{ x: 1, rev: 1, imp: 2, click: 3 }]}
+						yFields={['rev', 'imp', 'click']}
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						palette={palette}
@@ -123,12 +112,19 @@ describe('Lines', () => {
 				);
 
 				assert.equal(wrapper.find(Line).length, 1, 'wrong number of Line');
-				assert.equal(wrapper.find(Line).at(0).prop('d'), 'M0,900L50,450L100,0L100,0L50,450L0,900Z');
+				assert.equal(
+					wrapper.find(Line).at(0).prop('d'),
+					'M0,900L50,450L100,0L100,0L50,450L0,900Z'
+				);
 			});
 
 			it('should work with time scales', () => {
-				const xScale = d3Scale.scaleTime()
-					.domain([new Date('2015-01-01T00:00:00Z'), new Date('2015-01-02T00:00:00Z')])
+				const xScale = d3Scale
+					.scaleTime()
+					.domain([
+						new Date('2015-01-01T00:00:00Z'),
+						new Date('2015-01-02T00:00:00Z'),
+					])
 					.range([0, 500]);
 				const wrapper = shallow(
 					<Lines
@@ -142,14 +138,21 @@ describe('Lines', () => {
 				);
 
 				assert.equal(wrapper.find(Line).length, 1, 'wrong number of Line');
-				assert.equal(wrapper.find(Line).at(0).prop('d'), 'M0,500L500,400L500,400L0,500Z');
+				assert.equal(
+					wrapper.find(Line).at(0).prop('d'),
+					'M0,500L500,400L500,400L0,500Z'
+				);
 			});
 		});
 
 		describe('yScale', () => {
 			it('should work with time scales', () => {
-				const yScale = d3Scale.scaleTime()
-					.domain([new Date('2015-01-01T00:00:00Z'), new Date('2015-01-02T00:00:00Z')])
+				const yScale = d3Scale
+					.scaleTime()
+					.domain([
+						new Date('2015-01-01T00:00:00Z'),
+						new Date('2015-01-02T00:00:00Z'),
+					])
 					.range([0, 500]);
 				const wrapper = shallow(
 					<Lines
@@ -163,7 +166,10 @@ describe('Lines', () => {
 				);
 
 				assert.equal(wrapper.find(Line).length, 1, 'wrong number of Line');
-				assert.equal(wrapper.find(Line).at(0).prop('d'), 'M50,0L60,500L60,500L50,0Z');
+				assert.equal(
+					wrapper.find(Line).at(0).prop('d'),
+					'M50,0L60,500L60,500L50,0Z'
+				);
 			});
 		});
 
@@ -171,19 +177,18 @@ describe('Lines', () => {
 			it('should pickup alternate xFields', () => {
 				const wrapper = shallow(
 					<Lines
-						data={[
-							{ axe: 1 , y: 3 } ,
-							{ axe: 2 , y: 2 } ,
-							{ axe: 3 , y: 1 } ,
-						]}
-						xField='axe'
+						data={[{ axe: 1, y: 3 }, { axe: 2, y: 2 }, { axe: 3, y: 1 }]}
+						xField="axe"
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 					/>
 				);
 
 				assert.equal(wrapper.find(Line).length, 1, 'wrong number of Line');
-				assert.equal(wrapper.find(Line).at(0).prop('d'), 'M10,970L20,980L30,990L30,990L20,980L10,970Z');
+				assert.equal(
+					wrapper.find(Line).at(0).prop('d'),
+					'M10,970L20,980L30,990L30,990L20,980L10,970Z'
+				);
 			});
 		});
 
@@ -198,7 +203,10 @@ describe('Lines', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Line).at(0).prop('d'), 'M0,800L50,650L100,1000L100,1000L50,650L0,800Z');
+				assert.equal(
+					wrapper.find(Line).at(0).prop('d'),
+					'M0,800L50,650L100,1000L100,1000L50,650L0,800Z'
+				);
 			});
 
 			it('should handle multiple fields', () => {
@@ -211,8 +219,14 @@ describe('Lines', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Line).at(0).prop('d'), 'M0,900L50,450L100,0L100,0L50,450L0,900Z');
-				assert.equal(wrapper.find(Line).at(1).prop('d'), 'M0,800L50,650L100,1000L100,1000L50,650L0,800Z');
+				assert.equal(
+					wrapper.find(Line).at(0).prop('d'),
+					'M0,900L50,450L100,0L100,0L50,450L0,900Z'
+				);
+				assert.equal(
+					wrapper.find(Line).at(1).prop('d'),
+					'M0,800L50,650L100,1000L100,1000L50,650L0,800Z'
+				);
 			});
 		});
 
@@ -228,8 +242,14 @@ describe('Lines', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Line).at(0).prop('d'), 'M0,1000L50,1000L100,1000L100,0L50,450L0,900Z');
-				assert.equal(wrapper.find(Line).at(1).prop('d'), 'M0,900L50,450L100,0L100,0L50,100L0,700Z');
+				assert.equal(
+					wrapper.find(Line).at(0).prop('d'),
+					'M0,1000L50,1000L100,1000L100,0L50,450L0,900Z'
+				);
+				assert.equal(
+					wrapper.find(Line).at(1).prop('d'),
+					'M0,900L50,450L100,0L100,0L50,100L0,700Z'
+				);
 			});
 		});
 
@@ -238,10 +258,8 @@ describe('Lines', () => {
 				const palette = ['bing', 'bong'];
 				const wrapper = shallow(
 					<Lines
-						data={[
-							{ x: 1, rev: 1, imp: 2, click: 3 },
-						]}
-						yFields={[ 'rev', 'imp', 'click' ]}
+						data={[{ x: 1, rev: 1, imp: 2, click: 3 }]}
+						yFields={['rev', 'imp', 'click']}
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						palette={palette}

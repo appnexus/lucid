@@ -15,14 +15,17 @@ export function onChange(state, value) {
 export function onSelect(state, selectedIndex) {
 	const value = _.get(state.suggestions, selectedIndex);
 
-	return onChange({
-		...state,
-		value,
-		DropMenu: {
-			...DropMenu.onSelect(state.DropMenu, selectedIndex),
-			selectedIndices: [],
+	return onChange(
+		{
+			...state,
+			value,
+			DropMenu: {
+				...DropMenu.onSelect(state.DropMenu, selectedIndex),
+				selectedIndices: [],
+			},
 		},
-	}, value);
+		value
+	);
 }
 
 export function onExpand(state) {

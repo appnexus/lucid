@@ -1,11 +1,7 @@
 import React from 'react';
 import { SingleSelect } from '../../../index';
 
-const {
-	Placeholder,
-	Option,
-	OptionGroup,
-} = SingleSelect;
+const { Placeholder, Option, OptionGroup } = SingleSelect;
 
 export default React.createClass({
 	render() {

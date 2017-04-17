@@ -4,7 +4,13 @@ import { Submarine } from '../../../index';
 export default React.createClass({
 	render() {
 		return (
-			<section style={{ height: 300, background: 'lightgray', outline: '1px solid lightgray' }}>
+			<section
+				style={{
+					height: 300,
+					background: 'lightgray',
+					outline: '1px solid lightgray',
+				}}
+			>
 				<Submarine height={100}>
 					<Submarine.Bar>
 						Meditation photo booth actually chicharrones sed consectetur voluptate stumptown. Food truck nihil ut mixtape, ex deep v polaroid aesthetic. Duis street art stumptown nihil, aliquip vero VHS heirloom waistcoat adipisicing post-ironic lo-fi biodiesel.

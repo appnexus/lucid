@@ -1,10 +1,7 @@
 import React from 'react';
 import { SingleSelect } from '../../../index';
 
-const {
-	Placeholder,
-	Option,
-} = SingleSelect;
+const { Placeholder, Option } = SingleSelect;
 
 export default React.createClass({
 	getInitialState() {
@@ -14,7 +11,7 @@ export default React.createClass({
 		};
 	},
 
-	handleSelect(optionIndex, {props: {name}}) {
+	handleSelect(optionIndex, { props: { name } }) {
 		this.setState({
 			selectedIndex: optionIndex,
 			selectedOptionName: name,
@@ -27,9 +24,9 @@ export default React.createClass({
 
 				<SingleSelect onSelect={this.handleSelect}>
 					<Placeholder>Select Color</Placeholder>
-					<Option name='red'>Red</Option>
-					<Option name='green'>Green</Option>
-					<Option name='blue'>Blue</Option>
+					<Option name="red">Red</Option>
+					<Option name="green">Green</Option>
+					<Option name="blue">Blue</Option>
 				</SingleSelect>
 
 				<section>
@@ -37,7 +34,9 @@ export default React.createClass({
 						Selected Index: {JSON.stringify(this.state.selectedIndex)}
 					</p>
 					<p>
-						Selected Option Name: {JSON.stringify(this.state.selectedOptionName)}
+						Selected Option Name:
+						{' '}
+						{JSON.stringify(this.state.selectedOptionName)}
 					</p>
 				</section>
 			</section>

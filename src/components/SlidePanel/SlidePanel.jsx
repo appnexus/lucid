@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Motion, spring } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -8,15 +9,9 @@ import { createClass, findTypes, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SlidePanel');
 
-const {
-	bool,
-	func,
-	node,
-	number,
-	string,
-} = React.PropTypes;
+const { bool, func, node, number, string } = PropTypes;
 
-const modulo = (n, a) => (a - (n * Math.floor(a/n)));
+const modulo = (n, a) => a - n * Math.floor(a / n);
 
 /**
  * {"categories": ["helpers"]}
@@ -110,11 +105,12 @@ const SlidePanel = createClass({
 
 	handleTouchEnd(event) {
 		const dX = event.changedTouches[0].screenX - this.startX;
-		const slideWidth = this.rootNode.getBoundingClientRect().width / this.props.slidesToShow;
+		const slideWidth =
+			this.rootNode.getBoundingClientRect().width / this.props.slidesToShow;
 		const slidesSwiped = Math.round(dX / slideWidth);
 
 		if (slidesSwiped !== 0) {
-			this.props.onSwipe(-1 * slidesSwiped, {event, props: this.props});
+			this.props.onSwipe(-1 * slidesSwiped, { event, props: this.props });
 		}
 		this.setState({
 			translateXPixel: 0,
@@ -127,12 +123,16 @@ const SlidePanel = createClass({
 		const slides = findTypes(this.props, SlidePanel.Slide);
 		this.isAnimated = this.props.isAnimated;
 		this.isDragging = false;
-		this.offsetTranslate = this.props.isLooped ? Math.floor(_.size(slides) / 2) : 0;
+		this.offsetTranslate = this.props.isLooped
+			? Math.floor(_.size(slides) / 2)
+			: 0;
 	},
 
 	componentDidMount() {
 		const slides = findTypes(this.props, SlidePanel.Slide);
-		this.slideStrip = this.rootNode.querySelector('.lucid-SlidePanel-slidestrip');
+		this.slideStrip = this.rootNode.querySelector(
+			'.lucid-SlidePanel-slidestrip'
+		);
 		if (this.props.isLooped) {
 			shiftChildren(this.slideStrip, Math.floor(_.size(slides) / 2));
 		}
@@ -143,7 +143,10 @@ const SlidePanel = createClass({
 		const offsetDiff = this.props.offset - prevProps.offset;
 		if (offsetDiff !== 0) {
 			if (this.props.isLooped) {
-				this.offsetTranslate = modulo(_.size(slides), this.offsetTranslate - offsetDiff);
+				this.offsetTranslate = modulo(
+					_.size(slides),
+					this.offsetTranslate - offsetDiff
+				);
 				_.delay(() => {
 					shiftChildren(this.slideStrip, -offsetDiff);
 					this.isAnimated = false;
@@ -165,31 +168,46 @@ const SlidePanel = createClass({
 		const offset = realOffset + this.offsetTranslate;
 
 		const slides = findTypes(this.props, SlidePanel.Slide);
-		const translateXPercentage = -1 * (100 / slidesToShow) * (isLooped ? modulo(_.size(slides), offset) : offset);
+		const translateXPercentage =
+			-1 *
+			(100 / slidesToShow) *
+			(isLooped ? modulo(_.size(slides), offset) : offset);
 
 		return (
 			<div
 				{...omitProps(passThroughs, SlidePanel)}
-				ref={(domNode) => {this.rootNode = domNode;}}
+				ref={domNode => {
+					this.rootNode = domNode;
+				}}
 				className={cx('&', className)}
 			>
 				<Motion
-					style={this.isAnimated ? {
-						translateXPercentage: (spring(translateXPercentage, QUICK_SLIDE_MOTION)),
-						translateXPixel: (spring(this.state.translateXPixel, QUICK_SLIDE_MOTION)),
-					} : {
-						translateXPercentage: translateXPercentage,
-						translateXPixel: this.state.translateXPixel,
-					}}
+					style={
+						this.isAnimated
+							? {
+									translateXPercentage: spring(
+										translateXPercentage,
+										QUICK_SLIDE_MOTION
+									),
+									translateXPixel: spring(
+										this.state.translateXPixel,
+										QUICK_SLIDE_MOTION
+									),
+								}
+							: {
+									translateXPercentage: translateXPercentage,
+									translateXPixel: this.state.translateXPixel,
+								}
+					}
 				>
-					{(tween) => (
+					{tween => (
 						<div
 							{...omitProps(passThroughs, SlidePanel)}
 							className={cx('&-slidestrip', className)}
 							style={{
-								transform: this.isDragging ?
-								`translateX(calc(${tween.translateXPercentage}% + ${this.state.translateXPixel}px))` :
-								`translateX(calc(${tween.translateXPercentage}% + ${tween.translateXPixel}px))`,
+								transform: this.isDragging
+									? `translateX(calc(${tween.translateXPercentage}% + ${this.state.translateXPixel}px))`
+									: `translateX(calc(${tween.translateXPercentage}% + ${tween.translateXPixel}px))`,
 							}}
 							onTouchStart={this.handleTouchStart}
 							onTouchMove={this.handleTouchMove}
@@ -204,7 +222,7 @@ const SlidePanel = createClass({
 									style={{
 										flexGrow: 1,
 										flexShrink: 0,
-										flexBasis: `${100/slidesToShow}%`,
+										flexBasis: `${100 / slidesToShow}%`,
 										...slide.props.style,
 									}}
 								/>

@@ -1,8 +1,14 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, findTypes, omitProps } from '../../util/component-types';
+import {
+	createClass,
+	getFirst,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible from '../Collapsible/Collapsible';
@@ -10,15 +16,7 @@ import * as reducers from './Expander.reducers';
 
 const cx = lucidClassNames.bind('&-Expander');
 
-const {
-	any,
-	bool,
-	func,
-	node,
-	object,
-	oneOf,
-	string,
-} = React.PropTypes;
+const { any, bool, func, node, object, oneOf, string } = PropTypes;
 
 /**
  * {"categories": ["layout"], "madeFrom": ["ChevronIcon"]}
@@ -87,10 +85,7 @@ const Expander = createClass({
 		/**
 		 * Renders different variants of Expander. 'simple' is default. 'highlighted' is more prominant.
 		 */
-		kind: oneOf([
-			'simple',
-			'highlighted',
-		]),
+		kind: oneOf(['simple', 'highlighted']),
 	},
 
 	getDefaultProps() {
@@ -102,8 +97,16 @@ const Expander = createClass({
 	},
 
 	componentWillReceiveProps(nextProps) {
-		const currentLabel = _.get(getFirst(this.props, Expander.Label), 'props.children', null);
-		const nextLabel = _.get(getFirst(nextProps, Expander.Label), 'props.children', null);
+		const currentLabel = _.get(
+			getFirst(this.props, Expander.Label),
+			'props.children',
+			null
+		);
+		const nextLabel = _.get(
+			getFirst(nextProps, Expander.Label),
+			'props.children',
+			null
+		);
 
 		if (currentLabel !== nextLabel) {
 			this._labelKey++;
@@ -124,22 +127,26 @@ const Expander = createClass({
 			...passThroughs
 		} = this.props;
 
-		const labelChildProp = _.first(_.map(findTypes(this.props, Expander.Label), 'props'));
+		const labelChildProp = _.first(
+			_.map(findTypes(this.props, Expander.Label), 'props')
+		);
 
 		return (
 			<div
 				{...omitProps(passThroughs, Expander)}
-				className={cx('&', {
-					'&-is-expanded': isExpanded,
-					'&-kind-highlighted': kind === 'highlighted',
-				}, className)}
+				className={cx(
+					'&',
+					{
+						'&-is-expanded': isExpanded,
+						'&-kind-highlighted': kind === 'highlighted',
+					},
+					className
+				)}
 				style={style}
 			>
 				<header className={cx('&-header')} onClick={this.handleToggle}>
 					<span className={cx('&-icon')}>
-						<ChevronIcon
-							direction={isExpanded ? 'up' : 'down'}
-						/>
+						<ChevronIcon direction={isExpanded ? 'up' : 'down'} />
 					</span>
 					<ReactCSSTransitionGroup
 						transitionName={cx('&-text')}
@@ -147,12 +154,16 @@ const Expander = createClass({
 						transitionLeaveTimeout={100}
 						className={cx('&-text')}
 					>
-						{labelChildProp ?
-							<span key={this._labelKey}>{labelChildProp.children}</span>
-						: null}
+						{labelChildProp
+							? <span key={this._labelKey}>{labelChildProp.children}</span>
+							: null}
 					</ReactCSSTransitionGroup>
 				</header>
-				<Collapsible isExpanded={isExpanded} rootType='section' className={cx('&-content')}>
+				<Collapsible
+					isExpanded={isExpanded}
+					rootType="section"
+					className={cx('&-content')}
+				>
 					{children}
 				</Collapsible>
 			</div>
@@ -161,7 +172,8 @@ const Expander = createClass({
 
 	handleToggle(event) {
 		this.props.onToggle(!this.props.isExpanded, {
-			event, props: this.props,
+			event,
+			props: this.props,
 		});
 	},
 });

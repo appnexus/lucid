@@ -41,7 +41,7 @@ describe('DragCaptureZone', () => {
 				const wrapper = mount(<DragCaptureZone foo={1} bar={2} baz={3} />);
 				const rootProps = wrapper.find('div').props();
 
-				_.forEach(['foo', 'bar', 'baz'], (prop) => {
+				_.forEach(['foo', 'bar', 'baz'], prop => {
 					assert(_.has(rootProps, prop));
 				});
 			});
@@ -69,7 +69,9 @@ describe('DragCaptureZone', () => {
 		beforeEach(() => {
 			onDragStart = sinon.spy();
 
-			mount(<DragCaptureZone onDragStart={onDragStart} />).find('div').simulate('mousedown', dragStartCoordinates);
+			mount(<DragCaptureZone onDragStart={onDragStart} />)
+				.find('div')
+				.simulate('mousedown', dragStartCoordinates);
 		});
 
 		it('calls the function passed in as the `onDragStart` prop...', () => {
@@ -77,10 +79,13 @@ describe('DragCaptureZone', () => {
 		});
 
 		it('...passes along a map of coordinate data as the first argument...', () => {
-			const expectedData = _.assign({
-				dX: 0,
-				dY: 0,
-			}, dragStartCoordinates);
+			const expectedData = _.assign(
+				{
+					dX: 0,
+					dY: 0,
+				},
+				dragStartCoordinates
+			);
 
 			assert.deepEqual(_.first(onDragStart.args[0]), expectedData);
 		});
@@ -101,7 +106,9 @@ describe('DragCaptureZone', () => {
 
 			onDrag = sinon.spy();
 
-			mount(<DragCaptureZone onDrag={onDrag} />).find('div').simulate('mousedown', dragStartCoordinates);
+			mount(<DragCaptureZone onDrag={onDrag} />)
+				.find('div')
+				.simulate('mousedown', dragStartCoordinates);
 			window.document.dispatchEvent(event);
 		});
 
@@ -110,10 +117,13 @@ describe('DragCaptureZone', () => {
 		});
 
 		it('...passes along a map of coordinate data as the first argument...', () => {
-			const expectedData = _.assign({
-				dX: dragCoordinates.pageX - dragStartCoordinates.pageX,
-				dY: dragCoordinates.pageY - dragStartCoordinates.pageY,
-			}, dragCoordinates);
+			const expectedData = _.assign(
+				{
+					dX: dragCoordinates.pageX - dragStartCoordinates.pageX,
+					dY: dragCoordinates.pageY - dragStartCoordinates.pageY,
+				},
+				dragCoordinates
+			);
 
 			assert.deepEqual(_.first(onDrag.args[0]), expectedData);
 		});
@@ -134,7 +144,9 @@ describe('DragCaptureZone', () => {
 
 			onDragEnd = sinon.spy();
 
-			mount(<DragCaptureZone onDragEnd={onDragEnd} />).find('div').simulate('mousedown', dragStartCoordinates);
+			mount(<DragCaptureZone onDragEnd={onDragEnd} />)
+				.find('div')
+				.simulate('mousedown', dragStartCoordinates);
 			window.document.dispatchEvent(event);
 		});
 
@@ -143,10 +155,13 @@ describe('DragCaptureZone', () => {
 		});
 
 		it('...passes along a map of coordinate data as the first argument...', () => {
-			const expectedData = _.assign({
-				dX: dragEndCoordinates.pageX - dragStartCoordinates.pageX,
-				dY: dragEndCoordinates.pageY - dragStartCoordinates.pageY,
-			}, dragEndCoordinates);
+			const expectedData = _.assign(
+				{
+					dX: dragEndCoordinates.pageX - dragStartCoordinates.pageX,
+					dY: dragEndCoordinates.pageY - dragStartCoordinates.pageY,
+				},
+				dragEndCoordinates
+			);
 
 			assert.deepEqual(_.first(onDragEnd.args[0]), expectedData);
 		});

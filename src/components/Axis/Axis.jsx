@@ -1,18 +1,13 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { discreteTicks } from '../../util/chart-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Axis');
 
-const {
-	string,
-	array,
-	func,
-	number,
-	oneOf,
-} = React.PropTypes;
+const { string, array, func, number, oneOf } = PropTypes;
 
 /**
  * {"categories": ["visualizations", "chart primitives"]}
@@ -120,26 +115,21 @@ const Axis = createClass({
 		// ticks on the bands
 		if (scale.bandwidth) {
 			const bandModifier = scale.bandwidth() / 2;
-			scaleNormalized = (d) => scale(d) + bandModifier;
+			scaleNormalized = d => scale(d) + bandModifier;
 		}
 
 		return (
-			<g
-				{...omitProps(passThroughs, Axis)}
-				className={cx(className, '&')}
-			>
-			{isH ? (
-				<path
-					className={cx('&-domain')}
-					d={`M${range[0]},${sign * outerTickSize}V0H${range[1]}V${sign * outerTickSize}`}
-				/>
-			) : (
-				<path
-					className={cx('&-domain')}
-					d={`M${sign * outerTickSize},${range[0]}H0V${range[1]}H${sign * outerTickSize}`}
-				/>
-			)}
-				{_.map(ticks, (tick) =>
+			<g {...omitProps(passThroughs, Axis)} className={cx(className, '&')}>
+				{isH
+					? <path
+							className={cx('&-domain')}
+							d={`M${range[0]},${sign * outerTickSize}V0H${range[1]}V${sign * outerTickSize}`}
+						/>
+					: <path
+							className={cx('&-domain')}
+							d={`M${sign * outerTickSize},${range[0]}H0V${range[1]}H${sign * outerTickSize}`}
+						/>}
+				{_.map(ticks, tick => (
 					<g
 						key={tick}
 						transform={`translate(${isH ? scaleNormalized(tick) : 0}, ${isH ? 0 : scaleNormalized(tick)})`}
@@ -153,20 +143,19 @@ const Axis = createClass({
 							className={cx('&-tick-text')}
 							x={isH ? 0 : sign * tickSpacing}
 							y={isH ? sign * tickSpacing : 0}
-							dy={isH
-								? sign < 0 ? '0em' : '.71em' // magic d3 number
-								: '.32em' // magic d3 number
+							dy={
+								isH
+									? sign < 0 ? '0em' : '.71em' // magic d3 number
+									: '.32em' // magic d3 number
 							}
 							style={{
-								textAnchor: isH
-									? 'middle'
-									: sign < 0 ? 'end' : 'start',
+								textAnchor: isH ? 'middle' : sign < 0 ? 'end' : 'start',
 							}}
 						>
 							{tickFormat(tick)}
 						</text>
 					</g>
-				)}
+				))}
 			</g>
 		);
 	},

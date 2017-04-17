@@ -2,7 +2,6 @@ import React from 'react';
 import { Sidebar } from '../../../index';
 
 export default React.createClass({
-
 	getInitialState() {
 		return {
 			isExpanded: false,
@@ -17,7 +16,10 @@ export default React.createClass({
 		return (
 			<section>
 				<button onClick={this.handleToggle}>toggle</button>
-				<Sidebar isExpanded={this.state.isExpanded} onToggle={this.handleToggle}>
+				<Sidebar
+					isExpanded={this.state.isExpanded}
+					onToggle={this.handleToggle}
+				>
 					<Sidebar.Bar>
 						Paleo williamsburg retro, mumblecore deserunt typewriter magna raw denim taxidermy. Quinoa incididunt hoodie, ea synth four loko everyday carry lomo vice humblebrag forage assumenda ad small batch reprehenderit.
 					</Sidebar.Bar>

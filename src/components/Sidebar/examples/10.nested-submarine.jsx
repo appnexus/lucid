@@ -1,19 +1,15 @@
 import React from 'react';
 import _ from 'lodash';
-import {
-	CheckboxLabeled,
-	Sidebar,
-	Submarine,
-} from '../../../index';
+import { CheckboxLabeled, Sidebar, Submarine } from '../../../index';
 
 export default React.createClass({
 	render() {
 		return (
-			<div style={{display: 'flex', flexDirection: 'column', height: 600}}>
+			<div style={{ display: 'flex', flexDirection: 'column', height: 600 }}>
 				<Sidebar>
 					<Sidebar.Bar>
 						<div>
-							{_.times(100, (n) => (
+							{_.times(100, n => (
 								<CheckboxLabeled key={n}>
 									<CheckboxLabeled.Label>Filter #{n}</CheckboxLabeled.Label>
 								</CheckboxLabeled>
@@ -52,7 +48,6 @@ export default React.createClass({
 									Distillery art party small batch humblebrag blue bottle blog heirloom austin, live-edge helvetica cray poutine gluten-free hammock man braid. Vice blue bottle cardigan tbh, vegan ugh celiac. Roof party occupy flannel, jean shorts fap unicorn wolf beard. Pour-over air plant crucifix, man braid photo booth snackwave glossier sartorial affogato ethical vice. PBR&B hella selfies, tousled keytar biodiesel portland activated charcoal distillery art party echo park aesthetic. Affogato mlkshk literally pour-over, before they sold out crucifix cold-pressed kale chips ethical meh readymade williamsburg kogi knausgaard. Viral meditation kombucha hell of, godard chartreuse selfies pinterest thundercats vaporware microdosing.
 
 									Meditation forage art party tacos blue bottle. Messenger bag cred jean shorts taxidermy, pug shabby chic stumptown 8-bit next level. Vaporware gastropub next level activated charcoal kale chips. Mixtape heirloom cred, tofu iceland keytar copper mug man bun. Squid godard pabst ethical, hexagon 8-bit butcher actually master cleanse narwhal small batch waistcoat hell of vice. Fashion axe pok pok before they sold out, thundercats four dollar toast tbh cornhole godard try-hard pug pour-over kale chips. Artisan aesthetic iPhone godard.
-
 
 								</div>
 							</Submarine.Primary>

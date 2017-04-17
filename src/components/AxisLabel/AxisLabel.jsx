@@ -1,16 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-AxisLabel');
 
-const {
-	number,
-	string,
-	oneOf,
-	object,
-} = React.PropTypes;
+const { number, string, oneOf, object } = PropTypes;
 
 /**
  * {"categories": ["visualizations", "chart primitives"]}

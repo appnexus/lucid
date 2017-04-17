@@ -1,15 +1,13 @@
 import _ from 'lodash';
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps }  from '../../util/component-types';
+import { createClass, findTypes, omitProps } from '../../util/component-types';
 import SeparatorIcon from '../Icon/SeparatorIcon/SeparatorIcon';
 
 const cx = lucidClassNames.bind('&-Breadcrumb');
 
-const {
-	any,
-	node,
-} = PropTypes;
+const { any, node } = PropTypes;
 
 /**
  *
@@ -48,11 +46,7 @@ const Breadcrumb = createClass({
 	},
 
 	render() {
-
-		const {
-			className,
-			...passThroughs
-		} = this.props;
+		const { className, ...passThroughs } = this.props;
 
 		const items = findTypes(this.props, Breadcrumb.Item);
 		const initialItems = _.initial(items);
@@ -63,25 +57,25 @@ const Breadcrumb = createClass({
 				{...omitProps(passThroughs, Breadcrumb)}
 				className={cx('&', className)}
 			>
-				{!_.isEmpty(items) ? (
-					<ul className={cx('&-List')}>
-						{_.map(initialItems, ({ props, key }) => (
+				{!_.isEmpty(items)
+					? <ul className={cx('&-List')}>
+							{_.map(initialItems, ({ props, key }) => (
+								<li
+									{...props}
+									key={key}
+									className={cx('&-Item', props.className)}
+								>
+									{props.children}
+									<SeparatorIcon className={cx('&-SeparatorIcon')} />
+								</li>
+							))}
 							<li
-								{...props}
-								key={key}
-								className={cx('&-Item', props.className)}
-							>
-								{props.children}
-								<SeparatorIcon className={cx('&-SeparatorIcon')} />
-							</li>
-						))}
-						<li
-							{...lastItem.props}
-							key={lastItem.key}
-							className={cx('&-Item', lastItem.props.className)}
-						/>
-					</ul>
-				) : null}
+								{...lastItem.props}
+								key={lastItem.key}
+								className={cx('&-Item', lastItem.props.className)}
+							/>
+						</ul>
+					: null}
 			</nav>
 		);
 	},

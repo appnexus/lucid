@@ -17,7 +17,7 @@ export default React.createClass({
 			<div>
 				<TextFieldValidated
 					value={this.state.value}
-					onChangeDebounced={(value) => this.setState({ value })}
+					onChangeDebounced={value => this.setState({ value })}
 					Error={this.state.value === 'foo' ? null : 'Please enter "foo"'}
 				/>
 

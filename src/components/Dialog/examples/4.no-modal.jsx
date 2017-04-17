@@ -16,9 +16,7 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<Button
-					onClick={_.partial(this.handleShow, !this.state.isShown)}
-				>
+				<Button onClick={_.partial(this.handleShow, !this.state.isShown)}>
 					Toggle
 				</Button>
 
@@ -27,8 +25,8 @@ export default React.createClass({
 					isShown={this.state.isShown}
 					onBackgroundClick={_.partial(this.handleShow, false)}
 					onEscape={_.partial(this.handleShow, false)}
-					Header='Header'
-					size='small'
+					Header="Header"
+					size="small"
 				>
 
 					In most cases, you'll probably just use an isModal Dialog, but this
@@ -36,13 +34,10 @@ export default React.createClass({
 					pressing "escape" to close this Dialog.
 
 					<Dialog.Footer>
-						<Button
-							kind='link'
-							onClick={_.partial(this.handleShow, false)}
-						>
+						<Button kind="link" onClick={_.partial(this.handleShow, false)}>
 							Cancel
 						</Button>
-						<Button kind='primary'>Save</Button>
+						<Button kind="primary">Save</Button>
 					</Dialog.Footer>
 
 				</Dialog>

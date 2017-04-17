@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
@@ -7,14 +8,7 @@ import * as KEYCODE from '../../constants/key-code';
 
 const cx = lucidClassNames.bind('&-TextField');
 
-const {
-	bool,
-	string,
-	func,
-	number,
-	object,
-	oneOfType,
-} = React.PropTypes;
+const { bool, string, func, number, object, oneOfType } = PropTypes;
 
 /**
  *
@@ -64,7 +58,6 @@ const TextField = createClass({
 		 */
 		onChange: func,
 
-
 		/**
 		 * Fires an on the `input`'s onBlur.
 		 *
@@ -98,10 +91,7 @@ const TextField = createClass({
 		/**
 		 * Set the value of the input.
 		 */
-		value: oneOfType([
-			number,
-			string,
-		]),
+		value: oneOfType([number, string]),
 
 		/**
 		 * Number of milliseconds to debounce the `onChangeDebounced` callback.
@@ -156,7 +146,7 @@ const TextField = createClass({
 			this.setState({ isHolding: false });
 		}, this.props.lazyLevel);
 
-		this._updateWhenReady = _.debounce((newValue) => {
+		this._updateWhenReady = _.debounce(newValue => {
 			if (this.state.isHolding) {
 				this._updateWhenReady(newValue);
 			} else if (newValue !== this.state.value) {
@@ -177,10 +167,7 @@ const TextField = createClass({
 	},
 
 	handleChange(event) {
-		const {
-			onChange,
-			onChangeDebounced,
-		} = this.props;
+		const { onChange, onChangeDebounced } = this.props;
 
 		const value = _.get(event, 'target.value', '');
 
@@ -198,24 +185,15 @@ const TextField = createClass({
 	},
 
 	handleBlur(event) {
-		const {
-			onBlur,
-		} = this.props;
+		const { onBlur } = this.props;
 
 		const value = _.get(event, 'target.value', '');
 
 		onBlur(value, { event, props: this.props });
-
 	},
 
 	handleKeyDown(event) {
-		const {
-			props,
-			props: {
-				onSubmit,
-				onKeyDown,
-			},
-		} = this;
+		const { props, props: { onSubmit, onKeyDown } } = this;
 		const value = _.get(event, 'target.value', '');
 
 		// If the consumer passed an onKeyDown, we call it
@@ -224,7 +202,7 @@ const TextField = createClass({
 		}
 
 		if (event.keyCode === KEYCODE.Enter) {
-			onSubmit(value, {event, props: this.props });
+			onSubmit(value, { event, props: this.props });
 		}
 	},
 
@@ -243,17 +221,19 @@ const TextField = createClass({
 			...passThroughs
 		} = this.props;
 
-		const {
-			value,
-		} = this.state;
+		const { value } = this.state;
 
 		const finalProps = {
 			...omitProps(passThroughs, TextField, ['children']),
-			className: cx('&', {
-				'&-is-disabled': isDisabled,
-				'&-is-multi-line': isMultiLine,
-				'&-is-single-line': !isMultiLine,
-			}, className),
+			className: cx(
+				'&',
+				{
+					'&-is-disabled': isDisabled,
+					'&-is-multi-line': isMultiLine,
+					'&-is-single-line': !isMultiLine,
+				},
+				className
+			),
 			disabled: isDisabled,
 			onChange: this.handleChange,
 			onBlur: this.handleBlur,
@@ -261,12 +241,12 @@ const TextField = createClass({
 			style,
 			rows,
 			value,
-			ref: (ref) => this.refs = { nativeElement: ref },
+			ref: ref => this.refs = { nativeElement: ref },
 		};
 
 		return isMultiLine
-			? <textarea {...finalProps}/>
-			: <input type='text' {...finalProps}/>;
+			? <textarea {...finalProps} />
+			: <input type="text" {...finalProps} />;
 	},
 });
 

@@ -26,7 +26,4 @@ export function onRemoveAll(state) {
 	};
 }
 
-export {
-	DropMenu,
-	SearchField,
-};
+export { DropMenu, SearchField };

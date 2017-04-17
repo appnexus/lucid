@@ -12,8 +12,8 @@ describe('ContextMenu', () => {
 		exemptFunctionProps: ['getAlignmentOffset'],
 		getDefaultProps: () => ({
 			children: [
-				(<ContextMenu.Target>Test</ContextMenu.Target>),
-				(<ContextMenu.FlyOut>Menu</ContextMenu.FlyOut>),
+				<ContextMenu.Target>Test</ContextMenu.Target>,
+				<ContextMenu.FlyOut>Menu</ContextMenu.FlyOut>,
 			],
 		}),
 	});
@@ -30,7 +30,7 @@ describe('ContextMenu', () => {
 		describe('isExpanded', () => {
 			it('should not render the flyout when false', () => {
 				wrapper = mount(
-					<ContextMenu portalId='ContextMenu-test123' isExpanded={false}>
+					<ContextMenu portalId="ContextMenu-test123" isExpanded={false}>
 						<ContextMenu.Target>
 							File
 						</ContextMenu.Target>
@@ -45,7 +45,7 @@ describe('ContextMenu', () => {
 
 			it('should render the flyout when true', () => {
 				wrapper = mount(
-					<ContextMenu portalId='ContextMenu-test123' isExpanded>
+					<ContextMenu portalId="ContextMenu-test123" isExpanded>
 						<ContextMenu.Target>
 							File
 						</ContextMenu.Target>
@@ -55,12 +55,15 @@ describe('ContextMenu', () => {
 					</ContextMenu>
 				);
 
-				assert.equal(document.getElementById('ContextMenu-test123').textContent, 'Open');
+				assert.equal(
+					document.getElementById('ContextMenu-test123').textContent,
+					'Open'
+				);
 			});
 
 			it('should render the flyout with opacity 0 on initial render', () => {
 				wrapper = mount(
-					<ContextMenu portalId='ContextMenu-test456' isExpanded>
+					<ContextMenu portalId="ContextMenu-test456" isExpanded>
 						<ContextMenu.Target>
 							File
 						</ContextMenu.Target>
@@ -69,13 +72,15 @@ describe('ContextMenu', () => {
 						</ContextMenu.FlyOut>
 					</ContextMenu>
 				);
-				const flyout = _.first(document.getElementById('ContextMenu-test456').children);
+				const flyout = _.first(
+					document.getElementById('ContextMenu-test456').children
+				);
 				assert(_.isEmpty(flyout.style.opacity));
 			});
 
-			it('should render the flyout with opacity 1 on subsequent render', (done) => {
+			it('should render the flyout with opacity 1 on subsequent render', done => {
 				wrapper = mount(
-					<ContextMenu portalId='ContextMenu-test456' isExpanded>
+					<ContextMenu portalId="ContextMenu-test456" isExpanded>
 						<ContextMenu.Target>
 							File
 						</ContextMenu.Target>
@@ -84,7 +89,9 @@ describe('ContextMenu', () => {
 						</ContextMenu.FlyOut>
 					</ContextMenu>
 				);
-				const flyout = _.first(document.getElementById('ContextMenu-test456').children);
+				const flyout = _.first(
+					document.getElementById('ContextMenu-test456').children
+				);
 				_.defer(() => {
 					assert.equal(flyout.style.opacity, 1);
 					done();
@@ -93,10 +100,14 @@ describe('ContextMenu', () => {
 		});
 
 		describe('direction', () => {
-			_.forEach(['up', 'down', 'left', 'right'], (direction) => {
+			_.forEach(['up', 'down', 'left', 'right'], direction => {
 				it(`should apply the 'lucid-ContextMenu-FlyOut-${direction}' className when '${direction}'`, () => {
 					wrapper = mount(
-						<ContextMenu portalId='ContextMenu-test123' isExpanded direction={direction}>
+						<ContextMenu
+							portalId="ContextMenu-test123"
+							isExpanded
+							direction={direction}
+						>
 							<ContextMenu.Target>
 								File
 							</ContextMenu.Target>
@@ -106,18 +117,23 @@ describe('ContextMenu', () => {
 						</ContextMenu>
 					);
 
-					const flyOutPortalDomNode = document.getElementById('ContextMenu-test123');
+					const flyOutPortalDomNode = document.getElementById(
+						'ContextMenu-test123'
+					);
 
-					assert(flyOutPortalDomNode.querySelector(`.lucid-ContextMenu-FlyOut-${direction}`));
+					assert(
+						flyOutPortalDomNode.querySelector(
+							`.lucid-ContextMenu-FlyOut-${direction}`
+						)
+					);
 				});
 			});
-
 		});
 
 		describe('portalId', () => {
 			it('should render the portal with the given id when expanded', () => {
 				wrapper = mount(
-					<ContextMenu portalId='ContextMenu-test123' isExpanded>
+					<ContextMenu portalId="ContextMenu-test123" isExpanded>
 						<ContextMenu.Target>
 							File
 						</ContextMenu.Target>
@@ -170,8 +186,9 @@ describe('ContextMenu', () => {
 						<ContextMenu.FlyOut>
 							Open
 						</ContextMenu.FlyOut>
-					</ContextMenu>
-				, { attachTo: testSection });
+					</ContextMenu>,
+					{ attachTo: testSection }
+				);
 
 				testSection.querySelector('.lucid-ContextMenu').click();
 				document.body.querySelector('.lucid-ContextMenu-FlyOut').click();

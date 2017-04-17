@@ -18,12 +18,16 @@ export default React.createClass({
 				<TextField
 					style={style}
 					value={this.state.value}
-					onChangeDebounced={(value) => this.setState({value})}
+					onChangeDebounced={value => this.setState({ value })}
 				/>
 
 				<div style={style}>this.state.value: {this.state.value}</div>
 
-				<Button onClick={() => { this.setState({ value: 'foo' }); }}>
+				<Button
+					onClick={() => {
+						this.setState({ value: 'foo' });
+					}}
+				>
 					Set TextField to "foo"
 				</Button>
 			</div>
