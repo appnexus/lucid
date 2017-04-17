@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { buildHybridComponent } from '../../util/state-management';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -13,8 +12,9 @@ import ChevronThinIcon from '../Icon/ChevronThinIcon/ChevronThinIcon';
 const cx = lucidClassNames.bind('&-DateSelect');
 
 const NAV_BUTTON_SIZE = 32;
+const clampMonthsShown = monthsShown => _.clamp(monthsShown, 1, 6);
 
-const { any, bool, func, instanceOf, number, oneOf, string } = PropTypes;
+const { any, bool, func, instanceOf, number, oneOf, string } = React.PropTypes;
 
 /**
  * {"categories": ["controls", "selectors"], "madeFrom": ["InfiniteSlidePanel", "CalendarMonth"]}
@@ -42,13 +42,17 @@ const DateSelect = createClass({
 		className: string,
 
 		/**
-		 * Number of calendar months to show.
+		 * Number of calendar months to show. Min 1, suggested max 3. Actual max is
+		 * 6.
 		 */
 		monthsShown: number,
 
 		/**
 		 * Number of calendar months rendered at any given time (including those
 		 * out of view).
+		 *
+		 * In practice it should be at least (2 * monthsShown) + 2. It's got some
+		 * issues that still need to be ironed out but it works.
 		 */
 		calendarsRendered: number,
 
@@ -144,7 +148,7 @@ const DateSelect = createClass({
 	getDefaultProps() {
 		return {
 			monthsShown: 1,
-			calendarsRendered: 12,
+			calendarsRendered: 6,
 			offset: 0,
 			from: null,
 			to: null,
@@ -208,7 +212,9 @@ const DateSelect = createClass({
 	},
 
 	componentDidMount() {
-		const { isFontSizeRelative, monthsShown } = this.props;
+		const { isFontSizeRelative, monthsShown: monthsShownRaw } = this.props;
+
+		const monthsShown = clampMonthsShown(monthsShownRaw);
 
 		if (isFontSizeRelative) {
 			const rootElement = ReactDOM.findDOMNode(this.rootRef);
@@ -234,7 +240,7 @@ const DateSelect = createClass({
 	render() {
 		const {
 			className,
-			monthsShown,
+			monthsShown: monthsShownRaw,
 			calendarsRendered,
 			offset,
 			from,
@@ -255,6 +261,7 @@ const DateSelect = createClass({
 			DateSelect.CalendarMonth,
 			<DateSelect.CalendarMonth />
 		);
+		const monthsShown = clampMonthsShown(monthsShownRaw);
 
 		return (
 			<section
@@ -272,6 +279,7 @@ const DateSelect = createClass({
 			>
 				<div>
 					<ChevronThinIcon
+						className={cx('&-chevron')}
 						size={NAV_BUTTON_SIZE}
 						isClickable
 						direction="left"
@@ -305,7 +313,8 @@ const DateSelect = createClass({
 									onDayMouseLeave={
 										showCursorHighlight ? this.handleDayMouseLeave : null
 									}
-									// Only update CalendarMonths within frame or one position away:
+									// Only update CalendarMonths within frame or one position
+									// away. This has issues and doesnt always behave quite right
 									shouldComponentUpdate={
 										slideOffset - offset >= -1 &&
 											slideOffset - offset < monthsShown + 1
@@ -318,6 +327,7 @@ const DateSelect = createClass({
 				</InfiniteSlidePanel>
 				<div>
 					<ChevronThinIcon
+						className={cx('&-chevron')}
 						size={NAV_BUTTON_SIZE}
 						isClickable
 						direction="right"

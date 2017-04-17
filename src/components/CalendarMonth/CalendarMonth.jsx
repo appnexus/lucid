@@ -124,8 +124,14 @@ const CalendarMonth = createClass({
 			...passThroughs
 		} = this.props;
 
-		const monthDate = new Date(initialMonth);
-		monthDate.setMonth(monthDate.getMonth() + monthOffset);
+		// It can be tricky to increment months using JavaScript dates, this should
+		// handle the edge cases.
+		// http://stackoverflow.com/questions/499838/javascript-date-next-month
+		const monthDate = new Date(
+			initialMonth.getFullYear(),
+			initialMonth.getMonth() + monthOffset,
+			1
+		);
 
 		return (
 			<DayPicker
