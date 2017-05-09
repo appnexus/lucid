@@ -138,6 +138,7 @@ import SplitVertical from './components/SplitVertical/SplitVertical';
 import StarIcon from './components/Icon/StarIcon/StarIcon';
 import StarOutlineIcon from './components/Icon/StarOutlineIcon/StarOutlineIcon';
 import StickySection from './components/StickySection/StickySection';
+import StopwatchIcon from './components/Icon/StopwatchIcon/StopwatchIcon';
 import SuccessIcon from './components/Icon/SuccessIcon/SuccessIcon';
 import SuccessLightIcon
 	from './components/Icon/SuccessLightIcon/SuccessLightIcon';
@@ -308,6 +309,7 @@ export {
 	StarIcon,
 	StarOutlineIcon,
 	StickySection,
+	StopwatchIcon,
 	Submarine,
 	SubmarineDumb,
 	SuccessIcon,
