@@ -1,6 +1,7 @@
 import React, { isValidElement } from 'react';
 import _ from 'lodash';
 import { logger } from './logger';
+import { createSelector } from 'reselect';
 
 export function getDeepPaths(obj, path = []) {
 	return _.reduce(
@@ -118,23 +119,38 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
  * Generates a root selector from a tree of selectors
  * @param {Object} selectors - a tree of selectors
  * @returns {function} root selector that when called with state, calls each of
- * the selectors in the tree with the state local to that selector
+ * the selectors in the tree with the state local to that selector.
+ *
+ * This function is memoized because it's recursive, and we want it to reuse
+ * the functions created in the recursive reduce because those functions are
+ * also memoized (reselect selectors are memoized with a cache of 1) and we want
+ * to maintain their caches.
  */
+export const reduceSelectors = _.memoize(selectors => {
+	if (!_.isPlainObject(selectors)) {
+		throw new Error(
+			'Selectors must be a plain object with function or plain object values'
+		);
+	}
 
-export function reduceSelectors(selectors) {
-	return function reducedSelector(state) {
-		return _.reduce(
+	/**
+	 * For each iteration of `reduceSelectors`, we return a memoized selector so
+	 * that individual branches maintain reference equality if they haven't been
+	 * modified, even if a sibling (and therefore the parent) has been modified.
+	 */
+	return createSelector(_.identity, state =>
+		_.reduce(
 			selectors,
-			(state, selector, key) => ({
-				...state,
+			(acc, selector, key) => ({
+				...acc,
 				[key]: _.isFunction(selector)
 					? selector(state)
 					: reduceSelectors(selector)(state[key]),
 			}),
 			state
-		);
-	};
-}
+		)
+	);
+});
 
 export function safeMerge(objValue, srcValue) {
 	// don't merge arrays
