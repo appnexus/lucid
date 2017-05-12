@@ -1,15 +1,13 @@
 import React from 'react';
 import { SearchableMultiSelect, Resizer } from '../../../index';
 
-const {
-	Option,
-} = SearchableMultiSelect;
+const { Option } = SearchableMultiSelect;
 
 export default React.createClass({
 	render() {
 		return (
 			<Resizer>
-				{(width) => {
+				{width => {
 					const responsiveMode = width >= 768 ? 'large' : 'small';
 
 					return (

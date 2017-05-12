@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-	DateSelect,
-} from '../../../index';
+import { DateSelect } from '../../../index';
 
 export default React.createClass({
 	render() {

@@ -22,11 +22,7 @@ const {
 	oneOfType,
 } = PropTypes;
 
-const {
-	Target,
-	FlyOut,
-} = ContextMenu;
-
+const { Target, FlyOut } = ContextMenu;
 
 /**
  * {"categories": ["communication"], "madeFrom": ["ContextMenu"]}
@@ -56,14 +52,7 @@ const ToolTip = createClass({
 		/**
 		 * Style variations of the `ToolTip`.
 		 */
-		kind: oneOf([
-			'primary',
-			'success',
-			'warning',
-			'danger',
-			'info',
-			'default',
-		]),
+		kind: oneOf(['primary', 'success', 'warning', 'danger', 'info', 'default']),
 		/**
 		 * Called when the user closes the `Banner`.
 		 *
@@ -157,13 +146,8 @@ const ToolTip = createClass({
 		setTimeout(() => {
 			const {
 				props,
-				state: {
-					isMouseOverFlyout,
-					isMouseOverTarget,
-				},
-				props: {
-					onMouseOut,
-				},
+				state: { isMouseOverFlyout, isMouseOverTarget },
+				props: { onMouseOut },
 			} = this;
 			if (!isMouseOverFlyout && !isMouseOverTarget) {
 				onMouseOut({ props, event });
@@ -209,14 +193,21 @@ const ToolTip = createClass({
 			...passThroughs
 		} = this.props;
 
-		const targetProps = _.first(_.map(findTypes(this.props, ToolTip.Target), 'props'));
-		const title = _.get(_.first(_.map(findTypes(this.props, ToolTip.Title), 'props')), 'children');
-		const body = _.get(_.first(_.map(findTypes(this.props, ToolTip.Body), 'props')), 'children');
-		const getAlignmentOffset = (n) => (alignment === ContextMenu.CENTER
-			? 0
-			: alignment === ContextMenu.START
-				? n / 2 - 22.5
-				: -(n / 2 - 22.5));
+		const targetProps = _.first(
+			_.map(findTypes(this.props, ToolTip.Target), 'props')
+		);
+		const title = _.get(
+			_.first(_.map(findTypes(this.props, ToolTip.Title), 'props')),
+			'children'
+		);
+		const body = _.get(
+			_.first(_.map(findTypes(this.props, ToolTip.Body), 'props')),
+			'children'
+		);
+		const getAlignmentOffset = n =>
+			(alignment === ContextMenu.CENTER
+				? 0
+				: alignment === ContextMenu.START ? n / 2 - 22.5 : -(n / 2 - 22.5));
 
 		return (
 			<ContextMenu
@@ -232,7 +223,10 @@ const ToolTip = createClass({
 				onMouseOver={this.handleMouseOverTarget}
 				onMouseOut={this.handleMouseOutTarget}
 			>
-				<Target {...targetProps} className={cx(_.get(targetProps, 'className'), '&-Target')}>
+				<Target
+					{...targetProps}
+					className={cx(_.get(targetProps, 'className'), '&-Target')}
+				>
 					{_.get(targetProps, 'children')}
 				</Target>
 				<FlyOut
@@ -240,14 +234,25 @@ const ToolTip = createClass({
 						...flyOutStyle,
 						maxWidth: flyOutMaxWidth || flyOutStyle.maxWidth || 200,
 					}}
-					className={flyOutCx(className, '&', `&-${direction}`, `&-${alignment}`, `&-${kind}`)}
+					className={flyOutCx(
+						className,
+						'&',
+						`&-${direction}`,
+						`&-${alignment}`,
+						`&-${kind}`
+					)}
 					onMouseOver={this.handleMouseOverFlyout}
 					onMouseOut={this.handleMouseOutFlyout}
 				>
-					{isCloseable ? <CrossIcon onClick={this.handleClose} className={flyOutCx('&-close')}/> : null}
-					{!_.isNil(title) ?
-						<h2 className={flyOutCx('&-Title')}>{title}</h2>
-					: null}
+					{isCloseable
+						? <CrossIcon
+								onClick={this.handleClose}
+								className={flyOutCx('&-close')}
+							/>
+						: null}
+					{!_.isNil(title)
+						? <h2 className={flyOutCx('&-Title')}>{title}</h2>
+						: null}
 					{body}
 				</FlyOut>
 			</ContextMenu>

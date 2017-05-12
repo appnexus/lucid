@@ -2,25 +2,18 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, omitProps }  from '../../util/component-types';
+import { createClass, getFirst, omitProps } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
-import Collapsible  from '../Collapsible/Collapsible';
+import Collapsible from '../Collapsible/Collapsible';
 import Panel from '../Panel/Panel';
 
 import * as reducers from '../Expander/Expander.reducers';
 
 const cx = lucidClassNames.bind('&-ExpanderPanel');
 
-const {
-	any,
-	bool,
-	func,
-	node,
-	object,
-	string,
-} = PropTypes;
+const { any, bool, func, node, object, string } = PropTypes;
 
 /**
  * {"categories": ["layout"], "madeFrom": ["ChevronIcon", "Expander", "Panel"]}
@@ -126,21 +119,25 @@ const ExpanderPanel = createClass({
 			...passThroughs
 		} = this.props;
 
-		const headerChildProps = _.get(getFirst(this.props, ExpanderPanel.Header), 'props');
+		const headerChildProps = _.get(
+			getFirst(this.props, ExpanderPanel.Header),
+			'props'
+		);
 
 		return (
 			<Panel
 				{...omitProps(passThroughs, ExpanderPanel, [], false)}
-				className={cx('&', {
-					'&-is-collapsed': !isExpanded,
-					'&-is-disabled': isDisabled,
-				}, className)}
+				className={cx(
+					'&',
+					{
+						'&-is-collapsed': !isExpanded,
+						'&-is-disabled': isDisabled,
+					},
+					className
+				)}
 				style={style}
 			>
-				<Panel.Header
-					className={cx('&-header')}
-					onClick={this.handleToggle}
-				>
+				<Panel.Header className={cx('&-header')} onClick={this.handleToggle}>
 					<span className={cx('&-icon')}>
 						<ChevronIcon direction={isExpanded ? 'up' : 'down'} />
 					</span>
@@ -148,12 +145,17 @@ const ExpanderPanel = createClass({
 					<span {...headerChildProps} />
 				</Panel.Header>
 
-				<Collapsible isExpanded={isExpanded} className={cx('&-content', {
-					'&-content-is-expanded': isExpanded,
-				})}>
-					<div className={cx('&-content-inner', {
-						'&-content-inner-has-padding': hasPadding,
-					})}>
+				<Collapsible
+					isExpanded={isExpanded}
+					className={cx('&-content', {
+						'&-content-is-expanded': isExpanded,
+					})}
+				>
+					<div
+						className={cx('&-content-inner', {
+							'&-content-inner-has-padding': hasPadding,
+						})}
+					>
 						{children}
 					</div>
 				</Collapsible>

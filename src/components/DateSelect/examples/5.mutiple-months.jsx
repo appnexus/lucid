@@ -1,20 +1,15 @@
 import React from 'react';
-import {
-	DateSelect,
-} from '../../../index';
+import { DateSelect } from '../../../index';
 
 export default React.createClass({
 	render() {
 		return (
-			<section style={{ maxWidth: 736 }}>
-
-				<DateSelect
-					selectedDays={new Date()}
-					monthsShown={2}
-					showDivider
-				/>
-
-			</section>
+			<DateSelect
+				selectedDays={new Date()}
+				monthsShown={3}
+				calendarsRendered={9}
+				showDivider
+			/>
 		);
 	},
 });

@@ -2,11 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import { ToolTipDumb } from '../../../index';
 
-const {
-	Target,
-	Title,
-	Body,
-} = ToolTipDumb;
+const { Target, Title, Body } = ToolTipDumb;
 
 const kinds = ['primary', 'success', 'warning', 'danger', 'info', 'default'];
 const rows = _.chunk(kinds, 3);
@@ -15,11 +11,13 @@ export default React.createClass({
 	getInitialState: () => ({ isExpanded: true }),
 	render() {
 		return (
-			<section style={{
-				display: 'flex',
-				flexDirection: 'column',
-			}}>
-				{_.map(rows, (row) =>
+			<section
+				style={{
+					display: 'flex',
+					flexDirection: 'column',
+				}}
+			>
+				{_.map(rows, row => (
 					<section
 						key={`${row}`}
 						style={{
@@ -27,13 +25,10 @@ export default React.createClass({
 							display: 'flex',
 							flexDirection: 'row',
 							justifyContent: 'space-around',
-						}}>
-						{_.map(row, (kind) =>
-							<ToolTipDumb
-								key={kind}
-								isExpanded
-								kind={kind}
-							>
+						}}
+					>
+						{_.map(row, kind => (
+							<ToolTipDumb key={kind} isExpanded kind={kind}>
 								<Title>{_.capitalize(kind)}</Title>
 								<Body>
 									ToolTip is a utility component to create a transient message anchored to another component.
@@ -42,10 +37,10 @@ export default React.createClass({
 									<div>Target for {kind}</div>
 								</Target>
 							</ToolTipDumb>
-						)}
-						</section>
-						)}
-				</section>
+						))}
+					</section>
+				))}
+			</section>
 		);
 	},
 });

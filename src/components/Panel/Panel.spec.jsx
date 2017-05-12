@@ -23,7 +23,6 @@ describe('Panel', () => {
 	});
 
 	describe('props', () => {
-
 		describe('isGutterless', () => {
 			it('should apply the correct class', () => {
 				const wrapper = shallow(<Panel />);
@@ -32,7 +31,6 @@ describe('Panel', () => {
 		});
 
 		describe('hasMargin', () => {
-
 			it('should apply the correct class', () => {
 				const wrapper = shallow(<Panel />);
 				assert(wrapper.hasClass('lucid-Panel-has-margin'));
@@ -42,11 +40,9 @@ describe('Panel', () => {
 				const wrapper = shallow(<Panel hasMargin={false} />);
 				assert(!wrapper.hasClass('lucid-Panel-has-margin'));
 			});
-
 		});
 
 		describe('isScrollable', () => {
-
 			it('should apply the correct class', () => {
 				const wrapper = shallow(<Panel />);
 				assert(wrapper.hasClass('lucid-Panel-is-scrollable'));
@@ -56,9 +52,7 @@ describe('Panel', () => {
 				const wrapper = shallow(<Panel isScrollable={false} />);
 				assert(!wrapper.hasClass('lucid-Panel-is-scrollable'));
 			});
-
 		});
-
 	});
 
 	describe('childComponents', () => {
@@ -85,7 +79,7 @@ describe('Panel', () => {
 			it('should pass through className', () => {
 				const wrapper = shallow(
 					<Panel>
-						<Panel.Header className='foo'>Header</Panel.Header>
+						<Panel.Header className="foo">Header</Panel.Header>
 						Content
 					</Panel>
 				);
@@ -109,7 +103,7 @@ describe('Panel', () => {
 			it('should pass through className', () => {
 				const wrapper = shallow(
 					<Panel>
-						<Panel.Footer className='bar'>Footer</Panel.Footer>
+						<Panel.Footer className="bar">Footer</Panel.Footer>
 						Content
 					</Panel>
 				);
@@ -125,9 +119,7 @@ describe('Panel', () => {
 				assert.equal(wrapper.find('.lucid-Panel-footer').length, 0);
 			});
 		});
-
 	});
 
-	describe('any other children', () => {
-	});
+	describe('any other children', () => {});
 });

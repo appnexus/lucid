@@ -18,39 +18,51 @@ describe('Paginator selectors', () => {
 			});
 		});
 		describe('no totalPages prop', () => {
-			_.forEach([{
-				state: {
-					pageSizeOptions: [10],
-					selectedPageSizeIndex: 0,
-					totalCount: 100,
-				},
-				expectedTotalPages: 10,
-			}, {
-				state: {
-					pageSizeOptions: [10, 20],
-					selectedPageSizeIndex: 1,
-					totalCount: 100,
-				},
-				expectedTotalPages: 5,
-			}, {
-				state: {
-					pageSizeOptions: [100],
-					selectedPageSizeIndex: 0,
-					totalCount: 10,
-				},
-				expectedTotalPages: 1,
-			}, {
-				state: {
-					pageSizeOptions: [100],
-					selectedPageSizeIndex: 0,
-					totalCount: 101,
-				},
-				expectedTotalPages: 2,
-			}], ({ state, expectedTotalPages }) => {
-				it('should calculate the totalPages', () => {
-					assert.equal(totalPages(state), expectedTotalPages, `must be ${expectedTotalPages}`);
-				});
-			});
+			_.forEach(
+				[
+					{
+						state: {
+							pageSizeOptions: [10],
+							selectedPageSizeIndex: 0,
+							totalCount: 100,
+						},
+						expectedTotalPages: 10,
+					},
+					{
+						state: {
+							pageSizeOptions: [10, 20],
+							selectedPageSizeIndex: 1,
+							totalCount: 100,
+						},
+						expectedTotalPages: 5,
+					},
+					{
+						state: {
+							pageSizeOptions: [100],
+							selectedPageSizeIndex: 0,
+							totalCount: 10,
+						},
+						expectedTotalPages: 1,
+					},
+					{
+						state: {
+							pageSizeOptions: [100],
+							selectedPageSizeIndex: 0,
+							totalCount: 101,
+						},
+						expectedTotalPages: 2,
+					},
+				],
+				({ state, expectedTotalPages }) => {
+					it('should calculate the totalPages', () => {
+						assert.equal(
+							totalPages(state),
+							expectedTotalPages,
+							`must be ${expectedTotalPages}`
+						);
+					});
+				}
+			);
 		});
 	});
 });

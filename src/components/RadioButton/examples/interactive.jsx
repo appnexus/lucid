@@ -10,9 +10,11 @@ export default React.createClass({
 	},
 
 	handleSelected(isSelected) {
-		this.setState(_.assign({}, this.state, {
-			isSelected,
-		}));
+		this.setState(
+			_.assign({}, this.state, {
+				isSelected,
+			})
+		);
 	},
 
 	render() {
@@ -21,10 +23,10 @@ export default React.createClass({
 				<li>
 					<label>Enabled</label>
 					<RadioButton
-							isSelected={this.state.isSelected}
-							name='interactive-radio-buttons'
-							onSelect={this.handleSelected}
-							tabIndex={20}
+						isSelected={this.state.isSelected}
+						name="interactive-radio-buttons"
+						onSelect={this.handleSelected}
+						tabIndex={20}
 					/>
 				</li>
 			</ul>

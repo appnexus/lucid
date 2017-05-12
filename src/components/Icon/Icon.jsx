@@ -6,13 +6,7 @@ import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Icon');
 
-const {
-	any,
-	string,
-	number,
-	object,
-	bool,
-} = PropTypes;
+const { any, string, number, object, bool } = PropTypes;
 
 /**
  *
@@ -96,7 +90,11 @@ const Icon = createClass({
 		// out any `undefined` properties using lodash methods.
 		const actualStyle = {
 			...style,
-			borderRadius: _.get(style, 'borderRadius', isBadge ? `${size}px` : undefined),
+			borderRadius: _.get(
+				style,
+				'borderRadius',
+				isBadge ? `${size}px` : undefined
+			),
 		};
 
 		return (
@@ -107,11 +105,15 @@ const Icon = createClass({
 				preserveAspectRatio={aspectRatio}
 				{...omitProps(passThroughs, Icon)}
 				style={_.pickBy(actualStyle, _.negate(_.isUndefined))}
-				className={cx('&', {
-					'&-is-badge': isBadge,
-					'&-is-clickable': !isDisabled && isClickable,
-					'&-is-disabled': isDisabled,
-				}, className)}
+				className={cx(
+					'&',
+					{
+						'&-is-badge': isBadge,
+						'&-is-clickable': !isDisabled && isClickable,
+						'&-is-disabled': isDisabled,
+					},
+					className
+				)}
 			>
 				{children}
 			</svg>

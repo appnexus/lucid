@@ -1,19 +1,12 @@
 import React from 'react';
 import { LineChart, Button } from '../../../index';
 
-const {
-  EmptyStateWrapper,
-  EmptyStateWrapper: { Title, Body },
-} = LineChart;
+const { EmptyStateWrapper, EmptyStateWrapper: { Title, Body } } = LineChart;
 
 export default React.createClass({
 	render() {
 		return (
-			<LineChart
-				data={[]}
-
-				yAxisFields={['blueberries']}
-			>
+			<LineChart data={[]} yAxisFields={['blueberries']}>
 				<EmptyStateWrapper>
 					<Title>
 						Something went wrong.

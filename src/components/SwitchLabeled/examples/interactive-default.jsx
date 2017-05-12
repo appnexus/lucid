@@ -37,23 +37,23 @@ export default React.createClass({
 			<section>
 				<span>
 					<SwitchLabeled
-							isSelected={this.state.airplaneMode === true}
-							onSelect={this.handleSelectedAirplaneMode}
-							style={style}
+						isSelected={this.state.airplaneMode === true}
+						onSelect={this.handleSelectedAirplaneMode}
+						style={style}
 					>
 						<SwitchLabeled.Label>Airplane Mode</SwitchLabeled.Label>
 					</SwitchLabeled>
 					<SwitchLabeled
-							isSelected={this.state.bluetooth === true}
-							onSelect={this.handleSelectedBluetooth}
-							style={style}
+						isSelected={this.state.bluetooth === true}
+						onSelect={this.handleSelectedBluetooth}
+						style={style}
 					>
 						<SwitchLabeled.Label>Bluetooth</SwitchLabeled.Label>
 					</SwitchLabeled>
 					<SwitchLabeled
-							isSelected={this.state.cellularData === true}
-							onSelect={this.handleSelectedCellularData}
-							style={style}
+						isSelected={this.state.cellularData === true}
+						onSelect={this.handleSelectedCellularData}
+						style={style}
 					>
 						<SwitchLabeled.Label>Cellular Data</SwitchLabeled.Label>
 					</SwitchLabeled>

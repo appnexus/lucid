@@ -1,11 +1,7 @@
 import React from 'react';
 import { SearchableSelect } from '../../../index';
 
-const {
-	Placeholder,
-	Option,
-	SearchField,
-} = SearchableSelect;
+const { Placeholder, Option, SearchField } = SearchableSelect;
 
 export default React.createClass({
 	getInitialState() {
@@ -22,9 +18,9 @@ export default React.createClass({
 
 	render() {
 		return (
-			<section style={{marginBottom: '20px'}}>
-				<SearchableSelect onSelect={this.handleSelect} maxMenuHeight='200'>
-					<SearchField placeholder='Type here to filter...'/>
+			<section style={{ marginBottom: '20px' }}>
+				<SearchableSelect onSelect={this.handleSelect} maxMenuHeight="200">
+					<SearchField placeholder="Type here to filter..." />
 					<Placeholder>Select Color</Placeholder>
 					<Option>Blue</Option>
 					<Option>Green</Option>

@@ -15,9 +15,7 @@ export default React.createClass({
 	},
 
 	render() {
-		const {
-			selectedDate,
-		} = this.state;
+		const { selectedDate } = this.state;
 
 		return (
 			<section style={{ maxWidth: 400 }}>
@@ -27,7 +25,9 @@ export default React.createClass({
 					onSelectDate={this.handleSelectDate}
 				/>
 
-				selected date: {selectedDate && selectedDate.toLocaleDateString('en-US')}
+				selected date:
+				{' '}
+				{selectedDate && selectedDate.toLocaleDateString('en-US')}
 
 			</section>
 		);

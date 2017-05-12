@@ -1,10 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import {
-	LineChart,
-	Legend,
-	chartConstants,
-} from '../../../index';
+import { LineChart, Legend, chartConstants } from '../../../index';
 
 const data = [
 	{ x: new Date('2015-01-01T00:00:00-08:00'), apples: 2, oranges: 3, pears: 1 },
@@ -22,7 +18,7 @@ export default React.createClass({
 				<LineChart
 					data={data}
 					yAxisFields={yAxisFields}
-					yAxisTitle='Fruit Count'
+					yAxisTitle="Fruit Count"
 					palette={palette}
 				/>
 

@@ -21,10 +21,13 @@ describe('Switch', () => {
 	describe('props', () => {
 		describe('isDisabled', () => {
 			it('sets the `disabled` attribute of the native check box element.', () => {
-				_.forEach(booleanValues, (testValue) => {
+				_.forEach(booleanValues, testValue => {
 					const wrapper = shallow(<Switch isDisabled={testValue} />);
 
-					assert.equal(wrapper.find('input[type="checkbox"]').prop('disabled'), testValue);
+					assert.equal(
+						wrapper.find('input[type="checkbox"]').prop('disabled'),
+						testValue
+					);
 				});
 			});
 
@@ -37,10 +40,13 @@ describe('Switch', () => {
 
 		describe('isSelected', () => {
 			it('sets the `checked` attribute of the native check box element.', () => {
-				_.forEach(booleanValues, (testValue) => {
+				_.forEach(booleanValues, testValue => {
 					const wrapper = shallow(<Switch isSelected={testValue} />);
 
-					assert.equal(wrapper.find('input[type="checkbox"]').prop('checked'), testValue);
+					assert.equal(
+						wrapper.find('input[type="checkbox"]').prop('checked'),
+						testValue
+					);
 				});
 			});
 
@@ -62,14 +68,26 @@ describe('Switch', () => {
 		describe('pass throughs', () => {
 			it('passes through all props not defined in `propTypes` to the native input.', () => {
 				const wrapper = mount(
-					<Switch className='wut' isDisabled={true} isSelected={true} style={{ fontWeight: 'bold' }} onSelect={_.noop}
-							foo={1} bar={2} baz={3} qux={4} quux={5} />
+					<Switch
+						className="wut"
+						isDisabled={true}
+						isSelected={true}
+						style={{ fontWeight: 'bold' }}
+						onSelect={_.noop}
+						foo={1}
+						bar={2}
+						baz={3}
+						qux={4}
+						quux={5}
+					/>
 				);
-				const nativeProps = _.keys(wrapper.find('input[type="checkbox"]').props());
+				const nativeProps = _.keys(
+					wrapper.find('input[type="checkbox"]').props()
+				);
 
 				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
 				// to the native input.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
+				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], prop => {
 					assert(_.includes(nativeProps, prop));
 				});
 			});
@@ -83,32 +101,71 @@ describe('Switch', () => {
 	}
 
 	function verifyArgumentsWhenFalse(event) {
-		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
-			const onSelect = sinon.spy();
+		_.forEach(
+			[
+				'',
+				'-native',
+				'-visualization-container',
+				'-visualization-glow',
+				'-visualization-handle',
+			],
+			classSubString => {
+				const onSelect = sinon.spy();
 
-			simulateEvent(<Switch isSelected={false} onSelect={onSelect} />, `.lucid-Switch${classSubString}`, event);
-			assert.equal(onSelect.args[0][0], true);
-			assert(_.last(onSelect.args[0]).event);
-		});
+				simulateEvent(
+					<Switch isSelected={false} onSelect={onSelect} />,
+					`.lucid-Switch${classSubString}`,
+					event
+				);
+				assert.equal(onSelect.args[0][0], true);
+				assert(_.last(onSelect.args[0]).event);
+			}
+		);
 	}
 
 	function verifyArgumentsWhenTrue(event) {
-		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
-			const onSelect = sinon.spy();
+		_.forEach(
+			[
+				'',
+				'-native',
+				'-visualization-container',
+				'-visualization-glow',
+				'-visualization-handle',
+			],
+			classSubString => {
+				const onSelect = sinon.spy();
 
-			simulateEvent(<Switch isSelected={true} onSelect={onSelect} />, `.lucid-Switch${classSubString}`, event);
-			assert.equal(onSelect.args[0][0], false);
-			assert(_.last(onSelect.args[0]).event);
-		});
+				simulateEvent(
+					<Switch isSelected={true} onSelect={onSelect} />,
+					`.lucid-Switch${classSubString}`,
+					event
+				);
+				assert.equal(onSelect.args[0][0], false);
+				assert(_.last(onSelect.args[0]).event);
+			}
+		);
 	}
 
 	function verifyOnSelect(event) {
-		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-handle'], (classSubString) => {
-			const onSelect = sinon.spy();
+		_.forEach(
+			[
+				'',
+				'-native',
+				'-visualization-container',
+				'-visualization-glow',
+				'-visualization-handle',
+			],
+			classSubString => {
+				const onSelect = sinon.spy();
 
-			simulateEvent(<Switch onSelect={onSelect} />, `.lucid-Switch${classSubString}`, event);
-			assert(onSelect.calledOnce);
-		});
+				simulateEvent(
+					<Switch onSelect={onSelect} />,
+					`.lucid-Switch${classSubString}`,
+					event
+				);
+				assert(onSelect.calledOnce);
+			}
+		);
 	}
 
 	describe('user clicks on the rendered control', () => {

@@ -6,4 +6,3 @@ describe('SeparatorIcon', () => {
 	common(SeparatorIcon);
 	icons(SeparatorIcon);
 });
-

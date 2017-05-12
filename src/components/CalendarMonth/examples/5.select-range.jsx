@@ -31,9 +31,7 @@ export default React.createClass({
 			return;
 		}
 
-		const {
-			selectMode,
-		} = this.state;
+		const { selectMode } = this.state;
 
 		if (selectMode === 'to') {
 			this.setState({
@@ -68,13 +66,7 @@ export default React.createClass({
 	},
 
 	render() {
-		const {
-			selectMode,
-			from,
-			to,
-			cursor,
-			offset,
-		} = this.state;
+		const { selectMode, from, to, cursor, offset } = this.state;
 
 		return (
 			<section>

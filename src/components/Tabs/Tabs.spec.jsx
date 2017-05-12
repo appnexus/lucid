@@ -25,7 +25,7 @@ describe('Tabs', () => {
 
 		it('Tab as props', () => {
 			const wrapper = shallow(
-				<Tabs Tab={[{children: 'Bert'}, {children: 'Ernie'}]} />
+				<Tabs Tab={[{ children: 'Bert' }, { children: 'Ernie' }]} />
 			);
 
 			assert.equal(wrapper.find('.lucid-Tabs-bar').children().length, 2);
@@ -34,10 +34,12 @@ describe('Tabs', () => {
 
 		it('Tab as props with Title', () => {
 			const wrapper = shallow(
-				<Tabs Tab={[
-					{ Title: 'Coolest', children: 'Bert' },
-					{ Title: 'Not so cool', children: 'Ernie' },
-				]} />
+				<Tabs
+					Tab={[
+						{ Title: 'Coolest', children: 'Bert' },
+						{ Title: 'Not so cool', children: 'Ernie' },
+					]}
+				/>
 			);
 
 			const tabBar = wrapper.find('.lucid-Tabs-bar').shallow();
@@ -51,7 +53,7 @@ describe('Tabs', () => {
 		it('Title as props', () => {
 			const wrapper = shallow(
 				<Tabs>
-					<Tabs.Tab Title='Froyo'>Yolo fo sho</Tabs.Tab>
+					<Tabs.Tab Title="Froyo">Yolo fo sho</Tabs.Tab>
 					<Tabs.Tab>Broyoyo</Tabs.Tab>
 				</Tabs>
 			);
@@ -80,8 +82,8 @@ describe('Tabs', () => {
 		it('selectedIndex', () => {
 			const wrapper = shallow(
 				<Tabs selectedIndex={1}>
-					<Tabs.Tab Title='Lollipop'>Yuck</Tabs.Tab>
-					<Tabs.Tab Title='Slurpee'>Yum</Tabs.Tab>
+					<Tabs.Tab Title="Lollipop">Yuck</Tabs.Tab>
+					<Tabs.Tab Title="Slurpee">Yum</Tabs.Tab>
 				</Tabs>
 			);
 
@@ -94,8 +96,8 @@ describe('Tabs', () => {
 		it('Tab.isSelected', () => {
 			const wrapper = shallow(
 				<Tabs>
-					<Tabs.Tab Title='Lollipop'>Yuck</Tabs.Tab>
-					<Tabs.Tab isSelected={true} Title='Slurpee'>Yum</Tabs.Tab>
+					<Tabs.Tab Title="Lollipop">Yuck</Tabs.Tab>
+					<Tabs.Tab isSelected={true} Title="Slurpee">Yum</Tabs.Tab>
 				</Tabs>
 			);
 
@@ -108,9 +110,9 @@ describe('Tabs', () => {
 		it('last Tab.isSelected beats selectedIndex', () => {
 			const wrapper = shallow(
 				<Tabs selectedIndex={0}>
-					<Tabs.Tab Title='One'>One content</Tabs.Tab>
-					<Tabs.Tab isSelected={true} Title='Two'>Two content</Tabs.Tab>
-					<Tabs.Tab isSelected={true} Title='Three'>Three content</Tabs.Tab>
+					<Tabs.Tab Title="One">One content</Tabs.Tab>
+					<Tabs.Tab isSelected={true} Title="Two">Two content</Tabs.Tab>
+					<Tabs.Tab isSelected={true} Title="Three">Three content</Tabs.Tab>
 				</Tabs>
 			);
 
@@ -122,14 +124,12 @@ describe('Tabs', () => {
 		});
 
 		describe('onSelect', () => {
-
 			const onSelect = sinon.spy();
 			let clickEvent;
 			let wrapper;
 			let tabBar;
 
 			beforeEach(() => {
-
 				onSelect.reset();
 				clickEvent = 'event';
 				wrapper = shallow(
@@ -139,7 +139,6 @@ describe('Tabs', () => {
 					</Tabs>
 				);
 				tabBar = wrapper.find('.lucid-Tabs-bar').shallow();
-
 			});
 
 			it('should call onSelect with the correct arguments', () => {
@@ -149,25 +148,34 @@ describe('Tabs', () => {
 				assert(onSelect.called);
 				assert.equal(selectedIndex, 1);
 				assert.equal(meta.event, clickEvent);
-				assert.deepEqual(meta.props, {isLastTab: true, isOpen: true, isProgressive: false, isSelected: false, Title: '', children: 'Two'});
+				assert.deepEqual(meta.props, {
+					isLastTab: true,
+					isOpen: true,
+					isProgressive: false,
+					isSelected: false,
+					Title: '',
+					children: 'Two',
+				});
 			});
 
 			it('should not call onSelect if the `Tab` isDisabled', () => {
 				tabBar.childAt(0).shallow().simulate('click', clickEvent);
 				assert(!onSelect.called);
 			});
-
 		});
 
 		it('isOpen', () => {
 			const wrapper = shallow(
 				<Tabs isOpen={false} selectedIndex={0}>
-					<Tabs.Tab Title='Lollipop'>Yuck</Tabs.Tab>
-					<Tabs.Tab Title='Slurpee'>Yum</Tabs.Tab>
+					<Tabs.Tab Title="Lollipop">Yuck</Tabs.Tab>
+					<Tabs.Tab Title="Slurpee">Yum</Tabs.Tab>
 				</Tabs>
 			);
 
-			assert.equal(wrapper.find('.lucid-Tabs-Tab-is-active-and-open').length, 0);
+			assert.equal(
+				wrapper.find('.lucid-Tabs-Tab-is-active-and-open').length,
+				0
+			);
 		});
 	});
 });

@@ -6,14 +6,7 @@ import Table from '../Table/Table';
 
 const cx = lucidClassNames.bind('&-ScrollTable');
 
-const {
-	object,
-	string,
-	bool,
-	node,
-	number,
-	oneOfType,
-} = PropTypes;
+const { object, string, bool, node, number, oneOfType } = PropTypes;
 
 /**
  * {"categories": ["table"], "madeFrom": ["Table"]}
@@ -78,9 +71,13 @@ const ScrollTable = createClass({
 
 		return (
 			<div
-				className={cx('&', {
-					'&-has-border': hasBorder,
-				}, className)}
+				className={cx(
+					'&',
+					{
+						'&-has-border': hasBorder,
+					},
+					className
+				)}
 				style={style}
 			>
 				<Table

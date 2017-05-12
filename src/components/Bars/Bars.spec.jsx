@@ -14,16 +14,15 @@ import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
 const defaultData = [
 	{ x: 'aye', y: 10, y2: 20 },
 	{ x: 'bee', y: 55, y2: 35 },
-	{ x: 'see', y: 100, y2: 3  },
+	{ x: 'see', y: 100, y2: 3 },
 ];
 
-const defaultXScale = d3Scale.scaleBand()
+const defaultXScale = d3Scale
+	.scaleBand()
 	.domain(['aye', 'bee', 'see'])
 	.range([0, 100]);
 
-const defaultYScale = d3Scale.scaleLinear()
-	.domain([0, 100])
-	.range([1000, 0]);
+const defaultYScale = d3Scale.scaleLinear().domain([0, 100]).range([1000, 0]);
 
 describe('Bars', () => {
 	common(Bars, {
@@ -109,10 +108,8 @@ describe('Bars', () => {
 				const palette = ['r', 'g'];
 				const wrapper = shallow(
 					<Bars
-						data={[
-							{ x: 'one', rev: 1, imp: 2, click: 3 },
-						]}
-						yFields={[ 'rev', 'imp', 'click' ]}
+						data={[{ x: 'one', rev: 1, imp: 2, click: 3 }]}
+						yFields={['rev', 'imp', 'click']}
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						palette={palette}
@@ -128,10 +125,8 @@ describe('Bars', () => {
 				const palette = ['r', 'g'];
 				const wrapper = shallow(
 					<Bars
-						data={[
-							{ x: 'one', rev: 1, imp: 2, click: 3 },
-						]}
-						yFields={[ 'rev', 'imp', 'click' ]}
+						data={[{ x: 'one', rev: 1, imp: 2, click: 3 }]}
+						yFields={['rev', 'imp', 'click']}
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						palette={palette}
@@ -176,7 +171,10 @@ describe('Bars', () => {
 
 				assert.equal(wrapper.find(Bar).length, 3, 'wrong number of Bar');
 				assert.equal(wrapper.find(Bar).at(0).prop('height'), 100);
-				assert.equal(wrapper.find(Bar).at(1).prop('height'), 550.00000000000001);
+				assert.equal(
+					wrapper.find(Bar).at(1).prop('height'),
+					550.00000000000001
+				);
 				assert.equal(wrapper.find(Bar).at(2).prop('height'), 1000);
 			});
 		});
@@ -186,11 +184,11 @@ describe('Bars', () => {
 				const wrapper = shallow(
 					<Bars
 						data={[
-							{ axe: 'one'   , y: 0 }   ,
-							{ axe: 'two'   , y: 50 }  ,
-							{ axe: 'three' , y: 100 } ,
+							{ axe: 'one', y: 0 },
+							{ axe: 'two', y: 50 },
+							{ axe: 'three', y: 100 },
 						]}
-						xField='axe'
+						xField="axe"
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 					/>
@@ -211,7 +209,7 @@ describe('Bars', () => {
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						hasToolTips
-						xFormatter={(str) => str.toUpperCase()}
+						xFormatter={str => str.toUpperCase()}
 					/>
 				);
 
@@ -233,42 +231,47 @@ describe('Bars', () => {
 
 				assert.equal(wrapper.find(Bar).length, 3, 'wrong number of Bar');
 				assert.equal(wrapper.find(Bar).at(0).prop('height'), 100);
-				assert.equal(wrapper.find(Bar).at(1).prop('height'), 550.00000000000001);
+				assert.equal(
+					wrapper.find(Bar).at(1).prop('height'),
+					550.00000000000001
+				);
 				assert.equal(wrapper.find(Bar).at(2).prop('height'), 1000);
 			});
 
 			it('should work with time scales', () => {
-				const xScale = d3Scale.scaleBand()
-					.domain([new Date('2015-01-01T00:00:00Z'), new Date('2015-01-03T00:00:00Z')])
+				const xScale = d3Scale
+					.scaleBand()
+					.domain([
+						new Date('2015-01-01T00:00:00Z'),
+						new Date('2015-01-03T00:00:00Z'),
+					])
 					.range([0, 100]);
 
-				const yScale = d3Scale.scaleTime()
-					.domain([0, 100])
-					.range([1000, 0]);
+				const yScale = d3Scale.scaleTime().domain([0, 100]).range([1000, 0]);
 
 				const wrapper = shallow(
 					<Bars
 						data={[
-							{ x: new Date('2015-01-01T00:00:00Z') , y: 0 }   ,
-							{ x: new Date('2015-01-02T00:00:00Z') , y: 50 }  ,
-							{ x: new Date('2015-01-03T00:00:00Z') , y: 100 } ,
+							{ x: new Date('2015-01-01T00:00:00Z'), y: 0 },
+							{ x: new Date('2015-01-02T00:00:00Z'), y: 50 },
+							{ x: new Date('2015-01-03T00:00:00Z'), y: 100 },
 						]}
 						xScale={xScale}
 						yScale={yScale}
-						xFormatter={(d) => d.toISOString()}
+						xFormatter={d => d.toISOString()}
 					/>
 				);
 
 				assert.equal(wrapper.find(Bar).length, 3, 'wrong number of Bar');
 
-				assert.equal(wrapper.find(Bar).at(0).prop('width')  , 50);
-				assert.equal(wrapper.find(Bar).at(0).prop('height') , 0);
+				assert.equal(wrapper.find(Bar).at(0).prop('width'), 50);
+				assert.equal(wrapper.find(Bar).at(0).prop('height'), 0);
 
-				assert.equal(wrapper.find(Bar).at(1).prop('width')  , 50);
-				assert.equal(wrapper.find(Bar).at(1).prop('height') , 500);
+				assert.equal(wrapper.find(Bar).at(1).prop('width'), 50);
+				assert.equal(wrapper.find(Bar).at(1).prop('height'), 500);
 
-				assert.equal(wrapper.find(Bar).at(2).prop('width')  , 50);
-				assert.equal(wrapper.find(Bar).at(2).prop('height') , 1000);
+				assert.equal(wrapper.find(Bar).at(2).prop('width'), 50);
+				assert.equal(wrapper.find(Bar).at(2).prop('height'), 1000);
 			});
 		});
 
@@ -277,9 +280,9 @@ describe('Bars', () => {
 				const wrapper = shallow(
 					<Bars
 						data={[
-							{ x: 'one'   , why: 0 }   ,
-							{ x: 'two'   , why: 50 }  ,
-							{ x: 'three' , why: 100 } ,
+							{ x: 'one', why: 0 },
+							{ x: 'two', why: 50 },
+							{ x: 'three', why: 100 },
 						]}
 						yFields={['why']}
 						xScale={defaultXScale}
@@ -297,9 +300,9 @@ describe('Bars', () => {
 				const wrapper = shallow(
 					<Bars
 						data={[
-							{ x: 'one'   , why: 0   , not: 100} ,
-							{ x: 'two'   , why: 50  , not: 50}  ,
-							{ x: 'three' , why: 100 , not: 0 }  ,
+							{ x: 'one', why: 0, not: 100 },
+							{ x: 'two', why: 50, not: 50 },
+							{ x: 'three', why: 100, not: 0 },
 						]}
 						yFields={['why', 'not']}
 						xScale={defaultXScale}
@@ -328,7 +331,7 @@ describe('Bars', () => {
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						hasToolTips
-						xFormatter={(str) => str.toUpperCase()}
+						xFormatter={str => str.toUpperCase()}
 					/>
 				);
 
@@ -343,9 +346,9 @@ describe('Bars', () => {
 				const wrapper = shallow(
 					<Bars
 						data={[
-							{ x: 'one'   , why: 0   , not: 100 } ,
-							{ x: 'two'   , why: 50  , not: 50 }  ,
-							{ x: 'three' , why: 100 , not: 0 }   ,
+							{ x: 'one', why: 0, not: 100 },
+							{ x: 'two', why: 50, not: 50 },
+							{ x: 'three', why: 100, not: 0 },
 						]}
 						yFields={['why', 'not']}
 						xScale={defaultXScale}
@@ -372,10 +375,8 @@ describe('Bars', () => {
 				const palette = ['r', 'g'];
 				const wrapper = shallow(
 					<Bars
-						data={[
-							{ x: 'one', rev: 1, imp: 2, click: 3 },
-						]}
-						yFields={[ 'rev', 'imp', 'click' ]}
+						data={[{ x: 'one', rev: 1, imp: 2, click: 3 }]}
+						yFields={['rev', 'imp', 'click']}
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						palette={palette}
@@ -388,6 +389,5 @@ describe('Bars', () => {
 				assert.equal(wrapper.find(Bar).at(2).prop('color'), 'g');
 			});
 		});
-
 	});
 });

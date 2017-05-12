@@ -16,7 +16,7 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<Button onClick={_.partial(this.handleChange, !this.state.isClosed)} >
+				<Button onClick={_.partial(this.handleChange, !this.state.isClosed)}>
 					Open/Close
 				</Button>
 

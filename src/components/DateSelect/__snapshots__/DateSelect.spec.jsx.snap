@@ -11,6 +11,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronThinIcon
+      className="lucid-DateSelect-chevron"
       direction="left"
       isClickable={true}
       onClick={[Function]}
@@ -22,7 +23,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}
-    totalSlides={12}
+    totalSlides={6}
   >
     <InfiniteSlidePanel.Slide
       className="lucid-DateSelect-slide"
@@ -30,6 +31,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
+      className="lucid-DateSelect-chevron"
       direction="right"
       isClickable={true}
       onClick={[Function]}
@@ -50,6 +52,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronThinIcon
+      className="lucid-DateSelect-chevron"
       direction="left"
       isClickable={true}
       onClick={[Function]}
@@ -61,7 +64,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}
-    totalSlides={12}
+    totalSlides={6}
   >
     <InfiniteSlidePanel.Slide
       className="lucid-DateSelect-slide"
@@ -69,6 +72,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
+      className="lucid-DateSelect-chevron"
       direction="right"
       isClickable={true}
       onClick={[Function]}
@@ -89,6 +93,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronThinIcon
+      className="lucid-DateSelect-chevron"
       direction="left"
       isClickable={true}
       onClick={[Function]}
@@ -100,7 +105,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}
-    totalSlides={12}
+    totalSlides={6}
   >
     <InfiniteSlidePanel.Slide
       className="lucid-DateSelect-slide"
@@ -108,6 +113,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
+      className="lucid-DateSelect-chevron"
       direction="right"
       isClickable={true}
       onClick={[Function]}
@@ -128,6 +134,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronThinIcon
+      className="lucid-DateSelect-chevron"
       direction="left"
       isClickable={true}
       onClick={[Function]}
@@ -139,7 +146,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}
-    totalSlides={12}
+    totalSlides={6}
   >
     <InfiniteSlidePanel.Slide
       className="lucid-DateSelect-slide"
@@ -147,6 +154,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
+      className="lucid-DateSelect-chevron"
       direction="right"
       isClickable={true}
       onClick={[Function]}
@@ -161,12 +169,13 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   className="lucid-DateSelect lucid-DateSelect-show-divider"
   style={
     Object {
-      "minWidth": 434,
+      "minWidth": 619,
     }
   }
 >
   <div>
     <ChevronThinIcon
+      className="lucid-DateSelect-chevron"
       direction="left"
       isClickable={true}
       onClick={[Function]}
@@ -177,8 +186,8 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     className="lucid-DateSelect-InfiniteSlidePanel"
     offset={0}
     onSwipe={[Function]}
-    slidesToShow={2}
-    totalSlides={12}
+    slidesToShow={3}
+    totalSlides={9}
   >
     <InfiniteSlidePanel.Slide
       className="lucid-DateSelect-slide"
@@ -186,6 +195,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
+      className="lucid-DateSelect-chevron"
       direction="right"
       isClickable={true}
       onClick={[Function]}
@@ -206,6 +216,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronThinIcon
+      className="lucid-DateSelect-chevron"
       direction="left"
       isClickable={true}
       onClick={[Function]}
@@ -217,7 +228,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}
-    totalSlides={12}
+    totalSlides={6}
   >
     <InfiniteSlidePanel.Slide
       className="lucid-DateSelect-slide"
@@ -225,6 +236,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
+      className="lucid-DateSelect-chevron"
       direction="right"
       isClickable={true}
       onClick={[Function]}
@@ -246,6 +258,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 >
   <div>
     <ChevronThinIcon
+      className="lucid-DateSelect-chevron"
       direction="left"
       isClickable={true}
       onClick={[Function]}
@@ -257,7 +270,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     offset={0}
     onSwipe={[Function]}
     slidesToShow={1}
-    totalSlides={12}
+    totalSlides={6}
   >
     <InfiniteSlidePanel.Slide
       className="lucid-DateSelect-slide"
@@ -265,6 +278,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
+      className="lucid-DateSelect-chevron"
       direction="right"
       isClickable={true}
       onClick={[Function]}

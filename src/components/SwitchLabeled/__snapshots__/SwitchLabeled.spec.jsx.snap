@@ -18,7 +18,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
       Airplane Mode
     </SwitchLabeled.Label>
   </Switch>
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
       Object {
@@ -35,7 +35,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     <span>
       Airplane Mode
     </span>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 </label>
 `;
 
@@ -57,7 +57,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
       Bluetooth
     </SwitchLabeled.Label>
   </Switch>
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
       Object {
@@ -74,7 +74,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     <span>
       Bluetooth
     </span>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 </label>
 `;
 
@@ -96,7 +96,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
       Cellular Data
     </SwitchLabeled.Label>
   </Switch>
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
       Object {
@@ -113,7 +113,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     <span>
       Cellular Data
     </span>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 </label>
 `;
 
@@ -131,7 +131,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     isSelected={true}
     onSelect={[Function]}
   />
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
       Object {
@@ -148,7 +148,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     <span>
       Airplane Mode Activated
     </span>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 </label>
 `;
 
@@ -166,7 +166,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     isSelected={true}
     onSelect={[Function]}
   />
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
       Object {
@@ -183,7 +183,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     <span>
       Bluetooth Enabled
     </span>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 </label>
 `;
 
@@ -201,7 +201,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     isSelected={true}
     onSelect={[Function]}
   />
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
       Object {
@@ -218,7 +218,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     <span>
       Use Cellular Data
     </span>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 </label>
 `;
 
@@ -240,7 +240,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
       Yes! I would like to receive updates, special offers, and other information from AppNexus and its subsidiaries.
     </SwitchLabeled.Label>
   </Switch>
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
       Object {
@@ -257,7 +257,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     <span>
       Yes! I would like to receive updates, special offers, and other information from AppNexus and its subsidiaries.
     </span>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 </label>
 `;
 
@@ -275,7 +275,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     isSelected={false}
     onSelect={[Function]}
   />
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
       Object {
@@ -292,7 +292,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     <span>
       Just text
     </span>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 </label>
 `;
 
@@ -310,7 +310,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     isSelected={false}
     onSelect={[Function]}
   />
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
       Object {
@@ -329,7 +329,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
         HTML element
       </span>
     </span>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 </label>
 `;
 
@@ -347,7 +347,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     isSelected={false}
     onSelect={[Function]}
   />
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
       Object {
@@ -364,7 +364,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     <span>
       Text in an array
     </span>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 </label>
 `;
 
@@ -382,7 +382,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     isSelected={false}
     onSelect={[Function]}
   />
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
       Object {
@@ -401,7 +401,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
         HTML element in an array
       </span>
     </span>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 </label>
 `;
 
@@ -424,7 +424,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
       (default props)
     </SwitchLabeled.Label>
   </Switch>
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
       Object {
@@ -441,7 +441,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
     <span>
       (default props)
     </span>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 </label>
 `;
 
@@ -464,7 +464,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
       Disabled
     </SwitchLabeled.Label>
   </Switch>
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
       Object {
@@ -481,7 +481,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
     <span>
       Disabled
     </span>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 </label>
 `;
 
@@ -504,7 +504,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
       Selected
     </SwitchLabeled.Label>
   </Switch>
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
       Object {
@@ -521,7 +521,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
     <span>
       Selected
     </span>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 </label>
 `;
 
@@ -544,7 +544,7 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
       Disabled & selected
     </SwitchLabeled.Label>
   </Switch>
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     className="lucid-SwitchLabeled-text"
     style={
       Object {
@@ -561,6 +561,6 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
     <span>
       Disabled & selected
     </span>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 </label>
 `;

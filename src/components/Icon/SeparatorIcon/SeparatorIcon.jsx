@@ -24,10 +24,7 @@ const SeparatorIcon = createClass({
 	},
 
 	render() {
-		const {
-			className,
-			...passThroughs
-		} = this.props;
+		const { className, ...passThroughs } = this.props;
 
 		return (
 			<Icon
@@ -35,9 +32,7 @@ const SeparatorIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<polygon
-					points='4.5,8 1.5,0 0,0 3,8 0,16 1.5,16 4.5,8'
-				/>
+				<polygon points="4.5,8 1.5,0 0,0 3,8 0,16 1.5,16 4.5,8" />
 			</Icon>
 		);
 	},

@@ -1,11 +1,7 @@
 import assert from 'assert';
-import {
-	onResize,
-	onToggle,
-} from './Submarine.reducers';
+import { onResize, onToggle } from './Submarine.reducers';
 
 describe('Submarine reducers', () => {
-
 	const initialState = {
 		isExpanded: true,
 		height: 250,
@@ -13,13 +9,20 @@ describe('Submarine reducers', () => {
 
 	describe('onResize', () => {
 		it('should set the `height`', () => {
-			const nextState = onResize({
-				...initialState,
-				isExpanded: false,
-			}, 256);
+			const nextState = onResize(
+				{
+					...initialState,
+					isExpanded: false,
+				},
+				256
+			);
 
 			assert.equal(nextState.height, 256, 'must update the height');
-			assert.equal(nextState.isExpanded, true, 'must update isExpanded to true');
+			assert.equal(
+				nextState.isExpanded,
+				true,
+				'must update isExpanded to true'
+			);
 		});
 	});
 

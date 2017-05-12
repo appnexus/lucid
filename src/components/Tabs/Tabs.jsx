@@ -2,20 +2,18 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, findTypes, omitProps } from '../../util/component-types';
+import {
+	createClass,
+	getFirst,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './Tabs.reducers';
 
 const cx = lucidClassNames.bind('&-Tabs');
 
-const {
-	any,
-	bool,
-	func,
-	node,
-	number,
-	string,
-} = PropTypes;
+const { any, bool, func, node, number, string } = PropTypes;
 
 /**
  *
@@ -76,14 +74,7 @@ const Tab = createClass({
 	},
 
 	handleClick(event) {
-		const {
-			props,
-			props: {
-				index,
-				onSelect,
-				...passThroughs
-			},
-		} = this;
+		const { props, props: { index, onSelect, ...passThroughs } } = this;
 
 		if (!props.isDisabled) {
 			onSelect(index, passThroughs, event);
@@ -111,15 +102,29 @@ const Tab = createClass({
 				onClick={this.handleClick}
 			>
 				<span className={cx('&-Tab-content')}>{Title}</span>
-				{isProgressive && !isLastTab &&
-					<span className={cx('&-Tab-arrow')} >
-						<svg className={cx('&-Tab-arrow-svg')} viewBox='0 0 8 28'>
-							<polygon className={cx('&-Tab-arrow-background')} fill='#fff' points='0,0 8,14 0,28'/>
-							<polyline className={cx('&-Tab-arrow-tab-line')} fill='#fff' points='0,0 1,1 0,1'/>
-							<polyline className={cx('&-Tab-arrow-line')} fill='none' stroke='#fff' strokeWidth='1' points='0,28 7.9,14 0,0'/>
+				{isProgressive &&
+					!isLastTab &&
+					<span className={cx('&-Tab-arrow')}>
+						<svg className={cx('&-Tab-arrow-svg')} viewBox="0 0 8 28">
+							<polygon
+								className={cx('&-Tab-arrow-background')}
+								fill="#fff"
+								points="0,0 8,14 0,28"
+							/>
+							<polyline
+								className={cx('&-Tab-arrow-tab-line')}
+								fill="#fff"
+								points="0,0 1,1 0,1"
+							/>
+							<polyline
+								className={cx('&-Tab-arrow-line')}
+								fill="none"
+								stroke="#fff"
+								strokeWidth="1"
+								points="0,28 7.9,14 0,0"
+							/>
 						</svg>
-					</span>
-				}
+					</span>}
 			</li>
 		);
 	},
@@ -205,9 +210,7 @@ const Tabs = createClass({
 	},
 
 	handleClicked(index, tabProps, event) {
-		const {
-			onSelect,
-		} = this.props;
+		const { onSelect } = this.props;
 
 		onSelect(index, { event, props: tabProps });
 	},
@@ -234,13 +237,12 @@ const Tabs = createClass({
 			: selectedIndex;
 
 		return (
-			<div
-				{...omitProps(passThroughs, Tabs)}
-				className={cx('&', className)}
-			>
-				<ul className={cx('&-bar', {
-					'&-bar-is-multiline': hasMultilineTitle,
-				})}>
+			<div {...omitProps(passThroughs, Tabs)} className={cx('&', className)}>
+				<ul
+					className={cx('&-bar', {
+						'&-bar-is-multiline': hasMultilineTitle,
+					})}
+				>
 					{_.map(tabChildProps, (tabProps, index) => (
 						<Tab
 							key={index}
@@ -250,7 +252,11 @@ const Tabs = createClass({
 							isProgressive={isProgressive}
 							isSelected={index === actualSelectedIndex}
 							onSelect={this.handleClicked}
-							Title={_.get(getFirst(tabProps, Tabs.Title), 'props.children', '')}
+							Title={_.get(
+								getFirst(tabProps, Tabs.Title),
+								'props.children',
+								''
+							)}
 							{...tabProps}
 						/>
 					))}

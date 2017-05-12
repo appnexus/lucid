@@ -1,3 +1,6 @@
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
 .lucid-DateSelect {
 	display: flex;
 	align-items: center;
@@ -6,6 +9,10 @@
 	&-InfiniteSlidePanel {
 		flex: 1;
 		height: 100%;
+	}
+
+	.lucid-DateSelect-chevron {
+		user-select: none;
 	}
 
 	.lucid-DateSelect-slide {
@@ -44,4 +51,3 @@
 		}
 	}
 }
-

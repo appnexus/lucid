@@ -14,44 +14,47 @@ describe('Validation', () => {
 	describe('render', () => {
 		it('should render children', () => {
 			const content = <div>foo</div>;
-			const wrapper = shallow(
-				<Validation>{content}</Validation>
-			);
+			const wrapper = shallow(<Validation>{content}</Validation>);
 			assert(wrapper.children().first().equals(content));
 		});
 	});
 
 	describe('props', () => {
-
 		describe('Error', () => {
-
 			let wrapper;
 
-			beforeEach(() => wrapper = shallow(
-				<Validation Error='error'>
-					<div>foo</div>
-				</Validation>
-			));
+			beforeEach(
+				() =>
+					wrapper = shallow(
+						<Validation Error="error">
+							<div>foo</div>
+						</Validation>
+					)
+			);
 
 			it('should add error class', () => {
 				assert(wrapper.hasClass('lucid-Validation-is-error'));
 			});
 
 			it('should add error content', () => {
-				assert.equal(wrapper.find('.lucid-Validation-error-content').text(), 'error');
+				assert.equal(
+					wrapper.find('.lucid-Validation-error-content').text(),
+					'error'
+				);
 			});
-
 		});
 
 		describe('null Error', () => {
-
 			let wrapper;
 
-			beforeEach(() => wrapper = shallow(
-				<Validation Error={null}>
-					<div>foo</div>
-				</Validation>
-			));
+			beforeEach(
+				() =>
+					wrapper = shallow(
+						<Validation Error={null}>
+							<div>foo</div>
+						</Validation>
+					)
+			);
 
 			it('should not add error class', () => {
 				assert(!wrapper.hasClass('lucid-Validation-is-error'));
@@ -60,7 +63,6 @@ describe('Validation', () => {
 			it('should not add error content', () => {
 				assert.equal(wrapper.find('.lucid-Validation-error-content').length, 0);
 			});
-
 		});
 
 		describe('child components', () => {
@@ -73,11 +75,12 @@ describe('Validation', () => {
 						</Validation>
 					);
 
-					assert.equal(wrapper.find('.lucid-Validation-error-content').text(), 'foo');
+					assert.equal(
+						wrapper.find('.lucid-Validation-error-content').text(),
+						'foo'
+					);
 				});
 			});
 		});
-
 	});
-
 });

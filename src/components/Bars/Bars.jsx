@@ -2,10 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	extractFields,
-	stackByFields,
-} from '../../util/chart-helpers';
+import { extractFields, stackByFields } from '../../util/chart-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
 import * as chartConstants from '../../constants/charts';
@@ -16,14 +13,7 @@ import Legend from '../Legend/Legend';
 
 const cx = lucidClassNames.bind('&-Bars');
 
-const {
-	arrayOf,
-	func,
-	number,
-	object,
-	bool,
-	string,
-} = PropTypes;
+const { arrayOf, func, number, object, bool, string } = PropTypes;
 
 /**
  * {"categories": ["visualizations", "chart primitives"], "madeFrom": ["Bar", "ToolTip", "Legend"]}
@@ -97,7 +87,6 @@ const Bars = createClass({
 		 */
 		colorMap: object,
 
-
 		/**
 		 * The scale for the x axis. Must be a d3 band scale. Lucid exposes the
 		 * `lucid.d3Scale.scaleBand` library for use here.
@@ -164,7 +153,8 @@ const Bars = createClass({
 			xFormatter: _.identity,
 			yFields: ['y'],
 			yFormatter: _.identity,
-			yTooltipFormatter: (yField, yValueFormatted) => `${yField}: ${yValueFormatted}`,
+			yTooltipFormatter: (yField, yValueFormatted) =>
+				`${yField}: ${yValueFormatted}`,
 			isStacked: false,
 			colorOffset: 0,
 			palette: chartConstants.PALETTE_6,
@@ -198,13 +188,11 @@ const Bars = createClass({
 			...passThroughs
 		} = this.props;
 
-		const {
-			isHovering,
-			hoveringSeriesIndex,
-		} = this.state;
+		const { isHovering, hoveringSeriesIndex } = this.state;
 
 		// This scale is used for grouped bars
-		const innerXScale = d3Scale.scaleBand()
+		const innerXScale = d3Scale
+			.scaleBand()
 			.domain(_.times(yFields.length))
 			.range([0, xScale.bandwidth()])
 			.round(true);
@@ -223,82 +211,90 @@ const Bars = createClass({
 		if (isStacked) {
 			yScale.domain([
 				yScale.domain()[0],
-				yStackedMax || _.max(_.map(transformedData, (x) => _.last(_.last(x)))),
+				yStackedMax || _.max(_.map(transformedData, x => _.last(_.last(x)))),
 			]);
 		}
 
 		return (
-			<g
-				{...omitProps(passThroughs, Bars)}
-				className={cx(className, '&')}
-			>
+			<g {...omitProps(passThroughs, Bars)} className={cx(className, '&')}>
 				{_.map(transformedData, (series, seriesIndex) => (
 					<g key={seriesIndex}>
 						{_.map(series, ([start, end], pointsIndex) => (
 							<Bar
 								key={pointsIndex}
-								x={isStacked
-									? xScale(data[seriesIndex][xField])
-									: innerXScale(pointsIndex) + xScale(data[seriesIndex][xField])
+								x={
+									isStacked
+										? xScale(data[seriesIndex][xField])
+										: innerXScale(pointsIndex) +
+												xScale(data[seriesIndex][xField])
 								}
 								y={yScale(end)}
 								height={yScale(start) - yScale(end)}
-								width={isStacked ? xScale.bandwidth() : innerXScale.bandwidth() }
-								color={_.get(colorMap, yFields[pointsIndex], palette[(pointsIndex + colorOffset) % palette.length])}
+								width={isStacked ? xScale.bandwidth() : innerXScale.bandwidth()}
+								color={_.get(
+									colorMap,
+									yFields[pointsIndex],
+									palette[(pointsIndex + colorOffset) % palette.length]
+								)}
 							/>
 						))}
 
-						{hasToolTips ?
-							<ToolTip
-								isExpanded={isHovering && hoveringSeriesIndex === seriesIndex}
-								flyOutMaxWidth='none'
-							>
-								<ToolTip.Target elementType='g'>
-									<rect
-										className={cx('&-tooltip-hover-zone')}
-										height={isStacked
-											? yScale.range()[0] - yScale(_.last(series)[1])
-											: yScale.range()[0] - yScale(_.max(_.flatten(series)))
-										}
-										width={xScale.bandwidth()}
-										x={xScale(data[seriesIndex][xField])}
-										y={yScale(_.max(_.flatten(series)))}
-										onMouseOver={() => {
-											this.setState({
-												isHovering: true,
-												hoveringSeriesIndex: seriesIndex,
-											});
-										}}
-										onMouseOut={() => {
-											this.setState({ isHovering: false });
-										}}
-									/>
-								</ToolTip.Target>
+						{hasToolTips
+							? <ToolTip
+									isExpanded={isHovering && hoveringSeriesIndex === seriesIndex}
+									flyOutMaxWidth="none"
+								>
+									<ToolTip.Target elementType="g">
+										<rect
+											className={cx('&-tooltip-hover-zone')}
+											height={
+												isStacked
+													? yScale.range()[0] - yScale(_.last(series)[1])
+													: yScale.range()[0] - yScale(_.max(_.flatten(series)))
+											}
+											width={xScale.bandwidth()}
+											x={xScale(data[seriesIndex][xField])}
+											y={yScale(_.max(_.flatten(series)))}
+											onMouseOver={() => {
+												this.setState({
+													isHovering: true,
+													hoveringSeriesIndex: seriesIndex,
+												});
+											}}
+											onMouseOut={() => {
+												this.setState({ isHovering: false });
+											}}
+										/>
+									</ToolTip.Target>
 
-								<ToolTip.Title>
-									{xFormatter(data[seriesIndex][xField])}
-								</ToolTip.Title>
+									<ToolTip.Title>
+										{xFormatter(data[seriesIndex][xField])}
+									</ToolTip.Title>
 
-								<ToolTip.Body>
-									<Legend hasBorders={false} isReversed={isStacked}>
-										{_.map(yFields, (field, fieldIndex) => (
-											<Legend.Item
-												key={fieldIndex}
-												hasPoint={true}
-												pointKind={1}
-												color={_.get(colorMap, field, palette[(fieldIndex + colorOffset) % palette.length])}
-											>
-												{
-													yTooltipFormatter(_.get(legend, field, field),
-													yFormatter(data[seriesIndex][field]),
-													data[seriesIndex][field])
-												}
-											</Legend.Item>
-										))}
-									</Legend>
-								</ToolTip.Body>
-							</ToolTip>
-						: null}
+									<ToolTip.Body>
+										<Legend hasBorders={false} isReversed={isStacked}>
+											{_.map(yFields, (field, fieldIndex) => (
+												<Legend.Item
+													key={fieldIndex}
+													hasPoint={true}
+													pointKind={1}
+													color={_.get(
+														colorMap,
+														field,
+														palette[(fieldIndex + colorOffset) % palette.length]
+													)}
+												>
+													{yTooltipFormatter(
+														_.get(legend, field, field),
+														yFormatter(data[seriesIndex][field]),
+														data[seriesIndex][field]
+													)}
+												</Legend.Item>
+											))}
+										</Legend>
+									</ToolTip.Body>
+								</ToolTip>
+							: null}
 					</g>
 				))}
 			</g>
