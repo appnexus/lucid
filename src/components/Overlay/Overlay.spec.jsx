@@ -44,6 +44,17 @@ describe('Overlay', () => {
 });
 
 describe('Overlay', () => {
+	let testDOMNode;
+
+	beforeEach(() => {
+		testDOMNode = document.createElement('div');
+		document.body.appendChild(testDOMNode);
+	});
+
+	afterEach(() => {
+		testDOMNode.parentNode.removeChild(testDOMNode);
+	});
+
 	it('should fire onBackgroundClick', () => {
 		const onBackgroundClick = sinon.spy();
 		const wrapper = mount(
@@ -52,7 +63,10 @@ describe('Overlay', () => {
 				isModal={false}
 				onBackgroundClick={onBackgroundClick}
 				portalId={'brolo'}
-			/>
+			/>,
+			{
+				attachTo: testDOMNode,
+			}
 		);
 
 		const event = document.createEvent('MouseEvents');
@@ -90,7 +104,10 @@ describe('Overlay', () => {
 				portalId={'regiewat'}
 			>
 				<div id="foo">Nope</div>
-			</Overlay>
+			</Overlay>,
+			{
+				attachTo: testDOMNode,
+			}
 		);
 
 		const event = document.createEvent('MouseEvents');
@@ -120,7 +137,9 @@ describe('Overlay', () => {
 
 	it('should fire the onEscape handler when escape is typed', () => {
 		const onEscape = sinon.spy();
-		const wrapper = mount(<Overlay isShown={true} onEscape={onEscape} />);
+		const wrapper = mount(<Overlay isShown={true} onEscape={onEscape} />, {
+			attachTo: testDOMNode,
+		});
 
 		const event = document.createEvent('Event');
 		event.initEvent('keydown', true, true);

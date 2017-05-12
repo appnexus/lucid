@@ -15,7 +15,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 1.expand
         direction="up"
       />
     </span>
-    <ReactCSSTransitionGroup
+    <CSSTransitionGroup
       className="lucid-Expander-text"
       transitionAppear={false}
       transitionEnter={true}
@@ -27,7 +27,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 1.expand
       <span>
         Show Less
       </span>
-    </ReactCSSTransitionGroup>
+    </CSSTransitionGroup>
   </header>
   <Collapsible
     className="lucid-Expander-content"
@@ -62,7 +62,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 2.intera
         direction="down"
       />
     </span>
-    <ReactCSSTransitionGroup
+    <CSSTransitionGroup
       className="lucid-Expander-text"
       transitionAppear={false}
       transitionEnter={true}
@@ -74,7 +74,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 2.intera
       <span>
         Show More
       </span>
-    </ReactCSSTransitionGroup>
+    </CSSTransitionGroup>
   </header>
   <Collapsible
     className="lucid-Expander-content"
@@ -124,7 +124,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 3.intera
         direction="down"
       />
     </span>
-    <ReactCSSTransitionGroup
+    <CSSTransitionGroup
       className="lucid-Expander-text"
       transitionAppear={false}
       transitionEnter={true}
@@ -136,7 +136,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 3.intera
       <span>
         Show Stuff
       </span>
-    </ReactCSSTransitionGroup>
+    </CSSTransitionGroup>
   </header>
   <Collapsible
     className="lucid-Expander-content"
@@ -186,7 +186,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.highli
         direction="up"
       />
     </span>
-    <ReactCSSTransitionGroup
+    <CSSTransitionGroup
       className="lucid-Expander-text"
       transitionAppear={false}
       transitionEnter={true}
@@ -198,7 +198,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.highli
       <span>
         Show Less
       </span>
-    </ReactCSSTransitionGroup>
+    </CSSTransitionGroup>
   </header>
   <Collapsible
     className="lucid-Expander-content"
@@ -233,7 +233,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 5.highli
         direction="down"
       />
     </span>
-    <ReactCSSTransitionGroup
+    <CSSTransitionGroup
       className="lucid-Expander-text"
       transitionAppear={false}
       transitionEnter={true}
@@ -245,7 +245,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 5.highli
       <span>
         Show More
       </span>
-    </ReactCSSTransitionGroup>
+    </CSSTransitionGroup>
   </header>
   <Collapsible
     className="lucid-Expander-content"
@@ -295,7 +295,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 6.highli
         direction="down"
       />
     </span>
-    <ReactCSSTransitionGroup
+    <CSSTransitionGroup
       className="lucid-Expander-text"
       transitionAppear={false}
       transitionEnter={true}
@@ -307,7 +307,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 6.highli
       <span>
         Show Stuff
       </span>
-    </ReactCSSTransitionGroup>
+    </CSSTransitionGroup>
   </header>
   <Collapsible
     className="lucid-Expander-content"

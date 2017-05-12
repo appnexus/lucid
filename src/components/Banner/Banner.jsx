@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 import DangerIcon from '../Icon/DangerIcon/DangerIcon';
@@ -123,7 +123,7 @@ const Banner = createClass({
 		}
 
 		return (
-			<ReactCSSTransitionGroup
+			<ReactTransitionGroup
 				transitionName={cx('&')}
 				transitionEnterTimeout={300}
 				transitionLeaveTimeout={300}
@@ -162,7 +162,7 @@ const Banner = createClass({
 								: null}
 						</section>
 					: null}
-			</ReactCSSTransitionGroup>
+			</ReactTransitionGroup>
 		);
 	},
 });

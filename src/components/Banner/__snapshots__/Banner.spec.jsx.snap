@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Banner [common] example testing should match snapshot(s) for stateful 1`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -24,11 +24,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateful 1
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 1`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -51,11 +51,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 2`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -78,11 +78,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 3`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -100,11 +100,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 4`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -127,11 +127,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 5`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -149,11 +149,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 6`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -176,11 +176,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 7`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -198,11 +198,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 8`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -225,11 +225,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 9`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -247,11 +247,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 10`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -274,11 +274,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 11`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -296,11 +296,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 12`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -328,11 +328,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 13`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -355,11 +355,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 14`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -387,11 +387,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 15`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -417,11 +417,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       -- small
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 16`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -444,11 +444,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 17`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -466,11 +466,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 18`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -506,11 +506,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 19`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -533,11 +533,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 20`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -555,11 +555,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 21`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -587,11 +587,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 22`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -613,11 +613,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       Warning -- has iconv
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 23`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -640,11 +640,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 24`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -662,11 +662,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 25`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -694,11 +694,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 26`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -722,11 +722,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 27`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -749,11 +749,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 28`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -771,11 +771,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 29`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -803,11 +803,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 30`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -830,11 +830,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 31`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -857,11 +857,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 32`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -879,11 +879,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 33`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -911,11 +911,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 34`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -939,11 +939,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 35`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -966,11 +966,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 36`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -988,11 +988,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 37`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -1022,11 +1022,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 38`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -1051,11 +1051,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 39`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -1078,11 +1078,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 40`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -1100,11 +1100,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 41`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -1134,11 +1134,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 42`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -1163,11 +1163,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 43`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -1195,11 +1195,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 44`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -1233,11 +1233,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
 
 exports[`Banner [common] example testing should match snapshot(s) for stateless 45`] = `
-<ReactCSSTransitionGroup
+<CSSTransitionGroup
   transitionAppear={false}
   transitionEnter={true}
   transitionEnterTimeout={300}
@@ -1274,5 +1274,5 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       ×
     </span>
   </section>
-</ReactCSSTransitionGroup>
+</CSSTransitionGroup>
 `;
