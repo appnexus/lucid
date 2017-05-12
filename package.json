@@ -95,7 +95,7 @@
     "prettier": "^1.1.0",
     "raw-loader": "^0.5.1",
     "react": "^15.3.2",
-    "react-addons-css-transition-group": "^15.3.2",
+    "react-transition-group": "1.1.1",
     "react-addons-test-utils": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-router": "^2.0.0",
@@ -106,7 +106,6 @@
   },
   "peerDependencies": {
     "react": "^15.0.2",
-    "react-addons-css-transition-group": "^15.0.2",
     "react-dom": "^15.0.2"
   },
   "jest": {

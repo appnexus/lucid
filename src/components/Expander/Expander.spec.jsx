@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import assert from 'assert';
 import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
@@ -87,7 +87,7 @@ describe('Expander', () => {
 			it('renders the value in the header in a `SPAN` element neighboring its `ChevronIcon` instance.', () => {
 				assert.equal(
 					shallow(<Expander Label="foo" />)
-						.find(ReactCSSTransitionGroup)
+						.find(ReactTransitionGroup)
 						.find('span')
 						.prop('children'),
 					'foo'
@@ -104,7 +104,7 @@ describe('Expander', () => {
 				);
 
 				assert.equal(
-					wrapper.find(ReactCSSTransitionGroup).find('span').prop('children'),
+					wrapper.find(ReactTransitionGroup).find('span').prop('children'),
 					'foo'
 				);
 			});

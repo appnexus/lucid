@@ -64,7 +64,7 @@ exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.
     yAxisTitleColor="#000"
     yAxisTooltipFormatter={[Function]}
   />
-  <ReactCSSTransitionGroup
+  <CSSTransitionGroup
     transitionAppear={false}
     transitionEnter={true}
     transitionEnterTimeout={300}
@@ -79,6 +79,6 @@ exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.
         Message Goes Here
       </div>
     </div>
-  </ReactCSSTransitionGroup>
+  </CSSTransitionGroup>
 </div>
 `;
