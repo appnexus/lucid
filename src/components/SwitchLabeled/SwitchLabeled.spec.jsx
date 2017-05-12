@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import assert from 'assert';
 import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { mount, shallow } from 'enzyme';
 
 import { common } from '../../util/generic-tests';
@@ -61,7 +61,7 @@ describe('SwitchLabeled', () => {
 				const wrapper = shallow(<SwitchLabeled Label={'foo'} />);
 
 				assert.equal(
-					wrapper.find(ReactCSSTransitionGroup).find('span').prop('children'),
+					wrapper.find(ReactTransitionGroup).find('span').prop('children'),
 					'foo'
 				);
 			});
@@ -76,7 +76,7 @@ describe('SwitchLabeled', () => {
 				);
 
 				assert.equal(
-					wrapper.find(ReactCSSTransitionGroup).find('span').prop('children'),
+					wrapper.find(ReactTransitionGroup).find('span').prop('children'),
 					'foo'
 				);
 			});

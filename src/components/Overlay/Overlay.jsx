@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Portal from '../Portal/Portal';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
@@ -107,7 +108,7 @@ const Overlay = createClass({
 
 	handleDivRef(divDOMNode) {
 		// Store the dom node so we can check if it's clicked on later
-		this._divDOMNode = divDOMNode;
+		this._divDOMNode = ReactDOM.findDOMNode(divDOMNode);
 	},
 
 	handleBackgroundClick(event) {
@@ -131,7 +132,7 @@ const Overlay = createClass({
 
 		return (
 			<Portal portalId={portalId}>
-				<ReactCSSTransitionGroup
+				<ReactTransitionGroup
 					transitionName={cx('&')}
 					transitionEnterTimeout={300}
 					transitionLeaveTimeout={300}
@@ -148,7 +149,7 @@ const Overlay = createClass({
 								{children}
 							</div>
 						: null}
-				</ReactCSSTransitionGroup>
+				</ReactTransitionGroup>
 			</Portal>
 		);
 	},

@@ -8,7 +8,7 @@ import {
 	rejectTypes,
 	omitProps,
 } from '../../util/component-types';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
 const cx = lucidClassNames.bind('&-OverlayWrapper');
 
@@ -97,7 +97,7 @@ const OverlayWrapper = createClass({
 				className={cx('&', className)}
 			>
 				{otherChildren}
-				<ReactCSSTransitionGroup
+				<ReactTransitionGroup
 					transitionName={cx('&-message-container')}
 					transitionEnterTimeout={300}
 					transitionLeaveTimeout={300}
@@ -111,7 +111,7 @@ const OverlayWrapper = createClass({
 						>
 							<div {...messageElementProp} />
 						</div>}
-				</ReactCSSTransitionGroup>
+				</ReactTransitionGroup>
 			</div>
 		);
 	},
