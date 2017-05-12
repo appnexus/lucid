@@ -64,6 +64,8 @@
 		.bold();
 		border-color: @featured-color-primary-borderColor;
 		color: @color-white;
+
+		.lucid-Icon { fill: @color-white; }
 	}
 	&&-success {
 		.gradient-animation(@featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
@@ -71,6 +73,8 @@
 		.bold();
 		color: @color-white;
 		border-color: @featured-color-success-borderColor;
+
+		.lucid-Icon { fill: @color-white; }
 	}
 	&&-info {
 		.gradient-animation(@featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
@@ -78,6 +82,8 @@
 		.bold();
 		border-color: @featured-color-info-borderColor;
 		color: @color-white;
+
+		.lucid-Icon { fill: @color-white; }
 	}
 	&&-warning {
 		.gradient-animation(@featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
@@ -85,6 +91,8 @@
 		.bold();
 		border-color: @featured-color-warning-borderColor;
 		color: @color-white;
+
+		.lucid-Icon { fill: @color-white; }
 	}
 	&&-danger {
 		.gradient-animation(@featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
@@ -92,6 +100,8 @@
 		.bold();
 		border-color: @featured-color-danger-borderColor;
 		color: @color-white;
+
+		.lucid-Icon { fill: @color-white; }
 	}
 	&&-link {
 		.gradient-reset();
@@ -192,11 +202,6 @@
 		.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
 		.opacity();
 		.no-cursor();
-	}
-
-	// Nested Icon's
-	.lucid-Icon {
-		fill: @color-darkGray;
 	}
 
 	// Also needed in some cases to beat other libraries (e.g. pure.css)
