@@ -47,6 +47,7 @@
     "prop-types": "^15.5.6",
     "react-day-picker": "^5.0.0",
     "react-motion": "^0.4.3",
+    "react-transition-group": "1.1.1",
     "reselect": "^2.5.1"
   },
   "devDependencies": {
@@ -98,7 +99,6 @@
     "react-addons-test-utils": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-router": "^2.0.0",
-    "react-transition-group": "1.1.1",
     "sinon": "^2.0.0-pre",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.12",
