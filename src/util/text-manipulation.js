@@ -8,7 +8,11 @@ export function partitionText(text, pattern, length) {
 	} else if (index === 0) {
 		return ['', text.substr(0, length), text.substring(length)];
 	} else {
-		return [text.substring(0, index), text.substr(index, length), text.substring(index + length)];
+		return [
+			text.substring(0, index),
+			text.substr(index, length),
+			text.substring(index + length),
+		];
 	}
 }
 
@@ -22,9 +26,12 @@ export function getCombinedChildText(node) {
 	}
 
 	return node.children
-		.filter((child) => !_.isString(child))
-		.map((child) => getCombinedChildText(child.props))
-		.reduce(((combinedText, childText) => combinedText + childText), _.find(node.children, _.isString) || '');
+		.filter(child => !_.isString(child))
+		.map(child => getCombinedChildText(child.props))
+		.reduce(
+			(combinedText, childText) => combinedText + childText,
+			_.find(node.children, _.isString) || ''
+		);
 }
 
 export function propsSearch(text, node) {

@@ -52,28 +52,28 @@ describe('SplitButton', () => {
 
 		describe('secondary buttons', () => {
 			it('should call the click handler for the second button when it is selected', () => {
-				wrapper.simulate('select', 0, {event: {}});
+				wrapper.simulate('select', 0, { event: {} });
 
 				expect(handleClick).not.toBeCalled();
 				expect(handleOtherClick.mock.calls[0][0]).toMatchSnapshot();
 			});
 
 			it('should call the click handler for the third button when it is selected', () => {
-				wrapper.simulate('select', 1, {event: {}});
+				wrapper.simulate('select', 1, { event: {} });
 
 				expect(handleClick).not.toBeCalled();
 				expect(handleOtherClick.mock.calls[0][0]).toMatchSnapshot();
 			});
 
 			it('should not trigger a handler for a button without an `onClick`', () => {
-				wrapper.simulate('select', 2, {event: {}});
+				wrapper.simulate('select', 2, { event: {} });
 
 				expect(handleClick).not.toBeCalled();
 				expect(handleOtherClick).not.toBeCalled();
 			});
 
 			it('should not call the click handler for the second button when an invalid index is selected', () => {
-				wrapper.simulate('select', 3, {event: {}});
+				wrapper.simulate('select', 3, { event: {} });
 
 				expect(handleClick).not.toBeCalled();
 				expect(handleOtherClick).not.toBeCalled();

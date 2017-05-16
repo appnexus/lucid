@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import { createSelector } from 'reselect';
-import { reduceSelectors } from './state-management.js';
+import { reduceSelectors, safeMerge } from './state-management.js';
 import { logger, isDevMode } from './logger.js';
 
 /**
@@ -37,7 +37,6 @@ export function getReduxPrimitives({
 	rootSelector = _.identity,
 	selectors,
 }) {
-
 	/* istanbul ignore if */
 	if (isDevMode && _.isEmpty(rootPath)) {
 		logger.warn(
@@ -61,13 +60,14 @@ Components should have an \`initialState\` property or a \`getDefaultProps\` def
 
 	const reducer = createReduxReducer(reducers, initialState, rootPath);
 	const selector = selectors ? reduceSelectors(selectors) : _.identity;
-	const rootPathSelector = (state) => (_.isEmpty(rootPath) ? state : _.get(state, rootPath));
-	const mapStateToProps = createSelector(
-		[rootPathSelector],
-		(rootState) => rootSelector(selector(rootState))
+	const rootPathSelector = state =>
+		(_.isEmpty(rootPath) ? state : _.get(state, rootPath));
+	const mapStateToProps = createSelector([rootPathSelector], rootState =>
+		rootSelector(selector(rootState))
 	);
-	const mapDispatchToProps = (dispatch) => getDispatchTree(reducers, rootPath, dispatch);
-	const devModeMapStateToProps = (rootState) => {
+	const mapDispatchToProps = dispatch =>
+		getDispatchTree(reducers, rootPath, dispatch);
+	const devModeMapStateToProps = rootState => {
 		/* istanbul ignore if */
 		if (isDevMode && !_.has(rootState, rootPath)) {
 			logger.warn(
@@ -103,14 +103,23 @@ Make sure your \`rootPath\` is correct.
 				return function thunkInner(dispatch, getState, ...rest) {
 					const pathToLocalDispatchTree = _.slice(path, rootPath.length, -1);
 					const pathToLocalState = _.dropRight(path);
-					const localDispatchTree = _.isEmpty(pathToLocalDispatchTree) ? dispatchTree : _.get(dispatchTree, pathToLocalDispatchTree);
-					const getLocalState = _.isEmpty(pathToLocalState) ? getState : () => _.get(getState(), pathToLocalState);
-					return node(...args)(localDispatchTree, getLocalState, dispatch, getState, ...rest);
+					const localDispatchTree = _.isEmpty(pathToLocalDispatchTree)
+						? dispatchTree
+						: _.get(dispatchTree, pathToLocalDispatchTree);
+					const getLocalState = _.isEmpty(pathToLocalState)
+						? getState
+						: () => _.get(getState(), pathToLocalState);
+					return node(...args)(
+						localDispatchTree,
+						getLocalState,
+						dispatch,
+						getState,
+						...rest
+					);
 				};
 			};
 		}
 		return function actionCreator(...args) {
-
 			const [payload, ...meta] = isDevMode ? cleanArgs(args) : args;
 
 			return {
@@ -130,15 +139,19 @@ Make sure your \`rootPath\` is correct.
 	 * @returns {Object} action creator tree
 	 */
 	function createActionCreatorTree(reducers, rootPath, path = rootPath) {
-		return _.reduce(reducers, (memo, node, key) => {
-			const currentPath = path.concat(key);
-			return {
-				...memo,
-				[key]: _.isFunction(node) ?
-					createActionCreator(node, rootPath, currentPath) :
-					createActionCreatorTree(node, rootPath, currentPath),
-			};
-		}, {});
+		return _.reduce(
+			reducers,
+			(memo, node, key) => {
+				const currentPath = path.concat(key);
+				return {
+					...memo,
+					[key]: _.isFunction(node)
+						? createActionCreator(node, rootPath, currentPath)
+						: createActionCreatorTree(node, rootPath, currentPath),
+				};
+			},
+			{}
+		);
 	}
 
 	/**
@@ -162,7 +175,6 @@ Make sure your \`rootPath\` is correct.
 		}
 		return dispatchTree;
 	}
-
 }
 
 /**
@@ -175,25 +187,29 @@ Make sure your \`rootPath\` is correct.
  * @return {Object} redux reducer tree
  */
 function createReduxReducerTree(reducers, path = []) {
-	return _.reduce(reducers, (memo, node, key) => {
-		// filter out thunks from the reducer tree
-		if (node.isThunk) {
-			return memo;
-		}
-		const currentPath = path.concat(key);
-		return {
-			...memo,
-			[key]: _.isFunction(node) ?
-				function reduxReducer(state, action) {
-					const { type, payload, meta = [] } = action;
-					if (_.isUndefined(state) || type !== currentPath.join('.')) {
-						return state;
-					}
-					return node(state, payload, ...meta);
-				} :
-				createReduxReducerTree(node, currentPath),
-		};
-	}, {});
+	return _.reduce(
+		reducers,
+		(memo, node, key) => {
+			// filter out thunks from the reducer tree
+			if (node.isThunk) {
+				return memo;
+			}
+			const currentPath = path.concat(key);
+			return {
+				...memo,
+				[key]: _.isFunction(node)
+					? function reduxReducer(state, action) {
+							const { type, payload, meta = [] } = action;
+							if (_.isUndefined(state) || type !== currentPath.join('.')) {
+								return state;
+							}
+							return node(state, payload, ...meta);
+						}
+					: createReduxReducerTree(node, currentPath),
+			};
+		},
+		{}
+	);
 }
 
 /**
@@ -209,14 +225,20 @@ function createReducerFromReducerTree(reduxReducerTree, initialState) {
 		if (_.isUndefined(state)) {
 			return initialState;
 		}
-		return _.reduce(reduxReducerTree, (state, node, key) => {
-			return {
-				...state,
-				..._.isFunction(node) ? node(state, action) : {
-					[key]: createReducerFromReducerTree(node)(state[key], action),
-				},
-			};
-		}, state);
+		return _.reduce(
+			reduxReducerTree,
+			(state, node, key) => {
+				return {
+					...state,
+					...(_.isFunction(node)
+						? node(state, action)
+						: {
+								[key]: createReducerFromReducerTree(node)(state[key], action),
+							}),
+				};
+			},
+			state
+		);
 	};
 }
 
@@ -243,13 +265,19 @@ function createReduxReducer(reducers, initialState, rootPath) {
  * @param {string[]} path - array of strings representing the path to the action creator
  */
 function bindActionCreatorTree(actionCreatorTree, dispatch, path = []) {
-	return _.reduce(actionCreatorTree, (memo, node, key) => ({
-		...memo,
-		[key]: _.isFunction(node) ? function boundActionCreator(...args) {
-			const action = actionCreatorTree[key](...args);
-			return dispatch(action);
-		} : bindActionCreatorTree(node, dispatch, path.concat(key)),
-	}), {});
+	return _.reduce(
+		actionCreatorTree,
+		(memo, node, key) => ({
+			...memo,
+			[key]: _.isFunction(node)
+				? function boundActionCreator(...args) {
+						const action = actionCreatorTree[key](...args);
+						return dispatch(action);
+					}
+				: bindActionCreatorTree(node, dispatch, path.concat(key)),
+		}),
+		{}
+	);
 }
 
 /**
@@ -261,12 +289,10 @@ function bindActionCreatorTree(actionCreatorTree, dispatch, path = []) {
  * @param {Object} ownProps
  * @return {Object}
  */
-function mergeProps(state, dispatchTree, ownProps) {
-	return _.merge({}, state, dispatchTree, ownProps);
-}
+const mergeProps = _.memoize((state, dispatchTree, ownProps) => {
+	return _.mergeWith({}, state, dispatchTree, ownProps, safeMerge);
+});
 
 export function cleanArgs(args) {
-	return _.has(_.last(args), 'event')
-		? _.dropRight(args)
-		: args;
+	return _.has(_.last(args), 'event') ? _.dropRight(args) : args;
 }

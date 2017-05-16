@@ -11,9 +11,7 @@ import assert from 'assert';
 import LineChart from './LineChart';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
-const {
-  EmptyStateWrapper: { Title, Body },
-} = LineChart;
+const { EmptyStateWrapper: { Title, Body } } = LineChart;
 
 describe('LineChart', () => {
 	let wrapper;
@@ -36,8 +34,8 @@ describe('LineChart', () => {
 		],
 		getDefaultProps: () => ({
 			data: [
-				{x: new Date('2015-01-01T00:00:00Z'), y: 1},
-				{x: new Date('2015-01-01T00:00:00Z'), y: 2},
+				{ x: new Date('2015-01-01T00:00:00Z'), y: 1 },
+				{ x: new Date('2015-01-01T00:00:00Z'), y: 2 },
 			],
 		}),
 	});
@@ -45,11 +43,11 @@ describe('LineChart', () => {
 	describe('props', () => {
 		describe('isLoading', () => {
 			it('should show a `LoadingIndicator` if `isLoading`', () => {
-				wrapper = mount(
-					<LineChart isLoading />
-				);
+				wrapper = mount(<LineChart isLoading />);
 
-				const loadingIndicatorWrapper = wrapper.find(EmptyStateWrapper).find('LoadingIndicator');
+				const loadingIndicatorWrapper = wrapper
+					.find(EmptyStateWrapper)
+					.find('LoadingIndicator');
 
 				assert(loadingIndicatorWrapper.prop('isLoading'));
 			});
@@ -63,7 +61,7 @@ describe('LineChart', () => {
 				wrapper = mount(
 					<LineChart>
 						<EmptyStateWrapper>
-								<Title>{titleText}</Title>
+							<Title>{titleText}</Title>
 						</EmptyStateWrapper>
 					</LineChart>
 				);
@@ -72,13 +70,19 @@ describe('LineChart', () => {
 					.find(EmptyStateWrapper)
 					.find('.lucid-EmptyStateWrapper-message-title');
 
-				assert.equal(messageTitleWrapper.text(), titleText, 'must contain the title text');
+				assert.equal(
+					messageTitleWrapper.text(),
+					titleText,
+					'must contain the title text'
+				);
 			});
 		});
 
 		describe('EmptyStateWrapper Body', () => {
 			it('should render the message body element', () => {
-				const bodyElement = <div className='parent-div'><div className='nested-div'></div></div>;
+				const bodyElement = (
+					<div className="parent-div"><div className="nested-div" /></div>
+				);
 				wrapper = mount(
 					<LineChart>
 						<EmptyStateWrapper>
@@ -89,7 +93,10 @@ describe('LineChart', () => {
 
 				const messageBodyWrapper = wrapper.find(EmptyStateWrapper);
 
-				assert(messageBodyWrapper.contains(bodyElement), 'must contain the body element');
+				assert(
+					messageBodyWrapper.contains(bodyElement),
+					'must contain the body element'
+				);
 			});
 		});
 	});
@@ -99,45 +106,57 @@ describe('LineChart', () => {
 			wrapper = mount(
 				<LineChart
 					data={[
-						{x: new Date(), y: 1},
-						{x: new Date(), y: 2},
-						{x: new Date(), y: 3},
+						{ x: new Date(), y: 1 },
+						{ x: new Date(), y: 2 },
+						{ x: new Date(), y: 3 },
 					]}
 				/>
 			);
 
-			assert.equal(wrapper.find('.lucid-Point').length, 3, 'did not find the correct number of points');
+			assert.equal(
+				wrapper.find('.lucid-Point').length,
+				3,
+				'did not find the correct number of points'
+			);
 		});
 
 		it('should render a single axis chart with multiple series', () => {
 			wrapper = mount(
 				<LineChart
 					data={[
-						{x: new Date(), y: 1, y2: 1},
-						{x: new Date(), y: 2, y2: 1},
-						{x: new Date(), y: 3, y2: 1},
+						{ x: new Date(), y: 1, y2: 1 },
+						{ x: new Date(), y: 2, y2: 1 },
+						{ x: new Date(), y: 3, y2: 1 },
 					]}
 					yAxisFields={['y', 'y2']}
 				/>
 			);
 
-			assert.equal(wrapper.find('.lucid-Line').length, 2, 'did not find the correct number of lines');
+			assert.equal(
+				wrapper.find('.lucid-Line').length,
+				2,
+				'did not find the correct number of lines'
+			);
 		});
 
 		it('should render a dual axis chart', () => {
 			wrapper = mount(
 				<LineChart
 					data={[
-						{x: new Date(), y: 1, y2: 1},
-						{x: new Date(), y: 2, y2: 1},
-						{x: new Date(), y: 3, y2: 1},
+						{ x: new Date(), y: 1, y2: 1 },
+						{ x: new Date(), y: 2, y2: 1 },
+						{ x: new Date(), y: 3, y2: 1 },
 					]}
 					yAxisFields={['y']}
 					y2AxisFields={['y2']}
 				/>
 			);
 
-			assert.equal(wrapper.find('.lucid-Axis').length, 3, 'did not find the correct number of axes');
+			assert.equal(
+				wrapper.find('.lucid-Axis').length,
+				3,
+				'did not find the correct number of axes'
+			);
 		});
 	});
 });

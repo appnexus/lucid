@@ -1,14 +1,13 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-EligibilityIcon');
 
-const {
-	oneOf,
-} = React.PropTypes;
+const { oneOf } = PropTypes;
 
 const LEFT = 'left';
 const RIGHT = 'right';
@@ -29,12 +28,7 @@ const EligibilityIcon = createClass({
 		/**
 		 * Eligibility variations of the icon.
 		 */
-		eligibility: oneOf([
-			'both',
-			'neither',
-			'left',
-			'right',
-		]),
+		eligibility: oneOf(['both', 'neither', 'left', 'right']),
 	},
 
 	getDefaultProps() {
@@ -45,12 +39,7 @@ const EligibilityIcon = createClass({
 	},
 
 	render() {
-		const {
-			className,
-			eligibility,
-			isDisabled,
-			...passThroughs
-		} = this.props;
+		const { className, eligibility, isDisabled, ...passThroughs } = this.props;
 
 		return (
 			<Icon
@@ -65,14 +54,14 @@ const EligibilityIcon = createClass({
 							'&-is-selected': eligibility === LEFT || eligibility === BOTH,
 							'&-half-circle-is-disabled': isDisabled,
 						})}
-						d='M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z'
+						d="M6.979,0.928C3.511,1.424,0.845,4.398,0.845,8c0,3.604,2.666,6.576,6.133,7.072V0.928H6.979z"
 					/>
 					<path
 						className={cx('&-half-circle', {
 							'&-is-selected': eligibility === RIGHT || eligibility === BOTH,
 							'&-half-circle-is-disabled': isDisabled,
 						})}
-						d='M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z'
+						d="M9.022,0.928C12.487,1.424,15.155,4.398,15.155,8c0,3.604-2.668,6.576-6.133,7.072V0.928z"
 					/>
 				</g>
 			</Icon>

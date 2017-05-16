@@ -3,18 +3,8 @@ import { Tag } from '../../../index';
 import _ from 'lodash';
 
 const groups = [
-	[
-		'Last Man on Earth',
-		[
-			'Phil',
-		],
-	],
-	[
-		'Last Woman on Earth',
-		[
-			'Carol',
-		],
-	],
+	['Last Man on Earth', ['Phil']],
+	['Last Woman on Earth', ['Carol']],
 	[
 		'Star Wars',
 		[
@@ -103,7 +93,7 @@ export default React.createClass({
 		};
 	},
 
-	handleRemove({ props: { callbackId }}) {
+	handleRemove({ props: { callbackId } }) {
 		this.setState({
 			removedItems: _.set(this.state.removedItems, callbackId, true),
 		});

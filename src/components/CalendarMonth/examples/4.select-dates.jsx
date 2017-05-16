@@ -30,9 +30,7 @@ export default React.createClass({
 			return;
 		}
 
-		const {
-			selectedDays,
-		} = this.state;
+		const { selectedDays } = this.state;
 
 		this.setState({
 			selectedDays: _.xorWith(selectedDays, [date], DateUtils.isSameDay),
@@ -59,11 +57,7 @@ export default React.createClass({
 	},
 
 	render() {
-		const {
-			selectedDays,
-			cursor,
-			offset,
-		} = this.state;
+		const { selectedDays, cursor, offset } = this.state;
 
 		return (
 			<section>
@@ -84,7 +78,11 @@ export default React.createClass({
 					<Button onClick={this.handleNext}>{'>'}</Button>
 				</div>
 
-				selectedDays: {_.map(selectedDays, (selected) => selected.toLocaleDateString('en-US')).join(', ')}
+				selectedDays:
+				{' '}
+				{_.map(selectedDays, selected =>
+					selected.toLocaleDateString('en-US')
+				).join(', ')}
 			</section>
 		);
 	},

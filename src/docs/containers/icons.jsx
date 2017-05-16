@@ -1,19 +1,26 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 
 import { lucidClassNames } from '../../util/style-helpers';
 import * as components from '../../index';
 
-const { object } = React.PropTypes;
+const { object } = PropTypes;
 
 const { Button, Expander } = components;
 const icons = _.flow(
-	(x) => _.reduce(x, (acc, val, key) => (
-		acc.concat(_.endsWith(key, 'Icon') && key !== 'Icon' ? [[key, val]] : [])
-	), []),
-	(x) => _.filter(x, ([, Icon]) => !Icon._lucidIsPrivate),
-	(x) => _.sortBy(x, ([name]) => name)
+	x =>
+		_.reduce(
+			x,
+			(acc, val, key) =>
+				acc.concat(
+					_.endsWith(key, 'Icon') && key !== 'Icon' ? [[key, val]] : []
+				),
+			[]
+		),
+	x => _.filter(x, ([, Icon]) => !Icon._lucidIsPrivate),
+	x => _.sortBy(x, ([name]) => name)
 )(components);
 
 const cx = lucidClassNames.bind('Icons');
@@ -31,9 +38,7 @@ const Icons = React.createClass({
 	},
 
 	render() {
-		const {
-			showButtons,
-		} = this.state;
+		const { showButtons } = this.state;
 
 		return (
 			<div className={cx('&')}>
@@ -45,10 +50,12 @@ const Icons = React.createClass({
 					<ul className={cx('&-list')}>
 						{_.map(icons, ([name, Icon]) => (
 							<li className={cx('&-list-item')} key={name}>
-								<Link to={{
-									pathname: `/components/${name}`,
-									query: this.props.location.query,
-								}}>
+								<Link
+									to={{
+										pathname: `/components/${name}`,
+										query: this.props.location.query,
+									}}
+								>
 									<Icon className={cx('&-list-icon')} isClickable />
 									{name}
 								</Link>
@@ -67,16 +74,22 @@ const Icons = React.createClass({
 					<section className={cx('&-buttons')}>
 						{_.map(icons, ([name, Icon]) => (
 							<div className={cx('&-buttons-section')} key={name}>
-								<Button hasOnlyIcon size='short'><Icon /></Button>
-								<Button hasOnlyIcon size='small'><Icon /></Button>
-								<Button hasOnlyIcon ><Icon /></Button>
-								<Button hasOnlyIcon isActive ><Icon /></Button>
-								<Button hasOnlyIcon size='large'><Icon /></Button>
-								<Button hasOnlyIcon kind='primary' size='short'><Icon /></Button>
-								<Button hasOnlyIcon kind='primary' size='small'><Icon /></Button>
-								<Button hasOnlyIcon kind='primary' ><Icon /></Button>
-								<Button hasOnlyIcon kind='primary' isActive ><Icon /></Button>
-								<Button hasOnlyIcon kind='primary' size='large'><Icon /></Button>
+								<Button hasOnlyIcon size="short"><Icon /></Button>
+								<Button hasOnlyIcon size="small"><Icon /></Button>
+								<Button hasOnlyIcon><Icon /></Button>
+								<Button hasOnlyIcon isActive><Icon /></Button>
+								<Button hasOnlyIcon size="large"><Icon /></Button>
+								<Button hasOnlyIcon kind="primary" size="short">
+									<Icon />
+								</Button>
+								<Button hasOnlyIcon kind="primary" size="small">
+									<Icon />
+								</Button>
+								<Button hasOnlyIcon kind="primary"><Icon /></Button>
+								<Button hasOnlyIcon kind="primary" isActive><Icon /></Button>
+								<Button hasOnlyIcon kind="primary" size="large">
+									<Icon />
+								</Button>
 							</div>
 						))}
 					</section>

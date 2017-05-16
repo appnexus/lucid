@@ -1,14 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 import elementResizeDetectorMaker from 'element-resize-detector';
 
 const cx = lucidClassNames.bind('&-Resizer');
 
-const {
-	func,
-	string,
-} = React.PropTypes;
+const { func, string } = PropTypes;
 
 /**
  * {"categories": ["utility"]}
@@ -40,7 +38,7 @@ const Resizer = createClass({
 		};
 	},
 
-	handleResize({offsetWidth, offsetHeight}) {
+	handleResize({ offsetWidth, offsetHeight }) {
 		this.setState({
 			width: offsetWidth,
 			height: offsetHeight,
@@ -48,7 +46,7 @@ const Resizer = createClass({
 	},
 
 	componentDidMount() {
-		this.resizeDetector = elementResizeDetectorMaker({strategy: 'scroll'});
+		this.resizeDetector = elementResizeDetectorMaker({ strategy: 'scroll' });
 		this.resizeDetector.listenTo(this._element, this.handleResize);
 	},
 
@@ -57,21 +55,15 @@ const Resizer = createClass({
 	},
 
 	render() {
-		const {
-			className,
-			...passThroughs
-		} = this.props;
+		const { className, ...passThroughs } = this.props;
 
-		const {
-			width,
-			height,
-		} = this.state;
+		const { width, height } = this.state;
 
 		return (
 			<div
 				{...omitProps(passThroughs, Resizer)}
 				className={cx('&', className)}
-				ref={(ref) => this._element = ref}
+				ref={ref => this._element = ref}
 			>
 				{this.props.children(width, height)}
 			</div>

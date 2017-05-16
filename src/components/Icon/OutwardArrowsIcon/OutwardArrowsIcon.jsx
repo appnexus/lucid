@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass } from '../../../util/component-types';
 
-const { oneOf } = React.PropTypes;
+const { oneOf } = PropTypes;
 
 const cx = lucidClassNames.bind('&-OutwardArrowsIcon');
 
@@ -39,18 +40,11 @@ const OutwardArrowsIcon = createClass({
 	},
 
 	render() {
-		const {
-			className,
-			kind,
-			...passThroughs
-		} = this.props;
+		const { className, kind, ...passThroughs } = this.props;
 
 		return (
-			<Icon
-				{...passThroughs}
-				className={cx('&', className)}
-			>
-				<path d={paths[kind]}/>
+			<Icon {...passThroughs} className={cx('&', className)}>
+				<path d={paths[kind]} />
 			</Icon>
 		);
 	},

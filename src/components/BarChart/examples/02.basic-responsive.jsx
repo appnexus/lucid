@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-	BarChart,
-	Resizer,
-} from '../../../index';
+import { BarChart, Resizer } from '../../../index';
 
 const data = [
 	{ x: '2015-01-01', y: 1 },
@@ -21,7 +18,7 @@ export default React.createClass({
 							width={width}
 							height={width * 0.3}
 							data={data}
-							yAxisTitle='Revenue'
+							yAxisTitle="Revenue"
 						/>
 					)}
 				</Resizer>

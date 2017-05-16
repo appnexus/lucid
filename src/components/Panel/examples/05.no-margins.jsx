@@ -1,13 +1,7 @@
 import React from 'react';
 import { Panel, Table } from '../../../index';
 
-const {
-	Thead,
-	Tbody,
-	Th,
-	Tr,
-	Td,
-} = Table;
+const { Thead, Tbody, Th, Tr, Td } = Table;
 
 export default React.createClass({
 	render() {
@@ -18,7 +12,7 @@ export default React.createClass({
 					<strong>Header</strong>
 				</Panel.Header>
 
-				<Table style={{width: '100%'}}>
+				<Table style={{ width: '100%' }}>
 					<Thead>
 						<Tr>
 							<Th>Cell</Th>

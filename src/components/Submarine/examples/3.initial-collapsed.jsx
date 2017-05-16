@@ -4,8 +4,14 @@ import { Submarine } from '../../../index';
 export default React.createClass({
 	render() {
 		return (
-			<section style={{ height: 300, background: 'lightgray', outline: '1px solid lightgray' }}>
-				<Submarine initialState={{isExpanded: false}}>
+			<section
+				style={{
+					height: 300,
+					background: 'lightgray',
+					outline: '1px solid lightgray',
+				}}
+			>
+				<Submarine initialState={{ isExpanded: false }}>
 					<Submarine.Bar>
 						Try-hard cornhole ea artisan, laborum wolf eiusmod chillwave irure. Lomo chicharrones taxidermy narwhal. Cronut deep v PBR&B photo booth tilde. Asymmetrical waistcoat williamsburg 3 wolf moon, poutine magna dreamcatcher disrupt eiusmod thundercats farm-to-table lumbersexual nisi mlkshk tote bag.
 					</Submarine.Bar>

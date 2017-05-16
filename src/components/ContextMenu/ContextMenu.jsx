@@ -1,23 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import Portal from '../Portal/Portal';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
-import { getAbsoluteBoundingClientRect, sharesAncestor } from '../../util/dom-helpers';
+import {
+	getAbsoluteBoundingClientRect,
+	sharesAncestor,
+} from '../../util/dom-helpers';
 import { lucidClassNames } from '../../util/style-helpers';
 
 const cx = lucidClassNames.bind('&-ContextMenu');
 
-const {
-	PropTypes: {
-		bool,
-		node,
-		func,
-		number,
-		object,
-		oneOf,
-		string,
-	},
-} = React;
+const { bool, node, func, number, object, oneOf, string } = PropTypes;
 
 /**
  *
@@ -119,9 +113,7 @@ const ContextMenu = createClass({
 	},
 
 	getInitialState() {
-		const {
-			portalId,
-		} = this.props;
+		const { portalId } = this.props;
 		return {
 			portalId: portalId || _.uniqueId('ContextMenu-Portal-'),
 			targetRect: {
@@ -157,18 +149,15 @@ const ContextMenu = createClass({
 	handleBodyClick(event) {
 		const {
 			props,
-			props: {
-				onClickOut,
-			},
-			refs: {
-				flyOutPortal,
-				target,
-			},
+			props: { onClickOut },
+			refs: { flyOutPortal, target },
 		} = this;
 
 		if (onClickOut && flyOutPortal) {
 			const flyOutEl = flyOutPortal.portalElement.firstChild;
-			const wasALabelClick = event.target.nodeName === 'INPUT' && sharesAncestor(event.target, target, 'LABEL');
+			const wasALabelClick =
+				event.target.nodeName === 'INPUT' &&
+				sharesAncestor(event.target, target, 'LABEL');
 
 			// Attempt to detect <label> click and ignore it
 			if (wasALabelClick) {
@@ -196,25 +185,12 @@ const ContextMenu = createClass({
 	},
 
 	getFlyoutPosition() {
-
 		const {
-			props: {
-				alignment,
-				getAlignmentOffset,
-				direction,
-				directonOffset,
-			},
+			props: { alignment, getAlignmentOffset, direction, directonOffset },
 			state: {
 				flyOutHeight,
 				flyOutWidth,
-				targetRect: {
-					bottom,
-					left,
-					right,
-					top,
-					width,
-					height,
-				},
+				targetRect: { bottom, left, right, top, width, height },
 			},
 			refs: { flyOutPortal },
 		} = this;
@@ -225,23 +201,17 @@ const ContextMenu = createClass({
 
 		const alignmentOffset = !_.isUndefined(this.props.alignmentOffset)
 			? this.props.alignmentOffset
-			: (alignment === ContextMenu.CENTER)
-			? (getAlignmentOffset(_.includes([ContextMenu.UP, ContextMenu.DOWN], direction) ? flyOutWidth : flyOutHeight))
-			: 0;
+			: alignment === ContextMenu.CENTER
+					? getAlignmentOffset(
+							_.includes([ContextMenu.UP, ContextMenu.DOWN], direction)
+								? flyOutWidth
+								: flyOutHeight
+						)
+					: 0;
 
-		const {
-			CENTER,
-			DOWN,
-			END,
-			LEFT,
-			RIGHT,
-			START,
-			UP,
-		} = ContextMenu;
+		const { CENTER, DOWN, END, LEFT, RIGHT, START, UP } = ContextMenu;
 
-		const {
-			clientWidth,
-		} = document.body;
+		const { clientWidth } = document.body;
 
 		// default styling hides portal because its position can't be calculated
 		// properly until after 1st render so here we unhide it if the ref exists
@@ -271,7 +241,7 @@ const ContextMenu = createClass({
 			return {
 				...style,
 				top: top - flyOutHeight - directonOffset,
-				left: left + (width / 2) - (flyOutWidth / 2) + alignmentOffset,
+				left: left + width / 2 - flyOutWidth / 2 + alignmentOffset,
 			};
 		}
 		if (matcher({ direction: DOWN, alignment: START })) {
@@ -292,7 +262,7 @@ const ContextMenu = createClass({
 			return {
 				...style,
 				top: bottom + directonOffset,
-				left: left + (width / 2) - (flyOutWidth / 2) + alignmentOffset,
+				left: left + width / 2 - flyOutWidth / 2 + alignmentOffset,
 			};
 		}
 		if (matcher({ direction: LEFT, alignment: START })) {
@@ -312,7 +282,7 @@ const ContextMenu = createClass({
 		if (matcher({ direction: LEFT, alignment: CENTER })) {
 			return {
 				...style,
-				top: top - (flyOutHeight / 2) + (height / 2) + alignmentOffset,
+				top: top - flyOutHeight / 2 + height / 2 + alignmentOffset,
 				right: clientWidth - left + directonOffset,
 			};
 		}
@@ -333,21 +303,14 @@ const ContextMenu = createClass({
 		if (matcher({ direction: RIGHT, alignment: CENTER })) {
 			return {
 				...style,
-				top: top - (flyOutHeight / 2) + (height / 2) + alignmentOffset,
+				top: top - flyOutHeight / 2 + height / 2 + alignmentOffset,
 				left: left + width + directonOffset,
 			};
 		}
-
 	},
 
 	alignFlyOut() {
-
-		const {
-			refs: {
-				flyOutPortal,
-				target,
-			},
-		} = this;
+		const { refs: { flyOutPortal, target } } = this;
 
 		if (!target || !flyOutPortal) {
 			return;
@@ -362,10 +325,7 @@ const ContextMenu = createClass({
 		}
 
 		const flyOutEl = flyOutPortal.portalElement.firstChild;
-		const {
-			height,
-			width,
-		} = flyOutEl.getBoundingClientRect();
+		const { height, width } = flyOutEl.getBoundingClientRect();
 		this.setState({
 			targetRect,
 			flyOutHeight: height,
@@ -383,10 +343,7 @@ const ContextMenu = createClass({
 				minWidthOffset,
 				...passThroughs
 			},
-			state: {
-				portalId,
-				targetRect,
-			},
+			state: { portalId, targetRect },
 		} = this;
 
 		const targetElement = getFirst(this.props, ContextMenu.Target);
@@ -397,23 +354,32 @@ const ContextMenu = createClass({
 		const flyProps = _.get(flyoutElement, 'props', {});
 
 		return (
-			<TargetElementType ref='target' {...omitProps(passThroughs, ContextMenu)} className={cx('&', className)} style={style}>
+			<TargetElementType
+				ref="target"
+				{...omitProps(passThroughs, ContextMenu)}
+				className={cx('&', className)}
+				style={style}
+			>
 				{targetChildren}
-				{isExpanded ? (
-					<Portal
-						ref='flyOutPortal'
-						{...flyProps}
-						className={cx('&-FlyOut', `&-FlyOut-${direction}`, flyProps.className)}
-						portalId={portalId}
-						style={{
-							minWidth: targetRect.width + minWidthOffset,
-							...this.getFlyoutPosition(),
-							...flyProps.style,
-						}}
-					>
-						{flyProps.children}
-					</Portal>
-				) : null}
+				{isExpanded
+					? <Portal
+							ref="flyOutPortal"
+							{...flyProps}
+							className={cx(
+								'&-FlyOut',
+								`&-FlyOut-${direction}`,
+								flyProps.className
+							)}
+							portalId={portalId}
+							style={{
+								minWidth: targetRect.width + minWidthOffset,
+								...this.getFlyoutPosition(),
+								...flyProps.style,
+							}}
+						>
+							{flyProps.children}
+						</Portal>
+					: null}
 			</TargetElementType>
 		);
 	},

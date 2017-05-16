@@ -1,11 +1,7 @@
 import assert from 'assert';
-import {
-	onResize,
-	onToggle,
-} from './Sidebar.reducers';
+import { onResize, onToggle } from './Sidebar.reducers';
 
 describe('Sidebar reducers', () => {
-
 	const initialState = {
 		isExpanded: true,
 		width: 250,
@@ -13,13 +9,20 @@ describe('Sidebar reducers', () => {
 
 	describe('onResize', () => {
 		it('should set the `width`', () => {
-			const nextState = onResize({
-				...initialState,
-				isExpanded: false,
-			}, 256);
+			const nextState = onResize(
+				{
+					...initialState,
+					isExpanded: false,
+				},
+				256
+			);
 
 			assert.equal(nextState.width, 256, 'must update the width');
-			assert.equal(nextState.isExpanded, true, 'must update isExpanded to true');
+			assert.equal(
+				nextState.isExpanded,
+				true,
+				'must update isExpanded to true'
+			);
 		});
 	});
 

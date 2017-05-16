@@ -12,10 +12,7 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<BarChart
-					data={data}
-					yAxisTitle='Revenue'
-				/>
+				<BarChart data={data} yAxisTitle="Revenue" />
 			</div>
 		);
 	},

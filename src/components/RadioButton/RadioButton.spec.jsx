@@ -21,10 +21,13 @@ describe('RadioButton', () => {
 	describe('props', () => {
 		describe('isDisabled', () => {
 			it('sets the `disabled` attribute of the native radio button element.', () => {
-				_.forEach(booleanValues, (testValue) => {
+				_.forEach(booleanValues, testValue => {
 					const wrapper = shallow(<RadioButton isDisabled={testValue} />);
 
-					assert.equal(wrapper.find('input[type="radio"]').prop('disabled'), testValue);
+					assert.equal(
+						wrapper.find('input[type="radio"]').prop('disabled'),
+						testValue
+					);
 				});
 			});
 
@@ -37,10 +40,13 @@ describe('RadioButton', () => {
 
 		describe('isSelected', () => {
 			it('sets the `checked` attribute of the native radio button element.', () => {
-				_.forEach(booleanValues, (testValue) => {
+				_.forEach(booleanValues, testValue => {
 					const wrapper = shallow(<RadioButton isSelected={testValue} />);
 
-					assert.equal(wrapper.find('input[type="radio"]').prop('checked'), testValue);
+					assert.equal(
+						wrapper.find('input[type="radio"]').prop('checked'),
+						testValue
+					);
 				});
 			});
 
@@ -62,14 +68,24 @@ describe('RadioButton', () => {
 		describe('pass throughs', () => {
 			it('passes through all props not defined in `propTypes` to the native input.', () => {
 				const wrapper = mount(
-					<RadioButton className='wut' isDisabled={true} isSelected={true} style={{ fontWeight: 'bold' }} onSelect={_.noop}
-							foo={1} bar={2} baz={3} qux={4} quux={5} />
+					<RadioButton
+						className="wut"
+						isDisabled={true}
+						isSelected={true}
+						style={{ fontWeight: 'bold' }}
+						onSelect={_.noop}
+						foo={1}
+						bar={2}
+						baz={3}
+						qux={4}
+						quux={5}
+					/>
 				);
 				const nativeProps = wrapper.find('input[type="radio"]').props();
 
 				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
 				// to the native input.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
+				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], prop => {
 					assert(_.has(nativeProps, prop));
 				});
 			});
@@ -83,31 +99,70 @@ describe('RadioButton', () => {
 	}
 
 	function verifyArguments(event) {
-		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-dot'], (classSubString) => {
-			const onSelect = sinon.spy();
+		_.forEach(
+			[
+				'',
+				'-native',
+				'-visualization-container',
+				'-visualization-glow',
+				'-visualization-dot',
+			],
+			classSubString => {
+				const onSelect = sinon.spy();
 
-			simulateEvent(<RadioButton isSelected={false} onSelect={onSelect} />, `.lucid-RadioButton${classSubString}`, event);
-			assert.equal(onSelect.args[0][0], true);
-			assert(_.last(onSelect.args[0]).event);
-		});
+				simulateEvent(
+					<RadioButton isSelected={false} onSelect={onSelect} />,
+					`.lucid-RadioButton${classSubString}`,
+					event
+				);
+				assert.equal(onSelect.args[0][0], true);
+				assert(_.last(onSelect.args[0]).event);
+			}
+		);
 	}
 
 	function verifyNoOnSelect(event) {
-		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-dot'], (classSubString) => {
-			const onSelect = sinon.spy();
+		_.forEach(
+			[
+				'',
+				'-native',
+				'-visualization-container',
+				'-visualization-glow',
+				'-visualization-dot',
+			],
+			classSubString => {
+				const onSelect = sinon.spy();
 
-			simulateEvent(<RadioButton isSelected={true} onSelect={onSelect} />, `.lucid-RadioButton${classSubString}`, event);
-			assert.equal(onSelect.calledOnce, false);
-		});
+				simulateEvent(
+					<RadioButton isSelected={true} onSelect={onSelect} />,
+					`.lucid-RadioButton${classSubString}`,
+					event
+				);
+				assert.equal(onSelect.calledOnce, false);
+			}
+		);
 	}
 
 	function verifyOnSelect(event) {
-		_.forEach(['', '-native', '-visualization-container', '-visualization-glow', '-visualization-dot'], (classSubString) => {
-			const onSelect = sinon.spy();
+		_.forEach(
+			[
+				'',
+				'-native',
+				'-visualization-container',
+				'-visualization-glow',
+				'-visualization-dot',
+			],
+			classSubString => {
+				const onSelect = sinon.spy();
 
-			simulateEvent(<RadioButton isSelected={false} onSelect={onSelect} />, `.lucid-RadioButton${classSubString}`, event);
-			assert(onSelect.calledOnce);
-		});
+				simulateEvent(
+					<RadioButton isSelected={false} onSelect={onSelect} />,
+					`.lucid-RadioButton${classSubString}`,
+					event
+				);
+				assert(onSelect.calledOnce);
+			}
+		);
 	}
 
 	describe('user clicks on the rendered control', () => {

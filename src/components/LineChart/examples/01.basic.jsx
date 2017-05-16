@@ -10,8 +10,6 @@ const data = [
 
 export default React.createClass({
 	render() {
-		return (
-			<LineChart data={data} />
-		);
+		return <LineChart data={data} />;
 	},
 });

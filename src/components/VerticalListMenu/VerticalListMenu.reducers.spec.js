@@ -1,9 +1,6 @@
 import assert from 'assert';
 
-import {
-	onSelect,
-	onToggle,
-} from './VerticalListMenu.reducers';
+import { onSelect, onToggle } from './VerticalListMenu.reducers';
 
 describe('VerticalListMenu reducers', () => {
 	describe('onSelect', () => {

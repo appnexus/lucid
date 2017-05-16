@@ -29,27 +29,15 @@ export default React.createClass({
 				</li>
 				<li>
 					<label>Disabled unselected</label>
-					<Checkbox
-						isSelected={false}
-						isDisabled={true}
-						tabIndex={20}
-					/>
+					<Checkbox isSelected={false} isDisabled={true} tabIndex={20} />
 				</li>
 				<li>
 					<label>Disabled selected</label>
-					<Checkbox
-						isSelected={true}
-						isDisabled={true}
-						tabIndex={20}
-					/>
+					<Checkbox isSelected={true} isDisabled={true} tabIndex={20} />
 				</li>
 				<li>
 					<label>Disabled indeterminate</label>
-					<Checkbox
-						isIndeterminate={true}
-						isDisabled={true}
-						tabIndex={20}
-					/>
+					<Checkbox isIndeterminate={true} isDisabled={true} tabIndex={20} />
 				</li>
 			</ul>
 		);

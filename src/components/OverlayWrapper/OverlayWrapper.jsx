@@ -1,17 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, rejectTypes, omitProps } from '../../util/component-types';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import {
+	createClass,
+	getFirst,
+	rejectTypes,
+	omitProps,
+} from '../../util/component-types';
+import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
 const cx = lucidClassNames.bind('&-OverlayWrapper');
 
-const {
-	bool,
-	node,
-	oneOf,
-	string,
-} = React.PropTypes;
+const { bool, node, oneOf, string } = PropTypes;
 
 /**
  *
@@ -43,10 +44,7 @@ const OverlayWrapper = createClass({
 		/**
 		 * Style variations for the overlay behind the message.
 		 */
-		overlayKind: oneOf([
-			'light',
-			'dark',
-		]),
+		overlayKind: oneOf(['light', 'dark']),
 		/**
 		 * *Child Element*
 		 *
@@ -99,19 +97,21 @@ const OverlayWrapper = createClass({
 				className={cx('&', className)}
 			>
 				{otherChildren}
-				<ReactCSSTransitionGroup
+				<ReactTransitionGroup
 					transitionName={cx('&-message-container')}
 					transitionEnterTimeout={300}
 					transitionLeaveTimeout={300}
 				>
-				{isVisible &&
-					(<div className={cx('&-message-container', {
-						'&-has-overlay': hasOverlay,
-						'&-kind-light': hasOverlay && overlayKind === 'light',
-					})}>
-						<div {...messageElementProp} />
-					</div>)}
-				</ReactCSSTransitionGroup>
+					{isVisible &&
+						<div
+							className={cx('&-message-container', {
+								'&-has-overlay': hasOverlay,
+								'&-kind-light': hasOverlay && overlayKind === 'light',
+							})}
+						>
+							<div {...messageElementProp} />
+						</div>}
+				</ReactTransitionGroup>
 			</div>
 		);
 	},

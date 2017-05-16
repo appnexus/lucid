@@ -18,9 +18,7 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<Button
-					onClick={_.partial(this.handleOpenClose, !this.state.isShown)}
-				>
+				<Button onClick={_.partial(this.handleOpenClose, !this.state.isShown)}>
 					Toggle
 				</Button>
 
@@ -29,12 +27,16 @@ export default React.createClass({
 					isModal={false}
 					onEscape={_.partial(this.handleOpenClose, false)}
 				>
-					<div style={{
-						backgroundColor: '#eee',
-						padding: '100px',
-					}}>
+					<div
+						style={{
+							backgroundColor: '#eee',
+							padding: '100px',
+						}}
+					>
 						User can still interact with the background.
-						<Button onClick={_.partial(this.handleOpenClose, false)}>Close</Button>
+						<Button onClick={_.partial(this.handleOpenClose, false)}>
+							Close
+						</Button>
 					</div>
 				</Overlay>
 			</div>

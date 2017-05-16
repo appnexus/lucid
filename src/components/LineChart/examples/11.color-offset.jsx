@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-	LineChart,
-} from '../../../index';
+import { LineChart } from '../../../index';
 
 const data = [
 	{ x: new Date('2015-01-01T00:00:00-08:00'), apples: 184, pears: 117 },
@@ -30,11 +28,9 @@ export default React.createClass({
 					right: 80,
 				}}
 				hasLegend
-
-				yAxisFields={[ 'apples' ]}
+				yAxisFields={['apples']}
 				yAxisColorOffset={3}
-
-				y2AxisFields={[ 'pears' ]}
+				y2AxisFields={['pears']}
 				y2AxisColorOffset={4}
 			/>
 		);

@@ -1,17 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import DayPicker, { DateUtils } from 'react-day-picker';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-CalendarMonth');
 
-const {
-	bool,
-	instanceOf,
-	number,
-	oneOf,
-	string,
-} = React.PropTypes;
+const { bool, instanceOf, number, oneOf, string } = PropTypes;
 
 /**
  * {"categories": ["helpers"]}
@@ -81,12 +76,7 @@ const CalendarMonth = createClass({
 	},
 
 	modifierRange(day) {
-		const {
-			cursor,
-			from,
-			to,
-			selectMode,
-		} = this.props;
+		const { cursor, from, to, selectMode } = this.props;
 
 		if (cursor) {
 			if (selectMode === 'day') {
@@ -111,17 +101,13 @@ const CalendarMonth = createClass({
 	},
 
 	modifierFrom(day) {
-		const {
-			from,
-		} = this.props;
+		const { from } = this.props;
 
 		return DateUtils.isSameDay(day, new Date(from));
 	},
 
 	modifierTo(day) {
-		const {
-			to,
-		} = this.props;
+		const { to } = this.props;
 
 		return DateUtils.isSameDay(day, new Date(to));
 	},
@@ -138,8 +124,14 @@ const CalendarMonth = createClass({
 			...passThroughs
 		} = this.props;
 
-		const monthDate = new Date(initialMonth);
-		monthDate.setMonth(monthDate.getMonth() + monthOffset);
+		// It can be tricky to increment months using JavaScript dates, this should
+		// handle the edge cases.
+		// http://stackoverflow.com/questions/499838/javascript-date-next-month
+		const monthDate = new Date(
+			initialMonth.getFullYear(),
+			initialMonth.getMonth() + monthOffset,
+			1
+		);
 
 		return (
 			<DayPicker

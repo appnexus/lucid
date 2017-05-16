@@ -16,8 +16,10 @@ export default React.createClass({
 				>
 					Level one with VerticalListMenu
 					<VerticalListMenu>
-						{_.times(50, (n) => {
-							return <VerticalListMenu.Item key={n}>Level two</VerticalListMenu.Item>;
+						{_.times(50, n => {
+							return (
+								<VerticalListMenu.Item key={n}>Level two</VerticalListMenu.Item>
+							);
 						})}
 					</VerticalListMenu>
 				</VerticalListMenu.Item>

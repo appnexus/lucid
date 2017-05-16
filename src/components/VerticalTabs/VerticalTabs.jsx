@@ -1,19 +1,22 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, findTypes, omitProps } from '../../util/component-types';
+import {
+	createClass,
+	getFirst,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './VerticalTabs.reducers';
-import { VerticalListMenuDumb as VerticalListMenu } from '../VerticalListMenu/VerticalListMenu';
+import {
+	VerticalListMenuDumb as VerticalListMenu,
+} from '../VerticalListMenu/VerticalListMenu';
 
 const cx = lucidClassNames.bind('&-VerticalTabs');
 
-const {
-	string,
-	number,
-	bool,
-	func,
-} = React.PropTypes;
+const { string, number, bool, func } = PropTypes;
 
 /**
  *
@@ -82,15 +85,13 @@ const VerticalTabs = createClass({
 	},
 
 	render() {
-		const {
-			className,
-			onSelect,
-			selectedIndex,
-			...passThroughs
-		} = this.props;
+		const { className, onSelect, selectedIndex, ...passThroughs } = this.props;
 
 		// Grab props array from each Tab
-		const tabChildProps = _.map(findTypes(this.props, VerticalTabs.Tab), 'props');
+		const tabChildProps = _.map(
+			findTypes(this.props, VerticalTabs.Tab),
+			'props'
+		);
 
 		const selectedIndexFromChildren = _.findLastIndex(tabChildProps, {
 			isSelected: true,
@@ -111,10 +112,18 @@ const VerticalTabs = createClass({
 				>
 					{_.map(tabChildProps, (tabChildProp, index) => (
 						<VerticalListMenu.Item
-							className={cx('&-Tab', {'&-Tab-is-active': actualSelectedIndex === index})}
+							className={cx('&-Tab', {
+								'&-Tab-is-active': actualSelectedIndex === index,
+							})}
 							key={index}
 						>
-							<span className={cx('&-Tab-content')}>{_.get(getFirst(tabChildProp, VerticalTabs.Title), 'props.children', '')}</span>
+							<span className={cx('&-Tab-content')}>
+								{_.get(
+									getFirst(tabChildProp, VerticalTabs.Title),
+									'props.children',
+									''
+								)}
+							</span>
 						</VerticalListMenu.Item>
 					))}
 				</VerticalListMenu>

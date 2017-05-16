@@ -1,24 +1,16 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { bindClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps }  from '../../util/component-types';
+import { createClass, findTypes, omitProps } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './VerticalListMenu.reducers';
-import ChevronIcon  from '../Icon/ChevronIcon/ChevronIcon';
-import Collapsible  from '../Collapsible/Collapsible';
+import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
+import Collapsible from '../Collapsible/Collapsible';
 
 const cx = bindClassNames('lucid-VerticalListMenu');
 
-const {
-	func,
-	arrayOf,
-	bool,
-	string,
-	number,
-	node,
-	object,
-	shape,
-} = React.PropTypes;
+const { func, arrayOf, bool, string, number, node, object, shape } = PropTypes;
 
 /**
  * {"categories": ["navigation"], "madeFrom": ["ChevronIcon"]}
@@ -148,7 +140,10 @@ const VerticalListMenu = createClass({
 			...passThroughs
 		} = this.props;
 
-		const itemChildProps = _.map(findTypes(this.props, VerticalListMenu.Item), 'props');
+		const itemChildProps = _.map(
+			findTypes(this.props, VerticalListMenu.Item),
+			'props'
+		);
 
 		return (
 			<ul
@@ -163,12 +158,20 @@ const VerticalListMenu = createClass({
 						Collapsible: collapsibleProps = Collapsible.getDefaultProps(),
 					} = itemChildProp;
 
-					const itemChildrenAsArray = React.Children.toArray(itemChildProp.children);
+					const itemChildrenAsArray = React.Children.toArray(
+						itemChildProp.children
+					);
 
 					// Was not able to get `child.Type` to work correctly, I suspect this
 					// is due to the way we wrap components with createLucidComponentDefinition
-					const listChildren = _.filter(itemChildrenAsArray, (child) => _.get(child, 'type.displayName', '') === 'VerticalListMenu');
-					const otherChildren = _.filter(itemChildrenAsArray, (child) => _.get(child, 'type.displayName', '') !== 'VerticalListMenu');
+					const listChildren = _.filter(
+						itemChildrenAsArray,
+						child => _.get(child, 'type.displayName', '') === 'VerticalListMenu'
+					);
+					const otherChildren = _.filter(
+						itemChildrenAsArray,
+						child => _.get(child, 'type.displayName', '') !== 'VerticalListMenu'
+					);
 
 					// If the prop is found on the child, it should override what was
 					// passed in at the top level for selectedIndices and expandedIndices
@@ -193,30 +196,34 @@ const VerticalListMenu = createClass({
 								})}
 								onClick={_.partial(this.handleClickItem, index, itemChildProp)}
 							>
-							<div className={cx('&-Item-content-text')}>
-								{otherChildren}
-							</div>
-							{hasExpander ?
-								<div
-									className={cx('&-Item-expander')}
-									onClick={_.partial(this.handleToggle, index, itemChildProp)}
-								>
-									<ChevronIcon
-										direction={actualIsExpanded ? 'up' : 'down'}
-									/>
+								<div className={cx('&-Item-content-text')}>
+									{otherChildren}
 								</div>
-							: null}
+								{hasExpander
+									? <div
+											className={cx('&-Item-expander')}
+											onClick={_.partial(
+												this.handleToggle,
+												index,
+												itemChildProp
+											)}
+										>
+											<ChevronIcon
+												direction={actualIsExpanded ? 'up' : 'down'}
+											/>
+										</div>
+									: null}
 							</div>
 
-							{!_.isEmpty(listChildren) ? (
-								<Collapsible
-									{...collapsibleProps}
-									className={cx('&-Item-nested-list')}
-									isExpanded={actualIsExpanded}
-								>
-									{listChildren}
-								</Collapsible>
-							) : null}
+							{!_.isEmpty(listChildren)
+								? <Collapsible
+										{...collapsibleProps}
+										className={cx('&-Item-nested-list')}
+										isExpanded={actualIsExpanded}
+									>
+										{listChildren}
+									</Collapsible>
+								: null}
 						</li>
 					);
 				})}
@@ -226,9 +233,7 @@ const VerticalListMenu = createClass({
 	},
 
 	handleToggle(index, itemChildProp, event) {
-		const {
-			onToggle,
-		} = itemChildProp;
+		const { onToggle } = itemChildProp;
 
 		// Prevent the user from also selecting the current item.
 		event.stopPropagation();
@@ -241,9 +246,7 @@ const VerticalListMenu = createClass({
 	},
 
 	handleClickItem(index, itemChildProp, event) {
-		const {
-			onSelect,
-		} = itemChildProp;
+		const { onSelect } = itemChildProp;
 
 		this.props.onSelect(index, { event, props: itemChildProp });
 
@@ -251,7 +254,6 @@ const VerticalListMenu = createClass({
 			onSelect(index, { event, props: itemChildProp });
 		}
 	},
-
 });
 
 export default buildHybridComponent(VerticalListMenu);

@@ -1,9 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import {
-	Lines,
-	d3Scale,
-} from '../../../index';
+import { Lines, d3Scale } from '../../../index';
 
 const width = 1000;
 const height = 400;
@@ -18,17 +15,19 @@ const data = [
 ];
 
 const yFields = ['y0', 'y1', 'y2', 'y3'];
-const yMax = _.max(_.reduce(yFields, (acc, field) => {
-	return acc.concat(_.map(data, field));
-}, []));
+const yMax = _.max(
+	_.reduce(
+		yFields,
+		(acc, field) => {
+			return acc.concat(_.map(data, field));
+		},
+		[]
+	)
+);
 
-const xScale = d3Scale.scalePoint()
-	.domain(_.map(data, 'x'))
-	.range([0, width]);
+const xScale = d3Scale.scalePoint().domain(_.map(data, 'x')).range([0, width]);
 
-const yScale = d3Scale.scaleLinear()
-	.domain([0, yMax])
-	.range([height, 0]);
+const yScale = d3Scale.scaleLinear().domain([0, yMax]).range([height, 0]);
 
 export default React.createClass({
 	render() {

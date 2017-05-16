@@ -1,15 +1,13 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Overlay from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, omitProps }  from '../../util/component-types';
+import { createClass, getFirst, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Dialog');
 
-const {
-	node,
-	oneOf,
-} = React.PropTypes;
+const { node, oneOf } = PropTypes;
 
 const SMALL = 'small';
 const MEDIUM = 'medium';
@@ -69,15 +67,18 @@ const Dialog = createClass({
 	},
 
 	render() {
-		const {
-			className,
-			size,
-			isShown,
-			...passThroughs
-		} = this.props;
+		const { className, size, isShown, ...passThroughs } = this.props;
 
-		const headerChildProp = _.get(getFirst(this.props, Dialog.Header), 'props', {});
-		const footerChildProp = _.get(getFirst(this.props, Dialog.Footer), 'props', null);
+		const headerChildProp = _.get(
+			getFirst(this.props, Dialog.Header),
+			'props',
+			{}
+		);
+		const footerChildProp = _.get(
+			getFirst(this.props, Dialog.Footer),
+			'props',
+			null
+		);
 
 		return (
 			<Overlay
@@ -93,21 +94,14 @@ const Dialog = createClass({
 						'&-window-is-large': size === LARGE,
 					})}
 				>
-					<header
-						{...headerChildProp}
-						className={cx('&-header')}
-					/>
+					<header {...headerChildProp} className={cx('&-header')} />
 
 					<section className={cx('&-body')}>
 						{this.props.children}
 					</section>
 
-					{footerChildProp && (
-						<footer
-							{...footerChildProp}
-							className={cx('&-footer')}
-						/>
-					)}
+					{footerChildProp &&
+						<footer {...footerChildProp} className={cx('&-footer')} />}
 				</div>
 			</Overlay>
 		);
@@ -115,4 +109,3 @@ const Dialog = createClass({
 });
 
 export default Dialog;
-

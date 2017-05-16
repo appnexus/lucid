@@ -1,17 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { createClass, omitProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 
 const cx = lucidClassNames.bind('&-Portal');
 
-const {
-	PropTypes: {
-		any,
-		node,
-		string,
-	},
-} = React;
+const { any, node, string } = PropTypes;
 
 /**
  *
@@ -39,9 +34,7 @@ const Portal = createClass({
 	},
 	render: () => null,
 	componentDidMount() {
-		const {
-			portalId,
-		} = this.props;
+		const { portalId } = this.props;
 
 		let portalElement = window.document.getElementById(portalId);
 		if (!portalElement) {
@@ -56,11 +49,15 @@ const Portal = createClass({
 		window.document.body.removeChild(this.portalElement);
 	},
 	componentDidUpdate() {
-		ReactDOM.render((
-			<div {...omitProps(this.props, Portal)} className={cx('&', this.props.className)}>
+		ReactDOM.render(
+			<div
+				{...omitProps(this.props, Portal)}
+				className={cx('&', this.props.className)}
+			>
 				{this.props.children}
-			</div>
-		), this.portalElement);
+			</div>,
+			this.portalElement
+		);
 	},
 });
 

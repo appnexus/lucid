@@ -1,27 +1,21 @@
 /* eslint-disable comma-spacing */
 
 import React from 'react';
-import {
-	PieChart,
-	chartConstants,
-} from '../../../index';
+import { PieChart, chartConstants } from '../../../index';
 
 const data = [
-	{ x: 'Leslie' , y: 60 } ,
-	{ x: 'Ron'    , y: 40 } ,
-	{ x: 'Tom'    , y: 30 } ,
-	{ x: 'Gary'   , y: 20 } ,
-	{ x: 'Ben'    , y: 15 } ,
+	{ x: 'Leslie', y: 60 },
+	{ x: 'Ron', y: 40 },
+	{ x: 'Tom', y: 30 },
+	{ x: 'Gary', y: 20 },
+	{ x: 'Ben', y: 15 },
 ];
 
 export default React.createClass({
 	render() {
 		return (
 			<div>
-				<PieChart
-					data={data}
-					isDonut
-				/>
+				<PieChart data={data} isDonut />
 				<PieChart
 					data={data}
 					palette={chartConstants.PALETTE_MONOCHROME_0_5}

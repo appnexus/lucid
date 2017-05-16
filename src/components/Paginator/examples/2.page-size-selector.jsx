@@ -3,7 +3,6 @@ import React from 'react';
 import { Paginator, TextField } from '../../../index';
 
 export default React.createClass({
-
 	getInitialState() {
 		return { count: 45 };
 	},
@@ -11,12 +10,14 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<div style={{
-					display: 'flex',
-					flexDirection: 'row',
-					alignItems: 'center',
-					marginBottom: 10,
-				}}>
+				<div
+					style={{
+						display: 'flex',
+						flexDirection: 'row',
+						alignItems: 'center',
+						marginBottom: 10,
+					}}
+				>
 					Total number of items:
 					<TextField
 						style={{
@@ -24,7 +25,7 @@ export default React.createClass({
 							textAlign: 'center',
 							marginLeft: 6,
 						}}
-						onSubmit={(count) => this.setState({ count })}
+						onSubmit={count => this.setState({ count })}
 						value={this.state.count}
 					/>
 				</div>
@@ -39,5 +40,4 @@ export default React.createClass({
 			</div>
 		);
 	},
-
 });

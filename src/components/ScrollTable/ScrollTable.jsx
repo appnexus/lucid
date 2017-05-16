@@ -1,18 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { createClass, omitProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import Table from '../Table/Table';
 
 const cx = lucidClassNames.bind('&-ScrollTable');
 
-const {
-	object,
-	string,
-	bool,
-	node,
-	number,
-	oneOfType,
-} = React.PropTypes;
+const { object, string, bool, node, number, oneOfType } = PropTypes;
 
 /**
  * {"categories": ["table"], "madeFrom": ["Table"]}
@@ -77,9 +71,13 @@ const ScrollTable = createClass({
 
 		return (
 			<div
-				className={cx('&', {
-					'&-has-border': hasBorder,
-				}, className)}
+				className={cx(
+					'&',
+					{
+						'&-has-border': hasBorder,
+					},
+					className
+				)}
 				style={style}
 			>
 				<Table

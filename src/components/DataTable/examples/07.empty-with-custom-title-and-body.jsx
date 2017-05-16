@@ -1,10 +1,7 @@
 import React from 'react';
 import { DataTable } from '../../../index';
 
-const {
-  EmptyStateWrapper,
-  EmptyStateWrapper: { Title, Body },
-} = DataTable;
+const { EmptyStateWrapper, EmptyStateWrapper: { Title, Body } } = DataTable;
 
 export default React.createClass({
 	getInitialState() {
@@ -14,59 +11,35 @@ export default React.createClass({
 	},
 
 	render() {
-		const {
-			data,
-		} = this.state;
+		const { data } = this.state;
 
 		return (
-			<DataTable
-				data={data}
-				density='extended'
-				isFullWidth
-			>
+			<DataTable data={data} density="extended" isFullWidth>
 				<EmptyStateWrapper>
 					<Title>
 						Something went wrong.
 					</Title>
-					<Body
-						style={{fontSize: '12px'}}
-					>
+					<Body style={{ fontSize: '12px' }}>
 						Echo park poutine esse tempor squid do. Lo-fi ramps XOXO chicharrones laboris, portland fugiat locavore. Fap four dollar toast keytar, cronut kogi fingerstache distillery microdosing everyday carry austin DIY dreamcatcher. Distillery flexitarian meditation laboris roof party. Cred raclette gastropub tilde PBR&B. Shoreditch poke adipisicing, reprehenderit lumbersexual succulents mustache officia franzen vinyl nostrud af. Hashtag bitters organic, before they sold out butcher cronut sapiente.
 					</Body>
 				</EmptyStateWrapper>
-				<DataTable.Column
-					field='id'
-				>
+				<DataTable.Column field="id">
 					ID
 				</DataTable.Column>
 
-				<DataTable.Column
-					field='first_name'
-					width={100}
-				>
+				<DataTable.Column field="first_name" width={100}>
 					First
 				</DataTable.Column>
 
-				<DataTable.Column
-					field='last_name'
-					align='left'
-					width={100}
-				>
+				<DataTable.Column field="last_name" align="left" width={100}>
 					Last
 				</DataTable.Column>
 
-				<DataTable.Column
-					field='email'
-					align='center'
-				>
+				<DataTable.Column field="email" align="center">
 					E-Mail
 				</DataTable.Column>
 
-				<DataTable.Column
-					field='occupation'
-					align='right'
-					width={100}
-				>
+				<DataTable.Column field="occupation" align="right" width={100}>
 					Occupation
 				</DataTable.Column>
 			</DataTable>

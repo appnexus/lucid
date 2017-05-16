@@ -3,8 +3,6 @@ import { SeparatorIcon } from '../../../../index';
 
 export default React.createClass({
 	render() {
-		return (
-			<SeparatorIcon isDisabled />
-		);
+		return <SeparatorIcon isDisabled />;
 	},
 });

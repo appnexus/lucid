@@ -6,7 +6,7 @@ export default React.createClass({
 	render() {
 		return (
 			<div>
-				<SearchField onSubmit={(value) => this.setState({ value })}/>
+				<SearchField onSubmit={value => this.setState({ value })} />
 				<div>Hit "enter" to submit: {this.state.value}</div>
 			</div>
 		);

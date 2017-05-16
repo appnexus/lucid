@@ -1,7 +1,14 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, findTypes, rejectTypes, omitProps } from '../../util/component-types';
+import {
+	createClass,
+	getFirst,
+	findTypes,
+	rejectTypes,
+	omitProps,
+} from '../../util/component-types';
 import reducers from './RadioGroup.reducers';
 import { buildHybridComponent } from '../../util/state-management';
 
@@ -10,12 +17,7 @@ import RadioButton from '../RadioButton/RadioButton';
 
 const cx = lucidClassNames.bind('&-RadioGroup');
 
-const {
-	func,
-	node,
-	number,
-	string,
-} = React.PropTypes;
+const { func, node, number, string } = PropTypes;
 
 /**
  * {"categories": ["controls", "toggles"], "madeFrom": ["RadioButton"]}
@@ -100,7 +102,10 @@ const RadioGroup = createClass({
 			...passThroughs
 		} = this.props;
 
-		const radioButtonChildProps = _.map(findTypes(this.props, RadioGroup.RadioButton), 'props');
+		const radioButtonChildProps = _.map(
+			findTypes(this.props, RadioGroup.RadioButton),
+			'props'
+		);
 		const selectedIndexFromChildren = _.findLastIndex(radioButtonChildProps, {
 			isSelected: true,
 		});
@@ -126,7 +131,11 @@ const RadioGroup = createClass({
 							callbackId={index}
 							name={name}
 							onSelect={this.handleSelected}
-							Label={_.get(getFirst(radioButtonChildProp, RadioGroup.Label), 'props', null)}
+							Label={_.get(
+								getFirst(radioButtonChildProp, RadioGroup.Label),
+								'props',
+								null
+							)}
 						/>
 					);
 				})}
@@ -137,12 +146,18 @@ const RadioGroup = createClass({
 
 	handleSelected(isSelected, { event, props: childProps }) {
 		const { callbackId } = childProps;
-		const clickedRadioButtonProps = _.map(findTypes(this.props, RadioGroup.RadioButton), 'props')[callbackId];
+		const clickedRadioButtonProps = _.map(
+			findTypes(this.props, RadioGroup.RadioButton),
+			'props'
+		)[callbackId];
 
 		// If the `RadioGroup.RadioButton` child has an `onSelect` prop that is
 		// a function, call that prior to calling the group's `onSelect` prop.
 		if (_.isFunction(clickedRadioButtonProps.onSelect)) {
-			clickedRadioButtonProps.onSelect(isSelected, { event, props: childProps });
+			clickedRadioButtonProps.onSelect(isSelected, {
+				event,
+				props: childProps,
+			});
 		}
 
 		this.props.onSelect(callbackId, { event, props: childProps });

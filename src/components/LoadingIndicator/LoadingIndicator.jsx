@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, rejectTypes } from '../../util/component-types';
@@ -7,12 +8,7 @@ import LoadingMessage from '../LoadingMessage/LoadingMessage';
 
 const cx = lucidClassNames.bind('&-LoadingIndicator');
 
-const {
-	bool,
-	node,
-	oneOf,
-	string,
-} = React.PropTypes;
+const { bool, node, oneOf, string } = PropTypes;
 
 /**
  *
@@ -44,10 +40,7 @@ const LoadingIndicator = createClass({
 		/**
 		 * Style variations for the overlay behind the loading indicator.
 		 */
-		overlayKind: oneOf([
-			'light',
-			'dark',
-		]),
+		overlayKind: oneOf(['light', 'dark']),
 	},
 
 	components: { LoadingMessage },
@@ -61,14 +54,7 @@ const LoadingIndicator = createClass({
 	},
 
 	render() {
-		const {
-			props,
-			props: {
-				children,
-				className,
-				isLoading,
-			},
-		} = this;
+		const { props, props: { children, className, isLoading } } = this;
 
 		const { LoadingMessage } = LoadingIndicator;
 

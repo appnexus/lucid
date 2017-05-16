@@ -1,13 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DragCaptureZone');
-const {
-	func,
-	string,
-} = React.PropTypes;
+const { func, string } = PropTypes;
 
 /**
  * {"categories": ["utility"]}
@@ -74,9 +72,11 @@ const DragCaptureZone = createClass({
 			<div
 				{...omitProps(this.props, DragCaptureZone)}
 				className={cx('&', this.props.className)}
-				key='DragCaptureZone'
+				key="DragCaptureZone"
 				onMouseDown={this.handleDragStart}
-				ref={(ref) => {this.elementRef = ref;}}
+				ref={ref => {
+					this.elementRef = ref;
+				}}
 			/>
 		);
 	},
@@ -109,15 +109,18 @@ const DragCaptureZone = createClass({
 
 		event.preventDefault();
 
-		this.props.onDrag({
-			dX: pageX - this.state.pageX,
-			dY: pageY - this.state.pageY,
-			pageX,
-			pageY,
-		}, {
-			event,
-			props: this.props,
-		});
+		this.props.onDrag(
+			{
+				dX: pageX - this.state.pageX,
+				dY: pageY - this.state.pageY,
+				pageX,
+				pageY,
+			},
+			{
+				event,
+				props: this.props,
+			}
+		);
 	},
 
 	handleDragEnd(event) {
@@ -137,15 +140,18 @@ const DragCaptureZone = createClass({
 
 		event.preventDefault();
 
-		this.props.onDragEnd({
-			dX: pageX - this.state.pageX,
-			dY: pageY - this.state.pageY,
-			pageX,
-			pageY,
-		}, {
-			event,
-			props: this.props,
-		});
+		this.props.onDragEnd(
+			{
+				dX: pageX - this.state.pageX,
+				dY: pageY - this.state.pageY,
+				pageX,
+				pageY,
+			},
+			{
+				event,
+				props: this.props,
+			}
+		);
 
 		this.setState({
 			pageX: 0,
@@ -170,15 +176,18 @@ const DragCaptureZone = createClass({
 
 		event.preventDefault();
 
-		this.props.onDragStart({
-			dX: 0,
-			dY: 0,
-			pageX,
-			pageY,
-		}, {
-			event,
-			props: this.props,
-		});
+		this.props.onDragStart(
+			{
+				dX: 0,
+				dY: 0,
+				pageX,
+				pageY,
+			},
+			{
+				event,
+				props: this.props,
+			}
+		);
 
 		this.setState({
 			pageX,

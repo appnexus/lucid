@@ -2,12 +2,7 @@
 import assert from 'assert';
 import _ from 'lodash';
 import sinon from 'sinon';
-import {
-	isDevMode,
-	isNode,
-	logger,
-	checkIsDev,
-} from './logger';
+import { isDevMode, isNode, logger, checkIsDev } from './logger';
 
 describe('logger', () => {
 	describe('isDevMode', () => {
@@ -58,15 +53,27 @@ describe('logger', () => {
 			it('should log a message', () => {
 				log('Message Sent.');
 				assert.equal(1, console.log.callCount, 'callCount must be `1`');
-				assert.equal('Message Sent.', console.log.firstCall.args[0], 'must log the correct message');
+				assert.equal(
+					'Message Sent.',
+					console.log.firstCall.args[0],
+					'must log the correct message'
+				);
 			});
 
 			it('should log multiple messages', () => {
 				log('First Message.');
 				log('Second Message.');
 				assert.equal(2, console.log.callCount, 'callCount must be `2`');
-				assert.equal('First Message.', console.log.firstCall.args[0], 'must log the correct first message');
-				assert.equal('Second Message.', console.log.secondCall.args[0], 'must log the correct first message');
+				assert.equal(
+					'First Message.',
+					console.log.firstCall.args[0],
+					'must log the correct first message'
+				);
+				assert.equal(
+					'Second Message.',
+					console.log.secondCall.args[0],
+					'must log the correct first message'
+				);
 			});
 		});
 
@@ -88,22 +95,38 @@ describe('logger', () => {
 			it('should log a message', () => {
 				logOnce(onceID1, 'Message Sent.');
 				assert.equal(1, console.log.callCount, 'callCount must be `1`');
-				assert.equal('Message Sent.', console.log.firstCall.args[0], 'must log the correct message');
+				assert.equal(
+					'Message Sent.',
+					console.log.firstCall.args[0],
+					'must log the correct message'
+				);
 			});
 
 			it('should log multiple messages with different keys', () => {
 				logOnce(onceID1, 'First Message.');
 				logOnce(onceID2, 'Second Message.');
 				assert.equal(2, console.log.callCount, 'callCount must be `2`');
-				assert.equal('First Message.', console.log.firstCall.args[0], 'must log the correct first message');
-				assert.equal('Second Message.', console.log.secondCall.args[0], 'must log the correct first message');
+				assert.equal(
+					'First Message.',
+					console.log.firstCall.args[0],
+					'must log the correct first message'
+				);
+				assert.equal(
+					'Second Message.',
+					console.log.secondCall.args[0],
+					'must log the correct first message'
+				);
 			});
 
 			it('should not log multiple messages with the same key', () => {
 				logOnce(onceID1, 'First Message.');
 				logOnce(onceID1, 'Second Message.');
 				assert.equal(1, console.log.callCount, 'callCount must be `1`');
-				assert.equal('First Message.', console.log.firstCall.args[0], 'must log the correct first message');
+				assert.equal(
+					'First Message.',
+					console.log.firstCall.args[0],
+					'must log the correct first message'
+				);
 			});
 		});
 
@@ -121,15 +144,27 @@ describe('logger', () => {
 			it('should log a warn message', () => {
 				warn('Message Sent.');
 				assert.equal(1, console.warn.callCount, 'callCount must be `1`');
-				assert.equal('Message Sent.', console.warn.firstCall.args[0], 'must log the correct message');
+				assert.equal(
+					'Message Sent.',
+					console.warn.firstCall.args[0],
+					'must log the correct message'
+				);
 			});
 
 			it('should log multiple warn messages', () => {
 				warn('First Message.');
 				warn('Second Message.');
 				assert.equal(2, console.warn.callCount, 'callCount must be `2`');
-				assert.equal('First Message.', console.warn.firstCall.args[0], 'must log the correct first message');
-				assert.equal('Second Message.', console.warn.secondCall.args[0], 'must log the correct first message');
+				assert.equal(
+					'First Message.',
+					console.warn.firstCall.args[0],
+					'must log the correct first message'
+				);
+				assert.equal(
+					'Second Message.',
+					console.warn.secondCall.args[0],
+					'must log the correct first message'
+				);
 			});
 		});
 
@@ -152,22 +187,38 @@ describe('logger', () => {
 			it('should log a message', () => {
 				warnOnce(onceID1, 'Message Sent.');
 				assert.equal(1, console.warn.callCount, 'callCount must be `1`');
-				assert.equal('Message Sent.', console.warn.firstCall.args[0], 'must log the correct warn message');
+				assert.equal(
+					'Message Sent.',
+					console.warn.firstCall.args[0],
+					'must log the correct warn message'
+				);
 			});
 
 			it('should log multiple warn messages with different keys', () => {
 				warnOnce(onceID1, 'First Message.');
 				warnOnce(onceID2, 'Second Message.');
 				assert.equal(2, console.warn.callCount, 'callCount must be `2`');
-				assert.equal('First Message.', console.warn.firstCall.args[0], 'must log the correct first message');
-				assert.equal('Second Message.', console.warn.secondCall.args[0], 'must log the correct first message');
+				assert.equal(
+					'First Message.',
+					console.warn.firstCall.args[0],
+					'must log the correct first message'
+				);
+				assert.equal(
+					'Second Message.',
+					console.warn.secondCall.args[0],
+					'must log the correct first message'
+				);
 			});
 
 			it('should not log multiple warn messages with the same key', () => {
 				warnOnce(onceID1, 'First Message.');
 				warnOnce(onceID1, 'Second Message.');
 				assert.equal(1, console.warn.callCount, 'callCount must be `1`');
-				assert.equal('First Message.', console.warn.firstCall.args[0], 'must log the correct first message');
+				assert.equal(
+					'First Message.',
+					console.warn.firstCall.args[0],
+					'must log the correct first message'
+				);
 			});
 		});
 
@@ -185,15 +236,27 @@ describe('logger', () => {
 			it('should log an error message', () => {
 				error('Message Sent.');
 				assert.equal(1, console.error.callCount, 'callCount must be `1`');
-				assert.equal('Message Sent.', console.error.firstCall.args[0], 'must log the correct message');
+				assert.equal(
+					'Message Sent.',
+					console.error.firstCall.args[0],
+					'must log the correct message'
+				);
 			});
 
 			it('should log multiple error messages', () => {
 				error('First Message.');
 				error('Second Message.');
 				assert.equal(2, console.error.callCount, 'callCount must be `2`');
-				assert.equal('First Message.', console.error.firstCall.args[0], 'must log the correct first message');
-				assert.equal('Second Message.', console.error.secondCall.args[0], 'must log the correct first message');
+				assert.equal(
+					'First Message.',
+					console.error.firstCall.args[0],
+					'must log the correct first message'
+				);
+				assert.equal(
+					'Second Message.',
+					console.error.secondCall.args[0],
+					'must log the correct first message'
+				);
 			});
 		});
 
@@ -216,22 +279,38 @@ describe('logger', () => {
 			it('should log an error message', () => {
 				errorOnce(onceID1, 'Message Sent.');
 				assert.equal(1, console.error.callCount, 'callCount must be `1`');
-				assert.equal('Message Sent.', console.error.firstCall.args[0], 'must log the correct error message');
+				assert.equal(
+					'Message Sent.',
+					console.error.firstCall.args[0],
+					'must log the correct error message'
+				);
 			});
 
 			it('should log multiple warn messages with different keys', () => {
 				errorOnce(onceID1, 'First Message.');
 				errorOnce(onceID2, 'Second Message.');
 				assert.equal(2, console.error.callCount, 'callCount must be `2`');
-				assert.equal('First Message.', console.error.firstCall.args[0], 'must log the correct first message');
-				assert.equal('Second Message.', console.error.secondCall.args[0], 'must log the correct first message');
+				assert.equal(
+					'First Message.',
+					console.error.firstCall.args[0],
+					'must log the correct first message'
+				);
+				assert.equal(
+					'Second Message.',
+					console.error.secondCall.args[0],
+					'must log the correct first message'
+				);
 			});
 
 			it('should not log multiple warn messages with the same key', () => {
 				errorOnce(onceID1, 'First Message.');
 				errorOnce(onceID1, 'Second Message.');
 				assert.equal(1, console.error.callCount, 'callCount must be `1`');
-				assert.equal('First Message.', console.error.firstCall.args[0], 'must log the correct first message');
+				assert.equal(
+					'First Message.',
+					console.error.firstCall.args[0],
+					'must log the correct first message'
+				);
 			});
 		});
 
@@ -252,7 +331,11 @@ describe('logger', () => {
 				logOnce(onceID1, 'First Message.');
 				logOnce(onceID1, 'Second Message.');
 				assert.equal(1, console.log.callCount, 'callCount must be `1`');
-				assert.equal('First Message.', console.log.firstCall.args[0], 'must log the correct first message');
+				assert.equal(
+					'First Message.',
+					console.log.firstCall.args[0],
+					'must log the correct first message'
+				);
 			});
 
 			it('should allow logging multiple messages with the same key if resetOnce is called', () => {
@@ -260,8 +343,16 @@ describe('logger', () => {
 				resetOnce(onceID1);
 				logOnce(onceID1, 'Second Message.');
 				assert.equal(2, console.log.callCount, 'callCount must be `2`');
-				assert.equal('First Message.', console.log.firstCall.args[0], 'must log the correct first message');
-				assert.equal('Second Message.', console.log.secondCall.args[0], 'must log the correct first message');
+				assert.equal(
+					'First Message.',
+					console.log.firstCall.args[0],
+					'must log the correct first message'
+				);
+				assert.equal(
+					'Second Message.',
+					console.log.secondCall.args[0],
+					'must log the correct first message'
+				);
 			});
 		});
 	});

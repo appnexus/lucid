@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes } from '../../util/component-types';
@@ -19,7 +20,7 @@ const {
 	shape,
 	string,
 	oneOfType,
-} = React.PropTypes;
+} = PropTypes;
 
 /**
  *
@@ -161,11 +162,7 @@ const SingleSelect = createClass({
 			DropMenu: dropMenuProps,
 		} = this.props;
 
-		const {
-			direction,
-			isExpanded,
-			flyOutStyle,
-		} = dropMenuProps;
+		const { direction, isExpanded, flyOutStyle } = dropMenuProps;
 
 		const {
 			optionGroups,
@@ -174,7 +171,9 @@ const SingleSelect = createClass({
 			flattenedOptionsData,
 		} = this.state;
 
-		const placeholderProps = _.first(_.map(findTypes(this.props, SingleSelect.Placeholder), 'props'));
+		const placeholderProps = _.first(
+			_.map(findTypes(this.props, SingleSelect.Placeholder), 'props')
+		);
 		const placeholder = _.get(placeholderProps, 'children', 'Select');
 		const isItemSelected = _.isNumber(selectedIndex);
 
@@ -186,48 +185,73 @@ const SingleSelect = createClass({
 				className={cx('&', className)}
 				onSelect={onSelect}
 				style={style}
-				flyOutStyle={_.assign({}, flyOutStyle, !_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null)}
+				flyOutStyle={_.assign(
+					{},
+					flyOutStyle,
+					!_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null
+				)}
 			>
 				<DropMenu.Control>
 					<div
 						tabIndex={0}
 						className={cx('&-Control', {
-							'&-Control-is-highlighted': (!isDisabled && isItemSelected && isSelectionHighlighted) || (isExpanded && isSelectionHighlighted),
-							'&-Control-is-selected': (!isDisabled && isItemSelected && isSelectionHighlighted) || (isExpanded && isSelectionHighlighted),
+							'&-Control-is-highlighted': (!isDisabled &&
+								isItemSelected &&
+								isSelectionHighlighted) ||
+								(isExpanded && isSelectionHighlighted),
+							'&-Control-is-selected': (!isDisabled &&
+								isItemSelected &&
+								isSelectionHighlighted) ||
+								(isExpanded && isSelectionHighlighted),
 							'&-Control-is-expanded': isExpanded,
 							'&-Control-is-disabled': isDisabled,
-						})
-					}>
+						})}
+					>
 						<span
 							{...(!isItemSelected ? placeholderProps : null)}
 							className={cx(
-									'&-Control-content',
-									(!isItemSelected ? _.get(placeholderProps, 'className') : null)
+								'&-Control-content',
+								!isItemSelected ? _.get(placeholderProps, 'className') : null
 							)}
 						>
-							{isItemSelected ? flattenedOptionsData[selectedIndex].optionProps.children : placeholder}
+							{isItemSelected
+								? flattenedOptionsData[selectedIndex].optionProps.children
+								: placeholder}
 						</span>
-						<CaretIcon
-							direction={isExpanded ? direction : 'down'}
-							size={8}
-						/>
+						<CaretIcon direction={isExpanded ? direction : 'down'} size={8} />
 					</div>
 				</DropMenu.Control>
-				{hasReset && isItemSelected ? (
-					<DropMenu.NullOption {...placeholderProps}>{placeholder}</DropMenu.NullOption>
-				) : null}
-				{
-					// for each option group passed in, render a DropMenu.OptionGroup, any label will be included in it's children, render each option inside the group
-					_.map(optionGroups, (optionGroupProps, optionGroupIndex) => (
-							<DropMenu.OptionGroup key={'SingleSelectOptionGroup' + optionGroupIndex} {...optionGroupProps}>
-								{optionGroupProps.children}
-								{_.map(_.get(optionGroupDataLookup, optionGroupIndex), ({ optionProps, optionIndex }) => (
-									<DropMenu.Option key={'SingleSelectOption' + optionIndex} {...optionProps} />
-								))}
-							</DropMenu.OptionGroup>
-						// then render all the ungrouped options at the end
-						)).concat(_.map(ungroupedOptionData, ({ optionProps, optionIndex }) => (<DropMenu.Option key={'SingleSelectOption' + optionIndex} {...optionProps} />)))
-				}
+				{hasReset && isItemSelected
+					? <DropMenu.NullOption {...placeholderProps}>
+							{placeholder}
+						</DropMenu.NullOption>
+					: null}
+				{// for each option group passed in, render a DropMenu.OptionGroup, any label will be included in it's children, render each option inside the group
+				_.map(optionGroups, (optionGroupProps, optionGroupIndex) => (
+					<DropMenu.OptionGroup
+						key={'SingleSelectOptionGroup' + optionGroupIndex}
+						{...optionGroupProps}
+					>
+						{optionGroupProps.children}
+						{_.map(_.get(optionGroupDataLookup, optionGroupIndex), ({
+							optionProps,
+							optionIndex,
+						}) => (
+							<DropMenu.Option
+								key={'SingleSelectOption' + optionIndex}
+								{...optionProps}
+							/>
+						))}
+					</DropMenu.OptionGroup>
+				)).concat(
+					// then render all the ungrouped options at the end
+					_.map(ungroupedOptionData, ({ optionProps, optionIndex }) => (
+						<DropMenu.Option
+							key={'SingleSelectOption' + optionIndex}
+							{...optionProps}
+						/>
+					))
+				)}
 			</DropMenu>
 		);
 	},

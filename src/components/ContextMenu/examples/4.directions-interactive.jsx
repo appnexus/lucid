@@ -2,20 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import { ContextMenu, SingleSelect, TextField } from '../../../index';
 
-const {
-	CENTER,
-	DOWN,
-	END,
-	LEFT,
-	RIGHT,
-	START,
-	UP,
-} = ContextMenu;
+const { CENTER, DOWN, END, LEFT, RIGHT, START, UP } = ContextMenu;
 
 export default React.createClass({
-
 	render() {
-
 		const style = {
 			background: 'white',
 			boxShadow: '1px 1px 4px black',
@@ -42,28 +32,44 @@ export default React.createClass({
 						flexDirection: 'column',
 					}}
 				>
-					<SingleSelect onSelect={(i) => this.setState({ direction: directions[i] })} >
-						<SingleSelect.Placeholder>Select a direction</SingleSelect.Placeholder>
-						{_.map(directions, (direction) => <SingleSelect.Option key={direction}>{direction}</SingleSelect.Option>)}
+					<SingleSelect
+						onSelect={i => this.setState({ direction: directions[i] })}
+					>
+						<SingleSelect.Placeholder>
+							Select a direction
+						</SingleSelect.Placeholder>
+						{_.map(directions, direction => (
+							<SingleSelect.Option key={direction}>
+								{direction}
+							</SingleSelect.Option>
+						))}
 					</SingleSelect>
 
 					directonOffset:
 					<TextField
 						style={{ width: 100 }}
 						value={directonOffset}
-						onChange={(directonOffset) => this.setState({ directonOffset })}
+						onChange={directonOffset => this.setState({ directonOffset })}
 					/>
 
-					<SingleSelect onSelect={(i) => this.setState({ alignment: alignments[i] })} >
-						<SingleSelect.Placeholder>Select an alignment</SingleSelect.Placeholder>
-						{_.map(alignments, (alignment) => <SingleSelect.Option key={alignment}>{alignment}</SingleSelect.Option>)}
+					<SingleSelect
+						onSelect={i => this.setState({ alignment: alignments[i] })}
+					>
+						<SingleSelect.Placeholder>
+							Select an alignment
+						</SingleSelect.Placeholder>
+						{_.map(alignments, alignment => (
+							<SingleSelect.Option key={alignment}>
+								{alignment}
+							</SingleSelect.Option>
+						))}
 					</SingleSelect>
 
 					alignmentOffset:
 					<TextField
 						style={{ width: 100 }}
 						value={alignmentOffset}
-						onChange={(alignmentOffset) => this.setState({ alignmentOffset })}
+						onChange={alignmentOffset => this.setState({ alignmentOffset })}
 					/>
 
 					getAlignmentOffset:
@@ -71,7 +77,8 @@ export default React.createClass({
 						isDisabled={alignment !== CENTER}
 						style={{ width: 100 }}
 						value={getAlignmentOffset}
-						onSubmit={(getAlignmentOffset) => this.setState({ getAlignmentOffset })}
+						onSubmit={getAlignmentOffset =>
+							this.setState({ getAlignmentOffset })}
 					/>
 					<code>{getAlignmentOffset || null}</code>
 
@@ -87,9 +94,15 @@ export default React.createClass({
 				>
 					<ContextMenu
 						direction={direction}
-						directonOffset={_.isEmpty(directonOffset) ? 0 : _.parseInt(directonOffset)}
+						directonOffset={
+							_.isEmpty(directonOffset) ? 0 : _.parseInt(directonOffset)
+						}
 						alignment={alignment || undefined}
-						alignmentOffset={_.isEmpty(alignmentOffset) ? undefined : _.parseInt(alignmentOffset)}
+						alignmentOffset={
+							_.isEmpty(alignmentOffset)
+								? undefined
+								: _.parseInt(alignmentOffset)
+						}
 						getAlignmentOffset={eval(getAlignmentOffset)}
 					>
 
@@ -97,20 +110,18 @@ export default React.createClass({
 							Target
 						</ContextMenu.Target>
 
-						<ContextMenu.FlyOut
-							style={{ width: 210, ...style }}
-						>
+						<ContextMenu.FlyOut style={{ width: 210, ...style }}>
 							<div>{`direction: ${direction || 'default'}`}</div>
 							<div>{`directonOffset: ${directonOffset || 'default'}`}</div>
 							<div>{`alignment: ${alignment || 'default'}`}</div>
 							<div>{`alignmentOffset: ${alignmentOffset || 'default'}`}</div>
-							<div>{`getAlignmentOffset: ${getAlignmentOffset || 'default'}`}</div>
+							<div
+							>{`getAlignmentOffset: ${getAlignmentOffset || 'default'}`}</div>
 						</ContextMenu.FlyOut>
 
 					</ContextMenu>
+				</section>
 			</section>
-		</section>
 		);
 	},
-
 });

@@ -59,23 +59,23 @@ describe('CheckboxLabeled', () => {
 			it('passes through all props not defined in `propTypes` to its `Checkbox` instance.', () => {
 				const wrapper = shallow(
 					<CheckboxLabeled
-							className='wut'
-							isDisabled={true}
-							isSelected={true}
-							style={{ fontWeight: 'bold' }}
-							onSelect={_.noop}
-							foo={1}
-							bar={2}
-							baz={3}
-							qux={4}
-							quux={5}
+						className="wut"
+						isDisabled={true}
+						isSelected={true}
+						style={{ fontWeight: 'bold' }}
+						onSelect={_.noop}
+						foo={1}
+						bar={2}
+						baz={3}
+						qux={4}
+						quux={5}
 					/>
 				);
 				const checkboxProps = wrapper.find(Checkbox).props();
 
 				// It should pass `foo`, `bar`, `baz`, `qux`, and `quux` through
 				// to the `Checkbox` instance.
-				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], (prop) => {
+				_.forEach(['foo', 'bar', 'baz', 'qux', 'quux'], prop => {
 					assert(_.has(checkboxProps, prop));
 				});
 			});

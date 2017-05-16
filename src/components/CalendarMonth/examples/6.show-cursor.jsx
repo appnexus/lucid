@@ -12,13 +12,11 @@ export default React.createClass({
 			<section style={{ maxWidth: 400 }}>
 
 				Cursor for day selectMode:
-				<CalendarMonth
-					cursor={new Date()}
-				/>
+				<CalendarMonth cursor={new Date()} />
 
 				Cursor for range selectMode:
 				<CalendarMonth
-					selectMode='to'
+					selectMode="to"
 					from={this.fromDate}
 					cursor={new Date()}
 				/>

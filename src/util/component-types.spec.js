@@ -1,6 +1,7 @@
 import assert from 'assert';
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { shallow } from 'enzyme';
 
 import {
@@ -13,11 +14,12 @@ import {
 } from './component-types';
 
 function isReactComponentClass(componentClass) {
-	return _.isFunction(componentClass)
-		&& _.has(componentClass, 'prototype')
-		&& !!componentClass.prototype.isReactComponent;
+	return (
+		_.isFunction(componentClass) &&
+		_.has(componentClass, 'prototype') &&
+		!!componentClass.prototype.isReactComponent
+	);
 }
-
 
 describe('component-types', () => {
 	describe('createClass', () => {
@@ -46,8 +48,15 @@ describe('component-types', () => {
 				reducers: panelReducers,
 			});
 
-			assert(_.has(Panel, 'reducers'), 'must have `reducers` as a static property');
-			assert.equal(_.get(Panel, 'reducers'), panelReducers, 'static `reducers` must equal defined reducers');
+			assert(
+				_.has(Panel, 'reducers'),
+				'must have `reducers` as a static property'
+			);
+			assert.equal(
+				_.get(Panel, 'reducers'),
+				panelReducers,
+				'static `reducers` must equal defined reducers'
+			);
 		});
 
 		it('should make `selectors` a static property.', () => {
@@ -59,8 +68,15 @@ describe('component-types', () => {
 				selectors: panelSelectors,
 			});
 
-			assert(_.has(Panel, 'selectors'), 'must have `selectors` as a static property');
-			assert.equal(_.get(Panel, 'selectors'), panelSelectors, 'static `selectors` must equal defined selectors');
+			assert(
+				_.has(Panel, 'selectors'),
+				'must have `selectors` as a static property'
+			);
+			assert.equal(
+				_.get(Panel, 'selectors'),
+				panelSelectors,
+				'static `selectors` must equal defined selectors'
+			);
 		});
 
 		it('should make `initialState` a static property.', () => {
@@ -70,8 +86,15 @@ describe('component-types', () => {
 				initialState,
 			});
 
-			assert(_.has(Panel, 'initialState'), 'must have `initialState` as a static property');
-			assert.equal(_.get(Panel, 'initialState'), initialState, 'static `initialState` must equal defined initialState');
+			assert(
+				_.has(Panel, 'initialState'),
+				'must have `initialState` as a static property'
+			);
+			assert.equal(
+				_.get(Panel, 'initialState'),
+				initialState,
+				'static `initialState` must equal defined initialState'
+			);
 		});
 
 		it('should use `getDefaultProps` for default initialState', () => {
@@ -81,8 +104,15 @@ describe('component-types', () => {
 				getDefaultProps: () => defaultProps,
 			});
 
-			assert(_.has(Panel, 'initialState'), 'must have `initialState` as a static property');
-			assert.deepEqual(_.get(Panel, 'initialState'), defaultProps, 'static `initialState` must equal return value of `getDefaultProps`');
+			assert(
+				_.has(Panel, 'initialState'),
+				'must have `initialState` as a static property'
+			);
+			assert.deepEqual(
+				_.get(Panel, 'initialState'),
+				defaultProps,
+				'static `initialState` must equal return value of `getDefaultProps`'
+			);
 		});
 
 		it('should make `propName` a static property.', () => {
@@ -90,8 +120,14 @@ describe('component-types', () => {
 				propName: ['Panel', 'panel', 'panels'],
 			});
 
-			assert(_.has(Panel, 'propName'), 'must have `propName` as a static property');
-			assert(_.isEqual(_.get(Panel, 'propName'), ['Panel', 'panel', 'panels']), 'static `propName` must equal defined prop names');
+			assert(
+				_.has(Panel, 'propName'),
+				'must have `propName` as a static property'
+			);
+			assert(
+				_.isEqual(_.get(Panel, 'propName'), ['Panel', 'panel', 'panels']),
+				'static `propName` must equal defined prop names'
+			);
 		});
 	});
 
@@ -109,12 +145,33 @@ describe('component-types', () => {
 			const spanElements = filterTypes(elements, 'span');
 
 			assert.equal(3, spanElements.length, 'length must be 3');
-			assert(React.isValidElement(spanElements[0]), 'must be a valid React element');
-			assert.equal('Many', shallow(spanElements[0]).text(), 'text must be `Many`');
-			assert(React.isValidElement(spanElements[1]), 'must be a valid React element');
-			assert.equal('Make', shallow(spanElements[1]).text(), 'text must be `Make`');
-			assert(React.isValidElement(spanElements[2]), 'must be a valid React element');
-			assert.equal('Work', shallow(spanElements[2]).text(), 'text must be `Work`');
+			assert(
+				React.isValidElement(spanElements[0]),
+				'must be a valid React element'
+			);
+			assert.equal(
+				'Many',
+				shallow(spanElements[0]).text(),
+				'text must be `Many`'
+			);
+			assert(
+				React.isValidElement(spanElements[1]),
+				'must be a valid React element'
+			);
+			assert.equal(
+				'Make',
+				shallow(spanElements[1]).text(),
+				'text must be `Make`'
+			);
+			assert(
+				React.isValidElement(spanElements[2]),
+				'must be a valid React element'
+			);
+			assert.equal(
+				'Work',
+				shallow(spanElements[2]).text(),
+				'text must be `Work`'
+			);
 		});
 
 		it('should filter elements by many component types', () => {
@@ -130,14 +187,34 @@ describe('component-types', () => {
 			const spanElements = filterTypes(elements, ['section', Option]);
 
 			assert.equal(4, spanElements.length, 'length must be 4');
-			assert(React.isValidElement(spanElements[0]), 'must be a valid React element');
+			assert(
+				React.isValidElement(spanElements[0]),
+				'must be a valid React element'
+			);
 			assert.equal(Option, spanElements[0].type, 'type must be `Option`');
-			assert(React.isValidElement(spanElements[1]), 'must be a valid React element');
-			assert.equal('Make', shallow(spanElements[1]).text(), 'text must be `Make`');
-			assert(React.isValidElement(spanElements[2]), 'must be a valid React element');
+			assert(
+				React.isValidElement(spanElements[1]),
+				'must be a valid React element'
+			);
+			assert.equal(
+				'Make',
+				shallow(spanElements[1]).text(),
+				'text must be `Make`'
+			);
+			assert(
+				React.isValidElement(spanElements[2]),
+				'must be a valid React element'
+			);
 			assert.equal(Option, spanElements[0].type, 'type must be `Option`');
-			assert(React.isValidElement(spanElements[3]), 'must be a valid React element');
-			assert.equal('Work', shallow(spanElements[3]).text(), 'text must be `Work`');
+			assert(
+				React.isValidElement(spanElements[3]),
+				'must be a valid React element'
+			);
+			assert.equal(
+				'Work',
+				shallow(spanElements[3]).text(),
+				'text must be `Work`'
+			);
 		});
 	});
 
@@ -155,12 +232,26 @@ describe('component-types', () => {
 			const nonSpanElements = rejectTypes(elements, 'span');
 
 			assert.equal(2, nonSpanElements.length, 'length must be 2');
-			assert(React.isValidElement(nonSpanElements[0]), 'must be a valid React element');
+			assert(
+				React.isValidElement(nonSpanElements[0]),
+				'must be a valid React element'
+			);
 			assert.equal(Option, nonSpanElements[0].type, 'type must be `Option`');
-			assert.equal('Hands', nonSpanElements[0].props.children, 'first element must have the string `Hands`');
-			assert(React.isValidElement(nonSpanElements[1]), 'must be a valid React element');
+			assert.equal(
+				'Hands',
+				nonSpanElements[0].props.children,
+				'first element must have the string `Hands`'
+			);
+			assert(
+				React.isValidElement(nonSpanElements[1]),
+				'must be a valid React element'
+			);
 			assert.equal(Option, nonSpanElements[1].type, 'type must be `Option`');
-			assert.equal('Light', nonSpanElements[1].props.children, 'second element must have the string `Light`');
+			assert.equal(
+				'Light',
+				nonSpanElements[1].props.children,
+				'second element must have the string `Light`'
+			);
 		});
 
 		it('should reject elements of many component types', () => {
@@ -176,9 +267,20 @@ describe('component-types', () => {
 			const remainingElements = rejectTypes(elements, [Option, 'span']);
 
 			assert.equal(1, remainingElements.length, 'length must be 1');
-			assert(React.isValidElement(remainingElements[0]), 'must be a valid React element');
-			assert.equal('section', shallow(remainingElements[0]).type(), 'type must be `section`');
-			assert.equal('Make', shallow(remainingElements[0]).text(), 'element must have the string `Make`');
+			assert(
+				React.isValidElement(remainingElements[0]),
+				'must be a valid React element'
+			);
+			assert.equal(
+				'section',
+				shallow(remainingElements[0]).type(),
+				'type must be `section`'
+			);
+			assert.equal(
+				'Make',
+				shallow(remainingElements[0]).text(),
+				'element must have the string `Make`'
+			);
 		});
 	});
 
@@ -194,18 +296,32 @@ describe('component-types', () => {
 				{ isDisabled: true },
 			]);
 			assert.equal(5, elements.length, 'length must be 5');
-			_.forEach(elements, (element) => {
+			_.forEach(elements, element => {
 				assert.equal(Option, element.type, 'type must be Option');
 			});
-			assert.equal('button', elements[1].props.children.type, 'element must be a button');
-			assert.equal('red', elements[2].props.children, 'element children must be `red`');
-			assert(_.isNull(elements[3].props.children), 'must pass null values through');
-			assert(_.isEqual({ isDisabled: true }, elements[4].props), 'element props must match');
+			assert.equal(
+				'button',
+				elements[1].props.children.type,
+				'element must be a button'
+			);
+			assert.equal(
+				'red',
+				elements[2].props.children,
+				'element children must be `red`'
+			);
+			assert(
+				_.isNull(elements[3].props.children),
+				'must pass null values through'
+			);
+			assert(
+				_.isEqual({ isDisabled: true }, elements[4].props),
+				'element props must match'
+			);
 		});
 	});
 
 	describe('findTypes', () => {
-		it('should find all elements of the same type from children', (done) => {
+		it('should find all elements of the same type from children', done => {
 			const Option = createClass({ propName: 'option' });
 
 			const Selector = createClass({
@@ -213,8 +329,16 @@ describe('component-types', () => {
 					const optionElements = findTypes(this.props, Option);
 
 					assert.equal(2, optionElements.length, 'length must be 2');
-					assert.equal(true, _.get(optionElements[0].props, 'isDisabled'), 'element must have prop `isDisabled`');
-					assert.equal('Select red', _.get(optionElements[1].props, 'title'), 'element must have prop `title`');
+					assert.equal(
+						true,
+						_.get(optionElements[0].props, 'isDisabled'),
+						'element must have prop `isDisabled`'
+					);
+					assert.equal(
+						'Select red',
+						_.get(optionElements[1].props, 'title'),
+						'element must have prop `title`'
+					);
 					done();
 				},
 			});
@@ -224,13 +348,13 @@ describe('component-types', () => {
 					<button />
 					<Option isDisabled={true} />
 					<button />
-					<Option title='Select red'>Red</Option>
+					<Option title="Select red">Red</Option>
 					<button />
 				</Selector>
 			);
 		});
 
-		it('should find all elements of the same type from props if type has `propName` defined', (done) => {
+		it('should find all elements of the same type from props if type has `propName` defined', done => {
 			const Option = createClass({ propName: ['option', 'options'] });
 
 			const Selector = createClass({
@@ -238,25 +362,36 @@ describe('component-types', () => {
 					const optionElements = findTypes(this.props, Option);
 
 					assert.equal(3, optionElements.length, 'length must be 3');
-					assert.equal('red', _.get(optionElements[0].props, 'children'), 'element children must match prop value');
-					assert(_.isEqual({ children: 'green', isDisabled: true }, optionElements[1].props), 'element props must match props');
-					assert.equal('blue', _.get(optionElements[2].props, 'children'), 'element children must match prop value');
+					assert.equal(
+						'red',
+						_.get(optionElements[0].props, 'children'),
+						'element children must match prop value'
+					);
+					assert(
+						_.isEqual(
+							{ children: 'green', isDisabled: true },
+							optionElements[1].props
+						),
+						'element props must match props'
+					);
+					assert.equal(
+						'blue',
+						_.get(optionElements[2].props, 'children'),
+						'element children must match prop value'
+					);
 					done();
 				},
 			});
 
 			shallow(
 				<Selector
-					option='red'
-					options={[
-						{ children: 'green', isDisabled: true },
-						'blue',
-					]}
+					option="red"
+					options={[{ children: 'green', isDisabled: true }, 'blue']}
 				/>
 			);
 		});
 
-		it('should find all elements of the same type from props and children', (done) => {
+		it('should find all elements of the same type from props and children', done => {
 			const Option = createClass({ propName: ['option', 'options'] });
 
 			const Selector = createClass({
@@ -264,27 +399,46 @@ describe('component-types', () => {
 					const optionElements = findTypes(this.props, Option);
 
 					assert.equal(5, optionElements.length, 'length must be 3');
-					assert.equal('red', _.get(optionElements[0].props, 'children'), 'element children must match prop value');
-					assert(_.isEqual({ children: 'green', isDisabled: true }, optionElements[1].props), 'element props must match props');
-					assert.equal('blue', _.get(optionElements[2].props, 'children'), 'element children must match prop value');
-					assert.equal(true, _.get(optionElements[3].props, 'isDisabled'), 'element must have prop `isDisabled`');
-					assert.equal('Select red', _.get(optionElements[4].props, 'title'), 'element must have prop `title`');
+					assert.equal(
+						'red',
+						_.get(optionElements[0].props, 'children'),
+						'element children must match prop value'
+					);
+					assert(
+						_.isEqual(
+							{ children: 'green', isDisabled: true },
+							optionElements[1].props
+						),
+						'element props must match props'
+					);
+					assert.equal(
+						'blue',
+						_.get(optionElements[2].props, 'children'),
+						'element children must match prop value'
+					);
+					assert.equal(
+						true,
+						_.get(optionElements[3].props, 'isDisabled'),
+						'element must have prop `isDisabled`'
+					);
+					assert.equal(
+						'Select red',
+						_.get(optionElements[4].props, 'title'),
+						'element must have prop `title`'
+					);
 					done();
 				},
 			});
 
 			shallow(
 				<Selector
-					option='red'
-					options={[
-						{ children: 'green', isDisabled: true },
-						'blue',
-					]}
+					option="red"
+					options={[{ children: 'green', isDisabled: true }, 'blue']}
 				>
 					<button />
 					<Option isDisabled={true} />
 					<button />
-					<Option title='Select red'>Red</Option>
+					<Option title="Select red">Red</Option>
 					<button />
 				</Selector>
 			);
@@ -294,60 +448,83 @@ describe('component-types', () => {
 	describe('omitProps', () => {
 		const Button = createClass({
 			propTypes: {
-				className: React.PropTypes.any,
-				isActive: React.PropTypes.any,
-				isDisabled: React.PropTypes.any,
-				kind: React.PropTypes.any,
-				size: React.PropTypes.any,
+				className: PropTypes.any,
+				isActive: PropTypes.any,
+				isDisabled: PropTypes.any,
+				kind: PropTypes.any,
+				size: PropTypes.any,
 			},
 		});
 
 		it('should omit props which are defined in propTypes', () => {
-			const props = omitProps({
-				className: 'test-button',
-				text: 'Click Me',
-				isActive: true,
-				isPrimary: true,
-				size: 'normal',
-			}, Button);
+			const props = omitProps(
+				{
+					className: 'test-button',
+					text: 'Click Me',
+					isActive: true,
+					isPrimary: true,
+					size: 'normal',
+				},
+				Button
+			);
 
-			assert.deepEqual(props, {
-				text: 'Click Me',
-				isPrimary: true,
-			}, 'must omit props defined in propTypes');
+			assert.deepEqual(
+				props,
+				{
+					text: 'Click Me',
+					isPrimary: true,
+				},
+				'must omit props defined in propTypes'
+			);
 		});
 
 		it('should omit `callbackId` from props by default', () => {
-			const props = omitProps({
-				className: 'test-button',
-				text: 'Click Me',
-				isActive: true,
-				isPrimary: true,
-				size: 'normal',
-				callbackId: 'cant find me',
-			}, Button);
+			const props = omitProps(
+				{
+					className: 'test-button',
+					text: 'Click Me',
+					isActive: true,
+					isPrimary: true,
+					size: 'normal',
+					callbackId: 'cant find me',
+				},
+				Button
+			);
 
-			assert.deepEqual(props, {
-				text: 'Click Me',
-				isPrimary: true,
-			}, 'must omit props defined in propTypes');
+			assert.deepEqual(
+				props,
+				{
+					text: 'Click Me',
+					isPrimary: true,
+				},
+				'must omit props defined in propTypes'
+			);
 		});
 
 		it('should not omit `callbackId` from props when specified', () => {
-			const props = omitProps({
-				className: 'test-button',
-				text: 'Click Me',
-				isActive: true,
-				isPrimary: true,
-				size: 'normal',
-				callbackId: 'can find me',
-			}, Button, [], false);
+			const props = omitProps(
+				{
+					className: 'test-button',
+					text: 'Click Me',
+					isActive: true,
+					isPrimary: true,
+					size: 'normal',
+					callbackId: 'can find me',
+				},
+				Button,
+				[],
+				false
+			);
 
-			assert.deepEqual(props, {
-				text: 'Click Me',
-				isPrimary: true,
-				callbackId: 'can find me',
-			}, 'must omit props defined in propTypes');
+			assert.deepEqual(
+				props,
+				{
+					text: 'Click Me',
+					isPrimary: true,
+					callbackId: 'can find me',
+				},
+				'must omit props defined in propTypes'
+			);
 		});
 	});
 });

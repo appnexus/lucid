@@ -9,12 +9,12 @@ export default React.createClass({
 	render() {
 		return (
 			<RadioGroup
-					name='name'
-					selectedIndex={3}
-					style={{
-						display: 'flex',
-						flexDirection: 'column',
-					}}
+				name="name"
+				selectedIndex={3}
+				style={{
+					display: 'flex',
+					flexDirection: 'column',
+				}}
 			>
 				<RadioGroup.RadioButton style={style}>
 					<RadioGroup.Label>Captain America</RadioGroup.Label>

@@ -2,6 +2,7 @@ import assert from 'assert';
 import _ from 'lodash';
 import sinon from 'sinon';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { mount } from 'enzyme';
 
 import {
@@ -14,9 +15,7 @@ import {
 	safeMerge,
 	buildHybridComponent,
 } from './state-management';
-import {
-	createClass,
-} from './component-types';
+import { createClass } from './component-types';
 
 describe('#getDeepPaths', () => {
 	it('should return an empty array when arg is empty object, null, or undefined', () => {
@@ -39,23 +38,23 @@ describe('#getDeepPaths', () => {
 		};
 
 		const deepPaths = getDeepPaths(pagedTableObj);
-		const xorPaths = _.xorWith(deepPaths, [
-			['rows'],
-			['paginator', 'selectedPageIndex'],
-			['paginator', 'selectedPageSize'],
-			['paginator', 'dropselector', 'selectedIndex'],
-			['paginator', 'dropselector', 'options'],
-		], _.isEqual);
+		const xorPaths = _.xorWith(
+			deepPaths,
+			[
+				['rows'],
+				['paginator', 'selectedPageIndex'],
+				['paginator', 'selectedPageSize'],
+				['paginator', 'dropselector', 'selectedIndex'],
+				['paginator', 'dropselector', 'options'],
+			],
+			_.isEqual
+		);
 		assert(_.isEqual([], xorPaths));
 	});
 
 	it('should return an array of paths for each node with non-plain object value if arg is array', () => {
 		const deepPaths = getDeepPaths(['zero', { one: 1 }, 2]);
-		const xorPaths = _.xorWith(deepPaths, [
-			[0],
-			[1, 'one'],
-			[2],
-		], _.isEqual);
+		const xorPaths = _.xorWith(deepPaths, [[0], [1, 'one'], [2]], _.isEqual);
 		assert(_.isEqual([], xorPaths));
 	});
 });
@@ -86,17 +85,19 @@ describe('#omitFunctionPropsDeep', () => {
 
 		const result = omitFunctionPropsDeep(pagedTableObj);
 
-		assert(_.isEqual(result, {
-			rows: ['data0', 'data1'],
-			paginator: {
-				selectedPageIndex: 0,
-				selectedPageSize: 10,
-				dropselector: {
-					selectedIndex: 1,
-					options: [5, 10, 20],
+		assert(
+			_.isEqual(result, {
+				rows: ['data0', 'data1'],
+				paginator: {
+					selectedPageIndex: 0,
+					selectedPageSize: 10,
+					dropselector: {
+						selectedIndex: 1,
+						options: [5, 10, 20],
+					},
 				},
-			},
-		}));
+			})
+		);
 	});
 });
 
@@ -146,7 +147,10 @@ describe('#bindReducerToState', () => {
 			return _.assign({}, state, { value });
 		}
 
-		const boundSetValue = bindReducerToState(setValue, stateManager, ['sub', 'setValue']);
+		const boundSetValue = bindReducerToState(setValue, stateManager, [
+			'sub',
+			'setValue',
+		]);
 
 		assert.equal(state.sub.value, null);
 		boundSetValue('foo');
@@ -170,17 +174,19 @@ describe('#bindReducersToState', () => {
 		};
 
 		const reducers = {
-			increaseCounter: (state) => _.assign({}, state, {
-				counter: state.counter + 1,
-			}),
-			decreaseCounter: (state) => _.assign({}, state, {
-				counter: state.counter - 1,
-			}),
-			setCounter: (state, x) => _.assign({}, state, {
-				counter: x,
-			}),
+			increaseCounter: state =>
+				_.assign({}, state, {
+					counter: state.counter + 1,
+				}),
+			decreaseCounter: state =>
+				_.assign({}, state, {
+					counter: state.counter - 1,
+				}),
+			setCounter: (state, x) =>
+				_.assign({}, state, {
+					counter: x,
+				}),
 		};
-
 
 		const boundReducers = bindReducersToState(reducers, stateManager);
 
@@ -211,22 +217,25 @@ describe('#bindReducersToState', () => {
 		};
 
 		const reducers = {
-			setName: (state, newName) => _.assign({}, state, {
-				name: newName,
-			}),
+			setName: (state, newName) =>
+				_.assign({}, state, {
+					name: newName,
+				}),
 			count: {
-				increaseCounter: (state) => _.assign({}, state, {
-					counter: state.counter + 1,
-				}),
-				decreaseCounter: (state) => _.assign({}, state, {
-					counter: state.counter - 1,
-				}),
-				setCounter: (state, x) => _.assign({}, state, {
-					counter: x,
-				}),
+				increaseCounter: state =>
+					_.assign({}, state, {
+						counter: state.counter + 1,
+					}),
+				decreaseCounter: state =>
+					_.assign({}, state, {
+						counter: state.counter - 1,
+					}),
+				setCounter: (state, x) =>
+					_.assign({}, state, {
+						counter: x,
+					}),
 			},
 		};
-
 
 		const boundReducers = bindReducersToState(reducers, stateManager);
 
@@ -245,12 +254,14 @@ describe('#bindReducersToState', () => {
 		boundReducers.count.decreaseCounter();
 		assert.equal(state.count.counter, 31);
 
-		assert(_.isEqual(state, {
-			name: 'Neumann',
-			count: {
-				counter: 31,
-			},
-		}));
+		assert(
+			_.isEqual(state, {
+				name: 'Neumann',
+				count: {
+					counter: 31,
+				},
+			})
+		);
 	});
 });
 
@@ -263,7 +274,10 @@ describe('#getStatefulPropsContext', () => {
 
 	it('should return an object with two functions on it', () => {
 		const statefulPropsContext = getStatefulPropsContext({}, {});
-		const getPropReplaceReducers = _.get(statefulPropsContext, 'getPropReplaceReducers');
+		const getPropReplaceReducers = _.get(
+			statefulPropsContext,
+			'getPropReplaceReducers'
+		);
 		const getProps = _.get(statefulPropsContext, 'getProps');
 		assert(_.isFunction(getPropReplaceReducers));
 		assert(_.isFunction(getProps));
@@ -293,19 +307,23 @@ describe('#getStatefulPropsContext', () => {
 			};
 
 			reducers = {
-				setName: (state, newName) => _.assign({}, state, {
-					name: newName,
-				}),
+				setName: (state, newName) =>
+					_.assign({}, state, {
+						name: newName,
+					}),
 				count: {
-					increaseCounter: (state) => _.assign({}, state, {
-						counter: state.counter + 1,
-					}),
-					decreaseCounter: (state) => _.assign({}, state, {
-						counter: state.counter - 1,
-					}),
-					setCounter: (state, x) => _.assign({}, state, {
-						counter: x,
-					}),
+					increaseCounter: state =>
+						_.assign({}, state, {
+							counter: state.counter + 1,
+						}),
+					decreaseCounter: state =>
+						_.assign({}, state, {
+							counter: state.counter - 1,
+						}),
+					setCounter: (state, x) =>
+						_.assign({}, state, {
+							counter: x,
+						}),
 				},
 			};
 
@@ -329,7 +347,13 @@ describe('#getStatefulPropsContext', () => {
 					dead: 0xbeef,
 				};
 				const props = statefulPropsContext.getProps(overrides);
-				assert(_.isEqualWith(props, _.merge({}, state, reducers, overrides), isFunctions));
+				assert(
+					_.isEqualWith(
+						props,
+						_.merge({}, state, reducers, overrides),
+						isFunctions
+					)
+				);
 			});
 
 			it('should return an object with current state applied after function call modifies state', () => {
@@ -376,7 +400,7 @@ describe('#getStatefulPropsContext', () => {
 			// with lodash@4.7.0 -- https://github.com/appnexus/lucid/issues/181
 			it('should not clone arrays when the source object is undefined', () => {
 				const overrides = {
-					fresh: [{a: 1}],
+					fresh: [{ a: 1 }],
 				};
 				const props = statefulPropsContext.getProps(overrides);
 
@@ -396,7 +420,13 @@ describe('#getStatefulPropsContext', () => {
 					dead: 0xbeef,
 				};
 				const props = statefulPropsContext.getPropReplaceReducers(overrides);
-				assert(_.isEqualWith(props, _.merge({}, state, reducers, overrides), isFunctions));
+				assert(
+					_.isEqualWith(
+						props,
+						_.merge({}, state, reducers, overrides),
+						isFunctions
+					)
+				);
 			});
 
 			it('should return an object with current state applied after function call modifies state', () => {
@@ -423,7 +453,9 @@ describe('#getStatefulPropsContext', () => {
 
 			it('should call override function instead of the reducer function', () => {
 				const overrides = {
-					setName: sinon.spy((state, name) => _.assign({}, state, { name: _.toUpper(name) })),
+					setName: sinon.spy((state, name) =>
+						_.assign({}, state, { name: _.toUpper(name) })
+					),
 				};
 				let props;
 
@@ -442,26 +474,36 @@ describe('#getStatefulPropsContext', () => {
 });
 
 describe('#reduceSelectors', () => {
+	const selectors = {
+		fooAndBar: ({ foo, bar }) => `${foo} and ${bar}`,
+		incrementedBaz: ({ baz }) => baz + 1,
+		nested: {
+			nestedFooAndBar: ({ foo, bar }) => `${foo} & ${bar}`,
+			nestedIncrementedBaz: ({ baz }) => baz + 1,
+			moreNested: {
+				moreNestedFooAndBar: ({ foo, bar }) => `${foo} & ${bar}`,
+			},
+		},
+	};
+
+	const state = {
+		foo: 'foo',
+		bar: 'bar',
+		baz: 0,
+		nested: {
+			foo: 'nestedFoo',
+			bar: 'nestedBar',
+			baz: 10,
+			moreNested: {
+				foo: 'foo',
+				bar: 'bar',
+			},
+		},
+	};
+
+	const selector = reduceSelectors(selectors);
+
 	it('should create a single selector function from selector tree', () => {
-		const selectors = {
-			fooAndBar: ({ foo, bar }) => `${foo} and ${bar}`,
-			incrementedBaz: ({ baz }) => baz + 1,
-			nested: {
-				nestedFooAndBar: ({ foo, bar }) => `${foo} & ${bar}`,
-				nestedIncrementedBaz: ({ baz }) => baz + 1,
-			},
-		};
-		const selector = reduceSelectors(selectors);
-		const state = {
-			foo: 'foo',
-			bar: 'bar',
-			baz: 0,
-			nested: {
-				foo: 'nestedFoo',
-				bar: 'nestedBar',
-				baz: 10,
-			},
-		};
 		const expected = {
 			foo: 'foo',
 			bar: 'bar',
@@ -474,9 +516,36 @@ describe('#reduceSelectors', () => {
 				baz: 10,
 				nestedFooAndBar: 'nestedFoo & nestedBar',
 				nestedIncrementedBaz: 11,
+				moreNested: {
+					foo: 'foo',
+					bar: 'bar',
+					moreNestedFooAndBar: 'foo & bar',
+				},
 			},
 		};
 		assert.deepEqual(selector(state), expected, 'must be deeply equal');
+	});
+
+	it('should maintain referential equality if source does', () => {
+		assert.equal(selector(state), selector(state));
+	});
+
+	it('should maintain referential equality of branches if source does', () => {
+		assert.equal(
+			selector(state).nested,
+			selector({ ...state, foo: 'bar', bar: 'foo' }).nested
+		);
+		assert.equal(
+			selector(state).nested.moreNested,
+			selector({
+				...state,
+				nested: {
+					...state.nested,
+					foo: 'bar',
+					bar: 'foo',
+				},
+			}).nested.moreNested
+		);
 	});
 });
 
@@ -508,11 +577,11 @@ describe('#buildHybridComponent', () => {
 	const CounterDumb = createClass({
 		displayName: 'Counter',
 		propTypes: {
-			count: React.PropTypes.number,
-			onIncrement: React.PropTypes.func,
-			onDecrement: React.PropTypes.func,
-			countDisplay: React.PropTypes.string,
-			countModThree: React.PropTypes.number,
+			count: PropTypes.number,
+			onIncrement: PropTypes.func,
+			onDecrement: PropTypes.func,
+			countDisplay: PropTypes.string,
+			countModThree: PropTypes.number,
 		},
 		getDefaultProps() {
 			return {
@@ -528,8 +597,8 @@ describe('#buildHybridComponent', () => {
 			},
 		},
 		selectors: {
-			countDisplay: (state) => `count: ${state.count}`,
-			countModThree: (state) => state.count % 3,
+			countDisplay: state => `count: ${state.count}`,
+			countModThree: state => state.count % 3,
 		},
 		render() {
 			const {
@@ -542,11 +611,11 @@ describe('#buildHybridComponent', () => {
 
 			return (
 				<section>
-					<button className='minus' onClick={onDecrement}>-</button>
-					<span className='count'>{count}</span>
-					<span className='count-display'>{countDisplay}</span>
-					<span className='count-mod-three'>{countModThree}</span>
-					<button className='plus' onClick={onIncrement}>+</button>
+					<button className="minus" onClick={onDecrement}>-</button>
+					<span className="count">{count}</span>
+					<span className="count-display">{countDisplay}</span>
+					<span className="count-mod-three">{countModThree}</span>
+					<button className="plus" onClick={onIncrement}>+</button>
 				</section>
 			);
 		},
@@ -653,7 +722,9 @@ describe('#buildHybridComponent', () => {
 		const onIncrement = sinon.spy();
 		const onDecrement = sinon.spy();
 		const StatefulCounter = buildHybridComponent(CounterDumb);
-		const wrapper = mount(<StatefulCounter onIncrement={onIncrement} onDecrement={onDecrement} />);
+		const wrapper = mount(
+			<StatefulCounter onIncrement={onIncrement} onDecrement={onDecrement} />
+		);
 
 		const minusButton = wrapper.find('button.minus');
 		const countSpan = wrapper.find('.count');

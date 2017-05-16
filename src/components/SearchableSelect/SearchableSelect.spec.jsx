@@ -8,19 +8,11 @@ import { common } from '../../util/generic-tests';
 import { SearchableSelectDumb as SearchableSelect } from './SearchableSelect';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 
-const {
-	Placeholder,
-	Option,
-	OptionGroup,
-	SearchField,
-} = SearchableSelect;
+const { Placeholder, Option, OptionGroup, SearchField } = SearchableSelect;
 
 describe('SearchableSelect', () => {
 	common(SearchableSelect, {
-		exemptFunctionProps: [
-			'optionFilter',
-			'richChildRenderer',
-		],
+		exemptFunctionProps: ['optionFilter', 'richChildRenderer'],
 	});
 
 	describe('render', () => {
@@ -69,7 +61,11 @@ describe('SearchableSelect', () => {
 
 			it('should render the placeholder option as the first one in the menu and be a null option', () => {
 				wrapper = mount(
-					<SearchableSelect hasReset={true} selectedIndex={1} DropMenu={{ isExpanded: true }}>
+					<SearchableSelect
+						hasReset={true}
+						selectedIndex={1}
+						DropMenu={{ isExpanded: true }}
+					>
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
@@ -77,14 +73,25 @@ describe('SearchableSelect', () => {
 					</SearchableSelect>
 				);
 
-				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
+				const menuDOMNode = document.querySelector(
+					'.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
+				);
 
-				assert(_.includes(menuDOMNode.children[0].className, 'lucid-DropMenu-Option-is-null'));
+				assert(
+					_.includes(
+						menuDOMNode.children[0].className,
+						'lucid-DropMenu-Option-is-null'
+					)
+				);
 			});
 
 			it('should not render the placeholder null option as the first one in the menu', () => {
 				wrapper = mount(
-					<SearchableSelect hasReset={false} selectedIndex={1} DropMenu={{ isExpanded: true }}>
+					<SearchableSelect
+						hasReset={false}
+						selectedIndex={1}
+						DropMenu={{ isExpanded: true }}
+					>
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
@@ -92,9 +99,16 @@ describe('SearchableSelect', () => {
 					</SearchableSelect>
 				);
 
-				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
+				const menuDOMNode = document.querySelector(
+					'.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
+				);
 
-				assert(!_.includes(menuDOMNode.children[0].className, 'lucid-DropMenu-Option-is-null'));
+				assert(
+					!_.includes(
+						menuDOMNode.children[0].className,
+						'lucid-DropMenu-Option-is-null'
+					)
+				);
 			});
 		});
 
@@ -126,8 +140,12 @@ describe('SearchableSelect', () => {
 
 				const controlWrapper = wrapper.find('.lucid-SearchableSelect-Control');
 
-				assert(controlWrapper.hasClass('lucid-SearchableSelect-Control-is-disabled'));
-				assert(!controlWrapper.hasClass('lucid-SearchableSelect-Control-is-selected'));
+				assert(
+					controlWrapper.hasClass('lucid-SearchableSelect-Control-is-disabled')
+				);
+				assert(
+					!controlWrapper.hasClass('lucid-SearchableSelect-Control-is-selected')
+				);
 			});
 		});
 
@@ -142,7 +160,10 @@ describe('SearchableSelect', () => {
 					</SearchableSelect>
 				);
 
-				const options = wrapper.find(DropMenu).shallow().find('.lucid-DropMenu-Option');
+				const options = wrapper
+					.find(DropMenu)
+					.shallow()
+					.find('.lucid-DropMenu-Option');
 
 				// first option should be the loading indicator.
 				assert(options.at(0).hasClass('lucid-SearchableSelect-Loading'));
@@ -161,28 +182,45 @@ describe('SearchableSelect', () => {
 							<Option>option c</Option>
 						</SearchableSelect>
 					);
-					const controlWrapper = wrapper.find('.lucid-SearchableSelect-Control');
-					assert(controlWrapper.hasClass('lucid-SearchableSelect-Control-is-selected'));
-					assert(controlWrapper.hasClass('lucid-SearchableSelect-Control-is-highlighted'));
+					const controlWrapper = wrapper.find(
+						'.lucid-SearchableSelect-Control'
+					);
+					assert(
+						controlWrapper.hasClass(
+							'lucid-SearchableSelect-Control-is-selected'
+						)
+					);
+					assert(
+						controlWrapper.hasClass(
+							'lucid-SearchableSelect-Control-is-highlighted'
+						)
+					);
 				});
 			});
 
 			describe('false', () => {
 				it('should apply the appropriate classNames to the control', () => {
 					const wrapper = shallow(
-						<SearchableSelect
-							isSelectionHighlighted={false}
-							selectedIndex={2}
-							>
+						<SearchableSelect isSelectionHighlighted={false} selectedIndex={2}>
 							<Placeholder>select one</Placeholder>
 							<Option>option a</Option>
 							<Option>option b</Option>
 							<Option>option c</Option>
 						</SearchableSelect>
 					);
-					const controlWrapper = wrapper.find('.lucid-SearchableSelect-Control');
-					assert(!controlWrapper.hasClass('lucid-SearchableSelect-Control-is-selected'));
-					assert(!controlWrapper.hasClass('lucid-SearchableSelect-Control-is-highlighted'));
+					const controlWrapper = wrapper.find(
+						'.lucid-SearchableSelect-Control'
+					);
+					assert(
+						!controlWrapper.hasClass(
+							'lucid-SearchableSelect-Control-is-selected'
+						)
+					);
+					assert(
+						!controlWrapper.hasClass(
+							'lucid-SearchableSelect-Control-is-highlighted'
+						)
+					);
 				});
 			});
 		});
@@ -215,7 +253,12 @@ describe('SearchableSelect', () => {
 
 				const dropMenuControlWrapper = wrapper.find('DropMenu').childAt(0);
 
-				assert.equal('option c', dropMenuControlWrapper.find('.lucid-SearchableSelect-Control-content').text());
+				assert.equal(
+					'option c',
+					dropMenuControlWrapper
+						.find('.lucid-SearchableSelect-Control-content')
+						.text()
+				);
 			});
 		});
 
@@ -231,8 +274,14 @@ describe('SearchableSelect', () => {
 				);
 
 				const dropMenuWrapper = wrapper.find(DropMenu);
-				const optionContainerStyle = dropMenuWrapper.prop('optionContainerStyle');
-				assert.equal(123, optionContainerStyle.maxHeight, 'must match prop value');
+				const optionContainerStyle = dropMenuWrapper.prop(
+					'optionContainerStyle'
+				);
+				assert.equal(
+					123,
+					optionContainerStyle.maxHeight,
+					'must match prop value'
+				);
 			});
 		});
 
@@ -245,7 +294,6 @@ describe('SearchableSelect', () => {
 				}
 			});
 
-
 			it('should be called when an option is selected with the appropriate arguments', () => {
 				const onSelect = sinon.spy();
 
@@ -254,11 +302,13 @@ describe('SearchableSelect', () => {
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
-						<Option testProp='foo'>option c</Option>
+						<Option testProp="foo">option c</Option>
 					</SearchableSelect>
 				);
 
-				const menuDOMNode = document.querySelector('.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container');
+				const menuDOMNode = document.querySelector(
+					'.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
+				);
 				menuDOMNode.children[2].click();
 
 				assert(onSelect.called);
@@ -279,13 +329,13 @@ describe('SearchableSelect', () => {
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
-						<Option testProp='foo'>option c</Option>
+						<Option testProp="foo">option c</Option>
 					</SearchableSelect>
 				);
 
 				const searchFieldWrapper = wrapper.find(SearchField);
 
-				searchFieldWrapper.simulate('change', 'asdf', {event: {}});
+				searchFieldWrapper.simulate('change', 'asdf', { event: {} });
 				assert(onSearch.calledWith('asdf'));
 			});
 		});
@@ -314,18 +364,17 @@ describe('SearchableSelect', () => {
 				});
 			});
 		});
-
 	});
 
 	describe('child elements', () => {
 		describe('SearchField', () => {
 			it('should pass the searchfield props through to the underlying SearchField element', () => {
 				const wrapper = shallow(
-					<SearchableSelect DropMenu={{isExpanded: true}}>
-						<SearchField placeholder='custom' />
-						<Option name='OptionA'>option a</Option>
-						<Option name='OptionB'>option b</Option>
-						<Option name='OptionC'>option c</Option>
+					<SearchableSelect DropMenu={{ isExpanded: true }}>
+						<SearchField placeholder="custom" />
+						<Option name="OptionA">option a</Option>
+						<Option name="OptionB">option b</Option>
+						<Option name="OptionC">option c</Option>
 					</SearchableSelect>
 				);
 
@@ -341,39 +390,56 @@ describe('SearchableSelect', () => {
 				const wrapper = shallow(
 					<SearchableSelect selectedIndex={null}>
 						<Placeholder>select one</Placeholder>
-						<Option name='OptionA'>option a</Option>
-						<Option name='OptionB'>option b</Option>
-						<Option name='OptionC'>option c</Option>
+						<Option name="OptionA">option a</Option>
+						<Option name="OptionB">option b</Option>
+						<Option name="OptionC">option c</Option>
 					</SearchableSelect>
 				);
 
 				// navigate down the virutal DOM tree to find the Control content
 				const dropMenuWrapper = wrapper.find('DropMenu');
 				const dropMenuChildren = dropMenuWrapper.prop('children');
-				const controlProps = _.first(_.map(filterTypes(dropMenuChildren, DropMenu.Control), 'props'));
-				const dropMenuControlChildElement = _.first(React.Children.toArray(controlProps.children));
-				const SearchableSelectControlChildren = React.Children.toArray(dropMenuControlChildElement.props.children);
-				const SearchableSelectControlContent = SearchableSelectControlChildren[0];
+				const controlProps = _.first(
+					_.map(filterTypes(dropMenuChildren, DropMenu.Control), 'props')
+				);
+				const dropMenuControlChildElement = _.first(
+					React.Children.toArray(controlProps.children)
+				);
+				const SearchableSelectControlChildren = React.Children.toArray(
+					dropMenuControlChildElement.props.children
+				);
+				const SearchableSelectControlContent =
+					SearchableSelectControlChildren[0];
 
-				assert.equal(React.Children.toArray(SearchableSelectControlContent.props.children)[0], 'select one');
+				assert.equal(
+					React.Children.toArray(SearchableSelectControlContent.props.children)[
+						0
+					],
+					'select one'
+				);
 			});
 
 			it('should pass the placeholder thru to the underlying DropMenu NullOption when an option is selected', () => {
 				const wrapper = shallow(
 					<SearchableSelect selectedIndex={1}>
 						<Placeholder>select one</Placeholder>
-						<Option name='OptionA'>option a</Option>
-						<Option name='OptionB'>option b</Option>
-						<Option name='OptionC'>option c</Option>
+						<Option name="OptionA">option a</Option>
+						<Option name="OptionB">option b</Option>
+						<Option name="OptionC">option c</Option>
 					</SearchableSelect>
 				);
 
 				// navigate down the virutal DOM tree to find the Control content
 				const dropMenuWrapper = wrapper.find('DropMenu');
 				const dropMenuChildren = dropMenuWrapper.prop('children');
-				const nullOptionProps = _.first(_.map(filterTypes(dropMenuChildren, DropMenu.NullOption), 'props'));
+				const nullOptionProps = _.first(
+					_.map(filterTypes(dropMenuChildren, DropMenu.NullOption), 'props')
+				);
 
-				assert.equal(React.Children.toArray(nullOptionProps.children)[0], 'select one');
+				assert.equal(
+					React.Children.toArray(nullOptionProps.children)[0],
+					'select one'
+				);
 			});
 		});
 
@@ -382,38 +448,47 @@ describe('SearchableSelect', () => {
 				const wrapper = shallow(
 					<SearchableSelect>
 						<Placeholder>select one</Placeholder>
-						<Option name='OptionA'>option a</Option>
-						<Option name='OptionB'>option b</Option>
-						<Option name='OptionC'>option c</Option>
+						<Option name="OptionA">option a</Option>
+						<Option name="OptionB">option b</Option>
+						<Option name="OptionC">option c</Option>
 					</SearchableSelect>
 				);
 
 				const dropMenuWrapper = wrapper.find('DropMenu');
 				const dropMenuChildren = dropMenuWrapper.prop('children');
-				const optionsProps = _.map(filterTypes(dropMenuChildren, DropMenu.Option), 'props');
+				const optionsProps = _.map(
+					filterTypes(dropMenuChildren, DropMenu.Option),
+					'props'
+				);
 
 				assert.equal(_.size(optionsProps), 3);
-				assert(_.isEqual(optionsProps[0], {
-					name: 'OptionA',
-					children: 'option a',
-					isDisabled: false,
-					isHidden: false,
-					isWrapped: true,
-				}));
-				assert(_.isEqual(optionsProps[1], {
-					name: 'OptionB',
-					children: 'option b',
-					isDisabled: false,
-					isHidden: false,
-					isWrapped: true,
-				}));
-				assert(_.isEqual(optionsProps[2], {
-					name: 'OptionC',
-					children: 'option c',
-					isDisabled: false,
-					isHidden: false,
-					isWrapped: true,
-				}));
+				assert(
+					_.isEqual(optionsProps[0], {
+						name: 'OptionA',
+						children: 'option a',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true,
+					})
+				);
+				assert(
+					_.isEqual(optionsProps[1], {
+						name: 'OptionB',
+						children: 'option b',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true,
+					})
+				);
+				assert(
+					_.isEqual(optionsProps[2], {
+						name: 'OptionC',
+						children: 'option c',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true,
+					})
+				);
 			});
 		});
 
@@ -427,18 +502,20 @@ describe('SearchableSelect', () => {
 				wrapper = shallow(
 					<SearchableSelect>
 						<Placeholder>select one</Placeholder>
-						<OptionGroup name='TestGroup'>
+						<OptionGroup name="TestGroup">
 							Group Label
-							<Option name='OptionA'>option a</Option>
-							<Option name='OptionB'>option b</Option>
-							<Option name='OptionC'>option c</Option>
+							<Option name="OptionA">option a</Option>
+							<Option name="OptionB">option b</Option>
+							<Option name="OptionC">option c</Option>
 						</OptionGroup>
 					</SearchableSelect>
 				);
 
 				dropMenuWrapper = wrapper.find('DropMenu');
 				dropMenuChildren = dropMenuWrapper.prop('children');
-				optionGroupProps = _.first(_.map(filterTypes(dropMenuChildren, DropMenu.OptionGroup), 'props'));
+				optionGroupProps = _.first(
+					_.map(filterTypes(dropMenuChildren, DropMenu.OptionGroup), 'props')
+				);
 			});
 
 			it('should pass thru all props to the underlying DropMenu OptionGroup', () => {
@@ -446,35 +523,46 @@ describe('SearchableSelect', () => {
 			});
 
 			it('should pass options thru to the underlying DropMenu OptionGroup Options', () => {
-				const optionsProps = _.map(filterTypes(optionGroupProps.children, DropMenu.Option), 'props');
+				const optionsProps = _.map(
+					filterTypes(optionGroupProps.children, DropMenu.Option),
+					'props'
+				);
 
 				assert.equal(_.size(optionsProps), 3);
-				assert(_.isEqual(optionsProps[0], {
-					name: 'OptionA',
-					children: 'option a',
-					isDisabled: false,
-					isHidden: false,
-					isWrapped: true,
-				}));
-				assert(_.isEqual(optionsProps[1], {
-					name: 'OptionB',
-					children: 'option b',
-					isDisabled: false,
-					isHidden: false,
-					isWrapped: true,
-				}));
-				assert(_.isEqual(optionsProps[2], {
-					name: 'OptionC',
-					children: 'option c',
-					isDisabled: false,
-					isHidden: false,
-					isWrapped: true,
-				}));
-
+				assert(
+					_.isEqual(optionsProps[0], {
+						name: 'OptionA',
+						children: 'option a',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true,
+					})
+				);
+				assert(
+					_.isEqual(optionsProps[1], {
+						name: 'OptionB',
+						children: 'option b',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true,
+					})
+				);
+				assert(
+					_.isEqual(optionsProps[2], {
+						name: 'OptionC',
+						children: 'option c',
+						isDisabled: false,
+						isHidden: false,
+						isWrapped: true,
+					})
+				);
 			});
 
 			it('should pass all other elemens thru to the underlying DropMenu OptionGroup', () => {
-				const otherOptionGroupChildren = rejectTypes(optionGroupProps.children, [Placeholder, Option, OptionGroup]);
+				const otherOptionGroupChildren = rejectTypes(
+					optionGroupProps.children,
+					[Placeholder, Option, OptionGroup]
+				);
 
 				assert.equal(_.first(otherOptionGroupChildren), 'Group Label');
 			});

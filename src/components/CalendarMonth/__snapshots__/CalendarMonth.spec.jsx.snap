@@ -787,7 +787,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   enableOutsideDays={false}
   fixedWeeks={false}
   from={null}
-  initialMonth={2016-03-17T22:25:23.000Z}
+  initialMonth={2016-02-17T22:25:23.000Z}
   labels={
     Object {
       "nextMonth": "Next Month",

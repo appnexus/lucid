@@ -15,19 +15,23 @@ export default React.createClass({
 	},
 
 	handleDisabledSelected(isSelected) {
-		this.setState(_.assign({}, this.state, {
-			disabled: _.assign({}, this.state.disabled, {
-				isSelected,
-			}),
-		}));
+		this.setState(
+			_.assign({}, this.state, {
+				disabled: _.assign({}, this.state.disabled, {
+					isSelected,
+				}),
+			})
+		);
 	},
 
 	handleEnabledSelected(isSelected) {
-		this.setState(_.assign({}, this.state, {
-			enabled: _.assign({}, this.state.enabled, {
-				isSelected,
-			}),
-		}));
+		this.setState(
+			_.assign({}, this.state, {
+				enabled: _.assign({}, this.state.enabled, {
+					isSelected,
+				}),
+			})
+		);
 	},
 
 	render() {
@@ -36,19 +40,19 @@ export default React.createClass({
 				<li>
 					<label>Enabled</label>
 					<Switch
-							isDisabled={false}
-							isSelected={this.state.enabled.isSelected}
-							onSelect={this.handleEnabledSelected}
-							tabIndex={10}
+						isDisabled={false}
+						isSelected={this.state.enabled.isSelected}
+						onSelect={this.handleEnabledSelected}
+						tabIndex={10}
 					/>
 				</li>
 				<li>
 					<label>Disabled</label>
 					<Switch
-							isDisabled={true}
-							isSelected={this.state.disabled.isSelected}
-							onSelect={this.handleDisabledSelected}
-							tabIndex={11}
+						isDisabled={true}
+						isSelected={this.state.disabled.isSelected}
+						onSelect={this.handleDisabledSelected}
+						tabIndex={11}
 					/>
 				</li>
 			</ul>

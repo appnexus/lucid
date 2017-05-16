@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 import { groupByFields } from '../../util/chart-helpers';
@@ -10,14 +11,7 @@ import Line from '../Line/Line';
 
 const cx = lucidClassNames.bind('&-Lines');
 
-const {
-	arrayOf,
-	func,
-	number,
-	object,
-	bool,
-	string,
-} = React.PropTypes;
+const { arrayOf, func, number, object, bool, string } = PropTypes;
 
 /**
  * {"categories": ["visualizations", "chart primitives"], "madeFrom": ["Line"]}
@@ -170,15 +164,17 @@ const Lines = createClass({
 			: groupByFields(data, yFields);
 
 		const area = isStacked
-			? d3Shape.area()
-				.defined((a) => _.isFinite(a[0]) && _.isFinite(a[1]))
-				.x((a, i) => xScale(data[i][xField]))
-				.y0((a) => yScale(a[1]))
-				.y1((a) => yScale(a[0]))
-			: d3Shape.area()
-				.defined((a) => _.isFinite(a) || _.isDate(a))
-				.x((a, i) => xScale(data[i][xField]))
-				.y((a) => yScale(a));
+			? d3Shape
+					.area()
+					.defined(a => _.isFinite(a[0]) && _.isFinite(a[1]))
+					.x((a, i) => xScale(data[i][xField]))
+					.y0(a => yScale(a[1]))
+					.y1(a => yScale(a[0]))
+			: d3Shape
+					.area()
+					.defined(a => _.isFinite(a) || _.isDate(a))
+					.x((a, i) => xScale(data[i][xField]))
+					.y(a => yScale(a));
 
 		// If we are stacked, we need to calculate a new domain based on the sum of
 		// the various group's y data
@@ -190,14 +186,15 @@ const Lines = createClass({
 		}
 
 		return (
-			<g
-				{...omitProps(passThroughs, Lines)}
-				className={cx(className, '&')}
-			>
+			<g {...omitProps(passThroughs, Lines)} className={cx(className, '&')}>
 				{_.map(transformedData, (d, dIndex) => (
 					<g key={dIndex}>
 						<Line
-							color={_.get(colorMap, yFields[dIndex], palette[(dIndex + colorOffset) % palette.length])}
+							color={_.get(
+								colorMap,
+								yFields[dIndex],
+								palette[(dIndex + colorOffset) % palette.length]
+							)}
 							d={area(d)}
 						/>
 					</g>

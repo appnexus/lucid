@@ -12,4 +12,3 @@ export function onMouseOut(state) {
 		isHovering: false,
 	};
 }
-

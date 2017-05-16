@@ -8,17 +8,19 @@ export default React.createClass({
 
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget tempor mi. Curabitur eget risus ac diam euismod ultricies ac in est. Morbi in vehicula arcu, at laoreet libero. Phasellus nisi dolor, porta et erat quis, egestas mattis purus.
 
-				<ContextMenu isExpanded direction='up'>
+				<ContextMenu isExpanded direction="up">
 
 					<ContextMenu.Target>
 						<Button>Target</Button>
 					</ContextMenu.Target>
 
-					<ContextMenu.FlyOut style={{
-						background: 'white',
-						boxShadow: '1px -1px 4px black',
-						padding: 4,
-					}}>
+					<ContextMenu.FlyOut
+						style={{
+							background: 'white',
+							boxShadow: '1px -1px 4px black',
+							padding: 4,
+						}}
+					>
 						FlyOut
 					</ContextMenu.FlyOut>
 				</ContextMenu>

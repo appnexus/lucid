@@ -1,16 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 
 const cx = lucidClassNames.bind('&-StickySection');
-const {
-	node,
-	number,
-	object,
-	string,
-} = React.PropTypes;
+const { node, number, object, string } = PropTypes;
 
 /**
  * {"categories": ["helpers"]}
@@ -53,14 +49,9 @@ const StickySection = createClass({
 	},
 
 	handleScroll() {
-		const {
-			lowerBound,
-		} = this.props;
+		const { lowerBound } = this.props;
 
-		const {
-			isAboveFold,
-			containerRect,
-		} = this.state;
+		const { isAboveFold, containerRect } = this.state;
 
 		const nextContainerRect = this.getContainerRect();
 
@@ -85,14 +76,14 @@ const StickySection = createClass({
 		}
 
 		if (
-			containerRect.bottom !== nextContainerRect.bottom
-			|| containerRect.height !== nextContainerRect.height
-			|| containerRect.left !== nextContainerRect.left
-			|| containerRect.right !== nextContainerRect.right
-			|| containerRect.top !== nextContainerRect.top
-			|| containerRect.width !== nextContainerRect.width
-			|| containerRect.scrollWidth !== nextContainerRect.scrollWidth
-			|| containerRect.frameLeft !== nextContainerRect.frameLeft
+			containerRect.bottom !== nextContainerRect.bottom ||
+			containerRect.height !== nextContainerRect.height ||
+			containerRect.left !== nextContainerRect.left ||
+			containerRect.right !== nextContainerRect.right ||
+			containerRect.top !== nextContainerRect.top ||
+			containerRect.width !== nextContainerRect.width ||
+			containerRect.scrollWidth !== nextContainerRect.scrollWidth ||
+			containerRect.frameLeft !== nextContainerRect.frameLeft
 		) {
 			this.setState({
 				containerRect: nextContainerRect,
@@ -101,10 +92,11 @@ const StickySection = createClass({
 	},
 
 	getContainerRect() {
-		const containerRect = getAbsoluteBoundingClientRect(this.refs.scrollContainer);
+		const containerRect = getAbsoluteBoundingClientRect(
+			this.refs.scrollContainer
+		);
 		const stickyRect = this.refs.stickySection.getBoundingClientRect();
 		const frameRect = this.refs.stickyFrame.getBoundingClientRect();
-
 
 		return {
 			bottom: containerRect.top + stickyRect.height,
@@ -141,50 +133,55 @@ const StickySection = createClass({
 			...passThroughs
 		} = this.props;
 
-		const {
-			isAboveFold,
-			containerRect,
-		} = this.state;
+		const { isAboveFold, containerRect } = this.state;
 
 		return (
 			<div
 				{...omitProps(passThroughs, StickySection)}
 				className={cx('&', className)}
 				style={{
-					...(isAboveFold ? {
-						height: containerRect.height,
-					} : {}),
+					...(isAboveFold
+						? {
+								height: containerRect.height,
+							}
+						: {}),
 					...style,
 				}}
-				ref='scrollContainer'
+				ref="scrollContainer"
 			>
 				<div
 					className={cx('&-sticky-frame')}
-					ref='stickyFrame'
+					ref="stickyFrame"
 					style={{
-						...(isAboveFold ? {
-							position: 'fixed',
-							top: 0,
-							width: (_.isNumber(viewportWidth) ? viewportWidth : containerRect.width),
-							height: containerRect.height,
-							overflow: 'hidden',
-						} : {}),
+						...(isAboveFold
+							? {
+									position: 'fixed',
+									top: 0,
+									width: _.isNumber(viewportWidth)
+										? viewportWidth
+										: containerRect.width,
+									height: containerRect.height,
+									overflow: 'hidden',
+								}
+							: {}),
 						...style,
 					}}
 				>
 					<div
 						className={cx('&-sticky-section')}
-						ref='stickySection'
+						ref="stickySection"
 						style={{
-							...(isAboveFold ? {
-								position: 'absolute',
-								top: 0,
-								left: (containerRect.left - containerRect.frameLeft) || 0,
-								width: containerRect.scrollWidth,
-								height: containerRect.height,
-							} : {
-								position: 'relative',
-							}),
+							...(isAboveFold
+								? {
+										position: 'absolute',
+										top: 0,
+										left: containerRect.left - containerRect.frameLeft || 0,
+										width: containerRect.scrollWidth,
+										height: containerRect.height,
+									}
+								: {
+										position: 'relative',
+									}),
 							...style,
 						}}
 					>
