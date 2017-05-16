@@ -3,9 +3,6 @@
 exports[`DragCaptureZone [common] example testing should match snapshot(s) for interactive 1`] = `
 <div
   className="lucid-DragCaptureZone"
-  onDrag={[Function]}
-  onDragEnd={[Function]}
-  onDragStart={[Function]}
   onMouseDown={[Function]}
 >
   <div

@@ -10,6 +10,8 @@ export default React.createClass({
 	},
 
 	render() {
+		const { events } = this.state;
+
 		return (
 			<section
 				style={{
@@ -48,7 +50,7 @@ export default React.createClass({
 					}}
 				>
 					{_.reverse(
-						_.map(({ coordinates, type }, index) => (
+						_.map(events, ({ coordinates, type }, index) => (
 							<div key={index}>
 								<div
 									style={{

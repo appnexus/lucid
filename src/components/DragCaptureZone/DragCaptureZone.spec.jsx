@@ -2,7 +2,7 @@ import _ from 'lodash';
 import assert from 'assert';
 import React from 'react';
 import sinon from 'sinon';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 import { common } from '../../util/generic-tests';
 
@@ -33,6 +33,14 @@ describe('DragCaptureZone', () => {
 				const wrapper = mount(<DragCaptureZone />);
 
 				assert.equal(wrapper.prop('onDragStart'), _.noop);
+			});
+		});
+
+		describe('onDragCancel', () => {
+			it('defaults to the Lodash `noop` method.', () => {
+				const wrapper = mount(<DragCaptureZone />);
+
+				assert.equal(wrapper.prop('onDragCancel'), _.noop);
 			});
 		});
 
@@ -168,6 +176,26 @@ describe('DragCaptureZone', () => {
 
 		it('...and passes along a native event as part of the second argument.', () => {
 			assert(_.last(onDragEnd.args[0]).event instanceof window.Event);
+		});
+	});
+
+	describe('the drag action is canceled', () => {
+		const mockEvent = {};
+		let onDragCancel;
+
+		beforeEach(() => {
+			onDragCancel = sinon.spy();
+
+			const wrapper = shallow(<DragCaptureZone onDragCancel={onDragCancel} />);
+			wrapper.instance().handleDragCancel(mockEvent);
+		});
+
+		it('calls the function passed in as the `onDragCancel` prop...', () => {
+			assert(onDragCancel.calledOnce);
+		});
+
+		it('...and passes along a React synthetic event as part of the last argument.', () => {
+			assert(_.last(onDragCancel.args[0]).event);
 		});
 	});
 });
