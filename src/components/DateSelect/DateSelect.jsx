@@ -8,6 +8,7 @@ import * as reducers from './DateSelect.reducers';
 import InfiniteSlidePanel from '../InfiniteSlidePanel/InfiniteSlidePanel';
 import CalendarMonth from '../CalendarMonth/CalendarMonth';
 import ChevronThinIcon from '../Icon/ChevronThinIcon/ChevronThinIcon';
+import { DateUtils } from 'react-day-picker';
 
 const cx = lucidClassNames.bind('&-DateSelect');
 
@@ -255,6 +256,7 @@ const DateSelect = createClass({
 		} = this.props;
 
 		const { cursor } = this.state;
+		const isRangeSameDay = DateUtils.isSameDay(from, to);
 
 		const calendarMonth = getFirst(
 			this.props,
@@ -301,9 +303,9 @@ const DateSelect = createClass({
 									monthOffset={slideOffset}
 									initialMonth={this.initialMonth}
 									cursor={cursor}
-									from={from}
-									to={to}
-									selectedDays={selectedDays}
+									from={isRangeSameDay ? null : from}
+									to={isRangeSameDay ? null : to}
+									selectedDays={isRangeSameDay ? from : selectedDays}
 									disabledDays={disabledDays}
 									selectMode={selectMode}
 									onDayClick={this.handleDayClick}
