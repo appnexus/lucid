@@ -105,6 +105,7 @@ const DragCaptureZone = createClass({
 		let pageX;
 		let pageY;
 
+		/* istanbul ignore next */
 		if (event.touches) {
 			pageX = event.touches[0].pageX;
 			pageY = event.touches[0].pageY;
@@ -133,6 +134,7 @@ const DragCaptureZone = createClass({
 		let pageX;
 		let pageY;
 
+		/* istanbul ignore next */
 		if (event.changedTouches) {
 			pageX = event.changedTouches[0].pageX;
 			pageY = event.changedTouches[0].pageY;
@@ -169,6 +171,7 @@ const DragCaptureZone = createClass({
 		let pageX;
 		let pageY;
 
+		/* istanbul ignore next */
 		if (event.touches) {
 			pageX = event.touches[0].pageX;
 			pageY = event.touches[0].pageY;
