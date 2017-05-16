@@ -44,7 +44,8 @@ const DragCaptureZone = createClass({
 		 */
 		onDragStart: func,
 		/**
-		 * Called when the drag event is canceled dur to user interaction
+		 * Called when the drag event is canceled due to user interaction.
+		 * For example: if a system alert pops up during a touch event.
 		 *
 		 * Signature: `({ event, props }) => {}`
 		 */
@@ -82,8 +83,9 @@ const DragCaptureZone = createClass({
 	},
 
 	componentDidMount() {
-		//add event listeners directly on the DOM elemnt to allow preventDefault
+		//add event listeners directly on the DOM element to allow preventDefault
 		//calls which are not honored due to react's event delegation
+		//reference: https://github.com/facebook/react/issues/8968
 		this.elementRef.addEventListener('touchstart', this.handleDragStart);
 		this.elementRef.addEventListener('touchmove', this.handleDrag);
 		this.elementRef.addEventListener('touchend', this.handleDragEnd);
@@ -91,6 +93,10 @@ const DragCaptureZone = createClass({
 	},
 
 	componentWillUnmount() {
+		this.elementRef.removeEventListener('touchstart', this.handleDragStart);
+		this.elementRef.removeEventListener('touchmove', this.handleDrag);
+		this.elementRef.removeEventListener('touchend', this.handleDragEnd);
+		this.elementRef.removeEventListener('touchcancel', this.handleDragCancel);
 		window.document.removeEventListener('mousemove', this.handleDrag);
 		window.document.removeEventListener('mouseup', this.handleDragEnd);
 	},
