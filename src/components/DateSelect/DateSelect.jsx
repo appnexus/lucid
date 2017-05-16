@@ -265,6 +265,7 @@ const DateSelect = createClass({
 		);
 		const monthsShown = clampMonthsShown(monthsShownRaw);
 
+		/* istanbul ignore next */
 		return (
 			<section
 				ref={ref => {
