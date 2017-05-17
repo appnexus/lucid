@@ -1,11 +1,12 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { SwitchLabeled } from '../../../index';
 
 const style = {
 	marginRight: '5px',
 };
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<section>

@@ -1,4 +1,5 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { AxisLabel, chartConstants } from '../../../index';
 
 const width = 1000;
@@ -8,7 +9,7 @@ const margin = { top: 50, right: 50, bottom: 50, left: 50 };
 const innerWidth = width - margin.right - margin.left;
 const innerHeight = height - margin.top - margin.bottom;
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<svg width={width} height={height}>

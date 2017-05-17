@@ -1,7 +1,8 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { VerticalListMenu } from '../../../index';
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<VerticalListMenu style={{ width: 250 }}>

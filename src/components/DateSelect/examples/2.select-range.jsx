@@ -1,7 +1,8 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { Button, DateSelect } from '../../../index';
 
-export default React.createClass({
+export default createClass({
 	getInitialState() {
 		return {
 			selectMode: 'from',

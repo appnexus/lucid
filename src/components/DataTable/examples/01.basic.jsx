@@ -1,4 +1,5 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { DataTable } from '../../../index';
 
 const data = [
@@ -73,7 +74,7 @@ const data = [
 	},
 ];
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<DataTable data={data}>

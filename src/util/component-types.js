@@ -1,4 +1,5 @@
 import React from 'react';
+import createReactClass from 'create-react-class';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { omitFunctionPropsDeep } from './state-management';
@@ -42,7 +43,7 @@ export function createClass(definition = {}) {
 
 	newDefinition.statics.definition = newDefinition;
 
-	return React.createClass(newDefinition);
+	return createReactClass(newDefinition);
 }
 
 // return all elements matching the specified types

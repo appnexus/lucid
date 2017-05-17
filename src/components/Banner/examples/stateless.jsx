@@ -1,7 +1,8 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { Banner, Icon } from '../../../index';
 
-const CustomIcon = React.createClass({
+const CustomIcon = createClass({
 	render() {
 		return (
 			<Icon size={18} viewBox="0 0 22 22">
@@ -14,7 +15,7 @@ const CustomIcon = React.createClass({
 	},
 });
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<div>

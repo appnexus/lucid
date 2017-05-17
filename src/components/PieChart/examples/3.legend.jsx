@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import createClass from 'create-react-class';
 import { PieChart, Legend, chartConstants } from '../../../index';
 
 const data = [
@@ -11,7 +12,7 @@ const data = [
 
 const palette = chartConstants.PALETTE_6;
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<div

@@ -1,6 +1,7 @@
 /* eslint-disable comma-spacing */
 
 import React from 'react';
+import createClass from 'create-react-class';
 import { BarChart, chartConstants } from '../../../index';
 
 const data = [
@@ -12,7 +13,7 @@ const data = [
 const yFormatter = d => `${d / 1000}k`;
 const xFormatter = d => d.toUpperCase().slice(0, 3);
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<BarChart

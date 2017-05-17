@@ -1,9 +1,10 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { Button, Checkbox, ScrollTable, SuccessIcon } from '../../../index';
 
 const { Thead, Tbody, Tr, Th, Td } = ScrollTable;
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<ScrollTable

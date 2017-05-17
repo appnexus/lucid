@@ -1,5 +1,6 @@
 /*eslint no-console: 0*/
 import React from 'react';
+import createClass from 'create-react-class';
 import { AutocompleteDumb as Autocomplete } from '../../../index';
 
 const wordlist = [
@@ -18,7 +19,7 @@ const wordlist = [
 	'abracadabra alakazam hocus pocus shazam say the magic word please if you will thank you very much',
 ];
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<Autocomplete

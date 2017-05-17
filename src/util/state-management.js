@@ -2,6 +2,7 @@ import React, { isValidElement } from 'react';
 import _ from 'lodash';
 import { logger } from './logger';
 import { createSelector } from 'reselect';
+import createClass from 'create-react-class';
 
 export function getDeepPaths(obj, path = []) {
 	return _.reduce(
@@ -196,7 +197,7 @@ export function buildHybridComponent(
 
 	const selector = reduceSelectors(selectors);
 
-	return React.createClass({
+	return createClass({
 		propTypes,
 		statics: {
 			_isLucidHybridComponent: true,

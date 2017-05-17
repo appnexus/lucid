@@ -1,9 +1,10 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { ToolTipDumb } from '../../../index';
 
 const { Target, Title, Body } = ToolTipDumb;
 
-export default React.createClass({
+export default createClass({
 	getInitialState: () => ({ isExpanded: true }),
 	render() {
 		return (

@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import classNames from 'classnames';
 import React from 'react';
+import createClass from 'create-react-class';
 
 import { lucidClassNames } from '../../util/style-helpers';
 
@@ -221,7 +222,7 @@ function rgb2hex(rgb) {
 	return '#' + hex(matches[1]) + hex(matches[2]) + hex(matches[3]);
 }
 
-const ColorPalette = React.createClass({
+const ColorPalette = createClass({
 	getInitialState() {
 		return {
 			hexMap: {},

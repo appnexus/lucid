@@ -1,9 +1,10 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { Panel, Table } from '../../../index';
 
 const { Thead, Tbody, Th, Tr, Td } = Table;
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<Panel hasMargin={false}>

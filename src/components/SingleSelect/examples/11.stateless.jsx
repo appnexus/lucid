@@ -1,9 +1,10 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { SingleSelectDumb as SingleSelect } from '../../../index';
 
 const { Placeholder, Option, OptionGroup } = SingleSelect;
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<SingleSelect

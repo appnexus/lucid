@@ -1,7 +1,8 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import TableGearIcon from '../TableGearIcon';
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<div>

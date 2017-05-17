@@ -1,4 +1,5 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import _ from 'lodash';
 import { DataTable } from '../../../index';
 
@@ -35,7 +36,7 @@ const data = [
 	},
 ];
 
-export default React.createClass({
+export default createClass({
 	getInitialState() {
 		return {
 			activeIndex: 1,

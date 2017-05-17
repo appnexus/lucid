@@ -1,11 +1,12 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { RadioGroup, SingleSelect } from '../../../index';
 
 const style = {
 	marginRight: '13px',
 };
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<RadioGroup>
