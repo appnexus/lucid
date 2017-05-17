@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { buildHybridComponent } from '../../util/state-management';
@@ -14,7 +15,7 @@ const cx = lucidClassNames.bind('&-DateSelect');
 const NAV_BUTTON_SIZE = 32;
 const clampMonthsShown = monthsShown => _.clamp(monthsShown, 1, 6);
 
-const { any, bool, func, instanceOf, number, oneOf, string } = React.PropTypes;
+const { any, bool, func, instanceOf, number, oneOf, string } = PropTypes;
 
 /**
  * {"categories": ["controls", "selectors"], "madeFrom": ["InfiniteSlidePanel", "CalendarMonth"]}
