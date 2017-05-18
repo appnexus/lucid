@@ -1181,7 +1181,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     <span
       className="lucid-Banner-icon"
     >
-      <CustomIcon />
+      <Component />
     </span>
     <span
       className="lucid-Banner-content"
@@ -1213,7 +1213,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     <span
       className="lucid-Banner-icon"
     >
-      <CustomIcon />
+      <Component />
     </span>
     <span
       className="lucid-Banner-content"
@@ -1251,7 +1251,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     <span
       className="lucid-Banner-icon"
     >
-      <CustomIcon />
+      <Component />
     </span>
     <span
       className="lucid-Banner-content"

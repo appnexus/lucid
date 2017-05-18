@@ -1,4 +1,5 @@
 import sinon from 'sinon';
+import { basename } from 'path';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { mount, shallow } from 'enzyme';
@@ -149,12 +150,13 @@ export function common(
 		});
 
 		describe('example testing', () => {
-			const examples = glob
-				.sync(`./src/components/**/${Component.displayName}/examples/*.jsx`)
-				.map(path => require('../../' + path).default);
-
-			_.each(examples, Example => {
-				it(`should match snapshot(s) for ${Example.displayName}`, () => {
+			const fileNames = glob.sync(
+				`./src/components/**/${Component.displayName}/examples/*.jsx`
+			);
+			_.each(fileNames, path => {
+				const Example = require('../../' + path).default;
+				const title = basename(path, '.jsx');
+				it(`should match snapshot(s) for ${title}`, () => {
 					const shallowExample = shallow(<Example />);
 
 					// If the root of the example is an instance of the Component under test, snapshot it.
