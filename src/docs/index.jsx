@@ -1,6 +1,7 @@
 /*eslint no-console: 0*/
 import { basename } from 'path';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { render } from 'react-dom';
 import {
@@ -119,9 +120,7 @@ const examplesByComponent = _.flow(
 	x => _.groupBy(x, 'componentName')
 )(reqExamples.keys());
 
-const {
-	PropTypes: { oneOfType, shape, object, array, string, node, any, bool },
-} = React;
+const { oneOfType, shape, object, array, string, node, any, bool } = PropTypes;
 
 const PropType = React.createClass({
 	propTypes: {
