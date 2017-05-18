@@ -1,10 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
+import createClass from 'create-react-class';
 import { ContextMenu, SingleSelect, TextField } from '../../../index';
 
 const { CENTER, DOWN, END, LEFT, RIGHT, START, UP } = ContextMenu;
 
-export default React.createClass({
+export default createClass({
 	render() {
 		const style = {
 			background: 'white',

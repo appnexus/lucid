@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import createClass from 'create-react-class';
 import { Selection, Resizer } from '../../../index';
 
 const groups = [
@@ -35,7 +36,7 @@ const groups = [
 	],
 ];
 
-export default React.createClass({
+export default createClass({
 	getInitialState() {
 		return {
 			removedItems: {},

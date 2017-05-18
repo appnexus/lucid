@@ -1,9 +1,10 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { SearchableSelect } from '../../../index';
 
 const { Placeholder, Option } = SearchableSelect;
 
-export default React.createClass({
+export default createClass({
 	getInitialState() {
 		return {
 			selectedIndex: null,

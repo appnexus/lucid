@@ -1,4 +1,5 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { Tag } from '../../../index';
 import _ from 'lodash';
 
@@ -86,7 +87,7 @@ const groups = [
 	],
 ];
 
-export default React.createClass({
+export default createClass({
 	getInitialState() {
 		return {
 			removedItems: {},

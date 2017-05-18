@@ -1,4 +1,5 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { lucidClassNames } from '../../util/style-helpers';
 import { toMarkdown, handleHighlightCode } from '../util';
 import { Motion, spring } from 'react-motion';
@@ -10,7 +11,7 @@ const cx = lucidClassNames.bind('&-LandingPage');
 const squareDelta = -60;
 const damping = 30;
 
-const LandingPage = React.createClass({
+const LandingPage = createClass({
 	getInitialState() {
 		return {
 			isCarpeted: false,

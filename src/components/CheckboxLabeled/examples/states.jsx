@@ -1,4 +1,5 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { CheckboxLabeled } from '../../../index';
 
 const style = {
@@ -6,7 +7,7 @@ const style = {
 	marginRight: '13px',
 };
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<section>

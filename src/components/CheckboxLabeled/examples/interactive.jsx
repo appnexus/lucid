@@ -1,12 +1,13 @@
 import _ from 'lodash';
 import React from 'react';
+import createClass from 'create-react-class';
 import { CheckboxLabeled } from '../../../index';
 
 const style = {
 	marginBottom: '3px',
 };
 
-export default React.createClass({
+export default createClass({
 	getInitialState() {
 		return {
 			flavors: [],

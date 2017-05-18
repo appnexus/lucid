@@ -1,4 +1,5 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { BarChart, LoadingIndicator, LoadingIcon } from '../../../index';
 
 const {
@@ -6,7 +7,7 @@ const {
 	LoadingMessage: { Title, Body, Icon },
 } = LoadingIndicator;
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<div>

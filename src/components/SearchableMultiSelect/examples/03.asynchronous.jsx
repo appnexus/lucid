@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import createClass from 'create-react-class';
 import { Selection, SearchableMultiSelect } from '../../../index';
 
 const { Option } = SearchableMultiSelect;
@@ -26,7 +27,7 @@ const allData = {
 	119: { name: 'Shawn Burgess' },
 };
 
-export default React.createClass({
+export default createClass({
 	getInitialState() {
 		return {
 			selectedIds: [], // aka our full set of selections regardless of currently search

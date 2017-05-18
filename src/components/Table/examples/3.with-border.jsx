@@ -1,9 +1,10 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { Button, Checkbox, SuccessIcon, Table } from '../../../index';
 
 const { Thead, Tbody, Tr, Th, Td } = Table;
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<Table hasBorder>

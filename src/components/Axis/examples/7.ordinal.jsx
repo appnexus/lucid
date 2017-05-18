@@ -1,4 +1,5 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { Axis, d3Scale } from '../../../index';
 
 const margin = { right: 20, left: 20 };
@@ -11,7 +12,7 @@ const x = d3Scale
 	.domain(['a', 'b', 'c', 'd'])
 	.range([0, innerWidth]);
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<svg width={width} height={height}>

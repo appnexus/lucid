@@ -1,7 +1,8 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import CalendarMonth from '../CalendarMonth';
 
-export default React.createClass({
+export default createClass({
 	componentWillMount() {
 		this.fromDate = new Date();
 		this.fromDate.setDate(1);

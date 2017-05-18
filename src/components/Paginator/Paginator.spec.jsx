@@ -18,7 +18,7 @@ describe('Paginator', () => {
 			it('should not render page size selector', () => {
 				const wrapper = shallow(<Paginator />);
 				assert(
-					wrapper.find('.lucid-Paginator-page-size-container').isEmpty(),
+					!wrapper.find('.lucid-Paginator-page-size-container').exists(),
 					'must be true'
 				);
 			});

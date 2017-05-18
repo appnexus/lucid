@@ -1,4 +1,5 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import SlidePanel from '../SlidePanel';
 
 import {
@@ -15,7 +16,7 @@ import {
 
 const Slide = SlidePanel.Slide;
 
-export default React.createClass({
+export default createClass({
 	getInitialState() {
 		return {
 			offset: 0,

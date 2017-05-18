@@ -1,4 +1,5 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { BarChart, Resizer } from '../../../index';
 
 const data = [
@@ -8,7 +9,7 @@ const data = [
 	{ x: '2015-01-04', y: 5 },
 ];
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<div>

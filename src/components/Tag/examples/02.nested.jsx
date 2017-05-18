@@ -1,4 +1,5 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { Tag } from '../../../index';
 import _ from 'lodash';
 
@@ -10,7 +11,7 @@ const words = [
 	'This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable',
 ];
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<div>

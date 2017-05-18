@@ -1,7 +1,8 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { Sidebar } from '../../../index';
 
-export default React.createClass({
+export default createClass({
 	getInitialState() {
 		return {
 			isExpanded: false,

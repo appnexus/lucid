@@ -1,4 +1,5 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { Grid } from '../../../index';
 
 const gridStyle = {
@@ -28,7 +29,7 @@ const fillCells = count => {
 	return cells;
 };
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<Grid isGutterless isMultiline>

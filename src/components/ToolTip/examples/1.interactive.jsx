@@ -1,10 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
+import createClass from 'create-react-class';
 import { ToolTip } from '../../../index';
 
 const { Target, Title, Body } = ToolTip;
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<section style={{ display: 'flex', flexDirection: 'row' }}>

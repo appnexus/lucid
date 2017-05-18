@@ -1,11 +1,12 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { TextFieldValidated } from '../../../index';
 
 const style = {
 	marginBottom: '10px',
 };
 
-export default React.createClass({
+export default createClass({
 	getInitialState() {
 		return {
 			value: '',

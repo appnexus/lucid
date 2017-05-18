@@ -1,4 +1,5 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { Grid } from '../../../index';
 
 const gridStyle = {
@@ -16,7 +17,7 @@ const gridStyle = {
 	vertical: { height: '100px' },
 };
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<Grid isHorizontal isMultiline>

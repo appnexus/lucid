@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
+import createClass from 'create-react-class';
 import {
 	d3Scale,
 	Lines,
@@ -31,7 +32,7 @@ const titleThree = (
 	</span>
 );
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<div>

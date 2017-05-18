@@ -1,4 +1,5 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import _ from 'lodash';
 import { Autocomplete } from '../../../index';
 
@@ -261,7 +262,7 @@ const wordlist = [
 	'zippy',
 ];
 
-export default React.createClass({
+export default createClass({
 	getInitialState() {
 		return {
 			value: '',

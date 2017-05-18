@@ -1,4 +1,5 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { Button, RadioGroup, SearchField, Tabs } from '../../../index';
 
 const titleThree = (
@@ -15,7 +16,7 @@ const titleThree = (
 	</RadioGroup>
 );
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<div>
