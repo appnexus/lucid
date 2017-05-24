@@ -360,7 +360,6 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 05.group
         />
         <div
           className="lucid-DropMenu-label"
-          isHidden={false}
         >
           Screen
         </div>
@@ -390,7 +389,6 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 05.group
         />
         <div
           className="lucid-DropMenu-label"
-          isHidden={false}
         >
           Print
         </div>
@@ -712,7 +710,6 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 09.state
       >
         <div
           className="lucid-DropMenu-label"
-          isHidden={false}
         >
           Preferred
         </div>

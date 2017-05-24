@@ -636,7 +636,7 @@ const DropMenu = createClass({
 										? []
 										: [
 												<div
-													{...optionGroupProps}
+													{...omitProps(optionGroupProps, DropMenu.OptionGroup)}
 													className={cx('&-label', optionGroupProps.className)}
 												>
 													{labelElements}
