@@ -321,8 +321,34 @@ const SearchableMultiSelect = createClass({
 		];
 	},
 
-	renderOptions() {
+	renderOption({ optionProps, optionIndex }) {
 		const { optionFilter, searchText, selectedIndices, isLoading } = this.props;
+
+		return (
+			<DropMenu.Option
+				key={'SearchableMultiSelectOption' + optionIndex}
+				{..._.omit(optionProps, 'children')}
+				isHidden={!optionFilter(searchText, optionProps)}
+				isDisabled={isLoading}
+			>
+				<div className={cx('&-checkbox')}>
+					<Checkbox
+						onSelect={this.handleCheckboxSelect}
+						callbackId={optionIndex}
+						isSelected={_.includes(selectedIndices, optionIndex)}
+					/>
+					<label className={cx('&-checkbox-label')}>
+						{_.isString(optionProps.children)
+							? this.renderUnderlinedChildren(optionProps.children, searchText)
+							: optionProps.children}
+					</label>
+				</div>
+			</DropMenu.Option>
+		);
+	},
+
+	renderOptions() {
+		const { optionFilter, searchText, isLoading } = this.props;
 
 		const {
 			optionGroups,
@@ -330,6 +356,11 @@ const SearchableMultiSelect = createClass({
 			ungroupedOptionData,
 			flattenedOptionsData,
 		} = this.state;
+
+		const isAllOptionsHidden = _.every(
+			flattenedOptionsData,
+			({ optionProps }) => !optionFilter(searchText, optionProps)
+		);
 
 		// for each option group passed in, render a DropMenu.OptionGroup, any label will be included in it's children, render each option inside the group
 		const dropMenuOptions = _.map(
@@ -340,83 +371,29 @@ const SearchableMultiSelect = createClass({
 					{..._.omit(optionGroupProps, 'children')}
 				>
 					{optionGroupProps.children}
-					{_.map(_.get(optionGroupDataLookup, optionGroupIndex), ({
-						optionProps,
-						optionIndex,
-					}) => (
-						<DropMenu.Option
-							key={'SearchableMultiSelectOption' + optionIndex}
-							{..._.omit(optionProps, 'children')}
-							isHidden={!optionFilter(searchText, optionProps)}
-							isDisabled={isLoading}
-						>
-							<div className={cx('&-checkbox')}>
-								<Checkbox
-									onSelect={this.handleCheckboxSelect}
-									callbackId={optionIndex}
-									isSelected={_.includes(selectedIndices, optionIndex)}
-								/>
-								<div className={cx('&-checkbox-label')}>
-									{_.isString(optionProps.children)
-										? this.renderUnderlinedChildren(
-												optionProps.children,
-												searchText
-											)
-										: optionProps.children}
-								</div>
-							</div>
-						</DropMenu.Option>
-					))}
+					{_.map(optionGroupDataLookup[optionGroupIndex], this.renderOption)}
 				</DropMenu.OptionGroup>
 			)
 		).concat(
 			// then render all the ungrouped options at the end
-			_.map(ungroupedOptionData, ({ optionProps, optionIndex }) => (
-				<DropMenu.Option
-					key={'SearchableMultiSelectOption' + optionIndex}
-					{..._.omit(optionProps, 'children')}
-					isHidden={!optionFilter(searchText, optionProps)}
-					isDisabled={isLoading}
-				>
-					<div className={cx('&-checkbox')}>
-						<Checkbox
-							onSelect={this.handleCheckboxSelect}
-							callbackId={optionIndex}
-							isSelected={_.includes(selectedIndices, optionIndex)}
-						/>
-						<div className={cx('&-checkbox-label')}>
-							{_.isString(optionProps.children)
-								? this.renderUnderlinedChildren(
-										optionProps.children,
-										searchText
-									)
-								: optionProps.children}
-						</div>
-					</div>
-				</DropMenu.Option>
-			))
+			_.map(ungroupedOptionData, this.renderOption)
 		);
 
-		const visibleOptionsCount = _.filter(
-			flattenedOptionsData,
-			optionProps => !optionProps.isHidden
-		).length;
-
-		if (visibleOptionsCount > 0) {
+		if (!isAllOptionsHidden || _.isEmpty(searchText)) {
 			return dropMenuOptions;
 		}
 
-		if (isLoading || _.isEmpty(flattenedOptionsData)) {
-			return null;
+		if (!isLoading) {
+			return (
+				<DropMenu.Option isDisabled>
+					<span className={cx('&-noresults')}>
+						No results match "{searchText}"
+					</span>
+				</DropMenu.Option>
+			);
 		}
 
-		return (
-			<DropMenu.Option isDisabled>
-				<span className={cx('&-noresults')}>
-					No results match "{searchText}"
-				</span>
-			</DropMenu.Option>
-		);
+		return null;
 	},
 
 	render() {
@@ -583,7 +560,7 @@ const SearchableMultiSelect = createClass({
 							{_.map(selectedIndices, selectedIndex => {
 								const selectedUngroupedOptionData = _.find(
 									ungroupedOptionData,
-									({ optionIndex }) => selectedIndex === optionIndex
+									{ optionIndex: selectedIndex }
 								);
 
 								if (selectedUngroupedOptionData) {
