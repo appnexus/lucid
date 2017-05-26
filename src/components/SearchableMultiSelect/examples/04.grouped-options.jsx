@@ -6,7 +6,11 @@ const { Option, OptionGroup } = SearchableMultiSelect;
 export default React.createClass({
 	render() {
 		return (
-			<SearchableMultiSelect>
+			<SearchableMultiSelect
+				initialState={{
+					selectedIndices: [0, 1, 2, 3, 11, 12, 48, 49],
+				}}
+			>
 				<OptionGroup>
 					Northeast
 					<Option>Connecticut</Option>

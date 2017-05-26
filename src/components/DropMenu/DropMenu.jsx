@@ -625,10 +625,7 @@ const DropMenu = createClass({
 										optionGroupDataLookup[optionGroupIndex];
 									if (
 										optionGroupProps.isHidden ||
-										_.every(
-											groupedOptions,
-											({ optionProps: { isHidden } }) => isHidden
-										)
+										_.every(groupedOptions, { optionProps: { isHidden: true } })
 									) {
 										return null;
 									}
