@@ -87,7 +87,7 @@ export default createClass({
 		);
 
 		return (
-			<div style={{ marginBottom: '300px' }}>
+			<section>
 				<SearchableMultiSelect
 					hasSelections={false}
 					isLoading={isLoading}
@@ -122,7 +122,7 @@ export default createClass({
 							))}
 						</Selection>
 					: null}
-			</div>
+			</section>
 		);
 	},
 });
