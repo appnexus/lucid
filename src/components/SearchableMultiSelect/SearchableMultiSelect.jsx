@@ -493,6 +493,7 @@ const SearchableMultiSelect = createClass({
 
 				{hasSelections && !_.isEmpty(selectedIndices)
 					? <Selection
+							className={cx('&-Selection-section')}
 							isBold
 							hasBackground
 							kind="container"
@@ -512,6 +513,7 @@ const SearchableMultiSelect = createClass({
 									if (!_.isEmpty(selectedGroupedOptions)) {
 										return (
 											<Selection
+												className={cx('&-Selection-group')}
 												key={'optionGroup-' + optionGroupIndex}
 												responsiveMode={responsiveMode}
 												isRemovable={false}
