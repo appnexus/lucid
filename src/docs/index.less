@@ -11,7 +11,6 @@
 
 @import '../styles/variables';
 @import '../styles/mixins';
-
 @import './containers/color-palette';
 @import './containers/landing-page';
 @import './containers/icons';
@@ -24,6 +23,7 @@ html {
 	font-family: @fontFamily;
 	-ms-text-size-adjust: 100%; /* 2 */
 	-webkit-text-size-adjust: 100%; /* 2 */
+	box-sizing: border-box;
 }
 
 body {
@@ -35,11 +35,9 @@ pre code {
 	tab-size: 2; // This does not work in IE, I can live with that
 }
 
-html {
-	box-sizing: border-box;
-}
-
-*, *:before, *:after {
+*,
+*::before,
+*::after {
 	box-sizing: inherit;
 }
 
@@ -50,7 +48,6 @@ a {
 		color: @color-linkColorHover;
 	}
 }
-
 
 // -------------------------------------
 // Component
@@ -70,7 +67,6 @@ a {
 	}
 
 	&-examples.Button {
-
 		> li > section {
 			display: flex;
 			flex-direction: column;
@@ -82,7 +78,6 @@ a {
 				button:not(:last-child) { margin-right: 5px; }
 			}
 		}
-
 	}
 
 	&-examples-header {
@@ -156,3 +151,4 @@ a {
 		}
 	}
 }
+

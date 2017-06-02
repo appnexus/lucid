@@ -24,7 +24,7 @@
 		border: 1px solid @color-borderColor;
 		border-radius: @size-borderRadius;
 		font-size: @fontSize;
-font-family: @fontFamily;
+		font-family: @fontFamily;
 		color: @color-black;
 		letter-spacing: 0.05em;
 		line-height: @size-standard-height;
@@ -38,7 +38,7 @@ font-family: @fontFamily;
 			border: 0 solid @color-transparent;
 			outline: none;
 			font-size: @fontSize;
-font-family: @fontFamily;
+			font-family: @fontFamily;
 			font-weight: normal;
 			color: @color-textColor;
 			margin: 0;
@@ -60,8 +60,9 @@ font-family: @fontFamily;
 		}
 
 		&-is-disabled {
-			cursor: not-allowed;
 			.opacity();
+
+			cursor: not-allowed;
 
 			input {
 				cursor: not-allowed;

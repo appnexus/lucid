@@ -19,9 +19,11 @@
       ]
     ],
 		"selector-type-no-unknown": [
-			true,
-			ignore: [ 'x' ]
-		],
+      true,
+      {
+        "ignoreTypes": ["x"],
+      }
+    ],
     "time-min-milliseconds": 100,
   }
 }

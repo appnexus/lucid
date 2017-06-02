@@ -70,8 +70,10 @@
 		& + * {
 			border-left-width: 0;
 		}
+
 		.lucid-Tabs-Tab-arrow {
 			z-index: 1;
+
 			.lucid-Tabs-Tab-arrow-svg {
 				z-index: 1;
 			}
@@ -83,7 +85,7 @@
 		.Tabs-mixin-tab-line(@color-transparent);
 		.Tabs-mixin-tab-arrow-background();
 
-		&:not(:first-child){
+		&:not(:first-child) {
 			.lucid-Tabs-Tab-content {
 				padding-left: 15px;
 			}
@@ -91,10 +93,11 @@
 	}
 
 	&-Tab-is-active {
+		.hardstop-gradient();
+
 		border-top: none;
 		padding-top: @Tabs-border-width;
 		color: @color-black;
-		.hardstop-gradient();
 		cursor: initial;
 
 		&:hover {
@@ -131,7 +134,7 @@
 			height: 100%;
 			width: 8px;
 			display: block;
-			position: absolute
+			position: absolute;
 		}
 	}
 
