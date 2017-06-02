@@ -17,7 +17,7 @@
 	}
 
 	&-Tab {
-		flex: 1 1 0px;
+		flex: 1 1 0;
 		height: inherit;
 		display: flex;
 		justify-content: center;
@@ -48,10 +48,12 @@
 	&-Tab-is-disabled {
 		color: @color-disabledText;
 		cursor: not-allowed;
+
 		&:hover {
 			background-color: @color-white;
 			.Tabs-mixin-tab-arrow-background();
 		}
+
 		&:active {
 			background: @color-white;
 		}
@@ -60,9 +62,11 @@
 	&-Tab-is-progressive {
 		position: relative;
 		border-width: @Tabs-border-width 0;
+
 		&:first-of-type {
 			border-left-width: @Tabs-border-width;
 		}
+
 		& + * {
 			border-left-width: 0;
 		}
@@ -71,6 +75,7 @@
 			.lucid-Tabs-Tab-arrow-svg {
 				z-index: 1;
 			}
+
 			.lucid-Tabs-Tab-arrow-line {
 				stroke: @color-borderColor;
 			}
@@ -91,10 +96,12 @@
 		color: @color-black;
 		.hardstop-gradient();
 		cursor: initial;
+
 		&:hover {
 			background-color: @color-white;
 			.Tabs-mixin-tab-arrow-background();
 		}
+
 		&:active {
 			.hardstop-gradient();
 		}
@@ -140,17 +147,21 @@
 				.Tabs-mixin-tab-arrow-background(@color-white);
 			}
 		}
+
 		.lucid-Tabs-Tab-is-active {
 			border-bottom: @Tabs-border-width solid @color-white;
 			.Tabs-mixin-tab-arrow-background(@color-white);
 		}
+
 		.lucid-Tabs-Tab + .lucid-Tabs-Tab-is-disabled {
 			background-color: @color-lightGray;
 			.Tabs-mixin-tab-arrow-background(@color-lightGray);
+
 			&:hover {
 				background-color: @color-lightGray;
 				.Tabs-mixin-tab-arrow-background(@color-lightGray);
 			}
+
 			&:active {
 				background-color: @color-lightGray;
 			}
@@ -177,3 +188,4 @@
 		}
 	}
 }
+

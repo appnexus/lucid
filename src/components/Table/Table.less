@@ -12,12 +12,12 @@
 	border-spacing: 0;
 	box-sizing: border-box;
 
-// `Table`.`hasBorder` prop
+	// `Table`.`hasBorder` prop
 	&-has-border {
 		border: @border-table;
 	}
 
-// `Table`.`density` prop
+	// `Table`.`density` prop
 	&-density-extended {
 		& > .lucid-Table-Tbody > .lucid-Table-Tr > .lucid-Table-Td {
 			padding: @Table-cell-padding-extended;
@@ -30,13 +30,14 @@
 		}
 	}
 
-// `Table`.`hasWordWrap` prop
+	// `Table`.`hasWordWrap` prop
 	.lucid-Table-Td, .lucid-Table-Th {
 		white-space: nowrap;
 	}
 
 	&-has-word-wrap {
-		.lucid-Table-Td, .lucid-Table-Th {
+		.lucid-Table-Td,
+		.lucid-Table-Th {
 			white-space: initial;
 		}
 	}
@@ -55,16 +56,19 @@
 			&.lucid-Table-is-first-row {
 				border-top: 0 none @color-transparent;
 			}
+
 			&.lucid-Table-is-last-row {
 				border-bottom: 0 none @color-transparent;
 			}
+
 			&.lucid-Table-is-first-col {
 				border-left: 0 none @color-transparent;
 			}
+
 			&.lucid-Table-is-last-col {
 				border-right: 0 none @color-transparent;
 			}
-// `Th`.`isSortable` prop
+			// `Th`.`isSortable` prop
 			&.lucid-Table-is-sortable {
 				cursor: pointer;
 
@@ -86,7 +90,7 @@
 					align-items: center;
 					margin: 2.5px 9.4px;
 				}
-// `Th`.`isSorted` prop
+				// `Th`.`isSorted` prop
 				.lucid-Table-Th-inner-caret {
 					margin-right: 9px;
 					display: flex;
@@ -98,20 +102,21 @@
 						height: 8px;
 					}
 				}
-// `Th`.`isResizable` prop
+				// `Th`.`isResizable` prop
 				.lucid-Table-Th-inner-resize {
 					cursor: ew-resize;
 					width: 4px;
 					background-color: fade(@color-black, 70%);
 					opacity: 0;
 					transition: opacity @timing-animation-hover;
+
 					&:hover {
 						opacity: 1;
 					}
 				}
 			}
 
-// `Th`.`align` prop - use flex alignments in header
+			// `Th`.`align` prop - use flex alignments in header
 			&.lucid-Table-align-left > .lucid-Table-Th-inner .lucid-Table-Th-inner-content {
 				justify-content: flex-start;
 			}
@@ -128,112 +133,94 @@
 
 	// Table body cell styles
 	& > &-Tbody {
-
 		& > .lucid-Table-Tr {
 
-// `Td`.`align` prop - use text alignments in body
+			// `Td`.`align` prop - use text alignments in body
+			// Table body cell styles
 			& > .lucid-Table-Td {
-					background-clip: padding-box; // fixes Firefox background paints over collapsed border
-					&.lucid-Table-align-left {
-						text-align: left;
-					}
+				background-clip: padding-box; // fixes Firefox background paints over collapsed border
+				border-bottom: @border-table-body;
 
-					&.lucid-Table-align-center {
-						text-align: center;
-					}
+				// remove all borders from the perimeter of the body
+				&.lucid-Table-is-first-row {
+					border-top: 0 none @color-transparent;
+				}
 
-					&.lucid-Table-align-right {
-						text-align: right;
-					}
+				&.lucid-Table-is-last-row {
+					border-bottom: 0 none @color-transparent;
+				}
+
+				&.lucid-Table-is-first-col {
+					border-left: 0 none @color-transparent;
+				}
+
+				&.lucid-Table-is-last-col {
+					border-right: 0 none @color-transparent;
+				}
+
+				// `Td`.`hasBorderRight` prop
+				&.lucid-Table-has-border-right {
+					border-right: @border-table-body;
+				}
+
+				// `Td`.`hasBorderLeft` prop
+				&.lucid-Table-has-border-left {
+					border-left: @border-table-body;
+				}
+
+				&.lucid-Table-align-left {
+					text-align: left;
+				}
+
+				&.lucid-Table-align-center {
+					text-align: center;
+				}
+
+				&.lucid-Table-align-right {
+					text-align: right;
+				}
 			}
-
 
 			// style row cells on hover
 			&:hover {
-				.selectCellsOnRow({
-					background-color: @color-lightGray;
-				});
+				.selectCellsOnRow({ background-color: @color-lightGray;});
 			};
 
-// `Tr`.`isSelected` prop
+			// `Tr`.`isSelected` prop
 			// style row cells
 			&.lucid-Table-is-selected {
-				.selectCellsOnRow({
-					background-color: @color-primaryLight;
-				});
+				.selectCellsOnRow({background-color: @color-primaryLight;});
 
 				// style row cells on hover
 				&:hover {
-					.selectCellsOnRow({
-						background-color: multiply(@color-primaryLight, @color-lightGray);
-					});
+					.selectCellsOnRow({background-color: multiply(@color-primaryLight, @color-lightGray);});
 				}
 			}
 
-// `Tr`.`isActive` prop
+			// `Tr`.`isActive` prop
 			// style row cells
 			&.lucid-Table-is-active {
-				.selectCellsOnRow({
-					background-color: @color-primaryMedium;
-				});
+				.selectCellsOnRow({background-color: @color-primaryMedium;});
+				// always show marker on first cell
+				.selectFirstCellOnRow({.left-marker(1);});
 
 				// style row cells on hover
 				&:hover {
-					.selectCellsOnRow({
-						background-color: multiply(@color-primaryMedium, @color-lightGray);
-					});
+					.selectCellsOnRow({background-color: multiply(@color-primaryMedium, @color-lightGray);});
 				}
-
-				// always show marker on first cell
-				.selectFirstCellOnRow({
-					.left-marker(1);
-				});
 			}
 
-// `Tr`.`isActionable` prop
+			// `Tr`.`isActionable` prop
 			// style cells of rows which are only actionable but not active
 			&.lucid-Table-is-actionable:not(.lucid-Table-is-active) {
 
 				// place hidden marker on first cell
-				.selectFirstCellOnRow({
-					.left-marker(0);
-				});
+				.selectFirstCellOnRow({ .left-marker(0); });
 
 				// show marker on hover
 				&:hover {
-					.selectFirstCellOnRow({
-						.left-marker(1);
-					});
+					.selectFirstCellOnRow({ .left-marker(1); });
 				}
-			}
-		}
-
-		// Table body cell styles
-		& > .lucid-Table-Tr > .lucid-Table-Td {
-			border-bottom: @border-table-body;
-
-			// remove all borders from the perimeter of the body
-			&.lucid-Table-is-first-row {
-				border-top: 0 none @color-transparent;
-			}
-			&.lucid-Table-is-last-row {
-				border-bottom: 0 none @color-transparent;
-			}
-			&.lucid-Table-is-first-col {
-				border-left: 0 none @color-transparent;
-			}
-			&.lucid-Table-is-last-col {
-				border-right: 0 none @color-transparent;
-			}
-
-// `Td`.`hasBorderRight` prop
-			&.lucid-Table-has-border-right {
-				border-right: @border-table-body;
-			}
-
-// `Td`.`hasBorderLeft` prop
-			&.lucid-Table-has-border-left {
-				border-left: @border-table-body;
 			}
 		}
 	}
@@ -248,6 +235,7 @@
 .lucid-Table-is-disabled {
 	color: @color-disabledText;
 	font-style: italic;
+
 	a {
 		color: fade(multiply(@color-disabledText, @color-linkColor), 50%);
 	}
@@ -258,7 +246,8 @@
 // Select all 1-height cells on the current body row and apply the given styles
 .selectCellsOnRow(@ruleset) {
 	& > .lucid-Table-Td {
-		&:not([rowspan]), &[rowspan='1'] {
+		&:not([rowspan]),
+		&[rowspan='1'] {
 			@ruleset();
 		}
 	}
@@ -272,3 +261,4 @@
 		}
 	}
 }
+

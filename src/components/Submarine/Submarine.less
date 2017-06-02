@@ -52,6 +52,8 @@
 			}
 
 			& > .lucid-Submarine-Bar-header {
+				.box-sizing();
+
 				background-color: @color-backgroundColor;
 				color: @color-textColor;
 				font: @size-L @fontFamily;
@@ -59,11 +61,11 @@
 				display: flex;
 				flex-shrink: 0;
 				min-height: @Submarine-Bar-header-height;
-				.box-sizing();
 
 				.lucid-Submarine-is-position-top& {
 					border-top: @border-standardBorder;
 				}
+
 				.lucid-Submarine-is-position-bottom& {
 					border-bottom: @border-standardBorder;
 				}
@@ -75,6 +77,7 @@
 				& > .lucid-Submarine-expander {
 					.no-safari-flicker();
 					.box-sizing();
+
 					align-self: flex-start;
 					display: flex;
 					justify-content: center;
@@ -146,14 +149,14 @@
 		}
 
 		& > .lucid-Submarine-Primary {
-			flex-basis: 0px;
+			flex-basis: 0;
 			overflow: auto;
 			display: flex;
 			flex-direction: column;
 
 			.lucid-Submarine-is-position-top& {
 				margin-top: -@Submarine-Divider-height;
-				
+
 				.lucid-Submarine-is-resize-disabled& {
 					margin-top: 0;
 				}
@@ -169,7 +172,7 @@
 				.lucid-Submarine-is-resize-disabled& {
 					margin-bottom: 0;
 				}
-				
+
 				.lucid-SplitHorizontal-is-expanded& {
 					margin-bottom: 0;
 				}
@@ -183,7 +186,6 @@
 
 	&.lucid-SplitHorizontal-is-animated.lucid-SplitHorizontal-is-animated {
 		& > .lucid-SplitHorizontal-inner {
-
 			& > .lucid-Submarine-Bar {
 				& > .lucid-Submarine-Bar-overlay {
 					transition: opacity @Submarine-transition-half-duration;
@@ -214,3 +216,4 @@
 		}
 	}
 }
+

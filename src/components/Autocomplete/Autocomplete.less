@@ -5,7 +5,6 @@
 @Autocomplete-size-controlHeight: @size-standard-height;
 
 .lucid-Autocomplete {
-
 	&:not(.lucid-ContextMenu-FlyOut) {
 		width: 100%;
 	}
@@ -17,15 +16,17 @@
 	& &-Control {
 		.no-safari-flicker();
 		.box-sizing();
+
 		cursor: pointer;
 		height: @Autocomplete-size-controlHeight;
 		display: flex;
 		outline: none;
 		border: 1px solid @color-borderColor;
 		border-radius: @size-borderRadius;
-		font: @font;
+		font-size: @fontSize;
+font-family: @fontFamily;
 		color: @color-black;
-		letter-spacing: .05em;
+		letter-spacing: 0.05em;
 		line-height: @size-standard-height;
 		padding: 0 @size-S;
 		align-items: center;
@@ -36,7 +37,8 @@
 			background: none @color-transparent;
 			border: 0 solid @color-transparent;
 			outline: none;
-			font: @font;
+			font-size: @fontSize;
+font-family: @fontFamily;
 			font-weight: normal;
 			color: @color-textColor;
 			margin: 0;
@@ -60,9 +62,7 @@
 		&-is-disabled {
 			cursor: not-allowed;
 			.opacity();
-		}
 
-		&-is-disabled {
 			input {
 				cursor: not-allowed;
 			}
@@ -101,3 +101,4 @@
 		text-decoration: underline;
 	}
 }
+

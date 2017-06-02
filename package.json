@@ -21,6 +21,7 @@
     "preversion": "rm -rf dist && npm run lint && gulp preversion && npm run build-bundle",
     "postpublish": "gulp build-js-clean-path-imports && gulp docs-upload",
     "start": "npm run dev",
+    "stylelint": "stylelint 'src/**/*.less' --config .stylelintrc",
     "test": "npm run lint && npm run cover",
     "watch": "npm run jest -- --watch"
   },
@@ -103,6 +104,8 @@
     "react-router": "^2.0.0",
     "sinon": "^2.0.0-pre",
     "style-loader": "^0.13.0",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0",
     "webpack": "^1.12.12",
     "webpack-dev-server": "^1.14.1"
   },

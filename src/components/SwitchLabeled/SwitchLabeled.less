@@ -6,7 +6,8 @@
 	color: @color-darkGray;
 	cursor: pointer;
 	display: flex;
-	font: @font;
+	font-size: @fontSize;
+	font-family: @fontFamily;
 	justify-content: flex-start;
 
 	> .lucid-Switch {
@@ -21,6 +22,7 @@
 
 	&:hover .lucid-Switch-visualization-glow {
 		.opacity();
+
 		transform: @Switch-glow-scale;
 	}
 
@@ -30,6 +32,7 @@
 
 	&&-is-disabled:hover .lucid-Switch-visualization-glow {
 		.opacity(0);
+
 		transform: none;
 	}
 
@@ -41,7 +44,6 @@
 		transform: @Switch-selected-transform scale(1);
 	}
 
-
 	&-is-selected:hover .lucid-Switch-visualization-glow {
 		transform: @Switch-selected-transform @Switch-glow-scale;
 	}
@@ -52,6 +54,7 @@
 
 	&-text {
 		.transition-group-animation-fade(@timing-animation-hover);
+
 		position: relative;
 		height: @Switch-height;
 
@@ -70,3 +73,4 @@
 		}
 	}
 }
+

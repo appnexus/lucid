@@ -31,10 +31,11 @@
 	}
 
 	&-visualization-container {
+		.box-sizing();
+
 		background-color: white;
 		border-radius: @RadioButton-container-radius + 1;
 		border: solid 1px rgba(0, 0, 0, 0.3);
-		.box-sizing();
 		height: @RadioButton-container-radius * 2;
 		left: @RadioButton-container-offset;
 		position: absolute;
@@ -43,12 +44,13 @@
 	}
 
 	&-visualization-dot {
+		.box-sizing();
+		.opacity(0);
+
 		background-color: white;
 		border-radius: @RadioButton-dot-radius;
-		.box-sizing();
 		height: @RadioButton-dot-radius * 2;
 		left: @RadioButton-dot-offset;
-		.opacity(0);
 		position: absolute;
 		top: @RadioButton-dot-offset;
 		transition: @RadioButton-animation-timing;
@@ -56,12 +58,13 @@
 	}
 
 	&-visualization-glow {
+		.box-sizing();
+		.opacity(0);
+
 		background-color: @color-primary;
 		border-radius: @RadioButton-glow-radius;
-		.box-sizing();
 		height: @RadioButton-glow-radius * 2;
 		left: @RadioButton-glow-offset;
-		.opacity(0);
 		position: absolute;
 		top: @RadioButton-glow-offset;
 		transition: @RadioButton-animation-timing;
@@ -75,6 +78,7 @@
 
 	&:hover &-visualization-glow {
 		.opacity();
+
 		transform: @RadioButton-glow-scale;
 	}
 
@@ -86,6 +90,7 @@
 
 	&-is-disabled:hover &-visualization-glow {
 		.opacity(0);
+
 		transform: none;
 	}
 
@@ -106,6 +111,8 @@
 
 	&-native:focus ~ &-visualization-glow {
 		.opacity();
+
 		transform: @RadioButton-glow-scale;
 	}
 }
+

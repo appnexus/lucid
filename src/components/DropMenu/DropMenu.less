@@ -4,7 +4,6 @@
 @DropMenu-size-optionHeight: 25px;
 
 .lucid-DropMenu {
-
 	&&-base {
 		display: inline-block;
 	}
@@ -16,15 +15,16 @@
 	}
 
 	&-Control {
-		position:relative;
-		outline: 0px;
+		position: relative;
+		outline: 0;
 	}
 
 	&-Option {
 		cursor: pointer;
 		padding: 0 @size-S;
 		line-height: @size-standard;
-		font: @font;
+		font-size: @fontSize;
+		font-family: @fontFamily;
 		height: @DropMenu-size-optionHeight;
 		display: flex;
 		align-items: center;
@@ -54,9 +54,10 @@
 	}
 
 	&-option-container {
+		.box-sizing();
+
 		background-color: @color-white;
 		border: solid 1px @featured-color-default-borderColor;
-		.box-sizing();
 		overflow-y: auto;
 
 		// TODO: do we stil need this?
@@ -68,13 +69,13 @@
 
 	&.lucid-ContextMenu-FlyOut {
 		&&-Up {
-			border-width: 1px 1px 0 1px;
+			border-width: 1px 1px 0;
 			border-radius: @size-borderRadius @size-borderRadius 0 0;
 			box-shadow: 0 1px 0 @featured-color-default-borderColor;
 		}
 
 		&&-Down {
-			border-width: 0 1px 1px 1px;
+			border-width: 0 1px 1px;
 			border-radius: 0 0 @size-borderRadius @size-borderRadius;
 			box-shadow: 0 -1px 0 @featured-color-default-borderColor;
 		}
@@ -82,16 +83,18 @@
 
 	&-OptionGroup-divider {
 		border: 1px solid @color-gray;
-		border-width: 1px 0 0 0;
+		border-width: 1px 0 0;
 		height: 1px;
 	}
 
 	&-label {
 		padding: 0 @size-XS;
-		font: @font;
+		font-size: @fontSize;
+		font-family: @fontFamily;
 		font-weight: bold;
 		height: @DropMenu-size-optionHeight;
 		display: flex;
 		align-items: center;
 	}
 }
+

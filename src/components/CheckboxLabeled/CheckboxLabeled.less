@@ -6,7 +6,8 @@
 	color: @color-darkGray;
 	cursor: pointer;
 	display: flex;
-	font: @font;
+	font-size: @fontSize;
+font-family: @fontFamily;
 	justify-content: flex-start;
 
 	> .lucid-Checkbox {
@@ -30,6 +31,7 @@
 
 	&:hover .lucid-Checkbox-visualization-glow {
 		.opacity(0.3);
+
 		transform: @Checkbox-glow-scale;
 	}
 
@@ -41,9 +43,9 @@
 
 	&&-is-disabled:hover .lucid-Checkbox-visualization-glow {
 		.opacity(0);
+
 		transform: none;
 	}
-
 
 	&&-is-disabled&&-is-selected:hover .lucid-Checkbox-visualization-container,
 	&&-is-selected .lucid-Checkbox-visualization-container {
@@ -51,3 +53,4 @@
 		border-color: @color-primary;
 	}
 }
+

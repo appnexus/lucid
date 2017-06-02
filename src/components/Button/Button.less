@@ -12,14 +12,15 @@
 	.no-safari-flicker();
 	.box-sizing();
 	.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+
 	cursor: pointer;
 	height: @Button-size-height;
 	border: 1px solid @featured-color-default-borderColor;
 	border-radius: @Button-size-borderRadius;
-	font: @font;
-	letter-spacing: .05em;
+	font-size: @fontSize;
+font-family: @fontFamily;
+	letter-spacing: 0.05em;
 	padding: 0 @Button-size-padding;
-	cursor: pointer;
 	outline: none;
 	color: @color-black;
 
@@ -37,7 +38,7 @@
 		border: 0;
 	}
 
-	&:before {border-radius: @Button-size-borderRadius;}
+	&::before { border-radius: @Button-size-borderRadius; }
 
 	&&-has-only-icon {
 		padding: 0 5px;
@@ -52,6 +53,7 @@
 		> .lucid-Icon {
 			transition: color @timing-animation-hover, fill @timing-animation-hover;
 		}
+
 		> span {
 			transition: color @timing-animation-hover, fill @timing-animation-hover;
 		}
@@ -62,50 +64,61 @@
 		.gradient-animation(@featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
 		.make-is-disabled(lucid-Button, @featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
 		.bold();
+
 		border-color: @featured-color-primary-borderColor;
 		color: @color-white;
 
 		.lucid-Icon { fill: @color-white; }
 	}
+
 	&&-success {
 		.gradient-animation(@featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
 		.make-is-disabled(lucid-Button, @featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
 		.bold();
+
 		color: @color-white;
 		border-color: @featured-color-success-borderColor;
 
 		.lucid-Icon { fill: @color-white; }
 	}
+
 	&&-info {
 		.gradient-animation(@featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
 		.make-is-disabled(lucid-Button, @featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
 		.bold();
+
 		border-color: @featured-color-info-borderColor;
 		color: @color-white;
 
 		.lucid-Icon { fill: @color-white; }
 	}
+
 	&&-warning {
 		.gradient-animation(@featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
 		.make-is-disabled(lucid-Button, @featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
 		.bold();
+
 		border-color: @featured-color-warning-borderColor;
 		color: @color-white;
 
 		.lucid-Icon { fill: @color-white; }
 	}
+
 	&&-danger {
 		.gradient-animation(@featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
 		.make-is-disabled(lucid-Button, @featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
 		.bold();
+
 		border-color: @featured-color-danger-borderColor;
 		color: @color-white;
 
 		.lucid-Icon { fill: @color-white; }
 	}
+
 	&&-link {
 		.gradient-reset();
 		.make-is-disabled(lucid-Button);
+
 		border: none;
 		background: none;
 		color: @color-linkColor;
@@ -113,18 +126,19 @@
 		&:hover,
 		&:active,
 		&:focus {
+			.lucid-Icon { fill: @color-linkColorHover; }
+
 			background: none;
 			color: @color-linkColorHover;
 			text-decoration: underline;
-			.lucid-Icon { fill: @color-linkColorHover; }
 			box-shadow: none;
 		}
 
-		&:active:before {
+		&:active::before {
 			opacity: 0;
 		}
 
-		.lucid-Button-content{
+		.lucid-Button-content {
 			line-height: 1em;
 		}
 
@@ -137,6 +151,7 @@
 			}
 		}
 	}
+
 	&&-link&-has-only-icon {
 		// Clear the right margin, only need it if the has text with it
 		.lucid-Icon {
@@ -148,13 +163,16 @@
 	&&-short {
 		height: @Button-size-height-small;
 	}
+
 	&&-small {
 		height: @Button-size-height-small;
 		padding: 0 @Button-size-padding/1.5;
 	}
+
 	&&-small&-has-only-icon {
 		padding: 0 1px;
 	}
+
 	&&-large {
 		height: @Button-size-height-large;
 		padding: 0 @Button-size-padding*1.5;
@@ -165,6 +183,7 @@
 			height: 1.2em;
 		}
 	}
+
 	&&-large&-has-only-icon {
 		padding: 0 8px;
 	}
@@ -172,32 +191,39 @@
 	// States
 	&&-is-active {
 		.gradient-reset();
+
 		background: @featured-color-primary;
 		border-color: @featured-color-primary;
 		color: @color-white;
 
 		.lucid-Icon { fill: @color-white; }
 	}
+
 	&&-is-active&-primary {
 		background: @featured-color-primary;
 		border-color: @featured-color-primary;
 	}
+
 	&&-is-active&-success {
 		border-color: @featured-color-success-borderColor;
 		background: @featured-color-success;
 	}
+
 	&&-is-active&-info {
 		border-color: @featured-color-info-borderColor;
 		background: @featured-color-info;
 	}
+
 	&&-is-active&-warning {
 		border-color: @featured-color-warning-borderColor;
 		background: @featured-color-warning;
 	}
+
 	&&-is-active&-danger {
 		border-color: @featured-color-danger-borderColor;
 		background: @featured-color-danger;
 	}
+
 	&-is-disabled {
 		.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
 		.opacity();
@@ -209,3 +235,4 @@
 		.no-cursor();
 	}
 }
+

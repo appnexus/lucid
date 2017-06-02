@@ -4,26 +4,27 @@
 @SearchableSelect-size-controlHeight: @size-standard-height;
 
 .lucid-SearchableSelect {
-
 	&-Control {
 		.no-safari-flicker();
 		.box-sizing();
 		.gradient-animation( @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+
 		cursor: pointer;
 		height: @SearchableSelect-size-controlHeight;
 		display: flex;
 		outline: none;
 		border: 1px solid @featured-color-default-borderColor;
 		border-radius: @size-borderRadius;
-		font: @font;
+		font-size: @fontSize;
+		font-family: @fontFamily;
 		color: @color-black;
-		letter-spacing: .05em;
+		letter-spacing: 0.05em;
 		line-height: @size-standard-height;
 		padding: 0 @size-standard;
 		align-items: center;
 		white-space: nowrap;
 
-		&:before {
+		&::before {
 			border-radius: @size-borderRadius;
 		}
 
@@ -39,10 +40,12 @@
 		}
 
 		// States
-		&-is-highlighted, &-is-selected {
+		&-is-highlighted,
+		&-is-selected {
+			.gradient-animation(@featured-color-primary, @featured-color-primary);
+
 			color: @color-white;
 			border-color: @featured-color-primary-borderColor;
-			.gradient-animation(@featured-color-primary, @featured-color-primary);
 
 			.lucid-CaretIcon {
 				fill: @color-white;
@@ -54,9 +57,14 @@
 		}
 
 		&-is-disabled {
-			.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
-			cursor: not-allowed;
+			.gradient-reset(linear-gradient(
+				@standardGradient,
+				@featured-color-default-gradientStartColor,
+				@featured-color-default-gradientEndColor
+			));
 			.opacity();
+
+			cursor: not-allowed;
 		}
 	}
 
@@ -118,3 +126,4 @@
 		font-style: italic;
 	}
 }
+
