@@ -152,7 +152,9 @@
 		}
 
 		& > .lucid-Submarine-Primary {
-			flex-basis: 0;
+			/* https://connect.microsoft.com/IE/feedback/details/949764/ie-11-incorrectly-rejects-flexbox-shorthand-syntax-flex-1-1-0-as-invalid */
+			/* stylelint-disable-next-line length-zero-no-unit */
+			flex-basis: 0px;
 			overflow: auto;
 			display: flex;
 			flex-direction: column;
