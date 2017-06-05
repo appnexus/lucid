@@ -9,6 +9,7 @@ import {
 	omitProps,
 	getFirst,
 	findTypes,
+	rejectTypes,
 } from '../../util/component-types';
 import { SearchFieldDumb as SearchField } from '../SearchField/SearchField';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
@@ -68,6 +69,23 @@ const SearchableMultiSelect = createClass({
 			displayName: 'SearchableMultiSelect.SearchField',
 			propName: 'SearchField',
 			propTypes: SearchField.propTypes,
+		}),
+
+		/**
+		 * Groups `Option`s together with a non-selectable heading.
+		 */
+		OptionGroup: createClass({
+			displayName: 'SearchableMultiSelect.OptionGroup',
+			propName: 'OptionGroup',
+			propTypes: DropMenu.OptionGroup.propTypes,
+		}),
+
+		/**
+		 * Label for the selected section header.
+		 */
+		SelectionLabel: createClass({
+			displayName: 'SearchableMultiSelect.SelectionLabel',
+			propName: 'SelectionLabel',
 		}),
 	},
 
@@ -170,6 +188,15 @@ const SearchableMultiSelect = createClass({
 		hasSelections: bool,
 	},
 
+	getInitialState() {
+		return {
+			optionGroups: [],
+			flattenedOptionsData: [],
+			ungroupedOptionData: [],
+			optionGroupDataLookup: {},
+		};
+	},
+
 	getDefaultProps() {
 		return {
 			isDisabled: false,
@@ -259,6 +286,20 @@ const SearchableMultiSelect = createClass({
 		});
 	},
 
+	componentWillMount() {
+		// preprocess the options data before rendering
+		this.setState(
+			DropMenu.preprocessOptionData(this.props, SearchableMultiSelect)
+		);
+	},
+
+	componentWillReceiveProps(nextProps) {
+		// only preprocess options data when it changes (via new props) - better performance than doing this each render
+		this.setState(
+			DropMenu.preprocessOptionData(nextProps, SearchableMultiSelect)
+		);
+	},
+
 	renderUnderlinedChildren(childText, searchText) {
 		const [pre, match, post] = partitionText(
 			childText,
@@ -280,19 +321,14 @@ const SearchableMultiSelect = createClass({
 		];
 	},
 
-	renderOptions(optionsProps) {
+	renderOption({ optionProps, optionIndex }) {
 		const { optionFilter, searchText, selectedIndices, isLoading } = this.props;
 
-		const options = _.map(optionsProps, (optionProps, optionIndex) => (
+		return (
 			<DropMenu.Option
-				{...omitProps(
-					optionProps,
-					SearchableMultiSelect.Option,
-					['children'],
-					false
-				)}
+				key={'SearchableMultiSelectOption' + optionIndex}
+				{..._.omit(optionProps, 'children')}
 				isHidden={!optionFilter(searchText, optionProps)}
-				key={optionIndex}
 				isDisabled={isLoading}
 			>
 				<div className={cx('&-checkbox')}>
@@ -301,27 +337,63 @@ const SearchableMultiSelect = createClass({
 						callbackId={optionIndex}
 						isSelected={_.includes(selectedIndices, optionIndex)}
 					/>
-					<div className={cx('&-checkbox-label')}>
+					<label className={cx('&-checkbox-label')}>
 						{_.isString(optionProps.children)
 							? this.renderUnderlinedChildren(optionProps.children, searchText)
 							: optionProps.children}
-					</div>
+					</label>
 				</div>
 			</DropMenu.Option>
-		));
+		);
+	},
 
-		const visibleOptionsCount = _.filter(
-			options,
-			option => !option.props.isHidden
-		).length;
+	renderOptions() {
+		const { optionFilter, searchText, isLoading } = this.props;
 
-		return visibleOptionsCount > 0
-			? options
-			: <DropMenu.Option isDisabled>
+		const {
+			optionGroups,
+			optionGroupDataLookup,
+			ungroupedOptionData,
+			flattenedOptionsData,
+		} = this.state;
+
+		const isAllOptionsHidden = _.every(
+			flattenedOptionsData,
+			({ optionProps }) => !optionFilter(searchText, optionProps)
+		);
+
+		// for each option group passed in, render a DropMenu.OptionGroup, any label will be included in it's children, render each option inside the group
+		const dropMenuOptions = _.map(
+			optionGroups,
+			(optionGroupProps, optionGroupIndex) => (
+				<DropMenu.OptionGroup
+					key={'SearchableMultiSelectOptionGroup' + optionGroupIndex}
+					{..._.omit(optionGroupProps, 'children')}
+				>
+					{optionGroupProps.children}
+					{_.map(optionGroupDataLookup[optionGroupIndex], this.renderOption)}
+				</DropMenu.OptionGroup>
+			)
+		).concat(
+			// then render all the ungrouped options at the end
+			_.map(ungroupedOptionData, this.renderOption)
+		);
+
+		if (!isAllOptionsHidden || _.isEmpty(searchText)) {
+			return dropMenuOptions;
+		}
+
+		if (!isLoading) {
+			return (
+				<DropMenu.Option isDisabled>
 					<span className={cx('&-noresults')}>
 						No results match "{searchText}"
 					</span>
-				</DropMenu.Option>;
+				</DropMenu.Option>
+			);
+		}
+
+		return null;
 	},
 
 	render() {
@@ -343,14 +415,23 @@ const SearchableMultiSelect = createClass({
 			},
 		} = this;
 
+		const {
+			optionGroupDataLookup,
+			optionGroups,
+			ungroupedOptionData,
+		} = this.state;
+
 		const searchFieldProps = _.get(
 			getFirst(props, SearchableMultiSelect.SearchField),
 			'props',
 			{}
 		);
-		const optionsProps = _.map(
-			findTypes(props, SearchableMultiSelect.Option),
-			'props'
+		const selectionLabel = getFirst(
+			props,
+			SearchableMultiSelect.SelectionLabel,
+			<SearchableMultiSelect.SelectionLabel>
+				Selected
+			</SearchableMultiSelect.SelectionLabel>
 		);
 		const isSmall = responsiveMode === 'small';
 
@@ -407,39 +488,107 @@ const SearchableMultiSelect = createClass({
 								<LoadingIcon />
 							</DropMenu.Option>
 						: null}
-					{this.renderOptions(optionsProps)}
+					{this.renderOptions()}
 				</DropMenu>
 
 				{hasSelections && !_.isEmpty(selectedIndices)
 					? <Selection
+							className={cx('&-Selection-section')}
 							isBold
 							hasBackground
-							Label="Selected"
 							kind="container"
 							onRemove={this.handleRemoveAll}
 							responsiveMode={responsiveMode}
 							isRemovable={hasRemoveAll}
 						>
+							<Selection.Label>
+								{selectionLabel.props.children}
+							</Selection.Label>
+							{_.map(
+								optionGroupDataLookup,
+								(groupedOptionsData, optionGroupIndex) => {
+									const selectedGroupedOptions = _.filter(groupedOptionsData, ({
+										optionIndex,
+									}) => _.includes(selectedIndices, optionIndex));
+									if (!_.isEmpty(selectedGroupedOptions)) {
+										return (
+											<Selection
+												className={cx('&-Selection-group')}
+												key={'optionGroup-' + optionGroupIndex}
+												responsiveMode={responsiveMode}
+												isRemovable={false}
+												isBold
+												kind="container"
+											>
+												<Selection.Label>
+													{_.first(
+														rejectTypes(
+															optionGroups[optionGroupIndex].children,
+															SearchableMultiSelect.Option
+														)
+													)}
+												</Selection.Label>
+												{_.map(selectedGroupedOptions, ({
+													optionIndex,
+													optionProps,
+												}) => {
+													const selectionProps = _.get(
+														getFirst(
+															optionProps,
+															SearchableMultiSelect.Option.Selection
+														),
+														'props'
+													);
+													return (
+														<Selection
+															key={optionIndex}
+															{...selectionProps}
+															callbackId={optionIndex}
+															responsiveMode={responsiveMode}
+															onRemove={this.handleSelectionRemove}
+														>
+															<Selection.Label>
+																{optionProps.children}
+															</Selection.Label>
+														</Selection>
+													);
+												})}
+											</Selection>
+										);
+									}
+									return null;
+								}
+							)}
 							{_.map(selectedIndices, selectedIndex => {
-								const optionProps = optionsProps[selectedIndex];
-								const selectionProps = _.get(
-									getFirst(optionProps, SearchableMultiSelect.Option.Selection),
-									'props'
+								const selectedUngroupedOptionData = _.find(
+									ungroupedOptionData,
+									{ optionIndex: selectedIndex }
 								);
 
-								return (
-									<Selection
-										key={selectedIndex}
-										{...selectionProps}
-										callbackId={selectedIndex}
-										responsiveMode={responsiveMode}
-										onRemove={this.handleSelectionRemove}
-									>
-										<Selection.Label>
-											{optionProps.children}
-										</Selection.Label>
-									</Selection>
-								);
+								if (selectedUngroupedOptionData) {
+									const { optionProps } = selectedUngroupedOptionData;
+									const selectionProps = _.get(
+										getFirst(
+											optionProps,
+											SearchableMultiSelect.Option.Selection
+										),
+										'props'
+									);
+									return (
+										<Selection
+											key={selectedIndex}
+											{...selectionProps}
+											callbackId={selectedIndex}
+											responsiveMode={responsiveMode}
+											onRemove={this.handleSelectionRemove}
+										>
+											<Selection.Label>
+												{optionProps.children}
+											</Selection.Label>
+										</Selection>
+									);
+								}
+								return null;
 							})}
 						</Selection>
 					: null}

@@ -621,7 +621,12 @@ const DropMenu = createClass({
 							{joinArray(
 								// for each option group,
 								_.map(optionGroups, (optionGroupProps, optionGroupIndex) => {
-									if (optionGroupProps.isHidden) {
+									const groupedOptions =
+										optionGroupDataLookup[optionGroupIndex];
+									if (
+										optionGroupProps.isHidden ||
+										_.every(groupedOptions, { optionProps: { isHidden: true } })
+									) {
 										return null;
 									}
 
@@ -636,14 +641,14 @@ const DropMenu = createClass({
 										? []
 										: [
 												<div
-													{...optionGroupProps}
+													{...omitProps(optionGroupProps, DropMenu.OptionGroup)}
 													className={cx('&-label', optionGroupProps.className)}
 												>
 													{labelElements}
 												</div>,
 												// render the options in the group
 											]).concat(
-										_.map(_.get(optionGroupDataLookup, optionGroupIndex), ({
+										_.map(optionGroupDataLookup[optionGroupIndex], ({
 											optionProps,
 											optionIndex,
 										}) => this.renderOption(optionProps, optionIndex, true))

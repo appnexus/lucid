@@ -12,7 +12,7 @@ export default createClass({
 					const responsiveMode = width >= 768 ? 'large' : 'small';
 
 					return (
-						<div>
+						<section>
 							<h5>Loading</h5>
 							<SearchableMultiSelect
 								responsiveMode={responsiveMode}
@@ -52,7 +52,7 @@ export default createClass({
 								<Option>Oregon</Option>
 								<Option>California</Option>
 							</SearchableMultiSelect>
-						</div>
+						</section>
 					);
 				}}
 			</Resizer>
