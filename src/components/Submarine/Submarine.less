@@ -23,7 +23,10 @@
 			background-color: @color-white;
 			overflow: auto;
 			display: flex;
-			flex-shrink: 0;
+
+			/* https://connect.microsoft.com/IE/feedback/details/949764/ie-11-incorrectly-rejects-flexbox-shorthand-syntax-flex-1-1-0-as-invalid */
+			/* stylelint-disable-next-line length-zero-no-unit */
+			flex-shrink: 0px;
 
 			.lucid-Submarine-is-position-top& {
 				border-bottom: @border-standardBorder;

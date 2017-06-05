@@ -17,7 +17,9 @@
 	}
 
 	&-Tab {
-		flex: 1 1 0;
+		/* https://connect.microsoft.com/IE/feedback/details/949764/ie-11-incorrectly-rejects-flexbox-shorthand-syntax-flex-1-1-0-as-invalid */
+		/* stylelint-disable-next-line length-zero-no-unit */
+		flex: 1 1 0px;
 		height: inherit;
 		display: flex;
 		justify-content: center;
