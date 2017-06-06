@@ -1,9 +1,10 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { SearchableMultiSelect } from '../../../index';
 
 const { Option, SelectionLabel } = SearchableMultiSelect;
 
-export default React.createClass({
+export default createClass({
 	render() {
 		return (
 			<section style={{ marginBottom: '300px' }}>
