@@ -1,6 +1,6 @@
 // IE 10/11 do not respect box-sizing: border-box; on flex items so we need a max-width
 // This is fixed in IE12 - https://github.com/philipwalton/flexbugs/issues/3
-.flex(@basis: 0, @flex: 0, @max: 100%){
+.flex(@basis: 0, @flex: 0, @max: 100%) {
 	flex: @basis @flex @max;
 	max-width: @max;
 	max-height: @max;
@@ -15,12 +15,13 @@
 	transition: opacity @timing-animation-hover, box-shadow (@timing-animation-hover / 2);
 	z-index: 0;
 
-	&:before {
+	&::before {
 		position: absolute;
 		display: block;
 		height: 100%;
 		width: 100%;
-		top: 0; left: 0;
+		top: 0;
+		left: 0;
 		background-image: linear-gradient(@end, @start);
 		box-shadow: none;
 		opacity: 0;
@@ -29,7 +30,7 @@
 		content: '';
 	}
 
-	&:hover:not(&-is-active):before {
+	&:hover:not(&-is-active)::before {
 		opacity: 1;
 	}
 
@@ -45,7 +46,8 @@
 		border-radius: @size-borderRadius;
 		box-shadow: @shadow-inset;
 	}
-	&:active:before {
+
+	&:active::before {
 		border-radius: @size-borderRadius;
 		box-shadow: @shadow-inset;
 		opacity: 1;
@@ -56,7 +58,7 @@
 .gradient-reset(@background: none) {
 	background: @background;
 
-	&:before {
+	&::before {
 		content: '';
 		display: none;
 	}
@@ -76,6 +78,7 @@
 .make-is-disabled(@name, @start-color: @color-transparent, @end-color: @color-transparent, @gradient: @standardGradient) {
 	&.@{name}-is-disabled {
 		.gradient-reset(linear-gradient(@gradient, @start-color, @end-color));
+
 		&:hover {
 			text-decoration: none;
 		}
@@ -105,12 +108,12 @@
 // This helps prevent flickering on safari when using certain animations. See
 // the following link for more info: http://stackoverflow.com/questions/3461441/prevent-flicker-on-webkit-transition-of-webkit-transform
 .no-safari-flicker() {
-	-webkit-transform:translate3d(0,0,0);
+	-webkit-transform: translate3d(0, 0, 0);
 }
 
 // This helps prevent strange SVG aliasing in firefox
 .no-firefox-svg-aliasing() {
-	-moz-transform:translate3d(0,0,0);
+	-moz-transform: translate3d(0, 0, 0);
 }
 
 // Creates a drop shadow using a background gradient.
@@ -152,6 +155,7 @@
 
 	&-enter&-enter-active {
 		.opacity(1);
+
 		transition: opacity @timing ease-in;
 	}
 
@@ -161,10 +165,10 @@
 
 	&-leave&-leave-active {
 		.opacity(0.01);
+
 		transition: opacity @timing ease-in;
 	}
 }
-
 
 // This is a simple mixin to normalize the styles for an unselectable and unclickable element.
 .no-cursor() {
@@ -190,7 +194,7 @@
 }
 
 .focus-glow(@color: @color-primary-30) {
-	box-shadow: 0px 0px 0px 3px @color;
+	box-shadow: 0 0 0 3px @color;
 }
 
 // -----------------------------------------------------------------------------
@@ -233,7 +237,9 @@
 .link() {
 	text-decoration: none;
 	color: @color-linkColor;
+
 	&:hover {
 		color: @color-linkColorHover;
 	}
 }
+

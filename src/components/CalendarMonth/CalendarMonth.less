@@ -82,6 +82,7 @@
 
 					&--from:not(.DayPicker-Day--outside) {
 						@escaped-background-svg: escape('<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="100%" viewBox="0 0 16 16" preserveAspectRatio="none"><path d="M 0 0 H 12 L 16 8 L 12 16 H 0" fill="@{color-primary}" /></svg>');
+
 						color: @color-white;
 						background-image: url('data:image/svg+xml;utf8,@{escaped-background-svg}');
 						background-size: 100% 100%;
@@ -89,6 +90,7 @@
 
 					&--to:not(.DayPicker-Day--outside) {
 						@escaped-background-svg: escape('<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="100%" viewBox="0 0 16 16" preserveAspectRatio="none"><path d="M 16 16 H 4 L 0 8 L 4 0 H 16" fill="@{color-primary}" /></svg>');
+
 						color: @color-white;
 						background-image: url('data:image/svg+xml;utf8,@{escaped-background-svg}');
 						background-size: 100% 100%;
@@ -98,3 +100,4 @@
 		}
 	}
 }
+

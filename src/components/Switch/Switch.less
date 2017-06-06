@@ -35,9 +35,10 @@
 	}
 
 	&-visualization-container {
+		.box-sizing();
+
 		background-color: @color-borderColor;
 		border-radius: @Switch-container-height / 2;
-		.box-sizing();
 		height: @Switch-container-height;
 		left: @Switch-container-offset;
 		position: absolute;
@@ -47,9 +48,10 @@
 	}
 
 	&-visualization-glow {
+		.box-sizing();
+
 		background-color: @color-primary;
 		border-radius: @Switch-glow-radius;
-		.box-sizing();
 		height: @Switch-glow-radius * 2;
 		left: @Switch-glow-offset;
 		opacity: 0;
@@ -60,9 +62,10 @@
 	}
 
 	&-visualization-handle {
+		.box-sizing();
+
 		background-color: white;
 		border-radius: @Switch-handle-radius;
-		.box-sizing();
 		height: @Switch-handle-radius * 2;
 		left: @Switch-handle-offset;
 		position: absolute;
@@ -134,3 +137,4 @@
 		transform: @Switch-handle-scale;
 	}
 }
+

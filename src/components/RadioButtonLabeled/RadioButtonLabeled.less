@@ -6,7 +6,8 @@
 	color: @color-darkGray;
 	cursor: pointer;
 	display: flex;
-	font: @font;
+	font-size: @fontSize;
+	font-family: @fontFamily;
 	justify-content: flex-start;
 
 	> .lucid-RadioButton {
@@ -30,6 +31,7 @@
 
 	&:hover .lucid-RadioButton-visualization-glow {
 		.opacity();
+
 		transform: @RadioButton-glow-scale;
 	}
 
@@ -41,9 +43,9 @@
 
 	&&-is-disabled:hover .lucid-RadioButton-visualization-glow {
 		.opacity(0);
+
 		transform: none;
 	}
-
 
 	&&-is-disabled&&-is-selected:hover .lucid-RadioButton-visualization-container,
 	&&-is-selected .lucid-RadioButton-visualization-container {
@@ -51,3 +53,4 @@
 		border-color: @color-primary;
 	}
 }
+

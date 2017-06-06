@@ -56,6 +56,7 @@
 				.lucid-Sidebar-is-position-left& {
 					flex-direction: row;
 				}
+
 				.lucid-Sidebar-is-position-right& {
 					flex-direction: row-reverse;
 				}
@@ -64,6 +65,7 @@
 					.lucid-Sidebar-is-position-left& {
 						margin: @size-XS auto @size-XS @size-standard;
 					}
+
 					.lucid-Sidebar-is-position-right& {
 						margin: @size-XS auto @size-XS 0;
 					}
@@ -72,6 +74,7 @@
 				& > .lucid-Sidebar-expander {
 					.no-safari-flicker();
 					.box-sizing();
+
 					align-self: flex-start;
 					display: flex;
 					justify-content: center;
@@ -148,7 +151,7 @@
 
 			.lucid-Sidebar-is-position-left& {
 				margin-left: -@Sidebar-Divider-width;
-				
+
 				.lucid-Sidebar-is-resize-disabled& {
 					margin-left: 0;
 				}
@@ -164,7 +167,7 @@
 				.lucid-Sidebar-is-resize-disabled& {
 					margin-right: 0;
 				}
-				
+
 				.lucid-SplitVertical-is-expanded& {
 					margin-right: 0;
 				}
@@ -175,7 +178,9 @@
 			}
 
 			// Addresses a Firefox specific rendering issue with a Submarine nested in a Sidebar.
-			& > .lucid-Submarine, x:-moz-any-link, x:default { 
+			& > .lucid-Submarine,
+			x:-moz-any-link,
+			x:default {
 				display: block;
 				height: 100%;
 			}
@@ -184,7 +189,6 @@
 
 	&.lucid-SplitVertical-is-animated.lucid-SplitVertical-is-animated {
 		& > .lucid-SplitVertical-inner {
-
 			& > .lucid-Sidebar-Bar {
 				& > .lucid-Sidebar-Bar-overlay {
 					transition: opacity @Sidebar-transition-half-duration;
@@ -215,3 +219,4 @@
 		}
 	}
 }
+

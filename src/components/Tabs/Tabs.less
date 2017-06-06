@@ -17,6 +17,8 @@
 	}
 
 	&-Tab {
+		/* https://connect.microsoft.com/IE/feedback/details/949764/ie-11-incorrectly-rejects-flexbox-shorthand-syntax-flex-1-1-0-as-invalid */
+		/* stylelint-disable-next-line length-zero-no-unit */
 		flex: 1 1 0px;
 		height: inherit;
 		display: flex;
@@ -48,10 +50,12 @@
 	&-Tab-is-disabled {
 		color: @color-disabledText;
 		cursor: not-allowed;
+
 		&:hover {
 			background-color: @color-white;
 			.Tabs-mixin-tab-arrow-background();
 		}
+
 		&:active {
 			background: @color-white;
 		}
@@ -60,17 +64,22 @@
 	&-Tab-is-progressive {
 		position: relative;
 		border-width: @Tabs-border-width 0;
+
 		&:first-of-type {
 			border-left-width: @Tabs-border-width;
 		}
+
 		& + * {
 			border-left-width: 0;
 		}
+
 		.lucid-Tabs-Tab-arrow {
 			z-index: 1;
+
 			.lucid-Tabs-Tab-arrow-svg {
 				z-index: 1;
 			}
+
 			.lucid-Tabs-Tab-arrow-line {
 				stroke: @color-borderColor;
 			}
@@ -78,7 +87,7 @@
 		.Tabs-mixin-tab-line(@color-transparent);
 		.Tabs-mixin-tab-arrow-background();
 
-		&:not(:first-child){
+		&:not(:first-child) {
 			.lucid-Tabs-Tab-content {
 				padding-left: 15px;
 			}
@@ -86,15 +95,18 @@
 	}
 
 	&-Tab-is-active {
+		.hardstop-gradient();
+
 		border-top: none;
 		padding-top: @Tabs-border-width;
 		color: @color-black;
-		.hardstop-gradient();
 		cursor: initial;
+
 		&:hover {
 			background-color: @color-white;
 			.Tabs-mixin-tab-arrow-background();
 		}
+
 		&:active {
 			.hardstop-gradient();
 		}
@@ -124,7 +136,7 @@
 			height: 100%;
 			width: 8px;
 			display: block;
-			position: absolute
+			position: absolute;
 		}
 	}
 
@@ -140,17 +152,21 @@
 				.Tabs-mixin-tab-arrow-background(@color-white);
 			}
 		}
+
 		.lucid-Tabs-Tab-is-active {
 			border-bottom: @Tabs-border-width solid @color-white;
 			.Tabs-mixin-tab-arrow-background(@color-white);
 		}
+
 		.lucid-Tabs-Tab + .lucid-Tabs-Tab-is-disabled {
 			background-color: @color-lightGray;
 			.Tabs-mixin-tab-arrow-background(@color-lightGray);
+
 			&:hover {
 				background-color: @color-lightGray;
 				.Tabs-mixin-tab-arrow-background(@color-lightGray);
 			}
+
 			&:active {
 				background-color: @color-lightGray;
 			}
@@ -177,3 +193,4 @@
 		}
 	}
 }
+
