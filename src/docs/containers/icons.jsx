@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import createClass from 'create-react-class';
 
 import { lucidClassNames } from '../../util/style-helpers';

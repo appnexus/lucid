@@ -4,15 +4,8 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { render } from 'react-dom';
-import {
-	IndexRoute,
-	Link,
-	Route,
-	Router,
-	useRouterHistory,
-	withRouter,
-} from 'react-router';
-import { createHashHistory } from 'history';
+import { withRouter, Switch } from 'react-router';
+import { HashRouter, Link, Route } from 'react-router-dom';
 import docgenMapRaw from './docgen.json'; // eslint-disable-line
 import { handleHighlightCode, toMarkdown, sanitizeExamplePath } from './util';
 import createClass from 'create-react-class';
@@ -52,8 +45,6 @@ const VerticalListMenu = stateManagement.buildHybridComponent(
 );
 
 const { Item } = VerticalListMenu;
-
-const hashHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 
 // This is webpackism for "dynamically load all example files"
 const reqExamples = require.context(
@@ -187,8 +178,10 @@ const PropType = createClass({
 
 const Component = createClass({
 	propTypes: {
-		params: shape({
-			componentName: string.isRequired,
+		match: shape({
+			params: shape({
+				componentName: string.isRequired,
+			}),
 		}),
 		location: any,
 	},
@@ -216,7 +209,9 @@ const Component = createClass({
 	},
 
 	render() {
-		const { componentName } = this.props.params;
+		console.log('COMPONENT RENDER');
+		console.log(this.props);
+		const { componentName } = this.props.match.params;
 
 		const component = _.get(docgenMap, componentName, {});
 		const childComponents = _.map(
@@ -274,12 +269,7 @@ const Component = createClass({
 					<span>made from: </span>
 					{_.map(componentNames, (name, index) => (
 						<span key={name}>
-							<Link
-								to={{
-									pathname: `/components/${name}`,
-									query: this.props.location.query,
-								}}
-							>
+							<Link to={`/components/${name}`}>
 								{name}
 							</Link>
 							{index == componentNames.length - 1 ? null : ', '}
@@ -350,10 +340,7 @@ const Component = createClass({
 									<h4>
 										{childComponent.componentRef
 											? <Link
-													to={{
-														pathname: `/components/${childComponent.componentRef.split('.')[0]}`,
-														query: this.props.location.query,
-													}}
+													to={`/components/${childComponent.componentRef.split('.')[0]}`}
 												>
 													{childComponent.displayName}
 													{childComponent.displayName !==
@@ -498,20 +485,15 @@ const App = createClass({
 		};
 	},
 
-	contextTypes: {
-		router: object,
-	},
-
 	propTypes: {
 		children: any,
 		location: any,
+		history: any,
 	},
 
 	goToPath(path) {
-		this.context.router.push({
-			pathname: path,
-			query: this.props.location.query,
-		});
+		console.log('Going to this path: ', path);
+		this.props.history.push(path);
 	},
 
 	renderCategoryLinks(items) {
@@ -614,10 +596,7 @@ const App = createClass({
 		return (
 			<div className="App">
 				<div className="App-sidebar">
-					<Link
-						className="App-sidebar-logo"
-						to={{ pathname: '/', query: this.props.location.query }}
-					>
+					<Link className="App-sidebar-logo" to="/">
 						{/* `width` helps prevent a FOUC with webpack */}
 						<img src="img/logo.svg" style={{ maxWidth: '100%' }} />
 					</Link>
@@ -653,7 +632,12 @@ const App = createClass({
 					</nav>
 				</div>
 				<div className="App-body">
-					{this.props.children}
+					<Switch>
+						<Route exact path="/" component={LandingPage} />
+						<Route path="/components/:componentName" component={Component} />
+						<Route path="/color-palette" component={ColorPalette} />
+						<Route path="/icons" component={withRouter(Icons)} />
+					</Switch>
 				</div>
 			</div>
 		);
@@ -682,7 +666,7 @@ const TestList = createClass({
 			<ul id="examples-list">
 				{_.map(testExampleKeys, path => (
 					<li key={path}>
-						<Link to={{ pathname: `/test/${path}` }}>
+						<Link to={`/test/${path}`}>
 							{path}
 						</Link>
 					</li>
@@ -704,16 +688,34 @@ const Test = createClass({
 	},
 });
 
+// OLD
+
+// render(
+// 	<Router history={hashHistory}>
+// 		<Route path="/" component={App}>
+// 			<IndexRoute component={LandingPage} />
+// 			<Route path="components/:componentName" component={Component} />
+// 			<Route path="color-palette" component={ColorPalette} />
+// 			<Route path="icons" component={withRouter(Icons)} />
+// 		</Route>
+// 		<Route path="test" component={TestList} />
+// 		<Route path="test/:exampleKey" component={Test} />
+// 	</Router>,
+// 	document.querySelector('#docs')
+// );
+
+// render(
+// 	<App />,
+// 	document.querySelector('#docs')
+// );
+
 render(
-	<Router history={hashHistory}>
-		<Route path="/" component={App}>
-			<IndexRoute component={LandingPage} />
-			<Route path="components/:componentName" component={Component} />
-			<Route path="color-palette" component={ColorPalette} />
-			<Route path="icons" component={withRouter(Icons)} />
-		</Route>
-		<Route path="test" component={TestList} />
-		<Route path="test/:exampleKey" component={Test} />
-	</Router>,
+	<HashRouter>
+		<div>
+			<Route path="/" component={App} />
+			<Route path="test" component={TestList} />
+			<Route path="test/:exampleKey" component={Test} />
+		</div>
+	</HashRouter>,
 	document.querySelector('#docs')
 );
