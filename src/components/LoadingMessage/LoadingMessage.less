@@ -2,8 +2,8 @@
 @import (reference) '../../styles/mixins.less';
 
 .lucid-LoadingMessage {
-
 	.box-sizing();
+
 	line-height: 1em;
 	background-color: @color-white;
 	position: relative;
@@ -24,7 +24,8 @@
 	}
 
 	&-body {
-		font: @font;
+		font-size: @fontSize;
+		font-family: @fontFamily;
 		margin: @size-XS 0 0;
 		display: inline-block;
 	}
@@ -33,3 +34,4 @@
 		width: inherit;
 	}
 }
+

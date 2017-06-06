@@ -20,6 +20,7 @@
 
 .lucid-VerticalListMenu {
 	.VerticalListMenu-nest();
+
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -44,12 +45,13 @@
 		&-content {
 			.is-selectable();
 			.left-marker(0);
+
 			min-height: @VerticalListMenu-size-itemHeight;
 			display: flex;
 			font-size: 12px;
 			align-items: center;
 			font-weight: bold;
-			border-width: 1px 0 0 0;
+			border-width: 1px 0 0;
 			border-color: @color-gray;
 			border-style: solid;
 			color: @color-primary;
@@ -64,6 +66,7 @@
 			&&-is-selected,
 			&&-is-selected:hover {
 				.left-marker(1);
+
 				color: @color-darkGray;
 			}
 
@@ -81,6 +84,7 @@
 				.lucid-VerticalListMenu-Item-expander {
 					.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 					.box-sizing();
+
 					border: solid 1px @featured-color-default-borderColor;
 					border-radius: @size-borderRadius;
 					outline: none;
@@ -103,7 +107,7 @@
 				font-weight: normal;
 				border-color: @color-transparent;
 
-				&:before {
+				&::before {
 					align-self: flex-start;
 					flex-shrink: 0;
 					content: '\2013'; // en dash
@@ -116,7 +120,7 @@
 
 				&:hover,
 				&-is-selected {
-					&:before {
+					&::before {
 						color: @color-darkGray;
 					}
 				}
@@ -124,3 +128,4 @@
 		}
 	}
 }
+

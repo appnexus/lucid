@@ -2,16 +2,11 @@
 @import (reference) '../../styles/mixins.less';
 
 .lucid-SplitHorizontal {
-
 	& > &-inner {
 		& > .lucid-SplitHorizontal-Divider {
 			background: @color-gray;
 			cursor: ns-resize;
 		}
-	}
-
-	// fixes flicker in chrome for both the animated and non-animated collapse/expand
-	& > .lucid-SplitHorizontal-inner {
 
 		& > .lucid-SplitHorizontal-TopPane {
 			.no-safari-flicker();
@@ -22,3 +17,4 @@
 		}
 	}
 }
+
