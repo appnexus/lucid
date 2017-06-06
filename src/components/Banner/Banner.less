@@ -11,9 +11,11 @@
 .lucid-Banner {
 	.transition-group-animation-fade();
 	.box-sizing();
+
 	border: @border-standardBorder;
 	background-color: @color-backgroundColor;
-	font: @font;
+	font-size: @fontSize;
+	font-family: @fontFamily;
 	border-radius: @Banner-size-borderRadius;
 	padding: 0 @Banner-size-spacing-rightLeft;
 	display: flex;
@@ -34,6 +36,7 @@
 		line-height: 1em;
 		padding-top: @size-XXS;
 		color: fade(@color-black, 50%);
+
 		&:hover {
 			color: @color-black;
 		}
@@ -56,12 +59,14 @@
 		flex: 1;
 		padding: @Banner-size-spacing-topBottom 0;
 		line-height: 1em;
+
 		& > p {
 			line-height: 1.25em;
 
 			&:first-of-type {
 				margin-top: 0;
 			}
+
 			&:last-of-type {
 				margin-bottom: 0;
 			}
@@ -74,18 +79,22 @@
 		border-color: @featured-color-primary-borderColorLite;
 		background-color: @featured-color-primary-backgroundColor;
 	}
+
 	&-success {
 		border-color: @featured-color-success-borderColorLite;
 		background-color: @featured-color-success-backgroundColor;
 	}
+
 	&-info {
 		border-color: @featured-color-info-borderColorLite;
 		background-color: @featured-color-info-backgroundColor;
 	}
+
 	&-warning {
 		border-color: @featured-color-warning-borderColorLite;
 		background-color: @featured-color-warning-backgroundColor;
 	}
+
 	&-danger {
 		border-color: @featured-color-danger-borderColorLite;
 		background-color: @featured-color-danger-backgroundColor;
@@ -94,7 +103,9 @@
 	&-small &-icon {
 		padding-top: @Banner-size-spacing-topBottom-small - 2px;
 	}
+
 	&-small &-content {
 		padding: @Banner-size-spacing-topBottom - 6px 0;
 	}
 }
+

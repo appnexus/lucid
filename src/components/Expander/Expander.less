@@ -4,6 +4,7 @@
 .lucid-Expander {
 	&-icon {
 		.box-sizing();
+
 		width: @size-expander-button;
 		height: @size-expander-button;
 		align-items: center;
@@ -17,13 +18,15 @@
 		color: @color-darkGray;
 		cursor: pointer;
 		display: flex;
-		font: @font;
+		font-size: @fontSize;
+		font-family: @fontFamily;
 		justify-content: flex-start;
 
 		&:hover {
 			> .lucid-Expander-icon {
 				.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 				.box-sizing();
+
 				border: solid 1px @featured-color-default-borderColor;
 				border-radius: @size-borderRadius;
 				outline: none;
@@ -43,11 +46,11 @@
 				}
 			}
 		}
-
 	}
 
 	&-text {
 		.transition-group-animation-fade(@timing-animation-hover);
+
 		color: @color-linkColor;
 		height: @size-expander-button;
 		position: relative;
@@ -73,7 +76,6 @@
 
 	// kind
 	&-kind-highlighted {
-
 		.lucid-Expander-header {
 			background: @color-backgroundColor;
 			border: @border-lightBorder;
@@ -103,3 +105,4 @@
 		}
 	}
 }
+

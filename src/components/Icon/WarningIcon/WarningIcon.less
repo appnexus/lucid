@@ -1,18 +1,21 @@
 @import (reference) '../../../styles/variables.less';
 @import (reference) '../../../styles/mixins.less';
 
-.lucid-WarningIcon{
+.lucid-WarningIcon {
 	&-mark {
 		fill: @color-white;
 	}
 
 	&-triangle {
 		fill: @featured-color-warning;
+
 		&-is-disabled {
 			fill: @color-disabledText;
 		}
 	}
+
 	&-is-clickable:hover > &-triangle {
 		fill: @featured-color-warning-colorHover;
 	}
 }
+

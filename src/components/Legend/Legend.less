@@ -15,19 +15,24 @@
 		height: @size-standard-height;
 		padding: 0 (@size-S / 2);
 	}
+
 	&-is-horizontal&-is-reversed {
 		flex-direction: row-reverse;
 	}
+
 	&-is-vertical {
 		flex-direction: column;
 	}
+
 	&-is-vertical&-is-reversed {
 		flex-direction: column-reverse;
 	}
+
 	&-has-borders {
 		border: @border-lightBorder;
 		border-radius: @size-borderRadius;
 	}
+
 	&-is-vertical&-has-borders {
 		padding: (@size-S / 2) @size-S;
 	}
@@ -36,10 +41,12 @@
 		display: flex;
 		align-items: center;
 	}
+
 	&-is-vertical &-Item {
 		margin-top: @size-S / 2;
 		margin-bottom: @size-S / 2;
 	}
+
 	&-is-horizontal &-Item {
 		margin-left: @size-L / 2;
 		margin-right: @size-L / 2;
@@ -50,3 +57,4 @@
 		margin-right: @size-XS;
 	}
 }
+

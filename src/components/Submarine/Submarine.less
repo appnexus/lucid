@@ -23,7 +23,10 @@
 			background-color: @color-white;
 			overflow: auto;
 			display: flex;
-			flex-shrink: 0;
+
+			/* https://connect.microsoft.com/IE/feedback/details/949764/ie-11-incorrectly-rejects-flexbox-shorthand-syntax-flex-1-1-0-as-invalid */
+			/* stylelint-disable-next-line length-zero-no-unit */
+			flex-shrink: 0px;
 
 			.lucid-Submarine-is-position-top& {
 				border-bottom: @border-standardBorder;
@@ -52,6 +55,8 @@
 			}
 
 			& > .lucid-Submarine-Bar-header {
+				.box-sizing();
+
 				background-color: @color-backgroundColor;
 				color: @color-textColor;
 				font: @size-L @fontFamily;
@@ -59,11 +64,11 @@
 				display: flex;
 				flex-shrink: 0;
 				min-height: @Submarine-Bar-header-height;
-				.box-sizing();
 
 				.lucid-Submarine-is-position-top& {
 					border-top: @border-standardBorder;
 				}
+
 				.lucid-Submarine-is-position-bottom& {
 					border-bottom: @border-standardBorder;
 				}
@@ -75,6 +80,7 @@
 				& > .lucid-Submarine-expander {
 					.no-safari-flicker();
 					.box-sizing();
+
 					align-self: flex-start;
 					display: flex;
 					justify-content: center;
@@ -146,6 +152,8 @@
 		}
 
 		& > .lucid-Submarine-Primary {
+			/* https://connect.microsoft.com/IE/feedback/details/949764/ie-11-incorrectly-rejects-flexbox-shorthand-syntax-flex-1-1-0-as-invalid */
+			/* stylelint-disable-next-line length-zero-no-unit */
 			flex-basis: 0px;
 			overflow: auto;
 			display: flex;
@@ -153,7 +161,7 @@
 
 			.lucid-Submarine-is-position-top& {
 				margin-top: -@Submarine-Divider-height;
-				
+
 				.lucid-Submarine-is-resize-disabled& {
 					margin-top: 0;
 				}
@@ -169,7 +177,7 @@
 				.lucid-Submarine-is-resize-disabled& {
 					margin-bottom: 0;
 				}
-				
+
 				.lucid-SplitHorizontal-is-expanded& {
 					margin-bottom: 0;
 				}
@@ -183,7 +191,6 @@
 
 	&.lucid-SplitHorizontal-is-animated.lucid-SplitHorizontal-is-animated {
 		& > .lucid-SplitHorizontal-inner {
-
 			& > .lucid-Submarine-Bar {
 				& > .lucid-Submarine-Bar-overlay {
 					transition: opacity @Submarine-transition-half-duration;
@@ -214,3 +221,4 @@
 		}
 	}
 }
+

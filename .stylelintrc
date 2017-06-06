@@ -1,0 +1,30 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "comment-no-empty": true,
+    "indentation": "tab",
+    "no-duplicate-selectors": true,
+    "no-extra-semicolons": true,
+    "no-unknown-animations": true,
+    "property-no-unknown": [
+      true,
+      ignoreProperties: [ "composes" ]
+    ],
+    "selector-no-id": true,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      ignorePseudoClasses: [
+        "global",
+        "local"
+      ]
+    ],
+		"selector-type-no-unknown": [
+      true,
+      {
+        "ignoreTypes": ["x"],
+      }
+    ],
+    "time-min-milliseconds": 100,
+  }
+}
+
