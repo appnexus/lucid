@@ -9,6 +9,7 @@ import { HashRouter, Link, Route } from 'react-router-dom';
 import docgenMapRaw from './docgen.json'; // eslint-disable-line
 import { handleHighlightCode, toMarkdown, sanitizeExamplePath } from './util';
 import createClass from 'create-react-class';
+import querystring from 'querystring';
 
 import ColorPalette from './containers/color-palette';
 import LandingPage from './containers/landing-page';
@@ -267,7 +268,12 @@ const Component = createClass({
 					<span>made from: </span>
 					{_.map(componentNames, (name, index) => (
 						<span key={name}>
-							<Link to={`/components/${name}`}>
+							<Link
+								to={{
+									pathname: `/components/${name}`,
+									search: this.props.location.search,
+								}}
+							>
 								{name}
 							</Link>
 							{index == componentNames.length - 1 ? null : ', '}
@@ -490,7 +496,10 @@ const App = createClass({
 	},
 
 	goToPath(path) {
-		this.props.history.push(path);
+		this.props.history.push({
+			pathname: path,
+			search: this.props.location.search,
+		});
 	},
 
 	renderCategoryLinks(items) {
@@ -542,7 +551,12 @@ const App = createClass({
 	},
 
 	showPrivateComponents() {
-		return _.get(this, 'props.location.query.private', false);
+		return _.includes(
+			[true, '1', 'true'],
+			querystring.parse(
+				_.slice(_.get(this, 'props.location.search', ''), 1).join('')
+			).private
+		);
 	},
 
 	searchResults() {
@@ -593,7 +607,10 @@ const App = createClass({
 		return (
 			<div className="App">
 				<div className="App-sidebar">
-					<Link className="App-sidebar-logo" to="/">
+					<Link
+						className="App-sidebar-logo"
+						to={{ pathname: '/', search: this.props.location.search }}
+					>
 						{/* `width` helps prevent a FOUC with webpack */}
 						<img src="img/logo.svg" style={{ maxWidth: '100%' }} />
 					</Link>
