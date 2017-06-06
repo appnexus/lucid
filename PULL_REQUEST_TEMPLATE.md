@@ -4,7 +4,6 @@
   - [ ] Chrome
   - [ ] Firefox
   - [ ] Safari
-  - [ ] IE11 (Win 7)
   - [ ] Edge (Win 10)
 - [ ] Unit tests written (`common` at minimum)
 - [ ] PR has one of the `semver-` labels
