@@ -209,8 +209,6 @@ const Component = createClass({
 	},
 
 	render() {
-		console.log('COMPONENT RENDER');
-		console.log(this.props);
 		const { componentName } = this.props.match.params;
 
 		const component = _.get(docgenMap, componentName, {});
@@ -492,7 +490,6 @@ const App = createClass({
 	},
 
 	goToPath(path) {
-		console.log('Going to this path: ', path);
 		this.props.history.push(path);
 	},
 
@@ -687,27 +684,6 @@ const Test = createClass({
 		);
 	},
 });
-
-// OLD
-
-// render(
-// 	<Router history={hashHistory}>
-// 		<Route path="/" component={App}>
-// 			<IndexRoute component={LandingPage} />
-// 			<Route path="components/:componentName" component={Component} />
-// 			<Route path="color-palette" component={ColorPalette} />
-// 			<Route path="icons" component={withRouter(Icons)} />
-// 		</Route>
-// 		<Route path="test" component={TestList} />
-// 		<Route path="test/:exampleKey" component={Test} />
-// 	</Router>,
-// 	document.querySelector('#docs')
-// );
-
-// render(
-// 	<App />,
-// 	document.querySelector('#docs')
-// );
 
 render(
 	<HashRouter>
