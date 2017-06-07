@@ -234,7 +234,7 @@ const DataTable = createClass({
 
 		const fillerRowCount = _.size(data) === 0
 			? 10
-			: _.clamp(minRows - _.size(data), 0);
+			: _.clamp(minRows - _.size(data), 0, Infinity);
 
 		return (
 			<EmptyStateWrapper
