@@ -123,16 +123,20 @@ const Axis = createClass({
 				{isH
 					? <path
 							className={cx('&-domain')}
-							d={`M${range[0]},${sign * outerTickSize}V0H${range[1]}V${sign * outerTickSize}`}
+							d={`M${range[0]},${sign * outerTickSize}V0H${range[1]}V${sign *
+								outerTickSize}`}
 						/>
 					: <path
 							className={cx('&-domain')}
-							d={`M${sign * outerTickSize},${range[0]}H0V${range[1]}H${sign * outerTickSize}`}
+							d={`M${sign * outerTickSize},${range[0]}H0V${range[1]}H${sign *
+								outerTickSize}`}
 						/>}
-				{_.map(ticks, tick => (
+				{_.map(ticks, tick =>
 					<g
 						key={tick}
-						transform={`translate(${isH ? scaleNormalized(tick) : 0}, ${isH ? 0 : scaleNormalized(tick)})`}
+						transform={`translate(${isH ? scaleNormalized(tick) : 0}, ${isH
+							? 0
+							: scaleNormalized(tick)})`}
 					>
 						<line
 							className={cx('&-tick')}
@@ -155,7 +159,7 @@ const Axis = createClass({
 							{tickFormat(tick)}
 						</text>
 					</g>
-				))}
+				)}
 			</g>
 		);
 	},

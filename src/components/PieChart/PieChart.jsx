@@ -297,12 +297,12 @@ const PieChart = createClass({
 					<ToolTip.Target elementType="g">
 						<g transform={`translate(${margin.left}, ${margin.top})`}>
 							<g transform={`translate(${innerWidth / 2}, ${innerHeight / 2})`}>
-								{_.map(pieData, (pieDatum, index) => (
+								{_.map(pieData, (pieDatum, index) =>
 									<g
 										key={index}
 										className={cx('&-slice-group', {
-											'&-slice-group-is-hovering': isHovering &&
-												hoveringIndex === index,
+											'&-slice-group-is-hovering':
+												isHovering && hoveringIndex === index,
 										})}
 									>
 										<Line
@@ -316,7 +316,9 @@ const PieChart = createClass({
 												data[index][xAxisField],
 												palette[index % palette.length]
 											)}
-											transform={`scale(${isHovering && hoveringIndex === index ? HOVER_SCALE : 1})`}
+											transform={`scale(${isHovering && hoveringIndex === index
+												? HOVER_SCALE
+												: 1})`}
 										/>
 
 										{/* This hidden path is useful for capturing hovers when we're in donut mode */}
@@ -328,7 +330,7 @@ const PieChart = createClass({
 											onMouseOut={hasToolTips ? _.noop : this.handleMouseOut}
 										/>
 									</g>
-								))}
+								)}
 							</g>
 						</g>
 					</ToolTip.Target>

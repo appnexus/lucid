@@ -74,7 +74,8 @@ export function createElements(type, values = []) {
 			if (React.isValidElement(typeValue) && typeValue.type === type) {
 				return elements.concat(typeValue);
 			} else if (
-				_.isPlainObject(typeValue) && !React.isValidElement(typeValue)
+				_.isPlainObject(typeValue) &&
+				!React.isValidElement(typeValue)
 			) {
 				return elements.concat(React.createElement(type, typeValue));
 			} else if (_.isUndefined(typeValue)) {

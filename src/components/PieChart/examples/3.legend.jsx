@@ -23,7 +23,7 @@ export default createClass({
 			>
 				<PieChart data={data} palette={palette} />
 				<Legend>
-					{_.map(data, (d, index) => (
+					{_.map(data, (d, index) =>
 						<Legend.Item
 							key={index}
 							color={palette[index % palette.length]}
@@ -32,7 +32,7 @@ export default createClass({
 						>
 							{d.x}
 						</Legend.Item>
-					))}
+					)}
 				</Legend>
 			</div>
 		);

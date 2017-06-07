@@ -185,7 +185,7 @@ const Points = createClass({
 					_.map(
 						d,
 						(series, seriesIndex) =>
-							(isValidSeries(series)
+							isValidSeries(series)
 								? <Point
 										x={xScale(data[seriesIndex][xField])}
 										y={yScale(_.isArray(series) ? _.last(series) : series)}
@@ -197,7 +197,7 @@ const Points = createClass({
 											palette[(dIndex + colorOffset) % palette.length]
 										)}
 									/>
-								: null)
+								: null
 					)
 				)}
 			</g>

@@ -16,7 +16,7 @@ export default createClass({
 				}}
 			>
 				{_.map(['right', 'up', 'down', 'left'], direction =>
-					_.map(['start', 'center', 'end'], alignment => (
+					_.map(['start', 'center', 'end'], alignment =>
 						<section
 							key={`${direction}${alignment}`}
 							style={{ margin: '90px' }}
@@ -30,7 +30,8 @@ export default createClass({
 									Title: {direction} {alignment}
 								</Title>
 								<Body>
-									ToolTip is a utility component to create a transient message anchored to another component.
+									ToolTip is a utility component to create a transient message
+									anchored to another component.
 									My direction is "{direction}".
 									My alignment is "{alignment}".
 								</Body>
@@ -41,7 +42,7 @@ export default createClass({
 								</Target>
 							</ToolTipDumb>
 						</section>
-					))
+					)
 				)}
 			</section>
 		);

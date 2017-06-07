@@ -241,7 +241,7 @@ const TextField = createClass({
 			style,
 			rows,
 			value,
-			ref: ref => this.refs = { nativeElement: ref },
+			ref: ref => (this.refs = { nativeElement: ref }),
 		};
 
 		return isMultiLine

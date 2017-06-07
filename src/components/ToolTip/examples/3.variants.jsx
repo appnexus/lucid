@@ -18,7 +18,7 @@ export default createClass({
 					flexDirection: 'column',
 				}}
 			>
-				{_.map(rows, row => (
+				{_.map(rows, row =>
 					<section
 						key={`${row}`}
 						style={{
@@ -28,19 +28,20 @@ export default createClass({
 							justifyContent: 'space-around',
 						}}
 					>
-						{_.map(row, kind => (
+						{_.map(row, kind =>
 							<ToolTipDumb key={kind} isExpanded kind={kind}>
 								<Title>{_.capitalize(kind)}</Title>
 								<Body>
-									ToolTip is a utility component to create a transient message anchored to another component.
+									ToolTip is a utility component to create a transient message
+									anchored to another component.
 								</Body>
 								<Target>
 									<div>Target for {kind}</div>
 								</Target>
 							</ToolTipDumb>
-						))}
+						)}
 					</section>
-				))}
+				)}
 			</section>
 		);
 	},

@@ -164,8 +164,8 @@ const Collapsible = createClass({
 								{isMountControlled && !isExpanded
 									? _.isNull(maxHeight) ||
 											Math.abs(tween.height) > mountControlThreshold
-											? children
-											: null
+										? children
+										: null
 									: children}
 							</div>,
 						]

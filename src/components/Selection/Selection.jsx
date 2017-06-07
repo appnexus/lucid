@@ -31,27 +31,24 @@ function defaultIcon(kind, responsiveMode) {
 	return kind === 'default'
 		? null
 		: kind === 'container'
-				? null
-				: kind === 'success'
-						? <SuccessIcon
+			? null
+			: kind === 'success'
+				? <SuccessIcon
+						className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)}
+					/>
+				: kind === 'danger'
+					? <MinusCircleIcon
+							className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)}
+						/>
+					: kind === 'info'
+						? <InfoIcon
 								className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)}
 							/>
-						: kind === 'danger'
-								? <MinusCircleIcon
-										className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)}
-									/>
-								: kind === 'info'
-										? <InfoIcon
-												className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)}
-											/>
-										: kind === 'warning'
-												? <WarningIcon
-														className={cx(
-															'&-Icon',
-															`&-Icon-is-${responsiveMode}`
-														)}
-													/>
-												: null;
+						: kind === 'warning'
+							? <WarningIcon
+									className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)}
+								/>
+							: null;
 }
 
 /**
@@ -216,7 +213,7 @@ const Selection = createClass({
 					{_.isEmpty(selectionChildren)
 						? null
 						: <div className={cx('&-children-container')}>
-								{_.map(selectionChildren, ({ props }, i) => (
+								{_.map(selectionChildren, ({ props }, i) =>
 									<Selection
 										key={
 											_.get(
@@ -227,7 +224,7 @@ const Selection = createClass({
 										}
 										{...props}
 									/>
-								))}
+								)}
 							</div>}
 					{otherChildren}
 

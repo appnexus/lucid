@@ -9,7 +9,7 @@ export default createClass({
 	render() {
 		return (
 			<section style={{ display: 'flex', flexDirection: 'row' }}>
-				{_.map(['right', 'up', 'down', 'left'], direction => (
+				{_.map(['right', 'up', 'down', 'left'], direction =>
 					<section
 						key={direction}
 						style={{
@@ -19,7 +19,7 @@ export default createClass({
 							flexGrow: 1,
 						}}
 					>
-						{_.map(['start', 'center', 'end'], alignment => (
+						{_.map(['start', 'center', 'end'], alignment =>
 							<section
 								key={`${direction}${alignment}`}
 								style={{ margin: '30px' }}
@@ -29,7 +29,8 @@ export default createClass({
 										Title: {direction} {alignment}
 									</Title>
 									<Body>
-										ToolTip is a utility component to create a transient message anchored to another component.
+										ToolTip is a utility component to create a transient message
+										anchored to another component.
 										My direction is "{direction}".
 										My alignment is "{alignment}".
 									</Body>
@@ -40,9 +41,9 @@ export default createClass({
 									</Target>
 								</ToolTip>
 							</section>
-						))}
+						)}
 					</section>
-				))}
+				)}
 			</section>
 		);
 	},

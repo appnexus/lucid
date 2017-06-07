@@ -200,13 +200,14 @@ const SlidePanel = createClass({
 								}
 					}
 				>
-					{tween => (
+					{tween =>
 						<div
 							{...omitProps(passThroughs, SlidePanel)}
 							className={cx('&-slidestrip', className)}
 							style={{
 								transform: this.isDragging
-									? `translateX(calc(${tween.translateXPercentage}% + ${this.state.translateXPixel}px))`
+									? `translateX(calc(${tween.translateXPercentage}% + ${this
+											.state.translateXPixel}px))`
 									: `translateX(calc(${tween.translateXPercentage}% + ${tween.translateXPixel}px))`,
 							}}
 							onTouchStart={this.handleTouchStart}
@@ -214,7 +215,7 @@ const SlidePanel = createClass({
 							onTouchEnd={this.handleTouchEnd}
 							onTouchCancel={_.noop}
 						>
-							{_.map(slides, (slide, offset) => (
+							{_.map(slides, (slide, offset) =>
 								<div
 									key={offset}
 									{...slide.props}
@@ -226,9 +227,8 @@ const SlidePanel = createClass({
 										...slide.props.style,
 									}}
 								/>
-							))}
-						</div>
-					)}
+							)}
+						</div>}
 				</Motion>
 			</div>
 		);

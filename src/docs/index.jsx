@@ -266,7 +266,7 @@ const Component = createClass({
 			? null
 			: <span className="Component-made-from">
 					<span>made from: </span>
-					{_.map(componentNames, (name, index) => (
+					{_.map(componentNames, (name, index) =>
 						<span key={name}>
 							<Link
 								to={{
@@ -278,7 +278,7 @@ const Component = createClass({
 							</Link>
 							{index == componentNames.length - 1 ? null : ', '}
 						</span>
-					))}
+					)}
 				</span>;
 
 		return (
@@ -339,12 +339,14 @@ const Component = createClass({
 				{!_.isEmpty(childComponents)
 					? <section>
 							<h3>Child Components</h3>
-							{_.map(childComponents, childComponent => (
+							{_.map(childComponents, childComponent =>
 								<section key={childComponent.displayName}>
 									<h4>
 										{childComponent.componentRef
 											? <Link
-													to={`/components/${childComponent.componentRef.split('.')[0]}`}
+													to={`/components/${childComponent.componentRef.split(
+														'.'
+													)[0]}`}
 												>
 													{childComponent.displayName}
 													{childComponent.displayName !==
@@ -392,7 +394,8 @@ const Component = createClass({
 														),
 														([propName, propDetails]) => {
 															if (
-																!propDetails || _.isNil(propDetails.description)
+																!propDetails ||
+																_.isNil(propDetails.description)
 															) {
 																console.error(
 																	`Warning: There was an issue with the docs that were generated for component "${componentName}.${childComponent.displayName}" and prop "${propName}". One reason might be that you have a default value for something that was never declared in propTypes.`
@@ -438,7 +441,7 @@ const Component = createClass({
 											</Table>
 										: null}
 								</section>
-							))}
+							)}
 						</section>
 					: null}
 				<h3>Examples</h3>
@@ -678,13 +681,13 @@ const TestList = createClass({
 		window.examples = testExampleKeys;
 		return (
 			<ul id="examples-list">
-				{_.map(testExampleKeys, path => (
+				{_.map(testExampleKeys, path =>
 					<li key={path}>
 						<Link to={`/test/${path}`}>
 							{path}
 						</Link>
 					</li>
-				))}
+				)}
 			</ul>
 		);
 	},

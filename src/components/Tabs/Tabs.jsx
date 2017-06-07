@@ -243,7 +243,7 @@ const Tabs = createClass({
 						'&-bar-is-multiline': hasMultilineTitle,
 					})}
 				>
-					{_.map(tabChildProps, (tabProps, index) => (
+					{_.map(tabChildProps, (tabProps, index) =>
 						<Tab
 							key={index}
 							index={index}
@@ -259,7 +259,7 @@ const Tabs = createClass({
 							)}
 							{...tabProps}
 						/>
-					))}
+					)}
 				</ul>
 				<div className={cx('&-content')}>
 					{_.get(tabChildProps, [actualSelectedIndex, 'children'])}

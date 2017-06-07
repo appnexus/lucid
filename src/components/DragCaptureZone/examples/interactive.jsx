@@ -51,7 +51,7 @@ export default createClass({
 					}}
 				>
 					{_.reverse(
-						_.map(events, ({ coordinates, type }, index) => (
+						_.map(events, ({ coordinates, type }, index) =>
 							<div key={index}>
 								<div
 									style={{
@@ -65,7 +65,7 @@ export default createClass({
 									px: ${coordinates.pageX}, py: ${coordinates.pageY}`}
 								</div>
 							</div>
-						))
+						)
 					)}
 				</div>
 			</section>

@@ -26,7 +26,15 @@ export default createClass({
 					.
 				</Sidebar.Bar>
 				<Sidebar.Primary>
-					Helvetica narwhal irony, hoodie leggings occaecat tattooed authentic cred. Tumblr cred quinoa normcore, mumblecore cardigan cold-pressed dreamcatcher craft beer ad direct trade vero accusamus cray. Roof party chia shabby chic synth. Pariatur organic before they sold out everyday carry food truck. Labore four loko nihil, narwhal actually kinfolk mustache jean shorts. Meh kickstarter chicharrones williamsburg bushwick yr, PBR&B fap. Lo-fi leggings magna yuccie, tattooed accusamus blog literally gochujang listicle cliche humblebrag swag kombucha tousled.
+					Helvetica narwhal irony, hoodie leggings occaecat tattooed authentic
+					cred. Tumblr cred quinoa normcore, mumblecore cardigan cold-pressed
+					dreamcatcher craft beer ad direct trade vero accusamus cray. Roof
+					party chia shabby chic synth. Pariatur organic before they sold out
+					everyday carry food truck. Labore four loko nihil, narwhal actually
+					kinfolk mustache jean shorts. Meh kickstarter chicharrones
+					williamsburg bushwick yr, PBR&B fap. Lo-fi leggings magna yuccie,
+					tattooed accusamus blog literally gochujang listicle cliche humblebrag
+					swag kombucha tousled.
 				</Sidebar.Primary>
 			</Sidebar>
 		);

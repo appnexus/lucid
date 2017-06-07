@@ -298,7 +298,7 @@ const DateSelect = createClass({
 					onSwipe={onSwipe}
 				>
 					<InfiniteSlidePanel.Slide className={cx('&-slide')}>
-						{slideOffset => (
+						{slideOffset =>
 							<div className={cx('&-slide-content')}>
 								<CalendarMonth
 									className={cx('&-CalendarMonth')}
@@ -321,12 +321,11 @@ const DateSelect = createClass({
 									// away. This has issues and doesnt always behave quite right
 									shouldComponentUpdate={
 										slideOffset - offset >= -1 &&
-											slideOffset - offset < monthsShown + 1
+										slideOffset - offset < monthsShown + 1
 									}
 									{...calendarMonth.props}
 								/>
-							</div>
-						)}
+							</div>}
 					</InfiniteSlidePanel.Slide>
 				</InfiniteSlidePanel>
 				<div>

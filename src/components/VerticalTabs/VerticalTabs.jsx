@@ -10,9 +10,7 @@ import {
 } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './VerticalTabs.reducers';
-import {
-	VerticalListMenuDumb as VerticalListMenu,
-} from '../VerticalListMenu/VerticalListMenu';
+import { VerticalListMenuDumb as VerticalListMenu } from '../VerticalListMenu/VerticalListMenu';
 
 const cx = lucidClassNames.bind('&-VerticalTabs');
 
@@ -110,7 +108,7 @@ const VerticalTabs = createClass({
 					selectedIndices={[actualSelectedIndex]}
 					onSelect={onSelect}
 				>
-					{_.map(tabChildProps, (tabChildProp, index) => (
+					{_.map(tabChildProps, (tabChildProp, index) =>
 						<VerticalListMenu.Item
 							className={cx('&-Tab', {
 								'&-Tab-is-active': actualSelectedIndex === index,
@@ -125,7 +123,7 @@ const VerticalTabs = createClass({
 								)}
 							</span>
 						</VerticalListMenu.Item>
-					))}
+					)}
 				</VerticalListMenu>
 				<div className={cx('&-content')}>
 					{_.get(tabChildProps, [actualSelectedIndex, 'children'])}

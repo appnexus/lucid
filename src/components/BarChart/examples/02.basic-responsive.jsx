@@ -14,14 +14,13 @@ export default createClass({
 		return (
 			<div>
 				<Resizer>
-					{(width /*, height */) => (
+					{(width /*, height */) =>
 						<BarChart
 							width={width}
 							height={width * 0.3}
 							data={data}
 							yAxisTitle="Revenue"
-						/>
-					)}
+						/>}
 				</Resizer>
 			</div>
 		);

@@ -412,9 +412,9 @@ describe('SearchableSelect', () => {
 					SearchableSelectControlChildren[0];
 
 				assert.equal(
-					React.Children.toArray(SearchableSelectControlContent.props.children)[
-						0
-					],
+					React.Children.toArray(
+						SearchableSelectControlContent.props.children
+					)[0],
 					'select one'
 				);
 			});

@@ -65,7 +65,8 @@ export default createClass({
 									marginLeft: '5px',
 								}}
 							>
-								Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								Sed do eiusmod tempor incididunt ut labore et dolore magna
+								aliqua.
 							</span>
 						</VerticalTabs.Title>
 						Two content

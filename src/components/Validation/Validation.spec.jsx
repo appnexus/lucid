@@ -25,11 +25,11 @@ describe('Validation', () => {
 
 			beforeEach(
 				() =>
-					wrapper = shallow(
+					(wrapper = shallow(
 						<Validation Error="error">
 							<div>foo</div>
 						</Validation>
-					)
+					))
 			);
 
 			it('should add error class', () => {
@@ -49,11 +49,11 @@ describe('Validation', () => {
 
 			beforeEach(
 				() =>
-					wrapper = shallow(
+					(wrapper = shallow(
 						<Validation Error={null}>
 							<div>foo</div>
 						</Validation>
-					)
+					))
 			);
 
 			it('should not add error class', () => {

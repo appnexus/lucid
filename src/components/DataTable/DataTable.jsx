@@ -268,7 +268,7 @@ const DataTable = createClass({
 							{_.map(
 								childComponentElements,
 								({ props, type }, index) =>
-									(type === DataTable.Column
+									type === DataTable.Column
 										? <Th
 												{..._.omit(props, [
 													'field',
@@ -302,7 +302,7 @@ const DataTable = createClass({
 												key={_.get(props, 'field', index)}
 											>
 												{props.title || props.children}
-											</Th>)
+											</Th>
 							)}
 						</Tr>
 						{hasGroupedColumns
@@ -344,7 +344,7 @@ const DataTable = createClass({
 							: null}
 					</Thead>
 					<Tbody>
-						{_.map(data, (row, index) => (
+						{_.map(data, (row, index) =>
 							<Tr
 								{..._.pick(row, ['isDisabled', 'isActive', 'isSelected'])}
 								onClick={_.partial(this.handleRowClick, index)}
@@ -359,13 +359,45 @@ const DataTable = createClass({
 											/>
 										</Td>
 									: null}
-								{_.map(flattenedColumns, ({
-									props: columnProps,
-								}, columnIndex) => {
-									const cellValue = _.get(row, columnProps.field);
-									const isEmpty = _.isEmpty(_.toString(cellValue));
+								{_.map(
+									flattenedColumns,
+									({ props: columnProps }, columnIndex) => {
+										const cellValue = _.get(row, columnProps.field);
+										const isEmpty = _.isEmpty(_.toString(cellValue));
 
-									return (
+										return (
+											<Td
+												{..._.omit(columnProps, [
+													'field',
+													'children',
+													'width',
+													'title',
+													'isSortable',
+													'isSorted',
+													'isResizable',
+												])}
+												style={{
+													width: columnProps.width,
+												}}
+												key={
+													'row' +
+													index +
+													_.get(columnProps, 'field', columnIndex)
+												}
+											>
+												{isEmpty ? emptyCellText : cellValue}
+											</Td>
+										);
+									}
+								)}
+							</Tr>
+						)}
+						{_.times(fillerRowCount, index =>
+							<Tr isDisabled key={'row' + index} style={{ height: '32px' }}>
+								{isSelectable ? <Td /> : null}
+								{_.map(
+									flattenedColumns,
+									({ props: columnProps }, columnIndex) =>
 										<Td
 											{..._.omit(columnProps, [
 												'field',
@@ -382,39 +414,10 @@ const DataTable = createClass({
 											key={
 												'row' + index + _.get(columnProps, 'field', columnIndex)
 											}
-										>
-											{isEmpty ? emptyCellText : cellValue}
-										</Td>
-									);
-								})}
+										/>
+								)}
 							</Tr>
-						))}
-						{_.times(fillerRowCount, index => (
-							<Tr isDisabled key={'row' + index} style={{ height: '32px' }}>
-								{isSelectable ? <Td /> : null}
-								{_.map(flattenedColumns, ({
-									props: columnProps,
-								}, columnIndex) => (
-									<Td
-										{..._.omit(columnProps, [
-											'field',
-											'children',
-											'width',
-											'title',
-											'isSortable',
-											'isSorted',
-											'isResizable',
-										])}
-										style={{
-											width: columnProps.width,
-										}}
-										key={
-											'row' + index + _.get(columnProps, 'field', columnIndex)
-										}
-									/>
-								))}
-							</Tr>
-						))}
+						)}
 					</Tbody>
 				</ScrollTable>
 			</EmptyStateWrapper>

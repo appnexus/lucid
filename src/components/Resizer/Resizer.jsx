@@ -63,7 +63,7 @@ const Resizer = createClass({
 			<div
 				{...omitProps(passThroughs, Resizer)}
 				className={cx('&', className)}
-				ref={ref => this._element = ref}
+				ref={ref => (this._element = ref)}
 			>
 				{this.props.children(width, height)}
 			</div>

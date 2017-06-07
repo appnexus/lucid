@@ -191,9 +191,9 @@ const SplitButton = createClass({
 						</Button>
 					</ButtonGroup>
 				</DropMenu.Control>
-				{_.map(buttonChildProps, (buttonChildProp, index) => (
+				{_.map(buttonChildProps, (buttonChildProp, index) =>
 					<DropMenu.Option {...buttonChildProp} key={index} />
-				))}
+				)}
 			</DropMenu>
 		);
 	},

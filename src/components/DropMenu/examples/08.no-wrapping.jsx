@@ -18,11 +18,11 @@ export default createClass({
 						<Button>Click me</Button>
 					</DropMenu.Control>
 
-					{_.map(options, (optionText, index) => (
+					{_.map(options, (optionText, index) =>
 						<DropMenu.Option isWrapped={false} key={'Option-' + index}>
 							{optionText}
 						</DropMenu.Option>
-					))}
+					)}
 				</DropMenu>
 			</div>
 		);

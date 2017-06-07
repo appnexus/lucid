@@ -217,9 +217,9 @@ const Bars = createClass({
 
 		return (
 			<g {...omitProps(passThroughs, Bars)} className={cx(className, '&')}>
-				{_.map(transformedData, (series, seriesIndex) => (
+				{_.map(transformedData, (series, seriesIndex) =>
 					<g key={seriesIndex}>
-						{_.map(series, ([start, end], pointsIndex) => (
+						{_.map(series, ([start, end], pointsIndex) =>
 							<Bar
 								key={pointsIndex}
 								x={
@@ -237,7 +237,7 @@ const Bars = createClass({
 									palette[(pointsIndex + colorOffset) % palette.length]
 								)}
 							/>
-						))}
+						)}
 
 						{hasToolTips
 							? <ToolTip
@@ -273,7 +273,7 @@ const Bars = createClass({
 
 									<ToolTip.Body>
 										<Legend hasBorders={false} isReversed={isStacked}>
-											{_.map(yFields, (field, fieldIndex) => (
+											{_.map(yFields, (field, fieldIndex) =>
 												<Legend.Item
 													key={fieldIndex}
 													hasPoint={true}
@@ -290,13 +290,13 @@ const Bars = createClass({
 														data[seriesIndex][field]
 													)}
 												</Legend.Item>
-											))}
+											)}
 										</Legend>
 									</ToolTip.Body>
 								</ToolTip>
 							: null}
 					</g>
-				))}
+				)}
 			</g>
 		);
 	},

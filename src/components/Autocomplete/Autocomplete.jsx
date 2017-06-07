@@ -224,7 +224,7 @@ const Autocomplete = createClass({
 					</div>
 				</DropMenu.Control>
 				{value
-					? _.map(suggestions, suggestion => (
+					? _.map(suggestions, suggestion =>
 							<DropMenu.Option key={'AutocompleteOption' + suggestion}>
 								{(() => {
 									const [pre, match, post] = partitionText(
@@ -266,12 +266,12 @@ const Autocomplete = createClass({
 									return formattedSuggestion;
 								})()}
 							</DropMenu.Option>
-						))
-					: _.map(suggestions, suggestion => (
+						)
+					: _.map(suggestions, suggestion =>
 							<DropMenu.Option key={'AutocompleteOption' + suggestion}>
 								{suggestion}
 							</DropMenu.Option>
-						))}
+						)}
 			</DropMenu>
 		);
 	},

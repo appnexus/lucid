@@ -114,15 +114,13 @@ const ButtonGroup = createClass({
 						// the parent `ButtonGroup`. However, we want our `onClick` at the
 						// bottom because we manually handle passing the event to the
 						// `ButtonGroup.Button`'s `onClick` if it exists.
-						(
-							<Button
-								isActive={_.includes(selectedIndices, index)}
-								{...buttonChildProp}
-								key={index}
-								callbackId={index}
-								onClick={this.handleSelect}
-							/>
-						)
+						<Button
+							isActive={_.includes(selectedIndices, index)}
+							{...buttonChildProp}
+							key={index}
+							callbackId={index}
+							onClick={this.handleSelect}
+						/>
 					);
 				})}
 				{children}

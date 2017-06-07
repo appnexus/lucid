@@ -20,7 +20,7 @@ export default createClass({
 						overflow: 'hidden',
 					}}
 				>
-					{width => (
+					{width =>
 						<div
 							style={{
 								width,
@@ -35,8 +35,7 @@ export default createClass({
 							</div>
 							<div>Width: {width}</div>
 							<div>Height: {width * 0.3}</div>
-						</div>
-					)}
+						</div>}
 				</Resizer>
 			</div>
 		);

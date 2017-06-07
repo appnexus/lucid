@@ -5,9 +5,7 @@ import { shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
 
 import { VerticalTabsDumb as VerticalTabs } from './VerticalTabs';
-import {
-	VerticalListMenuDumb as VerticalListMenu,
-} from '../VerticalListMenu/VerticalListMenu';
+import { VerticalListMenuDumb as VerticalListMenu } from '../VerticalListMenu/VerticalListMenu';
 
 describe('VerticalTabs', () => {
 	common(VerticalTabs, {

@@ -38,7 +38,7 @@ export default createClass({
 						>
 							{_.map(alignments, alignment =>
 								_.map([0, 15, -15], directonOffset =>
-									_.map([0, 15, -15], alignmentOffset => (
+									_.map([0, 15, -15], alignmentOffset =>
 										<div
 											key={`${alignment}${alignmentOffset}${directonOffset}`}
 											style={{ marginTop: '120px' }}
@@ -63,7 +63,7 @@ export default createClass({
 												</ContextMenu.FlyOut>
 											</ContextMenu>
 										</div>
-									))
+									)
 								)
 							)}
 						</section>

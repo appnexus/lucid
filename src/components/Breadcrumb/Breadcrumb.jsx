@@ -59,7 +59,7 @@ const Breadcrumb = createClass({
 			>
 				{!_.isEmpty(items)
 					? <ul className={cx('&-List')}>
-							{_.map(initialItems, ({ props, key }) => (
+							{_.map(initialItems, ({ props, key }) =>
 								<li
 									{...props}
 									key={key}
@@ -68,7 +68,7 @@ const Breadcrumb = createClass({
 									{props.children}
 									<SeparatorIcon className={cx('&-SeparatorIcon')} />
 								</li>
-							))}
+							)}
 							<li
 								{...lastItem.props}
 								key={lastItem.key}
