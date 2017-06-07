@@ -232,6 +232,10 @@ const DataTable = createClass({
 			<DataTable.EmptyStateWrapper Title="You have no items." />
 		);
 
+		const fillerRowCount = _.size(data) === 0
+			? 10
+			: _.clamp(minRows - _.size(data), 0, Infinity);
+
 		return (
 			<EmptyStateWrapper
 				{...emptyStateWrapper.props}
@@ -385,35 +389,32 @@ const DataTable = createClass({
 								})}
 							</Tr>
 						))}
-						{_.times(
-							_.size(data) === 0 ? 10 : minRows - _.size(data),
-							index => (
-								<Tr isDisabled key={'row' + index} style={{ height: '32px' }}>
-									{isSelectable ? <Td /> : null}
-									{_.map(flattenedColumns, ({
-										props: columnProps,
-									}, columnIndex) => (
-										<Td
-											{..._.omit(columnProps, [
-												'field',
-												'children',
-												'width',
-												'title',
-												'isSortable',
-												'isSorted',
-												'isResizable',
-											])}
-											style={{
-												width: columnProps.width,
-											}}
-											key={
-												'row' + index + _.get(columnProps, 'field', columnIndex)
-											}
-										/>
-									))}
-								</Tr>
-							)
-						)}
+						{_.times(fillerRowCount, index => (
+							<Tr isDisabled key={'row' + index} style={{ height: '32px' }}>
+								{isSelectable ? <Td /> : null}
+								{_.map(flattenedColumns, ({
+									props: columnProps,
+								}, columnIndex) => (
+									<Td
+										{..._.omit(columnProps, [
+											'field',
+											'children',
+											'width',
+											'title',
+											'isSortable',
+											'isSorted',
+											'isResizable',
+										])}
+										style={{
+											width: columnProps.width,
+										}}
+										key={
+											'row' + index + _.get(columnProps, 'field', columnIndex)
+										}
+									/>
+								))}
+							</Tr>
+						))}
 					</Tbody>
 				</ScrollTable>
 			</EmptyStateWrapper>

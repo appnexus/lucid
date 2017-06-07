@@ -88,7 +88,6 @@
     "gulp-less": "^3.0.5",
     "gulp-postcss": "^6.1.0",
     "gulp-tar": "^1.8.0",
-    "history": "^2.0.0",
     "husky": "^0.13.3",
     "jest": "^19.0.0",
     "json-loader": "^0.5.4",
