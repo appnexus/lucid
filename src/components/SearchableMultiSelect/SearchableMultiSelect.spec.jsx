@@ -1,7 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
-import { SearchableMultiSelectDumb as SearchableMultiSelect } from './SearchableMultiSelect';
+import {
+	SearchableMultiSelectDumb as SearchableMultiSelect,
+} from './SearchableMultiSelect';
 
 const { Option } = SearchableMultiSelect;
 

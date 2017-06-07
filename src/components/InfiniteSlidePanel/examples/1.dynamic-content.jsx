@@ -48,7 +48,7 @@ export default createClass({
 					offset={this.state.offset}
 					onSwipe={this.handleSwipe}
 				>
-					{slideOffset =>
+					{slideOffset => (
 						<div
 							style={{
 								width: '100%',
@@ -60,7 +60,8 @@ export default createClass({
 							}}
 						>
 							{slideOffset}
-						</div>}
+						</div>
+					)}
 				</InfiniteSlidePanel>
 			</section>
 		);

@@ -49,9 +49,7 @@ export function getReduxPrimitives({
 	if (isDevMode && !initialState) {
 		logger.warn(
 			`\`getReduxPrimitives\` warning:
-Missing \`initialState\` for component at \`rootPath\` ${_.isArray(rootPath)
-				? rootPath.join(',')
-				: rootPath}
+Missing \`initialState\` for component at \`rootPath\` ${_.isArray(rootPath) ? rootPath.join(',') : rootPath}
 Components should have an \`initialState\` property or a \`getDefaultProps\` defined.
 `
 		);
@@ -63,7 +61,7 @@ Components should have an \`initialState\` property or a \`getDefaultProps\` def
 	const reducer = createReduxReducer(reducers, initialState, rootPath);
 	const selector = selectors ? reduceSelectors(selectors) : _.identity;
 	const rootPathSelector = state =>
-		_.isEmpty(rootPath) ? state : _.get(state, rootPath);
+		(_.isEmpty(rootPath) ? state : _.get(state, rootPath));
 	const mapStateToProps = createSelector([rootPathSelector], rootState =>
 		rootSelector(selector(rootState))
 	);

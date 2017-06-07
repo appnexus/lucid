@@ -130,22 +130,21 @@ const InfiniteSlidePanel = createClass({
 				onSwipe={onSwipe}
 				isLooped
 			>
-				{_.map(slideOffsetArray, (slideOffset, elementOffset) =>
+				{_.map(slideOffsetArray, (slideOffset, elementOffset) => (
 					<SlidePanel.Slide
 						key={elementOffset}
 						{...slide.props}
 						className={cx(
 							{
-								'&-Slide-in-frame':
-									slideOffset - offset < slidesToShow &&
-										slideOffset - offset >= 0,
+								'&-Slide-in-frame': slideOffset - offset < slidesToShow &&
+									slideOffset - offset >= 0,
 							},
 							slide.props.className
 						)}
 					>
 						{slideChildRenderFunction(slideOffset)}
 					</SlidePanel.Slide>
-				)}
+				))}
 			</SlidePanel>
 		);
 	},

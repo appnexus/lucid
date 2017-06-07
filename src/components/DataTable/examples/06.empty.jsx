@@ -19,7 +19,7 @@ export default createClass({
 				data={_.map(
 					data,
 					(row, index) =>
-						index === activeIndex ? { ...row, isActive: true } : row
+						(index === activeIndex ? { ...row, isActive: true } : row)
 				)}
 				density="extended"
 				isFullWidth

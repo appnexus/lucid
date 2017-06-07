@@ -716,23 +716,19 @@ function mapToGrid(trList, cellType = 'td', mapFn = _.property('element')) {
  */
 function renderRowsWithIdentifiedEdges(trList, cellType) {
 	const duplicateReferences = [];
-	const fullCellGrid = mapToGrid(
-		trList,
-		cellType,
-		(
-			{ element: { props }, isOriginal, canonicalPosition },
-			currentPos,
-			grid
-		) => {
-			if (!isOriginal) {
-				// if cell spans multiple positions
-				// store current position and return original cell props reference
-				duplicateReferences.push(currentPos);
-				return grid[canonicalPosition.row][canonicalPosition.col];
-			}
-			return _.assign({}, props); // return a new props object based on old cell
+	const fullCellGrid = mapToGrid(trList, cellType, ({
+		element: { props },
+		isOriginal,
+		canonicalPosition,
+	}, currentPos, grid) => {
+		if (!isOriginal) {
+			// if cell spans multiple positions
+			// store current position and return original cell props reference
+			duplicateReferences.push(currentPos);
+			return grid[canonicalPosition.row][canonicalPosition.col];
 		}
-	);
+		return _.assign({}, props); // return a new props object based on old cell
+	});
 
 	if (_.isEmpty(fullCellGrid)) {
 		return [];
@@ -780,7 +776,7 @@ function renderRowsWithIdentifiedEdges(trList, cellType) {
 	});
 
 	// render the grid back to elements using the updated cell props
-	return _.map(trList, (trElement, rowIndex) =>
+	return _.map(trList, (trElement, rowIndex) => (
 		<Tr {...trElement.props} key={rowIndex}>
 			{_.reduce(
 				fullCellGrid[rowIndex],
@@ -798,7 +794,7 @@ function renderRowsWithIdentifiedEdges(trList, cellType) {
 				[]
 			)}
 		</Tr>
-	);
+	));
 }
 
 export default Table;

@@ -14,7 +14,7 @@ describe('LoadingMessage', () => {
 	describe('render', () => {
 		let wrapper;
 
-		beforeEach(() => (wrapper = shallow(<LoadingMessage />)));
+		beforeEach(() => wrapper = shallow(<LoadingMessage />));
 
 		it('should render a LoadingIcon', () => {
 			assert.equal(
@@ -81,7 +81,7 @@ describe('LoadingMessage', () => {
 			describe('null', () => {
 				let wrapper;
 
-				beforeEach(() => (wrapper = shallow(<LoadingMessage Title={null} />)));
+				beforeEach(() => wrapper = shallow(<LoadingMessage Title={null} />));
 
 				it('should render a LoadingIcon', () => {
 					assert.equal(

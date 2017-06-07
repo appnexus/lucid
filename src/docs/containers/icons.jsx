@@ -49,7 +49,7 @@ const Icons = createClass({
 
 				<section>
 					<ul className={cx('&-list')}>
-						{_.map(icons, ([name, Icon]) =>
+						{_.map(icons, ([name, Icon]) => (
 							<li className={cx('&-list-item')} key={name}>
 								<Link
 									to={{
@@ -61,7 +61,7 @@ const Icons = createClass({
 									{name}
 								</Link>
 							</li>
-						)}
+						))}
 					</ul>
 				</section>
 
@@ -73,7 +73,7 @@ const Icons = createClass({
 					}}
 				>
 					<section className={cx('&-buttons')}>
-						{_.map(icons, ([name, Icon]) =>
+						{_.map(icons, ([name, Icon]) => (
 							<div className={cx('&-buttons-section')} key={name}>
 								<Button hasOnlyIcon size="short"><Icon /></Button>
 								<Button hasOnlyIcon size="small"><Icon /></Button>
@@ -92,7 +92,7 @@ const Icons = createClass({
 									<Icon />
 								</Button>
 							</div>
-						)}
+						))}
 					</section>
 				</Expander>
 

@@ -349,12 +349,14 @@ const SearchableSelect = createClass({
 					<div
 						tabIndex={0}
 						className={cx('&-Control', {
-							'&-Control-is-highlighted':
-								(!isDisabled && isItemSelected && isSelectionHighlighted) ||
-									(isExpanded && isSelectionHighlighted),
-							'&-Control-is-selected':
-								(!isDisabled && isItemSelected && isSelectionHighlighted) ||
-									(isExpanded && isSelectionHighlighted),
+							'&-Control-is-highlighted': (!isDisabled &&
+								isItemSelected &&
+								isSelectionHighlighted) ||
+								(isExpanded && isSelectionHighlighted),
+							'&-Control-is-selected': (!isDisabled &&
+								isItemSelected &&
+								isSelectionHighlighted) ||
+								(isExpanded && isSelectionHighlighted),
 							'&-Control-is-expanded': isExpanded,
 							'&-Control-is-disabled': isDisabled,
 						})}

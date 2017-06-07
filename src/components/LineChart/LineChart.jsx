@@ -530,8 +530,7 @@ const LineChart = createClass({
 						</g>
 						{/* x axis */}
 						<g
-							transform={`translate(${margin.left}, ${innerHeight +
-								margin.top})`}
+							transform={`translate(${margin.left}, ${innerHeight + margin.top})`}
 						>
 							<Axis
 								orient="bottom"
@@ -578,7 +577,7 @@ const LineChart = createClass({
 										{_.map(
 											yAxisFields,
 											(field, index) =>
-												!_.isNil(_.get(xPointMap, mouseX + '.y.' + field))
+												(!_.isNil(_.get(xPointMap, mouseX + '.y.' + field))
 													? <Legend.Item
 															key={index}
 															hasPoint={yAxisHasPointsFinal}
@@ -602,12 +601,12 @@ const LineChart = createClass({
 																_.get(xPointMap, mouseX + '.y.' + field)
 															)}
 														</Legend.Item>
-													: null
+													: null)
 										)}
 										{_.map(
 											y2AxisFields,
 											(field, index) =>
-												!_.isNil(_.get(xPointMap, mouseX + '.y.' + field))
+												(!_.isNil(_.get(xPointMap, mouseX + '.y.' + field))
 													? <Legend.Item
 															key={index}
 															hasPoint={y2AxisHasPointsFinal}
@@ -637,7 +636,7 @@ const LineChart = createClass({
 																_.get(xPointMap, mouseX + '.y.' + field)
 															)}
 														</Legend.Item>
-													: null
+													: null)
 										)}
 									</Legend>
 								</ToolTip.Body>
@@ -663,7 +662,7 @@ const LineChart = createClass({
 								alignment="center"
 								directonOffset={
 									(margin.bottom / 2 + Legend.HEIGHT / 2) *
-									-1 /* should center the legend in the bottom margin */
+										-1 /* should center the legend in the bottom margin */
 								}
 							>
 								<ContextMenu.Target elementType="g">
@@ -675,7 +674,7 @@ const LineChart = createClass({
 								</ContextMenu.Target>
 								<ContextMenu.FlyOut className={cx('&-legend-container')}>
 									<Legend orient="horizontal">
-										{_.map(yAxisFields, (field, index) =>
+										{_.map(yAxisFields, (field, index) => (
 											<Legend.Item
 												key={index}
 												hasPoint={yAxisHasPointsFinal}
@@ -691,8 +690,8 @@ const LineChart = createClass({
 											>
 												{_.get(legend, field, field)}
 											</Legend.Item>
-										)}
-										{_.map(y2AxisFields, (field, index) =>
+										))}
+										{_.map(y2AxisFields, (field, index) => (
 											<Legend.Item
 												key={index}
 												hasPoint={y2AxisHasPointsFinal}
@@ -714,7 +713,7 @@ const LineChart = createClass({
 											>
 												{_.get(legend, field, field)}
 											</Legend.Item>
-										)}
+										))}
 									</Legend>
 								</ContextMenu.FlyOut>
 							</ContextMenu>
@@ -724,8 +723,7 @@ const LineChart = createClass({
 				{/* x axis title */}
 				{xAxisTitle
 					? <g
-							transform={`translate(${margin.left}, ${margin.top +
-								innerHeight})`}
+							transform={`translate(${margin.left}, ${margin.top + innerHeight})`}
 						>
 							<AxisLabel
 								orient="bottom"
@@ -774,8 +772,7 @@ const LineChart = createClass({
 				{/* y2 axis */}
 				{y2AxisFields
 					? <g
-							transform={`translate(${margin.left +
-								innerWidth}, ${margin.top})`}
+							transform={`translate(${margin.left + innerWidth}, ${margin.top})`}
 						>
 							<Axis
 								orient="right"
@@ -790,8 +787,7 @@ const LineChart = createClass({
 				{/* y2 axis title */}
 				{y2AxisTitle
 					? <g
-							transform={`translate(${margin.left +
-								innerWidth}, ${margin.top})`}
+							transform={`translate(${margin.left + innerWidth}, ${margin.top})`}
 						>
 							<AxisLabel
 								orient="right"

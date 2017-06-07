@@ -187,7 +187,7 @@ const Lines = createClass({
 
 		return (
 			<g {...omitProps(passThroughs, Lines)} className={cx(className, '&')}>
-				{_.map(transformedData, (d, dIndex) =>
+				{_.map(transformedData, (d, dIndex) => (
 					<g key={dIndex}>
 						<Line
 							color={_.get(
@@ -198,7 +198,7 @@ const Lines = createClass({
 							d={area(d)}
 						/>
 					</g>
-				)}
+				))}
 			</g>
 		);
 	},

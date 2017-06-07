@@ -148,7 +148,7 @@ const LandingPage = createClass({
 							defaultStyle={{ opacity: 0 }}
 							style={{ opacity: spring(1, { damping: 4 }) }}
 						>
-							{value =>
+							{value => (
 								<rect
 									className={cx('&-primary', '&-carpetize')}
 									onClick={this.toggleCarpet}
@@ -157,7 +157,8 @@ const LandingPage = createClass({
 									width="12.4"
 									height="12.4"
 									style={value}
-								/>}
+								/>
+							)}
 						</Motion>
 						<rect x="195.7" y="36.8" width="12" height="12.4" />
 						<path d="M86.2,91.2v12.4H37.5V91.2C37.5,91.2,86.4,91.2,86.2,91.2z" />
@@ -173,7 +174,7 @@ const LandingPage = createClass({
 								y: spring(36.7, { damping }),
 							}}
 						>
-							{value =>
+							{value => (
 								<rect
 									x={value.x}
 									y={value.y}
@@ -181,7 +182,8 @@ const LandingPage = createClass({
 									width="12.4"
 									height="12.4"
 									style={{ opacity: value.opacity }}
-								/>}
+								/>
+							)}
 						</Motion>
 						<Motion
 							defaultStyle={{
@@ -195,7 +197,7 @@ const LandingPage = createClass({
 								y: spring(54.9),
 							}}
 						>
-							{value =>
+							{value => (
 								<rect
 									x={value.x}
 									y={value.y}
@@ -203,7 +205,8 @@ const LandingPage = createClass({
 									width="12.4"
 									height="12.4"
 									style={{ opacity: value.opacity }}
-								/>}
+								/>
+							)}
 						</Motion>
 						<Motion
 							defaultStyle={{
@@ -217,7 +220,7 @@ const LandingPage = createClass({
 								y: spring(73),
 							}}
 						>
-							{value =>
+							{value => (
 								<rect
 									x={value.x}
 									y={value.y}
@@ -225,7 +228,8 @@ const LandingPage = createClass({
 									width="12.4"
 									height="12.4"
 									style={{ opacity: value.opacity }}
-								/>}
+								/>
+							)}
 						</Motion>
 					</g>
 					{/* put a bird on it */}
@@ -236,7 +240,7 @@ const LandingPage = createClass({
 							y: spring(isCarpeted ? 8 : -50),
 						}}
 					>
-						{value =>
+						{value => (
 							<g
 								transform={`translate(${value.x}, ${value.y})`}
 								className={cx('&-bird')}
@@ -252,7 +256,8 @@ const LandingPage = createClass({
 									fill="#2abbb0"
 									d="M35,13.312 C33.688,13.312 32.625,12.249 32.625,10.938 C32.625,9.626 33.688,8.562 35,8.562 C36.312,8.562 37.375,9.626 37.375,10.938 C37.375,12.249 36.312,13.312 35,13.312 z"
 								/>
-							</g>}
+							</g>
+						)}
 					</Motion>
 				</svg>
 

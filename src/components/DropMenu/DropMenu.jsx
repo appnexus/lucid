@@ -600,7 +600,7 @@ const DropMenu = createClass({
 								{...headerProps}
 								className={cx('&-Header', headerProps.className)}
 								onKeyDown={this.handleKeydown}
-								ref={header => (this._header = header)}
+								ref={header => this._header = header}
 							/>}
 						<div
 							className={cx('&-option-container')}
@@ -648,22 +648,20 @@ const DropMenu = createClass({
 												</div>,
 												// render the options in the group
 											]).concat(
-										_.map(
-											optionGroupDataLookup[optionGroupIndex],
-											({ optionProps, optionIndex }) =>
-												this.renderOption(optionProps, optionIndex, true)
-										)
+										_.map(optionGroupDataLookup[optionGroupIndex], ({
+											optionProps,
+											optionIndex,
+										}) => this.renderOption(optionProps, optionIndex, true))
 									);
 									// append all ungrouped options as another unlabeled group
 								}).concat(
 									_.isEmpty(ungroupedOptionData)
 										? []
 										: [
-												_.map(
-													ungroupedOptionData,
-													({ optionProps, optionIndex }) =>
-														this.renderOption(optionProps, optionIndex)
-												),
+												_.map(ungroupedOptionData, ({
+													optionProps,
+													optionIndex,
+												}) => this.renderOption(optionProps, optionIndex)),
 											]
 								),
 								(element, index) =>

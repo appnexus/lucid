@@ -13,8 +13,9 @@ export default createClass({
 	render() {
 		return (
 			<Resizer>
-				{(width /*, height */) =>
-					<LineChart width={width} height={width * 0.3} data={data} />}
+				{(width /*, height */) => (
+					<LineChart width={width} height={width * 0.3} data={data} />
+				)}
 			</Resizer>
 		);
 	},

@@ -19,8 +19,7 @@ export default createClass({
 			alignment,
 			alignmentOffset,
 			getAlignmentOffset,
-		} =
-			this.state || {};
+		} = this.state || {};
 
 		const directions = [UP, DOWN, LEFT, RIGHT];
 		const alignments = [START, CENTER, END];
@@ -40,11 +39,11 @@ export default createClass({
 						<SingleSelect.Placeholder>
 							Select a direction
 						</SingleSelect.Placeholder>
-						{_.map(directions, direction =>
+						{_.map(directions, direction => (
 							<SingleSelect.Option key={direction}>
 								{direction}
 							</SingleSelect.Option>
-						)}
+						))}
 					</SingleSelect>
 
 					directonOffset:
@@ -60,11 +59,11 @@ export default createClass({
 						<SingleSelect.Placeholder>
 							Select an alignment
 						</SingleSelect.Placeholder>
-						{_.map(alignments, alignment =>
+						{_.map(alignments, alignment => (
 							<SingleSelect.Option key={alignment}>
 								{alignment}
 							</SingleSelect.Option>
-						)}
+						))}
 					</SingleSelect>
 
 					alignmentOffset:
@@ -117,8 +116,8 @@ export default createClass({
 							<div>{`directonOffset: ${directonOffset || 'default'}`}</div>
 							<div>{`alignment: ${alignment || 'default'}`}</div>
 							<div>{`alignmentOffset: ${alignmentOffset || 'default'}`}</div>
-							<div>{`getAlignmentOffset: ${getAlignmentOffset ||
-								'default'}`}</div>
+							<div
+							>{`getAlignmentOffset: ${getAlignmentOffset || 'default'}`}</div>
 						</ContextMenu.FlyOut>
 
 					</ContextMenu>

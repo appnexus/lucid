@@ -205,8 +205,7 @@ const SplitVertical = createClass({
 		collapseShift = 0
 	) {
 		if (isExpanded) {
-			secondaryRef.style.flexBasis = `${secondaryStartRect.width +
-				dX * (secondary === right ? -1 : 1)}px`;
+			secondaryRef.style.flexBasis = `${secondaryStartRect.width + dX * (secondary === right ? -1 : 1)}px`;
 			return secondaryStartRect.width + dX * (secondary === right ? -1 : 1);
 		} else {
 			const overlapWidth =
@@ -219,8 +218,7 @@ const SplitVertical = createClass({
 				return secondaryStartRect.width - overlapWidth;
 			} else {
 				this.expandSecondary();
-				secondaryRef.style.flexBasis = `${(dX + collapseShift) *
-					(secondary === right ? -1 : 1)}px`;
+				secondaryRef.style.flexBasis = `${(dX + collapseShift) * (secondary === right ? -1 : 1)}px`;
 				return (dX + collapseShift) * (secondary === right ? -1 : 1);
 			}
 		}
@@ -411,14 +409,13 @@ const SplitVertical = createClass({
 							: to
 					}
 				>
-					{tween =>
+					{tween => (
 						<div
 							className={cx('&-inner')}
 							ref={this.storeRef('inner')}
 							style={{
 								display: 'flex',
-								transform: `translateX(${(isRightSecondary ? 1 : -1) *
-									Math.round(tween.slideAmount)}px)`,
+								transform: `translateX(${(isRightSecondary ? 1 : -1) * Math.round(tween.slideAmount)}px)`,
 							}}
 						>
 							<div
@@ -501,7 +498,8 @@ const SplitVertical = createClass({
 							>
 								{rightPaneProps.children}
 							</div>
-						</div>}
+						</div>
+					)}
 				</Motion>
 			</div>
 		);

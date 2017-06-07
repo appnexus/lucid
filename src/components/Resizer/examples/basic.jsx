@@ -6,11 +6,12 @@ export default createClass({
 	render() {
 		return (
 			<Resizer>
-				{(width, height) =>
+				{(width, height) => (
 					<div>
 						<div>Width: {width}</div>
 						<div>Height: {height}</div>
-					</div>}
+					</div>
+				)}
 			</Resizer>
 		);
 	},

@@ -99,9 +99,9 @@ export default createClass({
 						placeholder: 'Type here to simulate an API backed search',
 					}}
 				>
-					{_.map(visibleIds, id =>
+					{_.map(visibleIds, id => (
 						<Option key={id} callbackId={id}>{allData[id].name}</Option>
-					)}
+					))}
 				</SearchableMultiSelect>
 
 				{!_.isEmpty(selectedIds)
@@ -112,14 +112,14 @@ export default createClass({
 							kind="container"
 							isRemovable={false}
 						>
-							{_.map(selectedIds, id =>
+							{_.map(selectedIds, id => (
 								<Selection
 									key={id}
 									Label={allData[id].name}
 									callbackId={id}
 									onRemove={this.handleRemove}
 								/>
-							)}
+							))}
 						</Selection>
 					: null}
 			</section>

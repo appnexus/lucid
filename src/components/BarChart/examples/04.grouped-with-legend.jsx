@@ -33,7 +33,7 @@ export default createClass({
 				/>
 
 				<Legend style={{ verticalAlign: 'top' }}>
-					{_.map(yAxisFields, (field, i) =>
+					{_.map(yAxisFields, (field, i) => (
 						<Legend.Item
 							key={field}
 							hasPoint
@@ -41,7 +41,7 @@ export default createClass({
 						>
 							{field}
 						</Legend.Item>
-					)}
+					))}
 				</Legend>
 			</div>
 		);

@@ -12,7 +12,8 @@ import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './Submarine.reducers';
 import SplitHorizontal from '../SplitHorizontal/SplitHorizontal';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
-import GripperHorizontalIcon from '../Icon/GripperHorizontalIcon/GripperHorizontalIcon';
+import GripperHorizontalIcon
+	from '../Icon/GripperHorizontalIcon/GripperHorizontalIcon';
 
 const cx = lucidClassNames.bind('&-Submarine');
 

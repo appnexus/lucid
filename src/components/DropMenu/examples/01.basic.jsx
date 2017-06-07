@@ -27,11 +27,11 @@ export default createClass({
 						? 'Select'
 						: options[_.last(selectedIndices)]}
 				</DropMenu.Control>
-				{_.map(options, (optionText, index) =>
+				{_.map(options, (optionText, index) => (
 					<DropMenu.Option key={'Option-' + index}>
 						{optionText}
 					</DropMenu.Option>
-				)}
+				))}
 			</DropMenu>
 		);
 	},

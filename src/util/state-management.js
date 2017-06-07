@@ -8,9 +8,9 @@ export function getDeepPaths(obj, path = []) {
 	return _.reduce(
 		obj,
 		(terminalKeys, value, key) =>
-			_.isPlainObject(value)
+			(_.isPlainObject(value)
 				? terminalKeys.concat(getDeepPaths(value, path.concat(key)))
-				: terminalKeys.concat([path.concat(key)]),
+				: terminalKeys.concat([path.concat(key)])),
 		[]
 	);
 }

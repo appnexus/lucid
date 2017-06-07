@@ -6,7 +6,9 @@ import { mount, shallow } from 'enzyme';
 
 import { common } from '../../util/generic-tests';
 import { AccordionDumb as Accordion } from './Accordion';
-import { ExpanderPanelDumb as ExpanderPanel } from '../ExpanderPanel/ExpanderPanel';
+import {
+	ExpanderPanelDumb as ExpanderPanel,
+} from '../ExpanderPanel/ExpanderPanel';
 
 describe('Accordion', () => {
 	common(Accordion);

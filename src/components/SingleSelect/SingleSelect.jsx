@@ -195,12 +195,14 @@ const SingleSelect = createClass({
 					<div
 						tabIndex={0}
 						className={cx('&-Control', {
-							'&-Control-is-highlighted':
-								(!isDisabled && isItemSelected && isSelectionHighlighted) ||
-									(isExpanded && isSelectionHighlighted),
-							'&-Control-is-selected':
-								(!isDisabled && isItemSelected && isSelectionHighlighted) ||
-									(isExpanded && isSelectionHighlighted),
+							'&-Control-is-highlighted': (!isDisabled &&
+								isItemSelected &&
+								isSelectionHighlighted) ||
+								(isExpanded && isSelectionHighlighted),
+							'&-Control-is-selected': (!isDisabled &&
+								isItemSelected &&
+								isSelectionHighlighted) ||
+								(isExpanded && isSelectionHighlighted),
 							'&-Control-is-expanded': isExpanded,
 							'&-Control-is-disabled': isDisabled,
 						})}
@@ -225,29 +227,30 @@ const SingleSelect = createClass({
 						</DropMenu.NullOption>
 					: null}
 				{// for each option group passed in, render a DropMenu.OptionGroup, any label will be included in it's children, render each option inside the group
-				_.map(optionGroups, (optionGroupProps, optionGroupIndex) =>
+				_.map(optionGroups, (optionGroupProps, optionGroupIndex) => (
 					<DropMenu.OptionGroup
 						key={'SingleSelectOptionGroup' + optionGroupIndex}
 						{...optionGroupProps}
 					>
 						{optionGroupProps.children}
-						{_.map(
-							_.get(optionGroupDataLookup, optionGroupIndex),
-							({ optionProps, optionIndex }) =>
-								<DropMenu.Option
-									key={'SingleSelectOption' + optionIndex}
-									{...optionProps}
-								/>
-						)}
+						{_.map(_.get(optionGroupDataLookup, optionGroupIndex), ({
+							optionProps,
+							optionIndex,
+						}) => (
+							<DropMenu.Option
+								key={'SingleSelectOption' + optionIndex}
+								{...optionProps}
+							/>
+						))}
 					</DropMenu.OptionGroup>
-				).concat(
+				)).concat(
 					// then render all the ungrouped options at the end
-					_.map(ungroupedOptionData, ({ optionProps, optionIndex }) =>
+					_.map(ungroupedOptionData, ({ optionProps, optionIndex }) => (
 						<DropMenu.Option
 							key={'SingleSelectOption' + optionIndex}
 							{...optionProps}
 						/>
-					)
+					))
 				)}
 			</DropMenu>
 		);

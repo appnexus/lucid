@@ -356,8 +356,7 @@ const BarChart = createClass({
 					>
 						{/* x axis */}
 						<g
-							transform={`translate(${margin.left}, ${innerHeight +
-								margin.top})`}
+							transform={`translate(${margin.left}, ${innerHeight + margin.top})`}
 						>
 							<Axis orient="bottom" scale={xScale} tickCount={xAxisTickCount} />
 						</g>
@@ -398,7 +397,7 @@ const BarChart = createClass({
 								alignment="center"
 								directonOffset={
 									(margin.bottom / 2 + Legend.HEIGHT / 2) *
-									-1 /* should center the legend in the bottom margin */
+										-1 /* should center the legend in the bottom margin */
 								}
 							>
 								<ContextMenu.Target elementType="g">
@@ -410,7 +409,7 @@ const BarChart = createClass({
 								</ContextMenu.Target>
 								<ContextMenu.FlyOut className={cx('&-legend-container')}>
 									<Legend orient="horizontal">
-										{_.map(yAxisFields, (field, index) =>
+										{_.map(yAxisFields, (field, index) => (
 											<Legend.Item
 												key={index}
 												hasPoint={true}
@@ -424,7 +423,7 @@ const BarChart = createClass({
 											>
 												{_.get(legend, field, field)}
 											</Legend.Item>
-										)}
+										))}
 									</Legend>
 								</ContextMenu.FlyOut>
 							</ContextMenu>
@@ -435,8 +434,7 @@ const BarChart = createClass({
 				{/* x axis title */}
 				{xAxisTitle
 					? <g
-							transform={`translate(${margin.left}, ${margin.top +
-								innerHeight})`}
+							transform={`translate(${margin.left}, ${margin.top + innerHeight})`}
 						>
 							<AxisLabel
 								orient="bottom"
