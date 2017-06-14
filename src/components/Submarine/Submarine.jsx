@@ -49,6 +49,15 @@ const Submarine = createClass({
 		 */
 		isExpanded: bool,
 		/**
+		 * Indicates if the Submarine should be shown or not.
+		 * This will override the value of isExpanded.
+		 */
+		isHidden: bool,
+		/**
+		 * Indicates if the Title should be shown when the Submarine is collapsed
+		 */
+		isTitleShownCollapsed: bool,
+		/**
 		 * Allows animated expand and collapse behavior.
 		 */
 		isAnimated: bool,
@@ -128,6 +137,8 @@ const Submarine = createClass({
 			height: 250,
 			position: 'bottom',
 			isResizeDisabled: false,
+			isHidden: false,
+			isTitleShownCollapsed: false,
 			onResizing: _.noop,
 			onResize: _.noop,
 			onToggle: _.noop,
@@ -161,6 +172,8 @@ const Submarine = createClass({
 			position,
 			isResizeDisabled,
 			height,
+			isHidden,
+			isTitleShownCollapsed,
 			...passThroughs
 		} = this.props;
 
@@ -191,6 +204,9 @@ const Submarine = createClass({
 			BarPane = SplitHorizontal.BottomPane;
 		}
 
+		// leave 33px of sidebar to stick out when collapsed, or 0px if hidden
+		const collapseShift = isHidden ? 0 : 33;
+
 		return (
 			<SplitHorizontal
 				{...omitProps(passThroughs, Submarine, [], false)}
@@ -204,8 +220,8 @@ const Submarine = createClass({
 					className
 				)}
 				isAnimated={isAnimated}
-				isExpanded={isExpanded}
-				collapseShift={33} // leave 33px of sidebar to stick out when collapsed
+				isExpanded={isExpanded && !isHidden}
+				collapseShift={collapseShift}
 				onResizing={this.handleResizing}
 				onResize={this.handleResize}
 			>
@@ -218,7 +234,11 @@ const Submarine = createClass({
 					<div className={cx('&-Bar-header')}>
 						<div
 							{...titleProps}
-							className={cx('&-Bar-Title', titleProps.className)}
+							className={cx(
+								'&-Bar-Title',
+								{ '&-Bar-Title-is-shown-collapsed': isTitleShownCollapsed },
+								titleProps.className
+							)}
 						/>
 						<div
 							className={cx('&-expander')}
