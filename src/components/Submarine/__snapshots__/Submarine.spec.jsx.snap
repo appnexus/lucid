@@ -576,3 +576,113 @@ exports[`Submarine [common] example testing should match snapshot(s) for 9.neste
   </SplitHorizontal.TopPane>
 </SplitHorizontal>
 `;
+
+exports[`Submarine [common] example testing should match snapshot(s) for 10.hidden-bar 1`] = `
+<SplitHorizontal
+  className="lucid-Submarine lucid-Submarine-is-position-bottom"
+  collapseShift={0}
+  isAnimated={true}
+  isExpanded={false}
+  onResize={[Function]}
+  onResizing={[Function]}
+>
+  <SplitHorizontal.BottomPane
+    className="lucid-Submarine-Bar"
+    height={250}
+    isPrimary={false}
+  >
+    <div
+      className="lucid-Submarine-Bar-overlay"
+    />
+    <div
+      className="lucid-Submarine-Bar-header"
+    >
+      <div
+        className="lucid-Submarine-Bar-Title"
+      />
+      <div
+        className="lucid-Submarine-expander"
+        onMouseDown={[Function]}
+      >
+        <ChevronIcon
+          direction="down"
+        />
+      </div>
+    </div>
+    <div
+      className="lucid-Submarine-Bar-content"
+    >
+      You will never see me!
+    </div>
+  </SplitHorizontal.BottomPane>
+  <SplitHorizontal.Divider
+    className="lucid-Submarine-Divider"
+  >
+    <GripperHorizontalIcon
+      className="lucid-Submarine-Divider-gripper"
+    />
+  </SplitHorizontal.Divider>
+  <SplitHorizontal.TopPane
+    className="lucid-Submarine-Primary"
+    isPrimary={true}
+  >
+    Pickled pinterest hot chicken taxidermy edison bulb. Butcher austin listicle fingerstache unicorn flexitarian. Tumblr cred quinoa normcore, mumblecore cardigan cold-pressed dreamcatcher craft beer ad direct trade vero accusamus cray. Roof party chia shabby chic synth.
+  </SplitHorizontal.TopPane>
+</SplitHorizontal>
+`;
+
+exports[`Submarine [common] example testing should match snapshot(s) for 11-title-shown-collapsed 1`] = `
+<SplitHorizontal
+  className="lucid-Submarine lucid-Submarine-is-position-bottom"
+  collapseShift={33}
+  isAnimated={true}
+  isExpanded={true}
+  onResize={[Function]}
+  onResizing={[Function]}
+>
+  <SplitHorizontal.BottomPane
+    className="lucid-Submarine-Bar"
+    height={250}
+    isPrimary={false}
+  >
+    <div
+      className="lucid-Submarine-Bar-overlay"
+    />
+    <div
+      className="lucid-Submarine-Bar-header"
+    >
+      <div
+        className="lucid-Submarine-Bar-Title lucid-Submarine-Bar-Title-is-shown-collapsed"
+      >
+        Submarine Title Stays While Collapsed!
+      </div>
+      <div
+        className="lucid-Submarine-expander"
+        onMouseDown={[Function]}
+      >
+        <ChevronIcon
+          direction="down"
+        />
+      </div>
+    </div>
+    <div
+      className="lucid-Submarine-Bar-content"
+    >
+      Minim 90's paleo retro, fugiat aliqua hashtag enim photo booth listicle next level. Consectetur proident magna culpa. Art party meh ad, four loko slow-carb venmo distillery wolf cornhole nisi. Truffaut meditation cray small batch, schlitz master cleanse cliche taxidermy labore gochujang bitters. Synth fixie banh mi bushwick shoreditch cold-pressed.
+    </div>
+  </SplitHorizontal.BottomPane>
+  <SplitHorizontal.Divider
+    className="lucid-Submarine-Divider"
+  >
+    <GripperHorizontalIcon
+      className="lucid-Submarine-Divider-gripper"
+    />
+  </SplitHorizontal.Divider>
+  <SplitHorizontal.TopPane
+    className="lucid-Submarine-Primary"
+    isPrimary={true}
+  >
+    Helvetica narwhal irony, hoodie leggings occaecat tattooed authentic cred. Tumblr cred quinoa normcore, mumblecore cardigan cold-pressed dreamcatcher craft beer ad direct trade vero accusamus cray. Roof party chia shabby chic synth. Pariatur organic before they sold out everyday carry food truck. Labore four loko nihil, narwhal actually infolk mustache jean shorts. Meh kickstarter chicharrones williamsburg bushwick yr, PBR&B fap. Lo-fi leggings magna yuccie, tattooed accusamus blog literally gochujang listicle cliche humblebrag swag kombucha tousled.
+  </SplitHorizontal.TopPane>
+</SplitHorizontal>
+`;
