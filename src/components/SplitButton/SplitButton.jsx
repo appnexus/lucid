@@ -182,6 +182,9 @@ const SplitButton = createClass({
 							hasOnlyIcon
 							isActive={isExpanded}
 							kind={kind}
+							isDisabled={_.every([primaryButtonProps, ...buttonChildProps], {
+								isDisabled: true,
+							})}
 						>
 							<CaretIcon
 								className={cx('&-CaretIcon')}
