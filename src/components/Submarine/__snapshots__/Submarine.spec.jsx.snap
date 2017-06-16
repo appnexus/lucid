@@ -599,7 +599,9 @@ exports[`Submarine [common] example testing should match snapshot(s) for 10.hidd
     >
       <div
         className="lucid-Submarine-Bar-Title"
-      />
+      >
+        This can be totally hidden from view
+      </div>
       <div
         className="lucid-Submarine-expander"
         onMouseDown={[Function]}
@@ -612,7 +614,7 @@ exports[`Submarine [common] example testing should match snapshot(s) for 10.hidd
     <div
       className="lucid-Submarine-Bar-content"
     >
-      You will never see me!
+      Slow-carb meditation four loko, kickstarter umami tilde craft beer kombucha deep v plaid yr cardigan gastropub ennui snackwave. Vape health goth selvage twee lumbersexual, tattooed iceland cred street art slow-carb craft beer pinterest banjo typewriter pop-up. Echo park bicycle rights put a bird on it, sriracha blue bottle ethical pinterest readymade messenger bag. Tousled slow-carb occupy messenger bag readymade, leggings celiac cloud bread tofu. Wayfarers chia jianbing, twee yuccie seitan meggings food truck meh neutra bushwick mlkshk four loko. Franzen unicorn tofu lumbersexual waistcoat. Taxidermy gluten-free yuccie vinyl waistcoat.
     </div>
   </SplitHorizontal.BottomPane>
   <SplitHorizontal.Divider
