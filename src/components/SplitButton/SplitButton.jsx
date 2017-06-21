@@ -171,7 +171,10 @@ const SplitButton = createClass({
 					<ButtonGroup>
 						<Button
 							{...primaryButtonProps}
-							className={cx('&-Button-primary')}
+							className={cx(
+								'&-Button-primary',
+								_.get(primaryButtonProps, 'className')
+							)}
 							kind={kind}
 							type={type}
 							size={size}
