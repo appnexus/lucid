@@ -138,21 +138,32 @@ const TextField = createClass({
 		// Because we want the debounceLevel to be configurable, we can't put the
 		// debounced handler directly on the react class, so we set it up right
 		// before mount
+		this._isMounted = true;
 		this._handleChangeDebounced = _.debounce((...args) => {
 			this.props.onChangeDebounced(...args);
 		}, this.props.debounceLevel);
 
 		this._releaseHold = _.debounce(() => {
+			if (!this._isMounted) {
+				return;
+			}
 			this.setState({ isHolding: false });
 		}, this.props.lazyLevel);
 
 		this._updateWhenReady = _.debounce(newValue => {
+			if (!this._isMounted) {
+				return;
+			}
 			if (this.state.isHolding) {
 				this._updateWhenReady(newValue);
 			} else if (newValue !== this.state.value) {
 				this.setState({ value: newValue });
 			}
 		}, this.props.lazyLevel);
+	},
+
+	componentWillUnmount() {
+		this._isMounted = false;
 	},
 
 	componentWillReceiveProps(nextProps) {
