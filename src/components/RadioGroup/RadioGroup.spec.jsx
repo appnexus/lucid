@@ -44,6 +44,53 @@ describe('RadioGroup', () => {
 			});
 		});
 
+		describe('isDisabled', () => {
+			it('should set `isDisabled` to true for all child radio buttons', () => {
+				const wrapper = shallow(
+					<RadioGroup isDisabled={true}>
+						<RadioGroup.RadioButton />
+						<RadioGroup.RadioButton />
+						<RadioGroup.RadioButton />
+					</RadioGroup>
+				);
+				const childNodes = wrapper.find(RadioButtonLabeled).nodes;
+
+				assert.equal(childNodes[0].props.isDisabled, true);
+				assert.equal(childNodes[1].props.isDisabled, true);
+				assert.equal(childNodes[2].props.isDisabled, true);
+			});
+
+			it('should set `isDisabled` to true for all child radio buttons even if the child radio buttons have isDisabled set as false', () => {
+				const wrapper = shallow(
+					<RadioGroup isDisabled={true}>
+						<RadioGroup.RadioButton />
+						<RadioGroup.RadioButton isDisabled={false} />
+						<RadioGroup.RadioButton />
+					</RadioGroup>
+				);
+				const childNodes = wrapper.find(RadioButtonLabeled).nodes;
+
+				assert.equal(childNodes[0].props.isDisabled, true);
+				assert.equal(childNodes[1].props.isDisabled, true);
+				assert.equal(childNodes[2].props.isDisabled, true);
+			});
+
+			it('should allow specific radio buttons to be disabled', () => {
+				const wrapper = shallow(
+					<RadioGroup isDisabled={false}>
+						<RadioGroup.RadioButton />
+						<RadioGroup.RadioButton isDisabled={true} />
+						<RadioGroup.RadioButton />
+					</RadioGroup>
+				);
+				const childNodes = wrapper.find(RadioButtonLabeled).nodes;
+
+				assert.equal(childNodes[0].props.isDisabled, false);
+				assert.equal(childNodes[1].props.isDisabled, true);
+				assert.equal(childNodes[2].props.isDisabled, false);
+			});
+		});
+
 		describe('selectedIndex', () => {
 			it('sets the `isSelected` prop of the child radio button at the matching index to true...', () => {
 				const wrapper = shallow(
