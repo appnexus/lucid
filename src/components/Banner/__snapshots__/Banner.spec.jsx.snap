@@ -38,6 +38,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-close"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -65,6 +70,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-has-no-roundedCorners"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -92,6 +102,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -114,6 +129,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -141,6 +161,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -163,6 +188,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-primary"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -190,6 +220,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-primary"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -212,6 +247,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-primary lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -239,6 +279,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-primary lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -261,6 +306,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-success"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -288,6 +338,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-success"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -310,6 +365,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-success"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -342,6 +402,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-success"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -369,6 +434,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-success lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -401,6 +471,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-success lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -431,6 +506,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -458,6 +538,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-success lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -480,6 +565,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-success"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -520,6 +610,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -547,6 +642,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-warning"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -569,6 +669,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-warning"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -601,6 +706,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-warning"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -627,6 +737,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -654,6 +769,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-warning lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -676,6 +796,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -708,6 +833,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-warning lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -736,6 +866,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -763,6 +898,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-danger"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -785,6 +925,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -817,6 +962,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-danger"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -844,6 +994,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -871,6 +1026,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-danger lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -893,6 +1053,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -925,6 +1090,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-danger lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -953,6 +1123,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-info"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -980,6 +1155,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-info"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -1002,6 +1182,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-info"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -1036,6 +1221,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-info"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -1065,6 +1255,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -1092,6 +1287,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-info lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-content"
@@ -1114,6 +1314,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-info lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -1148,6 +1353,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-info lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -1177,6 +1387,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -1209,6 +1424,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
@@ -1247,6 +1467,11 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
 >
   <section
     className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
   >
     <span
       className="lucid-Banner-icon"
