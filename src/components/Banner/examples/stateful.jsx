@@ -17,7 +17,10 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				<Button onClick={_.partial(this.handleChange, !this.state.isClosed)}>
+				<Button
+					onClick={_.partial(this.handleChange, !this.state.isClosed)}
+					style={{ marginBottom: 8 }}
+				>
 					Open/Close
 				</Button>
 
