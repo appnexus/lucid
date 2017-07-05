@@ -1191,9 +1191,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     <span
       className="lucid-Banner-icon"
     >
-      <InfoIcon
-        isBadge={true}
-      />
+      <InfoIcon />
     </span>
     <span
       className="lucid-Banner-content"
@@ -1230,9 +1228,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     <span
       className="lucid-Banner-icon"
     >
-      <InfoIcon
-        isBadge={true}
-      />
+      <InfoIcon />
     </span>
     <span
       className="lucid-Banner-content"
@@ -1323,9 +1319,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     <span
       className="lucid-Banner-icon"
     >
-      <InfoIcon
-        isBadge={true}
-      />
+      <InfoIcon />
     </span>
     <span
       className="lucid-Banner-content"
@@ -1362,9 +1356,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     <span
       className="lucid-Banner-icon"
     >
-      <InfoIcon
-        isBadge={true}
-      />
+      <InfoIcon />
     </span>
     <span
       className="lucid-Banner-content"
