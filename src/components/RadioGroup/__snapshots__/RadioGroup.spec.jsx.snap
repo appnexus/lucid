@@ -112,6 +112,118 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for defaul
 </span>
 `;
 
+exports[`RadioGroup [common] example testing should match snapshot(s) for is-disabled 1`] = `
+<span
+  className="lucid-RadioGroup"
+>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Superman",
+      }
+    }
+    callbackId={0}
+    isDisabled={true}
+    isSelected={true}
+    name="lucid-RadioGroup-2"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Superman
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Batman",
+      }
+    }
+    callbackId={1}
+    isDisabled={true}
+    isSelected={false}
+    name="lucid-RadioGroup-2"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Batman
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Wonder Woman",
+      }
+    }
+    callbackId={2}
+    isDisabled={true}
+    isSelected={false}
+    name="lucid-RadioGroup-2"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Wonder Woman
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Aquaman",
+      }
+    }
+    callbackId={3}
+    isDisabled={true}
+    isSelected={false}
+    name="lucid-RadioGroup-2"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Aquaman
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+  <RadioButtonLabeled
+    Label={
+      Object {
+        "children": "Robin",
+      }
+    }
+    callbackId={4}
+    isDisabled={true}
+    isSelected={false}
+    name="lucid-RadioGroup-2"
+    onSelect={[Function]}
+    style={
+      Object {
+        "marginRight": "13px",
+      }
+    }
+  >
+    <RadioGroup.Label>
+      Robin
+    </RadioGroup.Label>
+  </RadioButtonLabeled>
+</span>
+`;
+
 exports[`RadioGroup [common] example testing should match snapshot(s) for nested-select 1`] = `
 <span
   className="lucid-RadioGroup"

@@ -17,7 +17,7 @@ import RadioButton from '../RadioButton/RadioButton';
 
 const cx = lucidClassNames.bind('&-RadioGroup');
 
-const { func, node, number, string } = PropTypes;
+const { func, node, number, string, bool } = PropTypes;
 
 /**
  * {"categories": ["controls", "toggles"], "madeFrom": ["RadioButton"]}
@@ -83,6 +83,12 @@ const RadioGroup = createClass({
 		 * `isSelected` equal to true takes precedence over this prop.
 		 */
 		selectedIndex: number,
+
+		/**
+		 * Indicates whether all `RadioGroup.RadioButton` children should appear and act disabled by
+		 * having a "greyed out" palette and ignoring user interactions.
+		 */
+		isDisabled: bool,
 	},
 
 	getDefaultProps() {
@@ -90,6 +96,7 @@ const RadioGroup = createClass({
 			name: _.uniqueId(`${cx('&')}-`),
 			onSelect: _.noop,
 			selectedIndex: 0,
+			isDisabled: false,
 		};
 	},
 
@@ -99,6 +106,7 @@ const RadioGroup = createClass({
 			className,
 			name,
 			selectedIndex,
+			isDisabled,
 			...passThroughs
 		} = this.props;
 
@@ -106,6 +114,7 @@ const RadioGroup = createClass({
 			findTypes(this.props, RadioGroup.RadioButton),
 			'props'
 		);
+
 		const selectedIndexFromChildren = _.findLastIndex(radioButtonChildProps, {
 			isSelected: true,
 		});
@@ -126,6 +135,7 @@ const RadioGroup = createClass({
 					return (
 						<RadioButtonLabeled
 							{...radioButtonChildProp}
+							isDisabled={isDisabled || radioButtonChildProp.isDisabled}
 							isSelected={actualSelectedIndex === index}
 							key={index}
 							callbackId={index}
