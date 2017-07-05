@@ -20,38 +20,73 @@ export default createClass({
 		return (
 			<div>
 				<div>
-					<Banner>Default</Banner>
-					<Banner hasRoundedCorners={false}>Default no rounded corners</Banner>
-					<Banner isCloseable={false}>
+					<Banner style={{ marginBottom: 8 }}>Default</Banner>
+					<Banner hasRoundedCorners={false} style={{ marginBottom: 8 }}>
+						Default no rounded corners
+					</Banner>
+					<Banner isCloseable={false} style={{ marginBottom: 8 }}>
 						Default -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
-					<Banner isSmall={true}>Default -- small</Banner>
-					<Banner isSmall={true} isCloseable={false}>
+					<Banner isSmall={true} style={{ marginBottom: 8 }}>
+						Default -- small
+					</Banner>
+					<Banner
+						isSmall={true}
+						isCloseable={false}
+						style={{ marginBottom: 8 }}
+					>
 						Default -- small -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
 				</div>
 
 				<div>
-					<Banner kind="primary">Primary</Banner>
-					<Banner kind="primary" isCloseable={false}>
+					<Banner kind="primary" style={{ marginBottom: 8 }}>Primary</Banner>
+					<Banner
+						kind="primary"
+						isCloseable={false}
+						style={{ marginBottom: 8 }}
+					>
 						Primary -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
-					<Banner kind="primary" isSmall={true}>Primary -- small</Banner>
-					<Banner kind="primary" isSmall={true} isCloseable={false}>
+					<Banner kind="primary" isSmall={true} style={{ marginBottom: 8 }}>
+						Primary -- small
+					</Banner>
+					<Banner
+						kind="primary"
+						isSmall={true}
+						isCloseable={false}
+						style={{ marginBottom: 8 }}
+					>
 						Primary -- small -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
 				</div>
 
 				<div>
-					<Banner kind="success">Success</Banner>
-					<Banner kind="success" isCloseable={false}>
+					<Banner kind="success" style={{ marginBottom: 8 }}>Success</Banner>
+					<Banner
+						kind="success"
+						isCloseable={false}
+						style={{ marginBottom: 8 }}
+					>
 						Success -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
-					<Banner kind="success" hasIcon={true}>Success -- has icon</Banner>
-					<Banner kind="success" hasIcon={true} isCloseable={false}>
+					<Banner kind="success" hasIcon={true} style={{ marginBottom: 8 }}>
+						Success -- has icon
+					</Banner>
+					<Banner
+						kind="success"
+						hasIcon={true}
+						isCloseable={false}
+						style={{ marginBottom: 8 }}
+					>
 						Success -- has icon -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
-					<Banner kind="success" isSmall={true} hasIcon={true}>
+					<Banner
+						kind="success"
+						isSmall={true}
+						hasIcon={true}
+						style={{ marginBottom: 8 }}
+					>
 						Success -- has icon -- small
 					</Banner>
 					<Banner
@@ -59,6 +94,7 @@ export default createClass({
 						isSmall={true}
 						hasIcon={true}
 						isCloseable={false}
+						style={{ marginBottom: 8 }}
 					>
 						Success -- has icon -- No Close
 						{' '}
@@ -66,11 +102,18 @@ export default createClass({
 						{' '}
 						-- small
 					</Banner>
-					<Banner kind="success" isSmall={true}>Success -- small</Banner>
-					<Banner kind="success" isSmall={true} isCloseable={false}>
+					<Banner kind="success" isSmall={true} style={{ marginBottom: 8 }}>
+						Success -- small
+					</Banner>
+					<Banner
+						kind="success"
+						isSmall={true}
+						isCloseable={false}
+						style={{ marginBottom: 8 }}
+					>
 						Success -- small -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
-					<Banner kind="success" hasIcon={true}>
+					<Banner kind="success" hasIcon={true} style={{ marginBottom: 8 }}>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius neque veniam nisi aspernatur, quos dolorem aut praesentium eaque consequatur inventore adipisci, architecto atque ipsa, laudantium laboriosam ipsam non vitae, cum maiores hic. Laboriosam fugiat eveniet quos assumenda delectus aperiam excepturi vel, officia sint reiciendis expedita consequuntur, a sed deleniti commodi rerum natus quam veniam earum quibusdam! Nemo iusto asperiores sit velit eveniet quod nam. Voluptatibus beatae maxime, quia a velit praesentium vel vitae consectetur, libero nulla magni voluptatum facilis ea facere, minus doloribus. Excepturi veniam, mollitia esse aut illum ad tenetur facere quidem. Ipsum odio, dolore, error rem assumenda debitis.
 						</p>
@@ -84,19 +127,42 @@ export default createClass({
 				</div>
 
 				<div>
-					<Banner kind="warning">Warning</Banner>
-					<Banner kind="warning" isCloseable={false}>
+					<Banner kind="warning" style={{ marginBottom: 8 }}>Warning</Banner>
+					<Banner
+						kind="warning"
+						isCloseable={false}
+						style={{ marginBottom: 8 }}
+					>
 						Warning -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
-					<Banner kind="warning" hasIcon={true}>Warning -- has icon</Banner>
-					<Banner kind="warning" hasIcon={true} isCloseable={false}>
+					<Banner kind="warning" hasIcon={true} style={{ marginBottom: 8 }}>
+						Warning -- has icon
+					</Banner>
+					<Banner
+						kind="warning"
+						hasIcon={true}
+						isCloseable={false}
+						style={{ marginBottom: 8 }}
+					>
 						Warning -- has iconv
 					</Banner>
-					<Banner kind="warning" isSmall={true}>Warning -- small</Banner>
-					<Banner kind="warning" isSmall={true} isCloseable={false}>
+					<Banner kind="warning" isSmall={true} style={{ marginBottom: 8 }}>
+						Warning -- small
+					</Banner>
+					<Banner
+						kind="warning"
+						isSmall={true}
+						isCloseable={false}
+						style={{ marginBottom: 8 }}
+					>
 						Warning -- small -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
-					<Banner kind="warning" hasIcon={true} isSmall={true}>
+					<Banner
+						kind="warning"
+						hasIcon={true}
+						isSmall={true}
+						style={{ marginBottom: 8 }}
+					>
 						Warning -- has icon -- small
 					</Banner>
 					<Banner
@@ -104,6 +170,7 @@ export default createClass({
 						hasIcon={true}
 						isSmall={true}
 						isCloseable={false}
+						style={{ marginBottom: 8 }}
 					>
 						Warning -- has icon -- small -- No Close
 						{' '}
@@ -112,19 +179,38 @@ export default createClass({
 				</div>
 
 				<div>
-					<Banner kind="danger">Danger</Banner>
-					<Banner kind="danger" isCloseable={false}>
+					<Banner kind="danger" style={{ marginBottom: 8 }}>Danger</Banner>
+					<Banner kind="danger" isCloseable={false} style={{ marginBottom: 8 }}>
 						Danger -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
-					<Banner kind="danger" hasIcon={true}>Danger -- has icon</Banner>
-					<Banner kind="danger" hasIcon={true} isCloseable={false}>
+					<Banner kind="danger" hasIcon={true} style={{ marginBottom: 8 }}>
+						Danger -- has icon
+					</Banner>
+					<Banner
+						kind="danger"
+						hasIcon={true}
+						isCloseable={false}
+						style={{ marginBottom: 8 }}
+					>
 						Danger -- has icon -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
-					<Banner kind="danger" isSmall={true}>Danger -- small</Banner>
-					<Banner kind="danger" isSmall={true} isCloseable={false}>
+					<Banner kind="danger" isSmall={true} style={{ marginBottom: 8 }}>
+						Danger -- small
+					</Banner>
+					<Banner
+						kind="danger"
+						isSmall={true}
+						isCloseable={false}
+						style={{ marginBottom: 8 }}
+					>
 						Danger -- small -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
-					<Banner kind="danger" hasIcon={true} isSmall={true}>
+					<Banner
+						kind="danger"
+						hasIcon={true}
+						isSmall={true}
+						style={{ marginBottom: 8 }}
+					>
 						Danger -- has icon -- small
 					</Banner>
 					<Banner
@@ -132,6 +218,7 @@ export default createClass({
 						hasIcon={true}
 						isSmall={true}
 						isCloseable={false}
+						style={{ marginBottom: 8 }}
 					>
 						Danger -- has icon -- small -- No Close
 						{' '}
@@ -140,32 +227,63 @@ export default createClass({
 				</div>
 
 				<div>
-					<Banner kind="info">Info</Banner>
-					<Banner kind="info" isCloseable={false}>
+					<Banner kind="info" style={{ marginBottom: 8 }}>Info</Banner>
+					<Banner kind="info" isCloseable={false} style={{ marginBottom: 8 }}>
 						Info -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
-					<Banner kind="info" hasIcon={true}>Info -- has icon</Banner>
-					<Banner kind="info" hasIcon={true} isCloseable={false}>
+					<Banner kind="info" hasIcon={true} style={{ marginBottom: 8 }}>
+						Info -- has icon
+					</Banner>
+					<Banner
+						kind="info"
+						hasIcon={true}
+						isCloseable={false}
+						style={{ marginBottom: 8 }}
+					>
 						Info -- has icon -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
-					<Banner kind="info" isSmall={true}>Info -- small</Banner>
-					<Banner kind="info" isSmall={true} isCloseable={false}>
+					<Banner kind="info" isSmall={true} style={{ marginBottom: 8 }}>
+						Info -- small
+					</Banner>
+					<Banner
+						kind="info"
+						isSmall={true}
+						isCloseable={false}
+						style={{ marginBottom: 8 }}
+					>
 						Info -- small -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
-					<Banner kind="info" hasIcon={true} isSmall={true}>
+					<Banner
+						kind="info"
+						hasIcon={true}
+						isSmall={true}
+						style={{ marginBottom: 8 }}
+					>
 						Info -- has icon -- small
 					</Banner>
-					<Banner kind="info" hasIcon={true} isSmall={true} isCloseable={false}>
+					<Banner
+						kind="info"
+						hasIcon={true}
+						isSmall={true}
+						isCloseable={false}
+						style={{ marginBottom: 8 }}
+					>
 						Info -- has icon -- small -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
 				</div>
 
 				<div>
-					<Banner icon={<CustomIcon />} kind="danger">Has Custom Icon</Banner>
+					<Banner
+						style={{ marginBottom: 8 }}
+						icon={<CustomIcon />}
+						kind="danger"
+					>
+						Has Custom Icon
+					</Banner>
 				</div>
 
 				<div>
-					<Banner icon={<CustomIcon />}>
+					<Banner style={{ marginBottom: 8 }} icon={<CustomIcon />}>
 						<p>
 							<strong>Has Custom Icon</strong>
 							{' '}
@@ -175,7 +293,7 @@ export default createClass({
 				</div>
 
 				<div>
-					<Banner icon={<CustomIcon />}>
+					<Banner style={{ marginBottom: 8 }} icon={<CustomIcon />}>
 						<p>
 							<strong>Has Custom Icon</strong>
 							{' '}
