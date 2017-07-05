@@ -16,7 +16,7 @@ const { bool, element, func, node, oneOf, string } = PropTypes;
 const defaultIcons = {
 	success: <SuccessIcon />,
 	danger: <DangerIcon />,
-	info: <InfoIcon isBadge />,
+	info: <InfoIcon />,
 	warning: <WarningIcon />,
 	primary: null,
 	default: null,
@@ -148,7 +148,9 @@ const Banner = createClass({
 							)}
 						>
 							{displayedIcon
-								? <span className={cx('&-icon')}>{displayedIcon}</span>
+								? <span className={cx('&-icon')}>
+										{displayedIcon}
+									</span>
 								: null}
 
 							<span className={cx('&-content')}>
