@@ -7,10 +7,10 @@ exports[`SeparatorIcon [common] example testing should match snapshot(s) for 1.d
   isBadge={false}
   isDisabled={false}
   size={16}
-  viewBox="0 0 4.5 16"
+  viewBox="0 0 16 16"
 >
-  <polygon
-    points="4.5,8 1.5,0 0,0 3,8 0,16 1.5,16 4.5,8"
+  <path
+    d="M5.2,0h1.5l4,8l-4,8H5.2l4-8L5.2,0z"
   />
 </Icon>
 `;
@@ -23,10 +23,10 @@ exports[`SeparatorIcon [common] example testing should match snapshot(s) for 2.c
   isClickable={true}
   isDisabled={false}
   size={16}
-  viewBox="0 0 4.5 16"
+  viewBox="0 0 16 16"
 >
-  <polygon
-    points="4.5,8 1.5,0 0,0 3,8 0,16 1.5,16 4.5,8"
+  <path
+    d="M5.2,0h1.5l4,8l-4,8H5.2l4-8L5.2,0z"
   />
 </Icon>
 `;
@@ -38,10 +38,10 @@ exports[`SeparatorIcon [common] example testing should match snapshot(s) for 3.d
   isBadge={false}
   isDisabled={true}
   size={16}
-  viewBox="0 0 4.5 16"
+  viewBox="0 0 16 16"
 >
-  <polygon
-    points="4.5,8 1.5,0 0,0 3,8 0,16 1.5,16 4.5,8"
+  <path
+    d="M5.2,0h1.5l4,8l-4,8H5.2l4-8L5.2,0z"
   />
 </Icon>
 `;
