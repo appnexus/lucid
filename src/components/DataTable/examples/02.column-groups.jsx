@@ -1,6 +1,7 @@
 import React from 'react';
 import createClass from 'create-react-class';
 import { DataTable } from '../../../index';
+import { SuccessIcon } from '../../../index';
 
 const data = [
 	{
@@ -9,6 +10,8 @@ const data = [
 		last_name: 'Newton',
 		email: 'inewton@example.com',
 		occupation: 'Physicist',
+		salary: '$100.01',
+		status: <SuccessIcon />,
 	},
 	{
 		id: 2,
@@ -16,6 +19,8 @@ const data = [
 		last_name: 'Einstein',
 		email: 'aeinstein@example.com',
 		occupation: 'Physicist',
+		salary: '$100.02',
+		status: <SuccessIcon />,
 	},
 	{
 		id: 3,
@@ -23,16 +28,25 @@ const data = [
 		last_name: 'da Vinci',
 		email: 'ldvinci@example.com',
 		occupation: 'Engineer',
+		salary: '$100.03',
+		status: <SuccessIcon />,
 	},
 	{
 		id: 4,
 		first_name: 'Aristotle',
+		last_name: null,
+		email: 'aristotle@example.com',
 		occupation: 'Tutor',
+		salary: '$100.04',
+		status: <SuccessIcon />,
 	},
 	{
 		id: 5,
-		last_name: 'Galilei',
+		first_name: 'Galileo',
+		email: 'ggalilei@example.com',
 		occupation: 'Physicist',
+		salary: '$100.05',
+		status: <SuccessIcon />,
 	},
 	{
 		id: 6,
@@ -40,6 +54,8 @@ const data = [
 		last_name: 'Darwin',
 		email: 'cdarwin@example.com',
 		occupation: 'Biologist',
+		salary: '$100.06',
+		status: <SuccessIcon />,
 	},
 	{
 		id: 7,
@@ -47,6 +63,8 @@ const data = [
 		last_name: 'Macedon',
 		email: 'amacedon@example.com',
 		occupation: 'Head of State',
+		salary: '$100.07',
+		status: <SuccessIcon />,
 	},
 	{
 		id: 8,
@@ -54,6 +72,8 @@ const data = [
 		last_name: 'Plato',
 		email: 'plato@example.com',
 		occupation: 'Philosopher',
+		salary: '$100.08',
+		status: <SuccessIcon />,
 	},
 	{
 		id: 9,
@@ -61,6 +81,8 @@ const data = [
 		last_name: 'Gandhi',
 		email: 'mgandhi@example.com',
 		occupation: 'Politician',
+		salary: '$100.09',
+		status: <SuccessIcon />,
 	},
 	{
 		id: 10,
@@ -68,6 +90,8 @@ const data = [
 		last_name: 'Shakespeare',
 		email: 'wshakespear@example.com',
 		occupation: 'Playwright',
+		salary: '$100.10',
+		status: <SuccessIcon />,
 	},
 ];
 
@@ -82,6 +106,7 @@ export default createClass({
 				<DataTable.ColumnGroup title="Name">
 					<DataTable.Column
 						field="first_name"
+						align="left"
 						width={100}
 						hasBorderLeft
 						isSortable
@@ -100,17 +125,35 @@ export default createClass({
 					</DataTable.Column>
 				</DataTable.ColumnGroup>
 
-				<DataTable.Column field="email" align="center">
+				<DataTable.Column field="email" align="left">
 					E-Mail
 				</DataTable.Column>
 
 				<DataTable.Column
 					field="occupation"
-					align="right"
+					align="left"
 					width={100}
 					hasBorderLeft
 				>
 					Occupation
+				</DataTable.Column>
+
+				<DataTable.Column
+					field="salary"
+					align="right"
+					width={100}
+					hasBorderLeft
+				>
+					Salary
+				</DataTable.Column>
+
+				<DataTable.Column
+					field="status"
+					align="center"
+					width={100}
+					hasBorderLeft
+				>
+					Status
 				</DataTable.Column>
 			</DataTable>
 		);
