@@ -261,7 +261,7 @@ const DataTable = createClass({
 					<Thead>
 						<Tr>
 							{isSelectable
-								? <Th rowSpan={hasGroupedColumns ? 2 : null}>
+								? <Th rowSpan={hasGroupedColumns ? 2 : null} width={24}>
 										<Checkbox
 											isSelected={_.every(data, 'isSelected')}
 											onSelect={this.handleSelectAll}

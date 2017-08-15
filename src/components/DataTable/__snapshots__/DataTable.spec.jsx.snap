@@ -2154,6 +2154,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           isSorted={false}
           rowSpan={2}
           sortDirection="up"
+          width={24}
         >
           <Checkbox
             isDisabled={false}
@@ -3365,6 +3366,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           isSorted={false}
           rowSpan={2}
           sortDirection="up"
+          width={24}
         >
           <Checkbox
             isDisabled={false}
@@ -8605,6 +8607,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           isSorted={false}
           rowSpan={null}
           sortDirection="up"
+          width={24}
         >
           <Checkbox
             isDisabled={false}
