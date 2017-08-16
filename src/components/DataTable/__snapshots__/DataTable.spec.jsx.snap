@@ -7088,6 +7088,316 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           }
         />
       </Table.Tr>
+      <Table.Tr
+        isActionable={false}
+        isActive={false}
+        isDisabled={true}
+        isSelected={false}
+        style={
+          Object {
+            "height": "32px",
+          }
+        }
+      >
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+      </Table.Tr>
+      <Table.Tr
+        isActionable={false}
+        isActive={false}
+        isDisabled={true}
+        isSelected={false}
+        style={
+          Object {
+            "height": "32px",
+          }
+        }
+      >
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+      </Table.Tr>
+      <Table.Tr
+        isActionable={false}
+        isActive={false}
+        isDisabled={true}
+        isSelected={false}
+        style={
+          Object {
+            "height": "32px",
+          }
+        }
+      >
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+      </Table.Tr>
+      <Table.Tr
+        isActionable={false}
+        isActive={false}
+        isDisabled={true}
+        isSelected={false}
+        style={
+          Object {
+            "height": "32px",
+          }
+        }
+      >
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+      </Table.Tr>
+      <Table.Tr
+        isActionable={false}
+        isActive={false}
+        isDisabled={true}
+        isSelected={false}
+        style={
+          Object {
+            "height": "32px",
+          }
+        }
+      >
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+      </Table.Tr>
     </Table.Tbody>
   </ScrollTable>
 </EmptyStateWrapper>

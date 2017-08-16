@@ -14,7 +14,17 @@ export default createClass({
 					<RadioGroup.Label>Alvin</RadioGroup.Label>
 				</RadioGroup.RadioButton>
 				<RadioGroup.RadioButton style={style}>
-					<RadioGroup.Label>Simon</RadioGroup.Label>
+					<RadioGroup.Label>
+						Simon
+						<RadioGroup>
+							<RadioGroup.RadioButton>
+								<RadioGroup.Label>1</RadioGroup.Label>
+							</RadioGroup.RadioButton>
+							<RadioGroup.RadioButton>
+								<RadioGroup.Label>2</RadioGroup.Label>
+							</RadioGroup.RadioButton>
+						</RadioGroup>
+					</RadioGroup.Label>
 				</RadioGroup.RadioButton>
 				<RadioGroup.RadioButton style={style}>
 					<RadioGroup.Label>
