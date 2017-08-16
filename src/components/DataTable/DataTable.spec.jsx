@@ -274,7 +274,7 @@ describe('DataTable', () => {
 
 		describe('minRows', () => {
 			it('should render 10 empty rows if data is an empty array', () => {
-				const wrapper = shallow(<DataTable minRows={7} />);
+				const wrapper = shallow(<DataTable />);
 
 				const TrWrapper = wrapper
 					.find(ScrollTable)
