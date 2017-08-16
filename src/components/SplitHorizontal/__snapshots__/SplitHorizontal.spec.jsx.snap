@@ -27,7 +27,7 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 1
 
 exports[`SplitHorizontal [common] example testing should match snapshot(s) for 2.animated-collapse 1`] = `
 <div
-  className="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded"
+  className="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded lucid-SplitHorizontal-is-animated"
   style={
     Object {
       "flex": 1,
@@ -44,7 +44,12 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 2
     }
     style={
       Object {
-        "slideAmount": 0,
+        "slideAmount": Object {
+          "damping": 37,
+          "precision": 1,
+          "stiffness": 640,
+          "val": 0,
+        },
       }
     }
   />
@@ -53,7 +58,7 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 2
 
 exports[`SplitHorizontal [common] example testing should match snapshot(s) for 3.set-pane-as-primary 1`] = `
 <div
-  className="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded"
+  className="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded lucid-SplitHorizontal-is-animated"
   style={
     Object {
       "flex": 1,
@@ -70,7 +75,12 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 3
     }
     style={
       Object {
-        "slideAmount": 0,
+        "slideAmount": Object {
+          "damping": 37,
+          "precision": 1,
+          "stiffness": 640,
+          "val": 0,
+        },
       }
     }
   />
@@ -154,7 +164,7 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 6
 
 exports[`SplitHorizontal [common] example testing should match snapshot(s) for 7.collapse-shift 1`] = `
 <div
-  className="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded"
+  className="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded lucid-SplitHorizontal-is-animated"
   style={
     Object {
       "flex": 1,
@@ -171,7 +181,12 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 7
     }
     style={
       Object {
-        "slideAmount": 0,
+        "slideAmount": Object {
+          "damping": 37,
+          "precision": 1,
+          "stiffness": 640,
+          "val": 0,
+        },
       }
     }
   />
