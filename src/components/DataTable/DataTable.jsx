@@ -110,7 +110,7 @@ const DataTable = createClass({
 			onSelect: _.noop,
 			onSelectAll: _.noop,
 			onSort: _.noop,
-			minRows: 0,
+			minRows: 10,
 		};
 	},
 
@@ -235,9 +235,7 @@ const DataTable = createClass({
 			/>
 		);
 
-		const fillerRowCount = _.size(data) === 0
-			? 10
-			: _.clamp(minRows - _.size(data), 0, Infinity);
+		const fillerRowCount = _.clamp(minRows - _.size(data), 0, Infinity);
 
 		return (
 			<EmptyStateWrapper
