@@ -116,7 +116,7 @@ const DataTable = createClass({
 
 	components: {
 		/**
-		 * Renders a `Th` for the table.
+		 * Renders a `Th` for the table. It accepts all the props of `Table.Th`
 		 */
 		Column: createClass({
 			displayName: 'DataTable.Column',
@@ -127,7 +127,7 @@ const DataTable = createClass({
 			},
 		}),
 		/**
-		 * Renders a group of `Th`s.
+		 * Renders a group of `Th`s.  It accepts all the props of Table.Th
 		 */
 		ColumnGroup: createClass({
 			displayName: 'DataTable.ColumnGroup',
@@ -229,7 +229,10 @@ const DataTable = createClass({
 		const emptyStateWrapper = getFirst(
 			this.props,
 			DataTable.EmptyStateWrapper,
-			<DataTable.EmptyStateWrapper Title="You have no items." />
+			<DataTable.EmptyStateWrapper
+				Title="No items found."
+				Body="Try creating a new object or removing a filter."
+			/>
 		);
 
 		const fillerRowCount = _.clamp(minRows - _.size(data), 0, Infinity);
@@ -256,7 +259,7 @@ const DataTable = createClass({
 					<Thead>
 						<Tr>
 							{isSelectable
-								? <Th rowSpan={hasGroupedColumns ? 2 : null}>
+								? <Th rowSpan={hasGroupedColumns ? 2 : null} width={24}>
 										<Checkbox
 											isSelected={_.every(data, 'isSelected')}
 											onSelect={this.handleSelectAll}

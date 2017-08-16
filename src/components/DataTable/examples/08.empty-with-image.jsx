@@ -18,7 +18,7 @@ export default createClass({
 			<DataTable data={data} density="extended" isFullWidth>
 				<EmptyStateWrapper>
 					<Title>
-						This empty message has a large image in it.
+						No items found.
 					</Title>
 					<Body>
 						<img src="https://dummyimage.com/375x150/ff69/fff" />
