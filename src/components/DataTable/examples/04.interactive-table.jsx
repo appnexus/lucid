@@ -195,7 +195,6 @@ export default createClass({
 					width={41}
 					align="left"
 					hasBorderLeft
-					hasBorderLeft
 					isSortable
 					isSorted={currentlySortedField === 'id'}
 					sortDirection={currentlySortedFieldDirection}
@@ -203,32 +202,31 @@ export default createClass({
 					ID
 				</DataTable.Column>
 
-				<DataTable.ColumnGroup title="Name">
-					<DataTable.Column
-						field="first_name"
-						width={100}
-						hasBorderLeft
-						isResizable
-						isSortable
-						isSorted={currentlySortedField === 'first_name'}
-						sortDirection={currentlySortedFieldDirection}
-					>
-						First
-					</DataTable.Column>
+				<DataTable.Column
+					field="first_name"
+					width={100}
+					hasBorderLeft
+					hasBorderRight
+					isResizable
+					isSortable
+					isSorted={currentlySortedField === 'first_name'}
+					sortDirection={currentlySortedFieldDirection}
+				>
+					First
+				</DataTable.Column>
 
-					<DataTable.Column
-						field="last_name"
-						align="left"
-						width={100}
-						hasBorderRight
-						isResizable
-						isSortable
-						isSorted={currentlySortedField === 'last_name'}
-						sortDirection={currentlySortedFieldDirection}
-					>
-						Last
-					</DataTable.Column>
-				</DataTable.ColumnGroup>
+				<DataTable.Column
+					field="last_name"
+					align="left"
+					width={100}
+					hasBorderRight
+					isResizable
+					isSortable
+					isSorted={currentlySortedField === 'last_name'}
+					sortDirection={currentlySortedFieldDirection}
+				>
+					Last
+				</DataTable.Column>
 
 				<DataTable.Column
 					field="email"

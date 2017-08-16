@@ -103,27 +103,25 @@ export default createClass({
 					ID
 				</DataTable.Column>
 
-				<DataTable.ColumnGroup title="Name" align="left">
-					<DataTable.Column
-						field="first_name"
-						align="left"
-						width={100}
-						hasBorderLeft
-						isSortable
-					>
-						First
-					</DataTable.Column>
+				<DataTable.Column
+					field="first_name"
+					align="left"
+					width={100}
+					hasBorderLeft
+					isSortable
+				>
+					First
+				</DataTable.Column>
 
-					<DataTable.Column
-						field="last_name"
-						align="left"
-						width={100}
-						hasBorderRight
-						isSortable
-					>
-						Last
-					</DataTable.Column>
-				</DataTable.ColumnGroup>
+				<DataTable.Column
+					field="last_name"
+					align="left"
+					width={100}
+					hasBorderRight
+					isSortable
+				>
+					Last
+				</DataTable.Column>
 
 				<DataTable.Column field="email" align="left">
 					E-Mail

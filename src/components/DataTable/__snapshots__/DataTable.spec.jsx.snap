@@ -2152,7 +2152,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           align="left"
           isResizable={false}
           isSorted={false}
-          rowSpan={2}
+          rowSpan={null}
           sortDirection="up"
           width={24}
         >
@@ -2169,7 +2169,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           isResizable={false}
           isSorted={false}
           onClick={null}
-          rowSpan={2}
+          rowSpan={null}
           sortDirection="up"
           style={
             Object {
@@ -2181,19 +2181,44 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         </Table.Th>
         <Table.Th
           align="left"
-          colSpan={2}
+          hasBorderLeft={true}
           isResizable={false}
+          isSortable={true}
           isSorted={false}
+          onClick={[Function]}
+          rowSpan={null}
           sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
         >
-          Name
+          First
+        </Table.Th>
+        <Table.Th
+          align="left"
+          hasBorderRight={true}
+          isResizable={false}
+          isSortable={true}
+          isSorted={false}
+          onClick={[Function]}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Last
         </Table.Th>
         <Table.Th
           align="left"
           isResizable={false}
           isSorted={false}
           onClick={null}
-          rowSpan={2}
+          rowSpan={null}
           sortDirection="up"
           style={
             Object {
@@ -2209,7 +2234,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           isResizable={false}
           isSorted={false}
           onClick={null}
-          rowSpan={2}
+          rowSpan={null}
           sortDirection="up"
           style={
             Object {
@@ -2225,7 +2250,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           isResizable={false}
           isSorted={false}
           onClick={null}
-          rowSpan={2}
+          rowSpan={null}
           sortDirection="up"
           style={
             Object {
@@ -2241,7 +2266,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           isResizable={false}
           isSorted={false}
           onClick={null}
-          rowSpan={2}
+          rowSpan={null}
           sortDirection="up"
           style={
             Object {
@@ -2250,47 +2275,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           }
         >
           Status
-        </Table.Th>
-      </Table.Tr>
-      <Table.Tr
-        isActionable={false}
-        isActive={false}
-        isDisabled={false}
-        isSelected={false}
-      >
-        <Table.Th
-          align="left"
-          hasBorderLeft={true}
-          isResizable={false}
-          isSortable={true}
-          isSorted={false}
-          onClick={[Function]}
-          sortDirection="up"
-          style={
-            Object {
-              "width": 100,
-            }
-          }
-          width={100}
-        >
-          First
-        </Table.Th>
-        <Table.Th
-          align="left"
-          hasBorderRight={true}
-          isResizable={false}
-          isSortable={true}
-          isSorted={false}
-          onClick={[Function]}
-          sortDirection="up"
-          style={
-            Object {
-              "width": 100,
-            }
-          }
-          width={100}
-        >
-          Last
         </Table.Th>
       </Table.Tr>
     </Table.Thead>
@@ -3364,7 +3348,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           align="left"
           isResizable={false}
           isSorted={false}
-          rowSpan={2}
+          rowSpan={null}
           sortDirection="up"
           width={24}
         >
@@ -3382,7 +3366,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           isSortable={true}
           isSorted={true}
           onClick={[Function]}
-          rowSpan={2}
+          rowSpan={null}
           sortDirection="up"
           style={
             Object {
@@ -3393,13 +3377,39 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           ID
         </Table.Th>
         <Table.Th
-          align="center"
-          colSpan={2}
-          isResizable={false}
+          align="left"
+          hasBorderLeft={true}
+          hasBorderRight={true}
+          isResizable={true}
+          isSortable={true}
           isSorted={false}
+          onClick={[Function]}
+          rowSpan={null}
           sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
         >
-          Name
+          First
+        </Table.Th>
+        <Table.Th
+          align="left"
+          hasBorderRight={true}
+          isResizable={true}
+          isSortable={true}
+          isSorted={false}
+          onClick={[Function]}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Last
         </Table.Th>
         <Table.Th
           align="left"
@@ -3407,7 +3417,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           isSortable={true}
           isSorted={false}
           onClick={[Function]}
-          rowSpan={2}
+          rowSpan={null}
           sortDirection="up"
           style={
             Object {
@@ -3424,7 +3434,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           isSortable={true}
           isSorted={false}
           onClick={[Function]}
-          rowSpan={2}
+          rowSpan={null}
           sortDirection="up"
           style={
             Object {
@@ -3441,7 +3451,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           isSortable={true}
           isSorted={false}
           onClick={[Function]}
-          rowSpan={2}
+          rowSpan={null}
           sortDirection="up"
           style={
             Object {
@@ -3457,7 +3467,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           isResizable={false}
           isSorted={false}
           onClick={null}
-          rowSpan={2}
+          rowSpan={null}
           sortDirection="up"
           style={
             Object {
@@ -3466,47 +3476,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           }
         >
           Status
-        </Table.Th>
-      </Table.Tr>
-      <Table.Tr
-        isActionable={false}
-        isActive={false}
-        isDisabled={false}
-        isSelected={false}
-      >
-        <Table.Th
-          align="left"
-          hasBorderLeft={true}
-          isResizable={true}
-          isSortable={true}
-          isSorted={false}
-          onClick={[Function]}
-          sortDirection="up"
-          style={
-            Object {
-              "width": 100,
-            }
-          }
-          width={100}
-        >
-          First
-        </Table.Th>
-        <Table.Th
-          align="left"
-          hasBorderRight={true}
-          isResizable={true}
-          isSortable={true}
-          isSorted={false}
-          onClick={[Function]}
-          sortDirection="up"
-          style={
-            Object {
-              "width": 100,
-            }
-          }
-          width={100}
-        >
-          Last
         </Table.Th>
       </Table.Tr>
     </Table.Thead>
@@ -3546,7 +3515,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -3656,7 +3625,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -3766,7 +3735,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -3876,7 +3845,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -3986,7 +3955,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -4096,7 +4065,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -4206,7 +4175,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -4316,7 +4285,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -4426,7 +4395,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -4536,7 +4505,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -7129,7 +7098,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
   isEmpty={true}
 >
   <EmptyStateWrapper.Title>
-    This empty message has a large image in it.
+    No items found.
   </EmptyStateWrapper.Title>
   <EmptyStateWrapper.Body>
     <img
