@@ -252,7 +252,29 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
   <RadioButtonLabeled
     Label={
       Object {
-        "children": "Simon",
+        "children": Array [
+          "Simon",
+          <RadioGroup>
+            <RadioButton
+                  isDisabled={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+            >
+                  <RadioGroup.Label>
+                        1
+                  </RadioGroup.Label>
+            </RadioButton>
+            <RadioButton
+                  isDisabled={false}
+                  isSelected={false}
+                  onSelect={[Function]}
+            >
+                  <RadioGroup.Label>
+                        2
+                  </RadioGroup.Label>
+            </RadioButton>
+      </RadioGroup>,
+        ],
       }
     }
     callbackId={1}
@@ -268,6 +290,26 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
   >
     <RadioGroup.Label>
       Simon
+      <RadioGroup>
+        <RadioButton
+          isDisabled={false}
+          isSelected={false}
+          onSelect={[Function]}
+        >
+          <RadioGroup.Label>
+            1
+          </RadioGroup.Label>
+        </RadioButton>
+        <RadioButton
+          isDisabled={false}
+          isSelected={false}
+          onSelect={[Function]}
+        >
+          <RadioGroup.Label>
+            2
+          </RadioGroup.Label>
+        </RadioButton>
+      </RadioGroup>
     </RadioGroup.Label>
   </RadioButtonLabeled>
   <RadioButtonLabeled
