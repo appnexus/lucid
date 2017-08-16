@@ -15,7 +15,7 @@ export default createClass({
 		const { data } = this.state;
 
 		return (
-			<DataTable data={data} density="extended" isFullWidth>
+			<DataTable data={data} density="extended" isFullWidth minRows={15}>
 				<EmptyStateWrapper>
 					<Title>
 						Something went wrong.
