@@ -70,7 +70,7 @@ describe('Accordion', () => {
 
 				assert.equal(
 					firstItem.find('.lucid-ExpanderPanel-header').text(),
-					'Froyo'
+					'fail'
 				);
 			});
 		});
