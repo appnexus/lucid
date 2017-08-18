@@ -141,8 +141,6 @@ const SplitHorizontal = createClass({
 
 	getInitialState() {
 		return {
-			isAnimated: false, // to ensure first render doesn't show a collapse animation
-			isExpanded: true,
 			collapseAmount: 250,
 		};
 	},
@@ -351,7 +349,13 @@ const SplitHorizontal = createClass({
 	},
 
 	componentWillMount() {
+		const { isAnimated, isExpanded } = this.props;
 		this.storedRefs = {};
+
+		this.setState({
+			isAnimated,
+			isExpanded,
+		});
 	},
 
 	render() {
