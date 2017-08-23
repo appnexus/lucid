@@ -2,37 +2,44 @@ import React from 'react';
 import createClass from 'create-react-class';
 import _ from 'lodash';
 import { DataTable } from '../../../index';
+import { SuccessIcon } from '../../../index';
 
 const data = [
 	{
-		id: '01',
+		id: 1,
 		first_name: 'Isaac',
 		last_name: 'Newton',
 		email: 'inewton@example.com',
 		occupation: 'Physicist',
-		isSelected: true,
+		salary: '$100.01',
+		status: <SuccessIcon />,
 	},
 	{
-		id: '02',
+		id: 2,
 		first_name: 'Albert',
 		last_name: 'Einstein',
 		email: 'aeinstein@example.com',
 		occupation: 'Physicist',
-		isActive: true,
+		salary: '$100.02',
+		status: <SuccessIcon />,
 	},
 	{
-		id: '03',
+		id: 3,
 		first_name: 'Leonardo',
 		last_name: 'da Vinci',
 		email: 'ldvinci@example.com',
 		occupation: 'Engineer',
+		salary: '$100.03',
+		status: <SuccessIcon />,
 	},
 	{
-		id: '04',
+		id: 4,
 		first_name: 'Aristotle',
-		last_name: '--',
+		last_name: null,
 		email: 'aristotle@example.com',
 		occupation: 'Tutor',
+		salary: '$100.04',
+		status: <SuccessIcon />,
 	},
 ];
 
@@ -72,12 +79,20 @@ export default createClass({
 					Last
 				</DataTable.Column>
 
-				<DataTable.Column field="email" align="center">
+				<DataTable.Column field="email" align="left">
 					E-Mail
 				</DataTable.Column>
 
-				<DataTable.Column field="occupation" align="right" width={100}>
+				<DataTable.Column field="occupation" align="left" width={100}>
 					Occupation
+				</DataTable.Column>
+
+				<DataTable.Column field="salary" align="right" width={100}>
+					Salary
+				</DataTable.Column>
+
+				<DataTable.Column field="status" align="center" width={100}>
+					Status
 				</DataTable.Column>
 			</DataTable>
 		);

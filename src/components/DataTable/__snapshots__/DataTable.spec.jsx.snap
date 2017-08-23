@@ -2,7 +2,8 @@
 
 exports[`DataTable [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <EmptyStateWrapper
-  Title="You have no items."
+  Body="Try creating a new object or removing a filter."
+  Title="No items found."
   isEmpty={false}
 >
   <ScrollTable
@@ -64,7 +65,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           Last
         </Table.Th>
         <Table.Th
-          align="center"
+          align="left"
           isResizable={false}
           isSorted={false}
           onClick={null}
@@ -79,7 +80,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           E-Mail
         </Table.Th>
         <Table.Th
-          align="right"
+          align="left"
           isResizable={false}
           isSorted={false}
           onClick={null}
@@ -92,6 +93,36 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           }
         >
           Occupation
+        </Table.Th>
+        <Table.Th
+          align="right"
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Salary
+        </Table.Th>
+        <Table.Th
+          align="center"
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Status
         </Table.Th>
       </Table.Tr>
     </Table.Thead>
@@ -140,7 +171,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           Newton
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -152,7 +183,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           inewton@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -162,6 +193,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           }
         >
           Physicist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.01
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -208,7 +263,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           Einstein
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -220,7 +275,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           aeinstein@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -230,6 +285,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           }
         >
           Physicist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.02
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -276,7 +355,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           da Vinci
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -288,7 +367,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           ldvinci@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -298,6 +377,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           }
         >
           Engineer
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.03
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -344,7 +447,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           --
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -356,7 +459,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           aristotle@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -366,6 +469,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           }
         >
           Tutor
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.04
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -412,7 +539,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           --
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -424,7 +551,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           ggalilei@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -434,6 +561,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           }
         >
           Physicist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.05
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -480,7 +631,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           Darwin
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -492,7 +643,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           cdarwin@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -502,6 +653,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           }
         >
           Biologist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.06
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -548,7 +723,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           Macedon
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -560,7 +735,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           amacedon@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -570,6 +745,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           }
         >
           Head of State
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.07
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -616,7 +815,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           Plato
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -628,7 +827,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           plato@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -638,6 +837,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           }
         >
           Philosopher
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.08
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -684,7 +907,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           Gandhi
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -696,7 +919,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           mgandhi@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -706,6 +929,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           }
         >
           Politician
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.09
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -752,7 +999,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           Shakespeare
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -764,7 +1011,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           wshakespear@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -774,6 +1021,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
           }
         >
           Playwright
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.10
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
     </Table.Tbody>
@@ -783,7 +1054,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
 
 exports[`DataTable [common] example testing should match snapshot(s) for 02.column-groups 1`] = `
 <EmptyStateWrapper
-  Title="You have no items."
+  Body="Try creating a new object or removing a filter."
+  Title="No items found."
   isEmpty={false}
 >
   <ScrollTable
@@ -825,7 +1097,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           Name
         </Table.Th>
         <Table.Th
-          align="center"
+          align="left"
           isResizable={false}
           isSorted={false}
           onClick={null}
@@ -838,6 +1110,22 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           }
         >
           E-Mail
+        </Table.Th>
+        <Table.Th
+          align="left"
+          hasBorderLeft={true}
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={2}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Occupation
         </Table.Th>
         <Table.Th
           align="right"
@@ -853,7 +1141,23 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             }
           }
         >
-          Occupation
+          Salary
+        </Table.Th>
+        <Table.Th
+          align="center"
+          hasBorderLeft={true}
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={2}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Status
         </Table.Th>
       </Table.Tr>
       <Table.Tr
@@ -943,7 +1247,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           Newton
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -955,7 +1259,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           inewton@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -965,6 +1269,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           }
         >
           Physicist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.01
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -1011,7 +1339,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           Einstein
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -1023,7 +1351,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           aeinstein@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -1033,6 +1361,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           }
         >
           Physicist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.02
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -1079,7 +1431,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           da Vinci
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -1091,7 +1443,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           ldvinci@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -1101,6 +1453,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           }
         >
           Engineer
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.03
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -1147,7 +1523,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           --
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -1156,7 +1532,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             }
           }
         >
-          --
+          aristotle@example.com
+        </Table.Td>
+        <Table.Td
+          align="left"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Tutor
         </Table.Td>
         <Table.Td
           align="right"
@@ -1168,7 +1556,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             }
           }
         >
-          Tutor
+          $100.04
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -1200,7 +1600,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             }
           }
         >
-          --
+          Galileo
         </Table.Td>
         <Table.Td
           align="left"
@@ -1212,10 +1612,10 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             }
           }
         >
-          Galilei
+          --
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -1224,7 +1624,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             }
           }
         >
-          --
+          ggalilei@example.com
+        </Table.Td>
+        <Table.Td
+          align="left"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Physicist
         </Table.Td>
         <Table.Td
           align="right"
@@ -1236,7 +1648,19 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
             }
           }
         >
-          Physicist
+          $100.05
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -1283,7 +1707,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           Darwin
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -1295,7 +1719,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           cdarwin@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -1305,6 +1729,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           }
         >
           Biologist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.06
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -1351,7 +1799,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           Macedon
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -1363,7 +1811,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           amacedon@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -1373,6 +1821,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           }
         >
           Head of State
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.07
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -1419,7 +1891,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           Plato
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -1431,7 +1903,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           plato@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -1441,6 +1913,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           }
         >
           Philosopher
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.08
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -1487,7 +1983,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           Gandhi
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -1499,7 +1995,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           mgandhi@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -1509,6 +2005,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           }
         >
           Politician
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.09
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -1555,7 +2075,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           Shakespeare
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -1567,7 +2087,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           wshakespear@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -1577,6 +2097,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
           }
         >
           Playwright
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.10
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
     </Table.Tbody>
@@ -1586,7 +2130,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
 
 exports[`DataTable [common] example testing should match snapshot(s) for 03.selectable-and-navigable-rows 1`] = `
 <EmptyStateWrapper
-  Title="You have no items."
+  Body="Try creating a new object or removing a filter."
+  Title="No items found."
   isEmpty={false}
 >
   <ScrollTable
@@ -1607,8 +2152,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           align="left"
           isResizable={false}
           isSorted={false}
-          rowSpan={2}
+          rowSpan={null}
           sortDirection="up"
+          width={24}
         >
           <Checkbox
             isDisabled={false}
@@ -1623,7 +2169,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           isResizable={false}
           isSorted={false}
           onClick={null}
-          rowSpan={2}
+          rowSpan={null}
           sortDirection="up"
           style={
             Object {
@@ -1635,65 +2181,18 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         </Table.Th>
         <Table.Th
           align="left"
-          colSpan={2}
-          isResizable={false}
-          isSorted={false}
-          sortDirection="up"
-        >
-          Name
-        </Table.Th>
-        <Table.Th
-          align="center"
-          isResizable={false}
-          isSorted={false}
-          onClick={null}
-          rowSpan={2}
-          sortDirection="up"
-          style={
-            Object {
-              "width": undefined,
-            }
-          }
-        >
-          E-Mail
-        </Table.Th>
-        <Table.Th
-          align="right"
-          hasBorderLeft={true}
-          isResizable={false}
-          isSorted={false}
-          onClick={null}
-          rowSpan={2}
-          sortDirection="up"
-          style={
-            Object {
-              "width": 100,
-            }
-          }
-        >
-          Occupation
-        </Table.Th>
-      </Table.Tr>
-      <Table.Tr
-        isActionable={false}
-        isActive={false}
-        isDisabled={false}
-        isSelected={false}
-      >
-        <Table.Th
-          align="left"
           hasBorderLeft={true}
           isResizable={false}
           isSortable={true}
           isSorted={false}
           onClick={[Function]}
+          rowSpan={null}
           sortDirection="up"
           style={
             Object {
               "width": 100,
             }
           }
-          width={100}
         >
           First
         </Table.Th>
@@ -1704,15 +2203,78 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           isSortable={true}
           isSorted={false}
           onClick={[Function]}
+          rowSpan={null}
           sortDirection="up"
           style={
             Object {
               "width": 100,
             }
           }
-          width={100}
         >
           Last
+        </Table.Th>
+        <Table.Th
+          align="left"
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          E-Mail
+        </Table.Th>
+        <Table.Th
+          align="left"
+          hasBorderLeft={true}
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Occupation
+        </Table.Th>
+        <Table.Th
+          align="right"
+          hasBorderLeft={true}
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Salary
+        </Table.Th>
+        <Table.Th
+          align="center"
+          hasBorderLeft={true}
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Status
         </Table.Th>
       </Table.Tr>
     </Table.Thead>
@@ -1721,7 +2283,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         isActionable={true}
         isActive={false}
         isDisabled={false}
-        isSelected={true}
+        isSelected={false}
         onClick={[Function]}
       >
         <Table.Td
@@ -1732,7 +2294,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
-            isSelected={true}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -1746,7 +2308,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             }
           }
         >
-          01
+          1
         </Table.Td>
         <Table.Td
           align="left"
@@ -1773,7 +2335,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           Newton
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -1785,7 +2347,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           inewton@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -1796,10 +2358,34 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
         >
           Physicist
         </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.01
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
+        </Table.Td>
       </Table.Tr>
       <Table.Tr
         isActionable={true}
-        isActive={true}
+        isActive={false}
         isDisabled={false}
         isSelected={false}
         onClick={[Function]}
@@ -1826,7 +2412,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             }
           }
         >
-          02
+          2
         </Table.Td>
         <Table.Td
           align="left"
@@ -1853,7 +2439,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           Einstein
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -1865,7 +2451,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           aeinstein@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -1875,6 +2461,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           }
         >
           Physicist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.02
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -1906,7 +2516,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             }
           }
         >
-          03
+          3
         </Table.Td>
         <Table.Td
           align="left"
@@ -1933,7 +2543,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           da Vinci
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -1945,7 +2555,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           ldvinci@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -1955,6 +2565,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           }
         >
           Engineer
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.03
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -1986,7 +2620,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             }
           }
         >
-          04
+          4
         </Table.Td>
         <Table.Td
           align="left"
@@ -2013,7 +2647,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           --
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -2025,7 +2659,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           aristotle@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -2035,6 +2669,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           }
         >
           Tutor
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.04
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -2066,7 +2724,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             }
           }
         >
-          05
+          5
         </Table.Td>
         <Table.Td
           align="left"
@@ -2090,10 +2748,10 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             }
           }
         >
-          Galilei
+          --
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -2105,7 +2763,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           ggalilei@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -2115,6 +2773,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           }
         >
           Physicist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.05
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -2146,7 +2828,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             }
           }
         >
-          06
+          6
         </Table.Td>
         <Table.Td
           align="left"
@@ -2173,7 +2855,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           Darwin
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -2185,7 +2867,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           cdarwin@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -2195,6 +2877,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           }
         >
           Biologist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.06
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -2226,7 +2932,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             }
           }
         >
-          07
+          7
         </Table.Td>
         <Table.Td
           align="left"
@@ -2253,7 +2959,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           Macedon
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -2265,7 +2971,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           amacedon@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -2275,6 +2981,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           }
         >
           Head of State
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.07
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -2306,7 +3036,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             }
           }
         >
-          08
+          8
         </Table.Td>
         <Table.Td
           align="left"
@@ -2333,7 +3063,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           Plato
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -2345,7 +3075,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           plato@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -2355,6 +3085,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           }
         >
           Philosopher
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.08
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -2386,7 +3140,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
             }
           }
         >
-          09
+          9
         </Table.Td>
         <Table.Td
           align="left"
@@ -2413,7 +3167,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           Gandhi
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -2425,7 +3179,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           mgandhi@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -2435,6 +3189,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           }
         >
           Politician
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.09
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -2493,7 +3271,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           Shakespeare
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -2505,7 +3283,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           wshakespear@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           style={
@@ -2515,6 +3293,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
           }
         >
           Playwright
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.10
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
     </Table.Tbody>
@@ -2524,7 +3326,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
 
 exports[`DataTable [common] example testing should match snapshot(s) for 04.interactive-table 1`] = `
 <EmptyStateWrapper
-  Title="You have no items."
+  Body="Try creating a new object or removing a filter."
+  Title="No items found."
   isEmpty={false}
 >
   <ScrollTable
@@ -2545,8 +3348,9 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           align="left"
           isResizable={false}
           isSorted={false}
-          rowSpan={2}
+          rowSpan={null}
           sortDirection="up"
+          width={24}
         >
           <Checkbox
             isDisabled={false}
@@ -2556,13 +3360,13 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           />
         </Table.Th>
         <Table.Th
-          align="center"
+          align="left"
           hasBorderLeft={true}
           isResizable={false}
           isSortable={true}
           isSorted={true}
           onClick={[Function]}
-          rowSpan={2}
+          rowSpan={null}
           sortDirection="up"
           style={
             Object {
@@ -2573,68 +3377,20 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           ID
         </Table.Th>
         <Table.Th
-          align="center"
-          colSpan={2}
-          isResizable={false}
-          isSorted={false}
-          sortDirection="up"
-        >
-          Name
-        </Table.Th>
-        <Table.Th
-          align="center"
-          isResizable={false}
-          isSortable={true}
-          isSorted={false}
-          onClick={[Function]}
-          rowSpan={2}
-          sortDirection="up"
-          style={
-            Object {
-              "width": undefined,
-            }
-          }
-        >
-          E-Mail
-        </Table.Th>
-        <Table.Th
-          align="right"
-          hasBorderLeft={true}
-          isResizable={false}
-          isSortable={true}
-          isSorted={false}
-          onClick={[Function]}
-          rowSpan={2}
-          sortDirection="up"
-          style={
-            Object {
-              "width": 100,
-            }
-          }
-        >
-          Occupation
-        </Table.Th>
-      </Table.Tr>
-      <Table.Tr
-        isActionable={false}
-        isActive={false}
-        isDisabled={false}
-        isSelected={false}
-      >
-        <Table.Th
           align="left"
           hasBorderLeft={true}
+          hasBorderRight={true}
           isResizable={true}
           isSortable={true}
           isSorted={false}
           onClick={[Function]}
+          rowSpan={null}
           sortDirection="up"
           style={
             Object {
               "width": 100,
             }
           }
-          width={100}
         >
           First
         </Table.Th>
@@ -2645,15 +3401,81 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           isSortable={true}
           isSorted={false}
           onClick={[Function]}
+          rowSpan={null}
           sortDirection="up"
           style={
             Object {
               "width": 100,
             }
           }
-          width={100}
         >
           Last
+        </Table.Th>
+        <Table.Th
+          align="left"
+          isResizable={false}
+          isSortable={true}
+          isSorted={false}
+          onClick={[Function]}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        >
+          E-Mail
+        </Table.Th>
+        <Table.Th
+          align="left"
+          hasBorderLeft={true}
+          isResizable={false}
+          isSortable={true}
+          isSorted={false}
+          onClick={[Function]}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Occupation
+        </Table.Th>
+        <Table.Th
+          align="right"
+          hasBorderLeft={true}
+          isResizable={false}
+          isSortable={true}
+          isSorted={false}
+          onClick={[Function]}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Salary
+        </Table.Th>
+        <Table.Th
+          align="center"
+          hasBorderLeft={true}
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Status
         </Table.Th>
       </Table.Tr>
     </Table.Thead>
@@ -2678,7 +3500,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           />
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -2693,7 +3515,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -2717,7 +3539,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           Newton
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           sortDirection="up"
@@ -2730,7 +3552,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           inewton@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -2741,6 +3563,31 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           }
         >
           Physicist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.01
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -2763,7 +3610,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           />
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -2778,7 +3625,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -2802,7 +3649,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           Einstein
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           sortDirection="up"
@@ -2815,7 +3662,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           aeinstein@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -2826,6 +3673,31 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           }
         >
           Physicist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.02
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -2848,7 +3720,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           />
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -2863,7 +3735,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -2887,7 +3759,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           da Vinci
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           sortDirection="up"
@@ -2900,7 +3772,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           ldvinci@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -2911,6 +3783,31 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           }
         >
           Engineer
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.03
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -2933,7 +3830,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           />
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -2948,7 +3845,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -2972,7 +3869,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           --
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           sortDirection="up"
@@ -2985,7 +3882,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           aristotle@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -2996,6 +3893,31 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           }
         >
           Tutor
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.04
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -3018,7 +3940,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           />
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -3033,7 +3955,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -3057,7 +3979,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           Galilei
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           sortDirection="up"
@@ -3070,7 +3992,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           ggalilei@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -3081,6 +4003,31 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           }
         >
           Physicist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.05
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -3103,7 +4050,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           />
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -3118,7 +4065,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -3142,7 +4089,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           Darwin
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           sortDirection="up"
@@ -3155,7 +4102,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           cdarwin@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -3166,6 +4113,31 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           }
         >
           Biologist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.06
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -3188,7 +4160,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           />
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -3203,7 +4175,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -3227,7 +4199,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           Macedon
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           sortDirection="up"
@@ -3240,7 +4212,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           amacedon@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -3251,6 +4223,31 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           }
         >
           Head of State
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.07
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -3273,7 +4270,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           />
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -3288,7 +4285,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -3312,7 +4309,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           Plato
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           sortDirection="up"
@@ -3325,7 +4322,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           plato@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -3336,6 +4333,31 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           }
         >
           Philosopher
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.08
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -3358,7 +4380,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           />
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -3373,7 +4395,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -3397,7 +4419,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           Gandhi
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           sortDirection="up"
@@ -3410,7 +4432,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           mgandhi@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -3421,6 +4443,31 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           }
         >
           Politician
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.09
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -3443,7 +4490,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           />
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -3458,7 +4505,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         <Table.Td
           align="left"
           hasBorderLeft={true}
-          hasBorderRight={false}
+          hasBorderRight={true}
           sortDirection="up"
           style={
             Object {
@@ -3482,7 +4529,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           Shakespeare
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           sortDirection="up"
@@ -3495,7 +4542,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           wshakespear@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={true}
           hasBorderRight={false}
           sortDirection="up"
@@ -3507,6 +4554,31 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         >
           Playwright
         </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.10
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={true}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
+        </Table.Td>
       </Table.Tr>
     </Table.Tbody>
   </ScrollTable>
@@ -3515,7 +4587,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
 
 exports[`DataTable [common] example testing should match snapshot(s) for 05.disabled-rows 1`] = `
 <EmptyStateWrapper
-  Title="You have no items."
+  Body="Try creating a new object or removing a filter."
+  Title="No items found."
   isEmpty={false}
 >
   <ScrollTable
@@ -3577,7 +4650,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           Last
         </Table.Th>
         <Table.Th
-          align="center"
+          align="left"
           isResizable={false}
           isSorted={false}
           onClick={null}
@@ -3592,7 +4665,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           E-Mail
         </Table.Th>
         <Table.Th
-          align="right"
+          align="left"
           isResizable={false}
           isSorted={false}
           onClick={null}
@@ -3606,13 +4679,43 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         >
           Occupation
         </Table.Th>
+        <Table.Th
+          align="right"
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Salary
+        </Table.Th>
+        <Table.Th
+          align="center"
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Status
+        </Table.Th>
       </Table.Tr>
     </Table.Thead>
     <Table.Tbody>
       <Table.Tr
         isActionable={false}
         isActive={false}
-        isDisabled={true}
+        isDisabled={false}
         isSelected={false}
         onClick={[Function]}
       >
@@ -3626,7 +4729,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             }
           }
         >
-          01
+          1
         </Table.Td>
         <Table.Td
           align="left"
@@ -3653,7 +4756,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           Newton
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -3665,7 +4768,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           inewton@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -3675,6 +4778,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           }
         >
           Physicist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.01
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -3694,7 +4821,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             }
           }
         >
-          02
+          2
         </Table.Td>
         <Table.Td
           align="left"
@@ -3721,7 +4848,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           Einstein
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -3733,7 +4860,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           aeinstein@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -3744,11 +4871,35 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         >
           Physicist
         </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.02
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
+        </Table.Td>
       </Table.Tr>
       <Table.Tr
         isActionable={false}
         isActive={false}
-        isDisabled={true}
+        isDisabled={false}
         isSelected={false}
         onClick={[Function]}
       >
@@ -3762,7 +4913,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             }
           }
         >
-          03
+          3
         </Table.Td>
         <Table.Td
           align="left"
@@ -3789,7 +4940,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           da Vinci
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -3801,7 +4952,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           ldvinci@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -3811,6 +4962,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           }
         >
           Engineer
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.03
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -3830,7 +5005,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             }
           }
         >
-          04
+          4
         </Table.Td>
         <Table.Td
           align="left"
@@ -3857,7 +5032,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           --
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -3869,7 +5044,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           aristotle@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -3880,11 +5055,35 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         >
           Tutor
         </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.04
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
+        </Table.Td>
       </Table.Tr>
       <Table.Tr
         isActionable={false}
         isActive={false}
-        isDisabled={true}
+        isDisabled={false}
         isSelected={false}
         onClick={[Function]}
       >
@@ -3898,7 +5097,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             }
           }
         >
-          05
+          5
         </Table.Td>
         <Table.Td
           align="left"
@@ -3922,10 +5121,10 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             }
           }
         >
-          Galilei
+          --
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -3937,7 +5136,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           ggalilei@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -3947,6 +5146,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           }
         >
           Physicist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.05
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -3966,7 +5189,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             }
           }
         >
-          06
+          6
         </Table.Td>
         <Table.Td
           align="left"
@@ -3993,7 +5216,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           Darwin
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -4005,7 +5228,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           cdarwin@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -4016,11 +5239,35 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         >
           Biologist
         </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.06
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
+        </Table.Td>
       </Table.Tr>
       <Table.Tr
         isActionable={false}
         isActive={false}
-        isDisabled={true}
+        isDisabled={false}
         isSelected={false}
         onClick={[Function]}
       >
@@ -4034,7 +5281,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             }
           }
         >
-          07
+          7
         </Table.Td>
         <Table.Td
           align="left"
@@ -4061,7 +5308,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           Macedon
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -4073,7 +5320,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           amacedon@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -4083,6 +5330,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           }
         >
           Head of State
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.07
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -4102,7 +5373,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             }
           }
         >
-          08
+          8
         </Table.Td>
         <Table.Td
           align="left"
@@ -4129,7 +5400,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           Plato
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -4141,7 +5412,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           plato@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -4152,11 +5423,35 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         >
           Philosopher
         </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.08
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
+        </Table.Td>
       </Table.Tr>
       <Table.Tr
         isActionable={false}
         isActive={false}
-        isDisabled={true}
+        isDisabled={false}
         isSelected={false}
         onClick={[Function]}
       >
@@ -4170,7 +5465,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
             }
           }
         >
-          09
+          9
         </Table.Td>
         <Table.Td
           align="left"
@@ -4197,7 +5492,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           Gandhi
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -4209,7 +5504,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           mgandhi@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -4219,6 +5514,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           }
         >
           Politician
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.09
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -4265,7 +5584,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           Shakespeare
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -4277,7 +5596,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
           wshakespear@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -4288,6 +5607,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
         >
           Playwright
         </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.10
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
+        </Table.Td>
       </Table.Tr>
     </Table.Tbody>
   </ScrollTable>
@@ -4296,7 +5639,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
 
 exports[`DataTable [common] example testing should match snapshot(s) for 06.empty 1`] = `
 <EmptyStateWrapper
-  Title="You have no items."
+  Body="Try creating a new object or removing a filter."
+  Title="No items found."
   isEmpty={true}
 >
   <ScrollTable
@@ -5744,6 +7088,316 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
           }
         />
       </Table.Tr>
+      <Table.Tr
+        isActionable={false}
+        isActive={false}
+        isDisabled={true}
+        isSelected={false}
+        style={
+          Object {
+            "height": "32px",
+          }
+        }
+      >
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+      </Table.Tr>
+      <Table.Tr
+        isActionable={false}
+        isActive={false}
+        isDisabled={true}
+        isSelected={false}
+        style={
+          Object {
+            "height": "32px",
+          }
+        }
+      >
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+      </Table.Tr>
+      <Table.Tr
+        isActionable={false}
+        isActive={false}
+        isDisabled={true}
+        isSelected={false}
+        style={
+          Object {
+            "height": "32px",
+          }
+        }
+      >
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+      </Table.Tr>
+      <Table.Tr
+        isActionable={false}
+        isActive={false}
+        isDisabled={true}
+        isSelected={false}
+        style={
+          Object {
+            "height": "32px",
+          }
+        }
+      >
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+      </Table.Tr>
+      <Table.Tr
+        isActionable={false}
+        isActive={false}
+        isDisabled={true}
+        isSelected={false}
+        style={
+          Object {
+            "height": "32px",
+          }
+        }
+      >
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": undefined,
+            }
+          }
+        />
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+      </Table.Tr>
     </Table.Tbody>
   </ScrollTable>
 </EmptyStateWrapper>
@@ -5754,7 +7408,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
   isEmpty={true}
 >
   <EmptyStateWrapper.Title>
-    This empty message has a large image in it.
+    No items found.
   </EmptyStateWrapper.Title>
   <EmptyStateWrapper.Body>
     <img
@@ -6485,7 +8139,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
 
 exports[`DataTable [common] example testing should match snapshot(s) for 09.loading 1`] = `
 <EmptyStateWrapper
-  Title="You have no items."
+  Body="Try creating a new object or removing a filter."
+  Title="No items found."
   isEmpty={true}
   isLoading={true}
 >
@@ -7207,7 +8862,8 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
 
 exports[`DataTable [common] example testing should match snapshot(s) for 10.min-rows 1`] = `
 <EmptyStateWrapper
-  Title="You have no items."
+  Body="Try creating a new object or removing a filter."
+  Title="No items found."
   isEmpty={false}
 >
   <ScrollTable
@@ -7230,6 +8886,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           isSorted={false}
           rowSpan={null}
           sortDirection="up"
+          width={24}
         >
           <Checkbox
             isDisabled={false}
@@ -7284,7 +8941,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           Last
         </Table.Th>
         <Table.Th
-          align="center"
+          align="left"
           isResizable={false}
           isSorted={false}
           onClick={null}
@@ -7299,7 +8956,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           E-Mail
         </Table.Th>
         <Table.Th
-          align="right"
+          align="left"
           isResizable={false}
           isSorted={false}
           onClick={null}
@@ -7313,6 +8970,36 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         >
           Occupation
         </Table.Th>
+        <Table.Th
+          align="right"
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Salary
+        </Table.Th>
+        <Table.Th
+          align="center"
+          isResizable={false}
+          isSorted={false}
+          onClick={null}
+          rowSpan={null}
+          sortDirection="up"
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          Status
+        </Table.Th>
       </Table.Tr>
     </Table.Thead>
     <Table.Tbody>
@@ -7320,7 +9007,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         isActionable={true}
         isActive={false}
         isDisabled={false}
-        isSelected={true}
+        isSelected={false}
         onClick={[Function]}
       >
         <Table.Td
@@ -7331,7 +9018,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           <Checkbox
             isDisabled={false}
             isIndeterminate={false}
-            isSelected={true}
+            isSelected={false}
             onSelect={[Function]}
           />
         </Table.Td>
@@ -7345,7 +9032,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             }
           }
         >
-          01
+          1
         </Table.Td>
         <Table.Td
           align="left"
@@ -7372,7 +9059,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           Newton
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -7384,7 +9071,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           inewton@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -7394,6 +9081,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           }
         >
           Physicist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.01
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -7425,7 +9136,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             }
           }
         >
-          02
+          2
         </Table.Td>
         <Table.Td
           align="left"
@@ -7452,7 +9163,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           Einstein
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -7464,7 +9175,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           aeinstein@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -7474,6 +9185,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           }
         >
           Physicist
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.02
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -7505,7 +9240,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             }
           }
         >
-          03
+          3
         </Table.Td>
         <Table.Td
           align="left"
@@ -7532,7 +9267,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           da Vinci
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -7544,7 +9279,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           ldvinci@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -7554,6 +9289,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           }
         >
           Engineer
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.03
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -7585,7 +9344,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
             }
           }
         >
-          04
+          4
         </Table.Td>
         <Table.Td
           align="left"
@@ -7612,7 +9371,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           --
         </Table.Td>
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -7624,7 +9383,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           aristotle@example.com
         </Table.Td>
         <Table.Td
-          align="right"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -7634,6 +9393,30 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           }
         >
           Tutor
+        </Table.Td>
+        <Table.Td
+          align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          $100.04
+        </Table.Td>
+        <Table.Td
+          align="center"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        >
+          <SuccessIcon />
         </Table.Td>
       </Table.Tr>
       <Table.Tr
@@ -7683,7 +9466,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           }
         />
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -7693,7 +9476,27 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           }
         />
         <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
           align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="center"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -7750,7 +9553,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           }
         />
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -7760,7 +9563,27 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           }
         />
         <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
           align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="center"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -7817,7 +9640,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           }
         />
         <Table.Td
-          align="center"
+          align="left"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={
@@ -7827,7 +9650,27 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
           }
         />
         <Table.Td
+          align="left"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
           align="right"
+          hasBorderLeft={false}
+          hasBorderRight={false}
+          style={
+            Object {
+              "width": 100,
+            }
+          }
+        />
+        <Table.Td
+          align="center"
           hasBorderLeft={false}
           hasBorderRight={false}
           style={

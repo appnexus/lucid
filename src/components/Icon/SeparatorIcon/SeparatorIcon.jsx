@@ -17,12 +17,6 @@ const SeparatorIcon = createClass({
 	_isPrivate: true,
 	propTypes: Icon.propTypes,
 
-	getDefaultProps() {
-		return {
-			viewBox: '0 0 4.5 16',
-		};
-	},
-
 	render() {
 		const { className, ...passThroughs } = this.props;
 
@@ -32,7 +26,7 @@ const SeparatorIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<polygon points="4.5,8 1.5,0 0,0 3,8 0,16 1.5,16 4.5,8" />
+				<path d="M5.2,0h1.5l4,8l-4,8H5.2l4-8L5.2,0z" />
 			</Icon>
 		);
 	},
