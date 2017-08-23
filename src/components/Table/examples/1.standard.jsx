@@ -7,7 +7,7 @@ const { Thead, Tbody, Tr, Th, Td } = Table;
 export default createClass({
 	render() {
 		return (
-			<Table>
+			<Table hasLightHeader>
 				<Thead>
 					<Tr>
 						<Th rowSpan={2}>RS</Th>
@@ -18,9 +18,6 @@ export default createClass({
 						<Th rowSpan={2}><SuccessIcon /></Th>
 						<Th rowSpan={2}>Button</Th>
 						<Th rowSpan={2} isSorted sortDirection="up">Sorted Column</Th>
-						<Th colSpan={3} align="center">Alignments</Th>
-					</Tr>
-					<Tr>
 						<Th align="left">align left</Th>
 						<Th align="center">align center</Th>
 						<Th align="right" isSortable isSorted>align right</Th>

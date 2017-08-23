@@ -2,7 +2,7 @@
 
 exports[`Table [common] example testing should match snapshot(s) for 1.standard 1`] = `
 <table
-  className="lucid-Table lucid-Table-density-extended lucid-Table-has-word-wrap"
+  className="lucid-Table lucid-Table-density-extended lucid-Table-has-word-wrap lucid-Table-has-light-header"
 >
   <Table.Thead>
     <Table.Tr
@@ -71,22 +71,6 @@ exports[`Table [common] example testing should match snapshot(s) for 1.standard 
       >
         Sorted Column
       </Table.Th>
-      <Table.Th
-        align="center"
-        colSpan={3}
-        isResizable={false}
-        isSorted={false}
-        sortDirection="up"
-      >
-        Alignments
-      </Table.Th>
-    </Table.Tr>
-    <Table.Tr
-      isActionable={false}
-      isActive={false}
-      isDisabled={false}
-      isSelected={false}
-    >
       <Table.Th
         align="left"
         isResizable={false}
