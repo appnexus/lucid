@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
+	createClass as createReactClass,
 	filterTypes,
 	omitProps,
 } from '../../util/component-types';
@@ -17,7 +17,7 @@ const { any, bool, func, node, number, object, string, oneOf } = PropTypes;
 /**
  * `Thead` renders <thead>.
  */
-const Thead = createClass({
+const Thead = createReactClass({
 	displayName: 'Table.Thead',
 
 	propTypes: {
@@ -49,7 +49,7 @@ const Thead = createClass({
 /**
  * `Tbody` renders <tbody>.
  */
-const Tbody = createClass({
+const Tbody = createReactClass({
 	displayName: 'Table.Tbody',
 
 	propTypes: {
@@ -81,7 +81,7 @@ const Tbody = createClass({
 /**
  * `Tr` renders <tr>.
  */
-const Tr = createClass({
+const Tr = createReactClass({
 	displayName: 'Table.Tr',
 
 	propTypes: {
@@ -155,7 +155,7 @@ const Tr = createClass({
 /**
  * `Th` renders <th>.
  */
-const Th = createClass({
+const Th = createReactClass({
 	displayName: 'Table.Th',
 
 	propTypes: {
@@ -434,7 +434,7 @@ const Th = createClass({
 /**
  * `Td` renders <td>.
  */
-const Td = createClass({
+const Td = createReactClass({
 	displayName: 'Table.Td',
 
 	propTypes: {
@@ -530,7 +530,7 @@ const Td = createClass({
  * `Table` provides the most basic components to create a lucid table.
  * It is recommended to create a wrapper around this component rather than using it directly in an app.
  */
-const Table = createClass({
+const Table = createReactClass({
 	displayName: 'Table',
 
 	components: {

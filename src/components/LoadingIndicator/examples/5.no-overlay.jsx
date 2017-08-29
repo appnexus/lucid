@@ -1,8 +1,8 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { BarChart, LoadingIndicator } from '../../../index';
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<LoadingIndicator hasOverlay={false} isLoading>

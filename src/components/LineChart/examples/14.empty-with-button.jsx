@@ -1,10 +1,10 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { LineChart, Button } from '../../../index';
 
 const { EmptyStateWrapper, EmptyStateWrapper: { Title, Body } } = LineChart;
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<LineChart data={[]} yAxisFields={['blueberries']}>

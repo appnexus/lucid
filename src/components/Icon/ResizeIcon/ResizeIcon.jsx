@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass, omitProps } from '../../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ResizeIcon');
 
@@ -12,7 +15,7 @@ const cx = lucidClassNames.bind('&-ResizeIcon');
  *
  * A resize icon.
  */
-const ResizeIcon = createClass({
+const ResizeIcon = createReactClass({
 	displayName: 'ResizeIcon',
 	propTypes: {
 		...Icon.propTypes,

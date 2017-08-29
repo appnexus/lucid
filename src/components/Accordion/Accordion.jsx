@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 
 import {
@@ -20,7 +24,7 @@ const { any, func, object, number, string } = PropTypes;
 *
 * This is a container that renders panels and controls its expansion/retraction.
 */
-const Accordion = createClass({
+const Accordion = createReactClass({
 	displayName: 'Accordion',
 
 	components: {

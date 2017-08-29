@@ -1,10 +1,10 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { Breadcrumb, HomeIcon } from '../../../index';
 
 const { Item } = Breadcrumb;
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<Breadcrumb>

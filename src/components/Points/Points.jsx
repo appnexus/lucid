@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 import { groupByFields } from '../../util/chart-helpers';
 import * as d3Shape from 'd3-shape';
 import * as chartConstants from '../../constants/charts';
@@ -29,7 +32,7 @@ function isValidSeries(series) {
  *
  * Put some points on that data.
  */
-const Points = createClass({
+const Points = createReactClass({
 	displayName: 'Points',
 
 	propTypes: {

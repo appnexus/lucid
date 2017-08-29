@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
 
 const cx = lucidClassNames.bind('&-Bar');
@@ -18,7 +21,7 @@ const { number, bool, string, object } = PropTypes;
  * around svg rects.
  *
  */
-const Bar = createClass({
+const Bar = createReactClass({
 	displayName: 'Bar',
 
 	propTypes: {

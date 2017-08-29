@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass as createReactClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DataViewIcon');
 
@@ -12,7 +12,7 @@ const cx = lucidClassNames.bind('&-DataViewIcon');
  *
  * Typically used to guide users to more detailed data.
  */
-const DataViewIcon = createClass({
+const DataViewIcon = createReactClass({
 	displayName: 'DataViewIcon',
 	propTypes: {
 		...Icon.propTypes,

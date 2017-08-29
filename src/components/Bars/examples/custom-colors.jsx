@@ -2,7 +2,7 @@
 
 import _ from 'lodash';
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { Bars, d3Scale, chartConstants } from '../../../index';
 
 const width = 1000;
@@ -37,7 +37,7 @@ const xScale = d3Scale
 
 const yScale = d3Scale.scaleLinear().domain([0, yMax]).range([height, 0]);
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<div>

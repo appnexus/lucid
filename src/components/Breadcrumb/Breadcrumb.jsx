@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 import SeparatorIcon from '../Icon/SeparatorIcon/SeparatorIcon';
 
 const cx = lucidClassNames.bind('&-Breadcrumb');
@@ -17,7 +21,7 @@ const { any, node } = PropTypes;
  * provide links to return to higher points in the hierarchy
  *
  */
-const Breadcrumb = createClass({
+const Breadcrumb = createReactClass({
 	displayName: 'Breadcrumb',
 
 	components: {
@@ -25,7 +29,7 @@ const Breadcrumb = createClass({
 		/*
 		 * Renders a `li`
 		 */
-		Item: createClass({
+		Item: createReactClass({
 			displayName: 'Breadcrumb.Item',
 			propTypes: {
 				children: node,

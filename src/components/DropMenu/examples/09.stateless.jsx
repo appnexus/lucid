@@ -1,10 +1,10 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { Button, DropMenuDumb as DropMenu } from '../../../index';
 
 const { Control, Option, OptionGroup } = DropMenu;
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<DropMenu

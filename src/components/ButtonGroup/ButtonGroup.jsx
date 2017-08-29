@@ -3,7 +3,11 @@ import Button from '../Button/Button';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 import reducers from './ButtonGroup.reducers';
 import { buildHybridComponent } from '../../util/state-management';
 
@@ -18,14 +22,14 @@ const { any, func, arrayOf, number } = PropTypes;
  * Button groups allow you to pair buttons together to form a seamless cluster.
  * Any props not explicitly called out are spread on to the root component.
  */
-const ButtonGroup = createClass({
+const ButtonGroup = createReactClass({
 	displayName: 'ButtonGroup',
 
 	components: {
 		/**
 		 * Renders a `<Button`> inside the `ButtonGroup`.
 		 */
-		Button: createClass({
+		Button: createReactClass({
 			displayName: 'ButtonGroup.Button',
 		}),
 	},

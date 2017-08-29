@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass as createReactClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DownloadIcon');
 
@@ -12,7 +12,7 @@ const cx = lucidClassNames.bind('&-DownloadIcon');
  *
  * Typically used to denote that something is available for download.
  */
-const DownloadIcon = createClass({
+const DownloadIcon = createReactClass({
 	displayName: 'DownloadIcon',
 	propTypes: {
 		...Icon.propTypes,

@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
+	createClass as createReactClass,
 	getFirst,
 	findTypes,
 	omitProps,
@@ -26,7 +26,7 @@ const { string, number, bool, func } = PropTypes;
  * interface that allows tab content to be passed as regular React children or
  * through props.
  */
-const VerticalTabs = createClass({
+const VerticalTabs = createReactClass({
 	displayName: 'VerticalTabs',
 
 	components: {
@@ -34,7 +34,7 @@ const VerticalTabs = createClass({
 		 * Content that will be rendered in a tab. Be sure to nest a Title inside
 		 * each Tab or provide it as a prop.
 		 */
-		Tab: createClass({
+		Tab: createReactClass({
 			displayName: 'VerticalTabs.Tab',
 			propName: 'Tab',
 			propTypes: {
@@ -47,7 +47,7 @@ const VerticalTabs = createClass({
 		/**
 		 * Titles can be provided as a child or prop to a Tab.
 		 */
-		Title: createClass({
+		Title: createReactClass({
 			displayName: 'VerticalTabs.Title',
 			propName: 'Title',
 		}),

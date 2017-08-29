@@ -1,10 +1,10 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { BarChart } from '../../../index';
 
 const { EmptyStateWrapper, EmptyStateWrapper: { Title, Body } } = BarChart;
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<BarChart data={[]} yAxisTitle="Revenue">

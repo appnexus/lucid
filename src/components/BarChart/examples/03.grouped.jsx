@@ -1,7 +1,7 @@
 /* eslint-disable comma-spacing */
 
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { BarChart, chartConstants } from '../../../index';
 
 const data = [
@@ -17,7 +17,7 @@ const data = [
 	},
 ];
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<div>

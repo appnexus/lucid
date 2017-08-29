@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { Bar, chartConstants } from '../../../index';
 
 const svgProps = {
@@ -55,7 +55,7 @@ const colors = [
 	chartConstants.COLOR_NEUTRAL,
 ];
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<div>

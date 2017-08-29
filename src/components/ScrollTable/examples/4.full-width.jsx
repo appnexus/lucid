@@ -1,10 +1,10 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { Button, Checkbox, ScrollTable, SuccessIcon } from '../../../index';
 
 const { Thead, Tbody, Tr, Th, Td } = ScrollTable;
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<ScrollTable hasWordWrap={false}>

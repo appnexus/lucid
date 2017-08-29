@@ -1,8 +1,8 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import MaximizeIcon from '../MaximizeIcon';
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<div>

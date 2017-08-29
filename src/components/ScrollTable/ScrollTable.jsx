@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import Table from '../Table/Table';
 
@@ -13,7 +16,7 @@ const { object, string, bool, node, number, oneOfType } = PropTypes;
  *
  * Table in a scrollable container.
  */
-const ScrollTable = createClass({
+const ScrollTable = createReactClass({
 	displayName: 'ScrollTable',
 
 	components: {

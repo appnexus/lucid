@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass as createReactClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DownloadTableDataIcon');
 
@@ -13,7 +13,7 @@ const cx = lucidClassNames.bind('&-DownloadTableDataIcon');
  * Typically used to denote that the table has data that's available for
  * download. Usually clicking should kick off the download.
  */
-const DownloadTableDataIcon = createClass({
+const DownloadTableDataIcon = createReactClass({
 	displayName: 'DownloadTableDataIcon',
 	propTypes: {
 		...Icon.propTypes,

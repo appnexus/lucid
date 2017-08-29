@@ -1,9 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { Button, Dialog } from '../../../index';
 
-export default createClass({
+export default createReactClass({
 	getInitialState() {
 		return {
 			isShown: false,

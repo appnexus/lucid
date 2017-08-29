@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 
 const cx = lucidClassNames.bind('&-StickySection');
@@ -14,7 +17,7 @@ const { node, number, object, string } = PropTypes;
  * `StickySection` can be wrapped around any content to make it _stick_ to the
  * top edge of the screen when a user scrolls beyond its initial location.
  */
-const StickySection = createClass({
+const StickySection = createReactClass({
 	displayName: 'StickySection',
 	propTypes: {
 		/**

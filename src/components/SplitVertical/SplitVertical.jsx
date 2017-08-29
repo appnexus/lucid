@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
+	createClass as createReactClass,
 	filterTypes,
 	omitProps,
 } from '../../util/component-types';
@@ -20,7 +20,7 @@ const { any, bool, func, node, number, string, oneOfType } = PropTypes;
  *
  * `SplitVertical` renders a vertical split.
  */
-const SplitVertical = createClass({
+const SplitVertical = createReactClass({
 	displayName: 'SplitVertical',
 
 	_isPrivate: true,
@@ -70,7 +70,7 @@ const SplitVertical = createClass({
 		/**
 		 * Left pane of the split.
 		 */
-		LeftPane: createClass({
+		LeftPane: createReactClass({
 			displayName: 'SplitVertical.LeftPane',
 			propTypes: {
 				/**
@@ -96,7 +96,7 @@ const SplitVertical = createClass({
 		/**
 		 * Right pane of the split.
 		 */
-		RightPane: createClass({
+		RightPane: createReactClass({
 			displayName: 'SplitVertical.RightPane',
 			propTypes: {
 				/**
@@ -122,7 +122,7 @@ const SplitVertical = createClass({
 		/**
 		 * The area that separates the split panes. Can be dragged to resize them.
 		 */
-		Divider: createClass({
+		Divider: createReactClass({
 			displayName: 'SplitVertical.Divider',
 			propTypes: {
 				/**

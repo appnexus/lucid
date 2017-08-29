@@ -1,9 +1,9 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import _ from 'lodash';
 import { DropMenu, Button } from '../../../index';
 
-export default createClass({
+export default createReactClass({
 	render() {
 		const options = [
 			'Intentionally run off screen -- Adipisicing totam saepe officia repellat quo cupiditate ducimus hic? Quod temporibus corrupti eaque ullam quo nulla corporis !',

@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Panel');
 
@@ -13,21 +17,21 @@ const { bool, node, object, string } = PropTypes;
  *
  * Panel is used to wrap content to better organize elements in window.
  */
-const Panel = createClass({
+const Panel = createReactClass({
 	displayName: 'Panel',
 
 	components: {
 		/**
 		 * Content displayed at the top of the panel.
 		 */
-		Header: createClass({
+		Header: createReactClass({
 			displayName: 'Panel.Header',
 			propName: 'Header',
 		}),
 		/**
 		 * Content displayed at the bottom of the panel.
 		 */
-		Footer: createClass({
+		Footer: createReactClass({
 			displayName: 'Panel.Footer',
 			propName: 'Footer',
 		}),

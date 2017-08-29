@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass as createReactClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-HomeIcon');
 
@@ -12,7 +12,7 @@ const cx = lucidClassNames.bind('&-HomeIcon');
  *
  * RUNHOME Jack! No, no, no, HOMERUN Jack!
  */
-const HomeIcon = createClass({
+const HomeIcon = createReactClass({
 	displayName: 'HomeIcon',
 	propTypes: {
 		...Icon.propTypes,

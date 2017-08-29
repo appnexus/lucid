@@ -1,9 +1,9 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import _ from 'lodash';
 import { CheckboxLabeled, Sidebar, Submarine } from '../../../index';
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<div style={{ display: 'flex', flexDirection: 'column', height: 600 }}>

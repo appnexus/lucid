@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Icon');
 
@@ -15,7 +18,7 @@ const { any, string, number, object, bool } = PropTypes;
  * A basic svg icon. Any props that are not explicitly called out below will be
  * passed through to the native `svg` component.
  */
-const Icon = createClass({
+const Icon = createReactClass({
 	displayName: 'Icon',
 	propTypes: {
 		/**

@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 import reducers from './TextField.reducers';
 import * as KEYCODE from '../../constants/key-code';
 
@@ -18,7 +21,7 @@ const { bool, string, func, number, object, oneOfType } = PropTypes;
  * single and multi line inputs.
  *
  */
-const TextField = createClass({
+const TextField = createReactClass({
 	displayName: 'TextField',
 
 	reducers,

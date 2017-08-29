@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { ToolTipDumb } from '../../../index';
 
 const { Target, Title, Body } = ToolTipDumb;
@@ -8,7 +8,7 @@ const { Target, Title, Body } = ToolTipDumb;
 const kinds = ['primary', 'success', 'warning', 'danger', 'info', 'default'];
 const rows = _.chunk(kinds, 3);
 
-export default createClass({
+export default createReactClass({
 	getInitialState: () => ({ isExpanded: true }),
 	render() {
 		return (

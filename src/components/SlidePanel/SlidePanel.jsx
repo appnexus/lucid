@@ -5,7 +5,11 @@ import { Motion, spring } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 import { lucidClassNames } from '../../util/style-helpers';
 import { shiftChildren } from '../../util/dom-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SlidePanel');
 
@@ -20,12 +24,12 @@ const modulo = (n, a) => a - n * Math.floor(a / n);
  * offset. Translation between slides is controlled by passing in a new `offset`.
  * Can hook into touch events to update the `offset`.
  */
-const SlidePanel = createClass({
+const SlidePanel = createReactClass({
 	displayName: 'SlidePanel',
 	_isPrivate: true,
 
 	components: {
-		Slide: createClass({
+		Slide: createReactClass({
 			displayName: 'SlidePanel.Slide',
 			propName: 'Slide',
 		}),

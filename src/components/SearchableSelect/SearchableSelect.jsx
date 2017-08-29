@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import { createClass, findTypes, getFirst } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	findTypes,
+	getFirst,
+} from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { partitionText, propsSearch } from '../../util/text-manipulation';
 import { buildHybridComponent } from '../../util/state-management';
@@ -32,7 +36,7 @@ const {
  * A selector control (like native `<select>`) which is used to select a single option from a dropdown list using a SearchField.
  * Supports option groups with and without labels.
  */
-const SearchableSelect = createClass({
+const SearchableSelect = createReactClass({
 	displayName: 'SearchableSelect',
 
 	reducers,
@@ -41,14 +45,14 @@ const SearchableSelect = createClass({
 		/**
 		 * Content this is displayed when nothing is selected.
 		 */
-		Placeholder: createClass({
+		Placeholder: createReactClass({
 			displayName: 'SearchableSelect.Placeholder',
 			propName: 'Placeholder',
 		}),
 		/**
 		 * A selectable option in the list.
 		 */
-		Option: createClass({
+		Option: createReactClass({
 			displayName: 'SearchableSelect.Option',
 			propName: 'Option',
 			propTypes: DropMenu.Option.propTypes,
@@ -56,7 +60,7 @@ const SearchableSelect = createClass({
 		/**
 		 * Groups `Option`s together with a non-selectable heading.
 		 */
-		OptionGroup: createClass({
+		OptionGroup: createReactClass({
 			displayName: 'SearchableSelect.OptionGroup',
 			propName: 'OptionGroup',
 			propTypes: DropMenu.OptionGroup.propTypes,

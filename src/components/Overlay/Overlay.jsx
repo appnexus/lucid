@@ -5,7 +5,10 @@ import PropTypes from 'prop-types';
 import Portal from '../Portal/Portal';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Overlay');
 
@@ -17,7 +20,7 @@ const { string, bool, func, node } = PropTypes;
  * Overlay is used to block user interaction with the rest of the app until they
  * have completed something.
  */
-const Overlay = createClass({
+const Overlay = createReactClass({
 	displayName: 'Overlay',
 
 	propTypes: {

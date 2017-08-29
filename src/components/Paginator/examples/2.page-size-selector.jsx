@@ -1,9 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { Paginator, TextField } from '../../../index';
 
-export default createClass({
+export default createReactClass({
 	getInitialState() {
 		return { count: 45 };
 	},

@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 
 import { lucidClassNames } from '../../util/style-helpers';
 import * as components from '../../index';
@@ -26,7 +26,7 @@ const icons = _.flow(
 
 const cx = lucidClassNames.bind('Icons');
 
-const Icons = createClass({
+const Icons = createReactClass({
 	getInitialState() {
 		return {
 			showButtons: false,

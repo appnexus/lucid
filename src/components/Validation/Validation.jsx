@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	getFirst,
+	omitProps,
+} from '../../util/component-types';
 import _ from 'lodash';
 
 const cx = lucidClassNames.bind('&-Validation');
@@ -16,14 +20,14 @@ const { any } = PropTypes;
  * components. Wrap your form components in it and style them accordingly if
  * there's an error.
  */
-const Validation = createClass({
+const Validation = createReactClass({
 	displayName: 'Validation',
 
 	components: {
 		/**
 		 * Content that will be displayed as an error message.
 		 */
-		Error: createClass({
+		Error: createReactClass({
 			displayName: 'Validation.Error',
 			propName: 'Error',
 		}),

@@ -1,5 +1,5 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { Grid } from '../../../index';
 
 const gridStyle = {
@@ -29,7 +29,7 @@ const fillCells = count => {
 	return cells;
 };
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<div>

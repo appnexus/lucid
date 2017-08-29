@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Badge');
 
@@ -15,7 +18,7 @@ const { node, string } = PropTypes;
  * element(s). Do not wrap existing `Icon`s in a badge, rather add the
  * `isBadge` prop to any Icon component to turn it into a badge.
  */
-const Badge = createClass({
+const Badge = createReactClass({
 	displayName: 'Badge',
 	propTypes: {
 		/**

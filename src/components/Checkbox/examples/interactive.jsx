@@ -1,8 +1,8 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { Checkbox } from '../../../index';
 
-export default createClass({
+export default createReactClass({
 	getInitialState() {
 		return {
 			isSelected: 0,

@@ -1,10 +1,10 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { Button, DropMenu } from '../../../index';
 
 const { Control, Option } = DropMenu;
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<DropMenu isDisabled>

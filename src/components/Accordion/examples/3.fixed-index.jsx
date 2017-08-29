@@ -1,8 +1,8 @@
 import React from 'react';
 import { Accordion } from '../../../index';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<Accordion selectedIndex={1}>

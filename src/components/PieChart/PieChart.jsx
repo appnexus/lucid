@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 import * as d3Shape from 'd3-shape';
 import * as chartConstants from '../../constants/charts';
 import { buildHybridComponent } from '../../util/state-management';
@@ -28,7 +31,7 @@ const INNER_RADIUS = 0.5;
  * parity with the other charts even though pie charts are really just key value
  * based.
  */
-const PieChart = createClass({
+const PieChart = createReactClass({
 	displayName: 'PieChart',
 
 	reducers,

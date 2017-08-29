@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { DateUtils } from 'react-day-picker';
 import { Button } from '../../../index';
 import CalendarMonth from '../CalendarMonth';
 
-export default createClass({
+export default createReactClass({
 	getInitialState() {
 		return {
 			offset: 0,

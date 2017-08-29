@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass as createReactClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-FileIcon');
 
@@ -12,7 +12,7 @@ const cx = lucidClassNames.bind('&-FileIcon');
  *
  * An icon for a file.
  */
-const FileIcon = createClass({
+const FileIcon = createReactClass({
 	displayName: 'FileIcon',
 	propTypes: {
 		...Icon.propTypes,

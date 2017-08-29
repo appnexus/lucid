@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React, { createElement } from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	getFirst,
+	omitProps,
+} from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 
 import TextField from '../TextField/TextField';
@@ -20,7 +24,7 @@ const { bool, func, node, number, oneOfType, string } = PropTypes;
 * This is a wrapper around TextField that styles it for a search use-case. The
 * icon and TextField are customizable through child components.
 */
-const SearchField = createClass({
+const SearchField = createReactClass({
 	displayName: 'SearchField',
 
 	components: {
@@ -32,7 +36,7 @@ const SearchField = createClass({
 		 * Icon this is displayed on the right side of the SearchField. Any of the
 		 * lucid `*Icon` components should work.
 		 */
-		Icon: createClass({
+		Icon: createReactClass({
 			displayName: 'SearchField.Icon',
 			propName: 'Icon',
 		}),

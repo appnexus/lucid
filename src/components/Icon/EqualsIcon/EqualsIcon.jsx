@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass, omitProps } from '../../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-EqualsIcon');
 
@@ -12,7 +15,7 @@ const cx = lucidClassNames.bind('&-EqualsIcon');
  *
  * An equals icon.
  */
-const EqualsIcon = createClass({
+const EqualsIcon = createReactClass({
 	displayName: 'EqualsIcon',
 	propTypes: {
 		...Icon.propTypes,

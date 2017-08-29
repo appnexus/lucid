@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 import Checkbox from '../Checkbox/Checkbox';
 
 const cx = lucidClassNames.bind('&-CheckboxLabeled');
@@ -14,14 +18,14 @@ const { any, node, object, string } = PropTypes;
  * This is a composite of the `Checkbox` component and the native `label`
  * element.
  */
-const CheckboxLabeled = createClass({
+const CheckboxLabeled = createReactClass({
 	displayName: 'CheckboxLabeled',
 
 	components: {
 		/*
 		 * Renders a `<label>` for the `<Checkbox>`
 		 */
-		Label: createClass({
+		Label: createReactClass({
 			displayName: 'CheckboxLabeled.Label',
 			propName: 'Label',
 			propTypes: {

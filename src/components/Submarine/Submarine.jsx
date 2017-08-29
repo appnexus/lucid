@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
+	createClass as createReactClass,
 	filterTypes,
 	findTypes,
 	omitProps,
@@ -24,7 +24,7 @@ const { any, bool, func, node, number, string, oneOf, oneOfType } = PropTypes;
  *
  * `Submarine` renders a collapsible, resizeable side bar panel next to primary content.
  */
-const Submarine = createClass({
+const Submarine = createReactClass({
 	displayName: 'Submarine',
 
 	reducers,
@@ -94,7 +94,7 @@ const Submarine = createClass({
 	},
 
 	components: {
-		Bar: createClass({
+		Bar: createReactClass({
 			displayName: 'Submarine.Bar',
 			propTypes: {
 				/**
@@ -108,7 +108,7 @@ const Submarine = createClass({
 			},
 		}),
 
-		Primary: createClass({
+		Primary: createReactClass({
 			displayName: 'SplitHorizontal.Primary',
 			propTypes: {
 				/**
@@ -118,7 +118,7 @@ const Submarine = createClass({
 			},
 		}),
 
-		Title: createClass({
+		Title: createReactClass({
 			displayName: 'Submarine.Title',
 			propName: ['Title'],
 			propTypes: {

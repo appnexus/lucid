@@ -8,7 +8,7 @@ import { withRouter, Switch } from 'react-router';
 import { HashRouter, Link, Route } from 'react-router-dom';
 import docgenMapRaw from './docgen.json'; // eslint-disable-line
 import { handleHighlightCode, toMarkdown, sanitizeExamplePath } from './util';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import querystring from 'querystring';
 
 import ColorPalette from './containers/color-palette';
@@ -115,7 +115,7 @@ const examplesByComponent = _.flow(
 
 const { oneOfType, shape, object, array, string, node, any, bool } = PropTypes;
 
-const PropType = createClass({
+const PropType = createReactClass({
 	propTypes: {
 		componentName: string.isRequired,
 		type: oneOfType([
@@ -177,7 +177,7 @@ const PropType = createClass({
 	},
 });
 
-const Component = createClass({
+const Component = createReactClass({
 	propTypes: {
 		match: shape({
 			params: shape({
@@ -482,7 +482,7 @@ const Component = createClass({
 	},
 });
 
-const App = createClass({
+const App = createReactClass({
 	getInitialState() {
 		return {
 			search: '',
@@ -672,7 +672,7 @@ const testExamplesMap = _.reduce(
 
 const testExampleKeys = _.keys(testExamplesMap);
 
-const TestList = createClass({
+const TestList = createReactClass({
 	render() {
 		// gross hack to pass the list of examples to the screenshot test scaffold
 		window.examples = testExampleKeys;
@@ -690,7 +690,7 @@ const TestList = createClass({
 	},
 });
 
-const Test = createClass({
+const Test = createReactClass({
 	propTypes: { params: any },
 	render() {
 		const Example = testExamplesMap[this.props.params.exampleKey];

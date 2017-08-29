@@ -3,7 +3,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	getFirst,
+	omitProps,
+} from '../../util/component-types';
 import Switch from '../Switch/Switch';
 
 const cx = lucidClassNames.bind('&-SwitchLabeled');
@@ -15,14 +19,14 @@ const { any, node, object, string } = PropTypes;
  * This is a composite of the `Switch` component and the native `label`
  * element.
  */
-const SwitchLabeled = createClass({
+const SwitchLabeled = createReactClass({
 	displayName: 'SwitchLabeled',
 
 	components: {
 		/**
 		 * Label to be shown alongside the switch.
 		 */
-		Label: createClass({
+		Label: createReactClass({
 			displayName: 'SwitchLabeled.Label',
 			propName: 'Label',
 			propTypes: {

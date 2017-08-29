@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 import { transformFromCenter } from '../../util/chart-helpers';
 import * as chartConstants from '../../constants/charts';
 
@@ -28,7 +31,7 @@ const PATHS = [
  * Points are typically used for scatter plots or overlaying shapes on lines.
  *
  */
-const Point = createClass({
+const Point = createReactClass({
 	displayName: 'Point',
 
 	propTypes: {

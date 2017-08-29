@@ -1,8 +1,8 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { RadioButton } from '../../../index';
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<ul>

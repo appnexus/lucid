@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, rejectTypes } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	getFirst,
+	rejectTypes,
+} from '../../util/component-types';
 import OverlayWrapper from '../OverlayWrapper/OverlayWrapper';
 import LoadingMessage from '../LoadingMessage/LoadingMessage';
 
@@ -17,7 +21,7 @@ const { bool, node, oneOf, string } = PropTypes;
  * A loading indicator wrapper with optional overlay.
  *
  */
-const LoadingIndicator = createClass({
+const LoadingIndicator = createReactClass({
 	displayName: 'LoadingIndicator',
 	propTypes: {
 		/**

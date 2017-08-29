@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 import { groupByFields } from '../../util/chart-helpers';
 import * as d3Shape from 'd3-shape';
 import * as chartConstants from '../../constants/charts';
@@ -20,7 +23,7 @@ const { arrayOf, func, number, object, bool, string } = PropTypes;
  *
  * Lines are typically used to represent continuous data and can be stacked.
  */
-const Lines = createClass({
+const Lines = createReactClass({
 	displayName: 'Lines',
 
 	propTypes: {

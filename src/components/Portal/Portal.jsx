@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 
 const cx = lucidClassNames.bind('&-Portal');
@@ -15,7 +18,7 @@ const { any, node, string } = PropTypes;
  * A Portal component is used to render content in a container that is appended
  * to `document.body`.
  */
-const Portal = createClass({
+const Portal = createReactClass({
 	displayName: 'Portal',
 	propTypes: {
 		/**

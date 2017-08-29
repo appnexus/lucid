@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
+	createClass as createReactClass,
 	getFirst,
 	findTypes,
 	omitProps,
@@ -22,7 +22,7 @@ const { any, bool, func, node, number, string } = PropTypes;
  * and `Title` can be inferred from the parent `Tabs` component, but directly
  * provided `props` will take precedence.
  */
-const Tab = createClass({
+const Tab = createReactClass({
 	displayName: 'Tabs.Tab',
 
 	propName: 'Tab',
@@ -137,7 +137,7 @@ const Tab = createClass({
  * `Tabs` provides tabbed navigation. It has a flexible interface that allows
  * tab content to be passed as regular React children or through props.
  */
-const Tabs = createClass({
+const Tabs = createReactClass({
 	displayName: 'Tabs',
 
 	components: {
@@ -145,7 +145,7 @@ const Tabs = createClass({
 		/**
 		 * Titles can be provided as a child or prop to a Tab.
 		 */
-		Title: createClass({
+		Title: createReactClass({
 			displayName: 'Tabs.Title',
 			propName: 'Title',
 		}),

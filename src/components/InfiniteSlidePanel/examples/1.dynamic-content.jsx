@@ -1,5 +1,5 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { Button } from '../../../index';
 import InfiniteSlidePanel from '../InfiniteSlidePanel';
 
@@ -10,7 +10,7 @@ const generateRGB = n => {
 	return `rgb(${R},${G},${B})`;
 };
 
-export default createClass({
+export default createReactClass({
 	getInitialState() {
 		return {
 			offset: 0,

@@ -1,10 +1,10 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { Panel, Table } from '../../../index';
 
 const { Thead, Tbody, Th, Tr, Td } = Table;
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<Panel isGutterless={true}>

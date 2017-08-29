@@ -4,7 +4,7 @@ import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 import {
-	createClass,
+	createClass as createReactClass,
 	filterTypes,
 	rejectTypes,
 	omitProps,
@@ -20,7 +20,7 @@ const { bool, func, node, string } = PropTypes;
  * Organizes items into removable items or groups. Can be nested to facilitate
  * grouping.
  */
-const Tag = createClass({
+const Tag = createReactClass({
 	displayName: 'Tag',
 
 	propTypes: {

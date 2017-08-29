@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Button');
 
@@ -16,7 +19,7 @@ const { arrayOf, bool, func, node, oneOf, oneOfType, string } = PropTypes;
  * A basic button. Any props that are not explicitly called out below will be
  * passed through to the native `button` component.
  */
-const Button = createClass({
+const Button = createReactClass({
 	displayName: 'Button',
 	propName: 'Button',
 	propTypes: {

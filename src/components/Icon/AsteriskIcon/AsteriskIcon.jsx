@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass, omitProps } from '../../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-AsteriskIcon');
 
@@ -12,7 +15,7 @@ const cx = lucidClassNames.bind('&-AsteriskIcon');
  *
  * An asterisk icon.
  */
-const AsteriskIcon = createClass({
+const AsteriskIcon = createReactClass({
 	displayName: 'AsteriskIcon',
 	propTypes: {
 		...Icon.propTypes,

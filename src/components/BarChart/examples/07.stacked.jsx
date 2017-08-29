@@ -1,5 +1,5 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import BarChart from '../BarChart';
 
 const data = [
@@ -8,7 +8,7 @@ const data = [
 	{ x: 'Wednesday', apples: 5, pears: 15, peaches: 5 },
 ];
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<div>
