@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass as createReactClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-CalendarIcon');
 
@@ -12,7 +12,7 @@ const cx = lucidClassNames.bind('&-CalendarIcon');
  *
  * An icon for calendar-y things.
  */
-const CalendarIcon = createClass({
+const CalendarIcon = createReactClass({
 	displayName: 'CalendarIcon',
 	propTypes: {
 		...Icon.propTypes,

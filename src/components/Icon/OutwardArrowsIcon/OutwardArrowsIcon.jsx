@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass as createReactClass } from '../../../util/component-types';
 
 const { oneOf } = PropTypes;
 
@@ -20,7 +20,7 @@ const paths = {
  *
  * Typically used to denote width, height, or aspect ratio.
  */
-const OutwardArrowsIcon = createClass({
+const OutwardArrowsIcon = createReactClass({
 	displayName: 'OutwardArrowsIcon',
 
 	propTypes: {

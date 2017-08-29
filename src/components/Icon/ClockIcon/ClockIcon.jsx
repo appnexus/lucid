@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass as createReactClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ClockIcon');
 
@@ -11,7 +11,7 @@ const cx = lucidClassNames.bind('&-ClockIcon');
  *
  * Typically used for time-sensitive stuff.
  */
-const ClockIcon = createClass({
+const ClockIcon = createReactClass({
 	displayName: 'ClockIcon',
 	propTypes: {
 		...Icon.propTypes,

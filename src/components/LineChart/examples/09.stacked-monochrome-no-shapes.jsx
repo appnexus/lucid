@@ -1,5 +1,5 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { LineChart, chartConstants } from '../../../index';
 
 const data = [
@@ -53,7 +53,7 @@ const data = [
 	},
 ];
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<LineChart

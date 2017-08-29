@@ -8,7 +8,7 @@ import InfoIcon from '../Icon/InfoIcon/InfoIcon';
 import WarningIcon from '../Icon/WarningIcon/WarningIcon';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
+	createClass as createReactClass,
 	omitProps,
 	getFirst,
 	filterTypes,
@@ -61,16 +61,16 @@ function defaultIcon(kind, responsiveMode) {
  * Used to indicate selections. It's very similar to `Tag` but is meant to be
  * used in areas of the UI that have more space available to them.
  */
-const Selection = createClass({
+const Selection = createReactClass({
 	displayName: 'Selection',
 
 	components: {
-		Label: createClass({
+		Label: createReactClass({
 			displayName: 'Selection.Label',
 			propName: 'Label',
 		}),
 
-		Icon: createClass({
+		Icon: createReactClass({
 			displayName: 'Selection.Icon',
 			propName: 'Icon',
 		}),

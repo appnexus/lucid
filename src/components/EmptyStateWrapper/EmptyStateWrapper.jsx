@@ -1,7 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { createClass, getFirst, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	getFirst,
+	omitProps,
+} from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
@@ -18,7 +22,7 @@ const { any, bool, node, string } = PropTypes;
  * A wrapper which can display either a `LoadingIndicator` or `OverlayWrapper`.
  *
  */
-const EmptyStateWrapper = createClass({
+const EmptyStateWrapper = createReactClass({
 	_isPrivate: true,
 
 	displayName: 'EmptyStateWrapper',
@@ -58,14 +62,14 @@ const EmptyStateWrapper = createClass({
 		/**
 		 * Body content for the message to display when there is no data.
 		 */
-		Body: createClass({
+		Body: createReactClass({
 			displayName: 'EmptyStateWrapper.Body',
 			propName: 'Body',
 		}),
 		/**
 		 * Title text for the message to display when there is no data.
 		 */
-		Title: createClass({
+		Title: createReactClass({
 			displayName: 'EmptyStateWrapper.Title',
 			propName: 'Title',
 		}),

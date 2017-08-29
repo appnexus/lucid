@@ -1,10 +1,10 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { SingleSelect } from '../../../index';
 
 const { Placeholder, Option } = SingleSelect;
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<section style={{ minHeight: 90 }}>

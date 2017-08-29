@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Grid');
 
@@ -15,14 +19,14 @@ const { string, bool, node } = PropTypes;
  * You can use the Grid components themselves or create your own components using the Grid styles from Grid.less.
  * Please see examples for more information.
  */
-const Grid = createClass({
+const Grid = createReactClass({
 	displayName: 'Grid',
 
 	components: {
 		/**
 		 * Renders an `<article>` as the grid cell
 		 */
-		Cell: createClass({
+		Cell: createReactClass({
 			displayName: 'Grid.Cell',
 			propTypes: {
 				/**

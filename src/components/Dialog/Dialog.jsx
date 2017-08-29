@@ -3,7 +3,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Overlay from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	getFirst,
+	omitProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Dialog');
 
@@ -19,21 +23,21 @@ const LARGE = 'large';
  * Dialog is used to pop open a window so the user doesn't lose the context of
  * the page behind it. Extra props are spread through to the underlying `Overlay`
  */
-const Dialog = createClass({
+const Dialog = createReactClass({
 	displayName: 'Dialog',
 
 	components: {
 		/**
 		 * Renders a `<header>`.
 		 */
-		Header: createClass({
+		Header: createReactClass({
 			displayName: 'Dialog.Header',
 			propName: 'Header',
 		}),
 		/**
 		 * Renders a `<footer>`.
 		 */
-		Footer: createClass({
+		Footer: createReactClass({
 			displayName: 'Dialog.Footer',
 			propName: 'Footer',
 		}),

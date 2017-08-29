@@ -1,8 +1,8 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { BarChart, OverlayWrapper } from '../../../index';
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<OverlayWrapper isVisible>

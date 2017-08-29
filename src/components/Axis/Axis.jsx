@@ -3,7 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { discreteTicks } from '../../util/chart-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Axis');
 
@@ -21,7 +24,7 @@ const { string, array, func, number, oneOf } = PropTypes;
  * This component is a very close sister to d3's svg axis and most of the logic
  * was ported from there.
  */
-const Axis = createClass({
+const Axis = createReactClass({
 	displayName: 'Axis',
 
 	propTypes: {

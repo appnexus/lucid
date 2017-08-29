@@ -1,8 +1,8 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { SplitButton } from '../../../index';
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<div style={{ height: 100 }}>

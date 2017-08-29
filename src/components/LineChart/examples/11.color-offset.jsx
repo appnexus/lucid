@@ -1,5 +1,5 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { LineChart } from '../../../index';
 
 const data = [
@@ -20,7 +20,7 @@ const data = [
 	{ x: new Date('2015-01-15T00:00:00-08:00'), apples: 165, pears: 113 },
 ];
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<LineChart

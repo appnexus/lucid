@@ -1,5 +1,5 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import BarChart from '../BarChart';
 import * as formatters from '../../../util/formatters';
 
@@ -10,7 +10,7 @@ const data = [
 	{ x: '2015-01-04', y: 3000 },
 ];
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<div>

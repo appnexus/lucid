@@ -1,10 +1,10 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { SearchableMultiSelect } from '../../../index';
 
 const { Option, OptionGroup } = SearchableMultiSelect;
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<SearchableMultiSelect

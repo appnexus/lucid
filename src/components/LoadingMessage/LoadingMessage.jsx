@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	getFirst,
+	omitProps,
+} from '../../util/component-types';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 
 const cx = lucidClassNames.bind('&-LoadingMessage');
@@ -16,7 +20,7 @@ const { any, node, string } = PropTypes;
  * A loading message.
  *
  */
-const LoadingMessage = createClass({
+const LoadingMessage = createReactClass({
 	displayName: 'LoadingMessage',
 	_isPrivate: true,
 	propTypes: {
@@ -46,7 +50,7 @@ const LoadingMessage = createClass({
 		/**
 		 * Renders the `Icon` element passed in
 		 */
-		Icon: createClass({
+		Icon: createReactClass({
 			displayName: 'LoadingMessage.Icon',
 			propName: 'Icon',
 		}),
@@ -54,14 +58,14 @@ const LoadingMessage = createClass({
 		 * Renders an `<h3>` that represents the title of the `LoadingMessage`.
 		 * Defaults to the string "Loading".
 		 */
-		Title: createClass({
+		Title: createReactClass({
 			displayName: 'LoadingMessage.Title',
 			propName: 'Title',
 		}),
 		/**
 		 * Renders an `<span>` that represents the body of the `LoadingMessage`.
 		 */
-		Body: createClass({
+		Body: createReactClass({
 			displayName: 'LoadingMessage.Body',
 			propName: 'Body',
 		}),

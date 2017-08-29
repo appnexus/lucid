@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 import elementResizeDetectorMaker from 'element-resize-detector';
 
 const cx = lucidClassNames.bind('&-Resizer');
@@ -16,7 +19,7 @@ const { func, string } = PropTypes;
  * you to pass a single function for children. It will then call that function
  * with new `width` and `height` values if the container size changes.
  */
-const Resizer = createClass({
+const Resizer = createReactClass({
 	displayName: 'Resizer',
 	propTypes: {
 		/**

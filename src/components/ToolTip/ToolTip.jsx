@@ -5,7 +5,11 @@ import ContextMenu from '../ContextMenu/ContextMenu';
 import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 import * as reducers from './ToolTip.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-ToolTip');
@@ -31,7 +35,7 @@ const { Target, FlyOut } = ContextMenu;
  * component.
  */
 
-const ToolTip = createClass({
+const ToolTip = createReactClass({
 	displayName: 'ToolTip',
 
 	reducers,
@@ -103,19 +107,19 @@ const ToolTip = createClass({
 		/**
 		 * The hover target that will trigger the ToolTip to be displayed.
 		 */
-		Target: createClass({
+		Target: createReactClass({
 			displayName: 'ToolTip.Target',
 		}),
 		/**
 		 * The title displayed at the top of the ToolTip.
 		 */
-		Title: createClass({
+		Title: createReactClass({
 			displayName: 'ToolTip.Title',
 		}),
 		/**
 		 * The body of the ToolTip displayed below the Title.
 		 */
-		Body: createClass({
+		Body: createReactClass({
 			displayName: 'ToolTip.Body',
 		}),
 	},

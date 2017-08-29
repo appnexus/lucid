@@ -1,9 +1,9 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { DateUtils } from 'react-day-picker';
 import { DateSelect } from '../../../index';
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<section style={{ maxWidth: 400 }}>

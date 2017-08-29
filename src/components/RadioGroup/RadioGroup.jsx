@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
+	createClass as createReactClass,
 	getFirst,
 	findTypes,
 	rejectTypes,
@@ -28,7 +28,7 @@ const { func, node, number, string, bool } = PropTypes;
  * Any props that are not explicitly defined in `propTypes` are spread onto the
  * root element.
  */
-const RadioGroup = createClass({
+const RadioGroup = createReactClass({
 	displayName: 'RadioGroup',
 
 	components: {
@@ -38,7 +38,7 @@ const RadioGroup = createClass({
 		 * Support radio button labels as `RadioGroup.Label` component which can
 		 * be provided as a child of a `RadioGroup.RadioButton` component.
 		 */
-		Label: createClass({
+		Label: createReactClass({
 			displayName: 'RadioGroup.Label',
 			propTypes: {
 				children: node,

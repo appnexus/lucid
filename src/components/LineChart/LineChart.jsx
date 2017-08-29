@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	getFirst,
+	omitProps,
+} from '../../util/component-types';
 import {
 	minByFields,
 	maxByFields,
@@ -44,7 +48,7 @@ const {
  * on the x axis and numeric values on the y. If you need discrete values on
  * the x axis, consider using the `BarChart` instead.
  */
-const LineChart = createClass({
+const LineChart = createReactClass({
 	displayName: 'LineChart',
 
 	propTypes: {

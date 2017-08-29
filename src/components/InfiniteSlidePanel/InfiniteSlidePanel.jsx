@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	getFirst,
+	omitProps,
+} from '../../util/component-types';
 import SlidePanel from '../SlidePanel/SlidePanel';
 
 const cx = lucidClassNames.bind('&-InfiniteSlidePanel');
@@ -18,12 +22,12 @@ const modulo = (n, a) => a - n * Math.floor(a / n);
  * touch events to update the `offset`. This component is made from SlidePanel,
  * so it accepts the same props.
  */
-const InfiniteSlidePanel = createClass({
+const InfiniteSlidePanel = createReactClass({
 	displayName: 'InfiniteSlidePanel',
 	_isPrivate: true,
 
 	components: {
-		Slide: createClass({
+		Slide: createReactClass({
 			displayName: 'InfiniteSlidePanel.Slide',
 			propName: 'Slide',
 		}),

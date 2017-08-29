@@ -15,7 +15,7 @@ import {
 	safeMerge,
 	buildHybridComponent,
 } from './state-management';
-import { createClass } from './component-types';
+import { createClass as createReactClass } from './component-types';
 
 describe('#getDeepPaths', () => {
 	it('should return an empty array when arg is empty object, null, or undefined', () => {
@@ -574,7 +574,7 @@ describe('#safeMerge', () => {
 });
 
 describe('#buildHybridComponent', () => {
-	const CounterDumb = createClass({
+	const CounterDumb = createReactClass({
 		displayName: 'Counter',
 		propTypes: {
 			count: PropTypes.number,

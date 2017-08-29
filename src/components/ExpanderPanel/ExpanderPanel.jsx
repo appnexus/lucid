@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	getFirst,
+	omitProps,
+} from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
@@ -21,14 +25,14 @@ const { any, bool, func, node, object, string } = PropTypes;
  * This is a container that provides a toggle that controls when the content is
  * shown.
  */
-const ExpanderPanel = createClass({
+const ExpanderPanel = createReactClass({
 	displayName: 'ExpanderPanel',
 
 	components: {
 		/**
 		 * Renders a `<span>` of content next to the `ChevronIcon` in the `Panel.Header`
 		 */
-		Header: createClass({
+		Header: createReactClass({
 			displayName: 'ExpanderPanel.Header',
 			propName: 'Header',
 			propTypes: {

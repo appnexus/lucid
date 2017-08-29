@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
+	createClass as createReactClass,
 	filterTypes,
 	findTypes,
 	omitProps,
@@ -34,7 +34,7 @@ const {
  *
  * `Sidebar` renders a collapsible, resizeable side bar panel next to primary content.
  */
-const Sidebar = createClass({
+const Sidebar = createReactClass({
 	displayName: 'Sidebar',
 
 	reducers,
@@ -107,7 +107,7 @@ const Sidebar = createClass({
 		/**
 		 * Content to be placed alongside the Primary pane.
 		 */
-		Bar: createClass({
+		Bar: createReactClass({
 			displayName: 'Sidebar.Bar',
 			propTypes: {
 				/**
@@ -137,7 +137,7 @@ const Sidebar = createClass({
 		/**
 		 * Main pane content that will have a paired `Bar`.
 		 */
-		Primary: createClass({
+		Primary: createReactClass({
 			displayName: 'SplitVertical.Primary',
 			propTypes: {
 				/**
@@ -151,7 +151,7 @@ const Sidebar = createClass({
 		 * Content that will be displayed as the title of the Bar. It's only shown
 		 * when the user has the Bar expanded.
 		 */
-		Title: createClass({
+		Title: createReactClass({
 			displayName: 'Sidebar.Title',
 			propName: ['Title', 'title'],
 			propTypes: {

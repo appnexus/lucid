@@ -1,10 +1,10 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { SearchableMultiSelect, Resizer } from '../../../index';
 
 const { Option } = SearchableMultiSelect;
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<Resizer>

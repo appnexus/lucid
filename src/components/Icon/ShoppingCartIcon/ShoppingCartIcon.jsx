@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass as createReactClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ShoppingCartIcon');
 
@@ -12,7 +12,7 @@ const cx = lucidClassNames.bind('&-ShoppingCartIcon');
  *
  * Buy buy buy!
  */
-const ShoppingCartIcon = createClass({
+const ShoppingCartIcon = createReactClass({
 	displayName: 'ShoppingCartIcon',
 	propTypes: {
 		...Icon.propTypes,

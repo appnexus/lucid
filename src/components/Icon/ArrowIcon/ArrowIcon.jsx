@@ -3,7 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass, omitProps } from '../../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ArrowIcon');
 
@@ -15,7 +18,7 @@ const { oneOf } = PropTypes;
  *
  * An arrow icon.
  */
-const ArrowIcon = createClass({
+const ArrowIcon = createReactClass({
 	displayName: 'ArrowIcon',
 	propTypes: {
 		...Icon.propTypes,

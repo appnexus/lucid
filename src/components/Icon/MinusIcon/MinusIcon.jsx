@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass, omitProps } from '../../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-MinusIcon');
 
@@ -12,7 +15,7 @@ const cx = lucidClassNames.bind('&-MinusIcon');
  *
  * A minus icon.
  */
-const MinusIcon = createClass({
+const MinusIcon = createReactClass({
 	displayName: 'MinusIcon',
 	propTypes: {
 		...Icon.propTypes,

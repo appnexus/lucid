@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Switch');
 const { bool, func, object, string } = PropTypes;
@@ -17,7 +20,7 @@ const { bool, func, object, string } = PropTypes;
  * It uses a hidden native check box control under the hood but leverages other
  * HTML elements to visualize its state.
  */
-const Switch = createClass({
+const Switch = createReactClass({
 	displayName: 'Switch',
 	propTypes: {
 		/**

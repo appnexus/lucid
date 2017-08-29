@@ -1,11 +1,11 @@
 import _ from 'lodash';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import React from 'react';
 import { Breadcrumb } from '../../../index';
 
 const { Item } = Breadcrumb;
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<Breadcrumb>

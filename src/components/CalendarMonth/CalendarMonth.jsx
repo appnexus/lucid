@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DayPicker, { DateUtils } from 'react-day-picker';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass as createReactClass } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-CalendarMonth');
 
@@ -13,7 +13,7 @@ const { bool, instanceOf, number, oneOf, string } = PropTypes;
  *
  * A single calendar month based on `react-day-picker`.
  */
-const CalendarMonth = createClass({
+const CalendarMonth = createReactClass({
 	displayName: 'CalendarMonth',
 	_isPrivate: true,
 

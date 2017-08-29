@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass, omitProps } from '../../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-TableGearIcon');
 
@@ -13,7 +16,7 @@ const cx = lucidClassNames.bind('&-TableGearIcon');
  * A table configuration Icon.
  */
 
-const TableGearIcon = createClass({
+const TableGearIcon = createReactClass({
 	displayName: 'TableGearIcon',
 	propTypes: {
 		...Icon.propTypes,

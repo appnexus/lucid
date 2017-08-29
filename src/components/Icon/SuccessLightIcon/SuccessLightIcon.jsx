@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass as createReactClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SuccessLightIcon');
 
@@ -12,7 +12,7 @@ const cx = lucidClassNames.bind('&-SuccessLightIcon');
  *
  * Nothing like a mild success in the morning to get the blood flowing!
  */
-const SuccessLightIcon = createClass({
+const SuccessLightIcon = createReactClass({
 	displayName: 'SuccessLightIcon',
 	propTypes: {
 		...Icon.propTypes,

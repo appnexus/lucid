@@ -1,5 +1,5 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { LineChart, chartConstants } from '../../../index';
 
 const data = [
@@ -33,7 +33,7 @@ const data = [
 const yFormatter = d => `${d / 1000}k`;
 const xFormatter = d => `${d.getMonth() + 1}-${d.getDate()}`;
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<LineChart

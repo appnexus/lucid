@@ -5,7 +5,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { buildHybridComponent } from '../../util/state-management';
 import { partitionText, propsSearch } from '../../util/text-manipulation';
 import {
-	createClass,
+	createClass as createReactClass,
 	omitProps,
 	getFirst,
 	findTypes,
@@ -41,7 +41,7 @@ const cx = lucidClassNames.bind('&-SearchableMultiSelect');
  * A control used to select multiple options from a dropdown list using a
  * SearchField.
  */
-const SearchableMultiSelect = createClass({
+const SearchableMultiSelect = createReactClass({
 	displayName: 'SearchableMultiSelect',
 
 	reducers,
@@ -50,12 +50,12 @@ const SearchableMultiSelect = createClass({
 		/**
 		 * A selectable option in the list.
 		 */
-		Option: createClass({
+		Option: createReactClass({
 			displayName: 'SearchableMultiSelect.Option',
 			propName: 'Option',
 			propTypes: DropMenu.Option.propTypes,
 			components: {
-				Selection: createClass({
+				Selection: createReactClass({
 					displayName: 'SearchableMultiSelect.Option.Selection',
 					propName: 'Selection',
 					propTypes: Selection.propTypes,
@@ -65,7 +65,7 @@ const SearchableMultiSelect = createClass({
 		/**
 		 * Passes props through to the `SearchField` component.
 		 */
-		SearchField: createClass({
+		SearchField: createReactClass({
 			displayName: 'SearchableMultiSelect.SearchField',
 			propName: 'SearchField',
 			propTypes: SearchField.propTypes,
@@ -74,7 +74,7 @@ const SearchableMultiSelect = createClass({
 		/**
 		 * Groups `Option`s together with a non-selectable heading.
 		 */
-		OptionGroup: createClass({
+		OptionGroup: createReactClass({
 			displayName: 'SearchableMultiSelect.OptionGroup',
 			propName: 'OptionGroup',
 			propTypes: DropMenu.OptionGroup.propTypes,
@@ -83,7 +83,7 @@ const SearchableMultiSelect = createClass({
 		/**
 		 * Label for the selected section header.
 		 */
-		SelectionLabel: createClass({
+		SelectionLabel: createReactClass({
 			displayName: 'SearchableMultiSelect.SelectionLabel',
 			propName: 'SelectionLabel',
 		}),

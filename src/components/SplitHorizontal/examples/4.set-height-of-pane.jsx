@@ -1,8 +1,8 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { SplitHorizontal } from '../../../index';
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<section style={{ height: 300, outline: '1px solid #e3e3e3' }}>

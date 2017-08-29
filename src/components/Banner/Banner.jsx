@@ -3,7 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 import DangerIcon from '../Icon/DangerIcon/DangerIcon';
 import InfoIcon from '../Icon/InfoIcon/InfoIcon';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
@@ -34,7 +37,7 @@ const defaultIcons = {
  *
  * It is valid to use `strong` or `em` within a `Banner` message.
  */
-const Banner = createClass({
+const Banner = createReactClass({
 	displayName: 'Banner',
 	propTypes: {
 		/**

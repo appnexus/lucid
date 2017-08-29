@@ -70,7 +70,7 @@ describe('MyNewComponent', () => {
 
 ## Code styling
 
-- We use our own wrapper around `createClass` only, no ES6 classes.
+- We use our own wrapper around `createReactClass` only, no ES6 classes.
 - Folders should use kebab case e.g. "this-is-a-folder/and-a-javascript-file.js".
 - Components should use start case e.g.:
   - "MyComponent"

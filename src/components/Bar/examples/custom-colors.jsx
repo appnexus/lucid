@@ -1,5 +1,5 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { Bar } from '../../../index';
 
 const svgProps = {
@@ -14,7 +14,7 @@ const pointProps = {
 	height: 100,
 };
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<div>

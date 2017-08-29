@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
+	createClass as createReactClass,
 	findTypes,
 	filterTypes,
 	getFirst,
@@ -26,7 +26,7 @@ const { any, func, number, object, string, bool, arrayOf } = PropTypes;
  *
  * `DataTable` provides a simple abstraction over the `Table` component to make it easier to define data-driven tables and render an array of objects.
  */
-const DataTable = createClass({
+const DataTable = createReactClass({
 	displayName: 'DataTable',
 
 	propTypes: {
@@ -118,7 +118,7 @@ const DataTable = createClass({
 		/**
 		 * Renders a `Th` for the table. It accepts all the props of `Table.Th`
 		 */
-		Column: createClass({
+		Column: createReactClass({
 			displayName: 'DataTable.Column',
 			propName: 'Column',
 			propTypes: {
@@ -129,7 +129,7 @@ const DataTable = createClass({
 		/**
 		 * Renders a group of `Th`s.  It accepts all the props of Table.Th
 		 */
-		ColumnGroup: createClass({
+		ColumnGroup: createReactClass({
 			displayName: 'DataTable.ColumnGroup',
 			propName: 'ColumnGroup',
 			propTypes: {

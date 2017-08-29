@@ -4,7 +4,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { buildHybridComponent } from '../../util/state-management';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, getFirst, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	getFirst,
+	omitProps,
+} from '../../util/component-types';
 import * as reducers from './DateSelect.reducers';
 import InfiniteSlidePanel from '../InfiniteSlidePanel/InfiniteSlidePanel';
 import CalendarMonth from '../CalendarMonth/CalendarMonth';
@@ -24,14 +28,14 @@ const { any, bool, func, instanceOf, number, oneOf, string } = PropTypes;
  * Date selection component capabaple of supporting single date and date range
  * selections.
  */
-const DateSelect = createClass({
+const DateSelect = createReactClass({
 	displayName: 'DateSelect',
 
 	components: {
 		/**
 		 * Child component to pass thru props to underlying CalendarMonth.
 		 */
-		CalendarMonth: createClass({
+		CalendarMonth: createReactClass({
 			displayName: 'DateSelect.CalendarMonth',
 			propName: 'CalendarMonth',
 		}),

@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass as createReactClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-AnalyzeDataIcon');
 
@@ -12,7 +12,7 @@ const cx = lucidClassNames.bind('&-AnalyzeDataIcon');
  *
  * Typically used to show the user that further data analysis is available.
  */
-const AnalyzeDataIcon = createClass({
+const AnalyzeDataIcon = createReactClass({
 	displayName: 'AnalyzeDataIcon',
 	propTypes: {
 		...Icon.propTypes,

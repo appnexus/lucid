@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import { createClass } from '../../util/component-types';
+import { createClass as createReactClass } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { buildHybridComponent } from '../../util/state-management';
 import { partitionText } from '../../util/text-manipulation';
@@ -20,7 +20,7 @@ const { arrayOf, bool, func, object, shape, string } = PropTypes;
  * A text input with suggested values displayed in an attached menu.
  */
 
-const Autocomplete = createClass({
+const Autocomplete = createReactClass({
 	displayName: 'Autocomplete',
 
 	_isPrivate: true,

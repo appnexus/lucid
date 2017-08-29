@@ -1,10 +1,10 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { Button, Checkbox, SuccessIcon, Table } from '../../../index';
 
 const { Thead, Tbody, Tr, Th, Td } = Table;
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<Table density="compressed">

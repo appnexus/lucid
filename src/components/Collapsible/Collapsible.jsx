@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import { Motion, spring } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Collapsible');
 
@@ -15,7 +18,7 @@ const { any, bool, node, number, string } = PropTypes;
  *
  * This is a simple container that can render content as expanded or collapsed.
  */
-const Collapsible = createClass({
+const Collapsible = createReactClass({
 	displayName: 'Collapsible',
 	_isPrivate: true,
 

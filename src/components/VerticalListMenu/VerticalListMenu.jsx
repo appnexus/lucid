@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { bindClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './VerticalListMenu.reducers';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
@@ -21,7 +25,7 @@ const { func, arrayOf, bool, string, number, node, object, shape } = PropTypes;
  * selected at any given time; that is easily overridden by handling `onSelect`
  * yourself.
  */
-const VerticalListMenu = createClass({
+const VerticalListMenu = createReactClass({
 	displayName: 'VerticalListMenu',
 
 	reducers,
@@ -30,7 +34,7 @@ const VerticalListMenu = createClass({
 		/**
 		 * A child item that can contain content or another VerticalListMenu.
 		 */
-		Item: createClass({
+		Item: createReactClass({
 			displayName: 'VerticalListMenu.Item',
 			propTypes: {
 				/**

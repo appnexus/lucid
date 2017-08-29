@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass as createReactClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-FilterIcon');
 
@@ -12,7 +12,7 @@ const cx = lucidClassNames.bind('&-FilterIcon');
  *
  * Typically used to denote that something is filterable.
  */
-const FilterIcon = createClass({
+const FilterIcon = createReactClass({
 	displayName: 'FilterIcon',
 	propTypes: {
 		...Icon.propTypes,

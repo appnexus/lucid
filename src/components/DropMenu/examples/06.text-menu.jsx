@@ -1,10 +1,10 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { DropMenu, TextField } from '../../../index';
 
 const { Control, Option } = DropMenu;
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<DropMenu>

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { Point, chartConstants } from '../../../index';
 
 const svgProps = {
@@ -13,7 +13,7 @@ const pointProps = {
 	y: 10,
 };
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<div>

@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass as createReactClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DuplicateIcon');
 
@@ -12,7 +12,7 @@ const cx = lucidClassNames.bind('&-DuplicateIcon');
  *
  * Typically used when something can be duplicated.
  */
-const DuplicateIcon = createClass({
+const DuplicateIcon = createReactClass({
 	displayName: 'DuplicateIcon',
 	propTypes: {
 		...Icon.propTypes,

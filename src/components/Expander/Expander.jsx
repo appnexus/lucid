@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
+	createClass as createReactClass,
 	getFirst,
 	findTypes,
 	omitProps,
@@ -24,14 +24,14 @@ const { any, bool, func, node, object, oneOf, string } = PropTypes;
  * This is a container that provides a toggle that controls when the content is
  * shown.
  */
-const Expander = createClass({
+const Expander = createReactClass({
 	displayName: 'Expander',
 
 	components: {
 		/**
 		 * Renders a `<span>` to be shown next to the expander icon.
 		 */
-		Label: createClass({
+		Label: createReactClass({
 			displayName: 'Expander.Label',
 			propName: 'Label',
 			propTypes: {

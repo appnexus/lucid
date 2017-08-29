@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass, omitProps } from '../../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DangerIcon');
 
@@ -12,7 +15,7 @@ const cx = lucidClassNames.bind('&-DangerIcon');
  *
  * DANGER WILL ROBINSON DANGER
  */
-const DangerIcon = createClass({
+const DangerIcon = createReactClass({
 	displayName: 'DangerIcon',
 	propTypes: {
 		...Icon.propTypes,

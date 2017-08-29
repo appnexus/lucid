@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass, omitProps } from '../../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../../util/component-types';
 import Icon from '../Icon';
 
 const cx = lucidClassNames.bind('&-ChevronThinIcon');
@@ -14,7 +17,7 @@ const { oneOf } = PropTypes;
  *
  * A flat, thin chevron icon for directional navigation.
  */
-const ChevronThinIcon = createClass({
+const ChevronThinIcon = createReactClass({
 	displayName: 'ChevronThinIcon',
 	_isPrivate: true,
 

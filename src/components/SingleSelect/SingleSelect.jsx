@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	findTypes,
+} from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './SingleSelect.reducers';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
@@ -30,7 +33,7 @@ const {
  * Supports option groups with and without labels.
  */
 
-const SingleSelect = createClass({
+const SingleSelect = createReactClass({
 	displayName: 'SingleSelect',
 
 	reducers,
@@ -39,14 +42,14 @@ const SingleSelect = createClass({
 		/**
 		 * Content this is displayed when nothing is selected.
 		 */
-		Placeholder: createClass({
+		Placeholder: createReactClass({
 			displayName: 'SingleSelect.Placeholder',
 			propName: 'Placeholder',
 		}),
 		/**
 		 * A selectable option in the list.
 		 */
-		Option: createClass({
+		Option: createReactClass({
 			displayName: 'SingleSelect.Option',
 			propName: 'Option',
 			propTypes: DropMenu.Option.propTypes,
@@ -54,7 +57,7 @@ const SingleSelect = createClass({
 		/**
 		 * Groups `Option`s together with a non-selectable heading.
 		 */
-		OptionGroup: createClass({
+		OptionGroup: createReactClass({
 			displayName: 'SingleSelect.OptionGroup',
 			propName: 'OptionGroup',
 			propTypes: DropMenu.OptionGroup.propTypes,

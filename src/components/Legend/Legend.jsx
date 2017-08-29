@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 
 import Point from '../Point/Point';
 import Line from '../Line/Line';
@@ -24,7 +28,7 @@ const { number, string, oneOf, bool, func } = PropTypes;
  * DOM function `getComputedTextLength`. Variable widths are much more easy to
  * implement outside of svg.
  */
-const Legend = createClass({
+const Legend = createReactClass({
 	displayName: 'Legend',
 
 	statics: {
@@ -63,7 +67,7 @@ const Legend = createClass({
 		/**
 		 * Renders a `<li>` that describes the data series.
 		 */
-		Item: createClass({
+		Item: createReactClass({
 			displayName: 'Legend.Item',
 			propsName: 'Item',
 			propTypes: {

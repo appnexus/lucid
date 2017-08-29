@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass as createReactClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-GripperHorizontalIcon');
 
@@ -11,7 +11,7 @@ const cx = lucidClassNames.bind('&-GripperHorizontalIcon');
  *
  * A horizontal gripper icon.
  */
-const GripperHorizontalIcon = createClass({
+const GripperHorizontalIcon = createReactClass({
 	displayName: 'GripperHorizontalIcon',
 
 	_isPrivate: true,

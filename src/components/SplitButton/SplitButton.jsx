@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
+	createClass as createReactClass,
 	filterTypes,
 	getFirst,
 	omitProps,
@@ -27,7 +27,7 @@ const { any, bool, func, node, oneOf, shape, string } = PropTypes;
  * list of additional Buttons with actions which will be rendered within a
  * DropMenu.
  */
-const SplitButton = createClass({
+const SplitButton = createReactClass({
 	displayName: 'SplitButton',
 
 	components: {
@@ -36,7 +36,7 @@ const SplitButton = createClass({
 		 * first `Button` will be used as the Primary button, while all others will
 		 * be rendered within the `DropMenu` below.
 		 */
-		Button: createClass({
+		Button: createReactClass({
 			displayName: 'SplitButton.Button',
 			propTypes: {
 				/**

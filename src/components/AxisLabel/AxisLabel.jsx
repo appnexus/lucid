@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-AxisLabel');
 
@@ -15,7 +18,7 @@ const { number, string, oneOf, object } = PropTypes;
  *
  * Centered labels for axes that typically are fit into the margins of a chart.
  */
-const AxisLabel = createClass({
+const AxisLabel = createReactClass({
 	displayName: 'AxisLabel',
 
 	propTypes: {

@@ -1,9 +1,9 @@
 import _ from 'lodash';
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { VerticalListMenu } from '../../../index';
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<VerticalListMenu style={{ width: 250 }}>

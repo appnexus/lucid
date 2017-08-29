@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
+	createClass as createReactClass,
 	getFirst,
 	findTypes,
 	rejectTypes,
@@ -53,7 +53,7 @@ const {
  *
  * This is a helper component used to render a menu of options attached to any control. Supports option groups with and without labels as well as special options with a `null` index for unselect.
  */
-const DropMenu = createClass({
+const DropMenu = createReactClass({
 	displayName: 'DropMenu',
 
 	reducers,
@@ -62,21 +62,21 @@ const DropMenu = createClass({
 		/**
 		 * An optional header to be displayed within the expanded Flyout, above all `Option`s.
 		 */
-		Header: createClass({
+		Header: createReactClass({
 			displayName: 'DropMenu.Header',
 			propName: 'Header',
 		}),
 		/**
 		 * Renders a `<div>` that acts as the control target which the flyout menu is anchored to. Only one `Control` is used.
 		 */
-		Control: createClass({
+		Control: createReactClass({
 			displayName: 'DropMenu.Control',
 			propName: 'Control',
 		}),
 		/**
 		 * A special kind of `Option` that is always rendered at the top of the menu and has an `optionIndex` of `null`. Useful for unselect.
 		 */
-		OptionGroup: createClass({
+		OptionGroup: createReactClass({
 			displayName: 'DropMenu.OptionGroup',
 			propName: 'OptionGroup',
 			propTypes: {
@@ -94,7 +94,7 @@ const DropMenu = createClass({
 		/**
 		 * Renders a `<div>` that acts as an option in the menu.
 		 */
-		Option: createClass({
+		Option: createReactClass({
 			displayName: 'DropMenu.Option',
 			propName: 'Option',
 			propTypes: {
@@ -122,14 +122,14 @@ const DropMenu = createClass({
 		/**
 		 * A special kind of `Option` that is always rendered at the top of the menu and has an `optionIndex` of `null` used for deselecting.
 		 */
-		NullOption: createClass({
+		NullOption: createReactClass({
 			displayName: 'DropMenu.NullOption',
 			propName: 'NullOption',
 		}),
 		/**
 		 * Props that are passed through to the underling ContextMenu.
 		 */
-		ContextMenu: createClass({
+		ContextMenu: createReactClass({
 			displayName: 'DropMenu.ContextMenu',
 			propName: 'ContextMenu',
 		}),

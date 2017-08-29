@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps, getFirst } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+	getFirst,
+} from '../../util/component-types';
 import { maxByFields, maxByFieldsStacked } from '../../util/chart-helpers';
 import * as d3Scale from 'd3-scale';
 import * as chartConstants from '../../constants/charts';
@@ -34,7 +38,7 @@ const {
  * Bar charts are great for showing data that fits neatly in to "buckets". The
  * x axis data must be strings, and the y axis data must be numeric.
  */
-const BarChart = createClass({
+const BarChart = createReactClass({
 	displayName: 'BarChart',
 
 	propTypes: {

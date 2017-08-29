@@ -2,7 +2,11 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	findTypes,
+	omitProps,
+} from '../../util/component-types';
 import RadioButton from '../RadioButton/RadioButton';
 
 const cx = lucidClassNames.bind('&-RadioButtonLabeled');
@@ -14,11 +18,11 @@ const { any, node, object, string } = PropTypes;
  * This is a composite of the `RadioButton` component and the native `label`
  * element.
  */
-const RadioButtonLabeled = createClass({
+const RadioButtonLabeled = createReactClass({
 	displayName: 'RadioButtonLabeled',
 
 	components: {
-		Label: createClass({
+		Label: createReactClass({
 			displayName: 'RadioButtonLabeled.Label',
 			propName: 'Label',
 			propTypes: {

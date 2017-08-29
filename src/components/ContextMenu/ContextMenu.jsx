@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import Portal from '../Portal/Portal';
-import { createClass, getFirst, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	getFirst,
+	omitProps,
+} from '../../util/component-types';
 import {
 	getAbsoluteBoundingClientRect,
 	sharesAncestor,
@@ -19,7 +23,7 @@ const { bool, node, func, number, object, oneOf, string } = PropTypes;
  *
  * A ContextMenu component is used to render a target and a flyout which is positioned relative to the target.
  */
-const ContextMenu = createClass({
+const ContextMenu = createReactClass({
 	displayName: 'ContextMenu',
 	propTypes: {
 		/**
@@ -76,7 +80,7 @@ const ContextMenu = createClass({
 		/**
 		 * Renders an element of `elementType` (defaults to `<span>`) that the menu `FlyOut` anchors to.
 		 */
-		Target: createClass({
+		Target: createReactClass({
 			displayName: 'ContextMenu.Target',
 			propTypes: {
 				elementType: string,
@@ -90,7 +94,7 @@ const ContextMenu = createClass({
 		/*
 		 * Renders a `<Portal>` anchored to the `Target`.
 		 */
-		FlyOut: createClass({
+		FlyOut: createReactClass({
 			displayName: 'ContextMenu.FlyOut',
 			propTypes: {
 				style: object,

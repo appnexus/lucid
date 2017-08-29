@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass } from '../../util/component-types';
+import { createClass as createReactClass } from '../../util/component-types';
 import * as reducers from './Paginator.reducers';
 import selectors from './Paginator.selectors';
 import { SingleSelectDumb as SingleSelect } from '../SingleSelect/SingleSelect';
@@ -24,7 +24,7 @@ const { Option } = SingleSelect;
  * A paginator with page size selector.
  */
 
-const Paginator = createClass({
+const Paginator = createReactClass({
 	displayName: 'Paginator',
 
 	reducers,

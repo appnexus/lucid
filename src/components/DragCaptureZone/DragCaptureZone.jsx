@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DragCaptureZone');
 const { func, string } = PropTypes;
@@ -13,7 +16,7 @@ const { func, string } = PropTypes;
  * This is a helper component used to capture mouse events to determine when the
  * user starts, is and stops dragging.
  */
-const DragCaptureZone = createClass({
+const DragCaptureZone = createReactClass({
 	displayName: 'DragCaptureZone',
 	propTypes: {
 		/**

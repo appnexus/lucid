@@ -1,7 +1,7 @@
 /* eslint-disable comma-spacing */
 
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { PieChart, chartConstants } from '../../../index';
 
 const data = [
@@ -12,7 +12,7 @@ const data = [
 	{ x: 'Ben', y: 15 },
 ];
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<div>

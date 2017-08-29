@@ -3,7 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass, omitProps } from '../../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../../util/component-types';
 
 const { oneOf } = PropTypes;
 const cx = lucidClassNames.bind('&-LoadingIcon');
@@ -19,7 +22,7 @@ const durations = {
  *
  * A loading icon.
  */
-const LoadingIcon = createClass({
+const LoadingIcon = createReactClass({
 	displayName: 'LoadingIcon',
 	propTypes: {
 		...Icon.propTypes,

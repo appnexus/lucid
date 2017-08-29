@@ -1,10 +1,10 @@
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import _ from 'lodash';
 import { DataTable } from '../../../index';
 import { SuccessIcon } from '../../../index';
 
-export default createClass({
+export default createReactClass({
 	getInitialState() {
 		return {
 			activeIndex: 1,

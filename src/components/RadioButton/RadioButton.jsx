@@ -2,7 +2,10 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-RadioButton');
 const { bool, func, object, string } = PropTypes;
@@ -24,7 +27,7 @@ const { bool, func, object, string } = PropTypes;
  * Any props that are not explicitly defined in `propTypes` are spread onto the
  * native control.
  */
-const RadioButton = createClass({
+const RadioButton = createReactClass({
 	displayName: 'RadioButton',
 	propTypes: {
 		/**

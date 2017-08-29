@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
-	createClass,
+	createClass as createReactClass,
 	getFirst,
 	rejectTypes,
 	omitProps,
@@ -21,7 +21,7 @@ const { bool, node, oneOf, string } = PropTypes;
  * A wrapper with optional overlay to wrap content. `Overlay` is meant for overlaying an entire page, while this component is meant to wrap another component and cover its content.
  *
  */
-const OverlayWrapper = createClass({
+const OverlayWrapper = createReactClass({
 	displayName: 'OverlayWrapper',
 	propTypes: {
 		/**
@@ -54,7 +54,7 @@ const OverlayWrapper = createClass({
 	},
 
 	components: {
-		Message: createClass({
+		Message: createReactClass({
 			displayName: 'OverlayWrapper.Message',
 			propName: 'Message',
 			propTypes: {

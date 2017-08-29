@@ -1,13 +1,13 @@
 import _ from 'lodash';
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 
 import Legend from '../Legend';
 import { ToolTip, chartConstants } from '../../../index';
 
 const { Item } = Legend;
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<div>

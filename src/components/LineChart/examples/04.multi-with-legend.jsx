@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import createClass from 'create-react-class';
+import createReactClass from 'create-react-class';
 import { LineChart, Legend, chartConstants } from '../../../index';
 
 const data = [
@@ -12,7 +12,7 @@ const data = [
 const yAxisFields = ['apples', 'oranges', 'pears'];
 const palette = chartConstants.PALETTE_MONOCHROME_2_5;
 
-export default createClass({
+export default createReactClass({
 	render() {
 		return (
 			<div>

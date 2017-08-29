@@ -3,7 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { extractFields, stackByFields } from '../../util/chart-helpers';
-import { createClass, omitProps } from '../../util/component-types';
+import {
+	createClass as createReactClass,
+	omitProps,
+} from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
 import * as chartConstants from '../../constants/charts';
 
@@ -24,7 +27,7 @@ const { arrayOf, func, number, object, bool, string } = PropTypes;
  * grouped.
  *
  */
-const Bars = createClass({
+const Bars = createReactClass({
 	displayName: 'Bars',
 
 	propTypes: {
