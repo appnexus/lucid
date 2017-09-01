@@ -558,6 +558,11 @@ const Table = createClass({
 		density: oneOf(['compressed', 'extended']),
 
 		/**
+		 * Allows light header.
+		 */
+		hasLightHeader: bool,
+
+		/**
 		 * Render the table with borders on the outer edge.
 		 */
 		hasBorder: bool,
@@ -573,6 +578,7 @@ const Table = createClass({
 			density: 'extended',
 			hasBorder: false,
 			hasWordWrap: true,
+			hasLightHeader: false,
 		};
 	},
 
@@ -582,6 +588,7 @@ const Table = createClass({
 			hasBorder,
 			density,
 			hasWordWrap,
+			hasLightHeader,
 			style,
 			...passThroughs
 		} = this.props;
@@ -597,6 +604,7 @@ const Table = createClass({
 						'&-density-compressed': density === 'compressed',
 						'&-has-border': hasBorder,
 						'&-has-word-wrap': hasWordWrap,
+						'&-has-light-header': hasLightHeader,
 					},
 					className
 				)}
