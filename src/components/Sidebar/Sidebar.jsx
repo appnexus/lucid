@@ -294,7 +294,10 @@ const Sidebar = createClass({
 						{barProps.children}
 					</div>
 				</BarPane>
-				<SplitVertical.Divider className={cx('&-Divider')}>
+				<SplitVertical.Divider
+					className={cx('&-Divider')}
+					style={{ width: '7px' }}
+				>
 					<GripperVerticalIcon className={cx('&-Divider-gripper')} />
 				</SplitVertical.Divider>
 				<PrimaryPane
