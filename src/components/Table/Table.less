@@ -49,6 +49,31 @@
 	}
 
 	// Table header styles
+	&.lucid-Table-has-light-header > &-Thead {
+		background-color: @color-table-header-light;
+		color: @color-darkGray;
+		border: 1px solid @color-borderColorLight;
+		& > .lucid-Table-Tr > .lucid-Table-Th {
+			border: @border-table-header-light;
+		}
+		& > .lucid-Table-Tr > .lucid-Table-Th {
+			&.lucid-Table-is-sortable {
+					&:hover {
+						background-color: @color-table-header-sorted-light;
+					}
+			}
+
+			& > .lucid-Table-Th-inner {
+					// `Th`.`isSorted` prop
+					.lucid-Table-Th-inner-caret {
+						.lucid-Table-sort-icon {
+							fill: @color-textColor;
+						}
+					}
+			}
+		}
+	}
+
 	& > &-Thead {
 		background-color: @color-table-header;
 		color: @color-white;
@@ -56,6 +81,10 @@
 		// Table header cell styles
 		& > .lucid-Table-Tr > .lucid-Table-Th {
 			border: @border-table-header;
+			&.lucid-Table-has-light-header {
+				border: @border-table-header-light;
+			}
+
 			height: @size-standard-height; // effectively min height
 
 			// remove all borders from the perimeter of the header
