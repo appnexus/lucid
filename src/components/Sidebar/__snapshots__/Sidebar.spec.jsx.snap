@@ -55,7 +55,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 01.defaul
     className="lucid-Sidebar-Divider"
     style={
       Object {
-        "width": "7px",
+        "width": 7,
       }
     }
   >
@@ -127,7 +127,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 02.disabl
     className="lucid-Sidebar-Divider"
     style={
       Object {
-        "width": "7px",
+        "width": 7,
       }
     }
   >
@@ -199,7 +199,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 03.initia
     className="lucid-Sidebar-Divider"
     style={
       Object {
-        "width": "7px",
+        "width": 7,
       }
     }
   >
@@ -271,7 +271,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 04.positi
     className="lucid-Sidebar-Divider"
     style={
       Object {
-        "width": "7px",
+        "width": 7,
       }
     }
   >
@@ -369,7 +369,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 05.custom
     className="lucid-Sidebar-Divider"
     style={
       Object {
-        "width": "7px",
+        "width": 7,
       }
     }
   >
@@ -441,7 +441,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 06.custom
     className="lucid-Sidebar-Divider"
     style={
       Object {
-        "width": "7px",
+        "width": 7,
       }
     }
   >
@@ -513,7 +513,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 07.contro
     className="lucid-Sidebar-Divider"
     style={
       Object {
-        "width": "7px",
+        "width": 7,
       }
     }
   >
@@ -585,7 +585,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 08.handle
     className="lucid-Sidebar-Divider"
     style={
       Object {
-        "width": "7px",
+        "width": 7,
       }
     }
   >
@@ -657,7 +657,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 09.nested
     className="lucid-Sidebar-Divider"
     style={
       Object {
-        "width": "7px",
+        "width": 7,
       }
     }
   >
@@ -1841,7 +1841,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
     className="lucid-Sidebar-Divider"
     style={
       Object {
-        "width": "7px",
+        "width": 7,
       }
     }
   >
