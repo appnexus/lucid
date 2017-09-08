@@ -11,8 +11,8 @@
 
 	.lucid-Tag-inner {
 		border-radius: @size-borderRadius;
-		background: @color-primary-10;
-		border: 1px solid @color-primary-30;
+		background: @color-lightGray;
+		border: 1px solid @color-gray;
 		font-weight: bold;
 		font-size: @size-font;
 		color: @color-textColor;
@@ -49,24 +49,24 @@
 		}
 
 		.lucid-Tag-leaf& {
-			border: none;
 			border-radius: 3px;
-			background: @color-primary;
+			border-color: @featured-color-primary-borderColorMedium;
+			background: @color-white;
 			font-size: @size-standard;
 			font-weight: normal;
-			color: @color-white;
+			color: @color-black;
 
 			.lucid-Tag-inner-content {
 				height: 100%;
 
 				.lucid-Tag-remove {
 					.lucid-Tag-remove-button {
-						fill: @color-white-50;
+						fill: @color-mediumGray;
 					}
 
 					&:hover {
 						.lucid-Tag-remove-button {
-							fill: @color-white;
+							fill: @color-darkGray;
 						}
 					}
 				}
