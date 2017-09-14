@@ -26,7 +26,7 @@ const SeparatorIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path d="M5.2,0h1.5l4,8l-4,8H5.2l4-8L5.2,0z" />
+				<path d="M5.2 0h1.5l4 8-4 8H5.2l4-8-4-8z" />
 			</Icon>
 		);
 	},
