@@ -31,14 +31,7 @@ const GripperHorizontalIcon = createClass({
 				{...passThroughs}
 				className={cx('&', className)}
 			>
-				<path d="M0,0h1v2H0V0z" />
-				<path d="M2,0h1v2H2V0z" />
-				<path d="M4,0h1v2H4V0z" />
-				<path d="M6,0h1v2H6V0z" />
-				<path d="M8,0h1v2H8V0z" />
-				<path d="M10,0h1v2H10V0z" />
-				<path d="M12,0h1v2H12V0z" />
-				<path d="M14,0h1v2H14V0z" />
+				<path d="M0 0h1v2H0V0zM2 0h1v2H2V0zM4 0h1v2H4V0zM6 0h1v2H6V0zM8 0h1v2H8V0zM10 0h1v2h-1V0zM12 0h1v2h-1V0zM14 0h1v2h-1V0z" />
 			</Icon>
 		);
 	},

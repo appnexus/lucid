@@ -10,7 +10,7 @@ exports[`SeparatorIcon [common] example testing should match snapshot(s) for 1.d
   viewBox="0 0 16 16"
 >
   <path
-    d="M5.2,0h1.5l4,8l-4,8H5.2l4-8L5.2,0z"
+    d="M5.2 0h1.5l4 8-4 8H5.2l4-8-4-8z"
   />
 </Icon>
 `;
@@ -26,7 +26,7 @@ exports[`SeparatorIcon [common] example testing should match snapshot(s) for 2.c
   viewBox="0 0 16 16"
 >
   <path
-    d="M5.2,0h1.5l4,8l-4,8H5.2l4-8L5.2,0z"
+    d="M5.2 0h1.5l4 8-4 8H5.2l4-8-4-8z"
   />
 </Icon>
 `;
@@ -41,7 +41,7 @@ exports[`SeparatorIcon [common] example testing should match snapshot(s) for 3.d
   viewBox="0 0 16 16"
 >
   <path
-    d="M5.2,0h1.5l4,8l-4,8H5.2l4-8L5.2,0z"
+    d="M5.2 0h1.5l4 8-4 8H5.2l4-8-4-8z"
   />
 </Icon>
 `;

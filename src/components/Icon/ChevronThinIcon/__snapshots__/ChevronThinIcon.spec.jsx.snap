@@ -10,7 +10,7 @@ exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 1
   viewBox="0 0 16 16"
 >
   <path
-    d="M 5,0 L 13,8 L 5,16 L 4.25,15.25 L 11.50,8 L 4.25,0.75 Z"
+    d="M5 0l8 8-8 8-.75-.75L11.5 8 4.25.75z"
   />
 </Icon>
 `;
@@ -25,7 +25,7 @@ exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 1
   viewBox="0 0 16 16"
 >
   <path
-    d="M 12,0 L 4,8 L 12,16 L 12.75,15.25 L 5.50,8 L 12.75,0.75 Z"
+    d="M12 0L4 8l8 8 .75-.75L5.5 8 12.75.75z"
   />
 </Icon>
 `;
@@ -40,7 +40,7 @@ exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 1
   viewBox="0 0 16 16"
 >
   <path
-    d="M 5,0 L 13,8 L 5,16 L 4.25,15.25 L 11.50,8 L 4.25,0.75 Z"
+    d="M5 0l8 8-8 8-.75-.75L11.5 8 4.25.75z"
   />
 </Icon>
 `;
@@ -56,7 +56,7 @@ exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 2
   viewBox="0 0 16 16"
 >
   <path
-    d="M 5,0 L 13,8 L 5,16 L 4.25,15.25 L 11.50,8 L 4.25,0.75 Z"
+    d="M5 0l8 8-8 8-.75-.75L11.5 8 4.25.75z"
   />
 </Icon>
 `;
@@ -72,7 +72,7 @@ exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 2
   viewBox="0 0 16 16"
 >
   <path
-    d="M 12,0 L 4,8 L 12,16 L 12.75,15.25 L 5.50,8 L 12.75,0.75 Z"
+    d="M12 0L4 8l8 8 .75-.75L5.5 8 12.75.75z"
   />
 </Icon>
 `;
@@ -88,7 +88,7 @@ exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 2
   viewBox="0 0 16 16"
 >
   <path
-    d="M 5,0 L 13,8 L 5,16 L 4.25,15.25 L 11.50,8 L 4.25,0.75 Z"
+    d="M5 0l8 8-8 8-.75-.75L11.5 8 4.25.75z"
   />
 </Icon>
 `;
@@ -103,7 +103,7 @@ exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 3
   viewBox="0 0 16 16"
 >
   <path
-    d="M 5,0 L 13,8 L 5,16 L 4.25,15.25 L 11.50,8 L 4.25,0.75 Z"
+    d="M5 0l8 8-8 8-.75-.75L11.5 8 4.25.75z"
   />
 </Icon>
 `;
@@ -118,7 +118,7 @@ exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 3
   viewBox="0 0 16 16"
 >
   <path
-    d="M 12,0 L 4,8 L 12,16 L 12.75,15.25 L 5.50,8 L 12.75,0.75 Z"
+    d="M12 0L4 8l8 8 .75-.75L5.5 8 12.75.75z"
   />
 </Icon>
 `;
@@ -133,7 +133,7 @@ exports[`ChevronThinIcon [common] example testing should match snapshot(s) for 3
   viewBox="0 0 16 16"
 >
   <path
-    d="M 5,0 L 13,8 L 5,16 L 4.25,15.25 L 11.50,8 L 4.25,0.75 Z"
+    d="M5 0l8 8-8 8-.75-.75L11.5 8 4.25.75z"
   />
 </Icon>
 `;
