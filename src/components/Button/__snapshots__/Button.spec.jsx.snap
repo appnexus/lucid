@@ -5,6 +5,11 @@ exports[`Button [common] example testing should match snapshot(s) for basic 1`] 
   className="lucid-Button"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -20,6 +25,11 @@ exports[`Button [common] example testing should match snapshot(s) for basic 2`] 
   className="lucid-Button"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -36,6 +46,11 @@ exports[`Button [common] example testing should match snapshot(s) for basic 3`] 
   className="lucid-Button lucid-Button-has-only-icon"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -51,6 +66,11 @@ exports[`Button [common] example testing should match snapshot(s) for basic 4`] 
   className="lucid-Button lucid-Button-is-disabled"
   disabled={true}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -81,6 +101,11 @@ exports[`Button [common] example testing should match snapshot(s) for basic 6`] 
   className="lucid-Button lucid-Button-short"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -96,6 +121,11 @@ exports[`Button [common] example testing should match snapshot(s) for basic 7`] 
   className="lucid-Button lucid-Button-short"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -112,6 +142,11 @@ exports[`Button [common] example testing should match snapshot(s) for basic 8`] 
   className="lucid-Button lucid-Button-short lucid-Button-has-only-icon"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -127,6 +162,11 @@ exports[`Button [common] example testing should match snapshot(s) for basic 9`] 
   className="lucid-Button lucid-Button-is-disabled lucid-Button-short"
   disabled={true}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -157,6 +197,11 @@ exports[`Button [common] example testing should match snapshot(s) for basic 11`]
   className="lucid-Button lucid-Button-small"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -172,6 +217,11 @@ exports[`Button [common] example testing should match snapshot(s) for basic 12`]
   className="lucid-Button lucid-Button-small"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -188,6 +238,11 @@ exports[`Button [common] example testing should match snapshot(s) for basic 13`]
   className="lucid-Button lucid-Button-small lucid-Button-has-only-icon"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -203,6 +258,11 @@ exports[`Button [common] example testing should match snapshot(s) for basic 14`]
   className="lucid-Button lucid-Button-is-disabled lucid-Button-small"
   disabled={true}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -233,6 +293,11 @@ exports[`Button [common] example testing should match snapshot(s) for basic 16`]
   className="lucid-Button lucid-Button-large"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -248,6 +313,11 @@ exports[`Button [common] example testing should match snapshot(s) for basic 17`]
   className="lucid-Button lucid-Button-large"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -264,6 +334,11 @@ exports[`Button [common] example testing should match snapshot(s) for basic 18`]
   className="lucid-Button lucid-Button-large lucid-Button-has-only-icon"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -279,6 +354,11 @@ exports[`Button [common] example testing should match snapshot(s) for basic 19`]
   className="lucid-Button lucid-Button-is-disabled lucid-Button-large"
   disabled={true}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -309,6 +389,11 @@ exports[`Button [common] example testing should match snapshot(s) for danger 1`]
   className="lucid-Button lucid-Button-danger"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -339,6 +424,11 @@ exports[`Button [common] example testing should match snapshot(s) for danger 3`]
   className="lucid-Button lucid-Button-danger lucid-Button-short"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -369,6 +459,11 @@ exports[`Button [common] example testing should match snapshot(s) for danger 5`]
   className="lucid-Button lucid-Button-danger lucid-Button-small"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -399,6 +494,11 @@ exports[`Button [common] example testing should match snapshot(s) for danger 7`]
   className="lucid-Button lucid-Button-danger lucid-Button-large"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -429,6 +529,11 @@ exports[`Button [common] example testing should match snapshot(s) for info 1`] =
   className="lucid-Button lucid-Button-info"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -459,6 +564,11 @@ exports[`Button [common] example testing should match snapshot(s) for info 3`] =
   className="lucid-Button lucid-Button-info lucid-Button-short"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -489,6 +599,11 @@ exports[`Button [common] example testing should match snapshot(s) for info 5`] =
   className="lucid-Button lucid-Button-info lucid-Button-small"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -519,6 +634,11 @@ exports[`Button [common] example testing should match snapshot(s) for info 7`] =
   className="lucid-Button lucid-Button-info lucid-Button-large"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -549,6 +669,11 @@ exports[`Button [common] example testing should match snapshot(s) for link 1`] =
   className="lucid-Button lucid-Button-link"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -564,6 +689,11 @@ exports[`Button [common] example testing should match snapshot(s) for link 2`] =
   className="lucid-Button lucid-Button-is-disabled lucid-Button-link"
   disabled={true}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -579,6 +709,11 @@ exports[`Button [common] example testing should match snapshot(s) for link 3`] =
   className="lucid-Button lucid-Button-link"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -610,6 +745,11 @@ exports[`Button [common] example testing should match snapshot(s) for primary 1`
   className="lucid-Button lucid-Button-primary"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -640,6 +780,11 @@ exports[`Button [common] example testing should match snapshot(s) for primary 3`
   className="lucid-Button lucid-Button-primary lucid-Button-short"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -670,6 +815,11 @@ exports[`Button [common] example testing should match snapshot(s) for primary 5`
   className="lucid-Button lucid-Button-primary lucid-Button-small"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -700,6 +850,11 @@ exports[`Button [common] example testing should match snapshot(s) for primary 7`
   className="lucid-Button lucid-Button-primary lucid-Button-large"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -730,6 +885,11 @@ exports[`Button [common] example testing should match snapshot(s) for success 1`
   className="lucid-Button lucid-Button-success"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -760,6 +920,11 @@ exports[`Button [common] example testing should match snapshot(s) for success 3`
   className="lucid-Button lucid-Button-success lucid-Button-short"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -790,6 +955,11 @@ exports[`Button [common] example testing should match snapshot(s) for success 5`
   className="lucid-Button lucid-Button-success lucid-Button-small"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -820,6 +990,11 @@ exports[`Button [common] example testing should match snapshot(s) for success 7`
   className="lucid-Button lucid-Button-success lucid-Button-large"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -850,6 +1025,11 @@ exports[`Button [common] example testing should match snapshot(s) for warning 1`
   className="lucid-Button lucid-Button-warning"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -880,6 +1060,11 @@ exports[`Button [common] example testing should match snapshot(s) for warning 3`
   className="lucid-Button lucid-Button-warning lucid-Button-short"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -910,6 +1095,11 @@ exports[`Button [common] example testing should match snapshot(s) for warning 5`
   className="lucid-Button lucid-Button-warning lucid-Button-small"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
@@ -940,6 +1130,11 @@ exports[`Button [common] example testing should match snapshot(s) for warning 7`
   className="lucid-Button lucid-Button-warning lucid-Button-large"
   disabled={false}
   onClick={[Function]}
+  style={
+    Object {
+      "margin-right": "5px",
+    }
+  }
   type="button"
 >
   <span
