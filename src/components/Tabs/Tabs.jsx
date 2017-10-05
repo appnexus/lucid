@@ -73,11 +73,6 @@ const Tab = createClass({
 		Title: node,
 
 		/**
-		 * Width (with unit) to be passed as the `style` to the `Tab`
-		 */
-		width: string,
-
-		/**
 		 * If `true` component will be styled to be more visually prominent for use with page-level navigation.
 		 */
 		isNavigation: bool,
@@ -99,11 +94,9 @@ const Tab = createClass({
 			isProgressive,
 			isSelected,
 			Title,
-			width,
 			isNavigation,
+			...passThroughs
 		} = this.props;
-
-		const style = width ? { width } : {};
 
 		return (
 			<li
@@ -113,8 +106,8 @@ const Tab = createClass({
 					'&-Tab-is-active-and-open': isOpen && isSelected,
 					'&-Tab-is-progressive': isProgressive && !isLastTab,
 				})}
-				style={style}
 				onClick={this.handleClick}
+				{...passThroughs}
 			>
 				<span className={cx('&-Tab-content')}>{Title}</span>
 				{isProgressive &&

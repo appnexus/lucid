@@ -465,7 +465,11 @@ exports[`Tabs [common] example testing should match snapshot(s) for 6-tabs-varia
       isProgressive={false}
       isSelected={true}
       onSelect={[Function]}
-      width="17%"
+      style={
+        Object {
+          "width": "17%",
+        }
+      }
     >
       <Tabs.Title>
         One
@@ -481,7 +485,11 @@ exports[`Tabs [common] example testing should match snapshot(s) for 6-tabs-varia
       isProgressive={false}
       isSelected={false}
       onSelect={[Function]}
-      width="17%"
+      style={
+        Object {
+          "width": "17%",
+        }
+      }
     >
       <Tabs.Title>
         Two
@@ -497,7 +505,11 @@ exports[`Tabs [common] example testing should match snapshot(s) for 6-tabs-varia
       isProgressive={false}
       isSelected={false}
       onSelect={[Function]}
-      width="17%"
+      style={
+        Object {
+          "width": "17%",
+        }
+      }
     >
       <Tabs.Title>
         Three
