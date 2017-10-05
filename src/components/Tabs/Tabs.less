@@ -18,17 +18,15 @@
 	}
 
 	&-navigation-tabs {
-		border-color: @color-borderColorLight;
 		.lucid-Tabs-Tab {
 			height: 40px;
 			font-size: 15pt;
-			border-color: @color-borderColorLight;
+			font-weight: 200;
 		}
 	}
 
 	&-variable-width {
-		border-bottom-width: @Tabs-border-width;
-		border-bottom-style: solid;
+		border-bottom: @Tabs-border-width solid @color-borderColorLight;
 		.lucid-Tabs-Tab {
 			flex: none;
 		}
@@ -47,15 +45,12 @@
 		color: @color-primary;
 		user-select: none;
 		margin-bottom: -@Tabs-border-width;
-		border-width: @Tabs-border-width;
-		border-color: @color-borderColor;
-		border-style: solid;
-		border-right-width: 0;
+		border: @Tabs-border-width solid @color-borderColorLight;
+		border-right: 0;
 		background-color: @color-white;
 
 		&:last-of-type {
-			border-right-width: @Tabs-border-width;
-			border-right-style: solid;
+			border-right: @Tabs-border-width solid @color-borderColorLight;
 		}
 
 		&:hover {
@@ -135,9 +130,7 @@
 	}
 
 	&-Tab-is-active-and-open {
-		&.lucid-Tabs-Tab {
-			border-bottom: @Tabs-border-width solid @color-white;
-		}
+		border-bottom: @Tabs-border-width solid @color-white;
 
 		// `z-index: -1` fixes a very minor visual bug here in IE 11, but it
 		// introduces a bigger bug when using Tabs inside Dialogs.

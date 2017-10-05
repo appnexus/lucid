@@ -6,7 +6,7 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				<Tabs isNavigation={true} isProgressive={true}>
+				<Tabs isNavigation={true}>
 					<Tabs.Tab>
 						<Tabs.Title>One</Tabs.Title>
 						One content

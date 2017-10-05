@@ -139,7 +139,7 @@ const Tab = createClass({
 								fill="none"
 								stroke="#fff"
 								strokeWidth="1"
-								points={isNavigation ? '0,37 7.9,18.5 0,0' : '0,28 7.9,14 0,0'}
+								points={isNavigation ? '0,37 7.3,18.5 0,0' : '0,28 7.9,14 0,0'}
 							/>
 						</svg>
 					</span>}

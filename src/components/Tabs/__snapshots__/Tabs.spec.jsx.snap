@@ -11,6 +11,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-p
       Title="One"
       index={0}
       isLastTab={false}
+      isNavigation={false}
       isOpen={true}
       isProgressive={false}
       isSelected={true}
@@ -23,6 +24,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-p
       index={1}
       isDisabled={true}
       isLastTab={false}
+      isNavigation={false}
       isOpen={true}
       isProgressive={false}
       isSelected={false}
@@ -34,6 +36,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-p
       Title="Three"
       index={2}
       isLastTab={false}
+      isNavigation={false}
       isOpen={true}
       isProgressive={false}
       isSelected={false}
@@ -45,6 +48,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-p
       Title="Five"
       index={3}
       isLastTab={true}
+      isNavigation={false}
       isOpen={true}
       isProgressive={false}
       isSelected={false}
@@ -72,6 +76,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-c
       Title="One"
       index={0}
       isLastTab={false}
+      isNavigation={false}
       isOpen={true}
       isProgressive={false}
       isSelected={true}
@@ -86,6 +91,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-c
       Title="Two"
       index={1}
       isLastTab={false}
+      isNavigation={false}
       isOpen={true}
       isProgressive={false}
       isSelected={false}
@@ -100,6 +106,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-c
       Title="Three"
       index={2}
       isLastTab={false}
+      isNavigation={false}
       isOpen={true}
       isProgressive={false}
       isSelected={false}
@@ -115,6 +122,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-c
       index={3}
       isDisabled={true}
       isLastTab={true}
+      isNavigation={false}
       isOpen={true}
       isProgressive={false}
       isSelected={false}
@@ -148,6 +156,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
       Title="One"
       index={0}
       isLastTab={false}
+      isNavigation={false}
       isOpen={false}
       isProgressive={true}
       isSelected={true}
@@ -159,6 +168,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
       Title="Two"
       index={1}
       isLastTab={false}
+      isNavigation={false}
       isOpen={false}
       isProgressive={true}
       isSelected={false}
@@ -170,6 +180,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
       Title="Three"
       index={2}
       isLastTab={false}
+      isNavigation={false}
       isOpen={false}
       isProgressive={true}
       isSelected={false}
@@ -182,6 +193,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
       index={3}
       isDisabled={true}
       isLastTab={false}
+      isNavigation={false}
       isOpen={false}
       isProgressive={true}
       isSelected={false}
@@ -194,6 +206,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
       index={4}
       isDisabled={true}
       isLastTab={true}
+      isNavigation={false}
       isOpen={false}
       isProgressive={true}
       isSelected={false}
@@ -235,6 +248,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
       }
       index={0}
       isLastTab={false}
+      isNavigation={false}
       isOpen={true}
       isProgressive={false}
       isSelected={true}
@@ -266,6 +280,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
       }
       index={1}
       isLastTab={false}
+      isNavigation={false}
       isOpen={true}
       isProgressive={false}
       isSelected={false}
@@ -315,6 +330,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
       }
       index={2}
       isLastTab={false}
+      isNavigation={false}
       isOpen={true}
       isProgressive={false}
       isSelected={false}
@@ -360,6 +376,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
       index={3}
       isDisabled={true}
       isLastTab={true}
+      isNavigation={false}
       isOpen={true}
       isProgressive={false}
       isSelected={false}
@@ -403,6 +420,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 5-tab-as-pro
       Title="Bert"
       index={0}
       isLastTab={false}
+      isNavigation={false}
       isOpen={true}
       isProgressive={false}
       isSelected={true}
@@ -414,6 +432,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 5-tab-as-pro
       Title="Ernie"
       index={1}
       isLastTab={true}
+      isNavigation={false}
       isOpen={true}
       isProgressive={false}
       isSelected={false}
@@ -426,6 +445,137 @@ exports[`Tabs [common] example testing should match snapshot(s) for 5-tab-as-pro
     className="lucid-Tabs-content"
   >
     Bert
+  </div>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot(s) for 6-tabs-variable-width 1`] = `
+<div
+  className="lucid-Tabs"
+>
+  <ul
+    className="lucid-Tabs-bar lucid-Tabs-variable-width"
+  >
+    <Tabs.Tab
+      Title="One"
+      index={0}
+      isLastTab={false}
+      isNavigation={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={true}
+      onSelect={[Function]}
+      width="17%"
+    >
+      <Tabs.Title>
+        One
+      </Tabs.Title>
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two"
+      index={1}
+      isLastTab={false}
+      isNavigation={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      onSelect={[Function]}
+      width="17%"
+    >
+      <Tabs.Title>
+        Two
+      </Tabs.Title>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      index={2}
+      isLastTab={true}
+      isNavigation={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      onSelect={[Function]}
+      width="17%"
+    >
+      <Tabs.Title>
+        Three
+      </Tabs.Title>
+      Three content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content"
+  >
+    <Tabs.Title>
+      One
+    </Tabs.Title>
+    One content
+  </div>
+</div>
+`;
+
+exports[`Tabs [common] example testing should match snapshot(s) for 7-navigation-tabs 1`] = `
+<div
+  className="lucid-Tabs"
+>
+  <ul
+    className="lucid-Tabs-bar lucid-Tabs-navigation-tabs"
+  >
+    <Tabs.Tab
+      Title="One"
+      index={0}
+      isLastTab={false}
+      isNavigation={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={true}
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        One
+      </Tabs.Title>
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two"
+      index={1}
+      isLastTab={false}
+      isNavigation={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Two
+      </Tabs.Title>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      index={2}
+      isLastTab={true}
+      isNavigation={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Three
+      </Tabs.Title>
+      Three content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content"
+  >
+    <Tabs.Title>
+      One
+    </Tabs.Title>
+    One content
   </div>
 </div>
 `;
