@@ -44,7 +44,15 @@ const Button = createClass({
 		/**
 		 * Style variations of the Button
 		 */
-		kind: oneOf(['primary', 'link', 'success', 'warning', 'danger', 'info']),
+		kind: oneOf([
+			'primary',
+			'link',
+			'success',
+			'warning',
+			'danger',
+			'info',
+			'invisible',
+		]),
 		/**
 		 * Size variations of the Button
 		 */
@@ -107,6 +115,7 @@ const Button = createClass({
 						'&-is-active': isActive,
 						'&-primary': kind === 'primary',
 						'&-link': kind === 'link',
+						'&-invisible': kind === 'invisible',
 						'&-success': kind === 'success',
 						'&-warning': kind === 'warning',
 						'&-danger': kind === 'danger',
