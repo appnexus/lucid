@@ -71,6 +71,11 @@ const Tab = createClass({
 		 * The content to be rendered as the `Title` of the `Tab`.
 		 */
 		Title: node,
+
+		/**
+		 * If `true` component will be styled to be more visually prominent for use with page-level navigation.
+		 */
+		isNavigation: bool,
 	},
 
 	handleClick(event) {
@@ -89,6 +94,8 @@ const Tab = createClass({
 			isProgressive,
 			isSelected,
 			Title,
+			isNavigation,
+			...passThroughs
 		} = this.props;
 
 		return (
@@ -100,16 +107,20 @@ const Tab = createClass({
 					'&-Tab-is-progressive': isProgressive && !isLastTab,
 				})}
 				onClick={this.handleClick}
+				{...passThroughs}
 			>
 				<span className={cx('&-Tab-content')}>{Title}</span>
 				{isProgressive &&
 					!isLastTab &&
 					<span className={cx('&-Tab-arrow')}>
-						<svg className={cx('&-Tab-arrow-svg')} viewBox="0 0 8 28">
+						<svg
+							className={cx('&-Tab-arrow-svg')}
+							viewBox={isNavigation ? '0 0 8 37' : '0 0 8 28'}
+						>
 							<polygon
 								className={cx('&-Tab-arrow-background')}
 								fill="#fff"
-								points="0,0 8,14 0,28"
+								points={isNavigation ? '0,0 8,18.5 0,37' : '0,0 8,14 0,28'}
 							/>
 							<polyline
 								className={cx('&-Tab-arrow-tab-line')}
@@ -121,7 +132,7 @@ const Tab = createClass({
 								fill="none"
 								stroke="#fff"
 								strokeWidth="1"
-								points="0,28 7.9,14 0,0"
+								points={isNavigation ? '0,37 7.3,18.5 0,0' : '0,28 7.9,14 0,0'}
 							/>
 						</svg>
 					</span>}
@@ -191,6 +202,16 @@ const Tabs = createClass({
 		hasMultilineTitle: bool,
 
 		/**
+		 *  If `true` the width will be evenly distributed to all tabs.  `False` typically used in conjunction with `Tab.width`
+		 */
+		hasFullWidthTabs: bool,
+
+		/**
+		 * If `true` component will be styled to be more visually prominent for use with page-level navigation.
+		 */
+		isNavigation: bool,
+
+		/**
 		 * *Child Element*
 		 *
 		 * Can be used to define one or more individual `Tab`s in the sequence of `Tabs`.
@@ -206,6 +227,8 @@ const Tabs = createClass({
 			isOpen: true,
 			isProgressive: false,
 			hasMultilineTitle: false,
+			hasFullWidthTabs: true,
+			isNavigation: false,
 		};
 	},
 
@@ -222,6 +245,8 @@ const Tabs = createClass({
 			isOpen,
 			isProgressive,
 			selectedIndex,
+			hasFullWidthTabs,
+			isNavigation,
 			...passThroughs
 		} = this.props;
 
@@ -241,6 +266,8 @@ const Tabs = createClass({
 				<ul
 					className={cx('&-bar', {
 						'&-bar-is-multiline': hasMultilineTitle,
+						'&-variable-width': !hasFullWidthTabs,
+						'&-navigation-tabs': isNavigation,
 					})}
 				>
 					{_.map(tabChildProps, (tabProps, index) => (
@@ -250,6 +277,7 @@ const Tabs = createClass({
 							isLastTab={index === tabChildProps.length - 1}
 							isOpen={isOpen}
 							isProgressive={isProgressive}
+							isNavigation={isNavigation}
 							isSelected={index === actualSelectedIndex}
 							onSelect={this.handleClicked}
 							Title={_.get(

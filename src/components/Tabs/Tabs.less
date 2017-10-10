@@ -14,6 +14,22 @@
 		display: flex;
 		margin: 0;
 		padding: 0;
+		border-color: @color-borderColor;
+	}
+
+	&-navigation-tabs {
+		.lucid-Tabs-Tab {
+			height: 40px;
+			font-size: 15pt;
+			font-weight: 200;
+		}
+	}
+
+	&-variable-width {
+		border-bottom: @Tabs-border-width solid @color-borderColorLight;
+		.lucid-Tabs-Tab {
+			flex: none;
+		}
 	}
 
 	&-Tab {
@@ -29,12 +45,12 @@
 		color: @color-primary;
 		user-select: none;
 		margin-bottom: -@Tabs-border-width;
-		border: @Tabs-border-width solid @color-borderColor;
+		border: @Tabs-border-width solid @color-borderColorLight;
 		border-right: 0;
 		background-color: @color-white;
 
 		&:last-of-type {
-			border-right: @Tabs-border-width solid @color-borderColor;
+			border-right: @Tabs-border-width solid @color-borderColorLight;
 		}
 
 		&:hover {

@@ -155,6 +155,7 @@ describe('Tabs', () => {
 					isSelected: false,
 					Title: '',
 					children: 'Two',
+					isNavigation: false,
 				});
 			});
 
@@ -176,6 +177,28 @@ describe('Tabs', () => {
 				wrapper.find('.lucid-Tabs-Tab-is-active-and-open').length,
 				0
 			);
+		});
+
+		it('hasFullWidthTabs', () => {
+			const wrapper = shallow(
+				<Tabs hasFullWidthTabs={false}>
+					<Tabs.Tab Title="Lollipop">Yuck</Tabs.Tab>
+					<Tabs.Tab Title="Slurpee">Yum</Tabs.Tab>
+				</Tabs>
+			);
+
+			assert.equal(wrapper.find('.lucid-Tabs-variable-width').length, 1);
+		});
+
+		it('isNavigation', () => {
+			const wrapper = shallow(
+				<Tabs isNavigation={true}>
+					<Tabs.Tab Title="Lollipop">Yuck</Tabs.Tab>
+					<Tabs.Tab Title="Slurpee">Yum</Tabs.Tab>
+				</Tabs>
+			);
+
+			assert.equal(wrapper.find('.lucid-Tabs-navigation-tabs').length, 1);
 		});
 	});
 });
