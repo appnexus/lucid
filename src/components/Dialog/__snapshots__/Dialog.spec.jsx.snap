@@ -57,8 +57,13 @@ exports[`Dialog [common] example testing should match snapshot(s) for 1.small 1`
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
-          kind="link"
+          kind="invisible"
           onClick={[Function]}
+          style={
+            Object {
+              "marginRight": "9px",
+            }
+          }
           type="button"
         >
           Cancel
@@ -82,8 +87,13 @@ exports[`Dialog [common] example testing should match snapshot(s) for 1.small 1`
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
-        kind="link"
+        kind="invisible"
         onClick={[Function]}
+        style={
+          Object {
+            "marginRight": "9px",
+          }
+        }
         type="button"
       >
         Cancel
@@ -280,8 +290,13 @@ exports[`Dialog [common] example testing should match snapshot(s) for 2.medium 1
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
-          kind="link"
+          kind="invisible"
           onClick={[Function]}
+          style={
+            Object {
+              "marginRight": "9px",
+            }
+          }
           type="button"
         >
           Cancel
@@ -305,8 +320,13 @@ exports[`Dialog [common] example testing should match snapshot(s) for 2.medium 1
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
-        kind="link"
+        kind="invisible"
         onClick={[Function]}
+        style={
+          Object {
+            "marginRight": "9px",
+          }
+        }
         type="button"
       >
         Cancel
@@ -510,8 +530,13 @@ exports[`Dialog [common] example testing should match snapshot(s) for 3.large-wi
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
-          kind="link"
+          kind="invisible"
           onClick={[Function]}
+          style={
+            Object {
+              "marginRight": "9px",
+            }
+          }
           type="button"
         >
           Cancel
@@ -535,8 +560,13 @@ exports[`Dialog [common] example testing should match snapshot(s) for 3.large-wi
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
-        kind="link"
+        kind="invisible"
         onClick={[Function]}
+        style={
+          Object {
+            "marginRight": "9px",
+          }
+        }
         type="button"
       >
         Cancel
@@ -581,8 +611,13 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.no-modal
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
-          kind="link"
+          kind="invisible"
           onClick={[Function]}
+          style={
+            Object {
+              "marginRight": "9px",
+            }
+          }
           type="button"
         >
           Cancel
@@ -606,8 +641,13 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.no-modal
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
-        kind="link"
+        kind="invisible"
         onClick={[Function]}
+        style={
+          Object {
+            "marginRight": "9px",
+          }
+        }
         type="button"
       >
         Cancel
