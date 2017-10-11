@@ -28,9 +28,9 @@ export default createClass({
 					</Dialog.Header>
 					<div key={'info'}>
 						For better UX, we recommend NOT handling onEscape and
-						onBackgroundClick when isModal is true. The term "modal" implies that
-						the user needs to interact with one of the buttons in the footer to
-						exit the dialog.
+						onBackgroundClick when isModal is true. The term "modal" implies
+						that the user needs to interact with one of the buttons in the
+						footer to exit the dialog.
 					</div>
 					{_.times(50).map(i => {
 						return <div key={i}>Body</div>;
@@ -39,7 +39,7 @@ export default createClass({
 						<Button
 							kind="invisible"
 							onClick={_.partial(this.handleShow, false)}
-							style={{ marginRight: '5px' }}
+							style={{ marginRight: '9px' }}
 						>
 							Cancel
 						</Button>
