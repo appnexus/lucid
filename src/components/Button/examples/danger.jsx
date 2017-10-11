@@ -4,7 +4,7 @@ import { Button } from '../../../index';
 
 const sectionStyle = {
 	display: 'flex',
-	'flex-direction': 'column',
+	flexDirection: 'column',
 };
 
 const articleStyle = {
@@ -13,7 +13,7 @@ const articleStyle = {
 };
 
 const buttonStyle = {
-	'margin-right': '5px',
+	marginRight: '5px',
 };
 
 export default createClass({

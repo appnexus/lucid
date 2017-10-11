@@ -35,7 +35,11 @@ export default createClass({
 					pressing "escape" to close this Dialog.
 
 					<Dialog.Footer>
-						<Button kind="link" onClick={_.partial(this.handleShow, false)}>
+						<Button
+							kind="invisible"
+							onClick={_.partial(this.handleShow, false)}
+							style={{ marginRight: '5px' }}
+						>
 							Cancel
 						</Button>
 						<Button kind="primary">Save</Button>

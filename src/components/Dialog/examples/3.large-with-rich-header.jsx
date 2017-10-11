@@ -36,7 +36,11 @@ export default createClass({
 						return <div key={i}>Body</div>;
 					})}
 					<Dialog.Footer>
-						<Button kind="link" onClick={_.partial(this.handleShow, false)}>
+						<Button
+							kind="invisible"
+							onClick={_.partial(this.handleShow, false)}
+							style={{ marginRight: '5px' }}
+						>
 							Cancel
 						</Button>
 						<Button kind="primary">Save</Button>
