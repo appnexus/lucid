@@ -46,6 +46,7 @@ import AddURLIcon from './components/Icon/AddURLIcon/AddURLIcon';
 import AnalyzeDataIcon from './components/Icon/AnalyzeDataIcon/AnalyzeDataIcon';
 import ArrowIcon from './components/Icon/ArrowIcon/ArrowIcon';
 import AsteriskIcon from './components/Icon/AsteriskIcon/AsteriskIcon';
+import AttachIcon from './components/Icon/AttachIcon/AttachIcon';
 import Axis from './components/Axis/Axis';
 import AxisLabel from './components/AxisLabel/AxisLabel';
 import Badge from './components/Badge/Badge';
@@ -195,6 +196,7 @@ export {
 	AnalyzeDataIcon,
 	ArrowIcon,
 	AsteriskIcon,
+	AttachIcon,
 	Autocomplete,
 	AutocompleteDumb,
 	Axis,
