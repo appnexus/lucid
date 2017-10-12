@@ -10,7 +10,7 @@ const cx = lucidClassNames.bind('&-AttachIcon');
  *
  * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
  *
- * A trash icon, used for indicating the deletion of a ui component.
+ * A link/attach icon, used for indicating an attachment.
  */
 const AttachIcon = createClass({
 	displayName: 'AttachIcon',

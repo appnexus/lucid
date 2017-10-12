@@ -68,6 +68,7 @@ import ClockIcon from './components/Icon/ClockIcon/ClockIcon';
 import Collapsible from './components/Collapsible/Collapsible';
 import ContextMenu from './components/ContextMenu/ContextMenu';
 import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
+import CrownIcon from './components/Icon/CrownIcon/CrownIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
 import DangerLightIcon from './components/Icon/DangerLightIcon/DangerLightIcon';
 import DataTable from './components/DataTable/DataTable';
@@ -222,6 +223,7 @@ export {
 	Collapsible,
 	ContextMenu,
 	CrossIcon,
+	CrownIcon,
 	DangerIcon,
 	DangerLightIcon,
 	DataTable,
