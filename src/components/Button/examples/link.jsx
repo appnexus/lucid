@@ -9,11 +9,11 @@ const sectionStyle = {
 
 const articleStyle = {
 	display: 'flex',
-	margin: '5px 0',
+	margin: '5 0',
 };
 
 const buttonStyle = {
-	marginRight: '5px',
+	marginRight: '5',
 };
 
 export default createClass({
