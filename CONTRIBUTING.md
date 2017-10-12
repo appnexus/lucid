@@ -23,6 +23,105 @@ First of all, thank you for contributing. It’s appreciated.
 
 ## Component structure
 
+### Create a new Component
+Here are some basic steps to get you started building your first component.
+
+1. Create your new component folder
+`src/components/MyNewComponent/`
+2. Create your component file(s)
+```
+    /MyNewComponent/
+      |-examples/
+        |-0.default.jsx <-- default example, used by `gulp docs-generate` to create component demo
+      |-MyNewComponent.jsx  <-- component logic goes here
+      |-MyNewComponent/MyNewComponent.less <-- component styling goes here
+      |-MyNewComponent/MyNewComponent.spec.js <-- component tests go here
+  ```
+3. Component Template
+```javascript
+import _ from 'lodash';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { lucidClassNames } from '../../util/style-helpers';
+import { createClass, findTypes, omitProps } from '../../util/component-types';
+
+const cx = lucidClassNames.bind('&-MyNewComponent');
+
+const { string, bool, node } = PropTypes;
+
+const MyNewComponent = createClass({
+	displayName: 'MyNewComponent',
+	propTypes: {
+		/**
+		 * Appended to the component-specific class names set on the root
+		 * element.
+		 */
+		className: string,
+	},
+
+	render() {
+		const {
+			className,
+		} = this.props;
+
+		return (<div className={className}> MyComponent </div>);
+	}
+});
+
+export default MyNewComponent;
+```
+4. Styling Template
+```css
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
+.lucid-MyNewComponent {}
+```
+5. Tests Template
+```javascript
+import { common } from '../../util/generic-tests';
+import MyNewComponent from './MyNewComponent';
+
+describe('MyNewComponent', () => {
+	common(MyNewComponent);
+});
+```
+6. Default Example Template
+```javascript
+import React from 'react';
+import createClass from 'create-react-class';
+import { MyNewComponent } from '../../../index';
+
+/**
+ * {"categories": ["mycategory"]} <-- CHANGE THIS
+ *
+ * Describe your component here. How it should be used, use cases and more.
+ * Please see examples for more information.
+ */
+export default createClass({
+	render() {
+		return (
+			<MyNewComponent />
+		)
+	}
+});
+```
+
+7. Add your component's style file to `/src/styles/components.less`
+```css
+@import '../components/MyNewComponent/MyNewComponent';
+```
+8. Add your component's JSX file to `/src/index.js`
+```javascript
+import CSSGrid from './components/CSSGrid/CSSGrid';
+
+export {
+  CSSGrid,
+}
+```
+9. Run `yarn run start` to regenerate docs page.
+10. In your browser open, `http://localhost:8080/#/components/MyNewComponent`
+
 Some of our component conventions can be validated by running the `common` tests. Here's an example of how to do that:
 
 ```javascript
