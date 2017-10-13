@@ -123,6 +123,50 @@
 		background: none;
 		color: @color-linkColor;
 
+		&:hover,
+		&:active,
+		&:focus {
+			.lucid-Icon { fill: @color-linkColorHover; }
+
+			background: none;
+			color: @color-linkColorHover;
+			text-decoration: underline;
+			box-shadow: none;
+		}
+
+		&:active::before {
+			opacity: 0;
+		}
+
+		.lucid-Button-content {
+			line-height: 1em;
+		}
+
+		.lucid-Icon {
+			fill: @color-primary;
+			margin-right: 0.25em;
+
+			+ span {
+				line-height: 1.4em;
+			}
+		}
+	}
+
+	&&-link&-has-only-icon {
+		// Clear the right margin, only need it if the has text with it
+		.lucid-Icon {
+			margin-right: 0;
+		}
+	}
+
+	&&-invisible {
+		.gradient-reset();
+		.make-is-disabled(lucid-Button);
+
+		border: none;
+		background: none;
+		color: @color-linkColor;
+
 		&:hover:not(.lucid-Button-is-disabled),
 		&:active:not(.lucid-Button-is-disabled),
 		&:focus:not(.lucid-Button-is-disabled) {
@@ -150,13 +194,6 @@
 			}
 		}
 
-	}
-
-	&&-link&-has-only-icon {
-		// Clear the right margin, only need it if the has text with it
-		.lucid-Icon {
-			margin-right: 0;
-		}
 	}
 
 	// Sizes
