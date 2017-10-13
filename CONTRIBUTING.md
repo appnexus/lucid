@@ -24,6 +24,7 @@ First of all, thank you for contributing. It’s appreciated.
 ## Writing Components
 ### Create a new Component
 Here are some basic steps to get you started building your first component.
+Start your dev server and go to `http://localhost:8080/#/components/ExampleComponent` for a component example.
 
 1. Create your new component folder
 `src/components/MyNewComponent/`
