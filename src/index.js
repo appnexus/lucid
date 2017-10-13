@@ -46,6 +46,7 @@ import AddURLIcon from './components/Icon/AddURLIcon/AddURLIcon';
 import AnalyzeDataIcon from './components/Icon/AnalyzeDataIcon/AnalyzeDataIcon';
 import ArrowIcon from './components/Icon/ArrowIcon/ArrowIcon';
 import AsteriskIcon from './components/Icon/AsteriskIcon/AsteriskIcon';
+import AttachIcon from './components/Icon/AttachIcon/AttachIcon';
 import Axis from './components/Axis/Axis';
 import AxisLabel from './components/AxisLabel/AxisLabel';
 import Badge from './components/Badge/Badge';
@@ -67,10 +68,12 @@ import ClockIcon from './components/Icon/ClockIcon/ClockIcon';
 import Collapsible from './components/Collapsible/Collapsible';
 import ContextMenu from './components/ContextMenu/ContextMenu';
 import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
+import CrownIcon from './components/Icon/CrownIcon/CrownIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
 import DangerLightIcon from './components/Icon/DangerLightIcon/DangerLightIcon';
 import DataTable from './components/DataTable/DataTable';
 import DataViewIcon from './components/Icon/DataViewIcon/DataViewIcon';
+import DeleteIcon from './components/Icon/DeleteIcon/DeleteIcon';
 import Dialog from './components/Dialog/Dialog';
 import DownloadIcon from './components/Icon/DownloadIcon/DownloadIcon';
 import DownloadTableDataIcon
@@ -194,6 +197,7 @@ export {
 	AnalyzeDataIcon,
 	ArrowIcon,
 	AsteriskIcon,
+	AttachIcon,
 	Autocomplete,
 	AutocompleteDumb,
 	Axis,
@@ -211,25 +215,22 @@ export {
 	ButtonGroupDumb,
 	CalendarIcon,
 	CaretIcon,
-	CheckIcon,
 	Checkbox,
 	CheckboxLabeled,
+	CheckIcon,
 	ChevronIcon,
 	ClockIcon,
 	Collapsible,
-	SearchableSelect,
-	SearchableSelectDumb,
-	SearchableMultiSelect,
-	SearchableMultiSelectDumb,
 	ContextMenu,
 	CrossIcon,
+	CrownIcon,
 	DangerIcon,
 	DangerLightIcon,
 	DataTable,
+	DataViewIcon,
 	DateSelect,
 	DateSelectDumb,
-	EmptyStateWrapper,
-	DataViewIcon,
+	DeleteIcon,
 	Dialog,
 	DownloadIcon,
 	DownloadTableDataIcon,
@@ -240,11 +241,12 @@ export {
 	EditIcon,
 	EditPageIcon,
 	EligibilityIcon,
+	EmptyStateWrapper,
+	EqualsIcon,
 	Expander,
 	ExpanderDumb,
 	ExpanderPanel,
 	ExpanderPanelDumb,
-	EqualsIcon,
 	FileIcon,
 	FilterIcon,
 	FourSquaresIcon,
@@ -291,6 +293,10 @@ export {
 	ResizeIcon,
 	Resizer,
 	ScrollTable,
+	SearchableMultiSelect,
+	SearchableMultiSelectDumb,
+	SearchableSelect,
+	SearchableSelectDumb,
 	SearchField,
 	SearchFieldDumb,
 	SearchIcon,
@@ -319,9 +325,9 @@ export {
 	SwitchLabeled,
 	Table,
 	TableGearIcon,
-	Tag,
 	Tabs,
 	TabsDumb,
+	Tag,
 	TextField,
 	TextFieldValidated,
 	ToolTip,

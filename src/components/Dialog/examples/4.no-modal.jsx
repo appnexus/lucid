@@ -29,18 +29,19 @@ export default createClass({
 					Header="Header"
 					size="small"
 				>
-
 					In most cases, you'll probably just use an isModal Dialog, but this
-					example shows that the Dialog doesn't have to be a modal. Try
-					pressing "escape" to close this Dialog.
-
+					example shows that the Dialog doesn't have to be a modal. Try pressing
+					"escape" to close this Dialog.
 					<Dialog.Footer>
-						<Button kind="link" onClick={_.partial(this.handleShow, false)}>
+						<Button
+							kind="invisible"
+							onClick={_.partial(this.handleShow, false)}
+							style={{ marginRight: '9px' }}
+						>
 							Cancel
 						</Button>
 						<Button kind="primary">Save</Button>
 					</Dialog.Footer>
-
 				</Dialog>
 			</div>
 		);

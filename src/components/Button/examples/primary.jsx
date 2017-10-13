@@ -4,16 +4,16 @@ import { Button } from '../../../index';
 
 const sectionStyle = {
 	display: 'flex',
-	'flex-direction': 'column',
+	flexDirection: 'column',
 };
 
 const articleStyle = {
 	display: 'flex',
-	margin: '5px 0',
+	margin: '5 0',
 };
 
 const buttonStyle = {
-	'margin-right': '5px',
+	marginRight: '5',
 };
 
 export default createClass({
