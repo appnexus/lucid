@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 
-import './ExampleComponent.less';
 const cx = lucidClassNames.bind('&-ExampleComponent');
 
 const { bool, func, node, string, object } = PropTypes;
@@ -21,7 +20,6 @@ const { bool, func, node, string, object } = PropTypes;
  */
 const ExampleComponent = createClass({
 	displayName: 'ExampleComponent',
-	_isPrivate: true,
 
 	// reducers,
 	// selectors,
@@ -65,7 +63,6 @@ const ExampleComponent = createClass({
 
 	handleX() {
 		console.log('This is an example of a handler function');
-		return this.props.onX;
 	},
 
 	render() {
