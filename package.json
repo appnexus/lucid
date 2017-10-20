@@ -13,7 +13,7 @@
     "dev": "gulp docs-generate && webpack-dev-server --inline --hot --content-base src/docs/",
     "docs-upload-gh": "scripts/docs-upload-gh.sh",
     "docs-upload": "gulp docs-upload",
-    "jest": "NODE_ENV=test TZ=UTC jest --runInBand",
+    "jest": "NODE_ENV=test TZ=UTC jest",
     "lint": "eslint ./src --ext .js,.jsx",
     "lint-fix": "eslint ./src --ext .js,.jsx --fix",
     "precommit": "lint-staged",
@@ -66,8 +66,9 @@
     "babylon": "^6.0.0",
     "copy-webpack-plugin": "^3.0.0",
     "css-loader": "^0.23.1",
-    "enzyme": "^2.8.2",
-    "enzyme-to-json": "^1.4.5",
+    "enzyme": "^3.1.0",
+    "enzyme-to-json": "^3.1.4",
+    "enzyme-adapter-react-16": "^1.0.2",
     "eslint": "^3.14.1",
     "eslint-config-appnexus": "^1.6.0",
     "eslint-config-prettier": "^1.6.0",
@@ -98,10 +99,9 @@
     "prettier": "^1.1.0",
     "raw-loader": "^0.5.1",
     "react": "^16.0.0",
-    "react-addons-test-utils": "^15.6.2",
     "react-dom": "^16.0.0",
-    "react-router": "^4.1.1",
-    "react-router-dom": "^4.1.1",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
     "sinon": "^2.0.0-pre",
     "style-loader": "^0.13.0",
     "stylelint": "^7.10.1",
@@ -110,11 +110,12 @@
     "webpack-dev-server": "^1.14.1"
   },
   "peerDependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
   },
   "jest": {
     "rootDir": "src",
+    "setupFiles": [ "../tests/init" ],
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "!**/examples/**",
