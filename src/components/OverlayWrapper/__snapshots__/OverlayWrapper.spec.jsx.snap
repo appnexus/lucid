@@ -28,6 +28,7 @@ exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.
     hasLegend={false}
     hasToolTips={true}
     height={400}
+    key=".1"
     margin={
       Object {
         "bottom": 50,

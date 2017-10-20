@@ -75,6 +75,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="0"
   >
     One
   </DropMenu.Option>
@@ -82,6 +83,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="1"
   >
     Two
   </DropMenu.Option>
@@ -165,6 +167,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="0"
   >
     One
   </DropMenu.Option>
@@ -172,6 +175,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="1"
   >
     Two
   </DropMenu.Option>
@@ -255,6 +259,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="0"
   >
     One
   </DropMenu.Option>
@@ -262,6 +267,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="1"
   >
     Two
   </DropMenu.Option>
@@ -345,6 +351,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="0"
   >
     One
   </DropMenu.Option>
@@ -352,6 +359,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="1"
   >
     Two
   </DropMenu.Option>
@@ -435,6 +443,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="0"
   >
     One
   </DropMenu.Option>
@@ -442,6 +451,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="1"
   >
     Two
   </DropMenu.Option>
@@ -525,6 +535,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="0"
   >
     One
   </DropMenu.Option>
@@ -532,6 +543,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="1"
   >
     Two
   </DropMenu.Option>
@@ -615,6 +627,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="0"
   >
     Action 01
   </DropMenu.Option>
@@ -622,6 +635,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="1"
   >
     Here's Another Action
   </DropMenu.Option>
@@ -629,6 +643,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 02.su
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="2"
   >
     And Another Action
   </DropMenu.Option>
@@ -710,6 +725,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="0"
   >
     This action should be disabled
   </DropMenu.Option>
@@ -717,6 +733,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="1"
   >
     This one should be enabled
   </DropMenu.Option>
@@ -724,6 +741,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="2"
   >
     This should be disabled, too
   </DropMenu.Option>
@@ -807,6 +825,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="0"
   >
     Action 01
   </DropMenu.Option>
@@ -814,6 +833,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="1"
   >
     Here's Another Action
   </DropMenu.Option>
@@ -821,6 +841,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="2"
   >
     And Another Action
   </DropMenu.Option>

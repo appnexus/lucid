@@ -9,6 +9,7 @@ exports[`Breadcrumb [common] example testing should match snapshot(s) for 1.basi
   >
     <li
       className="lucid-Breadcrumb-Item"
+      key=".$home"
     >
       <a
         href="#"
@@ -21,6 +22,7 @@ exports[`Breadcrumb [common] example testing should match snapshot(s) for 1.basi
     </li>
     <li
       className="lucid-Breadcrumb-Item"
+      key=".$list"
     >
       <a
         href="#"
@@ -33,6 +35,7 @@ exports[`Breadcrumb [common] example testing should match snapshot(s) for 1.basi
     </li>
     <li
       className="lucid-Breadcrumb-Item"
+      key=".$item"
     >
       Item
     </li>
@@ -49,6 +52,7 @@ exports[`Breadcrumb [common] example testing should match snapshot(s) for 2.map 
   >
     <li
       className="lucid-Breadcrumb-Item"
+      key=".0:$Foo"
     >
       <a
         href="#"
@@ -61,6 +65,7 @@ exports[`Breadcrumb [common] example testing should match snapshot(s) for 2.map 
     </li>
     <li
       className="lucid-Breadcrumb-Item"
+      key=".0:$Bar"
     >
       <a
         href="#"
@@ -73,6 +78,7 @@ exports[`Breadcrumb [common] example testing should match snapshot(s) for 2.map 
     </li>
     <li
       className="lucid-Breadcrumb-Item"
+      key=".0:$Baz"
     >
       <a
         href="#"
@@ -85,6 +91,7 @@ exports[`Breadcrumb [common] example testing should match snapshot(s) for 2.map 
     </li>
     <li
       className="lucid-Breadcrumb-Item"
+      key=".$qux"
     >
       Qux
     </li>

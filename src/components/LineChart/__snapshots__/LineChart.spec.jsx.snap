@@ -2131,6 +2131,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
             color="color-chart-3"
             hasLine={true}
             hasPoint={true}
+            key="0"
             pointKind={3}
           >
             apples
@@ -2139,6 +2140,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
             color="color-chart-5"
             hasLine={true}
             hasPoint={true}
+            key="0"
             pointKind={5}
           >
             pears

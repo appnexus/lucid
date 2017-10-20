@@ -19,37 +19,59 @@ exports[`Dialog [common] example testing should match snapshot(s) for 1.small 1`
     <section
       className="lucid-Dialog-body"
     >
-      <div>
+      <div
+        key="info"
+      >
         For better UX, we recommend NOT handling onEscape and onBackgroundClick when isModal is true. The term "modal" implies that the user needs to interact with one of the buttons in the footer to exit the dialog.
       </div>
-      <div>
+      <div
+        key="0"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="1"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="2"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="3"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="4"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="5"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="6"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="7"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="8"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="9"
+      >
         Body
       </div>
       <Dialog.Footer>
@@ -132,157 +154,259 @@ exports[`Dialog [common] example testing should match snapshot(s) for 2.medium 1
     <section
       className="lucid-Dialog-body"
     >
-      <div>
+      <div
+        key="info"
+      >
         For better UX, we recommend NOT handling onEscape and onBackgroundClick when isModal is true. The term "modal" implies that the user needs to interact with one of the buttons in the footer to exit the dialog.
       </div>
-      <div>
+      <div
+        key="0"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="1"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="2"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="3"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="4"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="5"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="6"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="7"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="8"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="9"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="10"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="11"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="12"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="13"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="14"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="15"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="16"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="17"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="18"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="19"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="20"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="21"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="22"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="23"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="24"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="25"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="26"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="27"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="28"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="29"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="30"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="31"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="32"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="33"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="34"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="35"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="36"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="37"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="38"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="39"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="40"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="41"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="42"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="43"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="44"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="45"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="46"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="47"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="48"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="49"
+      >
         Body
       </div>
       <Dialog.Footer>
@@ -372,157 +496,259 @@ exports[`Dialog [common] example testing should match snapshot(s) for 3.large-wi
           Rich Header
         </i>
       </Dialog.Header>
-      <div>
+      <div
+        key="info"
+      >
         For better UX, we recommend NOT handling onEscape and onBackgroundClick when isModal is true. The term "modal" implies that the user needs to interact with one of the buttons in the footer to exit the dialog.
       </div>
-      <div>
+      <div
+        key="0"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="1"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="2"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="3"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="4"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="5"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="6"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="7"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="8"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="9"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="10"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="11"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="12"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="13"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="14"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="15"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="16"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="17"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="18"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="19"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="20"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="21"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="22"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="23"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="24"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="25"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="26"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="27"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="28"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="29"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="30"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="31"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="32"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="33"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="34"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="35"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="36"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="37"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="38"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="39"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="40"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="41"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="42"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="43"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="44"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="45"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="46"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="47"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="48"
+      >
         Body
       </div>
-      <div>
+      <div
+        key="49"
+      >
         Body
       </div>
       <Dialog.Footer>
