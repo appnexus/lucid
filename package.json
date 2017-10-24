@@ -67,8 +67,8 @@
     "copy-webpack-plugin": "^3.0.0",
     "css-loader": "^0.23.1",
     "enzyme": "^3.1.0",
-    "enzyme-to-json": "^3.1.4",
     "enzyme-adapter-react-16": "^1.0.2",
+    "enzyme-to-json": "^3.1.4",
     "eslint": "^3.14.1",
     "eslint-config-appnexus": "^1.6.0",
     "eslint-config-prettier": "^1.6.0",
@@ -89,7 +89,7 @@
     "gulp-postcss": "^6.1.0",
     "gulp-tar": "^1.8.0",
     "husky": "^0.13.3",
-    "jest": "^19.0.0",
+    "jest": "^21.2.1",
     "json-loader": "^0.5.4",
     "less": "^2.3.1",
     "less-loader": "^2.2.2",
@@ -115,7 +115,10 @@
   },
   "jest": {
     "rootDir": "src",
-    "setupFiles": [ "../tests/init" ],
+    "setupFiles": [
+      "../tests/init",
+      "../tests/enzyme-setup"
+    ],
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "!**/examples/**",
