@@ -8,6 +8,17 @@ import { mount } from 'enzyme';
 import ContextMenu from './ContextMenu';
 
 describe('ContextMenu', () => {
+	let requestAnimationFramePreviewValue;
+
+	beforeAll(() => {
+		requestAnimationFramePreviewValue = window.requestAnimationFrame;
+		window.requestAnimationFrame = callback => setTimeout(callback, 32);
+	});
+
+	afterAll(() => {
+		window.requestAnimationFrame = requestAnimationFramePreviewValue;
+	});
+
 	common(ContextMenu, {
 		exemptFunctionProps: ['getAlignmentOffset'],
 		getDefaultProps: () => ({
