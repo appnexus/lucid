@@ -254,9 +254,9 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
             isDisabled={false}
             onClick={[Function]}
             type="button"
-        >
+          >
             Button
-        </Button>,
+          </Button>,
         ]
       }
       index={0}

@@ -112,7 +112,7 @@ describe('ExpanderPanel', () => {
 			const onToggle = sinon.spy();
 			wrapper = mount(<ExpanderPanel onToggle={onToggle} />);
 
-			wrapper.find('.lucid-ExpanderPanel-header').simulate('click');
+			wrapper.find('.lucid-ExpanderPanel-header').first().simulate('click');
 			wrapper.find('.lucid-ExpanderPanel-icon').simulate('click');
 
 			assert.equal(
@@ -126,7 +126,7 @@ describe('ExpanderPanel', () => {
 			const onToggle = sinon.spy();
 			wrapper = mount(<ExpanderPanel isExpanded={false} onToggle={onToggle} />);
 
-			wrapper.find('.lucid-ExpanderPanel-header').simulate('click');
+			wrapper.find('.lucid-ExpanderPanel-header').first().simulate('click');
 			wrapper.find('.lucid-ExpanderPanel-icon').simulate('click');
 
 			assert.equal(
@@ -145,7 +145,7 @@ describe('ExpanderPanel', () => {
 			const onToggle = sinon.spy();
 			wrapper = mount(<ExpanderPanel isExpanded={true} onToggle={onToggle} />);
 
-			wrapper.find('.lucid-ExpanderPanel-header').simulate('click');
+			wrapper.find('.lucid-ExpanderPanel-header').first().simulate('click');
 			wrapper.find('.lucid-ExpanderPanel-icon').simulate('click');
 
 			assert.equal(

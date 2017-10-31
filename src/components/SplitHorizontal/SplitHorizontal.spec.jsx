@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import assert from 'assert';
-import sinon from 'sinon';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import SplitHorizontal from './SplitHorizontal';
@@ -162,12 +161,9 @@ describe('SplitHorizontal', () => {
 						'.lucid-SplitHorizontal-is-secondary'
 					);
 					const height = secondaryPaneDiv.getBoundingClientRect().height;
+					wrapper.update();
 					const slideAmount = wrapper.find(Motion).prop('style').slideAmount;
-					assert.equal(
-						height - 64,
-						slideAmount,
-						'must be translated by height - 64px'
-					);
+					expect(slideAmount).toEqual(height - 64);
 					done();
 				}, MOSTLY_STABLE_DELAY);
 			});
@@ -186,12 +182,9 @@ describe('SplitHorizontal', () => {
 						'.lucid-SplitHorizontal-is-secondary'
 					);
 					const height = secondaryPaneDiv.getBoundingClientRect().height;
+					wrapper.update();
 					const slideAmount = wrapper.find(Motion).prop('style').slideAmount;
-					assert.equal(
-						height - 64,
-						slideAmount,
-						'must be translated by height - 64px'
-					);
+					expect(slideAmount).toEqual(height - 64);
 					done();
 				}, MOSTLY_STABLE_DELAY);
 			});
@@ -217,7 +210,7 @@ describe('SplitHorizontal', () => {
 			});
 
 			it('should be called when the DragCaptureZone calls the onDrag event handler', () => {
-				const onResizing = sinon.spy();
+				const onResizing = jest.fn();
 
 				wrapper = mount(
 					<SplitHorizontal isExpanded={true} onResizing={onResizing} />,
@@ -234,22 +227,12 @@ describe('SplitHorizontal', () => {
 				onDrag({ dY: 122 }, lastArg);
 				onDragEnd({ dY: 123 }, lastArg);
 
-				assert(onResizing.called, 'must be called');
-				assert.equal(
-					onResizing.lastCall.args[0],
-					122,
-					'must pass the new height of the pane'
-				);
-				assert.equal(
-					onResizing.lastCall.args[1].props,
-					wrapper.props(),
-					'must pass component props in the last arg'
-				);
-				assert.equal(
-					onResizing.lastCall.args[1].event,
-					lastArg.event,
-					'must pass event reference in the last arg'
-				);
+				expect(onResizing).toHaveBeenCalled();
+
+				const [firstArg, { props, event }] = _.last(onResizing.mock.calls);
+				expect(firstArg).toEqual(122);
+				expect(props).toEqual(wrapper.props());
+				expect(event).toEqual(lastArg.event);
 			});
 		});
 
@@ -273,7 +256,7 @@ describe('SplitHorizontal', () => {
 			});
 
 			it('should be called when the DragCaptureZone calls the onDragEnd event handler', () => {
-				const onResize = sinon.spy();
+				const onResize = jest.fn();
 
 				wrapper = mount(
 					<SplitHorizontal isExpanded={true} onResize={onResize} />,
@@ -290,22 +273,11 @@ describe('SplitHorizontal', () => {
 				onDrag({ dY: 122 }, lastArg);
 				onDragEnd({ dY: 123 }, lastArg);
 
-				assert(onResize.called, 'must be called');
-				assert.equal(
-					onResize.lastCall.args[0],
-					123,
-					'must pass the new height of the pane'
-				);
-				assert.equal(
-					onResize.lastCall.args[1].props,
-					wrapper.props(),
-					'must pass component props in the last arg'
-				);
-				assert.equal(
-					onResize.lastCall.args[1].event,
-					lastArg.event,
-					'must pass event reference in the last arg'
-				);
+				expect(onResize).toHaveBeenCalled();
+				const [firstArg, { props, event }] = _.last(onResize.mock.calls);
+				expect(firstArg).toEqual(123);
+				expect(props).toEqual(wrapper.props());
+				expect(event).toEqual(lastArg.event);
 			});
 		});
 	});

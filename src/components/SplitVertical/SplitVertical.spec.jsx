@@ -1,13 +1,14 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import assert from 'assert';
-import sinon from 'sinon';
 import _ from 'lodash';
 import { common } from '../../util/generic-tests';
 import SplitVertical from './SplitVertical';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import { Motion } from 'react-motion';
 import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
+
+jest.setTimeout(10000);
 
 describe('SplitVertical', () => {
 	common(SplitVertical);
@@ -97,6 +98,7 @@ describe('SplitVertical', () => {
 				wrapper = mount(<SplitVertical isAnimated={true} />);
 
 				_.delay(() => {
+					wrapper.update();
 					assert.equal(
 						wrapper.find('.lucid-SplitVertical.lucid-SplitVertical-is-animated')
 							.length,
@@ -153,12 +155,9 @@ describe('SplitVertical', () => {
 						'.lucid-SplitVertical-is-secondary'
 					);
 					const width = secondaryPaneDiv.getBoundingClientRect().width;
+					wrapper.update();
 					const slideAmount = wrapper.find(Motion).prop('style').slideAmount;
-					assert.equal(
-						width - 64,
-						slideAmount,
-						'must be translated by width - 64px'
-					);
+					expect(slideAmount).toEqual(width - 64);
 					done();
 				}, MOSTLY_STABLE_DELAY);
 			});
@@ -177,6 +176,7 @@ describe('SplitVertical', () => {
 						'.lucid-SplitVertical-is-secondary'
 					);
 					const width = secondaryPaneDiv.getBoundingClientRect().width;
+					wrapper.update();
 					const slideAmount = wrapper.find(Motion).prop('style').slideAmount;
 					assert.equal(
 						width - 64,
@@ -210,7 +210,7 @@ describe('SplitVertical', () => {
 			it('should be called when the DragCaptureZone calls the onDrag event handler', () => {
 				const width = 100;
 				const dX = 122;
-				const onResizing = sinon.spy();
+				const onResizing = jest.fn();
 
 				wrapper = mount(
 					<SplitVertical isExpanded={true} onResizing={onResizing}>
@@ -230,22 +230,11 @@ describe('SplitVertical', () => {
 				onDrag({ dX: dX }, lastArg);
 				onDragEnd({ dX: dX + 1 }, lastArg);
 
-				assert(onResizing.called, 'must be called');
-				assert.equal(
-					onResizing.lastCall.args[0],
-					dX,
-					'must pass the new width of the pane'
-				);
-				assert.equal(
-					onResizing.lastCall.args[1].props,
-					wrapper.props(),
-					'must pass component props in the last arg'
-				);
-				assert.equal(
-					onResizing.lastCall.args[1].event,
-					lastArg.event,
-					'must pass event reference in the last arg'
-				);
+				expect(onResizing).toHaveBeenCalled();
+				const [firstArg, { props, event }] = _.last(onResizing.mock.calls);
+				expect(firstArg).toEqual(dX);
+				expect(props).toEqual(wrapper.props());
+				expect(event).toEqual(lastArg.event);
 			});
 		});
 
@@ -271,7 +260,7 @@ describe('SplitVertical', () => {
 			it('should be called when the DragCaptureZone calls the onDragEnd event handler', () => {
 				const width = 100;
 				const dX = 122;
-				const onResize = sinon.spy();
+				const onResize = jest.fn();
 
 				wrapper = mount(
 					<SplitVertical isExpanded={true} onResize={onResize}>
@@ -291,22 +280,13 @@ describe('SplitVertical', () => {
 				onDrag({ dX: dX }, lastArg);
 				onDragEnd({ dX: dX + 1 }, lastArg);
 
-				assert(onResize.called, 'must be called');
-				assert.equal(
-					onResize.lastCall.args[0],
-					dX + 1,
-					'must pass the new width of the pane'
-				);
-				assert.equal(
-					onResize.lastCall.args[1].props,
-					wrapper.props(),
-					'must pass component props in the last arg'
-				);
-				assert.equal(
-					onResize.lastCall.args[1].event,
-					lastArg.event,
-					'must pass event reference in the last arg'
-				);
+				expect(onResize).toHaveBeenCalled();
+
+				const [firstArg, { props, event }] = _.last(onResize.mock.calls);
+
+				expect(firstArg).toEqual(dX + 1);
+				expect(props).toEqual(wrapper.props());
+				expect(event).toEqual(lastArg.event);
 			});
 
 			describe('isResizeable', () => {
@@ -317,7 +297,7 @@ describe('SplitVertical', () => {
 						.find(Motion)
 						.shallow()
 						.find(DragCaptureZone)
-						.shallow()
+						.shallow({ disableLifecycleMethods: true })
 						.first();
 					assert(
 						dividerDivWrapper.hasClass(

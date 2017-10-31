@@ -267,24 +267,24 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
           "Simon",
           <RadioGroup>
             <RadioButton
-                  isDisabled={false}
-                  isSelected={false}
-                  onSelect={[Function]}
+              isDisabled={false}
+              isSelected={false}
+              onSelect={[Function]}
             >
-                  <RadioGroup.Label>
-                        1
-                  </RadioGroup.Label>
+              <RadioGroup.Label>
+                1
+              </RadioGroup.Label>
             </RadioButton>
             <RadioButton
-                  isDisabled={false}
-                  isSelected={false}
-                  onSelect={[Function]}
+              isDisabled={false}
+              isSelected={false}
+              onSelect={[Function]}
             >
-                  <RadioGroup.Label>
-                        2
-                  </RadioGroup.Label>
+              <RadioGroup.Label>
+                2
+              </RadioGroup.Label>
             </RadioButton>
-      </RadioGroup>,
+          </RadioGroup>,
         ],
       }
     }
@@ -329,12 +329,12 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
       Object {
         "children": <SingleSelect>
           <SingleSelect.Option>
-              One
+            One
           </SingleSelect.Option>
           <SingleSelect.Option>
-              Two
+            Two
           </SingleSelect.Option>
-      </SingleSelect>,
+        </SingleSelect>,
       }
     }
     callbackId={2}
