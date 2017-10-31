@@ -321,6 +321,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
           disabledDays={null}
           from={null}
           initialMonth={2016-02-17T22:25:23.000Z}
+          key="0"
           monthOffset={0}
           onDayClick={[Function]}
           onDayMouseEnter={[Function]}
