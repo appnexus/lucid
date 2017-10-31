@@ -145,6 +145,13 @@ const DateSelect = createClass({
 		 * Highlight dates and ranges based on cursor position.
 		 */
 		showCursorHighlight: bool,
+
+		/**
+		 * Render the calendar months in a touch-friendly slider with some being
+		 * rendered out-of-view. Set to `false` to disable this feature and gain a
+		 * performance boost.
+		 */
+		useSlidePanel: bool,
 	},
 
 	getDefaultProps() {
@@ -164,6 +171,7 @@ const DateSelect = createClass({
 			onSelectDate: _.noop,
 			isFontSizeRelative: false,
 			showCursorHighlight: true,
+			useSlidePanel: true,
 		};
 	},
 
@@ -239,6 +247,44 @@ const DateSelect = createClass({
 		}
 	},
 
+	renderCalendarMonth({
+		key,
+		offset,
+		slideOffset,
+		initialMonth,
+		cursor,
+		isRangeSameDay,
+		from,
+		to,
+		selectedDays,
+		disabledDays,
+		selectMode,
+		onDayClick,
+		showCursorHighlight,
+		onDayMouseEnter,
+		onDayMouseLeave,
+		calendarMonthProps,
+	}) {
+		return (
+			<CalendarMonth
+				key={key}
+				className={cx('&-CalendarMonth')}
+				monthOffset={offset + slideOffset}
+				initialMonth={initialMonth}
+				cursor={cursor}
+				from={isRangeSameDay ? null : from}
+				to={isRangeSameDay ? null : to}
+				selectedDays={isRangeSameDay ? from : selectedDays}
+				disabledDays={disabledDays}
+				selectMode={selectMode}
+				onDayClick={onDayClick}
+				onDayMouseEnter={showCursorHighlight ? onDayMouseEnter : null}
+				onDayMouseLeave={showCursorHighlight ? onDayMouseLeave : null}
+				{...calendarMonthProps}
+			/>
+		);
+	},
+
 	render() {
 		const {
 			className,
@@ -253,6 +299,7 @@ const DateSelect = createClass({
 			showDivider,
 			onSwipe,
 			showCursorHighlight,
+			useSlidePanel,
 			...passThroughs
 		} = this.props;
 
@@ -290,45 +337,65 @@ const DateSelect = createClass({
 						onClick={this.handlePrev}
 					/>
 				</div>
-				<InfiniteSlidePanel
-					className={cx('&-InfiniteSlidePanel')}
-					totalSlides={calendarsRendered}
-					slidesToShow={monthsShown}
-					offset={offset}
-					onSwipe={onSwipe}
-				>
-					<InfiniteSlidePanel.Slide className={cx('&-slide')}>
-						{slideOffset => (
-							<div className={cx('&-slide-content')}>
-								<CalendarMonth
-									className={cx('&-CalendarMonth')}
-									monthOffset={slideOffset}
-									initialMonth={this.initialMonth}
-									cursor={cursor}
-									from={isRangeSameDay ? null : from}
-									to={isRangeSameDay ? null : to}
-									selectedDays={isRangeSameDay ? from : selectedDays}
-									disabledDays={disabledDays}
-									selectMode={selectMode}
-									onDayClick={this.handleDayClick}
-									onDayMouseEnter={
-										showCursorHighlight ? this.handleDayMouseEnter : null
-									}
-									onDayMouseLeave={
-										showCursorHighlight ? this.handleDayMouseLeave : null
-									}
-									// Only update CalendarMonths within frame or one position
-									// away. This has issues and doesnt always behave quite right
-									shouldComponentUpdate={
-										slideOffset - offset >= -1 &&
-											slideOffset - offset < monthsShown + 1
-									}
-									{...calendarMonth.props}
-								/>
+				{useSlidePanel
+					? <InfiniteSlidePanel
+							className={cx('&-InfiniteSlidePanel', '&-slidePanel')}
+							totalSlides={calendarsRendered}
+							slidesToShow={monthsShown}
+							offset={offset}
+							onSwipe={onSwipe}
+						>
+							<InfiniteSlidePanel.Slide className={cx('&-slide')}>
+								{slideOffset => (
+									<div className={cx('&-slide-content')}>
+										{this.renderCalendarMonth({
+											key: slideOffset,
+											offset,
+											slideOffset,
+											initialMonth: this.initialMonth,
+											cursor,
+											isRangeSameDay,
+											from,
+											to,
+											selectedDays,
+											disabledDays,
+											selectMode,
+											onDayClick: this.handleDayClick,
+											showCursorHighlight,
+											onDayMouseEnter: this.handleDayMouseEnter,
+											onDayMouseLeave: this.handleDayMouseLeave,
+											calendarMonthProps: calendarMonth.props,
+										})}
+									</div>
+								)}
+							</InfiniteSlidePanel.Slide>
+						</InfiniteSlidePanel>
+					: <div className={cx('&-slidePanel')}>
+							<div className={cx('&-slide')}>
+								<div className={cx('&-slide-content')}>
+									{_.times(monthsShown, slideOffset =>
+										this.renderCalendarMonth({
+											key: slideOffset,
+											offset,
+											slideOffset,
+											initialMonth: this.initialMonth,
+											cursor,
+											isRangeSameDay,
+											from,
+											to,
+											selectedDays,
+											disabledDays,
+											selectMode,
+											onDayClick: this.handleDayClick,
+											showCursorHighlight,
+											onDayMouseEnter: this.handleDayMouseEnter,
+											onDayMouseLeave: this.handleDayMouseLeave,
+											calendarMonthProps: calendarMonth.props,
+										})
+									)}
+								</div>
 							</div>
-						)}
-					</InfiniteSlidePanel.Slide>
-				</InfiniteSlidePanel>
+						</div>}
 				<div>
 					<ChevronThinIcon
 						className={cx('&-chevron')}
