@@ -107,7 +107,7 @@ const Tab = createClass({
 					'&-Tab-is-progressive': isProgressive && !isLastTab,
 				})}
 				onClick={this.handleClick}
-				{...passThroughs}
+				{..._.omit(passThroughs, 'index')}
 			>
 				<span className={cx('&-Tab-content')}>{Title}</span>
 				{isProgressive &&
