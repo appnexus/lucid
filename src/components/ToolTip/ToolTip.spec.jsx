@@ -12,6 +12,17 @@ import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
 const { Target, Title, Body } = ToolTip;
 
 describe('ToolTip', () => {
+	let requestAnimationFramePreviewValue;
+
+	beforeAll(() => {
+		requestAnimationFramePreviewValue = window.requestAnimationFrame;
+		window.requestAnimationFrame = callback => setTimeout(callback, 32);
+	});
+
+	afterAll(() => {
+		window.requestAnimationFrame = requestAnimationFramePreviewValue;
+	});
+
 	common(ToolTip);
 
 	describe('render', () => {

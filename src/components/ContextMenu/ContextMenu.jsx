@@ -129,20 +129,34 @@ const ContextMenu = createClass({
 		};
 	},
 
+	handleAlignment() {
+		if (this.continueAlignment) {
+			if (this.props.isExpanded) {
+				this.alignFlyOut(true);
+			}
+			window.requestAnimationFrame(this.handleAlignment);
+		}
+	},
+
+	beginAlignment() {
+		this.continueAlignment = true;
+		window.requestAnimationFrame(this.handleAlignment);
+	},
+
+	endAlignment() {
+		this.continueAlignment = false;
+	},
+
 	componentDidMount() {
 		_.defer(() => this.alignFlyOut());
-		this.updateTargetRectangleIntervalId = setInterval(() => {
-			if (this.props.isExpanded) {
-				this.alignFlyOut();
-			}
-		}, 10);
+		this.beginAlignment();
 
 		document.body.addEventListener('touchstart', this.handleBodyClick);
 		document.body.addEventListener('click', this.handleBodyClick);
 	},
 
 	componentWillUnmount() {
-		clearInterval(this.updateTargetRectangleIntervalId);
+		this.endAlignment();
 		document.body.removeEventListener('click', this.handleBodyClick);
 	},
 
@@ -171,7 +185,7 @@ const ContextMenu = createClass({
 	},
 
 	componentWillReceiveProps() {
-		this.alignFlyOut();
+		_.defer(() => this.alignFlyOut());
 	},
 
 	statics: {
@@ -309,7 +323,7 @@ const ContextMenu = createClass({
 		}
 	},
 
-	alignFlyOut() {
+	alignFlyOut(doRedunancyCheck = false) {
 		const { refs: { flyOutPortal, target } } = this;
 
 		if (!target || !flyOutPortal) {
@@ -317,6 +331,17 @@ const ContextMenu = createClass({
 		}
 
 		const targetRect = getAbsoluteBoundingClientRect(target);
+
+		// Don't cause a state-change if target dimensions are the same
+		if (
+			doRedunancyCheck &&
+			targetRect.left === this.state.targetRect.left &&
+			targetRect.top === this.state.targetRect.top &&
+			targetRect.height === this.state.targetRect.height &&
+			targetRect.width === this.state.targetRect.width
+		) {
+			return;
+		}
 
 		if (!flyOutPortal) {
 			return this.setState({

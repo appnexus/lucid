@@ -116,6 +116,7 @@ const Tab = createClass({
 						<svg
 							className={cx('&-Tab-arrow-svg')}
 							viewBox={isNavigation ? '0 0 8 37' : '0 0 8 28'}
+							preserveAspectRatio="none"
 						>
 							<polygon
 								className={cx('&-Tab-arrow-background')}
