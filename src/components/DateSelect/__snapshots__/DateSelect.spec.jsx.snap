@@ -290,10 +290,10 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
 
 exports[`DateSelect common tests [common] example testing should match snapshot(s) for 8.disable-slide-panel 1`] = `
 <section
-  className="lucid-DateSelect"
+  className="lucid-DateSelect lucid-DateSelect-show-divider"
   style={
     Object {
-      "minWidth": 249,
+      "minWidth": 434,
     }
   }
 >
@@ -307,10 +307,10 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     />
   </div>
   <div
-    className="lucid-DateSelect-slidePanel"
+    className="lucid-DateSelect-slidePanel lucid-DateSelect-slidePanel-simple"
   >
     <div
-      className="lucid-DateSelect-slide"
+      className="lucid-DateSelect-slide lucid-DateSelect-slide-simple"
     >
       <div
         className="lucid-DateSelect-slide-content"
@@ -322,6 +322,29 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
           from={null}
           initialMonth={2016-02-17T22:25:23.000Z}
           monthOffset={0}
+          onDayClick={[Function]}
+          onDayMouseEnter={[Function]}
+          onDayMouseLeave={[Function]}
+          selectMode="day"
+          selectedDays={null}
+          shouldComponentUpdate={true}
+          to={null}
+        />
+      </div>
+    </div>
+    <div
+      className="lucid-DateSelect-slide lucid-DateSelect-slide-simple"
+    >
+      <div
+        className="lucid-DateSelect-slide-content"
+      >
+        <CalendarMonth
+          className="lucid-DateSelect-CalendarMonth"
+          cursor={null}
+          disabledDays={null}
+          from={null}
+          initialMonth={2016-02-17T22:25:23.000Z}
+          monthOffset={1}
           onDayClick={[Function]}
           onDayMouseEnter={[Function]}
           onDayMouseLeave={[Function]}

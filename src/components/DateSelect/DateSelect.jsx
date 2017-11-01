@@ -250,7 +250,7 @@ const DateSelect = createClass({
 	renderCalendarMonth({
 		key,
 		offset,
-		slideOffset,
+		calendarPosition,
 		initialMonth,
 		cursor,
 		isRangeSameDay,
@@ -269,7 +269,7 @@ const DateSelect = createClass({
 			<CalendarMonth
 				key={key}
 				className={cx('&-CalendarMonth')}
-				monthOffset={offset + slideOffset}
+				monthOffset={offset + calendarPosition}
 				initialMonth={initialMonth}
 				cursor={cursor}
 				from={isRangeSameDay ? null : from}
@@ -351,7 +351,7 @@ const DateSelect = createClass({
 										{this.renderCalendarMonth({
 											key: slideOffset,
 											offset,
-											slideOffset,
+											calendarPosition: slideOffset - offset,
 											initialMonth: this.initialMonth,
 											cursor,
 											isRangeSameDay,
@@ -370,14 +370,16 @@ const DateSelect = createClass({
 								)}
 							</InfiniteSlidePanel.Slide>
 						</InfiniteSlidePanel>
-					: <div className={cx('&-slidePanel')}>
-							<div className={cx('&-slide')}>
-								<div className={cx('&-slide-content')}>
-									{_.times(monthsShown, slideOffset =>
-										this.renderCalendarMonth({
-											key: slideOffset,
+					: <div className={cx('&-slidePanel', '&-slidePanel-simple')}>
+							{_.times(monthsShown, calendarIndex => (
+								<div
+									className={cx('&-slide', '&-slide-simple')}
+									key={calendarIndex}
+								>
+									<div className={cx('&-slide-content')}>
+										{this.renderCalendarMonth({
 											offset,
-											slideOffset,
+											calendarPosition: calendarIndex,
 											initialMonth: this.initialMonth,
 											cursor,
 											isRangeSameDay,
@@ -391,10 +393,10 @@ const DateSelect = createClass({
 											onDayMouseEnter: this.handleDayMouseEnter,
 											onDayMouseLeave: this.handleDayMouseLeave,
 											calendarMonthProps: calendarMonth.props,
-										})
-									)}
+										})}
+									</div>
 								</div>
-							</div>
+							))}
 						</div>}
 				<div>
 					<ChevronThinIcon
