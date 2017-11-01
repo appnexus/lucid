@@ -6,19 +6,28 @@
 	align-items: center;
 	font-size: @size-font;
 
-	&-slidePanel {
-		flex: 1;
-		height: 100%;
-	}
-
 	.lucid-DateSelect-chevron {
 		user-select: none;
 	}
 
-	.lucid-DateSelect-slide {
+	&-slidePanel {
+		flex: 1;
+		height: 100%;
+
+		&-simple {
+			overflow: hidden;
+			display: flex;
+		}
+	}
+
+	& &-slide {
 		position: relative;
 		display: flex;
 		align-items: stretch;
+
+		&-simple {
+			flex: 1;
+		}
 
 		.lucid-DateSelect-show-divider& {
 			&::after {
@@ -31,7 +40,8 @@
 				background-color: @color-gray-10;
 			}
 
-			&.lucid-InfiniteSlidePanel-Slide-in-frame {
+			&.lucid-InfiniteSlidePanel-Slide-in-frame,
+			&.lucid-DateSelect-slide-simple {
 				&::after {
 					right: -1px;
 				}
