@@ -19,13 +19,14 @@ export default createClass({
 		const { selectedDate } = this.state;
 
 		return (
-			<section style={{ maxWidth: 400 }}>
+			<section style={{ maxWidth: 800 }}>
 
 				<DateSelect
+					useSlidePanel={false}
 					selectedDays={selectedDate}
 					onSelectDate={this.handleSelectDate}
-					monthsShown={1}
-					useSlidePanel={false}
+					monthsShown={2}
+					showDivider
 				/>
 
 				selected date:
