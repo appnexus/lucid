@@ -311,6 +311,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   >
     <div
       className="lucid-DateSelect-slide lucid-DateSelect-slide-simple"
+      key="0"
     >
       <div
         className="lucid-DateSelect-slide-content"
@@ -321,7 +322,6 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
           disabledDays={null}
           from={null}
           initialMonth={2016-02-17T22:25:23.000Z}
-          key="0"
           monthOffset={0}
           onDayClick={[Function]}
           onDayMouseEnter={[Function]}
@@ -335,6 +335,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     </div>
     <div
       className="lucid-DateSelect-slide lucid-DateSelect-slide-simple"
+      key="1"
     >
       <div
         className="lucid-DateSelect-slide-content"

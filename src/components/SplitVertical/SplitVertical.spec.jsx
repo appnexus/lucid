@@ -8,8 +8,6 @@ import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import { Motion } from 'react-motion';
 import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
 
-jest.setTimeout(10000);
-
 describe('SplitVertical', () => {
 	common(SplitVertical);
 
