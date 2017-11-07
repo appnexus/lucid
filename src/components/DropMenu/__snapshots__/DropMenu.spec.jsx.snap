@@ -348,6 +348,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 05.group
         />
         <div
           className="lucid-DropMenu-label"
+          key="OptionGroup-label1"
         />
         <div
           className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
@@ -373,6 +374,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 05.group
         />
         <div
           className="lucid-DropMenu-label"
+          key="OptionGroup-label2"
         />
         <div
           className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-wrapped"
@@ -679,6 +681,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 09.state
       >
         <div
           className="lucid-DropMenu-label"
+          key="OptionGroup-label0"
         />
         <div
           className="lucid-DropMenu-Option lucid-DropMenu-Option-is-grouped lucid-DropMenu-Option-is-selected lucid-DropMenu-Option-is-wrapped"

@@ -65,7 +65,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       onChange={[Function]}
       onChangeDebounced={[Function]}
       onSubmit={[Function]}
-      value={null}
+      value=""
     />
   </DropMenu.Header>
   <DropMenu.OptionGroup
@@ -870,7 +870,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       onChange={[Function]}
       onChangeDebounced={[Function]}
       onSubmit={[Function]}
-      value={null}
+      value=""
     />
   </DropMenu.Header>
   <DropMenu.Option
@@ -1417,7 +1417,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       onChangeDebounced={[Function]}
       onSubmit={[Function]}
       placeholder="Type here to filter..."
-      value={null}
+      value=""
     />
   </DropMenu.Header>
   <DropMenu.Option
