@@ -1,12 +1,10 @@
 // Required for all new components
-import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes, omitProps } from '../../util/component-types';
+import { createClass } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ExampleComponent');
-
 const { bool, func, node, string, object } = PropTypes;
 
 /**
@@ -62,7 +60,7 @@ const ExampleComponent = createClass({
 	},
 
 	handleX() {
-		console.log('This is an example of a handler function');
+		alert('This is an example of a handler function');
 	},
 
 	render() {
