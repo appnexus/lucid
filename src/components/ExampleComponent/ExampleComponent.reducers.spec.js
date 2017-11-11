@@ -7,9 +7,10 @@ describe('ExampleComponent reducers', () => {
 	};
 
 	describe('onX', () => {
-		const nextState = onX(initialState);
+		it('should show the example state', () => {
+			const nextState = onX(initialState);
 
-		process.stdout('test');
-		expect(nextState).toBe(initialState);
+			expect(nextState.test).toBe('this is text');
+		});
 	});
 });
