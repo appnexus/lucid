@@ -8,9 +8,9 @@ const cx = lucidClassNames.bind('&-ExampleComponent');
 const { bool, func, node, string, object } = PropTypes;
 
 /**
- * {"categories": ["mycategory"]}
+ * {"categories": ["ExampleCategory"]}
  *
- * Update "mycategory" to set the category your component falls under. You can see available categories
+ * Update "ExampleCategory" to set the category your component falls under. You can see available categories
  * in the left hand column.
  *
  * Describe your component here. How it should be used, use cases and more.

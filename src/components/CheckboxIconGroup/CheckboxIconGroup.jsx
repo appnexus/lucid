@@ -33,7 +33,7 @@ const CheckboxIconGroup = createClass({
 		selections: arrayOf(
 			shape({
 				label: any,
-				icon: element,
+				icon: any,
 			})
 		),
 	},
@@ -41,16 +41,34 @@ const CheckboxIconGroup = createClass({
 	getDefaultProps() {
 		return {
 			selections: [],
+			isDisabled: false,
 		};
 	},
 
 	render() {
-		const { className, selections, ...passThroughs } = this.props;
+		const { className, selections, isDisabled, ...passThroughs } = this.props;
 
 		return (
-			<ul>
+			<ul
+				{...omitProps(passThroughs, CheckboxIconGroup)}
+				className={cx(
+					'&',
+					{
+						'&-is-disabled': isDisabled,
+					},
+					className
+				)}
+			>
 				{_.map(selections, (item, key) => (
-					<IconBox IconComponent={item.icon} Label={item.label} />
+					<li className={cx('&-Item')}>
+						<IconBox
+							key={`checkboxicongroup${key}`}
+							IconComponent={item.icon}
+							Label={item.label}
+							isCheckbox={true}
+							isDisabled={item.isDisabled || isDisabled}
+						/>
+					</li>
 				))}
 			</ul>
 		);

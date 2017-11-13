@@ -2,6 +2,7 @@ import React from 'react';
 import createClass from 'create-react-class';
 import CheckboxIconGroup from '../CheckboxIconGroup';
 import ClockIcon from '../../Icon/ClockIcon/ClockIcon';
+import FourSquaresIcon from '../../Icon/FourSquaresIcon/FourSquaresIcon';
 
 export default createClass({
 	render() {
@@ -12,7 +13,7 @@ export default createClass({
 			},
 			{
 				label: 'another label',
-				icon: ClockIcon,
+				icon: FourSquaresIcon,
 			},
 		];
 

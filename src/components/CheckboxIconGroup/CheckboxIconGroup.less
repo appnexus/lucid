@@ -3,11 +3,15 @@
 @import (reference) '../../styles/mixins.less';
 
 .lucid-CheckboxIconGroup {
-	font-size: @size-font-XL;
-	border: 1px solid gray;
-	border-radius: 5px;
+	display: flex;
+}
+
+.lucid-CheckboxIconGroup-Item {
+	list-style: none;
+	position: relative;
+	margin-right: 12px;
 }
 
 .lucid-CheckboxIconGroup-is-disabled {
-	color: @color-linkColor;
+
 }
