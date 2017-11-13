@@ -2,10 +2,126 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
+// Base Iconbox
 .lucid-IconBox {
 	font-size: @size-font-XL;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	margin: 0;
+	box-sizing: border-box;
+	position: relative;
+	align-items: center;
+	padding: 6px;
+	width: 120px;
+	height: 104px;
+
+	&::before {
+		content: '';
+		top: 0;
+		left: 0;
+		position: absolute;
+		border: 1px solid @color-gray;
+		border-radius: 4px;
+		transition: all 0.1s linear;
+		margin-right: 18px;
+		width: 100%;
+    height: 100%;
+	}
+
+	&:not(.lucid-IconBox-is-disabled):hover,
+	&.lucid-IconBox-is-active {
+		cursor: pointer;
+
+		&::before {
+			border-width: 2px;
+			border-color: @color-primary;
+		}
+
+		.lucid-Icon {
+			opacity: 1;
+			fill: @color-primary;
+		}
+	}
+
+	.lucid-IconBox-figcaption {
+		margin-top: @size-S;
+		font-size: 12px;
+		height: 42px;
+	}
+
+	.lucid-Icon {
+		width: 72px;
+    height: 32px;
+		fill: @color-darkGray;
+		transition: all 0.1s linear;
+	}
 }
 
-.lucid-IconBox-isX {
-	color: @color-linkColor;
+// Is selected
+.lucid-IconBox-is-selected {
+	.lucid-Icon {
+		opacity: 1;
+    fill: @color-primary;
+	}
 }
+
+// Is Disabled
+.lucid-IconBox-is-disabled {
+	opacity: 0.9;
+
+	&:hover {
+		cursor: not-allowed;
+	}
+
+	.lucid-Icon {
+    fill: @color-gray;
+	}
+}
+
+
+// Has a Checkbox Input
+.lucid-IconBox-has-checkbox {
+	&.lucid-IconBox-is-active,
+	&:active {
+		.lucid-Checkbox-visualization-container {
+			background: @color-primary;
+		}
+	}
+	&:not(.lucid-IconBox-is-disabled):hover,
+	&.lucid-IconBox-is-active {
+		.lucid-Checkbox-visualization-glow {
+			opacity: 0.3;
+			transform: scale(1.375);
+		}
+		.lucid-Checkbox-visualization-container {
+			border-color: @color-primary;
+		}
+	}
+
+	.lucid-CheckboxLabeled {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.lucid-CheckboxLabeled-Checkbox {
+		order: 2;
+		margin-top: @size-XXS;
+		margin-bottom: @size-XXS;
+	}
+
+	.lucid-CheckboxLabeled-label {
+		order: 1;
+		padding-top: 0;
+	}
+}
+
+// Has Radio Input
+.lucid-IconBox-has-radio {
+	.lucid-RadioButton.lucid-IconBox-radio {
+		visibility: hidden;
+		position: absolute;
+	}
+}
+

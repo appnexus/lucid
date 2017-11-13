@@ -61,7 +61,8 @@ const IconBox = createClass({
 		isIndeterminate: bool,
 
 		/**
-		 * Builds the IconBox as a radio button
+		 * Builds the IconBox as a radio button. Requires the `name` prop.
+		 * The actual radio input circle will be hidden.
 		 */
 		isRadio: bool,
 
@@ -118,7 +119,9 @@ const IconBox = createClass({
 		return (
 			<CheckboxLabeled
 				Label={Label}
-				className={cx('&-checkbox', `${className}-checkbox`)}
+				className={cx('&-checkbox', {
+					[`${className}-checkbox`]: className,
+				})}
 				isDisabled={isDisabled}
 				isIndeterminate={isIndeterminate}
 				isSelected={isSelected}
@@ -144,7 +147,9 @@ const IconBox = createClass({
 		return (
 			<RadioButtonLabeled
 				Label={Label}
-				className={cx('&-radio', `${className}-radio`)}
+				className={cx('&-radio', {
+					[`${className}-radio`]: className,
+				})}
 				isDisabled={isDisabled}
 				isSelected={isSelected}
 				onSelect={onClick}
@@ -181,8 +186,11 @@ const IconBox = createClass({
 				className={cx(
 					'&',
 					{
+						'&-is-selected': isSelected,
 						'&-is-disabled': isDisabled,
 						'&-is-active': isActive,
+						'&-has-checkbox': isCheckbox,
+						'&-has-radio': isRadio,
 					},
 					className
 				)}
@@ -191,7 +199,11 @@ const IconBox = createClass({
 			>
 				<IconComponent />
 				{!_.isEmpty(InputComponent) || !_.isEmpty(Label)
-					? <figcaption>
+					? <figcaption
+							className={cx('&-figcaption', {
+								[`${className}-figcaption`]: className,
+							})}
+						>
 							{InputComponent
 								? <InputComponent />
 								: _.isString(Label) ? Label : <Label />}

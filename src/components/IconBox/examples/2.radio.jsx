@@ -6,7 +6,12 @@ import ClockIcon from '../../Icon/ClockIcon/ClockIcon';
 export default createClass({
 	render() {
 		return (
-			<IconBox IconComponent={ClockIcon} Label="My IconBox" isRadio={true} />
+			<IconBox
+				IconComponent={ClockIcon}
+				Label="My IconBox"
+				isRadio={true}
+				name="radioIconExample"
+			/>
 		);
 	},
 });
