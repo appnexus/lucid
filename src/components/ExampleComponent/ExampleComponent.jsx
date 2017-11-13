@@ -10,6 +10,10 @@ const { bool, func, node, string, object } = PropTypes;
 /**
  * {"categories": ["ExampleCategory"]}
  *
+ * The Example Component is designed to be used by other developers as a template for new components.
+ * to try it for yourself, download the repo and copy/paste the Example Component to get started.
+ * Be sure to read the CONTRIBUTING.md file.
+ *
  * Update "ExampleCategory" to set the category your component falls under. You can see available categories
  * in the left hand column.
  *

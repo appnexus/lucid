@@ -58,6 +58,9 @@ import BeakerIcon from './components/Icon/BeakerIcon/BeakerIcon';
 import BellIcon from './components/Icon/BellIcon/BellIcon';
 import Breadcrumb from './components/Breadcrumb/Breadcrumb';
 import Button from './components/Button/Button';
+import CheckboxIconGroup
+	from './components/CheckboxIconGroup/CheckboxIconGroup';
+import RadioIconGroup from './components/RadioIconGroup/RadioIconGroup';
 import CalendarIcon from './components/Icon/CalendarIcon/CalendarIcon';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
@@ -222,6 +225,8 @@ export {
 	ClockIcon,
 	Collapsible,
 	ContextMenu,
+	CheckboxIconGroup,
+	RadioIconGroup,
 	CrossIcon,
 	CrownIcon,
 	DangerIcon,
