@@ -9,7 +9,7 @@ import IconBox from '../IconBox/IconBox';
 
 const cx = lucidClassNames.bind('&-CheckboxIconGroup');
 
-const { string, any, element, shape, arrayOf } = PropTypes;
+const { string, func, bool, number, any, element, shape, arrayOf } = PropTypes;
 
 /**
  * {"categories": ["controls", "IconGroup"]}
@@ -34,8 +34,22 @@ const CheckboxIconGroup = createClass({
 			shape({
 				label: any,
 				icon: any,
+				onClick: func,
+				isSelected: bool,
+				isActive: bool,
+				isIndeterminate: bool,
+				isDisabled: bool,
+				tabIndex: number,
 			})
 		),
+
+		isDisabled: bool,
+
+		name: string,
+
+		onClick: func,
+
+		tabIndex: number,
 	},
 
 	getDefaultProps() {
@@ -46,7 +60,15 @@ const CheckboxIconGroup = createClass({
 	},
 
 	render() {
-		const { className, selections, isDisabled, ...passThroughs } = this.props;
+		const {
+			className,
+			selections,
+			isDisabled,
+			name,
+			onClick,
+			tabIndex,
+			...passThroughs
+		} = this.props;
 
 		return (
 			<ul
@@ -62,6 +84,12 @@ const CheckboxIconGroup = createClass({
 				{_.map(selections, (item, key) => (
 					<li className={cx('&-Item')}>
 						<IconBox
+							name={name}
+							onClick={item.onClick || onClick}
+							isActive={item.isActive}
+							isIndeterminate={item.isIndeterminate}
+							isSelected={item.isSelected}
+							tabIndex={item.tabIndex || tabIndex}
 							key={`checkboxicongroup${key}`}
 							IconComponent={item.icon}
 							Label={item.label}
