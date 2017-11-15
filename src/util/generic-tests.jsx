@@ -16,6 +16,7 @@ export function common(
 		exemptFunctionProps = [],
 		exemptChildComponents = [],
 		selectRoot = _.identity,
+		noExport = false,
 	} = {}
 ) {
 	function generateDefaultProps(props = {}) {
@@ -189,7 +190,7 @@ export function common(
 		});
 
 		// Only run this test if it's a public component
-		if (!Component._isPrivate) {
+		if (!Component._isPrivate && !noExport) {
 			it('should be available as an exported module from index.js', () => {
 				assert(lucid[Component.displayName]);
 			});

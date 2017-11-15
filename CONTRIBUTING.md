@@ -21,22 +21,41 @@ First of all, thank you for contributing. It’s appreciated.
   - release/2.0.0
 - We use an issue template that provides a check list of tasks to consider for every PR.
 
-## Component structure
+## Writing Components
+### Create a new Component
+Here are some basic steps to get you started building your first component.
+Start your dev server and go to `http://localhost:8080/#/components/ExampleComponent` for a component example.
 
-Some of our component conventions can be validated by running the `common` tests. Here's an example of how to do that:
+1. Create your new component folder
+`src/components/MyNewComponent/`
+2. Create your component file(s). The only required files are your `MyNewComponent.jsx` file, `MyNewComponent.spec.js`, and `/examples/0.default.jsx`.
+```
+/MyNewComponent/
+  |-examples/
+    |-0.default.jsx <-- default example, used by `gulp docs-generate` to create component demo
+  |-MyNewComponent.jsx  <-- component logic goes here
+  |-MyNewComponent/MyNewComponent.spec.js <-- component tests go here
+```
+3. (optional) - See `/src/components/ExampleComponent/` for detailed templates and additional file examples.
 
+4. Add your component's JSX file to `/src/index.js`
 ```javascript
-import { common } from '../../util/generic-tests';
+import MyNewComponent from './components/MyNewComponent/MyNewComponent';
 
-import MyNewComponent from './MyNewComponent';
-
-describe('MyNewComponent', () => {
-  common(MyNewComponent);
-
-  // Other tests...
-});
+export {
+  MyNewComponent,
+}
 ```
 
+5. (optional) - Add your component's style file to `/src/styles/components.less`
+```css
+@import '../components/MyNewComponent/MyNewComponent';
+```
+
+6. Run `yarn run dev` to regenerate docs page.
+7. In your browser open, `http://localhost:8080/#/components/MyNewComponent`
+
+### Prop Conventions
 - Use `isX` or `hasX` props for boolean types even when it differs from native.
 - Make sure all components allow `className` and `style` to be extended for consumer convenience.
 - Use `onX` props for all event handlers.
@@ -50,9 +69,9 @@ describe('MyNewComponent', () => {
 - Stateless by default, use the reducer pattern for stateful components. Don't use `setState` in our components unless there is a very good reason.
 - Prefer `span`s for root level component elements.
 
-## Styling
+### Styling
 
-- *All* css classes must be prefixed by the name of the component. E.g. `.lucid-Button-foo`.
+- *All* css classes must be prefixed by the name of the component. E.g. `.lucid-Button-foo`. Use `const cx = lucidClassNames.bind('&-ExampleComponent');` to bind and auto-prefix classnames and include in your component with `<MyComponent classNames={cx}>`.
 - Css classes used for state, such as `.is-active`, should also be prefixed with the component name. E.g. `lucid-Button-is-active`.
 - We have a naming convention for our props. Below is a list of examples that are valid. Please see the `variables.less` file for real world examples.
 
@@ -68,7 +87,7 @@ describe('MyNewComponent', () => {
 }
 ```
 
-## Code styling
+### Code styling
 
 - We use our own wrapper around `createClass` only, no ES6 classes.
 - Folders should use kebab case e.g. "this-is-a-folder/and-a-javascript-file.js".
@@ -77,7 +96,7 @@ describe('MyNewComponent', () => {
   - "AnotherComponentHere.jsx"
 - We hang the `_isPrivate` boolean off our component definitions to indicate that the component isn't intended for external consumption yet. This will hide the component from the docs.
 
-## Tests
+### Tests
 
 - Components should have a `Component.spec.jsx` that lives alongside the component jsx file.
 - Most tests should be shallow rendered using `enzyme`.
@@ -106,3 +125,17 @@ describe('MyComponent', () => {
 
 [waffle]: https://waffle.io/appnexus/lucid/
 [perf]: https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f
+
+## Troubleshooting Frequent Component Errors
+
+#### `Uncaught ReferenceError: [object] is not defined`
+Similar errors include saying `string`, `bool`, `boolean`, `node`, etc. are not defined. If you get this error, double check that all your defined propTypes in your component class are also destructured from PropTypes.
+```javascript
+import PropTypes from 'prop-types';
+
+const {
+	bool,
+	func,
+  object, //<-- destructuring the appropriate prop-type from PropTypes will solve the problem.
+} = PropTypes;
+```
