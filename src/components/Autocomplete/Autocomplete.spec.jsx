@@ -10,17 +10,6 @@ import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import * as KEYCODE from '../../constants/key-code';
 
 describe('Autocomplete', () => {
-	let requestAnimationFramePreviewValue;
-
-	beforeAll(() => {
-		requestAnimationFramePreviewValue = window.requestAnimationFrame;
-		window.requestAnimationFrame = callback => setTimeout(callback, 32);
-	});
-
-	afterAll(() => {
-		window.requestAnimationFrame = requestAnimationFramePreviewValue;
-	});
-
 	common(Autocomplete);
 
 	describe('render', () => {
