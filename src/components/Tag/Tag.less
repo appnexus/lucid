@@ -3,13 +3,15 @@
 
 .lucid-Tag {
 	display: inline-flex;
-	margin: @size-XXS @size-XXS 0 0;
+	margin: 0 @size-XXS @size-XXS 0;
 
-	&.lucid-Tag-leaf {
-		min-height: @size-tag;
+	&&-is-removable&-leaf {
+		.lucid-Tag-inner {
+			border-color: @featured-color-primary-borderColorMedium;
+		}
 	}
 
-	.lucid-Tag-inner {
+	& &-inner {
 		border-radius: @size-borderRadius;
 		background: @color-lightGray;
 		border: 1px solid @color-gray;
@@ -17,58 +19,47 @@
 		font-size: @size-font;
 		color: @color-textColor;
 		width: 100%; // fix for IE 11 bug flex wrapping bug
+		padding: @size-XS @size-XS @size-XXS;
+		display: inline-flex;
+		flex-wrap: wrap;
+		align-items: center;
 
-		.lucid-Tag-inner-content {
-			margin: 0 @size-XS;
-			padding: @size-XXS 0;
-			display: flex;
-			align-items: center;
+		.lucid-Tag-inner-children {
+			padding: 0 @size-XS @size-XXS 0;
+		}
 
-			.lucid-Tag-remove {
-				margin-left: auto;
-				padding-left: @size-XS;
-				display: flex;
-				align-items: center;
+		.lucid-Tag-remove {
+			padding: 1px @size-XS 0 0;
 
+			&-button {
+				fill: fade(@color-darkGray, 50%);
+			}
+
+			&:hover {
 				.lucid-Tag-remove-button {
-					fill: fade(@color-darkGray, 50%);
-				}
-
-				&:hover {
-					.lucid-Tag-remove-button {
-						fill: @color-darkGray;
-					}
+					fill: @color-darkGray;
 				}
 			}
 		}
 
-		.lucid-Tag-subgroup {
-			display: flex;
-			flex-wrap: wrap;
-			padding: 0 @size-XXS @size-XS @size-XS;
-		}
-
 		.lucid-Tag-leaf& {
 			border-radius: 3px;
-			border-color: @featured-color-primary-borderColorMedium;
 			background: @color-white;
 			font-size: @size-standard;
 			font-weight: normal;
 			color: @color-black;
+			min-height: @size-tag;
+			padding: @size-XXS @size-XS 0;
 
-			.lucid-Tag-inner-content {
-				height: 100%;
+			.lucid-Tag-inner-children {
+				padding: 0 @size-XS @size-XXS 0;
+			}
 
-				.lucid-Tag-remove {
-					.lucid-Tag-remove-button {
-						fill: @color-mediumGray;
-					}
+			.lucid-Tag-remove {
+				padding: 0;
 
-					&:hover {
-						.lucid-Tag-remove-button {
-							fill: @color-darkGray;
-						}
-					}
+				&-button {
+					fill: @color-mediumGray;
 				}
 			}
 		}

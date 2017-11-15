@@ -59,36 +59,36 @@ const Tag = createClass({
 
 		const subTags = filterTypes(children, Tag);
 		const otherChildren = rejectTypes(children, Tag);
+		const hasOtherChildren = !_.isEmpty(otherChildren);
 		const isLeaf = _.isEmpty(subTags);
 
 		return (
 			<div
 				{...omitProps(passThroughs, Tag)}
-				className={cx('&', { '&-leaf': isLeaf }, className)}
+				className={cx(
+					'&',
+					{
+						'&-leaf': isLeaf,
+						'&-is-removable': isRemovable,
+					},
+					className
+				)}
 			>
 				<div className={cx('&-inner')}>
-					<div className={cx('&-inner-content')}>
-						{!_.isEmpty(otherChildren)
-							? <span className={cx('&-inner-children')}>
-									{otherChildren}
-								</span>
-							: null}
-						{isRemovable
-							? <span className={cx('&-remove')} onClick={this.handleRemove}>
-									<CrossIcon
-										className={cx('&-remove-button')}
-										size={10}
-										viewBox="4 4 8 8"
-										isClickable
-									/>
-								</span>
-							: null}
-					</div>
-					{!isLeaf
-						? <div className={cx('&-subgroup')}>
-								{subTags}
-							</div>
-						: null}
+					{hasOtherChildren &&
+						<span className={cx('&-inner-children')}>
+							{otherChildren}
+						</span>}
+					{isRemovable &&
+						<span className={cx('&-remove')} onClick={this.handleRemove}>
+							<CrossIcon
+								className={cx('&-remove-button')}
+								size={10}
+								viewBox="4 4 8 8"
+								isClickable
+							/>
+						</span>}
+					{subTags}
 				</div>
 			</div>
 		);
