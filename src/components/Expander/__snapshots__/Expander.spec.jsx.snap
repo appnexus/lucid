@@ -24,7 +24,9 @@ exports[`Expander [common] example testing should match snapshot(s) for 1.expand
       transitionLeaveTimeout={100}
       transitionName="lucid-Expander-text"
     >
-      <span>
+      <span
+        key="0"
+      >
         Show Less
       </span>
     </CSSTransitionGroup>
@@ -71,7 +73,9 @@ exports[`Expander [common] example testing should match snapshot(s) for 2.intera
       transitionLeaveTimeout={100}
       transitionName="lucid-Expander-text"
     >
-      <span>
+      <span
+        key="0"
+      >
         Show More
       </span>
     </CSSTransitionGroup>
@@ -133,7 +137,9 @@ exports[`Expander [common] example testing should match snapshot(s) for 3.intera
       transitionLeaveTimeout={100}
       transitionName="lucid-Expander-text"
     >
-      <span>
+      <span
+        key="0"
+      >
         Show Stuff
       </span>
     </CSSTransitionGroup>
@@ -195,7 +201,9 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.highli
       transitionLeaveTimeout={100}
       transitionName="lucid-Expander-text"
     >
-      <span>
+      <span
+        key="0"
+      >
         Show Less
       </span>
     </CSSTransitionGroup>
@@ -242,7 +250,9 @@ exports[`Expander [common] example testing should match snapshot(s) for 5.highli
       transitionLeaveTimeout={100}
       transitionName="lucid-Expander-text"
     >
-      <span>
+      <span
+        key="0"
+      >
         Show More
       </span>
     </CSSTransitionGroup>
@@ -304,7 +314,9 @@ exports[`Expander [common] example testing should match snapshot(s) for 6.highli
       transitionLeaveTimeout={100}
       transitionName="lucid-Expander-text"
     >
-      <span>
+      <span
+        key="0"
+      >
         Show Stuff
       </span>
     </CSSTransitionGroup>

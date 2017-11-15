@@ -50,7 +50,9 @@ exports[`Selection render should match snapshot for custom icons 1`] = `
         viewBox="-3 -2 20 20"
       />
     </div>
-    <Selection.Icon>
+    <Selection.Icon
+      key=".0"
+    >
       <div
         className="fake-icon"
       />
@@ -145,6 +147,7 @@ exports[`Selection render should match snapshot for nested selections 1`] = `
         hasBackground={false}
         isBold={false}
         isRemovable={true}
+        key="[object Object]0"
         kind="default"
         onRemove={[Function]}
         responsiveMode="large"

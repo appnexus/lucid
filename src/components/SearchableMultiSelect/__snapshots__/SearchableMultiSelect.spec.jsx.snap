@@ -95,6 +95,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
     </DropMenu.Control>
     <DropMenu.OptionGroup
       isHidden={false}
+      key="SearchableMultiSelectOptionGroup0"
     >
       Northeast
       <SearchableMultiSelect.Option>
@@ -134,6 +135,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption0"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -150,6 +152,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Connecticut
             </span>
@@ -160,6 +163,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption1"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -176,6 +180,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Delaware
             </span>
@@ -186,6 +191,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption2"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -202,6 +208,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Maine
             </span>
@@ -212,6 +219,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption3"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -228,6 +236,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Maryland
             </span>
@@ -238,6 +247,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption4"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -254,6 +264,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Massachusetts
             </span>
@@ -264,6 +275,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption5"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -280,6 +292,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               New Hampshire
             </span>
@@ -290,6 +303,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption6"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -306,6 +320,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               New Jersey
             </span>
@@ -316,6 +331,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption7"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -332,6 +348,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               New York
             </span>
@@ -342,6 +359,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption8"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -358,6 +376,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Pennsylvania
             </span>
@@ -368,6 +387,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption9"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -384,6 +404,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Rhode Island
             </span>
@@ -394,6 +415,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption10"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -410,6 +432,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Vermont
             </span>
@@ -419,6 +442,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
     </DropMenu.OptionGroup>
     <DropMenu.OptionGroup
       isHidden={false}
+      key="SearchableMultiSelectOptionGroup1"
     >
       Southeast
       <SearchableMultiSelect.Option>
@@ -461,6 +485,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption11"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -477,6 +502,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Alabama
             </span>
@@ -487,6 +513,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption12"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -503,6 +530,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Arkansas
             </span>
@@ -513,6 +541,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption13"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -529,6 +558,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Florida
             </span>
@@ -539,6 +569,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption14"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -555,6 +586,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Georgia
             </span>
@@ -565,6 +597,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption15"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -581,6 +614,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Kentucky
             </span>
@@ -591,6 +625,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption16"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -607,6 +642,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Louisiana
             </span>
@@ -617,6 +653,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption17"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -633,6 +670,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Mississippi
             </span>
@@ -643,6 +681,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption18"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -659,6 +698,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               North Carolina
             </span>
@@ -669,6 +709,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption19"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -685,6 +726,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               South Carolina
             </span>
@@ -695,6 +737,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption20"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -711,6 +754,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Tennessee
             </span>
@@ -721,6 +765,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption21"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -737,6 +782,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Virginia
             </span>
@@ -747,6 +793,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption22"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -763,6 +810,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               West Virginia
             </span>
@@ -772,6 +820,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
     </DropMenu.OptionGroup>
     <DropMenu.OptionGroup
       isHidden={false}
+      key="SearchableMultiSelectOptionGroup2"
     >
       Midwest
       <SearchableMultiSelect.Option>
@@ -814,6 +863,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption23"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -830,6 +880,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Illinois
             </span>
@@ -840,6 +891,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption24"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -856,6 +908,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Indiana
             </span>
@@ -866,6 +919,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption25"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -882,6 +936,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Iowa
             </span>
@@ -892,6 +947,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption26"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -908,6 +964,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Kansas
             </span>
@@ -918,6 +975,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption27"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -934,6 +992,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Michigan
             </span>
@@ -944,6 +1003,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption28"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -960,6 +1020,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Minnesota
             </span>
@@ -970,6 +1031,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption29"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -986,6 +1048,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Missouri
             </span>
@@ -996,6 +1059,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption30"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1012,6 +1076,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Nebraska
             </span>
@@ -1022,6 +1087,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption31"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1038,6 +1104,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               North Dakota
             </span>
@@ -1048,6 +1115,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption32"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1064,6 +1132,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Ohio
             </span>
@@ -1074,6 +1143,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption33"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1090,6 +1160,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               South Dakota
             </span>
@@ -1100,6 +1171,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption34"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1116,6 +1188,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Wisconsin
             </span>
@@ -1125,6 +1198,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
     </DropMenu.OptionGroup>
     <DropMenu.OptionGroup
       isHidden={false}
+      key="SearchableMultiSelectOptionGroup3"
     >
       Southwest
       <SearchableMultiSelect.Option>
@@ -1143,6 +1217,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption35"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1159,6 +1234,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Arizona
             </span>
@@ -1169,6 +1245,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption36"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1185,6 +1262,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               New Mexico
             </span>
@@ -1195,6 +1273,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption37"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1211,6 +1290,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Oklahoma
             </span>
@@ -1221,6 +1301,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption38"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1237,6 +1318,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Texas
             </span>
@@ -1246,6 +1328,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
     </DropMenu.OptionGroup>
     <DropMenu.OptionGroup
       isHidden={false}
+      key="SearchableMultiSelectOptionGroup4"
     >
       West
       <SearchableMultiSelect.Option>
@@ -1279,6 +1362,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption39"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1295,6 +1379,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               California
             </span>
@@ -1305,6 +1390,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption40"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1321,6 +1407,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Colorado
             </span>
@@ -1331,6 +1418,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption41"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1347,6 +1435,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Idaho
             </span>
@@ -1357,6 +1446,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption42"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1373,6 +1463,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Montana
             </span>
@@ -1383,6 +1474,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption43"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1399,6 +1491,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Nevada
             </span>
@@ -1409,6 +1502,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption44"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1425,6 +1519,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Oregon
             </span>
@@ -1435,6 +1530,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption45"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1451,6 +1547,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Utah
             </span>
@@ -1461,6 +1558,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption46"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1477,6 +1575,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Washington
             </span>
@@ -1487,6 +1586,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isDisabled={false}
         isHidden={false}
         isWrapped={true}
+        key="SearchableMultiSelectOption47"
       >
         <div
           className="lucid-SearchableMultiSelect-checkbox"
@@ -1503,6 +1603,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
           >
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
+              key="post"
             >
               Wyoming
             </span>
@@ -1514,6 +1615,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption48"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1530,6 +1632,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Alaska
           </span>
@@ -1540,6 +1643,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption49"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1556,6 +1660,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Hawaii
           </span>
@@ -1614,6 +1719,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption0"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1630,6 +1736,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Alabama
           </span>
@@ -1640,6 +1747,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption1"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1656,6 +1764,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Alaska
           </span>
@@ -1666,6 +1775,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption2"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1682,6 +1792,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Arizona
           </span>
@@ -1692,6 +1803,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption3"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1708,6 +1820,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Arkansas
           </span>
@@ -1718,6 +1831,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption4"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1734,6 +1848,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             California
           </span>
@@ -1744,6 +1859,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption5"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1760,6 +1876,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Colorado
           </span>
@@ -1770,6 +1887,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption6"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1786,6 +1904,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Connecticut
           </span>
@@ -1796,6 +1915,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption7"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1812,6 +1932,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Delaware
           </span>
@@ -1822,6 +1943,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption8"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1838,6 +1960,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Florida
           </span>
@@ -1848,6 +1971,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption9"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1864,6 +1988,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Georgia
           </span>
@@ -1874,6 +1999,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption10"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1890,6 +2016,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Hawaii
           </span>
@@ -1900,6 +2027,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption11"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1916,6 +2044,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Idaho
           </span>
@@ -1926,6 +2055,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption12"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1942,6 +2072,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Illinois
           </span>
@@ -1952,6 +2083,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption13"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1968,6 +2100,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Indiana
           </span>
@@ -1978,6 +2111,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption14"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -1994,6 +2128,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Iowa
           </span>
@@ -2004,6 +2139,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption15"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2020,6 +2156,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Kansas
           </span>
@@ -2030,6 +2167,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption16"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2046,6 +2184,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Kentucky
           </span>
@@ -2056,6 +2195,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption17"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2072,6 +2212,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Louisiana
           </span>
@@ -2082,6 +2223,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption18"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2098,6 +2240,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Maine
           </span>
@@ -2108,6 +2251,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption19"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2124,6 +2268,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Maryland
           </span>
@@ -2134,6 +2279,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption20"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2150,6 +2296,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Massachusetts
           </span>
@@ -2160,6 +2307,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption21"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2176,6 +2324,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Michigan
           </span>
@@ -2186,6 +2335,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption22"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2202,6 +2352,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Minnesota
           </span>
@@ -2212,6 +2363,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption23"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2228,6 +2380,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Mississippi
           </span>
@@ -2238,6 +2391,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption24"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2254,6 +2408,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Missouri
           </span>
@@ -2264,6 +2419,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption25"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2280,6 +2436,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Montana Nebraska
           </span>
@@ -2290,6 +2447,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption26"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2306,6 +2464,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Nevada
           </span>
@@ -2316,6 +2475,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption27"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2332,6 +2492,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             New Hampshire
           </span>
@@ -2342,6 +2503,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption28"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2358,6 +2520,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             New Jersey
           </span>
@@ -2368,6 +2531,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption29"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2384,6 +2548,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             New Mexico
           </span>
@@ -2394,6 +2559,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption30"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2410,6 +2576,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             New York
           </span>
@@ -2420,6 +2587,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption31"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2436,6 +2604,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             North Carolina
           </span>
@@ -2446,6 +2615,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption32"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2462,6 +2632,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             North Dakota
           </span>
@@ -2472,6 +2643,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption33"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2488,6 +2660,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Ohio
           </span>
@@ -2498,6 +2671,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption34"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2514,6 +2688,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Oklahoma
           </span>
@@ -2524,6 +2699,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption35"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2540,6 +2716,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Oregon
           </span>
@@ -2550,6 +2727,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption36"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2566,6 +2744,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Pennsylvania Rhode Island
           </span>
@@ -2576,6 +2755,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption37"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2592,6 +2772,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             South Carolina
           </span>
@@ -2602,6 +2783,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption38"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2618,6 +2800,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             South Dakota
           </span>
@@ -2628,6 +2811,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption39"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2644,6 +2828,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Tennessee
           </span>
@@ -2654,6 +2839,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption40"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2670,6 +2856,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Texas
           </span>
@@ -2680,6 +2867,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption41"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2696,6 +2884,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Utah
           </span>
@@ -2706,6 +2895,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption42"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2722,6 +2912,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Vermont
           </span>
@@ -2732,6 +2923,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption43"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2748,6 +2940,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Virginia
           </span>
@@ -2758,6 +2951,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption44"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2774,6 +2968,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Washington
           </span>
@@ -2784,6 +2979,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption45"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2800,6 +2996,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             West Virginia
           </span>
@@ -2810,6 +3007,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption46"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2826,6 +3024,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Wisconsin
           </span>
@@ -2836,6 +3035,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableMultiSelectOption47"
     >
       <div
         className="lucid-SearchableMultiSelect-checkbox"
@@ -2852,6 +3052,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         >
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
+            key="post"
           >
             Wyoming
           </span>

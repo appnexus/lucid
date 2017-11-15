@@ -50,7 +50,7 @@ describe('Accordion', () => {
 				const firstItem = wrapper.find('.lucid-Accordion-Item').first();
 
 				assert.equal(
-					firstItem.find('.lucid-ExpanderPanel-header').text(),
+					firstItem.find('.lucid-ExpanderPanel-header').first().text(),
 					'Froyo'
 				);
 			});
@@ -69,7 +69,7 @@ describe('Accordion', () => {
 				const firstItem = wrapper.find('.lucid-Accordion-Item').first();
 
 				assert.equal(
-					firstItem.find('.lucid-ExpanderPanel-header').text(),
+					firstItem.find('.lucid-ExpanderPanel-header').first().text(),
 					'Froyo'
 				);
 			});
@@ -158,7 +158,7 @@ describe('Accordion', () => {
 		it('should call the function passed in as the `onSelect` prop', () => {
 			const firstPanel = wrapper.find('.lucid-ExpanderPanel').at(0);
 
-			firstPanel.find('.lucid-ExpanderPanel-header').simulate('click');
+			firstPanel.find('.lucid-ExpanderPanel-header').first().simulate('click');
 			firstPanel.find('.lucid-ExpanderPanel-icon').simulate('click');
 
 			assert.equal(
@@ -169,16 +169,12 @@ describe('Accordion', () => {
 		});
 
 		it('should not call the function passed in as the `onSelect` prop when Item is disabled', () => {
-			const firstPanel = wrapper.find('.lucid-ExpanderPanel').at(1);
+			const secondPanel = wrapper.find('.lucid-ExpanderPanel').at(2);
 
-			firstPanel.find('.lucid-ExpanderPanel-header').simulate('click');
-			firstPanel.find('.lucid-ExpanderPanel-icon').simulate('click');
+			secondPanel.find('.lucid-ExpanderPanel-header').first().simulate('click');
+			secondPanel.find('.lucid-ExpanderPanel-icon').simulate('click');
 
-			assert.equal(
-				onSelect.callCount,
-				0,
-				`onSelect called the wrong number of times, actual: ${onSelect.callCount}, expected: 0`
-			);
+			expect(onSelect.callCount).toEqual(0);
 		});
 	});
 });

@@ -456,126 +456,151 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`
       Grouped items
     </span>
     <Tag
+      key=".1:$0"
       onRemove={[Function]}
     >
       Fashion
     </Tag>
     <Tag
+      key=".1:$1"
       onRemove={[Function]}
     >
       The
     </Tag>
     <Tag
+      key=".1:$2"
       onRemove={[Function]}
     >
       Vexillologist
     </Tag>
     <Tag
+      key=".1:$3"
       onRemove={[Function]}
     >
       Cold Brew
     </Tag>
     <Tag
+      key=".1:$4"
       onRemove={[Function]}
     >
       This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
     </Tag>
     <Tag
+      key=".1:$5"
       onRemove={[Function]}
     >
       Fashion
     </Tag>
     <Tag
+      key=".1:$6"
       onRemove={[Function]}
     >
       The
     </Tag>
     <Tag
+      key=".1:$7"
       onRemove={[Function]}
     >
       Vexillologist
     </Tag>
     <Tag
+      key=".1:$8"
       onRemove={[Function]}
     >
       Cold Brew
     </Tag>
     <Tag
+      key=".1:$9"
       onRemove={[Function]}
     >
       This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
     </Tag>
     <Tag
+      key=".1:$10"
       onRemove={[Function]}
     >
       Fashion
     </Tag>
     <Tag
+      key=".1:$11"
       onRemove={[Function]}
     >
       The
     </Tag>
     <Tag
+      key=".1:$12"
       onRemove={[Function]}
     >
       Vexillologist
     </Tag>
     <Tag
+      key=".1:$13"
       onRemove={[Function]}
     >
       Cold Brew
     </Tag>
     <Tag
+      key=".1:$14"
       onRemove={[Function]}
     >
       This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
     </Tag>
     <Tag
+      key=".1:$15"
       onRemove={[Function]}
     >
       Fashion
     </Tag>
     <Tag
+      key=".1:$16"
       onRemove={[Function]}
     >
       The
     </Tag>
     <Tag
+      key=".1:$17"
       onRemove={[Function]}
     >
       Vexillologist
     </Tag>
     <Tag
+      key=".1:$18"
       onRemove={[Function]}
     >
       Cold Brew
     </Tag>
     <Tag
+      key=".1:$19"
       onRemove={[Function]}
     >
       This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
     </Tag>
     <Tag
+      key=".1:$20"
       onRemove={[Function]}
     >
       Fashion
     </Tag>
     <Tag
+      key=".1:$21"
       onRemove={[Function]}
     >
       The
     </Tag>
     <Tag
+      key=".1:$22"
       onRemove={[Function]}
     >
       Vexillologist
     </Tag>
     <Tag
+      key=".1:$23"
       onRemove={[Function]}
     >
       Cold Brew
     </Tag>
     <Tag
+      key=".1:$24"
       onRemove={[Function]}
     >
       This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
@@ -997,126 +1022,151 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`
       Grouped items
     </span>
     <Tag
+      key=".1:$0"
       onRemove={[Function]}
     >
       Fashion
     </Tag>
     <Tag
+      key=".1:$1"
       onRemove={[Function]}
     >
       The
     </Tag>
     <Tag
+      key=".1:$2"
       onRemove={[Function]}
     >
       Vexillologist
     </Tag>
     <Tag
+      key=".1:$3"
       onRemove={[Function]}
     >
       Cold Brew
     </Tag>
     <Tag
+      key=".1:$4"
       onRemove={[Function]}
     >
       This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
     </Tag>
     <Tag
+      key=".1:$5"
       onRemove={[Function]}
     >
       Fashion
     </Tag>
     <Tag
+      key=".1:$6"
       onRemove={[Function]}
     >
       The
     </Tag>
     <Tag
+      key=".1:$7"
       onRemove={[Function]}
     >
       Vexillologist
     </Tag>
     <Tag
+      key=".1:$8"
       onRemove={[Function]}
     >
       Cold Brew
     </Tag>
     <Tag
+      key=".1:$9"
       onRemove={[Function]}
     >
       This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
     </Tag>
     <Tag
+      key=".1:$10"
       onRemove={[Function]}
     >
       Fashion
     </Tag>
     <Tag
+      key=".1:$11"
       onRemove={[Function]}
     >
       The
     </Tag>
     <Tag
+      key=".1:$12"
       onRemove={[Function]}
     >
       Vexillologist
     </Tag>
     <Tag
+      key=".1:$13"
       onRemove={[Function]}
     >
       Cold Brew
     </Tag>
     <Tag
+      key=".1:$14"
       onRemove={[Function]}
     >
       This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
     </Tag>
     <Tag
+      key=".1:$15"
       onRemove={[Function]}
     >
       Fashion
     </Tag>
     <Tag
+      key=".1:$16"
       onRemove={[Function]}
     >
       The
     </Tag>
     <Tag
+      key=".1:$17"
       onRemove={[Function]}
     >
       Vexillologist
     </Tag>
     <Tag
+      key=".1:$18"
       onRemove={[Function]}
     >
       Cold Brew
     </Tag>
     <Tag
+      key=".1:$19"
       onRemove={[Function]}
     >
       This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
     </Tag>
     <Tag
+      key=".1:$20"
       onRemove={[Function]}
     >
       Fashion
     </Tag>
     <Tag
+      key=".1:$21"
       onRemove={[Function]}
     >
       The
     </Tag>
     <Tag
+      key=".1:$22"
       onRemove={[Function]}
     >
       Vexillologist
     </Tag>
     <Tag
+      key=".1:$23"
       onRemove={[Function]}
     >
       Cold Brew
     </Tag>
     <Tag
+      key=".1:$24"
       onRemove={[Function]}
     >
       This is a longer sentence that should be handled okay but what if it is even longer than you could ever think imaginable
@@ -1551,6 +1601,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="0.0"
       isRemovable={true}
+      key=".1:$0.0"
       onRemove={[Function]}
     >
       Phil
@@ -1612,6 +1663,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="1.0"
       isRemovable={true}
+      key=".1:$1.0"
       onRemove={[Function]}
     >
       Carol
@@ -1673,6 +1725,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.0"
       isRemovable={true}
+      key=".1:$2.0"
       onRemove={[Function]}
     >
       Ask Aak
@@ -1680,6 +1733,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.1"
       isRemovable={true}
+      key=".1:$2.1"
       onRemove={[Function]}
     >
       Admiral Gial Ackbar
@@ -1687,6 +1741,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.2"
       isRemovable={true}
+      key=".1:$2.2"
       onRemove={[Function]}
     >
       Acros-Krik
@@ -1694,6 +1749,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.3"
       isRemovable={true}
+      key=".1:$2.3"
       onRemove={[Function]}
     >
       Ak-Rev
@@ -1701,6 +1757,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.4"
       isRemovable={true}
+      key=".1:$2.4"
       onRemove={[Function]}
     >
       Stass Allie
@@ -1708,6 +1765,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.5"
       isRemovable={true}
+      key=".1:$2.5"
       onRemove={[Function]}
     >
       Almec
@@ -1715,6 +1773,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.6"
       isRemovable={true}
+      key=".1:$2.6"
       onRemove={[Function]}
     >
       Mas Amedda
@@ -1722,6 +1781,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.7"
       isRemovable={true}
+      key=".1:$2.7"
       onRemove={[Function]}
     >
       Amee
@@ -1729,6 +1789,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.8"
       isRemovable={true}
+      key=".1:$2.8"
       onRemove={[Function]}
     >
       Padmé Amidala
@@ -1736,6 +1797,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.9"
       isRemovable={true}
+      key=".1:$2.9"
       onRemove={[Function]}
     >
       Cassian Andor
@@ -1743,6 +1805,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.10"
       isRemovable={true}
+      key=".1:$2.10"
       onRemove={[Function]}
     >
       Bail Antilles
@@ -1750,6 +1813,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.11"
       isRemovable={true}
+      key=".1:$2.11"
       onRemove={[Function]}
     >
       Raymus Antilles
@@ -1757,6 +1821,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.12"
       isRemovable={true}
+      key=".1:$2.12"
       onRemove={[Function]}
     >
       Wedge Antilles
@@ -1764,6 +1829,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.13"
       isRemovable={true}
+      key=".1:$2.13"
       onRemove={[Function]}
     >
       Queen Apailana
@@ -1771,6 +1837,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.14"
       isRemovable={true}
+      key=".1:$2.14"
       onRemove={[Function]}
     >
       Commander Appo
@@ -1778,6 +1845,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.15"
       isRemovable={true}
+      key=".1:$2.15"
       onRemove={[Function]}
     >
       Passel Argente
@@ -1785,6 +1853,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.16"
       isRemovable={true}
+      key=".1:$2.16"
       onRemove={[Function]}
     >
       Faro Argyus
@@ -1792,6 +1861,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.17"
       isRemovable={true}
+      key=".1:$2.17"
       onRemove={[Function]}
     >
       Seti Ashgad
@@ -1799,6 +1869,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="2.18"
       isRemovable={true}
+      key=".1:$2.18"
       onRemove={[Function]}
     >
       AZI-3
@@ -2346,6 +2417,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.0"
       isRemovable={true}
+      key=".1:$3.0"
       onRemove={[Function]}
     >
       Adrahil
@@ -2353,6 +2425,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.1"
       isRemovable={true}
+      key=".1:$3.1"
       onRemove={[Function]}
     >
       Adrahil II
@@ -2360,6 +2433,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.2"
       isRemovable={true}
+      key=".1:$3.2"
       onRemove={[Function]}
     >
       Aegnor
@@ -2367,6 +2441,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.3"
       isRemovable={true}
+      key=".1:$3.3"
       onRemove={[Function]}
     >
       Aerandir
@@ -2374,6 +2449,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.4"
       isRemovable={true}
+      key=".1:$3.4"
       onRemove={[Function]}
     >
       Aghan
@@ -2381,6 +2457,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.5"
       isRemovable={true}
+      key=".1:$3.5"
       onRemove={[Function]}
     >
       Aglahad
@@ -2388,6 +2465,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.6"
       isRemovable={true}
+      key=".1:$3.6"
       onRemove={[Function]}
     >
       Ailinel
@@ -2395,6 +2473,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.7"
       isRemovable={true}
+      key=".1:$3.7"
       onRemove={[Function]}
     >
       Alatar
@@ -2402,6 +2481,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.8"
       isRemovable={true}
+      key=".1:$3.8"
       onRemove={[Function]}
     >
       Aldamir
@@ -2409,6 +2489,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.9"
       isRemovable={true}
+      key=".1:$3.9"
       onRemove={[Function]}
     >
       Aldor
@@ -2416,6 +2497,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.10"
       isRemovable={true}
+      key=".1:$3.10"
       onRemove={[Function]}
     >
       Almarian
@@ -2423,6 +2505,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.11"
       isRemovable={true}
+      key=".1:$3.11"
       onRemove={[Function]}
     >
       Almiel
@@ -2430,6 +2513,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.12"
       isRemovable={true}
+      key=".1:$3.12"
       onRemove={[Function]}
     >
       Amandil
@@ -2437,6 +2521,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.13"
       isRemovable={true}
+      key=".1:$3.13"
       onRemove={[Function]}
     >
       Amdír
@@ -2444,6 +2529,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.14"
       isRemovable={true}
+      key=".1:$3.14"
       onRemove={[Function]}
     >
       Amlaith
@@ -2451,6 +2537,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.15"
       isRemovable={true}
+      key=".1:$3.15"
       onRemove={[Function]}
     >
       Amrod
@@ -2458,6 +2545,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.16"
       isRemovable={true}
+      key=".1:$3.16"
       onRemove={[Function]}
     >
       Amroth
@@ -2465,6 +2553,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.17"
       isRemovable={true}
+      key=".1:$3.17"
       onRemove={[Function]}
     >
       Anardil
@@ -2472,6 +2561,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.18"
       isRemovable={true}
+      key=".1:$3.18"
       onRemove={[Function]}
     >
       Anborn
@@ -2479,6 +2569,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.19"
       isRemovable={true}
+      key=".1:$3.19"
       onRemove={[Function]}
     >
       Ancalagon The Black
@@ -2486,6 +2577,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.20"
       isRemovable={true}
+      key=".1:$3.20"
       onRemove={[Function]}
     >
       Andróg
@@ -2493,6 +2585,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.21"
       isRemovable={true}
+      key=".1:$3.21"
       onRemove={[Function]}
     >
       Angbor
@@ -2500,6 +2593,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.22"
       isRemovable={true}
+      key=".1:$3.22"
       onRemove={[Function]}
     >
       Angelimar
@@ -2507,6 +2601,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.23"
       isRemovable={true}
+      key=".1:$3.23"
       onRemove={[Function]}
     >
       Angelimir
@@ -2514,6 +2609,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.24"
       isRemovable={true}
+      key=".1:$3.24"
       onRemove={[Function]}
     >
       Angrod
@@ -2521,6 +2617,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.25"
       isRemovable={true}
+      key=".1:$3.25"
       onRemove={[Function]}
     >
       Anárion
@@ -2528,6 +2625,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.26"
       isRemovable={true}
+      key=".1:$3.26"
       onRemove={[Function]}
     >
       Ar-Adûnakhôr
@@ -2535,6 +2633,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.27"
       isRemovable={true}
+      key=".1:$3.27"
       onRemove={[Function]}
     >
       Ar-Gimilzôr
@@ -2542,6 +2641,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.28"
       isRemovable={true}
+      key=".1:$3.28"
       onRemove={[Function]}
     >
       Ar-Pharazôn
@@ -2549,6 +2649,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.29"
       isRemovable={true}
+      key=".1:$3.29"
       onRemove={[Function]}
     >
       Ar-Sakalthôr
@@ -2556,6 +2657,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.30"
       isRemovable={true}
+      key=".1:$3.30"
       onRemove={[Function]}
     >
       Ar-Zimrathôn
@@ -2563,6 +2665,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.31"
       isRemovable={true}
+      key=".1:$3.31"
       onRemove={[Function]}
     >
       Arador
@@ -2570,6 +2673,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.32"
       isRemovable={true}
+      key=".1:$3.32"
       onRemove={[Function]}
     >
       Araglas
@@ -2577,6 +2681,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.33"
       isRemovable={true}
+      key=".1:$3.33"
       onRemove={[Function]}
     >
       Aragorn I
@@ -2584,6 +2689,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="3.34"
       isRemovable={true}
+      key=".1:$3.34"
       onRemove={[Function]}
     >
       Aragorn II Elessar
@@ -3563,6 +3669,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="4.0"
       isRemovable={true}
+      key=".1:$4.0"
       onRemove={[Function]}
     >
       Jonathan Archer
@@ -3570,6 +3677,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="4.1"
       isRemovable={true}
+      key=".1:$4.1"
       onRemove={[Function]}
     >
       Ayala
@@ -3577,6 +3685,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="4.2"
       isRemovable={true}
+      key=".1:$4.2"
       onRemove={[Function]}
     >
       Azan
@@ -3584,6 +3693,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="4.3"
       isRemovable={true}
+      key=".1:$4.3"
       onRemove={[Function]}
     >
       Reginald Barclay
@@ -3591,6 +3701,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="4.4"
       isRemovable={true}
+      key=".1:$4.4"
       onRemove={[Function]}
     >
       Lieutenant, JG (TNG,FCT)
@@ -3598,6 +3709,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="4.5"
       isRemovable={true}
+      key=".1:$4.5"
       onRemove={[Function]}
     >
       Engineering Officer (TNG,Movies)
@@ -3605,6 +3717,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="4.6"
       isRemovable={true}
+      key=".1:$4.6"
       onRemove={[Function]}
     >
       Bareil Antos
@@ -3612,6 +3725,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="4.7"
       isRemovable={true}
+      key=".1:$4.7"
       onRemove={[Function]}
     >
       Julian Bashir
@@ -3619,6 +3733,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="4.8"
       isRemovable={true}
+      key=".1:$4.8"
       onRemove={[Function]}
     >
       Season 6 (TNG)
@@ -3626,6 +3741,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
     <Tag
       callbackId="4.9"
       isRemovable={true}
+      key=".1:$4.9"
       onRemove={[Function]}
     >
       Lieutenant, JG (S1-3)

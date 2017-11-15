@@ -32,7 +32,9 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     transitionLeaveTimeout={100}
     transitionName="lucid-SwitchLabeled-text"
   >
-    <span>
+    <span
+      key="0"
+    >
       Airplane Mode
     </span>
   </CSSTransitionGroup>
@@ -71,7 +73,9 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     transitionLeaveTimeout={100}
     transitionName="lucid-SwitchLabeled-text"
   >
-    <span>
+    <span
+      key="0"
+    >
       Bluetooth
     </span>
   </CSSTransitionGroup>
@@ -110,7 +114,9 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     transitionLeaveTimeout={100}
     transitionName="lucid-SwitchLabeled-text"
   >
-    <span>
+    <span
+      key="0"
+    >
       Cellular Data
     </span>
   </CSSTransitionGroup>
@@ -145,7 +151,9 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     transitionLeaveTimeout={100}
     transitionName="lucid-SwitchLabeled-text"
   >
-    <span>
+    <span
+      key="0"
+    >
       Airplane Mode Activated
     </span>
   </CSSTransitionGroup>
@@ -180,7 +188,9 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     transitionLeaveTimeout={100}
     transitionName="lucid-SwitchLabeled-text"
   >
-    <span>
+    <span
+      key="0"
+    >
       Bluetooth Enabled
     </span>
   </CSSTransitionGroup>
@@ -215,7 +225,9 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     transitionLeaveTimeout={100}
     transitionName="lucid-SwitchLabeled-text"
   >
-    <span>
+    <span
+      key="0"
+    >
       Use Cellular Data
     </span>
   </CSSTransitionGroup>
@@ -254,7 +266,9 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for int
     transitionLeaveTimeout={100}
     transitionName="lucid-SwitchLabeled-text"
   >
-    <span>
+    <span
+      key="0"
+    >
       Yes! I would like to receive updates, special offers, and other information from AppNexus and its subsidiaries.
     </span>
   </CSSTransitionGroup>
@@ -289,7 +303,9 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     transitionLeaveTimeout={100}
     transitionName="lucid-SwitchLabeled-text"
   >
-    <span>
+    <span
+      key="0"
+    >
       Just text
     </span>
   </CSSTransitionGroup>
@@ -324,7 +340,9 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     transitionLeaveTimeout={100}
     transitionName="lucid-SwitchLabeled-text"
   >
-    <span>
+    <span
+      key="0"
+    >
       <span>
         HTML element
       </span>
@@ -361,7 +379,9 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     transitionLeaveTimeout={100}
     transitionName="lucid-SwitchLabeled-text"
   >
-    <span>
+    <span
+      key="0"
+    >
       Text in an array
     </span>
   </CSSTransitionGroup>
@@ -396,7 +416,9 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for lab
     transitionLeaveTimeout={100}
     transitionName="lucid-SwitchLabeled-text"
   >
-    <span>
+    <span
+      key="0"
+    >
       <span>
         HTML element in an array
       </span>
@@ -438,7 +460,9 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
     transitionLeaveTimeout={100}
     transitionName="lucid-SwitchLabeled-text"
   >
-    <span>
+    <span
+      key="0"
+    >
       (default props)
     </span>
   </CSSTransitionGroup>
@@ -478,7 +502,9 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
     transitionLeaveTimeout={100}
     transitionName="lucid-SwitchLabeled-text"
   >
-    <span>
+    <span
+      key="0"
+    >
       Disabled
     </span>
   </CSSTransitionGroup>
@@ -518,7 +544,9 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
     transitionLeaveTimeout={100}
     transitionName="lucid-SwitchLabeled-text"
   >
-    <span>
+    <span
+      key="0"
+    >
       Selected
     </span>
   </CSSTransitionGroup>
@@ -558,7 +586,9 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
     transitionLeaveTimeout={100}
     transitionName="lucid-SwitchLabeled-text"
   >
-    <span>
+    <span
+      key="0"
+    >
       Disabled & selected
     </span>
   </CSSTransitionGroup>

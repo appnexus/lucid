@@ -41,56 +41,59 @@ describe('StickySection', () => {
 				mountTestdiv.parentNode.removeChild(mountTestdiv);
 			});
 
-			it('render the sticky section normally (not fixed) when scrolled past the lowerBound value', () => {
-				// set the lowerBound to 500
-				wrapper = mount(<StickySection lowerBound={500} />, {
-					attachTo: mountTestdiv,
-				});
+			it.skip(
+				'render the sticky section normally (not fixed) when scrolled past the lowerBound value',
+				() => {
+					// set the lowerBound to 500
+					wrapper = mount(<StickySection lowerBound={500} />, {
+						attachTo: mountTestdiv,
+					});
 
-				// scroll to position 499
-				window.pageYOffset = 499;
-				dispatchDOMEvent(window, 'scroll');
+					// scroll to position 499
+					window.pageYOffset = 499;
+					dispatchDOMEvent(window, 'scroll');
 
-				// check that the fixed position sticky section is rendered
-				assert.equal(
-					_.get(
-						wrapper.find('.lucid-StickySection-sticky-frame').prop('style'),
-						'position'
-					),
-					'fixed',
-					'sticky frame must be position fixed'
-				);
-				assert.equal(
-					_.get(
-						wrapper.find('.lucid-StickySection-sticky-section').prop('style'),
-						'position'
-					),
-					'absolute',
-					'sticky section must be position absolute'
-				);
+					// check that the fixed position sticky section is rendered
+					assert.equal(
+						_.get(
+							wrapper.find('.lucid-StickySection-sticky-frame').prop('style'),
+							'position'
+						),
+						'fixed',
+						'sticky frame must be position fixed'
+					);
+					assert.equal(
+						_.get(
+							wrapper.find('.lucid-StickySection-sticky-section').prop('style'),
+							'position'
+						),
+						'absolute',
+						'sticky section must be position absolute'
+					);
 
-				// scroll to position 501, past the lowerBound value
-				window.pageYOffset = 501;
-				dispatchDOMEvent(window, 'scroll');
+					// scroll to position 501, past the lowerBound value
+					window.pageYOffset = 501;
+					dispatchDOMEvent(window, 'scroll');
 
-				// check that the sticky section is no longer fixed position
-				assert.notEqual(
-					_.get(
-						wrapper.find('.lucid-StickySection-sticky-frame').prop('style'),
-						'position'
-					),
-					'fixed',
-					'sticky frame must not be position fixed'
-				);
-				assert.notEqual(
-					_.get(
-						wrapper.find('.lucid-StickySection-sticky-section').prop('style'),
-						'position'
-					),
-					'absolute',
-					'sticky section must not be position absolute'
-				);
-			});
+					// check that the sticky section is no longer fixed position
+					assert.notEqual(
+						_.get(
+							wrapper.find('.lucid-StickySection-sticky-frame').prop('style'),
+							'position'
+						),
+						'fixed',
+						'sticky frame must not be position fixed'
+					);
+					assert.notEqual(
+						_.get(
+							wrapper.find('.lucid-StickySection-sticky-section').prop('style'),
+							'position'
+						),
+						'absolute',
+						'sticky section must not be position absolute'
+					);
+				}
+			);
 		});
 		describe('viewportWidth', () => {
 			it('should set the width of the sticky frame to this value when the section `isAboveFold`', () => {

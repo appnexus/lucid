@@ -65,11 +65,12 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       onChange={[Function]}
       onChangeDebounced={[Function]}
       onSubmit={[Function]}
-      value={null}
+      value=""
     />
   </DropMenu.Header>
   <DropMenu.OptionGroup
     isHidden={false}
+    key="SearchableSelectOptionGroup0"
   >
     PST
     <SearchableSelect.Option
@@ -96,6 +97,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption0"
       value="CA"
     >
       California
@@ -104,6 +106,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption1"
       value="NV"
     >
       Nevada
@@ -112,6 +115,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption2"
       value="OR"
     >
       Oregon
@@ -120,6 +124,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption3"
       value="WA"
     >
       Washington
@@ -127,6 +132,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
   </DropMenu.OptionGroup>
   <DropMenu.OptionGroup
     isHidden={false}
+    key="SearchableSelectOptionGroup1"
   >
     MST
     <SearchableSelect.Option
@@ -173,6 +179,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption4"
       value="CO"
     >
       Colorado
@@ -181,6 +188,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption5"
       value="ID"
     >
       Idaho
@@ -189,6 +197,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption6"
       value="MT"
     >
       Montana
@@ -197,6 +206,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption7"
       value="NM"
     >
       New Mexico
@@ -205,6 +215,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption8"
       value="ND"
     >
       North Dakota
@@ -213,6 +224,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption9"
       value="SD"
     >
       South Dakota
@@ -221,6 +233,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption10"
       value="WI"
     >
       Wisconsin
@@ -229,6 +242,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption11"
       value="WY"
     >
       Wyoming
@@ -236,6 +250,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
   </DropMenu.OptionGroup>
   <DropMenu.OptionGroup
     isHidden={false}
+    key="SearchableSelectOptionGroup2"
   >
     CST
     <SearchableSelect.Option
@@ -322,6 +337,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption12"
       value="AR"
     >
       Arkansas
@@ -330,6 +346,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption13"
       value="IL"
     >
       Illinois
@@ -338,6 +355,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption14"
       value="IN"
     >
       Indiana
@@ -346,6 +364,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption15"
       value="IA"
     >
       Iowa
@@ -354,6 +373,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption16"
       value="KS"
     >
       Kansas
@@ -362,6 +382,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption17"
       value="KY"
     >
       Kentucky
@@ -370,6 +391,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption18"
       value="MI"
     >
       Michigan
@@ -378,6 +400,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption19"
       value="MN"
     >
       Minnesota
@@ -386,6 +409,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption20"
       value="MS"
     >
       Mississippi
@@ -394,6 +418,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption21"
       value="MO"
     >
       Missouri
@@ -402,6 +427,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption22"
       value="NE"
     >
       Nebraska
@@ -410,6 +436,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption23"
       value="OH"
     >
       Ohio
@@ -418,6 +445,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption24"
       value="OK"
     >
       Oklahoma
@@ -426,6 +454,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption25"
       value="TN"
     >
       Tennessee
@@ -434,6 +463,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption26"
       value="TX"
     >
       Texas
@@ -442,6 +472,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption27"
       value="UT"
     >
       Utah
@@ -449,6 +480,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
   </DropMenu.OptionGroup>
   <DropMenu.OptionGroup
     isHidden={false}
+    key="SearchableSelectOptionGroup3"
   >
     EST
     <SearchableSelect.Option
@@ -563,6 +595,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption28"
       value="AL"
     >
       <span>
@@ -574,6 +607,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption29"
       value="AZ"
     >
       Arizona
@@ -582,6 +616,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption30"
       value="CT"
     >
       Connecticut
@@ -590,6 +625,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption31"
       value="DE"
     >
       Delaware
@@ -598,6 +634,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption32"
       value="DC"
     >
       District Of Columbia
@@ -606,6 +643,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption33"
       value="FL"
     >
       Florida
@@ -614,6 +652,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption34"
       value="GA"
     >
       Georgia
@@ -622,6 +661,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption35"
       value="LA"
     >
       Louisiana
@@ -630,6 +670,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption36"
       value="ME"
     >
       Maine
@@ -638,6 +679,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption37"
       value="MD"
     >
       Maryland
@@ -646,6 +688,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption38"
       value="MA"
     >
       Massachusetts
@@ -654,6 +697,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption39"
       value="NH"
     >
       New Hampshire
@@ -662,6 +706,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption40"
       value="NJ"
     >
       New Jersey
@@ -670,6 +715,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption41"
       value="NY"
     >
       New York
@@ -678,6 +724,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption42"
       value="NC"
     >
       North Carolina
@@ -686,6 +733,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption43"
       value="PA"
     >
       Pennsylvania
@@ -694,6 +742,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption44"
       value="RI"
     >
       Rhode Island
@@ -702,6 +751,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption45"
       value="SC"
     >
       South Carolina
@@ -710,6 +760,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption46"
       value="VT"
     >
       Vermont
@@ -718,6 +769,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption47"
       value="VA"
     >
       Virginia
@@ -726,6 +778,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SearchableSelectOption48"
       value="WV"
     >
       West Virginia
@@ -735,6 +788,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption49"
     value="AK"
   >
     Alaska
@@ -743,6 +797,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption50"
     value="HI"
   >
     Hawaii
@@ -815,7 +870,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       onChange={[Function]}
       onChangeDebounced={[Function]}
       onSubmit={[Function]}
-      value={null}
+      value=""
     />
   </DropMenu.Header>
   <DropMenu.Option
@@ -823,6 +878,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectLoading"
   >
     <LoadingIcon
       aspectRatio="xMidYMid meet"
@@ -837,6 +893,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption0"
     value="AL"
   >
     Alabama
@@ -845,6 +902,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption1"
     value="AK"
   >
     Alaska
@@ -853,6 +911,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption2"
     value="AZ"
   >
     Arizona
@@ -861,6 +920,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption3"
     value="AR"
   >
     Arkansas
@@ -869,6 +929,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption4"
     value="CA"
   >
     California
@@ -877,6 +938,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption5"
     value="CO"
   >
     Colorado
@@ -885,6 +947,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption6"
     value="CT"
   >
     Connecticut
@@ -893,6 +956,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption7"
     value="DE"
   >
     Delaware
@@ -901,6 +965,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption8"
     value="DC"
   >
     District Of Columbia
@@ -909,6 +974,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption9"
     value="FL"
   >
     Florida
@@ -917,6 +983,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption10"
     value="GA"
   >
     Georgia
@@ -925,6 +992,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption11"
     value="HI"
   >
     Hawaii
@@ -933,6 +1001,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption12"
     value="ID"
   >
     Idaho
@@ -941,6 +1010,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption13"
     value="IL"
   >
     Illinois
@@ -949,6 +1019,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption14"
     value="IN"
   >
     Indiana
@@ -957,6 +1028,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption15"
     value="IA"
   >
     Iowa
@@ -965,6 +1037,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption16"
     value="KS"
   >
     Kansas
@@ -973,6 +1046,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption17"
     value="KY"
   >
     Kentucky
@@ -981,6 +1055,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption18"
     value="LA"
   >
     Louisiana
@@ -989,6 +1064,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption19"
     value="ME"
   >
     Maine
@@ -997,6 +1073,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption20"
     value="MD"
   >
     Maryland
@@ -1005,6 +1082,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption21"
     value="MA"
   >
     Massachusetts
@@ -1013,6 +1091,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption22"
     value="MI"
   >
     Michigan
@@ -1021,6 +1100,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption23"
     value="MN"
   >
     Minnesota
@@ -1029,6 +1109,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption24"
     value="MS"
   >
     Mississippi
@@ -1037,6 +1118,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption25"
     value="MO"
   >
     Missouri
@@ -1045,6 +1127,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption26"
     value="MT"
   >
     Montana
@@ -1053,6 +1136,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption27"
     value="NE"
   >
     Nebraska
@@ -1061,6 +1145,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption28"
     value="NV"
   >
     Nevada
@@ -1069,6 +1154,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption29"
     value="NH"
   >
     New Hampshire
@@ -1077,6 +1163,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption30"
     value="NJ"
   >
     New Jersey
@@ -1085,6 +1172,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption31"
     value="NM"
   >
     New Mexico
@@ -1093,6 +1181,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption32"
     value="NY"
   >
     New York
@@ -1101,6 +1190,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption33"
     value="NC"
   >
     North Carolina
@@ -1109,6 +1199,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption34"
     value="ND"
   >
     North Dakota
@@ -1117,6 +1208,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption35"
     value="OH"
   >
     Ohio
@@ -1125,6 +1217,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption36"
     value="OK"
   >
     Oklahoma
@@ -1133,6 +1226,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption37"
     value="OR"
   >
     Oregon
@@ -1141,6 +1235,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption38"
     value="PA"
   >
     Pennsylvania
@@ -1149,6 +1244,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption39"
     value="RI"
   >
     Rhode Island
@@ -1157,6 +1253,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption40"
     value="SC"
   >
     South Carolina
@@ -1165,6 +1262,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption41"
     value="SD"
   >
     South Dakota
@@ -1173,6 +1271,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption42"
     value="TN"
   >
     Tennessee
@@ -1181,6 +1280,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption43"
     value="TX"
   >
     Texas
@@ -1189,6 +1289,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption44"
     value="UT"
   >
     Utah
@@ -1197,6 +1298,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption45"
     value="VT"
   >
     Vermont
@@ -1205,6 +1307,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption46"
     value="VA"
   >
     Virginia
@@ -1213,6 +1316,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption47"
     value="WA"
   >
     Washington
@@ -1221,6 +1325,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption48"
     value="WV"
   >
     West Virginia
@@ -1229,6 +1334,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption49"
     value="WI"
   >
     Wisconsin
@@ -1237,6 +1343,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption50"
     value="WY"
   >
     Wyoming
@@ -1310,13 +1417,14 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       onChangeDebounced={[Function]}
       onSubmit={[Function]}
       placeholder="Type here to filter..."
-      value={null}
+      value=""
     />
   </DropMenu.Header>
   <DropMenu.Option
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption0"
   >
     Blue
   </DropMenu.Option>
@@ -1324,6 +1432,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption1"
   >
     Green
   </DropMenu.Option>
@@ -1331,6 +1440,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption2"
   >
     Orange
   </DropMenu.Option>
@@ -1338,6 +1448,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SearchableSelectOption3"
   >
     Red
   </DropMenu.Option>

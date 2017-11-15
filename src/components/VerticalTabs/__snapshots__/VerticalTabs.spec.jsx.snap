@@ -16,6 +16,7 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 1-ti
   >
     <VerticalListMenu.Item
       className="lucid-VerticalTabs-Tab lucid-VerticalTabs-Tab-is-active"
+      key="0"
     >
       <span
         className="lucid-VerticalTabs-Tab-content"
@@ -25,6 +26,7 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 1-ti
     </VerticalListMenu.Item>
     <VerticalListMenu.Item
       className="lucid-VerticalTabs-Tab"
+      key="1"
     >
       <span
         className="lucid-VerticalTabs-Tab-content"
@@ -34,6 +36,7 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 1-ti
     </VerticalListMenu.Item>
     <VerticalListMenu.Item
       className="lucid-VerticalTabs-Tab"
+      key="2"
     >
       <span
         className="lucid-VerticalTabs-Tab-content"
@@ -43,6 +46,7 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 1-ti
     </VerticalListMenu.Item>
     <VerticalListMenu.Item
       className="lucid-VerticalTabs-Tab"
+      key="3"
     >
       <span
         className="lucid-VerticalTabs-Tab-content"
@@ -75,6 +79,7 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 2-ti
   >
     <VerticalListMenu.Item
       className="lucid-VerticalTabs-Tab lucid-VerticalTabs-Tab-is-active"
+      key="0"
     >
       <span
         className="lucid-VerticalTabs-Tab-content"
@@ -84,6 +89,7 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 2-ti
     </VerticalListMenu.Item>
     <VerticalListMenu.Item
       className="lucid-VerticalTabs-Tab"
+      key="1"
     >
       <span
         className="lucid-VerticalTabs-Tab-content"
@@ -93,6 +99,7 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 2-ti
     </VerticalListMenu.Item>
     <VerticalListMenu.Item
       className="lucid-VerticalTabs-Tab"
+      key="2"
     >
       <span
         className="lucid-VerticalTabs-Tab-content"
@@ -102,6 +109,7 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 2-ti
     </VerticalListMenu.Item>
     <VerticalListMenu.Item
       className="lucid-VerticalTabs-Tab"
+      key="3"
     >
       <span
         className="lucid-VerticalTabs-Tab-content"
@@ -137,6 +145,7 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 3-co
   >
     <VerticalListMenu.Item
       className="lucid-VerticalTabs-Tab lucid-VerticalTabs-Tab-is-active"
+      key="0"
     >
       <span
         className="lucid-VerticalTabs-Tab-content"
@@ -166,6 +175,7 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 3-co
     </VerticalListMenu.Item>
     <VerticalListMenu.Item
       className="lucid-VerticalTabs-Tab"
+      key="1"
     >
       <span
         className="lucid-VerticalTabs-Tab-content"
@@ -195,6 +205,7 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 3-co
     </VerticalListMenu.Item>
     <VerticalListMenu.Item
       className="lucid-VerticalTabs-Tab"
+      key="2"
     >
       <span
         className="lucid-VerticalTabs-Tab-content"
@@ -269,6 +280,7 @@ exports[`VerticalTabs [common] example testing should match snapshot(s) for 3-co
     </VerticalListMenu.Item>
     <VerticalListMenu.Item
       className="lucid-VerticalTabs-Tab"
+      key="3"
     >
       <span
         className="lucid-VerticalTabs-Tab-content"

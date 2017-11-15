@@ -17,7 +17,8 @@ describe('SlidePanel', () => {
 					<Slide>foo</Slide>
 					<Slide>bar</Slide>
 					<Slide>baz</Slide>
-				</SlidePanel>
+				</SlidePanel>,
+				{ disableLifecycleMethods: true }
 			);
 			const slidePanelInstance = wrapper.instance();
 			slidePanelInstance.rootNode = {
@@ -42,7 +43,8 @@ describe('SlidePanel', () => {
 					<Slide>foo</Slide>
 					<Slide>bar</Slide>
 					<Slide>baz</Slide>
-				</SlidePanel>
+				</SlidePanel>,
+				{ disableLifecycleMethods: true }
 			);
 			const slidePanelInstance = wrapper.instance();
 			slidePanelInstance.rootNode = {
@@ -74,7 +76,8 @@ describe('SlidePanel', () => {
 						<Slide>spam</Slide>
 						<Slide>eggs</Slide>
 						<Slide>quux</Slide>
-					</SlidePanel>
+					</SlidePanel>,
+					{ disableLifecycleMethods: true }
 				);
 				slidePanelInstance = wrapper.instance();
 				slidePanelInstance.rootNode = {

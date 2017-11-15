@@ -43,7 +43,8 @@ export function common(
 				backgroundColor: '#f0f',
 			};
 			const wrapper = shallow(
-				<Component {...generateDefaultProps()} style={style} />
+				<Component {...generateDefaultProps()} style={style} />,
+				{ disableLifecycleMethods: true }
 			);
 
 			const rootWrapper = selectRoot(wrapper).first();
@@ -57,7 +58,8 @@ export function common(
 		it('should pass through `className`', () => {
 			const expectedClass = 'rAnDoM';
 			const wrapper = shallow(
-				<Component {...generateDefaultProps()} className={expectedClass} />
+				<Component {...generateDefaultProps()} className={expectedClass} />,
+				{ disableLifecycleMethods: true }
 			);
 			const rootWrapper = selectRoot(wrapper).first();
 			const classNames = rootWrapper.prop('className').split(' ');
@@ -70,7 +72,9 @@ export function common(
 
 		it('should have an application scoped base class', () => {
 			const expectedClass = 'lucid-' + Component.displayName;
-			const wrapper = shallow(<Component {...generateDefaultProps()} />);
+			const wrapper = shallow(<Component {...generateDefaultProps()} />, {
+				disableLifecycleMethods: true,
+			});
 			const rootWrapper = selectRoot(wrapper).first();
 			const classNames = rootWrapper.prop('className').split(' ');
 
@@ -81,7 +85,9 @@ export function common(
 		});
 
 		it('should have only application scoped classes', () => {
-			const wrapper = shallow(<Component {...generateDefaultProps()} />);
+			const wrapper = shallow(<Component {...generateDefaultProps()} />, {
+				disableLifecycleMethods: true,
+			});
 			const rootWrapper = selectRoot(wrapper).first();
 			const parentClasses = rootWrapper.prop('className').split(' ');
 			const childrenClasses = rootWrapper.children().reduce((acc, node) => {
@@ -158,18 +164,24 @@ export function common(
 				const Example = require('../../' + path).default;
 				const title = basename(path, '.jsx');
 				it(`should match snapshot(s) for ${title}`, () => {
-					const shallowExample = shallow(<Example />);
+					const shallowExample = shallow(<Example />, {
+						disableLifecycleMethods: true,
+					});
 
 					// If the root of the example is an instance of the Component under test, snapshot it.
 					// Otherwise, look under the root for instances of the Component and snapshot those.
 					if (shallowExample.is(Component.displayName)) {
 						expect(
-							shallow(<Component {...shallowExample.props()} />)
+							shallow(<Component {...shallowExample.props()} />, {
+								disableLifecycleMethods: true,
+							})
 						).toMatchSnapshot();
 					} else {
 						shallowExample.find(Component.displayName).forEach(example => {
 							expect(
-								shallow(<Component {...example.props()} />)
+								shallow(<Component {...example.props()} />, {
+									disableLifecycleMethods: true,
+								})
 							).toMatchSnapshot();
 						});
 					}
@@ -216,7 +228,7 @@ export function controls(
 			};
 			const wrapper = mount(<Component {...props} />);
 
-			wrapper.find(controlSelector).simulate(eventType);
+			wrapper.find(controlSelector).first().simulate(eventType);
 
 			// Last argument should be an object with `uniqueId` and `event`
 			const { props: { specialProp }, event } = _.last(

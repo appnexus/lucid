@@ -23,8 +23,8 @@ describe('RadioGroup', () => {
 					</RadioGroup>
 				);
 
-				_.forEach(wrapper.find(RadioButtonLabeled).nodes, node => {
-					assert.equal(node.props.name, name);
+				wrapper.find(RadioButtonLabeled).forEach(node => {
+					assert.equal(node.props().name, name);
 				});
 			});
 
@@ -38,8 +38,8 @@ describe('RadioGroup', () => {
 				);
 				const name = wrapper.first().prop('name');
 
-				_.forEach(wrapper.find(RadioButtonLabeled).nodes, node => {
-					assert.equal(node.props.name, name);
+				wrapper.find(RadioButtonLabeled).forEach(node => {
+					assert.equal(node.props().name, name);
 				});
 			});
 		});
@@ -53,11 +53,9 @@ describe('RadioGroup', () => {
 						<RadioGroup.RadioButton />
 					</RadioGroup>
 				);
-				const childNodes = wrapper.find(RadioButtonLabeled).nodes;
-
-				assert.equal(childNodes[0].props.isDisabled, true);
-				assert.equal(childNodes[1].props.isDisabled, true);
-				assert.equal(childNodes[2].props.isDisabled, true);
+				wrapper.find(RadioButtonLabeled).forEach(node => {
+					assert(node.props().isDisabled);
+				});
 			});
 
 			it('should set `isDisabled` to true for all child radio buttons even if the child radio buttons have isDisabled set as false', () => {
@@ -68,11 +66,9 @@ describe('RadioGroup', () => {
 						<RadioGroup.RadioButton />
 					</RadioGroup>
 				);
-				const childNodes = wrapper.find(RadioButtonLabeled).nodes;
-
-				assert.equal(childNodes[0].props.isDisabled, true);
-				assert.equal(childNodes[1].props.isDisabled, true);
-				assert.equal(childNodes[2].props.isDisabled, true);
+				wrapper.find(RadioButtonLabeled).forEach(node => {
+					assert(node.props().isDisabled);
+				});
 			});
 
 			it('should allow specific radio buttons to be disabled', () => {
@@ -83,11 +79,12 @@ describe('RadioGroup', () => {
 						<RadioGroup.RadioButton />
 					</RadioGroup>
 				);
-				const childNodes = wrapper.find(RadioButtonLabeled).nodes;
 
-				assert.equal(childNodes[0].props.isDisabled, false);
-				assert.equal(childNodes[1].props.isDisabled, true);
-				assert.equal(childNodes[2].props.isDisabled, false);
+				const childNodes = wrapper.find(RadioButtonLabeled);
+
+				assert.equal(childNodes.at(0).props().isDisabled, false);
+				assert.equal(childNodes.at(1).props().isDisabled, true);
+				assert.equal(childNodes.at(2).props().isDisabled, false);
 			});
 		});
 
@@ -100,11 +97,11 @@ describe('RadioGroup', () => {
 						<RadioGroup.RadioButton />
 					</RadioGroup>
 				);
-				const childNodes = wrapper.find(RadioButtonLabeled).nodes;
+				const childNodes = wrapper.find(RadioButtonLabeled);
 
-				assert.equal(childNodes[0].props.isSelected, false);
-				assert.equal(childNodes[1].props.isSelected, false);
-				assert.equal(childNodes[2].props.isSelected, true);
+				assert.equal(childNodes.at(0).props().isSelected, false);
+				assert.equal(childNodes.at(1).props().isSelected, false);
+				assert.equal(childNodes.at(2).props().isSelected, true);
 			});
 
 			it('...except when a child component already has an explicitly defined `isSelected` prop which takes precedence.', () => {
@@ -115,11 +112,11 @@ describe('RadioGroup', () => {
 						<RadioGroup.RadioButton />
 					</RadioGroup>
 				);
-				const childNodes = wrapper.find(RadioButtonLabeled).nodes;
+				const childNodes = wrapper.find(RadioButtonLabeled);
 
-				assert.equal(childNodes[0].props.isSelected, false);
-				assert.equal(childNodes[1].props.isSelected, true);
-				assert.equal(childNodes[2].props.isSelected, false);
+				assert.equal(childNodes.at(0).props().isSelected, false);
+				assert.equal(childNodes.at(1).props().isSelected, true);
+				assert.equal(childNodes.at(2).props().isSelected, false);
 			});
 
 			it('defaults to 0.', () => {
@@ -130,11 +127,11 @@ describe('RadioGroup', () => {
 						<RadioGroup.RadioButton />
 					</RadioGroup>
 				);
-				const childNodes = wrapper.find(RadioButtonLabeled).nodes;
+				const childNodes = wrapper.find(RadioButtonLabeled);
 
-				assert.equal(childNodes[0].props.isSelected, true);
-				assert.equal(childNodes[1].props.isSelected, false);
-				assert.equal(childNodes[2].props.isSelected, false);
+				assert.equal(childNodes.at(0).props().isSelected, true);
+				assert.equal(childNodes.at(1).props().isSelected, false);
+				assert.equal(childNodes.at(2).props().isSelected, false);
 			});
 		});
 
@@ -214,7 +211,7 @@ describe('RadioGroup', () => {
 				</RadioGroup>
 			);
 
-			wrapper.childAt(1).childAt(0).simulate('click');
+			wrapper.childAt(0).childAt(1).childAt(0).childAt(0).simulate('click');
 			assert(onSelect.calledOnce);
 		});
 
@@ -228,7 +225,7 @@ describe('RadioGroup', () => {
 				</RadioGroup>
 			);
 
-			wrapper.childAt(1).childAt(0).simulate('click');
+			wrapper.childAt(0).childAt(1).childAt(0).childAt(0).simulate('click');
 			assert.equal(onSelect.args[0][0], 1);
 			assert(_.last(onSelect.args[0]).event);
 		});
@@ -244,7 +241,7 @@ describe('RadioGroup', () => {
 				</RadioGroup>
 			);
 
-			wrapper.childAt(1).childAt(0).simulate('click');
+			wrapper.childAt(0).childAt(1).childAt(0).childAt(0).simulate('click');
 			assert(childOnSelect.calledBefore(onSelect));
 		});
 	});

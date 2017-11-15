@@ -10,17 +10,6 @@ import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 const { Placeholder, Option, OptionGroup } = SingleSelect;
 
 describe('SingleSelect', () => {
-	let requestAnimationFramePreviewValue;
-
-	beforeAll(() => {
-		requestAnimationFramePreviewValue = window.requestAnimationFrame;
-		window.requestAnimationFrame = callback => setTimeout(callback, 32);
-	});
-
-	afterAll(() => {
-		window.requestAnimationFrame = requestAnimationFramePreviewValue;
-	});
-
 	common(SingleSelect);
 
 	describe('render', () => {

@@ -12,17 +12,6 @@ import * as KEYCODE from '../../constants/key-code';
 const { Control, Header, Option, OptionGroup, NullOption } = DropMenu;
 
 describe('DropMenu', () => {
-	let requestAnimationFramePreviewValue;
-
-	beforeAll(() => {
-		requestAnimationFramePreviewValue = window.requestAnimationFrame;
-		window.requestAnimationFrame = callback => setTimeout(callback, 32);
-	});
-
-	afterAll(() => {
-		window.requestAnimationFrame = requestAnimationFramePreviewValue;
-	});
-
 	common(DropMenu);
 
 	describe('render', () => {

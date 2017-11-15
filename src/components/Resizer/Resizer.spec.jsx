@@ -36,10 +36,11 @@ describe('Resizer', () => {
 				</Resizer>
 			);
 
-			expect(wrapper.node.resizeDetector.removeListener).not.toHaveBeenCalled();
+			const instance = wrapper.instance();
+			expect(instance.resizeDetector.removeListener).not.toHaveBeenCalled();
 
 			wrapper.unmount();
-			expect(wrapper.node.resizeDetector.removeListener).toHaveBeenCalled();
+			expect(instance.resizeDetector.removeListener).toHaveBeenCalled();
 		});
 	});
 

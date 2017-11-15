@@ -11,17 +11,6 @@ import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 const { Placeholder, Option, OptionGroup, SearchField } = SearchableSelect;
 
 describe('SearchableSelect', () => {
-	let requestAnimationFramePreviewValue;
-
-	beforeAll(() => {
-		requestAnimationFramePreviewValue = window.requestAnimationFrame;
-		window.requestAnimationFrame = callback => setTimeout(callback, 32);
-	});
-
-	afterAll(() => {
-		window.requestAnimationFrame = requestAnimationFramePreviewValue;
-	});
-
 	common(SearchableSelect, {
 		exemptFunctionProps: ['optionFilter', 'richChildRenderer'],
 	});

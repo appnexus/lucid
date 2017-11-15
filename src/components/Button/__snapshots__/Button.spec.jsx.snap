@@ -7,7 +7,7 @@ exports[`Button [common] example testing should match snapshot(s) for basic 1`] 
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -27,7 +27,7 @@ exports[`Button [common] example testing should match snapshot(s) for basic 2`] 
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -48,7 +48,7 @@ exports[`Button [common] example testing should match snapshot(s) for basic 3`] 
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -68,7 +68,7 @@ exports[`Button [common] example testing should match snapshot(s) for basic 4`] 
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -103,7 +103,7 @@ exports[`Button [common] example testing should match snapshot(s) for basic 6`] 
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -123,7 +123,7 @@ exports[`Button [common] example testing should match snapshot(s) for basic 7`] 
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -144,7 +144,7 @@ exports[`Button [common] example testing should match snapshot(s) for basic 8`] 
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -164,7 +164,7 @@ exports[`Button [common] example testing should match snapshot(s) for basic 9`] 
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -199,7 +199,7 @@ exports[`Button [common] example testing should match snapshot(s) for basic 11`]
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -219,7 +219,7 @@ exports[`Button [common] example testing should match snapshot(s) for basic 12`]
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -240,7 +240,7 @@ exports[`Button [common] example testing should match snapshot(s) for basic 13`]
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -260,7 +260,7 @@ exports[`Button [common] example testing should match snapshot(s) for basic 14`]
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -295,7 +295,7 @@ exports[`Button [common] example testing should match snapshot(s) for basic 16`]
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -315,7 +315,7 @@ exports[`Button [common] example testing should match snapshot(s) for basic 17`]
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -336,7 +336,7 @@ exports[`Button [common] example testing should match snapshot(s) for basic 18`]
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -356,7 +356,7 @@ exports[`Button [common] example testing should match snapshot(s) for basic 19`]
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -391,7 +391,7 @@ exports[`Button [common] example testing should match snapshot(s) for danger 1`]
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -426,7 +426,7 @@ exports[`Button [common] example testing should match snapshot(s) for danger 3`]
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -461,7 +461,7 @@ exports[`Button [common] example testing should match snapshot(s) for danger 5`]
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -496,7 +496,7 @@ exports[`Button [common] example testing should match snapshot(s) for danger 7`]
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -531,7 +531,7 @@ exports[`Button [common] example testing should match snapshot(s) for info 1`] =
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -566,7 +566,7 @@ exports[`Button [common] example testing should match snapshot(s) for info 3`] =
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -601,7 +601,7 @@ exports[`Button [common] example testing should match snapshot(s) for info 5`] =
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -636,7 +636,7 @@ exports[`Button [common] example testing should match snapshot(s) for info 7`] =
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -671,7 +671,7 @@ exports[`Button [common] example testing should match snapshot(s) for invisible 
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -691,7 +691,7 @@ exports[`Button [common] example testing should match snapshot(s) for invisible 
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -711,7 +711,7 @@ exports[`Button [common] example testing should match snapshot(s) for invisible 
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -747,7 +747,7 @@ exports[`Button [common] example testing should match snapshot(s) for link 1`] =
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -767,7 +767,7 @@ exports[`Button [common] example testing should match snapshot(s) for link 2`] =
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -787,7 +787,7 @@ exports[`Button [common] example testing should match snapshot(s) for link 3`] =
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -823,7 +823,7 @@ exports[`Button [common] example testing should match snapshot(s) for primary 1`
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -858,7 +858,7 @@ exports[`Button [common] example testing should match snapshot(s) for primary 3`
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -893,7 +893,7 @@ exports[`Button [common] example testing should match snapshot(s) for primary 5`
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -928,7 +928,7 @@ exports[`Button [common] example testing should match snapshot(s) for primary 7`
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -963,7 +963,7 @@ exports[`Button [common] example testing should match snapshot(s) for success 1`
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -998,7 +998,7 @@ exports[`Button [common] example testing should match snapshot(s) for success 3`
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -1033,7 +1033,7 @@ exports[`Button [common] example testing should match snapshot(s) for success 5`
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -1068,7 +1068,7 @@ exports[`Button [common] example testing should match snapshot(s) for success 7`
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -1103,7 +1103,7 @@ exports[`Button [common] example testing should match snapshot(s) for warning 1`
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -1138,7 +1138,7 @@ exports[`Button [common] example testing should match snapshot(s) for warning 3`
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -1173,7 +1173,7 @@ exports[`Button [common] example testing should match snapshot(s) for warning 5`
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
@@ -1208,7 +1208,7 @@ exports[`Button [common] example testing should match snapshot(s) for warning 7`
   onClick={[Function]}
   style={
     Object {
-      "marginRight": "5",
+      "marginRight": "5px",
     }
   }
   type="button"
