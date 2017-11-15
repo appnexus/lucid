@@ -16,17 +16,6 @@ import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 const { EmptyStateWrapper: { Title, Body } } = BarChart;
 
 describe('BarChart', () => {
-	let requestAnimationFramePreviewValue;
-
-	beforeAll(() => {
-		requestAnimationFramePreviewValue = window.requestAnimationFrame;
-		window.requestAnimationFrame = callback => setTimeout(callback, 32);
-	});
-
-	afterAll(() => {
-		window.requestAnimationFrame = requestAnimationFramePreviewValue;
-	});
-
 	let wrapper;
 
 	afterEach(() => {

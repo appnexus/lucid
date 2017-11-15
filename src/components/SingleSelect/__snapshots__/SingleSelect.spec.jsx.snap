@@ -54,6 +54,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption0"
   >
     Red
   </DropMenu.Option>
@@ -61,6 +62,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption1"
   >
     Green
   </DropMenu.Option>
@@ -68,6 +70,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption2"
   >
     Blue
   </DropMenu.Option>
@@ -128,6 +131,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption0"
     name="red"
   >
     Red
@@ -136,6 +140,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption1"
     name="green"
   >
     Green
@@ -144,6 +149,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption2"
     name="blue"
   >
     Blue
@@ -205,6 +211,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.d
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption0"
   >
     Red
   </DropMenu.Option>
@@ -212,6 +219,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.d
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption1"
   >
     Green
   </DropMenu.Option>
@@ -219,6 +227,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.d
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption2"
   >
     Blue
   </DropMenu.Option>
@@ -279,6 +288,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.d
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption0"
   >
     Red
   </DropMenu.Option>
@@ -286,6 +296,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.d
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption1"
   >
     Green
   </DropMenu.Option>
@@ -293,6 +304,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.d
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption2"
   >
     Blue
   </DropMenu.Option>
@@ -351,6 +363,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
   </DropMenu.Control>
   <DropMenu.OptionGroup
     isHidden={false}
+    key="SingleSelectOptionGroup0"
   >
     Screen
     <SingleSelect.Option>
@@ -366,6 +379,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SingleSelectOption0"
     >
       Red
     </DropMenu.Option>
@@ -373,6 +387,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SingleSelectOption1"
     >
       Green
     </DropMenu.Option>
@@ -380,12 +395,14 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SingleSelectOption2"
     >
       Blue
     </DropMenu.Option>
   </DropMenu.OptionGroup>
   <DropMenu.OptionGroup
     isHidden={false}
+    key="SingleSelectOptionGroup1"
   >
     Print
     <SingleSelect.Option>
@@ -404,6 +421,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SingleSelectOption3"
     >
       Cyan
     </DropMenu.Option>
@@ -411,6 +429,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SingleSelectOption4"
     >
       Yellow
     </DropMenu.Option>
@@ -418,6 +437,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SingleSelectOption5"
     >
       Magenta
     </DropMenu.Option>
@@ -425,6 +445,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SingleSelectOption6"
     >
       Black
     </DropMenu.Option>
@@ -486,6 +507,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.n
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption0"
   >
     Red
   </DropMenu.Option>
@@ -493,6 +515,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.n
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption1"
   >
     Green
   </DropMenu.Option>
@@ -500,6 +523,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.n
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption2"
   >
     Blue
   </DropMenu.Option>
@@ -560,6 +584,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption0"
   >
     Aliceblue
   </DropMenu.Option>
@@ -567,6 +592,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption1"
   >
     Antiquewhite
   </DropMenu.Option>
@@ -574,6 +600,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption2"
   >
     Aqua
   </DropMenu.Option>
@@ -581,6 +608,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption3"
   >
     Aquamarine
   </DropMenu.Option>
@@ -588,6 +616,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption4"
   >
     Azure
   </DropMenu.Option>
@@ -595,6 +624,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption5"
   >
     Beige
   </DropMenu.Option>
@@ -602,6 +632,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption6"
   >
     Bisque
   </DropMenu.Option>
@@ -609,6 +640,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption7"
   >
     Black
   </DropMenu.Option>
@@ -616,6 +648,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption8"
   >
     Blanchedalmond
   </DropMenu.Option>
@@ -623,6 +656,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption9"
   >
     Blue
   </DropMenu.Option>
@@ -630,6 +664,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption10"
   >
     Blueviolet
   </DropMenu.Option>
@@ -637,6 +672,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption11"
   >
     Brown
   </DropMenu.Option>
@@ -644,6 +680,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption12"
   >
     Burlywood
   </DropMenu.Option>
@@ -651,6 +688,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption13"
   >
     Cadetblue
   </DropMenu.Option>
@@ -658,6 +696,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption14"
   >
     Chartreuse
   </DropMenu.Option>
@@ -665,6 +704,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption15"
   >
     Chocolate
   </DropMenu.Option>
@@ -672,6 +712,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption16"
   >
     Coral
   </DropMenu.Option>
@@ -679,6 +720,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption17"
   >
     Cornflowerblue
   </DropMenu.Option>
@@ -686,6 +728,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption18"
   >
     Cornsilk
   </DropMenu.Option>
@@ -693,6 +736,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption19"
   >
     Crimson
   </DropMenu.Option>
@@ -700,6 +744,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption20"
   >
     Cyan
   </DropMenu.Option>
@@ -707,6 +752,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption21"
   >
     Darkblue
   </DropMenu.Option>
@@ -714,6 +760,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption22"
   >
     Darkcyan
   </DropMenu.Option>
@@ -721,6 +768,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption23"
   >
     Darkgoldenrod
   </DropMenu.Option>
@@ -728,6 +776,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption24"
   >
     Darkgray
   </DropMenu.Option>
@@ -735,6 +784,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption25"
   >
     Darkgreen
   </DropMenu.Option>
@@ -742,6 +792,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption26"
   >
     Darkkhaki
   </DropMenu.Option>
@@ -749,6 +800,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption27"
   >
     Darkmagenta
   </DropMenu.Option>
@@ -756,6 +808,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption28"
   >
     Darkolivegreen
   </DropMenu.Option>
@@ -763,6 +816,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption29"
   >
     Darkorange
   </DropMenu.Option>
@@ -770,6 +824,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption30"
   >
     Darkorchid
   </DropMenu.Option>
@@ -777,6 +832,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption31"
   >
     Darkred
   </DropMenu.Option>
@@ -784,6 +840,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption32"
   >
     Darksalmon
   </DropMenu.Option>
@@ -791,6 +848,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption33"
   >
     Darkseagreen
   </DropMenu.Option>
@@ -798,6 +856,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption34"
   >
     Darkslateblue
   </DropMenu.Option>
@@ -805,6 +864,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption35"
   >
     Darkslategray
   </DropMenu.Option>
@@ -812,6 +872,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption36"
   >
     Darkturquoise
   </DropMenu.Option>
@@ -819,6 +880,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption37"
   >
     Darkviolet
   </DropMenu.Option>
@@ -826,6 +888,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption38"
   >
     Deeppink
   </DropMenu.Option>
@@ -833,6 +896,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption39"
   >
     Deepskyblue
   </DropMenu.Option>
@@ -840,6 +904,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption40"
   >
     Dimgray
   </DropMenu.Option>
@@ -847,6 +912,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption41"
   >
     Dodgerblue
   </DropMenu.Option>
@@ -854,6 +920,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption42"
   >
     Firebrick
   </DropMenu.Option>
@@ -861,6 +928,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption43"
   >
     Floralwhite
   </DropMenu.Option>
@@ -868,6 +936,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption44"
   >
     Forestgreen
   </DropMenu.Option>
@@ -875,6 +944,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption45"
   >
     Fuchsia
   </DropMenu.Option>
@@ -882,6 +952,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption46"
   >
     Gainsboro
   </DropMenu.Option>
@@ -889,6 +960,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption47"
   >
     Ghostwhite
   </DropMenu.Option>
@@ -896,6 +968,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption48"
   >
     Gold
   </DropMenu.Option>
@@ -903,6 +976,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption49"
   >
     Goldenrod
   </DropMenu.Option>
@@ -910,6 +984,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption50"
   >
     Gray
   </DropMenu.Option>
@@ -917,6 +992,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption51"
   >
     Green
   </DropMenu.Option>
@@ -924,6 +1000,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption52"
   >
     Greenyellow
   </DropMenu.Option>
@@ -931,6 +1008,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption53"
   >
     Honeydew
   </DropMenu.Option>
@@ -938,6 +1016,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption54"
   >
     Hotpink
   </DropMenu.Option>
@@ -945,6 +1024,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption55"
   >
     Indianred
   </DropMenu.Option>
@@ -952,6 +1032,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption56"
   >
     Indigo
   </DropMenu.Option>
@@ -959,6 +1040,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption57"
   >
     Ivory
   </DropMenu.Option>
@@ -966,6 +1048,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption58"
   >
     Khaki
   </DropMenu.Option>
@@ -973,6 +1056,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption59"
   >
     Lavender
   </DropMenu.Option>
@@ -980,6 +1064,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption60"
   >
     Lavenderblush
   </DropMenu.Option>
@@ -987,6 +1072,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption61"
   >
     Lawngreen
   </DropMenu.Option>
@@ -994,6 +1080,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption62"
   >
     Lemonchiffon
   </DropMenu.Option>
@@ -1001,6 +1088,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption63"
   >
     Lightblue
   </DropMenu.Option>
@@ -1008,6 +1096,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption64"
   >
     Lightcoral
   </DropMenu.Option>
@@ -1015,6 +1104,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption65"
   >
     Lightcyan
   </DropMenu.Option>
@@ -1022,6 +1112,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption66"
   >
     Lightgoldenrodyellow
   </DropMenu.Option>
@@ -1029,6 +1120,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption67"
   >
     Lightgray
   </DropMenu.Option>
@@ -1036,6 +1128,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption68"
   >
     Lightgreen
   </DropMenu.Option>
@@ -1043,6 +1136,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption69"
   >
     Lightpink
   </DropMenu.Option>
@@ -1050,6 +1144,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption70"
   >
     Lightsalmon
   </DropMenu.Option>
@@ -1057,6 +1152,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption71"
   >
     Lightseagreen
   </DropMenu.Option>
@@ -1064,6 +1160,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption72"
   >
     Lightskyblue
   </DropMenu.Option>
@@ -1071,6 +1168,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption73"
   >
     Lightslategray
   </DropMenu.Option>
@@ -1078,6 +1176,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption74"
   >
     Lightsteelblue
   </DropMenu.Option>
@@ -1085,6 +1184,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption75"
   >
     Lightyellow
   </DropMenu.Option>
@@ -1092,6 +1192,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption76"
   >
     Lime
   </DropMenu.Option>
@@ -1099,6 +1200,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption77"
   >
     Limegreen
   </DropMenu.Option>
@@ -1106,6 +1208,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption78"
   >
     Linen
   </DropMenu.Option>
@@ -1113,6 +1216,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption79"
   >
     Magenta
   </DropMenu.Option>
@@ -1120,6 +1224,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption80"
   >
     Maroon
   </DropMenu.Option>
@@ -1127,6 +1232,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption81"
   >
     Medium aquamarine
   </DropMenu.Option>
@@ -1134,6 +1240,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption82"
   >
     Mediumblue
   </DropMenu.Option>
@@ -1141,6 +1248,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption83"
   >
     Mediumorchid
   </DropMenu.Option>
@@ -1148,6 +1256,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption84"
   >
     Mediumpurple
   </DropMenu.Option>
@@ -1155,6 +1264,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption85"
   >
     Mediumseagreen
   </DropMenu.Option>
@@ -1162,6 +1272,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption86"
   >
     Mediumslateblue
   </DropMenu.Option>
@@ -1169,6 +1280,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption87"
   >
     Mediumspringgreen
   </DropMenu.Option>
@@ -1176,6 +1288,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption88"
   >
     Mediumturquoise
   </DropMenu.Option>
@@ -1183,6 +1296,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption89"
   >
     Mediumvioletred
   </DropMenu.Option>
@@ -1190,6 +1304,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption90"
   >
     Midnightblue
   </DropMenu.Option>
@@ -1197,6 +1312,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption91"
   >
     Mintcream
   </DropMenu.Option>
@@ -1204,6 +1320,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption92"
   >
     Mistyrose
   </DropMenu.Option>
@@ -1211,6 +1328,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption93"
   >
     Moccasin
   </DropMenu.Option>
@@ -1218,6 +1336,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption94"
   >
     Navajowhite
   </DropMenu.Option>
@@ -1225,6 +1344,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption95"
   >
     Navy
   </DropMenu.Option>
@@ -1232,6 +1352,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption96"
   >
     Oldlace
   </DropMenu.Option>
@@ -1239,6 +1360,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption97"
   >
     Olive
   </DropMenu.Option>
@@ -1246,6 +1368,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption98"
   >
     Olivedrab
   </DropMenu.Option>
@@ -1253,6 +1376,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption99"
   >
     Orange
   </DropMenu.Option>
@@ -1260,6 +1384,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption100"
   >
     Orangered
   </DropMenu.Option>
@@ -1267,6 +1392,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption101"
   >
     Orchid
   </DropMenu.Option>
@@ -1274,6 +1400,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption102"
   >
     Palegoldenrod
   </DropMenu.Option>
@@ -1281,6 +1408,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption103"
   >
     Palegreen
   </DropMenu.Option>
@@ -1288,6 +1416,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption104"
   >
     Paleturquoise
   </DropMenu.Option>
@@ -1295,6 +1424,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption105"
   >
     Palevioletred
   </DropMenu.Option>
@@ -1302,6 +1432,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption106"
   >
     Papayawhip
   </DropMenu.Option>
@@ -1309,6 +1440,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption107"
   >
     Peachpuff
   </DropMenu.Option>
@@ -1316,6 +1448,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption108"
   >
     Peru
   </DropMenu.Option>
@@ -1323,6 +1456,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption109"
   >
     Pink
   </DropMenu.Option>
@@ -1330,6 +1464,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption110"
   >
     Plum
   </DropMenu.Option>
@@ -1337,6 +1472,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption111"
   >
     Powderblue
   </DropMenu.Option>
@@ -1344,6 +1480,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption112"
   >
     Purple
   </DropMenu.Option>
@@ -1351,6 +1488,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption113"
   >
     Rebeccapurple
   </DropMenu.Option>
@@ -1358,6 +1496,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption114"
   >
     Red
   </DropMenu.Option>
@@ -1365,6 +1504,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption115"
   >
     Rosybrown
   </DropMenu.Option>
@@ -1372,6 +1512,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption116"
   >
     Royalblue
   </DropMenu.Option>
@@ -1379,6 +1520,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption117"
   >
     Saddlebrown
   </DropMenu.Option>
@@ -1386,6 +1528,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption118"
   >
     Salmon
   </DropMenu.Option>
@@ -1393,6 +1536,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption119"
   >
     Sandybrown
   </DropMenu.Option>
@@ -1400,6 +1544,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption120"
   >
     Seagreen
   </DropMenu.Option>
@@ -1407,6 +1552,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption121"
   >
     Seashell
   </DropMenu.Option>
@@ -1414,6 +1560,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption122"
   >
     Sienna
   </DropMenu.Option>
@@ -1421,6 +1568,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption123"
   >
     Silver
   </DropMenu.Option>
@@ -1428,6 +1576,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption124"
   >
     Skyblue
   </DropMenu.Option>
@@ -1435,6 +1584,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption125"
   >
     Slateblue
   </DropMenu.Option>
@@ -1442,6 +1592,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption126"
   >
     Slategray
   </DropMenu.Option>
@@ -1449,6 +1600,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption127"
   >
     Snow
   </DropMenu.Option>
@@ -1456,6 +1608,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption128"
   >
     Springgreen
   </DropMenu.Option>
@@ -1463,6 +1616,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption129"
   >
     Steelblue
   </DropMenu.Option>
@@ -1470,6 +1624,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption130"
   >
     Tan
   </DropMenu.Option>
@@ -1477,6 +1632,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption131"
   >
     Teal
   </DropMenu.Option>
@@ -1484,6 +1640,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption132"
   >
     Thistle
   </DropMenu.Option>
@@ -1491,6 +1648,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption133"
   >
     Tomato
   </DropMenu.Option>
@@ -1498,6 +1656,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption134"
   >
     Turquoise
   </DropMenu.Option>
@@ -1505,6 +1664,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption135"
   >
     Violet
   </DropMenu.Option>
@@ -1512,6 +1672,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption136"
   >
     Wheat
   </DropMenu.Option>
@@ -1519,6 +1680,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption137"
   >
     White
   </DropMenu.Option>
@@ -1526,6 +1688,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption138"
   >
     Whitesmoke
   </DropMenu.Option>
@@ -1533,6 +1696,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption139"
   >
     Yellow
   </DropMenu.Option>
@@ -1540,6 +1704,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption140"
   >
     Yellowgreen
   </DropMenu.Option>
@@ -1610,6 +1775,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption0"
   >
     <PlusIcon
       isBadge={true}
@@ -1627,6 +1793,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption1"
   >
     <PlusIcon
       isBadge={true}
@@ -1644,6 +1811,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption2"
   >
     <PlusIcon
       isBadge={true}
@@ -1714,6 +1882,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.n
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption0"
   >
     Red
   </DropMenu.Option>
@@ -1721,6 +1890,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.n
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption1"
   >
     Green
   </DropMenu.Option>
@@ -1728,6 +1898,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.n
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption2"
   >
     Blue
   </DropMenu.Option>
@@ -1788,6 +1959,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.a
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption0"
   >
     1
   </DropMenu.Option>
@@ -1795,6 +1967,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.a
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption1"
   >
     2
   </DropMenu.Option>
@@ -1802,6 +1975,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.a
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption2"
   >
     3
   </DropMenu.Option>
@@ -1863,6 +2037,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
   </DropMenu.NullOption>
   <DropMenu.OptionGroup
     isHidden={false}
+    key="SingleSelectOptionGroup0"
   >
     Preferred
     <SingleSelect.Option>
@@ -1878,6 +2053,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SingleSelectOption0"
     >
       Red
     </DropMenu.Option>
@@ -1885,6 +2061,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SingleSelectOption1"
     >
       Green
     </DropMenu.Option>
@@ -1892,6 +2069,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
+      key="SingleSelectOption2"
     >
       Blue
     </DropMenu.Option>
@@ -1900,6 +2078,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
     isDisabled={false}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption3"
   >
     Orange
   </DropMenu.Option>
@@ -1907,6 +2086,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption4"
   >
     Violet
   </DropMenu.Option>
@@ -1914,6 +2094,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
     isDisabled={true}
     isHidden={false}
     isWrapped={true}
+    key="SingleSelectOption5"
   >
     Brown
   </DropMenu.Option>

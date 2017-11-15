@@ -92,11 +92,9 @@ const StickySection = createClass({
 	},
 
 	getContainerRect() {
-		const containerRect = getAbsoluteBoundingClientRect(
-			this.refs.scrollContainer
-		);
-		const stickyRect = this.refs.stickySection.getBoundingClientRect();
-		const frameRect = this.refs.stickyFrame.getBoundingClientRect();
+		const containerRect = getAbsoluteBoundingClientRect(this.scrollContainer);
+		const stickyRect = this.stickySection.getBoundingClientRect();
+		const frameRect = this.stickyFrame.getBoundingClientRect();
 
 		return {
 			bottom: containerRect.top + stickyRect.height,
@@ -104,7 +102,7 @@ const StickySection = createClass({
 			left: containerRect.left,
 			right: containerRect.left + stickyRect.width,
 			top: containerRect.top,
-			scrollWidth: this.refs.stickySection.scrollWidth,
+			scrollWidth: this.stickySection.scrollWidth,
 			width: containerRect.width,
 			frameLeft: frameRect.left,
 		};
@@ -147,11 +145,11 @@ const StickySection = createClass({
 						: {}),
 					...style,
 				}}
-				ref="scrollContainer"
+				ref={scrollContainer => this.scrollContainer = scrollContainer}
 			>
 				<div
 					className={cx('&-sticky-frame')}
-					ref="stickyFrame"
+					ref={stickyFrame => this.stickyFrame = stickyFrame}
 					style={{
 						...(isAboveFold
 							? {
@@ -169,7 +167,7 @@ const StickySection = createClass({
 				>
 					<div
 						className={cx('&-sticky-section')}
-						ref="stickySection"
+						ref={stickySection => this.stickySection = stickySection}
 						style={{
 							...(isAboveFold
 								? {

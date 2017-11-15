@@ -10,22 +10,13 @@ import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import * as KEYCODE from '../../constants/key-code';
 
 describe('Autocomplete', () => {
-	let requestAnimationFramePreviewValue;
-
-	beforeAll(() => {
-		requestAnimationFramePreviewValue = window.requestAnimationFrame;
-		window.requestAnimationFrame = callback => setTimeout(callback, 32);
-	});
-
-	afterAll(() => {
-		window.requestAnimationFrame = requestAnimationFramePreviewValue;
-	});
-
 	common(Autocomplete);
 
 	describe('render', () => {
 		it('should render a DropMenu', () => {
-			const wrapper = shallow(<Autocomplete />);
+			const wrapper = shallow(<Autocomplete />, {
+				disableLifecycleMethods: true,
+			});
 
 			assert.equal(wrapper.find('DropMenu').length, 1);
 		});
@@ -34,7 +25,9 @@ describe('Autocomplete', () => {
 	describe('props', () => {
 		describe('isDisabled', () => {
 			it('should pass the `isDisabled` prop thru to the underlying DropMenu', () => {
-				const wrapper = shallow(<Autocomplete isDisabled={true} />);
+				const wrapper = shallow(<Autocomplete isDisabled={true} />, {
+					disableLifecycleMethods: true,
+				});
 
 				const dropMenuWrapper = wrapper.find('DropMenu');
 
@@ -42,7 +35,9 @@ describe('Autocomplete', () => {
 			});
 
 			it('should apply the appropriate classNames to the control', () => {
-				const wrapper = shallow(<Autocomplete isDisabled={true} />);
+				const wrapper = shallow(<Autocomplete isDisabled={true} />, {
+					disableLifecycleMethods: true,
+				});
 
 				const controlWrapper = wrapper.find('.lucid-Autocomplete-Control');
 
@@ -57,7 +52,8 @@ describe('Autocomplete', () => {
 				const wrapper = shallow(
 					<Autocomplete
 						suggestions={['Portland', 'portal', 'porridge', 'potent', 'please']}
-					/>
+					/>,
+					{ disableLifecycleMethods: true }
 				);
 
 				const options = _.map(
@@ -136,7 +132,8 @@ describe('Autocomplete', () => {
 				};
 
 				const wrapper = shallow(
-					<Autocomplete DropMenu={explicitDropMenuProps} />
+					<Autocomplete DropMenu={explicitDropMenuProps} />,
+					{ disableLifecycleMethods: true }
 				);
 
 				const dropMenuProps = wrapper.find('DropMenu').props();
@@ -307,7 +304,8 @@ describe('Autocomplete', () => {
 						DropMenu={{
 							isExpanded: false,
 						}}
-					/>
+					/>,
+					{ disableLifecycleMethods: true }
 				);
 
 				wrapper.find('.lucid-Autocomplete-Control-input').simulate('keydown', {

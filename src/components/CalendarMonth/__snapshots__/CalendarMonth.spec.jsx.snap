@@ -12,18 +12,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
           "container": "DayPicker",
           "day": "DayPicker-Day",
           "disabled": "disabled",
+          "footer": "DayPicker-Footer",
           "interactionDisabled": "DayPicker--interactionDisabled",
           "month": "DayPicker-Month",
           "navBar": "DayPicker-NavBar",
+          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
           "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
           "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
           "outside": "outside",
           "selected": "selected",
           "today": "today",
+          "todayButton": "DayPicker-TodayButton",
           "week": "DayPicker-Week",
+          "weekNumber": "DayPicker-WeekNumber",
           "weekday": "DayPicker-Weekday",
           "weekdays": "DayPicker-Weekdays",
           "weekdaysRow": "DayPicker-WeekdaysRow",
+          "wrapper": "DayPicker-wrapper",
         }
       }
     />
@@ -36,18 +41,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
       "container": "DayPicker",
       "day": "DayPicker-Day",
       "disabled": "disabled",
+      "footer": "DayPicker-Footer",
       "interactionDisabled": "DayPicker--interactionDisabled",
       "month": "DayPicker-Month",
       "navBar": "DayPicker-NavBar",
+      "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
       "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
       "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
       "outside": "outside",
       "selected": "selected",
       "today": "today",
+      "todayButton": "DayPicker-TodayButton",
       "week": "DayPicker-Week",
+      "weekNumber": "DayPicker-WeekNumber",
       "weekday": "DayPicker-Weekday",
       "weekdays": "DayPicker-Weekdays",
       "weekdaysRow": "DayPicker-WeekdaysRow",
+      "wrapper": "DayPicker-wrapper",
     }
   }
   cursor={null}
@@ -55,6 +65,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   fixedWeeks={false}
   from={null}
   initialMonth={2016-02-17T22:25:23.000Z}
+  key="0"
   labels={
     Object {
       "nextMonth": "Next Month",
@@ -96,18 +107,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
           "container": "DayPicker",
           "day": "DayPicker-Day",
           "disabled": "disabled",
+          "footer": "DayPicker-Footer",
           "interactionDisabled": "DayPicker--interactionDisabled",
           "month": "DayPicker-Month",
           "navBar": "DayPicker-NavBar",
+          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
           "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
           "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
           "outside": "outside",
           "selected": "selected",
           "today": "today",
+          "todayButton": "DayPicker-TodayButton",
           "week": "DayPicker-Week",
+          "weekNumber": "DayPicker-WeekNumber",
           "weekday": "DayPicker-Weekday",
           "weekdays": "DayPicker-Weekdays",
           "weekdaysRow": "DayPicker-WeekdaysRow",
+          "wrapper": "DayPicker-wrapper",
         }
       }
       dir="ltr"
@@ -128,6 +144,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   selectMode="day"
   selectedDays={2016-02-17T22:25:23.000Z}
   shouldComponentUpdate={true}
+  showWeekNumbers={false}
   tabIndex={0}
   to={null}
   weekdayElement={<Weekday />}
@@ -157,18 +174,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
           "container": "DayPicker",
           "day": "DayPicker-Day",
           "disabled": "disabled",
+          "footer": "DayPicker-Footer",
           "interactionDisabled": "DayPicker--interactionDisabled",
           "month": "DayPicker-Month",
           "navBar": "DayPicker-NavBar",
+          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
           "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
           "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
           "outside": "outside",
           "selected": "selected",
           "today": "today",
+          "todayButton": "DayPicker-TodayButton",
           "week": "DayPicker-Week",
+          "weekNumber": "DayPicker-WeekNumber",
           "weekday": "DayPicker-Weekday",
           "weekdays": "DayPicker-Weekdays",
           "weekdaysRow": "DayPicker-WeekdaysRow",
+          "wrapper": "DayPicker-wrapper",
         }
       }
     />
@@ -181,18 +203,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
       "container": "DayPicker",
       "day": "DayPicker-Day",
       "disabled": "disabled",
+      "footer": "DayPicker-Footer",
       "interactionDisabled": "DayPicker--interactionDisabled",
       "month": "DayPicker-Month",
       "navBar": "DayPicker-NavBar",
+      "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
       "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
       "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
       "outside": "outside",
       "selected": "selected",
       "today": "today",
+      "todayButton": "DayPicker-TodayButton",
       "week": "DayPicker-Week",
+      "weekNumber": "DayPicker-WeekNumber",
       "weekday": "DayPicker-Weekday",
       "weekdays": "DayPicker-Weekdays",
       "weekdaysRow": "DayPicker-WeekdaysRow",
+      "wrapper": "DayPicker-wrapper",
     }
   }
   cursor={null}
@@ -201,6 +228,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   fixedWeeks={false}
   from={null}
   initialMonth={2016-02-17T22:25:23.000Z}
+  key="0"
   labels={
     Object {
       "nextMonth": "Next Month",
@@ -242,18 +270,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
           "container": "DayPicker",
           "day": "DayPicker-Day",
           "disabled": "disabled",
+          "footer": "DayPicker-Footer",
           "interactionDisabled": "DayPicker--interactionDisabled",
           "month": "DayPicker-Month",
           "navBar": "DayPicker-NavBar",
+          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
           "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
           "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
           "outside": "outside",
           "selected": "selected",
           "today": "today",
+          "todayButton": "DayPicker-TodayButton",
           "week": "DayPicker-Week",
+          "weekNumber": "DayPicker-WeekNumber",
           "weekday": "DayPicker-Weekday",
           "weekdays": "DayPicker-Weekdays",
           "weekdaysRow": "DayPicker-WeekdaysRow",
+          "wrapper": "DayPicker-wrapper",
         }
       }
       dir="ltr"
@@ -273,6 +306,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   reverseMonths={false}
   selectMode="day"
   shouldComponentUpdate={true}
+  showWeekNumbers={false}
   tabIndex={0}
   to={null}
   weekdayElement={<Weekday />}
@@ -302,18 +336,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
           "container": "DayPicker",
           "day": "DayPicker-Day",
           "disabled": "disabled",
+          "footer": "DayPicker-Footer",
           "interactionDisabled": "DayPicker--interactionDisabled",
           "month": "DayPicker-Month",
           "navBar": "DayPicker-NavBar",
+          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
           "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
           "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
           "outside": "outside",
           "selected": "selected",
           "today": "today",
+          "todayButton": "DayPicker-TodayButton",
           "week": "DayPicker-Week",
+          "weekNumber": "DayPicker-WeekNumber",
           "weekday": "DayPicker-Weekday",
           "weekdays": "DayPicker-Weekdays",
           "weekdaysRow": "DayPicker-WeekdaysRow",
+          "wrapper": "DayPicker-wrapper",
         }
       }
     />
@@ -326,18 +365,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
       "container": "DayPicker",
       "day": "DayPicker-Day",
       "disabled": "disabled",
+      "footer": "DayPicker-Footer",
       "interactionDisabled": "DayPicker--interactionDisabled",
       "month": "DayPicker-Month",
       "navBar": "DayPicker-NavBar",
+      "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
       "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
       "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
       "outside": "outside",
       "selected": "selected",
       "today": "today",
+      "todayButton": "DayPicker-TodayButton",
       "week": "DayPicker-Week",
+      "weekNumber": "DayPicker-WeekNumber",
       "weekday": "DayPicker-Weekday",
       "weekdays": "DayPicker-Weekdays",
       "weekdaysRow": "DayPicker-WeekdaysRow",
+      "wrapper": "DayPicker-wrapper",
     }
   }
   cursor={null}
@@ -345,6 +389,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   fixedWeeks={false}
   from={null}
   initialMonth={2016-02-17T22:25:23.000Z}
+  key="0"
   labels={
     Object {
       "nextMonth": "Next Month",
@@ -387,18 +432,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
           "container": "DayPicker",
           "day": "DayPicker-Day",
           "disabled": "disabled",
+          "footer": "DayPicker-Footer",
           "interactionDisabled": "DayPicker--interactionDisabled",
           "month": "DayPicker-Month",
           "navBar": "DayPicker-NavBar",
+          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
           "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
           "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
           "outside": "outside",
           "selected": "selected",
           "today": "today",
+          "todayButton": "DayPicker-TodayButton",
           "week": "DayPicker-Week",
+          "weekNumber": "DayPicker-WeekNumber",
           "weekday": "DayPicker-Weekday",
           "weekdays": "DayPicker-Weekdays",
           "weekdaysRow": "DayPicker-WeekdaysRow",
+          "wrapper": "DayPicker-wrapper",
         }
       }
       dir="ltr"
@@ -418,6 +468,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   reverseMonths={false}
   selectMode="day"
   shouldComponentUpdate={true}
+  showWeekNumbers={false}
   tabIndex={0}
   to={null}
   weekdayElement={<Weekday />}
@@ -447,18 +498,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
           "container": "DayPicker",
           "day": "DayPicker-Day",
           "disabled": "disabled",
+          "footer": "DayPicker-Footer",
           "interactionDisabled": "DayPicker--interactionDisabled",
           "month": "DayPicker-Month",
           "navBar": "DayPicker-NavBar",
+          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
           "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
           "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
           "outside": "outside",
           "selected": "selected",
           "today": "today",
+          "todayButton": "DayPicker-TodayButton",
           "week": "DayPicker-Week",
+          "weekNumber": "DayPicker-WeekNumber",
           "weekday": "DayPicker-Weekday",
           "weekdays": "DayPicker-Weekdays",
           "weekdaysRow": "DayPicker-WeekdaysRow",
+          "wrapper": "DayPicker-wrapper",
         }
       }
     />
@@ -471,18 +527,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
       "container": "DayPicker",
       "day": "DayPicker-Day",
       "disabled": "disabled",
+      "footer": "DayPicker-Footer",
       "interactionDisabled": "DayPicker--interactionDisabled",
       "month": "DayPicker-Month",
       "navBar": "DayPicker-NavBar",
+      "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
       "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
       "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
       "outside": "outside",
       "selected": "selected",
       "today": "today",
+      "todayButton": "DayPicker-TodayButton",
       "week": "DayPicker-Week",
+      "weekNumber": "DayPicker-WeekNumber",
       "weekday": "DayPicker-Weekday",
       "weekdays": "DayPicker-Weekdays",
       "weekdaysRow": "DayPicker-WeekdaysRow",
+      "wrapper": "DayPicker-wrapper",
     }
   }
   cursor={null}
@@ -491,6 +552,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   fixedWeeks={false}
   from={null}
   initialMonth={2016-02-17T22:25:23.000Z}
+  key="0"
   labels={
     Object {
       "nextMonth": "Next Month",
@@ -532,18 +594,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
           "container": "DayPicker",
           "day": "DayPicker-Day",
           "disabled": "disabled",
+          "footer": "DayPicker-Footer",
           "interactionDisabled": "DayPicker--interactionDisabled",
           "month": "DayPicker-Month",
           "navBar": "DayPicker-NavBar",
+          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
           "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
           "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
           "outside": "outside",
           "selected": "selected",
           "today": "today",
+          "todayButton": "DayPicker-TodayButton",
           "week": "DayPicker-Week",
+          "weekNumber": "DayPicker-WeekNumber",
           "weekday": "DayPicker-Weekday",
           "weekdays": "DayPicker-Weekdays",
           "weekdaysRow": "DayPicker-WeekdaysRow",
+          "wrapper": "DayPicker-wrapper",
         }
       }
       dir="ltr"
@@ -567,6 +634,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   selectMode="day"
   selectedDays={Array []}
   shouldComponentUpdate={true}
+  showWeekNumbers={false}
   tabIndex={0}
   to={null}
   weekdayElement={<Weekday />}
@@ -596,18 +664,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
           "container": "DayPicker",
           "day": "DayPicker-Day",
           "disabled": "disabled",
+          "footer": "DayPicker-Footer",
           "interactionDisabled": "DayPicker--interactionDisabled",
           "month": "DayPicker-Month",
           "navBar": "DayPicker-NavBar",
+          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
           "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
           "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
           "outside": "outside",
           "selected": "selected",
           "today": "today",
+          "todayButton": "DayPicker-TodayButton",
           "week": "DayPicker-Week",
+          "weekNumber": "DayPicker-WeekNumber",
           "weekday": "DayPicker-Weekday",
           "weekdays": "DayPicker-Weekdays",
           "weekdaysRow": "DayPicker-WeekdaysRow",
+          "wrapper": "DayPicker-wrapper",
         }
       }
     />
@@ -620,18 +693,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
       "container": "DayPicker",
       "day": "DayPicker-Day",
       "disabled": "disabled",
+      "footer": "DayPicker-Footer",
       "interactionDisabled": "DayPicker--interactionDisabled",
       "month": "DayPicker-Month",
       "navBar": "DayPicker-NavBar",
+      "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
       "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
       "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
       "outside": "outside",
       "selected": "selected",
       "today": "today",
+      "todayButton": "DayPicker-TodayButton",
       "week": "DayPicker-Week",
+      "weekNumber": "DayPicker-WeekNumber",
       "weekday": "DayPicker-Weekday",
       "weekdays": "DayPicker-Weekdays",
       "weekdaysRow": "DayPicker-WeekdaysRow",
+      "wrapper": "DayPicker-wrapper",
     }
   }
   cursor={null}
@@ -640,6 +718,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   fixedWeeks={false}
   from={null}
   initialMonth={2016-02-17T22:25:23.000Z}
+  key="0"
   labels={
     Object {
       "nextMonth": "Next Month",
@@ -681,18 +760,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
           "container": "DayPicker",
           "day": "DayPicker-Day",
           "disabled": "disabled",
+          "footer": "DayPicker-Footer",
           "interactionDisabled": "DayPicker--interactionDisabled",
           "month": "DayPicker-Month",
           "navBar": "DayPicker-NavBar",
+          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
           "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
           "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
           "outside": "outside",
           "selected": "selected",
           "today": "today",
+          "todayButton": "DayPicker-TodayButton",
           "week": "DayPicker-Week",
+          "weekNumber": "DayPicker-WeekNumber",
           "weekday": "DayPicker-Weekday",
           "weekdays": "DayPicker-Weekdays",
           "weekdaysRow": "DayPicker-WeekdaysRow",
+          "wrapper": "DayPicker-wrapper",
         }
       }
       dir="ltr"
@@ -715,6 +799,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   reverseMonths={false}
   selectMode="from"
   shouldComponentUpdate={true}
+  showWeekNumbers={false}
   tabIndex={0}
   to={null}
   weekdayElement={<Weekday />}
@@ -744,18 +829,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
           "container": "DayPicker",
           "day": "DayPicker-Day",
           "disabled": "disabled",
+          "footer": "DayPicker-Footer",
           "interactionDisabled": "DayPicker--interactionDisabled",
           "month": "DayPicker-Month",
           "navBar": "DayPicker-NavBar",
+          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
           "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
           "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
           "outside": "outside",
           "selected": "selected",
           "today": "today",
+          "todayButton": "DayPicker-TodayButton",
           "week": "DayPicker-Week",
+          "weekNumber": "DayPicker-WeekNumber",
           "weekday": "DayPicker-Weekday",
           "weekdays": "DayPicker-Weekdays",
           "weekdaysRow": "DayPicker-WeekdaysRow",
+          "wrapper": "DayPicker-wrapper",
         }
       }
     />
@@ -768,18 +858,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
       "container": "DayPicker",
       "day": "DayPicker-Day",
       "disabled": "disabled",
+      "footer": "DayPicker-Footer",
       "interactionDisabled": "DayPicker--interactionDisabled",
       "month": "DayPicker-Month",
       "navBar": "DayPicker-NavBar",
+      "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
       "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
       "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
       "outside": "outside",
       "selected": "selected",
       "today": "today",
+      "todayButton": "DayPicker-TodayButton",
       "week": "DayPicker-Week",
+      "weekNumber": "DayPicker-WeekNumber",
       "weekday": "DayPicker-Weekday",
       "weekdays": "DayPicker-Weekdays",
       "weekdaysRow": "DayPicker-WeekdaysRow",
+      "wrapper": "DayPicker-wrapper",
     }
   }
   cursor={null}
@@ -788,6 +883,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   fixedWeeks={false}
   from={null}
   initialMonth={2016-02-17T22:25:23.000Z}
+  key="1"
   labels={
     Object {
       "nextMonth": "Next Month",
@@ -829,18 +925,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
           "container": "DayPicker",
           "day": "DayPicker-Day",
           "disabled": "disabled",
+          "footer": "DayPicker-Footer",
           "interactionDisabled": "DayPicker--interactionDisabled",
           "month": "DayPicker-Month",
           "navBar": "DayPicker-NavBar",
+          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
           "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
           "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
           "outside": "outside",
           "selected": "selected",
           "today": "today",
+          "todayButton": "DayPicker-TodayButton",
           "week": "DayPicker-Week",
+          "weekNumber": "DayPicker-WeekNumber",
           "weekday": "DayPicker-Weekday",
           "weekdays": "DayPicker-Weekdays",
           "weekdaysRow": "DayPicker-WeekdaysRow",
+          "wrapper": "DayPicker-wrapper",
         }
       }
       dir="ltr"
@@ -863,6 +964,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   reverseMonths={false}
   selectMode="from"
   shouldComponentUpdate={true}
+  showWeekNumbers={false}
   tabIndex={0}
   to={null}
   weekdayElement={<Weekday />}
@@ -892,18 +994,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
           "container": "DayPicker",
           "day": "DayPicker-Day",
           "disabled": "disabled",
+          "footer": "DayPicker-Footer",
           "interactionDisabled": "DayPicker--interactionDisabled",
           "month": "DayPicker-Month",
           "navBar": "DayPicker-NavBar",
+          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
           "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
           "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
           "outside": "outside",
           "selected": "selected",
           "today": "today",
+          "todayButton": "DayPicker-TodayButton",
           "week": "DayPicker-Week",
+          "weekNumber": "DayPicker-WeekNumber",
           "weekday": "DayPicker-Weekday",
           "weekdays": "DayPicker-Weekdays",
           "weekdaysRow": "DayPicker-WeekdaysRow",
+          "wrapper": "DayPicker-wrapper",
         }
       }
     />
@@ -916,18 +1023,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
       "container": "DayPicker",
       "day": "DayPicker-Day",
       "disabled": "disabled",
+      "footer": "DayPicker-Footer",
       "interactionDisabled": "DayPicker--interactionDisabled",
       "month": "DayPicker-Month",
       "navBar": "DayPicker-NavBar",
+      "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
       "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
       "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
       "outside": "outside",
       "selected": "selected",
       "today": "today",
+      "todayButton": "DayPicker-TodayButton",
       "week": "DayPicker-Week",
+      "weekNumber": "DayPicker-WeekNumber",
       "weekday": "DayPicker-Weekday",
       "weekdays": "DayPicker-Weekdays",
       "weekdaysRow": "DayPicker-WeekdaysRow",
+      "wrapper": "DayPicker-wrapper",
     }
   }
   cursor={2016-02-17T22:25:23.000Z}
@@ -935,6 +1047,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   fixedWeeks={false}
   from={null}
   initialMonth={2016-02-17T22:25:23.000Z}
+  key="0"
   labels={
     Object {
       "nextMonth": "Next Month",
@@ -976,18 +1089,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
           "container": "DayPicker",
           "day": "DayPicker-Day",
           "disabled": "disabled",
+          "footer": "DayPicker-Footer",
           "interactionDisabled": "DayPicker--interactionDisabled",
           "month": "DayPicker-Month",
           "navBar": "DayPicker-NavBar",
+          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
           "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
           "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
           "outside": "outside",
           "selected": "selected",
           "today": "today",
+          "todayButton": "DayPicker-TodayButton",
           "week": "DayPicker-Week",
+          "weekNumber": "DayPicker-WeekNumber",
           "weekday": "DayPicker-Weekday",
           "weekdays": "DayPicker-Weekdays",
           "weekdaysRow": "DayPicker-WeekdaysRow",
+          "wrapper": "DayPicker-wrapper",
         }
       }
       dir="ltr"
@@ -1007,6 +1125,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   reverseMonths={false}
   selectMode="day"
   shouldComponentUpdate={true}
+  showWeekNumbers={false}
   tabIndex={0}
   to={null}
   weekdayElement={<Weekday />}
@@ -1036,18 +1155,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
           "container": "DayPicker",
           "day": "DayPicker-Day",
           "disabled": "disabled",
+          "footer": "DayPicker-Footer",
           "interactionDisabled": "DayPicker--interactionDisabled",
           "month": "DayPicker-Month",
           "navBar": "DayPicker-NavBar",
+          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
           "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
           "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
           "outside": "outside",
           "selected": "selected",
           "today": "today",
+          "todayButton": "DayPicker-TodayButton",
           "week": "DayPicker-Week",
+          "weekNumber": "DayPicker-WeekNumber",
           "weekday": "DayPicker-Weekday",
           "weekdays": "DayPicker-Weekdays",
           "weekdaysRow": "DayPicker-WeekdaysRow",
+          "wrapper": "DayPicker-wrapper",
         }
       }
     />
@@ -1060,18 +1184,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
       "container": "DayPicker",
       "day": "DayPicker-Day",
       "disabled": "disabled",
+      "footer": "DayPicker-Footer",
       "interactionDisabled": "DayPicker--interactionDisabled",
       "month": "DayPicker-Month",
       "navBar": "DayPicker-NavBar",
+      "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
       "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
       "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
       "outside": "outside",
       "selected": "selected",
       "today": "today",
+      "todayButton": "DayPicker-TodayButton",
       "week": "DayPicker-Week",
+      "weekNumber": "DayPicker-WeekNumber",
       "weekday": "DayPicker-Weekday",
       "weekdays": "DayPicker-Weekdays",
       "weekdaysRow": "DayPicker-WeekdaysRow",
+      "wrapper": "DayPicker-wrapper",
     }
   }
   cursor={2016-02-17T22:25:23.000Z}
@@ -1079,6 +1208,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   fixedWeeks={false}
   from={2016-02-01T22:25:23.000Z}
   initialMonth={2016-02-17T22:25:23.000Z}
+  key="0"
   labels={
     Object {
       "nextMonth": "Next Month",
@@ -1120,18 +1250,23 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
           "container": "DayPicker",
           "day": "DayPicker-Day",
           "disabled": "disabled",
+          "footer": "DayPicker-Footer",
           "interactionDisabled": "DayPicker--interactionDisabled",
           "month": "DayPicker-Month",
           "navBar": "DayPicker-NavBar",
+          "navButtonInteractionDisabled": "DayPicker-NavButton--interactionDisabled",
           "navButtonNext": "DayPicker-NavButton DayPicker-NavButton--next",
           "navButtonPrev": "DayPicker-NavButton DayPicker-NavButton--prev",
           "outside": "outside",
           "selected": "selected",
           "today": "today",
+          "todayButton": "DayPicker-TodayButton",
           "week": "DayPicker-Week",
+          "weekNumber": "DayPicker-WeekNumber",
           "weekday": "DayPicker-Weekday",
           "weekdays": "DayPicker-Weekdays",
           "weekdaysRow": "DayPicker-WeekdaysRow",
+          "wrapper": "DayPicker-wrapper",
         }
       }
       dir="ltr"
@@ -1151,6 +1286,7 @@ exports[`CalendarMonth common tests [common] example testing should match snapsh
   reverseMonths={false}
   selectMode="to"
   shouldComponentUpdate={true}
+  showWeekNumbers={false}
   tabIndex={0}
   to={null}
   weekdayElement={<Weekday />}

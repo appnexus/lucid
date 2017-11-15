@@ -70,13 +70,19 @@ exports[`Paginator [common] example testing should match snapshot(s) for 2.page-
       isSelectionHighlighted={false}
       selectedIndex={0}
     >
-      <SingleSelect.Option>
+      <SingleSelect.Option
+        key="10"
+      >
         10
       </SingleSelect.Option>
-      <SingleSelect.Option>
+      <SingleSelect.Option
+        key="25"
+      >
         25
       </SingleSelect.Option>
-      <SingleSelect.Option>
+      <SingleSelect.Option
+        key="50"
+      >
         50
       </SingleSelect.Option>
     </SingleSelect>
@@ -194,13 +200,19 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
       isSelectionHighlighted={false}
       selectedIndex={0}
     >
-      <SingleSelect.Option>
+      <SingleSelect.Option
+        key="10"
+      >
         10
       </SingleSelect.Option>
-      <SingleSelect.Option>
+      <SingleSelect.Option
+        key="50"
+      >
         50
       </SingleSelect.Option>
-      <SingleSelect.Option>
+      <SingleSelect.Option
+        key="100"
+      >
         100
       </SingleSelect.Option>
     </SingleSelect>

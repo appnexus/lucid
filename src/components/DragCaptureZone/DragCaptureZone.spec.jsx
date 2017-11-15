@@ -186,7 +186,9 @@ describe('DragCaptureZone', () => {
 		beforeEach(() => {
 			onDragCancel = sinon.spy();
 
-			const wrapper = shallow(<DragCaptureZone onDragCancel={onDragCancel} />);
+			const wrapper = shallow(<DragCaptureZone onDragCancel={onDragCancel} />, {
+				disableLifecycleMethods: true,
+			});
 			wrapper.instance().handleDragCancel(mockEvent);
 		});
 

@@ -15,6 +15,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-p
       isOpen={true}
       isProgressive={false}
       isSelected={true}
+      key="0"
       onSelect={[Function]}
     >
       One content
@@ -28,6 +29,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-p
       isOpen={true}
       isProgressive={false}
       isSelected={false}
+      key="1"
       onSelect={[Function]}
     >
       Two content
@@ -40,6 +42,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-p
       isOpen={true}
       isProgressive={false}
       isSelected={false}
+      key="2"
       onSelect={[Function]}
     >
       Three content
@@ -52,6 +55,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-p
       isOpen={true}
       isProgressive={false}
       isSelected={false}
+      key="3"
       onSelect={[Function]}
     >
       Four content
@@ -80,6 +84,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-c
       isOpen={true}
       isProgressive={false}
       isSelected={true}
+      key="0"
       onSelect={[Function]}
     >
       <Tabs.Title>
@@ -95,6 +100,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-c
       isOpen={true}
       isProgressive={false}
       isSelected={false}
+      key="1"
       onSelect={[Function]}
     >
       <Tabs.Title>
@@ -110,6 +116,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-c
       isOpen={true}
       isProgressive={false}
       isSelected={false}
+      key="2"
       onSelect={[Function]}
     >
       <Tabs.Title>
@@ -126,6 +133,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-c
       isOpen={true}
       isProgressive={false}
       isSelected={false}
+      key="3"
       onSelect={[Function]}
     >
       <Tabs.Title>
@@ -160,6 +168,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
       isOpen={false}
       isProgressive={true}
       isSelected={true}
+      key="0"
       onSelect={[Function]}
     >
       One content
@@ -172,6 +181,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
       isOpen={false}
       isProgressive={true}
       isSelected={false}
+      key="1"
       onSelect={[Function]}
     >
       Two content
@@ -184,6 +194,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
       isOpen={false}
       isProgressive={true}
       isSelected={false}
+      key="2"
       onSelect={[Function]}
     >
       Three content
@@ -197,6 +208,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
       isOpen={false}
       isProgressive={true}
       isSelected={false}
+      key="3"
       onSelect={[Function]}
     >
       Disabled Content
@@ -210,6 +222,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
       isOpen={false}
       isProgressive={true}
       isSelected={false}
+      key="4"
       onSelect={[Function]}
     >
       Four content
@@ -241,9 +254,9 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
             isDisabled={false}
             onClick={[Function]}
             type="button"
-        >
+          >
             Button
-        </Button>,
+          </Button>,
         ]
       }
       index={0}
@@ -252,6 +265,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
       isOpen={true}
       isProgressive={false}
       isSelected={true}
+      key="0"
       onSelect={[Function]}
     >
       <Tabs.Title>
@@ -284,6 +298,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
       isOpen={true}
       isProgressive={false}
       isSelected={false}
+      key="1"
       onSelect={[Function]}
     >
       <Tabs.Title>
@@ -334,6 +349,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
       isOpen={true}
       isProgressive={false}
       isSelected={false}
+      key="2"
       onSelect={[Function]}
     >
       <Tabs.Title>
@@ -380,6 +396,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
       isOpen={true}
       isProgressive={false}
       isSelected={false}
+      key="3"
       onSelect={[Function]}
     >
       <Tabs.Title>
@@ -424,6 +441,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 5-tab-as-pro
       isOpen={true}
       isProgressive={false}
       isSelected={true}
+      key="0"
       onSelect={[Function]}
     >
       Bert
@@ -436,6 +454,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 5-tab-as-pro
       isOpen={true}
       isProgressive={false}
       isSelected={false}
+      key="1"
       onSelect={[Function]}
     >
       Ernie
@@ -464,6 +483,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 6-tabs-varia
       isOpen={true}
       isProgressive={false}
       isSelected={true}
+      key="0"
       onSelect={[Function]}
       style={
         Object {
@@ -484,6 +504,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 6-tabs-varia
       isOpen={true}
       isProgressive={false}
       isSelected={false}
+      key="1"
       onSelect={[Function]}
       style={
         Object {
@@ -504,6 +525,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 6-tabs-varia
       isOpen={true}
       isProgressive={false}
       isSelected={false}
+      key="2"
       onSelect={[Function]}
       style={
         Object {
@@ -543,6 +565,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 7-navigation
       isOpen={true}
       isProgressive={false}
       isSelected={true}
+      key="0"
       onSelect={[Function]}
     >
       <Tabs.Title>
@@ -558,6 +581,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 7-navigation
       isOpen={true}
       isProgressive={false}
       isSelected={false}
+      key="1"
       onSelect={[Function]}
     >
       <Tabs.Title>
@@ -573,6 +597,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 7-navigation
       isOpen={true}
       isProgressive={false}
       isSelected={false}
+      key="2"
       onSelect={[Function]}
     >
       <Tabs.Title>
@@ -607,6 +632,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 8-navigation
       isOpen={false}
       isProgressive={true}
       isSelected={true}
+      key="0"
       onSelect={[Function]}
     >
       One content
@@ -619,6 +645,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 8-navigation
       isOpen={false}
       isProgressive={true}
       isSelected={false}
+      key="1"
       onSelect={[Function]}
     >
       Two content
@@ -631,6 +658,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 8-navigation
       isOpen={false}
       isProgressive={true}
       isSelected={false}
+      key="2"
       onSelect={[Function]}
     >
       Three content
@@ -644,6 +672,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 8-navigation
       isOpen={false}
       isProgressive={true}
       isSelected={false}
+      key="3"
       onSelect={[Function]}
     >
       Disabled Content
@@ -657,6 +686,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 8-navigation
       isOpen={false}
       isProgressive={true}
       isSelected={false}
+      key="4"
       onSelect={[Function]}
     >
       Four content

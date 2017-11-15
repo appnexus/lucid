@@ -4,10 +4,13 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
 <g
   className="lucid-Bars"
 >
-  <g>
+  <g
+    key="0"
+  >
     <Bar
       color="color-chart-0"
       height={20}
+      key="0"
       width={38}
       x={1}
       y={380}
@@ -15,6 +18,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-1"
       height={40}
+      key="1"
       width={38}
       x={39}
       y={360}
@@ -22,6 +26,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-2"
       height={60}
+      key="2"
       width={38}
       x={77}
       y={340}
@@ -29,6 +34,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-3"
       height={100}
+      key="3"
       width={38}
       x={115}
       y={300}
@@ -71,6 +77,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-0"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 1
@@ -78,6 +85,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 2
@@ -85,6 +93,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-2"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 3
@@ -92,6 +101,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 5
@@ -100,10 +110,13 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       </ToolTip.Body>
     </ToolTip>
   </g>
-  <g>
+  <g
+    key="1"
+  >
     <Bar
       color="color-chart-0"
       height={40}
+      key="0"
       width={38}
       x={170}
       y={360}
@@ -111,6 +124,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-1"
       height={60}
+      key="1"
       width={38}
       x={208}
       y={340}
@@ -118,6 +132,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-2"
       height={80}
+      key="2"
       width={38}
       x={246}
       y={320}
@@ -125,6 +140,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-3"
       height={120}
+      key="3"
       width={38}
       x={284}
       y={280}
@@ -167,6 +183,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-0"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 2
@@ -174,6 +191,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 3
@@ -181,6 +199,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-2"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 4
@@ -188,6 +207,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 6
@@ -196,10 +216,13 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       </ToolTip.Body>
     </ToolTip>
   </g>
-  <g>
+  <g
+    key="2"
+  >
     <Bar
       color="color-chart-0"
       height={40}
+      key="0"
       width={38}
       x={339}
       y={360}
@@ -207,6 +230,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-1"
       height={80}
+      key="1"
       width={38}
       x={377}
       y={320}
@@ -214,6 +238,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-2"
       height={100}
+      key="2"
       width={38}
       x={415}
       y={300}
@@ -221,6 +246,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-3"
       height={120}
+      key="3"
       width={38}
       x={453}
       y={280}
@@ -263,6 +289,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-0"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 2
@@ -270,6 +297,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 4
@@ -277,6 +305,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-2"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 5
@@ -284,6 +313,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 6
@@ -292,10 +322,13 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       </ToolTip.Body>
     </ToolTip>
   </g>
-  <g>
+  <g
+    key="3"
+  >
     <Bar
       color="color-chart-0"
       height={60}
+      key="0"
       width={38}
       x={508}
       y={340}
@@ -303,6 +336,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-1"
       height={120}
+      key="1"
       width={38}
       x={546}
       y={280}
@@ -310,6 +344,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-2"
       height={140}
+      key="2"
       width={38}
       x={584}
       y={260}
@@ -317,6 +352,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-3"
       height={140}
+      key="3"
       width={38}
       x={622}
       y={260}
@@ -359,6 +395,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-0"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 3
@@ -366,6 +403,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 6
@@ -373,6 +411,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-2"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 7
@@ -380,6 +419,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 7
@@ -388,10 +428,13 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       </ToolTip.Body>
     </ToolTip>
   </g>
-  <g>
+  <g
+    key="4"
+  >
     <Bar
       color="color-chart-0"
       height={80}
+      key="0"
       width={38}
       x={677}
       y={320}
@@ -399,6 +442,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-1"
       height={160}
+      key="1"
       width={38}
       x={715}
       y={240}
@@ -406,6 +450,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-2"
       height={180}
+      key="2"
       width={38}
       x={753}
       y={220}
@@ -413,6 +458,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-3"
       height={160}
+      key="3"
       width={38}
       x={791}
       y={240}
@@ -455,6 +501,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-0"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 4
@@ -462,6 +509,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 8
@@ -469,6 +517,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-2"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 9
@@ -476,6 +525,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 8
@@ -484,10 +534,13 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       </ToolTip.Body>
     </ToolTip>
   </g>
-  <g>
+  <g
+    key="5"
+  >
     <Bar
       color="color-chart-0"
       height={400}
+      key="0"
       width={38}
       x={846}
       y={0}
@@ -495,6 +548,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-1"
       height={160}
+      key="1"
       width={38}
       x={884}
       y={240}
@@ -502,6 +556,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-2"
       height={180}
+      key="2"
       width={38}
       x={922}
       y={220}
@@ -509,6 +564,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
     <Bar
       color="color-chart-3"
       height={20}
+      key="3"
       width={38}
       x={960}
       y={380}
@@ -551,6 +607,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-0"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 20
@@ -558,6 +615,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 8
@@ -565,6 +623,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-2"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 9
@@ -572,6 +631,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 1
@@ -587,10 +647,13 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
 <g
   className="lucid-Bars"
 >
-  <g>
+  <g
+    key="0"
+  >
     <Bar
       color="color-chart-0"
       height={10.5263157894737}
+      key="0"
       width={152}
       x={1}
       y={389.4736842105263}
@@ -598,6 +661,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-1"
       height={21.05263157894734}
+      key="1"
       width={152}
       x={1}
       y={368.42105263157896}
@@ -605,6 +669,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-2"
       height={31.57894736842104}
+      key="2"
       width={152}
       x={1}
       y={336.8421052631579}
@@ -612,6 +677,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-3"
       height={52.63157894736844}
+      key="3"
       width={152}
       x={1}
       y={284.2105263157895}
@@ -654,6 +720,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-0"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 1
@@ -661,6 +728,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 2
@@ -668,6 +736,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-2"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 3
@@ -675,6 +744,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 5
@@ -683,10 +753,13 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       </ToolTip.Body>
     </ToolTip>
   </g>
-  <g>
+  <g
+    key="1"
+  >
     <Bar
       color="color-chart-0"
       height={21.05263157894734}
+      key="0"
       width={152}
       x={170}
       y={378.94736842105266}
@@ -694,6 +767,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-1"
       height={31.578947368421098}
+      key="1"
       width={152}
       x={170}
       y={347.36842105263156}
@@ -701,6 +775,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-2"
       height={42.10526315789468}
+      key="2"
       width={152}
       x={170}
       y={305.2631578947369}
@@ -708,6 +783,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-3"
       height={63.15789473684214}
+      key="3"
       width={152}
       x={170}
       y={242.10526315789474}
@@ -750,6 +826,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-0"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 2
@@ -757,6 +834,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 3
@@ -764,6 +842,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-2"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 4
@@ -771,6 +850,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 6
@@ -779,10 +859,13 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       </ToolTip.Body>
     </ToolTip>
   </g>
-  <g>
+  <g
+    key="2"
+  >
     <Bar
       color="color-chart-0"
       height={21.05263157894734}
+      key="0"
       width={152}
       x={339}
       y={378.94736842105266}
@@ -790,6 +873,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-1"
       height={42.10526315789474}
+      key="1"
       width={152}
       x={339}
       y={336.8421052631579}
@@ -797,6 +881,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-2"
       height={52.63157894736844}
+      key="2"
       width={152}
       x={339}
       y={284.2105263157895}
@@ -804,6 +889,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-3"
       height={63.15789473684211}
+      key="3"
       width={152}
       x={339}
       y={221.05263157894737}
@@ -846,6 +932,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-0"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 2
@@ -853,6 +940,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 4
@@ -860,6 +948,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-2"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 5
@@ -867,6 +956,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 6
@@ -875,10 +965,13 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       </ToolTip.Body>
     </ToolTip>
   </g>
-  <g>
+  <g
+    key="3"
+  >
     <Bar
       color="color-chart-0"
       height={31.57894736842104}
+      key="0"
       width={152}
       x={508}
       y={368.42105263157896}
@@ -886,6 +979,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-1"
       height={63.15789473684208}
+      key="1"
       width={152}
       x={508}
       y={305.2631578947369}
@@ -893,6 +987,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-2"
       height={73.68421052631581}
+      key="2"
       width={152}
       x={508}
       y={231.57894736842107}
@@ -900,6 +995,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-3"
       height={73.68421052631581}
+      key="3"
       width={152}
       x={508}
       y={157.89473684210526}
@@ -942,6 +1038,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-0"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 3
@@ -949,6 +1046,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 6
@@ -956,6 +1054,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-2"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 7
@@ -963,6 +1062,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 7
@@ -971,10 +1071,13 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       </ToolTip.Body>
     </ToolTip>
   </g>
-  <g>
+  <g
+    key="4"
+  >
     <Bar
       color="color-chart-0"
       height={42.10526315789474}
+      key="0"
       width={152}
       x={677}
       y={357.89473684210526}
@@ -982,6 +1085,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-1"
       height={84.21052631578948}
+      key="1"
       width={152}
       x={677}
       y={273.6842105263158}
@@ -989,6 +1093,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-2"
       height={94.73684210526318}
+      key="2"
       width={152}
       x={677}
       y={178.9473684210526}
@@ -996,6 +1101,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-3"
       height={84.21052631578948}
+      key="3"
       width={152}
       x={677}
       y={94.73684210526312}
@@ -1038,6 +1144,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-0"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 4
@@ -1045,6 +1152,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 8
@@ -1052,6 +1160,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-2"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 9
@@ -1059,6 +1168,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 8
@@ -1067,10 +1177,13 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       </ToolTip.Body>
     </ToolTip>
   </g>
-  <g>
+  <g
+    key="5"
+  >
     <Bar
       color="color-chart-0"
       height={210.52631578947367}
+      key="0"
       width={152}
       x={846}
       y={189.47368421052633}
@@ -1078,6 +1191,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-1"
       height={84.21052631578945}
+      key="1"
       width={152}
       x={846}
       y={105.26315789473688}
@@ -1085,6 +1199,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-2"
       height={94.73684210526318}
+      key="2"
       width={152}
       x={846}
       y={10.5263157894737}
@@ -1092,6 +1207,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
     <Bar
       color="color-chart-3"
       height={10.5263157894737}
+      key="3"
       width={152}
       x={846}
       y={0}
@@ -1134,6 +1250,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-0"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 20
@@ -1141,6 +1258,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 8
@@ -1148,6 +1266,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-2"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 9
@@ -1155,6 +1274,7 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 1
@@ -1170,10 +1290,13 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
 <g
   className="lucid-Bars"
 >
-  <g>
+  <g
+    key="0"
+  >
     <Bar
       color="color-chart-good"
       height={20}
+      key="0"
       width={38}
       x={1}
       y={380}
@@ -1181,6 +1304,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-1"
       height={40}
+      key="1"
       width={38}
       x={39}
       y={360}
@@ -1188,6 +1312,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-bad"
       height={60}
+      key="2"
       width={38}
       x={77}
       y={340}
@@ -1195,6 +1320,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-3"
       height={100}
+      key="3"
       width={38}
       x={115}
       y={300}
@@ -1237,6 +1363,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-good"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 1
@@ -1244,6 +1371,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 2
@@ -1251,6 +1379,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-bad"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 3
@@ -1258,6 +1387,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 5
@@ -1266,10 +1396,13 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       </ToolTip.Body>
     </ToolTip>
   </g>
-  <g>
+  <g
+    key="1"
+  >
     <Bar
       color="color-chart-good"
       height={40}
+      key="0"
       width={38}
       x={170}
       y={360}
@@ -1277,6 +1410,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-1"
       height={60}
+      key="1"
       width={38}
       x={208}
       y={340}
@@ -1284,6 +1418,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-bad"
       height={80}
+      key="2"
       width={38}
       x={246}
       y={320}
@@ -1291,6 +1426,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-3"
       height={120}
+      key="3"
       width={38}
       x={284}
       y={280}
@@ -1333,6 +1469,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-good"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 2
@@ -1340,6 +1477,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 3
@@ -1347,6 +1485,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-bad"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 4
@@ -1354,6 +1493,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 6
@@ -1362,10 +1502,13 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       </ToolTip.Body>
     </ToolTip>
   </g>
-  <g>
+  <g
+    key="2"
+  >
     <Bar
       color="color-chart-good"
       height={40}
+      key="0"
       width={38}
       x={339}
       y={360}
@@ -1373,6 +1516,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-1"
       height={80}
+      key="1"
       width={38}
       x={377}
       y={320}
@@ -1380,6 +1524,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-bad"
       height={100}
+      key="2"
       width={38}
       x={415}
       y={300}
@@ -1387,6 +1532,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-3"
       height={120}
+      key="3"
       width={38}
       x={453}
       y={280}
@@ -1429,6 +1575,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-good"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 2
@@ -1436,6 +1583,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 4
@@ -1443,6 +1591,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-bad"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 5
@@ -1450,6 +1599,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 6
@@ -1458,10 +1608,13 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       </ToolTip.Body>
     </ToolTip>
   </g>
-  <g>
+  <g
+    key="3"
+  >
     <Bar
       color="color-chart-good"
       height={60}
+      key="0"
       width={38}
       x={508}
       y={340}
@@ -1469,6 +1622,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-1"
       height={120}
+      key="1"
       width={38}
       x={546}
       y={280}
@@ -1476,6 +1630,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-bad"
       height={140}
+      key="2"
       width={38}
       x={584}
       y={260}
@@ -1483,6 +1638,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-3"
       height={140}
+      key="3"
       width={38}
       x={622}
       y={260}
@@ -1525,6 +1681,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-good"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 3
@@ -1532,6 +1689,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 6
@@ -1539,6 +1697,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-bad"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 7
@@ -1546,6 +1705,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 7
@@ -1554,10 +1714,13 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       </ToolTip.Body>
     </ToolTip>
   </g>
-  <g>
+  <g
+    key="4"
+  >
     <Bar
       color="color-chart-good"
       height={80}
+      key="0"
       width={38}
       x={677}
       y={320}
@@ -1565,6 +1728,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-1"
       height={160}
+      key="1"
       width={38}
       x={715}
       y={240}
@@ -1572,6 +1736,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-bad"
       height={180}
+      key="2"
       width={38}
       x={753}
       y={220}
@@ -1579,6 +1744,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-3"
       height={160}
+      key="3"
       width={38}
       x={791}
       y={240}
@@ -1621,6 +1787,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-good"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 4
@@ -1628,6 +1795,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 8
@@ -1635,6 +1803,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-bad"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 9
@@ -1642,6 +1811,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 8
@@ -1650,10 +1820,13 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       </ToolTip.Body>
     </ToolTip>
   </g>
-  <g>
+  <g
+    key="5"
+  >
     <Bar
       color="color-chart-good"
       height={400}
+      key="0"
       width={38}
       x={846}
       y={0}
@@ -1661,6 +1834,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-1"
       height={160}
+      key="1"
       width={38}
       x={884}
       y={240}
@@ -1668,6 +1842,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-bad"
       height={180}
+      key="2"
       width={38}
       x={922}
       y={220}
@@ -1675,6 +1850,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
     <Bar
       color="color-chart-3"
       height={20}
+      key="3"
       width={38}
       x={960}
       y={380}
@@ -1717,6 +1893,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-good"
             hasPoint={true}
+            key="0"
             pointKind={1}
           >
             y0: 20
@@ -1724,6 +1901,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-1"
             hasPoint={true}
+            key="1"
             pointKind={1}
           >
             y1: 8
@@ -1731,6 +1909,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-bad"
             hasPoint={true}
+            key="2"
             pointKind={1}
           >
             y2: 9
@@ -1738,6 +1917,7 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
           <Legend.Item
             color="color-chart-3"
             hasPoint={true}
+            key="3"
             pointKind={1}
           >
             y3: 1

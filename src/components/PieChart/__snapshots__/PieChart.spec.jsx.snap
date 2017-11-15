@@ -29,12 +29,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-0"
               d="60"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -47,12 +49,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-1"
               d="40"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -65,12 +69,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-2"
               d="30"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -83,12 +89,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-3"
               d="20"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -101,12 +109,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-4"
               d="15"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path
@@ -159,12 +169,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-0-lightest"
               d="60"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -177,12 +189,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-0-light"
               d="40"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -195,12 +209,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-0"
               d="30"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -213,12 +229,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-0-dark"
               d="20"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -231,12 +249,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-0-darkest"
               d="15"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path
@@ -289,12 +309,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-1-lightest"
               d="60"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -307,12 +329,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-1-light"
               d="40"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -325,12 +349,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-1"
               d="30"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -343,12 +369,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-1-dark"
               d="20"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -361,12 +389,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-1-darkest"
               d="15"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path
@@ -419,12 +449,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-2-lightest"
               d="60"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -437,12 +469,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-2-light"
               d="40"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -455,12 +489,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-2"
               d="30"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -473,12 +509,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-2-dark"
               d="20"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -491,12 +529,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-2-darkest"
               d="15"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path
@@ -549,12 +589,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-3-lightest"
               d="60"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -567,12 +609,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-3-light"
               d="40"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -585,12 +629,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-3"
               d="30"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -603,12 +649,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-3-dark"
               d="20"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -621,12 +669,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-3-darkest"
               d="15"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path
@@ -679,12 +729,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-4-lightest"
               d="60"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -697,12 +749,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-4-light"
               d="40"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -715,12 +769,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-4"
               d="30"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -733,12 +789,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-4-dark"
               d="20"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -751,12 +809,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-4-darkest"
               d="15"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path
@@ -809,12 +869,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-5-lightest"
               d="60"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -827,12 +889,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-5-light"
               d="40"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -845,12 +909,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-5"
               d="30"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -863,12 +929,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-5-dark"
               d="20"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -881,12 +949,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 1.basic 
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-5-darkest"
               d="15"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path
@@ -939,12 +1009,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-0"
               d="60"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -957,12 +1029,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-1"
               d="40"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -975,12 +1049,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-2"
               d="30"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -993,12 +1069,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-3"
               d="20"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -1011,12 +1089,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-4"
               d="15"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path
@@ -1069,12 +1149,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-0-lightest"
               d="60"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -1087,12 +1169,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-0-light"
               d="40"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -1105,12 +1189,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-0"
               d="30"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -1123,12 +1209,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-0-dark"
               d="20"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -1141,12 +1229,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-0-darkest"
               d="15"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path
@@ -1199,12 +1289,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-1-lightest"
               d="60"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -1217,12 +1309,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-1-light"
               d="40"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -1235,12 +1329,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-1"
               d="30"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -1253,12 +1349,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-1-dark"
               d="20"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -1271,12 +1369,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-1-darkest"
               d="15"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path
@@ -1329,12 +1429,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-2-lightest"
               d="60"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -1347,12 +1449,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-2-light"
               d="40"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -1365,12 +1469,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-2"
               d="30"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -1383,12 +1489,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-2-dark"
               d="20"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -1401,12 +1509,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-2-darkest"
               d="15"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path
@@ -1459,12 +1569,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-3-lightest"
               d="60"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -1477,12 +1589,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-3-light"
               d="40"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -1495,12 +1609,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-3"
               d="30"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -1513,12 +1629,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-3-dark"
               d="20"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -1531,12 +1649,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-3-darkest"
               d="15"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path
@@ -1589,12 +1709,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-4-lightest"
               d="60"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -1607,12 +1729,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-4-light"
               d="40"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -1625,12 +1749,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-4"
               d="30"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -1643,12 +1769,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-4-dark"
               d="20"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -1661,12 +1789,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-4-darkest"
               d="15"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path
@@ -1719,12 +1849,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-5-lightest"
               d="60"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -1737,12 +1869,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-5-light"
               d="40"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -1755,12 +1889,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-5"
               d="30"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -1773,12 +1909,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-5-dark"
               d="20"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -1791,12 +1929,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 2.basic-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-5-darkest"
               d="15"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path
@@ -1849,12 +1989,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 3.legend
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-0"
               d="80"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -1867,12 +2009,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 3.legend
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-1"
               d="20"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -1885,12 +2029,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 3.legend
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-2"
               d="10"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -1903,12 +2049,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 3.legend
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-3"
               d="30"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -1961,12 +2109,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 4.color-
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-good"
               d="100"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -1979,12 +2129,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 4.color-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-1"
               d="20"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -1997,12 +2149,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 4.color-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-2"
               d="10"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -2015,12 +2169,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 4.color-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-3"
               d="30"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -2033,12 +2189,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 4.color-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-bad"
               d="40"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path
@@ -2091,12 +2249,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 5.percen
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-0"
               d="60"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -2109,12 +2269,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 5.percen
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-1"
               d="40"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -2127,12 +2289,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 5.percen
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-2"
               d="30"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -2145,12 +2309,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 5.percen
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-3"
               d="20"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -2163,12 +2329,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 5.percen
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice lucid-PieChart-slice-has-stroke"
               color="color-chart-4"
               d="15"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path
@@ -2221,12 +2389,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 6.small-
         >
           <g
             className="lucid-PieChart-slice-group"
+            key="0"
           >
             <Line
               className="lucid-PieChart-slice"
               color="color-chart-0"
               d="60"
               isDotted={false}
+              key="0"
               transform="scale(1)"
             />
             <path
@@ -2239,12 +2409,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 6.small-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="1"
           >
             <Line
               className="lucid-PieChart-slice"
               color="color-chart-1"
               d="40"
               isDotted={false}
+              key="1"
               transform="scale(1)"
             />
             <path
@@ -2257,12 +2429,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 6.small-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="2"
           >
             <Line
               className="lucid-PieChart-slice"
               color="color-chart-2"
               d="30"
               isDotted={false}
+              key="2"
               transform="scale(1)"
             />
             <path
@@ -2275,12 +2449,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 6.small-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="3"
           >
             <Line
               className="lucid-PieChart-slice"
               color="color-chart-3"
               d="20"
               isDotted={false}
+              key="3"
               transform="scale(1)"
             />
             <path
@@ -2293,12 +2469,14 @@ exports[`PieChart [common] example testing should match snapshot(s) for 6.small-
           </g>
           <g
             className="lucid-PieChart-slice-group"
+            key="4"
           >
             <Line
               className="lucid-PieChart-slice"
               color="color-chart-4"
               d="15"
               isDotted={false}
+              key="4"
               transform="scale(1)"
             />
             <path

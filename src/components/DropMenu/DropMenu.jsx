@@ -236,6 +236,11 @@ const DropMenu = createClass({
 		 * *Child Element* - An optional header to be displayed within the expanded Flyout, above all `Option`s.
 		 */
 		Header: any,
+		/**
+		 * *Child Element* - props pass through to the underlying ContextMenu
+		 * component
+		 */
+		ContextMenu: any,
 	},
 
 	getDefaultProps() {
@@ -642,6 +647,7 @@ const DropMenu = createClass({
 										: [
 												<div
 													{...omitProps(optionGroupProps, DropMenu.OptionGroup)}
+													key={'OptionGroup-label' + optionGroupIndex}
 													className={cx('&-label', optionGroupProps.className)}
 												>
 													{labelElements}

@@ -6,6 +6,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
 >
   <li
     className="lucid-Legend-Item"
+    key="0"
     onClick={[Function]}
   >
     <svg
@@ -26,6 +27,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="1"
     onClick={[Function]}
   >
     <svg
@@ -46,6 +48,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="2"
     onClick={[Function]}
   >
     <svg
@@ -66,6 +69,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="3"
     onClick={[Function]}
   >
     <svg
@@ -86,6 +90,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="4"
     onClick={[Function]}
   >
     <svg
@@ -106,6 +111,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 1`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="5"
     onClick={[Function]}
   >
     <svg
@@ -133,6 +139,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
 >
   <li
     className="lucid-Legend-Item"
+    key="0"
     onClick={[Function]}
   >
     <svg
@@ -153,6 +160,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="1"
     onClick={[Function]}
   >
     <svg
@@ -173,6 +181,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="2"
     onClick={[Function]}
   >
     <svg
@@ -193,6 +202,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="3"
     onClick={[Function]}
   >
     <svg
@@ -213,6 +223,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="4"
     onClick={[Function]}
   >
     <svg
@@ -233,6 +244,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 2`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="5"
     onClick={[Function]}
   >
     <svg
@@ -260,6 +272,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 3`] 
 >
   <li
     className="lucid-Legend-Item"
+    key="0"
     onClick={[Function]}
   >
     <svg
@@ -277,6 +290,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 3`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="1"
     onClick={[Function]}
   >
     <svg
@@ -294,6 +308,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 3`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="2"
     onClick={[Function]}
   >
     <svg
@@ -311,6 +326,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 3`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="3"
     onClick={[Function]}
   >
     <svg
@@ -328,6 +344,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 3`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="4"
     onClick={[Function]}
   >
     <svg
@@ -345,6 +362,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 3`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="5"
     onClick={[Function]}
   >
     <svg
@@ -369,6 +387,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
 >
   <li
     className="lucid-Legend-Item"
+    key="0"
     onClick={[Function]}
   >
     <svg
@@ -394,6 +413,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="1"
     onClick={[Function]}
   >
     <svg
@@ -419,6 +439,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="2"
     onClick={[Function]}
   >
     <svg
@@ -444,6 +465,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="3"
     onClick={[Function]}
   >
     <svg
@@ -469,6 +491,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="4"
     onClick={[Function]}
   >
     <svg
@@ -494,6 +517,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 4`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="5"
     onClick={[Function]}
   >
     <svg
@@ -526,6 +550,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
 >
   <li
     className="lucid-Legend-Item"
+    key="0"
     onClick={[Function]}
   >
     <svg
@@ -551,6 +576,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="1"
     onClick={[Function]}
   >
     <svg
@@ -576,6 +602,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="2"
     onClick={[Function]}
   >
     <svg
@@ -601,6 +628,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="3"
     onClick={[Function]}
   >
     <svg
@@ -626,6 +654,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="4"
     onClick={[Function]}
   >
     <svg
@@ -651,6 +680,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 5`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="5"
     onClick={[Function]}
   >
     <svg
@@ -683,6 +713,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 6`] 
 >
   <li
     className="lucid-Legend-Item"
+    key="0"
     onClick={[Function]}
   >
     <svg
@@ -700,6 +731,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 6`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="1"
     onClick={[Function]}
   >
     <svg
@@ -717,6 +749,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 6`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="2"
     onClick={[Function]}
   >
     <svg
@@ -737,6 +770,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 6`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="3"
     onClick={[Function]}
   >
     <svg
@@ -764,6 +798,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 7`] 
 >
   <li
     className="lucid-Legend-Item"
+    key="0"
     onClick={[Function]}
   >
     <svg
@@ -781,6 +816,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 7`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="1"
     onClick={[Function]}
   >
     <svg
@@ -798,6 +834,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 7`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="2"
     onClick={[Function]}
   >
     <svg
@@ -818,6 +855,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 7`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="3"
     onClick={[Function]}
   >
     <svg
@@ -845,6 +883,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 8`] 
 >
   <li
     className="lucid-Legend-Item"
+    key="0"
     onClick={[Function]}
   >
     <svg
@@ -862,6 +901,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 8`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="1"
     onClick={[Function]}
   >
     <svg
@@ -879,6 +919,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 8`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="2"
     onClick={[Function]}
   >
     <svg
@@ -899,6 +940,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 8`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="3"
     onClick={[Function]}
   >
     <svg
@@ -926,6 +968,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 9`] 
 >
   <li
     className="lucid-Legend-Item"
+    key="0"
     onClick={[Function]}
   >
     <svg
@@ -943,6 +986,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 9`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="1"
     onClick={[Function]}
   >
     <svg
@@ -960,6 +1004,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 9`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="2"
     onClick={[Function]}
   >
     <svg
@@ -980,6 +1025,7 @@ exports[`Legend [common] example testing should match snapshot(s) for basic 9`] 
   </li>
   <li
     className="lucid-Legend-Item"
+    key="3"
     onClick={[Function]}
   >
     <svg
