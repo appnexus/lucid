@@ -4,13 +4,28 @@ import IconBox from '../IconBox';
 import ClockIcon from '../../Icon/ClockIcon/ClockIcon';
 
 export default createClass({
+	getInitialState() {
+		return {
+			isSelected: 0,
+		};
+	},
+
+	handleSelected() {
+		this.setState({
+			...this.state,
+			isSelected: (this.state.isSelected + 1) % 3,
+		});
+	},
+
 	render() {
 		return (
 			<IconBox
 				IconComponent={ClockIcon}
 				Label="My IconBox"
 				isCheckbox={true}
-				isDisabled={true}
+				isIndeterminate={this.state.isSelected === 1}
+				isSelected={this.state.isSelected === 0}
+				onClick={this.handleSelected}
 			/>
 		);
 	},
