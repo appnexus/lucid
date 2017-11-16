@@ -5,12 +5,26 @@ import ClockIcon from '../../Icon/ClockIcon/ClockIcon';
 import FourSquaresIcon from '../../Icon/FourSquaresIcon/FourSquaresIcon';
 
 export default createClass({
+	getInitialState() {
+		return {
+			selected: [],
+		};
+	},
+
+	handleClick(id) {
+		console.log(id);
+
+		this.setState({
+			...this.state,
+			selected: [id],
+		});
+	},
+
 	render() {
 		const selections = [
 			{
 				label: 'my label',
 				icon: ClockIcon,
-				onClick: this.handleClick,
 			},
 			{
 				label: 'another label',
@@ -18,6 +32,12 @@ export default createClass({
 			},
 		];
 
-		return <CheckboxIconGroup selections={selections} />;
+		return (
+			<CheckboxIconGroup
+				name="mygroup1"
+				selections={selections}
+				onClick={this.handleClick}
+			/>
+		);
 	},
 });

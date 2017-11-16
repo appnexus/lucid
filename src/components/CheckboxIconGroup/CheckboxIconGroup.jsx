@@ -34,6 +34,7 @@ const CheckboxIconGroup = createClass({
 			shape({
 				label: any,
 				icon: any,
+				id: number,
 				onClick: func,
 				isSelected: bool,
 				isActive: bool,
@@ -45,10 +46,20 @@ const CheckboxIconGroup = createClass({
 
 		isDisabled: bool,
 
+		/**
+		 * A unique string representing the group of checkbox inputs.
+		 */
 		name: string,
 
+		/**
+		 * Signature: `(id) => {}`
+		 */
 		onClick: func,
 
+		/**
+		 * Allows you to override the defalt global tabbing order of the base html checkbox element
+		 * To learn more about tabIndex check out (MDN's web docs on tabIndex)[https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex]
+		 */
 		tabIndex: number,
 	},
 
@@ -95,6 +106,7 @@ const CheckboxIconGroup = createClass({
 							Label={item.label}
 							isCheckbox={true}
 							isDisabled={item.isDisabled || isDisabled}
+							id={item.id}
 						/>
 					</li>
 				))}

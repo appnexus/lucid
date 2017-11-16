@@ -159,6 +159,10 @@ const IconBox = createClass({
 		);
 	},
 
+	handleClick() {
+		return this.props.onClick(this.props.id);
+	},
+
 	render() {
 		const {
 			className,
@@ -173,6 +177,7 @@ const IconBox = createClass({
 			name,
 			onClick,
 			tabIndex,
+			id,
 			...passThroughs
 		} = this.props;
 
@@ -194,7 +199,7 @@ const IconBox = createClass({
 					},
 					className
 				)}
-				onClick={onClick}
+				onClick={this.handleClick}
 				disabled={isDisabled}
 			>
 				<IconComponent />
