@@ -274,7 +274,11 @@ const DropMenu = createClass({
 	},
 
 	statics: {
-		preprocessOptionData(props, ParentType = DropMenu) {
+		preprocessOptionData(
+			props,
+			ParentType = DropMenu,
+			hideFunction = _.constant(false)
+		) {
 			const { OptionGroup, Option, NullOption } = ParentType;
 
 			const optionGroups = _.map(findTypes(props, OptionGroup), 'props'); // find all OptionGroup props
@@ -297,7 +301,10 @@ const DropMenu = createClass({
 								localOptionIndex,
 								optionIndex: _.size(memo) + localOptionIndex, // add current index to current array length to get final option index
 								optionGroupIndex, // store option group index to associate option back to group
-								optionProps,
+								optionProps: {
+									isHidden: hideFunction(optionProps),
+									...optionProps,
+								},
 							};
 						})
 					);
@@ -319,7 +326,10 @@ const DropMenu = createClass({
 						localOptionIndex,
 						optionIndex: _.size(groupedOptionData) + localOptionIndex, // add current index to grouped options array length to get final option index (grouped options rendered first)
 						optionGroupIndex: null, // ungrouped options have no `optionGroupIndex`
-						optionProps,
+						optionProps: {
+							isHidden: hideFunction(optionProps),
+							...optionProps,
+						},
 					};
 				}
 			);

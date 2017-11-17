@@ -83,7 +83,7 @@ describe('SearchableMultiSelect', () => {
 					mockSelectionCallback
 				);
 
-				expect(onSelect).toHaveBeenCalledWith(10, mockSelectionCallback);
+				expect(onSelect).toHaveBeenCalledWith(9, mockSelectionCallback);
 			});
 
 			it('should work when fired from a Checkbox', () => {
@@ -112,7 +112,7 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				wrapper.find('Checkbox').first().prop('onSelect')(
+				wrapper.find('Checkbox').at(1).prop('onSelect')(
 					true,
 					mockSelectionCallback
 				);
