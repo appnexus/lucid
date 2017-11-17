@@ -28,9 +28,9 @@ const CheckboxIconGroup = createClass({
 
 		/**
 		 * An array of {name: name, icon: icon} objects describing the available
-		 * selections in the Checkbox Icon Group
+		 * items in the Checkbox Icon Group
 		 */
-		selections: arrayOf(
+		groupItems: arrayOf(
 			shape({
 				label: any,
 				icon: any,
@@ -65,7 +65,7 @@ const CheckboxIconGroup = createClass({
 
 	getDefaultProps() {
 		return {
-			selections: [],
+			groupItems: [],
 			isDisabled: false,
 		};
 	},
@@ -73,7 +73,7 @@ const CheckboxIconGroup = createClass({
 	render() {
 		const {
 			className,
-			selections,
+			groupItems,
 			isDisabled,
 			name,
 			onClick,
@@ -92,7 +92,7 @@ const CheckboxIconGroup = createClass({
 					className
 				)}
 			>
-				{_.map(selections, (item, key) => (
+				{_.map(groupItems, (item, key) => (
 					<li className={cx('&-Item')}>
 						<IconBox
 							name={name}
@@ -106,7 +106,7 @@ const CheckboxIconGroup = createClass({
 							Label={item.label}
 							isCheckbox={true}
 							isDisabled={item.isDisabled || isDisabled}
-							id={item.id}
+							id={item.id || _.uniqueId('iconGroupItem_')}
 						/>
 					</li>
 				))}

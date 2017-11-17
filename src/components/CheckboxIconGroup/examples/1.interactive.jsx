@@ -14,10 +14,10 @@ export default createClass({
 	handleClick(id) {
 		console.log(id);
 
-		this.setState({
-			...this.state,
-			selected: [id],
-		});
+		// this.setState({
+		// 	...this.state,
+		// 	selected: [id],
+		// });
 	},
 
 	render() {
