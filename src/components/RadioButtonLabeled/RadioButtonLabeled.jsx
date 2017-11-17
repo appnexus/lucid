@@ -75,7 +75,7 @@ const RadioButtonLabeled = createClass({
 		);
 
 		return (
-			<label
+			<span
 				className={cx(
 					'&',
 					{
@@ -86,15 +86,21 @@ const RadioButtonLabeled = createClass({
 				)}
 				style={style}
 			>
-				<RadioButton
-					className={className}
-					isDisabled={isDisabled}
-					isSelected={isSelected}
-					onSelect={onSelect}
-					{...omitProps(passThroughs, RadioButtonLabeled, [], false)}
-				/>
-				<div {...labelChildProps} className={cx('&-label')} />
-			</label>
+				<span className={cx('&-clickable-area')}>
+					<RadioButton
+						className={className}
+						isDisabled={isDisabled}
+						isSelected={isSelected}
+						onSelect={onSelect}
+						{...omitProps(passThroughs, RadioButtonLabeled, [], false)}
+					/>
+					<div
+						{...labelChildProps}
+						className={cx('&-label')}
+						onClick={onSelect}
+					/>
+				</span>
+			</span>
 		);
 	},
 });

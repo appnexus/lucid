@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for interactive 1`] = `
-<label
+<span
   className="lucid-RadioButtonLabeled lucid-RadioButtonLabeled-is-selected"
   style={
     Object {
@@ -9,26 +9,31 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
     }
   }
 >
-  <RadioButton
-    isDisabled={false}
-    isSelected={true}
-    name="interactive-radio-buttons"
-    onSelect={[Function]}
+  <span
+    className="lucid-RadioButtonLabeled-clickable-area"
   >
-    <RadioButtonLabeled.Label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={true}
+      name="interactive-radio-buttons"
+      onSelect={[Function]}
+    >
+      <RadioButtonLabeled.Label>
+        Vanilla
+      </RadioButtonLabeled.Label>
+    </RadioButton>
+    <div
+      className="lucid-RadioButtonLabeled-label"
+      onClick={[Function]}
+    >
       Vanilla
-    </RadioButtonLabeled.Label>
-  </RadioButton>
-  <div
-    className="lucid-RadioButtonLabeled-label"
-  >
-    Vanilla
-  </div>
-</label>
+    </div>
+  </span>
+</span>
 `;
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for interactive 2`] = `
-<label
+<span
   className="lucid-RadioButtonLabeled"
   style={
     Object {
@@ -36,26 +41,31 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
     }
   }
 >
-  <RadioButton
-    isDisabled={false}
-    isSelected={false}
-    name="interactive-radio-buttons"
-    onSelect={[Function]}
+  <span
+    className="lucid-RadioButtonLabeled-clickable-area"
   >
-    <RadioButtonLabeled.Label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={false}
+      name="interactive-radio-buttons"
+      onSelect={[Function]}
+    >
+      <RadioButtonLabeled.Label>
+        Chocolate
+      </RadioButtonLabeled.Label>
+    </RadioButton>
+    <div
+      className="lucid-RadioButtonLabeled-label"
+      onClick={[Function]}
+    >
       Chocolate
-    </RadioButtonLabeled.Label>
-  </RadioButton>
-  <div
-    className="lucid-RadioButtonLabeled-label"
-  >
-    Chocolate
-  </div>
-</label>
+    </div>
+  </span>
+</span>
 `;
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for interactive 3`] = `
-<label
+<span
   className="lucid-RadioButtonLabeled"
   style={
     Object {
@@ -63,26 +73,31 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
     }
   }
 >
-  <RadioButton
-    isDisabled={false}
-    isSelected={false}
-    name="interactive-radio-buttons"
-    onSelect={[Function]}
+  <span
+    className="lucid-RadioButtonLabeled-clickable-area"
   >
-    <RadioButtonLabeled.Label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={false}
+      name="interactive-radio-buttons"
+      onSelect={[Function]}
+    >
+      <RadioButtonLabeled.Label>
+        Strawberry
+      </RadioButtonLabeled.Label>
+    </RadioButton>
+    <div
+      className="lucid-RadioButtonLabeled-label"
+      onClick={[Function]}
+    >
       Strawberry
-    </RadioButtonLabeled.Label>
-  </RadioButton>
-  <div
-    className="lucid-RadioButtonLabeled-label"
-  >
-    Strawberry
-  </div>
-</label>
+    </div>
+  </span>
+</span>
 `;
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for interactive 4`] = `
-<label
+<span
   className="lucid-RadioButtonLabeled"
   style={
     Object {
@@ -90,26 +105,31 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
     }
   }
 >
-  <RadioButton
-    isDisabled={false}
-    isSelected={false}
-    name="interactive-radio-buttons"
-    onSelect={[Function]}
+  <span
+    className="lucid-RadioButtonLabeled-clickable-area"
   >
-    <RadioButtonLabeled.Label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={false}
+      name="interactive-radio-buttons"
+      onSelect={[Function]}
+    >
+      <RadioButtonLabeled.Label>
+        Polaroid four dollar toast bespoke succulents. Kickstarter truffaut PBR&B fashion axe, lyft actually viral everyday carry iPhone tote bag mumblecore umami. Skateboard you probably haven't heard of them before they sold out, edison bulb paleo poutine jianbing blue bottle mixtape. Normcore farm-to-table coloring book cliche before they sold out. Roof party authentic hoodie paleo next level, bicycle rights selvage you probably haven't heard of them leggings venmo etsy cronut williamsburg. Dreamcatcher vice gastropub austin fam. Actually subway tile kickstarter, messenger bag shabby chic activated charcoal lomo.
+      </RadioButtonLabeled.Label>
+    </RadioButton>
+    <div
+      className="lucid-RadioButtonLabeled-label"
+      onClick={[Function]}
+    >
       Polaroid four dollar toast bespoke succulents. Kickstarter truffaut PBR&B fashion axe, lyft actually viral everyday carry iPhone tote bag mumblecore umami. Skateboard you probably haven't heard of them before they sold out, edison bulb paleo poutine jianbing blue bottle mixtape. Normcore farm-to-table coloring book cliche before they sold out. Roof party authentic hoodie paleo next level, bicycle rights selvage you probably haven't heard of them leggings venmo etsy cronut williamsburg. Dreamcatcher vice gastropub austin fam. Actually subway tile kickstarter, messenger bag shabby chic activated charcoal lomo.
-    </RadioButtonLabeled.Label>
-  </RadioButton>
-  <div
-    className="lucid-RadioButtonLabeled-label"
-  >
-    Polaroid four dollar toast bespoke succulents. Kickstarter truffaut PBR&B fashion axe, lyft actually viral everyday carry iPhone tote bag mumblecore umami. Skateboard you probably haven't heard of them before they sold out, edison bulb paleo poutine jianbing blue bottle mixtape. Normcore farm-to-table coloring book cliche before they sold out. Roof party authentic hoodie paleo next level, bicycle rights selvage you probably haven't heard of them leggings venmo etsy cronut williamsburg. Dreamcatcher vice gastropub austin fam. Actually subway tile kickstarter, messenger bag shabby chic activated charcoal lomo.
-  </div>
-</label>
+    </div>
+  </span>
+</span>
 `;
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for interactive 5`] = `
-<label
+<span
   className="lucid-RadioButtonLabeled"
   style={
     Object {
@@ -117,26 +137,31 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
     }
   }
 >
-  <RadioButton
-    isDisabled={false}
-    isSelected={false}
-    name="interactive-radio-buttons"
-    onSelect={[Function]}
+  <span
+    className="lucid-RadioButtonLabeled-clickable-area"
   >
-    <RadioButtonLabeled.Label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={false}
+      name="interactive-radio-buttons"
+      onSelect={[Function]}
+    >
+      <RadioButtonLabeled.Label>
+        Unicorn helvetica glossier pop-up letterpress snackwave raw denim. Lomo blog tattooed helvetica seitan DIY. Tbh kombucha shabby chic cornhole, microdosing seitan snackwave gastropub celiac. Biodiesel 90's fixie drinking vinegar literally unicorn readymade fap, vape wolf direct trade kickstarter pickled disrupt fashion axe. Heirloom subway tile hell of, austin portland meditation PBR&B tacos raclette. Prism fanny pack banh mi trust fund unicorn, thundercats chicharrones salvia pour-over VHS. Distillery organic pork belly squid.
+      </RadioButtonLabeled.Label>
+    </RadioButton>
+    <div
+      className="lucid-RadioButtonLabeled-label"
+      onClick={[Function]}
+    >
       Unicorn helvetica glossier pop-up letterpress snackwave raw denim. Lomo blog tattooed helvetica seitan DIY. Tbh kombucha shabby chic cornhole, microdosing seitan snackwave gastropub celiac. Biodiesel 90's fixie drinking vinegar literally unicorn readymade fap, vape wolf direct trade kickstarter pickled disrupt fashion axe. Heirloom subway tile hell of, austin portland meditation PBR&B tacos raclette. Prism fanny pack banh mi trust fund unicorn, thundercats chicharrones salvia pour-over VHS. Distillery organic pork belly squid.
-    </RadioButtonLabeled.Label>
-  </RadioButton>
-  <div
-    className="lucid-RadioButtonLabeled-label"
-  >
-    Unicorn helvetica glossier pop-up letterpress snackwave raw denim. Lomo blog tattooed helvetica seitan DIY. Tbh kombucha shabby chic cornhole, microdosing seitan snackwave gastropub celiac. Biodiesel 90's fixie drinking vinegar literally unicorn readymade fap, vape wolf direct trade kickstarter pickled disrupt fashion axe. Heirloom subway tile hell of, austin portland meditation PBR&B tacos raclette. Prism fanny pack banh mi trust fund unicorn, thundercats chicharrones salvia pour-over VHS. Distillery organic pork belly squid.
-  </div>
-</label>
+    </div>
+  </span>
+</span>
 `;
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for interactive 6`] = `
-<label
+<span
   className="lucid-RadioButtonLabeled"
   style={
     Object {
@@ -144,26 +169,31 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
     }
   }
 >
-  <RadioButton
-    isDisabled={false}
-    isSelected={false}
-    name="interactive-radio-buttons"
-    onSelect={[Function]}
+  <span
+    className="lucid-RadioButtonLabeled-clickable-area"
   >
-    <RadioButtonLabeled.Label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={false}
+      name="interactive-radio-buttons"
+      onSelect={[Function]}
+    >
+      <RadioButtonLabeled.Label>
+        Heirloom keffiyeh schlitz cray. Keytar tumblr dreamcatcher art party polaroid, sriracha etsy pinterest typewriter. IPhone ugh williamsburg man bun waistcoat literally paleo direct trade. Taxidermy cold-pressed pabst green juice, freegan tumblr post-ironic everyday carry disrupt distillery. Hell of lumbersexual cliche, whatever tilde raclette pop-up blue bottle skateboard butcher meditation four dollar toast tattooed health goth pinterest. Poutine polaroid YOLO, biodiesel chambray gentrify microdosing kickstarter bushwick humblebrag yr cred intelligentsia you probably haven't heard of them. Blog meditation locavore tousled, edison bulb cronut occupy +1 you probably haven't heard of them echo park distillery chambray.
+      </RadioButtonLabeled.Label>
+    </RadioButton>
+    <div
+      className="lucid-RadioButtonLabeled-label"
+      onClick={[Function]}
+    >
       Heirloom keffiyeh schlitz cray. Keytar tumblr dreamcatcher art party polaroid, sriracha etsy pinterest typewriter. IPhone ugh williamsburg man bun waistcoat literally paleo direct trade. Taxidermy cold-pressed pabst green juice, freegan tumblr post-ironic everyday carry disrupt distillery. Hell of lumbersexual cliche, whatever tilde raclette pop-up blue bottle skateboard butcher meditation four dollar toast tattooed health goth pinterest. Poutine polaroid YOLO, biodiesel chambray gentrify microdosing kickstarter bushwick humblebrag yr cred intelligentsia you probably haven't heard of them. Blog meditation locavore tousled, edison bulb cronut occupy +1 you probably haven't heard of them echo park distillery chambray.
-    </RadioButtonLabeled.Label>
-  </RadioButton>
-  <div
-    className="lucid-RadioButtonLabeled-label"
-  >
-    Heirloom keffiyeh schlitz cray. Keytar tumblr dreamcatcher art party polaroid, sriracha etsy pinterest typewriter. IPhone ugh williamsburg man bun waistcoat literally paleo direct trade. Taxidermy cold-pressed pabst green juice, freegan tumblr post-ironic everyday carry disrupt distillery. Hell of lumbersexual cliche, whatever tilde raclette pop-up blue bottle skateboard butcher meditation four dollar toast tattooed health goth pinterest. Poutine polaroid YOLO, biodiesel chambray gentrify microdosing kickstarter bushwick humblebrag yr cred intelligentsia you probably haven't heard of them. Blog meditation locavore tousled, edison bulb cronut occupy +1 you probably haven't heard of them echo park distillery chambray.
-  </div>
-</label>
+    </div>
+  </span>
+</span>
 `;
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for label-as-child 1`] = `
-<label
+<span
   className="lucid-RadioButtonLabeled"
   style={
     Object {
@@ -171,25 +201,30 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
     }
   }
 >
-  <RadioButton
-    isDisabled={false}
-    isSelected={false}
-    onSelect={[Function]}
+  <span
+    className="lucid-RadioButtonLabeled-clickable-area"
   >
-    <RadioButtonLabeled.Label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+    >
+      <RadioButtonLabeled.Label>
+        Just text
+      </RadioButtonLabeled.Label>
+    </RadioButton>
+    <div
+      className="lucid-RadioButtonLabeled-label"
+      onClick={[Function]}
+    >
       Just text
-    </RadioButtonLabeled.Label>
-  </RadioButton>
-  <div
-    className="lucid-RadioButtonLabeled-label"
-  >
-    Just text
-  </div>
-</label>
+    </div>
+  </span>
+</span>
 `;
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for label-as-child 2`] = `
-<label
+<span
   className="lucid-RadioButtonLabeled"
   style={
     Object {
@@ -197,29 +232,34 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
     }
   }
 >
-  <RadioButton
-    isDisabled={false}
-    isSelected={false}
-    onSelect={[Function]}
+  <span
+    className="lucid-RadioButtonLabeled-clickable-area"
   >
-    <RadioButtonLabeled.Label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+    >
+      <RadioButtonLabeled.Label>
+        <span>
+          HTML element
+        </span>
+      </RadioButtonLabeled.Label>
+    </RadioButton>
+    <div
+      className="lucid-RadioButtonLabeled-label"
+      onClick={[Function]}
+    >
       <span>
         HTML element
       </span>
-    </RadioButtonLabeled.Label>
-  </RadioButton>
-  <div
-    className="lucid-RadioButtonLabeled-label"
-  >
-    <span>
-      HTML element
-    </span>
-  </div>
-</label>
+    </div>
+  </span>
+</span>
 `;
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for label-as-prop 1`] = `
-<label
+<span
   className="lucid-RadioButtonLabeled"
   style={
     Object {
@@ -227,21 +267,26 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
     }
   }
 >
-  <RadioButton
-    isDisabled={false}
-    isSelected={false}
-    onSelect={[Function]}
-  />
-  <div
-    className="lucid-RadioButtonLabeled-label"
+  <span
+    className="lucid-RadioButtonLabeled-clickable-area"
   >
-    Just text
-  </div>
-</label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+    />
+    <div
+      className="lucid-RadioButtonLabeled-label"
+      onClick={[Function]}
+    >
+      Just text
+    </div>
+  </span>
+</span>
 `;
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for label-as-prop 2`] = `
-<label
+<span
   className="lucid-RadioButtonLabeled"
   style={
     Object {
@@ -249,23 +294,28 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
     }
   }
 >
-  <RadioButton
-    isDisabled={false}
-    isSelected={false}
-    onSelect={[Function]}
-  />
-  <div
-    className="lucid-RadioButtonLabeled-label"
+  <span
+    className="lucid-RadioButtonLabeled-clickable-area"
   >
-    <span>
-      HTML element
-    </span>
-  </div>
-</label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+    />
+    <div
+      className="lucid-RadioButtonLabeled-label"
+      onClick={[Function]}
+    >
+      <span>
+        HTML element
+      </span>
+    </div>
+  </span>
+</span>
 `;
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for label-as-prop 3`] = `
-<label
+<span
   className="lucid-RadioButtonLabeled"
   style={
     Object {
@@ -273,21 +323,26 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
     }
   }
 >
-  <RadioButton
-    isDisabled={false}
-    isSelected={false}
-    onSelect={[Function]}
-  />
-  <div
-    className="lucid-RadioButtonLabeled-label"
+  <span
+    className="lucid-RadioButtonLabeled-clickable-area"
   >
-    Text in an array
-  </div>
-</label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+    />
+    <div
+      className="lucid-RadioButtonLabeled-label"
+      onClick={[Function]}
+    >
+      Text in an array
+    </div>
+  </span>
+</span>
 `;
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for label-as-prop 4`] = `
-<label
+<span
   className="lucid-RadioButtonLabeled"
   style={
     Object {
@@ -295,23 +350,28 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
     }
   }
 >
-  <RadioButton
-    isDisabled={false}
-    isSelected={false}
-    onSelect={[Function]}
-  />
-  <div
-    className="lucid-RadioButtonLabeled-label"
+  <span
+    className="lucid-RadioButtonLabeled-clickable-area"
   >
-    <span>
-      HTML element in an array
-    </span>
-  </div>
-</label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+    />
+    <div
+      className="lucid-RadioButtonLabeled-label"
+      onClick={[Function]}
+    >
+      <span>
+        HTML element in an array
+      </span>
+    </div>
+  </span>
+</span>
 `;
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for states 1`] = `
-<label
+<span
   className="lucid-RadioButtonLabeled"
   style={
     Object {
@@ -320,25 +380,30 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
     }
   }
 >
-  <RadioButton
-    isDisabled={false}
-    isSelected={false}
-    onSelect={[Function]}
+  <span
+    className="lucid-RadioButtonLabeled-clickable-area"
   >
-    <RadioButtonLabeled.Label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+    >
+      <RadioButtonLabeled.Label>
+        (default props)
+      </RadioButtonLabeled.Label>
+    </RadioButton>
+    <div
+      className="lucid-RadioButtonLabeled-label"
+      onClick={[Function]}
+    >
       (default props)
-    </RadioButtonLabeled.Label>
-  </RadioButton>
-  <div
-    className="lucid-RadioButtonLabeled-label"
-  >
-    (default props)
-  </div>
-</label>
+    </div>
+  </span>
+</span>
 `;
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for states 2`] = `
-<label
+<span
   className="lucid-RadioButtonLabeled lucid-RadioButtonLabeled-is-disabled"
   style={
     Object {
@@ -347,25 +412,30 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
     }
   }
 >
-  <RadioButton
-    isDisabled={true}
-    isSelected={false}
-    onSelect={[Function]}
+  <span
+    className="lucid-RadioButtonLabeled-clickable-area"
   >
-    <RadioButtonLabeled.Label>
+    <RadioButton
+      isDisabled={true}
+      isSelected={false}
+      onSelect={[Function]}
+    >
+      <RadioButtonLabeled.Label>
+        Disabled
+      </RadioButtonLabeled.Label>
+    </RadioButton>
+    <div
+      className="lucid-RadioButtonLabeled-label"
+      onClick={[Function]}
+    >
       Disabled
-    </RadioButtonLabeled.Label>
-  </RadioButton>
-  <div
-    className="lucid-RadioButtonLabeled-label"
-  >
-    Disabled
-  </div>
-</label>
+    </div>
+  </span>
+</span>
 `;
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for states 3`] = `
-<label
+<span
   className="lucid-RadioButtonLabeled lucid-RadioButtonLabeled-is-selected"
   style={
     Object {
@@ -374,25 +444,30 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
     }
   }
 >
-  <RadioButton
-    isDisabled={false}
-    isSelected={true}
-    onSelect={[Function]}
+  <span
+    className="lucid-RadioButtonLabeled-clickable-area"
   >
-    <RadioButtonLabeled.Label>
+    <RadioButton
+      isDisabled={false}
+      isSelected={true}
+      onSelect={[Function]}
+    >
+      <RadioButtonLabeled.Label>
+        Selected
+      </RadioButtonLabeled.Label>
+    </RadioButton>
+    <div
+      className="lucid-RadioButtonLabeled-label"
+      onClick={[Function]}
+    >
       Selected
-    </RadioButtonLabeled.Label>
-  </RadioButton>
-  <div
-    className="lucid-RadioButtonLabeled-label"
-  >
-    Selected
-  </div>
-</label>
+    </div>
+  </span>
+</span>
 `;
 
 exports[`RadioButtonLabeled [common] example testing should match snapshot(s) for states 4`] = `
-<label
+<span
   className="lucid-RadioButtonLabeled lucid-RadioButtonLabeled-is-disabled lucid-RadioButtonLabeled-is-selected"
   style={
     Object {
@@ -401,19 +476,24 @@ exports[`RadioButtonLabeled [common] example testing should match snapshot(s) fo
     }
   }
 >
-  <RadioButton
-    isDisabled={true}
-    isSelected={true}
-    onSelect={[Function]}
+  <span
+    className="lucid-RadioButtonLabeled-clickable-area"
   >
-    <RadioButtonLabeled.Label>
+    <RadioButton
+      isDisabled={true}
+      isSelected={true}
+      onSelect={[Function]}
+    >
+      <RadioButtonLabeled.Label>
+        Disabled & selected
+      </RadioButtonLabeled.Label>
+    </RadioButton>
+    <div
+      className="lucid-RadioButtonLabeled-label"
+      onClick={[Function]}
+    >
       Disabled & selected
-    </RadioButtonLabeled.Label>
-  </RadioButton>
-  <div
-    className="lucid-RadioButtonLabeled-label"
-  >
-    Disabled & selected
-  </div>
-</label>
+    </div>
+  </span>
+</span>
 `;
