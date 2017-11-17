@@ -46,6 +46,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       />
     </DropMenu.Control>
     <DropMenu.Option
+      className="lucid-SearchableMultiSelect-Option-select-all"
       isDisabled={false}
       isHidden={true}
       isWrapped={true}
@@ -116,6 +117,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       />
     </DropMenu.Control>
     <DropMenu.Option
+      className="lucid-SearchableMultiSelect-Option-select-all"
       isDisabled={false}
       isHidden={true}
       isWrapped={true}
@@ -1760,6 +1762,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       />
     </DropMenu.Control>
     <DropMenu.Option
+      className="lucid-SearchableMultiSelect-Option-select-all"
       isDisabled={false}
       isHidden={true}
       isWrapped={true}
