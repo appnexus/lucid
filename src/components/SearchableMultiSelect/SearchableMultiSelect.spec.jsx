@@ -23,7 +23,7 @@ describe('SearchableMultiSelect', () => {
 				</SearchableMultiSelect>
 			);
 
-			expect(wrapper.find(DropMenu.Option).length).toBe(1);
+			expect(wrapper.find(DropMenu).length).toBe(1);
 		});
 
 		it('should pass `isDisabled` to `Options`', () => {
