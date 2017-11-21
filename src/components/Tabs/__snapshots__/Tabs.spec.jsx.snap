@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-prop 1`] = `
+exports[`Tabs [common] example testing should match snapshot(s) for 01-title-as-prop 1`] = `
 <div
   className="lucid-Tabs"
 >
@@ -69,7 +69,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 1-title-as-p
 </div>
 `;
 
-exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-child 1`] = `
+exports[`Tabs [common] example testing should match snapshot(s) for 02-title-as-child 1`] = `
 <div
   className="lucid-Tabs"
 >
@@ -153,7 +153,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 2-title-as-c
 </div>
 `;
 
-exports[`Tabs [common] example testing should match snapshot(s) for 3-progression 1`] = `
+exports[`Tabs [common] example testing should match snapshot(s) for 03-progression 1`] = `
 <div
   className="lucid-Tabs"
 >
@@ -236,7 +236,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 3-progressio
 </div>
 `;
 
-exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-title-as-child 1`] = `
+exports[`Tabs [common] example testing should match snapshot(s) for 04-complex-title-as-child 1`] = `
 <div
   className="lucid-Tabs"
 >
@@ -426,7 +426,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 4-complex-ti
 </div>
 `;
 
-exports[`Tabs [common] example testing should match snapshot(s) for 5-tab-as-prop 1`] = `
+exports[`Tabs [common] example testing should match snapshot(s) for 05-tab-as-prop 1`] = `
 <div
   className="lucid-Tabs"
 >
@@ -468,7 +468,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 5-tab-as-pro
 </div>
 `;
 
-exports[`Tabs [common] example testing should match snapshot(s) for 6-tabs-variable-width 1`] = `
+exports[`Tabs [common] example testing should match snapshot(s) for 06-tabs-variable-width 1`] = `
 <div
   className="lucid-Tabs"
 >
@@ -550,7 +550,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 6-tabs-varia
 </div>
 `;
 
-exports[`Tabs [common] example testing should match snapshot(s) for 7-navigation-tabs 1`] = `
+exports[`Tabs [common] example testing should match snapshot(s) for 07-navigation-tabs 1`] = `
 <div
   className="lucid-Tabs"
 >
@@ -617,7 +617,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 7-navigation
 </div>
 `;
 
-exports[`Tabs [common] example testing should match snapshot(s) for 8-navigation-progression-tabs 1`] = `
+exports[`Tabs [common] example testing should match snapshot(s) for 08-navigation-progression-tabs 1`] = `
 <div
   className="lucid-Tabs"
 >
@@ -700,7 +700,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 8-navigation
 </div>
 `;
 
-exports[`Tabs [common] example testing should match snapshot(s) for 9-navigation-tabs-variable-width 1`] = `
+exports[`Tabs [common] example testing should match snapshot(s) for 09-navigation-tabs-variable-width 1`] = `
 <div
   className="lucid-Tabs"
 >
