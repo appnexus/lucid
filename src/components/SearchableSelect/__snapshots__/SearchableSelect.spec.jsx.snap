@@ -25,7 +25,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
   focusedIndex={null}
   isDisabled={false}
   isExpanded={false}
-  isLoading={false}
   onCollapse={[Function]}
   onExpand={[Function]}
   onFocusNext={[Function]}
@@ -830,7 +829,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
   focusedIndex={null}
   isDisabled={false}
   isExpanded={false}
-  isLoading={true}
   onCollapse={[Function]}
   onExpand={[Function]}
   onFocusNext={[Function]}
@@ -1376,7 +1374,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
   focusedIndex={null}
   isDisabled={false}
   isExpanded={false}
-  isLoading={false}
   onCollapse={[Function]}
   onExpand={[Function]}
   onFocusNext={[Function]}
