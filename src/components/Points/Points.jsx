@@ -187,6 +187,7 @@ const Points = createClass({
 						(series, seriesIndex) =>
 							(isValidSeries(series)
 								? <Point
+										key={`${seriesIndex}${dIndex}`}
 										x={xScale(data[seriesIndex][xField])}
 										y={yScale(_.isArray(series) ? _.last(series) : series)}
 										hasStroke={hasStroke}

@@ -340,7 +340,6 @@ const SearchableSelect = createClass({
 					!_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null
 				)}
 				isDisabled={isDisabled}
-				isLoading={isLoading}
 				onSelect={onSelect}
 				selectedIndices={isItemSelected ? [selectedIndex] : []}
 				style={style}
