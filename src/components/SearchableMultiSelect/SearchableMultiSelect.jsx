@@ -186,6 +186,10 @@ const SearchableMultiSelect = createClass({
 		 * the search field.
 		 */
 		hasSelections: bool,
+		/**
+		 * Controls whether to show a "Select All" option.
+		 */
+		hasSelectAll: bool,
 	},
 
 	getInitialState() {
@@ -209,13 +213,18 @@ const SearchableMultiSelect = createClass({
 			responsiveMode: 'large',
 			hasRemoveAll: true,
 			hasSelections: true,
+			hasSelectAll: false,
 		};
 	},
 
 	handleDropMenuSelect(optionIndex, { event, props }) {
 		const { onSelect } = this.props;
 
-		return onSelect(optionIndex, { event, props });
+		if (optionIndex === 0) {
+			return this.handleSelectAll(event);
+		}
+		// this index is decremented to account for the "Select All" Option
+		return onSelect(optionIndex - 1, { event, props });
 	},
 
 	handleCheckboxSelect(
@@ -241,6 +250,32 @@ const SearchableMultiSelect = createClass({
 			event,
 			props: selectedOptionProps,
 		});
+	},
+
+	handleSelectAll(event) {
+		// This is needed otherwise clicking the checkbox will double fire this
+		// event _and_ the `handleDropMenuSelect` handler
+		const {
+			props: { selectedIndices, onSelect },
+			state: { flattenedOptionsData },
+		} = this;
+
+		event.stopPropagation();
+
+		const visibleOptions = _.reject(
+			flattenedOptionsData,
+			'optionProps.isHidden'
+		);
+
+		const [selected, unselected] = _.partition(visibleOptions, ({
+			optionIndex,
+		}) => _.includes(selectedIndices, optionIndex));
+
+		const indices = _.isEmpty(unselected)
+			? _.map(selected, 'optionIndex')
+			: _.map(unselected, 'optionIndex');
+
+		return onSelect(indices);
 	},
 
 	handleSelectionRemove({ event, props, props: { callbackId: optionIndex } }) {
@@ -289,14 +324,22 @@ const SearchableMultiSelect = createClass({
 	componentWillMount() {
 		// preprocess the options data before rendering
 		this.setState(
-			DropMenu.preprocessOptionData(this.props, SearchableMultiSelect)
+			DropMenu.preprocessOptionData(
+				this.props,
+				SearchableMultiSelect,
+				props => !this.props.optionFilter(this.props.searchText, props)
+			)
 		);
 	},
 
 	componentWillReceiveProps(nextProps) {
 		// only preprocess options data when it changes (via new props) - better performance than doing this each render
 		this.setState(
-			DropMenu.preprocessOptionData(nextProps, SearchableMultiSelect)
+			DropMenu.preprocessOptionData(
+				nextProps,
+				SearchableMultiSelect,
+				props => !this.props.optionFilter(nextProps.searchText, props)
+			)
 		);
 	},
 
@@ -322,7 +365,7 @@ const SearchableMultiSelect = createClass({
 	},
 
 	renderOption({ optionProps, optionIndex }) {
-		const { optionFilter, searchText, selectedIndices, isLoading } = this.props;
+		const { searchText, selectedIndices, isLoading, optionFilter } = this.props;
 
 		return (
 			<DropMenu.Option
@@ -348,7 +391,7 @@ const SearchableMultiSelect = createClass({
 	},
 
 	renderOptions() {
-		const { optionFilter, searchText, isLoading } = this.props;
+		const { searchText, isLoading, hasSelectAll, selectedIndices } = this.props;
 
 		const {
 			optionGroups,
@@ -357,15 +400,43 @@ const SearchableMultiSelect = createClass({
 			flattenedOptionsData,
 		} = this.state;
 
-		const isAllOptionsHidden = _.every(
+		const visibleOptions = _.reject(
 			flattenedOptionsData,
-			({ optionProps }) => !optionFilter(searchText, optionProps)
+			'optionProps.isHidden'
 		);
 
+		const isAllOptionsHidden = _.isEmpty(visibleOptions);
+
+		const isEveryVisibleOptionSelected = _.every(visibleOptions, ({
+			optionIndex,
+		}) => _.includes(selectedIndices, optionIndex));
+
+		const isAnyVisibleOptionSelected = _.some(visibleOptions, ({
+			optionIndex,
+		}) => _.includes(selectedIndices, optionIndex));
+
 		// for each option group passed in, render a DropMenu.OptionGroup, any label will be included in it's children, render each option inside the group
-		const dropMenuOptions = _.map(
-			optionGroups,
-			(optionGroupProps, optionGroupIndex) => (
+		const dropMenuOptions = [
+			<DropMenu.Option
+				className={cx('&-Option-select-all')}
+				key={'SearchableMultiSelectOption-select-all'}
+				isHidden={!hasSelectAll}
+				isDisabled={isLoading}
+			>
+				<div className={cx('&-checkbox')}>
+					<Checkbox
+						isSelected={isEveryVisibleOptionSelected}
+						isIndeterminate={
+							!isEveryVisibleOptionSelected && isAnyVisibleOptionSelected
+						}
+					/>
+					<label className={cx('&-checkbox-label')}>
+						Select All
+					</label>
+				</div>
+			</DropMenu.Option>,
+		].concat(
+			_.map(optionGroups, (optionGroupProps, optionGroupIndex) => (
 				<DropMenu.OptionGroup
 					key={'SearchableMultiSelectOptionGroup' + optionGroupIndex}
 					{..._.omit(optionGroupProps, 'children')}
@@ -373,10 +444,10 @@ const SearchableMultiSelect = createClass({
 					{optionGroupProps.children}
 					{_.map(optionGroupDataLookup[optionGroupIndex], this.renderOption)}
 				</DropMenu.OptionGroup>
+			)).concat(
+				// then render all the ungrouped options at the end
+				_.map(ungroupedOptionData, this.renderOption)
 			)
-		).concat(
-			// then render all the ungrouped options at the end
-			_.map(ungroupedOptionData, this.renderOption)
 		);
 
 		if (!isAllOptionsHidden || _.isEmpty(searchText)) {

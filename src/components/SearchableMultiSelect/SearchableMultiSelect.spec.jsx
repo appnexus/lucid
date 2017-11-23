@@ -34,9 +34,10 @@ describe('SearchableMultiSelect', () => {
 					<Option>option c</Option>
 				</SearchableMultiSelect>
 			);
-			const [first, second, third] = wrapper
+			const [selectAll, first, second, third] = wrapper
 				.find(DropMenu.Option)
 				.map(option => option.prop('isDisabled'));
+			expect(selectAll).toBe(false);
 			expect(first).toBe(true);
 			expect(second).toBe(false);
 			expect(third).toBe(false);
@@ -100,7 +101,7 @@ describe('SearchableMultiSelect', () => {
 					mockSelectionCallback
 				);
 
-				expect(onSelect).toHaveBeenCalledWith(10, mockSelectionCallback);
+				expect(onSelect).toHaveBeenCalledWith(9, mockSelectionCallback);
 			});
 
 			it('should work when fired from a Checkbox', () => {
@@ -129,7 +130,7 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				wrapper.find('Checkbox').first().prop('onSelect')(
+				wrapper.find('Checkbox').at(1).prop('onSelect')(
 					true,
 					mockSelectionCallback
 				);
@@ -162,6 +163,102 @@ describe('SearchableMultiSelect', () => {
 				wrapper.find('Selection').at(1).prop('onRemove')(mockSelectionCallback);
 
 				expect(onSelect).toHaveBeenCalledWith(1, expected);
+			});
+
+			it('should work when selecting all', () => {
+				const onSelect = jest.fn();
+				const mockSelectionCallback = {
+					event: { stopPropagation: () => {} },
+					props: {},
+				};
+
+				const wrapper = shallow(
+					<SearchableMultiSelect onSelect={onSelect}>
+						<Option>option a</Option>
+						<Option>option b</Option>
+					</SearchableMultiSelect>
+				);
+
+				wrapper.find('DropMenu').first().prop('onSelect')(
+					0,
+					mockSelectionCallback
+				);
+
+				expect(onSelect).toHaveBeenCalledWith([0, 1]);
+			});
+
+			it('should work when deselecting all', () => {
+				const onSelect = jest.fn();
+				const mockSelectionCallback = {
+					event: { stopPropagation: () => {} },
+					props: {},
+				};
+				const selectedIndices = [0, 1];
+
+				const wrapper = shallow(
+					<SearchableMultiSelect
+						selectedIndices={selectedIndices}
+						onSelect={onSelect}
+					>
+						<Option>option a</Option>
+						<Option>option b</Option>
+					</SearchableMultiSelect>
+				);
+
+				wrapper.find('DropMenu').first().prop('onSelect')(
+					0,
+					mockSelectionCallback
+				);
+
+				expect(onSelect).toHaveBeenCalledWith([0, 1]);
+			});
+
+			it('should work when selecting some', () => {
+				const onSelect = jest.fn();
+				const mockSelectionCallback = {
+					event: { stopPropagation: () => {} },
+					props: {},
+				};
+				const selectedIndices = [0];
+
+				const wrapper = shallow(
+					<SearchableMultiSelect
+						selectedIndices={selectedIndices}
+						onSelect={onSelect}
+					>
+						<Option>option a</Option>
+						<Option>option b</Option>
+					</SearchableMultiSelect>
+				);
+
+				wrapper.find('DropMenu').first().prop('onSelect')(
+					0,
+					mockSelectionCallback
+				);
+
+				expect(onSelect).toHaveBeenCalledWith([1]);
+			});
+
+			it('should work when selecting filtered options', () => {
+				const onSelect = jest.fn();
+				const mockSelectionCallback = {
+					event: { stopPropagation: () => {} },
+					props: {},
+				};
+
+				const wrapper = shallow(
+					<SearchableMultiSelect onSelect={onSelect}>
+						<Option isHidden>option a</Option>
+						<Option>option b</Option>
+					</SearchableMultiSelect>
+				);
+
+				wrapper.find('DropMenu').first().prop('onSelect')(
+					0,
+					mockSelectionCallback
+				);
+
+				expect(onSelect).toHaveBeenCalledWith([1]);
 			});
 		});
 	});

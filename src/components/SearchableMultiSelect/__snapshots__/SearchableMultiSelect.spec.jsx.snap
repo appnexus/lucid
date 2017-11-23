@@ -45,6 +45,29 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         value=""
       />
     </DropMenu.Control>
+    <DropMenu.Option
+      className="lucid-SearchableMultiSelect-Option-select-all"
+      isDisabled={false}
+      isHidden={true}
+      isWrapped={true}
+      key="SearchableMultiSelectOption-select-all"
+    >
+      <div
+        className="lucid-SearchableMultiSelect-checkbox"
+      >
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]}
+        />
+        <label
+          className="lucid-SearchableMultiSelect-checkbox-label"
+        >
+          Select All
+        </label>
+      </div>
+    </DropMenu.Option>
   </DropMenu>
 </div>
 `;
@@ -93,6 +116,29 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         value=""
       />
     </DropMenu.Control>
+    <DropMenu.Option
+      className="lucid-SearchableMultiSelect-Option-select-all"
+      isDisabled={false}
+      isHidden={true}
+      isWrapped={true}
+      key="SearchableMultiSelectOption-select-all"
+    >
+      <div
+        className="lucid-SearchableMultiSelect-checkbox"
+      >
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
+        />
+        <label
+          className="lucid-SearchableMultiSelect-checkbox-label"
+        >
+          Select All
+        </label>
+      </div>
+    </DropMenu.Option>
     <DropMenu.OptionGroup
       isHidden={false}
       key="SearchableMultiSelectOptionGroup0"
@@ -1715,6 +1761,29 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         value=""
       />
     </DropMenu.Control>
+    <DropMenu.Option
+      className="lucid-SearchableMultiSelect-Option-select-all"
+      isDisabled={false}
+      isHidden={true}
+      isWrapped={true}
+      key="SearchableMultiSelectOption-select-all"
+    >
+      <div
+        className="lucid-SearchableMultiSelect-checkbox"
+      >
+        <Checkbox
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
+        />
+        <label
+          className="lucid-SearchableMultiSelect-checkbox-label"
+        >
+          Select All
+        </label>
+      </div>
+    </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
