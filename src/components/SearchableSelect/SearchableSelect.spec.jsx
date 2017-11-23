@@ -286,12 +286,19 @@ describe('SearchableSelect', () => {
 		});
 
 		describe('onSelect', () => {
-			let wrapper;
+			/* eslint-disable no-console */
+			let error, wrapper;
+
+			beforeEach(() => {
+				error = console.error;
+				console.error = jest.fn();
+			});
 
 			afterEach(() => {
 				if (wrapper) {
 					wrapper.unmount();
 				}
+				console.error = error;
 			});
 
 			it('should be called when an option is selected with the appropriate arguments', () => {
@@ -318,6 +325,7 @@ describe('SearchableSelect', () => {
 				assert.equal(props.testProp, 'foo');
 				assert(event);
 			});
+			/* eslint-enable no-console */
 		});
 
 		describe('onSearch', () => {

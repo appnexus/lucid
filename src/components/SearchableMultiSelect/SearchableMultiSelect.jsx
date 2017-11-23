@@ -365,13 +365,14 @@ const SearchableMultiSelect = createClass({
 	},
 
 	renderOption({ optionProps, optionIndex }) {
-		const { searchText, selectedIndices, isLoading } = this.props;
+		const { searchText, selectedIndices, isLoading, optionFilter } = this.props;
 
 		return (
 			<DropMenu.Option
 				key={'SearchableMultiSelectOption' + optionIndex}
 				{..._.omit(optionProps, 'children')}
-				isDisabled={isLoading}
+				isHidden={!optionFilter(searchText, optionProps)}
+				isDisabled={optionProps.isDisabled || isLoading}
 			>
 				<div className={cx('&-checkbox')}>
 					<Checkbox

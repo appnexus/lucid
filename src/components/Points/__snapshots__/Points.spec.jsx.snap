@@ -7,6 +7,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-0"
     hasStroke={true}
+    key="00"
     kind={0}
     scale={1}
     x={0}
@@ -15,6 +16,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-0"
     hasStroke={true}
+    key="10"
     kind={0}
     scale={1}
     x={163.33333333333334}
@@ -23,6 +25,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-0"
     hasStroke={true}
+    key="20"
     kind={0}
     scale={1}
     x={326.6666666666667}
@@ -31,6 +34,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-0"
     hasStroke={true}
+    key="30"
     kind={0}
     scale={1}
     x={490}
@@ -39,6 +43,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-0"
     hasStroke={true}
+    key="40"
     kind={0}
     scale={1}
     x={653.3333333333334}
@@ -47,6 +52,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-0"
     hasStroke={true}
+    key="50"
     kind={0}
     scale={1}
     x={816.6666666666667}
@@ -55,6 +61,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-0"
     hasStroke={true}
+    key="60"
     kind={0}
     scale={1}
     x={980}
@@ -63,6 +70,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-1"
     hasStroke={true}
+    key="01"
     kind={1}
     scale={1}
     x={0}
@@ -71,6 +79,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-1"
     hasStroke={true}
+    key="11"
     kind={1}
     scale={1}
     x={163.33333333333334}
@@ -79,6 +88,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-1"
     hasStroke={true}
+    key="21"
     kind={1}
     scale={1}
     x={326.6666666666667}
@@ -87,6 +97,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-1"
     hasStroke={true}
+    key="31"
     kind={1}
     scale={1}
     x={490}
@@ -95,6 +106,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-1"
     hasStroke={true}
+    key="41"
     kind={1}
     scale={1}
     x={653.3333333333334}
@@ -103,6 +115,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-1"
     hasStroke={true}
+    key="51"
     kind={1}
     scale={1}
     x={816.6666666666667}
@@ -111,6 +124,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-1"
     hasStroke={true}
+    key="61"
     kind={1}
     scale={1}
     x={980}
@@ -119,6 +133,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-2"
     hasStroke={true}
+    key="02"
     kind={2}
     scale={1}
     x={0}
@@ -127,6 +142,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-2"
     hasStroke={true}
+    key="12"
     kind={2}
     scale={1}
     x={163.33333333333334}
@@ -135,6 +151,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-2"
     hasStroke={true}
+    key="22"
     kind={2}
     scale={1}
     x={326.6666666666667}
@@ -143,6 +160,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-2"
     hasStroke={true}
+    key="32"
     kind={2}
     scale={1}
     x={490}
@@ -151,6 +169,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-2"
     hasStroke={true}
+    key="42"
     kind={2}
     scale={1}
     x={653.3333333333334}
@@ -159,6 +178,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-2"
     hasStroke={true}
+    key="52"
     kind={2}
     scale={1}
     x={816.6666666666667}
@@ -167,6 +187,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-2"
     hasStroke={true}
+    key="62"
     kind={2}
     scale={1}
     x={980}
@@ -175,6 +196,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-3"
     hasStroke={true}
+    key="03"
     kind={3}
     scale={1}
     x={0}
@@ -183,6 +205,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-3"
     hasStroke={true}
+    key="13"
     kind={3}
     scale={1}
     x={163.33333333333334}
@@ -191,6 +214,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-3"
     hasStroke={true}
+    key="23"
     kind={3}
     scale={1}
     x={326.6666666666667}
@@ -199,6 +223,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-3"
     hasStroke={true}
+    key="33"
     kind={3}
     scale={1}
     x={490}
@@ -207,6 +232,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-3"
     hasStroke={true}
+    key="43"
     kind={3}
     scale={1}
     x={653.3333333333334}
@@ -215,6 +241,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-3"
     hasStroke={true}
+    key="53"
     kind={3}
     scale={1}
     x={816.6666666666667}
@@ -223,6 +250,7 @@ exports[`Points [common] example testing should match snapshot(s) for basic 1`] 
   <Point
     color="color-chart-3"
     hasStroke={true}
+    key="63"
     kind={3}
     scale={1}
     x={980}
@@ -238,6 +266,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="color-chart-bad"
     hasStroke={true}
+    key="00"
     kind={0}
     scale={1}
     x={0}
@@ -246,6 +275,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="color-chart-bad"
     hasStroke={true}
+    key="10"
     kind={0}
     scale={1}
     x={163.33333333333334}
@@ -254,6 +284,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="color-chart-bad"
     hasStroke={true}
+    key="20"
     kind={0}
     scale={1}
     x={326.6666666666667}
@@ -262,6 +293,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="color-chart-bad"
     hasStroke={true}
+    key="30"
     kind={0}
     scale={1}
     x={490}
@@ -270,6 +302,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="color-chart-bad"
     hasStroke={true}
+    key="40"
     kind={0}
     scale={1}
     x={653.3333333333334}
@@ -278,6 +311,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="color-chart-bad"
     hasStroke={true}
+    key="50"
     kind={0}
     scale={1}
     x={816.6666666666667}
@@ -286,6 +320,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="color-chart-bad"
     hasStroke={true}
+    key="60"
     kind={0}
     scale={1}
     x={980}
@@ -294,6 +329,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="color-chart-good"
     hasStroke={true}
+    key="01"
     kind={1}
     scale={1}
     x={0}
@@ -302,6 +338,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="color-chart-good"
     hasStroke={true}
+    key="11"
     kind={1}
     scale={1}
     x={163.33333333333334}
@@ -310,6 +347,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="color-chart-good"
     hasStroke={true}
+    key="21"
     kind={1}
     scale={1}
     x={326.6666666666667}
@@ -318,6 +356,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="color-chart-good"
     hasStroke={true}
+    key="31"
     kind={1}
     scale={1}
     x={490}
@@ -326,6 +365,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="color-chart-good"
     hasStroke={true}
+    key="41"
     kind={1}
     scale={1}
     x={653.3333333333334}
@@ -334,6 +374,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="color-chart-good"
     hasStroke={true}
+    key="51"
     kind={1}
     scale={1}
     x={816.6666666666667}
@@ -342,6 +383,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="color-chart-good"
     hasStroke={true}
+    key="61"
     kind={1}
     scale={1}
     x={980}
@@ -350,6 +392,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="#ff8800"
     hasStroke={true}
+    key="02"
     kind={2}
     scale={1}
     x={0}
@@ -358,6 +401,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="#ff8800"
     hasStroke={true}
+    key="12"
     kind={2}
     scale={1}
     x={163.33333333333334}
@@ -366,6 +410,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="#ff8800"
     hasStroke={true}
+    key="22"
     kind={2}
     scale={1}
     x={326.6666666666667}
@@ -374,6 +419,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="#ff8800"
     hasStroke={true}
+    key="32"
     kind={2}
     scale={1}
     x={490}
@@ -382,6 +428,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="#ff8800"
     hasStroke={true}
+    key="42"
     kind={2}
     scale={1}
     x={653.3333333333334}
@@ -390,6 +437,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="#ff8800"
     hasStroke={true}
+    key="52"
     kind={2}
     scale={1}
     x={816.6666666666667}
@@ -398,6 +446,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="#ff8800"
     hasStroke={true}
+    key="62"
     kind={2}
     scale={1}
     x={980}
@@ -406,6 +455,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="#abc123"
     hasStroke={true}
+    key="03"
     kind={3}
     scale={1}
     x={0}
@@ -414,6 +464,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="#abc123"
     hasStroke={true}
+    key="13"
     kind={3}
     scale={1}
     x={163.33333333333334}
@@ -422,6 +473,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="#abc123"
     hasStroke={true}
+    key="23"
     kind={3}
     scale={1}
     x={326.6666666666667}
@@ -430,6 +482,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="#abc123"
     hasStroke={true}
+    key="33"
     kind={3}
     scale={1}
     x={490}
@@ -438,6 +491,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="#abc123"
     hasStroke={true}
+    key="43"
     kind={3}
     scale={1}
     x={653.3333333333334}
@@ -446,6 +500,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="#abc123"
     hasStroke={true}
+    key="53"
     kind={3}
     scale={1}
     x={816.6666666666667}
@@ -454,6 +509,7 @@ exports[`Points [common] example testing should match snapshot(s) for custom-col
   <Point
     color="#abc123"
     hasStroke={true}
+    key="63"
     kind={3}
     scale={1}
     x={980}

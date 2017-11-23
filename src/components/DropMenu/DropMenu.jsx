@@ -545,6 +545,7 @@ const DropMenu = createClass({
 			onCollapse,
 			flyOutStyle,
 			optionContainerStyle,
+			...passThroughs
 		} = this.props;
 
 		const {
@@ -584,6 +585,7 @@ const DropMenu = createClass({
 					className
 				)}
 				style={style}
+				{...omitProps(passThroughs, DropMenu)}
 			>
 				<ContextMenu
 					{...contextMenuProps}
