@@ -4,6 +4,7 @@ import { common } from '../../util/generic-tests';
 import {
 	SearchableMultiSelectDumb as SearchableMultiSelect,
 } from './SearchableMultiSelect';
+import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 
 const { Option } = SearchableMultiSelect;
 
@@ -22,7 +23,23 @@ describe('SearchableMultiSelect', () => {
 				</SearchableMultiSelect>
 			);
 
-			expect(wrapper.find('DropMenu').length).toBe(1);
+			expect(wrapper.find(DropMenu).length).toBe(1);
+		});
+
+		it('should pass `isDisabled` to `Options`', () => {
+			const wrapper = shallow(
+				<SearchableMultiSelect>
+					<Option isDisabled>option a</Option>
+					<Option>option b</Option>
+					<Option>option c</Option>
+				</SearchableMultiSelect>
+			);
+			const [first, second, third] = wrapper
+				.find(DropMenu.Option)
+				.map(option => option.prop('isDisabled'));
+			expect(first).toBe(true);
+			expect(second).toBe(false);
+			expect(third).toBe(false);
 		});
 	});
 

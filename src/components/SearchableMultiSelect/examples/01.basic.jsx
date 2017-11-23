@@ -13,7 +13,7 @@ export default createClass({
 
 					return (
 						<SearchableMultiSelect responsiveMode={responsiveMode}>
-							<Option>Alabama</Option>
+							<Option isDisabled>Alabama</Option>
 							<Option>Alaska</Option>
 							<Option>Arizona</Option>
 							<Option>Arkansas</Option>

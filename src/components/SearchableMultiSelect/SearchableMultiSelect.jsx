@@ -329,7 +329,7 @@ const SearchableMultiSelect = createClass({
 				key={'SearchableMultiSelectOption' + optionIndex}
 				{..._.omit(optionProps, 'children')}
 				isHidden={!optionFilter(searchText, optionProps)}
-				isDisabled={isLoading}
+				isDisabled={optionProps.isDisabled || isLoading}
 			>
 				<div className={cx('&-checkbox')}>
 					<Checkbox
