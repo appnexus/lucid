@@ -5,7 +5,7 @@ import SearchField from '../SearchField/SearchField.reducers';
 export function onSelect(state, selectedIndex) {
 	return {
 		...state,
-		selectedIndices: _.xor(state.selectedIndices, [selectedIndex]),
+		selectedIndices: _.xor(state.selectedIndices, [].concat(selectedIndex)),
 	};
 }
 
