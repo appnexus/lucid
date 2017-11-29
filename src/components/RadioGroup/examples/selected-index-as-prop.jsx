@@ -13,7 +13,7 @@ export default createClass({
 				name="name"
 				selectedIndex={3}
 				style={{
-					display: 'flex',
+					display: 'inline-flex',
 					flexDirection: 'column',
 				}}
 			>
