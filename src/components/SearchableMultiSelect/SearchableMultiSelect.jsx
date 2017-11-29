@@ -14,7 +14,7 @@ import {
 import { SearchFieldDumb as SearchField } from '../SearchField/SearchField';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
-import Checkbox from '../Checkbox/Checkbox';
+import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
 import Selection from '../Selection/Selection';
 
 import * as reducers from './SearchableMultiSelect.reducers';
@@ -220,36 +220,13 @@ const SearchableMultiSelect = createClass({
 	handleDropMenuSelect(optionIndex, { event, props }) {
 		const { onSelect } = this.props;
 
+		event.preventDefault();
+
 		if (optionIndex === 0) {
 			return this.handleSelectAll(event);
 		}
 		// this index is decremented to account for the "Select All" Option
 		return onSelect(optionIndex - 1, { event, props });
-	},
-
-	handleCheckboxSelect(
-		_isSelected,
-		{
-			// TODO: make sure the consumer can do callbackId somehow
-			event,
-			props: { callbackId: optionIndex },
-		}
-	) {
-		// This is needed otherwise clicking the checkbox will double fire this
-		// event _and_ the `handleDropMenuSelect` handler
-		event.stopPropagation();
-
-		// We don't want to send the consumer the checkbox's props so we have to
-		// lookup the option they clicked and send its props along
-		const selectedOptionProps = _.get(
-			findTypes(this.props, SearchableMultiSelect.Option),
-			`[${optionIndex}].props`
-		);
-
-		return this.props.onSelect(optionIndex, {
-			event,
-			props: selectedOptionProps,
-		});
 	},
 
 	handleSelectAll(event) {
@@ -260,7 +237,7 @@ const SearchableMultiSelect = createClass({
 			state: { flattenedOptionsData },
 		} = this;
 
-		event.stopPropagation();
+		event.preventDefault();
 
 		const visibleOptions = _.reject(
 			flattenedOptionsData,
@@ -374,18 +351,17 @@ const SearchableMultiSelect = createClass({
 				isHidden={!optionFilter(searchText, optionProps)}
 				isDisabled={optionProps.isDisabled || isLoading}
 			>
-				<div className={cx('&-checkbox')}>
-					<Checkbox
-						onSelect={this.handleCheckboxSelect}
-						callbackId={optionIndex}
-						isSelected={_.includes(selectedIndices, optionIndex)}
-					/>
-					<label className={cx('&-checkbox-label')}>
+				<CheckboxLabeled
+					className={cx('&-CheckboxLabeled')}
+					callbackId={optionIndex}
+					isSelected={_.includes(selectedIndices, optionIndex)}
+				>
+					<CheckboxLabeled.Label>
 						{_.isString(optionProps.children)
 							? this.renderUnderlinedChildren(optionProps.children, searchText)
 							: optionProps.children}
-					</label>
-				</div>
+					</CheckboxLabeled.Label>
+				</CheckboxLabeled>
 			</DropMenu.Option>
 		);
 	},
@@ -423,17 +399,14 @@ const SearchableMultiSelect = createClass({
 				isHidden={!hasSelectAll}
 				isDisabled={isLoading}
 			>
-				<div className={cx('&-checkbox')}>
-					<Checkbox
-						isSelected={isEveryVisibleOptionSelected}
-						isIndeterminate={
-							!isEveryVisibleOptionSelected && isAnyVisibleOptionSelected
-						}
-					/>
-					<label className={cx('&-checkbox-label')}>
-						Select All
-					</label>
-				</div>
+				<CheckboxLabeled
+					className={cx('&-CheckboxLabeled')}
+					isSelected={isEveryVisibleOptionSelected}
+					isIndeterminate={
+						!isEveryVisibleOptionSelected && isAnyVisibleOptionSelected
+					}
+					Label="Select All"
+				/>
 			</DropMenu.Option>,
 		].concat(
 			_.map(optionGroups, (optionGroupProps, optionGroupIndex) => (
@@ -527,7 +500,6 @@ const SearchableMultiSelect = createClass({
 						!_.isNil(maxMenuHeight) ? { maxHeight: maxMenuHeight } : null
 					)}
 					isDisabled={isDisabled}
-					isLoading={isLoading}
 					onSelect={this.handleDropMenuSelect}
 					ContextMenu={{
 						alignmentOffset: -13,
