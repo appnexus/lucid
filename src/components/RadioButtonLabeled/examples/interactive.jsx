@@ -52,7 +52,23 @@ export default createClass({
 	render() {
 		return (
 			<section>
-				<span>
+				<p>
+					<em>
+						(Use the styles on the parent container of
+						{' '}
+						<code>RadioButtonLabeled</code>
+						{' '}
+						components
+						to ensure only the radio buttons and their labels are clickable)
+					</em>
+				</p>
+				<span
+					style={{
+						display: 'inline-flex',
+						flexDirection: 'column',
+						alignItems: 'flex-start',
+					}}
+				>
 					<RadioButtonLabeled
 						isSelected={this.state.flavor === 'vanilla'}
 						name="interactive-radio-buttons"

@@ -65,6 +65,16 @@ export default createClass({
 	render() {
 		return (
 			<section>
+				<p>
+					<em>
+						(Use the styles on the parent container of
+						{' '}
+						<code>CheckboxLabeled</code>
+						{' '}
+						components
+						to ensure only the checkboxes and their labels are clickable)
+					</em>
+				</p>
 				<span
 					style={{
 						display: 'inline-flex',
