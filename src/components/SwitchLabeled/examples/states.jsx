@@ -10,7 +10,13 @@ const style = {
 export default createClass({
 	render() {
 		return (
-			<section>
+			<section
+				style={{
+					display: 'inline-flex',
+					flexDirection: 'column',
+					alignItems: 'flex-start',
+				}}
+			>
 				<SwitchLabeled style={style}>
 					<SwitchLabeled.Label>(default props)</SwitchLabeled.Label>
 				</SwitchLabeled>

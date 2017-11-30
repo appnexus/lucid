@@ -47,7 +47,13 @@ export default createClass({
 
 		return (
 			<section>
-				<span>
+				<span
+					style={{
+						display: 'inline-flex',
+						flexDirection: 'column',
+						alignItems: 'flex-start',
+					}}
+				>
 					<SwitchLabeled
 						isSelected={this.state.airplaneMode === true}
 						Label={`Airplane Mode ${this.state.airplaneMode === true ? 'Activated' : 'Deactivated'}`}

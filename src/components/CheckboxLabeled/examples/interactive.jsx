@@ -65,7 +65,13 @@ export default createClass({
 	render() {
 		return (
 			<section>
-				<span>
+				<span
+					style={{
+						display: 'inline-flex',
+						flexDirection: 'column',
+						alignItems: 'flex-start',
+					}}
+				>
 					<CheckboxLabeled
 						isSelected={_.includes(this.state.flavors, 'vanilla')}
 						name="interactive-checkboxes"

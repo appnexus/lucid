@@ -10,7 +10,13 @@ export default createClass({
 	render() {
 		return (
 			<section>
-				<section>
+				<section
+					style={{
+						display: 'inline-flex',
+						flexDirection: 'column',
+						alignItems: 'flex-start',
+					}}
+				>
 					<SwitchLabeled Label="Just text" style={style} />
 					<SwitchLabeled Label={<span>HTML element</span>} style={style} />
 					<SwitchLabeled
