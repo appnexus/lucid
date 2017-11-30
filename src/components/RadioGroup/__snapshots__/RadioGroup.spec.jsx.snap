@@ -368,7 +368,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
   className="lucid-RadioGroup"
   style={
     Object {
-      "display": "flex",
+      "display": "inline-flex",
       "flexDirection": "column",
     }
   }
@@ -513,7 +513,7 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for select
   className="lucid-RadioGroup"
   style={
     Object {
-      "display": "flex",
+      "display": "inline-flex",
       "flexDirection": "column",
     }
   }
