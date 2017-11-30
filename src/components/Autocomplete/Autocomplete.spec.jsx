@@ -161,54 +161,81 @@ describe('Autocomplete', () => {
 				document.body.removeChild(rootMountNode);
 			});
 
-			it('should be called when a suggestion is selected from the menu', () => {
-				const onChange = sinon.spy();
+			describe('suggestion', () => {
+				/* eslint-disable no-console */
+				let error;
 
-				wrapper = mount(
-					<Autocomplete
-						onChange={onChange}
-						DropMenu={{ isExpanded: true }}
-						suggestions={['Portland', 'portal', 'porridge', 'potent', 'please']}
-						testProp="foo"
-					/>
-				);
-
-				const menuDOMNode = document.querySelector(
-					'.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
-				);
-				menuDOMNode.children[2].click();
-
-				assert(onChange.called);
-				const [textValue, { props, event }] = onChange.lastCall.args;
-				assert.equal(textValue, 'porridge');
-				assert(props);
-				assert.equal(props.testProp, 'foo');
-				assert(event);
-			});
-
-			it('should be called when user types into the text box', () => {
-				const onChange = sinon.spy();
-
-				wrapper = mount(<Autocomplete onChange={onChange} testProp="foo" />, {
-					attachTo: rootMountNode,
+				beforeEach(() => {
+					error = console.error;
+					console.error = jest.fn();
 				});
 
-				const inputDOMNode = document.querySelector(
-					'.lucid-Autocomplete-Control-input'
-				);
+				afterEach(() => {
+					console.error = error;
+				});
 
-				// set the input value and dispatch an `input` event
-				inputDOMNode.value = 'aaa';
-				const inputEvent = document.createEvent('Event');
-				inputEvent.initEvent('input', true, true);
-				inputDOMNode.dispatchEvent(inputEvent);
+				it('should be called when a suggestion is selected from the menu', () => {
+					const onChange = sinon.spy();
 
-				assert(onChange.called, 'onChange must be called');
-				const [textValue, { props, event }] = onChange.lastCall.args;
-				assert.equal(textValue, 'aaa', 'value must match input');
-				assert(props, 'props must be passed');
-				assert.equal(props.testProp, 'foo', 'aditional props must be included');
-				assert(event, 'event must be passed');
+					wrapper = mount(
+						<Autocomplete
+							onChange={onChange}
+							DropMenu={{ isExpanded: true }}
+							suggestions={[
+								'Portland',
+								'portal',
+								'porridge',
+								'potent',
+								'please',
+							]}
+							testProp="foo"
+						/>
+					);
+
+					const menuDOMNode = document.querySelector(
+						'.lucid-ContextMenu-FlyOut .lucid-DropMenu-option-container'
+					);
+					menuDOMNode.children[2].click();
+
+					assert(onChange.called);
+					const [textValue, { props, event }] = onChange.lastCall.args;
+					assert.equal(textValue, 'porridge');
+					assert(props);
+					assert.equal(props.testProp, 'foo');
+					assert(event);
+					expect(console.error).toHaveBeenCalledTimes(1);
+				});
+
+				it('should be called when user types into the text box', () => {
+					const onChange = sinon.spy();
+
+					wrapper = mount(<Autocomplete onChange={onChange} testProp="foo" />, {
+						attachTo: rootMountNode,
+					});
+
+					const inputDOMNode = document.querySelector(
+						'.lucid-Autocomplete-Control-input'
+					);
+
+					// set the input value and dispatch an `input` event
+					inputDOMNode.value = 'aaa';
+					const inputEvent = document.createEvent('Event');
+					inputEvent.initEvent('input', true, true);
+					inputDOMNode.dispatchEvent(inputEvent);
+
+					assert(onChange.called, 'onChange must be called');
+					const [textValue, { props, event }] = onChange.lastCall.args;
+					assert.equal(textValue, 'aaa', 'value must match input');
+					assert(props, 'props must be passed');
+					assert.equal(
+						props.testProp,
+						'foo',
+						'aditional props must be included'
+					);
+					assert(event, 'event must be passed');
+				});
+
+				/* eslint-enable no-console */
 			});
 		});
 

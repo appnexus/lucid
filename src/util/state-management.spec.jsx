@@ -661,9 +661,27 @@ describe('#buildHybridComponent', () => {
 		assert.equal(countModThreeSpan.text(), '1');
 	});
 
-	it('should not wrap a wrapped component', () => {
-		const StatefulCounter = buildHybridComponent(CounterDumb);
-		assert.equal(StatefulCounter, buildHybridComponent(StatefulCounter));
+	describe('wrapped component', () => {
+		/* eslint-disable no-console */
+		let warn;
+
+		beforeEach(() => {
+			warn = console.warn;
+			console.warn = jest.fn();
+		});
+
+		it('should not wrap a wrapped component', () => {
+			const StatefulCounter = buildHybridComponent(CounterDumb);
+			assert.equal(StatefulCounter, buildHybridComponent(StatefulCounter));
+			expect(console.warn).toHaveBeenCalledWith(
+				'Lucid: you are trying to apply buildHybridComponent to Counter, which is already a hybrid component. Lucid exports hybrid components by default. To access the dumb components, use the -Dumb suffix, e.g. "ComponentDumb"'
+			);
+		});
+
+		afterEach(() => {
+			console.warn = warn;
+		});
+		/* eslint-enable no-console */
 	});
 
 	it('should prioritize passed-in prop values over internal state', () => {
