@@ -120,11 +120,41 @@ const DropMenu = createClass({
 			},
 		}),
 		/**
-		 * A special kind of `Option` that is always rendered at the top of the menu and has an `optionIndex` of `null` used for deselecting.
+		 * A special kind of `Option` that is always rendered at the top of the menu
+		 * and has an `optionIndex` of `null` used for deselecting.
 		 */
 		NullOption: createClass({
 			displayName: 'DropMenu.NullOption',
 			propName: 'NullOption',
+		}),
+		/**
+		 * A special kind of `Option` that is always rendered at the top of the
+		 * menu.
+		 */
+		FixedOption: createClass({
+			displayName: 'DropMenu.FixedOption',
+			propName: 'FixedOption',
+			propTypes: {
+				/**
+				 * disables selection of the `Option`.
+				 */
+				isDisabled: bool,
+				/**
+				 * hides the `Option` from the list.
+				 */
+				isHidden: bool,
+				/**
+				 * controls wrapping of the text.
+				 */
+				isWrapped: bool,
+			},
+			getDefaultProps() {
+				return {
+					isDisabled: false,
+					isHidden: false,
+					isWrapped: true,
+				};
+			},
 		}),
 		/**
 		 * Props that are passed through to the underling ContextMenu.
@@ -279,13 +309,26 @@ const DropMenu = createClass({
 			ParentType = DropMenu,
 			hideFunction = _.constant(false)
 		) {
-			const { OptionGroup, Option, NullOption } = ParentType;
+			const { OptionGroup, Option, NullOption, FixedOption } = ParentType;
 
 			const optionGroups = _.map(findTypes(props, OptionGroup), 'props'); // find all OptionGroup props
+			const fixedOptions = _.map(findTypes(props, FixedOption), 'props'); // find all FixedOption props
 			const ungroupedOptions = _.map(findTypes(props, Option), 'props'); // find all ungrouped Option props
 			const nullOptions = NullOption
 				? _.map(findTypes(props, NullOption), 'props')
 				: []; // find all NullOption props
+
+			const fixedOptionData = _.map(
+				fixedOptions,
+				(optionProps, localOptionIndex) => {
+					return {
+						localOptionIndex,
+						optionIndex: localOptionIndex,
+						optionGroupIndex: null, // ungrouped options have no `optionGroupIndex`
+						optionProps,
+					};
+				}
+			);
 
 			// flatten grouped options into array of objects to associate { index, group index, and props } for each option
 			const groupedOptionData = _.reduce(
@@ -299,7 +342,9 @@ const DropMenu = createClass({
 						_.map(groupedOptions, (optionProps, localOptionIndex) => {
 							return {
 								localOptionIndex,
-								optionIndex: _.size(memo) + localOptionIndex, // add current index to current array length to get final option index
+								optionIndex: _.size(memo) +
+									_.size(fixedOptionData) +
+									localOptionIndex, // add current index to current array length to get final option index
 								optionGroupIndex, // store option group index to associate option back to group
 								optionProps: {
 									isHidden: hideFunction(optionProps),
@@ -324,7 +369,9 @@ const DropMenu = createClass({
 				(optionProps, localOptionIndex) => {
 					return {
 						localOptionIndex,
-						optionIndex: _.size(groupedOptionData) + localOptionIndex, // add current index to grouped options array length to get final option index (grouped options rendered first)
+						optionIndex: _.size(groupedOptionData) +
+							_.size(fixedOptionData) +
+							localOptionIndex, // add current index to grouped options array length to get final option index (grouped options rendered first)
 						optionGroupIndex: null, // ungrouped options have no `optionGroupIndex`
 						optionProps: {
 							isHidden: hideFunction(optionProps),
@@ -335,13 +382,16 @@ const DropMenu = createClass({
 			);
 
 			// concatenate grouped options array with ungrouped options array to get flat list of all options
-			const flattenedOptionsData = groupedOptionData.concat(
+			const flattenedOptionsData = _.concat(
+				fixedOptionData,
+				groupedOptionData,
 				ungroupedOptionData
 			);
 
 			return {
 				optionGroups,
 				optionGroupDataLookup,
+				fixedOptionData,
 				ungroupedOptionData,
 				flattenedOptionsData,
 				nullOptions,
@@ -550,6 +600,7 @@ const DropMenu = createClass({
 
 		const {
 			optionGroups,
+			fixedOptionData,
 			ungroupedOptionData,
 			optionGroupDataLookup,
 			nullOptions,
@@ -634,6 +685,10 @@ const DropMenu = createClass({
 												className={cx('&-OptionGroup-divider')}
 											/>,
 										]
+							)}
+							{// fixed options go first
+							_.map(fixedOptionData, ({ optionProps, optionIndex }) =>
+								this.renderOption(optionProps, optionIndex)
 							)}
 							{joinArray(
 								// for each option group,

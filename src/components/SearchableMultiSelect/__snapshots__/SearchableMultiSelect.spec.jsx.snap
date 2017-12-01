@@ -44,7 +44,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         value=""
       />
     </DropMenu.Control>
-    <DropMenu.Option
+    <DropMenu.FixedOption
       className="lucid-SearchableMultiSelect-Option-select-all"
       isDisabled={false}
       isHidden={true}
@@ -59,7 +59,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isSelected={true}
         onSelect={[Function]}
       />
-    </DropMenu.Option>
+    </DropMenu.FixedOption>
   </DropMenu>
 </div>
 `;
@@ -107,10 +107,10 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         value=""
       />
     </DropMenu.Control>
-    <DropMenu.Option
+    <DropMenu.FixedOption
       className="lucid-SearchableMultiSelect-Option-select-all"
       isDisabled={false}
-      isHidden={true}
+      isHidden={false}
       isWrapped={true}
       key="SearchableMultiSelectOption-select-all"
     >
@@ -122,7 +122,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isSelected={false}
         onSelect={[Function]}
       />
-    </DropMenu.Option>
+    </DropMenu.FixedOption>
     <DropMenu.OptionGroup
       isHidden={false}
       key="SearchableMultiSelectOptionGroup0"
@@ -1544,7 +1544,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         value=""
       />
     </DropMenu.Control>
-    <DropMenu.Option
+    <DropMenu.FixedOption
       className="lucid-SearchableMultiSelect-Option-select-all"
       isDisabled={false}
       isHidden={true}
@@ -1559,7 +1559,7 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isSelected={false}
         onSelect={[Function]}
       />
-    </DropMenu.Option>
+    </DropMenu.FixedOption>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}

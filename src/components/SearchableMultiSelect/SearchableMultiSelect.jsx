@@ -393,7 +393,7 @@ const SearchableMultiSelect = createClass({
 
 		// for each option group passed in, render a DropMenu.OptionGroup, any label will be included in it's children, render each option inside the group
 		const dropMenuOptions = [
-			<DropMenu.Option
+			<DropMenu.FixedOption
 				className={cx('&-Option-select-all')}
 				key={'SearchableMultiSelectOption-select-all'}
 				isHidden={!hasSelectAll}
@@ -407,7 +407,7 @@ const SearchableMultiSelect = createClass({
 					}
 					Label="Select All"
 				/>
-			</DropMenu.Option>,
+			</DropMenu.FixedOption>,
 		].concat(
 			_.map(optionGroups, (optionGroupProps, optionGroupIndex) => (
 				<DropMenu.OptionGroup

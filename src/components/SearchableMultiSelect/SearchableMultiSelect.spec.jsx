@@ -35,10 +35,9 @@ describe('SearchableMultiSelect', () => {
 					<Option>option c</Option>
 				</SearchableMultiSelect>
 			);
-			const [selectAll, first, second, third] = wrapper
+			const [first, second, third] = wrapper
 				.find(DropMenu.Option)
 				.map(option => option.prop('isDisabled'));
-			expect(selectAll).toBe(false);
 			expect(first).toBe(true);
 			expect(second).toBe(false);
 			expect(third).toBe(false);
