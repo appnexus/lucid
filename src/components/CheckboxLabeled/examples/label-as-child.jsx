@@ -10,7 +10,13 @@ export default createClass({
 	render() {
 		return (
 			<section>
-				<section>
+				<section
+					style={{
+						display: 'inline-flex',
+						flexDirection: 'column',
+						alignItems: 'flex-start',
+					}}
+				>
 					<CheckboxLabeled style={style}>
 						<CheckboxLabeled.Label>Just text</CheckboxLabeled.Label>
 					</CheckboxLabeled>

@@ -65,7 +65,23 @@ export default createClass({
 	render() {
 		return (
 			<section>
-				<span>
+				<p>
+					<em>
+						(Use the styles on the parent container of
+						{' '}
+						<code>CheckboxLabeled</code>
+						{' '}
+						components
+						to ensure only the checkboxes and their labels are clickable)
+					</em>
+				</p>
+				<span
+					style={{
+						display: 'inline-flex',
+						flexDirection: 'column',
+						alignItems: 'flex-start',
+					}}
+				>
 					<CheckboxLabeled
 						isSelected={_.includes(this.state.flavors, 'vanilla')}
 						name="interactive-checkboxes"

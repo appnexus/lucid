@@ -36,7 +36,23 @@ export default createClass({
 	render() {
 		return (
 			<section>
-				<span>
+				<p>
+					<em>
+						(Use the styles on the parent container of
+						{' '}
+						<code>SwitchLabeled</code>
+						{' '}
+						components
+						to ensure only the switches and their labels are clickable)
+					</em>
+				</p>
+				<span
+					style={{
+						display: 'inline-flex',
+						flexDirection: 'column',
+						alignItems: 'flex-start',
+					}}
+				>
 					<SwitchLabeled
 						isSelected={this.state.airplaneMode === true}
 						onSelect={this.handleSelectedAirplaneMode}
