@@ -80,30 +80,33 @@ const CheckboxLabeled = createClass({
 		);
 
 		return (
-			<label
-				className={cx(
-					'&',
-					{
-						'&-is-disabled': isDisabled,
-						'&-is-selected': isIndeterminate || isSelected,
-					},
-					className
-				)}
-				style={style}
-			>
-				<Checkbox
-					className={cx('&-Checkbox', className)}
-					isDisabled={isDisabled}
-					isIndeterminate={isIndeterminate}
-					isSelected={isSelected}
-					onSelect={onSelect}
-					{...omitProps(passThroughs, CheckboxLabeled, [], false)}
-				/>
-				<div
-					{...labelChildProps}
-					className={cx('&-label', _.get(labelChildProps, 'className', null))}
-				/>
-			</label>
+			<div className={cx('&-wrapper')}>
+				<label
+					className={cx(
+						'&',
+						{
+							'&-is-disabled': isDisabled,
+							'&-is-selected': isIndeterminate || isSelected,
+						},
+						className
+					)}
+					style={style}
+				>
+					<Checkbox
+						className={cx('&-Checkbox', className)}
+						isDisabled={isDisabled}
+						isIndeterminate={isIndeterminate}
+						isSelected={isSelected}
+						onSelect={onSelect}
+						{...omitProps(passThroughs, CheckboxLabeled, [], false)}
+					/>
+					<div
+						{...labelChildProps}
+						className={cx('&-label', _.get(labelChildProps, 'className', null))}
+						onClick={_.noop}
+					/>
+				</label>
+			</div>
 		);
 	},
 });
