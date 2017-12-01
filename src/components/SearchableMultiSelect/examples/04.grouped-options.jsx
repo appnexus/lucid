@@ -8,6 +8,7 @@ export default createClass({
 	render() {
 		return (
 			<SearchableMultiSelect
+				hasSelectAll
 				initialState={{
 					selectedIndices: [0, 1, 2, 3, 11, 12, 48, 49],
 				}}

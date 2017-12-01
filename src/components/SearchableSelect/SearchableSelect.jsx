@@ -234,9 +234,9 @@ const SearchableSelect = createClass({
 
 		return (
 			<DropMenu.Option
-				isDisabled={isLoading}
 				key={'SearchableSelectOption' + optionIndex}
 				{...optionProps}
+				isDisabled={optionProps.isDisabled || isLoading}
 			/>
 		);
 	},

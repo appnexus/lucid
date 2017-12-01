@@ -1,3 +1,4 @@
+import * as _ from 'lodash';
 import React from 'react';
 import { shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
@@ -34,10 +35,9 @@ describe('SearchableMultiSelect', () => {
 					<Option>option c</Option>
 				</SearchableMultiSelect>
 			);
-			const [selectAll, first, second, third] = wrapper
+			const [first, second, third] = wrapper
 				.find(DropMenu.Option)
 				.map(option => option.prop('isDisabled'));
-			expect(selectAll).toBe(false);
 			expect(first).toBe(true);
 			expect(second).toBe(false);
 			expect(third).toBe(false);
@@ -86,7 +86,9 @@ describe('SearchableMultiSelect', () => {
 			it('should work when fired from the DropMenu', () => {
 				const onSelect = jest.fn();
 				const mockSelectionCallback = {
-					event: {},
+					event: {
+						preventDefault: _.noop,
+					},
 					props: {},
 				};
 
@@ -102,40 +104,6 @@ describe('SearchableMultiSelect', () => {
 				);
 
 				expect(onSelect).toHaveBeenCalledWith(9, mockSelectionCallback);
-			});
-
-			it('should work when fired from a Checkbox', () => {
-				const onSelect = jest.fn();
-				const stopPropagation = jest.fn();
-				const mockSelectionCallback = {
-					event: {
-						stopPropagation,
-					},
-					props: {
-						callbackId: 0,
-					},
-				};
-				const expected = {
-					event: {
-						stopPropagation,
-					},
-					props: {
-						callbackId: 'custom',
-					},
-				};
-
-				const wrapper = shallow(
-					<SearchableMultiSelect onSelect={onSelect}>
-						<Option callbackId={'custom'} />
-					</SearchableMultiSelect>
-				);
-
-				wrapper.find('Checkbox').at(1).prop('onSelect')(
-					true,
-					mockSelectionCallback
-				);
-
-				expect(onSelect).toHaveBeenCalledWith(0, expected);
 			});
 
 			it('should work when removing a selection', () => {
@@ -168,7 +136,7 @@ describe('SearchableMultiSelect', () => {
 			it('should work when selecting all', () => {
 				const onSelect = jest.fn();
 				const mockSelectionCallback = {
-					event: { stopPropagation: () => {} },
+					event: { stopPropagation: _.noop, preventDefault: _.noop },
 					props: {},
 				};
 
@@ -190,7 +158,7 @@ describe('SearchableMultiSelect', () => {
 			it('should work when deselecting all', () => {
 				const onSelect = jest.fn();
 				const mockSelectionCallback = {
-					event: { stopPropagation: () => {} },
+					event: { stopPropagation: _.noop, preventDefault: _.noop },
 					props: {},
 				};
 				const selectedIndices = [0, 1];
@@ -216,7 +184,7 @@ describe('SearchableMultiSelect', () => {
 			it('should work when selecting some', () => {
 				const onSelect = jest.fn();
 				const mockSelectionCallback = {
-					event: { stopPropagation: () => {} },
+					event: { stopPropagation: _.noop, preventDefault: _.noop },
 					props: {},
 				};
 				const selectedIndices = [0];
@@ -242,7 +210,7 @@ describe('SearchableMultiSelect', () => {
 			it('should work when selecting filtered options', () => {
 				const onSelect = jest.fn();
 				const mockSelectionCallback = {
-					event: { stopPropagation: () => {} },
+					event: { stopPropagation: _.noop, preventDefault: _.noop },
 					props: {},
 				};
 

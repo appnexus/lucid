@@ -23,7 +23,6 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
     focusedIndex={null}
     isDisabled={false}
     isExpanded={false}
-    isLoading={false}
     onCollapse={[Function]}
     onExpand={[Function]}
     onFocusNext={[Function]}
@@ -45,29 +44,22 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         value=""
       />
     </DropMenu.Control>
-    <DropMenu.Option
+    <DropMenu.FixedOption
       className="lucid-SearchableMultiSelect-Option-select-all"
       isDisabled={false}
       isHidden={true}
       isWrapped={true}
       key="SearchableMultiSelectOption-select-all"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
-      >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={true}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
-          Select All
-        </label>
-      </div>
-    </DropMenu.Option>
+      <CheckboxLabeled
+        Label="Select All"
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={true}
+        onSelect={[Function]}
+      />
+    </DropMenu.FixedOption>
   </DropMenu>
 </div>
 `;
@@ -95,7 +87,6 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
     focusedIndex={null}
     isDisabled={false}
     isExpanded={false}
-    isLoading={false}
     onCollapse={[Function]}
     onExpand={[Function]}
     onFocusNext={[Function]}
@@ -116,29 +107,22 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         value=""
       />
     </DropMenu.Control>
-    <DropMenu.Option
+    <DropMenu.FixedOption
       className="lucid-SearchableMultiSelect-Option-select-all"
       isDisabled={false}
-      isHidden={true}
+      isHidden={false}
       isWrapped={true}
       key="SearchableMultiSelectOption-select-all"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
-      >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
-          Select All
-        </label>
-      </div>
-    </DropMenu.Option>
+      <CheckboxLabeled
+        Label="Select All"
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
+      />
+    </DropMenu.FixedOption>
     <DropMenu.OptionGroup
       isHidden={false}
       key="SearchableMultiSelectOptionGroup0"
@@ -183,27 +167,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption0"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={0}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={0}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Connecticut
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -211,27 +191,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption1"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={1}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={1}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Delaware
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -239,27 +215,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption2"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={2}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={2}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Maine
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -267,27 +239,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption3"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={3}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={3}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Maryland
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -295,27 +263,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption4"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={4}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={4}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Massachusetts
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -323,27 +287,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption5"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={5}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={5}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               New Hampshire
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -351,27 +311,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption6"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={6}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={6}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               New Jersey
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -379,27 +335,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption7"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={7}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={7}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               New York
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -407,27 +359,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption8"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={8}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={8}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Pennsylvania
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -435,27 +383,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption9"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={9}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={9}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Rhode Island
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -463,27 +407,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption10"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={10}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={10}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Vermont
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
     </DropMenu.OptionGroup>
     <DropMenu.OptionGroup
@@ -533,27 +473,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption11"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={11}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={11}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Alabama
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -561,27 +497,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption12"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={12}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={12}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Arkansas
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -589,27 +521,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption13"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={13}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={13}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Florida
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -617,27 +545,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption14"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={14}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={14}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Georgia
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -645,27 +569,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption15"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={15}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={15}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Kentucky
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -673,27 +593,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption16"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={16}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={16}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Louisiana
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -701,27 +617,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption17"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={17}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={17}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Mississippi
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -729,27 +641,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption18"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={18}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={18}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               North Carolina
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -757,27 +665,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption19"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={19}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={19}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               South Carolina
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -785,27 +689,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption20"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={20}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={20}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Tennessee
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -813,27 +713,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption21"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={21}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={21}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Virginia
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -841,27 +737,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption22"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={22}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={22}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               West Virginia
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
     </DropMenu.OptionGroup>
     <DropMenu.OptionGroup
@@ -911,27 +803,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption23"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={23}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={23}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Illinois
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -939,27 +827,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption24"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={24}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={24}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Indiana
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -967,27 +851,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption25"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={25}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={25}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Iowa
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -995,27 +875,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption26"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={26}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={26}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Kansas
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1023,27 +899,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption27"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={27}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={27}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Michigan
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1051,27 +923,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption28"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={28}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={28}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Minnesota
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1079,27 +947,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption29"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={29}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={29}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Missouri
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1107,27 +971,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption30"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={30}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={30}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Nebraska
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1135,27 +995,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption31"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={31}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={31}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               North Dakota
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1163,27 +1019,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption32"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={32}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={32}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Ohio
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1191,27 +1043,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption33"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={33}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={33}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               South Dakota
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1219,27 +1067,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption34"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={34}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={34}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Wisconsin
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
     </DropMenu.OptionGroup>
     <DropMenu.OptionGroup
@@ -1265,27 +1109,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption35"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={35}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={35}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Arizona
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1293,27 +1133,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption36"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={36}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={36}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               New Mexico
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1321,27 +1157,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption37"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={37}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={37}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Oklahoma
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1349,27 +1181,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption38"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={38}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={38}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Texas
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
     </DropMenu.OptionGroup>
     <DropMenu.OptionGroup
@@ -1410,27 +1238,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption39"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={39}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={39}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               California
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1438,27 +1262,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption40"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={40}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={40}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Colorado
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1466,27 +1286,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption41"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={41}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={41}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Idaho
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1494,27 +1310,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption42"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={42}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={42}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Montana
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1522,27 +1334,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption43"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={43}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={43}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Nevada
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1550,27 +1358,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption44"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={44}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={44}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Oregon
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1578,27 +1382,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption45"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={45}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={45}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Utah
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1606,27 +1406,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption46"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={46}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={46}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Washington
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
       <DropMenu.Option
         isDisabled={false}
@@ -1634,27 +1430,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         isWrapped={true}
         key="SearchableMultiSelectOption47"
       >
-        <div
-          className="lucid-SearchableMultiSelect-checkbox"
+        <CheckboxLabeled
+          callbackId={47}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
         >
-          <Checkbox
-            callbackId={47}
-            isDisabled={false}
-            isIndeterminate={false}
-            isSelected={false}
-            onSelect={[Function]}
-          />
-          <label
-            className="lucid-SearchableMultiSelect-checkbox-label"
-          >
+          <CheckboxLabeled.Label>
             <span
               className="lucid-SearchableMultiSelect-Option-underline-post"
               key="post"
             >
               Wyoming
             </span>
-          </label>
-        </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
       </DropMenu.Option>
     </DropMenu.OptionGroup>
     <DropMenu.Option
@@ -1663,27 +1455,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption48"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={48}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={48}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Alaska
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -1691,27 +1479,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption49"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={49}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={49}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Hawaii
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
   </DropMenu>
 </div>
@@ -1740,7 +1524,6 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
     focusedIndex={null}
     isDisabled={false}
     isExpanded={false}
-    isLoading={false}
     onCollapse={[Function]}
     onExpand={[Function]}
     onFocusNext={[Function]}
@@ -1761,56 +1544,45 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
         value=""
       />
     </DropMenu.Control>
-    <DropMenu.Option
+    <DropMenu.FixedOption
       className="lucid-SearchableMultiSelect-Option-select-all"
       isDisabled={false}
       isHidden={true}
       isWrapped={true}
       key="SearchableMultiSelectOption-select-all"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
-      >
-        <Checkbox
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
-          Select All
-        </label>
-      </div>
-    </DropMenu.Option>
+      <CheckboxLabeled
+        Label="Select All"
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
+      />
+    </DropMenu.FixedOption>
     <DropMenu.Option
       isDisabled={false}
       isHidden={false}
       isWrapped={true}
       key="SearchableMultiSelectOption0"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={0}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={0}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Alabama
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -1818,27 +1590,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption1"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={1}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={1}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Alaska
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -1846,27 +1614,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption2"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={2}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={2}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Arizona
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -1874,27 +1638,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption3"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={3}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={3}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Arkansas
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -1902,27 +1662,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption4"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={4}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={4}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             California
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -1930,27 +1686,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption5"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={5}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={5}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Colorado
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -1958,27 +1710,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption6"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={6}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={6}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Connecticut
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -1986,27 +1734,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption7"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={7}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={7}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Delaware
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2014,27 +1758,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption8"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={8}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={8}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Florida
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2042,27 +1782,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption9"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={9}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={9}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Georgia
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2070,27 +1806,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption10"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={10}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={10}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Hawaii
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2098,27 +1830,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption11"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={11}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={11}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Idaho
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2126,27 +1854,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption12"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={12}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={12}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Illinois
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2154,27 +1878,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption13"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={13}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={13}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Indiana
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2182,27 +1902,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption14"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={14}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={14}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Iowa
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2210,27 +1926,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption15"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={15}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={15}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Kansas
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2238,27 +1950,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption16"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={16}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={16}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Kentucky
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2266,27 +1974,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption17"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={17}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={17}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Louisiana
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2294,27 +1998,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption18"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={18}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={18}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Maine
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2322,27 +2022,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption19"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={19}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={19}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Maryland
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2350,27 +2046,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption20"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={20}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={20}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Massachusetts
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2378,27 +2070,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption21"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={21}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={21}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Michigan
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2406,27 +2094,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption22"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={22}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={22}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Minnesota
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2434,27 +2118,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption23"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={23}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={23}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Mississippi
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2462,27 +2142,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption24"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={24}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={24}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Missouri
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2490,27 +2166,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption25"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={25}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={25}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Montana Nebraska
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2518,27 +2190,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption26"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={26}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={26}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Nevada
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2546,27 +2214,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption27"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={27}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={27}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             New Hampshire
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2574,27 +2238,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption28"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={28}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={28}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             New Jersey
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2602,27 +2262,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption29"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={29}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={29}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             New Mexico
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2630,27 +2286,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption30"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={30}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={30}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             New York
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2658,27 +2310,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption31"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={31}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={31}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             North Carolina
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2686,27 +2334,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption32"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={32}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={32}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             North Dakota
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2714,27 +2358,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption33"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={33}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={33}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Ohio
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2742,27 +2382,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption34"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={34}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={34}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Oklahoma
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2770,27 +2406,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption35"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={35}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={35}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Oregon
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2798,27 +2430,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption36"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={36}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={36}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Pennsylvania Rhode Island
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2826,27 +2454,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption37"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={37}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={37}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             South Carolina
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2854,27 +2478,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption38"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={38}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={38}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             South Dakota
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2882,27 +2502,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption39"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={39}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={39}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Tennessee
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2910,27 +2526,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption40"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={40}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={40}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Texas
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2938,27 +2550,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption41"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={41}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={41}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Utah
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2966,27 +2574,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption42"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={42}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={42}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Vermont
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -2994,27 +2598,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption43"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={43}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={43}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Virginia
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -3022,27 +2622,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption44"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={44}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={44}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Washington
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -3050,27 +2646,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption45"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={45}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={45}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             West Virginia
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -3078,27 +2670,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption46"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={46}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={46}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Wisconsin
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
     <DropMenu.Option
       isDisabled={false}
@@ -3106,27 +2694,23 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
       isWrapped={true}
       key="SearchableMultiSelectOption47"
     >
-      <div
-        className="lucid-SearchableMultiSelect-checkbox"
+      <CheckboxLabeled
+        callbackId={47}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
       >
-        <Checkbox
-          callbackId={47}
-          isDisabled={false}
-          isIndeterminate={false}
-          isSelected={false}
-          onSelect={[Function]}
-        />
-        <label
-          className="lucid-SearchableMultiSelect-checkbox-label"
-        >
+        <CheckboxLabeled.Label>
           <span
             className="lucid-SearchableMultiSelect-Option-underline-post"
             key="post"
           >
             Wyoming
           </span>
-        </label>
-      </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
     </DropMenu.Option>
   </DropMenu>
 </div>

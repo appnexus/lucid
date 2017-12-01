@@ -35,14 +35,16 @@
 		}
 	}
 
-	&-checkbox {
+	&-CheckboxLabeled.lucid-CheckboxLabeled {
 		display: flex;
+		flex: 1;
 		align-items: center;
-	}
 
-	&-checkbox-label {
-		margin-left: @size-XXS;
-		cursor: pointer;
+		.lucid-CheckboxLabeled-label {
+			margin-left: @size-XXS;
+			cursor: pointer;
+			padding-top: 0;
+		}
 	}
 
 	&-noresults {
