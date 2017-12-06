@@ -2,9 +2,11 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, omitProps } from '../../util/component-types';
 
+import { lucidClassNames } from '../../util/style-helpers';
+import { createClass, findTypes, omitProps } from '../../util/component-types';
+import { buildHybridComponent } from '../../util/state-management';
+import reducers from './CheckboxIconGroup.reducers.js';
 import IconBox from '../IconBox/IconBox';
 
 const cx = lucidClassNames.bind('&-CheckboxIconGroup');
@@ -20,99 +22,119 @@ const { string, func, bool, number, any, element, shape, arrayOf } = PropTypes;
 const CheckboxIconGroup = createClass({
 	displayName: 'CheckboxIconGroup',
 	propName: 'CheckboxIconGroup',
+
+	components: {
+		/**
+		 * Renders a `<IconBox>` inside the `CheckboxIconGroup`.
+		 */
+		IconBox: createClass({
+			displayName: 'CheckboxIconGroup.IconBox',
+			propName: 'IconBox',
+		}),
+	},
+
+	reducers: reducers,
+
 	propTypes: {
 		/**
-		 * Class names that are appended to the defaults
+		 * A function that is called with the index of the child button clicked.
+		 * `props` refers to the child button props.
+		 *
+		 * Signature: `(selectedIndex, { event, props }) => {}`
 		 */
-		className: string,
+		onSelect: func,
 
 		/**
-		 * An array of {name: name, icon: icon} objects describing the available
-		 * items in the Checkbox Icon Group
+		 * Appended to the component-specific class names set on the root
+		 * element. Value is run through the `classnames` library.
 		 */
-		groupItems: arrayOf(
-			shape({
-				label: any,
-				icon: any,
-				id: number,
-				onClick: func,
-				isSelected: bool,
-				isActive: bool,
-				isIndeterminate: bool,
-				isDisabled: bool,
-				tabIndex: number,
-			})
-		),
-
-		isDisabled: bool,
+		className: any,
 
 		/**
-		 * A unique string representing the group of checkbox inputs.
+		 * All children should be `CheckboxIconGroup.IconBox`s and they support the same
+		 * props as `IconBox`s.
 		 */
-		name: string,
+		children: any,
 
 		/**
-		 * Signature: `(id) => {}`
+		 * An array of currently selected `CheckboxIconGroup.IconBox`s indices. You can
+		 * also pass the prop `isActive` to individual `CheckboxIconGroup.IconBox`
+		 * components.
 		 */
-		onClick: func,
-
-		/**
-		 * Allows you to override the defalt global tabbing order of the base html checkbox element
-		 * To learn more about tabIndex check out (MDN's web docs on tabIndex)[https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex]
-		 */
-		tabIndex: number,
+		selectedIndices: arrayOf(number),
 	},
 
 	getDefaultProps() {
 		return {
-			groupItems: [],
-			isDisabled: false,
+			onSelect: _.noop,
+			className: null,
+			children: null,
+			selectedIndices: [],
 		};
+	},
+
+	handleSelect({ event, props: childProps }) {
+		debugger;
+		const { callbackId } = childProps;
+		const clickedIconProps = _.get(
+			findTypes(this.props, CheckboxIconGroup.IconBox)[callbackId],
+			'props',
+			{}
+		);
+
+		debugger;
+
+		// If the consumer passed in an `onClick` to the child `CheckboxIconGroup.IconBox`
+		// component, we should make sure to call that in addition to the
+		// `CheckboxIconGroup`'s `onSelect`.
+		if (_.isFunction(clickedIconProps.onClick)) {
+			clickedIconProps.onClick({ event, props: childProps });
+		}
+
+		this.props.onSelect(callbackId, { event, props: childProps });
 	},
 
 	render() {
 		const {
+			selectedIndices,
 			className,
-			groupItems,
-			isDisabled,
-			name,
-			onClick,
-			tabIndex,
+			children,
 			...passThroughs
 		} = this.props;
+
+		const iconGroupChildProps = _.map(
+			findTypes(this.props, CheckboxIconGroup.IconBox),
+			'props'
+		);
 
 		return (
 			<ul
 				{...omitProps(passThroughs, CheckboxIconGroup)}
-				className={cx(
-					'&',
-					{
-						'&-is-disabled': isDisabled,
-					},
-					className
-				)}
+				className={cx('&', className)}
 			>
-				{_.map(groupItems, (item, key) => (
-					<li className={cx('&-Item')}>
-						<IconBox
-							name={name}
-							onClick={item.onClick || onClick}
-							isActive={item.isActive}
-							isIndeterminate={item.isIndeterminate}
-							isSelected={item.isSelected}
-							tabIndex={item.tabIndex || tabIndex}
-							key={`checkboxicongroup${key}`}
-							IconComponent={item.icon}
-							Label={item.label}
-							isCheckbox={true}
-							isDisabled={item.isDisabled || isDisabled}
-							id={item.id || _.uniqueId('iconGroupItem_')}
-						/>
-					</li>
-				))}
+				{_.map(iconGroupChildProps, (iconGroupChildProp, index) => {
+					debugger;
+					return (
+						<li
+							className={cx('&-ItemContainer')}
+							key={`checkboxIconItem-${index}`}
+						>
+							<IconBox
+								isActive={_.includes(selectedIndices, index)}
+								{...iconGroupChildProp}
+								key={index}
+								callbackId={index}
+								onClick={this.handleSelect}
+								isCheckbox={true}
+							/>
+						</li>
+					);
+				})}
+				{children}
 			</ul>
 		);
 	},
 });
 
-export default CheckboxIconGroup;
+export default buildHybridComponent(CheckboxIconGroup);
+export { CheckboxIconGroup as CheckboxIconGroupDumb };

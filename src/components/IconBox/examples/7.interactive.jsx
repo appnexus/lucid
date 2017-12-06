@@ -20,7 +20,7 @@ export default createClass({
 	render() {
 		return (
 			<IconBox
-				IconComponent={ClockIcon}
+				Icon={ClockIcon}
 				Label="My IconBox"
 				isCheckbox={true}
 				isIndeterminate={this.state.isSelected === 1}

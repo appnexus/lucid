@@ -60,7 +60,7 @@ const RadioIconGroup = createClass({
 				)}
 			>
 				{_.map(selections, (item, key) => (
-					<li className={cx('&-Item')}>
+					<li className={cx('&-Item')} key={`radioIconItem-${key}`}>
 						<IconBox
 							key={`RadioIconGroup${key}`}
 							IconComponent={item.icon}

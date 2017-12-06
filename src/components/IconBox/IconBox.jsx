@@ -2,6 +2,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
@@ -38,7 +39,7 @@ const IconBox = createClass({
 		/**
 		 * The image used for the Icon. Expects any SVG React element.
 		 */
-		IconComponent: any.isRequired,
+		Icon: any.isRequired,
 
 		/**
 		 * Activates the IconBox by giving it a "pressed down" look
@@ -159,14 +160,21 @@ const IconBox = createClass({
 		);
 	},
 
-	handleClick() {
-		return this.props.onClick(this.props.id);
+	handleClick(event) {
+		const { isDisabled, onClick } = this.props;
+		const domNode = ReactDOM.findDOMNode(this);
+
+		if (!isDisabled) {
+			// required to correctly apply the focus state in Safari and Firefox
+			domNode.focus();
+			onClick({ event, props: this.props });
+		}
 	},
 
 	render() {
 		const {
 			className,
-			IconComponent,
+			Icon,
 			isActive,
 			isCheckbox,
 			isDisabled,
@@ -176,8 +184,7 @@ const IconBox = createClass({
 			Label,
 			name,
 			onClick,
-			tabIndex,
-			id,
+			callbackId,
 			...passThroughs
 		} = this.props;
 
@@ -202,7 +209,7 @@ const IconBox = createClass({
 				onClick={this.handleClick}
 				disabled={isDisabled}
 			>
-				<IconComponent />
+				<Icon />
 				{!_.isEmpty(InputComponent) || !_.isEmpty(Label)
 					? <figcaption
 							className={cx('&-figcaption', {

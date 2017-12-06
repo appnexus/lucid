@@ -19,7 +19,7 @@ export default createClass({
 				<article style={style}>
 					<h3>Is Active</h3>
 					<IconBox
-						IconComponent={ClockIcon}
+						Icon={ClockIcon}
 						Label="My IconBox"
 						isCheckbox={true}
 						isActive={true}
@@ -28,7 +28,7 @@ export default createClass({
 				<article style={style}>
 					<h3>Is Disabled</h3>
 					<IconBox
-						IconComponent={ClockIcon}
+						Icon={ClockIcon}
 						Label="My IconBox"
 						isCheckbox={true}
 						isDisabled={true}
@@ -37,7 +37,7 @@ export default createClass({
 				<article style={style}>
 					<h3>Is Indeterminate</h3>
 					<IconBox
-						IconComponent={ClockIcon}
+						Icon={ClockIcon}
 						Label="My IconBox"
 						isCheckbox={true}
 						isIndeterminate={true}
@@ -46,7 +46,7 @@ export default createClass({
 				<article style={style}>
 					<h3>Is Selected</h3>
 					<IconBox
-						IconComponent={ClockIcon}
+						Icon={ClockIcon}
 						Label="My IconBox"
 						isCheckbox={true}
 						isSelected={true}

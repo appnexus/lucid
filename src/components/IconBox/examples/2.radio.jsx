@@ -7,7 +7,7 @@ export default createClass({
 	render() {
 		return (
 			<IconBox
-				IconComponent={ClockIcon}
+				Icon={ClockIcon}
 				Label="My IconBox"
 				isRadio={true}
 				name="radioIconExample"

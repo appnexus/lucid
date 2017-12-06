@@ -5,8 +5,6 @@ import ClockIcon from '../../Icon/ClockIcon/ClockIcon';
 
 export default createClass({
 	render() {
-		return (
-			<IconBox IconComponent={ClockIcon} Label="My IconBox" isCheckbox={true} />
-		);
+		return <IconBox Icon={ClockIcon} Label="My IconBox" isCheckbox={true} />;
 	},
 });
