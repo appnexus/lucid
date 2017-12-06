@@ -221,9 +221,9 @@ const SearchableSelect = createClass({
 			return (
 				<DropMenu.Option
 					isDisabled={isLoading}
+					{..._.omit(optionProps, ['children'])}
 					isHidden={!optionFilter(searchText, optionProps)}
 					key={'SearchableSelectOption' + optionIndex}
-					{..._.omit(optionProps, ['children'])}
 				>
 					{_.isString(optionProps.children)
 						? this.renderUnderlinedChildren(optionProps.children, searchText)
