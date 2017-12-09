@@ -93,6 +93,7 @@ import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
 import Grid from './components/Grid/Grid';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
+import IconBox from './components/IconBox/IconBox';
 import Icon from './components/Icon/Icon';
 import ImageIcon from './components/Icon/ImageIcon/ImageIcon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
@@ -255,6 +256,7 @@ export {
 	Grid,
 	HelpIcon,
 	HomeIcon,
+	IconBox,
 	Icon,
 	ImageIcon,
 	InfoIcon,

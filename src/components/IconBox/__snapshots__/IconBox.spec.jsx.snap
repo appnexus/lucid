@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconBox [common] example testing should match snapshot(s) for 0_default 1`] = `
+<figure
+  className="lucid-IconBox"
+  disabled={false}
+  onClick={[Function]}
+>
+  <ClockIcon />
+  <figcaption>
+    Default IconBox
+  </figcaption>
+</figure>
+`;
+
+exports[`IconBox [common] example testing should match snapshot(s) for 1_checkbox 1`] = `
+<figure
+  className="lucid-IconBox lucid-IconBox-checkbox"
+  disabled={false}
+  onClick={[Function]}
+>
+  <ClockIcon />
+  <figcaption />
+</figure>
+`;
+
+exports[`IconBox [common] example testing should match snapshot(s) for 2_radio 1`] = `
+<figure
+  className="lucid-IconBox lucid-IconBox-radio"
+  disabled={false}
+  onClick={[Function]}
+>
+  <ClockIcon />
+  <figcaption />
+</figure>
+`;
