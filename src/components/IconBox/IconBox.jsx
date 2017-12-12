@@ -100,9 +100,7 @@ const IconBox = createClass({
 
 	handleClick(event) {
 		const { isDisabled, onClick } = this.props;
-		const domNode = ReactDOM.findDOMNode(this).children[1].children[0].children[
-			0
-		].children[0];
+		const domNode = ReactDOM.findDOMNode(this);
 
 		if (!isDisabled) {
 			// required to correctly apply the focus state in Safari and Firefox

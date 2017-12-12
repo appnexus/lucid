@@ -20,7 +20,20 @@ exports[`IconBox [common] example testing should match snapshot(s) for 1_checkbo
   onClick={[Function]}
 >
   <ClockIcon />
-  <figcaption />
+  <figcaption>
+    <CheckboxLabeled
+      Label={
+        Array [
+          "Checkbox IconBox",
+        ]
+      }
+      className="lucid-IconBox-checkbox"
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={false}
+      onSelect={[Function]}
+    />
+  </figcaption>
 </figure>
 `;
 
@@ -31,6 +44,140 @@ exports[`IconBox [common] example testing should match snapshot(s) for 2_radio 1
   onClick={[Function]}
 >
   <ClockIcon />
-  <figcaption />
+  <figcaption>
+    <RadioButtonLabeled
+      Label={
+        Array [
+          "Checkbox IconBox",
+        ]
+      }
+      className="lucid-IconBox-radio"
+      isDisabled={false}
+      isSelected={false}
+      onSelect={[Function]}
+    />
+  </figcaption>
+</figure>
+`;
+
+exports[`IconBox [common] example testing should match snapshot(s) for 3.states 1`] = `
+<figure
+  className="lucid-IconBox lucid-IconBox-is-active lucid-IconBox-checkbox"
+  disabled={false}
+  onClick={[Function]}
+>
+  <ClockIcon />
+  <figcaption>
+    <CheckboxLabeled
+      Label={
+        Array [
+          "Active IconBox",
+        ]
+      }
+      className="lucid-IconBox-checkbox"
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={false}
+      onSelect={[Function]}
+    />
+  </figcaption>
+</figure>
+`;
+
+exports[`IconBox [common] example testing should match snapshot(s) for 3.states 2`] = `
+<figure
+  className="lucid-IconBox lucid-IconBox-is-disabled lucid-IconBox-checkbox"
+  disabled={true}
+  onClick={[Function]}
+>
+  <ClockIcon />
+  <figcaption>
+    <CheckboxLabeled
+      Label={
+        Array [
+          "Disabled IconBox",
+        ]
+      }
+      className="lucid-IconBox-checkbox"
+      isDisabled={true}
+      isIndeterminate={false}
+      isSelected={false}
+      onSelect={[Function]}
+    />
+  </figcaption>
+</figure>
+`;
+
+exports[`IconBox [common] example testing should match snapshot(s) for 3.states 3`] = `
+<figure
+  className="lucid-IconBox lucid-IconBox-checkbox"
+  disabled={false}
+  isIndeterminate={true}
+  onClick={[Function]}
+>
+  <ClockIcon />
+  <figcaption>
+    <CheckboxLabeled
+      Label={
+        Array [
+          "Indeterminate IconBox",
+        ]
+      }
+      className="lucid-IconBox-checkbox"
+      isDisabled={false}
+      isIndeterminate={true}
+      isSelected={false}
+      onSelect={[Function]}
+    />
+  </figcaption>
+</figure>
+`;
+
+exports[`IconBox [common] example testing should match snapshot(s) for 3.states 4`] = `
+<figure
+  className="lucid-IconBox lucid-IconBox-is-selected lucid-IconBox-checkbox"
+  disabled={false}
+  onClick={[Function]}
+>
+  <ClockIcon />
+  <figcaption>
+    <CheckboxLabeled
+      Label={
+        Array [
+          "Selected IconBox",
+        ]
+      }
+      className="lucid-IconBox-checkbox"
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={true}
+      onSelect={[Function]}
+    />
+  </figcaption>
+</figure>
+`;
+
+exports[`IconBox [common] example testing should match snapshot(s) for 7.interactive 1`] = `
+<figure
+  className="lucid-IconBox lucid-IconBox-is-selected lucid-IconBox-checkbox"
+  disabled={false}
+  isIndeterminate={false}
+  onClick={[Function]}
+>
+  <ClockIcon />
+  <figcaption>
+    <CheckboxLabeled
+      Label={
+        Array [
+          "Interactive IconBox",
+        ]
+      }
+      className="lucid-IconBox-checkbox"
+      isDisabled={false}
+      isIndeterminate={false}
+      isSelected={true}
+      onSelect={[Function]}
+    />
+  </figcaption>
 </figure>
 `;

@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconGroup [common] example testing should match snapshot(s) for stateful 1`] = `
+<span
+  className="lucid-IconGroup"
+>
+  <IconBox
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    isSelected={false}
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Zero
+  </IconBox>
+  <IconBox
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    isSelected={false}
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    One
+  </IconBox>
+  <IconBox
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    isSelected={false}
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Two
+  </IconBox>
+  <IconBox
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    isSelected={false}
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Three
+  </IconBox>
+</span>
+`;
+
+exports[`IconGroup [common] example testing should match snapshot(s) for stateless 1`] = `
+<span
+  className="lucid-IconGroup"
+>
+  <IconBox
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    isSelected={false}
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Zero
+  </IconBox>
+  <IconBox
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    isSelected={false}
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    One
+  </IconBox>
+  <IconBox
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    isSelected={false}
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Two
+  </IconBox>
+  <IconBox
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    isSelected={false}
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Three
+  </IconBox>
+  <IconBox
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    isSelected={false}
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Four
+  </IconBox>
+  <IconBox
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    isSelected={false}
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Five
+  </IconBox>
+  <IconBox
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    isSelected={false}
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Six
+  </IconBox>
+  <IconBox
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    isSelected={false}
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Seven
+  </IconBox>
+  <IconBox
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    isSelected={false}
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Eight
+  </IconBox>
+  <IconBox
+    hasOnlyIcon={false}
+    isActive={false}
+    isDisabled={false}
+    isSelected={false}
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Nine
+  </IconBox>
+</span>
+`;

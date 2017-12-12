@@ -1,0 +1,39 @@
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
+// @IconGroup-active-borderColor: fade(#fff, 30%);
+
+// .lucid-IconGroup {
+// 	display: flex;
+
+// 	> .lucid-IconBox {
+// 		// This crazy selector was written to help with the problem of having two
+// 		// active IconBoxs right next to each other. See the following more for
+// 		// context: https://appnexus.slack.com/archives/anx-react-future/p1456439335000016
+// 		&-is-active + .lucid-IconBox-is-active {
+// 			border-left: 1px solid @IconGroup-active-borderColor;
+// 		}
+
+// 		// First IconBox. The `::before` selector targets the IconBox gradient
+// 		&:first-of-type,
+// 		&:first-of-type::before {
+// 			border-top-right-radius: 0;
+// 			border-bottom-right-radius: 0;
+// 			border-right: 0;
+// 		}
+
+// 		// IconBoxs in the middle
+// 		&:not(:first-of-type):not(:last-of-type),
+// 		&:not(:first-of-type):not(:last-of-type)::before {
+// 			border-radius: 0;
+// 			border-right: 0;
+// 		}
+
+// 		// Last IconBox. The `::before` selector targets the IconBox gradient
+// 		&:last-of-type,
+// 		&:last-of-type::before {
+// 			border-top-left-radius: 0;
+// 			border-bottom-left-radius: 0;
+// 		}
+// 	}
+// }

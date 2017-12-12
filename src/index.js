@@ -6,6 +6,7 @@ import Autocomplete, {
 import ButtonGroup, {
 	ButtonGroupDumb,
 } from './components/ButtonGroup/ButtonGroup';
+import IconGroup, { IconGroupDumb } from './components/IconGroup/IconGroup';
 import SearchableSelect, {
 	SearchableSelectDumb,
 } from './components/SearchableSelect/SearchableSelect';
@@ -256,8 +257,10 @@ export {
 	Grid,
 	HelpIcon,
 	HomeIcon,
-	IconBox,
 	Icon,
+	IconBox,
+	IconGroup,
+	IconGroupDumb,
 	ImageIcon,
 	InfoIcon,
 	InfoLightIcon,
