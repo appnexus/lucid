@@ -10,7 +10,7 @@ import { buildHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-IconGroup');
 
-const { any, bool, oneOf, func, arrayOf, number } = PropTypes;
+const { any, oneOf, objectOf, func, arrayOf, number } = PropTypes;
 
 /**
  *
@@ -56,25 +56,11 @@ const IconGroup = createClass({
 		children: any,
 
 		/**
-		 * An array of currently selected `IconGroup.IconBox`s indices. You can
+		 * An array object of currently selected `IconGroup.IconBox`s indices. You can
 		 * also pass the prop `isSelected` to individual `IconGroup.IconBox`
 		 * components.
 		 */
-		selectedIndices: arrayOf(number),
-
-		/**
-		 * An array of currently active `IconGroup.IconBox`s indices. You can
-		 * also pass the prop `isActive` to individual `IconGroup.IconBox`
-		 * components.
-		 */
-		selectedIndices: arrayOf(number),
-
-		/**
-		 * An array of currently indeterminate `IconGroup.IconBox`s indices. You can
-		 * also pass the prop `isIndeterminate` to individual `IconGroup.IconBox`
-		 * components.
-		 */
-		selectedIndices: arrayOf(number),
+		selectedIndices: arrayOf(oneOf([objectOf(number)], number)),
 
 		/**
 			* defines if more than one `IconGroup.IconBox` may be selected at at
@@ -83,21 +69,6 @@ const IconGroup = createClass({
 			* checkbox `IconBox`s at this time.
 			*/
 		kind: oneOf(['radio', 'checkbox']),
-
-		/*
-		 * Sets if the `IconGroup.Box`s may have an `isActive` state.
-		 */
-		handleActive: bool,
-
-		/*
-		 * Sets if the `IconGroup.Box`s may have an `isIndeterminate` state.
-		 */
-		handleIndeterminate: bool,
-
-		/*
-		 * Sets if the `IconGroup.Box`s may have an `isSelected` state.
-		 */
-		handleSelect: bool,
 	},
 
 	getDefaultProps() {
@@ -105,13 +76,8 @@ const IconGroup = createClass({
 			onSelect: _.noop,
 			className: null,
 			children: null,
-			selectedIndices: {},
 			kind: 'checkbox',
-			activeIndices: [],
-			indeterminateIndices: [],
-			handleActive: true,
-			handleIndeterminate: true,
-			handleSelect: true,
+			selectedIndices: [],
 		};
 	},
 
@@ -136,9 +102,6 @@ const IconGroup = createClass({
 	render() {
 		const {
 			selectedIndices,
-			activeIndices,
-			indeterminateIndices,
-			handleSelect,
 			className,
 			children,
 			kind,

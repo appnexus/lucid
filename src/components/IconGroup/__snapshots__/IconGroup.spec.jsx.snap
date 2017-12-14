@@ -1,14 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IconGroup [common] example testing should match snapshot(s) for stateful 1`] = `
+exports[`IconGroup [common] example testing should match snapshot(s) for 0_stateful 1`] = `
 <span
   className="lucid-IconGroup"
 >
   <IconBox
+    callbackId={0}
     hasOnlyIcon={false}
-    isActive={false}
     isDisabled={false}
+    isIndeterminate={false}
     isSelected={false}
+    key="0"
+    kind="checkbox"
     onClick={[Function]}
   >
     <IconBox.Icon>
@@ -17,10 +20,13 @@ exports[`IconGroup [common] example testing should match snapshot(s) for statefu
     Zero
   </IconBox>
   <IconBox
+    callbackId={1}
     hasOnlyIcon={false}
-    isActive={false}
     isDisabled={false}
+    isIndeterminate={false}
     isSelected={false}
+    key="1"
+    kind="checkbox"
     onClick={[Function]}
   >
     <IconBox.Icon>
@@ -29,10 +35,13 @@ exports[`IconGroup [common] example testing should match snapshot(s) for statefu
     One
   </IconBox>
   <IconBox
+    callbackId={2}
     hasOnlyIcon={false}
-    isActive={false}
     isDisabled={false}
+    isIndeterminate={false}
     isSelected={false}
+    key="2"
+    kind="checkbox"
     onClick={[Function]}
   >
     <IconBox.Icon>
@@ -40,30 +49,39 @@ exports[`IconGroup [common] example testing should match snapshot(s) for statefu
     </IconBox.Icon>
     Two
   </IconBox>
-  <IconBox
-    hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
-    isSelected={false}
-    onClick={[Function]}
-  >
+  <IconGroup.Box>
     <IconBox.Icon>
       <ClockIcon />
     </IconBox.Icon>
-    Three
-  </IconBox>
+    Zero
+  </IconGroup.Box>
+  <IconGroup.Box>
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    One
+  </IconGroup.Box>
+  <IconGroup.Box>
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Two
+  </IconGroup.Box>
 </span>
 `;
 
-exports[`IconGroup [common] example testing should match snapshot(s) for stateless 1`] = `
+exports[`IconGroup [common] example testing should match snapshot(s) for 1_radioGroup 1`] = `
 <span
   className="lucid-IconGroup"
 >
   <IconBox
+    callbackId={0}
     hasOnlyIcon={false}
-    isActive={false}
     isDisabled={false}
+    isIndeterminate={false}
     isSelected={false}
+    key="0"
+    kind="radio"
     onClick={[Function]}
   >
     <IconBox.Icon>
@@ -72,10 +90,13 @@ exports[`IconGroup [common] example testing should match snapshot(s) for statele
     Zero
   </IconBox>
   <IconBox
+    callbackId={1}
     hasOnlyIcon={false}
-    isActive={false}
     isDisabled={false}
+    isIndeterminate={false}
     isSelected={false}
+    key="1"
+    kind="radio"
     onClick={[Function]}
   >
     <IconBox.Icon>
@@ -84,10 +105,83 @@ exports[`IconGroup [common] example testing should match snapshot(s) for statele
     One
   </IconBox>
   <IconBox
+    callbackId={2}
     hasOnlyIcon={false}
-    isActive={false}
     isDisabled={false}
+    isIndeterminate={false}
     isSelected={false}
+    key="2"
+    kind="radio"
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Two
+  </IconBox>
+  <IconGroup.Box>
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Zero
+  </IconGroup.Box>
+  <IconGroup.Box>
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    One
+  </IconGroup.Box>
+  <IconGroup.Box>
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Two
+  </IconGroup.Box>
+</span>
+`;
+
+exports[`IconGroup [common] example testing should match snapshot(s) for 2_stateless 1`] = `
+<span
+  className="lucid-IconGroup"
+>
+  <IconBox
+    callbackId={0}
+    hasOnlyIcon={false}
+    isDisabled={false}
+    isIndeterminate={false}
+    isSelected={true}
+    key="0"
+    kind="checkbox"
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Zero
+  </IconBox>
+  <IconBox
+    callbackId={1}
+    hasOnlyIcon={false}
+    isDisabled={false}
+    isIndeterminate={false}
+    isSelected={false}
+    key="1"
+    kind="checkbox"
+    onClick={[Function]}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    One
+  </IconBox>
+  <IconBox
+    callbackId={2}
+    hasOnlyIcon={false}
+    isDisabled={false}
+    isIndeterminate={false}
+    isSelected={false}
+    key="2"
+    kind="checkbox"
     onClick={[Function]}
   >
     <IconBox.Icon>
@@ -96,10 +190,13 @@ exports[`IconGroup [common] example testing should match snapshot(s) for statele
     Two
   </IconBox>
   <IconBox
+    callbackId={3}
     hasOnlyIcon={false}
-    isActive={false}
     isDisabled={false}
+    isIndeterminate={false}
     isSelected={false}
+    key="3"
+    kind="checkbox"
     onClick={[Function]}
   >
     <IconBox.Icon>
@@ -108,10 +205,13 @@ exports[`IconGroup [common] example testing should match snapshot(s) for statele
     Three
   </IconBox>
   <IconBox
+    callbackId={4}
     hasOnlyIcon={false}
-    isActive={false}
     isDisabled={false}
+    isIndeterminate={false}
     isSelected={false}
+    key="4"
+    kind="checkbox"
     onClick={[Function]}
   >
     <IconBox.Icon>
@@ -120,10 +220,13 @@ exports[`IconGroup [common] example testing should match snapshot(s) for statele
     Four
   </IconBox>
   <IconBox
+    callbackId={5}
     hasOnlyIcon={false}
-    isActive={false}
     isDisabled={false}
+    isIndeterminate={false}
     isSelected={false}
+    key="5"
+    kind="checkbox"
     onClick={[Function]}
   >
     <IconBox.Icon>
@@ -132,10 +235,13 @@ exports[`IconGroup [common] example testing should match snapshot(s) for statele
     Five
   </IconBox>
   <IconBox
+    callbackId={6}
     hasOnlyIcon={false}
-    isActive={false}
-    isDisabled={false}
+    isDisabled={true}
+    isIndeterminate={true}
     isSelected={false}
+    key="6"
+    kind="checkbox"
     onClick={[Function]}
   >
     <IconBox.Icon>
@@ -144,10 +250,13 @@ exports[`IconGroup [common] example testing should match snapshot(s) for statele
     Six
   </IconBox>
   <IconBox
+    callbackId={7}
     hasOnlyIcon={false}
-    isActive={false}
     isDisabled={false}
-    isSelected={false}
+    isIndeterminate={false}
+    isSelected={true}
+    key="7"
+    kind="checkbox"
     onClick={[Function]}
   >
     <IconBox.Icon>
@@ -156,10 +265,13 @@ exports[`IconGroup [common] example testing should match snapshot(s) for statele
     Seven
   </IconBox>
   <IconBox
+    callbackId={8}
     hasOnlyIcon={false}
-    isActive={false}
     isDisabled={false}
+    isIndeterminate={true}
     isSelected={false}
+    key="8"
+    kind="checkbox"
     onClick={[Function]}
   >
     <IconBox.Icon>
@@ -168,10 +280,13 @@ exports[`IconGroup [common] example testing should match snapshot(s) for statele
     Eight
   </IconBox>
   <IconBox
+    callbackId={9}
     hasOnlyIcon={false}
-    isActive={false}
     isDisabled={false}
+    isIndeterminate={false}
     isSelected={false}
+    key="9"
+    kind="checkbox"
     onClick={[Function]}
   >
     <IconBox.Icon>
@@ -179,5 +294,69 @@ exports[`IconGroup [common] example testing should match snapshot(s) for statele
     </IconBox.Icon>
     Nine
   </IconBox>
+  <IconGroup.Box
+    isSelected={true}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Zero
+  </IconGroup.Box>
+  <IconGroup.Box>
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    One
+  </IconGroup.Box>
+  <IconGroup.Box>
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Two
+  </IconGroup.Box>
+  <IconGroup.Box>
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Three
+  </IconGroup.Box>
+  <IconGroup.Box>
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Four
+  </IconGroup.Box>
+  <IconGroup.Box>
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Five
+  </IconGroup.Box>
+  <IconGroup.Box
+    isDisabled={true}
+  >
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Six
+  </IconGroup.Box>
+  <IconGroup.Box>
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Seven
+  </IconGroup.Box>
+  <IconGroup.Box>
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Eight
+  </IconGroup.Box>
+  <IconGroup.Box>
+    <IconBox.Icon>
+      <ClockIcon />
+    </IconBox.Icon>
+    Nine
+  </IconGroup.Box>
 </span>
 `;

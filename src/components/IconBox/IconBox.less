@@ -8,14 +8,13 @@
 .lucid-IconBox {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
 	margin: 0;
 	box-sizing: border-box;
 	position: relative;
 	align-items: center;
-	padding: 6px;
+	padding: 15px 6px;
 	width: 120px;
-	height: 104px;
 	overflow: hidden;
 
 	&::before {
@@ -57,8 +56,11 @@
 	.lucid-IconBox-figcaption,
 	.lucid-IconBox-checkbox.lucid-CheckboxLabeled,
 	.lucid-RadioButtonLabeled {
-		font-size: @size-font-L;
+		font-size: @size-font;
 		white-space: nowrap;
+		color: @color-darkGray;
+		text-align: center;
+		padding: 9px 0;
 	}
 
 	.lucid-Icon {

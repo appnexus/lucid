@@ -52,13 +52,13 @@ const IconBox = createClass({
 		 */
 		isDisabled: bool,
 		/**
-		 * Activates the IconBox by giving it a "pressed down" look
-		 */
-		isActive: bool,
-		/**
 		 * Selects the IconBox by checking it's input
 		 */
 		isSelected: bool,
+		/**
+		 * Selects the IconBox by setting it's checkbox to the secondary state. Only usable when kind='checkbox'
+		 */
+		isIndeterminate: bool,
 		/**
 		 * Class names that are appended to the defaults
 		 */
@@ -91,7 +91,6 @@ const IconBox = createClass({
 	getDefaultProps() {
 		return {
 			isDisabled: false,
-			isActive: false,
 			isSelected: false,
 			onClick: _.noop,
 			hasOnlyIcon: false,
@@ -113,11 +112,10 @@ const IconBox = createClass({
 		const {
 			kind,
 			isDisabled,
-			isActive,
+			children,
 			isIndeterminate,
 			onClick,
 			isSelected,
-			children,
 			className,
 			tabIndex,
 			name,
@@ -154,18 +152,14 @@ const IconBox = createClass({
 	render() {
 		const {
 			isDisabled,
-			isActive,
 			isSelected,
 			kind,
 			className,
 			children,
-			type,
 			...passThroughs
 		} = this.props;
 
-		const hasOnlyIcon = _.isUndefined(this.props.children.length)
-			? false
-			: true;
+		const hasOnlyIcon = _.isUndefined(children.length) ? false : true;
 		const Icon = getFirst(this.props, IconBox.Icon, <Icon />).props.children;
 
 		return (
@@ -175,7 +169,6 @@ const IconBox = createClass({
 					'&',
 					{
 						'&-is-disabled': isDisabled,
-						'&-is-active': isActive,
 						'&-is-selected': isSelected,
 						'&-checkbox': kind === 'checkbox',
 						'&-radio': kind === 'radio',

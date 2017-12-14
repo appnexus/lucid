@@ -9,7 +9,7 @@ export default {
 		const selectedIndices = _.isEqual(obj.props.kind, 'checkbox')
 			? _.assign(currentIndices, { [index]: newVal })
 			: [index];
-		debugger;
+
 		return {
 			...state,
 			selectedIndices: selectedIndices,
