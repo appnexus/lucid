@@ -48,6 +48,7 @@ import AnalyzeDataIcon from './components/Icon/AnalyzeDataIcon/AnalyzeDataIcon';
 import ArrowIcon from './components/Icon/ArrowIcon/ArrowIcon';
 import AsteriskIcon from './components/Icon/AsteriskIcon/AsteriskIcon';
 import AttachIcon from './components/Icon/AttachIcon/AttachIcon';
+import AudioIcon from './components/Icon/AudioIcon/AudioIcon';
 import Axis from './components/Axis/Axis';
 import AxisLabel from './components/AxisLabel/AxisLabel';
 import Badge from './components/Badge/Badge';
@@ -154,6 +155,7 @@ import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
 import Table from './components/Table/Table';
 import TableGearIcon from './components/Icon/TableGearIcon/TableGearIcon';
 import Tag from './components/Tag/Tag';
+import TextIcon from './components/Icon/TextIcon/TextIcon';
 import TextField from './components/TextField/TextField';
 import TextFieldValidated
 	from './components/TextFieldValidated/TextFieldValidated';
@@ -162,6 +164,7 @@ import UnlockedIcon from './components/Icon/UnlockedIcon/UnlockedIcon';
 import UploadIcon from './components/Icon/UploadIcon/UploadIcon';
 import UserIcon from './components/Icon/UserIcon/UserIcon';
 import Validation from './components/Validation/Validation';
+import VideoIcon from './components/Icon/VideoIcon/VideoIcon';
 import ViewIcon from './components/Icon/ViewIcon/ViewIcon';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
 import WarningLightIcon
@@ -201,6 +204,7 @@ export {
 	ArrowIcon,
 	AsteriskIcon,
 	AttachIcon,
+	AudioIcon,
 	Autocomplete,
 	AutocompleteDumb,
 	Axis,
@@ -335,6 +339,7 @@ export {
 	Tabs,
 	TabsDumb,
 	Tag,
+	TextIcon,
 	TextField,
 	TextFieldValidated,
 	ToolTip,
@@ -348,6 +353,7 @@ export {
 	VerticalListMenuDumb,
 	VerticalTabs,
 	VerticalTabsDumb,
+	VideoIcon,
 	ViewIcon,
 	WarningIcon,
 	WarningLightIcon,
