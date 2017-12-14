@@ -80,7 +80,6 @@ exports[`IconBox [common] example testing should match snapshot(s) for 3.states 
 <figure
   className="lucid-IconBox lucid-IconBox-checkbox lucid-IconBox-has-only-icon"
   disabled={false}
-  isActive={true}
   onClick={[Function]}
 >
   <ClockIcon />
@@ -209,7 +208,7 @@ exports[`IconBox [common] example testing should match snapshot(s) for 7.interac
 
 exports[`IconBox [common] example testing should match snapshot(s) for 8_no-label 1`] = `
 <figure
-  className="lucid-IconBox"
+  className="lucid-IconBox lucid-IconBox-has-only-icon"
   disabled={false}
   onClick={[Function]}
 >

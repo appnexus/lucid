@@ -83,8 +83,14 @@ const IconBox = createClass({
 		 */
 		onClick: func,
 
+		/**
+		 * tabIndex
+		 */
 		tabIndex: number,
 
+		/**
+		 * name
+		 */
 		name: string,
 	},
 
@@ -114,7 +120,6 @@ const IconBox = createClass({
 			isDisabled,
 			children,
 			isIndeterminate,
-			onClick,
 			isSelected,
 			className,
 			tabIndex,
@@ -132,7 +137,6 @@ const IconBox = createClass({
 					isDisabled={isDisabled}
 					isIndeterminate={isIndeterminate}
 					isSelected={isSelected}
-					onSelect={onClick}
 					name={name}
 					tabIndex={tabIndex}
 				/>
@@ -143,7 +147,6 @@ const IconBox = createClass({
 					})}
 					isDisabled={isDisabled}
 					isSelected={isSelected}
-					onSelect={onClick}
 					name={name}
 					tabIndex={tabIndex}
 				/>;
@@ -159,8 +162,9 @@ const IconBox = createClass({
 			...passThroughs
 		} = this.props;
 
-		const hasOnlyIcon = _.isUndefined(children.length) ? false : true;
-		const Icon = getFirst(this.props, IconBox.Icon, <Icon />).props.children;
+		const hasOnlyIcon = React.Children.count(children) > 0;
+		const Icon = getFirst(this.props, IconBox.Icon, <IconBox.Icon />).props
+			.children;
 
 		return (
 			<figure

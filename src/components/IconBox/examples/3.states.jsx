@@ -17,7 +17,7 @@ export default createClass({
 			>
 				<article style={style}>
 					<h3>Is Active</h3>
-					<IconBox kind="checkbox" isActive={true}>
+					<IconBox kind="checkbox">
 						<IconBox.Icon><ClockIcon /></IconBox.Icon>
 						Active
 					</IconBox>
