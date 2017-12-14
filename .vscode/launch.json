@@ -6,14 +6,14 @@
     "configurations": [
       {
         "name": "Launch",
-        "type": "node2",
+        "type": "node",
         "request": "launch",
         "program": "${workspaceRoot}/src/index.js",
         "stopOnEntry": false,
         "args": [],
         "cwd": "${workspaceRoot}",
         "preLaunchTask": null,
-        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node",
+        "runtimeExecutable": "/Users/astump/.nvm/versions/node/v6.9.3/bin/babel-node",
         "runtimeArgs": [
           "--nolazy"
         ],

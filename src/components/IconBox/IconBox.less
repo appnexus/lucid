@@ -49,7 +49,6 @@
 	}
 
 	.lucid-IconBox-figcaption {
-		padding-top: @size-S;
 		text-align: center;
 	}
 
@@ -60,7 +59,6 @@
 		white-space: nowrap;
 		color: @color-darkGray;
 		text-align: center;
-		padding: 9px 0;
 	}
 
 	.lucid-Icon {
@@ -120,13 +118,15 @@
 
 	.lucid-CheckboxLabeled-Checkbox {
 		order: 2;
-		margin-top: @size-XXS;
-		margin-bottom: @size-XXS;
+	}
+
+	.lucid-CheckboxLabeled > .lucid-Checkbox {
+		margin-right: 0;
 	}
 
 	.lucid-CheckboxLabeled-label {
 		order: 1;
-		padding-top: 0;
+		padding: 9px 0;
 	}
 }
 
