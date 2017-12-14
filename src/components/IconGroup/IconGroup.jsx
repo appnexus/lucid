@@ -1,15 +1,16 @@
 import _ from 'lodash';
-import IconBox from '../IconBox/IconBox';
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
+import IconBox from '../IconBox/IconBox';
 import reducers from './IconGroup.reducers';
 import { buildHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-IconGroup');
 
-const { any, oneOf, func, arrayOf, number } = PropTypes;
+const { any, bool, oneOf, func, arrayOf, number } = PropTypes;
 
 /**
  *
@@ -25,7 +26,9 @@ const IconGroup = createClass({
 		/**
 		 * Renders a `<IconBox`> inside the `CheckboxIconGroup`.
 		 */
-		Box: IconBox,
+		Box: createClass({
+			displayName: 'IconGroup.Box',
+		}),
 		Icon: IconBox.Icon,
 	},
 
@@ -54,7 +57,21 @@ const IconGroup = createClass({
 
 		/**
 		 * An array of currently selected `IconGroup.IconBox`s indices. You can
+		 * also pass the prop `isSelected` to individual `IconGroup.IconBox`
+		 * components.
+		 */
+		selectedIndices: arrayOf(number),
+
+		/**
+		 * An array of currently active `IconGroup.IconBox`s indices. You can
 		 * also pass the prop `isActive` to individual `IconGroup.IconBox`
+		 * components.
+		 */
+		selectedIndices: arrayOf(number),
+
+		/**
+		 * An array of currently indeterminate `IconGroup.IconBox`s indices. You can
+		 * also pass the prop `isIndeterminate` to individual `IconGroup.IconBox`
 		 * components.
 		 */
 		selectedIndices: arrayOf(number),
@@ -66,6 +83,21 @@ const IconGroup = createClass({
 			* checkbox `IconBox`s at this time.
 			*/
 		kind: oneOf(['radio', 'checkbox']),
+
+		/*
+		 * Sets if the `IconGroup.Box`s may have an `isActive` state.
+		 */
+		handleActive: bool,
+
+		/*
+		 * Sets if the `IconGroup.Box`s may have an `isIndeterminate` state.
+		 */
+		handleIndeterminate: bool,
+
+		/*
+		 * Sets if the `IconGroup.Box`s may have an `isSelected` state.
+		 */
+		handleSelect: bool,
 	},
 
 	getDefaultProps() {
@@ -73,8 +105,13 @@ const IconGroup = createClass({
 			onSelect: _.noop,
 			className: null,
 			children: null,
-			selectedIndices: [],
+			selectedIndices: {},
 			kind: 'checkbox',
+			activeIndices: [],
+			indeterminateIndices: [],
+			handleActive: true,
+			handleIndeterminate: true,
+			handleSelect: true,
 		};
 	},
 
@@ -99,6 +136,9 @@ const IconGroup = createClass({
 	render() {
 		const {
 			selectedIndices,
+			activeIndices,
+			indeterminateIndices,
+			handleSelect,
 			className,
 			children,
 			kind,
@@ -116,6 +156,20 @@ const IconGroup = createClass({
 				className={cx('&', className)}
 			>
 				{_.map(iconBoxChildProps, (iconBoxChildProp, index) => {
+					const isCheckbox = _.isEqual(this.props.kind, 'checkbox');
+					let isIndeterminate = false;
+					let isSelected = false;
+
+					if (isCheckbox) {
+						const selectedIndex = _.isUndefined(selectedIndices[index])
+							? 2
+							: selectedIndices[index];
+						isIndeterminate = _.isEqual(selectedIndex, 1);
+						isSelected = _.isEqual(selectedIndex, 0);
+					} else {
+						isSelected = _.includes(selectedIndices, index);
+					}
+
 					return (
 						// The order of the spread operator below is important. If the
 						// consumer puts `isActive` directly on a `IconGroup.IconBox`, we
@@ -125,7 +179,8 @@ const IconGroup = createClass({
 						// `IconGroup.IconBox`'s `onClick` if it exists.
 						(
 							<IconBox
-								isActive={_.includes(selectedIndices, index)}
+								isIndeterminate={isIndeterminate}
+								isSelected={isSelected}
 								{...iconBoxChildProp}
 								key={index}
 								callbackId={index}

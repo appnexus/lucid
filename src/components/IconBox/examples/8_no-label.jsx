@@ -7,7 +7,6 @@ export default createClass({
 		return (
 			<IconBox>
 				<IconBox.Icon><ClockIcon /></IconBox.Icon>
-				Default
 			</IconBox>
 		);
 	},

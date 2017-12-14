@@ -1,6 +1,16 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
+@IconGroup_margin: 9px;
+
+.lucid-IconGroup {
+	display: inline-flex;
+	flex-wrap: wrap;
+
+	> figure:not(:last-of-type) {
+		margin: 0 @IconGroup_margin @IconGroup_margin 0;
+	}
+}
 // @IconGroup-active-borderColor: fade(#fff, 30%);
 
 // .lucid-IconGroup {

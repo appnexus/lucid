@@ -26,7 +26,7 @@ export default createClass({
 				onClick={this.handleSelected}
 			>
 				<IconBox.Icon><ClockIcon /></IconBox.Icon>
-				Interactive IconBox
+				Interactive
 			</IconBox>
 		);
 	},

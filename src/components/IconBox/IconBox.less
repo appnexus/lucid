@@ -6,10 +6,9 @@
 
 // Base Iconbox
 .lucid-IconBox {
-	font-size: @size-font-XL;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: space-between;
 	margin: 0;
 	box-sizing: border-box;
 	position: relative;
@@ -17,6 +16,7 @@
 	padding: 6px;
 	width: 120px;
 	height: 104px;
+	overflow: hidden;
 
 	&::before {
 		content: '';
@@ -31,6 +31,9 @@
     height: 100%;
 	}
 
+	&:not(.lucid-IconBox-checkbox) {
+		padding: 15px 6px;
+	}
 	&:not(.lucid-IconBox-is-disabled):hover,
 	&.lucid-IconBox-is-active {
 		cursor: pointer;
@@ -47,9 +50,15 @@
 	}
 
 	.lucid-IconBox-figcaption {
-		margin-top: @size-S;
-		font-size: 12px;
-		height: 42px;
+		padding-top: @size-S;
+		text-align: center;
+	}
+
+	.lucid-IconBox-figcaption,
+	.lucid-IconBox-checkbox.lucid-CheckboxLabeled,
+	.lucid-RadioButtonLabeled {
+		font-size: @size-font-L;
+		white-space: nowrap;
 	}
 
 	.lucid-Icon {

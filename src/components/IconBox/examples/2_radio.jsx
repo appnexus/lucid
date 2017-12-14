@@ -7,7 +7,7 @@ export default createClass({
 		return (
 			<IconBox kind="radio">
 				<IconBox.Icon><ClockIcon /></IconBox.Icon>
-				Checkbox IconBox
+				Radio
 			</IconBox>
 		);
 	},

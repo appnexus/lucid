@@ -7,7 +7,7 @@ export default createClass({
 		return (
 			<IconBox kind="checkbox">
 				<IconBox.Icon><ClockIcon /></IconBox.Icon>
-				Checkbox IconBox
+				Checkbox
 			</IconBox>
 		);
 	},

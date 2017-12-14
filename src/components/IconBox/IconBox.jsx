@@ -109,10 +109,6 @@ const IconBox = createClass({
 		}
 	},
 
-	getOtherChildren() {
-		return rejectTypes(this.props.children, IconBox.Icon);
-	},
-
 	getInputComponent() {
 		const {
 			kind,
@@ -121,12 +117,13 @@ const IconBox = createClass({
 			isIndeterminate,
 			onClick,
 			isSelected,
+			children,
 			className,
 			tabIndex,
 			name,
 		} = this.props;
 
-		const Label = this.getOtherChildren();
+		const Label = rejectTypes(children, IconBox.Icon);
 
 		return _.isEqual(kind, 'checkbox')
 			? <CheckboxLabeled
@@ -159,7 +156,6 @@ const IconBox = createClass({
 			isDisabled,
 			isActive,
 			isSelected,
-			hasOnlyIcon,
 			kind,
 			className,
 			children,
@@ -167,6 +163,9 @@ const IconBox = createClass({
 			...passThroughs
 		} = this.props;
 
+		const hasOnlyIcon = _.isUndefined(this.props.children.length)
+			? false
+			: true;
 		const Icon = getFirst(this.props, IconBox.Icon, <Icon />).props.children;
 
 		return (
@@ -189,8 +188,8 @@ const IconBox = createClass({
 				ref="figure"
 			>
 				{Icon}
-				<figcaption>
-					{_.isNil(kind) ? this.getOtherChildren() : this.getInputComponent()}
+				<figcaption className={cx('&-figcaption')}>
+					{this.getInputComponent()}
 				</figcaption>
 			</figure>
 		);

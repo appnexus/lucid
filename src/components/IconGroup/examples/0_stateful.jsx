@@ -18,10 +18,6 @@ export default createClass({
 					<IconGroup.Icon><ClockIcon /></IconGroup.Icon>
 					Two
 				</IconGroup.Box>
-				<IconGroup.Box>
-					<IconGroup.Icon><ClockIcon /></IconGroup.Icon>
-					Three
-				</IconGroup.Box>
 			</IconGroup>
 		);
 	},

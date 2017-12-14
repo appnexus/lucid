@@ -5,8 +5,8 @@ import { IconGroupDumb as IconGroup, ClockIcon } from '../../../index';
 export default createClass({
 	render() {
 		return (
-			<IconGroup selectedIndices={[7, 8]}>
-				<IconGroup.Box>
+			<IconGroup selectedIndices={{ 7: 0, 8: 1, 6: 1 }}>
+				<IconGroup.Box isSelected={true}>
 					<IconGroup.Icon><ClockIcon /></IconGroup.Icon>
 					Zero
 				</IconGroup.Box>
@@ -30,7 +30,7 @@ export default createClass({
 					<IconGroup.Icon><ClockIcon /></IconGroup.Icon>
 					Five
 				</IconGroup.Box>
-				<IconGroup.Box>
+				<IconGroup.Box isDisabled={true}>
 					<IconGroup.Icon><ClockIcon /></IconGroup.Icon>
 					Six
 				</IconGroup.Box>
