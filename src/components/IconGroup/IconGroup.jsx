@@ -10,7 +10,7 @@ import { buildHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-IconGroup');
 
-const { any, oneOf, objectOf, func, arrayOf, number } = PropTypes;
+const { any, oneOf, func, arrayOf, number, bool, shape } = PropTypes;
 
 /**
  *
@@ -60,7 +60,7 @@ const IconGroup = createClass({
 		 * also pass the prop `isSelected` to individual `IconGroup.IconBox`
 		 * components.
 		 */
-		selectedIndices: arrayOf(oneOf([objectOf(number)], number)),
+		selectedIndices: arrayOf(arrayOf(number)),
 
 		/**
 			* defines if more than one `IconGroup.IconBox` may be selected at at
@@ -77,7 +77,8 @@ const IconGroup = createClass({
 			className: null,
 			children: null,
 			kind: 'checkbox',
-			selectedIndices: [],
+			selectedIndices: [[], []],
+			hasIndeterminate: false,
 		};
 	},
 
@@ -105,6 +106,7 @@ const IconGroup = createClass({
 			className,
 			children,
 			kind,
+			hasIndeterminate,
 			...passThroughs
 		} = this.props;
 
@@ -119,23 +121,12 @@ const IconGroup = createClass({
 				className={cx('&', className)}
 			>
 				{_.map(iconBoxChildProps, (iconBoxChildProp, index) => {
-					const isCheckbox = _.isEqual(this.props.kind, 'checkbox');
-					let isIndeterminate = false;
-					let isSelected = false;
-
-					if (isCheckbox) {
-						const selectedIndex = _.isUndefined(selectedIndices[index])
-							? 2
-							: selectedIndices[index];
-						isIndeterminate = _.isEqual(selectedIndex, 1);
-						isSelected = _.isEqual(selectedIndex, 0);
-					} else {
-						isSelected = _.includes(selectedIndices, index);
-					}
+					const isSelected = _.includes(selectedIndices[0], index);
+					const isIndeterminate = _.includes(selectedIndices[1], index);
 
 					return (
 						// The order of the spread operator below is important. If the
-						// consumer puts `isActive` directly on a `IconGroup.IconBox`, we
+						// consumer puts `isSelected` directly on a `IconGroup.IconBox`, we
 						// want that to take precedence over the `selectedIndices` prop on
 						// the parent `IconGroup`. However, we want our `onClick` at the
 						// bottom because we manually handle passing the event to the
@@ -144,7 +135,11 @@ const IconGroup = createClass({
 							<IconBox
 								isIndeterminate={isIndeterminate}
 								isSelected={isSelected}
+								hasIndeterminate={hasIndeterminate}
 								{...iconBoxChildProp}
+								className={cx('&-IconBox', iconBoxChildProp.className, {
+									[`${className}-IconBox`]: className,
+								})}
 								key={index}
 								callbackId={index}
 								onClick={this.handleSelect}

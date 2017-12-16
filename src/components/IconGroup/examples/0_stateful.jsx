@@ -5,7 +5,7 @@ import { IconGroup, ClockIcon } from '../../../index';
 export default createClass({
 	render() {
 		return (
-			<IconGroup>
+			<IconGroup hasIndeterminate>
 				<IconGroup.Box>
 					<IconGroup.Icon><ClockIcon /></IconGroup.Icon>
 					Zero
