@@ -10,7 +10,7 @@ import { buildHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-IconGroup');
 
-const { any, oneOf, func, arrayOf, number, bool, shape } = PropTypes;
+const { any, arrayOf, bool, func, number, oneOf } = PropTypes;
 
 /**
  *
@@ -56,9 +56,12 @@ const IconGroup = createClass({
 		children: any,
 
 		/**
-		 * An array object of currently selected `IconGroup.IconBox`s indices. You can
-		 * also pass the prop `isSelected` to individual `IconGroup.IconBox`
-		 * components.
+		 * An array of two arrays.
+		 * `selectedIndices[0]` is for indicies with the `isSelected` prop.
+		 * `selectedIndices[1]` is for indicies with the `isIndeterminate` prop, only
+		 * allowed is `hasInditerminate` is true.
+		 * You can also pass the prop `isSelected` or `isIndeterminate` to individual
+		 * `IconGroup.IconBox` components.
 		 */
 		selectedIndices: arrayOf(arrayOf(number)),
 
@@ -69,6 +72,14 @@ const IconGroup = createClass({
 			* checkbox `IconBox`s at this time.
 			*/
 		kind: oneOf(['radio', 'checkbox']),
+
+		/**
+			* sets whether the IconGroup may have an `indeterminate` state or not.
+			* This only applies `IconGroup`s where `kind="checkbox"`. The prop `hasIndeterminate`
+			* may also be manually passed to specific `IconGroup.IconBox`s when necessary which
+			* will override the parent component settings.
+			*/
+		hasIndeterminate: bool,
 	},
 
 	getDefaultProps() {
