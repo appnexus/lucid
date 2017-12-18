@@ -13,7 +13,7 @@
         "args": [],
         "cwd": "${workspaceRoot}",
         "preLaunchTask": null,
-        "runtimeExecutable": "/Users/astump/.nvm/versions/node/v6.9.3/bin/babel-node",
+        "runtimeExecutable": "~/.nvm/versions/node/v6.9.3/bin/babel-node",
         "runtimeArgs": [
           "--nolazy"
         ],

@@ -1,7 +1,7 @@
 import React from 'react';
 import assert from 'assert';
 import sinon from 'sinon';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import { common, controls } from '../../util/generic-tests';
 import IconBox from './IconBox';

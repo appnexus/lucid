@@ -168,7 +168,10 @@ const IconBox = createClass({
 
 		return (
 			<figure
-				{...omitProps(passThroughs, IconBox, ['callbackId'])}
+				{...omitProps(passThroughs, IconBox, [
+					'callbackId',
+					'hasIndeterminate',
+				])}
 				className={cx(
 					'&',
 					{
