@@ -101,7 +101,7 @@ const IconGroup = createClass({
 			{}
 		);
 
-		// If the consumer passed in an `onClick` to the child `IconGroup.Button`
+		// If the consumer passed in an `onClick` to the child `IconGroup.Box`
 		// component, we should make sure to call that in addition to the
 		// `IconGroup`'s `onSelect`.
 		if (_.isFunction(clickedIconBoxProps.onClick)) {
