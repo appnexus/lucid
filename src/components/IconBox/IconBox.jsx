@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
+import Icon from '../Icon/Icon';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	createClass,
@@ -168,16 +169,10 @@ const IconBox = createClass({
 			this.props,
 			IconBox.Icon,
 			<IconBox.Icon>
-				<svg
-					className="lucid-Icon"
-					width="16"
-					height="16"
-					preserveAspectRatio="xMidYMid meet"
-					viewBox="0 0 16 16"
-				>
+				<Icon>
 					<rect x="0" y="0" width="16" height="16" />
 					<rect x="1" y="1" width="14" height="14" fill="white" />
-				</svg>
+				</Icon>
 			</IconBox.Icon>
 		).props.children;
 

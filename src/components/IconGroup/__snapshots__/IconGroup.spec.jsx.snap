@@ -63,9 +63,7 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 0_state
     </IconBox.Icon>
     Zero
   </IconGroup.Box>
-  <IconGroup.Box
-    onClick={[Function]}
-  >
+  <IconGroup.Box>
     <IconBox.Icon>
       <ClockIcon />
     </IconBox.Icon>
@@ -403,27 +401,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 2_state
 
 exports[`IconGroup [common] example testing should match snapshot(s) for 3_as-props 1`] = `
 <span
-  Boxes={
-    Array [
-      Object {
-        "Icon": <ClockIcon />,
-        "children": "Zero",
-        "hasIndeterminate": true,
-      },
-      Object {
-        "Icon": <ClockIcon />,
-        "children": "One",
-      },
-      Object {
-        "Icon": <ClockIcon />,
-        "children": "Two",
-      },
-      Object {
-        "Icon": <ClockIcon />,
-        "children": "Three",
-      },
-    ]
-  }
   className="lucid-IconGroup"
 >
   <IconBox

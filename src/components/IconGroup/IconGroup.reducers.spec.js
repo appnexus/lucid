@@ -1,6 +1,6 @@
 import assert from 'assert';
 
-import * as reducers from './IconGroup.reducers';
+import { onSelect } from './IconGroup.reducers';
 
 describe('IconGroup reducers', () => {
 	describe('default onSelect with checkbox', () => {
@@ -13,12 +13,9 @@ describe('IconGroup reducers', () => {
 				},
 			};
 
-			assert.deepEqual(
-				reducers.default.onSelect(initialStateToAdd, index, iconBoxProps),
-				{
-					selectedIndices: [[2, 1], []],
-				}
-			);
+			assert.deepEqual(onSelect(initialStateToAdd, index, iconBoxProps), {
+				selectedIndices: [[2, 1], []],
+			});
 		});
 
 		it('should remove selectedIndex prop', () => {
@@ -30,12 +27,9 @@ describe('IconGroup reducers', () => {
 				},
 			};
 
-			assert.deepEqual(
-				reducers.default.onSelect(initialStateToAdd, index, iconBoxProps),
-				{
-					selectedIndices: [[2], []],
-				}
-			);
+			assert.deepEqual(onSelect(initialStateToAdd, index, iconBoxProps), {
+				selectedIndices: [[2], []],
+			});
 		});
 	});
 
@@ -49,12 +43,9 @@ describe('IconGroup reducers', () => {
 				},
 			};
 
-			assert.deepEqual(
-				reducers.default.onSelect(initialState, index, iconBoxProps),
-				{
-					selectedIndices: [[1], []],
-				}
-			);
+			assert.deepEqual(onSelect(initialState, index, iconBoxProps), {
+				selectedIndices: [[1], []],
+			});
 		});
 	});
 
@@ -69,12 +60,9 @@ describe('IconGroup reducers', () => {
 				},
 			};
 
-			assert.deepEqual(
-				reducers.default.onSelect(initialState, index, iconBoxProps),
-				{
-					selectedIndices: [[2, 1], [1]],
-				}
-			);
+			assert.deepEqual(onSelect(initialState, index, iconBoxProps), {
+				selectedIndices: [[2, 1], [1]],
+			});
 		});
 
 		it('should remove index from selectedIndex and indeterminateIndex', () => {
@@ -87,12 +75,9 @@ describe('IconGroup reducers', () => {
 				},
 			};
 
-			assert.deepEqual(
-				reducers.default.onSelect(initialState, index, iconBoxProps),
-				{
-					selectedIndices: [[2], []],
-				}
-			);
+			assert.deepEqual(onSelect(initialState, index, iconBoxProps), {
+				selectedIndices: [[2], []],
+			});
 		});
 
 		it('should add only to selectedIndex when in neither', () => {
@@ -105,12 +90,9 @@ describe('IconGroup reducers', () => {
 				},
 			};
 
-			assert.deepEqual(
-				reducers.default.onSelect(initialState, index, iconBoxProps),
-				{
-					selectedIndices: [[2, 1], []],
-				}
-			);
+			assert.deepEqual(onSelect(initialState, index, iconBoxProps), {
+				selectedIndices: [[2, 1], []],
+			});
 		});
 	});
 });

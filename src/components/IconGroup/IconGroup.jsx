@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 import IconBox from '../IconBox/IconBox';
-import reducers from './IconGroup.reducers';
+import * as reducers from './IconGroup.reducers';
 import { buildHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-IconGroup');
 
-const { any, arrayOf, bool, func, number, oneOf } = PropTypes;
+const { any, arrayOf, bool, func, number, oneOf, object } = PropTypes;
 
 /**
  *
@@ -37,12 +37,14 @@ const IconGroup = createClass({
 
 	propTypes: {
 		/**
-		 * A function that is called with the index of the child IconBox clicked.
-		 * `props` refers to the child IconBox props.
-		 *
-		 * Signature: `(selectedIndex, { event, props }) => {}`
+		 * Renders an IconBox as props. See IconBox for available props.
 		 */
-		onSelect: func,
+		Box: arrayOf(oneOf([object])),
+
+		/**
+		 * Renders a collection of IconBoxes as props. See IconBox for available props.
+		 */
+		Boxes: arrayOf(object),
 
 		/**
 		 * Appended to the component-specific class names set on the root
@@ -55,6 +57,14 @@ const IconGroup = createClass({
 		 * props as `IconBox`s.
 		 */
 		children: any,
+
+		/**
+		 * A function that is called with the index of the child IconBox clicked.
+		 * `props` refers to the child IconBox props.
+		 *
+		 * Signature: `(selectedIndex, { event, props }) => {}`
+		 */
+		onSelect: func,
 
 		/**
 		 * An array of two arrays.

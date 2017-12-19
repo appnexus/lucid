@@ -6,12 +6,12 @@ exports[`IconBox [common] example testing should match snapshot(s) for 0_default
   disabled={false}
   onClick={[Function]}
 >
-  <svg
-    className="lucid-Icon"
-    height="16"
-    preserveAspectRatio="xMidYMid meet"
+  <Icon
+    aspectRatio="xMidYMid meet"
+    isBadge={false}
+    isDisabled={false}
+    size={16}
     viewBox="0 0 16 16"
-    width="16"
   >
     <rect
       height="16"
@@ -26,7 +26,7 @@ exports[`IconBox [common] example testing should match snapshot(s) for 0_default
       x="1"
       y="1"
     />
-  </svg>
+  </Icon>
   <figcaption
     className="lucid-IconBox-figcaption"
   >
