@@ -1,7 +1,6 @@
 import React from 'react';
-import _ from 'lodash';
 import assert from 'assert';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import { common } from '../../util/generic-tests';
 import { IconGroupDumb as IconGroup } from './IconGroup';
