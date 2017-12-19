@@ -10,7 +10,7 @@ export default createClass({
 					<IconGroup.Icon><ClockIcon /></IconGroup.Icon>
 					Zero
 				</IconGroup.Box>
-				<IconGroup.Box>
+				<IconGroup.Box onClick={() => console.log('IconBox 2 Clicked!')}>
 					<IconGroup.Icon><ClockIcon /></IconGroup.Icon>
 					One
 				</IconGroup.Box>

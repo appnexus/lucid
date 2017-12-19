@@ -63,7 +63,9 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 0_state
     </IconBox.Icon>
     Zero
   </IconGroup.Box>
-  <IconGroup.Box>
+  <IconGroup.Box
+    onClick={[Function]}
+  >
     <IconBox.Icon>
       <ClockIcon />
     </IconBox.Icon>
@@ -396,5 +398,93 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 2_state
     </IconBox.Icon>
     Nine
   </IconGroup.Box>
+</span>
+`;
+
+exports[`IconGroup [common] example testing should match snapshot(s) for 3_as-props 1`] = `
+<span
+  Boxes={
+    Array [
+      Object {
+        "Icon": <ClockIcon />,
+        "children": "Zero",
+        "hasIndeterminate": true,
+      },
+      Object {
+        "Icon": <ClockIcon />,
+        "children": "One",
+      },
+      Object {
+        "Icon": <ClockIcon />,
+        "children": "Two",
+      },
+      Object {
+        "Icon": <ClockIcon />,
+        "children": "Three",
+      },
+    ]
+  }
+  className="lucid-IconGroup"
+>
+  <IconBox
+    Icon={<ClockIcon />}
+    callbackId={0}
+    className="lucid-IconGroup-IconBox"
+    hasIndeterminate={true}
+    hasOnlyIcon={false}
+    isDisabled={false}
+    isIndeterminate={false}
+    isSelected={false}
+    key="0"
+    kind="checkbox"
+    onClick={[Function]}
+  >
+    Zero
+  </IconBox>
+  <IconBox
+    Icon={<ClockIcon />}
+    callbackId={1}
+    className="lucid-IconGroup-IconBox"
+    hasIndeterminate={false}
+    hasOnlyIcon={false}
+    isDisabled={false}
+    isIndeterminate={false}
+    isSelected={false}
+    key="1"
+    kind="checkbox"
+    onClick={[Function]}
+  >
+    One
+  </IconBox>
+  <IconBox
+    Icon={<ClockIcon />}
+    callbackId={2}
+    className="lucid-IconGroup-IconBox"
+    hasIndeterminate={false}
+    hasOnlyIcon={false}
+    isDisabled={false}
+    isIndeterminate={false}
+    isSelected={false}
+    key="2"
+    kind="checkbox"
+    onClick={[Function]}
+  >
+    Two
+  </IconBox>
+  <IconBox
+    Icon={<ClockIcon />}
+    callbackId={3}
+    className="lucid-IconGroup-IconBox"
+    hasIndeterminate={false}
+    hasOnlyIcon={false}
+    isDisabled={false}
+    isIndeterminate={false}
+    isSelected={false}
+    key="3"
+    kind="checkbox"
+    onClick={[Function]}
+  >
+    Three
+  </IconBox>
 </span>
 `;

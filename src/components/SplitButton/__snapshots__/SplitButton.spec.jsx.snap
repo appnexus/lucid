@@ -851,20 +851,10 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
 exports[`SplitButton click handlers primary button should trigger \`handleClick\` 1`] = `
 Object {
   "event": Object {
-    "stopPropagation": [MockFunction] {
-      "calls": Array [
-        Array [],
-      ],
-    },
+    "stopPropagation": [Function],
   },
   "props": Object {
-    "onClick": [MockFunction] {
-      "calls": Array [
-        Array [
-          [Circular],
-        ],
-      ],
-    },
+    "onClick": [Function],
   },
 }
 `;
@@ -873,13 +863,7 @@ exports[`SplitButton click handlers secondary buttons should call the click hand
 Object {
   "event": Object {},
   "props": Object {
-    "onClick": [MockFunction] {
-      "calls": Array [
-        Array [
-          [Circular],
-        ],
-      ],
-    },
+    "onClick": [Function],
   },
 }
 `;
@@ -888,13 +872,7 @@ exports[`SplitButton click handlers secondary buttons should call the click hand
 Object {
   "event": Object {},
   "props": Object {
-    "onClick": [MockFunction] {
-      "calls": Array [
-        Array [
-          [Circular],
-        ],
-      ],
-    },
+    "onClick": [Function],
   },
 }
 `;

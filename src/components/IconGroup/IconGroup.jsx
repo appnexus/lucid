@@ -28,6 +28,7 @@ const IconGroup = createClass({
 		 */
 		Box: createClass({
 			displayName: 'IconGroup.Box',
+			propName: ['Box', 'Boxes'],
 		}),
 		Icon: IconBox.Icon,
 	},
@@ -96,7 +97,7 @@ const IconGroup = createClass({
 	handleSelect({ event, props: childProps }) {
 		const { callbackId } = childProps;
 		const clickedIconBoxProps = _.get(
-			findTypes(this.props, IconGroup.IconBox)[callbackId],
+			findTypes(this.props, IconGroup.Box)[callbackId],
 			'props',
 			{}
 		);

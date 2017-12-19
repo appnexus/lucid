@@ -59,5 +59,29 @@ describe('IconGroup', () => {
 				},
 			});
 		});
+
+		it('should trigger `onClick` prop of `IconGroup.Box` when `IconGroup.Box` is clicked', () => {
+			const onSelect = jest.fn();
+			const onChildClick = jest.fn();
+			const event = {};
+			const callbackId = 1;
+			const wrapper = shallow(
+				<IconGroup onSelect={onSelect}>
+					<IconGroup.Box />
+					<IconGroup.Box onClick={onChildClick} />
+				</IconGroup>
+			);
+			const icongroupSelectInstance = wrapper.instance();
+
+			icongroupSelectInstance.handleSelect({
+				event,
+				props: {
+					callbackId,
+					...wrapper.children().at(1).props(),
+				},
+			});
+
+			expect(onChildClick).toHaveBeenCalled();
+		});
 	});
 });

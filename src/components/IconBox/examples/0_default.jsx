@@ -1,12 +1,11 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { IconBox, ClockIcon } from '../../../index';
+import { IconBox } from '../../../index';
 
 export default createClass({
 	render() {
 		return (
 			<IconBox>
-				<IconBox.Icon><ClockIcon /></IconBox.Icon>
 				Default
 			</IconBox>
 		);

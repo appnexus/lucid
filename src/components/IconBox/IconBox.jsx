@@ -39,10 +39,11 @@ const IconBox = createClass({
 
 	components: {
 		/**
-		 * The Custom Icon for your IconBox.
+		 * The Custom Icon for your IconBox. Defaults to a square placeholder.
 		 */
 		Icon: createClass({
 			displayName: 'IconBox.Icon',
+			propName: 'Icon',
 		}),
 	},
 
@@ -163,14 +164,29 @@ const IconBox = createClass({
 		} = this.props;
 
 		const hasOnlyIcon = React.Children.count(children) > 0;
-		const Icon = getFirst(this.props, IconBox.Icon, <IconBox.Icon />).props
-			.children;
+		const iconChildren = getFirst(
+			this.props,
+			IconBox.Icon,
+			<IconBox.Icon>
+				<svg
+					className="lucid-Icon"
+					width="16"
+					height="16"
+					preserveAspectRatio="xMidYMid meet"
+					viewBox="0 0 16 16"
+				>
+					<rect x="0" y="0" width="16" height="16" />
+					<rect x="1" y="1" width="14" height="14" fill="white" />
+				</svg>
+			</IconBox.Icon>
+		).props.children;
 
 		return (
 			<figure
 				{...omitProps(passThroughs, IconBox, [
 					'callbackId',
 					'hasIndeterminate',
+					'Boxes',
 				])}
 				className={cx(
 					'&',
@@ -187,7 +203,7 @@ const IconBox = createClass({
 				disabled={isDisabled}
 				ref="figure"
 			>
-				{Icon}
+				{iconChildren}
 				<figcaption className={cx('&-figcaption')}>
 					{this.getInputComponent()}
 				</figcaption>
