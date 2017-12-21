@@ -53,31 +53,32 @@ const IconBox = createClass({
 		 * Disables the IconBox by greying it out
 		 */
 		isDisabled: bool,
+
 		/**
 		 * Selects the IconBox by checking it's input
 		 */
 		isSelected: bool,
+
 		/**
 		 * Selects the IconBox by setting it's checkbox to the secondary state. Only usable when kind='checkbox'
 		 */
 		isIndeterminate: bool,
+
 		/**
 		 * Class names that are appended to the defaults
 		 */
 		className: string,
-		/**
-		 * Set this to `true` if you want the IconBox to only contain
-		 * an icon.
-		 */
-		hasOnlyIcon: bool,
+
 		/**
 		 * Any valid React children
 		 */
 		children: oneOfType([node, arrayOf(node)]),
+
 		/**
 		 * Style variations of the IconBox
 		 */
 		kind: oneOf(['radio', 'checkbox']),
+
 		/**
 		 * Called when the user clicks the `IconBox`.
 		 *
@@ -101,7 +102,6 @@ const IconBox = createClass({
 			isDisabled: false,
 			isSelected: false,
 			onClick: _.noop,
-			hasOnlyIcon: false,
 		};
 	},
 
@@ -160,11 +160,9 @@ const IconBox = createClass({
 			isSelected,
 			kind,
 			className,
-			children,
 			...passThroughs
 		} = this.props;
 
-		const hasOnlyIcon = React.Children.count(children) > 0;
 		const iconChildren = getFirst(
 			this.props,
 			IconBox.Icon,
@@ -190,7 +188,6 @@ const IconBox = createClass({
 						'&-is-selected': isSelected,
 						'&-checkbox': kind === 'checkbox',
 						'&-radio': kind === 'radio',
-						'&-has-only-icon': hasOnlyIcon,
 					},
 					className
 				)}

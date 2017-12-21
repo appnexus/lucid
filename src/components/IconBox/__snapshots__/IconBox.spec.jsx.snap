@@ -2,7 +2,7 @@
 
 exports[`IconBox [common] example testing should match snapshot(s) for 0_default 1`] = `
 <figure
-  className="lucid-IconBox lucid-IconBox-has-only-icon"
+  className="lucid-IconBox"
   disabled={false}
   onClick={[Function]}
 >
@@ -47,7 +47,7 @@ exports[`IconBox [common] example testing should match snapshot(s) for 0_default
 
 exports[`IconBox [common] example testing should match snapshot(s) for 1_checkbox 1`] = `
 <figure
-  className="lucid-IconBox lucid-IconBox-checkbox lucid-IconBox-has-only-icon"
+  className="lucid-IconBox lucid-IconBox-checkbox"
   disabled={false}
   onClick={[Function]}
 >
@@ -73,7 +73,7 @@ exports[`IconBox [common] example testing should match snapshot(s) for 1_checkbo
 
 exports[`IconBox [common] example testing should match snapshot(s) for 2_radio 1`] = `
 <figure
-  className="lucid-IconBox lucid-IconBox-radio lucid-IconBox-has-only-icon"
+  className="lucid-IconBox lucid-IconBox-radio"
   disabled={false}
   onClick={[Function]}
 >
@@ -98,7 +98,7 @@ exports[`IconBox [common] example testing should match snapshot(s) for 2_radio 1
 
 exports[`IconBox [common] example testing should match snapshot(s) for 3.states 1`] = `
 <figure
-  className="lucid-IconBox lucid-IconBox-checkbox lucid-IconBox-has-only-icon"
+  className="lucid-IconBox lucid-IconBox-checkbox"
   disabled={false}
   onClick={[Function]}
 >
@@ -124,7 +124,7 @@ exports[`IconBox [common] example testing should match snapshot(s) for 3.states 
 
 exports[`IconBox [common] example testing should match snapshot(s) for 3.states 2`] = `
 <figure
-  className="lucid-IconBox lucid-IconBox-is-disabled lucid-IconBox-checkbox lucid-IconBox-has-only-icon"
+  className="lucid-IconBox lucid-IconBox-is-disabled lucid-IconBox-checkbox"
   disabled={true}
   onClick={[Function]}
 >
@@ -150,7 +150,7 @@ exports[`IconBox [common] example testing should match snapshot(s) for 3.states 
 
 exports[`IconBox [common] example testing should match snapshot(s) for 3.states 3`] = `
 <figure
-  className="lucid-IconBox lucid-IconBox-checkbox lucid-IconBox-has-only-icon"
+  className="lucid-IconBox lucid-IconBox-checkbox"
   disabled={false}
   onClick={[Function]}
 >
@@ -176,7 +176,7 @@ exports[`IconBox [common] example testing should match snapshot(s) for 3.states 
 
 exports[`IconBox [common] example testing should match snapshot(s) for 3.states 4`] = `
 <figure
-  className="lucid-IconBox lucid-IconBox-is-selected lucid-IconBox-checkbox lucid-IconBox-has-only-icon"
+  className="lucid-IconBox lucid-IconBox-is-selected lucid-IconBox-checkbox"
   disabled={false}
   onClick={[Function]}
 >
@@ -202,7 +202,7 @@ exports[`IconBox [common] example testing should match snapshot(s) for 3.states 
 
 exports[`IconBox [common] example testing should match snapshot(s) for 7.interactive 1`] = `
 <figure
-  className="lucid-IconBox lucid-IconBox-is-selected lucid-IconBox-checkbox lucid-IconBox-has-only-icon"
+  className="lucid-IconBox lucid-IconBox-is-selected lucid-IconBox-checkbox"
   disabled={false}
   onClick={[Function]}
 >
@@ -228,7 +228,7 @@ exports[`IconBox [common] example testing should match snapshot(s) for 7.interac
 
 exports[`IconBox [common] example testing should match snapshot(s) for 8_no-label 1`] = `
 <figure
-  className="lucid-IconBox lucid-IconBox-has-only-icon"
+  className="lucid-IconBox"
   disabled={false}
   onClick={[Function]}
 >
@@ -249,7 +249,7 @@ exports[`IconBox [common] example testing should match snapshot(s) for 8_no-labe
 
 exports[`IconBox [common] example testing should match snapshot(s) for 9_as-props 1`] = `
 <figure
-  className="lucid-IconBox lucid-IconBox-checkbox lucid-IconBox-has-only-icon"
+  className="lucid-IconBox lucid-IconBox-checkbox"
   disabled={false}
   onClick={[Function]}
 >

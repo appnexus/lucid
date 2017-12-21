@@ -8,7 +8,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 0_state
     callbackId={0}
     className="lucid-IconGroup-IconBox"
     hasIndeterminate={true}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
@@ -25,7 +24,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 0_state
     callbackId={1}
     className="lucid-IconGroup-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
@@ -42,7 +40,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 0_state
     callbackId={2}
     className="lucid-IconGroup-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
@@ -86,7 +83,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 1_radio
     callbackId={0}
     className="lucid-IconGroup-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
@@ -103,7 +99,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 1_radio
     callbackId={1}
     className="lucid-IconGroup-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
@@ -120,7 +115,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 1_radio
     callbackId={2}
     className="lucid-IconGroup-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
@@ -162,7 +156,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 2_state
     callbackId={0}
     className="lucid-IconGroup-IconBox Custom-Class-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={true}
@@ -179,7 +172,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 2_state
     callbackId={1}
     className="lucid-IconGroup-IconBox my-custom-iconbox-class Custom-Class-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
@@ -196,7 +188,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 2_state
     callbackId={2}
     className="lucid-IconGroup-IconBox Custom-Class-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
@@ -213,7 +204,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 2_state
     callbackId={3}
     className="lucid-IconGroup-IconBox Custom-Class-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
@@ -230,7 +220,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 2_state
     callbackId={4}
     className="lucid-IconGroup-IconBox Custom-Class-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
@@ -247,7 +236,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 2_state
     callbackId={5}
     className="lucid-IconGroup-IconBox Custom-Class-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={true}
     isSelected={false}
@@ -264,7 +252,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 2_state
     callbackId={6}
     className="lucid-IconGroup-IconBox Custom-Class-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={true}
     isIndeterminate={true}
     isSelected={false}
@@ -281,7 +268,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 2_state
     callbackId={7}
     className="lucid-IconGroup-IconBox Custom-Class-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={true}
@@ -298,7 +284,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 2_state
     callbackId={8}
     className="lucid-IconGroup-IconBox Custom-Class-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={true}
     isSelected={false}
@@ -315,7 +300,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 2_state
     callbackId={9}
     className="lucid-IconGroup-IconBox Custom-Class-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
@@ -408,7 +392,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 3_as-pr
     callbackId={0}
     className="lucid-IconGroup-IconBox"
     hasIndeterminate={true}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
@@ -423,7 +406,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 3_as-pr
     callbackId={1}
     className="lucid-IconGroup-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
@@ -438,7 +420,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 3_as-pr
     callbackId={2}
     className="lucid-IconGroup-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}
@@ -453,7 +434,6 @@ exports[`IconGroup [common] example testing should match snapshot(s) for 3_as-pr
     callbackId={3}
     className="lucid-IconGroup-IconBox"
     hasIndeterminate={false}
-    hasOnlyIcon={false}
     isDisabled={false}
     isIndeterminate={false}
     isSelected={false}

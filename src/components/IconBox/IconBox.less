@@ -13,8 +13,9 @@
 	box-sizing: border-box;
 	position: relative;
 	align-items: center;
-	padding: 15px 6px;
-	width: 120px;
+	padding: 12px 6px 11px 6px;
+	height: 103px;
+	width: 112px;
 	overflow: hidden;
 
 	&::before {
@@ -30,9 +31,6 @@
     height: 100%;
 	}
 
-	&:not(.lucid-IconBox-checkbox) {
-		padding: 15px 6px;
-	}
 	&:not(.lucid-IconBox-is-disabled):hover,
 	&.lucid-IconBox-is-active {
 		cursor: pointer;
@@ -126,12 +124,19 @@
 
 	.lucid-CheckboxLabeled-label {
 		order: 1;
-		padding: 9px 0;
+		padding: 6px 0;
+	}
+	.lucid-CheckboxLabeled-label {
+		padding-top: 6px;
 	}
 }
 
 // Has Radio Input
 .lucid-IconBox-radio {
+	width: 112px;
+	padding-top: 13px;
+	padding-bottom: 15px;
+
 	.lucid-RadioButton.lucid-IconBox-radio {
 		visibility: hidden;
 		position: absolute;
