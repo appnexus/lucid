@@ -158,6 +158,7 @@ const IconBox = createClass({
 		const {
 			isDisabled,
 			isSelected,
+			isIndeterminate,
 			kind,
 			className,
 			...passThroughs
@@ -185,6 +186,7 @@ const IconBox = createClass({
 					'&',
 					{
 						'&-is-disabled': isDisabled,
+						'&-is-indeterminate': isIndeterminate,
 						'&-is-selected': isSelected,
 						'&-checkbox': kind === 'checkbox',
 						'&-radio': kind === 'radio',

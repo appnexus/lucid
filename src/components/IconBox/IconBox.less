@@ -18,6 +18,7 @@
 	width: 112px;
 	overflow: hidden;
 
+	// Create border that doesn't effect layout
 	&::before {
 		content: '';
 		top: 0;
@@ -31,11 +32,13 @@
     height: 100%;
 	}
 
+	// On Hover, Active, Indeterminate, or Selected
 	&:not(.lucid-IconBox-is-disabled):hover,
-	&.lucid-IconBox-is-active {
+	&.lucid-IconBox-is-active,
+	&.lucid-IconBox-is-selected {
 		cursor: pointer;
 
-		&::before {
+		&:not(.lucid-IconBox-is-indeterminate)::before {
 			border-width: 2px;
 			border-color: @color-primary;
 		}
@@ -45,49 +48,40 @@
 			fill: @color-primary;
 		}
 	}
+	// Is Disabled
+	&.lucid-IconBox-is-disabled {
+		opacity: 0.9;
 
+		&:hover {
+			cursor: not-allowed;
+		}
+
+		.lucid-Icon {
+			fill: @color-gray;
+		}
+	}
+
+	// Label Caption
 	.lucid-IconBox-figcaption {
 		text-align: center;
 	}
 
 	.lucid-IconBox-figcaption,
-	.lucid-IconBox-checkbox.lucid-CheckboxLabeled,
+	.lucid-CheckboxLabeled,
 	.lucid-RadioButtonLabeled {
 		font-size: @size-font;
 		white-space: nowrap;
-		color: @color-darkGray;
 		text-align: center;
 	}
-
-	.lucid-Icon {
-		width: 72px;
-    height: 32px;
-		fill: @color-darkGray;
-		transition: all 0.1s linear;
-	}
 }
 
-// Is selected
-.lucid-IconBox-is-selected {
-	.lucid-Icon {
-		opacity: 1;
-    fill: @color-primary;
-	}
+// Icon
+.lucid-IconBox .lucid-Icon {
+	width: 72px;
+	height: 32px;
+	fill: @color-darkGray;
+	transition: all 0.1s linear;
 }
-
-// Is Disabled
-.lucid-IconBox-is-disabled {
-	opacity: 0.9;
-
-	&:hover {
-		cursor: not-allowed;
-	}
-
-	.lucid-Icon {
-    fill: @color-gray;
-	}
-}
-
 
 // Has a Checkbox Input
 .lucid-IconBox-checkbox {
@@ -118,16 +112,13 @@
 		order: 2;
 	}
 
-	.lucid-CheckboxLabeled > .lucid-Checkbox {
-		margin-right: 0;
-	}
-
 	.lucid-CheckboxLabeled-label {
 		order: 1;
 		padding: 6px 0;
-	}
-	.lucid-CheckboxLabeled-label {
-		padding-top: 6px;
+
+		> .lucid-Checkbox {
+			margin-right: 0;
+		}
 	}
 }
 
