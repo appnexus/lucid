@@ -10,7 +10,17 @@ import { buildHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-IconGroup');
 
-const { any, arrayOf, bool, func, number, oneOf, object } = PropTypes;
+const {
+	arrayOf,
+	bool,
+	func,
+	node,
+	number,
+	object,
+	oneOf,
+	oneOfType,
+	string,
+} = PropTypes;
 
 /**
  *
@@ -33,30 +43,30 @@ const IconGroup = createClass({
 		Icon: IconBox.Icon,
 	},
 
-	reducers: reducers,
+	reducers,
 
 	propTypes: {
 		/**
 		 * Renders an IconBox as props. See IconBox for available props.
 		 */
-		Box: arrayOf(oneOf([object])),
+		Box: oneOfType([node, object]),
 
 		/**
 		 * Renders a collection of IconBoxes as props. See IconBox for available props.
 		 */
-		Boxes: arrayOf(object),
+		Boxes: arrayOf(oneOfType([node, object])),
 
 		/**
 		 * Appended to the component-specific class names set on the root
 		 * element. Value is run through the `classnames` library.
 		 */
-		className: any,
+		className: string,
 
 		/**
 		 * All children should be `IconGroup.IconBox`s and they support the same
 		 * props as `IconBox`s.
 		 */
-		children: any,
+		children: node,
 
 		/**
 		 * A function that is called with the index of the child IconBox clicked.
@@ -144,7 +154,8 @@ const IconGroup = createClass({
 			>
 				{_.map(iconBoxChildProps, (iconBoxChildProp, index) => {
 					const isSelected = _.includes(selectedIndices[0], index);
-					const isIndeterminate = _.includes(selectedIndices[1], index);
+					const isIndeterminate =
+						hasIndeterminate || _.includes(selectedIndices[1], index);
 
 					return (
 						// The order of the spread operator below is important. If the
@@ -157,7 +168,6 @@ const IconGroup = createClass({
 							<IconBox
 								isIndeterminate={isIndeterminate}
 								isSelected={isSelected}
-								hasIndeterminate={hasIndeterminate}
 								{...iconBoxChildProp}
 								className={cx('&-IconBox', iconBoxChildProp.className, {
 									[`${className}-IconBox`]: className,

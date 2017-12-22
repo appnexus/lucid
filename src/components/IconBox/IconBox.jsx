@@ -16,16 +16,7 @@ import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
 
 const cx = lucidClassNames.bind('&-IconBox');
 
-const {
-	arrayOf,
-	bool,
-	func,
-	node,
-	number,
-	oneOf,
-	oneOfType,
-	string,
-} = PropTypes;
+const { bool, func, node, number, oneOf, string } = PropTypes;
 
 /**
  *
@@ -72,7 +63,7 @@ const IconBox = createClass({
 		/**
 		 * Any valid React children
 		 */
-		children: oneOfType([node, arrayOf(node)]),
+		children: node,
 
 		/**
 		 * Style variations of the IconBox
@@ -90,11 +81,6 @@ const IconBox = createClass({
 		 * tabIndex
 		 */
 		tabIndex: number,
-
-		/**
-		 * name
-		 */
-		name: string,
 	},
 
 	getDefaultProps() {
@@ -125,7 +111,6 @@ const IconBox = createClass({
 			isSelected,
 			className,
 			tabIndex,
-			name,
 		} = this.props;
 
 		const Label = rejectTypes(children, IconBox.Icon);
@@ -139,7 +124,6 @@ const IconBox = createClass({
 					isDisabled={isDisabled}
 					isIndeterminate={isIndeterminate}
 					isSelected={isSelected}
-					name={name}
 					tabIndex={tabIndex}
 				/>
 			: <RadioButtonLabeled
@@ -149,7 +133,6 @@ const IconBox = createClass({
 					})}
 					isDisabled={isDisabled}
 					isSelected={isSelected}
-					name={name}
 					tabIndex={tabIndex}
 				/>;
 	},
@@ -195,7 +178,6 @@ const IconBox = createClass({
 				)}
 				onClick={this.handleClick}
 				disabled={isDisabled}
-				ref="figure"
 			>
 				{iconChildren}
 				<figcaption className={cx('&-figcaption')}>
