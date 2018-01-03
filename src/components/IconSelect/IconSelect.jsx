@@ -13,6 +13,16 @@ const cx = lucidClassNames.bind('&-IconSelect');
 
 const { arrayOf, bool, func, node, number, oneOf, string, shape } = PropTypes;
 
+const getFigureParent = domNode => {
+	if (domNode.classList.contains(cx('&-Item'))) {
+		return domNode;
+	}
+	if (domNode === document.body) {
+		throw new Error(`domNode is not a child of .${cx('&-Item')}`);
+	}
+
+	return getFigureParent(domNode.parentElement);
+};
 /**
  *
  * {"categories": ["controls", "selectors"]}
@@ -46,6 +56,8 @@ const IconSelect = createClass({
 				isSelected: bool,
 				isPartial: bool,
 				tabIndex: number,
+				isDisabled: bool,
+				className: string,
 			})
 		).isRequired,
 
@@ -54,7 +66,7 @@ const IconSelect = createClass({
 			* radio input type Item. A 'multiple' select will create a checkbox
 			* input type.
 			*/
-		kind: oneOf(['single', 'multiple']).isRequired,
+		kind: oneOf(['single', 'multiple']),
 
 		/**
 		 * A function that is called with the id of the Item in the IconSelect
@@ -63,19 +75,24 @@ const IconSelect = createClass({
 		 * Signature: `(id, { event }) => {}`
 		 */
 		onSelect: func,
+
+		/**
+			* Disabled all IconSelect Items.
+			*/
+		isDisabled: bool,
 	},
 
 	getDefaultProps() {
 		return {
-			className: null,
-			children: null,
 			kind: 'multiple',
+			isDisabled: false,
+			onSelect: _.noop,
 		};
 	},
 
 	handleClick(event) {
 		if (!this.props.isDisabled) {
-			const domNode = event.target;
+			const domNode = getFigureParent(event.target);
 			const id = domNode.dataset.id;
 
 			domNode.focus();

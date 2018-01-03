@@ -46,6 +46,9 @@ describe('IconSelect', () => {
 			const onIconSelectClick = jest.fn();
 			const mockEvent = {
 				target: {
+					classList: {
+						contains: () => true,
+					},
 					focus: onIconSelect,
 					hasAttribute: () => false,
 					dataset: {
@@ -57,10 +60,17 @@ describe('IconSelect', () => {
 				<IconSelect items={items} onSelect={onIconSelectClick} />
 			);
 			const onClickEvent = wrapper.instance();
+
 			onClickEvent.handleClick(mockEvent);
 
 			expect(onIconSelect).toHaveBeenCalled();
-			expect(onIconSelectClick).toHaveBeenCalled();
+			expect(onIconSelectClick).toHaveBeenCalledWith(
+				'test',
+				expect.objectContaining({
+					event: expect.anything(),
+					props: expect.anything(),
+				})
+			);
 		});
 
 		it('should not use onClick if disabled', () => {
