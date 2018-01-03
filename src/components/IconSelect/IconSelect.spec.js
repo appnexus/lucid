@@ -3,7 +3,7 @@ import assert from 'assert';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
 
-import { common, controls } from '../../util/generic-tests';
+import { common } from '../../util/generic-tests';
 import IconSelect from './IconSelect';
 
 const items = [
@@ -21,11 +21,6 @@ const items = [
 
 describe('IconSelect', () => {
 	common(IconSelect);
-	// controls(IconSelect, {
-	// 	callbackName: 'onSelct',
-	// 	controlSelector: '.lucid-IconSelect',
-	// 	eventType: 'click',
-	// });
 
 	it('prop children', () => {
 		const wrapper = shallow(
