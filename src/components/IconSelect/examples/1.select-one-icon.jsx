@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import createClass from 'create-react-class';
 import { IconSelect, ClockIcon } from '../../../index';
@@ -15,23 +16,37 @@ export default createClass({
 	},
 
 	render() {
+		const items = [
+			{
+				id: 'item1',
+				icon: <ClockIcon />,
+				label: 'Foo Bar',
+			},
+			{
+				id: 'item2',
+				icon: <ClockIcon />,
+				label: 'Bax Tar',
+			},
+		];
+
 		return (
 			<IconSelect
 				kind="single" // renders as radio buttons
 				selectedIcon={this.state.selectedIcon}
 				onSelect={this.handleSelect}
-				items={[
-					{
-						id: 'item1',
-						icon: <ClockIcon />,
-						label: 'Foo Bar',
-					},
-					{
-						id: 'item2',
-						icon: <ClockIcon />,
-						label: 'Bax Tar',
-					},
-				]}
+				items={_.map(
+					items,
+					(item, index) =>
+						(_.isEqual(item.id, this.state.selectedIcon)
+							? {
+									...item,
+									isSelected: true,
+								}
+							: {
+									...item,
+									isSelected: false,
+								})
+				)}
 			/>
 		);
 	},

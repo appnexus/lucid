@@ -24,35 +24,47 @@ export default createClass({
 	handleSelect(id) {
 		const selectedIcons = this.state.selectedIcons;
 
-		// if partially selected, then set `isPartial` to false (making it fully selected)
-		if (selectedIcons.find(isPartial('item1'))) {
-			this.setState({
-				selectedIcons: selectedIcons.filter(isNot(id)).concat({
-					id,
-					isPartial: false,
-				}),
-			});
-
-			// else if fully selected, then remove from list (unselecting it)
-		} else if (selectedIcons.find(hasId(id))) {
-			this.setState({
+		if (selectedIcons.find(isPartial(id))) {
+			// if it is already a partial, remove from the list
+			return this.setState({
 				selectedIcons: selectedIcons.filter(isNot(id)),
 			});
+		} else if (selectedIcons.find(hasId(id))) {
+			// if already selected, set to partial
+			return this.setState({
+				selectedIcons: selectedIcons.map((item, index) => {
+					if (item.id === id) {
+						return {
+							...item,
+							isPartial: true,
+						};
+					}
 
-			// else, add it to the list with `isPartial` set to true (partially selecting it)
+					return item;
+				}),
+			});
 		} else {
+			// select icon
 			this.setState({
 				selectedIcons: selectedIcons.concat({
 					id,
-					isPartial: true,
+					isPartial: false,
 				}),
 			});
 		}
 	},
 
-	render() {
+	handleFind(selection) {
 		const selectedIcons = this.state.selectedIcons;
 
+		if (typeof selectedIcons.find(selection) !== 'undefined') {
+			return true;
+		}
+
+		return false;
+	},
+
+	render() {
 		return (
 			<IconSelect
 				kind="multiple" // renders as checkboxes
@@ -61,15 +73,15 @@ export default createClass({
 					{
 						id: 'item1',
 						icon: <ClockIcon />,
-						isSelected: selectedIcons.find(hasId('item1')),
-						isPartial: selectedIcons.find(isPartial('item1')),
+						isSelected: this.handleFind(hasId('item1')),
+						isPartial: this.handleFind(isPartial('item1')),
 						label: 'Foo Bar',
 					},
 					{
 						id: 'item2',
 						icon: <ClockIcon />,
-						isSelected: selectedIcons.find(hasId('item2')),
-						isPartial: selectedIcons.find(isPartial('item2')),
+						isSelected: this.handleFind(hasId('item2')),
+						isPartial: this.handleFind(isPartial('item2')),
 						label: 'Bax Tar',
 					},
 				]}
