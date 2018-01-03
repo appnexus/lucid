@@ -57,11 +57,10 @@ describe('IconSelect', () => {
 				<IconSelect items={items} onSelect={onIconSelectClick} />
 			);
 			const onClickEvent = wrapper.instance();
-
 			onClickEvent.handleClick(mockEvent);
 
 			expect(onIconSelect).toHaveBeenCalled();
-			expect(onIconSelectClick).toHaveBeenCalledWith('test');
+			expect(onIconSelectClick).toHaveBeenCalled();
 		});
 
 		it('should not use onClick if disabled', () => {
