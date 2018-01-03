@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconSelect [common] example testing should match snapshot(s) for 1.select-one-icon 1`] = `
+<span
+  className="lucid-IconSelect"
+>
+  <figure
+    className="lucid-IconSelect-Item lucid-IconSelect-Item-single"
+    data-id="item1"
+    key="iconselectitem_0"
+    onClick={[Function]}
+  >
+    <ClockIcon />
+    <figcaption
+      className="lucid-IconSelect-Item-figcaption"
+    >
+      <RadioButtonLabeled
+        Label="Foo Bar"
+        className="lucid-IconSelect-Item-radio"
+        isDisabled={false}
+        isSelected={false}
+        onSelect={[Function]}
+      />
+    </figcaption>
+  </figure>
+  <figure
+    className="lucid-IconSelect-Item lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-single"
+    data-id="item2"
+    key="iconselectitem_1"
+    onClick={[Function]}
+  >
+    <ClockIcon />
+    <figcaption
+      className="lucid-IconSelect-Item-figcaption"
+    >
+      <RadioButtonLabeled
+        Label="Bax Tar"
+        className="lucid-IconSelect-Item-radio"
+        isDisabled={false}
+        isSelected={true}
+        onSelect={[Function]}
+      />
+    </figcaption>
+  </figure>
+</span>
+`;
+
+exports[`IconSelect [common] example testing should match snapshot(s) for 2.select-multiple-icons 1`] = `
+<span
+  className="lucid-IconSelect"
+>
+  <figure
+    className="lucid-IconSelect-Item lucid-IconSelect-Item-multi"
+    data-id="item1"
+    key="iconselectitem_0"
+    onClick={[Function]}
+  >
+    <ClockIcon />
+    <figcaption
+      className="lucid-IconSelect-Item-figcaption"
+    >
+      <CheckboxLabeled
+        Label="Foo Bar"
+        className="lucid-IconSelect-Item-checkbox"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
+      />
+    </figcaption>
+  </figure>
+  <figure
+    className="lucid-IconSelect-Item lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-multi"
+    data-id="item2"
+    key="iconselectitem_1"
+    onClick={[Function]}
+  >
+    <ClockIcon />
+    <figcaption
+      className="lucid-IconSelect-Item-figcaption"
+    >
+      <CheckboxLabeled
+        Label="Bax Tar"
+        className="lucid-IconSelect-Item-checkbox"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={true}
+        onSelect={[Function]}
+      />
+    </figcaption>
+  </figure>
+</span>
+`;
+
+exports[`IconSelect [common] example testing should match snapshot(s) for 3.partially-select-icons 1`] = `
+<span
+  className="lucid-IconSelect"
+>
+  <figure
+    className="lucid-IconSelect-Item lucid-IconSelect-Item-multi"
+    data-id="item1"
+    key="iconselectitem_0"
+    onClick={[Function]}
+  >
+    <ClockIcon />
+    <figcaption
+      className="lucid-IconSelect-Item-figcaption"
+    >
+      <CheckboxLabeled
+        Label="Foo Bar"
+        className="lucid-IconSelect-Item-checkbox"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
+      />
+    </figcaption>
+  </figure>
+  <figure
+    className="lucid-IconSelect-Item lucid-IconSelect-Item-is-partial lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-multi"
+    data-id="item2"
+    key="iconselectitem_1"
+    onClick={[Function]}
+  >
+    <ClockIcon />
+    <figcaption
+      className="lucid-IconSelect-Item-figcaption"
+    >
+      <CheckboxLabeled
+        Label="Bax Tar"
+        className="lucid-IconSelect-Item-checkbox"
+        isDisabled={false}
+        isIndeterminate={true}
+        isSelected={true}
+        onSelect={[Function]}
+      />
+    </figcaption>
+  </figure>
+</span>
+`;
+
+exports[`IconSelect [common] example testing should match snapshot(s) for 4.disabled-icon-select 1`] = `
+<span
+  className="lucid-IconSelect"
+>
+  <figure
+    className="lucid-IconSelect-Item lucid-IconSelect-Item-is-disabled lucid-IconSelect-Item-multi"
+    data-id="item1"
+    disabled={true}
+    key="iconselectitem_0"
+    onClick={[Function]}
+  >
+    <ClockIcon />
+    <figcaption
+      className="lucid-IconSelect-Item-figcaption"
+    >
+      <CheckboxLabeled
+        Label="Always Disabled"
+        className="lucid-IconSelect-Item-checkbox"
+        isDisabled={true}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
+      />
+    </figcaption>
+  </figure>
+  <figure
+    className="lucid-IconSelect-Item lucid-IconSelect-Item-is-disabled lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-multi"
+    data-id="item2"
+    disabled={true}
+    key="iconselectitem_1"
+    onClick={[Function]}
+  >
+    <ClockIcon />
+    <figcaption
+      className="lucid-IconSelect-Item-figcaption"
+    >
+      <CheckboxLabeled
+        Label="Bax Tar"
+        className="lucid-IconSelect-Item-checkbox"
+        isDisabled={true}
+        isIndeterminate={false}
+        isSelected={true}
+        onSelect={[Function]}
+      />
+    </figcaption>
+  </figure>
+</span>
+`;

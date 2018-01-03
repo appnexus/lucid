@@ -1,0 +1,143 @@
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
+@IconGroup_margin: 9px;
+@iconBoxFontSize: 14px;
+
+.lucid-IconSelect {
+	display: inline-flex;
+	flex-wrap: wrap;
+
+	> figure:not(:last-of-type) {
+		margin: 0 @IconGroup_margin @IconGroup_margin 0;
+	}
+}
+
+// Base Iconbox
+.lucid-IconSelect-Item {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 0;
+	box-sizing: border-box;
+	position: relative;
+	align-items: center;
+	padding: 12px 6px 11px 6px;
+	height: 103px;
+	width: 112px;
+	overflow: hidden;
+
+	// Create border that doesn't effect layout
+	&::before {
+		content: '';
+		top: 0;
+		left: 0;
+		position: absolute;
+		border: 1px solid @color-gray;
+		border-radius: 4px;
+		transition: all 0.1s linear;
+		margin-right: 18px;
+		width: 100%;
+    height: 100%;
+	}
+
+	// On Hover, Active, Indeterminate, or Selected
+	&:not(.lucid-IconSelect-Item-is-disabled):hover,
+	&.lucid-IconSelect-Item-is-active,
+	&.lucid-IconSelect-Item-is-selected {
+		cursor: pointer;
+
+		&:not(.lucid-IconSelect-Item-is-indeterminate)::before {
+			border-width: 2px;
+			border-color: @color-primary;
+		}
+
+		.lucid-Icon {
+			opacity: 1;
+			fill: @color-primary;
+		}
+	}
+	// Is Disabled
+	&.lucid-IconSelect-Item-is-disabled {
+		opacity: 0.9;
+
+		&:hover {
+			cursor: not-allowed;
+		}
+
+		.lucid-Icon {
+			fill: @color-gray;
+		}
+	}
+
+	// Label Caption
+	.lucid-IconSelect-Item-figcaption {
+		text-align: center;
+	}
+
+	.lucid-IconSelect-Item-figcaption,
+	.lucid-CheckboxLabeled,
+	.lucid-RadioButtonLabeled {
+		font-size: @size-font;
+		white-space: nowrap;
+		text-align: center;
+	}
+}
+
+// Icon
+.lucid-IconSelect-Item .lucid-Icon {
+	width: 72px;
+	height: 32px;
+	fill: @color-darkGray;
+	transition: all 0.1s linear;
+}
+
+// Has a Checkbox Input
+.lucid-IconSelect-Item-checkbox {
+	&.lucid-IconSelect-Item-is-active,
+	&:active {
+		.lucid-Checkbox-visualization-container {
+			background: @color-primary;
+		}
+	}
+	&:not(.lucid-IconSelect-Item-is-disabled):hover,
+	&.lucid-IconSelect-Item-is-active {
+		.lucid-Checkbox-visualization-glow {
+			opacity: 0.3;
+			transform: scale(1.375);
+		}
+		.lucid-Checkbox-visualization-container {
+			border-color: @color-primary;
+		}
+	}
+	&.lucid-CheckboxLabeled {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.lucid-CheckboxLabeled-Checkbox {
+		order: 2;
+	}
+
+	.lucid-CheckboxLabeled-label {
+		order: 1;
+		padding: 6px 0;
+
+		> .lucid-Checkbox {
+			margin-right: 0;
+		}
+	}
+}
+
+// Has Radio Input
+.lucid-IconSelect-Item-radio {
+	width: 112px;
+	padding-top: 13px;
+	padding-bottom: 15px;
+
+	.lucid-RadioButton.lucid-IconSelect-Item-radio {
+		visibility: hidden;
+		position: absolute;
+	}
+}
