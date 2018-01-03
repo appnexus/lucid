@@ -1,7 +1,6 @@
 import React from 'react';
 import assert from 'assert';
 import { shallow } from 'enzyme';
-import sinon from 'sinon';
 
 import { common } from '../../util/generic-tests';
 import IconSelect from './IconSelect';
@@ -41,25 +40,55 @@ describe('IconSelect', () => {
 		);
 	});
 
-	describe.skip('IconSelect Events', () => {
+	describe('IconSelect Events', () => {
 		it('should call the onClick handler when clicked', () => {
-			const onIconSelectClick = sinon.spy();
+			const onIconSelect = jest.fn();
+			const onIconSelectClick = jest.fn();
+			const mockEvent = {
+				target: {
+					focus: onIconSelect,
+					hasAttribute: () => false,
+					dataset: {
+						id: 'test',
+					},
+				},
+			};
 			const wrapper = shallow(
 				<IconSelect items={items} onSelect={onIconSelectClick} />
 			);
+			const onClickEvent = wrapper.instance();
 
-			wrapper.find(wrapper.children().at(0)).simulate('click');
-			assert(onIconSelectClick.calledOnce);
+			onClickEvent.handleClick(mockEvent);
+
+			expect(onIconSelect).toHaveBeenCalled();
+			expect(onIconSelectClick).toHaveBeenCalledWith('test');
 		});
 
 		it('should not use onClick if disabled', () => {
-			const onIconSelectClick = sinon.spy();
+			const onIconSelect = jest.fn();
+			const onIconSelectClick = jest.fn();
+			const mockEvent = {
+				target: {
+					focus: onIconSelect,
+					hasAttribute: () => true,
+					dataset: {
+						id: 'test',
+					},
+				},
+			};
 			const wrapper = shallow(
-				<IconSelect isDisabled={true} onSelect={onIconSelectClick} />
+				<IconSelect
+					items={items}
+					isDisabled={true}
+					onSelect={onIconSelectClick}
+				/>
 			);
+			const onClickEvent = wrapper.instance();
 
-			wrapper.find(wrapper.children().at(0)).simulate('click');
-			assert(!onIconSelectClick.calledOnce);
+			onClickEvent.handleClick(mockEvent);
+
+			expect(onIconSelect).not.toHaveBeenCalled();
+			expect(onIconSelectClick).not.toHaveBeenCalled();
 		});
 	});
 });

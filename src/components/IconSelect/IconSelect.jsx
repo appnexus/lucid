@@ -73,13 +73,16 @@ const IconSelect = createClass({
 		};
 	},
 
-	handleClick(id) {
-		return event => {
+	handleClick(event) {
+		if (!this.props.isDisabled) {
 			const domNode = event.target;
-			domNode.focus();
+			const id = domNode.dataset.id;
 
-			this.props.onSelect(id, { event });
-		};
+			domNode.focus();
+			if (!domNode.hasAttribute('disabled')) {
+				this.props.onSelect(id, { event, props: this.props });
+			}
+		}
 	},
 
 	getChildIcon(icon) {
@@ -92,8 +95,7 @@ const IconSelect = createClass({
 	},
 
 	getInputComponent(item) {
-		const { kind, className } = this.props;
-		const { isDisabled, isPartial, isSelected, tabIndex } = item;
+		const { kind, className, isDisabled } = this.props;
 		const Label = item.label;
 		const singleSelect = _.isEqual(kind, 'single');
 
@@ -103,24 +105,31 @@ const IconSelect = createClass({
 					className={cx('&-Item-radio', {
 						[`${className}-radio`]: className,
 					})}
-					isDisabled={isDisabled}
-					isSelected={isSelected}
-					tabIndex={tabIndex}
+					isDisabled={isDisabled || item.isDisabled}
+					isSelected={item.isSelected}
+					tabIndex={item.tabIndex}
 				/>
 			: <CheckboxLabeled
 					Label={Label}
 					className={cx('&-Item-checkbox', {
 						[`${className}-checkbox`]: className,
 					})}
-					isDisabled={isDisabled}
-					isIndeterminate={isPartial}
-					isSelected={isSelected}
-					tabIndex={tabIndex}
+					isDisabled={isDisabled || item.isDisabled}
+					isIndeterminate={item.isPartial}
+					isSelected={item.isSelected}
+					tabIndex={item.tabIndex}
 				/>;
 	},
 
 	render() {
-		const { className, children, kind, items, ...passThroughs } = this.props;
+		const {
+			className,
+			children,
+			kind,
+			items,
+			isDisabled,
+			...passThroughs
+		} = this.props;
 
 		return (
 			<span
@@ -133,14 +142,15 @@ const IconSelect = createClass({
 							key={`iconselectitem_${index}`}
 							className={cx('&-Item', childItem.className, {
 								[`${className}-Item`]: className,
-								'&-Item-is-disabled': childItem.isDisabled,
+								'&-Item-is-disabled': isDisabled || childItem.isDisabled,
 								'&-Item-is-partial': childItem.isPartial,
 								'&-Item-is-selected': childItem.isSelected,
 								'&-Item-multi': kind === 'multiple',
 								'&-Item-single': kind === 'single',
 							})}
-							onClick={this.handleClick(childItem.id)}
-							disabled={childItem.isDisabled}
+							data-id={childItem.id}
+							onClick={this.handleClick}
+							disabled={isDisabled || childItem.isDisabled}
 						>
 							{this.getChildIcon(childItem.icon)}
 							<figcaption className={cx('&-Item-figcaption')}>
