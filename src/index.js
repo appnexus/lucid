@@ -7,7 +7,6 @@ import ButtonGroup, {
 	ButtonGroupDumb,
 } from './components/ButtonGroup/ButtonGroup';
 import IconSelect from './components/IconSelect/IconSelect';
-import IconGroup, { IconGroupDumb } from './components/IconGroup/IconGroup';
 import SearchableSelect, {
 	SearchableSelectDumb,
 } from './components/SearchableSelect/SearchableSelect';
@@ -96,7 +95,6 @@ import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
 import Grid from './components/Grid/Grid';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
-import IconBox from './components/IconBox/IconBox';
 import Icon from './components/Icon/Icon';
 import ImageIcon from './components/Icon/ImageIcon/ImageIcon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
@@ -263,10 +261,7 @@ export {
 	HelpIcon,
 	HomeIcon,
 	Icon,
-	IconBox,
 	IconSelect,
-	IconGroup,
-	IconGroupDumb,
 	ImageIcon,
 	InfoIcon,
 	InfoLightIcon,

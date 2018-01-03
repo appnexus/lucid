@@ -32,7 +32,6 @@ export default createClass({
 		return (
 			<IconSelect
 				kind="single" // renders as radio buttons
-				selectedIcon={this.state.selectedIcon}
 				onSelect={this.handleSelect}
 				items={_.map(
 					items,
