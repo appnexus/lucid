@@ -2,86 +2,66 @@ import React from 'react';
 import createClass from 'create-react-class';
 import { IconSelect, ClockIcon } from '../../../index';
 
-const hasId = subject => {
-	return ({ id }) => id === subject;
-};
-
-const isNot = subject => {
-	return ({ id }) => id !== subject;
-};
-
-const isPartial = subject => {
-	return ({ id, isPartial }) => id === subject && isPartial;
-};
-
 export default createClass({
 	getInitialState() {
 		return {
-			selectedIcons: [],
+			selectedIcons: [{ id: 'item2', isPartial: true }],
 		};
 	},
 
-	handleSelect(id) {
-		const selectedIcons = this.state.selectedIcons;
-
-		if (selectedIcons.find(isPartial(id))) {
-			// if it is already a partial, remove from the list
-			return this.setState({
-				selectedIcons: selectedIcons.filter(isNot(id)),
-			});
-		} else if (selectedIcons.find(hasId(id))) {
-			// if already selected, set to partial
-			return this.setState({
-				selectedIcons: selectedIcons.map((item, index) => {
-					if (item.id === id) {
-						return {
-							...item,
-							isPartial: true,
-						};
-					}
-
-					return item;
-				}),
-			});
-		} else {
-			// select icon
-			this.setState({
-				selectedIcons: selectedIcons.concat({
-					id,
-					isPartial: false,
-				}),
-			});
-		}
+	isSelected(id) {
+		return this.state.selectedIcons.some(
+			({ id: selectedId }) => id === selectedId
+		);
 	},
 
-	handleFind(selection) {
+	isPartiallySelected(id) {
+		return this.state.selectedIcons.some(
+			({ id: selectedId, isPartial }) => id === selectedId && isPartial
+		);
+	},
+
+	handleSelect(selectedId) {
 		const selectedIcons = this.state.selectedIcons;
 
-		if (typeof selectedIcons.find(selection) !== 'undefined') {
-			return true;
+		if (this.isPartiallySelected(selectedId)) {
+			// if partially selected, remove from the list
+			this.setState({
+				selectedIcons: selectedIcons.filter(({ id }) => id !== selectedId),
+			});
+		} else if (this.isSelected(selectedId)) {
+			// if already selected, ensure isPartial is true
+			this.setState({
+				selectedIcons: selectedIcons.map(({ id, isPartial }) => ({
+					id,
+					isPartial: isPartial || id === selectedId,
+				})),
+			});
+		} else {
+			// add selected icon to list
+			this.setState({
+				selectedIcons: [...selectedIcons, { id: selectedId, isPartial: false }],
+			});
 		}
-
-		return false;
 	},
 
 	render() {
 		return (
 			<IconSelect
-				kind="multiple" // renders as checkboxes
 				onSelect={this.handleSelect}
 				items={[
 					{
 						id: 'item1',
 						icon: <ClockIcon />,
-						isSelected: this.handleFind(hasId('item1')),
-						isPartial: this.handleFind(isPartial('item1')),
+						isSelected: this.isSelected('item1'),
+						isPartial: this.isPartiallySelected('item1'),
 						label: 'Foo Bar',
 					},
 					{
 						id: 'item2',
 						icon: <ClockIcon />,
-						isSelected: this.handleFind(hasId('item2')),
-						isPartial: this.handleFind(isPartial('item2')),
+						isSelected: this.isSelected('item2'),
+						isPartial: this.isPartiallySelected('item2'),
 						label: 'Bax Tar',
 					},
 				]}

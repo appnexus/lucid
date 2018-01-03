@@ -1,73 +1,72 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { ClockIcon, IconSelect, Switch } from '../../../index';
-
-const isNot = subject => {
-	return object => object !== subject;
-};
+import { IconSelect, ClockIcon, SwitchLabeled } from '../../../index';
 
 export default createClass({
 	getInitialState() {
 		return {
-			selectedIcons: [],
-			setDisabled: true,
+			selectedIcons: ['item2'],
+			isDisabled: true,
 		};
 	},
 
-	toggleDisabled() {
-		this.setState({
-			setDisabled: !this.state.setDisabled,
-		});
+	isSelected(id) {
+		return this.state.selectedIcons.includes(id);
 	},
 
-	handleSelect(id) {
+	handleSelect(selectedId) {
 		const selectedIcons = this.state.selectedIcons;
 
-		// if selected, then remove it from `selectedIcons`
-		if (selectedIcons.includes(id)) {
+		// if selected, then remove from list
+		if (this.isSelected(selectedId)) {
 			this.setState({
-				selectedIcons: selectedIcons.filter(isNot(id)),
+				selectedIcons: selectedIcons.filter(id => id !== selectedId),
 			});
-
-			// else, add it to `selectedIcons`
 		} else {
+			// add it to list
 			this.setState({
-				selectedIcons: selectedIcons.concat(id),
+				selectedIcons: [...selectedIcons, selectedId],
 			});
 		}
 	},
 
+	handleToggleDisabled() {
+		this.setState({
+			isDisabled: !this.state.isDisabled,
+		});
+	},
+
 	render() {
-		const { selectedIcons, setDisabled } = this.state;
+		const { isDisabled } = this.state;
 
 		return (
-			<div>
-				<div style={{ clear: 'both' }}>
-					<label>Toggle IconSelect</label>
-					<Switch isSelected={setDisabled} onSelect={this.toggleDisabled} />
-				</div>
+			<section>
+				<SwitchLabeled
+					Label={`IconSelect ${isDisabled ? 'Disabled' : 'Enabled'}`}
+					isSelected={!isDisabled}
+					onSelect={this.handleToggleDisabled}
+				/>
 
 				<IconSelect
-					kind="multiple" // renders as checkboxes
+					isDisabled={isDisabled}
 					onSelect={this.handleSelect}
-					isDisabled={setDisabled}
 					items={[
 						{
 							id: 'item1',
 							icon: <ClockIcon />,
-							isSelected: selectedIcons.includes('item1'),
-							label: 'Foo Bar',
+							isSelected: this.isSelected('item1'),
+							label: 'Always Disabled',
 							isDisabled: true,
 						},
 						{
 							id: 'item2',
 							icon: <ClockIcon />,
-							isSelected: selectedIcons.includes('item2'),
+							isSelected: this.isSelected('item2'),
 							label: 'Bax Tar',
 						},
 					]}
 				/>
-			</div>
+			</section>
 		);
 	},
 });

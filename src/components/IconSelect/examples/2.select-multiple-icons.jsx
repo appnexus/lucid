@@ -2,52 +2,49 @@ import React from 'react';
 import createClass from 'create-react-class';
 import { IconSelect, ClockIcon } from '../../../index';
 
-const isNot = subject => {
-	return object => object !== subject;
-};
-
 export default createClass({
 	getInitialState() {
 		return {
-			selectedIcons: [],
+			selectedIcons: ['item2'],
 		};
 	},
 
-	handleSelect(id) {
+	isSelected(id) {
+		return this.state.selectedIcons.includes(id);
+	},
+
+	handleSelect(selectedId) {
 		const selectedIcons = this.state.selectedIcons;
 
-		// if selected, then remove it from `selectedIcons`
-		if (selectedIcons.includes(id)) {
+		// if selected, then remove from list
+		if (this.isSelected(selectedId)) {
 			this.setState({
-				selectedIcons: selectedIcons.filter(isNot(id)),
+				selectedIcons: selectedIcons.filter(id => id !== selectedId),
 			});
-
-			// else, add it to `selectedIcons`
 		} else {
+			// add it to list
 			this.setState({
-				selectedIcons: selectedIcons.concat(id),
+				selectedIcons: [...selectedIcons, selectedId],
 			});
 		}
 	},
 
 	render() {
-		const selectedIcons = this.state.selectedIcons;
-
 		return (
 			<IconSelect
-				kind="multiple" // renders as checkboxes
+				kind="multiple" // default value, renders as checkboxes
 				onSelect={this.handleSelect}
 				items={[
 					{
 						id: 'item1',
 						icon: <ClockIcon />,
-						isSelected: selectedIcons.includes('item1'),
+						isSelected: this.isSelected('item1'),
 						label: 'Foo Bar',
 					},
 					{
 						id: 'item2',
 						icon: <ClockIcon />,
-						isSelected: selectedIcons.includes('item2'),
+						isSelected: this.isSelected('item2'),
 						label: 'Bax Tar',
 					},
 				]}
