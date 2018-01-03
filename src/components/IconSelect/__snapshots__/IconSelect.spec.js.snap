@@ -24,7 +24,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 1.sele
     </figcaption>
   </figure>
   <figure
-    className="lucid-IconSelect-Item lucid-IconSelect-Item-single"
+    className="lucid-IconSelect-Item lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-single"
     data-id="item2"
     key="iconselectitem_1"
     onClick={[Function]}
@@ -37,7 +37,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 1.sele
         Label="Bax Tar"
         className="lucid-IconSelect-Item-radio"
         isDisabled={false}
-        isSelected={false}
+        isSelected={true}
         onSelect={[Function]}
       />
     </figcaption>
@@ -70,7 +70,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 2.sele
     </figcaption>
   </figure>
   <figure
-    className="lucid-IconSelect-Item lucid-IconSelect-Item-multi"
+    className="lucid-IconSelect-Item lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-multi"
     data-id="item2"
     key="iconselectitem_1"
     onClick={[Function]}
@@ -84,7 +84,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 2.sele
         className="lucid-IconSelect-Item-checkbox"
         isDisabled={false}
         isIndeterminate={false}
-        isSelected={false}
+        isSelected={true}
         onSelect={[Function]}
       />
     </figcaption>
@@ -117,7 +117,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 3.part
     </figcaption>
   </figure>
   <figure
-    className="lucid-IconSelect-Item lucid-IconSelect-Item-multi"
+    className="lucid-IconSelect-Item lucid-IconSelect-Item-is-partial lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-multi"
     data-id="item2"
     key="iconselectitem_1"
     onClick={[Function]}
@@ -130,8 +130,8 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 3.part
         Label="Bax Tar"
         className="lucid-IconSelect-Item-checkbox"
         isDisabled={false}
-        isIndeterminate={false}
-        isSelected={false}
+        isIndeterminate={true}
+        isSelected={true}
         onSelect={[Function]}
       />
     </figcaption>
@@ -155,7 +155,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 4.disa
       className="lucid-IconSelect-Item-figcaption"
     >
       <CheckboxLabeled
-        Label="Foo Bar"
+        Label="Always Disabled"
         className="lucid-IconSelect-Item-checkbox"
         isDisabled={true}
         isIndeterminate={false}
@@ -165,7 +165,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 4.disa
     </figcaption>
   </figure>
   <figure
-    className="lucid-IconSelect-Item lucid-IconSelect-Item-is-disabled lucid-IconSelect-Item-multi"
+    className="lucid-IconSelect-Item lucid-IconSelect-Item-is-disabled lucid-IconSelect-Item-is-selected lucid-IconSelect-Item-multi"
     data-id="item2"
     disabled={true}
     key="iconselectitem_1"
@@ -180,7 +180,7 @@ exports[`IconSelect [common] example testing should match snapshot(s) for 4.disa
         className="lucid-IconSelect-Item-checkbox"
         isDisabled={true}
         isIndeterminate={false}
-        isSelected={false}
+        isSelected={true}
         onSelect={[Function]}
       />
     </figcaption>
