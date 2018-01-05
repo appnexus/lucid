@@ -24,7 +24,7 @@
 	align-items: center;
 	padding: 12px 6px 11px 6px;
 	height: 103px;
-	width: 112px;
+	width: 120px;
 	overflow: hidden;
 
 	// Create border that doesn't effect layout
@@ -38,7 +38,8 @@
 		transition: all 0.1s linear;
 		margin-right: 18px;
 		width: 100%;
-    height: 100%;
+		height: 100%;
+		box-sizing: border-box;
 	}
 
 	// On Hover, Active, Indeterminate, or Selected
@@ -56,7 +57,23 @@
 			opacity: 1;
 			fill: @color-primary;
 		}
+
+		.lucid-Checkbox-visualization-glow {
+			opacity: 0.3;
+			transform: scale(1.375);
+		}
+		.lucid-Checkbox-visualization-container {
+			border-color: @color-primary;
+		}
 	}
+
+	&.lucid-IconSelect-Item-is-active,
+	&:active {
+		.lucid-Checkbox-visualization-container {
+			background: @color-primary;
+		}
+	}
+
 	// Is Disabled
 	&.lucid-IconSelect-Item-is-disabled {
 		opacity: 0.9;
@@ -94,22 +111,6 @@
 
 // Has a Checkbox Input
 .lucid-IconSelect-Item-checkbox {
-	&.lucid-IconSelect-Item-is-active,
-	&:active {
-		.lucid-Checkbox-visualization-container {
-			background: @color-primary;
-		}
-	}
-	&:not(.lucid-IconSelect-Item-is-disabled):hover,
-	&.lucid-IconSelect-Item-is-active {
-		.lucid-Checkbox-visualization-glow {
-			opacity: 0.3;
-			transform: scale(1.375);
-		}
-		.lucid-Checkbox-visualization-container {
-			border-color: @color-primary;
-		}
-	}
 	&.lucid-CheckboxLabeled {
 		display: flex;
 		flex-direction: column;
