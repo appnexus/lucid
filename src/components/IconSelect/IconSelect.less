@@ -23,8 +23,7 @@
 	position: relative;
 	align-items: center;
 	padding: 12px 6px 11px 6px;
-	height: 103px;
-	width: 112px;
+	width: 120px;
 	overflow: hidden;
 
 	// Create border that doesn't effect layout
@@ -38,7 +37,9 @@
 		transition: all 0.1s linear;
 		margin-right: 18px;
 		width: 100%;
-    height: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		margin: 0;
 	}
 
 	// On Hover, Active, Indeterminate, or Selected
@@ -56,23 +57,21 @@
 			opacity: 1;
 			fill: @color-primary;
 		}
-	}
-	// Is Disabled
-	&.lucid-IconSelect-Item-is-disabled {
-		opacity: 0.9;
 
-		&:hover {
-			cursor: not-allowed;
+		.lucid-Checkbox-visualization-glow {
+			opacity: 0.3;
+			transform: scale(1.375);
 		}
-
-		.lucid-Icon {
-			fill: @color-gray;
+		.lucid-Checkbox-visualization-container {
+			border-color: @color-primary;
 		}
 	}
 
-	// Label Caption
-	.lucid-IconSelect-Item-figcaption {
-		text-align: center;
+	&.lucid-IconSelect-Item-is-active,
+	&:active {
+		.lucid-Checkbox-visualization-container {
+			background: @color-primary;
+		}
 	}
 
 	.lucid-IconSelect-Item-figcaption,
@@ -81,6 +80,27 @@
 		font-size: @size-font;
 		white-space: nowrap;
 		text-align: center;
+	}
+}
+
+// Disabled
+.lucid-IconSelect-Item.lucid-IconSelect-Item-is-disabled {
+	opacity: 0.9;
+
+	&:hover {
+		cursor: not-allowed;
+	}
+
+	.lucid-Icon {
+		fill: @color-gray;
+	}
+}
+
+// Disabled && Selected
+.lucid-IconSelect-Item.lucid-IconSelect-Item-is-disabled.lucid-IconSelect-Item-is-selected {
+	.lucid-Icon {
+		opacity: 0.5;
+		fill: @color-primary;
 	}
 }
 
@@ -93,27 +113,18 @@
 }
 
 // Has a Checkbox Input
+.lucid-IconSelect-Item-multi {
+	height: 103px;
+}
 .lucid-IconSelect-Item-checkbox {
-	&.lucid-IconSelect-Item-is-active,
-	&:active {
-		.lucid-Checkbox-visualization-container {
-			background: @color-primary;
-		}
-	}
-	&:not(.lucid-IconSelect-Item-is-disabled):hover,
-	&.lucid-IconSelect-Item-is-active {
-		.lucid-Checkbox-visualization-glow {
-			opacity: 0.3;
-			transform: scale(1.375);
-		}
-		.lucid-Checkbox-visualization-container {
-			border-color: @color-primary;
-		}
-	}
 	&.lucid-CheckboxLabeled {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+
+	&.lucid-CheckboxLabeled > .lucid-Checkbox {
+		margin-right: 0;
 	}
 
 	.lucid-CheckboxLabeled-Checkbox {
@@ -123,19 +134,15 @@
 	.lucid-CheckboxLabeled-label {
 		order: 1;
 		padding: 6px 0;
-
-		> .lucid-Checkbox {
-			margin-right: 0;
-		}
 	}
 }
 
 // Has Radio Input
-.lucid-IconSelect-Item-radio {
-	width: 112px;
-	padding-top: 13px;
-	padding-bottom: 15px;
+.lucid-IconSelect-Item-single {
+	height: 90px;
+}
 
+.lucid-IconSelect-Item-radio {
 	.lucid-RadioButton.lucid-IconSelect-Item-radio {
 		visibility: hidden;
 		position: absolute;
