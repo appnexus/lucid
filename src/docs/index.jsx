@@ -521,6 +521,28 @@ const App = createClass({
 	},
 
 	renderCategoryLinks(items) {
+		return (
+			<VerticalListMenu selectedIndices={[]}>
+				{_.map(_.sortBy(_.keys(items)), componentName => {
+					return (
+						<Item
+							key={componentName}
+							onSelect={_.partial(
+								this.goToPath,
+								`/components/${componentName}`
+							)}
+							isSelected={
+								this.props.location.pathname === `/components/${componentName}`
+							}
+						>
+							{componentName}
+						</Item>
+					);
+				})}
+			</VerticalListMenu>
+		);
+	},
+	_renderCategoryLinks(items) {
 		if (_.isPlainObject(items)) {
 			const sortedItems = _.sortBy(_.toPairs(items), pair => pair[0]);
 
@@ -660,7 +682,7 @@ const App = createClass({
 							</Item>
 						</VerticalListMenu>
 
-						{this.renderCategoryLinks(docgenGroups)}
+						{this.renderCategoryLinks(lucidComponents)}
 					</nav>
 				</div>
 				<div className="App-body">
