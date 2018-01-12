@@ -169,19 +169,21 @@ const PropType = createClass({
 					{shapeKey ? `${shapeKey}: ` : null}
 					{type.name === 'union' ? 'oneOfType' : type.name}:
 					<ul>
-						{type.name === 'arrayOf'
-							? <PropType type={type.value} componentName={componentName} />
-							: _.map(type.value, (innerType, key) => {
-									return (
-										<li key={key}>
-											<PropType
-												type={innerType}
-												componentName={componentName}
-												shapeKey={type.name === 'shape' ? key : null}
-											/>
-										</li>
-									);
-								})}
+						{type.name === 'arrayOf' ? (
+							<PropType type={type.value} componentName={componentName} />
+						) : (
+							_.map(type.value, (innerType, key) => {
+								return (
+									<li key={key}>
+										<PropType
+											type={innerType}
+											componentName={componentName}
+											shapeKey={type.name === 'shape' ? key : null}
+										/>
+									</li>
+								);
+							})
+						)}
 					</ul>
 				</div>
 			);
@@ -189,7 +191,8 @@ const PropType = createClass({
 
 		return (
 			<span>
-				{shapeKey ? `${shapeKey}: ` : null}{type.name || type.value || type}
+				{shapeKey ? `${shapeKey}: ` : null}
+				{type.name || type.value || type}
 			</span>
 		);
 	},
@@ -280,28 +283,30 @@ const Component = createClass({
 			`${componentName}.customData.madeFrom`,
 			[]
 		);
-		const composesComponents = _.isEmpty(componentNames)
-			? null
-			: <span className="Component-made-from">
-					<span>made from: </span>
-					{_.map(componentNames, (name, index) => (
-						<span key={name}>
-							<Link
-								to={{
-									pathname: `/components/${name}`,
-									search: this.props.location.search,
-								}}
-							>
-								{name}
-							</Link>
-							{index == componentNames.length - 1 ? null : ', '}
-						</span>
-					))}
-				</span>;
+		const composesComponents = _.isEmpty(componentNames) ? null : (
+			<span className="Component-made-from">
+				<span>made from: </span>
+				{_.map(componentNames, (name, index) => (
+					<span key={name}>
+						<Link
+							to={{
+								pathname: `/components/${name}`,
+								search: this.props.location.search,
+							}}
+						>
+							{name}
+						</Link>
+						{index == componentNames.length - 1 ? null : ', '}
+					</span>
+				))}
+			</span>
+		);
 
 		return (
 			<div className="Component">
-				<h2>{componentName} {privateString} {composesComponents}</h2>
+				<h2>
+					{componentName} {privateString} {composesComponents}
+				</h2>
 				<div dangerouslySetInnerHTML={descriptionHTML} />
 				<h3>Props</h3>
 				<div className="Component-table-wrapper">
@@ -335,13 +340,13 @@ const Component = createClass({
 										</Td>
 										<Td>{propDetails.required ? 'yes' : 'no'}</Td>
 										<Td>
-											{propDetails.defaultValue
-												? <pre>
-														<code className="lang-javascript">
-															{_.get(propDetails, 'defaultValue.value', '')}
-														</code>
-													</pre>
-												: null}
+											{propDetails.defaultValue ? (
+												<pre>
+													<code className="lang-javascript">
+														{_.get(propDetails, 'defaultValue.value', '')}
+													</code>
+												</pre>
+											) : null}
 										</Td>
 										<Td
 											dangerouslySetInnerHTML={toMarkdown(
@@ -354,111 +359,119 @@ const Component = createClass({
 						</Tbody>
 					</Table>
 				</div>
-				{!_.isEmpty(childComponents)
-					? <section>
-							<h3>Child Components</h3>
-							{_.map(childComponents, childComponent => (
-								<section key={childComponent.displayName}>
-									<h4>
-										{childComponent.componentRef
-											? <Link
-													to={`/components/${childComponent.componentRef.split('.')[0]}`}
-												>
-													{childComponent.displayName}
-													{childComponent.displayName !==
-														childComponent.componentRef &&
-														` (${childComponent.componentRef})`}
-												</Link>
-											: childComponent.displayName}
-									</h4>
-									<div
-										dangerouslySetInnerHTML={toMarkdown(
-											childComponent.description
-										)}
-									/>
-									{childComponent.propName &&
-										<Table>
-											<Tbody>
-												<Tr>
-													<Td>propName</Td>
-													<Td>
-														<pre>
-															<code className="lang-javascript">
-																{childComponent.propName}
-															</code>
-														</pre>
-													</Td>
-												</Tr>
-											</Tbody>
-										</Table>}
-									{!_.isNil(childComponent.props)
-										? <Table style={{ width: '100%' }}>
-												<Thead>
-													<Tr>
-														<Th>Name</Th>
-														<Th>Type</Th>
-														<Th>Required</Th>
-														<Th>Default</Th>
-														<Th>Description</Th>
-													</Tr>
-												</Thead>
-												<Tbody>
-													{_.map(
-														_.sortBy(
-															_.toPairs(_.get(childComponent, 'props', [])),
-															x => x[0]
-														),
-														([propName, propDetails]) => {
-															if (
-																!propDetails || _.isNil(propDetails.description)
-															) {
-																console.error(
-																	`Warning: There was an issue with the docs that were generated for component "${componentName}.${childComponent.displayName}" and prop "${propName}". One reason might be that you have a default value for something that was never declared in propTypes.`
-																);
-																return null;
-															}
+				{!_.isEmpty(childComponents) ? (
+					<section>
+						<h3>Child Components</h3>
+						{_.map(childComponents, childComponent => (
+							<section key={childComponent.displayName}>
+								<h4>
+									{childComponent.componentRef ? (
+										<Link
+											to={`/components/${
+												childComponent.componentRef.split('.')[0]
+											}`}
+										>
+											{childComponent.displayName}
+											{childComponent.displayName !==
+												childComponent.componentRef &&
+												` (${childComponent.componentRef})`}
+										</Link>
+									) : (
+										childComponent.displayName
+									)}
+								</h4>
+								<div
+									dangerouslySetInnerHTML={toMarkdown(
+										childComponent.description
+									)}
+								/>
+								{childComponent.propName && (
+									<Table>
+										<Tbody>
+											<Tr>
+												<Td>propName</Td>
+												<Td>
+													<pre>
+														<code className="lang-javascript">
+															{childComponent.propName}
+														</code>
+													</pre>
+												</Td>
+											</Tr>
+										</Tbody>
+									</Table>
+								)}
+								{!_.isNil(childComponent.props) ? (
+									<Table style={{ width: '100%' }}>
+										<Thead>
+											<Tr>
+												<Th>Name</Th>
+												<Th>Type</Th>
+												<Th>Required</Th>
+												<Th>Default</Th>
+												<Th>Description</Th>
+											</Tr>
+										</Thead>
+										<Tbody>
+											{_.map(
+												_.sortBy(
+													_.toPairs(_.get(childComponent, 'props', [])),
+													x => x[0]
+												),
+												([propName, propDetails]) => {
+													if (
+														!propDetails ||
+														_.isNil(propDetails.description)
+													) {
+														console.error(
+															`Warning: There was an issue with the docs that were generated for component "${componentName}.${
+																childComponent.displayName
+															}" and prop "${propName}". One reason might be that you have a default value for something that was never declared in propTypes.`
+														);
+														return null;
+													}
 
-															return (
-																<Tr
-																	key={`${childComponent.displayName}-${propName}`}
-																>
-																	<Td>{propName}</Td>
-																	<Td>
-																		<PropType
-																			type={propDetails.type}
-																			componentName={childComponent.displayName}
-																		/>
-																	</Td>
-																	<Td>{propDetails.required ? 'yes' : 'no'}</Td>
-																	<Td>
-																		{propDetails.defaultValue
-																			? <pre>
-																					<code className="lang-javascript">
-																						{_.get(
-																							propDetails,
-																							'defaultValue.value',
-																							''
-																						)}
-																					</code>
-																				</pre>
-																			: null}
-																	</Td>
-																	<Td
-																		dangerouslySetInnerHTML={toMarkdown(
-																			propDetails.description
-																		)}
-																	/>
-																</Tr>
-															);
-														}
-													)}
-												</Tbody>
-											</Table>
-										: null}
-								</section>
-							))}
-						</section>
-					: null}
+													return (
+														<Tr
+															key={`${childComponent.displayName}-${propName}`}
+														>
+															<Td>{propName}</Td>
+															<Td>
+																<PropType
+																	type={propDetails.type}
+																	componentName={childComponent.displayName}
+																/>
+															</Td>
+															<Td>{propDetails.required ? 'yes' : 'no'}</Td>
+															<Td>
+																{propDetails.defaultValue ? (
+																	<pre>
+																		<code className="lang-javascript">
+																			{_.get(
+																				propDetails,
+																				'defaultValue.value',
+																				''
+																			)}
+																		</code>
+																	</pre>
+																) : null}
+															</Td>
+															<Td
+																dangerouslySetInnerHTML={toMarkdown(
+																	propDetails.description
+																)}
+															/>
+														</Tr>
+													);
+												}
+											)}
+										</Tbody>
+									</Table>
+								) : null}
+							</section>
+						))}
+					</section>
+				) : null}
 				<h3>Examples</h3>
 				<ul className={`Component-examples ${componentName}`}>
 					{_.map(_.get(examplesByComponent, componentName, []), example => {
@@ -485,11 +498,14 @@ const Component = createClass({
 											: 'Show code'}
 									</a>
 								</div>
-								{_.get(this.state.examples, `${componentName}.${example.name}`)
-									? <pre>
-											<code className="lang-javascript">{example.source}</code>
-										</pre>
-									: null}
+								{_.get(
+									this.state.examples,
+									`${componentName}.${example.name}`
+								) ? (
+									<pre>
+										<code className="lang-javascript">{example.source}</code>
+									</pre>
+								) : null}
 								<example.Example />
 							</li>
 						);
@@ -521,22 +537,38 @@ const App = createClass({
 	},
 
 	renderCategoryLinks(items) {
+		const sortedItems = _.sortBy(_.keys(items), _.lowerCase);
+
 		return (
 			<VerticalListMenu selectedIndices={[]}>
-				{_.map(_.sortBy(_.keys(items)), componentName => {
+				{_.map(sortedItems, currentNodeName => {
+					if (typeof items[currentNodeName] === 'function') {
+						return (
+							<Item
+								key={currentNodeName}
+								onSelect={_.partial(
+									this.goToPath,
+									`/components/${currentNodeName}`
+								)}
+								isSelected={
+									this.props.location.pathname ===
+									`/components/${currentNodeName}`
+								}
+							>
+								{currentNodeName}
+							</Item>
+						);
+					}
+
+					const kids = items[currentNodeName];
+
 					return (
-						<Item
-							key={componentName}
-							onSelect={_.partial(
-								this.goToPath,
-								`/components/${componentName}`
-							)}
-							isSelected={
-								this.props.location.pathname === `/components/${componentName}`
-							}
-						>
-							{componentName}
-						</Item>
+						<VerticalListMenu selectedIndices={[]}>
+							<Item hasExpander isActionable={false} key={currentNodeName}>
+								<span>{_.startCase(currentNodeName)}</span>
+								{this.renderCategoryLinks(kids)}
+							</Item>
+						</VerticalListMenu>
 					);
 				})}
 			</VerticalListMenu>
@@ -545,7 +577,6 @@ const App = createClass({
 	_renderCategoryLinks(items) {
 		if (_.isPlainObject(items)) {
 			const sortedItems = _.sortBy(_.toPairs(items), pair => pair[0]);
-
 			return (
 				<VerticalListMenu selectedIndices={[]}>
 					{_.map(sortedItems, ([categoryName, kids]) => {
@@ -644,6 +675,16 @@ const App = createClass({
 		);
 		const suggestions = this.searchResults();
 
+		const categoryMap = _.reduce(
+			lucidComponents,
+			(acc, value, key) => {
+				const categories = _.get(value, 'peek.categories', []);
+				const path = categories.concat(key).join('.');
+				return _.set(acc, path, value);
+			},
+			{}
+		);
+
 		return (
 			<div className="App">
 				<div className="App-sidebar">
@@ -682,7 +723,7 @@ const App = createClass({
 							</Item>
 						</VerticalListMenu>
 
-						{this.renderCategoryLinks(lucidComponents)}
+						{this.renderCategoryLinks(categoryMap)}
 					</nav>
 				</div>
 				<div className="App-body">
@@ -720,9 +761,7 @@ const TestList = createClass({
 			<ul id="examples-list">
 				{_.map(testExampleKeys, path => (
 					<li key={path}>
-						<Link to={`/test/${path}`}>
-							{path}
-						</Link>
+						<Link to={`/test/${path}`}>{path}</Link>
 					</li>
 				))}
 			</ul>
