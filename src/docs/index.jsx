@@ -15,12 +15,30 @@ import ColorPalette from './containers/color-palette';
 import LandingPage from './containers/landing-page';
 import Icons from './containers/icons';
 
-import {
-	Table,
-	VerticalListMenuDumb,
-	Autocomplete,
-	stateManagement,
-} from '../index';
+//import {
+//	Table,
+//	VerticalListMenuDumb,
+//	Autocomplete,
+//	stateManagement,
+//} from '../index';
+import * as Lucid from '../index';
+
+const { Table, VerticalListMenuDumb, Autocomplete, stateManagement } = Lucid;
+const ignoreExports = [
+	'componentTypes',
+	'domHelpers',
+	'redux',
+	'stateManagement',
+	'styleHelpers',
+	'chartConstants',
+	'formatters',
+	'logger',
+	'd3Scale',
+	'd3Time',
+];
+const lucidComponents = _.omitBy(Lucid, (value, key) => {
+	return _.includes(ignoreExports, key) || _.endsWith(key, 'Dumb');
+});
 
 // Allow webpack to handle less compilation here
 require('./index.less');

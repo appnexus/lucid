@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
@@ -15,12 +15,50 @@ const cx = lucidClassNames.bind('&-Accordion');
 
 const { any, func, object, number, string } = PropTypes;
 
-/**
-* {"categories": ["layout"], "madeFrom": ["ExpanderPanel"]}
-*
-* This is a container that renders panels and controls its expansion/retraction.
-*/
+let propDescriptions;
+let componentSummary;
+
+if (process.env.NODE_ENV !== 'production') {
+	componentSummary = {
+		description: `
+			This is a container that renders panels and controls its expansion/retraction.
+		`,
+		categories: ['layout'],
+		madeFrom: ['ExpanderPanel'],
+	};
+
+	propDescriptions = {
+		className: `
+			Appended to the component-specific class names set on the root element.
+		`,
+		selectedIndex: `
+			Indicates which item is expanded
+		`,
+		onSelect: `
+			Called when the user clicks on the component's header of an item.
+			Signature: \`(itemIndex, { event, props }) => {}\`
+		`,
+		style: `
+			Passed through to the root element.
+		`,
+		Header: `
+			prop alternative to Header child component
+			passed through to the underlying ExpanderPanel
+		`,
+		mode: `
+			TEST: to set the mode of the component.
+		`,
+		selectedIndices: `
+			TEST: list of selected indices for this component
+		`,
+	};
+}
+
 const Accordion = createClass({
+	statics: {
+		peek: componentSummary,
+	},
+
 	displayName: 'Accordion',
 
 	components: {
@@ -30,35 +68,49 @@ const Accordion = createClass({
 
 	reducers,
 
-	propTypes: {
-		/**
-		* Appended to the component-specific class names set on the root
-		* element.
-		*/
-		className: string,
+	propTypes: PropTypes.applyText(
+		{
+			className: string,
+			selectedIndex: number,
+			onSelect: func,
+			style: object,
+			Header: any,
+			mode: PropTypes.oneOf(['large', 'small']).isRequired,
+			selectedIndices: PropTypes.arrayOf(string),
+		},
+		propDescriptions
+	),
 
-		/**
-		* Indicates which item is expanded.
-		*/
-		selectedIndex: number,
+	_propTypes: {
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
 
-		/**
-		* Called when the user clicks on the component's header of an item.
-		*
-		* Signature: `(itemIndex, { event, props }) => {}`
-		*/
-		onSelect: func,
+		selectedIndex: number`
+			Indicates which item is expanded
+		`,
 
-		/**
-		* Passed through to the root element.
-		*/
-		style: object,
+		onSelect: func`
+			Called when the user clicks on the component's header of an item.
+			Signature: \`(itemIndex, { event, props }) => {}\`
+		`,
 
-		/**
-		 * prop alternative to Header child component
-		 * passed through to the underlying ExpanderPanel
-		 */
-		Header: any,
+		style: object`
+			Passed through to the root element.
+		`,
+
+		Header: any`
+			prop alternative to Header child component
+			passed through to the underlying ExpanderPanel
+		`,
+
+		mode: PropTypes.oneOf(['large', 'small']).isRequired`
+			TEST: to set the mode of the component.
+		`,
+
+		selectedIndices: PropTypes.arrayOf(string)`
+			TEST: list of selected indices for this component
+		`,
 	},
 
 	getDefaultProps() {

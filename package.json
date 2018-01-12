@@ -16,6 +16,7 @@
     "jest": "NODE_ENV=test TZ=UTC jest --runInBand",
     "lint": "eslint ./src --ext .js,.jsx",
     "lint-fix": "eslint ./src --ext .js,.jsx --fix",
+    "peek": "NODE_ENV='development' && react-peek --ignore './**/*spec.jsx' './src/components/*/*.jsx' --output :8000",
     "precommit": "lint-staged",
     "prettier": "prettier --write --single-quote --use-tabs --trailing-comma es5 '{src,tests,scripts}/**/*.{js,jsx}'",
     "preversion": "rm -rf dist && npm run lint && gulp preversion && npm run build-bundle",
@@ -49,6 +50,7 @@
     "prop-types": "^15.5.10",
     "react-day-picker": "^6.2.1",
     "react-motion": "^0.5.2",
+    "react-peek": "^0.1.0",
     "react-transition-group": "^1.2.1",
     "reselect": "^2.5.1"
   },
