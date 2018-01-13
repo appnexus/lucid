@@ -184,6 +184,7 @@ export function buildHybridComponent(
 		displayName,
 		propTypes,
 		definition: { statics = {} } = {},
+		getDefaultProps,
 	} = baseComponent;
 
 	if (_isLucidHybridComponent) {
@@ -204,6 +205,7 @@ export function buildHybridComponent(
 			...statics,
 		},
 		displayName,
+		getDefaultProps,
 		getInitialState() {
 			const { initialState } = this.props; //initial state overrides
 			return _.mergeWith(

@@ -2,8 +2,14 @@ import _ from 'lodash';
 import { markdown } from 'markdown';
 
 export function toMarkdown(md) {
+	if (md) {
+		return {
+			__html: markdown.toHTML(md),
+		};
+	}
+
 	return {
-		__html: markdown.toHTML(md),
+		__html: '',
 	};
 }
 
