@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
@@ -13,20 +13,25 @@ const durations = {
 	slow: '4s',
 };
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * A loading icon.
- */
 const LoadingIcon = createClass({
 	displayName: 'LoadingIcon',
+
+	statics: {
+		peek: {
+			description: `
+				A loading icon.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
-		/**
-		 * The speed of rotation of the spinner. Defaults to 'normal'
-		 */
-		speed: oneOf(['fast', 'normal', 'slow']),
+		speed: oneOf(['fast', 'normal', 'slow'])`
+		 The speed of rotation of the spinner. Defaults to 'normal'
+		`,
 	},
 	getDefaultProps() {
 		return {

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import ContextMenu from '../ContextMenu/ContextMenu';
 import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 import * as reducers from './ToolTip.reducers';
@@ -24,99 +24,109 @@ const {
 
 const { Target, FlyOut } = ContextMenu;
 
-/**
- * {"categories": ["communication"], "madeFrom": ["ContextMenu"]}
- *
- * A utility component that creates a transient message anchored to another
- * component.
- */
-
 const ToolTip = createClass({
 	displayName: 'ToolTip',
+
+	statics: {
+		peek: {
+			description: `
+A utility component that creates a transient message anchored to another component.
+			`,
+			categories: ['communication'],
+			madeFrom: ['ContextMenu'],
+		},
+	},
 
 	reducers,
 
 	propTypes: {
-		/**
-		 * `children` should include exactly one ToolTip.Target and one ToolTip.FlyOut.
-		 */
-		children: node,
-		/**
-		 * Appended to the component-specific class names set on the root element.
-		 */
-		className: string,
-		/**
-		 * Set this to `true` if you want to have a `x` close icon.
-		 */
-		isCloseable: bool,
-		/**
-		 * Style variations of the `ToolTip`.
-		 */
-		kind: oneOf(['primary', 'success', 'warning', 'danger', 'info', 'default']),
-		/**
-		 * Called when the user closes the `Banner`.
-		 *
-		 * Signature: `({ event, props }) => {}`
-		 */
-		onClose: func,
-		/**
-		 * Passed through to the root target element.
-		 */
-		style: object,
-		/**
-		 * Passed through to the root FlyOut element.
-		 */
-		flyOutStyle: object,
-		/**
-		 * maximum width of the ToolTip FlyOut. Defaults to 200px.
-		 */
-		flyOutMaxWidth: oneOfType([number, string]),
-		/**
-		 * direction of the FlyOut relative to Target. Defaults to `'down'`.
-		 */
-		direction: oneOf(['down', 'up', 'right', 'left']),
-		/**
-		 * alignment of the Flyout relative to Target in the cross axis from `direction` Defaults to `'start'`
-		 */
-		alignment: oneOf(['start', 'center', 'end']),
-		/**
-		 * Indicates whether the ToolTip will render or not. Defaults to `true`.
-		 */
-		isExpanded: bool,
-		/**
-		 * Called when cursor moves over the target
-		 * Signature: `({ props, event }) => {}`
-		 */
-		onMouseOver: func,
-		/**
-		 * Called when cursor leaves the target and the ToolTip
-		 * Signature: `({ props, event }) => {}`
-		 */
-		onMouseOut: func,
-		/**
-		 * The `id` of the FlyOut portal element that is appended to `document.body`. Defaults to a generated `id`.
-		 */
-		portalId: string,
+		children: node`
+		 \`children\` should include exactly one ToolTip.Target and one ToolTip.FlyOut.
+		`,
+
+		className: string`
+		 Appended to the component-specific class names set on the root element.
+		`,
+
+		isCloseable: bool`
+		 Set this to \`true\` if you want to have a \`x\` close icon.
+		`,
+
+		kind: oneOf(['primary', 'success', 'warning', 'danger', 'info', 'default'])`
+		 Style variations of the \`ToolTip\`.
+		`,
+
+		onClose: func`
+		 Called when the user closes the \`Banner\`.  Signature: \`({ event, props }) => {}\`
+		`,
+
+		style: object`
+		 Passed through to the root target element.
+		`,
+
+		flyOutStyle: object`
+		 Passed through to the root FlyOut element.
+		`,
+
+		flyOutMaxWidth: oneOfType([number, string])`
+		 maximum width of the ToolTip FlyOut. Defaults to 200px.
+		`,
+
+		direction: oneOf(['down', 'up', 'right', 'left'])`
+		 direction of the FlyOut relative to Target. Defaults to \`'down'\`.
+		`,
+
+		alignment: oneOf(['start', 'center', 'end'])`
+		 alignment of the Flyout relative to Target in the cross axis from \`direction\` Defaults to \`'start'\`
+		`,
+
+		isExpanded: bool`
+		 Indicates whether the ToolTip will render or not. Defaults to \`true\`.
+		`,
+
+		onMouseOver: func`
+		 Called when cursor moves over the target Signature: \`({ props, event }) => {}\`
+		`,
+
+		onMouseOut: func`
+		 Called when cursor leaves the target and the ToolTip Signature: \`({ props, event }) => {}\`
+		`,
+
+		portalId: string`
+		 The \`id\` of the FlyOut portal element that is appended to \`document.body\`. Defaults to a generated \`id\`.
+		`,
 	},
 
 	components: {
-		/**
-		 * The hover target that will trigger the ToolTip to be displayed.
-		 */
 		Target: createClass({
 			displayName: 'ToolTip.Target',
+			statics: {
+				peek: {
+					description: `
+						The hover target that will trigger the ToolTip to be displayed.
+					`,
+				},
+			},
 		}),
-		/**
-		 * The title displayed at the top of the ToolTip.
-		 */
 		Title: createClass({
 			displayName: 'ToolTip.Title',
+			statics: {
+				peek: {
+					description: `
+						The title displayed at the top of the ToolTip.
+					`,
+				},
+			},
 		}),
-		/**
-		 * The body of the ToolTip displayed below the Title.
-		 */
 		Body: createClass({
 			displayName: 'ToolTip.Body',
+			statics: {
+				peek: {
+					description: `
+						The body of the ToolTip displayed below the Title.
+					`,
+				},
+			},
 		}),
 	},
 

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { Motion, spring } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -10,53 +10,48 @@ const cx = lucidClassNames.bind('&-Collapsible');
 
 const { any, bool, node, number, string } = PropTypes;
 
-/**
- * {"categories": ["utility"]}
- *
- * This is a simple container that can render content as expanded or collapsed.
- */
 const Collapsible = createClass({
 	displayName: 'Collapsible',
+
+	statics: {
+		peek: {
+			description: `
+This is a simple container that can render content as expanded or collapsed.
+			`,
+			categories: ['utility'],
+		},
+	},
+
 	_isPrivate: true,
 
 	propTypes: {
-		/**
-		 * Expandable content.
-		 */
-		children: node,
+		children: node`
+		 Expandable content.
+		`,
 
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element.
-		 */
-		className: string,
+		className: string`
+		 Appended to the component-specific class names set on the root element.
+		`,
 
-		/**
-		 * Indicates that the component is in the "expanded" state when true
-		 * and in the "unexpanded" state when false.
-		 */
-		isExpanded: bool,
+		isExpanded: bool`
+		 Indicates that the component is in the "expanded" state when true and in the "unexpanded" state when false.
+		`,
 
-		/**
-		 * Show an animated transition for alternating values of `isExpanded`.
-		 */
-		isAnimated: bool,
+		isAnimated: bool`
+		 Show an animated transition for alternating values of \`isExpanded\`.
+		`,
 
-		/**
-		 * If true, do not render children when fully collapsed.
-		 */
-		isMountControlled: bool,
+		isMountControlled: bool`
+		 If true, do not render children when fully collapsed.
+		`,
 
-		/**
-		 * If `isMountControlled` is true, this value sets is the minimum height
-		 * the container needs to reach to not render any children.
-		 */
-		mountControlThreshold: number,
+		mountControlThreshold: number`
+		 If \`isMountControlled\` is true, this value sets is the minimum height the container needs to reach to not render any children.
+		`,
 
-		/**
-		 * Pass in a custom root element type.
-		 */
-		rootType: any,
+		rootType: any`
+		 Pass in a custom root element type.
+		`,
 	},
 
 	getDefaultProps() {

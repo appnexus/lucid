@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps, getFirst } from '../../util/component-types';
 import { maxByFields, maxByFieldsStacked } from '../../util/chart-helpers';
@@ -28,194 +28,18 @@ const {
 	oneOfType,
 } = PropTypes;
 
-/**
- * {"categories": ["visualizations", "charts"], "madeFrom": ["ContextMenu", "ToolTip"]}
- *
- * Bar charts are great for showing data that fits neatly in to "buckets". The
- * x axis data must be strings, and the y axis data must be numeric.
- */
 const BarChart = createClass({
 	displayName: 'BarChart',
 
-	propTypes: {
-		/**
-		 * Appended to the component-specific class names set on the root element.
-		 */
-		className: string,
-		/**
-		 * Height of the chart.
-		 */
-		height: number,
-		/**
-		 * Width of the chart.
-		 */
-		width: number,
-		/**
-		 * An object defining the margins of the chart. These margins typically
-		 * contain the axis and labels.
-		 */
-		margin: shape({
-			top: number,
-			right: number,
-			bottom: number,
-			left: number,
-		}),
-		/**
-		 * Data for the chart. E.g.
-		 *
-		 *     [
-		 *       { x: 'Monday'    , y: 1 } ,
-		 *       { x: 'Tuesday'   , y: 2 } ,
-		 *       { x: 'Wednesday' , y: 3 } ,
-		 *       { x: 'Thursday'  , y: 2 } ,
-		 *       { x: 'Friday'    , y: 5 } ,
-		 *     ]
-		 */
-		data: arrayOf(object),
-		/**
-		 * An object with human readable names for fields that will be used for
-		 * legends and tooltips. E.g:
-		 *
-		 *     {
-		 *       x: 'Date',
-		 *       y: 'Impressions',
-		 *     }
-		 *
-		 */
-		legend: object,
-		/**
-		 * Controls the visibility of the `LoadingMessage`.
-		 */
-		isLoading: bool,
-		/**
-		 * Show tool tips on hover.
-		 */
-		hasToolTips: bool,
-		/**
-		 * Show a legend at the bottom of the chart.
-		 */
-		hasLegend: bool,
-		/**
-		 * Takes one of the palettes exported from `lucid.chartConstants`.
-		 * Available palettes:
-		 *
-		 * - `PALETTE_6` (default)
-		 * - `PALETTE_30`
-		 * - `PALETTE_MONOCHROME_0_5`
-		 * - `PALETTE_MONOCHROME_1_5`
-		 * - `PALETTE_MONOCHROME_2_5`
-		 * - `PALETTE_MONOCHROME_3_5`
-		 * - `PALETTE_MONOCHROME_4_5`
-		 * - `PALETTE_MONOCHROME_5_5`
-		 *
-		 */
-		palette: arrayOf(string),
-		/**
-		 * You can pass in an object if you want to map x values to
-		 * `lucid.chartConstants` or custom colors:
-		 *
-		 *     {
-		 *       'imps': COLOR_0,
-		 *       'rev': COLOR_3,
-		 *       'clicks': '#abc123',
-		 *     }
-		 */
-		colorMap: object,
-
-		/**
-		 * The field we should look up your x data by. Your actual x data must be
-		 * strings.
-		 */
-		xAxisField: string,
-		/**
-		 * There are some cases where you need to only show a "sampling" of ticks
-		 * on the x axis. This number will control that.
-		 */
-		xAxisTickCount: number,
-		/**
-		 * An optional function used to format your x axis data. If you don't
-		 * provide anything, we'll use an identity function.
-		 */
-		xAxisFormatter: func,
-		/**
-		 * Set a title for the x axis.
-		 */
-		xAxisTitle: string,
-		/**
-		 * Set a color for the x axis title. Use the color constants exported off
-		 * `lucid.chartConstants`. E.g.:
-		 *
-		 * - `COLOR_0`
-		 * - `COLOR_GOOD`
-		 * - `'#123abc'` // custom color hex
-		 *
-		 * `number` is supported only for backwards compatability.
-		 */
-		xAxisTitleColor: oneOfType([number, string]),
-
-		/**
-		 * An array of your y axis fields. Typically this will just be a single
-		 * item unless you need to display grouped or stacked bars. The order of
-		 * the array determines the series order in the chart.
-		 */
-		yAxisFields: array,
-		/**
-		 * The minimum number the y axis should display. Typically this
-		 * should be be `0`.
-		 */
-		yAxisMin: number,
-		/**
-		 * The maximum number the y axis should display. This should almost always
-		 * be the largest number from your dataset.
-		 */
-		yAxisMax: number,
-		/**
-		 * An optional function used to format your y axis data. If you don't
-		 * provide anything, we use the default D3 number formatter.
-		 */
-		yAxisFormatter: func,
-		/**
-		 * Stack the y axis data instead of showing it as groups. This is only
-		 * useful if you have multiple `yAxisFields`. Stacking will cause the chart
-		 * to be aggregated by sum.
-		 */
-		yAxisIsStacked: bool,
-		/**
-		 * There are some cases where you need to only show a "sampling" of ticks
-		 * on the y axis. This number will control that.
-		 */
-		yAxisTickCount: number,
-		/**
-		 * Set a title for the y axis.
-		 */
-		yAxisTitle: string,
-		/**
-		 * Set a color for the y axis title. Use the color constants exported off
-		 * `lucid.chartConstants`. E.g.:
-		 *
-		 * - `COLOR_0`
-		 * - `COLOR_GOOD`
-		 * - `'#123abc'` // custom color hex
-		 *
-		 * `number` is supported only for backwards compatability.
-		 */
-		yAxisTitleColor: oneOfType([number, string]),
-		/**
-		 * An optional function used to format your y axis titles and data in the
-		 * tooltips. The first value is the name of your y field, the second value
-		 * is your post-formatted y value, and the third value is your non-formatted
-		 * y-value.
-		 *
-		 * Signature: `(yField, yValueFormatted, yValue) => {}`
-		 */
-		yAxisTooltipFormatter: func,
-		/**
-		 * An optional function used to format data in the tooltips.
-		 */
-		yAxisTooltipDataFormatter: func,
-	},
-
 	statics: {
+		peek: {
+			description: `
+Bar charts are great for showing data that fits neatly in to "buckets". The
+x axis data must be strings, and the y axis data must be numeric.
+			`,
+			categories: ['visualizations', 'charts'],
+			madeFrom: ['ContextMenu', 'ToolTip'],
+		},
 		PADDING: 0.05,
 		PADDING_GROUPED_OR_STACKED: 0.3,
 		MARGIN: {
@@ -224,6 +48,156 @@ const BarChart = createClass({
 			bottom: 50,
 			left: 80,
 		},
+	},
+
+	propTypes: {
+		className: string`
+		 Appended to the component-specific class names set on the root element.
+		`,
+
+		height: number`
+		 Height of the chart.
+		`,
+
+		width: number`
+		 Width of the chart.
+		`,
+
+		margin: shape({
+			top: number,
+			right: number,
+			bottom: number,
+			left: number,
+		})`
+		 An object defining the margins of the chart. These margins typically contain the axis and labels.
+		`,
+
+		data: arrayOf(object)`
+	Data for the chart. E.g.
+
+	[
+		{ x: 'Monday'    , y: 1 } ,
+		{ x: 'Tuesday'   , y: 2 } ,
+		{ x: 'Wednesday' , y: 3 } ,
+		{ x: 'Thursday'  , y: 2 } ,
+		{ x: 'Friday'    , y: 5 } ,
+	]
+		`,
+		legend: object`
+	An object with human readable names for fields that will be used for legends and tooltips. E.g:
+
+	{
+		x: 'Date',
+		y: 'Impressions',
+	}
+		`,
+
+		isLoading: bool`
+		 Controls the visibility of the \`LoadingMessage\`.
+		`,
+
+		hasToolTips: bool`
+		 Show tool tips on hover.
+		`,
+
+		hasLegend: bool`
+		 Show a legend at the bottom of the chart.
+		`,
+
+		palette: arrayOf(string)`
+	Takes one of the palettes exported from \`lucid.chartConstants\`. Available palettes:
+
+	- \`PALETTE_6\` (default)
+	- \`PALETTE_30\`
+	- \`PALETTE_MONOCHROME_0_5\`
+	- \`PALETTE_MONOCHROME_1_5\`
+	- \`PALETTE_MONOCHROME_2_5\`
+	- \`PALETTE_MONOCHROME_3_5\`
+	- \`PALETTE_MONOCHROME_4_5\`
+	- \`PALETTE_MONOCHROME_5_5\`
+		`,
+
+		colorMap: object`
+	You can pass in an object if you want to map x values to \`lucid.chartConstants\` or custom colors:
+
+	{
+		'imps': COLOR_0,
+		'rev': COLOR_3,
+		'clicks': '#abc123',
+	}
+		`,
+
+		xAxisField: string`
+		 The field we should look up your x data by. Your actual x data must be strings.
+		`,
+		xAxisTickCount: number`
+
+		 There are some cases where you need to only show a "sampling" of ticks on the x axis. This number will control that.
+		`,
+
+		xAxisFormatter: func`
+		 An optional function used to format your x axis data. If you don't provide anything, we'll use an identity function.
+		`,
+
+		xAxisTitle: string`
+		 Set a title for the x axis.
+		`,
+
+		xAxisTitleColor: oneOfType([number, string])`
+Set a color for the x axis title. Use the color constants exported off \`lucid.chartConstants\`. E.g.:
+
+	- \`COLOR_0\`
+	- \`COLOR_GOOD\`
+	- \`'#123abc'\` // custom color hex
+
+\`number\` is supported only for backwards compatability.
+		`,
+
+		yAxisFields: array`
+		 An array of your y axis fields. Typically this will just be a single item unless you need to display grouped or stacked bars. The order of the array determines the series order in the chart.
+		`,
+
+		yAxisMin: number`
+		 The minimum number the y axis should display. Typically this should be be \`0\`.
+		`,
+
+		yAxisMax: number`
+		 The maximum number the y axis should display. This should almost always be the largest number from your dataset.
+		`,
+
+		yAxisFormatter: func`
+		 An optional function used to format your y axis data. If you don't provide anything, we use the default D3 number formatter.
+		`,
+
+		yAxisIsStacked: bool`
+		 Stack the y axis data instead of showing it as groups. This is only useful if you have multiple \`yAxisFields\`. Stacking will cause the chart to be aggregated by sum.
+		`,
+
+		yAxisTickCount: number`
+		 There are some cases where you need to only show a "sampling" of ticks on the y axis. This number will control that.
+		`,
+
+		yAxisTitle: string`
+		 Set a title for the y axis.
+		`,
+
+		yAxisTitleColor: oneOfType([number, string])`
+Set a color for the y axis title. Use the color constants exported off \`lucid.chartConstants\`. E.g.:
+
+	- \`COLOR_0\`
+	- \`COLOR_GOOD\`
+	- \`'#123abc'\` // custom color hex
+
+\`number\` is supported only for backwards compatability.
+		`,
+
+		yAxisTooltipFormatter: func`
+		 An optional function used to format your y axis titles and data in the tooltips. The first value is the name of your y field, the second value is your post-formatted y value, and the third value is your non-formatted y-value.  Signature: \`(yField, yValueFormatted, yValue) => {}\`
+		`,
+
+		yAxisTooltipDataFormatter: func`
+		 An optional function used to format data in the tooltips.
+		`,
 	},
 
 	getDefaultProps() {

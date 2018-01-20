@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { Motion, spring } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -13,15 +13,20 @@ const { bool, func, node, number, string } = PropTypes;
 
 const modulo = (n, a) => a - n * Math.floor(a / n);
 
-/**
- * {"categories": ["helpers"]}
- *
- * A container for rendering a set of horizontal slides at at a particular
- * offset. Translation between slides is controlled by passing in a new `offset`.
- * Can hook into touch events to update the `offset`.
- */
 const SlidePanel = createClass({
 	displayName: 'SlidePanel',
+
+	statics: {
+		peek: {
+			description: `
+A container for rendering a set of horizontal slides at at a particular
+offset. Translation between slides is controlled by passing in a new \`offset\`.
+Can hook into touch events to update the \`offset\`.
+			`,
+			categories: ['helpers'],
+		},
+	},
+
 	_isPrivate: true,
 
 	components: {
@@ -32,46 +37,33 @@ const SlidePanel = createClass({
 	},
 
 	propTypes: {
-		/**
-		 * Appended to the component-specific class names set on the root element.
-		 */
-		className: string,
+		className: string`
+		 Appended to the component-specific class names set on the root element.
+		`,
 
-		/**
-		 * SlidePanel.Slide elements are passed in as children.
-		 */
-		children: node,
+		children: node`
+		 SlidePanel.Slide elements are passed in as children.
+		`,
 
-		/**
-		 * Max number of viewable slides to show simultaneously.
-		 */
-		slidesToShow: number,
+		slidesToShow: number`
+		 Max number of viewable slides to show simultaneously.
+		`,
 
-		/**
-		 * The offset of the left-most rendered slide.
-		 */
-		offset: number,
+		offset: number`
+		 The offset of the left-most rendered slide.
+		`,
 
-		/**
-		 * Animate slides transitions from changes in `offset`.
-		 */
-		isAnimated: bool,
+		isAnimated: bool`
+		 Animate slides transitions from changes in \`offset\`.
+		`,
 
-		/**
-		 * Slides are rendered in a continuous loop, where the first slide repeats
-		 * after the last slide and vice-versa. DOM elements are re-ordered and
-		 * re-used.
-		 */
-		isLooped: bool,
+		isLooped: bool`
+		 Slides are rendered in a continuous loop, where the first slide repeats after the last slide and vice-versa. DOM elements are re-ordered and re-used.
+		`,
 
-		/**
-		 * Called when a user's swipe would change the offset. Callback passes
-		 * number of slides by the user (positive for forward swipes, negative for
-		 * backwards swipes).
-		 *
-		 * Signature: `(slidesSwiped, { event, props }) => {}`
-		 */
-		onSwipe: func,
+		onSwipe: func`
+		 Called when a user's swipe would change the offset. Callback passes number of slides by the user (positive for forward swipes, negative for backwards swipes).  Signature: \`(slidesSwiped, { event, props }) => {}\`
+		`,
 	},
 
 	getDefaultProps() {

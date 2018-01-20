@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 
@@ -11,62 +11,68 @@ const cx = lucidClassNames.bind('&-EmptyStateWrapper');
 
 const { any, bool, node, string } = PropTypes;
 
-/**
- *
- * {"categories": ["utility"], "madeFrom": ["LoadingIndicator", "OverlayWrapper"]}
- *
- * A wrapper which can display either a `LoadingIndicator` or `OverlayWrapper`.
- *
- */
 const EmptyStateWrapper = createClass({
 	_isPrivate: true,
+
+	statics: {
+		peek: {
+			description: `
+A wrapper which can display either a \`LoadingIndicator\` or \`OverlayWrapper\`.
+			`,
+			categories: ['utility'],
+			madeFrom: ['LoadingIndicator', 'OverlayWrapper'],
+		},
+	},
 
 	displayName: 'EmptyStateWrapper',
 
 	propTypes: {
-		/**
-		 * Class names that are appended to the defaults.
-		 */
-		className: string,
-		/**
-		 * Any valid React children.
-		 */
-		children: node,
-		/**
-		 * Controls the visibility of the `EmptyMessage`
-		 */
-		isEmpty: bool,
-		/**
-		 * Controls the visibility of the `LoadingMessage`.
-		 */
-		isLoading: bool,
-		/**
-		 * *Child Element*
-		 *
-		 * The element to display in the body of the overlay.
-		 */
-		Body: any,
-		/**
-		 * *Child Element*
-		 *
-		 * The element to display in the title of the overlay.
-		 */
-		Title: any,
+		className: string`
+		 Class names that are appended to the defaults.
+		`,
+
+		children: node`
+		 Any valid React children.
+		`,
+
+		isEmpty: bool`
+		 Controls the visibility of the \`EmptyMessage\`
+		`,
+
+		isLoading: bool`
+		 Controls the visibility of the \`LoadingMessage\`.
+		`,
+
+		Body: any`
+		 *Child Element* The element to display in the body of the overlay.
+		`,
+
+		Title: any`
+		 *Child Element* The element to display in the title of the overlay.
+		`,
 	},
 
 	components: {
-		/**
-		 * Body content for the message to display when there is no data.
-		 */
 		Body: createClass({
 			displayName: 'EmptyStateWrapper.Body',
+			statics: {
+				peek: {
+					description: `
+						Body content for the message to display when there is no data.
+					`,
+				},
+			},
 			propName: 'Body',
 		}),
-		/**
-		 * Title text for the message to display when there is no data.
-		 */
 		Title: createClass({
 			displayName: 'EmptyStateWrapper.Title',
+			statics: {
+				peek: {
+					description: `
+						Title text for the message to display when there is no data.
+					`,
+				},
+			},
 			propName: 'Title',
 		}),
 	},

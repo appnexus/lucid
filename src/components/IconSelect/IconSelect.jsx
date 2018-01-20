@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 
 import Icon from '../Icon/Icon';
 import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
@@ -23,31 +23,28 @@ const getFigureParent = domNode => {
 
 	return getFigureParent(domNode.parentElement);
 };
-/**
- *
- * {"categories": ["controls", "selectors"]}
- *
- * IconSelect allow you to pair icons together to form a related cluster.
- * Any props not explicitly called out are spread on to the root component.
-*/
 const IconSelect = createClass({
 	displayName: 'IconSelect',
 
+	statics: {
+		peek: {
+			description: `
+IconSelect allow you to pair icons together to form a related cluster.
+Any props not explicitly called out are spread on to the root component.
+			`,
+			categories: ['controls', 'selectors'],
+		},
+	},
+
 	propTypes: {
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element. Value is run through the `classnames` library.
-		 */
-		className: string,
+		className: string`
+		 Appended to the component-specific class names set on the root element. Value is run through the \`classnames\` library.
+		`,
 
-		/**
-		 * Added to the end of the IconSelect group.
-		*/
-		children: node,
+		children: node`
+		 Added to the end of the IconSelect group.
+		`,
 
-		/**
-		 * Items in the IconSelect group. Each item should have an id.
-		*/
 		items: arrayOf(
 			shape({
 				id: string.isRequired,
@@ -59,27 +56,21 @@ const IconSelect = createClass({
 				isDisabled: bool,
 				className: string,
 			})
-		).isRequired,
+		).isRequired`
+		 Items in the IconSelect group. Each item should have an id.
+		`,
 
-		/**
-			* Defines the type of IconSelect box. A 'single' select will create a
-			* radio input type Item. A 'multiple' select will create a checkbox
-			* input type.
-			*/
-		kind: oneOf(['single', 'multiple']),
+		kind: oneOf(['single', 'multiple'])`
+			Defines the type of IconSelect box. A 'single' select will create a radio input type Item. A 'multiple' select will create a checkbox input type.
+		`,
 
-		/**
-		 * A function that is called with the id of the Item in the IconSelect
-		 * group is clicked.
-		 *
-		 * Signature: `(id, { event }) => {}`
-		 */
-		onSelect: func,
+		onSelect: func`
+		 A function that is called with the id of the Item in the IconSelect group is clicked.  Signature: \`(id, { event }) => {}\`
+		`,
 
-		/**
-			* Disabled all IconSelect Items.
-			*/
-		isDisabled: bool,
+		isDisabled: bool`
+			Disabled all IconSelect Items.
+		`,
 	},
 
 	getDefaultProps() {

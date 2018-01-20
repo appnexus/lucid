@@ -6,14 +6,19 @@ import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-GripperVerticalIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * A vertical gripper icon.
- */
 const GripperVerticalIcon = createClass({
 	displayName: 'GripperVerticalIcon',
+
+	statics: {
+		peek: {
+			description: `
+				A vertical gripper icon.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
 
 	_isPrivate: true,
 

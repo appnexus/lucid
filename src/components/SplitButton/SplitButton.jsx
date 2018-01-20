@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	createClass,
@@ -19,40 +19,40 @@ const cx = lucidClassNames.bind('&-SplitButton');
 
 const { any, bool, func, node, oneOf, shape, string } = PropTypes;
 
-/**
- *
- * {"categories": ["controls", "buttons"], "madeFrom": ["Button", "DropMenu"]}
- *
- * SplitButtons allow you to combine a single main `Button` together with a
- * list of additional Buttons with actions which will be rendered within a
- * DropMenu.
- */
 const SplitButton = createClass({
 	displayName: 'SplitButton',
 
+	statics: {
+		peek: {
+			description: `
+SplitButtons allow you to combine a single main \`Button\` together with a list
+of additional Buttons with actions which will be rendered within a DropMenu.
+			`,
+			categories: ['controls', 'buttons'],
+			madeFrom: ['Button', 'DropMenu'],
+		},
+	},
+
 	components: {
-		/**
-		 * One of many potential `Button`s to render in this `SplitButton`. The
-		 * first `Button` will be used as the Primary button, while all others will
-		 * be rendered within the `DropMenu` below.
-		 */
 		Button: createClass({
 			displayName: 'SplitButton.Button',
+			statics: {
+				peek: {
+					description: `
+						One of many potential \`Button\`s to render in this \`SplitButton\`. The first \`Button\` will be used as the Primary button, while all others will be rendered within the \`DropMenu\` below.
+					`,
+				},
+			},
 			propTypes: {
-				/**
-				 * The children to render within the `Button`.
-				 */
-				children: any,
-				/**
-				 * Disables selection of the `Button`.
-				 */
-				isDisabled: bool,
-				/**
-				 * Called when the user clicks the `Button`.
-				 *
-				 * Signature: `({ event, props }) => {}`
-				 */
-				onClick: func,
+				children: any`
+				 The children to render within the \`Button\`.
+				`,
+				isDisabled: bool`
+				 Disables selection of the \`Button\`.
+				`,
+				onClick: func`
+				 Called when the user clicks the \`Button\`.  Signature: \`({ event, props }) => {}\`
+				`,
 			},
 		}),
 	},
@@ -60,46 +60,33 @@ const SplitButton = createClass({
 	reducers,
 
 	propTypes: {
-		/**
-		 * Object of DropMenu props which are passed through to the underlying
-		 * DropMenu component.
-		 */
-		DropMenu: shape(DropMenu.propTypes),
+		DropMenu: shape(DropMenu.propTypes)`
+		 Object of DropMenu props which are passed through to the underlying DropMenu component.
+		`,
 
-		/**
-		 * All children should be `ButtonGroup.Button`s and they support the same
-		 * props as `Button`s.
-		 */
-		children: node,
+		children: node`
+		 All children should be \`ButtonGroup.Button\`s and they support the same props as \`Button\`s.
+		`,
 
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element. Value is run through the `classnames` library.
-		 */
-		className: string,
+		className: string`
+		 Appended to the component-specific class names set on the root element. Value is run through the \`classnames\` library.
+		`,
 
-		/**
-		 * Sets the direction the flyout menu will render relative to the
-		 * SplitButton.
-		 */
-		direction: oneOf(['up', 'down']),
+		direction: oneOf(['up', 'down'])`
+		 Sets the direction the flyout menu will render relative to the SplitButton.
+		`,
 
-		/**
-		 * Style variations of the SplitButton.
-		 */
-		kind: oneOf(['primary', 'success', 'warning', 'danger', 'info']),
+		kind: oneOf(['primary', 'success', 'warning', 'danger', 'info'])`
+		 Style variations of the SplitButton.
+		`,
 
-		/**
-		 * Size variations of the SplitButton.
-		 */
-		size: oneOf(['short', 'small', 'large']),
+		size: oneOf(['short', 'small', 'large'])`
+		 Size variations of the SplitButton.
+		`,
 
-		/**
-		 * Form element type variations of SplitButton. Defaults to 'button' to avoid
-		 * being triggered by 'Enter' anywhere on the page. Passed through to DOM
-		 * Button.
-		 */
-		type: string,
+		type: string`
+		 Form element type variations of SplitButton. Defaults to 'button' to avoid being triggered by 'Enter' anywhere on the page. Passed through to DOM Button.
+		`,
 	},
 
 	getDefaultProps() {

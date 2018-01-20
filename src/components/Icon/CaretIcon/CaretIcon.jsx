@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
 import Icon from '../Icon';
@@ -9,20 +9,25 @@ const cx = lucidClassNames.bind('&-CaretIcon');
 
 const { oneOf } = PropTypes;
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * A caret icon.
- */
 const CaretIcon = createClass({
 	displayName: 'CaretIcon',
+
+	statics: {
+		peek: {
+			description: `
+				A caret icon.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
-		/**
-		 * direction variations of the icon
-		 */
-		direction: oneOf(['up', 'down', 'left', 'right']),
+		direction: oneOf(['up', 'down', 'left', 'right'])`
+		 direction variations of the icon
+		`,
 	},
 
 	getDefaultProps() {

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	createClass,
@@ -15,67 +15,58 @@ const cx = lucidClassNames.bind('&-Tabs');
 
 const { any, bool, func, node, number, string } = PropTypes;
 
-/**
- *
- * Content that will be rendered in a tab. Be sure to nest a Title inside
- * each Tab or provide it as a prop. Props other than `isDisabled`, `isSelected`,
- * and `Title` can be inferred from the parent `Tabs` component, but directly
- * provided `props` will take precedence.
- */
 const Tab = createClass({
 	displayName: 'Tabs.Tab',
+
+	statics: {
+		peek: {
+			description: `
+Content that will be rendered in a tab. Be sure to nest a Title inside each Tab
+or provide it as a prop. Props other than \`isDisabled\`, \`isSelected\`, and
+\`Title\` can be inferred from the parent \`Tabs\` component, but directly
+provided \`props\` will take precedence.
+			`,
+		},
+	},
 
 	propName: 'Tab',
 
 	propTypes: {
-		/**
-		 * The index of this `Tab` within the list of `Tabs`.
-		 */
-		index: number,
+		index: number`
+		 The index of this \`Tab\` within the list of \`Tabs\`.
+		`,
 
-		/**
-		 * Styles a `Tab` as disabled. This is typically used with
-		 * `isProgressive` to disable steps that have not been completed
-		 * and should not be selected until the current step has been
-		 * completed.
-		 */
-		isDisabled: bool,
+		isDisabled: bool`
+		 Styles a \`Tab\` as disabled. This is typically used with \`isProgressive\` to disable steps that have not been completed and should not be selected until the current step has been completed.
+		`,
 
-		/**
-		 * If `true`, this `Tab` is the last `Tab` in the list of `Tabs`.
-		 */
-		isLastTab: bool,
+		isLastTab: bool`
+		 If \`true\`, this \`Tab\` is the last \`Tab\` in the list of \`Tabs\`.
+		`,
 
-		/**
-		 * If `true` then the active `Tab` will appear open on the bottom.
-		 */
-		isOpen: bool,
+		isOpen: bool`
+		 If \`true\` then the active \`Tab\` will appear open on the bottom.
+		`,
 
-		/**
-		 * If `true`, the `Tab` will appear as a `Progressive` tab.
-		 */
-		isProgressive: bool,
+		isProgressive: bool`
+		 If \`true\`, the \`Tab\` will appear as a \`Progressive\` tab.
+		`,
 
-		/**
-		 * If `true`, the `Tab` will appear selected.
-		 */
-		isSelected: bool,
+		isSelected: bool`
+		 If \`true\`, the \`Tab\` will appear selected.
+		`,
 
-		/**
-		 * Callback for when the user clicks a `Tab`. Called with the index of the
-		 * `Tab` that was clicked.
-		 */
-		onSelect: func,
+		onSelect: func`
+		 Callback for when the user clicks a \`Tab\`. Called with the index of the \`Tab\` that was clicked.
+		`,
 
-		/**
-		 * The content to be rendered as the `Title` of the `Tab`.
-		 */
-		Title: node,
+		Title: node`
+		 The content to be rendered as the \`Title\` of the \`Tab\`.
+		`,
 
-		/**
-		 * If `true` component will be styled to be more visually prominent for use with page-level navigation.
-		 */
-		isNavigation: bool,
+		isNavigation: bool`
+		 If \`true\` component will be styled to be more visually prominent for use with page-level navigation.
+		`,
 	},
 
 	handleClick(event) {
@@ -142,22 +133,29 @@ const Tab = createClass({
 	},
 });
 
-/**
- *
- * {"categories": ["navigation"]}
- *
- * `Tabs` provides tabbed navigation. It has a flexible interface that allows
- * tab content to be passed as regular React children or through props.
- */
 const Tabs = createClass({
 	displayName: 'Tabs',
 
+	statics: {
+		peek: {
+			description: `
+\`Tabs\` provides tabbed navigation. It has a flexible interface that allows
+tab content to be passed as regular React children or through props.
+			`,
+			categories: ['navigation'],
+		},
+	},
+
 	components: {
 		Tab,
-		/**
-		 * Titles can be provided as a child or prop to a Tab.
-		 */
 		Title: createClass({
+			statics: {
+				peek: {
+					description: `
+						Titles can be provided as a child or prop to a Tab.
+					`,
+				},
+			},
 			displayName: 'Tabs.Title',
 			propName: 'Title',
 		}),
@@ -166,59 +164,41 @@ const Tabs = createClass({
 	reducers,
 
 	propTypes: {
-		/**
-		 * Class names that are appended to the defaults.
-		 */
-		className: string,
+		className: string`
+		 Class names that are appended to the defaults.
+		`,
 
-		/**
-		 * Indicates which of the `Tabs.Tab` children is currently selected. The
-		 * index of the last `Tabs.Tab` child with `isSelected` equal to `true`
-		 * takes precedence over this prop.
-		 */
-		selectedIndex: number,
+		selectedIndex: number`
+		 Indicates which of the \`Tabs.Tab\` children is currently selected. The index of the last \`Tabs.Tab\` child with \`isSelected\` equal to \`true\` takes precedence over this prop.
+		`,
 
-		/**
-		 * Callback for when the user clicks a tab. Called with the index of the
-		 * tab that was clicked.
-		 */
-		onSelect: func,
+		onSelect: func`
+		 Callback for when the user clicks a tab. Called with the index of the tab that was clicked.
+		`,
 
-		/**
-		 * If `true` then the active tab will appear open on the bottom.
-		 */
-		isOpen: bool,
+		isOpen: bool`
+		 If \`true\` then the active tab will appear open on the bottom.
+		`,
 
-		/**
-		 * Style the tabs as a progression. This is typically used for a work flow
-		 * where the user needs to move forward and backward through a series of
-		 * steps.
-		 */
-		isProgressive: bool,
+		isProgressive: bool`
+		 Style the tabs as a progression. This is typically used for a work flow where the user needs to move forward and backward through a series of steps.
+		`,
 
-		/**
-		 * Set the multiline className. This is typically used for styling the Tab.Title bar
-		 * for improved readability when there are multiple React elements in the tab headers.
-		 */
-		hasMultilineTitle: bool,
+		hasMultilineTitle: bool`
+		 Set the multiline className. This is typically used for styling the Tab.Title bar for improved readability when there are multiple React elements in the tab headers.
+		`,
 
-		/**
-		 *  If `true` the width will be evenly distributed to all tabs.  `False` typically used in conjunction with `Tab.width`
-		 */
-		hasFullWidthTabs: bool,
+		hasFullWidthTabs: bool`
+		  If \`true\` the width will be evenly distributed to all tabs.  \`False\` typically used in conjunction with \`Tab.width\`
+		`,
 
-		/**
-		 * If `true` component will be styled to be more visually prominent for use with page-level navigation.
-		 */
-		isNavigation: bool,
+		isNavigation: bool`
+		 If \`true\` component will be styled to be more visually prominent for use with page-level navigation.
+		`,
 
-		/**
-		 * *Child Element*
-		 *
-		 * Can be used to define one or more individual `Tab`s in the sequence of `Tabs`.
-		 *
-		 */
-		Tab: any,
+		Tab: any`
+		 *Child Element* Can be used to define one or more individual \`Tab\`s in the sequence of \`Tabs\`.  
+		`,
 	},
 
 	getDefaultProps() {

@@ -6,7 +6,6 @@ import React from 'react';
 import { render } from 'react-dom';
 import { withRouter, Switch } from 'react-router';
 import { HashRouter, Link, Route } from 'react-router-dom';
-import docgenMapRaw from './docgen.json'; // eslint-disable-line
 import { handleHighlightCode, toMarkdown, sanitizeExamplePath } from './util';
 import createClass from 'create-react-class';
 import querystring from 'querystring';
@@ -15,12 +14,6 @@ import ColorPalette from './containers/color-palette';
 import LandingPage from './containers/landing-page';
 import Icons from './containers/icons';
 
-//import {
-//	Table,
-//	VerticalListMenuDumb,
-//	Autocomplete,
-//	stateManagement,
-//} from '../index';
 import * as Lucid from '../index';
 
 const { Table, VerticalListMenuDumb, Autocomplete, stateManagement } = Lucid;
@@ -77,36 +70,6 @@ const reqExamplesRaw = require.context(
 	/examples.*\.jsx?/i
 );
 
-const docgenMap = _.mapValues(docgenMapRaw, (value, componentName) => {
-	// child components don't have any custom data
-	if (_.includes(componentName, '.')) {
-		return value;
-	}
-
-	const parentName = value.customData.extend;
-
-	if (!parentName) {
-		return value;
-	}
-
-	// TODO: this hack only allows for one level of `extend` nesting, we'll need
-	// recursion to go deeper.
-	const parentExtend = _.get(docgenMapRaw, `${parentName}.customData.extend`);
-	const parentProps = _.get(
-		docgenMapRaw,
-		`${parentExtend || parentName}.props`
-	);
-
-	if (!parentProps) {
-		throw new Error(
-			`Looks like something is wrong with the custom metadata for ${componentName}. Please make sure the 'extend' refers to a real component that has valid props defined.`
-		);
-	}
-
-	// The `clone` is important to keep from mutating `value`
-	return _.defaultsDeep(_.clone(value), { props: parentProps });
-});
-
 /**
  * Transforms an example filename to an example title. Remove leading numbers and
  * file extensions then capitalizes each word and separates each with a space.
@@ -144,7 +107,7 @@ const PropType = createClass({
 				computed: bool,
 				value: oneOfType([string, array, object]),
 			}),
-		]).isRequired,
+		]),
 		/**
 		 * Only provided when we're dealing with a `shape`
 		 */
@@ -155,9 +118,9 @@ const PropType = createClass({
 		const { componentName, type, shapeKey } = this.props;
 
 		if (!type) {
-			console.error(
-				`It looks like there's an issue with ${componentName}'s props. One common cause of this issue is when the getDefaultProps method defines a default value for a prop that is not explicitly defined in the propTypes map.`
-			);
+			//console.error(
+			//	`It looks like there's an issue with ${componentName}'s props. One common cause of this issue is when the getDefaultProps method defines a default value for a prop that is not explicitly defined in the propTypes map.`
+			//);
 			return null;
 		}
 
@@ -219,6 +182,18 @@ const ContextualComponent = createClass({
 	},
 });
 
+const isReactComponent = value => {
+	try {
+		return (
+			typeof value === 'function' &&
+			value.prototype &&
+			value.prototype.isReactComponent
+		);
+	} catch (err) {
+		return false;
+	}
+};
+
 const Component = createClass({
 	propTypes: {
 		componentName: any,
@@ -249,36 +224,15 @@ const Component = createClass({
 	},
 
 	render() {
-		//const { componentName } = this.props.match.params;
-
-		//const component = _.get(docgenMap, componentName, {});
 		const { componentName, componentRef } = this.props;
-		const component = componentRef.peek;
-
-		//const childComponents = _.map(
-		//	_.get(component, 'childComponents', []),
-		//	childComponent => {
-		//		if (!childComponent.componentRef) {
-		//			return childComponent;
-		//		}
-		//		return _.assign(
-		//			{},
-		//			childComponent,
-		//			_.omit(_.get(docgenMap, childComponent.componentRef, {}), [
-		//				'displayName',
-		//			])
-		//		);
-		//	}
-		//);
-		const childComponents = [];
-
+		const childComponents = _.toPairs(_.pickBy(componentRef, isReactComponent));
 		const defaultProps = componentRef.defaultProps;
 
 		const componentProps = _.flow(
 			x => _.get(x, `propTypes`, {}),
 			x =>
 				_.mapValues(x, (resolverFn, propName) => {
-					const defaultProp = _.get(defaultProps, propName, '');
+					const defaultProp = _.get(defaultProps, propName);
 					const peek = _.get(resolverFn, 'peek', {});
 					return _.assign({}, peek, {
 						default: defaultProp,
@@ -290,11 +244,12 @@ const Component = createClass({
 
 		const descriptionMarkdown = _.get(componentRef, 'peek.description', '');
 
-		if (_.isEmpty(descriptionMarkdown)) {
-			console.warn(
-				`Unable to find ${componentName}'s description in src/docs/docgen.json. Are you on a bad URL? Did you forget to run \`gulp docs-generate\`? Did you remember to give ${componentName} a description block?`
-			);
-		}
+		//if (_.isEmpty(descriptionMarkdown)) {
+		//	console.warn(
+		//		`Unable to find ${componentName}'s description in src/docs/docgen.json. Are you on a bad URL? Did you forget to run \`gulp docs-generate\`? Did you remember to give ${componentName} a description block?`
+		//		``
+		//	);
+		//}
 
 		const descriptionHTML = toMarkdown(descriptionMarkdown.trim());
 
@@ -341,11 +296,11 @@ const Component = createClass({
 						</Thead>
 						<Tbody>
 							{_.map(componentProps, ([propName, propDetails]) => {
-								if (!propDetails.text) {
-									console.error(
-										`Warning: There was an issue with the docs that were generated for component "${componentName}" and prop "${propName}". One reason might be that you have a default value for something that was never declared in propTypes.`
-									);
-								}
+								//if (!propDetails.text) {
+								//	console.error(
+								//		`Warning: There was an issue with the docs that were generated for component "${componentName}" and prop "${propName}". One reason might be that you have a default value for something that was never declared in propTypes.`
+								//	);
+								//}
 
 								return (
 									<Tr key={propName}>
@@ -358,10 +313,9 @@ const Component = createClass({
 										</Td>
 										<Td>{propDetails.isRequired ? 'yes' : ''}</Td>
 										<Td>
-											{propDetails.default
-												? <pre>
+											{!_.isUndefined(propDetails.default)
+												? <pre className="default-value">
 														<code className="lang-javascript">
-															{/*_.get(propDetails, 'defaultValue.value', '')*/}
 															{_.isFunction(propDetails.default)
 																? 'function'
 																: JSON.stringify(propDetails.default)}
@@ -381,25 +335,29 @@ const Component = createClass({
 				{!_.isEmpty(childComponents)
 					? <section>
 							<h3>Child Components</h3>
-							{_.map(childComponents, childComponent => (
-								<section key={childComponent.displayName}>
+							{_.map(childComponents, ([refName, childComponent]) => (
+								<section key={refName}>
 									<h4>
-										{childComponent.componentRef
+										{componentName !==
+											_.first(
+												_.get(childComponent, 'displayName', '').split('.')
+											)
 											? <Link
-													to={`/components/${childComponent.componentRef.split('.')[0]}`}
+													to={`/components/${_.get(childComponent, 'displayName', '').split('.')[0]}`}
 												>
-													{childComponent.displayName}
-													{childComponent.displayName !==
-														childComponent.componentRef &&
-														` (${childComponent.componentRef})`}
+													{refName}
+													{refName !== childComponent.displayName &&
+														` (${childComponent.displayName})`}
 												</Link>
-											: childComponent.displayName}
+											: refName}
 									</h4>
-									<div
-										dangerouslySetInnerHTML={toMarkdown(
-											childComponent.description
-										)}
-									/>
+									{_.has(childComponent, 'peek.description')
+										? <div
+												dangerouslySetInnerHTML={toMarkdown(
+													_.get(childComponent, 'peek.description', '').trim()
+												)}
+											/>
+										: null}
 									{childComponent.propName &&
 										<Table>
 											<Tbody>
@@ -415,7 +373,7 @@ const Component = createClass({
 												</Tr>
 											</Tbody>
 										</Table>}
-									{!_.isNil(childComponent.props)
+									{!_.isEmpty(childComponent.propTypes)
 										? <Table style={{ width: '100%' }}>
 												<Thead>
 													<Tr>
@@ -429,21 +387,26 @@ const Component = createClass({
 												<Tbody>
 													{_.map(
 														_.sortBy(
-															_.toPairs(_.get(childComponent, 'props', [])),
+															_.toPairs(_.get(childComponent, 'propTypes', {})),
 															x => x[0]
 														),
-														([propName, propDetails]) => {
-															if (!propDetails || _.isNil(propDetails.text)) {
-																console.error(
-																	`Warning: There was an issue with the docs that were generated for component "${componentName}.${childComponent.displayName}" and prop "${propName}". One reason might be that you have a default value for something that was never declared in propTypes.`
-																);
-																return null;
-															}
+														([propName, propTypeResolver]) => {
+															const propDetails = _.assign(
+																{},
+																_.has(childComponent, [
+																	'defaultProps',
+																	propName,
+																]) && {
+																	default: _.get(childComponent, [
+																		'defaultProps',
+																		propName,
+																	]),
+																},
+																_.get(propTypeResolver, 'peek')
+															);
 
 															return (
-																<Tr
-																	key={`${childComponent.displayName}-${propName}`}
-																>
+																<Tr key={`${refName}-${propName}`}>
 																	<Td>{propName}</Td>
 																	<Td>
 																		<PropType
@@ -453,17 +416,14 @@ const Component = createClass({
 																	</Td>
 																	<Td>{propDetails.isRequired ? 'yes' : ''}</Td>
 																	<Td>
-																		{propDetails.default
-																			? <pre>
+																		{!_.isUndefined(propDetails.default)
+																			? <pre className="default-value">
 																					<code className="lang-javascript">
-																						{/*_.get(
-																				propDetails,
-																				'defaultValue.value',
-																				''
-																			)*/}
-																						{JSON.stringify(
-																							propDetails.default
-																						)}
+																						{_.isFunction(propDetails.default)
+																							? 'function'
+																							: JSON.stringify(
+																									propDetails.default
+																								)}
 																					</code>
 																				</pre>
 																			: null}
@@ -545,78 +505,27 @@ const App = createClass({
 		});
 	},
 
-	renderCategoryLinks(items) {
-		const sortedItems = _.sortBy(_.keys(items), _.lowerCase);
+	renderCategoryLinks(categoryTree) {
+		const sortedNodeKeys = _.sortBy(_.keys(categoryTree), _.lowerCase);
 
 		return (
 			<VerticalListMenu selectedIndices={[]}>
-				{_.map(sortedItems, currentNodeName => {
-					if (typeof items[currentNodeName] === 'function') {
-						return (
-							<Item
-								key={currentNodeName}
-								onSelect={_.partial(
-									this.goToPath,
-									`/components/${currentNodeName}`
-								)}
+				{_.map(sortedNodeKeys, nodeKey => {
+					const node = categoryTree[nodeKey];
+					return isReactComponent(node)
+						? <Item
+								key={nodeKey}
+								onSelect={_.partial(this.goToPath, `/components/${nodeKey}`)}
 								isSelected={
-									this.props.location.pathname ===
-										`/components/${currentNodeName}`
+									this.props.location.pathname === `/components/${nodeKey}`
 								}
 							>
-								{currentNodeName}
+								{_.startCase(nodeKey)}
 							</Item>
-						);
-					}
-
-					const kids = items[currentNodeName];
-
-					return (
-						<VerticalListMenu selectedIndices={[]}>
-							<Item hasExpander isActionable={false} key={currentNodeName}>
-								<span>{_.startCase(currentNodeName)}</span>
-								{this.renderCategoryLinks(kids)}
-							</Item>
-						</VerticalListMenu>
-					);
-				})}
-			</VerticalListMenu>
-		);
-	},
-	_renderCategoryLinks(items) {
-		if (_.isPlainObject(items)) {
-			const sortedItems = _.sortBy(_.toPairs(items), pair => pair[0]);
-			return (
-				<VerticalListMenu selectedIndices={[]}>
-					{_.map(sortedItems, ([categoryName, kids]) => {
-						return (
-							<Item hasExpander isActionable={false} key={categoryName}>
-								<span>{_.startCase(categoryName)}</span>
-								{this.renderCategoryLinks(kids)}
-							</Item>
-						);
-					})}
-				</VerticalListMenu>
-			);
-		}
-
-		return (
-			<VerticalListMenu selectedIndices={[]}>
-				{_.map(_.sortBy(items), componentName => {
-					return (
-						<Item
-							key={componentName}
-							onSelect={_.partial(
-								this.goToPath,
-								`/components/${componentName}`
-							)}
-							isSelected={
-								this.props.location.pathname === `/components/${componentName}`
-							}
-						>
-							{componentName}
-						</Item>
-					);
+						: <Item hasExpander isActionable={false} key={nodeKey}>
+								<span>{_.startCase(nodeKey)}</span>
+								{this.renderCategoryLinks(node)}
+							</Item>;
 				})}
 			</VerticalListMenu>
 		);
@@ -640,27 +549,18 @@ const App = createClass({
 	},
 
 	searchResults() {
-		return [];
-	},
-
-	_searchResults() {
 		const { search } = this.state;
+		const searchLower = _.toLower(search);
+		const showPrivateComponents = this.showPrivateComponents();
 
-		return _.flatMap(docgenMap, (value, componentName) => {
-			if (!this.showPrivateComponents() && value.isPrivateComponent) {
-				return [];
+		return _.filter(_.keys(lucidComponents), key => {
+			const componentRef = lucidComponents[key];
+			const isPrivate =
+				_.get(componentRef, 'peek.isPrivate') ||
+				_.get(componentRef, '_isPrivate');
+			if (showPrivateComponents || !isPrivate) {
+				return _.includes(_.toLower(key), searchLower);
 			}
-
-			// exclude child components from search
-			if (_.includes(componentName, '.')) {
-				return [];
-			}
-
-			if (componentName.toLowerCase().indexOf(search.toLowerCase()) !== -1) {
-				return componentName;
-			}
-
-			return [];
 		});
 	},
 
@@ -669,18 +569,38 @@ const App = createClass({
 
 		const suggestions = this.searchResults();
 
-		const categoryMap = _.reduce(
+		const categoryTree = _.reduce(
 			lucidComponents,
 			(acc, value, key) => {
 				const categories = _.get(value, 'peek.categories', []);
 				const path = categories.concat(key).join('.');
-				return _.set(acc, path, value);
+				const isPrivate =
+					_.get(value, 'peek.isPrivate') || _.get(value, '_isPrivate');
+				if (this.showPrivateComponents() || !isPrivate) {
+					return _.set(acc, path, value);
+				}
+				return acc;
 			},
 			{}
 		);
 
 		return (
 			<div className="App">
+				{/* `.App-loading` helps prevent a FOUC */}
+				<div
+					className="App-loading"
+					style={{
+						position: 'fixed',
+						left: 0,
+						top: 0,
+						width: '100%',
+						height: '100%',
+						backgroundColor: 'white',
+						zIndex: 2,
+						pointerEvents: 'none',
+						transition: 'opacity 200ms ease 200ms',
+					}}
+				/>
 				<div className="App-sidebar">
 					<Link
 						className="App-sidebar-logo"
@@ -717,7 +637,7 @@ const App = createClass({
 							</Item>
 						</VerticalListMenu>
 
-						{this.renderCategoryLinks(categoryMap)}
+						{this.renderCategoryLinks(categoryTree)}
 					</nav>
 				</div>
 				<div className="App-body">

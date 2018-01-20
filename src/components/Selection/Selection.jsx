@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import MinusCircleIcon from '../Icon/MinusCircleIcon/MinusCircleIcon';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
 import CrossIcon from '../Icon/CrossIcon/CrossIcon';
@@ -54,15 +54,18 @@ function defaultIcon(kind, responsiveMode) {
 												: null;
 }
 
-/**
- *
- * {"categories": ["communication"]}
- *
- * Used to indicate selections. It's very similar to `Tag` but is meant to be
- * used in areas of the UI that have more space available to them.
- */
 const Selection = createClass({
 	displayName: 'Selection',
+
+	statics: {
+		peek: {
+			description: `
+Used to indicate selections. It's very similar to \`Tag\` but is meant to be
+used in areas of the UI that have more space available to them.
+			`,
+			categories: ['communication'],
+		},
+	},
 
 	components: {
 		Label: createClass({
@@ -77,13 +80,10 @@ const Selection = createClass({
 	},
 
 	propTypes: {
-		/**
-		 * Appended to the component-specific class names set on the root element.
-		 */
-		className: string,
-		/**
-		 * Applies an icon and styles for the kind of selection.
-		 */
+		className: string`
+		 Appended to the component-specific class names set on the root element.
+		`,
+
 		kind: oneOf([
 			'default',
 			'container',
@@ -91,46 +91,41 @@ const Selection = createClass({
 			'danger',
 			'info',
 			'warning',
-		]),
-		/**
-		 * Shows or hides the little "x" for a given item.
-		 */
-		isRemovable: bool,
-		/**
-		 * Gives the selection a background. This is desirable when you only have
-		 * one level of nested selections.
-		 */
-		hasBackground: bool,
-		/**
-		 * Make the content text bold. This is desirable when you only have
-		 * one level of nested selections.
-		 */
-		isBold: bool,
-		/**
-		 * Called when the close button is clicked.
-		 *
-		 * Signature: `({ props, event }) => {}`
-		 */
-		onRemove: func,
-		/**
-		 * Label of the component.
-		 */
-		Label: node,
-		/**
-		 * Display a custom icon for the selection. Generally you shouldn't need
-		 * this prop since the `kind` prop will pick the correct icon for you.
-		 */
-		Icon: node,
-		/**
-		 * Arbitrary children.
-		 */
-		children: node,
-		/**
-		 * Adjusts the display of this component. This should typically be driven
-		 * by screen size. Currently `small` and `large` are explicitly handled
-		 * by this component.
-		 */
-		responsiveMode: oneOf(['small', 'medium', 'large']),
+		])`
+		 Applies an icon and styles for the kind of selection.
+		`,
+
+		isRemovable: bool`
+		 Shows or hides the little "x" for a given item.
+		`,
+
+		hasBackground: bool`
+		 Gives the selection a background. This is desirable when you only have one level of nested selections.
+		`,
+
+		isBold: bool`
+		 Make the content text bold. This is desirable when you only have one level of nested selections.
+		`,
+
+		onRemove: func`
+		 Called when the close button is clicked.  Signature: \`({ props, event }) => {}\`
+		`,
+
+		Label: node`
+		 Label of the component.
+		`,
+
+		Icon: node`
+		 Display a custom icon for the selection. Generally you shouldn't need this prop since the \`kind\` prop will pick the correct icon for you.
+		`,
+
+		children: node`
+		 Arbitrary children.
+		`,
+
+		responsiveMode: oneOf(['small', 'medium', 'large'])`
+		 Adjusts the display of this component. This should typically be driven by screen size. Currently \`small\` and \`large\` are explicitly handled by this component.
+		`,
 	},
 
 	getDefaultProps() {

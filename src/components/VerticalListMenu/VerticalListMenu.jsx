@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { bindClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
@@ -12,113 +12,95 @@ const cx = bindClassNames('lucid-VerticalListMenu');
 
 const { func, arrayOf, bool, string, number, node, object, shape } = PropTypes;
 
-/**
- * {"categories": ["navigation"], "madeFrom": ["ChevronIcon"]}
- *
- * Used primarily for navigation lists. It supports nesting `VerticalListMenu`s
- * below `VerticalListMenu.Item`s and animating expanding of those sub lists.
- * The default reducer behavior is for only one `VerticalListMenu.Item` to be
- * selected at any given time; that is easily overridden by handling `onSelect`
- * yourself.
- */
 const VerticalListMenu = createClass({
 	displayName: 'VerticalListMenu',
+
+	statics: {
+		peek: {
+			description: `
+Used primarily for navigation lists. It supports nesting \`VerticalListMenu\`s
+below \`VerticalListMenu.Item\`s and animating expanding of those sub lists.
+The default reducer behavior is for only one \`VerticalListMenu.Item\` to be
+selected at any given time; that is easily overridden by handling \`onSelect\`
+yourself.
+			`,
+			categories: ['navigation'],
+			madeFrom: ['ChevronIcon'],
+		},
+	},
 
 	reducers,
 
 	components: {
-		/**
-		 * A child item that can contain content or another VerticalListMenu.
-		 */
 		Item: createClass({
 			displayName: 'VerticalListMenu.Item',
+			statics: {
+				peek: {
+					description: `
+						A child item that can contain content or another VerticalListMenu.
+					`,
+				},
+			},
 			propTypes: {
-				/**
-				 * Show or hide the expand button. Should be `true` if you want to nest
-				 * menus.
-				 */
-				hasExpander: bool,
-				/**
-				 * Determines the visibility of nested menus.
-				 */
-				isExpanded: bool,
-				/**
-				 * If `true` then a small bar on the left side of the item will be
-				 * shown indicating this item is selected.
-				 */
-				isSelected: bool,
-				/**
-				 * Determines the visibility of the small bar on the left when the user
-				 * hovers over the item. This should indicate to the user that an item
-				 * is clickable.
-				 */
-				isActionable: bool,
-				/**
-				 * Called when the user clicks the main body of the item.
-				 *
-				 * Signature: `(index, { event, props}) => {}`
-				 */
-				onSelect: func,
-				/**
-				 * Called when the user clicks the expand button.
-				 *
-				 * Signature: `(index, { event, props}) => {}`
-				 */
-				onToggle: func,
-				/**
-				 * Props that are passed through to the underlying Collapsible
-				 * component if the item has children.
-				 */
-				Collapsible: shape(Collapsible.propTypes),
+				hasExpander: bool`
+				 Show or hide the expand button. Should be \`true\` if you want to nest menus.
+				`,
+
+				isExpanded: bool`
+				 Determines the visibility of nested menus.
+				`,
+
+				isSelected: bool`
+				 If \`true\` then a small bar on the left side of the item will be shown indicating this item is selected.
+				`,
+
+				isActionable: bool`
+				 Determines the visibility of the small bar on the left when the user hovers over the item. This should indicate to the user that an item is clickable.
+				`,
+
+				onSelect: func`
+				 Called when the user clicks the main body of the item.  Signature: \`(index, { event, props}) => {}\`
+				`,
+
+				onToggle: func`
+				 Called when the user clicks the expand button.  Signature: \`(index, { event, props}) => {}\`
+				`,
+
+				Collapsible: shape(Collapsible.propTypes)`
+				 Props that are passed through to the underlying Collapsible component if the item has children.
+				`,
 			},
 		}),
 	},
 
 	propTypes: {
-		/**
-		 * Regular `children` aren't really used in this component, but if you do
-		 * add them they will be placed at the end of the component. You should be
-		 * using `VerticalListMenu.Item`s instead of regular children.
-		 */
-		children: node,
+		children: node`
+		 Regular \`children\` aren't really used in this component, but if you do add them they will be placed at the end of the component. You should be using \`VerticalListMenu.Item\`s instead of regular children.
+		`,
 
-		/**
-		 * Appended to the component-specific class names set on the root element.
-		 */
-		className: string,
+		className: string`
+		 Appended to the component-specific class names set on the root element.
+		`,
 
-		/**
-		 * Passed through to the root element.
-		 */
-		style: object,
+		style: object`
+		 Passed through to the root element.
+		`,
 
-		/**
-		 * Indicates which of the `VerticalListMenu.Item` children are currently
-		 * selected. You can also put the `isSelected` prop directly on the
-		 * `VerticalListMenu.Item`s if you wish.
-		 */
-		selectedIndices: arrayOf(number),
+		selectedIndices: arrayOf(number)`
+		 Indicates which of the \`VerticalListMenu.Item\` children are currently selected. You can also put the \`isSelected\` prop directly on the \`VerticalListMenu.Item\`s if you wish.
+		`,
 
-		/**
-		 * Indicates which of the `VerticalListMenu.Item` children are currently
-		 * expanded. You can also put the `isExpanded` prop directly on the
-		 * `VerticalListMenu.Item`s if you wish.
-		 */
-		expandedIndices: arrayOf(number),
+		expandedIndices: arrayOf(number)`
+		 Indicates which of the \`VerticalListMenu.Item\` children are currently expanded. You can also put the \`isExpanded\` prop directly on the \`VerticalListMenu.Item\`s if you wish.
+		`,
 
-		/**
-		 * Callback fired when the user selects a `VerticalListMenu.Item`.
-		 *
-		 * Signature: `(index, { event, props }) => {}`
-		 */
-		onSelect: func,
+		onSelect: func`
+		 Callback fired when the user selects a \`VerticalListMenu.Item\`.  Signature: \`(index, { event, props }) => {}\`
+		`,
 
-		/**
-		 * Callback fired when the user expands or collapses an expandable `VerticalListMenu.Item`.
-		 *
-		 * Signature: `(index, { event, props }) => {}`
-		 */
-		onToggle: func,
+		onToggle: func`
+		 Callback fired when the user expands or collapses an expandable \`VerticalListMenu.Item\`.  Signature: \`(index, { event, props }) => {}\`
+		`,
 	},
 
 	getDefaultProps() {

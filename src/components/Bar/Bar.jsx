@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
@@ -9,56 +9,53 @@ const cx = lucidClassNames.bind('&-Bar');
 
 const { number, bool, string, object } = PropTypes;
 
-/**
- * {"categories": ["visualizations", "geoms"]}
- *
- * *For use within an `svg`*
- *
- * Bars are typically used for bar charts and are pretty much a thin wrapper
- * around svg rects.
- *
- */
 const Bar = createClass({
 	displayName: 'Bar',
 
+	statics: {
+		peek: {
+			description: `
+*For use within an \`svg\`*
+
+Bars are typically used for bar charts and are pretty much a thin wrapper
+around svg rects.
+			`,
+			categories: ['visualizations', 'geoms'],
+		},
+	},
+
 	propTypes: {
-		/**
-		 * Passed through to the root element.
-		 */
-		style: object,
-		/**
-		 * Appended to the component-specific class names set on the root element.
-		 */
-		className: string,
-		/**
-		 * x coordinate.
-		 */
-		x: number,
-		/**
-		 * y coordinate.
-		 */
-		y: number,
-		/**
-		 * Height of the bar.
-		 */
-		height: number,
-		/**
-		 * Width of the bar.
-		 */
-		width: number,
-		/**
-		 * Determines if the bar has a white stroke around it.
-		 */
-		hasStroke: bool,
-		/**
-		 * Strings should match an existing color class unless they start with a
-		 * '#' for specific colors. E.g.:
-		 *
-		 * - `COLOR_0`
-		 * - `COLOR_GOOD`
-		 * - `'#123abc'`
-		 */
-		color: string,
+		style: object`
+		 Passed through to the root element.
+		`,
+
+		className: string`
+		 Appended to the component-specific class names set on the root element.
+		`,
+
+		x: number`
+		 x coordinate.
+		`,
+
+		y: number`
+		 y coordinate.
+		`,
+
+		height: number`
+		 Height of the bar.
+		`,
+
+		width: number`
+		 Width of the bar.
+		`,
+
+		hasStroke: bool`
+		 Determines if the bar has a white stroke around it.
+		`,
+
+		color: string`
+		 Strings should match an existing color class unless they start with a '#' for specific colors. E.g.: - \`COLOR_0\` - \`COLOR_GOOD\` - \`'#123abc'\`
+		`,
 	},
 
 	getDefaultProps() {

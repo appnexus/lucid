@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { createClass, omitProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import Table from '../Table/Table';
@@ -8,13 +8,18 @@ const cx = lucidClassNames.bind('&-ScrollTable');
 
 const { object, string, bool, node, number, oneOfType } = PropTypes;
 
-/**
- * {"categories": ["table"], "madeFrom": ["Table"]}
- *
- * Table in a scrollable container.
- */
 const ScrollTable = createClass({
 	displayName: 'ScrollTable',
+
+	statics: {
+		peek: {
+			description: `
+Table in a scrollable container.
+			`,
+			categories: ['table'],
+			madeFrom: ['Table'],
+		},
+	},
 
 	components: {
 		Thead: Table.Thead,
@@ -25,30 +30,29 @@ const ScrollTable = createClass({
 	},
 
 	propTypes: {
-		/**
-		 * {Thead, Tbody, Tr, Th, Td} are the child components of Scrolltable, same as Table.
-		 */
-		children: node,
-		/**
-		 * Class names that are appended to the defaults.
-		 */
-		className: string,
-		/**
-		 * Styles that are passed through to the root container.
-		 */
-		style: object,
-		/**
-		 * Set the width of the Table inside the scrollable container.
-		 */
-		tableWidth: oneOfType([number, string]),
-		/**
-		 * Set the Table contents to not allow word wrapping.
-		 */
-		hasWordWrap: bool,
-		/**
-		 * render the table with borders on the outer edge
-		 */
-		hasBorder: bool,
+		children: node`
+		 {Thead, Tbody, Tr, Th, Td} are the child components of Scrolltable, same as Table.
+		`,
+
+		className: string`
+		 Class names that are appended to the defaults.
+		`,
+
+		style: object`
+		 Styles that are passed through to the root container.
+		`,
+
+		tableWidth: oneOfType([number, string])`
+		 Set the width of the Table inside the scrollable container.
+		`,
+
+		hasWordWrap: bool`
+		 Set the Table contents to not allow word wrapping.
+		`,
+
+		hasBorder: bool`
+		 render the table with borders on the outer edge
+		`,
 	},
 
 	getDefaultProps() {

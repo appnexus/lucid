@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
@@ -18,28 +18,34 @@ const cx = lucidClassNames.bind('&-Expander');
 
 const { any, bool, func, node, object, oneOf, string } = PropTypes;
 
-/**
- * {"categories": ["layout"], "madeFrom": ["ChevronIcon"]}
- *
- * This is a container that provides a toggle that controls when the content is
- * shown.
- */
 const Expander = createClass({
 	displayName: 'Expander',
 
+	statics: {
+		peek: {
+			description: `
+This is a container that provides a toggle that controls when the content is shown.
+			`,
+			categories: ['layout'],
+			madeFrom: ['ChevronIcon'],
+		},
+	},
+
 	components: {
-		/**
-		 * Renders a `<span>` to be shown next to the expander icon.
-		 */
 		Label: createClass({
 			displayName: 'Expander.Label',
+			statics: {
+				peek: {
+					description: `
+						Renders a \`<span>\` to be shown next to the expander icon.
+					`,
+				},
+			},
 			propName: 'Label',
 			propTypes: {
-				/**
-				 * Used to identify the purpose of this switch to the user -- can be
-				 * any renderable content.
-				 */
-				children: node,
+				children: node`
+				 Used to identify the purpose of this switch to the user -- can be any renderable content.
+				`,
 			},
 		}),
 	},
@@ -47,45 +53,33 @@ const Expander = createClass({
 	reducers,
 
 	propTypes: {
-		/**
-		 * Expandable content.
-		 */
-		children: node,
+		children: node`
+		 Expandable content.
+		`,
 
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element.
-		 */
-		className: string,
+		className: string`
+		 Appended to the component-specific class names set on the root element.
+		`,
 
-		/**
-		 * Indicates that the component is in the "expanded" state when true
-		 * and in the "unexpanded" state when false.
-		 */
-		isExpanded: bool,
+		isExpanded: bool`
+		 Indicates that the component is in the "expanded" state when true and in the "unexpanded" state when false.
+		`,
 
-		/**
-		 * Called when the user clicks on the component's header.
-		 *
-		 * Signature: `(isExpanded, { event, props }) => {}`
-		 */
-		onToggle: func,
+		onToggle: func`
+		 Called when the user clicks on the component's header.  Signature: \`(isExpanded, { event, props }) => {}\`
+		`,
 
-		/**
-		 * Passed through to the root element.
-		 */
-		style: object,
+		style: object`
+		 Passed through to the root element.
+		`,
 
-		/**
-		 * Child element whose children represents content to be shown next to
-		 * the expander icon.
-		 */
-		Label: any,
+		Label: any`
+		 Child element whose children represents content to be shown next to the expander icon.
+		`,
 
-		/**
-		 * Renders different variants of Expander. 'simple' is default. 'highlighted' is more prominant.
-		 */
-		kind: oneOf(['simple', 'highlighted']),
+		kind: oneOf(['simple', 'highlighted'])`
+		 Renders different variants of Expander. 'simple' is default. 'highlighted' is more prominant.
+		`,
 	},
 
 	getDefaultProps() {

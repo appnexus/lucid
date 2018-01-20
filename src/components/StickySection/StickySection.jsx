@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
@@ -8,37 +8,35 @@ import { getAbsoluteBoundingClientRect } from '../../util/dom-helpers';
 const cx = lucidClassNames.bind('&-StickySection');
 const { node, number, object, string } = PropTypes;
 
-/**
- * {"categories": ["helpers"]}
- *
- * `StickySection` can be wrapped around any content to make it _stick_ to the
- * top edge of the screen when a user scrolls beyond its initial location.
- */
 const StickySection = createClass({
 	displayName: 'StickySection',
+
+	statics: {
+		peek: {
+			description: `
+\`StickySection\` can be wrapped around any content to make it _stick_ to the
+top edge of the screen when a user scrolls beyond its initial location.
+			`,
+			categories: ['helpers'],
+		},
+	},
+
 	propTypes: {
-		/**
-		 * any valid React children
-		 */
-		children: node,
-		/**
-		 * Appended to the component-specific class names set on the root element.
-		 */
-		className: string,
-		/**
-		 * Styles that are passed through to the root container.
-		 */
-		style: object,
-		/**
-		 * Pixel value from the top of the document. When scrolled passed, the
-		 * sticky header is no longer sticky, and renders normally.
-		 */
-		lowerBound: number,
-		/**
-		 * Width of section when it sticks to the top edge of the screen. When
-		 * omitted, it defaults to the last width of the section.
-		 */
-		viewportWidth: number,
+		children: node`
+		 any valid React children
+		`,
+		className: string`
+		 Appended to the component-specific class names set on the root element.
+		`,
+		style: object`
+		 Styles that are passed through to the root container.
+		`,
+		lowerBound: number`
+		 Pixel value from the top of the document. When scrolled passed, the sticky header is no longer sticky, and renders normally.
+		`,
+		viewportWidth: number`
+		 Width of section when it sticks to the top edge of the screen. When omitted, it defaults to the last width of the section.
+		`,
 	},
 
 	getInitialState() {

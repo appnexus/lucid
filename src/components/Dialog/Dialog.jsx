@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import Overlay from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
@@ -13,28 +13,41 @@ const SMALL = 'small';
 const MEDIUM = 'medium';
 const LARGE = 'large';
 
-/**
- * {"categories": ["layout"], "extend": "Overlay", "madeFrom": ["Portal", "Overlay"]}
- *
- * Dialog is used to pop open a window so the user doesn't lose the context of
- * the page behind it. Extra props are spread through to the underlying `Overlay`
- */
 const Dialog = createClass({
 	displayName: 'Dialog',
 
+	statics: {
+		peek: {
+			description: `
+Dialog is used to pop open a window so the user doesn't lose the context of the page behind it. Extra props are spread through to the underlying \`Overlay\`
+			`,
+			categories: ['layout'],
+			extend: 'Overlay',
+			madeFrom: ['Portal', 'Overlay'],
+		},
+	},
+
 	components: {
-		/**
-		 * Renders a `<header>`.
-		 */
 		Header: createClass({
 			displayName: 'Dialog.Header',
+			statics: {
+				peek: {
+					description: `
+						Renders a \`<header>\`.
+					`,
+				},
+			},
 			propName: 'Header',
 		}),
-		/**
-		 * Renders a `<footer>`.
-		 */
 		Footer: createClass({
 			displayName: 'Dialog.Footer',
+			statics: {
+				peek: {
+					description: `
+						Renders a \`<footer>\`.
+					`,
+				},
+			},
 			propName: 'Footer',
 		}),
 	},
@@ -42,22 +55,17 @@ const Dialog = createClass({
 	propTypes: {
 		...Overlay.propTypes,
 
-		/**
-		 * Size variations that only affect the width of the dialog. All the sizes
-		 * will grow in height until they get too big, at which point they will
-		 * scroll inside.
-		 */
-		size: oneOf(['small', 'medium', 'large']),
+		size: oneOf(['small', 'medium', 'large'])`
+		 Size variations that only affect the width of the dialog. All the sizes will grow in height until they get too big, at which point they will scroll inside.
+		`,
 
-		/**
-		 * *Child Element* - Header contents. Only one `Header` is used.
-		 */
-		Header: node,
+		Header: node`
+			*Child Element* - Header contents. Only one \`Header\` is used.
+		`,
 
-		/**
-		 * *Child Element* - Footer contents. Only one `Footer` is used.
-		 */
-		Footer: node,
+		Footer: node`
+			*Child Element* - Footer contents. Only one \`Footer\` is used.
+		`,
 	},
 
 	getDefaultProps() {

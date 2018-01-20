@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
@@ -22,64 +22,65 @@ const defaultIcons = {
 	default: null,
 };
 
-/**
- *
- * {"categories": ["communication"], "madeFrom": ["DangerIcon", "InfoIcon", "SuccessIcon", "WarningIcon"]}
- *
- * A basic Banner. Any props that are not explicitly called out below will be
- * passed through to the native `Banner` component.
- *
- * Short single line content can be passed in as a simple string. Multi line
- * messages should be passed wrapped in a `<p>` tag.
- *
- * It is valid to use `strong` or `em` within a `Banner` message.
- */
 const Banner = createClass({
 	displayName: 'Banner',
+
+	statics: {
+		peek: {
+			description: `
+A basic Banner. Any props that are not explicitly called out below will be
+passed through to the native \`Banner\` component.
+
+Short single line content can be passed in as a simple string. Multi line
+messages should be passed wrapped in a \`<p>\` tag.
+
+It is valid to use \`strong\` or \`em\` within a \`Banner\` message.
+			`,
+			categories: ['communication'],
+			madeFrom: ['DangerIcon', 'InfoIcon', 'SuccessIcon', 'WarningIcon'],
+		},
+	},
+
 	propTypes: {
-		/**
-		 * Pass in a bool to display predefined icon based on `kind`.
-		 */
-		hasIcon: bool,
-		/**
-		 * Pass in a icon component for custom icons within `Banner`.
-		 */
-		icon: element,
-		/**
-		 * Set this to `true` if you want to have a `x` close icon.
-		 */
-		isCloseable: bool,
-		/**
-		 * Set this value to `false` if you want to remove the rounded corners on
-		 * the `Banner`.  **default is `true`**
-		 */
-		hasRoundedCorners: bool,
-		/**
-		 * Class names that are appended to the defaults.
-		 */
-		className: string,
-		/**
-		 * Any valid React children.
-		 */
-		children: node,
-		/**
-		 * Style variations of the `Banner`.
-		 */
-		kind: oneOf(['primary', 'success', 'warning', 'danger', 'info', 'default']),
-		/**
-		 * If set to `true` the banner have smaller padding on the inside.
-		 */
-		isSmall: bool,
-		/**
-		 * Called when the user closes the `Banner`.
-		 *
-		 * Signature: `({ event, props }) => {}`
-		 */
-		onClose: func,
-		/**
-		 * Controls the visibility of the `Banner`.
-		 */
-		isClosed: bool,
+		hasIcon: bool`
+		 Pass in a bool to display predefined icon based on \`kind\`.
+		`,
+
+		icon: element`
+		 Pass in a icon component for custom icons within \`Banner\`.
+		`,
+
+		isCloseable: bool`
+		 Set this to \`true\` if you want to have a \`x\` close icon.
+		`,
+
+		hasRoundedCorners: bool`
+		 Set this value to \`false\` if you want to remove the rounded corners on the \`Banner\`.
+		`,
+
+		className: string`
+		 Class names that are appended to the defaults.
+		`,
+
+		children: node`
+		 Any valid React children.
+		`,
+
+		kind: oneOf(['primary', 'success', 'warning', 'danger', 'info', 'default'])`
+		 Style variations of the \`Banner\`.
+		`,
+
+		isSmall: bool`
+		 If set to \`true\` the banner have smaller padding on the inside.
+		`,
+
+		onClose: func`
+		 Called when the user closes the \`Banner\`.  Signature: \`({ event, props }) => {}\`
+		`,
+
+		isClosed: bool`
+		 Controls the visibility of the \`Banner\`.
+		`,
 	},
 
 	getDefaultProps() {

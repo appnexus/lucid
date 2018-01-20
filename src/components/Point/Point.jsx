@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 import { transformFromCenter } from '../../util/chart-helpers';
@@ -20,56 +20,56 @@ const PATHS = [
 	'M2.594,9.406 C-0.812,6 -0.812,6 2.594,2.594 C6,-0.812 6,-0.812 9.406,2.594 C12.812,6 12.812,6 9.406,9.406 C6,12.812 6,12.812 2.594,9.406 z',
 ];
 
-/**
- * {"categories": ["visualizations", "geoms"]}
- *
- * *For use within an `svg`*
- *
- * Points are typically used for scatter plots or overlaying shapes on lines.
- *
- */
 const Point = createClass({
 	displayName: 'Point',
 
+	statics: {
+		peek: {
+			description: `
+*For use within an \`svg\`*
+
+Points are typically used for scatter plots or overlaying shapes on lines.
+			`,
+			categories: ['visualizations', 'geoms'],
+		},
+	},
+
 	propTypes: {
-		/**
-		 * Passed through to the root element.
-		 */
-		style: object,
-		/**
-		 * Appended to the component-specific class names set on the root element.
-		 */
-		className: string,
-		/**
-		 * Determines if the point has a white stroke around it.
-		 */
-		hasStroke: bool,
-		/**
-		 * x coordinate
-		 */
-		x: number,
-		/**
-		 * y coordinate
-		 */
-		y: number,
-		/**
-		 * Zero-based set of shapes. It's recommended that you pass the index of
-		 * your array for shapes.
-		 */
-		kind: number,
-		/**
-		 * Strings should match an existing color class unless they start with a
-		 * '#' for specific colors. E.g.:
-		 *
-		 * - `COLOR_0`
-		 * - `COLOR_GOOD`
-		 * - `'#123abc'`
-		 */
-		color: string,
-		/**
-		 * Scale up the size of the symbol. 2 would be double the original size.
-		 */
-		scale: number,
+		style: object`
+		 Passed through to the root element.
+		`,
+
+		className: string`
+		 Appended to the component-specific class names set on the root element.
+		`,
+
+		hasStroke: bool`
+		 Determines if the point has a white stroke around it.
+		`,
+
+		x: number`
+		 x coordinate
+		`,
+
+		y: number`
+		 y coordinate
+		`,
+
+		kind: number`
+		 Zero-based set of shapes. It's recommended that you pass the index of your array for shapes.
+		`,
+
+		color: string`
+Strings should match an existing color class unless they start with a '#' for specific colors. E.g.:
+
+- \`COLOR_0\`
+- \`COLOR_GOOD\`
+- \`'#123abc'\`
+		`,
+
+		scale: number`
+		 Scale up the size of the symbol. 2 would be double the original size.
+		`,
 	},
 
 	getDefaultProps() {

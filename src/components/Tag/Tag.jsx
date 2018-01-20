@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import CrossIcon from '../Icon/CrossIcon/CrossIcon';
@@ -14,34 +14,34 @@ const cx = lucidClassNames.bind('&-Tag');
 
 const { bool, func, node, string } = PropTypes;
 
-/**
- * {"categories": ["communication"]}
- *
- * Organizes items into removable items or groups. Can be nested to facilitate
- * grouping.
- */
 const Tag = createClass({
 	displayName: 'Tag',
 
+	statics: {
+		peek: {
+			description: `
+Organizes items into removable items or groups. Can be nested to facilitate grouping.
+			`,
+			categories: ['communication'],
+		},
+	},
+
 	propTypes: {
-		/**
-		 * Shows or hides the little "x" for a given tag.
-		 */
-		isRemovable: bool,
-		/**
-		 * Called when the user clicks to remove a tag.
-		 *
-		 * Signature: `({props, event}) => {}`
-		 */
-		onRemove: func,
-		/**
-		 * Can contain elements or nested `Tag` components.
-		 */
-		children: node,
-		/**
-		 * Appended to the component-specific class names set on the root element.
-		 */
-		className: string,
+		isRemovable: bool`
+		 Shows or hides the little "x" for a given tag.
+		`,
+
+		onRemove: func`
+		 Called when the user clicks to remove a tag.  Signature: \`({props, event}) => {}\`
+		`,
+
+		children: node`
+		 Can contain elements or nested \`Tag\` components.
+		`,
+
+		className: string`
+		 Appended to the component-specific class names set on the root element.
+		`,
 	},
 
 	getDefaultProps() {

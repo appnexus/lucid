@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
 import Icon from '../Icon';
@@ -9,21 +9,27 @@ const cx = lucidClassNames.bind('&-ChevronThinIcon');
 
 const { oneOf } = PropTypes;
 
-/**
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * A flat, thin chevron icon for directional navigation.
- */
 const ChevronThinIcon = createClass({
 	displayName: 'ChevronThinIcon',
+
+	statics: {
+		peek: {
+			description: `
+				A flat, thin chevron icon for directional navigation.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	_isPrivate: true,
 
 	propTypes: {
 		...Icon.propTypes,
-		/**
-		 * direction variations of the icon
-		 */
-		direction: oneOf(['left', 'right']),
+		direction: oneOf(['left', 'right'])`
+		 direction variations of the icon
+		`,
 	},
 
 	getDefaultProps() {

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
@@ -14,21 +14,25 @@ const RIGHT = 'right';
 const NEITHER = 'neither';
 const BOTH = 'both';
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * An eligibility icon.
- */
-
 const EligibilityIcon = createClass({
 	displayName: 'EligibilityIcon',
+
+	statics: {
+		peek: {
+			description: `
+				An eligibility icon.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
-		/**
-		 * Eligibility variations of the icon.
-		 */
-		eligibility: oneOf(['both', 'neither', 'left', 'right']),
+		eligibility: oneOf(['both', 'neither', 'left', 'right'])`
+		 Eligibility variations of the icon.
+		`,
 	},
 
 	getDefaultProps() {
