@@ -91,11 +91,9 @@ const InfiniteSlidePanel = createClass({
 			...passThroughs
 		} = this.props;
 
-		const slide = getFirst(
-			this.props,
-			InfiniteSlidePanel.Slide,
-			<InfiniteSlidePanel.Slide>{children}</InfiniteSlidePanel.Slide>
-		);
+		const slide =
+			getFirst(this.props, InfiniteSlidePanel.Slide) ||
+			<InfiniteSlidePanel.Slide>{children}</InfiniteSlidePanel.Slide>;
 		const slideChildRenderFunction = slide.props.children;
 		if (!_.isFunction(slideChildRenderFunction)) {
 			throw new Error(

@@ -470,13 +470,11 @@ const SearchableMultiSelect = createClass({
 			'props',
 			{}
 		);
-		const selectionLabel = getFirst(
-			props,
-			SearchableMultiSelect.SelectionLabel,
+		const selectionLabel =
+			getFirst(props, SearchableMultiSelect.SelectionLabel) ||
 			<SearchableMultiSelect.SelectionLabel>
 				Selected
-			</SearchableMultiSelect.SelectionLabel>
-		);
+			</SearchableMultiSelect.SelectionLabel>;
 		const isSmall = responsiveMode === 'small';
 
 		return (

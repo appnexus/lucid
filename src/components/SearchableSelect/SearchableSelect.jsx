@@ -321,7 +321,7 @@ const SearchableSelect = createClass({
 		const { flattenedOptionsData } = this.state;
 
 		const searchFieldProps = _.get(
-			getFirst(props, SearchField, <SearchField />),
+			getFirst(props, SearchField) || <SearchField />,
 			'props'
 		);
 		const placeholderProps = _.first(
