@@ -510,6 +510,15 @@ exports[`Submarine [common] example testing should match snapshot(s) for 9.neste
     isPrimary={true}
   >
     <Submarine
+      height={250}
+      isAnimated={true}
+      isExpanded={true}
+      isHidden={false}
+      isResizeDisabled={false}
+      isTitleShownCollapsed={false}
+      onResize={[Function]}
+      onResizing={[Function]}
+      onToggle={[Function]}
       position="bottom"
     >
       <Submarine.Bar>
