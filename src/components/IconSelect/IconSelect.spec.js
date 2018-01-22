@@ -19,7 +19,9 @@ const items = [
 ];
 
 describe('IconSelect', () => {
-	common(IconSelect);
+	common(IconSelect, {
+		getDefaultProps: () => ({ items: [] }),
+	});
 
 	it('prop children', () => {
 		const wrapper = shallow(
