@@ -16,6 +16,8 @@ const { bool, node, object, string } = PropTypes;
 const Panel = createClass({
 	displayName: 'Panel',
 
+	propName: 'Panel',
+
 	components: {
 		/**
 		 * Content displayed at the top of the panel.
