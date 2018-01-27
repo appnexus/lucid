@@ -2,29 +2,7 @@ import React from 'react';
 import { Accordion } from '../../../index';
 import createClass from 'create-react-class';
 
-export default createClass({
-	/*<HIDE>*/
-	statics: {
-		peek: {
-			exampleOf: Accordion,
-			title: 'Initial index set',
-			description: `
-				This example show the inital index set with an Accordion component.
-			`,
-			position: 2,
-			//code: code =>
-			//	code
-			//		.replace(
-			//			/\/\*<HIDE>\*\/(\s|\S)*\/\*<\/HIDE>\*\//g,
-			//			''
-			//		)
-			//		.replace(
-			//			`import { Accordion } from '../../../index';`,
-			//			`import Accordion from 'lucid-ui/Accordion';`
-			//		),
-		},
-	},
-	/*</HIDE>*/
+const Example = createClass({
 	getInitialState() {
 		return {
 			index: 2,
@@ -71,3 +49,20 @@ export default createClass({
 		);
 	},
 });
+export default Example;
+
+Example.peek = {
+	exampleOf: Accordion,
+	title: 'Initial index set',
+	description: `
+		This example show the inital index set with an Accordion component.
+	`,
+	position: 2,
+	code: code =>
+		code
+			.replace(/Example\.peek(\s|\S)*$/, '')
+			.replace(
+				`import { Accordion } from '../../../index';`,
+				`import Accordion from 'lucid-ui/Accordion';`
+			),
+};
