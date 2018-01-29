@@ -11,6 +11,7 @@ exports[`Lines [common] example testing should match snapshot(s) for basic 1`] =
       color="color-chart-0"
       d="M0,380L200,360L400,360L600,340L800,320L1000,0L1000,0L800,320L600,340L400,360L200,360L0,380Z"
       isDotted={false}
+      style={null}
     />
   </g>
   <g
@@ -20,6 +21,7 @@ exports[`Lines [common] example testing should match snapshot(s) for basic 1`] =
       color="color-chart-1"
       d="M0,360L200,340L400,320L600,280L800,240L1000,240L1000,240L800,240L600,280L400,320L200,340L0,360Z"
       isDotted={false}
+      style={null}
     />
   </g>
   <g
@@ -29,6 +31,7 @@ exports[`Lines [common] example testing should match snapshot(s) for basic 1`] =
       color="color-chart-2"
       d="M0,340L200,320L400,300L600,260L800,220L1000,220L1000,220L800,220L600,260L400,300L200,320L0,340Z"
       isDotted={false}
+      style={null}
     />
   </g>
   <g
@@ -38,6 +41,7 @@ exports[`Lines [common] example testing should match snapshot(s) for basic 1`] =
       color="color-chart-3"
       d="M0,300L200,280L400,280L600,260L800,240L1000,380L1000,380L800,240L600,260L400,280L200,280L0,300Z"
       isDotted={false}
+      style={null}
     />
   </g>
 </g>
@@ -54,6 +58,7 @@ exports[`Lines [common] example testing should match snapshot(s) for basic 2`] =
       color="color-chart-0"
       d="M0,400L200,400L400,400L600,400L800,400L1000,400L1000,189.47368421052633L800,357.89473684210526L600,368.42105263157896L400,378.94736842105266L200,378.94736842105266L0,389.4736842105263Z"
       isDotted={false}
+      style={null}
     />
   </g>
   <g
@@ -63,6 +68,7 @@ exports[`Lines [common] example testing should match snapshot(s) for basic 2`] =
       color="color-chart-1"
       d="M0,389.4736842105263L200,378.94736842105266L400,378.94736842105266L600,368.42105263157896L800,357.89473684210526L1000,189.47368421052633L1000,105.26315789473688L800,273.6842105263158L600,305.2631578947369L400,336.8421052631579L200,347.36842105263156L0,368.42105263157896Z"
       isDotted={false}
+      style={null}
     />
   </g>
   <g
@@ -72,6 +78,7 @@ exports[`Lines [common] example testing should match snapshot(s) for basic 2`] =
       color="color-chart-2"
       d="M0,368.42105263157896L200,347.36842105263156L400,336.8421052631579L600,305.2631578947369L800,273.6842105263158L1000,105.26315789473688L1000,10.5263157894737L800,178.9473684210526L600,231.57894736842107L400,284.2105263157895L200,305.2631578947369L0,336.8421052631579Z"
       isDotted={false}
+      style={null}
     />
   </g>
   <g
@@ -81,6 +88,7 @@ exports[`Lines [common] example testing should match snapshot(s) for basic 2`] =
       color="color-chart-3"
       d="M0,336.8421052631579L200,305.2631578947369L400,284.2105263157895L600,231.57894736842107L800,178.9473684210526L1000,10.5263157894737L1000,0L800,94.73684210526312L600,157.89473684210526L400,221.05263157894737L200,242.10526315789474L0,284.2105263157895Z"
       isDotted={false}
+      style={null}
     />
   </g>
 </g>
@@ -97,6 +105,7 @@ exports[`Lines [common] example testing should match snapshot(s) for custom-colo
       color="color-chart-bad"
       d="M0,380L200,360L400,360L600,340L800,320L1000,0L1000,0L800,320L600,340L400,360L200,360L0,380Z"
       isDotted={false}
+      style={null}
     />
   </g>
   <g
@@ -106,6 +115,7 @@ exports[`Lines [common] example testing should match snapshot(s) for custom-colo
       color="color-chart-good"
       d="M0,360L200,340L400,320L600,280L800,240L1000,240L1000,240L800,240L600,280L400,320L200,340L0,360Z"
       isDotted={false}
+      style={null}
     />
   </g>
   <g
@@ -115,6 +125,7 @@ exports[`Lines [common] example testing should match snapshot(s) for custom-colo
       color="#ff8800"
       d="M0,340L200,320L400,300L600,260L800,220L1000,220L1000,220L800,220L600,260L400,300L200,320L0,340Z"
       isDotted={false}
+      style={null}
     />
   </g>
   <g
@@ -124,6 +135,7 @@ exports[`Lines [common] example testing should match snapshot(s) for custom-colo
       color="#abc123"
       d="M0,300L200,280L400,280L600,260L800,240L1000,380L1000,380L800,240L600,260L400,280L200,280L0,300Z"
       isDotted={false}
+      style={null}
     />
   </g>
 </g>
