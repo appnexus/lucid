@@ -245,14 +245,12 @@ const DataTable = createClass({
 				childComponentElement.type === DataTable.ColumnGroup
 		);
 
-		const emptyStateWrapper = getFirst(
-			this.props,
-			DataTable.EmptyStateWrapper,
+		const emptyStateWrapper =
+			getFirst(this.props, DataTable.EmptyStateWrapper) ||
 			<DataTable.EmptyStateWrapper
 				Title="No items found."
 				Body="Try creating a new object or removing a filter."
-			/>
-		);
+			/>;
 
 		const fillerRowCount = _.clamp(minRows - _.size(data), 0, Infinity);
 

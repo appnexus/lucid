@@ -290,11 +290,9 @@ const DateSelect = createClass({
 		const { cursor } = this.state;
 		const isRangeSameDay = DateUtils.isSameDay(from, to);
 
-		const calendarMonth = getFirst(
-			this.props,
-			DateSelect.CalendarMonth,
-			<DateSelect.CalendarMonth />
-		);
+		const calendarMonth =
+			getFirst(this.props, DateSelect.CalendarMonth) ||
+			<DateSelect.CalendarMonth />;
 		const monthsShown = clampMonthsShown(monthsShownRaw);
 
 		/* istanbul ignore next */

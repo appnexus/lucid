@@ -324,11 +324,9 @@ const BarChart = createClass({
 			: yAxisFinalFormatter;
 
 		if (_.isEmpty(data) || width < 1 || height < 1 || isLoading) {
-			const emptyStateWrapper = getFirst(
-				this.props,
-				BarChart.EmptyStateWrapper,
-				<BarChart.EmptyStateWrapper Title="You have no data." />
-			);
+			const emptyStateWrapper =
+				getFirst(this.props, BarChart.EmptyStateWrapper) ||
+				<BarChart.EmptyStateWrapper Title="You have no data." />;
 
 			return (
 				<EmptyStateWrapper

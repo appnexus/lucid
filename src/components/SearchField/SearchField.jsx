@@ -137,11 +137,8 @@ const SearchField = createClass({
 			value,
 		};
 
-		const textFieldElement = getFirst(
-			props,
-			TextField,
-			<TextField {...textFieldProps} />
-		);
+		const textFieldElement =
+			getFirst(props, TextField) || <TextField {...textFieldProps} />;
 		const isIconActive = _.isUndefined(isValid)
 			? !_.isEmpty(_.get(textFieldElement, 'props.value'))
 			: isValid;

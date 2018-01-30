@@ -61,7 +61,8 @@ const LoadingIndicator = createClass({
 
 		const { LoadingMessage } = LoadingIndicator;
 
-		const messageElement = getFirst(props, LoadingMessage, <LoadingMessage />);
+		const messageElement =
+			getFirst(props, LoadingMessage) || <LoadingMessage />;
 		const otherChildren = rejectTypes(children, LoadingMessage);
 
 		return (
