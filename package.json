@@ -46,6 +46,7 @@
     "d3-time-format": "^2.0.0",
     "element-resize-detector": "^1.1.6",
     "lodash": "^4.11.0",
+    "prop-types": "^15.6.0",
     "react-day-picker": "^6.2.1",
     "react-motion": "^0.5.2",
     "react-peek": "^1.0.1",
