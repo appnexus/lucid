@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "2.29.2",
+  "version": "2.29.4",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "repository": {
@@ -10,7 +10,7 @@
   "scripts": {
     "build-bundle": "scripts/build-bundle.sh",
     "cover": "npm run jest -- --coverage",
-    "dev": "gulp docs-generate && webpack-dev-server --inline --hot --content-base src/docs/",
+    "dev": "webpack-dev-server --inline --hot --content-base src/docs/",
     "docs-upload-gh": "scripts/docs-upload-gh.sh",
     "docs-upload": "gulp docs-upload",
     "jest": "NODE_ENV=test TZ=UTC jest --runInBand",
@@ -18,7 +18,7 @@
     "lint-fix": "eslint ./src --ext .js,.jsx --fix",
     "precommit": "lint-staged",
     "prettier": "prettier --write --single-quote --use-tabs --trailing-comma es5 '{src,tests,scripts}/**/*.{js,jsx}'",
-    "preversion": "rm -rf dist && npm run lint && gulp preversion && npm run build-bundle",
+    "preversion": "rm -rf dist && npm run lint && NODE_ENV=production gulp preversion && npm run build-bundle",
     "postpublish": "gulp build-js-clean-path-imports && gulp docs-upload",
     "start": "npm run dev",
     "stylelint": "stylelint 'src/**/*.less' --config .stylelintrc",
@@ -46,14 +46,14 @@
     "d3-time-format": "^2.0.0",
     "element-resize-detector": "^1.1.6",
     "lodash": "^4.11.0",
-    "prop-types": "^15.5.10",
+    "prop-types": "^15.6.0",
     "react-day-picker": "^6.2.1",
     "react-motion": "^0.5.2",
+    "react-peek": "^1.0.2",
     "react-transition-group": "^1.2.1",
     "reselect": "^2.5.1"
   },
   "devDependencies": {
-    "anx-docgen": "^1.1.0",
     "autoprefixer": "^6.3.3",
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import DayPicker, { DateUtils } from 'react-day-picker';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
@@ -8,59 +8,57 @@ const cx = lucidClassNames.bind('&-CalendarMonth');
 
 const { bool, instanceOf, number, oneOf, string } = PropTypes;
 
-/**
- * {"categories": ["helpers"]}
- *
- * A single calendar month based on `react-day-picker`.
- */
 const CalendarMonth = createClass({
 	displayName: 'CalendarMonth',
+
+	statics: {
+		peek: {
+			description: `
+				A single calendar month based on \`react-day-picker\`.
+			`,
+			categories: ['helpers'],
+		},
+	},
+
 	_isPrivate: true,
 
 	propTypes: {
-		/**
-		 * Appended to the component-specific class names set on the root element.
-		 */
-		className: string,
-		/**
-		 * The offset of the rendered month, where 0 is the `initialMonth`. Negative
-		 * values will show previous months.
-		 */
-		monthOffset: number,
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
 
-		/**
-		 * Sets the month of the calendar. The 0 value for the `monthOffset`
-		 * prop refers to this month.
-		 */
-		initialMonth: instanceOf(Date),
+		monthOffset: number`
+			The offset of the rendered month, where 0 is the \`initialMonth\`.
+			Negative values will show previous months.
+		`,
 
-		/**
-		 * Set the cursor to target date. Primarily used to preview expected ranges
-		 * when the cursor is on a target date.
-		 */
-		cursor: instanceOf(Date),
+		initialMonth: instanceOf(Date)`
+			Sets the month of the calendar. The 0 value for the \`monthOffset\` prop
+			refers to this month.
+		`,
 
-		/**
-		 * Sets the start date in a date range.
-		 */
-		from: instanceOf(Date),
+		cursor: instanceOf(Date)`
+			Set the cursor to target date. Primarily used to preview expected ranges
+			when the cursor is on a target date.
+		`,
 
-		/**
-		 * Sets the end date in a date range.
-		 */
-		to: instanceOf(Date),
+		from: instanceOf(Date)`
+			Sets the start date in a date range.
+		`,
 
-		/**
-		 * The next selection that is expected. Primarily used to preview expected
-		 * ranges when the cursor is on a target date.
-		 */
-		selectMode: oneOf(['day', 'from', 'to']),
+		to: instanceOf(Date)`
+			Sets the end date in a date range.
+		`,
 
-		/**
-		 * Used to skip re-rendering of this component when true. Primarily used
-		 * for CalendarMonths which are rendered out of view.
-		 */
-		shouldComponentUpdate: bool,
+		selectMode: oneOf(['day', 'from', 'to'])`
+			The next selection that is expected. Primarily used to preview expected
+			ranges when the cursor is on a target date.
+		`,
+
+		shouldComponentUpdate: bool`
+			Used to skip re-rendering of this component when true. Primarily used for
+			CalendarMonths which are rendered out of view.
+		`,
 	},
 
 	getDefaultProps() {

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 import Checkbox from '../Checkbox/Checkbox';
@@ -8,28 +8,38 @@ import Checkbox from '../Checkbox/Checkbox';
 const cx = lucidClassNames.bind('&-CheckboxLabeled');
 const { any, node, object, string } = PropTypes;
 
-/**
- * {"categories": ["controls", "toggles"], "extend": "Checkbox", "madeFrom": ["Checkbox"]}
- *
- * This is a composite of the `Checkbox` component and the native `label`
- * element.
- */
 const CheckboxLabeled = createClass({
 	displayName: 'CheckboxLabeled',
 
+	statics: {
+		peek: {
+			description: `
+				This is a composite of the \`Checkbox\` component and the native
+				\`label\` element.
+			`,
+			categories: ['controls', 'toggles'],
+			madeFrom: ['Checkbox'],
+		},
+	},
+
 	components: {
-		/*
-		 * Renders a `<label>` for the `<Checkbox>`
-		 */
 		Label: createClass({
 			displayName: 'CheckboxLabeled.Label',
+			statics: {
+				peek: {
+					description: `
+						Renders a \`<label>\` for the \`<Checkbox>\`
+					`,
+					categories: ['controls', 'toggles'],
+					madeFrom: ['Checkbox'],
+				},
+			},
 			propName: 'Label',
 			propTypes: {
-				/**
-				 * Used to identify the purpose of this checkbox to the user -- can
-				 * be any renderable content.
-				 */
-				children: node,
+				children: node`
+					Used to identify the purpose of this checkbox to the user -- can be
+					any renderable content.
+				`,
 			},
 		}),
 	},
@@ -37,22 +47,18 @@ const CheckboxLabeled = createClass({
 	propTypes: {
 		...Checkbox.propTypes,
 
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element.
-		 */
-		className: string,
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
 
-		/**
-		 * Passed through to the root element.
-		 */
-		style: object,
+		style: object`
+			Passed through to the root element.
+		`,
 
-		/**
-		 * Child element whose children are used to identify the purpose of this
-		 * checkbox to the user.
-		 */
-		Label: any,
+		Label: any`
+			Child element whose children are used to identify the purpose of this
+			checkbox to the user.
+		`,
 	},
 
 	getDefaultProps() {

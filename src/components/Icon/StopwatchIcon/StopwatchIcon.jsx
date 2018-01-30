@@ -6,14 +6,20 @@ import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-StopwatchIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * A Stopwatch Icon.
- */
 const StopwatchIcon = createClass({
 	displayName: 'StopwatchIcon',
+
+	statics: {
+		peek: {
+			description: `
+				A Stopwatch Icon.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

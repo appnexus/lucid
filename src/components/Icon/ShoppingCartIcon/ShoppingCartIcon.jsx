@@ -6,14 +6,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ShoppingCartIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * Buy buy buy!
- */
 const ShoppingCartIcon = createClass({
 	displayName: 'ShoppingCartIcon',
+
+	statics: {
+		peek: {
+			description: `
+				Buy buy buy!
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

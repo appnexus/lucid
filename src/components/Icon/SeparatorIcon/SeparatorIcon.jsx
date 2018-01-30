@@ -6,14 +6,20 @@ import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SeparatorIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * An Separator icon.
- */
 const SeparatorIcon = createClass({
 	displayName: 'SeparatorIcon',
+
+	statics: {
+		peek: {
+			description: `
+				An Separator icon.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	_isPrivate: true,
 	propTypes: Icon.propTypes,
 

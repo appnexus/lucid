@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
@@ -15,12 +15,18 @@ const cx = lucidClassNames.bind('&-Accordion');
 
 const { any, func, object, number, string } = PropTypes;
 
-/**
-* {"categories": ["layout"], "madeFrom": ["ExpanderPanel"]}
-*
-* This is a container that renders panels and controls its expansion/retraction.
-*/
 const Accordion = createClass({
+	statics: {
+		peek: {
+			description: `
+				This is a container that renders panels and controls its
+				expansion/retraction.
+			`,
+			categories: ['layout'],
+			madeFrom: ['ExpanderPanel'],
+		},
+	},
+
 	displayName: 'Accordion',
 
 	components: {
@@ -31,34 +37,23 @@ const Accordion = createClass({
 	reducers,
 
 	propTypes: {
-		/**
-		* Appended to the component-specific class names set on the root
-		* element.
-		*/
-		className: string,
-
-		/**
-		* Indicates which item is expanded.
-		*/
-		selectedIndex: number,
-
-		/**
-		* Called when the user clicks on the component's header of an item.
-		*
-		* Signature: `(itemIndex, { event, props }) => {}`
-		*/
-		onSelect: func,
-
-		/**
-		* Passed through to the root element.
-		*/
-		style: object,
-
-		/**
-		 * prop alternative to Header child component
-		 * passed through to the underlying ExpanderPanel
-		 */
-		Header: any,
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
+		selectedIndex: number`
+			Indicates which item is expanded
+		`,
+		onSelect: func`
+			Called when the user clicks on the component's header of an item.
+			Signature: \`(itemIndex, { event, props }) => {}\`
+		`,
+		style: object`
+			Passed through to the root element.
+		`,
+		Header: any`
+			Prop alternative to Header child component passed through to the
+			underlying ExpanderPanel
+		`,
 	},
 
 	getDefaultProps() {

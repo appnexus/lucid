@@ -6,14 +6,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-LinkedIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * Get linked in with this fresh new icon!
- */
 const LinkedIcon = createClass({
 	displayName: 'LinkedIcon',
+
+	statics: {
+		peek: {
+			description: `
+				Get linked in with this fresh new icon!
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

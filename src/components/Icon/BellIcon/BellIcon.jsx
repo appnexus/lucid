@@ -5,14 +5,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-BellIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * Typically used for notifications.
- */
 const BellIcon = createClass({
 	displayName: 'BellIcon',
+
+	statics: {
+		peek: {
+			description: `
+				Typically used for notifications.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import Portal from '../Portal/Portal';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -11,59 +11,53 @@ const cx = lucidClassNames.bind('&-Overlay');
 
 const { string, bool, func, node } = PropTypes;
 
-/**
- * {"categories": ["utility"], "madeFrom": ["Portal"]}
- *
- * Overlay is used to block user interaction with the rest of the app until they
- * have completed something.
- */
 const Overlay = createClass({
 	displayName: 'Overlay',
 
+	statics: {
+		peek: {
+			description: `
+				Overlay is used to block user interaction with the rest of the app
+				until they have completed something.
+			`,
+			categories: ['utility'],
+			madeFrom: ['Portal'],
+		},
+	},
+
 	propTypes: {
-		/**
-		 * Appended to the component-specific class names set on the root element.
-		 */
-		className: string,
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
 
-		/**
-		 * Generally you should only have a single child element so the centering
-		 * works correctly.
-		 */
-		children: node,
+		children: node`
+			Generally you should only have a single child element so the centering
+			works correctly.
+		`,
 
-		/**
-		 * Controls visibility.
-		 */
-		isShown: bool,
+		isShown: bool`
+			Controls visibility.
+		`,
 
-		/**
-		 * Determines if it shows with a gray background. If `false`, the
-		 * background will be rendered but will be invisible, except for the
-		 * contents, and it won't capture any of the user click events.
-		 */
-		isModal: bool,
+		isModal: bool`
+			Determines if it shows with a gray background. If \`false\`, the
+			background will be rendered but will be invisible, except for the
+			contents, and it won't capture any of the user click events.
+		`,
 
-		/**
-		 * Set your own id for the `Portal` is that is opened up to contain the
-		 * contents. In practice you should never need to set this manually.
-		 */
-		portalId: string,
+		portalId: string`
+			Set your own id for the \`Portal\` is that is opened up to contain the
+			contents. In practice you should never need to set this manually.
+		`,
 
-		/**
-		 * Fired when the user hits escape.
-		 *
-		 * Signature: `({ event, props }) => {}`
-		 */
-		onEscape: func,
+		onEscape: func`
+			Fired when the user hits escape.  Signature: \`({ event, props }) => {}\`
+		`,
 
-		/**
-		 * Fired when the user clicks on the background, this may or may not be
-		 * visible depending on `isModal`.
-		 *
-		 * Signature: `({ event, props }) => {}`
-		 */
-		onBackgroundClick: func,
+		onBackgroundClick: func`
+			Fired when the user clicks on the background, this may or may not be
+			visible depending on \`isModal\`.  Signature: \`({ event, props }) => {}\`
+		`,
 	},
 
 	getDefaultProps() {

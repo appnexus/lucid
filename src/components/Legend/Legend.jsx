@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 
@@ -14,41 +14,38 @@ const LINE_WIDTH = 22;
 
 const { number, string, oneOf, bool, func } = PropTypes;
 
-/**
- * {"categories": ["visualizations", "chart primitives"]}
- *
- * Contrary to the other chart primitives, this component is not rendered in
- * svg. In order to sanely render horizontal legends, we need to know the width
- * of the text elements ahead of rendering time. Since we're using a variable
- * width font, the only way I know of to correctly get the width is with the
- * DOM function `getComputedTextLength`. Variable widths are much more easy to
- * implement outside of svg.
- */
 const Legend = createClass({
 	displayName: 'Legend',
 
 	statics: {
+		peek: {
+			description: `
+				Contrary to the other chart primitives, this component is not rendered
+				in svg. In order to sanely render horizontal legends, we need to know
+				the width of the text elements ahead of rendering time. Since we're
+				using a variable width font, the only way I know of to correctly get
+				the width is with the DOM function \`getComputedTextLength\`. Variable
+				widths are much more easy to implement outside of svg.
+			`,
+			categories: ['visualizations', 'chart primitives'],
+		},
 		HEIGHT: 28, // exposed for consumer convenience
 	},
 
 	propTypes: {
-		/**
-		 * Appended to the component-specific class names set on the root element.
-		 */
-		className: string,
-		/**
-		 * Determine orientation of the legend.
-		 */
-		orient: oneOf(['horizontal', 'vertical']),
-		/**
-		 * Show the legend borders. Turn this off if you want to put the legend in
-		 * a `ToolTip` for example.
-		 */
-		hasBorders: bool,
-		/**
-		 * Reverse the order of items in the legend.
-		 */
-		isReversed: bool,
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
+		orient: oneOf(['horizontal', 'vertical'])`
+			Determine orientation of the legend.
+		`,
+		hasBorders: bool`
+			Show the legend borders. Turn this off if you want to put the legend in a
+			\`ToolTip\` for example.
+		`,
+		isReversed: bool`
+			Reverse the order of items in the legend.
+		`,
 	},
 
 	getDefaultProps() {
@@ -60,30 +57,31 @@ const Legend = createClass({
 	},
 
 	components: {
-		/**
-		 * Renders a `<li>` that describes the data series.
-		 */
 		Item: createClass({
 			displayName: 'Legend.Item',
+			statics: {
+				peek: {
+					description: `
+						Renders a \`<li>\` that describes the data series.
+					`,
+				},
+			},
 			propsName: 'Item',
 			propTypes: {
 				hasPoint: bool,
 				hasLine: bool,
-				/**
-				 * Strings should match an existing color class unless they start with a
-				 * '#' for specific colors. E.g.:
-				 *
-				 * - `COLOR_0`
-				 * - `COLOR_GOOD`
-				 * - `'#123abc'`
-				 */
-				color: string,
+				color: string`
+					Strings should match an existing color class unless they start with a '#' for specific colors. E.g.:
+
+					- \`COLOR_0\`
+					- \`COLOR_GOOD\`
+					- \`'#123abc'\`
+				`,
 				pointKind: number,
 				onClick: func,
-				/**
-				 * Class names that are appended to the defaults.
-				 */
-				className: string,
+				className: string`
+					Class names that are appended to the defaults.
+				`,
 			},
 		}),
 	},

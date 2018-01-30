@@ -7,7 +7,12 @@
 			"plugins": ["lodash"]
 		},
 		"production": {
-			"plugins": ["lodash"]
+			"plugins": [
+				["react-peek/babel", {
+					"minifyStatics": true
+				}],
+				"lodash"
+			]
 		}
 	},
 	"presets": [

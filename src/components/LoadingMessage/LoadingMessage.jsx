@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
@@ -9,60 +9,78 @@ const cx = lucidClassNames.bind('&-LoadingMessage');
 
 const { any, node, string } = PropTypes;
 
-/**
- *
- * {"categories": ["communication"], "madeFrom": ["LoadingIcon"]}
- *
- * A loading message.
- *
- */
 const LoadingMessage = createClass({
 	displayName: 'LoadingMessage',
+
+	statics: {
+		peek: {
+			description: `
+				A loading message.
+			`,
+			categories: ['communication'],
+			madeFrom: ['LoadingIcon'],
+		},
+	},
+
 	_isPrivate: true,
 	propTypes: {
-		/**
-		 * Class names that are appended to the defaults.
-		 */
-		className: string,
-		/**
-		 * Any valid React children.
-		 */
-		children: node,
-		/**
-		 * Custom Icon element (alias for `LoadingMessage.Icon`)
-		 */
-		Icon: any,
-		/**
-		 * Custom Title element (alias for `LoadingMessage.Title`)
-		 */
-		Title: any,
-		/**
-		 * Custom Body element (alias for `LoadingMessage.Body`)
-		 */
-		Body: any,
+		className: string`
+			Class names that are appended to the defaults.
+		`,
+
+		children: node`
+			Any valid React children.
+		`,
+
+		Icon: any`
+			Custom Icon element (alias for \`LoadingMessage.Icon\`)
+		`,
+
+		Title: any`
+			Custom Title element (alias for \`LoadingMessage.Title\`)
+		`,
+
+		Body: any`
+			Custom Body element (alias for \`LoadingMessage.Body\`)
+		`,
 	},
 
 	components: {
-		/**
-		 * Renders the `Icon` element passed in
-		 */
 		Icon: createClass({
 			displayName: 'LoadingMessage.Icon',
+			statics: {
+				peek: {
+					description: `
+						Renders the \`Icon\` element passed in
+					`,
+				},
+			},
 			propName: 'Icon',
 		}),
-		/**
-		 * Renders an `<h3>` that represents the title of the `LoadingMessage`.
-		 * Defaults to the string "Loading".
-		 */
+
 		Title: createClass({
 			displayName: 'LoadingMessage.Title',
+			statics: {
+				peek: {
+					description: `
+						Renders an \`<h3>\` that represents the title of the
+						\`LoadingMessage\`.  Defaults to the string "Loading".
+					`,
+				},
+			},
 			propName: 'Title',
 		}),
-		/**
-		 * Renders an `<span>` that represents the body of the `LoadingMessage`.
-		 */
+
 		Body: createClass({
 			displayName: 'LoadingMessage.Body',
+			statics: {
+				peek: {
+					description: `
+						Renders an \`<span>\` that represents the body of the
+						\`LoadingMessage\`.
+					`,
+				},
+			},
 			propName: 'Body',
 		}),
 	},

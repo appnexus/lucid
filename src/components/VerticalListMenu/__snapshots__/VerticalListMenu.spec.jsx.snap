@@ -121,8 +121,10 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       rootType="div"
     >
       <VerticalListMenu
+        expandedIndices={Array []}
         key=".1"
         onSelect={[Function]}
+        onToggle={[Function]}
         selectedIndices={Array []}
       >
         <VerticalListMenu.Item>
@@ -133,7 +135,9 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
         >
           Level two with VerticalListMenu and lots of text. Lorem quos natus mollitia nihil quasi! Necessitatibus corporis aliquam quam laborum nesciunt quaerat. Nostrum distinctio officiis adipisci nulla unde repellat. Soluta eaque ex obcaecati molestiae provident aspernatur sit! Expedita et.
           <VerticalListMenu
+            expandedIndices={Array []}
             onSelect={[Function]}
+            onToggle={[Function]}
             selectedIndices={Array []}
           >
             <VerticalListMenu.Item
@@ -417,7 +421,9 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
   >
     Level one with VerticalListMenu
     <VerticalListMenu
+      expandedIndices={Array []}
       onSelect={[Function]}
+      onToggle={[Function]}
       selectedIndices={Array []}
     >
       <VerticalListMenu.Item>
@@ -428,7 +434,9 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       >
         Level two with VerticalListMenu and lots of text. Lorem quos natus mollitia nihil quasi! Necessitatibus corporis aliquam quam laborum nesciunt quaerat. Nostrum distinctio officiis adipisci nulla unde repellat. Soluta eaque ex obcaecati molestiae provident aspernatur sit! Expedita et.
         <VerticalListMenu
+          expandedIndices={Array []}
           onSelect={[Function]}
+          onToggle={[Function]}
           selectedIndices={Array []}
         >
           <VerticalListMenu.Item
@@ -736,8 +744,10 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       rootType="div"
     >
       <VerticalListMenu
+        expandedIndices={Array []}
         key=".1"
         onSelect={[Function]}
+        onToggle={[Function]}
         selectedIndices={Array []}
       >
         <VerticalListMenu.Item>
@@ -772,8 +782,10 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       rootType="div"
     >
       <VerticalListMenu
+        expandedIndices={Array []}
         key=".1"
         onSelect={[Function]}
+        onToggle={[Function]}
         selectedIndices={Array []}
       >
         <VerticalListMenu.Item>
@@ -784,7 +796,9 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
         >
           Level two with closed VerticalListMenu
           <VerticalListMenu
+            expandedIndices={Array []}
             onSelect={[Function]}
+            onToggle={[Function]}
             selectedIndices={Array []}
           >
             <VerticalListMenu.Item>
@@ -827,7 +841,9 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
   >
     Level one with VerticalListMenu
     <VerticalListMenu
+      expandedIndices={Array []}
       onSelect={[Function]}
+      onToggle={[Function]}
       selectedIndices={Array []}
     >
       <VerticalListMenu.Item>
@@ -843,7 +859,9 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
   >
     Level one with VerticalListMenu
     <VerticalListMenu
+      expandedIndices={Array []}
       onSelect={[Function]}
+      onToggle={[Function]}
       selectedIndices={Array []}
     >
       <VerticalListMenu.Item>
@@ -854,7 +872,9 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       >
         Level two with closed VerticalListMenu
         <VerticalListMenu
+          expandedIndices={Array []}
           onSelect={[Function]}
+          onToggle={[Function]}
           selectedIndices={Array []}
         >
           <VerticalListMenu.Item>
@@ -934,7 +954,11 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       rootType="div"
     >
       <VerticalListMenu
+        expandedIndices={Array []}
         key=".1"
+        onSelect={[Function]}
+        onToggle={[Function]}
+        selectedIndices={Array []}
       >
         <VerticalListMenu.Item
           key="0"
@@ -1217,7 +1241,12 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     hasExpander={true}
   >
     Level one with VerticalListMenu
-    <VerticalListMenu>
+    <VerticalListMenu
+      expandedIndices={Array []}
+      onSelect={[Function]}
+      onToggle={[Function]}
+      selectedIndices={Array []}
+    >
       <VerticalListMenu.Item
         key="0"
       >

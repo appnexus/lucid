@@ -6,14 +6,20 @@ import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-RefreshIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * A refresh icon.
- */
 const RefreshIcon = createClass({
 	displayName: 'RefreshIcon',
+
+	statics: {
+		peek: {
+			description: `
+				A refresh icon.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

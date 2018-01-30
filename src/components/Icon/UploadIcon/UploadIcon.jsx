@@ -6,14 +6,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-UploadIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * Upload files
- */
 const UploadIcon = createClass({
 	displayName: 'UploadIcon',
+
+	statics: {
+		peek: {
+			description: `
+				Upload files
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 import RadioButton from '../RadioButton/RadioButton';
@@ -8,25 +8,30 @@ import RadioButton from '../RadioButton/RadioButton';
 const cx = lucidClassNames.bind('&-RadioButtonLabeled');
 const { any, node, object, string } = PropTypes;
 
-/**
- * {"categories": ["controls", "toggles"], "extend": "RadioButton", "madeFrom": ["RadioButton"]}
- *
- * This is a composite of the `RadioButton` component and the native `label`
- * element.
- */
 const RadioButtonLabeled = createClass({
 	displayName: 'RadioButtonLabeled',
+
+	statics: {
+		peek: {
+			description: `
+				This is a composite of the \`RadioButton\` component and the native
+				\`label\` element.
+			`,
+			categories: ['controls', 'toggles'],
+			extend: 'RadioButton',
+			madeFrom: ['RadioButton'],
+		},
+	},
 
 	components: {
 		Label: createClass({
 			displayName: 'RadioButtonLabeled.Label',
 			propName: 'Label',
 			propTypes: {
-				/**
-				 * Used to identify the purpose of this radio button to the user --
-				 * can be any renderable content.
-				 */
-				children: node,
+				children: node`
+					Used to identify the purpose of this radio button to the user -- can
+					be any renderable content.
+				`,
 			},
 		}),
 	},
@@ -34,22 +39,18 @@ const RadioButtonLabeled = createClass({
 	propTypes: {
 		...RadioButton.propTypes,
 
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element.
-		 */
-		className: string,
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
 
-		/**
-		 * Passed through to the root element.
-		 */
-		style: object,
+		style: object`
+			Passed through to the root element.
+		`,
 
-		/**
-		 * Child element whose children are used to identify the purpose of this
-		 * radio button to the user.
-		 */
-		Label: any,
+		Label: any`
+			Child element whose children are used to identify the purpose of this
+			radio button to the user.
+		`,
 	},
 
 	getDefaultProps() {

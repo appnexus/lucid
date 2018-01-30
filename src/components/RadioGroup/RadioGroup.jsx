@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	createClass,
@@ -19,27 +19,37 @@ const cx = lucidClassNames.bind('&-RadioGroup');
 
 const { func, node, number, string, bool } = PropTypes;
 
-/**
- * {"categories": ["controls", "toggles"], "madeFrom": ["RadioButton"]}
- *
- * This is a group of related radio buttons whose values are mutually exclusive
- * and one whom must be selected any given moment in time.
-
- * Any props that are not explicitly defined in `propTypes` are spread onto the
- * root element.
- */
 const RadioGroup = createClass({
 	displayName: 'RadioGroup',
+
+	statics: {
+		peek: {
+			description: `
+				This is a group of related radio buttons whose values are mutually
+				exclusive and one whom must be selected any given moment in time.
+
+				Any props that are not explicitly defined in \`propTypes\` are spread
+				onto the root element.
+			`,
+			categories: ['controls', 'toggles'],
+			madeFrom: ['RadioButton'],
+		},
+	},
 
 	components: {
 		RadioButton,
 
-		/**
-		 * Support radio button labels as `RadioGroup.Label` component which can
-		 * be provided as a child of a `RadioGroup.RadioButton` component.
-		 */
 		Label: createClass({
 			displayName: 'RadioGroup.Label',
+			statics: {
+				peek: {
+					description: `
+						Support radio button labels as \`RadioGroup.Label\` component which
+						can be provided as a child of a \`RadioGroup.RadioButton\`
+						component.
+					`,
+				},
+			},
 			propTypes: {
 				children: node,
 			},
@@ -49,46 +59,38 @@ const RadioGroup = createClass({
 	reducers,
 
 	propTypes: {
-		/**
-		 * Should be instances of `RadioGroup.RadioButton` which supports the
-		 * same props as `RadioButton`.
-		 */
-		children: node,
+		children: node`
+			Should be instances of \`RadioGroup.RadioButton\` which supports the same
+			props as \`RadioButton\`.
+		`,
 
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element.
-		 */
-		className: string,
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
 
-		/**
-		 * Passed along to the `RadioGroup.RadioButton` children whose `name`
-		 * props are ignored.
-		 */
-		name: string,
+		name: string`
+			Passed along to the \`RadioGroup.RadioButton\` children whose \`name\`
+			props are ignored.
+		`,
 
-		/**
-		 * Called when the user clicks on one of the child radio buttons or when
-		 * they press the space key while one is in focus, and only called when
-		 * the component is in the unselected state. `props` refers to the child
-		 * `RadioButton` props.
-		 *
-		 * Signature: `(selectedIndex, { event, props }) => {}`
-		 */
-		onSelect: func,
+		onSelect: func`
+			Called when the user clicks on one of the child radio buttons or when
+			they press the space key while one is in focus, and only called when the
+			component is in the unselected state. \`props\` refers to the child
+			\`RadioButton\` props.  Signature: \`(selectedIndex, { event, props }) => {}\`
+		`,
 
-		/**
-		 * Indicates which of the `RadioGroup.RadioButton` children is currently
-		 * selected. The index of the last `RadioGroup.RadioButton` child with
-		 * `isSelected` equal to true takes precedence over this prop.
-		 */
-		selectedIndex: number,
+		selectedIndex: number`
+			Indicates which of the \`RadioGroup.RadioButton\` children is currently
+			selected. The index of the last \`RadioGroup.RadioButton\` child with
+			\`isSelected\` equal to true takes precedence over this prop.
+		`,
 
-		/**
-		 * Indicates whether all `RadioGroup.RadioButton` children should appear and act disabled by
-		 * having a "greyed out" palette and ignoring user interactions.
-		 */
-		isDisabled: bool,
+		isDisabled: bool`
+			Indicates whether all \`RadioGroup.RadioButton\` children should appear
+			and act disabled by having a "greyed out" palette and ignoring user
+			interactions.
+		`,
 	},
 
 	getDefaultProps() {

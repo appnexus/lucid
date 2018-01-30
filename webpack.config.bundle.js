@@ -7,9 +7,7 @@ var isMinified = process.argv.indexOf('--minify') !== -1;
 
 module.exports = {
 	context: __dirname,
-	entry: [
-		'./src/index.js',
-	],
+	entry: ['./src/index.js'],
 	output: {
 		path: path.join(__dirname, '/dist'),
 		filename: isMinified ? 'lucid.min.js' : 'lucid.js',
@@ -17,7 +15,7 @@ module.exports = {
 		library: 'Lucid',
 	},
 	externals: {
-		'react': 'React',
+		react: 'React',
 		'react-dom': 'ReactDOM',
 
 		// to avoid duplicate import of React with react-addons-css-transition-group
@@ -32,6 +30,10 @@ module.exports = {
 				exclude: /(node_modules)/,
 			},
 			{
+				include: [require.resolve('react-peek/prop-types')],
+				loader: 'babel',
+			},
+			{
 				test: /\.json/,
 				loader: 'json',
 			},
@@ -41,15 +43,19 @@ module.exports = {
 		extensions: ['', '.js', '.jsx'],
 	},
 	plugins: [
-		isMinified ? new webpack.DefinePlugin({
-			'process.env': {
-				'NODE_ENV': '"production"',
-			},
-		}) : function() {},
-		isMinified ? new webpack.optimize.UglifyJsPlugin({
-			compress: {
-				warnings: false,
-			},
-		}) : function() {},
+		isMinified
+			? new webpack.DefinePlugin({
+					'process.env': {
+						NODE_ENV: '"production"',
+					},
+				})
+			: function() {},
+		isMinified
+			? new webpack.optimize.UglifyJsPlugin({
+					compress: {
+						warnings: false,
+					},
+				})
+			: function() {},
 	],
 };

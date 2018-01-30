@@ -6,14 +6,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-NewWindowIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * A new window icon.
- */
 const NewWindowIcon = createClass({
 	displayName: 'NewWindowIcon',
+
+	statics: {
+		peek: {
+			description: `
+				A new window icon.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

@@ -6,14 +6,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-HelpIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * Help me Rhonda.
- */
 const HelpIcon = createClass({
 	displayName: 'HelpIcon',
+
+	statics: {
+		peek: {
+			description: `
+				Help me Rhonda.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

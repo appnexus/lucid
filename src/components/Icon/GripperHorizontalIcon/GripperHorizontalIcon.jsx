@@ -5,14 +5,19 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-GripperHorizontalIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * A horizontal gripper icon.
- */
 const GripperHorizontalIcon = createClass({
 	displayName: 'GripperHorizontalIcon',
+
+	statics: {
+		peek: {
+			description: `
+				A horizontal gripper icon.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
 
 	_isPrivate: true,
 
