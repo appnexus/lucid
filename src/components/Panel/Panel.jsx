@@ -20,6 +20,8 @@ const Panel = createClass({
 		},
 	},
 
+	propName: 'Panel',
+
 	components: {
 		Header: createClass({
 			displayName: 'Panel.Header',
