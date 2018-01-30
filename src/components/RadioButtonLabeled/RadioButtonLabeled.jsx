@@ -14,7 +14,8 @@ const RadioButtonLabeled = createClass({
 	statics: {
 		peek: {
 			description: `
-This is a composite of the \`RadioButton\` component and the native \`label\` element.
+				This is a composite of the \`RadioButton\` component and the native
+				\`label\` element.
 			`,
 			categories: ['controls', 'toggles'],
 			extend: 'RadioButton',
@@ -28,7 +29,8 @@ This is a composite of the \`RadioButton\` component and the native \`label\` el
 			propName: 'Label',
 			propTypes: {
 				children: node`
-				 Used to identify the purpose of this radio button to the user -- can be any renderable content.
+					Used to identify the purpose of this radio button to the user -- can
+					be any renderable content.
 				`,
 			},
 		}),
@@ -38,15 +40,16 @@ This is a composite of the \`RadioButton\` component and the native \`label\` el
 		...RadioButton.propTypes,
 
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		style: object`
-		 Passed through to the root element.
+			Passed through to the root element.
 		`,
 
 		Label: any`
-		 Child element whose children are used to identify the purpose of this radio button to the user.
+			Child element whose children are used to identify the purpose of this
+			radio button to the user.
 		`,
 	},
 

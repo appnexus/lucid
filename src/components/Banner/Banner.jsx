@@ -28,13 +28,13 @@ const Banner = createClass({
 	statics: {
 		peek: {
 			description: `
-A basic Banner. Any props that are not explicitly called out below will be
-passed through to the native \`Banner\` component.
+				A basic Banner. Any props that are not explicitly called out below will
+				be passed through to the native \`Banner\` component.
 
-Short single line content can be passed in as a simple string. Multi line
-messages should be passed wrapped in a \`<p>\` tag.
+				Short single line content can be passed in as a simple string. Multi
+				line messages should be passed wrapped in a \`<p>\` tag.
 
-It is valid to use \`strong\` or \`em\` within a \`Banner\` message.
+				It is valid to use \`strong\` or \`em\` within a \`Banner\` message.
 			`,
 			categories: ['communication'],
 			madeFrom: ['DangerIcon', 'InfoIcon', 'SuccessIcon', 'WarningIcon'],
@@ -43,43 +43,45 @@ It is valid to use \`strong\` or \`em\` within a \`Banner\` message.
 
 	propTypes: {
 		hasIcon: bool`
-		 Pass in a bool to display predefined icon based on \`kind\`.
+			Pass in a bool to display predefined icon based on \`kind\`.
 		`,
 
 		icon: element`
-		 Pass in a icon component for custom icons within \`Banner\`.
+			Pass in a icon component for custom icons within \`Banner\`.
 		`,
 
 		isCloseable: bool`
-		 Set this to \`true\` if you want to have a \`x\` close icon.
+			Set this to \`true\` if you want to have a \`x\` close icon.
 		`,
 
 		hasRoundedCorners: bool`
-		 Set this value to \`false\` if you want to remove the rounded corners on the \`Banner\`.
+			Set this value to \`false\` if you want to remove the rounded corners on
+			the \`Banner\`.
 		`,
 
 		className: string`
-		 Class names that are appended to the defaults.
+			Class names that are appended to the defaults.
 		`,
 
 		children: node`
-		 Any valid React children.
+			Any valid React children.
 		`,
 
 		kind: oneOf(['primary', 'success', 'warning', 'danger', 'info', 'default'])`
-		 Style variations of the \`Banner\`.
+			Style variations of the \`Banner\`.
 		`,
 
 		isSmall: bool`
-		 If set to \`true\` the banner have smaller padding on the inside.
+			If set to \`true\` the banner have smaller padding on the inside.
 		`,
 
 		onClose: func`
-		 Called when the user closes the \`Banner\`.  Signature: \`({ event, props }) => {}\`
+			Called when the user closes the \`Banner\`.  Signature:
+			\`({ event, props }) => {}\`
 		`,
 
 		isClosed: bool`
-		 Controls the visibility of the \`Banner\`.
+			Controls the visibility of the \`Banner\`.
 		`,
 	},
 

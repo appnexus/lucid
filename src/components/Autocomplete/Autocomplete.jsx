@@ -17,7 +17,7 @@ const Autocomplete = createClass({
 	statics: {
 		peek: {
 			description: `
-A text input with suggested values displayed in an attached menu.
+				A text input with suggested values displayed in an attached menu.
 			`,
 			categories: ['controls', 'text'],
 			madeFrom: ['DropMenu'],
@@ -52,22 +52,23 @@ A text input with suggested values displayed in an attached menu.
 		`,
 
 		DropMenu: shape(DropMenu.propTypes)`
-			Object of DropMenu props which are passed thru to the underlying DropMenu component.
+			Object of DropMenu props which are passed thru to the underlying DropMenu
+			component.
 		`,
 
 		onChange: func`
-			Called when the input value changes.
-			Has the signature \`(value, {props, event}) => {}\` where value is a string.
+			Called when the input value changes. Has the signature
+			\`(value, {props, event}) => {}\` where value is a string.
 		`,
 
 		onSelect: func`
-			Called when a suggstion is selected from the menu.
-			Has the signature \`(optionIndex, {props, event}) => {}\` where optionIndex is a number.
+			Called when a suggstion is selected from the menu. Has the signature
+			\`(optionIndex, {props, event}) => {}\` where optionIndex is a number.
 		`,
 
 		onExpand: func`
-			Called when menu is expected to expand.
-			Has the signature \`({props, event}) => {}\`.
+			Called when menu is expected to expand. Has the signature
+			\`({props, event}) => {}\`.
 		`,
 	},
 

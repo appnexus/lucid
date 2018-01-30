@@ -17,7 +17,8 @@ const EmptyStateWrapper = createClass({
 	statics: {
 		peek: {
 			description: `
-A wrapper which can display either a \`LoadingIndicator\` or \`OverlayWrapper\`.
+				A wrapper which can display either a \`LoadingIndicator\` or
+				\`OverlayWrapper\`.
 			`,
 			categories: ['utility'],
 			madeFrom: ['LoadingIndicator', 'OverlayWrapper'],
@@ -28,27 +29,27 @@ A wrapper which can display either a \`LoadingIndicator\` or \`OverlayWrapper\`.
 
 	propTypes: {
 		className: string`
-		 Class names that are appended to the defaults.
+			Class names that are appended to the defaults.
 		`,
 
 		children: node`
-		 Any valid React children.
+			Any valid React children.
 		`,
 
 		isEmpty: bool`
-		 Controls the visibility of the \`EmptyMessage\`
+			Controls the visibility of the \`EmptyMessage\`
 		`,
 
 		isLoading: bool`
-		 Controls the visibility of the \`LoadingMessage\`.
+			Controls the visibility of the \`LoadingMessage\`.
 		`,
 
 		Body: any`
-		 *Child Element* The element to display in the body of the overlay.
+			*Child Element* The element to display in the body of the overlay.
 		`,
 
 		Title: any`
-		 *Child Element* The element to display in the title of the overlay.
+			*Child Element* The element to display in the title of the overlay.
 		`,
 	},
 

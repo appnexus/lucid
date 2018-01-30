@@ -19,9 +19,9 @@ const SlidePanel = createClass({
 	statics: {
 		peek: {
 			description: `
-A container for rendering a set of horizontal slides at at a particular
-offset. Translation between slides is controlled by passing in a new \`offset\`.
-Can hook into touch events to update the \`offset\`.
+				A container for rendering a set of horizontal slides at at a particular
+				offset. Translation between slides is controlled by passing in a new
+				\`offset\`.  Can hook into touch events to update the \`offset\`.
 			`,
 			categories: ['helpers'],
 		},
@@ -38,31 +38,35 @@ Can hook into touch events to update the \`offset\`.
 
 	propTypes: {
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		children: node`
-		 SlidePanel.Slide elements are passed in as children.
+			SlidePanel.Slide elements are passed in as children.
 		`,
 
 		slidesToShow: number`
-		 Max number of viewable slides to show simultaneously.
+			Max number of viewable slides to show simultaneously.
 		`,
 
 		offset: number`
-		 The offset of the left-most rendered slide.
+			The offset of the left-most rendered slide.
 		`,
 
 		isAnimated: bool`
-		 Animate slides transitions from changes in \`offset\`.
+			Animate slides transitions from changes in \`offset\`.
 		`,
 
 		isLooped: bool`
-		 Slides are rendered in a continuous loop, where the first slide repeats after the last slide and vice-versa. DOM elements are re-ordered and re-used.
+			Slides are rendered in a continuous loop, where the first slide repeats
+			after the last slide and vice-versa. DOM elements are re-ordered and
+			re-used.
 		`,
 
 		onSwipe: func`
-		 Called when a user's swipe would change the offset. Callback passes number of slides by the user (positive for forward swipes, negative for backwards swipes).  Signature: \`(slidesSwiped, { event, props }) => {}\`
+			Called when a user's swipe would change the offset. Callback passes
+			number of slides by the user (positive for forward swipes, negative for
+			backwards swipes).  Signature: \`(slidesSwiped, { event, props }) => {}\`
 		`,
 	},
 

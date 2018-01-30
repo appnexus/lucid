@@ -15,7 +15,8 @@ const Breadcrumb = createClass({
 	statics: {
 		peek: {
 			description: `
-Navigation component to show a user's place in a navigation hierarchy and provide links to return to higher points in the hierarchy
+				Navigation component to show a user's place in a navigation hierarchy
+				and provide links to return to higher points in the hierarchy
 			`,
 			categories: ['navigation'],
 			madeFrom: ['SeparatorIcon'],
@@ -30,7 +31,7 @@ Navigation component to show a user's place in a navigation hierarchy and provid
 			statics: {
 				peek: {
 					description: `
-					 Renders a \`li\`
+						Renders a \`li\`
 					`,
 				},
 			},
@@ -42,11 +43,12 @@ Navigation component to show a user's place in a navigation hierarchy and provid
 
 	propTypes: {
 		children: node`
-		 All children should be \`Breadcrumb.Item\`s. Others are ignored.
+			All children should be \`Breadcrumb.Item\`s. Others are ignored.
 		`,
 
 		className: any`
-		 Appended to the component-specific class names set on the root element. Value is run through the \`classnames\` library.
+			Appended to the component-specific class names set on the root element.
+			Value is run through the \`classnames\` library.
 		`,
 	},
 

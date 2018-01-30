@@ -25,8 +25,9 @@ const SplitButton = createClass({
 	statics: {
 		peek: {
 			description: `
-SplitButtons allow you to combine a single main \`Button\` together with a list
-of additional Buttons with actions which will be rendered within a DropMenu.
+				SplitButtons allow you to combine a single main \`Button\` together
+				with a list of additional Buttons with actions which will be rendered
+				within a DropMenu.
 			`,
 			categories: ['controls', 'buttons'],
 			madeFrom: ['Button', 'DropMenu'],
@@ -39,19 +40,23 @@ of additional Buttons with actions which will be rendered within a DropMenu.
 			statics: {
 				peek: {
 					description: `
-						One of many potential \`Button\`s to render in this \`SplitButton\`. The first \`Button\` will be used as the Primary button, while all others will be rendered within the \`DropMenu\` below.
+						One of many potential \`Button\`s to render in this
+						\`SplitButton\`. The first \`Button\` will be used as the Primary
+						button, while all others will be rendered within the \`DropMenu\`
+						below.
 					`,
 				},
 			},
 			propTypes: {
 				children: any`
-				 The children to render within the \`Button\`.
+					The children to render within the \`Button\`.
 				`,
 				isDisabled: bool`
-				 Disables selection of the \`Button\`.
+					Disables selection of the \`Button\`.
 				`,
 				onClick: func`
-				 Called when the user clicks the \`Button\`.  Signature: \`({ event, props }) => {}\`
+					Called when the user clicks the \`Button\`.  Signature:
+					\`({ event, props }) => {}\`
 				`,
 			},
 		}),
@@ -61,31 +66,37 @@ of additional Buttons with actions which will be rendered within a DropMenu.
 
 	propTypes: {
 		DropMenu: shape(DropMenu.propTypes)`
-		 Object of DropMenu props which are passed through to the underlying DropMenu component.
+			Object of DropMenu props which are passed through to the underlying
+			DropMenu component.
 		`,
 
 		children: node`
-		 All children should be \`ButtonGroup.Button\`s and they support the same props as \`Button\`s.
+			All children should be \`ButtonGroup.Button\`s and they support the same
+			props as \`Button\`s.
 		`,
 
 		className: string`
-		 Appended to the component-specific class names set on the root element. Value is run through the \`classnames\` library.
+			Appended to the component-specific class names set on the root element.
+			Value is run through the \`classnames\` library.
 		`,
 
 		direction: oneOf(['up', 'down'])`
-		 Sets the direction the flyout menu will render relative to the SplitButton.
+			Sets the direction the flyout menu will render relative to the
+			SplitButton.
 		`,
 
 		kind: oneOf(['primary', 'success', 'warning', 'danger', 'info'])`
-		 Style variations of the SplitButton.
+			Style variations of the SplitButton.
 		`,
 
 		size: oneOf(['short', 'small', 'large'])`
-		 Size variations of the SplitButton.
+			Size variations of the SplitButton.
 		`,
 
 		type: string`
-		 Form element type variations of SplitButton. Defaults to 'button' to avoid being triggered by 'Enter' anywhere on the page. Passed through to DOM Button.
+			Form element type variations of SplitButton. Defaults to 'button' to
+			avoid being triggered by 'Enter' anywhere on the page. Passed through to
+			DOM Button.
 		`,
 	},
 

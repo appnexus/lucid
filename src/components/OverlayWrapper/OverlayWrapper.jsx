@@ -20,7 +20,9 @@ const OverlayWrapper = createClass({
 	statics: {
 		peek: {
 			description: `
-A wrapper with optional overlay to wrap content. \`Overlay\` is meant for overlaying an entire page, while this component is meant to wrap another component and cover its content.
+				A wrapper with optional overlay to wrap content. \`Overlay\` is meant
+				for overlaying an entire page, while this component is meant to wrap
+				another component and cover its content.
 			`,
 			categories: ['utility'],
 		},
@@ -28,27 +30,29 @@ A wrapper with optional overlay to wrap content. \`Overlay\` is meant for overla
 
 	propTypes: {
 		isVisible: bool`
-		 Controls whether the message should be displayed over the wrapped content.
+			Controls whether the message should be displayed over the wrapped
+			content.
 		`,
 
 		hasOverlay: bool`
-		 Set this to \`false\` if you don't want the semi-transparent overlay over the wrapped content.
+			Set this to \`false\` if you don't want the semi-transparent overlay over
+			the wrapped content.
 		`,
 
 		className: string`
-		 Class names that are appended to the defaults.
+			Class names that are appended to the defaults.
 		`,
 
 		children: node`
-		 Any valid React children.
+			Any valid React children.
 		`,
 
 		overlayKind: oneOf(['light', 'dark'])`
-		 Style variations for the overlay behind the message.
+			Style variations for the overlay behind the message.
 		`,
 
 		Message: node`
-		 *Child Element* The Message to display in the overlay.
+			*Child Element* The Message to display in the overlay.
 		`,
 	},
 
@@ -58,7 +62,7 @@ A wrapper with optional overlay to wrap content. \`Overlay\` is meant for overla
 			propName: 'Message',
 			propTypes: {
 				children: node`
-				 Any valid React children.
+					Any valid React children.
 				`,
 			},
 		}),

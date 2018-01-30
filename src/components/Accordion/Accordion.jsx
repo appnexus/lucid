@@ -19,7 +19,8 @@ const Accordion = createClass({
 	statics: {
 		peek: {
 			description: `
-This is a container that renders panels and controls its expansion/retraction.
+				This is a container that renders panels and controls its
+				expansion/retraction.
 			`,
 			categories: ['layout'],
 			madeFrom: ['ExpanderPanel'],
@@ -50,8 +51,8 @@ This is a container that renders panels and controls its expansion/retraction.
 			Passed through to the root element.
 		`,
 		Header: any`
-			prop alternative to Header child component
-			passed through to the underlying ExpanderPanel
+			Prop alternative to Header child component passed through to the
+			underlying ExpanderPanel
 		`,
 		mode: PropTypes.oneOf(['large', 'small']).isRequired`
 			TEST: to set the mode of the component.

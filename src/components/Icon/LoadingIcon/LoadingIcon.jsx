@@ -30,7 +30,7 @@ const LoadingIcon = createClass({
 	propTypes: {
 		...Icon.propTypes,
 		speed: oneOf(['fast', 'normal', 'slow'])`
-		 The speed of rotation of the spinner. Defaults to 'normal'
+			The speed of rotation of the spinner. Defaults to 'normal'
 		`,
 	},
 	getDefaultProps() {

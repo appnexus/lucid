@@ -15,8 +15,8 @@ const Button = createClass({
 	statics: {
 		peek: {
 			description: `
-A basic button. Any props that are not explicitly called out below will be
-passed through to the native \`button\` component.
+				A basic button. Any props that are not explicitly called out below will
+				be passed through to the native \`button\` component.
 			`,
 			categories: ['controls', 'buttons'],
 		},
@@ -26,23 +26,23 @@ passed through to the native \`button\` component.
 
 	propTypes: {
 		isDisabled: bool`
-		 Disables the Button by greying it out
+			Disables the Button by greying it out
 		`,
 
 		isActive: bool`
-		 Activates the Button by giving it a "pressed down" look
+			Activates the Button by giving it a "pressed down" look
 		`,
 
 		className: string`
-		 Class names that are appended to the defaults
+			Class names that are appended to the defaults
 		`,
 
 		hasOnlyIcon: bool`
-		 Set this to \`true\` if you want the Button to only contain an icon.
+			Set this to \`true\` if you want the Button to only contain an icon.
 		`,
 
 		children: oneOfType([node, arrayOf(node)])`
-		 Any valid React children
+			Any valid React children
 		`,
 
 		kind: oneOf([
@@ -58,15 +58,18 @@ passed through to the native \`button\` component.
 		`,
 
 		size: oneOf(['short', 'small', 'large'])`
-		 Size variations of the Button
+			Size variations of the Button
 		`,
 
 		onClick: func`
-		 Called when the user clicks the \`Button\`.  Signature: \`({ event, props }) => {}\`
+			Called when the user clicks the \`Button\`.  Signature:
+			\`({ event, props }) => {}\`
 		`,
 
 		type: string`
-		 Form element type variations of Button. Defaults to 'button' to avoid being triggered by 'Enter' anywhere on the page. Passed through to DOM Button.
+			Form element type variations of Button. Defaults to 'button' to avoid
+			being triggered by 'Enter' anywhere on the page. Passed through to DOM
+			Button.
 		`,
 	},
 

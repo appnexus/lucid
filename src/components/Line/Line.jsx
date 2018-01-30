@@ -15,10 +15,10 @@ const Line = createClass({
 	statics: {
 		peek: {
 			description: `
-*For use within an \`svg\`*
+				*For use within an \`svg\`*
 
-Lines are typically used for line charts and are pretty much a thin wrapper
-around svg paths.
+				Lines are typically used for line charts and are pretty much a thin
+				wrapper around svg paths.
 			`,
 			categories: ['visualizations', 'geoms'],
 		},
@@ -26,26 +26,26 @@ around svg paths.
 
 	propTypes: {
 		style: object`
-		 Passed through to the root element.
+			Passed through to the root element.
 		`,
 
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		d: string`
-		 The path for the line.
+			The path for the line.
 		`,
 
 		color: string`
-Strings should match an existing color class unless they start with a '#' for specific colors. E.g.:
+			Strings should match an existing color class unless they start with a '#' for specific colors. E.g.:
 
-- \`COLOR_0\`
-- \`COLOR_GOOD\`
-- \`'#123abc'\`
+			- \`COLOR_0\`
+			- \`COLOR_GOOD\`
+			- \`'#123abc'\`
 		`,
 		isDotted: bool`
-		 Display a dotted line.
+			Display a dotted line.
 		`,
 	},
 

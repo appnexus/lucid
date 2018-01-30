@@ -28,7 +28,7 @@ const ChevronThinIcon = createClass({
 	propTypes: {
 		...Icon.propTypes,
 		direction: oneOf(['left', 'right'])`
-		 direction variations of the icon
+			direction variations of the icon
 		`,
 	},
 

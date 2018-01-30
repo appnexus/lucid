@@ -1,4 +1,3 @@
-/*eslint no-console: 0*/
 import { basename } from 'path';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -6,7 +5,12 @@ import React from 'react';
 import { render } from 'react-dom';
 import { withRouter, Switch } from 'react-router';
 import { HashRouter, Link, Route } from 'react-router-dom';
-import { handleHighlightCode, toMarkdown, sanitizeExamplePath } from './util';
+import {
+	handleHighlightCode,
+	toMarkdown,
+	sanitizeExamplePath,
+	stripIndent,
+} from './util';
 import createClass from 'create-react-class';
 import querystring from 'querystring';
 
@@ -118,9 +122,6 @@ const PropType = createClass({
 		const { componentName, type, shapeKey } = this.props;
 
 		if (!type) {
-			//console.error(
-			//	`It looks like there's an issue with ${componentName}'s props. One common cause of this issue is when the getDefaultProps method defines a default value for a prop that is not explicitly defined in the propTypes map.`
-			//);
 			return null;
 		}
 
@@ -182,17 +183,10 @@ const ContextualComponent = createClass({
 	},
 });
 
-const isReactComponent = value => {
-	try {
-		return (
-			typeof value === 'function' &&
-			value.prototype &&
-			value.prototype.isReactComponent
-		);
-	} catch (err) {
-		return false;
-	}
-};
+const isReactComponent = value =>
+	typeof value === 'function' &&
+	value.prototype &&
+	value.prototype.isReactComponent;
 
 const Component = createClass({
 	propTypes: {
@@ -229,7 +223,7 @@ const Component = createClass({
 		const defaultProps = componentRef.defaultProps;
 
 		const componentProps = _.flow(
-			x => _.get(x, `propTypes`, {}),
+			x => _.get(x, 'propTypes', {}),
 			x =>
 				_.mapValues(x, (resolverFn, propName) => {
 					const defaultProp = _.get(defaultProps, propName);
@@ -242,16 +236,11 @@ const Component = createClass({
 			x => _.sortBy(x, x => x[0]) // sort by property name
 		)(componentRef);
 
-		const descriptionMarkdown = _.get(componentRef, 'peek.description', '');
+		const descriptionMarkdown = stripIndent(
+			_.get(componentRef, 'peek.description', '')
+		);
 
-		//if (_.isEmpty(descriptionMarkdown)) {
-		//	console.warn(
-		//		`Unable to find ${componentName}'s description in src/docs/docgen.json. Are you on a bad URL? Did you forget to run \`gulp docs-generate\`? Did you remember to give ${componentName} a description block?`
-		//		``
-		//	);
-		//}
-
-		const descriptionHTML = toMarkdown(descriptionMarkdown.trim());
+		const descriptionHTML = toMarkdown(descriptionMarkdown);
 
 		const privateString = componentRef._isPrivate ? '(private)' : '';
 
@@ -296,12 +285,6 @@ const Component = createClass({
 						</Thead>
 						<Tbody>
 							{_.map(componentProps, ([propName, propDetails]) => {
-								//if (!propDetails.text) {
-								//	console.error(
-								//		`Warning: There was an issue with the docs that were generated for component "${componentName}" and prop "${propName}". One reason might be that you have a default value for something that was never declared in propTypes.`
-								//	);
-								//}
-
 								return (
 									<Tr key={propName}>
 										<Td>{propName}</Td>
@@ -317,14 +300,16 @@ const Component = createClass({
 												? <pre className="default-value">
 														<code className="lang-javascript">
 															{_.isFunction(propDetails.default)
-																? 'function'
-																: JSON.stringify(propDetails.default)}
+																? 'func'
+																: JSON.stringify(propDetails.default, null, 2)}
 														</code>
 													</pre>
 												: null}
 										</Td>
 										<Td
-											dangerouslySetInnerHTML={toMarkdown(propDetails.text)}
+											dangerouslySetInnerHTML={toMarkdown(
+												stripIndent(propDetails.text)
+											)}
 										/>
 									</Tr>
 								);
@@ -354,7 +339,9 @@ const Component = createClass({
 									{_.has(childComponent, 'peek.description')
 										? <div
 												dangerouslySetInnerHTML={toMarkdown(
-													_.get(childComponent, 'peek.description', '').trim()
+													stripIndent(
+														_.get(childComponent, 'peek.description', '')
+													)
 												)}
 											/>
 										: null}
@@ -420,9 +407,11 @@ const Component = createClass({
 																			? <pre className="default-value">
 																					<code className="lang-javascript">
 																						{_.isFunction(propDetails.default)
-																							? 'function'
+																							? 'func'
 																							: JSON.stringify(
-																									propDetails.default
+																									propDetails.default,
+																									null,
+																									2
 																								)}
 																					</code>
 																				</pre>
@@ -430,7 +419,7 @@ const Component = createClass({
 																	</Td>
 																	<Td
 																		dangerouslySetInnerHTML={toMarkdown(
-																			propDetails.text
+																			stripIndent(propDetails.text)
 																		)}
 																	/>
 																</Tr>
@@ -484,6 +473,9 @@ const Component = createClass({
 		);
 	},
 });
+
+const isPrivateComponent = componentRef =>
+	_.get(componentRef, 'peek.isPrivate') || _.get(componentRef, '_isPrivate');
 
 const App = createClass({
 	getInitialState() {
@@ -555,34 +547,32 @@ const App = createClass({
 
 		return _.filter(_.keys(lucidComponents), key => {
 			const componentRef = lucidComponents[key];
-			const isPrivate =
-				_.get(componentRef, 'peek.isPrivate') ||
-				_.get(componentRef, '_isPrivate');
-			if (showPrivateComponents || !isPrivate) {
+			if (showPrivateComponents || !isPrivateComponent(componentRef)) {
 				return _.includes(_.toLower(key), searchLower);
 			}
 		});
 	},
 
-	render() {
-		const { search } = this.state;
-
-		const suggestions = this.searchResults();
-
-		const categoryTree = _.reduce(
+	componentWillMount() {
+		// Moved this out the render function for better performance
+		this.categoryTree = _.reduce(
 			lucidComponents,
 			(acc, value, key) => {
 				const categories = _.get(value, 'peek.categories', []);
 				const path = categories.concat(key).join('.');
-				const isPrivate =
-					_.get(value, 'peek.isPrivate') || _.get(value, '_isPrivate');
-				if (this.showPrivateComponents() || !isPrivate) {
+				if (this.showPrivateComponents() || !isPrivateComponent(value)) {
 					return _.set(acc, path, value);
 				}
 				return acc;
 			},
 			{}
 		);
+	},
+
+	render() {
+		const { search } = this.state;
+
+		const suggestions = this.searchResults();
 
 		return (
 			<div className="App">
@@ -637,7 +627,7 @@ const App = createClass({
 							</Item>
 						</VerticalListMenu>
 
-						{this.renderCategoryLinks(categoryTree)}
+						{this.renderCategoryLinks(this.categoryTree)}
 					</nav>
 				</div>
 				<div className="App-body">

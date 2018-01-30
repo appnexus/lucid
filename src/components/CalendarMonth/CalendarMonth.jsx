@@ -14,7 +14,7 @@ const CalendarMonth = createClass({
 	statics: {
 		peek: {
 			description: `
-A single calendar month based on \`react-day-picker\`.
+				A single calendar month based on \`react-day-picker\`.
 			`,
 			categories: ['helpers'],
 		},
@@ -24,35 +24,40 @@ A single calendar month based on \`react-day-picker\`.
 
 	propTypes: {
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		monthOffset: number`
-		 The offset of the rendered month, where 0 is the \`initialMonth\`. Negative values will show previous months.
+			The offset of the rendered month, where 0 is the \`initialMonth\`.
+			Negative values will show previous months.
 		`,
 
 		initialMonth: instanceOf(Date)`
-		 Sets the month of the calendar. The 0 value for the \`monthOffset\` prop refers to this month.
+			Sets the month of the calendar. The 0 value for the \`monthOffset\` prop
+			refers to this month.
 		`,
 
 		cursor: instanceOf(Date)`
-		 Set the cursor to target date. Primarily used to preview expected ranges when the cursor is on a target date.
+			Set the cursor to target date. Primarily used to preview expected ranges
+			when the cursor is on a target date.
 		`,
 
 		from: instanceOf(Date)`
-		 Sets the start date in a date range.
+			Sets the start date in a date range.
 		`,
 
 		to: instanceOf(Date)`
-		 Sets the end date in a date range.
+			Sets the end date in a date range.
 		`,
 
 		selectMode: oneOf(['day', 'from', 'to'])`
-		 The next selection that is expected. Primarily used to preview expected ranges when the cursor is on a target date.
+			The next selection that is expected. Primarily used to preview expected
+			ranges when the cursor is on a target date.
 		`,
 
 		shouldComponentUpdate: bool`
-		 Used to skip re-rendering of this component when true. Primarily used for CalendarMonths which are rendered out of view.
+			Used to skip re-rendering of this component when true. Primarily used for
+			CalendarMonths which are rendered out of view.
 		`,
 	},
 

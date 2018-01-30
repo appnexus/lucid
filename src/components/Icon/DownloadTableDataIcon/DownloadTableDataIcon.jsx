@@ -12,7 +12,8 @@ const DownloadTableDataIcon = createClass({
 	statics: {
 		peek: {
 			description: `
-				Typically used to denote that the table has data that's available for download. Usually clicking should kick off the download.
+				Typically used to denote that the table has data that's available for
+				download. Usually clicking should kick off the download.
 			`,
 			categories: ['visual design', 'icons'],
 			extend: 'Icon',

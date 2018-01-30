@@ -31,7 +31,7 @@ const EligibilityIcon = createClass({
 	propTypes: {
 		...Icon.propTypes,
 		eligibility: oneOf(['both', 'neither', 'left', 'right'])`
-		 Eligibility variations of the icon.
+			Eligibility variations of the icon.
 		`,
 	},
 

@@ -31,8 +31,9 @@ const SearchableSelect = createClass({
 	statics: {
 		peek: {
 			description: `
-A selector control (like native \`<select>\`) which is used to select a single option from a dropdown list using a SearchField.
-Supports option groups with and without labels.
+				A selector control (like native \`<select>\`) which is used to select a
+				single option from a dropdown list using a SearchField.  Supports
+				option groups with and without labels.
 			`,
 			categories: ['controls', 'selectors'],
 			madeFrom: ['DropMenu', 'SearchField'],
@@ -82,71 +83,98 @@ Supports option groups with and without labels.
 
 	propTypes: {
 		children: node`
-		 Should be instances of {\`SearchableSelect.Placeholder\`, \`SearchableSelect.Option\`, \`SearchableSelect.OptionGroup\`}. Other direct child elements will not render.
+			Should be instances of {\`SearchableSelect.Placeholder\`,
+			\`SearchableSelect.Option\`, \`SearchableSelect.OptionGroup\`}. Other
+			direct child elements will not render.
 		`,
 
 		className: string`
-		 Appended to the component-specific class names set on the root elements. Applies to *both* the control and the flyout menu.
+			Appended to the component-specific class names set on the root elements.
+			Applies to *both* the control and the flyout menu.
 		`,
 
 		style: object`
-		 Styles that are passed through to root element.
+			Styles that are passed through to root element.
 		`,
 
 		hasReset: bool`
-		 Allows user to reset the \`optionIndex\` to \`null\` if they select the placeholder at the top of the options list.  If \`false\`, it will not render the placeholder in the menu.
+			Allows user to reset the \`optionIndex\` to \`null\` if they select the
+			placeholder at the top of the options list.  If \`false\`, it will not
+			render the placeholder in the menu.
 		`,
 
 		isDisabled: bool`
-		 Disables the SearchableSelect from being clicked or focused.
+			Disables the SearchableSelect from being clicked or focused.
 		`,
 
 		isLoading: bool`
-		 Displays a centered LoadingIcon to allow for asynchronous loading of options.
+			Displays a centered LoadingIcon to allow for asynchronous loading of
+			options.
 		`,
 
 		isSelectionHighlighted: bool`
-		 Applies primary color styling to the control when an item is selected. Defaults to true.
+			Applies primary color styling to the control when an item is selected.
+			Defaults to true.
 		`,
 
 		maxMenuHeight: oneOfType([number, string])`
-		 The max height of the fly-out menu.
+			The max height of the fly-out menu.
 		`,
 
 		onSearch: func`
-		 Called when the user enters a value to search for; the set of visible Options will be filtered using the value.  Has the signature \`(searchText, firstVisibleIndex, {props, event}) => {}\` where \`searchText\` is the value from the \`SearchField\` and \`firstVisibleIndex\` is the index of the first option that will be visible after filtering.
+			Called when the user enters a value to search for; the set of visible
+			Options will be filtered using the value.  Has the signature
+			\`(searchText, firstVisibleIndex, {props, event}) => {}\` where
+			\`searchText\` is the value from the \`SearchField\` and
+			\`firstVisibleIndex\` is the index of the first option that will be
+			visible after filtering.
 		`,
 
 		onSelect: func`
-		 Called when an option is selected.  Has the signature \`(optionIndex, {props, event}) => {}\` where \`optionIndex\` is the new \`selectedIndex\` or \`null\`.
+			Called when an option is selected.  Has the signature
+			\`(optionIndex, {props, event}) => {}\` where \`optionIndex\` is the new
+			\`selectedIndex\` or \`null\`.
 		`,
 
 		optionFilter: func`
-		 The function that will be run against each Option's props to determine whether it should be visible or not. The default behavior of the function is to match, ignoring case, against any text node descendant of the \`Option\`.  Has the signature \`(searchText, optionProps)\` If \`true\`, option will be visible. If \`false\`, the option will not be visible.
+			The function that will be run against each Option's props to determine
+			whether it should be visible or not. The default behavior of the function
+			is to match, ignoring case, against any text node descendant of the
+			\`Option\`.  Has the signature \`(searchText, optionProps)\` If \`true\`,
+			option will be visible. If \`false\`, the option will not be visible.
 		`,
 
 		searchText: string`
-		 The current search text to filter the list of options by.
+			The current search text to filter the list of options by.
 		`,
 
 		selectedIndex: number`
-		 The currently selected \`SearchableSelect.Option\` index or \`null\` if nothing is selected.
+			The currently selected \`SearchableSelect.Option\` index or \`null\` if
+			nothing is selected.
 		`,
 
 		DropMenu: shape(DropMenu.propTypes)`
-		 Object of DropMenu props which are passed thru to the underlying DropMenu component.
+			Object of DropMenu props which are passed thru to the underlying DropMenu
+			component.
 		`,
 
 		Placeholder: any`
-		 *Child Element* - The content rendered in the control when there is no option is selected. Also rendered in the option list to remove current selection.
+			*Child Element* - The content rendered in the control when there is no
+			option is selected. Also rendered in the option list to remove current
+			selection.
 		`,
 
 		Option: any`
-		 *Child Element* - These are menu options. The \`optionIndex\` is in-order of rendering regardless of group nesting, starting with index \`0\`.  Each \`Option\` may be passed a prop called \`isDisabled\` to disable selection of that \`Option\`.  Any other props pass to Option will be available from the \`onSelect\` handler.
+			*Child Element* - These are menu options. The \`optionIndex\` is in-order
+			of rendering regardless of group nesting, starting with index \`0\`.
+			Each \`Option\` may be passed a prop called \`isDisabled\` to disable
+			selection of that \`Option\`.  Any other props pass to Option will be
+			available from the \`onSelect\` handler.
 		`,
 
 		OptionGroup: any`
-		 *Child Element* - Used to group \`Option\`s within the menu. Any non-\`Option\`s passed in will be rendered as a label for the group.
+			*Child Element* - Used to group \`Option\`s within the menu. Any
+			non-\`Option\`s passed in will be rendered as a label for the group.
 		`,
 	},
 

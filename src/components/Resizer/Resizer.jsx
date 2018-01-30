@@ -14,10 +14,11 @@ const Resizer = createClass({
 	statics: {
 		peek: {
 			description: `
-This is a helper component used for getting the width and height of a
-containing element. This component doesn't take normal children. It expects
-you to pass a single function for children. It will then call that function
-with new \`width\` and \`height\` values if the container size changes.
+				This is a helper component used for getting the width and height of a
+				containing element. This component doesn't take normal children. It
+				expects you to pass a single function for children. It will then call
+				that function with new \`width\` and \`height\` values if the container
+				size changes.
 			`,
 			categories: ['utility'],
 		},
@@ -25,11 +26,12 @@ with new \`width\` and \`height\` values if the container size changes.
 
 	propTypes: {
 		className: string`
-		 Appended to the component-specific class names set on the root elements.
+			Appended to the component-specific class names set on the root elements.
 		`,
 
 		children: func`
-		 A function that returns your rendered content with the signature: \`(width, height) => {}\`
+			A function that returns your rendered content with the signature:
+			\`(width, height) => {}\`
 		`,
 	},
 

@@ -24,7 +24,8 @@ const DateSelect = createClass({
 	statics: {
 		peek: {
 			description: `
-Date selection component capabaple of supporting single date and date range selections.
+				Date selection component capabaple of supporting single date and date
+				range selections.
 			`,
 			categories: ['controls', 'selectors'],
 			madeFrom: ['InfiniteSlidePanel', 'CalendarMonth'],
@@ -47,75 +48,93 @@ Date selection component capabaple of supporting single date and date range sele
 
 	propTypes: {
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		monthsShown: number`
-		 Number of calendar months to show. Min 1, suggested max 3. Actual max is 6.
+			Number of calendar months to show. Min 1, suggested max 3. Actual max is 6.
 		`,
 
 		calendarsRendered: number`
-		 Number of calendar months rendered at any given time (including those out of view).  In practice it should be at least (2 * monthsShown) + 2. It's got some issues that still need to be ironed out but it works.
+			Number of calendar months rendered at any given time (including those out
+			of view).  In practice it should be at least (2 * monthsShown) + 2. It's
+			got some issues that still need to be ironed out but it works.
 		`,
 
 		offset: number`
-		 The offset of the leftmost month in view, where 0 is the \`initialMonth\`.  Negative values will show previous months.
+			The offset of the leftmost month in view, where 0 is the
+			\`initialMonth\`.  Negative values will show previous months.
 		`,
 
 		from: instanceOf(Date)`
-		 Sets the start date in a date range.
+			Sets the start date in a date range.
 		`,
 
 		to: instanceOf(Date)`
-		 Sets the end date in a date range.
+			Sets the end date in a date range.
 		`,
 
 		selectMode: oneOf(['day', 'from', 'to'])`
-		 The next selection that is expected. Primarily used to preview expected ranges when the cursor is on a target date.
+			The next selection that is expected. Primarily used to preview expected
+			ranges when the cursor is on a target date.
 		`,
 
 		initialMonth: instanceOf(Date)`
-		 Sets first month in view on render. The 0 value for the \`offset\` prop refers to this month.
+			Sets first month in view on render. The 0 value for the \`offset\` prop
+			refers to this month.
 		`,
 
 		selectedDays: any`
-		 Sets selected days. Passed through to \`CalendarMonth\` -> \`react-day-picker\`. Can be a \`Date\`, array of \`Date\`s or a function with the signature \`(date) => Boolean\`.
+			Sets selected days. Passed through to \`CalendarMonth\` ->
+			\`react-day-picker\`. Can be a \`Date\`, array of \`Date\`s or a function
+			with the signature \`(date) => Boolean\`.
 		`,
 
 		disabledDays: any`
-		 Sets disabled days. Passed through to \`CalendarMonth\` -> \`react-day-picker\`. Can be a \`Date\`, array of \`Date\`s or a function with the signature \`(date) => Boolean\`.
+			Sets disabled days. Passed through to \`CalendarMonth\` ->
+			\`react-day-picker\`. Can be a \`Date\`, array of \`Date\`s or a function
+			with the signature \`(date) => Boolean\`.
 		`,
 
 		showDivider: bool`
-		 Display a divider between each month.
+			Display a divider between each month.
 		`,
 
 		onSwipe: func`
-		 Called when user's swipe would change the month \`offset\`. Callback passes number of months swiped by the user (positive for forward swipes, negative for backwards swipes).  Signature: \`(monthsSwiped, { event, props }) => {}\`
+			Called when user's swipe would change the month \`offset\`. Callback
+			passes number of months swiped by the user (positive for forward swipes,
+			negative for backwards swipes).  Signature:
+			\`(monthsSwiped, { event, props }) => {}\`
 		`,
 
 		onPrev: func`
-		 Called when user clicks the previous button.  Signature: \`({ event, props }) => {}\`
+			Called when user clicks the previous button.  Signature:
+			\`({ event, props }) => {}\`
 		`,
 
 		onNext: func`
-		 Called when user clicks the next button.  Signature: \`({ event, props }) => {}\`
+			Called when user clicks the next button.  Signature:
+			\`({ event, props }) => {}\`
 		`,
 
 		onSelectDate: func`
-		 Called when user selects a date. Callback passes a Date object as the first argument.  Signature: \`(selectedDate, { event, props }) => {}\`
+			Called when user selects a date. Callback passes a Date object as the
+			first argument.  Signature: \`(selectedDate, { event, props }) => {}\`
 		`,
 
 		isFontSizeRelative: bool`
-		 Render initial font size relative to size of the component so it scales with the calendar size.
+			Render initial font size relative to size of the component so it scales
+			with the calendar size.
 		`,
 
 		showCursorHighlight: bool`
-		 Highlight dates and ranges based on cursor position.
+			Highlight dates and ranges based on cursor position.
 		`,
 
 		useSlidePanel: bool`
-		 Render the calendar months in a touch-friendly slider with some being rendered out-of-view. Set to \`false\` to disable this feature and gain a performance boost.
+			Render the calendar months in a touch-friendly slider with some being
+			rendered out-of-view. Set to \`false\` to disable this feature and gain a
+			performance boost.
 		`,
 	},
 

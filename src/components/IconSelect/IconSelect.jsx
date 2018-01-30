@@ -29,8 +29,9 @@ const IconSelect = createClass({
 	statics: {
 		peek: {
 			description: `
-IconSelect allow you to pair icons together to form a related cluster.
-Any props not explicitly called out are spread on to the root component.
+				IconSelect allow you to pair icons together to form a related cluster.
+				Any props not explicitly called out are spread on to the root
+				component.
 			`,
 			categories: ['controls', 'selectors'],
 		},
@@ -38,11 +39,12 @@ Any props not explicitly called out are spread on to the root component.
 
 	propTypes: {
 		className: string`
-		 Appended to the component-specific class names set on the root element. Value is run through the \`classnames\` library.
+			Appended to the component-specific class names set on the root element.
+			Value is run through the \`classnames\` library.
 		`,
 
 		children: node`
-		 Added to the end of the IconSelect group.
+			Added to the end of the IconSelect group.
 		`,
 
 		items: arrayOf(
@@ -57,15 +59,17 @@ Any props not explicitly called out are spread on to the root component.
 				className: string,
 			})
 		).isRequired`
-		 Items in the IconSelect group. Each item should have an id.
+			Items in the IconSelect group. Each item should have an id.
 		`,
 
 		kind: oneOf(['single', 'multiple'])`
-			Defines the type of IconSelect box. A 'single' select will create a radio input type Item. A 'multiple' select will create a checkbox input type.
+			Defines the type of IconSelect box. A 'single' select will create a radio
+			input type Item. A 'multiple' select will create a checkbox input type.
 		`,
 
 		onSelect: func`
-		 A function that is called with the id of the Item in the IconSelect group is clicked.  Signature: \`(id, { event }) => {}\`
+			A function that is called with the id of the Item in the IconSelect group
+			is clicked.  Signature: \`(id, { event }) => {}\`
 		`,
 
 		isDisabled: bool`

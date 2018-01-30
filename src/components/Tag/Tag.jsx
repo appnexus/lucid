@@ -20,7 +20,8 @@ const Tag = createClass({
 	statics: {
 		peek: {
 			description: `
-Organizes items into removable items or groups. Can be nested to facilitate grouping.
+				Organizes items into removable items or groups. Can be nested to
+				facilitate grouping.
 			`,
 			categories: ['communication'],
 		},
@@ -28,19 +29,20 @@ Organizes items into removable items or groups. Can be nested to facilitate grou
 
 	propTypes: {
 		isRemovable: bool`
-		 Shows or hides the little "x" for a given tag.
+			Shows or hides the little "x" for a given tag.
 		`,
 
 		onRemove: func`
-		 Called when the user clicks to remove a tag.  Signature: \`({props, event}) => {}\`
+			Called when the user clicks to remove a tag.  Signature:
+			\`({props, event}) => {}\`
 		`,
 
 		children: node`
-		 Can contain elements or nested \`Tag\` components.
+			Can contain elements or nested \`Tag\` components.
 		`,
 
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 	},
 

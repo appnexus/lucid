@@ -13,9 +13,9 @@ const Badge = createClass({
 	statics: {
 		peek: {
 			description: `
- \`Badge\` is a quick utility component to create a badge around any
- element(s). Do not wrap existing \`Icon\`s in a badge, rather add the
- \`isBadge\` prop to any Icon component to turn it into a badge.
+				\`Badge\` is a quick utility component to create a badge around any
+				element(s). Do not wrap existing \`Icon\`s in a badge, rather add the
+				\`isBadge\` prop to any Icon component to turn it into a badge.
 			`,
 			categories: ['visual design', 'icons'],
 		},
@@ -23,11 +23,11 @@ const Badge = createClass({
 
 	propTypes: {
 		className: string`
-		 class names that are appended to the defaults
+			class names that are appended to the defaults
 		`,
 
 		children: node`
-		 any valid React children
+			any valid React children
 		`,
 	},
 

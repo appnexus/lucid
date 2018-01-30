@@ -17,7 +17,7 @@ const TextFieldValidated = createClass({
 	statics: {
 		peek: {
 			description: `
-A composition of TextField and Validation.
+				A composition of TextField and Validation.
 			`,
 			categories: ['controls', 'text'],
 			madeFrom: ['TextField', 'Validation'],
@@ -43,15 +43,15 @@ A composition of TextField and Validation.
 
 	propTypes: {
 		style: object`
-		 Passed to the root container.
+			Passed to the root container.
 		`,
 
 		className: string`
-		 Passed to the root container.
+			Passed to the root container.
 		`,
 
 		Error: any`
-		 Prop alternative to Error child component
+			Prop alternative to Error child component
 		`,
 	},
 

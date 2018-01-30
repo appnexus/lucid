@@ -13,12 +13,13 @@ const Switch = createClass({
 	statics: {
 		peek: {
 			description: `
-This is a toggle -- a component that is in one of two particular states at
-any given moment in time -- that uses a visualization of a physical on/off
-switch made popular by smartphone OSes to reflect its current state.
+				This is a toggle -- a component that is in one of two particular states
+				at any given moment in time -- that uses a visualization of a physical
+				on/off switch made popular by smartphone OSes to reflect its current
+				state.
 
-It uses a hidden native check box control under the hood but leverages other
-HTML elements to visualize its state.
+				It uses a hidden native check box control under the hood but leverages
+				other HTML elements to visualize its state.
 			`,
 			categories: ['controls', 'toggles'],
 		},
@@ -26,23 +27,27 @@ HTML elements to visualize its state.
 
 	propTypes: {
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		isDisabled: bool`
-		 Indicates whether the component should appear and act disabled by having a "greyed out" palette and ignoring user interactions.
+			Indicates whether the component should appear and act disabled by having
+			a "greyed out" palette and ignoring user interactions.
 		`,
 
 		isSelected: bool`
-		 Indicates that the component is in the "selected" state when true and in the "unselected" state when false.
+			Indicates that the component is in the "selected" state when true and in
+			the "unselected" state when false.
 		`,
 
 		onSelect: func`
-		 Called when the user clicks on the component or when they press the space key while the component is in focus.  Signature: \`(isSelected, { event, props }) => {}\`
+			Called when the user clicks on the component or when they press the space
+			key while the component is in focus.  Signature:
+			\`(isSelected, { event, props }) => {}\`
 		`,
 
 		style: object`
-		 Passed through to the root element.
+			Passed through to the root element.
 		`,
 	},
 

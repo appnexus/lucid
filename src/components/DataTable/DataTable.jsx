@@ -26,7 +26,9 @@ const DataTable = createClass({
 	statics: {
 		peek: {
 			description: `
-\`DataTable\` provides a simple abstraction over the \`Table\` component to make it easier to define data-driven tables and render an array of objects.
+				\`DataTable\` provides a simple abstraction over the \`Table\`
+				component to make it easier to define data-driven tables and render an
+				array of objects.
 			`,
 			categories: ['table'],
 			madeFrom: ['Checkbox', 'EmptyStateWrapper', 'ScrollTable'],
@@ -39,72 +41,83 @@ const DataTable = createClass({
 
 	propTypes: {
 		className: string`
-		 Class names that are appended to the defaults.
+			Class names that are appended to the defaults.
 		`,
 
 		data: arrayOf(object)`
-		 Array of objects to be rendered in the table. Object keys match the \`field\` of each defined \`DataTable.Column\`.
+			Array of objects to be rendered in the table. Object keys match the
+			\`field\` of each defined \`DataTable.Column\`.
 		`,
 
 		emptyCellText: string`
-		 The text to display in cells which have no data.
+			The text to display in cells which have no data.
 		`,
 
 		isActionable: bool`
-		 Render each row item to be navigable, allowing \`onRowClick\` to be triggered.
+			Render each row item to be navigable, allowing \`onRowClick\` to be
+			triggered.
 		`,
 
 		isFullWidth: bool`
-		 If \`true\`, the table will be set to fill the width of its parent container.
+			If \`true\`, the table will be set to fill the width of its parent
+			container.
 		`,
 
 		isLoading: bool`
-		 Controls the visibility of the \`LoadingMessage\`.
+			Controls the visibility of the \`LoadingMessage\`.
 		`,
 
 		isSelectable: bool`
-		 Render a checkbox in the first column allowing \`onSelect\` and \`onSelectAll\` to be triggered.
+			Render a checkbox in the first column allowing \`onSelect\` and
+			\`onSelectAll\` to be triggered.
 		`,
 
 		style: object`
-		 Styles that are passed through to the root container.
+			Styles that are passed through to the root container.
 		`,
 
 		minRows: number`
-		 The minimum number of rows to rendered. If not enough data is provided, the remainder will be shown as empty rows.
+			The minimum number of rows to rendered. If not enough data is provided,
+			the remainder will be shown as empty rows.
 		`,
 
 		onRowClick: func`
-		 Handler for row click. Signature is \`(object, index, { props, event }) => {...}\`
+			Handler for row click. Signature is
+			\`(object, index, { props, event }) => {...}\`
 		`,
 
 		onSelect: func`
-		 Handler for checkbox selection. Signature is \`(object, index, { props, event }) => {...}\`
+			Handler for checkbox selection. Signature is
+			\`(object, index, { props, event }) => {...}\`
 		`,
 
 		onSelectAll: func`
-		 Handler for checkbox selection in the table header. Signature is \`({ props, event }) => {...}\`
+			Handler for checkbox selection in the table header. Signature is
+			\`({ props, event }) => {...}\`
 		`,
 
 		onSort: func`
-		 Handler for column header click (for sorting). Signature is \`(field, { props, event }) => {...}\`
+			Handler for column header click (for sorting). Signature is
+			\`(field, { props, event }) => {...}\`
 		`,
 
 		Column: any`
-*Child Element*
+			*Child Element*
 
-Used to define a column of the table. It accepts the same props as \`Table.Th\` in addition to:
+			Used to define a column of the table. It accepts the same props as
+			\`Table.Th\` in addition to:
 
-- the required prop \`field\`
-- the optional prop \`title\`
+			- the required prop \`field\`
+			- the optional prop \`title\`
 		`,
 
 		ColumnGroup: any`
-*Child Element*
+			*Child Element*
 
-Used to Group defined \`Column\`s in the table. It accepts the same props as \`Table.Th\` in addition to:
+			Used to Group defined \`Column\`s in the table. It accepts the same props
+			as \`Table.Th\` in addition to:
 
-- the optional prop \`title\`
+			- the optional prop \`title\`
 		`,
 	},
 

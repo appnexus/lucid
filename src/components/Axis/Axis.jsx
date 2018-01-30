@@ -15,14 +15,14 @@ const Axis = createClass({
 	statics: {
 		peek: {
 			description: `
-*For use within an \`svg\`*
+				*For use within an \`svg\`*
 
-Axes are used to help render human-readable reference marks on charts. They can
-either be horizontal or vertical and really only need a scale to be able to
-draw properly.
+				Axes are used to help render human-readable reference marks on charts.
+				They can either be horizontal or vertical and really only need a scale
+				to be able to draw properly.
 
-This component is a very close sister to d3's svg axis and most of the logic
-pwas ported from there.
+				This component is a very close sister to d3's svg axis and most of the
+				logic pwas ported from there.
 			`,
 			categories: ['visualizations', 'chart primitives'],
 		},
@@ -30,39 +30,49 @@ pwas ported from there.
 
 	propTypes: {
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		scale: func.isRequired`
-		 Must be a d3 scale. Lucid exposes the \`lucid.d3Scale\` library for use here.
+			Must be a d3 scale. Lucid exposes the \`lucid.d3Scale\` library for use
+			here.
 		`,
 
 		innerTickSize: number`
-		 Size of the ticks for each discrete tick mark.
+			Size of the ticks for each discrete tick mark.
 		`,
 
 		outerTickSize: number`
-		 Size of the tick marks found at the beginning and end of the axis. It's common to set this to \`0\` to remove them.
+			Size of the tick marks found at the beginning and end of the axis. It's
+			common to set this to \`0\` to remove them.
 		`,
 
 		tickFormat: func`
-		 An optional function that can format ticks. Generally this shouldn't be needed since d3 has very good default formatters for most data. Signature: \`(tick) => {}\`
+			An optional function that can format ticks. Generally this shouldn't be
+			needed since d3 has very good default formatters for most data.
+			Signature: \`(tick) => {}\`
 		`,
 
 		ticks: array`
-		 If you need fine grained control over the axis ticks, you can pass them in this array.
+			If you need fine grained control over the axis ticks, you can pass them
+			in this array.
 		`,
 
 		tickPadding: number`
-		 Determines the spacing between each tick and its text.
+			Determines the spacing between each tick and its text.
 		`,
 
 		orient: oneOf(['top', 'bottom', 'left', 'right'])`
-		 Determines the orientation of the ticks. \`left\` and \`right\` will generate a vertical axis, whereas \`top\` and \`bottom\` will generate a horizontal axis.
+			Determines the orientation of the ticks. \`left\` and \`right\` will
+			generate a vertical axis, whereas \`top\` and \`bottom\` will generate a
+			horizontal axis.
 		`,
 
 		tickCount: number`
-		 Control the number of ticks displayed. If the scale is time based or linear, this number acts a "hint" per the default behavior of D3. If it's an ordinal scale, this number is treated as an absolute number of ticks to display and is powered by our own utility function \`discreteTicks\`.
+			Control the number of ticks displayed. If the scale is time based or
+			linear, this number acts a "hint" per the default behavior of D3. If it's
+			an ordinal scale, this number is treated as an absolute number of ticks
+			to display and is powered by our own utility function \`discreteTicks\`.
 		`,
 	},
 

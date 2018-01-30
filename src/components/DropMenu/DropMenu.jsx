@@ -53,7 +53,9 @@ const DropMenu = createClass({
 	statics: {
 		peek: {
 			description: `
-This is a helper component used to render a menu of options attached to any control. Supports option groups with and without labels as well as special options with a \`null\` index for unselect.
+				This is a helper component used to render a menu of options attached to
+				any control. Supports option groups with and without labels as well as
+				special options with a \`null\` index for unselect.
 			`,
 			categories: ['helpers'],
 			madeFrom: ['ContextMenu'],
@@ -162,7 +164,8 @@ This is a helper component used to render a menu of options attached to any cont
 			statics: {
 				peek: {
 					description: `
-						An optional header to be displayed within the expanded Flyout, above all \`Option\`s.
+						An optional header to be displayed within the expanded Flyout,
+						above all \`Option\`s.
 					`,
 				},
 			},
@@ -173,7 +176,8 @@ This is a helper component used to render a menu of options attached to any cont
 			statics: {
 				peek: {
 					description: `
-						Renders a \`<div>\` that acts as the control target which the flyout menu is anchored to. Only one \`Control\` is used.
+						Renders a \`<div>\` that acts as the control target which the
+						flyout menu is anchored to. Only one \`Control\` is used.
 					`,
 				},
 			},
@@ -184,14 +188,16 @@ This is a helper component used to render a menu of options attached to any cont
 			statics: {
 				peek: {
 					description: `
-						A special kind of \`Option\` that is always rendered at the top of the menu and has an \`optionIndex\` of \`null\`. Useful for unselect.
+						A special kind of \`Option\` that is always rendered at the top of
+						the menu and has an \`optionIndex\` of \`null\`. Useful for
+						unselect.
 					`,
 				},
 			},
 			propName: 'OptionGroup',
 			propTypes: {
 				isHidden: bool`
-				 hides the \`OptionGroup\` from the list.
+					hides the \`OptionGroup\` from the list.
 				`,
 			},
 			getDefaultProps() {
@@ -212,13 +218,13 @@ This is a helper component used to render a menu of options attached to any cont
 			propName: 'Option',
 			propTypes: {
 				isDisabled: bool`
-				 disables selection of the \`Option\`.
+					disables selection of the \`Option\`.
 				`,
 				isHidden: bool`
-				 hides the \`Option\` from the list.
+					hides the \`Option\` from the list.
 				`,
 				isWrapped: bool`
-				 controls wrapping of the text.
+					controls wrapping of the text.
 				`,
 			},
 			getDefaultProps() {
@@ -234,7 +240,9 @@ This is a helper component used to render a menu of options attached to any cont
 			statics: {
 				peek: {
 					description: `
-						A special kind of \`Option\` that is always rendered at the top of the menu and has an \`optionIndex\` of \`null\` used for deselecting.
+						A special kind of \`Option\` that is always rendered at the top of
+						the menu and has an \`optionIndex\` of \`null\` used for
+						deselecting.
 					`,
 				},
 			},
@@ -245,20 +253,21 @@ This is a helper component used to render a menu of options attached to any cont
 			statics: {
 				peek: {
 					description: `
-						A special kind of \`Option\` that is always rendered at the top of the menu.
+						A special kind of \`Option\` that is always rendered at the top of
+						the menu.
 					`,
 				},
 			},
 			propName: 'FixedOption',
 			propTypes: {
 				isDisabled: bool`
-				 disables selection of the \`Option\`.
+					disables selection of the \`Option\`.
 				`,
 				isHidden: bool`
-				 hides the \`Option\` from the list.
+					hides the \`Option\` from the list.
 				`,
 				isWrapped: bool`
-				 controls wrapping of the text.
+					controls wrapping of the text.
 				`,
 			},
 			getDefaultProps() {
@@ -284,99 +293,125 @@ This is a helper component used to render a menu of options attached to any cont
 
 	propTypes: {
 		children: node`
-		 Should be instances of {\`DropMenu.Control\`, \`DropMenu.Option\`, \`DropMenu.OptionGroup\`, \`DropMenu.Nulloption\`}. Other direct child elements will not render.
+			Should be instances of {\`DropMenu.Control\`, \`DropMenu.Option\`,
+			\`DropMenu.OptionGroup\`, \`DropMenu.Nulloption\`}. Other direct child
+			elements will not render.
 		`,
 
 		className: string`
-		 Appended to the component-specific class names set on the root elements. Applies to *both* the control and the flyout menu.
+			Appended to the component-specific class names set on the root elements.
+			Applies to *both* the control and the flyout menu.
 		`,
 
 		style: object`
-		 Styles that are passed through to root element.
+			Styles that are passed through to root element.
 		`,
 
 		isDisabled: bool`
-		 Disables the DropMenu from being clicked or focused.
+			Disables the DropMenu from being clicked or focused.
 		`,
 
 		isExpanded: bool`
-		 Renders the flyout menu adjacent to the control.
+			Renders the flyout menu adjacent to the control.
 		`,
 
 		direction: oneOf(['down', 'up'])`
-		 Sets the direction the flyout menu will render relative to the control.
+			Sets the direction the flyout menu will render relative to the control.
 		`,
 
 		alignment: oneOf(['start', 'center', 'end'])`
-		 Sets the alignment the flyout menu will render relative to the control.
+			Sets the alignment the flyout menu will render relative to the control.
 		`,
 
 		selectedIndices: arrayOf(number)`
-		 An array of currently selected \`DropMenu.Option\` indices.
+			An array of currently selected \`DropMenu.Option\` indices.
 		`,
 
 		focusedIndex: number`
-		 The currently focused index of \`DropMenu.Option\`. Can also be \`null\`.
+			The currently focused index of \`DropMenu.Option\`. Can also be \`null\`.
 		`,
 
 		portalId: string`
-		 The \`id\` of the flyout menu portal element that is appended to \`document.body\`. Defaults to a generated id.
+			The \`id\` of the flyout menu portal element that is appended to
+			\`document.body\`. Defaults to a generated id.
 		`,
 
 		flyOutStyle: object`
-		 Styles that are passed through to the ContextMenu FlyOut element.
+			Styles that are passed through to the ContextMenu FlyOut element.
 		`,
 
 		optionContainerStyle: object`
-		 Styles that are passed through to the option container element.
+			Styles that are passed through to the option container element.
 		`,
 
 		onExpand: func`
-		 Called when collapsed and the control is clicked, or when the control has focus and the Down Arrow is pressed.  Has the signature \`({ props, event }) => {}\`
+			Called when collapsed and the control is clicked, or when the control has
+			focus and the Down Arrow is pressed.  Has the signature
+			\`({ props, event }) => {}\`
 		`,
 
 		onCollapse: func`
-		 Called when expanded and the user clicks the control or outside of the menu, or when the control has focus and the Escape key is pressed Has the signature \`({ props, event }) => {}\`
+			Called when expanded and the user clicks the control or outside of the
+			menu, or when the control has focus and the Escape key is pressed Has the
+			signature \`({ props, event }) => {}\`
 		`,
 
 		onSelect: func`
-		 Called when an option is clicked, or when an option has focus and the Enter key is pressed.  Has the signature \`(optionIndex, {props, event}) => {}\` where optionIndex can be a number or \`null\`.
+			Called when an option is clicked, or when an option has focus and the
+			Enter key is pressed.  Has the signature
+			\`(optionIndex, {props, event}) => {}\`
+			where optionIndex can be a number or \`null\`.
 		`,
 
 		onFocusNext: func`
-		 Called when expanded and the the Down Arrow key is pressed. Not called when focus is on the last option.  Has the signature \`({ props, event }) => {}\`
+			Called when expanded and the the Down Arrow key is pressed. Not called
+			when focus is on the last option.  Has the signature
+			\`({ props, event }) => {}\`
 		`,
 
 		onFocusPrev: func`
-		 Called when expanded and the the Up Arrow key is pressed. Not called when focus is on the first option.  Has the signature \`({ props, event }) => {}\`
+			Called when expanded and the the Up Arrow key is pressed. Not called when
+			focus is on the first option.  Has the signature
+			\`({ props, event }) => {}\`
 		`,
 
 		onFocusOption: func`
-		 Called when the mouse moves over an option.  Has the signature \`(optionIndex) => {}\` where optionIndex can be a number or \`null\`.
+			Called when the mouse moves over an option.  Has the signature
+			\`(optionIndex) => {}\` where optionIndex can be a number or \`null\`.
 		`,
 
 		Control: any`
-		 *Child Element* - The control target which the flyout menu is anchored to. Only one \`Control\` is used.
+			*Child Element* - The control target which the flyout menu is anchored
+			to. Only one \`Control\` is used.
 		`,
 
 		Option: any`
-		 *Child Element* - These are menu options. The \`optionIndex\` is in-order of rendering regardless of group nesting, starting with index \`0\`.  Each \`Option\` may be passed a prop called \`isDisabled\` to disable selection of that \`Option\`.  Any other props pass to Option will be available from the \`onSelect\` handler.
+			*Child Element* - These are menu options. The \`optionIndex\` is in-order
+			of rendering regardless of group nesting, starting with index \`0\`.
+			Each \`Option\` may be passed a prop called \`isDisabled\` to disable
+			selection of that \`Option\`.  Any other props pass to Option will be
+			available from the \`onSelect\` handler.
 		`,
 
 		OptionGroup: any`
-		 *Child Element* - Used to group \`Option\`s within the menu. Any non-\`Option\`s passed in will be rendered as a label for the group.
+			*Child Element* - Used to group \`Option\`s within the menu. Any
+			non-\`Option\`s passed in will be rendered as a label for the group.
 		`,
 
 		NullOption: any`
-		 *Child Element* - A special kind of \`Option\` that is always rendered at the top of the menu and has an \`optionIndex\` of \`null\`. Useful for unselect.
+			*Child Element* - A special kind of \`Option\` that is always rendered at
+			the top of the menu and has an \`optionIndex\` of \`null\`. Useful for
+			unselect.
 		`,
 
 		Header: any`
-		 *Child Element* - An optional header to be displayed within the expanded Flyout, above all \`Option\`s.
+			*Child Element* - An optional header to be displayed within the expanded
+			Flyout, above all \`Option\`s.
 		`,
 
 		ContextMenu: any`
-		 *Child Element* - props pass through to the underlying ContextMenu component
+			*Child Element* - props pass through to the underlying ContextMenu
+			component
 		`,
 	},
 

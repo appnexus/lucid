@@ -15,7 +15,7 @@ const LoadingMessage = createClass({
 	statics: {
 		peek: {
 			description: `
-A loading message.
+				A loading message.
 			`,
 			categories: ['communication'],
 			madeFrom: ['LoadingIcon'],
@@ -25,23 +25,23 @@ A loading message.
 	_isPrivate: true,
 	propTypes: {
 		className: string`
-		 Class names that are appended to the defaults.
+			Class names that are appended to the defaults.
 		`,
 
 		children: node`
-		 Any valid React children.
+			Any valid React children.
 		`,
 
 		Icon: any`
-		 Custom Icon element (alias for \`LoadingMessage.Icon\`)
+			Custom Icon element (alias for \`LoadingMessage.Icon\`)
 		`,
 
 		Title: any`
-		 Custom Title element (alias for \`LoadingMessage.Title\`)
+			Custom Title element (alias for \`LoadingMessage.Title\`)
 		`,
 
 		Body: any`
-		 Custom Body element (alias for \`LoadingMessage.Body\`)
+			Custom Body element (alias for \`LoadingMessage.Body\`)
 		`,
 	},
 
@@ -63,7 +63,8 @@ A loading message.
 			statics: {
 				peek: {
 					description: `
-						Renders an \`<h3>\` that represents the title of the \`LoadingMessage\`.  Defaults to the string "Loading".
+						Renders an \`<h3>\` that represents the title of the
+						\`LoadingMessage\`.  Defaults to the string "Loading".
 					`,
 				},
 			},
@@ -75,7 +76,8 @@ A loading message.
 			statics: {
 				peek: {
 					description: `
-						Renders an \`<span>\` that represents the body of the \`LoadingMessage\`.
+						Renders an \`<span>\` that represents the body of the
+						\`LoadingMessage\`.
 					`,
 				},
 			},

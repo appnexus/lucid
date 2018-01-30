@@ -16,8 +16,8 @@ const TextField = createClass({
 	statics: {
 		peek: {
 			description: `
-TextField should cover all your text input needs. It is able to handle
-single and multi line inputs.
+				TextField should cover all your text input needs. It is able to handle
+				single and multi line inputs.
 			`,
 			categories: ['controls', 'text'],
 		},
@@ -27,55 +27,68 @@ single and multi line inputs.
 
 	propTypes: {
 		style: object`
-		 Styles that are passed through to native control.
+			Styles that are passed through to native control.
 		`,
 
 		isMultiLine: bool`
-		 Set the TextField to multi line mode. Under the hood this will use a \`textarea\` instead of an \`input\` if set to \`true\`.
+			Set the TextField to multi line mode. Under the hood this will use a
+			\`textarea\` instead of an \`input\` if set to \`true\`.
 		`,
 
 		isDisabled: bool`
-		 Disables the TextField by greying it out.
+			Disables the TextField by greying it out.
 		`,
 
 		rows: number`
-		 Initial number of rows a multi line TextField should have. Ignored when not in multi-line mode.
+			Initial number of rows a multi line TextField should have. Ignored when
+			not in multi-line mode.
 		`,
 
 		className: string`
-		 Class names that are appended to the defaults.
+			Class names that are appended to the defaults.
 		`,
 
 		onChange: func`
-		 Fires an event every time the user types text into the TextField.  Signature: \`(value, { event, props }) => {}\`
+			Fires an event every time the user types text into the TextField.
+			Signature: \`(value, { event, props }) => {}\`
 		`,
 
 		onBlur: func`
-		 Fires an on the \`input\`'s onBlur.  Signature: \`(currentValue, { event, props }) => {}\`
+			Fires an on the \`input\`'s onBlur.  Signature:
+			\`(currentValue, { event, props }) => {}\`
 		`,
 
 		onChangeDebounced: func`
-		 Fires an event, debounced by \`debounceLevel\`, when the user types text into the TextField.  Signature: \`(value, { event, props }) => {}\`
+			Fires an event, debounced by \`debounceLevel\`, when the user types text
+			into the TextField.  Signature: \`(value, { event, props }) => {}\`
 		`,
 
 		onKeyDown: func`
-		 Fires an event on every keydown Signature: \`({ event, props }) => {}\`
+			Fires an event on every keydown Signature: \`({ event, props }) => {}\`
 		`,
 
 		onSubmit: func`
-		 Fires an event when the user hits "enter" from the TextField. You shouldn't use it if you're using \`isMultiLine\`.  Signature: \`(value, { event, props }) => {}\`
+			Fires an event when the user hits "enter" from the TextField. You
+			shouldn't use it if you're using \`isMultiLine\`.  Signature:
+			\`(value, { event, props }) => {}\`
 		`,
 
 		value: oneOfType([number, string])`
-		 Set the value of the input.
+			Set the value of the input.
 		`,
 
 		debounceLevel: number`
-		 Number of milliseconds to debounce the \`onChangeDebounced\` callback.  Only useful if you provide an \`onChangeDebounced\` handler.
+			Number of milliseconds to debounce the \`onChangeDebounced\` callback.
+			Only useful if you provide an \`onChangeDebounced\` handler.
 		`,
 
 		lazyLevel: number`
-		 Set the holding time, in milliseconds, that the component will wait if the user is typing and the component gets a new \`value\` prop.  Any time the user hits a key, it starts a timer that prevents state changes from flowing in to the component until the timer has elapsed.  This was heavily inspired by the [lazy-input][li] component.  [li]: https://www.npmjs.com/package/lazy-input
+			Set the holding time, in milliseconds, that the component will wait if
+			the user is typing and the component gets a new \`value\` prop.  Any time
+			the user hits a key, it starts a timer that prevents state changes from
+			flowing in to the component until the timer has elapsed.  This was
+			heavily inspired by the [lazy-input][li] component.  [li]:
+			https://www.npmjs.com/package/lazy-input
 		`,
 	},
 

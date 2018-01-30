@@ -26,10 +26,10 @@ const PieChart = createClass({
 	statics: {
 		peek: {
 			description: `
-Pie charts are used for categorical data when you want to show the relative
-size of each category to the whole. We use similar "x" and "y" terms to keep
-parity with the other charts even though pie charts are really just key value
-based.
+				Pie charts are used for categorical data when you want to show the
+				relative size of each category to the whole. We use similar "x" and "y"
+				terms to keep parity with the other charts even though pie charts are
+				really just key value based.
 			`,
 			categories: ['visualizations', 'charts'],
 			madeFrom: ['ToolTip'],
@@ -48,19 +48,19 @@ based.
 
 	propTypes: {
 		style: object`
-		 Styles that are passed through to the root container.
+			Styles that are passed through to the root container.
 		`,
 
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		height: number`
-		 Height of the chart.
+			Height of the chart.
 		`,
 
 		width: number`
-		 Width of the chart.
+			Width of the chart.
 		`,
 
 		margin: shape({
@@ -69,94 +69,102 @@ based.
 			bottom: number,
 			left: number,
 		})`
-		 An object defining the margins of the chart. These margins typically contain the axis and labels.
+			An object defining the margins of the chart. These margins typically
+			contain the axis and labels.
 		`,
 
 		data: arrayOf(object)`
-Data for the chart. E.g.
+			Data for the chart. E.g.
 
-	[
-		{ x: 'Monday'    , y: 1 } ,
-		{ x: 'Tuesday'   , y: 2 } ,
-		{ x: 'Wednesday' , y: 3 } ,
-		{ x: 'Thursday'  , y: 2 } ,
-		{ x: 'Friday'    , y: 5 } ,
-	]
+				[
+					{ x: 'Monday'    , y: 1 } ,
+					{ x: 'Tuesday'   , y: 2 } ,
+					{ x: 'Wednesday' , y: 3 } ,
+					{ x: 'Thursday'  , y: 2 } ,
+					{ x: 'Friday'    , y: 5 } ,
+				]
 		`,
 
 		hasToolTips: bool`
-		 Show tool tips on hover.
+			Show tool tips on hover.
 		`,
 
 		hasStroke: bool`
-		 Determines if the pie slices have a stroke around them.
+			Determines if the pie slices have a stroke around them.
 		`,
 
 		palette: arrayOf(string)`
-Takes one of the palettes exported from \`lucid.chartConstants\`.  Available palettes:
+			Takes one of the palettes exported from \`lucid.chartConstants\`.
+			Available palettes:
 
-- \`PALETTE_6\` (default)
-- \`PALETTE_30\`
-- \`PALETTE_MONOCHROME_0_5\`
-- \`PALETTE_MONOCHROME_1_5\`
-- \`PALETTE_MONOCHROME_2_5\`
-- \`PALETTE_MONOCHROME_3_5\`
-- \`PALETTE_MONOCHROME_4_5\`
-- \`PALETTE_MONOCHROME_5_5\`
+			- \`PALETTE_6\` (default)
+			- \`PALETTE_30\`
+			- \`PALETTE_MONOCHROME_0_5\`
+			- \`PALETTE_MONOCHROME_1_5\`
+			- \`PALETTE_MONOCHROME_2_5\`
+			- \`PALETTE_MONOCHROME_3_5\`
+			- \`PALETTE_MONOCHROME_4_5\`
+			- \`PALETTE_MONOCHROME_5_5\`
 		`,
 
 		colorMap: object`
-You can pass in an object if you want to map x values to \`lucid.chartConstants\` or custom colors:
+			You can pass in an object if you want to map x values to
+			\`lucid.chartConstants\` or custom colors:
 
-	{
-		'imps': COLOR_0,
-		'rev': COLOR_3,
-		'clicks': '#abc123',
-	}
+				{
+					'imps': COLOR_0,
+					'rev': COLOR_3,
+					'clicks': '#abc123',
+				}
 		`,
 
 		ToolTip: shape(ToolTip.propTypes)`
-		 An object of ToolTip props that are passed through to the underlying ToolTip component.
+			An object of ToolTip props that are passed through to the underlying
+			ToolTip component.
 		`,
 
 		isDonut: bool`
-		 Show the pie chart as a donut with a hollow center.
+			Show the pie chart as a donut with a hollow center.
 		`,
 
 		isHovering: bool`
-		 Controls the visibility of the tooltip and the size of the currently hovered slice.
+			Controls the visibility of the tooltip and the size of the currently
+			hovered slice.
 		`,
 
 		hoveringIndex: number`
-		 Determines which slice to scale up and which data to display in he tooltip.
+			Determines which slice to scale up and which data to display in he
+			tooltip.
 		`,
 
 		onMouseOver: func`
-		 Called when the user hovers over a slice.  Signature: \`(index, {props, event}) => {}\`
+			Called when the user hovers over a slice.  Signature:
+			\`(index, {props, event}) => {}\`
 		`,
 
 		onMouseOut: func`
-		 Called when the user hovers away from either the pie or the tooltip.  Signature: \`({props, event}) => {}\`
+			Called when the user hovers away from either the pie or the tooltip.
+			Signature: \`({props, event}) => {}\`
 		`,
 
 		donutWidth: number`
-		 Width of the donut in px.
+			Width of the donut in px.
 		`,
 
 		xAxisField: string`
-		 The field we should look up your x data by. The data should be strings.
+			The field we should look up your x data by. The data should be strings.
 		`,
 
 		xAxisFormatter: func`
-		 An optional function used to format your x axis data.
+			An optional function used to format your x axis data.
 		`,
 
 		yAxisField: string`
-		 The field we should look up your y data by. The data should be numeric.
+			The field we should look up your y data by. The data should be numeric.
 		`,
 
 		yAxisFormatter: func`
-		 An optional function used to format your y axis data.
+			An optional function used to format your y axis data.
 		`,
 	},
 

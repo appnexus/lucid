@@ -24,7 +24,8 @@ const Expander = createClass({
 	statics: {
 		peek: {
 			description: `
-This is a container that provides a toggle that controls when the content is shown.
+				This is a container that provides a toggle that controls when the
+				content is shown.
 			`,
 			categories: ['layout'],
 			madeFrom: ['ChevronIcon'],
@@ -44,7 +45,8 @@ This is a container that provides a toggle that controls when the content is sho
 			propName: 'Label',
 			propTypes: {
 				children: node`
-				 Used to identify the purpose of this switch to the user -- can be any renderable content.
+					Used to identify the purpose of this switch to the user -- can be any
+					renderable content.
 				`,
 			},
 		}),
@@ -54,31 +56,35 @@ This is a container that provides a toggle that controls when the content is sho
 
 	propTypes: {
 		children: node`
-		 Expandable content.
+			Expandable content.
 		`,
 
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		isExpanded: bool`
-		 Indicates that the component is in the "expanded" state when true and in the "unexpanded" state when false.
+			Indicates that the component is in the "expanded" state when true and in
+			the "unexpanded" state when false.
 		`,
 
 		onToggle: func`
-		 Called when the user clicks on the component's header.  Signature: \`(isExpanded, { event, props }) => {}\`
+			Called when the user clicks on the component's header.  Signature:
+			\`(isExpanded, { event, props }) => {}\`
 		`,
 
 		style: object`
-		 Passed through to the root element.
+			Passed through to the root element.
 		`,
 
 		Label: any`
-		 Child element whose children represents content to be shown next to the expander icon.
+			Child element whose children represents content to be shown next to the
+			expander icon.
 		`,
 
 		kind: oneOf(['simple', 'highlighted'])`
-		 Renders different variants of Expander. 'simple' is default. 'highlighted' is more prominant.
+			Renders different variants of Expander. 'simple' is default.
+			'highlighted' is more prominant.
 		`,
 	},
 

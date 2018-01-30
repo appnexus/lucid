@@ -13,7 +13,8 @@ const DragCaptureZone = createClass({
 	statics: {
 		peek: {
 			description: `
-This is a helper component used to capture mouse events to determine when the user starts, is and stops dragging.
+				This is a helper component used to capture mouse events to determine
+				when the user starts, is and stops dragging.
 			`,
 			categories: ['utility'],
 		},
@@ -21,22 +22,28 @@ This is a helper component used to capture mouse events to determine when the us
 
 	propTypes: {
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		onDrag: func`
-		 Called as the user drags the mouse.  Signature: \`({ dx, dy, pageX, pageY }, { event, props }) => {}\`
+			Called as the user drags the mouse.  Signature:
+			\`({ dx, dy, pageX, pageY }, { event, props }) => {}\`
 		`,
 
 		onDragEnd: func`
-		 Called when the user releases the mouse button after having dragged.  Signature: \`({ dx, dy, pageX, pageY }, { event, props }) => {}\`
+			Called when the user releases the mouse button after having dragged.
+			Signature: \`({ dx, dy, pageX, pageY }, { event, props }) => {}\`
 		`,
 
 		onDragStart: func`
-		 Called when the user presses the mouse button down while over the component.  Signature: \`({ dx, dy, pageX, pageY }, { event, props }) => {}\`
+			Called when the user presses the mouse button down while over the
+			component.  Signature:
+			\`({ dx, dy, pageX, pageY }, { event, props }) => {}\`
 		`,
 		onDragCancel: func`
-		 Called when the drag event is canceled due to user interaction.  For example: if a system alert pops up during a touch event.  Signature: \`({ event, props }) => {}\`
+			Called when the drag event is canceled due to user interaction.  For
+			example: if a system alert pops up during a touch event.  Signature:
+			\`({ event, props }) => {}\`
 		`,
 	},
 

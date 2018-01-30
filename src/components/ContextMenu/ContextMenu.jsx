@@ -19,7 +19,8 @@ const ContextMenu = createClass({
 	statics: {
 		peek: {
 			description: `
-A ContextMenu component is used to render a target and a flyout which is positioned relative to the target.
+				A ContextMenu component is used to render a target and a flyout which
+				is positioned relative to the target.
 			`,
 			categories: ['utility'],
 			madeFrom: ['Portal'],
@@ -35,51 +36,57 @@ A ContextMenu component is used to render a target and a flyout which is positio
 
 	propTypes: {
 		children: node`
-		 \`children\` should include exactly one ContextMenu.Target and one ContextMenu.FlyOut.
+			\`children\` should include exactly one ContextMenu.Target and one
+			ContextMenu.FlyOut.
 		`,
 
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		style: object`
-		 Passed through to the root element.
+			Passed through to the root element.
 		`,
 
 		direction: oneOf(['down', 'up', 'right', 'left'])`
-		 direction of the FlyOut relative to Target. Defaults to \`'down'\`.
+			direction of the FlyOut relative to Target. Defaults to \`'down'\`.
 		`,
 
 		directonOffset: number`
-		 the px offset along the axis of the direction
+			the px offset along the axis of the direction
 		`,
 
 		alignment: oneOf(['start', 'center', 'end'])`
-		 alignment of the Flyout relative to Target in the cross axis from \`direction\` Defaults to \`'start'\`
+			alignment of the Flyout relative to Target in the cross axis from
+			\`direction\` Defaults to \`'start'\`
 		`,
 
 		alignmentOffset: number`
-		 the px offset along the axis of the alignment
+			the px offset along the axis of the alignment
 		`,
 
 		getAlignmentOffset: func`
-		 an alternative to \`alignmentOffset\`, a function that is applied with the width/height of the flyout. the result is used as the \`alignmentOffset\`
+			an alternative to \`alignmentOffset\`, a function that is applied with
+			the width/height of the flyout. the result is used as the
+			\`alignmentOffset\`
 		`,
 
 		minWidthOffset: number`
-		 The number of px's to grow or shrink the minWidth of the FlyOut
+			The number of px's to grow or shrink the minWidth of the FlyOut
 		`,
 
 		isExpanded: bool`
-		 Indicates whether the FlyOut will render or not. Defaults to \`true\`.
+			Indicates whether the FlyOut will render or not. Defaults to \`true\`.
 		`,
 
 		onClickOut: func`
-		 Called when a click event happenens outside of the ContextMenu, with the signature \`({ props, event }) => { ... }\`
+			Called when a click event happenens outside of the ContextMenu, with the
+			signature \`({ props, event }) => { ... }\`
 		`,
 
 		portalId: string`
-		 The \`id\` of the FlyOut portal element that is appended to \`document.body\`. Defaults to a generated \`id\`.
+			The \`id\` of the FlyOut portal element that is appended to
+			\`document.body\`. Defaults to a generated \`id\`.
 		`,
 	},
 

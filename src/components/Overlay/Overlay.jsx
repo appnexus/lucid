@@ -17,7 +17,8 @@ const Overlay = createClass({
 	statics: {
 		peek: {
 			description: `
-Overlay is used to block user interaction with the rest of the app until they have completed something.
+				Overlay is used to block user interaction with the rest of the app
+				until they have completed something.
 			`,
 			categories: ['utility'],
 			madeFrom: ['Portal'],
@@ -26,31 +27,36 @@ Overlay is used to block user interaction with the rest of the app until they ha
 
 	propTypes: {
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		children: node`
-		 Generally you should only have a single child element so the centering works correctly.
+			Generally you should only have a single child element so the centering
+			works correctly.
 		`,
 
 		isShown: bool`
-		 Controls visibility.
+			Controls visibility.
 		`,
 
 		isModal: bool`
-		 Determines if it shows with a gray background. If \`false\`, the background will be rendered but will be invisible, except for the contents, and it won't capture any of the user click events.
+			Determines if it shows with a gray background. If \`false\`, the
+			background will be rendered but will be invisible, except for the
+			contents, and it won't capture any of the user click events.
 		`,
 
 		portalId: string`
-		 Set your own id for the \`Portal\` is that is opened up to contain the contents. In practice you should never need to set this manually.
+			Set your own id for the \`Portal\` is that is opened up to contain the
+			contents. In practice you should never need to set this manually.
 		`,
 
 		onEscape: func`
-		 Fired when the user hits escape.  Signature: \`({ event, props }) => {}\`
+			Fired when the user hits escape.  Signature: \`({ event, props }) => {}\`
 		`,
 
 		onBackgroundClick: func`
-		 Fired when the user clicks on the background, this may or may not be visible depending on \`isModal\`.  Signature: \`({ event, props }) => {}\`
+			Fired when the user clicks on the background, this may or may not be
+			visible depending on \`isModal\`.  Signature: \`({ event, props }) => {}\`
 		`,
 	},
 

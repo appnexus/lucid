@@ -16,7 +16,7 @@ const LoadingIndicator = createClass({
 	statics: {
 		peek: {
 			description: `
-A loading indicator wrapper with optional overlay.
+				A loading indicator wrapper with optional overlay.
 			`,
 			categories: ['communication'],
 			madeFrom: ['OverlayWrapper', 'LoadingMessage'],
@@ -25,23 +25,24 @@ A loading indicator wrapper with optional overlay.
 
 	propTypes: {
 		hasOverlay: bool`
-		 Set this to \`false\` if you don't want the semi-transparent overlay over the wrapped content
+			Set this to \`false\` if you don't want the semi-transparent overlay over
+			the wrapped content
 		`,
 
 		className: string`
-		 Class names that are appended to the defaults.
+			Class names that are appended to the defaults.
 		`,
 
 		children: node`
-		 Any valid React children.
+			Any valid React children.
 		`,
 
 		isLoading: bool`
-		 Controls the visibility of the \`LoadingMessage\` and overlay.
+			Controls the visibility of the \`LoadingMessage\` and overlay.
 		`,
 
 		overlayKind: oneOf(['light', 'dark'])`
-		 Style variations for the overlay behind the loading indicator.
+			Style variations for the overlay behind the loading indicator.
 		`,
 	},
 

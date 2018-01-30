@@ -23,7 +23,7 @@ const Paginator = createClass({
 	statics: {
 		peek: {
 			description: `
-A paginator with page size selector.
+				A paginator with page size selector.
 			`,
 			categories: ['navigation'],
 			madeFrom: ['ArrowIcon', 'TextField', 'Button', 'SingleSelect'],
@@ -36,55 +36,60 @@ A paginator with page size selector.
 
 	propTypes: {
 		className: string`
-		 Appended to the component-specific class names set on the root elements.
+			Appended to the component-specific class names set on the root elements.
 		`,
 
 		style: object`
-		 Styles that are passed through to root element.
+			Styles that are passed through to root element.
 		`,
 
 		isDisabled: bool`
-		 Disables the Paginator from being clicked or focused.
+			Disables the Paginator from being clicked or focused.
 		`,
 
 		hasPageSizeSelector: bool`
-		 Whether to show the page size selector. Defaults to false.
+			Whether to show the page size selector. Defaults to false.
 		`,
 
 		selectedPageIndex: number`
-		 0-indexed currently selected page number
+			0-indexed currently selected page number
 		`,
 
 		selectedPageSizeIndex: number`
-		 currently selected page size option index
+			currently selected page size option index
 		`,
 
 		SingleSelect: shape(SingleSelect.propTypes)`
-		 Object of SingleSelect props which are passed thru to the underlying SingleSelect component for the page size selector.
+			Object of SingleSelect props which are passed thru to the underlying
+			SingleSelect component for the page size selector.
 		`,
 
 		totalPages: number`
-		 number to display in \`of \${totalPages}\`, calculated from \`totalPages\` and selected page size by default.
+			number to display in \`of \${totalPages}\`, calculated from
+			\`totalPages\` and selected page size by default.
 		`,
 
 		totalCount: number`
-		 total number of items across all pages
+			total number of items across all pages
 		`,
 
 		pageSizeOptions: arrayOf(number)`
-		 array of numbers representing page size options
+			array of numbers representing page size options
 		`,
 
 		TextField: shape(TextField.propTypes)`
-		 Object of TextField props which are passed thru to the underlying TextField component.
+			Object of TextField props which are passed thru to the underlying
+			TextField component.
 		`,
 
 		onPageSelect: func`
-		 Called when a page is selected.  Has the signature \`(pageIndex, totalPages, {props, event}) => {}\` where pageIndex is a number.
+			Called when a page is selected.  Has the signature \`(pageIndex,
+			totalPages, {props, event}) => {}\` where pageIndex is a number.
 		`,
 
 		onPageSizeSelect: func`
-		 Called when a page size is selected.  Has the signature \`(pageSizeIndex, {props, event}) => {}\` where pageSizeIndex is a number.
+			Called when a page size is selected.  Has the signature \`(pageSizeIndex,
+			{props, event}) => {}\` where pageSizeIndex is a number.
 		`,
 	},
 

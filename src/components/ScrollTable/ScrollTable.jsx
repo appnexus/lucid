@@ -14,7 +14,7 @@ const ScrollTable = createClass({
 	statics: {
 		peek: {
 			description: `
-Table in a scrollable container.
+				Table in a scrollable container.
 			`,
 			categories: ['table'],
 			madeFrom: ['Table'],
@@ -31,27 +31,28 @@ Table in a scrollable container.
 
 	propTypes: {
 		children: node`
-		 {Thead, Tbody, Tr, Th, Td} are the child components of Scrolltable, same as Table.
+			{Thead, Tbody, Tr, Th, Td} are the child components of Scrolltable, same
+			as Table.
 		`,
 
 		className: string`
-		 Class names that are appended to the defaults.
+			Class names that are appended to the defaults.
 		`,
 
 		style: object`
-		 Styles that are passed through to the root container.
+			Styles that are passed through to the root container.
 		`,
 
 		tableWidth: oneOfType([number, string])`
-		 Set the width of the Table inside the scrollable container.
+			Set the width of the Table inside the scrollable container.
 		`,
 
 		hasWordWrap: bool`
-		 Set the Table contents to not allow word wrapping.
+			Set the Table contents to not allow word wrapping.
 		`,
 
 		hasBorder: bool`
-		 render the table with borders on the outer edge
+			render the table with borders on the outer edge
 		`,
 	},
 

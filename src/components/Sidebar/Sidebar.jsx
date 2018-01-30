@@ -35,7 +35,8 @@ const Sidebar = createClass({
 	statics: {
 		peek: {
 			description: `
-\`Sidebar\` renders a collapsible, resizeable side bar panel next to primary content.
+				\`Sidebar\` renders a collapsible, resizeable side bar panel next to
+				primary content.
 			`,
 			categories: ['layout'],
 		},
@@ -45,55 +46,61 @@ const Sidebar = createClass({
 
 	propTypes: {
 		style: object`
-		 Style object that gets applied to the outer element.
+			Style object that gets applied to the outer element.
 		`,
 
 		className: string`
-		 Appended to the component-specific class names set on the root element. Value is run through the \`classnames\` library.
+			Appended to the component-specific class names set on the root element.
+			Value is run through the \`classnames\` library.
 		`,
 
 		children: node`
-		 Direct children must be types {Sidebar.Primary, Sidebar.Bar, Sidebar.Title}.  All content is composed as children of these respective elements.
+			Direct children must be types {Sidebar.Primary, Sidebar.Bar,
+			Sidebar.Title}.  All content is composed as children of these respective
+			elements.
 		`,
 
 		width: oneOfType([number, string])`
-		 Sets the starting width of the Bar.
+			Sets the starting width of the Bar.
 		`,
 
 		isExpanded: bool`
-		 Force the Sidebar to be expanded or collapsed.
+			Force the Sidebar to be expanded or collapsed.
 		`,
 
 		isAnimated: bool`
-		 Allows animated expand and collapse behavior.
+			Allows animated expand and collapse behavior.
 		`,
 
 		position: oneOf(['left', 'right'])`
-		 Render the Sidebar to the left or right of primary content.
+			Render the Sidebar to the left or right of primary content.
 		`,
 
 		isResizeDisabled: bool`
-		 Disable user resizing of the Sidebar.
+			Disable user resizing of the Sidebar.
 		`,
 
 		title: any`
-		 Set the title of the Sidebar. (alias for \`Title\` and \`Sidebar.Title\`)
+			Set the title of the Sidebar. (alias for \`Title\` and \`Sidebar.Title\`)
 		`,
 
 		Title: any`
-		 Set the title of the Sidebar. (alias for \`title\` and \`Sidebar.Title\`)
+			Set the title of the Sidebar. (alias for \`title\` and \`Sidebar.Title\`)
 		`,
 
 		onResizing: func`
-		 Called when the user is currently resizing the Sidebar.  Signature: \`(width, { event, props }) => {}\`
+			Called when the user is currently resizing the Sidebar.  Signature:
+			\`(width, { event, props }) => {}\`
 		`,
 
 		onResize: func`
-		 Called when the user resizes the Sidebar.  Signature: \`(width, { event, props }) => {}\`
+			Called when the user resizes the Sidebar.  Signature: \`(width, { event,
+			props }) => {}\`
 		`,
 
 		onToggle: func`
-		 Called when the user expands or collapses the Sidebar.  Signature: \`({ event, props }) => {}\`
+			Called when the user expands or collapses the Sidebar.  Signature: \`({
+			event, props }) => {}\`
 		`,
 	},
 
@@ -109,16 +116,18 @@ const Sidebar = createClass({
 			},
 			propTypes: {
 				children: node`
-				 Sidebar content. Also can define <Sidebar.Title> here as well.
+					Sidebar content. Also can define <Sidebar.Title> here as well.
 				`,
 				title: any`
-				 Set the title of the Sidebar. (alias for \`Title\` and \`Sidebar.Title\`)
+					Set the title of the Sidebar. (alias for \`Title\` and
+					\`Sidebar.Title\`)
 				`,
 				Title: any`
-				 Set the title of the Sidebar. (alias for \`title\` and \`Sidebar.Title\`)
+					Set the title of the Sidebar. (alias for \`title\` and
+					\`Sidebar.Title\`)
 				`,
 				hasGutters: bool`
-				 Adds default padding to the sidebar content.
+					Adds default padding to the sidebar content.
 				`,
 			},
 			getDefaultProps() {
@@ -139,7 +148,7 @@ const Sidebar = createClass({
 			},
 			propTypes: {
 				children: node`
-				 Primary content rendered beside the Sidebar.
+					Primary content rendered beside the Sidebar.
 				`,
 			},
 		}),
@@ -149,14 +158,15 @@ const Sidebar = createClass({
 			statics: {
 				peek: {
 					description: `
-						Content that will be displayed as the title of the Bar. It's only shown when the user has the Bar expanded.
+						Content that will be displayed as the title of the Bar. It's only
+						shown when the user has the Bar expanded.
 					`,
 				},
 			},
 			propName: ['Title', 'title'],
 			propTypes: {
 				children: node`
-				 Sidebar title.
+					Sidebar title.
 				`,
 			},
 		}),

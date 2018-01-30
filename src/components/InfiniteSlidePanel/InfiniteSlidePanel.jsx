@@ -17,7 +17,10 @@ const InfiniteSlidePanel = createClass({
 	statics: {
 		peek: {
 			description: `
-A container for rendering an infinite set of horizontal slides. Translation between slides is controlled by passing in a new \`offset\`.  Can hook into touch events to update the \`offset\`. This component is made from SlidePanel, so it accepts the same props.
+				A container for rendering an infinite set of horizontal slides.
+				Translation between slides is controlled by passing in a new
+				\`offset\`.  Can hook into touch events to update the \`offset\`. This
+				component is made from SlidePanel, so it accepts the same props.
 			`,
 			categories: ['helpers'],
 			madeFrom: ['SlidePanel'],
@@ -35,27 +38,35 @@ A container for rendering an infinite set of horizontal slides. Translation betw
 
 	propTypes: {
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		children: oneOfType([node, func])`
-		 The only allowed child is a render function which is passed the current slide's offset and returns the slide contents: \`(slideOffset) => { //returns React.PropTypes.node }\` Alternatively, you could pass one <InfiniteSlidePanel.Slide {...}> element with the render function. The only reason do to the latter is to pass addiontal props to the slide element.
+			The only allowed child is a render function which is passed the current
+			slide's offset and returns the slide contents: \`(slideOffset) => {
+			//returns React.PropTypes.node }\` Alternatively, you could pass one
+			\`<InfiniteSlidePanel.Slide {...}>\` element with the render function.
+			The only reason do to the latter is to pass addiontal props to the slide
+			element.
 		`,
 
 		offset: number`
-		 The offset of the left-most rendered slide.
+			The offset of the left-most rendered slide.
 		`,
 
 		slidesToShow: number`
-		 Max number of viewable slides to show simultaneously.
+			Max number of viewable slides to show simultaneously.
 		`,
 
 		onSwipe: func`
-		 Called when a user's swipe would change the offset. Callback passes number of slides by the user (positive for forward swipes, negative for backwards swipes).  Signature: \`(slidesSwiped, { event, props }) => {}\`
+			Called when a user's swipe would change the offset. Callback passes
+			number of slides by the user (positive for forward swipes, negative for
+			backwards swipes).  Signature: \`(slidesSwiped, { event, props }) => {}\`
 		`,
 
 		totalSlides: number`
-		 The number of slides rendered at any given time. A good rule-of-thumb is that this should be at least 4 times the \`slidesToShow\` value.
+			The number of slides rendered at any given time. A good rule-of-thumb is
+			that this should be at least 4 times the \`slidesToShow\` value.
 		`,
 	},
 

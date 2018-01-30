@@ -14,8 +14,9 @@ const StickySection = createClass({
 	statics: {
 		peek: {
 			description: `
-\`StickySection\` can be wrapped around any content to make it _stick_ to the
-top edge of the screen when a user scrolls beyond its initial location.
+				\`StickySection\` can be wrapped around any content to make it _stick_
+				to the top edge of the screen when a user scrolls beyond its initial
+				location.
 			`,
 			categories: ['helpers'],
 		},
@@ -23,19 +24,21 @@ top edge of the screen when a user scrolls beyond its initial location.
 
 	propTypes: {
 		children: node`
-		 any valid React children
+			any valid React children
 		`,
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 		style: object`
-		 Styles that are passed through to the root container.
+			Styles that are passed through to the root container.
 		`,
 		lowerBound: number`
-		 Pixel value from the top of the document. When scrolled passed, the sticky header is no longer sticky, and renders normally.
+			Pixel value from the top of the document. When scrolled passed, the
+			sticky header is no longer sticky, and renders normally.
 		`,
 		viewportWidth: number`
-		 Width of section when it sticks to the top edge of the screen. When omitted, it defaults to the last width of the section.
+			Width of section when it sticks to the top edge of the screen. When
+			omitted, it defaults to the last width of the section.
 		`,
 	},
 

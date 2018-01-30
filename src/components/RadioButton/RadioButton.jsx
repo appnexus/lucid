@@ -13,19 +13,20 @@ const RadioButton = createClass({
 	statics: {
 		peek: {
 			description: `
-This is a toggle -- a component that is in one of two particular states at
-any given moment in time -- that features a custom visualization of the
-native radio button control to reflect its current state.
+				This is a toggle -- a component that is in one of two particular states
+				at any given moment in time -- that features a custom visualization of
+				the native radio button control to reflect its current state.
 
-The radio button is different from a standard toggle in that when it is in
-the selected state user events do not cause it to toggle to the unselected
-state so the \`onSelect\` function is called only when \`isSelected\` is false.
+				The radio button is different from a standard toggle in that when it is
+				in the selected state user events do not cause it to toggle to the
+				unselected state so the \`onSelect\` function is called only when
+				\`isSelected\` is false.
 
-It uses a hidden native radio button control under the hood but leverages
-other HTML elements to visualize its state.
+				It uses a hidden native radio button control under the hood but
+				leverages other HTML elements to visualize its state.
 
-Any props that are not explicitly defined in \`propTypes\` are spread onto the
-native control.
+				Any props that are not explicitly defined in \`propTypes\` are spread
+				onto the native control.
 			`,
 			categories: ['controls', 'toggles'],
 		},
@@ -33,23 +34,27 @@ native control.
 
 	propTypes: {
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		isDisabled: bool`
-		 Indicates whether the component should appear and act disabled by having a "greyed out" palette and ignoring user interactions.
+			Indicates whether the component should appear and act disabled by having
+			a "greyed out" palette and ignoring user interactions.
 		`,
 
 		isSelected: bool`
-		 Indicates that the component is in the "selected" state when true and in the "unselected" state when false.
+			Indicates that the component is in the "selected" state when true and in
+			the "unselected" state when false.
 		`,
 
 		onSelect: func`
-		 Called when the user clicks on the component or when they press the space key while the component is in focus, and only called when the component is in the unselected state.  Signature: \`(true, { event, props }) => {}\`
+			Called when the user clicks on the component or when they press the space
+			key while the component is in focus, and only called when the component
+			is in the unselected state.  Signature: \`(true, { event, props }) => {}\`
 		`,
 
 		style: object`
-		 Passed through to the root element.
+			Passed through to the root element.
 		`,
 	},
 

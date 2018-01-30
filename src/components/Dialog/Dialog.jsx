@@ -19,7 +19,9 @@ const Dialog = createClass({
 	statics: {
 		peek: {
 			description: `
-Dialog is used to pop open a window so the user doesn't lose the context of the page behind it. Extra props are spread through to the underlying \`Overlay\`
+				Dialog is used to pop open a window so the user doesn't lose the
+				context of the page behind it. Extra props are spread through to the
+				underlying \`Overlay\`
 			`,
 			categories: ['layout'],
 			extend: 'Overlay',
@@ -56,7 +58,9 @@ Dialog is used to pop open a window so the user doesn't lose the context of the 
 		...Overlay.propTypes,
 
 		size: oneOf(['small', 'medium', 'large'])`
-		 Size variations that only affect the width of the dialog. All the sizes will grow in height until they get too big, at which point they will scroll inside.
+			Size variations that only affect the width of the dialog. All the sizes
+			will grow in height until they get too big, at which point they will
+			scroll inside.
 		`,
 
 		Header: node`

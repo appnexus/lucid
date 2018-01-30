@@ -14,9 +14,9 @@ const Validation = createClass({
 	statics: {
 		peek: {
 			description: `
-Validation is a wrapper component that's meant to be used by other
-components. Wrap your form components in it and style them accordingly if
-there's an error.
+				Validation is a wrapper component that's meant to be used by other
+				components. Wrap your form components in it and style them accordingly
+				if there's an error.
 			`,
 			categories: ['helpers'],
 		},
@@ -38,15 +38,20 @@ there's an error.
 
 	propTypes: {
 		Error: any`
-		 In most cases this will be a string, but it also accepts any valid React element. If this is a falsey value, then no error message will be displayed.  If this is the literal \`true\`, it will add the \`-is-error\` class to the wrapper div, but not render the \`-error-content\` \`div\`.
+			In most cases this will be a string, but it also accepts any valid React
+			element. If this is a falsey value, then no error message will be
+			displayed.  If this is the literal \`true\`, it will add the
+			\`-is-error\` class to the wrapper div, but not render the
+			\`-error-content\` \`div\`.
 		`,
 
 		className: any`
-		 Classes that are appended to the component defaults. This prop is run through the \`classnames\` library.
+			Classes that are appended to the component defaults. This prop is run
+			through the \`classnames\` library.
 		`,
 
 		children: any.isRequired`
-		 Any valid React children.
+			Any valid React children.
 		`,
 	},
 

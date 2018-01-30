@@ -20,8 +20,9 @@ const SearchField = createClass({
 	statics: {
 		peek: {
 			description: `
-This is a wrapper around TextField that styles it for a search use-case. The
-icon and TextField are customizable through child components.
+				This is a wrapper around TextField that styles it for a search
+				use-case. The icon and TextField are customizable through child
+				components.
 			`,
 			categories: ['controls', 'text'],
 			madeFrom: ['TextField', 'SearchIcon'],
@@ -35,7 +36,8 @@ icon and TextField are customizable through child components.
 			statics: {
 				peek: {
 					description: `
-						Icon this is displayed on the right side of the SearchField. Any of the lucid \`*Icon\` components should work.
+						Icon this is displayed on the right side of the SearchField. Any of
+						the lucid \`*Icon\` components should work.
 					`,
 				},
 			},
@@ -47,35 +49,41 @@ icon and TextField are customizable through child components.
 
 	propTypes: {
 		onChange: func`
-		 Fires an event every time the user types text into the TextField.  Signature: \`(value, { event, props }) => {}\`
+			Fires an event every time the user types text into the TextField.
+			Signature: \`(value, { event, props }) => {}\`
 		`,
 
 		onChangeDebounced: func`
-		 Fires an event, debounced by \`debounceLevel\`, when the user types text into the TextField.  Signature: \`(value, { event, props }) => {}\`
+			Fires an event, debounced by \`debounceLevel\`, when the user types text
+			into the TextField.  Signature: \`(value, { event, props }) => {}\`
 		`,
 
 		debounceLevel: number`
-		 Number of milliseconds to debounce the \`onChangeDebounced\` callback.  Only useful if you provide an \`onChangeDebounced\` handler.
+			Number of milliseconds to debounce the \`onChangeDebounced\` callback.
+			Only useful if you provide an \`onChangeDebounced\` handler.
 		`,
 
 		onSubmit: func`
-		 Fires an event when the user hits "enter" from the SearchField.  Signature: \`(value, { event, props }) => {}\`
+			Fires an event when the user hits "enter" from the SearchField.
+			Signature: \`(value, { event, props }) => {}\`
 		`,
 
 		value: oneOfType([number, string])`
-		 Set the value of the input.
+			Set the value of the input.
 		`,
 
 		isValid: bool`
-		 Controls the highlighting of the search icon. Should be passed \`true\` when the search text is valid, e.g. contains enough characters to perform a search.
+			Controls the highlighting of the search icon. Should be passed \`true\`
+			when the search text is valid, e.g. contains enough characters to perform
+			a search.
 		`,
 
 		isDisabled: bool`
-		 Disables the SearchField by greying it out.
+			Disables the SearchField by greying it out.
 		`,
 
 		placeholder: string`
-		 placeholder value
+			placeholder value
 		`,
 
 		className: string`
@@ -83,7 +91,8 @@ icon and TextField are customizable through child components.
 		`,
 
 		Icon: node`
-		 Icon this is displayed on the right side of the SearchField. Any of the lucid \`*Icon\` components should work.
+			Icon this is displayed on the right side of the SearchField. Any of the
+			lucid \`*Icon\` components should work.
 		`,
 	},
 

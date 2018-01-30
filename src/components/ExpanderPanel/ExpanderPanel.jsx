@@ -21,7 +21,8 @@ const ExpanderPanel = createClass({
 	statics: {
 		peek: {
 			description: `
-				This is a container that provides a toggle that controls when the content is shown.
+				This is a container that provides a toggle that controls when the
+				content is shown.
 			`,
 			categories: ['layout'],
 			madeFrom: ['ChevronIcon', 'Expander', 'Panel'],
@@ -33,7 +34,8 @@ const ExpanderPanel = createClass({
 			statics: {
 				peek: {
 					description: `
-						Renders a \`<span>\` of content next to the \`ChevronIcon\` in the \`Panel.Header\`
+						Renders a \`<span>\` of content next to the \`ChevronIcon\` in the
+						\`Panel.Header\`
 					`,
 				},
 			},
@@ -41,7 +43,8 @@ const ExpanderPanel = createClass({
 			propName: 'Header',
 			propTypes: {
 				children: node`
-					Used to identify the purpose of this switch to the user -- can be any renderable content.
+					Used to identify the purpose of this switch to the user -- can be any
+					renderable content.
 				`,
 			},
 		}),
@@ -59,11 +62,13 @@ const ExpanderPanel = createClass({
 		`,
 
 		isExpanded: bool`
-			Indicates that the component is in the "expanded" state when true and in the "unexpanded" state when false.
+			Indicates that the component is in the "expanded" state when true and in
+			the "unexpanded" state when false.
 		`,
 
 		isDisabled: bool`
-			Indicates that the component is in the "disabled" state when true and in the "enabled" state when false.
+			Indicates that the component is in the "disabled" state when true and in
+			the "enabled" state when false.
 		`,
 
 		hasPadding: bool`
@@ -80,7 +85,8 @@ const ExpanderPanel = createClass({
 		`,
 
 		Header: any`
-			prop alternative to Header child component passed through to the underlying ExpanderPanel
+			prop alternative to Header child component passed through to the
+			underlying ExpanderPanel
 		`,
 	},
 

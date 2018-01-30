@@ -24,9 +24,9 @@ const VerticalTabs = createClass({
 	statics: {
 		peek: {
 			description: `
-\`VerticalTabs\` provides vertically tabbed navigation. It has a flexible
-interface that allows tab content to be passed as regular React children or
-through props.
+				\`VerticalTabs\` provides vertically tabbed navigation. It has a
+				flexible interface that allows tab content to be passed as regular
+				React children or through props.
 			`,
 			categories: ['navigation'],
 			madeFrom: ['VerticalListMenu'],
@@ -39,14 +39,15 @@ through props.
 			statics: {
 				peek: {
 					description: `
-						Content that will be rendered in a tab. Be sure to nest a Title inside each Tab or provide it as a prop.
+						Content that will be rendered in a tab. Be sure to nest a Title
+						inside each Tab or provide it as a prop.
 					`,
 				},
 			},
 			propName: 'Tab',
 			propTypes: {
 				isSelected: bool`
-				 Determines if the Tab is selected.
+					Determines if the Tab is selected.
 				`,
 			},
 		}),
@@ -67,15 +68,18 @@ through props.
 
 	propTypes: {
 		className: string`
-		 Class names that are appended to the defaults.
+			Class names that are appended to the defaults.
 		`,
 
 		selectedIndex: number`
-		 Indicates which of the \`VerticalTabs.Tab\` children is currently selected. The index of the last \`VerticalTabs.Tab\` child with \`isSelected\` equal to \`true\` takes precedence over this prop.
+			Indicates which of the \`VerticalTabs.Tab\` children is currently
+			selected. The index of the last \`VerticalTabs.Tab\` child with
+			\`isSelected\` equal to \`true\` takes precedence over this prop.
 		`,
 
 		onSelect: func`
-		 Callback for when the user clicks a tab. Called with the index of the tab that was clicked.  Signature: \`(index, { event, props}) => {}\`
+			Callback for when the user clicks a tab. Called with the index of the tab
+			that was clicked.  Signature: \`(index, { event, props}) => {}\`
 		`,
 	},
 

@@ -14,7 +14,8 @@ const Portal = createClass({
 	statics: {
 		peek: {
 			description: `
-A Portal component is used to render content in a container that is appended to \`document.body\`.
+				A Portal component is used to render content in a container that is
+				appended to \`document.body\`.
 			`,
 			categories: ['utility'],
 		},
@@ -22,14 +23,15 @@ A Portal component is used to render content in a container that is appended to 
 
 	propTypes: {
 		children: node`
-		 any valid React children
+			any valid React children
 		`,
 		className: any`
-		 Appended to the component-specific class names set on the root element. Value is run through the \`classnames\` library.
+			Appended to the component-specific class names set on the root element.
+			Value is run through the \`classnames\` library.
 		`,
 
 		portalId: string.isRequired`
-		 The \`id\` of the portal element that is appended to \`document.body\`.
+			The \`id\` of the portal element that is appended to \`document.body\`.
 		`,
 	},
 	render: () => null,

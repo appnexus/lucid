@@ -15,10 +15,10 @@ const Bar = createClass({
 	statics: {
 		peek: {
 			description: `
-*For use within an \`svg\`*
+				*For use within an \`svg\`*
 
-Bars are typically used for bar charts and are pretty much a thin wrapper
-around svg rects.
+				Bars are typically used for bar charts and are pretty much a thin
+				wrapper around svg rects.
 			`,
 			categories: ['visualizations', 'geoms'],
 		},
@@ -26,35 +26,40 @@ around svg rects.
 
 	propTypes: {
 		style: object`
-		 Passed through to the root element.
+			Passed through to the root element.
 		`,
 
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		x: number`
-		 x coordinate.
+			x coordinate.
 		`,
 
 		y: number`
-		 y coordinate.
+			y coordinate.
 		`,
 
 		height: number`
-		 Height of the bar.
+			Height of the bar.
 		`,
 
 		width: number`
-		 Width of the bar.
+			Width of the bar.
 		`,
 
 		hasStroke: bool`
-		 Determines if the bar has a white stroke around it.
+			Determines if the bar has a white stroke around it.
 		`,
 
 		color: string`
-		 Strings should match an existing color class unless they start with a '#' for specific colors. E.g.: - \`COLOR_0\` - \`COLOR_GOOD\` - \`'#123abc'\`
+			Strings should match an existing color class unless they start with a '#'
+			for specific colors. E.g.:
+
+			- \`COLOR_0\`
+			- \`COLOR_GOOD\`
+			- \`'#123abc'\`
 		`,
 	},
 

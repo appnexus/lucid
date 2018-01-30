@@ -26,7 +26,7 @@ const ArrowIcon = createClass({
 	propTypes: {
 		...Icon.propTypes,
 		direction: oneOf(['up', 'down', 'left', 'right'])`
-		 direction variations of the icon
+			direction variations of the icon
 		`,
 	},
 

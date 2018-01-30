@@ -16,7 +16,8 @@ const Collapsible = createClass({
 	statics: {
 		peek: {
 			description: `
-This is a simple container that can render content as expanded or collapsed.
+				This is a simple container that can render content as expanded or
+				collapsed.
 			`,
 			categories: ['utility'],
 		},
@@ -26,31 +27,33 @@ This is a simple container that can render content as expanded or collapsed.
 
 	propTypes: {
 		children: node`
-		 Expandable content.
+			Expandable content.
 		`,
 
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		isExpanded: bool`
-		 Indicates that the component is in the "expanded" state when true and in the "unexpanded" state when false.
+			Indicates that the component is in the "expanded" state when true and in
+			the "unexpanded" state when false.
 		`,
 
 		isAnimated: bool`
-		 Show an animated transition for alternating values of \`isExpanded\`.
+			Show an animated transition for alternating values of \`isExpanded\`.
 		`,
 
 		isMountControlled: bool`
-		 If true, do not render children when fully collapsed.
+			If true, do not render children when fully collapsed.
 		`,
 
 		mountControlThreshold: number`
-		 If \`isMountControlled\` is true, this value sets is the minimum height the container needs to reach to not render any children.
+			If \`isMountControlled\` is true, this value sets is the minimum height
+			the container needs to reach to not render any children.
 		`,
 
 		rootType: any`
-		 Pass in a custom root element type.
+			Pass in a custom root element type.
 		`,
 	},
 

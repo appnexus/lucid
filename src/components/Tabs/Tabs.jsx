@@ -21,10 +21,10 @@ const Tab = createClass({
 	statics: {
 		peek: {
 			description: `
-Content that will be rendered in a tab. Be sure to nest a Title inside each Tab
-or provide it as a prop. Props other than \`isDisabled\`, \`isSelected\`, and
-\`Title\` can be inferred from the parent \`Tabs\` component, but directly
-provided \`props\` will take precedence.
+				Content that will be rendered in a tab. Be sure to nest a Title inside
+				each Tab or provide it as a prop. Props other than \`isDisabled\`,
+				\`isSelected\`, and \`Title\` can be inferred from the parent \`Tabs\`
+				component, but directly provided \`props\` will take precedence.
 			`,
 		},
 	},
@@ -33,39 +33,43 @@ provided \`props\` will take precedence.
 
 	propTypes: {
 		index: number`
-		 The index of this \`Tab\` within the list of \`Tabs\`.
+			The index of this \`Tab\` within the list of \`Tabs\`.
 		`,
 
 		isDisabled: bool`
-		 Styles a \`Tab\` as disabled. This is typically used with \`isProgressive\` to disable steps that have not been completed and should not be selected until the current step has been completed.
+			Styles a \`Tab\` as disabled. This is typically used with
+			\`isProgressive\` to disable steps that have not been completed and
+			should not be selected until the current step has been completed.
 		`,
 
 		isLastTab: bool`
-		 If \`true\`, this \`Tab\` is the last \`Tab\` in the list of \`Tabs\`.
+			If \`true\`, this \`Tab\` is the last \`Tab\` in the list of \`Tabs\`.
 		`,
 
 		isOpen: bool`
-		 If \`true\` then the active \`Tab\` will appear open on the bottom.
+			If \`true\` then the active \`Tab\` will appear open on the bottom.
 		`,
 
 		isProgressive: bool`
-		 If \`true\`, the \`Tab\` will appear as a \`Progressive\` tab.
+			If \`true\`, the \`Tab\` will appear as a \`Progressive\` tab.
 		`,
 
 		isSelected: bool`
-		 If \`true\`, the \`Tab\` will appear selected.
+			If \`true\`, the \`Tab\` will appear selected.
 		`,
 
 		onSelect: func`
-		 Callback for when the user clicks a \`Tab\`. Called with the index of the \`Tab\` that was clicked.
+			Callback for when the user clicks a \`Tab\`. Called with the index of the
+			\`Tab\` that was clicked.
 		`,
 
 		Title: node`
-		 The content to be rendered as the \`Title\` of the \`Tab\`.
+			The content to be rendered as the \`Title\` of the \`Tab\`.
 		`,
 
 		isNavigation: bool`
-		 If \`true\` component will be styled to be more visually prominent for use with page-level navigation.
+			If \`true\` component will be styled to be more visually prominent for
+			use with page-level navigation.
 		`,
 	},
 
@@ -139,8 +143,9 @@ const Tabs = createClass({
 	statics: {
 		peek: {
 			description: `
-\`Tabs\` provides tabbed navigation. It has a flexible interface that allows
-tab content to be passed as regular React children or through props.
+				\`Tabs\` provides tabbed navigation. It has a flexible interface that
+				allows tab content to be passed as regular React children or through
+				props.
 			`,
 			categories: ['navigation'],
 		},
@@ -165,39 +170,49 @@ tab content to be passed as regular React children or through props.
 
 	propTypes: {
 		className: string`
-		 Class names that are appended to the defaults.
+			Class names that are appended to the defaults.
 		`,
 
 		selectedIndex: number`
-		 Indicates which of the \`Tabs.Tab\` children is currently selected. The index of the last \`Tabs.Tab\` child with \`isSelected\` equal to \`true\` takes precedence over this prop.
+			Indicates which of the \`Tabs.Tab\` children is currently selected. The
+			index of the last \`Tabs.Tab\` child with \`isSelected\` equal to
+			\`true\` takes precedence over this prop.
 		`,
 
 		onSelect: func`
-		 Callback for when the user clicks a tab. Called with the index of the tab that was clicked.
+			Callback for when the user clicks a tab. Called with the index of the tab
+			that was clicked.
 		`,
 
 		isOpen: bool`
-		 If \`true\` then the active tab will appear open on the bottom.
+			If \`true\` then the active tab will appear open on the bottom.
 		`,
 
 		isProgressive: bool`
-		 Style the tabs as a progression. This is typically used for a work flow where the user needs to move forward and backward through a series of steps.
+			Style the tabs as a progression. This is typically used for a work flow
+			where the user needs to move forward and backward through a series of
+			steps.
 		`,
 
 		hasMultilineTitle: bool`
-		 Set the multiline className. This is typically used for styling the Tab.Title bar for improved readability when there are multiple React elements in the tab headers.
+			Set the multiline className. This is typically used for styling the
+			Tab.Title bar for improved readability when there are multiple React
+			elements in the tab headers.
 		`,
 
 		hasFullWidthTabs: bool`
-		  If \`true\` the width will be evenly distributed to all tabs.  \`False\` typically used in conjunction with \`Tab.width\`
+			If \`true\` the width will be evenly distributed to all tabs.  \`False\`
+			typically used in conjunction with \`Tab.width\`
 		`,
 
 		isNavigation: bool`
-		 If \`true\` component will be styled to be more visually prominent for use with page-level navigation.
+			If \`true\` component will be styled to be more visually prominent for
+			use with page-level navigation.
 		`,
 
 		Tab: any`
-		 *Child Element* Can be used to define one or more individual \`Tab\`s in the sequence of \`Tabs\`.  
+			*Child Element* Can be used to define one or more individual \`Tab\`s in
+			the sequence of \`Tabs\`.  
 		`,
 	},
 

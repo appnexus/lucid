@@ -14,7 +14,7 @@ const Panel = createClass({
 	statics: {
 		peek: {
 			description: `
-Panel is used to wrap content to better organize elements in window.
+				Panel is used to wrap content to better organize elements in window.
 			`,
 			categories: ['layout'],
 		},
@@ -47,28 +47,30 @@ Panel is used to wrap content to better organize elements in window.
 
 	propTypes: {
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 		Header: node`
-		 *Child Element* - Header contents. Only one \`Header\` is used.
+			*Child Element* - Header contents. Only one \`Header\` is used.
 		`,
 		Footer: node`
-		 *Child Element* - Footer contents. Only one \`Footer\` is used.
+			*Child Element* - Footer contents. Only one \`Footer\` is used.
 		`,
 		children: node`
-		 Generally you should only have a single child element so the centering works correctly.
+			Generally you should only have a single child element so the centering
+			works correctly.
 		`,
 		isGutterless: bool`
-		 If set to true, creates a content section with no padding.
+			If set to true, creates a content section with no padding.
 		`,
 		hasMargin: bool`
-		 If set to false, removes margin around the Panel
+			If set to false, removes margin around the Panel
 		`,
 		style: object`
-		 Styles that are passed through to root element.
+			Styles that are passed through to root element.
 		`,
 		isScrollable: bool`
-		 If set to true, makes content overflow scrollable, when Panel has a set height.
+			If set to true, makes content overflow scrollable, when Panel has a set
+			height.
 		`,
 	},
 

@@ -30,7 +30,9 @@ const OutwardArrowsIcon = createClass({
 
 	propTypes: {
 		kind: oneOf(['horizontal', 'vertical', 'diagonal'])`
-		 Determines the kind of arrows you want to display. \`horizontal\` is usually used for width. \`vertical\` is usually used for height.  \`diagonal\` is usually used for aspect ratio.
+			Determines the kind of arrows you want to display. \`horizontal\` is
+			usually used for width. \`vertical\` is usually used for height.
+			\`diagonal\` is usually used for aspect ratio.
 		`,
 		...Icon.propTypes,
 	},

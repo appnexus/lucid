@@ -17,8 +17,9 @@ const ButtonGroup = createClass({
 	statics: {
 		peek: {
 			description: `
-Button groups allow you to pair buttons together to form a seamless cluster.
-Any props not explicitly called out are spread on to the root component.
+				Button groups allow you to pair buttons together to form a seamless
+				cluster.  Any props not explicitly called out are spread on to the root
+				component.
 			`,
 			categories: ['controls', 'buttons'],
 			madeFrom: ['Button'],
@@ -42,19 +43,25 @@ Any props not explicitly called out are spread on to the root component.
 
 	propTypes: {
 		onSelect: func`
-		 A function that is called with the index of the child button clicked.  \`props\` refers to the child button props.  Signature: \`(selectedIndex, { event, props }) => {}\`
+			A function that is called with the index of the child button clicked.
+			\`props\` refers to the child button props.  Signature:
+			\`(selectedIndex, { event, props }) => {}\`
 		`,
 
 		className: any`
-		 Appended to the component-specific class names set on the root element. Value is run through the \`classnames\` library.
+			Appended to the component-specific class names set on the root element.
+			Value is run through the \`classnames\` library.
 		`,
 
 		children: any`
-		 All children should be \`ButtonGroup.Button\`s and they support the same props as \`Button\`s.
+			All children should be \`ButtonGroup.Button\`s and they support the same
+			props as \`Button\`s.
 		`,
 
 		selectedIndices: arrayOf(number)`
-		 An array of currently selected \`ButtonGroup.Button\`s indices. You can also pass the prop \`isActive\` to individual \`ButtonGroup.Button\` components.
+			An array of currently selected \`ButtonGroup.Button\`s indices. You can
+			also pass the prop \`isActive\` to individual \`ButtonGroup.Button\`
+			components.
 		`,
 	},
 

@@ -21,9 +21,10 @@ const Bars = createClass({
 	statics: {
 		peek: {
 			description: `
-*For use within an \`svg\`*
+				*For use within an \`svg\`*
 
-Bars are typically used to represent categorical data and can be stacked or grouped.
+				Bars are typically used to represent categorical data and can be
+				stacked or grouped.
 			`,
 			categories: ['visualizations', 'chart primitives'],
 			madeFrom: ['Bar', 'ToolTip', 'Legend'],
@@ -32,28 +33,29 @@ Bars are typically used to represent categorical data and can be stacked or grou
 
 	propTypes: {
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		data: arrayOf(object).isRequired`
-De-normalized data
+			De-normalized data
 
-	[
-		{ x: 'one', y0: 1, y1: 2, y2: 3, y3: 5 },
-		{ x: 'two', y0: 2, y1: 3, y2: 4, y3: 6 },
-		{ x: 'three', y0: 2, y1: 4, y2: 5, y3: 6 },
-		{ x: 'four', y0: 3, y1: 6, y2: 7, y3: 7 },
-		{ x: 'five', y0: 4, y1: 8, y2: 9, y3: 8 },
-	]
+				[
+					{ x: 'one', y0: 1, y1: 2, y2: 3, y3: 5 },
+					{ x: 'two', y0: 2, y1: 3, y2: 4, y3: 6 },
+					{ x: 'three', y0: 2, y1: 4, y2: 5, y3: 6 },
+					{ x: 'four', y0: 3, y1: 6, y2: 7, y3: 7 },
+					{ x: 'five', y0: 4, y1: 8, y2: 9, y3: 8 },
+				]
 		`,
 
 		legend: object`
-An object with human readable names for fields that  will be used for tooltips. E.g:
+			An object with human readable names for fields that  will be used for
+			tooltips. E.g:
 
-	{
-		rev: 'Revenue',
-		imps: 'Impressions',
-	}
+				{
+					rev: 'Revenue',
+					imps: 'Impressions',
+				}
 		`,
 
 		hasToolTips: bool`
@@ -61,66 +63,81 @@ An object with human readable names for fields that  will be used for tooltips. 
 		`,
 
 		palette: arrayOf(string)`
-Takes one of the palettes exported from \`lucid.chartConstants\`.  Available palettes:
+			Takes one of the palettes exported from \`lucid.chartConstants\`.
+			Available palettes:
 
-	- \`PALETTE_6\` (default)
-	- \`PALETTE_30\`
-	- \`PALETTE_MONOCHROME_0_5\`
-	- \`PALETTE_MONOCHROME_1_5\`
-	- \`PALETTE_MONOCHROME_2_5\`
-	- \`PALETTE_MONOCHROME_3_5\`
-	- \`PALETTE_MONOCHROME_4_5\`
-	- \`PALETTE_MONOCHROME_5_5\`
+			- \`PALETTE_6\` (default)
+			- \`PALETTE_30\`
+			- \`PALETTE_MONOCHROME_0_5\`
+			- \`PALETTE_MONOCHROME_1_5\`
+			- \`PALETTE_MONOCHROME_2_5\`
+			- \`PALETTE_MONOCHROME_3_5\`
+			- \`PALETTE_MONOCHROME_4_5\`
+			- \`PALETTE_MONOCHROME_5_5\`
 		`,
 
 		colorMap: object`
-You can pass in an object if you want to map fields to \`lucid.chartConstants\` or custom colors:
+			You can pass in an object if you want to map fields to
+			\`lucid.chartConstants\` or custom colors:
 
-	{
-		'imps': COLOR_0,
-		'rev': COLOR_3,
-		'clicks': '#abc123',
-	}
+				{
+					'imps': COLOR_0,
+					'rev': COLOR_3,
+					'clicks': '#abc123',
+				}
 		`,
 
 		xScale: func.isRequired`
-		 The scale for the x axis. Must be a d3 band scale. Lucid exposes the \`lucid.d3Scale.scaleBand\` library for use here.
+			The scale for the x axis. Must be a d3 band scale. Lucid exposes the
+			\`lucid.d3Scale.scaleBand\` library for use here.
 		`,
 
 		xField: string`
-		 The field we should look up your x data by.
+			The field we should look up your x data by.
 		`,
 
 		xFormatter: func`
-		 Function to format the x data.
+			Function to format the x data.
 		`,
 
 		yScale: func.isRequired`
-		 The scale for the y axis. Must be a d3 scale. Lucid exposes the \`lucid.d3Scale\` library for use here.
+			The scale for the y axis. Must be a d3 scale. Lucid exposes the
+			\`lucid.d3Scale\` library for use here.
 		`,
 
 		yFields: arrayOf(string)`
-		 The field(s) we should look up your y data by. Each entry represents a series. Your actual y data should be numeric.
+			The field(s) we should look up your y data by. Each entry represents a
+			series. Your actual y data should be numeric.
 		`,
 
 		yFormatter: func`
-		 Function to format the y data.
+			Function to format the y data.
 		`,
 
 		yStackedMax: number`
-		 Typically this number can be derived from the yScale. However when we're \`isStacked\` we need to calculate a new domain for the yScale based on the sum of the data. If you need explicit control of the y max when stacking, pass it in here.
+			Typically this number can be derived from the yScale. However when we're
+			\`isStacked\` we need to calculate a new domain for the yScale based on
+			the sum of the data. If you need explicit control of the y max when
+			stacking, pass it in here.
 		`,
 
 		yTooltipFormatter: func`
-		 An optional function used to format your y axis titles and data in the tooltips. The first value is the name of your y field, the second value is your post-formatted y value, and the third value is your non-formatted y-value.  Signature: \`(yField, yValueFormatted, yValue) => {}\`
+			An optional function used to format your y axis titles and data in the
+			tooltips. The first value is the name of your y field, the second value
+			is your post-formatted y value, and the third value is your non-formatted
+			y-value.  Signature: \`(yField, yValueFormatted, yValue) => {}\`
 		`,
 
 		isStacked: bool`
-		 This will stack the data instead of grouping it. In order to stack the data we have to calculate a new domain for the y scale that is based on the \`sum\` of the data.
+			This will stack the data instead of grouping it. In order to stack the
+			data we have to calculate a new domain for the y scale that is based on
+			the \`sum\` of the data.
 		`,
 
 		colorOffset: number`
-		 Sometimes you might not want the colors to start rotating at the blue color, this number will be added the bar index in determining which color the bars are.
+			Sometimes you might not want the colors to start rotating at the blue
+			color, this number will be added the bar index in determining which color
+			the bars are.
 		`,
 	},
 

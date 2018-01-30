@@ -20,7 +20,12 @@ const Legend = createClass({
 	statics: {
 		peek: {
 			description: `
-Contrary to the other chart primitives, this component is not rendered in svg. In order to sanely render horizontal legends, we need to know the width of the text elements ahead of rendering time. Since we're using a variable width font, the only way I know of to correctly get the width is with the DOM function \`getComputedTextLength\`. Variable widths are much more easy to implement outside of svg.
+				Contrary to the other chart primitives, this component is not rendered
+				in svg. In order to sanely render horizontal legends, we need to know
+				the width of the text elements ahead of rendering time. Since we're
+				using a variable width font, the only way I know of to correctly get
+				the width is with the DOM function \`getComputedTextLength\`. Variable
+				widths are much more easy to implement outside of svg.
 			`,
 			categories: ['visualizations', 'chart primitives'],
 		},
@@ -29,16 +34,17 @@ Contrary to the other chart primitives, this component is not rendered in svg. I
 
 	propTypes: {
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 		orient: oneOf(['horizontal', 'vertical'])`
-		 Determine orientation of the legend.
+			Determine orientation of the legend.
 		`,
 		hasBorders: bool`
-		 Show the legend borders. Turn this off if you want to put the legend in a \`ToolTip\` for example.
+			Show the legend borders. Turn this off if you want to put the legend in a
+			\`ToolTip\` for example.
 		`,
 		isReversed: bool`
-		 Reverse the order of items in the legend.
+			Reverse the order of items in the legend.
 		`,
 	},
 
@@ -65,16 +71,16 @@ Contrary to the other chart primitives, this component is not rendered in svg. I
 				hasPoint: bool,
 				hasLine: bool,
 				color: string`
-Strings should match an existing color class unless they start with a '#' for specific colors. E.g.:
+					Strings should match an existing color class unless they start with a '#' for specific colors. E.g.:
 
-- \`COLOR_0\`
-- \`COLOR_GOOD\`
-- \`'#123abc'\`
+					- \`COLOR_0\`
+					- \`COLOR_GOOD\`
+					- \`'#123abc'\`
 				`,
 				pointKind: number,
 				onClick: func,
 				className: string`
-				 Class names that are appended to the defaults.
+					Class names that are appended to the defaults.
 				`,
 			},
 		}),

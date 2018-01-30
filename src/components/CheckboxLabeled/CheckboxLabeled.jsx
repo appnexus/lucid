@@ -14,7 +14,8 @@ const CheckboxLabeled = createClass({
 	statics: {
 		peek: {
 			description: `
-This is a composite of the \`Checkbox\` component and the native \`label\` element.
+				This is a composite of the \`Checkbox\` component and the native
+				\`label\` element.
 			`,
 			categories: ['controls', 'toggles'],
 			madeFrom: ['Checkbox'],
@@ -36,7 +37,8 @@ This is a composite of the \`Checkbox\` component and the native \`label\` eleme
 			propName: 'Label',
 			propTypes: {
 				children: node`
-				 Used to identify the purpose of this checkbox to the user -- can be any renderable content.
+					Used to identify the purpose of this checkbox to the user -- can be
+					any renderable content.
 				`,
 			},
 		}),
@@ -46,15 +48,16 @@ This is a composite of the \`Checkbox\` component and the native \`label\` eleme
 		...Checkbox.propTypes,
 
 		className: string`
-		 Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		style: object`
-		 Passed through to the root element.
+			Passed through to the root element.
 		`,
 
 		Label: any`
-		 Child element whose children are used to identify the purpose of this checkbox to the user.
+			Child element whose children are used to identify the purpose of this
+			checkbox to the user.
 		`,
 	},
 
