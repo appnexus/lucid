@@ -54,12 +54,6 @@ const Accordion = createClass({
 			Prop alternative to Header child component passed through to the
 			underlying ExpanderPanel
 		`,
-		mode: PropTypes.oneOf(['large', 'small']).isRequired`
-			TEST: to set the mode of the component.
-		`,
-		selectedIndices: PropTypes.arrayOf(string)`
-			TEST: list of selected indices for this component
-		`,
 	},
 
 	getDefaultProps() {
