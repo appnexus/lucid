@@ -13,6 +13,8 @@ const cx = lucidClassNames.bind('&-Lines');
 
 const { arrayOf, func, number, object, bool, string } = PropTypes;
 
+const isUniform = array => _.every(array, val => val === _.first(array));
+
 const Lines = createClass({
 	displayName: 'Lines',
 
@@ -198,6 +200,8 @@ const Lines = createClass({
 								palette[(dIndex + colorOffset) % palette.length]
 							)}
 							d={area(d)}
+							// Fixes a bug in chrome by forcing a reflow of the element (ANXR-1405)
+							style={isUniform(d) ? { transform: 'scaleX(0.999)' } : null}
 						/>
 					</g>
 				))}
