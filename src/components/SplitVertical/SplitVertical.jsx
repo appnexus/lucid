@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	createClass,
@@ -15,76 +15,81 @@ const cx = lucidClassNames.bind('&-SplitVertical');
 
 const { any, bool, func, node, number, string, oneOfType } = PropTypes;
 
-/**
- * {"categories": ["helpers"]}
- *
- * `SplitVertical` renders a vertical split.
- */
 const SplitVertical = createClass({
 	displayName: 'SplitVertical',
+
+	statics: {
+		peek: {
+			description: `
+				\`SplitVertical\` renders a vertical split.
+			`,
+			categories: ['helpers'],
+			madeFrom: ['DragCaptureZone'],
+		},
+	},
 
 	_isPrivate: true,
 
 	propTypes: {
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element. Value is run through the `classnames` library.
-		 */
-		className: any,
-		/**
-		 * Direct children must be types {Splitvertical.Leftpane, Splitvertical.Divider, Splitvertical.RightPane}.
-		 * All content is composed as children of these respective elements.
-		 */
-		children: node,
-		/**
-		 * Allows draggable resizing of the SplitVertical
-		 */
-		isResizeable: bool,
-		/**
-		 * Render as expanded or collapsed.
-		 */
-		isExpanded: bool,
-		/**
-		 * Allows animated expand and collapse behavior.
-		 */
-		isAnimated: bool,
-		/**
-		 * Called when the user is currently resizing the split with the Divider.
-		 *
-		 * Signature: `(width, { event, props }) => {}`
-		 */
-		onResizing: func,
-		/**
-		 * Called when the user resizes the split with the Divider.
-		 *
-		 * Signature: `(width, { event, props }) => {}`
-		 */
-		onResize: func,
-		/**
-		 * Use this prop to shift the collapsed position by a known value.
-		 */
-		collapseShift: number,
+		className: any`
+			Appended to the component-specific class names set on the root element.
+			Value is run through the \`classnames\` library.
+		`,
+
+		children: node`
+			Direct children must be types {Splitvertical.Leftpane,
+			Splitvertical.Divider, Splitvertical.RightPane}.  All content is composed
+			as children of these respective elements.
+		`,
+
+		isResizeable: bool`
+			Allows draggable resizing of the SplitVertical
+		`,
+
+		isExpanded: bool`
+			Render as expanded or collapsed.
+		`,
+
+		isAnimated: bool`
+			Allows animated expand and collapse behavior.
+		`,
+
+		onResizing: func`
+			Called when the user is currently resizing the split with the Divider.
+			Signature: \`(width, { event, props }) => {}\`
+		`,
+
+		onResize: func`
+			Called when the user resizes the split with the Divider.  Signature:
+			\`(width, { event, props }) => {}\`
+		`,
+
+		collapseShift: number`
+			Use this prop to shift the collapsed position by a known value.
+		`,
 	},
 
 	components: {
-		/**
-		 * Left pane of the split.
-		 */
 		LeftPane: createClass({
 			displayName: 'SplitVertical.LeftPane',
+			statics: {
+				peek: {
+					description: `
+						Left pane of the split.
+					`,
+				},
+			},
 			propTypes: {
-				/**
-				 * Any valid React children.
-				 */
-				children: node,
-				/**
-				 * Set width of this pane.
-				 */
-				width: oneOfType([number, string]),
-				/**
-				 * Define this pane as the primary content pane. When the split is collapsed, this pane becomes full width.
-				 */
-				isPrimary: bool,
+				children: node`
+					Any valid React children.
+				`,
+				width: oneOfType([number, string])`
+					Set width of this pane.
+				`,
+				isPrimary: bool`
+					Define this pane as the primary content pane. When the split is
+					collapsed, this pane becomes full width.
+				`,
 			},
 			getDefaultProps() {
 				return {
@@ -93,24 +98,26 @@ const SplitVertical = createClass({
 			},
 		}),
 
-		/**
-		 * Right pane of the split.
-		 */
 		RightPane: createClass({
 			displayName: 'SplitVertical.RightPane',
+			statics: {
+				peek: {
+					description: `
+						Right pane of the split.
+					`,
+				},
+			},
 			propTypes: {
-				/**
-				 * Any valid React children.
-				 */
-				children: node,
-				/**
-				 * Set width of this pane.
-				 */
-				width: oneOfType([number, string]),
-				/**
-				 * Define this pane as the primary content pane. When the split is collapsed, this pane becomes full width.
-				 */
-				isPrimary: bool,
+				children: node`
+					Any valid React children.
+				`,
+				width: oneOfType([number, string])`
+					Set width of this pane.
+				`,
+				isPrimary: bool`
+					Define this pane as the primary content pane. When the split is
+					collapsed, this pane becomes full width.
+				`,
 			},
 			getDefaultProps() {
 				return {
@@ -119,16 +126,20 @@ const SplitVertical = createClass({
 			},
 		}),
 
-		/**
-		 * The area that separates the split panes. Can be dragged to resize them.
-		 */
 		Divider: createClass({
 			displayName: 'SplitVertical.Divider',
+			statics: {
+				peek: {
+					description: `
+						The area that separates the split panes. Can be dragged to resize
+						them.
+					`,
+				},
+			},
 			propTypes: {
-				/**
-				 * Any valid React children.
-				 */
-				children: node,
+				children: node`
+					Any valid React children.
+				`,
 			},
 		}),
 	},

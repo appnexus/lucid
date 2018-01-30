@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { extractFields, stackByFields } from '../../util/chart-helpers';
 import { createClass, omitProps } from '../../util/component-types';
@@ -15,135 +15,130 @@ const cx = lucidClassNames.bind('&-Bars');
 
 const { arrayOf, func, number, object, bool, string } = PropTypes;
 
-/**
- * {"categories": ["visualizations", "chart primitives"], "madeFrom": ["Bar", "ToolTip", "Legend"]}
- *
- * *For use within an `svg`*
- *
- * Bars are typically used to represent categorical data and can be stacked or
- * grouped.
- *
- */
 const Bars = createClass({
 	displayName: 'Bars',
 
+	statics: {
+		peek: {
+			description: `
+				*For use within an \`svg\`*
+
+				Bars are typically used to represent categorical data and can be
+				stacked or grouped.
+			`,
+			categories: ['visualizations', 'chart primitives'],
+			madeFrom: ['Bar', 'ToolTip', 'Legend'],
+		},
+	},
+
 	propTypes: {
-		/**
-		 * Appended to the component-specific class names set on the root element.
-		 */
-		className: string,
-		/**
-		 * De-normalized data
-		 *
-		 *     [
-		 *       { x: 'one', y0: 1, y1: 2, y2: 3, y3: 5 },
-		 *       { x: 'two', y0: 2, y1: 3, y2: 4, y3: 6 },
-		 *       { x: 'three', y0: 2, y1: 4, y2: 5, y3: 6 },
-		 *       { x: 'four', y0: 3, y1: 6, y2: 7, y3: 7 },
-		 *       { x: 'five', y0: 4, y1: 8, y2: 9, y3: 8 },
-		 *     ]
-		 *
-		 */
-		data: arrayOf(object).isRequired,
-		/**
-		 * An object with human readable names for fields that  will be used for
-		 * tooltips. E.g:
-		 *
-		 *     {
-		 *       rev: 'Revenue',
-		 *       imps: 'Impressions',
-		 *     }
-		 *
-		 */
-		legend: object,
-		/**
-		 * Show tool tips on hover.
-		 */
-		hasToolTips: bool,
-		/**
-		 * Takes one of the palettes exported from `lucid.chartConstants`.
-		 * Available palettes:
-		 *
-		 * - `PALETTE_6` (default)
-		 * - `PALETTE_30`
-		 * - `PALETTE_MONOCHROME_0_5`
-		 * - `PALETTE_MONOCHROME_1_5`
-		 * - `PALETTE_MONOCHROME_2_5`
-		 * - `PALETTE_MONOCHROME_3_5`
-		 * - `PALETTE_MONOCHROME_4_5`
-		 * - `PALETTE_MONOCHROME_5_5`
-		 *
-		 */
-		palette: arrayOf(string),
-		/**
-		 * You can pass in an object if you want to map fields to
-		 * `lucid.chartConstants` or custom colors:
-		 *
-		 *     {
-		 *       'imps': COLOR_0,
-		 *       'rev': COLOR_3,
-		 *       'clicks': '#abc123',
-		 *     }
-		 */
-		colorMap: object,
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
 
-		/**
-		 * The scale for the x axis. Must be a d3 band scale. Lucid exposes the
-		 * `lucid.d3Scale.scaleBand` library for use here.
-		 */
-		xScale: func.isRequired,
-		/**
-		 * The field we should look up your x data by.
-		 */
-		xField: string,
-		/**
-		 * Function to format the x data.
-		 */
-		xFormatter: func,
+		data: arrayOf(object).isRequired`
+			De-normalized data
 
-		/**
-		 * The scale for the y axis. Must be a d3 scale. Lucid exposes the
-		 * `lucid.d3Scale` library for use here.
-		 */
-		yScale: func.isRequired,
-		/**
-		 * The field(s) we should look up your y data by. Each entry represents a
-		 * series. Your actual y data should be numeric.
-		 */
-		yFields: arrayOf(string),
-		/**
-		 * Function to format the y data.
-		 */
-		yFormatter: func,
-		/**
-		 * Typically this number can be derived from the yScale. However when we're
-		 * `isStacked` we need to calculate a new domain for the yScale based on
-		 * the sum of the data. If you need explicit control of the y max when
-		 * stacking, pass it in here.
-		 */
-		yStackedMax: number,
-		/**
-		 * An optional function used to format your y axis titles and data in the
-		 * tooltips. The first value is the name of your y field, the second value
-		 * is your post-formatted y value, and the third value is your non-formatted
-		 * y-value.
-		 *
-		 * Signature: `(yField, yValueFormatted, yValue) => {}`
-		 */
-		yTooltipFormatter: func,
+				[
+					{ x: 'one', y0: 1, y1: 2, y2: 3, y3: 5 },
+					{ x: 'two', y0: 2, y1: 3, y2: 4, y3: 6 },
+					{ x: 'three', y0: 2, y1: 4, y2: 5, y3: 6 },
+					{ x: 'four', y0: 3, y1: 6, y2: 7, y3: 7 },
+					{ x: 'five', y0: 4, y1: 8, y2: 9, y3: 8 },
+				]
+		`,
 
-		/**
-		 * This will stack the data instead of grouping it. In order to stack the
-		 * data we have to calculate a new domain for the y scale that is based on
-		 * the `sum` of the data.
-		 */
-		isStacked: bool,
-		/**
-		 * Sometimes you might not want the colors to start rotating at the blue
-		 * color, this number will be added the bar index in determining which
-		 * color the bars are.
-		 */
-		colorOffset: number,
+		legend: object`
+			An object with human readable names for fields that  will be used for
+			tooltips. E.g:
+
+				{
+					rev: 'Revenue',
+					imps: 'Impressions',
+				}
+		`,
+
+		hasToolTips: bool`
+		 Show tool tips on hover.
+		`,
+
+		palette: arrayOf(string)`
+			Takes one of the palettes exported from \`lucid.chartConstants\`.
+			Available palettes:
+
+			- \`PALETTE_6\` (default)
+			- \`PALETTE_30\`
+			- \`PALETTE_MONOCHROME_0_5\`
+			- \`PALETTE_MONOCHROME_1_5\`
+			- \`PALETTE_MONOCHROME_2_5\`
+			- \`PALETTE_MONOCHROME_3_5\`
+			- \`PALETTE_MONOCHROME_4_5\`
+			- \`PALETTE_MONOCHROME_5_5\`
+		`,
+
+		colorMap: object`
+			You can pass in an object if you want to map fields to
+			\`lucid.chartConstants\` or custom colors:
+
+				{
+					'imps': COLOR_0,
+					'rev': COLOR_3,
+					'clicks': '#abc123',
+				}
+		`,
+
+		xScale: func.isRequired`
+			The scale for the x axis. Must be a d3 band scale. Lucid exposes the
+			\`lucid.d3Scale.scaleBand\` library for use here.
+		`,
+
+		xField: string`
+			The field we should look up your x data by.
+		`,
+
+		xFormatter: func`
+			Function to format the x data.
+		`,
+
+		yScale: func.isRequired`
+			The scale for the y axis. Must be a d3 scale. Lucid exposes the
+			\`lucid.d3Scale\` library for use here.
+		`,
+
+		yFields: arrayOf(string)`
+			The field(s) we should look up your y data by. Each entry represents a
+			series. Your actual y data should be numeric.
+		`,
+
+		yFormatter: func`
+			Function to format the y data.
+		`,
+
+		yStackedMax: number`
+			Typically this number can be derived from the yScale. However when we're
+			\`isStacked\` we need to calculate a new domain for the yScale based on
+			the sum of the data. If you need explicit control of the y max when
+			stacking, pass it in here.
+		`,
+
+		yTooltipFormatter: func`
+			An optional function used to format your y axis titles and data in the
+			tooltips. The first value is the name of your y field, the second value
+			is your post-formatted y value, and the third value is your non-formatted
+			y-value.  Signature: \`(yField, yValueFormatted, yValue) => {}\`
+		`,
+
+		isStacked: bool`
+			This will stack the data instead of grouping it. In order to stack the
+			data we have to calculate a new domain for the y scale that is based on
+			the \`sum\` of the data.
+		`,
+
+		colorOffset: number`
+			Sometimes you might not want the colors to start rotating at the blue
+			color, this number will be added the bar index in determining which color
+			the bars are.
+		`,
 	},
 
 	getDefaultProps() {

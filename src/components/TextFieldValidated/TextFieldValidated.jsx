@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import Validation from '../Validation/Validation';
 import TextField from '../TextField/TextField';
 import reducers from '../TextField/TextField.reducers';
@@ -11,42 +11,48 @@ const cx = lucidClassNames.bind('&-TextFieldValidated');
 
 const { any, object, string } = PropTypes;
 
-/**
- *
- * {"categories": ["controls", "text"], "extend": "TextField", "madeFrom": ["TextField", "Validation"]}
- *
- * A composition of TextField and Validation.
- */
 const TextFieldValidated = createClass({
 	displayName: 'TextFieldValidated',
+
+	statics: {
+		peek: {
+			description: `
+				A composition of TextField and Validation.
+			`,
+			categories: ['controls', 'text'],
+			madeFrom: ['TextField', 'Validation'],
+			extend: 'TextField',
+		},
+	},
 
 	reducers,
 
 	components: {
-		/**
-		 * Content that will be displayed as an error message.
-		 */
 		Error: createClass({
 			displayName: 'TextFieldValidated.Error',
+			statics: {
+				peek: {
+					description: `
+						Content that will be displayed as an error message.
+					`,
+				},
+			},
 			propName: 'Error',
 		}),
 	},
 
 	propTypes: {
-		/**
-		 * Passed to the root container.
-		 */
-		style: object,
+		style: object`
+			Passed to the root container.
+		`,
 
-		/**
-		 * Passed to the root container.
-		 */
-		className: string,
+		className: string`
+			Passed to the root container.
+		`,
 
-		/**
-		 * Prop alternative to Error child component
-		 */
-		Error: any,
+		Error: any`
+			Prop alternative to Error child component
+		`,
 	},
 
 	getDefaultProps() {

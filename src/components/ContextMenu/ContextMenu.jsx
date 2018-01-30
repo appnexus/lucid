@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import Portal from '../Portal/Portal';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
@@ -13,71 +13,93 @@ const cx = lucidClassNames.bind('&-ContextMenu');
 
 const { bool, node, func, number, object, oneOf, string } = PropTypes;
 
-/**
- *
- * {"categories": ["utility"], "madeFrom": ["Portal"]}
- *
- * A ContextMenu component is used to render a target and a flyout which is positioned relative to the target.
- */
 const ContextMenu = createClass({
 	displayName: 'ContextMenu',
+
+	statics: {
+		peek: {
+			description: `
+				A ContextMenu component is used to render a target and a flyout which
+				is positioned relative to the target.
+			`,
+			categories: ['utility'],
+			madeFrom: ['Portal'],
+		},
+		CENTER: 'center',
+		DOWN: 'down',
+		END: 'end',
+		LEFT: 'left',
+		RIGHT: 'right',
+		START: 'start',
+		UP: 'up',
+	},
+
 	propTypes: {
-		/**
-		 * `children` should include exactly one ContextMenu.Target and one ContextMenu.FlyOut.
-		 */
-		children: node,
-		/**
-		 * Appended to the component-specific class names set on the root element.
-		 */
-		className: string,
-		/**
-		 * Passed through to the root element.
-		 */
-		style: object,
-		/**
-		 * direction of the FlyOut relative to Target. Defaults to `'down'`.
-		 */
-		direction: oneOf(['down', 'up', 'right', 'left']),
-		/**
-		 * the px offset along the axis of the direction
-		 */
-		directonOffset: number,
-		/**
-		 * alignment of the Flyout relative to Target in the cross axis from `direction` Defaults to `'start'`
-		 */
-		alignment: oneOf(['start', 'center', 'end']),
-		/**
-		 * the px offset along the axis of the alignment
-		 */
-		alignmentOffset: number,
-		/**
-		 * an alternative to `alignmentOffset`, a function that is applied with the width/height of the flyout. the result is used as the `alignmentOffset`
-		 */
-		getAlignmentOffset: func,
-		/**
-		 * The number of px's to grow or shrink the minWidth of the FlyOut
-		 */
-		minWidthOffset: number,
-		/**
-		 * Indicates whether the FlyOut will render or not. Defaults to `true`.
-		 */
-		isExpanded: bool,
-		/**
-		 * Called when a click event happenens outside of the ContextMenu, with the signature `({ props, event }) => { ... }`
-		 */
-		onClickOut: func,
-		/**
-		 * The `id` of the FlyOut portal element that is appended to `document.body`. Defaults to a generated `id`.
-		 */
-		portalId: string,
+		children: node`
+			\`children\` should include exactly one ContextMenu.Target and one
+			ContextMenu.FlyOut.
+		`,
+
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
+
+		style: object`
+			Passed through to the root element.
+		`,
+
+		direction: oneOf(['down', 'up', 'right', 'left'])`
+			direction of the FlyOut relative to Target. Defaults to \`'down'\`.
+		`,
+
+		directonOffset: number`
+			the px offset along the axis of the direction
+		`,
+
+		alignment: oneOf(['start', 'center', 'end'])`
+			alignment of the Flyout relative to Target in the cross axis from
+			\`direction\` Defaults to \`'start'\`
+		`,
+
+		alignmentOffset: number`
+			the px offset along the axis of the alignment
+		`,
+
+		getAlignmentOffset: func`
+			an alternative to \`alignmentOffset\`, a function that is applied with
+			the width/height of the flyout. the result is used as the
+			\`alignmentOffset\`
+		`,
+
+		minWidthOffset: number`
+			The number of px's to grow or shrink the minWidth of the FlyOut
+		`,
+
+		isExpanded: bool`
+			Indicates whether the FlyOut will render or not. Defaults to \`true\`.
+		`,
+
+		onClickOut: func`
+			Called when a click event happenens outside of the ContextMenu, with the
+			signature \`({ props, event }) => { ... }\`
+		`,
+
+		portalId: string`
+			The \`id\` of the FlyOut portal element that is appended to
+			\`document.body\`. Defaults to a generated \`id\`.
+		`,
 	},
 
 	components: {
-		/**
-		 * Renders an element of `elementType` (defaults to `<span>`) that the menu `FlyOut` anchors to.
-		 */
 		Target: createClass({
 			displayName: 'ContextMenu.Target',
+			statics: {
+				peek: {
+					description: `
+						Renders an element of \`elementType\` (defaults to \`<span>\`) that the menu \`FlyOut\` anchors to.
+					`,
+				},
+			},
 			propTypes: {
 				elementType: string,
 			},
@@ -87,11 +109,15 @@ const ContextMenu = createClass({
 				};
 			},
 		}),
-		/*
-		 * Renders a `<Portal>` anchored to the `Target`.
-		 */
 		FlyOut: createClass({
 			displayName: 'ContextMenu.FlyOut',
+			statics: {
+				peek: {
+					description: `
+						Renders a \`<Portal>\` anchored to the \`Target\`.
+					`,
+				},
+			},
 			propTypes: {
 				style: object,
 			},
@@ -186,16 +212,6 @@ const ContextMenu = createClass({
 
 	componentWillReceiveProps() {
 		_.defer(() => this.alignFlyOut());
-	},
-
-	statics: {
-		CENTER: 'center',
-		DOWN: 'down',
-		END: 'end',
-		LEFT: 'left',
-		RIGHT: 'right',
-		START: 'start',
-		UP: 'up',
 	},
 
 	getFlyoutPosition() {

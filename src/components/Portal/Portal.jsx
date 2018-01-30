@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import ReactDOM from 'react-dom';
 import { createClass, omitProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -8,29 +8,31 @@ const cx = lucidClassNames.bind('&-Portal');
 
 const { any, node, string } = PropTypes;
 
-/**
- *
- * {"categories": ["utility"]}
- *
- * A Portal component is used to render content in a container that is appended
- * to `document.body`.
- */
 const Portal = createClass({
 	displayName: 'Portal',
+
+	statics: {
+		peek: {
+			description: `
+				A Portal component is used to render content in a container that is
+				appended to \`document.body\`.
+			`,
+			categories: ['utility'],
+		},
+	},
+
 	propTypes: {
-		/**
-		 * any valid React children
-		 */
-		children: node,
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element. Value is run through the `classnames` library.
-		 */
-		className: any,
-		/**
-		 * The `id` of the portal element that is appended to `document.body`.
-		 */
-		portalId: string.isRequired,
+		children: node`
+			any valid React children
+		`,
+		className: any`
+			Appended to the component-specific class names set on the root element.
+			Value is run through the \`classnames\` library.
+		`,
+
+		portalId: string.isRequired`
+			The \`id\` of the portal element that is appended to \`document.body\`.
+		`,
 	},
 	render: () => null,
 	componentDidMount() {

@@ -1,55 +1,50 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DragCaptureZone');
 const { func, string } = PropTypes;
 
-/**
- * {"categories": ["utility"]}
- *
- * This is a helper component used to capture mouse events to determine when the
- * user starts, is and stops dragging.
- */
 const DragCaptureZone = createClass({
 	displayName: 'DragCaptureZone',
+
+	statics: {
+		peek: {
+			description: `
+				This is a helper component used to capture mouse events to determine
+				when the user starts, is and stops dragging.
+			`,
+			categories: ['utility'],
+		},
+	},
+
 	propTypes: {
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element.
-		 */
-		className: string,
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
 
-		/**
-		 * Called as the user drags the mouse.
-		 *
-		 * Signature: `({ dx, dy, pageX, pageY }, { event, props }) => {}`
-		 */
-		onDrag: func,
+		onDrag: func`
+			Called as the user drags the mouse.  Signature:
+			\`({ dx, dy, pageX, pageY }, { event, props }) => {}\`
+		`,
 
-		/**
-		 * Called when the user releases the mouse button after having dragged.
-		 *
-		 * Signature: `({ dx, dy, pageX, pageY }, { event, props }) => {}`
-		 */
-		onDragEnd: func,
+		onDragEnd: func`
+			Called when the user releases the mouse button after having dragged.
+			Signature: \`({ dx, dy, pageX, pageY }, { event, props }) => {}\`
+		`,
 
-		/**
-		 * Called when the user presses the mouse button down while over the
-		 * component.
-		 *
-		 * Signature: `({ dx, dy, pageX, pageY }, { event, props }) => {}`
-		 */
-		onDragStart: func,
-		/**
-		 * Called when the drag event is canceled due to user interaction.
-		 * For example: if a system alert pops up during a touch event.
-		 *
-		 * Signature: `({ event, props }) => {}`
-		 */
-		onDragCancel: func,
+		onDragStart: func`
+			Called when the user presses the mouse button down while over the
+			component.  Signature:
+			\`({ dx, dy, pageX, pageY }, { event, props }) => {}\`
+		`,
+		onDragCancel: func`
+			Called when the drag event is canceled due to user interaction.  For
+			example: if a system alert pops up during a touch event.  Signature:
+			\`({ event, props }) => {}\`
+		`,
 	},
 
 	getDefaultProps() {

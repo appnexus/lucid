@@ -6,14 +6,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SuccessLightIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * Nothing like a mild success in the morning to get the blood flowing!
- */
 const SuccessLightIcon = createClass({
 	displayName: 'SuccessLightIcon',
+
+	statics: {
+		peek: {
+			description: `
+				Nothing like a mild success in the morning to get the blood flowing!
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

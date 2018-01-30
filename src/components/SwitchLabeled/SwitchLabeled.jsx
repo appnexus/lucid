@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
@@ -9,28 +9,36 @@ import Switch from '../Switch/Switch';
 const cx = lucidClassNames.bind('&-SwitchLabeled');
 const { any, node, object, string } = PropTypes;
 
-/**
- * {"categories": ["controls", "toggles"], "extend": "Switch", "madeFrom": ["Switch"]}
- *
- * This is a composite of the `Switch` component and the native `label`
- * element.
- */
 const SwitchLabeled = createClass({
 	displayName: 'SwitchLabeled',
 
+	statics: {
+		peek: {
+			description: `
+				This is a composite of the \`Switch\` component and the native
+				\`label\` element.
+			`,
+			categories: ['controls', 'toggles'],
+			madeFrom: ['Switch'],
+		},
+	},
+
 	components: {
-		/**
-		 * Label to be shown alongside the switch.
-		 */
 		Label: createClass({
 			displayName: 'SwitchLabeled.Label',
+			statics: {
+				peek: {
+					description: `
+						Label to be shown alongside the switch.
+					`,
+				},
+			},
 			propName: 'Label',
 			propTypes: {
-				/**
-				 * Used to identify the purpose of this switch to the user -- can be
-				 * any renderable content.
-				 */
-				children: node,
+				children: node`
+					Used to identify the purpose of this switch to the user -- can be any
+					renderable content.
+				`,
 			},
 		}),
 	},
@@ -38,22 +46,18 @@ const SwitchLabeled = createClass({
 	propTypes: {
 		...Switch.propTypes,
 
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element.
-		 */
-		className: string,
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
 
-		/**
-		 * Passed through to the root element.
-		 */
-		style: object,
+		style: object`
+			Passed through to the root element.
+		`,
 
-		/**
-		 * Child element whose children are used to identify the purpose of this
-		 * switch to the user.
-		 */
-		Label: any,
+		Label: any`
+			Child element whose children are used to identify the purpose of this
+			switch to the user.
+		`,
 	},
 
 	getDefaultProps() {
