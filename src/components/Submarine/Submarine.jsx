@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	createClass,
@@ -19,102 +19,102 @@ const cx = lucidClassNames.bind('&-Submarine');
 
 const { any, bool, func, node, number, string, oneOf, oneOfType } = PropTypes;
 
-/**
- * {"categories": ["layout"], "madeFrom": ["SplitHorizontal", "ChevronIcon", "GripperHorizontalIcon"]}
- *
- * `Submarine` renders a collapsible, resizeable side bar panel next to primary content.
- */
 const Submarine = createClass({
 	displayName: 'Submarine',
+
+	statics: {
+		peek: {
+			description: `
+				\`Submarine\` renders a collapsible, resizeable side bar panel next to
+				primary content.
+			`,
+			categories: ['layout'],
+			madeFrom: ['SplitHorizontal', 'ChevronIcon', 'GripperHorizontalIcon'],
+		},
+	},
 
 	reducers,
 
 	propTypes: {
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element. Value is run through the `classnames` library.
-		 */
-		className: string,
-		/**
-		 * Direct children must be types {Submarine.Primary, Submarine.Bar, Submarine.Title}.
-		 * All content is composed as children of these respective elements.
-		 */
-		children: node,
-		/**
-		 * Sets the starting height of the Bar.
-		 */
-		height: oneOfType([number, string]),
-		/**
-		 * Force the Submarine to be expanded or collapsed.
-		 */
-		isExpanded: bool,
-		/**
-		 * Indicates if the Submarine should be shown or not.
-		 * This will override the value of isExpanded.
-		 */
-		isHidden: bool,
-		/**
-		 * Indicates if the Title should be shown when the Submarine is collapsed
-		 */
-		isTitleShownCollapsed: bool,
-		/**
-		 * Allows animated expand and collapse behavior.
-		 */
-		isAnimated: bool,
-		/**
-		 * Render the Submarine to the top or bottom of primary content.
-		 */
-		position: oneOf(['top', 'bottom']),
-		/**
-		 * Disable user resizing of the Submarine.
-		 */
-		isResizeDisabled: bool,
-		/**
-		 * Set the title of the Submarine.
-		 */
-		Title: any,
-		/**
-		 * Called when the user is currently resizing the Submarine.
-		 *
-		 * Signature: `(height, { event, props }) => {}`
-		 */
-		onResizing: func,
-		/**
-		 * Called when the user resizes the Submarine.
-		 *
-		 * Signature: `(height, { event, props }) => {}`
-		 */
-		onResize: func,
-		/**
-		 * Called when the user expands or collapses the Submarine.
-		 *
-		 * Signature: `({ event, props }) => {}`
-		 */
-		onToggle: func,
+		className: string`
+			Appended to the component-specific class names set on the root element.
+			Value is run through the \`classnames\` library.
+		`,
+
+		children: node`
+			Direct children must be types {Submarine.Primary, Submarine.Bar,
+			Submarine.Title}.  All content is composed as children of these
+			respective elements.
+		`,
+
+		height: oneOfType([number, string])`
+			Sets the starting height of the Bar.
+		`,
+
+		isExpanded: bool`
+			Force the Submarine to be expanded or collapsed.
+		`,
+
+		isHidden: bool`
+			Indicates if the Submarine should be shown or not.  This will override
+			the value of isExpanded.
+		`,
+
+		isTitleShownCollapsed: bool`
+			Indicates if the Title should be shown when the Submarine is collapsed
+		`,
+
+		isAnimated: bool`
+			Allows animated expand and collapse behavior.
+		`,
+
+		position: oneOf(['top', 'bottom'])`
+			Render the Submarine to the top or bottom of primary content.
+		`,
+
+		isResizeDisabled: bool`
+			Disable user resizing of the Submarine.
+		`,
+
+		Title: any`
+			Set the title of the Submarine.
+		`,
+
+		onResizing: func`
+			Called when the user is currently resizing the Submarine.  Signature:
+			\`(height, { event, props }) => {}\`
+		`,
+
+		onResize: func`
+			Called when the user resizes the Submarine.  Signature:
+			\`(height, { event, props }) => {}\`
+		`,
+
+		onToggle: func`
+			Called when the user expands or collapses the Submarine.  Signature:
+			\`({ event, props }) => {}\`
+		`,
 	},
 
 	components: {
 		Bar: createClass({
 			displayName: 'Submarine.Bar',
 			propTypes: {
-				/**
-				 * Submarine content. Also can define <Submarine.Title> here as well.
-				 */
-				children: node,
-				/**
-				 * Set the title of the Submarine. (alias for `Submarine.Title`)
-				 */
-				Title: any,
+				children: node`
+					Submarine content. Also can define <Submarine.Title> here as well.
+				`,
+				Title: any`
+					Set the title of the Submarine. (alias for \`Submarine.Title\`)
+				`,
 			},
 		}),
 
 		Primary: createClass({
 			displayName: 'SplitHorizontal.Primary',
 			propTypes: {
-				/**
-				 * Primary content rendered beside the Submarine.
-				 */
-				children: node,
+				children: node`
+					Primary content rendered beside the Submarine.
+				`,
 			},
 		}),
 
@@ -122,10 +122,9 @@ const Submarine = createClass({
 			displayName: 'Submarine.Title',
 			propName: ['Title'],
 			propTypes: {
-				/**
-				 * Submarine title.
-				 */
-				children: node,
+				children: node`
+					Submarine title.
+				`,
 			},
 		}),
 	},

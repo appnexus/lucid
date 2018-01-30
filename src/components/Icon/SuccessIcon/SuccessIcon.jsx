@@ -6,14 +6,20 @@ import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SuccessIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "CheckIcon", "madeFrom": ["CheckIcon"]}
- *
- * A success icon.
- */
 const SuccessIcon = createClass({
 	displayName: 'SuccessIcon',
+
+	statics: {
+		peek: {
+			description: `
+				A success icon.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'CheckIcon',
+			madeFrom: ['CheckIcon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

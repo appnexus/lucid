@@ -6,14 +6,20 @@ import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-EqualsIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * An equals icon.
- */
 const EqualsIcon = createClass({
 	displayName: 'EqualsIcon',
+
+	statics: {
+		peek: {
+			description: `
+				An equals icon.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

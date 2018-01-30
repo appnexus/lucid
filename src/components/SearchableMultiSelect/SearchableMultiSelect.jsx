@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { buildHybridComponent } from '../../util/state-management';
 import { partitionText, propsSearch } from '../../util/text-manipulation';
@@ -34,24 +34,38 @@ const {
 
 const cx = lucidClassNames.bind('&-SearchableMultiSelect');
 
-/**
- *
- * {"categories": ["controls", "selectors"], "madeFrom": ["Checkbox", "SearchField", "DropMenu", "LoadingIcon", "Selection"]}
- *
- * A control used to select multiple options from a dropdown list using a
- * SearchField.
- */
 const SearchableMultiSelect = createClass({
 	displayName: 'SearchableMultiSelect',
+
+	statics: {
+		peek: {
+			description: `
+				A control used to select multiple options from a dropdown list using a
+				SearchField.
+			`,
+			categories: ['controls', 'selectors'],
+			madeFrom: [
+				'Checkbox',
+				'SearchField',
+				'DropMenu',
+				'LoadingIcon',
+				'Selection',
+			],
+		},
+	},
 
 	reducers,
 
 	components: {
-		/**
-		 * A selectable option in the list.
-		 */
 		Option: createClass({
 			displayName: 'SearchableMultiSelect.Option',
+			statics: {
+				peek: {
+					description: `
+						A selectable option in the list.
+					`,
+				},
+			},
 			propName: 'Option',
 			propTypes: DropMenu.Option.propTypes,
 			components: {
@@ -62,134 +76,135 @@ const SearchableMultiSelect = createClass({
 				}),
 			},
 		}),
-		/**
-		 * Passes props through to the `SearchField` component.
-		 */
 		SearchField: createClass({
 			displayName: 'SearchableMultiSelect.SearchField',
+			statics: {
+				peek: {
+					description: `
+						Passes props through to the \`SearchField\` component.
+					`,
+				},
+			},
 			propName: 'SearchField',
 			propTypes: SearchField.propTypes,
 		}),
 
-		/**
-		 * Groups `Option`s together with a non-selectable heading.
-		 */
 		OptionGroup: createClass({
 			displayName: 'SearchableMultiSelect.OptionGroup',
+			statics: {
+				peek: {
+					description: `
+						Groups \`Option\`s together with a non-selectable heading.
+					`,
+				},
+			},
 			propName: 'OptionGroup',
 			propTypes: DropMenu.OptionGroup.propTypes,
 		}),
 
-		/**
-		 * Label for the selected section header.
-		 */
 		SelectionLabel: createClass({
 			displayName: 'SearchableMultiSelect.SelectionLabel',
+			statics: {
+				peek: {
+					description: `
+						Label for the selected section header.
+					`,
+				},
+			},
 			propName: 'SelectionLabel',
 		}),
 	},
 
 	propTypes: {
-		/**
-		 * Should be instances of {`SearchableMultiSelect.Option`}. Other direct child elements will not render.
-		 */
-		children: node,
-		/**
-		 * Appended to the component-specific class names set on the root element.
-		 */
-		className: string,
-		/**
-		 * Disables the control from being clicked or focused.
-		 */
-		isDisabled: bool,
-		/**
-		 * Displays a LoadingIcon to allow for asynchronous loading of options.
-		 */
-		isLoading: bool,
-		/**
-		 * The max height of the fly-out menu.
-		 */
-		maxMenuHeight: oneOfType([number, string]),
-		/**
-		 * Called when the user enters a value to search for; the set of visible
-		 * Options will be filtered using the value.
-		 *
-		 * Signature: `(searchText, firstVisibleIndex, {props, event}) => {}`
-		 *
-		 * `searchText` is the value from the `SearchField` and `firstVisibleIndex`
-		 * is the index of the first option that will be visible after filtering.
-		 */
-		onSearch: func,
-		/**
-		 * Called when an option is selected.
-		 *
-		 * Signature: `(optionIndex, {props, event}) => {}`
-		 *
-		 * `optionIndex` is the new `selectedIndex` or `null`.
-		 */
-		onSelect: func,
-		/**
-		 * Called when the user clicks to remove all selections.
-		 *
-		 * Signature: `({props, event}) => {}`
-		 */
-		onRemoveAll: func,
-		/**
-		 * The function that will be run against each Option's props to determine
-		 * whether it should be visible or not. The default behavior of the
-		 * function is to match, ignoring case, against any text node descendant of
-		 * the `Option`.
-		 *
-		 * Signature: `(searchText, optionProps) => {}`
-		 *
-		 * If `true` is returned, the option will be visible. If `false`, the
-		 * option will not be visible.
-		 */
-		optionFilter: func,
-		/**
-		 * The current search text to filter the list of options by.
-		 */
-		searchText: string,
-		/**
-		 * An array of currently selected `SearchableMultiSelect.Option` indices or
-		 * `null` if nothing is selected.
-		 */
-		selectedIndices: arrayOf(number),
-		/**
-		 * Object of DropMenu props which are passed through to the underlying
-		 * DropMenu component.
-		 */
-		DropMenu: shape(DropMenu.propTypes),
-		/**
-		 * *Child Element* - These are menu options. Each `Option` may be passed a
-		 * prop called `isDisabled` to disable selection of that `Option`. Any
-		 * other props pass to Option will be available from the `onSelect`
-		 * handler.
-		 *
-		 * It also support the `Selection` prop that can be used to forward along
-		 * props to the underlying `Selection` component.
-		 */
-		Option: any,
-		/**
-		 * Adjusts the display of this component. This should typically be driven
-		 * by screen size. Currently `small` and `large` are explicitly handled
-		 * by this component.
-		 */
-		responsiveMode: oneOf(['small', 'medium', 'large']),
-		/**
-		 * Controls the visibility of the "remove all" button that's shown with the
-		 * selected items.
-		 */
-		hasRemoveAll: bool,
-		/**
-		 * Controls the visibility of the `Selection` component that appears below
-		 * the search field.
-		 */
-		hasSelections: bool,
-		/**
-		 * Controls whether to show a "Select All" option.
-		 */
-		hasSelectAll: bool,
+		children: node`
+			Should be instances of {\`SearchableMultiSelect.Option\`}. Other direct
+			child elements will not render.
+		`,
+
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
+
+		isDisabled: bool`
+			Disables the control from being clicked or focused.
+		`,
+
+		isLoading: bool`
+			Displays a LoadingIcon to allow for asynchronous loading of options.
+		`,
+
+		maxMenuHeight: oneOfType([number, string])`
+			The max height of the fly-out menu.
+		`,
+
+		onSearch: func`
+			Called when the user enters a value to search for; the set of visible
+			Options will be filtered using the value.  Signature: \`(searchText,
+			firstVisibleIndex, {props, event}) => {}\` \`searchText\` is the value
+			from the \`SearchField\` and \`firstVisibleIndex\` is the index of the
+			first option that will be visible after filtering.
+		`,
+
+		onSelect: func`
+			Called when an option is selected.  Signature: \`(optionIndex, {props,
+			event}) => {}\` \`optionIndex\` is the new \`selectedIndex\` or \`null\`.
+		`,
+
+		onRemoveAll: func`
+			Called when the user clicks to remove all selections.  Signature:
+			\`({props, event}) => {}\`
+		`,
+
+		optionFilter: func`
+			The function that will be run against each Option's props to determine
+			whether it should be visible or not. The default behavior of the function
+			is to match, ignoring case, against any text node descendant of the
+			\`Option\`.  Signature: \`(searchText, optionProps) => {}\` If \`true\`
+			is returned, the option will be visible. If \`false\`, the option will
+			not be visible.
+		`,
+
+		searchText: string`
+			The current search text to filter the list of options by.
+		`,
+
+		selectedIndices: arrayOf(number)`
+			An array of currently selected \`SearchableMultiSelect.Option\` indices
+			or \`null\` if nothing is selected.
+		`,
+
+		DropMenu: shape(DropMenu.propTypes)`
+			Object of DropMenu props which are passed through to the underlying
+			DropMenu component.
+		`,
+
+		Option: any`
+			*Child Element* - These are menu options. Each \`Option\` may be passed a
+			prop called \`isDisabled\` to disable selection of that \`Option\`. Any
+			other props pass to Option will be available from the \`onSelect\`
+			handler.  It also support the \`Selection\` prop that can be used to
+			forward along props to the underlying \`Selection\` component.
+		`,
+
+		responsiveMode: oneOf(['small', 'medium', 'large'])`
+			Adjusts the display of this component. This should typically be driven by
+			screen size. Currently \`small\` and \`large\` are explicitly handled by
+			this component.
+		`,
+
+		hasRemoveAll: bool`
+			Controls the visibility of the "remove all" button that's shown with the
+			selected items.
+		`,
+
+		hasSelections: bool`
+			Controls the visibility of the \`Selection\` component that appears below
+			the search field.
+		`,
+
+		hasSelectAll: bool`
+			Controls whether to show a "Select All" option.
+		`,
 	},
 
 	getInitialState() {

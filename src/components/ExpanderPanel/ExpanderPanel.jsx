@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
@@ -15,28 +15,37 @@ const cx = lucidClassNames.bind('&-ExpanderPanel');
 
 const { any, bool, func, node, object, string } = PropTypes;
 
-/**
- * {"categories": ["layout"], "madeFrom": ["ChevronIcon", "Expander", "Panel"]}
- *
- * This is a container that provides a toggle that controls when the content is
- * shown.
- */
 const ExpanderPanel = createClass({
 	displayName: 'ExpanderPanel',
 
+	statics: {
+		peek: {
+			description: `
+				This is a container that provides a toggle that controls when the
+				content is shown.
+			`,
+			categories: ['layout'],
+			madeFrom: ['ChevronIcon', 'Expander', 'Panel'],
+		},
+	},
+
 	components: {
-		/**
-		 * Renders a `<span>` of content next to the `ChevronIcon` in the `Panel.Header`
-		 */
 		Header: createClass({
+			statics: {
+				peek: {
+					description: `
+						Renders a \`<span>\` of content next to the \`ChevronIcon\` in the
+						\`Panel.Header\`
+					`,
+				},
+			},
 			displayName: 'ExpanderPanel.Header',
 			propName: 'Header',
 			propTypes: {
-				/**
-				 * Used to identify the purpose of this switch to the user -- can be
-				 * any renderable content.
-				 */
-				children: node,
+				children: node`
+					Used to identify the purpose of this switch to the user -- can be any
+					renderable content.
+				`,
 			},
 		}),
 	},
@@ -44,51 +53,41 @@ const ExpanderPanel = createClass({
 	reducers,
 
 	propTypes: {
-		/**
-		 * Expandable content.
-		 */
-		children: node,
+		children: node`
+			Expandable content.
+		`,
 
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element.
-		 */
-		className: string,
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
 
-		/**
-		 * Indicates that the component is in the "expanded" state when true
-		 * and in the "unexpanded" state when false.
-		 */
-		isExpanded: bool,
+		isExpanded: bool`
+			Indicates that the component is in the "expanded" state when true and in
+			the "unexpanded" state when false.
+		`,
 
-		/**
-		 * Indicates that the component is in the "disabled" state when true
-		 * and in the "enabled" state when false.
-		 */
-		isDisabled: bool,
+		isDisabled: bool`
+			Indicates that the component is in the "disabled" state when true and in
+			the "enabled" state when false.
+		`,
 
-		/**
-		 * Controls the presence of padding on the inner content.
-		 */
-		hasPadding: bool,
+		hasPadding: bool`
+			Controls the presence of padding on the inner content.
+		`,
 
-		/**
-		 * Called when the user clicks on the component's header.
-		 *
-		 * Signature: `(isExpanded, { event, props }) => {}`
-		 */
-		onToggle: func,
+		onToggle: func`
+			Called when the user clicks on the component's header.
+			Signature: \`(isExpanded, { event, props }) => {}\`
+		`,
 
-		/**
-		 * Passed through to the root element.
-		 */
-		style: object,
+		style: object`
+			Passed through to the root element.
+		`,
 
-		/**
-		 * prop alternative to Header child component
-		 * passed through to the underlying ExpanderPanel
-		 */
-		Header: any,
+		Header: any`
+			prop alternative to Header child component passed through to the
+			underlying ExpanderPanel
+		`,
 	},
 
 	getDefaultProps() {

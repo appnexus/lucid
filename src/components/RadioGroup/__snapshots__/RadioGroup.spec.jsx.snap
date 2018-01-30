@@ -265,7 +265,12 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
       Object {
         "children": Array [
           "Simon",
-          <RadioGroup>
+          <RadioGroup
+            isDisabled={false}
+            name="lucid-RadioGroup-2"
+            onSelect={[Function]}
+            selectedIndex={0}
+          >
             <RadioButton
               isDisabled={false}
               isSelected={false}
@@ -302,7 +307,12 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
   >
     <RadioGroup.Label>
       Simon
-      <RadioGroup>
+      <RadioGroup
+        isDisabled={false}
+        name="lucid-RadioGroup-2"
+        onSelect={[Function]}
+        selectedIndex={0}
+      >
         <RadioButton
           isDisabled={false}
           isSelected={false}
@@ -327,7 +337,41 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
   <RadioButtonLabeled
     Label={
       Object {
-        "children": <SingleSelect>
+        "children": <SingleSelect
+          DropMenu={
+            Object {
+              "ContextMenu": Object {
+                "alignment": "start",
+                "direction": "down",
+                "directonOffset": 0,
+                "getAlignmentOffset": [Function],
+                "isExpanded": true,
+                "minWidthOffset": 0,
+                "onClickOut": null,
+                "portalId": null,
+              },
+              "alignment": "start",
+              "direction": "down",
+              "flyOutStyle": Object {
+                "maxHeight": "18em",
+              },
+              "focusedIndex": null,
+              "isDisabled": false,
+              "isExpanded": false,
+              "onCollapse": [Function],
+              "onExpand": [Function],
+              "onFocusNext": [Function],
+              "onFocusOption": [Function],
+              "onFocusPrev": [Function],
+              "onSelect": [Function],
+              "selectedIndices": Array [],
+            }
+          }
+          hasReset={true}
+          isDisabled={false}
+          isSelectionHighlighted={true}
+          selectedIndex={null}
+        >
           <SingleSelect.Option>
             One
           </SingleSelect.Option>
@@ -350,7 +394,41 @@ exports[`RadioGroup [common] example testing should match snapshot(s) for nested
     }
   >
     <RadioGroup.Label>
-      <SingleSelect>
+      <SingleSelect
+        DropMenu={
+          Object {
+            "ContextMenu": Object {
+              "alignment": "start",
+              "direction": "down",
+              "directonOffset": 0,
+              "getAlignmentOffset": [Function],
+              "isExpanded": true,
+              "minWidthOffset": 0,
+              "onClickOut": null,
+              "portalId": null,
+            },
+            "alignment": "start",
+            "direction": "down",
+            "flyOutStyle": Object {
+              "maxHeight": "18em",
+            },
+            "focusedIndex": null,
+            "isDisabled": false,
+            "isExpanded": false,
+            "onCollapse": [Function],
+            "onExpand": [Function],
+            "onFocusNext": [Function],
+            "onFocusOption": [Function],
+            "onFocusPrev": [Function],
+            "onSelect": [Function],
+            "selectedIndices": Array [],
+          }
+        }
+        hasReset={true}
+        isDisabled={false}
+        isSelectionHighlighted={true}
+        selectedIndex={null}
+      >
         <SingleSelect.Option>
           One
         </SingleSelect.Option>

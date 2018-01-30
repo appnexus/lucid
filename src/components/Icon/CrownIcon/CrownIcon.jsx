@@ -6,14 +6,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-CrownIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * A crown icon, used for indicating super or admin users.
- */
 const CrownIcon = createClass({
 	displayName: 'CrownIcon',
+
+	statics: {
+		peek: {
+			description: `
+				A crown icon, used for indicating super or admin users.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

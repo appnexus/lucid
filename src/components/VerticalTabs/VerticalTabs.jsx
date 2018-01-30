@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	createClass,
@@ -18,37 +18,48 @@ const cx = lucidClassNames.bind('&-VerticalTabs');
 
 const { string, number, bool, func } = PropTypes;
 
-/**
- *
- * {"categories": ["navigation"], "madeFrom": ["VerticalListMenu"]}
- *
- * `VerticalTabs` provides vertically tabbed navigation. It has a flexible
- * interface that allows tab content to be passed as regular React children or
- * through props.
- */
 const VerticalTabs = createClass({
 	displayName: 'VerticalTabs',
 
+	statics: {
+		peek: {
+			description: `
+				\`VerticalTabs\` provides vertically tabbed navigation. It has a
+				flexible interface that allows tab content to be passed as regular
+				React children or through props.
+			`,
+			categories: ['navigation'],
+			madeFrom: ['VerticalListMenu'],
+		},
+	},
+
 	components: {
-		/**
-		 * Content that will be rendered in a tab. Be sure to nest a Title inside
-		 * each Tab or provide it as a prop.
-		 */
 		Tab: createClass({
 			displayName: 'VerticalTabs.Tab',
+			statics: {
+				peek: {
+					description: `
+						Content that will be rendered in a tab. Be sure to nest a Title
+						inside each Tab or provide it as a prop.
+					`,
+				},
+			},
 			propName: 'Tab',
 			propTypes: {
-				/**
-				 * Determines if the Tab is selected.
-				 */
-				isSelected: bool,
+				isSelected: bool`
+					Determines if the Tab is selected.
+				`,
 			},
 		}),
-		/**
-		 * Titles can be provided as a child or prop to a Tab.
-		 */
 		Title: createClass({
 			displayName: 'VerticalTabs.Title',
+			statics: {
+				peek: {
+					description: `
+						Titles can be provided as a child or prop to a Tab.
+					`,
+				},
+			},
 			propName: 'Title',
 		}),
 	},
@@ -56,25 +67,20 @@ const VerticalTabs = createClass({
 	reducers,
 
 	propTypes: {
-		/**
-		 * Class names that are appended to the defaults.
-		 */
-		className: string,
+		className: string`
+			Class names that are appended to the defaults.
+		`,
 
-		/**
-		 * Indicates which of the `VerticalTabs.Tab` children is currently
-		 * selected. The index of the last `VerticalTabs.Tab` child with
-		 * `isSelected` equal to `true` takes precedence over this prop.
-		 */
-		selectedIndex: number,
+		selectedIndex: number`
+			Indicates which of the \`VerticalTabs.Tab\` children is currently
+			selected. The index of the last \`VerticalTabs.Tab\` child with
+			\`isSelected\` equal to \`true\` takes precedence over this prop.
+		`,
 
-		/**
-		 * Callback for when the user clicks a tab. Called with the index of the
-		 * tab that was clicked.
-		 *
-		 * Signature: `(index, { event, props}) => {}`
-		 */
-		onSelect: func,
+		onSelect: func`
+			Callback for when the user clicks a tab. Called with the index of the tab
+			that was clicked.  Signature: \`(index, { event, props}) => {}\`
+		`,
 	},
 
 	getDefaultProps() {

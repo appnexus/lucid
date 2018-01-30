@@ -5,14 +5,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-FourSquaresIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * Description.
- */
 const FourSquaresIcon = createClass({
 	displayName: 'FourSquaresIcon',
+
+	statics: {
+		peek: {
+			description: `
+				Four squares icon
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

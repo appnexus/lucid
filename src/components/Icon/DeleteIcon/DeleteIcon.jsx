@@ -6,14 +6,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DeleteIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * A trash icon, used for indicating the deletion of a ui component.
- */
 const DeleteIcon = createClass({
 	displayName: 'DeleteIcon',
+
+	statics: {
+		peek: {
+			description: `
+				A trash icon, used for indicating the deletion of a ui component.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

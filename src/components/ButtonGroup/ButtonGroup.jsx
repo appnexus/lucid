@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import Button from '../Button/Button';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 import reducers from './ButtonGroup.reducers';
@@ -11,54 +11,58 @@ const cx = lucidClassNames.bind('&-ButtonGroup');
 
 const { any, func, arrayOf, number } = PropTypes;
 
-/**
- *
- * {"categories": ["controls", "buttons"], "madeFrom": ["Button"]}
- *
- * Button groups allow you to pair buttons together to form a seamless cluster.
- * Any props not explicitly called out are spread on to the root component.
- */
 const ButtonGroup = createClass({
 	displayName: 'ButtonGroup',
 
+	statics: {
+		peek: {
+			description: `
+				Button groups allow you to pair buttons together to form a seamless
+				cluster.  Any props not explicitly called out are spread on to the root
+				component.
+			`,
+			categories: ['controls', 'buttons'],
+			madeFrom: ['Button'],
+		},
+	},
+
 	components: {
-		/**
-		 * Renders a `<Button`> inside the `ButtonGroup`.
-		 */
 		Button: createClass({
 			displayName: 'ButtonGroup.Button',
+			statics: {
+				peek: {
+					description: `
+						Renders a \`<Button\`> inside the \`ButtonGroup\`.
+					`,
+				},
+			},
 		}),
 	},
 
 	reducers: reducers,
 
 	propTypes: {
-		/**
-		 * A function that is called with the index of the child button clicked.
-		 * `props` refers to the child button props.
-		 *
-		 * Signature: `(selectedIndex, { event, props }) => {}`
-		 */
-		onSelect: func,
+		onSelect: func`
+			A function that is called with the index of the child button clicked.
+			\`props\` refers to the child button props.  Signature:
+			\`(selectedIndex, { event, props }) => {}\`
+		`,
 
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element. Value is run through the `classnames` library.
-		 */
-		className: any,
+		className: any`
+			Appended to the component-specific class names set on the root element.
+			Value is run through the \`classnames\` library.
+		`,
 
-		/**
-		 * All children should be `ButtonGroup.Button`s and they support the same
-		 * props as `Button`s.
-		 */
-		children: any,
+		children: any`
+			All children should be \`ButtonGroup.Button\`s and they support the same
+			props as \`Button\`s.
+		`,
 
-		/**
-		 * An array of currently selected `ButtonGroup.Button`s indices. You can
-		 * also pass the prop `isActive` to individual `ButtonGroup.Button`
-		 * components.
-		 */
-		selectedIndices: arrayOf(number),
+		selectedIndices: arrayOf(number)`
+			An array of currently selected \`ButtonGroup.Button\`s indices. You can
+			also pass the prop \`isActive\` to individual \`ButtonGroup.Button\`
+			components.
+		`,
 	},
 
 	getDefaultProps() {
