@@ -9,6 +9,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 01-title-as-
   >
     <Tabs.Tab
       Title="One"
+      className="one"
       index={0}
       isLastTab={false}
       isNavigation={false}

@@ -29,6 +29,11 @@ const Tab = createClass({
 
 	propTypes: {
 		/**
+		 * Class names that are appended to the defaults.
+		 */
+		className: string,
+
+		/**
 		 * The index of this `Tab` within the list of `Tabs`.
 		 */
 		index: number,
@@ -95,19 +100,24 @@ const Tab = createClass({
 			isSelected,
 			Title,
 			isNavigation,
+			className,
 			...passThroughs
 		} = this.props;
 
 		return (
 			<li
-				className={cx('&-Tab', {
-					'&-Tab-is-active': isSelected,
-					'&-Tab-is-disabled': isDisabled,
-					'&-Tab-is-active-and-open': isOpen && isSelected,
-					'&-Tab-is-progressive': isProgressive && !isLastTab,
-				})}
+				className={cx(
+					'&-Tab',
+					{
+						'&-Tab-is-active': isSelected,
+						'&-Tab-is-disabled': isDisabled,
+						'&-Tab-is-active-and-open': isOpen && isSelected,
+						'&-Tab-is-progressive': isProgressive && !isLastTab,
+					},
+					className
+				)}
 				onClick={this.handleClick}
-				{..._.omit(passThroughs, 'index')}
+				{...omitProps(passThroughs, Tab)}
 			>
 				<span className={cx('&-Tab-content')}>{Title}</span>
 				{isProgressive &&

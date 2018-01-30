@@ -7,7 +7,7 @@ export default createClass({
 		return (
 			<div>
 				<Tabs>
-					<Tabs.Tab Title="One">One content</Tabs.Tab>
+					<Tabs.Tab Title="One" className="one">One content</Tabs.Tab>
 					<Tabs.Tab Title="Two" isDisabled={true}>Two content</Tabs.Tab>
 					<Tabs.Tab Title="Three">Three content</Tabs.Tab>
 					<Tabs.Tab Title="Five">Four content</Tabs.Tab>
