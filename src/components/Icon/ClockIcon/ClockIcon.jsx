@@ -5,14 +5,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ClockIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * Typically used for time-sensitive stuff.
- */
 const ClockIcon = createClass({
 	displayName: 'ClockIcon',
+
+	statics: {
+		peek: {
+			description: `
+				Typically used for time-sensitive stuff.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	createClass,
@@ -14,22 +14,26 @@ const cx = lucidClassNames.bind('&-Table');
 
 const { any, bool, func, node, number, object, string, oneOf } = PropTypes;
 
-/**
- * `Thead` renders <thead>.
- */
 const Thead = createClass({
 	displayName: 'Table.Thead',
 
+	statics: {
+		peek: {
+			description: `
+				\`Thead\` renders <thead>.
+			`,
+		},
+	},
+
 	propTypes: {
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element. Value is run through the `classnames` library.
-		 */
-		className: any,
-		/**
-		 * any valid React children
-		 */
-		children: node,
+		className: any`
+			Appended to the component-specific class names set on the root element.
+			Value is run through the \`classnames\` library.
+		`,
+
+		children: node`
+			any valid React children
+		`,
 	},
 
 	render() {
@@ -46,22 +50,26 @@ const Thead = createClass({
 	},
 });
 
-/**
- * `Tbody` renders <tbody>.
- */
 const Tbody = createClass({
 	displayName: 'Table.Tbody',
 
+	statics: {
+		peek: {
+			description: `
+				\`Tbody\` renders <tbody>.
+			`,
+		},
+	},
+
 	propTypes: {
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element. Value is run through the `classnames` library.
-		 */
-		className: any,
-		/**
-		 * any valid React children
-		 */
-		children: node,
+		className: any`
+			Appended to the component-specific class names set on the root element.
+			Value is run through the \`classnames\` library.
+		`,
+
+		children: node`
+			any valid React children
+		`,
 	},
 
 	render() {
@@ -78,38 +86,44 @@ const Tbody = createClass({
 	},
 });
 
-/**
- * `Tr` renders <tr>.
- */
 const Tr = createClass({
 	displayName: 'Table.Tr',
 
+	statics: {
+		peek: {
+			description: `
+				\`Tr\` renders <tr>.
+			`,
+		},
+	},
+
 	propTypes: {
-		/**
-		 * any valid React children
-		 */
-		children: node,
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element. Value is run through the `classnames` library.
-		 */
-		className: any,
-		/**
-		 * Applies disabled styles to the row.
-		 */
-		isDisabled: bool,
-		/**
-		 * Applies styles to the row for when the row is selected, usually by a checkbox.
-		 */
-		isSelected: bool,
-		/**
-		 * Applies active styles to the row, usually when the row has been clicked.
-		 */
-		isActive: bool,
-		/**
-		 * Applies styles to the row, used to show if a row is clickable / can be made active.
-		 */
-		isActionable: bool,
+		children: node`
+			any valid React children
+		`,
+
+		className: any`
+			Appended to the component-specific class names set on the root element.
+			Value is run through the \`classnames\` library.
+		`,
+
+		isDisabled: bool`
+			Applies disabled styles to the row.
+		`,
+
+		isSelected: bool`
+			Applies styles to the row for when the row is selected, usually by a
+			checkbox.
+		`,
+
+		isActive: bool`
+			Applies active styles to the row, usually when the row has been clicked.
+		`,
+
+		isActionable: bool`
+			Applies styles to the row, used to show if a row is clickable / can be
+			made active.
+		`,
 	},
 
 	getDefaultProps() {
@@ -152,84 +166,88 @@ const Tr = createClass({
 	},
 });
 
-/**
- * `Th` renders <th>.
- */
 const Th = createClass({
 	displayName: 'Table.Th',
 
+	statics: {
+		peek: {
+			description: `
+				\`Th\` renders <th>.
+			`,
+		},
+	},
+
 	propTypes: {
-		/**
-		 * Aligns the content of a cell. Can be `left`, `center`, or `right`.
-		 */
-		align: string,
-		/**
-		 * any valid React children
-		 */
-		children: node,
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element. Value is run through the `classnames` library.
-		 */
-		className: any,
-		/**
-		 * Should be `true` to render a right border.
-		 */
-		hasBorderRight: bool,
-		/**
-		 * Should be `true` to render a left border.
-		 */
-		hasBorderLeft: bool,
-		/**
-		 * Styles the cell to indicate it should be resizable and sets up drag-
-		 * related events to enable this resizing functionality.
-		 */
-		isResizable: bool,
-		/**
-		 * Styles the cell to allow column sorting.
-		 */
-		isSortable: bool,
-		/**
-		 * Renders a caret icon to show that the column is sorted.
-		 */
-		isSorted: bool,
-		/**
-		 * Called as the user drags the resize handle to resize the column atop
-		 * which this table header cell sits.
-		 */
-		onResize: func,
-		/**
-		 * Sets the direction of the caret icon when `isSorted` is also set.
-		 */
-		sortDirection: string,
-		/**
-		 * Styles that are passed through to root element.
-		 */
-		style: object,
-		/**
-		 * Sets the width of the cell.
-		 */
-		width: number,
-		/**
-		 * Define the cell as being in the first row.
-		 */
-		isFirstRow: bool,
-		/**
-		 * Define the cell as being in the last row.
-		 */
-		isLastRow: bool,
-		/**
-		 * Define the cell as being in the first column.
-		 */
-		isFirstCol: bool,
-		/**
-		 * Define the cell as being in the last column.
-		 */
-		isLastCol: bool,
-		/**
-		 * Define the cell as being the first 1-height cell in the row.
-		 */
-		isFirstSingle: bool,
+		align: string`
+			Aligns the content of a cell. Can be \`left\`, \`center\`, or \`right\`.
+		`,
+
+		children: node`
+			any valid React children
+		`,
+
+		className: any`
+			Appended to the component-specific class names set on the root element.
+			Value is run through the \`classnames\` library.
+		`,
+
+		hasBorderRight: bool`
+			Should be \`true\` to render a right border.
+		`,
+
+		hasBorderLeft: bool`
+			Should be \`true\` to render a left border.
+		`,
+
+		isResizable: bool`
+			Styles the cell to indicate it should be resizable and sets up drag-
+			related events to enable this resizing functionality.
+		`,
+
+		isSortable: bool`
+			Styles the cell to allow column sorting.
+		`,
+
+		isSorted: bool`
+			Renders a caret icon to show that the column is sorted.
+		`,
+
+		onResize: func`
+			Called as the user drags the resize handle to resize the column atop
+			which this table header cell sits.
+		`,
+
+		sortDirection: string`
+			Sets the direction of the caret icon when \`isSorted\` is also set.
+		`,
+
+		style: object`
+			Styles that are passed through to root element.
+		`,
+
+		width: number`
+			Sets the width of the cell.
+		`,
+
+		isFirstRow: bool`
+			Define the cell as being in the first row.
+		`,
+
+		isLastRow: bool`
+			Define the cell as being in the last row.
+		`,
+
+		isFirstCol: bool`
+			Define the cell as being in the first column.
+		`,
+
+		isLastCol: bool`
+			Define the cell as being in the last column.
+		`,
+
+		isFirstSingle: bool`
+			Define the cell as being the first 1-height cell in the row.
+		`,
 	},
 
 	getDefaultProps() {
@@ -431,50 +449,56 @@ const Th = createClass({
 	},
 });
 
-/**
- * `Td` renders <td>.
- */
 const Td = createClass({
 	displayName: 'Table.Td',
 
+	statics: {
+		peek: {
+			description: `
+				\`Td\` renders <td>.
+			`,
+			categories: [],
+			madeFrom: [],
+		},
+	},
+
 	propTypes: {
-		/**
-		 * Aligns the content of a cell. Can be `left`, `center`, or `right`.
-		 */
-		align: string,
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element. Value is run through the `classnames` library.
-		 */
-		className: any,
-		/**
-		 * Should be `true` to render a right border.
-		 */
-		hasBorderRight: bool,
-		/**
-		 * Should be `true` to render a left border.
-		 */
-		hasBorderLeft: bool,
-		/**
-		 * Define the cell as being in the first row.
-		 */
-		isFirstRow: bool,
-		/**
-		 * Define the cell as being in the last row.
-		 */
-		isLastRow: bool,
-		/**
-		 * Define the cell as being in the first column.
-		 */
-		isFirstCol: bool,
-		/**
-		 * Define the cell as being in the last column.
-		 */
-		isLastCol: bool,
-		/**
-		 * Define the cell as being the first 1-height cell in the row.
-		 */
-		isFirstSingle: bool,
+		align: string`
+			Aligns the content of a cell. Can be \`left\`, \`center\`, or \`right\`.
+		`,
+
+		className: any`
+			Appended to the component-specific class names set on the root element.
+			Value is run through the \`classnames\` library.
+		`,
+
+		hasBorderRight: bool`
+			Should be \`true\` to render a right border.
+		`,
+
+		hasBorderLeft: bool`
+			Should be \`true\` to render a left border.
+		`,
+
+		isFirstRow: bool`
+			Define the cell as being in the first row.
+		`,
+
+		isLastRow: bool`
+			Define the cell as being in the last row.
+		`,
+
+		isFirstCol: bool`
+			Define the cell as being in the first column.
+		`,
+
+		isLastCol: bool`
+			Define the cell as being in the last column.
+		`,
+
+		isFirstSingle: bool`
+			Define the cell as being the first 1-height cell in the row.
+		`,
 	},
 
 	getDefaultProps() {
@@ -523,15 +547,20 @@ const Td = createClass({
 	},
 });
 
-/**
- *
- * {"categories": ["table"], "madeFrom": ["CaretIcon", "DragCaptureZone"]}
- *
- * `Table` provides the most basic components to create a lucid table.
- * It is recommended to create a wrapper around this component rather than using it directly in an app.
- */
 const Table = createClass({
 	displayName: 'Table',
+
+	statics: {
+		peek: {
+			description: `
+				\`Table\` provides the most basic components to create a lucid table.
+				It is recommended to create a wrapper around this component rather than
+				using it directly in an app.
+			`,
+			categories: ['table'],
+			madeFrom: ['CaretIcon', 'DragCaptureZone'],
+		},
+	},
 
 	components: {
 		Thead,
@@ -542,35 +571,29 @@ const Table = createClass({
 	},
 
 	propTypes: {
-		/**
-		 * Styles that are passed through to the root container.
-		 */
-		style: object,
+		style: object`
+			Styles that are passed through to the root container.
+		`,
 
-		/**
-		 * Class names that are appended to the defaults.
-		 */
-		className: string,
+		className: string`
+			Class names that are appended to the defaults.
+		`,
 
-		/**
-		 * Adjusts the row density of the table to have more or less spacing.
-		 */
-		density: oneOf(['compressed', 'extended']),
+		density: oneOf(['compressed', 'extended'])`
+			Adjusts the row density of the table to have more or less spacing.
+		`,
 
-		/**
-		 * Allows light header.
-		 */
-		hasLightHeader: bool,
+		hasLightHeader: bool`
+			Allows light header.
+		`,
 
-		/**
-		 * Render the table with borders on the outer edge.
-		 */
-		hasBorder: bool,
+		hasBorder: bool`
+			Render the table with borders on the outer edge.
+		`,
 
-		/**
-		 * Enables word wrapping in tables cells.
-		 */
-		hasWordWrap: bool,
+		hasWordWrap: bool`
+			Enables word wrapping in tables cells.
+		`,
 	},
 
 	getDefaultProps() {

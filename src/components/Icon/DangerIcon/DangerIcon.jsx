@@ -6,14 +6,20 @@ import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DangerIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "CrossIcon", "madeFrom": ["CrossIcon"]}
- *
- * DANGER WILL ROBINSON DANGER
- */
 const DangerIcon = createClass({
 	displayName: 'DangerIcon',
+
+	statics: {
+		peek: {
+			description: `
+				DANGER WILL ROBINSON DANGER
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'CrossIcon',
+			madeFrom: ['CrossIcon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 import SeparatorIcon from '../Icon/SeparatorIcon/SeparatorIcon';
@@ -9,24 +9,32 @@ const cx = lucidClassNames.bind('&-Breadcrumb');
 
 const { any, node } = PropTypes;
 
-/**
- *
- * {"categories": ["navigation"], "madeFrom": ["SeparatorIcon"]}
- *
- * Navigation component to show a user's place in a navigation hierarchy and
- * provide links to return to higher points in the hierarchy
- *
- */
 const Breadcrumb = createClass({
 	displayName: 'Breadcrumb',
 
+	statics: {
+		peek: {
+			description: `
+				Navigation component to show a user's place in a navigation hierarchy
+				and provide links to return to higher points in the hierarchy
+			`,
+			categories: ['navigation'],
+			madeFrom: ['SeparatorIcon'],
+		},
+	},
+
 	components: {
 		SeparatorIcon,
-		/*
-		 * Renders a `li`
-		 */
+
 		Item: createClass({
 			displayName: 'Breadcrumb.Item',
+			statics: {
+				peek: {
+					description: `
+						Renders a \`li\`
+					`,
+				},
+			},
 			propTypes: {
 				children: node,
 			},
@@ -34,15 +42,14 @@ const Breadcrumb = createClass({
 	},
 
 	propTypes: {
-		/**
-		 * All children should be `Breadcrumb.Item`s. Others are ignored.
-		 */
-		children: node,
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element. Value is run through the `classnames` library.
-		 */
-		className: any,
+		children: node`
+			All children should be \`Breadcrumb.Item\`s. Others are ignored.
+		`,
+
+		className: any`
+			Appended to the component-specific class names set on the root element.
+			Value is run through the \`classnames\` library.
+		`,
 	},
 
 	render() {

@@ -5,14 +5,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-QuestionMarkCircleIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * Description.
- */
 const QuestionMarkCircleIcon = createClass({
 	displayName: 'QuestionMarkCircleIcon',
+
+	statics: {
+		peek: {
+			description: `
+				Question mark circle icon
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

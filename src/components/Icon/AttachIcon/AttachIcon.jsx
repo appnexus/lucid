@@ -6,14 +6,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-AttachIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * A link/attach icon, used for indicating an attachment.
- */
 const AttachIcon = createClass({
 	displayName: 'AttachIcon',
+
+	statics: {
+		peek: {
+			description: `
+				A link/attach icon, used for indicating an attachment.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

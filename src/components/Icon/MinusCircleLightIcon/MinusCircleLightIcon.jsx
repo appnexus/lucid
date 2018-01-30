@@ -5,14 +5,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-MinusCircleLightIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * Description.
- */
 const MinusCircleLightIcon = createClass({
 	displayName: 'MinusCircleLightIcon',
+
+	statics: {
+		peek: {
+			description: `
+				Minus circle light icon
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

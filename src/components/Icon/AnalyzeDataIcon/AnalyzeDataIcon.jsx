@@ -6,14 +6,21 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-AnalyzeDataIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * Typically used to show the user that further data analysis is available.
- */
 const AnalyzeDataIcon = createClass({
 	displayName: 'AnalyzeDataIcon',
+
+	statics: {
+		peek: {
+			description: `
+				Typically used to show the user that further data analysis is
+				available.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

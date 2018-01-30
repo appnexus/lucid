@@ -6,14 +6,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-HomeIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * RUNHOME Jack! No, no, no, HOMERUN Jack!
- */
 const HomeIcon = createClass({
 	displayName: 'HomeIcon',
+
+	statics: {
+		peek: {
+			description: `
+				RUNHOME Jack! No, no, no, HOMERUN Jack!
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

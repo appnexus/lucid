@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
@@ -8,57 +8,54 @@ const cx = lucidClassNames.bind('&-Checkbox');
 
 const { bool, func, object, string } = PropTypes;
 
-/**
- * {"categories": ["controls", "toggles"]}
- *
- * This is a checkbox. It's a component that is in one of two particular states
- * at any given moment. It features a custom visualization of the native
- * checkbox button control to reflect its current state.
- *
- * It uses a hidden native checkbox control under the hood but leverages other
- * HTML elements to visualize its state.
- */
 const Checkbox = createClass({
 	displayName: 'Checkbox',
+
+	statics: {
+		peek: {
+			description: `
+				This is a checkbox. It's a component that is in one of two particular
+				states at any given moment. It features a custom visualization of the
+				native checkbox button control to reflect its current state.
+
+				It uses a hidden native checkbox control under the hood but leverages
+				other HTML elements to visualize its state.
+			`,
+			categories: ['controls', 'toggles'],
+		},
+	},
+
 	propTypes: {
-		/**
-		 * Appended to the component-specific class names set on the root
-		 * element.
-		 */
-		className: string,
+		className: string`
+			Appended to the component-specific class names set on the root element.
+		`,
 
-		/**
-		 * Indicates whether the component should appear in an "indeterminate"
-		 * or "partially checked" state. This prop takes precedence over
-		 * `isSelected`.
-		 */
-		isIndeterminate: bool,
+		isIndeterminate: bool`
+			Indicates whether the component should appear in an "indeterminate" or
+			"partially checked" state. This prop takes precedence over
+			\`isSelected\`.
+		`,
 
-		/**
-		 * Indicates whether the component should appear and act disabled by
-		 * having a "greyed out" palette and ignoring user interactions.
-		 */
-		isDisabled: bool,
+		isDisabled: bool`
+			Indicates whether the component should appear and act disabled by having
+			a "greyed out" palette and ignoring user interactions.
+		`,
 
-		/**
-		 * Indicates that the component is in the "selected" state when true
-		 * and in the "unselected" state when false. This props is ignored if
-		 * `isIndeterminate` is `true`.
-		 */
-		isSelected: bool,
+		isSelected: bool`
+			Indicates that the component is in the "selected" state when true and in
+			the "unselected" state when false. This props is ignored if
+			\`isIndeterminate\` is \`true\`.
+		`,
 
-		/**
-		 * Called when the user clicks on the component or when they press the
-		 * space key while the component is in focus.
-		 *
-		 * Signature: `(isSelected, { event, props }) => {}`
-		 */
-		onSelect: func,
+		onSelect: func`
+			Called when the user clicks on the component or when they press the space
+			key while the component is in focus.  Signature:
+			\`(isSelected, { event, props }) => {}\`
+		`,
 
-		/**
-		 * Passed through to the root element.
-		 */
-		style: object,
+		style: object`
+			Passed through to the root element.
+		`,
 	},
 
 	getDefaultProps() {

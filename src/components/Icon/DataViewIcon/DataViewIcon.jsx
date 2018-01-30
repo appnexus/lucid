@@ -6,14 +6,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DataViewIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * Typically used to guide users to more detailed data.
- */
 const DataViewIcon = createClass({
 	displayName: 'DataViewIcon',
+
+	statics: {
+		peek: {
+			description: `
+				Typically used to guide users to more detailed data.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

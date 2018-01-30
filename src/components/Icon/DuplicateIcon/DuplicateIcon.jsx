@@ -6,14 +6,20 @@ import { createClass } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-DuplicateIcon');
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * Typically used when something can be duplicated.
- */
 const DuplicateIcon = createClass({
 	displayName: 'DuplicateIcon',
+
+	statics: {
+		peek: {
+			description: `
+				Typically used when something can be duplicated.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
 	},

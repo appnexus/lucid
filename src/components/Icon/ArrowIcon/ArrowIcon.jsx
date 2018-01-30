@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
@@ -9,20 +9,25 @@ const cx = lucidClassNames.bind('&-ArrowIcon');
 
 const { oneOf } = PropTypes;
 
-/**
- *
- * {"categories": ["visual design", "icons"], "extend": "Icon", "madeFrom": ["Icon"]}
- *
- * An arrow icon.
- */
 const ArrowIcon = createClass({
 	displayName: 'ArrowIcon',
+
+	statics: {
+		peek: {
+			description: `
+				An arrow icon.
+			`,
+			categories: ['visual design', 'icons'],
+			extend: 'Icon',
+			madeFrom: ['Icon'],
+		},
+	},
+
 	propTypes: {
 		...Icon.propTypes,
-		/**
-		 * direction variations of the icon
-		 */
-		direction: oneOf(['up', 'down', 'left', 'right']),
+		direction: oneOf(['up', 'down', 'left', 'right'])`
+			direction variations of the icon
+		`,
 	},
 
 	getDefaultProps() {
