@@ -364,6 +364,19 @@ const LineChart = createClass({
 		EmptyStateWrapper: EmptyStateWrapper,
 	},
 
+	handleToolTipHoverZone({ clientX, target }, xPoints) {
+		const mouseX = nearest(
+			xPoints,
+			clientX - target.getBoundingClientRect().left
+		);
+		if (!this.state.isHovering || this.state.mouseX !== mouseX) {
+			this.setState({
+				isHovering: true,
+				mouseX: nearest(xPoints, clientX - target.getBoundingClientRect().left),
+			});
+		}
+	},
+
 	render() {
 		const {
 			className,
@@ -875,14 +888,8 @@ const LineChart = createClass({
 								className={cx('&-invisible')}
 								width={innerWidth}
 								height={innerHeight}
-								onMouseMove={({ clientX, target }) => {
-									this.setState({
-										isHovering: true,
-										mouseX: nearest(
-											xPoints,
-											clientX - target.getBoundingClientRect().left
-										),
-									});
+								onMouseMove={event => {
+									this.handleToolTipHoverZone(event, xPoints);
 								}}
 								onMouseOut={() => {
 									this.setState({ isHovering: false });
