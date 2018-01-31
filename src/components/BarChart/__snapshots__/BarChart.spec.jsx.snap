@@ -15,6 +15,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 01.basic
       outerTickSize={0}
       scale={[Function]}
       tickCount={null}
+      tickFormat={[Function]}
       tickPadding={3}
     />
   </g>
@@ -111,6 +112,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 03.group
       outerTickSize={0}
       scale={[Function]}
       tickCount={null}
+      tickFormat={[Function]}
       tickPadding={3}
     />
   </g>
@@ -243,6 +245,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 04.group
       outerTickSize={0}
       scale={[Function]}
       tickCount={null}
+      tickFormat={[Function]}
       tickPadding={3}
     />
   </g>
@@ -351,6 +354,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 05.limit
       outerTickSize={0}
       scale={[Function]}
       tickCount={5}
+      tickFormat={[Function]}
       tickPadding={3}
     />
   </g>
@@ -488,6 +492,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 06.all-t
       outerTickSize={0}
       scale={[Function]}
       tickCount={2}
+      tickFormat={[Function]}
       tickPadding={3}
     />
   </g>
@@ -606,6 +611,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 07.stack
       outerTickSize={0}
       scale={[Function]}
       tickCount={null}
+      tickFormat={[Function]}
       tickPadding={3}
     />
   </g>
@@ -706,6 +712,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 08.unfor
       outerTickSize={0}
       scale={[Function]}
       tickCount={null}
+      tickFormat={[Function]}
       tickPadding={3}
     />
   </g>
@@ -802,6 +809,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 09.forma
       outerTickSize={0}
       scale={[Function]}
       tickCount={null}
+      tickFormat={[Function]}
       tickPadding={3}
     />
   </g>

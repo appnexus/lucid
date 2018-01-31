@@ -317,6 +317,8 @@ const BarChart = createClass({
 			.domain([yAxisMin, yAxisMax])
 			.range([innerHeight, 0]);
 
+		const xAxisFinalFormatter = xAxisFormatter || xScale.tickFormat();
+
 		const yAxisFinalFormatter = yAxisFormatter || yScale.tickFormat();
 
 		const yFinalFormatter = yAxisTooltipDataFormatter
@@ -375,6 +377,7 @@ const BarChart = createClass({
 						orient="bottom"
 						scale={xScale}
 						outerTickSize={0}
+						tickFormat={xAxisFinalFormatter}
 						tickCount={xAxisTickCount}
 					/>
 
