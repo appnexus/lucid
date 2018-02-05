@@ -148,6 +148,43 @@ const Bars = createClass({
 		`,
 	},
 
+	defaultTooltipFormatter(dataPoint) {
+		const {
+			colorMap,
+			colorOffset,
+			data,
+			isStacked,
+			legend,
+			palette,
+			yFields,
+			yFormatter,
+			yTooltipFormatter,
+		} = this.props;
+
+		return (
+			<Legend hasBorders={false} isReversed={isStacked}>
+				{_.map(yFields, (field, fieldIndex) => (
+					<Legend.Item
+						key={fieldIndex}
+						hasPoint={true}
+						pointKind={1}
+						color={_.get(
+							colorMap,
+							field,
+							palette[(fieldIndex + colorOffset) % palette.length]
+						)}
+					>
+						{yTooltipFormatter(
+							_.get(legend, field, field),
+							yFormatter(dataPoint[field]),
+							dataPoint[field]
+						)}
+					</Legend.Item>
+				))}
+			</Legend>
+		);
+	},
+
 	getDefaultProps() {
 		return {
 			hasToolTips: true,
@@ -174,7 +211,6 @@ const Bars = createClass({
 		const {
 			className,
 			data,
-			legend,
 			hasToolTips,
 			palette,
 			colorMap,
@@ -184,9 +220,7 @@ const Bars = createClass({
 			xFormatter,
 			yScale: yScaleOriginal,
 			yFields,
-			yFormatter,
 			yStackedMax,
-			yTooltipFormatter,
 			tooltipFormatter,
 			isStacked,
 			...passThroughs
@@ -278,28 +312,7 @@ const Bars = createClass({
 									<ToolTip.Body>
 										{tooltipFormatter
 											? tooltipFormatter(data[seriesIndex])
-											: <Legend hasBorders={false} isReversed={isStacked}>
-													{_.map(yFields, (field, fieldIndex) => (
-														<Legend.Item
-															key={fieldIndex}
-															hasPoint={true}
-															pointKind={1}
-															color={_.get(
-																colorMap,
-																field,
-																palette[
-																	(fieldIndex + colorOffset) % palette.length
-																]
-															)}
-														>
-															{yTooltipFormatter(
-																_.get(legend, field, field),
-																yFormatter(data[seriesIndex][field]),
-																data[seriesIndex][field]
-															)}
-														</Legend.Item>
-													))}
-												</Legend>}
+											: this.defaultTooltipFormatter(data[seriesIndex])}
 									</ToolTip.Body>
 								</ToolTip>
 							: null}
