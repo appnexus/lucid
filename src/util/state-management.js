@@ -171,9 +171,6 @@ export function safeMerge(objValue, srcValue) {
 	}
 }
 
-const omitDefaults = (props = {}, defaultProps = {}) =>
-	_.omitBy(props, (value, key) => _.isEqual(props[key], defaultProps[key]));
-
 export function buildHybridComponent(
 	baseComponent,
 	{
@@ -205,19 +202,17 @@ export function buildHybridComponent(
 		propTypes,
 		statics: {
 			_isLucidHybridComponent: true,
+			peekDefaultProps: defaultProps,
 			...statics,
 		},
 		displayName,
-		getDefaultProps() {
-			return defaultProps;
-		},
 		getInitialState() {
 			const { initialState } = this.props; //initial state overrides
 			return _.mergeWith(
 				{},
-				omitFunctionPropsDeep(defaultProps),
+				omitFunctionPropsDeep(baseComponent.getDefaultProps()),
 				initialState,
-				omitFunctionPropsDeep(omitDefaults(this.props, defaultProps)),
+				omitFunctionPropsDeep(this.props),
 				safeMerge
 			);
 		},
@@ -228,7 +223,7 @@ export function buildHybridComponent(
 					_.mergeWith(
 						{},
 						omitFunctionPropsDeep(synchronousState),
-						omitFunctionPropsDeep(omitDefaults(this.props, defaultProps)),
+						omitFunctionPropsDeep(this.props),
 						safeMerge
 					),
 				setState: state => {
@@ -241,19 +236,13 @@ export function buildHybridComponent(
 			if (replaceEvents) {
 				return React.createElement(
 					baseComponent,
-					selector(
-						this.boundContext.getPropReplaceReducers(
-							omitDefaults(this.props, defaultProps)
-						)
-					),
+					selector(this.boundContext.getPropReplaceReducers(this.props)),
 					this.props.children
 				);
 			}
 			return React.createElement(
 				baseComponent,
-				selector(
-					this.boundContext.getProps(omitDefaults(this.props, defaultProps))
-				),
+				selector(this.boundContext.getProps(this.props)),
 				this.props.children
 			);
 		},
