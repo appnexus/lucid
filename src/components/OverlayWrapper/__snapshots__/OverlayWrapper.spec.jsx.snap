@@ -47,6 +47,7 @@ exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.
         "color-chart-5",
       ]
     }
+    tooltipFormatter={null}
     width={1000}
     xAxisField="x"
     xAxisFormatter={[Function]}

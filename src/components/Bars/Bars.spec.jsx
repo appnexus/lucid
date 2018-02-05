@@ -32,6 +32,7 @@ describe('Bars', () => {
 			'xFormatter',
 			'yFormatter',
 			'yTooltipFormatter',
+			'tooltipFormatter',
 		],
 		getDefaultProps: () => ({
 			data: defaultData,
@@ -387,6 +388,23 @@ describe('Bars', () => {
 				assert.equal(wrapper.find(Bar).at(0).prop('color'), 'g');
 				assert.equal(wrapper.find(Bar).at(1).prop('color'), 'r');
 				assert.equal(wrapper.find(Bar).at(2).prop('color'), 'g');
+			});
+		});
+
+		describe('tooltipFormatter', () => {
+			it('should format the whole tooltip body', () => {
+				const wrapper = shallow(
+					<Bars
+						data={defaultData}
+						xScale={defaultXScale}
+						yScale={defaultYScale}
+						hasToolTips
+						tooltipFormatter={(dataPoint, data) => dataPoint.x.toUpperCase()}
+					/>
+				);
+				assert.equal(wrapper.find(ToolTip.Body).at(0).prop('children'), 'AYE');
+				assert.equal(wrapper.find(ToolTip.Body).at(1).prop('children'), 'BEE');
+				assert.equal(wrapper.find(ToolTip.Body).at(2).prop('children'), 'SEE');
 			});
 		});
 	});

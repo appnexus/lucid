@@ -139,6 +139,13 @@ const Bars = createClass({
 			color, this number will be added the bar index in determining which color
 			the bars are.
 		`,
+
+		tooltipFormatter: func`
+			An optional function used to format the entire tooltip body. The first value is
+			the associated data point, the second value is the full data set. This formatter
+			will over-ride yAxisTooltipFormatter and yAxisTooltipDataFormatter. Signature:
+			\`(dataPoint, data) => {}\`
+		`,
 	},
 
 	getDefaultProps() {
@@ -150,6 +157,7 @@ const Bars = createClass({
 			yFormatter: _.identity,
 			yTooltipFormatter: (yField, yValueFormatted) =>
 				`${yField}: ${yValueFormatted}`,
+			tooltipFormatter: null,
 			isStacked: false,
 			colorOffset: 0,
 			palette: chartConstants.PALETTE_6,
@@ -179,6 +187,7 @@ const Bars = createClass({
 			yFormatter,
 			yStackedMax,
 			yTooltipFormatter,
+			tooltipFormatter,
 			isStacked,
 			...passThroughs
 		} = this.props;
@@ -267,26 +276,30 @@ const Bars = createClass({
 									</ToolTip.Title>
 
 									<ToolTip.Body>
-										<Legend hasBorders={false} isReversed={isStacked}>
-											{_.map(yFields, (field, fieldIndex) => (
-												<Legend.Item
-													key={fieldIndex}
-													hasPoint={true}
-													pointKind={1}
-													color={_.get(
-														colorMap,
-														field,
-														palette[(fieldIndex + colorOffset) % palette.length]
-													)}
-												>
-													{yTooltipFormatter(
-														_.get(legend, field, field),
-														yFormatter(data[seriesIndex][field]),
-														data[seriesIndex][field]
-													)}
-												</Legend.Item>
-											))}
-										</Legend>
+										{tooltipFormatter
+											? tooltipFormatter(data[seriesIndex])
+											: <Legend hasBorders={false} isReversed={isStacked}>
+													{_.map(yFields, (field, fieldIndex) => (
+														<Legend.Item
+															key={fieldIndex}
+															hasPoint={true}
+															pointKind={1}
+															color={_.get(
+																colorMap,
+																field,
+																palette[
+																	(fieldIndex + colorOffset) % palette.length
+																]
+															)}
+														>
+															{yTooltipFormatter(
+																_.get(legend, field, field),
+																yFormatter(data[seriesIndex][field]),
+																data[seriesIndex][field]
+															)}
+														</Legend.Item>
+													))}
+												</Legend>}
 									</ToolTip.Body>
 								</ToolTip>
 							: null}
