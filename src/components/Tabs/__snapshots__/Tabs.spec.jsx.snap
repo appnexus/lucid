@@ -290,14 +290,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 04-complex-t
           "Two",
           <br />,
           "Line Two",
-          <SearchField
-            debounceLevel={500}
-            isDisabled={false}
-            onChange={[Function]}
-            onChangeDebounced={[Function]}
-            onSubmit={[Function]}
-            value=""
-          />,
+          <SearchField />,
         ]
       }
       index={1}
@@ -313,23 +306,13 @@ exports[`Tabs [common] example testing should match snapshot(s) for 04-complex-t
         Two
         <br />
         Line Two
-        <SearchField
-          debounceLevel={500}
-          isDisabled={false}
-          onChange={[Function]}
-          onChangeDebounced={[Function]}
-          onSubmit={[Function]}
-          value=""
-        />
+        <SearchField />
       </Tabs.Title>
       Two content
     </Tabs.Tab>
     <Tabs.Tab
       Title={
         <RadioGroup
-          isDisabled={false}
-          name="lucid-RadioGroup-2"
-          onSelect={[Function]}
           selectedIndex={1}
         >
           <RadioButton
@@ -372,9 +355,6 @@ exports[`Tabs [common] example testing should match snapshot(s) for 04-complex-t
     >
       <Tabs.Title>
         <RadioGroup
-          isDisabled={false}
-          name="lucid-RadioGroup-2"
-          onSelect={[Function]}
           selectedIndex={1}
         >
           <RadioButton

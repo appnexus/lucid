@@ -220,7 +220,8 @@ const Component = createClass({
 	render() {
 		const { componentName, componentRef } = this.props;
 		const childComponents = _.toPairs(_.pickBy(componentRef, isReactComponent));
-		const defaultProps = componentRef.defaultProps;
+		const defaultProps =
+			componentRef.defaultProps || componentRef.peekDefaultProps;
 
 		const componentProps = _.flow(
 			x => _.get(x, 'propTypes', {}),
@@ -378,16 +379,13 @@ const Component = createClass({
 															x => x[0]
 														),
 														([propName, propTypeResolver]) => {
+															const defaultProps =
+																childComponent.defaultProps ||
+																childComponent.peekDefaultProps;
 															const propDetails = _.assign(
 																{},
-																_.has(childComponent, [
-																	'defaultProps',
-																	propName,
-																]) && {
-																	default: _.get(childComponent, [
-																		'defaultProps',
-																		propName,
-																	]),
+																_.has(defaultProps, propName) && {
+																	default: _.get(defaultProps, propName),
 																},
 																_.get(propTypeResolver, 'peek')
 															);
