@@ -16,7 +16,7 @@ export default createClass({
 				<BarChart
 					data={data}
 					yAxisTitle="Revenue"
-					tooltipFormatter={dataPoint =>
+					renderTooltipBody={dataPoint =>
 						`x value = ${dataPoint.x} and y value = ${dataPoint.y}`}
 				/>
 			</div>

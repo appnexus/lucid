@@ -214,11 +214,11 @@ const BarChart = createClass({
 			An optional function used to format y-values in the tooltip legends.
 		`,
 
-		tooltipFormatter: func`
-			An optional function used to format the entire tooltip body. The first value is
-			the associated data point, the second value is the full data set. This formatter
-			will over-ride yAxisTooltipFormatter and yAxisTooltipDataFormatter. Signature:
-			\`(dataPoint, data) => {}\`
+		renderTooltipBody: func`
+			An optional function used to format the entire tooltip body. The only arg is
+			the associated data point. This formatter will over-ride yAxisTooltipFormatter
+			and yAxisTooltipDataFormatter. Signature:
+			\`dataPoint => {}\`
 		`,
 	},
 
@@ -237,7 +237,7 @@ const BarChart = createClass({
 			hasToolTips: true,
 			hasLegend: false,
 
-			tooltipFormatter: null,
+			renderTooltipBody: null,
 
 			xAxisField: 'x',
 			xAxisTickCount: null,
@@ -276,7 +276,7 @@ const BarChart = createClass({
 			hasLegend,
 			palette,
 			colorMap,
-			tooltipFormatter,
+			renderTooltipBody,
 			xAxisField,
 			xAxisFormatter,
 			xAxisTitle,
@@ -493,7 +493,7 @@ const BarChart = createClass({
 						legend={legend}
 						palette={palette}
 						colorMap={colorMap}
-						tooltipFormatter={tooltipFormatter}
+						renderTooltipBody={renderTooltipBody}
 					/>
 				</g>
 			</svg>

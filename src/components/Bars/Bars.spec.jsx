@@ -32,7 +32,7 @@ describe('Bars', () => {
 			'xFormatter',
 			'yFormatter',
 			'yTooltipFormatter',
-			'tooltipFormatter',
+			'renderTooltipBody',
 		],
 		getDefaultProps: () => ({
 			data: defaultData,
@@ -391,7 +391,7 @@ describe('Bars', () => {
 			});
 		});
 
-		describe('tooltipFormatter', () => {
+		describe('renderTooltipBody', () => {
 			it('should format the whole tooltip body', () => {
 				const wrapper = shallow(
 					<Bars
@@ -399,7 +399,7 @@ describe('Bars', () => {
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 						hasToolTips
-						tooltipFormatter={(dataPoint, data) => dataPoint.x.toUpperCase()}
+						renderTooltipBody={(dataPoint, data) => dataPoint.x.toUpperCase()}
 					/>
 				);
 				assert.equal(wrapper.find(ToolTip.Body).at(0).prop('children'), 'AYE');

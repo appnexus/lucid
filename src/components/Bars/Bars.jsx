@@ -140,11 +140,11 @@ const Bars = createClass({
 			the bars are.
 		`,
 
-		tooltipFormatter: func`
-			An optional function used to format the entire tooltip body. The first value is
-			the associated data point, the second value is the full data set. This formatter
-			will over-ride yAxisTooltipFormatter and yAxisTooltipDataFormatter. Signature:
-			\`(dataPoint, data) => {}\`
+		renderTooltipBody: func`
+			An optional function used to format the entire tooltip body. The only arg is
+			the associated data point. This formatter will over-ride yAxisTooltipFormatter
+			and yAxisTooltipDataFormatter. Signature:
+			\`dataPoint => {}\`
 		`,
 	},
 
@@ -152,7 +152,6 @@ const Bars = createClass({
 		const {
 			colorMap,
 			colorOffset,
-			data,
 			isStacked,
 			legend,
 			palette,
@@ -194,7 +193,7 @@ const Bars = createClass({
 			yFormatter: _.identity,
 			yTooltipFormatter: (yField, yValueFormatted) =>
 				`${yField}: ${yValueFormatted}`,
-			tooltipFormatter: null,
+			renderTooltipBody: null,
 			isStacked: false,
 			colorOffset: 0,
 			palette: chartConstants.PALETTE_6,
@@ -221,7 +220,7 @@ const Bars = createClass({
 			yScale: yScaleOriginal,
 			yFields,
 			yStackedMax,
-			tooltipFormatter,
+			renderTooltipBody,
 			isStacked,
 			...passThroughs
 		} = this.props;
@@ -310,8 +309,8 @@ const Bars = createClass({
 									</ToolTip.Title>
 
 									<ToolTip.Body>
-										{tooltipFormatter
-											? tooltipFormatter(data[seriesIndex])
+										{renderTooltipBody
+											? renderTooltipBody(data[seriesIndex])
 											: this.defaultTooltipFormatter(data[seriesIndex])}
 									</ToolTip.Body>
 								</ToolTip>
