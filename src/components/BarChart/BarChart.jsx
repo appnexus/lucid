@@ -205,13 +205,20 @@ const BarChart = createClass({
 
 		yAxisTooltipFormatter: func`
 			An optional function used to format your y axis titles and data in the
-			tooltips. The first value is the name of your y field, the second value
+			tooltip legends. The first value is the name of your y field, the second value
 			is your post-formatted y value, and the third value is your non-formatted
 			y-value.  Signature: \`(yField, yValueFormatted, yValue) => {}\`
 		`,
 
 		yAxisTooltipDataFormatter: func`
-			An optional function used to format data in the tooltips.
+			An optional function used to format y-values in the tooltip legends.
+		`,
+
+		renderTooltipBody: func`
+			An optional function used to format the entire tooltip body. The only arg is
+			the associated data point. This formatter will over-ride yAxisTooltipFormatter
+			and yAxisTooltipDataFormatter. Signature:
+			\`dataPoint => {}\`
 		`,
 	},
 
@@ -229,6 +236,8 @@ const BarChart = createClass({
 			palette: chartConstants.PALETTE_6,
 			hasToolTips: true,
 			hasLegend: false,
+
+			renderTooltipBody: null,
 
 			xAxisField: 'x',
 			xAxisTickCount: null,
@@ -267,7 +276,7 @@ const BarChart = createClass({
 			hasLegend,
 			palette,
 			colorMap,
-
+			renderTooltipBody,
 			xAxisField,
 			xAxisFormatter,
 			xAxisTitle,
@@ -484,6 +493,7 @@ const BarChart = createClass({
 						legend={legend}
 						palette={palette}
 						colorMap={colorMap}
+						renderTooltipBody={renderTooltipBody}
 					/>
 				</g>
 			</svg>
