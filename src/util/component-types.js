@@ -1,6 +1,6 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { omitFunctionPropsDeep } from './state-management';
 
@@ -36,7 +36,13 @@ export function createClass(definition = {}) {
 		propTypes: _.assign(
 			{},
 			propTypes,
-			_.mapValues(definition.components, () => PropTypes.any)
+			_.mapValues(
+				definition.components,
+				(
+					componentValue,
+					componentKey
+				) => PropTypes.any`Props for ${componentValue.displayName || componentKey}`
+			)
 		),
 		render,
 	};

@@ -5966,9 +5966,9 @@ react-motion@^0.5.2:
     prop-types "^15.5.8"
     raf "^3.1.0"
 
-react-peek@^1.0.3:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/react-peek/-/react-peek-1.0.4.tgz#4bc4b753b4beea4c553597387c6624fe54ce5857"
+react-peek@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-peek/-/react-peek-1.0.5.tgz#b95ddb57f6098f5c1b94a5afe04bca3fc2a6c98e"
   dependencies:
     prop-types "^15.6.0"
 

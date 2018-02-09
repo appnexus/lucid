@@ -18,7 +18,7 @@
     "lint-fix": "eslint ./src --ext .js,.jsx --fix",
     "precommit": "lint-staged",
     "prettier": "prettier --write --single-quote --use-tabs --trailing-comma es5 '{src,tests,scripts}/**/*.{js,jsx}'",
-    "preversion": "rm -rf dist && npm run lint && NODE_ENV=production gulp preversion && npm run build-bundle",
+    "preversion": "rm -rf dist && npm run lint && gulp docs-docgenjson && NODE_ENV=production gulp preversion && npm run build-bundle",
     "postpublish": "gulp build-js-clean-path-imports && gulp docs-upload",
     "start": "npm run dev",
     "stylelint": "stylelint 'src/**/*.less' --config .stylelintrc",
@@ -49,7 +49,7 @@
     "prop-types": "^15.6.0",
     "react-day-picker": "^6.2.1",
     "react-motion": "^0.5.2",
-    "react-peek": "^1.0.3",
+    "react-peek": "^1.0.5",
     "react-transition-group": "^1.2.1",
     "reselect": "^2.5.1"
   },
