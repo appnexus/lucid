@@ -23,7 +23,8 @@
     "start": "npm run dev",
     "stylelint": "stylelint 'src/**/*.less' --config .stylelintrc",
     "test": "npm run lint && npm run cover",
-    "watch": "npm run jest -- --watch"
+    "watch": "npm run jest -- --watch",
+    "np": "npm run np"
   },
   "keywords": [
     "component",
