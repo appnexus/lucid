@@ -10,5 +10,6 @@ gulp.task('build-js-clean-path-imports', build.jsCleanPathImports);
 
 gulp.task('docs-upload', docs.upload);
 gulp.task('docs-build', docs.build);
+gulp.task('docs-docgenjson', ['build-js'], docs.docgenJson);
 
 gulp.task('preversion', ['build-css', 'build-js', 'build-js-path-imports']);
