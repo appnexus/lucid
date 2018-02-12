@@ -2801,3 +2801,146 @@ exports[`LineChart [common] example testing should match snapshot(s) for 15.load
   </svg>
 </EmptyStateWrapper>
 `;
+
+exports[`LineChart [common] example testing should match snapshot(s) for 16.fine-grained-ticks 1`] = `
+<svg
+  className="lucid-LineChart"
+  height={400}
+  width={1000}
+>
+  <g
+    transform="translate(80, 10)"
+  />
+  <g
+    transform="translate(80, 335)"
+  >
+    <Axis
+      innerTickSize={6}
+      orient="bottom"
+      outerTickSize={0}
+      scale={[Function]}
+      tickCount={null}
+      tickFormat={[Function]}
+      tickPadding={3}
+      ticks={
+        Array [
+          2018-01-01T08:00:00.000Z,
+          2018-01-02T08:00:00.000Z,
+          2018-01-03T08:00:00.000Z,
+        ]
+      }
+    />
+  </g>
+  <g
+    transform="translate(80, 10)"
+  >
+    <Axis
+      innerTickSize={6}
+      orient="left"
+      outerTickSize={6}
+      scale={[Function]}
+      tickCount={null}
+      tickFormat={[Function]}
+      tickPadding={3}
+    />
+  </g>
+  <g
+    transform="translate(80, 10)"
+  >
+    <Lines
+      colorOffset={0}
+      data={
+        Array [
+          Object {
+            "x": 2018-01-01T08:00:00.000Z,
+            "y": 1,
+          },
+          Object {
+            "x": 2018-01-02T08:00:00.000Z,
+            "y": 2,
+          },
+          Object {
+            "x": 2018-01-03T08:00:00.000Z,
+            "y": 3,
+          },
+        ]
+      }
+      isStacked={false}
+      palette={
+        Array [
+          "color-chart-0",
+          "color-chart-1",
+          "color-chart-2",
+          "color-chart-3",
+          "color-chart-4",
+          "color-chart-5",
+        ]
+      }
+      xField="x"
+      xScale={[Function]}
+      yFields={
+        Array [
+          "y",
+        ]
+      }
+      yScale={[Function]}
+      yStackedMax={3}
+    />
+  </g>
+  <g
+    transform="translate(80, 10)"
+  >
+    <Points
+      colorOffset={0}
+      data={
+        Array [
+          Object {
+            "x": 2018-01-01T08:00:00.000Z,
+            "y": 1,
+          },
+          Object {
+            "x": 2018-01-02T08:00:00.000Z,
+            "y": 2,
+          },
+          Object {
+            "x": 2018-01-03T08:00:00.000Z,
+            "y": 3,
+          },
+        ]
+      }
+      hasStroke={true}
+      isStacked={false}
+      palette={
+        Array [
+          "color-chart-0",
+          "color-chart-1",
+          "color-chart-2",
+          "color-chart-3",
+          "color-chart-4",
+          "color-chart-5",
+        ]
+      }
+      xField="x"
+      xScale={[Function]}
+      yFields={
+        Array [
+          "y",
+        ]
+      }
+      yScale={[Function]}
+      yStackedMax={3}
+    />
+  </g>
+  <g
+    transform="translate(80, 10)"
+  >
+    <rect
+      className="lucid-LineChart-invisible"
+      height={325}
+      onMouseMove={[Function]}
+      onMouseOut={[Function]}
+      width={840}
+    />
+  </g>
+</svg>
+`;
