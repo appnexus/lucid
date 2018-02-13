@@ -48,6 +48,7 @@ const Portal = createClass({
 		this.componentDidUpdate();
 	},
 	componentWillUnmount() {
+		ReactDOM.unmountComponentAtNode(this.portalElement);
 		window.document.body.removeChild(this.portalElement);
 	},
 	componentDidUpdate() {
