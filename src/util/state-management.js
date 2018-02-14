@@ -212,7 +212,6 @@ export function buildHybridComponent(
 				{},
 				omitFunctionPropsDeep(baseComponent.getDefaultProps()),
 				initialState,
-				omitFunctionPropsDeep(this.props),
 				safeMerge
 			);
 		},
