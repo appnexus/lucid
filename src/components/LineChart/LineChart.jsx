@@ -171,7 +171,7 @@ const LineChart = createClass({
 			the x axis. This number will control that.
 		`,
 
-		xAxisTicks: array`
+		xAxisTicks: arrayOf(instanceOf(Date))`
 			In some cases xAxisTickCount is not enough and you want to specify
 			exactly where the tick marks should appear on the x axis. This prop takes
 			an array of dates (currently only dates are supported for the x axis).
