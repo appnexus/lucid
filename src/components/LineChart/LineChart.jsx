@@ -35,7 +35,6 @@ const {
 	string,
 	bool,
 	oneOfType,
-	array,
 } = PropTypes;
 
 const LineChart = createClass({
