@@ -321,7 +321,8 @@ const Bars = createClass({
 	},
 });
 
-const PureToolTip = createClass({
+export const PureToolTip = createClass({
+	_isPrivate: true,
 	propTypes: {
 		data: arrayOf(object),
 		height: number,
