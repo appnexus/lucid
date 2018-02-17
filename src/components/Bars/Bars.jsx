@@ -6,10 +6,15 @@ import { extractFields, stackByFields } from '../../util/chart-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 import * as d3Scale from 'd3-scale';
 import * as chartConstants from '../../constants/charts';
-
+import shallowCompare from 'react-addons-shallow-compare';
 import Bar from '../Bar/Bar';
 import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
 import Legend from '../Legend/Legend';
+
+// memoizing to maintain referential equality across renders, for performance
+// optimization with shallow comparison
+const memoizedExtractFields = _.memoize(extractFields);
+const memoizedStackByFields = _.memoize(stackByFields);
 
 const cx = lucidClassNames.bind('&-Bars');
 
@@ -184,6 +189,20 @@ const Bars = createClass({
 		);
 	},
 
+	handleMouseEnter(hoveringSeriesIndex) {
+		this.setState({
+			hoveringSeriesIndex,
+		});
+	},
+
+	handleMouseOut() {
+		this.setState({ hoveringSeriesIndex: null });
+	},
+
+	shouldComponentUpdate(...args) {
+		return shallowCompare(this, ...args);
+	},
+
 	getDefaultProps() {
 		return {
 			hasToolTips: true,
@@ -202,7 +221,7 @@ const Bars = createClass({
 
 	getInitialState() {
 		return {
-			isHovering: false,
+			hoveringSeriesIndex: null,
 		};
 	},
 
@@ -225,7 +244,7 @@ const Bars = createClass({
 			...passThroughs
 		} = this.props;
 
-		const { isHovering, hoveringSeriesIndex } = this.state;
+		const { hoveringSeriesIndex } = this.state;
 
 		// This scale is used for grouped bars
 		const innerXScale = d3Scale
@@ -240,8 +259,8 @@ const Bars = createClass({
 		// If we are stacked, we need to calculate a new domain based on the sum of
 		// the various series' y data. One row per series.
 		const transformedData = isStacked
-			? stackByFields(data, yFields)
-			: extractFields(data, yFields);
+			? memoizedStackByFields(data, yFields)
+			: memoizedExtractFields(data, yFields);
 
 		// If we are stacked, we need to calculate a new domain based on the sum of
 		// the various group's y data
@@ -276,48 +295,94 @@ const Bars = createClass({
 							/>
 						))}
 
-						{hasToolTips
-							? <ToolTip
-									isExpanded={isHovering && hoveringSeriesIndex === seriesIndex}
-									flyOutMaxWidth="none"
-								>
-									<ToolTip.Target elementType="g">
-										<rect
-											className={cx('&-tooltip-hover-zone')}
-											height={
-												isStacked
-													? yScale.range()[0] - yScale(_.last(series)[1])
-													: yScale.range()[0] - yScale(_.max(_.flatten(series)))
-											}
-											width={xScale.bandwidth()}
-											x={xScale(data[seriesIndex][xField])}
-											y={yScale(_.max(_.flatten(series)))}
-											onMouseOver={() => {
-												this.setState({
-													isHovering: true,
-													hoveringSeriesIndex: seriesIndex,
-												});
-											}}
-											onMouseOut={() => {
-												this.setState({ isHovering: false });
-											}}
-										/>
-									</ToolTip.Target>
-
-									<ToolTip.Title>
-										{xFormatter(data[seriesIndex][xField])}
-									</ToolTip.Title>
-
-									<ToolTip.Body>
-										{renderTooltipBody
-											? renderTooltipBody(data[seriesIndex])
-											: this.defaultTooltipFormatter(data[seriesIndex])}
-									</ToolTip.Body>
-								</ToolTip>
-							: null}
+						<PureToolTip
+							isExpanded={hasToolTips && hoveringSeriesIndex === seriesIndex}
+							height={
+								isStacked
+									? yScale.range()[0] - yScale(_.last(series)[1])
+									: yScale.range()[0] - yScale(_.max(_.flatten(series)))
+							}
+							width={xScale.bandwidth()}
+							x={xScale(data[seriesIndex][xField])}
+							y={yScale(_.max(_.flatten(series)))}
+							series={series}
+							seriesIndex={seriesIndex}
+							onMouseEnter={this.handleMouseEnter}
+							onMouseOut={this.handleMouseOut}
+							xFormatter={xFormatter}
+							xField={xField}
+							renderBody={renderTooltipBody || this.defaultTooltipFormatter}
+							data={data}
+						/>
 					</g>
 				))}
 			</g>
+		);
+	},
+});
+
+export const PureToolTip = createClass({
+	_isPrivate: true,
+	propTypes: {
+		data: arrayOf(object),
+		height: number,
+		isExpanded: bool,
+		onMouseEnter: func,
+		onMouseOut: func,
+		renderBody: func,
+		seriesIndex: number,
+		width: number,
+		x: number,
+		xField: string,
+		xFormatter: func,
+		y: number,
+	},
+
+	shouldComponentUpdate(...args) {
+		return shallowCompare(this, ...args);
+	},
+
+	handleMouseEnter() {
+		this.props.onMouseEnter(this.props.seriesIndex);
+	},
+
+	render() {
+		const {
+			isExpanded,
+			height,
+			width,
+			x,
+			y,
+			seriesIndex,
+			onMouseOut,
+			renderBody,
+			data,
+			xFormatter,
+			xField,
+		} = this.props;
+
+		return (
+			<ToolTip isExpanded={isExpanded} flyOutMaxWidth="none">
+				<ToolTip.Target elementType="g">
+					<rect
+						className={cx('&-tooltip-hover-zone')}
+						height={height}
+						width={width}
+						x={x}
+						y={y}
+						onMouseEnter={this.handleMouseEnter}
+						onMouseOut={onMouseOut}
+					/>
+				</ToolTip.Target>
+
+				<ToolTip.Title>
+					{xFormatter(data[seriesIndex][xField])}
+				</ToolTip.Title>
+
+				<ToolTip.Body>
+					{renderBody(data[seriesIndex])}
+				</ToolTip.Body>
+			</ToolTip>
 		);
 	},
 });
