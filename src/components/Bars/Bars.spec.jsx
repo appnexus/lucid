@@ -6,7 +6,7 @@ import * as d3Scale from 'd3-scale';
 import { common } from '../../util/generic-tests';
 import { shallow } from 'enzyme';
 
-import Bars from './Bars';
+import Bars, { PureToolTip } from './Bars';
 import Bar from '../Bar/Bar';
 import Legend from '../Legend/Legend';
 import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
@@ -70,37 +70,18 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert(wrapper.find(Legend.Item).at(0).text(), 'Foo: 10');
-				assert(wrapper.find(Legend.Item).at(1).text(), 'Foo: 55');
-				assert(wrapper.find(Legend.Item).at(2).text(), 'Foo: 90');
-			});
-		});
-
-		describe('hasToolTips', () => {
-			it('should include ToolTip if true', () => {
-				const wrapper = shallow(
-					<Bars
-						data={defaultData}
-						xScale={defaultXScale}
-						yScale={defaultYScale}
-						hasToolTips
-					/>
+				assert(
+					wrapper.find(PureToolTip).at(0).shallow().find(Legend.Item).text(),
+					'Foo: 10'
 				);
-
-				assert.equal(wrapper.find(ToolTip).length, 3);
-			});
-
-			it('should not include ToolTip if false', () => {
-				const wrapper = shallow(
-					<Bars
-						data={defaultData}
-						xScale={defaultXScale}
-						yScale={defaultYScale}
-						hasToolTips={false}
-					/>
+				assert(
+					wrapper.find(PureToolTip).at(1).shallow().find(Legend.Item).text(),
+					'Foo: 55'
 				);
-
-				assert.equal(wrapper.find(ToolTip).length, 0);
+				assert(
+					wrapper.find(PureToolTip).at(2).shallow().find(Legend.Item).text(),
+					'Foo: 90'
+				);
 			});
 		});
 
@@ -212,11 +193,20 @@ describe('Bars', () => {
 						hasToolTips
 						xFormatter={str => str.toUpperCase()}
 					/>
-				);
+				).find(PureToolTip);
 
-				assert.equal(wrapper.find(ToolTip.Title).at(0).prop('children'), 'AYE');
-				assert.equal(wrapper.find(ToolTip.Title).at(1).prop('children'), 'BEE');
-				assert.equal(wrapper.find(ToolTip.Title).at(2).prop('children'), 'SEE');
+				assert.equal(
+					wrapper.at(0).shallow().find(ToolTip.Title).prop('children'),
+					'AYE'
+				);
+				assert.equal(
+					wrapper.at(1).shallow().find(ToolTip.Title).prop('children'),
+					'BEE'
+				);
+				assert.equal(
+					wrapper.at(2).shallow().find(ToolTip.Title).prop('children'),
+					'SEE'
+				);
 			});
 		});
 
@@ -334,11 +324,20 @@ describe('Bars', () => {
 						hasToolTips
 						xFormatter={str => str.toUpperCase()}
 					/>
-				);
+				).find(PureToolTip);
 
-				assert.equal(wrapper.find(ToolTip.Title).at(0).prop('children'), 'AYE');
-				assert.equal(wrapper.find(ToolTip.Title).at(1).prop('children'), 'BEE');
-				assert.equal(wrapper.find(ToolTip.Title).at(2).prop('children'), 'SEE');
+				assert.equal(
+					wrapper.at(0).shallow().find(ToolTip.Title).prop('children'),
+					'AYE'
+				);
+				assert.equal(
+					wrapper.at(1).shallow().find(ToolTip.Title).prop('children'),
+					'BEE'
+				);
+				assert.equal(
+					wrapper.at(2).shallow().find(ToolTip.Title).prop('children'),
+					'SEE'
+				);
 			});
 		});
 
@@ -402,10 +401,66 @@ describe('Bars', () => {
 						renderTooltipBody={(dataPoint, data) => dataPoint.x.toUpperCase()}
 					/>
 				);
-				assert.equal(wrapper.find(ToolTip.Body).at(0).prop('children'), 'AYE');
-				assert.equal(wrapper.find(ToolTip.Body).at(1).prop('children'), 'BEE');
-				assert.equal(wrapper.find(ToolTip.Body).at(2).prop('children'), 'SEE');
+				const toolTip = wrapper.find(PureToolTip);
+				assert.equal(
+					toolTip.at(0).shallow().find(ToolTip.Body).prop('children'),
+					'AYE'
+				);
+				assert.equal(
+					toolTip.at(1).shallow().find(ToolTip.Body).prop('children'),
+					'BEE'
+				);
+				assert.equal(
+					toolTip.at(2).shallow().find(ToolTip.Body).prop('children'),
+					'SEE'
+				);
 			});
+		});
+	});
+
+	describe('tooltips', () => {
+		it('should show the tooltip', () => {
+			const wrapper = shallow(
+				<Bars
+					data={defaultData}
+					xScale={defaultXScale}
+					yScale={defaultYScale}
+					hasToolTips
+				/>
+			);
+
+			wrapper
+				.find(PureToolTip)
+				.forEach(node => expect(node.prop('isExpanded')).toBe(false));
+
+			wrapper.setState({ hoveringSeriesIndex: 0 });
+
+			const toolTips = wrapper.find(PureToolTip);
+
+			expect(toolTips.first().prop('isExpanded')).toBe(true);
+			expect(toolTips.at(1).prop('isExpanded')).toBe(false);
+			expect(toolTips.at(2).prop('isExpanded')).toBe(false);
+		});
+
+		it('should not show tooltips with `hasToolTips` = false', () => {
+			const wrapper = shallow(
+				<Bars
+					data={defaultData}
+					xScale={defaultXScale}
+					yScale={defaultYScale}
+					hasToolTips={false}
+				/>
+			);
+
+			wrapper
+				.find(PureToolTip)
+				.forEach(node => expect(node.prop('isExpanded')).toBe(false));
+
+			wrapper.setState({ hoveringSeriesIndex: 0 });
+
+			wrapper
+				.find(PureToolTip)
+				.forEach(node => expect(node.prop('isExpanded')).toBe(false));
 		});
 	});
 });

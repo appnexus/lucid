@@ -2723,7 +2723,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-fbjs@^0.8.16:
+fbjs@^0.8.16, fbjs@^0.8.4:
   version "0.8.16"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.16.tgz#5e67432f550dc41b572bf55847b8aca64e5337db"
   dependencies:
@@ -6312,6 +6312,13 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-addons-shallow-compare@^15.6.2:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react-addons-shallow-compare/-/react-addons-shallow-compare-15.6.2.tgz#198a00b91fc37623db64a28fd17b596ba362702f"
+  dependencies:
+    fbjs "^0.8.4"
+    object-assign "^4.1.0"
+
 react-day-picker@^6.2.1:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/react-day-picker/-/react-day-picker-6.2.1.tgz#fc22b809db792386d1468d3f46d725ad91e04db9"
@@ -6336,9 +6343,9 @@ react-motion@^0.5.2:
     prop-types "^15.5.8"
     raf "^3.1.0"
 
-react-peek@^1.0.3:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/react-peek/-/react-peek-1.0.4.tgz#4bc4b753b4beea4c553597387c6624fe54ce5857"
+react-peek@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-peek/-/react-peek-1.0.5.tgz#b95ddb57f6098f5c1b94a5afe04bca3fc2a6c98e"
   dependencies:
     prop-types "^15.6.0"
 

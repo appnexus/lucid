@@ -170,6 +170,13 @@ const LineChart = createClass({
 			the x axis. This number will control that.
 		`,
 
+		xAxisTicks: arrayOf(instanceOf(Date))`
+			In some cases xAxisTickCount is not enough and you want to specify
+			exactly where the tick marks should appear on the x axis. This prop takes
+			an array of dates (currently only dates are supported for the x axis).
+			This prop will override the \`xAxisTickCount\` prop.
+		`,
+
 		xAxisTitle: string`
 			Set a title for the x axis.
 		`,
@@ -327,6 +334,7 @@ const LineChart = createClass({
 
 			xAxisField: 'x',
 			xAxisTickCount: null,
+			xAxisTicks: undefined, // intentionally undefined so that `Axis` can default it correctly
 			xAxisTitle: null,
 			xAxisTitleColor: '#000',
 			// E.g. "Mon 06/06/2016 15:46:19"
@@ -393,6 +401,7 @@ const LineChart = createClass({
 
 			xAxisField,
 			xAxisTickCount,
+			xAxisTicks,
 			xAxisTitle,
 			xAxisTitleColor,
 			xAxisFormatter = formatDate,
@@ -655,6 +664,7 @@ const LineChart = createClass({
 						outerTickSize={0}
 						tickFormat={xFinalFormatter}
 						tickCount={xAxisTickCount}
+						ticks={xAxisTicks}
 						ref="xAxis"
 					/>
 
