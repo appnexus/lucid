@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "2.31.1",
+  "version": "2.31.2-beta.0",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "repository": {
@@ -23,7 +23,8 @@
     "start": "npm run dev",
     "stylelint": "stylelint 'src/**/*.less' --config .stylelintrc",
     "test": "npm run lint && npm run cover",
-    "watch": "npm run jest -- --watch"
+    "watch": "npm run jest -- --watch",
+    "release": "np"
   },
   "keywords": [
     "component",
@@ -95,6 +96,7 @@
     "less-loader": "^2.2.2",
     "lint-staged": "^3.4.0",
     "markdown": "^0.5.0",
+    "np": "^2.20.1",
     "postcss-loader": "^0.8.1",
     "prettier": "^1.1.0",
     "raw-loader": "^0.5.1",
