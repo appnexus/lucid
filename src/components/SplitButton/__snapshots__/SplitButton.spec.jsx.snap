@@ -848,6 +848,285 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
 </DropMenu>
 `;
 
+exports[`SplitButton [common] example testing should match snapshot(s) for 4.sizes 1`] = `
+<DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
+  alignment="start"
+  className="lucid-SplitButton"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}
+  style={
+    Object {
+      "height": 100,
+      "marginRight": "20px",
+    }
+  }
+>
+  <DropMenu.Control>
+    <ButtonGroup
+      className={null}
+      onSelect={[Function]}
+      selectedIndices={Array []}
+    >
+      <Button
+        className="lucid-SplitButton-Button-primary"
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        onClick={[Function]}
+        size="large"
+        type="button"
+      >
+        Large
+      </Button>
+      <Button
+        className="lucid-SplitButton-Button-drop"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        onClick={[Function]}
+        size="large"
+        type="button"
+      >
+        <CaretIcon
+          className="lucid-SplitButton-CaretIcon"
+          direction="down"
+          size={8}
+          viewBox="0 3 16 8"
+        />
+      </Button>
+    </ButtonGroup>
+  </DropMenu.Control>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="0"
+  >
+    One
+  </DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="1"
+  >
+    Two
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SplitButton [common] example testing should match snapshot(s) for 4.sizes 2`] = `
+<DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
+  alignment="start"
+  className="lucid-SplitButton"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}
+  style={
+    Object {
+      "height": 100,
+      "marginRight": "20px",
+    }
+  }
+>
+  <DropMenu.Control>
+    <ButtonGroup
+      className={null}
+      onSelect={[Function]}
+      selectedIndices={Array []}
+    >
+      <Button
+        className="lucid-SplitButton-Button-primary"
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        onClick={[Function]}
+        size="small"
+        type="button"
+      >
+        Small
+      </Button>
+      <Button
+        className="lucid-SplitButton-Button-drop"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        onClick={[Function]}
+        size="small"
+        type="button"
+      >
+        <CaretIcon
+          className="lucid-SplitButton-CaretIcon"
+          direction="down"
+          size={8}
+          viewBox="0 3 16 8"
+        />
+      </Button>
+    </ButtonGroup>
+  </DropMenu.Control>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="0"
+  >
+    One
+  </DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="1"
+  >
+    Two
+  </DropMenu.Option>
+</DropMenu>
+`;
+
+exports[`SplitButton [common] example testing should match snapshot(s) for 4.sizes 3`] = `
+<DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
+  alignment="start"
+  className="lucid-SplitButton"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}
+  style={
+    Object {
+      "height": 100,
+      "marginRight": "20px",
+    }
+  }
+>
+  <DropMenu.Control>
+    <ButtonGroup
+      className={null}
+      onSelect={[Function]}
+      selectedIndices={Array []}
+    >
+      <Button
+        className="lucid-SplitButton-Button-primary"
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        onClick={[Function]}
+        size="short"
+        type="button"
+      >
+        Short
+      </Button>
+      <Button
+        className="lucid-SplitButton-Button-drop"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        onClick={[Function]}
+        size="short"
+        type="button"
+      >
+        <CaretIcon
+          className="lucid-SplitButton-CaretIcon"
+          direction="down"
+          size={8}
+          viewBox="0 3 16 8"
+        />
+      </Button>
+    </ButtonGroup>
+  </DropMenu.Control>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="0"
+  >
+    One
+  </DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="1"
+  >
+    Two
+  </DropMenu.Option>
+</DropMenu>
+`;
+
 exports[`SplitButton click handlers primary button should trigger \`handleClick\` 1`] = `
 Object {
   "event": Object {
