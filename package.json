@@ -17,7 +17,7 @@
     "lint": "eslint ./src --ext .js,.jsx",
     "lint-fix": "eslint ./src --ext .js,.jsx --fix",
     "precommit": "lint-staged",
-    "prettier": "prettier --write --single-quote --use-tabs --trailing-comma es5 '{src,tests,scripts}/**/*.{js,jsx}'",
+    "prettier": "prettier --write '{src,tests,scripts}/**/*.{js,jsx}'",
     "preversion": "rm -rf dist && npm run lint && gulp docs-docgenjson && NODE_ENV=production gulp preversion && npm run build-bundle",
     "postpublish": "gulp build-js-clean-path-imports && gulp docs-upload",
     "start": "npm run dev",
@@ -131,7 +131,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "prettier --write --single-quote --use-tabs --trailing-comma es5",
+      "prettier --write",
       "git add"
     ]
   }
