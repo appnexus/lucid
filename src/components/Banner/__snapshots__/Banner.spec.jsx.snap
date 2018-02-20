@@ -485,11 +485,9 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     <span
       className="lucid-Banner-content"
     >
-      Success -- has icon -- No Close
-       
+      Success -- has icon -- No Close 
       ×
-       
-      -- small
+       -- small
     </span>
   </section>
 </CSSTransitionGroup>
@@ -1434,8 +1432,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
         <strong>
           Has Custom Icon
         </strong>
-         
-        ipsum dolor sit amet, consectetur adipisicing elit. A doloribus, fugit atque. Impedit neque perferendis libero nam, deserunt inventore aliquid quis molestiae est! In perferendis dignissimos ex optio cupiditate quae!
+         ipsum dolor sit amet, consectetur adipisicing elit. A doloribus, fugit atque. Impedit neque perferendis libero nam, deserunt inventore aliquid quis molestiae est! In perferendis dignissimos ex optio cupiditate quae!
       </p>
     </span>
     <span
@@ -1477,8 +1474,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
         <strong>
           Has Custom Icon
         </strong>
-         
-        ipsum dolor sit amet, consectetur adipisicing elit. A doloribus, fugit atque. Impedit neque perferendis libero nam, deserunt inventore aliquid quis molestiae est! In perferendis dignissimos ex optio cupiditate quae!
+         ipsum dolor sit amet, consectetur adipisicing elit. A doloribus, fugit atque. Impedit neque perferendis libero nam, deserunt inventore aliquid quis molestiae est! In perferendis dignissimos ex optio cupiditate quae!
       </p>
       <p>
         Velit, architecto, commodi. Non porro cupiditate rerum obcaecati veniam alias fugiat nam similique, labore a quis magni vero consequatur consequuntur veritatis est quibusdam tempora tempore ex, deleniti dicta inventore. Quas.
