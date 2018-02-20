@@ -64,25 +64,25 @@ const Breadcrumb = createClass({
 				{...omitProps(passThroughs, Breadcrumb)}
 				className={cx('&', className)}
 			>
-				{!_.isEmpty(items)
-					? <ul className={cx('&-List')}>
-							{_.map(initialItems, ({ props, key }) => (
-								<li
-									{...props}
-									key={key}
-									className={cx('&-Item', props.className)}
-								>
-									{props.children}
-									<SeparatorIcon className={cx('&-SeparatorIcon')} />
-								</li>
-							))}
+				{!_.isEmpty(items) ? (
+					<ul className={cx('&-List')}>
+						{_.map(initialItems, ({ props, key }) => (
 							<li
-								{...lastItem.props}
-								key={lastItem.key}
-								className={cx('&-Item', lastItem.props.className)}
-							/>
-						</ul>
-					: null}
+								{...props}
+								key={key}
+								className={cx('&-Item', props.className)}
+							>
+								{props.children}
+								<SeparatorIcon className={cx('&-SeparatorIcon')} />
+							</li>
+						))}
+						<li
+							{...lastItem.props}
+							key={lastItem.key}
+							className={cx('&-Item', lastItem.props.className)}
+						/>
+					</ul>
+				) : null}
 			</nav>
 		);
 	},

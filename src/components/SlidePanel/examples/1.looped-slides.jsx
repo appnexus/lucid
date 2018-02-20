@@ -47,7 +47,6 @@ export default createClass({
 				<Button onClick={this.handlePrev}>Backward</Button>
 				<Button onClick={this.handleNext}>Forward</Button>
 				Current offset: {this.state.offset}
-
 				<SlidePanel
 					slidesToShow={2}
 					offset={this.state.offset}

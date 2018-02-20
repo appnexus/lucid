@@ -13,7 +13,9 @@ export default createClass({
 					<Tabs.Tab Title="Disabled" isDisabled={true}>
 						Disabled Content
 					</Tabs.Tab>
-					<Tabs.Tab Title="Five" isDisabled={true}>Four content</Tabs.Tab>
+					<Tabs.Tab Title="Five" isDisabled={true}>
+						Four content
+					</Tabs.Tab>
 				</Tabs>
 			</div>
 		);

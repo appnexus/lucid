@@ -62,28 +62,52 @@ export default createClass({
 				<br />
 
 				<Legend orient="horizontal">
-					<Item hasLine color={chartConstants.COLOR_GOOD}>Revenue</Item>
-					<Item hasLine color={chartConstants.COLOR_BAD}>Loss</Item>
-					<Item hasPoint color={chartConstants.COLOR_0}>Partner 0</Item>
-					<Item hasPoint color={chartConstants.COLOR_1}>Partner 1</Item>
+					<Item hasLine color={chartConstants.COLOR_GOOD}>
+						Revenue
+					</Item>
+					<Item hasLine color={chartConstants.COLOR_BAD}>
+						Loss
+					</Item>
+					<Item hasPoint color={chartConstants.COLOR_0}>
+						Partner 0
+					</Item>
+					<Item hasPoint color={chartConstants.COLOR_1}>
+						Partner 1
+					</Item>
 				</Legend>
 
 				<br />
 
 				<Legend orient="horizontal" isReversed>
-					<Item hasLine color={chartConstants.COLOR_GOOD}>Revenue</Item>
-					<Item hasLine color={chartConstants.COLOR_BAD}>Loss</Item>
-					<Item hasPoint color={chartConstants.COLOR_0}>Partner 0</Item>
-					<Item hasPoint color={chartConstants.COLOR_1}>Partner 1</Item>
+					<Item hasLine color={chartConstants.COLOR_GOOD}>
+						Revenue
+					</Item>
+					<Item hasLine color={chartConstants.COLOR_BAD}>
+						Loss
+					</Item>
+					<Item hasPoint color={chartConstants.COLOR_0}>
+						Partner 0
+					</Item>
+					<Item hasPoint color={chartConstants.COLOR_1}>
+						Partner 1
+					</Item>
 				</Legend>
 
 				<br />
 
 				<Legend>
-					<Item hasLine color={chartConstants.COLOR_GOOD}>Revenue</Item>
-					<Item hasLine color={chartConstants.COLOR_BAD}>Loss</Item>
-					<Item hasPoint color={chartConstants.COLOR_0}>Partner 0</Item>
-					<Item hasPoint color={chartConstants.COLOR_1}>Partner 1</Item>
+					<Item hasLine color={chartConstants.COLOR_GOOD}>
+						Revenue
+					</Item>
+					<Item hasLine color={chartConstants.COLOR_BAD}>
+						Loss
+					</Item>
+					<Item hasPoint color={chartConstants.COLOR_0}>
+						Partner 0
+					</Item>
+					<Item hasPoint color={chartConstants.COLOR_1}>
+						Partner 1
+					</Item>
 				</Legend>
 
 				<br />
@@ -91,20 +115,25 @@ export default createClass({
 				<br />
 
 				<ToolTip isExpanded={true} direction="right" alignment="end">
-					<ToolTip.Target>
-						Tooltip example
-					</ToolTip.Target>
+					<ToolTip.Target>Tooltip example</ToolTip.Target>
 
 					<ToolTip.Body>
 						<Legend hasBorders={false}>
-							<Item hasLine color={chartConstants.COLOR_GOOD}>Revenue</Item>
-							<Item hasLine color={chartConstants.COLOR_BAD}>Loss</Item>
-							<Item hasPoint color={chartConstants.COLOR_0}>Partner 0</Item>
-							<Item hasPoint color={chartConstants.COLOR_1}>Partner 1</Item>
+							<Item hasLine color={chartConstants.COLOR_GOOD}>
+								Revenue
+							</Item>
+							<Item hasLine color={chartConstants.COLOR_BAD}>
+								Loss
+							</Item>
+							<Item hasPoint color={chartConstants.COLOR_0}>
+								Partner 0
+							</Item>
+							<Item hasPoint color={chartConstants.COLOR_1}>
+								Partner 1
+							</Item>
 						</Legend>
 					</ToolTip.Body>
 				</ToolTip>
-
 			</div>
 		);
 	},

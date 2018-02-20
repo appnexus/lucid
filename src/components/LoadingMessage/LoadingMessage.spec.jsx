@@ -14,7 +14,7 @@ describe('LoadingMessage', () => {
 	describe('render', () => {
 		let wrapper;
 
-		beforeEach(() => wrapper = shallow(<LoadingMessage />));
+		beforeEach(() => (wrapper = shallow(<LoadingMessage />)));
 
 		it('should render a LoadingIcon', () => {
 			assert.equal(
@@ -45,7 +45,9 @@ describe('LoadingMessage', () => {
 			it('should render the custom icon', () => {
 				const wrapper = shallow(
 					<LoadingMessage>
-						<Icon><SuccessIcon /></Icon>
+						<Icon>
+							<SuccessIcon />
+						</Icon>
 					</LoadingMessage>
 				);
 				assert.equal(wrapper.find(SuccessIcon).length, 1);
@@ -81,7 +83,7 @@ describe('LoadingMessage', () => {
 			describe('null', () => {
 				let wrapper;
 
-				beforeEach(() => wrapper = shallow(<LoadingMessage Title={null} />));
+				beforeEach(() => (wrapper = shallow(<LoadingMessage Title={null} />)));
 
 				it('should render a LoadingIcon', () => {
 					assert.equal(

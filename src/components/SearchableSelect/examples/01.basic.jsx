@@ -63,7 +63,9 @@ export default createClass({
 					</OptionGroup>
 					<OptionGroup>
 						EST
-						<Option value="AL"><span>USA: </span>Alabama</Option>
+						<Option value="AL">
+							<span>USA: </span>Alabama
+						</Option>
 						<Option value="AZ">Arizona</Option>
 						<Option value="CT">Connecticut</Option>
 						<Option value="DE">Delaware</Option>

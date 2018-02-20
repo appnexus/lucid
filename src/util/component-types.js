@@ -38,10 +38,8 @@ export function createClass(definition = {}) {
 			propTypes,
 			_.mapValues(
 				definition.components,
-				(
-					componentValue,
-					componentKey
-				) => PropTypes.any`Props for ${componentValue.displayName || componentKey}`
+				(componentValue, componentKey) =>
+					PropTypes.any`Props for ${componentValue.displayName || componentKey}`
 			)
 		),
 		render,
@@ -80,7 +78,8 @@ export function createElements(type, values = []) {
 			if (React.isValidElement(typeValue) && typeValue.type === type) {
 				return elements.concat(typeValue);
 			} else if (
-				_.isPlainObject(typeValue) && !React.isValidElement(typeValue)
+				_.isPlainObject(typeValue) &&
+				!React.isValidElement(typeValue)
 			) {
 				return elements.concat(React.createElement(type, typeValue));
 			} else if (_.isUndefined(typeValue)) {
@@ -132,6 +131,8 @@ export function omitProps(props, type, keys = [], targetIsDOMElement = true) {
 
 	return _.omit(
 		props,
-		_.keys(type.propTypes).concat(keys).concat(additionalOmittedKeys)
+		_.keys(type.propTypes)
+			.concat(keys)
+			.concat(additionalOmittedKeys)
 	);
 }

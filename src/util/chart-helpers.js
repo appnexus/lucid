@@ -208,7 +208,9 @@ export function discreteTicks(array, count) {
  * @return {string} - transform string
  */
 export function transformFromCenter(x, y, xCenter, yCenter, scale) {
-	return `translate(${(1 - scale) * xCenter + (x - xCenter)}, ${(1 - scale) * yCenter + (y - yCenter)}) scale(${scale})`;
+	return `translate(${(1 - scale) * xCenter + (x - xCenter)}, ${(1 - scale) *
+		yCenter +
+		(y - yCenter)}) scale(${scale})`;
 }
 
 const FORMAT_MILLISECOND = d3TimeFormat.timeFormat('.%L');
@@ -233,14 +235,12 @@ export function formatDate(date) {
 	return (d3Time.timeSecond(date) < date
 		? FORMAT_MILLISECOND
 		: d3Time.timeMinute(date) < date
-				? FORMAT_SECOND
-				: d3Time.timeHour(date) < date
-						? FORMAT_MINUTE
-						: d3Time.timeDay(date) < date
-								? FORMAT_HOUR
-								: d3Time.timeMonth(date) < date
-										? d3Time.timeWeek(date) < date ? FORMAT_DAY : FORMAT_WEEK
-										: d3Time.timeYear(date) < date
-												? FORMAT_MONTH
-												: FORMAT_YEAR)(date);
+			? FORMAT_SECOND
+			: d3Time.timeHour(date) < date
+				? FORMAT_MINUTE
+				: d3Time.timeDay(date) < date
+					? FORMAT_HOUR
+					: d3Time.timeMonth(date) < date
+						? d3Time.timeWeek(date) < date ? FORMAT_DAY : FORMAT_WEEK
+						: d3Time.timeYear(date) < date ? FORMAT_MONTH : FORMAT_YEAR)(date);
 }

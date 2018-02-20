@@ -15,28 +15,22 @@ describe('Overlay', () => {
 	});
 
 	it('should render body content', () => {
-		const wrapper = shallow(
-			<Overlay isShown={true}>
-				Flux Capacitor
-			</Overlay>
-		);
+		const wrapper = shallow(<Overlay isShown={true}>Flux Capacitor</Overlay>);
 
 		assert(wrapper.contains('Flux Capacitor'));
 	});
 
 	it('should not render when isShown is false', () => {
-		const wrapper = shallow(
-			<Overlay isShown={false}>
-				Flux Capacitor
-			</Overlay>
-		);
+		const wrapper = shallow(<Overlay isShown={false}>Flux Capacitor</Overlay>);
 
 		assert(!wrapper.contains('Flux Capacitor'));
 	});
 
 	it('should have the correct class when isModal is false', () => {
 		const wrapper = shallow(
-			<Overlay isShown={true} isModal={false}>Nerp</Overlay>
+			<Overlay isShown={true} isModal={false}>
+				Nerp
+			</Overlay>
 		);
 
 		assert.equal(wrapper.find('.lucid-Overlay-is-not-modal').length, 1);

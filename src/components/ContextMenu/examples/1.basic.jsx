@@ -6,7 +6,6 @@ export default createClass({
 	render() {
 		return (
 			<ContextMenu>
-
 				<ContextMenu.Target>
 					<Button>Target</Button>
 				</ContextMenu.Target>

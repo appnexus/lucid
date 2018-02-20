@@ -79,7 +79,7 @@ const TextFieldValidated = createClass({
 			>
 				<TextField
 					{...omitProps(passThroughs, TextFieldValidated, [], false)}
-					ref={ref => this.refs = { TextField: ref }}
+					ref={ref => (this.refs = { TextField: ref })}
 				/>
 			</Validation>
 		);

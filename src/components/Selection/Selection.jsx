@@ -28,30 +28,16 @@ const responsiveMap = {
 };
 
 function defaultIcon(kind, responsiveMode) {
-	return kind === 'default'
-		? null
-		: kind === 'container'
-				? null
-				: kind === 'success'
-						? <SuccessIcon
-								className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)}
-							/>
-						: kind === 'danger'
-								? <MinusCircleIcon
-										className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)}
-									/>
-								: kind === 'info'
-										? <InfoIcon
-												className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)}
-											/>
-										: kind === 'warning'
-												? <WarningIcon
-														className={cx(
-															'&-Icon',
-															`&-Icon-is-${responsiveMode}`
-														)}
-													/>
-												: null;
+	return kind === 'default' ? null : kind === 'container' ? null : kind ===
+	'success' ? (
+		<SuccessIcon className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)} />
+	) : kind === 'danger' ? (
+		<MinusCircleIcon className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)} />
+	) : kind === 'info' ? (
+		<InfoIcon className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)} />
+	) : kind === 'warning' ? (
+		<WarningIcon className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)} />
+	) : null;
 }
 
 const Selection = createClass({
@@ -203,35 +189,34 @@ const Selection = createClass({
 							className={cx('&-label', isSmall && '&-label-is-small')}
 						/>
 
-						{isRemovable
-							? <CrossIcon
-									isClickable
-									size={isSmall ? 44 : 26}
-									viewBox={isSmall ? '-6 -6 28 28' : '-3 -2 20 20'}
-									className={cx('&-close-button')}
-									onClick={this.handleRemove}
-								/>
-							: null}
+						{isRemovable ? (
+							<CrossIcon
+								isClickable
+								size={isSmall ? 44 : 26}
+								viewBox={isSmall ? '-6 -6 28 28' : '-3 -2 20 20'}
+								className={cx('&-close-button')}
+								onClick={this.handleRemove}
+							/>
+						) : null}
 					</div>
 
-					{_.isEmpty(selectionChildren)
-						? null
-						: <div className={cx('&-children-container')}>
-								{_.map(selectionChildren, ({ props }, i) => (
-									<Selection
-										key={
-											_.get(
-												getFirst(props, Selection.Label),
-												['props', 'children'],
-												{}
-											) + i
-										}
-										{...props}
-									/>
-								))}
-							</div>}
+					{_.isEmpty(selectionChildren) ? null : (
+						<div className={cx('&-children-container')}>
+							{_.map(selectionChildren, ({ props }, i) => (
+								<Selection
+									key={
+										_.get(
+											getFirst(props, Selection.Label),
+											['props', 'children'],
+											{}
+										) + i
+									}
+									{...props}
+								/>
+							))}
+						</div>
+					)}
 					{otherChildren}
-
 				</div>
 			</div>
 		);

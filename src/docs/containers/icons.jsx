@@ -75,19 +75,33 @@ const Icons = createClass({
 					<section className={cx('&-buttons')}>
 						{_.map(icons, ([name, Icon]) => (
 							<div className={cx('&-buttons-section')} key={name}>
-								<Button hasOnlyIcon size="short"><Icon /></Button>
-								<Button hasOnlyIcon size="small"><Icon /></Button>
-								<Button hasOnlyIcon><Icon /></Button>
-								<Button hasOnlyIcon isActive><Icon /></Button>
-								<Button hasOnlyIcon size="large"><Icon /></Button>
+								<Button hasOnlyIcon size="short">
+									<Icon />
+								</Button>
+								<Button hasOnlyIcon size="small">
+									<Icon />
+								</Button>
+								<Button hasOnlyIcon>
+									<Icon />
+								</Button>
+								<Button hasOnlyIcon isActive>
+									<Icon />
+								</Button>
+								<Button hasOnlyIcon size="large">
+									<Icon />
+								</Button>
 								<Button hasOnlyIcon kind="primary" size="short">
 									<Icon />
 								</Button>
 								<Button hasOnlyIcon kind="primary" size="small">
 									<Icon />
 								</Button>
-								<Button hasOnlyIcon kind="primary"><Icon /></Button>
-								<Button hasOnlyIcon kind="primary" isActive><Icon /></Button>
+								<Button hasOnlyIcon kind="primary">
+									<Icon />
+								</Button>
+								<Button hasOnlyIcon kind="primary" isActive>
+									<Icon />
+								</Button>
 								<Button hasOnlyIcon kind="primary" size="large">
 									<Icon />
 								</Button>
@@ -95,7 +109,6 @@ const Icons = createClass({
 						))}
 					</section>
 				</Expander>
-
 			</div>
 		);
 	},

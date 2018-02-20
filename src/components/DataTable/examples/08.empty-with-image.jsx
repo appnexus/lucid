@@ -17,9 +17,7 @@ export default createClass({
 		return (
 			<DataTable data={data} density="extended" isFullWidth>
 				<EmptyStateWrapper>
-					<Title>
-						No items found.
-					</Title>
+					<Title>No items found.</Title>
 					<Body>
 						<img src="https://dummyimage.com/375x150/ff69/fff" />
 					</Body>

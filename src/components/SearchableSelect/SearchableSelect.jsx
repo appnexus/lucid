@@ -233,16 +233,21 @@ const SearchableSelect = createClass({
 		);
 
 		return [
-			pre &&
-				<span key="pre" className={cx('&-Option-underline-pre')}>{pre}</span>,
-			match &&
+			pre && (
+				<span key="pre" className={cx('&-Option-underline-pre')}>
+					{pre}
+				</span>
+			),
+			match && (
 				<span key="match" className={cx('&-Option-underline-match')}>
 					{match}
-				</span>,
-			post &&
+				</span>
+			),
+			post && (
 				<span key="post" className={cx('&-Option-underline-post')}>
 					{post}
-				</span>,
+				</span>
+			),
 		];
 	},
 
@@ -321,13 +326,15 @@ const SearchableSelect = createClass({
 			option => !option.props.isHidden
 		).length;
 
-		return visibleOptionsCount > 0
-			? options
-			: <DropMenu.Option isDisabled>
-					<span className={cx('&-noresults')}>
-						No results match "{searchText}"
-					</span>
-				</DropMenu.Option>;
+		return visibleOptionsCount > 0 ? (
+			options
+		) : (
+			<DropMenu.Option isDisabled>
+				<span className={cx('&-noresults')}>
+					No results match "{searchText}"
+				</span>
+			</DropMenu.Option>
+		);
 	},
 
 	render() {
@@ -380,13 +387,11 @@ const SearchableSelect = createClass({
 					<div
 						tabIndex={0}
 						className={cx('&-Control', {
-							'&-Control-is-highlighted': (!isDisabled &&
-								isItemSelected &&
-								isSelectionHighlighted) ||
+							'&-Control-is-highlighted':
+								(!isDisabled && isItemSelected && isSelectionHighlighted) ||
 								(isExpanded && isSelectionHighlighted),
-							'&-Control-is-selected': (!isDisabled &&
-								isItemSelected &&
-								isSelectionHighlighted) ||
+							'&-Control-is-selected':
+								(!isDisabled && isItemSelected && isSelectionHighlighted) ||
 								(isExpanded && isSelectionHighlighted),
 							'&-Control-is-expanded': isExpanded,
 							'&-Control-is-disabled': isDisabled,
@@ -413,19 +418,21 @@ const SearchableSelect = createClass({
 						value={searchText}
 					/>
 				</DropMenu.Header>
-				{isLoading &&
+				{isLoading && (
 					<DropMenu.Option
 						key="SearchableSelectLoading"
 						className={cx('&-Loading')}
 						isDisabled
 					>
 						<LoadingIcon />
-					</DropMenu.Option>}
+					</DropMenu.Option>
+				)}
 				{hasReset &&
-					isItemSelected &&
-					<DropMenu.NullOption {...placeholderProps}>
-						{placeholder}
-					</DropMenu.NullOption>}
+					isItemSelected && (
+						<DropMenu.NullOption {...placeholderProps}>
+							{placeholder}
+						</DropMenu.NullOption>
+					)}
 				{this.renderOptions()}
 			</DropMenu>
 		);

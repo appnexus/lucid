@@ -130,11 +130,11 @@ const SwitchLabeled = createClass({
 					style={{ position: 'relative' }}
 					className={cx('&-text')}
 				>
-					{labelChildProps
-						? <span key={this._labelKey}>
-								{labelChildProps.children || labelChildProps}
-							</span>
-						: null}
+					{labelChildProps ? (
+						<span key={this._labelKey}>
+							{labelChildProps.children || labelChildProps}
+						</span>
+					) : null}
 				</ReactTransitionGroup>
 			</label>
 		);

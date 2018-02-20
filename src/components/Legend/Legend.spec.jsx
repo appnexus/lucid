@@ -64,11 +64,17 @@ describe('Legend', () => {
 				);
 
 				assert.equal(
-					wrapper.find('.lucid-Legend-Item-indicator').at(0).prop('width'),
+					wrapper
+						.find('.lucid-Legend-Item-indicator')
+						.at(0)
+						.prop('width'),
 					22
 				);
 				assert.equal(
-					wrapper.find('.lucid-Legend-Item-indicator').at(1).prop('width'),
+					wrapper
+						.find('.lucid-Legend-Item-indicator')
+						.at(1)
+						.prop('width'),
 					22
 				);
 
@@ -85,11 +91,17 @@ describe('Legend', () => {
 				);
 
 				assert.equal(
-					wrapper.find('.lucid-Legend-Item-indicator').at(0).prop('width'),
+					wrapper
+						.find('.lucid-Legend-Item-indicator')
+						.at(0)
+						.prop('width'),
 					12
 				);
 				assert.equal(
-					wrapper.find('.lucid-Legend-Item-indicator').at(1).prop('width'),
+					wrapper
+						.find('.lucid-Legend-Item-indicator')
+						.at(1)
+						.prop('width'),
 					12
 				);
 			});
@@ -103,12 +115,18 @@ describe('Legend', () => {
 				);
 
 				assert.equal(
-					wrapper.find('.lucid-Legend-Item').at(0).text(),
+					wrapper
+						.find('.lucid-Legend-Item')
+						.at(0)
+						.text(),
 					'Foo',
 					'wrong text content found'
 				);
 				assert.equal(
-					wrapper.find('.lucid-Legend-Item').at(1).text(),
+					wrapper
+						.find('.lucid-Legend-Item')
+						.at(1)
+						.text(),
 					'Bar',
 					'wrong text content found'
 				);

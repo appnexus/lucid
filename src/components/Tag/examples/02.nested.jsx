@@ -15,28 +15,16 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				{_.times(25, n => (
-					<Tag key={n}>
-						{words[n % words.length]}
-					</Tag>
-				))}
+				{_.times(25, n => <Tag key={n}>{words[n % words.length]}</Tag>)}
 
 				<Tag>
 					Grouped items
-					{_.times(25, n => (
-						<Tag key={n}>
-							{words[n % words.length]}
-						</Tag>
-					))}
+					{_.times(25, n => <Tag key={n}>{words[n % words.length]}</Tag>)}
 				</Tag>
 
 				<Tag>
 					Grouped items
-					{_.times(25, n => (
-						<Tag key={n}>
-							{words[n % words.length]}
-						</Tag>
-					))}
+					{_.times(25, n => <Tag key={n}>{words[n % words.length]}</Tag>)}
 				</Tag>
 			</div>
 		);

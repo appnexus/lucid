@@ -99,9 +99,8 @@ const DropMenu = createClass({
 						_.map(groupedOptions, (optionProps, localOptionIndex) => {
 							return {
 								localOptionIndex,
-								optionIndex: _.size(memo) +
-									_.size(fixedOptionData) +
-									localOptionIndex, // add current index to current array length to get final option index
+								optionIndex:
+									_.size(memo) + _.size(fixedOptionData) + localOptionIndex, // add current index to current array length to get final option index
 								optionGroupIndex, // store option group index to associate option back to group
 								optionProps: {
 									isHidden: hideFunction(optionProps),
@@ -126,7 +125,8 @@ const DropMenu = createClass({
 				(optionProps, localOptionIndex) => {
 					return {
 						localOptionIndex,
-						optionIndex: _.size(groupedOptionData) +
+						optionIndex:
+							_.size(groupedOptionData) +
 							_.size(fixedOptionData) +
 							localOptionIndex, // add current index to grouped options array length to get final option index (grouped options rendered first)
 						optionGroupIndex: null, // ungrouped options have no `optionGroupIndex`
@@ -588,35 +588,38 @@ const DropMenu = createClass({
 		const isSelected = _.includes(selectedIndices, optionIndex);
 
 		return (
-			!isHidden &&
-			<div
-				key={'DropMenuOption' + optionIndex}
-				{...omitProps(optionProps, DropMenu.Option)}
-				onClick={event =>
-					this.handleSelectOption(optionIndex, optionProps, event)}
-				onMouseMove={event =>
-					this.handleMouseFocusOption(optionIndex, optionProps, event)}
-				className={cx(
-					'&-Option',
-					{
-						'&-Option-is-grouped': isGrouped,
-						'&-Option-is-focused': isFocused,
-						'&-Option-is-selected': isSelected,
-						'&-Option-is-disabled': isDisabled,
-						'&-Option-is-null': _.isNull(optionIndex),
-						'&-Option-is-wrapped': isWrapped,
-					},
-					optionProps.className
-				)}
-				ref={optionDOMNode => {
-					if (isFocused && !isMouseTriggered) {
-						scrollParentTo(
-							optionDOMNode,
-							this._header && this._header.offsetHeight
-						);
+			!isHidden && (
+				<div
+					key={'DropMenuOption' + optionIndex}
+					{...omitProps(optionProps, DropMenu.Option)}
+					onClick={event =>
+						this.handleSelectOption(optionIndex, optionProps, event)
 					}
-				}}
-			/>
+					onMouseMove={event =>
+						this.handleMouseFocusOption(optionIndex, optionProps, event)
+					}
+					className={cx(
+						'&-Option',
+						{
+							'&-Option-is-grouped': isGrouped,
+							'&-Option-is-focused': isFocused,
+							'&-Option-is-selected': isSelected,
+							'&-Option-is-disabled': isDisabled,
+							'&-Option-is-null': _.isNull(optionIndex),
+							'&-Option-is-wrapped': isWrapped,
+						},
+						optionProps.className
+					)}
+					ref={optionDOMNode => {
+						if (isFocused && !isMouseTriggered) {
+							scrollParentTo(
+								optionDOMNode,
+								this._header && this._header.offsetHeight
+							);
+						}
+					}}
+				/>
+			)
 		);
 	},
 
@@ -709,13 +712,14 @@ const DropMenu = createClass({
 						className={cx('&', className)}
 						style={flyOutStyle}
 					>
-						{!_.isEmpty(headerProps) &&
+						{!_.isEmpty(headerProps) && (
 							<div
 								{...headerProps}
 								className={cx('&-Header', headerProps.className)}
 								onKeyDown={this.handleKeydown}
-								ref={header => this._header = header}
-							/>}
+								ref={header => (this._header = header)}
+							/>
+						)}
 						<div
 							className={cx('&-option-container')}
 							style={_.assign({}, flyOutStyle, optionContainerStyle)}
@@ -766,29 +770,33 @@ const DropMenu = createClass({
 													{labelElements}
 												</div>,
 												// render the options in the group
-											]).concat(
-										_.map(optionGroupDataLookup[optionGroupIndex], ({
-											optionProps,
-											optionIndex,
-										}) => this.renderOption(optionProps, optionIndex, true))
+											]
+									).concat(
+										_.map(
+											optionGroupDataLookup[optionGroupIndex],
+											({ optionProps, optionIndex }) =>
+												this.renderOption(optionProps, optionIndex, true)
+										)
 									);
 									// append all ungrouped options as another unlabeled group
 								}).concat(
 									_.isEmpty(ungroupedOptionData)
 										? []
 										: [
-												_.map(ungroupedOptionData, ({
-													optionProps,
-													optionIndex,
-												}) => this.renderOption(optionProps, optionIndex)),
+												_.map(
+													ungroupedOptionData,
+													({ optionProps, optionIndex }) =>
+														this.renderOption(optionProps, optionIndex)
+												),
 											]
 								),
 								(element, index) =>
-									element &&
-									<div
-										key={`OptionGroup-divider-${index}`}
-										className={cx('&-OptionGroup-divider')}
-									/> // separate each group with divider
+									element && (
+										<div
+											key={`OptionGroup-divider-${index}`}
+											className={cx('&-OptionGroup-divider')}
+										/>
+									) // separate each group with divider
 							)}
 						</div>
 					</ContextMenu.FlyOut>

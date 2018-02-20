@@ -100,28 +100,30 @@ export default createClass({
 					}}
 				>
 					{_.map(visibleIds, id => (
-						<Option key={id} callbackId={id}>{allData[id].name}</Option>
+						<Option key={id} callbackId={id}>
+							{allData[id].name}
+						</Option>
 					))}
 				</SearchableMultiSelect>
 
-				{!_.isEmpty(selectedIds)
-					? <Selection
-							isBold
-							hasBackground
-							Label="Selected"
-							kind="container"
-							isRemovable={false}
-						>
-							{_.map(selectedIds, id => (
-								<Selection
-									key={id}
-									Label={allData[id].name}
-									callbackId={id}
-									onRemove={this.handleRemove}
-								/>
-							))}
-						</Selection>
-					: null}
+				{!_.isEmpty(selectedIds) ? (
+					<Selection
+						isBold
+						hasBackground
+						Label="Selected"
+						kind="container"
+						isRemovable={false}
+					>
+						{_.map(selectedIds, id => (
+							<Selection
+								key={id}
+								Label={allData[id].name}
+								callbackId={id}
+								onRemove={this.handleRemove}
+							/>
+						))}
+					</Selection>
+				) : null}
 			</section>
 		);
 	},

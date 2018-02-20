@@ -16,9 +16,15 @@ const defaultData = [
 ];
 
 // The scales are functions to guard against inadvertent scale mutation
-const defaultXScale = d3Scale.scaleLinear().domain([0, 10]).range([0, 100]);
+const defaultXScale = d3Scale
+	.scaleLinear()
+	.domain([0, 10])
+	.range([0, 100]);
 
-const defaultYScale = d3Scale.scaleLinear().domain([0, 100]).range([1000, 0]);
+const defaultYScale = d3Scale
+	.scaleLinear()
+	.domain([0, 100])
+	.range([1000, 0]);
 
 describe('Lines', () => {
 	common(Lines, {
@@ -44,9 +50,27 @@ describe('Lines', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Line).at(0).prop('color'), 'bling');
-				assert.equal(wrapper.find(Line).at(1).prop('color'), 'blang');
-				assert.equal(wrapper.find(Line).at(2).prop('color'), 'bling');
+				assert.equal(
+					wrapper
+						.find(Line)
+						.at(0)
+						.prop('color'),
+					'bling'
+				);
+				assert.equal(
+					wrapper
+						.find(Line)
+						.at(1)
+						.prop('color'),
+					'blang'
+				);
+				assert.equal(
+					wrapper
+						.find(Line)
+						.at(2)
+						.prop('color'),
+					'bling'
+				);
 			});
 
 			it('should be beat when theres a colorMap', () => {
@@ -64,9 +88,27 @@ describe('Lines', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Line).at(0).prop('color'), 'wat');
-				assert.equal(wrapper.find(Line).at(1).prop('color'), 'blang');
-				assert.equal(wrapper.find(Line).at(2).prop('color'), 'bling');
+				assert.equal(
+					wrapper
+						.find(Line)
+						.at(0)
+						.prop('color'),
+					'wat'
+				);
+				assert.equal(
+					wrapper
+						.find(Line)
+						.at(1)
+						.prop('color'),
+					'blang'
+				);
+				assert.equal(
+					wrapper
+						.find(Line)
+						.at(2)
+						.prop('color'),
+					'bling'
+				);
 			});
 		});
 
@@ -83,7 +125,13 @@ describe('Lines', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Line).at(0).prop('color'), '#ABC333');
+				assert.equal(
+					wrapper
+						.find(Line)
+						.at(0)
+						.prop('color'),
+					'#ABC333'
+				);
 			});
 		});
 
@@ -113,7 +161,10 @@ describe('Lines', () => {
 
 				assert.equal(wrapper.find(Line).length, 1, 'wrong number of Line');
 				assert.equal(
-					wrapper.find(Line).at(0).prop('d'),
+					wrapper
+						.find(Line)
+						.at(0)
+						.prop('d'),
 					'M0,900L50,450L100,0L100,0L50,450L0,900Z'
 				);
 			});
@@ -139,7 +190,10 @@ describe('Lines', () => {
 
 				assert.equal(wrapper.find(Line).length, 1, 'wrong number of Line');
 				assert.equal(
-					wrapper.find(Line).at(0).prop('d'),
+					wrapper
+						.find(Line)
+						.at(0)
+						.prop('d'),
 					'M0,500L500,400L500,400L0,500Z'
 				);
 			});
@@ -167,7 +221,10 @@ describe('Lines', () => {
 
 				assert.equal(wrapper.find(Line).length, 1, 'wrong number of Line');
 				assert.equal(
-					wrapper.find(Line).at(0).prop('d'),
+					wrapper
+						.find(Line)
+						.at(0)
+						.prop('d'),
 					'M50,0L60,500L60,500L50,0Z'
 				);
 			});
@@ -186,7 +243,10 @@ describe('Lines', () => {
 
 				assert.equal(wrapper.find(Line).length, 1, 'wrong number of Line');
 				assert.equal(
-					wrapper.find(Line).at(0).prop('d'),
+					wrapper
+						.find(Line)
+						.at(0)
+						.prop('d'),
 					'M10,970L20,980L30,990L30,990L20,980L10,970Z'
 				);
 			});
@@ -204,7 +264,10 @@ describe('Lines', () => {
 				);
 
 				assert.equal(
-					wrapper.find(Line).at(0).prop('d'),
+					wrapper
+						.find(Line)
+						.at(0)
+						.prop('d'),
 					'M0,800L50,650L100,1000L100,1000L50,650L0,800Z'
 				);
 			});
@@ -220,11 +283,17 @@ describe('Lines', () => {
 				);
 
 				assert.equal(
-					wrapper.find(Line).at(0).prop('d'),
+					wrapper
+						.find(Line)
+						.at(0)
+						.prop('d'),
 					'M0,900L50,450L100,0L100,0L50,450L0,900Z'
 				);
 				assert.equal(
-					wrapper.find(Line).at(1).prop('d'),
+					wrapper
+						.find(Line)
+						.at(1)
+						.prop('d'),
 					'M0,800L50,650L100,1000L100,1000L50,650L0,800Z'
 				);
 			});
@@ -243,11 +312,17 @@ describe('Lines', () => {
 				);
 
 				assert.equal(
-					wrapper.find(Line).at(0).prop('d'),
+					wrapper
+						.find(Line)
+						.at(0)
+						.prop('d'),
 					'M0,1000L50,1000L100,1000L100,0L50,450L0,900Z'
 				);
 				assert.equal(
-					wrapper.find(Line).at(1).prop('d'),
+					wrapper
+						.find(Line)
+						.at(1)
+						.prop('d'),
 					'M0,900L50,450L100,0L100,0L50,100L0,700Z'
 				);
 			});
@@ -267,9 +342,27 @@ describe('Lines', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Line).at(0).prop('color'), 'bong');
-				assert.equal(wrapper.find(Line).at(1).prop('color'), 'bing');
-				assert.equal(wrapper.find(Line).at(2).prop('color'), 'bong');
+				assert.equal(
+					wrapper
+						.find(Line)
+						.at(0)
+						.prop('color'),
+					'bong'
+				);
+				assert.equal(
+					wrapper
+						.find(Line)
+						.at(1)
+						.prop('color'),
+					'bing'
+				);
+				assert.equal(
+					wrapper
+						.find(Line)
+						.at(2)
+						.prop('color'),
+					'bong'
+				);
 			});
 		});
 	});

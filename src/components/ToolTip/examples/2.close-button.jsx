@@ -17,12 +17,11 @@ export default createClass({
 				>
 					<Title>Title</Title>
 					<Body>
-						ToolTip is a utility component to create a transient message anchored to another component.
+						ToolTip is a utility component to create a transient message
+						anchored to another component.
 					</Body>
 					<Target>
-						<div>
-							Target
-						</div>
+						<div>Target</div>
 					</Target>
 				</ToolTipDumb>
 			</section>

@@ -272,7 +272,10 @@ const PieChart = createClass({
 			.outerRadius(outerRadius);
 
 		// Useful for capturing hovers when we're in donut mode
-		const arcFull = d3Shape.arc().innerRadius(0).outerRadius(outerRadius);
+		const arcFull = d3Shape
+			.arc()
+			.innerRadius(0)
+			.outerRadius(outerRadius);
 
 		const pie = d3Shape.pie().sort(null); // needed to put the slices in proper order
 		const pieData = pie(_.map(data, yAxisField));
@@ -298,8 +301,8 @@ const PieChart = createClass({
 									<g
 										key={index}
 										className={cx('&-slice-group', {
-											'&-slice-group-is-hovering': isHovering &&
-												hoveringIndex === index,
+											'&-slice-group-is-hovering':
+												isHovering && hoveringIndex === index,
 										})}
 									>
 										<Line
@@ -313,7 +316,9 @@ const PieChart = createClass({
 												data[index][xAxisField],
 												palette[index % palette.length]
 											)}
-											transform={`scale(${isHovering && hoveringIndex === index ? HOVER_SCALE : 1})`}
+											transform={`scale(${
+												isHovering && hoveringIndex === index ? HOVER_SCALE : 1
+											})`}
 										/>
 
 										{/* This hidden path is useful for capturing hovers when we're in donut mode */}

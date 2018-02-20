@@ -81,7 +81,9 @@ describe('LineChart', () => {
 		describe('EmptyStateWrapper Body', () => {
 			it('should render the message body element', () => {
 				const bodyElement = (
-					<div className="parent-div"><div className="nested-div" /></div>
+					<div className="parent-div">
+						<div className="nested-div" />
+					</div>
 				);
 				wrapper = mount(
 					<LineChart>

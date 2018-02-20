@@ -146,11 +146,11 @@ const StickySection = createClass({
 						: {}),
 					...style,
 				}}
-				ref={scrollContainer => this.scrollContainer = scrollContainer}
+				ref={scrollContainer => (this.scrollContainer = scrollContainer)}
 			>
 				<div
 					className={cx('&-sticky-frame')}
-					ref={stickyFrame => this.stickyFrame = stickyFrame}
+					ref={stickyFrame => (this.stickyFrame = stickyFrame)}
 					style={{
 						...(isAboveFold
 							? {
@@ -168,7 +168,7 @@ const StickySection = createClass({
 				>
 					<div
 						className={cx('&-sticky-section')}
-						ref={stickySection => this.stickySection = stickySection}
+						ref={stickySection => (this.stickySection = stickySection)}
 						style={{
 							...(isAboveFold
 								? {

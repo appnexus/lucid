@@ -265,7 +265,6 @@ const LandingPage = createClass({
 					className={cx('&-readme')}
 					dangerouslySetInnerHTML={toMarkdown(readmeRaw)}
 				/>
-
 			</div>
 		);
 	},

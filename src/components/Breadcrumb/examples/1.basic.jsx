@@ -9,14 +9,14 @@ export default createClass({
 		return (
 			<Breadcrumb>
 				<Item key="home">
-					<a href="#"><HomeIcon /></a>
+					<a href="#">
+						<HomeIcon />
+					</a>
 				</Item>
 				<Item key="list">
 					<a href="#">List</a>
 				</Item>
-				<Item key="item">
-					Item
-				</Item>
+				<Item key="item">Item</Item>
 			</Breadcrumb>
 		);
 	},

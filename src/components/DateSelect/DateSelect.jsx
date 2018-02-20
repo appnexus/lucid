@@ -290,9 +290,9 @@ const DateSelect = createClass({
 		const { cursor } = this.state;
 		const isRangeSameDay = DateUtils.isSameDay(from, to);
 
-		const calendarMonth =
-			getFirst(this.props, DateSelect.CalendarMonth) ||
-			<DateSelect.CalendarMonth />;
+		const calendarMonth = getFirst(this.props, DateSelect.CalendarMonth) || (
+			<DateSelect.CalendarMonth />
+		);
 		const monthsShown = clampMonthsShown(monthsShownRaw);
 
 		/* istanbul ignore next */
@@ -319,67 +319,69 @@ const DateSelect = createClass({
 						onClick={this.handlePrev}
 					/>
 				</div>
-				{useSlidePanel
-					? <InfiniteSlidePanel
-							className={cx('&-InfiniteSlidePanel', '&-slidePanel')}
-							totalSlides={calendarsRendered}
-							slidesToShow={monthsShown}
-							offset={offset}
-							onSwipe={onSwipe}
-						>
-							<InfiniteSlidePanel.Slide className={cx('&-slide')}>
-								{slideOffset => (
-									<div className={cx('&-slide-content')}>
-										{this.renderCalendarMonth({
-											key: slideOffset,
-											offset,
-											calendarPosition: slideOffset - offset,
-											initialMonth: this.initialMonth,
-											cursor,
-											isRangeSameDay,
-											from,
-											to,
-											selectedDays,
-											disabledDays,
-											selectMode,
-											onDayClick: this.handleDayClick,
-											showCursorHighlight,
-											onDayMouseEnter: this.handleDayMouseEnter,
-											onDayMouseLeave: this.handleDayMouseLeave,
-											calendarMonthProps: calendarMonth.props,
-										})}
-									</div>
-								)}
-							</InfiniteSlidePanel.Slide>
-						</InfiniteSlidePanel>
-					: <div className={cx('&-slidePanel', '&-slidePanel-simple')}>
-							{_.times(monthsShown, calendarIndex => (
-								<div
-									className={cx('&-slide', '&-slide-simple')}
-									key={calendarIndex}
-								>
-									<div className={cx('&-slide-content')}>
-										{this.renderCalendarMonth({
-											offset,
-											calendarPosition: calendarIndex,
-											initialMonth: this.initialMonth,
-											cursor,
-											isRangeSameDay,
-											from,
-											to,
-											selectedDays,
-											disabledDays,
-											selectMode,
-											onDayClick: this.handleDayClick,
-											showCursorHighlight,
-											onDayMouseEnter: this.handleDayMouseEnter,
-											onDayMouseLeave: this.handleDayMouseLeave,
-											calendarMonthProps: calendarMonth.props,
-										})}
-									</div>
+				{useSlidePanel ? (
+					<InfiniteSlidePanel
+						className={cx('&-InfiniteSlidePanel', '&-slidePanel')}
+						totalSlides={calendarsRendered}
+						slidesToShow={monthsShown}
+						offset={offset}
+						onSwipe={onSwipe}
+					>
+						<InfiniteSlidePanel.Slide className={cx('&-slide')}>
+							{slideOffset => (
+								<div className={cx('&-slide-content')}>
+									{this.renderCalendarMonth({
+										key: slideOffset,
+										offset,
+										calendarPosition: slideOffset - offset,
+										initialMonth: this.initialMonth,
+										cursor,
+										isRangeSameDay,
+										from,
+										to,
+										selectedDays,
+										disabledDays,
+										selectMode,
+										onDayClick: this.handleDayClick,
+										showCursorHighlight,
+										onDayMouseEnter: this.handleDayMouseEnter,
+										onDayMouseLeave: this.handleDayMouseLeave,
+										calendarMonthProps: calendarMonth.props,
+									})}
 								</div>
-							))}
-						</div>}
+							)}
+						</InfiniteSlidePanel.Slide>
+					</InfiniteSlidePanel>
+				) : (
+					<div className={cx('&-slidePanel', '&-slidePanel-simple')}>
+						{_.times(monthsShown, calendarIndex => (
+							<div
+								className={cx('&-slide', '&-slide-simple')}
+								key={calendarIndex}
+							>
+								<div className={cx('&-slide-content')}>
+									{this.renderCalendarMonth({
+										offset,
+										calendarPosition: calendarIndex,
+										initialMonth: this.initialMonth,
+										cursor,
+										isRangeSameDay,
+										from,
+										to,
+										selectedDays,
+										disabledDays,
+										selectMode,
+										onDayClick: this.handleDayClick,
+										showCursorHighlight,
+										onDayMouseEnter: this.handleDayMouseEnter,
+										onDayMouseLeave: this.handleDayMouseLeave,
+										calendarMonthProps: calendarMonth.props,
+									})}
+								</div>
+							</div>
+						))}
+					</div>
+				)}
 				<div>
 					<ChevronThinIcon
 						className={cx('&-chevron')}

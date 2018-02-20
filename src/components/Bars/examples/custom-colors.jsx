@@ -35,7 +35,10 @@ const xScale = d3Scale
 	.round(true)
 	.paddingInner(0.1);
 
-const yScale = d3Scale.scaleLinear().domain([0, yMax]).range([height, 0]);
+const yScale = d3Scale
+	.scaleLinear()
+	.domain([0, yMax])
+	.range([height, 0]);
 
 export default createClass({
 	render() {

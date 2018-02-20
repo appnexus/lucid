@@ -23,9 +23,7 @@ describe('InfiniteSlidePanel', () => {
 			expect(() => {
 				shallow(
 					<InfiniteSlidePanel>
-						<InfiniteSlidePanel.Slide>
-							foo
-						</InfiniteSlidePanel.Slide>
+						<InfiniteSlidePanel.Slide>foo</InfiniteSlidePanel.Slide>
 					</InfiniteSlidePanel>
 				);
 			}).toThrowErrorMatchingSnapshot();
@@ -35,9 +33,7 @@ describe('InfiniteSlidePanel', () => {
 			expect(() => {
 				shallow(
 					<InfiniteSlidePanel>
-						<InfiniteSlidePanel.Slide>
-							{() => null}
-						</InfiniteSlidePanel.Slide>
+						<InfiniteSlidePanel.Slide>{() => null}</InfiniteSlidePanel.Slide>
 					</InfiniteSlidePanel>
 				);
 			}).not.toThrow();
@@ -45,11 +41,7 @@ describe('InfiniteSlidePanel', () => {
 
 		it('should not throw if passed a function child', () => {
 			expect(() => {
-				shallow(
-					<InfiniteSlidePanel>
-						{() => null}
-					</InfiniteSlidePanel>
-				);
+				shallow(<InfiniteSlidePanel>{() => null}</InfiniteSlidePanel>);
 			}).not.toThrow();
 		});
 	});

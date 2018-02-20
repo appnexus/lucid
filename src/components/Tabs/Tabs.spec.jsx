@@ -97,7 +97,9 @@ describe('Tabs', () => {
 			const wrapper = shallow(
 				<Tabs>
 					<Tabs.Tab Title="Lollipop">Yuck</Tabs.Tab>
-					<Tabs.Tab isSelected={true} Title="Slurpee">Yum</Tabs.Tab>
+					<Tabs.Tab isSelected={true} Title="Slurpee">
+						Yum
+					</Tabs.Tab>
 				</Tabs>
 			);
 
@@ -111,8 +113,12 @@ describe('Tabs', () => {
 			const wrapper = shallow(
 				<Tabs selectedIndex={0}>
 					<Tabs.Tab Title="One">One content</Tabs.Tab>
-					<Tabs.Tab isSelected={true} Title="Two">Two content</Tabs.Tab>
-					<Tabs.Tab isSelected={true} Title="Three">Three content</Tabs.Tab>
+					<Tabs.Tab isSelected={true} Title="Two">
+						Two content
+					</Tabs.Tab>
+					<Tabs.Tab isSelected={true} Title="Three">
+						Three content
+					</Tabs.Tab>
 				</Tabs>
 			);
 
@@ -142,7 +148,10 @@ describe('Tabs', () => {
 			});
 
 			it('should call onSelect with the correct arguments', () => {
-				tabBar.childAt(1).shallow().simulate('click', clickEvent);
+				tabBar
+					.childAt(1)
+					.shallow()
+					.simulate('click', clickEvent);
 				const selectedIndex = onSelect.args[0][0];
 				const meta = onSelect.args[0][1];
 				assert(onSelect.called);
@@ -160,7 +169,10 @@ describe('Tabs', () => {
 			});
 
 			it('should not call onSelect if the `Tab` isDisabled', () => {
-				tabBar.childAt(0).shallow().simulate('click', clickEvent);
+				tabBar
+					.childAt(0)
+					.shallow()
+					.simulate('click', clickEvent);
 				assert(!onSelect.called);
 			});
 		});

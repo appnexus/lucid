@@ -17,7 +17,8 @@ export default createClass({
 					data={data}
 					yAxisTitle="Revenue"
 					renderTooltipBody={dataPoint =>
-						`x value = ${dataPoint.x} and y value = ${dataPoint.y}`}
+						`x value = ${dataPoint.x} and y value = ${dataPoint.y}`
+					}
 				/>
 			</div>
 		);

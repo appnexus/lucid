@@ -98,12 +98,14 @@ const IconSelect = createClass({
 	},
 
 	getChildIcon(icon) {
-		return icon
-			? icon
-			: <Icon>
-					<rect x="0" y="0" width="16" height="16" />
-					<rect x="1" y="1" width="14" height="14" fill="white" />
-				</Icon>;
+		return icon ? (
+			icon
+		) : (
+			<Icon>
+				<rect x="0" y="0" width="16" height="16" />
+				<rect x="1" y="1" width="14" height="14" fill="white" />
+			</Icon>
+		);
 	},
 
 	getInputComponent(item) {
@@ -111,26 +113,28 @@ const IconSelect = createClass({
 		const Label = item.label;
 		const singleSelect = _.isEqual(kind, 'single');
 
-		return singleSelect
-			? <RadioButtonLabeled
-					Label={Label}
-					className={cx('&-Item-radio', {
-						[`${className}-radio`]: className,
-					})}
-					isDisabled={isDisabled || item.isDisabled}
-					isSelected={item.isSelected}
-					tabIndex={item.tabIndex}
-				/>
-			: <CheckboxLabeled
-					Label={Label}
-					className={cx('&-Item-checkbox', {
-						[`${className}-checkbox`]: className,
-					})}
-					isDisabled={isDisabled || item.isDisabled}
-					isIndeterminate={item.isPartial}
-					isSelected={item.isSelected}
-					tabIndex={item.tabIndex}
-				/>;
+		return singleSelect ? (
+			<RadioButtonLabeled
+				Label={Label}
+				className={cx('&-Item-radio', {
+					[`${className}-radio`]: className,
+				})}
+				isDisabled={isDisabled || item.isDisabled}
+				isSelected={item.isSelected}
+				tabIndex={item.tabIndex}
+			/>
+		) : (
+			<CheckboxLabeled
+				Label={Label}
+				className={cx('&-Item-checkbox', {
+					[`${className}-checkbox`]: className,
+				})}
+				isDisabled={isDisabled || item.isDisabled}
+				isIndeterminate={item.isPartial}
+				isSelected={item.isSelected}
+				tabIndex={item.tabIndex}
+			/>
+		);
 	},
 
 	render() {

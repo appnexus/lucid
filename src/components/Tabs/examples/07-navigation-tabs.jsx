@@ -21,7 +21,6 @@ export default createClass({
 						<Tabs.Title>Three</Tabs.Title>
 						Three content
 					</Tabs.Tab>
-
 				</Tabs>
 			</div>
 		);

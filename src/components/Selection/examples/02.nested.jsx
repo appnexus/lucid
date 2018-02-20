@@ -147,7 +147,6 @@ export default createClass({
 						</div>
 					);
 				}}
-
 			</Resizer>
 		);
 	},

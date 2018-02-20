@@ -38,12 +38,9 @@ export default createClass({
 			<section>
 				<p>
 					<em>
-						(Use the styles on the parent container of
-						{' '}
-						<code>SwitchLabeled</code>
-						{' '}
-						components
-						to ensure only the switches and their labels are clickable)
+						(Use the styles on the parent container of{' '}
+						<code>SwitchLabeled</code> components to ensure only the switches
+						and their labels are clickable)
 					</em>
 				</p>
 				<span

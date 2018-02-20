@@ -23,12 +23,20 @@ describe('RadioButtonLabeled', () => {
 			);
 
 			assert.equal(
-				wrapper.find(RadioButtonLabeled.Label).children().at(0).text(),
+				wrapper
+					.find(RadioButtonLabeled.Label)
+					.children()
+					.at(0)
+					.text(),
 				'one',
 				'wrong or missing first Label child'
 			);
 			assert.equal(
-				wrapper.find(RadioButtonLabeled.Label).children().at(1).text(),
+				wrapper
+					.find(RadioButtonLabeled.Label)
+					.children()
+					.at(1)
+					.text(),
 				'two',
 				'wrong or missing second Label child'
 			);

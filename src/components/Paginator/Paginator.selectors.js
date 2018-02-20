@@ -10,9 +10,9 @@ function totalPagesSelector({
 	return _.isNumber(totalPages)
 		? totalPages
 		: totalCount <= pageSize
-				? 1
-				: Math.floor(totalCount / pageSize) +
-						_.clamp(totalCount % pageSize, 0, 1);
+			? 1
+			: Math.floor(totalCount / pageSize) +
+				_.clamp(totalCount % pageSize, 0, 1);
 }
 
 export default {

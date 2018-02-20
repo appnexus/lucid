@@ -21,7 +21,8 @@ const colorList = [
 	},
 	{
 		category: 'Primary',
-		description: "The primary color is the most prominent color used throughout lucid. It's great for drawing the user's eye to particular components.",
+		description:
+			"The primary color is the most prominent color used throughout lucid. It's great for drawing the user's eye to particular components.",
 		variables: ['color-primaryLight', 'color-primaryMedium', 'color-primary'],
 	},
 	{
@@ -35,7 +36,8 @@ const colorList = [
 	},
 	{
 		category: 'Grays',
-		description: 'Grays play an important role in lucid, and this set of grays forms the foundation for all the other variants. More prescriptive colors should be favored over these general grays when available.',
+		description:
+			'Grays play an important role in lucid, and this set of grays forms the foundation for all the other variants. More prescriptive colors should be favored over these general grays when available.',
 		variables: [
 			'color-lightGray',
 			'color-gray',
@@ -45,7 +47,8 @@ const colorList = [
 	},
 	{
 		category: 'Featured Colors',
-		description: 'A featured color should only be used for a component that has multiple states like banners, buttons, or button like components (e.g. SingleSelect).',
+		description:
+			'A featured color should only be used for a component that has multiple states like banners, buttons, or button like components (e.g. SingleSelect).',
 		variables: [
 			'featured-color-default',
 			'featured-color-primary',
@@ -126,7 +129,8 @@ const colorList = [
 	},
 	{
 		category: 'Chart 0',
-		description: 'Chart colors are used for data visualizations and were designed to be used in a particular order.',
+		description:
+			'Chart colors are used for data visualizations and were designed to be used in a particular order.',
 		variables: [
 			'color-chart-0-lightest',
 			'color-chart-0-light',
