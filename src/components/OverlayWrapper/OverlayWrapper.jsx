@@ -104,7 +104,7 @@ const OverlayWrapper = createClass({
 					transitionEnterTimeout={300}
 					transitionLeaveTimeout={300}
 				>
-					{isVisible &&
+					{isVisible && (
 						<div
 							className={cx('&-message-container', {
 								'&-has-overlay': hasOverlay,
@@ -112,7 +112,8 @@ const OverlayWrapper = createClass({
 							})}
 						>
 							<div {...messageElementProp} />
-						</div>}
+						</div>
+					)}
 				</ReactTransitionGroup>
 			</div>
 		);

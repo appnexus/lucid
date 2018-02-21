@@ -20,16 +20,12 @@ export default createClass({
 
 		return (
 			<section style={{ maxWidth: 400 }}>
-
 				<DateSelect
 					selectedDays={selectedDate}
 					onSelectDate={this.handleSelectDate}
 				/>
-
-				selected date:
-				{' '}
+				selected date:{' '}
 				{selectedDate && selectedDate.toLocaleDateString('en-US')}
-
 			</section>
 		);
 	},

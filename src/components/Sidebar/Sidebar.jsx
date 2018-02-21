@@ -12,8 +12,7 @@ import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './Sidebar.reducers';
 import SplitVertical from '../SplitVertical/SplitVertical';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
-import GripperVerticalIcon
-	from '../Icon/GripperVerticalIcon/GripperVerticalIcon';
+import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon';
 
 const cx = lucidClassNames.bind('&-Sidebar');
 
@@ -288,7 +287,7 @@ const Sidebar = createClass({
 							<ChevronIcon
 								direction={
 									(isExpanded && position === 'right') ||
-										(!isExpanded && position !== 'right')
+									(!isExpanded && position !== 'right')
 										? 'right'
 										: 'left'
 								}

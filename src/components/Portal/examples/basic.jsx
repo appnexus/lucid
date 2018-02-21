@@ -48,15 +48,11 @@ export default createClass({
 						textAlign: 'center',
 					}}
 				>
-					<p>
-						click to move
-					</p>
+					<p>click to move</p>
 					<p>
 						({left}, {top})
 					</p>
-					<p>
-						inspect me
-					</p>
+					<p>inspect me</p>
 				</section>
 			</Portal>
 		);

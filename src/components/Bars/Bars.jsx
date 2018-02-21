@@ -282,7 +282,7 @@ const Bars = createClass({
 									isStacked
 										? xScale(data[seriesIndex][xField])
 										: innerXScale(pointsIndex) +
-												xScale(data[seriesIndex][xField])
+											xScale(data[seriesIndex][xField])
 								}
 								y={yScale(end)}
 								height={yScale(start) - yScale(end)}
@@ -375,13 +375,9 @@ export const PureToolTip = createClass({
 					/>
 				</ToolTip.Target>
 
-				<ToolTip.Title>
-					{xFormatter(data[seriesIndex][xField])}
-				</ToolTip.Title>
+				<ToolTip.Title>{xFormatter(data[seriesIndex][xField])}</ToolTip.Title>
 
-				<ToolTip.Body>
-					{renderBody(data[seriesIndex])}
-				</ToolTip.Body>
+				<ToolTip.Body>{renderBody(data[seriesIndex])}</ToolTip.Body>
 			</ToolTip>
 		);
 	},

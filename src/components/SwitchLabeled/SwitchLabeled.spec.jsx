@@ -61,7 +61,10 @@ describe('SwitchLabeled', () => {
 				const wrapper = shallow(<SwitchLabeled Label={'foo'} />);
 
 				assert.equal(
-					wrapper.find(ReactTransitionGroup).find('span').prop('children'),
+					wrapper
+						.find(ReactTransitionGroup)
+						.find('span')
+						.prop('children'),
 					'foo'
 				);
 			});
@@ -76,7 +79,10 @@ describe('SwitchLabeled', () => {
 				);
 
 				assert.equal(
-					wrapper.find(ReactTransitionGroup).find('span').prop('children'),
+					wrapper
+						.find(ReactTransitionGroup)
+						.find('span')
+						.prop('children'),
 					'foo'
 				);
 			});

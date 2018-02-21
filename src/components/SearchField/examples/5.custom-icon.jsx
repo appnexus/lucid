@@ -6,7 +6,9 @@ export default createClass({
 	render() {
 		return (
 			<SearchField>
-				<SearchField.Icon><LoadingIcon /></SearchField.Icon>
+				<SearchField.Icon>
+					<LoadingIcon />
+				</SearchField.Icon>
 			</SearchField>
 		);
 	},

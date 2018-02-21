@@ -10,9 +10,7 @@ export default createClass({
 					display: 'flex',
 				}}
 			>
-				<div>
-					Other content
-				</div>
+				<div>Other content</div>
 
 				<Resizer
 					style={{

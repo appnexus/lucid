@@ -216,7 +216,8 @@ describe('redux utils', () => {
 								onChange: (state, payload) => ({ value: payload }),
 							},
 							asyncOperation: thunk(payload => dispatchTree =>
-								dispatchTree.onChange(payload)),
+								dispatchTree.onChange(payload)
+							),
 							thunkSpy: thunk(() => thunkSpy),
 						},
 					};
@@ -248,9 +249,9 @@ describe('redux utils', () => {
 					const mockGetState = sinon.spy(() => rootState);
 					const mockDispatch = sinon.spy(
 						action =>
-							(isFunction(action)
+							isFunction(action)
 								? action(mockDispatch, mockGetState, ...extraArgs)
-								: action)
+								: action
 					);
 					const dispatchTree = mapDispatchToProps(mockDispatch);
 

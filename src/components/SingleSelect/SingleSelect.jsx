@@ -224,13 +224,11 @@ const SingleSelect = createClass({
 					<div
 						tabIndex={0}
 						className={cx('&-Control', {
-							'&-Control-is-highlighted': (!isDisabled &&
-								isItemSelected &&
-								isSelectionHighlighted) ||
+							'&-Control-is-highlighted':
+								(!isDisabled && isItemSelected && isSelectionHighlighted) ||
 								(isExpanded && isSelectionHighlighted),
-							'&-Control-is-selected': (!isDisabled &&
-								isItemSelected &&
-								isSelectionHighlighted) ||
+							'&-Control-is-selected':
+								(!isDisabled && isItemSelected && isSelectionHighlighted) ||
 								(isExpanded && isSelectionHighlighted),
 							'&-Control-is-expanded': isExpanded,
 							'&-Control-is-disabled': isDisabled,
@@ -250,11 +248,11 @@ const SingleSelect = createClass({
 						<CaretIcon direction={isExpanded ? direction : 'down'} size={8} />
 					</div>
 				</DropMenu.Control>
-				{hasReset && isItemSelected
-					? <DropMenu.NullOption {...placeholderProps}>
-							{placeholder}
-						</DropMenu.NullOption>
-					: null}
+				{hasReset && isItemSelected ? (
+					<DropMenu.NullOption {...placeholderProps}>
+						{placeholder}
+					</DropMenu.NullOption>
+				) : null}
 				{// for each option group passed in, render a DropMenu.OptionGroup, any label will be included in it's children, render each option inside the group
 				_.map(optionGroups, (optionGroupProps, optionGroupIndex) => (
 					<DropMenu.OptionGroup
@@ -262,15 +260,15 @@ const SingleSelect = createClass({
 						{...optionGroupProps}
 					>
 						{optionGroupProps.children}
-						{_.map(_.get(optionGroupDataLookup, optionGroupIndex), ({
-							optionProps,
-							optionIndex,
-						}) => (
-							<DropMenu.Option
-								key={'SingleSelectOption' + optionIndex}
-								{...optionProps}
-							/>
-						))}
+						{_.map(
+							_.get(optionGroupDataLookup, optionGroupIndex),
+							({ optionProps, optionIndex }) => (
+								<DropMenu.Option
+									key={'SingleSelectOption' + optionIndex}
+									{...optionProps}
+								/>
+							)
+						)}
 					</DropMenu.OptionGroup>
 				)).concat(
 					// then render all the ungrouped options at the end

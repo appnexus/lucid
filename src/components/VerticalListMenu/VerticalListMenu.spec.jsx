@@ -41,17 +41,13 @@ describe('VerticalListMenu', () => {
 			it('should favor child props over parent level', () => {
 				const wrapper = shallow(
 					<VerticalListMenu selectedIndices={[0]} expandedIndices={[2]}>
-						<VerticalListMenu.Item>
-							Selected one
-						</VerticalListMenu.Item>
+						<VerticalListMenu.Item>Selected one</VerticalListMenu.Item>
 
 						<VerticalListMenu.Item isSelected={true}>
 							Selected two
 						</VerticalListMenu.Item>
 
-						<VerticalListMenu.Item>
-							Expanded one
-						</VerticalListMenu.Item>
+						<VerticalListMenu.Item>Expanded one</VerticalListMenu.Item>
 
 						<VerticalListMenu.Item isExpanded={true}>
 							Expanded two

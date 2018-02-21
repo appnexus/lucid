@@ -108,8 +108,9 @@ const LoadingMessage = createClass({
 				)}
 			>
 				{iconChildren}
-				{!_.isNull(titleChildren) &&
-					<h3 className={cx('&-title')}>{titleChildren || defaultTitle}</h3>}
+				{!_.isNull(titleChildren) && (
+					<h3 className={cx('&-title')}>{titleChildren || defaultTitle}</h3>
+				)}
 				{bodyChildren && <span className={cx('&-body')}>{bodyChildren}</span>}
 			</div>
 		);

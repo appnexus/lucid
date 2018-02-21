@@ -278,16 +278,14 @@ export default createClass({
 	render() {
 		const { value } = this.state;
 		const valuePattern = new RegExp(_.escapeRegExp(value), 'i');
-		const filteredWordList = value !== ''
-			? _.filter(wordlist, word => valuePattern.test(word))
-			: wordlist;
+		const filteredWordList =
+			value !== ''
+				? _.filter(wordlist, word => valuePattern.test(word))
+				: wordlist;
 
 		return (
 			<section>
-
-				<section>
-					Current Value: {this.state.value}
-				</section>
+				<section>Current Value: {this.state.value}</section>
 
 				<Autocomplete
 					placeholder="Enter a word..."
@@ -298,7 +296,6 @@ export default createClass({
 					}
 					onChange={this.handleChange}
 				/>
-
 			</section>
 		);
 	},

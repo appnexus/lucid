@@ -20,7 +20,6 @@ export default createClass({
 
 		return (
 			<section style={{ maxWidth: 800 }}>
-
 				<DateSelect
 					useSlidePanel={false}
 					selectedDays={selectedDate}
@@ -28,11 +27,8 @@ export default createClass({
 					monthsShown={2}
 					showDivider
 				/>
-
-				selected date:
-				{' '}
+				selected date:{' '}
 				{selectedDate && selectedDate.toLocaleDateString('en-US')}
-
 			</section>
 		);
 	},

@@ -30,7 +30,9 @@ export function common(
 
 		if (Component._isLucidHybridComponent) {
 			throw new Error(
-				`You're trying to run generic tests on a hybrid component which is bad and won't work and will make you cry. Check your spec files for ${Component.displayName} and import the raw component instead of the hybrid version.`
+				`You're trying to run generic tests on a hybrid component which is bad and won't work and will make you cry. Check your spec files for ${
+					Component.displayName
+				} and import the raw component instead of the hybrid version.`
 			);
 		}
 
@@ -240,7 +242,10 @@ export function controls(
 			};
 			const wrapper = mount(<Component {...props} />);
 
-			wrapper.find(controlSelector).first().simulate(eventType);
+			wrapper
+				.find(controlSelector)
+				.first()
+				.simulate(eventType);
 
 			// Last argument should be an object with `uniqueId` and `event`
 			const { props: { specialProp }, event } = _.last(

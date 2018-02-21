@@ -6,7 +6,8 @@ export default createClass({
 	render() {
 		return (
 			<ExampleComponent>
-				Feel free to play with this example component to see how to create your own.
+				Feel free to play with this example component to see how to create your
+				own.
 			</ExampleComponent>
 		);
 	},

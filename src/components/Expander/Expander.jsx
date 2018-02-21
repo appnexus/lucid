@@ -154,9 +154,9 @@ const Expander = createClass({
 						transitionLeaveTimeout={100}
 						className={cx('&-text')}
 					>
-						{labelChildProp
-							? <span key={this._labelKey}>{labelChildProp.children}</span>
-							: null}
+						{labelChildProp ? (
+							<span key={this._labelKey}>{labelChildProp.children}</span>
+						) : null}
 					</ReactTransitionGroup>
 				</header>
 				<Collapsible

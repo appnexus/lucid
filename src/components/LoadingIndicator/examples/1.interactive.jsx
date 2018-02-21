@@ -46,9 +46,7 @@ export default createClass({
 				>
 					Get more data
 				</Button>
-				<Button onClick={this.handleKindClick}>
-					Switch overlay color
-				</Button>
+				<Button onClick={this.handleKindClick}>Switch overlay color</Button>
 				<BarChart data={data} yAxisTitle="Revenue" />
 			</LoadingIndicator>
 		);

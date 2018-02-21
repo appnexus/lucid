@@ -33,7 +33,9 @@ describe('SingleSelect', () => {
 				const wrapper = shallow(
 					<SingleSelect>
 						<button>button</button>
-						<Placeholder>control<i>italic</i></Placeholder>
+						<Placeholder>
+							control<i>italic</i>
+						</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
 						<Option>option c</Option>

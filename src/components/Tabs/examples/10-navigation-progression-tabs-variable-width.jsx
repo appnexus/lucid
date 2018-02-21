@@ -13,9 +13,15 @@ export default createClass({
 					isOpen={false}
 					isProgressive
 				>
-					<Tabs.Tab style={tabStyle} Title="One">One content</Tabs.Tab>
-					<Tabs.Tab style={tabStyle} Title="Two">Two content</Tabs.Tab>
-					<Tabs.Tab style={tabStyle} Title="Three">Three content</Tabs.Tab>
+					<Tabs.Tab style={tabStyle} Title="One">
+						One content
+					</Tabs.Tab>
+					<Tabs.Tab style={tabStyle} Title="Two">
+						Two content
+					</Tabs.Tab>
+					<Tabs.Tab style={tabStyle} Title="Three">
+						Three content
+					</Tabs.Tab>
 					<Tabs.Tab style={tabStyle} Title="Disabled" isDisabled={true}>
 						Disabled Content
 					</Tabs.Tab>

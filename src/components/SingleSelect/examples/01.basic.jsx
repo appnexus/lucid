@@ -20,7 +20,6 @@ export default createClass({
 	render() {
 		return (
 			<section>
-
 				<SingleSelect onSelect={this.handleSelect}>
 					<Placeholder>Select Color</Placeholder>
 					<Option>Red</Option>

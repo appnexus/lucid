@@ -47,15 +47,15 @@ const ExampleComponent = createClass({
 		isX: bool,
 
 		/**
-		* Example of a customizable component function. Always show the signature.
-		*
-		* Signature: `(item, { event, props }) => {}`
-		*/
+		 * Example of a customizable component function. Always show the signature.
+		 *
+		 * Signature: `(item, { event, props }) => {}`
+		 */
 		onX: func,
 
 		/**
-		* Passed through to the root element.
-		*/
+		 * Passed through to the root element.
+		 */
 		style: object,
 	},
 

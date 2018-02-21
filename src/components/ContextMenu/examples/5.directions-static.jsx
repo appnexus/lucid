@@ -24,7 +24,6 @@ export default createClass({
 					margin: '0 60px',
 				}}
 			>
-
 				{_.map(directions, direction => {
 					return (
 						<section
@@ -51,9 +50,7 @@ export default createClass({
 													alignmentOffset,
 												}}
 											>
-												<ContextMenu.Target>
-													Target
-												</ContextMenu.Target>
+												<ContextMenu.Target>Target</ContextMenu.Target>
 
 												<ContextMenu.FlyOut style={style}>
 													<div>{`direction: ${direction}`}</div>
@@ -69,7 +66,6 @@ export default createClass({
 						</section>
 					);
 				})}
-
 			</section>
 		);
 	},

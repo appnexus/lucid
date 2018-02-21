@@ -9,9 +9,7 @@ export default createClass({
 		return (
 			<LineChart data={[]} yAxisFields={['blueberries']}>
 				<EmptyStateWrapper>
-					<Title>
-						Something went wrong.
-					</Title>
+					<Title>Something went wrong.</Title>
 					<Body
 						style={{
 							fontSize: '12px',

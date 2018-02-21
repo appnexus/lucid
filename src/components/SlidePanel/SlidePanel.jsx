@@ -202,8 +202,12 @@ const SlidePanel = createClass({
 							className={cx('&-slidestrip', className)}
 							style={{
 								transform: this.isDragging
-									? `translateX(calc(${tween.translateXPercentage}% + ${this.state.translateXPixel}px))`
-									: `translateX(calc(${tween.translateXPercentage}% + ${tween.translateXPixel}px))`,
+									? `translateX(calc(${tween.translateXPercentage}% + ${
+											this.state.translateXPixel
+										}px))`
+									: `translateX(calc(${tween.translateXPercentage}% + ${
+											tween.translateXPixel
+										}px))`,
 							}}
 							onTouchStart={this.handleTouchStart}
 							onTouchMove={this.handleTouchMove}

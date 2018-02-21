@@ -41,8 +41,8 @@ export default createClass({
 				/>
 
 				<div>
-					from: {from && from.toLocaleDateString('en-US')},
-					to: {to && to.toLocaleDateString('en-US')}
+					from: {from && from.toLocaleDateString('en-US')}, to:{' '}
+					{to && to.toLocaleDateString('en-US')}
 				</div>
 
 				<Button onClick={this.handleReset}>Reset</Button>

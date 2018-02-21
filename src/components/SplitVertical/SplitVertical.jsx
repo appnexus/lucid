@@ -216,7 +216,8 @@ const SplitVertical = createClass({
 		collapseShift = 0
 	) {
 		if (isExpanded) {
-			secondaryRef.style.flexBasis = `${secondaryStartRect.width + dX * (secondary === right ? -1 : 1)}px`;
+			secondaryRef.style.flexBasis = `${secondaryStartRect.width +
+				dX * (secondary === right ? -1 : 1)}px`;
 			return secondaryStartRect.width + dX * (secondary === right ? -1 : 1);
 		} else {
 			const overlapWidth =
@@ -229,7 +230,8 @@ const SplitVertical = createClass({
 				return secondaryStartRect.width - overlapWidth;
 			} else {
 				this.expandSecondary();
-				secondaryRef.style.flexBasis = `${(dX + collapseShift) * (secondary === right ? -1 : 1)}px`;
+				secondaryRef.style.flexBasis = `${(dX + collapseShift) *
+					(secondary === right ? -1 : 1)}px`;
 				return (dX + collapseShift) * (secondary === right ? -1 : 1);
 			}
 		}
@@ -429,7 +431,8 @@ const SplitVertical = createClass({
 							ref={this.storeRef('inner')}
 							style={{
 								display: 'flex',
-								transform: `translateX(${(isRightSecondary ? 1 : -1) * Math.round(tween.slideAmount)}px)`,
+								transform: `translateX(${(isRightSecondary ? 1 : -1) *
+									Math.round(tween.slideAmount)}px)`,
 							}}
 						>
 							<div
@@ -457,36 +460,33 @@ const SplitVertical = createClass({
 							>
 								{leftPaneProps.children}
 							</div>
-							{isResizeable
-								? <DragCaptureZone
-										{...omitProps(
-											dividerProps,
-											SplitVertical.Divider,
-											[],
-											false
-										)}
-										className={cx(
-											'&-Divider',
-											'&-Divider-is-resizeable',
-											dividerProps.className
-										)}
-										onDragStart={this.handleDragStart}
-										onDrag={this.handleDrag}
-										onDragEnd={this.handleDragEnd}
-										style={{
-											width: '6px',
-											boxSizing: 'border-box',
-											...dividerProps.style,
-										}}
-									>
-										{dividerProps.children || ' '}
-									</DragCaptureZone>
-								: <div
-										{...omitProps(dividerProps, SplitVertical.Divider)}
-										className={cx('&-Divider', dividerProps.className)}
-									>
-										{dividerProps.children || ' '}
-									</div>}
+							{isResizeable ? (
+								<DragCaptureZone
+									{...omitProps(dividerProps, SplitVertical.Divider, [], false)}
+									className={cx(
+										'&-Divider',
+										'&-Divider-is-resizeable',
+										dividerProps.className
+									)}
+									onDragStart={this.handleDragStart}
+									onDrag={this.handleDrag}
+									onDragEnd={this.handleDragEnd}
+									style={{
+										width: '6px',
+										boxSizing: 'border-box',
+										...dividerProps.style,
+									}}
+								>
+									{dividerProps.children || ' '}
+								</DragCaptureZone>
+							) : (
+								<div
+									{...omitProps(dividerProps, SplitVertical.Divider)}
+									className={cx('&-Divider', dividerProps.className)}
+								>
+									{dividerProps.children || ' '}
+								</div>
+							)}
 							<div
 								{...omitProps(rightPaneProps, SplitVertical.RightPane)}
 								className={cx(

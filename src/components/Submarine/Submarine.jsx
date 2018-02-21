@@ -12,8 +12,7 @@ import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './Submarine.reducers';
 import SplitHorizontal from '../SplitHorizontal/SplitHorizontal';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
-import GripperHorizontalIcon
-	from '../Icon/GripperHorizontalIcon/GripperHorizontalIcon';
+import GripperHorizontalIcon from '../Icon/GripperHorizontalIcon/GripperHorizontalIcon';
 
 const cx = lucidClassNames.bind('&-Submarine');
 
@@ -246,16 +245,14 @@ const Submarine = createClass({
 							<ChevronIcon
 								direction={
 									(isExpanded && position === 'bottom') ||
-										(!isExpanded && position !== 'bottom')
+									(!isExpanded && position !== 'bottom')
 										? 'down'
 										: 'up'
 								}
 							/>
 						</div>
 					</div>
-					<div className={cx('&-Bar-content')}>
-						{barProps.children}
-					</div>
+					<div className={cx('&-Bar-content')}>{barProps.children}</div>
 				</BarPane>
 				<SplitHorizontal.Divider className={cx('&-Divider')}>
 					<GripperHorizontalIcon className={cx('&-Divider-gripper')} />

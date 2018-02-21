@@ -124,9 +124,10 @@ const RadioGroup = createClass({
 		// If there are any `RadioGroup.RadioButton` children with `isSelected`
 		// equal to true, then the index of the last one should override the
 		// value of the `selectedIndex` prop.
-		const actualSelectedIndex = selectedIndexFromChildren !== -1
-			? selectedIndexFromChildren
-			: selectedIndex;
+		const actualSelectedIndex =
+			selectedIndexFromChildren !== -1
+				? selectedIndexFromChildren
+				: selectedIndex;
 
 		return (
 			<span

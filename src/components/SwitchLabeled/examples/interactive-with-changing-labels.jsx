@@ -56,19 +56,25 @@ export default createClass({
 				>
 					<SwitchLabeled
 						isSelected={this.state.airplaneMode === true}
-						Label={`Airplane Mode ${this.state.airplaneMode === true ? 'Activated' : 'Deactivated'}`}
+						Label={`Airplane Mode ${
+							this.state.airplaneMode === true ? 'Activated' : 'Deactivated'
+						}`}
 						onSelect={this.handleSelectedAirplaneMode}
 						style={style}
 					/>
 					<SwitchLabeled
 						isSelected={this.state.bluetooth === true}
-						Label={`Bluetooth ${this.state.bluetooth === true ? 'Enabled' : 'Disabled'}`}
+						Label={`Bluetooth ${
+							this.state.bluetooth === true ? 'Enabled' : 'Disabled'
+						}`}
 						onSelect={this.handleSelectedBluetooth}
 						style={style}
 					/>
 					<SwitchLabeled
 						isSelected={this.state.cellularData === true}
-						Label={`${this.state.cellularData ? 'Use' : 'Do Not Use'} Cellular Data`}
+						Label={`${
+							this.state.cellularData ? 'Use' : 'Do Not Use'
+						} Cellular Data`}
 						onSelect={this.handleSelectedCellularData}
 						style={style}
 					/>

@@ -175,10 +175,36 @@ describe('RadioGroup', () => {
 			);
 			const labels = wrapper.find(RadioGroup.Label);
 
-			assert.equal(labels.at(0).children().text(), 'foo');
-			assert.equal(labels.at(1).children().text(), 'bar');
-			assert.equal(labels.at(2).children().at(0).text(), 'baz');
-			assert.equal(labels.at(2).children().at(1).text(), 'qux');
+			assert.equal(
+				labels
+					.at(0)
+					.children()
+					.text(),
+				'foo'
+			);
+			assert.equal(
+				labels
+					.at(1)
+					.children()
+					.text(),
+				'bar'
+			);
+			assert.equal(
+				labels
+					.at(2)
+					.children()
+					.at(0)
+					.text(),
+				'baz'
+			);
+			assert.equal(
+				labels
+					.at(2)
+					.children()
+					.at(1)
+					.text(),
+				'qux'
+			);
 		});
 	});
 });
@@ -211,7 +237,12 @@ describe('RadioGroup', () => {
 				</RadioGroup>
 			);
 
-			wrapper.childAt(0).childAt(1).childAt(0).childAt(0).simulate('click');
+			wrapper
+				.childAt(0)
+				.childAt(1)
+				.childAt(0)
+				.childAt(0)
+				.simulate('click');
 			assert(onSelect.calledOnce);
 		});
 
@@ -225,7 +256,12 @@ describe('RadioGroup', () => {
 				</RadioGroup>
 			);
 
-			wrapper.childAt(0).childAt(1).childAt(0).childAt(0).simulate('click');
+			wrapper
+				.childAt(0)
+				.childAt(1)
+				.childAt(0)
+				.childAt(0)
+				.simulate('click');
 			assert.equal(onSelect.args[0][0], 1);
 			assert(_.last(onSelect.args[0]).event);
 		});
@@ -241,7 +277,12 @@ describe('RadioGroup', () => {
 				</RadioGroup>
 			);
 
-			wrapper.childAt(0).childAt(1).childAt(0).childAt(0).simulate('click');
+			wrapper
+				.childAt(0)
+				.childAt(1)
+				.childAt(0)
+				.childAt(0)
+				.simulate('click');
 			assert(childOnSelect.calledBefore(onSelect));
 		});
 	});

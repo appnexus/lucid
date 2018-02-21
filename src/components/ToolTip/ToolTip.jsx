@@ -222,9 +222,9 @@ const ToolTip = createClass({
 			'children'
 		);
 		const getAlignmentOffset = n =>
-			(alignment === ContextMenu.CENTER
+			alignment === ContextMenu.CENTER
 				? 0
-				: alignment === ContextMenu.START ? n / 2 - 22.5 : -(n / 2 - 22.5));
+				: alignment === ContextMenu.START ? n / 2 - 22.5 : -(n / 2 - 22.5);
 
 		return (
 			<ContextMenu
@@ -261,15 +261,15 @@ const ToolTip = createClass({
 					onMouseOver={this.handleMouseOverFlyout}
 					onMouseOut={this.handleMouseOutFlyout}
 				>
-					{isCloseable
-						? <CrossIcon
-								onClick={this.handleClose}
-								className={flyOutCx('&-close')}
-							/>
-						: null}
-					{!_.isNil(title)
-						? <h2 className={flyOutCx('&-Title')}>{title}</h2>
-						: null}
+					{isCloseable ? (
+						<CrossIcon
+							onClick={this.handleClose}
+							className={flyOutCx('&-close')}
+						/>
+					) : null}
+					{!_.isNil(title) ? (
+						<h2 className={flyOutCx('&-Title')}>{title}</h2>
+					) : null}
 					{body}
 				</FlyOut>
 			</ContextMenu>

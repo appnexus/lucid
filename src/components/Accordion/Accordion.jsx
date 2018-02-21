@@ -5,9 +5,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 
-import {
-	ExpanderPanelDumb as ExpanderPanel,
-} from '../ExpanderPanel/ExpanderPanel';
+import { ExpanderPanelDumb as ExpanderPanel } from '../ExpanderPanel/ExpanderPanel';
 
 import * as reducers from '../Accordion/Accordion.reducers';
 
@@ -92,7 +90,8 @@ const Accordion = createClass({
 							{...itemChildProp}
 							className={cx('&-Item', itemChildProp.className)}
 							onToggle={(isExpanded, { event }) =>
-								this.handleToggle(isExpanded, index, event)}
+								this.handleToggle(isExpanded, index, event)
+							}
 							isExpanded={!itemChildProp.isDisabled && selectedIndex === index}
 						/>
 					);

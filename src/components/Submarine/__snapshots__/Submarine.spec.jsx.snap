@@ -256,26 +256,19 @@ exports[`Submarine [common] example testing should match snapshot(s) for 5.custo
     <div
       className="lucid-Submarine-Bar-content"
     >
-      You can also set the
-       
+      You can also set the 
       <code>
         title
       </code>
-       
-      or
-       
+       or 
       <code>
         Title
       </code>
-       
-      prop on
-       
+       prop on 
       <code>
         &lt;Submarine&gt;
       </code>
-       
-      or
-       
+       or 
       <code>
         &lt;Submarine.Bar&gt;
       </code>

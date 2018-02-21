@@ -8,9 +8,7 @@ export default createClass({
 	render() {
 		return (
 			<SearchableMultiSelect>
-				<SelectionLabel>
-					Selected States
-				</SelectionLabel>
+				<SelectionLabel>Selected States</SelectionLabel>
 				<Option>Alabama</Option>
 				<Option>Alaska</Option>
 				<Option>Arizona</Option>

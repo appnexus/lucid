@@ -112,23 +112,21 @@ const Panel = createClass({
 				})}
 				style={style}
 			>
-				{headerChildProp
-					? <header
-							{...headerChildProp}
-							className={cx('&-Header', headerChildProp.className)}
-						/>
-					: null}
+				{headerChildProp ? (
+					<header
+						{...headerChildProp}
+						className={cx('&-Header', headerChildProp.className)}
+					/>
+				) : null}
 
-				<section className={cx('&-content')}>
-					{children}
-				</section>
+				<section className={cx('&-content')}>{children}</section>
 
-				{footerChildProp
-					? <footer
-							{...footerChildProp}
-							className={cx('&-Footer', footerChildProp.className)}
-						/>
-					: null}
+				{footerChildProp ? (
+					<footer
+						{...footerChildProp}
+						className={cx('&-Footer', footerChildProp.className)}
+					/>
+				) : null}
 			</div>
 		);
 	},

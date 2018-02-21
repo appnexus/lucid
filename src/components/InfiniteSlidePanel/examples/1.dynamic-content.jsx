@@ -41,7 +41,6 @@ export default createClass({
 				<Button onClick={this.handlePrev}>Backward</Button>
 				<Button onClick={this.handleNext}>Forward</Button>
 				Current offset: {this.state.offset}
-
 				<InfiniteSlidePanel
 					totalSlides={12}
 					slidesToShow={3}

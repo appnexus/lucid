@@ -19,14 +19,14 @@ export default createClass({
 			alignment,
 			alignmentOffset,
 			getAlignmentOffset,
-		} = this.state || {};
+		} =
+			this.state || {};
 
 		const directions = [UP, DOWN, LEFT, RIGHT];
 		const alignments = [START, CENTER, END];
 
 		return (
 			<section>
-
 				<section
 					style={{
 						display: 'flex',
@@ -45,14 +45,12 @@ export default createClass({
 							</SingleSelect.Option>
 						))}
 					</SingleSelect>
-
 					directonOffset:
 					<TextField
 						style={{ width: 100 }}
 						value={directonOffset}
 						onChange={directonOffset => this.setState({ directonOffset })}
 					/>
-
 					<SingleSelect
 						onSelect={i => this.setState({ alignment: alignments[i] })}
 					>
@@ -65,24 +63,22 @@ export default createClass({
 							</SingleSelect.Option>
 						))}
 					</SingleSelect>
-
 					alignmentOffset:
 					<TextField
 						style={{ width: 100 }}
 						value={alignmentOffset}
 						onChange={alignmentOffset => this.setState({ alignmentOffset })}
 					/>
-
 					getAlignmentOffset:
 					<TextField
 						isDisabled={alignment !== CENTER}
 						style={{ width: 100 }}
 						value={getAlignmentOffset}
 						onSubmit={getAlignmentOffset =>
-							this.setState({ getAlignmentOffset })}
+							this.setState({ getAlignmentOffset })
+						}
 					/>
 					<code>{getAlignmentOffset || null}</code>
-
 				</section>
 
 				<section
@@ -106,20 +102,16 @@ export default createClass({
 						}
 						getAlignmentOffset={eval(getAlignmentOffset)}
 					>
-
-						<ContextMenu.Target>
-							Target
-						</ContextMenu.Target>
+						<ContextMenu.Target>Target</ContextMenu.Target>
 
 						<ContextMenu.FlyOut style={{ width: 210, ...style }}>
 							<div>{`direction: ${direction || 'default'}`}</div>
 							<div>{`directonOffset: ${directonOffset || 'default'}`}</div>
 							<div>{`alignment: ${alignment || 'default'}`}</div>
 							<div>{`alignmentOffset: ${alignmentOffset || 'default'}`}</div>
-							<div
-							>{`getAlignmentOffset: ${getAlignmentOffset || 'default'}`}</div>
+							<div>{`getAlignmentOffset: ${getAlignmentOffset ||
+								'default'}`}</div>
 						</ContextMenu.FlyOut>
-
 					</ContextMenu>
 				</section>
 			</section>

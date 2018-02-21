@@ -119,49 +119,56 @@ const Legend = createClass({
 					'&-is-reversed': isReversed,
 				})}
 			>
-				{_.map(itemProps, ({
-					hasLine,
-					hasPoint,
-					pointKind = 1,
-					color,
-					onClick,
-					children,
-					className: itemClass,
-				}, index) => (
-					<li
-						key={index}
-						className={cx(itemClass, '&-Item')}
-						onClick={_.partial(this.handleItemClick, index, itemProps[index])}
-					>
-						{hasPoint || hasLine
-							? <svg
+				{_.map(
+					itemProps,
+					(
+						{
+							hasLine,
+							hasPoint,
+							pointKind = 1,
+							color,
+							onClick,
+							children,
+							className: itemClass,
+						},
+						index
+					) => (
+						<li
+							key={index}
+							className={cx(itemClass, '&-Item')}
+							onClick={_.partial(this.handleItemClick, index, itemProps[index])}
+						>
+							{hasPoint || hasLine ? (
+								<svg
 									className={cx('&-Item-indicator')}
 									width={hasLine || hasSomeLines ? LINE_WIDTH : POINT_SIZE}
 									height={POINT_SIZE}
 								>
-									{hasPoint
-										? <Point
-												x={
-													hasLine || hasSomeLines
-														? LINE_WIDTH / 2
-														: POINT_SIZE / 2
-												}
-												y={POINT_SIZE / 2}
-												color={color}
-												kind={pointKind}
-											/>
-										: null}
-									{hasLine
-										? <Line
-												d={`M0,${POINT_SIZE / 2} L${LINE_WIDTH},${POINT_SIZE / 2}`}
-												color={color}
-											/>
-										: null}
+									{hasPoint ? (
+										<Point
+											x={
+												hasLine || hasSomeLines
+													? LINE_WIDTH / 2
+													: POINT_SIZE / 2
+											}
+											y={POINT_SIZE / 2}
+											color={color}
+											kind={pointKind}
+										/>
+									) : null}
+									{hasLine ? (
+										<Line
+											d={`M0,${POINT_SIZE / 2} L${LINE_WIDTH},${POINT_SIZE /
+												2}`}
+											color={color}
+										/>
+									) : null}
 								</svg>
-							: null}
-						{children}
-					</li>
-				))}
+							) : null}
+							{children}
+						</li>
+					)
+				)}
 			</ul>
 		);
 	},

@@ -8,7 +8,6 @@ export default createClass({
 	render() {
 		return (
 			<section>
-
 				<SingleSelect maxMenuHeight="12em">
 					<Placeholder>Select Color</Placeholder>
 					<Option>Aliceblue</Option>
@@ -153,7 +152,6 @@ export default createClass({
 					<Option>Yellow</Option>
 					<Option>Yellowgreen</Option>
 				</SingleSelect>
-
 			</section>
 		);
 	},

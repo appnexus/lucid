@@ -137,26 +137,23 @@ const Paginator = createClass({
 
 		return (
 			<div style={style} className={cx('&', className)}>
-
-				{hasPageSizeSelector
-					? <div className={cx('&-page-size-container')}>
-							<span className={cx('&-rows-per-page-label')}>
-								Rows per page:
-							</span>
-							<SingleSelect
-								{...singleSelectProps}
-								hasReset={false}
-								isSelectionHighlighted={false}
-								isDisabled={isDisabled}
-								selectedIndex={selectedPageSizeIndex}
-								onSelect={onPageSizeSelect}
-							>
-								{_.map(pageSizeOptions, option => (
-									<Option key={option}>{option}</Option>
-								))}
-							</SingleSelect>
-						</div>
-					: null}
+				{hasPageSizeSelector ? (
+					<div className={cx('&-page-size-container')}>
+						<span className={cx('&-rows-per-page-label')}>Rows per page:</span>
+						<SingleSelect
+							{...singleSelectProps}
+							hasReset={false}
+							isSelectionHighlighted={false}
+							isDisabled={isDisabled}
+							selectedIndex={selectedPageSizeIndex}
+							onSelect={onPageSizeSelect}
+						>
+							{_.map(pageSizeOptions, option => (
+								<Option key={option}>{option}</Option>
+							))}
+						</SingleSelect>
+					</div>
+				) : null}
 
 				<Button
 					onClick={_.partial(onPageSelect, selectedPageIndex - 1, totalPages)}

@@ -134,9 +134,7 @@ const Button = createClass({
 				ref="button"
 				type={type}
 			>
-				<span className={cx('&-content')}>
-					{children}
-				</span>
+				<span className={cx('&-content')}>{children}</span>
 			</button>
 		);
 	},

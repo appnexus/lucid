@@ -30,11 +30,7 @@ describe('Resizer', () => {
 
 	describe('render', () => {
 		it('should call the correct function when unmounted', () => {
-			const wrapper = mount(
-				<Resizer>
-					{_.noop}
-				</Resizer>
-			);
+			const wrapper = mount(<Resizer>{_.noop}</Resizer>);
 
 			const instance = wrapper.instance();
 			expect(instance.resizeDetector.removeListener).not.toHaveBeenCalled();
@@ -47,11 +43,7 @@ describe('Resizer', () => {
 	describe('props', () => {
 		it('children should callback with width and height', () => {
 			const children = jest.fn();
-			mount(
-				<Resizer>
-					{children}
-				</Resizer>
-			);
+			mount(<Resizer>{children}</Resizer>);
 
 			expect(children).toHaveBeenCalledWith(50, 100);
 		});

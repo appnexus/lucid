@@ -62,7 +62,6 @@ export default createClass({
 
 		return (
 			<section>
-
 				<div style={{ display: 'flex', maxWidth: 468 }}>
 					<Button onClick={this.handlePrev}>{'<'}</Button>
 
@@ -78,9 +77,7 @@ export default createClass({
 
 					<Button onClick={this.handleNext}>{'>'}</Button>
 				</div>
-
-				selectedDays:
-				{' '}
+				selectedDays:{' '}
 				{_.map(selectedDays, selected =>
 					selected.toLocaleDateString('en-US')
 				).join(', ')}

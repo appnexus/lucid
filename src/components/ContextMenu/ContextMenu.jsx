@@ -232,12 +232,12 @@ const ContextMenu = createClass({
 		const alignmentOffset = !_.isUndefined(this.props.alignmentOffset)
 			? this.props.alignmentOffset
 			: alignment === ContextMenu.CENTER
-					? getAlignmentOffset(
-							_.includes([ContextMenu.UP, ContextMenu.DOWN], direction)
-								? flyOutWidth
-								: flyOutHeight
-						)
-					: 0;
+				? getAlignmentOffset(
+						_.includes([ContextMenu.UP, ContextMenu.DOWN], direction)
+							? flyOutWidth
+							: flyOutHeight
+					)
+				: 0;
 
 		const { CENTER, DOWN, END, LEFT, RIGHT, START, UP } = ContextMenu;
 
@@ -402,25 +402,25 @@ const ContextMenu = createClass({
 				style={style}
 			>
 				{targetChildren}
-				{isExpanded
-					? <Portal
-							ref="flyOutPortal"
-							{...flyProps}
-							className={cx(
-								'&-FlyOut',
-								`&-FlyOut-${direction}`,
-								flyProps.className
-							)}
-							portalId={portalId}
-							style={{
-								minWidth: targetRect.width + minWidthOffset,
-								...this.getFlyoutPosition(),
-								...flyProps.style,
-							}}
-						>
-							{flyProps.children}
-						</Portal>
-					: null}
+				{isExpanded ? (
+					<Portal
+						ref="flyOutPortal"
+						{...flyProps}
+						className={cx(
+							'&-FlyOut',
+							`&-FlyOut-${direction}`,
+							flyProps.className
+						)}
+						portalId={portalId}
+						style={{
+							minWidth: targetRect.width + minWidthOffset,
+							...this.getFlyoutPosition(),
+							...flyProps.style,
+						}}
+					>
+						{flyProps.children}
+					</Portal>
+				) : null}
 			</TargetElementType>
 		);
 	},

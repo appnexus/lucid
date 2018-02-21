@@ -10,9 +10,7 @@ import {
 } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './VerticalTabs.reducers';
-import {
-	VerticalListMenuDumb as VerticalListMenu,
-} from '../VerticalListMenu/VerticalListMenu';
+import { VerticalListMenuDumb as VerticalListMenu } from '../VerticalListMenu/VerticalListMenu';
 
 const cx = lucidClassNames.bind('&-VerticalTabs');
 
@@ -103,9 +101,10 @@ const VerticalTabs = createClass({
 			isSelected: true,
 		});
 
-		const actualSelectedIndex = selectedIndexFromChildren !== -1
-			? selectedIndexFromChildren
-			: selectedIndex;
+		const actualSelectedIndex =
+			selectedIndexFromChildren !== -1
+				? selectedIndexFromChildren
+				: selectedIndex;
 
 		return (
 			<div

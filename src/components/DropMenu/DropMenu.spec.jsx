@@ -34,7 +34,9 @@ describe('DropMenu', () => {
 				const wrapper = shallow(
 					<DropMenu className="MyDropMenu">
 						<button>button</button>
-						<Control>control <i>italic</i></Control>
+						<Control>
+							control <i>italic</i>
+						</Control>
 						<Option>option a</Option>
 						<Option>option b</Option>
 						<Option>option c</Option>

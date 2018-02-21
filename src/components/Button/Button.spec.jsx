@@ -39,7 +39,10 @@ describe('Button', () => {
 		// TODO: make this a generic test
 		it('should have the Button class', () => {
 			const wrapper = shallow(<Button />);
-			const classNames = wrapper.find('button').prop('className').split(' ');
+			const classNames = wrapper
+				.find('button')
+				.prop('className')
+				.split(' ');
 			assert(
 				_.includes(classNames, 'lucid-Button'),
 				`'${classNames}' should include 'lucid-Button'`
@@ -48,7 +51,10 @@ describe('Button', () => {
 
 		it('should have a button with the "active" class when active is true', () => {
 			const wrapper = shallow(<Button isActive={true} />);
-			const classNames = wrapper.find('button').prop('className').split(' ');
+			const classNames = wrapper
+				.find('button')
+				.prop('className')
+				.split(' ');
 			assert(
 				_.includes(classNames, 'lucid-Button-is-active'),
 				`'${classNames}' should include 'lucid-Button-is-active'`

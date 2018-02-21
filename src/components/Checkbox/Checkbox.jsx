@@ -115,20 +115,22 @@ const Checkbox = createClass({
 					onClick={this.handleSpanClick}
 					className={cx('&-visualization-container')}
 				/>
-				{isIndeterminate
-					? <span
-							onClick={this.handleSpanClick}
-							className={cx('&-visualization-indeterminate')}
-						>
-							<span className={cx('&-visualization-indeterminate-line')} />
-						</span>
-					: <span
-							onClick={this.handleSpanClick}
-							className={cx('&-visualization-checkmark')}
-						>
-							<span className={cx('&-visualization-checkmark-stem')} />
-							<span className={cx('&-visualization-checkmark-kick')} />
-						</span>}
+				{isIndeterminate ? (
+					<span
+						onClick={this.handleSpanClick}
+						className={cx('&-visualization-indeterminate')}
+					>
+						<span className={cx('&-visualization-indeterminate-line')} />
+					</span>
+				) : (
+					<span
+						onClick={this.handleSpanClick}
+						className={cx('&-visualization-checkmark')}
+					>
+						<span className={cx('&-visualization-checkmark-stem')} />
+						<span className={cx('&-visualization-checkmark-kick')} />
+					</span>
+				)}
 			</div>
 		);
 	},

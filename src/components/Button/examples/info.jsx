@@ -21,23 +21,33 @@ export default createClass({
 		return (
 			<section style={sectionStyle}>
 				<article style={articleStyle}>
-					<Button style={buttonStyle} kind="info">Info</Button>
-					<Button kind="info" isDisabled={true}>Disabled</Button>
+					<Button style={buttonStyle} kind="info">
+						Info
+					</Button>
+					<Button kind="info" isDisabled={true}>
+						Disabled
+					</Button>
 				</article>
 				<article style={articleStyle}>
-					<Button style={buttonStyle} kind="info" size="short">Short</Button>
+					<Button style={buttonStyle} kind="info" size="short">
+						Short
+					</Button>
 					<Button kind="info" size="short" isDisabled={true}>
 						Short disabled
 					</Button>
 				</article>
 				<article style={articleStyle}>
-					<Button style={buttonStyle} kind="info" size="small">Small</Button>
+					<Button style={buttonStyle} kind="info" size="small">
+						Small
+					</Button>
 					<Button kind="info" size="small" isDisabled={true}>
 						Small disabled
 					</Button>
 				</article>
 				<article style={articleStyle}>
-					<Button style={buttonStyle} kind="info" size="large">Large</Button>
+					<Button style={buttonStyle} kind="info" size="large">
+						Large
+					</Button>
 					<Button kind="info" size="large" isDisabled={true}>
 						Large disabled
 					</Button>
