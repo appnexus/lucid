@@ -7,7 +7,6 @@ export default createClass({
 		return (
 			<div>
 				<EnvelopeIcon isDisabled />
-				<EnvelopeIcon isDisabled isBadge />
 			</div>
 		);
 	},

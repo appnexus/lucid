@@ -7,7 +7,6 @@ export default createClass({
 		return (
 			<div>
 				<BookIcon isDisabled />
-				<BookIcon isDisabled isBadge />
 			</div>
 		);
 	},

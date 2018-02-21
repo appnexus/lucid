@@ -7,7 +7,6 @@ export default createClass({
 		return (
 			<div>
 				<ChatIcon isDisabled />
-				<ChatIcon isDisabled isBadge />
 			</div>
 		);
 	},

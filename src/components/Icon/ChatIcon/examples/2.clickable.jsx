@@ -7,7 +7,6 @@ export default createClass({
 		return (
 			<div>
 				<ChatIcon isClickable />
-				<ChatIcon isClickable isBadge />
 			</div>
 		);
 	},
