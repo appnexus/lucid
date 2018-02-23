@@ -12,7 +12,7 @@ const ChatIcon = createClass({
 	statics: {
 		peek: {
 			description: `
-				A book icon.
+				A chat icon.
 			`,
 			categories: ['visual design', 'icons'],
 			extend: 'Icon',
