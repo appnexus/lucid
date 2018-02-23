@@ -12,7 +12,7 @@ const EnvelopeIcon = createClass({
 	statics: {
 		peek: {
 			description: `
-				A book icon.
+				An Envelope icon.
 			`,
 			categories: ['visual design', 'icons'],
 			extend: 'Icon',
