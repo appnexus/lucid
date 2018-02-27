@@ -58,10 +58,12 @@ import BarChart from './components/BarChart/BarChart';
 import Bars from './components/Bars/Bars';
 import BeakerIcon from './components/Icon/BeakerIcon/BeakerIcon';
 import BellIcon from './components/Icon/BellIcon/BellIcon';
+import BookIcon from './components/Icon/BookIcon/BookIcon';
 import Breadcrumb from './components/Breadcrumb/Breadcrumb';
 import Button from './components/Button/Button';
 import CalendarIcon from './components/Icon/CalendarIcon/CalendarIcon';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
+import ChatIcon from './components/Icon/ChatIcon/ChatIcon';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
 import Checkbox from './components/Checkbox/Checkbox';
 import CheckboxLabeled from './components/CheckboxLabeled/CheckboxLabeled';
@@ -85,6 +87,7 @@ import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EditPageIcon from './components/Icon/EditPageIcon/EditPageIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
 import EmptyStateWrapper from './components/EmptyStateWrapper/EmptyStateWrapper';
+import EnvelopeIcon from './components/Icon/EnvelopeIcon/EnvelopeIcon';
 import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
 import FileIcon from './components/Icon/FileIcon/FileIcon';
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
@@ -205,12 +208,14 @@ export {
 	Bars,
 	BeakerIcon,
 	BellIcon,
+	BookIcon,
 	Breadcrumb,
 	Button,
 	ButtonGroup,
 	ButtonGroupDumb,
 	CalendarIcon,
 	CaretIcon,
+	ChatIcon,
 	Checkbox,
 	CheckboxLabeled,
 	CheckIcon,
@@ -238,6 +243,7 @@ export {
 	EditPageIcon,
 	EligibilityIcon,
 	EmptyStateWrapper,
+	EnvelopeIcon,
 	EqualsIcon,
 	Expander,
 	ExpanderDumb,
