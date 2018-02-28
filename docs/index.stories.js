@@ -59,7 +59,9 @@ const styles = {
 		outline: 'none',
 	},
 	ul: {
-		listStyleImage: `url('data:image/svg+xml;base64,${window.btoa(checkIconSVG)}')`,
+		listStyleImage: `url('data:image/svg+xml;base64,${window.btoa(
+			checkIconSVG
+		)}')`,
 	},
 	li: {
 		margin: '8px 0',
@@ -90,14 +92,8 @@ class ArticlePage extends React.Component {
 	}
 
 	componentDidMount() {
-		if (
-			typeof window !== 'undefined' &&
-			window.document &&
-			window.document.body &&
-			window.document.body.parentElement &&
-			window.document.body.parentElement.scrollIntoView
-		) {
-			window.document.body.parentElement.scrollIntoView();
+		if (typeof window !== 'undefined') {
+			window.document.documentElement.scrollTop = 0;
 		}
 	}
 
@@ -147,25 +143,15 @@ storiesOf('Lucid UI', module)
 			{compile(introText).tree}
 		</ArticlePage>
 	))
-	.add('Readme', () => (
-		<ArticlePage>
-			{compile(readmeText).tree}
-		</ArticlePage>
-	))
+	.add('Readme', () => <ArticlePage>{compile(readmeText).tree}</ArticlePage>)
 	.add('Child Components', () => (
-		<ArticlePage>
-			{compile(childComponentsText).tree}
-		</ArticlePage>
+		<ArticlePage>{compile(childComponentsText).tree}</ArticlePage>
 	))
 	.add('Hybrid State Components', () => (
-		<ArticlePage>
-			{compile(hybridComponentsText).tree}
-		</ArticlePage>
+		<ArticlePage>{compile(hybridComponentsText).tree}</ArticlePage>
 	))
 	.add('Computed Props', () => (
-		<ArticlePage>
-			{compile(computedPropsText).tree}
-		</ArticlePage>
+		<ArticlePage>{compile(computedPropsText).tree}</ArticlePage>
 	));
 
 const loadedIcons = require('./load-icons');
@@ -187,65 +173,68 @@ const storiesOfIcons = storiesOf('Icons', module).add('All', () => (
 						margin: 10,
 					}}
 				>
-					<Icon />
-					{' '}
-					<LinkTo style={styles.link} kind="Icons" story={name}>{name}</LinkTo>
+					<Icon />{' '}
+					<LinkTo style={styles.link} kind="Icons" story={name}>
+						{name}
+					</LinkTo>
 				</div>
 			))}
 		</section>
 	</ArticlePage>
 ));
 
-_.forEach(loadedIcons, ({
-	name,
-	component,
-	examplesContext,
-	examplesContextRaw,
-}) => {
-	if (component._isPrivate || (component.peek && component.peek.isPrivate)) {
-		return;
+_.forEach(
+	loadedIcons,
+	({ name, component, examplesContext, examplesContextRaw }) => {
+		if (component._isPrivate || (component.peek && component.peek.isPrivate)) {
+			return;
+		}
+		const examples = getExamplesFromContext(
+			examplesContext,
+			examplesContextRaw
+		);
+		const firstExample = _.first(examples);
+		const FirstExampleComponent = firstExample.Example;
+		storiesOfIcons.add(
+			name,
+			exampleStory({
+				component,
+				code: firstExample.source,
+				example: FirstExampleComponent,
+				options: { showAddonPanel: true },
+			})
+		);
 	}
-	const examples = getExamplesFromContext(examplesContext, examplesContextRaw);
-	const firstExample = _.first(examples);
-	const FirstExampleComponent = firstExample.Example;
-	storiesOfIcons.add(
-		name,
-		exampleStory({
-			component,
-			code: firstExample.source,
-			example: FirstExampleComponent,
-			options: { showAddonPanel: true },
-		})
-	);
-});
+);
 
 const loadedComponents = require('./load-components');
 
-_.forEach(loadedComponents, ({
-	name,
-	component,
-	examplesContext,
-	examplesContextRaw,
-}) => {
-	if (component._isPrivate || (component.peek && component.peek.isPrivate)) {
-		return;
+_.forEach(
+	loadedComponents,
+	({ name, component, examplesContext, examplesContextRaw }) => {
+		if (component._isPrivate || (component.peek && component.peek.isPrivate)) {
+			return;
+		}
+		const examples = getExamplesFromContext(
+			examplesContext,
+			examplesContextRaw
+		);
+		_.reduce(
+			examples,
+			(componentStories, { name, Example, source }) =>
+				componentStories.add(
+					name,
+					exampleStory({
+						component,
+						code: source,
+						example: Example,
+						options: { showAddonPanel: true },
+					})
+				),
+			storiesOf(name, module)
+		);
 	}
-	const examples = getExamplesFromContext(examplesContext, examplesContextRaw);
-	_.reduce(
-		examples,
-		(componentStories, { name, Example, source }) =>
-			componentStories.add(
-				name,
-				exampleStory({
-					component,
-					code: source,
-					example: Example,
-					options: { showAddonPanel: true },
-				})
-			),
-		storiesOf(name, module)
-	);
-});
+);
 
 const requireExampleDotStoriesJs = require.context(
 	'./examples',

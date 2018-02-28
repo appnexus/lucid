@@ -53,14 +53,14 @@ class CodepenDefine extends React.Component {
 	}
 }
 
-const ExampleCode = ({ code, hasCodepen }) => (
+const ExampleCode = ({ code, hasCodepen, packageJson }) => (
 	<section
 		style={{
 			height: '100%',
 		}}
 	>
 		<div style={{ height: '100%' }}>
-			{hasCodepen &&
+			{hasCodepen && (
 				<CodepenDefine
 					data={{
 						title: 'Lucid Example',
@@ -68,35 +68,47 @@ const ExampleCode = ({ code, hasCodepen }) => (
 						layout: 'right',
 						editors: '0010',
 						html: '<div id="react-root"></div>',
-						js: code
-							.replace(/\s*import _ from 'lodash';\s*/, '')
-							.replace(
-								/\s*import (\{\s*(\s|\S)+\s*\}) from ('|")(\.\.\/)*(src\/)?index(\.js)?('|");/,
-								'const $1 = Lucid;'
-							)
-							.replace(' as ', ': ')
-							.replace(/\s*import React from 'react';\s*/, '')
-							.replace(
-								/\s*import createClass from 'create-react-class';\s*/,
-								''
-							)
-							.replace('createClass', 'createReactClass')
-							.replace('export default', 'const Example =') +
+						js:
+							code
+								.replace(/\s*import _ from 'lodash';\s*/, '')
+								.replace(
+									/\s*import (\{\s*(\s|\S)+\s*\}) from ('|")(\.\.\/)*(src\/)?index(\.js)?('|");/,
+									'const $1 = Lucid;'
+								)
+								.replace(' as ', ': ')
+								.replace(/\s*import React from 'react';\s*/, '')
+								.replace(
+									/\s*import createClass from 'create-react-class';\s*/,
+									''
+								)
+								.replace('createClass', 'createReactClass')
+								.replace('export default', 'const Example =') +
 							`
-	ReactDOM.render(
-	<Example />,
-	document.querySelector('#react-root')
-	);`,
+ReactDOM.render(
+  <Example />,
+  document.querySelector('#react-root')
+);`,
 						js_pre_processor: 'babel',
-						head: '<style>html,body {font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;}</style>',
-						css_external: 'https://unpkg.com/lucid-ui@2.31.0/dist/index.css',
+						head:
+							'<style>html,body {font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;}</style>',
+						css_external: encodeURI(
+							`https://unpkg.com/lucid-ui@${packageJson.version}/dist/index.css`
+						),
 						js_external: [
 							'https://unpkg.com/react@16/umd/react.development.js',
 							'https://unpkg.com/react-dom@16/umd/react-dom.development.js',
-							'https://unpkg.com/create-react-class@15.6.3/create-react-class.js',
-							'https://unpkg.com/lucid-ui@2.31.0/dist/lucid.min.js',
-							'https://unpkg.com/lodash@4.17.5/lodash.min.js',
-						].join(';'),
+							`https://unpkg.com/create-react-class@${
+								packageJson.dependencies['create-react-class']
+							}/create-react-class.min.js`,
+							`https://unpkg.com/lucid-ui@${
+								packageJson.version
+							}/dist/lucid.min.js`,
+							`https://unpkg.com/lodash@${
+								packageJson.dependencies.lodash
+							}/lodash.min.js`,
+						]
+							.map(encodeURI)
+							.join(';'),
 						js_module: true,
 					}}
 				>
@@ -112,7 +124,8 @@ const ExampleCode = ({ code, hasCodepen }) => (
 						height={40}
 						title="Open in CodePen"
 					/>
-				</CodepenDefine>}
+				</CodepenDefine>
+			)}
 			<div
 				style={{
 					height: '100%',
@@ -135,7 +148,14 @@ const ExampleCode = ({ code, hasCodepen }) => (
 );
 
 ExampleCode.defaultProps = {
-	hasCodepen: true,
+	hasCodepen: false,
+	packageJson: {
+		version: '2.31.2',
+		dependencies: {
+			'create-react-class': '^15.6.2',
+			lodash: '^4.11.0',
+		},
+	},
 };
 
 export default ExampleCode;

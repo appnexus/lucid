@@ -4,6 +4,7 @@ import addons from '@storybook/addons';
 import _ from 'lodash';
 import ExampleCode from './ExampleCode';
 import PropTypes from './PropTypes';
+import packageJson from '../../package.json';
 
 class CodePanel extends React.Component {
 	constructor(...args) {
@@ -44,7 +45,7 @@ class CodePanel extends React.Component {
 
 		return (
 			<div style={{ width: '100%' }}>
-				<ExampleCode code={code} />
+				<ExampleCode code={code} hasCodepen packageJson={packageJson} />
 			</div>
 		);
 	}
@@ -206,7 +207,8 @@ SettingsPanel.style = {
 		color: 'rgb(130, 130, 130)',
 		fontWeight: 'normal',
 		textTransform: 'uppercase',
-		fontFamily: '-apple-system, ".SFNSText-Regular", "San Francisco", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", "Lucida Grande", Arial, sans-serif',
+		fontFamily:
+			'-apple-system, ".SFNSText-Regular", "San Francisco", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", "Lucida Grande", Arial, sans-serif',
 		letterSpacing: 1,
 		padding: '5px 10px',
 	},
