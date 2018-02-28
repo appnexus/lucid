@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import '../src/index.less';
 import Button from '../src/components/Button/Button';
+import SingleSelect from '../src/components/SingleSelect/SingleSelect';
 
 storiesOf('Intro Stories', module)
 	.add('Hello, world!', () => (
@@ -57,19 +58,83 @@ storiesOf('Intro Stories', module)
 	));
 
 storiesOf('Dev Stories', module)
-	.add('developing in stories', () => <Button>Hello Button</Button>)
-	.add('for example', () => <Button>Hello Button</Button>);
+	.add('Developing in stories', () => (
+		<section>
+			<h1>Developing in stories</h1>
+			<ul>
+				<li>iterative</li>
+				<li>shareable</li>
+				<li>organized</li>
+			</ul>
+		</section>
+	))
+	.add('for example', () => (
+		<section>
+			<h1>For example...</h1>
+		</section>
+	));
 
 //storiesOf('Button', module)
 //	.add('with text', () => <Button>Hello Button</Button>)
 //	.add('with some emoji', () => <Button>😀 😎 👍 💯</Button>);
 
+class AddSelect extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			selectedIndex: null,
+			addedItems: [],
+		};
+		this.handleSelect = this.handleSelect.bind(this);
+		this.handleAdd = this.handleAdd.bind(this);
+	}
+
+	handleSelect(selectedIndex) {
+		this.setState({
+			selectedIndex,
+		});
+	}
+
+	handleAdd() {
+		const { addedItems, selectedIndex } = this.state;
+		this.setState({
+			addedItems: [...addedItems, this.props.items[selectedIndex]],
+		});
+	}
+
+	render() {
+		return (
+			<div>
+				<SingleSelect onSelect={this.handleSelect} Option={this.props.items} />
+				<Button style={{ marginLeft: 10 }} onClick={this.handleAdd}>
+					Add +
+				</Button>
+				<ul>{this.state.addedItems.map(item => <li>{item}</li>)}</ul>
+			</div>
+		);
+	}
+}
+
+//storiesOf('AddSelect', module)
+//	.add('basic', () => (<AddSelect items={['foo', 'bar', 'baz']}/>))
+
 storiesOf('Doc Stories', module)
-	.add('Dev env vs gallery', () => <Button>Hello Button</Button>)
-	.add('Lucid Docs!', () => (
+	.add('Dev env vs gallery', () => (
 		<section>
-			<a href="http://docspot.devnxs.net/projects/lucid/storybook1/">
-				Lucid Docs!
+			<h1>Dev env vs gallery</h1>
+			<ul>
+				<li>Storybook is a dev tool first</li>
+				<li>simple docs and examples</li>
+				<li>docs in storybook have limitations</li>
+				<li>addons can help</li>
+			</ul>
+		</section>
+	))
+	.add('Case study', () => (
+		<section>
+			<h1>Lucid Docs!</h1>
+			<a href="https://appnexus.github.io/lucid/">
+				https://appnexus.github.io/lucid/
 			</a>
 		</section>
 	));
