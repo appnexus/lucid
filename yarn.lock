@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@storybook/addon-actions@^3.3.12", "@storybook/addon-actions@^3.3.14":
+"@storybook/addon-actions@^3.3.14":
   version "3.3.14"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.3.14.tgz#b78e707b32130ad16ea8a0af62a66f23b5df502b"
   dependencies:
@@ -35,7 +35,7 @@
     global "^4.3.2"
     prop-types "^15.5.10"
 
-"@storybook/addon-options@^3.3.13":
+"@storybook/addon-options@^3.3.14":
   version "3.3.14"
   resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-3.3.14.tgz#578b59de3ca93b788662b3d863781611f7fc2e87"
 
@@ -59,7 +59,7 @@
   version "3.3.14"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-3.3.14.tgz#03d5bc6036a8e82351a349bec11a8c89f06c901e"
 
-"@storybook/components@^3.3.12", "@storybook/components@^3.3.14":
+"@storybook/components@^3.3.14":
   version "3.3.14"
   resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.3.14.tgz#84ffcb5ac6a7d40e145402ed0d1521e6ad1b2d4d"
   dependencies:
