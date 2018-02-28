@@ -39,76 +39,85 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       x={115}
       y={300}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={100}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={100}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={1}
-          y={300}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        one
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={false}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-0"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 1
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 2
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-2"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 3
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 5
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            1,
+          ],
+          Array [
+            0,
+            2,
+          ],
+          Array [
+            0,
+            3,
+          ],
+          Array [
+            0,
+            5,
+          ],
+        ]
+      }
+      seriesIndex={0}
+      width={152}
+      x={1}
+      xField="x"
+      xFormatter={[Function]}
+      y={300}
+    />
   </g>
   <g
     key="1"
@@ -145,76 +154,85 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       x={284}
       y={280}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={120}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={120}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={170}
-          y={280}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        two
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={false}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-0"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 2
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 3
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-2"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 4
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 6
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            2,
+          ],
+          Array [
+            0,
+            3,
+          ],
+          Array [
+            0,
+            4,
+          ],
+          Array [
+            0,
+            6,
+          ],
+        ]
+      }
+      seriesIndex={1}
+      width={152}
+      x={170}
+      xField="x"
+      xFormatter={[Function]}
+      y={280}
+    />
   </g>
   <g
     key="2"
@@ -251,76 +269,85 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       x={453}
       y={280}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={120}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={120}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={339}
-          y={280}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        three
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={false}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-0"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 2
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 4
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-2"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 5
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 6
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            2,
+          ],
+          Array [
+            0,
+            4,
+          ],
+          Array [
+            0,
+            5,
+          ],
+          Array [
+            0,
+            6,
+          ],
+        ]
+      }
+      seriesIndex={2}
+      width={152}
+      x={339}
+      xField="x"
+      xFormatter={[Function]}
+      y={280}
+    />
   </g>
   <g
     key="3"
@@ -357,76 +384,85 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       x={622}
       y={260}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={140}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={140}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={508}
-          y={260}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        four
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={false}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-0"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 3
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 6
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-2"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 7
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 7
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            3,
+          ],
+          Array [
+            0,
+            6,
+          ],
+          Array [
+            0,
+            7,
+          ],
+          Array [
+            0,
+            7,
+          ],
+        ]
+      }
+      seriesIndex={3}
+      width={152}
+      x={508}
+      xField="x"
+      xFormatter={[Function]}
+      y={260}
+    />
   </g>
   <g
     key="4"
@@ -463,76 +499,85 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       x={791}
       y={240}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={180}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={180}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={677}
-          y={220}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        five
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={false}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-0"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 4
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 8
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-2"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 9
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 8
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            4,
+          ],
+          Array [
+            0,
+            8,
+          ],
+          Array [
+            0,
+            9,
+          ],
+          Array [
+            0,
+            8,
+          ],
+        ]
+      }
+      seriesIndex={4}
+      width={152}
+      x={677}
+      xField="x"
+      xFormatter={[Function]}
+      y={220}
+    />
   </g>
   <g
     key="5"
@@ -569,76 +614,85 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 1`] = 
       x={960}
       y={380}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={400}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={400}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={846}
-          y={0}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        six
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={false}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-0"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 20
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 8
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-2"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 9
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 1
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            20,
+          ],
+          Array [
+            0,
+            8,
+          ],
+          Array [
+            0,
+            9,
+          ],
+          Array [
+            0,
+            1,
+          ],
+        ]
+      }
+      seriesIndex={5}
+      width={152}
+      x={846}
+      xField="x"
+      xFormatter={[Function]}
+      y={0}
+    />
   </g>
 </g>
 `;
@@ -682,76 +736,85 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       x={1}
       y={284.2105263157895}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={115.78947368421052}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={115.78947368421052}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={1}
-          y={284.2105263157895}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        one
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={true}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-0"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 1
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 2
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-2"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 3
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 5
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            1,
+          ],
+          Array [
+            1,
+            3,
+          ],
+          Array [
+            3,
+            6,
+          ],
+          Array [
+            6,
+            11,
+          ],
+        ]
+      }
+      seriesIndex={0}
+      width={152}
+      x={1}
+      xField="x"
+      xFormatter={[Function]}
+      y={284.2105263157895}
+    />
   </g>
   <g
     key="1"
@@ -788,76 +851,85 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       x={170}
       y={242.10526315789474}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={157.89473684210526}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={157.89473684210526}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={170}
-          y={242.10526315789474}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        two
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={true}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-0"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 2
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 3
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-2"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 4
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 6
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            2,
+          ],
+          Array [
+            2,
+            5,
+          ],
+          Array [
+            5,
+            9,
+          ],
+          Array [
+            9,
+            15,
+          ],
+        ]
+      }
+      seriesIndex={1}
+      width={152}
+      x={170}
+      xField="x"
+      xFormatter={[Function]}
+      y={242.10526315789474}
+    />
   </g>
   <g
     key="2"
@@ -894,76 +966,85 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       x={339}
       y={221.05263157894737}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={178.94736842105263}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={178.94736842105263}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={339}
-          y={221.05263157894737}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        three
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={true}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-0"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 2
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 4
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-2"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 5
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 6
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            2,
+          ],
+          Array [
+            2,
+            6,
+          ],
+          Array [
+            6,
+            11,
+          ],
+          Array [
+            11,
+            17,
+          ],
+        ]
+      }
+      seriesIndex={2}
+      width={152}
+      x={339}
+      xField="x"
+      xFormatter={[Function]}
+      y={221.05263157894737}
+    />
   </g>
   <g
     key="3"
@@ -1000,76 +1081,85 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       x={508}
       y={157.89473684210526}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={242.10526315789474}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={242.10526315789474}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={508}
-          y={157.89473684210526}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        four
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={true}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-0"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 3
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 6
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-2"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 7
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 7
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            3,
+          ],
+          Array [
+            3,
+            9,
+          ],
+          Array [
+            9,
+            16,
+          ],
+          Array [
+            16,
+            23,
+          ],
+        ]
+      }
+      seriesIndex={3}
+      width={152}
+      x={508}
+      xField="x"
+      xFormatter={[Function]}
+      y={157.89473684210526}
+    />
   </g>
   <g
     key="4"
@@ -1106,76 +1196,85 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       x={677}
       y={94.73684210526312}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={305.2631578947369}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={305.2631578947369}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={677}
-          y={94.73684210526312}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        five
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={true}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-0"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 4
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 8
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-2"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 9
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 8
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            4,
+          ],
+          Array [
+            4,
+            12,
+          ],
+          Array [
+            12,
+            21,
+          ],
+          Array [
+            21,
+            29,
+          ],
+        ]
+      }
+      seriesIndex={4}
+      width={152}
+      x={677}
+      xField="x"
+      xFormatter={[Function]}
+      y={94.73684210526312}
+    />
   </g>
   <g
     key="5"
@@ -1212,76 +1311,85 @@ exports[`Bars [common] example testing should match snapshot(s) for basic 2`] = 
       x={846}
       y={0}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={400}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={400}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={846}
-          y={0}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        six
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={true}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-0"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 20
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 8
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-2"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 9
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 1
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            20,
+          ],
+          Array [
+            20,
+            28,
+          ],
+          Array [
+            28,
+            37,
+          ],
+          Array [
+            37,
+            38,
+          ],
+        ]
+      }
+      seriesIndex={5}
+      width={152}
+      x={846}
+      xField="x"
+      xFormatter={[Function]}
+      y={0}
+    />
   </g>
 </g>
 `;
@@ -1325,76 +1433,85 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       x={115}
       y={300}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={100}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={100}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={1}
-          y={300}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        one
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={false}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-good"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 1
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 2
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-bad"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 3
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 5
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            1,
+          ],
+          Array [
+            0,
+            2,
+          ],
+          Array [
+            0,
+            3,
+          ],
+          Array [
+            0,
+            5,
+          ],
+        ]
+      }
+      seriesIndex={0}
+      width={152}
+      x={1}
+      xField="x"
+      xFormatter={[Function]}
+      y={300}
+    />
   </g>
   <g
     key="1"
@@ -1431,76 +1548,85 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       x={284}
       y={280}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={120}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={120}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={170}
-          y={280}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        two
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={false}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-good"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 2
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 3
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-bad"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 4
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 6
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            2,
+          ],
+          Array [
+            0,
+            3,
+          ],
+          Array [
+            0,
+            4,
+          ],
+          Array [
+            0,
+            6,
+          ],
+        ]
+      }
+      seriesIndex={1}
+      width={152}
+      x={170}
+      xField="x"
+      xFormatter={[Function]}
+      y={280}
+    />
   </g>
   <g
     key="2"
@@ -1537,76 +1663,85 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       x={453}
       y={280}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={120}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={120}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={339}
-          y={280}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        three
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={false}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-good"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 2
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 4
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-bad"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 5
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 6
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            2,
+          ],
+          Array [
+            0,
+            4,
+          ],
+          Array [
+            0,
+            5,
+          ],
+          Array [
+            0,
+            6,
+          ],
+        ]
+      }
+      seriesIndex={2}
+      width={152}
+      x={339}
+      xField="x"
+      xFormatter={[Function]}
+      y={280}
+    />
   </g>
   <g
     key="3"
@@ -1643,76 +1778,85 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       x={622}
       y={260}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={140}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={140}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={508}
-          y={260}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        four
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={false}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-good"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 3
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 6
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-bad"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 7
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 7
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            3,
+          ],
+          Array [
+            0,
+            6,
+          ],
+          Array [
+            0,
+            7,
+          ],
+          Array [
+            0,
+            7,
+          ],
+        ]
+      }
+      seriesIndex={3}
+      width={152}
+      x={508}
+      xField="x"
+      xFormatter={[Function]}
+      y={260}
+    />
   </g>
   <g
     key="4"
@@ -1749,76 +1893,85 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       x={791}
       y={240}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={180}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={180}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={677}
-          y={220}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        five
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={false}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-good"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 4
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 8
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-bad"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 9
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 8
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            4,
+          ],
+          Array [
+            0,
+            8,
+          ],
+          Array [
+            0,
+            9,
+          ],
+          Array [
+            0,
+            8,
+          ],
+        ]
+      }
+      seriesIndex={4}
+      width={152}
+      x={677}
+      xField="x"
+      xFormatter={[Function]}
+      y={220}
+    />
   </g>
   <g
     key="5"
@@ -1855,76 +2008,85 @@ exports[`Bars [common] example testing should match snapshot(s) for custom-color
       x={960}
       y={380}
     />
-    <ToolTip
-      alignment="center"
-      direction="up"
-      flyOutMaxWidth="none"
-      flyOutStyle={Object {}}
-      isCloseable={false}
+    <Component
+      data={
+        Array [
+          Object {
+            "x": "one",
+            "y0": 1,
+            "y1": 2,
+            "y2": 3,
+            "y3": 5,
+          },
+          Object {
+            "x": "two",
+            "y0": 2,
+            "y1": 3,
+            "y2": 4,
+            "y3": 6,
+          },
+          Object {
+            "x": "three",
+            "y0": 2,
+            "y1": 4,
+            "y2": 5,
+            "y3": 6,
+          },
+          Object {
+            "x": "four",
+            "y0": 3,
+            "y1": 6,
+            "y2": 7,
+            "y3": 7,
+          },
+          Object {
+            "x": "five",
+            "y0": 4,
+            "y1": 8,
+            "y2": 9,
+            "y3": 8,
+          },
+          Object {
+            "x": "six",
+            "y0": 20,
+            "y1": 8,
+            "y2": 9,
+            "y3": 1,
+          },
+        ]
+      }
+      height={400}
       isExpanded={false}
-      kind="default"
-      onClose={[Function]}
+      onMouseEnter={[Function]}
       onMouseOut={[Function]}
-      onMouseOver={[Function]}
-      portalId={null}
-    >
-      <ToolTip.Target
-        elementType="g"
-      >
-        <rect
-          className="lucid-Bars-tooltip-hover-zone"
-          height={400}
-          onMouseOut={[Function]}
-          onMouseOver={[Function]}
-          width={152}
-          x={846}
-          y={0}
-        />
-      </ToolTip.Target>
-      <ToolTip.Title>
-        six
-      </ToolTip.Title>
-      <ToolTip.Body>
-        <Legend
-          hasBorders={false}
-          isReversed={false}
-          orient="vertical"
-        >
-          <Legend.Item
-            color="color-chart-good"
-            hasPoint={true}
-            key="0"
-            pointKind={1}
-          >
-            y0: 20
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-1"
-            hasPoint={true}
-            key="1"
-            pointKind={1}
-          >
-            y1: 8
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-bad"
-            hasPoint={true}
-            key="2"
-            pointKind={1}
-          >
-            y2: 9
-          </Legend.Item>
-          <Legend.Item
-            color="color-chart-3"
-            hasPoint={true}
-            key="3"
-            pointKind={1}
-          >
-            y3: 1
-          </Legend.Item>
-        </Legend>
-      </ToolTip.Body>
-    </ToolTip>
+      renderBody={[Function]}
+      series={
+        Array [
+          Array [
+            0,
+            20,
+          ],
+          Array [
+            0,
+            8,
+          ],
+          Array [
+            0,
+            9,
+          ],
+          Array [
+            0,
+            1,
+          ],
+        ]
+      }
+      seriesIndex={5}
+      width={152}
+      x={846}
+      xField="x"
+      xFormatter={[Function]}
+      y={0}
+    />
   </g>
 </g>
 `;

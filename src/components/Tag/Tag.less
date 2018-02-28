@@ -3,9 +3,20 @@
 
 .lucid-Tag {
 	display: inline-flex;
-	margin: 0 @size-XXS @size-XXS 0;
+	margin: 0 @size-XS @size-XS 0;
 
-	&&-is-removable&-leaf {
+	&-leaf {
+		margin: 0 @size-XXS @size-XXS 0;
+
+		.lucid-Tag-inner {
+			border: 1px solid @color-gray;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&-leaf&-is-removable {
 		.lucid-Tag-inner {
 			border-color: @featured-color-primary-borderColorMedium;
 		}
@@ -14,12 +25,11 @@
 	& &-inner {
 		border-radius: @size-borderRadius;
 		background: @color-lightGray;
-		border: 1px solid @color-gray;
 		font-weight: bold;
 		font-size: @size-font;
 		color: @color-textColor;
 		width: 100%; // fix for IE 11 bug flex wrapping bug
-		padding: @size-XS @size-XS @size-XXS;
+		padding: 5px @size-XS 2px;
 		display: inline-flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -52,11 +62,11 @@
 			padding: @size-XXS @size-XS 0;
 
 			.lucid-Tag-inner-children {
-				padding: 0 @size-XS @size-XXS 0;
+				padding: 0 0 @size-XXS;
 			}
 
 			.lucid-Tag-remove {
-				padding: 0;
+				padding: 0 0 0 @size-XS;
 
 				&-button {
 					fill: @color-mediumGray;

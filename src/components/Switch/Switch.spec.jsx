@@ -97,7 +97,9 @@ describe('Switch', () => {
 
 describe('Switch', () => {
 	function simulateEvent(reactElement, selector, event) {
-		mount(reactElement).find(selector).simulate(event);
+		mount(reactElement)
+			.find(selector)
+			.simulate(event);
 	}
 
 	function verifyArgumentsWhenFalse(event) {

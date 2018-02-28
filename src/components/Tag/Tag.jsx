@@ -77,11 +77,10 @@ const Tag = createClass({
 				)}
 			>
 				<div className={cx('&-inner')}>
-					{hasOtherChildren &&
-						<span className={cx('&-inner-children')}>
-							{otherChildren}
-						</span>}
-					{isRemovable &&
+					{hasOtherChildren && (
+						<span className={cx('&-inner-children')}>{otherChildren}</span>
+					)}
+					{isRemovable && (
 						<span className={cx('&-remove')} onClick={this.handleRemove}>
 							<CrossIcon
 								className={cx('&-remove-button')}
@@ -89,7 +88,8 @@ const Tag = createClass({
 								viewBox="4 4 8 8"
 								isClickable
 							/>
-						</span>}
+						</span>
+					)}
 					{subTags}
 				</div>
 			</div>

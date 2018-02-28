@@ -75,7 +75,10 @@ describe('Paginator', () => {
 		describe('selectedPageIndex', () => {
 			it('should set the value of the TextField to selectedPageIndex + 1', () => {
 				const wrapper = shallow(<Paginator selectedPageIndex={1} />);
-				const textFieldWrapper = wrapper.find(TextField).first().shallow();
+				const textFieldWrapper = wrapper
+					.find(TextField)
+					.first()
+					.shallow();
 				assert.equal(textFieldWrapper.prop('value'), 2, 'must be 2');
 			});
 		});
@@ -148,7 +151,11 @@ describe('Paginator', () => {
 					<HybridPaginator totalCount={totalCount} pageSizeOptions={[10]} />
 				);
 				assert.equal(
-					wrapper.find(Paginator).shallow().find('span').text(),
+					wrapper
+						.find(Paginator)
+						.shallow()
+						.find('span')
+						.text(),
 					'of 10',
 					'must be "of 10"'
 				);
@@ -189,7 +196,10 @@ describe('Paginator', () => {
 				const wrapper = shallow(
 					<Paginator TextField={explicitTextFieldProps} />
 				);
-				const textFieldProps = wrapper.find(TextField).first().props();
+				const textFieldProps = wrapper
+					.find(TextField)
+					.first()
+					.props();
 
 				_.forEach(explicitTextFieldProps, (prop, name) => {
 					assert.strictEqual(textFieldProps[name], prop);
@@ -216,7 +226,10 @@ describe('Paginator', () => {
 							onPageSelect={onPageSelect}
 						/>
 					);
-					wrapper.find('button').first().simulate('click');
+					wrapper
+						.find('button')
+						.first()
+						.simulate('click');
 					assert(onPageSelect.calledOnce);
 					const [pageIndex, totalPages] = onPageSelect.firstCall.args;
 					assert.equal(pageIndex, 0, 'must be 0');
@@ -234,7 +247,10 @@ describe('Paginator', () => {
 							onPageSelect={onPageSelect}
 						/>
 					);
-					wrapper.find('button').first().simulate('click');
+					wrapper
+						.find('button')
+						.first()
+						.simulate('click');
 					assert(onPageSelect.calledOnce);
 					const [pageIndex, totalPages] = onPageSelect.firstCall.args;
 					assert.equal(pageIndex, 0, 'must be 0');

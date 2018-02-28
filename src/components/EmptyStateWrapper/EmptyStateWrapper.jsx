@@ -97,36 +97,35 @@ const EmptyStateWrapper = createClass({
 			{ children: 'You have no data.' }
 		);
 
-		return isLoading
-			? <LoadingIndicator
-					className={cx('&', className)}
-					isLoading
-					{...omitProps(passThroughs, EmptyStateWrapper, [], false)}
-				>
-					{children}
-				</LoadingIndicator>
-			: <OverlayWrapper
-					className={cx('&', className)}
-					hasOverlay={false}
-					isVisible={isEmpty}
-					{...omitProps(passThroughs, EmptyStateWrapper, [], false)}
-				>
-					<OverlayWrapper.Message className={cx('&-message-container')}>
-						<div className={cx('&-message-header')} />
-						<div className={cx('&-message-contents')}>
-							<header
-								{...emptyMessageTitleProp}
-								className={cx(
-									'&-message-title',
-									emptyMessageTitleProp.className
-								)}
-							/>
-							{emptyMessageBodyProp && <div {...emptyMessageBodyProp} />}
-						</div>
-					</OverlayWrapper.Message>
+		return isLoading ? (
+			<LoadingIndicator
+				className={cx('&', className)}
+				isLoading
+				{...omitProps(passThroughs, EmptyStateWrapper, [], false)}
+			>
+				{children}
+			</LoadingIndicator>
+		) : (
+			<OverlayWrapper
+				className={cx('&', className)}
+				hasOverlay={false}
+				isVisible={isEmpty}
+				{...omitProps(passThroughs, EmptyStateWrapper, [], false)}
+			>
+				<OverlayWrapper.Message className={cx('&-message-container')}>
+					<div className={cx('&-message-header')} />
+					<div className={cx('&-message-contents')}>
+						<header
+							{...emptyMessageTitleProp}
+							className={cx('&-message-title', emptyMessageTitleProp.className)}
+						/>
+						{emptyMessageBodyProp && <div {...emptyMessageBodyProp} />}
+					</div>
+				</OverlayWrapper.Message>
 
-					{children}
-				</OverlayWrapper>;
+				{children}
+			</OverlayWrapper>
+		);
 	},
 });
 

@@ -21,14 +21,18 @@ export default createClass({
 		return (
 			<section style={sectionStyle}>
 				<article style={articleStyle}>
-					<Button style={buttonStyle} kind="invisible">Invisible</Button>
+					<Button style={buttonStyle} kind="invisible">
+						Invisible
+					</Button>
 					<Button style={buttonStyle} kind="invisible" isDisabled={true}>
 						Invisible disabled
 					</Button>
 					<Button style={buttonStyle} kind="invisible">
 						<PlusIcon />Invisible
 					</Button>
-					<Button kind="invisible" hasOnlyIcon><PlusIcon /></Button>
+					<Button kind="invisible" hasOnlyIcon>
+						<PlusIcon />
+					</Button>
 				</article>
 			</section>
 		);

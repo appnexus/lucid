@@ -194,34 +194,26 @@ const VerticalListMenu = createClass({
 								})}
 								onClick={_.partial(this.handleClickItem, index, itemChildProp)}
 							>
-								<div className={cx('&-Item-content-text')}>
-									{otherChildren}
-								</div>
-								{hasExpander
-									? <div
-											className={cx('&-Item-expander')}
-											onClick={_.partial(
-												this.handleToggle,
-												index,
-												itemChildProp
-											)}
-										>
-											<ChevronIcon
-												direction={actualIsExpanded ? 'up' : 'down'}
-											/>
-										</div>
-									: null}
+								<div className={cx('&-Item-content-text')}>{otherChildren}</div>
+								{hasExpander ? (
+									<div
+										className={cx('&-Item-expander')}
+										onClick={_.partial(this.handleToggle, index, itemChildProp)}
+									>
+										<ChevronIcon direction={actualIsExpanded ? 'up' : 'down'} />
+									</div>
+								) : null}
 							</div>
 
-							{!_.isEmpty(listChildren)
-								? <Collapsible
-										{...collapsibleProps}
-										className={cx('&-Item-nested-list')}
-										isExpanded={actualIsExpanded}
-									>
-										{listChildren}
-									</Collapsible>
-								: null}
+							{!_.isEmpty(listChildren) ? (
+								<Collapsible
+									{...collapsibleProps}
+									className={cx('&-Item-nested-list')}
+									isExpanded={actualIsExpanded}
+								>
+									{listChildren}
+								</Collapsible>
+							) : null}
 						</li>
 					);
 				})}

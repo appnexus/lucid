@@ -6,7 +6,7 @@ import * as d3Scale from 'd3-scale';
 import { common } from '../../util/generic-tests';
 import { shallow } from 'enzyme';
 
-import Bars from './Bars';
+import Bars, { PureToolTip } from './Bars';
 import Bar from '../Bar/Bar';
 import Legend from '../Legend/Legend';
 import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
@@ -22,7 +22,10 @@ const defaultXScale = d3Scale
 	.domain(['aye', 'bee', 'see'])
 	.range([0, 100]);
 
-const defaultYScale = d3Scale.scaleLinear().domain([0, 100]).range([1000, 0]);
+const defaultYScale = d3Scale
+	.scaleLinear()
+	.domain([0, 100])
+	.range([1000, 0]);
 
 describe('Bars', () => {
 	common(Bars, {
@@ -70,37 +73,33 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert(wrapper.find(Legend.Item).at(0).text(), 'Foo: 10');
-				assert(wrapper.find(Legend.Item).at(1).text(), 'Foo: 55');
-				assert(wrapper.find(Legend.Item).at(2).text(), 'Foo: 90');
-			});
-		});
-
-		describe('hasToolTips', () => {
-			it('should include ToolTip if true', () => {
-				const wrapper = shallow(
-					<Bars
-						data={defaultData}
-						xScale={defaultXScale}
-						yScale={defaultYScale}
-						hasToolTips
-					/>
+				assert(
+					wrapper
+						.find(PureToolTip)
+						.at(0)
+						.shallow()
+						.find(Legend.Item)
+						.text(),
+					'Foo: 10'
 				);
-
-				assert.equal(wrapper.find(ToolTip).length, 3);
-			});
-
-			it('should not include ToolTip if false', () => {
-				const wrapper = shallow(
-					<Bars
-						data={defaultData}
-						xScale={defaultXScale}
-						yScale={defaultYScale}
-						hasToolTips={false}
-					/>
+				assert(
+					wrapper
+						.find(PureToolTip)
+						.at(1)
+						.shallow()
+						.find(Legend.Item)
+						.text(),
+					'Foo: 55'
 				);
-
-				assert.equal(wrapper.find(ToolTip).length, 0);
+				assert(
+					wrapper
+						.find(PureToolTip)
+						.at(2)
+						.shallow()
+						.find(Legend.Item)
+						.text(),
+					'Foo: 90'
+				);
 			});
 		});
 
@@ -117,9 +116,27 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Bar).at(0).prop('color'), 'r');
-				assert.equal(wrapper.find(Bar).at(1).prop('color'), 'g');
-				assert.equal(wrapper.find(Bar).at(2).prop('color'), 'r');
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(0)
+						.prop('color'),
+					'r'
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(1)
+						.prop('color'),
+					'g'
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(2)
+						.prop('color'),
+					'r'
+				);
 			});
 
 			it('should be beat when theres a colorMap', () => {
@@ -137,9 +154,27 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Bar).at(0).prop('color'), 'r');
-				assert.equal(wrapper.find(Bar).at(1).prop('color'), '#ABC123');
-				assert.equal(wrapper.find(Bar).at(2).prop('color'), 'r');
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(0)
+						.prop('color'),
+					'r'
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(1)
+						.prop('color'),
+					'#ABC123'
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(2)
+						.prop('color'),
+					'r'
+				);
 			});
 		});
 
@@ -156,7 +191,13 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Bar).at(0).prop('color'), '#ABC333');
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(0)
+						.prop('color'),
+					'#ABC333'
+				);
 			});
 		});
 
@@ -171,12 +212,27 @@ describe('Bars', () => {
 				);
 
 				assert.equal(wrapper.find(Bar).length, 3, 'wrong number of Bar');
-				assert.equal(wrapper.find(Bar).at(0).prop('height'), 100);
 				assert.equal(
-					wrapper.find(Bar).at(1).prop('height'),
+					wrapper
+						.find(Bar)
+						.at(0)
+						.prop('height'),
+					100
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(1)
+						.prop('height'),
 					550.00000000000001
 				);
-				assert.equal(wrapper.find(Bar).at(2).prop('height'), 1000);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(2)
+						.prop('height'),
+					1000
+				);
 			});
 		});
 
@@ -196,9 +252,27 @@ describe('Bars', () => {
 				);
 
 				assert.equal(wrapper.find(Bar).length, 3, 'wrong number of Bar');
-				assert.equal(wrapper.find(Bar).at(0).prop('height'), 0);
-				assert.equal(wrapper.find(Bar).at(1).prop('height'), 500);
-				assert.equal(wrapper.find(Bar).at(2).prop('height'), 1000);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(0)
+						.prop('height'),
+					0
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(1)
+						.prop('height'),
+					500
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(2)
+						.prop('height'),
+					1000
+				);
 			});
 		});
 
@@ -212,11 +286,32 @@ describe('Bars', () => {
 						hasToolTips
 						xFormatter={str => str.toUpperCase()}
 					/>
-				);
+				).find(PureToolTip);
 
-				assert.equal(wrapper.find(ToolTip.Title).at(0).prop('children'), 'AYE');
-				assert.equal(wrapper.find(ToolTip.Title).at(1).prop('children'), 'BEE');
-				assert.equal(wrapper.find(ToolTip.Title).at(2).prop('children'), 'SEE');
+				assert.equal(
+					wrapper
+						.at(0)
+						.shallow()
+						.find(ToolTip.Title)
+						.prop('children'),
+					'AYE'
+				);
+				assert.equal(
+					wrapper
+						.at(1)
+						.shallow()
+						.find(ToolTip.Title)
+						.prop('children'),
+					'BEE'
+				);
+				assert.equal(
+					wrapper
+						.at(2)
+						.shallow()
+						.find(ToolTip.Title)
+						.prop('children'),
+					'SEE'
+				);
 			});
 		});
 
@@ -231,12 +326,27 @@ describe('Bars', () => {
 				);
 
 				assert.equal(wrapper.find(Bar).length, 3, 'wrong number of Bar');
-				assert.equal(wrapper.find(Bar).at(0).prop('height'), 100);
 				assert.equal(
-					wrapper.find(Bar).at(1).prop('height'),
+					wrapper
+						.find(Bar)
+						.at(0)
+						.prop('height'),
+					100
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(1)
+						.prop('height'),
 					550.00000000000001
 				);
-				assert.equal(wrapper.find(Bar).at(2).prop('height'), 1000);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(2)
+						.prop('height'),
+					1000
+				);
 			});
 
 			it('should work with time scales', () => {
@@ -248,7 +358,10 @@ describe('Bars', () => {
 					])
 					.range([0, 100]);
 
-				const yScale = d3Scale.scaleTime().domain([0, 100]).range([1000, 0]);
+				const yScale = d3Scale
+					.scaleTime()
+					.domain([0, 100])
+					.range([1000, 0]);
 
 				const wrapper = shallow(
 					<Bars
@@ -265,14 +378,50 @@ describe('Bars', () => {
 
 				assert.equal(wrapper.find(Bar).length, 3, 'wrong number of Bar');
 
-				assert.equal(wrapper.find(Bar).at(0).prop('width'), 50);
-				assert.equal(wrapper.find(Bar).at(0).prop('height'), 0);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(0)
+						.prop('width'),
+					50
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(0)
+						.prop('height'),
+					0
+				);
 
-				assert.equal(wrapper.find(Bar).at(1).prop('width'), 50);
-				assert.equal(wrapper.find(Bar).at(1).prop('height'), 500);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(1)
+						.prop('width'),
+					50
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(1)
+						.prop('height'),
+					500
+				);
 
-				assert.equal(wrapper.find(Bar).at(2).prop('width'), 50);
-				assert.equal(wrapper.find(Bar).at(2).prop('height'), 1000);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(2)
+						.prop('width'),
+					50
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(2)
+						.prop('height'),
+					1000
+				);
 			});
 		});
 
@@ -292,9 +441,27 @@ describe('Bars', () => {
 				);
 
 				assert.equal(wrapper.find(Bar).length, 3, 'wrong number of Bar');
-				assert.equal(wrapper.find(Bar).at(0).prop('height'), 0);
-				assert.equal(wrapper.find(Bar).at(1).prop('height'), 500);
-				assert.equal(wrapper.find(Bar).at(2).prop('height'), 1000);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(0)
+						.prop('height'),
+					0
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(1)
+						.prop('height'),
+					500
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(2)
+						.prop('height'),
+					1000
+				);
 			});
 
 			it('should handle multiple fields', () => {
@@ -312,15 +479,57 @@ describe('Bars', () => {
 				);
 
 				assert.equal(wrapper.find(Bar).length, 6, 'wrong number of Bar');
-				assert.equal(wrapper.find(Bar).at(0).prop('width'), 16);
-				assert.equal(wrapper.find(Bar).at(0).prop('height'), 0);
-				assert.equal(wrapper.find(Bar).at(1).prop('height'), 1000);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(0)
+						.prop('width'),
+					16
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(0)
+						.prop('height'),
+					0
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(1)
+						.prop('height'),
+					1000
+				);
 
-				assert.equal(wrapper.find(Bar).at(2).prop('height'), 500);
-				assert.equal(wrapper.find(Bar).at(3).prop('height'), 500);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(2)
+						.prop('height'),
+					500
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(3)
+						.prop('height'),
+					500
+				);
 
-				assert.equal(wrapper.find(Bar).at(4).prop('height'), 1000);
-				assert.equal(wrapper.find(Bar).at(5).prop('height'), 0);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(4)
+						.prop('height'),
+					1000
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(5)
+						.prop('height'),
+					0
+				);
 			});
 		});
 
@@ -334,11 +543,32 @@ describe('Bars', () => {
 						hasToolTips
 						xFormatter={str => str.toUpperCase()}
 					/>
-				);
+				).find(PureToolTip);
 
-				assert.equal(wrapper.find(ToolTip.Title).at(0).prop('children'), 'AYE');
-				assert.equal(wrapper.find(ToolTip.Title).at(1).prop('children'), 'BEE');
-				assert.equal(wrapper.find(ToolTip.Title).at(2).prop('children'), 'SEE');
+				assert.equal(
+					wrapper
+						.at(0)
+						.shallow()
+						.find(ToolTip.Title)
+						.prop('children'),
+					'AYE'
+				);
+				assert.equal(
+					wrapper
+						.at(1)
+						.shallow()
+						.find(ToolTip.Title)
+						.prop('children'),
+					'BEE'
+				);
+				assert.equal(
+					wrapper
+						.at(2)
+						.shallow()
+						.find(ToolTip.Title)
+						.prop('children'),
+					'SEE'
+				);
 			});
 		});
 
@@ -359,15 +589,57 @@ describe('Bars', () => {
 				);
 
 				assert.equal(wrapper.find(Bar).length, 6, 'wrong number of Bar');
-				assert.equal(wrapper.find(Bar).at(0).prop('width'), 33.333333333333336);
-				assert.equal(wrapper.find(Bar).at(0).prop('height'), 0);
-				assert.equal(wrapper.find(Bar).at(1).prop('height'), 1000);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(0)
+						.prop('width'),
+					33.333333333333336
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(0)
+						.prop('height'),
+					0
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(1)
+						.prop('height'),
+					1000
+				);
 
-				assert.equal(wrapper.find(Bar).at(2).prop('height'), 500);
-				assert.equal(wrapper.find(Bar).at(3).prop('height'), 500);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(2)
+						.prop('height'),
+					500
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(3)
+						.prop('height'),
+					500
+				);
 
-				assert.equal(wrapper.find(Bar).at(4).prop('height'), 1000);
-				assert.equal(wrapper.find(Bar).at(5).prop('height'), 0);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(4)
+						.prop('height'),
+					1000
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(5)
+						.prop('height'),
+					0
+				);
 			});
 		});
 
@@ -385,9 +657,27 @@ describe('Bars', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Bar).at(0).prop('color'), 'g');
-				assert.equal(wrapper.find(Bar).at(1).prop('color'), 'r');
-				assert.equal(wrapper.find(Bar).at(2).prop('color'), 'g');
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(0)
+						.prop('color'),
+					'g'
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(1)
+						.prop('color'),
+					'r'
+				);
+				assert.equal(
+					wrapper
+						.find(Bar)
+						.at(2)
+						.prop('color'),
+					'g'
+				);
 			});
 		});
 
@@ -402,10 +692,78 @@ describe('Bars', () => {
 						renderTooltipBody={(dataPoint, data) => dataPoint.x.toUpperCase()}
 					/>
 				);
-				assert.equal(wrapper.find(ToolTip.Body).at(0).prop('children'), 'AYE');
-				assert.equal(wrapper.find(ToolTip.Body).at(1).prop('children'), 'BEE');
-				assert.equal(wrapper.find(ToolTip.Body).at(2).prop('children'), 'SEE');
+				const toolTip = wrapper.find(PureToolTip);
+				assert.equal(
+					toolTip
+						.at(0)
+						.shallow()
+						.find(ToolTip.Body)
+						.prop('children'),
+					'AYE'
+				);
+				assert.equal(
+					toolTip
+						.at(1)
+						.shallow()
+						.find(ToolTip.Body)
+						.prop('children'),
+					'BEE'
+				);
+				assert.equal(
+					toolTip
+						.at(2)
+						.shallow()
+						.find(ToolTip.Body)
+						.prop('children'),
+					'SEE'
+				);
 			});
+		});
+	});
+
+	describe('tooltips', () => {
+		it('should show the tooltip', () => {
+			const wrapper = shallow(
+				<Bars
+					data={defaultData}
+					xScale={defaultXScale}
+					yScale={defaultYScale}
+					hasToolTips
+				/>
+			);
+
+			wrapper
+				.find(PureToolTip)
+				.forEach(node => expect(node.prop('isExpanded')).toBe(false));
+
+			wrapper.setState({ hoveringSeriesIndex: 0 });
+
+			const toolTips = wrapper.find(PureToolTip);
+
+			expect(toolTips.first().prop('isExpanded')).toBe(true);
+			expect(toolTips.at(1).prop('isExpanded')).toBe(false);
+			expect(toolTips.at(2).prop('isExpanded')).toBe(false);
+		});
+
+		it('should not show tooltips with `hasToolTips` = false', () => {
+			const wrapper = shallow(
+				<Bars
+					data={defaultData}
+					xScale={defaultXScale}
+					yScale={defaultYScale}
+					hasToolTips={false}
+				/>
+			);
+
+			wrapper
+				.find(PureToolTip)
+				.forEach(node => expect(node.prop('isExpanded')).toBe(false));
+
+			wrapper.setState({ hoveringSeriesIndex: 0 });
+
+			wrapper
+				.find(PureToolTip)
+				.forEach(node => expect(node.prop('isExpanded')).toBe(false));
 		});
 	});
 });

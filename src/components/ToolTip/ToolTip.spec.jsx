@@ -280,7 +280,11 @@ describe('ToolTip', () => {
 						<Body>Body</Body>
 					</ToolTip>
 				);
-				wrapper.find(ContextMenu).shallow().find('span').simulate('mouseOver');
+				wrapper
+					.find(ContextMenu)
+					.shallow()
+					.find('span')
+					.simulate('mouseOver');
 				assert(spy.calledOnce, 'onMouseOver must be called once');
 			});
 		});
@@ -294,7 +298,10 @@ describe('ToolTip', () => {
 						<Body>Body</Body>
 					</ToolTip>
 				);
-				const root = wrapper.find('ContextMenu').shallow().find('span');
+				const root = wrapper
+					.find('ContextMenu')
+					.shallow()
+					.find('span');
 				root.simulate('mouseOver');
 				root.simulate('mouseOut');
 				// wait for timeout
@@ -312,7 +319,10 @@ describe('ToolTip', () => {
 						<Body>Body</Body>
 					</ToolTip>
 				);
-				const root = wrapper.find(ContextMenu).shallow().find('span');
+				const root = wrapper
+					.find(ContextMenu)
+					.shallow()
+					.find('span');
 				root.simulate('mouseOver');
 				// simulate click hover over FlyOut Portal
 				wrapper.find(ContextMenu.FlyOut).prop('onMouseOver')();

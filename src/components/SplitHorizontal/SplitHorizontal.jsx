@@ -209,7 +209,8 @@ const SplitHorizontal = createClass({
 		collapseShift = 0
 	) {
 		if (isExpanded) {
-			secondaryRef.style.flexBasis = `${secondaryStartRect.height + dY * (secondary === bottom ? -1 : 1)}px`;
+			secondaryRef.style.flexBasis = `${secondaryStartRect.height +
+				dY * (secondary === bottom ? -1 : 1)}px`;
 			return secondaryStartRect.height + dY * (secondary === bottom ? -1 : 1);
 		} else {
 			const overlapHeight =
@@ -222,7 +223,8 @@ const SplitHorizontal = createClass({
 				return secondaryStartRect.height - overlapHeight;
 			} else {
 				this.expandSecondary();
-				secondaryRef.style.flexBasis = `${(dY + collapseShift) * (secondary === bottom ? -1 : 1)}px`;
+				secondaryRef.style.flexBasis = `${(dY + collapseShift) *
+					(secondary === bottom ? -1 : 1)}px`;
 				return (dY + collapseShift) * (secondary === bottom ? -1 : 1);
 			}
 		}
@@ -431,7 +433,8 @@ const SplitHorizontal = createClass({
 								height: '100%',
 								display: 'flex',
 								flexDirection: 'column',
-								transform: `translateY(${(isBottomSecondary ? 1 : -1) * Math.round(tween.slideAmount)}px)`,
+								transform: `translateY(${(isBottomSecondary ? 1 : -1) *
+									Math.round(tween.slideAmount)}px)`,
 							}}
 						>
 							<div

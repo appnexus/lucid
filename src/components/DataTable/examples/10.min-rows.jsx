@@ -58,7 +58,7 @@ export default createClass({
 				data={_.map(
 					data,
 					(row, index) =>
-						(index === activeIndex ? { ...row, isActive: true } : row)
+						index === activeIndex ? { ...row, isActive: true } : row
 				)}
 				density="extended"
 				isSelectable
@@ -66,9 +66,7 @@ export default createClass({
 				isFullWidth
 				minRows={7}
 			>
-				<DataTable.Column field="id">
-					ID
-				</DataTable.Column>
+				<DataTable.Column field="id">ID</DataTable.Column>
 
 				<DataTable.Column field="first_name" width={100}>
 					First

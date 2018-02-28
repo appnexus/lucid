@@ -131,42 +131,38 @@ const Banner = createClass({
 				transitionEnterTimeout={300}
 				transitionLeaveTimeout={300}
 			>
-				{!isClosed
-					? <section
-							{...omitProps(passThroughs, Banner)}
-							className={cx(
-								'&',
-								{
-									'&-has-icon': displayedIcon,
-									'&-has-close': isCloseable,
-									'&-has-no-roundedCorners': !hasRoundedCorners,
-									'&-primary': kind === 'primary',
-									'&-success': kind === 'success',
-									'&-warning': kind === 'warning',
-									'&-danger': kind === 'danger',
-									'&-info': kind === 'info',
-									'&-small': isSmall,
-								},
-								className
-							)}
-						>
-							{displayedIcon
-								? <span className={cx('&-icon')}>
-										{displayedIcon}
-									</span>
-								: null}
+				{!isClosed ? (
+					<section
+						{...omitProps(passThroughs, Banner)}
+						className={cx(
+							'&',
+							{
+								'&-has-icon': displayedIcon,
+								'&-has-close': isCloseable,
+								'&-has-no-roundedCorners': !hasRoundedCorners,
+								'&-primary': kind === 'primary',
+								'&-success': kind === 'success',
+								'&-warning': kind === 'warning',
+								'&-danger': kind === 'danger',
+								'&-info': kind === 'info',
+								'&-small': isSmall,
+							},
+							className
+						)}
+					>
+						{displayedIcon ? (
+							<span className={cx('&-icon')}>{displayedIcon}</span>
+						) : null}
 
-							<span className={cx('&-content')}>
-								{children}
+						<span className={cx('&-content')}>{children}</span>
+
+						{isCloseable ? (
+							<span className={cx('&-close')} onClick={this.handleClose}>
+								{String.fromCharCode(0x00d7)}
 							</span>
-
-							{isCloseable
-								? <span className={cx('&-close')} onClick={this.handleClose}>
-										{String.fromCharCode(0x00d7)}
-									</span>
-								: null}
-						</section>
-					: null}
+						) : null}
+					</section>
+				) : null}
 			</ReactTransitionGroup>
 		);
 	},

@@ -150,18 +150,19 @@ export default createClass({
 			data,
 		} = this.state;
 
-		const nextCurrentlySortedFieldDirection = currentlySortedField === field &&
-			currentlySortedFieldDirection === 'up'
-			? 'down'
-			: 'up';
+		const nextCurrentlySortedFieldDirection =
+			currentlySortedField === field && currentlySortedFieldDirection === 'up'
+				? 'down'
+				: 'up';
 		const nextData = _.sortBy(data, field);
 
 		this.setState({
 			currentlySortedField: field,
 			currentlySortedFieldDirection: nextCurrentlySortedFieldDirection,
-			data: nextCurrentlySortedFieldDirection === 'up'
-				? nextData
-				: _.reverse(nextData),
+			data:
+				nextCurrentlySortedFieldDirection === 'up'
+					? nextData
+					: _.reverse(nextData),
 			activeIndex: null,
 		});
 	},
@@ -179,7 +180,7 @@ export default createClass({
 				data={_.map(
 					data,
 					(row, index) =>
-						(index === activeIndex ? { ...row, isActive: true } : row)
+						index === activeIndex ? { ...row, isActive: true } : row
 				)}
 				density="extended"
 				isSelectable

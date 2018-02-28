@@ -37,14 +37,12 @@ export default createClass({
 		} = this.state;
 		return (
 			<section>
-
 				<ContextMenu
 					portalId="FileMenu-example"
 					isExpanded={isFileExpanded}
 					direction={fileDirection}
 					onClickOut={this.handleFileMenuToggle}
 				>
-
 					<ContextMenu.Target>
 						<div
 							style={{
@@ -81,7 +79,6 @@ export default createClass({
 						<div>Close Pane</div>
 						<div>Close Window</div>
 					</ContextMenu.FlyOut>
-
 				</ContextMenu>
 
 				<ContextMenu
@@ -90,7 +87,6 @@ export default createClass({
 					direction={editDirection}
 					onClickOut={this.handleEditMenuToggle}
 				>
-
 					<ContextMenu.Target>
 						<div
 							style={{
@@ -121,9 +117,7 @@ export default createClass({
 						<div>Paste</div>
 						<div>Select All</div>
 					</ContextMenu.FlyOut>
-
 				</ContextMenu>
-
 			</section>
 		);
 	},

@@ -9,7 +9,9 @@ export default createClass({
 				<div>
 					<StopwatchIcon isBadge />
 				</div>
-				<Tag>Stopwatch <StopwatchIcon isBadge /></Tag>
+				<Tag>
+					Stopwatch <StopwatchIcon isBadge />
+				</Tag>
 			</div>
 		);
 	},

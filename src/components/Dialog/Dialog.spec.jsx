@@ -23,9 +23,7 @@ describe('Dialog', () => {
 	it('should render a Header', () => {
 		const wrapper = shallow(
 			<Dialog isShown={true}>
-				<Dialog.Header>
-					Mobius
-				</Dialog.Header>
+				<Dialog.Header>Mobius</Dialog.Header>
 			</Dialog>
 		);
 
@@ -35,9 +33,7 @@ describe('Dialog', () => {
 	it('should render a Footer', () => {
 		const wrapper = shallow(
 			<Dialog isShown={true}>
-				<Dialog.Footer>
-					Groober
-				</Dialog.Footer>
+				<Dialog.Footer>Groober</Dialog.Footer>
 			</Dialog>
 		);
 
@@ -51,11 +47,7 @@ describe('Dialog', () => {
 	});
 
 	it('should render body content', () => {
-		const wrapper = shallow(
-			<Dialog isShown={true}>
-				Flux Capacitor
-			</Dialog>
-		);
+		const wrapper = shallow(<Dialog isShown={true}>Flux Capacitor</Dialog>);
 
 		assert.equal(wrapper.find('.lucid-Dialog-body').text(), 'Flux Capacitor');
 	});
@@ -83,9 +75,7 @@ describe('Dialog', () => {
 	it('should render when isShown', () => {
 		const wrapper = mount(
 			<Dialog isShown={true}>
-				<div id="holler">
-					bro
-				</div>
+				<div id="holler">bro</div>
 			</Dialog>
 		);
 
@@ -96,9 +86,7 @@ describe('Dialog', () => {
 	it('should not render when not isShown', () => {
 		const wrapper = mount(
 			<Dialog isShown={false}>
-				<div id="flux">
-					Flux Capacitor
-				</div>
+				<div id="flux">Flux Capacitor</div>
 			</Dialog>
 		);
 

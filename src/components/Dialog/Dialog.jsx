@@ -108,12 +108,11 @@ const Dialog = createClass({
 				>
 					<header {...headerChildProp} className={cx('&-header')} />
 
-					<section className={cx('&-body')}>
-						{this.props.children}
-					</section>
+					<section className={cx('&-body')}>{this.props.children}</section>
 
-					{footerChildProp &&
-						<footer {...footerChildProp} className={cx('&-footer')} />}
+					{footerChildProp && (
+						<footer {...footerChildProp} className={cx('&-footer')} />
+					)}
 				</div>
 			</Overlay>
 		);

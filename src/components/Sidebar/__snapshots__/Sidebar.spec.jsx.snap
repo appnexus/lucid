@@ -339,26 +339,20 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 05.custom
     <div
       className="lucid-Sidebar-Bar-content lucid-Sidebar-Bar-content-has-gutters"
     >
-      You can also set the
-       
+      You can also set the 
       <code>
         title
       </code>
-       
-      or
-       
+       or 
       <code>
         Title
       </code>
-       
-      prop on
+       prop on
        
       <code>
         &lt;Sidebar&gt;
       </code>
-       
-      or
-       
+       or 
       <code>
         &lt;Sidebar.Bar&gt;
       </code>

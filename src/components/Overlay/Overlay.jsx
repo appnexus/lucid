@@ -131,18 +131,18 @@ const Overlay = createClass({
 					transitionEnterTimeout={300}
 					transitionLeaveTimeout={300}
 				>
-					{isShown
-						? <div
-								{...omitProps(passThroughs, Overlay)}
-								className={cx(className, '&', {
-									'&-is-not-modal': !isModal,
-								})}
-								onClick={this.handleBackgroundClick}
-								ref={this.handleDivRef}
-							>
-								{children}
-							</div>
-						: null}
+					{isShown ? (
+						<div
+							{...omitProps(passThroughs, Overlay)}
+							className={cx(className, '&', {
+								'&-is-not-modal': !isModal,
+							})}
+							onClick={this.handleBackgroundClick}
+							ref={this.handleDivRef}
+						>
+							{children}
+						</div>
+					) : null}
 				</ReactTransitionGroup>
 			</Portal>
 		);

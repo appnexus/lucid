@@ -20,7 +20,6 @@ export default createClass({
 
 		return (
 			<section>
-
 				<DateSelect
 					isFontSizeRelative
 					style={{
@@ -30,11 +29,8 @@ export default createClass({
 					selectedDays={selectedDate}
 					onSelectDate={this.handleSelectDate}
 				/>
-
-				selected date:
-				{' '}
+				selected date:{' '}
 				{selectedDate && selectedDate.toLocaleDateString('en-US')}
-
 			</section>
 		);
 	},

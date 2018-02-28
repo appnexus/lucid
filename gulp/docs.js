@@ -1,5 +1,6 @@
 /*eslint no-console:0 */
 
+var _ = require('lodash');
 var FormData = require('form-data');
 var exec = require('child_process').exec;
 var fs = require('fs');
@@ -9,6 +10,83 @@ var path = require('path');
 var tar = require('gulp-tar');
 var webpack = require('webpack');
 var webpackConfig = require('../webpack.config.js');
+var CONFIG = require('./config');
+
+const isReactComponent = value =>
+	typeof value === 'function' &&
+	value.prototype &&
+	value.prototype.isReactComponent;
+
+const componentToDocgen = (
+	componentRef,
+	stripIndent = _.identity,
+	displayName
+) => ({
+	description: _.trim(stripIndent(_.get(componentRef, 'peek.description', ''))),
+	displayName: displayName || componentRef.displayName,
+	methods: [],
+	isPrivateComponent: !!componentRef._isPrivate,
+	props: _.mapValues(componentRef.propTypes, ({ peek }, property) => {
+		const defaultProps =
+			componentRef.peekDefaultProps || componentRef.defaultProps;
+		const defaultValue = _.get(defaultProps, property);
+		const type = _.get(peek, 'type');
+
+		let value;
+		if (type === 'oneOf' && _.has(peek, 'args')) {
+			value = _.map(_.first(peek.args), value => ({
+				value: JSON.stringify(value),
+			}));
+		}
+		if (type === 'oneOfType' && _.has(peek, 'args')) {
+			value = _.map(_.first(peek.args), resolverFn => ({
+				name: _.get(resolverFn, ['peek', 'type']),
+			}));
+		}
+
+		if (type === 'arrayOf' && _.has(peek, 'args')) {
+			value = {
+				name: _.get(_.first(peek.args), ['peek', 'type']),
+			};
+		}
+
+		if (type === 'shape' && _.has(peek, 'args')) {
+			value = _.mapValues(_.first(peek.args), resolverFn => ({
+				name: _.get(resolverFn, ['peek', 'type']),
+				required: !!_.get(resolverFn, ['peek', 'isRequired']),
+			}));
+		}
+
+		return {
+			type: {
+				name: type,
+				value,
+				raw: _.has(peek, 'args') ? JSON.stringify(peek.args) : undefined,
+			},
+			description:
+				(_.has(peek, 'text') && _.trim(stripIndent(peek.text))) || undefined,
+			required: _.get(peek, 'isRequired', false),
+			defaultValue: !_.isUndefined(defaultValue)
+				? {
+						value: _.isFunction(defaultValue)
+							? 'func'
+							: JSON.stringify(defaultValue, null, 2),
+						computed: true,
+					}
+				: undefined,
+		};
+	}),
+	childComponents: _.map(
+		_.toPairs(_.pickBy(componentRef, isReactComponent)),
+		([childComponentProperty, childComponentRef]) =>
+			componentToDocgen(childComponentRef, stripIndent, childComponentProperty)
+	),
+	customData: {
+		categories: _.get(componentRef, ['peek', 'categories']),
+		extend: _.get(componentRef, ['peek', 'extend']),
+		madeFrom: _.get(componentRef, ['peek', 'madeFrom']),
+	},
+});
 
 function uploadDocsBuild(callback) {
 	// Figure out of the last commit was a tagged version. This command only
@@ -64,6 +142,28 @@ function uploadDocsBuild(callback) {
 }
 
 module.exports = {
+	docgenJson: function() {
+		const { stripIndent } = require(path.join(
+			'..',
+			CONFIG.BUILD_DIR,
+			'docs',
+			'util'
+		));
+		const Lucid = require(path.join('../', CONFIG.BUILD_DIR));
+		const lucidComponents = _.pickBy(
+			Lucid,
+			(value, key) => isReactComponent(value) && !_.endsWith(key, 'Dumb')
+		);
+		const docgenMap = _.mapValues(lucidComponents, componentRef =>
+			componentToDocgen(componentRef, stripIndent)
+		);
+		fs.writeFileSync(
+			path.resolve(__dirname, '..', CONFIG.BUILD_DIR, 'docs', 'docgen.json'),
+			JSON.stringify(docgenMap, null, 2),
+			'utf8'
+		);
+	},
+
 	build: function(callback) {
 		webpack(webpackConfig, callback);
 	},

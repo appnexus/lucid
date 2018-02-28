@@ -20,7 +20,10 @@ const defaultXScale = d3Scale
 	.domain(['aye', 'bee', 'see'])
 	.range([0, 100]);
 
-const defaultYScale = d3Scale.scaleLinear().domain([0, 100]).range([1000, 0]);
+const defaultYScale = d3Scale
+	.scaleLinear()
+	.domain([0, 100])
+	.range([1000, 0]);
 
 describe('Points', () => {
 	common(Points, {
@@ -60,9 +63,27 @@ describe('Points', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Point).at(0).prop('color'), 'r');
-				assert.equal(wrapper.find(Point).at(1).prop('color'), 'g');
-				assert.equal(wrapper.find(Point).at(2).prop('color'), 'r');
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('color'),
+					'r'
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('color'),
+					'g'
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('color'),
+					'r'
+				);
 			});
 
 			it('should be beat when theres a colorMap', () => {
@@ -80,9 +101,27 @@ describe('Points', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Point).at(0).prop('color'), 'r');
-				assert.equal(wrapper.find(Point).at(1).prop('color'), '#ABC123');
-				assert.equal(wrapper.find(Point).at(2).prop('color'), 'r');
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('color'),
+					'r'
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('color'),
+					'#ABC123'
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('color'),
+					'r'
+				);
 			});
 		});
 
@@ -99,7 +138,13 @@ describe('Points', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Point).at(0).prop('color'), '#ABC333');
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('color'),
+					'#ABC333'
+				);
 			});
 		});
 
@@ -113,18 +158,57 @@ describe('Points', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Point).at(0).prop('x'), 0);
-				assert.equal(wrapper.find(Point).at(0).prop('y'), 900);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('x'),
+					0
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('y'),
+					900
+				);
 
-				assert.equal(wrapper.find(Point).at(1).prop('x'), 50);
-				assert.equal(wrapper.find(Point).at(1).prop('y'), 450);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('x'),
+					50
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('y'),
+					450
+				);
 
-				assert.equal(wrapper.find(Point).at(2).prop('x'), 100);
-				assert.equal(wrapper.find(Point).at(2).prop('y'), 0);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('x'),
+					100
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('y'),
+					0
+				);
 			});
 
 			it('should work with linear scales', () => {
-				const xScale = d3Scale.scaleLinear().domain([0, 10]).range([0, 100]);
+				const xScale = d3Scale
+					.scaleLinear()
+					.domain([0, 10])
+					.range([0, 100]);
 				const wrapper = shallow(
 					<Points
 						data={[{ x: 2, y: 20 }, { x: 6, y: 50 }]}
@@ -133,11 +217,35 @@ describe('Points', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Point).at(0).prop('x'), 20);
-				assert.equal(wrapper.find(Point).at(0).prop('y'), 800);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('x'),
+					20
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('y'),
+					800
+				);
 
-				assert.equal(wrapper.find(Point).at(1).prop('x'), 60);
-				assert.equal(wrapper.find(Point).at(1).prop('y'), 500);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('x'),
+					60
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('y'),
+					500
+				);
 			});
 		});
 
@@ -151,14 +259,50 @@ describe('Points', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Point).at(0).prop('x'), 0);
-				assert.equal(wrapper.find(Point).at(0).prop('y'), 900);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('x'),
+					0
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('y'),
+					900
+				);
 
-				assert.equal(wrapper.find(Point).at(1).prop('x'), 50);
-				assert.equal(wrapper.find(Point).at(1).prop('y'), 450);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('x'),
+					50
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('y'),
+					450
+				);
 
-				assert.equal(wrapper.find(Point).at(2).prop('x'), 100);
-				assert.equal(wrapper.find(Point).at(2).prop('y'), 0);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('x'),
+					100
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('y'),
+					0
+				);
 			});
 
 			it('should work with time scales', () => {
@@ -170,7 +314,10 @@ describe('Points', () => {
 					])
 					.range([0, 100]);
 
-				const yScale = d3Scale.scaleTime().domain([0, 100]).range([1000, 0]);
+				const yScale = d3Scale
+					.scaleTime()
+					.domain([0, 100])
+					.range([1000, 0]);
 
 				const wrapper = shallow(
 					<Points
@@ -186,14 +333,50 @@ describe('Points', () => {
 
 				assert.equal(wrapper.find(Point).length, 3, 'wrong number of Point');
 
-				assert.equal(wrapper.find(Point).at(0).prop('x'), 0);
-				assert.equal(wrapper.find(Point).at(0).prop('y'), 1000);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('x'),
+					0
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('y'),
+					1000
+				);
 
-				assert.equal(wrapper.find(Point).at(1).prop('x'), 0);
-				assert.equal(wrapper.find(Point).at(1).prop('y'), 500);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('x'),
+					0
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('y'),
+					500
+				);
 
-				assert.equal(wrapper.find(Point).at(2).prop('x'), 100);
-				assert.equal(wrapper.find(Point).at(2).prop('y'), 0);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('x'),
+					100
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('y'),
+					0
+				);
 			});
 		});
 
@@ -212,14 +395,50 @@ describe('Points', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Point).at(0).prop('x'), 0);
-				assert.equal(wrapper.find(Point).at(0).prop('y'), 900);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('x'),
+					0
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('y'),
+					900
+				);
 
-				assert.equal(wrapper.find(Point).at(1).prop('x'), 50);
-				assert.equal(wrapper.find(Point).at(1).prop('y'), 450);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('x'),
+					50
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('y'),
+					450
+				);
 
-				assert.equal(wrapper.find(Point).at(2).prop('x'), 100);
-				assert.equal(wrapper.find(Point).at(2).prop('y'), 0);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('x'),
+					100
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('y'),
+					0
+				);
 			});
 		});
 
@@ -234,14 +453,50 @@ describe('Points', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Point).at(0).prop('x'), 0);
-				assert.equal(wrapper.find(Point).at(0).prop('y'), 800);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('x'),
+					0
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('y'),
+					800
+				);
 
-				assert.equal(wrapper.find(Point).at(1).prop('x'), 50);
-				assert.equal(wrapper.find(Point).at(1).prop('y'), 650);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('x'),
+					50
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('y'),
+					650
+				);
 
-				assert.equal(wrapper.find(Point).at(2).prop('x'), 100);
-				assert.equal(wrapper.find(Point).at(2).prop('y'), 970);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('x'),
+					100
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('y'),
+					970
+				);
 			});
 
 			it('should handle multiple fields', () => {
@@ -254,23 +509,95 @@ describe('Points', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Point).at(0).prop('x'), 0);
-				assert.equal(wrapper.find(Point).at(0).prop('y'), 900);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('x'),
+					0
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('y'),
+					900
+				);
 
-				assert.equal(wrapper.find(Point).at(1).prop('x'), 50);
-				assert.equal(wrapper.find(Point).at(1).prop('y'), 450);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('x'),
+					50
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('y'),
+					450
+				);
 
-				assert.equal(wrapper.find(Point).at(2).prop('x'), 100);
-				assert.equal(wrapper.find(Point).at(2).prop('y'), 0);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('x'),
+					100
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('y'),
+					0
+				);
 
-				assert.equal(wrapper.find(Point).at(3).prop('x'), 0);
-				assert.equal(wrapper.find(Point).at(3).prop('y'), 800);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(3)
+						.prop('x'),
+					0
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(3)
+						.prop('y'),
+					800
+				);
 
-				assert.equal(wrapper.find(Point).at(4).prop('x'), 50);
-				assert.equal(wrapper.find(Point).at(4).prop('y'), 650);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(4)
+						.prop('x'),
+					50
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(4)
+						.prop('y'),
+					650
+				);
 
-				assert.equal(wrapper.find(Point).at(5).prop('x'), 100);
-				assert.equal(wrapper.find(Point).at(5).prop('y'), 970);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(5)
+						.prop('x'),
+					100
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(5)
+						.prop('y'),
+					970
+				);
 			});
 		});
 
@@ -288,9 +615,27 @@ describe('Points', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Point).at(0).prop('color'), 'g');
-				assert.equal(wrapper.find(Point).at(1).prop('color'), 'r');
-				assert.equal(wrapper.find(Point).at(2).prop('color'), 'g');
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('color'),
+					'g'
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('color'),
+					'r'
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('color'),
+					'g'
+				);
 			});
 		});
 
@@ -305,7 +650,13 @@ describe('Points', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Point).at(0).prop('hasStroke'), true);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('hasStroke'),
+					true
+				);
 			});
 
 			it('should pass through false to Point', () => {
@@ -318,7 +669,13 @@ describe('Points', () => {
 					/>
 				);
 
-				assert.equal(wrapper.find(Point).at(0).prop('hasStroke'), false);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('hasStroke'),
+					false
+				);
 			});
 		});
 
@@ -336,23 +693,95 @@ describe('Points', () => {
 
 				assert.equal(wrapper.find(Point).length, 6);
 
-				assert.equal(wrapper.find(Point).at(0).prop('x'), 0);
-				assert.equal(wrapper.find(Point).at(0).prop('y'), 902.9126213592233);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('x'),
+					0
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(0)
+						.prop('y'),
+					902.9126213592233
+				);
 
-				assert.equal(wrapper.find(Point).at(1).prop('x'), 50);
-				assert.equal(wrapper.find(Point).at(1).prop('y'), 466.0194174757281);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('x'),
+					50
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(1)
+						.prop('y'),
+					466.0194174757281
+				);
 
-				assert.equal(wrapper.find(Point).at(2).prop('x'), 100);
-				assert.equal(wrapper.find(Point).at(2).prop('y'), 29.126213592232943);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('x'),
+					100
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(2)
+						.prop('y'),
+					29.126213592232943
+				);
 
-				assert.equal(wrapper.find(Point).at(3).prop('x'), 0);
-				assert.equal(wrapper.find(Point).at(3).prop('y'), 708.7378640776699);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(3)
+						.prop('x'),
+					0
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(3)
+						.prop('y'),
+					708.7378640776699
+				);
 
-				assert.equal(wrapper.find(Point).at(4).prop('x'), 50);
-				assert.equal(wrapper.find(Point).at(4).prop('y'), 126.21359223300976);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(4)
+						.prop('x'),
+					50
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(4)
+						.prop('y'),
+					126.21359223300976
+				);
 
-				assert.equal(wrapper.find(Point).at(5).prop('x'), 100);
-				assert.equal(wrapper.find(Point).at(5).prop('y'), 0);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(5)
+						.prop('x'),
+					100
+				);
+				assert.equal(
+					wrapper
+						.find(Point)
+						.at(5)
+						.prop('y'),
+					0
+				);
 			});
 		});
 	});

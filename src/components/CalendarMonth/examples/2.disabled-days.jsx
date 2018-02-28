@@ -7,9 +7,7 @@ export default createClass({
 	render() {
 		return (
 			<section style={{ maxWidth: 400 }}>
-
 				<CalendarMonth disabledDays={DateUtils.isPastDay} />
-
 			</section>
 		);
 	},

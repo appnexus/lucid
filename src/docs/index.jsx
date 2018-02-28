@@ -133,19 +133,21 @@ const PropType = createClass({
 					{shapeKey ? `${shapeKey}: ` : null}
 					{type.name === 'union' ? 'oneOfType' : type.name}:
 					<ul>
-						{type.name === 'arrayOf'
-							? <PropType type={type.value} componentName={componentName} />
-							: _.map(type.value, (innerType, key) => {
-									return (
-										<li key={key}>
-											<PropType
-												type={innerType}
-												componentName={componentName}
-												shapeKey={type.name === 'shape' ? key : null}
-											/>
-										</li>
-									);
-								})}
+						{type.name === 'arrayOf' ? (
+							<PropType type={type.value} componentName={componentName} />
+						) : (
+							_.map(type.value, (innerType, key) => {
+								return (
+									<li key={key}>
+										<PropType
+											type={innerType}
+											componentName={componentName}
+											shapeKey={type.name === 'shape' ? key : null}
+										/>
+									</li>
+								);
+							})
+						)}
 					</ul>
 				</div>
 			);
@@ -247,24 +249,24 @@ const Component = createClass({
 
 		const componentNames = _.get(componentRef, 'peek.madeFrom', []);
 
-		const composesComponents = _.isEmpty(componentNames)
-			? null
-			: <span className="Component-made-from">
-					<span>made from: </span>
-					{_.map(componentNames, (name, index) => (
-						<span key={name}>
-							<Link
-								to={{
-									pathname: `/components/${name}`,
-									search: this.props.location.search,
-								}}
-							>
-								{name}
-							</Link>
-							{index == componentNames.length - 1 ? null : ', '}
-						</span>
-					))}
-				</span>;
+		const composesComponents = _.isEmpty(componentNames) ? null : (
+			<span className="Component-made-from">
+				<span>made from: </span>
+				{_.map(componentNames, (name, index) => (
+					<span key={name}>
+						<Link
+							to={{
+								pathname: `/components/${name}`,
+								search: this.props.location.search,
+							}}
+						>
+							{name}
+						</Link>
+						{index == componentNames.length - 1 ? null : ', '}
+					</span>
+				))}
+			</span>
+		);
 
 		return (
 			<div className="Component">
@@ -297,15 +299,15 @@ const Component = createClass({
 										</Td>
 										<Td>{propDetails.isRequired ? 'yes' : ''}</Td>
 										<Td>
-											{!_.isUndefined(propDetails.default)
-												? <pre className="default-value">
-														<code className="lang-javascript">
-															{_.isFunction(propDetails.default)
-																? 'func'
-																: JSON.stringify(propDetails.default, null, 2)}
-														</code>
-													</pre>
-												: null}
+											{!_.isUndefined(propDetails.default) ? (
+												<pre className="default-value">
+													<code className="lang-javascript">
+														{_.isFunction(propDetails.default)
+															? 'func'
+															: JSON.stringify(propDetails.default, null, 2)}
+													</code>
+												</pre>
+											) : null}
 										</Td>
 										<Td
 											dangerouslySetInnerHTML={toMarkdown(
@@ -318,119 +320,122 @@ const Component = createClass({
 						</Tbody>
 					</Table>
 				</div>
-				{!_.isEmpty(childComponents)
-					? <section>
-							<h3>Child Components</h3>
-							{_.map(childComponents, ([refName, childComponent]) => (
-								<section key={refName}>
-									<h4>
-										{componentName !==
-											_.first(
-												_.get(childComponent, 'displayName', '').split('.')
-											)
-											? <Link
-													to={`/components/${_.get(childComponent, 'displayName', '').split('.')[0]}`}
-												>
-													{refName}
-													{refName !== childComponent.displayName &&
-														` (${childComponent.displayName})`}
-												</Link>
-											: refName}
-									</h4>
-									{_.has(childComponent, 'peek.description')
-										? <div
-												dangerouslySetInnerHTML={toMarkdown(
-													stripIndent(
-														_.get(childComponent, 'peek.description', '')
-													)
-												)}
-											/>
-										: null}
-									{childComponent.propName &&
-										<Table>
-											<Tbody>
-												<Tr>
-													<Td>propName</Td>
-													<Td>
-														<pre>
-															<code className="lang-javascript">
-																{childComponent.propName}
-															</code>
-														</pre>
-													</Td>
-												</Tr>
-											</Tbody>
-										</Table>}
-									{!_.isEmpty(childComponent.propTypes)
-										? <Table style={{ width: '100%' }}>
-												<Thead>
-													<Tr>
-														<Th>Name</Th>
-														<Th>Type</Th>
-														<Th>Required</Th>
-														<Th>Default</Th>
-														<Th>Description</Th>
-													</Tr>
-												</Thead>
-												<Tbody>
-													{_.map(
-														_.sortBy(
-															_.toPairs(_.get(childComponent, 'propTypes', {})),
-															x => x[0]
-														),
-														([propName, propTypeResolver]) => {
-															const defaultProps =
-																childComponent.defaultProps ||
-																childComponent.peekDefaultProps;
-															const propDetails = _.assign(
-																{},
-																_.has(defaultProps, propName) && {
-																	default: _.get(defaultProps, propName),
-																},
-																_.get(propTypeResolver, 'peek')
-															);
+				{!_.isEmpty(childComponents) ? (
+					<section>
+						<h3>Child Components</h3>
+						{_.map(childComponents, ([refName, childComponent]) => (
+							<section key={refName}>
+								<h4>
+									{componentName !==
+									_.first(
+										_.get(childComponent, 'displayName', '').split('.')
+									) ? (
+										<Link
+											to={`/components/${
+												_.get(childComponent, 'displayName', '').split('.')[0]
+											}`}
+										>
+											{refName}
+											{refName !== childComponent.displayName &&
+												` (${childComponent.displayName})`}
+										</Link>
+									) : (
+										refName
+									)}
+								</h4>
+								{_.has(childComponent, 'peek.description') ? (
+									<div
+										dangerouslySetInnerHTML={toMarkdown(
+											stripIndent(_.get(childComponent, 'peek.description', ''))
+										)}
+									/>
+								) : null}
+								{childComponent.propName && (
+									<Table>
+										<Tbody>
+											<Tr>
+												<Td>propName</Td>
+												<Td>
+													<pre>
+														<code className="lang-javascript">
+															{childComponent.propName}
+														</code>
+													</pre>
+												</Td>
+											</Tr>
+										</Tbody>
+									</Table>
+								)}
+								{!_.isEmpty(childComponent.propTypes) ? (
+									<Table style={{ width: '100%' }}>
+										<Thead>
+											<Tr>
+												<Th>Name</Th>
+												<Th>Type</Th>
+												<Th>Required</Th>
+												<Th>Default</Th>
+												<Th>Description</Th>
+											</Tr>
+										</Thead>
+										<Tbody>
+											{_.map(
+												_.sortBy(
+													_.toPairs(_.get(childComponent, 'propTypes', {})),
+													x => x[0]
+												),
+												([propName, propTypeResolver]) => {
+													const defaultProps =
+														childComponent.defaultProps ||
+														childComponent.peekDefaultProps;
+													const propDetails = _.assign(
+														{},
+														_.has(defaultProps, propName) && {
+															default: _.get(defaultProps, propName),
+														},
+														_.get(propTypeResolver, 'peek')
+													);
 
-															return (
-																<Tr key={`${refName}-${propName}`}>
-																	<Td>{propName}</Td>
-																	<Td>
-																		<PropType
-																			type={propDetails.type}
-																			componentName={childComponent.displayName}
-																		/>
-																	</Td>
-																	<Td>{propDetails.isRequired ? 'yes' : ''}</Td>
-																	<Td>
-																		{!_.isUndefined(propDetails.default)
-																			? <pre className="default-value">
-																					<code className="lang-javascript">
-																						{_.isFunction(propDetails.default)
-																							? 'func'
-																							: JSON.stringify(
-																									propDetails.default,
-																									null,
-																									2
-																								)}
-																					</code>
-																				</pre>
-																			: null}
-																	</Td>
-																	<Td
-																		dangerouslySetInnerHTML={toMarkdown(
-																			stripIndent(propDetails.text)
-																		)}
-																	/>
-																</Tr>
-															);
-														}
-													)}
-												</Tbody>
-											</Table>
-										: null}
-								</section>
-							))}
-						</section>
-					: null}
+													return (
+														<Tr key={`${refName}-${propName}`}>
+															<Td>{propName}</Td>
+															<Td>
+																<PropType
+																	type={propDetails.type}
+																	componentName={childComponent.displayName}
+																/>
+															</Td>
+															<Td>{propDetails.isRequired ? 'yes' : ''}</Td>
+															<Td>
+																{!_.isUndefined(propDetails.default) ? (
+																	<pre className="default-value">
+																		<code className="lang-javascript">
+																			{_.isFunction(propDetails.default)
+																				? 'func'
+																				: JSON.stringify(
+																						propDetails.default,
+																						null,
+																						2
+																					)}
+																		</code>
+																	</pre>
+																) : null}
+															</Td>
+															<Td
+																dangerouslySetInnerHTML={toMarkdown(
+																	stripIndent(propDetails.text)
+																)}
+															/>
+														</Tr>
+													);
+												}
+											)}
+										</Tbody>
+									</Table>
+								) : null}
+							</section>
+						))}
+					</section>
+				) : null}
 				<h3>Examples</h3>
 				<ul className={`Component-examples ${componentName}`}>
 					{_.map(_.get(examplesByComponent, componentName, []), example => {
@@ -457,11 +462,14 @@ const Component = createClass({
 											: 'Show code'}
 									</a>
 								</div>
-								{_.get(this.state.examples, `${componentName}.${example.name}`)
-									? <pre>
-											<code className="lang-javascript">{example.source}</code>
-										</pre>
-									: null}
+								{_.get(
+									this.state.examples,
+									`${componentName}.${example.name}`
+								) ? (
+									<pre>
+										<code className="lang-javascript">{example.source}</code>
+									</pre>
+								) : null}
 								<example.Example />
 							</li>
 						);
@@ -502,20 +510,22 @@ const App = createClass({
 			<VerticalListMenu selectedIndices={[]}>
 				{_.map(sortedNodeKeys, nodeKey => {
 					const node = categoryTree[nodeKey];
-					return isReactComponent(node)
-						? <Item
-								key={nodeKey}
-								onSelect={_.partial(this.goToPath, `/components/${nodeKey}`)}
-								isSelected={
-									this.props.location.pathname === `/components/${nodeKey}`
-								}
-							>
-								{_.startCase(nodeKey)}
-							</Item>
-						: <Item hasExpander isActionable={false} key={nodeKey}>
-								<span>{_.startCase(nodeKey)}</span>
-								{this.renderCategoryLinks(node)}
-							</Item>;
+					return isReactComponent(node) ? (
+						<Item
+							key={nodeKey}
+							onSelect={_.partial(this.goToPath, `/components/${nodeKey}`)}
+							isSelected={
+								this.props.location.pathname === `/components/${nodeKey}`
+							}
+						>
+							{_.startCase(nodeKey)}
+						</Item>
+					) : (
+						<Item hasExpander isActionable={false} key={nodeKey}>
+							<span>{_.startCase(nodeKey)}</span>
+							{this.renderCategoryLinks(node)}
+						</Item>
+					);
 				})}
 			</VerticalListMenu>
 		);

@@ -22,7 +22,6 @@ export default createClass({
 	render() {
 		return (
 			<section>
-
 				<SingleSelect onSelect={this.handleSelect}>
 					<Placeholder>Select Color</Placeholder>
 					<Option name="red">Red</Option>
@@ -31,12 +30,9 @@ export default createClass({
 				</SingleSelect>
 
 				<section>
+					<p>Selected Index: {JSON.stringify(this.state.selectedIndex)}</p>
 					<p>
-						Selected Index: {JSON.stringify(this.state.selectedIndex)}
-					</p>
-					<p>
-						Selected Option Name:
-						{' '}
+						Selected Option Name:{' '}
 						{JSON.stringify(this.state.selectedOptionName)}
 					</p>
 				</section>

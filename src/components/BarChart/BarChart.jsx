@@ -310,9 +310,10 @@ const BarChart = createClass({
 		const innerHeight = height - margin.top - margin.bottom;
 
 		// `paddingInner` determines the space between the bars or groups of bars
-		const paddingInner = yAxisFields.length > 1
-			? BarChart.PADDING_GROUPED_OR_STACKED
-			: BarChart.PADDING;
+		const paddingInner =
+			yAxisFields.length > 1
+				? BarChart.PADDING_GROUPED_OR_STACKED
+				: BarChart.PADDING;
 
 		const xScale = d3Scale
 			.scaleBand()
@@ -335,9 +336,10 @@ const BarChart = createClass({
 			: yAxisFinalFormatter;
 
 		if (_.isEmpty(data) || width < 1 || height < 1 || isLoading) {
-			const emptyStateWrapper =
-				getFirst(this.props, BarChart.EmptyStateWrapper) ||
-				<BarChart.EmptyStateWrapper Title="You have no data." />;
+			const emptyStateWrapper = getFirst(
+				this.props,
+				BarChart.EmptyStateWrapper
+			) || <BarChart.EmptyStateWrapper Title="You have no data." />;
 
 			return (
 				<EmptyStateWrapper
@@ -354,7 +356,8 @@ const BarChart = createClass({
 					>
 						{/* x axis */}
 						<g
-							transform={`translate(${margin.left}, ${innerHeight + margin.top})`}
+							transform={`translate(${margin.left}, ${innerHeight +
+								margin.top})`}
 						>
 							<Axis orient="bottom" scale={xScale} tickCount={xAxisTickCount} />
 						</g>
@@ -390,64 +393,63 @@ const BarChart = createClass({
 						tickCount={xAxisTickCount}
 					/>
 
-					{hasLegend
-						? <ContextMenu
-								direction="down"
-								alignment="center"
-								directonOffset={
-									(margin.bottom / 2 + Legend.HEIGHT / 2) *
-										-1 /* should center the legend in the bottom margin */
-								}
-							>
-								<ContextMenu.Target elementType="g">
-									<rect
-										className={cx('&-invisible')}
-										width={innerWidth}
-										height={margin.bottom}
-									/>
-								</ContextMenu.Target>
-								<ContextMenu.FlyOut className={cx('&-legend-container')}>
-									<Legend orient="horizontal">
-										{_.map(yAxisFields, (field, index) => (
-											<Legend.Item
-												key={index}
-												hasPoint={true}
-												hasLine={false}
-												color={_.get(
-													colorMap,
-													field,
-													palette[index % palette.length]
-												)}
-												pointKind={1}
-											>
-												{_.get(legend, field, field)}
-											</Legend.Item>
-										))}
-									</Legend>
-								</ContextMenu.FlyOut>
-							</ContextMenu>
-						: null}
-
+					{hasLegend ? (
+						<ContextMenu
+							direction="down"
+							alignment="center"
+							directonOffset={
+								(margin.bottom / 2 + Legend.HEIGHT / 2) *
+								-1 /* should center the legend in the bottom margin */
+							}
+						>
+							<ContextMenu.Target elementType="g">
+								<rect
+									className={cx('&-invisible')}
+									width={innerWidth}
+									height={margin.bottom}
+								/>
+							</ContextMenu.Target>
+							<ContextMenu.FlyOut className={cx('&-legend-container')}>
+								<Legend orient="horizontal">
+									{_.map(yAxisFields, (field, index) => (
+										<Legend.Item
+											key={index}
+											hasPoint={true}
+											hasLine={false}
+											color={_.get(
+												colorMap,
+												field,
+												palette[index % palette.length]
+											)}
+											pointKind={1}
+										>
+											{_.get(legend, field, field)}
+										</Legend.Item>
+									))}
+								</Legend>
+							</ContextMenu.FlyOut>
+						</ContextMenu>
+					) : null}
 				</g>
 
 				{/* x axis title */}
-				{xAxisTitle
-					? <g
-							transform={`translate(${margin.left}, ${margin.top + innerHeight})`}
-						>
-							<AxisLabel
-								orient="bottom"
-								width={innerWidth}
-								height={margin.bottom}
-								label={xAxisTitle}
-								color={
-									_.isString(xAxisTitleColor)
-										? xAxisTitleColor
-										: palette[xAxisTitleColor % palette.length]
-								}
-							/>
-						</g>
-					: null}
+				{xAxisTitle ? (
+					<g
+						transform={`translate(${margin.left}, ${margin.top + innerHeight})`}
+					>
+						<AxisLabel
+							orient="bottom"
+							width={innerWidth}
+							height={margin.bottom}
+							label={xAxisTitle}
+							color={
+								_.isString(xAxisTitleColor)
+									? xAxisTitleColor
+									: palette[xAxisTitleColor % palette.length]
+							}
+						/>
+					</g>
+				) : null}
 
 				{/* y axis */}
 				<g transform={`translate(${margin.left}, ${margin.top})`}>
@@ -460,21 +462,21 @@ const BarChart = createClass({
 				</g>
 
 				{/* y axis title */}
-				{yAxisTitle
-					? <g transform={`translate(0, ${margin.top})`}>
-							<AxisLabel
-								orient="left"
-								width={margin.left}
-								height={innerHeight}
-								label={yAxisTitle}
-								color={
-									_.isString(yAxisTitleColor)
-										? yAxisTitleColor
-										: palette[yAxisTitleColor % palette.length]
-								}
-							/>
-						</g>
-					: null}
+				{yAxisTitle ? (
+					<g transform={`translate(0, ${margin.top})`}>
+						<AxisLabel
+							orient="left"
+							width={margin.left}
+							height={innerHeight}
+							label={yAxisTitle}
+							color={
+								_.isString(yAxisTitleColor)
+									? yAxisTitleColor
+									: palette[yAxisTitleColor % palette.length]
+							}
+						/>
+					</g>
+				) : null}
 
 				{/* bars */}
 				<g transform={`translate(${margin.left}, ${margin.top})`}>

@@ -611,11 +611,15 @@ describe('#buildHybridComponent', () => {
 
 			return (
 				<section>
-					<button className="minus" onClick={onDecrement}>-</button>
+					<button className="minus" onClick={onDecrement}>
+						-
+					</button>
 					<span className="count">{count}</span>
 					<span className="count-display">{countDisplay}</span>
 					<span className="count-mod-three">{countModThree}</span>
-					<button className="plus" onClick={onIncrement}>+</button>
+					<button className="plus" onClick={onIncrement}>
+						+
+					</button>
 				</section>
 			);
 		},

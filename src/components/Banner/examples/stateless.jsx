@@ -40,7 +40,9 @@ export default createClass({
 				</div>
 
 				<div>
-					<Banner kind="primary" style={{ marginBottom: 8 }}>Primary</Banner>
+					<Banner kind="primary" style={{ marginBottom: 8 }}>
+						Primary
+					</Banner>
 					<Banner
 						kind="primary"
 						isCloseable={false}
@@ -62,7 +64,9 @@ export default createClass({
 				</div>
 
 				<div>
-					<Banner kind="success" style={{ marginBottom: 8 }}>Success</Banner>
+					<Banner kind="success" style={{ marginBottom: 8 }}>
+						Success
+					</Banner>
 					<Banner
 						kind="success"
 						isCloseable={false}
@@ -96,11 +100,8 @@ export default createClass({
 						isCloseable={false}
 						style={{ marginBottom: 8 }}
 					>
-						Success -- has icon -- No Close
-						{' '}
-						{String.fromCharCode(0x00d7)}
-						{' '}
-						-- small
+						Success -- has icon -- No Close {String.fromCharCode(0x00d7)} --
+						small
 					</Banner>
 					<Banner kind="success" isSmall={true} style={{ marginBottom: 8 }}>
 						Success -- small
@@ -115,19 +116,54 @@ export default createClass({
 					</Banner>
 					<Banner kind="success" hasIcon={true} style={{ marginBottom: 8 }}>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius neque veniam nisi aspernatur, quos dolorem aut praesentium eaque consequatur inventore adipisci, architecto atque ipsa, laudantium laboriosam ipsam non vitae, cum maiores hic. Laboriosam fugiat eveniet quos assumenda delectus aperiam excepturi vel, officia sint reiciendis expedita consequuntur, a sed deleniti commodi rerum natus quam veniam earum quibusdam! Nemo iusto asperiores sit velit eveniet quod nam. Voluptatibus beatae maxime, quia a velit praesentium vel vitae consectetur, libero nulla magni voluptatum facilis ea facere, minus doloribus. Excepturi veniam, mollitia esse aut illum ad tenetur facere quidem. Ipsum odio, dolore, error rem assumenda debitis.
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
+							neque veniam nisi aspernatur, quos dolorem aut praesentium eaque
+							consequatur inventore adipisci, architecto atque ipsa, laudantium
+							laboriosam ipsam non vitae, cum maiores hic. Laboriosam fugiat
+							eveniet quos assumenda delectus aperiam excepturi vel, officia
+							sint reiciendis expedita consequuntur, a sed deleniti commodi
+							rerum natus quam veniam earum quibusdam! Nemo iusto asperiores sit
+							velit eveniet quod nam. Voluptatibus beatae maxime, quia a velit
+							praesentium vel vitae consectetur, libero nulla magni voluptatum
+							facilis ea facere, minus doloribus. Excepturi veniam, mollitia
+							esse aut illum ad tenetur facere quidem. Ipsum odio, dolore, error
+							rem assumenda debitis.
 						</p>
 						<p>
-							Culpa a facilis facere, ipsum eveniet, minima nisi ipsam perspiciatis aut nostrum autem delectus natus, error obcaecati. Deleniti, illo, nulla. Maiores similique accusantium sint ullam deleniti provident, ratione debitis neque a iusto placeat, explicabo quia assumenda minus amet suscipit modi odit voluptatem soluta. Quas consectetur accusantium iure magni velit, rem quasi sunt corrupti nisi, fugit quos beatae. Laborum impedit cum soluta facere consequuntur nisi nostrum enim. Eius incidunt ratione excepturi harum explicabo quos recusandae sequi, facere tenetur in ducimus impedit sunt sapiente accusamus laborum quae velit minus neque. Perferendis, ducimus nihil dolor placeat libero nisi adipisci autem et fugit commodi?
+							Culpa a facilis facere, ipsum eveniet, minima nisi ipsam
+							perspiciatis aut nostrum autem delectus natus, error obcaecati.
+							Deleniti, illo, nulla. Maiores similique accusantium sint ullam
+							deleniti provident, ratione debitis neque a iusto placeat,
+							explicabo quia assumenda minus amet suscipit modi odit voluptatem
+							soluta. Quas consectetur accusantium iure magni velit, rem quasi
+							sunt corrupti nisi, fugit quos beatae. Laborum impedit cum soluta
+							facere consequuntur nisi nostrum enim. Eius incidunt ratione
+							excepturi harum explicabo quos recusandae sequi, facere tenetur in
+							ducimus impedit sunt sapiente accusamus laborum quae velit minus
+							neque. Perferendis, ducimus nihil dolor placeat libero nisi
+							adipisci autem et fugit commodi?
 						</p>
 						<p>
-							Eos ut odio, perspiciatis ad delectus. Inventore officiis rem quisquam magni. Amet, doloremque? Eveniet laborum labore, quod enim repellat, omnis voluptates, quasi non nostrum dolores ut perspiciatis facilis sint dolorum, minima reprehenderit? Vitae ipsam, similique et quisquam. Molestias, eaque. Expedita eligendi, saepe facere tempore doloremque earum incidunt esse labore nobis amet odio, deserunt voluptate eius blanditiis ullam consequuntur maxime reprehenderit dolorem recusandae eos voluptas! Harum dolorum in, quo, dolore minima commodi laudantium beatae enim dolorem, aspernatur quaerat libero cupiditate repellendus. Ullam perferendis tempore autem quos officiis, natus a accusamus odit ut sint culpa. Quos sunt eos, magnam aliquam, adipisci consectetur.
+							Eos ut odio, perspiciatis ad delectus. Inventore officiis rem
+							quisquam magni. Amet, doloremque? Eveniet laborum labore, quod
+							enim repellat, omnis voluptates, quasi non nostrum dolores ut
+							perspiciatis facilis sint dolorum, minima reprehenderit? Vitae
+							ipsam, similique et quisquam. Molestias, eaque. Expedita eligendi,
+							saepe facere tempore doloremque earum incidunt esse labore nobis
+							amet odio, deserunt voluptate eius blanditiis ullam consequuntur
+							maxime reprehenderit dolorem recusandae eos voluptas! Harum
+							dolorum in, quo, dolore minima commodi laudantium beatae enim
+							dolorem, aspernatur quaerat libero cupiditate repellendus. Ullam
+							perferendis tempore autem quos officiis, natus a accusamus odit ut
+							sint culpa. Quos sunt eos, magnam aliquam, adipisci consectetur.
 						</p>
 					</Banner>
 				</div>
 
 				<div>
-					<Banner kind="warning" style={{ marginBottom: 8 }}>Warning</Banner>
+					<Banner kind="warning" style={{ marginBottom: 8 }}>
+						Warning
+					</Banner>
 					<Banner
 						kind="warning"
 						isCloseable={false}
@@ -172,14 +208,15 @@ export default createClass({
 						isCloseable={false}
 						style={{ marginBottom: 8 }}
 					>
-						Warning -- has icon -- small -- No Close
-						{' '}
+						Warning -- has icon -- small -- No Close{' '}
 						{String.fromCharCode(0x00d7)}
 					</Banner>
 				</div>
 
 				<div>
-					<Banner kind="danger" style={{ marginBottom: 8 }}>Danger</Banner>
+					<Banner kind="danger" style={{ marginBottom: 8 }}>
+						Danger
+					</Banner>
 					<Banner kind="danger" isCloseable={false} style={{ marginBottom: 8 }}>
 						Danger -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
@@ -220,14 +257,15 @@ export default createClass({
 						isCloseable={false}
 						style={{ marginBottom: 8 }}
 					>
-						Danger -- has icon -- small -- No Close
-						{' '}
+						Danger -- has icon -- small -- No Close{' '}
 						{String.fromCharCode(0x00d7)}
 					</Banner>
 				</div>
 
 				<div>
-					<Banner kind="info" style={{ marginBottom: 8 }}>Info</Banner>
+					<Banner kind="info" style={{ marginBottom: 8 }}>
+						Info
+					</Banner>
 					<Banner kind="info" isCloseable={false} style={{ marginBottom: 8 }}>
 						Info -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
@@ -285,9 +323,10 @@ export default createClass({
 				<div>
 					<Banner style={{ marginBottom: 8 }} icon={<CustomIcon />}>
 						<p>
-							<strong>Has Custom Icon</strong>
-							{' '}
-							ipsum dolor sit amet, consectetur adipisicing elit. A doloribus, fugit atque. Impedit neque perferendis libero nam, deserunt inventore aliquid quis molestiae est! In perferendis dignissimos ex optio cupiditate quae!
+							<strong>Has Custom Icon</strong> ipsum dolor sit amet, consectetur
+							adipisicing elit. A doloribus, fugit atque. Impedit neque
+							perferendis libero nam, deserunt inventore aliquid quis molestiae
+							est! In perferendis dignissimos ex optio cupiditate quae!
 						</p>
 					</Banner>
 				</div>
@@ -295,16 +334,19 @@ export default createClass({
 				<div>
 					<Banner style={{ marginBottom: 8 }} icon={<CustomIcon />}>
 						<p>
-							<strong>Has Custom Icon</strong>
-							{' '}
-							ipsum dolor sit amet, consectetur adipisicing elit. A doloribus, fugit atque. Impedit neque perferendis libero nam, deserunt inventore aliquid quis molestiae est! In perferendis dignissimos ex optio cupiditate quae!
+							<strong>Has Custom Icon</strong> ipsum dolor sit amet, consectetur
+							adipisicing elit. A doloribus, fugit atque. Impedit neque
+							perferendis libero nam, deserunt inventore aliquid quis molestiae
+							est! In perferendis dignissimos ex optio cupiditate quae!
 						</p>
 						<p>
-							Velit, architecto, commodi. Non porro cupiditate rerum obcaecati veniam alias fugiat nam similique, labore a quis magni vero consequatur consequuntur veritatis est quibusdam tempora tempore ex, deleniti dicta inventore. Quas.
+							Velit, architecto, commodi. Non porro cupiditate rerum obcaecati
+							veniam alias fugiat nam similique, labore a quis magni vero
+							consequatur consequuntur veritatis est quibusdam tempora tempore
+							ex, deleniti dicta inventore. Quas.
 						</p>
 					</Banner>
 				</div>
-
 			</div>
 		);
 	},

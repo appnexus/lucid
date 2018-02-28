@@ -36,7 +36,9 @@ describe('SearchableSelect', () => {
 				const wrapper = shallow(
 					<SearchableSelect>
 						<button>button</button>
-						<Placeholder>control<i>italic</i></Placeholder>
+						<Placeholder>
+							control<i>italic</i>
+						</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
 						<Option>option c</Option>
@@ -420,9 +422,9 @@ describe('SearchableSelect', () => {
 					SearchableSelectControlChildren[0];
 
 				assert.equal(
-					React.Children.toArray(SearchableSelectControlContent.props.children)[
-						0
-					],
+					React.Children.toArray(
+						SearchableSelectControlContent.props.children
+					)[0],
 					'select one'
 				);
 			});

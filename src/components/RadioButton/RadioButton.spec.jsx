@@ -95,7 +95,9 @@ describe('RadioButton', () => {
 
 describe('RadioButton', () => {
 	function simulateEvent(reactElement, selector, event) {
-		mount(reactElement).find(selector).simulate(event);
+		mount(reactElement)
+			.find(selector)
+			.simulate(event);
 	}
 
 	function verifyArguments(event) {

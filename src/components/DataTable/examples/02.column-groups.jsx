@@ -98,9 +98,7 @@ export default createClass({
 	render() {
 		return (
 			<DataTable data={data} density="extended">
-				<DataTable.Column field="id">
-					ID
-				</DataTable.Column>
+				<DataTable.Column field="id">ID</DataTable.Column>
 
 				<DataTable.ColumnGroup title="Name">
 					<DataTable.Column

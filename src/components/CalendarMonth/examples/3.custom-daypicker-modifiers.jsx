@@ -6,7 +6,6 @@ export default createClass({
 	render() {
 		return (
 			<section style={{ maxWidth: 400 }}>
-
 				<CalendarMonth
 					modifiers={{
 						tuesday: day => day.getDay() === 2,
@@ -18,7 +17,6 @@ export default createClass({
 						border: 1px dotted gray;
 					}
 				`}</style>
-
 			</section>
 		);
 	},

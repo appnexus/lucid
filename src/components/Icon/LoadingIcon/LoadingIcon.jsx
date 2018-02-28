@@ -62,7 +62,6 @@ const LoadingIcon = createClass({
 					cy="50"
 					r="40"
 				/>
-
 			</Icon>
 		);
 	},

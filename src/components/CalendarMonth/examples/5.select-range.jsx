@@ -71,7 +71,6 @@ export default createClass({
 
 		return (
 			<section>
-
 				<div style={{ display: 'flex', maxWidth: 800 }}>
 					<Button onClick={this.handlePrev}>{'<'}</Button>
 
@@ -101,9 +100,8 @@ export default createClass({
 
 					<Button onClick={this.handleNext}>{'>'}</Button>
 				</div>
-
-				from: {from && from.toLocaleDateString('en-US')},
-				to: {to && to.toLocaleDateString('en-US')}
+				from: {from && from.toLocaleDateString('en-US')}, to:{' '}
+				{to && to.toLocaleDateString('en-US')}
 			</section>
 		);
 	},

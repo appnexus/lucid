@@ -6,7 +6,6 @@ export default createClass({
 	render() {
 		return (
 			<section style={{ maxWidth: 400 }}>
-
 				<DateSelect>
 					<DateSelect.CalendarMonth
 						modifiers={{

@@ -2,9 +2,7 @@ import * as _ from 'lodash';
 import React from 'react';
 import { shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
-import {
-	SearchableMultiSelectDumb as SearchableMultiSelect,
-} from './SearchableMultiSelect';
+import { SearchableMultiSelectDumb as SearchableMultiSelect } from './SearchableMultiSelect';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 
 const { Option } = SearchableMultiSelect;
@@ -54,7 +52,10 @@ describe('SearchableMultiSelect', () => {
 				</SearchableMultiSelect>
 			);
 
-			wrapper.find('Selection').first().prop('onRemove')({ event: 'nert' });
+			wrapper
+				.find('Selection')
+				.first()
+				.prop('onRemove')({ event: 'nert' });
 
 			expect(onRemoveAll).toHaveBeenCalled();
 		});
@@ -98,10 +99,10 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				wrapper.find('DropMenu').first().prop('onSelect')(
-					10,
-					mockSelectionCallback
-				);
+				wrapper
+					.find('DropMenu')
+					.first()
+					.prop('onSelect')(10, mockSelectionCallback);
 
 				expect(onSelect).toHaveBeenCalledWith(9, mockSelectionCallback);
 			});
@@ -128,7 +129,10 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				wrapper.find('Selection').at(1).prop('onRemove')(mockSelectionCallback);
+				wrapper
+					.find('Selection')
+					.at(1)
+					.prop('onRemove')(mockSelectionCallback);
 
 				expect(onSelect).toHaveBeenCalledWith(1, expected);
 			});
@@ -147,10 +151,10 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				wrapper.find('DropMenu').first().prop('onSelect')(
-					0,
-					mockSelectionCallback
-				);
+				wrapper
+					.find('DropMenu')
+					.first()
+					.prop('onSelect')(0, mockSelectionCallback);
 
 				expect(onSelect).toHaveBeenCalledWith([0, 1]);
 			});
@@ -173,10 +177,10 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				wrapper.find('DropMenu').first().prop('onSelect')(
-					0,
-					mockSelectionCallback
-				);
+				wrapper
+					.find('DropMenu')
+					.first()
+					.prop('onSelect')(0, mockSelectionCallback);
 
 				expect(onSelect).toHaveBeenCalledWith([0, 1]);
 			});
@@ -199,10 +203,10 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				wrapper.find('DropMenu').first().prop('onSelect')(
-					0,
-					mockSelectionCallback
-				);
+				wrapper
+					.find('DropMenu')
+					.first()
+					.prop('onSelect')(0, mockSelectionCallback);
 
 				expect(onSelect).toHaveBeenCalledWith([1]);
 			});
@@ -221,10 +225,10 @@ describe('SearchableMultiSelect', () => {
 					</SearchableMultiSelect>
 				);
 
-				wrapper.find('DropMenu').first().prop('onSelect')(
-					0,
-					mockSelectionCallback
-				);
+				wrapper
+					.find('DropMenu')
+					.first()
+					.prop('onSelect')(0, mockSelectionCallback);
 
 				expect(onSelect).toHaveBeenCalledWith([1]);
 			});

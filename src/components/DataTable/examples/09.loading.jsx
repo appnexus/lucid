@@ -6,9 +6,7 @@ export default createClass({
 	render() {
 		return (
 			<DataTable isFullWidth isLoading data={[]}>
-				<DataTable.Column field="id">
-					ID
-				</DataTable.Column>
+				<DataTable.Column field="id">ID</DataTable.Column>
 
 				<DataTable.Column field="first_name" width={100}>
 					First

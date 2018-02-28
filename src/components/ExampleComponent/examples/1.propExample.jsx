@@ -6,7 +6,8 @@ export default createClass({
 	render() {
 		return (
 			<ExampleComponent isX={true}>
-				Be sure to show consumers of your component examples of how each prop is implemented.
+				Be sure to show consumers of your component examples of how each prop is
+				implemented.
 			</ExampleComponent>
 		);
 	},

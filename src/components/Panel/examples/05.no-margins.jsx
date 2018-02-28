@@ -8,7 +8,6 @@ export default createClass({
 	render() {
 		return (
 			<Panel hasMargin={false}>
-
 				<Panel.Header>
 					<strong>Header</strong>
 				</Panel.Header>
@@ -44,7 +43,6 @@ export default createClass({
 						</Tr>
 					</Tbody>
 				</Table>
-
 			</Panel>
 		);
 	},

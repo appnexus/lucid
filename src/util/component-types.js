@@ -1,6 +1,6 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { omitFunctionPropsDeep } from './state-management';
 
@@ -36,7 +36,11 @@ export function createClass(definition = {}) {
 		propTypes: _.assign(
 			{},
 			propTypes,
-			_.mapValues(definition.components, () => PropTypes.any)
+			_.mapValues(
+				definition.components,
+				(componentValue, componentKey) =>
+					PropTypes.any`Props for ${componentValue.displayName || componentKey}`
+			)
 		),
 		render,
 	};
@@ -74,7 +78,8 @@ export function createElements(type, values = []) {
 			if (React.isValidElement(typeValue) && typeValue.type === type) {
 				return elements.concat(typeValue);
 			} else if (
-				_.isPlainObject(typeValue) && !React.isValidElement(typeValue)
+				_.isPlainObject(typeValue) &&
+				!React.isValidElement(typeValue)
 			) {
 				return elements.concat(React.createElement(type, typeValue));
 			} else if (_.isUndefined(typeValue)) {
@@ -126,6 +131,8 @@ export function omitProps(props, type, keys = [], targetIsDOMElement = true) {
 
 	return _.omit(
 		props,
-		_.keys(type.propTypes).concat(keys).concat(additionalOmittedKeys)
+		_.keys(type.propTypes)
+			.concat(keys)
+			.concat(additionalOmittedKeys)
 	);
 }

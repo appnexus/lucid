@@ -53,9 +53,7 @@ describe('Selection', () => {
 			const wrapper = shallow(
 				<Selection>
 					Hello
-					<Selection>
-						There
-					</Selection>
+					<Selection>There</Selection>
 				</Selection>
 			);
 

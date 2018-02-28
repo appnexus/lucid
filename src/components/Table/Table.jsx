@@ -322,9 +322,8 @@ const Th = createClass({
 						'&-align-right': align === 'right',
 						'&-is-resizable': isResizable,
 						'&-is-resizing': isResizing,
-						'&-is-sortable': isSortable === false
-							? isSortable
-							: isSorted || isSortable,
+						'&-is-sortable':
+							isSortable === false ? isSortable : isSorted || isSortable,
 						'&-is-sorted': isSorted,
 						'&-has-border-right': hasBorderRight,
 						'&-has-border-left': hasBorderLeft,
@@ -344,26 +343,24 @@ const Th = createClass({
 				}
 			>
 				<div className={cx('&-Th-inner')}>
-					<div className={cx('&-Th-inner-content')}>
-						{children}
-					</div>
-					{isSorted
-						? <div className={cx('&-Th-inner-caret')}>
-								<CaretIcon
-									className={cx('&-sort-icon')}
-									direction={sortDirection}
-									size={6}
-								/>
-							</div>
-						: null}
-					{isResizable
-						? <DragCaptureZone
-								className={cx('&-Th-inner-resize')}
-								onDrag={this.handleDragged}
-								onDragEnd={this.handleDragEnded}
-								onDragStart={this.handleDragStarted}
+					<div className={cx('&-Th-inner-content')}>{children}</div>
+					{isSorted ? (
+						<div className={cx('&-Th-inner-caret')}>
+							<CaretIcon
+								className={cx('&-sort-icon')}
+								direction={sortDirection}
+								size={6}
 							/>
-						: null}
+						</div>
+					) : null}
+					{isResizable ? (
+						<DragCaptureZone
+							className={cx('&-Th-inner-resize')}
+							onDrag={this.handleDragged}
+							onDragEnd={this.handleDragEnded}
+							onDragStart={this.handleDragStarted}
+						/>
+					) : null}
 				</div>
 			</th>
 		);
@@ -677,9 +674,8 @@ function mapToGrid(trList, cellType = 'td', mapFn = _.property('element')) {
 			}
 
 			const nilCellIndex = _.findIndex(grid[canonicalRow], _.isNil);
-			const originCol = nilCellIndex !== -1
-				? nilCellIndex
-				: grid[canonicalRow].length;
+			const originCol =
+				nilCellIndex !== -1 ? nilCellIndex : grid[canonicalRow].length;
 
 			for (let currentColSpan = 0; currentColSpan < colSpan; currentColSpan++) {
 				grid[canonicalRow][originCol + currentColSpan] = {
@@ -747,19 +743,23 @@ function mapToGrid(trList, cellType = 'td', mapFn = _.property('element')) {
  */
 function renderRowsWithIdentifiedEdges(trList, cellType) {
 	const duplicateReferences = [];
-	const fullCellGrid = mapToGrid(trList, cellType, ({
-		element: { props },
-		isOriginal,
-		canonicalPosition,
-	}, currentPos, grid) => {
-		if (!isOriginal) {
-			// if cell spans multiple positions
-			// store current position and return original cell props reference
-			duplicateReferences.push(currentPos);
-			return grid[canonicalPosition.row][canonicalPosition.col];
+	const fullCellGrid = mapToGrid(
+		trList,
+		cellType,
+		(
+			{ element: { props }, isOriginal, canonicalPosition },
+			currentPos,
+			grid
+		) => {
+			if (!isOriginal) {
+				// if cell spans multiple positions
+				// store current position and return original cell props reference
+				duplicateReferences.push(currentPos);
+				return grid[canonicalPosition.row][canonicalPosition.col];
+			}
+			return _.assign({}, props); // return a new props object based on old cell
 		}
-		return _.assign({}, props); // return a new props object based on old cell
-	});
+	);
 
 	if (_.isEmpty(fullCellGrid)) {
 		return [];

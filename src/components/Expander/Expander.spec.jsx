@@ -104,7 +104,10 @@ describe('Expander', () => {
 				);
 
 				assert.equal(
-					wrapper.find(ReactTransitionGroup).find('span').prop('children'),
+					wrapper
+						.find(ReactTransitionGroup)
+						.find('span')
+						.prop('children'),
 					'foo'
 				);
 			});
@@ -145,9 +148,18 @@ describe('Expander', () => {
 			const onToggle = sinon.spy();
 			wrapper = mount(<Expander onToggle={onToggle} />);
 
-			wrapper.find('.lucid-Expander-header').first().simulate('click');
-			wrapper.find('.lucid-Expander-icon').first().simulate('click');
-			wrapper.find('.lucid-Expander-text').first().simulate('click');
+			wrapper
+				.find('.lucid-Expander-header')
+				.first()
+				.simulate('click');
+			wrapper
+				.find('.lucid-Expander-icon')
+				.first()
+				.simulate('click');
+			wrapper
+				.find('.lucid-Expander-text')
+				.first()
+				.simulate('click');
 
 			assert.equal(onToggle.callCount, 3);
 		});
@@ -156,9 +168,18 @@ describe('Expander', () => {
 			const onToggle = sinon.spy();
 			wrapper = mount(<Expander isExpanded={false} onToggle={onToggle} />);
 
-			wrapper.find('.lucid-Expander-header').first().simulate('click');
-			wrapper.find('.lucid-Expander-icon').first().simulate('click');
-			wrapper.find('.lucid-Expander-text').first().simulate('click');
+			wrapper
+				.find('.lucid-Expander-header')
+				.first()
+				.simulate('click');
+			wrapper
+				.find('.lucid-Expander-icon')
+				.first()
+				.simulate('click');
+			wrapper
+				.find('.lucid-Expander-text')
+				.first()
+				.simulate('click');
 
 			assert.equal(onToggle.args[0][0], true);
 			assert.equal(onToggle.args[1][0], true);
@@ -169,9 +190,18 @@ describe('Expander', () => {
 			const onToggle = sinon.spy();
 			wrapper = mount(<Expander isExpanded={true} onToggle={onToggle} />);
 
-			wrapper.find('.lucid-Expander-header').first().simulate('click');
-			wrapper.find('.lucid-Expander-icon').first().simulate('click');
-			wrapper.find('.lucid-Expander-text').first().simulate('click');
+			wrapper
+				.find('.lucid-Expander-header')
+				.first()
+				.simulate('click');
+			wrapper
+				.find('.lucid-Expander-icon')
+				.first()
+				.simulate('click');
+			wrapper
+				.find('.lucid-Expander-text')
+				.first()
+				.simulate('click');
 
 			assert.equal(onToggle.args[0][0], false);
 			assert.equal(onToggle.args[1][0], false);

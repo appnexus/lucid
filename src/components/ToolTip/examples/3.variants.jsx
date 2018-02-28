@@ -32,7 +32,8 @@ export default createClass({
 							<ToolTipDumb key={kind} isExpanded kind={kind}>
 								<Title>{_.capitalize(kind)}</Title>
 								<Body>
-									ToolTip is a utility component to create a transient message anchored to another component.
+									ToolTip is a utility component to create a transient message
+									anchored to another component.
 								</Body>
 								<Target>
 									<div>Target for {kind}</div>

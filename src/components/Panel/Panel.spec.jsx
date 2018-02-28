@@ -68,11 +68,7 @@ describe('Panel', () => {
 			});
 
 			it('should not render when not included', () => {
-				const wrapper = shallow(
-					<Panel>
-						Content
-					</Panel>
-				);
+				const wrapper = shallow(<Panel>Content</Panel>);
 				assert.equal(wrapper.find('.lucid-Panel-Header').length, 0);
 			});
 
@@ -111,11 +107,7 @@ describe('Panel', () => {
 			});
 
 			it('should not render when not included', () => {
-				const wrapper = shallow(
-					<Panel>
-						Content
-					</Panel>
-				);
+				const wrapper = shallow(<Panel>Content</Panel>);
 				assert.equal(wrapper.find('.lucid-Panel-footer').length, 0);
 			});
 		});

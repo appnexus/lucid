@@ -76,15 +76,15 @@ const Validation = createClass({
 			>
 				{children}
 				{errorChildProps &&
-					errorChildProps.children &&
-					errorChildProps.children !== true
-					? <div
-							{...omitProps(errorChildProps, Validation.Error)}
-							className={cx('&-error-content', errorChildProps.className)}
-						>
-							{errorChildProps.children}
-						</div>
-					: null}
+				errorChildProps.children &&
+				errorChildProps.children !== true ? (
+					<div
+						{...omitProps(errorChildProps, Validation.Error)}
+						className={cx('&-error-content', errorChildProps.className)}
+					>
+						{errorChildProps.children}
+					</div>
+				) : null}
 			</div>
 		);
 	},

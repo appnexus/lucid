@@ -12,8 +12,8 @@ export default createClass({
 			<section>
 				<p>
 					<em>
-						(Use the styles on the <code>RadioGroup</code> component
-						to ensure only the radio buttons and theirs labels are clickable)
+						(Use the styles on the <code>RadioGroup</code> component to ensure
+						only the radio buttons and theirs labels are clickable)
 					</em>
 				</p>
 				<RadioGroup

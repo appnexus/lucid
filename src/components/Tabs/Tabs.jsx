@@ -115,32 +115,35 @@ const Tab = createClass({
 			>
 				<span className={cx('&-Tab-content')}>{Title}</span>
 				{isProgressive &&
-					!isLastTab &&
-					<span className={cx('&-Tab-arrow')}>
-						<svg
-							className={cx('&-Tab-arrow-svg')}
-							viewBox={isNavigation ? '0 0 8 37' : '0 0 8 28'}
-							preserveAspectRatio="none"
-						>
-							<polygon
-								className={cx('&-Tab-arrow-background')}
-								fill="#fff"
-								points={isNavigation ? '0,0 8,18.5 0,37' : '0,0 8,14 0,28'}
-							/>
-							<polyline
-								className={cx('&-Tab-arrow-tab-line')}
-								fill="#fff"
-								points="0,0 1,1 0,1"
-							/>
-							<polyline
-								className={cx('&-Tab-arrow-line')}
-								fill="none"
-								stroke="#fff"
-								strokeWidth="1"
-								points={isNavigation ? '0,37 7.3,18.5 0,0' : '0,28 7.9,14 0,0'}
-							/>
-						</svg>
-					</span>}
+					!isLastTab && (
+						<span className={cx('&-Tab-arrow')}>
+							<svg
+								className={cx('&-Tab-arrow-svg')}
+								viewBox={isNavigation ? '0 0 8 37' : '0 0 8 28'}
+								preserveAspectRatio="none"
+							>
+								<polygon
+									className={cx('&-Tab-arrow-background')}
+									fill="#fff"
+									points={isNavigation ? '0,0 8,18.5 0,37' : '0,0 8,14 0,28'}
+								/>
+								<polyline
+									className={cx('&-Tab-arrow-tab-line')}
+									fill="#fff"
+									points="0,0 1,1 0,1"
+								/>
+								<polyline
+									className={cx('&-Tab-arrow-line')}
+									fill="none"
+									stroke="#fff"
+									strokeWidth="1"
+									points={
+										isNavigation ? '0,37 7.3,18.5 0,0' : '0,28 7.9,14 0,0'
+									}
+								/>
+							</svg>
+						</span>
+					)}
 			</li>
 		);
 	},
@@ -262,9 +265,10 @@ const Tabs = createClass({
 			isSelected: true,
 		});
 
-		const actualSelectedIndex = selectedIndexFromChildren !== -1
-			? selectedIndexFromChildren
-			: selectedIndex;
+		const actualSelectedIndex =
+			selectedIndexFromChildren !== -1
+				? selectedIndexFromChildren
+				: selectedIndex;
 
 		return (
 			<div {...omitProps(passThroughs, Tabs)} className={cx('&', className)}>

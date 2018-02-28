@@ -11,7 +11,6 @@ export default createClass({
 	render() {
 		return (
 			<div>
-
 				<LoadingIndicator isLoading>
 					<BarChart
 						data={[
@@ -22,7 +21,9 @@ export default createClass({
 						]}
 					/>
 					<LoadingMessage>
-						<Icon><LoadingIcon speed="slow" /></Icon>
+						<Icon>
+							<LoadingIcon speed="slow" />
+						</Icon>
 						<Title>Custom Title</Title>
 						<Body>Custom Body</Body>
 					</LoadingMessage>
@@ -43,7 +44,6 @@ export default createClass({
 						Body="Please wait"
 					/>
 				</LoadingIndicator>
-
 			</div>
 		);
 	},
