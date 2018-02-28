@@ -51,8 +51,6 @@ const getDefaultPropValue = (componentRef, property) => {
 const style = {
 	a: {
 		textDecoration: 'none',
-		//color: '#3f6486',
-		//textDecoration: 'underline',
 		color: '#2abbb0',
 	},
 	ul: {
@@ -68,16 +66,8 @@ const style = {
 		padding: '2px 4px',
 		border: '1px solid rgb(236,236,236)',
 		borderRadius: 3,
-		//color: '#666',
-		//marginLeft: '1.075em',
 	},
 	hashSymbol: {
-		//color: '#2abbb0',
-		//marginRight: 4,
-		//textDecoration: 'none',
-		//opacity: '.3',
-		//width: '1em',
-		//marginLeft: '-1.075em',
 		display: 'none',
 	},
 	propType: {
@@ -86,7 +76,6 @@ const style = {
 	},
 	isRequired: {
 		fontSize: 9,
-		//color: '#de5e46',
 		color: '#0d8050',
 		marginLeft: 4,
 		backgroundColor: 'rgba(15,153,96,.15)',
@@ -95,11 +84,6 @@ const style = {
 	},
 	propName: {
 		fontFamily: 'monospace',
-		//border: '1px solid #ddd',
-		//borderRadius: 3,
-		//padding: '2px 4px',
-		//color: '#555',
-		//backgroundColor: '#f8f8f8',
 		fontWeight: '100',
 	},
 	propHeader: {
@@ -109,7 +93,6 @@ const style = {
 	propSection: {
 		margin: '10px 0 10px 0',
 		backgroundColor: 'white',
-		//boxShadow: '0 0 10px rgba(64,64,64,0.15)',
 		padding: 8,
 	},
 	defaultValueLabel: {
@@ -123,7 +106,6 @@ const style = {
 		padding: 10,
 	},
 	divider: {
-		//backgroundColor: 'rgba(64,64,64,0.1)',
 		backgroundColor: 'rgb(247,247,247)',
 		height: 1,
 		border: 'none',
@@ -137,7 +119,7 @@ const style = {
 };
 
 const Block = ({ oneline, ...rest }) =>
-	(oneline ? <span {...rest} /> : <div {...rest} />);
+	oneline ? <span {...rest} /> : <div {...rest} />;
 
 const PropType = ({ oneline, type, ...propData }) => {
 	if (type === 'oneOf') {
@@ -218,11 +200,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 		);
 	}
 
-	return (
-		<span style={PropType.style.root}>
-			{type}
-		</span>
-	);
+	return <span style={PropType.style.root}>{type}</span>;
 };
 
 PropType.style = {
@@ -245,76 +223,62 @@ const PropsList = ({ componentRef, props }) => {
 		<section>
 			<a name="top" />
 			<ul style={style.ul}>
-				{_.map(sortedProps, ({
-					name,
-					type,
-					isRequired,
-					defaultValue,
-					text,
-				}) => (
-					<li key={name} style={style.li}>
-
-						<a
-							style={{ ...style.a, ...style.propName, ...style.propLink }}
-							href={`#${name}`}
-						>
-							<span style={style.hashSymbol}>#</span>{name}
-						</a>
-						&nbsp;
-						<span style={style.propType}>{type}</span>
-						{isRequired && <span style={style.isRequired}>Required</span>}
-					</li>
-				))}
+				{_.map(
+					sortedProps,
+					({ name, type, isRequired, defaultValue, text }) => (
+						<li key={name} style={style.li}>
+							<a
+								style={{ ...style.a, ...style.propName, ...style.propLink }}
+								href={`#${name}`}
+							>
+								<span style={style.hashSymbol}>#</span>
+								{name}
+							</a>
+							&nbsp;
+							<span style={style.propType}>{type}</span>
+							{isRequired && <span style={style.isRequired}>Required</span>}
+						</li>
+					)
+				)}
 			</ul>
 			<hr style={style.divider} />
-			{_.map(sortedProps, ({
-				name,
-				type,
-				isRequired,
-				defaultValue,
-				text,
-				...propData
-			}) => (
-				<span key={name}>
-					<a name={name} />
-					<div style={style.propSection}>
-						<h3 style={style.propHeader}>
-							<span style={style.propName}>{name}</span>
-						</h3>
-						<div>
-							<span style={style.propType}>
-								<PropType {...{ type, ...propData }} />
-							</span>
-							{' '}
-							{isRequired && <span style={style.isRequired}>Required</span>}
-						</div>
-						<div>{compile(stripIndent(text)).tree}</div>
-						{!_.isUndefined(defaultValue) &&
+			{_.map(
+				sortedProps,
+				({ name, type, isRequired, defaultValue, text, ...propData }) => (
+					<span key={name}>
+						<a name={name} />
+						<div style={style.propSection}>
+							<h3 style={style.propHeader}>
+								<span style={style.propName}>{name}</span>
+							</h3>
 							<div>
-								<span style={style.defaultValueLabel}>default:</span>
-								<SyntaxHighlighter
-									language="json"
-									style={coy}
-									customStyle={{
-										fontSize: 12,
-									}}
-								>
-									{JSON.stringify(defaultValue, null, 2)}
-								</SyntaxHighlighter>
-								{/*
-								<pre style={style.defaultValue}>
-									{JSON.stringify(
-										defaultValue,
-										null,
-										2
-									)}
-								</pre>
-								*/}
-							</div>}
-						<a style={{ ...style.a, ...style.top }} href="#top">top</a>
-					</div>
-				</span>
-			))}
+								<span style={style.propType}>
+									<PropType {...{ type, ...propData }} />
+								</span>{' '}
+								{isRequired && <span style={style.isRequired}>Required</span>}
+							</div>
+							<div>{compile(stripIndent(text)).tree}</div>
+							{!_.isUndefined(defaultValue) && (
+								<div>
+									<span style={style.defaultValueLabel}>default:</span>
+									<SyntaxHighlighter
+										language="json"
+										style={coy}
+										customStyle={{
+											fontSize: 12,
+										}}
+									>
+										{JSON.stringify(defaultValue, null, 2)}
+									</SyntaxHighlighter>
+								</div>
+							)}
+							<a style={{ ...style.a, ...style.top }} href="#top">
+								top
+							</a>
+						</div>
+					</span>
+				)
+			)}
 		</section>
 	);
 };
