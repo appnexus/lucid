@@ -1,7 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import DataTable from '../DataTable';
-import { SuccessIcon } from '../../../index';
+import { DataTable, SuccessIcon } from '../../../index';
 
 const data = [
 	{

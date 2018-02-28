@@ -13,7 +13,7 @@ if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ "$TRAVIS_BRANCH" = "master" ]; then
 	rm -rf ./dist/docs
 
 	# Build the new docs
-	gulp docs-build
+	npm run build-docs
 
 	cd ./dist/docs
 	git init

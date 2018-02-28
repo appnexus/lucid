@@ -24,6 +24,10 @@
     "stylelint": "stylelint 'src/**/*.less' --config .stylelintrc",
     "test": "npm run lint && npm run cover",
     "watch": "npm run jest -- --watch",
+    "storybook": "start-storybook -p 6006",
+    "docs": "NODE_ENV=documentation start-storybook -p 6006",
+    "build-docs": "NODE_ENV=documentation build-storybook -o ./dist/docs",
+    "upload-docs": "rm -rf ./dist/docs; npm run build-docs; gulp docs-upload-build",
     "release": "np"
   },
   "keywords": [
@@ -56,6 +60,11 @@
     "reselect": "^2.5.1"
   },
   "devDependencies": {
+    "@storybook/addon-info": "^3.3.12",
+    "@storybook/addon-links": "^3.3.12",
+    "@storybook/addon-options": "^3.3.14",
+    "@storybook/addons": "^3.3.12",
+    "@storybook/react": "^3.3.12",
     "autoprefixer": "^6.3.3",
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
@@ -96,6 +105,7 @@
     "less-loader": "^2.2.2",
     "lint-staged": "^3.4.0",
     "markdown": "^0.5.0",
+    "marksy": "^6.0.3",
     "np": "^2.20.1",
     "postcss-loader": "^0.8.1",
     "prettier": "^1.1.0",
@@ -104,6 +114,7 @@
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
+    "react-syntax-highlighter": "^7.0.0",
     "sinon": "^2.0.0-pre",
     "style-loader": "^0.13.0",
     "stylelint": "^7.10.1",

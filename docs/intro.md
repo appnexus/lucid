@@ -1,0 +1,62 @@
+# Introduction
+
+Lucid UI is a React component library by AppNexus.
+
+- Battle-tested in Enterprise Apps
+- Hybrid Component State
+- Child Component Composition
+- Computed Props With `reselect`
+- Pure SVG Charts Built on `D3`
+- Human-readable CSS Class Names
+
+```marksy
+<p>See <LinkTo kind='Lucid UI' story='Readme'>Readme</LinkTo> for instructions to install.</p>
+```
+
+#### Battle-tested in Enterprise Apps
+
+AppNexus is an internet technology company that uses data and machine learning to power the world’s open digital audience platforms.
+React is a core part of our front-end architecture and our components have to be able to handle large data sets and complex workflows.
+We take great care in designing components that are easy-to-use and flexible enough to handle unique configurations.
+We continuously create new components and refine existing ones with feedback from our own suite of enterprise React apps and the open source community.
+
+#### Hybrid Component State
+
+All components manage their own internal state by default, however any prop passed in explicitly will always override the internal value.
+This allows developers to control important app state in a store while letting the component manage the more mundane component state automatically.
+We accomplish this by developing all of our components as pure, stateless components along with a set of reducer functions to control behavior.
+The stateless component and the reducers are combined to create the final component that manages its own state.
+
+```marksy
+<p>Read more about <LinkTo kind='Lucid UI' story='Hybrid State Components'>hybrid components</LinkTo>.</p>
+```
+
+#### Child Component Composition
+
+Developers of large, complex components will often conceal complexity by exposing a multitude of various props to provide custom configurations.
+Lucid exposes child components that are passed in as children rather having to rely on passing in elements, components or render functions via props.
+The resulting code is clean, flexible JSX that embraces component composition.
+
+```marksy
+<p>Read more about <LinkTo kind='Lucid UI' story='Child Components'>child components</LinkTo>.</p>
+```
+
+#### Computed Props With `reselect`
+
+Some components need to calculate values in every render, and in many cases, these computations will return the same values repeatedly.
+In these instances, we use `reselect` to cache results providing a performance boost in those components.
+
+```marksy
+<p>Read more about <LinkTo kind='Lucid UI' story='Computed Props'>computed props</LinkTo>.</p>
+```
+
+#### Pure SVG Charts Built on `D3`
+
+While there are many great React chart libraries out there, we needed to have more control over the style and structure of graphs in our apps.
+We accomplish this by using the core `D3` logic to render pure, primitive SVG elements which can be composed together to create elegant charts and graphs.
+We also have wrappers for common chart configurations for developer convenience.
+
+#### Human-readable CSS Class Names
+
+All components follow a strict, consistent pattern for CSS class names. This is because we consider CSS classes as part of our public API.
+It also makes it easy to target specific elements for custom styling and functional tests.

@@ -1,0 +1,308 @@
+# Child Components
+When we define a component type as a static property on another component, we refer to it as a _child component_.
+
+## What are they?
+Child component are like _sub-components_ that can be composed into the main component in this style:
+```jsx
+import SingleSelect from 'lucid-ui/SingleSelect';
+const { Option, Placeholder } = SingleSelect;
+
+<SingleSelect>
+  <Placeholder>Choose a color</Placeholder>
+  <Option>Red</Option>
+  <Option>Green</Option>
+  <Option>Blue</Option>
+<SingleSelect>
+```
+
+## Why use them?
+Rather than use the composition pattern above, we could have alternatively defined a component API that accepts props like this:
+```jsx
+import SingleSelect from 'lucid-ui/SingleSelect';
+
+<SingleSelect
+  placeholder="Choose a color"
+  options={[
+    'Red',
+    'Green',
+    'Blue',
+  ]}
+/>
+```
+This API is flat, clean and straightforward, but how does it handle edge cases?
+Intuitively, you might think `placeholder` can only accept a string, and `options` accepts an array of strings.
+But strings aren't the only things that can rendered.
+Depending on the implementation of `SingleSelect`, `placeholder` and `options` could also accept `PropTypes.node` to allow:
+```jsx
+<SingleSelect
+  placeholder={<span>Choose a color <CircleIcon /></span>}
+  options={[
+    <span>Red <RedCircle /></span>,
+    <span>Green <GreenCircle /></span>,
+    <span>Blue <BlueCircle /></span>,
+  ]}
+/>
+```
+So now we can render any arbitrary element inside each option or placeholder.
+But what if we wanted apply other props or styles to the containers of those arbitrary elements?
+We could create a new prop for `placeholderProps` like this:
+```jsx
+<SingleSelect
+  placeholder={<span>Choose a color <CircleIcon /></span>}
+  placeholderProps={{
+    style: { background: 'grey' }
+  }}
+  options={[
+    <span>Red <RedCircle /></span>,
+    <span>Green <GreenCircle /></span>,
+    <span>Blue <BlueCircle /></span>,
+  ]}
+/>
+```
+This allows additional props to be spread onto the container of the placeholder. For the array of `options` we can have it accept an array of props objects:
+```jsx
+  <SingleSelect
+  placeholder={<span>Choose a color <CircleIcon /></span>}
+  options={[
+    {
+      style: { background: 'red' },
+      children: <span>Red <RedCircle /></span>
+    },
+    {
+      style: { background: 'green' },
+      children: <span>Green <GreenCircle /></span>
+    },
+    {
+      style: { background: 'blue' },
+      children: <span>Blue <BlueCircle /></span>
+    },
+  ]}
+/>
+```
+You can see how this component API can become more complex to accommodate all the various edge cases.
+This requires a more complex implementation as well as more documentation to enumerate all the special cases.
+
+This is why we recommend using child components which by default already handle these variations with a consistent, composable component API:
+```jsx
+<SingleSelect>
+  <Placeholder style={{ background: 'gray' }}>
+    Choose a color <GrayCircleIcon />
+  </Placeholder>
+  <Option style={{ background: 'red' }}>Red <RedCircle /></Option>
+  <Option style={{ background: 'green' }}>Green <GreenCircle /></Option>
+  <Option style={{ background: 'blue' }}>Blue <BlueCircle /></Option>
+<SingleSelect>
+```
+
+However, some still prefer to pass these nodes as props instead of using child components.
+For the sake of consistency, we expose props with the same name as the child components which accept the various values you might expect to pass in:
+```jsx
+<SingleSelect
+  Placeholder="Choose a color"
+  Option={[
+    'Red',
+    'Green',
+    'Blue',
+  ]}
+/>
+```
+
+When you are using props API the prop value gets transformed to a child component that will be applied to the main component.
+
+Here's how various prop values are transformed:
+
+### String
+```jsx
+<SingleSelect
+  Placeholder="Choose a color"
+/>
+
+// is equivalent to:
+
+<SingleSelect>
+  <Placeholder>Choose a color</Placeholder>
+</SingleSelect>
+```
+
+### Element
+```jsx
+<SingleSelect
+  Placeholder={
+    <span>Choose a color <GrayCircleIcon /></span>
+  }
+/>
+
+// is equivalent to:
+
+<SingleSelect>
+  <Placeholder>
+    <span>Choose a color <GrayCircleIcon /></span>
+  </Placeholder>
+</SingleSelect>
+```
+
+### Object
+```jsx
+<SingleSelect
+  Placeholder={{
+    style: { background: 'gray' }
+    children: 'Choose a color',
+  }}
+/>
+
+// is equivalent to:
+
+<SingleSelect>
+  <Placeholder style={{ background: 'gray' }}>
+    Choose a color
+  </Placeholder>
+</SingleSelect>
+```
+
+
+### Array of strings
+```jsx
+<SingleSelect
+  Option={[
+    'Red',
+    'Green',
+    'Blue',
+  ]}
+/>
+
+// is equivalent to:
+
+<SingleSelect>
+  <Option>Red</Option>
+  <Option>Green</Option>
+  <Option>Blue</Option>
+</SingleSelect>
+```
+
+### Array of elements
+```jsx
+<SingleSelect
+  Option={[
+    <span>Red <RedCircle /></span>,
+    <span>Green <GreenCircle /></span>,
+    <span>Blue <BlueCircle /></span>,
+  ]}
+/>
+
+// is equivalent to:
+
+<SingleSelect>
+  <Option><span>Red <RedCircle /></span></Option>
+  <Option><span>Green <GreenCircle /></span></Option>
+  <Option><span>Blue <BlueCircle /></span></Option>
+</SingleSelect>
+```
+
+### Array of objects
+```jsx
+<SingleSelect
+  Option={[
+    { style: {background: 'red'}, children: 'Red' }
+    { style: {background: 'green'}, children: 'Green' }
+    { style: {background: 'blue'}, children: 'Blue' }
+  ]}
+/>
+
+// is equivalent to:
+
+<SingleSelect>
+  <Option style={{background: 'red'}}>Red</Option>
+  <Option style={{background: 'green'}}>Green</Option>
+  <Option style={{background: 'blue'}}>Blue</Option>
+</SingleSelect>
+```
+
+## How to create a child component?
+A child component is just another way to pass data to the component.
+
+You can inspect `props.children` to look for a matching child component to
+reference its props and children that will be used in the main component's
+render function:
+```jsx
+const Confirmation = ({children, onSubmit, onCancel}) => {
+
+  // default element;
+  let submitButton = (
+    <Confirmation.SubmitButton>
+      Submit
+    </Confirmation.SubmitButton>
+  );
+
+  // overwrite the default submitButton if one is found in props.children
+  React.Children.forEach(children, (element) => {
+    if (element.type === Confirmation.SubmitButton) {
+      submitButton = element;
+    }
+  });
+
+  return (
+    <div>
+      <section>
+        {children}
+      </section>
+
+      <button onClick={onSubmit} {...submitButton.props} />
+      <button onClick={onCancel}>Cancel</button>
+    </div>
+  );
+};
+
+// Child component renders null since we only use it to pass props to the real
+// submit button and we don't want it to render anything in the content section.
+
+Confirmation.SubmitButton = () => null;
+```
+In this example, the child component `Confirmation.SubmitButton` is just a noop.
+That's because we only want to use it to pass in data through children.
+Because we can inspect the props that it was passed in with, we can use them to render the real submit button with the added properties:
+```jsx
+<Confirmation>
+  Would you like to continue?
+
+  <Confirmation.SubmitButton style={{background: 'green'}}>
+    OK
+  </Confirmation.SubmitButton>
+
+</Confirmation>
+```
+
+In Lucid, we have the helper function `findTypes` to pull out the child component elements from props and children:
+
+```jsx
+import { componentTypes }  from 'lucid-ui';
+const { findTypes } = componentTypes;
+
+const Confirmation = (props) => {
+  const {children, onSubmit, onCancel} = props;
+
+  const submitButton = findTypes(props, Confirmation.SubmitButton)[0] || (
+    <Confirmation.SubmitButton>
+      Submit
+    </Confirmation.SubmitButton>
+  );
+
+  return (
+    <div>
+      <section>
+        {children}
+      </section>
+
+      <button onClick={onSubmit} {...submitButton.props} />
+      <button onClick={onCancel}>Cancel</button>
+    </div>
+  );
+};
+
+Confirmation.SubmitButton = () => null;
+
+// tell findTypes to look for `props.SubmitButton`:
+Confirmation.SubmitButton.propName = ['SubmitButton'];
+```
+
+The function `findTypes` checks the props objects for a prop that matches `propName`, then it checks props.children for elements which match the given component type.
+Note that `findTypes` can be used to search for any component type, not just child components.
