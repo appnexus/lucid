@@ -1,0 +1,87 @@
+# Computed Component Props
+Any prop whose value is wholly derived from other component props is referred to as a _computed prop_.
+
+## What are computed props?
+A computed prop is passed into a component just like any other prop that is used for rendering.
+The only difference that the a computed prop isn't normally passed explicitly since it can be entirely derived by the value of other component props.
+The logic to compute these values is usually represented by a set of selector functions which map to each computed prop.
+
+```jsx
+{
+  subTotal: ({cartItems}) => calcSubTotal(cartItems),
+  totalPrice: ({cartItems, taxRate) => calcSubTotal(cartItems) * (1 + taxRate);
+}
+```
+
+## When and why use computed props?
+Computed props are useful when you want to separate view logic from data logic, or share common data logic across many components.
+Using libraries like `reselect` increase component performance by ensuring that previously computed values are cached and reused.
+Sometimes data that should be computed in the view end up being stored in app state which can result in stale app state being passed to components.
+Using computed props can keep your app state lean and decrease the surface area for bugs in your app state.
+Another reason is sometimes there's view logic that a parent component might want to know about.
+Having these functions external to the component definition makes them easy to compose up as you compose your component hierarchy.
+
+## How to define computed props?
+In lucid, components with `selectors` defined use `buildHybridComponent` to get a component which applies those selector functions via `reselect` and passes them as props to the underlying component.
+```jsx
+import { stateManagement } = 'lucid-ui';
+const { buildHybridComponent } = stateManagement;
+
+const ShoppingCart = ({cartItems, taxRate, subTotal, totalPrice}) => {
+  return (
+    <ul>
+      {cartItems.map(({name, price, quantity}) => (
+        <li key={name}>
+          Name: {name}, price: {price}, Quantity: {quantity}
+        </li>
+      ))}
+    </ul>
+    <section>
+      Subtotal: {subTotal}
+      Tax Rate: {taxRate}
+      Total: {totalPrice}
+    </section>
+  );
+};
+
+const calcSubTotal = items =>
+  items.reduce(subTotal, ({price, quantity}) => subTotal + (price * quantity), 0);
+
+StatelessExpander.selectors = {
+  subTotal: ({cartItems}) => calcSubTotal(cartItems),
+  totalPrice: ({cartItems, taxRate) => calcSubTotal(cartItems) * (1 + taxRate);
+}
+
+const ComputedShoppingCart = buildHybridComponent(ShoppingCart);
+export default ComputedShoppingCart;
+```
+
+Now that the component & selectors have been defined, `buildHybridComponent` returns a new component
+which wraps the original component and passes it the computed values.
+
+```jsx
+<ComputedShoppingCart
+  taxRate={0.0887}
+  cartItems={[
+    {name: 'USB Charging Cable 6ft', price: 7.99, quantity: 2},
+    {name: 'USB Wall Charger 12W', price: 6.99, quantity: 1},
+    {name: 'Wired Earphones with Mic White', price: 17.99, quantity: 1},
+  ]}
+/>
+```
+But you still have the ability to take back control and compute new values for props by passing them in explicitly:
+```jsx
+const items = [
+  {name: 'USB Charging Cable 6ft', price: 7.99, quantity: 2},
+  {name: 'USB Wall Charger 12W', price: 6.99, quantity: 1},
+  {name: 'Wired Earphones with Mic White', price: 17.99, quantity: 1},
+];
+const taxRate = 0.0887
+const shipping = 5.00;
+
+<ComputedShoppingCart
+  taxRate={taxRate}
+  cartItems={items}
+  totalPrice={calcSubTotal(items) * (1 + taxRate) + shipping}
+/>
+```

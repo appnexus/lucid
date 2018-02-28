@@ -2,8 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import createClass from 'create-react-class';
 
-import Legend from '../Legend';
-import { ToolTip, chartConstants } from '../../../index';
+import { Legend, ToolTip, chartConstants } from '../../../index';
 
 const { Item } = Legend;
 

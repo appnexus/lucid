@@ -1,7 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import BarChart from '../BarChart';
-import * as formatters from '../../../util/formatters';
+import { BarChart, formatters } from '../../../index';
 
 const data = [
 	{ x: '2015-01-01', y: 1200 },

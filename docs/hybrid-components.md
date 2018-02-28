@@ -1,0 +1,86 @@
+# Hybrid Components
+Components which can be used as either stateful or stateless are referred to as _hybrid components_.
+
+## What is it?
+All hybrid components start out as simple stateless components at first.
+Then a static property called `.reducers` is set on the stateless component and populated with state reducer functions that map to callback functions of the stateless component.
+For example, a stateless expander component that calls `onToggle` to expand or collapse, might have a `reducers` property like this:
+```jsx
+StatelessExpander.reducers = {
+  onToggle(state) {
+    return {
+      ...state,
+      isExpanded: !state.isExpanded,
+    };
+  }
+};
+```
+With the `reducers` property set, calling `buildHybridComponent(StatelessExpander)` returns a stateful version of the component.
+It doesn't modify the existing component, but rather returns a new one that maintains component state and renders the stateless component with that state as props.
+The `defaultProps` of the stateless component are used as the initial state of the hybrid component.
+Now that the component is a hybrid, you don't need to pass in every prop since the stateful wrapper will do this.
+However, you always have the option to explicitly pass in a prop that always takes priority over the stateful value.
+This way, you can keep control over component state that is important to your app and let the component manage more mundane state.
+The most common example of this shared control between apps and component is with dropdown selectors:
+Most apps don't want to explicitly manage whether the dropdown is expanded or not but controlling the currently selected option is essential.
+In lucid, stateful components are exposed as hybrids by default, but all stateless versions are also made available to those who want total control.
+You can even access the `reducers` property of the component and use them in your own apps and components.
+
+## Why use it?
+Most Apps have state they care about and state they don't care about.
+Hybrid component allow apps to have as little or as much control over component state that they require.
+Also, unit testing stateless components + reducer functions is much easier and simpler than trying to get full test coverage on a stateful component.
+
+## How to create one?
+Use the `buildHybridComponent` to create a stateful wrapper around a stateless component with reducers defined for each callback:
+```jsx
+import { stateManagement } = 'lucid-ui';
+const { buildHybridComponent } = stateManagement;
+
+const StatelessExpander = ({header, isExpanded, content, onToggle }) => {
+  return (
+    <section>
+    <h1>{header}</h1>
+    <button onClick={onToggle}>toggle</button>
+      {isExpanded && (
+        <div>
+          {content}
+        </div>
+      )}
+    </section>
+  );
+};
+
+StatelessExpander.defaultProps = {
+  isExpanded: true,
+};
+
+StatelessExpander.reducers = {
+  onToggle: (state) => ({
+    ...state,
+    isExpanded: !state.isExpanded,
+  })
+}
+
+const HybridExpander = buildHybridComponent(Expander);
+export default HybridExpander;
+```
+Now you have the flexibility to either let the component handle it's own state:
+```jsx
+<HybridExpander
+  header="Fully Stateful"
+  content="The stateful wrapper keeps track of all state as defined by initial defaultProps and reducer functions."
+/>
+```
+...or take control of component state:
+```jsx
+export default connect(state => state)(
+  ({ dispatch, isExpanded }) =>
+    <HybridExpander
+      isExpanded={isExpanded}
+      onToggle={() => dispatch({type: 'TOGGLE_EXPANDER'})}
+      header="Stateless Usage"
+      content="Explicitly pass in isExpanded to take control of that piece of state."
+    />
+)
+```

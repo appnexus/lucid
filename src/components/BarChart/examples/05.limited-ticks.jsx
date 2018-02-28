@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import BarChart from '../BarChart';
+import { BarChart } from '../../../index';
 
 const data = [
 	{ x: '2015-01-01', y: 1 },
