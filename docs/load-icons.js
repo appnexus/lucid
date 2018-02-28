@@ -143,6 +143,23 @@ module.exports = [
 	},
 
 	{
+		name: 'BookIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/BookIcon/BookIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/BookIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/BookIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
 		name: 'CalendarIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/CalendarIcon/CalendarIcon')
@@ -171,6 +188,23 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/CaretIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
+		name: 'ChatIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/ChatIcon/ChatIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/ChatIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/ChatIcon/examples',
 			true,
 			/\.jsx?$/
 		),
@@ -443,6 +477,23 @@ module.exports = [
 		),
 		examplesContextRaw: require.context(
 			'!!raw-loader!../src/components/Icon/EligibilityIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
+		name: 'EnvelopeIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/EnvelopeIcon/EnvelopeIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/EnvelopeIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/EnvelopeIcon/examples',
 			true,
 			/\.jsx?$/
 		),
