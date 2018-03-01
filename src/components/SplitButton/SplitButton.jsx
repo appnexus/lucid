@@ -94,9 +94,8 @@ const SplitButton = createClass({
 		`,
 
 		type: string`
-			Form element type variations of SplitButton. Defaults to 'button' to
-			avoid being triggered by 'Enter' anywhere on the page. Passed through to
-			DOM Button.
+			Form element type variations of SplitButton. Passed through to DOM
+			Button.
 		`,
 	},
 
