@@ -137,7 +137,7 @@ const Sidebar = createClass({
 		}),
 
 		Primary: createClass({
-			displayName: 'SplitVertical.Primary',
+			displayName: 'Sidebar.Primary',
 			statics: {
 				peek: {
 					description: `

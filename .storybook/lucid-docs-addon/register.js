@@ -4,6 +4,7 @@ import addons from '@storybook/addons';
 import _ from 'lodash';
 import ExampleCode from './ExampleCode';
 import PropTypes from './PropTypes';
+import ChildComponents from './ChildComponents';
 import packageJson from '../../package.json';
 
 class CodePanel extends React.Component {
@@ -67,6 +68,7 @@ class PropsPanel extends React.Component {
 		super(...args);
 		this.state = { props: null };
 		this.onDisplayProps = this.onDisplayProps.bind(this);
+		this.onDisplayChildComponents = this.onDisplayChildComponents.bind(this);
 	}
 
 	onDisplayProps(propsJSON) {
@@ -89,10 +91,34 @@ class PropsPanel extends React.Component {
 		}
 	}
 
+	onDisplayChildComponents(childComponentJSON) {
+		if (!_.isString(childComponentJSON)) {
+			return this.setState({
+				childComponents: null,
+			});
+		}
+
+		try {
+			this.setState({
+				childComponents: JSON.parse(childComponentJSON),
+			});
+		} catch (err) {
+			console.log('Error parsing props JSON.');
+			console.error(err.stack);
+			this.setState({
+				childComponents: null,
+			});
+		}
+	}
+
 	componentDidMount() {
 		const { channel, api } = this.props;
 		// Listen to the notes and render it.
 		channel.on('lucid-docs-display-props', this.onDisplayProps);
+		channel.on(
+			'lucid-docs-display-child-components',
+			this.onDisplayChildComponents
+		);
 
 		// Clear the current notes on every story change.
 		this.stopListeningOnStory = api.onStory(() => {
@@ -108,9 +134,15 @@ class PropsPanel extends React.Component {
 		this.unmounted = true;
 		const { channel, api } = this.props;
 		channel.removeListener('lucid-docs-display-props', this.onDisplayProps);
+		channel.removeListener(
+			'lucid-docs-display-child-components',
+			this.onDisplayChildComponents
+		);
 	}
 
 	render() {
+		const { childComponents, props: componentProps } = this.state;
+
 		return (
 			<div
 				style={{
@@ -121,7 +153,10 @@ class PropsPanel extends React.Component {
 					position: 'relative',
 				}}
 			>
-				<PropTypes props={this.state.props} />
+				<PropTypes props={componentProps} />
+				{!_.isEmpty(childComponents) && (
+					<ChildComponents childComponents={childComponents} />
+				)}
 			</div>
 		);
 	}

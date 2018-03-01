@@ -8,6 +8,11 @@ import { setOptions } from '@storybook/addon-options';
 
 const compile = marksy({ createElement: React.createElement });
 
+const isReactComponent = value =>
+	typeof value === 'function' &&
+	value.prototype &&
+	value.prototype.isReactComponent;
+
 const getDefaultPropValue = (componentRef, property) => {
 	const defaultValue = _.get(componentRef, ['defaultProps', property]);
 	return _.isUndefined(defaultValue)
@@ -56,6 +61,7 @@ const getPropTypeData = resolverFn => {
 	return {
 		...resolverFn.peek,
 		type,
+		text: stripIndent(_.get(resolverFn, ['peek', 'text'])).trim(),
 		oneOfData,
 		arrayOfData,
 		oneOfTypeData,
@@ -73,6 +79,44 @@ const getPropsData = componentRef => {
 			defaultValue: getDefaultPropValue(componentRef, property),
 		};
 	});
+};
+
+const getChildComponentsData = (
+	componentRef,
+	maxRecursiveHeight = 1,
+	recursiveHeight = 0,
+	path = []
+) => {
+	if (recursiveHeight >= maxRecursiveHeight) {
+		return [];
+	}
+
+	return _.map(
+		_.pickBy(componentRef, isReactComponent),
+		(childComponent, key) => {
+			const recursiveChildComponentData = getChildComponentsData(
+				childComponent,
+				maxRecursiveHeight,
+				recursiveHeight + 1,
+				path.concat(key)
+			);
+			return {
+				name: key,
+				path: path.concat(key),
+				displayName: childComponent.displayName,
+				description: stripIndent(
+					_.get(childComponent, 'peek.description')
+				).trim(),
+				isPrivate: _.get(
+					childComponent,
+					'peek.isPrivate',
+					childComponent._isPrivate
+				),
+				props: getPropsData(childComponent),
+				childComponents: recursiveChildComponentData,
+			};
+		}
+	);
 };
 
 export const withDescription = componentRef => {
@@ -116,9 +160,24 @@ export const withCode = (source = null) => {
 	};
 };
 
+export const withChildComponents = (componentRef, maxHeight, path) => {
+	return StoryComponent => {
+		return props => {
+			const channel = addons.getChannel();
+			channel.emit(
+				'lucid-docs-display-child-components',
+				JSON.stringify(
+					getChildComponentsData(componentRef, maxHeight, undefined, path)
+				)
+			);
+			return <StoryComponent {...props} />;
+		};
+	};
+};
+
 const getDefaultExport = mod => (mod.__esModule ? mod.default : mod);
 
-export const exampleStory = ({ component, code, example, options }) => {
+export const exampleStory = ({ component, code, example, path, options }) => {
 	const StoryComponent = options
 		? props => {
 				setOptions(options);
@@ -130,7 +189,12 @@ export const exampleStory = ({ component, code, example, options }) => {
 
 	const storyWithCode = withCode(code)(StoryComponent);
 	const storyWithProps = withProps(componentRef)(storyWithCode);
-	const storyWithDescription = withDescription(componentRef)(storyWithProps);
+	const storyWithChildComponents = withChildComponents(componentRef, 1, path)(
+		storyWithProps
+	);
+	const storyWithDescription = withDescription(componentRef)(
+		storyWithChildComponents
+	);
 
 	return storyWithDescription;
 };

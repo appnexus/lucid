@@ -11,6 +11,7 @@ storiesOf('Accordion', module).add(
 		component: Accordion,
 		example: OnSelectExample,
 		code: onSelectCode,
+		path: ['Accordion'],
 	})
 );
 

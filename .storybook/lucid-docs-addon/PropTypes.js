@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import _ from 'lodash';
 import marksy from 'marksy/components';
-import { Table, Td, Th } from '@storybook/components';
 import { stripIndent } from '../../src/docs/util';
 
 import SyntaxHighlighter, {
@@ -40,13 +39,6 @@ const compile = marksy({
 		p: props => <p {...props} style={{ margin: '4px 0' }} />,
 	},
 });
-
-const getDefaultPropValue = (componentRef, property) => {
-	const defaultValue = _.get(componentRef, ['defaultProps', property]);
-	return _.isUndefined(defaultValue)
-		? _.get(componentRef, ['peekDefaultProps', property])
-		: defaultValue;
-};
 
 const style = {
 	a: {
@@ -92,7 +84,6 @@ const style = {
 	},
 	propSection: {
 		margin: '10px 0 10px 0',
-		backgroundColor: 'white',
 		padding: 8,
 	},
 	defaultValueLabel: {
@@ -114,7 +105,6 @@ const style = {
 	top: {
 		fontSize: 'smaller',
 		fontWeight: '200',
-		display: 'none',
 	},
 };
 
@@ -212,41 +202,39 @@ PropType.style = {
 	},
 };
 
-const PropsList = ({ componentRef, props }) => {
-	if (componentRef) {
-		return <section />;
-	}
-
+const PropsList = ({ showIndex, showTopLinks, props }) => {
 	const sortedProps = _.sortBy(props, 'isRequired');
 
 	return (
 		<section>
-			<a name="top" />
-			<ul style={style.ul}>
-				{_.map(
-					sortedProps,
-					({ name, type, isRequired, defaultValue, text }) => (
-						<li key={name} style={style.li}>
-							<a
-								style={{ ...style.a, ...style.propName, ...style.propLink }}
-								href={`#${name}`}
-							>
-								<span style={style.hashSymbol}>#</span>
-								{name}
-							</a>
-							&nbsp;
-							<span style={style.propType}>{type}</span>
-							{isRequired && <span style={style.isRequired}>Required</span>}
-						</li>
-					)
-				)}
-			</ul>
-			<hr style={style.divider} />
+			{showIndex && [
+				showTopLinks ? <a name="top" /> : null,
+				<ul key="propsIndex" style={style.ul}>
+					{_.map(
+						sortedProps,
+						({ name, type, isRequired, defaultValue, text }) => (
+							<li key={name} style={style.li}>
+								<a
+									style={{ ...style.a, ...style.propName, ...style.propLink }}
+									href={`#${name}`}
+								>
+									<span style={style.hashSymbol}>#</span>
+									{name}
+								</a>
+								&nbsp;
+								<span style={style.propType}>{type}</span>
+								{isRequired && <span style={style.isRequired}>Required</span>}
+							</li>
+						)
+					)}
+				</ul>,
+				<hr key="propsIndexDivider" style={style.divider} />,
+			]}
 			{_.map(
 				sortedProps,
 				({ name, type, isRequired, defaultValue, text, ...propData }) => (
 					<span key={name}>
-						<a name={name} />
+						{showIndex && <a name={name} />}
 						<div style={style.propSection}>
 							<h3 style={style.propHeader}>
 								<span style={style.propName}>{name}</span>
@@ -266,21 +254,30 @@ const PropsList = ({ componentRef, props }) => {
 										style={coy}
 										customStyle={{
 											fontSize: 12,
+											backgroundColor: 'none',
 										}}
 									>
 										{JSON.stringify(defaultValue, null, 2)}
 									</SyntaxHighlighter>
 								</div>
 							)}
-							<a style={{ ...style.a, ...style.top }} href="#top">
-								top
-							</a>
+							{showIndex &&
+								showTopLinks && (
+									<a style={{ ...style.a, ...style.top }} href="#top">
+										top
+									</a>
+								)}
 						</div>
 					</span>
 				)
 			)}
 		</section>
 	);
+};
+
+PropsList.defaultProps = {
+	showIndex: true,
+	showTopLinks: false,
 };
 
 export default PropsList;

@@ -202,6 +202,7 @@ _.forEach(
 				component,
 				code: firstExample.source,
 				example: FirstExampleComponent,
+				path: [name],
 				options: { showAddonPanel: true },
 			})
 		);
@@ -212,7 +213,7 @@ const loadedComponents = require('./load-components');
 
 _.forEach(
 	loadedComponents,
-	({ name, component, examplesContext, examplesContextRaw }) => {
+	({ name: componentName, component, examplesContext, examplesContextRaw }) => {
 		if (component._isPrivate || (component.peek && component.peek.isPrivate)) {
 			return;
 		}
@@ -229,10 +230,11 @@ _.forEach(
 						component,
 						code: source,
 						example: Example,
+						path: [componentName],
 						options: { showAddonPanel: true },
 					})
 				),
-			storiesOf(name, module)
+			storiesOf(componentName, module)
 		);
 	}
 );
