@@ -95,13 +95,14 @@ class ArticlePage extends React.Component {
 		if (typeof window !== 'undefined') {
 			window.document.documentElement.scrollTop = 0;
 		}
+
+		setOptions({
+			showAddonPanel: false,
+		});
 	}
 
 	render() {
 		const { children } = this.props;
-		setOptions({
-			showAddonPanel: false,
-		});
 
 		return (
 			<article

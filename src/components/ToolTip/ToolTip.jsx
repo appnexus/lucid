@@ -76,16 +76,16 @@ const ToolTip = createClass({
 		`,
 
 		direction: oneOf(['down', 'up', 'right', 'left'])`
-			direction of the FlyOut relative to Target. Defaults to \`'down'\`.
+			direction of the FlyOut relative to Target.
 		`,
 
 		alignment: oneOf(['start', 'center', 'end'])`
 			alignment of the Flyout relative to Target in the cross axis from
-			\`direction\` Defaults to \`'start'\`
+			\`direction\`.
 		`,
 
 		isExpanded: bool`
-			Indicates whether the ToolTip will render or not. Defaults to \`true\`.
+			Indicates whether the ToolTip will render or not.
 		`,
 
 		onMouseOver: func`

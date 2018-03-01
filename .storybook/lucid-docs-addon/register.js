@@ -81,6 +81,8 @@ class PropsPanel extends React.Component {
 				props: JSON.parse(propsJSON),
 			});
 		} catch (err) {
+			console.log('Error parsing props JSON.');
+			console.error(err.stack);
 			this.setState({
 				props: null,
 			});
@@ -94,7 +96,7 @@ class PropsPanel extends React.Component {
 
 		// Clear the current notes on every story change.
 		this.stopListeningOnStory = api.onStory(() => {
-			this.onDisplayProps('');
+			this.onDisplayProps();
 		});
 	}
 
@@ -131,7 +133,6 @@ class SettingsPanel extends React.Component {
 
 		const [props] = args;
 		const urlState = props.api.getUrlState();
-		window.api = props.api;
 
 		this.state = {
 			addonPanelInRight: !!urlState.panelRight,
