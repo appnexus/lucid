@@ -119,7 +119,7 @@ ReactDOM.render(
 							top: 42,
 							right: 12,
 						}}
-						src="http://s.cdpn.io/3/cp-arrow-right.svg"
+						src="//s.cdpn.io/3/cp-arrow-right.svg"
 						width={40}
 						height={40}
 						title="Open in CodePen"
