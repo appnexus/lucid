@@ -49,7 +49,7 @@ const ContextMenu = createClass({
 		`,
 
 		direction: oneOf(['down', 'up', 'right', 'left'])`
-			direction of the FlyOut relative to Target. Defaults to \`'down'\`.
+			direction of the FlyOut relative to Target.
 		`,
 
 		directonOffset: number`
@@ -58,7 +58,7 @@ const ContextMenu = createClass({
 
 		alignment: oneOf(['start', 'center', 'end'])`
 			alignment of the Flyout relative to Target in the cross axis from
-			\`direction\` Defaults to \`'start'\`
+			\`direction\`.
 		`,
 
 		alignmentOffset: number`
@@ -76,7 +76,7 @@ const ContextMenu = createClass({
 		`,
 
 		isExpanded: bool`
-			Indicates whether the FlyOut will render or not. Defaults to \`true\`.
+			Indicates whether the FlyOut will render or not.
 		`,
 
 		onClickOut: func`

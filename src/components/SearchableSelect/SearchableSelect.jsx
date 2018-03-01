@@ -114,7 +114,6 @@ const SearchableSelect = createClass({
 
 		isSelectionHighlighted: bool`
 			Applies primary color styling to the control when an item is selected.
-			Defaults to true.
 		`,
 
 		maxMenuHeight: oneOfType([number, string])`

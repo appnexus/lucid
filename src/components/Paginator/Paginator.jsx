@@ -48,7 +48,7 @@ const Paginator = createClass({
 		`,
 
 		hasPageSizeSelector: bool`
-			Whether to show the page size selector. Defaults to false.
+			Whether to show the page size selector.
 		`,
 
 		selectedPageIndex: number`

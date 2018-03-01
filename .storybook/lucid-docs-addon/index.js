@@ -80,15 +80,11 @@ export const withDescription = componentRef => {
 		return ({ kind, story }) => {
 			return (
 				<div>
-					<h1>
-						{kind}
-					</h1>
+					<h1>{kind}</h1>
 					<section>
 						{compile(stripIndent(componentRef.peek.description)).tree}
 					</section>
-					<h2>
-						{story}
-					</h2>
+					<h2>{story}</h2>
 					<StoryComponent {...{ kind, story }} />
 				</div>
 			);
@@ -123,17 +119,18 @@ export const withCode = (source = null) => {
 const getDefaultExport = mod => (mod.__esModule ? mod.default : mod);
 
 export const exampleStory = ({ component, code, example, options }) => {
-	let StoryComponent = getDefaultExport(example);
-	if (options) {
-		StoryComponent = props => {
-			setOptions(options);
-			return React.createElement(getDefaultExport(example), props);
-		};
-	}
+	const StoryComponent = options
+		? props => {
+				setOptions(options);
+				return React.createElement(getDefaultExport(example), props);
+			}
+		: getDefaultExport(example);
 
 	const componentRef = getDefaultExport(component);
 
-	return withDescription(componentRef)(
-		withProps(componentRef)(withCode(code)(StoryComponent))
-	);
+	const storyWithCode = withCode(code)(StoryComponent);
+	const storyWithProps = withProps(componentRef)(storyWithCode);
+	const storyWithDescription = withDescription(componentRef)(storyWithProps);
+
+	return storyWithDescription;
 };
