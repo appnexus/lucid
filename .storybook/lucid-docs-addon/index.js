@@ -22,52 +22,42 @@ const getDefaultPropValue = (componentRef, property) => {
 
 const getPropTypeData = resolverFn => {
 	const type = _.get(resolverFn, ['peek', 'type']);
+	let dynamicData;
 
-	let oneOfData;
 	if (type === 'oneOf') {
-		oneOfData = _.get(resolverFn, ['peek', 'args', 0]);
+		dynamicData = _.get(resolverFn, ['peek', 'args', 0]);
 	}
 
-	let arrayOfData;
 	if (type === 'arrayOf') {
 		const arrayOfResolverFn = _.get(resolverFn, ['peek', 'args', 0]);
-		arrayOfData = getPropTypeData(arrayOfResolverFn);
+		dynamicData = getPropTypeData(arrayOfResolverFn);
 	}
 
-	let oneOfTypeData;
 	if (type === 'oneOfType') {
 		const oneOfTypeResolverFns = _.get(resolverFn, ['peek', 'args', 0]);
-		oneOfTypeData = _.map(oneOfTypeResolverFns, getPropTypeData);
+		dynamicData = _.map(oneOfTypeResolverFns, getPropTypeData);
 	}
 
-	let instanceOfData;
 	if (type === 'instanceOf') {
 		const instanceOfClass = _.get(resolverFn, ['peek', 'args', 0]);
-		instanceOfData = instanceOfClass.name;
+		dynamicData = instanceOfClass.name;
 	}
 
-	let objectOfData;
 	if (type === 'objectOf') {
 		const objectOfResolverFn = _.get(resolverFn, ['peek', 'args', 0]);
-		objectOfData = getPropTypeData(objectOfResolverFn);
+		dynamicData = getPropTypeData(objectOfResolverFn);
 	}
 
-	let shapeData;
 	if (type === 'shape') {
 		const shapeObject = _.get(resolverFn, ['peek', 'args', 0]);
-		shapeData = _.mapValues(shapeObject, getPropTypeData);
+		dynamicData = _.mapValues(shapeObject, getPropTypeData);
 	}
 
 	return {
 		...resolverFn.peek,
 		type,
 		text: stripIndent(_.get(resolverFn, ['peek', 'text'])).trim(),
-		oneOfData,
-		arrayOfData,
-		oneOfTypeData,
-		instanceOfData,
-		objectOfData,
-		shapeData,
+		dynamicData,
 	};
 };
 

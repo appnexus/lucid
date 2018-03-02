@@ -120,7 +120,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 					oneline={oneline}
 					style={{ fontFamily: 'monospace', ...PropType.style.section }}
 				>
-					{JSON.stringify(propData.oneOfData, null, 2)}
+					{JSON.stringify(propData.dynamicData, null, 2)}
 				</Block>
 			</span>
 		);
@@ -131,7 +131,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 			<span style={PropType.style.root}>
 				{type}:
 				<Block oneline={oneline} style={PropType.style.section}>
-					<PropType {...propData.arrayOfData} />
+					<PropType {...propData.dynamicData} />
 				</Block>
 			</span>
 		);
@@ -141,7 +141,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 		return (
 			<span style={PropType.style.root}>
 				{type}:
-				{_.map(propData.oneOfTypeData, (propTypeData, key) => (
+				{_.map(propData.dynamicData, (propTypeData, key) => (
 					<Block oneline={oneline} key={key} style={PropType.style.section}>
 						<PropType {...propTypeData} />
 					</Block>
@@ -153,7 +153,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 	if (type === 'instanceOf') {
 		return (
 			<span style={PropType.style.root}>
-				{type}: <span>{propData.instanceOfData}</span>
+				{type}: <span>{propData.dynamicData}</span>
 			</span>
 		);
 	}
@@ -163,7 +163,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 			<span style={PropType.style.root}>
 				{type}:
 				<Block oneline={oneline} style={PropType.style.section}>
-					<PropType {...propData.objectOfData} />
+					<PropType {...propData.dynamicData} />
 				</Block>
 			</span>
 		);
@@ -175,7 +175,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 				{type}:
 				<Block oneline={oneline} style={PropType.style.section}>
 					{'{'}
-					{_.map(propData.shapeData, (propTypeData, key) => (
+					{_.map(propData.dynamicData, (propTypeData, key) => (
 						<div key={key} style={PropType.style.section}>
 							{key}:
 							<span style={PropType.style.section}>
