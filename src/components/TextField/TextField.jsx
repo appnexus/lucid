@@ -87,8 +87,8 @@ const TextField = createClass({
 			the user is typing and the component gets a new \`value\` prop.  Any time
 			the user hits a key, it starts a timer that prevents state changes from
 			flowing in to the component until the timer has elapsed.  This was
-			heavily inspired by the [lazy-input][li] component.  [li]:
-			https://www.npmjs.com/package/lazy-input
+			heavily inspired by the
+			[lazy-input](https:/docs.npmjs.com/package/lazy-input) component.
 		`,
 	},
 

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import _ from 'lodash';
 import marksy from 'marksy/components';
-import { Table, Td, Th } from '@storybook/components';
 import { stripIndent } from '../../src/docs/util';
 
 import SyntaxHighlighter, {
@@ -40,13 +39,6 @@ const compile = marksy({
 		p: props => <p {...props} style={{ margin: '4px 0' }} />,
 	},
 });
-
-const getDefaultPropValue = (componentRef, property) => {
-	const defaultValue = _.get(componentRef, ['defaultProps', property]);
-	return _.isUndefined(defaultValue)
-		? _.get(componentRef, ['peekDefaultProps', property])
-		: defaultValue;
-};
 
 const style = {
 	a: {
@@ -92,7 +84,6 @@ const style = {
 	},
 	propSection: {
 		margin: '10px 0 10px 0',
-		backgroundColor: 'white',
 		padding: 8,
 	},
 	defaultValueLabel: {
@@ -114,7 +105,6 @@ const style = {
 	top: {
 		fontSize: 'smaller',
 		fontWeight: '200',
-		display: 'none',
 	},
 };
 
@@ -130,7 +120,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 					oneline={oneline}
 					style={{ fontFamily: 'monospace', ...PropType.style.section }}
 				>
-					{JSON.stringify(propData.oneOfData, null, 2)}
+					{JSON.stringify(propData.dynamicData, null, 2)}
 				</Block>
 			</span>
 		);
@@ -141,7 +131,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 			<span style={PropType.style.root}>
 				{type}:
 				<Block oneline={oneline} style={PropType.style.section}>
-					<PropType {...propData.arrayOfData} />
+					<PropType {...propData.dynamicData} />
 				</Block>
 			</span>
 		);
@@ -151,7 +141,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 		return (
 			<span style={PropType.style.root}>
 				{type}:
-				{_.map(propData.oneOfTypeData, (propTypeData, key) => (
+				{_.map(propData.dynamicData, (propTypeData, key) => (
 					<Block oneline={oneline} key={key} style={PropType.style.section}>
 						<PropType {...propTypeData} />
 					</Block>
@@ -163,7 +153,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 	if (type === 'instanceOf') {
 		return (
 			<span style={PropType.style.root}>
-				{type}: <span>{propData.instanceOfData}</span>
+				{type}: <span>{propData.dynamicData}</span>
 			</span>
 		);
 	}
@@ -173,7 +163,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 			<span style={PropType.style.root}>
 				{type}:
 				<Block oneline={oneline} style={PropType.style.section}>
-					<PropType {...propData.objectOfData} />
+					<PropType {...propData.dynamicData} />
 				</Block>
 			</span>
 		);
@@ -185,7 +175,7 @@ const PropType = ({ oneline, type, ...propData }) => {
 				{type}:
 				<Block oneline={oneline} style={PropType.style.section}>
 					{'{'}
-					{_.map(propData.shapeData, (propTypeData, key) => (
+					{_.map(propData.dynamicData, (propTypeData, key) => (
 						<div key={key} style={PropType.style.section}>
 							{key}:
 							<span style={PropType.style.section}>
@@ -212,41 +202,39 @@ PropType.style = {
 	},
 };
 
-const PropsList = ({ componentRef, props }) => {
-	if (componentRef) {
-		return <section />;
-	}
-
+const PropsList = ({ showIndex, showTopLinks, props }) => {
 	const sortedProps = _.sortBy(props, 'isRequired');
 
 	return (
 		<section>
-			<a name="top" />
-			<ul style={style.ul}>
-				{_.map(
-					sortedProps,
-					({ name, type, isRequired, defaultValue, text }) => (
-						<li key={name} style={style.li}>
-							<a
-								style={{ ...style.a, ...style.propName, ...style.propLink }}
-								href={`#${name}`}
-							>
-								<span style={style.hashSymbol}>#</span>
-								{name}
-							</a>
-							&nbsp;
-							<span style={style.propType}>{type}</span>
-							{isRequired && <span style={style.isRequired}>Required</span>}
-						</li>
-					)
-				)}
-			</ul>
-			<hr style={style.divider} />
+			{showIndex && [
+				showTopLinks ? <a name="top" /> : null,
+				<ul key="propsIndex" style={style.ul}>
+					{_.map(
+						sortedProps,
+						({ name, type, isRequired, defaultValue, text }) => (
+							<li key={name} style={style.li}>
+								<a
+									style={{ ...style.a, ...style.propName, ...style.propLink }}
+									href={`#${name}`}
+								>
+									<span style={style.hashSymbol}>#</span>
+									{name}
+								</a>
+								&nbsp;
+								<span style={style.propType}>{type}</span>
+								{isRequired && <span style={style.isRequired}>Required</span>}
+							</li>
+						)
+					)}
+				</ul>,
+				<hr key="propsIndexDivider" style={style.divider} />,
+			]}
 			{_.map(
 				sortedProps,
 				({ name, type, isRequired, defaultValue, text, ...propData }) => (
 					<span key={name}>
-						<a name={name} />
+						{showIndex && <a name={name} />}
 						<div style={style.propSection}>
 							<h3 style={style.propHeader}>
 								<span style={style.propName}>{name}</span>
@@ -266,21 +254,30 @@ const PropsList = ({ componentRef, props }) => {
 										style={coy}
 										customStyle={{
 											fontSize: 12,
+											backgroundColor: 'none',
 										}}
 									>
 										{JSON.stringify(defaultValue, null, 2)}
 									</SyntaxHighlighter>
 								</div>
 							)}
-							<a style={{ ...style.a, ...style.top }} href="#top">
-								top
-							</a>
+							{showIndex &&
+								showTopLinks && (
+									<a style={{ ...style.a, ...style.top }} href="#top">
+										top
+									</a>
+								)}
 						</div>
 					</span>
 				)
 			)}
 		</section>
 	);
+};
+
+PropsList.defaultProps = {
+	showIndex: true,
+	showTopLinks: false,
 };
 
 export default PropsList;
