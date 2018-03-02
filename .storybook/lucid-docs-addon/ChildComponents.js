@@ -43,7 +43,6 @@ const compile = marksy({
 
 const styles = {
 	divider: {
-		//backgroundColor: 'rgb(247,247,247)',
 		backgroundColor: 'rgb(236,236,236)',
 		height: 1,
 		border: 'none',
@@ -51,16 +50,11 @@ const styles = {
 	},
 	childComponent: {
 		backgroundColor: 'rgb(247,247,247)',
-		//border: '1px solid #ccc',
 		margin: '10px 0px 0px 10px',
 		padding: 6,
 	},
 	name: {
 		fontWeight: 'bold',
-		//fontSize: 'larger',
-	},
-	header: {
-		//fontWeight: 100,
 	},
 	headerText: {
 		backgroundColor: 'white',
@@ -107,18 +101,13 @@ const ChildComponents = ({ childComponents }) => {
 	return (
 		<section>
 			<hr style={styles.divider} />
-			<div style={styles.header}>
+			<div>
 				<span style={styles.headerText}>Child Components</span>
 			</div>
 			{!_.isEmpty(childComponents) &&
 				_.map(childComponents, (childComponent, key) => (
 					<ChildComponent key={key} {...childComponent} />
 				))}
-			{/*<pre>
-				{JSON.stringify(childComponents, null, 2)}
-			</pre>*/}
-			{/*TODO remove the bottom <hr>*/}
-			{/*<hr style={{...styles.divider, marginBottom: 18}} />*/}
 		</section>
 	);
 };
