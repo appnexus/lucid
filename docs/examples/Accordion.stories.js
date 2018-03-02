@@ -12,6 +12,7 @@ storiesOf('Accordion', module).add(
 		example: OnSelectExample,
 		code: onSelectCode,
 		path: ['Accordion'],
+		options: { showAddonPanel: true },
 	})
 );
 
