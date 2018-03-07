@@ -36,6 +36,9 @@ const getDefaultExport = module => {
 	return module;
 };
 
+const isPrivate = component =>
+	component._isPrivate || (component.peek && component.peek.isPrivate);
+
 const getExamplesFromContext = (reqExamples, rawContext) =>
 	_.map(loadAllKeys(reqExamples, rawContext), ({ key, module, raw }) => ({
 		name: _.join(_.reject(_.words(key), w => /^(\d+)|jsx?$/.test(w)), ' '),
@@ -155,7 +158,85 @@ storiesOf('Lucid UI', module)
 		<ArticlePage>{compile(computedPropsText).tree}</ArticlePage>
 	));
 
+const loadedComponents = require('./load-components');
+
+const filteredComponents = _.reject(loadedComponents, ({ component }) =>
+	isPrivate(component)
+);
+
+const groupedComponents = _.groupBy(filteredComponents, ({ component }) =>
+	_.get(component, 'peek.categories[0]', 'misc')
+);
+_.reduce(
+	groupedComponents,
+	(storyKind, componentGroup, category) => {
+		const subGroupedComponents = _.groupBy(componentGroup, ({ component }) =>
+			_.get(component, 'peek.categories[1]', 'misc')
+		);
+		return storyKind.add(_.capitalize(category), () => (
+			<ArticlePage>
+				<h1>{_.capitalize(category)}</h1>
+				<section
+					style={{
+						display: 'flex',
+						flexWrap: 'wrap',
+					}}
+				>
+					{_.map(subGroupedComponents, (componentSubGroup, subCategory) => (
+						<section
+							key={subCategory}
+							style={{
+								marginRight: 10,
+								marginBottom: 10,
+								backgroundColor: 'rgb(247,247,247)',
+								padding: 6,
+								width: 200,
+							}}
+						>
+							{subCategory !== 'misc' && (
+								<h3
+									style={{
+										marginTop: 0,
+										textAlign: 'center',
+									}}
+								>
+									{_.capitalize(subCategory)}
+								</h3>
+							)}
+							<section
+								style={{
+									display: 'flex',
+									flexDirection: 'column',
+								}}
+							>
+								{_.map(componentSubGroup, ({ name }) => (
+									<div
+										key={name}
+										style={{
+											//flexBasis: 256,
+											margin: 10,
+										}}
+									>
+										<LinkTo style={styles.link} kind={name}>
+											{name}
+										</LinkTo>
+									</div>
+								))}
+							</section>
+						</section>
+					))}
+				</section>
+			</ArticlePage>
+		));
+	},
+	storiesOf('Categories', module)
+);
+
 const loadedIcons = require('./load-icons');
+
+const filteredIcons = _.reject(loadedIcons, ({ component }) =>
+	isPrivate(component)
+);
 
 const storiesOfIcons = storiesOf('Icons', module).add('All', () => (
 	<ArticlePage>
@@ -166,7 +247,7 @@ const storiesOfIcons = storiesOf('Icons', module).add('All', () => (
 				flexWrap: 'wrap',
 			}}
 		>
-			{_.map(loadedIcons, ({ name, component: Icon }) => (
+			{_.map(filteredIcons, ({ name, component: Icon }) => (
 				<div
 					key={name}
 					style={{
@@ -185,11 +266,8 @@ const storiesOfIcons = storiesOf('Icons', module).add('All', () => (
 ));
 
 _.forEach(
-	loadedIcons,
+	filteredIcons,
 	({ name, component, examplesContext, examplesContextRaw }) => {
-		if (component._isPrivate || (component.peek && component.peek.isPrivate)) {
-			return;
-		}
 		const examples = getExamplesFromContext(
 			examplesContext,
 			examplesContextRaw
@@ -209,14 +287,9 @@ _.forEach(
 	}
 );
 
-const loadedComponents = require('./load-components');
-
 _.forEach(
-	loadedComponents,
+	filteredComponents,
 	({ name: componentName, component, examplesContext, examplesContextRaw }) => {
-		if (component._isPrivate || (component.peek && component.peek.isPrivate)) {
-			return;
-		}
 		const examples = getExamplesFromContext(
 			examplesContext,
 			examplesContextRaw
