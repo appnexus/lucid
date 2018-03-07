@@ -2,8 +2,6 @@ before_install:
   - bash ./scripts/validate-tests.sh
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-after_deploy:
-  - bash ./scripts/docs-upload-gh.sh
 branches:
   only:
     - master

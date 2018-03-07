@@ -88,7 +88,7 @@ const componentToDocgen = (
 	},
 });
 
-function uploadDocsBuild(callback) {
+function uploadDocspotBuild(callback) {
 	// Figure out of the last commit was a tagged version. This command only
 	// succeeds if the last commit has an annotated tag and the tag is output
 	// on stdout if one is found.
@@ -169,8 +169,8 @@ module.exports = {
 	},
 
 	upload: function(callback) {
-		webpack(webpackConfig, uploadDocsBuild);
+		webpack(webpackConfig, uploadDocspotBuild);
 	},
 
-	uploadDocsBuild: uploadDocsBuild,
+	uploadDocspotBuild: uploadDocspotBuild,
 };
