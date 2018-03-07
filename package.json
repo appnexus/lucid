@@ -25,8 +25,8 @@
     "test": "npm run lint && npm run cover",
     "watch": "npm run jest -- --watch",
     "storybook": "start-storybook -p 6006",
-    "docs": "NODE_ENV=documentation start-storybook -p 6006",
-    "build-docs": "NODE_ENV=documentation build-storybook -o ./dist/docs",
+    "docs": "NODE_ENV=documentation start-storybook -s ./docs/public -p 6006",
+    "build-docs": "NODE_ENV=documentation build-storybook -s ./docs/public -o ./dist/docs",
     "upload-docs": "rm -rf ./dist/docs; npm run build-docs; gulp docs-upload-build",
     "release": "np"
   },
