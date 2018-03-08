@@ -3,6 +3,9 @@
 # exit with nonzero exit code if anything fails
 set -e
 
+# Get the current branch name
+CURRENT_BRANCH=`git symbolic-ref -q --short HEAD`
+
 # Only run this script if we're on `master`
 if [ "$CURRENT_BRANCH" = "master" ]; then
 	cd ./dist/docs
