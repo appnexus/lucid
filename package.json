@@ -19,15 +19,15 @@
     "precommit": "lint-staged",
     "prettier": "prettier --write '{src,tests,scripts}/**/*.{js,jsx}'",
     "preversion": "rm -rf dist && npm run lint && gulp docs-docgenjson && NODE_ENV=production gulp preversion && npm run build-bundle",
-    "postpublish": "gulp build-js-clean-path-imports && gulp docs-upload-build",
+    "postpublish": "gulp build-js-clean-path-imports && npm run build-docs && scripts/upload-docs-build-gh.sh && gulp docspot-upload-build",
     "start": "npm run dev",
     "stylelint": "stylelint 'src/**/*.less' --config .stylelintrc",
     "test": "npm run lint && npm run cover",
     "watch": "npm run jest -- --watch",
     "storybook": "start-storybook -p 6006",
     "docs": "NODE_ENV=documentation start-storybook -s ./docs/public -p 6006",
-    "build-docs": "NODE_ENV=documentation build-storybook -s ./docs/public -o ./dist/docs",
-    "upload-docs": "rm -rf ./dist/docs; npm run build-docs; gulp docs-upload-build",
+    "build-docs": "rm -rf ./dist/docs && NODE_ENV=documentation build-storybook -s ./docs/public -o ./dist/docs",
+    "upload-docs": "npm run build-docs && gulp docspot-upload-build",
     "release": "np"
   },
   "keywords": [
