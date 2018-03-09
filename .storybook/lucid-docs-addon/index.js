@@ -165,6 +165,131 @@ export const withChildComponents = (componentRef, maxHeight, path) => {
 	};
 };
 
+class Hoverable extends React.Component {
+	constructor(...args) {
+		super(...args);
+		this.state = {
+			isHovered: false,
+		};
+		this.handleMouseOver = this.handleMouseOver.bind(this);
+		this.handleMouseOut = this.handleMouseOut.bind(this);
+	}
+
+	handleMouseOver() {
+		this.setState({ isHovered: true });
+	}
+
+	handleMouseOut() {
+		this.setState({ isHovered: false });
+	}
+
+	render() {
+		return React.cloneElement(this.props.children(this.state.isHovered), {
+			onMouseOver: this.handleMouseOver,
+			onMouseOut: this.handleMouseOut,
+		});
+	}
+}
+
+export const withPanelLayoutToggle = StoryComponent => {
+	const channel = addons.getChannel();
+	const onToggle = () => {
+		channel.emit('lucid-docs-panel-layout-toggle');
+	};
+
+	return ({ kind, story }) => {
+		return (
+			<div>
+				<StoryComponent {...{ kind, story }} />
+				<Hoverable>
+					{hover => (
+						<div
+							style={{
+								position: 'fixed',
+								bottom: 0,
+								right: 28,
+								width: 24,
+								height: 24,
+								backgroundColor: 'rgba(0,0,0,.12)',
+								cursor: 'pointer',
+								opacity: hover ? '1' : '0.5',
+							}}
+							onClick={onToggle}
+							title="Toggle Layout"
+						>
+							<div
+								style={{
+									position: 'absolute',
+									bottom: 0,
+									left: 0,
+									width: 24,
+									height: 8,
+									backgroundColor: 'rgba(0,0,0,.12)',
+								}}
+							/>
+							<div
+								style={{
+									position: 'absolute',
+									top: 0,
+									right: 0,
+									width: 8,
+									height: 24,
+									backgroundColor: 'rgba(0,0,0,.12)',
+								}}
+							/>
+						</div>
+					)}
+				</Hoverable>
+			</div>
+		);
+	};
+};
+export const withPanelHideToggle = StoryComponent => {
+	const channel = addons.getChannel();
+	const onToggle = () => {
+		channel.emit('lucid-docs-panel-hide-toggle');
+	};
+
+	return ({ kind, story }) => {
+		return (
+			<div>
+				<StoryComponent {...{ kind, story }} />
+				<Hoverable>
+					{hover => (
+						<div
+							style={{
+								position: 'fixed',
+								bottom: 0,
+								right: 0,
+								width: 24,
+								height: 24,
+								backgroundColor: 'rgba(0,0,0,.12)',
+								cursor: 'pointer',
+								opacity: hover ? '1' : '0.5',
+							}}
+							onClick={onToggle}
+							title="Toggle Panel"
+						>
+							<div
+								style={{
+									position: 'absolute',
+									bottom: 0,
+									left: 0,
+									width: 24,
+									height: 8,
+									backgroundColor: 'rgba(0,0,0,.03)',
+									outline: '2px dashed rgba(0,0,0,.12)',
+									outlineOffset: -1,
+								}}
+							/>
+						</div>
+					)}
+				</Hoverable>
+			</div>
+		);
+	};
+};
+
 const getDefaultExport = mod => (mod.__esModule ? mod.default : mod);
 
 export const exampleStory = ({ component, code, example, path, options }) => {
@@ -185,6 +310,13 @@ export const exampleStory = ({ component, code, example, path, options }) => {
 	const storyWithDescription = withDescription(componentRef)(
 		storyWithChildComponents
 	);
+	//return storyWithDescription;
 
-	return storyWithDescription;
+	const storyWithPanelLayoutToggle = withPanelLayoutToggle(
+		storyWithDescription
+	);
+	const storyWithPanelHideToggle = withPanelHideToggle(
+		storyWithPanelLayoutToggle
+	);
+	return storyWithPanelHideToggle;
 };

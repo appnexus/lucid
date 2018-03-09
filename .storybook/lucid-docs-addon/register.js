@@ -268,14 +268,28 @@ addons.register('lucid-docs', api => {
 		title: 'Code',
 		render: () => <CodePanel channel={addons.getChannel()} api={api} />,
 	});
-	addons.addPanel('lucid-docs-panel-settings', {
-		title: 'Settings',
-		render: () => (
-			<SettingsPanel
-				channel={addons.getChannel()}
-				api={api}
-				setOptions={() => {}}
-			/>
-		),
+	//addons.addPanel('lucid-docs-panel-settings', {
+	//	title: 'Settings',
+	//	render: () => (
+	//		<SettingsPanel
+	//			channel={addons.getChannel()}
+	//			api={api}
+	//			setOptions={() => {}}
+	//		/>
+	//	),
+	//});
+
+	addons.getChannel().on('lucid-docs-panel-layout-toggle', () => {
+		const urlState = api.getUrlState();
+		api.setOptions({
+			addonPanelInRight: !urlState.panelRight,
+		});
+	});
+
+	addons.getChannel().on('lucid-docs-panel-hide-toggle', () => {
+		const urlState = api.getUrlState();
+		api.setOptions({
+			showAddonPanel: !urlState.addons,
+		});
 	});
 });
