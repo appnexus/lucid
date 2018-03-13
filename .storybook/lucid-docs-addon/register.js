@@ -32,11 +32,6 @@ class CodePanel extends React.Component {
 		const { channel, api } = this.props;
 		// Listen to the notes and render it.
 		channel.on('lucid-docs-source', this.onSource);
-
-		// Clear the current code on every story change.
-		//this.stopListeningOnStory = api.onStory(() => {
-		//	this.onSource('');
-		//});
 	}
 
 	render() {
@@ -49,17 +44,13 @@ class CodePanel extends React.Component {
 		return (
 			<div style={{ width: '100%' }}>
 				<ExampleCode code={code} hasCodepen packageJson={packageJson} />
-				{/*<PanelToggles api={this.props.api} />*/}
 			</div>
 		);
 	}
 
 	// This is some cleanup tasks when the CodePanel is unmounting.
 	componentWillUnmount() {
-		if (this.stopListeningOnStory) {
-			this.stopListeningOnStory();
-		}
-
+		this.onSource('');
 		this.unmounted = true;
 		const { channel, api } = this.props;
 		channel.removeListener('lucid-docs-source', this.onSource);
@@ -122,18 +113,10 @@ class PropsPanel extends React.Component {
 			'lucid-docs-display-child-components',
 			this.onDisplayChildComponents
 		);
-
-		// Clear the current props on every story change.
-		//this.stopListeningOnStory = api.onStory(() => {
-		//	this.onDisplayProps();
-		//});
 	}
 
 	componentWillUnmount() {
-		if (this.stopListeningOnStory) {
-			this.stopListeningOnStory();
-		}
-
+		this.onDisplayProps();
 		this.unmounted = true;
 		const { channel, api } = this.props;
 		channel.removeListener('lucid-docs-display-props', this.onDisplayProps);
@@ -160,99 +143,10 @@ class PropsPanel extends React.Component {
 				{!_.isEmpty(childComponents) && (
 					<ChildComponents childComponents={childComponents} />
 				)}
-				{/*<PanelToggles api={this.props.api} />*/}
 			</div>
 		);
 	}
 }
-
-class SettingsPanel extends React.Component {
-	constructor(...args) {
-		super(...args);
-
-		const [props] = args;
-		const urlState = props.api.getUrlState();
-
-		this.state = {
-			addonPanelInRight: !!urlState.panelRight,
-			showAddonPanel: true,
-		};
-
-		this.onTogglePanelDisplay = this.onTogglePanelDisplay.bind(this);
-		this.onTogglePanelRight = this.onTogglePanelRight.bind(this);
-	}
-
-	onTogglePanelDisplay() {
-		this.props.api.setOptions({
-			showAddonPanel: !this.state.showAddonPanel,
-		});
-		this.setState({
-			showAddonPanel: !this.state.showAddonPanel,
-		});
-	}
-
-	onTogglePanelRight() {
-		this.props.api.setOptions({
-			addonPanelInRight: !this.state.addonPanelInRight,
-		});
-		this.setState({
-			addonPanelInRight: !this.state.addonPanelInRight,
-		});
-	}
-
-	componentWillUnmount() {
-		if (this.stopListeningOnStory) {
-			this.stopListeningOnStory();
-		}
-
-		this.unmounted = true;
-	}
-
-	render() {
-		return (
-			<div style={SettingsPanel.style.panelContent}>
-				<p>
-					<button
-						style={SettingsPanel.style.button}
-						onClick={this.onTogglePanelRight}
-					>
-						Toggle Layout
-					</button>
-				</p>
-				<p>
-					<button
-						style={SettingsPanel.style.button}
-						onClick={this.onTogglePanelDisplay}
-					>
-						Hide Panel
-					</button>
-				</p>
-			</div>
-		);
-	}
-}
-
-SettingsPanel.style = {
-	panelContent: {
-		backgroundColor: 'white',
-		width: '100%',
-		padding: 6,
-	},
-	button: {
-		border: '1px solid rgb(193, 193, 193)',
-		fontSize: 10,
-		cursor: 'pointer',
-		borderRadius: 2,
-		backgroundColor: 'rgb(247, 247, 247)',
-		color: 'rgb(130, 130, 130)',
-		fontWeight: 'normal',
-		textTransform: 'uppercase',
-		fontFamily:
-			'-apple-system, ".SFNSText-Regular", "San Francisco", BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", "Lucida Grande", Arial, sans-serif',
-		letterSpacing: 1,
-		padding: '5px 10px',
-	},
-};
 
 // Register the addon with a unique name.
 addons.register('lucid-docs', api => {
@@ -272,16 +166,6 @@ addons.register('lucid-docs', api => {
 		title: 'Code',
 		render: () => <CodePanel channel={addons.getChannel()} api={api} />,
 	});
-	//addons.addPanel('lucid-docs-panel-settings', {
-	//	title: 'Settings',
-	//	render: () => (
-	//		<SettingsPanel
-	//			channel={addons.getChannel()}
-	//			api={api}
-	//			setOptions={() => {}}
-	//		/>
-	//	),
-	//});
 
 	addons.getChannel().on('lucid-docs-panel-layout-toggle', () => {
 		const urlState = api.getUrlState();
