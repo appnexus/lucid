@@ -3,6 +3,7 @@ import _ from 'lodash';
 import addons from '@storybook/addons';
 import { stripIndent } from '../../src/docs/util';
 import marksy from 'marksy';
+import Hoverable from './Hoverable';
 
 import { setOptions } from '@storybook/addon-options';
 
@@ -165,32 +166,6 @@ export const withChildComponents = (componentRef, maxHeight, path) => {
 	};
 };
 
-class Hoverable extends React.Component {
-	constructor(...args) {
-		super(...args);
-		this.state = {
-			isHovered: false,
-		};
-		this.handleMouseOver = this.handleMouseOver.bind(this);
-		this.handleMouseOut = this.handleMouseOut.bind(this);
-	}
-
-	handleMouseOver() {
-		this.setState({ isHovered: true });
-	}
-
-	handleMouseOut() {
-		this.setState({ isHovered: false });
-	}
-
-	render() {
-		return React.cloneElement(this.props.children(this.state.isHovered), {
-			onMouseOver: this.handleMouseOver,
-			onMouseOut: this.handleMouseOut,
-		});
-	}
-}
-
 export const withPanelLayoutToggle = StoryComponent => {
 	const channel = addons.getChannel();
 	const onToggle = () => {
@@ -213,6 +188,7 @@ export const withPanelLayoutToggle = StoryComponent => {
 								backgroundColor: 'rgba(0,0,0,.12)',
 								cursor: 'pointer',
 								opacity: hover ? '1' : '0.5',
+								//border: '1px solid rgb(236, 236, 236)',
 							}}
 							onClick={onToggle}
 							title="Toggle Layout"
@@ -290,6 +266,113 @@ export const withPanelHideToggle = StoryComponent => {
 	};
 };
 
+export const withPanelToggles = StoryComponent => {
+	const channel = addons.getChannel();
+	const onToggleLayout = () => {
+		channel.emit('lucid-docs-panel-layout-toggle');
+	};
+
+	const onTogglePanel = () => {
+		channel.emit('lucid-docs-panel-hide-toggle');
+	};
+
+	return ({ kind, story }) => {
+		return (
+			<div>
+				<StoryComponent {...{ kind, story }} />
+				<Hoverable>
+					{hover => (
+						<div
+							style={{
+								position: 'fixed',
+								bottom: 0,
+								left: 0,
+								width: '100%',
+								height: 32,
+								backgroundColor: 'rgb(247, 247, 247)',
+								opacity: hover ? '1' : '0.5',
+								borderTop: '1px solid rgb(236, 236, 236)',
+							}}
+						>
+							<Hoverable>
+								{hover => (
+									<div
+										style={{
+											position: 'fixed',
+											bottom: 4,
+											right: 32,
+											width: 24,
+											height: 24,
+											backgroundColor: 'rgba(0,0,0,.12)',
+											cursor: 'pointer',
+											opacity: hover ? '1' : '0.5',
+											//border: '1px solid rgb(236, 236, 236)',
+										}}
+										onClick={onToggleLayout}
+										title="Toggle Layout"
+									>
+										<div
+											style={{
+												position: 'absolute',
+												bottom: 0,
+												left: 0,
+												width: 24,
+												height: 8,
+												backgroundColor: 'rgba(0,0,0,.12)',
+											}}
+										/>
+										<div
+											style={{
+												position: 'absolute',
+												top: 0,
+												right: 0,
+												width: 8,
+												height: 24,
+												backgroundColor: 'rgba(0,0,0,.12)',
+											}}
+										/>
+									</div>
+								)}
+							</Hoverable>
+							<Hoverable>
+								{hover => (
+									<div
+										style={{
+											position: 'fixed',
+											bottom: 4,
+											right: 4,
+											width: 24,
+											height: 24,
+											backgroundColor: 'rgba(0,0,0,.12)',
+											cursor: 'pointer',
+											opacity: hover ? '1' : '0.5',
+										}}
+										onClick={onTogglePanel}
+										title="Toggle Panel"
+									>
+										<div
+											style={{
+												position: 'absolute',
+												bottom: 0,
+												left: 0,
+												width: 24,
+												height: 8,
+												backgroundColor: 'rgba(0,0,0,.03)',
+												outline: '2px dashed rgba(0,0,0,.12)',
+												outlineOffset: -1,
+											}}
+										/>
+									</div>
+								)}
+							</Hoverable>
+						</div>
+					)}
+				</Hoverable>
+			</div>
+		);
+	};
+};
+
 const getDefaultExport = mod => (mod.__esModule ? mod.default : mod);
 
 export const exampleStory = ({ component, code, example, path, options }) => {
@@ -310,13 +393,14 @@ export const exampleStory = ({ component, code, example, path, options }) => {
 	const storyWithDescription = withDescription(componentRef)(
 		storyWithChildComponents
 	);
-	//return storyWithDescription;
+	return storyWithDescription;
 
-	const storyWithPanelLayoutToggle = withPanelLayoutToggle(
-		storyWithDescription
-	);
-	const storyWithPanelHideToggle = withPanelHideToggle(
-		storyWithPanelLayoutToggle
-	);
-	return storyWithPanelHideToggle;
+	//const storyWithPanelLayoutToggle = withPanelLayoutToggle(
+	//	storyWithDescription
+	//);
+	//const storyWithPanelHideToggle = withPanelHideToggle(
+	//	storyWithPanelLayoutToggle
+	//);
+	//return storyWithPanelHideToggle;
+	//return withPanelToggles(storyWithDescription);
 };

@@ -1,9 +1,11 @@
 import '@storybook/addon-options/register';
 import React from 'react';
+import ReactDOM from 'react-dom';
 import addons from '@storybook/addons';
 import _ from 'lodash';
 import ExampleCode from './ExampleCode';
 import PropTypes from './PropTypes';
+import PanelToggles from './PanelToggles';
 import ChildComponents from './ChildComponents';
 import packageJson from '../../package.json';
 
@@ -31,10 +33,10 @@ class CodePanel extends React.Component {
 		// Listen to the notes and render it.
 		channel.on('lucid-docs-source', this.onSource);
 
-		// Clear the current notes on every story change.
-		this.stopListeningOnStory = api.onStory(() => {
-			this.onSource('');
-		});
+		// Clear the current code on every story change.
+		//this.stopListeningOnStory = api.onStory(() => {
+		//	this.onSource('');
+		//});
 	}
 
 	render() {
@@ -47,6 +49,7 @@ class CodePanel extends React.Component {
 		return (
 			<div style={{ width: '100%' }}>
 				<ExampleCode code={code} hasCodepen packageJson={packageJson} />
+				{/*<PanelToggles api={this.props.api} />*/}
 			</div>
 		);
 	}
@@ -120,10 +123,10 @@ class PropsPanel extends React.Component {
 			this.onDisplayChildComponents
 		);
 
-		// Clear the current notes on every story change.
-		this.stopListeningOnStory = api.onStory(() => {
-			this.onDisplayProps();
-		});
+		// Clear the current props on every story change.
+		//this.stopListeningOnStory = api.onStory(() => {
+		//	this.onDisplayProps();
+		//});
 	}
 
 	componentWillUnmount() {
@@ -157,6 +160,7 @@ class PropsPanel extends React.Component {
 				{!_.isEmpty(childComponents) && (
 					<ChildComponents childComponents={childComponents} />
 				)}
+				{/*<PanelToggles api={this.props.api} />*/}
 			</div>
 		);
 	}
@@ -291,5 +295,13 @@ addons.register('lucid-docs', api => {
 		api.setOptions({
 			showAddonPanel: !urlState.addons,
 		});
+	});
+
+	const div = window.document.createElement('div');
+	window.document.body.appendChild(div);
+	api.onStory((kind, story) => {
+		setTimeout(() => {
+			ReactDOM.render(<PanelToggles api={api} />, div);
+		}, 200);
 	});
 });
