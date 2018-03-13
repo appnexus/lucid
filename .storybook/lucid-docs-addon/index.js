@@ -3,6 +3,7 @@ import _ from 'lodash';
 import addons from '@storybook/addons';
 import { stripIndent } from '../../src/docs/util';
 import marksy from 'marksy';
+import Hoverable from './Hoverable';
 
 import { setOptions } from '@storybook/addon-options';
 
@@ -185,6 +186,5 @@ export const exampleStory = ({ component, code, example, path, options }) => {
 	const storyWithDescription = withDescription(componentRef)(
 		storyWithChildComponents
 	);
-
 	return storyWithDescription;
 };

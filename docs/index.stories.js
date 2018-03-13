@@ -55,7 +55,6 @@ const checkIconSVG = `<?xml version="1.0" encoding="utf-8"?>
 
 const styles = {
 	link: {
-		//color: '#3f6486',
 		color: '#2abbb0',
 		textDecoration: 'underline',
 		cursor: 'pointer',
@@ -213,7 +212,6 @@ _.reduce(
 									<div
 										key={name}
 										style={{
-											//flexBasis: 256,
 											margin: 10,
 										}}
 									>
