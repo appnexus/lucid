@@ -1,147 +1,151 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import '../src/index.less';
-import Button from '../src/components/Button/Button';
-import SingleSelect from '../src/components/SingleSelect/SingleSelect';
+import { Transition, TransitionList } from './Transition';
 
 storiesOf('Intro Stories', module)
 	.add('Hello, world!', () => (
-		<section>
+		<Transition>
 			<h1>Story Time with Lucid UI</h1>
-			<h3>by Oliver Gupte</h3>
-		</section>
+			<Transition delay={500}>
+				<h3>by Oliver Gupte</h3>
+			</Transition>
+		</Transition>
 	))
 	.add('Story time!', () => (
-		<section>
+		<Transition>
 			<h1>Story time!</h1>
-			<h3>This is Storybook!</h3>
-		</section>
+			<Transition delay={500}>
+				<h3>This is Storybook!</h3>
+			</Transition>
+		</Transition>
 	))
 	.add('What is Storybook?', () => (
-		<section>
+		<Transition>
 			<h1>What is Storybook?</h1>
-			<ul>
-				<li>component dev environment</li>
-				<li>organizing variations in UI</li>
-				<li>components isolated from storybook</li>
-				<li>supports react, vue, and angular out of box</li>
-			</ul>
-		</section>
+			<TransitionList
+				items={[
+					'component dev environment',
+					'organizing variations in UI',
+					'components isolated from storybook',
+					'supports react, vue, and angular out of box',
+				]}
+			/>
+		</Transition>
 	))
 	.add('Swiss army knife', () => (
-		<section>
+		<Transition>
 			<h1>Swiss army knife</h1>
-			<ul>
-				<li>
-					tons of addons{' '}
-					<a href="https://storybook.js.org/addons/addon-gallery/">
-						Addon Gallery
-					</a>
-				</li>
-				<li>run locally or build to static site</li>
-				<li>hot module reloading</li>
-				<li>keyboard shortcuts</li>
-				<li>testing</li>
-			</ul>
-		</section>
+			<TransitionList
+				items={[
+					[
+						'tons of addons ',
+						<a
+							key="addongallery"
+							href="https://storybook.js.org/addons/addon-gallery/"
+						>
+							Addon Gallery
+						</a>,
+					],
+					'run locally or build to static site',
+					'hot module reloading',
+					'keyboard shortcuts',
+					'testing',
+				]}
+			/>
+		</Transition>
 	))
 	.add('Testing with Storybook', () => (
-		<section>
+		<Transition>
 			<h1>Testing with Storybook</h1>
-			<ul>
-				<li>structural testing with jest snapshots (StoryShots)</li>
-				<li>interaction testing with enzyme</li>
-				<li>style testing with visual regression tools</li>
-				<li>manual testing with humans (job sec)</li>
-			</ul>
-		</section>
+			<TransitionList
+				items={[
+					'structural testing with jest snapshots (StoryShots)',
+					'interaction testing with enzyme',
+					'style testing with visual regression tools',
+					'manual testing with humans (job sec)',
+				]}
+			/>
+		</Transition>
 	));
 
 storiesOf('Dev Stories', module)
 	.add('Developing in stories', () => (
-		<section>
+		<Transition>
 			<h1>Developing in stories</h1>
-			<ul>
-				<li>iterative</li>
-				<li>shareable</li>
-				<li>organized</li>
-			</ul>
-		</section>
+			<TransitionList items={['iterative', 'shareable', 'organized']} />
+		</Transition>
 	))
 	.add('for example', () => (
-		<section>
+		<Transition>
 			<h1>For example...</h1>
-		</section>
+		</Transition>
 	));
 
-//storiesOf('Button', module)
-//	.add('with text', () => <Button>Hello Button</Button>)
-//	.add('with some emoji', () => <Button>😀 😎 👍 💯</Button>);
+//storiesOf('Transition Component', module)
+//	.add('single transition', () => (
+//		<Transition>
+//			<h1>I am in a Transition</h1>
+//		</Transition>
+//	))
+//	.add('nested transitions', () => (
+//		<Transition>
+//			<h1>I am in a nested Transition</h1>
+//			<Transition>
+//				<h1>I am in a nested Transition</h1>
+//				<Transition>
+//					<h1>I am in a nested Transition</h1>
+//				</Transition>
+//			</Transition>
+//		</Transition>
+//	))
+//	.add('with delay', () => (
+//		<Transition delay={1500}>
+//			<h1>I am in a delayed Transition</h1>
+//		</Transition>
+//	))
+//	.add('nested delayed transitions', () => (
+//		<Transition delay={0}>
+//			<h1>I am in a nested Transition</h1>
+//			<Transition delay={1000}>
+//				<h1>I am in a nested Transition</h1>
+//				<Transition delay={2000}>
+//					<h1>I am in a nested Transition</h1>
+//				</Transition>
+//			</Transition>
+//		</Transition>
+//	));
 
-class AddSelect extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			selectedIndex: null,
-			addedItems: [],
-		};
-		this.handleSelect = this.handleSelect.bind(this);
-		this.handleAdd = this.handleAdd.bind(this);
-	}
-
-	handleSelect(selectedIndex) {
-		this.setState({
-			selectedIndex,
-		});
-	}
-
-	handleAdd() {
-		const { addedItems, selectedIndex } = this.state;
-		this.setState({
-			addedItems: [...addedItems, this.props.items[selectedIndex]],
-		});
-	}
-
-	render() {
-		return (
-			<div>
-				<SingleSelect onSelect={this.handleSelect} Option={this.props.items} />
-				<Button style={{ marginLeft: 10 }} onClick={this.handleAdd}>
-					Add +
-				</Button>
-				<ul>{this.state.addedItems.map(item => <li>{item}</li>)}</ul>
-			</div>
-		);
-	}
-}
-
-//storiesOf('AddSelect', module)
-//	.add('basic', () => (<AddSelect items={['foo', 'bar', 'baz']}/>))
+// TransitionList Component
+// basic list
+// with delay
 
 storiesOf('Doc Stories', module)
 	.add('Dev env vs gallery', () => (
-		<section>
+		<Transition>
 			<h1>Dev env vs gallery</h1>
-			<ul>
-				<li>Storybook is a dev tool first</li>
-				<li>simple docs and examples</li>
-				<li>docs in storybook have limitations</li>
-				<li>addons can help</li>
-			</ul>
-		</section>
+			<TransitionList
+				items={[
+					'Storybook is a dev tool first',
+					'simple docs and examples',
+					'docs in storybook have limitations',
+					'addons can help',
+				]}
+			/>
+		</Transition>
 	))
 	.add('Case study', () => (
-		<section>
+		<Transition>
 			<h1>Lucid Docs!</h1>
 			<a href="https://appnexus.github.io/lucid/">
 				https://appnexus.github.io/lucid/
 			</a>
-		</section>
+		</Transition>
 	));
 
 storiesOf('End Story', module)
 	.add('Thanks!', () => (
-		<section>
+		<Transition>
 			<h1>Thanks!</h1>
 			<p>
 				<a href="http://docspot.devnxs.net/projects/lucid/storybookshelf/">
@@ -149,15 +153,15 @@ storiesOf('End Story', module)
 				</a>
 			</p>
 			<h3>Questions?</h3>
-		</section>
+		</Transition>
 	))
 	.add('Last page', () => (
-		<section>
+		<Transition>
 			<h1>&lt;your story here&gt;</h1>
 			<p>git clone git@github.com:appnexus/lucid.git</p>
 			<p>cd lucid</p>
 			<p>yarn</p>
 			<p>npm run storybook</p>
 			<p>write your own stories in stories/index.stories.js</p>
-		</section>
+		</Transition>
 	));
