@@ -1,7 +1,11 @@
 {
 	"env": {
 		"test": {
-			"plugins": []
+			"plugins": [
+				["babel-plugin-transform-require-ignore", {
+					"extensions": [".less", ".css"]
+				}],
+			]
 		},
 		"development": {
 			"plugins": ["lodash"]
