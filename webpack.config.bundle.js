@@ -1,61 +1,55 @@
 // This webpack config builds lucid for the use in a <script> tag that already
 // has React and ReactDOM available as globals
 
-var path = require('path');
-var webpack = require('webpack');
-var isMinified = process.argv.indexOf('--minify') !== -1;
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
+const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
-	context: __dirname,
-	entry: ['./src/index.js'],
+	mode: isProduction ? 'production' : 'development',
+	entry: path.join(__dirname, 'src', 'index.js'),
 	output: {
-		path: path.join(__dirname, '/dist'),
-		filename: isMinified ? 'lucid.min.js' : 'lucid.js',
+		path: path.join(__dirname, 'dist'),
+		filename: isProduction ? 'lucid.min.js' : 'lucid.js',
 		libraryTarget: 'var',
 		library: 'Lucid',
 	},
-	externals: {
-		react: 'React',
-		'react-dom': 'ReactDOM',
-
-		// to avoid duplicate import of React with react-addons-css-transition-group
-		'./React': 'React',
-		'./ReactDOM': 'ReactDOM',
-	},
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.jsx?$/,
-				loader: 'babel',
-				exclude: /(node_modules)/,
+				loader: 'babel-loader',
+				include: [path.resolve(__dirname, 'src')],
 			},
 			{
-				include: [require.resolve('react-peek/prop-types')],
-				loader: 'babel',
-			},
-			{
-				test: /\.json/,
-				loader: 'json',
+				test: /\.less$/,
+				use: [
+					MiniCssExtractPlugin.loader,
+					{ loader: 'css-loader', options: { sourceMap: !isProduction } },
+					{ loader: 'postcss-loader', options: { sourceMap: !isProduction } },
+					{ loader: 'less-loader', options: { sourceMap: !isProduction } },
+				],
 			},
 		],
 	},
 	resolve: {
-		extensions: ['', '.js', '.jsx'],
+		extensions: ['.js', '.jsx'],
+	},
+	devtool: isProduction ? false : 'source-map',
+	externals: {
+		react: 'React',
+		'react-dom': 'ReactDOM',
+
+		// TODO check if still necessary
+		// to avoid duplicate import of React with react-addons-css-transition-group
+		'./React': 'React',
+		'./ReactDOM': 'ReactDOM',
 	},
 	plugins: [
-		isMinified
-			? new webpack.DefinePlugin({
-					'process.env': {
-						NODE_ENV: '"production"',
-					},
-				})
-			: function() {},
-		isMinified
-			? new webpack.optimize.UglifyJsPlugin({
-					compress: {
-						warnings: false,
-					},
-				})
-			: function() {},
+		new MiniCssExtractPlugin({
+			filename: 'lucid.css',
+			disable: !isProduction,
+		}),
 	],
 };

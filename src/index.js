@@ -1,3 +1,4 @@
+import './index.less';
 // components with reducers
 import Accordion, { AccordionDumb } from './components/Accordion/Accordion';
 import Autocomplete, {

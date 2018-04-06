@@ -1,16 +1,10 @@
-var autoprefixer = require('autoprefixer');
-var babelCore = require('babel-core');
-var babel = require('gulp-babel');
-var cache = require('gulp-cached');
-var gulp = require('gulp');
-var less = require('gulp-less');
-var postcss = require('gulp-postcss');
-var babylon = require('babylon');
-var fs = require('fs');
-var _ = require('lodash');
-var path = require('path');
+const babelCore = require('babel-core');
+const babylon = require('babylon');
+const fs = require('fs');
+const _ = require('lodash');
+const path = require('path');
 
-var CONFIG = require('./config');
+const CONFIG = require('./config');
 
 function indexAst() {
 	const code = fs
@@ -81,34 +75,6 @@ function exportCode(specifierType, specifierPath, exportName) {
 }
 
 module.exports = {
-	css: function() {
-		return gulp
-			.src([CONFIG.LESS_ENTRY])
-			.pipe(less())
-			.pipe(
-				postcss([
-					autoprefixer({
-						browsers: [CONFIG.AUTOPREFIXER_BROWSERS],
-					}),
-				])
-			)
-			.pipe(gulp.dest(CONFIG.BUILD_DIR));
-	},
-
-	js: function() {
-		return gulp
-			.src([
-				'!/**/*.json',
-				'!/**/*.html',
-				'!' + CONFIG.TEST_GLOB.SOURCE,
-				'!' + CONFIG.EXAMPLES_GLOB.SOURCE,
-				CONFIG.JS_GLOB.SOURCE,
-			])
-			.pipe(cache('build-js')) // only useful when using a watch task
-			.pipe(babel())
-			.pipe(gulp.dest(CONFIG.BUILD_DIR));
-	},
-
 	/**
 	 * This is a task that reads our `index.js` and statically analyzes it for
 	 * imports/exports. Based on that, it writes a single file for each of the
