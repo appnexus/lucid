@@ -40,11 +40,6 @@ module.exports = {
 	externals: {
 		react: 'React',
 		'react-dom': 'ReactDOM',
-
-		// TODO check if still necessary
-		// to avoid duplicate import of React with react-addons-css-transition-group
-		'./React': 'React',
-		'./ReactDOM': 'ReactDOM',
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
