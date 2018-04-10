@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import addons from '@storybook/addons';
-import { stripIndent } from '../../src/docs/util';
+import { stripIndent } from './util';
 import marksy from 'marksy';
 import Hoverable from './Hoverable';
 

@@ -3,7 +3,7 @@ import ReactDOMServer from 'react-dom/server';
 import _ from 'lodash';
 import marksy from 'marksy/components';
 import PropTypes from './PropTypes';
-import { stripIndent } from '../../src/docs/util';
+import { stripIndent } from './util';
 
 import SyntaxHighlighter, {
 	registerLanguage,
