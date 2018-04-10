@@ -62,7 +62,7 @@ StatelessExpander.reducers = {
   })
 }
 
-const HybridExpander = buildHybridComponent(Expander);
+const HybridExpander = buildHybridComponent(StatelessExpander);
 export default HybridExpander;
 ```
 Now you have the flexibility to either let the component handle it's own state:
