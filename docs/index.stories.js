@@ -18,6 +18,7 @@ import SyntaxHighlighter, {
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 import okaidia from 'react-syntax-highlighter/styles/prism/okaidia';
 import '../src/index.less';
+import ColorPalette from './color-palette';
 
 registerLanguage('jsx', jsx);
 
@@ -155,6 +156,11 @@ storiesOf('Lucid UI', module)
 	))
 	.add('Computed Props', () => (
 		<ArticlePage>{compile(computedPropsText).tree}</ArticlePage>
+	))
+	.add('Color Palette', () => (
+		<ArticlePage>
+			<ColorPalette />
+		</ArticlePage>
 	));
 
 const loadedComponents = require('./load-components');

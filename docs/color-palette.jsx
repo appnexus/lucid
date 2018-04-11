@@ -3,7 +3,8 @@ import classNames from 'classnames';
 import React from 'react';
 import createClass from 'create-react-class';
 
-import { lucidClassNames } from '../../util/style-helpers';
+import { lucidClassNames } from '../src/util/style-helpers';
+import './color-palette.less';
 
 const cx = lucidClassNames.bind('ColorPalette');
 
