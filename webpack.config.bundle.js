@@ -46,5 +46,9 @@ module.exports = {
 			filename: 'lucid.css',
 			disable: !isProduction,
 		}),
+		new MiniCssExtractPlugin({
+			filename: 'index.css',
+			disable: !isProduction,
+		}),
 	],
 };
