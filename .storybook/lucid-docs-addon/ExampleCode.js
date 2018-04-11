@@ -92,7 +92,7 @@ ReactDOM.render(
 						head:
 							'<style>html,body {font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;}</style>',
 						css_external: encodeURI(
-							`https://unpkg.com/lucid-ui@${packageJson.version}/dist/index.css`
+							`https://unpkg.com/lucid-ui@${packageJson.version}/dist/lucid.css`
 						),
 						js_external: [
 							'https://unpkg.com/react@16/umd/react.development.js',
