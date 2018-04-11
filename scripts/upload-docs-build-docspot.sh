@@ -33,5 +33,7 @@ curl "http://docspot.devnxs.net/api/projects" \
 
 if [ $? -eq 0 ]; then
 	echo "Uploaded to: http://docspot.devnxs.net/projects/anx-react/$BUILD_ID"
+else
+	echo "Error: unable to upload to: http://docspot.devnxs.net/projects/anx-react/$BUILD_ID"
 fi
 
