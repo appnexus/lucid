@@ -126,10 +126,9 @@
       "../tests/enzyme-setup"
     ],
     "collectCoverageFrom": [
-      "**/*.{js,jsx}",
-      "!**/examples/**",
-      "!docs/**",
-      "!*.*"
+      "components/**/*.{js,jsx}",
+      "!components/**/examples/*",
+      "util/**/*.{js,jsx}"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
