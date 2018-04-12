@@ -111,7 +111,7 @@ const generateModules = (
 
 				const transpiledCode = exportCode(
 					specifierType,
-					mapModuleId(specifierModuleId) || specifierModuleId,
+					mapModuleId(specifierModuleId, exportName) || specifierModuleId,
 					exportName
 				);
 
@@ -144,24 +144,3 @@ const removeModules = (entryModulePath, rootPath = '.') => {
 	);
 };
 module.exports.removeModules = removeModules;
-
-const ensureRelativePath = path => (path.startsWith('.') ? path : `./${path}`);
-
-const entryModulePath = path.join('src', 'index.js');
-const destinationPath = '.';
-
-if (process.argv.includes('--generate')) {
-	generateModules(entryModulePath, destinationPath, moduleId => {
-		return moduleId
-			.replace(
-				/^\.\.\//,
-				`${ensureRelativePath(path.relative(destinationPath, '.'))}/`
-			)
-			.replace(
-				/^\.\//,
-				`${ensureRelativePath(path.relative(destinationPath, 'dist'))}/`
-			);
-	});
-} else if (process.argv.includes('--remove')) {
-	removeModules(entryModulePath, destinationPath);
-}

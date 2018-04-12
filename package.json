@@ -27,8 +27,8 @@
     "build-docs": "rm -rf ./dist/docs && NODE_ENV=documentation build-storybook -s ./docs/public -o ./dist/docs",
     "upload-docs": "npm run build-docs && scripts/upload-docs-build-docspot.sh",
     "build-js": "NODE_ENV=production babel --extensions .js,.jsx --ignore spec.js,docs,examples,test-entry.js,coverage ./src --out-dir ./dist",
-    "path-import-modules-generate": "node ./scripts/path-import-modules.js --generate",
-    "path-import-modules-remove": "node ./scripts/path-import-modules.js --remove",
+    "path-import-modules-generate": "node ./scripts/path-import-modules-exec.js --generate",
+    "path-import-modules-remove": "node ./scripts/path-import-modules-exec.js --remove",
     "release": "np"
   },
   "keywords": [
