@@ -5,10 +5,20 @@
 				["babel-plugin-transform-require-ignore", {
 					"extensions": [".less", ".css"]
 				}],
+			],
+			"presets": [
+				"stage-2",
+				"es2015",
+				"react"
 			]
 		},
 		"development": {
-			"plugins": ["lodash"]
+			"plugins": ["lodash"],
+			"presets": [
+				"stage-2",
+				"es2015",
+				"react"
+			]
 		},
 		"production": {
 			"plugins": [
@@ -19,12 +29,32 @@
 					"minifyStatics": true
 				}],
 				"lodash"
+			],
+			"presets": [
+				"stage-2",
+				"es2015",
+				"react"
+			]
+		},
+		"modules": {
+			"plugins": [
+				["transform-object-rest-spread"],
+				["babel-plugin-transform-require-ignore", {
+					"extensions": [".less", ".css"]
+				}],
+				["react-peek/babel", {
+					"minifyStatics": true
+				}],
+			],
+			"presets": [
+				["env", {
+					"targets": {
+						"browsers": ["last 2 versions"]
+					},
+					"modules": false
+				}],
+				"react"
 			]
 		}
-	},
-	"presets": [
-		"stage-2",
-		"es2015",
-		"react"
-	]
+	}
 }
