@@ -2,6 +2,7 @@
 	"env": {
 		"test": {
 			"plugins": [
+				["transform-object-rest-spread"],
 				["babel-plugin-transform-require-ignore", {
 					"extensions": [".less", ".css"]
 				}],
@@ -12,6 +13,7 @@
 		},
 		"production": {
 			"plugins": [
+				["transform-object-rest-spread"],
 				["babel-plugin-transform-require-ignore", {
 					"extensions": [".less", ".css"]
 				}],
@@ -23,8 +25,11 @@
 		}
 	},
 	"presets": [
-		"stage-2",
-		"es2015",
+		["env", {
+			"targets": {
+				"browsers": ["last 2 versions"]
+			}
+		}],
 		"react"
 	]
 }
