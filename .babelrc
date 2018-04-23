@@ -6,10 +6,26 @@
 				["babel-plugin-transform-require-ignore", {
 					"extensions": [".less", ".css"]
 				}],
+			],
+			"presets": [
+				["env", {
+					"targets": {
+						"browsers": ["last 2 versions"]
+					}
+				}],
+			"react"
 			]
 		},
 		"development": {
-			"plugins": ["lodash"]
+			"plugins": ["lodash"],
+			"presets": [
+				["env", {
+					"targets": {
+						"browsers": ["last 2 versions"]
+					}
+				}],
+			"react"
+			]
 		},
 		"production": {
 			"plugins": [
@@ -21,15 +37,36 @@
 					"minifyStatics": true
 				}],
 				"lodash"
+			],
+			"presets": [
+				["env", {
+					"targets": {
+						"browsers": ["last 2 versions"]
+					}
+				}],
+			"react"
+			]
+		},
+		"modules": {
+			"plugins": [
+				["transform-object-rest-spread"],
+				["babel-plugin-transform-require-ignore", {
+					"extensions": [".less", ".css"]
+				}],
+				["react-peek/babel", {
+					"minifyStatics": true
+				}],
+				"lodash"
+			],
+			"presets": [
+				["env", {
+					"targets": {
+						"browsers": ["last 2 versions"]
+					},
+					"modules": false
+				}],
+				"react"
 			]
 		}
-	},
-	"presets": [
-		["env", {
-			"targets": {
-				"browsers": ["last 2 versions"]
-			}
-		}],
-		"react"
-	]
+	}
 }
