@@ -64,7 +64,27 @@ const SearchableSelect = createClass({
 				},
 			},
 			propName: 'Option',
-			propTypes: DropMenu.Option.propTypes,
+			propTypes: {
+				Selected: any`
+					Customizes the rendering of the Option when it is selected and is
+					displayed instead of the Placeholder.
+				`,
+				...DropMenu.Option.propTypes,
+			},
+			components: {
+				Selected: createClass({
+					displayName: 'SearchableSelect.Option.Selected',
+					statics: {
+						peek: {
+							description: `
+								Customizes the rendering of the Option when it is selected
+								and is displayed instead of the Placeholder.
+							`,
+						},
+					},
+					propName: 'Selected',
+				}),
+			},
 		}),
 		OptionGroup: createClass({
 			displayName: 'SearchableSelect.OptionGroup',
@@ -263,7 +283,9 @@ const SearchableSelect = createClass({
 				>
 					{_.isString(optionProps.children)
 						? this.renderUnderlinedChildren(optionProps.children, searchText)
-						: optionProps.children}
+						: _.isFunction(optionProps.children)
+							? React.createElement(optionProps.children, { searchText })
+							: optionProps.children}
 				</DropMenu.Option>
 			);
 		}
@@ -271,9 +293,13 @@ const SearchableSelect = createClass({
 		return (
 			<DropMenu.Option
 				key={'SearchableSelectOption' + optionIndex}
-				{...optionProps}
+				{..._.omit(optionProps, ['children'])}
 				isDisabled={optionProps.isDisabled || isLoading}
-			/>
+			>
+				{_.isFunction(optionProps.children)
+					? React.createElement(optionProps.children, { searchText })
+					: optionProps.children}
+			</DropMenu.Option>
 		);
 	},
 
@@ -404,7 +430,17 @@ const SearchableSelect = createClass({
 							)}
 						>
 							{isItemSelected
-								? flattenedOptionsData[selectedIndex].optionProps.children
+								? _.get(
+										getFirst(
+											flattenedOptionsData[selectedIndex].optionProps,
+											SearchableSelect.Option.Selected
+										),
+										'props.children'
+									) ||
+									(Children =>
+										_.isFunction(Children) ? <Children /> : Children)(
+										flattenedOptionsData[selectedIndex].optionProps.children
+									)
 								: placeholder}
 						</span>
 						<CaretIcon direction={isExpanded ? direction : 'down'} size={8} />

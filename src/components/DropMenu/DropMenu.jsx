@@ -283,7 +283,7 @@ const DropMenu = createClass({
 			statics: {
 				peek: {
 					description: `
-						Props that are passed through to the underling ContextMenu.
+						Props that are passed through to the underlying ContextMenu.
 					`,
 				},
 			},

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import { createClass, findTypes } from '../../util/component-types';
+import { createClass, findTypes, getFirst } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './SingleSelect.reducers';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
@@ -61,7 +61,27 @@ const SingleSelect = createClass({
 				},
 			},
 			propName: 'Option',
-			propTypes: DropMenu.Option.propTypes,
+			propTypes: {
+				Selected: any`
+					Customizes the rendering of the Option when it is selected and is
+					displayed instead of the Placeholder.
+				`,
+				...DropMenu.Option.propTypes,
+			},
+			components: {
+				Selected: createClass({
+					displayName: 'SingleSelect.Option.Selected',
+					statics: {
+						peek: {
+							description: `
+								Customizes the rendering of the Option when it is selected
+								and is displayed instead of the Placeholder.
+							`,
+						},
+					},
+					propName: 'Selected',
+				}),
+			},
 		}),
 		OptionGroup: createClass({
 			displayName: 'SingleSelect.OptionGroup',
@@ -241,7 +261,13 @@ const SingleSelect = createClass({
 							)}
 						>
 							{isItemSelected
-								? flattenedOptionsData[selectedIndex].optionProps.children
+								? _.get(
+										getFirst(
+											flattenedOptionsData[selectedIndex].optionProps,
+											SingleSelect.Option.Selected
+										),
+										'props.children'
+									) || flattenedOptionsData[selectedIndex].optionProps.children
 								: placeholder}
 						</span>
 						<CaretIcon direction={isExpanded ? direction : 'down'} size={8} />
@@ -264,7 +290,7 @@ const SingleSelect = createClass({
 							({ optionProps, optionIndex }) => (
 								<DropMenu.Option
 									key={'SingleSelectOption' + optionIndex}
-									{...optionProps}
+									{..._.omit(optionProps, 'Selected')}
 								/>
 							)
 						)}
@@ -274,7 +300,7 @@ const SingleSelect = createClass({
 					_.map(ungroupedOptionData, ({ optionProps, optionIndex }) => (
 						<DropMenu.Option
 							key={'SingleSelectOption' + optionIndex}
-							{...optionProps}
+							{..._.omit(optionProps, 'Selected')}
 						/>
 					))
 				)}
