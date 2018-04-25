@@ -1,3 +1,4 @@
+import React from 'react';
 import assert from 'assert';
 import _ from 'lodash';
 
@@ -38,29 +39,26 @@ describe('text-manipulation', () => {
 
 	describe('#getCombinedChildText', () => {
 		it("should return '' if the passed in node has no children", () => {
-			assert.equal(getCombinedChildText({}), '');
+			const element = <div />;
+			assert.equal(getCombinedChildText(element.props), '');
 		});
 
 		it("should return the node's `children` if it is a string", () => {
-			const children = 'child';
-			assert.equal(getCombinedChildText({ children }), 'child');
+			const element = <div>child</div>;
+			assert.equal(getCombinedChildText(element.props), 'child');
 		});
 
 		it('should recursively combine children', () => {
-			const node = {
-				children: [
-					{ props: { children: '1' } },
-					{
-						props: {
-							children: [
-								{ props: { children: '2' } },
-								{ props: { children: '3' } },
-							],
-						},
-					},
-				],
-			};
-			assert.equal(getCombinedChildText(node), '123');
+			const element = (
+				<div>
+					1
+					<div>
+						<div>2</div>
+						<div>3</div>
+					</div>
+				</div>
+			);
+			assert.equal(getCombinedChildText(element.props), '123');
 		});
 	});
 

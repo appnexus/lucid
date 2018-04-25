@@ -128,13 +128,10 @@ export function common(
 		});
 
 		describe('child components', () => {
-			const childComponents = _.omit(Component.definition.statics, [
-				'_isPrivate',
-				'definition',
-				'propName',
-				'reducers',
-				'selectors',
-			]);
+			// Child components are all function types which start with a capital letter
+			const childComponents = _.pickBy(Component, (value, key) => {
+				return /^[A-Z]/.test(key) && _.isFunction(value);
+			});
 
 			describe('propNames in propTypes', () => {
 				_.flow(

@@ -67,8 +67,27 @@ const SearchableMultiSelect = createClass({
 				},
 			},
 			propName: 'Option',
-			propTypes: DropMenu.Option.propTypes,
+			propTypes: {
+				filterText: string`
+					Text used to filter options when searching. By default, this is the
+					text rendered in the Option, but it can be customized further with
+					this prop.
+				`,
+				...DropMenu.Option.propTypes,
+			},
 			components: {
+				Selected: createClass({
+					displayName: 'SearchableMultiSelect.Option.Selected',
+					statics: {
+						peek: {
+							description: `
+								Customizes the rendering of the Option label when it is
+								selected and is displayed .
+							`,
+						},
+					},
+					propName: 'Selected',
+				}),
 				Selection: createClass({
 					displayName: 'SearchableMultiSelect.Option.Selection',
 					propName: 'Selection',
@@ -100,6 +119,20 @@ const SearchableMultiSelect = createClass({
 			},
 			propName: 'OptionGroup',
 			propTypes: DropMenu.OptionGroup.propTypes,
+			components: {
+				Selected: createClass({
+					displayName: 'SearchableMultiSelect.OptionGroup.Selected',
+					statics: {
+						peek: {
+							description: `
+								Customizes the rendering of the OptionGroup label when it is
+								selected and is displayed.
+							`,
+						},
+					},
+					propName: 'Selected',
+				}),
+			},
 		}),
 
 		SelectionLabel: createClass({
@@ -368,7 +401,7 @@ const SearchableMultiSelect = createClass({
 		return (
 			<DropMenu.Option
 				key={'SearchableMultiSelectOption' + optionIndex}
-				{..._.omit(optionProps, 'children')}
+				{..._.omit(optionProps, ['children', 'Selected', 'filterText'])}
 				isHidden={!optionFilter(searchText, optionProps)}
 				isDisabled={optionProps.isDisabled || isLoading}
 			>
@@ -380,7 +413,9 @@ const SearchableMultiSelect = createClass({
 					<CheckboxLabeled.Label>
 						{_.isString(optionProps.children)
 							? this.renderUnderlinedChildren(optionProps.children, searchText)
-							: optionProps.children}
+							: _.isFunction(optionProps.children)
+								? React.createElement(optionProps.children, { searchText })
+								: optionProps.children}
 					</CheckboxLabeled.Label>
 				</CheckboxLabeled>
 			</DropMenu.Option>
@@ -435,7 +470,7 @@ const SearchableMultiSelect = createClass({
 			_.map(optionGroups, (optionGroupProps, optionGroupIndex) => (
 				<DropMenu.OptionGroup
 					key={'SearchableMultiSelectOptionGroup' + optionGroupIndex}
-					{..._.omit(optionGroupProps, 'children')}
+					{..._.omit(optionGroupProps, 'children', 'Selected')}
 				>
 					{optionGroupProps.children}
 					{_.map(optionGroupDataLookup[optionGroupIndex], this.renderOption)}
@@ -577,6 +612,13 @@ const SearchableMultiSelect = createClass({
 									({ optionIndex }) => _.includes(selectedIndices, optionIndex)
 								);
 								if (!_.isEmpty(selectedGroupedOptions)) {
+									const selectedOptionGroupChildren = _.get(
+										getFirst(
+											optionGroups[optionGroupIndex],
+											SearchableMultiSelect.OptionGroup.Selected
+										),
+										'props.children'
+									);
 									return (
 										<Selection
 											className={cx('&-Selection-group')}
@@ -587,12 +629,14 @@ const SearchableMultiSelect = createClass({
 											kind="container"
 										>
 											<Selection.Label>
-												{_.first(
-													rejectTypes(
-														optionGroups[optionGroupIndex].children,
-														SearchableMultiSelect.Option
-													)
-												)}
+												{!_.isNil(selectedOptionGroupChildren)
+													? selectedOptionGroupChildren
+													: _.first(
+															rejectTypes(
+																optionGroups[optionGroupIndex].children,
+																SearchableMultiSelect.Option
+															)
+														)}
 											</Selection.Label>
 											{_.map(
 												selectedGroupedOptions,
@@ -613,7 +657,16 @@ const SearchableMultiSelect = createClass({
 															onRemove={this.handleSelectionRemove}
 														>
 															<Selection.Label>
-																{optionProps.children}
+																{_.get(
+																	getFirst(
+																		optionProps,
+																		SearchableMultiSelect.Option.Selected
+																	),
+																	'props.children'
+																) ||
+																	(_.isFunction(optionProps.children)
+																		? React.createElement(optionProps.children)
+																		: optionProps.children)}
 															</Selection.Label>
 														</Selection>
 													);
@@ -644,7 +697,18 @@ const SearchableMultiSelect = createClass({
 										responsiveMode={responsiveMode}
 										onRemove={this.handleSelectionRemove}
 									>
-										<Selection.Label>{optionProps.children}</Selection.Label>
+										<Selection.Label>
+											{_.get(
+												getFirst(
+													optionProps,
+													SearchableMultiSelect.Option.Selected
+												),
+												'props.children'
+											) ||
+												(_.isFunction(optionProps.children)
+													? React.createElement(optionProps.children)
+													: optionProps.children)}
+										</Selection.Label>
 									</Selection>
 								);
 							}
