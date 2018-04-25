@@ -500,6 +500,75 @@ describe('SearchableSelect', () => {
 					})
 				);
 			});
+
+			it('should render Option.Selected in the Placeholder area', () => {
+				expect(
+					shallow(
+						<SearchableSelect selectedIndex={1}>
+							<Placeholder>select one</Placeholder>
+							<Option name="OptionA" Selected="option a">
+								<div style={{ display: 'flex' }}>
+									<div style={{ width: 100 }}>id</div>
+									<div>option a</div>
+								</div>
+							</Option>
+							<Option name="OptionB" Selected="option b">
+								<div style={{ display: 'flex' }}>
+									<div style={{ width: 100 }}>id</div>
+									<div>option b</div>
+								</div>
+							</Option>
+							<Option name="OptionC" Selected="option c">
+								<div style={{ display: 'flex' }}>
+									<div style={{ width: 100 }}>id</div>
+									<div>option c</div>
+								</div>
+							</Option>
+						</SearchableSelect>
+					)
+				).toMatchSnapshot();
+			});
+
+			it('should render Option child function by passing in {searchText}, setting filterText on each option and using a custom optionFilter', () => {
+				const optionFilter = (searchText, { filterText }) => {
+					if (filterText) {
+						return new RegExp(_.escapeRegExp(searchText), 'i').test(filterText);
+					}
+					return true;
+				};
+
+				expect(
+					shallow(
+						<SearchableSelect optionFilter={optionFilter} searchText="tion">
+							<Placeholder>select one</Placeholder>
+							<Option name="OptionA" Selected="option a" filterText="option a">
+								{({ searchText }) => (
+									<div style={{ display: 'flex' }}>
+										<div style={{ width: 100 }}>{searchText}</div>
+										<div>option a</div>
+									</div>
+								)}
+							</Option>
+							<Option name="OptionB" Selected="option b" filterText="option b">
+								{({ searchText }) => (
+									<div style={{ display: 'flex' }}>
+										<div style={{ width: 100 }}>{searchText}</div>
+										<div>option b</div>
+									</div>
+								)}
+							</Option>
+							<Option name="OptionC" Selected="option c" filterText="option c">
+								{({ searchText }) => (
+									<div style={{ display: 'flex' }}>
+										<div style={{ width: 100 }}>{searchText}</div>
+										<div>option c</div>
+									</div>
+								)}
+							</Option>
+						</SearchableSelect>
+					)
+				).toMatchSnapshot();
+			});
 		});
 
 		describe('OptionGroup', () => {

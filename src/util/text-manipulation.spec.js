@@ -44,25 +44,11 @@ describe('text-manipulation', () => {
 		});
 
 		it("should return the node's `children` if it is a string", () => {
-			const children = 'child';
 			const element = <div>child</div>;
 			assert.equal(getCombinedChildText(element.props), 'child');
 		});
 
 		it('should recursively combine children', () => {
-			const node = {
-				children: [
-					{ props: { children: '1' } },
-					{
-						props: {
-							children: [
-								{ props: { children: '2' } },
-								{ props: { children: '3' } },
-							],
-						},
-					},
-				],
-			};
 			const element = (
 				<div>
 					1

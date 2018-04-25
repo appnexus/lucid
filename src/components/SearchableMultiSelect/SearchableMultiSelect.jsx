@@ -67,7 +67,14 @@ const SearchableMultiSelect = createClass({
 				},
 			},
 			propName: 'Option',
-			propTypes: DropMenu.Option.propTypes,
+			propTypes: {
+				filterText: string`
+					Text used to filter options when searching. By default, this is the
+					text rendered in the Option, but it can be customized further with
+					this prop.
+				`,
+				...DropMenu.Option.propTypes,
+			},
 			components: {
 				Selected: createClass({
 					displayName: 'SearchableMultiSelect.Option.Selected',
