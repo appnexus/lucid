@@ -13,18 +13,35 @@
 						"browsers": ["last 2 versions"]
 					}
 				}],
-			"react"
+				"react"
 			]
 		},
 		"development": {
-			"plugins": ["lodash"],
+			"plugins": [
+				["transform-object-rest-spread"],
+				"lodash"
+			],
 			"presets": [
 				["env", {
 					"targets": {
 						"browsers": ["last 2 versions"]
 					}
 				}],
-			"react"
+				"react"
+			]
+		},
+		"documentation": {
+			"plugins": [
+				["transform-object-rest-spread"],
+				"lodash"
+			],
+			"presets": [
+				["env", {
+					"targets": {
+						"browsers": ["last 2 versions"]
+					}
+				}],
+				"react"
 			]
 		},
 		"production": {
@@ -44,7 +61,7 @@
 						"browsers": ["last 2 versions"]
 					}
 				}],
-			"react"
+				"react"
 			]
 		},
 		"modules": {
