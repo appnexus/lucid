@@ -3,6 +3,6 @@ import { Underline } from '../../../src/index.js';
 
 export default class extends React.Component {
 	render() {
-		return <Underline>foo bar baz</Underline>;
+		return <Underline match="bar">foo bar baz</Underline>;
 	}
 }

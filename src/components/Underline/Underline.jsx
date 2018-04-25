@@ -10,7 +10,7 @@ const { node, string, instanceOf, oneOfType } = PropTypes;
 
 const matchAllRegexp = /^.*$/;
 
-const Underline = ({ className, children, match }) => {
+const Underline = ({ className, children, match, ...passThroughs }) => {
 	if (!_.isRegExp(match)) {
 		if (_.isString(match)) {
 			match = new RegExp(_.escapeRegExp(match), 'i');
@@ -21,7 +21,7 @@ const Underline = ({ className, children, match }) => {
 
 	if (!_.isString(children)) {
 		return (
-			<span className={cx('&', className)}>
+			<span className={cx('&', className)} {...passThroughs}>
 				<span
 					style={
 						match === matchAllRegexp ? { textDecoration: 'underline' } : null
@@ -36,7 +36,7 @@ const Underline = ({ className, children, match }) => {
 	const [pre, matchText, post] = partitionText(children, match);
 
 	return (
-		<span className="lucid-Underline">
+		<span className={cx('&', className)} {...passThroughs}>
 			{[
 				pre && <span key="pre">{pre}</span>,
 				matchText && (
@@ -50,6 +50,8 @@ const Underline = ({ className, children, match }) => {
 	);
 };
 
+Underline.displayName = 'Underline';
+
 Underline.peek = {
 	description: `
 		Underlines a portion of text that matches a given pattern
@@ -61,8 +63,13 @@ Underline.propTypes = {
 	className: string`
 		Appended to the component-specific class names set on the root element.
 	`,
-	children: node,
-	match: oneOfType([string, instanceOf(RegExp)]),
+	children: node`
+		Text to be partially or fully underlined. If non-text is passed as
+		children, it will not attempt to match the given pattern.
+	`,
+	match: oneOfType([string, instanceOf(RegExp)])`
+		The first match of the given pattern has the underline style applied to it.
+	`,
 };
 
 export default Underline;

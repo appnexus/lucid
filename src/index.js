@@ -153,7 +153,7 @@ import Tag from './components/Tag/Tag';
 import TextIcon from './components/Icon/TextIcon/TextIcon';
 import TextField from './components/TextField/TextField';
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
-import Underline from './components/Icon/Underline/Underline';
+import Underline from './components/Underline/Underline';
 import UnlinkedIcon from './components/Icon/UnlinkedIcon/UnlinkedIcon';
 import UnlockedIcon from './components/Icon/UnlockedIcon/UnlockedIcon';
 import UploadIcon from './components/Icon/UploadIcon/UploadIcon';

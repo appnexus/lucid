@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Underline should match snapshot for default props 1`] = `
+<span
+  className="lucid-Underline"
+>
+  <span
+    style={
+      Object {
+        "textDecoration": "underline",
+      }
+    }
+  />
+</span>
+`;
+
+exports[`Underline should match snapshot for default props with children 1`] = `
+<span
+  className="lucid-Underline"
+>
+  <span
+    key="match"
+    style={
+      Object {
+        "textDecoration": "underline",
+      }
+    }
+  >
+    foo bar baz
+  </span>
+</span>
+`;
+
+exports[`Underline should match snapshot for regex match with children 1`] = `
+<span
+  className="lucid-Underline"
+>
+  <span
+    key="match"
+    style={
+      Object {
+        "textDecoration": "underline",
+      }
+    }
+  >
+    foo
+  </span>
+  <span
+    key="post"
+  >
+     bar baz
+  </span>
+</span>
+`;
+
+exports[`Underline should match snapshot for string match with children 1`] = `
+<span
+  className="lucid-Underline"
+>
+  <span
+    key="pre"
+  >
+    foo 
+  </span>
+  <span
+    key="match"
+    style={
+      Object {
+        "textDecoration": "underline",
+      }
+    }
+  >
+    bar
+  </span>
+  <span
+    key="post"
+  >
+     baz
+  </span>
+</span>
+`;

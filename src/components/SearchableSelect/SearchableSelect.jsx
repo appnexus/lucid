@@ -69,6 +69,11 @@ const SearchableSelect = createClass({
 					Customizes the rendering of the Option when it is selected and is
 					displayed instead of the Placeholder.
 				`,
+				filterText: string`
+					Text used to filter options when searching. By default, this is the
+					text rendered in the Option, but it can be customized further with
+					this prop.
+				`,
 				...DropMenu.Option.propTypes,
 			},
 			components: {
@@ -277,7 +282,7 @@ const SearchableSelect = createClass({
 			return (
 				<DropMenu.Option
 					isDisabled={isLoading}
-					{..._.omit(optionProps, ['children'])}
+					{..._.omit(optionProps, ['children', 'Selected', 'filterText'])}
 					isHidden={!optionFilter(searchText, optionProps)}
 					key={'SearchableSelectOption' + optionIndex}
 				>
@@ -293,7 +298,7 @@ const SearchableSelect = createClass({
 		return (
 			<DropMenu.Option
 				key={'SearchableSelectOption' + optionIndex}
-				{..._.omit(optionProps, ['children'])}
+				{..._.omit(optionProps, ['children', 'Selected', 'filterText'])}
 				isDisabled={optionProps.isDisabled || isLoading}
 			>
 				{_.isFunction(optionProps.children)
