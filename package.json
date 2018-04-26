@@ -29,7 +29,8 @@
     "build-js": "NODE_ENV=production babel --extensions .js,.jsx --ignore spec.js,docs,examples,test-entry.js,coverage ./src --out-dir ./dist",
     "path-import-modules-generate": "node ./scripts/path-import-modules-exec.js --generate",
     "path-import-modules-remove": "node ./scripts/path-import-modules-exec.js --remove",
-    "release": "np"
+    "release": "np",
+    "create-component": "scripts/create-component.sh"
   },
   "keywords": [
     "component",
@@ -93,6 +94,7 @@
     "glob": "^7.1.1",
     "husky": "^0.13.3",
     "jest": "^21.2.1",
+    "jscodeshift": "^0.5.0",
     "less": "^2.3.1",
     "less-loader": "^4.1.0",
     "lint-staged": "^3.4.0",
