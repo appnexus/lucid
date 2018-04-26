@@ -1,5 +1,6 @@
 # Built files
 dist
+lib
 src/docs/docgen.json
 
 # Npm
