@@ -2,13 +2,14 @@
 
 First of all, thank you for contributing. It’s appreciated.
 
-1. Clone the repo and install dependencies with `npm install`.
+1. Clone the repo and install dependencies with `yarn`.
 2. Make a GitHub issue before doing any significant amount of work. Make sure the core team approves your idea. This step is really important. If you skip this, your PR might be rejected.
   - Be sure to check out our [Waffle board][waffle] for a kanban view of all our issues.
 3. Below are some important commands for developing. Don't commit before fixing all errors and warnings.
-  - `npm start` hosts the docs page and watches for changes
-  - `npm test-tdd` runs tests and watches for changes, optimized for speed
-4. Ensure your changes work properly on the latest versions of Chrome, Firefox, Safari, IE11, and IE Edge. Currently this step is manual.
+  - `yarn start` runs the docs page and watches for changes
+  - `yarn run dev` starts a blank storybook sandbox for quick, iterative development
+  - `yarn run watch` runs tests and watches for changes, optimized for speed
+4. Ensure your changes work properly on the latest versions of Chrome, Firefox, Safari, and IE Edge. Currently this step is manual.
 5. Reference the issue's number in your commit. E.g.: "Did this #12".
 6. Make a pull request.
 
@@ -22,21 +23,23 @@ First of all, thank you for contributing. It’s appreciated.
 - We use an issue template that provides a check list of tasks to consider for every PR.
 
 ## Writing Components
-### Create a new Component
+### Create a new Component (automated)
+Run command
+    npm run create-component MyNewComponent
+
+### Create a new Component (manual)
 Here are some basic steps to get you started building your first component.
 Start your dev server and go to `http://localhost:8080/#/components/ExampleComponent` for a component example.
 
 1. Create your new component folder
 `src/components/MyNewComponent/`
-2. Create your component file(s). The only required files are your `MyNewComponent.jsx` file, `MyNewComponent.spec.js`, and `/examples/0.default.jsx`.
-```
-/MyNewComponent/
-  |-examples/
-    |-0.default.jsx <-- default example, used by `gulp docs-generate` to create component demo
-  |-MyNewComponent.jsx  <-- component logic goes here
-  |-MyNewComponent/MyNewComponent.spec.js <-- component tests go here
-```
-3. (optional) - See `/src/components/ExampleComponent/` for detailed templates and additional file examples.
+
+2. Create your component file(s). The only required file are `MyNewComponent.jsx` and `MyNewComponent.spec.js`.
+
+3. Create your docs example:
+* Storybook story definition `docs/examples/MyNewComponent.stories.js`
+* Example dir `docs/examples/MyNewComponent/`
+* Example component `docs/examples/MyNewComponent/WithDefaults.js`
 
 4. Add your component's JSX file to `/src/index.js`
 ```javascript
@@ -52,8 +55,9 @@ export {
 @import '../components/MyNewComponent/MyNewComponent';
 ```
 
-6. Run `yarn run dev` to regenerate docs page.
-7. In your browser open, `http://localhost:8080/#/components/MyNewComponent`
+6. Run `yarn run docs` to run the docs app locally.
+
+7. In your browser open, `http://localhost:6006/`
 
 ### Prop Conventions
 - Use `isX` or `hasX` props for boolean types even when it differs from native.
@@ -89,12 +93,19 @@ export {
 
 ### Code styling
 
-- We use our own wrapper around `createClass` only, no ES6 classes.
+- We use our own wrapper around `createClass`.
 - Folders should use kebab case e.g. "this-is-a-folder/and-a-javascript-file.js".
 - Components should use start case e.g.:
   - "MyComponent"
   - "AnotherComponentHere.jsx"
-- We hang the `_isPrivate` boolean off our component definitions to indicate that the component isn't intended for external consumption yet. This will hide the component from the docs.
+- We define component description & meta data in static property of components called `peek`.
+```javascript
+MyExampleComponent.peek = {
+  description: `...`,
+  isPrivate: true,
+}
+```
+- We set the `isPrivate` boolean to indicate that the component isn't intended for external consumption yet. This will hide the component from the docs.
 
 ### Tests
 
@@ -131,7 +142,7 @@ describe('MyComponent', () => {
 #### `Uncaught ReferenceError: [object] is not defined`
 Similar errors include saying `string`, `bool`, `boolean`, `node`, etc. are not defined. If you get this error, double check that all your defined propTypes in your component class are also destructured from PropTypes.
 ```javascript
-import PropTypes from 'prop-types';
+import PropTypes from 'react-peek/prop-types';
 
 const {
 	bool,
