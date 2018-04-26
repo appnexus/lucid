@@ -10,4 +10,4 @@ cat << EOF >> ./src/styles/components.less
 @import '../components/${COMPONENT_NAME}/${COMPONENT_NAME}';
 EOF
 
-echo "imported '../components/${COMPONENT_NAME}/${COMPONENT_NAME}' in src/styles/components.less"
+echo "Imported 'src/components/${COMPONENT_NAME}/${COMPONENT_NAME}.less' in src/styles/components.less"
