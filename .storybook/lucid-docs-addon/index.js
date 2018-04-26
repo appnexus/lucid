@@ -117,7 +117,8 @@ export const withDescription = componentRef => {
 				<div>
 					<h1>{kind}</h1>
 					<section>
-						{compile(stripIndent(componentRef.peek.description)).tree}
+						{_.has(componentRef, 'peek.description') &&
+							compile(stripIndent(componentRef.peek.description)).tree}
 					</section>
 					<h2>{story}</h2>
 					<StoryComponent {...{ kind, story }} />

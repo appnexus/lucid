@@ -2715,3 +2715,669 @@ exports[`SearchableMultiSelect [common] example testing should match snapshot(s)
   </DropMenu>
 </div>
 `;
+
+exports[`SearchableMultiSelect custom formatting should render Option child function by passing in {searchText}, setting filterText on each option and using a custom optionFilter 1`] = `
+<div
+  className="lucid-SearchableMultiSelect"
+>
+  <DropMenu
+    ContextMenu={
+      Object {
+        "alignmentOffset": -13,
+        "directonOffset": -1,
+        "minWidthOffset": -28,
+      }
+    }
+    alignment="start"
+    className="lucid-SearchableMultiSelect-DropMenu"
+    direction="down"
+    flyOutStyle={
+      Object {
+        "maxHeight": "18em",
+      }
+    }
+    focusedIndex={null}
+    isDisabled={false}
+    isExpanded={false}
+    onCollapse={[Function]}
+    onExpand={[Function]}
+    onFocusNext={[Function]}
+    onFocusOption={[Function]}
+    onFocusPrev={[Function]}
+    onSelect={[Function]}
+    optionContainerStyle={Object {}}
+    selectedIndices={null}
+  >
+    <DropMenu.Control>
+      <SearchField
+        className="lucid-SearchableMultiSelect-search"
+        debounceLevel={500}
+        isDisabled={false}
+        onChange={[Function]}
+        onChangeDebounced={[Function]}
+        onSubmit={[Function]}
+        value="tion"
+      />
+    </DropMenu.Control>
+    <DropMenu.FixedOption
+      className="lucid-SearchableMultiSelect-Option-select-all"
+      isDisabled={false}
+      isHidden={true}
+      isWrapped={true}
+      key="SearchableMultiSelectOption-select-all"
+    >
+      <CheckboxLabeled
+        Label="Select All"
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
+      />
+    </DropMenu.FixedOption>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SearchableMultiSelectOption0"
+      name="OptionA"
+    >
+      <CheckboxLabeled
+        callbackId={0}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
+      >
+        <CheckboxLabeled.Label>
+          <Component
+            searchText="tion"
+          />
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
+    </DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SearchableMultiSelectOption1"
+      name="OptionB"
+    >
+      <CheckboxLabeled
+        callbackId={1}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
+      >
+        <CheckboxLabeled.Label>
+          <Component
+            searchText="tion"
+          />
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
+    </DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SearchableMultiSelectOption2"
+      name="OptionC"
+    >
+      <CheckboxLabeled
+        callbackId={2}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
+      >
+        <CheckboxLabeled.Label>
+          <Component
+            searchText="tion"
+          />
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
+    </DropMenu.Option>
+  </DropMenu>
+</div>
+`;
+
+exports[`SearchableMultiSelect custom formatting should render Option.Selected in the SelectedItems area 1`] = `
+<div
+  className="lucid-SearchableMultiSelect"
+>
+  <DropMenu
+    ContextMenu={
+      Object {
+        "alignmentOffset": -13,
+        "directonOffset": -1,
+        "minWidthOffset": -28,
+      }
+    }
+    alignment="start"
+    className="lucid-SearchableMultiSelect-DropMenu"
+    direction="down"
+    flyOutStyle={
+      Object {
+        "maxHeight": "18em",
+      }
+    }
+    focusedIndex={null}
+    isDisabled={false}
+    isExpanded={false}
+    onCollapse={[Function]}
+    onExpand={[Function]}
+    onFocusNext={[Function]}
+    onFocusOption={[Function]}
+    onFocusPrev={[Function]}
+    onSelect={[Function]}
+    optionContainerStyle={Object {}}
+    selectedIndices={null}
+  >
+    <DropMenu.Control>
+      <SearchField
+        className="lucid-SearchableMultiSelect-search"
+        debounceLevel={500}
+        isDisabled={false}
+        onChange={[Function]}
+        onChangeDebounced={[Function]}
+        onSubmit={[Function]}
+        value=""
+      />
+    </DropMenu.Control>
+    <DropMenu.FixedOption
+      className="lucid-SearchableMultiSelect-Option-select-all"
+      isDisabled={false}
+      isHidden={true}
+      isWrapped={true}
+      key="SearchableMultiSelectOption-select-all"
+    >
+      <CheckboxLabeled
+        Label="Select All"
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={true}
+        isSelected={false}
+        onSelect={[Function]}
+      />
+    </DropMenu.FixedOption>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SearchableMultiSelectOption0"
+      name="OptionA"
+    >
+      <CheckboxLabeled
+        callbackId={0}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        onSelect={[Function]}
+      >
+        <CheckboxLabeled.Label>
+          <div
+            style={
+              Object {
+                "display": "flex",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "width": 100,
+                }
+              }
+            >
+              id
+            </div>
+            <div>
+              option a
+            </div>
+          </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
+    </DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SearchableMultiSelectOption1"
+      name="OptionB"
+    >
+      <CheckboxLabeled
+        callbackId={1}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={true}
+        onSelect={[Function]}
+      >
+        <CheckboxLabeled.Label>
+          <div
+            style={
+              Object {
+                "display": "flex",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "width": 100,
+                }
+              }
+            >
+              id
+            </div>
+            <div>
+              option b
+            </div>
+          </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
+    </DropMenu.Option>
+    <DropMenu.Option
+      isDisabled={false}
+      isHidden={false}
+      isWrapped={true}
+      key="SearchableMultiSelectOption2"
+      name="OptionC"
+    >
+      <CheckboxLabeled
+        callbackId={2}
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={true}
+        onSelect={[Function]}
+      >
+        <CheckboxLabeled.Label>
+          <div
+            style={
+              Object {
+                "display": "flex",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "width": 100,
+                }
+              }
+            >
+              id
+            </div>
+            <div>
+              option c
+            </div>
+          </div>
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
+    </DropMenu.Option>
+  </DropMenu>
+  <Selection
+    className="lucid-SearchableMultiSelect-Selection-section"
+    hasBackground={true}
+    isBold={true}
+    isRemovable={true}
+    kind="container"
+    onRemove={[Function]}
+    responsiveMode="large"
+  >
+    <Selection.Label>
+      Selected
+    </Selection.Label>
+    <Selection
+      callbackId={1}
+      hasBackground={false}
+      isBold={false}
+      isRemovable={true}
+      key="1"
+      kind="default"
+      onRemove={[Function]}
+      responsiveMode="large"
+    >
+      <Selection.Label>
+        option b
+      </Selection.Label>
+    </Selection>
+    <Selection
+      callbackId={2}
+      hasBackground={false}
+      isBold={false}
+      isRemovable={true}
+      key="2"
+      kind="default"
+      onRemove={[Function]}
+      responsiveMode="large"
+    >
+      <Selection.Label>
+        option c
+      </Selection.Label>
+    </Selection>
+  </Selection>
+</div>
+`;
+
+exports[`SearchableMultiSelect custom formatting should render OptionGroup.Selected in the SelectedItems area 1`] = `
+<div
+  className="lucid-SearchableMultiSelect"
+>
+  <DropMenu
+    ContextMenu={
+      Object {
+        "alignmentOffset": -13,
+        "directonOffset": -1,
+        "minWidthOffset": -28,
+      }
+    }
+    alignment="start"
+    className="lucid-SearchableMultiSelect-DropMenu"
+    direction="down"
+    flyOutStyle={
+      Object {
+        "maxHeight": "18em",
+      }
+    }
+    focusedIndex={null}
+    isDisabled={false}
+    isExpanded={false}
+    onCollapse={[Function]}
+    onExpand={[Function]}
+    onFocusNext={[Function]}
+    onFocusOption={[Function]}
+    onFocusPrev={[Function]}
+    onSelect={[Function]}
+    optionContainerStyle={Object {}}
+    selectedIndices={null}
+  >
+    <DropMenu.Control>
+      <SearchField
+        className="lucid-SearchableMultiSelect-search"
+        debounceLevel={500}
+        isDisabled={false}
+        onChange={[Function]}
+        onChangeDebounced={[Function]}
+        onSubmit={[Function]}
+        value=""
+      />
+    </DropMenu.Control>
+    <DropMenu.FixedOption
+      className="lucid-SearchableMultiSelect-Option-select-all"
+      isDisabled={false}
+      isHidden={true}
+      isWrapped={true}
+      key="SearchableMultiSelectOption-select-all"
+    >
+      <CheckboxLabeled
+        Label="Select All"
+        className="lucid-SearchableMultiSelect-CheckboxLabeled"
+        isDisabled={false}
+        isIndeterminate={true}
+        isSelected={false}
+        onSelect={[Function]}
+      />
+    </DropMenu.FixedOption>
+    <DropMenu.OptionGroup
+      isHidden={false}
+      key="SearchableMultiSelectOptionGroup0"
+    >
+      Foo bar baz
+      <SearchableMultiSelect.Option
+        Selected="option a"
+        name="OptionA"
+      >
+        <div
+          style={
+            Object {
+              "display": "flex",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "width": 100,
+              }
+            }
+          >
+            id
+          </div>
+          <div>
+            option a
+          </div>
+        </div>
+      </SearchableMultiSelect.Option>
+      <SearchableMultiSelect.Option
+        Selected="option b"
+        name="OptionB"
+      >
+        <div
+          style={
+            Object {
+              "display": "flex",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "width": 100,
+              }
+            }
+          >
+            id
+          </div>
+          <div>
+            option b
+          </div>
+        </div>
+      </SearchableMultiSelect.Option>
+      <SearchableMultiSelect.Option
+        Selected="option c"
+        name="OptionC"
+      >
+        <div
+          style={
+            Object {
+              "display": "flex",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "width": 100,
+              }
+            }
+          >
+            id
+          </div>
+          <div>
+            option c
+          </div>
+        </div>
+      </SearchableMultiSelect.Option>
+      <DropMenu.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+        key="SearchableMultiSelectOption0"
+        name="OptionA"
+      >
+        <CheckboxLabeled
+          callbackId={0}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={false}
+          onSelect={[Function]}
+        >
+          <CheckboxLabeled.Label>
+            <div
+              style={
+                Object {
+                  "display": "flex",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                id
+              </div>
+              <div>
+                option a
+              </div>
+            </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
+      </DropMenu.Option>
+      <DropMenu.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+        key="SearchableMultiSelectOption1"
+        name="OptionB"
+      >
+        <CheckboxLabeled
+          callbackId={1}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]}
+        >
+          <CheckboxLabeled.Label>
+            <div
+              style={
+                Object {
+                  "display": "flex",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                id
+              </div>
+              <div>
+                option b
+              </div>
+            </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
+      </DropMenu.Option>
+      <DropMenu.Option
+        isDisabled={false}
+        isHidden={false}
+        isWrapped={true}
+        key="SearchableMultiSelectOption2"
+        name="OptionC"
+      >
+        <CheckboxLabeled
+          callbackId={2}
+          className="lucid-SearchableMultiSelect-CheckboxLabeled"
+          isDisabled={false}
+          isIndeterminate={false}
+          isSelected={true}
+          onSelect={[Function]}
+        >
+          <CheckboxLabeled.Label>
+            <div
+              style={
+                Object {
+                  "display": "flex",
+                }
+              }
+            >
+              <div
+                style={
+                  Object {
+                    "width": 100,
+                  }
+                }
+              >
+                id
+              </div>
+              <div>
+                option c
+              </div>
+            </div>
+          </CheckboxLabeled.Label>
+        </CheckboxLabeled>
+      </DropMenu.Option>
+    </DropMenu.OptionGroup>
+  </DropMenu>
+  <Selection
+    className="lucid-SearchableMultiSelect-Selection-section"
+    hasBackground={true}
+    isBold={true}
+    isRemovable={true}
+    kind="container"
+    onRemove={[Function]}
+    responsiveMode="large"
+  >
+    <Selection.Label>
+      Selected
+    </Selection.Label>
+    <Selection
+      className="lucid-SearchableMultiSelect-Selection-group"
+      hasBackground={false}
+      isBold={true}
+      isRemovable={false}
+      key="optionGroup-0"
+      kind="container"
+      onRemove={[Function]}
+      responsiveMode="large"
+    >
+      <Selection.Label>
+        Selected Foo
+      </Selection.Label>
+      <Selection
+        callbackId={1}
+        hasBackground={false}
+        isBold={false}
+        isRemovable={true}
+        key="1"
+        kind="default"
+        onRemove={[Function]}
+        responsiveMode="large"
+      >
+        <Selection.Label>
+          option b
+        </Selection.Label>
+      </Selection>
+      <Selection
+        callbackId={2}
+        hasBackground={false}
+        isBold={false}
+        isRemovable={true}
+        key="2"
+        kind="default"
+        onRemove={[Function]}
+        responsiveMode="large"
+      >
+        <Selection.Label>
+          option c
+        </Selection.Label>
+      </Selection>
+    </Selection>
+  </Selection>
+</div>
+`;

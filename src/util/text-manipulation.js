@@ -1,7 +1,21 @@
 import _ from 'lodash';
+import React from 'react';
 
 export function partitionText(text, pattern, length) {
-	const index = text.search(pattern);
+	let index;
+
+	if (length) {
+		index = text.search(pattern);
+	} else {
+		const result = pattern.exec(text);
+		if (result) {
+			length = result[0].length;
+			index = result.index;
+		} else {
+			length = 0;
+			index = -1;
+		}
+	}
 
 	if (index === -1) {
 		return ['', '', text];
@@ -25,7 +39,7 @@ export function getCombinedChildText(node) {
 		return node.children;
 	}
 
-	return node.children
+	return React.Children.toArray(node.children)
 		.filter(child => !_.isString(child))
 		.map(child => getCombinedChildText(child.props))
 		.reduce(

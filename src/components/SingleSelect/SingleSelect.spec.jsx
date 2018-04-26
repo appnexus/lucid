@@ -379,6 +379,34 @@ describe('SingleSelect', () => {
 					})
 				);
 			});
+
+			it('should render Option.Selected in the Placeholder area', () => {
+				expect(
+					shallow(
+						<SingleSelect selectedIndex={1}>
+							<Placeholder>select one</Placeholder>
+							<Option name="OptionA" Selected="option a">
+								<div style={{ display: 'flex' }}>
+									<div style={{ width: 100 }}>id</div>
+									<div>option a</div>
+								</div>
+							</Option>
+							<Option name="OptionB" Selected="option b">
+								<div style={{ display: 'flex' }}>
+									<div style={{ width: 100 }}>id</div>
+									<div>option b</div>
+								</div>
+							</Option>
+							<Option name="OptionC" Selected="option c">
+								<div style={{ display: 'flex' }}>
+									<div style={{ width: 100 }}>id</div>
+									<div>option c</div>
+								</div>
+							</Option>
+						</SingleSelect>
+					)
+				).toMatchSnapshot();
+			});
 		});
 
 		describe('OptionGroup', () => {

@@ -2100,3 +2100,147 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
   </DropMenu.Option>
 </DropMenu>
 `;
+
+exports[`SingleSelect child elements Option should render Option.Selected in the Placeholder area 1`] = `
+<DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
+  alignment="start"
+  className="lucid-SingleSelect"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={
+    Array [
+      1,
+    ]
+  }
+>
+  <DropMenu.Control>
+    <div
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-highlighted lucid-SingleSelect-Control-is-selected"
+      tabIndex={0}
+    >
+      <span
+        className="lucid-SingleSelect-Control-content"
+      >
+        option b
+      </span>
+      <CaretIcon
+        direction="down"
+        size={8}
+        viewBox="0 3 16 8"
+      />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.NullOption>
+    select one
+  </DropMenu.NullOption>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="SingleSelectOption0"
+    name="OptionA"
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "width": 100,
+          }
+        }
+      >
+        id
+      </div>
+      <div>
+        option a
+      </div>
+    </div>
+  </DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="SingleSelectOption1"
+    name="OptionB"
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "width": 100,
+          }
+        }
+      >
+        id
+      </div>
+      <div>
+        option b
+      </div>
+    </div>
+  </DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="SingleSelectOption2"
+    name="OptionC"
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "width": 100,
+          }
+        }
+      >
+        id
+      </div>
+      <div>
+        option c
+      </div>
+    </div>
+  </DropMenu.Option>
+</DropMenu>
+`;

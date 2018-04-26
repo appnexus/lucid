@@ -64,7 +64,32 @@ const SearchableSelect = createClass({
 				},
 			},
 			propName: 'Option',
-			propTypes: DropMenu.Option.propTypes,
+			propTypes: {
+				Selected: any`
+					Customizes the rendering of the Option when it is selected and is
+					displayed instead of the Placeholder.
+				`,
+				filterText: string`
+					Text used to filter options when searching. By default, this is the
+					text rendered in the Option, but it can be customized further with
+					this prop.
+				`,
+				...DropMenu.Option.propTypes,
+			},
+			components: {
+				Selected: createClass({
+					displayName: 'SearchableSelect.Option.Selected',
+					statics: {
+						peek: {
+							description: `
+								Customizes the rendering of the Option when it is selected
+								and is displayed instead of the Placeholder.
+							`,
+						},
+					},
+					propName: 'Selected',
+				}),
+			},
 		}),
 		OptionGroup: createClass({
 			displayName: 'SearchableSelect.OptionGroup',
@@ -257,13 +282,15 @@ const SearchableSelect = createClass({
 			return (
 				<DropMenu.Option
 					isDisabled={isLoading}
-					{..._.omit(optionProps, ['children'])}
+					{..._.omit(optionProps, ['children', 'Selected', 'filterText'])}
 					isHidden={!optionFilter(searchText, optionProps)}
 					key={'SearchableSelectOption' + optionIndex}
 				>
 					{_.isString(optionProps.children)
 						? this.renderUnderlinedChildren(optionProps.children, searchText)
-						: optionProps.children}
+						: _.isFunction(optionProps.children)
+							? React.createElement(optionProps.children, { searchText })
+							: optionProps.children}
 				</DropMenu.Option>
 			);
 		}
@@ -271,9 +298,13 @@ const SearchableSelect = createClass({
 		return (
 			<DropMenu.Option
 				key={'SearchableSelectOption' + optionIndex}
-				{...optionProps}
+				{..._.omit(optionProps, ['children', 'Selected', 'filterText'])}
 				isDisabled={optionProps.isDisabled || isLoading}
-			/>
+			>
+				{_.isFunction(optionProps.children)
+					? React.createElement(optionProps.children, { searchText })
+					: optionProps.children}
+			</DropMenu.Option>
 		);
 	},
 
@@ -404,7 +435,17 @@ const SearchableSelect = createClass({
 							)}
 						>
 							{isItemSelected
-								? flattenedOptionsData[selectedIndex].optionProps.children
+								? _.get(
+										getFirst(
+											flattenedOptionsData[selectedIndex].optionProps,
+											SearchableSelect.Option.Selected
+										),
+										'props.children'
+									) ||
+									(Children =>
+										_.isFunction(Children) ? <Children /> : Children)(
+										flattenedOptionsData[selectedIndex].optionProps.children
+									)
 								: placeholder}
 						</span>
 						<CaretIcon direction={isExpanded ? direction : 'down'} size={8} />
