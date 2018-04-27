@@ -7,7 +7,6 @@ import Autocomplete, {
 import ButtonGroup, {
 	ButtonGroupDumb,
 } from './components/ButtonGroup/ButtonGroup';
-import IconSelect from './components/IconSelect/IconSelect';
 import SearchableSelect, {
 	SearchableSelectDumb,
 } from './components/SearchableSelect/SearchableSelect';
@@ -98,6 +97,7 @@ import Grid from './components/Grid/Grid';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
 import Icon from './components/Icon/Icon';
+import IconSelect from './components/IconSelect/IconSelect';
 import ImageIcon from './components/Icon/ImageIcon/ImageIcon';
 import InfoIcon from './components/Icon/InfoIcon/InfoIcon';
 import InfoLightIcon from './components/Icon/InfoLightIcon/InfoLightIcon';
@@ -150,9 +150,9 @@ import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
 import Table from './components/Table/Table';
 import TableGearIcon from './components/Icon/TableGearIcon/TableGearIcon';
 import Tag from './components/Tag/Tag';
-import TextIcon from './components/Icon/TextIcon/TextIcon';
 import TextField from './components/TextField/TextField';
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
+import TextIcon from './components/Icon/TextIcon/TextIcon';
 import Underline from './components/Underline/Underline';
 import UnlinkedIcon from './components/Icon/UnlinkedIcon/UnlinkedIcon';
 import UnlockedIcon from './components/Icon/UnlockedIcon/UnlockedIcon';

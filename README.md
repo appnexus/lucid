@@ -4,9 +4,13 @@ A UI component library from AppNexus.
 
 ## Install
 
-Lucid can be installed with npm.
+Lucid can be installed with npm
 
     npm install --save lucid-ui
+
+or yarn
+
+    yarn add lucid-ui
 
 ## Usage
 
@@ -32,16 +36,15 @@ If you don't use `less`, you can use the precompiled css file
 
 `lucid-ui` has several React peer dependencies. This means **your application
 is responsible for declaring dependencies** on compatible versions. Currently
-we support React 15.
+we support React 15 and 16.
 
 Example package.json:
 
     {
       "dependencies": {
         "lucid-ui": "^2.0.0",
-        "react": "^15.0.0",
-        "react-dom": "^15.0.0",
-        "react-addons-css-transition-group": "^15.0.0"
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0",
       }
     }
 
