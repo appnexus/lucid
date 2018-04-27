@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import { SearchableSelect, Underline } from '../../../src/index.js';
 
 const OptionCols = ({ col1, col2, textMatch }) => (
