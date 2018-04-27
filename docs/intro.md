@@ -53,7 +53,7 @@ Some components need to calculate values in every render, and in many cases, the
 In these instances, we use `reselect` to cache results providing a performance boost in those components.
 
 ```marksy
-<p key="link2computed">R
+<p key="link2computed">
   Read more about <LinkTo kind='Lucid UI' story='Computed Props'>computed props</LinkTo>.
 </p>
 ```
