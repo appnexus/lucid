@@ -246,15 +246,15 @@ const SplitVertical = createClass({
 	},
 
 	disableAnimation(innerRef, secondaryRef, primaryRef) {
-		innerRef.style.transition = 'all 0s';
-		secondaryRef.style.transition = 'all 0s';
-		primaryRef.style.transition = 'all 0s';
+		innerRef.style.transitionDuration = '0s';
+		secondaryRef.style.transitionDuration = '0s';
+		primaryRef.style.transitionDuration = '0s';
 	},
 
 	resetAnimation(innerRef, secondaryRef, primaryRef) {
-		innerRef.style.transition = '';
-		secondaryRef.style.transition = '';
-		primaryRef.style.transition = '';
+		innerRef.style.transitionDuration = '';
+		secondaryRef.style.transitionDuration = '';
+		primaryRef.style.transitionDuration = '';
 	},
 
 	handleDragStart() {
@@ -333,33 +333,28 @@ const SplitVertical = createClass({
 	},
 
 	componentDidMount() {
-		const { isExpanded, isAnimated, collapseShift } = this.props;
+		const { isAnimated, isExpanded, collapseShift } = this.props;
 
-		const { primaryRef, secondaryRef } = this.getPanes();
+		const { secondaryRef } = this.getPanes();
 
-		const { inner } = this.storedRefs;
+		if (
+			!isExpanded // check if collapseShift changed or secondary pane collapsed
+		) {
+			// collapse secondary
+			const secondaryRect = secondaryRef.getBoundingClientRect();
+			this.collapseSecondary(secondaryRect.width - collapseShift);
+		} else if (isExpanded) {
+			// expand secondary
+			this.expandSecondary();
+		}
 
-		_.defer(() => {
-			this.disableAnimation(inner, secondaryRef, primaryRef);
-			inner.style.visibility = 'hidden';
+		if (this.state.isAnimated !== isAnimated) {
 			_.defer(() => {
-				if (!isExpanded) {
-					// collapse secondary
-					const secondaryRect = secondaryRef.getBoundingClientRect();
-					this.collapseSecondary(secondaryRect.width - collapseShift);
-				}
-
-				_.defer(() => {
-					if (isAnimated) {
-						this.setState({ isAnimated });
-					}
-					_.defer(() => {
-						inner.style.visibility = '';
-						this.resetAnimation(inner, secondaryRef, primaryRef);
-					});
+				this.setState({
+					isAnimated,
 				});
 			});
-		});
+		}
 	},
 
 	storeRef(name) {
