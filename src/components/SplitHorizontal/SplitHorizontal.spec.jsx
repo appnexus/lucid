@@ -100,11 +100,8 @@ describe('SplitHorizontal', () => {
 				wrapper = mount(<SplitHorizontal isAnimated={true} />);
 
 				_.delay(() => {
-					assert.equal(
-						wrapper.find(
-							'.lucid-SplitHorizontal.lucid-SplitHorizontal-is-animated'
-						).length,
-						1
+					assert(
+						wrapper.render().hasClass('lucid-SplitHorizontal-is-animated')
 					);
 					done();
 				}, MOSTLY_STABLE_DELAY);

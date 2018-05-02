@@ -14,6 +14,9 @@ const isReactComponent = value =>
 	value.prototype &&
 	value.prototype.isReactComponent;
 
+const isChildComponent = (value, key) =>
+	isReactComponent(value) || (/^[A-Z]/.test(key) && _.isFunction(value));
+
 const getDefaultPropValue = (componentRef, property) => {
 	const defaultValue = _.get(componentRef, ['defaultProps', property]);
 	return _.isUndefined(defaultValue)
@@ -83,7 +86,7 @@ const getChildComponentsData = (
 	}
 
 	return _.map(
-		_.pickBy(componentRef, isReactComponent),
+		_.pickBy(componentRef, isChildComponent),
 		(childComponent, key) => {
 			const recursiveChildComponentData = getChildComponentsData(
 				childComponent,
