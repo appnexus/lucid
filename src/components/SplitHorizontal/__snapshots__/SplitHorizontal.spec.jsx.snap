@@ -2,7 +2,7 @@
 
 exports[`SplitHorizontal [common] example testing should match snapshot(s) for 1.default-split 1`] = `
 <div
-  className="lucid-SplitHorizontal"
+  className="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded"
   style={
     Object {
       "flex": 1,
@@ -27,7 +27,7 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 1
 
 exports[`SplitHorizontal [common] example testing should match snapshot(s) for 2.animated-collapse 1`] = `
 <div
-  className="lucid-SplitHorizontal"
+  className="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded lucid-SplitHorizontal-is-animated"
   style={
     Object {
       "flex": 1,
@@ -53,7 +53,7 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 2
 
 exports[`SplitHorizontal [common] example testing should match snapshot(s) for 3.set-pane-as-primary 1`] = `
 <div
-  className="lucid-SplitHorizontal"
+  className="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded lucid-SplitHorizontal-is-animated"
   style={
     Object {
       "flex": 1,
@@ -79,7 +79,7 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 3
 
 exports[`SplitHorizontal [common] example testing should match snapshot(s) for 4.set-height-of-pane 1`] = `
 <div
-  className="lucid-SplitHorizontal"
+  className="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded"
   style={
     Object {
       "flex": 1,
@@ -104,7 +104,7 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 4
 
 exports[`SplitHorizontal [common] example testing should match snapshot(s) for 5.customize-divider 1`] = `
 <div
-  className="lucid-SplitHorizontal"
+  className="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded"
   style={
     Object {
       "flex": 1,
@@ -129,7 +129,7 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 5
 
 exports[`SplitHorizontal [common] example testing should match snapshot(s) for 6.no-animation 1`] = `
 <div
-  className="lucid-SplitHorizontal"
+  className="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded"
   style={
     Object {
       "flex": 1,
@@ -154,7 +154,7 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 6
 
 exports[`SplitHorizontal [common] example testing should match snapshot(s) for 7.collapse-shift 1`] = `
 <div
-  className="lucid-SplitHorizontal"
+  className="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded lucid-SplitHorizontal-is-animated"
   style={
     Object {
       "flex": 1,
@@ -180,7 +180,7 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 7
 
 exports[`SplitHorizontal [common] example testing should match snapshot(s) for 8.handle-resize 1`] = `
 <div
-  className="lucid-SplitHorizontal"
+  className="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded"
   style={
     Object {
       "flex": 1,

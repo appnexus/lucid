@@ -302,7 +302,7 @@ const Sidebar = createClass({
 						{barProps.children}
 					</div>
 				</BarPane>
-				<SplitVertical.Divider className={cx('&-Divider')} style={{ width: 7 }}>
+				<SplitVertical.Divider className={cx('&-Divider')}>
 					<GripperVerticalIcon className={cx('&-Divider-gripper')} />
 				</SplitVertical.Divider>
 				<PrimaryPane

@@ -70,6 +70,41 @@ describe('SidePanel', () => {
 		});
 	});
 
+	describe('position', () => {
+		it('should match snapshot', () => {
+			const wrapper = shallow(<SidePanel position="left" />);
+			expect(wrapper).toMatchSnapshot();
+		});
+	});
+
+	describe('isResizeDisabled', () => {
+		it('should match snapshot', () => {
+			const wrapper = shallow(<SidePanel isResizeDisabled />);
+			expect(wrapper).toMatchSnapshot();
+		});
+	});
+
+	describe('isAnimated', () => {
+		it('should match snapshot', () => {
+			const wrapper = shallow(<SidePanel isAnimated={false} />);
+			expect(wrapper).toMatchSnapshot();
+		});
+	});
+
+	describe('isExpanded', () => {
+		it('should match snapshot', () => {
+			const wrapper = shallow(<SidePanel isExpanded={false} />);
+			expect(wrapper).toMatchSnapshot();
+		});
+	});
+
+	describe('width', () => {
+		it('should match snapshot', () => {
+			const wrapper = shallow(<SidePanel width={200} />);
+			expect(wrapper).toMatchSnapshot();
+		});
+	});
+
 	describe('Header', () => {
 		it('should match snapshot', () => {
 			const wrapper = shallow(<SidePanel Header="This is a header" />);

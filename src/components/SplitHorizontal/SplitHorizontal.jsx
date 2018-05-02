@@ -395,8 +395,8 @@ const SplitHorizontal = createClass({
 				className={cx(
 					'&',
 					{
-						'&-is-expanded': isExpanded,
-						'&-is-animated': isAnimated,
+						'&-is-expanded': this.props.isExpanded,
+						'&-is-animated': this.props.isAnimated,
 					},
 					className
 				)}
