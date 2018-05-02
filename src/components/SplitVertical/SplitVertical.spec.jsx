@@ -38,6 +38,14 @@ describe('SplitVertical', () => {
 				1
 			);
 		});
+
+		it('should render expanded & collapsed', () => {
+			const wrapper = mount(<SplitVertical isExpanded={true} />);
+			expect(wrapper).toMatchSnapshot();
+			expect(
+				wrapper.setProps({ isExpanded: false }).render()
+			).toMatchSnapshot();
+		});
 	});
 
 	describe('props', () => {

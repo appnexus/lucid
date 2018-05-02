@@ -203,3 +203,127 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 8
   />
 </div>
 `;
+
+exports[`SplitHorizontal render should render expanded & collapsed 1`] = `
+<SplitHorizontal
+  collapseShift={0}
+  isAnimated={false}
+  isExpanded={true}
+  onResize={[Function]}
+  onResizing={[Function]}
+>
+  <div
+    className="lucid-SplitHorizontal lucid-SplitHorizontal-is-expanded"
+    style={
+      Object {
+        "flex": 1,
+        "overflow": "hidden",
+      }
+    }
+  >
+    <Motion
+      defaultStyle={
+        Object {
+          "slideAmount": 0,
+        }
+      }
+      style={
+        Object {
+          "slideAmount": 0,
+        }
+      }
+    >
+      <div
+        className="lucid-SplitHorizontal-inner"
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "height": "100%",
+            "transform": "translateY(0px)",
+          }
+        }
+      >
+        <div
+          className="lucid-SplitHorizontal-TopPane lucid-SplitHorizontal-is-secondary"
+          style={
+            Object {
+              "flexBasis": "calc(50% - 3px)",
+              "flexGrow": 0,
+              "flexShrink": 0,
+              "marginTop": null,
+              "overflow": "auto",
+            }
+          }
+        />
+        <DragCaptureZone
+          className="lucid-SplitHorizontal-Divider"
+          onDrag={[Function]}
+          onDragCancel={[Function]}
+          onDragEnd={[Function]}
+          onDragStart={[Function]}
+          style={
+            Object {
+              "boxSizing": "border-box",
+              "height": "6px",
+            }
+          }
+        >
+          <div
+            className="lucid-DragCaptureZone lucid-SplitHorizontal-Divider"
+            key="DragCaptureZone"
+            onMouseDown={[Function]}
+            style={
+              Object {
+                "boxSizing": "border-box",
+                "height": "6px",
+              }
+            }
+          >
+             
+          </div>
+        </DragCaptureZone>
+        <div
+          className="lucid-SplitHorizontal-BottomPane"
+          style={
+            Object {
+              "flexBasis": "0%",
+              "flexGrow": 1,
+              "flexShrink": 1,
+              "marginBottom": -0,
+              "overflow": "auto",
+            }
+          }
+        />
+      </div>
+    </Motion>
+  </div>
+</SplitHorizontal>
+`;
+
+exports[`SplitHorizontal render should render expanded & collapsed 2`] = `
+<div
+  class="lucid-SplitHorizontal"
+  style="overflow: hidden;"
+>
+  <div
+    class="lucid-SplitHorizontal-inner"
+    style="height: 100%; display: flex;"
+  >
+    <div
+      class="lucid-SplitHorizontal-TopPane lucid-SplitHorizontal-is-secondary"
+      style="overflow: auto;"
+    />
+    <div
+      class="lucid-DragCaptureZone lucid-SplitHorizontal-Divider"
+      style="height: 6px; box-sizing: border-box;"
+    >
+       
+    </div>
+    <div
+      class="lucid-SplitHorizontal-BottomPane"
+      style="margin-bottom: 0px; overflow: auto;"
+    />
+  </div>
+</div>
+`;

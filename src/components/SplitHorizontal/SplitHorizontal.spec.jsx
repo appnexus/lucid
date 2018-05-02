@@ -41,6 +41,13 @@ describe('SplitHorizontal', () => {
 				1
 			);
 		});
+		it('should render expanded & collapsed', () => {
+			const wrapper = mount(<SplitHorizontal isExpanded={true} />);
+			expect(wrapper).toMatchSnapshot();
+			expect(
+				wrapper.setProps({ isExpanded: false }).render()
+			).toMatchSnapshot();
+		});
 	});
 
 	describe('props', () => {
