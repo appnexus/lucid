@@ -330,15 +330,13 @@ const SplitHorizontal = createClass({
 
 		const { secondaryRef } = this.getPanes();
 
-		if (
-			!isExpanded // check if collapseShift changed or secondary pane collapsed
-		) {
+		if (isExpanded) {
+			// expand secondary
+			this.expandSecondary();
+		} else {
 			// collapse secondary
 			const secondaryRect = secondaryRef.getBoundingClientRect();
 			this.collapseSecondary(secondaryRect.height - collapseShift);
-		} else if (isExpanded) {
-			// expand secondary
-			this.expandSecondary();
 		}
 
 		if (this.state.isAnimated !== isAnimated) {
