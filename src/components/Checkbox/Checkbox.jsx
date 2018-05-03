@@ -56,6 +56,10 @@ const Checkbox = createClass({
 		style: object`
 			Passed through to the root element.
 		`,
+
+		title: string`
+			A string title that is displayed on hover.
+		`,
 	},
 
 	getDefaultProps() {
@@ -85,6 +89,8 @@ const Checkbox = createClass({
 			...passThroughs
 		} = this.props;
 
+		const { title } = passThroughs;
+
 		return (
 			<div
 				className={cx(
@@ -97,6 +103,7 @@ const Checkbox = createClass({
 				)}
 				onClick={this.handleClicked}
 				style={style}
+				title={title}
 			>
 				<input
 					onChange={_.noop}
