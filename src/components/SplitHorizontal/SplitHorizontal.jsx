@@ -326,33 +326,26 @@ const SplitHorizontal = createClass({
 	},
 
 	componentDidMount() {
-		const { isExpanded, isAnimated, collapseShift } = this.props;
+		const { isAnimated, isExpanded, collapseShift } = this.props;
 
-		const { primaryRef, secondaryRef } = this.getPanes();
+		const { secondaryRef } = this.getPanes();
 
-		const { inner } = this.storedRefs;
+		if (isExpanded) {
+			// expand secondary
+			this.expandSecondary();
+		} else {
+			// collapse secondary
+			const secondaryRect = secondaryRef.getBoundingClientRect();
+			this.collapseSecondary(secondaryRect.height - collapseShift);
+		}
 
-		_.defer(() => {
-			this.disableAnimation(inner, secondaryRef, primaryRef);
-			inner.style.visibility = 'hidden';
+		if (this.state.isAnimated !== isAnimated) {
 			_.defer(() => {
-				if (!isExpanded) {
-					// collapse secondary
-					const secondaryRect = secondaryRef.getBoundingClientRect();
-					this.collapseSecondary(secondaryRect.height - collapseShift);
-				}
-
-				_.defer(() => {
-					if (isAnimated) {
-						this.setState({ isAnimated });
-					}
-					_.defer(() => {
-						inner.style.visibility = '';
-						this.resetAnimation(inner, secondaryRef, primaryRef);
-					});
+				this.setState({
+					isAnimated,
 				});
 			});
-		});
+		}
 	},
 
 	storeRef(name) {
@@ -362,13 +355,7 @@ const SplitHorizontal = createClass({
 	},
 
 	componentWillMount() {
-		const { isAnimated, isExpanded } = this.props;
 		this.storedRefs = {};
-
-		this.setState({
-			isAnimated,
-			isExpanded,
-		});
 	},
 
 	render() {
@@ -406,8 +393,8 @@ const SplitHorizontal = createClass({
 				className={cx(
 					'&',
 					{
-						'&-is-expanded': isExpanded,
-						'&-is-animated': isAnimated,
+						'&-is-expanded': this.props.isExpanded,
+						'&-is-animated': this.props.isAnimated,
 					},
 					className
 				)}

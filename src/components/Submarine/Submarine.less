@@ -119,6 +119,8 @@
 			display: flex;
 			flex-shrink: 0;
 			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			background-color: @color-backgroundColor;
 			height: @Submarine-Divider-height;
 			z-index: @zindex-base - 1;
@@ -142,7 +144,7 @@
 			}
 
 			.lucid-Submarine-Divider-gripper {
-				margin: auto;
+				transform: translateY(0.5px);
 			}
 
 			&:hover {

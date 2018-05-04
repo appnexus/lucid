@@ -53,11 +53,6 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 01.defaul
   </SplitVertical.LeftPane>
   <SplitVertical.Divider
     className="lucid-Sidebar-Divider"
-    style={
-      Object {
-        "width": 7,
-      }
-    }
   >
     <GripperVerticalIcon
       className="lucid-Sidebar-Divider-gripper"
@@ -125,11 +120,6 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 02.disabl
   </SplitVertical.LeftPane>
   <SplitVertical.Divider
     className="lucid-Sidebar-Divider"
-    style={
-      Object {
-        "width": 7,
-      }
-    }
   >
     <GripperVerticalIcon
       className="lucid-Sidebar-Divider-gripper"
@@ -197,11 +187,6 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 03.initia
   </SplitVertical.LeftPane>
   <SplitVertical.Divider
     className="lucid-Sidebar-Divider"
-    style={
-      Object {
-        "width": 7,
-      }
-    }
   >
     <GripperVerticalIcon
       className="lucid-Sidebar-Divider-gripper"
@@ -269,11 +254,6 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 04.positi
   </SplitVertical.RightPane>
   <SplitVertical.Divider
     className="lucid-Sidebar-Divider"
-    style={
-      Object {
-        "width": 7,
-      }
-    }
   >
     <GripperVerticalIcon
       className="lucid-Sidebar-Divider-gripper"
@@ -361,11 +341,6 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 05.custom
   </SplitVertical.LeftPane>
   <SplitVertical.Divider
     className="lucid-Sidebar-Divider"
-    style={
-      Object {
-        "width": 7,
-      }
-    }
   >
     <GripperVerticalIcon
       className="lucid-Sidebar-Divider-gripper"
@@ -433,11 +408,6 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 06.custom
   </SplitVertical.LeftPane>
   <SplitVertical.Divider
     className="lucid-Sidebar-Divider"
-    style={
-      Object {
-        "width": 7,
-      }
-    }
   >
     <GripperVerticalIcon
       className="lucid-Sidebar-Divider-gripper"
@@ -505,11 +475,6 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 07.contro
   </SplitVertical.LeftPane>
   <SplitVertical.Divider
     className="lucid-Sidebar-Divider"
-    style={
-      Object {
-        "width": 7,
-      }
-    }
   >
     <GripperVerticalIcon
       className="lucid-Sidebar-Divider-gripper"
@@ -577,11 +542,6 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 08.handle
   </SplitVertical.LeftPane>
   <SplitVertical.Divider
     className="lucid-Sidebar-Divider"
-    style={
-      Object {
-        "width": 7,
-      }
-    }
   >
     <GripperVerticalIcon
       className="lucid-Sidebar-Divider-gripper"
@@ -649,11 +609,6 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 09.nested
   </SplitVertical.LeftPane>
   <SplitVertical.Divider
     className="lucid-Sidebar-Divider"
-    style={
-      Object {
-        "width": 7,
-      }
-    }
   >
     <GripperVerticalIcon
       className="lucid-Sidebar-Divider-gripper"
@@ -1933,11 +1888,6 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
   </SplitVertical.LeftPane>
   <SplitVertical.Divider
     className="lucid-Sidebar-Divider"
-    style={
-      Object {
-        "width": 7,
-      }
-    }
   >
     <GripperVerticalIcon
       className="lucid-Sidebar-Divider-gripper"

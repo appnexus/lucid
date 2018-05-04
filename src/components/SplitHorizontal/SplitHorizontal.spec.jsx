@@ -41,6 +41,13 @@ describe('SplitHorizontal', () => {
 				1
 			);
 		});
+		it('should render expanded & collapsed', () => {
+			const wrapper = mount(<SplitHorizontal isExpanded={true} />);
+			expect(wrapper).toMatchSnapshot();
+			expect(
+				wrapper.setProps({ isExpanded: false }).render()
+			).toMatchSnapshot();
+		});
 	});
 
 	describe('props', () => {
@@ -100,11 +107,8 @@ describe('SplitHorizontal', () => {
 				wrapper = mount(<SplitHorizontal isAnimated={true} />);
 
 				_.delay(() => {
-					assert.equal(
-						wrapper.find(
-							'.lucid-SplitHorizontal.lucid-SplitHorizontal-is-animated'
-						).length,
-						1
+					assert(
+						wrapper.render().hasClass('lucid-SplitHorizontal-is-animated')
 					);
 					done();
 				}, MOSTLY_STABLE_DELAY);

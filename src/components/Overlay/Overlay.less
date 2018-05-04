@@ -2,7 +2,9 @@
 @import (reference) '../../styles/mixins.less';
 
 .lucid-Overlay {
-	.transition-group-animation-fade();
+	.lucid-Overlay-is-animated& {
+		.transition-group-animation-fade();
+	}
 
 	display: flex;
 	justify-content: center;

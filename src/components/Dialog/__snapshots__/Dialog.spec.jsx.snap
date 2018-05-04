@@ -3,6 +3,7 @@
 exports[`Dialog [common] example testing should match snapshot(s) for 1.small 1`] = `
 <Overlay
   className="lucid-Dialog"
+  isAnimated={true}
   isModal={true}
   isShown={false}
   onBackgroundClick={[Function]}
@@ -138,6 +139,7 @@ exports[`Dialog [common] example testing should match snapshot(s) for 1.small 1`
 exports[`Dialog [common] example testing should match snapshot(s) for 2.medium 1`] = `
 <Overlay
   className="lucid-Dialog"
+  isAnimated={true}
   isModal={true}
   isShown={false}
   onBackgroundClick={[Function]}
@@ -473,6 +475,7 @@ exports[`Dialog [common] example testing should match snapshot(s) for 2.medium 1
 exports[`Dialog [common] example testing should match snapshot(s) for 3.large-with-rich-header 1`] = `
 <Overlay
   className="lucid-Dialog"
+  isAnimated={true}
   isModal={true}
   isShown={false}
   onBackgroundClick={[Function]}
@@ -815,6 +818,7 @@ exports[`Dialog [common] example testing should match snapshot(s) for 3.large-wi
 exports[`Dialog [common] example testing should match snapshot(s) for 4.no-modal 1`] = `
 <Overlay
   className="lucid-Dialog"
+  isAnimated={true}
   isModal={false}
   isShown={false}
   onBackgroundClick={[Function]}
@@ -896,6 +900,7 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.no-modal
 exports[`Dialog [common] example testing should match snapshot(s) for 5.no-footer 1`] = `
 <Overlay
   className="lucid-Dialog"
+  isAnimated={true}
   isModal={true}
   isShown={false}
   onBackgroundClick={[Function]}
