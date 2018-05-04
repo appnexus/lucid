@@ -1,0 +1,106 @@
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
+.lucid-SidePanel {
+	.lucid-SidePanel-pane {
+		height: 100%;
+		position: fixed;
+		top: 0;
+		display: flex;
+
+		.lucid-SidePanel-is-animated& {
+			transition: transform 200ms;
+		}
+
+		.lucid-SidePanel-is-expanded.lucid-SidePanel-is-expanded& {
+			transform: translateX(0);
+		}
+
+		.lucid-SidePanel-position-right& {
+			right: 0;
+			transform: translateX(100%);
+		}
+
+		.lucid-SidePanel-position-left& {
+			left: 0;
+			flex-direction: row-reverse;
+			transform: translateX(-100%);
+		}
+
+		.lucid-SidePanel-grabber {
+			background-color: @color-backgroundColor;
+			width: @size-XS;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: ew-resize;
+			box-sizing: border-box;
+
+			.lucid-SidePanel-position-right& {
+				border-left: @border-lightBorder;
+			}
+
+			.lucid-SidePanel-position-left& {
+				border-right: @border-lightBorder;
+			}
+
+			.lucid-GripperVerticalIcon {
+				transform: translateX(-0.5px);
+			}
+
+			&:hover {
+				background-color: @color-mediumGray;
+
+				.lucid-GripperVerticalIcon {
+					fill: @color-darkGray;
+				}
+			}
+		}
+
+		.lucid-SidePanel-panel {
+			width: 240px;
+			height: 100%;
+			background-color: @color-backgroundColor;
+			display: flex;
+			flex-direction: column;
+
+			.lucid-SidePanel-position-right& {
+				border-left: @border-lightBorder;
+			}
+
+			.lucid-SidePanel-position-left& {
+				border-right: @border-lightBorder;
+			}
+
+			.lucid-SidePanel-header {
+				border-bottom: @border-lightBorder;
+
+				.lucid-SidePanel-header-inner-wrapper {
+					display: flex;
+
+					.lucid-SidePanel-header-content {
+						flex: 1;
+						margin: 6px;
+						height: 100%;
+					}
+
+					.lucid-SidePanel-header-closer {
+						height: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						.lucid-CrossIcon {
+							fill: @color-disabledText;
+						}
+					}
+				}
+			}
+
+			.lucid-SidePanel-content {
+				overflow: auto;
+			}
+		}
+	}
+}

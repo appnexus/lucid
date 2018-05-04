@@ -109,6 +109,8 @@
 			position: relative;
 			display: flex;
 			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			background-color: @color-backgroundColor;
 			width: @Sidebar-Divider-width;
 			z-index: @zindex-base - 1;
@@ -132,7 +134,7 @@
 			}
 
 			.lucid-Sidebar-Divider-gripper {
-				margin: auto;
+				transform: translateX(-0.5px);
 			}
 
 			&:hover {

@@ -39,6 +39,8 @@ const Overlay = createClass({
 			Controls visibility.
 		`,
 
+		isAnimated: bool,
+
 		isModal: bool`
 			Determines if it shows with a gray background. If \`false\`, the
 			background will be rendered but will be invisible, except for the
@@ -66,6 +68,7 @@ const Overlay = createClass({
 			isModal: true,
 			onEscape: _.noop,
 			onBackgroundClick: _.noop,
+			isAnimated: true,
 		};
 	},
 
@@ -118,32 +121,40 @@ const Overlay = createClass({
 			className,
 			isShown,
 			isModal,
+			isAnimated,
 			children,
 			...passThroughs
 		} = this.props;
 
 		const { portalId } = this.state;
 
+		const overlayElement = isShown ? (
+			<div
+				{...omitProps(passThroughs, Overlay)}
+				className={cx(className, '&', {
+					'&-is-not-modal': !isModal,
+					'&-is-animated': isAnimated,
+				})}
+				onClick={this.handleBackgroundClick}
+				ref={this.handleDivRef}
+			>
+				{children}
+			</div>
+		) : null;
+
 		return (
 			<Portal portalId={portalId}>
-				<ReactTransitionGroup
-					transitionName={cx('&')}
-					transitionEnterTimeout={300}
-					transitionLeaveTimeout={300}
-				>
-					{isShown ? (
-						<div
-							{...omitProps(passThroughs, Overlay)}
-							className={cx(className, '&', {
-								'&-is-not-modal': !isModal,
-							})}
-							onClick={this.handleBackgroundClick}
-							ref={this.handleDivRef}
-						>
-							{children}
-						</div>
-					) : null}
-				</ReactTransitionGroup>
+				{isAnimated ? (
+					<ReactTransitionGroup
+						transitionName={cx('&')}
+						transitionEnterTimeout={300}
+						transitionLeaveTimeout={300}
+					>
+						{overlayElement}
+					</ReactTransitionGroup>
+				) : (
+					overlayElement
+				)}
 			</Portal>
 		);
 	},

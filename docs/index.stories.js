@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import _ from 'lodash';
+import * as path from 'path';
 import marksy from 'marksy/components';
 import { storiesOf } from '@storybook/react';
 import LinkTo from '@storybook/addon-links/react';
@@ -23,7 +24,7 @@ import ColorPalette from './color-palette';
 registerLanguage('jsx', jsx);
 
 const loadAllKeys = (reqContext, rawContext) => {
-	return _.map(reqContext.keys(), key => ({
+	return _.map(_.get(reqContext, 'keys', _.constant([]))(), key => ({
 		key,
 		module: reqContext(key),
 		raw: rawContext(key),
@@ -292,6 +293,8 @@ _.forEach(
 	}
 );
 
+const storiesOfAddSequence = [];
+
 _.forEach(
 	filteredComponents,
 	({ name: componentName, component, examplesContext, examplesContextRaw }) => {
@@ -299,21 +302,23 @@ _.forEach(
 			examplesContext,
 			examplesContextRaw
 		);
-		_.reduce(
-			examples,
-			(componentStories, { name, Example, source }) =>
-				componentStories.add(
-					name,
-					exampleStory({
-						component,
-						code: source,
-						example: Example,
-						path: [componentName],
-						options: { showAddonPanel: true },
-					})
-				),
-			storiesOf(componentName, module)
-		);
+		_.forEach(examples, ({ name, Example, source }) => {
+			storiesOfAddSequence.push([
+				componentName,
+				() => {
+					storiesOf(componentName, module).add(
+						name,
+						exampleStory({
+							component,
+							code: source,
+							example: Example,
+							path: [componentName],
+							options: { showAddonPanel: true },
+						})
+					);
+				},
+			]);
+		});
 	}
 );
 
@@ -322,6 +327,16 @@ const requireExampleDotStoriesJs = require.context(
 	true,
 	/.stories.js$/
 );
-requireExampleDotStoriesJs
-	.keys()
-	.forEach(filename => requireExampleDotStoriesJs(filename));
+
+requireExampleDotStoriesJs.keys().forEach(filename => {
+	const componentName = path.basename(filename, '.stories.js');
+	storiesOfAddSequence.push([
+		componentName,
+		() => {
+			requireExampleDotStoriesJs(filename);
+		},
+	]);
+});
+_.forEach(_.sortBy(storiesOfAddSequence, _.property('0')), ([, addStory]) =>
+	addStory()
+);

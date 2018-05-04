@@ -793,6 +793,12 @@ module.exports = [
 		),
 	},
 	{
+		name: 'SidePanel',
+		component: getDefaultExport(
+			require('../src/components/SidePanel/SidePanel')
+		),
+	},
+	{
 		name: 'SingleSelect',
 		component: getDefaultExport(
 			require('../src/components/SingleSelect/SingleSelect')

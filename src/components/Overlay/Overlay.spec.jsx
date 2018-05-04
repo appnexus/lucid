@@ -35,6 +35,12 @@ describe('Overlay', () => {
 
 		assert.equal(wrapper.find('.lucid-Overlay-is-not-modal').length, 1);
 	});
+
+	it('should render with isAnimated=false', () => {
+		const wrapper = shallow(<Overlay isAnimated={false}>Nerp</Overlay>);
+
+		expect(wrapper).toMatchSnapshot();
+	});
 });
 
 describe('Overlay', () => {
