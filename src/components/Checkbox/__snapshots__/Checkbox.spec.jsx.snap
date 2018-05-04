@@ -12,6 +12,7 @@ exports[`Checkbox [common] example testing should match snapshot(s) for interact
     disabled={false}
     onChange={[Function]}
     tabIndex={20}
+    title="Little Plain Checkbox"
     type="checkbox"
   />
   <span
