@@ -50,11 +50,17 @@ class SidePanel extends React.Component {
 
 	componentDidUpdate(prevProps) {
 		if (prevProps.isExpanded !== this.props.isExpanded) {
-			setTimeout(() => {
+			this.timerId = setTimeout(() => {
 				this.setState({
 					isExpanded: this.props.isExpanded,
 				});
 			}, 1);
+		}
+	}
+
+	componentWillUnmount() {
+		if (this.timerId) {
+			clearTimeout(this.timerId);
 		}
 	}
 
@@ -75,11 +81,7 @@ class SidePanel extends React.Component {
 		const headerChildren = _.get(headerEl, 'props.children');
 
 		if (preventBodyScroll) {
-			if (isExpanded) {
-				window.document.body.style.overflow = 'hidden';
-			} else {
-				window.document.body.style.overflow = '';
-			}
+			window.document.body.style.overflow = isExpanded ? 'hidden' : '';
 		}
 
 		return (
