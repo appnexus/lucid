@@ -1,9 +1,8 @@
 {
   "name": "lucid-ui",
-  "version": "2.33.2-test.0",
+  "version": "2.33.2",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
-  "browser": "lib/index.js",
   "module": "lib/index.js",
   "repository": {
     "type": "git",
