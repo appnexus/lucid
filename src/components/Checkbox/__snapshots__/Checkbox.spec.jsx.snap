@@ -4,6 +4,7 @@ exports[`Checkbox [common] example testing should match snapshot(s) for interact
 <div
   className="lucid-Checkbox lucid-Checkbox-is-selected"
   onClick={[Function]}
+  title="Little Plain Checkbox"
 >
   <input
     checked={true}
@@ -11,6 +12,7 @@ exports[`Checkbox [common] example testing should match snapshot(s) for interact
     disabled={false}
     onChange={[Function]}
     tabIndex={20}
+    title="Little Plain Checkbox"
     type="checkbox"
   />
   <span

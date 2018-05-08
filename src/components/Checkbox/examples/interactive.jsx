@@ -22,6 +22,7 @@ export default createClass({
 				<li>
 					<label>Plain</label>
 					<Checkbox
+						title="Little Plain Checkbox"
 						isIndeterminate={this.state.isSelected === 1}
 						isSelected={this.state.isSelected === 0}
 						onSelect={this.handleSelected}
