@@ -182,11 +182,7 @@ const DataTable = createClass({
 
 	handleRowClick(rowIndex, event) {
 		const { data, onRowClick } = this.props;
-
-		const targetTagName = event.target.tagName.toLowerCase();
-		if (targetTagName === 'td' || targetTagName === 'tr') {
-			onRowClick(data[rowIndex], rowIndex, { props: this.props, event });
-		}
+		onRowClick(data[rowIndex], rowIndex, { props: this.props, event });
 	},
 
 	handleSort(field, event) {
