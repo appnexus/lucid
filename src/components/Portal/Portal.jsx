@@ -8,6 +8,25 @@ const cx = lucidClassNames.bind('&-Portal');
 
 const { any, node, string } = PropTypes;
 
+// This component passes the `context` prop with { store } from react-redux
+// Provider on to the childContext
+const WithStoreContext = createClass({
+	displayName: 'WithContext',
+	propTypes: {
+		context: any,
+		children: node,
+	},
+	childContextTypes: {
+		store: any,
+	},
+	getChildContext() {
+		return this.props.context;
+	},
+	render() {
+		return this.props.children;
+	},
+});
+
 const Portal = createClass({
 	displayName: 'Portal',
 
@@ -34,6 +53,9 @@ const Portal = createClass({
 			The \`id\` of the portal element that is appended to \`document.body\`.
 		`,
 	},
+	contextTypes: {
+		store: any, // access `store` from the context object
+	},
 	render: () => null,
 	componentDidMount() {
 		const { portalId } = this.props;
@@ -53,12 +75,14 @@ const Portal = createClass({
 	},
 	componentDidUpdate() {
 		ReactDOM.render(
-			<div
-				{...omitProps(this.props, Portal)}
-				className={cx('&', this.props.className)}
-			>
-				{this.props.children}
-			</div>,
+			<WithStoreContext context={this.context}>
+				<div
+					{...omitProps(this.props, Portal)}
+					className={cx('&', this.props.className)}
+				>
+					{this.props.children}
+				</div>
+			</WithStoreContext>,
 			this.portalElement
 		);
 	},
