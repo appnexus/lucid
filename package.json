@@ -19,6 +19,8 @@
     "dev": "npm run storybook",
     "docs": "NODE_ENV=documentation start-storybook -s ./docs/public -p 6006",
     "jest": "NODE_ENV=test TZ=UTC jest --runInBand",
+    "link": "node ./scripts/path-import-source-modules-exec.js --generate",
+    "link-clean": "node ./scripts/path-import-source-modules-exec.js --remove",
     "lint": "eslint ./src --ext .js,.jsx",
     "lint-fix": "eslint ./src --ext .js,.jsx --fix",
     "path-import-modules-generate": "node ./scripts/path-import-modules-exec.js --generate",

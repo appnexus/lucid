@@ -37,28 +37,39 @@ const getExports = entryModulePath => {
 	);
 };
 
-const exportCode = (specifierType, specifierPath, exportName) => {
+const exportCode = (
+	specifierType,
+	specifierPath,
+	exportName,
+	isTransformed = true
+) => {
 	const codeMap = {
 		ImportSpecifier: `
-			import { ${exportName} } from '${specifierPath}';
-			export default ${exportName};
-			export * from '${specifierPath}';
-		`,
+import { ${exportName} } from '${specifierPath}';
+
+export default ${exportName};
+export * from '${specifierPath}';
+		`.trim(),
 		ImportDefaultSpecifier: `
-			import def from '${specifierPath}';
-			export default def;
-			export * from '${specifierPath}'
-		`,
+import def from '${specifierPath}';
+
+export default def;
+export * from '${specifierPath}';
+		`.trim(),
 		ImportNamespaceSpecifier: `
-			import * as def from '${specifierPath}';
-			export default def;
-			export * from '${specifierPath}'
-		`,
+import * as def from '${specifierPath}';
+
+export default def;
+export * from '${specifierPath}';
+		`.trim(),
 	};
 
-	// For some reason this doesn't pickup our .babelrc even though it's supposed to
-	return babelCore.transform(codeMap[specifierType], { presets: ['es2015'] })
-		.code;
+	if (isTransformed) {
+		// For some reason this doesn't pickup our .babelrc even though it's supposed to
+		return babelCore.transform(codeMap[specifierType], { presets: ['es2015'] })
+			.code;
+	}
+	return codeMap[specifierType];
 };
 
 /**
@@ -77,7 +88,8 @@ const exportCode = (specifierType, specifierPath, exportName) => {
 const generateModules = (
 	entryModulePath,
 	destinationPath = '.',
-	mapModuleId = _.identity
+	mapModuleId = _.identity,
+	isTransformed
 ) => {
 	const importMap = _.fromPairs(getImports(entryModulePath));
 	const allExportsNames = getExports(entryModulePath);
@@ -112,7 +124,8 @@ const generateModules = (
 				const transpiledCode = exportCode(
 					specifierType,
 					mapModuleId(specifierModuleId, exportName) || specifierModuleId,
-					exportName
+					exportName,
+					isTransformed
 				);
 
 				fs.writeFile(exportPath, transpiledCode, err => {
