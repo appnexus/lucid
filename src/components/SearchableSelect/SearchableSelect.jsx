@@ -11,6 +11,8 @@ import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 import { SearchFieldDumb as SearchField } from '../SearchField/SearchField';
 
+import './SearchableSelect.less';
+
 const cx = lucidClassNames.bind('&-SearchableSelect');
 
 const {

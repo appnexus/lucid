@@ -14,6 +14,8 @@ import ContextMenu from '../ContextMenu/ContextMenu';
 import Legend from '../Legend/Legend';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
+import './BarChart.less';
+
 const cx = lucidClassNames.bind('&-BarChart');
 
 const {

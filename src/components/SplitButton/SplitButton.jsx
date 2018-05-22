@@ -15,6 +15,8 @@ import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import * as reducers from './SplitButton.reducers';
 
+import './SplitButton.less';
+
 const cx = lucidClassNames.bind('&-SplitButton');
 
 const { any, bool, func, node, oneOf, shape, string } = PropTypes;

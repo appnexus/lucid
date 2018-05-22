@@ -6,6 +6,8 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
 import Switch from '../Switch/Switch';
 
+import './SwitchLabeled.less';
+
 const cx = lucidClassNames.bind('&-SwitchLabeled');
 const { any, node, object, string } = PropTypes;
 

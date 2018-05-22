@@ -9,6 +9,8 @@ import {
 } from '../../util/dom-helpers';
 import { lucidClassNames } from '../../util/style-helpers';
 
+import './ContextMenu.less';
+
 const cx = lucidClassNames.bind('&-ContextMenu');
 
 const { bool, node, func, number, object, oneOf, string } = PropTypes;

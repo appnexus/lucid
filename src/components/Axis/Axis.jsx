@@ -5,6 +5,8 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { discreteTicks } from '../../util/chart-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
+import './Axis.less';
+
 const cx = lucidClassNames.bind('&-Axis');
 
 const { string, array, func, number, oneOf } = PropTypes;

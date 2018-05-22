@@ -10,6 +10,8 @@ import {
 } from '../../util/component-types';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
+import './OverlayWrapper.less';
+
 const cx = lucidClassNames.bind('&-OverlayWrapper');
 
 const { bool, node, oneOf, string } = PropTypes;

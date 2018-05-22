@@ -3,6 +3,8 @@ import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass } from '../../../util/component-types';
 
+import './MinusCircleIcon.less';
+
 const cx = lucidClassNames.bind('&-MinusCircleIcon');
 
 const MinusCircleIcon = createClass({

@@ -9,6 +9,8 @@ import InfoIcon from '../Icon/InfoIcon/InfoIcon';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
 import WarningIcon from '../Icon/WarningIcon/WarningIcon';
 
+import './Banner.less';
+
 const cx = lucidClassNames.bind('&-Banner');
 
 const { bool, element, func, node, oneOf, string } = PropTypes;

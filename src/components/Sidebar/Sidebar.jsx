@@ -14,6 +14,8 @@ import SplitVertical from '../SplitVertical/SplitVertical';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon';
 
+import './Sidebar.less';
+
 const cx = lucidClassNames.bind('&-Sidebar');
 
 const {

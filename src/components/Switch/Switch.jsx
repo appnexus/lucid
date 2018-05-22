@@ -4,6 +4,8 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
+import './Switch.less';
+
 const cx = lucidClassNames.bind('&-Switch');
 const { bool, func, object, string } = PropTypes;
 

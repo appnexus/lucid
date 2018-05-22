@@ -7,6 +7,8 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { shiftChildren } from '../../util/dom-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 
+import './SlidePanel.less';
+
 const cx = lucidClassNames.bind('&-SlidePanel');
 
 const { bool, func, node, number, string } = PropTypes;

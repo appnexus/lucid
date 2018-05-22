@@ -6,6 +6,8 @@ import { createClass, omitProps } from '../../util/component-types';
 import { transformFromCenter } from '../../util/chart-helpers';
 import * as chartConstants from '../../constants/charts';
 
+import './Point.less';
+
 const cx = lucidClassNames.bind('&-Point');
 
 const { number, bool, string, object } = PropTypes;

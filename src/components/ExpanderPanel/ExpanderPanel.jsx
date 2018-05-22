@@ -11,6 +11,8 @@ import Panel from '../Panel/Panel';
 
 import * as reducers from '../Expander/Expander.reducers';
 
+import './ExpanderPanel.less';
+
 const cx = lucidClassNames.bind('&-ExpanderPanel');
 
 const { any, bool, func, node, object, string } = PropTypes;

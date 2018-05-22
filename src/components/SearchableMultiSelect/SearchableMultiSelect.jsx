@@ -19,6 +19,8 @@ import Selection from '../Selection/Selection';
 
 import * as reducers from './SearchableMultiSelect.reducers';
 
+import './SearchableMultiSelect.less';
+
 const {
 	any,
 	arrayOf,

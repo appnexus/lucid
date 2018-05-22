@@ -5,6 +5,8 @@ import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
 import Icon from '../Icon';
 
+import './CaretIcon.less';
+
 const cx = lucidClassNames.bind('&-CaretIcon');
 
 const { oneOf } = PropTypes;

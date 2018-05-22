@@ -4,6 +4,8 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
+import './Icon.less';
+
 const cx = lucidClassNames.bind('&-Icon');
 
 const { any, string, number, object, bool } = PropTypes;

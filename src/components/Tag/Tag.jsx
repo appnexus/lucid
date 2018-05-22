@@ -10,6 +10,8 @@ import {
 	omitProps,
 } from '../../util/component-types';
 
+import './Tag.less';
+
 const cx = lucidClassNames.bind('&-Tag');
 
 const { bool, func, node, string } = PropTypes;

@@ -15,6 +15,8 @@ import { buildHybridComponent } from '../../util/state-management';
 import RadioButtonLabeled from '../RadioButtonLabeled/RadioButtonLabeled';
 import RadioButton from '../RadioButton/RadioButton';
 
+import './RadioGroup.less';
+
 const cx = lucidClassNames.bind('&-RadioGroup');
 
 const { func, node, number, string, bool } = PropTypes;

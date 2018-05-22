@@ -7,6 +7,8 @@ import { createClass, findTypes, omitProps } from '../../util/component-types';
 import reducers from './ButtonGroup.reducers';
 import { buildHybridComponent } from '../../util/state-management';
 
+import './ButtonGroup.less';
+
 const cx = lucidClassNames.bind('&-ButtonGroup');
 
 const { any, func, arrayOf, number } = PropTypes;

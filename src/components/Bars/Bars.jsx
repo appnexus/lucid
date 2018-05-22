@@ -11,6 +11,8 @@ import Bar from '../Bar/Bar';
 import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
 import Legend from '../Legend/Legend';
 
+import './Bars.less';
+
 // memoizing to maintain referential equality across renders, for performance
 // optimization with shallow comparison
 const memoizedExtractFields = _.memoize(extractFields);

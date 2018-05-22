@@ -5,6 +5,8 @@ import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
 import Icon from '../Icon';
 
+import './ChevronIcon.less';
+
 const cx = lucidClassNames.bind('&-ChevronIcon');
 
 const { oneOf } = PropTypes;

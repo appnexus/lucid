@@ -8,6 +8,8 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 
+import './ToolTip.less';
+
 const cx = lucidClassNames.bind('&-ToolTip');
 const flyOutCx = cx.bind('&-FlyOut');
 

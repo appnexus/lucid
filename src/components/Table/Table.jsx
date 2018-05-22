@@ -10,6 +10,8 @@ import {
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
+import './Table.less';
+
 const cx = lucidClassNames.bind('&-Table');
 
 const { any, bool, func, node, number, object, string, oneOf } = PropTypes;

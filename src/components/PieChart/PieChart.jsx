@@ -12,6 +12,8 @@ import { ToolTipDumb as ToolTip } from '../../components/ToolTip/ToolTip';
 
 import * as reducers from './PieChart.reducers';
 
+import './PieChart.less';
+
 const cx = lucidClassNames.bind('&-PieChart');
 
 const { string, number, arrayOf, bool, shape, object, func } = PropTypes;

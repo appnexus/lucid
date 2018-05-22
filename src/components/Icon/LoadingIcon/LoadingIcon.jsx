@@ -5,6 +5,8 @@ import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
 
+import './LoadingIcon.less';
+
 const { oneOf } = PropTypes;
 const cx = lucidClassNames.bind('&-LoadingIcon');
 const durations = {

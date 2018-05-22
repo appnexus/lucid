@@ -11,6 +11,8 @@ import {
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './Tabs.reducers';
 
+import './Tabs.less';
+
 const cx = lucidClassNames.bind('&-Tabs');
 
 const { any, bool, func, node, number, string } = PropTypes;

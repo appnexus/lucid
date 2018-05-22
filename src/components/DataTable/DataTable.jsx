@@ -14,6 +14,8 @@ import Checkbox from '../Checkbox/Checkbox';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 import ScrollTable from '../ScrollTable/ScrollTable';
 
+import './DataTable.less';
+
 const { Thead, Tbody, Tr, Th, Td } = ScrollTable;
 
 const cx = lucidClassNames.bind('&-DataTable');

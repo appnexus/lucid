@@ -14,6 +14,8 @@ import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible from '../Collapsible/Collapsible';
 import * as reducers from './Expander.reducers';
 
+import './Expander.less';
+
 const cx = lucidClassNames.bind('&-Expander');
 
 const { any, bool, func, node, object, oneOf, string } = PropTypes;

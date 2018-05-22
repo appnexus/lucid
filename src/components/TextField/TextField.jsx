@@ -6,6 +6,8 @@ import { createClass, omitProps } from '../../util/component-types';
 import reducers from './TextField.reducers';
 import * as KEYCODE from '../../constants/key-code';
 
+import './TextField.less';
+
 const cx = lucidClassNames.bind('&-TextField');
 
 const { bool, string, func, number, object, oneOfType } = PropTypes;

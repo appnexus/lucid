@@ -10,6 +10,8 @@ import SearchIcon from '../Icon/SearchIcon/SearchIcon';
 
 import reducers from './SearchField.reducers';
 
+import './SearchField.less';
+
 const cx = lucidClassNames.bind('&-SearchField');
 
 const { bool, func, node, number, oneOfType, string } = PropTypes;

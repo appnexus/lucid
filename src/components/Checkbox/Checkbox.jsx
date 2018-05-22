@@ -4,6 +4,8 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
+import './Checkbox.less';
+
 const cx = lucidClassNames.bind('&-Checkbox');
 
 const { bool, func, object, string } = PropTypes;

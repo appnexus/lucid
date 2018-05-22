@@ -9,6 +9,8 @@ import CheckboxLabeled from '../CheckboxLabeled/CheckboxLabeled';
 import { lucidClassNames } from '../../util/style-helpers.js';
 import { createClass, omitProps } from '../../util/component-types';
 
+import './IconSelect.less';
+
 const cx = lucidClassNames.bind('&-IconSelect');
 
 const { arrayOf, bool, func, node, number, oneOf, string, shape } = PropTypes;

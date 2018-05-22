@@ -5,6 +5,8 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 import * as chartConstants from '../../constants/charts';
 
+import './Bar.less';
+
 const cx = lucidClassNames.bind('&-Bar');
 
 const { number, bool, string, object } = PropTypes;

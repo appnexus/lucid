@@ -7,6 +7,8 @@ import reducers from '../TextField/TextField.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 
+import './TextFieldValidated.less';
+
 const cx = lucidClassNames.bind('&-TextFieldValidated');
 
 const { any, object, string } = PropTypes;

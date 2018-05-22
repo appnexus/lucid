@@ -15,6 +15,8 @@ import {
 	rejectTypes,
 } from '../../util/component-types';
 
+import './Selection.less';
+
 const { createElement } = React;
 
 const { bool, func, string, node, oneOf } = PropTypes;

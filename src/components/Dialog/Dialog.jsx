@@ -5,6 +5,8 @@ import Overlay from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
 
+import './Dialog.less';
+
 const cx = lucidClassNames.bind('&-Dialog');
 
 const { node, oneOf } = PropTypes;

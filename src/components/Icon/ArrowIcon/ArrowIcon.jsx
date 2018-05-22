@@ -5,6 +5,8 @@ import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
 
+import './ArrowIcon.less';
+
 const cx = lucidClassNames.bind('&-ArrowIcon');
 
 const { oneOf } = PropTypes;

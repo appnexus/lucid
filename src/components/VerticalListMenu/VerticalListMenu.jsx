@@ -8,6 +8,8 @@ import * as reducers from './VerticalListMenu.reducers';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible from '../Collapsible/Collapsible';
 
+import './VerticalListMenu.less';
+
 const cx = bindClassNames('lucid-VerticalListMenu');
 
 const { func, arrayOf, bool, string, number, node, object, shape } = PropTypes;

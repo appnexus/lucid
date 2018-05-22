@@ -4,6 +4,8 @@ import { createClass, omitProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import Table from '../Table/Table';
 
+import './ScrollTable.less';
+
 const cx = lucidClassNames.bind('&-ScrollTable');
 
 const { object, string, bool, node, number, oneOfType } = PropTypes;

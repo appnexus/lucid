@@ -5,6 +5,8 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 import RadioButton from '../RadioButton/RadioButton';
 
+import './RadioButtonLabeled.less';
+
 const cx = lucidClassNames.bind('&-RadioButtonLabeled');
 const { any, node, object, string } = PropTypes;
 

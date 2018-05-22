@@ -7,6 +7,8 @@ import { lucidClassNames } from '../../util/style-helpers';
 import LoadingIndicator from '../LoadingIndicator/LoadingIndicator';
 import OverlayWrapper from '../OverlayWrapper/OverlayWrapper';
 
+import './EmptyStateWrapper.less';
+
 const cx = lucidClassNames.bind('&-EmptyStateWrapper');
 
 const { any, bool, node, string } = PropTypes;

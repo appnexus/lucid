@@ -5,6 +5,8 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 import SeparatorIcon from '../Icon/SeparatorIcon/SeparatorIcon';
 
+import './Breadcrumb.less';
+
 const cx = lucidClassNames.bind('&-Breadcrumb');
 
 const { any, node } = PropTypes;

@@ -5,6 +5,8 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 import Checkbox from '../Checkbox/Checkbox';
 
+import './CheckboxLabeled.less';
+
 const cx = lucidClassNames.bind('&-CheckboxLabeled');
 const { any, node, object, string } = PropTypes;
 

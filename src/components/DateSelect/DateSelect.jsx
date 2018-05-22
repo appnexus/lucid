@@ -11,6 +11,8 @@ import CalendarMonth from '../CalendarMonth/CalendarMonth';
 import ChevronThinIcon from '../Icon/ChevronThinIcon/ChevronThinIcon';
 import { DateUtils } from 'react-day-picker';
 
+import './DateSelect.less';
+
 const cx = lucidClassNames.bind('&-DateSelect');
 
 const NAV_BUTTON_SIZE = 32;

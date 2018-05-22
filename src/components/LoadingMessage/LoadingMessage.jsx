@@ -5,6 +5,8 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 
+import './LoadingMessage.less';
+
 const cx = lucidClassNames.bind('&-LoadingMessage');
 
 const { any, node, string } = PropTypes;

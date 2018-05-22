@@ -11,6 +11,8 @@ import Button from '../Button/Button';
 import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
 import { buildHybridComponent } from '../../util/state-management';
 
+import './Paginator.less';
+
 const cx = lucidClassNames.bind('&-Paginator');
 
 const { arrayOf, bool, func, number, object, shape, string } = PropTypes;

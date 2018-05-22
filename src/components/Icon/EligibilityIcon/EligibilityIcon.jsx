@@ -5,6 +5,8 @@ import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
 
+import './EligibilityIcon.less';
+
 const cx = lucidClassNames.bind('&-EligibilityIcon');
 
 const { oneOf } = PropTypes;

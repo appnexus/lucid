@@ -11,6 +11,8 @@ import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import { Motion, spring } from 'react-motion';
 import { QUICK_SLIDE_MOTION } from '../../constants/motion-spring';
 
+import './SplitHorizontal.less';
+
 const cx = lucidClassNames.bind('&-SplitHorizontal');
 
 const { any, bool, func, node, number, string, oneOfType } = PropTypes;

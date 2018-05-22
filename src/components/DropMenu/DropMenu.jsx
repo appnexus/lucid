@@ -15,6 +15,8 @@ import * as KEYCODE from '../../constants/key-code';
 import * as reducers from './DropMenu.reducers';
 import ContextMenu from '../ContextMenu/ContextMenu';
 
+import './DropMenu.less';
+
 function joinArray(array, getSeparator) {
 	return _.reduce(
 		array,

@@ -5,6 +5,8 @@ import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
+import './Button.less';
+
 const cx = lucidClassNames.bind('&-Button');
 
 const { arrayOf, bool, func, node, oneOf, oneOfType, string } = PropTypes;

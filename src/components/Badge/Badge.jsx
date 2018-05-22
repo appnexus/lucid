@@ -3,6 +3,8 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
+import './Badge.less';
+
 const cx = lucidClassNames.bind('&-Badge');
 
 const { node, string } = PropTypes;

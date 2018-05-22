@@ -12,6 +12,8 @@ import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './VerticalTabs.reducers';
 import { VerticalListMenuDumb as VerticalListMenu } from '../VerticalListMenu/VerticalListMenu';
 
+import './VerticalTabs.less';
+
 const cx = lucidClassNames.bind('&-VerticalTabs');
 
 const { string, number, bool, func } = PropTypes;

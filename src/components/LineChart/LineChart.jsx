@@ -23,6 +23,8 @@ import { ToolTipDumb as ToolTip } from '../ToolTip/ToolTip';
 import ContextMenu from '../ContextMenu/ContextMenu';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
+import './LineChart.less';
+
 const cx = lucidClassNames.bind('&-LineChart');
 
 const {

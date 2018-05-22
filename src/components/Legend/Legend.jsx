@@ -7,6 +7,8 @@ import { createClass, findTypes, omitProps } from '../../util/component-types';
 import Point from '../Point/Point';
 import Line from '../Line/Line';
 
+import './Legend.less';
+
 const cx = lucidClassNames.bind('&-Legend');
 
 const POINT_SIZE = 12;

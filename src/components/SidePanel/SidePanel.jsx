@@ -8,6 +8,8 @@ import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import { getFirst, omitProps } from '../../util/component-types';
 
+import './SidePanel.less';
+
 const cx = lucidClassNames.bind('&-SidePanel');
 
 const { any, bool, func, oneOf, node, number, string } = PropTypes;

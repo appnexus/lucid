@@ -9,6 +9,8 @@ import * as reducers from './Autocomplete.reducers';
 import * as KEYCODE from '../../constants/key-code';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 
+import './Autocomplete.less';
+
 const cx = lucidClassNames.bind('&-Autocomplete');
 
 const { arrayOf, bool, func, object, shape, string } = PropTypes;

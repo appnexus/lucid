@@ -4,6 +4,8 @@ import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass } from '../../../util/component-types';
 
+import './SuccessLightIcon.less';
+
 const cx = lucidClassNames.bind('&-SuccessLightIcon');
 
 const SuccessLightIcon = createClass({

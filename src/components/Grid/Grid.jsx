@@ -4,6 +4,8 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
 
+import './Grid.less';
+
 const cx = lucidClassNames.bind('&-Grid');
 
 const { string, bool, node } = PropTypes;

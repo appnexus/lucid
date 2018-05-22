@@ -4,6 +4,8 @@ import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
 
+import './InfoIcon.less';
+
 const cx = lucidClassNames.bind('&-InfoIcon');
 
 const InfoIcon = createClass({

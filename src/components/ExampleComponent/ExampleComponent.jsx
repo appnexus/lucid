@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
 
+import './ExampleComponent.less';
+
 const cx = lucidClassNames.bind('&-ExampleComponent');
 const { bool, func, node, string, object } = PropTypes;
 

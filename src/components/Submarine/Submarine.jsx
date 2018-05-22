@@ -14,6 +14,8 @@ import SplitHorizontal from '../SplitHorizontal/SplitHorizontal';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import GripperHorizontalIcon from '../Icon/GripperHorizontalIcon/GripperHorizontalIcon';
 
+import './Submarine.less';
+
 const cx = lucidClassNames.bind('&-Submarine');
 
 const { any, bool, func, node, number, string, oneOf, oneOfType } = PropTypes;

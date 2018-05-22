@@ -8,6 +8,8 @@ import * as reducers from './SingleSelect.reducers';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import CaretIcon from '../Icon/CaretIcon/CaretIcon';
 
+import './SingleSelect.less';
+
 const cx = lucidClassNames.bind('&-SingleSelect');
 
 const {

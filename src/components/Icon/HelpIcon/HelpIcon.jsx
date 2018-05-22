@@ -4,6 +4,8 @@ import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass } from '../../../util/component-types';
 
+import './HelpIcon.less';
+
 const cx = lucidClassNames.bind('&-HelpIcon');
 
 const HelpIcon = createClass({
