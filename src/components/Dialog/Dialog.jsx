@@ -7,11 +7,13 @@ import { createClass, getFirst, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Dialog');
 
-const { node, oneOf } = PropTypes;
+const { node, oneOf, bool } = PropTypes;
 
 const SMALL = 'small';
 const MEDIUM = 'medium';
 const LARGE = 'large';
+// hasGutters added to allow for a choice regarding Body padding
+var hasGutters;
 
 const Dialog = createClass({
 	displayName: 'Dialog',
@@ -70,16 +72,27 @@ const Dialog = createClass({
 		Footer: node`
 			*Child Element* - Footer contents. Only one \`Footer\` is used.
 		`,
+
+		hasGutters: bool`
+			A true or false value that dictates whether or not the Body has padding.
+		`,
 	},
 
 	getDefaultProps() {
 		return {
 			size: MEDIUM,
+			hasGutters: true,
 		};
 	},
 
 	render() {
-		const { className, size, isShown, ...passThroughs } = this.props;
+		const {
+			className,
+			size,
+			hasGutters,
+			isShown,
+			...passThroughs
+		} = this.props;
 
 		const headerChildProp = _.get(
 			getFirst(this.props, Dialog.Header),
@@ -108,7 +121,9 @@ const Dialog = createClass({
 				>
 					<header {...headerChildProp} className={cx('&-header')} />
 
-					<section className={cx('&-body')}>{this.props.children}</section>
+					<section className={cx(hasGutters ? '&-body' : '&-body-no-gutters')}>
+						{this.props.children}
+					</section>
 
 					{footerChildProp && (
 						<footer {...footerChildProp} className={cx('&-footer')} />
