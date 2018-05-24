@@ -12,8 +12,6 @@ const { node, oneOf, bool } = PropTypes;
 const SMALL = 'small';
 const MEDIUM = 'medium';
 const LARGE = 'large';
-// hasGutters added to allow for a choice regarding Body padding
-var hasGutters;
 
 const Dialog = createClass({
 	displayName: 'Dialog',
@@ -121,7 +119,9 @@ const Dialog = createClass({
 				>
 					<header {...headerChildProp} className={cx('&-header')} />
 
-					<section className={cx(hasGutters ? '&-body' : '&-body-no-gutters')}>
+					<section
+						className={cx('&-body', hasGutters ? '' : '&-body-no-gutters')}
+					>
 						{this.props.children}
 					</section>
 
