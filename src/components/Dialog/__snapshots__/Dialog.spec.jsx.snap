@@ -922,3 +922,28 @@ exports[`Dialog [common] example testing should match snapshot(s) for 5.no-foote
   </div>
 </Overlay>
 `;
+
+exports[`Dialog [common] example testing should match snapshot(s) for 6.no-gutters 1`] = `
+<Overlay
+  className="lucid-Dialog"
+  isModal={true}
+  isShown={false}
+  onBackgroundClick={[Function]}
+  onEscape={[Function]}
+>
+  <div
+    className="lucid-Dialog-window lucid-Dialog-window-is-medium"
+  >
+    <header
+      className="lucid-Dialog-header"
+    >
+      Header
+    </header>
+    <section
+      className="lucid-Dialog-body lucid-Dialog-body-no-gutters"
+    >
+      This \`Dialog\` has no gutters!
+    </section>
+  </div>
+</Overlay>
+`;
