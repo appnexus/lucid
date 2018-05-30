@@ -3,20 +3,41 @@
 @VerticalListMenu-size-itemHeight: 29px;
 @VerticalListMenu-size-childSpacer: 6px;
 @VerticalListMenu-size-childPadding: 15px;
-
-// Recursive mixin to facilitate nesting to a pre-determined depth
-.VerticalListMenu-nest(@i: 0) when (@i < @VerticalListMenu-levels) {
-	.lucid-VerticalListMenu {
-		.lucid-VerticalListMenu-Item-content {
-			padding-left: @VerticalListMenu-size-childPadding + (12 * @i);
-		}
-
-		.VerticalListMenu-nest(@i + 1);
-	}
-}
+@VerticalListMenu-step: 12;
 
 .lucid-VerticalListMenu {
-	.VerticalListMenu-nest();
+	& & .lucid-VerticalListMenu-Item-content {
+		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 0);
+	}
+
+	& & & .lucid-VerticalListMenu-Item-content {
+		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 1);
+	}
+
+	& & & & .lucid-VerticalListMenu-Item-content {
+		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 2);
+	}
+
+	& & & & & .lucid-VerticalListMenu-Item-content {
+		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 3);
+	}
+
+	& & & & & & .lucid-VerticalListMenu-Item-content {
+		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 4);
+	}
+
+	& & & & & & & .lucid-VerticalListMenu-Item-content {
+		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 5);
+	}
+
+	& & & & & & & & .lucid-VerticalListMenu-Item-content {
+		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 6);
+	}
+
+	& & & & & & & & & .lucid-VerticalListMenu-Item-content {
+		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 7);
+	}
+
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
