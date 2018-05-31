@@ -9,7 +9,7 @@
 @Banner-size-iconFontSize: 16px;
 
 .lucid-Banner {
-	.transition-group-animation-fade();
+	// .transition-group-animation-fade();
 	.box-sizing();
 
 	border: @border-standardBorder;
@@ -28,17 +28,12 @@
 		border-radius: 0;
 	}
 
-	&-close {
-		align-self: flex-start;
-		font-size: @Banner-size-iconFontSize;
-		font-weight: bold;
-		cursor: pointer;
-		line-height: 1em;
-		padding-top: @size-XXS;
-		color: fade(@color-black, 50%);
+	// must use this selector in order to override default color
+	.lucid-Icon-is-clickable {
+		fill: @color-mediumGray;
 
 		&:hover {
-			color: @color-black;
+			fill: @color-darkGray;
 		}
 	}
 
