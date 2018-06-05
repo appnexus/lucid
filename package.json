@@ -13,7 +13,7 @@
     "docs-upload-gh": "scripts/docs-upload-gh.sh",
     "docs-upload": "gulp docs-upload",
     "lint": "gulp lint",
-    "preversion": "rm -rf dist && gulp lint && gulp preversion && npm run build-bundle",
+    "preversion": "rm -rf dist && gulp preversion && npm run build-bundle",
     "postversion": "gulp docs-upload",
     "start": "npm run dev",
     "test": "gulp lint && npm run test-browserstack && npm run test-acceptance",
