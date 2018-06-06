@@ -130,8 +130,8 @@ const Icon = createClass({
 					'&',
 					{
 						'&-is-badge': isBadge,
-						'&-is-clickable': !isDisabled && isClickable,
 						'&-is-disabled': isDisabled,
+						'&-is-clickable': !isDisabled && isClickable,
 					},
 					className
 				)}
