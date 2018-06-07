@@ -926,6 +926,7 @@ exports[`Dialog [common] example testing should match snapshot(s) for 5.no-foote
 exports[`Dialog [common] example testing should match snapshot(s) for 6.no-gutters 1`] = `
 <Overlay
   className="lucid-Dialog"
+  isAnimated={true}
   isModal={true}
   isShown={false}
   onBackgroundClick={[Function]}
