@@ -17,12 +17,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateful 1
     >
       Default
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={26}
+      viewBox="-3 -6 20 20"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -49,12 +50,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Default
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={26}
+      viewBox="-3 -6 20 20"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -81,12 +83,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Default no rounded corners
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={26}
+      viewBox="-3 -6 20 20"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -140,12 +143,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Default -- small
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={44}
+      viewBox="-12 -6 28 28"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -199,12 +203,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Primary
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={26}
+      viewBox="-3 -6 20 20"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -258,12 +263,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Primary -- small
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={44}
+      viewBox="-12 -6 28 28"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -317,12 +323,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Success
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={26}
+      viewBox="-3 -6 20 20"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -381,12 +388,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Success -- has icon
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={26}
+      viewBox="-3 -6 20 20"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -450,12 +458,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Success -- has icon -- small
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={44}
+      viewBox="-12 -6 28 28"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -515,12 +524,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Success -- small
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={44}
+      viewBox="-12 -6 28 28"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -587,12 +597,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
         Eos ut odio, perspiciatis ad delectus. Inventore officiis rem quisquam magni. Amet, doloremque? Eveniet laborum labore, quod enim repellat, omnis voluptates, quasi non nostrum dolores ut perspiciatis facilis sint dolorum, minima reprehenderit? Vitae ipsam, similique et quisquam. Molestias, eaque. Expedita eligendi, saepe facere tempore doloremque earum incidunt esse labore nobis amet odio, deserunt voluptate eius blanditiis ullam consequuntur maxime reprehenderit dolorem recusandae eos voluptas! Harum dolorum in, quo, dolore minima commodi laudantium beatae enim dolorem, aspernatur quaerat libero cupiditate repellendus. Ullam perferendis tempore autem quos officiis, natus a accusamus odit ut sint culpa. Quos sunt eos, magnam aliquam, adipisci consectetur.
       </p>
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={26}
+      viewBox="-3 -6 20 20"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -619,12 +630,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Warning
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={26}
+      viewBox="-3 -6 20 20"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -683,12 +695,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Warning -- has icon
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={26}
+      viewBox="-3 -6 20 20"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -746,12 +759,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Warning -- small
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={44}
+      viewBox="-12 -6 28 28"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -810,12 +824,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Warning -- has icon -- small
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={44}
+      viewBox="-12 -6 28 28"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -875,12 +890,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Danger
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={26}
+      viewBox="-3 -6 20 20"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -939,12 +955,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Danger -- has icon
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={26}
+      viewBox="-3 -6 20 20"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -1003,12 +1020,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Danger -- small
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={44}
+      viewBox="-12 -6 28 28"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -1067,12 +1085,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Danger -- has icon -- small
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={44}
+      viewBox="-12 -6 28 28"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -1132,12 +1151,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Info
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={26}
+      viewBox="-3 -6 20 20"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -1196,12 +1216,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Info -- has icon
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={26}
+      viewBox="-3 -6 20 20"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -1260,12 +1281,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Info -- small
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={44}
+      viewBox="-12 -6 28 28"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -1324,12 +1346,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Info -- has icon -- small
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={44}
+      viewBox="-12 -6 28 28"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -1393,12 +1416,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     >
       Has Custom Icon
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={26}
+      viewBox="-3 -6 20 20"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -1435,12 +1459,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
          ipsum dolor sit amet, consectetur adipisicing elit. A doloribus, fugit atque. Impedit neque perferendis libero nam, deserunt inventore aliquid quis molestiae est! In perferendis dignissimos ex optio cupiditate quae!
       </p>
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={26}
+      viewBox="-3 -6 20 20"
+    />
   </section>
 </CSSTransitionGroup>
 `;
@@ -1480,12 +1505,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
         Velit, architecto, commodi. Non porro cupiditate rerum obcaecati veniam alias fugiat nam similique, labore a quis magni vero consequatur consequuntur veritatis est quibusdam tempora tempore ex, deleniti dicta inventore. Quas.
       </p>
     </span>
-    <span
+    <CrossIcon
       className="lucid-Banner-close"
+      isClickable={true}
       onClick={[Function]}
-    >
-      ×
-    </span>
+      size={26}
+      viewBox="-3 -6 20 20"
+    />
   </section>
 </CSSTransitionGroup>
 `;
