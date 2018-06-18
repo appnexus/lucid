@@ -25,7 +25,6 @@ exports[`Icon [common] example testing should match snapshot(s) for 2.clickable 
 <svg
   className="lucid-Icon lucid-Icon-is-clickable"
   height={16}
-  onClick={[Function]}
   preserveAspectRatio="xMidYMid meet"
   style={Object {}}
   viewBox="0 0 16 16"

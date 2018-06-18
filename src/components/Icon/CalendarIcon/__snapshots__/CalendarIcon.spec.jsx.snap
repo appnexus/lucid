@@ -5,6 +5,7 @@ exports[`CalendarIcon [common] example testing should match snapshot(s) for 1.de
   aspectRatio="xMidYMid meet"
   className="lucid-CalendarIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
@@ -44,6 +45,7 @@ exports[`CalendarIcon [common] example testing should match snapshot(s) for 3.di
   aspectRatio="xMidYMid meet"
   className="lucid-CalendarIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={true}
   size={16}
   viewBox="0 0 16 16"

@@ -5,6 +5,7 @@ exports[`InfoLightIcon [common] example testing should match snapshot(s) for 1.d
   aspectRatio="xMidYMid meet"
   className="lucid-InfoLightIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
@@ -46,6 +47,7 @@ exports[`InfoLightIcon [common] example testing should match snapshot(s) for 3.d
   aspectRatio="xMidYMid meet"
   className="lucid-InfoLightIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={true}
   size={16}
   viewBox="0 0 16 16"

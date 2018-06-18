@@ -5,6 +5,7 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
   aspectRatio="xMidYMid meet"
   className="lucid-LoadingIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={false}
   size={16}
   style={
@@ -46,6 +47,7 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
   aspectRatio="xMidYMid meet"
   className="lucid-LoadingIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={false}
   size={16}
   style={
@@ -87,6 +89,7 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
   aspectRatio="xMidYMid meet"
   className="lucid-LoadingIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={false}
   size={16}
   style={
@@ -254,6 +257,7 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 3.dis
   aspectRatio="xMidYMid meet"
   className="lucid-LoadingIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={true}
   size={16}
   style={
@@ -295,6 +299,7 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 3.dis
   aspectRatio="xMidYMid meet"
   className="lucid-LoadingIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={true}
   size={16}
   style={
@@ -336,6 +341,7 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 3.dis
   aspectRatio="xMidYMid meet"
   className="lucid-LoadingIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={true}
   size={16}
   style={
