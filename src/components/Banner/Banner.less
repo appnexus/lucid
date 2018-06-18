@@ -28,17 +28,12 @@
 		border-radius: 0;
 	}
 
-	&-close {
-		align-self: flex-start;
-		font-size: @Banner-size-iconFontSize;
-		font-weight: bold;
-		cursor: pointer;
-		line-height: 1em;
-		padding-top: @size-XXS;
-		color: fade(@color-black, 50%);
+	// must use this specific selector in order to override default color
+	.lucid-Banner-close {
+		fill: @color-mediumGray;
 
 		&:hover {
-			color: @color-black;
+			fill: @color-darkGray;
 		}
 	}
 

@@ -4,6 +4,7 @@ import PropTypes from 'react-peek/prop-types';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
+import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 import DangerIcon from '../Icon/DangerIcon/DangerIcon';
 import InfoIcon from '../Icon/InfoIcon/InfoIcon';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
@@ -157,9 +158,13 @@ const Banner = createClass({
 						<span className={cx('&-content')}>{children}</span>
 
 						{isCloseable ? (
-							<span className={cx('&-close')} onClick={this.handleClose}>
-								{String.fromCharCode(0x00d7)}
-							</span>
+							<CrossIcon
+								isClickable
+								size={isSmall ? 44 : 26}
+								viewBox={isSmall ? '-12 -6 28 28' : '-3 -6 20 20'}
+								className={cx('&-close')}
+								onClick={this.handleClose}
+							/>
 						) : null}
 					</section>
 				) : null}
