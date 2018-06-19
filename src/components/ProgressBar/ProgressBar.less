@@ -1,0 +1,37 @@
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
+.lucid-ProgressBar {
+	display: flex;
+	border-radius: 5px;
+	text-align: center;
+	margin: 8px 0;
+	border: 1px solid #f4f4f4;
+
+
+	// Kinds
+	&-default {
+		background: #2abbb0;
+		border-radius: 5px;
+	}
+
+	&-success {
+		background: @featured-color-success-borderColorLite;
+		border-radius: 5px;
+	}
+
+	&-danger {
+		background: @featured-color-danger-borderColorLite;
+		border-radius: 5px;
+	}
+
+	&-info {
+		background: @featured-color-info-borderColorLite;
+		border-radius: 5px;
+	}
+
+	&-warning {
+		background: @featured-color-warning-borderColorLite;
+		border-radius: 5px;
+	}
+}
