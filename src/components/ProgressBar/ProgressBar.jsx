@@ -37,8 +37,12 @@ const ProgressBar = createClass({
 
 		children: any,
 
-		hasLabel: bool`
-			Displays ther percent complete within the ProgressBar.
+		hasTitle: bool`
+			Whether or not a title is displayed above the ProgressBar.
+		`,
+
+		title: string`
+			The title text that is displayed above ProgressBar.
 		`,
 	},
 
@@ -47,21 +51,23 @@ const ProgressBar = createClass({
 			kind: 'default',
 			percentComplete: 50,
 			children: '\u00A0',
-			hasLabel: false,
+			title: '',
 		};
 	},
 
 	render() {
-		const { kind, percentComplete, children, hasLabel } = this.props;
+		const { kind, percentComplete, children, title } = this.props;
 
 		return (
-			<div className={cx('&')}>
-				<div
-					className={percentComplete > 0 ? cx(`&-${kind}`) : null}
-					style={{ width: `${percentComplete}%` }}
-				>
-					{hasLabel ? `${percentComplete}%` : null}
-					{children}
+			<div className={cx('&-title')}>
+				{title}
+				<div className={cx('&')}>
+					<div
+						className={percentComplete > 0 ? cx(`&-${kind}`) : null}
+						style={{ width: `${percentComplete}%` }}
+					>
+						{children}
+					</div>
 				</div>
 			</div>
 		);

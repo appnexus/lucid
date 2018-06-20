@@ -6,6 +6,8 @@ import WithDefaultsExample from './ProgressBar/WithDefaults';
 import withDefaultsCode from '!!raw-loader!./ProgressBar/WithDefaults';
 import VariousColorsExample from './ProgressBar/VariousColors';
 import variousColorsCode from '!!raw-loader!./ProgressBar/VariousColors';
+import WithTitleExample from './ProgressBar/WithTitle';
+import withTitleCode from '!!raw-loader!./ProgressBar/WithTitle';
 
 storiesOf('ProgressBar', module)
 	.add(
@@ -24,6 +26,16 @@ storiesOf('ProgressBar', module)
 			component: ProgressBar,
 			example: VariousColorsExample,
 			code: variousColorsCode,
+			path: ['ProgressBar'],
+			options: { showAddonPanel: true },
+		})
+	)
+	.add(
+		'with title',
+		exampleStory({
+			component: ProgressBar,
+			example: WithTitleExample,
+			code: withTitleCode,
 			path: ['ProgressBar'],
 			options: { showAddonPanel: true },
 		})
