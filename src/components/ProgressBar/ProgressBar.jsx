@@ -6,15 +6,7 @@ import { createClass } from '../../util/component-types.js';
 
 const cx = lucidClassNames.bind('&-ProgressBar');
 
-const { number, string, oneOf, any } = PropTypes;
-
-const style = {
-	root: {
-		display: 'flex',
-		margin: '8px 0',
-		border: '1px solid #f4f4f4',
-	},
-};
+const { number, string, oneOf, any, bool } = PropTypes;
 
 const ProgressBar = createClass({
 	displayName: 'Progress Bar',
@@ -32,7 +24,7 @@ const ProgressBar = createClass({
 
 	propTypes: {
 		className: string`
-		Appended to the component-specific class names set on the root element.
+			Appended to the component-specific class names set on the root element.
 		`,
 
 		kind: oneOf(['default', 'success', 'danger', 'info', 'warning'])`
@@ -43,8 +35,11 @@ const ProgressBar = createClass({
 			Percentage ProgressBar is complete.
 		`,
 
-		// not sure what this is or what it does?
 		children: any,
+
+		hasLabel: bool`
+			Displays ther percent complete within the ProgressBar.
+		`,
 	},
 
 	getDefaultProps() {
@@ -52,11 +47,12 @@ const ProgressBar = createClass({
 			kind: 'default',
 			percentComplete: 50,
 			children: '\u00A0',
+			hasLabel: false,
 		};
 	},
 
 	render() {
-		const { kind, percentComplete, children } = this.props;
+		const { kind, percentComplete, children, hasLabel } = this.props;
 
 		return (
 			<div className={cx('&')}>
@@ -66,6 +62,7 @@ const ProgressBar = createClass({
 						width: `${percentComplete}%`,
 					}}
 				>
+					{hasLabel ? `${percentComplete}%` : null}
 					{children}
 				</div>
 			</div>
