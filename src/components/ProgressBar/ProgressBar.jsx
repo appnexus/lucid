@@ -57,10 +57,8 @@ const ProgressBar = createClass({
 		return (
 			<div className={cx('&')}>
 				<div
-					className={cx(`&-${kind}`)}
-					style={{
-						width: `${percentComplete}%`,
-					}}
+					className={percentComplete > 0 ? cx(`&-${kind}`) : null}
+					style={{ width: `${percentComplete}%` }}
 				>
 					{hasLabel ? `${percentComplete}%` : null}
 					{children}
