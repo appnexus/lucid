@@ -11,15 +11,15 @@ export default createClass({
 		return (
 			<div>
 				<p>Default</p>
-				<ProgressBar percentComplete="20" kind="default" />
+				<ProgressBar kind="default" />
 				<p>Success</p>
-				<ProgressBar percentComplete="40" kind="success" />
+				<ProgressBar kind="success" />
 				<p>Warning</p>
-				<ProgressBar percentComplete="60" kind="warning" />
+				<ProgressBar kind="warning" />
 				<p>Danger</p>
-				<ProgressBar percentComplete="80" kind="danger" />
+				<ProgressBar kind="danger" />
 				<p>Info</p>
-				<ProgressBar percentComplete="100" kind="info" />
+				<ProgressBar kind="info" />
 			</div>
 		);
 	},

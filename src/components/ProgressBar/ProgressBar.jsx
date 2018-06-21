@@ -49,7 +49,7 @@ const ProgressBar = createClass({
 	getDefaultProps() {
 		return {
 			kind: 'default',
-			percentComplete: 50,
+			percentComplete: 100,
 			children: '\u00A0',
 			title: '',
 		};

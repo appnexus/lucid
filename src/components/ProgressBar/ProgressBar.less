@@ -5,9 +5,36 @@
 	display: flex;
 	text-align: center;
 	margin: 8px 0;
-	border: 1px solid #f4f4f4;
 	background-color: #f4f4f4;
 	height: 4px;
+
+	&:before {
+		display: block;
+		position: absolute;
+		content: "";
+		left: 100%;
+		width: 100%;
+		height: 4px;
+		background-color: #f4f4f4;
+		animation: loading 7s linear;
+		animation-iteration-count: 1;
+	}
+
+	@keyframes loading {
+		from {left: 0%; width: 100%;}
+		0% {left: 0%;}
+		5% {left: 2%;}
+		10% {left: 20%;}
+		20% {left: 40%;}
+		30% {left: 43%;}
+		40% {left: 46%;}
+		50% {left: 50%;}
+		60% {left: 51%;}
+		70% {left: 70%;}
+		80% {left: 73%;}
+		90% {left: 90%;}
+		to {right: 0%;}
+	}
 
 	&-title {
 		margin: 5px;
@@ -17,26 +44,21 @@
 	// Kinds
 	&-default {
 		background: #2abbb0;
-		border: 1px solid #2abbb0;
 	}
 
 	&-success {
 		background: @featured-color-success-borderColorLite;
-		border: 1px solid @featured-color-success-borderColorLite;
 	}
 
 	&-danger {
 		background: @featured-color-danger-borderColorLite;
-		border: 1px solid @featured-color-danger-borderColorLite;
 	}
 
 	&-info {
 		background: @featured-color-info-borderColorLite;
-		border: 1px solid @featured-color-info-borderColorLite;
 	}
 
 	&-warning {
 		background: @featured-color-warning-borderColorLite;
-		border: 1px solid @featured-color-warning-borderColorLite;
 	}
 }
