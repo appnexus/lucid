@@ -2,63 +2,56 @@
 @import (reference) '../../styles/mixins.less';
 
 .lucid-ProgressBar {
-	display: flex;
-	text-align: center;
-	margin: 8px 0;
-	background-color: #f4f4f4;
-	height: 4px;
 
-	&:before {
-		display: block;
-		position: absolute;
-		content: "";
-		left: 100%;
-		width: 100%;
-		height: 4px;
-		background-color: #f4f4f4;
-		animation: loading 7s linear;
-		animation-iteration-count: 1;
+	&-bar {
+		display: flex;
+		text-align: center;
+		margin: @size-S 0;
+		background-color: @color-lightGray;
+		height: @size-XXS;
 	}
 
-	@keyframes loading {
-		from {left: 0%; width: 100%;}
-		0% {left: 0%;}
-		5% {left: 2%;}
-		10% {left: 20%;}
-		20% {left: 40%;}
-		30% {left: 43%;}
-		40% {left: 46%;}
-		50% {left: 50%;}
-		60% {left: 51%;}
-		70% {left: 70%;}
-		80% {left: 73%;}
-		90% {left: 90%;}
-		to {right: 0%;}
+	&-bar-progress {
+		transition: width @timing-animation-fade ease-in-out;
+		height: @size-XXS;
 	}
 
 	&-title {
-		margin: 5px;
+		margin: @size-XS;
 		font-weight: bold;
 	}
 
 	// Kinds
-	&-default {
-		background: #2abbb0;
+	&-bar-default {
+		background: @color-primary;
+		&-is-pulsed {
+			background-color: white;
+			background-image: linear-gradient(to right,
+				@color-primary 15%,
+				rgba(42, 187, 175, 0.35) 50%,
+				@color-primary 85%);
+			// animation: lucid-ProgressBar-is-pulsing 1s linear 0s infinite;
+		}
 	}
 
-	&-success {
+	&-bar-success {
 		background: @featured-color-success-borderColorLite;
 	}
 
-	&-danger {
+	&-bar-danger {
 		background: @featured-color-danger-borderColorLite;
 	}
 
-	&-info {
+	&-bar-info {
 		background: @featured-color-info-borderColorLite;
 	}
 
-	&-warning {
+	&-bar-warning {
 		background: @featured-color-warning-borderColorLite;
+	}
+
+	@keyframes lucid-ProgressBar-is-pulsing {
+		from { background-position-x: 0 }
+		to { background-position-x: 1000px }
 	}
 }

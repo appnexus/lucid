@@ -49,8 +49,7 @@ const ProgressBar = createClass({
 	getDefaultProps() {
 		return {
 			kind: 'default',
-			percentComplete: 100,
-			children: '\u00A0',
+			percentComplete: 0,
 			title: '',
 		};
 	},
@@ -59,11 +58,13 @@ const ProgressBar = createClass({
 		const { kind, percentComplete, children, title } = this.props;
 
 		return (
-			<div className={cx('&-title')}>
-				{title}
-				<div className={cx('&')}>
+			<div className={cx('&')}>
+				<div className={cx('&-title')}>{title}</div>
+				<div className={cx('&-bar')}>
 					<div
-						className={percentComplete > 0 ? cx(`&-${kind}`) : null}
+						className={cx(`&-bar-${kind}`, `&-bar-progress`, {
+							[`&-bar-${kind}-is-pulsed`]: percentComplete < 100,
+						})}
 						style={{ width: `${percentComplete}%` }}
 					>
 						{children}
