@@ -62,11 +62,7 @@ const Icon = createClass({
 		`,
 
 		onSelect: func`
-			Called if user already has \`onClick\` in place.
-		`,
-
-		handleClick: func`
-			Called when user clicks the \`Icon\`. Signature:
+			Called when the user clicks the \`Icon\`. Signature:
 			\`({event, props}) => {}\`
 		`,
 
@@ -87,10 +83,14 @@ const Icon = createClass({
 	},
 
 	handleClick(event) {
-		const { onClick } = this.props;
+		const { onClick, isDisabled, isClickable, onSelect } = this.props;
 		const domNode = ReactDOM.findDOMNode(this);
 
 		if (onClick) {
+			onClick(event);
+		}
+
+		if (onSelect && isClickable && !isDisabled) {
 			domNode.focus();
 			onSelect({ event, props: this.props });
 		}
