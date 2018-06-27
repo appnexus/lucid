@@ -1,12 +1,13 @@
 import React from 'react';
+import createClass from 'create-react-class';
 import { ProgressBar } from '../../../src/index.js';
 
-export default class extends React.Component {
+export default createClass({
+	getInitialState() {
+		return {};
+	},
+
 	render() {
-		return (
-			<div>
-				<ProgressBar title="Title" />
-			</div>
-		);
-	}
-}
+		return <ProgressBar title="Title" percentComplete={75} />;
+	},
+});
