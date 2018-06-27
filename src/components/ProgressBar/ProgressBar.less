@@ -2,18 +2,73 @@
 @import (reference) '../../styles/mixins.less';
 
 .lucid-ProgressBar {
+	@bar-width: 5000px;
 
-	&-bar {
-		display: flex;
-		text-align: center;
-		margin: @size-S 0;
-		background-color: @color-lightGray;
-		height: @size-XXS;
+	.pulse(@color) {
+		background-color: @color-white;
+		background-image: linear-gradient(to right, @color 15%, fade(@color, 25%) 50%, @color 85%);
+		animation: lucid-ProgressBar-is-pulsing 3s linear 0s infinite;
 	}
 
-	&-bar-progress {
-		transition: width @timing-animation-fade ease-in-out;
+	&-bar-container {
+		overflow: hidden;
+		position: relative;
+		margin: @size-S 0;
+	}
+
+	&-bar {
+		background: @color-primary;
 		height: @size-XXS;
+		min-width: @bar-width;
+
+		&-default {
+			background: @color-primary;
+
+			&-is-pulsed {
+				.pulse(@color-primary);
+			}
+		}
+
+		&-success {
+			background: @featured-color-success-borderColorLite;
+
+			&-is-pulsed {
+				.pulse(@featured-color-success-borderColorLite);
+			}
+		}
+
+		&-danger {
+			background: @featured-color-danger-borderColorLite;
+
+			&-is-pulsed {
+				.pulse(@featured-color-danger-borderColorLite);
+			}
+		}
+
+		&-info {
+			background: @featured-color-info-borderColorLite;
+
+			&-is-pulsed {
+				.pulse(@featured-color-info-borderColorLite);
+			}
+		}
+
+		&-warning {
+			background: @featured-color-warning-borderColorLite;
+
+			&-is-pulsed {
+				.pulse(@featured-color-warning-borderColorLite);
+			}
+		}
+	}
+
+	&-bar-overlay {
+		background-color: @color-lightGray;
+		height: @size-XXS;
+		transition: width @timing-animation-fade ease-in-out;
+		position: absolute;
+		right: 0;
+		top: 0;
 	}
 
 	&-title {
@@ -21,37 +76,8 @@
 		font-weight: bold;
 	}
 
-	// Kinds
-	&-bar-default {
-		background: @color-primary;
-		&-is-pulsed {
-			background-color: white;
-			background-image: linear-gradient(to right,
-				@color-primary 15%,
-				rgba(42, 187, 175, 0.35) 50%,
-				@color-primary 85%);
-			// animation: lucid-ProgressBar-is-pulsing 1s linear 0s infinite;
-		}
-	}
-
-	&-bar-success {
-		background: @featured-color-success-borderColorLite;
-	}
-
-	&-bar-danger {
-		background: @featured-color-danger-borderColorLite;
-	}
-
-	&-bar-info {
-		background: @featured-color-info-borderColorLite;
-	}
-
-	&-bar-warning {
-		background: @featured-color-warning-borderColorLite;
-	}
-
 	@keyframes lucid-ProgressBar-is-pulsing {
-		from { background-position-x: 0 }
-		to { background-position-x: 1000px }
+		from { background-position: 0; }
+		to { background-position: @bar-width; }
 	}
 }
