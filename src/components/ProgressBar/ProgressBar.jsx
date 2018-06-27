@@ -14,7 +14,7 @@ const ProgressBar = createClass({
 	statics: {
 		peek: {
 			description: `
-				A Progress Bar component is used to indicate progress in a procedure 
+				A Progress Bar component is used to indicate progress in a procedure
 				consisting of numerous discrete steps or continuous operation.
 			`,
 
@@ -55,20 +55,21 @@ const ProgressBar = createClass({
 	},
 
 	render() {
-		const { kind, percentComplete, children, title } = this.props;
+		const { kind, percentComplete, title } = this.props;
 
 		return (
 			<div className={cx('&')}>
 				<div className={cx('&-title')}>{title}</div>
-				<div className={cx('&-bar')}>
+				<div className={cx('&-bar-container')}>
 					<div
-						className={cx(`&-bar-${kind}`, `&-bar-progress`, {
+						className={cx(`&-bar`, `&-bar-${kind}`, {
 							[`&-bar-${kind}-is-pulsed`]: percentComplete < 100,
 						})}
-						style={{ width: `${percentComplete}%` }}
-					>
-						{children}
-					</div>
+					/>
+					<div
+						className={cx(`&-bar-overlay`)}
+						style={{ width: `${100 - percentComplete}%` }}
+					/>
 				</div>
 			</div>
 		);
