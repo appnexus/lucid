@@ -61,8 +61,8 @@ const Icon = createClass({
 			isClickable to be false.
 		`,
 
-		onClick: func`
-			Called when user clicks the \`Icon\`. Signature:
+		onSelect: func`
+			Called when the user clicks the \`Icon\`. Signature:
 			\`({event, props}) => {}\`
 		`,
 
@@ -82,13 +82,17 @@ const Icon = createClass({
 		};
 	},
 
-	onSelect(event) {
-		const { isClickable, isDisabled, onClick } = this.props;
+	handleClick(event) {
+		const { onClick, isDisabled, isClickable, onSelect } = this.props;
 		const domNode = ReactDOM.findDOMNode(this);
 
-		if (!isDisabled && isClickable) {
+		if (onClick) {
+			onClick(event);
+		}
+
+		if (onSelect && isClickable && !isDisabled) {
 			domNode.focus();
-			onClick({ event, props: this.props });
+			onSelect({ event, props: this.props });
 		}
 	},
 
@@ -135,7 +139,7 @@ const Icon = createClass({
 					},
 					className
 				)}
-				onClick={this.handleSelect}
+				onClick={this.handleClick}
 			>
 				{children}
 			</svg>
