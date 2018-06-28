@@ -8,6 +8,6 @@ export default createClass({
 	},
 
 	render() {
-		return <ProgressBar title="Title" percentComplete={75} />;
+		return <ProgressBar Title="Title" percentComplete={75} />;
 	},
 });
