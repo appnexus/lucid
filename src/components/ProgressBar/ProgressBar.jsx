@@ -41,25 +41,32 @@ const ProgressBar = createClass({
 			Whether or not a title is displayed above the ProgressBar.
 		`,
 
-		title: string`
-			The title text that is displayed above ProgressBar.
-		`,
+		Title: createClass({
+			displayName: 'ProgressBar.Title',
+			statics: {
+				peek: {
+					description: `
+						The title displayed above the ProgressBar.
+					`,
+				},
+			},
+		}),
 	},
 
 	getDefaultProps() {
 		return {
 			kind: 'default',
 			percentComplete: 0,
-			title: '',
+			Title: '',
 		};
 	},
 
 	render() {
-		const { kind, percentComplete, title } = this.props;
+		const { kind, percentComplete, Title } = this.props;
 
 		return (
 			<div className={cx('&')}>
-				<div className={cx('&-title')}>{title}</div>
+				<div className={cx('&-title')}>{Title}</div>
 				<div className={cx('&-bar-container')}>
 					<div
 						className={cx(`&-bar`, `&-bar-${kind}`, {

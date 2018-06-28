@@ -1,43 +1,33 @@
 import React from 'react';
 import { ProgressBar } from '../../../src/index.js';
+import { TextField } from '../../../src/index.js';
+
+const style = {
+	marginBottom: '10px',
+	marginTop: '10px',
+};
 
 export default class extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			percentEntered: '',
-			percentCompleteValue: 95,
+			value: '',
+			percentComplete: 95,
 		};
-		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
-	}
-
-	handleChange(event) {
-		this.setState({
-			percentEntered: event.target.value,
-		});
-	}
-
-	handleSubmit(event) {
-		this.setState({
-			percentCompleteValue: this.state.percentEntered,
-			percentEntered: '',
-		});
-		event.preventDefault();
 	}
 
 	render() {
 		return (
 			<div>
-				<form onSubmit={this.handleSubmit}>
-					<input
-						type="text"
-						placeholder="Enter % complete"
-						value={this.state.percentEntered}
-						onChange={this.handleChange}
-					/>
-				</form>
-				<ProgressBar percentComplete={this.state.percentCompleteValue} />
+				Enter % complete:
+				<TextField
+					style={style}
+					value={this.state.value}
+					onSubmit={value =>
+						this.setState({ percentComplete: value, value: '' })
+					}
+				/>
+				<ProgressBar percentComplete={this.state.percentComplete} />
 			</div>
 		);
 	}
