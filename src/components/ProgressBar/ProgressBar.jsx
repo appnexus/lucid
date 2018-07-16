@@ -2,14 +2,18 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers.js';
-import { createClass } from '../../util/component-types.js';
+import {
+	createClass,
+	omitProps,
+	getFirst,
+} from '../../util/component-types.js';
 
 const cx = lucidClassNames.bind('&-ProgressBar');
 
-const { number, string, oneOf, any, bool } = PropTypes;
+const { number, string, oneOf, any, node } = PropTypes;
 
 const ProgressBar = createClass({
-	displayName: 'Progress Bar',
+	displayName: 'ProgressBar',
 
 	statics: {
 		peek: {
@@ -20,6 +24,22 @@ const ProgressBar = createClass({
 
 			categories: ['communication'],
 		},
+	},
+
+	propName: 'ProgressBar',
+
+	components: {
+		Title: createClass({
+			displayName: 'ProgressBar.Title',
+			statics: {
+				peek: {
+					description: `
+						Content displayed at the top of the ProgressBar.
+					`,
+				},
+			},
+			propName: 'Title',
+		}),
 	},
 
 	propTypes: {
@@ -35,38 +55,50 @@ const ProgressBar = createClass({
 			Percentage ProgressBar is complete.
 		`,
 
-		children: any,
+		// children: any
+		children: node,
 
-		hasTitle: bool`
-			Whether or not a title is displayed above the ProgressBar.
+		Title: node`
+			*Child Element* - Title contents. Only one \`Title\` is used.
 		`,
-
-		Title: createClass({
-			displayName: 'ProgressBar.Title',
-			statics: {
-				peek: {
-					description: `
-						The title displayed above the ProgressBar.
-					`,
-				},
-			},
-		}),
 	},
 
 	getDefaultProps() {
 		return {
 			kind: 'default',
 			percentComplete: 0,
-			Title: '',
 		};
 	},
 
 	render() {
-		const { kind, percentComplete, Title } = this.props;
+		const {
+			kind,
+			percentComplete,
+			className,
+			children,
+			...passThroughs
+		} = this.props;
+
+		const titleChildProp = _.get(
+			getFirst(this.props, ProgressBar.Title),
+			'props',
+			{}
+		);
+
+		console.log(titleChildProp);
 
 		return (
-			<div className={cx('&')}>
-				<div className={cx('&-title')}>{Title}</div>
+			<div
+				{...omitProps(passThroughs, ProgressBar)}
+				className={cx('&', className, {
+					'&-default': kind === 'default',
+					'&-success': kind === 'success',
+					'&-danger': kind === 'danger',
+					'&-info': kind === 'info',
+					'&-warning': kind === 'warning',
+				})}
+			>
+				<title {...titleChildProp} className={cx('&-title')} />
 				<div className={cx('&-bar-container')}>
 					<div
 						className={cx(`&-bar`, `&-bar-${kind}`, {
