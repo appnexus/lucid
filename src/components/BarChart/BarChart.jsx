@@ -45,7 +45,7 @@ const BarChart = createClass({
 		MARGIN: {
 			top: 10,
 			right: 20,
-			bottom: 50,
+			bottom: 75,
 			left: 80,
 		},
 	},
@@ -230,7 +230,7 @@ const BarChart = createClass({
 			margin: {
 				top: 10,
 				right: 20,
-				bottom: 50,
+				bottom: 75,
 				left: 80,
 			},
 			palette: chartConstants.PALETTE_6,
@@ -387,6 +387,7 @@ const BarChart = createClass({
 				<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
 					<Axis
 						orient="bottom"
+						textOrientation="diagonal"
 						scale={xScale}
 						outerTickSize={0}
 						tickFormat={xAxisFinalFormatter}
