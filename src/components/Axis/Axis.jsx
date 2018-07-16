@@ -114,14 +114,55 @@ const Axis = createClass({
 		const range = scale.range();
 		const sign = orient === 'top' || orient === 'left' ? -1 : 1;
 		const isH = orient === 'top' || orient === 'bottom'; // is horizontal
+		const getOrientationProperties = (orient, textOrientation) => {
+			let textAnchor;
+			switch (orient) {
+				case 'bottom':
+					textAnchor =
+						textOrientation === 'vertical'
+							? 'end'
+							: textOrientation === 'diagonal' ? 'start' : 'middle';
+					break;
+				case 'top':
+					textAnchor =
+						textOrientation === 'vertical'
+							? 'end'
+							: textOrientation === 'diagonal' ? 'start' : 'middle';
+					break;
+				case 'right':
+					textAnchor =
+						textOrientation === 'vertical'
+							? 'end'
+							: textOrientation === 'diagonal' ? 'start' : 'middle';
+					break;
+				case 'left':
+					textAnchor =
+						textOrientation === 'vertical'
+							? 'middle'
+							: textOrientation === 'diagonal' ? 'end' : 'end';
+					break;
+			}
+			return {
+				transform:
+					textOrientation === 'vertical'
+						? 'rotate(-90)'
+						: textOrientation === 'diagonal' ? 'rotate(45)' : '',
+				textAnchor,
+				x: -1 * tickSpacing,
+				y: -1 * tickSpacing / 2,
+			};
+		};
 		const orientationProperties = {
-			vertical: {
-				transform: 'rotate(-90)',
-				// check textAnchor
-				textAnchor: sign < 0 ? 'end' : 'start',
-				x: isH ? 0 : sign * tickSpacing,
-				y: isH ? sign * tickSpacing : 0,
-			},
+			vertical: getOrientationProperties(orient, 'vertical'),
+			// vertical: {
+			// 	transform: 'rotate(-90)',
+			// 	// check textAnchor
+			// 	textAnchor: sign < 0 ? 'end' : 'end',
+			// 	// x: isH ? 0 : sign * tickSpacing,
+			// 	// y: isH ? sign * tickSpacing : 0,
+			// 	x: (-1 * tickSpacing),
+			// 	y: (-1 * tickSpacing) / 2,
+			// },
 			horizontal: {
 				transform: '',
 				textAnchor: isH ? 'middle' : sign < 0 ? 'end' : 'start',
