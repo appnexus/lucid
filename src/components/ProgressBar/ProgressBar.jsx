@@ -10,7 +10,7 @@ import {
 
 const cx = lucidClassNames.bind('&-ProgressBar');
 
-const { number, string, oneOf, any, node } = PropTypes;
+const { number, string, oneOf, node } = PropTypes;
 
 const ProgressBar = createClass({
 	displayName: 'ProgressBar',
@@ -55,7 +55,6 @@ const ProgressBar = createClass({
 			Percentage ProgressBar is complete.
 		`,
 
-		// children: any
 		children: node,
 
 		Title: node`
@@ -71,21 +70,13 @@ const ProgressBar = createClass({
 	},
 
 	render() {
-		const {
-			kind,
-			percentComplete,
-			className,
-			children,
-			...passThroughs
-		} = this.props;
+		const { kind, percentComplete, className, ...passThroughs } = this.props;
 
 		const titleChildProp = _.get(
 			getFirst(this.props, ProgressBar.Title),
 			'props',
 			{}
 		);
-
-		console.log(titleChildProp);
 
 		return (
 			<div
