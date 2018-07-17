@@ -115,31 +115,71 @@ const Axis = createClass({
 		const sign = orient === 'top' || orient === 'left' ? -1 : 1;
 		const isH = orient === 'top' || orient === 'bottom'; // is horizontal
 		const getOrientationProperties = (orient, textOrientation) => {
-			let textAnchor;
+			let textAnchor, x, y, dy;
+			let orientationSign = sign;
 			switch (orient) {
 				case 'bottom':
+					if (textOrientation === 'vertical') {
+						orientationSign = -orientationSign;
+					}
 					textAnchor =
 						textOrientation === 'vertical'
 							? 'end'
 							: textOrientation === 'diagonal' ? 'start' : 'middle';
+					x =
+						textOrientation === 'vertical' || textOrientation === 'diagonal'
+							? orientationSign * tickSpacing
+							: 0;
+					y =
+						textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
+					dy =
+						textOrientation === 'vertical' || textOrientation === 'diagonal'
+							? '.32em'
+							: '.71em';
 					break;
 				case 'top':
+					if (textOrientation === 'vertical') {
+						orientationSign = -orientationSign;
+					}
 					textAnchor =
 						textOrientation === 'vertical'
-							? 'end'
-							: textOrientation === 'diagonal' ? 'start' : 'middle';
+							? 'start'
+							: textOrientation === 'diagonal' ? 'end' : 'middle';
+					x =
+						textOrientation === 'vertical' || textOrientation === 'diagonal'
+							? orientationSign * tickSpacing
+							: 0;
+					y =
+						textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
+					dy =
+						textOrientation === 'vertical' || textOrientation === 'diagonal'
+							? '.32em'
+							: '0em';
 					break;
 				case 'right':
-					textAnchor =
+					textAnchor = textOrientation === 'vertical' ? 'middle' : 'start';
+					x =
+						textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
+					y =
 						textOrientation === 'vertical'
-							? 'end'
-							: textOrientation === 'diagonal' ? 'start' : 'middle';
+							? orientationSign * tickSpacing
+							: textOrientation === 'horizontal'
+								? 0
+								: -orientationSign * tickSpacing;
+					dy = textOrientation === 'vertical' ? '.71em' : '.32em';
 					break;
 				case 'left':
 					textAnchor =
 						textOrientation === 'vertical'
-							? 'middle'
+							? 'start'
 							: textOrientation === 'diagonal' ? 'end' : 'end';
+					x = orientationSign * tickSpacing;
+					y =
+						textOrientation === 'vertical' ? orientationSign * tickSpacing : 0;
+					dy =
+						textOrientation === 'vertical'
+							? '0em'
+							: textOrientation === 'horizontal' ? '.32em' : '.71em';
 					break;
 			}
 			return {
@@ -148,33 +188,15 @@ const Axis = createClass({
 						? 'rotate(-90)'
 						: textOrientation === 'diagonal' ? 'rotate(45)' : '',
 				textAnchor,
-				x: -1 * tickSpacing,
-				y: -1 * tickSpacing / 2,
+				x,
+				y,
+				dy,
 			};
 		};
 		const orientationProperties = {
 			vertical: getOrientationProperties(orient, 'vertical'),
-			// vertical: {
-			// 	transform: 'rotate(-90)',
-			// 	// check textAnchor
-			// 	textAnchor: sign < 0 ? 'end' : 'end',
-			// 	// x: isH ? 0 : sign * tickSpacing,
-			// 	// y: isH ? sign * tickSpacing : 0,
-			// 	x: (-1 * tickSpacing),
-			// 	y: (-1 * tickSpacing) / 2,
-			// },
-			horizontal: {
-				transform: '',
-				textAnchor: isH ? 'middle' : sign < 0 ? 'end' : 'start',
-				x: isH ? 0 : sign * tickSpacing,
-				y: isH ? sign * tickSpacing : 0,
-			},
-			diagonal: {
-				transform: 'rotate(45)',
-				textAnchor: 'start',
-				x: sign * tickSpacing,
-				y: sign * tickSpacing,
-			},
+			horizontal: getOrientationProperties(orient, 'horizontal'),
+			diagonal: getOrientationProperties(orient, 'diagonal'),
 		};
 		const orientationKey = textOrientation || 'horizontal';
 
@@ -219,9 +241,10 @@ const Axis = createClass({
 							x={orientationProperties[orientationKey].x}
 							y={orientationProperties[orientationKey].y}
 							dy={
-								isH
-									? sign < 0 ? '0em' : '.71em' // magic d3 number
-									: '.32em' // magic d3 number
+								orientationProperties[orientationKey].dy
+								// isH
+								// 	? sign < 0 ? '0em' : '.71em' // magic d3 number
+								// 	: '.32em' // magic d3 number
 							}
 							style={{
 								textAnchor: orientationProperties[orientationKey].textAnchor,

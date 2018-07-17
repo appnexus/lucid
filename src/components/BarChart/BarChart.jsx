@@ -386,8 +386,8 @@ const BarChart = createClass({
 				{/* x axis */}
 				<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
 					<Axis
-						orient="bottom"
-						textOrientation="vertical"
+						orient="top"
+						textOrientation="diagonal"
 						scale={xScale}
 						outerTickSize={0}
 						tickFormat={xAxisFinalFormatter}
@@ -456,7 +456,7 @@ const BarChart = createClass({
 				<g transform={`translate(${margin.left}, ${margin.top})`}>
 					<Axis
 						orient="left"
-						textOrientation="vertical"
+						textOrientation="diagonal"
 						scale={yScale}
 						tickFormat={yAxisFinalFormatter}
 						tickCount={yAxisTickCount}
