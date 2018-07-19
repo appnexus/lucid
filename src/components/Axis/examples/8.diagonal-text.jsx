@@ -2,7 +2,7 @@ import React from 'react';
 import createClass from 'create-react-class';
 import { Axis, d3Scale } from '../../../index';
 
-const margin = { right: 20, left: 20, top: 10, bottom: 10 };
+const margin = { right: 30, left: 20, top: 40, bottom: 10 };
 const horizontalAxisWidth = 500;
 const horizontalAxisHeight = 100;
 const verticalAxisWidth = 100;
