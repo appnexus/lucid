@@ -124,6 +124,7 @@ import PlusIcon from './components/Icon/PlusIcon/PlusIcon';
 import Point from './components/Point/Point';
 import Points from './components/Points/Points';
 import Portal from './components/Portal/Portal';
+import ProgressBar from './components/ProgressBar/ProgressBar';
 import QuestionMarkCircleIcon from './components/Icon/QuestionMarkCircleIcon/QuestionMarkCircleIcon';
 import RadioButton from './components/RadioButton/RadioButton';
 import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
@@ -291,6 +292,7 @@ export {
 	Point,
 	Points,
 	Portal,
+	ProgressBar,
 	QuestionMarkCircleIcon,
 	RadioButton,
 	RadioButtonLabeled,
