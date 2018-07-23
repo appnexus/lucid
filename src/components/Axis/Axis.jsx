@@ -144,10 +144,10 @@ const Axis = createClass({
 					textAnchor =
 						textOrientation === 'vertical'
 							? 'start'
-							: textOrientation === 'diagonal' ? 'end' : 'middle';
+							: textOrientation === 'diagonal' ? 'start' : 'middle';
 					x =
 						textOrientation === 'vertical' || textOrientation === 'diagonal'
-							? orientationSign * tickSpacing
+							? -orientationSign * tickSpacing
 							: 0;
 					y =
 						textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
@@ -165,7 +165,7 @@ const Axis = createClass({
 							? orientationSign * tickSpacing
 							: textOrientation === 'horizontal'
 								? 0
-								: -orientationSign * tickSpacing;
+								: orientationSign * tickSpacing;
 					dy = textOrientation === 'vertical' ? '.71em' : '.32em';
 					break;
 				case 'left':
@@ -186,7 +186,11 @@ const Axis = createClass({
 				transform:
 					textOrientation === 'vertical'
 						? 'rotate(-90)'
-						: textOrientation === 'diagonal' ? 'rotate(45)' : '',
+						: textOrientation === 'horizontal'
+							? ''
+							: orient === 'bottom' || orient === 'left'
+								? 'rotate(45)'
+								: 'rotate(-30)',
 				textAnchor,
 				x,
 				y,

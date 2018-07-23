@@ -46,7 +46,6 @@ export default createClass({
 						width={horizontalAxisWidth}
 						height={horizontalAxisHeight}
 						margin="400"
-						style={{ marginRight: 40 }}
 					>
 						<g
 							transform={`translate(${margin.left}, ${horizontalAxisHeight /
