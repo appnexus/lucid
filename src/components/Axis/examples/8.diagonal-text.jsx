@@ -4,7 +4,7 @@ import { Axis, d3Scale } from '../../../index';
 
 // individual margin values may need to be changed to
 // prevent or add extra padding depending on use of axis.
-const margin = { right: 30, left: 20, top: 40, bottom: 10 };
+const margin = { right: 40, left: 20, top: 40, bottom: 10 };
 const horizontalAxisWidth = 500;
 const horizontalAxisHeight = 100;
 const verticalAxisWidth = 100;
@@ -42,7 +42,12 @@ export default createClass({
 				</div>
 				<div>
 					<p>bottom</p>
-					<svg width={horizontalAxisWidth} height={horizontalAxisHeight}>
+					<svg
+						width={horizontalAxisWidth}
+						height={horizontalAxisHeight}
+						margin="400"
+						style={{ marginRight: 40 }}
+					>
 						<g
 							transform={`translate(${margin.left}, ${horizontalAxisHeight /
 								2})`}
