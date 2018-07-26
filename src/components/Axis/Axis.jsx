@@ -172,7 +172,9 @@ const Axis = createClass({
 					x =
 						textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
 					y =
-						textOrientation === 'vertical' ? orientationSign * tickSpacing : 0;
+						textOrientation === 'vertical' || textOrientation === 'diagonal'
+							? orientationSign * tickSpacing
+							: 0;
 					dy =
 						textOrientation === 'vertical'
 							? '0em'
