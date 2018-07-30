@@ -31,7 +31,7 @@ exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.
     key=".1"
     margin={
       Object {
-        "bottom": 50,
+        "bottom": 75,
         "left": 80,
         "right": 20,
         "top": 10,
@@ -51,6 +51,7 @@ exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.
     width={1000}
     xAxisField="x"
     xAxisFormatter={[Function]}
+    xAxisTextOrientation="horizontal"
     xAxisTickCount={null}
     xAxisTitle={null}
     xAxisTitleColor="#000"
@@ -61,6 +62,7 @@ exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.
     }
     yAxisIsStacked={false}
     yAxisMin={0}
+    yAxisTextOrientation="horizontal"
     yAxisTickCount={null}
     yAxisTitle={null}
     yAxisTitleColor="#000"

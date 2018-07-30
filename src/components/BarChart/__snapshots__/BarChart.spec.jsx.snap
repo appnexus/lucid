@@ -7,44 +7,46 @@ exports[`BarChart [common] example testing should match snapshot(s) for 01.basic
   width={1000}
 >
   <g
-    transform="translate(80, 350)"
+    transform="translate(80, 325)"
   >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
     />
   </g>
   <g
-    transform="translate(80, 10)"
+    transform="translate(80, 20)"
   >
     <Axis
       innerTickSize={6}
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
     />
   </g>
   <g
-    transform="translate(0, 10)"
+    transform="translate(0, 20)"
   >
     <AxisLabel
       color="#000"
-      height={340}
+      height={305}
       label="Revenue"
       orient="left"
       width={80}
     />
   </g>
   <g
-    transform="translate(80, 10)"
+    transform="translate(80, 20)"
   >
     <Bars
       colorOffset={0}
@@ -105,13 +107,14 @@ exports[`BarChart [common] example testing should match snapshot(s) for 03.group
   width={1000}
 >
   <g
-    transform="translate(80, 350)"
+    transform="translate(80, 325)"
   >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -125,6 +128,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 03.group
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -135,7 +139,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 03.group
   >
     <AxisLabel
       color="#000"
-      height={340}
+      height={315}
       label="Fruit Count"
       orient="left"
       width={80}
@@ -239,13 +243,14 @@ exports[`BarChart [common] example testing should match snapshot(s) for 04.group
   width={1000}
 >
   <g
-    transform="translate(80, 350)"
+    transform="translate(80, 325)"
   >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -259,6 +264,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 04.group
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -269,7 +275,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 04.group
   >
     <AxisLabel
       color="#000"
-      height={340}
+      height={315}
       label="Fruit Count"
       orient="left"
       width={80}
@@ -349,13 +355,14 @@ exports[`BarChart [common] example testing should match snapshot(s) for 05.limit
   width={1000}
 >
   <g
-    transform="translate(80, 350)"
+    transform="translate(80, 325)"
   >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={5}
       tickFormat={[Function]}
       tickPadding={3}
@@ -369,6 +376,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 05.limit
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={4}
       tickFormat={[Function]}
       tickPadding={3}
@@ -488,24 +496,25 @@ exports[`BarChart [common] example testing should match snapshot(s) for 06.all-t
   width={1000}
 >
   <g
-    transform="translate(80, 350)"
+    transform="translate(80, 325)"
   >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={2}
       tickFormat={[Function]}
       tickPadding={3}
     />
   </g>
   <g
-    transform="translate(80, 350)"
+    transform="translate(80, 325)"
   >
     <AxisLabel
       color="#000"
-      height={50}
+      height={75}
       label="Weekdays"
       orient="bottom"
       width={900}
@@ -519,6 +528,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 06.all-t
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={4}
       tickFormat={[Function]}
       tickPadding={3}
@@ -529,7 +539,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 06.all-t
   >
     <AxisLabel
       color="#000"
-      height={340}
+      height={315}
       label="Fruit Count"
       orient="left"
       width={80}
@@ -608,13 +618,14 @@ exports[`BarChart [common] example testing should match snapshot(s) for 07.stack
   width={1000}
 >
   <g
-    transform="translate(80, 350)"
+    transform="translate(80, 325)"
   >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -628,6 +639,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 07.stack
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -638,7 +650,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 07.stack
   >
     <AxisLabel
       color="#000"
-      height={340}
+      height={315}
       label="Fruit Count"
       orient="left"
       width={80}
@@ -710,13 +722,14 @@ exports[`BarChart [common] example testing should match snapshot(s) for 08.unfor
   width={1000}
 >
   <g
-    transform="translate(80, 350)"
+    transform="translate(80, 325)"
   >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -730,6 +743,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 08.unfor
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -740,7 +754,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 08.unfor
   >
     <AxisLabel
       color="#000"
-      height={340}
+      height={315}
       label="Revenue"
       orient="left"
       width={80}
@@ -808,13 +822,14 @@ exports[`BarChart [common] example testing should match snapshot(s) for 09.forma
   width={1000}
 >
   <g
-    transform="translate(80, 350)"
+    transform="translate(80, 325)"
   >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -828,6 +843,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 09.forma
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -838,7 +854,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 09.forma
   >
     <AxisLabel
       color="#000"
-      height={340}
+      height={315}
       label="Revenue"
       orient="left"
       width={80}
@@ -906,13 +922,14 @@ exports[`BarChart [common] example testing should match snapshot(s) for 10.forma
   width={1000}
 >
   <g
-    transform="translate(80, 350)"
+    transform="translate(80, 325)"
   >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -926,6 +943,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 10.forma
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -936,7 +954,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 10.forma
   >
     <AxisLabel
       color="#000"
-      height={340}
+      height={315}
       label="Revenue"
       orient="left"
       width={80}
@@ -1008,7 +1026,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 11.empty
     width={1000}
   >
     <g
-      transform="translate(80, 350)"
+      transform="translate(80, 325)"
     >
       <Axis
         innerTickSize={6}
@@ -1058,7 +1076,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 12.empty
     width={1000}
   >
     <g
-      transform="translate(80, 350)"
+      transform="translate(80, 325)"
     >
       <Axis
         innerTickSize={6}
@@ -1089,37 +1107,39 @@ exports[`BarChart [common] example testing should match snapshot(s) for 12.empty
 exports[`BarChart [common] example testing should match snapshot(s) for 13.many-bars 1`] = `
 <svg
   className="lucid-BarChart"
-  height={400}
-  width={1000}
+  height={600}
+  width={1400}
 >
   <g
-    transform="translate(80, 350)"
+    transform="translate(300, 300)"
   >
     <Axis
       innerTickSize={6}
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
-      tickCount={null}
+      textOrientation="diagonal"
+      tickCount={20}
       tickFormat={[Function]}
       tickPadding={3}
     />
   </g>
   <g
-    transform="translate(80, 10)"
+    transform="translate(300, 10)"
   >
     <Axis
       innerTickSize={6}
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
     />
   </g>
   <g
-    transform="translate(80, 10)"
+    transform="translate(300, 10)"
   >
     <Bars
       colorOffset={0}
