@@ -77,7 +77,7 @@ const Axis = createClass({
 
 		textOrientation: oneOf(['vertical', 'horizontal', 'diagonal'])`
 			Determines the orientation of the tick text. This may override what the orient prop
-			tries to determine.
+			tries to determine. This defaults to \`horizontal\`.
 		`,
 	},
 
@@ -86,6 +86,7 @@ const Axis = createClass({
 			innerTickSize: 6, // same as d3
 			outerTickSize: 6, // same as d3
 			tickPadding: 3, // same as d3
+			textOrientation: 'horizontal',
 			orient: 'bottom',
 			tickCount: null,
 		};
@@ -185,11 +186,7 @@ const Axis = createClass({
 				transform:
 					textOrientation === 'vertical'
 						? 'rotate(-90)'
-						: textOrientation === 'horizontal'
-							? ''
-							: orient === 'bottom' || orient === 'left'
-								? 'rotate(-30)'
-								: 'rotate(-30)',
+						: textOrientation === 'horizontal' ? '' : 'rotate(-30)',
 				textAnchor,
 				x,
 				y,
