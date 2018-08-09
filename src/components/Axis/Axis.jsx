@@ -243,12 +243,7 @@ const Axis = createClass({
 							className={cx('&-tick-text')}
 							x={orientationProperties[orientationKey].x}
 							y={orientationProperties[orientationKey].y}
-							dy={
-								orientationProperties[orientationKey].dy
-								// isH
-								// 	? sign < 0 ? '0em' : '.71em' // magic d3 number
-								// 	: '.32em' // magic d3 number
-							}
+							dy={orientationProperties[orientationKey].dy}
 							style={{
 								textAnchor: orientationProperties[orientationKey].textAnchor,
 							}}
