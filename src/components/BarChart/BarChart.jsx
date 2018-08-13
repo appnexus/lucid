@@ -402,7 +402,6 @@ const BarChart = createClass({
 				<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
 					<Axis
 						orient="bottom"
-						// textOrientation={xAxisTickCount > 2 ? "diagonal" : ''}
 						scale={xScale}
 						outerTickSize={0}
 						tickFormat={xAxisFinalFormatter}
