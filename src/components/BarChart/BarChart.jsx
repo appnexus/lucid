@@ -46,7 +46,7 @@ const BarChart = createClass({
 		MARGIN: {
 			top: 10,
 			right: 20,
-			bottom: 75,
+			bottom: 50,
 			left: 80,
 		},
 	},

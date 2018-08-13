@@ -7,7 +7,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 01.basic
   width={1000}
 >
   <g
-    transform="translate(80, 325)"
+    transform="translate(80, 350)"
   >
     <Axis
       innerTickSize={6}
@@ -39,7 +39,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 01.basic
   >
     <AxisLabel
       color="#000"
-      height={305}
+      height={330}
       label="Revenue"
       orient="left"
       width={80}
@@ -1033,6 +1033,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 11.empty
         orient="bottom"
         outerTickSize={6}
         scale={[Function]}
+        textOrientation="horizontal"
         tickCount={null}
         tickPadding={3}
       />
@@ -1045,6 +1046,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 11.empty
         orient="left"
         outerTickSize={6}
         scale={[Function]}
+        textOrientation="horizontal"
         tickCount={null}
         tickFormat={[Function]}
         tickPadding={3}
@@ -1083,6 +1085,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 12.empty
         orient="bottom"
         outerTickSize={6}
         scale={[Function]}
+        textOrientation="horizontal"
         tickCount={null}
         tickPadding={3}
       />
@@ -1095,6 +1098,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 12.empty
         orient="left"
         outerTickSize={6}
         scale={[Function]}
+        textOrientation="horizontal"
         tickCount={null}
         tickFormat={[Function]}
         tickPadding={3}

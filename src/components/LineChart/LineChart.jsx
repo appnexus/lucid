@@ -35,6 +35,7 @@ const {
 	string,
 	bool,
 	oneOfType,
+	oneOf,
 } = PropTypes;
 
 const LineChart = createClass({
@@ -192,6 +193,11 @@ const LineChart = createClass({
 			\`number\` is supported only for backwards compatability.
 		`,
 
+		xAxisTextOrientation: oneOf(['vertical', 'horizontal', 'diagonal'])`
+			Determines the orientation of the tick text. This may override what the orient prop
+			tries to determine.
+		`,
+
 		yAxisFields: arrayOf(string)`
 			An array of your y axis fields. Typically this will just be a single item
 			unless you need to display multiple lines. The order of the array
@@ -316,6 +322,11 @@ const LineChart = createClass({
 			Set the starting index where colors start rotating for points and lines
 			along the y2 axis.
 		`,
+
+		yAxisTextOrientation: oneOf(['vertical', 'horizontal', 'diagonal'])`
+			Determines the orientation of the tick text. This may override what the orient prop
+			tries to determine.
+		`,
 	},
 
 	getDefaultProps() {
@@ -339,6 +350,7 @@ const LineChart = createClass({
 			xAxisTitleColor: '#000',
 			// E.g. "Mon 06/06/2016 15:46:19"
 			xAxisTooltipFormatter: d3TimeFormat.timeFormat('%a %x %X'),
+			xAxisTextOrientation: 'horizontal',
 
 			yAxisFields: ['y'],
 			yAxisIsStacked: false,
@@ -359,6 +371,7 @@ const LineChart = createClass({
 			y2AxisTitle: null,
 			y2AxisTitleColor: '#000',
 			y2AxisColorOffset: 1,
+			yAxisTextOrientation: 'horizontal',
 		};
 	},
 
@@ -408,6 +421,7 @@ const LineChart = createClass({
 			xAxisTooltipFormatter,
 			xAxisMin = minByFields(data, xAxisField),
 			xAxisMax = maxByFields(data, xAxisField),
+			xAxisTextOrientation,
 
 			yAxisFields,
 			yAxisFormatter,
@@ -437,6 +451,7 @@ const LineChart = createClass({
 				? maxByFieldsStacked(data, y2AxisFields)
 				: maxByFields(data, y2AxisFields),
 			y2AxisColorOffset,
+			yAxisTextOrientation,
 
 			...passThroughs
 		} = this.props;
@@ -664,6 +679,7 @@ const LineChart = createClass({
 						tickCount={xAxisTickCount}
 						ticks={xAxisTicks}
 						ref="xAxis"
+						textOrientation={xAxisTextOrientation}
 					/>
 
 					{/* legend */}
@@ -757,6 +773,7 @@ const LineChart = createClass({
 						tickFormat={yAxisFinalFormatter}
 						tickCount={yAxisTickCount}
 						ref="yAxis"
+						textOrientation={yAxisTextOrientation}
 					/>
 				</g>
 
