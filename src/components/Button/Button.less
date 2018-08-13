@@ -40,10 +40,6 @@
 
 	&::before { border-radius: @Button-size-borderRadius; }
 
-	&&-has-only-icon {
-		padding: 0 5px;
-	}
-
 	& &-content {
 		display: flex;
 		justify-content: center;
@@ -52,10 +48,19 @@
 
 		> .lucid-Icon {
 			transition: color @timing-animation-hover, fill @timing-animation-hover;
+			margin-right: 4px;
 		}
 
 		> span {
 			transition: color @timing-animation-hover, fill @timing-animation-hover;
+		}
+	}
+
+	&&-has-only-icon {
+		padding: 8px;
+
+		.lucid-Icon {
+			margin-right: 0;
 		}
 	}
 
@@ -199,6 +204,7 @@
 	// Sizes
 	&&-short {
 		height: @Button-size-height-small;
+		padding: 0 @Button-size-padding/1.5;
 	}
 
 	&&-small {
@@ -208,11 +214,15 @@
 
 	&&-small&-has-only-icon {
 		padding: 0 1px;
+
+		.lucid-Icon {
+			margin-right: 0;
+		}
 	}
 
 	&&-large {
 		height: @Button-size-height-large;
-		padding: 0 @Button-size-padding*1.5;
+		padding: 0 @Button-size-padding;
 		font-size: 1.2em;
 
 		.lucid-Icon {
