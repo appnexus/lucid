@@ -31,7 +31,7 @@ exports[`OverlayWrapper [common] example testing should match snapshot(s) for 1.
     key=".1"
     margin={
       Object {
-        "bottom": 75,
+        "bottom": 50,
         "left": 80,
         "right": 20,
         "top": 10,

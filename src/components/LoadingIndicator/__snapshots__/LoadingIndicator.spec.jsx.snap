@@ -59,7 +59,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     key=".2"
     margin={
       Object {
-        "bottom": 75,
+        "bottom": 50,
         "left": 80,
         "right": 20,
         "top": 10,
@@ -136,7 +136,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     key=".0"
     margin={
       Object {
-        "bottom": 75,
+        "bottom": 50,
         "left": 80,
         "right": 20,
         "top": 10,
@@ -213,7 +213,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     key=".0"
     margin={
       Object {
-        "bottom": 75,
+        "bottom": 50,
         "left": 80,
         "right": 20,
         "top": 10,
@@ -310,7 +310,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     key=".0"
     margin={
       Object {
-        "bottom": 75,
+        "bottom": 50,
         "left": 80,
         "right": 20,
         "top": 10,
@@ -402,7 +402,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     key=".0"
     margin={
       Object {
-        "bottom": 75,
+        "bottom": 50,
         "left": 80,
         "right": 20,
         "top": 10,
@@ -482,7 +482,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     key=".0"
     margin={
       Object {
-        "bottom": 75,
+        "bottom": 50,
         "left": 80,
         "right": 20,
         "top": 10,
@@ -559,7 +559,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     key=".0"
     margin={
       Object {
-        "bottom": 75,
+        "bottom": 50,
         "left": 80,
         "right": 20,
         "top": 10,

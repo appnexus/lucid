@@ -107,7 +107,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 03.group
   width={1000}
 >
   <g
-    transform="translate(80, 325)"
+    transform="translate(80, 350)"
   >
     <Axis
       innerTickSize={6}
@@ -139,7 +139,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 03.group
   >
     <AxisLabel
       color="#000"
-      height={315}
+      height={340}
       label="Fruit Count"
       orient="left"
       width={80}
@@ -243,7 +243,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 04.group
   width={1000}
 >
   <g
-    transform="translate(80, 325)"
+    transform="translate(80, 350)"
   >
     <Axis
       innerTickSize={6}
@@ -275,7 +275,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 04.group
   >
     <AxisLabel
       color="#000"
-      height={315}
+      height={340}
       label="Fruit Count"
       orient="left"
       width={80}
@@ -355,7 +355,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 05.limit
   width={1000}
 >
   <g
-    transform="translate(80, 325)"
+    transform="translate(80, 350)"
   >
     <Axis
       innerTickSize={6}
@@ -496,7 +496,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 06.all-t
   width={1000}
 >
   <g
-    transform="translate(80, 325)"
+    transform="translate(80, 350)"
   >
     <Axis
       innerTickSize={6}
@@ -510,11 +510,11 @@ exports[`BarChart [common] example testing should match snapshot(s) for 06.all-t
     />
   </g>
   <g
-    transform="translate(80, 325)"
+    transform="translate(80, 350)"
   >
     <AxisLabel
       color="#000"
-      height={75}
+      height={50}
       label="Weekdays"
       orient="bottom"
       width={900}
@@ -539,7 +539,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 06.all-t
   >
     <AxisLabel
       color="#000"
-      height={315}
+      height={340}
       label="Fruit Count"
       orient="left"
       width={80}
@@ -618,7 +618,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 07.stack
   width={1000}
 >
   <g
-    transform="translate(80, 325)"
+    transform="translate(80, 350)"
   >
     <Axis
       innerTickSize={6}
@@ -650,7 +650,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 07.stack
   >
     <AxisLabel
       color="#000"
-      height={315}
+      height={340}
       label="Fruit Count"
       orient="left"
       width={80}
@@ -722,7 +722,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 08.unfor
   width={1000}
 >
   <g
-    transform="translate(80, 325)"
+    transform="translate(80, 350)"
   >
     <Axis
       innerTickSize={6}
@@ -754,7 +754,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 08.unfor
   >
     <AxisLabel
       color="#000"
-      height={315}
+      height={340}
       label="Revenue"
       orient="left"
       width={80}
@@ -822,7 +822,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 09.forma
   width={1000}
 >
   <g
-    transform="translate(80, 325)"
+    transform="translate(80, 350)"
   >
     <Axis
       innerTickSize={6}
@@ -854,7 +854,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 09.forma
   >
     <AxisLabel
       color="#000"
-      height={315}
+      height={340}
       label="Revenue"
       orient="left"
       width={80}
@@ -922,7 +922,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 10.forma
   width={1000}
 >
   <g
-    transform="translate(80, 325)"
+    transform="translate(80, 350)"
   >
     <Axis
       innerTickSize={6}
@@ -954,7 +954,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 10.forma
   >
     <AxisLabel
       color="#000"
-      height={315}
+      height={340}
       label="Revenue"
       orient="left"
       width={80}
@@ -1026,7 +1026,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 11.empty
     width={1000}
   >
     <g
-      transform="translate(80, 325)"
+      transform="translate(80, 350)"
     >
       <Axis
         innerTickSize={6}
@@ -1078,7 +1078,7 @@ exports[`BarChart [common] example testing should match snapshot(s) for 12.empty
     width={1000}
   >
     <g
-      transform="translate(80, 325)"
+      transform="translate(80, 350)"
     >
       <Axis
         innerTickSize={6}
