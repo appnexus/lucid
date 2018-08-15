@@ -143,4 +143,69 @@ describe('TextField', () => {
 
 		assert(event.persist.called);
 	});
+
+	it('should flush the `onChangeDebounced`-handled event before blurring', () => {
+		const onBlur = sinon.spy();
+		const internalChangeSpy = sinon.spy();
+		const onChangeDebounced = () => {
+			assert(onBlur.notCalled);
+			internalChangeSpy();
+		};
+		const event = {
+			target: {
+				value: 'foo',
+			},
+			persist: () => {},
+		};
+
+		const wrapper = shallow(
+			<TextField
+				onBlur={onBlur}
+				debounceLevel={100}
+				onChangeDebounced={onChangeDebounced}
+			/>
+		);
+
+		wrapper.find('input').simulate('change', event);
+		assert(internalChangeSpy.notCalled);
+
+		wrapper.find('input').simulate('blur');
+		assert(internalChangeSpy.calledOnce);
+		assert(onBlur.calledOnce);
+	});
+
+	it('should flush the `onChangeDebounced`-handled event before submitting', () => {
+		const onSubmit = sinon.spy();
+		const internalChangeSpy = sinon.spy();
+		const onChangeDebounced = () => {
+			assert(onSubmit.notCalled);
+			internalChangeSpy();
+		};
+		const event = {
+			target: {
+				value: 'foo',
+			},
+			persist: () => {},
+		};
+
+		const wrapper = shallow(
+			<TextField
+				onSubmit={onSubmit}
+				debounceLevel={100}
+				onChangeDebounced={onChangeDebounced}
+			/>
+		);
+
+		wrapper.find('input').simulate('change', event);
+		assert(internalChangeSpy.notCalled);
+
+		wrapper.find('input').simulate('keydown', {
+			keyCode: KEYCODE.Enter,
+			target: {
+				value: 'foo',
+			},
+		});
+		assert(internalChangeSpy.calledOnce);
+		assert(onSubmit.calledOnce);
+	});
 });

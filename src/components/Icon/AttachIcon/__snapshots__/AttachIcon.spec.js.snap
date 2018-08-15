@@ -5,6 +5,7 @@ exports[`AttachIcon [common] example testing should match snapshot(s) for 1.defa
   aspectRatio="xMidYMid meet"
   className="lucid-AttachIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="102.8 0 54.4 60"
@@ -36,6 +37,7 @@ exports[`AttachIcon [common] example testing should match snapshot(s) for 3.disa
   aspectRatio="xMidYMid meet"
   className="lucid-AttachIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={true}
   size={16}
   viewBox="102.8 0 54.4 60"
