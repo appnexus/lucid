@@ -5,6 +5,7 @@ exports[`AnalyzeDataIcon [common] example testing should match snapshot(s) for 1
   aspectRatio="xMidYMid meet"
   className="lucid-AnalyzeDataIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
@@ -88,6 +89,7 @@ exports[`AnalyzeDataIcon [common] example testing should match snapshot(s) for 3
   aspectRatio="xMidYMid meet"
   className="lucid-AnalyzeDataIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={true}
   size={16}
   viewBox="0 0 16 16"

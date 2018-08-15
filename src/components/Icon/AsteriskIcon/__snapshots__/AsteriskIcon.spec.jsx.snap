@@ -5,6 +5,7 @@ exports[`AsteriskIcon [common] example testing should match snapshot(s) for 1.de
   aspectRatio="xMidYMid meet"
   className="lucid-AsteriskIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={false}
   size={18}
   viewBox="0 0 18 18"
@@ -20,6 +21,7 @@ exports[`AsteriskIcon [common] example testing should match snapshot(s) for 1.de
   aspectRatio="xMidYMid meet"
   className="lucid-AsteriskIcon"
   isBadge={true}
+  isClickable={false}
   isDisabled={false}
   size={18}
   viewBox="0 0 18 18"
@@ -67,6 +69,7 @@ exports[`AsteriskIcon [common] example testing should match snapshot(s) for 3.di
   aspectRatio="xMidYMid meet"
   className="lucid-AsteriskIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={true}
   size={18}
   viewBox="0 0 18 18"
@@ -82,6 +85,7 @@ exports[`AsteriskIcon [common] example testing should match snapshot(s) for 3.di
   aspectRatio="xMidYMid meet"
   className="lucid-AsteriskIcon"
   isBadge={true}
+  isClickable={false}
   isDisabled={true}
   size={18}
   viewBox="0 0 18 18"

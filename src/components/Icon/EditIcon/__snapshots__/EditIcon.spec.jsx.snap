@@ -5,6 +5,7 @@ exports[`EditIcon [common] example testing should match snapshot(s) for 1.defaul
   aspectRatio="xMidYMid meet"
   className="lucid-EditIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
@@ -20,6 +21,7 @@ exports[`EditIcon [common] example testing should match snapshot(s) for 1.defaul
   aspectRatio="xMidYMid meet"
   className="lucid-EditIcon"
   isBadge={true}
+  isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
@@ -67,6 +69,7 @@ exports[`EditIcon [common] example testing should match snapshot(s) for 3.disabl
   aspectRatio="xMidYMid meet"
   className="lucid-EditIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={true}
   size={16}
   viewBox="0 0 16 16"
@@ -82,6 +85,7 @@ exports[`EditIcon [common] example testing should match snapshot(s) for 3.disabl
   aspectRatio="xMidYMid meet"
   className="lucid-EditIcon"
   isBadge={true}
+  isClickable={false}
   isDisabled={true}
   size={16}
   viewBox="0 0 16 16"

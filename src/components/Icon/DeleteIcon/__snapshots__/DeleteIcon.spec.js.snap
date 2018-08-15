@@ -5,6 +5,7 @@ exports[`DeleteIcon [common] example testing should match snapshot(s) for 1.defa
   aspectRatio="xMidYMid meet"
   className="lucid-DeleteIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="103.75 0 52.5 60"
@@ -36,6 +37,7 @@ exports[`DeleteIcon [common] example testing should match snapshot(s) for 3.disa
   aspectRatio="xMidYMid meet"
   className="lucid-DeleteIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={true}
   size={16}
   viewBox="103.75 0 52.5 60"
