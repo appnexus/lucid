@@ -241,7 +241,7 @@ const BarChart = createClass({
 			margin: {
 				top: 10,
 				right: 20,
-				bottom: 75,
+				bottom: 50,
 				left: 80,
 			},
 			palette: chartConstants.PALETTE_6,
