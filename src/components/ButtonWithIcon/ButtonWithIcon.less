@@ -40,6 +40,10 @@
 
 	&::before { border-radius: @Button-size-borderRadius; }
 
+	&-icon {
+		padding-right: 8px;
+	}
+
 	& &-content {
 		display: flex;
 		justify-content: center;
@@ -48,6 +52,7 @@
 
 		> .lucid-Icon {
 			transition: color @timing-animation-hover, fill @timing-animation-hover;
+			padding-right: 3px;
 		}
 
 		> span {
