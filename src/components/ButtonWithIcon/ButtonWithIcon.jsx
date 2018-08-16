@@ -84,7 +84,15 @@ const ButtonWithIcon = createClass({
 		return (
 			<div>
 				<Button
-					className={cx('&-Button', className)}
+					className={cx(
+						'&',
+						{
+							'&-short': size === 'short',
+							'&-small': size === 'small',
+							'&-large': size === 'large',
+						},
+						className
+					)}
 					isDisabled={isDisabled}
 					onClick={this.handleClick}
 					ref="button"
