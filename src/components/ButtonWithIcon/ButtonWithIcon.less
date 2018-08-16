@@ -9,6 +9,8 @@
 
 .lucid-ButtonWithIcon {
 
+	padding-left: 4px;
+
 	// only applied to the default button's icon
 	.lucid-Icon {
 		padding-right: 8px;
@@ -30,26 +32,10 @@
 	}
 
 	// Sizes
-	&&-short {
-		height: @Button-size-height-small;
-
-		.lucid-Icon {
-			padding-right: 8px;
-		}
-	}
-
-	&&-small {
-		height: @Button-size-height-small;
-		padding: 0 @Button-size-padding/1.5;
-
-		.lucid-Icon {
-			padding-right: 8px;
-		}
-	}
-
 	&&-large {
 		height: @Button-size-height-large;
 		padding: 0 @Button-size-padding*1.5;
+		padding-left: 8px;
 		font-size: 1.2em;
 
 		.lucid-Icon {
@@ -66,6 +52,7 @@
 		border: none;
 		background: none;
 		color: @color-linkColor;
+		padding-left: 8px;
 
 		&:hover:not(.lucid-Button-is-disabled),
 		&:active:not(.lucid-Button-is-disabled),
@@ -87,7 +74,7 @@
 
 		.lucid-Icon {
 			fill: @color-primary;
-			margin-right: 0.25em;
+			padding-right: 6px;
 
 			+ span {
 				line-height: 1.4em;

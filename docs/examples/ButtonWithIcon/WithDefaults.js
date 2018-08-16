@@ -22,43 +22,81 @@ export default class extends React.Component {
 		return (
 			<section style={sectionStyle}>
 				<article style={articleStyle}>
-					<ButtonWithIcon icon={<EditPageIcon />}>
-						Default Button with Icon
-					</ButtonWithIcon>
+					<ButtonWithIcon icon={<EditPageIcon />}>Edit</ButtonWithIcon>
+				</article>
+				<article style={articleStyle}>
+					<ButtonWithIcon icon={<PlusIcon />}>Add New</ButtonWithIcon>
+				</article>
+				<article style={articleStyle}>
+					<ButtonWithIcon icon={<ViewIcon />}>View details</ButtonWithIcon>
+				</article>
+				<article style={articleStyle}>
+					<ButtonWithIcon icon={<DownloadIcon />}>Download</ButtonWithIcon>
+				</article>
+				<article style={articleStyle}>
+					<ButtonWithIcon icon={<DuplicateIcon />}>Duplicate</ButtonWithIcon>
+				</article>
+				<article style={articleStyle}>
+					<ButtonWithIcon icon={<UploadIcon />}>Upload</ButtonWithIcon>
 				</article>
 				<article style={articleStyle}>
 					<ButtonWithIcon size="large" icon={<EditPageIcon />}>
-						Large Button with Icon
+						Edit
+					</ButtonWithIcon>
+				</article>
+				<article style={articleStyle}>
+					<ButtonWithIcon size="large" icon={<PlusIcon />}>
+						Add New
+					</ButtonWithIcon>
+				</article>
+				<article style={articleStyle}>
+					<ButtonWithIcon size="large" icon={<ViewIcon />}>
+						View details
+					</ButtonWithIcon>
+				</article>
+				<article style={articleStyle}>
+					<ButtonWithIcon size="large" icon={<DownloadIcon />}>
+						Download
+					</ButtonWithIcon>
+				</article>
+				<article style={articleStyle}>
+					<ButtonWithIcon size="large" icon={<DuplicateIcon />}>
+						Duplicate
+					</ButtonWithIcon>
+				</article>
+				<article style={articleStyle}>
+					<ButtonWithIcon size="large" icon={<UploadIcon />}>
+						Upload
 					</ButtonWithIcon>
 				</article>
 				<article style={articleStyle}>
 					<ButtonWithIcon kind="invisible" icon={<EditPageIcon />}>
-						Invisible Button with Icon
+						Edit
 					</ButtonWithIcon>
 				</article>
 				<article style={articleStyle}>
-					<ButtonWithIcon icon={<PlusIcon />}>
-						Default Button with Icon
+					<ButtonWithIcon kind="invisible" icon={<PlusIcon />}>
+						Add New
 					</ButtonWithIcon>
 				</article>
 				<article style={articleStyle}>
-					<ButtonWithIcon icon={<ViewIcon />}>
-						Default Button with Icon
+					<ButtonWithIcon kind="invisible" icon={<ViewIcon />}>
+						View details
 					</ButtonWithIcon>
 				</article>
 				<article style={articleStyle}>
-					<ButtonWithIcon icon={<DownloadIcon />}>
-						Default Button with Icon
+					<ButtonWithIcon kind="invisible" icon={<DownloadIcon />}>
+						Download
 					</ButtonWithIcon>
 				</article>
 				<article style={articleStyle}>
-					<ButtonWithIcon icon={<DuplicateIcon />}>
-						Default Button with Icon
+					<ButtonWithIcon kind="invisible" icon={<DuplicateIcon />}>
+						Duplicate
 					</ButtonWithIcon>
 				</article>
 				<article style={articleStyle}>
-					<ButtonWithIcon icon={<UploadIcon />}>
-						Default Button with Icon
+					<ButtonWithIcon kind="invisible" icon={<UploadIcon />}>
+						Upload
 					</ButtonWithIcon>
 				</article>
 			</section>
