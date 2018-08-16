@@ -98,7 +98,7 @@ const ButtonWithIcon = createClass({
 					ref="button"
 					type={type}
 				>
-					<span className={cx('&')}>
+					<span className={cx('&', '&-content')}>
 						{icon}
 						{children}
 					</span>

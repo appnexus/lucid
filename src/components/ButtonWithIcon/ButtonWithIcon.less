@@ -2,15 +2,30 @@
 @import (reference) '../../styles/mixins.less';
 
 @Button-size-padding: @size-standard;
+@Button-size-height: @size-standard-height;
 @Button-size-height-small: @size-standard-height - 8;
 @Button-size-height-large: @size-standard-height + 12;
 @Button-size-borderRadius: @size-borderRadius;
 
 .lucid-ButtonWithIcon {
 
-	// default button size
 	.lucid-Icon {
 		padding-right: 8px;
+	}
+
+	& &-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+
+		> .lucid-Icon {
+			transition: color @timing-animation-hover, fill @timing-animation-hover;
+		}
+
+		> span {
+			transition: color @timing-animation-hover, fill @timing-animation-hover;
+		}
 	}
 
 	// Sizes
@@ -18,7 +33,7 @@
 		height: @Button-size-height-small;
 
 		.lucid-Icon {
-			padding-right: 8px;
+			padding-right: 4px;
 		}
 	}
 
@@ -27,8 +42,7 @@
 		padding: 0 @Button-size-padding/1.5;
 
 		.lucid-Icon {
-			padding-right: 8px;
-			padding-left: 4px;
+			padding-right: 4px;
 		}
 	}
 
@@ -40,7 +54,7 @@
 		.lucid-Icon {
 			width: 1.2em;
 			height: 1.2em;
-			padding-right: 10px;
+			padding-right: 8px;
 		}
 	}
 }
