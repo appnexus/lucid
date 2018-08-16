@@ -58,5 +58,41 @@
 			padding-right: 12px;
 		}
 	}
+
+	&&-invisible {
+		.gradient-reset();
+		.make-is-disabled(lucid-Button);
+
+		border: none;
+		background: none;
+		color: @color-linkColor;
+
+		&:hover:not(.lucid-Button-is-disabled),
+		&:active:not(.lucid-Button-is-disabled),
+		&:focus:not(.lucid-Button-is-disabled) {
+			.lucid-Icon { fill: @color-linkColorHover; }
+
+			background: @color-lightGray;
+			color: @color-linkColorHover;
+			box-shadow: none;
+		}
+
+		&:active::before {
+			opacity: 0;
+		}
+
+		.lucid-Button-content {
+			line-height: 1em;
+		}
+
+		.lucid-Icon {
+			fill: @color-primary;
+			margin-right: 0.25em;
+
+			+ span {
+				line-height: 1.4em;
+			}
+		}
+	}
 }
 

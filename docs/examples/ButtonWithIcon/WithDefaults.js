@@ -27,18 +27,38 @@ export default class extends React.Component {
 					</ButtonWithIcon>
 				</article>
 				<article style={articleStyle}>
-					<ButtonWithIcon size="short" icon={<EditPageIcon />}>
-						Short Button with Icon
-					</ButtonWithIcon>
-				</article>
-				<article style={articleStyle}>
-					<ButtonWithIcon size="small" icon={<EditPageIcon />}>
-						Small Button with Icon
-					</ButtonWithIcon>
-				</article>
-				<article style={articleStyle}>
 					<ButtonWithIcon size="large" icon={<EditPageIcon />}>
 						Large Button with Icon
+					</ButtonWithIcon>
+				</article>
+				<article style={articleStyle}>
+					<ButtonWithIcon kind="invisible" icon={<EditPageIcon />}>
+						Invisible Button with Icon
+					</ButtonWithIcon>
+				</article>
+				<article style={articleStyle}>
+					<ButtonWithIcon icon={<PlusIcon />}>
+						Default Button with Icon
+					</ButtonWithIcon>
+				</article>
+				<article style={articleStyle}>
+					<ButtonWithIcon icon={<ViewIcon />}>
+						Default Button with Icon
+					</ButtonWithIcon>
+				</article>
+				<article style={articleStyle}>
+					<ButtonWithIcon icon={<DownloadIcon />}>
+						Default Button with Icon
+					</ButtonWithIcon>
+				</article>
+				<article style={articleStyle}>
+					<ButtonWithIcon icon={<DuplicateIcon />}>
+						Default Button with Icon
+					</ButtonWithIcon>
+				</article>
+				<article style={articleStyle}>
+					<ButtonWithIcon icon={<UploadIcon />}>
+						Default Button with Icon
 					</ButtonWithIcon>
 				</article>
 			</section>

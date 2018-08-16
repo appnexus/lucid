@@ -73,6 +73,7 @@ const ButtonWithIcon = createClass({
 			isActive,
 			iconIsOnLeft,
 			size,
+			kind,
 			className,
 			children,
 			type,
@@ -86,9 +87,8 @@ const ButtonWithIcon = createClass({
 					className={cx(
 						'&',
 						{
-							'&-short': size === 'short',
-							'&-small': size === 'small',
 							'&-large': size === 'large',
+							'&-invisible': kind === 'invisible',
 						},
 						className
 					)}
