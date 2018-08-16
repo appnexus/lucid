@@ -5,11 +5,11 @@ import PropTypes from 'react-peek/prop-types';
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
 import { lucidClassNames } from '../../util/style-helpers.js';
-import { createClass, omitProps } from '../../util/component-types';
+import { createClass } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-ButtonWithIcon');
 
-const { any, string, oneOfType, func, node, arrayOf } = PropTypes;
+const { any, string, oneOfType, node, arrayOf } = PropTypes;
 
 const ButtonWithIcon = createClass({
 	displayName: 'ButtonWithIcon',
@@ -76,12 +76,11 @@ const ButtonWithIcon = createClass({
 		return {
 			isDisabled: false,
 			isActive: false,
+			iconIsOnLeft: true,
 			onClick: _.noop,
 			type: 'button',
 		};
 	},
-
-	/*
 
 	handleClick(event) {
 		const { isDisabled, onClick } = this.props;
@@ -94,12 +93,11 @@ const ButtonWithIcon = createClass({
 		}
 	},
 
-	*/
-
 	render() {
 		const {
 			isDisabled,
 			isActive,
+			iconIsOnLeft,
 			size,
 			className,
 			children,
@@ -108,20 +106,16 @@ const ButtonWithIcon = createClass({
 		} = this.props;
 
 		return (
-			<ButtonWithIcon
-				{...omitProps(passThroughs, ButtonWithIcon)}
-				className={cx('&', className)}
+			<Button
+				className={cx('&-Button', className)}
+				isDisabled={isDisabled}
+				onClick={this.handleClick}
+				ref="button"
+				type={type}
 			>
-				<button
-					className={cx('&-Button', className)}
-					isDisabled={isDisabled}
-					// onClick={this.handleClick}
-					// ref="button"
-					// type={type}
-				>
-					<Icon className={cx('&-Icon', className)} />
-				</button>
-			</ButtonWithIcon>
+				{this.props.Icon}
+				Here's a button!
+			</Button>
 		);
 	},
 });

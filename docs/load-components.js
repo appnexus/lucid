@@ -185,22 +185,6 @@ module.exports = [
 		),
 	},
 	{
-		name: 'ButtonWithIcon',
-		component: getDefaultExport(
-			require('../src/components/ButtonWithIcon/ButtonWithIcon')
-		),
-		examplesContext: require.context(
-			'../src/components/ButtonWithIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/ButtonWithIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-	},
-	{
 		name: 'CalendarMonth',
 		component: getDefaultExport(
 			require('../src/components/CalendarMonth/CalendarMonth')
