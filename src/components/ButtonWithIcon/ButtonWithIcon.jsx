@@ -52,7 +52,6 @@ const ButtonWithIcon = createClass({
 			isDisabled: false,
 			isActive: false,
 			onClick: _.noop,
-			icon: null,
 			type: 'button',
 		};
 	},
