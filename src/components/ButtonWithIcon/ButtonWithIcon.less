@@ -1,0 +1,101 @@
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
+@Button-size-padding: @size-standard;
+@Button-size-height: @size-standard-height;
+@Button-size-height-small: @size-standard-height - 8;
+@Button-size-height-large: @size-standard-height + 12;
+@Button-size-borderRadius: @size-borderRadius;
+
+.lucid-ButtonWithIcon {
+	// Mixins
+	.no-safari-flicker();
+	.box-sizing();
+	.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+
+	cursor: pointer;
+	height: @Button-size-height;
+	border: 1px solid @featured-color-default-borderColor;
+	border-radius: @Button-size-borderRadius;
+	font-size: @fontSize;
+	font-family: @fontFamily;
+	letter-spacing: 0.05em;
+	padding: 0 @Button-size-padding;
+	outline: none;
+	color: @color-black;
+
+	// from normalize.css@4.1.1
+	margin: 0; /* 2 */
+	overflow: visible;
+	text-transform: none;
+	-webkit-appearance: button; /* 2 */
+	// end normalize
+
+	white-space: nowrap;
+
+	// don't show Firefox's focus ring: https://github.com/appnexus/lucid/issues/292
+	&::-moz-focus-inner {
+		border: 0;
+	}
+
+	&::before { border-radius: @Button-size-borderRadius; }
+
+	& &-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+
+		> .lucid-Icon {
+			transition: color @timing-animation-hover, fill @timing-animation-hover;
+		}
+
+		> span {
+			transition: color @timing-animation-hover, fill @timing-animation-hover;
+		}
+	}
+
+	// Sizes
+	&&-short {
+		height: @Button-size-height-small;
+	}
+
+	&&-small {
+		height: @Button-size-height-small;
+		padding: 0 @Button-size-padding/1.5;
+	}
+
+	&&-large {
+		height: @Button-size-height-large;
+		padding: 0 @Button-size-padding*1.5;
+		font-size: 1.2em;
+
+		.lucid-Icon {
+			width: 1.2em;
+			height: 1.2em;
+		}
+	}
+
+	// States
+	&&-is-active {
+		.gradient-reset();
+
+		background: @featured-color-primary;
+		border-color: @featured-color-primary;
+		color: @color-white;
+
+		.lucid-Icon { fill: @color-white; }
+	}
+
+	&-is-disabled {
+		.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
+		.opacity();
+		.no-cursor();
+	}
+
+	// Also needed in some cases to beat other libraries (e.g. pure.css)
+	&[disabled] {
+		.no-cursor();
+	}
+}
+

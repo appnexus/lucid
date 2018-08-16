@@ -61,6 +61,7 @@ import BellIcon from './components/Icon/BellIcon/BellIcon';
 import BookIcon from './components/Icon/BookIcon/BookIcon';
 import Breadcrumb from './components/Breadcrumb/Breadcrumb';
 import Button from './components/Button/Button';
+import ButtonWithIcon from './components/ButtonWithIcon/ButtonWithIcon';
 import CalendarIcon from './components/Icon/CalendarIcon/CalendarIcon';
 import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
 import ChatIcon from './components/Icon/ChatIcon/ChatIcon';
@@ -214,6 +215,7 @@ export {
 	BookIcon,
 	Breadcrumb,
 	Button,
+	ButtonWithIcon,
 	ButtonGroup,
 	ButtonGroupDumb,
 	CalendarIcon,
