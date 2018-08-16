@@ -22,16 +22,24 @@ export default class extends React.Component {
 		return (
 			<section style={sectionStyle}>
 				<article style={articleStyle}>
-					<ButtonWithIcon icon={<EditPageIcon />} />
+					<ButtonWithIcon icon={<EditPageIcon />}>
+						Default Button with Icon
+					</ButtonWithIcon>
 				</article>
 				<article style={articleStyle}>
-					<ButtonWithIcon size="short" icon={<EditPageIcon />} />
+					<ButtonWithIcon size="short" icon={<EditPageIcon />}>
+						Short Button with Icon
+					</ButtonWithIcon>
 				</article>
 				<article style={articleStyle}>
-					<ButtonWithIcon size="small" icon={<EditPageIcon />} />
+					<ButtonWithIcon size="small" icon={<EditPageIcon />}>
+						Small Button with Icon
+					</ButtonWithIcon>
 				</article>
 				<article style={articleStyle}>
-					<ButtonWithIcon size="large" icon={<EditPageIcon />} />
+					<ButtonWithIcon size="large" icon={<EditPageIcon />}>
+						Large Button with Icon
+					</ButtonWithIcon>
 				</article>
 			</section>
 		);
