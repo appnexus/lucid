@@ -79,6 +79,10 @@
 		color: @color-white;
 		border-color: @featured-color-success-borderColor;
 
+		&:focus {
+			.focus-glow(@featured-color-success-30);
+		}
+
 		.lucid-Icon { fill: @color-white; }
 	}
 
@@ -89,6 +93,10 @@
 
 		border-color: @featured-color-info-borderColor;
 		color: @color-white;
+
+		&:focus {
+			.focus-glow(@featured-color-info-30);
+		}
 
 		.lucid-Icon { fill: @color-white; }
 	}
@@ -101,6 +109,10 @@
 		border-color: @featured-color-warning-borderColor;
 		color: @color-white;
 
+		&:focus {
+			.focus-glow(@featured-color-warning-30);
+		}
+
 		.lucid-Icon { fill: @color-white; }
 	}
 
@@ -111,6 +123,10 @@
 
 		border-color: @featured-color-danger-borderColor;
 		color: @color-white;
+
+		&:focus {
+			.focus-glow(@featured-color-danger-30);
+		}
 
 		.lucid-Icon { fill: @color-white; }
 	}
