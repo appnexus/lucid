@@ -26,6 +26,7 @@ const {
 	array,
 	bool,
 	oneOfType,
+	oneOf,
 } = PropTypes;
 
 const BarChart = createClass({
@@ -220,6 +221,16 @@ const BarChart = createClass({
 			and yAxisTooltipDataFormatter. Signature:
 			\`dataPoint => {}\`
 		`,
+
+		xAxisTextOrientation: oneOf(['vertical', 'horizontal', 'diagonal'])`
+			Determines the orientation of the tick text. This may override what the orient prop
+			tries to determine.
+		`,
+
+		yAxisTextOrientation: oneOf(['vertical', 'horizontal', 'diagonal'])`
+			Determines the orientation of the tick text. This may override what the orient prop
+			tries to determine.
+		`,
 	},
 
 	getDefaultProps() {
@@ -244,6 +255,7 @@ const BarChart = createClass({
 			xAxisTitle: null,
 			xAxisTitleColor: '#000',
 			xAxisFormatter: _.identity,
+			xAxisTextOrientation: 'horizontal',
 
 			yAxisFields: ['y'],
 			yAxisTickCount: null,
@@ -253,6 +265,7 @@ const BarChart = createClass({
 			yAxisTitleColor: '#000',
 			yAxisTooltipFormatter: (yField, yValueFormatted) =>
 				`${yField}: ${yValueFormatted}`,
+			yAxisTextOrientation: 'horizontal',
 		};
 	},
 
@@ -282,6 +295,7 @@ const BarChart = createClass({
 			xAxisTitle,
 			xAxisTitleColor,
 			xAxisTickCount,
+			xAxisTextOrientation,
 
 			yAxisFields,
 			yAxisFormatter,
@@ -295,6 +309,7 @@ const BarChart = createClass({
 			yAxisMax = yAxisIsStacked
 				? maxByFieldsStacked(data, yAxisFields)
 				: maxByFields(data, yAxisFields),
+			yAxisTextOrientation,
 
 			...passThroughs
 		} = this.props;
@@ -391,6 +406,7 @@ const BarChart = createClass({
 						outerTickSize={0}
 						tickFormat={xAxisFinalFormatter}
 						tickCount={xAxisTickCount}
+						textOrientation={xAxisTextOrientation}
 					/>
 
 					{hasLegend ? (
@@ -455,9 +471,11 @@ const BarChart = createClass({
 				<g transform={`translate(${margin.left}, ${margin.top})`}>
 					<Axis
 						orient="left"
+						textOrientation="horizontal"
 						scale={yScale}
 						tickFormat={yAxisFinalFormatter}
 						tickCount={yAxisTickCount}
+						textOrientation={yAxisTextOrientation}
 					/>
 				</g>
 
