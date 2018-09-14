@@ -8,7 +8,7 @@ const height = 200;
 const innerHeight = height - margin.top - margin.bottom;
 const y = d3Scale
 	.scaleLinear()
-	.domain([0, 100000])
+	.domain([0, 50])
 	.range([innerHeight, 0]);
 
 export default createClass({
@@ -16,7 +16,7 @@ export default createClass({
 		return (
 			<svg width={width} height={height}>
 				<g transform={`translate(0, ${margin.top})`}>
-					<Axis scale={y} orient="right" />
+					<Axis scale={y} orient="right" textOrientation="horizontal" />
 				</g>
 			</svg>
 		);

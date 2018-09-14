@@ -2,9 +2,9 @@ import React from 'react';
 import createClass from 'create-react-class';
 import { Axis, d3Scale } from '../../../index';
 
-const margin = { right: 20, left: 20 };
-const width = 400;
-const height = 50;
+const margin = { right: 40, left: 20, top: 40, bottom: 10 };
+const width = 500;
+const height = 100;
 const innerWidth = width - margin.right - margin.left;
 const x = d3Scale
 	.scaleLinear()

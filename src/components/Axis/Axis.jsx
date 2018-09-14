@@ -74,6 +74,11 @@ const Axis = createClass({
 			an ordinal scale, this number is treated as an absolute number of ticks
 			to display and is powered by our own utility function \`discreteTicks\`.
 		`,
+
+		textOrientation: oneOf(['vertical', 'horizontal', 'diagonal'])`
+			Determines the orientation of the tick text. This may override what the orient prop
+			tries to determine. This defaults to \`horizontal\`.
+		`,
 	},
 
 	getDefaultProps() {
@@ -81,6 +86,7 @@ const Axis = createClass({
 			innerTickSize: 6, // same as d3
 			outerTickSize: 6, // same as d3
 			tickPadding: 3, // same as d3
+			textOrientation: 'horizontal',
 			orient: 'bottom',
 			tickCount: null,
 		};
@@ -99,6 +105,7 @@ const Axis = createClass({
 			outerTickSize,
 			tickFormat = scale.tickFormat ? scale.tickFormat() : _.identity,
 			tickPadding,
+			textOrientation,
 			...passThroughs
 		} = this.props;
 
@@ -108,6 +115,90 @@ const Axis = createClass({
 		const range = scale.range();
 		const sign = orient === 'top' || orient === 'left' ? -1 : 1;
 		const isH = orient === 'top' || orient === 'bottom'; // is horizontal
+		const getOrientationProperties = (orient, textOrientation) => {
+			let textAnchor, x, y, dy;
+			let orientationSign = sign;
+			switch (orient) {
+				case 'bottom':
+					if (textOrientation === 'vertical') {
+						orientationSign = -orientationSign;
+					}
+					textAnchor =
+						textOrientation === 'vertical'
+							? 'end'
+							: textOrientation === 'diagonal' ? 'end' : 'middle';
+					x =
+						textOrientation === 'vertical'
+							? orientationSign * tickSpacing
+							: textOrientation === 'diagonal'
+								? -orientationSign * tickSpacing
+								: 0;
+					y =
+						textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
+					dy = textOrientation === 'vertical' ? '.32em' : '.71em';
+					break;
+				case 'top':
+					if (textOrientation === 'vertical') {
+						orientationSign = -orientationSign;
+					}
+					textAnchor =
+						textOrientation === 'vertical'
+							? 'start'
+							: textOrientation === 'diagonal' ? 'start' : 'middle';
+					x =
+						textOrientation === 'vertical' || textOrientation === 'diagonal'
+							? -orientationSign * tickSpacing
+							: 0;
+					y =
+						textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
+					dy =
+						textOrientation === 'vertical' || textOrientation === 'diagonal'
+							? '.32em'
+							: '0em';
+					break;
+				case 'right':
+					textAnchor = textOrientation === 'vertical' ? 'middle' : 'start';
+					x =
+						textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
+					y =
+						textOrientation === 'vertical'
+							? orientationSign * tickSpacing
+							: textOrientation === 'horizontal'
+								? 0
+								: orientationSign * tickSpacing;
+					dy = textOrientation === 'vertical' ? '.71em' : '.32em';
+					break;
+				case 'left':
+					textAnchor = textOrientation === 'vertical' ? 'middle' : 'end';
+					x =
+						textOrientation === 'vertical' ? 0 : orientationSign * tickSpacing;
+					y =
+						textOrientation === 'vertical' || textOrientation === 'diagonal'
+							? orientationSign * tickSpacing
+							: 0;
+					dy =
+						textOrientation === 'vertical'
+							? '0em'
+							: textOrientation === 'horizontal' ? '.32em' : '.71em';
+					break;
+			}
+			return {
+				transform:
+					textOrientation === 'vertical'
+						? 'rotate(-90)'
+						: textOrientation === 'horizontal' ? '' : 'rotate(-30)',
+				textAnchor,
+				x,
+				y,
+				dy,
+			};
+		};
+		const orientationProperties = {
+			vertical: getOrientationProperties(orient, 'vertical'),
+			horizontal: getOrientationProperties(orient, 'horizontal'),
+			diagonal: getOrientationProperties(orient, 'diagonal'),
+		};
+		const orientationKey = textOrientation || 'horizontal';
 
 		let scaleNormalized = scale;
 
@@ -147,16 +238,13 @@ const Axis = createClass({
 						/>
 						<text
 							className={cx('&-tick-text')}
-							x={isH ? 0 : sign * tickSpacing}
-							y={isH ? sign * tickSpacing : 0}
-							dy={
-								isH
-									? sign < 0 ? '0em' : '.71em' // magic d3 number
-									: '.32em' // magic d3 number
-							}
+							x={orientationProperties[orientationKey].x}
+							y={orientationProperties[orientationKey].y}
+							dy={orientationProperties[orientationKey].dy}
 							style={{
-								textAnchor: isH ? 'middle' : sign < 0 ? 'end' : 'start',
+								textAnchor: orientationProperties[orientationKey].textAnchor,
 							}}
+							transform={orientationProperties[orientationKey].transform}
 						>
 							{tickFormat(tick)}
 						</text>

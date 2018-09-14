@@ -4,6 +4,7 @@ exports[`Icon [common] example testing should match snapshot(s) for 1.default 1`
 <svg
   className="lucid-Icon"
   height={16}
+  onClick={[Function]}
   preserveAspectRatio="xMidYMid meet"
   style={Object {}}
   viewBox="0 0 16 16"
@@ -47,6 +48,7 @@ exports[`Icon [common] example testing should match snapshot(s) for 3.disabled 1
 <svg
   className="lucid-Icon lucid-Icon-is-disabled"
   height={16}
+  onClick={[Function]}
   preserveAspectRatio="xMidYMid meet"
   style={Object {}}
   viewBox="0 0 16 16"

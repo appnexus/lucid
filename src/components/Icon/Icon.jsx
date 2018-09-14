@@ -1,12 +1,13 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
+import ReactDOM from 'react-dom';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Icon');
 
-const { any, string, number, object, bool } = PropTypes;
+const { any, string, number, object, bool, func } = PropTypes;
 
 const Icon = createClass({
 	displayName: 'Icon',
@@ -60,6 +61,11 @@ const Icon = createClass({
 			isClickable to be false.
 		`,
 
+		onSelect: func`
+			Called when the user clicks the \`Icon\`. Signature:
+			\`({event, props}) => {}\`
+		`,
+
 		children: any`
 			Any valid React children.
 		`,
@@ -72,7 +78,22 @@ const Icon = createClass({
 			viewBox: '0 0 16 16',
 			isBadge: false,
 			isDisabled: false,
+			isClickable: false,
 		};
+	},
+
+	handleClick(event) {
+		const { onClick, isDisabled, isClickable, onSelect } = this.props;
+		const domNode = ReactDOM.findDOMNode(this);
+
+		if (onClick) {
+			onClick(event);
+		}
+
+		if (onSelect && isClickable && !isDisabled) {
+			domNode.focus();
+			onSelect({ event, props: this.props });
+		}
 	},
 
 	render() {
@@ -118,6 +139,7 @@ const Icon = createClass({
 					},
 					className
 				)}
+				onClick={this.handleClick}
 			>
 				{children}
 			</svg>
