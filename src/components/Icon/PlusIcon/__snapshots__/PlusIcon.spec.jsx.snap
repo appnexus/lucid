@@ -10,10 +10,7 @@ exports[`PlusIcon [common] example testing should match snapshot(s) for 1.defaul
   viewBox="0 0 16 16"
 >
   <path
-    d="M1,6.6h14v2.8H1V6.6z"
-  />
-  <path
-    d="M6.6,1v14h2.8V1H6.6z"
+    d="M15 7v2H9v6H7V9H1V7h6V1h2v6h6z"
   />
 </Icon>
 `;
@@ -28,10 +25,7 @@ exports[`PlusIcon [common] example testing should match snapshot(s) for 1.defaul
   viewBox="0 0 16 16"
 >
   <path
-    d="M1,6.6h14v2.8H1V6.6z"
-  />
-  <path
-    d="M6.6,1v14h2.8V1H6.6z"
+    d="M15 7v2H9v6H7V9H1V7h6V1h2v6h6z"
   />
 </Icon>
 `;
@@ -47,10 +41,7 @@ exports[`PlusIcon [common] example testing should match snapshot(s) for 2.clicka
   viewBox="0 0 16 16"
 >
   <path
-    d="M1,6.6h14v2.8H1V6.6z"
-  />
-  <path
-    d="M6.6,1v14h2.8V1H6.6z"
+    d="M15 7v2H9v6H7V9H1V7h6V1h2v6h6z"
   />
 </Icon>
 `;
@@ -66,10 +57,7 @@ exports[`PlusIcon [common] example testing should match snapshot(s) for 2.clicka
   viewBox="0 0 16 16"
 >
   <path
-    d="M1,6.6h14v2.8H1V6.6z"
-  />
-  <path
-    d="M6.6,1v14h2.8V1H6.6z"
+    d="M15 7v2H9v6H7V9H1V7h6V1h2v6h6z"
   />
 </Icon>
 `;
@@ -84,10 +72,7 @@ exports[`PlusIcon [common] example testing should match snapshot(s) for 3.disabl
   viewBox="0 0 16 16"
 >
   <path
-    d="M1,6.6h14v2.8H1V6.6z"
-  />
-  <path
-    d="M6.6,1v14h2.8V1H6.6z"
+    d="M15 7v2H9v6H7V9H1V7h6V1h2v6h6z"
   />
 </Icon>
 `;
@@ -102,10 +87,7 @@ exports[`PlusIcon [common] example testing should match snapshot(s) for 3.disabl
   viewBox="0 0 16 16"
 >
   <path
-    d="M1,6.6h14v2.8H1V6.6z"
-  />
-  <path
-    d="M6.6,1v14h2.8V1H6.6z"
+    d="M15 7v2H9v6H7V9H1V7h6V1h2v6h6z"
   />
 </Icon>
 `;
