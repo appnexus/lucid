@@ -41,11 +41,11 @@ const Bar = createClass({
 			y coordinate.
 		`,
 
-		height: number`
+		height: PropTypes.oneOfType([number, string])`
 			Height of the bar.
 		`,
 
-		width: number`
+		width: PropTypes.oneOfType([number, string])`
 			Width of the bar.
 		`,
 

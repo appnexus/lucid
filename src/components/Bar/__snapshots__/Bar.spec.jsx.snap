@@ -30,6 +30,36 @@ exports[`Bar [common] example testing should match snapshot(s) for custom-colors
 />
 `;
 
+exports[`Bar [common] example testing should match snapshot(s) for custom-dimension-units 1`] = `
+<rect
+  className="lucid-Bar"
+  height="100%"
+  style={
+    Object {
+      "fill": "#f80",
+    }
+  }
+  width="10%"
+  x={5}
+  y={0}
+/>
+`;
+
+exports[`Bar [common] example testing should match snapshot(s) for custom-dimension-units 2`] = `
+<rect
+  className="lucid-Bar"
+  height="100%"
+  style={
+    Object {
+      "fill": "#abc123",
+    }
+  }
+  width="10%"
+  x={5}
+  y={0}
+/>
+`;
+
 exports[`Bar [common] example testing should match snapshot(s) for regular-colors 1`] = `
 <rect
   className="lucid-Bar lucid-Bar-color-chart-0-lightest"
