@@ -5,7 +5,7 @@ import { Button, Checkbox, SuccessIcon, Table } from '../../../index';
 
 const { Thead, Tbody, Tr, Th, Td } = Table;
 
-const COLUMN_WIDTH = '10%';
+const COLUMN_WIDTH = '200px';
 const FIRST_COLUMN_WIDTH = '150px';
 const TABLE_HEIGHT = '300px';
 
@@ -40,14 +40,21 @@ function renderHeader(onlyFixedColumns) {
 function renderRow(n, onlyFixedColumns) {
 	const style =
 		n === 0
-			? { width: onlyFixedColumns ? FIRST_COLUMN_WIDTH : COLUMN_WIDTH }
-			: {};
+			? {
+					width: onlyFixedColumns ? FIRST_COLUMN_WIDTH : COLUMN_WIDTH,
+					boxSizing: 'border-box',
+				}
+			: { boxSizing: 'border-box' };
 	return (
-		<Tr style={{ height: '60px' }} isActionable>
+		<Tr style={{ height: '150px' }} isActionable>
 			{onlyFixedColumns ? (
 				/*<Td style={style}>prettylongtextthatdoesnthaveanywordbreaksinitimgoingtomessupyourtablehehehe</Td>*/
 				<Td style={style}>
-					<div>one</div>
+					<div>
+						one tw tw tw tw tw tw tw tw tw tw tw tw tw tw tw tw tw tw tw tw tw
+						tw tw tw tw tw tw tw tw tw tw tw tw tw tw tw tw tw tw tw tw tw tw tw
+						twooooooooooooooooooooooooooooooooooooooooooooo
+					</div>
 				</Td>
 			) : (
 				[
@@ -77,17 +84,18 @@ export default createClass({
 				<div style={{ display: 'flex' }}>
 					{/* table header fixed column(s) */}
 					<div style={{ width: FIRST_COLUMN_WIDTH, flexShrink: 0 }}>
-						<Table style={{ width: '100%', tableLayout: 'fixed' }}>
-							{renderHeader(true)}
-						</Table>
+						<Table style={{ tableLayout: 'fixed' }}>{renderHeader(true)}</Table>
 					</div>
 
 					{/* table header unfixed column(s) */}
 					<div
-						style={{ width: '100%', overflow: 'hidden' }}
+						style={{
+							overflowY: 'scroll',
+							overflowX: 'hidden',
+						}}
 						ref={ref => (this.headerUnfixedColumns = ref)}
 					>
-						<Table style={{ width: '150%', tableLayout: 'fixed' }}>
+						<Table style={{ tableLayout: 'fixed', width: '100%' }}>
 							{renderHeader(false)}
 						</Table>
 					</div>
@@ -99,25 +107,30 @@ export default createClass({
 						style={{
 							width: FIRST_COLUMN_WIDTH,
 							height: TABLE_HEIGHT,
-							overflow: 'hidden',
+							overflowY: 'hidden',
+							overflowX: 'scroll',
 							flexShrink: 0,
 						}}
 						ref={ref => (this.bodyFixedColumns = ref)}
 					>
-						<Table style={{ width: '100%', tableLayout: 'fixed' }}>
+						<Table style={{ tableLayout: 'fixed', width: '100%' }}>
 							<Tbody>{_.times(50, n => renderRow(n, true))}</Tbody>
 						</Table>
 					</div>
 
 					{/* table body unfixed column(s) */}
 					<div
-						style={{ width: '100%', height: TABLE_HEIGHT, overflow: 'auto' }}
+						style={{
+							height: TABLE_HEIGHT,
+							overflowY: 'scroll',
+							overflowX: 'scroll',
+						}}
 						onScroll={e => {
 							this.headerUnfixedColumns.scrollLeft = e.target.scrollLeft;
 							this.bodyFixedColumns.scrollTop = e.target.scrollTop;
 						}}
 					>
-						<Table style={{ width: '150%', tableLayout: 'fixed' }}>
+						<Table style={{ tableLayout: 'fixed', width: '100%' }}>
 							<Tbody>{_.times(50, n => renderRow(n, false))}</Tbody>
 						</Table>
 					</div>
