@@ -5,9 +5,9 @@ import { Button, Checkbox, SuccessIcon, Table } from '../../../index';
 
 const { Thead, Tbody, Tr, Th, Td } = Table;
 
-const COLUMN_WIDTH = '200px';
+const COLUMN_WIDTH = '500px';
 const FIRST_COLUMN_WIDTH = '150px';
-const TABLE_HEIGHT = '300px';
+const TABLE_HEIGHT = '500px';
 
 function renderHeader(onlyFixedColumns) {
 	return (
@@ -80,18 +80,25 @@ function renderRow(n, onlyFixedColumns) {
 export default createClass({
 	render() {
 		return (
-			<div>
-				<div style={{ display: 'flex' }}>
-					{/* table header fixed column(s) */}
+			<div
+				style={{
+					height: TABLE_HEIGHT,
+					display: 'flex',
+					flexDirection: 'column',
+				}}
+			>
+				{/* table header */}
+				<div style={{ display: 'flex', flexShrink: 0 }}>
+					{/* fixed column(s) */}
 					<div style={{ width: FIRST_COLUMN_WIDTH, flexShrink: 0 }}>
 						<Table style={{ tableLayout: 'fixed' }}>{renderHeader(true)}</Table>
 					</div>
 
-					{/* table header unfixed column(s) */}
+					{/* unfixed column(s) */}
 					<div
 						style={{
+							overflowX: 'hidden', // can't do "overflow: x y" cause it isn't working on safari 11.0 (12604.1.38.1.7)
 							overflowY: 'scroll',
-							overflowX: 'hidden',
 						}}
 						ref={ref => (this.headerUnfixedColumns = ref)}
 					>
@@ -101,29 +108,32 @@ export default createClass({
 					</div>
 				</div>
 
-				<div style={{ display: 'flex' }}>
-					{/* table body fixed column(s) */}
+				{/* table body */}
+				<div
+					style={{
+						display: 'flex',
+						height: '100%', // needed for firefox
+					}}
+				>
+					{/* fixed column(s) */}
 					<div
 						style={{
 							width: FIRST_COLUMN_WIDTH,
-							height: TABLE_HEIGHT,
+							overflowX: 'scroll', // can't do "overflow: x y" cause it isn't working on safari 11.0 (12604.1.38.1.7)
 							overflowY: 'hidden',
-							overflowX: 'scroll',
 							flexShrink: 0,
 						}}
 						ref={ref => (this.bodyFixedColumns = ref)}
 					>
-						<Table style={{ tableLayout: 'fixed', width: '100%' }}>
+						<Table style={{ tableLayout: 'fixed' }}>
 							<Tbody>{_.times(50, n => renderRow(n, true))}</Tbody>
 						</Table>
 					</div>
 
-					{/* table body unfixed column(s) */}
+					{/* unfixed column(s) */}
 					<div
 						style={{
-							height: TABLE_HEIGHT,
-							overflowY: 'scroll',
-							overflowX: 'scroll',
+							overflow: 'scroll',
 						}}
 						onScroll={e => {
 							this.headerUnfixedColumns.scrollLeft = e.target.scrollLeft;
