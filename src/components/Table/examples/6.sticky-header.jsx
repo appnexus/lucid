@@ -6,7 +6,7 @@ import { Button, Checkbox, SuccessIcon, Table } from '../../../index';
 const { Thead, Tbody, Tr, Th, Td } = Table;
 
 const COLUMN_WIDTH = '500px';
-const FIRST_COLUMN_WIDTH = '150px';
+const FIRST_COLUMN_WIDTH = '550px';
 const TABLE_HEIGHT = '500px';
 
 function renderHeader(onlyFixedColumns) {
@@ -46,7 +46,7 @@ function renderRow(n, onlyFixedColumns) {
 				}
 			: { boxSizing: 'border-box' };
 	return (
-		<Tr style={{ height: '150px' }} isActionable>
+		<Tr style={{ height: '150px' }} isActionable={onlyFixedColumns}>
 			{onlyFixedColumns ? (
 				/*<Td style={style}>prettylongtextthatdoesnthaveanywordbreaksinitimgoingtomessupyourtablehehehe</Td>*/
 				<Td style={style}>

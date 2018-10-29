@@ -13,10 +13,12 @@ import {
 import Checkbox from '../Checkbox/Checkbox';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 import ScrollTable from '../ScrollTable/ScrollTable';
+import Table from '../Table/Table';
 
 const { Thead, Tbody, Tr, Th, Td } = ScrollTable;
 
 const cx = lucidClassNames.bind('&-DataTable');
+const cxe = lucidClassNames.bind('&-DataTable-EmptyStateWrapper');
 
 const { any, func, number, object, string, bool, arrayOf } = PropTypes;
 
@@ -101,6 +103,39 @@ const DataTable = createClass({
 			\`(field, { props, event }) => {...}\`
 		`,
 
+		// TODO: add the full list of limitation and caveats
+		hasFixedHeader: bool`
+			If \`true\` the table will have a fixed header set. *Note* this feature
+			imposes some limitations with respect to the styling and usage of your
+			table. Here are those caveats:
+
+			- Each \`DataTable.Column\` *must* have an explicit pixel width defined
+				on it. If the combined width of all the columns is greater than the
+				parent container, the user will be able to horizontally scroll.
+			- The outermost wrapper element emitted by this component will be set to
+				100% height. It's your responsibility to put this component inside
+				another container that limits its height so that the resulting table can
+				scroll vertically and keep the fixed headers.
+			- Scroll bars will always be present. This is prevent misalignment of the
+				header and the table body that can occur when scroll bars show up and
+				take width. MacOS browsers depend on OS level settings to determine how
+				scrollbars show up. Having them always present saves us from writing a
+				bunch of terrible code to detect scroll bars and account for their width.
+			- Using fixed headers means multiple tables will be rendered under the
+				hood. We use \`table-layout: fixed\` behavior to make sure we can sync
+				columns widths between the header and the body.
+		`,
+
+		fixedColumnCount: number`
+			Sets the number of columns you want to have fixed. You must specify
+			\`fixedRowHeight\` when setting this prop.
+		`,
+
+		fixedRowHeight: number`
+			Determines the height of every row in the DataTable. It's required when
+			using the \`fixedColumnCount\` prop.
+		`,
+
 		Column: any`
 			*Child Element*
 
@@ -131,6 +166,8 @@ const DataTable = createClass({
 			onSelectAll: _.noop,
 			onSort: _.noop,
 			minRows: 10,
+			hasFixedHeader: false,
+			fixedColumnCount: 0,
 		};
 	},
 
@@ -198,17 +235,187 @@ const DataTable = createClass({
 		onSort(field, { props: this.props, event });
 	},
 
+	handleFixedBodyUnfixedColumnsScroll(event) {
+		this.fixedHeaderUnfixedColumnsRef.scrollLeft = event.target.scrollLeft;
+	},
+
+	renderHeader(childComponentElements, flattenedColumns) {
+		const { isSelectable, data } = this.props;
+
+		const hasGroupedColumns = _.some(
+			childComponentElements,
+			childComponentElement =>
+				childComponentElement.type === DataTable.ColumnGroup
+		);
+
+		return (
+			<Thead>
+				<Tr>
+					{isSelectable ? (
+						<Th rowSpan={hasGroupedColumns ? 2 : null} width={24}>
+							<Checkbox
+								isSelected={_.every(data, 'isSelected')}
+								onSelect={this.handleSelectAll}
+							/>
+						</Th>
+					) : null}
+					{_.map(
+						childComponentElements,
+						({ props, type }, index) =>
+							type === DataTable.Column ? (
+								<Th
+									{..._.omit(props, ['field', 'children', 'width', 'title'])}
+									onClick={
+										DataTable.shouldColumnHandleSort(props)
+											? _.partial(this.handleSort, props.field)
+											: null
+									}
+									style={{
+										width: props.width,
+									}}
+									rowSpan={hasGroupedColumns ? 2 : null}
+									key={_.get(props, 'field', index)}
+								>
+									{props.title || props.children}
+								</Th>
+							) : (
+								<Th
+									colSpan={_.size(
+										filterTypes(props.children, DataTable.Column)
+									)}
+									{..._.omit(props, ['field', 'children', 'width', 'title'])}
+									key={_.get(props, 'field', index)}
+								>
+									{props.title || props.children}
+								</Th>
+							)
+					)}
+				</Tr>
+				{hasGroupedColumns ? (
+					<Tr>
+						{_.reduce(
+							flattenedColumns,
+							(acc, { props: columnProps, columnGroupProps }, index) =>
+								acc.concat(
+									_.isNull(columnGroupProps)
+										? []
+										: [
+												<Th
+													{...omitProps(
+														columnProps,
+														DataTable.Column,
+														[],
+														false
+													)}
+													onClick={
+														DataTable.shouldColumnHandleSort(columnProps)
+															? _.partial(this.handleSort, columnProps.field)
+															: null
+													}
+													style={{
+														width: columnProps.width,
+													}}
+													key={_.get(columnProps, 'field', index)}
+												>
+													{columnProps.title || columnProps.children}
+												</Th>,
+											]
+								),
+							[]
+						)}
+					</Tr>
+				) : null}
+			</Thead>
+		);
+	},
+
+	renderBody(flattenedColumns) {
+		const {
+			data,
+			isActionable,
+			isSelectable,
+			minRows,
+			emptyCellText,
+		} = this.props;
+
+		const fillerRowCount = _.clamp(minRows - _.size(data), 0, Infinity);
+		return (
+			<Tbody>
+				{_.map(data, (row, index) => (
+					<Tr
+						{..._.pick(row, ['isDisabled', 'isActive', 'isSelected'])}
+						onClick={_.partial(this.handleRowClick, index)}
+						isActionable={isActionable}
+						key={'row' + index}
+					>
+						{isSelectable ? (
+							<Td>
+								<Checkbox
+									isSelected={row.isSelected}
+									onSelect={_.partial(this.handleSelect, index)}
+								/>
+							</Td>
+						) : null}
+						{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => {
+							const cellValue = _.get(row, columnProps.field);
+							const isEmpty = _.isEmpty(_.toString(cellValue));
+
+							return (
+								<Td
+									{..._.omit(columnProps, [
+										'field',
+										'children',
+										'width',
+										'title',
+										'isSortable',
+										'isSorted',
+										'isResizable',
+									])}
+									style={{
+										width: columnProps.width,
+									}}
+									key={'row' + index + _.get(columnProps, 'field', columnIndex)}
+								>
+									{isEmpty ? emptyCellText : cellValue}
+								</Td>
+							);
+						})}
+					</Tr>
+				))}
+				{_.times(fillerRowCount, index => (
+					<Tr isDisabled key={'row' + index} style={{ height: '32px' }}>
+						{isSelectable ? <Td /> : null}
+						{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => (
+							<Td
+								{..._.omit(columnProps, [
+									'field',
+									'children',
+									'width',
+									'title',
+									'isSortable',
+									'isSorted',
+									'isResizable',
+								])}
+								style={{
+									width: columnProps.width,
+								}}
+								key={'row' + index + _.get(columnProps, 'field', columnIndex)}
+							/>
+						))}
+					</Tr>
+				))}
+			</Tbody>
+		);
+	},
+
 	render() {
 		const {
 			className,
 			data,
-			emptyCellText,
-			isActionable,
 			isFullWidth,
 			isLoading,
-			isSelectable,
 			style,
-			minRows,
+			hasFixedHeader,
 			...passThroughs
 		} = this.props;
 
@@ -216,6 +423,7 @@ const DataTable = createClass({
 			DataTable.Column,
 			DataTable.ColumnGroup,
 		]);
+
 		const flattenedColumns = _.reduce(
 			childComponentElements,
 			(acc, childComponentElement) => {
@@ -239,12 +447,6 @@ const DataTable = createClass({
 			[]
 		);
 
-		const hasGroupedColumns = _.some(
-			childComponentElements,
-			childComponentElement =>
-				childComponentElement.type === DataTable.ColumnGroup
-		);
-
 		const emptyStateWrapper = getFirst(
 			this.props,
 			DataTable.EmptyStateWrapper
@@ -255,195 +457,69 @@ const DataTable = createClass({
 			/>
 		);
 
-		const fillerRowCount = _.clamp(minRows - _.size(data), 0, Infinity);
+		const emptyStateWrapperClassName = cxe(
+			{
+				'&-has-fixed-header': hasFixedHeader,
+			},
+			emptyStateWrapper.props.className
+		);
 
 		return (
 			<EmptyStateWrapper
 				{...emptyStateWrapper.props}
 				isEmpty={_.isEmpty(data)}
 				isLoading={isLoading}
+				className={emptyStateWrapperClassName}
 			>
 				{emptyStateWrapper.props.children}
-				<ScrollTable
-					style={style}
-					tableWidth={isFullWidth ? '100%' : null}
-					{...omitProps(passThroughs, DataTable, [], false)}
-					className={cx(
-						'&',
-						{
-							'&-full-width': isFullWidth,
-						},
-						className
-					)}
-				>
-					<Thead>
-						<Tr>
-							{isSelectable ? (
-								<Th rowSpan={hasGroupedColumns ? 2 : null} width={24}>
-									<Checkbox
-										isSelected={_.every(data, 'isSelected')}
-										onSelect={this.handleSelectAll}
-									/>
-								</Th>
-							) : null}
-							{_.map(
-								childComponentElements,
-								({ props, type }, index) =>
-									type === DataTable.Column ? (
-										<Th
-											{..._.omit(props, [
-												'field',
-												'children',
-												'width',
-												'title',
-											])}
-											onClick={
-												DataTable.shouldColumnHandleSort(props)
-													? _.partial(this.handleSort, props.field)
-													: null
-											}
-											style={{
-												width: props.width,
-											}}
-											rowSpan={hasGroupedColumns ? 2 : null}
-											key={_.get(props, 'field', index)}
-										>
-											{props.title || props.children}
-										</Th>
-									) : (
-										<Th
-											colSpan={_.size(
-												filterTypes(props.children, DataTable.Column)
-											)}
-											{..._.omit(props, [
-												'field',
-												'children',
-												'width',
-												'title',
-											])}
-											key={_.get(props, 'field', index)}
-										>
-											{props.title || props.children}
-										</Th>
-									)
-							)}
-						</Tr>
-						{hasGroupedColumns ? (
-							<Tr>
-								{_.reduce(
-									flattenedColumns,
-									(acc, { props: columnProps, columnGroupProps }, index) =>
-										acc.concat(
-											_.isNull(columnGroupProps)
-												? []
-												: [
-														<Th
-															{...omitProps(
-																columnProps,
-																DataTable.Column,
-																[],
-																false
-															)}
-															onClick={
-																DataTable.shouldColumnHandleSort(columnProps)
-																	? _.partial(
-																			this.handleSort,
-																			columnProps.field
-																		)
-																	: null
-															}
-															style={{
-																width: columnProps.width,
-															}}
-															key={_.get(columnProps, 'field', index)}
-														>
-															{columnProps.title || columnProps.children}
-														</Th>,
-													]
-										),
-									[]
-								)}
-							</Tr>
-						) : null}
-					</Thead>
-					<Tbody>
-						{_.map(data, (row, index) => (
-							<Tr
-								{..._.pick(row, ['isDisabled', 'isActive', 'isSelected'])}
-								onClick={_.partial(this.handleRowClick, index)}
-								isActionable={isActionable}
-								key={'row' + index}
+				{hasFixedHeader ? (
+					<div className={cx('&-fixed')}>
+						<div className={cx('&-fixed-header')}>
+							<div className={cx('&-fixed-header-fixed-columns')} />
+							<div
+								className={cx('&-fixed-header-unfixed-columns')}
+								ref={ref => (this.fixedHeaderUnfixedColumnsRef = ref)}
 							>
-								{isSelectable ? (
-									<Td>
-										<Checkbox
-											isSelected={row.isSelected}
-											onSelect={_.partial(this.handleSelect, index)}
-										/>
-									</Td>
-								) : null}
-								{_.map(
-									flattenedColumns,
-									({ props: columnProps }, columnIndex) => {
-										const cellValue = _.get(row, columnProps.field);
-										const isEmpty = _.isEmpty(_.toString(cellValue));
-
-										return (
-											<Td
-												{..._.omit(columnProps, [
-													'field',
-													'children',
-													'width',
-													'title',
-													'isSortable',
-													'isSorted',
-													'isResizable',
-												])}
-												style={{
-													width: columnProps.width,
-												}}
-												key={
-													'row' +
-													index +
-													_.get(columnProps, 'field', columnIndex)
-												}
-											>
-												{isEmpty ? emptyCellText : cellValue}
-											</Td>
-										);
-									}
-								)}
-							</Tr>
-						))}
-						{_.times(fillerRowCount, index => (
-							<Tr isDisabled key={'row' + index} style={{ height: '32px' }}>
-								{isSelectable ? <Td /> : null}
-								{_.map(
-									flattenedColumns,
-									({ props: columnProps }, columnIndex) => (
-										<Td
-											{..._.omit(columnProps, [
-												'field',
-												'children',
-												'width',
-												'title',
-												'isSortable',
-												'isSorted',
-												'isResizable',
-											])}
-											style={{
-												width: columnProps.width,
-											}}
-											key={
-												'row' + index + _.get(columnProps, 'field', columnIndex)
-											}
-										/>
-									)
-								)}
-							</Tr>
-						))}
-					</Tbody>
-				</ScrollTable>
+								<Table
+									style={style}
+									className={cx('&-fixed-header-unfixed-columns-Table')}
+								>
+									{this.renderHeader(childComponentElements, flattenedColumns)}
+								</Table>
+							</div>
+						</div>
+						<div className={cx('&-fixed-body')}>
+							<div className={cx('&-fixed-body-fixed-columns')} />
+							<div
+								onScroll={this.handleFixedBodyUnfixedColumnsScroll}
+								className={cx('&-fixed-body-unfixed-columns')}
+							>
+								<Table
+									style={style}
+									className={cx('&-fixed-body-unfixed-columns-Table')}
+								>
+									{this.renderBody(flattenedColumns)}
+								</Table>
+							</div>
+						</div>
+					</div>
+				) : (
+					<ScrollTable
+						style={style}
+						tableWidth={isFullWidth ? '100%' : null}
+						{...omitProps(passThroughs, DataTable, [], false)}
+						className={cx(
+							'&',
+							{
+								'&-full-width': isFullWidth,
+							},
+							className
+						)}
+					>
+						{this.renderHeader(childComponentElements, flattenedColumns)}
+						{this.renderBody(flattenedColumns)}
+					</ScrollTable>
+				)}
 			</EmptyStateWrapper>
 		);
 	},

@@ -1,8 +1,71 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
+.lucid-DataTable-EmptyStateWrapper {
+	&-has-fixed-header {
+		height: 100%;
+	}
+}
+
 .lucid-DataTable {
 	&.lucid-DataTable-full-width {
 		width: 100%;
+	}
+
+	&-fixed {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&-fixed-header {
+		display: flex;
+		flex-shrink: 0;
+
+		&-fixed-columns {
+			flex-shrink: 0;
+
+			&-Table {
+				table-layout: fixed;
+			}
+		}
+
+		&-unfixed-columns {
+			overflow-x: hidden;
+			overflow-y: scroll;
+
+			&-Table {
+				table-layout: fixed;
+				width: 100%;
+			}
+		}
+	}
+
+	&-fixed-body {
+		display: flex;
+		height: 100%; // needed for Firefox
+
+		.lucid-Table-Td {
+			box-sizing: border-box;
+		}
+
+		&-fixed-columns {
+			overflow-x: scroll;
+			overflow-y: hidden;
+			flex-shrink: 0;
+
+			&-Table {
+				table-layout: fixed;
+			}
+		}
+
+		&-unfixed-columns {
+			overflow: scroll;
+
+			&-Table {
+				table-layout: fixed;
+				width: 100%;
+			}
+		}
 	}
 }
