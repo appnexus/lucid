@@ -22,9 +22,6 @@ export default createClass({
 			<section style={sectionStyle}>
 				<article style={articleStyle}>
 					<Button style={buttonStyle}>Default</Button>
-					<Button style={buttonStyle}>
-						<CheckIcon />Default
-					</Button>
 					<Button style={buttonStyle} hasOnlyIcon={true}>
 						<CheckIcon />
 					</Button>
@@ -36,9 +33,6 @@ export default createClass({
 				<article style={articleStyle}>
 					<Button style={buttonStyle} size="short">
 						Short
-					</Button>
-					<Button style={buttonStyle} size="short">
-						<CheckIcon />Short
 					</Button>
 					<Button style={buttonStyle} size="short" hasOnlyIcon={true}>
 						<CheckIcon />
@@ -54,9 +48,6 @@ export default createClass({
 					<Button style={buttonStyle} size="small">
 						Small
 					</Button>
-					<Button style={buttonStyle} size="small">
-						<CheckIcon />Small
-					</Button>
 					<Button style={buttonStyle} size="small" hasOnlyIcon={true}>
 						<CheckIcon />
 					</Button>
@@ -70,9 +61,6 @@ export default createClass({
 				<article style={articleStyle}>
 					<Button style={buttonStyle} size="large">
 						Large
-					</Button>
-					<Button style={buttonStyle} size="large">
-						<CheckIcon />Large
 					</Button>
 					<Button style={buttonStyle} size="large" hasOnlyIcon={true}>
 						<CheckIcon />

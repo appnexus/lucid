@@ -15,7 +15,12 @@ const Button = createClass({
 	statics: {
 		peek: {
 			description: `
-				A basic button. Any props that are not explicitly called out below will
+				Use buttons for actions in forms, dialogs, and more. 
+				
+				\`PrimaryButton\` for primary, 
+				
+				\`LinkButton\` for sentences. etc
+				Any props that are not explicitly called out below will 
 				be passed through to the native \`button\` component.
 			`,
 			categories: ['controls', 'buttons'],

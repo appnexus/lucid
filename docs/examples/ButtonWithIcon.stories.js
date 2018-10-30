@@ -2,11 +2,11 @@ import { storiesOf } from '@storybook/react';
 import { exampleStory } from '../../.storybook/lucid-docs-addon';
 
 import ButtonWithIcon from '../../src/components/ButtonWithIcon/ButtonWithIcon';
-import WithDefaultsExample from './ButtonWithIcon/WithDefaults';
-import withDefaultsCode from '!!raw-loader!./ButtonWithIcon/WithDefaults';
+import WithDefaultsExample from './ButtonWithIcon/ButtonWithIcon';
+import withDefaultsCode from '!!raw-loader!./ButtonWithIcon/ButtonWithIcon';
 
 storiesOf('ButtonWithIcon', module).add(
-	'with defaults',
+	'Button with icon and text',
 	exampleStory({
 		component: ButtonWithIcon,
 		example: WithDefaultsExample,

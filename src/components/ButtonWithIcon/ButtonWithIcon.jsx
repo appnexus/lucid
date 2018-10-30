@@ -17,7 +17,7 @@ const ButtonWithIcon = createClass({
 	statics: {
 		peek: {
 			description: `
-				A basic button with an \`Icon\`.
+				Use this component for buttons with text and an icon, for text only or icon only buttons use \`Button\`. Button with \`Icon\` is styled to work with \`Basic button\` and \`Link button\`, and in some cases \`Large button\`.  
 			`,
 			categories: ['controls', 'buttons'],
 			madeFrom: ['Button', 'Icon'],
@@ -50,7 +50,6 @@ const ButtonWithIcon = createClass({
 	getDefaultProps() {
 		return {
 			isDisabled: false,
-			isActive: false,
 			onClick: _.noop,
 			type: 'button',
 		};
@@ -70,8 +69,6 @@ const ButtonWithIcon = createClass({
 	render() {
 		const {
 			isDisabled,
-			isActive,
-			iconIsOnLeft,
 			size,
 			kind,
 			className,
@@ -82,27 +79,26 @@ const ButtonWithIcon = createClass({
 		} = this.props;
 
 		return (
-			<div>
-				<Button
-					className={cx(
-						'&',
-						{
-							'&-large': size === 'large',
-							'&-invisible': kind === 'invisible',
-						},
-						className
-					)}
-					isDisabled={isDisabled}
-					onClick={this.handleClick}
-					ref="button"
-					type={type}
-				>
-					<span className={cx('&', '&-content')}>
-						{icon}
-						{children}
-					</span>
-				</Button>
-			</div>
+			<Button
+				className={cx(
+					'&',
+					{
+						'&-large': size === 'large',
+						'&-invisible': kind === 'invisible',
+					},
+					className
+				)}
+				isDisabled={isDisabled}
+				onClick={this.handleClick}
+				ref="button"
+				type={type}
+				{...passThroughs}
+			>
+				<span className={cx('&', '&-content')}>
+					{icon}
+					{children}
+				</span>
+			</Button>
 		);
 	},
 });

@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-@Button-size-padding: @size-standard;
+@Button-size-padding: 10px;
 @Button-size-height: @size-standard-height;
 @Button-size-height-small: @size-standard-height - 8;
 @Button-size-height-large: @size-standard-height + 12;
@@ -9,11 +9,11 @@
 
 .lucid-ButtonWithIcon {
 
-	padding-left: 4px;
+	padding-left: 5px;
 
 	// only applied to the default button's icon
 	.lucid-Icon {
-		padding-right: 8px;
+		padding-right: 7px;
 	}
 
 	& &-content {
@@ -21,6 +21,7 @@
 		justify-content: center;
 		align-items: center;
 		height: 100%;
+		padding-left: 3px;
 
 		> .lucid-Icon {
 			transition: color @timing-animation-hover, fill @timing-animation-hover;
@@ -35,13 +36,13 @@
 	&&-large {
 		height: @Button-size-height-large;
 		padding: 0 @Button-size-padding*1.5;
-		padding-left: 8px;
+		padding-left: 5px;
 		font-size: 1.2em;
 
 		.lucid-Icon {
 			width: 1.2em;
 			height: 1.2em;
-			padding-right: 12px;
+			padding-right: 10px;
 		}
 	}
 
@@ -52,7 +53,7 @@
 		border: none;
 		background: none;
 		color: @color-linkColor;
-		padding-left: 8px;
+		padding-left: 5px;
 
 		&:hover:not(.lucid-Button-is-disabled),
 		&:active:not(.lucid-Button-is-disabled),
@@ -74,7 +75,7 @@
 
 		.lucid-Icon {
 			fill: @color-primary;
-			padding-right: 6px;
+			padding-right: 7px;
 
 			+ span {
 				line-height: 1.4em;
