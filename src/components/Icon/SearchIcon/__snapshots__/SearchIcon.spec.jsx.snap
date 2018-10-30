@@ -5,6 +5,7 @@ exports[`SearchIcon [common] example testing should match snapshot(s) for 1.defa
   aspectRatio="xMidYMid meet"
   className="lucid-SearchIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
@@ -20,6 +21,7 @@ exports[`SearchIcon [common] example testing should match snapshot(s) for 1.defa
   aspectRatio="xMidYMid meet"
   className="lucid-SearchIcon"
   isBadge={true}
+  isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
@@ -67,6 +69,7 @@ exports[`SearchIcon [common] example testing should match snapshot(s) for 3.disa
   aspectRatio="xMidYMid meet"
   className="lucid-SearchIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={true}
   size={16}
   viewBox="0 0 16 16"
@@ -82,6 +85,7 @@ exports[`SearchIcon [common] example testing should match snapshot(s) for 3.disa
   aspectRatio="xMidYMid meet"
   className="lucid-SearchIcon"
   isBadge={true}
+  isClickable={false}
   isDisabled={true}
   size={16}
   viewBox="0 0 16 16"

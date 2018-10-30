@@ -33,7 +33,7 @@ const MinusIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path d="M3,7h10v2H3V7z" />
+				<path d="M2 7h12v2H2z" />
 			</Icon>
 		);
 	},

@@ -176,15 +176,18 @@ const TextField = createClass({
 	},
 
 	handleBlur(event) {
-		const { onBlur } = this.props;
+		const { onBlur, onChangeDebounced } = this.props;
 
 		const value = _.get(event, 'target.value', '');
 
+		if (onChangeDebounced !== _.noop) {
+			this._handleChangeDebounced.flush();
+		}
 		onBlur(value, { event, props: this.props });
 	},
 
 	handleKeyDown(event) {
-		const { props, props: { onSubmit, onKeyDown } } = this;
+		const { props, props: { onSubmit, onKeyDown, onChangeDebounced } } = this;
 		const value = _.get(event, 'target.value', '');
 
 		// If the consumer passed an onKeyDown, we call it
@@ -193,6 +196,10 @@ const TextField = createClass({
 		}
 
 		if (event.keyCode === KEYCODE.Enter) {
+			if (onChangeDebounced !== _.noop) {
+				this._handleChangeDebounced.flush();
+			}
+
 			onSubmit(value, { event, props: this.props });
 		}
 	},

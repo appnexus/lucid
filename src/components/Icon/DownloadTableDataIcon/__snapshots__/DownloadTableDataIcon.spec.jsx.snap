@@ -5,6 +5,7 @@ exports[`DownloadTableDataIcon [common] example testing should match snapshot(s)
   aspectRatio="xMidYMid meet"
   className="lucid-DownloadTableDataIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
@@ -44,6 +45,7 @@ exports[`DownloadTableDataIcon [common] example testing should match snapshot(s)
   aspectRatio="xMidYMid meet"
   className="lucid-DownloadTableDataIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={true}
   size={16}
   viewBox="0 0 16 16"
