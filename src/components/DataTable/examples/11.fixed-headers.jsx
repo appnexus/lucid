@@ -98,7 +98,13 @@ export default createClass({
 	render() {
 		return (
 			<div style={{ height: '200px' }}>
-				<DataTable data={data} hasFixedHeader>
+				<DataTable
+					data={data}
+					hasFixedHeader
+					fixedColumnCount={2}
+					fixedRowHeight={45}
+					isSelectable
+				>
 					<DataTable.Column field="id" align="left" width={25}>
 						ID
 					</DataTable.Column>

@@ -237,9 +237,15 @@ const DataTable = createClass({
 
 	handleFixedBodyUnfixedColumnsScroll(event) {
 		this.fixedHeaderUnfixedColumnsRef.scrollLeft = event.target.scrollLeft;
+		this.fixedBodyFixedColumnsRef.scrollTop = event.target.scrollTop;
 	},
 
-	renderHeader(childComponentElements, flattenedColumns) {
+	renderHeader(
+		startColumnIndex,
+		endColumnIndex,
+		childComponentElements,
+		flattenedColumns
+	) {
 		const { isSelectable, data } = this.props;
 
 		const hasGroupedColumns = _.some(
@@ -248,49 +254,59 @@ const DataTable = createClass({
 				childComponentElement.type === DataTable.ColumnGroup
 		);
 
+		// Opting for a mutable array here for readability
+		const firstRowColumns = [];
+
+		if (isSelectable) {
+			firstRowColumns.push(
+				<Th
+					key={cx('&-row-selector')}
+					rowSpan={hasGroupedColumns ? 2 : null}
+					width={24}
+				>
+					<Checkbox
+						isSelected={_.every(data, 'isSelected')}
+						onSelect={this.handleSelectAll}
+					/>
+				</Th>
+			);
+		}
+
+		_.forEach(childComponentElements, ({ props, type }, index) => {
+			if (type === DataTable.Column) {
+				firstRowColumns.push(
+					<Th
+						{..._.omit(props, ['field', 'children', 'width', 'title'])}
+						onClick={
+							DataTable.shouldColumnHandleSort(props)
+								? _.partial(this.handleSort, props.field)
+								: null
+						}
+						style={{
+							width: props.width,
+						}}
+						rowSpan={hasGroupedColumns ? 2 : null}
+						key={_.get(props, 'field', index)}
+					>
+						{props.title || props.children}
+					</Th>
+				);
+			} else {
+				firstRowColumns.push(
+					<Th
+						colSpan={_.size(filterTypes(props.children, DataTable.Column))}
+						{..._.omit(props, ['field', 'children', 'width', 'title'])}
+						key={_.get(props, 'field', index)}
+					>
+						{props.title || props.children}
+					</Th>
+				);
+			}
+		});
+
 		return (
 			<Thead>
-				<Tr>
-					{isSelectable ? (
-						<Th rowSpan={hasGroupedColumns ? 2 : null} width={24}>
-							<Checkbox
-								isSelected={_.every(data, 'isSelected')}
-								onSelect={this.handleSelectAll}
-							/>
-						</Th>
-					) : null}
-					{_.map(
-						childComponentElements,
-						({ props, type }, index) =>
-							type === DataTable.Column ? (
-								<Th
-									{..._.omit(props, ['field', 'children', 'width', 'title'])}
-									onClick={
-										DataTable.shouldColumnHandleSort(props)
-											? _.partial(this.handleSort, props.field)
-											: null
-									}
-									style={{
-										width: props.width,
-									}}
-									rowSpan={hasGroupedColumns ? 2 : null}
-									key={_.get(props, 'field', index)}
-								>
-									{props.title || props.children}
-								</Th>
-							) : (
-								<Th
-									colSpan={_.size(
-										filterTypes(props.children, DataTable.Column)
-									)}
-									{..._.omit(props, ['field', 'children', 'width', 'title'])}
-									key={_.get(props, 'field', index)}
-								>
-									{props.title || props.children}
-								</Th>
-							)
-					)}
-				</Tr>
+				<Tr>{_.slice(firstRowColumns, startColumnIndex, endColumnIndex)}</Tr>
 				{hasGroupedColumns ? (
 					<Tr>
 						{_.reduce(
@@ -329,16 +345,21 @@ const DataTable = createClass({
 		);
 	},
 
-	renderBody(flattenedColumns) {
+	renderBody(startColumnIndex, endColumnIndex, flattenedColumns) {
 		const {
 			data,
 			isActionable,
 			isSelectable,
 			minRows,
 			emptyCellText,
+			fixedRowHeight,
 		} = this.props;
 
 		const fillerRowCount = _.clamp(minRows - _.size(data), 0, Infinity);
+		const columnSlicer = _.flow(_.compact, columns =>
+			_.slice(columns, startColumnIndex, endColumnIndex)
+		);
+
 		return (
 			<Tbody>
 				{_.map(data, (row, index) => (
@@ -347,61 +368,89 @@ const DataTable = createClass({
 						onClick={_.partial(this.handleRowClick, index)}
 						isActionable={isActionable}
 						key={'row' + index}
+						style={_.assign(
+							row.style,
+							fixedRowHeight ? { height: fixedRowHeight } : {}
+						)}
 					>
-						{isSelectable ? (
-							<Td>
-								<Checkbox
-									isSelected={row.isSelected}
-									onSelect={_.partial(this.handleSelect, index)}
-								/>
-							</Td>
-						) : null}
-						{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => {
-							const cellValue = _.get(row, columnProps.field);
-							const isEmpty = _.isEmpty(_.toString(cellValue));
+						{columnSlicer(
+							[
+								isSelectable ? (
+									<Td key={cx('&-row-selector')}>
+										<Checkbox
+											isSelected={row.isSelected}
+											onSelect={_.partial(this.handleSelect, index)}
+										/>
+									</Td>
+								) : null,
+							].concat(
+								_.map(
+									flattenedColumns,
+									({ props: columnProps }, columnIndex) => {
+										const cellValue = _.get(row, columnProps.field);
+										const isEmpty = _.isEmpty(_.toString(cellValue));
 
-							return (
-								<Td
-									{..._.omit(columnProps, [
-										'field',
-										'children',
-										'width',
-										'title',
-										'isSortable',
-										'isSorted',
-										'isResizable',
-									])}
-									style={{
-										width: columnProps.width,
-									}}
-									key={'row' + index + _.get(columnProps, 'field', columnIndex)}
-								>
-									{isEmpty ? emptyCellText : cellValue}
-								</Td>
-							);
-						})}
+										return (
+											<Td
+												{..._.omit(columnProps, [
+													'field',
+													'children',
+													'width',
+													'title',
+													'isSortable',
+													'isSorted',
+													'isResizable',
+												])}
+												style={{
+													width: columnProps.width,
+												}}
+												key={
+													'row' +
+													index +
+													_.get(columnProps, 'field', columnIndex)
+												}
+											>
+												{isEmpty ? emptyCellText : cellValue}
+											</Td>
+										);
+									}
+								)
+							)
+						)}
 					</Tr>
 				))}
 				{_.times(fillerRowCount, index => (
-					<Tr isDisabled key={'row' + index} style={{ height: '32px' }}>
-						{isSelectable ? <Td /> : null}
-						{_.map(flattenedColumns, ({ props: columnProps }, columnIndex) => (
-							<Td
-								{..._.omit(columnProps, [
-									'field',
-									'children',
-									'width',
-									'title',
-									'isSortable',
-									'isSorted',
-									'isResizable',
-								])}
-								style={{
-									width: columnProps.width,
-								}}
-								key={'row' + index + _.get(columnProps, 'field', columnIndex)}
-							/>
-						))}
+					<Tr
+						isDisabled
+						key={'row' + index}
+						style={{ height: fixedRowHeight || '32px' }}
+					>
+						{columnSlicer(
+							[isSelectable ? <Td key={cx('&-row-selector')} /> : null].concat(
+								_.map(
+									flattenedColumns,
+									({ props: columnProps }, columnIndex) => (
+										<Td
+											{..._.omit(columnProps, [
+												'field',
+												'children',
+												'width',
+												'title',
+												'isSortable',
+												'isSorted',
+												'isResizable',
+											])}
+											style={{
+												width: columnProps.width,
+											}}
+											key={
+												'row' + index + _.get(columnProps, 'field', columnIndex)
+											}
+										/>
+									)
+								)
+							)
+						)}
 					</Tr>
 				))}
 			</Tbody>
@@ -416,6 +465,7 @@ const DataTable = createClass({
 			isLoading,
 			style,
 			hasFixedHeader,
+			fixedColumnCount,
 			...passThroughs
 		} = this.props;
 
@@ -475,7 +525,21 @@ const DataTable = createClass({
 				{hasFixedHeader ? (
 					<div className={cx('&-fixed')}>
 						<div className={cx('&-fixed-header')}>
-							<div className={cx('&-fixed-header-fixed-columns')} />
+							<div className={cx('&-fixed-header-fixed-columns')}>
+								{fixedColumnCount > 0 ? (
+									<Table
+										style={style}
+										className={cx('&-fixed-header-fixed-columns-Table')}
+									>
+										{this.renderHeader(
+											0,
+											fixedColumnCount,
+											childComponentElements,
+											flattenedColumns
+										)}
+									</Table>
+								) : null}
+							</div>
 							<div
 								className={cx('&-fixed-header-unfixed-columns')}
 								ref={ref => (this.fixedHeaderUnfixedColumnsRef = ref)}
@@ -484,12 +548,29 @@ const DataTable = createClass({
 									style={style}
 									className={cx('&-fixed-header-unfixed-columns-Table')}
 								>
-									{this.renderHeader(childComponentElements, flattenedColumns)}
+									{this.renderHeader(
+										fixedColumnCount,
+										Infinity,
+										childComponentElements,
+										flattenedColumns
+									)}
 								</Table>
 							</div>
 						</div>
 						<div className={cx('&-fixed-body')}>
-							<div className={cx('&-fixed-body-fixed-columns')} />
+							<div
+								className={cx('&-fixed-body-fixed-columns')}
+								ref={ref => (this.fixedBodyFixedColumnsRef = ref)}
+							>
+								{fixedColumnCount > 0 ? (
+									<Table
+										style={style}
+										className={cx('&-fixed-body-fixed-columns-Table')}
+									>
+										{this.renderBody(0, fixedColumnCount, flattenedColumns)}
+									</Table>
+								) : null}
+							</div>
 							<div
 								onScroll={this.handleFixedBodyUnfixedColumnsScroll}
 								className={cx('&-fixed-body-unfixed-columns')}
@@ -498,7 +579,11 @@ const DataTable = createClass({
 									style={style}
 									className={cx('&-fixed-body-unfixed-columns-Table')}
 								>
-									{this.renderBody(flattenedColumns)}
+									{this.renderBody(
+										fixedColumnCount,
+										Infinity,
+										flattenedColumns
+									)}
 								</Table>
 							</div>
 						</div>
@@ -516,8 +601,13 @@ const DataTable = createClass({
 							className
 						)}
 					>
-						{this.renderHeader(childComponentElements, flattenedColumns)}
-						{this.renderBody(flattenedColumns)}
+						{this.renderHeader(
+							0,
+							Infinity,
+							childComponentElements,
+							flattenedColumns
+						)}
+						{this.renderBody(0, Infinity, flattenedColumns)}
 					</ScrollTable>
 				)}
 			</EmptyStateWrapper>
