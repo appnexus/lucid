@@ -25,15 +25,15 @@ tar -czf /tmp/$BUILD_ID.tar.gz . &>/dev/null
 popd &>/dev/null
 
 echo "POSTing to docspot (buildId: $BUILD_ID, isLatest: $IS_LASTEST)..."
-curl "http://docspot.devnxs.net/api/projects" \
+curl "https://docspot.adnxs.net/api/projects" \
 	--form file=@/tmp/$BUILD_ID.tar.gz \
-	--form projectId=anx-react \
+	--form projectId=lucid \
 	--form buildId=$BUILD_ID \
 	--form isLatest=$IS_LASTEST &>/dev/null
 
 if [ $? -eq 0 ]; then
-	echo "Uploaded to: http://docspot.devnxs.net/projects/anx-react/$BUILD_ID"
+	echo "Uploaded to: https://docspot.adnxs.net/projects/lucid/$BUILD_ID"
 else
-	echo "Error: unable to upload to: http://docspot.devnxs.net/projects/anx-react/$BUILD_ID"
+	echo "Error: unable to upload to: https://docspot.adnxs.net/projects/lucid/$BUILD_ID"
 fi
 

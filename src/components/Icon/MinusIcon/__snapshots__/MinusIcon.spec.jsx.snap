@@ -5,12 +5,13 @@ exports[`MinusIcon [common] example testing should match snapshot(s) for 1.defau
   aspectRatio="xMidYMid meet"
   className="lucid-MinusIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
   <path
-    d="M3,7h10v2H3V7z"
+    d="M2 7h12v2H2z"
   />
 </Icon>
 `;
@@ -20,12 +21,13 @@ exports[`MinusIcon [common] example testing should match snapshot(s) for 1.defau
   aspectRatio="xMidYMid meet"
   className="lucid-MinusIcon"
   isBadge={true}
+  isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
   <path
-    d="M3,7h10v2H3V7z"
+    d="M2 7h12v2H2z"
   />
 </Icon>
 `;
@@ -41,7 +43,7 @@ exports[`MinusIcon [common] example testing should match snapshot(s) for 2.click
   viewBox="0 0 16 16"
 >
   <path
-    d="M3,7h10v2H3V7z"
+    d="M2 7h12v2H2z"
   />
 </Icon>
 `;
@@ -57,7 +59,7 @@ exports[`MinusIcon [common] example testing should match snapshot(s) for 2.click
   viewBox="0 0 16 16"
 >
   <path
-    d="M3,7h10v2H3V7z"
+    d="M2 7h12v2H2z"
   />
 </Icon>
 `;
@@ -67,12 +69,13 @@ exports[`MinusIcon [common] example testing should match snapshot(s) for 3.disab
   aspectRatio="xMidYMid meet"
   className="lucid-MinusIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={true}
   size={16}
   viewBox="0 0 16 16"
 >
   <path
-    d="M3,7h10v2H3V7z"
+    d="M2 7h12v2H2z"
   />
 </Icon>
 `;
@@ -82,12 +85,13 @@ exports[`MinusIcon [common] example testing should match snapshot(s) for 3.disab
   aspectRatio="xMidYMid meet"
   className="lucid-MinusIcon"
   isBadge={true}
+  isClickable={false}
   isDisabled={true}
   size={16}
   viewBox="0 0 16 16"
 >
   <path
-    d="M3,7h10v2H3V7z"
+    d="M2 7h12v2H2z"
   />
 </Icon>
 `;

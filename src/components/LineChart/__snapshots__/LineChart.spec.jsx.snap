@@ -17,6 +17,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 01.basi
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -30,6 +31,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 01.basi
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -161,6 +163,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 03.mult
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -174,6 +177,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 03.mult
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -636,6 +640,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 04.mult
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -649,6 +654,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 04.mult
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -809,6 +815,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 05.stac
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -822,6 +829,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 05.stac
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -1050,6 +1058,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -1063,6 +1072,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -1087,6 +1097,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 06.dual
       orient="right"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -1364,6 +1375,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={5}
       tickFormat={[Function]}
       tickPadding={3}
@@ -1388,6 +1400,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={5}
       tickFormat={[Function]}
       tickPadding={3}
@@ -1412,6 +1425,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 07.all-
       orient="right"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={5}
       tickFormat={[Function]}
       tickPadding={3}
@@ -1658,6 +1672,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 08.stac
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -1671,6 +1686,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 08.stac
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -1802,6 +1818,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 09.stac
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -1815,6 +1832,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 09.stac
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -1944,6 +1962,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 10.abbr
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -1957,6 +1976,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 10.abbr
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -2096,6 +2116,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -2157,6 +2178,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -2170,6 +2192,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 11.colo
       orient="right"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -2633,6 +2656,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 12.empt
         orient="left"
         outerTickSize={6}
         scale={[Function]}
+        textOrientation="horizontal"
         tickCount={null}
         tickPadding={3}
       />
@@ -2645,6 +2669,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 12.empt
         orient="bottom"
         outerTickSize={6}
         scale={[Function]}
+        textOrientation="horizontal"
         tickCount={null}
         tickFormat={[Function]}
         tickPadding={3}
@@ -2683,6 +2708,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 13.empt
         orient="left"
         outerTickSize={6}
         scale={[Function]}
+        textOrientation="horizontal"
         tickCount={null}
         tickPadding={3}
       />
@@ -2695,6 +2721,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 13.empt
         orient="bottom"
         outerTickSize={6}
         scale={[Function]}
+        textOrientation="horizontal"
         tickCount={null}
         tickFormat={[Function]}
         tickPadding={3}
@@ -2741,6 +2768,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 14.empt
         orient="left"
         outerTickSize={6}
         scale={[Function]}
+        textOrientation="horizontal"
         tickCount={null}
         tickPadding={3}
       />
@@ -2753,6 +2781,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 14.empt
         orient="bottom"
         outerTickSize={6}
         scale={[Function]}
+        textOrientation="horizontal"
         tickCount={null}
         tickFormat={[Function]}
         tickPadding={3}
@@ -2781,6 +2810,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 15.load
         orient="left"
         outerTickSize={6}
         scale={[Function]}
+        textOrientation="horizontal"
         tickCount={null}
         tickPadding={3}
       />
@@ -2793,6 +2823,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 15.load
         orient="bottom"
         outerTickSize={6}
         scale={[Function]}
+        textOrientation="horizontal"
         tickCount={null}
         tickFormat={[Function]}
         tickPadding={3}
@@ -2819,6 +2850,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 16.fine
       orient="bottom"
       outerTickSize={0}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}
@@ -2839,6 +2871,7 @@ exports[`LineChart [common] example testing should match snapshot(s) for 16.fine
       orient="left"
       outerTickSize={6}
       scale={[Function]}
+      textOrientation="horizontal"
       tickCount={null}
       tickFormat={[Function]}
       tickPadding={3}

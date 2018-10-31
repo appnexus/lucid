@@ -1,0 +1,84 @@
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
+.lucid-ProgressBar {
+	@bar-width: 5000px;
+
+	.pulse(@color) {
+		background-color: @color-white;
+		background-image: linear-gradient(to right, @color 15%, fade(@color, 25%) 25%, @color 15%);
+		animation: lucid-ProgressBar-is-pulsing 3s linear 0s infinite;
+	}
+
+	&-bar-container {
+		overflow: hidden;
+		position: relative;
+		margin: @size-S 0;
+	}
+
+	&-bar {
+		background: @color-primary;
+		height: @size-XXS;
+		min-width: @bar-width;
+
+		&-default {
+			background: @color-primary;
+
+			&-is-pulsed {
+				.pulse(@color-primary);
+			}
+		}
+
+		&-success {
+			background: @featured-color-success-borderColorLite;
+
+			&-is-pulsed {
+				.pulse(@featured-color-success-borderColorLite);
+			}
+		}
+
+		&-danger {
+			background: @featured-color-danger-borderColorLite;
+
+			&-is-pulsed {
+				.pulse(@featured-color-danger-borderColorLite);
+			}
+		}
+
+		&-info {
+			background: @featured-color-info-borderColorLite;
+
+			&-is-pulsed {
+				.pulse(@featured-color-info-borderColorLite);
+			}
+		}
+
+		&-warning {
+			background: @featured-color-warning-borderColorLite;
+
+			&-is-pulsed {
+				.pulse(@featured-color-warning-borderColorLite);
+			}
+		}
+	}
+
+	&-bar-overlay {
+		background-color: @color-lightGray;
+		height: @size-XXS;
+		transition: width @timing-animation-fade ease-in-out;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	&-title {
+		display: flex;
+		margin: @size-XS;
+		font-weight: bold;
+	}
+
+	@keyframes lucid-ProgressBar-is-pulsing {
+		from { background-position: 0; }
+		to { background-position: @bar-width; }
+	}
+}

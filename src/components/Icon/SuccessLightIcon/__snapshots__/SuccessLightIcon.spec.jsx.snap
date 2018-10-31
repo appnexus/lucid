@@ -5,6 +5,7 @@ exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 
   aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
@@ -46,6 +47,7 @@ exports[`SuccessLightIcon [common] example testing should match snapshot(s) for 
   aspectRatio="xMidYMid meet"
   className="lucid-SuccessLightIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={true}
   size={16}
   viewBox="0 0 16 16"

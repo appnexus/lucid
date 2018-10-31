@@ -20,3 +20,4 @@ local.log
 
 # Coverage
 coverage
+.DS_Store

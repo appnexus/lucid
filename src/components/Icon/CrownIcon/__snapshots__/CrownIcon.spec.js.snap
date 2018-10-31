@@ -5,6 +5,7 @@ exports[`CrownIcon [common] example testing should match snapshot(s) for 1.defau
   aspectRatio="xMidYMid meet"
   className="lucid-CrownIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="99.9 7.5 60.1 45"
@@ -36,6 +37,7 @@ exports[`CrownIcon [common] example testing should match snapshot(s) for 3.disab
   aspectRatio="xMidYMid meet"
   className="lucid-CrownIcon"
   isBadge={false}
+  isClickable={false}
   isDisabled={true}
   size={16}
   viewBox="99.9 7.5 60.1 45"

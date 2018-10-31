@@ -79,6 +79,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     width={1000}
     xAxisField="x"
     xAxisFormatter={[Function]}
+    xAxisTextOrientation="horizontal"
     xAxisTickCount={null}
     xAxisTitle={null}
     xAxisTitleColor="#000"
@@ -89,6 +90,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     }
     yAxisIsStacked={false}
     yAxisMin={0}
+    yAxisTextOrientation="horizontal"
     yAxisTickCount={null}
     yAxisTitle="Revenue"
     yAxisTitleColor="#000"
@@ -154,6 +156,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     width={1000}
     xAxisField="x"
     xAxisFormatter={[Function]}
+    xAxisTextOrientation="horizontal"
     xAxisTickCount={null}
     xAxisTitle={null}
     xAxisTitleColor="#000"
@@ -164,6 +167,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     }
     yAxisIsStacked={false}
     yAxisMin={0}
+    yAxisTextOrientation="horizontal"
     yAxisTickCount={null}
     yAxisTitle={null}
     yAxisTitleColor="#000"
@@ -229,6 +233,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     width={1000}
     xAxisField="x"
     xAxisFormatter={[Function]}
+    xAxisTextOrientation="horizontal"
     xAxisTickCount={null}
     xAxisTitle={null}
     xAxisTitleColor="#000"
@@ -239,6 +244,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     }
     yAxisIsStacked={false}
     yAxisMin={0}
+    yAxisTextOrientation="horizontal"
     yAxisTickCount={null}
     yAxisTitle={null}
     yAxisTitleColor="#000"
@@ -252,6 +258,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
         <LoadingIcon
           aspectRatio="xMidYMid meet"
           isBadge={false}
+          isClickable={false}
           isDisabled={false}
           size={16}
           speed="slow"
@@ -323,6 +330,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     width={1000}
     xAxisField="x"
     xAxisFormatter={[Function]}
+    xAxisTextOrientation="horizontal"
     xAxisTickCount={null}
     xAxisTitle={null}
     xAxisTitleColor="#000"
@@ -333,6 +341,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     }
     yAxisIsStacked={false}
     yAxisMin={0}
+    yAxisTextOrientation="horizontal"
     yAxisTickCount={null}
     yAxisTitle={null}
     yAxisTitleColor="#000"
@@ -345,6 +354,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
         <LoadingIcon
           aspectRatio="xMidYMid meet"
           isBadge={false}
+          isClickable={false}
           isDisabled={false}
           size={16}
           speed="fast"
@@ -412,6 +422,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     width={1000}
     xAxisField="x"
     xAxisFormatter={[Function]}
+    xAxisTextOrientation="horizontal"
     xAxisTickCount={null}
     xAxisTitle={null}
     xAxisTitleColor="#000"
@@ -422,6 +433,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     }
     yAxisIsStacked={false}
     yAxisMin={0}
+    yAxisTextOrientation="horizontal"
     yAxisTickCount={null}
     yAxisTitle={null}
     yAxisTitleColor="#000"
@@ -490,6 +502,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     width={1000}
     xAxisField="x"
     xAxisFormatter={[Function]}
+    xAxisTextOrientation="horizontal"
     xAxisTickCount={null}
     xAxisTitle={null}
     xAxisTitleColor="#000"
@@ -500,6 +513,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     }
     yAxisIsStacked={false}
     yAxisMin={0}
+    yAxisTextOrientation="horizontal"
     yAxisTickCount={null}
     yAxisTitle={null}
     yAxisTitleColor="#000"
@@ -565,6 +579,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     width={1000}
     xAxisField="x"
     xAxisFormatter={[Function]}
+    xAxisTextOrientation="horizontal"
     xAxisTickCount={null}
     xAxisTitle={null}
     xAxisTitleColor="#000"
@@ -575,6 +590,7 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
     }
     yAxisIsStacked={false}
     yAxisMin={0}
+    yAxisTextOrientation="horizontal"
     yAxisTickCount={null}
     yAxisTitle={null}
     yAxisTitleColor="#000"
