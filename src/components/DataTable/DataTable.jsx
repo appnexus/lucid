@@ -19,7 +19,7 @@ const { Thead, Tbody, Tr, Th, Td } = ScrollTable;
 
 const cx = lucidClassNames.bind('&-DataTable');
 const cxe = lucidClassNames.bind('&-DataTable-EmptyStateWrapper');
-const SELECTOR_COLUMN_WIDTH = 24;
+const SELECTOR_COLUMN_WIDTH = 41;
 
 const { any, func, number, object, string, bool, arrayOf } = PropTypes;
 
@@ -246,8 +246,8 @@ const DataTable = createClass({
 	},
 
 	renderHeader(
-		startColumnIndex,
-		endColumnIndex,
+		startColumn,
+		endColumn,
 		childComponentElements,
 		flattenedColumns
 	) {
@@ -260,7 +260,7 @@ const DataTable = createClass({
 		);
 
 		const columnSlicer = _.flow(_.compact, columns =>
-			_.slice(columns, startColumnIndex, endColumnIndex)
+			_.slice(columns, startColumn, endColumn)
 		);
 
 		return (
@@ -286,20 +286,12 @@ const DataTable = createClass({
 								({ props, type }, index) =>
 									type === DataTable.Column ? (
 										<Th
-											{..._.omit(props, [
-												'field',
-												'children',
-												'width',
-												'title',
-											])}
+											{..._.omit(props, ['field', 'children', 'title'])}
 											onClick={
 												DataTable.shouldColumnHandleSort(props)
 													? _.partial(this.handleSort, props.field)
 													: null
 											}
-											style={{
-												width: props.width,
-											}}
 											rowSpan={hasGroupedColumns ? 2 : null}
 											key={_.get(props, 'field', index)}
 										>
@@ -363,7 +355,7 @@ const DataTable = createClass({
 		);
 	},
 
-	renderBody(startColumnIndex, endColumnIndex, flattenedColumns) {
+	renderBody(startColumn, endColumn, flattenedColumns) {
 		const {
 			data,
 			isSelectable,
@@ -373,9 +365,9 @@ const DataTable = createClass({
 		} = this.props;
 
 		const fillerRowCount = _.clamp(minRows - _.size(data), 0, Infinity);
-		const isFixedColumn = endColumnIndex < Infinity;
+		const isFixedColumn = endColumn < Infinity;
 		const columnSlicer = _.flow(_.compact, columns =>
-			_.slice(columns, startColumnIndex, endColumnIndex)
+			_.slice(columns, startColumn, endColumn)
 		);
 
 		return (
@@ -428,8 +420,8 @@ const DataTable = createClass({
 													!_.isNil(columnProps.hasBorderRight)
 														? columnProps.hasBorderRight
 														: isFixedColumn &&
-															(columnIndex + isSelectable ? 1 : 0) ===
-																endColumnIndex - 1
+															columnIndex + 1 + (isSelectable ? 1 : 0) ===
+																endColumn
 												}
 												style={{
 													width: columnProps.width,

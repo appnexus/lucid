@@ -1,6 +1,11 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { DataTable, SuccessIcon } from '../../../index';
+import {
+	DataTable,
+	SuccessIcon,
+	TextField,
+	CheckboxLabeled,
+} from '../../../index';
 
 const data = [
 	{
@@ -95,17 +100,26 @@ const data = [
 ];
 
 export default createClass({
-	renderDataTable(hasLightHeader) {
+	getInitialState() {
+		return {
+			hasFixedHeader: true,
+			isSelectable: true,
+			hasLightHeader: false,
+			fixedColumnCount: 2,
+			fixedRowHeight: 45,
+			isActionable: false,
+		};
+	},
+	handleToggle(stateItem) {
+		this.setState({ [stateItem]: !this.state[stateItem] });
+	},
+	handleNumeric(stateItem, value) {
+		this.setState({ [stateItem]: value });
+	},
+	renderDataTable(props) {
 		return (
-			<DataTable
-				data={data}
-				hasLightHeader={hasLightHeader}
-				hasFixedHeader
-				fixedColumnCount={2}
-				fixedRowHeight={45}
-				isSelectable
-			>
-				<DataTable.Column field="id" align="left" width={25}>
+			<DataTable data={data} {...props}>
+				<DataTable.Column field="id" align="left" width={35}>
 					ID
 				</DataTable.Column>
 
@@ -138,8 +152,43 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				<div style={{ height: '200px' }}>{this.renderDataTable(false)}</div>
-				<div style={{ height: '200px' }}>{this.renderDataTable(true)}</div>
+				<TextField
+					onChangeDebounced={v =>
+						this.handleNumeric('fixedColumnCount', parseInt(v, 10))
+					}
+					placeholder="fixedColumnCount"
+					value={this.state.fixedColumnCount}
+				/>
+				<TextField
+					onChangeDebounced={v =>
+						this.handleNumeric('fixedRowHeight', parseInt(v, 10))
+					}
+					placeholder="fixedRowHeight"
+					value={this.state.fixedRowHeight}
+				/>
+				<CheckboxLabeled
+					Label="hasFixedHeader"
+					isSelected={this.state.hasFixedHeader}
+					onSelect={() => this.handleToggle('hasFixedHeader')}
+				/>
+				<CheckboxLabeled
+					Label="isSelectable"
+					isSelected={this.state.isSelectable}
+					onSelect={() => this.handleToggle('isSelectable')}
+				/>
+				<CheckboxLabeled
+					Label="hasLightHeader"
+					isSelected={this.state.hasLightHeader}
+					onSelect={() => this.handleToggle('hasLightHeader')}
+				/>
+				<CheckboxLabeled
+					Label="isActionable"
+					isSelected={this.state.isActionable}
+					onSelect={() => this.handleToggle('isActionable')}
+				/>
+				<div style={{ height: '200px' }}>
+					{this.renderDataTable(this.state)}
+				</div>
 			</div>
 		);
 	},
