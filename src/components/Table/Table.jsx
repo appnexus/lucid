@@ -14,75 +14,6 @@ const cx = lucidClassNames.bind('&-Table');
 
 const { any, bool, func, node, number, object, string, oneOf } = PropTypes;
 
-const Colgroup = createClass({
-	displayName: 'Table.Colgroup',
-
-	statics: {
-		peek: {
-			description: `
-				\`Colgroup\` renders <colgroup>.
-			`,
-		},
-	},
-
-	propTypes: {
-		className: any`
-			Appended to the component-specific class names set on the root element.
-			Value is run through the \`classnames\` library.
-		`,
-
-		children: node`
-			any valid React children
-		`,
-	},
-
-	render() {
-		const { children, className, ...passThroughs } = this.props;
-
-		return (
-			<colgroup
-				{...omitProps(passThroughs, Colgroup)}
-				className={cx('&-Colgroup', className)}
-			>
-				{children}
-			</colgroup>
-		);
-	},
-});
-
-const Col = createClass({
-	displayName: 'Table.Col',
-
-	statics: {
-		peek: {
-			description: `
-				\`Col\` renders <col>.
-			`,
-		},
-	},
-
-	propTypes: {
-		className: any`
-			Appended to the component-specific class names set on the root element.
-			Value is run through the \`classnames\` library.
-		`,
-
-		children: node`
-			any valid React children
-		`,
-	},
-
-	render() {
-		const { children, className, ...passThroughs } = this.props;
-
-		return (
-			<col {...omitProps(passThroughs, Col)} className={cx('&-Col', className)}>
-				{children}
-			</col>
-		);
-	},
-});
-
 const Thead = createClass({
 	displayName: 'Table.Thead',
 
@@ -629,8 +560,6 @@ const Table = createClass({
 	},
 
 	components: {
-		Colgroup,
-		Col,
 		Thead,
 		Tbody,
 		Tr,

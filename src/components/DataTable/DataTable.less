@@ -92,10 +92,10 @@
 				table-layout: fixed;
 				width: 100%;
 
-				// TODO: overwrite the active thingy
-				// &.lucid-Table-is-active {
-				// 	.selectFirstCellOnRow({ .left-marker(0); });
-				// }
+				// Very high specifity to beat Table styles
+				&.lucid-Table > .lucid-Table-Tbody > .lucid-Table-Tr.lucid-Table-is-active > .lucid-Table-Td.lucid-Table-is-first-single::after {
+					width: 0;
+				}
 			}
 		}
 	}

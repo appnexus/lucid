@@ -359,6 +359,7 @@ const DataTable = createClass({
 		const {
 			data,
 			isSelectable,
+			isActionable,
 			minRows,
 			emptyCellText,
 			fixedRowHeight,
@@ -375,6 +376,7 @@ const DataTable = createClass({
 				{_.map(data, (row, index) => (
 					<Tr
 						{..._.pick(row, ['isDisabled', 'isActive', 'isSelected'])}
+						isActionable={isActionable}
 						onClick={_.partial(this.handleRowClick, index)}
 						key={'row' + index}
 						style={_.assign(
