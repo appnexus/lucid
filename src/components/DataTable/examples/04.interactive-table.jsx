@@ -189,10 +189,13 @@ export default createClass({
 				onSelect={this.handleSelect}
 				onSelectAll={this.handleSelectAll}
 				onSort={this.handleSort}
+				hasFixedHeader
+				fixedColumnCount={2}
+				fixedRowHeight={50}
 			>
 				<DataTable.Column
 					field="id"
-					width={41}
+					width={60}
 					align="left"
 					hasBorderLeft
 					isSortable
@@ -205,9 +208,7 @@ export default createClass({
 				<DataTable.Column
 					field="first_name"
 					width={100}
-					hasBorderLeft
 					hasBorderRight
-					isResizable
 					isSortable
 					isSorted={currentlySortedField === 'first_name'}
 					sortDirection={currentlySortedFieldDirection}
@@ -218,9 +219,8 @@ export default createClass({
 				<DataTable.Column
 					field="last_name"
 					align="left"
-					width={100}
+					width={200}
 					hasBorderRight
-					isResizable
 					isSortable
 					isSorted={currentlySortedField === 'last_name'}
 					sortDirection={currentlySortedFieldDirection}
@@ -229,6 +229,7 @@ export default createClass({
 				</DataTable.Column>
 
 				<DataTable.Column
+					width={100}
 					field="email"
 					align="left"
 					isSortable

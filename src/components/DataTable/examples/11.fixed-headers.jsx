@@ -95,44 +95,51 @@ const data = [
 ];
 
 export default createClass({
+	renderDataTable(hasLightHeader) {
+		return (
+			<DataTable
+				data={data}
+				hasLightHeader={hasLightHeader}
+				hasFixedHeader
+				fixedColumnCount={2}
+				fixedRowHeight={45}
+				isSelectable
+			>
+				<DataTable.Column field="id" align="left" width={25}>
+					ID
+				</DataTable.Column>
+
+				<DataTable.Column field="first_name" align="left" width={100}>
+					First
+				</DataTable.Column>
+
+				<DataTable.Column field="last_name" align="left" width={100}>
+					Last
+				</DataTable.Column>
+
+				<DataTable.Column field="email" align="left" width={900}>
+					E-Mail
+				</DataTable.Column>
+
+				<DataTable.Column field="occupation" align="left" width={100}>
+					Occupation
+				</DataTable.Column>
+
+				<DataTable.Column field="salary" align="right" width={100}>
+					Salary
+				</DataTable.Column>
+
+				<DataTable.Column field="status" align="center" width={100}>
+					Status
+				</DataTable.Column>
+			</DataTable>
+		);
+	},
 	render() {
 		return (
-			<div style={{ height: '200px' }}>
-				<DataTable
-					data={data}
-					hasFixedHeader
-					fixedColumnCount={2}
-					fixedRowHeight={45}
-					isSelectable
-				>
-					<DataTable.Column field="id" align="left" width={25}>
-						ID
-					</DataTable.Column>
-
-					<DataTable.Column field="first_name" align="left" width={100}>
-						First
-					</DataTable.Column>
-
-					<DataTable.Column field="last_name" align="left" width={100}>
-						Last
-					</DataTable.Column>
-
-					<DataTable.Column field="email" align="left" width={900}>
-						E-Mail
-					</DataTable.Column>
-
-					<DataTable.Column field="occupation" align="left" width={100}>
-						Occupation
-					</DataTable.Column>
-
-					<DataTable.Column field="salary" align="right" width={100}>
-						Salary
-					</DataTable.Column>
-
-					<DataTable.Column field="status" align="center" width={100}>
-						Status
-					</DataTable.Column>
-				</DataTable>
+			<div>
+				<div style={{ height: '200px' }}>{this.renderDataTable(false)}</div>
+				<div style={{ height: '200px' }}>{this.renderDataTable(true)}</div>
 			</div>
 		);
 	},

@@ -19,6 +19,7 @@ const { Thead, Tbody, Tr, Th, Td } = ScrollTable;
 
 const cx = lucidClassNames.bind('&-DataTable');
 const cxe = lucidClassNames.bind('&-DataTable-EmptyStateWrapper');
+const SELECTOR_COLUMN_WIDTH = 24;
 
 const { any, func, number, object, string, bool, arrayOf } = PropTypes;
 
@@ -124,6 +125,8 @@ const DataTable = createClass({
 			- Using fixed headers means multiple tables will be rendered under the
 				hood. We use \`table-layout: fixed\` behavior to make sure we can sync
 				columns widths between the header and the body.
+			- Does not support \`DataTable.ColumnGroup\`s at this time. It's possible
+				we could support them at some point but its not a priority at the moment.
 		`,
 
 		fixedColumnCount: number`
@@ -148,6 +151,8 @@ const DataTable = createClass({
 
 		ColumnGroup: any`
 			*Child Element*
+
+			_Note_: column groups are *not* compatible with \`hasFixedHeader\`.
 
 			Used to Group defined \`Column\`s in the table. It accepts the same props
 			as \`Table.Th\` in addition to:
@@ -254,59 +259,72 @@ const DataTable = createClass({
 				childComponentElement.type === DataTable.ColumnGroup
 		);
 
-		// Opting for a mutable array here for readability
-		const firstRowColumns = [];
-
-		if (isSelectable) {
-			firstRowColumns.push(
-				<Th
-					key={cx('&-row-selector')}
-					rowSpan={hasGroupedColumns ? 2 : null}
-					width={24}
-				>
-					<Checkbox
-						isSelected={_.every(data, 'isSelected')}
-						onSelect={this.handleSelectAll}
-					/>
-				</Th>
-			);
-		}
-
-		_.forEach(childComponentElements, ({ props, type }, index) => {
-			if (type === DataTable.Column) {
-				firstRowColumns.push(
-					<Th
-						{..._.omit(props, ['field', 'children', 'width', 'title'])}
-						onClick={
-							DataTable.shouldColumnHandleSort(props)
-								? _.partial(this.handleSort, props.field)
-								: null
-						}
-						style={{
-							width: props.width,
-						}}
-						rowSpan={hasGroupedColumns ? 2 : null}
-						key={_.get(props, 'field', index)}
-					>
-						{props.title || props.children}
-					</Th>
-				);
-			} else {
-				firstRowColumns.push(
-					<Th
-						colSpan={_.size(filterTypes(props.children, DataTable.Column))}
-						{..._.omit(props, ['field', 'children', 'width', 'title'])}
-						key={_.get(props, 'field', index)}
-					>
-						{props.title || props.children}
-					</Th>
-				);
-			}
-		});
+		const columnSlicer = _.flow(_.compact, columns =>
+			_.slice(columns, startColumnIndex, endColumnIndex)
+		);
 
 		return (
 			<Thead>
-				<Tr>{_.slice(firstRowColumns, startColumnIndex, endColumnIndex)}</Tr>
+				<Tr>
+					{columnSlicer(
+						[
+							isSelectable ? (
+								<Th
+									key={cx('&-row-selector')}
+									rowSpan={hasGroupedColumns ? 2 : null}
+									width={SELECTOR_COLUMN_WIDTH}
+								>
+									<Checkbox
+										isSelected={_.every(data, 'isSelected')}
+										onSelect={this.handleSelectAll}
+									/>
+								</Th>
+							) : null,
+						].concat(
+							_.map(
+								childComponentElements,
+								({ props, type }, index) =>
+									type === DataTable.Column ? (
+										<Th
+											{..._.omit(props, [
+												'field',
+												'children',
+												'width',
+												'title',
+											])}
+											onClick={
+												DataTable.shouldColumnHandleSort(props)
+													? _.partial(this.handleSort, props.field)
+													: null
+											}
+											style={{
+												width: props.width,
+											}}
+											rowSpan={hasGroupedColumns ? 2 : null}
+											key={_.get(props, 'field', index)}
+										>
+											{props.title || props.children}
+										</Th>
+									) : (
+										<Th
+											colSpan={_.size(
+												filterTypes(props.children, DataTable.Column)
+											)}
+											{..._.omit(props, [
+												'field',
+												'children',
+												'width',
+												'title',
+											])}
+											key={_.get(props, 'field', index)}
+										>
+											{props.title || props.children}
+										</Th>
+									)
+							)
+						)
+					)}
+				</Tr>
 				{hasGroupedColumns ? (
 					<Tr>
 						{_.reduce(
@@ -348,7 +366,6 @@ const DataTable = createClass({
 	renderBody(startColumnIndex, endColumnIndex, flattenedColumns) {
 		const {
 			data,
-			isActionable,
 			isSelectable,
 			minRows,
 			emptyCellText,
@@ -356,6 +373,7 @@ const DataTable = createClass({
 		} = this.props;
 
 		const fillerRowCount = _.clamp(minRows - _.size(data), 0, Infinity);
+		const isFixedColumn = endColumnIndex < Infinity;
 		const columnSlicer = _.flow(_.compact, columns =>
 			_.slice(columns, startColumnIndex, endColumnIndex)
 		);
@@ -366,7 +384,6 @@ const DataTable = createClass({
 					<Tr
 						{..._.pick(row, ['isDisabled', 'isActive', 'isSelected'])}
 						onClick={_.partial(this.handleRowClick, index)}
-						isActionable={isActionable}
 						key={'row' + index}
 						style={_.assign(
 							row.style,
@@ -376,7 +393,13 @@ const DataTable = createClass({
 						{columnSlicer(
 							[
 								isSelectable ? (
-									<Td key={cx('&-row-selector')}>
+									<Td
+										key={cx('&-row-selector')}
+										width={SELECTOR_COLUMN_WIDTH}
+										hasBorderRight={
+											isFixedColumn && flattenedColumns.length === 0
+										}
+									>
 										<Checkbox
 											isSelected={row.isSelected}
 											onSelect={_.partial(this.handleSelect, index)}
@@ -401,6 +424,13 @@ const DataTable = createClass({
 													'isSorted',
 													'isResizable',
 												])}
+												hasBorderRight={
+													!_.isNil(columnProps.hasBorderRight)
+														? columnProps.hasBorderRight
+														: isFixedColumn &&
+															(columnIndex + isSelectable ? 1 : 0) ===
+																endColumnIndex - 1
+												}
 												style={{
 													width: columnProps.width,
 												}}
@@ -528,6 +558,7 @@ const DataTable = createClass({
 							<div className={cx('&-fixed-header-fixed-columns')}>
 								{fixedColumnCount > 0 ? (
 									<Table
+										{...omitProps(passThroughs, DataTable, [], false)}
 										style={style}
 										className={cx('&-fixed-header-fixed-columns-Table')}
 									>
@@ -545,6 +576,7 @@ const DataTable = createClass({
 								ref={ref => (this.fixedHeaderUnfixedColumnsRef = ref)}
 							>
 								<Table
+									{...omitProps(passThroughs, DataTable, [], false)}
 									style={style}
 									className={cx('&-fixed-header-unfixed-columns-Table')}
 								>
@@ -564,6 +596,7 @@ const DataTable = createClass({
 							>
 								{fixedColumnCount > 0 ? (
 									<Table
+										{...omitProps(passThroughs, DataTable, [], false)}
 										style={style}
 										className={cx('&-fixed-body-fixed-columns-Table')}
 									>
@@ -575,7 +608,9 @@ const DataTable = createClass({
 								onScroll={this.handleFixedBodyUnfixedColumnsScroll}
 								className={cx('&-fixed-body-unfixed-columns')}
 							>
+								<span className={cx('&-fixed-body-unfixed-columns-shadow')} />
 								<Table
+									{...omitProps(passThroughs, DataTable, [], false)}
 									style={style}
 									className={cx('&-fixed-body-unfixed-columns-Table')}
 								>
