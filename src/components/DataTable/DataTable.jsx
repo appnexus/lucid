@@ -127,6 +127,8 @@ const DataTable = createClass({
 				columns widths between the header and the body.
 			- Does not support \`DataTable.ColumnGroup\`s at this time. It's possible
 				we could support them at some point but its not a priority at the moment.
+			- You have to be careful about table cell height overflow. There are
+				cases where this can break the alignment of fixed columns.
 		`,
 
 		fixedColumnCount: number`
@@ -593,6 +595,9 @@ const DataTable = createClass({
 										{...omitProps(passThroughs, DataTable, [], false)}
 										style={style}
 										className={cx('&-fixed-body-fixed-columns-Table')}
+										hasWordWrap={
+											false /* try to protect against vertical overflow */
+										}
 									>
 										{this.renderBody(0, fixedColumnCount, flattenedColumns)}
 									</Table>
@@ -607,6 +612,9 @@ const DataTable = createClass({
 									{...omitProps(passThroughs, DataTable, [], false)}
 									style={style}
 									className={cx('&-fixed-body-unfixed-columns-Table')}
+									hasWordWrap={
+										false /* try to protect against vertical overflow */
+									}
 								>
 									{this.renderBody(
 										fixedColumnCount,
