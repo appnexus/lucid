@@ -152,20 +152,28 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				<TextField
-					onChangeDebounced={v =>
-						this.handleNumeric('fixedColumnCount', parseInt(v, 10))
-					}
-					placeholder="fixedColumnCount"
-					value={this.state.fixedColumnCount}
-				/>
-				<TextField
-					onChangeDebounced={v =>
-						this.handleNumeric('fixedRowHeight', parseInt(v, 10))
-					}
-					placeholder="fixedRowHeight"
-					value={this.state.fixedRowHeight}
-				/>
+				<label style={{ marginBottom: 6, display: 'block', fontSize: 12 }}>
+					<TextField
+						style={{ marginRight: 9, width: 45 }}
+						onChangeDebounced={v =>
+							this.handleNumeric('fixedColumnCount', parseInt(v, 10))
+						}
+						placeholder="fixedColumnCount"
+						value={this.state.fixedColumnCount}
+					/>
+					fixedColumnCount
+				</label>
+				<label style={{ marginBottom: 6, display: 'block', fontSize: 12 }}>
+					<TextField
+						style={{ marginRight: 9, width: 45 }}
+						onChangeDebounced={v =>
+							this.handleNumeric('fixedRowHeight', parseInt(v, 10))
+						}
+						placeholder="fixedRowHeight"
+						value={this.state.fixedRowHeight}
+					/>
+					fixedRowHeight
+				</label>
 				<CheckboxLabeled
 					Label="hasFixedHeader"
 					isSelected={this.state.hasFixedHeader}
