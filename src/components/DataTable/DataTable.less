@@ -93,8 +93,9 @@
 				width: 100%;
 
 				// Very high specifity to beat Table styles
-				&.lucid-Table > .lucid-Table-Tbody > .lucid-Table-Tr.lucid-Table-is-active > .lucid-Table-Td.lucid-Table-is-first-single::after {
-					width: 0;
+				&.lucid-Table > .lucid-Table-Tbody > .lucid-Table-Tr.lucid-Table-is-active > .lucid-Table-Td.lucid-Table-is-first-single::after,
+				&.lucid-Table > .lucid-Table-Tbody > .lucid-Table-Tr.lucid-Table-is-actionable:not(.lucid-Table-is-active):hover > .lucid-Table-Td.lucid-Table-is-first-single::after {
+					display: none;
 				}
 			}
 		}
