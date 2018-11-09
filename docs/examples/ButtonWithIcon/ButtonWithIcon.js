@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import {
 	ButtonWithIcon,
 	PlusIcon,
@@ -14,146 +15,66 @@ import {
 	UserIcon,
 } from '../../../src/index.js';
 
-const sectionStyle = {
-	display: 'flex',
-	flexDirection: 'column',
-};
-
-const articleStyle = {
-	display: 'flex',
-	margin: '5px 0px',
-};
-
-const buttonStyle = {
-	marginRight: '5px',
-};
+const icons = [
+	[<ArrowIcon />, 'Back'],
+	[<DeleteIcon />, 'Delete'],
+	[<DownloadIcon />, 'Download'],
+	[<DuplicateIcon />, 'Duplicate'],
+	[<EditIcon />, 'Edit'],
+	[<EditPageIcon />, 'Edit'],
+	[<PlusIcon />, 'Add New'],
+	[<SwitchIcon />, 'View as a Seller'],
+	[<UploadIcon />, 'Upload'],
+	[<UserIcon />, 'View Profile'],
+	[<ViewIcon />, 'View Details'],
+];
 
 export default class extends React.Component {
 	render() {
 		return (
 			<div>
 				<p>Examples of commonly used text and icon combinations.</p>
-				<section style={sectionStyle}>
-					<article style={articleStyle}>
-						<ButtonWithIcon style={buttonStyle} icon={<EditPageIcon />}>
-							Edit
-						</ButtonWithIcon>
-						<ButtonWithIcon style={buttonStyle} icon={<PlusIcon />}>
-							Add New
-						</ButtonWithIcon>
-						<ButtonWithIcon style={buttonStyle} icon={<ViewIcon />}>
-							View details
-						</ButtonWithIcon>
-						<ButtonWithIcon style={buttonStyle} icon={<DownloadIcon />}>
-							Download
-						</ButtonWithIcon>
-						<ButtonWithIcon style={buttonStyle} icon={<DuplicateIcon />}>
-							Duplicate
-						</ButtonWithIcon>
-						<ButtonWithIcon style={buttonStyle} icon={<UploadIcon />}>
-							Upload
-						</ButtonWithIcon>
-						<ButtonWithIcon style={buttonStyle} icon={<EditIcon />}>
-							Edit
-						</ButtonWithIcon>
-						<ButtonWithIcon style={buttonStyle} icon={<ArrowIcon />}>
-							Back
-						</ButtonWithIcon>
-						<ButtonWithIcon style={buttonStyle} icon={<DeleteIcon />}>
-							Delete
-						</ButtonWithIcon>
-						<ButtonWithIcon style={buttonStyle} icon={<SwitchIcon />}>
-							View as a Seller
-						</ButtonWithIcon>
-						<ButtonWithIcon style={buttonStyle} icon={<UserIcon />}>
-							View profile
-						</ButtonWithIcon>
-					</article>
-					<article style={articleStyle}>
-						<ButtonWithIcon
-							style={buttonStyle}
-							kind="invisible"
-							icon={<EditPageIcon />}
-						>
-							Edit
-						</ButtonWithIcon>
-						<ButtonWithIcon
-							style={buttonStyle}
-							kind="invisible"
-							icon={<PlusIcon />}
-						>
-							Add New
-						</ButtonWithIcon>
-						<ButtonWithIcon
-							style={buttonStyle}
-							kind="invisible"
-							icon={<ViewIcon />}
-						>
-							View details
-						</ButtonWithIcon>
-						<ButtonWithIcon
-							style={buttonStyle}
-							kind="invisible"
-							icon={<DownloadIcon />}
-						>
-							Download
-						</ButtonWithIcon>
-						<ButtonWithIcon
-							style={buttonStyle}
-							kind="invisible"
-							icon={<DuplicateIcon />}
-						>
-							Duplicate
-						</ButtonWithIcon>
-						<ButtonWithIcon
-							style={buttonStyle}
-							kind="invisible"
-							icon={<UploadIcon />}
-						>
-							Upload
-						</ButtonWithIcon>
-						<ButtonWithIcon
-							style={buttonStyle}
-							kind="invisible"
-							icon={<EditIcon />}
-						>
-							Edit
-						</ButtonWithIcon>
-						<ButtonWithIcon
-							style={buttonStyle}
-							kind="invisible"
-							icon={<ArrowIcon />}
-						>
-							Back
-						</ButtonWithIcon>
-						<ButtonWithIcon
-							style={buttonStyle}
-							kind="invisible"
-							icon={<DeleteIcon />}
-						>
-							Delete
-						</ButtonWithIcon>
-						<ButtonWithIcon
-							style={buttonStyle}
-							kind="invisible"
-							icon={<SwitchIcon />}
-						>
-							View as a Seller
-						</ButtonWithIcon>
-						<ButtonWithIcon
-							style={buttonStyle}
-							kind="invisible"
-							icon={<UserIcon />}
-						>
-							View profile
-						</ButtonWithIcon>
-					</article>
-
-					<article style={articleStyle}>
-						<ButtonWithIcon size="large" icon={<PlusIcon />}>
-							Button name
-						</ButtonWithIcon>
-					</article>
+				<section
+					style={{
+						display: 'grid',
+						gridTemplateColumns: `repeat(${icons.length}, 1fr)`,
+						gridColumnGap: 6,
+						gridRowGap: 6,
+					}}
+				>
+					{_.map(icons, ([icon, text]) => (
+						<div>
+							<ButtonWithIcon icon={icon}>{text}</ButtonWithIcon>
+						</div>
+					))}
+					{_.map(icons, ([icon, text]) => (
+						<div>
+							<ButtonWithIcon kind="invisible" icon={icon}>
+								{text}
+							</ButtonWithIcon>
+						</div>
+					))}
+					{_.map(icons, ([icon, text]) => (
+						<div>
+							<ButtonWithIcon size="short" icon={icon}>
+								{text}
+							</ButtonWithIcon>
+						</div>
+					))}
+					{_.map(icons, ([icon, text]) => (
+						<div>
+							<ButtonWithIcon size="small" icon={icon}>
+								{text}
+							</ButtonWithIcon>
+						</div>
+					))}
+					{_.map(icons, ([icon, text]) => (
+						<div>
+							<ButtonWithIcon size="large" icon={icon}>
+								{text}
+							</ButtonWithIcon>
+						</div>
+					))}
 				</section>
 			</div>
 		);

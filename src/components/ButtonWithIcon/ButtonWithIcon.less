@@ -1,86 +1,28 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-@Button-size-padding: 10px;
-@Button-size-height: @size-standard-height;
-@Button-size-height-small: @size-standard-height - 8;
-@Button-size-height-large: @size-standard-height + 12;
-@Button-size-borderRadius: @size-borderRadius;
-
 .lucid-ButtonWithIcon {
-
 	padding-left: 5px;
 
-	// only applied to the default button's icon
+	// Special case for large buttons.
+	&.lucid-Button-large {
+		padding-left: 9px;
+	}
+
+	// Special case for invisible buttons: it needs an extra pixel since there is
+	// no border.
+	&.lucid-Button-invisible {
+		padding-left: 6px;
+	}
+
 	.lucid-Icon {
-		padding-right: 7px;
+		padding-right: @size-XS;
 	}
 
-	& &-content {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-		padding-left: 3px;
-
-		> .lucid-Icon {
-			transition: color @timing-animation-hover, fill @timing-animation-hover;
-		}
-
-		> span {
-			transition: color @timing-animation-hover, fill @timing-animation-hover;
-		}
-	}
-
-	// Sizes
-	&&-large {
-		height: @Button-size-height-large;
-		padding: 0 @Button-size-padding*1.5;
-		padding-left: 5px;
-		font-size: 1.2em;
-
-		.lucid-Icon {
-			width: 1.2em;
-			height: 1.2em;
-			padding-right: 10px;
-		}
-	}
-
-	&&-invisible {
-		.gradient-reset();
-		.make-is-disabled(lucid-Button);
-
-		border: none;
-		background: none;
-		color: @color-linkColor;
-		padding-left: 5px;
-
-		&:hover:not(.lucid-Button-is-disabled),
-		&:active:not(.lucid-Button-is-disabled),
-		&:focus:not(.lucid-Button-is-disabled) {
-			.lucid-Icon { fill: @color-linkColorHover; }
-
-			background: @color-lightGray;
-			color: @color-linkColorHover;
-			box-shadow: none;
-		}
-
-		&:active::before {
-			opacity: 0;
-		}
-
-		.lucid-Button-content {
-			line-height: 1em;
-		}
-
-		.lucid-Icon {
-			fill: @color-primary;
-			padding-right: 7px;
-
-			+ span {
-				line-height: 1.4em;
-			}
-		}
+	// Special case for the arrow icon since it uses a CSS rotation
+	.lucid-Icon.lucid-ArrowIcon-is-left {
+		padding-right: 0;
+		padding-left: @size-XS;
 	}
 }
 
