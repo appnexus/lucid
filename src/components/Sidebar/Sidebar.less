@@ -20,6 +20,8 @@
 			z-index: @zindex-base;
 			background-color: @color-white;
 			overflow: auto;
+			display: flex;
+			flex-direction: column;
 
 			.lucid-Sidebar-is-position-left& {
 				border-right: @border-standardBorder;
@@ -52,6 +54,7 @@
 				font: @size-L @fontFamily;
 				font-weight: bold;
 				display: flex;
+				flex-shrink: 0;
 
 				.lucid-Sidebar-is-position-left& {
 					flex-direction: row;
@@ -97,6 +100,11 @@
 						fill: @color-darkGray;
 					}
 				}
+			}
+
+			& > .lucid-Sidebar-Bar-content {
+				overflow: auto;
+				flex: 1;
 			}
 
 			& > .lucid-Sidebar-Bar-content.lucid-Sidebar-Bar-content-has-gutters {
