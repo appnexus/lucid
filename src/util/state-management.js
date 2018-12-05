@@ -128,7 +128,7 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
  * to maintain their caches.
  */
 export const reduceSelectors = _.memoize(selectors => {
-	if (!_.isPlainObject(selectors)) {
+	if (!_.isPlainObject(selectors) && !_.get(selectors, '__esModule', false)) {
 		throw new Error(
 			'Selectors must be a plain object with function or plain object values'
 		);
