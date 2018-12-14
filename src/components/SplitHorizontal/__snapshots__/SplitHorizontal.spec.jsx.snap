@@ -21,7 +21,9 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 1
         "slideAmount": 250,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 
@@ -47,7 +49,9 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 2
         "slideAmount": 250,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 
@@ -73,7 +77,9 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 3
         "slideAmount": 250,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 
@@ -98,7 +104,9 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 4
         "slideAmount": 250,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 
@@ -123,7 +131,9 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 5
         "slideAmount": 250,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 
@@ -148,7 +158,9 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 6
         "slideAmount": 250,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 
@@ -174,7 +186,9 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 7
         "slideAmount": 250,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 
@@ -200,7 +214,9 @@ exports[`SplitHorizontal [common] example testing should match snapshot(s) for 8
         "slideAmount": 250,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 

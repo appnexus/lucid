@@ -254,7 +254,7 @@ describe('SplitVertical', () => {
 			});
 
 			afterEach(() => {
-				if (wrapper) {
+				if (wrapper && wrapper.exists()) {
 					wrapper.unmount();
 				}
 
