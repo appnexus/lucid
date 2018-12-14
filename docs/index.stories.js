@@ -247,37 +247,42 @@ const filteredIcons = _.reject(loadedIcons, ({ component }) =>
 );
 
 const storiesOfIcons = storiesOf('Icons', module)
-	.addDecorator(withOptions(articlePageOptions))
-	.add('All', () => (
-		<ArticlePage>
-			<h1>Icons</h1>
-			<section
-				style={{
-					display: 'flex',
-					flexWrap: 'wrap',
-				}}
-			>
-				{_.map(filteredIcons, ({ name, component: Icon }) => (
-					<div
-						key={name}
-						style={{
-							flexBasis: 256,
-							margin: 10,
-						}}
-					>
-						<Icon />{' '}
-						<LinkTo style={styles.link} kind="Icons" story={name}>
-							{name}
-						</LinkTo>
-					</div>
-				))}
-			</section>
-		</ArticlePage>
-	));
-
-storiesOfIcons
-	.addDecorator(withOptions(examplePageOptions))
-	.addDecorator(withPanelToggles(withTogglePanelAddonParameters));
+	.addDecorator(withOptions)
+	.addDecorator(withPanelToggles)
+	.addParameters({
+		options: examplePageOptions,
+		...withTogglePanelAddonParameters,
+	})
+	.add(
+		'All',
+		() => (
+			<ArticlePage>
+				<h1>Icons</h1>
+				<section
+					style={{
+						display: 'flex',
+						flexWrap: 'wrap',
+					}}
+				>
+					{_.map(filteredIcons, ({ name, component: Icon }) => (
+						<div
+							key={name}
+							style={{
+								flexBasis: 256,
+								margin: 10,
+							}}
+						>
+							<Icon />{' '}
+							<LinkTo style={styles.link} kind="Icons" story={name}>
+								{name}
+							</LinkTo>
+						</div>
+					))}
+				</section>
+			</ArticlePage>
+		),
+		{ options: articlePageOptions, panelToggles: undefined }
+	);
 
 _.forEach(
 	filteredIcons,
