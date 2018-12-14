@@ -17,7 +17,6 @@ storiesOf('ProgressBar', module)
 			example: WithDefaultsExample,
 			code: withDefaultsCode,
 			path: ['ProgressBar'],
-			options: { showAddonPanel: true },
 		})
 	)
 	.add(
@@ -27,7 +26,6 @@ storiesOf('ProgressBar', module)
 			example: VariousColorsExample,
 			code: variousColorsCode,
 			path: ['ProgressBar'],
-			options: { showAddonPanel: true },
 		})
 	)
 	.add(
@@ -37,6 +35,5 @@ storiesOf('ProgressBar', module)
 			example: WithTitleExample,
 			code: withTitleCode,
 			path: ['ProgressBar'],
-			options: { showAddonPanel: true },
 		})
 	);

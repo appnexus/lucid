@@ -2,51 +2,51 @@
 	"env": {
 		"test": {
 			"plugins": [
-				["transform-object-rest-spread"],
+				["@babel/plugin-proposal-object-rest-spread"],
 				["babel-plugin-transform-require-ignore", {
 					"extensions": [".less", ".css"]
 				}],
 			],
 			"presets": [
-				["env", {
+				["@babel/env", {
 					"targets": {
 						"browsers": ["last 2 versions"]
 					}
 				}],
-				"react"
+				"@babel/react"
 			]
 		},
 		"development": {
 			"plugins": [
-				["transform-object-rest-spread"],
+				["@babel/plugin-proposal-object-rest-spread"],
 				"lodash"
 			],
 			"presets": [
-				["env", {
+				["@babel/env", {
 					"targets": {
 						"browsers": ["last 2 versions"]
 					}
 				}],
-				"react"
+				"@babel/react"
 			]
 		},
 		"documentation": {
 			"plugins": [
-				["transform-object-rest-spread"],
+				["@babel/plugin-proposal-object-rest-spread"],
 				"lodash"
 			],
 			"presets": [
-				["env", {
+				["@babel/env", {
 					"targets": {
 						"browsers": ["last 2 versions"]
 					}
 				}],
-				"react"
+				"@babel/react"
 			]
 		},
 		"production": {
 			"plugins": [
-				["transform-object-rest-spread"],
+				["@babel/plugin-proposal-object-rest-spread"],
 				["babel-plugin-transform-require-ignore", {
 					"extensions": [".less", ".css"]
 				}],
@@ -56,17 +56,17 @@
 				"lodash"
 			],
 			"presets": [
-				["env", {
+				["@babel/env", {
 					"targets": {
 						"browsers": ["last 2 versions"]
 					}
 				}],
-				"react"
+				"@babel/react"
 			]
 		},
 		"modules": {
 			"plugins": [
-				["transform-object-rest-spread"],
+				["@babel/plugin-proposal-object-rest-spread"],
 				["babel-plugin-transform-require-ignore", {
 					"extensions": [".less", ".css"]
 				}],
@@ -76,13 +76,13 @@
 				"lodash"
 			],
 			"presets": [
-				["env", {
+				["@babel/env", {
 					"targets": {
 						"browsers": ["last 2 versions"]
 					},
 					"modules": false
 				}],
-				"react"
+				"@babel/react"
 			]
 		}
 	}

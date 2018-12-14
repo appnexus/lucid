@@ -1,11 +1,9 @@
+import '@storybook/addon-options/register';
 import React from 'react';
 import _ from 'lodash';
 import addons from '@storybook/addons';
 import { stripIndent } from './util';
 import marksy from 'marksy';
-import Hoverable from './Hoverable';
-
-import { setOptions } from '@storybook/addon-options';
 
 const compile = marksy({ createElement: React.createElement });
 
@@ -172,14 +170,8 @@ export const withChildComponents = (componentRef, maxHeight, path) => {
 
 const getDefaultExport = mod => (mod.__esModule ? mod.default : mod);
 
-export const exampleStory = ({ component, code, example, path, options }) => {
-	const StoryComponent = options
-		? props => {
-				setOptions(options);
-				return React.createElement(getDefaultExport(example), props);
-			}
-		: getDefaultExport(example);
-
+export const exampleStory = ({ component, code, example, path }) => {
+	const StoryComponent = getDefaultExport(example);
 	const componentRef = getDefaultExport(component);
 
 	const storyWithCode = withCode(code)(StoryComponent);

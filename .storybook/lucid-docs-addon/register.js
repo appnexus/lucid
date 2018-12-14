@@ -1,11 +1,8 @@
-import '@storybook/addon-options/register';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import addons from '@storybook/addons';
 import _ from 'lodash';
 import ExampleCode from './ExampleCode';
 import PropTypes from './PropTypes';
-import PanelToggles from './PanelToggles';
 import ChildComponents from './ChildComponents';
 import packageJson from '../../package.json';
 
@@ -37,7 +34,7 @@ class CodePanel extends React.Component {
 	render() {
 		const { code } = this.state;
 
-		if (_.isEmpty(code)) {
+		if (_.isEmpty(code) || !this.props.active) {
 			return null;
 		}
 
@@ -129,6 +126,10 @@ class PropsPanel extends React.Component {
 	render() {
 		const { childComponents, props: componentProps } = this.state;
 
+		if (!this.props.active) {
+			return null;
+		}
+
 		return (
 			<div
 				style={{
@@ -160,11 +161,15 @@ addons.register('lucid-docs', api => {
 	// Also need to set a unique name to the panel.
 	addons.addPanel('lucid-docs-panel-props', {
 		title: 'Props',
-		render: () => <PropsPanel channel={addons.getChannel()} api={api} />,
+		render: ({ active }) => (
+			<PropsPanel active={active} channel={addons.getChannel()} api={api} />
+		),
 	});
 	addons.addPanel('lucid-docs-panel-code', {
 		title: 'Code',
-		render: () => <CodePanel channel={addons.getChannel()} api={api} />,
+		render: ({ active }) => (
+			<CodePanel active={active} channel={addons.getChannel()} api={api} />
+		),
 	});
 
 	addons.getChannel().on('lucid-docs-panel-layout-toggle', () => {
@@ -179,13 +184,5 @@ addons.register('lucid-docs', api => {
 		api.setOptions({
 			showAddonPanel: !urlState.addons,
 		});
-	});
-
-	const div = window.document.createElement('div');
-	window.document.body.appendChild(div);
-	api.onStory((kind, story) => {
-		setTimeout(() => {
-			ReactDOM.render(<PanelToggles api={api} />, div);
-		}, 200);
 	});
 });

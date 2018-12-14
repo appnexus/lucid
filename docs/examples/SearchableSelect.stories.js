@@ -12,6 +12,5 @@ storiesOf('SearchableSelect', module).add(
 		example: WithFomattedOptionsExample,
 		code: withFomattedOptionsExampleCode,
 		path: ['SearchableSelect'],
-		options: { showAddonPanel: true },
 	})
 );

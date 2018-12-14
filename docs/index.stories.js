@@ -5,7 +5,7 @@ import * as path from 'path';
 import marksy from 'marksy/components';
 import { storiesOf } from '@storybook/react';
 import LinkTo from '@storybook/addon-links/react';
-import { setOptions } from '@storybook/addon-options';
+import { withOptions } from '@storybook/addon-options';
 import { exampleStory } from '../.storybook/lucid-docs-addon';
 import readmeText from '!!raw-loader!../README.md';
 import introText from '!!raw-loader!./intro.md';
@@ -20,8 +20,13 @@ import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 import okaidia from 'react-syntax-highlighter/styles/prism/okaidia';
 import '../src/index.less';
 import ColorPalette from './color-palette';
+import { withPanelToggles } from '../.storybook/lucid-docs-addon/PanelToggles';
 
 registerLanguage('jsx', jsx);
+
+const articlePageOptions = { showAddonPanel: false };
+const examplePageOptions = { showAddonPanel: true, addonPanelInRight: true };
+const withTogglePanelAddonParameters = { panelToggles: true };
 
 const loadAllKeys = (reqContext, rawContext) => {
 	return _.map(_.get(reqContext, 'keys', _.constant([]))(), key => ({
@@ -99,10 +104,6 @@ class ArticlePage extends React.Component {
 		if (typeof window !== 'undefined') {
 			window.document.documentElement.scrollTop = 0;
 		}
-
-		setOptions({
-			showAddonPanel: false,
-		});
 	}
 
 	render() {
@@ -136,6 +137,7 @@ class ArticlePage extends React.Component {
 }
 
 storiesOf('Lucid UI', module)
+	.addDecorator(withOptions(articlePageOptions))
 	.add('Introduction', () => (
 		<ArticlePage>
 			<div
@@ -235,7 +237,7 @@ _.reduce(
 			</ArticlePage>
 		));
 	},
-	storiesOf('Categories', module)
+	storiesOf('Categories', module).addDecorator(withOptions(articlePageOptions))
 );
 
 const loadedIcons = require('./load-icons');
@@ -244,32 +246,38 @@ const filteredIcons = _.reject(loadedIcons, ({ component }) =>
 	isPrivate(component)
 );
 
-const storiesOfIcons = storiesOf('Icons', module).add('All', () => (
-	<ArticlePage>
-		<h1>Icons</h1>
-		<section
-			style={{
-				display: 'flex',
-				flexWrap: 'wrap',
-			}}
-		>
-			{_.map(filteredIcons, ({ name, component: Icon }) => (
-				<div
-					key={name}
-					style={{
-						flexBasis: 256,
-						margin: 10,
-					}}
-				>
-					<Icon />{' '}
-					<LinkTo style={styles.link} kind="Icons" story={name}>
-						{name}
-					</LinkTo>
-				</div>
-			))}
-		</section>
-	</ArticlePage>
-));
+const storiesOfIcons = storiesOf('Icons', module)
+	.addDecorator(withOptions(articlePageOptions))
+	.add('All', () => (
+		<ArticlePage>
+			<h1>Icons</h1>
+			<section
+				style={{
+					display: 'flex',
+					flexWrap: 'wrap',
+				}}
+			>
+				{_.map(filteredIcons, ({ name, component: Icon }) => (
+					<div
+						key={name}
+						style={{
+							flexBasis: 256,
+							margin: 10,
+						}}
+					>
+						<Icon />{' '}
+						<LinkTo style={styles.link} kind="Icons" story={name}>
+							{name}
+						</LinkTo>
+					</div>
+				))}
+			</section>
+		</ArticlePage>
+	));
+
+storiesOfIcons
+	.addDecorator(withOptions(examplePageOptions))
+	.addDecorator(withPanelToggles(withTogglePanelAddonParameters));
 
 _.forEach(
 	filteredIcons,
@@ -287,7 +295,6 @@ _.forEach(
 				code: firstExample.source,
 				example: FirstExampleComponent,
 				path: [name],
-				options: { showAddonPanel: true },
 			})
 		);
 	}
@@ -306,16 +313,18 @@ _.forEach(
 			storiesOfAddSequence.push([
 				componentName,
 				() => {
-					storiesOf(componentName, module).add(
-						name,
-						exampleStory({
-							component,
-							code: source,
-							example: Example,
-							path: [componentName],
-							options: { showAddonPanel: true },
-						})
-					);
+					storiesOf(componentName, module)
+						.addDecorator(withOptions(examplePageOptions))
+						.addDecorator(withPanelToggles(withTogglePanelAddonParameters))
+						.add(
+							name,
+							exampleStory({
+								component,
+								code: source,
+								example: Example,
+								path: [componentName],
+							})
+						);
 				},
 			]);
 		});

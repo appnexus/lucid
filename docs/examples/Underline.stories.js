@@ -17,7 +17,6 @@ storiesOf('Underline', module)
 			example: WithDefaultsExample,
 			code: withDefaultsCode,
 			path: ['Underline'],
-			options: { showAddonPanel: true },
 		})
 	)
 	.add(
@@ -27,7 +26,6 @@ storiesOf('Underline', module)
 			example: WithStringMatchExample,
 			code: withStringMatchCode,
 			path: ['Underline'],
-			options: { showAddonPanel: true },
 		})
 	)
 	.add(
@@ -37,6 +35,5 @@ storiesOf('Underline', module)
 			example: WithRegexMatchExample,
 			code: withRegexMatchCode,
 			path: ['Underline'],
-			options: { showAddonPanel: true },
 		})
 	);

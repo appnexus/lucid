@@ -1,34 +1,39 @@
 import React from 'react';
 import Hoverable from './Hoverable';
+import addons, { makeDecorator } from '@storybook/addons';
+import ReactDOM from 'react-dom';
 
-export default class extends React.Component {
-	constructor(...args) {
-		super(...args);
-		this.onToggleLayout = this.onToggleLayout.bind(this);
-		this.onTogglePanel = this.onTogglePanel.bind(this);
-	}
+const portalElement = window.document.createElement('div');
+window.parent.document.body.appendChild(portalElement);
 
-	onToggleLayout() {
-		const urlState = this.props.api.getUrlState();
-		this.props.api.setOptions({
-			addonPanelInRight: !urlState.panelRight,
-		});
-	}
+export const withPanelToggles = makeDecorator({
+	name: 'withPanelToggles',
+	parameterName: 'panelToggles',
+	skipIfNoParametersOrOptions: true,
+	wrapper: (storyFn, context) => {
+		const channel = addons.getChannel();
+		const panelPortal = ReactDOM.createPortal(
+			<PanelToggles
+				handleToggleLayout={() => {
+					channel.emit('lucid-docs-panel-layout-toggle');
+				}}
+				handleTogglePanel={() => {
+					channel.emit('lucid-docs-panel-hide-toggle');
+				}}
+			/>,
+			portalElement
+		);
+		return (
+			<div>
+				{storyFn(context)}
+				{panelPortal}
+			</div>
+		);
+	},
+});
 
-	onTogglePanel() {
-		const urlState = this.props.api.getUrlState();
-		this.props.api.setOptions({
-			showAddonPanel: !urlState.addons,
-		});
-	}
-
+class PanelToggles extends React.Component {
 	render() {
-		const urlState = this.props.api.getUrlState();
-
-		if (urlState.full || !urlState.addons) {
-			return null;
-		}
-
 		return (
 			<Hoverable>
 				{hoverGroup => (
@@ -60,7 +65,7 @@ export default class extends React.Component {
 											: 'translateX(28px)',
 										transition: 'transform 300ms',
 									}}
-									onClick={this.onToggleLayout}
+									onClick={this.props.handleToggleLayout}
 									title="Toggle Layout"
 								>
 									<div
@@ -99,7 +104,7 @@ export default class extends React.Component {
 										cursor: 'pointer',
 										opacity: hover ? '1' : '0.6',
 									}}
-									onClick={this.onTogglePanel}
+									onClick={this.props.handleTogglePanel}
 									title="Toggle Panel"
 								>
 									<div
@@ -123,3 +128,5 @@ export default class extends React.Component {
 		);
 	}
 }
+
+export default PanelToggles;

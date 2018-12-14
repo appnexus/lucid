@@ -56,9 +56,7 @@ const exportCode = (specifierType, specifierPath, exportName) => {
 		`,
 	};
 
-	// For some reason this doesn't pickup our .babelrc even though it's supposed to
-	return babelCore.transform(codeMap[specifierType], { presets: ['es2015'] })
-		.code;
+	return babelCore.transform(codeMap[specifierType]).code;
 };
 
 /**
