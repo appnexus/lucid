@@ -1,4 +1,3 @@
-import '@storybook/addon-options/register';
 import React from 'react';
 import _ from 'lodash';
 import addons from '@storybook/addons';
