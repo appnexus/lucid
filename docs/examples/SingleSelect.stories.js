@@ -12,6 +12,5 @@ storiesOf('SingleSelect', module).add(
 		example: WithFomattedOptionsExample,
 		code: withFomattedOptionsExampleCode,
 		path: ['SingleSelect'],
-		options: { showAddonPanel: true },
 	})
 );

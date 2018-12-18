@@ -27,7 +27,9 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   >
     <InfiniteSlidePanel.Slide
       className="lucid-DateSelect-slide"
-    />
+    >
+      <Component />
+    </InfiniteSlidePanel.Slide>
   </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
@@ -68,7 +70,9 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   >
     <InfiniteSlidePanel.Slide
       className="lucid-DateSelect-slide"
-    />
+    >
+      <Component />
+    </InfiniteSlidePanel.Slide>
   </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
@@ -109,7 +113,9 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   >
     <InfiniteSlidePanel.Slide
       className="lucid-DateSelect-slide"
-    />
+    >
+      <Component />
+    </InfiniteSlidePanel.Slide>
   </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
@@ -150,7 +156,9 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   >
     <InfiniteSlidePanel.Slide
       className="lucid-DateSelect-slide"
-    />
+    >
+      <Component />
+    </InfiniteSlidePanel.Slide>
   </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
@@ -191,7 +199,9 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   >
     <InfiniteSlidePanel.Slide
       className="lucid-DateSelect-slide"
-    />
+    >
+      <Component />
+    </InfiniteSlidePanel.Slide>
   </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
@@ -232,7 +242,9 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   >
     <InfiniteSlidePanel.Slide
       className="lucid-DateSelect-slide"
-    />
+    >
+      <Component />
+    </InfiniteSlidePanel.Slide>
   </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon
@@ -274,7 +286,9 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   >
     <InfiniteSlidePanel.Slide
       className="lucid-DateSelect-slide"
-    />
+    >
+      <Component />
+    </InfiniteSlidePanel.Slide>
   </InfiniteSlidePanel>
   <div>
     <ChevronThinIcon

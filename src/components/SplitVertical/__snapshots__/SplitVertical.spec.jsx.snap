@@ -20,7 +20,9 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 1.d
         "slideAmount": 0,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 
@@ -44,7 +46,9 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 2.a
         "slideAmount": 0,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 
@@ -68,7 +72,9 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 3.s
         "slideAmount": 0,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 
@@ -92,7 +98,9 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 4.s
         "slideAmount": 0,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 
@@ -116,7 +124,9 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 5.c
         "slideAmount": 0,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 
@@ -140,7 +150,9 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 6.n
         "slideAmount": 0,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 
@@ -164,7 +176,9 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 7.c
         "slideAmount": 0,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 
@@ -188,7 +202,9 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 8.h
         "slideAmount": 0,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 
@@ -212,7 +228,9 @@ exports[`SplitVertical [common] example testing should match snapshot(s) for 9.n
         "slideAmount": 0,
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;
 

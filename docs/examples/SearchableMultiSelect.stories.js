@@ -12,6 +12,5 @@ storiesOf('SearchableMultiSelect', module).add(
 		example: WithFomattedOptionsExample,
 		code: withFomattedOptionsExampleCode,
 		path: ['SearchableMultiSelect'],
-		options: { showAddonPanel: true },
 	})
 );

@@ -101,7 +101,7 @@ describe('Sidebar', () => {
 			let wrapper;
 
 			afterEach(() => {
-				if (wrapper) {
+				if (wrapper && wrapper.exists()) {
 					wrapper.unmount();
 				}
 			});
