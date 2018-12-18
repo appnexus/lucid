@@ -2,16 +2,17 @@
 
 First of all, thank you for contributing. It’s appreciated.
 
-1. Clone the repo and install dependencies with `yarn`.
-2. Make a GitHub issue before doing any significant amount of work. Make sure the core team approves your idea. This step is really important. If you skip this, your PR might be rejected.
+1. Install node >= `>=8.0.0`
+2. Clone the repo and install dependencies with `yarn`.
+3. Make a GitHub issue before doing any significant amount of work. Make sure the core team approves your idea. This step is really important. If you skip this, your PR might be rejected.
   - Be sure to check out our [Waffle board][waffle] for a kanban view of all our issues.
-3. Below are some important commands for developing. Don't commit before fixing all errors and warnings.
+4. Below are some important commands for developing. Don't commit before fixing all errors and warnings.
   - `yarn start` runs the docs page and watches for changes
   - `yarn run dev` starts a blank storybook sandbox for quick, iterative development
   - `yarn run watch` runs tests and watches for changes, optimized for speed
-4. Ensure your changes work properly on the latest versions of Chrome, Firefox, Safari, and IE Edge. Currently this step is manual.
-5. Reference the issue's number in your commit. E.g.: "Did this #12".
-6. Make a pull request.
+5. Ensure your changes work properly on the latest versions of Chrome, Firefox, Safari, and IE Edge. Currently this step is manual.
+6. Reference the issue's number in your commit. E.g.: "Did this #12".
+7. Make a pull request.
 
 ## Process
 
