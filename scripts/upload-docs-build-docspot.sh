@@ -13,6 +13,9 @@ else
 	BUILD_ID=$CURRENT_BRANCH
 fi
 
+# Replace all `/` with `_` so we don't confuse other commands or docspot
+BUILD_ID=${BUILD_ID//\//_}
+
 # check that dist/docs exists, then upload archive to docspot
 if [ ! -e dist/docs ]; then
 	echo "Not found: dist/docs -- must build docs first (npm run build-docs)"
