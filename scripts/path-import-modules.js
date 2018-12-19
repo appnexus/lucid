@@ -1,5 +1,5 @@
-const babelCore = require('babel-core');
-const babylon = require('babylon');
+const babelCore = require('@babel/core');
+const babylon = require('@babel/parser');
 const fs = require('fs');
 const _ = require('lodash');
 const path = require('path');
