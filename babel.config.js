@@ -39,37 +39,8 @@ module.exports = function(api) {
 					'@babel/react',
 				],
 			},
-			documentation: {
-				plugins: [['@babel/plugin-proposal-object-rest-spread'], 'lodash'],
-				presets: [
-					[
-						'@babel/env',
-						{
-							targets: {
-								browsers: ['last 2 versions'],
-							},
-						},
-					],
-					'@babel/react',
-				],
-			},
 			production: {
-				plugins: [
-					['@babel/plugin-proposal-object-rest-spread'],
-					[
-						'babel-plugin-transform-require-ignore',
-						{
-							extensions: ['.less', '.css'],
-						},
-					],
-					[
-						'react-peek/babel',
-						{
-							minifyStatics: true,
-						},
-					],
-					'lodash',
-				],
+				plugins: [['@babel/plugin-proposal-object-rest-spread'], 'lodash'],
 				presets: [
 					[
 						'@babel/env',
