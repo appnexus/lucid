@@ -11,7 +11,7 @@
   "scripts": {
     "build": "npm run build-js && npm run build-modules",
     "build-bundle": "scripts/build-bundle.sh",
-    "build-docs": "rm -rf ./dist/docs && NODE_ENV=production build-storybook -s ./docs/public -o ./dist/docs",
+    "build-docs": "rm -rf ./dist/docs && NODE_DEST_ENV=docs build-storybook -s ./docs/public -o ./dist/docs",
     "build-js": "NODE_ENV=production babel --extensions .js,.jsx --ignore spec.js,docs,examples,test-entry.js,coverage ./src --out-dir ./dist",
     "build-modules": "NODE_ENV=production BABEL_ENV=modules babel --extensions .js,.jsx --ignore spec.js,docs,examples,test-entry.js,coverage ./src --out-dir ./lib",
     "cover": "npm run jest -- --coverage",

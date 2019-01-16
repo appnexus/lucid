@@ -1,5 +1,6 @@
 module.exports = function(api) {
 	const isProduction = process.env.NODE_ENV === 'production';
+	const isDocsBuild = process.env.NODE_DEST_ENV === 'docs';
 	api.cache(!isProduction);
 	return {
 		env: {
@@ -40,7 +41,26 @@ module.exports = function(api) {
 				],
 			},
 			production: {
-				plugins: [['@babel/plugin-proposal-object-rest-spread'], 'lodash'],
+				plugins: [
+					['@babel/plugin-proposal-object-rest-spread'],
+					'lodash',
+					...(isDocsBuild
+						? []
+						: [
+								[
+									'babel-plugin-transform-require-ignore',
+									{
+										extensions: ['.less', '.css'],
+									},
+								],
+								[
+									'react-peek/babel',
+									{
+										minifyStatics: true,
+									},
+								],
+							]),
+				],
 				presets: [
 					[
 						'@babel/env',
