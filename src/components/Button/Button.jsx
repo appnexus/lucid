@@ -1,11 +1,26 @@
-import React from 'react';
+/** @jsx jsx */
 import PropTypes from 'react-peek/prop-types';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
+import { jsx, css } from '@emotion/core';
 
 const cx = lucidClassNames.bind('&-Button');
+
+const baseStyles = css`
+	font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+	background-color: #009fdb;
+	color: #fff;
+	font-size: 14px;
+	padding: 6px 9px;
+	border: none;
+	border-radius: 3px;
+`;
+
+const dangerStyles = css`
+	background-color: #9f0000;
+`;
 
 const { arrayOf, bool, func, node, oneOf, oneOfType, string } = PropTypes;
 
@@ -108,6 +123,7 @@ const Button = createClass({
 		return (
 			<button
 				{...omitProps(passThroughs, Button, ['callbackId'])}
+				css={[baseStyles, kind === 'danger' ? dangerStyles : null]}
 				className={cx(
 					'&',
 					{
