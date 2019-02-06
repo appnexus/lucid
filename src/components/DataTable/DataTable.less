@@ -1,8 +1,103 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
+.lucid-DataTable-EmptyStateWrapper {
+	&-has-fixed-header {
+		height: 100%;
+	}
+}
+
 .lucid-DataTable {
 	&.lucid-DataTable-full-width {
 		width: 100%;
+	}
+
+	&-fixed {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+
+		// The borders on a light table screw with size of the header and mess up
+		// alignment for fixed table headers. This works, but an alternate approach
+		// would be to add 1px transparent border to the trs in the body. Not sure
+		// which is better so I'm starting with this.
+		.lucid-Table.lucid-Table-has-light-header > .lucid-Table-Thead {
+			border: none;
+		}
+	}
+
+	&-fixed-header {
+		display: flex;
+		flex-shrink: 0;
+
+		// `border-box` ensures that padding and borders are included in the total
+		// `width` of the element
+		.lucid-Table-Th {
+			box-sizing: border-box;
+		}
+
+		&-fixed-columns {
+			flex-shrink: 0;
+
+			// Very high specifity to beat Table styles
+			& > .lucid-Table > .lucid-Table-Thead > .lucid-Table-Tr > .lucid-Table-is-last-col.lucid-Table-is-last-col {
+				border-right: @border-table-header;
+			}
+
+			// Very high specifity to beat Table styles
+			& > .lucid-Table.lucid-Table-has-light-header > .lucid-Table-Thead > .lucid-Table-Tr > .lucid-Table-is-last-col.lucid-Table-is-last-col {
+				border-right: @border-table-header-light;
+			}
+
+			&-Table {
+				table-layout: fixed;
+			}
+		}
+
+		&-unfixed-columns {
+			overflow-x: hidden;
+			overflow-y: scroll;
+
+			&-Table {
+				table-layout: fixed;
+				width: 100%;
+			}
+		}
+	}
+
+	&-fixed-body {
+		display: flex;
+		overflow: auto;
+
+		.lucid-Table-Td {
+			// `border-box` ensures that padding and borders are included in the total
+			// `width` of the element
+			box-sizing: border-box;
+		}
+
+		&-fixed-columns {
+			overflow-x: scroll;
+			overflow-y: hidden;
+			flex-shrink: 0;
+
+			&-Table {
+				table-layout: fixed;
+			}
+		}
+
+		&-unfixed-columns {
+			overflow: scroll;
+
+			&-Table {
+				table-layout: fixed;
+				width: 100%;
+
+				// Very high specifity to beat Table styles
+				&.lucid-Table > .lucid-Table-Tbody > .lucid-Table-Tr.lucid-Table-is-active > .lucid-Table-Td.lucid-Table-is-first-single::after,
+				&.lucid-Table > .lucid-Table-Tbody > .lucid-Table-Tr.lucid-Table-is-actionable:not(.lucid-Table-is-active):hover > .lucid-Table-Td.lucid-Table-is-first-single::after {
+					display: none;
+				}
+			}
+		}
 	}
 }
