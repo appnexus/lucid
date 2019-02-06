@@ -104,7 +104,6 @@ const DataTable = createClass({
 			\`(field, { props, event }) => {...}\`
 		`,
 
-		// TODO: add the full list of limitation and caveats
 		hasFixedHeader: bool`
 			If \`true\` the table will have a fixed header set. *Note* this feature
 			imposes some limitations with respect to the styling and usage of your
