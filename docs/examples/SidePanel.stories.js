@@ -14,6 +14,8 @@ import WithoutResizeExample from './SidePanel/WithoutResize';
 import withoutResizeCode from '!!raw-loader!./SidePanel/WithoutResize';
 import WithoutAnimationExample from './SidePanel/WithoutAnimation';
 import witouthAnimationCode from '!!raw-loader!./SidePanel/WithoutAnimation';
+import NoModalExample from './SidePanel/NoModal';
+import noModalCode from '!!raw-loader!./SidePanel/NoModal';
 
 storiesOf('SidePanel', module)
 	.add(
@@ -67,6 +69,15 @@ storiesOf('SidePanel', module)
 			component: SidePanel,
 			example: WithoutAnimationExample,
 			code: witouthAnimationCode,
+			path: ['SidePanel'],
+		})
+	)
+	.add(
+		'no modal',
+		exampleStory({
+			component: SidePanel,
+			example: NoModalExample,
+			code: noModalCode,
 			path: ['SidePanel'],
 		})
 	);
