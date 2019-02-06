@@ -249,34 +249,164 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
   </Grid.Cell>
   <Grid.Cell
     key="0"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="1"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="2"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="3"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="4"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="5"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="6"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="7"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="8"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="9"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
 </section>
 `;
 
@@ -472,31 +602,148 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
   </Grid.Cell>
   <Grid.Cell
     key="0"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="1"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="2"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="3"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="4"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="5"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="6"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="7"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="8"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
 </section>
 `;
 
@@ -675,28 +922,132 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
   </Grid.Cell>
   <Grid.Cell
     key="0"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="1"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="2"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="3"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="4"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="5"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="6"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="7"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
 </section>
 `;
 
@@ -858,25 +1209,116 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
   </Grid.Cell>
   <Grid.Cell
     key="0"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="1"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="2"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="3"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="4"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="5"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="6"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
 </section>
 `;
 
@@ -1021,22 +1463,100 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
   </Grid.Cell>
   <Grid.Cell
     key="0"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="1"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="2"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="3"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="4"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="5"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
 </section>
 `;
 
@@ -1164,19 +1684,84 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
   </Grid.Cell>
   <Grid.Cell
     key="0"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="1"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="2"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="3"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="4"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
 </section>
 `;
 
@@ -1287,16 +1872,68 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
   </Grid.Cell>
   <Grid.Cell
     key="0"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="1"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="2"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="3"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
 </section>
 `;
 
@@ -1390,13 +2027,52 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
   </Grid.Cell>
   <Grid.Cell
     key="0"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="1"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="2"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
 </section>
 `;
 
@@ -1473,10 +2149,36 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
   </Grid.Cell>
   <Grid.Cell
     key="0"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     key="1"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
 </section>
 `;
 
@@ -1536,7 +2238,20 @@ exports[`Grid [common] example testing should match snapshot(s) for GridColumns 
   </Grid.Cell>
   <Grid.Cell
     key="0"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
 </section>
 `;
 
@@ -1674,7 +2389,20 @@ exports[`Grid [common] example testing should match snapshot(s) for GutterlessGr
   </Grid.Cell>
   <Grid.Cell
     key="0"
-  />
+  >
+    <p
+      style={
+        Object {
+          "background": "#999999",
+          "color": "#f3f3f3",
+          "margin": 0,
+          "padding": 0,
+        }
+      }
+    >
+      auto
+    </p>
+  </Grid.Cell>
   <Grid.Cell
     isQuarter={true}
   >

@@ -284,7 +284,7 @@ describe('Autocomplete', () => {
 			});
 
 			afterEach(() => {
-				if (wrapper) {
+				if (wrapper && wrapper.exists()) {
 					wrapper.unmount();
 				}
 

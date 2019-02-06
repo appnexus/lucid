@@ -547,6 +547,39 @@ describe('#reduceSelectors', () => {
 			}).nested.moreNested
 		);
 	});
+
+	it('should throw if the selector is not an object', () => {
+		expect(() => {
+			reduceSelectors(['foo']);
+		}).toThrow();
+	});
+
+	it('should not throw if the selector is a babel esModule', () => {
+		/*
+			babel no longer creates plain javascript objects when transpiling imports
+			like `import * as foo from 'someSelectorFile';`. What babel imports has a
+			prototype and a defined `__esModule` property.
+
+			A common pattern used by consumers is to create a module of selector pure functions,
+			import them all, and directly pass those selectors to the stateful component.
+		 */
+
+		function mockBabelModule() {}
+		mockBabelModule.prototype.foo = 'bar';
+
+		const someModule = new mockBabelModule();
+		someModule.someSelector = () => {};
+
+		Object.defineProperty(someModule, '__esModule', {
+			value: true,
+			enumerable: false,
+			writable: false,
+		});
+
+		expect(() => {
+			reduceSelectors(someModule);
+		}).not.toThrow();
+	});
 });
 
 describe('#safeMerge', () => {

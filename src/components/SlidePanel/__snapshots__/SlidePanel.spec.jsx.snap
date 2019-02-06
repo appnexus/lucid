@@ -21,6 +21,8 @@ exports[`SlidePanel [common] example testing should match snapshot(s) for 1.loop
         },
       }
     }
-  />
+  >
+    <Component />
+  </Motion>
 </div>
 `;

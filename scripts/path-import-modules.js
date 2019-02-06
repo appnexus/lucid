@@ -1,5 +1,5 @@
-const babelCore = require('babel-core');
-const babylon = require('babylon');
+const babelCore = require('@babel/core');
+const babylon = require('@babel/parser');
 const fs = require('fs');
 const _ = require('lodash');
 const path = require('path');
@@ -56,9 +56,7 @@ const exportCode = (specifierType, specifierPath, exportName) => {
 		`,
 	};
 
-	// For some reason this doesn't pickup our .babelrc even though it's supposed to
-	return babelCore.transform(codeMap[specifierType], { presets: ['es2015'] })
-		.code;
+	return babelCore.transform(codeMap[specifierType]).code;
 };
 
 /**

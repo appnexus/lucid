@@ -23,7 +23,6 @@ storiesOf('SidePanel', module)
 			example: WithDefaultsExample,
 			code: withDefaultsCode,
 			path: ['SidePanel'],
-			options: { showAddonPanel: true },
 		})
 	)
 	.add(
@@ -33,7 +32,6 @@ storiesOf('SidePanel', module)
 			example: WithHeaderExample,
 			code: withHeaderCode,
 			path: ['SidePanel'],
-			options: { showAddonPanel: true },
 		})
 	)
 	.add(
@@ -43,7 +41,6 @@ storiesOf('SidePanel', module)
 			example: WithLeftPositionExample,
 			code: withLeftPositionCode,
 			path: ['SidePanel'],
-			options: { showAddonPanel: true },
 		})
 	)
 	.add(
@@ -53,7 +50,6 @@ storiesOf('SidePanel', module)
 			example: WithResizeExample,
 			code: withResizeCode,
 			path: ['SidePanel'],
-			options: { showAddonPanel: true },
 		})
 	)
 	.add(
@@ -63,7 +59,6 @@ storiesOf('SidePanel', module)
 			example: WithoutResizeExample,
 			code: withoutResizeCode,
 			path: ['SidePanel'],
-			options: { showAddonPanel: true },
 		})
 	)
 	.add(
@@ -73,6 +68,5 @@ storiesOf('SidePanel', module)
 			example: WithoutAnimationExample,
 			code: witouthAnimationCode,
 			path: ['SidePanel'],
-			options: { showAddonPanel: true },
 		})
 	);

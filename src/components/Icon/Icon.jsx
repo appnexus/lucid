@@ -61,8 +61,13 @@ const Icon = createClass({
 			isClickable to be false.
 		`,
 
-		onSelect: func`
+		onClick: func`
 			Called when the user clicks the \`Icon\`. Signature:
+			\`({event, props}) => {}\`
+		`,
+
+		onSelect: func`
+			Called when the user clicks an active, clickable \`Icon\`. Signature:
 			\`({event, props}) => {}\`
 		`,
 
