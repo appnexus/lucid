@@ -26,7 +26,7 @@
     "postpublish": "npm run path-import-modules-remove && npm run build-docs && scripts/upload-docs-build-gh.sh && scripts/upload-docs-build-docspot.sh",
     "precommit": "lint-staged",
     "prettier": "prettier --write '{src,tests,scripts}/**/*.{js,jsx}'",
-    "preversion": "rm -rf dist && npm run lint && npm run build-js && npm run build-bundle &&  npm run path-import-modules-generate",
+    "preversion": "rm -rf dist && rm -rf lib && npm run lint && npm run build-js && npm run build-bundle && npm run build-modules && npm run path-import-modules-generate",
     "release": "np",
     "start": "npm run docs",
     "storybook": "start-storybook -p 6006",
