@@ -2,7 +2,10 @@ import React from 'react';
 import createReactClass from 'create-react-class';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
-import { omitFunctionPropsDeep } from './state-management';
+import {
+	isPlainObjectOrEsModule,
+	omitFunctionPropsDeep,
+} from './state-management';
 
 // creates a React component
 export function createClass(definition = {}) {
@@ -78,7 +81,7 @@ export function createElements(type, values = []) {
 			if (React.isValidElement(typeValue) && typeValue.type === type) {
 				return elements.concat(typeValue);
 			} else if (
-				_.isPlainObject(typeValue) &&
+				isPlainObjectOrEsModule(typeValue) &&
 				!React.isValidElement(typeValue)
 			) {
 				return elements.concat(React.createElement(type, typeValue));
