@@ -4,7 +4,10 @@
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "module": "lib/index.js",
-  "sideEffects": false,
+  "sideEffects": [
+    "*.css",
+    "*.less"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/appnexus/lucid.git"
