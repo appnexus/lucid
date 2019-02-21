@@ -8,18 +8,22 @@ export function getDeepPaths(obj, path = []) {
 	return _.reduce(
 		obj,
 		(terminalKeys, value, key) =>
-			_.isPlainObject(value)
+			isPlainObjectOrEsModule(value)
 				? terminalKeys.concat(getDeepPaths(value, path.concat(key)))
 				: terminalKeys.concat([path.concat(key)]),
 		[]
 	);
 }
 
+export function isPlainObjectOrEsModule(obj) {
+	return _.isPlainObject(obj) || _.get(obj, '__esModule', false);
+}
+
 export function omitFunctionPropsDeep(obj) {
 	return _.reduce(
 		obj,
 		(memo, value, key) => {
-			if (_.isPlainObject(value)) {
+			if (isPlainObjectOrEsModule(value)) {
 				memo[key] = omitFunctionPropsDeep(value);
 			} else if (!_.isFunction(value)) {
 				memo[key] = value;
@@ -128,7 +132,7 @@ export function getStatefulPropsContext(reducers, { getState, setState }) {
  * to maintain their caches.
  */
 export const reduceSelectors = _.memoize(selectors => {
-	if (!_.isPlainObject(selectors) && !_.get(selectors, '__esModule', false)) {
+	if (!isPlainObjectOrEsModule(selectors)) {
 		throw new Error(
 			'Selectors must be a plain object with function or plain object values'
 		);

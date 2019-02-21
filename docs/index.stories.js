@@ -247,12 +247,8 @@ const filteredIcons = _.reject(loadedIcons, ({ component }) =>
 );
 
 const storiesOfIcons = storiesOf('Icons', module)
-	.addDecorator(withOptions)
-	.addDecorator(withPanelToggles)
-	.addParameters({
-		options: examplePageOptions,
-		...withTogglePanelAddonParameters,
-	})
+	.addDecorator(withOptions(examplePageOptions))
+	.addDecorator(withPanelToggles(withTogglePanelAddonParameters))
 	.add(
 		'All',
 		() => (
