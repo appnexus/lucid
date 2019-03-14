@@ -2,7 +2,6 @@
   "name": "lucid-ui",
   "version": "3.0.0-beta0",
   "description": "A UI component library from AppNexus.",
-  "main": "dist/index.js",
   "module": "lib/index.js",
   "sideEffects": [
     "*.css",
@@ -13,10 +12,8 @@
     "url": "https://github.com/appnexus/lucid.git"
   },
   "scripts": {
-    "build": "npm run build-js && npm run build-modules",
-    "build-bundle": "scripts/build-bundle.sh",
-    "build-docs": "rm -rf ./dist/docs && NODE_DEST_ENV=docs build-storybook -s ./docs/public -o ./dist/docs",
-    "build-js": "NODE_ENV=production babel --extensions .js,.jsx --ignore spec.js,docs,examples,test-entry.js,coverage ./src --out-dir ./dist",
+    "build": "npm run build-modules",
+    "build-docs": "rm -rf ./lib/docs && NODE_DEST_ENV=docs build-storybook -s ./docs/public -o ./lib/docs",
     "build-modules": "NODE_ENV=production BABEL_ENV=modules babel --extensions .js,.jsx --ignore spec.js,docs,examples,test-entry.js,coverage ./src --out-dir ./lib",
     "cover": "npm run jest -- --coverage",
     "dev": "npm run storybook",
@@ -27,7 +24,7 @@
     "postpublish": "npm run build-docs && scripts/upload-docs-build-gh.sh && scripts/upload-docs-build-docspot.sh",
     "precommit": "lint-staged",
     "prettier": "prettier --write '{src,tests,scripts}/**/*.{js,jsx}'",
-    "preversion": "rm -rf dist && rm -rf lib && npm run lint && npm run build-js && npm run build-bundle && npm run build-modules",
+    "preversion": "rm -rf lib && npm run lint && npm run build-modules",
     "release": "np",
     "start": "npm run docs",
     "storybook": "start-storybook -p 6006",
