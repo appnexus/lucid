@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "3.0.0-beta0",
+  "version": "3.0.0-beta1",
   "description": "A UI component library from AppNexus.",
   "module": "lib/index.js",
   "sideEffects": [
