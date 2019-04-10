@@ -38,6 +38,11 @@ const Icon = createClass({
 			\`viewBox\`.
 		`,
 
+		large: bool`
+			An optional prop to declare a 32px height and width. Defaults to false and 
+			16px height and width. Can be overwritten by manual width and height.
+		`,
+
 		viewBox: string`
 			\`viewBox\` is very important for SVGs. You can think of \`viewBox\` as
 			the "artboard" for our SVG while \`size\` is the presented height and
@@ -112,6 +117,7 @@ const Icon = createClass({
 			isBadge,
 			isClickable,
 			isDisabled,
+			large,
 			...passThroughs
 		} = this.props;
 
@@ -119,6 +125,8 @@ const Icon = createClass({
 		// radius in the case where they user wants `isBadge`. Later one, we filter
 		// out any `undefined` properties using lodash methods.
 		const actualStyle = {
+			height: large ? 32 : null,
+			width: large ? 32 : null,
 			...style,
 			borderRadius: _.get(
 				style,
