@@ -11,7 +11,6 @@ export default createClass({
 				<CrossIcon isDisabled isBadge />
 				<p>Large:</p>
 				<CrossIcon large isDisabled />
-				<CrossIcon large isDisabled isBadge />
 			</div>
 		);
 	},
