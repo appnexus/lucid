@@ -40,15 +40,17 @@ exports[`SidePanel Header should match snapshot 1`] = `
           >
             This is a header
           </div>
-          <div
+          <button
             className="lucid-SidePanel-header-closer"
           >
             <CrossIcon
+              height="28"
               isClickable={true}
               onClick={[Function]}
-              size={32}
+              size={36}
+              width="28"
             />
-          </div>
+          </button>
         </div>
       </div>
       <div

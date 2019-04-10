@@ -125,7 +125,6 @@ class SidePanel extends React.Component {
 											onClick={onCollapse}
 											width="28"
 											height="28"
-											viewbBox="0 0 28 28"
 										/>
 									</button>
 								</div>
