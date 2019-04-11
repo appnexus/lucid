@@ -659,6 +659,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.close-b
     <CrossIcon
       className="lucid-ToolTip-FlyOut-close"
       onClick={[Function]}
+      size="small"
     />
     <h2
       className="lucid-ToolTip-FlyOut-Title"
