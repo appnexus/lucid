@@ -10,7 +10,7 @@ export default createClass({
 				<CrossIcon />
 				<CrossIcon isBadge />
 				<p>Large:</p>
-				<CrossIcon large />
+				<CrossIcon size="large" />
 			</div>
 		);
 	},
