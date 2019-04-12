@@ -17,7 +17,7 @@
 @size-font-XL: 18px;
 
 // standard border radius
-@size-borderRadius: 4px;
+@size-borderRadius: 0;
 @size-borderWidth: 1px;
 
 @size-standard-height: 28px; // should have been `@size-height-standard`
@@ -72,7 +72,7 @@
 // Grays
 @color-lightGray: #f4f4f4;
 @color-gray: #e3e3e3;
-@color-mediumGray: #c5c5c5;
+@color-mediumGray: #d3d3d3;
 @color-darkGray: #333;
 
 // Standard text color
@@ -95,7 +95,7 @@
 @color-transparent: rgba(255, 255, 255, 0); // normalize transparent due to Safari bug
 
 // Primary colors
-@color-primary: #2abbb0;
+@color-primary: #587eba;
 @color-primaryLight: tint(@color-primary, 85%);
 @color-primaryMedium: tint(@color-primary, 65%);
 
@@ -141,13 +141,13 @@
 // Featured colors
 @featured-color-default: #f3f3f3;
 @featured-color-primary: @color-primary;
-@featured-color-success: #3fa516;
+@featured-color-success: #6bba92;
 @featured-color-success-30: fade(@featured-color-success, 30%);
-@featured-color-info: #0089c4;
+@featured-color-info: @color-primary;
 @featured-color-info-30: fade(@featured-color-info, 30%);
 @featured-color-warning: #feb209;
 @featured-color-warning-30: fade(@featured-color-warning, 30%);
-@featured-color-danger: #f7403a;
+@featured-color-danger: #f38000;
 @featured-color-danger-30: fade(@featured-color-danger, 30%);
 
 // Featured default color
