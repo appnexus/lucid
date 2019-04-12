@@ -52,7 +52,7 @@ exports[`SidePanel Header should match snapshot 1`] = `
             <CrossIcon
               isClickable={true}
               onClick={[Function]}
-              size="large"
+              presetSize="large"
             />
           </Button>
         </div>
