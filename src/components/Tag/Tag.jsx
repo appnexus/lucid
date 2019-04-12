@@ -60,8 +60,15 @@ const Tag = createClass({
 		const { isRemovable, children, className, ...passThroughs } = this.props;
 
 		const subTags = filterTypes(children, Tag);
+
 		const otherChildren = rejectTypes(children, Tag);
+
 		const hasOtherChildren = !_.isEmpty(otherChildren);
+
+		const hasGrandChildren = !!subTags.find(
+			tag => parseInt(tag.key.slice(1, 2)) > 1
+		);
+
 		const isLeaf = _.isEmpty(subTags);
 
 		return (
@@ -78,7 +85,11 @@ const Tag = createClass({
 			>
 				<div className={cx('&-inner')}>
 					{hasOtherChildren && (
-						<span className={cx('&-inner-children')}>{otherChildren}</span>
+						<span
+							className={cx(hasGrandChildren ? '&-title' : '&-inner-children')}
+						>
+							{otherChildren}
+						</span>
 					)}
 					{isRemovable && (
 						<span className={cx('&-remove')} onClick={this.handleRemove}>
