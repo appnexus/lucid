@@ -2,8 +2,9 @@
 // Typography
 // -----------------------------------------------------------------------------
 
-@fontSize: 12px;
-@fontFamily: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+@fontSize: 13px;
+@fontFamily: "Helvetica Neue", Helvetica, Arial, Sans-Serif; // TODO: Gallano -> century gothic -> helvetica -> arial -> sans
+// TODO: add inter for tabular data
 @font: @fontSize @fontFamily;
 @font-chart: 11px sans-serif;
 
@@ -11,8 +12,10 @@
 // Sizes
 // -----------------------------------------------------------------------------
 
+// Table might use 11px
+
 @size-font-S: 9px;
-@size-font: 12px;
+@size-font: 13px;
 @size-font-L: 15px;
 @size-font-XL: 18px;
 
@@ -64,6 +67,7 @@
 
 // Standard inset shadow
 @shadow-inset: 0 10px 10px -10px @color-gray-30 inset;
+@shadow: 2px 2px 5px 0 fade(@color-darkGray, 8%);
 
 // -----------------------------------------------------------------------------
 // Colors
@@ -72,8 +76,8 @@
 // Grays
 @color-lightGray: #f4f4f4;
 @color-gray: #e3e3e3;
-@color-mediumGray: #d3d3d3;
-@color-darkGray: #333;
+@color-mediumGray: #e4e4e4;
+@color-darkGray: #211f1f;
 
 // Standard text color
 @color-textColor: @color-darkGray;
@@ -84,10 +88,10 @@
 @color-linkColorHover: darken(@color-linkColor, 7%);
 
 // Standard background color
-@color-backgroundColor: @color-lightGray;
+@color-backgroundColor: @color-lightGray; // TODO: settle on a single background color if possible
 
 // Standard background color
-@color-pageBackgroundColor: @color-gray;
+@color-pageBackgroundColor: #f9f8f7;
 
 // General colors
 @color-white: #fff;
@@ -141,13 +145,13 @@
 // Featured colors
 @featured-color-default: #f3f3f3;
 @featured-color-primary: @color-primary;
-@featured-color-success: #6bba92;
+@featured-color-success: #49b27b;
 @featured-color-success-30: fade(@featured-color-success, 30%);
 @featured-color-info: @color-primary;
 @featured-color-info-30: fade(@featured-color-info, 30%);
-@featured-color-warning: #feb209;
+@featured-color-warning: #f5b701;
 @featured-color-warning-30: fade(@featured-color-warning, 30%);
-@featured-color-danger: #f38000;
+@featured-color-danger: #f77402;
 @featured-color-danger-30: fade(@featured-color-danger, 30%);
 
 // Featured default color
