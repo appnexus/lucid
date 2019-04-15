@@ -2,7 +2,7 @@
 
 exports[`Overlay [common] example testing should match snapshot(s) for basic 1`] = `
 <Portal
-  portalId="Overlay-Portal-7"
+  portalId="383848317566352-Overlay-Portal-7"
 >
   <CSSTransitionGroup
     transitionAppear={false}
@@ -17,7 +17,7 @@ exports[`Overlay [common] example testing should match snapshot(s) for basic 1`]
 
 exports[`Overlay [common] example testing should match snapshot(s) for no-modal 1`] = `
 <Portal
-  portalId="Overlay-Portal-8"
+  portalId="383848317566352-Overlay-Portal-8"
 >
   <CSSTransitionGroup
     transitionAppear={false}
@@ -32,6 +32,6 @@ exports[`Overlay [common] example testing should match snapshot(s) for no-modal 
 
 exports[`Overlay should render with isAnimated=false 1`] = `
 <Portal
-  portalId="Overlay-Portal-12"
+  portalId="383848317566352-Overlay-Portal-12"
 />
 `;

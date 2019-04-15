@@ -12,7 +12,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 01.basic
     isExpanded={false}
     minWidthOffset={0}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-7"
+    portalId="3898404018074826-DropMenu-Portal-7"
   >
     <ContextMenu.Target
       elementType="span"
@@ -84,7 +84,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 02.butto
     isExpanded={false}
     minWidthOffset={0}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-8"
+    portalId="3898404018074826-DropMenu-Portal-8"
   >
     <ContextMenu.Target
       elementType="span"
@@ -164,7 +164,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 03.disab
     isExpanded={false}
     minWidthOffset={0}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-9"
+    portalId="3898404018074826-DropMenu-Portal-9"
   >
     <ContextMenu.Target
       elementType="span"
@@ -242,7 +242,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 04.disab
     isExpanded={false}
     minWidthOffset={0}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-10"
+    portalId="3898404018074826-DropMenu-Portal-10"
   >
     <ContextMenu.Target
       elementType="span"
@@ -322,7 +322,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 05.group
     isExpanded={false}
     minWidthOffset={0}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-11"
+    portalId="3898404018074826-DropMenu-Portal-11"
   >
     <ContextMenu.Target
       elementType="span"
@@ -462,7 +462,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 06.text-
     isExpanded={false}
     minWidthOffset={0}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-12"
+    portalId="3898404018074826-DropMenu-Portal-12"
   >
     <ContextMenu.Target
       elementType="span"
@@ -547,7 +547,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 07.actio
     isExpanded={false}
     minWidthOffset={0}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-13"
+    portalId="3898404018074826-DropMenu-Portal-13"
   >
     <ContextMenu.Target
       elementType="span"
@@ -623,7 +623,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 08.no-wr
     isExpanded={false}
     minWidthOffset={0}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-14"
+    portalId="3898404018074826-DropMenu-Portal-14"
   >
     <ContextMenu.Target
       elementType="span"
@@ -703,7 +703,7 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 09.state
     isExpanded={true}
     minWidthOffset={0}
     onClickOut={[Function]}
-    portalId="DropMenu-Portal-15"
+    portalId="3898404018074826-DropMenu-Portal-15"
   >
     <ContextMenu.Target
       elementType="span"

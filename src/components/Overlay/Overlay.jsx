@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'react-peek/prop-types';
 import Portal from '../Portal/Portal';
 import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
-import { lucidClassNames } from '../../util/style-helpers';
+import { lucidClassNames, uniqueName } from '../../util/style-helpers';
 import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Overlay');
@@ -76,7 +76,7 @@ const Overlay = createClass({
 		return {
 			// This must be in state because getDefaultProps only runs once per
 			// component import which causes collisions
-			portalId: this.props.portalId || _.uniqueId('Overlay-Portal-'),
+			portalId: this.props.portalId || uniqueName('Overlay-Portal-'),
 		};
 	},
 
