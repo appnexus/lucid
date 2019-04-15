@@ -16,7 +16,7 @@ export default createClass({
 		return (
 			<div>
 				<Tag>
-					Global
+					Global:
 					<Tag>
 						Group 1
 						{_.times(4, n => <Tag key={n}>{words[n % words.length]}</Tag>)}
@@ -28,7 +28,7 @@ export default createClass({
 				</Tag>
 
 				<Tag>
-					In Progess:
+					In-Progess:
 					<Tag>
 						Group 1
 						{_.times(4, n => <Tag key={n}>{words[n % words.length]}</Tag>)}
