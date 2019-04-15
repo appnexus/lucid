@@ -21,6 +21,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateful 1
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={26}
       viewBox="-3 -6 20 20"
     />
@@ -54,6 +55,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={26}
       viewBox="-3 -6 20 20"
     />
@@ -87,6 +89,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={26}
       viewBox="-3 -6 20 20"
     />
@@ -147,6 +150,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={44}
       viewBox="-12 -6 28 28"
     />
@@ -207,6 +211,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={26}
       viewBox="-3 -6 20 20"
     />
@@ -267,6 +272,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={44}
       viewBox="-12 -6 28 28"
     />
@@ -327,6 +333,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={26}
       viewBox="-3 -6 20 20"
     />
@@ -392,6 +399,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={26}
       viewBox="-3 -6 20 20"
     />
@@ -462,6 +470,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={44}
       viewBox="-12 -6 28 28"
     />
@@ -528,6 +537,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={44}
       viewBox="-12 -6 28 28"
     />
@@ -601,6 +611,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={26}
       viewBox="-3 -6 20 20"
     />
@@ -634,6 +645,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={26}
       viewBox="-3 -6 20 20"
     />
@@ -699,6 +711,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={26}
       viewBox="-3 -6 20 20"
     />
@@ -763,6 +776,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={44}
       viewBox="-12 -6 28 28"
     />
@@ -828,6 +842,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={44}
       viewBox="-12 -6 28 28"
     />
@@ -894,6 +909,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={26}
       viewBox="-3 -6 20 20"
     />
@@ -959,6 +975,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={26}
       viewBox="-3 -6 20 20"
     />
@@ -1024,6 +1041,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={44}
       viewBox="-12 -6 28 28"
     />
@@ -1089,6 +1107,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={44}
       viewBox="-12 -6 28 28"
     />
@@ -1155,6 +1174,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={26}
       viewBox="-3 -6 20 20"
     />
@@ -1220,6 +1240,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={26}
       viewBox="-3 -6 20 20"
     />
@@ -1285,6 +1306,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={44}
       viewBox="-12 -6 28 28"
     />
@@ -1350,6 +1372,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={44}
       viewBox="-12 -6 28 28"
     />
@@ -1420,6 +1443,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={26}
       viewBox="-3 -6 20 20"
     />
@@ -1463,6 +1487,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={26}
       viewBox="-3 -6 20 20"
     />
@@ -1509,6 +1534,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
+      presetSize="small"
       size={26}
       viewBox="-3 -6 20 20"
     />

@@ -7,6 +7,7 @@ import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon
 import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import { getFirst, omitProps } from '../../util/component-types';
+import { Button } from '../../index';
 
 const cx = lucidClassNames.bind('&-SidePanel');
 
@@ -118,9 +119,14 @@ class SidePanel extends React.Component {
 							<div className={cx('&-header')}>
 								<div className={cx('&-header-inner-wrapper')}>
 									<div className={cx('&-header-content')}>{headerChildren}</div>
-									<div className={cx('&-header-closer')}>
-										<CrossIcon isClickable size={32} onClick={onCollapse} />
-									</div>
+
+									<Button kind="invisible" className={cx('&-header-closer')}>
+										<CrossIcon
+											isClickable
+											onClick={onCollapse}
+											presetSize="large"
+										/>
+									</Button>
 								</div>
 							</div>
 						)}

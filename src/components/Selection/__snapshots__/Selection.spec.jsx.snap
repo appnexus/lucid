@@ -17,6 +17,7 @@ exports[`Selection render should match snapshot for container 1`] = `
         className="lucid-Selection-close-button"
         isClickable={true}
         onClick={[Function]}
+        presetSize="small"
         size={26}
         viewBox="-3 -2 20 20"
       />
@@ -46,6 +47,7 @@ exports[`Selection render should match snapshot for custom icons 1`] = `
         className="lucid-Selection-close-button"
         isClickable={true}
         onClick={[Function]}
+        presetSize="small"
         size={26}
         viewBox="-3 -2 20 20"
       />
@@ -81,6 +83,7 @@ exports[`Selection render should match snapshot for danger 1`] = `
         className="lucid-Selection-close-button"
         isClickable={true}
         onClick={[Function]}
+        presetSize="small"
         size={26}
         viewBox="-3 -2 20 20"
       />
@@ -110,6 +113,7 @@ exports[`Selection render should match snapshot for info 1`] = `
         className="lucid-Selection-close-button"
         isClickable={true}
         onClick={[Function]}
+        presetSize="small"
         size={26}
         viewBox="-3 -2 20 20"
       />
@@ -136,6 +140,7 @@ exports[`Selection render should match snapshot for nested selections 1`] = `
         className="lucid-Selection-close-button"
         isClickable={true}
         onClick={[Function]}
+        presetSize="small"
         size={26}
         viewBox="-3 -2 20 20"
       />
@@ -195,6 +200,7 @@ exports[`Selection render should match snapshot for responsiveMode small 1`] = `
         className="lucid-Selection-close-button"
         isClickable={true}
         onClick={[Function]}
+        presetSize="small"
         size={44}
         viewBox="-6 -6 28 28"
       />
@@ -224,6 +230,7 @@ exports[`Selection render should match snapshot for success 1`] = `
         className="lucid-Selection-close-button"
         isClickable={true}
         onClick={[Function]}
+        presetSize="small"
         size={26}
         viewBox="-3 -2 20 20"
       />
@@ -253,6 +260,7 @@ exports[`Selection render should match snapshot for warning 1`] = `
         className="lucid-Selection-close-button"
         isClickable={true}
         onClick={[Function]}
+        presetSize="small"
         size={26}
         viewBox="-3 -2 20 20"
       />
