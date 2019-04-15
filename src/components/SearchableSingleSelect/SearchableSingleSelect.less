@@ -1,0 +1,75 @@
+@import (reference) '../../styles/variables.less';
+@import (reference) '../../styles/mixins.less';
+
+.lucid-SearchableSingleSelect {
+
+	// Increase specificity to minimum necessary to beat DropMenu
+	&-DropMenu&-DropMenu&-DropMenu {
+		display: block;
+	}
+
+	&-DropMenu {
+		.lucid-DropMenu-Option {
+			padding: 0 @size-XXS;
+		}
+	}
+
+	&-DropMenu-is-small {
+		.lucid-DropMenu-Option {
+			height: @size-height-L;
+			padding: 0 @size-S;
+		}
+	}
+
+	.lucid-ContextMenu {
+		display: block;
+	}
+
+	&-search {
+		margin-bottom: @size-standard;
+	}
+
+	&-CheckboxLabeled.lucid-CheckboxLabeled {
+		display: flex;
+		flex: 1;
+		align-items: center;
+
+		.lucid-CheckboxLabeled-label {
+			margin-left: @size-XXS;
+			cursor: pointer;
+			padding-top: 0;
+		}
+	}
+
+	&-noresults {
+		color: @color-disabledText;
+		font-style: italic;
+	}
+
+	&-Option-underline-match,
+	&-Option-underline-post,
+	&-Option-underline-pre {
+		white-space: pre;
+	}
+
+	&-Option-underline-match {
+		text-decoration: underline;
+	}
+
+	&-loading {
+		justify-content: center;
+
+		&.lucid-DropMenu-Option.lucid-DropMenu-Option-is-focused {
+			background: none;
+		}
+	}
+
+	& &-Selection-section &-Selection-group {
+		margin-bottom: @size-XS;
+	}
+
+	&-Option-select-all {
+		border-bottom: 1px solid @color-borderColorLight;
+	}
+}
+
