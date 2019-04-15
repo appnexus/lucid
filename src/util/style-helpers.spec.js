@@ -1,6 +1,6 @@
 import assert from 'assert';
 import _ from 'lodash';
-import { bindClassNames, lucidClassNames } from './style-helpers';
+import { bindClassNames, lucidClassNames, uniqueName } from './style-helpers';
 
 describe('#bindClassNames', function() {
 	it('should always return a function', () => {
@@ -129,4 +129,22 @@ describe('#lucidClassNames', function() {
 			'lucid-Button my-custom-class another-class'
 		);
 	});
+});
+
+describe('#uniqueName', () => {
+	it('should increment by one every time it is called', () => {
+		const first = _.parseInt(_.split(uniqueName('foo'), 'foo')[1]);
+		const second = _.parseInt(_.split(uniqueName('foo'), 'foo')[1]);
+		assert.equal(first + 1, second);
+	});
+
+	it(
+		'should reuse random prefix. This will safeguard against unfortunate cases where two ' +
+			'lucid instances are present.',
+		() => {
+			const first = _.split(uniqueName('foo'), 'foo')[0];
+			const second = _.split(uniqueName('foo'), 'foo')[0];
+			assert.equal(first, second);
+		}
+	);
 });

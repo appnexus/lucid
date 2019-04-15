@@ -7,7 +7,7 @@ import {
 	getAbsoluteBoundingClientRect,
 	sharesAncestor,
 } from '../../util/dom-helpers';
-import { lucidClassNames } from '../../util/style-helpers';
+import { lucidClassNames, uniqueName } from '../../util/style-helpers';
 
 const cx = lucidClassNames.bind('&-ContextMenu');
 
@@ -141,7 +141,7 @@ const ContextMenu = createClass({
 	getInitialState() {
 		const { portalId } = this.props;
 		return {
-			portalId: portalId || _.uniqueId('ContextMenu-Portal-'),
+			portalId: portalId || uniqueName('ContextMenu-Portal-'),
 			targetRect: {
 				bottom: 0,
 				top: 0,
