@@ -17,12 +17,12 @@ export default createClass({
 			<div>
 				{_.times(25, n => <Tag key={n}>{words[n % words.length]}</Tag>)}
 
-				<Tag>
+				<Tag isTop>
 					Grouped items
 					{_.times(25, n => <Tag key={n}>{words[n % words.length]}</Tag>)}
 				</Tag>
 
-				<Tag>
+				<Tag isTop>
 					Grouped items
 					{_.times(25, n => <Tag key={n}>{words[n % words.length]}</Tag>)}
 				</Tag>

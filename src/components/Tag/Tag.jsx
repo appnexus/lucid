@@ -57,7 +57,13 @@ const Tag = createClass({
 	},
 
 	render() {
-		const { isRemovable, children, className, ...passThroughs } = this.props;
+		const {
+			isRemovable,
+			isTop,
+			children,
+			className,
+			...passThroughs
+		} = this.props;
 
 		const subTags = filterTypes(children, Tag);
 
@@ -77,6 +83,7 @@ const Tag = createClass({
 				className={cx(
 					'&',
 					{
+						'&-top': isTop,
 						'&-leaf': isLeaf,
 						'&-is-removable': isRemovable,
 					},

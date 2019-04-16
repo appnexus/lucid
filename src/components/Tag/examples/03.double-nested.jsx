@@ -15,7 +15,7 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				<Tag>
+				<Tag isTop>
 					Global:
 					<Tag>
 						Group 1
@@ -27,7 +27,7 @@ export default createClass({
 					</Tag>
 				</Tag>
 
-				<Tag>
+				<Tag isTop>
 					In-Progess:
 					<Tag>
 						Group 1
