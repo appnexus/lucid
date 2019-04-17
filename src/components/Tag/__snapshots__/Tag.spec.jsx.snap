@@ -445,7 +445,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 25`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`] = `
 <div
-  className="lucid-Tag"
+  className="lucid-Tag lucid-Tag-top"
 >
   <div
     className="lucid-Tag-inner"
@@ -1011,7 +1011,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 51`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`] = `
 <div
-  className="lucid-Tag"
+  className="lucid-Tag lucid-Tag-top"
 >
   <div
     className="lucid-Tag-inner"
@@ -1577,7 +1577,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 77`
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 1`] = `
 <div
-  className="lucid-Tag"
+  className="lucid-Tag lucid-Tag-top"
 >
   <div
     className="lucid-Tag-inner"
@@ -1585,7 +1585,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     <span
       className="lucid-Tag-title"
     >
-      Global
+      Global:
     </span>
     <Tag
       key=".1"
@@ -1861,7 +1861,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
 
 exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 12`] = `
 <div
-  className="lucid-Tag"
+  className="lucid-Tag lucid-Tag-top"
 >
   <div
     className="lucid-Tag-inner"
@@ -1869,7 +1869,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.double-nes
     <span
       className="lucid-Tag-title"
     >
-      In Progess:
+      In-Progess:
     </span>
     <Tag
       key=".1"
