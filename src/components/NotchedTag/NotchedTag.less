@@ -1,0 +1,25 @@
+@import (reference) '../../styles/variables.less';
+
+.lucid-NotchedTag {
+	position: relative;
+	background-color: @color-primary;
+
+	&-container {
+		background-color: @color-white;
+		color: @color-primary;
+		position: absolute;
+
+		&-filled {
+			color: @color-white;
+			background-color: @color-primary;
+		}
+
+		&-centered {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			height: 100%;
+		}
+	}
+}

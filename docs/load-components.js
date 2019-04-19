@@ -521,6 +521,22 @@ module.exports = [
 	//	examplesContextRaw: require.context('!!raw-loader!../src/components/LoadingMessage/examples', true, /\.jsx?$/),
 	//},
 	{
+		name: 'NotchedTag',
+		component: getDefaultExport(
+			require('../src/components/NotchedTag/NotchedTag')
+		),
+		examplesContext: require.context(
+			'../src/components/NotchedTag/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/NotchedTag/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+	{
 		name: 'Overlay',
 		component: getDefaultExport(require('../src/components/Overlay/Overlay')),
 		examplesContext: require.context(

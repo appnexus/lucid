@@ -116,6 +116,7 @@ import MinusCircleIcon from './components/Icon/MinusCircleIcon/MinusCircleIcon';
 import MinusCircleLightIcon from './components/Icon/MinusCircleLightIcon/MinusCircleLightIcon';
 import MinusIcon from './components/Icon/MinusIcon/MinusIcon';
 import NewWindowIcon from './components/Icon/NewWindowIcon/NewWindowIcon';
+import NotchedTag from './components/NotchedTag/NotchedTag';
 import OutwardArrowsIcon from './components/Icon/OutwardArrowsIcon/OutwardArrowsIcon';
 import Overlay from './components/Overlay/Overlay';
 import OverlayWrapper from './components/OverlayWrapper/OverlayWrapper';
@@ -280,6 +281,7 @@ export {
 	MinusCircleLightIcon,
 	MinusIcon,
 	NewWindowIcon,
+	NotchedTag,
 	OutwardArrowsIcon,
 	Overlay,
 	OverlayWrapper,

@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotchedTag [common] example testing should match snapshot(s) for basic 1`] = `
+<div
+  className="lucid-NotchedTag"
+  style={
+    Object {
+      "clipPath": "
+			polygon(
+				6px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 10.392304845413264px
+			)",
+      "height": 25,
+      "width": 40,
+    }
+  }
+>
+  <div
+    className="lucid-NotchedTag-container"
+    style={
+      Object {
+        "bottom": 2,
+        "clipPath": "
+			polygon(
+				5px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 9.392304845413264px
+			)",
+        "left": 2,
+        "right": 2,
+        "top": 2,
+      }
+    }
+  >
+    <div
+      className="lucid-NotchedTag-container-centered"
+    >
+      HI
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NotchedTag [common] example testing should match snapshot(s) for filled 1`] = `
+<div
+  className="lucid-NotchedTag"
+  style={
+    Object {
+      "clipPath": "
+			polygon(
+				6px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 10.392304845413264px
+			)",
+      "height": 25,
+      "width": 40,
+    }
+  }
+>
+  <div
+    className="lucid-NotchedTag-container lucid-NotchedTag-container-filled"
+    style={
+      Object {
+        "bottom": 2,
+        "clipPath": "
+			polygon(
+				5px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 9.392304845413264px
+			)",
+        "left": 2,
+        "right": 2,
+        "top": 2,
+      }
+    }
+  >
+    <div
+      className="lucid-NotchedTag-container-centered"
+    >
+      HI
+    </div>
+  </div>
+</div>
+`;
