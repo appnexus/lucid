@@ -28,6 +28,11 @@ const Tag = createClass({
 	},
 
 	propTypes: {
+		isTop: bool`
+			If using nested or double nested tags, add this prop to the top level tags
+			for more vertical spacing.
+		`,
+
 		isRemovable: bool`
 			Shows or hides the little "x" for a given tag.
 		`,
@@ -57,11 +62,24 @@ const Tag = createClass({
 	},
 
 	render() {
-		const { isRemovable, children, className, ...passThroughs } = this.props;
+		const {
+			isRemovable,
+			isTop,
+			children,
+			className,
+			...passThroughs
+		} = this.props;
 
 		const subTags = filterTypes(children, Tag);
+
 		const otherChildren = rejectTypes(children, Tag);
+
 		const hasOtherChildren = !_.isEmpty(otherChildren);
+
+		const hasGrandChildren = !!subTags.find(tag =>
+			Array.isArray(tag.props.children)
+		);
+
 		const isLeaf = _.isEmpty(subTags);
 
 		return (
@@ -70,6 +88,7 @@ const Tag = createClass({
 				className={cx(
 					'&',
 					{
+						'&-top': isTop,
 						'&-leaf': isLeaf,
 						'&-is-removable': isRemovable,
 					},
@@ -78,7 +97,11 @@ const Tag = createClass({
 			>
 				<div className={cx('&-inner')}>
 					{hasOtherChildren && (
-						<span className={cx('&-inner-children')}>{otherChildren}</span>
+						<span
+							className={cx(hasGrandChildren ? '&-title' : '&-inner-children')}
+						>
+							{otherChildren}
+						</span>
 					)}
 					{isRemovable && (
 						<span className={cx('&-remove')} onClick={this.handleRemove}>

@@ -446,7 +446,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 25`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 26`] = `
 <div
-  className="lucid-Tag"
+  className="lucid-Tag lucid-Tag-top"
 >
   <div
     className="lucid-Tag-inner"
@@ -1012,7 +1012,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 51`
 
 exports[`Tag [common] example testing should match snapshot(s) for 02.nested 52`] = `
 <div
-  className="lucid-Tag"
+  className="lucid-Tag lucid-Tag-top"
 >
   <div
     className="lucid-Tag-inner"
@@ -1576,7 +1576,575 @@ exports[`Tag [common] example testing should match snapshot(s) for 02.nested 77`
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 1`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 1`] = `
+<div
+  className="lucid-Tag lucid-Tag-top"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-title"
+    >
+      Global:
+    </span>
+    <Tag
+      key=".1"
+      onRemove={[Function]}
+    >
+      Group 1
+      <Tag
+        key="0"
+        onRemove={[Function]}
+      >
+        Fashion
+      </Tag>
+      <Tag
+        key="1"
+        onRemove={[Function]}
+      >
+        The
+      </Tag>
+      <Tag
+        key="2"
+        onRemove={[Function]}
+      >
+        Vexillologist
+      </Tag>
+      <Tag
+        key="3"
+        onRemove={[Function]}
+      >
+        Cold Brew
+      </Tag>
+    </Tag>
+    <Tag
+      key=".2"
+      onRemove={[Function]}
+    >
+      Group 2
+      <Tag
+        key="0"
+        onRemove={[Function]}
+      >
+        Fashion
+      </Tag>
+      <Tag
+        key="1"
+        onRemove={[Function]}
+      >
+        The
+      </Tag>
+      <Tag
+        key="2"
+        onRemove={[Function]}
+      >
+        Vexillologist
+      </Tag>
+      <Tag
+        key="3"
+        onRemove={[Function]}
+      >
+        Cold Brew
+      </Tag>
+    </Tag>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 2`] = `
+<div
+  className="lucid-Tag"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      Group 1
+    </span>
+    <Tag
+      key=".1:$0"
+      onRemove={[Function]}
+    >
+      Fashion
+    </Tag>
+    <Tag
+      key=".1:$1"
+      onRemove={[Function]}
+    >
+      The
+    </Tag>
+    <Tag
+      key=".1:$2"
+      onRemove={[Function]}
+    >
+      Vexillologist
+    </Tag>
+    <Tag
+      key=".1:$3"
+      onRemove={[Function]}
+    >
+      Cold Brew
+    </Tag>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 3`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      Fashion
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 4`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      The
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 5`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      Vexillologist
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 6`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      Cold Brew
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 7`] = `
+<div
+  className="lucid-Tag"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      Group 2
+    </span>
+    <Tag
+      key=".1:$0"
+      onRemove={[Function]}
+    >
+      Fashion
+    </Tag>
+    <Tag
+      key=".1:$1"
+      onRemove={[Function]}
+    >
+      The
+    </Tag>
+    <Tag
+      key=".1:$2"
+      onRemove={[Function]}
+    >
+      Vexillologist
+    </Tag>
+    <Tag
+      key=".1:$3"
+      onRemove={[Function]}
+    >
+      Cold Brew
+    </Tag>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 8`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      Fashion
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 9`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      The
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 10`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      Vexillologist
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 11`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      Cold Brew
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 12`] = `
+<div
+  className="lucid-Tag lucid-Tag-top"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-title"
+    >
+      In-Progess:
+    </span>
+    <Tag
+      key=".1"
+      onRemove={[Function]}
+    >
+      Group 1
+      <Tag
+        key="0"
+        onRemove={[Function]}
+      >
+        Fashion
+      </Tag>
+      <Tag
+        key="1"
+        onRemove={[Function]}
+      >
+        The
+      </Tag>
+      <Tag
+        key="2"
+        onRemove={[Function]}
+      >
+        Vexillologist
+      </Tag>
+      <Tag
+        key="3"
+        onRemove={[Function]}
+      >
+        Cold Brew
+      </Tag>
+    </Tag>
+    <Tag
+      key=".2"
+      onRemove={[Function]}
+    >
+      Group 2
+      <Tag
+        key="0"
+        onRemove={[Function]}
+      >
+        Fashion
+      </Tag>
+      <Tag
+        key="1"
+        onRemove={[Function]}
+      >
+        The
+      </Tag>
+      <Tag
+        key="2"
+        onRemove={[Function]}
+      >
+        Vexillologist
+      </Tag>
+      <Tag
+        key="3"
+        onRemove={[Function]}
+      >
+        Cold Brew
+      </Tag>
+    </Tag>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 13`] = `
+<div
+  className="lucid-Tag"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      Group 1
+    </span>
+    <Tag
+      key=".1:$0"
+      onRemove={[Function]}
+    >
+      Fashion
+    </Tag>
+    <Tag
+      key=".1:$1"
+      onRemove={[Function]}
+    >
+      The
+    </Tag>
+    <Tag
+      key=".1:$2"
+      onRemove={[Function]}
+    >
+      Vexillologist
+    </Tag>
+    <Tag
+      key=".1:$3"
+      onRemove={[Function]}
+    >
+      Cold Brew
+    </Tag>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 14`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      Fashion
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 15`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      The
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 16`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      Vexillologist
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 17`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      Cold Brew
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 18`] = `
+<div
+  className="lucid-Tag"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      Group 2
+    </span>
+    <Tag
+      key=".1:$0"
+      onRemove={[Function]}
+    >
+      Fashion
+    </Tag>
+    <Tag
+      key=".1:$1"
+      onRemove={[Function]}
+    >
+      The
+    </Tag>
+    <Tag
+      key=".1:$2"
+      onRemove={[Function]}
+    >
+      Vexillologist
+    </Tag>
+    <Tag
+      key=".1:$3"
+      onRemove={[Function]}
+    >
+      Cold Brew
+    </Tag>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 19`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      Fashion
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 20`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      The
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 21`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      Vexillologist
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 03.double-nested 22`] = `
+<div
+  className="lucid-Tag lucid-Tag-leaf"
+>
+  <div
+    className="lucid-Tag-inner"
+  >
+    <span
+      className="lucid-Tag-inner-children"
+    >
+      Cold Brew
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 1`] = `
 <div
   className="lucid-Tag lucid-Tag-is-removable"
 >
@@ -1612,7 +2180,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 2`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 2`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -1640,7 +2208,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 3`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 3`] = `
 <div
   className="lucid-Tag lucid-Tag-is-removable"
 >
@@ -1676,7 +2244,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 4`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 4`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -1704,7 +2272,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 5`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 5`] = `
 <div
   className="lucid-Tag lucid-Tag-is-removable"
 >
@@ -1884,7 +2452,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 6`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 6`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -1912,7 +2480,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 7`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 7`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -1940,7 +2508,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 8`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 8`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -1968,7 +2536,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 9`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 9`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -1996,7 +2564,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 10`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 10`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2024,7 +2592,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 11`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 11`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2052,7 +2620,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 12`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 12`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2080,7 +2648,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 13`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 13`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2108,7 +2676,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 14`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 14`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2136,7 +2704,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 15`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 15`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2164,7 +2732,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 16`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 16`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2192,7 +2760,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 17`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 17`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2220,7 +2788,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 18`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 18`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2248,7 +2816,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 19`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 19`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2276,7 +2844,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 20`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 20`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2304,7 +2872,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 21`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 21`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2332,7 +2900,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 22`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 22`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2360,7 +2928,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 23`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 23`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2388,7 +2956,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 24`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 24`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2416,7 +2984,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 25`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 25`] = `
 <div
   className="lucid-Tag lucid-Tag-is-removable"
 >
@@ -2724,7 +3292,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 26`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 26`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2752,7 +3320,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 27`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 27`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2780,7 +3348,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 28`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 28`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2808,7 +3376,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 29`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 29`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2836,7 +3404,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 30`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 30`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2864,7 +3432,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 31`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 31`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2892,7 +3460,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 32`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 32`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2920,7 +3488,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 33`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 33`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2948,7 +3516,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 34`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 34`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -2976,7 +3544,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 35`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 35`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3004,7 +3572,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 36`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 36`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3032,7 +3600,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 37`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 37`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3060,7 +3628,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 38`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 38`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3088,7 +3656,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 39`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 39`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3116,7 +3684,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 40`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 40`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3144,7 +3712,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 41`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 41`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3172,7 +3740,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 42`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 42`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3200,7 +3768,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 43`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 43`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3228,7 +3796,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 44`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 44`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3256,7 +3824,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 45`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 45`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3284,7 +3852,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 46`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 46`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3312,7 +3880,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 47`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 47`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3340,7 +3908,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 48`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 48`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3368,7 +3936,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 49`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 49`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3396,7 +3964,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 50`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 50`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3424,7 +3992,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 51`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 51`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3452,7 +4020,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 52`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 52`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3480,7 +4048,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 53`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 53`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3508,7 +4076,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 54`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 54`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3536,7 +4104,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 55`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 55`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3564,7 +4132,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 56`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 56`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3592,7 +4160,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 57`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 57`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3620,7 +4188,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 58`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 58`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3648,7 +4216,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 59`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 59`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3676,7 +4244,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 60`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 60`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3704,7 +4272,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 61`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 61`] = `
 <div
   className="lucid-Tag lucid-Tag-is-removable"
 >
@@ -3812,7 +4380,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 62`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 62`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3840,7 +4408,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 63`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 63`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3868,7 +4436,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 64`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 64`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3896,7 +4464,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 65`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 65`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3924,7 +4492,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 66`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 66`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3952,7 +4520,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 67`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 67`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -3980,7 +4548,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 68`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 68`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -4008,7 +4576,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 69`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 69`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -4036,7 +4604,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 70`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 70`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >
@@ -4064,7 +4632,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 03.interactiv
 </div>
 `;
 
-exports[`Tag [common] example testing should match snapshot(s) for 03.interactive 71`] = `
+exports[`Tag [common] example testing should match snapshot(s) for 04.interactive 71`] = `
 <div
   className="lucid-Tag lucid-Tag-leaf lucid-Tag-is-removable"
 >

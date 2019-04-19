@@ -3,7 +3,11 @@
 
 .lucid-Tag {
 	display: inline-flex;
-	margin: 0 @size-XS @size-XS 0;
+	margin: 0 @size-XS 0;
+
+	&-top {
+		margin: @size-XS 0;
+	}
 
 	&-leaf {
 		margin: 0 @size-XXS @size-XXS 0;
@@ -14,6 +18,14 @@
 		&:last-child {
 			margin-right: 0;
 		}
+	}
+
+	&-title {
+		color: @color-chart-0-dark;
+		font-weight: bold;
+		font-size: @size-standard;
+		text-transform: uppercase;
+		padding: 0 @size-XS 0 @size-XS;
 	}
 
 	&-leaf&-is-removable {
@@ -29,7 +41,7 @@
 		font-size: @size-font;
 		color: @color-textColor;
 		width: 100%; // fix for IE 11 bug flex wrapping bug
-		padding: 5px @size-XS 2px;
+		padding: 4px @size-XXS 2px;
 		display: inline-flex;
 		flex-wrap: wrap;
 		align-items: center;
