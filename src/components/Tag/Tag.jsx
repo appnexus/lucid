@@ -28,6 +28,11 @@ const Tag = createClass({
 	},
 
 	propTypes: {
+		isTop: bool`
+			If using nested or double nested tags, add this prop to the top level tags
+			for more vertical spacing.
+		`,
+
 		isRemovable: bool`
 			Shows or hides the little "x" for a given tag.
 		`,
@@ -71,8 +76,8 @@ const Tag = createClass({
 
 		const hasOtherChildren = !_.isEmpty(otherChildren);
 
-		const hasGrandChildren = !!subTags.find(
-			tag => parseInt(tag.key.slice(1, 2)) > 1
+		const hasGrandChildren = !!subTags.find(tag =>
+			Array.isArray(tag.props.children)
 		);
 
 		const isLeaf = _.isEmpty(subTags);
