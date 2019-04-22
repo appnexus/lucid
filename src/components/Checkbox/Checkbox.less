@@ -36,7 +36,7 @@
 
 		background-color: white;
 		border: solid 1px @Checkbox-borderColor;
-		border-radius: @Checkbox-borderRadius;
+		// border-radius: @Checkbox-borderRadius;
 		height: @Checkbox-container-size;
 		left: @Checkbox-container-offset;
 		position: absolute;
@@ -95,7 +95,7 @@
 		.box-sizing();
 
 		background-color: @color-primary;
-		border-radius: @Checkbox-borderRadius;
+		// border-radius: @Checkbox-borderRadius;
 		height: @Checkbox-container-size;
 		left: @Checkbox-glow-offset;
 		opacity: 0;
@@ -109,11 +109,12 @@
 	&-native:focus ~ &-visualization-container {
 		border-color: @color-primary;
 		transition: @Checkbox-animation-timing;
+		border: 2px solid @color-primary;
 	}
 
 	&:hover &-visualization-glow {
-		opacity: 0.3;
-		transform: @Checkbox-glow-scale;
+		// transform: @Checkbox-glow-scale;
+		border: 2px solid @color-primary;
 	}
 
 	&-is-disabled &-visualization-container,
@@ -151,7 +152,8 @@
 
 	&-native:focus ~ &-visualization-glow {
 		opacity: 0.3;
-		transform: @Checkbox-glow-scale;
+		border: 2px solid @color-primary;
+		// transform: @Checkbox-glow-scale;
 	}
 }
 
