@@ -2,11 +2,32 @@
 // Typography
 // -----------------------------------------------------------------------------
 
+// At Xandr here are the font variation we support internally:
+// ------ | --------------- | ------
+// weight | font            | style
+// ------ | --------------- | ------
+// 400    | GalanoGrotesque | normal
+// 400    | GalanoGrotesque | italic
+// 400    | Inter           | normal
+// 400    | Inter           | italic
+// 500    | GalanoGrotesque | normal
+// 500    | GalanoGrotesque | italic
+// 600    | GalanoGrotesque | normal
+// 600    | GalanoGrotesque | italic
+// 600    | Inter           | normal
+// 600    | Inter           | italic
+
 @fontSize: 13px;
-@fontFamily: "Helvetica Neue", Helvetica, Arial, Sans-Serif; // TODO: Gallano -> century gothic -> helvetica -> arial -> sans
-// TODO: add inter for tabular data
+@fontFamily: GalanoGrotesque, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-tabular: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font: @fontSize @fontFamily;
 @font-chart: 11px sans-serif;
+
+// Our designers have agreed to keep the number of font weight variants to
+// what's outlined in these variables.
+@font-weight-regular: 400;  // Available with GalanoGrotesque and Inter
+@font-weight-medium: 500;   // Available with GalanoGrotesque
+@font-weight-semiBold: 600; // Available with GalanoGrotesque and Inter
 
 // -----------------------------------------------------------------------------
 // Sizes
