@@ -20,6 +20,7 @@ export default createClass({
 					<CheckboxLabeled style={style}>
 						<CheckboxLabeled.Label>Just text</CheckboxLabeled.Label>
 					</CheckboxLabeled>
+
 					<CheckboxLabeled style={style}>
 						<CheckboxLabeled.Label>
 							<span>HTML element</span>

@@ -36,7 +36,6 @@
 
 		background-color: white;
 		border: solid 1px @Checkbox-borderColor;
-		// border-radius: @Checkbox-borderRadius;
 		height: @Checkbox-container-size;
 		left: @Checkbox-container-offset;
 		position: absolute;
@@ -95,7 +94,6 @@
 		.box-sizing();
 
 		background-color: @color-primary;
-		// border-radius: @Checkbox-borderRadius;
 		height: @Checkbox-container-size;
 		left: @Checkbox-glow-offset;
 		opacity: 0;
@@ -113,7 +111,6 @@
 	}
 
 	&:hover &-visualization-glow {
-		// transform: @Checkbox-glow-scale;
 		border: 2px solid @color-primary;
 	}
 
@@ -128,8 +125,16 @@
 		transform: none;
 	}
 
+	&:hover&-is-selected &-visualization-container {
+		opacity: 0.8;
+	}
+
 	&-is-disabled&-is-selected &-visualization-container {
-		opacity: 0.3;
+		opacity: 0.5;
+	}
+
+	&:hover&-is-disabled&-is-selected &-visualization-container {
+		opacity: 0.5;
 	}
 
 	&-is-disabled&-is-selected:hover &-visualization-container,
@@ -151,9 +156,8 @@
 	}
 
 	&-native:focus ~ &-visualization-glow {
-		opacity: 0.3;
+		opacity: 0.5;
 		border: 2px solid @color-primary;
-		// transform: @Checkbox-glow-scale;
 	}
 }
 
