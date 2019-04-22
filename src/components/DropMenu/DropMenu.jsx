@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
-import { lucidClassNames } from '../../util/style-helpers';
+import { lucidClassNames, uniqueName } from '../../util/style-helpers';
 import {
 	createClass,
 	getFirst,
@@ -441,7 +441,7 @@ const DropMenu = createClass({
 			flattenedOptionsData: [],
 			ungroupedOptionData: [],
 			optionGroupDataLookup: {},
-			portalId: this.props.portalId || _.uniqueId('DropMenu-Portal-'),
+			portalId: this.props.portalId || uniqueName('DropMenu-Portal-'),
 		};
 	},
 

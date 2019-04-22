@@ -6,8 +6,11 @@ export default createClass({
 	render() {
 		return (
 			<div>
+				<p>Small (default):</p>
 				<CrossIcon />
 				<CrossIcon isBadge />
+				<p>Large:</p>
+				<CrossIcon presetSize="large" />
 			</div>
 		);
 	},
