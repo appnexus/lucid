@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import classNames from 'classnames';
 
+const RANDOM_INTEGER = _.random(0, Number.MAX_SAFE_INTEGER);
+
 /**
  * bindClassNames
  *
@@ -40,3 +42,7 @@ export const NAMESPACE = 'lucid';
  *   }, ['custom-classname']) === 'lucid-Button lucid-Button-active custom-classname'
  */
 export const lucidClassNames = bindClassNames(NAMESPACE);
+
+export function uniqueName(prefix) {
+	return _.uniqueId(`${RANDOM_INTEGER}-${prefix}`);
+}

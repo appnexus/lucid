@@ -12,7 +12,17 @@ import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
 const cx = lucidClassNames.bind('&-Table');
 
-const { any, bool, func, node, number, object, string, oneOf } = PropTypes;
+const {
+	any,
+	bool,
+	func,
+	node,
+	number,
+	object,
+	string,
+	oneOf,
+	oneOfType,
+} = PropTypes;
 
 const Thead = createClass({
 	displayName: 'Table.Thead',
@@ -225,7 +235,7 @@ const Th = createClass({
 			Styles that are passed through to root element.
 		`,
 
-		width: number`
+		width: oneOfType([number, string])`
 			Sets the width of the cell.
 		`,
 

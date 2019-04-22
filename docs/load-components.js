@@ -763,6 +763,22 @@ module.exports = [
 		),
 	},
 	{
+		name: 'SearchableSingleSelect',
+		component: getDefaultExport(
+			require('../src/components/SearchableSingleSelect/SearchableSingleSelect')
+		),
+		examplesContext: require.context(
+			'../src/components/SearchableSingleSelect/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/SearchableSingleSelect/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+	{
 		name: 'SearchableSelect',
 		component: getDefaultExport(
 			require('../src/components/SearchableSelect/SearchableSelect')

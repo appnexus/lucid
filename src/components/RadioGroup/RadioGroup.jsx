@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import { lucidClassNames } from '../../util/style-helpers';
+import { lucidClassNames, uniqueName } from '../../util/style-helpers';
 import {
 	createClass,
 	getFirst,
@@ -95,7 +95,7 @@ const RadioGroup = createClass({
 
 	getDefaultProps() {
 		return {
-			name: _.uniqueId(`${cx('&')}-`),
+			name: uniqueName(`${cx('&')}-`),
 			onSelect: _.noop,
 			selectedIndex: 0,
 			isDisabled: false,

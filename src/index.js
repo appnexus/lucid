@@ -14,6 +14,9 @@ import DateSelect, { DateSelectDumb } from './components/DateSelect/DateSelect';
 import SearchableMultiSelect, {
 	SearchableMultiSelectDumb,
 } from './components/SearchableMultiSelect/SearchableMultiSelect';
+import SearchableSingleSelect, {
+	SearchableSingleSelectDumb,
+} from './components/SearchableSingleSelect/SearchableSingleSelect';
 import DropMenu, { DropMenuDumb } from './components/DropMenu/DropMenu';
 import Expander, { ExpanderDumb } from './components/Expander/Expander';
 import ExpanderPanel, {
@@ -306,6 +309,8 @@ export {
 	ScrollTable,
 	SearchableMultiSelect,
 	SearchableMultiSelectDumb,
+	SearchableSingleSelect,
+	SearchableSingleSelectDumb,
 	SearchableSelect,
 	SearchableSelectDumb,
 	SearchField,
