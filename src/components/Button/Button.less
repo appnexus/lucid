@@ -11,7 +11,7 @@
 	// Mixins
 	.no-safari-flicker();
 	.box-sizing();
-	.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
+	background-color: @featured-color-default-backgroundColor;
 
 	cursor: pointer;
 	height: @Button-size-height;
@@ -61,10 +61,10 @@
 
 	// Types
 	&&-primary {
-		.gradient-animation(@featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
-		.make-is-disabled(lucid-Button, @featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
+		.make-is-disabled(lucid-Button);
 		.bold();
 
+		background-color: @featured-color-primary-backgroundColor;
 		border-color: @featured-color-primary-borderColor;
 		color: @color-white;
 
@@ -72,10 +72,10 @@
 	}
 
 	&&-success {
-		.gradient-animation(@featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
-		.make-is-disabled(lucid-Button, @featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
+		.make-is-disabled(lucid-Button);
 		.bold();
 
+		background-color: @featured-color-success-backgroundColor;
 		color: @color-white;
 		border-color: @featured-color-success-borderColor;
 
@@ -87,10 +87,10 @@
 	}
 
 	&&-info {
-		.gradient-animation(@featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
-		.make-is-disabled(lucid-Button, @featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
+		.make-is-disabled(lucid-Button);
 		.bold();
 
+		background-color: @featured-color-info-backgroundColor;
 		border-color: @featured-color-info-borderColor;
 		color: @color-white;
 
@@ -102,10 +102,10 @@
 	}
 
 	&&-warning {
-		.gradient-animation(@featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
-		.make-is-disabled(lucid-Button, @featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
+		.make-is-disabled(lucid-Button);
 		.bold();
 
+		background-color: @featured-color-warning-backgroundColor;
 		border-color: @featured-color-warning-borderColor;
 		color: @color-white;
 
@@ -117,10 +117,10 @@
 	}
 
 	&&-danger {
-		.gradient-animation(@featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
-		.make-is-disabled(lucid-Button, @featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
+		.make-is-disabled(lucid-Button);
 		.bold();
 
+		background-color: @featured-color-danger-backgroundColor;
 		border-color: @featured-color-danger-borderColor;
 		color: @color-white;
 
@@ -278,8 +278,7 @@
 	}
 
 	&-is-disabled {
-		.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
-		.opacity();
+		.opacity(.8);
 		.no-cursor();
 	}
 

@@ -7,8 +7,8 @@
 	&-Control {
 		.no-safari-flicker();
 		.box-sizing();
-		.gradient-animation( @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 
+		background-color: @featured-color-default-backgroundColor;
 		cursor: pointer;
 		height: @SingleSelect-size-controlHeight;
 		display: flex;
@@ -44,7 +44,7 @@
 		&-is-selected {
 			color: @color-white;
 			border-color: @featured-color-primary-borderColor;
-			.gradient-animation(@featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
+			background-color: @featured-color-primary-backgroundColor;
 
 			.lucid-CaretIcon {
 				fill: @color-white;
@@ -56,8 +56,7 @@
 		}
 
 		&-is-disabled {
-			.gradient-reset(linear-gradient(@standardGradient, @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor));
-			.opacity();
+			.opacity(.8);
 
 			cursor: not-allowed;
 		}
