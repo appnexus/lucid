@@ -69,9 +69,7 @@ const colorList = [
 	{
 		category: 'Featured Primary',
 		variables: [
-			'featured-color-primary-backgroundColorLight',
 			'featured-color-primary-backgroundColor',
-			'featured-color-primary-borderColorLite',
 			'featured-color-primary-borderColor',
 			'featured-color-primary-colorHover',
 		],
@@ -79,9 +77,7 @@ const colorList = [
 	{
 		category: 'Featured Success',
 		variables: [
-			'featured-color-success-backgroundColorLight',
 			'featured-color-success-backgroundColor',
-			'featured-color-success-borderColorLite',
 			'featured-color-success-borderColor',
 			'featured-color-success-colorHover',
 		],
@@ -89,9 +85,7 @@ const colorList = [
 	{
 		category: 'Featured Info',
 		variables: [
-			'featured-color-info-backgroundColorLight',
 			'featured-color-info-backgroundColor',
-			'featured-color-info-borderColorLite',
 			'featured-color-info-borderColor',
 			'featured-color-info-colorHover',
 		],
@@ -99,9 +93,7 @@ const colorList = [
 	{
 		category: 'Featured Warning',
 		variables: [
-			'featured-color-warning-backgroundColorLight',
 			'featured-color-warning-backgroundColor',
-			'featured-color-warning-borderColorLite',
 			'featured-color-warning-borderColor',
 			'featured-color-warning-colorHover',
 		],
@@ -109,9 +101,7 @@ const colorList = [
 	{
 		category: 'Featured Danger',
 		variables: [
-			'featured-color-danger-backgroundColorLight',
 			'featured-color-danger-backgroundColor',
-			'featured-color-danger-borderColorLite',
 			'featured-color-danger-borderColor',
 			'featured-color-danger-colorHover',
 		],
