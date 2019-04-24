@@ -18,7 +18,7 @@
 	width: 100%;
 
 	&:focus {
-		border: @size-borderWidth solid @color-primary;
+		border: @size-borderWidthFocused solid @color-primary;
 		padding-left: @size-S - 1px; // account for 1 extra border pixel
 		padding-right: @size-S - 1px; // account for 1 extra border pixel
 		outline: none;
@@ -27,7 +27,7 @@
 
 	&&-is-single-line {
 		vertical-align: middle;
-		height: @TextField-size-height;
+		height: @size-standard-height;
 	}
 
 	&&-is-multi-line {

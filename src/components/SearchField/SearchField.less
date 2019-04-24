@@ -5,8 +5,7 @@
 	position: relative;
 
 	.lucid-TextField {
-		border-radius: @TextField-size-height / 2;
-		padding: 0 @size-standard;
+		border-radius: @size-standard-height / 2;
 	}
 
 	&-Icon-container {
@@ -20,7 +19,7 @@
 	}
 
 	&-Icon {
-		fill: @color-mediumGray;
+		fill: #7a7878; // TODO: use a value from `variables.less`
 
 		&-active {
 			fill: @color-primary;
