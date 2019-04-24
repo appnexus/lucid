@@ -79,18 +79,57 @@
 // -----------------------------------------------------------------------------
 
 // Standard inset shadow
-@shadow-inset: 0 10px 10px -10px @color-gray-30 inset;
+@shadow-inset: 0 10px 10px -10px @color-transparent-gray-30 inset;
 @shadow: 2px 2px 5px 0 fade(@color-darkGray, 8%);
 
 // -----------------------------------------------------------------------------
 // Colors
 // -----------------------------------------------------------------------------
 
+// General colors
+@color-white: #fff;
+@color-black: #000;
+@color-transparent: rgba(255, 255, 255, 0); // normalize transparent due to Safari bug
+
+// Primary colors
+@color-primary: #587eba;
+@color-primaryLight: #e6ecf5;
+
+// Secondary colors
+@color-secondary-1: #fc5047;
+@color-secondary-2: #ab52b0;
+@color-secondary-3: #009fdb;
+
+//neutral colors
+@color-neutral-1: #FFF;
+@color-neutral-2: #f9f8f7;
+@color-neutral-3: #f4f2f2;
+@color-neutral-4: #e8e6e6;
+@color-neutral-5: #d3d1d1;
+@color-neutral-6: #a6a3a3;
+@color-neutral-7: #7a7878;
+@color-neutral-8: #4d4b4b;
+@color-neutral-9: #211f1f;
+
+// Transparent grays
+@color-transparent-gray-5: fade(@color-black, 5%);
+@color-transparent-gray-10: fade(@color-black, 10%);
+@color-transparent-gray-25: fade(@color-black, 25%);
+@color-transparent-gray-30: fade(@color-black, 30%);
+@color-transparent-gray-50: fade(@color-black, 50%);
+@color-transparent-gray-60: fade(@color-black, 60%);
+
 // Grays
 @color-lightGray: #f4f4f4;
 @color-gray: #e3e3e3;
 @color-mediumGray: #e4e4e4;
 @color-darkGray: #211f1f;
+
+
+// -------------------------------------
+// Semantic Colors
+// -------------------------------------
+
 
 // Standard text color
 @color-textColor: @color-darkGray;
@@ -105,26 +144,6 @@
 
 // Standard background color
 @color-pageBackgroundColor: #f9f8f7;
-
-// General colors
-@color-white: #fff;
-@color-black: #000;
-@color-transparent: rgba(255, 255, 255, 0); // normalize transparent due to Safari bug
-
-// Primary colors
-@color-primary: #587eba;
-@color-primaryLight: tint(@color-primary, 85%);
-@color-primaryMedium: tint(@color-primary, 65%);
-
-@color-primary-30: fade(@color-primary, 30%);
-
-// Transparent grays
-@color-gray-5: fade(@color-black, 5%);
-@color-gray-10: fade(@color-black, 10%);
-@color-gray-25: fade(@color-black, 25%);
-@color-gray-30: fade(@color-black, 30%);
-@color-gray-50: fade(@color-black, 50%);
-@color-gray-60: fade(@color-black, 60%);
 
 @color-borderGray: fade(@color-darkGray, 30%); //@todo remove
 
@@ -149,12 +168,6 @@
 // -------------------------------------
 // Featured color variables are intended to only be used for components that
 // have "states" to them like `info`, `waring`, `danger` etc.
-
-// `@featured-color-default-borderColor` should only be used for banner or
-// button or button like components.
-
-// Generally you should not use `@featured-color-primary` instead use
-// `@color-primary`
 
 // Featured default color
 @featured-color-default: #333;

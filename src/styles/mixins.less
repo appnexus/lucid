@@ -40,10 +40,6 @@
 		box-shadow: @shadow-inset;
 	}
 
-	&:focus {
-		.focus-glow();
-	}
-
 	&:active:focus {
 		border-radius: @size-borderRadius;
 		box-shadow: @shadow-inset;
@@ -190,10 +186,6 @@
 		transform: scaleX(@scale);
 		transition: transform @timing-animation-hover;
 	}
-}
-
-.focus-glow(@color: @color-primary-30) {
-	box-shadow: 0 0 0 3px @color;
 }
 
 // -----------------------------------------------------------------------------
