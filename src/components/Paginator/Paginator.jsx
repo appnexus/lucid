@@ -158,6 +158,7 @@ const Paginator = createClass({
 				<Button
 					onClick={_.partial(onPageSelect, selectedPageIndex - 1, totalPages)}
 					isDisabled={isDisabled || selectedPageIndex === 0}
+					kind="invisible"
 					hasOnlyIcon
 				>
 					<ArrowIcon direction="left" />
@@ -172,6 +173,7 @@ const Paginator = createClass({
 				/>
 				<span>of {totalPages}</span>
 				<Button
+					kind="invisible"
 					onClick={_.partial(onPageSelect, selectedPageIndex + 1, totalPages)}
 					isDisabled={isDisabled || selectedPageIndex === totalPages - 1}
 					hasOnlyIcon
