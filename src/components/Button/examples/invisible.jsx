@@ -25,7 +25,7 @@ export default createClass({
 						Invisible
 					</Button>
 					<Button style={buttonStyle} kind="invisible" isDisabled={true}>
-						Invisible disabled
+						<PlusIcon />Invisible disabled
 					</Button>
 					<Button style={buttonStyle} kind="invisible">
 						<PlusIcon />Invisible
