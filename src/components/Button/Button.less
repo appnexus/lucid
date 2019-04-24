@@ -23,7 +23,7 @@
 	letter-spacing: 0.05em;
 	padding: 0 @Button-size-padding;
 	outline: none;
-	color: @color-black;
+	color: @featured-color-default;
 
 	// from normalize.css@4.1.1
 	margin: 0; /* 2 */
@@ -35,10 +35,10 @@
 	white-space: nowrap;
 
 	&:hover:not(&-is-disabled) {
-		.opacity(@opacity-hover);
+		background-color: @featured-color-default-backgroundColorHover;
 	}
 	&:active:not(&-is-disabled) {
-		.opacity(1);
+		background-color: @featured-color-default-backgroundColorFocus;
 	}
 
 	// don't show Firefox's focus ring: https://github.com/appnexus/lucid/issues/292
@@ -81,6 +81,15 @@
 		color: @color-white;
 
 		.lucid-Icon { fill: @color-white; }
+
+		&:hover:not(.lucid-Button-is-disabled) {
+			background-color: @featured-color-primary-backgroundColor;
+			.opacity(@opacity-hover);
+		}
+		&:active:not(.lucid-Button-is-disabled) {
+			background-color: @featured-color-primary-backgroundColor;
+			.opacity(1);
+		}
 	}
 
 	&&-danger {
@@ -92,26 +101,29 @@
 		color: @color-white;
 
 		.lucid-Icon { fill: @color-white; }
+
+		&:hover:not(.lucid-Button-is-disabled) {
+			background-color: @featured-color-danger-backgroundColor;
+			.opacity(@opacity-hover);
+		}
+		&:active:not(.lucid-Button-is-disabled) {
+			background-color: @featured-color-danger-backgroundColor;
+			.opacity(1);
+		}
 	}
 
 	&&-link {
-		.gradient-reset();
 		.make-is-disabled(lucid-Button);
 
 		border: none;
 		background: none;
-		color: @color-linkColor;
 		padding: 0;
 
 		&:hover,
 		&:active,
 		&:focus {
-			.lucid-Icon { fill: @color-linkColorHover; }
-
-			background: none;
-			color: @color-linkColorHover;
+			background-color: @featured-color-default-backgroundColor;
 			text-decoration: underline;
-			box-shadow: none;
 		}
 
 		&:active::before {
@@ -145,17 +157,8 @@
 
 		border: none;
 		background: none;
-		color: @color-darkGray;
 
-		&:hover:not(.lucid-Button-is-disabled),
-		&:active:not(.lucid-Button-is-disabled),
-		&:focus:not(.lucid-Button-is-disabled) {
-			.lucid-Icon { fill: @color-darkGray; }
 
-			background: @color-lightGray;
-			color: @color-darkGray;
-			box-shadow: none;
-		}
 
 		&:active::before {
 			opacity: 0;
@@ -206,13 +209,7 @@
 
 	// States
 	&&-is-active {
-		.gradient-reset();
-
-		background: @featured-color-primary;
-		border-color: @featured-color-primary;
-		color: @color-white;
-
-		.lucid-Icon { fill: @color-white; }
+		background-color: @featured-color-default-backgroundColorFocus;
 	}
 
 	&&-is-active&-primary {

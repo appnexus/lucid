@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Button } from '../../../index';
+import { Button, CheckIcon } from '../../../index';
 
 const sectionStyle = {
 	display: 'flex',
@@ -50,6 +50,14 @@ export default createClass({
 					</Button>
 					<Button kind="primary" size="large" isDisabled={true}>
 						Large disabled
+					</Button>
+				</article>
+				<article style={articleStyle}>
+					<Button kind="primary" style={buttonStyle} size="small">
+						<CheckIcon />Small
+					</Button>
+					<Button kind="primary" style={buttonStyle} size="large">
+						<CheckIcon />Large
 					</Button>
 				</article>
 			</section>
