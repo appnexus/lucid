@@ -71,7 +71,6 @@ const colorList = [
 		variables: [
 			'featured-color-primary-backgroundColor',
 			'featured-color-primary-borderColor',
-			'featured-color-primary-colorHover',
 		],
 	},
 	{
