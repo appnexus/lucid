@@ -7,8 +7,8 @@
 	&-Control {
 		.no-safari-flicker();
 		.box-sizing();
-		.gradient-animation( @featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 
+		background-color: @featured-color-default-backgroundColor;
 		cursor: pointer;
 		height: @SearchableSelect-size-controlHeight;
 		display: flex;
@@ -57,12 +57,7 @@
 		}
 
 		&-is-disabled {
-			.gradient-reset(linear-gradient(
-				@standardGradient,
-				@featured-color-default-gradientStartColor,
-				@featured-color-default-gradientEndColor
-			));
-			.opacity();
+			.opacity(@opacity-disabled);
 
 			cursor: not-allowed;
 		}

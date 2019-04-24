@@ -85,7 +85,7 @@ const SplitButton = createClass({
 			SplitButton.
 		`,
 
-		kind: oneOf(['primary', 'success', 'warning', 'danger', 'info'])`
+		kind: oneOf(['primary', 'danger'])`
 			Style variations of the SplitButton.
 		`,
 
