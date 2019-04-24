@@ -1,17 +1,41 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Validation } from '../../../index';
+import { Validation, TextField } from '../../../index';
 
 export default createClass({
 	render() {
 		return (
 			<div>
-				<Validation Error="Method one">Content</Validation>
+				<p>Text field with error (method 1)</p>
+				<Validation Error="Error One">
+					<TextField value="Text Field Text" />
+				</Validation>
+
+				<br />
+
+				<p>Text field with error (method 2)</p>
 				<Validation>
 					<Validation.Error>
-						<i>Method two</i>
+						<p>Error Two</p>
 					</Validation.Error>
-					Content
+					<TextField value="Text Field Text" />
+				</Validation>
+
+				<br />
+
+				<p>Text area with error (method 1)</p>
+				<Validation Error="Error Three">
+					<TextField isMultiLine row={3} value="Text Area Text" />
+				</Validation>
+
+				<br />
+
+				<p>Text area with error (method 2)</p>
+				<Validation>
+					<Validation.Error>
+						<p>Error Four</p>
+					</Validation.Error>
+					<TextField isMultiLine row={3} value="Text Area Text" />
 				</Validation>
 			</div>
 		);
