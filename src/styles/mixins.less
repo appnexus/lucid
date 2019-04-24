@@ -1,3 +1,5 @@
+@import (reference) './variables.less';
+
 // IE 10/11 do not respect box-sizing: border-box; on flex items so we need a max-width
 // This is fixed in IE12 - https://github.com/philipwalton/flexbugs/issues/3
 .flex(@basis: 0, @flex: 0, @max: 100%) {
@@ -72,12 +74,9 @@
 
 // Creates a disabled element **uses `.gradient-reset()`**
 // * `@name` is passed in to help name space the styles.
-// * `@start-color` gradient start color if other than transparent.
-// * `@end-color` gradient end color if other than transparent.
-// * `@gradient` is the flow of the gradient.
-.make-is-disabled(@name, @start-color: @color-transparent, @end-color: @color-transparent, @gradient: @standardGradient) {
+.make-is-disabled(@name) {
 	&.@{name}-is-disabled {
-		.gradient-reset(linear-gradient(@gradient, @start-color, @end-color));
+		opacity: @opacity-disabled;
 
 		&:hover {
 			text-decoration: none;

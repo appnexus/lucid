@@ -45,15 +45,7 @@ const Button = createClass({
 			Any valid React children
 		`,
 
-		kind: oneOf([
-			'primary',
-			'link',
-			'success',
-			'warning',
-			'danger',
-			'info',
-			'invisible',
-		])`
+		kind: oneOf(['primary', 'link', 'danger', 'invisible'])`
 			Style variations of the Button
 		`,
 
@@ -116,10 +108,7 @@ const Button = createClass({
 						'&-primary': kind === 'primary',
 						'&-link': kind === 'link',
 						'&-invisible': kind === 'invisible',
-						'&-success': kind === 'success',
-						'&-warning': kind === 'warning',
 						'&-danger': kind === 'danger',
-						'&-info': kind === 'info',
 						'&-short': size === 'short',
 						'&-small': size === 'small',
 						'&-large': size === 'large',
