@@ -163,7 +163,7 @@
 
 // Featured primary color
 @featured-color-primary: @color-primary;
-@featured-color-primary-backgroundColor: tint(@featured-color-primary, 70%);
+@featured-color-primary-backgroundColor: @featured-color-primary;
 @featured-color-primary-borderColor: @featured-color-primary;
 
 // Featured success color
@@ -175,20 +175,20 @@
 // Featured info color
 @featured-color-info: @color-primary;
 @featured-color-info-colorHover: shade(@featured-color-info, 35%);
-@featured-color-info-backgroundColor: tint(@featured-color-info, 70%);
+@featured-color-info-backgroundColor: @featured-color-info;
 @featured-color-info-borderColor: @featured-color-info;
 
 // Featured warning color
 @featured-color-warning: #f5b701;
 @featured-color-warning-colorHover: shade(@featured-color-warning, 35%);
-@featured-color-warning-backgroundColor: tint(@featured-color-warning, 70%);
+@featured-color-warning-backgroundColor: @featured-color-warning;
 @featured-color-warning-borderColor: @featured-color-warning;
 
 // Featured danger color
 @featured-color-danger: #f77402;
 @featured-color-danger-30: fade(@featured-color-danger, 30%);
 @featured-color-danger-colorHover: shade(@featured-color-danger, 35%);
-@featured-color-danger-backgroundColor: tint(@featured-color-danger, 70%);
+@featured-color-danger-backgroundColor: @featured-color-danger;
 @featured-color-danger-borderColor: @featured-color-danger;
 
 // -------------------------------------
@@ -311,3 +311,5 @@
 
 @pattern-diagonal-striped: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cGF0aCBkPSJNLTEgNUw1IC0xWk01IDNMMyA1Wk0tMSAxTDEgLTEiIHN0cm9rZT0iI2UzZTNlMyIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+Cjwvc3ZnPg==");
 
+@opacity-hover: .8;
+@opacity-disabled: .35;

@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-@Button-size-padding: @size-standard;
+@Button-size-padding: 8px;
 @Button-size-height: @size-standard-height;
 @Button-size-height-small: @size-standard-height - 8;
 @Button-size-height-large: @size-standard-height + 12;
@@ -19,6 +19,7 @@
 	border-radius: @Button-size-borderRadius;
 	font-size: @fontSize;
 	font-family: @fontFamily;
+	font-weight: @font-weight-medium;
 	letter-spacing: 0.05em;
 	padding: 0 @Button-size-padding;
 	outline: none;
@@ -33,6 +34,13 @@
 
 	white-space: nowrap;
 
+	&:hover:not(&-is-disabled) {
+		.opacity(@opacity-hover);
+	}
+	&:active:not(&-is-disabled) {
+		.opacity(1);
+	}
+
 	// don't show Firefox's focus ring: https://github.com/appnexus/lucid/issues/292
 	&::-moz-focus-inner {
 		border: 0;
@@ -42,6 +50,9 @@
 
 	&&-has-only-icon {
 		padding: 0 5px;
+		.lucid-Button-content > .lucid-Icon {
+			margin-right: 0;
+		}
 	}
 
 	& &-content {
@@ -52,6 +63,7 @@
 
 		> .lucid-Icon {
 			transition: color @timing-animation-hover, fill @timing-animation-hover;
+			margin-right: 5px;
 		}
 
 		> span {
@@ -78,10 +90,6 @@
 		background-color: @featured-color-danger-backgroundColor;
 		border-color: @featured-color-danger-borderColor;
 		color: @color-white;
-
-		&:focus {
-			.focus-glow(@featured-color-danger-30);
-		}
 
 		.lucid-Icon { fill: @color-white; }
 	}
@@ -219,7 +227,7 @@
 	}
 
 	&-is-disabled {
-		.opacity(.8);
+		.opacity(@opacity-disabled);
 		.no-cursor();
 	}
 

@@ -1,3 +1,5 @@
+@import (reference) './variables.less';
+
 // IE 10/11 do not respect box-sizing: border-box; on flex items so we need a max-width
 // This is fixed in IE12 - https://github.com/philipwalton/flexbugs/issues/3
 .flex(@basis: 0, @flex: 0, @max: 100%) {
@@ -74,7 +76,7 @@
 // * `@name` is passed in to help name space the styles.
 .make-is-disabled(@name) {
 	&.@{name}-is-disabled {
-		opacity: .8;
+		opacity: @opacity-disabled;
 
 		&:hover {
 			text-decoration: none;
