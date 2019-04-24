@@ -22,6 +22,8 @@ export default createClass({
 					onChange={value => this.setState({ value })}
 				/>
 
+				<TextField isDisabled style={style} value={this.state.value} />
+
 				<div style={style}>this.state.value: {this.state.value}</div>
 
 				<Button

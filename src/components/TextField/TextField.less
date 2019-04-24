@@ -1,13 +1,11 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-@TextField-size-padding: @size-S;
 @TextField-size-height: @size-standard-height;
 @TextField-color-font: #333;
 
 .lucid-TextField {
 	.box-sizing();
-	.inset-box-shadow();
 
 	background-color: @color-white;
 	border-radius: @size-borderRadius;
@@ -16,11 +14,13 @@
 	font-family: @fontFamily;
 	font-size: @fontSize;
 	margin: 0;
-	padding: 0 @TextField-size-padding;
+	padding: 1px @size-S 0 @size-S;
 	width: 100%;
 
 	&:focus {
-
+		border: @size-borderWidth solid @color-primary;
+		padding-left: @size-S - 1px; // account for 1 extra border pixel
+		padding-right: @size-S - 1px; // account for 1 extra border pixel
 		outline: none;
 		border-color: @color-primary;
 	}
@@ -33,14 +33,19 @@
 	&&-is-multi-line {
 		vertical-align: top;
 		resize: both;
-		padding-top: @TextField-size-padding - 2px; // Handle padding appropriately for `textarea`s
+		padding-top: @size-S - 3px; // Handle padding appropriately for `textarea`s
+	}
+
+	&&-is-multi-line:focus {
+		padding-top: @size-S - 4px; // Handle padding appropriately for `textarea`s
+		margin-bottom: -1px;
+		// TODO
 	}
 
 	&&-is-disabled {
 		cursor: not-allowed;
-		background-color: @color-transparent-gray-5;
-		border-color: @color-transparent-gray-10;
-		color: @color-transparent-gray-25;
+		background-color: #f4f2f2; // TODO: use a gray from `variables.less`
+		color: #a6a3a3; // TODO: use a gray from `variables.less`
 	}
 }
 
