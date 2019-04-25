@@ -70,9 +70,13 @@
 
 // Creates a disabled element **uses `.gradient-reset()`**
 // * `@name` is passed in to help name space the styles.
-.make-is-disabled(@name) {
+.make-is-disabled(@name, @iconDisabledFill: @featured-color-default-iconColorDisabled) {
 	&.@{name}-is-disabled {
 		opacity: @opacity-disabled;
+
+		.lucid-Icon {
+			fill: @iconDisabledFill;
+		}
 
 		&:hover {
 			text-decoration: none;

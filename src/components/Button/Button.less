@@ -15,7 +15,7 @@
 
 	cursor: pointer;
 	height: @Button-size-height;
-	border: 1px solid @featured-color-default-borderColor;
+	border: @border-standardBorder;
 	border-radius: @Button-size-borderRadius;
 	font-size: @fontSize;
 	font-family: @fontFamily;
@@ -73,7 +73,7 @@
 
 	// Types
 	&&-primary {
-		.make-is-disabled(lucid-Button);
+		.make-is-disabled(lucid-Button, @color-white);
 		.bold();
 
 		background-color: @featured-color-primary-backgroundColor;
@@ -93,7 +93,7 @@
 	}
 
 	&&-danger {
-		.make-is-disabled(lucid-Button);
+		.make-is-disabled(lucid-Button, @color-white);
 		.bold();
 
 		background-color: @featured-color-danger-backgroundColor;
@@ -224,8 +224,7 @@
 	}
 
 	&-is-disabled {
-		.opacity(@opacity-disabled);
-		.no-cursor();
+		.make-is-disabled(lucid-Button);
 	}
 
 	// Also needed in some cases to beat other libraries (e.g. pure.css)

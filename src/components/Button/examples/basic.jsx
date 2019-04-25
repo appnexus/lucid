@@ -29,7 +29,7 @@ export default createClass({
 						<CheckIcon />
 					</Button>
 					<Button style={buttonStyle} isDisabled={true}>
-						Default disabled
+						<CheckIcon />Default disabled
 					</Button>
 					<Button isActive={true}>Default active</Button>
 				</article>
@@ -44,7 +44,7 @@ export default createClass({
 						<CheckIcon />
 					</Button>
 					<Button style={buttonStyle} size="short" isDisabled={true}>
-						Short disabled
+						<CheckIcon />Short disabled
 					</Button>
 					<Button size="short" isActive={true}>
 						Short active
@@ -61,7 +61,7 @@ export default createClass({
 						<CheckIcon />
 					</Button>
 					<Button style={buttonStyle} size="small" isDisabled={true}>
-						Small disabled
+						<CheckIcon />Small disabled
 					</Button>
 					<Button size="small" isActive={true}>
 						Small active
@@ -78,7 +78,7 @@ export default createClass({
 						<CheckIcon />
 					</Button>
 					<Button style={buttonStyle} size="large" isDisabled={true}>
-						Large disabled
+						<CheckIcon />Large disabled
 					</Button>
 					<Button size="large" isActive={true}>
 						Large active

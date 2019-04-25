@@ -42,7 +42,8 @@
 
 // standard border radius
 @size-borderRadius: 0;
-@size-borderWidth: 2px;
+@size-borderWidth: 1px;
+@size-borderWidthFocused: 2px;
 
 @size-standard-height: 28px; // should have been `@size-height-standard`
 @size-height-L: 46px;
@@ -172,7 +173,8 @@
 // Featured default color
 @featured-color-default: #333;
 @featured-color-default-borderColor: #d3d1d1;
-@featured-color-default-backgroundColor: #FFF;
+@featured-color-default-iconColorDisabled: @featured-color-default-borderColor;
+@featured-color-default-backgroundColor: #fff;
 @featured-color-default-backgroundColorHover: #f4f2f2;
 @featured-color-default-backgroundColorFocus: #e8e6e6;
 
@@ -312,8 +314,8 @@
 // Borders
 // -----------------------------------------------------------------------------
 
-@border-standardBorder: 1px solid @color-borderColor;
-@border-lightBorder: 1px solid @color-borderColorLight;
+@border-standardBorder: @size-borderWidth solid @featured-color-default-borderColor;
+@border-lightBorder: @size-borderWidth solid @color-borderColorLight;
 
 @border-table: 1px solid @color-table-header;
 @border-table-header: 1px solid #babdbe;
