@@ -12,6 +12,7 @@ export default createClass({
 					return (
 						<div>
 							<Selection
+								isTop
 								responsiveMode={responsiveMode}
 								Label="Arts & Entertainment"
 							>
@@ -34,6 +35,7 @@ export default createClass({
 							</Selection>
 
 							<Selection
+								isTop
 								responsiveMode={responsiveMode}
 								kind="info"
 								Label="Arts & Entertainment"
@@ -98,6 +100,7 @@ export default createClass({
 							</Selection>
 
 							<Selection
+								isTop
 								responsiveMode={responsiveMode}
 								kind="success"
 								hasBackground
@@ -122,6 +125,7 @@ export default createClass({
 							</Selection>
 
 							<Selection
+								isTop
 								responsiveMode={responsiveMode}
 								kind="danger"
 								hasBackground

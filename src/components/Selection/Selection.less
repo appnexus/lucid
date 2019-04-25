@@ -12,6 +12,15 @@
 	border-radius: @size-borderRadius;
 	border: 1px solid @featured-color-primary-borderColor;
 	padding-left: @size-S;
+	
+	&-is-large {
+		font-size: @size-font-L;
+		line-height: 44px;
+
+		.lucid-Selection-Icon {
+			margin-top: 12px;
+		}
+	}
 
 	&-is-bold {
 		.bold();
@@ -60,6 +69,8 @@
 
 	&-Icon {
 		margin-right: @size-XS;
+		margin-top: 6px;
+    align-self: flex-start;
 	}
 
 	&-label-container {
@@ -96,7 +107,14 @@
 	}
 
 	&:not(:last-child) {
-		border-bottom: 0px;
+		&:not(.lucid-Selection-is-top) {
+			border-bottom: 0px;
+		}
+	}
+
+	&-is-top {
+		margin: @size-L;
+		// border-bottom: 1px;
 	}
 }
 

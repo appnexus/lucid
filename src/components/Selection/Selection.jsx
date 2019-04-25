@@ -81,6 +81,11 @@ const Selection = createClass({
 			Applies an icon and styles for the kind of selection.
 		`,
 
+		isTop: bool`
+			Apply to the top of a nested sequence of Selection components.
+			Adds some spacing for a list of top level Selections with nested Selctions inside each.
+		`,
+
 		isFilled: bool`
 			Only applies to \`container\` Selection components. 
 			Fills with a darker gray background.
@@ -150,6 +155,7 @@ const Selection = createClass({
 			hasBackground,
 			isBold,
 			isFilled,
+			isTop,
 			responsiveMode: responsiveModeInput,
 			...passThroughs
 		} = this.props;
@@ -184,6 +190,7 @@ const Selection = createClass({
 						'&-has-background': hasBackground,
 						'&-is-bold': isBold,
 						'&-is-filled': isFilled,
+						'&-is-top': isTop,
 					},
 					className
 				)}
