@@ -138,7 +138,7 @@ const Selection = createClass({
 			onRemove: _.noop,
 			hasBackground: false,
 			isBold: false,
-			responsiveMode: 'large',
+			responsiveMode: 'small',
 		};
 	},
 
