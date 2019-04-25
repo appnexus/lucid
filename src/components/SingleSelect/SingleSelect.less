@@ -17,8 +17,8 @@
 		border-radius: @size-borderRadius;
 		font-size: @fontSize;
 		font-family: @fontFamily;
-		color: @color-black;
-		letter-spacing: 0.05em;
+		font-weight: @font-weight-medium;
+		color: @color-darkGray;
 		line-height: @size-standard-height;
 		padding: 0 @size-standard;
 		align-items: center;
@@ -35,24 +35,37 @@
 		}
 
 		.lucid-CaretIcon {
-			fill: @color-black;
+			fill: @color-primary;
 			margin-left: auto;
+		}
+
+		&:hover {
+			background-color: @color-neutral-3;
+		}
+
+		&:focus {
+			background-color: @color-neutral-4;
 		}
 
 		// States
 		&-is-highlighted,
 		&-is-selected {
-			color: @color-white;
-			border-color: @featured-color-primary-borderColor;
-			background-color: @featured-color-primary-backgroundColor;
-
-			.lucid-CaretIcon {
-				fill: @color-white;
-			}
+			border: 2px solid @featured-color-primary-borderColor;
+			// background-color: @featured-color-primary-backgroundColor;
 		}
 
 		&-is-expanded {
 			z-index: @zindex-tooltip;
+			// background-color: @featured-color-default-backgroundColor;
+		}
+		
+		&-is-selected&-is-expanded {
+			background-color: @featured-color-default-backgroundColor;
+		}
+
+		&-is-null-option {
+			background-color: @featured-color-default-backgroundColor;
+			border: 1px solid @featured-color-default-borderColor;
 		}
 
 		&-is-disabled {
@@ -77,3 +90,19 @@
 	}
 }
 
+.lucid-DropMenu-label {
+	text-transform: uppercase;
+	color: @color-neutral-6;
+	font-weight: @font-weight-medium;
+}
+
+// .lucid-DropMenu-Option-is-null {
+// 	back
+// }
+
+
+// with red:
+// lucid-DropMenu lucid-DropMenu-base lucid-DropMenu-is-expanded lucid-DropMenu-direction-down lucid-SingleSelect
+
+// with null:
+// lucid-DropMenu lucid-DropMenu-base lucid-DropMenu-is-expanded lucid-DropMenu-direction-down lucid-SingleSelect

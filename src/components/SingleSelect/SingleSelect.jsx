@@ -251,6 +251,7 @@ const SingleSelect = createClass({
 								(isExpanded && isSelectionHighlighted),
 							'&-Control-is-expanded': isExpanded,
 							'&-Control-is-disabled': isDisabled,
+							'&-Control-is-null-option': selectedIndex === null,
 						})}
 					>
 						<span
@@ -270,9 +271,11 @@ const SingleSelect = createClass({
 									) || flattenedOptionsData[selectedIndex].optionProps.children
 								: placeholder}
 						</span>
+
 						<CaretIcon direction={isExpanded ? direction : 'down'} size={8} />
 					</div>
 				</DropMenu.Control>
+
 				{hasReset && isItemSelected ? (
 					<DropMenu.NullOption {...placeholderProps}>
 						{placeholder}
