@@ -46,10 +46,15 @@
 		.opacity(0);
 		transform: none;
 	}
+	
+	&&-is-disabled&&-is-selected:hover .lucid-Checkbox-visualization-container {
+		.opacity(0.5);
+		background-color: @color-primary;
+	}
 
-	&&-is-disabled&&-is-selected:hover .lucid-Checkbox-visualization-container,
 	&&-is-selected .lucid-Checkbox-visualization-container {
 		border-color: @color-primary;
+		background-color: @color-primary;
 	}
 }
 

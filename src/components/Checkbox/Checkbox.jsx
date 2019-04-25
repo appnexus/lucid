@@ -79,6 +79,15 @@ const Checkbox = createClass({
 		e.preventDefault();
 	},
 
+	handleClicked(event) {
+		const { isDisabled, isSelected, onSelect } = this.props;
+
+		if (!isDisabled) {
+			onSelect(!isSelected, { event, props: this.props });
+			this.nativeElement.focus();
+		}
+	},
+
 	render() {
 		const {
 			className,
@@ -140,15 +149,6 @@ const Checkbox = createClass({
 				)}
 			</div>
 		);
-	},
-
-	handleClicked(event) {
-		const { isDisabled, isSelected, onSelect } = this.props;
-
-		if (!isDisabled) {
-			onSelect(!isSelected, { event, props: this.props });
-			this.nativeElement.focus();
-		}
 	},
 });
 
