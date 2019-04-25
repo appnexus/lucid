@@ -15,7 +15,18 @@ export default createClass({
 								<Selection
 									isSmall
 									responsiveMode={responsiveMode}
-									Label="Default"
+									kind="container"
+									Label="Container Light"
+								/>
+							</div>
+
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									isFilled
+									responsiveMode={responsiveMode}
+									kind="container"
+									Label="Container Filled"
 								/>
 							</div>
 
@@ -23,8 +34,7 @@ export default createClass({
 								<Selection
 									isSmall
 									responsiveMode={responsiveMode}
-									kind="container"
-									Label="Container"
+									Label="Default"
 								/>
 							</div>
 

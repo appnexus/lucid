@@ -81,6 +81,12 @@ const Selection = createClass({
 			Applies an icon and styles for the kind of selection.
 		`,
 
+		isFilled: bool`
+			Only applies to \`container\` Selection components. 
+			Fills with a darker gray background.
+			Defaults to false.
+		`,
+
 		isRemovable: bool`
 			Shows or hides the little "x" for a given item.
 		`,
@@ -143,6 +149,7 @@ const Selection = createClass({
 			children,
 			hasBackground,
 			isBold,
+			isFilled,
 			responsiveMode: responsiveModeInput,
 			...passThroughs
 		} = this.props;
@@ -176,6 +183,7 @@ const Selection = createClass({
 					{
 						'&-has-background': hasBackground,
 						'&-is-bold': isBold,
+						'&-is-filled': isFilled,
 					},
 					className
 				)}

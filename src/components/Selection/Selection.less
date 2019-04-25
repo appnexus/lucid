@@ -12,12 +12,6 @@
 	border-radius: @size-borderRadius;
 	border: 1px solid @featured-color-primary-borderColor;
 	padding-left: @size-S;
-	// margin-bottom: @size-XS;
-
-	&-is-small {
-		// min-height: @size-L;
-		font-size: @size-font;
-	}
 
 	&-is-bold {
 		.bold();
@@ -50,18 +44,22 @@
 	}
 
 	&-container {
-		border-color: @color-borderColor;
+		border-color: @color-neutral-4;
+		font-weight: @font-weight-medium;
+		
+		.lucid-Selection {
+			font-weight: @font-weight-regular;
+		}	
+	}
+
+	&-is-filled {
+		background-color: @color-neutral-3;
 	}
 
 	// Others
 
 	&-Icon {
-		// margin-top: 5px;
 		margin-right: @size-XS;
-	}
-
-	&-Icon-is-small {
-		// margin-top: 6px;
 	}
 
 	&-label-container {
@@ -71,15 +69,10 @@
 
 	&-label {
 		flex: 1;
-		// margin: @size-XS 0;
-	}
-
-	&-label-is-small {
-		// margin: 6px 0;
 	}
 
 	&-close-button {
-		fill: @color-mediumGray;
+		fill: @color-mediumDarkGray;
 
 		&:hover {
 			fill: @color-darkGray;
@@ -95,7 +88,6 @@
 
 		& > .lucid-Selection {
 			margin-right: @size-XS;
-			// margin-bottom: @size-XXS;
 		}
 
 		& > .lucid-Selection:last-of-type {
