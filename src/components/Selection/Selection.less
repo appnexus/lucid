@@ -3,19 +3,20 @@
 
 .lucid-Selection {
 	display: flex;
-	min-height: @size-standard-height;
-	font-size: @fontSize;
+	align-items: center;
+	font-size: @size-font;
+	line-height: 28px;
 	font-family: @fontFamily;
 	color: @color-darkGray;
 	background-color: @color-white;
 	border-radius: @size-borderRadius;
 	border: 1px solid @featured-color-primary-borderColor;
 	padding-left: @size-S;
-	margin-bottom: @size-XS;
+	// margin-bottom: @size-XS;
 
 	&-is-small {
-		min-height: @size-L;
-		font-size: @size-font-L;
+		// min-height: @size-L;
+		font-size: @size-font;
 	}
 
 	&-is-bold {
@@ -55,12 +56,12 @@
 	// Others
 
 	&-Icon {
-		margin-top: 5px;
+		// margin-top: 5px;
 		margin-right: @size-XS;
 	}
 
 	&-Icon-is-small {
-		margin-top: 13px;
+		// margin-top: 6px;
 	}
 
 	&-label-container {
@@ -70,11 +71,11 @@
 
 	&-label {
 		flex: 1;
-		margin: @size-XS 0;
+		// margin: @size-XS 0;
 	}
 
 	&-label-is-small {
-		margin: 13px 0;
+		// margin: 6px 0;
 	}
 
 	&-close-button {
@@ -94,12 +95,16 @@
 
 		& > .lucid-Selection {
 			margin-right: @size-XS;
-			margin-bottom: @size-XXS;
+			// margin-bottom: @size-XXS;
 		}
 
 		& > .lucid-Selection:last-of-type {
 			margin-bottom: @size-S;
 		}
+	}
+
+	&:not(:last-child) {
+		border-bottom: 0px;
 	}
 }
 

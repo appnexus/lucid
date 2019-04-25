@@ -192,7 +192,7 @@ const Selection = createClass({
 						{isRemovable ? (
 							<CrossIcon
 								isClickable
-								size={isSmall ? 44 : 26}
+								size={isSmall ? 28 : 44}
 								viewBox={isSmall ? '-6 -6 28 28' : '-3 -2 20 20'}
 								className={cx('&-close-button')}
 								onClick={this.handleRemove}

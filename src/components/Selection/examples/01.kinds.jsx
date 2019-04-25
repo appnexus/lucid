@@ -11,32 +11,58 @@ export default createClass({
 
 					return (
 						<div>
-							<Selection responsiveMode={responsiveMode} Label="Default" />
-							<Selection
-								responsiveMode={responsiveMode}
-								kind="container"
-								Label="Container"
-							/>
-							<Selection
-								responsiveMode={responsiveMode}
-								kind="success"
-								Label="Success"
-							/>
-							<Selection
-								responsiveMode={responsiveMode}
-								kind="danger"
-								Label="Danger"
-							/>
-							<Selection
-								responsiveMode={responsiveMode}
-								kind="info"
-								Label="Info"
-							/>
-							<Selection
-								responsiveMode={responsiveMode}
-								kind="warning"
-								Label="Warning"
-							/>
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									responsiveMode={responsiveMode}
+									Label="Default"
+								/>
+							</div>
+
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									responsiveMode={responsiveMode}
+									kind="container"
+									Label="Container"
+								/>
+							</div>
+
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									responsiveMode={responsiveMode}
+									kind="success"
+									Label="Success"
+								/>
+							</div>
+
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									responsiveMode={responsiveMode}
+									kind="danger"
+									Label="Danger"
+								/>
+							</div>
+
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									responsiveMode={responsiveMode}
+									kind="info"
+									Label="Info"
+								/>
+							</div>
+
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									responsiveMode={responsiveMode}
+									kind="warning"
+									Label="Warning"
+								/>
+							</div>
 						</div>
 					);
 				}}
