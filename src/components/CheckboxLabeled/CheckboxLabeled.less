@@ -21,7 +21,6 @@
 	}
 
 	&&-is-disabled {
-		color: @color-mediumGray;
 		cursor: not-allowed;
 	}
 
@@ -29,11 +28,19 @@
 		border: @color-primary solid 2px;
 		transition: @Checkbox-animation-timing;
 	}
+	
+	&-is-selected:hover .lucid-Checkbox-visualization-container,
+	&-is-selected:hover .lucid-CheckboxLabeled-Checkbox,
+	&:hover .lucid-Checkbox-visualization-glow,
+	&-is-selected:hover .lucid-CheckboxLabeled-Checkbox {
+		.opacity(0.8);
+	}
 
-	&:hover .lucid-Checkbox-visualization-glow {
-		.opacity(0.5);
-
-		// transform: @Checkbox-glow-scale;
+	// this code doesn't do anything
+	&-is-selected lucidCheckbox-native:focus ~ .lucid-Checkbox-visualization-glow,
+	&-is-selected &-native:focus ~ .lucid-CheckboxLabeled-Checkbox 
+		{
+		.opacity(0.8);
 	}
 
 	&&-is-disabled .lucid-Checkbox-visualization-container,
@@ -44,7 +51,6 @@
 
 	&&-is-disabled:hover .lucid-Checkbox-visualization-glow {
 		.opacity(0);
-
 		transform: none;
 	}
 
