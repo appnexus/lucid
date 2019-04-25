@@ -112,6 +112,7 @@ const NotchedTag = createClass({
 					'&',
 					className,
 					tagStyle,
+					size,
 					type === TYPE_FILLED ? 'no-border' : ''
 				)}
 				{...passThroughs}

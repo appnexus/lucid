@@ -8,26 +8,26 @@ export default createClass({
 		return (
 			<div>
 				<div>
-					<NotchedTag style={style}>LRG</NotchedTag>
+					<NotchedTag style={style}>ADV</NotchedTag>
 					<NotchedTag size="small" style={style}>
-						SM
+						ADV
 					</NotchedTag>
 					<NotchedTag type="filled" style={style}>
-						LRG
+						ADV
 					</NotchedTag>
 					<NotchedTag size="small" type="filled" style={style}>
-						SM
+						ADV
 					</NotchedTag>
 				</div>
 				<div>
 					<NotchedTag tagStyle="style-two" style={style}>
-						LRG
+						IO
 					</NotchedTag>
 					<NotchedTag size="small" tagStyle="style-two" style={style}>
-						SM
+						IO
 					</NotchedTag>
 					<NotchedTag tagStyle="style-two" type="filled" style={style}>
-						LRG
+						IO
 					</NotchedTag>
 					<NotchedTag
 						size="small"
@@ -35,18 +35,18 @@ export default createClass({
 						type="filled"
 						style={style}
 					>
-						SM
+						IO
 					</NotchedTag>
 				</div>
 				<div>
 					<NotchedTag tagStyle="style-three" style={style}>
-						LRG
+						LI
 					</NotchedTag>
 					<NotchedTag size="small" tagStyle="style-three" style={style}>
-						SM
+						LI
 					</NotchedTag>
 					<NotchedTag tagStyle="style-three" type="filled" style={style}>
-						LRG
+						LI
 					</NotchedTag>
 					<NotchedTag
 						size="small"
@@ -54,7 +54,7 @@ export default createClass({
 						type="filled"
 						style={style}
 					>
-						SM
+						LI
 					</NotchedTag>
 				</div>
 			</div>
