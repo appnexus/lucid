@@ -31,6 +31,10 @@
 		opacity: 0;
 	}
 
+	&-native:focused {
+		.opacity(0.8);
+	}
+
 	&-visualization-container {
 		.box-sizing();
 
@@ -156,8 +160,11 @@
 	}
 
 	&-native:focus ~ &-visualization-glow {
-		opacity: 0.5;
 		border: @size-borderWidth solid @color-primary;
+	}
+
+	&-native:focus ~ &-visualization-container {
+		.opacity(0.8);
 	}
 }
 
