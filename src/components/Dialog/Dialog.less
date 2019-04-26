@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-@Dialog-size-spacing: @size-XXL;
+@Dialog-size-spacing: 30px;
 @Dialog-size-borderRadius: @size-borderRadius + 2;
 @Dialog-size-maxHeight: 80vh;
 @Dialog-size-smallWidth: 30%;
@@ -39,7 +39,12 @@
 		font-size: @size-font-XL;
 		color: @color-darkGray;
 		font-weight: @font-weight-medium;
-		padding: @size-XL @Dialog-size-spacing 10px;
+		padding: 26px @Dialog-size-spacing 10px;
+	}
+
+	& &-is-menu &-header {
+		border-bottom: 1px solid @color-neutral-4;
+		font-size: @size-font-XXL;
 	}
 
 	&-body {
@@ -60,7 +65,11 @@
 		flex: 1 0 auto;
 		text-align: right;
 		background-color: @color-white;
-		padding: @Dialog-size-spacing;
+		padding: 26px;
+	}
+
+	& &-is-menu &-footer {
+		border-top: 1px solid @color-neutral-4;
 	}
 }
 

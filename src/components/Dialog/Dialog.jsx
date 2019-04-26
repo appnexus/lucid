@@ -63,6 +63,11 @@ const Dialog = createClass({
 			scroll inside.
 		`,
 
+		isMenu: bool`
+			Defaults to false.
+			Provides a more segregated design to organize more content in the Dialog.
+		`,
+
 		Header: node`
 			*Child Element* - Header contents. Only one \`Header\` is used.
 		`,
@@ -89,6 +94,7 @@ const Dialog = createClass({
 			size,
 			hasGutters,
 			isShown,
+			isMenu,
 			...passThroughs
 		} = this.props;
 
@@ -115,6 +121,7 @@ const Dialog = createClass({
 						'&-window-is-small': size === SMALL,
 						'&-window-is-medium': size === MEDIUM,
 						'&-window-is-large': size === LARGE,
+						'&-is-menu': isMenu,
 					})}
 				>
 					<header {...headerChildProp} className={cx('&-header')} />
