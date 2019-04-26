@@ -4,8 +4,6 @@
 // banner sizes
 @Banner-size-spacing-rightLeft: @size-S;
 @Banner-size-spacing-topBottom: @size-standard;
-@Banner-size-spacing-topBottom-small: @size-XS;
-@Banner-size-borderRadius: @size-borderRadius;
 @Banner-size-iconFontSize: 16px;
 
 .lucid-Banner {
@@ -13,27 +11,24 @@
 	.box-sizing();
 
 	border: @border-standardBorder;
-	background-color: @color-backgroundColor;
+	background-color: @color-neutral-9;
 	font-size: @fontSize;
 	font-family: @fontFamily;
-	border-radius: @Banner-size-borderRadius;
+	font-weight: @font-weight-semiBold;
 	padding: 0 @Banner-size-spacing-rightLeft;
 	display: flex;
+	color: @color-white;
 
 	&.lucid-Banner-has-close {
 		padding-right: @Banner-size-spacing-rightLeft;
 	}
 
-	&.lucid-Banner-has-no-roundedCorners {
-		border-radius: 0;
-	}
-
 	// must use this specific selector in order to override default color
 	.lucid-Banner-close {
-		fill: @color-mediumGray;
+		fill: @color-white;
 
 		&:hover {
-			fill: @color-darkGray;
+			fill: @color-white;
 		}
 	}
 
@@ -69,38 +64,20 @@
 	}
 
 	// Types
-
-	&-primary {
-		border-color: @featured-color-primary-borderColor;
-		background-color: @featured-color-primary-backgroundColor;
-	}
-
 	&-success {
-		border-color: @featured-color-success-borderColor;
-		background-color: @featured-color-success-backgroundColor;
+		background-color: @featured-color-success;
 	}
 
 	&-info {
-		border-color: @featured-color-info-borderColor;
-		background-color: @featured-color-info-backgroundColor;
+		background-color: @featured-color-info;
 	}
 
 	&-warning {
-		border-color: @featured-color-warning-borderColor;
-		background-color: @featured-color-warning-backgroundColor;
+		background-color: @featured-color-warning;
 	}
 
 	&-danger {
-		border-color: @featured-color-danger-borderColor;
-		background-color: @featured-color-danger-backgroundColor;
-	}
-
-	&-small &-icon {
-		padding-top: @Banner-size-spacing-topBottom-small - 2px;
-	}
-
-	&-small &-content {
-		padding: @Banner-size-spacing-topBottom - 6px 0;
+		background-color: @featured-color-danger;
 	}
 }
 
