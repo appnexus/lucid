@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CloseIcon [example testing] should match snapshot(s) for 1.default 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="anxr-CloseIcon"
+  height="16"
+  isBadge={false}
+  isClickable={false}
+  isDisabled={false}
+  size={null}
+  viewBox="0 0 16 16"
+  width="16"
+>
+  <path
+    d="M9.414 8l6.364 6.364-1.414 1.414L8 9.414l-6.364 6.364-1.414-1.414L6.586 8 .222 1.636 1.636.222 8 6.586 14.364.222l1.414 1.414L9.414 8z"
+  />
+</Icon>
+`;
+
+exports[`CloseIcon [example testing] should match snapshot(s) for 2.clickable 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="anxr-CloseIcon"
+  height="16"
+  isBadge={false}
+  isClickable={true}
+  isDisabled={false}
+  size={null}
+  viewBox="0 0 16 16"
+  width="16"
+>
+  <path
+    d="M9.414 8l6.364 6.364-1.414 1.414L8 9.414l-6.364 6.364-1.414-1.414L6.586 8 .222 1.636 1.636.222 8 6.586 14.364.222l1.414 1.414L9.414 8z"
+  />
+</Icon>
+`;
+
+exports[`CloseIcon [example testing] should match snapshot(s) for 3.disabled 1`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="anxr-CloseIcon"
+  height="16"
+  isBadge={false}
+  isClickable={false}
+  isDisabled={true}
+  size={null}
+  viewBox="0 0 16 16"
+  width="16"
+>
+  <path
+    d="M9.414 8l6.364 6.364-1.414 1.414L8 9.414l-6.364 6.364-1.414-1.414L6.586 8 .222 1.636 1.636.222 8 6.586 14.364.222l1.414 1.414L9.414 8z"
+  />
+</Icon>
+`;
