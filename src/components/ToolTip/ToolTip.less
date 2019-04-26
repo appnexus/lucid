@@ -12,18 +12,46 @@
 	padding: @size-standard;
 	font-family: @fontFamily;
 	font-size: @fontSize * 0.9;
-	font-weight: @font-weight-medium;
+	font-weight: @font-weight-regular;
+	line-height: 16px;
 	color: @color-neutral-1;
-	
+	box-shadow: 0 1px 5px 0 rgba(33, 31, 31, 0.3);
+
 	&-light {
 		background-color: @color-white;
 		border: @border-standardBorder;
 		color: @color-darkGray;
 	}
+	
+	&-Title {
+		font-size: @size-font-L;
+		font-weight: @font-weight-medium;
+		margin: 0 0 4px;
+	}
+
+	&-close {
+		position: absolute;
+		top: 6px;
+		right: 6px;
+		cursor: pointer;
+		fill: @color-white;
+
+		&:hover {
+			fill: @color-neutral-5;
+		}
+	}
+
+	&-light &-close {
+		fill: @color-darkGray;
+
+		&:hover {
+			fill: @color-neutral-7;
+		}
+	}
 
 	// default before/after styles
 	&-default&-up::after {
-		border-top-color: @color-white;
+		border-top-color: @color-darkGray;
 	}
 
 	&-default&-up::before {
@@ -31,7 +59,7 @@
 	}
 
 	&-default&-left::after {
-		border-left-color: @color-white;
+		border-left-color: @color-darkGray;
 	}
 
 	&-default&-left::before {
@@ -39,7 +67,7 @@
 	}
 
 	&-default&-right::after {
-		border-right-color: @color-white;
+		border-right-color: @color-darkGray;
 	}
 
 	&-default&-right::before {
@@ -47,7 +75,7 @@
 	}
 
 	&-default&-down::after {
-		border-bottom-color: @color-white;
+		border-bottom-color: @color-darkGray;
 	}
 
 	&-default&-down::before {
@@ -209,25 +237,6 @@
 	&-left&-end::after,
 	&-right&-end::after {
 		margin-bottom: 1px;
-	}
-
-	&-Title {
-		font-size: @size-L;
-		font-weight: bold;
-		margin: 0 0 @size-XS;
-		line-height: 1em;
-	}
-
-	&-close {
-		position: absolute;
-		top: 6px;
-		right: 6px;
-		cursor: pointer;
-		fill: @color-transparent-gray-50;
-
-		&:hover {
-			fill: @color-black;
-		}
 	}
 }
 
