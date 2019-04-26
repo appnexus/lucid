@@ -74,6 +74,7 @@ import ChevronIcon from './components/Icon/ChevronIcon/ChevronIcon';
 import ClockIcon from './components/Icon/ClockIcon/ClockIcon';
 import Collapsible from './components/Collapsible/Collapsible';
 import ContextMenu from './components/ContextMenu/ContextMenu';
+import CloseIcon from './components/Icon/CloseIcon/CloseIcon';
 import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import CrownIcon from './components/Icon/CrownIcon/CrownIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
@@ -231,6 +232,7 @@ export {
 	ClockIcon,
 	Collapsible,
 	ContextMenu,
+	CloseIcon,
 	CrossIcon,
 	CrownIcon,
 	DangerIcon,

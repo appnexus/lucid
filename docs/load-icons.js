@@ -279,6 +279,23 @@ module.exports = [
 	},
 
 	{
+		name: 'CloseIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/CloseIcon/CloseIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/CloseIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/CloseIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
 		name: 'CrossIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/CrossIcon/CrossIcon')
