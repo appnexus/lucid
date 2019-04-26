@@ -58,6 +58,7 @@ export default createClass({
 					isShown={this.state.isShown}
 					Header="Advanced Filters"
 					size="medium"
+					height={500}
 				>
 					<p style={{ fontSize: '16px' }}>Flavor</p>
 					<CheckboxLabeled
@@ -77,18 +78,22 @@ export default createClass({
 						<CheckboxLabeled.Label>Strawberry</CheckboxLabeled.Label>
 					</CheckboxLabeled>
 
-					<p style={{ fontSize: '16px' }}>Flavor Combination Research</p>
+					<p style={{ fontSize: '16px', marginTop: '25px' }}>
+						Flavor Combination Research
+					</p>
 					<SearchField placeholder="Sundae school..." />
 
-					<p style={{ fontSize: '16px' }}>Toppings</p>
-					<SearchableMultiSelect>
+					<p style={{ fontSize: '16px', marginTop: '25px' }}>Toppings</p>
+					<SearchableMultiSelect responsiveMode="small">
 						<Option>cookie dough</Option>
 						<Option>more ice cream</Option>
 						<Option>mochi</Option>
 						<Option>peanut butter cups</Option>
 					</SearchableMultiSelect>
 
-					<p style={{ fontSize: '16px' }}>Ice Cream Breaks</p>
+					<p style={{ fontSize: '16px', marginTop: '25px' }}>
+						Ice Cream Breaks
+					</p>
 					<SingleSelect onSelect={this.handleSelect}>
 						<Placeholder>You must select a break...</Placeholder>
 						<SingleOption>10am</SingleOption>

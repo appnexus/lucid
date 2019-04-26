@@ -7,7 +7,7 @@ import { createClass, getFirst, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Dialog');
 
-const { node, oneOf, bool } = PropTypes;
+const { node, oneOf, bool, number } = PropTypes;
 
 const SMALL = 'small';
 const MEDIUM = 'medium';
@@ -68,6 +68,10 @@ const Dialog = createClass({
 			Provides a more segregated design to organize more content in the Dialog.
 		`,
 
+		height: number`
+			Optionally, pass in a fixed height for the Dialog box. Units are \`px\`.
+		`,
+
 		Header: node`
 			*Child Element* - Header contents. Only one \`Header\` is used.
 		`,
@@ -92,6 +96,7 @@ const Dialog = createClass({
 		const {
 			className,
 			size,
+			height,
 			hasGutters,
 			isShown,
 			isMenu,
@@ -123,6 +128,7 @@ const Dialog = createClass({
 						'&-window-is-large': size === LARGE,
 						'&-is-menu': isMenu,
 					})}
+					style={{ height: height }}
 				>
 					<header {...headerChildProp} className={cx('&-header')} />
 
