@@ -2,11 +2,58 @@ import React from 'react';
 import createClass from 'create-react-class';
 import { Badge } from '../../../index';
 
+const style = { marginBottom: '10px', marginRight: '10px' };
+
 export default createClass({
 	render() {
 		return (
 			<div>
-				<Badge>Badge</Badge>
+				<div>
+					<Badge style={style}>Badge</Badge>
+					<Badge style={style} type="stroke">
+						Badge
+					</Badge>
+				</div>
+				<div>
+					<Badge style={style} kind="primary">
+						Badge
+					</Badge>
+					<Badge style={style} kind="primary" type="stroke">
+						Badge
+					</Badge>
+				</div>
+				<div>
+					<Badge style={style} kind="success">
+						Badge
+					</Badge>
+					<Badge style={style} kind="success" type="stroke">
+						Badge
+					</Badge>
+				</div>
+				<div>
+					<Badge style={style} kind="danger">
+						Badge
+					</Badge>
+					<Badge style={style} kind="danger" type="stroke">
+						Badge
+					</Badge>
+				</div>
+				<div>
+					<Badge style={style} kind="warning">
+						Badge
+					</Badge>
+					<Badge style={style} kind="warning" type="stroke">
+						Badge
+					</Badge>
+				</div>
+				<div>
+					<Badge style={style} kind="dark">
+						Badge
+					</Badge>
+					<Badge style={style} kind="dark" type="stroke">
+						Badge
+					</Badge>
+				</div>
 			</div>
 		);
 	},
