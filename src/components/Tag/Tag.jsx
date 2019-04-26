@@ -29,8 +29,9 @@ const Tag = createClass({
 
 	propTypes: {
 		isTop: bool`
-			If using nested or double nested tags, add this prop to the top level tags
-			for more vertical spacing.
+			Set this prop if you're using three levels of tags so it can be styled
+			appropriately. This is required because we aren't able to know if your
+			Tags have grand children efficiently.
 		`,
 
 		isRemovable: bool`
@@ -54,6 +55,7 @@ const Tag = createClass({
 	getDefaultProps() {
 		return {
 			onRemove: _.noop,
+			isTop: false,
 		};
 	},
 
@@ -63,23 +65,16 @@ const Tag = createClass({
 
 	render() {
 		const {
-			isRemovable,
 			isTop,
+			isRemovable,
 			children,
 			className,
 			...passThroughs
 		} = this.props;
 
 		const subTags = filterTypes(children, Tag);
-
 		const otherChildren = rejectTypes(children, Tag);
-
 		const hasOtherChildren = !_.isEmpty(otherChildren);
-
-		const hasGrandChildren = !!subTags.find(tag =>
-			Array.isArray(tag.props.children)
-		);
-
 		const isLeaf = _.isEmpty(subTags);
 
 		return (
@@ -88,33 +83,27 @@ const Tag = createClass({
 				className={cx(
 					'&',
 					{
-						'&-top': isTop,
-						'&-leaf': isLeaf,
+						'&-is-top': isTop,
+						'&-is-leaf': isLeaf,
 						'&-is-removable': isRemovable,
 					},
 					className
 				)}
 			>
-				<div className={cx('&-inner')}>
-					{hasOtherChildren && (
-						<span
-							className={cx(hasGrandChildren ? '&-title' : '&-inner-children')}
-						>
-							{otherChildren}
-						</span>
-					)}
-					{isRemovable && (
-						<span className={cx('&-remove')} onClick={this.handleRemove}>
+				{hasOtherChildren && (
+					<span className={cx('&-other-children')}>
+						{otherChildren}
+						{isRemovable && (
 							<CrossIcon
+								onClick={this.handleRemove}
 								className={cx('&-remove-button')}
-								size={10}
-								viewBox="4 4 8 8"
+								presetSize="small"
 								isClickable
 							/>
-						</span>
-					)}
-					{subTags}
-				</div>
+						)}
+					</span>
+				)}
+				{subTags}
 			</div>
 		);
 	},
