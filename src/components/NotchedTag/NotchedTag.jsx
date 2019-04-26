@@ -3,7 +3,7 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
 
-const { node, string, oneOf, oneOfType, number } = PropTypes;
+const { node, string, oneOf } = PropTypes;
 
 const cx = lucidClassNames.bind('&-NotchedTag');
 
@@ -63,6 +63,7 @@ const NotchedTag = createClass({
 		`,
 		size: oneOf(SIZES),
 		tagStyle: oneOf(TAG_STYLES),
+		style: object,
 	},
 
 	getDefaultProps() {
