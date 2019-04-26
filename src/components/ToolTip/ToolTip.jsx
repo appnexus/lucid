@@ -54,9 +54,21 @@ const ToolTip = createClass({
 			Set this to \`true\` if you want to have a \`x\` close icon.
 		`,
 
-		kind: oneOf(['primary', 'success', 'warning', 'danger', 'info', 'default'])`
-			Style variations of the \`ToolTip\`.
+		isLight: bool`
+			Offers a lighter style for the tooltip window. Defaults to false.
 		`,
+
+		// kind: oneOf([
+		// 	'primary',
+		// 	'success',
+		// 	'warning',
+		// 	'danger',
+		// 	'info',
+		// 	'light',
+		// 	'default',
+		// ])`
+		// 	Style variations of the \`ToolTip\`.
+		// `,
 
 		onClose: func`
 			Called when the user closes the \`Banner\`.  Signature:
@@ -144,7 +156,8 @@ const ToolTip = createClass({
 			flyOutStyle: {},
 			isCloseable: false,
 			isExpanded: false,
-			kind: 'default',
+			// kind: 'default',
+			isLight: false,
 			onClose: _.noop,
 			onMouseOut: _.noop,
 			onMouseOver: _.noop,
@@ -204,7 +217,8 @@ const ToolTip = createClass({
 			flyOutStyle,
 			isCloseable,
 			isExpanded,
-			kind,
+			isLight,
+			// kind,
 			portalId,
 			style,
 			...passThroughs
@@ -256,7 +270,7 @@ const ToolTip = createClass({
 						'&',
 						`&-${direction}`,
 						`&-${alignment}`,
-						`&-${kind}`
+						isLight ? '&-light' : '&-default'
 					)}
 					onMouseOver={this.handleMouseOverFlyout}
 					onMouseOut={this.handleMouseOutFlyout}

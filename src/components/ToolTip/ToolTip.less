@@ -6,13 +6,22 @@
 @Tooltip-pointer-offset: 13px;
 
 .lucid-ToolTip-FlyOut {
-	background-color: @color-white;
+	background-color: @color-neutral-9;
 	border: @border-standardBorder;
 	border-radius: @size-borderRadius;
 	padding: @size-standard;
-	font-size: @fontSize;
-	color: @color-darkGray;
+	font-family: @fontFamily;
+	font-size: @fontSize * 0.9;
+	font-weight: @font-weight-medium;
+	color: @color-neutral-1;
+	
+	&-light {
+		background-color: @color-white;
+		border: @border-standardBorder;
+		color: @color-darkGray;
+	}
 
+	// default before/after styles
 	&-default&-up::after {
 		border-top-color: @color-white;
 	}
@@ -45,189 +54,37 @@
 		border-bottom-color: @color-borderColor;
 	}
 
-	&-primary&-up::after {
-		border-top-color: @featured-color-primary-backgroundColor;
+	// light before/after styles
+	&-light&-up::after {
+		border-top-color: @color-white;
 	}
 
-	&-primary&-up::before {
-		border-top-color: @featured-color-primary-borderColor;
+	&-light&-up::before {
+		border-top-color: @color-borderColor;
 	}
 
-	&-primary&-left::after {
-		border-left-color: @featured-color-primary-backgroundColor;
+	&-light&-left::after {
+		border-left-color: @color-white;
 	}
 
-	&-primary&-left::before {
-		border-left-color: @featured-color-primary-borderColor;
+	&-light&-left::before {
+		border-left-color: @color-borderColor;
 	}
 
-	&-primary&-right::after {
-		border-right-color: @featured-color-primary-backgroundColor;
+	&-light&-right::after {
+		border-right-color: @color-white;
 	}
 
-	&-primary&-right::before {
-		border-right-color: @featured-color-primary-borderColor;
+	&-light&-right::before {
+		border-right-color: @color-borderColor;
 	}
 
-	&-primary&-down::after {
-		border-bottom-color: @featured-color-primary-backgroundColor;
+	&-light&-down::after {
+		border-bottom-color: @color-white;
 	}
 
-	&-primary&-down::before {
-		border-bottom-color: @featured-color-primary-borderColor;
-	}
-
-	&-primary {
-		border-color: @featured-color-primary-borderColor;
-		background-color: @featured-color-primary-backgroundColor;
-	}
-
-	&-success&-up::after {
-		border-top-color: @featured-color-success-backgroundColor;
-	}
-
-	&-success&-up::before {
-		border-top-color: @featured-color-success-borderColor;
-	}
-
-	&-success&-left::after {
-		border-left-color: @featured-color-success-backgroundColor;
-	}
-
-	&-success&-left::before {
-		border-left-color: @featured-color-success-borderColor;
-	}
-
-	&-success&-right::after {
-		border-right-color: @featured-color-success-backgroundColor;
-	}
-
-	&-success&-right::before {
-		border-right-color: @featured-color-success-borderColor;
-	}
-
-	&-success&-down::after {
-		border-bottom-color: @featured-color-success-backgroundColor;
-	}
-
-	&-success&-down::before {
-		border-bottom-color: @featured-color-success-borderColor;
-	}
-
-	&-success {
-		border-color: @featured-color-success-borderColor;
-		background-color: @featured-color-success-backgroundColor;
-	}
-
-	&-info&-up::after {
-		border-top-color: @featured-color-info-backgroundColor;
-	}
-
-	&-info&-up::before {
-		border-top-color: @featured-color-info-borderColor;
-	}
-
-	&-info&-left::after {
-		border-left-color: @featured-color-info-backgroundColor;
-	}
-
-	&-info&-left::before {
-		border-left-color: @featured-color-info-borderColor;
-	}
-
-	&-info&-right::after {
-		border-right-color: @featured-color-info-backgroundColor;
-	}
-
-	&-info&-right::before {
-		border-right-color: @featured-color-info-borderColor;
-	}
-
-	&-info&-down::after {
-		border-bottom-color: @featured-color-info-backgroundColor;
-	}
-
-	&-info&-down::before {
-		border-bottom-color: @featured-color-info-borderColor;
-	}
-
-	&-info {
-		border-color: @featured-color-info-borderColor;
-		background-color: @featured-color-info-backgroundColor;
-	}
-
-	&-warning&-up::after {
-		border-top-color: @featured-color-warning-backgroundColor;
-	}
-
-	&-warning&-up::before {
-		border-top-color: @featured-color-warning-borderColor;
-	}
-
-	&-warning&-left::after {
-		border-left-color: @featured-color-warning-backgroundColor;
-	}
-
-	&-warning&-left::before {
-		border-left-color: @featured-color-warning-borderColor;
-	}
-
-	&-warning&-right::after {
-		border-right-color: @featured-color-warning-backgroundColor;
-	}
-
-	&-warning&-right::before {
-		border-right-color: @featured-color-warning-borderColor;
-	}
-
-	&-warning&-down::after {
-		border-bottom-color: @featured-color-warning-backgroundColor;
-	}
-
-	&-warning&-down::before {
-		border-bottom-color: @featured-color-warning-borderColor;
-	}
-
-	&-warning {
-		border-color: @featured-color-warning-borderColor;
-		background-color: @featured-color-warning-backgroundColor;
-	}
-
-	&-danger&-up::after {
-		border-top-color: @featured-color-danger-backgroundColor;
-	}
-
-	&-danger&-up::before {
-		border-top-color: @featured-color-danger-borderColor;
-	}
-
-	&-danger&-left::after {
-		border-left-color: @featured-color-danger-backgroundColor;
-	}
-
-	&-danger&-left::before {
-		border-left-color: @featured-color-danger-borderColor;
-	}
-
-	&-danger&-right::after {
-		border-right-color: @featured-color-danger-backgroundColor;
-	}
-
-	&-danger&-right::before {
-		border-right-color: @featured-color-danger-borderColor;
-	}
-
-	&-danger&-down::after {
-		border-bottom-color: @featured-color-danger-backgroundColor;
-	}
-
-	&-danger&-down::before {
-		border-bottom-color: @featured-color-danger-borderColor;
-	}
-
-	&-danger {
-		border-color: @featured-color-danger-borderColor;
-		background-color: @featured-color-danger-backgroundColor;
+	&-light&-down::before {
+		border-bottom-color: @color-borderColor;
 	}
 
 	&::after,
