@@ -109,7 +109,7 @@ export default createClass({
 							<Tag>Cucumbers</Tag>
 						</Tag>
 					</Tag>
-					<Tag isTop>
+					<Tag isTop hasLightBackground={false}>
 						Produce
 						<Tag isRemovable>
 							Fruits

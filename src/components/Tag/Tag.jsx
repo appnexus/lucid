@@ -34,6 +34,12 @@ const Tag = createClass({
 			Tags have grand children efficiently.
 		`,
 
+		hasLightBackground: bool`
+			Use the light background when your tags are on a white page background.
+			Use a dark background when your tags need to be placed on a darker
+			background (e.g. in a page header).
+		`,
+
 		isRemovable: bool`
 			Shows or hides the little "x" for a given tag.
 		`,
@@ -56,6 +62,7 @@ const Tag = createClass({
 		return {
 			onRemove: _.noop,
 			isTop: false,
+			hasLightBackground: true,
 		};
 	},
 
@@ -69,6 +76,7 @@ const Tag = createClass({
 			isRemovable,
 			children,
 			className,
+			hasLightBackground,
 			...passThroughs
 		} = this.props;
 
@@ -86,6 +94,7 @@ const Tag = createClass({
 						'&-is-top': isTop,
 						'&-is-leaf': isLeaf,
 						'&-is-removable': isRemovable,
+						'&-has-light-background': hasLightBackground,
 					},
 					className
 				)}
