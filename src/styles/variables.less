@@ -102,7 +102,7 @@
 @color-secondary-3: #009fdb;
 
 //neutral colors
-@color-neutral-1: #FFF;
+@color-neutral-1: #fff;
 @color-neutral-2: #f9f8f7;
 @color-neutral-3: #f4f2f2;
 @color-neutral-4: #e8e6e6;
@@ -124,16 +124,14 @@
 @color-lightGray: #f4f4f4;
 @color-gray: #e3e3e3;
 @color-mediumGray: #e4e4e4;
-@color-darkGray: #211f1f;
-
+@color-darkGray: @color-neutral-9;
 
 // -------------------------------------
 // Semantic Colors
 // -------------------------------------
 
-
 // Standard text color
-@color-textColor: @color-darkGray;
+@color-textColor: @color-neutral-9;
 @color-disabledText: tint(@color-textColor, 50%);
 
 // Standard link colors
@@ -144,7 +142,7 @@
 @color-backgroundColor: @color-lightGray; // TODO: settle on a single background color if possible
 
 // Standard background color
-@color-pageBackgroundColor: #f9f8f7;
+@color-pageBackgroundColor: @color-neutral-2;
 
 @color-borderGray: fade(@color-darkGray, 30%); //@todo remove
 
@@ -155,7 +153,7 @@
 @color-background-white-60: fade(@color-pageBackgroundColor, 60%);
 
 // Standard border color
-@color-borderColor: #d3d1d1; // TODO: use one of the new grays
+@color-borderColor: @color-neutral-5;
 @color-borderColorLight: @color-gray;
 
 // Table colors
@@ -172,11 +170,11 @@
 
 // Featured default color
 @featured-color-default: #333;
-@featured-color-default-borderColor: #d3d1d1;
+@featured-color-default-borderColor: @color-neutral-5;
 @featured-color-default-iconColorDisabled: @featured-color-default-borderColor;
 @featured-color-default-backgroundColor: #fff;
-@featured-color-default-backgroundColorHover: #f4f2f2;
-@featured-color-default-backgroundColorFocus: #e8e6e6;
+@featured-color-default-backgroundColorHover: @color-neutral-3;
+@featured-color-default-backgroundColorFocus: @color-neutral-4;
 
 // Featured primary color
 @featured-color-primary: @color-primary;
@@ -328,5 +326,5 @@
 
 @pattern-diagonal-striped: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cGF0aCBkPSJNLTEgNUw1IC0xWk01IDNMMyA1Wk0tMSAxTDEgLTEiIHN0cm9rZT0iI2UzZTNlMyIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+Cjwvc3ZnPg==");
 
-@opacity-hover: .8;
-@opacity-disabled: .35;
+@opacity-hover: 0.8;
+@opacity-disabled: 0.35;
