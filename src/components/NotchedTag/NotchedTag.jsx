@@ -3,7 +3,7 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass } from '../../util/component-types';
 
-const { node, string, oneOf } = PropTypes;
+const { node, string, oneOf, object } = PropTypes;
 
 const cx = lucidClassNames.bind('&-NotchedTag');
 
