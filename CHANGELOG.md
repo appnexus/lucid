@@ -1,6 +1,14 @@
-## `xandr` Breaking Changes
-
+- removed `primary` kind from `Banner`.
+- removed `hasIcon` from `Banner`
+- removed `hasRoundedCorners` from `Banner`.  All Banners are now square.
+- removed `isSmall` from `Banner`.
+- moved `CloseIcon` to lucid.  Shouldn't effect anx-react consumers.
+- added `NotchedTag`
+- custom icons in `Banner` probably don't look quite right.  Icons are now on a dark background
 - removed `Info` `Success` `Warning` as `Button` `kind`
 - removed the `inset-box-shadow` LESS mixin
 - removed `@TextField-size-padding` from `TextField`'s LESS
 - lot possible breakages to LESS mixins and variables.  Will enumerate when done.
+- table now defaults to `hasLightHeader`
+- removed `border` prop from `Table.td`
+- removed `isActionable` from `table`

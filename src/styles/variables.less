@@ -20,6 +20,7 @@
 @fontSize: 12px;
 @fontFamily: GalanoGrotesque, "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-tabular: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-feature-settings-tabular: 'zero' 1;
 @font: @fontSize @fontFamily;
 @font-chart: 11px sans-serif;
 
@@ -162,10 +163,22 @@
 @color-borderColorLight: @color-gray;
 
 // Table colors
-@color-table-header: #767b7f;
-@color-table-header-sorted: #525659;
-@color-table-header-light: @color-lightGray;
-@color-table-header-sorted-light: @color-gray;
+@color-table-header-border: @color-neutral-5;
+@color-table-row-border: @color-neutral-4;
+@border-table-header: 1px solid @color-table-header-border;
+@border-table-row: 1px solid @color-table-row-border;
+
+@color-table-header-dark-background: @color-neutral-2;
+@color-table-header-dark-background-hover: @color-neutral-3;
+
+@color-table-header-light-background: @color-white;
+@color-table-header-light-color: @color-neutral-9;
+@color-table-header-light-sort-hover: @color-neutral-3;
+
+@color-table-row-selected-background: @color-primaryLight;
+@color-table-row-hover-background: @color-neutral-2;
+@color-table-row-active-background: @color-neutral-3;
+
 
 // -------------------------------------
 // Featured Colors
@@ -319,11 +332,6 @@
 
 @border-standardBorder: @size-borderWidth solid @featured-color-default-borderColor;
 @border-lightBorder: @size-borderWidth solid @color-borderColorLight;
-
-@border-table: 1px solid @color-table-header;
-@border-table-header: 1px solid #babdbe;
-@border-table-header-light: 1px solid @color-gray;
-@border-table-body: 1px solid @color-gray;
 
 // -----------------------------------------------------------------------------
 // Patterns

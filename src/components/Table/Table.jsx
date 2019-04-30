@@ -129,11 +129,6 @@ const Tr = createClass({
 		isActive: bool`
 			Applies active styles to the row, usually when the row has been clicked.
 		`,
-
-		isActionable: bool`
-			Applies styles to the row, used to show if a row is clickable / can be
-			made active.
-		`,
 	},
 
 	getDefaultProps() {
@@ -141,7 +136,6 @@ const Tr = createClass({
 			isDisabled: false,
 			isSelected: false,
 			isActive: false,
-			isActionable: false,
 		};
 	},
 
@@ -151,7 +145,6 @@ const Tr = createClass({
 			children,
 			isDisabled,
 			isSelected,
-			isActionable,
 			isActive,
 			...passThroughs
 		} = this.props;
@@ -164,7 +157,6 @@ const Tr = createClass({
 					{
 						'&-is-disabled': isDisabled,
 						'&-is-selected': isSelected,
-						'&-is-actionable': isActionable,
 						'&-is-active': isActive,
 					},
 					className
@@ -354,7 +346,7 @@ const Th = createClass({
 			>
 				<div className={cx('&-Th-inner')}>
 					<div className={cx('&-Th-inner-content')}>{children}</div>
-					{isSorted ? (
+					{isSorted || isSortable ? (
 						<div className={cx('&-Th-inner-caret')}>
 							<CaretIcon
 								className={cx('&-sort-icon')}
@@ -608,7 +600,7 @@ const Table = createClass({
 			density: 'extended',
 			hasBorder: false,
 			hasWordWrap: true,
-			hasLightHeader: false,
+			hasLightHeader: true,
 		};
 	},
 

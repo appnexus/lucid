@@ -5,16 +5,20 @@
 @Table-cell-padding-compressed: 2.5px 9.4px;
 
 .lucid-Table {
-	font: 500 @font;
+	font-family: @font-family-tabular;
+	font-feature-settings: @font-feature-settings-tabular;
+	font-size: @fontSize;
+	font-weight: @font-weight-regular;
 	color: @color-textColor;
 	background-color: @color-white;
 	border-collapse: collapse;
 	border-spacing: 0;
 	box-sizing: border-box;
+	border-top: 1px solid @color-table-header-border;
 
 	// `Table`.`hasBorder` prop
 	&-has-border {
-		border: @border-table;
+		border: @border-table-header;
 	}
 
 	// `Table`.`density` prop
@@ -32,8 +36,14 @@
 
 	// padding was causing content in `Th` to not line up with `Td`
 	.lucid-Table-Th {
+		font-weight: @font-weight-regular;
 		padding: 0;
+
+		&.lucid-Table-is-sorted {
+			font-weight: @font-weight-semiBold;
+		}
 	}
+
 
 	// `Table`.`hasWordWrap` prop
 	.lucid-Table-Td,
@@ -50,39 +60,26 @@
 
 	// Table header styles
 	&.lucid-Table-has-light-header > &-Thead {
-		background-color: @color-table-header-light;
-		color: @color-darkGray;
-		border: 1px solid @color-borderColorLight;
-		& > .lucid-Table-Tr > .lucid-Table-Th {
-			border: @border-table-header-light;
-		}
+		background-color: @color-table-header-light-background;
+		border-color: 1px solid @color-table-row-border;
 		& > .lucid-Table-Tr > .lucid-Table-Th {
 			&.lucid-Table-is-sortable {
 					&:hover {
-						background-color: @color-table-header-sorted-light;
-					}
-			}
-
-			& > .lucid-Table-Th-inner {
-					// `Th`.`isSorted` prop
-					.lucid-Table-Th-inner-caret {
-						.lucid-Table-sort-icon {
-							fill: @color-textColor;
-						}
+						background-color: @color-table-header-light-sort-hover;
 					}
 			}
 		}
 	}
 
 	& > &-Thead {
-		background-color: @color-table-header;
-		color: @color-white;
+		background-color: @color-table-header-dark-background;
+		color: @color-table-header-light-color;
 
 		// Table header cell styles
 		& > .lucid-Table-Tr > .lucid-Table-Th {
-			border: @border-table-header;
+			border-bottom: 1px solid @color-table-header-border;
 			&.lucid-Table-has-light-header {
-				border: @border-table-header-light;
+				border-color: @color-table-header-border;
 			}
 
 			height: @size-standard-height; // effectively min height
@@ -108,8 +105,12 @@
 				cursor: pointer;
 
 				&:hover {
-					background-color: @color-table-header-sorted;
+					background-color: @color-table-header-dark-background-hover;
 				}
+			}
+
+			&.lucid-Table-is-sorted > .lucid-Table-Th-inner > .lucid-Table-Th-inner-caret > .lucid-Table-sort-icon {
+				opacity: 1;
 			}
 
 			// header cell content
@@ -125,6 +126,7 @@
 					align-items: center;
 					margin: 2.5px 9.4px;
 				}
+
 				// `Th`.`isSorted` prop
 				.lucid-Table-Th-inner-caret {
 					margin-right: 9px;
@@ -132,7 +134,8 @@
 					align-items: center;
 
 					.lucid-Table-sort-icon {
-						fill: @color-white;
+						fill: @color-textColor;
+						opacity: @opacity-disabled;
 						width: 8px;
 						height: 8px;
 					}
@@ -140,7 +143,7 @@
 				// `Th`.`isResizable` prop
 				.lucid-Table-Th-inner-resize {
 					cursor: ew-resize;
-					width: 4px;
+					width: 3px;
 					background-color: fade(@color-black, 70%);
 					opacity: 0;
 					transition: opacity @timing-animation-hover;
@@ -174,11 +177,11 @@
 			// Table body cell styles
 			& > .lucid-Table-Td {
 				background-clip: padding-box; // fixes Firefox background paints over collapsed border
-				border-bottom: @border-table-body;
+				border-bottom: @border-table-row;
 
 				// remove all borders from the perimeter of the body
 				&.lucid-Table-is-first-row {
-					border-top: 0 none @color-transparent;
+					border-top: 1px solid @color-table-header-border;
 				}
 
 				&.lucid-Table-is-last-row {
@@ -191,16 +194,6 @@
 
 				&.lucid-Table-is-last-col {
 					border-right: 0 none @color-transparent;
-				}
-
-				// `Td`.`hasBorderRight` prop
-				&.lucid-Table-has-border-right {
-					border-right: @border-table-body;
-				}
-
-				// `Td`.`hasBorderLeft` prop
-				&.lucid-Table-has-border-left {
-					border-left: @border-table-body;
 				}
 
 				&.lucid-Table-align-left {
@@ -218,45 +211,39 @@
 
 			// style row cells on hover
 			&:hover {
-				.selectCellsOnRow({ background-color: @color-lightGray;});
+				.selectCellsOnRow({ background-color: @color-table-row-hover-background;});
 			};
 
 			// `Tr`.`isSelected` prop
 			// style row cells
 			&.lucid-Table-is-selected {
-				.selectCellsOnRow({background-color: @featured-color-primary-backgroundColor;});
-
-				// style row cells on hover
+				.selectCellsOnRow({background-color: @color-table-row-selected-background;});
 				&:hover {
-					.selectCellsOnRow({background-color: multiply(@color-primaryLight, @color-lightGray);});
+					.selectCellsOnRow({background-color: @color-table-row-hover-background;});
 				}
 			}
 
 			// `Tr`.`isActive` prop
 			// style row cells
 			&.lucid-Table-is-active {
-				.selectCellsOnRow({background-color: @featured-color-primary-backgroundColor;});
+				.selectCellsOnRow({background-color: @color-table-row-active-background;});
 				// always show marker on first cell
 				.selectFirstCellOnRow({.left-marker(1);});
 
 				// style row cells on hover
 				&:hover {
-					.selectCellsOnRow({background-color: @color-primaryLight;});
+					.selectCellsOnRow({background-color: @color-table-row-hover-background;});
 				}
 			}
 
-			// `Tr`.`isActionable` prop
-			// style cells of rows which are only actionable but not active
-			&.lucid-Table-is-actionable:not(.lucid-Table-is-active) {
+			// place hidden marker on first cell
+			.selectFirstCellOnRow({ .left-marker(0); });
 
-				// place hidden marker on first cell
-				.selectFirstCellOnRow({ .left-marker(0); });
-
-				// show marker on hover
-				&:hover {
-					.selectFirstCellOnRow({ .left-marker(1); });
-				}
+			// show marker on hover
+			&:hover {
+				.selectFirstCellOnRow({ .left-marker(1); });
 			}
+
 		}
 	}
 
@@ -272,7 +259,10 @@
 	font-style: italic;
 
 	a {
-		color: fade(multiply(@color-disabledText, @color-linkColor), 50%);
+		color: @color-linkColor;
+		&:hover {
+			color: @color-linkColorHover;
+		}
 	}
 }
 
