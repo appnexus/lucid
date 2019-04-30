@@ -46,8 +46,8 @@ In your webpack config use the [`DefinePlugin`][dp] to specify
     });
 
 
-When you render the less, make sure to set the `prefix` variable to the same
-thing you set in the step about. E.g.
+When you render the less, make sure to [set the `prefix` variable][lmv] to the
+same thing you set in in your webpack config. E.g.
 
     lessc node_modules/lucid-ui/src/index.less --modify-var='prefix=something-custom'
 
@@ -80,3 +80,4 @@ To contribute to lucid, please see `CONTRIBUTING.md`.
 [CodeCov]: https://codecov.io
 [bpi]: https://github.com/ant-design/babel-plugin-import
 [dp]: https://webpack.js.org/plugins/define-plugin/
+[lmv]: http://lesscss.org/usage/
