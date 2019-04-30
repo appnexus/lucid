@@ -62,7 +62,15 @@
 	// Types
 	&&-primary {
 		.gradient-animation(@featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
-		.make-is-disabled("@{prefix}-Button", @featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
+
+		&.@{prefix}-Button-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor));
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
 		.bold();
 
 		border-color: @featured-color-primary-borderColor;
@@ -73,7 +81,15 @@
 
 	&&-success {
 		.gradient-animation(@featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
-		.make-is-disabled("@{prefix}-Button", @featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
+
+		&.@{prefix}-Button-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor));
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
 		.bold();
 
 		color: @color-white;
@@ -88,7 +104,15 @@
 
 	&&-info {
 		.gradient-animation(@featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
-		.make-is-disabled("@{prefix}-Button", @featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
+
+		&.@{prefix}-Button-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor));
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
 		.bold();
 
 		border-color: @featured-color-info-borderColor;
@@ -103,7 +127,14 @@
 
 	&&-warning {
 		.gradient-animation(@featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
-		.make-is-disabled("@{prefix}-Button", @featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
+		&.@{prefix}-Button-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor));
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
 		.bold();
 
 		border-color: @featured-color-warning-borderColor;
@@ -118,7 +149,14 @@
 
 	&&-danger {
 		.gradient-animation(@featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
-		.make-is-disabled("@{prefix}-Button", @featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
+		&.@{prefix}-Button-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor));
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
 		.bold();
 
 		border-color: @featured-color-danger-borderColor;
@@ -133,7 +171,14 @@
 
 	&&-link {
 		.gradient-reset();
-		.make-is-disabled("@{prefix}-Button");
+
+		&.@{prefix}-Button-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @color-transparent, @color-transparent));
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
 
 		border: none;
 		background: none;
@@ -178,7 +223,15 @@
 
 	&&-invisible {
 		.gradient-reset();
-		.make-is-disabled("@{prefix}-Button");
+
+		&.@{prefix}-Button-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @color-transparent, @color-transparent));
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
 
 		border: none;
 		background: none;
