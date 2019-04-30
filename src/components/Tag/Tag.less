@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-Tag {
+.@{prefix}-Tag {
 	display: inline-flex;
 	margin: 0 @size-XS 0;
 
@@ -12,7 +12,7 @@
 	&-leaf {
 		margin: 0 @size-XXS @size-XXS 0;
 
-		.lucid-Tag-inner {
+		.@{prefix}-Tag-inner {
 			border: 1px solid @color-gray;
 		}
 		&:last-child {
@@ -29,7 +29,7 @@
 	}
 
 	&-leaf&-is-removable {
-		.lucid-Tag-inner {
+		.@{prefix}-Tag-inner {
 			border-color: @featured-color-primary-borderColorMedium;
 		}
 	}
@@ -46,11 +46,11 @@
 		flex-wrap: wrap;
 		align-items: center;
 
-		.lucid-Tag-inner-children {
+		.@{prefix}-Tag-inner-children {
 			padding: 0 @size-XS @size-XXS 0;
 		}
 
-		.lucid-Tag-remove {
+		.@{prefix}-Tag-remove {
 			padding: 1px @size-XS 0 0;
 
 			&-button {
@@ -58,13 +58,13 @@
 			}
 
 			&:hover {
-				.lucid-Tag-remove-button {
+				.@{prefix}-Tag-remove-button {
 					fill: @color-darkGray;
 				}
 			}
 		}
 
-		.lucid-Tag-leaf& {
+		.@{prefix}-Tag-leaf& {
 			border-radius: 3px;
 			background: @color-white;
 			font-size: @size-standard;
@@ -73,11 +73,11 @@
 			min-height: @size-tag;
 			padding: @size-XXS @size-XS 0;
 
-			.lucid-Tag-inner-children {
+			.@{prefix}-Tag-inner-children {
 				padding: 0 0 @size-XXS;
 			}
 
-			.lucid-Tag-remove {
+			.@{prefix}-Tag-remove {
 				padding: 0 0 0 @size-XS;
 
 				&-button {

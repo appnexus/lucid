@@ -6,7 +6,7 @@
 @Tabs-arrow-width: 8px;
 @Tabs-border-width: 1px;
 
-.lucid-Tabs {
+.@{prefix}-Tabs {
 	&-bar {
 		font-size: @fontSize;
 		font-family: @fontFamily;
@@ -18,7 +18,7 @@
 	}
 
 	&-navigation-tabs {
-		.lucid-Tabs-Tab {
+		.@{prefix}-Tabs-Tab {
 			font-size: @size-font-L;
 			font-weight: 200;
 		}
@@ -26,7 +26,7 @@
 
 	&-variable-width {
 		border-bottom: @Tabs-border-width solid @color-borderColorLight;
-		.lucid-Tabs-Tab {
+		.@{prefix}-Tabs-Tab {
 			flex: none;
 		}
 	}
@@ -88,14 +88,14 @@
 			border-left-width: 0;
 		}
 
-		.lucid-Tabs-Tab-arrow {
+		.@{prefix}-Tabs-Tab-arrow {
 			z-index: 1;
 
-			.lucid-Tabs-Tab-arrow-svg {
+			.@{prefix}-Tabs-Tab-arrow-svg {
 				z-index: 1;
 			}
 
-			.lucid-Tabs-Tab-arrow-line {
+			.@{prefix}-Tabs-Tab-arrow-line {
 				stroke: @color-gray;
 			}
 		}
@@ -103,7 +103,7 @@
 		.Tabs-mixin-tab-arrow-background();
 
 		&:not(:first-child) {
-			.lucid-Tabs-Tab-content {
+			.@{prefix}-Tabs-Tab-content {
 				padding-left: 15px;
 			}
 		}
@@ -156,7 +156,7 @@
 	}
 
 	&-bar-is-multiline {
-		.lucid-Tabs-Tab {
+		.@{prefix}-Tabs-Tab {
 			background-color: @color-lightGray;
 			border-color: @color-gray;
 			color: @color-darkGray;
@@ -168,12 +168,12 @@
 			}
 		}
 
-		.lucid-Tabs-Tab-is-active {
+		.@{prefix}-Tabs-Tab-is-active {
 			border-bottom: @Tabs-border-width solid @color-white;
 			.Tabs-mixin-tab-arrow-background(@color-white);
 		}
 
-		.lucid-Tabs-Tab + .lucid-Tabs-Tab-is-disabled {
+		.@{prefix}-Tabs-Tab + .@{prefix}-Tabs-Tab-is-disabled {
 			background-color: @color-lightGray;
 			.Tabs-mixin-tab-arrow-background(@color-lightGray);
 
@@ -194,16 +194,16 @@
 }
 
 .Tabs-mixin-tab-line(@color-Tab-line: @color-primary) {
-	.lucid-Tabs-Tab-arrow {
-		.lucid-Tabs-Tab-arrow-tab-line {
+	.@{prefix}-Tabs-Tab-arrow {
+		.@{prefix}-Tabs-Tab-arrow-tab-line {
 			fill: @color-Tab-line;
 		}
 	}
 }
 
 .Tabs-mixin-tab-arrow-background(@color-Tab-background: @color-white) {
-	.lucid-Tabs-Tab-arrow {
-		.lucid-Tabs-Tab-arrow-background {
+	.@{prefix}-Tabs-Tab-arrow {
+		.@{prefix}-Tabs-Tab-arrow-background {
 			fill: @color-Tab-background;
 		}
 	}

@@ -28,7 +28,13 @@ export function bindClassNames(value = '', variable = /&/g) {
 	});
 }
 
-export const NAMESPACE = 'lucid';
+// LUCID_CSS_NAMESPACE is a placeholder that webpack's DefinePlugin can
+// overwrite at compile time. Paired with the `prefix` LESS variable, consumers
+// are able to scope all class names to something custom. This is a really rare
+// use-case. We needed it becuase we sometimes run two copies of the library on
+// a single page and need the styles not to step on each other.
+export const NAMESPACE =
+	typeof LUCID_CSS_NAMESPACE !== 'undefined' ? LUCID_CSS_NAMESPACE : 'lucid';
 
 /**
  * Exports a lucid-bound version of classnames, which can be make more specific

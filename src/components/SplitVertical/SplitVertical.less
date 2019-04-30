@@ -1,14 +1,14 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-SplitVertical {
+.@{prefix}-SplitVertical {
 	& > &-inner {
-		& > .lucid-SplitVertical-Divider {
+		& > .@{prefix}-SplitVertical-Divider {
 			background: @color-borderColor;
 			box-sizing: border-box;
 			width: 1px;
 
-			&.lucid-SplitVertical-Divider-is-resizeable {
+			&.@{prefix}-SplitVertical-Divider-is-resizeable {
 				background: @color-gray;
 				cursor: ew-resize;
 			}

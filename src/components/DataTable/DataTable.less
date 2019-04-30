@@ -1,14 +1,14 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-DataTable-EmptyStateWrapper {
+.@{prefix}-DataTable-EmptyStateWrapper {
 	&-has-fixed-header {
 		height: 100%;
 	}
 }
 
-.lucid-DataTable {
-	&.lucid-DataTable-full-width {
+.@{prefix}-DataTable {
+	&.@{prefix}-DataTable-full-width {
 		width: 100%;
 	}
 
@@ -21,7 +21,7 @@
 		// alignment for fixed table headers. This works, but an alternate approach
 		// would be to add 1px transparent border to the trs in the body. Not sure
 		// which is better so I'm starting with this.
-		.lucid-Table.lucid-Table-has-light-header > .lucid-Table-Thead {
+		.@{prefix}-Table.@{prefix}-Table-has-light-header > .@{prefix}-Table-Thead {
 			border: none;
 		}
 	}
@@ -32,7 +32,7 @@
 
 		// `border-box` ensures that padding and borders are included in the total
 		// `width` of the element
-		.lucid-Table-Th {
+		.@{prefix}-Table-Th {
 			box-sizing: border-box;
 		}
 
@@ -40,12 +40,12 @@
 			flex-shrink: 0;
 
 			// Very high specifity to beat Table styles
-			& > .lucid-Table > .lucid-Table-Thead > .lucid-Table-Tr > .lucid-Table-is-last-col.lucid-Table-is-last-col {
+			& > .@{prefix}-Table > .@{prefix}-Table-Thead > .@{prefix}-Table-Tr > .@{prefix}-Table-is-last-col.@{prefix}-Table-is-last-col {
 				border-right: @border-table-header;
 			}
 
 			// Very high specifity to beat Table styles
-			& > .lucid-Table.lucid-Table-has-light-header > .lucid-Table-Thead > .lucid-Table-Tr > .lucid-Table-is-last-col.lucid-Table-is-last-col {
+			& > .@{prefix}-Table.@{prefix}-Table-has-light-header > .@{prefix}-Table-Thead > .@{prefix}-Table-Tr > .@{prefix}-Table-is-last-col.@{prefix}-Table-is-last-col {
 				border-right: @border-table-header-light;
 			}
 
@@ -69,7 +69,7 @@
 		display: flex;
 		overflow: auto;
 
-		.lucid-Table-Td {
+		.@{prefix}-Table-Td {
 			// `border-box` ensures that padding and borders are included in the total
 			// `width` of the element
 			box-sizing: border-box;
@@ -93,8 +93,8 @@
 				width: 100%;
 
 				// Very high specifity to beat Table styles
-				&.lucid-Table > .lucid-Table-Tbody > .lucid-Table-Tr.lucid-Table-is-active > .lucid-Table-Td.lucid-Table-is-first-single::after,
-				&.lucid-Table > .lucid-Table-Tbody > .lucid-Table-Tr.lucid-Table-is-actionable:not(.lucid-Table-is-active):hover > .lucid-Table-Td.lucid-Table-is-first-single::after {
+				&.@{prefix}-Table > .@{prefix}-Table-Tbody > .@{prefix}-Table-Tr.@{prefix}-Table-is-active > .@{prefix}-Table-Td.@{prefix}-Table-is-first-single::after,
+				&.@{prefix}-Table > .@{prefix}-Table-Tbody > .@{prefix}-Table-Tr.@{prefix}-Table-is-actionable:not(.@{prefix}-Table-is-active):hover > .@{prefix}-Table-Td.@{prefix}-Table-is-first-single::after {
 					display: none;
 				}
 			}

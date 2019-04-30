@@ -1,33 +1,33 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-SidePanel {
-	.lucid-SidePanel-pane {
+.@{prefix}-SidePanel {
+	.@{prefix}-SidePanel-pane {
 		height: 100%;
 		position: fixed;
 		top: 0;
 		display: flex;
 
-		.lucid-SidePanel-is-animated& {
+		.@{prefix}-SidePanel-is-animated& {
 			transition: transform 200ms;
 		}
 
-		.lucid-SidePanel-is-expanded.lucid-SidePanel-is-expanded& {
+		.@{prefix}-SidePanel-is-expanded.@{prefix}-SidePanel-is-expanded& {
 			transform: translateX(0);
 		}
 
-		.lucid-SidePanel-position-right& {
+		.@{prefix}-SidePanel-position-right& {
 			right: 0;
 			transform: translateX(100%);
 		}
 
-		.lucid-SidePanel-position-left& {
+		.@{prefix}-SidePanel-position-left& {
 			left: 0;
 			flex-direction: row-reverse;
 			transform: translateX(-100%);
 		}
 
-		.lucid-SidePanel-grabber {
+		.@{prefix}-SidePanel-grabber {
 			background-color: @color-backgroundColor;
 			width: @size-XS;
 			height: 100%;
@@ -37,56 +37,56 @@
 			cursor: ew-resize;
 			box-sizing: border-box;
 
-			.lucid-SidePanel-position-right& {
+			.@{prefix}-SidePanel-position-right& {
 				border-left: @border-lightBorder;
 			}
 
-			.lucid-SidePanel-position-left& {
+			.@{prefix}-SidePanel-position-left& {
 				border-right: @border-lightBorder;
 			}
 
-			.lucid-GripperVerticalIcon {
+			.@{prefix}-GripperVerticalIcon {
 				transform: translateX(-0.5px);
 			}
 
 			&:hover {
 				background-color: @color-mediumGray;
 
-				.lucid-GripperVerticalIcon {
+				.@{prefix}-GripperVerticalIcon {
 					fill: @color-darkGray;
 				}
 			}
 		}
 
-		.lucid-SidePanel-panel {
+		.@{prefix}-SidePanel-panel {
 			width: 240px;
 			height: 100%;
 			background-color: @color-backgroundColor;
 			display: flex;
 			flex-direction: column;
 
-			.lucid-SidePanel-position-right& {
+			.@{prefix}-SidePanel-position-right& {
 				border-left: @border-lightBorder;
 			}
 
-			.lucid-SidePanel-position-left& {
+			.@{prefix}-SidePanel-position-left& {
 				border-right: @border-lightBorder;
 			}
 
-			.lucid-SidePanel-header {
+			.@{prefix}-SidePanel-header {
 				border-bottom: @border-lightBorder;
 				background: white;
 				
-				.lucid-SidePanel-header-inner-wrapper {
+				.@{prefix}-SidePanel-header-inner-wrapper {
 					display: flex;
 					
-					.lucid-SidePanel-header-content {
+					.@{prefix}-SidePanel-header-content {
 						flex: 1;
 						margin: 6px;
 						height: 100%;
 					}
 
-					.lucid-SidePanel-header-closer {
+					.@{prefix}-SidePanel-header-closer {
 						height: 100%;
 						display: flex;
 						justify-content: center;
@@ -94,14 +94,14 @@
 						padding: @size-XS;
 						margin: @size-standard;
 						
-						.lucid-CrossIcon {
+						.@{prefix}-CrossIcon {
 							fill: @color-disabledText;
 						}
 					}
 				}
 			}
 
-			.lucid-SidePanel-content {
+			.@{prefix}-SidePanel-content {
 				overflow: auto;
 			}
 		}

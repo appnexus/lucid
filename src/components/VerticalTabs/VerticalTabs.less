@@ -1,11 +1,11 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-VerticalTabs {
+.@{prefix}-VerticalTabs {
 	display: flex;
 	flex-direction: row;
 
-	& > .lucid-VerticalListMenu {
+	& > .@{prefix}-VerticalListMenu {
 		flex: 1;
 	}
 
@@ -15,7 +15,7 @@
 	}
 
 	// make the tab highlight extend all the way to the top of the tab
-	.lucid-VerticalListMenu-Item:first-of-type > .lucid-VerticalListMenu-Item-content {
+	.@{prefix}-VerticalListMenu-Item:first-of-type > .@{prefix}-VerticalListMenu-Item-content {
 		border-top: 0;
 	}
 }

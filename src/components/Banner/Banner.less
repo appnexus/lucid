@@ -8,7 +8,7 @@
 @Banner-size-borderRadius: @size-borderRadius;
 @Banner-size-iconFontSize: 16px;
 
-.lucid-Banner {
+.@{prefix}-Banner {
 	.transition-group-animation-fade();
 	.box-sizing();
 
@@ -20,16 +20,16 @@
 	padding: 0 @Banner-size-spacing-rightLeft;
 	display: flex;
 
-	&.lucid-Banner-has-close {
+	&.@{prefix}-Banner-has-close {
 		padding-right: @Banner-size-spacing-rightLeft;
 	}
 
-	&.lucid-Banner-has-no-roundedCorners {
+	&.@{prefix}-Banner-has-no-roundedCorners {
 		border-radius: 0;
 	}
 
 	// must use this specific selector in order to override default color
-	.lucid-Banner-close {
+	.@{prefix}-Banner-close {
 		fill: @color-mediumGray;
 
 		&:hover {
@@ -40,7 +40,7 @@
 	// States
 
 	&-has-icon {
-		& > .lucid-Banner-content {
+		& > .@{prefix}-Banner-content {
 			padding: @Banner-size-spacing-topBottom 0;
 		}
 	}

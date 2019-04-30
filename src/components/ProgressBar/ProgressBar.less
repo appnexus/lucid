@@ -1,13 +1,13 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-ProgressBar {
+.@{prefix}-ProgressBar {
 	@bar-width: 5000px;
 
 	.pulse(@color) {
 		background-color: @color-white;
 		background-image: linear-gradient(to right, @color 15%, fade(@color, 25%) 25%, @color 15%);
-		animation: lucid-ProgressBar-is-pulsing 3s linear 0s infinite;
+		animation: "@{prefix}-ProgressBar-is-pulsing" 3s linear 0s infinite;
 	}
 
 	&-bar-container {
@@ -77,7 +77,7 @@
 		font-weight: bold;
 	}
 
-	@keyframes lucid-ProgressBar-is-pulsing {
+	@keyframes "@{prefix}-ProgressBar-is-pulsing" {
 		from { background-position: 0; }
 		to { background-position: @bar-width; }
 	}

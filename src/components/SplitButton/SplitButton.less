@@ -1,29 +1,29 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-SplitButton {
+.@{prefix}-SplitButton {
 	&-CaretIcon {
 		margin-left: @size-XXS;
 		margin-right: @size-XXS;
 	}
 
-	.lucid-Button-primary,
-	.lucid-Button-success,
-	.lucid-Button-warning,
-	.lucid-Button-danger,
-	.lucid-Button-info {
-		.lucid-SplitButton-CaretIcon {
+	.@{prefix}-Button-primary,
+	.@{prefix}-Button-success,
+	.@{prefix}-Button-warning,
+	.@{prefix}-Button-danger,
+	.@{prefix}-Button-info {
+		.@{prefix}-SplitButton-CaretIcon {
 			fill: @color-white;
 		}
 
-		&.lucid-SplitButton-Button-primary {
+		&.@{prefix}-SplitButton-Button-primary {
 			&:active:focus {
 				border-top-right-radius: 0;
 				border-bottom-right-radius: 0;
 			}
 		}
 
-		&.lucid-SplitButton-Button-drop {
+		&.@{prefix}-SplitButton-Button-drop {
 			&:active:focus {
 				border-top-left-radius: 0;
 				border-bottom-left-radius: 0;
@@ -31,23 +31,23 @@
 		}
 	}
 
-	&.lucid-DropMenu-is-expanded {
-		&.lucid-DropMenu-direction-up {
-			.lucid-SplitButton-Button-primary {
+	&.@{prefix}-DropMenu-is-expanded {
+		&.@{prefix}-DropMenu-direction-up {
+			.@{prefix}-SplitButton-Button-primary {
 				border-top-left-radius: 0;
 			}
 
-			.lucid-SplitButton-Button-drop {
+			.@{prefix}-SplitButton-Button-drop {
 				border-top-right-radius: 0;
 			}
 		}
 
-		&.lucid-DropMenu-direction-down {
-			.lucid-SplitButton-Button-primary {
+		&.@{prefix}-DropMenu-direction-down {
+			.@{prefix}-SplitButton-Button-primary {
 				border-bottom-left-radius: 0;
 			}
 
-			.lucid-SplitButton-Button-drop {
+			.@{prefix}-SplitButton-Button-drop {
 				border-bottom-right-radius: 0;
 			}
 		}

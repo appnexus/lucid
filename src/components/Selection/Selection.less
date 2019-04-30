@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-Selection {
+.@{prefix}-Selection {
 	display: flex;
 	min-height: @size-standard-height;
 	font-size: @fontSize;
@@ -92,12 +92,12 @@
 	&-children-container {
 		padding-top: 2px;
 
-		& > .lucid-Selection {
+		& > .@{prefix}-Selection {
 			margin-right: @size-XS;
 			margin-bottom: @size-XXS;
 		}
 
-		& > .lucid-Selection:last-of-type {
+		& > .@{prefix}-Selection:last-of-type {
 			margin-bottom: @size-S;
 		}
 	}

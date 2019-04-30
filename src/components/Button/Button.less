@@ -7,7 +7,7 @@
 @Button-size-height-large: @size-standard-height + 12;
 @Button-size-borderRadius: @size-borderRadius;
 
-.lucid-Button {
+.@{prefix}-Button {
 	// Mixins
 	.no-safari-flicker();
 	.box-sizing();
@@ -50,7 +50,7 @@
 		align-items: center;
 		height: 100%;
 
-		> .lucid-Icon {
+		> .@{prefix}-Icon {
 			transition: color @timing-animation-hover, fill @timing-animation-hover;
 		}
 
@@ -62,18 +62,34 @@
 	// Types
 	&&-primary {
 		.gradient-animation(@featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
-		.make-is-disabled(lucid-Button, @featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
+
+		&.@{prefix}-Button-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor));
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
 		.bold();
 
 		border-color: @featured-color-primary-borderColor;
 		color: @color-white;
 
-		.lucid-Icon { fill: @color-white; }
+		.@{prefix}-Icon { fill: @color-white; }
 	}
 
 	&&-success {
 		.gradient-animation(@featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
-		.make-is-disabled(lucid-Button, @featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor);
+
+		&.@{prefix}-Button-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @featured-color-success-gradientStartColor, @featured-color-success-gradientEndColor));
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
 		.bold();
 
 		color: @color-white;
@@ -83,12 +99,20 @@
 			.focus-glow(@featured-color-success-30);
 		}
 
-		.lucid-Icon { fill: @color-white; }
+		.@{prefix}-Icon { fill: @color-white; }
 	}
 
 	&&-info {
 		.gradient-animation(@featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
-		.make-is-disabled(lucid-Button, @featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor);
+
+		&.@{prefix}-Button-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @featured-color-info-gradientStartColor, @featured-color-info-gradientEndColor));
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
 		.bold();
 
 		border-color: @featured-color-info-borderColor;
@@ -98,12 +122,19 @@
 			.focus-glow(@featured-color-info-30);
 		}
 
-		.lucid-Icon { fill: @color-white; }
+		.@{prefix}-Icon { fill: @color-white; }
 	}
 
 	&&-warning {
 		.gradient-animation(@featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
-		.make-is-disabled(lucid-Button, @featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor);
+		&.@{prefix}-Button-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @featured-color-warning-gradientStartColor, @featured-color-warning-gradientEndColor));
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
 		.bold();
 
 		border-color: @featured-color-warning-borderColor;
@@ -113,12 +144,19 @@
 			.focus-glow(@featured-color-warning-30);
 		}
 
-		.lucid-Icon { fill: @color-white; }
+		.@{prefix}-Icon { fill: @color-white; }
 	}
 
 	&&-danger {
 		.gradient-animation(@featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
-		.make-is-disabled(lucid-Button, @featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor);
+		&.@{prefix}-Button-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @featured-color-danger-gradientStartColor, @featured-color-danger-gradientEndColor));
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
 		.bold();
 
 		border-color: @featured-color-danger-borderColor;
@@ -128,12 +166,19 @@
 			.focus-glow(@featured-color-danger-30);
 		}
 
-		.lucid-Icon { fill: @color-white; }
+		.@{prefix}-Icon { fill: @color-white; }
 	}
 
 	&&-link {
 		.gradient-reset();
-		.make-is-disabled(lucid-Button);
+
+		&.@{prefix}-Button-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @color-transparent, @color-transparent));
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
 
 		border: none;
 		background: none;
@@ -143,7 +188,7 @@
 		&:hover,
 		&:active,
 		&:focus {
-			.lucid-Icon { fill: @color-linkColorHover; }
+			.@{prefix}-Icon { fill: @color-linkColorHover; }
 
 			background: none;
 			color: @color-linkColorHover;
@@ -155,11 +200,11 @@
 			opacity: 0;
 		}
 
-		.lucid-Button-content {
+		.@{prefix}-Button-content {
 			line-height: 1em;
 		}
 
-		.lucid-Icon {
+		.@{prefix}-Icon {
 			fill: @color-primary;
 			margin-right: 0.25em;
 
@@ -171,23 +216,31 @@
 
 	&&-link&-has-only-icon {
 		// Clear the right margin, only need it if the has text with it
-		.lucid-Icon {
+		.@{prefix}-Icon {
 			margin-right: 0;
 		}
 	}
 
 	&&-invisible {
 		.gradient-reset();
-		.make-is-disabled(lucid-Button);
+
+		&.@{prefix}-Button-is-disabled {
+			.gradient-reset(linear-gradient(@standardGradient, @color-transparent, @color-transparent));
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
 
 		border: none;
 		background: none;
 		color: @color-linkColor;
 
-		&:hover:not(.lucid-Button-is-disabled),
-		&:active:not(.lucid-Button-is-disabled),
-		&:focus:not(.lucid-Button-is-disabled) {
-			.lucid-Icon { fill: @color-linkColorHover; }
+		&:hover:not(.@{prefix}-Button-is-disabled),
+		&:active:not(.@{prefix}-Button-is-disabled),
+		&:focus:not(.@{prefix}-Button-is-disabled) {
+			.@{prefix}-Icon { fill: @color-linkColorHover; }
 
 			background: @color-lightGray;
 			color: @color-linkColorHover;
@@ -198,11 +251,11 @@
 			opacity: 0;
 		}
 
-		.lucid-Button-content {
+		.@{prefix}-Button-content {
 			line-height: 1em;
 		}
 
-		.lucid-Icon {
+		.@{prefix}-Icon {
 			fill: @color-primary;
 			margin-right: 0.25em;
 
@@ -231,7 +284,7 @@
 		padding: 0 @Button-size-padding*1.5;
 		font-size: 1.2em;
 
-		.lucid-Icon {
+		.@{prefix}-Icon {
 			width: 1.2em;
 			height: 1.2em;
 		}
@@ -249,7 +302,7 @@
 		border-color: @featured-color-primary;
 		color: @color-white;
 
-		.lucid-Icon { fill: @color-white; }
+		.@{prefix}-Icon { fill: @color-white; }
 	}
 
 	&&-is-active&-primary {

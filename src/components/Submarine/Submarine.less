@@ -7,16 +7,16 @@
 @Submarine-transition-half-duration: @Submarine-transition-duration / 2;
 @Submarine-transition-third-duration: @Submarine-transition-duration / 3;
 
-.lucid-Submarine {
+.@{prefix}-Submarine {
 	display: flex;
 	align-items: stretch;
 	height: 100%;
 	width: 100%;
 	flex-direction: column;
 
-	& > .lucid-SplitHorizontal-inner {
+	& > .@{prefix}-SplitHorizontal-inner {
 
-		& > .lucid-Submarine-Bar {
+		& > .@{prefix}-Submarine-Bar {
 			position: relative;
 			z-index: @zindex-base;
 			background-color: @color-white;
@@ -27,17 +27,17 @@
 			/* stylelint-disable-next-line length-zero-no-unit */
 			flex-shrink: 0px;
 
-			.lucid-Submarine-is-position-top& {
+			.@{prefix}-Submarine-is-position-top& {
 				border-bottom: @border-standardBorder;
 				flex-direction: column-reverse;
 			}
 
-			.lucid-Submarine-is-position-bottom& {
+			.@{prefix}-Submarine-is-position-bottom& {
 				border-top: @border-standardBorder;
 				flex-direction: column;
 			}
 
-			& > .lucid-Submarine-Bar-overlay {
+			& > .@{prefix}-Submarine-Bar-overlay {
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -47,13 +47,13 @@
 				opacity: 1;
 				z-index: @zindex-base;
 
-				.lucid-SplitHorizontal-is-expanded& {
+				.@{prefix}-SplitHorizontal-is-expanded& {
 					opacity: 0;
 					pointer-events: none;
 				}
 			}
 
-			& > .lucid-Submarine-Bar-header {
+			& > .@{prefix}-Submarine-Bar-header {
 				.box-sizing();
 
 				background-color: @color-backgroundColor;
@@ -64,15 +64,15 @@
 				flex-shrink: 0;
 				min-height: @Submarine-Bar-header-height;
 
-				.lucid-Submarine-is-position-top& {
+				.@{prefix}-Submarine-is-position-top& {
 					border-top: @border-standardBorder;
 				}
 
-				.lucid-Submarine-is-position-bottom& {
+				.@{prefix}-Submarine-is-position-bottom& {
 					border-bottom: @border-standardBorder;
 				}
 
-				& > .lucid-Submarine-Bar-Title {
+				& > .@{prefix}-Submarine-Bar-Title {
 					margin: @size-XS auto @size-XS @size-standard;
 
 					&-is-shown-collapsed {
@@ -80,7 +80,7 @@
 					}
 				}
 
-				& > .lucid-Submarine-expander {
+				& > .@{prefix}-Submarine-expander {
 					.no-safari-flicker();
 					.box-sizing();
 
@@ -102,19 +102,19 @@
 						background-image: linear-gradient(@featured-color-default-gradientEndColor, @featured-color-default-gradientStartColor);
 					}
 
-					.lucid-ChevronIcon {
+					.@{prefix}-ChevronIcon {
 						fill: @color-darkGray;
 					}
 				}
 			}
 
-			& > .lucid-Submarine-Bar-content {
+			& > .@{prefix}-Submarine-Bar-content {
 				flex: 1 0;
 				padding: @size-XS;
 			}
 		}
 
-		& > .lucid-SplitHorizontal-Divider.lucid-Submarine-Divider {
+		& > .@{prefix}-SplitHorizontal-Divider.@{prefix}-Submarine-Divider {
 			position: relative;
 			display: flex;
 			flex-shrink: 0;
@@ -125,38 +125,38 @@
 			height: @Submarine-Divider-height;
 			z-index: @zindex-base - 1;
 
-			.lucid-Submarine-is-position-top& {
+			.@{prefix}-Submarine-is-position-top& {
 				transform: translateY(-@Submarine-Divider-height);
 				border-bottom: @border-standardBorder;
 			}
 
-			.lucid-Submarine-is-position-bottom& {
+			.@{prefix}-Submarine-is-position-bottom& {
 				transform: translateY(@Submarine-Divider-height);
 				border-top: @border-standardBorder;
 			}
 
-			.lucid-SplitHorizontal-is-expanded& {
+			.@{prefix}-SplitHorizontal-is-expanded& {
 				transform: translateY(0);
 			}
 
-			.lucid-Submarine-is-resize-disabled& {
+			.@{prefix}-Submarine-is-resize-disabled& {
 				display: none;
 			}
 
-			.lucid-Submarine-Divider-gripper {
+			.@{prefix}-Submarine-Divider-gripper {
 				transform: translateY(0.5px);
 			}
 
 			&:hover {
 				background-color: @color-mediumGray;
 
-				.lucid-Submarine-Divider-gripper {
+				.@{prefix}-Submarine-Divider-gripper {
 					fill: @color-darkGray;
 				}
 			}
 		}
 
-		& > .lucid-Submarine-Primary {
+		& > .@{prefix}-Submarine-Primary {
 			/* https://connect.microsoft.com/IE/feedback/details/949764/ie-11-incorrectly-rejects-flexbox-shorthand-syntax-flex-1-1-0-as-invalid */
 			/* stylelint-disable-next-line length-zero-no-unit */
 			flex-basis: 0px;
@@ -164,61 +164,61 @@
 			display: flex;
 			flex-direction: column;
 
-			.lucid-Submarine-is-position-top& {
+			.@{prefix}-Submarine-is-position-top& {
 				margin-top: -@Submarine-Divider-height;
 
-				.lucid-Submarine-is-resize-disabled& {
+				.@{prefix}-Submarine-is-resize-disabled& {
 					margin-top: 0;
 				}
 
-				.lucid-SplitHorizontal-is-expanded& {
+				.@{prefix}-SplitHorizontal-is-expanded& {
 					margin-top: 0;
 				}
 			}
 
-			.lucid-Submarine-is-position-bottom& {
+			.@{prefix}-Submarine-is-position-bottom& {
 				margin-bottom: -@Submarine-Divider-height;
 
-				.lucid-Submarine-is-resize-disabled& {
+				.@{prefix}-Submarine-is-resize-disabled& {
 					margin-bottom: 0;
 				}
 
-				.lucid-SplitHorizontal-is-expanded& {
+				.@{prefix}-SplitHorizontal-is-expanded& {
 					margin-bottom: 0;
 				}
 			}
 
-			& > .lucid-Submarine {
+			& > .@{prefix}-Submarine {
 				flex: 1;
 			}
 		}
 	}
 
-	&.lucid-SplitHorizontal-is-animated.lucid-SplitHorizontal-is-animated {
-		& > .lucid-SplitHorizontal-inner {
-			& > .lucid-Submarine-Bar {
-				& > .lucid-Submarine-Bar-overlay {
+	&.@{prefix}-SplitHorizontal-is-animated.@{prefix}-SplitHorizontal-is-animated {
+		& > .@{prefix}-SplitHorizontal-inner {
+			& > .@{prefix}-Submarine-Bar {
+				& > .@{prefix}-Submarine-Bar-overlay {
 					transition: opacity @Submarine-transition-half-duration;
 				}
 			}
 
-			& > .lucid-SplitHorizontal-Divider.lucid-Submarine-Divider {
+			& > .@{prefix}-SplitHorizontal-Divider.@{prefix}-Submarine-Divider {
 				transition: transform @Submarine-transition-third-duration, background-color @Submarine-transition-third-duration;
 
-				.lucid-SplitHorizontal-is-expanded& {
+				.@{prefix}-SplitHorizontal-is-expanded& {
 					transition: transform @Submarine-transition-third-duration @Submarine-transition-duration, background-color @Submarine-transition-third-duration;
 				}
 			}
 
-			& > .lucid-Submarine-Primary {
-				.lucid-Submarine-is-position-top& {
+			& > .@{prefix}-Submarine-Primary {
+				.@{prefix}-Submarine-is-position-top& {
 					transition: margin-top @Submarine-transition-half-duration linear;
 				}
 
-				.lucid-Submarine-is-position-bottom& {
+				.@{prefix}-Submarine-is-position-bottom& {
 					transition: margin-bottom @Submarine-transition-third-duration;
 
-					.lucid-SplitHorizontal-is-expanded& {
+					.@{prefix}-SplitHorizontal-is-expanded& {
 						transition: margin-bottom @Submarine-transition-third-duration @Submarine-transition-duration;
 					}
 				}

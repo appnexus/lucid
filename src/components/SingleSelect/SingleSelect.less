@@ -3,7 +3,7 @@
 
 @SingleSelect-size-controlHeight: @size-standard-height;
 
-.lucid-SingleSelect {
+.@{prefix}-SingleSelect {
 	&-Control {
 		.no-safari-flicker();
 		.box-sizing();
@@ -34,7 +34,7 @@
 			margin-right: @size-standard;
 		}
 
-		.lucid-CaretIcon {
+		.@{prefix}-CaretIcon {
 			fill: @color-black;
 			margin-left: auto;
 		}
@@ -46,7 +46,7 @@
 			border-color: @featured-color-primary-borderColor;
 			.gradient-animation(@featured-color-primary-gradientStartColor, @featured-color-primary-gradientEndColor);
 
-			.lucid-CaretIcon {
+			.@{prefix}-CaretIcon {
 				fill: @color-white;
 			}
 		}
@@ -63,15 +63,15 @@
 		}
 	}
 
-	&.lucid-DropMenu-is-expanded {
-		&.lucid-DropMenu-direction-up {
-			.lucid-SingleSelect-Control {
+	&.@{prefix}-DropMenu-is-expanded {
+		&.@{prefix}-DropMenu-direction-up {
+			.@{prefix}-SingleSelect-Control {
 				border-radius: 0 0 @size-borderRadius @size-borderRadius;
 			}
 		}
 
-		&.lucid-DropMenu-direction-down {
-			.lucid-SingleSelect-Control {
+		&.@{prefix}-DropMenu-direction-down {
+			.@{prefix}-SingleSelect-Control {
 				border-radius: @size-borderRadius @size-borderRadius 0 0;
 			}
 		}
