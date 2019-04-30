@@ -10,6 +10,7 @@ import {
 } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './Tabs.reducers';
+import Badge from '../Badge/Badge';
 
 const cx = lucidClassNames.bind('&-Tabs');
 
@@ -70,6 +71,10 @@ const Tab = createClass({
 		Title: node`
 			The content to be rendered as the \`Title\` of the \`Tab\`.
 		`,
+
+		count: number`
+			Optional prop that will show a count number next to the tab's title.
+		`,
 	},
 
 	handleClick(event) {
@@ -89,6 +94,7 @@ const Tab = createClass({
 			isSelected,
 			Title,
 			className,
+			count,
 			...passThroughs
 		} = this.props;
 
@@ -107,7 +113,21 @@ const Tab = createClass({
 				onClick={this.handleClick}
 				{...omitProps(passThroughs, Tab)}
 			>
-				<span className={cx('&-Tab-content')}>{Title}</span>
+				<span className={cx('&-Tab-content')}>
+					{Title}
+					{count && (
+						<Badge
+							style={{
+								marginLeft: '12px',
+								width: '20px',
+							}}
+							type="stroke"
+							kind={isSelected ? 'primary' : null}
+						>
+							{count}
+						</Badge>
+					)}
+				</span>
 				{isProgressive &&
 					!isLastTab && (
 						<span className={cx('&-Tab-arrow')}>
@@ -198,6 +218,12 @@ const Tabs = createClass({
 			steps.
 		`,
 
+		isFloating: bool`
+			Provides a small bottom border that offers a barrier between the tab 
+			group and the rest of the page.
+			Useful if the tabs are not anchored to anything.
+		`,
+
 		hasMultilineTitle: bool`
 			Set the multiline className. This is typically used for styling the
 			Tab.Title bar for improved readability when there are multiple React
@@ -221,6 +247,7 @@ const Tabs = createClass({
 			onSelect: _.noop,
 			isOpen: true,
 			isProgressive: false,
+			isFloating: false,
 			hasMultilineTitle: false,
 			hasFullWidthTabs: false,
 		};
@@ -240,6 +267,7 @@ const Tabs = createClass({
 			isProgressive,
 			selectedIndex,
 			hasFullWidthTabs,
+			isFloating,
 			...passThroughs
 		} = this.props;
 
@@ -261,6 +289,7 @@ const Tabs = createClass({
 					className={cx('&-bar', {
 						'&-bar-is-multiline': hasMultilineTitle,
 						'&-variable-width': !hasFullWidthTabs,
+						'&-floating': isFloating,
 					})}
 				>
 					{_.map(tabChildProps, (tabProps, index) => (

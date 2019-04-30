@@ -4,7 +4,7 @@ import { Tabs } from '../../../index';
 
 export default createClass({
 	render() {
-		const tabStyle = { width: '17%' };
+		const tabStyle = { width: '100px' };
 		return (
 			<div>
 				<Tabs hasFullWidthTabs={false} isOpen={false} isProgressive>
