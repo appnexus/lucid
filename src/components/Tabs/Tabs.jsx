@@ -70,11 +70,6 @@ const Tab = createClass({
 		Title: node`
 			The content to be rendered as the \`Title\` of the \`Tab\`.
 		`,
-
-		isNavigation: bool`
-			If \`true\` component will be styled to be more visually prominent for
-			use with page-level navigation.
-		`,
 	},
 
 	handleClick(event) {
@@ -93,7 +88,6 @@ const Tab = createClass({
 			isProgressive,
 			isSelected,
 			Title,
-			isNavigation,
 			className,
 			...passThroughs
 		} = this.props;
@@ -119,13 +113,13 @@ const Tab = createClass({
 						<span className={cx('&-Tab-arrow')}>
 							<svg
 								className={cx('&-Tab-arrow-svg')}
-								viewBox={isNavigation ? '0 0 8 37' : '0 0 8 28'}
+								viewBox={'0 0 8 37'}
 								preserveAspectRatio="none"
 							>
 								<polygon
 									className={cx('&-Tab-arrow-background')}
 									fill="#fff"
-									points={isNavigation ? '0,0 8,18.5 0,37' : '0,0 8,14 0,28'}
+									points={'0,0 8,18.5 0,37'}
 								/>
 								<polyline
 									className={cx('&-Tab-arrow-tab-line')}
@@ -137,9 +131,7 @@ const Tab = createClass({
 									fill="none"
 									stroke="#fff"
 									strokeWidth="1"
-									points={
-										isNavigation ? '0,37 7.3,18.5 0,0' : '0,28 7.9,14 0,0'
-									}
+									points={'0,37 7.3,18.5 0,0'}
 								/>
 							</svg>
 						</span>
@@ -217,11 +209,6 @@ const Tabs = createClass({
 			typically used in conjunction with \`Tab.width\`
 		`,
 
-		isNavigation: bool`
-			If \`true\` component will be styled to be more visually prominent for
-			use with page-level navigation.
-		`,
-
 		Tab: any`
 			*Child Element* Can be used to define one or more individual \`Tab\`s in
 			the sequence of \`Tabs\`.  
@@ -236,7 +223,6 @@ const Tabs = createClass({
 			isProgressive: false,
 			hasMultilineTitle: false,
 			hasFullWidthTabs: true,
-			isNavigation: false,
 		};
 	},
 
@@ -254,7 +240,6 @@ const Tabs = createClass({
 			isProgressive,
 			selectedIndex,
 			hasFullWidthTabs,
-			isNavigation,
 			...passThroughs
 		} = this.props;
 
@@ -276,7 +261,6 @@ const Tabs = createClass({
 					className={cx('&-bar', {
 						'&-bar-is-multiline': hasMultilineTitle,
 						'&-variable-width': !hasFullWidthTabs,
-						'&-navigation-tabs': isNavigation,
 					})}
 				>
 					{_.map(tabChildProps, (tabProps, index) => (
@@ -286,7 +270,6 @@ const Tabs = createClass({
 							isLastTab={index === tabChildProps.length - 1}
 							isOpen={isOpen}
 							isProgressive={isProgressive}
-							isNavigation={isNavigation}
 							isSelected={index === actualSelectedIndex}
 							onSelect={this.handleClicked}
 							Title={_.get(

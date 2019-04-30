@@ -14,7 +14,7 @@ export default createClass({
 						Two content
 					</Tabs.Tab>
 					<Tabs.Tab Title="Three">Three content</Tabs.Tab>
-					<Tabs.Tab Title="Five">Four content</Tabs.Tab>
+					<Tabs.Tab Title="Four">Four content</Tabs.Tab>
 				</Tabs>
 			</div>
 		);

@@ -12,7 +12,7 @@ export default createClass({
 						One content
 					</Tabs.Tab>
 
-					<Tabs.Tab>
+					<Tabs.Tab isDisabled={true}>
 						<Tabs.Title>Two</Tabs.Title>
 						Two content
 					</Tabs.Tab>
@@ -22,7 +22,7 @@ export default createClass({
 						Three content
 					</Tabs.Tab>
 
-					<Tabs.Tab isDisabled={true}>
+					<Tabs.Tab>
 						<Tabs.Title>Four</Tabs.Title>
 						Four content
 					</Tabs.Tab>
