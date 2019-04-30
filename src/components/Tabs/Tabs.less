@@ -2,8 +2,6 @@
 @import (reference) '../../styles/mixins.less';
 
 @Tabs-spacer-height: @size-XXS;
-@Tabs-tab-height: @size-standard-height;
-@Tabs-arrow-width: 8px;
 @Tabs-border-width: 1px;
 
 .lucid-Tabs {
@@ -15,19 +13,17 @@
 		display: flex;
 		margin: 0;
 		padding: 0;
-		border-color: @color-borderColor;
+		// border-color: @color-borderColor;
 	}
 
 	&-variable-width {
-		border-bottom: @Tabs-border-width solid @color-borderColorLight;
+		// border-bottom: @Tabs-border-width solid @color-borderColorLight;
 		.lucid-Tabs-Tab {
 			flex: none;
 		}
 	}
 
 	&-Tab {
-		/* https://connect.microsoft.com/IE/feedback/details/949764/ie-11-incorrectly-rejects-flexbox-shorthand-syntax-flex-1-1-0-as-invalid */
-		/* stylelint-disable-next-line length-zero-no-unit */
 		flex: 1 1 0px;
 		height: inherit;
 		display: flex;
@@ -37,17 +33,18 @@
 		cursor: pointer;
 		color: @color-darkGray;
 		user-select: none;
-		margin-bottom: -@Tabs-border-width;
-		border: @Tabs-border-width solid @color-borderColorLight;
-		border-right: 0;
+		// margin-bottom: -@Tabs-border-width;
+		// border: @Tabs-border-width solid @color-borderColorLight;
+		// border-right: 0;
 		background-color: @color-white;
 
 		&:last-of-type {
-			border-right: @Tabs-border-width solid @color-borderColorLight;
+			// border-right: @Tabs-border-width solid @color-borderColorLight;
 		}
 
 		&:hover {
-			background-color: @color-lightGray;
+			// background-color: @color-lightGray;
+			border-bottom: 3px solid @color-primary;
 			.Tabs-mixin-tab-arrow-background(@color-lightGray);
 		}
 
@@ -93,7 +90,7 @@
 				stroke: @color-gray;
 			}
 		}
-		.Tabs-mixin-tab-line(@color-transparent);
+		// .Tabs-mixin-tab-line(@color-transparent);
 		.Tabs-mixin-tab-arrow-background();
 
 		&:not(:first-child) {
@@ -104,10 +101,9 @@
 	}
 
 	&-Tab-is-active {
-		.hardstop-gradient();
-
+		// .hardstop-gradient();
 		border-top: none;
-		padding-top: @Tabs-border-width;
+		border-bottom: 3px solid @color-primary;
 		color: @color-black;
 		cursor: initial;
 
@@ -116,28 +112,29 @@
 			.Tabs-mixin-tab-arrow-background();
 		}
 
-		&:active {
-			.hardstop-gradient();
-		}
-		.Tabs-mixin-tab-line();
+		// &:active {
+		// 	.hardstop-gradient();
+		// }
+		// .Tabs-mixin-tab-line();
 	}
 
 	&-Tab-is-active-and-open {
-		border-bottom: @Tabs-border-width solid @color-white;
+		// border-bottom: @Tabs-border-width solid @color-white;
 
 		// `z-index: -1` fixes a very minor visual bug here in IE 11, but it
 		// introduces a bigger bug when using Tabs inside Dialogs.
 
-		&:hover {
-			.Tabs-mixin-tab-arrow-background();
-		}
-		.Tabs-mixin-tab-line();
+		// &:hover {
+		// 	.Tabs-mixin-tab-arrow-background();
+		// }
+		// .Tabs-mixin-tab-line();
 	}
 
 	&-Tab-content {
 		flex: 1;
-		padding: @size-standard/2;
+		padding: @size-standard;
 		text-align: center;
+		height: 16px;
 	}
 
 	&-Tab-arrow {
@@ -152,7 +149,7 @@
 	&-bar-is-multiline {
 		.lucid-Tabs-Tab {
 			background-color: @color-lightGray;
-			border-color: @color-gray;
+			// border-color: @color-gray;
 			color: @color-darkGray;
 			.Tabs-mixin-tab-arrow-background(@color-lightGray);
 
@@ -163,7 +160,7 @@
 		}
 
 		.lucid-Tabs-Tab-is-active {
-			border-bottom: @Tabs-border-width solid @color-white;
+			// border-bottom: @Tabs-border-width solid @color-white;
 			.Tabs-mixin-tab-arrow-background(@color-white);
 		}
 

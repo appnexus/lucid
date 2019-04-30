@@ -222,7 +222,7 @@ const Tabs = createClass({
 			isOpen: true,
 			isProgressive: false,
 			hasMultilineTitle: false,
-			hasFullWidthTabs: true,
+			hasFullWidthTabs: false,
 		};
 	},
 

@@ -4,19 +4,18 @@ import { Tabs } from '../../../index';
 
 export default createClass({
 	render() {
-		const tabStyle = { width: '100px' };
 		return (
 			<div>
-				<Tabs hasFullWidthTabs={false}>
-					<Tabs.Tab style={tabStyle}>
+				<Tabs hasFullWidthTabs={true}>
+					<Tabs.Tab>
 						<Tabs.Title>One</Tabs.Title>
 						One content
 					</Tabs.Tab>
-					<Tabs.Tab style={tabStyle}>
+					<Tabs.Tab>
 						<Tabs.Title>Two</Tabs.Title>
 						Two content
 					</Tabs.Tab>
-					<Tabs.Tab style={tabStyle}>
+					<Tabs.Tab>
 						<Tabs.Title>Three</Tabs.Title>
 						Three content
 					</Tabs.Tab>

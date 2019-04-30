@@ -7,12 +7,7 @@ export default createClass({
 		const tabStyle = { width: '17%' };
 		return (
 			<div>
-				<Tabs
-					hasFullWidthTabs={false}
-					isNavigation
-					isOpen={false}
-					isProgressive
-				>
+				<Tabs hasFullWidthTabs={false} isOpen={false} isProgressive>
 					<Tabs.Tab style={tabStyle} Title="One">
 						One content
 					</Tabs.Tab>
