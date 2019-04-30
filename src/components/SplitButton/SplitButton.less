@@ -3,8 +3,22 @@
 
 .lucid-SplitButton {
 	&-CaretIcon {
-		margin-left: @size-XXS;
-		margin-right: @size-XXS;
+		// margin-left: @size-XS;
+		// margin-right: @size-XS;
+	}
+	
+	button.lucid-Button.lucid-Button-has-only-icon.lucid-SplitButton-Button-drop {
+		padding: 0 @size-S;
+		border-left: 0;
+	}
+
+	button.lucid-Button.lucid-Button-is-active.lucid-Button-has-only-icon.lucid-SplitButton-Button-drop {
+		border: 1px solid @color-neutral-5;
+		border-left: 0;
+	}
+
+	.lucid-DropMenu-option-container {
+		border-top: 0;
 	}
 
 	.lucid-Button-primary,
