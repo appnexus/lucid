@@ -6,36 +6,36 @@
 @VerticalListMenu-size-childPadding: 15px;
 @VerticalListMenu-step: 12;
 
-.lucid-VerticalListMenu {
-	& & .lucid-VerticalListMenu-Item-content {
+.@{prefix}-VerticalListMenu {
+	& & .@{prefix}-VerticalListMenu-Item-content {
 		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 0);
 	}
 
-	& & & .lucid-VerticalListMenu-Item-content {
+	& & & .@{prefix}-VerticalListMenu-Item-content {
 		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 1);
 	}
 
-	& & & & .lucid-VerticalListMenu-Item-content {
+	& & & & .@{prefix}-VerticalListMenu-Item-content {
 		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 2);
 	}
 
-	& & & & & .lucid-VerticalListMenu-Item-content {
+	& & & & & .@{prefix}-VerticalListMenu-Item-content {
 		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 3);
 	}
 
-	& & & & & & .lucid-VerticalListMenu-Item-content {
+	& & & & & & .@{prefix}-VerticalListMenu-Item-content {
 		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 4);
 	}
 
-	& & & & & & & .lucid-VerticalListMenu-Item-content {
+	& & & & & & & .@{prefix}-VerticalListMenu-Item-content {
 		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 5);
 	}
 
-	& & & & & & & & .lucid-VerticalListMenu-Item-content {
+	& & & & & & & & .@{prefix}-VerticalListMenu-Item-content {
 		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 6);
 	}
 
-	& & & & & & & & & .lucid-VerticalListMenu-Item-content {
+	& & & & & & & & & .@{prefix}-VerticalListMenu-Item-content {
 		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 7);
 	}
 
@@ -99,7 +99,7 @@
 				color: @color-darkGray;
 
 				// Style the expander button when the user hovers on the item content
-				.lucid-VerticalListMenu-Item-expander {
+				.@{prefix}-VerticalListMenu-Item-expander {
 					.gradient-animation(@featured-color-default-gradientStartColor, @featured-color-default-gradientEndColor);
 					.box-sizing();
 
@@ -107,7 +107,7 @@
 					border-radius: @size-borderRadius;
 					outline: none;
 
-					.lucid-ChevronIcon {
+					.@{prefix}-ChevronIcon {
 						fill: @color-darkGray;
 					}
 				}
@@ -120,8 +120,8 @@
 		}
 
 		// Any time we have a VerticalListMenu below a VerticalListMenu-Item
-		.lucid-VerticalListMenu {
-			.lucid-VerticalListMenu-Item-content {
+		.@{prefix}-VerticalListMenu {
+			.@{prefix}-VerticalListMenu-Item-content {
 				font-weight: normal;
 				border-color: @color-transparent;
 

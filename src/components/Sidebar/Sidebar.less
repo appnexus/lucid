@@ -6,16 +6,16 @@
 @Sidebar-transition-half-duration: @Sidebar-transition-duration / 2;
 @Sidebar-transition-third-duration: @Sidebar-transition-duration / 3;
 
-.lucid-Sidebar {
+.@{prefix}-Sidebar {
 	display: flex;
 	align-items: stretch;
 	height: 100%;
 	width: 100%;
 
-	& > .lucid-SplitVertical-inner {
+	& > .@{prefix}-SplitVertical-inner {
 		width: 100%;
 
-		& > .lucid-Sidebar-Bar {
+		& > .@{prefix}-Sidebar-Bar {
 			position: relative;
 			z-index: @zindex-base;
 			background-color: @color-white;
@@ -23,15 +23,15 @@
 			display: flex;
 			flex-direction: column;
 
-			.lucid-Sidebar-is-position-left& {
+			.@{prefix}-Sidebar-is-position-left& {
 				border-right: @border-standardBorder;
 			}
 
-			.lucid-Sidebar-is-position-right& {
+			.@{prefix}-Sidebar-is-position-right& {
 				border-left: @border-standardBorder;
 			}
 
-			& > .lucid-Sidebar-Bar-overlay {
+			& > .@{prefix}-Sidebar-Bar-overlay {
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -41,13 +41,13 @@
 				opacity: 1;
 				z-index: @zindex-base;
 
-				.lucid-SplitVertical-is-expanded& {
+				.@{prefix}-SplitVertical-is-expanded& {
 					opacity: 0;
 					pointer-events: none;
 				}
 			}
 
-			& > .lucid-Sidebar-Bar-header {
+			& > .@{prefix}-Sidebar-Bar-header {
 				background-color: @color-backgroundColor;
 				border-bottom: @border-lightBorder;
 				color: @color-textColor;
@@ -56,25 +56,25 @@
 				display: flex;
 				flex-shrink: 0;
 
-				.lucid-Sidebar-is-position-left& {
+				.@{prefix}-Sidebar-is-position-left& {
 					flex-direction: row;
 				}
 
-				.lucid-Sidebar-is-position-right& {
+				.@{prefix}-Sidebar-is-position-right& {
 					flex-direction: row-reverse;
 				}
 
-				& > .lucid-Sidebar-Bar-Title {
-					.lucid-Sidebar-is-position-left& {
+				& > .@{prefix}-Sidebar-Bar-Title {
+					.@{prefix}-Sidebar-is-position-left& {
 						margin: @size-XS auto @size-XS @size-standard;
 					}
 
-					.lucid-Sidebar-is-position-right& {
+					.@{prefix}-Sidebar-is-position-right& {
 						margin: @size-XS auto @size-XS 0;
 					}
 				}
 
-				& > .lucid-Sidebar-expander {
+				& > .@{prefix}-Sidebar-expander {
 					.no-safari-flicker();
 					.box-sizing();
 
@@ -96,24 +96,24 @@
 						background-image: linear-gradient(@featured-color-default-gradientEndColor, @featured-color-default-gradientStartColor);
 					}
 
-					.lucid-ChevronIcon {
+					.@{prefix}-ChevronIcon {
 						fill: @color-darkGray;
 					}
 				}
 			}
 
-			& > .lucid-Sidebar-Bar-content {
+			& > .@{prefix}-Sidebar-Bar-content {
 				overflow: auto;
 				flex: 1;
 			}
 
-			& > .lucid-Sidebar-Bar-content.lucid-Sidebar-Bar-content-has-gutters {
+			& > .@{prefix}-Sidebar-Bar-content.@{prefix}-Sidebar-Bar-content-has-gutters {
 				padding: @size-XS;
 			}
 		}
 
 		// Triple specificity to beat some styles in SplitVertical.less
-		& > .lucid-SplitVertical-Divider.lucid-Sidebar-Divider.lucid-Sidebar-Divider {
+		& > .@{prefix}-SplitVertical-Divider.@{prefix}-Sidebar-Divider.@{prefix}-Sidebar-Divider {
 			position: relative;
 			display: flex;
 			flex-direction: column;
@@ -123,72 +123,72 @@
 			width: @Sidebar-Divider-width;
 			z-index: @zindex-base - 1;
 
-			.lucid-Sidebar-is-position-left& {
+			.@{prefix}-Sidebar-is-position-left& {
 				transform: translateX(-@Sidebar-Divider-width);
 				border-right: @border-standardBorder;
 			}
 
-			.lucid-Sidebar-is-position-right& {
+			.@{prefix}-Sidebar-is-position-right& {
 				transform: translateX(@Sidebar-Divider-width);
 				border-left: @border-standardBorder;
 			}
 
-			.lucid-SplitVertical-is-expanded& {
+			.@{prefix}-SplitVertical-is-expanded& {
 				transform: translateX(0);
 			}
 
-			.lucid-Sidebar-is-resize-disabled& {
+			.@{prefix}-Sidebar-is-resize-disabled& {
 				display: none;
 			}
 
-			.lucid-Sidebar-Divider-gripper {
+			.@{prefix}-Sidebar-Divider-gripper {
 				transform: translateX(-0.5px);
 			}
 
 			&:hover {
 				background-color: @color-mediumGray;
 
-				.lucid-Sidebar-Divider-gripper {
+				.@{prefix}-Sidebar-Divider-gripper {
 					fill: @color-darkGray;
 				}
 			}
 		}
 
-		& > .lucid-Sidebar-Primary {
+		& > .@{prefix}-Sidebar-Primary {
 			overflow: auto;
 			display: flex;
 			flex-direction: column;
 
-			.lucid-Sidebar-is-position-left& {
+			.@{prefix}-Sidebar-is-position-left& {
 				margin-left: -@Sidebar-Divider-width;
 
-				.lucid-Sidebar-is-resize-disabled& {
+				.@{prefix}-Sidebar-is-resize-disabled& {
 					margin-left: 0;
 				}
 
-				.lucid-SplitVertical-is-expanded& {
+				.@{prefix}-SplitVertical-is-expanded& {
 					margin-left: 0;
 				}
 			}
 
-			.lucid-Sidebar-is-position-right& {
+			.@{prefix}-Sidebar-is-position-right& {
 				margin-right: -@Sidebar-Divider-width;
 
-				.lucid-Sidebar-is-resize-disabled& {
+				.@{prefix}-Sidebar-is-resize-disabled& {
 					margin-right: 0;
 				}
 
-				.lucid-SplitVertical-is-expanded& {
+				.@{prefix}-SplitVertical-is-expanded& {
 					margin-right: 0;
 				}
 			}
 
-			& > .lucid-Sidebar {
+			& > .@{prefix}-Sidebar {
 				flex: 1;
 			}
 
 			// Addresses a Firefox specific rendering issue with a Submarine nested in a Sidebar.
-			& > .lucid-Submarine,
+			& > .@{prefix}-Submarine,
 			x:-moz-any-link,
 			x:default {
 				display: block;
@@ -197,31 +197,31 @@
 		}
 	}
 
-	&.lucid-SplitVertical-is-animated.lucid-SplitVertical-is-animated {
-		& > .lucid-SplitVertical-inner {
-			& > .lucid-Sidebar-Bar {
-				& > .lucid-Sidebar-Bar-overlay {
+	&.@{prefix}-SplitVertical-is-animated.@{prefix}-SplitVertical-is-animated {
+		& > .@{prefix}-SplitVertical-inner {
+			& > .@{prefix}-Sidebar-Bar {
+				& > .@{prefix}-Sidebar-Bar-overlay {
 					transition: opacity @Sidebar-transition-half-duration;
 				}
 			}
 
-			& > .lucid-SplitVertical-Divider.lucid-Sidebar-Divider {
+			& > .@{prefix}-SplitVertical-Divider.@{prefix}-Sidebar-Divider {
 				transition: transform @Sidebar-transition-third-duration, background-color @Sidebar-transition-third-duration;
 
-				.lucid-SplitVertical-is-expanded& {
+				.@{prefix}-SplitVertical-is-expanded& {
 					transition: transform @Sidebar-transition-third-duration @Sidebar-transition-duration, background-color @Sidebar-transition-third-duration;
 				}
 			}
 
-			& > .lucid-Sidebar-Primary {
-				.lucid-Sidebar-is-position-left& {
+			& > .@{prefix}-Sidebar-Primary {
+				.@{prefix}-Sidebar-is-position-left& {
 					transition: margin-left @Sidebar-transition-half-duration linear;
 				}
 
-				.lucid-Sidebar-is-position-right& {
+				.@{prefix}-Sidebar-is-position-right& {
 					transition: margin-right @Sidebar-transition-third-duration;
 
-					.lucid-SplitVertical-is-expanded& {
+					.@{prefix}-SplitVertical-is-expanded& {
 						transition: margin-right @Sidebar-transition-third-duration @Sidebar-transition-duration;
 					}
 				}

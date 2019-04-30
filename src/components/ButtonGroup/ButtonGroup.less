@@ -3,14 +3,14 @@
 
 @ButtonGroup-active-borderColor: fade(#fff, 30%);
 
-.lucid-ButtonGroup {
+.@{prefix}-ButtonGroup {
 	display: flex;
 
-	> .lucid-Button {
+	> .@{prefix}-Button {
 		// This crazy selector was written to help with the problem of having two
 		// active buttons right next to each other. See the following more for
 		// context: https://appnexus.slack.com/archives/anx-react-future/p1456439335000016
-		&-is-active + .lucid-Button-is-active {
+		&-is-active + .@{prefix}-Button-is-active {
 			border-left: 1px solid @ButtonGroup-active-borderColor;
 		}
 
