@@ -13,11 +13,9 @@
 		display: flex;
 		margin: 0;
 		padding: 0;
-		// border-color: @color-borderColor;
 	}
 
 	&-variable-width {
-		// border-bottom: @Tabs-border-width solid @color-borderColorLight;
 
 		display: inline-flex;
 
@@ -40,23 +38,18 @@
 		cursor: pointer;
 		color: @color-darkGray;
 		user-select: none;
-		// margin-bottom: -@Tabs-border-width;
-		// border: @Tabs-border-width solid @color-borderColorLight;
-		// border-right: 0;
 		background-color: @color-white;
-
-		&:last-of-type {
-			// border-right: @Tabs-border-width solid @color-borderColorLight;
-		}
-
+		
 		&:hover {
-			// background-color: @color-lightGray;
 			border-bottom: 3px solid @color-primary;
-			// .Tabs-mixin-tab-arrow-background(@color-lightGray);
 		}
 
 		&:active {
 			.dropshadow-gradient(@color-gray, @color-lightGray, @Tabs-spacer-height);
+		}
+		
+		.lucid-Badge {
+			cursor: pointer;
 		}
 	}
 
@@ -65,8 +58,6 @@
 		cursor: not-allowed;
 		
 		&:hover {
-			// background-color: @color-white;
-			// .Tabs-mixin-tab-arrow-background();
 			border-bottom: 0;
 		}
 		
@@ -77,6 +68,7 @@
 		.lucid-Badge {
 			color: @color-neutral-6;
 			border-color: @color-neutral-5;
+			cursor: not-allowed;
 		}
 	}
 
@@ -103,8 +95,6 @@
 				stroke: @color-gray;
 			}
 		}
-		// .Tabs-mixin-tab-line(@color-transparent);
-		// .Tabs-mixin-tab-arrow-background();
 
 		&:not(:first-child) {
 			.lucid-Tabs-Tab-content {
@@ -114,33 +104,10 @@
 	}
 
 	&-Tab-is-active {
-		// .hardstop-gradient();
 		border-top: none;
 		border-bottom: 3px solid @color-primary;
 		color: @color-black;
 		cursor: initial;
-
-		&:hover {
-			// background-color: @color-white;
-			// .Tabs-mixin-tab-arrow-background();
-		}
-
-		// &:active {
-		// 	.hardstop-gradient();
-		// }
-		// .Tabs-mixin-tab-line();
-	}
-
-	&-Tab-is-active-and-open {
-		// border-bottom: @Tabs-border-width solid @color-white;
-
-		// `z-index: -1` fixes a very minor visual bug here in IE 11, but it
-		// introduces a bigger bug when using Tabs inside Dialogs.
-
-		// &:hover {
-		// 	.Tabs-mixin-tab-arrow-background();
-		// }
-		// .Tabs-mixin-tab-line();
 	}
 
 	&-Tab-content {
@@ -162,28 +129,18 @@
 	&-bar-is-multiline {
 		.lucid-Tabs-Tab {
 			background-color: @color-lightGray;
-			// border-color: @color-gray;
 			color: @color-darkGray;
-			// .Tabs-mixin-tab-arrow-background(@color-lightGray);
 
 			&:hover {
 				background-color: @color-white;
-				// .Tabs-mixin-tab-arrow-background(@color-white);
 			}
-		}
-
-		.lucid-Tabs-Tab-is-active {
-			// border-bottom: @Tabs-border-width solid @color-white;
-			// .Tabs-mixin-tab-arrow-background(@color-white);
 		}
 
 		.lucid-Tabs-Tab + .lucid-Tabs-Tab-is-disabled {
 			background-color: @color-lightGray;
-			// .Tabs-mixin-tab-arrow-background(@color-lightGray);
 
 			&:hover {
 				background-color: @color-lightGray;
-				// .Tabs-mixin-tab-arrow-background(@color-lightGray);
 			}
 
 			&:active {
