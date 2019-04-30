@@ -32,6 +32,25 @@ styles like so:
 If you don't use `less`, you can use the precompiled css file
 `node_modules/lucid-ui/dist/index.css`.
 
+### Custom CSS Scope
+
+There are some _very rare_ situations where you might need to customize the
+prefix for all the css class names emitted by the library and `less`. If you
+find yourself in that unenviable position, you can do the following:
+
+In your webpack config use the [`DefinePlugin`][dp] to specify
+`LUCID_CSS_NAMESPACE` like so:
+
+    new webpack.DefinePlugin({
+      LUCID_CSS_NAMESPACE: "'something-custom'",
+    });
+
+
+When you render the less, make sure to set the `prefix` variable to the same
+thing you set in the step about. E.g.
+
+    lessc node_modules/lucid-ui/src/index.less --modify-var='prefix=something-custom'
+
 ### Dependencies
 
 `lucid-ui` has several React peer dependencies. This means **your application
@@ -60,3 +79,4 @@ To contribute to lucid, please see `CONTRIBUTING.md`.
 [Travis CI]: https://travis-ci.org/
 [CodeCov]: https://codecov.io
 [bpi]: https://github.com/ant-design/babel-plugin-import
+[dp]: https://webpack.js.org/plugins/define-plugin/
