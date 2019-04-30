@@ -10,7 +10,6 @@ export default createClass({
 			<Table>
 				<Thead>
 					<Tr>
-						<Th rowSpan={2}>RS</Th>
 						<Th rowSpan={2}>
 							<Checkbox />
 						</Th>
@@ -38,13 +37,28 @@ export default createClass({
 				</Thead>
 				<Tbody>
 					<Tr>
-						<Td rowSpan={14} hasBorderRight>
-							RS
-						</Td>
 						<Td>
 							<Checkbox />
 						</Td>
 						<Td>Text</Td>
+						<Td hasBorderLeft hasBorderRight>
+							<SuccessIcon />
+						</Td>
+						<Td>
+							<Button size="small">button</Button>
+						</Td>
+						<Td>Sorted Column</Td>
+						<Td align="left" hasBorderLeft>
+							align left
+						</Td>
+						<Td align="center">align center</Td>
+						<Td align="right">align right</Td>
+					</Tr>
+					<Tr isActive>
+						<Td>
+							<Checkbox />
+						</Td>
+						<Td>Row active</Td>
 						<Td hasBorderLeft hasBorderRight>
 							<SuccessIcon />
 						</Td>

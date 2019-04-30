@@ -7,7 +7,7 @@ const { Thead, Tbody, Tr, Th, Td } = Table;
 export default createClass({
 	render() {
 		return (
-			<Table hasLightHeader>
+			<Table hasLightHeader={false}>
 				<Thead>
 					<Tr>
 						<Th rowSpan={2}>RS</Th>
