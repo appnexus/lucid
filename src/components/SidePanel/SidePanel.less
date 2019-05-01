@@ -8,6 +8,8 @@
 		top: 0;
 		display: flex;
 
+		box-shadow: -1px 0px 5px 0px rgba(33, 31, 31, 0.3);
+
 		.lucid-SidePanel-is-animated& {
 			transition: transform 200ms;
 		}
@@ -28,32 +30,29 @@
 		}
 
 		.lucid-SidePanel-grabber {
-			background-color: @color-backgroundColor;
-			width: @size-XS;
+			background-color: @color-neutral-2;
+			width: 20px;
 			height: 100%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			cursor: ew-resize;
+			cursor: grab;
 			box-sizing: border-box;
-
-			.lucid-SidePanel-position-right& {
-				border-left: @border-lightBorder;
-			}
-
-			.lucid-SidePanel-position-left& {
-				border-right: @border-lightBorder;
-			}
 
 			.lucid-GripperVerticalIcon {
 				transform: translateX(-0.5px);
+				opacity: 50%;
 			}
 
+			&:active {
+				cursor: grabbing;
+			}
+
+			&:active,
 			&:hover {
-				background-color: @color-mediumGray;
 
 				.lucid-GripperVerticalIcon {
-					fill: @color-darkGray;
+					opacity: 1;
 				}
 			}
 		}
@@ -61,17 +60,10 @@
 		.lucid-SidePanel-panel {
 			width: 240px;
 			height: 100%;
-			background-color: @color-backgroundColor;
+			background-color: @color-neutral-2;
 			display: flex;
 			flex-direction: column;
 
-			.lucid-SidePanel-position-right& {
-				border-left: @border-lightBorder;
-			}
-
-			.lucid-SidePanel-position-left& {
-				border-right: @border-lightBorder;
-			}
 
 			.lucid-SidePanel-header {
 				border-bottom: @border-lightBorder;
@@ -103,6 +95,7 @@
 
 			.lucid-SidePanel-content {
 				overflow: auto;
+				padding: 20px 20px 20px 0
 			}
 		}
 	}

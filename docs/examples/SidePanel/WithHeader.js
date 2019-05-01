@@ -1,6 +1,10 @@
 import React from 'react';
 import { SidePanel } from '../../../src/index.js';
 
+const margins = {
+	margin: '0 0 16px 0',
+};
+
 export default class extends React.Component {
 	constructor(...args) {
 		super(...args);
@@ -27,7 +31,7 @@ export default class extends React.Component {
 					<SidePanel.Header>
 						<strong>Stumptown keytar schlitz</strong>
 					</SidePanel.Header>
-					<p>
+					<p style={margins}>
 						Stumptown keytar schlitz, vinyl vexillologist humblebrag sartorial
 						crucifix cornhole. Four dollar toast 8-bit taiyaki asymmetrical
 						helvetica kitsch farm-to-table thundercats. Occupy hammock waistcoat
@@ -37,7 +41,7 @@ export default class extends React.Component {
 						Lumbersexual lo-fi stumptown, iceland locavore tacos chillwave
 						portland beard celiac polaroid.
 					</p>
-					<p>
+					<p style={margins}>
 						Keffiyeh kinfolk lumbersexual, austin ennui sustainable mlkshk four
 						loko selfies ramps pop-up coloring book before they sold out yuccie
 						biodiesel. Yuccie taxidermy beard, +1 church-key umami echo park
