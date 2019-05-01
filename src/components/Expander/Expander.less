@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-Expander {
+.@{prefix}-Expander {
 	&-icon {
 		.box-sizing();
 
@@ -22,14 +22,14 @@
 		justify-content: flex-start;
 
 		&:hover {
-			> .lucid-Expander-icon {
+			> .@{prefix}-Expander-icon {
 				.box-sizing();
 
 				background-color: @featured-color-default-backgroundColorHover;
 				outline: none;
 			}
 
-			> .lucid-Expander-text {
+			> .@{prefix}-Expander-text {
 
 				// `text-decoration `does not inherit when you're using `position:
 				// absolute` as per the spec
@@ -69,31 +69,31 @@
 
 	// kind
 	&-kind-highlighted {
-		.lucid-Expander-header {
+		.@{prefix}-Expander-header {
 			background: @color-backgroundColor;
 			border: @border-lightBorder;
 			padding: @size-standard;
 			display: flex;
 			flex-direction: row-reverse;
 
-			.lucid-Expander-text {
+			.@{prefix}-Expander-text {
 				font-size: @size-font-L;
 				color: @color-textColor;
 				font-weight: bold;
 				flex: 1;
 			}
 
-			.lucid-Expander-icon {
+			.@{prefix}-Expander-icon {
 				margin: 0;
 				flex-shrink: 0;
 			}
 
-			&:hover .lucid-Expander-text > span {
+			&:hover .@{prefix}-Expander-text > span {
 				text-decoration: none;
 			}
 		}
 
-		.lucid-Collapsible-content {
+		.@{prefix}-Collapsible-content {
 			padding: @size-standard;
 		}
 	}

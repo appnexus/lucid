@@ -1,11 +1,14 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-Breadcrumb {
+.@{prefix}-Breadcrumb {
 
 	@breadcrumb-margin: 7px;
+	font: @font;
+	font-weight: @font-weight-medium;
+	color: @color-textColor;
 
-	> .lucid-Breadcrumb-List {
+	> .@{prefix}-Breadcrumb-List {
 		list-style-type: none;
 		display: flex;
 		flex-direction: row;
@@ -15,28 +18,47 @@
 		margin: 0;
 		height: 12px;
 
-		> .lucid-Breadcrumb-Item {
+		> .@{prefix}-Breadcrumb-Item {
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
 			align-items: center;
 			font-size: @size-font;
-			color: @color-textColor;
 
 			> a {
-				.link();
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-decoration: none;
+				color: @color-textColor;
+				line-height: 0;
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+				> * {
+					margin-right: 5px;
+					&:last-child {
+						margin-right: 0;
+					}
+				}
 			}
 
-			.lucid-Icon {
-				height: @size-font;
-				width: @size-font;
-				display: block;
-			}
+			.@{prefix}-Breadcrumb-BreadcrumbSeparator {
+				margin: 2px 0 0 2px;
 
-			> .lucid-Breadcrumb-SeparatorIcon {
-				fill: @color-mediumGray;
-				// this is the width of the icon + a margin on either side of it
-				width: 3.4 + @breadcrumb-margin * 2;
+				> span {
+					display: inline-block;
+					width: 8px;
+					height: 16px;
+					transform: rotate(30deg);
+					opacity: 0.7;
+
+					&:first-child {
+						border-right: 1px solid @color-neutral-6;
+					}
+				}
 			}
 		}
 	}

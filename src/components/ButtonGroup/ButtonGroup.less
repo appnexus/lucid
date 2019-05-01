@@ -1,16 +1,16 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-ButtonGroup {
+.@{prefix}-ButtonGroup {
 	display: flex;
 
-	> .lucid-Button {
+	> .@{prefix}-Button {
 
-		&.lucid-Button-is-active {
+		&.@{prefix}-Button-is-active {
 			border: 2px solid @color-primary;
 		}
 
-		&-is-active + .lucid-Button-is-active {
+		&-is-active + .@{prefix}-Button-is-active {
 			border-left: 0;
 		}
 	}

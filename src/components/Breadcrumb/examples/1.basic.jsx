@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Breadcrumb, HomeIcon } from '../../../index';
+import { Breadcrumb } from '../../../index';
 
 const { Item } = Breadcrumb;
 
@@ -9,14 +9,14 @@ export default createClass({
 		return (
 			<Breadcrumb>
 				<Item key="home">
-					<a href="#">
-						<HomeIcon />
-					</a>
+					<a href="#">Start</a>
 				</Item>
 				<Item key="list">
 					<a href="#">List</a>
 				</Item>
-				<Item key="item">Item</Item>
+				<Item key="item">
+					<a href="#">Item</a>
+				</Item>
 			</Breadcrumb>
 		);
 	},

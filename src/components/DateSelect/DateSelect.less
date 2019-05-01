@@ -1,12 +1,12 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-DateSelect {
+.@{prefix}-DateSelect {
 	display: flex;
 	align-items: center;
 	font-size: @size-font;
 
-	.lucid-DateSelect-chevron {
+	.@{prefix}-DateSelect-chevron {
 		user-select: none;
 	}
 
@@ -29,7 +29,7 @@
 			flex: 1;
 		}
 
-		.lucid-DateSelect-show-divider& {
+		.@{prefix}-DateSelect-show-divider& {
 			&::after {
 				position: absolute;
 				top: 0;
@@ -40,21 +40,21 @@
 				background-color: @color-transparent-gray-10;
 			}
 
-			&.lucid-InfiniteSlidePanel-Slide-in-frame,
-			&.lucid-DateSelect-slide-simple {
+			&.@{prefix}-InfiniteSlidePanel-Slide-in-frame,
+			&.@{prefix}-DateSelect-slide-simple {
 				&::after {
 					right: -1px;
 				}
 			}
 		}
 
-		.lucid-DateSelect-slide-content {
+		.@{prefix}-DateSelect-slide-content {
 			margin: @size-XS;
 			flex: 1;
 			display: flex;
 			align-items: stretch;
 
-			.lucid-DateSelect-CalendarMonth {
+			.@{prefix}-DateSelect-CalendarMonth {
 				flex: 1;
 				font-size: 100%;
 			}

@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-Grid {
+.@{prefix}-Grid {
 	.box-sizing();
 
 	display: flex;
@@ -10,7 +10,7 @@
 	&-is-vertical {
 		flex-direction: column;
 
-		.lucid-Grid-Cell {
+		.@{prefix}-Grid-Cell {
 			display: flex;
 			padding: 0 @size-standard @size-standard 0;
 
@@ -41,15 +41,15 @@
 	}
 
 	&-is-gutterless {
-		.lucid-Grid-Cell {
+		.@{prefix}-Grid-Cell {
 			padding: 0;
 		}
 	}
 
-	.lucid-Grid { flex: 1; }
+	.@{prefix}-Grid { flex: 1; }
 }
 
-.lucid-Grid-Cell {
+.@{prefix}-Grid-Cell {
 	.box-sizing();
 
 	position: relative;

@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-Selection {
+.@{prefix}-Selection {
 	display: flex;
 	align-items: center;
 	font-size: @size-font;
@@ -17,7 +17,7 @@
 		font-size: @size-font-L;
 		line-height: 44px;
 
-		.lucid-Selection-Icon {
+		.@{prefix}-Selection-Icon {
 			margin-top: 12px;
 		}
 	}
@@ -56,7 +56,7 @@
 		border-color: @color-neutral-4;
 		font-weight: @font-weight-medium;
 		
-		.lucid-Selection {
+		.@{prefix}-Selection {
 			font-weight: @font-weight-regular;
 		}	
 	}
@@ -98,17 +98,17 @@
 	&-children-container {
 		padding-top: 2px;
 
-		& > .lucid-Selection {
+		& > .@{prefix}-Selection {
 			margin-right: @size-XS;
 		}
 
-		& > .lucid-Selection:last-of-type {
+		& > .@{prefix}-Selection:last-of-type {
 			margin-bottom: @size-S;
 		}
 	}
 
 	&:not(:last-child) {
-		&:not(.lucid-Selection-is-top) {
+		&:not(.@{prefix}-Selection-is-top) {
 			border-bottom: 0px;
 		}
 	}

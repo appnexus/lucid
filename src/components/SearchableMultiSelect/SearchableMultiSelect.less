@@ -1,25 +1,25 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-SearchableMultiSelect {
+.@{prefix}-SearchableMultiSelect {
 	// Increase specificity to minimum necessary to beat DropMenu
 	&-DropMenu&-DropMenu&-DropMenu {
 		display: block;
 	}
 
 	&-DropMenu {
-		.lucid-DropMenu-Option {
+		.@{prefix}-DropMenu-Option {
 			padding: 0 @size-XXS;
 		}
 	}
 
 	&-DropMenu-is-small {
-		.lucid-DropMenu-Option {
+		.@{prefix}-DropMenu-Option {
 			padding: 0 7px;
 		}
 	}
 
-	.lucid-ContextMenu {
+	.@{prefix}-ContextMenu {
 		display: block;
 	}
 
@@ -28,18 +28,18 @@
 
 		&-is-small {
 			// Prevents zooming on focus
-			.lucid-TextField {
+			.@{prefix}-TextField {
 				font-size: 16px;
 			}
 		}
 	}
 
-	&-CheckboxLabeled.lucid-CheckboxLabeled {
+	&-CheckboxLabeled.@{prefix}-CheckboxLabeled {
 		display: flex;
 		flex: 1;
 		align-items: center;
 
-		.lucid-CheckboxLabeled-label {
+		.@{prefix}-CheckboxLabeled-label {
 			margin-left: @size-XXS;
 			cursor: pointer;
 			padding-top: 0;
@@ -64,7 +64,7 @@
 	&-loading {
 		justify-content: center;
 
-		&.lucid-DropMenu-Option.lucid-DropMenu-Option-is-focused {
+		&.@{prefix}-DropMenu-Option.@{prefix}-DropMenu-Option-is-focused {
 			background: none;
 		}
 	}

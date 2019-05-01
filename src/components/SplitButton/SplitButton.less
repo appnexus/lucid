@@ -1,36 +1,36 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-SplitButton {
+.@{prefix}-SplitButton {
 
-	button.lucid-Button.lucid-Button-has-only-icon.lucid-SplitButton-Button-drop {
+	button.@{prefix}-Button.@{prefix}-Button-has-only-icon.@{prefix}-SplitButton-Button-drop {
 		padding: 0 @size-S;
 		border-left: 1px solid white;
 	}
 	
-	button.lucid-Button.lucid-Button-is-active.lucid-Button-has-only-icon.lucid-SplitButton-Button-drop {
+	button.@{prefix}-Button.@{prefix}-Button-is-active.@{prefix}-Button-has-only-icon.@{prefix}-SplitButton-Button-drop {
 		border: 1px solid @color-neutral-5;
 		border-left: 1px solid white;
 	}
 
-	button.lucid-Button.lucid-Button-primary.lucid-Button-has-only-icon.lucid-SplitButton-Button-drop {
+	button.@{prefix}-Button.@{prefix}-Button-primary.@{prefix}-Button-has-only-icon.@{prefix}-SplitButton-Button-drop {
 		border: 1px solid @color-primary;
 	}
 
-	button.lucid-Button.lucid-Button-is-active.lucid-Button-primary.lucid-Button-has-only-icon.lucid-SplitButton-Button-drop {
+	button.@{prefix}-Button.@{prefix}-Button-is-active.@{prefix}-Button-primary.@{prefix}-Button-has-only-icon.@{prefix}-SplitButton-Button-drop {
 		background-color: @color-primary-dark;
 	}
 	
-	.lucid-DropMenu-option-container {
+	.@{prefix}-DropMenu-option-container {
 		border-top: 0;
 	}
 
-	button.lucid-Button.lucid-Button-primary.lucid-SplitButton-Button-primary {
+	button.@{prefix}-Button.@{prefix}-Button-primary.@{prefix}-SplitButton-Button-primary {
 		border-right: 1px solid white;
 	}
 
-	.lucid-Button-primary {
-		.lucid-SplitButton-CaretIcon {
+	.@{prefix}-Button-primary {
+		.@{prefix}-SplitButton-CaretIcon {
 			fill: @color-white;
 		}
 	}

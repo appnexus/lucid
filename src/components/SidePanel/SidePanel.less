@@ -1,11 +1,11 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-SidePanel {
+.@{prefix}-SidePanel {
 
 	font-family: @fontFamily;
 
-	.lucid-SidePanel-pane {
+	.@{prefix}-SidePanel-pane {
 		position: fixed;
 		top: 0;
 		display: flex;
@@ -15,63 +15,63 @@
 		background-color: @color-neutral-2;
 		box-shadow: -1px 0px 5px 0px rgba(33, 31, 31, 0.3);
 
-		.lucid-SidePanel-is-animated& {
+		.@{prefix}-SidePanel-is-animated& {
 			transition: transform 200ms;
 		}
 
-		.lucid-SidePanel-is-expanded.lucid-SidePanel-is-expanded& {
+		.@{prefix}-SidePanel-is-expanded.@{prefix}-SidePanel-is-expanded& {
 			transform: translateX(0);
 		}
 
-		.lucid-SidePanel-position-right& {
+		.@{prefix}-SidePanel-position-right& {
 			right: 0;
 			transform: translateX(100%);
 		}
 
-		.lucid-SidePanel-position-left& {
+		.@{prefix}-SidePanel-position-left& {
 			left: 0;
 			flex-direction: row-reverse;
 			transform: translateX(-100%);
 		}
 		
-		.lucid-SidePanel-header {
+		.@{prefix}-SidePanel-header {
 			border-bottom: @border-lightBorder;
 			background: white;
 			padding: 20px 20px 0 20px;
 			
-			.lucid-SidePanel-header-inner-wrapper {
+			.@{prefix}-SidePanel-header-inner-wrapper {
 				display: flex;
 				
-				.lucid-SidePanel-header-content {
+				.@{prefix}-SidePanel-header-content {
 					flex: 1;
 					height: 100%;
 				}
 				
-				.lucid-SidePanel-header-closer {
+				.@{prefix}-SidePanel-header-closer {
 					fill: @color-disabledText;
 					
 					// padding: 0;
 					// margin: 0;
 					// height: 16px;
 
-					.lucid-Button-content {
+					.@{prefix}-Button-content {
 						// height: 100%;
 						// width: 100%;
 						// padding: 0;
 					}
 					
-					.lucid-CrossIcon {
+					.@{prefix}-CrossIcon {
 						fill: @color-disabledText;
 					}
 				}
 			}
 		}
-		.lucid-SidePanel-body {
+		.@{prefix}-SidePanel-body {
 
 			height: 100%;
 			display: flex;
 
-			.lucid-SidePanel-grabber {
+			.@{prefix}-SidePanel-grabber {
 				background-color: @color-neutral-2;
 				width: 20px;
 				height: 100%;
@@ -81,7 +81,7 @@
 				cursor: grab;
 				box-sizing: border-box;
 	
-				.lucid-GripperVerticalIcon {
+				.@{prefix}-GripperVerticalIcon {
 					transform: translateX(-0.5px);
 					opacity: 50%;
 				}
@@ -93,13 +93,13 @@
 				&:active,
 				&:hover {
 	
-					.lucid-GripperVerticalIcon {
+					.@{prefix}-GripperVerticalIcon {
 						opacity: 1;
 					}
 				}
 			}
 
-			.lucid-SidePanel-content {
+			.@{prefix}-SidePanel-content {
 				overflow: auto;
 				padding: 20px 20px 20px 0;
 			}

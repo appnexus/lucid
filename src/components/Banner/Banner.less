@@ -6,7 +6,7 @@
 @Banner-size-spacing-topBottom: @size-standard;
 @Banner-size-iconFontSize: 16px;
 
-.lucid-Banner {
+.@{prefix}-Banner {
 	.transition-group-animation-fade();
 	.box-sizing();
 
@@ -19,12 +19,12 @@
 	display: flex;
 	color: @color-white;
 
-	&.lucid-Banner-has-close {
+	&.@{prefix}-Banner-has-close {
 		padding-right: @Banner-size-spacing-rightLeft;
 	}
 
 	// must use this specific selector in order to override default color
-	.lucid-Banner-close {
+	.@{prefix}-Banner-close {
 		fill: @color-white;
 
 		&:hover {
@@ -35,7 +35,7 @@
 	// States
 
 	&-has-icon {
-		& > .lucid-Banner-content {
+		& > .@{prefix}-Banner-content {
 			padding: @Banner-size-spacing-topBottom 0;
 		}
 	}
