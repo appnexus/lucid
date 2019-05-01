@@ -2,12 +2,17 @@
 @import (reference) '../../styles/mixins.less';
 
 .lucid-SidePanel {
+
+	font-family: @fontFamily;
+
 	.lucid-SidePanel-pane {
-		height: 100%;
 		position: fixed;
 		top: 0;
 		display: flex;
-
+		flex-direction: column;
+		height: 100%;
+		width: 240px;
+		background-color: @color-neutral-2;
 		box-shadow: -1px 0px 5px 0px rgba(33, 31, 31, 0.3);
 
 		.lucid-SidePanel-is-animated& {
@@ -28,75 +33,78 @@
 			flex-direction: row-reverse;
 			transform: translateX(-100%);
 		}
+		
+		.lucid-SidePanel-header {
+			border-bottom: @border-lightBorder;
+			background: white;
+			padding: 20px 20px 0 20px;
+			
+			.lucid-SidePanel-header-inner-wrapper {
+				display: flex;
+				
+				.lucid-SidePanel-header-content {
+					flex: 1;
+					height: 100%;
+				}
+				
+				.lucid-SidePanel-header-closer {
+					fill: @color-disabledText;
+					
+					// padding: 0;
+					// margin: 0;
+					// height: 16px;
 
-		.lucid-SidePanel-grabber {
-			background-color: @color-neutral-2;
-			width: 20px;
-			height: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			cursor: grab;
-			box-sizing: border-box;
-
-			.lucid-GripperVerticalIcon {
-				transform: translateX(-0.5px);
-				opacity: 50%;
-			}
-
-			&:active {
-				cursor: grabbing;
-			}
-
-			&:active,
-			&:hover {
-
-				.lucid-GripperVerticalIcon {
-					opacity: 1;
+					.lucid-Button-content {
+						// height: 100%;
+						// width: 100%;
+						// padding: 0;
+					}
+					
+					.lucid-CrossIcon {
+						fill: @color-disabledText;
+					}
 				}
 			}
 		}
+		.lucid-SidePanel-body {
 
-		.lucid-SidePanel-panel {
-			width: 240px;
 			height: 100%;
-			background-color: @color-neutral-2;
 			display: flex;
-			flex-direction: column;
 
-
-			.lucid-SidePanel-header {
-				border-bottom: @border-lightBorder;
-				background: white;
-				
-				.lucid-SidePanel-header-inner-wrapper {
-					display: flex;
-					
-					.lucid-SidePanel-header-content {
-						flex: 1;
-						margin: 6px;
-						height: 100%;
-					}
-
-					.lucid-SidePanel-header-closer {
-						height: 100%;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						padding: @size-XS;
-						margin: @size-standard;
-						
-						.lucid-CrossIcon {
-							fill: @color-disabledText;
-						}
+			.lucid-SidePanel-grabber {
+				background-color: @color-neutral-2;
+				width: 20px;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				cursor: grab;
+				box-sizing: border-box;
+	
+				.lucid-GripperVerticalIcon {
+					transform: translateX(-0.5px);
+					opacity: 50%;
+				}
+	
+				&:active {
+					cursor: grabbing;
+				}
+	
+				&:active,
+				&:hover {
+	
+					.lucid-GripperVerticalIcon {
+						opacity: 1;
 					}
 				}
 			}
 
 			.lucid-SidePanel-content {
 				overflow: auto;
-				padding: 20px 20px 20px 0
+				padding: 20px 20px 20px 0;
 			}
+
 		}
+		
 	}
 }

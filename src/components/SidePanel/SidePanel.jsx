@@ -103,32 +103,40 @@ class SidePanel extends React.Component {
 				isAnimated={isAnimated}
 				{...omitProps(passThroughs, SidePanel)}
 			>
-				<div className={cx('&-pane')}>
-					{!isResizeDisabled && (
-						<DragCaptureZone
-							className={cx('&-grabber')}
-							onDragStart={this.handleResizeStart}
-							onDrag={this.handleResize}
-							onDragEnd={this.handleResizeEnd}
-						>
-							<GripperVerticalIcon />
-						</DragCaptureZone>
-					)}
-					<div className={cx('&-panel')} style={{ width: this.state.width }}>
-						{headerEl && (
-							<div className={cx('&-header')}>
-								<div className={cx('&-header-inner-wrapper')}>
-									<div className={cx('&-header-content')}>{headerChildren}</div>
+				<div className={cx('&-pane')} style={{ width: this.state.width }}>
+					{headerEl && (
+						<div className={cx('&-header')}>
+							<div className={cx('&-header-inner-wrapper')}>
+								<div className={cx('&-header-content')}>{headerChildren}</div>
 
-									<Button kind="invisible" className={cx('&-header-closer')}>
-										<CrossIcon
-											isClickable
-											onClick={onCollapse}
-											presetSize="large"
-										/>
-									</Button>
-								</div>
+								<CrossIcon
+									className={cx('&-header-closer')}
+									isClickable
+									onClick={onCollapse}
+									presetSize="large"
+									style={{
+										height: 16,
+										width: 16,
+									}}
+								/>
+
+								{/* <Button kind="invisible" className={cx('&-header-closer')}>
+									
+								</Button>  */}
 							</div>
+						</div>
+					)}
+
+					<div className={cx('&-body')}>
+						{!isResizeDisabled && (
+							<DragCaptureZone
+								className={cx('&-grabber')}
+								onDragStart={this.handleResizeStart}
+								onDrag={this.handleResize}
+								onDragEnd={this.handleResizeEnd}
+							>
+								<GripperVerticalIcon />
+							</DragCaptureZone>
 						)}
 						<div className={cx('&-content')}>{children}</div>
 					</div>
