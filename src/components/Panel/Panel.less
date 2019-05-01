@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-Panel {
+.@{prefix}-Panel {
 	overflow: hidden;
 	border-radius: @size-borderRadius;
 	margin: 0;
@@ -13,7 +13,7 @@
 		margin: 0 @size-standard @size-standard @size-standard;
 	}
 
-	.lucid-Panel-is-scrollable& {
+	.@{prefix}-Panel-is-scrollable& {
 		display: flex;
 		flex-direction: column;
 	}
@@ -22,18 +22,18 @@
 		padding: @size-standard;
 		border-bottom: @border-lightBorder;
 
-		.lucid-Panel-is-scrollable& {
+		.@{prefix}-Panel-is-scrollable& {
 			flex-shrink: 0;
 		}
 	}
 
 	& > &-content {
-		.lucid-Panel-is-not-gutterless& {
+		.@{prefix}-Panel-is-not-gutterless& {
 			overflow: auto;
 			padding: @size-standard;
 		}
 
-		.lucid-Panel-is-scrollable& {
+		.@{prefix}-Panel-is-scrollable& {
 			overflow: auto;
 			flex: 1 1 auto;
 		}
@@ -44,7 +44,7 @@
 		padding: @size-standard;
 		border-top: @border-lightBorder;
 
-		.lucid-Panel-is-scrollable& {
+		.@{prefix}-Panel-is-scrollable& {
 			flex-shrink: 0;
 		}
 	}

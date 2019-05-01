@@ -4,12 +4,12 @@
 @Autocomplete-size-menu-maxHeight: 220px;
 @Autocomplete-size-controlHeight: @size-standard-height;
 
-.lucid-Autocomplete {
-	&:not(.lucid-ContextMenu-FlyOut) {
+.@{prefix}-Autocomplete {
+	&:not(.@{prefix}-ContextMenu-FlyOut) {
 		width: 100%;
 	}
 
-	.lucid-ContextMenu {
+	.@{prefix}-ContextMenu {
 		width: 100%;
 	}
 
@@ -33,7 +33,7 @@
 
 		// The highly specific selector makes it so global input styles
 		// are less likely to affect the Autocomplete input.
-		& .lucid-Autocomplete-Control-input {
+		& .@{prefix}-Autocomplete-Control-input {
 			background: none @color-transparent;
 			border: 0 solid @color-transparent;
 			outline: none;
@@ -46,7 +46,7 @@
 			width: 100%;
 		}
 
-		.lucid-CaretIcon {
+		.@{prefix}-CaretIcon {
 			fill: @color-black;
 			width: 8px;
 			height: 8px;
@@ -70,25 +70,25 @@
 		}
 	}
 
-	&.lucid-DropMenu-is-expanded {
-		&.lucid-DropMenu-direction-up {
-			.lucid-Autocomplete-Control {
+	&.@{prefix}-DropMenu-is-expanded {
+		&.@{prefix}-DropMenu-direction-up {
+			.@{prefix}-Autocomplete-Control {
 				border-radius: 0 0 @size-borderRadius @size-borderRadius;
 			}
 		}
 
-		&.lucid-DropMenu-direction-down {
-			.lucid-Autocomplete-Control {
+		&.@{prefix}-DropMenu-direction-down {
+			.@{prefix}-Autocomplete-Control {
 				border-radius: @size-borderRadius @size-borderRadius 0 0;
 			}
 		}
 
-		.lucid-DropMenu-Control {
+		.@{prefix}-DropMenu-Control {
 			z-index: @zindex-tooltip;
 		}
 	}
 
-	&.lucid-ContextMenu-FlyOut {
+	&.@{prefix}-ContextMenu-FlyOut {
 		max-height: @Autocomplete-size-menu-maxHeight;
 	}
 

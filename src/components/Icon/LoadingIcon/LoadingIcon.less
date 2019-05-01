@@ -1,9 +1,9 @@
 @import (reference) '../../../styles/variables.less';
 @import (reference) '../../../styles/mixins.less';
 
-.lucid-LoadingIcon {
+.@{prefix}-LoadingIcon {
 	// simple rotation in IE11 because IE11 doesn't support svg animations
-	-ms-animation: lucid-LoadingIcon-rotate-animation linear infinite;
+	-ms-animation: "@{prefix}-LoadingIcon-rotate-animation" linear infinite;
 
 	circle {
 		fill: none;
@@ -13,7 +13,7 @@
 
 	&-spinner {
 		transform-origin: center;
-		animation: lucid-LoadingIcon-dash-animation linear infinite;
+		animation: "@{prefix}-LoadingIcon-dash-animation" linear infinite;
 		stroke: @color-primary;
 		stroke-dasharray: 150px 100px;
 	}
@@ -27,13 +27,13 @@
 	}
 }
 
-@keyframes lucid-LoadingIcon-rotate-animation {
+@keyframes "@{prefix}-LoadingIcon-rotate-animation" {
 	to {
 		transform: rotateZ(360deg);
 	}
 }
 
-@keyframes lucid-LoadingIcon-dash-animation {
+@keyframes "@{prefix}-LoadingIcon-dash-animation" {
 	0% {
 		stroke-dashoffset: 0;
 		stroke-dasharray: 151.327px 100px;

@@ -3,7 +3,7 @@
 
 @SearchableSelect-size-controlHeight: @size-standard-height;
 
-.lucid-SearchableSelect {
+.@{prefix}-SearchableSelect {
 	&-Control {
 		.no-safari-flicker();
 		.box-sizing();
@@ -34,7 +34,7 @@
 			margin-right: @size-standard;
 		}
 
-		.lucid-CaretIcon {
+		.@{prefix}-CaretIcon {
 			fill: @color-black;
 			margin-left: auto;
 		}
@@ -47,7 +47,7 @@
 			color: @color-white;
 			border-color: @featured-color-primary-borderColor;
 
-			.lucid-CaretIcon {
+			.@{prefix}-CaretIcon {
 				fill: @color-white;
 			}
 		}
@@ -63,15 +63,15 @@
 		}
 	}
 
-	&.lucid-DropMenu-is-expanded {
-		&.lucid-DropMenu-direction-up {
-			.lucid-SearchableSelect-Control {
+	&.@{prefix}-DropMenu-is-expanded {
+		&.@{prefix}-DropMenu-direction-up {
+			.@{prefix}-SearchableSelect-Control {
 				border-radius: 0 0 @size-borderRadius @size-borderRadius;
 			}
 		}
 
-		&.lucid-DropMenu-direction-down {
-			.lucid-SearchableSelect-Control {
+		&.@{prefix}-DropMenu-direction-down {
+			.@{prefix}-SearchableSelect-Control {
 				border-radius: @size-borderRadius @size-borderRadius 0 0;
 			}
 		}
@@ -80,10 +80,10 @@
 	&-Search-container {
 		background-color: @color-lightGray;
 
-		.lucid-SearchField {
+		.@{prefix}-SearchField {
 			padding: 8px;
 
-			.lucid-SearchField-Icon-container {
+			.@{prefix}-SearchField-Icon-container {
 				right: 8px;
 			}
 		}
@@ -92,15 +92,15 @@
 	&-Loading {
 		justify-content: center;
 
-		&.lucid-DropMenu-Option.lucid-DropMenu-Option-is-focused {
+		&.@{prefix}-DropMenu-Option.@{prefix}-DropMenu-Option-is-focused {
 			background: none;
 		}
 	}
 
-	.lucid-LoadingIndicator-message-container {
+	.@{prefix}-LoadingIndicator-message-container {
 		align-items: flex-start;
 
-		.lucid-LoadingMessage {
+		.@{prefix}-LoadingMessage {
 			border: none;
 			padding: @size-XS;
 		}
