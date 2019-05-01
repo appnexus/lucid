@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-Tag {
+.@{prefix}-Tag {
 	background: @color-neutral-4;
 
 	// positioning
@@ -92,7 +92,7 @@
 		line-height: 0; // pairs with `min-height` so its okay
 		text-transform: none;
 
-		& > .lucid-Tag-other-children {
+		& > .@{prefix}-Tag-other-children {
 			padding: 0 @size-S;
 		}
 	}
@@ -109,11 +109,11 @@
 		// margin/padding
 		padding: 0 0 0 @size-XS;
 
-		& > .lucid-Tag-other-children {
+		& > .@{prefix}-Tag-other-children {
 			// margin/padding
 			padding: 0;
 
-			& > .lucid-Tag-remove-button {
+			& > .@{prefix}-Tag-remove-button {
 				// margin/padding
 				margin: 0 2px;
 			}

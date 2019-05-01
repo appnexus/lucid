@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-Paginator {
+.@{prefix}-Paginator {
 	font-size: @fontSize;
 	font-family: @fontFamily;
 
@@ -19,13 +19,13 @@
 	flex-direction: row;
 	align-items: center;
 
-	& > .lucid-TextField {
+	& > .@{prefix}-TextField {
 		text-align: center;
 		width: 45px;
 		margin-right: @size-S;
 	}
 
-	& > .lucid-Button,
+	& > .@{prefix}-Button,
 	& > span {
 		margin-right: @size-S;
 	}

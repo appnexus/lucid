@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-ExpanderPanel {
+.@{prefix}-ExpanderPanel {
 	&-icon {
 		.box-sizing();
 
@@ -22,14 +22,14 @@
 		align-items: center;
 
 		&:hover {
-			> .lucid-ExpanderPanel-icon {
+			> .@{prefix}-ExpanderPanel-icon {
 
 				background-color: @featured-color-default-backgroundColor;
 				border: solid 1px @featured-color-default-borderColor;
 				border-radius: @size-borderRadius;
 				outline: none;
 
-				.lucid-ChevronIcon {
+				.@{prefix}-ChevronIcon {
 					fill: @color-darkGray;
 				}
 			}
@@ -44,11 +44,11 @@
 		}
 	}
 
-	> .lucid-Panel-content.lucid-Panel-content { // increased specificity
+	> .@{prefix}-Panel-content.@{prefix}-Panel-content { // increased specificity
 		padding: 0;
 	}
 
-	> .lucid-Panel-Header {
+	> .@{prefix}-Panel-Header {
 		border-bottom: none;
 	}
 

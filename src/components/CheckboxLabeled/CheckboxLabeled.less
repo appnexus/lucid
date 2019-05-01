@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-CheckboxLabeled {
+.@{prefix}-CheckboxLabeled {
 	align-items: flex-start;
 	color: @color-darkGray;
 	cursor: pointer;
@@ -11,7 +11,7 @@
 	justify-content: flex-start;
 	width: fit-content;
 
-	> .lucid-Checkbox {
+	> .@{prefix}-Checkbox {
 		flex: 0 0 @Checkbox-size;
 		margin-right: @size-XXS;
 	}
@@ -24,35 +24,35 @@
 		cursor: not-allowed;
 	}
 
-	&:hover .lucid-Checkbox-visualization-container {
+	&:hover .@{prefix}-Checkbox-visualization-container {
 		border: @color-primary solid 2px;
 		transition: @Checkbox-animation-timing;
 	}
 	
-	&-is-selected:hover .lucid-Checkbox-visualization-container,
-	&-is-selected:hover .lucid-CheckboxLabeled-Checkbox,
-	&:hover .lucid-Checkbox-visualization-glow,
-	&-is-selected:hover .lucid-CheckboxLabeled-Checkbox {
+	&-is-selected:hover .@{prefix}-Checkbox-visualization-container,
+	&-is-selected:hover .@{prefix}-CheckboxLabeled-Checkbox,
+	&:hover .@{prefix}-Checkbox-visualization-glow,
+	&-is-selected:hover .@{prefix}-CheckboxLabeled-Checkbox {
 		.opacity(0.8);
 	}
 
-	&&-is-disabled .lucid-Checkbox-visualization-container,
-	&&-is-disabled:hover .lucid-Checkbox-visualization-container {
+	&&-is-disabled .@{prefix}-Checkbox-visualization-container,
+	&&-is-disabled:hover .@{prefix}-Checkbox-visualization-container {
 		background-color: @Checkbox-disabled-backgroundColor;
 		border-color: @Checkbox-disabled-borderColor;
 	}
 
-	&&-is-disabled:hover .lucid-Checkbox-visualization-glow {
+	&&-is-disabled:hover .@{prefix}-Checkbox-visualization-glow {
 		.opacity(0);
 		transform: none;
 	}
 	
-	&&-is-disabled&&-is-selected:hover .lucid-Checkbox-visualization-container {
+	&&-is-disabled&&-is-selected:hover .@{prefix}-Checkbox-visualization-container {
 		.opacity(0.5);
 		background-color: @color-primary;
 	}
 
-	&&-is-selected .lucid-Checkbox-visualization-container {
+	&&-is-selected .@{prefix}-Checkbox-visualization-container {
 		border-color: @color-primary;
 		background-color: @color-primary;
 	}

@@ -7,12 +7,12 @@
 @Button-size-height-large: @size-standard-height + 12;
 @Button-size-borderRadius: @size-borderRadius;
 
-.lucid-Button {
+.@{prefix}-Button {
 	// Mixins
 	.no-safari-flicker();
 	.box-sizing();
-	background-color: @featured-color-default-backgroundColor;
 
+	background-color: @featured-color-default-backgroundColor;
 	cursor: pointer;
 	height: @Button-size-height;
 	border: @border-standardBorder;
@@ -37,6 +37,7 @@
 	&:hover:not(&-is-disabled) {
 		background-color: @featured-color-default-backgroundColorHover;
 	}
+
 	&:active:not(&-is-disabled) {
 		background-color: @featured-color-default-backgroundColorFocus;
 	}
@@ -50,7 +51,8 @@
 
 	&&-has-only-icon {
 		padding: 0 5px;
-		.lucid-Button-content > .lucid-Icon {
+
+		.@{prefix}-Button-content > .@{prefix}-Icon {
 			margin-right: 0;
 		}
 	}
@@ -61,7 +63,7 @@
 		align-items: center;
 		height: 100%;
 
-		> .lucid-Icon {
+		> .@{prefix}-Icon {
 			transition: color @timing-animation-hover, fill @timing-animation-hover;
 			margin-right: 5px;
 		}
@@ -73,47 +75,79 @@
 
 	// Types
 	&&-primary {
-		.make-is-disabled(lucid-Button, @color-white);
+		&.@{prefix}-Button-is-disabled {
+			opacity: @opacity-disabled;
+
+			.@{prefix}-Icon {
+				fill: @color-white;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
 		.bold();
 
 		background-color: @featured-color-primary-backgroundColor;
 		border-color: @featured-color-primary-borderColor;
 		color: @color-white;
 
-		.lucid-Icon { fill: @color-white; }
+		.@{prefix}-Icon { fill: @color-white; }
 
-		&:hover:not(.lucid-Button-is-disabled) {
+		&:hover:not(.@{prefix}-Button-is-disabled) {
 			background-color: @featured-color-primary-backgroundColor;
 			.opacity(@opacity-hover);
 		}
-		&:active:not(.lucid-Button-is-disabled) {
+
+		&:active:not(.@{prefix}-Button-is-disabled) {
 			background-color: @featured-color-primary-backgroundColor;
 			.opacity(1);
 		}
 	}
 
 	&&-danger {
-		.make-is-disabled(lucid-Button, @color-white);
+		&.@{prefix}-Button-is-disabled {
+			opacity: @opacity-disabled;
+
+			.@{prefix}-Icon {
+				fill: @color-white;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
 		.bold();
 
 		background-color: @featured-color-danger-backgroundColor;
 		border-color: @featured-color-danger-borderColor;
 		color: @color-white;
 
-		.lucid-Icon { fill: @color-white; }
+		.@{prefix}-Icon { fill: @color-white; }
 
-		&:hover:not(.lucid-Button-is-disabled) {
+		&:hover:not(.@{prefix}-Button-is-disabled) {
 			background-color: @featured-color-danger-backgroundColor;
 			.opacity(@opacity-hover);
 		}
-		&:active:not(.lucid-Button-is-disabled) {
+
+		&:active:not(.@{prefix}-Button-is-disabled) {
 			background-color: @featured-color-danger-backgroundColor;
 			.opacity(1);
 		}
 	}
 
 	&&-link {
-		.make-is-disabled(lucid-Button);
+		&.@{prefix}-Button-is-disabled {
+			opacity: @opacity-disabled;
+
+			.@{prefix}-Icon {
+				fill: @featured-color-default-iconColorDisabled;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
 
 		border: none;
 		background: none;
@@ -130,11 +164,11 @@
 			opacity: 0;
 		}
 
-		.lucid-Button-content {
+		.@{prefix}-Button-content {
 			line-height: 1em;
 		}
 
-		.lucid-Icon {
+		.@{prefix}-Icon {
 			fill: @color-primary;
 			margin-right: 0.25em;
 
@@ -146,29 +180,38 @@
 
 	&&-link&-has-only-icon {
 		// Clear the right margin, only need it if the has text with it
-		.lucid-Icon {
+		.@{prefix}-Icon {
 			margin-right: 0;
 		}
 	}
 
 	&&-invisible {
 		.gradient-reset();
-		.make-is-disabled(lucid-Button);
+
+		&.@{prefix}-Button-is-disabled {
+			opacity: @opacity-disabled;
+
+			.@{prefix}-Icon {
+				fill: @featured-color-default-iconColorDisabled;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
 
 		border: none;
 		background: none;
-
-
 
 		&:active::before {
 			opacity: 0;
 		}
 
-		.lucid-Button-content {
+		.@{prefix}-Button-content {
 			line-height: 1em;
 		}
 
-		.lucid-Icon {
+		.@{prefix}-Icon {
 			fill: @color-primary;
 			margin-right: 0.25em;
 
@@ -197,7 +240,7 @@
 		padding: 0 @Button-size-padding*1.5;
 		font-size: 1.2em;
 
-		.lucid-Icon {
+		.@{prefix}-Icon {
 			width: 1.2em;
 			height: 1.2em;
 		}
@@ -217,14 +260,23 @@
 		border-color: @featured-color-primary;
 	}
 
-
 	&&-is-active&-danger {
 		border-color: @featured-color-danger-borderColor;
 		background: @featured-color-danger;
 	}
 
 	&-is-disabled {
-		.make-is-disabled(lucid-Button);
+		&.@{prefix}-Button-is-disabled {
+			opacity: @opacity-disabled;
+
+			.@{prefix}-Icon {
+				fill: @featured-color-default-iconColorDisabled;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 
 	// Also needed in some cases to beat other libraries (e.g. pure.css)
@@ -232,4 +284,3 @@
 		.no-cursor();
 	}
 }
-

@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-.lucid-RadioButtonLabeled {
+.@{prefix}-RadioButtonLabeled {
 	align-items: flex-start;
 	color: @color-darkGray;
 	cursor: pointer;
@@ -11,7 +11,7 @@
 	justify-content: flex-start;
 	width: fit-content;
 
-	> .lucid-RadioButton {
+	> .@{prefix}-RadioButton {
 		flex: 0 0 @RadioButton-size;
 		margin-right: @size-XXS;
 	}
@@ -25,22 +25,22 @@
 		cursor: not-allowed;
 	}
 
-	&:hover .lucid-RadioButton-visualization-container {
+	&:hover .@{prefix}-RadioButton-visualization-container {
 		border-color: @color-primary;
 	}
 
-	&&-is-disabled .lucid-RadioButton-visualization-container,
-	&&-is-disabled:hover .lucid-RadioButton-visualization-container {
+	&&-is-disabled .@{prefix}-RadioButton-visualization-container,
+	&&-is-disabled:hover .@{prefix}-RadioButton-visualization-container {
 		background-color: rgba(0, 0, 0, 0.05);
 		border-color: rgba(0, 0, 0, 0.1);
 	}
 
-	&&-is-disabled:hover .lucid-RadioButton-visualization-glow {
+	&&-is-disabled:hover .@{prefix}-RadioButton-visualization-glow {
 		.opacity(0);
 	}
 
-	&&-is-disabled&&-is-selected:hover > .lucid-RadioButton .lucid-RadioButton-visualization-container,
-	&&-is-selected > .lucid-RadioButton .lucid-RadioButton-visualization-container {
+	&&-is-disabled&&-is-selected:hover > .@{prefix}-RadioButton .@{prefix}-RadioButton-visualization-container,
+	&&-is-selected > .@{prefix}-RadioButton .@{prefix}-RadioButton-visualization-container {
 		border-color: @color-primary;
 	}
 }
