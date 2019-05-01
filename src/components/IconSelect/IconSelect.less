@@ -15,6 +15,7 @@
 
 // Base Iconbox
 .lucid-IconSelect-Item {
+	cursor: pointer;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -33,7 +34,6 @@
 		left: 0;
 		position: absolute;
 		border: 1px solid @color-gray;
-		border-radius: 4px;
 		transition: all 0.1s linear;
 		width: 100%;
 		height: 100%;
@@ -47,9 +47,12 @@
 	&.lucid-IconSelect-Item-is-selected {
 		cursor: pointer;
 
+		// &.lucid-IconSelect-Item-is-disabled::before {
+		// 	border: 2px solid @color-primary-50;
+		// }
+
 		&:not(.lucid-IconSelect-Item-is-indeterminate)::before {
-			border-width: 2px;
-			border-color: @color-primary;
+			border: 2px solid @color-primary;
 		}
 
 		.lucid-Icon {
@@ -58,15 +61,7 @@
 		}
 
 		.lucid-Checkbox-visualization-container {
-			border-color: @color-primary;
-		}
-	}
-
-	// On Hover
-	&:not(.lucid-IconSelect-Item-is-disabled):hover {
-		.lucid-Checkbox-visualization-glow {
-			opacity: 0.3;
-			transform: scale(1.375);
+			border: 2px solid @color-primary;
 		}
 	}
 
@@ -86,9 +81,43 @@
 	}
 }
 
+// &.lucid-IconSelect-Item-is-active,
+// &.lucid-IconSelect-Item-is-selected {
+// 	// cursor: pointer;
+
+// 	&.lucid-IconSelect-Item-is-disabled::before {
+// 		// border: 2px solid @color-primary-50;
+// 	}
+
+// 	&:not(.lucid-IconSelect-Item-is-indeterminate)::before {
+// 	}
+
+// 	// .lucid-Icon {
+// 	// 	opacity: 1;
+// 	// 	fill: @color-primary;
+// 	// }
+
+// 	.lucid-Checkbox-visualization-container {
+// 		border: 2px solid @color-primary;
+// 	}
+// }
+
 // Disabled
-.lucid-IconSelect-Item.lucid-IconSelect-Item-is-disabled {
+&.lucid-IconSelect-Item-is-disabled {
 	opacity: 0.9;
+
+	&.lucid-IconSelect-Item-is-active,
+	&.lucid-IconSelect-Item-is-selected {
+
+		&.lucid-IconSelect-Item-is-disabled::before {
+			border: 2px solid @color-primary-50;
+		}
+	}
+
+	.lucid-CheckboxLabeled {
+		color: @color-transparent-gray-35;
+	}
+
 
 	&:hover {
 		cursor: not-allowed;
@@ -100,7 +129,7 @@
 }
 
 // Disabled && Selected
-.lucid-IconSelect-Item.lucid-IconSelect-Item-is-disabled.lucid-IconSelect-Item-is-selected {
+&.lucid-IconSelect-Item-is-disabled.lucid-IconSelect-Item-is-selected {
 	.lucid-Icon {
 		opacity: 0.5;
 		fill: @color-primary;
@@ -108,7 +137,7 @@
 }
 
 // Icon
-.lucid-IconSelect-Item .lucid-Icon {
+& .lucid-Icon {
 	width: 72px;
 	height: 32px;
 	fill: @color-darkGray;
@@ -117,7 +146,7 @@
 
 // Has a Checkbox Input
 .lucid-IconSelect-Item-multi {
-	height: 103px;
+	height: 110px;
 }
 
 .lucid-IconSelect-Item-checkbox {
