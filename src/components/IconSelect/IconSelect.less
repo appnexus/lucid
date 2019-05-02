@@ -41,6 +41,12 @@
 		margin: 0 18px 0 0;
 	}
 
+	.@{prefix}-Icon {
+		width: 72px;
+		height: 32px;
+		transition: all 0.1s linear;
+	}
+
 	// On Hover, Active, Indeterminate, or Selected
 	&:not(.@{prefix}-IconSelect-Item-is-disabled):hover,
 	&.@{prefix}-IconSelect-Item-is-active,
@@ -78,12 +84,11 @@
 }
 
 // Disabled
-&.@{prefix}-IconSelect-Item-is-disabled {
+.@{prefix}-IconSelect-Item-is-disabled {
 	opacity: 0.9;
 
 	&.@{prefix}-IconSelect-Item-is-active,
 	&.@{prefix}-IconSelect-Item-is-selected {
-
 		&.@{prefix}-IconSelect-Item-is-disabled::before {
 			border: 2px solid @color-primary-50;
 		}
@@ -92,7 +97,6 @@
 	.@{prefix}-CheckboxLabeled {
 		color: @color-transparent-gray-35;
 	}
-
 
 	&:hover {
 		cursor: not-allowed;
@@ -104,19 +108,11 @@
 }
 
 // Disabled && Selected
-&.@{prefix}-IconSelect-Item-is-disabled.@{prefix}-IconSelect-Item-is-selected {
+.@{prefix}-IconSelect-Item-is-disabled.@{prefix}-IconSelect-Item-is-selected {
 	.@{prefix}-Icon {
 		opacity: 0.5;
 		fill: @color-primary;
 	}
-}
-
-// Icon
-& .@{prefix}-Icon {
-	width: 72px;
-	height: 32px;
-	fill: @color-darkGray;
-	transition: all 0.1s linear;
 }
 
 // Has a Checkbox Input

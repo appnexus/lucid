@@ -47,7 +47,7 @@ const NotchedTag = createClass({
 	statics: {
 		peek: {
 			description: `
-				A tag with a notched edge. 
+				A tag with a notched edge.
 			`,
 			categories: ['visual design'],
 		},
@@ -111,10 +111,10 @@ const NotchedTag = createClass({
 			<div
 				className={cx(
 					'&',
-					className,
-					tagStyle,
-					size,
-					type === TYPE_FILLED ? 'no-border' : ''
+					`&-${tagStyle}`,
+					`&-${size}`,
+					type === TYPE_FILLED ? '&-no-border' : '',
+					className
 				)}
 				{...passThroughs}
 				style={{

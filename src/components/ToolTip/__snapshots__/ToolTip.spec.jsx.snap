@@ -624,11 +624,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 1.interac
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 2.close-button 1`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 2.variants 1`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
-  direction="right"
+  direction="up"
   directonOffset={15}
   getAlignmentOffset={[Function]}
   isExpanded={true}
@@ -643,11 +643,90 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.close-b
     elementType="span"
   >
     <div>
-      Target
+      No Title or Close Button
     </div>
   </ContextMenu.Target>
   <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-right lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-default"
+    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-default"
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    style={
+      Object {
+        "maxWidth": 200,
+      }
+    }
+  >
+    ToolTip is a utility component to create a transient message anchored to another component.
+  </ContextMenu.FlyOut>
+</ContextMenu>
+`;
+
+exports[`ToolTip [common] example testing should match snapshot(s) for 2.variants 2`] = `
+<ContextMenu
+  alignment="center"
+  className="lucid-ToolTip"
+  direction="up"
+  directonOffset={15}
+  getAlignmentOffset={[Function]}
+  isExpanded={true}
+  minWidthOffset={0}
+  onClickOut={null}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  portalId={null}
+>
+  <ContextMenu.Target
+    className="lucid-ToolTip-Target"
+    elementType="span"
+  >
+    <div>
+      With Close Button
+    </div>
+  </ContextMenu.Target>
+  <ContextMenu.FlyOut
+    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-default"
+    onMouseOut={[Function]}
+    onMouseOver={[Function]}
+    style={
+      Object {
+        "maxWidth": 200,
+      }
+    }
+  >
+    <CrossIcon
+      className="lucid-ToolTip-FlyOut-close"
+      onClick={[Function]}
+      presetSize="small"
+    />
+    ToolTip is a utility component to create a transient message anchored to another component.
+  </ContextMenu.FlyOut>
+</ContextMenu>
+`;
+
+exports[`ToolTip [common] example testing should match snapshot(s) for 2.variants 3`] = `
+<ContextMenu
+  alignment="center"
+  className="lucid-ToolTip"
+  direction="up"
+  directonOffset={15}
+  getAlignmentOffset={[Function]}
+  isExpanded={true}
+  minWidthOffset={0}
+  onClickOut={null}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  portalId={null}
+>
+  <ContextMenu.Target
+    className="lucid-ToolTip-Target"
+    elementType="span"
+  >
+    <div>
+      With Title and Close Button
+    </div>
+  </ContextMenu.Target>
+  <ContextMenu.FlyOut
+    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-default"
     onMouseOut={[Function]}
     onMouseOver={[Function]}
     style={
@@ -671,7 +750,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.close-b
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.variants 1`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 2.variants 4`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -690,12 +769,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.variant
     elementType="span"
   >
     <div>
-      Target for 
-      primary
+      No Title or Close Button
     </div>
   </ContextMenu.Target>
   <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-primary"
+    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-light"
     onMouseOut={[Function]}
     onMouseOver={[Function]}
     style={
@@ -704,17 +782,12 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.variant
       }
     }
   >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Primary
-    </h2>
     ToolTip is a utility component to create a transient message anchored to another component.
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.variants 2`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 2.variants 5`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -733,12 +806,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.variant
     elementType="span"
   >
     <div>
-      Target for 
-      success
+      With Close Button
     </div>
   </ContextMenu.Target>
   <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-success"
+    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-light"
     onMouseOut={[Function]}
     onMouseOver={[Function]}
     style={
@@ -747,17 +819,17 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.variant
       }
     }
   >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Success
-    </h2>
+    <CrossIcon
+      className="lucid-ToolTip-FlyOut-close"
+      onClick={[Function]}
+      presetSize="small"
+    />
     ToolTip is a utility component to create a transient message anchored to another component.
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.variants 3`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 2.variants 6`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -776,12 +848,11 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.variant
     elementType="span"
   >
     <div>
-      Target for 
-      warning
+      With Title and Close Button
     </div>
   </ContextMenu.Target>
   <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-warning"
+    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-light"
     onMouseOut={[Function]}
     onMouseOver={[Function]}
     style={
@@ -790,146 +861,22 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 3.variant
       }
     }
   >
+    <CrossIcon
+      className="lucid-ToolTip-FlyOut-close"
+      onClick={[Function]}
+      presetSize="small"
+    />
     <h2
       className="lucid-ToolTip-FlyOut-Title"
     >
-      Warning
+      Title
     </h2>
     ToolTip is a utility component to create a transient message anchored to another component.
   </ContextMenu.FlyOut>
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.variants 4`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="up"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target for 
-      danger
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-danger"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Danger
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component.
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.variants 5`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="up"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target for 
-      info
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-info"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Info
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component.
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 3.variants 6`] = `
-<ContextMenu
-  alignment="center"
-  className="lucid-ToolTip"
-  direction="up"
-  directonOffset={15}
-  getAlignmentOffset={[Function]}
-  isExpanded={true}
-  minWidthOffset={0}
-  onClickOut={null}
-  onMouseOut={[Function]}
-  onMouseOver={[Function]}
-  portalId={null}
->
-  <ContextMenu.Target
-    className="lucid-ToolTip-Target"
-    elementType="span"
-  >
-    <div>
-      Target for 
-      default
-    </div>
-  </ContextMenu.Target>
-  <ContextMenu.FlyOut
-    className="lucid-ToolTip-FlyOut lucid-ToolTip-FlyOut-up lucid-ToolTip-FlyOut-center lucid-ToolTip-FlyOut-default"
-    onMouseOut={[Function]}
-    onMouseOver={[Function]}
-    style={
-      Object {
-        "maxWidth": 200,
-      }
-    }
-  >
-    <h2
-      className="lucid-ToolTip-FlyOut-Title"
-    >
-      Default
-    </h2>
-    ToolTip is a utility component to create a transient message anchored to another component.
-  </ContextMenu.FlyOut>
-</ContextMenu>
-`;
-
-exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 1`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 1`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -981,7 +928,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 2`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 2`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1033,7 +980,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 3`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 3`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1085,7 +1032,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 4`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 4`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1137,7 +1084,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 5`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 5`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1189,7 +1136,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 6`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 6`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1241,7 +1188,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 7`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 7`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1293,7 +1240,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 8`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 8`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1345,7 +1292,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 9`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 9`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1397,7 +1344,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 10`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 10`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1449,7 +1396,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 11`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 11`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"
@@ -1501,7 +1448,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 
 </ContextMenu>
 `;
 
-exports[`ToolTip [common] example testing should match snapshot(s) for 4.static 12`] = `
+exports[`ToolTip [common] example testing should match snapshot(s) for 3.static 12`] = `
 <ContextMenu
   alignment="center"
   className="lucid-ToolTip"

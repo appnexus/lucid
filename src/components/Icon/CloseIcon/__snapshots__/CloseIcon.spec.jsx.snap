@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CloseIcon [example testing] should match snapshot(s) for 1.default 1`] = `
+exports[`CloseIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
-  className="anxr-CloseIcon"
+  className="lucid-CloseIcon"
   height="16"
   isBadge={false}
   isClickable={false}
@@ -18,10 +18,10 @@ exports[`CloseIcon [example testing] should match snapshot(s) for 1.default 1`] 
 </Icon>
 `;
 
-exports[`CloseIcon [example testing] should match snapshot(s) for 2.clickable 1`] = `
+exports[`CloseIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
-  className="anxr-CloseIcon"
+  className="lucid-CloseIcon"
   height="16"
   isBadge={false}
   isClickable={true}
@@ -36,10 +36,10 @@ exports[`CloseIcon [example testing] should match snapshot(s) for 2.clickable 1`
 </Icon>
 `;
 
-exports[`CloseIcon [example testing] should match snapshot(s) for 3.disabled 1`] = `
+exports[`CloseIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
-  className="anxr-CloseIcon"
+  className="lucid-CloseIcon"
   height="16"
   isBadge={false}
   isClickable={false}

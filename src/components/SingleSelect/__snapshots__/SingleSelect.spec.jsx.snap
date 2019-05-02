@@ -35,7 +35,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -112,7 +112,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -192,7 +192,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.d
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -269,7 +269,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.d
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-disabled"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-disabled lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -346,7 +346,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -488,7 +488,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.n
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -565,7 +565,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -1746,7 +1746,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -1863,7 +1863,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.n
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span
@@ -1940,7 +1940,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.a
 >
   <DropMenu.Control>
     <div
-      className="lucid-SingleSelect-Control"
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-null-option"
       tabIndex={0}
     >
       <span

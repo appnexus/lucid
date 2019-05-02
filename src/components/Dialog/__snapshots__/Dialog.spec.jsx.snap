@@ -815,7 +815,196 @@ exports[`Dialog [common] example testing should match snapshot(s) for 3.large-wi
 </Overlay>
 `;
 
-exports[`Dialog [common] example testing should match snapshot(s) for 4.no-modal 1`] = `
+exports[`Dialog [common] example testing should match snapshot(s) for 4.menu 1`] = `
+<Overlay
+  className="lucid-Dialog"
+  height={500}
+  isAnimated={true}
+  isModal={true}
+  isShown={false}
+  onBackgroundClick={[Function]}
+  onEscape={[Function]}
+>
+  <div
+    className="lucid-Dialog-window lucid-Dialog-window-is-medium lucid-Dialog-is-menu"
+  >
+    <header
+      className="lucid-Dialog-header"
+    >
+      Advanced Filters
+    </header>
+    <section
+      className="lucid-Dialog-body"
+    >
+      <p
+        style={
+          Object {
+            "fontSize": "16px",
+          }
+        }
+      >
+        Flavor
+      </p>
+      <CheckboxLabeled
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={true}
+        name="interactive-checkboxes"
+        onSelect={[Function]}
+        style={
+          Object {
+            "marginBottom": "3px",
+          }
+        }
+      >
+        <CheckboxLabeled.Label>
+          Chocolate
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
+      <CheckboxLabeled
+        isDisabled={false}
+        isIndeterminate={false}
+        isSelected={false}
+        name="interactive-checkboxes"
+        onSelect={[Function]}
+        style={
+          Object {
+            "marginBottom": "3px",
+          }
+        }
+      >
+        <CheckboxLabeled.Label>
+          Strawberry
+        </CheckboxLabeled.Label>
+      </CheckboxLabeled>
+      <p
+        style={
+          Object {
+            "fontSize": "16px",
+            "marginTop": "25px",
+          }
+        }
+      >
+        Flavor Combination Research
+      </p>
+      <SearchField
+        placeholder="Sundae school..."
+      />
+      <p
+        style={
+          Object {
+            "fontSize": "16px",
+            "marginTop": "25px",
+          }
+        }
+      >
+        Toppings
+      </p>
+      <SearchableMultiSelect
+        responsiveMode="small"
+      >
+        <SearchableMultiSelect.Option>
+          cookie dough
+        </SearchableMultiSelect.Option>
+        <SearchableMultiSelect.Option>
+          more ice cream
+        </SearchableMultiSelect.Option>
+        <SearchableMultiSelect.Option>
+          mochi
+        </SearchableMultiSelect.Option>
+        <SearchableMultiSelect.Option>
+          peanut butter cups
+        </SearchableMultiSelect.Option>
+      </SearchableMultiSelect>
+      <p
+        style={
+          Object {
+            "fontSize": "16px",
+            "marginTop": "25px",
+          }
+        }
+      >
+        Ice Cream Breaks
+      </p>
+      <SingleSelect>
+        <SingleSelect.Placeholder>
+          You must select a break...
+        </SingleSelect.Placeholder>
+        <SingleSelect.Option>
+          10am
+        </SingleSelect.Option>
+        <SingleSelect.Option>
+          11am
+        </SingleSelect.Option>
+        <SingleSelect.Option>
+          1pm
+        </SingleSelect.Option>
+        <SingleSelect.Option>
+          2pm
+        </SingleSelect.Option>
+      </SingleSelect>
+      <Dialog.Footer>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          kind="invisible"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginRight": "9px",
+            }
+          }
+          type="button"
+        >
+          Cancel
+        </Button>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          kind="primary"
+          onClick={[Function]}
+          type="button"
+        >
+          Save
+        </Button>
+      </Dialog.Footer>
+    </section>
+    <footer
+      className="lucid-Dialog-footer"
+    >
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginRight": "9px",
+          }
+        }
+        type="button"
+      >
+        Cancel
+      </Button>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="primary"
+        onClick={[Function]}
+        type="button"
+      >
+        Save
+      </Button>
+    </footer>
+  </div>
+</Overlay>
+`;
+
+exports[`Dialog [common] example testing should match snapshot(s) for 5.no-modal 1`] = `
 <Overlay
   className="lucid-Dialog"
   isAnimated={true}
@@ -897,7 +1086,7 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.no-modal
 </Overlay>
 `;
 
-exports[`Dialog [common] example testing should match snapshot(s) for 5.no-footer 1`] = `
+exports[`Dialog [common] example testing should match snapshot(s) for 6.no-footer 1`] = `
 <Overlay
   className="lucid-Dialog"
   isAnimated={true}
@@ -923,7 +1112,7 @@ exports[`Dialog [common] example testing should match snapshot(s) for 5.no-foote
 </Overlay>
 `;
 
-exports[`Dialog [common] example testing should match snapshot(s) for 6.no-gutters 1`] = `
+exports[`Dialog [common] example testing should match snapshot(s) for 7.no-gutters 1`] = `
 <Overlay
   className="lucid-Dialog"
   isAnimated={true}

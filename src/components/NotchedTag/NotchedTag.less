@@ -8,43 +8,50 @@
 	position: relative;
 	background-color: @color-neutral-4;
 
-	&.small {
+	&-small {
 		font-size: 10px;
 	}
 
-	&.no-border {
-		&.style-one {
+	&-no-border {
+		&.@{prefix}-NotchedTag-style-one {
 			background-color: @color-secondary-1;
 		}
-		&.style-two {
+
+		&.@{prefix}-NotchedTag-style-two {
 			background-color: @color-secondary-2;
 		}
-		&.style-three {
+
+		&.@{prefix}-NotchedTag-style-three {
 			background-color: @color-secondary-3;
 		}
 	}
 
-	&.style-one {
+	&-style-one {
 		.@{prefix}-NotchedTag-container {
 			color: @color-secondary-1;
+
 			&-filled {
 				color: @color-white;
 				background-color: @color-secondary-1;
 			}
 		}
 	}
-	&.style-two {
+
+	&-style-two {
 		.@{prefix}-NotchedTag-container {
 			color: @color-secondary-2;
+
 			&-filled {
 				color: @color-white;
 				background-color: @color-secondary-2;
 			}
 		}
 	}
-	&.style-three {
+
+	&-style-three {
 		.@{prefix}-NotchedTag-container {
 			color: @color-secondary-3;
+
 			&-filled {
 				color: @color-white;
 				background-color: @color-secondary-3;

@@ -147,7 +147,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 05.no-margi
     <Table
       density="extended"
       hasBorder={false}
-      hasLightHeader={false}
+      hasLightHeader={true}
       hasWordWrap={true}
       style={
         Object {
@@ -157,7 +157,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 05.no-margi
     >
       <Table.Thead>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -190,7 +189,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 05.no-margi
       </Table.Thead>
       <Table.Tbody>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -218,7 +216,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 05.no-margi
           </Table.Td>
         </Table.Tr>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -246,7 +243,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 05.no-margi
           </Table.Td>
         </Table.Tr>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -274,7 +270,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 05.no-margi
           </Table.Td>
         </Table.Tr>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -329,7 +324,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-conte
     <Table
       density="extended"
       hasBorder={false}
-      hasLightHeader={false}
+      hasLightHeader={true}
       hasWordWrap={true}
       style={
         Object {
@@ -339,7 +334,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-conte
     >
       <Table.Thead>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -372,7 +366,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-conte
       </Table.Thead>
       <Table.Tbody>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -400,7 +393,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-conte
           </Table.Td>
         </Table.Tr>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -428,7 +420,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-conte
           </Table.Td>
         </Table.Tr>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}
@@ -456,7 +447,6 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-conte
           </Table.Td>
         </Table.Tr>
         <Table.Tr
-          isActionable={false}
           isActive={false}
           isDisabled={false}
           isSelected={false}

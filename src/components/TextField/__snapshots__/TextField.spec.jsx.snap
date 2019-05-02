@@ -18,6 +18,24 @@ exports[`TextField [common] example testing should match snapshot(s) for basic 1
 />
 `;
 
+exports[`TextField [common] example testing should match snapshot(s) for basic 2`] = `
+<input
+  className="lucid-TextField lucid-TextField-is-disabled lucid-TextField-is-single-line"
+  disabled={true}
+  onBlur={[Function]}
+  onChange={[Function]}
+  onKeyDown={[Function]}
+  rows={5}
+  style={
+    Object {
+      "marginBottom": "10px",
+    }
+  }
+  type="text"
+  value="foo"
+/>
+`;
+
 exports[`TextField [common] example testing should match snapshot(s) for debounced 1`] = `
 <input
   className="lucid-TextField lucid-TextField-is-single-line"

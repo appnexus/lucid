@@ -2,19 +2,21 @@
 
 exports[`NotchedTag [common] example testing should match snapshot(s) for basic 1`] = `
 <div
-  className="lucid-NotchedTag"
+  className="lucid-NotchedTag lucid-NotchedTag-style-one lucid-NotchedTag-large"
   style={
     Object {
       "clipPath": "
 			polygon(
-				6px 0,
+				5px 0,
 				100% 0,
 				100% 100%,
 				0 100%,
-				0 10.392304845413264px
+				0 8.660254037844386px
 			)",
-      "height": 25,
-      "width": 40,
+      "display": "inline-block",
+      "height": "24px",
+      "marginRight": "10px",
+      "width": "40px",
     }
   }
 >
@@ -22,45 +24,95 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for basic 
     className="lucid-NotchedTag-container"
     style={
       Object {
-        "bottom": 2,
+        "bottom": "2px",
         "clipPath": "
 			polygon(
-				5px 0,
+				4px 0,
 				100% 0,
 				100% 100%,
 				0 100%,
-				0 9.392304845413264px
+				0 7.6602540378443855px
 			)",
-        "left": 2,
-        "right": 2,
-        "top": 2,
+        "left": "2px",
+        "right": "2px",
+        "top": "2px",
       }
     }
   >
     <div
       className="lucid-NotchedTag-container-centered"
     >
-      HI
+      ADV
     </div>
   </div>
 </div>
 `;
 
-exports[`NotchedTag [common] example testing should match snapshot(s) for filled 1`] = `
+exports[`NotchedTag [common] example testing should match snapshot(s) for basic 2`] = `
 <div
-  className="lucid-NotchedTag"
+  className="lucid-NotchedTag lucid-NotchedTag-style-one lucid-NotchedTag-small"
   style={
     Object {
       "clipPath": "
 			polygon(
-				6px 0,
+				4px 0,
 				100% 0,
 				100% 100%,
 				0 100%,
-				0 10.392304845413264px
+				0 6.928203230275509px
 			)",
-      "height": 25,
-      "width": 40,
+      "display": "inline-block",
+      "height": "18px",
+      "marginRight": "10px",
+      "width": "30px",
+    }
+  }
+>
+  <div
+    className="lucid-NotchedTag-container"
+    style={
+      Object {
+        "bottom": "2px",
+        "clipPath": "
+			polygon(
+				3px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 5.928203230275509px
+			)",
+        "left": "2px",
+        "right": "2px",
+        "top": "2px",
+      }
+    }
+  >
+    <div
+      className="lucid-NotchedTag-container-centered"
+    >
+      ADV
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NotchedTag [common] example testing should match snapshot(s) for basic 3`] = `
+<div
+  className="lucid-NotchedTag lucid-NotchedTag-style-one lucid-NotchedTag-large lucid-NotchedTag-no-border"
+  style={
+    Object {
+      "clipPath": "
+			polygon(
+				5px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 8.660254037844386px
+			)",
+      "display": "inline-block",
+      "height": "24px",
+      "marginRight": "10px",
+      "width": "40px",
     }
   }
 >
@@ -68,25 +120,457 @@ exports[`NotchedTag [common] example testing should match snapshot(s) for filled
     className="lucid-NotchedTag-container lucid-NotchedTag-container-filled"
     style={
       Object {
-        "bottom": 2,
+        "bottom": "2px",
         "clipPath": "
 			polygon(
-				5px 0,
+				4px 0,
 				100% 0,
 				100% 100%,
 				0 100%,
-				0 9.392304845413264px
+				0 7.6602540378443855px
 			)",
-        "left": 2,
-        "right": 2,
-        "top": 2,
+        "left": "2px",
+        "right": "2px",
+        "top": "2px",
       }
     }
   >
     <div
       className="lucid-NotchedTag-container-centered"
     >
-      HI
+      ADV
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NotchedTag [common] example testing should match snapshot(s) for basic 4`] = `
+<div
+  className="lucid-NotchedTag lucid-NotchedTag-style-one lucid-NotchedTag-small lucid-NotchedTag-no-border"
+  style={
+    Object {
+      "clipPath": "
+			polygon(
+				4px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 6.928203230275509px
+			)",
+      "display": "inline-block",
+      "height": "18px",
+      "marginRight": "10px",
+      "width": "30px",
+    }
+  }
+>
+  <div
+    className="lucid-NotchedTag-container lucid-NotchedTag-container-filled"
+    style={
+      Object {
+        "bottom": "2px",
+        "clipPath": "
+			polygon(
+				3px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 5.928203230275509px
+			)",
+        "left": "2px",
+        "right": "2px",
+        "top": "2px",
+      }
+    }
+  >
+    <div
+      className="lucid-NotchedTag-container-centered"
+    >
+      ADV
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NotchedTag [common] example testing should match snapshot(s) for basic 5`] = `
+<div
+  className="lucid-NotchedTag lucid-NotchedTag-style-two lucid-NotchedTag-large"
+  style={
+    Object {
+      "clipPath": "
+			polygon(
+				5px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 8.660254037844386px
+			)",
+      "display": "inline-block",
+      "height": "24px",
+      "marginRight": "10px",
+      "width": "40px",
+    }
+  }
+>
+  <div
+    className="lucid-NotchedTag-container"
+    style={
+      Object {
+        "bottom": "2px",
+        "clipPath": "
+			polygon(
+				4px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 7.6602540378443855px
+			)",
+        "left": "2px",
+        "right": "2px",
+        "top": "2px",
+      }
+    }
+  >
+    <div
+      className="lucid-NotchedTag-container-centered"
+    >
+      IO
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NotchedTag [common] example testing should match snapshot(s) for basic 6`] = `
+<div
+  className="lucid-NotchedTag lucid-NotchedTag-style-two lucid-NotchedTag-small"
+  style={
+    Object {
+      "clipPath": "
+			polygon(
+				4px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 6.928203230275509px
+			)",
+      "display": "inline-block",
+      "height": "18px",
+      "marginRight": "10px",
+      "width": "30px",
+    }
+  }
+>
+  <div
+    className="lucid-NotchedTag-container"
+    style={
+      Object {
+        "bottom": "2px",
+        "clipPath": "
+			polygon(
+				3px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 5.928203230275509px
+			)",
+        "left": "2px",
+        "right": "2px",
+        "top": "2px",
+      }
+    }
+  >
+    <div
+      className="lucid-NotchedTag-container-centered"
+    >
+      IO
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NotchedTag [common] example testing should match snapshot(s) for basic 7`] = `
+<div
+  className="lucid-NotchedTag lucid-NotchedTag-style-two lucid-NotchedTag-large lucid-NotchedTag-no-border"
+  style={
+    Object {
+      "clipPath": "
+			polygon(
+				5px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 8.660254037844386px
+			)",
+      "display": "inline-block",
+      "height": "24px",
+      "marginRight": "10px",
+      "width": "40px",
+    }
+  }
+>
+  <div
+    className="lucid-NotchedTag-container lucid-NotchedTag-container-filled"
+    style={
+      Object {
+        "bottom": "2px",
+        "clipPath": "
+			polygon(
+				4px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 7.6602540378443855px
+			)",
+        "left": "2px",
+        "right": "2px",
+        "top": "2px",
+      }
+    }
+  >
+    <div
+      className="lucid-NotchedTag-container-centered"
+    >
+      IO
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NotchedTag [common] example testing should match snapshot(s) for basic 8`] = `
+<div
+  className="lucid-NotchedTag lucid-NotchedTag-style-two lucid-NotchedTag-small lucid-NotchedTag-no-border"
+  style={
+    Object {
+      "clipPath": "
+			polygon(
+				4px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 6.928203230275509px
+			)",
+      "display": "inline-block",
+      "height": "18px",
+      "marginRight": "10px",
+      "width": "30px",
+    }
+  }
+>
+  <div
+    className="lucid-NotchedTag-container lucid-NotchedTag-container-filled"
+    style={
+      Object {
+        "bottom": "2px",
+        "clipPath": "
+			polygon(
+				3px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 5.928203230275509px
+			)",
+        "left": "2px",
+        "right": "2px",
+        "top": "2px",
+      }
+    }
+  >
+    <div
+      className="lucid-NotchedTag-container-centered"
+    >
+      IO
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NotchedTag [common] example testing should match snapshot(s) for basic 9`] = `
+<div
+  className="lucid-NotchedTag lucid-NotchedTag-style-three lucid-NotchedTag-large"
+  style={
+    Object {
+      "clipPath": "
+			polygon(
+				5px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 8.660254037844386px
+			)",
+      "display": "inline-block",
+      "height": "24px",
+      "marginRight": "10px",
+      "width": "40px",
+    }
+  }
+>
+  <div
+    className="lucid-NotchedTag-container"
+    style={
+      Object {
+        "bottom": "2px",
+        "clipPath": "
+			polygon(
+				4px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 7.6602540378443855px
+			)",
+        "left": "2px",
+        "right": "2px",
+        "top": "2px",
+      }
+    }
+  >
+    <div
+      className="lucid-NotchedTag-container-centered"
+    >
+      LI
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NotchedTag [common] example testing should match snapshot(s) for basic 10`] = `
+<div
+  className="lucid-NotchedTag lucid-NotchedTag-style-three lucid-NotchedTag-small"
+  style={
+    Object {
+      "clipPath": "
+			polygon(
+				4px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 6.928203230275509px
+			)",
+      "display": "inline-block",
+      "height": "18px",
+      "marginRight": "10px",
+      "width": "30px",
+    }
+  }
+>
+  <div
+    className="lucid-NotchedTag-container"
+    style={
+      Object {
+        "bottom": "2px",
+        "clipPath": "
+			polygon(
+				3px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 5.928203230275509px
+			)",
+        "left": "2px",
+        "right": "2px",
+        "top": "2px",
+      }
+    }
+  >
+    <div
+      className="lucid-NotchedTag-container-centered"
+    >
+      LI
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NotchedTag [common] example testing should match snapshot(s) for basic 11`] = `
+<div
+  className="lucid-NotchedTag lucid-NotchedTag-style-three lucid-NotchedTag-large lucid-NotchedTag-no-border"
+  style={
+    Object {
+      "clipPath": "
+			polygon(
+				5px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 8.660254037844386px
+			)",
+      "display": "inline-block",
+      "height": "24px",
+      "marginRight": "10px",
+      "width": "40px",
+    }
+  }
+>
+  <div
+    className="lucid-NotchedTag-container lucid-NotchedTag-container-filled"
+    style={
+      Object {
+        "bottom": "2px",
+        "clipPath": "
+			polygon(
+				4px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 7.6602540378443855px
+			)",
+        "left": "2px",
+        "right": "2px",
+        "top": "2px",
+      }
+    }
+  >
+    <div
+      className="lucid-NotchedTag-container-centered"
+    >
+      LI
+    </div>
+  </div>
+</div>
+`;
+
+exports[`NotchedTag [common] example testing should match snapshot(s) for basic 12`] = `
+<div
+  className="lucid-NotchedTag lucid-NotchedTag-style-three lucid-NotchedTag-small lucid-NotchedTag-no-border"
+  style={
+    Object {
+      "clipPath": "
+			polygon(
+				4px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 6.928203230275509px
+			)",
+      "display": "inline-block",
+      "height": "18px",
+      "marginRight": "10px",
+      "width": "30px",
+    }
+  }
+>
+  <div
+    className="lucid-NotchedTag-container lucid-NotchedTag-container-filled"
+    style={
+      Object {
+        "bottom": "2px",
+        "clipPath": "
+			polygon(
+				3px 0,
+				100% 0,
+				100% 100%,
+				0 100%,
+				0 5.928203230275509px
+			)",
+        "left": "2px",
+        "right": "2px",
+        "top": "2px",
+      }
+    }
+  >
+    <div
+      className="lucid-NotchedTag-container-centered"
+    >
+      LI
     </div>
   </div>
 </div>

@@ -164,7 +164,6 @@ describe('Tabs', () => {
 					isSelected: false,
 					Title: '',
 					children: 'Two',
-					isNavigation: false,
 				});
 			});
 

@@ -15,7 +15,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 01.basi
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -1136,7 +1135,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -1214,7 +1212,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 02.colu
         </Table.Th>
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -2289,7 +2286,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 03.sele
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -3574,7 +3570,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -4924,7 +4919,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 05.disa
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -6045,7 +6039,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -6112,7 +6105,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
     </Table.Thead>
     <Table.Tbody>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6180,7 +6172,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6248,7 +6239,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6316,7 +6306,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6384,7 +6373,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6452,7 +6440,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6520,7 +6507,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6588,7 +6574,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6656,7 +6641,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6724,7 +6708,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 06.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6822,7 +6805,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -6889,7 +6871,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
     </Table.Thead>
     <Table.Tbody>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -6957,7 +6938,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7025,7 +7005,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7093,7 +7072,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7161,7 +7139,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7229,7 +7206,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7297,7 +7273,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7365,7 +7340,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7433,7 +7407,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7501,7 +7474,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7569,7 +7541,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7637,7 +7608,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7705,7 +7675,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7773,7 +7742,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7841,7 +7809,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 07.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -7935,7 +7902,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -8008,7 +7974,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
     </Table.Thead>
     <Table.Tbody>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8076,7 +8041,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8144,7 +8108,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8212,7 +8175,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8280,7 +8242,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8348,7 +8309,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8416,7 +8376,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8484,7 +8443,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8552,7 +8510,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8620,7 +8577,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 08.empt
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8708,7 +8664,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -8775,7 +8730,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
     </Table.Thead>
     <Table.Tbody>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8843,7 +8797,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8911,7 +8864,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -8979,7 +8931,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -9047,7 +8998,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -9115,7 +9065,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -9183,7 +9132,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -9251,7 +9199,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -9319,7 +9266,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -9387,7 +9333,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 09.load
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -9475,7 +9420,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
   >
     <Table.Thead>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={false}
         isSelected={false}
@@ -10042,7 +9986,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         </Table.Td>
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -10138,7 +10081,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -10234,7 +10176,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 10.min-
         />
       </Table.Tr>
       <Table.Tr
-        isActionable={false}
         isActive={false}
         isDisabled={true}
         isSelected={false}
@@ -10359,7 +10300,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
         >
           <Table.Thead>
             <Table.Tr
-              isActionable={false}
               isActive={false}
               isDisabled={false}
               isSelected={false}
@@ -10408,7 +10348,6 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
         >
           <Table.Thead>
             <Table.Tr
-              isActionable={false}
               isActive={false}
               isDisabled={false}
               isSelected={false}
@@ -10513,7 +10452,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10549,12 +10488,12 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               isActionable={false}
               isActive={false}
               isDisabled={false}
-              isSelected={false}
+              isSelected={true}
               key="row1"
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10568,7 +10507,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
                 <Checkbox
                   isDisabled={false}
                   isIndeterminate={false}
-                  isSelected={false}
+                  isSelected={true}
                   onSelect={[Function]}
                 />
               </Table.Td>
@@ -10588,14 +10527,14 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
             </Table.Tr>
             <Table.Tr
               isActionable={false}
-              isActive={false}
+              isActive={true}
               isDisabled={false}
               isSelected={false}
               key="row2"
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10636,7 +10575,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10677,7 +10616,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10718,7 +10657,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10759,7 +10698,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10800,7 +10739,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10841,7 +10780,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10882,7 +10821,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -10941,7 +10880,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11028,12 +10967,12 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               isActionable={false}
               isActive={false}
               isDisabled={false}
-              isSelected={false}
+              isSelected={true}
               key="row1"
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11118,14 +11057,14 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
             </Table.Tr>
             <Table.Tr
               isActionable={false}
-              isActive={false}
+              isActive={true}
               isDisabled={false}
               isSelected={false}
               key="row2"
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11217,7 +11156,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11309,7 +11248,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11401,7 +11340,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11493,7 +11432,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11585,7 +11524,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11677,7 +11616,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >
@@ -11769,7 +11708,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
               onClick={[Function]}
               style={
                 Object {
-                  "height": 45,
+                  "height": 50,
                 }
               }
             >

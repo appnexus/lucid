@@ -111,17 +111,6 @@ describe('Table', () => {
 						assert.equal(wrapper.find('tr.lucid-Table-is-active').length, 1);
 					});
 				});
-
-				describe('isActionable', () => {
-					it('should apply the class name `lucid-Table-is-actionable`', () => {
-						const wrapper = shallow(<Tr isActionable />);
-
-						assert.equal(
-							wrapper.find('tr.lucid-Table-is-actionable').length,
-							1
-						);
-					});
-				});
 			});
 		});
 

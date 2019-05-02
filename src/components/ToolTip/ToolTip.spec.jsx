@@ -150,22 +150,6 @@ describe('ToolTip', () => {
 			});
 		});
 
-		describe('kind', () => {
-			it('should pass the correct className to the Flyout', () => {
-				const wrapper = shallow(
-					<ToolTip isExpanded kind="primary">
-						<Target>Target</Target>
-						<Body>Body</Body>
-					</ToolTip>
-				);
-				const className = wrapper.find(ContextMenu.FlyOut).prop('className');
-				assert(
-					_.includes(className, 'lucid-ToolTip-FlyOut-primary'),
-					'must include className'
-				);
-			});
-		});
-
 		describe('direction', () => {
 			it('should pass direction to the underlying ContextMenu', () => {
 				const wrapper = shallow(

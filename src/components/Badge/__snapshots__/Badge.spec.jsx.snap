@@ -2,7 +2,167 @@
 
 exports[`Badge [common] example testing should match snapshot(s) for default 1`] = `
 <span
-  className="lucid-Badge"
+  className="lucid-Badge lucid-Badge-default lucid-Badge-filled"
+  style={
+    Object {
+      "marginBottom": "10px",
+      "marginRight": "10px",
+    }
+  }
+>
+  Badge
+</span>
+`;
+
+exports[`Badge [common] example testing should match snapshot(s) for default 2`] = `
+<span
+  className="lucid-Badge lucid-Badge-default lucid-Badge-stroke"
+  style={
+    Object {
+      "marginBottom": "10px",
+      "marginRight": "10px",
+    }
+  }
+>
+  Badge
+</span>
+`;
+
+exports[`Badge [common] example testing should match snapshot(s) for default 3`] = `
+<span
+  className="lucid-Badge lucid-Badge-primary lucid-Badge-filled"
+  style={
+    Object {
+      "marginBottom": "10px",
+      "marginRight": "10px",
+    }
+  }
+>
+  Badge
+</span>
+`;
+
+exports[`Badge [common] example testing should match snapshot(s) for default 4`] = `
+<span
+  className="lucid-Badge lucid-Badge-primary lucid-Badge-stroke"
+  style={
+    Object {
+      "marginBottom": "10px",
+      "marginRight": "10px",
+    }
+  }
+>
+  Badge
+</span>
+`;
+
+exports[`Badge [common] example testing should match snapshot(s) for default 5`] = `
+<span
+  className="lucid-Badge lucid-Badge-success lucid-Badge-filled"
+  style={
+    Object {
+      "marginBottom": "10px",
+      "marginRight": "10px",
+    }
+  }
+>
+  Badge
+</span>
+`;
+
+exports[`Badge [common] example testing should match snapshot(s) for default 6`] = `
+<span
+  className="lucid-Badge lucid-Badge-success lucid-Badge-stroke"
+  style={
+    Object {
+      "marginBottom": "10px",
+      "marginRight": "10px",
+    }
+  }
+>
+  Badge
+</span>
+`;
+
+exports[`Badge [common] example testing should match snapshot(s) for default 7`] = `
+<span
+  className="lucid-Badge lucid-Badge-danger lucid-Badge-filled"
+  style={
+    Object {
+      "marginBottom": "10px",
+      "marginRight": "10px",
+    }
+  }
+>
+  Badge
+</span>
+`;
+
+exports[`Badge [common] example testing should match snapshot(s) for default 8`] = `
+<span
+  className="lucid-Badge lucid-Badge-danger lucid-Badge-stroke"
+  style={
+    Object {
+      "marginBottom": "10px",
+      "marginRight": "10px",
+    }
+  }
+>
+  Badge
+</span>
+`;
+
+exports[`Badge [common] example testing should match snapshot(s) for default 9`] = `
+<span
+  className="lucid-Badge lucid-Badge-warning lucid-Badge-filled"
+  style={
+    Object {
+      "marginBottom": "10px",
+      "marginRight": "10px",
+    }
+  }
+>
+  Badge
+</span>
+`;
+
+exports[`Badge [common] example testing should match snapshot(s) for default 10`] = `
+<span
+  className="lucid-Badge lucid-Badge-warning lucid-Badge-stroke"
+  style={
+    Object {
+      "marginBottom": "10px",
+      "marginRight": "10px",
+    }
+  }
+>
+  Badge
+</span>
+`;
+
+exports[`Badge [common] example testing should match snapshot(s) for default 11`] = `
+<span
+  className="lucid-Badge lucid-Badge-dark lucid-Badge-filled"
+  style={
+    Object {
+      "marginBottom": "10px",
+      "marginRight": "10px",
+    }
+  }
+>
+  Badge
+</span>
+`;
+
+exports[`Badge [common] example testing should match snapshot(s) for default 12`] = `
+<span
+  className="lucid-Badge lucid-Badge-dark lucid-Badge-stroke"
+  style={
+    Object {
+      "marginBottom": "10px",
+      "marginRight": "10px",
+    }
+  }
 >
   Badge
 </span>
