@@ -25,6 +25,7 @@ const data = [
 		occupation: 'Physicist',
 		salary: '$100.02',
 		status: <SuccessIcon />,
+		isSelected: true,
 	},
 	{
 		id: 3,
@@ -34,6 +35,7 @@ const data = [
 		occupation: 'Engineer',
 		salary: '$100.03',
 		status: <SuccessIcon />,
+		isActive: true,
 	},
 	{
 		id: 4,
@@ -106,7 +108,7 @@ export default createClass({
 			isSelectable: true,
 			hasLightHeader: false,
 			fixedColumnCount: 2,
-			fixedRowHeight: 45,
+			fixedRowHeight: 50,
 			isActionable: false,
 		};
 	},

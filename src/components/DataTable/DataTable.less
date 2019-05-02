@@ -92,6 +92,28 @@
 				&.@{prefix}-Table > .@{prefix}-Table-Tbody > .@{prefix}-Table-Tr.@{prefix}-Table-is-actionable:not(.@{prefix}-Table-is-active):hover > .@{prefix}-Table-Td.@{prefix}-Table-is-first-single::after {
 					display: none;
 				}
+
+				&.@{prefix}-Table > .@{prefix}-Table-Tbody > .@{prefix}-Table-Tr {
+					// place hidden marker on first cell
+					.selectFirstCellOnRow({ .left-marker(0); });
+
+					// show marker on hover
+					&:hover {
+						.selectFirstCellOnRow({ .left-marker(0); });
+					}
+				}
+			}
+		}
+	}
+}
+
+// Select the first 1-height cell on the current body row and apply the given styles
+.selectFirstCellOnRow(@ruleset) {
+	& > .@{prefix}-Table-Td {
+		&.@{prefix}-Table-is-first-single {
+			@ruleset();
+			> .@{prefix}-Checkbox {
+				vertical-align: middle;
 			}
 		}
 	}
