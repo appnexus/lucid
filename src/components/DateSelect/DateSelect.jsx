@@ -219,10 +219,8 @@ const DateSelect = createClass({
 			const size = Math.sqrt(oneMonthShownWidth * height);
 			const relativeFontSize = Math.round(size / 24);
 			const relativeMinWidth =
-				(width - navButtonsWidth) /
-					monthsShown *
-					10.1075 /
-					relativeFontSize *
+				((((width - navButtonsWidth) / monthsShown) * 10.1075) /
+					relativeFontSize) *
 					monthsShown +
 				navButtonsWidth;
 

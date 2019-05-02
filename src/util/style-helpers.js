@@ -34,7 +34,7 @@ export function bindClassNames(value = '', variable = /&/g) {
 // use-case. We needed it becuase we sometimes run two copies of the library on
 // a single page and need the styles not to step on each other.
 export const NAMESPACE =
-	typeof LUCID_CSS_NAMESPACE !== 'undefined' ? LUCID_CSS_NAMESPACE : 'lucid';
+	typeof LUCID_CSS_NAMESPACE !== 'undefined' ? LUCID_CSS_NAMESPACE : 'lucid'; // eslint-disable-line no-undef
 
 /**
  * Exports a lucid-bound version of classnames, which can be make more specific

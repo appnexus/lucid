@@ -25,10 +25,12 @@ export default createClass({
 						Link
 					</Button>
 					<Button style={buttonStyle} kind="link" isDisabled={true}>
-						<PlusIcon />Link disabled
+						<PlusIcon />
+						Link disabled
 					</Button>
 					<Button style={buttonStyle} kind="link">
-						<PlusIcon />Link
+						<PlusIcon />
+						Link
 					</Button>
 					<Button kind="link" hasOnlyIcon>
 						<PlusIcon />

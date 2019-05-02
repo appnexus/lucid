@@ -30,8 +30,8 @@ export default createClass({
 									</Title>
 									<Body>
 										ToolTip is a utility component to create a transient message
-										anchored to another component. My direction is "{direction}".
-										My alignment is "{alignment}".
+										anchored to another component. My direction is "{direction}
+										". My alignment is "{alignment}".
 									</Body>
 									<Target>
 										<div>

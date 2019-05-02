@@ -13,7 +13,9 @@ import assert from 'assert';
 import BarChart from './BarChart';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
-const { EmptyStateWrapper: { Title, Body } } = BarChart;
+const {
+	EmptyStateWrapper: { Title, Body },
+} = BarChart;
 
 describe('BarChart', () => {
 	let wrapper;

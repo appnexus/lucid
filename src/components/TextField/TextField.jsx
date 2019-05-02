@@ -187,7 +187,10 @@ const TextField = createClass({
 	},
 
 	handleKeyDown(event) {
-		const { props, props: { onSubmit, onKeyDown, onChangeDebounced } } = this;
+		const {
+			props,
+			props: { onSubmit, onKeyDown, onChangeDebounced },
+		} = this;
 		const value = _.get(event, 'target.value', '');
 
 		// If the consumer passed an onKeyDown, we call it

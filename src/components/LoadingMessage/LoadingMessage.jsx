@@ -86,7 +86,10 @@ const LoadingMessage = createClass({
 	},
 
 	render() {
-		const { props, props: { className, ...passThroughs } } = this;
+		const {
+			props,
+			props: { className, ...passThroughs },
+		} = this;
 
 		const { Icon, Title, Body } = LoadingMessage;
 

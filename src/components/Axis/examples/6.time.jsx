@@ -20,7 +20,7 @@ export default createClass({
 					<Axis orient="bottom" scale={x} />
 				</g>
 
-				<g transform={`translate(${margin.left}, ${height / 3 * 1})`}>
+				<g transform={`translate(${margin.left}, ${(height / 3) * 1})`}>
 					<Axis
 						orient="bottom"
 						scale={x}
@@ -28,7 +28,7 @@ export default createClass({
 					/>
 				</g>
 
-				<g transform={`translate(${margin.left}, ${height / 3 * 2})`}>
+				<g transform={`translate(${margin.left}, ${(height / 3) * 2})`}>
 					<Axis orient="bottom" scale={x} ticks={x.ticks(d3Time.timeYear, 1)} />
 				</g>
 			</svg>

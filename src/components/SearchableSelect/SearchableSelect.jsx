@@ -235,7 +235,9 @@ const SearchableSelect = createClass({
 	},
 
 	handleSearch(searchText) {
-		const { props: { onSearch, optionFilter } } = this;
+		const {
+			props: { onSearch, optionFilter },
+		} = this;
 
 		const { flattenedOptionsData } = this.state;
 
@@ -289,8 +291,8 @@ const SearchableSelect = createClass({
 					{_.isString(optionProps.children)
 						? this.renderUnderlinedChildren(optionProps.children, searchText)
 						: _.isFunction(optionProps.children)
-							? React.createElement(optionProps.children, { searchText })
-							: optionProps.children}
+						? React.createElement(optionProps.children, { searchText })
+						: optionProps.children}
 				</DropMenu.Option>
 			);
 		}
@@ -441,11 +443,11 @@ const SearchableSelect = createClass({
 											SearchableSelect.Option.Selected
 										),
 										'props.children'
-									) ||
-									(Children =>
+								  ) ||
+								  (Children =>
 										_.isFunction(Children) ? <Children /> : Children)(
 										flattenedOptionsData[selectedIndex].optionProps.children
-									)
+								  )
 								: placeholder}
 						</span>
 						<CaretIcon direction={isExpanded ? direction : 'down'} size={8} />
@@ -467,12 +469,11 @@ const SearchableSelect = createClass({
 						<LoadingIcon />
 					</DropMenu.Option>
 				)}
-				{hasReset &&
-					isItemSelected && (
-						<DropMenu.NullOption {...placeholderProps}>
-							{placeholder}
-						</DropMenu.NullOption>
-					)}
+				{hasReset && isItemSelected && (
+					<DropMenu.NullOption {...placeholderProps}>
+						{placeholder}
+					</DropMenu.NullOption>
+				)}
 				{this.renderOptions()}
 			</DropMenu>
 		);

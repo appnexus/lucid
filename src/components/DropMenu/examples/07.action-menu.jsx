@@ -9,7 +9,8 @@ export default createClass({
 		return (
 			<DropMenu>
 				<Control>
-					Colors<CaretIcon direction="down" />
+					Colors
+					<CaretIcon direction="down" />
 				</Control>
 				<Option>Red</Option>
 				<Option>Green</Option>

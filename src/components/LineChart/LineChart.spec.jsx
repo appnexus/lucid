@@ -11,7 +11,9 @@ import assert from 'assert';
 import LineChart from './LineChart';
 import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
-const { EmptyStateWrapper: { Title, Body } } = LineChart;
+const {
+	EmptyStateWrapper: { Title, Body },
+} = LineChart;
 
 describe('LineChart', () => {
 	let wrapper;

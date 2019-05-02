@@ -325,7 +325,11 @@ const SearchableMultiSelect = createClass({
 	handleSearch(searchText, { event }) {
 		const {
 			props,
-			props: { onSearch, optionFilter, DropMenu: { onExpand } },
+			props: {
+				onSearch,
+				optionFilter,
+				DropMenu: { onExpand },
+			},
 		} = this;
 
 		const options = _.map(
@@ -414,8 +418,8 @@ const SearchableMultiSelect = createClass({
 						{_.isString(optionProps.children)
 							? this.renderUnderlinedChildren(optionProps.children, searchText)
 							: _.isFunction(optionProps.children)
-								? React.createElement(optionProps.children, { searchText })
-								: optionProps.children}
+							? React.createElement(optionProps.children, { searchText })
+							: optionProps.children}
 					</CheckboxLabeled.Label>
 				</CheckboxLabeled>
 			</DropMenu.Option>
@@ -636,7 +640,7 @@ const SearchableMultiSelect = createClass({
 																optionGroups[optionGroupIndex].children,
 																SearchableMultiSelect.Option
 															)
-														)}
+													  )}
 											</Selection.Label>
 											{_.map(
 												selectedGroupedOptions,

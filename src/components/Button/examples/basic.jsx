@@ -23,13 +23,15 @@ export default createClass({
 				<article style={articleStyle}>
 					<Button style={buttonStyle}>Default</Button>
 					<Button style={buttonStyle}>
-						<CheckIcon />Default
+						<CheckIcon />
+						Default
 					</Button>
 					<Button style={buttonStyle} hasOnlyIcon={true}>
 						<CheckIcon />
 					</Button>
 					<Button style={buttonStyle} isDisabled={true}>
-						<CheckIcon />Default disabled
+						<CheckIcon />
+						Default disabled
 					</Button>
 					<Button isActive={true}>Default active</Button>
 				</article>
@@ -38,13 +40,15 @@ export default createClass({
 						Short
 					</Button>
 					<Button style={buttonStyle} size="short">
-						<CheckIcon />Short
+						<CheckIcon />
+						Short
 					</Button>
 					<Button style={buttonStyle} size="short" hasOnlyIcon={true}>
 						<CheckIcon />
 					</Button>
 					<Button style={buttonStyle} size="short" isDisabled={true}>
-						<CheckIcon />Short disabled
+						<CheckIcon />
+						Short disabled
 					</Button>
 					<Button size="short" isActive={true}>
 						Short active
@@ -55,13 +59,15 @@ export default createClass({
 						Small
 					</Button>
 					<Button style={buttonStyle} size="small">
-						<CheckIcon />Small
+						<CheckIcon />
+						Small
 					</Button>
 					<Button style={buttonStyle} size="small" hasOnlyIcon={true}>
 						<CheckIcon />
 					</Button>
 					<Button style={buttonStyle} size="small" isDisabled={true}>
-						<CheckIcon />Small disabled
+						<CheckIcon />
+						Small disabled
 					</Button>
 					<Button size="small" isActive={true}>
 						Small active
@@ -72,13 +78,15 @@ export default createClass({
 						Large
 					</Button>
 					<Button style={buttonStyle} size="large">
-						<CheckIcon />Large
+						<CheckIcon />
+						Large
 					</Button>
 					<Button style={buttonStyle} size="large" hasOnlyIcon={true}>
 						<CheckIcon />
 					</Button>
 					<Button style={buttonStyle} size="large" isDisabled={true}>
-						<CheckIcon />Large disabled
+						<CheckIcon />
+						Large disabled
 					</Button>
 					<Button size="large" isActive={true}>
 						Large active

@@ -490,7 +490,9 @@ const LineChart = createClass({
 		const yAxisFinalFormatter = yAxisFormatter || yScale.tickFormat();
 		const y2AxisFinalFormatter = y2AxisFormatter
 			? y2AxisFormatter
-			: y2Scale ? y2Scale.tickFormat() : _.identity;
+			: y2Scale
+			? y2Scale.tickFormat()
+			: _.identity;
 
 		const xFinalFormatter = xAxisFormatter
 			? xAxisFormatter
@@ -589,7 +591,9 @@ const LineChart = createClass({
 							alignment={
 								mouseX < innerWidth * 0.15
 									? 'start'
-									: mouseX > innerWidth * 0.85 ? 'end' : 'center'
+									: mouseX > innerWidth * 0.85
+									? 'end'
+									: 'center'
 							}
 						>
 							<ToolTip.Target elementType="g">
@@ -603,65 +607,61 @@ const LineChart = createClass({
 							</ToolTip.Title>
 							<ToolTip.Body>
 								<Legend hasBorders={false} isReversed={yAxisIsStacked}>
-									{_.map(
-										yAxisFields,
-										(field, index) =>
-											!_.isNil(_.get(xPointMap, mouseX + '.y.' + field)) ? (
-												<Legend.Item
-													key={index}
-													hasPoint={yAxisHasPointsFinal}
-													hasLine={yAxisHasLinesFinal}
-													color={_.get(
-														colorMap,
-														field,
-														palette[(index + yAxisColorOffset) % palette.length]
-													)}
-													pointKind={
-														yAxisHasPoints ? index + yAxisColorOffset : 1
-													}
-												>
-													{yAxisTooltipFormatter(
-														_.get(legend, field, field),
-														yFinalFormatter(
-															_.get(xPointMap, mouseX + '.y.' + field)
-														),
+									{_.map(yAxisFields, (field, index) =>
+										!_.isNil(_.get(xPointMap, mouseX + '.y.' + field)) ? (
+											<Legend.Item
+												key={index}
+												hasPoint={yAxisHasPointsFinal}
+												hasLine={yAxisHasLinesFinal}
+												color={_.get(
+													colorMap,
+													field,
+													palette[(index + yAxisColorOffset) % palette.length]
+												)}
+												pointKind={
+													yAxisHasPoints ? index + yAxisColorOffset : 1
+												}
+											>
+												{yAxisTooltipFormatter(
+													_.get(legend, field, field),
+													yFinalFormatter(
 														_.get(xPointMap, mouseX + '.y.' + field)
-													)}
-												</Legend.Item>
-											) : null
+													),
+													_.get(xPointMap, mouseX + '.y.' + field)
+												)}
+											</Legend.Item>
+										) : null
 									)}
-									{_.map(
-										y2AxisFields,
-										(field, index) =>
-											!_.isNil(_.get(xPointMap, mouseX + '.y.' + field)) ? (
-												<Legend.Item
-													key={index}
-													hasPoint={y2AxisHasPointsFinal}
-													hasLine={y2AxisHasLinesFinal}
-													color={_.get(
-														colorMap,
-														field,
-														palette[
-															y2AxisColorOffset +
-																index +
-																yAxisFields.length % palette.length
-														]
-													)}
-													pointKind={
-														y2AxisHasPoints
-															? y2AxisColorOffset + index + yAxisFields.length
-															: 1
-													}
-												>
-													{yAxisTooltipFormatter(
-														_.get(legend, field, field),
-														y2FinalFormatter(
-															_.get(xPointMap, mouseX + '.y.' + field)
-														),
+									{_.map(y2AxisFields, (field, index) =>
+										!_.isNil(_.get(xPointMap, mouseX + '.y.' + field)) ? (
+											<Legend.Item
+												key={index}
+												hasPoint={y2AxisHasPointsFinal}
+												hasLine={y2AxisHasLinesFinal}
+												color={_.get(
+													colorMap,
+													field,
+													palette[
+														y2AxisColorOffset +
+															index +
+															(yAxisFields.length % palette.length)
+													]
+												)}
+												pointKind={
+													y2AxisHasPoints
+														? y2AxisColorOffset + index + yAxisFields.length
+														: 1
+												}
+											>
+												{yAxisTooltipFormatter(
+													_.get(legend, field, field),
+													y2FinalFormatter(
 														_.get(xPointMap, mouseX + '.y.' + field)
-													)}
-												</Legend.Item>
-											) : null
+													),
+													_.get(xPointMap, mouseX + '.y.' + field)
+												)}
+											</Legend.Item>
+										) : null
 									)}
 								</Legend>
 							</ToolTip.Body>
@@ -709,7 +709,7 @@ const LineChart = createClass({
 											color={_.get(
 												colorMap,
 												field,
-												palette[index + yAxisColorOffset % palette.length]
+												palette[index + (yAxisColorOffset % palette.length)]
 											)}
 											pointKind={yAxisHasPoints ? index + yAxisColorOffset : 1}
 										>
@@ -727,7 +727,7 @@ const LineChart = createClass({
 												palette[
 													y2AxisColorOffset +
 														index +
-														yAxisFields.length % palette.length
+														(yAxisFields.length % palette.length)
 												]
 											)}
 											pointKind={

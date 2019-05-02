@@ -282,7 +282,7 @@ const Bars = createClass({
 									isStacked
 										? xScale(data[seriesIndex][xField])
 										: innerXScale(pointsIndex) +
-											xScale(data[seriesIndex][xField])
+										  xScale(data[seriesIndex][xField])
 								}
 								y={yScale(end)}
 								height={yScale(start) - yScale(end)}

@@ -55,7 +55,8 @@ export default createClass({
 				</article>
 				<article style={articleStyle}>
 					<Button kind="danger" style={buttonStyle} size="large">
-						<CheckIcon />Large
+						<CheckIcon />
+						Large
 					</Button>
 					<Button
 						isDisabled={true}
@@ -63,7 +64,8 @@ export default createClass({
 						style={buttonStyle}
 						size="large"
 					>
-						<CheckIcon />Large
+						<CheckIcon />
+						Large
 					</Button>
 				</article>
 			</section>

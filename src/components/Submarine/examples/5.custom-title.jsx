@@ -18,8 +18,7 @@ export default createClass({
 					</Submarine.Title>
 					<Submarine.Bar>
 						You can also set the <code>title</code> or <code>Title</code> prop
-						on <code>{'<Submarine>'}</code> or <code>{'<Submarine.Bar>'}</code>
-						.
+						on <code>{'<Submarine>'}</code> or <code>{'<Submarine.Bar>'}</code>.
 					</Submarine.Bar>
 					<Submarine.Primary>
 						Helvetica narwhal irony, hoodie leggings occaecat tattooed authentic

@@ -260,8 +260,9 @@ const DataTable = createClass({
 				childComponentElement.type === DataTable.ColumnGroup
 		);
 
-		const columnSlicer = _.flow(_.compact, columns =>
-			_.slice(columns, startColumn, endColumn)
+		const columnSlicer = _.flow(
+			_.compact,
+			columns => _.slice(columns, startColumn, endColumn)
 		);
 
 		return (
@@ -282,38 +283,31 @@ const DataTable = createClass({
 								</Th>
 							) : null,
 						].concat(
-							_.map(
-								childComponentElements,
-								({ props, type }, index) =>
-									type === DataTable.Column ? (
-										<Th
-											{..._.omit(props, ['field', 'children', 'title'])}
-											onClick={
-												DataTable.shouldColumnHandleSort(props)
-													? _.partial(this.handleSort, props.field)
-													: null
-											}
-											rowSpan={hasGroupedColumns ? 2 : null}
-											key={_.get(props, 'field', index)}
-										>
-											{props.title || props.children}
-										</Th>
-									) : (
-										<Th
-											colSpan={_.size(
-												filterTypes(props.children, DataTable.Column)
-											)}
-											{..._.omit(props, [
-												'field',
-												'children',
-												'width',
-												'title',
-											])}
-											key={_.get(props, 'field', index)}
-										>
-											{props.title || props.children}
-										</Th>
-									)
+							_.map(childComponentElements, ({ props, type }, index) =>
+								type === DataTable.Column ? (
+									<Th
+										{..._.omit(props, ['field', 'children', 'title'])}
+										onClick={
+											DataTable.shouldColumnHandleSort(props)
+												? _.partial(this.handleSort, props.field)
+												: null
+										}
+										rowSpan={hasGroupedColumns ? 2 : null}
+										key={_.get(props, 'field', index)}
+									>
+										{props.title || props.children}
+									</Th>
+								) : (
+									<Th
+										colSpan={_.size(
+											filterTypes(props.children, DataTable.Column)
+										)}
+										{..._.omit(props, ['field', 'children', 'width', 'title'])}
+										key={_.get(props, 'field', index)}
+									>
+										{props.title || props.children}
+									</Th>
+								)
 							)
 						)
 					)}
@@ -346,7 +340,7 @@ const DataTable = createClass({
 												>
 													{columnProps.title || columnProps.children}
 												</Th>,
-											]
+										  ]
 								),
 							[]
 						)}
@@ -368,8 +362,9 @@ const DataTable = createClass({
 
 		const fillerRowCount = _.clamp(minRows - _.size(data), 0, Infinity);
 		const isFixedColumn = endColumn < Infinity;
-		const columnSlicer = _.flow(_.compact, columns =>
-			_.slice(columns, startColumn, endColumn)
+		const columnSlicer = _.flow(
+			_.compact,
+			columns => _.slice(columns, startColumn, endColumn)
 		);
 
 		return (
@@ -423,7 +418,7 @@ const DataTable = createClass({
 													!_.isNil(columnProps.hasBorderRight)
 														? columnProps.hasBorderRight
 														: isFixedColumn &&
-															columnIndex + 1 + (isSelectable ? 1 : 0) ===
+														  columnIndex + 1 + (isSelectable ? 1 : 0) ===
 																endColumn
 												}
 												style={{

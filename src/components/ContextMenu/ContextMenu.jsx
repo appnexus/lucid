@@ -232,12 +232,12 @@ const ContextMenu = createClass({
 		const alignmentOffset = !_.isUndefined(this.props.alignmentOffset)
 			? this.props.alignmentOffset
 			: alignment === ContextMenu.CENTER
-				? getAlignmentOffset(
-						_.includes([ContextMenu.UP, ContextMenu.DOWN], direction)
-							? flyOutWidth
-							: flyOutHeight
-					)
-				: 0;
+			? getAlignmentOffset(
+					_.includes([ContextMenu.UP, ContextMenu.DOWN], direction)
+						? flyOutWidth
+						: flyOutHeight
+			  )
+			: 0;
 
 		const { CENTER, DOWN, END, LEFT, RIGHT, START, UP } = ContextMenu;
 
@@ -340,7 +340,9 @@ const ContextMenu = createClass({
 	},
 
 	alignFlyOut(doRedunancyCheck = false) {
-		const { refs: { flyOutPortal, target } } = this;
+		const {
+			refs: { flyOutPortal, target },
+		} = this;
 
 		if (!target || !flyOutPortal) {
 			return;

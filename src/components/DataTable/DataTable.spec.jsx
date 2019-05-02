@@ -11,7 +11,9 @@ import EmptyStateWrapper from '../EmptyStateWrapper/EmptyStateWrapper';
 
 const { Column, ColumnGroup } = DataTable;
 
-const { EmptyStateWrapper: { Title, Body } } = DataTable;
+const {
+	EmptyStateWrapper: { Title, Body },
+} = DataTable;
 
 const testData = [
 	{

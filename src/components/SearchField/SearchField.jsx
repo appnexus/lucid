@@ -156,7 +156,7 @@ const SearchField = createClass({
 						{ '&-Icon-active': isIconActive },
 						iconChildren.props.className
 					),
-				})
+			  })
 			: defaultIcon;
 
 		return (

@@ -7,7 +7,7 @@ import { createClass, getFirst, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Dialog');
 
-const { node, oneOf, bool, number } = PropTypes;
+const { node, oneOf, bool } = PropTypes;
 
 const SMALL = 'small';
 const MEDIUM = 'medium';

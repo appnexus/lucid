@@ -12,8 +12,7 @@ describe('Panel', () => {
 		it('should render any children that are not instances of `Panel.Header` or `Panel.Footer`', () => {
 			const wrapper = shallow(
 				<Panel>
-					<Panel.Header>Header</Panel.Header>
-					A Cool Content
+					<Panel.Header>Header</Panel.Header>A Cool Content
 					<Panel.Footer>Footer</Panel.Footer>
 				</Panel>
 			);

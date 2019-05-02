@@ -23,7 +23,8 @@ export default createClass({
 				<Tabs hasMultilineTitle={true}>
 					<Tabs.Tab>
 						<Tabs.Title>
-							One<br />
+							One
+							<br />
 							<Button>Button</Button>
 						</Tabs.Title>
 						One content
@@ -31,7 +32,8 @@ export default createClass({
 
 					<Tabs.Tab>
 						<Tabs.Title>
-							Two<br />
+							Two
+							<br />
 							Line Two
 							<SearchField />
 						</Tabs.Title>

@@ -441,7 +441,9 @@ const SplitVertical = createClass({
 									flexGrow: isRightSecondary ? 1 : 0,
 									flexShrink: isRightSecondary ? 1 : 0,
 									flexBasis: _.isNil(leftPaneProps.width)
-										? leftPaneProps === secondary ? 'calc(50% - 3px)' : '0%'
+										? leftPaneProps === secondary
+											? 'calc(50% - 3px)'
+											: '0%'
 										: leftPaneProps.width,
 									marginLeft: isRightSecondary
 										? -Math.round(tween.slideAmount)
@@ -493,7 +495,9 @@ const SplitVertical = createClass({
 									flexGrow: !isRightSecondary ? 1 : 0,
 									flexShrink: !isRightSecondary ? 1 : 0,
 									flexBasis: _.isNil(rightPaneProps.width)
-										? rightPaneProps === secondary ? 'calc(50% - 3px)' : '0%'
+										? rightPaneProps === secondary
+											? 'calc(50% - 3px)'
+											: '0%'
 										: rightPaneProps.width,
 									marginRight: isRightSecondary
 										? null

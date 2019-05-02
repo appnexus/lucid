@@ -2,7 +2,10 @@ import React from 'react';
 import createClass from 'create-react-class';
 import { BarChart } from '../../../index';
 
-const { EmptyStateWrapper, EmptyStateWrapper: { Title, Body } } = BarChart;
+const {
+	EmptyStateWrapper,
+	EmptyStateWrapper: { Title, Body },
+} = BarChart;
 
 export default createClass({
 	render() {
