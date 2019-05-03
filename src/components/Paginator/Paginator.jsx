@@ -143,6 +143,7 @@ const Paginator = createClass({
 						<SingleSelect
 							{...singleSelectProps}
 							hasReset={false}
+							isInvisible={true}
 							isSelectionHighlighted={false}
 							isDisabled={isDisabled}
 							selectedIndex={selectedPageSizeIndex}
