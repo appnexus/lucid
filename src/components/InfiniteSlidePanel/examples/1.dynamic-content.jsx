@@ -5,8 +5,8 @@ import InfiniteSlidePanel from '../InfiniteSlidePanel';
 
 const generateRGB = n => {
 	const R = Math.floor((Math.sin(n / Math.PI) + 1) * 128);
-	const G = Math.floor((Math.sin((2 * n) / Math.PI) + 1) * 128);
-	const B = Math.floor((Math.sin((3 * n) / Math.PI) + 1) * 128);
+	const G = Math.floor((Math.sin(2 * n / Math.PI) + 1) * 128);
+	const B = Math.floor((Math.sin(3 * n / Math.PI) + 1) * 128);
 	return `rgb(${R},${G},${B})`;
 };
 

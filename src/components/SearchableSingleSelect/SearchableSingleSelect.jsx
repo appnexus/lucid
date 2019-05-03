@@ -209,11 +209,7 @@ const SearchableSingleSelect = createClass({
 	handleSearch(searchText, { event }) {
 		const {
 			props,
-			props: {
-				onSearch,
-				optionFilter,
-				DropMenu: { onExpand },
-			},
+			props: { onSearch, optionFilter, DropMenu: { onExpand } },
 		} = this;
 
 		const options = _.map(
@@ -289,8 +285,8 @@ const SearchableSingleSelect = createClass({
 			searchText.length > 0
 			? this.renderUnderlinedChildren(optionProps.children, searchText)
 			: _.isFunction(optionProps.children)
-			? React.createElement(optionProps.children, { searchText })
-			: optionProps.children;
+				? React.createElement(optionProps.children, { searchText })
+				: optionProps.children;
 	},
 
 	renderOption({ optionProps, optionIndex }) {

@@ -12,12 +12,7 @@ export default createClass({
 		};
 	},
 
-	handleSelect(
-		optionIndex,
-		{
-			props: { name },
-		}
-	) {
+	handleSelect(optionIndex, { props: { name } }) {
 		this.setState({
 			selectedIndex: optionIndex,
 			selectedOptionName: name,

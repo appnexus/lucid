@@ -189,11 +189,11 @@ const SlidePanel = createClass({
 										this.state.translateXPixel,
 										QUICK_SLIDE_MOTION
 									),
-							  }
+								}
 							: {
 									translateXPercentage: translateXPercentage,
 									translateXPixel: this.state.translateXPixel,
-							  }
+								}
 					}
 				>
 					{tween => (
@@ -204,10 +204,10 @@ const SlidePanel = createClass({
 								transform: this.isDragging
 									? `translateX(calc(${tween.translateXPercentage}% + ${
 											this.state.translateXPixel
-									  }px))`
+										}px))`
 									: `translateX(calc(${tween.translateXPercentage}% + ${
 											tween.translateXPixel
-									  }px))`,
+										}px))`,
 							}}
 							onTouchStart={this.handleTouchStart}
 							onTouchMove={this.handleTouchMove}

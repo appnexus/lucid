@@ -2101,6 +2101,83 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
 </DropMenu>
 `;
 
+exports[`SingleSelect [common] example testing should match snapshot(s) for 12.invisible 1`] = `
+<DropMenu
+  ContextMenu={
+    Object {
+      "alignment": "start",
+      "direction": "down",
+      "directonOffset": 0,
+      "getAlignmentOffset": [Function],
+      "isExpanded": true,
+      "minWidthOffset": 0,
+      "onClickOut": null,
+      "portalId": null,
+    }
+  }
+  alignment="start"
+  className="lucid-SingleSelect"
+  direction="down"
+  flyOutStyle={
+    Object {
+      "maxHeight": "18em",
+    }
+  }
+  focusedIndex={null}
+  isDisabled={false}
+  isExpanded={false}
+  onCollapse={[Function]}
+  onExpand={[Function]}
+  onFocusNext={[Function]}
+  onFocusOption={[Function]}
+  onFocusPrev={[Function]}
+  onSelect={[Function]}
+  selectedIndices={Array []}
+>
+  <DropMenu.Control>
+    <div
+      className="lucid-SingleSelect-Control lucid-SingleSelect-Control-is-invisible lucid-SingleSelect-Control-is-null-option"
+      tabIndex={0}
+    >
+      <span
+        className="lucid-SingleSelect-Control-content"
+      >
+        Select Color
+      </span>
+      <CaretIcon
+        direction="down"
+        size={8}
+        viewBox="0 3 16 8"
+      />
+    </div>
+  </DropMenu.Control>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="SingleSelectOption0"
+  >
+    Red
+  </DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="SingleSelectOption1"
+  >
+    Green
+  </DropMenu.Option>
+  <DropMenu.Option
+    isDisabled={false}
+    isHidden={false}
+    isWrapped={true}
+    key="SingleSelectOption2"
+  >
+    Blue
+  </DropMenu.Option>
+</DropMenu>
+`;
+
 exports[`SingleSelect child elements Option should render Option.Selected in the Placeholder area 1`] = `
 <DropMenu
   ContextMenu={

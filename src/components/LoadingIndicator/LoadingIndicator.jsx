@@ -57,10 +57,7 @@ const LoadingIndicator = createClass({
 	},
 
 	render() {
-		const {
-			props,
-			props: { children, className, isLoading },
-		} = this;
+		const { props, props: { children, className, isLoading } } = this;
 
 		const { LoadingMessage } = LoadingIndicator;
 

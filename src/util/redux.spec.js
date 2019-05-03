@@ -115,9 +115,7 @@ describe('redux utils', () => {
 					},
 				};
 
-				const {
-					connectors: [mapStateToProps],
-				} = getReduxPrimitives({
+				const { connectors: [mapStateToProps] } = getReduxPrimitives({
 					reducers,
 					initialState,
 					selectors,
@@ -129,9 +127,7 @@ describe('redux utils', () => {
 				});
 
 				describe('rootPath', () => {
-					const {
-						connectors: [mapStateToProps],
-					} = getReduxPrimitives({
+					const { connectors: [mapStateToProps] } = getReduxPrimitives({
 						reducers,
 						initialState,
 						selectors,
@@ -145,9 +141,7 @@ describe('redux utils', () => {
 				});
 
 				describe('rootSelector', () => {
-					const {
-						connectors: [mapStateToProps],
-					} = getReduxPrimitives({
+					const { connectors: [mapStateToProps] } = getReduxPrimitives({
 						reducers,
 						initialState,
 						selectors,
@@ -253,10 +247,11 @@ describe('redux utils', () => {
 
 					const mapDispatchToProps = connectors[1];
 					const mockGetState = sinon.spy(() => rootState);
-					const mockDispatch = sinon.spy(action =>
-						isFunction(action)
-							? action(mockDispatch, mockGetState, ...extraArgs)
-							: action
+					const mockDispatch = sinon.spy(
+						action =>
+							isFunction(action)
+								? action(mockDispatch, mockGetState, ...extraArgs)
+								: action
 					);
 					const dispatchTree = mapDispatchToProps(mockDispatch);
 

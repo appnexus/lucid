@@ -68,12 +68,7 @@ export default createClass({
 		});
 	},
 
-	handleSelect(
-		index,
-		{
-			props: { callbackId },
-		}
-	) {
+	handleSelect(index, { props: { callbackId } }) {
 		this.setState({
 			selectedIds: _.xor(this.state.selectedIds, [callbackId]),
 		});

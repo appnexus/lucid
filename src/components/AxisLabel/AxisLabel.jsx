@@ -91,7 +91,7 @@ const AxisLabel = createClass({
 				className={cx(className, '&', {
 					[`&-${color}`]: !isCustomColor,
 				})}
-				x={isH ? width / 2 : (height / 2) * -1}
+				x={isH ? width / 2 : height / 2 * -1}
 				y={orient === 'right' ? width : orient === 'bottom' ? height : 0}
 				dy={orient === 'top' || orient === 'left' ? '1em' : '-.32em'}
 				transform={isH ? '' : 'rotate(-90)'}

@@ -18,7 +18,7 @@ export const logger = (function() {
 				error,
 				errorOnce,
 				resetOnce,
-		  }
+			}
 		: {
 				log: _.noop,
 				logOnce: _.noop,
@@ -27,7 +27,7 @@ export const logger = (function() {
 				error: _.noop,
 				errorOnce: _.noop,
 				resetOnce: _.noop,
-		  };
+			};
 })();
 
 const onceMap = {};

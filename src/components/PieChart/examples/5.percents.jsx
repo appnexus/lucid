@@ -22,7 +22,7 @@ export default createClass({
 				<PieChart
 					data={data}
 					yAxisFormatter={value => {
-						return `${((value / total) * 100).toFixed(1)}%`;
+						return `${(value / total * 100).toFixed(1)}%`;
 					}}
 				/>
 			</div>

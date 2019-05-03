@@ -548,10 +548,7 @@ const DropMenu = createClass({
 	},
 
 	handleClick(event) {
-		const {
-			props,
-			props: { isExpanded, onExpand, onCollapse },
-		} = this;
+		const { props, props: { isExpanded, onExpand, onCollapse } } = this;
 
 		if (isExpanded) {
 			onCollapse({ props, event });
@@ -705,7 +702,7 @@ const DropMenu = createClass({
 										tabIndex: 0,
 										onClick: this.handleClick,
 										onKeyDown: this.handleKeydown,
-								  }
+									}
 								: null)}
 							{...controlProps}
 							className={cx('&-Control', _.get(controlProps, 'className'))}
@@ -737,7 +734,7 @@ const DropMenu = createClass({
 												key={'OptionGroup-divider-NullOption'}
 												className={cx('&-OptionGroup-divider')}
 											/>,
-									  ]
+										]
 							)}
 							{// fixed options go first
 							_.map(fixedOptionData, ({ optionProps, optionIndex }) =>
@@ -773,7 +770,7 @@ const DropMenu = createClass({
 													{labelElements}
 												</div>,
 												// render the options in the group
-										  ]
+											]
 									).concat(
 										_.map(
 											optionGroupDataLookup[optionGroupIndex],
@@ -791,7 +788,7 @@ const DropMenu = createClass({
 													({ optionProps, optionIndex }) =>
 														this.renderOption(optionProps, optionIndex)
 												),
-										  ]
+											]
 								),
 								(element, index) =>
 									element && (

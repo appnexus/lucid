@@ -181,21 +181,23 @@ const Points = createClass({
 		return (
 			<g {...omitProps(passThroughs, Points)} className={cx(className, '&')}>
 				{_.map(transformedData, (d, dIndex) =>
-					_.map(d, (series, seriesIndex) =>
-						isValidSeries(series) ? (
-							<Point
-								key={`${seriesIndex}${dIndex}`}
-								x={xScale(data[seriesIndex][xField])}
-								y={yScale(_.isArray(series) ? _.last(series) : series)}
-								hasStroke={hasStroke}
-								kind={dIndex + colorOffset}
-								color={_.get(
-									colorMap,
-									yFields[dIndex],
-									palette[(dIndex + colorOffset) % palette.length]
-								)}
-							/>
-						) : null
+					_.map(
+						d,
+						(series, seriesIndex) =>
+							isValidSeries(series) ? (
+								<Point
+									key={`${seriesIndex}${dIndex}`}
+									x={xScale(data[seriesIndex][xField])}
+									y={yScale(_.isArray(series) ? _.last(series) : series)}
+									hasStroke={hasStroke}
+									kind={dIndex + colorOffset}
+									color={_.get(
+										colorMap,
+										yFields[dIndex],
+										palette[(dIndex + colorOffset) % palette.length]
+									)}
+								/>
+							) : null
 					)
 				)}
 			</g>

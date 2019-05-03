@@ -2,10 +2,7 @@ import React from 'react';
 import createClass from 'create-react-class';
 import { DataTable } from '../../../index';
 
-const {
-	EmptyStateWrapper,
-	EmptyStateWrapper: { Title, Body },
-} = DataTable;
+const { EmptyStateWrapper, EmptyStateWrapper: { Title, Body } } = DataTable;
 
 export default createClass({
 	getInitialState() {

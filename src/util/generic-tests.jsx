@@ -245,10 +245,9 @@ export function controls(
 				.simulate(eventType);
 
 			// Last argument should be an object with `uniqueId` and `event`
-			const {
-				props: { specialProp },
-				event,
-			} = _.last(props[callbackName].args[0]);
+			const { props: { specialProp }, event } = _.last(
+				props[callbackName].args[0]
+			);
 
 			assert(event, 'missing event');
 			assert.equal(

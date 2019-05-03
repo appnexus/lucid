@@ -247,9 +247,7 @@ const Sidebar = createClass({
 				{...omitProps(passThroughs, Sidebar, [], false)}
 				style={{
 					minWidth: isExpanded
-						? _.isNumber(width)
-							? width + 6
-							: `calc(${width} + 6px)`
+						? _.isNumber(width) ? width + 6 : `calc(${width} + 6px)`
 						: null,
 					...style,
 				}}
