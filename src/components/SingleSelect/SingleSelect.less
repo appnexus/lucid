@@ -14,7 +14,6 @@
 		display: flex;
 		outline: none;
 		border: 1px solid @featured-color-default-borderColor;
-		border-radius: @size-borderRadius;
 		font-size: @fontSize;
 		font-family: @fontFamily;
 		font-weight: @font-weight-medium;
@@ -24,8 +23,8 @@
 		align-items: center;
 		white-space: nowrap;
 
-		&::before {
-			border-radius: @size-borderRadius;
+		&&-is-invisible {
+			border: 0;
 		}
 
 		&-content {
@@ -72,20 +71,6 @@
 			.opacity(@opacity-disabled);
 
 			cursor: not-allowed;
-		}
-	}
-
-	&.@{prefix}-DropMenu-is-expanded {
-		&.@{prefix}-DropMenu-direction-up {
-			.@{prefix}-SingleSelect-Control {
-				border-radius: 0 0 @size-borderRadius @size-borderRadius;
-			}
-		}
-
-		&.@{prefix}-DropMenu-direction-down {
-			.@{prefix}-SingleSelect-Control {
-				border-radius: @size-borderRadius @size-borderRadius 0 0;
-			}
 		}
 	}
 }
