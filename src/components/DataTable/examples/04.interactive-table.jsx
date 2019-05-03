@@ -177,8 +177,10 @@ export default createClass({
 
 		return (
 			<DataTable
-				data={_.map(data, (row, index) =>
-					index === activeIndex ? { ...row, isActive: true } : row
+				data={_.map(
+					data,
+					(row, index) =>
+						index === activeIndex ? { ...row, isActive: true } : row
 				)}
 				density="extended"
 				isSelectable
