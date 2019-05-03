@@ -176,6 +176,12 @@ exports[`Tabs [common] example testing should match snapshot(s) for 03-complex-t
       isSelected={true}
       key="0"
       onSelect={[Function]}
+      style={
+        Object {
+          "height": "100px",
+          "width": "200px",
+        }
+      }
     >
       <Tabs.Title>
         One
@@ -208,6 +214,12 @@ exports[`Tabs [common] example testing should match snapshot(s) for 03-complex-t
       isSelected={false}
       key="1"
       onSelect={[Function]}
+      style={
+        Object {
+          "height": "100px",
+          "width": "200px",
+        }
+      }
     >
       <Tabs.Title>
         Two
@@ -258,6 +270,12 @@ exports[`Tabs [common] example testing should match snapshot(s) for 03-complex-t
       isSelected={false}
       key="2"
       onSelect={[Function]}
+      style={
+        Object {
+          "height": "100px",
+          "width": "200px",
+        }
+      }
     >
       <Tabs.Title>
         <RadioGroup
@@ -304,6 +322,12 @@ exports[`Tabs [common] example testing should match snapshot(s) for 03-complex-t
       isSelected={false}
       key="3"
       onSelect={[Function]}
+      style={
+        Object {
+          "height": "100px",
+          "width": "200px",
+        }
+      }
     >
       <Tabs.Title>
         Four
