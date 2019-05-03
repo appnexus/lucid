@@ -8,29 +8,44 @@
 	position: relative;
 	background-color: @color-white;
 	border: @border-standardBorder;
-
+	font-family: @fontFamily;
+	
 	&&-has-margin {
 		margin: 0 @size-standard @size-standard @size-standard;
 	}
-
+	
 	.@{prefix}-Panel-is-scrollable& {
 		display: flex;
 		flex-direction: column;
 	}
-
+	
 	& > &-Header {
-		padding: @size-standard;
-		border-bottom: @border-lightBorder;
+		display: flex;
+		align-items: center;
+		// padding: 20px 20px 0 20px;
+		padding: 20px;
+		font-size: 15px;
+		font-family: @fontFamily;
+		font-weight: @font-weight-medium;
 
 		.@{prefix}-Panel-is-scrollable& {
 			flex-shrink: 0;
 		}
 	}
 
-	& > &-content {
+	& > &-Header ~ &-content {
 		.@{prefix}-Panel-is-not-gutterless& {
+			padding: 0 20px 20px 20px;
+		}
+	}
+
+	& > &-content {
+
+		font-size: 12px;
+
+		.@{prefix}-Panel-is-not-gutterless& {
+			padding: 20px;
 			overflow: auto;
-			padding: @size-standard;
 		}
 
 		.@{prefix}-Panel-is-scrollable& {
@@ -41,8 +56,7 @@
 
 	& > &-Footer {
 		text-align: right;
-		padding: @size-standard;
-		border-top: @border-lightBorder;
+		padding: 0 20px 20px 20px;
 
 		.@{prefix}-Panel-is-scrollable& {
 			flex-shrink: 0;

@@ -1,12 +1,15 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Panel } from '../../../index';
+import { Panel, SettingsIcon } from '../../../index';
 
 export default createClass({
 	render() {
 		return (
 			<Panel>
 				<Panel.Header>
+					<SettingsIcon
+						style={{ height: '36px', width: '36px', marginRight: '12px' }}
+					/>
 					<span>Header</span>
 				</Panel.Header>
 				Meditation literally chia, schlitz banh mi mlkshk vape ennui art party.
