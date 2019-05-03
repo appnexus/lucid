@@ -18,10 +18,15 @@ const titleThree = (
 
 export default createClass({
 	render() {
+		const tabStyle = {
+			height: '100px',
+			width: '200px',
+		};
+
 		return (
 			<div>
 				<Tabs hasMultilineTitle={true}>
-					<Tabs.Tab>
+					<Tabs.Tab style={tabStyle}>
 						<Tabs.Title>
 							One
 							<br />
@@ -30,7 +35,7 @@ export default createClass({
 						One content
 					</Tabs.Tab>
 
-					<Tabs.Tab>
+					<Tabs.Tab style={tabStyle}>
 						<Tabs.Title>
 							Two
 							<br />
@@ -40,12 +45,12 @@ export default createClass({
 						Two content
 					</Tabs.Tab>
 
-					<Tabs.Tab>
+					<Tabs.Tab style={tabStyle}>
 						<Tabs.Title>{titleThree}</Tabs.Title>
 						Three content
 					</Tabs.Tab>
 
-					<Tabs.Tab isDisabled={true}>
+					<Tabs.Tab isDisabled={true} style={tabStyle}>
 						<Tabs.Title>Four</Tabs.Title>
 						Four content
 					</Tabs.Tab>
