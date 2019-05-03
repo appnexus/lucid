@@ -33,9 +33,13 @@
 
 				.DayPicker-Weekday {
 					text-transform: uppercase;
-					color: @color-mediumGray;
+					color: @color-neutral-6;
 					flex: 1;
 					font-size: 100%;
+
+					abbr {
+						text-decoration: none;
+					}
 				}
 			}
 		}
@@ -81,7 +85,7 @@
 					}
 
 					&--range:not(.DayPicker-Day--outside):not(.DayPicker-Day--selected) {
-						background-color: @featured-color-primary-backgroundColor;
+						background-color: @color-primaryLight;
 					}
 
 					&--from:not(.DayPicker-Day--outside) {
