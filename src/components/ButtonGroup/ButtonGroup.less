@@ -6,7 +6,6 @@
 	box-sizing: border-box;
 	
 	.@{prefix}-Button + .@{prefix}-Button {
-		// border-left: 1px solid rgba(0, 0, 0, 0);
 		border-left: 0px;
 	}
 
@@ -16,22 +15,10 @@
 			outline: 2px solid @color-primary;
 			background-color: @color-white;
 			z-index: 1;
-			// padding: 0 8px;
 
 			&:hover {
 				background-color: @color-neutral-3;
 			}
 		}
-
-		&-is-active + .@{prefix}-Button-is-active {
-			// border-left: 1px solid rgba(0, 0, 0, 0);
-			// border-left: 0px;
-		}
-
-		&-is-active + .@{prefix}-Button {
-			// border-left: 1px solid rgba(0, 0, 0, 0);
-			// border-left: 0px;
-		}
-
 	}
 }
