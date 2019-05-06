@@ -4,6 +4,12 @@ import { SettingsIcon } from '../../../../index';
 
 export default createClass({
 	render() {
-		return <SettingsIcon />;
+		return (
+			<div>
+				Small: <SettingsIcon />
+				<br />
+				Large: <SettingsIcon presetSize="large" />
+			</div>
+		);
 	},
 });
