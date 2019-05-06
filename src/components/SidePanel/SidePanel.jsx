@@ -139,7 +139,7 @@ class SidePanel extends React.Component {
 								onDrag={this.handleResize}
 								onDragEnd={this.handleResizeEnd}
 							>
-								<GripperVerticalIcon />
+								<GripperVerticalIcon width="20" />
 							</DragCaptureZone>
 						)}
 						<div className={cx('&-content')}>{children}</div>

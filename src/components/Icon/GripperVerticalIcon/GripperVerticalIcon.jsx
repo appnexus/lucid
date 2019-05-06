@@ -31,7 +31,7 @@ const GripperVerticalIcon = createClass({
 
 		return (
 			<Icon
-				width={20}
+				width={2}
 				height={16}
 				viewBox="0 0 2 16"
 				{...omitProps(passThroughs, GripperVerticalIcon, [], false)}
