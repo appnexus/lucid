@@ -28,18 +28,33 @@ exports[`SidePanel Header should match snapshot 1`] = `
         >
           This is a header
         </div>
-        <CrossIcon
-          className="lucid-SidePanel-header-closer"
-          isClickable={true}
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          kind="invisible"
           onClick={[Function]}
-          presetSize="large"
           style={
             Object {
-              "height": 16,
-              "width": 16,
+              "height": "32px",
+              "width": "32px",
             }
           }
-        />
+          type="button"
+        >
+          <CrossIcon
+            className="lucid-SidePanel-header-closer"
+            isClickable={true}
+            onClick={[Function]}
+            presetSize="large"
+            style={
+              Object {
+                "height": 16,
+                "width": 16,
+              }
+            }
+          />
+        </Button>
       </div>
     </div>
     <div
@@ -52,7 +67,9 @@ exports[`SidePanel Header should match snapshot 1`] = `
         onDragEnd={[Function]}
         onDragStart={[Function]}
       >
-        <GripperVerticalIcon />
+        <GripperVerticalIcon
+          width="20"
+        />
       </DragCaptureZone>
       <div
         className="lucid-SidePanel-content"
@@ -89,7 +106,9 @@ exports[`SidePanel isAnimated should match snapshot 1`] = `
         onDragEnd={[Function]}
         onDragStart={[Function]}
       >
-        <GripperVerticalIcon />
+        <GripperVerticalIcon
+          width="20"
+        />
       </DragCaptureZone>
       <div
         className="lucid-SidePanel-content"
@@ -126,7 +145,9 @@ exports[`SidePanel isExpanded should match snapshot 1`] = `
         onDragEnd={[Function]}
         onDragStart={[Function]}
       >
-        <GripperVerticalIcon />
+        <GripperVerticalIcon
+          width="20"
+        />
       </DragCaptureZone>
       <div
         className="lucid-SidePanel-content"
@@ -191,7 +212,9 @@ exports[`SidePanel position should match snapshot 1`] = `
         onDragEnd={[Function]}
         onDragStart={[Function]}
       >
-        <GripperVerticalIcon />
+        <GripperVerticalIcon
+          width="20"
+        />
       </DragCaptureZone>
       <div
         className="lucid-SidePanel-content"
@@ -228,7 +251,9 @@ exports[`SidePanel width should match snapshot 1`] = `
         onDragEnd={[Function]}
         onDragStart={[Function]}
       >
-        <GripperVerticalIcon />
+        <GripperVerticalIcon
+          width="20"
+        />
       </DragCaptureZone>
       <div
         className="lucid-SidePanel-content"
