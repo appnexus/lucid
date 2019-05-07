@@ -12,3 +12,4 @@
 - table now defaults to `hasLightHeader`
 - removed `border` prop from `Table.td`
 - removed `isActionable` from `table`
+- added `presetSize` to `SettingsIcon`
