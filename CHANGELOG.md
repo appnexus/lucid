@@ -13,3 +13,4 @@
 - removed `border` prop from `Table.td`
 - removed `isActionable` from `table`
 - added `presetSize` to `SettingsIcon`
+- `Tabs` is now an inline element when the `hasFullWidthTabs` is false
