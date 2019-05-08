@@ -284,16 +284,7 @@ const Tabs = createClass({
 				: selectedIndex;
 
 		return (
-			<div
-				{...omitProps(passThroughs, Tabs)}
-				className={cx(
-					'&',
-					{
-						'&-container-variable-width': !hasFullWidthTabs,
-					},
-					className
-				)}
-			>
+			<div {...omitProps(passThroughs, Tabs)} className={cx('&', className)}>
 				<ul
 					className={cx('&-bar', {
 						'&-bar-is-multiline': hasMultilineTitle,

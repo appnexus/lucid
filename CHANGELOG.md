@@ -19,5 +19,3 @@
 - added `isInvisible` to `SingleSelect`. We do not use a button under the hood for this component, but this simulates an invisible `Button`, styling-wise.
 - removed `kindOf` from `ToolTip`
 - added `isLight` to `ToolTip`. The default now has dark styling, and this adds light styling.
-- `Tabs` is now an inline element when the `hasFullWidthTabs` is false
-

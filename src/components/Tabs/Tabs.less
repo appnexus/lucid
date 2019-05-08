@@ -5,8 +5,6 @@
 @Tabs-border-width: 1px;
 
 .@{prefix}-Tabs {
-
-
 	&-bar {
 		font-size: @size-font;
 		font-weight: @font-weight-semiBold;
@@ -15,10 +13,6 @@
 		display: flex;
 		margin: 0;
 		padding: 0;
-	}
-
-	&-container-variable-width {
-		display: inline;
 	}
 
 	&-variable-width {
@@ -45,7 +39,7 @@
 		color: @color-darkGray;
 		user-select: none;
 		background-color: @color-white;
-
+		
 		&:hover {
 			border-bottom: 3px solid @color-primary;
 		}
@@ -53,7 +47,7 @@
 		&:active {
 			.dropshadow-gradient(@color-gray, @color-lightGray, @Tabs-spacer-height);
 		}
-
+		
 		.@{prefix}-Badge {
 			cursor: pointer;
 		}
@@ -62,15 +56,15 @@
 	&-Tab-is-disabled {
 		color: @color-neutral-6;
 		cursor: not-allowed;
-
+		
 		&:hover {
 			border-bottom: 0;
 		}
-
+		
 		&:active {
 			background: @color-white;
 		}
-
+		
 		.@{prefix}-Badge {
 			color: @color-neutral-6;
 			border-color: @color-neutral-5;
