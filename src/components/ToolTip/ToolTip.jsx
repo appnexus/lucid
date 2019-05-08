@@ -58,18 +58,6 @@ const ToolTip = createClass({
 			Offers a lighter style for the tooltip window. Defaults to false.
 		`,
 
-		// kind: oneOf([
-		// 	'primary',
-		// 	'success',
-		// 	'warning',
-		// 	'danger',
-		// 	'info',
-		// 	'light',
-		// 	'default',
-		// ])`
-		// 	Style variations of the \`ToolTip\`.
-		// `,
-
 		onClose: func`
 			Called when the user closes the \`Banner\`.  Signature:
 			\`({ event, props }) => {}\`
