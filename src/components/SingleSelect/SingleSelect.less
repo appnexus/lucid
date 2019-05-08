@@ -25,6 +25,7 @@
 
 		&&-is-invisible {
 			border: 0;
+			background-color: transparent;
 		}
 
 		&-content {
@@ -50,14 +51,15 @@
 		&-is-highlighted,
 		&-is-selected {
 			border: 2px solid @featured-color-primary-borderColor;
-			// background-color: @featured-color-primary-backgroundColor;
 		}
 
 		&-is-expanded {
 			z-index: @zindex-tooltip;
-			// background-color: @featured-color-default-backgroundColor;
 		}
-		
+		&-is-expanded&-is-null-option {
+			border-bottom-width: 0px;
+		}
+
 		&-is-selected&-is-expanded {
 			background-color: @featured-color-default-backgroundColor;
 		}
@@ -80,14 +82,3 @@
 	color: @color-neutral-6;
 	font-weight: @font-weight-medium;
 }
-
-// .@{prefix}-DropMenu-Option-is-null {
-// 	back
-// }
-
-
-// with red:
-// @{prefix}-DropMenu @{prefix}-DropMenu-base @{prefix}-DropMenu-is-expanded @{prefix}-DropMenu-direction-down @{prefix}-SingleSelect
-
-// with null:
-// @{prefix}-DropMenu @{prefix}-DropMenu-base @{prefix}-DropMenu-is-expanded @{prefix}-DropMenu-direction-down @{prefix}-SingleSelect
