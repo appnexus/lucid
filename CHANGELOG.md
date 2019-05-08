@@ -13,3 +13,10 @@
 - removed `border` prop from `Table.td`
 - removed `isActionable` from `table`
 - added `presetSize` to `SettingsIcon`
+- added `isMenu` to `Dialog`. Styling adjustments for a more complex `Dialog`.
+- added `isTop` to `Tag`. Necessary only for tiered tags that are three levels deep. (Use at the top level)
+- added `isTop` to `Selection`. Necessary only for tiered selections. (Use at the top level)
+- added `isInvisible` to `SingleSelect`. We do not use a button under the hood for this component, but this simulates an invisible `Button`, styling-wise.
+- removed `kindOf` from `ToolTip`
+- added `isLight` to `ToolTip`. The default now has dark styling, and this adds light styling.
+-
