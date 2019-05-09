@@ -75,6 +75,11 @@ const Tab = createClass({
 		count: number`
 			Optional prop that will show a count number next to the tab's title.
 		`,
+
+		isVariableCountWidth: bool`
+			Defaults to false.
+			Allows the count bubble to grow large. Useful if working with huge numbers.
+		`,
 	},
 
 	handleClick(event) {
@@ -95,6 +100,7 @@ const Tab = createClass({
 			Title,
 			className,
 			count,
+			isVariableCountWidth,
 			...passThroughs
 		} = this.props;
 
@@ -119,7 +125,8 @@ const Tab = createClass({
 						<Badge
 							style={{
 								marginLeft: '12px',
-								width: '20px',
+								width: isVariableCountWidth ? null : '20px',
+								minWidth: '20px',
 							}}
 							type="stroke"
 							kind={isSelected ? 'primary' : null}
@@ -219,7 +226,7 @@ const Tabs = createClass({
 		`,
 
 		isFloating: bool`
-			Provides a small bottom border that offers a barrier between the tab 
+			Provides a small bottom border that offers a barrier between the tab
 			group and the rest of the page.
 			Useful if the tabs are not anchored to anything.
 		`,
@@ -237,7 +244,7 @@ const Tabs = createClass({
 
 		Tab: any`
 			*Child Element* Can be used to define one or more individual \`Tab\`s in
-			the sequence of \`Tabs\`.  
+			the sequence of \`Tabs\`.
 		`,
 	},
 
