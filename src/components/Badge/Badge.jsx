@@ -7,14 +7,15 @@ const cx = lucidClassNames.bind('&-Badge');
 
 const { node, string, oneOf } = PropTypes;
 
+const KIND_DEFAULT = 'default';
 const KIND_PRIMARY = 'primary';
 const KIND_SUCCESS = 'success';
 const KIND_DANGER = 'danger';
 const KIND_WARNING = 'warning';
 const KIND_INFO = 'info';
 const KIND_DARK = 'dark';
-const KIND_DEFAULT = 'default';
 const KINDS = [
+	KIND_DEFAULT,
 	KIND_PRIMARY,
 	KIND_SUCCESS,
 	KIND_DANGER,

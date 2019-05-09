@@ -329,7 +329,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
         hasOnlyIcon={false}
         isActive={false}
         isDisabled={false}
-        kind="success"
+        kind="primary"
         onClick={[Function]}
         type="button"
       >
@@ -340,7 +340,7 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
         hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
-        kind="success"
+        kind="primary"
         onClick={[Function]}
         type="button"
       >

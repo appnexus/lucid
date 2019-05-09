@@ -804,6 +804,94 @@ exports[`Tabs [common] example testing should match snapshot(s) for 09-with-coun
 </div>
 `;
 
+exports[`Tabs [common] example testing should match snapshot(s) for 09-with-count 2`] = `
+<div
+  className="lucid-Tabs"
+>
+  <ul
+    className="lucid-Tabs-bar lucid-Tabs-variable-width"
+  >
+    <Tabs.Tab
+      Title="One"
+      count={1231321}
+      index={0}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={true}
+      isVariableCountWidth={true}
+      key="0"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        One
+      </Tabs.Title>
+      One content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Two"
+      count={6546541612}
+      index={1}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      isVariableCountWidth={true}
+      key="1"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Two
+      </Tabs.Title>
+      Two content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      count={7}
+      index={2}
+      isLastTab={false}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      isVariableCountWidth={true}
+      key="2"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Three
+      </Tabs.Title>
+      Three content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Three"
+      count={123}
+      index={3}
+      isDisabled={true}
+      isLastTab={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      isVariableCountWidth={true}
+      key="3"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Three
+      </Tabs.Title>
+      Three content
+    </Tabs.Tab>
+  </ul>
+  <div
+    className="lucid-Tabs-content"
+  >
+    <Tabs.Title>
+      One
+    </Tabs.Title>
+    One content
+  </div>
+</div>
+`;
+
 exports[`Tabs [common] example testing should match snapshot(s) for 10-floating 1`] = `
 <div
   className="lucid-Tabs"
