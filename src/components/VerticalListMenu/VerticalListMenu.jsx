@@ -7,6 +7,7 @@ import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './VerticalListMenu.reducers';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible from '../Collapsible/Collapsible';
+import Button from '../Button/Button';
 
 const cx = bindClassNames('lucid-VerticalListMenu');
 
@@ -190,6 +191,7 @@ const VerticalListMenu = createClass({
 							<div
 								className={cx('&-Item-content', {
 									'&-Item-content-is-selected': actualIsSelected,
+									'&-Item-content-is-not-selected': !actualIsSelected,
 									'&-Item-content-is-actionable': isActionable,
 								})}
 								onClick={_.partial(this.handleClickItem, index, itemChildProp)}
@@ -198,9 +200,16 @@ const VerticalListMenu = createClass({
 								{hasExpander ? (
 									<div
 										className={cx('&-Item-expander')}
+										kind="invisible"
 										onClick={_.partial(this.handleToggle, index, itemChildProp)}
 									>
-										<ChevronIcon direction={actualIsExpanded ? 'up' : 'down'} />
+										<ChevronIcon
+											style={{
+												height: '20px',
+												width: '20px',
+											}}
+											direction={actualIsExpanded ? 'up' : 'down'}
+										/>
 									</div>
 								) : null}
 							</div>

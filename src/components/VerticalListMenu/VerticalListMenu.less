@@ -2,41 +2,44 @@
 @import (reference) '../../styles/mixins.less';
 
 @VerticalListMenu-size-itemHeight: 29px;
-@VerticalListMenu-size-childSpacer: 6px;
+@VerticalListMenu-size-childSpacer: 8px;
 @VerticalListMenu-size-childPadding: 15px;
 @VerticalListMenu-step: 12;
 
 .@{prefix}-VerticalListMenu {
-	& & .@{prefix}-VerticalListMenu-Item-content {
-		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 0);
-	}
 
-	& & & .@{prefix}-VerticalListMenu-Item-content {
+	font-weight: @font-weight-medium;
+
+	& & .@{prefix}-VerticalListMenu-Item-content {
 		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 1);
 	}
 
-	& & & & .@{prefix}-VerticalListMenu-Item-content {
+	& & & .@{prefix}-VerticalListMenu-Item-content {
 		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 2);
 	}
 
-	& & & & & .@{prefix}-VerticalListMenu-Item-content {
+	& & & & .@{prefix}-VerticalListMenu-Item-content {
 		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 3);
 	}
 
-	& & & & & & .@{prefix}-VerticalListMenu-Item-content {
+	& & & & & .@{prefix}-VerticalListMenu-Item-content {
 		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 4);
 	}
 
-	& & & & & & & .@{prefix}-VerticalListMenu-Item-content {
+	& & & & & & .@{prefix}-VerticalListMenu-Item-content {
 		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 5);
 	}
 
-	& & & & & & & & .@{prefix}-VerticalListMenu-Item-content {
+	& & & & & & & .@{prefix}-VerticalListMenu-Item-content {
 		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 6);
 	}
 
-	& & & & & & & & & .@{prefix}-VerticalListMenu-Item-content {
+	& & & & & & & & .@{prefix}-VerticalListMenu-Item-content {
 		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 7);
+	}
+
+	& & & & & & & & & .@{prefix}-VerticalListMenu-Item-content {
+		padding-left: @VerticalListMenu-size-childPadding + (@VerticalListMenu-step * 8);
 	}
 
 	display: flex;
@@ -49,91 +52,139 @@
 	list-style: none;
 
 	&-Item {
+
+
+		&:hover {
+			font-weight: @font-weight-semiBold;
+		}
+
 		&-expander {
 			align-self: flex-start;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			flex-shrink: 0;
-			width: @size-expander-button;
-			height: @size-expander-button;
+			width: 20px;
+			height: 20px;
 			margin: 4px;
-		}
 
-		&-content {
-			.is-selectable();
-			.left-marker(0);
-
-			min-height: @VerticalListMenu-size-itemHeight;
-			display: flex;
-			font-size: 12px;
-			align-items: center;
-			font-weight: bold;
-			border-width: 1px 0 0;
-			border-color: @color-gray;
-			border-style: solid;
-			color: @color-darkGray;
-			padding-left: 15px;
-
-			&-text {
-				width: 100%;
-				padding: @VerticalListMenu-size-childSpacer 0;
-			}
-
-			// Selected and hover state are the same for items
-			&&-is-selected,
-			&&-is-selected:hover {
-				.left-marker(1);
-
-				color: @color-darkGray;
-			}
-
-			// Only show the left marker if the item is actionable
-			&&-is-actionable:hover,
-			&&-is-actionable:focus {
-				.left-marker(1);
+			.@{prefix}-ChevronIcon {
+				fill: @color-transparent-gray-35;
 			}
 
 			&:hover,
 			&:focus {
-				color: @color-darkGray;
+				.box-sizing();
 
-				// Style the expander button when the user hovers on the item content
-				.@{prefix}-VerticalListMenu-Item-expander {
-					.box-sizing();
+				background-color: @color-neutral-3;
+				outline: none;
 
-					background-color: @featured-color-default-backgroundColor;
-					border: solid 1px @featured-color-default-borderColor;
-					border-radius: @size-borderRadius;
-					outline: none;
-
-					.@{prefix}-ChevronIcon {
-						fill: @color-darkGray;
-					}
+				.@{prefix}-ChevronIcon {
+					fill: @color-primary;
 				}
 			}
 		}
 
-		// The first VerticalListMenu-Item shouldn't have a top border
-		&:first-of-type > &-content {
-			border-top-color: @color-transparent;
+		& .@{prefix}-Collapsible-content {
+
+
+			& .@{prefix}-VerticalListMenu-Item-content.@{prefix}-VerticalListMenu-Item-content-is-not-selected {
+
+					position: relative;
+
+					& ::after {
+						z-index: -1;
+						position: absolute;
+						left: 0;
+						top: 0;
+						height: 100%;
+						width: @size-XXS;
+						background-color: @color-gray;
+						content: '';
+						transform-origin: 0 0;
+						transition: transform @timing-animation-hover;
+					}
+
+					&:hover {
+						& ::after {
+							background-color: @color-primary;
+						}
+					}
+
+			}
+		}
+
+		&-content:not(.@{prefix}-VerticalListMenu-Item-content-is-not-selected) {
+
+			.@{prefix}-VerticalListMenu-Item-content-text {
+				font-weight: @font-weight-semiBold;
+			}
+		}
+
+		&-content {
+			cursor: pointer;
+
+			display: flex;
+			align-items: center;
+			padding-left: 15px;
+
+			color: @color-darkGray;
+			font-family: @fontFamily;
+			font-size: 12px;
+			line-height: 16px;
+
+			&-text {
+
+
+				&:hover {
+					font-weight: @font-weight-semiBold;
+				}
+
+				width: 100%;
+				padding: @VerticalListMenu-size-childSpacer 0;
+
+				border-top: 1px solid @color-neutral-4;
+			}
+
+			&:hover {
+				font-weight: @font-weight-semiBold;
+			}
+
+			&&-is-selected,
+			&&-is-selected:hover,
+			&&-is-actionable:hover,
+			&&-is-actionable:focus {
+
+				position: relative;
+
+				& ::after {
+					z-index: 2;
+					position: absolute;
+					left: 0;
+					top: 0;
+					height: 100%;
+					width: @size-XXS;
+					background-color: @color-primary;
+					content: '';
+					transform-origin: 0 0;
+					transition: transform @timing-animation-hover;
+				}
+			}
+
 		}
 
 		// Any time we have a VerticalListMenu below a VerticalListMenu-Item
 		.@{prefix}-VerticalListMenu {
 			.@{prefix}-VerticalListMenu-Item-content {
-				font-weight: normal;
-				border-color: @color-transparent;
+				font-weight: @font-weight-medium;
 
 				&::before {
 					align-self: flex-start;
 					flex-shrink: 0;
-					content: '\2013'; // en dash
 					display: inline-block;
 					width: @VerticalListMenu-size-childSpacer;
 					color: @color-gray;
 					margin: @VerticalListMenu-size-childSpacer;
-					margin-left: 0;
 				}
 
 				&:hover,
