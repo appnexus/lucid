@@ -394,7 +394,6 @@ const SearchableSingleSelect = createClass({
 						)}
 						onRemove={this.removeSelection}
 						kind="default"
-						responsiveMode="large"
 					/>
 				</div>
 			);
