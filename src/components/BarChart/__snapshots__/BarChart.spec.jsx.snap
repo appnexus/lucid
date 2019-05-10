@@ -1150,803 +1150,803 @@ exports[`BarChart [common] example testing should match snapshot(s) for 13.many-
       data={
         Array [
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)0",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)0",
             "y": 0,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)86400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)86400",
             "y": 1,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)172800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)172800",
             "y": 2,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)259200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)259200",
             "y": 3,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)345600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)345600",
             "y": 4,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)432000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)432000",
             "y": 5,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)518400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)518400",
             "y": 6,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)604800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)604800",
             "y": 7,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)691200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)691200",
             "y": 8,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)777600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)777600",
             "y": 9,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)864000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)864000",
             "y": 10,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)950400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)950400",
             "y": 11,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)1036800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1036800",
             "y": 12,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)1123200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1123200",
             "y": 13,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)1209600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1209600",
             "y": 14,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)1296000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1296000",
             "y": 15,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)1382400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1382400",
             "y": 16,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)1468800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1468800",
             "y": 17,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)1555200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1555200",
             "y": 18,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)1641600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1641600",
             "y": 19,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)1728000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1728000",
             "y": 20,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)1814400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1814400",
             "y": 21,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)1900800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1900800",
             "y": 22,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)1987200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)1987200",
             "y": 23,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)2073600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2073600",
             "y": 24,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)2160000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2160000",
             "y": 25,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)2246400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2246400",
             "y": 26,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)2332800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2332800",
             "y": 27,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)2419200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2419200",
             "y": 28,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)2505600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2505600",
             "y": 29,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)2592000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2592000",
             "y": 30,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)2678400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2678400",
             "y": 31,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)2764800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2764800",
             "y": 32,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)2851200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2851200",
             "y": 33,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)2937600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)2937600",
             "y": 34,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)3024000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3024000",
             "y": 35,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)3110400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3110400",
             "y": 36,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)3196800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3196800",
             "y": 37,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)3283200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3283200",
             "y": 38,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)3369600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3369600",
             "y": 39,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)3456000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3456000",
             "y": 40,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)3542400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3542400",
             "y": 41,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)3628800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3628800",
             "y": 42,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)3715200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3715200",
             "y": 43,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)3801600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3801600",
             "y": 44,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)3888000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3888000",
             "y": 45,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)3974400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)3974400",
             "y": 46,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)4060800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4060800",
             "y": 47,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)4147200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4147200",
             "y": 48,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)4233600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4233600",
             "y": 49,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)4320000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4320000",
             "y": 50,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)4406400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4406400",
             "y": 51,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)4492800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4492800",
             "y": 52,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)4579200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4579200",
             "y": 53,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)4665600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4665600",
             "y": 54,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)4752000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4752000",
             "y": 55,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)4838400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4838400",
             "y": 56,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)4924800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)4924800",
             "y": 57,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)5011200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5011200",
             "y": 58,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)5097600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5097600",
             "y": 59,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)5184000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5184000",
             "y": 60,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)5270400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5270400",
             "y": 61,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)5356800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5356800",
             "y": 62,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)5443200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5443200",
             "y": 63,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)5529600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5529600",
             "y": 64,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)5616000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5616000",
             "y": 65,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)5702400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5702400",
             "y": 66,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)5788800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5788800",
             "y": 67,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)5875200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5875200",
             "y": 68,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)5961600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)5961600",
             "y": 69,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)6048000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)6048000",
             "y": 70,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)6134400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)6134400",
             "y": 71,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)6220800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)6220800",
             "y": 72,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)6307200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)6307200",
             "y": 73,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)6393600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)6393600",
             "y": 74,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)6480000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)6480000",
             "y": 75,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)6566400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)6566400",
             "y": 76,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)6652800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)6652800",
             "y": 77,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)6739200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)6739200",
             "y": 78,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)6825600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)6825600",
             "y": 79,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)6912000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)6912000",
             "y": 80,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)6998400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)6998400",
             "y": 81,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)7084800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)7084800",
             "y": 82,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)7171200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)7171200",
             "y": 83,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)7257600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)7257600",
             "y": 84,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)7344000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)7344000",
             "y": 85,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)7430400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)7430400",
             "y": 86,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)7516800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)7516800",
             "y": 87,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)7603200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)7603200",
             "y": 88,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)7689600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)7689600",
             "y": 89,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)7776000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)7776000",
             "y": 90,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)7862400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)7862400",
             "y": 91,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)7948800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)7948800",
             "y": 92,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)8035200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)8035200",
             "y": 93,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)8121600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)8121600",
             "y": 94,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)8208000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)8208000",
             "y": 95,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)8294400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)8294400",
             "y": 96,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)8380800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)8380800",
             "y": 97,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)8467200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)8467200",
             "y": 98,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)8553600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)8553600",
             "y": 99,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)8640000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)8640000",
             "y": 100,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)8726400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)8726400",
             "y": 101,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)8812800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)8812800",
             "y": 102,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)8899200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)8899200",
             "y": 103,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)8985600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)8985600",
             "y": 104,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)9072000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)9072000",
             "y": 105,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)9158400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)9158400",
             "y": 106,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)9244800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)9244800",
             "y": 107,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)9331200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)9331200",
             "y": 108,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)9417600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)9417600",
             "y": 109,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)9504000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)9504000",
             "y": 110,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)9590400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)9590400",
             "y": 111,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)9676800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)9676800",
             "y": 112,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)9763200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)9763200",
             "y": 113,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)9849600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)9849600",
             "y": 114,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)9936000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)9936000",
             "y": 115,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)10022400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)10022400",
             "y": 116,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)10108800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)10108800",
             "y": 117,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)10195200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)10195200",
             "y": 118,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)10281600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)10281600",
             "y": 119,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)10368000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)10368000",
             "y": 120,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)10454400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)10454400",
             "y": 121,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)10540800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)10540800",
             "y": 122,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)10627200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)10627200",
             "y": 123,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)10713600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)10713600",
             "y": 124,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)10800000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)10800000",
             "y": 125,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)10886400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)10886400",
             "y": 126,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)10972800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)10972800",
             "y": 127,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)11059200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)11059200",
             "y": 128,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)11145600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)11145600",
             "y": 129,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)11232000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)11232000",
             "y": 130,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)11318400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)11318400",
             "y": 131,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)11404800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)11404800",
             "y": 132,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)11491200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)11491200",
             "y": 133,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)11577600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)11577600",
             "y": 134,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)11664000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)11664000",
             "y": 135,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)11750400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)11750400",
             "y": 136,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)11836800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)11836800",
             "y": 137,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)11923200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)11923200",
             "y": 138,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)12009600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)12009600",
             "y": 139,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)12096000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)12096000",
             "y": 140,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)12182400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)12182400",
             "y": 141,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)12268800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)12268800",
             "y": 142,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)12355200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)12355200",
             "y": 143,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)12441600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)12441600",
             "y": 144,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)12528000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)12528000",
             "y": 145,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)12614400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)12614400",
             "y": 146,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)12700800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)12700800",
             "y": 147,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)12787200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)12787200",
             "y": 148,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)12873600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)12873600",
             "y": 149,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)12960000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)12960000",
             "y": 150,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)13046400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)13046400",
             "y": 151,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)13132800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)13132800",
             "y": 152,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)13219200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)13219200",
             "y": 153,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)13305600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)13305600",
             "y": 154,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)13392000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)13392000",
             "y": 155,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)13478400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)13478400",
             "y": 156,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)13564800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)13564800",
             "y": 157,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)13651200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)13651200",
             "y": 158,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)13737600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)13737600",
             "y": 159,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)13824000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)13824000",
             "y": 160,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)13910400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)13910400",
             "y": 161,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)13996800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)13996800",
             "y": 162,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)14083200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)14083200",
             "y": 163,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)14169600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)14169600",
             "y": 164,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)14256000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)14256000",
             "y": 165,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)14342400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)14342400",
             "y": 166,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)14428800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)14428800",
             "y": 167,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)14515200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)14515200",
             "y": 168,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)14601600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)14601600",
             "y": 169,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)14688000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)14688000",
             "y": 170,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)14774400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)14774400",
             "y": 171,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)14860800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)14860800",
             "y": 172,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)14947200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)14947200",
             "y": 173,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)15033600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)15033600",
             "y": 174,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)15120000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)15120000",
             "y": 175,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)15206400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)15206400",
             "y": 176,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)15292800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)15292800",
             "y": 177,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)15379200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)15379200",
             "y": 178,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)15465600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)15465600",
             "y": 179,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)15552000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)15552000",
             "y": 180,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)15638400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)15638400",
             "y": 181,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)15724800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)15724800",
             "y": 182,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)15811200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)15811200",
             "y": 183,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)15897600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)15897600",
             "y": 184,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)15984000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)15984000",
             "y": 185,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)16070400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)16070400",
             "y": 186,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)16156800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)16156800",
             "y": 187,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)16243200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)16243200",
             "y": 188,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)16329600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)16329600",
             "y": 189,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)16416000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)16416000",
             "y": 190,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)16502400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)16502400",
             "y": 191,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)16588800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)16588800",
             "y": 192,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)16675200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)16675200",
             "y": 193,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)16761600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)16761600",
             "y": 194,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)16848000",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)16848000",
             "y": 195,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)16934400",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)16934400",
             "y": 196,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)17020800",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)17020800",
             "y": 197,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)17107200",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)17107200",
             "y": 198,
           },
           Object {
-            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (UTC)17193600",
+            "x": "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)17193600",
             "y": 199,
           },
         ]
