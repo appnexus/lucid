@@ -4,7 +4,6 @@ import { shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
 import SidePanel from './SidePanel';
 import Overlay from '../Overlay/Overlay';
-import CrossIcon from '../Icon/CrossIcon/CrossIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
 describe('SidePanel', () => {
@@ -41,7 +40,9 @@ describe('SidePanel', () => {
 				const wrapper = shallow(
 					<SidePanel isExpanded onCollapse={onCollapse} Header='Foo bar' />
 				);
-				const crossIconWrapper = wrapper.find(CrossIcon);
+				const crossIconWrapper = wrapper.find(
+					'.lucid-SidePanel-header-closer-button'
+				);
 				crossIconWrapper.simulate('click');
 				expect(onCollapse).toHaveBeenCalled();
 			});
