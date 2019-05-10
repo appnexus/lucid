@@ -1,13 +1,5 @@
 {
   "extends": [
-		"appnexus/frontend",
-		"prettier",
-		"prettier/react"
-	],
-	"plugins": [
-		"prettier"
-	],
-  "rules": {
-		"prettier/prettier": ["error", {"trailingComma": "es5", "singleQuote": true, "useTabs": true}]
-  }
+		"appnexus/frontend"
+	]
 }
