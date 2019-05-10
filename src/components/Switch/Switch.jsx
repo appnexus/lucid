@@ -96,7 +96,7 @@ const Switch = createClass({
 					type="checkbox"
 				/>
 				<span className={cx('&-visualization-container')} />
-				<span className={cx('&-visualization-glow')} />
+				{/* <span className={cx('&-visualization-glow')} /> */}
 				<span className={cx('&-visualization-handle')} />
 			</span>
 		);
