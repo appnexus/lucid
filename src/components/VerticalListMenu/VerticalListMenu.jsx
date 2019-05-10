@@ -7,7 +7,6 @@ import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './VerticalListMenu.reducers';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible from '../Collapsible/Collapsible';
-import Button from '../Button/Button';
 
 const cx = bindClassNames('lucid-VerticalListMenu');
 
