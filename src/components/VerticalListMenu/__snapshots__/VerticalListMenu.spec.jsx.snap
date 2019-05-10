@@ -14,7 +14,7 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="0"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
@@ -29,7 +29,7 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="1"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
@@ -44,7 +44,7 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="2"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
@@ -95,7 +95,7 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="1"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
@@ -105,10 +105,17 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       </div>
       <div
         className="lucid-VerticalListMenu-Item-expander"
+        kind="invisible"
         onClick={[Function]}
       >
         <ChevronIcon
           direction="down"
+          style={
+            Object {
+              "height": "20px",
+              "width": "20px",
+            }
+          }
         />
       </div>
     </div>
@@ -399,7 +406,7 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="2"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
@@ -718,7 +725,7 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="1"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
@@ -754,7 +761,7 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="2"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
@@ -809,7 +816,7 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="3"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
@@ -893,7 +900,7 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="0"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
@@ -908,7 +915,7 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="1"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
@@ -918,10 +925,17 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       </div>
       <div
         className="lucid-VerticalListMenu-Item-expander"
+        kind="invisible"
         onClick={[Function]}
       >
         <ChevronIcon
           direction="down"
+          style={
+            Object {
+              "height": "20px",
+              "width": "20px",
+            }
+          }
         />
       </div>
     </div>
@@ -1194,7 +1208,7 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="2"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
