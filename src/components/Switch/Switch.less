@@ -37,7 +37,6 @@
 	&-visualization-container {
 		.box-sizing();
 
-		// background-color: @color-borderColor;
 		border-radius: @Switch-container-height / 2;
 		border: 1px solid @color-transparent-gray-30-new;
 		height: @Switch-container-height;
@@ -47,20 +46,6 @@
 		transition: @Switch-animation-timing;
 		width: @Switch-container-width;
 	}
-
-	// &-visualization-glow {
-	// 	.box-sizing();
-
-	// 	background-color: @color-primary;
-	// 	border-radius: @Switch-glow-radius;
-	// 	height: @Switch-glow-radius * 2;
-	// 	left: @Switch-glow-offset;
-	// 	opacity: 0;
-	// 	position: absolute;
-	// 	top: @Switch-glow-offset;
-	// 	transition: @Switch-animation-timing;
-	// 	width: @Switch-glow-radius * 2;
-	// }
 
 	&-visualization-handle {
 		.box-sizing();
@@ -76,42 +61,24 @@
 		width: @Switch-handle-radius * 2;
 	}
 
-	// &:hover &-visualization-glow {
-	// 	// opacity: 0.3;
-	// 	// transform: @Switch-glow-scale;
-	// }
-
 	&:hover &-visualization-handle {
-		// transform: @Switch-handle-scale;
 		background-color: @color-white;
 		border: 1px solid @color-primary;
 	}
 
 	&:hover &-visualization-container {
-		// transform: @Switch-handle-scale;
-		// background-color: @color-white;
 		border: 1px solid @color-primary;
 	}
 
-	// &-is-disabled:hover &-visualization-glow {
-	// 	opacity: 0;
-	// 	transform: none;
-	// }
+	&-is-selected &-visualization-container {
+		background-color: @color-white;
+		border: 1px solid @color-primary;
+	}
 
-	// &-is-disabled:hover &-visualization-handle {
-	// 	transform: none;
-	// }
-
-	// &-is-disabled &-visualization-container,
-	// &-is-disabled &-visualization-handle {
-	// 	background-color: fade(@color-neutral-9, 4%);
-	// 	border-color: fade(@color-neutral-9, 15%);
-
-	// 	&:hover {
-	// 		background-color: fade(@color-neutral-9, 4%);
-	// 		border-color: fade(@color-neutral-9, 15%);
-	// 	}
-	// }
+	&-is-selected &-visualization-handle {
+		background-color: @color-primary;
+		transform: @Switch-selected-transform;
+	}
 
 	&-is-disabled {
 
@@ -134,48 +101,93 @@
 
 		& .@{prefix}-Switch-visualization-container {
 			background-color: @color-white;
-			border-color: @color-primary-50;
+			border-color: @color-primary;
+			opacity: .50;
 		}
 
 		& .@{prefix}-Switch-visualization-handle {
-			background-color: @color-primary-50;
+			background-color: @color-primary;
+			opacity: .50;
 			border-color: transparent;
 		}
 
 		&:hover {
 			& .@{prefix}-Switch-visualization-container {
 				background-color: @color-white;
-				border-color: @color-primary-50;
+				border-color: @color-primary;
+				opacity: .50;
 			}
 
 			& .@{prefix}-Switch-visualization-handle {
-				background-color: @color-primary-50;
+				background-color: @color-primary;
+				opacity: .50;
 				border-color: transparent;
 			}
 		}
 	}
 
-	// &-is-disabled&-is-selected:hover &-visualization-handle {
-	// 	transform: @Switch-selected-transform scale(1);
-	// }
+	&-is-include-exclude {
 
-	&-is-selected &-visualization-container {
-		background-color: @color-white;
-		border: 1px solid @color-primary;
+		.@{prefix}-Switch-visualization-handle {
+			background-color: @color-secondary-1;
+		}
+
+		.@{prefix}-Switch-visualization-container {
+			border-color: @color-secondary-1;
+		}
+
+		&.@{prefix}-Switch-is-selected {
+
+			.@{prefix}-Switch-visualization-handle {
+				background-color: @color-secondary-4;
+				border: 0;
+			}
+
+			.@{prefix}-Switch-visualization-container {
+				border-color: @color-secondary-4;
+			}
+		}
+
+		&:hover {
+
+			.@{prefix}-Switch-visualization-container,
+			.@{prefix}-Switch-visualization-handle {
+				border: 1px solid @color-secondary-1;
+			}
+		}
+
+
+		&:hover.@{prefix}-Switch-is-selected {
+
+			.@{prefix}-Switch-visualization-container,
+			.@{prefix}-Switch-visualization-handle {
+				border: 1px solid @color-secondary-4;
+			}
+		}
+
+		&.@{prefix}-Switch-is-disabled:not(.@{prefix}-Switch-is-selected) {
+
+			& .@{prefix}-Switch-visualization-container,
+			& .@{prefix}-Switch-visualization-handle {
+				background-color: fade(@color-neutral-9, 4%);
+				border-color: fade(@color-neutral-9, 15%);
+			}
+		}
+
+		&.@{prefix}-Switch-is-selected.@{prefix}-Switch-is-disabled {
+
+			&:hover {
+				.@{prefix}-Switch-visualization-handle {
+					background-color: @color-secondary-4;
+				}
+
+				.@{prefix}-Switch-visualization-container {
+					border-color: @color-secondary-4;
+				}
+			}
+
+		}
 	}
-
-	// &-is-selected &-visualization-glow {
-	// 	// transform: @Switch-selected-transform;
-	// }
-
-	&-is-selected &-visualization-handle {
-		background-color: @color-primary;
-		transform: @Switch-selected-transform;
-	}
-
-	// &-is-selected &-native:focus ~ &-visualization-glow {
-	// 	// transform: @Switch-selected-transform @Switch-glow-scale;
-	// }
 
 	&-is-selected &-native:focus ~ &-visualization-handle {
 		// transform: @Switch-selected-transform @Switch-handle-scale;
@@ -190,11 +202,6 @@
 		background-color: white;
 		border: 1px solid @color-primary;
 	}
-
-	// &-native:focus ~ &-visualization-glow {
-	// 	opacity: 0.3;
-	// 	transform: @Switch-glow-scale;
-	// }
 
 	&-native:focus ~ &-visualization-handle {
 		// transform: @Switch-handle-scale;

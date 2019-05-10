@@ -49,6 +49,10 @@ const Switch = createClass({
 		style: object`
 			Passed through to the root element.
 		`,
+
+		isIncludeExclude: bool`
+			Offers a red/green styling to the switch.
+		`,
 	},
 
 	getDefaultProps() {
@@ -69,6 +73,7 @@ const Switch = createClass({
 			isDisabled,
 			isSelected,
 			style,
+			isIncludeExclude,
 			...passThroughs
 		} = this.props;
 
@@ -79,6 +84,7 @@ const Switch = createClass({
 					{
 						'&-is-disabled': isDisabled,
 						'&-is-selected': isSelected,
+						'&-is-include-exclude': isIncludeExclude,
 					},
 					className
 				)}
@@ -96,7 +102,6 @@ const Switch = createClass({
 					type="checkbox"
 				/>
 				<span className={cx('&-visualization-container')} />
-				{/* <span className={cx('&-visualization-glow')} /> */}
 				<span className={cx('&-visualization-handle')} />
 			</span>
 		);
