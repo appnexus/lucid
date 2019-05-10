@@ -87,7 +87,7 @@ describe('Autocomplete', () => {
 			});
 
 			it('should set the text value of the input', () => {
-				wrapper = mount(<Autocomplete value="Portland" />, {
+				wrapper = mount(<Autocomplete value='Portland' />, {
 					attachTo: rootMountNode,
 				});
 
@@ -103,7 +103,7 @@ describe('Autocomplete', () => {
 			});
 
 			it('should change the text value of the input when the prop changes', () => {
-				wrapper = mount(<Autocomplete value="Portland" />, {
+				wrapper = mount(<Autocomplete value='Portland' />, {
 					attachTo: rootMountNode,
 				});
 
@@ -188,7 +188,7 @@ describe('Autocomplete', () => {
 								'potent',
 								'please',
 							]}
-							testProp="foo"
+							testProp='foo'
 						/>
 					);
 
@@ -209,7 +209,7 @@ describe('Autocomplete', () => {
 				it('should be called when user types into the text box', () => {
 					const onChange = sinon.spy();
 
-					wrapper = mount(<Autocomplete onChange={onChange} testProp="foo" />, {
+					wrapper = mount(<Autocomplete onChange={onChange} testProp='foo' />, {
 						attachTo: rootMountNode,
 					});
 
@@ -256,7 +256,7 @@ describe('Autocomplete', () => {
 						onSelect={onSelect}
 						DropMenu={{ isExpanded: true }}
 						suggestions={['Portland', 'portal', 'porridge', 'potent', 'please']}
-						testProp="foo"
+						testProp='foo'
 					/>
 				);
 
@@ -298,7 +298,7 @@ describe('Autocomplete', () => {
 					<Autocomplete
 						onExpand={onExpand}
 						suggestions={['Portland', 'portal', 'porridge', 'potent', 'please']}
-						testProp="foo"
+						testProp='foo'
 					/>,
 					{ attachTo: rootMountNode }
 				);
@@ -327,7 +327,7 @@ describe('Autocomplete', () => {
 					<Autocomplete
 						onExpand={onExpand}
 						suggestions={['Portland', 'portal', 'porridge', 'potent', 'please']}
-						testProp="foo"
+						testProp='foo'
 						DropMenu={{
 							isExpanded: false,
 						}}
@@ -354,7 +354,7 @@ describe('Autocomplete', () => {
 					<Autocomplete
 						onExpand={onExpand}
 						suggestions={['Portland', 'portal', 'porridge', 'potent', 'please']}
-						testProp="foo"
+						testProp='foo'
 					/>,
 					{ attachTo: rootMountNode }
 				);
@@ -375,7 +375,7 @@ describe('Autocomplete', () => {
 					<Autocomplete
 						onExpand={onExpand}
 						suggestions={['Portland', 'portal', 'porridge', 'potent', 'please']}
-						testProp="foo"
+						testProp='foo'
 						DropMenu={{
 							isExpanded: false,
 						}}

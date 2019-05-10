@@ -177,12 +177,10 @@ export default createClass({
 
 		return (
 			<DataTable
-				data={_.map(
-					data,
-					(row, index) =>
-						index === activeIndex ? { ...row, isActive: true } : row
+				data={_.map(data, (row, index) =>
+					index === activeIndex ? { ...row, isActive: true } : row
 				)}
-				density="extended"
+				density='extended'
 				isSelectable
 				isActionable
 				onRowClick={this.handleRowClick}
@@ -191,9 +189,9 @@ export default createClass({
 				onSort={this.handleSort}
 			>
 				<DataTable.Column
-					field="id"
+					field='id'
 					width={41}
-					align="left"
+					align='left'
 					hasBorderLeft
 					isSortable
 					isSorted={currentlySortedField === 'id'}
@@ -203,7 +201,7 @@ export default createClass({
 				</DataTable.Column>
 
 				<DataTable.Column
-					field="first_name"
+					field='first_name'
 					width={100}
 					hasBorderLeft
 					hasBorderRight
@@ -216,8 +214,8 @@ export default createClass({
 				</DataTable.Column>
 
 				<DataTable.Column
-					field="last_name"
-					align="left"
+					field='last_name'
+					align='left'
 					width={100}
 					hasBorderRight
 					isResizable
@@ -229,8 +227,8 @@ export default createClass({
 				</DataTable.Column>
 
 				<DataTable.Column
-					field="email"
-					align="left"
+					field='email'
+					align='left'
 					isSortable
 					isSorted={currentlySortedField === 'email'}
 					sortDirection={currentlySortedFieldDirection}
@@ -239,8 +237,8 @@ export default createClass({
 				</DataTable.Column>
 
 				<DataTable.Column
-					field="occupation"
-					align="left"
+					field='occupation'
+					align='left'
 					width={100}
 					hasBorderLeft
 					isSortable
@@ -251,8 +249,8 @@ export default createClass({
 				</DataTable.Column>
 
 				<DataTable.Column
-					field="salary"
-					align="right"
+					field='salary'
+					align='right'
 					width={100}
 					hasBorderLeft
 					isSortable
@@ -263,8 +261,8 @@ export default createClass({
 				</DataTable.Column>
 
 				<DataTable.Column
-					field="status"
-					align="center"
+					field='status'
+					align='center'
 					width={100}
 					hasBorderLeft
 				>

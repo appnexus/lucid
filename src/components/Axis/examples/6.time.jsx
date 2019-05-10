@@ -17,19 +17,19 @@ export default createClass({
 		return (
 			<svg width={width} height={height}>
 				<g transform={`translate(${margin.left}, 1)`}>
-					<Axis orient="bottom" scale={x} />
+					<Axis orient='bottom' scale={x} />
 				</g>
 
-				<g transform={`translate(${margin.left}, ${height / 3 * 1})`}>
+				<g transform={`translate(${margin.left}, ${(height / 3) * 1})`}>
 					<Axis
-						orient="bottom"
+						orient='bottom'
 						scale={x}
 						ticks={x.ticks(d3Time.timeMonth, 6)}
 					/>
 				</g>
 
-				<g transform={`translate(${margin.left}, ${height / 3 * 2})`}>
-					<Axis orient="bottom" scale={x} ticks={x.ticks(d3Time.timeYear, 1)} />
+				<g transform={`translate(${margin.left}, ${(height / 3) * 2})`}>
+					<Axis orient='bottom' scale={x} ticks={x.ticks(d3Time.timeYear, 1)} />
 				</g>
 			</svg>
 		);

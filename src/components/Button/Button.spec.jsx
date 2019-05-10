@@ -74,7 +74,7 @@ describe('Button', () => {
 		});
 
 		it('should passthrough button type property', () => {
-			const wrapper = shallow(<Button type="submit" />);
+			const wrapper = shallow(<Button type='submit' />);
 			assert.equal(wrapper.find('button').prop('type'), 'submit');
 		});
 	});

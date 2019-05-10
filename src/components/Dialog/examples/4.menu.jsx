@@ -56,14 +56,14 @@ export default createClass({
 				<Dialog
 					isMenu
 					isShown={this.state.isShown}
-					Header="Advanced Filters"
-					size="medium"
+					Header='Advanced Filters'
+					size='medium'
 					height={500}
 				>
 					<p style={{ fontSize: '16px' }}>Flavor</p>
 					<CheckboxLabeled
 						isSelected={_.includes(this.state.flavors, 'chocolate')}
-						name="interactive-checkboxes"
+						name='interactive-checkboxes'
 						onSelect={this.handleSelectedChocolate}
 						style={style}
 					>
@@ -71,7 +71,7 @@ export default createClass({
 					</CheckboxLabeled>
 					<CheckboxLabeled
 						isSelected={_.includes(this.state.flavors, 'strawberry')}
-						name="interactive-checkboxes"
+						name='interactive-checkboxes'
 						onSelect={this.handleSelectedStrawberry}
 						style={style}
 					>
@@ -81,10 +81,10 @@ export default createClass({
 					<p style={{ fontSize: '16px', marginTop: '25px' }}>
 						Flavor Combination Research
 					</p>
-					<SearchField placeholder="Sundae school..." />
+					<SearchField placeholder='Sundae school...' />
 
 					<p style={{ fontSize: '16px', marginTop: '25px' }}>Toppings</p>
-					<SearchableMultiSelect responsiveMode="small">
+					<SearchableMultiSelect responsiveMode='small'>
 						<Option>cookie dough</Option>
 						<Option>more ice cream</Option>
 						<Option>mochi</Option>
@@ -104,13 +104,13 @@ export default createClass({
 
 					<Dialog.Footer>
 						<Button
-							kind="invisible"
+							kind='invisible'
 							onClick={_.partial(this.handleShow, false)}
 							style={{ marginRight: '9px' }}
 						>
 							Cancel
 						</Button>
-						<Button kind="primary">Save</Button>
+						<Button kind='primary'>Save</Button>
 					</Dialog.Footer>
 				</Dialog>
 			</div>

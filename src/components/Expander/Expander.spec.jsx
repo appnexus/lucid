@@ -68,13 +68,13 @@ describe('Expander', () => {
 			});
 			it('accepts "highlighted".', () => {
 				assert.equal(
-					mount(<Expander kind="highlighted" />).prop('kind'),
+					mount(<Expander kind='highlighted' />).prop('kind'),
 					'highlighted'
 				);
 			});
 			it('`kind=highlighted` adds the "lucid-Expander-kind-highlighted" class.', () => {
 				const wrapper = shallow(
-					<Expander isExpanded={true} kind="highlighted" />
+					<Expander isExpanded={true} kind='highlighted' />
 				);
 				assert.equal(
 					wrapper.find('.lucid-Expander-kind-highlighted').length,
@@ -86,7 +86,7 @@ describe('Expander', () => {
 		describe('Label (as a prop)', () => {
 			it('renders the value in the header in a `SPAN` element neighboring its `ChevronIcon` instance.', () => {
 				assert.equal(
-					shallow(<Expander Label="foo" />)
+					shallow(<Expander Label='foo' />)
 						.find(ReactTransitionGroup)
 						.find('span')
 						.prop('children'),
@@ -117,7 +117,7 @@ describe('Expander', () => {
 			it('passes through all props not defined in `propTypes` to the root element.', () => {
 				const wrapper = shallow(
 					<Expander
-						className="wut"
+						className='wut'
 						isExpanded={true}
 						onToggle={_.noop}
 						style={{ marginRight: 10 }}

@@ -125,7 +125,7 @@ describe('Point', () => {
 
 		describe('color', () => {
 			it('should apply color strings as a class', () => {
-				const wrapper = shallow(<Point color="yolo" />);
+				const wrapper = shallow(<Point color='yolo' />);
 
 				assert(
 					wrapper.find('path').hasClass('lucid-Point-yolo'),
@@ -134,7 +134,7 @@ describe('Point', () => {
 			});
 
 			it('should apply custom colors to `style`', () => {
-				const wrapper = shallow(<Point color="#F00" />);
+				const wrapper = shallow(<Point color='#F00' />);
 
 				assert.deepEqual(wrapper.find('path').prop('style'), {
 					fill: '#F00',

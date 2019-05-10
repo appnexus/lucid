@@ -21,12 +21,12 @@ export default createClass({
 							<SuccessIcon />
 						</Th>
 						<Th rowSpan={2}>Button</Th>
-						<Th rowSpan={2} isSorted sortDirection="up">
+						<Th rowSpan={2} isSorted sortDirection='up'>
 							Sorted Column
 						</Th>
-						<Th align="left">align left</Th>
-						<Th align="center">align center</Th>
-						<Th align="right" isSortable isSorted>
+						<Th align='left'>align left</Th>
+						<Th align='center'>align center</Th>
+						<Th align='right' isSortable isSorted>
 							align right
 						</Th>
 					</Tr>
@@ -44,14 +44,14 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small">button</Button>
+							<Button size='small'>button</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr isDisabled>
 						<Td>
@@ -62,16 +62,16 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small" isDisabled={true}>
+							<Button size='small' isDisabled={true}>
 								button
 							</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr isActionable>
 						<Td>
@@ -82,14 +82,14 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small">button</Button>
+							<Button size='small'>button</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr isDisabled isActionable>
 						<Td>
@@ -100,100 +100,100 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small" isDisabled={true}>
+							<Button size='small' isDisabled={true}>
 								button
 							</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr>
 						<Td>
 							<Checkbox />
 						</Td>
 						<Td>
-							<a href="#">Link</a>
+							<a href='#'>Link</a>
 						</Td>
 						<Td hasBorderLeft hasBorderRight>
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small">button</Button>
+							<Button size='small'>button</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr isDisabled>
 						<Td>
 							<Checkbox />
 						</Td>
 						<Td>
-							<a href="#">isDisabled Link</a>
+							<a href='#'>isDisabled Link</a>
 						</Td>
 						<Td hasBorderLeft hasBorderRight>
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small" isDisabled={true}>
+							<Button size='small' isDisabled={true}>
 								button
 							</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr isActionable>
 						<Td>
 							<Checkbox />
 						</Td>
 						<Td>
-							<a href="#">Link && isActionable</a>
+							<a href='#'>Link && isActionable</a>
 						</Td>
 						<Td hasBorderLeft hasBorderRight>
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small">button</Button>
+							<Button size='small'>button</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr isActionable isDisabled>
 						<Td>
 							<Checkbox />
 						</Td>
 						<Td>
-							<a href="#">isDisabled Link && isActionable</a>
+							<a href='#'>isDisabled Link && isActionable</a>
 						</Td>
 						<Td hasBorderLeft hasBorderRight>
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small" isDisabled={true}>
+							<Button size='small' isDisabled={true}>
 								button
 							</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr isSelected>
 						<Td>
@@ -204,14 +204,14 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small">button</Button>
+							<Button size='small'>button</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr isSelected isDisabled>
 						<Td>
@@ -222,16 +222,16 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small" isDisabled={true}>
+							<Button size='small' isDisabled={true}>
 								button
 							</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr isSelected isActionable>
 						<Td>
@@ -242,14 +242,14 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small">button</Button>
+							<Button size='small'>button</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr isSelected isDisabled isActionable>
 						<Td>
@@ -260,16 +260,16 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small" isDisabled={true}>
+							<Button size='small' isDisabled={true}>
 								button
 							</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr isActionable isActive>
 						<Td>
@@ -280,14 +280,14 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small">button</Button>
+							<Button size='small'>button</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 					</Tr>
 					<Tr isActionable isActive isDisabled>
 						<Td>
@@ -298,16 +298,16 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small" isDisabled={true}>
+							<Button size='small' isDisabled={true}>
 								button
 							</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 					</Tr>
 				</Tbody>
 			</Table>

@@ -22,47 +22,47 @@ export default createClass({
 		return (
 			<section style={sectionStyle}>
 				<article style={articleStyle}>
-					<Button style={buttonStyle} kind="danger">
+					<Button style={buttonStyle} kind='danger'>
 						Danger
 					</Button>
-					<Button kind="danger" isDisabled={true}>
+					<Button kind='danger' isDisabled={true}>
 						Disabled
 					</Button>
 				</article>
 				<article style={articleStyle}>
-					<Button style={buttonStyle} kind="danger" size="short">
+					<Button style={buttonStyle} kind='danger' size='short'>
 						Short
 					</Button>
-					<Button kind="danger" size="short" isDisabled={true}>
+					<Button kind='danger' size='short' isDisabled={true}>
 						Short disabled
 					</Button>
 				</article>
 				<article style={articleStyle}>
-					<Button style={buttonStyle} kind="danger" size="small">
+					<Button style={buttonStyle} kind='danger' size='small'>
 						Small
 					</Button>
-					<Button kind="danger" size="small" isDisabled={true}>
+					<Button kind='danger' size='small' isDisabled={true}>
 						Small disabled
 					</Button>
 				</article>
 				<article style={articleStyle}>
-					<Button style={buttonStyle} kind="danger" size="large">
+					<Button style={buttonStyle} kind='danger' size='large'>
 						Large
 					</Button>
-					<Button kind="danger" size="large" isDisabled={true}>
+					<Button kind='danger' size='large' isDisabled={true}>
 						Large disabled
 					</Button>
 				</article>
 				<article style={articleStyle}>
-					<Button kind="danger" style={buttonStyle} size="large">
+					<Button kind='danger' style={buttonStyle} size='large'>
 						<CheckIcon />
 						Large
 					</Button>
 					<Button
 						isDisabled={true}
-						kind="danger"
+						kind='danger'
 						style={buttonStyle}
-						size="large"
+						size='large'
 					>
 						<CheckIcon />
 						Large

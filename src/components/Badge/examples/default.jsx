@@ -10,47 +10,47 @@ export default createClass({
 			<div>
 				<div>
 					<Badge style={style}>Badge</Badge>
-					<Badge style={style} type="stroke">
+					<Badge style={style} type='stroke'>
 						Badge
 					</Badge>
 				</div>
 				<div>
-					<Badge style={style} kind="primary">
+					<Badge style={style} kind='primary'>
 						Badge
 					</Badge>
-					<Badge style={style} kind="primary" type="stroke">
-						Badge
-					</Badge>
-				</div>
-				<div>
-					<Badge style={style} kind="success">
-						Badge
-					</Badge>
-					<Badge style={style} kind="success" type="stroke">
+					<Badge style={style} kind='primary' type='stroke'>
 						Badge
 					</Badge>
 				</div>
 				<div>
-					<Badge style={style} kind="danger">
+					<Badge style={style} kind='success'>
 						Badge
 					</Badge>
-					<Badge style={style} kind="danger" type="stroke">
-						Badge
-					</Badge>
-				</div>
-				<div>
-					<Badge style={style} kind="warning">
-						Badge
-					</Badge>
-					<Badge style={style} kind="warning" type="stroke">
+					<Badge style={style} kind='success' type='stroke'>
 						Badge
 					</Badge>
 				</div>
 				<div>
-					<Badge style={style} kind="dark">
+					<Badge style={style} kind='danger'>
 						Badge
 					</Badge>
-					<Badge style={style} kind="dark" type="stroke">
+					<Badge style={style} kind='danger' type='stroke'>
+						Badge
+					</Badge>
+				</div>
+				<div>
+					<Badge style={style} kind='warning'>
+						Badge
+					</Badge>
+					<Badge style={style} kind='warning' type='stroke'>
+						Badge
+					</Badge>
+				</div>
+				<div>
+					<Badge style={style} kind='dark'>
+						Badge
+					</Badge>
+					<Badge style={style} kind='dark' type='stroke'>
 						Badge
 					</Badge>
 				</div>

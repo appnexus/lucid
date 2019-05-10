@@ -98,8 +98,8 @@ const Switch = createClass({
 					checked={isSelected}
 					className={cx('&-native')}
 					disabled={isDisabled}
-					ref="nativeElement"
-					type="checkbox"
+					ref='nativeElement'
+					type='checkbox'
 				/>
 				<span className={cx('&-visualization-container')} />
 				<span className={cx('&-visualization-handle')} />

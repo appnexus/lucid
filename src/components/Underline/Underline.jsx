@@ -38,13 +38,13 @@ const Underline = ({ className, children, match, ...passThroughs }) => {
 	return (
 		<span className={cx('&', className)} {...passThroughs}>
 			{[
-				pre && <span key="pre">{pre}</span>,
+				pre && <span key='pre'>{pre}</span>,
 				matchText && (
-					<span key="match" style={{ textDecoration: 'underline' }}>
+					<span key='match' style={{ textDecoration: 'underline' }}>
 						{matchText}
 					</span>
 				),
-				post && <span key="post">{post}</span>,
+				post && <span key='post'>{post}</span>,
 			]}
 		</span>
 	);

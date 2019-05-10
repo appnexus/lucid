@@ -6,7 +6,7 @@ export default createClass({
 	render() {
 		return (
 			<Autocomplete
-				placeholder="Enter a word..."
+				placeholder='Enter a word...'
 				suggestions={[
 					'Portland',
 					'pinky and the brain',

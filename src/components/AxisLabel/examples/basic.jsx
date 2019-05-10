@@ -40,40 +40,40 @@ export default createClass({
 
 				<g transform={'translate(0,0)'}>
 					<AxisLabel
-						orient="left"
+						orient='left'
 						width={margin.left}
 						height={height}
-						label="Left"
+						label='Left'
 					/>
 				</g>
 
 				<g transform={`translate(${margin.left + innerWidth}, 0)`}>
 					<AxisLabel
-						orient="right"
+						orient='right'
 						color={chartConstants.COLOR_0}
 						width={margin.right}
 						height={height}
-						label="Right"
+						label='Right'
 					/>
 				</g>
 
 				<g transform={`translate(0, ${margin.top + innerHeight})`}>
 					<AxisLabel
-						orient="bottom"
+						orient='bottom'
 						color={chartConstants.COLOR_1}
 						width={width}
 						height={margin.bottom}
-						label="Bottom"
+						label='Bottom'
 					/>
 				</g>
 
 				<g transform={'translate(0, 0)'}>
 					<AxisLabel
-						orient="top"
+						orient='top'
 						color={chartConstants.COLOR_2}
 						width={width}
 						height={margin.top}
-						label="Top"
+						label='Top'
 					/>
 				</g>
 			</svg>

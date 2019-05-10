@@ -15,7 +15,7 @@ export default createClass({
 			<div>
 				<BarChart
 					data={data}
-					yAxisTitle="Revenue"
+					yAxisTitle='Revenue'
 					yAxisTooltipFormatter={(yField, yValueFormatted, yValue) => yValue}
 				/>
 			</div>

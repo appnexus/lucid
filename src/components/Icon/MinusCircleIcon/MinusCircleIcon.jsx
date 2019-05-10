@@ -37,11 +37,11 @@ const MinusCircleIcon = createClass({
 					className={cx('&-background', {
 						'&-background-is-disabled': isDisabled,
 					})}
-					cx="8"
-					cy="8"
-					r="8"
+					cx='8'
+					cy='8'
+					r='8'
 				/>
-				<rect className={cx('&-minus')} x="3" y="7" width="10" height="2" />
+				<rect className={cx('&-minus')} x='3' y='7' width='10' height='2' />
 			</Icon>
 		);
 	},

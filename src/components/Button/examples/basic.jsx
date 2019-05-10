@@ -36,59 +36,59 @@ export default createClass({
 					<Button isActive={true}>Default active</Button>
 				</article>
 				<article style={articleStyle}>
-					<Button style={buttonStyle} size="short">
+					<Button style={buttonStyle} size='short'>
 						Short
 					</Button>
-					<Button style={buttonStyle} size="short">
+					<Button style={buttonStyle} size='short'>
 						<CheckIcon />
 						Short
 					</Button>
-					<Button style={buttonStyle} size="short" hasOnlyIcon={true}>
+					<Button style={buttonStyle} size='short' hasOnlyIcon={true}>
 						<CheckIcon />
 					</Button>
-					<Button style={buttonStyle} size="short" isDisabled={true}>
+					<Button style={buttonStyle} size='short' isDisabled={true}>
 						<CheckIcon />
 						Short disabled
 					</Button>
-					<Button size="short" isActive={true}>
+					<Button size='short' isActive={true}>
 						Short active
 					</Button>
 				</article>
 				<article style={articleStyle}>
-					<Button style={buttonStyle} size="small">
+					<Button style={buttonStyle} size='small'>
 						Small
 					</Button>
-					<Button style={buttonStyle} size="small">
+					<Button style={buttonStyle} size='small'>
 						<CheckIcon />
 						Small
 					</Button>
-					<Button style={buttonStyle} size="small" hasOnlyIcon={true}>
+					<Button style={buttonStyle} size='small' hasOnlyIcon={true}>
 						<CheckIcon />
 					</Button>
-					<Button style={buttonStyle} size="small" isDisabled={true}>
+					<Button style={buttonStyle} size='small' isDisabled={true}>
 						<CheckIcon />
 						Small disabled
 					</Button>
-					<Button size="small" isActive={true}>
+					<Button size='small' isActive={true}>
 						Small active
 					</Button>
 				</article>
 				<article style={articleStyle}>
-					<Button style={buttonStyle} size="large">
+					<Button style={buttonStyle} size='large'>
 						Large
 					</Button>
-					<Button style={buttonStyle} size="large">
+					<Button style={buttonStyle} size='large'>
 						<CheckIcon />
 						Large
 					</Button>
-					<Button style={buttonStyle} size="large" hasOnlyIcon={true}>
+					<Button style={buttonStyle} size='large' hasOnlyIcon={true}>
 						<CheckIcon />
 					</Button>
-					<Button style={buttonStyle} size="large" isDisabled={true}>
+					<Button style={buttonStyle} size='large' isDisabled={true}>
 						<CheckIcon />
 						Large disabled
 					</Button>
-					<Button size="large" isActive={true}>
+					<Button size='large' isActive={true}>
 						Large active
 					</Button>
 				</article>

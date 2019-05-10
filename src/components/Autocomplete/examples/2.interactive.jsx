@@ -288,7 +288,7 @@ export default createClass({
 				<section>Current Value: {this.state.value}</section>
 
 				<Autocomplete
-					placeholder="Enter a word..."
+					placeholder='Enter a word...'
 					suggestions={
 						_.size(filteredWordList) <= 1 && _.first(filteredWordList) === value
 							? []

@@ -391,7 +391,7 @@ describe('Points', () => {
 						]}
 						xScale={defaultXScale}
 						yScale={defaultYScale}
-						xField="axe"
+						xField='axe'
 					/>
 				);
 

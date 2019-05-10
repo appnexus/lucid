@@ -311,7 +311,7 @@ describe('SearchableSelect', () => {
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
-						<Option testProp="foo">option c</Option>
+						<Option testProp='foo'>option c</Option>
 					</SearchableSelect>
 				);
 
@@ -339,7 +339,7 @@ describe('SearchableSelect', () => {
 						<Placeholder>select one</Placeholder>
 						<Option>option a</Option>
 						<Option>option b</Option>
-						<Option testProp="foo">option c</Option>
+						<Option testProp='foo'>option c</Option>
 					</SearchableSelect>
 				);
 
@@ -381,10 +381,10 @@ describe('SearchableSelect', () => {
 			it('should pass the searchfield props through to the underlying SearchField element', () => {
 				const wrapper = shallow(
 					<SearchableSelect DropMenu={{ isExpanded: true }}>
-						<SearchField placeholder="custom" />
-						<Option name="OptionA">option a</Option>
-						<Option name="OptionB">option b</Option>
-						<Option name="OptionC">option c</Option>
+						<SearchField placeholder='custom' />
+						<Option name='OptionA'>option a</Option>
+						<Option name='OptionB'>option b</Option>
+						<Option name='OptionC'>option c</Option>
 					</SearchableSelect>
 				);
 
@@ -400,9 +400,9 @@ describe('SearchableSelect', () => {
 				const wrapper = shallow(
 					<SearchableSelect selectedIndex={null}>
 						<Placeholder>select one</Placeholder>
-						<Option name="OptionA">option a</Option>
-						<Option name="OptionB">option b</Option>
-						<Option name="OptionC">option c</Option>
+						<Option name='OptionA'>option a</Option>
+						<Option name='OptionB'>option b</Option>
+						<Option name='OptionC'>option c</Option>
 					</SearchableSelect>
 				);
 
@@ -433,9 +433,9 @@ describe('SearchableSelect', () => {
 				const wrapper = shallow(
 					<SearchableSelect selectedIndex={1}>
 						<Placeholder>select one</Placeholder>
-						<Option name="OptionA">option a</Option>
-						<Option name="OptionB">option b</Option>
-						<Option name="OptionC">option c</Option>
+						<Option name='OptionA'>option a</Option>
+						<Option name='OptionB'>option b</Option>
+						<Option name='OptionC'>option c</Option>
 					</SearchableSelect>
 				);
 
@@ -458,9 +458,9 @@ describe('SearchableSelect', () => {
 				const wrapper = shallow(
 					<SearchableSelect>
 						<Placeholder>select one</Placeholder>
-						<Option name="OptionA">option a</Option>
-						<Option name="OptionB">option b</Option>
-						<Option name="OptionC">option c</Option>
+						<Option name='OptionA'>option a</Option>
+						<Option name='OptionB'>option b</Option>
+						<Option name='OptionC'>option c</Option>
 					</SearchableSelect>
 				);
 
@@ -506,19 +506,19 @@ describe('SearchableSelect', () => {
 					shallow(
 						<SearchableSelect selectedIndex={1}>
 							<Placeholder>select one</Placeholder>
-							<Option name="OptionA" Selected="option a">
+							<Option name='OptionA' Selected='option a'>
 								<div style={{ display: 'flex' }}>
 									<div style={{ width: 100 }}>id</div>
 									<div>option a</div>
 								</div>
 							</Option>
-							<Option name="OptionB" Selected="option b">
+							<Option name='OptionB' Selected='option b'>
 								<div style={{ display: 'flex' }}>
 									<div style={{ width: 100 }}>id</div>
 									<div>option b</div>
 								</div>
 							</Option>
-							<Option name="OptionC" Selected="option c">
+							<Option name='OptionC' Selected='option c'>
 								<div style={{ display: 'flex' }}>
 									<div style={{ width: 100 }}>id</div>
 									<div>option c</div>
@@ -539,9 +539,9 @@ describe('SearchableSelect', () => {
 
 				expect(
 					shallow(
-						<SearchableSelect optionFilter={optionFilter} searchText="tion">
+						<SearchableSelect optionFilter={optionFilter} searchText='tion'>
 							<Placeholder>select one</Placeholder>
-							<Option name="OptionA" Selected="option a" filterText="option a">
+							<Option name='OptionA' Selected='option a' filterText='option a'>
 								{({ searchText }) => (
 									<div style={{ display: 'flex' }}>
 										<div style={{ width: 100 }}>{searchText}</div>
@@ -549,7 +549,7 @@ describe('SearchableSelect', () => {
 									</div>
 								)}
 							</Option>
-							<Option name="OptionB" Selected="option b" filterText="option b">
+							<Option name='OptionB' Selected='option b' filterText='option b'>
 								{({ searchText }) => (
 									<div style={{ display: 'flex' }}>
 										<div style={{ width: 100 }}>{searchText}</div>
@@ -557,7 +557,7 @@ describe('SearchableSelect', () => {
 									</div>
 								)}
 							</Option>
-							<Option name="OptionC" Selected="option c" filterText="option c">
+							<Option name='OptionC' Selected='option c' filterText='option c'>
 								{({ searchText }) => (
 									<div style={{ display: 'flex' }}>
 										<div style={{ width: 100 }}>{searchText}</div>
@@ -581,11 +581,11 @@ describe('SearchableSelect', () => {
 				wrapper = shallow(
 					<SearchableSelect>
 						<Placeholder>select one</Placeholder>
-						<OptionGroup name="TestGroup">
+						<OptionGroup name='TestGroup'>
 							Group Label
-							<Option name="OptionA">option a</Option>
-							<Option name="OptionB">option b</Option>
-							<Option name="OptionC">option c</Option>
+							<Option name='OptionA'>option a</Option>
+							<Option name='OptionB'>option b</Option>
+							<Option name='OptionC'>option c</Option>
 						</OptionGroup>
 					</SearchableSelect>
 				);

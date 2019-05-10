@@ -29,7 +29,7 @@ const responsiveMap = {
 
 function defaultIcon(kind, responsiveMode) {
 	return kind === 'default' ? null : kind === 'container' ? null : kind ===
-	'success' ? (
+	  'success' ? (
 		<SuccessIcon className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)} />
 	) : kind === 'danger' ? (
 		<MinusCircleIcon className={cx('&-Icon', `&-Icon-is-${responsiveMode}`)} />
@@ -176,7 +176,7 @@ const Selection = createClass({
 			? createElement(iconChildren.type, {
 					...iconChildren.props,
 					className: cx('&-Icon', iconChildren.props.className),
-				})
+			  })
 			: defaultIcon(kind, responsiveMode);
 
 		return (

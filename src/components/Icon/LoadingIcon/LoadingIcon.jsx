@@ -48,19 +48,19 @@ const LoadingIcon = createClass({
 			<Icon
 				{...omitProps(passThroughs, LoadingIcon)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
-				viewBox="0 0 100 100"
+				viewBox='0 0 100 100'
 				className={cx('&', className)}
 				style={{ animationDuration, ...style }}
 				isDisabled={isDisabled}
 			>
-				<rect x="0" y="0" width="100" height="100" fill="none" />
-				<circle className={cx('&-circle')} cx="50" cy="50" r="40" />
+				<rect x='0' y='0' width='100' height='100' fill='none' />
+				<circle className={cx('&-circle')} cx='50' cy='50' r='40' />
 				<circle
 					style={{ animationDuration }}
 					className={cx('&-spinner', { '&-spinner-is-disabled': isDisabled })}
-					cx="50"
-					cy="50"
-					r="40"
+					cx='50'
+					cy='50'
+					r='40'
 				/>
 			</Icon>
 		);

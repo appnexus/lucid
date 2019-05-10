@@ -9,49 +9,49 @@ export default createClass({
 			<div>
 				<div>
 					<NotchedTag style={style}>ADV</NotchedTag>
-					<NotchedTag size="small" style={style}>
+					<NotchedTag size='small' style={style}>
 						ADV
 					</NotchedTag>
-					<NotchedTag type="filled" style={style}>
+					<NotchedTag type='filled' style={style}>
 						ADV
 					</NotchedTag>
-					<NotchedTag size="small" type="filled" style={style}>
+					<NotchedTag size='small' type='filled' style={style}>
 						ADV
 					</NotchedTag>
 				</div>
 				<div>
-					<NotchedTag tagStyle="style-two" style={style}>
+					<NotchedTag tagStyle='style-two' style={style}>
 						IO
 					</NotchedTag>
-					<NotchedTag size="small" tagStyle="style-two" style={style}>
+					<NotchedTag size='small' tagStyle='style-two' style={style}>
 						IO
 					</NotchedTag>
-					<NotchedTag tagStyle="style-two" type="filled" style={style}>
+					<NotchedTag tagStyle='style-two' type='filled' style={style}>
 						IO
 					</NotchedTag>
 					<NotchedTag
-						size="small"
-						tagStyle="style-two"
-						type="filled"
+						size='small'
+						tagStyle='style-two'
+						type='filled'
 						style={style}
 					>
 						IO
 					</NotchedTag>
 				</div>
 				<div>
-					<NotchedTag tagStyle="style-three" style={style}>
+					<NotchedTag tagStyle='style-three' style={style}>
 						LI
 					</NotchedTag>
-					<NotchedTag size="small" tagStyle="style-three" style={style}>
+					<NotchedTag size='small' tagStyle='style-three' style={style}>
 						LI
 					</NotchedTag>
-					<NotchedTag tagStyle="style-three" type="filled" style={style}>
+					<NotchedTag tagStyle='style-three' type='filled' style={style}>
 						LI
 					</NotchedTag>
 					<NotchedTag
-						size="small"
-						tagStyle="style-three"
-						type="filled"
+						size='small'
+						tagStyle='style-three'
+						type='filled'
 						style={style}
 					>
 						LI

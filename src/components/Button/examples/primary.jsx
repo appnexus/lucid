@@ -21,47 +21,47 @@ export default createClass({
 		return (
 			<section style={sectionStyle}>
 				<article style={articleStyle}>
-					<Button style={buttonStyle} kind="primary">
+					<Button style={buttonStyle} kind='primary'>
 						Primary
 					</Button>
-					<Button kind="primary" isDisabled={true}>
+					<Button kind='primary' isDisabled={true}>
 						Disabled
 					</Button>
 				</article>
 				<article style={articleStyle}>
-					<Button style={buttonStyle} kind="primary" size="short">
+					<Button style={buttonStyle} kind='primary' size='short'>
 						Short
 					</Button>
-					<Button kind="primary" size="short" isDisabled={true}>
+					<Button kind='primary' size='short' isDisabled={true}>
 						Short disabled
 					</Button>
 				</article>
 				<article style={articleStyle}>
-					<Button style={buttonStyle} kind="primary" size="small">
+					<Button style={buttonStyle} kind='primary' size='small'>
 						Small
 					</Button>
-					<Button kind="primary" size="small" isDisabled={true}>
+					<Button kind='primary' size='small' isDisabled={true}>
 						Small disabled
 					</Button>
 				</article>
 				<article style={articleStyle}>
-					<Button style={buttonStyle} kind="primary" size="large">
+					<Button style={buttonStyle} kind='primary' size='large'>
 						Large
 					</Button>
-					<Button kind="primary" size="large" isDisabled={true}>
+					<Button kind='primary' size='large' isDisabled={true}>
 						Large disabled
 					</Button>
 				</article>
 				<article style={articleStyle}>
-					<Button kind="primary" style={buttonStyle} size="large">
+					<Button kind='primary' style={buttonStyle} size='large'>
 						<CheckIcon />
 						Large
 					</Button>
 					<Button
 						isDisabled={true}
-						kind="primary"
+						kind='primary'
 						style={buttonStyle}
-						size="large"
+						size='large'
 					>
 						<CheckIcon />
 						Large

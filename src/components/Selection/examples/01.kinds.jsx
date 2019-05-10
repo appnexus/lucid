@@ -15,8 +15,8 @@ export default createClass({
 								<Selection
 									isSmall
 									responsiveMode={responsiveMode}
-									kind="container"
-									Label="Container Light"
+									kind='container'
+									Label='Container Light'
 								/>
 							</div>
 
@@ -25,8 +25,8 @@ export default createClass({
 									isSmall
 									isFilled
 									responsiveMode={responsiveMode}
-									kind="container"
-									Label="Container Filled"
+									kind='container'
+									Label='Container Filled'
 								/>
 							</div>
 
@@ -34,7 +34,7 @@ export default createClass({
 								<Selection
 									isSmall
 									responsiveMode={responsiveMode}
-									Label="Default"
+									Label='Default'
 								/>
 							</div>
 
@@ -42,8 +42,8 @@ export default createClass({
 								<Selection
 									isSmall
 									responsiveMode={responsiveMode}
-									kind="success"
-									Label="Success"
+									kind='success'
+									Label='Success'
 								/>
 							</div>
 
@@ -51,8 +51,8 @@ export default createClass({
 								<Selection
 									isSmall
 									responsiveMode={responsiveMode}
-									kind="danger"
-									Label="Danger"
+									kind='danger'
+									Label='Danger'
 								/>
 							</div>
 
@@ -60,8 +60,8 @@ export default createClass({
 								<Selection
 									isSmall
 									responsiveMode={responsiveMode}
-									kind="info"
-									Label="Info"
+									kind='info'
+									Label='Info'
 								/>
 							</div>
 
@@ -69,8 +69,8 @@ export default createClass({
 								<Selection
 									isSmall
 									responsiveMode={responsiveMode}
-									kind="warning"
-									Label="Warning"
+									kind='warning'
+									Label='Warning'
 								/>
 							</div>
 						</div>

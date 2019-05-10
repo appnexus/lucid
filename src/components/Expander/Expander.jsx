@@ -161,7 +161,7 @@ const Expander = createClass({
 				</header>
 				<Collapsible
 					isExpanded={isExpanded}
-					rootType="section"
+					rootType='section'
 					className={cx('&-content')}
 				>
 					{children}

@@ -8,9 +8,9 @@ export default createClass({
 	render() {
 		return (
 			<Breadcrumb>
-				<Item key="home">
-					<a href="#">
-						<NotchedTag type="filled" size="small" tagStyle="style-two">
+				<Item key='home'>
+					<a href='#'>
+						<NotchedTag type='filled' size='small' tagStyle='style-two'>
 							IO
 						</NotchedTag>
 						<span>
@@ -19,9 +19,9 @@ export default createClass({
 						</span>
 					</a>
 				</Item>
-				<Item key="list">
-					<a href="#">
-						<NotchedTag type="stroke" size="small" tagStyle="style-three">
+				<Item key='list'>
+					<a href='#'>
+						<NotchedTag type='stroke' size='small' tagStyle='style-three'>
 							LI
 						</NotchedTag>
 						<span>

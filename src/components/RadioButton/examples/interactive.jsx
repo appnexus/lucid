@@ -25,7 +25,7 @@ export default createClass({
 					<label>Enabled</label>
 					<RadioButton
 						isSelected={this.state.isSelected}
-						name="interactive-radio-buttons"
+						name='interactive-radio-buttons'
 						onSelect={this.handleSelected}
 						tabIndex={20}
 					/>

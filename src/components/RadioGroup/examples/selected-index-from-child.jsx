@@ -10,7 +10,7 @@ export default createClass({
 	render() {
 		return (
 			<RadioGroup
-				name="name"
+				name='name'
 				selectedIndex={3}
 				style={{
 					display: 'inline-flex',

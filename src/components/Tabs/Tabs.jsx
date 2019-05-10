@@ -83,7 +83,10 @@ const Tab = createClass({
 	},
 
 	handleClick(event) {
-		const { props, props: { index, onSelect, ...passThroughs } } = this;
+		const {
+			props,
+			props: { index, onSelect, ...passThroughs },
+		} = this;
 
 		if (!props.isDisabled) {
 			onSelect(index, passThroughs, event);
@@ -128,41 +131,40 @@ const Tab = createClass({
 								width: isVariableCountWidth ? null : '20px',
 								minWidth: '20px',
 							}}
-							type="stroke"
+							type='stroke'
 							kind={isSelected ? 'primary' : null}
 						>
 							{count}
 						</Badge>
 					)}
 				</span>
-				{isProgressive &&
-					!isLastTab && (
-						<span className={cx('&-Tab-arrow')}>
-							<svg
-								className={cx('&-Tab-arrow-svg')}
-								viewBox={'0 0 8 37'}
-								preserveAspectRatio="none"
-							>
-								<polygon
-									className={cx('&-Tab-arrow-background')}
-									fill="#fff"
-									points={'0,0 8,18.5 0,37'}
-								/>
-								<polyline
-									className={cx('&-Tab-arrow-tab-line')}
-									fill="#fff"
-									points="0,0 1,1 0,1"
-								/>
-								<polyline
-									className={cx('&-Tab-arrow-line')}
-									fill="none"
-									stroke="#fff"
-									strokeWidth="1"
-									points={'0,37 7.3,18.5 0,0'}
-								/>
-							</svg>
-						</span>
-					)}
+				{isProgressive && !isLastTab && (
+					<span className={cx('&-Tab-arrow')}>
+						<svg
+							className={cx('&-Tab-arrow-svg')}
+							viewBox={'0 0 8 37'}
+							preserveAspectRatio='none'
+						>
+							<polygon
+								className={cx('&-Tab-arrow-background')}
+								fill='#fff'
+								points={'0,0 8,18.5 0,37'}
+							/>
+							<polyline
+								className={cx('&-Tab-arrow-tab-line')}
+								fill='#fff'
+								points='0,0 1,1 0,1'
+							/>
+							<polyline
+								className={cx('&-Tab-arrow-line')}
+								fill='none'
+								stroke='#fff'
+								strokeWidth='1'
+								points={'0,37 7.3,18.5 0,0'}
+							/>
+						</svg>
+					</span>
+				)}
 			</li>
 		);
 	},

@@ -103,7 +103,7 @@ describe('Overlay', () => {
 				onBackgroundClick={onBackgroundClick}
 				portalId={'regiewat'}
 			>
-				<div id="foo">Nope</div>
+				<div id='foo'>Nope</div>
 			</Overlay>,
 			{
 				attachTo: testDOMNode,

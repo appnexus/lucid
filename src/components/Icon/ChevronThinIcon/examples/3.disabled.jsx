@@ -10,8 +10,8 @@ export default createClass({
 					<ChevronThinIcon isDisabled />
 				</div>
 				<div>
-					<ChevronThinIcon isDisabled direction="left" />
-					<ChevronThinIcon isDisabled direction="right" />
+					<ChevronThinIcon isDisabled direction='left' />
+					<ChevronThinIcon isDisabled direction='right' />
 				</div>
 			</div>
 		);

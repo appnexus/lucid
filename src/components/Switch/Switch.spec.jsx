@@ -69,7 +69,7 @@ describe('Switch', () => {
 			it('passes through all props not defined in `propTypes` to the native input.', () => {
 				const wrapper = mount(
 					<Switch
-						className="wut"
+						className='wut'
 						isDisabled={true}
 						isSelected={true}
 						style={{ fontWeight: 'bold' }}

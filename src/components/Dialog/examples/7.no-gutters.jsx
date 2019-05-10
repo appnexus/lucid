@@ -25,8 +25,8 @@ export default createClass({
 					isShown={this.state.isShown}
 					onBackgroundClick={_.partial(this.handleShow, false)}
 					onEscape={_.partial(this.handleShow, false)}
-					Header="Header"
-					size="medium"
+					Header='Header'
+					size='medium'
 					hasGutters={false}
 				>
 					This `Dialog` has no gutters!

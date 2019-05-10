@@ -12,7 +12,12 @@ export default createClass({
 		};
 	},
 
-	handleSelect(optionIndex, { props: { name } }) {
+	handleSelect(
+		optionIndex,
+		{
+			props: { name },
+		}
+	) {
 		this.setState({
 			selectedIndex: optionIndex,
 			selectedOptionName: name,
@@ -24,9 +29,9 @@ export default createClass({
 			<section>
 				<SingleSelect onSelect={this.handleSelect}>
 					<Placeholder>Select Color</Placeholder>
-					<Option name="red">Red</Option>
-					<Option name="green">Green</Option>
-					<Option name="blue">Blue</Option>
+					<Option name='red'>Red</Option>
+					<Option name='green'>Green</Option>
+					<Option name='blue'>Blue</Option>
 				</SingleSelect>
 
 				<section>

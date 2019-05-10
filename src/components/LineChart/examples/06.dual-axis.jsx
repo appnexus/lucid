@@ -22,10 +22,10 @@ export default createClass({
 					cherries: chartConstants.COLOR_2,
 				}}
 				yAxisFields={['bananas']}
-				yAxisTitle="Number of Bananas"
+				yAxisTitle='Number of Bananas'
 				yAxisTitleColor={chartConstants.COLOR_4}
 				y2AxisFields={['cherries']}
-				y2AxisTitle="Number of Cherries"
+				y2AxisTitle='Number of Cherries'
 				y2AxisTitleColor={chartConstants.COLOR_2}
 			/>
 		);

@@ -22,7 +22,7 @@ export default createClass({
 					/>
 					<LoadingMessage>
 						<Icon>
-							<LoadingIcon speed="slow" />
+							<LoadingIcon speed='slow' />
 						</Icon>
 						<Title>Custom Title</Title>
 						<Body>Custom Body</Body>
@@ -39,9 +39,9 @@ export default createClass({
 						]}
 					/>
 					<LoadingMessage
-						Icon={<LoadingIcon speed="fast" />}
-						Title="Enhancing..."
-						Body="Please wait"
+						Icon={<LoadingIcon speed='fast' />}
+						Title='Enhancing...'
+						Body='Please wait'
 					/>
 				</LoadingIndicator>
 			</div>

@@ -5,7 +5,7 @@ import { Sidebar } from '../../../index';
 export default createClass({
 	render() {
 		return (
-			<Sidebar position="right">
+			<Sidebar position='right'>
 				<Sidebar.Bar>
 					Paleo art party disrupt, consequat kogi fashion axe tofu trust fund
 					raw denim readymade. Seitan banjo salvia organic ethical. Next level

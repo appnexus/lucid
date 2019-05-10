@@ -64,7 +64,7 @@ describe('OverlayWrapper', () => {
 			beforeEach(() => {
 				wrapper = shallow(
 					<OverlayWrapper isVisible>
-						<Message className="overlay-message">Danger!</Message>
+						<Message className='overlay-message'>Danger!</Message>
 						<div>Some content</div>
 					</OverlayWrapper>
 				);
@@ -132,7 +132,7 @@ describe('OverlayWrapper', () => {
 		describe('light', () => {
 			it('should add `&-kind-light` class', () => {
 				const wrapper = shallow(
-					<OverlayWrapper isVisible overlayKind="light">
+					<OverlayWrapper isVisible overlayKind='light'>
 						<div>Some content</div>
 					</OverlayWrapper>
 				);

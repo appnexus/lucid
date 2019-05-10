@@ -184,7 +184,7 @@ describe('Submarine', () => {
 
 		describe('position', () => {
 			it('should render the Bar in the TopPane and the primary content in the BottomPane when set to `top`', () => {
-				const wrapper = shallow(<Submarine position="top" />);
+				const wrapper = shallow(<Submarine position='top' />);
 				const splitHorizontalTopPane = wrapper.find(SplitHorizontal.TopPane);
 				const splitHorizontalBottomPane = wrapper.find(
 					SplitHorizontal.BottomPane
@@ -206,7 +206,7 @@ describe('Submarine', () => {
 			});
 
 			it('should render the Primary content in the TopPane and the Bar in the BottomPane when set to `bottom`', () => {
-				const wrapper = shallow(<Submarine position="bottom" />);
+				const wrapper = shallow(<Submarine position='bottom' />);
 				const splitHorizontalTopPane = wrapper.find(SplitHorizontal.TopPane);
 				const splitHorizontalBottomPane = wrapper.find(
 					SplitHorizontal.BottomPane
@@ -278,7 +278,7 @@ describe('Submarine', () => {
 
 		describe('Title', () => {
 			it('should render the prop value in the title', () => {
-				const wrapper = shallow(<Submarine Title="Help Docs" />);
+				const wrapper = shallow(<Submarine Title='Help Docs' />);
 
 				const titleWrapper = wrapper.find(
 					'.lucid-Submarine > .lucid-Submarine-Bar > .lucid-Submarine-Bar-header .lucid-Submarine-Bar-Title'
@@ -394,7 +394,7 @@ describe('Submarine', () => {
 			it('should render title from the given prop value for `Title`', () => {
 				const wrapper = shallow(
 					<Submarine>
-						<Submarine.Bar Title="Authentic pork belly" />
+						<Submarine.Bar Title='Authentic pork belly' />
 					</Submarine>
 				);
 

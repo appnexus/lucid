@@ -159,10 +159,10 @@ const Paginator = createClass({
 				<Button
 					onClick={_.partial(onPageSelect, selectedPageIndex - 1, totalPages)}
 					isDisabled={isDisabled || selectedPageIndex === 0}
-					kind="invisible"
+					kind='invisible'
 					hasOnlyIcon
 				>
-					<ArrowIcon direction="left" />
+					<ArrowIcon direction='left' />
 				</Button>
 				<TextField
 					lazyLevel={100}
@@ -174,12 +174,12 @@ const Paginator = createClass({
 				/>
 				<span>of {totalPages}</span>
 				<Button
-					kind="invisible"
+					kind='invisible'
 					onClick={_.partial(onPageSelect, selectedPageIndex + 1, totalPages)}
 					isDisabled={isDisabled || selectedPageIndex === totalPages - 1}
 					hasOnlyIcon
 				>
-					<ArrowIcon direction="right" />
+					<ArrowIcon direction='right' />
 				</Button>
 			</div>
 		);

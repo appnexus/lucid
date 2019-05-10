@@ -23,7 +23,7 @@ describe('Table', () => {
 		describe('density', () => {
 			describe('value `compressed`', () => {
 				it('should apply the `lucid-Table-density-compressed` class name to the rendered table', () => {
-					const wrapper = shallow(<Table density="compressed" />);
+					const wrapper = shallow(<Table density='compressed' />);
 
 					assert.equal(
 						wrapper.find('table.lucid-Table-density-compressed').length,
@@ -34,7 +34,7 @@ describe('Table', () => {
 
 			describe('value `extended`', () => {
 				it('should apply the `lucid-Table-density-extended` class name to the rendered table', () => {
-					const wrapper = shallow(<Table density="extended" />);
+					const wrapper = shallow(<Table density='extended' />);
 
 					assert.equal(
 						wrapper.find('table.lucid-Table-density-extended').length,
@@ -126,19 +126,19 @@ describe('Table', () => {
 			describe('props', () => {
 				describe('align', () => {
 					it('should apply the class name `lucid-Table-align-left` when align=`left`', () => {
-						const wrapper = shallow(<Th align="left" />);
+						const wrapper = shallow(<Th align='left' />);
 
 						assert.equal(wrapper.find('th.lucid-Table-align-left').length, 1);
 					});
 
 					it('should apply the class name `lucid-Table-align-center` when align=`center`', () => {
-						const wrapper = shallow(<Th align="center" />);
+						const wrapper = shallow(<Th align='center' />);
 
 						assert.equal(wrapper.find('th.lucid-Table-align-center').length, 1);
 					});
 
 					it('should apply the class name `lucid-Table-align-right` when align=`right`', () => {
-						const wrapper = shallow(<Th align="right" />);
+						const wrapper = shallow(<Th align='right' />);
 
 						assert.equal(wrapper.find('th.lucid-Table-align-right').length, 1);
 					});
@@ -223,7 +223,7 @@ describe('Table', () => {
 
 				describe('sortDirection', () => {
 					it('should pass thru to the CaretIcon when `isSorted` is also true', () => {
-						const wrapper = shallow(<Th isSorted sortDirection="down" />);
+						const wrapper = shallow(<Th isSorted sortDirection='down' />);
 						const containerWrapper = wrapper.find(
 							'.lucid-Table-Th-inner-caret'
 						);
@@ -250,19 +250,19 @@ describe('Table', () => {
 			describe('props', () => {
 				describe('align', () => {
 					it('should apply the class name `lucid-Table-align-left` when align=`left`', () => {
-						const wrapper = shallow(<Td align="left" />);
+						const wrapper = shallow(<Td align='left' />);
 
 						assert.equal(wrapper.find('td.lucid-Table-align-left').length, 1);
 					});
 
 					it('should apply the class name `lucid-Table-align-center` when align=`center`', () => {
-						const wrapper = shallow(<Td align="center" />);
+						const wrapper = shallow(<Td align='center' />);
 
 						assert.equal(wrapper.find('td.lucid-Table-align-center').length, 1);
 					});
 
 					it('should apply the class name `lucid-Table-align-right` when align=`right`', () => {
-						const wrapper = shallow(<Td align="right" />);
+						const wrapper = shallow(<Td align='right' />);
 
 						assert.equal(wrapper.find('td.lucid-Table-align-right').length, 1);
 					});

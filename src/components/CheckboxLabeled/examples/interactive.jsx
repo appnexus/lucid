@@ -81,7 +81,7 @@ export default createClass({
 				>
 					<CheckboxLabeled
 						isSelected={_.includes(this.state.flavors, 'vanilla')}
-						name="interactive-checkboxes"
+						name='interactive-checkboxes'
 						onSelect={this.handleSelectedVanilla}
 						style={style}
 					>
@@ -89,7 +89,7 @@ export default createClass({
 					</CheckboxLabeled>
 					<CheckboxLabeled
 						isSelected={_.includes(this.state.flavors, 'chocolate')}
-						name="interactive-checkboxes"
+						name='interactive-checkboxes'
 						onSelect={this.handleSelectedChocolate}
 						style={style}
 					>
@@ -97,7 +97,7 @@ export default createClass({
 					</CheckboxLabeled>
 					<CheckboxLabeled
 						isSelected={_.includes(this.state.flavors, 'strawberry')}
-						name="interactive-checkboxes"
+						name='interactive-checkboxes'
 						onSelect={this.handleSelectedStrawberry}
 						style={style}
 					>
@@ -105,7 +105,7 @@ export default createClass({
 					</CheckboxLabeled>
 					<CheckboxLabeled
 						isSelected={_.includes(this.state.flavors, 'hipsum')}
-						name="interactive-checkboxes"
+						name='interactive-checkboxes'
 						onSelect={this.handleSelectedHipsum}
 						style={style}
 					>
@@ -124,7 +124,7 @@ export default createClass({
 					</CheckboxLabeled>
 					<CheckboxLabeled
 						isSelected={_.includes(this.state.flavors, 'hipsum2')}
-						name="interactive-checkboxes"
+						name='interactive-checkboxes'
 						onSelect={this.handleSelectedHipsum2}
 						style={style}
 					>
@@ -142,7 +142,7 @@ export default createClass({
 					</CheckboxLabeled>
 					<CheckboxLabeled
 						isSelected={_.includes(this.state.flavors, 'hipsum3')}
-						name="interactive-checkboxes"
+						name='interactive-checkboxes'
 						onSelect={this.handleSelectedHipsum3}
 						style={style}
 					>

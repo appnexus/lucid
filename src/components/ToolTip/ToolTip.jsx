@@ -226,7 +226,9 @@ const ToolTip = createClass({
 		const getAlignmentOffset = n =>
 			alignment === ContextMenu.CENTER
 				? 0
-				: alignment === ContextMenu.START ? n / 2 - 22.5 : -(n / 2 - 22.5);
+				: alignment === ContextMenu.START
+				? n / 2 - 22.5
+				: -(n / 2 - 22.5);
 
 		return (
 			<ContextMenu

@@ -215,8 +215,8 @@ describe('RadioGroup', () => {
 			<RadioGroup>
 				<RadioGroup.RadioButton>
 					<RadioGroup.Label>
-						<span id="foo">foo</span>
-						<span id="bar">bar</span>
+						<span id='foo'>foo</span>
+						<span id='bar'>bar</span>
 					</RadioGroup.Label>
 				</RadioGroup.RadioButton>
 			</RadioGroup>

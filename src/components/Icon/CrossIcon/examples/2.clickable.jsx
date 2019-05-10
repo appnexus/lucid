@@ -10,7 +10,7 @@ export default createClass({
 				<CrossIcon isClickable />
 				<CrossIcon isClickable isBadge />
 				<p>Large:</p>
-				<CrossIcon presetSize="large" isClickable />
+				<CrossIcon presetSize='large' isClickable />
 			</div>
 		);
 	},

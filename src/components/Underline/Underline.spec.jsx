@@ -25,7 +25,7 @@ describe('Underline', () => {
 
 	it('should match snapshot for string match with children', () => {
 		expect(
-			shallow(<Underline match="bar">foo bar baz</Underline>, {
+			shallow(<Underline match='bar'>foo bar baz</Underline>, {
 				disableLifecycleMethods: true,
 			})
 		).toMatchSnapshot();

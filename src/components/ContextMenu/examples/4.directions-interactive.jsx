@@ -19,8 +19,7 @@ export default createClass({
 			alignment,
 			alignmentOffset,
 			getAlignmentOffset,
-		} =
-			this.state || {};
+		} = this.state || {};
 
 		const directions = [UP, DOWN, LEFT, RIGHT];
 		const alignments = [START, CENTER, END];

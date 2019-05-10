@@ -245,7 +245,7 @@ describe('Bars', () => {
 							{ axe: 'two', y: 50 },
 							{ axe: 'three', y: 100 },
 						]}
-						xField="axe"
+						xField='axe'
 						xScale={defaultXScale}
 						yScale={defaultYScale}
 					/>

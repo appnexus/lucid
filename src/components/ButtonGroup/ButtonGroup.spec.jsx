@@ -14,11 +14,11 @@ describe('ButtonGroup', () => {
 		const wrapper = shallow(
 			<ButtonGroup>
 				<ButtonGroup.Button />
-				<div className="jim" />
+				<div className='jim' />
 			</ButtonGroup>
 		);
 
-		assert(wrapper.contains(<div className="jim" />));
+		assert(wrapper.contains(<div className='jim' />));
 	});
 
 	it('prop selectedIndices', () => {

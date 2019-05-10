@@ -64,8 +64,9 @@ Components should have an \`initialState\` property or a \`getDefaultProps\` def
 	const selector = selectors ? reduceSelectors(selectors) : _.identity;
 	const rootPathSelector = state =>
 		_.isEmpty(rootPath) ? state : _.get(state, rootPath);
-	const mapStateToProps = createSelector([rootPathSelector], rootState =>
-		rootSelector(selector(rootState))
+	const mapStateToProps = createSelector(
+		[rootPathSelector],
+		rootState => rootSelector(selector(rootState))
 	);
 	const mapDispatchToProps = dispatch =>
 		getDispatchTree(reducers, rootPath, dispatch);
@@ -206,7 +207,7 @@ function createReduxReducerTree(reducers, path = []) {
 								return state;
 							}
 							return node(state, payload, ...meta);
-						}
+					  }
 					: createReduxReducerTree(node, currentPath),
 			};
 		},
@@ -236,7 +237,7 @@ function createReducerFromReducerTree(reduxReducerTree, initialState) {
 						? node(state, action)
 						: {
 								[key]: createReducerFromReducerTree(node)(state[key], action),
-							}),
+						  }),
 				};
 			},
 			state
@@ -275,7 +276,7 @@ function bindActionCreatorTree(actionCreatorTree, dispatch, path = []) {
 				? function boundActionCreator(...args) {
 						const action = actionCreatorTree[key](...args);
 						return dispatch(action);
-					}
+				  }
 				: bindActionCreatorTree(node, dispatch, path.concat(key)),
 		}),
 		{}

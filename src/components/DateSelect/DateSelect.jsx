@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import _ from 'lodash';
 import PropTypes from 'react-peek/prop-types';
 import React from 'react';
@@ -219,10 +220,8 @@ const DateSelect = createClass({
 			const size = Math.sqrt(oneMonthShownWidth * height);
 			const relativeFontSize = Math.round(size / 24);
 			const relativeMinWidth =
-				(width - navButtonsWidth) /
-					monthsShown *
-					10.1075 /
-					relativeFontSize *
+				((((width - navButtonsWidth) / monthsShown) * 10.1075) /
+					relativeFontSize) *
 					monthsShown +
 				navButtonsWidth;
 
@@ -315,7 +314,7 @@ const DateSelect = createClass({
 						className={cx('&-chevron')}
 						size={NAV_BUTTON_SIZE}
 						isClickable
-						direction="left"
+						direction='left'
 						onClick={this.handlePrev}
 					/>
 				</div>
@@ -387,7 +386,7 @@ const DateSelect = createClass({
 						className={cx('&-chevron')}
 						size={NAV_BUTTON_SIZE}
 						isClickable
-						direction="right"
+						direction='right'
 						onClick={this.handleNext}
 					/>
 				</div>

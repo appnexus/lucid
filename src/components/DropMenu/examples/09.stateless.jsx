@@ -11,7 +11,7 @@ export default createClass({
 				selectedIndices={[0]}
 				focusedIndex={3}
 				isExpanded
-				direction="down"
+				direction='down'
 			>
 				<Control>
 					<Button>Select Color</Button>

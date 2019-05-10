@@ -7,13 +7,13 @@ export default createClass({
 		return (
 			<div>
 				<h5>Horizontal</h5>
-				<OutwardArrowsIcon kind="horizontal" />
+				<OutwardArrowsIcon kind='horizontal' />
 
 				<h5>Vertical</h5>
-				<OutwardArrowsIcon kind="vertical" />
+				<OutwardArrowsIcon kind='vertical' />
 
 				<h5>Diagonal</h5>
-				<OutwardArrowsIcon kind="diagonal" />
+				<OutwardArrowsIcon kind='diagonal' />
 			</div>
 		);
 	},

@@ -135,10 +135,10 @@ const Collapsible = createClass({
 									isExpanded && !_.isNull(maxHeight)
 										? spring(maxHeight, QUICK_SLIDE_MOTION)
 										: spring(0, QUICK_SLIDE_MOTION),
-							}
+						  }
 						: {
 								height: isExpanded && !_.isNull(maxHeight) ? maxHeight : 0,
-							}
+						  }
 				}
 			>
 				{tween =>
@@ -151,7 +151,9 @@ const Collapsible = createClass({
 							style: {
 								height:
 									tween.height !== maxHeight
-										? tween.height < 0 ? 0 : tween.height
+										? tween.height < 0
+											? 0
+											: tween.height
 										: null,
 								overflow: 'hidden',
 								padding: 0,
@@ -160,13 +162,13 @@ const Collapsible = createClass({
 						},
 						[
 							<div
-								key="content"
+								key='content'
 								className={cx('&-content')}
 								style={{ margin: 0 }}
 							>
 								{isMountControlled && !isExpanded
 									? _.isNull(maxHeight) ||
-										Math.abs(tween.height) > mountControlThreshold
+									  Math.abs(tween.height) > mountControlThreshold
 										? children
 										: null
 									: children}

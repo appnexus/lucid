@@ -282,7 +282,7 @@ const Bars = createClass({
 									isStacked
 										? xScale(data[seriesIndex][xField])
 										: innerXScale(pointsIndex) +
-											xScale(data[seriesIndex][xField])
+										  xScale(data[seriesIndex][xField])
 								}
 								y={yScale(end)}
 								height={yScale(start) - yScale(end)}
@@ -362,8 +362,8 @@ export const PureToolTip = createClass({
 		} = this.props;
 
 		return (
-			<ToolTip isExpanded={isExpanded} flyOutMaxWidth="none">
-				<ToolTip.Target elementType="g">
+			<ToolTip isExpanded={isExpanded} flyOutMaxWidth='none'>
+				<ToolTip.Target elementType='g'>
 					<rect
 						className={cx('&-tooltip-hover-zone')}
 						height={height}

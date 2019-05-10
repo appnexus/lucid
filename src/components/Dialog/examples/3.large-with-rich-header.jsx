@@ -21,7 +21,7 @@ export default createClass({
 					Toggle
 				</Button>
 
-				<Dialog isShown={this.state.isShown} size="large">
+				<Dialog isShown={this.state.isShown} size='large'>
 					<Dialog.Header>
 						<i>Rich Header</i>
 					</Dialog.Header>
@@ -36,13 +36,13 @@ export default createClass({
 					})}
 					<Dialog.Footer>
 						<Button
-							kind="invisible"
+							kind='invisible'
 							onClick={_.partial(this.handleShow, false)}
 							style={{ marginRight: '9px' }}
 						>
 							Cancel
 						</Button>
-						<Button kind="primary">Save</Button>
+						<Button kind='primary'>Save</Button>
 					</Dialog.Footer>
 				</Dialog>
 			</div>

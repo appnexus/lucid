@@ -106,7 +106,7 @@ const Tag = createClass({
 							<CrossIcon
 								onClick={this.handleRemove}
 								className={cx('&-remove-button')}
-								presetSize="small"
+								presetSize='small'
 								isClickable
 							/>
 						)}

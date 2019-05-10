@@ -11,25 +11,25 @@ describe('ChevronIcon', () => {
 
 	describe('`direction` prop', () => {
 		it('should render the correct class with "up"', () => {
-			const wrapper = shallow(<ChevronIcon direction="up" />);
+			const wrapper = shallow(<ChevronIcon direction='up' />);
 
 			assert.equal(wrapper.find('.lucid-ChevronIcon-is-up').length, 1);
 		});
 
 		it('should render the correct class with "down"', () => {
-			const wrapper = shallow(<ChevronIcon direction="down" />);
+			const wrapper = shallow(<ChevronIcon direction='down' />);
 
 			assert.equal(wrapper.find('.lucid-ChevronIcon-is-down').length, 1);
 		});
 
 		it('should render the correct class with "left"', () => {
-			const wrapper = shallow(<ChevronIcon direction="left" />);
+			const wrapper = shallow(<ChevronIcon direction='left' />);
 
 			assert.equal(wrapper.find('.lucid-ChevronIcon-is-left').length, 1);
 		});
 
 		it('should render the correct class with "right"', () => {
-			const wrapper = shallow(<ChevronIcon direction="right" />);
+			const wrapper = shallow(<ChevronIcon direction='right' />);
 
 			assert.equal(wrapper.find('.lucid-ChevronIcon-is-right').length, 1);
 		});

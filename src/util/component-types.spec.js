@@ -348,7 +348,7 @@ describe('component-types', () => {
 					<button />
 					<Option isDisabled={true} />
 					<button />
-					<Option title="Select red">Red</Option>
+					<Option title='Select red'>Red</Option>
 					<button />
 				</Selector>
 			);
@@ -385,7 +385,7 @@ describe('component-types', () => {
 
 			shallow(
 				<Selector
-					option="red"
+					option='red'
 					options={[{ children: 'green', isDisabled: true }, 'blue']}
 				/>
 			);
@@ -432,13 +432,13 @@ describe('component-types', () => {
 
 			shallow(
 				<Selector
-					option="red"
+					option='red'
 					options={[{ children: 'green', isDisabled: true }, 'blue']}
 				>
 					<button />
 					<Option isDisabled={true} />
 					<button />
-					<Option title="Select red">Red</Option>
+					<Option title='Select red'>Red</Option>
 					<button />
 				</Selector>
 			);

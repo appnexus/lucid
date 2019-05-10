@@ -49,9 +49,9 @@ const ChevronThinIcon = createClass({
 				size={size}
 			>
 				{direction === 'right' ? (
-					<path d="M5 0l8 8-8 8-.75-.75L11.5 8 4.25.75z" />
+					<path d='M5 0l8 8-8 8-.75-.75L11.5 8 4.25.75z' />
 				) : (
-					<path d="M12 0L4 8l8 8 .75-.75L5.5 8 12.75.75z" />
+					<path d='M12 0L4 8l8 8 .75-.75L5.5 8 12.75.75z' />
 				)}
 			</Icon>
 		);

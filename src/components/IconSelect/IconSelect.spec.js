@@ -26,11 +26,11 @@ describe('IconSelect', () => {
 	it('prop children', () => {
 		const wrapper = shallow(
 			<IconSelect items={items}>
-				<div className="jim" />
+				<div className='jim' />
 			</IconSelect>
 		);
 
-		assert(wrapper.contains(<div className="jim" />));
+		assert(wrapper.contains(<div className='jim' />));
 	});
 
 	it('has a selected item', () => {
