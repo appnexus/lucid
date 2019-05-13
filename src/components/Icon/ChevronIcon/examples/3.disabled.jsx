@@ -10,16 +10,16 @@ export default createClass({
 					<ChevronIcon isDisabled />
 				</div>
 				<div>
-					<ChevronIcon isDisabled direction="up" />
-					<ChevronIcon isDisabled direction="down" />
-					<ChevronIcon isDisabled direction="left" />
-					<ChevronIcon isDisabled direction="right" />
+					<ChevronIcon isDisabled direction='up' />
+					<ChevronIcon isDisabled direction='down' />
+					<ChevronIcon isDisabled direction='left' />
+					<ChevronIcon isDisabled direction='right' />
 				</div>
 				<div>
-					<ChevronIcon isDisabled direction="up" isBadge />
-					<ChevronIcon isDisabled direction="down" isBadge />
-					<ChevronIcon isDisabled direction="left" isBadge />
-					<ChevronIcon isDisabled direction="right" isBadge />
+					<ChevronIcon isDisabled direction='up' isBadge />
+					<ChevronIcon isDisabled direction='down' isBadge />
+					<ChevronIcon isDisabled direction='left' isBadge />
+					<ChevronIcon isDisabled direction='right' isBadge />
 				</div>
 			</div>
 		);

@@ -354,7 +354,7 @@ const BarChart = createClass({
 			const emptyStateWrapper = getFirst(
 				this.props,
 				BarChart.EmptyStateWrapper
-			) || <BarChart.EmptyStateWrapper Title="You have no data." />;
+			) || <BarChart.EmptyStateWrapper Title='You have no data.' />;
 
 			return (
 				<EmptyStateWrapper
@@ -374,13 +374,13 @@ const BarChart = createClass({
 							transform={`translate(${margin.left}, ${innerHeight +
 								margin.top})`}
 						>
-							<Axis orient="bottom" scale={xScale} tickCount={xAxisTickCount} />
+							<Axis orient='bottom' scale={xScale} tickCount={xAxisTickCount} />
 						</g>
 
 						{/* y axis */}
 						<g transform={`translate(${margin.left}, ${margin.top})`}>
 							<Axis
-								orient="left"
+								orient='left'
 								scale={yScale}
 								tickFormat={yFinalFormatter}
 								tickCount={yAxisTickCount}
@@ -401,7 +401,7 @@ const BarChart = createClass({
 				{/* x axis */}
 				<g transform={`translate(${margin.left}, ${innerHeight + margin.top})`}>
 					<Axis
-						orient="bottom"
+						orient='bottom'
 						scale={xScale}
 						outerTickSize={0}
 						tickFormat={xAxisFinalFormatter}
@@ -411,14 +411,14 @@ const BarChart = createClass({
 
 					{hasLegend ? (
 						<ContextMenu
-							direction="down"
-							alignment="center"
+							direction='down'
+							alignment='center'
 							directonOffset={
 								(margin.bottom / 2 + Legend.HEIGHT / 2) *
 								-1 /* should center the legend in the bottom margin */
 							}
 						>
-							<ContextMenu.Target elementType="g">
+							<ContextMenu.Target elementType='g'>
 								<rect
 									className={cx('&-invisible')}
 									width={innerWidth}
@@ -426,7 +426,7 @@ const BarChart = createClass({
 								/>
 							</ContextMenu.Target>
 							<ContextMenu.FlyOut className={cx('&-legend-container')}>
-								<Legend orient="horizontal">
+								<Legend orient='horizontal'>
 									{_.map(yAxisFields, (field, index) => (
 										<Legend.Item
 											key={index}
@@ -454,7 +454,7 @@ const BarChart = createClass({
 						transform={`translate(${margin.left}, ${margin.top + innerHeight})`}
 					>
 						<AxisLabel
-							orient="bottom"
+							orient='bottom'
 							width={innerWidth}
 							height={margin.bottom}
 							label={xAxisTitle}
@@ -470,8 +470,8 @@ const BarChart = createClass({
 				{/* y axis */}
 				<g transform={`translate(${margin.left}, ${margin.top})`}>
 					<Axis
-						orient="left"
-						textOrientation="horizontal"
+						orient='left'
+						textOrientation='horizontal'
 						scale={yScale}
 						tickFormat={yAxisFinalFormatter}
 						tickCount={yAxisTickCount}
@@ -483,7 +483,7 @@ const BarChart = createClass({
 				{yAxisTitle ? (
 					<g transform={`translate(0, ${margin.top})`}>
 						<AxisLabel
-							orient="left"
+							orient='left'
 							width={margin.left}
 							height={innerHeight}
 							label={yAxisTitle}

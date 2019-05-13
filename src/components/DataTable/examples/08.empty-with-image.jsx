@@ -2,7 +2,10 @@ import React from 'react';
 import createClass from 'create-react-class';
 import { DataTable } from '../../../index';
 
-const { EmptyStateWrapper, EmptyStateWrapper: { Title, Body } } = DataTable;
+const {
+	EmptyStateWrapper,
+	EmptyStateWrapper: { Title, Body },
+} = DataTable;
 
 export default createClass({
 	getInitialState() {
@@ -15,17 +18,17 @@ export default createClass({
 		const { data } = this.state;
 
 		return (
-			<DataTable data={data} density="extended" isFullWidth>
+			<DataTable data={data} density='extended' isFullWidth>
 				<EmptyStateWrapper>
 					<Title>No items found.</Title>
 					<Body>
-						<img src="https://dummyimage.com/375x150/ff69/fff" />
+						<img src='https://dummyimage.com/375x150/ff69/fff' />
 					</Body>
 				</EmptyStateWrapper>
 				<DataTable.Column
-					field="id"
+					field='id'
 					width={41}
-					align="center"
+					align='center'
 					hasBorderLeft
 					hasBorderLeft
 					isSortable
@@ -33,26 +36,26 @@ export default createClass({
 					ID
 				</DataTable.Column>
 
-				<DataTable.Column field="first_name" width={100} hasBorderLeft>
+				<DataTable.Column field='first_name' width={100} hasBorderLeft>
 					First
 				</DataTable.Column>
 
 				<DataTable.Column
-					field="last_name"
-					align="left"
+					field='last_name'
+					align='left'
 					width={100}
 					hasBorderRight
 				>
 					Last
 				</DataTable.Column>
 
-				<DataTable.Column field="email" align="center">
+				<DataTable.Column field='email' align='center'>
 					E-Mail
 				</DataTable.Column>
 
 				<DataTable.Column
-					field="occupation"
-					align="right"
+					field='occupation'
+					align='right'
 					width={100}
 					hasBorderLeft
 				>

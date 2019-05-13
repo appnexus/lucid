@@ -22,14 +22,14 @@ export default createClass({
 					apples: chartConstants.COLOR_GOOD,
 					oranges: chartConstants.COLOR_1,
 				}}
-				xAxisField="day"
+				xAxisField='day'
 				xAxisFormatter={xFormatter}
 				xAxisTickCount={5}
-				xAxisTitle="Weekdays"
+				xAxisTitle='Weekdays'
 				xAxisTickCount={2}
 				yAxisFields={['apples', 'oranges']}
 				yAxisFormatter={yFormatter}
-				yAxisTitle="Fruit Count"
+				yAxisTitle='Fruit Count'
 				yAxisTickCount={4}
 			/>
 		);

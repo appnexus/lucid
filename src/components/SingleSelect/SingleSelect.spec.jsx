@@ -282,9 +282,9 @@ describe('SingleSelect', () => {
 				const wrapper = shallow(
 					<SingleSelect selectedIndex={null}>
 						<Placeholder>select one</Placeholder>
-						<Option name="OptionA">option a</Option>
-						<Option name="OptionB">option b</Option>
-						<Option name="OptionC">option c</Option>
+						<Option name='OptionA'>option a</Option>
+						<Option name='OptionB'>option b</Option>
+						<Option name='OptionC'>option c</Option>
 					</SingleSelect>
 				);
 
@@ -312,9 +312,9 @@ describe('SingleSelect', () => {
 				const wrapper = shallow(
 					<SingleSelect selectedIndex={1}>
 						<Placeholder>select one</Placeholder>
-						<Option name="OptionA">option a</Option>
-						<Option name="OptionB">option b</Option>
-						<Option name="OptionC">option c</Option>
+						<Option name='OptionA'>option a</Option>
+						<Option name='OptionB'>option b</Option>
+						<Option name='OptionC'>option c</Option>
 					</SingleSelect>
 				);
 
@@ -337,9 +337,9 @@ describe('SingleSelect', () => {
 				const wrapper = shallow(
 					<SingleSelect>
 						<Placeholder>select one</Placeholder>
-						<Option name="OptionA">option a</Option>
-						<Option name="OptionB">option b</Option>
-						<Option name="OptionC">option c</Option>
+						<Option name='OptionA'>option a</Option>
+						<Option name='OptionB'>option b</Option>
+						<Option name='OptionC'>option c</Option>
 					</SingleSelect>
 				);
 
@@ -385,19 +385,19 @@ describe('SingleSelect', () => {
 					shallow(
 						<SingleSelect selectedIndex={1}>
 							<Placeholder>select one</Placeholder>
-							<Option name="OptionA" Selected="option a">
+							<Option name='OptionA' Selected='option a'>
 								<div style={{ display: 'flex' }}>
 									<div style={{ width: 100 }}>id</div>
 									<div>option a</div>
 								</div>
 							</Option>
-							<Option name="OptionB" Selected="option b">
+							<Option name='OptionB' Selected='option b'>
 								<div style={{ display: 'flex' }}>
 									<div style={{ width: 100 }}>id</div>
 									<div>option b</div>
 								</div>
 							</Option>
-							<Option name="OptionC" Selected="option c">
+							<Option name='OptionC' Selected='option c'>
 								<div style={{ display: 'flex' }}>
 									<div style={{ width: 100 }}>id</div>
 									<div>option c</div>
@@ -419,11 +419,11 @@ describe('SingleSelect', () => {
 				wrapper = shallow(
 					<SingleSelect>
 						<Placeholder>select one</Placeholder>
-						<OptionGroup name="TestGroup">
+						<OptionGroup name='TestGroup'>
 							Group Label
-							<Option name="OptionA">option a</Option>
-							<Option name="OptionB">option b</Option>
-							<Option name="OptionC">option c</Option>
+							<Option name='OptionA'>option a</Option>
+							<Option name='OptionB'>option b</Option>
+							<Option name='OptionC'>option c</Option>
 						</OptionGroup>
 					</SingleSelect>
 				);

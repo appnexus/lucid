@@ -265,7 +265,7 @@ describe('Collapsible', () => {
 			});
 
 			it('should render a root container of the passed in type', () => {
-				const wrapper = shallow(<Collapsible rootType="section" />);
+				const wrapper = shallow(<Collapsible rootType='section' />);
 
 				const motionWrapper = wrapper.find(Motion).shallow();
 

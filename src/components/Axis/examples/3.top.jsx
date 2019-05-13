@@ -18,8 +18,8 @@ export default createClass({
 				<g transform={`translate(${margin.left}, ${height / 2})`}>
 					<Axis
 						scale={x}
-						orient="top"
-						textOrientation="horizontal"
+						orient='top'
+						textOrientation='horizontal'
 						tickCount={6}
 					/>
 				</g>

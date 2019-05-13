@@ -7,8 +7,8 @@ export default createClass({
 		return (
 			<div>
 				<p>Text field with error (method 1)</p>
-				<Validation Error="Error One">
-					<TextField value="Text Field Text" />
+				<Validation Error='Error One'>
+					<TextField value='Text Field Text' />
 				</Validation>
 
 				<br />
@@ -18,14 +18,14 @@ export default createClass({
 					<Validation.Error>
 						<span>Error Two</span>
 					</Validation.Error>
-					<TextField value="Text Field Text" />
+					<TextField value='Text Field Text' />
 				</Validation>
 
 				<br />
 
 				<p>Text area with error (method 1)</p>
-				<Validation Error="Error Three">
-					<TextField isMultiLine row={3} value="Text Area Text" />
+				<Validation Error='Error Three'>
+					<TextField isMultiLine row={3} value='Text Area Text' />
 				</Validation>
 
 				<br />
@@ -35,7 +35,7 @@ export default createClass({
 					<Validation.Error>
 						<span>Error Four</span>
 					</Validation.Error>
-					<TextField isMultiLine row={3} value="Text Area Text" />
+					<TextField isMultiLine row={3} value='Text Area Text' />
 				</Validation>
 			</div>
 		);

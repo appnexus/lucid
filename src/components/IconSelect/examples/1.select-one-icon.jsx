@@ -17,7 +17,7 @@ export default createClass({
 	render() {
 		return (
 			<IconSelect
-				kind="single" // renders as radio buttons
+				kind='single' // renders as radio buttons
 				onSelect={this.handleSelect}
 				items={[
 					{

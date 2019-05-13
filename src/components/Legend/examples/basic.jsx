@@ -60,7 +60,7 @@ export default createClass({
 
 				<br />
 
-				<Legend orient="horizontal">
+				<Legend orient='horizontal'>
 					<Item hasLine color={chartConstants.COLOR_GOOD}>
 						Revenue
 					</Item>
@@ -77,7 +77,7 @@ export default createClass({
 
 				<br />
 
-				<Legend orient="horizontal" isReversed>
+				<Legend orient='horizontal' isReversed>
 					<Item hasLine color={chartConstants.COLOR_GOOD}>
 						Revenue
 					</Item>
@@ -113,7 +113,7 @@ export default createClass({
 				<br />
 				<br />
 
-				<ToolTip isExpanded={true} direction="right" alignment="end">
+				<ToolTip isExpanded={true} direction='right' alignment='end'>
 					<ToolTip.Target>Tooltip example</ToolTip.Target>
 
 					<ToolTip.Body>

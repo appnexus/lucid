@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
@@ -232,12 +233,12 @@ const ContextMenu = createClass({
 		const alignmentOffset = !_.isUndefined(this.props.alignmentOffset)
 			? this.props.alignmentOffset
 			: alignment === ContextMenu.CENTER
-				? getAlignmentOffset(
-						_.includes([ContextMenu.UP, ContextMenu.DOWN], direction)
-							? flyOutWidth
-							: flyOutHeight
-					)
-				: 0;
+			? getAlignmentOffset(
+					_.includes([ContextMenu.UP, ContextMenu.DOWN], direction)
+						? flyOutWidth
+						: flyOutHeight
+			  )
+			: 0;
 
 		const { CENTER, DOWN, END, LEFT, RIGHT, START, UP } = ContextMenu;
 
@@ -340,7 +341,9 @@ const ContextMenu = createClass({
 	},
 
 	alignFlyOut(doRedunancyCheck = false) {
-		const { refs: { flyOutPortal, target } } = this;
+		const {
+			refs: { flyOutPortal, target },
+		} = this;
 
 		if (!target || !flyOutPortal) {
 			return;
@@ -396,7 +399,7 @@ const ContextMenu = createClass({
 
 		return (
 			<TargetElementType
-				ref="target"
+				ref='target'
 				{...omitProps(passThroughs, ContextMenu)}
 				className={cx('&', className)}
 				style={style}
@@ -404,7 +407,7 @@ const ContextMenu = createClass({
 				{targetChildren}
 				{isExpanded ? (
 					<Portal
-						ref="flyOutPortal"
+						ref='flyOutPortal'
 						{...flyProps}
 						className={cx(
 							'&-FlyOut',

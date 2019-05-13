@@ -6,8 +6,8 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				<SearchField value="foo" />
-				<SearchField placeholder="bar" />
+				<SearchField value='foo' />
+				<SearchField placeholder='bar' />
 				<SearchField isDisabled />
 				<SearchField isValid={false} />
 				<SearchField>
@@ -15,13 +15,13 @@ export default createClass({
 						<LoadingIcon />
 					</SearchField.Icon>
 				</SearchField>
-				<SearchField value="foo">
+				<SearchField value='foo'>
 					<SearchField.Icon>
 						<LoadingIcon />
 					</SearchField.Icon>
 				</SearchField>
 				<SearchField>
-					<SearchField.TextField value="bar" />
+					<SearchField.TextField value='bar' />
 				</SearchField>
 			</div>
 		);

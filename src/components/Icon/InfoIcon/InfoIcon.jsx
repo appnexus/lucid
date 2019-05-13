@@ -39,12 +39,12 @@ const InfoIcon = createClass({
 					className={cx('&-background', {
 						'&-background-is-disabled': isDisabled,
 					})}
-					cx="8"
-					cy="8"
-					r="8"
+					cx='8'
+					cy='8'
+					r='8'
 				/>
-				<rect className={cx('&-mark')} x="7" y="3" width="2" height="2" />
-				<rect className={cx('&-mark')} x="7" y="6" width="2" height="7" />
+				<rect className={cx('&-mark')} x='7' y='3' width='2' height='2' />
+				<rect className={cx('&-mark')} x='7' y='6' width='2' height='7' />
 			</Icon>
 		);
 	},

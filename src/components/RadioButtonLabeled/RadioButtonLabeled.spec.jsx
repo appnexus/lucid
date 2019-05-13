@@ -91,7 +91,7 @@ describe('RadioButtonLabeled', () => {
 			it('passes through all props not defined in `propTypes` to its `RadioButton` instance.', () => {
 				const wrapper = shallow(
 					<RadioButtonLabeled
-						className="wut"
+						className='wut'
 						isDisabled={true}
 						isSelected={true}
 						style={{ fontWeight: 'bold' }}

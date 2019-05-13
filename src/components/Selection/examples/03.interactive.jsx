@@ -71,7 +71,7 @@ export default createClass({
 										isRemovable={true}
 										isBold
 										hasBackground
-										kind="container"
+										kind='container'
 										onRemove={this.handleRemove}
 										callbackId={groupCallbackId}
 										Label={group}

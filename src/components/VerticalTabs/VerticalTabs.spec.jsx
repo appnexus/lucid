@@ -60,7 +60,7 @@ describe('VerticalTabs', () => {
 		it('Title as props', () => {
 			const wrapper = shallow(
 				<VerticalTabs>
-					<VerticalTabs.Tab Title="Froyo">Yolo fo sho</VerticalTabs.Tab>
+					<VerticalTabs.Tab Title='Froyo'>Yolo fo sho</VerticalTabs.Tab>
 					<VerticalTabs.Tab>Broyoyo</VerticalTabs.Tab>
 				</VerticalTabs>
 			);
@@ -99,8 +99,8 @@ describe('VerticalTabs', () => {
 		it('selectedIndex', () => {
 			const wrapper = shallow(
 				<VerticalTabs selectedIndex={1}>
-					<VerticalTabs.Tab Title="Lollipop">Yuck</VerticalTabs.Tab>
-					<VerticalTabs.Tab Title="Slurpee">Yum</VerticalTabs.Tab>
+					<VerticalTabs.Tab Title='Lollipop'>Yuck</VerticalTabs.Tab>
+					<VerticalTabs.Tab Title='Slurpee'>Yum</VerticalTabs.Tab>
 				</VerticalTabs>
 			);
 
@@ -117,8 +117,8 @@ describe('VerticalTabs', () => {
 		it('Tab.isSelected', () => {
 			const wrapper = shallow(
 				<VerticalTabs>
-					<VerticalTabs.Tab Title="Lollipop">Yuck</VerticalTabs.Tab>
-					<VerticalTabs.Tab isSelected={true} Title="Slurpee">
+					<VerticalTabs.Tab Title='Lollipop'>Yuck</VerticalTabs.Tab>
+					<VerticalTabs.Tab isSelected={true} Title='Slurpee'>
 						Yum
 					</VerticalTabs.Tab>
 				</VerticalTabs>
@@ -137,11 +137,11 @@ describe('VerticalTabs', () => {
 		it('last Tab.isSelected beats selectedIndex', () => {
 			const wrapper = shallow(
 				<VerticalTabs selectedIndex={0}>
-					<VerticalTabs.Tab Title="One">One content</VerticalTabs.Tab>
-					<VerticalTabs.Tab isSelected={true} Title="Two">
+					<VerticalTabs.Tab Title='One'>One content</VerticalTabs.Tab>
+					<VerticalTabs.Tab isSelected={true} Title='Two'>
 						Two content
 					</VerticalTabs.Tab>
-					<VerticalTabs.Tab isSelected={true} Title="Three">
+					<VerticalTabs.Tab isSelected={true} Title='Three'>
 						Three content
 					</VerticalTabs.Tab>
 				</VerticalTabs>

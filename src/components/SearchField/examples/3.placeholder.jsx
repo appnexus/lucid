@@ -4,6 +4,6 @@ import { SearchField } from '../../../index';
 
 export default createClass({
 	render() {
-		return <SearchField placeholder="Name/ID" />;
+		return <SearchField placeholder='Name/ID' />;
 	},
 });

@@ -146,8 +146,8 @@ describe('SearchableSingleSelect', () => {
 
 			expect(
 				shallow(
-					<SearchableSingleSelect optionFilter={optionFilter} searchText="tion">
-						<Option name="OptionA" Selected="option a" filterText="option a">
+					<SearchableSingleSelect optionFilter={optionFilter} searchText='tion'>
+						<Option name='OptionA' Selected='option a' filterText='option a'>
 							{({ searchText }) => (
 								<div style={{ display: 'flex' }}>
 									<div style={{ width: 100 }}>{searchText}</div>
@@ -155,7 +155,7 @@ describe('SearchableSingleSelect', () => {
 								</div>
 							)}
 						</Option>
-						<Option name="OptionB" Selected="option b" filterText="option b">
+						<Option name='OptionB' Selected='option b' filterText='option b'>
 							{({ searchText }) => (
 								<div style={{ display: 'flex' }}>
 									<div style={{ width: 100 }}>{searchText}</div>
@@ -163,7 +163,7 @@ describe('SearchableSingleSelect', () => {
 								</div>
 							)}
 						</Option>
-						<Option name="OptionC" Selected="option c" filterText="option c">
+						<Option name='OptionC' Selected='option c' filterText='option c'>
 							{({ searchText }) => (
 								<div style={{ display: 'flex' }}>
 									<div style={{ width: 100 }}>{searchText}</div>

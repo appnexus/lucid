@@ -332,7 +332,7 @@ const Th = createClass({
 					},
 					className
 				)}
-				ref="root"
+				ref='root'
 				onClickCapture={this.handleClickCapture}
 				onMouseEnter={this.handleMouseEnter}
 				onMouseUp={this.handleMouseUp}
@@ -340,7 +340,7 @@ const Th = createClass({
 					hasSetWidth
 						? _.assign({}, style, {
 								width: isResizing ? activeWidth : passiveWidth,
-							})
+						  })
 						: style
 				}
 			>
@@ -821,7 +821,7 @@ function renderRowsWithIdentifiedEdges(trList, cellType) {
 										cellType,
 										_.assign({}, cellProps, { key: colIndex })
 									),
-								]
+							  ]
 							: []
 					),
 				[]

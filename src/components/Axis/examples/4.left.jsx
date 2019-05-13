@@ -16,7 +16,7 @@ export default createClass({
 		return (
 			<svg width={width} height={height}>
 				<g transform={`translate(${width - 1}, ${margin.top})`}>
-					<Axis scale={y} orient="left" />
+					<Axis scale={y} orient='left' />
 				</g>
 			</svg>
 		);

@@ -7,8 +7,8 @@ export default createClass({
 		return (
 			<div>
 				<LoadingIcon />
-				<LoadingIcon speed="slow" />
-				<LoadingIcon speed="fast" />
+				<LoadingIcon speed='slow' />
+				<LoadingIcon speed='fast' />
 			</div>
 		);
 	},

@@ -199,7 +199,7 @@ const VerticalListMenu = createClass({
 								{hasExpander ? (
 									<div
 										className={cx('&-Item-expander')}
-										kind="invisible"
+										kind='invisible'
 										onClick={_.partial(this.handleToggle, index, itemChildProp)}
 									>
 										<ChevronIcon

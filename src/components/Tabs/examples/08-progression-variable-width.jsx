@@ -8,19 +8,19 @@ export default createClass({
 		return (
 			<div>
 				<Tabs hasFullWidthTabs={false} isOpen={false} isProgressive>
-					<Tabs.Tab style={tabStyle} Title="One">
+					<Tabs.Tab style={tabStyle} Title='One'>
 						One content
 					</Tabs.Tab>
-					<Tabs.Tab style={tabStyle} Title="Two">
+					<Tabs.Tab style={tabStyle} Title='Two'>
 						Two content
 					</Tabs.Tab>
-					<Tabs.Tab style={tabStyle} Title="Three">
+					<Tabs.Tab style={tabStyle} Title='Three'>
 						Three content
 					</Tabs.Tab>
-					<Tabs.Tab style={tabStyle} Title="Disabled" isDisabled={true}>
+					<Tabs.Tab style={tabStyle} Title='Disabled' isDisabled={true}>
 						Disabled Content
 					</Tabs.Tab>
-					<Tabs.Tab style={tabStyle} Title="Five" isDisabled={true}>
+					<Tabs.Tab style={tabStyle} Title='Five' isDisabled={true}>
 						Four content
 					</Tabs.Tab>
 				</Tabs>

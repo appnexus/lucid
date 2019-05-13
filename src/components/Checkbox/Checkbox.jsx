@@ -119,9 +119,9 @@ const Checkbox = createClass({
 					checked={isSelected}
 					className={cx('&-native')}
 					disabled={isDisabled}
-					ref="nativeElement"
+					ref='nativeElement'
 					title={title}
-					type="checkbox"
+					type='checkbox'
 				/>
 				<span
 					onClick={this.handleSpanClick}

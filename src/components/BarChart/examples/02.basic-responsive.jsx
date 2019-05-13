@@ -19,7 +19,7 @@ export default createClass({
 							width={width}
 							height={width * 0.3}
 							data={data}
-							yAxisTitle="Revenue"
+							yAxisTitle='Revenue'
 						/>
 					)}
 				</Resizer>

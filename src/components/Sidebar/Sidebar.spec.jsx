@@ -195,7 +195,7 @@ describe('Sidebar', () => {
 
 		describe('position', () => {
 			it('should render the Bar in the LeftPane and the primary content in the RightPane when set to `left`', () => {
-				const wrapper = shallow(<Sidebar position="left" />);
+				const wrapper = shallow(<Sidebar position='left' />);
 				const splitVerticalLeftPane = wrapper.find(SplitVertical.LeftPane);
 				const splitVerticalRightPane = wrapper.find(SplitVertical.RightPane);
 
@@ -212,7 +212,7 @@ describe('Sidebar', () => {
 			});
 
 			it('should render the Primary content in the LeftPane and the Bar in the RightPane when set to `right`', () => {
-				const wrapper = shallow(<Sidebar position="right" />);
+				const wrapper = shallow(<Sidebar position='right' />);
 				const splitVerticalLeftPane = wrapper.find(SplitVertical.LeftPane);
 				const splitVerticalRightPane = wrapper.find(SplitVertical.RightPane);
 
@@ -277,7 +277,7 @@ describe('Sidebar', () => {
 
 		describe('title', () => {
 			it('should render the prop value in the title', () => {
-				const wrapper = shallow(<Sidebar title="Search Filters" />);
+				const wrapper = shallow(<Sidebar title='Search Filters' />);
 
 				const titleWrapper = wrapper.find(
 					'.lucid-Sidebar > .lucid-Sidebar-Bar > .lucid-Sidebar-Bar-header .lucid-Sidebar-Bar-Title'
@@ -305,7 +305,7 @@ describe('Sidebar', () => {
 
 		describe('Title', () => {
 			it('should render the prop value in the title', () => {
-				const wrapper = shallow(<Sidebar Title="Help Docs" />);
+				const wrapper = shallow(<Sidebar Title='Help Docs' />);
 
 				const titleWrapper = wrapper.find(
 					'.lucid-Sidebar > .lucid-Sidebar-Bar > .lucid-Sidebar-Bar-header .lucid-Sidebar-Bar-Title'
@@ -438,7 +438,7 @@ describe('Sidebar', () => {
 			it('should render title from the given prop value for `title`', () => {
 				const wrapper = shallow(
 					<Sidebar>
-						<Sidebar.Bar title="Artisan Jean Shorts" />
+						<Sidebar.Bar title='Artisan Jean Shorts' />
 					</Sidebar>
 				);
 
@@ -455,7 +455,7 @@ describe('Sidebar', () => {
 			it('should render title from the given prop value for `Title`', () => {
 				const wrapper = shallow(
 					<Sidebar>
-						<Sidebar.Bar Title="Authentic pork belly" />
+						<Sidebar.Bar Title='Authentic pork belly' />
 					</Sidebar>
 				);
 

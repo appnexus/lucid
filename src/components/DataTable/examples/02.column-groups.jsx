@@ -97,13 +97,13 @@ const data = [
 export default createClass({
 	render() {
 		return (
-			<DataTable data={data} density="extended">
-				<DataTable.Column field="id">ID</DataTable.Column>
+			<DataTable data={data} density='extended'>
+				<DataTable.Column field='id'>ID</DataTable.Column>
 
-				<DataTable.ColumnGroup title="Name">
+				<DataTable.ColumnGroup title='Name'>
 					<DataTable.Column
-						field="first_name"
-						align="left"
+						field='first_name'
+						align='left'
 						width={100}
 						hasBorderLeft
 						isSortable
@@ -112,8 +112,8 @@ export default createClass({
 					</DataTable.Column>
 
 					<DataTable.Column
-						field="last_name"
-						align="left"
+						field='last_name'
+						align='left'
 						width={100}
 						hasBorderRight
 						isSortable
@@ -122,13 +122,13 @@ export default createClass({
 					</DataTable.Column>
 				</DataTable.ColumnGroup>
 
-				<DataTable.Column field="email" align="left">
+				<DataTable.Column field='email' align='left'>
 					E-Mail
 				</DataTable.Column>
 
 				<DataTable.Column
-					field="occupation"
-					align="left"
+					field='occupation'
+					align='left'
 					width={100}
 					hasBorderLeft
 				>
@@ -136,8 +136,8 @@ export default createClass({
 				</DataTable.Column>
 
 				<DataTable.Column
-					field="salary"
-					align="right"
+					field='salary'
+					align='right'
 					width={100}
 					hasBorderLeft
 				>
@@ -145,8 +145,8 @@ export default createClass({
 				</DataTable.Column>
 
 				<DataTable.Column
-					field="status"
-					align="center"
+					field='status'
+					align='center'
 					width={100}
 					hasBorderLeft
 				>

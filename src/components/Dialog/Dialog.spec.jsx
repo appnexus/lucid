@@ -53,19 +53,19 @@ describe('Dialog', () => {
 	});
 
 	it('should respect size = "small"', () => {
-		const wrapper = shallow(<Dialog isShown={true} size="small" />);
+		const wrapper = shallow(<Dialog isShown={true} size='small' />);
 
 		assert.equal(wrapper.find('.lucid-Dialog-window-is-small').length, 1);
 	});
 
 	it('should respect size = "medium"', () => {
-		const wrapper = shallow(<Dialog isShown={true} size="medium" />);
+		const wrapper = shallow(<Dialog isShown={true} size='medium' />);
 
 		assert.equal(wrapper.find('.lucid-Dialog-window-is-medium').length, 1);
 	});
 
 	it('should respect size = "large"', () => {
-		const wrapper = shallow(<Dialog isShown={true} size="large" />);
+		const wrapper = shallow(<Dialog isShown={true} size='large' />);
 
 		assert.equal(wrapper.find('.lucid-Dialog-window-is-large').length, 1);
 	});
@@ -75,7 +75,7 @@ describe('Dialog', () => {
 	it('should render when isShown', () => {
 		const wrapper = mount(
 			<Dialog isShown={true}>
-				<div id="holler">bro</div>
+				<div id='holler'>bro</div>
 			</Dialog>
 		);
 
@@ -86,7 +86,7 @@ describe('Dialog', () => {
 	it('should not render when not isShown', () => {
 		const wrapper = mount(
 			<Dialog isShown={false}>
-				<div id="flux">Flux Capacitor</div>
+				<div id='flux'>Flux Capacitor</div>
 			</Dialog>
 		);
 

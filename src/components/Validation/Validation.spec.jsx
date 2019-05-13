@@ -31,7 +31,7 @@ describe('Validation', () => {
 			beforeEach(
 				() =>
 					(wrapper = shallow(
-						<Validation Error="error">
+						<Validation Error='error'>
 							<div>foo</div>
 						</Validation>
 					))

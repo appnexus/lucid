@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import _ from 'lodash';
 import React, { createElement } from 'react';
 import PropTypes from 'react-peek/prop-types';
@@ -156,7 +157,7 @@ const SearchField = createClass({
 						{ '&-Icon-active': isIconActive },
 						iconChildren.props.className
 					),
-				})
+			  })
 			: defaultIcon;
 
 		return (

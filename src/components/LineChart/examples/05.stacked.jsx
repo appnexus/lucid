@@ -73,7 +73,7 @@ export default createClass({
 					'cherries',
 				]}
 				yAxisIsStacked={true}
-				yAxisTitle="Fruit Count"
+				yAxisTitle='Fruit Count'
 			/>
 		);
 	},

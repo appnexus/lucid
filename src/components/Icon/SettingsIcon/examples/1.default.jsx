@@ -8,7 +8,7 @@ export default createClass({
 			<div>
 				Small: <SettingsIcon />
 				<br />
-				Large: <SettingsIcon presetSize="large" />
+				Large: <SettingsIcon presetSize='large' />
 			</div>
 		);
 	},

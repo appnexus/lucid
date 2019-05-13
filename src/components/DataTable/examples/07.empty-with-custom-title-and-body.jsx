@@ -2,7 +2,10 @@ import React from 'react';
 import createClass from 'create-react-class';
 import { DataTable } from '../../../index';
 
-const { EmptyStateWrapper, EmptyStateWrapper: { Title, Body } } = DataTable;
+const {
+	EmptyStateWrapper,
+	EmptyStateWrapper: { Title, Body },
+} = DataTable;
 
 export default createClass({
 	getInitialState() {
@@ -15,7 +18,7 @@ export default createClass({
 		const { data } = this.state;
 
 		return (
-			<DataTable data={data} density="extended" isFullWidth minRows={15}>
+			<DataTable data={data} density='extended' isFullWidth minRows={15}>
 				<EmptyStateWrapper>
 					<Title>Something went wrong.</Title>
 					<Body style={{ fontSize: '12px' }}>
@@ -29,21 +32,21 @@ export default createClass({
 						before they sold out butcher cronut sapiente.
 					</Body>
 				</EmptyStateWrapper>
-				<DataTable.Column field="id">ID</DataTable.Column>
+				<DataTable.Column field='id'>ID</DataTable.Column>
 
-				<DataTable.Column field="first_name" width={100}>
+				<DataTable.Column field='first_name' width={100}>
 					First
 				</DataTable.Column>
 
-				<DataTable.Column field="last_name" align="left" width={100}>
+				<DataTable.Column field='last_name' align='left' width={100}>
 					Last
 				</DataTable.Column>
 
-				<DataTable.Column field="email" align="center">
+				<DataTable.Column field='email' align='center'>
 					E-Mail
 				</DataTable.Column>
 
-				<DataTable.Column field="occupation" align="right" width={100}>
+				<DataTable.Column field='occupation' align='right' width={100}>
 					Occupation
 				</DataTable.Column>
 			</DataTable>

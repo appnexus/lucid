@@ -13,7 +13,7 @@ export default createClass({
 		return (
 			<div>
 				<Expander
-					kind="highlighted"
+					kind='highlighted'
 					isExpanded={this.state.isExpanded}
 					onToggle={this.handleExpanded}
 				>

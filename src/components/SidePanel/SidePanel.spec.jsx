@@ -39,7 +39,7 @@ describe('SidePanel', () => {
 			it('should be called when the close icon is clicked', () => {
 				const onCollapse = jest.fn();
 				const wrapper = shallow(
-					<SidePanel isExpanded onCollapse={onCollapse} Header="Foo bar" />
+					<SidePanel isExpanded onCollapse={onCollapse} Header='Foo bar' />
 				);
 				const crossIconWrapper = wrapper.find(CrossIcon);
 				crossIconWrapper.simulate('click');
@@ -72,7 +72,7 @@ describe('SidePanel', () => {
 
 	describe('position', () => {
 		it('should match snapshot', () => {
-			const wrapper = shallow(<SidePanel position="left" />);
+			const wrapper = shallow(<SidePanel position='left' />);
 			expect(wrapper).toMatchSnapshot();
 		});
 	});
@@ -107,7 +107,7 @@ describe('SidePanel', () => {
 
 	describe('Header', () => {
 		it('should match snapshot', () => {
-			const wrapper = shallow(<SidePanel Header="This is a header" />);
+			const wrapper = shallow(<SidePanel Header='This is a header' />);
 			expect(wrapper).toMatchSnapshot();
 		});
 	});

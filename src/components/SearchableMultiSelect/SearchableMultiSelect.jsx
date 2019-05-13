@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
@@ -325,7 +326,11 @@ const SearchableMultiSelect = createClass({
 	handleSearch(searchText, { event }) {
 		const {
 			props,
-			props: { onSearch, optionFilter, DropMenu: { onExpand } },
+			props: {
+				onSearch,
+				optionFilter,
+				DropMenu: { onExpand },
+			},
 		} = this;
 
 		const options = _.map(
@@ -378,17 +383,17 @@ const SearchableMultiSelect = createClass({
 
 		return [
 			pre && (
-				<span key="pre" className={cx('&-Option-underline-pre')}>
+				<span key='pre' className={cx('&-Option-underline-pre')}>
 					{pre}
 				</span>
 			),
 			match && (
-				<span key="match" className={cx('&-Option-underline-match')}>
+				<span key='match' className={cx('&-Option-underline-match')}>
 					{match}
 				</span>
 			),
 			post && (
-				<span key="post" className={cx('&-Option-underline-post')}>
+				<span key='post' className={cx('&-Option-underline-post')}>
 					{post}
 				</span>
 			),
@@ -414,8 +419,8 @@ const SearchableMultiSelect = createClass({
 						{_.isString(optionProps.children)
 							? this.renderUnderlinedChildren(optionProps.children, searchText)
 							: _.isFunction(optionProps.children)
-								? React.createElement(optionProps.children, { searchText })
-								: optionProps.children}
+							? React.createElement(optionProps.children, { searchText })
+							: optionProps.children}
 					</CheckboxLabeled.Label>
 				</CheckboxLabeled>
 			</DropMenu.Option>
@@ -463,7 +468,7 @@ const SearchableMultiSelect = createClass({
 					isIndeterminate={
 						!isEveryVisibleOptionSelected && isAnyVisibleOptionSelected
 					}
-					Label="Select All"
+					Label='Select All'
 				/>
 			</DropMenu.FixedOption>,
 		].concat(
@@ -583,7 +588,7 @@ const SearchableMultiSelect = createClass({
 					</DropMenu.Control>
 					{isLoading ? (
 						<DropMenu.Option
-							key="SearchableMultiSelectLoading"
+							key='SearchableMultiSelectLoading'
 							className={cx('&-loading')}
 							isDisabled
 						>
@@ -598,7 +603,7 @@ const SearchableMultiSelect = createClass({
 						className={cx('&-Selection-section')}
 						isBold
 						hasBackground
-						kind="container"
+						kind='container'
 						onRemove={this.handleRemoveAll}
 						responsiveMode={responsiveMode}
 						isRemovable={hasRemoveAll}
@@ -626,7 +631,7 @@ const SearchableMultiSelect = createClass({
 											responsiveMode={responsiveMode}
 											isRemovable={false}
 											isBold
-											kind="container"
+											kind='container'
 										>
 											<Selection.Label>
 												{!_.isNil(selectedOptionGroupChildren)
@@ -636,7 +641,7 @@ const SearchableMultiSelect = createClass({
 																optionGroups[optionGroupIndex].children,
 																SearchableMultiSelect.Option
 															)
-														)}
+													  )}
 											</Selection.Label>
 											{_.map(
 												selectedGroupedOptions,

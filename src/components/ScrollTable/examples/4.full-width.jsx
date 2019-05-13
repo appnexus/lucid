@@ -21,10 +21,10 @@ export default createClass({
 							<SuccessIcon />
 						</Th>
 						<Th rowSpan={2}>Button</Th>
-						<Th rowSpan={2} isSorted sortDirection="up" isResizable>
+						<Th rowSpan={2} isSorted sortDirection='up' isResizable>
 							Sorted Column
 						</Th>
-						<Th colSpan={3} align="center">
+						<Th colSpan={3} align='center'>
 							Alignments
 						</Th>
 						<Th rowSpan={2}>Extra Column</Th>
@@ -39,11 +39,11 @@ export default createClass({
 						<Th rowSpan={2}>Extra Column</Th>
 					</Tr>
 					<Tr>
-						<Th align="left">align left</Th>
-						<Th align="center" isResizable>
+						<Th align='left'>align left</Th>
+						<Th align='center' isResizable>
 							align center
 						</Th>
-						<Th align="right" isSortable isSorted>
+						<Th align='right' isSortable isSorted>
 							align right
 						</Th>
 					</Tr>
@@ -61,14 +61,14 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small">button</Button>
+							<Button size='small'>button</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
@@ -89,16 +89,16 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small" isDisabled={true}>
+							<Button size='small' isDisabled={true}>
 								button
 							</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
@@ -119,14 +119,14 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small">button</Button>
+							<Button size='small'>button</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
@@ -147,16 +147,16 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small" isDisabled={true}>
+							<Button size='small' isDisabled={true}>
 								button
 							</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
@@ -173,20 +173,20 @@ export default createClass({
 							<Checkbox />
 						</Td>
 						<Td>
-							<a href="#">Link</a>
+							<a href='#'>Link</a>
 						</Td>
 						<Td hasBorderLeft hasBorderRight>
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small">button</Button>
+							<Button size='small'>button</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
@@ -203,22 +203,22 @@ export default createClass({
 							<Checkbox />
 						</Td>
 						<Td>
-							<a href="#">isDisabled Link</a>
+							<a href='#'>isDisabled Link</a>
 						</Td>
 						<Td hasBorderLeft hasBorderRight>
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small" isDisabled={true}>
+							<Button size='small' isDisabled={true}>
 								button
 							</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
@@ -235,20 +235,20 @@ export default createClass({
 							<Checkbox />
 						</Td>
 						<Td>
-							<a href="#">Link && isActionable</a>
+							<a href='#'>Link && isActionable</a>
 						</Td>
 						<Td hasBorderLeft hasBorderRight>
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small">button</Button>
+							<Button size='small'>button</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
@@ -265,22 +265,22 @@ export default createClass({
 							<Checkbox />
 						</Td>
 						<Td>
-							<a href="#">isDisabled Link && isActionable</a>
+							<a href='#'>isDisabled Link && isActionable</a>
 						</Td>
 						<Td hasBorderLeft hasBorderRight>
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small" isDisabled={true}>
+							<Button size='small' isDisabled={true}>
 								button
 							</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
@@ -301,14 +301,14 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small">button</Button>
+							<Button size='small'>button</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
@@ -329,16 +329,16 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small" isDisabled={true}>
+							<Button size='small' isDisabled={true}>
 								button
 							</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
@@ -359,14 +359,14 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small">button</Button>
+							<Button size='small'>button</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
@@ -387,16 +387,16 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small" isDisabled={true}>
+							<Button size='small' isDisabled={true}>
 								button
 							</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
@@ -417,14 +417,14 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small">button</Button>
+							<Button size='small'>button</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
@@ -445,16 +445,16 @@ export default createClass({
 							<SuccessIcon />
 						</Td>
 						<Td>
-							<Button size="small" isDisabled={true}>
+							<Button size='small' isDisabled={true}>
 								button
 							</Button>
 						</Td>
 						<Td>Sorted Column</Td>
-						<Td align="left" hasBorderLeft>
+						<Td align='left' hasBorderLeft>
 							align left
 						</Td>
-						<Td align="center">align center</Td>
-						<Td align="right">align right</Td>
+						<Td align='center'>align center</Td>
+						<Td align='right'>align right</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>
 						<Td>Extra Column</Td>

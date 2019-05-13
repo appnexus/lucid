@@ -92,7 +92,11 @@ const Autocomplete = createClass({
 	},
 
 	handleInput(event) {
-		const { onChange, onExpand, DropMenu: { onCollapse } } = this.props;
+		const {
+			onChange,
+			onExpand,
+			DropMenu: { onCollapse },
+		} = this.props;
 
 		onChange(event.target.value, { event, props: this.props });
 		if (!_.isEmpty(event.target.value)) {
@@ -145,7 +149,10 @@ const Autocomplete = createClass({
 	},
 
 	handleControlClick(event) {
-		const { onExpand, DropMenu: { isExpanded, onCollapse } } = this.props;
+		const {
+			onExpand,
+			DropMenu: { isExpanded, onCollapse },
+		} = this.props;
 
 		if (event.target === this.refs.inputNode) {
 			onExpand({ event, props: this.props });
@@ -218,9 +225,9 @@ const Autocomplete = createClass({
 								'value',
 								'children',
 							])}
-							type="text"
+							type='text'
 							className={cx('&-Control-input')}
-							ref="inputNode"
+							ref='inputNode'
 							onKeyDown={this.handleInputKeydown}
 							disabled={isDisabled}
 						/>
@@ -269,12 +276,12 @@ const Autocomplete = createClass({
 									return formattedSuggestion;
 								})()}
 							</DropMenu.Option>
-						))
+					  ))
 					: _.map(suggestions, suggestion => (
 							<DropMenu.Option key={'AutocompleteOption' + suggestion}>
 								{suggestion}
 							</DropMenu.Option>
-						))}
+					  ))}
 			</DropMenu>
 		);
 	},

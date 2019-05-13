@@ -23,9 +23,9 @@ export default createClass({
 	render() {
 		return (
 			<Autocomplete
-				placeholder="Enter a word..."
+				placeholder='Enter a word...'
 				suggestions={wordlist}
-				value="ab"
+				value='ab'
 				onSelect={index => {
 					console.log(`selected: ${wordlist[index]}`);
 				}}

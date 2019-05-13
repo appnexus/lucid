@@ -19,23 +19,23 @@ describe('ProgressBar', () => {
 	describe('props', () => {
 		describe('kind', () => {
 			it('should match snapshot for default', () => {
-				expect(shallow(<ProgressBar kind="default" />)).toMatchSnapshot();
+				expect(shallow(<ProgressBar kind='default' />)).toMatchSnapshot();
 			});
 
 			it('should match snapshot for success', () => {
-				expect(shallow(<ProgressBar kind="success" />)).toMatchSnapshot();
+				expect(shallow(<ProgressBar kind='success' />)).toMatchSnapshot();
 			});
 
 			it('should match snapshot for warning', () => {
-				expect(shallow(<ProgressBar kind="warning" />)).toMatchSnapshot();
+				expect(shallow(<ProgressBar kind='warning' />)).toMatchSnapshot();
 			});
 
 			it('should match snapshot for danger', () => {
-				expect(shallow(<ProgressBar kind="danger" />)).toMatchSnapshot();
+				expect(shallow(<ProgressBar kind='danger' />)).toMatchSnapshot();
 			});
 
 			it('should match snapshot for info', () => {
-				expect(shallow(<ProgressBar kind="info" />)).toMatchSnapshot();
+				expect(shallow(<ProgressBar kind='info' />)).toMatchSnapshot();
 			});
 		});
 

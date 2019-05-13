@@ -2,7 +2,10 @@ import React from 'react';
 import createClass from 'create-react-class';
 import { LineChart } from '../../../index';
 
-const { EmptyStateWrapper, EmptyStateWrapper: { Title, Body } } = LineChart;
+const {
+	EmptyStateWrapper,
+	EmptyStateWrapper: { Title, Body },
+} = LineChart;
 
 export default createClass({
 	render() {

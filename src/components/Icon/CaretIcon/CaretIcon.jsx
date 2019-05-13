@@ -56,7 +56,7 @@ const CaretIcon = createClass({
 				)}
 				size={size}
 			>
-				<path d="M1.234 4.408l6.718 7.184 6.813-7.184H1.235z" />
+				<path d='M1.234 4.408l6.718 7.184 6.813-7.184H1.235z' />
 			</Icon>
 		);
 	},

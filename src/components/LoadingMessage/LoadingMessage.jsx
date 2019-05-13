@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
@@ -86,7 +87,10 @@ const LoadingMessage = createClass({
 	},
 
 	render() {
-		const { props, props: { className, ...passThroughs } } = this;
+		const {
+			props,
+			props: { className, ...passThroughs },
+		} = this;
 
 		const { Icon, Title, Body } = LoadingMessage;
 

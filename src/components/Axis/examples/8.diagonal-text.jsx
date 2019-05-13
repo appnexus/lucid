@@ -33,8 +33,8 @@ export default createClass({
 						>
 							<Axis
 								scale={x}
-								orient="top"
-								textOrientation="diagonal"
+								orient='top'
+								textOrientation='diagonal'
 								tickCount={6}
 							/>
 						</g>
@@ -45,7 +45,7 @@ export default createClass({
 					<svg
 						width={horizontalAxisWidth}
 						height={horizontalAxisHeight}
-						margin="400"
+						margin='400'
 					>
 						<g
 							transform={`translate(${margin.left}, ${horizontalAxisHeight /
@@ -53,8 +53,8 @@ export default createClass({
 						>
 							<Axis
 								scale={x}
-								orient="bottom"
-								textOrientation="diagonal"
+								orient='bottom'
+								textOrientation='diagonal'
 								tickCount={6}
 							/>
 						</g>
@@ -66,8 +66,8 @@ export default createClass({
 						<g transform={`translate(0, ${margin.top})`}>
 							<Axis
 								scale={y}
-								orient="right"
-								textOrientation="diagonal"
+								orient='right'
+								textOrientation='diagonal'
 								tickCount={6}
 							/>
 						</g>
@@ -79,8 +79,8 @@ export default createClass({
 						<g transform={`translate(${verticalAxisWidth - 1}, ${margin.top})`}>
 							<Axis
 								scale={y}
-								orient="left"
-								textOrientation="diagonal"
+								orient='left'
+								textOrientation='diagonal'
 								tickCount={6}
 							/>
 						</g>

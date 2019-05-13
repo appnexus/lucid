@@ -129,7 +129,9 @@ const SplitButton = createClass({
 	},
 
 	handleButtonClick(buttonProps, event) {
-		const { DropMenu: { onCollapse } } = this.props;
+		const {
+			DropMenu: { onCollapse },
+		} = this.props;
 
 		onCollapse();
 

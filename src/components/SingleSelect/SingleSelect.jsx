@@ -276,7 +276,7 @@ const SingleSelect = createClass({
 											SingleSelect.Option.Selected
 										),
 										'props.children'
-									) || flattenedOptionsData[selectedIndex].optionProps.children
+								  ) || flattenedOptionsData[selectedIndex].optionProps.children
 								: placeholder}
 						</span>
 

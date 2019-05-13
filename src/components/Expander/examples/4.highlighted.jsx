@@ -6,7 +6,7 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				<Expander kind="highlighted" isExpanded={true}>
+				<Expander kind='highlighted' isExpanded={true}>
 					<Expander.Label>Show Less</Expander.Label>
 					<p>
 						You can't get rid of me. Keep clicking that icon as much as you

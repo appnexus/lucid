@@ -13,8 +13,8 @@ export default createClass({
 		return (
 			<BarChart
 				data={data}
-				xAxisTextOrientation="diagonal"
-				yAxisTextOrientation="horizontal"
+				xAxisTextOrientation='diagonal'
+				yAxisTextOrientation='horizontal'
 				xAxisTickCount={20}
 				height={600}
 				width={1400}

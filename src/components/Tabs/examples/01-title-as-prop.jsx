@@ -7,14 +7,14 @@ export default createClass({
 		return (
 			<div>
 				<Tabs>
-					<Tabs.Tab Title="One" className="one">
+					<Tabs.Tab Title='One' className='one'>
 						One content
 					</Tabs.Tab>
-					<Tabs.Tab Title="Two" isDisabled={true}>
+					<Tabs.Tab Title='Two' isDisabled={true}>
 						Two content
 					</Tabs.Tab>
-					<Tabs.Tab Title="Three">Three content</Tabs.Tab>
-					<Tabs.Tab Title="Four">Four content</Tabs.Tab>
+					<Tabs.Tab Title='Three'>Three content</Tabs.Tab>
+					<Tabs.Tab Title='Four'>Four content</Tabs.Tab>
 				</Tabs>
 			</div>
 		);

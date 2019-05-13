@@ -61,7 +61,7 @@ describe('ToolTip', () => {
 
 				it('should pass the className prop thru to the FlyOut (portal) element', () => {
 					wrapper = mount(
-						<ToolTip isExpanded className="MyToolTip">
+						<ToolTip isExpanded className='MyToolTip'>
 							<Target>Target</Target>
 							<Body>Body</Body>
 						</ToolTip>
@@ -153,7 +153,7 @@ describe('ToolTip', () => {
 		describe('direction', () => {
 			it('should pass direction to the underlying ContextMenu', () => {
 				const wrapper = shallow(
-					<ToolTip isExpanded direction="right">
+					<ToolTip isExpanded direction='right'>
 						<Target>Target</Target>
 						<Body>Body</Body>
 					</ToolTip>
@@ -169,7 +169,7 @@ describe('ToolTip', () => {
 		describe('alignment', () => {
 			it('should pass alignment center to the underlying ContextMenu', () => {
 				const wrapper = shallow(
-					<ToolTip isExpanded alignment="start">
+					<ToolTip isExpanded alignment='start'>
 						<Target>Target</Target>
 						<Body>Body</Body>
 					</ToolTip>
@@ -184,7 +184,7 @@ describe('ToolTip', () => {
 			describe('center', () => {
 				it('should pass getAlignmentOffset with correct closed over values', () => {
 					const wrapper = shallow(
-						<ToolTip isExpanded alignment="center">
+						<ToolTip isExpanded alignment='center'>
 							<Target>Target</Target>
 							<Body>Body</Body>
 						</ToolTip>
@@ -199,7 +199,7 @@ describe('ToolTip', () => {
 			describe('start', () => {
 				it('should pass getAlignmentOffset with correct closed over values', () => {
 					const wrapper = shallow(
-						<ToolTip isExpanded alignment="start">
+						<ToolTip isExpanded alignment='start'>
 							<Target>Target</Target>
 							<Body>Body</Body>
 						</ToolTip>
@@ -214,7 +214,7 @@ describe('ToolTip', () => {
 			describe('end', () => {
 				it('should pass getAlignmentOffset with correct closed over values', () => {
 					const wrapper = shallow(
-						<ToolTip isExpanded alignment="end">
+						<ToolTip isExpanded alignment='end'>
 							<Target>Target</Target>
 							<Body>Body</Body>
 						</ToolTip>
@@ -322,7 +322,7 @@ describe('ToolTip', () => {
 		describe('portalId', () => {
 			it('should pass portalId to underlying ContextMenu', () => {
 				const wrapper = shallow(
-					<ToolTip portalId="foo-portal-id">
+					<ToolTip portalId='foo-portal-id'>
 						<Target>Target</Target>
 						<Body>Body</Body>
 					</ToolTip>

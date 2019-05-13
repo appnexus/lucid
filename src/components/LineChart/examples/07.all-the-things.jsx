@@ -45,21 +45,21 @@ export default createClass({
 					blueberries: chartConstants.COLOR_0,
 					oranges: chartConstants.COLOR_1,
 				}}
-				xAxisField="date"
+				xAxisField='date'
 				xAxisFormatter={xFormatter}
 				xAxisMin={new Date('2014-12-31T00:00-08:00')}
 				xAxisMax={new Date('2015-01-07T00:00-08:00')}
 				xAxisTickCount={5}
-				xAxisTitle="Date"
+				xAxisTitle='Date'
 				yAxisFields={['blueberries']}
 				yAxisFormatter={yFormatter}
 				yAxisTickCount={5}
-				yAxisTitle="Number of Blueberries"
+				yAxisTitle='Number of Blueberries'
 				yAxisTitleColor={chartConstants.COLOR_0}
 				y2AxisFields={['oranges']}
 				y2AxisFormatter={yFormatter}
 				y2AxisTickCount={5}
-				y2AxisTitle="Number of Oranges"
+				y2AxisTitle='Number of Oranges'
 				y2AxisTitleColor={1}
 				y2AxisHasPoints={false}
 				y2AxisTitleColor={chartConstants.COLOR_1}

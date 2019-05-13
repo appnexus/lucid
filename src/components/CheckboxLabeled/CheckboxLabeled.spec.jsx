@@ -59,7 +59,7 @@ describe('CheckboxLabeled', () => {
 			it('passes through all props not defined in `propTypes` to its `Checkbox` instance.', () => {
 				const wrapper = shallow(
 					<CheckboxLabeled
-						className="wut"
+						className='wut'
 						isDisabled={true}
 						isSelected={true}
 						style={{ fontWeight: 'bold' }}

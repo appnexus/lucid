@@ -43,7 +43,7 @@ describe('TextField', () => {
 	});
 
 	it('should accept a new `value` prop immediately if the user hasnt typed anything recently', () => {
-		const wrapper = shallow(<TextField value="start" />);
+		const wrapper = shallow(<TextField value='start' />);
 
 		wrapper.setProps({ value: 'end' });
 
@@ -52,7 +52,7 @@ describe('TextField', () => {
 
 	// This test had value, but it's been known to be flaky.
 	it('should postpone state changes if the user recently typed something in [mostly stable]', done => {
-		const wrapper = shallow(<TextField value="start" lazyLevel={1} />);
+		const wrapper = shallow(<TextField value='start' lazyLevel={1} />);
 
 		// Order of operations is crucial for this test
 		// 1) User starts typing something in

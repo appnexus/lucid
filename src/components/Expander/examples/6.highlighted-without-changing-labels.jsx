@@ -6,7 +6,7 @@ export default createClass({
 	render() {
 		return (
 			<div>
-				<Expander kind="highlighted">
+				<Expander kind='highlighted'>
 					<Expander.Label>Show Stuff</Expander.Label>
 					<p>
 						Tacos craft beer humblebrag meditation. Cold-pressed next level man

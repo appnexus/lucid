@@ -10,7 +10,7 @@ export default createClass({
 				tempor mi. Curabitur eget risus ac diam euismod ultricies ac in est.
 				Morbi in vehicula arcu, at laoreet libero. Phasellus nisi dolor, porta
 				et erat quis, egestas mattis purus.
-				<ContextMenu isExpanded direction="up">
+				<ContextMenu isExpanded direction='up'>
 					<ContextMenu.Target>
 						<Button>Target</Button>
 					</ContextMenu.Target>

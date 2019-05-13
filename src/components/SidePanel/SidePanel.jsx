@@ -110,7 +110,7 @@ class SidePanel extends React.Component {
 								<div className={cx('&-header-content')}>{headerChildren}</div>
 
 								<Button
-									kind="invisible"
+									kind='invisible'
 									style={{
 										width: '32px',
 										height: '32px',
@@ -120,7 +120,7 @@ class SidePanel extends React.Component {
 										className={cx('&-header-closer')}
 										isClickable
 										onClick={onCollapse}
-										presetSize="large"
+										presetSize='large'
 										style={{
 											height: 16,
 											width: 16,
@@ -139,7 +139,7 @@ class SidePanel extends React.Component {
 								onDrag={this.handleResize}
 								onDragEnd={this.handleResizeEnd}
 							>
-								<GripperVerticalIcon width="20" />
+								<GripperVerticalIcon width='20' />
 							</DragCaptureZone>
 						)}
 						<div className={cx('&-content')}>{children}</div>

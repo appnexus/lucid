@@ -25,7 +25,7 @@ export default createClass({
 					data={data}
 					yAxisFields={['apples', 'pears', 'peaches', 'bananas', 'oranges']}
 					yAxisMin={0}
-					yAxisTitle="Fruit Count"
+					yAxisTitle='Fruit Count'
 					palette={chartConstants.PALETTE_30}
 				/>
 			</div>

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
@@ -235,7 +236,9 @@ const SearchableSelect = createClass({
 	},
 
 	handleSearch(searchText) {
-		const { props: { onSearch, optionFilter } } = this;
+		const {
+			props: { onSearch, optionFilter },
+		} = this;
 
 		const { flattenedOptionsData } = this.state;
 
@@ -258,17 +261,17 @@ const SearchableSelect = createClass({
 
 		return [
 			pre && (
-				<span key="pre" className={cx('&-Option-underline-pre')}>
+				<span key='pre' className={cx('&-Option-underline-pre')}>
 					{pre}
 				</span>
 			),
 			match && (
-				<span key="match" className={cx('&-Option-underline-match')}>
+				<span key='match' className={cx('&-Option-underline-match')}>
 					{match}
 				</span>
 			),
 			post && (
-				<span key="post" className={cx('&-Option-underline-post')}>
+				<span key='post' className={cx('&-Option-underline-post')}>
 					{post}
 				</span>
 			),
@@ -289,8 +292,8 @@ const SearchableSelect = createClass({
 					{_.isString(optionProps.children)
 						? this.renderUnderlinedChildren(optionProps.children, searchText)
 						: _.isFunction(optionProps.children)
-							? React.createElement(optionProps.children, { searchText })
-							: optionProps.children}
+						? React.createElement(optionProps.children, { searchText })
+						: optionProps.children}
 				</DropMenu.Option>
 			);
 		}
@@ -441,11 +444,11 @@ const SearchableSelect = createClass({
 											SearchableSelect.Option.Selected
 										),
 										'props.children'
-									) ||
-									(Children =>
+								  ) ||
+								  (Children =>
 										_.isFunction(Children) ? <Children /> : Children)(
 										flattenedOptionsData[selectedIndex].optionProps.children
-									)
+								  )
 								: placeholder}
 						</span>
 						<CaretIcon direction={isExpanded ? direction : 'down'} size={8} />
@@ -460,19 +463,18 @@ const SearchableSelect = createClass({
 				</DropMenu.Header>
 				{isLoading && (
 					<DropMenu.Option
-						key="SearchableSelectLoading"
+						key='SearchableSelectLoading'
 						className={cx('&-Loading')}
 						isDisabled
 					>
 						<LoadingIcon />
 					</DropMenu.Option>
 				)}
-				{hasReset &&
-					isItemSelected && (
-						<DropMenu.NullOption {...placeholderProps}>
-							{placeholder}
-						</DropMenu.NullOption>
-					)}
+				{hasReset && isItemSelected && (
+					<DropMenu.NullOption {...placeholderProps}>
+						{placeholder}
+					</DropMenu.NullOption>
+				)}
 				{this.renderOptions()}
 			</DropMenu>
 		);
