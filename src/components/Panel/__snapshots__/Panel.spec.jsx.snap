@@ -44,14 +44,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 03.with-ico
     className="lucid-Panel-Header"
   >
     <SettingsIcon
-      presetSize="small"
-      style={
-        Object {
-          "height": "36px",
-          "marginRight": "12px",
-          "width": "36px",
-        }
-      }
+      presetSize="large"
     />
     <span>
       Header
@@ -62,14 +55,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 03.with-ico
   >
     <Panel.Header>
       <SettingsIcon
-        presetSize="small"
-        style={
-          Object {
-            "height": "36px",
-            "marginRight": "12px",
-            "width": "36px",
-          }
-        }
+        presetSize="large"
       />
       <span>
         Header
@@ -349,6 +335,183 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-margi
 exports[`Panel [common] example testing should match snapshot(s) for 07.no-content-padding 1`] = `
 <div
   className="lucid-Panel lucid-Panel-has-margin lucid-Panel-is-scrollable"
+>
+  <header
+    className="lucid-Panel-Header"
+  >
+    <strong>
+      Header
+    </strong>
+  </header>
+  <section
+    className="lucid-Panel-content"
+  >
+    <Panel.Header>
+      <strong>
+        Header
+      </strong>
+    </Panel.Header>
+    <Table
+      density="extended"
+      hasBorder={false}
+      hasLightHeader={true}
+      hasWordWrap={true}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <Table.Thead>
+        <Table.Tr
+          isActive={false}
+          isDisabled={false}
+          isSelected={false}
+        >
+          <Table.Th
+            align="left"
+            isResizable={false}
+            isSorted={false}
+            sortDirection="up"
+          >
+            Cell
+          </Table.Th>
+          <Table.Th
+            align="left"
+            isResizable={false}
+            isSorted={false}
+            sortDirection="up"
+          >
+            Cell
+          </Table.Th>
+          <Table.Th
+            align="left"
+            isResizable={false}
+            isSorted={false}
+            sortDirection="up"
+          >
+            Cell
+          </Table.Th>
+        </Table.Tr>
+      </Table.Thead>
+      <Table.Tbody>
+        <Table.Tr
+          isActive={false}
+          isDisabled={false}
+          isSelected={false}
+        >
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+        </Table.Tr>
+        <Table.Tr
+          isActive={false}
+          isDisabled={false}
+          isSelected={false}
+        >
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+        </Table.Tr>
+        <Table.Tr
+          isActive={false}
+          isDisabled={false}
+          isSelected={false}
+        >
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+        </Table.Tr>
+        <Table.Tr
+          isActive={false}
+          isDisabled={false}
+          isSelected={false}
+        >
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+          <Table.Td
+            align="left"
+            hasBorderLeft={false}
+            hasBorderRight={false}
+          >
+            Cell
+          </Table.Td>
+        </Table.Tr>
+      </Table.Tbody>
+    </Table>
+  </section>
+</div>
+`;
+
+exports[`Panel [common] example testing should match snapshot(s) for 08.no-margins-or-content-padding 1`] = `
+<div
+  className="lucid-Panel lucid-Panel-is-scrollable"
 >
   <header
     className="lucid-Panel-Header"

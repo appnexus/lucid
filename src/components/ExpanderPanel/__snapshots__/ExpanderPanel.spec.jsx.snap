@@ -31,7 +31,7 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 1.b
     rootType="div"
   >
     <div
-      className="lucid-ExpanderPanel-content-inner lucid-ExpanderPanel-content-inner-has-padding"
+      className="lucid-ExpanderPanel-content-inner"
     >
       <ExpanderPanel.Header>
         Show More
@@ -449,7 +449,7 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 2.n
 <Panel
   className="lucid-ExpanderPanel lucid-ExpanderPanel-is-collapsed"
   hasMargin={true}
-  isGutterless={false}
+  isGutterless={true}
   isScrollable={true}
 >
   <Panel.Header

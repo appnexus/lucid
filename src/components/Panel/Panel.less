@@ -7,44 +7,41 @@
 	margin: 0;
 	position: relative;
 	background-color: @color-white;
-	border: @border-standardBorder;
+	border: 1px solid @color-neutral-4; // slightly lighter than standard borders
 	font-family: @fontFamily;
-	
+
 	&&-has-margin {
 		margin: 0 @size-standard @size-standard @size-standard;
 	}
-	
+
 	.@{prefix}-Panel-is-scrollable& {
 		display: flex;
 		flex-direction: column;
 	}
-	
+
 	& > &-Header {
 		display: flex;
 		align-items: center;
-		// padding: 20px 20px 0 20px;
-		padding: 20px;
+		margin: 16px 20px;
 		font-size: 15px;
 		font-family: @fontFamily;
 		font-weight: @font-weight-medium;
+
+		.@{prefix}-Panel-is-not-gutterless& {
+			margin-bottom: 0;
+		}
 
 		.@{prefix}-Panel-is-scrollable& {
 			flex-shrink: 0;
 		}
 	}
 
-	& > &-Header ~ &-content {
-		.@{prefix}-Panel-is-not-gutterless& {
-			padding: 0 20px 20px 20px;
-		}
-	}
-
 	& > &-content {
-
 		font-size: 12px;
 
 		.@{prefix}-Panel-is-not-gutterless& {
-			padding: 20px;
+			margin: 16px 0;
+			padding: 0 20px;
 			overflow: auto;
 		}
 
@@ -56,7 +53,11 @@
 
 	& > &-Footer {
 		text-align: right;
-		padding: 0 20px 20px 20px;
+		margin: 16px 20px;
+
+		.@{prefix}-Panel-is-not-gutterless& {
+			margin-top: 0;
+		}
 
 		.@{prefix}-Panel-is-scrollable& {
 			flex-shrink: 0;
