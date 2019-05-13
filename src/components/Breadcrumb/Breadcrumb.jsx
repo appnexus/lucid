@@ -70,10 +70,7 @@ const Breadcrumb = createClass({
 								className={cx('&-Item', props.className)}
 							>
 								{props.children}
-								<span className={cx('&-BreadcrumbSeparator')}>
-									<span />
-									<span />
-								</span>
+								<span className={cx('&-BreadcrumbSeparator')} />
 							</li>
 						))}
 						<li
