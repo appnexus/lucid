@@ -11,6 +11,7 @@ import {
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './Sidebar.reducers';
 import SplitVertical from '../SplitVertical/SplitVertical';
+import Button from '../Button/Button';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon';
 
@@ -230,7 +231,7 @@ const Sidebar = createClass({
 				findTypes(this.props, Sidebar.Title)
 			), // get titles from Bar and parent Sidebar
 			'[0].props', // select props from the first title element
-			<Sidebar.Title>Title</Sidebar.Title>.props // default props
+			{ children: 'Title' } // default props
 		);
 
 		let PrimaryPane, BarPane; // using Left/Right Pane as primary depends on position
@@ -282,8 +283,9 @@ const Sidebar = createClass({
 							{...titleProps}
 							className={cx('&-Bar-Title', titleProps.className)}
 						/>
-						<div
+						<Button
 							className={cx('&-expander')}
+							kind='invisible'
 							onMouseDown={this.handleExpanderClick}
 						>
 							<ChevronIcon
@@ -294,7 +296,7 @@ const Sidebar = createClass({
 										: 'left'
 								}
 							/>
-						</div>
+						</Button>
 					</div>
 					<div
 						className={cx('&-Bar-content', {
