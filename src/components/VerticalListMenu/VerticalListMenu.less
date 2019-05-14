@@ -3,7 +3,7 @@
 
 @VerticalListMenu-size-itemHeight: 29px;
 @VerticalListMenu-size-childSpacer: 8px;
-@VerticalListMenu-size-childPadding: 15px;
+@VerticalListMenu-size-childPadding: 12px;
 @VerticalListMenu-step: 12;
 
 .@{prefix}-VerticalListMenu {
@@ -52,6 +52,76 @@
 	list-style: none;
 
 	&-Item {
+		&-content {
+			cursor: pointer;
+
+			display: flex;
+			align-items: center;
+			// padding-left: 15px;
+
+			color: @color-darkGray;
+			font-family: @fontFamily;
+			font-size: 12px;
+			line-height: 16px;
+
+			// border-bottom: 1px solid @color-neutral-4;
+
+
+			&-is-selected, &:hover {
+
+				.@{prefix}-VerticalListMenu-Item-content-text {
+					font-weight: @font-weight-semiBold;
+				}
+			}
+
+			&-text {
+				width: 100%;
+				padding: @VerticalListMenu-size-childSpacer 0;
+				padding-left: 15px;
+				border-bottom: 1px solid @color-neutral-4;
+			}
+
+			&-is-expanded,
+			&&-is-expanded {
+
+				position: relative;
+
+				& ::after {
+					z-index: 2;
+					position: absolute;
+					left: 0;
+					top: 0;
+					height: 100%;
+					width: @size-XXS;
+					background-color: @color-gray;
+					content: '';
+					transform-origin: 0 0;
+					transition: transform @timing-animation-hover;
+				}
+			}
+
+			&&-is-selected,
+			&&-is-selected:hover,
+			&&-is-actionable:hover,
+			&&-is-actionable:focus {
+
+				position: relative;
+
+				& ::after {
+					z-index: 2;
+					position: absolute;
+					left: 0;
+					top: 0;
+					height: 100%;
+					width: @size-XXS;
+					background-color: @color-primary;
+					content: '';
+					transform-origin: 0 0;
+					transition: transform @timing-animation-hover;
+				}
+			}
+
+		}
 
 		&-expander {
 			align-self: flex-start;
@@ -107,97 +177,6 @@
 					}
 
 			}
-		}
-
-		&-content {
-			cursor: pointer;
-
-			display: flex;
-			align-items: center;
-			padding-left: 15px;
-
-			color: @color-darkGray;
-			font-family: @fontFamily;
-			font-size: 12px;
-			line-height: 16px;
-
-			border-bottom: 1px solid @color-neutral-4;
-
-
-			&-is-selected, &:hover {
-
-				.@{prefix}-VerticalListMenu-Item-content-text {
-					font-weight: @font-weight-semiBold;
-				}
-			}
-
-			&-text {
-
-
-				// &:hover {
-				// 	font-weight: @font-weight-semiBold;
-				// }
-
-				width: 100%;
-				padding: @VerticalListMenu-size-childSpacer 0;
-
-				// border-top: 1px solid @color-neutral-4;
-			}
-
-
-			// &-is-expanded.@{prefix}-VerticalListMenu-is-not-selected {
-
-			// 	&::before {
-			// 		align-self: flex-start;
-			// 		flex-shrink: 0;
-			// 		display: inline-block;
-			// 		width: @VerticalListMenu-size-childSpacer;
-			// 		color: @color-gray;
-			// 		margin: @VerticalListMenu-size-childSpacer;
-			// 	}
-
-			// }
-
-			&-is-expanded,
-			&&-is-expanded {
-
-				position: relative;
-
-				& ::after {
-					z-index: 2;
-					position: absolute;
-					left: 0;
-					top: 0;
-					height: 100%;
-					width: @size-XXS;
-					background-color: @color-gray;
-					content: '';
-					transform-origin: 0 0;
-					transition: transform @timing-animation-hover;
-				}
-			}
-
-			&&-is-selected,
-			&&-is-selected:hover,
-			&&-is-actionable:hover,
-			&&-is-actionable:focus {
-
-				position: relative;
-
-				& ::after {
-					z-index: 2;
-					position: absolute;
-					left: 0;
-					top: 0;
-					height: 100%;
-					width: @size-XXS;
-					background-color: @color-primary;
-					content: '';
-					transform-origin: 0 0;
-					transition: transform @timing-animation-hover;
-				}
-			}
-
 		}
 
 		// Any time we have a VerticalListMenu below a VerticalListMenu-Item
