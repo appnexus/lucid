@@ -36,14 +36,20 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 01.defaul
       >
         Title
       </div>
-      <div
+      <Button
         className="lucid-Sidebar-expander"
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
         onMouseDown={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="left"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Sidebar-Bar-content lucid-Sidebar-Bar-content-has-gutters"
@@ -103,14 +109,20 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 02.disabl
       >
         Title
       </div>
-      <div
+      <Button
         className="lucid-Sidebar-expander"
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
         onMouseDown={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="left"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Sidebar-Bar-content lucid-Sidebar-Bar-content-has-gutters"
@@ -170,14 +182,20 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 03.initia
       >
         Title
       </div>
-      <div
+      <Button
         className="lucid-Sidebar-expander"
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
         onMouseDown={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="left"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Sidebar-Bar-content lucid-Sidebar-Bar-content-has-gutters"
@@ -237,14 +255,20 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 04.positi
       >
         Title
       </div>
-      <div
+      <Button
         className="lucid-Sidebar-expander"
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
         onMouseDown={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="right"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Sidebar-Bar-content lucid-Sidebar-Bar-content-has-gutters"
@@ -307,14 +331,20 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 05.custom
           Edit
         </button>
       </div>
-      <div
+      <Button
         className="lucid-Sidebar-expander"
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
         onMouseDown={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="left"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Sidebar-Bar-content lucid-Sidebar-Bar-content-has-gutters"
@@ -391,14 +421,20 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 06.custom
       >
         Title
       </div>
-      <div
+      <Button
         className="lucid-Sidebar-expander"
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
         onMouseDown={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="left"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Sidebar-Bar-content lucid-Sidebar-Bar-content-has-gutters"
@@ -458,14 +494,20 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 07.contro
       >
         Title
       </div>
-      <div
+      <Button
         className="lucid-Sidebar-expander"
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
         onMouseDown={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="right"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Sidebar-Bar-content lucid-Sidebar-Bar-content-has-gutters"
@@ -525,14 +567,20 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 08.handle
       >
         Title
       </div>
-      <div
+      <Button
         className="lucid-Sidebar-expander"
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
         onMouseDown={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="left"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Sidebar-Bar-content lucid-Sidebar-Bar-content-has-gutters"
@@ -592,14 +640,20 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 09.nested
       >
         Title
       </div>
-      <div
+      <Button
         className="lucid-Sidebar-expander"
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
         onMouseDown={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="left"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Sidebar-Bar-content lucid-Sidebar-Bar-content-has-gutters"
@@ -670,14 +724,20 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
       >
         Title
       </div>
-      <div
+      <Button
         className="lucid-Sidebar-expander"
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
         onMouseDown={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="left"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Sidebar-Bar-content lucid-Sidebar-Bar-content-has-gutters"
