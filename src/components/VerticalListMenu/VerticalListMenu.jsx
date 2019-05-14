@@ -164,11 +164,11 @@ const VerticalListMenu = createClass({
 					// is due to the way we wrap components with createLucidComponentDefinition
 					const listChildren = _.filter(
 						itemChildrenAsArray,
-						child => _.get(child, 'type.displayName', '') === 'VerticalListMenu'
+						(child) => _.get(child, 'type.displayName', '') === 'VerticalListMenu'
 					);
 					const otherChildren = _.filter(
 						itemChildrenAsArray,
-						child => _.get(child, 'type.displayName', '') !== 'VerticalListMenu'
+						(child) => _.get(child, 'type.displayName', '') !== 'VerticalListMenu'
 					);
 
 					// If the prop is found on the child, it should override what was
@@ -191,6 +191,7 @@ const VerticalListMenu = createClass({
 								className={cx('&-Item-content', {
 									'&-Item-content-is-selected': actualIsSelected,
 									'&-Item-content-is-not-selected': !actualIsSelected,
+									'&-Item-content-is-expanded': actualIsExpanded,
 									'&-Item-content-is-actionable': isActionable,
 								})}
 								onClick={_.partial(this.handleClickItem, index, itemChildProp)}
