@@ -725,7 +725,7 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="1"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-expanded lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
@@ -761,7 +761,7 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
     key="2"
   >
     <div
-      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-actionable"
+      className="lucid-VerticalListMenu-Item-content lucid-VerticalListMenu-Item-content-is-not-selected lucid-VerticalListMenu-Item-content-is-expanded lucid-VerticalListMenu-Item-content-is-actionable"
       onClick={[Function]}
     >
       <div
