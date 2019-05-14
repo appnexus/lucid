@@ -53,19 +53,23 @@
 
 	&-Item {
 		&-content {
+
+			&-body {
+				display: flex;
+				align-items: center;
+				border-bottom: 1px solid @color-neutral-4;
+				width: 100%;
+			}
+
 			cursor: pointer;
 
 			display: flex;
 			align-items: center;
-			// padding-left: 15px;
 
 			color: @color-darkGray;
 			font-family: @fontFamily;
 			font-size: 12px;
 			line-height: 16px;
-
-			// border-bottom: 1px solid @color-neutral-4;
-
 
 			&-is-selected, &:hover {
 
@@ -78,7 +82,6 @@
 				width: 100%;
 				padding: @VerticalListMenu-size-childSpacer 0;
 				padding-left: 15px;
-				border-bottom: 1px solid @color-neutral-4;
 			}
 
 			&-is-expanded,

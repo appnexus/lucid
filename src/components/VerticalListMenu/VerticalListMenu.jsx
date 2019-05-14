@@ -164,11 +164,11 @@ const VerticalListMenu = createClass({
 					// is due to the way we wrap components with createLucidComponentDefinition
 					const listChildren = _.filter(
 						itemChildrenAsArray,
-						(child) => _.get(child, 'type.displayName', '') === 'VerticalListMenu'
+						child => _.get(child, 'type.displayName', '') === 'VerticalListMenu'
 					);
 					const otherChildren = _.filter(
 						itemChildrenAsArray,
-						(child) => _.get(child, 'type.displayName', '') !== 'VerticalListMenu'
+						child => _.get(child, 'type.displayName', '') !== 'VerticalListMenu'
 					);
 
 					// If the prop is found on the child, it should override what was
@@ -196,22 +196,30 @@ const VerticalListMenu = createClass({
 								})}
 								onClick={_.partial(this.handleClickItem, index, itemChildProp)}
 							>
-								<div className={cx('&-Item-content-text')}>{otherChildren}</div>
-								{hasExpander ? (
-									<div
-										className={cx('&-Item-expander')}
-										kind='invisible'
-										onClick={_.partial(this.handleToggle, index, itemChildProp)}
-									>
-										<ChevronIcon
-											style={{
-												height: '20px',
-												width: '20px',
-											}}
-											direction={actualIsExpanded ? 'up' : 'down'}
-										/>
+								<div className={cx('&-Item-content-body')}>
+									<div className={cx('&-Item-content-text')}>
+										{otherChildren}
 									</div>
-								) : null}
+									{hasExpander ? (
+										<div
+											className={cx('&-Item-expander')}
+											kind='invisible'
+											onClick={_.partial(
+												this.handleToggle,
+												index,
+												itemChildProp
+											)}
+										>
+											<ChevronIcon
+												style={{
+													height: '20px',
+													width: '20px',
+												}}
+												direction={actualIsExpanded ? 'up' : 'down'}
+											/>
+										</div>
+									) : null}
+								</div>
 							</div>
 
 							{!_.isEmpty(listChildren) ? (

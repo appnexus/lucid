@@ -18,9 +18,13 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
@@ -33,9 +37,13 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
@@ -48,9 +56,13 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
@@ -84,9 +96,13 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
@@ -99,24 +115,28 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one with VerticalListMenu
-      </div>
-      <div
-        className="lucid-VerticalListMenu-Item-expander"
-        kind="invisible"
-        onClick={[Function]}
-      >
-        <ChevronIcon
-          direction="down"
-          style={
-            Object {
-              "height": "20px",
-              "width": "20px",
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one with VerticalListMenu
+        </div>
+        <div
+          className="lucid-VerticalListMenu-Item-expander"
+          kind="invisible"
+          onClick={[Function]}
+        >
+          <ChevronIcon
+            direction="down"
+            style={
+              Object {
+                "height": "20px",
+                "width": "20px",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
     </div>
     <Collapsible
@@ -410,9 +430,13 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
@@ -714,9 +738,13 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
@@ -729,9 +757,13 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one with VerticalListMenu
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one with VerticalListMenu
+        </div>
       </div>
     </div>
     <Collapsible
@@ -765,9 +797,13 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one with VerticalListMenu
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one with VerticalListMenu
+        </div>
       </div>
     </div>
     <Collapsible
@@ -820,9 +856,13 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
@@ -904,9 +944,13 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
@@ -919,24 +963,28 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one with VerticalListMenu
-      </div>
-      <div
-        className="lucid-VerticalListMenu-Item-expander"
-        kind="invisible"
-        onClick={[Function]}
-      >
-        <ChevronIcon
-          direction="down"
-          style={
-            Object {
-              "height": "20px",
-              "width": "20px",
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one with VerticalListMenu
+        </div>
+        <div
+          className="lucid-VerticalListMenu-Item-expander"
+          kind="invisible"
+          onClick={[Function]}
+        >
+          <ChevronIcon
+            direction="down"
+            style={
+              Object {
+                "height": "20px",
+                "width": "20px",
+              }
             }
-          }
-        />
+          />
+        </div>
       </div>
     </div>
     <Collapsible
@@ -1212,9 +1260,13 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
       onClick={[Function]}
     >
       <div
-        className="lucid-VerticalListMenu-Item-content-text"
+        className="lucid-VerticalListMenu-Item-content-body"
       >
-        Level one
+        <div
+          className="lucid-VerticalListMenu-Item-content-text"
+        >
+          Level one
+        </div>
       </div>
     </div>
   </li>
