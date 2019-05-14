@@ -23,7 +23,6 @@
 
 		&:hover {
 			> .@{prefix}-ExpanderPanel-icon {
-
 				background-color: @featured-color-default-backgroundColor;
 				border: solid 1px @featured-color-default-borderColor;
 				border-radius: @size-borderRadius;
@@ -34,18 +33,6 @@
 				}
 			}
 		}
-	}
-
-	&-content-inner {
-		border-top: @border-lightBorder;
-
-		&-has-padding {
-			padding: @size-standard;
-		}
-	}
-
-	> .@{prefix}-Panel-content.@{prefix}-Panel-content { // increased specificity
-		padding: 0;
 	}
 
 	> .@{prefix}-Panel-Header {
@@ -65,6 +52,11 @@
 			color: @color-disabledText;
 			.no-cursor();
 		}
+	}
+
+	// Selector is a little funky to increase specificity
+	&&-is-collapsed > .@{prefix}-Panel-content {
+		margin-bottom: 0;
 	}
 }
 

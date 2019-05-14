@@ -135,6 +135,7 @@ const ExpanderPanel = createClass({
 					className
 				)}
 				style={style}
+				isGutterless={!hasPadding}
 			>
 				<Panel.Header className={cx('&-header')} onClick={this.handleToggle}>
 					<span className={cx('&-icon')}>
@@ -150,13 +151,7 @@ const ExpanderPanel = createClass({
 						'&-content-is-expanded': isExpanded,
 					})}
 				>
-					<div
-						className={cx('&-content-inner', {
-							'&-content-inner-has-padding': hasPadding,
-						})}
-					>
-						{children}
-					</div>
+					<div className={cx('&-content-inner')}>{children}</div>
 				</Collapsible>
 			</Panel>
 		);
