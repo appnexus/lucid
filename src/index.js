@@ -90,6 +90,7 @@ import DuplicateIcon from './components/Icon/DuplicateIcon/DuplicateIcon';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
 import EditPageIcon from './components/Icon/EditPageIcon/EditPageIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
+import EligibilityLightIcon from './components/Icon/EligibilityLightIcon/EligibilityLightIcon';
 import EmptyStateWrapper from './components/EmptyStateWrapper/EmptyStateWrapper';
 import EnvelopeIcon from './components/Icon/EnvelopeIcon/EnvelopeIcon';
 import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
@@ -252,6 +253,7 @@ export {
 	EditIcon,
 	EditPageIcon,
 	EligibilityIcon,
+	EligibilityLightIcon,
 	EmptyStateWrapper,
 	EnvelopeIcon,
 	EqualsIcon,
