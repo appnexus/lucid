@@ -39,7 +39,7 @@
 		color: @color-darkGray;
 		user-select: none;
 		background-color: @color-white;
-		
+
 		&:hover {
 			border-bottom: 3px solid @color-primary;
 		}
@@ -47,7 +47,7 @@
 		&:active {
 			.dropshadow-gradient(@color-gray, @color-lightGray, @Tabs-spacer-height);
 		}
-		
+
 		.@{prefix}-Badge {
 			cursor: pointer;
 		}
@@ -56,15 +56,15 @@
 	&-Tab-is-disabled {
 		color: @color-neutral-6;
 		cursor: not-allowed;
-		
+
 		&:hover {
 			border-bottom: 0;
 		}
-		
+
 		&:active {
 			background: @color-white;
 		}
-		
+
 		.@{prefix}-Badge {
 			color: @color-neutral-6;
 			border-color: @color-neutral-5;
@@ -112,7 +112,7 @@
 
 	&-Tab-content {
 		flex: 1;
-		padding: @size-S;
+		padding: 12px 15px;
 		text-align: center;
 	}
 
