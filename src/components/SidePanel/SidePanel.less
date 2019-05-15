@@ -33,15 +33,15 @@
 			flex-direction: row-reverse;
 			transform: translateX(-100%);
 		}
-		
+
 		.@{prefix}-SidePanel-header {
 			border-bottom: @border-lightBorder;
 			background: white;
 			padding: 20px 20px 0 20px;
-			
+
 			.@{prefix}-SidePanel-header-inner-wrapper {
 				display: flex;
-				
+
 				.@{prefix}-SidePanel-header-content {
 					flex: 1;
 					height: 100%;
@@ -50,7 +50,7 @@
 				.@{prefix}-Button {
 					padding: 3px;
 				}
-				
+
 				.@{prefix}-SidePanel-header-closer {
 					fill: @color-disabledText;
 
@@ -75,16 +75,16 @@
 				align-items: center;
 				cursor: grab;
 				box-sizing: border-box;
-	
+
 				.@{prefix}-GripperVerticalIcon {
 					transform: translateX(-0.5px);
 					opacity: 0.5;
 				}
-	
+
 				&:active {
 					cursor: grabbing;
 				}
-	
+
 				&:active, &:hover {
 
 					.@{prefix}-GripperVerticalIcon {
@@ -96,9 +96,10 @@
 			.@{prefix}-SidePanel-content {
 				overflow: auto;
 				padding: 20px 20px 20px 0;
+				flex: 1;
 			}
 
 		}
-		
+
 	}
 }
