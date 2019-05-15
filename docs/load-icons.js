@@ -500,6 +500,23 @@ module.exports = [
 	},
 
 	{
+		name: 'EligibilityLightIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/EligibilityLightIcon/EligibilityLightIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/EligibilityLightIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/EligibilityLightIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
 		name: 'EnvelopeIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/EnvelopeIcon/EnvelopeIcon')
