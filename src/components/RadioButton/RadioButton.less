@@ -34,7 +34,7 @@
 
 		background-color: white;
 		border-radius: @RadioButton-container-radius + 1;
-		border: solid 1px @color-borderGray;
+		border: solid @size-borderWidth @color-borderGray;
 		height: @RadioButton-container-radius * 2;
 		left: @RadioButton-container-offset;
 		position: absolute;
@@ -69,7 +69,7 @@
 	}
 
 	&:hover &-visualization-container {
-		border: 2px solid @color-primary;
+		border: @size-borderWidthFocused solid @color-primary;
 	}
 
 	&-is-disabled &-visualization-container,
@@ -93,7 +93,7 @@
 	}
 
 	&-is-selected &-visualization-container {
-		border: 2px solid @color-primary;
+		border: @size-borderWidthFocused solid @color-primary;
 	}
 
 	&-is-selected:not(&-is-disabled) {
