@@ -25,10 +25,10 @@
 	}
 
 	&:hover .@{prefix}-Checkbox-visualization-container {
-		border: @color-primary solid 2px;
+		border: @color-primary solid @size-borderWidthFocused;
 		transition: @Checkbox-animation-timing;
 	}
-	
+
 	&-is-selected:hover .@{prefix}-Checkbox-visualization-container,
 	&-is-selected:hover .@{prefix}-CheckboxLabeled-Checkbox,
 	&:hover .@{prefix}-Checkbox-visualization-glow,
@@ -46,7 +46,7 @@
 		.opacity(0);
 		transform: none;
 	}
-	
+
 	&&-is-disabled&&-is-selected:hover .@{prefix}-Checkbox-visualization-container {
 		.opacity(0.5);
 		background-color: @color-primary;
