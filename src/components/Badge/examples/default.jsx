@@ -38,22 +38,6 @@ export default createClass({
 						Badge
 					</Badge>
 				</div>
-				<div>
-					<Badge style={style} kind='warning'>
-						Badge
-					</Badge>
-					<Badge style={style} kind='warning' type='stroke'>
-						Badge
-					</Badge>
-				</div>
-				<div>
-					<Badge style={style} kind='dark'>
-						Badge
-					</Badge>
-					<Badge style={style} kind='dark' type='stroke'>
-						Badge
-					</Badge>
-				</div>
 			</div>
 		);
 	},
