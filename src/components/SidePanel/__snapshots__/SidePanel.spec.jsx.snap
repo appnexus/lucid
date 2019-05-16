@@ -29,6 +29,7 @@ exports[`SidePanel Header should match snapshot 1`] = `
           This is a header
         </div>
         <Button
+          className="lucid-SidePanel-header-closer-button"
           hasOnlyIcon={false}
           isActive={false}
           isDisabled={false}
@@ -45,7 +46,6 @@ exports[`SidePanel Header should match snapshot 1`] = `
           <CrossIcon
             className="lucid-SidePanel-header-closer"
             isClickable={true}
-            onClick={[Function]}
             presetSize="large"
             style={
               Object {

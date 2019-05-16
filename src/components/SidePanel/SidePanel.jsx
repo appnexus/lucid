@@ -110,16 +110,17 @@ class SidePanel extends React.Component {
 								<div className={cx('&-header-content')}>{headerChildren}</div>
 
 								<Button
+									className={cx('&-header-closer-button')}
 									kind='invisible'
 									style={{
 										width: '32px',
 										height: '32px',
 									}}
+									onClick={onCollapse}
 								>
 									<CrossIcon
 										className={cx('&-header-closer')}
 										isClickable
-										onClick={onCollapse}
 										presetSize='large'
 										style={{
 											height: 16,
