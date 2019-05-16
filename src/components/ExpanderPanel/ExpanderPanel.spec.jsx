@@ -116,7 +116,10 @@ describe('ExpanderPanel', () => {
 				.find('.lucid-ExpanderPanel-header')
 				.first()
 				.simulate('click');
-			wrapper.find('.lucid-ExpanderPanel-icon').simulate('click');
+			wrapper
+				.find('.lucid-ExpanderPanel-icon')
+				.first()
+				.simulate('click');
 
 			assert.equal(
 				onToggle.callCount,
@@ -135,7 +138,10 @@ describe('ExpanderPanel', () => {
 				.find('.lucid-ExpanderPanel-header')
 				.first()
 				.simulate('click');
-			wrapper.find('.lucid-ExpanderPanel-icon').simulate('click');
+			wrapper
+				.find('.lucid-ExpanderPanel-icon')
+				.first()
+				.simulate('click');
 
 			assert.equal(
 				onToggle.args[0][0],
@@ -157,7 +163,10 @@ describe('ExpanderPanel', () => {
 				.find('.lucid-ExpanderPanel-header')
 				.first()
 				.simulate('click');
-			wrapper.find('.lucid-ExpanderPanel-icon').simulate('click');
+			wrapper
+				.find('.lucid-ExpanderPanel-icon')
+				.first()
+				.simulate('click');
 
 			assert.equal(
 				onToggle.args[0][0],

@@ -11,13 +11,19 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 1.b
     className="lucid-ExpanderPanel-header"
     onClick={[Function]}
   >
-    <span
+    <Button
       className="lucid-ExpanderPanel-icon"
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="invisible"
+      onClick={[Function]}
+      type="button"
     >
       <ChevronIcon
         direction="down"
       />
-    </span>
+    </Button>
     <span>
       Show More
     </span>
@@ -456,13 +462,19 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 2.n
     className="lucid-ExpanderPanel-header"
     onClick={[Function]}
   >
-    <span
+    <Button
       className="lucid-ExpanderPanel-icon"
+      hasOnlyIcon={false}
+      isActive={false}
+      isDisabled={false}
+      kind="invisible"
+      onClick={[Function]}
+      type="button"
     >
       <ChevronIcon
         direction="down"
       />
-    </span>
+    </Button>
     <span>
       Show More
     </span>
