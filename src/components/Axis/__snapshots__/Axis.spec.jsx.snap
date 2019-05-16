@@ -869,7 +869,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
     d="M0,6V0H360V6"
   />
   <g
-    key="Thu Jan 01 2015 00:00:00 GMT+0000 (UTC)"
+    key="Thu Jan 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(0, 0)"
   >
     <line
@@ -893,7 +893,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
     </text>
   </g>
   <g
-    key="Wed Apr 01 2015 00:00:00 GMT+0000 (UTC)"
+    key="Wed Apr 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(42.51968503937008, 0)"
   >
     <line
@@ -917,7 +917,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
     </text>
   </g>
   <g
-    key="Wed Jul 01 2015 00:00:00 GMT+0000 (UTC)"
+    key="Wed Jul 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(85.51181102362204, 0)"
   >
     <line
@@ -941,7 +941,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
     </text>
   </g>
   <g
-    key="Thu Oct 01 2015 00:00:00 GMT+0000 (UTC)"
+    key="Thu Oct 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(128.97637795275588, 0)"
   >
     <line
@@ -965,7 +965,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
     </text>
   </g>
   <g
-    key="Fri Jan 01 2016 00:00:00 GMT+0000 (UTC)"
+    key="Fri Jan 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(172.44094488188978, 0)"
   >
     <line
@@ -989,7 +989,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
     </text>
   </g>
   <g
-    key="Fri Apr 01 2016 00:00:00 GMT+0000 (UTC)"
+    key="Fri Apr 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(215.43307086614175, 0)"
   >
     <line
@@ -1013,7 +1013,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
     </text>
   </g>
   <g
-    key="Fri Jul 01 2016 00:00:00 GMT+0000 (UTC)"
+    key="Fri Jul 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(258.4251968503937, 0)"
   >
     <line
@@ -1037,7 +1037,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
     </text>
   </g>
   <g
-    key="Sat Oct 01 2016 00:00:00 GMT+0000 (UTC)"
+    key="Sat Oct 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(301.8897637795275, 0)"
   >
     <line
@@ -1061,7 +1061,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 1`] =
     </text>
   </g>
   <g
-    key="Sun Jan 01 2017 00:00:00 GMT+0000 (UTC)"
+    key="Sun Jan 01 2017 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(345.35433070866145, 0)"
   >
     <line
@@ -1096,7 +1096,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] =
     d="M0,6V0H360V6"
   />
   <g
-    key="Thu Jan 01 2015 00:00:00 GMT+0000 (UTC)"
+    key="Thu Jan 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(0, 0)"
   >
     <line
@@ -1120,7 +1120,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] =
     </text>
   </g>
   <g
-    key="Wed Jul 01 2015 00:00:00 GMT+0000 (UTC)"
+    key="Wed Jul 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(85.51181102362204, 0)"
   >
     <line
@@ -1144,7 +1144,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] =
     </text>
   </g>
   <g
-    key="Fri Jan 01 2016 00:00:00 GMT+0000 (UTC)"
+    key="Fri Jan 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(172.44094488188978, 0)"
   >
     <line
@@ -1168,7 +1168,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] =
     </text>
   </g>
   <g
-    key="Fri Jul 01 2016 00:00:00 GMT+0000 (UTC)"
+    key="Fri Jul 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(258.4251968503937, 0)"
   >
     <line
@@ -1192,7 +1192,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 2`] =
     </text>
   </g>
   <g
-    key="Sun Jan 01 2017 00:00:00 GMT+0000 (UTC)"
+    key="Sun Jan 01 2017 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(345.35433070866145, 0)"
   >
     <line
@@ -1227,7 +1227,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 3`] =
     d="M0,6V0H360V6"
   />
   <g
-    key="Thu Jan 01 2015 00:00:00 GMT+0000 (UTC)"
+    key="Thu Jan 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(0, 0)"
   >
     <line
@@ -1251,7 +1251,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 3`] =
     </text>
   </g>
   <g
-    key="Fri Jan 01 2016 00:00:00 GMT+0000 (UTC)"
+    key="Fri Jan 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(172.44094488188978, 0)"
   >
     <line
@@ -1275,7 +1275,7 @@ exports[`Axis [common] example testing should match snapshot(s) for 6.time 3`] =
     </text>
   </g>
   <g
-    key="Sun Jan 01 2017 00:00:00 GMT+0000 (UTC)"
+    key="Sun Jan 01 2017 00:00:00 GMT+0000 (Coordinated Universal Time)"
     transform="translate(345.35433070866145, 0)"
   >
     <line
