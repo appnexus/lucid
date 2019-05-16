@@ -9,7 +9,7 @@ const style = {
 export default createClass({
 	getInitialState() {
 		return {
-			value: 'foo',
+			value: '',
 		};
 	},
 
@@ -18,11 +18,18 @@ export default createClass({
 			<div>
 				<TextField
 					style={style}
+					placeholder='default'
 					value={this.state.value}
 					onChange={value => this.setState({ value })}
 				/>
 
-				<TextField isDisabled style={style} value={this.state.value} />
+				<TextField
+					isMultiLine
+					placeholder='isMultiLine'
+					style={style}
+					value={this.state.value}
+					onChange={value => this.setState({ value })}
+				/>
 
 				<div style={style}>this.state.value: {this.state.value}</div>
 
