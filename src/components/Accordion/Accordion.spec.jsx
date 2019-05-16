@@ -168,7 +168,10 @@ describe('Accordion', () => {
 				.find('.lucid-ExpanderPanel-header')
 				.first()
 				.simulate('click');
-			firstPanel.find('.lucid-ExpanderPanel-icon').simulate('click');
+			firstPanel
+				.find('.lucid-ExpanderPanel-icon')
+				.first()
+				.simulate('click');
 
 			assert.equal(
 				onSelect.callCount,
@@ -186,7 +189,10 @@ describe('Accordion', () => {
 				.find('.lucid-ExpanderPanel-header')
 				.first()
 				.simulate('click');
-			secondPanel.find('.lucid-ExpanderPanel-icon').simulate('click');
+			secondPanel
+				.find('.lucid-ExpanderPanel-icon')
+				.first()
+				.simulate('click');
 
 			expect(onSelect.callCount).toEqual(0);
 		});
