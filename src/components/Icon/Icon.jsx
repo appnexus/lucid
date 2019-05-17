@@ -48,10 +48,6 @@ const Icon = createClass({
 			Any valid SVG aspect ratio.
 		`,
 
-		isBadge: bool`
-			Add badge styling.
-		`,
-
 		isClickable: bool`
 			Adds styling that makes the icon appear clickable.
 		`,

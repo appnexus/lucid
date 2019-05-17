@@ -9,32 +9,18 @@ export default createClass({
 		return (
 			<SingleSelect>
 				<Placeholder>
-					<PlusIcon
-						isBadge
-						style={{ backgroundColor: 'gray', marginRight: 4 }}
-					/>{' '}
-					Add Color
+					<PlusIcon style={{ backgroundColor: 'gray', marginRight: 4 }} /> Add
+					Color
 				</Placeholder>
 				<Option>
-					<PlusIcon
-						isBadge
-						style={{ backgroundColor: 'red', marginRight: 4 }}
-					/>{' '}
-					Red
+					<PlusIcon style={{ backgroundColor: 'red', marginRight: 4 }} /> Red
 				</Option>
 				<Option>
-					<PlusIcon
-						isBadge
-						style={{ backgroundColor: 'green', marginRight: 4 }}
-					/>{' '}
+					<PlusIcon style={{ backgroundColor: 'green', marginRight: 4 }} />{' '}
 					Green
 				</Option>
 				<Option>
-					<PlusIcon
-						isBadge
-						style={{ backgroundColor: 'blue', marginRight: 4 }}
-					/>{' '}
-					Blue
+					<PlusIcon style={{ backgroundColor: 'blue', marginRight: 4 }} /> Blue
 				</Option>
 			</SingleSelect>
 		);

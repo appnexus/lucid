@@ -1753,7 +1753,6 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
         className="lucid-SingleSelect-Control-content"
       >
         <PlusIcon
-          isBadge={true}
           style={
             Object {
               "backgroundColor": "gray",
@@ -1761,8 +1760,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
             }
           }
         />
-         
-        Add Color
+         Add Color
       </span>
       <CaretIcon
         direction="down"
@@ -1778,7 +1776,6 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
     key="SingleSelectOption0"
   >
     <PlusIcon
-      isBadge={true}
       style={
         Object {
           "backgroundColor": "red",
@@ -1786,8 +1783,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
         }
       }
     />
-     
-    Red
+     Red
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
@@ -1796,7 +1792,6 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
     key="SingleSelectOption1"
   >
     <PlusIcon
-      isBadge={true}
       style={
         Object {
           "backgroundColor": "green",
@@ -1814,7 +1809,6 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
     key="SingleSelectOption2"
   >
     <PlusIcon
-      isBadge={true}
       style={
         Object {
           "backgroundColor": "blue",
@@ -1822,8 +1816,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
         }
       }
     />
-     
-    Blue
+     Blue
   </DropMenu.Option>
 </DropMenu>
 `;
