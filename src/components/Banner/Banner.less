@@ -2,7 +2,7 @@
 @import (reference) '../../styles/mixins.less';
 
 // banner sizes
-@Banner-size-spacing-rightLeft: @size-S;
+@Banner-size-spacing-rightLeft: @size-standard;
 @Banner-size-spacing-topBottom: @size-standard;
 @Banner-size-iconFontSize: 16px;
 
@@ -10,7 +10,7 @@
 	.transition-group-animation-fade();
 	.box-sizing();
 
-	border: @border-standardBorder;
+	border: none;
 	background-color: @color-neutral-9;
 	font-size: @fontSize;
 	font-family: @fontFamily;
@@ -74,6 +74,7 @@
 
 	&-warning {
 		background-color: @featured-color-warning;
+		color: @color-darkGray;
 	}
 
 	&-danger {

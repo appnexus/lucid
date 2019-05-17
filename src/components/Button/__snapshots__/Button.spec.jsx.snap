@@ -669,6 +669,27 @@ exports[`Button [common] example testing should match snapshot(s) for link 1`] =
 
 exports[`Button [common] example testing should match snapshot(s) for link 2`] = `
 <button
+  className="lucid-Button lucid-Button-link"
+  disabled={false}
+  onClick={[Function]}
+  style={
+    Object {
+      "color": "#587eba",
+      "marginRight": "5px",
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    Link
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for link 3`] = `
+<button
   className="lucid-Button lucid-Button-is-disabled lucid-Button-link"
   disabled={true}
   onClick={[Function]}
@@ -688,7 +709,7 @@ exports[`Button [common] example testing should match snapshot(s) for link 2`] =
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for link 3`] = `
+exports[`Button [common] example testing should match snapshot(s) for link 4`] = `
 <button
   className="lucid-Button lucid-Button-link"
   disabled={false}
@@ -709,7 +730,29 @@ exports[`Button [common] example testing should match snapshot(s) for link 3`] =
 </button>
 `;
 
-exports[`Button [common] example testing should match snapshot(s) for link 4`] = `
+exports[`Button [common] example testing should match snapshot(s) for link 5`] = `
+<button
+  className="lucid-Button lucid-Button-link"
+  disabled={false}
+  onClick={[Function]}
+  style={
+    Object {
+      "color": "#587eba",
+      "marginRight": "5px",
+    }
+  }
+  type="button"
+>
+  <span
+    className="lucid-Button-content"
+  >
+    <PlusIcon />
+    Link
+  </span>
+</button>
+`;
+
+exports[`Button [common] example testing should match snapshot(s) for link 6`] = `
 <button
   className="lucid-Button lucid-Button-link lucid-Button-has-only-icon"
   disabled={false}

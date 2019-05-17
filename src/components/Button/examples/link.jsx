@@ -16,6 +16,11 @@ const buttonStyle = {
 	marginRight: '5px',
 };
 
+const buttonStyleBlue = {
+	marginRight: '5px',
+	color: '#587eba', // note: use @color-primary if you implement this
+};
+
 export default createClass({
 	render() {
 		return (
@@ -24,11 +29,18 @@ export default createClass({
 					<Button style={buttonStyle} kind='link'>
 						Link
 					</Button>
+					<Button style={buttonStyleBlue} kind='link'>
+						Link
+					</Button>
 					<Button style={buttonStyle} kind='link' isDisabled={true}>
 						<PlusIcon />
 						Link disabled
 					</Button>
 					<Button style={buttonStyle} kind='link'>
+						<PlusIcon />
+						Link
+					</Button>
+					<Button style={buttonStyleBlue} kind='link'>
 						<PlusIcon />
 						Link
 					</Button>
