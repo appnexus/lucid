@@ -21,4 +21,5 @@
 - added `isLight` to `ToolTip`. The default now has dark styling, and this adds light styling.
 - added `isVariableCountWidth` to `Tabs`. Allows count badges to have fixed or variable widths.
 - added `isIncludeExclude` to `Switch`. Adds red/green styling.
+- removed `isBadge` from `Icon`. It was an ill conceived feature. All icons should not be allowed to be made circular via a prop.
 
