@@ -4,6 +4,7 @@
 // banner sizes
 @Banner-size-spacing-rightLeft: @size-standard;
 @Banner-size-spacing-topBottom: @size-standard;
+@Banner-size-spacing-topBottom-small: @size-XS;
 @Banner-size-iconFontSize: 16px;
 
 .@{prefix}-Banner {
@@ -26,6 +27,8 @@
 	// must use this specific selector in order to override default color
 	.@{prefix}-Banner-close {
 		fill: @color-white;
+		padding: 4px 0;
+		height: 24px;
 
 		&:hover {
 			fill: @color-white;
@@ -79,6 +82,22 @@
 
 	&-danger {
 		background-color: @featured-color-danger;
+	}
+
+
+	// Small version
+	&-small .@{prefix}-Banner-icon {
+		padding-top: @Banner-size-spacing-topBottom-small - 2px;
+	}
+
+	&-small .@{prefix}-Banner-close {
+		padding-top: @Banner-size-spacing-topBottom-small - 2px;
+		height: 16px;
+	}
+
+	&-small &-content	{
+		padding: @Banner-size-spacing-topBottom - 6px 0;
+		height: 12px;
 	}
 }
 

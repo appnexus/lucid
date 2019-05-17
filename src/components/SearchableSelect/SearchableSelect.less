@@ -13,10 +13,11 @@
 		height: @SearchableSelect-size-controlHeight;
 		display: flex;
 		outline: none;
-		border: 1px solid @featured-color-default-borderColor;
+		border: 1px solid @color-neutral-5;
 		border-radius: @size-borderRadius;
 		font-size: @fontSize;
 		font-family: @fontFamily;
+		font-weight: @font-weight-medium;
 		color: @color-black;
 		letter-spacing: 0.05em;
 		line-height: @size-standard-height;
@@ -34,26 +35,15 @@
 			margin-right: @size-standard;
 		}
 
-		.@{prefix}-CaretIcon {
-			fill: @color-black;
-			margin-left: auto;
-		}
-
 		// States
-		&-is-highlighted,
 		&-is-selected {
-			.gradient-animation(@featured-color-primary, @featured-color-primary);
-
-			color: @color-white;
-			border-color: @featured-color-primary-borderColor;
-
-			.@{prefix}-CaretIcon {
-				fill: @color-white;
-			}
+			border-color: @color-primary;
 		}
 
 		&-is-expanded {
 			z-index: @zindex-tooltip;
+			color: @color-neutral-7;
+			border-bottom: none;
 		}
 
 		&-is-disabled {
@@ -82,6 +72,11 @@
 
 		.@{prefix}-SearchField {
 			padding: 8px;
+			background-color: white;
+
+			::placeholder {
+				color: @color-neutral-9;
+			}
 
 			.@{prefix}-SearchField-Icon-container {
 				right: 8px;
