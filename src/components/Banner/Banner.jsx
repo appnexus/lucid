@@ -37,6 +37,10 @@ const Banner = createClass({
 			Set this to \`true\` if you want to have a \`x\` close icon.
 		`,
 
+		isSmall: bool`
+			If set to \`true\` the banner have smaller padding on the inside.
+		`,
+
 		className: string`
 			Class names that are appended to the defaults.
 		`,
@@ -63,6 +67,7 @@ const Banner = createClass({
 		return {
 			icon: null,
 			isCloseable: true,
+			isSmall: false,
 			kind: 'default',
 			onClose: _.noop,
 		};
@@ -82,6 +87,7 @@ const Banner = createClass({
 			children,
 			isCloseable,
 			isClosed,
+			isSmall,
 			...passThroughs
 		} = this.props;
 
@@ -110,6 +116,7 @@ const Banner = createClass({
 								'&-warning': kind === 'warning',
 								'&-danger': kind === 'danger',
 								'&-info': kind === 'info',
+								'&-small': isSmall,
 							},
 							className
 						)}
@@ -123,8 +130,9 @@ const Banner = createClass({
 						{isCloseable ? (
 							<CloseIcon
 								isClickable
-								style={{ height: 30 }}
-								viewBox={'-3 -6 20 20'}
+								// style={{ height: 30 }}
+								size={isSmall ? 44 : 26}
+								viewBox={isSmall ? '-12 -6 28 28' : '-3 -6 20 20'}
 								className={cx('&-close')}
 								onClick={this.handleClose}
 							/>

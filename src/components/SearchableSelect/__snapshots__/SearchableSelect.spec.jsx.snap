@@ -48,10 +48,8 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       >
         Select State
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -64,6 +62,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       onChange={[Function]}
       onChangeDebounced={[Function]}
       onSubmit={[Function]}
+      placeholder="Search..."
       value=""
     />
   </DropMenu.Header>
@@ -852,10 +851,8 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       >
         Select State
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -868,6 +865,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       onChange={[Function]}
       onChangeDebounced={[Function]}
       onSubmit={[Function]}
+      placeholder="Search..."
       value=""
     />
   </DropMenu.Header>
@@ -1398,10 +1396,8 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       >
         Select Color
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -1497,10 +1493,8 @@ exports[`SearchableSelect child elements Option should render Option child funct
       >
         select one
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -1513,6 +1507,7 @@ exports[`SearchableSelect child elements Option should render Option child funct
       onChange={[Function]}
       onChangeDebounced={[Function]}
       onSubmit={[Function]}
+      placeholder="Search..."
       value="tion"
     />
   </DropMenu.Header>
@@ -1600,10 +1595,8 @@ exports[`SearchableSelect child elements Option should render Option.Selected in
       >
         option b
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -1616,6 +1609,7 @@ exports[`SearchableSelect child elements Option should render Option.Selected in
       onChange={[Function]}
       onChangeDebounced={[Function]}
       onSubmit={[Function]}
+      placeholder="Search..."
       value=""
     />
   </DropMenu.Header>
