@@ -87,7 +87,7 @@ const Selection = createClass({
 		`,
 
 		isFilled: bool`
-			Only applies to \`container\` Selection components. 
+			Only applies to \`container\` Selection components.
 			Fills with a darker gray background.
 			Defaults to false.
 		`,
@@ -138,7 +138,7 @@ const Selection = createClass({
 			onRemove: _.noop,
 			hasBackground: false,
 			isBold: false,
-			responsiveMode: 'small',
+			responsiveMode: 'large',
 		};
 	},
 
@@ -207,8 +207,8 @@ const Selection = createClass({
 						{isRemovable ? (
 							<CrossIcon
 								isClickable
-								size={isSmall ? 28 : 44}
-								viewBox={isSmall ? '-6 -6 28 28' : '-3 -2 20 20'}
+								size={!isSmall ? 28 : 44}
+								viewBox={!isSmall ? '-6 -6 28 28' : '-3 -2 20 20'}
 								className={cx('&-close-button')}
 								onClick={this.handleRemove}
 							/>

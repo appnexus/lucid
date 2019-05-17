@@ -22,4 +22,5 @@
 - added `isVariableCountWidth` to `Tabs`. Allows count badges to have fixed or variable widths.
 - added `isIncludeExclude` to `Switch`. Adds red/green styling.
 - removed `isBadge` from `Icon`. It was an ill conceived feature. All icons should not be allowed to be made circular via a prop.
+- returned `responsiveMode` in `Selection` to original meaning: `small` means small device with large style, and `large` means large device with small style. This was temporarily reversed out of a misunderstanding of the meaning of the prop.
 
