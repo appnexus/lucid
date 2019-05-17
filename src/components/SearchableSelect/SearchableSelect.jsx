@@ -7,7 +7,7 @@ import { lucidClassNames } from '../../util/style-helpers';
 import { partitionText, propsSearch } from '../../util/text-manipulation';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './SearchableSelect.reducers';
-import CaretIcon from '../Icon/CaretIcon/CaretIcon';
+import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import LoadingIcon from '../Icon/LoadingIcon/LoadingIcon';
 import { SearchFieldDumb as SearchField } from '../SearchField/SearchField';
@@ -393,7 +393,7 @@ const SearchableSelect = createClass({
 		const { flattenedOptionsData } = this.state;
 
 		const searchFieldProps = _.get(
-			getFirst(props, SearchField) || <SearchField />,
+			getFirst(props, SearchField) || <SearchField placeholder='Search...' />,
 			'props'
 		);
 		const placeholderProps = _.first(
@@ -424,8 +424,7 @@ const SearchableSelect = createClass({
 								(!isDisabled && isItemSelected && isSelectionHighlighted) ||
 								(isExpanded && isSelectionHighlighted),
 							'&-Control-is-selected':
-								(!isDisabled && isItemSelected && isSelectionHighlighted) ||
-								(isExpanded && isSelectionHighlighted),
+								!isDisabled && isItemSelected && isSelectionHighlighted,
 							'&-Control-is-expanded': isExpanded,
 							'&-Control-is-disabled': isDisabled,
 						})}
@@ -451,7 +450,7 @@ const SearchableSelect = createClass({
 								  )
 								: placeholder}
 						</span>
-						<CaretIcon direction={isExpanded ? direction : 'down'} size={8} />
+						<ChevronIcon direction={isExpanded ? direction : 'down'} />
 					</div>
 				</DropMenu.Control>
 				<DropMenu.Header className={cx('&-Search-container')}>
