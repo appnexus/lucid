@@ -19,8 +19,8 @@
 
 	&:focus {
 		border: @size-borderWidthFocused solid @color-primary;
-		padding-left: @size-S - 1px; // account for 1 extra border pixel
-		padding-right: @size-S - 1px; // account for 1 extra border pixel
+		padding-left: @size-S;
+		padding-right: @size-S;
 		outline: none;
 		border-color: @color-primary;
 	}
@@ -33,13 +33,7 @@
 	&&-is-multi-line {
 		vertical-align: top;
 		resize: both;
-		padding-top: @size-S - 3px; // Handle padding appropriately for `textarea`s
-	}
-
-	&&-is-multi-line:focus {
-		padding-top: @size-S - 4px; // Handle padding appropriately for `textarea`s
-		margin-bottom: -1px;
-		// TODO
+		padding-top: 4px; // Handle padding appropriately for `textarea`s
 	}
 
 	&&-is-disabled {
