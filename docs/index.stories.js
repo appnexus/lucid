@@ -21,12 +21,15 @@ import okaidia from 'react-syntax-highlighter/styles/prism/okaidia';
 import '../src/index.less';
 import ColorPalette from './color-palette';
 import { withPanelToggles } from '../.storybook/lucid-docs-addon/PanelToggles';
+import IconTest from './test-icons';
 
 registerLanguage('jsx', jsx);
 
 const articlePageOptions = { showAddonPanel: false };
 const examplePageOptions = { showAddonPanel: true, addonPanelInRight: true };
 const withTogglePanelAddonParameters = { panelToggles: true };
+
+const loadedIcons = require('./load-icons');
 
 const loadAllKeys = (reqContext, rawContext) => {
 	return _.map(_.get(reqContext, 'keys', _.constant([]))(), key => ({
@@ -116,7 +119,7 @@ class ArticlePage extends React.Component {
 					height: '100%',
 				}}
 			>
-				<a href="https://github.com/appnexus/lucid">
+				<a href='https://github.com/appnexus/lucid'>
 					<img
 						style={{
 							position: 'absolute',
@@ -124,10 +127,10 @@ class ArticlePage extends React.Component {
 							right: 0,
 							border: 0,
 						}}
-						src="//camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67"
-						srcSet="//aral.github.io/fork-me-on-github-retina-ribbons/right-graphite@2x.png 2x"
-						alt="Fork me on GitHub"
-						data-canonical-src="//s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+						src='//camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67'
+						srcSet='//aral.github.io/fork-me-on-github-retina-ribbons/right-graphite@2x.png 2x'
+						alt='Fork me on GitHub'
+						data-canonical-src='//s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png'
 					/>
 				</a>
 				{children}
@@ -240,8 +243,6 @@ _.reduce(
 	storiesOf('Categories', module).addDecorator(withOptions(articlePageOptions))
 );
 
-const loadedIcons = require('./load-icons');
-
 const filteredIcons = _.reject(loadedIcons, ({ component }) =>
 	isPrivate(component)
 );
@@ -249,6 +250,7 @@ const filteredIcons = _.reject(loadedIcons, ({ component }) =>
 const storiesOfIcons = storiesOf('Icons', module)
 	.addDecorator(withOptions(examplePageOptions))
 	.addDecorator(withPanelToggles(withTogglePanelAddonParameters))
+	.add('Icon Stroke Test', () => <IconTest />)
 	.add(
 		'All',
 		() => (
@@ -269,7 +271,7 @@ const storiesOfIcons = storiesOf('Icons', module)
 							}}
 						>
 							<Icon />{' '}
-							<LinkTo style={styles.link} kind="Icons" story={name}>
+							<LinkTo style={styles.link} kind='Icons' story={name}>
 								{name}
 							</LinkTo>
 						</div>
