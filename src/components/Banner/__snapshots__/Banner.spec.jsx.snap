@@ -1,5 +1,343 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Banner [common] example testing should match snapshot(s) for small 1`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Default
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={44}
+      viewBox="-12 -6 28 28"
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for small 2`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Default -- No Close 
+      ×
+    </span>
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for small 3`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-success lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Success
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={44}
+      viewBox="-12 -6 28 28"
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for small 4`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-success lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Success -- No Close 
+      ×
+    </span>
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for small 5`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-warning lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Warning
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={44}
+      viewBox="-12 -6 28 28"
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for small 6`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-warning lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Warning -- No Close 
+      ×
+    </span>
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for small 7`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Danger
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={44}
+      viewBox="-12 -6 28 28"
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for small 8`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-danger lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Danger -- No Close 
+      ×
+    </span>
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for small 9`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-close lucid-Banner-info lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Info
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={44}
+      viewBox="-12 -6 28 28"
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for small 10`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-info lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-content"
+    >
+      Info -- No Close 
+      ×
+    </span>
+  </section>
+</CSSTransitionGroup>
+`;
+
+exports[`Banner [common] example testing should match snapshot(s) for small 11`] = `
+<CSSTransitionGroup
+  transitionAppear={false}
+  transitionEnter={true}
+  transitionEnterTimeout={300}
+  transitionLeave={true}
+  transitionLeaveTimeout={300}
+  transitionName="lucid-Banner"
+>
+  <section
+    className="lucid-Banner lucid-Banner-has-icon lucid-Banner-has-close lucid-Banner-danger lucid-Banner-small"
+    style={
+      Object {
+        "marginBottom": 8,
+      }
+    }
+  >
+    <span
+      className="lucid-Banner-icon"
+    >
+      <Component />
+    </span>
+    <span
+      className="lucid-Banner-content"
+    >
+      Has Custom Icon
+    </span>
+    <CloseIcon
+      className="lucid-Banner-close"
+      isClickable={true}
+      onClick={[Function]}
+      size={44}
+      viewBox="-12 -6 28 28"
+    />
+  </section>
+</CSSTransitionGroup>
+`;
+
 exports[`Banner [common] example testing should match snapshot(s) for stateful 1`] = `
 <CSSTransitionGroup
   transitionAppear={false}
@@ -21,12 +359,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateful 1
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={null}
-      style={
-        Object {
-          "height": 30,
-        }
-      }
+      size={26}
       viewBox="-3 -6 20 20"
     />
   </section>
@@ -59,12 +392,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={null}
-      style={
-        Object {
-          "height": 30,
-        }
-      }
+      size={26}
       viewBox="-3 -6 20 20"
     />
   </section>
@@ -124,12 +452,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={null}
-      style={
-        Object {
-          "height": 30,
-        }
-      }
+      size={26}
       viewBox="-3 -6 20 20"
     />
   </section>
@@ -189,12 +512,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={null}
-      style={
-        Object {
-          "height": 30,
-        }
-      }
+      size={26}
       viewBox="-3 -6 20 20"
     />
   </section>
@@ -254,12 +572,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={null}
-      style={
-        Object {
-          "height": 30,
-        }
-      }
+      size={26}
       viewBox="-3 -6 20 20"
     />
   </section>
@@ -319,12 +632,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={null}
-      style={
-        Object {
-          "height": 30,
-        }
-      }
+      size={26}
       viewBox="-3 -6 20 20"
     />
   </section>
@@ -389,12 +697,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={null}
-      style={
-        Object {
-          "height": 30,
-        }
-      }
+      size={26}
       viewBox="-3 -6 20 20"
     />
   </section>
