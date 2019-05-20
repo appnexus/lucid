@@ -586,6 +586,7 @@ const LineChart = createClass({
 				<g transform={`translate(${margin.left}, ${margin.top})`}>
 					{hasToolTips && isHovering && !_.isNil(mouseX) ? (
 						<ToolTip
+							isLight={true}
 							isExpanded={true}
 							flyOutMaxWidth='none'
 							alignment={

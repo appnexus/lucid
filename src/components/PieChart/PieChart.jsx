@@ -290,6 +290,7 @@ const PieChart = createClass({
 			>
 				<ToolTip
 					{...toolTipProps}
+					isLight={true}
 					isExpanded={hasToolTips && isHovering}
 					onMouseOver={_.noop}
 					onMouseOut={this.handleMouseOut}
