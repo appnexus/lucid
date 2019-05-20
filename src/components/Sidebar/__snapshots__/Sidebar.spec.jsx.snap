@@ -38,7 +38,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 01.defaul
       </div>
       <Button
         className="lucid-Sidebar-expander"
-        hasOnlyIcon={false}
+        hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
         kind="invisible"
@@ -111,7 +111,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 02.disabl
       </div>
       <Button
         className="lucid-Sidebar-expander"
-        hasOnlyIcon={false}
+        hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
         kind="invisible"
@@ -184,7 +184,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 03.initia
       </div>
       <Button
         className="lucid-Sidebar-expander"
-        hasOnlyIcon={false}
+        hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
         kind="invisible"
@@ -257,7 +257,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 04.positi
       </div>
       <Button
         className="lucid-Sidebar-expander"
-        hasOnlyIcon={false}
+        hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
         kind="invisible"
@@ -333,7 +333,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 05.custom
       </div>
       <Button
         className="lucid-Sidebar-expander"
-        hasOnlyIcon={false}
+        hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
         kind="invisible"
@@ -423,7 +423,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 06.custom
       </div>
       <Button
         className="lucid-Sidebar-expander"
-        hasOnlyIcon={false}
+        hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
         kind="invisible"
@@ -496,7 +496,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 07.contro
       </div>
       <Button
         className="lucid-Sidebar-expander"
-        hasOnlyIcon={false}
+        hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
         kind="invisible"
@@ -569,7 +569,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 08.handle
       </div>
       <Button
         className="lucid-Sidebar-expander"
-        hasOnlyIcon={false}
+        hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
         kind="invisible"
@@ -642,7 +642,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 09.nested
       </div>
       <Button
         className="lucid-Sidebar-expander"
-        hasOnlyIcon={false}
+        hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
         kind="invisible"
@@ -726,7 +726,7 @@ exports[`Sidebar [common] example testing should match snapshot(s) for 10.nested
       </div>
       <Button
         className="lucid-Sidebar-expander"
-        hasOnlyIcon={false}
+        hasOnlyIcon={true}
         isActive={false}
         isDisabled={false}
         kind="invisible"
