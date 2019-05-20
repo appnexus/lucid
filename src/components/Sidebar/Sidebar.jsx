@@ -287,6 +287,7 @@ const Sidebar = createClass({
 							className={cx('&-expander')}
 							kind='invisible'
 							onMouseDown={this.handleExpanderClick}
+							hasOnlyIcon={true}
 						>
 							<ChevronIcon
 								direction={
