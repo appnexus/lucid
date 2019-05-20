@@ -362,7 +362,7 @@ export const PureToolTip = createClass({
 		} = this.props;
 
 		return (
-			<ToolTip isExpanded={isExpanded} flyOutMaxWidth='none'>
+			<ToolTip isExpanded={isExpanded} flyOutMaxWidth='none' isLight={true}>
 				<ToolTip.Target elementType='g'>
 					<rect
 						className={cx('&-tooltip-hover-zone')}
