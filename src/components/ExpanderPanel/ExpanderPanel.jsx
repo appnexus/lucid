@@ -139,7 +139,7 @@ const ExpanderPanel = createClass({
 				isGutterless={!hasPadding}
 			>
 				<Panel.Header className={cx('&-header')} onClick={this.handleToggle}>
-					<Button className={cx('&-icon')} kind='invisible'>
+					<Button className={cx('&-icon')} kind='invisible' hasOnlyIcon={true}>
 						<ChevronIcon direction={isExpanded ? 'up' : 'down'} />
 					</Button>
 
