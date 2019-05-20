@@ -13,7 +13,7 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 1.b
   >
     <Button
       className="lucid-ExpanderPanel-icon"
-      hasOnlyIcon={false}
+      hasOnlyIcon={true}
       isActive={false}
       isDisabled={false}
       kind="invisible"
@@ -464,7 +464,7 @@ exports[`ExpanderPanel [common] example testing should match snapshot(s) for 2.n
   >
     <Button
       className="lucid-ExpanderPanel-icon"
-      hasOnlyIcon={false}
+      hasOnlyIcon={true}
       isActive={false}
       isDisabled={false}
       kind="invisible"
