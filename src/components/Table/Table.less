@@ -16,6 +16,25 @@
 	box-sizing: border-box;
 	border-top: 1px solid @color-table-header-border;
 
+
+	/*
+		These two selectors hide the sorting caret icon
+		if the column is not sorted, and they show the icon
+		if the column is being sorted.
+	*/
+	& .@{prefix}-Table-is-sorted.@{prefix}-Table-Th {
+		& > .@{prefix}-Table-Th-inner {
+			& > :not(:first-child) {
+				visibility: visible;
+			}
+		}
+	}
+	& .@{prefix}-Table-Th-inner {
+		& > :not(:first-child) {
+			visibility: hidden;
+		}
+	}
+
 	// `Table`.`hasBorder` prop
 	&-has-border {
 		border: @border-table-header;
