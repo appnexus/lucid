@@ -29,7 +29,9 @@ export default class extends React.Component {
 					onCollapse={this.handleToggle}
 				>
 					<SidePanel.Header>
-						<strong>Stumptown keytar schlitz</strong>
+						<div>
+							<div><strong>Rich content</strong></div>
+						</div>
 					</SidePanel.Header>
 					<p style={margins}>
 						Stumptown keytar schlitz, vinyl vexillologist humblebrag sartorial
