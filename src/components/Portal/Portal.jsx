@@ -3,29 +3,11 @@ import PropTypes from 'react-peek/prop-types';
 import ReactDOM from 'react-dom';
 import { createClass, omitProps } from '../../util/component-types';
 import { lucidClassNames } from '../../util/style-helpers';
+import classNames from 'classnames';
 
 const cx = lucidClassNames.bind('&-Portal');
 
 const { any, node, string } = PropTypes;
-
-// This component passes the `context` prop with { store } from react-redux
-// Provider on to the childContext
-const WithStoreContext = createClass({
-	displayName: 'WithContext',
-	propTypes: {
-		context: any,
-		children: node,
-	},
-	childContextTypes: {
-		store: any,
-	},
-	getChildContext() {
-		return this.props.context;
-	},
-	render() {
-		return this.props.children;
-	},
-});
 
 const Portal = createClass({
 	displayName: 'Portal',
@@ -44,47 +26,55 @@ const Portal = createClass({
 		children: node`
 			any valid React children
 		`,
+
 		className: any`
 			Appended to the component-specific class names set on the root element.
 			Value is run through the \`classnames\` library.
 		`,
 
-		portalId: string.isRequired`
+		portalId: string`
 			The \`id\` of the portal element that is appended to \`document.body\`.
 		`,
 	},
-	contextTypes: {
-		store: any, // access `store` from the context object
+
+	getInitialState() {
+		return { isReady: false };
 	},
-	render: () => null,
+
 	componentDidMount() {
 		const { portalId } = this.props;
 
-		let portalElement = window.document.getElementById(portalId);
+		let portalElement;
+
+		if (portalId) {
+			portalElement = document.getElementById(portalId);
+		}
 		if (!portalElement) {
-			portalElement = window.document.createElement('div');
+			this.manuallyCreatedPortal = true;
+			portalElement = document.createElement('div');
 			portalElement.id = portalId;
-			window.document.body.appendChild(portalElement);
+			document.body.appendChild(portalElement);
 		}
 		this.portalElement = portalElement;
-		this.componentDidUpdate();
+		this.setState({ isReady: true });
 	},
 	componentWillUnmount() {
-		ReactDOM.unmountComponentAtNode(this.portalElement);
-		window.document.body.removeChild(this.portalElement);
+		if (this.manuallyCreatedPOrtal) {
+			this.portalElement.remove();
+		}
 	},
-	componentDidUpdate() {
-		ReactDOM.render(
-			<WithStoreContext context={this.context}>
-				<div
-					{...omitProps(this.props, Portal)}
-					className={cx('&', this.props.className)}
-				>
-					{this.props.children}
-				</div>
-			</WithStoreContext>,
-			this.portalElement
-		);
+	render() {
+		return this.state.isReady
+			? ReactDOM.createPortal(
+					<div
+						className={classNames(cx('&'), this.props.className)}
+						{...omitProps(this.props, Portal)}
+					>
+						{this.props.children}
+					</div>,
+					this.portalElement
+			  )
+			: null;
 	},
 });
 
