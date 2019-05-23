@@ -815,7 +815,7 @@ exports[`Dialog [common] example testing should match snapshot(s) for 3.large-wi
 </Overlay>
 `;
 
-exports[`Dialog [common] example testing should match snapshot(s) for 4.menu 1`] = `
+exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 1`] = `
 <Overlay
   className="lucid-Dialog"
   height={500}
