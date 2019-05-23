@@ -10,7 +10,7 @@ export default createClass({
 			<Breadcrumb>
 				<Item key='home'>
 					<a href='#'>
-						<NotchedTag type='filled' size='small' tagStyle='style-two'>
+						<NotchedTag type='stroke' size='small' tagStyle='style-two'>
 							IO
 						</NotchedTag>
 						<span>
@@ -21,7 +21,7 @@ export default createClass({
 				</Item>
 				<Item key='list'>
 					<a href='#'>
-						<NotchedTag type='stroke' size='small' tagStyle='style-three'>
+						<NotchedTag type='filled' size='small' tagStyle='style-three'>
 							LI
 						</NotchedTag>
 						<span>
