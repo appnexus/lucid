@@ -24,6 +24,7 @@ export default createClass({
 		return (
 			<Portal
 				portalId='example-portal123'
+				className='example-portal-container'
 				style={{
 					width: 128,
 					height: 128,
