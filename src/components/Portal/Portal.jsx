@@ -59,7 +59,7 @@ const Portal = createClass({
 		this.setState({ isReady: true });
 	},
 	componentWillUnmount() {
-		if (this.manuallyCreatedPOrtal) {
+		if (this.manuallyCreatedPortal) {
 			this.portalElement.remove();
 		}
 	},
