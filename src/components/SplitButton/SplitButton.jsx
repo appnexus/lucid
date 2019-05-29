@@ -182,7 +182,7 @@ const SplitButton = createClass({
 						<Button
 							className={cx('&-Button-drop')}
 							size={size}
-							hasOnlyIcon
+							hasOnlyIcon={true}
 							isActive={isExpanded}
 							kind={kind}
 							isDisabled={_.every(

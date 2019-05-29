@@ -84,7 +84,7 @@ export default createClass({
 					<SearchField placeholder='Sundae school...' />
 
 					<p style={{ fontSize: '16px', marginTop: '25px' }}>Toppings</p>
-					<SearchableMultiSelect responsiveMode='small'>
+					<SearchableMultiSelect responsiveMode='large'>
 						<Option>cookie dough</Option>
 						<Option>more ice cream</Option>
 						<Option>mochi</Option>
