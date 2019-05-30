@@ -3,9 +3,9 @@
 exports[`MinusCircleIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
-  className="lucid-MinusCircleIcon"
+  className="lucid-MinusCircleIcon lucid-MinusCircleIcon-is-clickable"
   isBadge={false}
-  isClickable={false}
+  isClickable={true}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
