@@ -4,6 +4,6 @@ import { MinusCircleIcon } from '../../../../index';
 
 export default createClass({
 	render() {
-		return <MinusCircleIcon />;
+		return <MinusCircleIcon isClickable />;
 	},
 });

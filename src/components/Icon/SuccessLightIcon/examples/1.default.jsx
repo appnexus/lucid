@@ -4,6 +4,6 @@ import { SuccessLightIcon } from '../../../../index';
 
 export default createClass({
 	render() {
-		return <SuccessLightIcon />;
+		return <SuccessLightIcon isClickable />;
 	},
 });
