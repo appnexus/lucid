@@ -901,7 +901,7 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 
         Toppings
       </p>
       <SearchableMultiSelect
-        responsiveMode="small"
+        responsiveMode="large"
       >
         <SearchableMultiSelect.Option>
           cookie dough
