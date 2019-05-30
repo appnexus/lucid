@@ -29,4 +29,11 @@ describe('Portal', () => {
 			});
 		});
 	});
+
+	it('removes itself on unmount', () => {
+		const wrapper = mount(<Portal portalId='unmount-test' />);
+		expect(document.getElementById('unmount-test')).toBeTruthy();
+		wrapper.unmount();
+		expect(document.getElementById('unmount-test')).toBeNull();
+	});
 });
