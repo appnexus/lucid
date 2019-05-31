@@ -45,6 +45,11 @@ exports[`Panel [common] example testing should match snapshot(s) for 03.with-ico
   >
     <SettingsIcon
       presetSize="large"
+      style={
+        Object {
+          "marginRight": "16px",
+        }
+      }
     />
     <span>
       Header
@@ -56,6 +61,11 @@ exports[`Panel [common] example testing should match snapshot(s) for 03.with-ico
     <Panel.Header>
       <SettingsIcon
         presetSize="large"
+        style={
+          Object {
+            "marginRight": "16px",
+          }
+        }
       />
       <span>
         Header
