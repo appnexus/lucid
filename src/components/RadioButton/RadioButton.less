@@ -7,8 +7,8 @@
 @RadioButton-container-offset: @size-XXS;
 @RadioButton-container-radius: 8px;
 
-@RadioButton-dot-offset: 7px;
-@RadioButton-dot-radius: 4px;
+@RadioButton-dot-offset: 6px;
+@RadioButton-dot-radius: 5px;
 
 @RadioButton-glow-offset: @size-XXS;
 @RadioButton-glow-radius: 8px;
@@ -74,8 +74,8 @@
 
 	&-is-disabled &-visualization-container,
 	&-is-disabled:hover &-visualization-container {
-		background-color: rgba(0, 0, 0, 0.05);
-		border-color: rgba(0, 0, 0, 0.1);
+		background-color: @color-neutral-3;
+		border-color: @color-neutral-5;
 	}
 
 	&-is-disabled&-is-selected &-visualization-container,
@@ -100,7 +100,7 @@
 		border-color: @color-primary;
 
 		&:hover {
-			.opacity(@opacity-hover)
+			.opacity(.5)
 		}
 	}
 
