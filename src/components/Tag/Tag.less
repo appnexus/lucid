@@ -4,13 +4,16 @@
 .@{prefix}-Tag {
 	background: @color-neutral-4;
 
+	// do we want this? makes the bubbles more square
+	// height: 26px;
+
 	// positioning
 	align-items: center;
 	display: inline-flex;
 	flex-wrap: wrap;
 
 	// margin/padding
-	padding: 0 @size-S @size-XS @size-S;
+	padding: 0 @size-S @size-XS 11px;
 	margin: @size-S @size-S 0 0;
 
 	// typography
@@ -26,7 +29,7 @@
 	&-other-children {
 		display: inline-flex;
 		align-items: center;
-		padding: @size-XS @size-XS 0 0;
+		padding: 7px @size-XS 0 0;
 	}
 
 	&-remove-button {
@@ -42,6 +45,7 @@
 		text-transform: uppercase;
 		color: @color-neutral-7;
 		font-size: 11px; // non-standard font size
+		height: 26px;
 	}
 
 	// ---------------
@@ -59,7 +63,7 @@
 
 	& > & > &-other-children {
 		// margin/padding
-		padding: @size-XS @size-XS 0 0;
+		padding: 6px 11px 0 0;
 	}
 
 	// --------------
@@ -77,13 +81,13 @@
 
 		// border
 		border-radius: @size-tag / 2;
-		border: 1px solid @color-gray;
+		border: 1px solid @color-neutral-5;
 
 		// margin/padding
 		// margin-right: @size-XXS;
 		// margin-top: @size-XS;
 		padding: 0;
-		margin: @size-XS @size-XS 0 0;
+		margin: 4px 4px 0 0;
 
 		// typography
 		color: @color-neutral-9;
