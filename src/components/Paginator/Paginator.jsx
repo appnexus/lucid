@@ -64,6 +64,17 @@ const Paginator = createClass({
 			SingleSelect component for the page size selector.
 		`,
 
+		showTotalObjects: bool`
+			Show total count of objects.
+		`,
+
+		objectLabel: string`
+			Label when showTotalObjects is true with 1 or fewer objects.
+		`,
+		objectLabelPlural: string`
+			Label when showTotalObjects is true with more than 1 objects.
+		`,
+
 		totalPages: number`
 			number to display in \`of \${totalPages}\`, calculated from
 			\`totalPages\` and selected page size by default.
@@ -97,9 +108,12 @@ const Paginator = createClass({
 		return {
 			hasPageSizeSelector: false,
 			isDisabled: false,
+			objectLabel: 'Object',
+			objectLabelPlural: 'Objects',
 			onPageSelect: _.noop,
 			selectedPageIndex: 0,
 			selectedPageSizeIndex: 0,
+			showTotalObjects: false,
 			totalCount: null,
 			pageSizeOptions: [10, 50, 100],
 			SingleSelect: {
@@ -124,12 +138,16 @@ const Paginator = createClass({
 			className,
 			hasPageSizeSelector,
 			isDisabled,
+			objectLabel,
+			objectLabelPlural,
 			onPageSelect,
 			onPageSizeSelect,
 			pageSizeOptions,
 			selectedPageIndex,
 			selectedPageSizeIndex,
+			showTotalObjects,
 			totalPages,
+			totalCount,
 			style,
 			SingleSelect: singleSelectProps,
 			TextField: textFieldProps,
@@ -137,6 +155,11 @@ const Paginator = createClass({
 
 		return (
 			<div style={style} className={cx('&', className)}>
+				{showTotalObjects && _.isNumber(totalCount) && (
+					<div className={cx('&-total-count')}>
+						{totalCount} {totalCount <= 1 ? objectLabel : objectLabelPlural}
+					</div>
+				)}
 				{hasPageSizeSelector ? (
 					<div className={cx('&-page-size-container')}>
 						<span className={cx('&-rows-per-page-label')}>Rows per page:</span>
