@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
-import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import { lucidClassNames } from '../../util/style-helpers';
 import {
 	createClass,
@@ -148,16 +147,9 @@ const Expander = createClass({
 					<span className={cx('&-icon')}>
 						<ChevronIcon direction={isExpanded ? 'up' : 'down'} />
 					</span>
-					<ReactTransitionGroup
-						transitionName={cx('&-text')}
-						transitionEnterTimeout={100}
-						transitionLeaveTimeout={100}
-						className={cx('&-text')}
-					>
-						{labelChildProp ? (
-							<span key={this._labelKey}>{labelChildProp.children}</span>
-						) : null}
-					</ReactTransitionGroup>
+					{labelChildProp && (
+						<span className={cx('&-text')}>{labelChildProp.children}</span>
+					)}
 				</header>
 				<Collapsible
 					isExpanded={isExpanded}

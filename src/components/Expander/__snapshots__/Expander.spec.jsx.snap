@@ -15,21 +15,11 @@ exports[`Expander [common] example testing should match snapshot(s) for 1.expand
         direction="up"
       />
     </span>
-    <CSSTransitionGroup
+    <span
       className="lucid-Expander-text"
-      transitionAppear={false}
-      transitionEnter={true}
-      transitionEnterTimeout={100}
-      transitionLeave={true}
-      transitionLeaveTimeout={100}
-      transitionName="lucid-Expander-text"
     >
-      <span
-        key="0"
-      >
-        Show Less
-      </span>
-    </CSSTransitionGroup>
+      Show Less
+    </span>
   </header>
   <Collapsible
     className="lucid-Expander-content"
@@ -64,21 +54,11 @@ exports[`Expander [common] example testing should match snapshot(s) for 2.intera
         direction="down"
       />
     </span>
-    <CSSTransitionGroup
+    <span
       className="lucid-Expander-text"
-      transitionAppear={false}
-      transitionEnter={true}
-      transitionEnterTimeout={100}
-      transitionLeave={true}
-      transitionLeaveTimeout={100}
-      transitionName="lucid-Expander-text"
     >
-      <span
-        key="0"
-      >
-        Show More
-      </span>
-    </CSSTransitionGroup>
+      Show More
+    </span>
   </header>
   <Collapsible
     className="lucid-Expander-content"
@@ -128,21 +108,11 @@ exports[`Expander [common] example testing should match snapshot(s) for 3.intera
         direction="down"
       />
     </span>
-    <CSSTransitionGroup
+    <span
       className="lucid-Expander-text"
-      transitionAppear={false}
-      transitionEnter={true}
-      transitionEnterTimeout={100}
-      transitionLeave={true}
-      transitionLeaveTimeout={100}
-      transitionName="lucid-Expander-text"
     >
-      <span
-        key="0"
-      >
-        Show Stuff
-      </span>
-    </CSSTransitionGroup>
+      Show Stuff
+    </span>
   </header>
   <Collapsible
     className="lucid-Expander-content"
