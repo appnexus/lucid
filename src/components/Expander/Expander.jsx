@@ -49,6 +49,22 @@ const Expander = createClass({
 				`,
 			},
 		}),
+		AdditionalLabelContent: createClass({
+			displayName: 'Expander.AdditionalLabelContent',
+			statics: {
+				peek: {
+					description: `
+						Renders a \`<span>\` to be shown next to the expander label.
+					`,
+				},
+			},
+			propName: 'AdditionalLabelContent',
+			propTypes: {
+				children: node`
+					Used to display additional information or/and actions next to expander label.
+				`,
+			},
+		}),
 	},
 
 	reducers,
@@ -79,6 +95,11 @@ const Expander = createClass({
 		Label: any`
 			Child element whose children represents content to be shown next to the
 			expander icon.
+		`,
+
+		AdditionalLabelContent: node`
+			Child element whose children respresent content to be shown inside
+			Expander.Label and to the right of it
 		`,
 
 		kind: oneOf(['simple', 'highlighted'])`
@@ -130,6 +151,10 @@ const Expander = createClass({
 			_.map(findTypes(this.props, Expander.Label), 'props')
 		);
 
+		const additionalLabelContentChildProp = _.first(
+			_.map(findTypes(this.props, Expander.AdditionalLabelContent), 'props')
+		);
+
 		return (
 			<div
 				{...omitProps(passThroughs, Expander)}
@@ -143,12 +168,19 @@ const Expander = createClass({
 				)}
 				style={style}
 			>
-				<header className={cx('&-header')} onClick={this.handleToggle}>
-					<span className={cx('&-icon')}>
-						<ChevronIcon direction={isExpanded ? 'up' : 'down'} />
-					</span>
-					{labelChildProp && (
-						<span className={cx('&-text')}>{labelChildProp.children}</span>
+				<header className={cx('&-header')}>
+					<div className={cx('&-header-toggle')} onClick={this.handleToggle}>
+						<span className={cx('&-icon')}>
+							<ChevronIcon direction={isExpanded ? 'up' : 'down'} />
+						</span>
+						{labelChildProp && (
+							<span className={cx('&-text')}>{labelChildProp.children}</span>
+						)}
+					</div>
+					{additionalLabelContentChildProp && (
+						<div className={cx('&-additional-content')}>
+							{additionalLabelContentChildProp.children}
+						</div>
 					)}
 				</header>
 				<Collapsible

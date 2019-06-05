@@ -12,7 +12,7 @@ describe('Expander', () => {
 	common(Expander);
 	controls(Expander, {
 		callbackName: 'onToggle',
-		controlSelector: '.lucid-Expander-header',
+		controlSelector: '.lucid-Expander-header-toggle',
 		eventType: 'click',
 	});
 
@@ -108,6 +108,36 @@ describe('Expander', () => {
 			});
 		});
 
+		describe('AdditionalLabelContent (as a prop)', () => {
+			it('renders the value in `lucid-Expander-additional-content` class', () => {
+				const additionalContent = <div>Hello</div>;
+				const wrapper = shallow(
+					<Expander>
+						<Expander.AdditionalLabelContent>
+							{additionalContent}
+						</Expander.AdditionalLabelContent>
+					</Expander>
+				);
+				assert.equal(
+					wrapper.find('.lucid-Expander-additional-content').prop('children'),
+					additionalContent
+				);
+			});
+		});
+
+		describe('AdditionalLabelContent (as a child)', () => {
+			it('renders the value in `lucid-Expander-additional-content` class', () => {
+				const additionalContent = <div>Hello</div>;
+				const wrapper = shallow(
+					<Expander AdditionalLabelContent={additionalContent} />
+				);
+				assert.equal(
+					wrapper.find('.lucid-Expander-additional-content').prop('children'),
+					additionalContent
+				);
+			});
+		});
+
 		describe('pass throughs', () => {
 			it('passes through all props not defined in `propTypes` to the root element.', () => {
 				const wrapper = shallow(
@@ -144,7 +174,7 @@ describe('Expander', () => {
 			wrapper = mount(<Expander onToggle={onToggle} Label='foo' />);
 
 			wrapper
-				.find('.lucid-Expander-header')
+				.find('.lucid-Expander-header-toggle')
 				.first()
 				.simulate('click');
 			wrapper
@@ -166,7 +196,7 @@ describe('Expander', () => {
 			);
 
 			wrapper
-				.find('.lucid-Expander-header')
+				.find('.lucid-Expander-header-toggle')
 				.first()
 				.simulate('click');
 			wrapper
@@ -190,7 +220,7 @@ describe('Expander', () => {
 			);
 
 			wrapper
-				.find('.lucid-Expander-header')
+				.find('.lucid-Expander-header-toggle')
 				.first()
 				.simulate('click');
 			wrapper

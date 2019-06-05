@@ -9,7 +9,6 @@
 		width: @size-expander-button;
 		height: @size-expander-button;
 		align-items: center;
-		display: flex;
 		justify-content: center;
 		margin-right: @size-XS;
 	}
@@ -17,7 +16,6 @@
 	&-header {
 		align-items: center;
 		color: @color-darkGray;
-		cursor: pointer;
 		display: flex;
 		font: @font;
 		justify-content: flex-start;
@@ -39,18 +37,27 @@
 				}
 			}
 		}
+
+		&-toggle {
+			cursor: pointer;
+		}
 	}
 
 	&-text {
 		color: @color-darkGray;
 		height: @size-expander-button;
 		font-weight: @font-weight-medium;
+		margin-right: @size-XS;
 		position: relative;
 
 		> * {
 			line-height: @size-expander-button;
 			white-space: nowrap;
 		}
+	}
+
+	&-additional-content {
+		flex: 1;
 	}
 
 	&-content {
