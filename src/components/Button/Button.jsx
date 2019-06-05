@@ -118,7 +118,6 @@ const Button = createClass({
 				)}
 				onClick={this.handleClick}
 				disabled={isDisabled}
-				ref='button'
 				type={type}
 			>
 				<span className={cx('&-content')}>{children}</span>
