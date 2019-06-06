@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import assert from 'assert';
 import React from 'react';
-import ReactTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import sinon from 'sinon';
 import { mount, shallow } from 'enzyme';
 
@@ -13,7 +12,7 @@ describe('Expander', () => {
 	common(Expander);
 	controls(Expander, {
 		callbackName: 'onToggle',
-		controlSelector: '.lucid-Expander-header',
+		controlSelector: '.lucid-Expander-header-toggle',
 		eventType: 'click',
 	});
 
@@ -84,11 +83,10 @@ describe('Expander', () => {
 		});
 
 		describe('Label (as a prop)', () => {
-			it('renders the value in the header in a `SPAN` element neighboring its `ChevronIcon` instance.', () => {
+			it('renders the value in the header in `lucid-Expander-text` class neighboring `ChevronIcon` instance.', () => {
 				assert.equal(
 					shallow(<Expander Label='foo' />)
-						.find(ReactTransitionGroup)
-						.find('span')
+						.find('.lucid-Expander-text')
 						.prop('children'),
 					'foo'
 				);
@@ -96,7 +94,7 @@ describe('Expander', () => {
 		});
 
 		describe('Label (as a child)', () => {
-			it('renders the value in the header in a `SPAN` element neighboring its `ChevronIcon` instance.', () => {
+			it('renders the value in the header in `lucid-Expander-text` class neighboring `ChevronIcon` instance.', () => {
 				const wrapper = shallow(
 					<Expander>
 						<Expander.Label>foo</Expander.Label>
@@ -104,11 +102,38 @@ describe('Expander', () => {
 				);
 
 				assert.equal(
-					wrapper
-						.find(ReactTransitionGroup)
-						.find('span')
-						.prop('children'),
+					wrapper.find('.lucid-Expander-text').prop('children'),
 					'foo'
+				);
+			});
+		});
+
+		describe('AdditionalLabelContent (as a prop)', () => {
+			it('renders the value in `lucid-Expander-additional-content` class', () => {
+				const additionalContent = <div>Hello</div>;
+				const wrapper = shallow(
+					<Expander>
+						<Expander.AdditionalLabelContent>
+							{additionalContent}
+						</Expander.AdditionalLabelContent>
+					</Expander>
+				);
+				assert.equal(
+					wrapper.find('.lucid-Expander-additional-content').prop('children'),
+					additionalContent
+				);
+			});
+		});
+
+		describe('AdditionalLabelContent (as a child)', () => {
+			it('renders the value in `lucid-Expander-additional-content` class', () => {
+				const additionalContent = <div>Hello</div>;
+				const wrapper = shallow(
+					<Expander AdditionalLabelContent={additionalContent} />
+				);
+				assert.equal(
+					wrapper.find('.lucid-Expander-additional-content').prop('children'),
+					additionalContent
 				);
 			});
 		});
@@ -146,10 +171,10 @@ describe('Expander', () => {
 	describe('user clicks on the header', () => {
 		it('calls the function passed in as the `onToggle` prop', () => {
 			const onToggle = sinon.spy();
-			wrapper = mount(<Expander onToggle={onToggle} />);
+			wrapper = mount(<Expander onToggle={onToggle} Label='foo' />);
 
 			wrapper
-				.find('.lucid-Expander-header')
+				.find('.lucid-Expander-header-toggle')
 				.first()
 				.simulate('click');
 			wrapper
@@ -166,10 +191,12 @@ describe('Expander', () => {
 
 		it('should call `onToggle` correctly when not `isExpanded`', () => {
 			const onToggle = sinon.spy();
-			wrapper = mount(<Expander isExpanded={false} onToggle={onToggle} />);
+			wrapper = mount(
+				<Expander isExpanded={false} onToggle={onToggle} Label='foo' />
+			);
 
 			wrapper
-				.find('.lucid-Expander-header')
+				.find('.lucid-Expander-header-toggle')
 				.first()
 				.simulate('click');
 			wrapper
@@ -188,10 +215,12 @@ describe('Expander', () => {
 
 		it('should call `onToggle` correctly when `isExpanded`', () => {
 			const onToggle = sinon.spy();
-			wrapper = mount(<Expander isExpanded={true} onToggle={onToggle} />);
+			wrapper = mount(
+				<Expander isExpanded={true} onToggle={onToggle} Label='foo' />
+			);
 
 			wrapper
-				.find('.lucid-Expander-header')
+				.find('.lucid-Expander-header-toggle')
 				.first()
 				.simulate('click');
 			wrapper
