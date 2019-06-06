@@ -2,12 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
-import {
-	createClass,
-	getFirst,
-	findTypes,
-	omitProps,
-} from '../../util/component-types';
+import { createClass, findTypes, omitProps } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import Collapsible from '../Collapsible/Collapsible';
@@ -114,27 +109,6 @@ const Expander = createClass({
 			onToggle: _.noop,
 			kind: 'simple',
 		};
-	},
-
-	componentWillReceiveProps(nextProps) {
-		const currentLabel = _.get(
-			getFirst(this.props, Expander.Label),
-			'props.children',
-			null
-		);
-		const nextLabel = _.get(
-			getFirst(nextProps, Expander.Label),
-			'props.children',
-			null
-		);
-
-		if (currentLabel !== nextLabel) {
-			this._labelKey++;
-		}
-	},
-
-	componentWillMount() {
-		this._labelKey = 0;
 	},
 
 	render() {
