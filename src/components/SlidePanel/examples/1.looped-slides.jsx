@@ -7,9 +7,8 @@ import {
 	Button,
 	CalendarIcon,
 	DuplicateIcon,
-	EditPageIcon,
+	EditIcon,
 	FileIcon,
-	FourSquaresIcon,
 	ImageIcon,
 	TableGearIcon,
 } from '../../../index';
@@ -75,7 +74,7 @@ export default createClass({
 						/>
 					</Slide>
 					<Slide>
-						<EditPageIcon style={{ width: '100%', height: '30vh' }} />
+						<EditIcon style={{ width: '100%', height: '30vh' }} />
 					</Slide>
 					<Slide>
 						<FileIcon
@@ -85,9 +84,6 @@ export default createClass({
 								background: 'whitesmoke',
 							}}
 						/>
-					</Slide>
-					<Slide>
-						<FourSquaresIcon style={{ width: '100%', height: '30vh' }} />
 					</Slide>
 					<Slide>
 						<ImageIcon

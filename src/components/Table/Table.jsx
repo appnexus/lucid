@@ -7,7 +7,7 @@ import {
 	filterTypes,
 	omitProps,
 } from '../../util/component-types';
-import CaretIcon from '../Icon/CaretIcon/CaretIcon';
+import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
 const cx = lucidClassNames.bind('&-Table');
@@ -348,7 +348,7 @@ const Th = createClass({
 					<div className={cx('&-Th-inner-content')}>{children}</div>
 					{isSorted || isSortable ? (
 						<div className={cx('&-Th-inner-caret')}>
-							<CaretIcon
+							<ChevronIcon
 								className={cx('&-sort-icon')}
 								direction={sortDirection}
 								size={6}
@@ -557,7 +557,7 @@ const Table = createClass({
 				using it directly in an app.
 			`,
 			categories: ['table'],
-			madeFrom: ['CaretIcon', 'DragCaptureZone'],
+			madeFrom: ['ChevronIcon', 'DragCaptureZone'],
 		},
 	},
 

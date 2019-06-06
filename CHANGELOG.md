@@ -23,4 +23,11 @@
 - added `isIncludeExclude` to `Switch`. Adds red/green styling.
 - removed `isBadge` from `Icon`. It was an ill conceived feature. All icons should not be allowed to be made circular via a prop.
 - returned `responsiveMode` in `Selection` to original meaning: `small` means small device with large style, and `large` means large device with small style. This was temporarily reversed out of a misunderstanding of the meaning of the prop.
+- removed `BeakerIcon`
+- removed `CaretIcon`, use `Chevron` or `Arrow` icons instead
+- removed `CrossIcon` in favor of `CloseIcon`
+- removed `DataViewIcon` in favor of `AnalyzeDataIcon`
+- removed `DownloadTableDataIcon` in favor of `DownloadIcon`
+- removed `EditPageIcon` in favor of `EditIcon`
+- removed `FourSquaresIcon`
 

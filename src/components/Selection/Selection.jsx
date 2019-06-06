@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import MinusCircleIcon from '../Icon/MinusCircleIcon/MinusCircleIcon';
 import SuccessIcon from '../Icon/SuccessIcon/SuccessIcon';
-import CrossIcon from '../Icon/CrossIcon/CrossIcon';
+import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import InfoIcon from '../Icon/InfoIcon/InfoIcon';
 import WarningIcon from '../Icon/WarningIcon/WarningIcon';
 import { lucidClassNames } from '../../util/style-helpers';
@@ -205,7 +205,7 @@ const Selection = createClass({
 						/>
 
 						{isRemovable ? (
-							<CrossIcon
+							<CloseIcon
 								isClickable
 								size={!isSmall ? 28 : 44}
 								viewBox={!isSmall ? '-6 -6 28 28' : '-3 -2 20 20'}

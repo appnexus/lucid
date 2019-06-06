@@ -77,7 +77,6 @@ const Icon = createClass({
 			size: 16,
 			aspectRatio: 'xMidYMid meet',
 			viewBox: '0 0 16 16',
-			isBadge: false,
 			isDisabled: false,
 			isClickable: false,
 		};
@@ -102,26 +101,12 @@ const Icon = createClass({
 			className,
 			children,
 			size,
-			style,
 			viewBox,
 			aspectRatio,
-			isBadge,
 			isClickable,
 			isDisabled,
 			...passThroughs
 		} = this.props;
-
-		// Because we control the icon size inline, we must also control the border
-		// radius in the case where they user wants `isBadge`. Later one, we filter
-		// out any `undefined` properties using lodash methods.
-		const actualStyle = {
-			...style,
-			borderRadius: _.get(
-				style,
-				'borderRadius',
-				isBadge ? `${size}px` : undefined
-			),
-		};
 
 		return (
 			<svg
@@ -130,11 +115,9 @@ const Icon = createClass({
 				viewBox={viewBox}
 				preserveAspectRatio={aspectRatio}
 				{...omitProps(passThroughs, Icon)}
-				style={_.pickBy(actualStyle, _.negate(_.isUndefined))}
 				className={cx(
 					'&',
 					{
-						'&-is-badge': isBadge,
 						'&-is-clickable': !isDisabled && isClickable,
 						'&-is-disabled': isDisabled,
 					},

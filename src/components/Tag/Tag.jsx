@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
 import { lucidClassNames } from '../../util/style-helpers';
-import CrossIcon from '../Icon/CrossIcon/CrossIcon';
+import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import {
 	createClass,
 	filterTypes,
@@ -103,7 +103,7 @@ const Tag = createClass({
 					<span className={cx('&-other-children')}>
 						{otherChildren}
 						{isRemovable && (
-							<CrossIcon
+							<CloseIcon
 								onClick={this.handleRemove}
 								className={cx('&-remove-button')}
 								presetSize='small'

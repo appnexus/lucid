@@ -11,7 +11,7 @@ import {
 import { buildHybridComponent } from '../../util/state-management';
 import Button from '../Button/Button';
 import { ButtonGroupDumb as ButtonGroup } from '../ButtonGroup/ButtonGroup';
-import CaretIcon from '../Icon/CaretIcon/CaretIcon';
+import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
 import * as reducers from './SplitButton.reducers';
 
@@ -190,8 +190,8 @@ const SplitButton = createClass({
 								'isDisabled'
 							)}
 						>
-							<CaretIcon
-								className={cx('&-CaretIcon')}
+							<ChevronIcon
+								className={cx('&-ChevronIcon')}
 								direction={direction}
 								size={8}
 							/>

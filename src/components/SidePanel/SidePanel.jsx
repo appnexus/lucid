@@ -4,7 +4,7 @@ import PropTypes from 'react-peek/prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import Overlay from '../Overlay/Overlay';
 import GripperVerticalIcon from '../Icon/GripperVerticalIcon/GripperVerticalIcon';
-import CrossIcon from '../Icon/CrossIcon/CrossIcon';
+import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 import Button from '../Button/Button';
 import { getFirst, omitProps } from '../../util/component-types';
@@ -115,7 +115,7 @@ class SidePanel extends React.Component {
 									onClick={onCollapse}
 									hasOnlyIcon={true}
 								>
-									<CrossIcon
+									<CloseIcon
 										className={cx('&-header-closer')}
 										isClickable
 										presetSize='large'

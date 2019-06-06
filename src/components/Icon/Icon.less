@@ -1,14 +1,21 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-@Icon-color-badgeBackground: @color-mediumGray;
-
 .@{prefix}-Icon {
 	.no-firefox-svg-aliasing();
 
 	display: inline-block;
-	vertical-align: top; /* Prevents automatic addition of bottom margin. */
-	fill: @color-primary;
+	vertical-align: top; // Prevents automatic addition of bottom margin.
+
+	fill: none;
+	stroke: @color-primary;
+	stroke-width: 1.3;
+	stroke-miterlimit: 10;
+
+	// Our icons are designed in a 16x16 grid using primarily strokes so it's
+	// possible for some small piece of the edges to overflow. This allows the
+	// entire, unclipped icon to be displayed without affecting the bounding box.
+	overflow: visible;
 
 	> path,
 	> rect,

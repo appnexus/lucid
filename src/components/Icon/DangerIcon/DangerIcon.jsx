@@ -15,8 +15,6 @@ const DangerIcon = createClass({
 				DANGER WILL ROBINSON DANGER
 			`,
 			categories: ['visual design', 'icons'],
-			extend: 'CrossIcon',
-			madeFrom: ['CrossIcon'],
 		},
 	},
 
@@ -25,27 +23,20 @@ const DangerIcon = createClass({
 	},
 
 	render() {
-		const { className, isDisabled, isClickable, ...passThroughs } = this.props;
+		const { className, ...passThroughs } = this.props;
 
 		return (
 			<Icon
 				{...omitProps(passThroughs, DangerIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
-				isClickable={isClickable}
-				isDisabled={isDisabled}
-				className={cx('&', className, isClickable && '&-is-clickable')}
+				className={cx('&', className)}
 			>
-				<circle
-					className={cx('&-background', {
-						'&-background-is-disabled': isDisabled,
-					})}
-					cx='8'
-					cy='8'
-					r='8'
-				/>
+				<circle className={cx('&-background')} cx='8' cy='8' r='7.5' />
 				<path
 					className={cx('&-x')}
-					d='M6.836 8l-2.45-2.463 1.17-1.17 2.45 2.464 2.465-2.464 1.17 1.17L9.164 8l2.48 2.465-1.17 1.17-2.466-2.48-2.48 2.48-1.17-1.17L6.837 8z'
+					d='M5.5 5.5l5 5m0-5l-5 5'
+					stroke='#fff'
+					strokeLinecap='square'
 				/>
 			</Icon>
 		);

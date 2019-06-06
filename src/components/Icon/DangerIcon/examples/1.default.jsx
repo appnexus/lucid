@@ -4,10 +4,6 @@ import { DangerIcon } from '../../../../index';
 
 export default createClass({
 	render() {
-		return (
-			<div>
-				<DangerIcon />
-			</div>
-		);
+		return <DangerIcon />;
 	},
 });

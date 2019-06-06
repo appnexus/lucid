@@ -4,10 +4,6 @@ import { CloseIcon } from '../../../../index';
 
 export default createClass({
 	render() {
-		return (
-			<div>
-				<CloseIcon />
-			</div>
-		);
+		return <CloseIcon />;
 	},
 });

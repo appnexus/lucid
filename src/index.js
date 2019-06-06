@@ -59,13 +59,11 @@ import Banner from './components/Banner/Banner';
 import Bar from './components/Bar/Bar';
 import BarChart from './components/BarChart/BarChart';
 import Bars from './components/Bars/Bars';
-import BeakerIcon from './components/Icon/BeakerIcon/BeakerIcon';
 import BellIcon from './components/Icon/BellIcon/BellIcon';
 import BookIcon from './components/Icon/BookIcon/BookIcon';
 import Breadcrumb from './components/Breadcrumb/Breadcrumb';
 import Button from './components/Button/Button';
 import CalendarIcon from './components/Icon/CalendarIcon/CalendarIcon';
-import CaretIcon from './components/Icon/CaretIcon/CaretIcon';
 import ChatIcon from './components/Icon/ChatIcon/ChatIcon';
 import CheckIcon from './components/Icon/CheckIcon/CheckIcon';
 import Checkbox from './components/Checkbox/Checkbox';
@@ -75,20 +73,16 @@ import ClockIcon from './components/Icon/ClockIcon/ClockIcon';
 import Collapsible from './components/Collapsible/Collapsible';
 import ContextMenu from './components/ContextMenu/ContextMenu';
 import CloseIcon from './components/Icon/CloseIcon/CloseIcon';
-import CrossIcon from './components/Icon/CrossIcon/CrossIcon';
 import CrownIcon from './components/Icon/CrownIcon/CrownIcon';
 import DangerIcon from './components/Icon/DangerIcon/DangerIcon';
 import DangerLightIcon from './components/Icon/DangerLightIcon/DangerLightIcon';
 import DataTable from './components/DataTable/DataTable';
-import DataViewIcon from './components/Icon/DataViewIcon/DataViewIcon';
 import DeleteIcon from './components/Icon/DeleteIcon/DeleteIcon';
 import Dialog from './components/Dialog/Dialog';
 import DownloadIcon from './components/Icon/DownloadIcon/DownloadIcon';
-import DownloadTableDataIcon from './components/Icon/DownloadTableDataIcon/DownloadTableDataIcon';
 import DragCaptureZone from './components/DragCaptureZone/DragCaptureZone';
 import DuplicateIcon from './components/Icon/DuplicateIcon/DuplicateIcon';
 import EditIcon from './components/Icon/EditIcon/EditIcon';
-import EditPageIcon from './components/Icon/EditPageIcon/EditPageIcon';
 import EligibilityIcon from './components/Icon/EligibilityIcon/EligibilityIcon';
 import EligibilityLightIcon from './components/Icon/EligibilityLightIcon/EligibilityLightIcon';
 import EmptyStateWrapper from './components/EmptyStateWrapper/EmptyStateWrapper';
@@ -97,7 +91,6 @@ import EqualsIcon from './components/Icon/EqualsIcon/EqualsIcon';
 import FileIcon from './components/Icon/FileIcon/FileIcon';
 import FilterIcon from './components/Icon/FilterIcon/FilterIcon';
 import FolderIcon from './components/Icon/FolderIcon/FolderIcon';
-import FourSquaresIcon from './components/Icon/FourSquaresIcon/FourSquaresIcon';
 import Grid from './components/Grid/Grid';
 import HelpIcon from './components/Icon/HelpIcon/HelpIcon';
 import HomeIcon from './components/Icon/HomeIcon/HomeIcon';
@@ -216,7 +209,6 @@ export {
 	Bar,
 	BarChart,
 	Bars,
-	BeakerIcon,
 	BellIcon,
 	BookIcon,
 	Breadcrumb,
@@ -224,7 +216,6 @@ export {
 	ButtonGroup,
 	ButtonGroupDumb,
 	CalendarIcon,
-	CaretIcon,
 	ChatIcon,
 	Checkbox,
 	CheckboxLabeled,
@@ -234,24 +225,20 @@ export {
 	Collapsible,
 	ContextMenu,
 	CloseIcon,
-	CrossIcon,
 	CrownIcon,
 	DangerIcon,
 	DangerLightIcon,
 	DataTable,
-	DataViewIcon,
 	DateSelect,
 	DateSelectDumb,
 	DeleteIcon,
 	Dialog,
 	DownloadIcon,
-	DownloadTableDataIcon,
 	DragCaptureZone,
 	DropMenu,
 	DropMenuDumb,
 	DuplicateIcon,
 	EditIcon,
-	EditPageIcon,
 	EligibilityIcon,
 	EligibilityLightIcon,
 	EmptyStateWrapper,
@@ -264,7 +251,6 @@ export {
 	FileIcon,
 	FilterIcon,
 	FolderIcon,
-	FourSquaresIcon,
 	Grid,
 	HelpIcon,
 	HomeIcon,

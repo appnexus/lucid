@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import ContextMenu from '../ContextMenu/ContextMenu';
-import CrossIcon from '../Icon/CrossIcon/CrossIcon';
+import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import * as reducers from './ToolTip.reducers';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, findTypes, omitProps } from '../../util/component-types';
@@ -266,7 +266,7 @@ const ToolTip = createClass({
 					onMouseOut={this.handleMouseOutFlyout}
 				>
 					{isCloseable ? (
-						<CrossIcon
+						<CloseIcon
 							onClick={this.handleClose}
 							className={flyOutCx('&-close')}
 						/>
