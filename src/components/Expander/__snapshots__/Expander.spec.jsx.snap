@@ -186,32 +186,30 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.intera
     <div
       className="lucid-Expander-additional-content"
     >
-      <span>
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          kind="invisible"
-          onClick={[Function]}
-          type="button"
-        >
-          <EditIcon />
-          Edit
-        </Button>
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          kind="invisible"
-          onClick={[Function]}
-          type="button"
-        >
-          <CrossIcon
-            presetSize="small"
-          />
-          Clear All
-        </Button>
-      </span>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
+      >
+        <EditIcon />
+        Edit
+      </Button>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
+      >
+        <CrossIcon
+          presetSize="small"
+        />
+        Clear All
+      </Button>
     </div>
   </header>
   <Collapsible
@@ -226,32 +224,30 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.intera
       Show Stuff
     </Expander.Label>
     <Expander.AdditionalLabelContent>
-      <span>
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          kind="invisible"
-          onClick={[Function]}
-          type="button"
-        >
-          <EditIcon />
-          Edit
-        </Button>
-        <Button
-          hasOnlyIcon={false}
-          isActive={false}
-          isDisabled={false}
-          kind="invisible"
-          onClick={[Function]}
-          type="button"
-        >
-          <CrossIcon
-            presetSize="small"
-          />
-          Clear All
-        </Button>
-      </span>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
+      >
+        <EditIcon />
+        Edit
+      </Button>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
+      >
+        <CrossIcon
+          presetSize="small"
+        />
+        Clear All
+      </Button>
     </Expander.AdditionalLabelContent>
     <p>
       Tacos craft beer humblebrag meditation. Cold-pressed next level man bun readymade beard, wayfarers fanny pack keytar helvetica knausgaard biodiesel lumbersexual. Knausgaard echo park whatever four loko messenger bag hella. Cardigan church-key brooklyn letterpress artisan venmo, gastropub hella. Single-origin coffee selfies four loko, biodiesel health goth truffaut migas sustainable kale chips disrupt locavore meggings mustache actually retro. Mlkshk poutine flexitarian scenester 3 wolf moon, vice kinfolk chia blog ennui bitters brooklyn quinoa marfa. Literally before they sold out gochujang pork belly franzen.

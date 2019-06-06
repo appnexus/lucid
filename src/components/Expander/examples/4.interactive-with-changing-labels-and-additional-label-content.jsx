@@ -9,16 +9,14 @@ export default createClass({
 				<Expander>
 					<Expander.Label>Show Stuff</Expander.Label>
 					<Expander.AdditionalLabelContent>
-						<span>
-							<Button kind='invisible'>
-								<EditIcon />
-								Edit
-							</Button>
-							<Button kind='invisible'>
-								<CrossIcon />
-								Clear All
-							</Button>
-						</span>
+						<Button kind='invisible'>
+							<EditIcon />
+							Edit
+						</Button>
+						<Button kind='invisible'>
+							<CrossIcon />
+							Clear All
+						</Button>
 					</Expander.AdditionalLabelContent>
 					<p>
 						Tacos craft beer humblebrag meditation. Cold-pressed next level man

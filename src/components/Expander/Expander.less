@@ -20,26 +20,21 @@
 		font: @font;
 		justify-content: flex-start;
 
-		&:hover {
-			> .@{prefix}-Expander-icon {
-				.box-sizing();
+		&-toggle {
+			cursor: pointer;
 
-				background-color: @featured-color-default-backgroundColorHover;
-				outline: none;
-			}
+			&:hover {
+				> .@{prefix}-Expander-icon {
+					.box-sizing();
 
-			> .@{prefix}-Expander-text {
+					background-color: @featured-color-default-backgroundColorHover;
+					outline: none;
+				}
 
-				// `text-decoration `does not inherit when you're using `position:
-				// absolute` as per the spec
-				> span {
+				> .@{prefix}-Expander-text {
 					text-decoration: underline;
 				}
 			}
-		}
-
-		&-toggle {
-			cursor: pointer;
 		}
 	}
 
@@ -47,7 +42,6 @@
 		color: @color-darkGray;
 		height: @size-expander-button;
 		font-weight: @font-weight-medium;
-		margin-right: @size-XS;
 		position: relative;
 
 		> * {
@@ -58,6 +52,7 @@
 
 	&-additional-content {
 		flex: 1;
+		margin-left: @size-standard;
 	}
 
 	&-content {
