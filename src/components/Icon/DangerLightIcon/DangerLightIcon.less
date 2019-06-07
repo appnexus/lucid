@@ -1,19 +1,15 @@
 @import (reference) '../../../styles/variables.less';
 @import (reference) '../../../styles/mixins.less';
 
-.@{prefix}-DangerIcon {
+.@{prefix}-DangerLightIcon {
 	stroke: @featured-color-danger;
-
-	&-x {
-		stroke: @color-white;
-	}
-
-	&-background {
-		fill: @featured-color-danger;
-	}
 
 	&-is-clickable:hover &-background {
 		stroke: @featured-color-danger-colorHover;
 		fill: @featured-color-danger-colorHover;
+	}
+
+	&-is-clickable:hover &-x {
+		stroke: @color-white;
 	}
 }

@@ -118,7 +118,7 @@ class SidePanel extends React.Component {
 									<CloseIcon
 										className={cx('&-header-closer')}
 										isClickable
-										presetSize='large'
+										size={14}
 									/>
 								</Button>
 							</div>

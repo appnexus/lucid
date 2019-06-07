@@ -25,13 +25,14 @@ const HelpIcon = createClass({
 	},
 
 	render() {
-		const { className, ...passThroughs } = this.props;
+		const { className, isClickable, ...passThroughs } = this.props;
 
 		return (
 			<Icon
 				{...passThroughs}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
-				className={cx('&', className)}
+				isClickable={isClickable}
+				className={cx('&', isClickable && '&-is-clickable', className)}
 			>
 				<path d='M5.5 6.138C5.5 4.681 6.533 3.5 7.99 3.5s2.51 1.135 2.51 2.592c0 .696-.398 1.323-1.259 1.885-.806.525-1.251.861-1.251 1.536V10' />
 				<circle className={cx('&-period')} cx='7.99' cy='12.001' r='.293' />

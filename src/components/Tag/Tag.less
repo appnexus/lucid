@@ -2,10 +2,9 @@
 @import (reference) '../../styles/mixins.less';
 
 .@{prefix}-Tag {
-	background: @color-neutral-4;
+	.no-firefox-svg-aliasing();
 
-	// do we want this? makes the bubbles more square
-	// height: 26px;
+	background: @color-neutral-4;
 
 	// positioning
 	align-items: center;
@@ -32,20 +31,16 @@
 		padding: 7px @size-XS 0 0;
 	}
 
-	&-remove-button {
-		fill: @color-neutral-5;
-
-		&:hover {
-			fill: @color-darkGray;
-		}
-	}
-
 	&-is-top {
 		// typography
 		text-transform: uppercase;
 		color: @color-neutral-7;
 		font-size: 11px; // non-standard font size
-		height: 26px;
+		min-height: 26px;
+	}
+
+	&-remove-button {
+		margin: 0 0 0 6px;
 	}
 
 	// ---------------
@@ -59,6 +54,7 @@
 
 		// typography
 		text-transform: none;
+
 	}
 
 	& > & > &-other-children {
@@ -87,7 +83,7 @@
 		// margin-right: @size-XXS;
 		// margin-top: @size-XS;
 		padding: 0;
-		margin: 4px 4px 0 0;
+		margin: 5px 4px 0 0;
 
 		// typography
 		color: @color-neutral-9;
@@ -119,7 +115,7 @@
 
 			& > .@{prefix}-Tag-remove-button {
 				// margin/padding
-				margin: 0 2px;
+				margin: 0 9px 0 7px;
 			}
 		}
 	}

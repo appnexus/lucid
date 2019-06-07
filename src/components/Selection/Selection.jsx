@@ -207,8 +207,7 @@ const Selection = createClass({
 						{isRemovable ? (
 							<CloseIcon
 								isClickable
-								size={!isSmall ? 28 : 44}
-								viewBox={!isSmall ? '-6 -6 28 28' : '-3 -2 20 20'}
+								size={!isSmall ? 8 : 16}
 								className={cx('&-close-button')}
 								onClick={this.handleRemove}
 							/>

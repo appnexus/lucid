@@ -23,13 +23,14 @@ const DangerIcon = createClass({
 	},
 
 	render() {
-		const { className, ...passThroughs } = this.props;
+		const { className, isClickable, ...passThroughs } = this.props;
 
 		return (
 			<Icon
 				{...omitProps(passThroughs, DangerIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
-				className={cx('&', className)}
+				isClickable={isClickable}
+				className={cx('&', isClickable && '&-is-clickable', className)}
 			>
 				<circle className={cx('&-background')} cx='8' cy='8' r='7.5' />
 				<path className={cx('&-x')} d='M5.5 5.5l5 5m0-5l-5 5' stroke='#fff' />

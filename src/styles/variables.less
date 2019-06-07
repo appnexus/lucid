@@ -112,7 +112,6 @@
 
 @color-secondary-1-hover: shade(@color-secondary-1, 35%);
 
-
 //neutral colors
 @color-neutral-1: #fff;
 @color-neutral-2: #f9f8f7;
@@ -135,11 +134,10 @@
 @color-transparent-gray-30-new: fade(@color-neutral-9, 30%);
 @color-transparent-gray-35: fade(@color-neutral-9, 35%);
 
-
 // Grays
-@color-lightGray: #f4f4f4;
-@color-gray: #e3e3e3;
-@color-mediumGray: #e4e4e4;
+@color-lightGray: @color-neutral-3;
+@color-gray: @color-neutral-4;
+@color-mediumGray: @color-neutral-5;
 @color-darkGray: @color-neutral-9;
 
 // -------------------------------------
@@ -214,26 +212,26 @@
 
 // Featured success color
 @featured-color-success: #49b27b;
-@featured-color-success-colorHover: shade(@featured-color-success, 35%);
+@featured-color-success-colorHover: shade(@featured-color-success, 20%);
 @featured-color-success-backgroundColor: @featured-color-success;
 @featured-color-success-borderColor: @featured-color-success;
 
 // Featured info color
 @featured-color-info: @color-primary;
-@featured-color-info-colorHover: shade(@featured-color-info, 35%);
+@featured-color-info-colorHover: shade(@featured-color-info, 20%);
 @featured-color-info-backgroundColor: @featured-color-info;
 @featured-color-info-borderColor: @featured-color-info;
 
 // Featured warning color
 @featured-color-warning: #f5b701;
-@featured-color-warning-colorHover: shade(@featured-color-warning, 35%);
+@featured-color-warning-colorHover: shade(@featured-color-warning, 20%);
 @featured-color-warning-backgroundColor: @featured-color-warning;
 @featured-color-warning-borderColor: @featured-color-warning;
 
 // Featured danger color
 @featured-color-danger: #f77402;
 @featured-color-danger-30: fade(@featured-color-danger, 30%);
-@featured-color-danger-colorHover: shade(@featured-color-danger, 35%);
+@featured-color-danger-colorHover: shade(@featured-color-danger, 20%);
 @featured-color-danger-backgroundColor: @featured-color-danger;
 @featured-color-danger-borderColor: @featured-color-danger;
 

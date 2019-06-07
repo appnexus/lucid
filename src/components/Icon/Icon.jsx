@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import ReactDOM from 'react-dom';
@@ -105,8 +104,13 @@ const Icon = createClass({
 			aspectRatio,
 			isClickable,
 			isDisabled,
+			style,
 			...passThroughs
 		} = this.props;
+
+		// Since our icons were designed at 16px with a 1.3px stroke, we use this
+		// formula to keep the stroke the same size regardless of `size`
+		const combinedStyles = { ...style, strokeWidth: (16 / size) * 1.3 };
 
 		return (
 			<svg
@@ -115,6 +119,7 @@ const Icon = createClass({
 				viewBox={viewBox}
 				preserveAspectRatio={aspectRatio}
 				{...omitProps(passThroughs, Icon)}
+				style={combinedStyles}
 				className={cx(
 					'&',
 					{
