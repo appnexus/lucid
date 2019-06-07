@@ -124,7 +124,7 @@ import Point from './components/Point/Point';
 import Points from './components/Points/Points';
 import Portal from './components/Portal/Portal';
 import ProgressBar from './components/ProgressBar/ProgressBar';
-import QuestionMarkCircleIcon from './components/Icon/QuestionMarkCircleIcon/QuestionMarkCircleIcon';
+import QuestionMarkIcon from './components/Icon/QuestionMarkIcon/QuestionMarkIcon';
 import RadioButton from './components/RadioButton/RadioButton';
 import RadioButtonLabeled from './components/RadioButtonLabeled/RadioButtonLabeled';
 import RefreshIcon from './components/Icon/RefreshIcon/RefreshIcon';
@@ -149,7 +149,6 @@ import Switch from './components/Switch/Switch';
 import SwitchIcon from './components/Icon/SwitchIcon/SwitchIcon';
 import SwitchLabeled from './components/SwitchLabeled/SwitchLabeled';
 import Table from './components/Table/Table';
-import TableGearIcon from './components/Icon/TableGearIcon/TableGearIcon';
 import Tag from './components/Tag/Tag';
 import TextField from './components/TextField/TextField';
 import TextFieldValidated from './components/TextFieldValidated/TextFieldValidated';
@@ -161,7 +160,7 @@ import UploadIcon from './components/Icon/UploadIcon/UploadIcon';
 import UserIcon from './components/Icon/UserIcon/UserIcon';
 import Validation from './components/Validation/Validation';
 import VideoIcon from './components/Icon/VideoIcon/VideoIcon';
-import ViewIcon from './components/Icon/ViewIcon/ViewIcon';
+import ViewTableIcon from './components/Icon/ViewTableIcon/ViewTableIcon';
 import WarningIcon from './components/Icon/WarningIcon/WarningIcon';
 import WarningLightIcon from './components/Icon/WarningLightIcon/WarningLightIcon';
 
@@ -288,7 +287,7 @@ export {
 	Points,
 	Portal,
 	ProgressBar,
-	QuestionMarkCircleIcon,
+	QuestionMarkIcon,
 	RadioButton,
 	RadioButtonLabeled,
 	RadioGroup,
@@ -331,7 +330,6 @@ export {
 	SwitchIcon,
 	SwitchLabeled,
 	Table,
-	TableGearIcon,
 	Tabs,
 	TabsDumb,
 	Tag,
@@ -351,7 +349,7 @@ export {
 	VerticalTabs,
 	VerticalTabsDumb,
 	VideoIcon,
-	ViewIcon,
+	ViewTableIcon,
 	WarningIcon,
 	WarningLightIcon,
 };

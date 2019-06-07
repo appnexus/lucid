@@ -30,4 +30,9 @@
 - removed `DownloadTableDataIcon` in favor of `DownloadIcon`
 - removed `EditPageIcon` in favor of `EditIcon`
 - removed `FourSquaresIcon`
+- renamed `QuestionMarkCircleIcon` to `QuestionMarkIcon` since it no longer has a circle around it
+- removed the `presetSize` prop from `SettingsIcon` since all our utility icons can now be scaled
+- removed `TableGearIcon` in favor of `SettingsIcon`
+- removed `ViewIcon`, we don't have a 1:1 replacement for this icon so you'll have to take it on a case by case basis
+- added `ViewTableIcon`
 

@@ -10,7 +10,7 @@ import {
 	EditIcon,
 	FileIcon,
 	ImageIcon,
-	TableGearIcon,
+	SettingsIcon,
 } from '../../../index';
 
 const Slide = SlidePanel.Slide;
@@ -95,7 +95,7 @@ export default createClass({
 						/>
 					</Slide>
 					<Slide>
-						<TableGearIcon style={{ width: '100%', height: '30vh' }} />
+						<SettingsIcon style={{ width: '100%', height: '30vh' }} />
 					</Slide>
 				</SlidePanel>
 			</section>

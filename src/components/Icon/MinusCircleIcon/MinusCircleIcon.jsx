@@ -24,24 +24,12 @@ const MinusCircleIcon = createClass({
 	},
 
 	render() {
-		const { className, isDisabled, isClickable, ...passThroughs } = this.props;
+		const { className, ...passThroughs } = this.props;
 
 		return (
-			<Icon
-				{...passThroughs}
-				isClickable={isClickable}
-				isDisabled={isDisabled}
-				className={cx('&', className, isClickable && '&-is-clickable')}
-			>
-				<circle
-					className={cx('&-background', {
-						'&-background-is-disabled': isDisabled,
-					})}
-					cx='8'
-					cy='8'
-					r='8'
-				/>
-				<rect className={cx('&-minus')} x='3' y='7' width='10' height='2' />
+			<Icon {...passThroughs} className={cx('&', className)}>
+				<circle className={cx('&-background')} cx='8' cy='8' r='7.5' />
+				<path className={cx('&-dash')} strokeLinecap='square' d='M4.5 8h7' />
 			</Icon>
 		);
 	},

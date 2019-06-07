@@ -772,17 +772,17 @@ module.exports = [
 	},
 
 	{
-		name: 'QuestionMarkCircleIcon',
+		name: 'QuestionMarkIcon',
 		component: getDefaultExport(
-			require('../src/components/Icon/QuestionMarkCircleIcon/QuestionMarkCircleIcon')
+			require('../src/components/Icon/QuestionMarkIcon/QuestionMarkIcon')
 		),
 		examplesContext: require.context(
-			'../src/components/Icon/QuestionMarkCircleIcon/examples',
+			'../src/components/Icon/QuestionMarkIcon/examples',
 			true,
 			/\.jsx?$/
 		),
 		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/QuestionMarkCircleIcon/examples',
+			'!!raw-loader!../src/components/Icon/QuestionMarkIcon/examples',
 			true,
 			/\.jsx?$/
 		),
@@ -993,23 +993,6 @@ module.exports = [
 	},
 
 	{
-		name: 'TableGearIcon',
-		component: getDefaultExport(
-			require('../src/components/Icon/TableGearIcon/TableGearIcon')
-		),
-		examplesContext: require.context(
-			'../src/components/Icon/TableGearIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/TableGearIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-	},
-
-	{
 		name: 'TextIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/TextIcon/TextIcon')
@@ -1112,17 +1095,17 @@ module.exports = [
 	},
 
 	{
-		name: 'ViewIcon',
+		name: 'ViewTableIcon',
 		component: getDefaultExport(
-			require('../src/components/Icon/ViewIcon/ViewIcon')
+			require('../src/components/Icon/ViewTableIcon/ViewTableIcon')
 		),
 		examplesContext: require.context(
-			'../src/components/Icon/ViewIcon/examples',
+			'../src/components/Icon/ViewTableIcon/examples',
 			true,
 			/\.jsx?$/
 		),
 		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/ViewIcon/examples',
+			'!!raw-loader!../src/components/Icon/ViewTableIcon/examples',
 			true,
 			/\.jsx?$/
 		),

@@ -1,18 +1,17 @@
-import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass } from '../../../util/component-types';
 
-const cx = lucidClassNames.bind('&-WarningLightIcon');
+const cx = lucidClassNames.bind('&-QuestionMarkIcon');
 
-const WarningLightIcon = createClass({
-	displayName: 'WarningLightIcon',
+const QuestionMarkIcon = createClass({
+	displayName: 'QuestionMarkIcon',
 
 	statics: {
 		peek: {
 			description: `
-				Diet version.
+				Question mark circle icon
 			`,
 			categories: ['visual design', 'icons'],
 			extend: 'Icon',
@@ -28,17 +27,12 @@ const WarningLightIcon = createClass({
 		const { className, ...passThroughs } = this.props;
 
 		return (
-			<Icon
-				{...passThroughs}
-				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
-				className={cx('&', className)}
-			>
-				<path d='M7.99 6v4' />
-				<circle className={cx('&-period')} cx='7.99' cy='12' r='.293' />
-				<path d='M.5 15h15L8 .5z' />
+			<Icon {...passThroughs} className={cx('&', className)}>
+				<path d='M3.752 5C3.752 2.515 5.514.5 8 .5s4.28 1.936 4.28 4.421c0 1.187-.679 2.257-2.148 3.214C8.759 9.032 8 9.604 8 10.755v1.652' />
+				<circle cx='8' cy='15' r='.5' />
 			</Icon>
 		);
 	},
 });
 
-export default WarningLightIcon;
+export default QuestionMarkIcon;
