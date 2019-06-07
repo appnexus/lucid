@@ -75,6 +75,7 @@ class SidePanel extends React.Component {
 			onCollapse,
 			position,
 			preventBodyScroll,
+			topOffset,
 			...passThroughs
 		} = this.props;
 
@@ -101,9 +102,17 @@ class SidePanel extends React.Component {
 				onBackgroundClick={onCollapse}
 				onEscape={onCollapse}
 				isAnimated={isAnimated}
+				style={{
+					marginTop: topOffset,
+				}}
 				{...omitProps(passThroughs, SidePanel)}
 			>
-				<div className={cx('&-pane')} style={{ width: this.state.width }}>
+				<div
+					className={cx('&-pane')} style={{ width: this.state.width }}
+					style={{
+						marginTop: topOffset,
+					}}
+				>
 					{headerEl && (
 						<div className={cx('&-header')}>
 							<div className={cx('&-header-inner-wrapper')}>
@@ -192,6 +201,9 @@ SidePanel.propTypes = {
 		Sets the initial width in pixels. The actual width may change if the user
 		resizes it.
 	`,
+	topOffset: string`
+		Sets the top margin for the panel. Defaults to \`0px\`.
+	`,
 	Header: any`
 		Alternative to using \`<SidePanel.Header>\`.
 	`,
@@ -205,6 +217,7 @@ SidePanel.defaultProps = {
 	onResize: _.noop,
 	position: 'right',
 	preventBodyScroll: false,
+	topOffset: '0px',
 	width: 240,
 };
 
