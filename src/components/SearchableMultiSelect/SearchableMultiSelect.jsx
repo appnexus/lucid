@@ -629,7 +629,7 @@ const SearchableMultiSelect = createClass({
 											className={cx('&-Selection-group')}
 											key={'optionGroup-' + optionGroupIndex}
 											responsiveMode={responsiveMode}
-											isRemovable={false}
+											isRemovable={true}
 											isBold
 											kind='container'
 										>

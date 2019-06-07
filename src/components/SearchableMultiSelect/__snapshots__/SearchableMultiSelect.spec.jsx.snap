@@ -3340,7 +3340,7 @@ exports[`SearchableMultiSelect custom formatting should render OptionGroup.Selec
       className="lucid-SearchableMultiSelect-Selection-group"
       hasBackground={false}
       isBold={true}
-      isRemovable={false}
+      isRemovable={true}
       key="optionGroup-0"
       kind="container"
       onRemove={[Function]}
