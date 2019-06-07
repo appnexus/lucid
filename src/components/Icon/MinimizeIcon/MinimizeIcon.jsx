@@ -33,7 +33,7 @@ const MinimizeIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path d='M15.5 6.5h-6v-6m-3 15v-6h-6' strokeLinecap='square' />
+				<path d='M15.5 6.5h-6v-6m-3 15v-6h-6' />
 			</Icon>
 		);
 	},

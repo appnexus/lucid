@@ -33,7 +33,7 @@ const MaximizeIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path d='M9.5.5h6v6m-15 3v6h6' strokeLinecap='square' />
+				<path d='M9.5.5h6v6m-15 3v6h6' />
 			</Icon>
 		);
 	},

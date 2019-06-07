@@ -33,7 +33,7 @@ const CrownIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path strokeLinecap='square' d='M1.5 14.5h13' />
+				<path d='M1.5 14.5h13' />
 				<path d='M1.5 11.5h13l1-8-4 2L8 .5l-3.5 5-4-2z' />
 			</Icon>
 		);

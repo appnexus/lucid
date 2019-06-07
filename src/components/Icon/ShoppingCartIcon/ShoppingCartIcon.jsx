@@ -35,7 +35,7 @@ const ShoppingCartIcon = createClass({
 			>
 				<path d='M13.5 14a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM7 13.5a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1z' />
 				<path d='M14.5 11.5h-9l-2-7h12z' />
-				<path strokeLinecap='square' d='M3.5 4.5l-1-2h-2' />
+				<path d='M3.5 4.5l-1-2h-2' />
 			</Icon>
 		);
 	},

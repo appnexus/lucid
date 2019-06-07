@@ -33,7 +33,7 @@ const CheckIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path strokeLinecap='square' d='M.5 7L6 12.5 15.5 3' />
+				<path d='M.5 7L6 12.5 15.5 3' />
 			</Icon>
 		);
 	},

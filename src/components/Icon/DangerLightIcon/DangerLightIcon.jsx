@@ -35,8 +35,8 @@ const DangerLightIcon = createClass({
 				isDisabled={isDisabled}
 				className={cx('&', className, isClickable && '&-is-clickable')}
 			>
-				<path strokeLinecap='square' d='M5.5 5.5l5 5m0-5l-5 5' />
-				<circle strokeLinecap='square' cx='8' cy='8' r='7.5' />
+				<path d='M5.5 5.5l5 5m0-5l-5 5' />
+				<circle cx='8' cy='8' r='7.5' />
 			</Icon>
 		);
 	},

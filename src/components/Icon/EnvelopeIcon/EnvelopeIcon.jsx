@@ -33,7 +33,7 @@ const EnvelopeIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path strokeLinecap='square' d='M.5 2.5h15v11H.5z' />
+				<path d='M.5 2.5h15v11H.5z' />
 				<path d='M.5 3.5l7.5 6 7.5-6m-15 10l6-5m3 0l6 5' />
 			</Icon>
 		);

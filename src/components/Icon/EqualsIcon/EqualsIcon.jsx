@@ -33,7 +33,7 @@ const EqualsIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path d='M.5 5.5h15m-15 5h15' strokeLinecap='square' />
+				<path d='M.5 5.5h15m-15 5h15' />
 			</Icon>
 		);
 	},

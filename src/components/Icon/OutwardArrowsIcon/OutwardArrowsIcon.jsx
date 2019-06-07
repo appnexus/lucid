@@ -9,25 +9,12 @@ const { oneOf } = PropTypes;
 const cx = lucidClassNames.bind('&-OutwardArrowsIcon');
 
 const paths = {
-	horizontal: (
-		<path
-			strokeLinecap='square'
-			d='M4 8h8m-1.5 2l2-2-2-2m-5 4l-2-2 2-2m-5-2.5v9m15-9v9'
-		/>
-	),
-	vertical: (
-		<path
-			strokeLinecap='square'
-			d='M8 4v8m-2-1.5l2 2 2-2m-4-5l2-2 2 2m2.5-5h-9m9 15h-9'
-		/>
-	),
+	horizontal: <path d='M4 8h8m-1.5 2l2-2-2-2m-5 4l-2-2 2-2m-5-2.5v9m15-9v9' />,
+	vertical: <path d='M8 4v8m-2-1.5l2 2 2-2m-4-5l2-2 2 2m2.5-5h-9m9 15h-9' />,
 	diagonal: (
 		<>
-			<path
-				strokeLinecap='square'
-				d='M11.828 4.172l-7.656 7.656m-.354-2.474v2.828h2.828m2.708-8.364h2.828v2.828'
-			/>
-			<path strokeLinecap='square' d='M.5 8.5v7h7m8-8v-7h-7' />
+			<path d='M11.828 4.172l-7.656 7.656m-.354-2.474v2.828h2.828m2.708-8.364h2.828v2.828' />
+			<path d='M.5 8.5v7h7m8-8v-7h-7' />
 		</>
 	),
 };

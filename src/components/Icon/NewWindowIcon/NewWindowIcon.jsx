@@ -33,7 +33,7 @@ const NewWindowIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path d='M9.5.5h6v6m-10-6h-5v15h15v-5' strokeLinecap='square' />
+				<path d='M9.5.5h6v6m-10-6h-5v15h15v-5' />
 				<path d='M15.5.5L7 9' />
 			</Icon>
 		);

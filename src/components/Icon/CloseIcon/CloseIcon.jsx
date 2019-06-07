@@ -33,7 +33,7 @@ const CloseIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path strokeLinecap='square' d='M.5.5l15 15m0-15l-15 15' />
+				<path d='M.5.5l15 15m0-15l-15 15' />
 			</Icon>
 		);
 	},

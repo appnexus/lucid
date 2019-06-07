@@ -29,7 +29,7 @@ const MinusCircleLightIcon = createClass({
 		return (
 			<Icon {...passThroughs} className={cx('&', className)}>
 				<circle cx='8' cy='8' r='7.5' />
-				<path strokeLinecap='square' d='M4.5 8h7' />
+				<path d='M4.5 8h7' />
 			</Icon>
 		);
 	},

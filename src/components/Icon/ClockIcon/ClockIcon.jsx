@@ -28,8 +28,8 @@ const ClockIcon = createClass({
 
 		return (
 			<Icon {...passThroughs} className={cx('&', className)}>
-				<circle strokeLinecap='square' cx='8' cy='8' r='7.5' />
-				<path strokeLinecap='square' class='st0' d='M8 3.5v5l2.75 2.25' />
+				<circle cx='8' cy='8' r='7.5' />
+				<path class='st0' d='M8 3.5v5l2.75 2.25' />
 			</Icon>
 		);
 	},

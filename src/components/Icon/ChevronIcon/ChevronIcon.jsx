@@ -54,7 +54,7 @@ const ChevronIcon = createClass({
 					className
 				)}
 			>
-				<path strokeLinecap='square' d='M.5 4.5l7.5 7 7.5-7' />
+				<path d='M.5 4.5l7.5 7 7.5-7' />
 			</Icon>
 		);
 	},

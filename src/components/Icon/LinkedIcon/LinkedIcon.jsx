@@ -33,7 +33,7 @@ const LinkedIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path strokeLinecap='square' d='M5 11l6-6' />
+				<path d='M5 11l6-6' />
 				<path d='M8.968 7.032a3.009 3.009 0 0 1 0-4.243l1.414-1.414a3.009 3.009 0 0 1 4.243 0 3.009 3.009 0 0 1 0 4.243l-1.414 1.414a3.009 3.009 0 0 1-4.243 0zm-7.593 7.593a3.009 3.009 0 0 1 0-4.243l1.414-1.414a3.009 3.009 0 0 1 4.243 0 3.009 3.009 0 0 1 0 4.243l-1.414 1.414a3.009 3.009 0 0 1-4.243 0z' />
 			</Icon>
 		);

@@ -34,7 +34,7 @@ const RefreshIcon = createClass({
 				className={cx('&', className)}
 			>
 				<path d='M15.5 8a7.5 7.5 0 1 1-1.122-3.949' />
-				<path strokeLinecap='square' d='M14.5.244v4h-4' />
+				<path d='M14.5.244v4h-4' />
 			</Icon>
 		);
 	},

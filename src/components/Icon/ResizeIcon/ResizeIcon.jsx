@@ -33,7 +33,7 @@ const ResizeIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path d='M13.5 15.5l2-2m-6 2l6-6' strokeLinecap='square' />
+				<path d='M13.5 15.5l2-2m-6 2l6-6' />
 			</Icon>
 		);
 	},

@@ -32,12 +32,7 @@ const DangerIcon = createClass({
 				className={cx('&', className)}
 			>
 				<circle className={cx('&-background')} cx='8' cy='8' r='7.5' />
-				<path
-					className={cx('&-x')}
-					d='M5.5 5.5l5 5m0-5l-5 5'
-					stroke='#fff'
-					strokeLinecap='square'
-				/>
+				<path className={cx('&-x')} d='M5.5 5.5l5 5m0-5l-5 5' stroke='#fff' />
 			</Icon>
 		);
 	},

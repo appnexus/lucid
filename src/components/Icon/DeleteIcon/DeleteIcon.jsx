@@ -33,9 +33,9 @@ const DeleteIcon = createClass({
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				className={cx('&', className)}
 			>
-				<path strokeLinecap='square' d='M1.5 3h13' />
+				<path d='M1.5 3h13' />
 				<path d='M2.5 3L3 15.5h10L13.5 3' />
-				<path strokeLinecap='square' d='M6 6.503V12.5m4-5.997V12.5' />
+				<path d='M6 6.503V12.5m4-5.997V12.5' />
 				<path d='M5.5 3l1-2.5h3l1 2.5' />
 			</Icon>
 		);
