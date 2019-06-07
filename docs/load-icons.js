@@ -211,23 +211,6 @@ module.exports = [
 	},
 
 	{
-		name: 'ChevronThinIcon',
-		component: getDefaultExport(
-			require('../src/components/Icon/ChevronThinIcon/ChevronThinIcon')
-		),
-		examplesContext: require.context(
-			'../src/components/Icon/ChevronThinIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-		examplesContextRaw: require.context(
-			'!!raw-loader!../src/components/Icon/ChevronThinIcon/examples',
-			true,
-			/\.jsx?$/
-		),
-	},
-
-	{
 		name: 'ClockIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/ClockIcon/ClockIcon')

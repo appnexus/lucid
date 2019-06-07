@@ -35,4 +35,5 @@
 - removed `TableGearIcon` in favor of `SettingsIcon`
 - removed `ViewIcon`, we don't have a 1:1 replacement for this icon so you'll have to take it on a case by case basis
 - added `ViewTableIcon`
+- removed `ChevronThinIcon` in favor of just `Chevron`, if you need it to be thin you can set a add your own class and apply a smaller `stroke-width`
 
