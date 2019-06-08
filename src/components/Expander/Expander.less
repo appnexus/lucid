@@ -4,13 +4,18 @@
 .@{prefix}-Expander {
 
 	&-icon {
-		.box-sizing();
+		// .box-sizing();
+		display: inline-block;
 
 		width: @size-expander-button;
 		height: @size-expander-button;
 		align-items: center;
 		justify-content: center;
 		margin-right: @size-XS;
+
+		.@{prefix}-Icon {
+			margin: 2px 2px;
+		}
 	}
 
 	&-header {
