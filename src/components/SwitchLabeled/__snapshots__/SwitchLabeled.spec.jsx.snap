@@ -471,48 +471,6 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
 
 exports[`SwitchLabeled [common] example testing should match snapshot(s) for states 2`] = `
 <label
-  className="lucid-SwitchLabeled lucid-SwitchLabeled-is-disabled"
-  style={
-    Object {
-      "marginBottom": "3px",
-      "marginRight": "13px",
-    }
-  }
->
-  <Switch
-    isDisabled={true}
-    isSelected={false}
-    onSelect={[Function]}
-  >
-    <SwitchLabeled.Label>
-      Disabled
-    </SwitchLabeled.Label>
-  </Switch>
-  <CSSTransitionGroup
-    className="lucid-SwitchLabeled-text"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-    transitionAppear={false}
-    transitionEnter={true}
-    transitionEnterTimeout={100}
-    transitionLeave={true}
-    transitionLeaveTimeout={100}
-    transitionName="lucid-SwitchLabeled-text"
-  >
-    <span
-      key="0"
-    >
-      Disabled
-    </span>
-  </CSSTransitionGroup>
-</label>
-`;
-
-exports[`SwitchLabeled [common] example testing should match snapshot(s) for states 3`] = `
-<label
   className="lucid-SwitchLabeled lucid-SwitchLabeled-is-selected"
   style={
     Object {
@@ -548,6 +506,48 @@ exports[`SwitchLabeled [common] example testing should match snapshot(s) for sta
       key="0"
     >
       Selected
+    </span>
+  </CSSTransitionGroup>
+</label>
+`;
+
+exports[`SwitchLabeled [common] example testing should match snapshot(s) for states 3`] = `
+<label
+  className="lucid-SwitchLabeled lucid-SwitchLabeled-is-disabled"
+  style={
+    Object {
+      "marginBottom": "3px",
+      "marginRight": "13px",
+    }
+  }
+>
+  <Switch
+    isDisabled={true}
+    isSelected={false}
+    onSelect={[Function]}
+  >
+    <SwitchLabeled.Label>
+      Disabled
+    </SwitchLabeled.Label>
+  </Switch>
+  <CSSTransitionGroup
+    className="lucid-SwitchLabeled-text"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
+    transitionAppear={false}
+    transitionEnter={true}
+    transitionEnterTimeout={100}
+    transitionLeave={true}
+    transitionLeaveTimeout={100}
+    transitionName="lucid-SwitchLabeled-text"
+  >
+    <span
+      key="0"
+    >
+      Disabled
     </span>
   </CSSTransitionGroup>
 </label>
