@@ -145,7 +145,10 @@ const SearchField = createClass({
 			? !_.isEmpty(_.get(textFieldElement, 'props.value'))
 			: isValid;
 		const defaultIcon = (
-			<SearchIcon className={cx('&-Icon', { '&-Icon-active': isIconActive })} />
+			<SearchIcon
+				size={12}
+				className={cx('&-Icon', { '&-Icon-active': isIconActive })}
+			/>
 		);
 		const iconElement = getFirst(props, Icon);
 		const iconChildren = _.get(iconElement, 'props.children');

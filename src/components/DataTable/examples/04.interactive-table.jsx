@@ -8,7 +8,7 @@ export default createClass({
 		return {
 			activeIndex: 1,
 			currentlySortedField: 'id',
-			currentlySortedFieldDirection: 'up',
+			currentlySortedFieldDirection: 'down',
 			data: [
 				{
 					id: '01',
@@ -160,7 +160,7 @@ export default createClass({
 			currentlySortedField: field,
 			currentlySortedFieldDirection: nextCurrentlySortedFieldDirection,
 			data:
-				nextCurrentlySortedFieldDirection === 'up'
+				nextCurrentlySortedFieldDirection === 'down'
 					? nextData
 					: _.reverse(nextData),
 			activeIndex: null,
