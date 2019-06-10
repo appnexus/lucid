@@ -25,6 +25,17 @@
 		align-items: center;
 		white-space: nowrap;
 
+		&-is-invisible {
+			border: none;
+
+			&:active {
+				background-color: @color-neutral-5;
+			}
+			&:hover {
+				background-color: @color-neutral-3;
+			}
+		}
+
 		&::before {
 			border-radius: @size-borderRadius;
 		}

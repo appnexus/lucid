@@ -133,6 +133,10 @@ const SearchableSelect = createClass({
 			Disables the SearchableSelect from being clicked or focused.
 		`,
 
+		isInvisible: bool`
+			The SearchableSelect will be invisible.
+		`,
+
 		isLoading: bool`
 			Displays a centered LoadingIcon to allow for asynchronous loading of
 			options.
@@ -208,6 +212,7 @@ const SearchableSelect = createClass({
 			hasReset: true,
 			isSelectionHighlighted: true,
 			isDisabled: false,
+			isInvisible: false,
 			isLoading: false,
 			optionFilter: propsSearch,
 			searchText: '',
@@ -378,6 +383,7 @@ const SearchableSelect = createClass({
 				className,
 				hasReset,
 				isDisabled,
+				isInvisible,
 				isLoading,
 				isSelectionHighlighted,
 				maxMenuHeight,
@@ -426,6 +432,7 @@ const SearchableSelect = createClass({
 							'&-Control-is-selected':
 								!isDisabled && isItemSelected && isSelectionHighlighted,
 							'&-Control-is-expanded': isExpanded,
+							'&-Control-is-invisible': isInvisible,
 							'&-Control-is-disabled': isDisabled,
 						})}
 					>

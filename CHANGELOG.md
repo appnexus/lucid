@@ -24,3 +24,4 @@
 - removed `isBadge` from `Icon`. It was an ill conceived feature. All icons should not be allowed to be made circular via a prop.
 - returned `responsiveMode` in `Selection` to original meaning: `small` means small device with large style, and `large` means large device with small style. This was temporarily reversed out of a misunderstanding of the meaning of the prop.
 - added `topOffset` to `SidePanel`. This prop adds a top margin to the component.
+- added `isInvisible` to `SearchableSelect`
