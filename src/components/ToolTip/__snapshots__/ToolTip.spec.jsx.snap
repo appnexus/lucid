@@ -693,10 +693,10 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
       }
     }
   >
-    <CrossIcon
+    <CloseIcon
       className="lucid-ToolTip-FlyOut-close"
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
     ToolTip is a utility component to create a transient message anchored to another component.
   </ContextMenu.FlyOut>
@@ -735,10 +735,10 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
       }
     }
   >
-    <CrossIcon
+    <CloseIcon
       className="lucid-ToolTip-FlyOut-close"
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
     <h2
       className="lucid-ToolTip-FlyOut-Title"
@@ -819,10 +819,10 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
       }
     }
   >
-    <CrossIcon
+    <CloseIcon
       className="lucid-ToolTip-FlyOut-close"
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
     ToolTip is a utility component to create a transient message anchored to another component.
   </ContextMenu.FlyOut>
@@ -861,10 +861,10 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
       }
     }
   >
-    <CrossIcon
+    <CloseIcon
       className="lucid-ToolTip-FlyOut-close"
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
     <h2
       className="lucid-ToolTip-FlyOut-Title"

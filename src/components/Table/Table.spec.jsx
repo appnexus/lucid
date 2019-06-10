@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import assert from 'assert';
 import { common } from '../../util/generic-tests';
 import Table from './Table';
-import CaretIcon from '../Icon/CaretIcon/CaretIcon';
+import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
 const { Thead, Tbody, Tr, Th, Td } = Table;
@@ -208,13 +208,13 @@ describe('Table', () => {
 
 						assert.equal(containerWrapper.length, 1, 'must have a container');
 						assert.equal(
-							containerWrapper.find(CaretIcon).length,
+							containerWrapper.find(ChevronIcon).length,
 							1,
-							'must render a CaretIcon'
+							'must render a ChevronIcon'
 						);
 						assert(
 							containerWrapper
-								.find(CaretIcon)
+								.find(ChevronIcon)
 								.hasClass('lucid-Table-sort-icon'),
 							'must have className `lucid-Table-sort-icon`'
 						);
@@ -222,16 +222,16 @@ describe('Table', () => {
 				});
 
 				describe('sortDirection', () => {
-					it('should pass thru to the CaretIcon when `isSorted` is also true', () => {
+					it('should pass thru to the ChevronIcon when `isSorted` is also true', () => {
 						const wrapper = shallow(<Th isSorted sortDirection='down' />);
 						const containerWrapper = wrapper.find(
 							'.lucid-Table-Th-inner-caret'
 						);
 
 						assert.equal(
-							containerWrapper.find(CaretIcon).prop('direction'),
+							containerWrapper.find(ChevronIcon).prop('direction'),
 							'down',
-							'CaretIcon direction must match prop value'
+							'ChevronIcon direction must match prop value'
 						);
 					});
 				});

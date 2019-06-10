@@ -78,7 +78,7 @@ describe('Selection', () => {
 			const onRemove = jest.fn();
 			const wrapper = shallow(<Selection onRemove={onRemove} />);
 
-			wrapper.find('CrossIcon').prop('onClick')({});
+			wrapper.find('CloseIcon').prop('onClick')({});
 			expect(onRemove).toHaveBeenCalled();
 		});
 	});

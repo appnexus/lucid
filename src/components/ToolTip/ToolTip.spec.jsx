@@ -6,7 +6,7 @@ import { mount, shallow } from 'enzyme';
 import { common } from '../../util/generic-tests';
 import { ToolTipDumb as ToolTip } from './ToolTip';
 import ContextMenu from '../ContextMenu/ContextMenu';
-import CrossIcon from '../Icon/CrossIcon/CrossIcon';
+import CloseIcon from '../Icon/CloseIcon/CloseIcon';
 import { MOSTLY_STABLE_DELAY } from '../../../tests/constants';
 
 const { Target, Title, Body } = ToolTip;
@@ -81,7 +81,7 @@ describe('ToolTip', () => {
 
 		describe('isCloseable', () => {
 			describe('true', () => {
-				it('should render a `CrossIcon`', () => {
+				it('should render a `CloseIcon`', () => {
 					const wrapper = shallow(
 						<ToolTip isExpanded isCloseable>
 							<Target>Target</Target>
@@ -89,14 +89,14 @@ describe('ToolTip', () => {
 						</ToolTip>
 					);
 					assert.equal(
-						wrapper.find(CrossIcon).length,
+						wrapper.find(CloseIcon).length,
 						1,
-						'must include a CrossIcon'
+						'must include a CloseIcon'
 					);
 				});
 			});
 			describe('false', () => {
-				it('should not render a `CrossIcon`', () => {
+				it('should not render a `CloseIcon`', () => {
 					const wrapper = shallow(
 						<ToolTip isExpanded>
 							<Target>Target</Target>
@@ -104,9 +104,9 @@ describe('ToolTip', () => {
 						</ToolTip>
 					);
 					assert.equal(
-						wrapper.find(CrossIcon).length,
+						wrapper.find(CloseIcon).length,
 						0,
-						'must not include a CrossIcon'
+						'must not include a CloseIcon'
 					);
 				});
 			});
