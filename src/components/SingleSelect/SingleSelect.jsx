@@ -6,7 +6,7 @@ import { createClass, findTypes, getFirst } from '../../util/component-types';
 import { buildHybridComponent } from '../../util/state-management';
 import * as reducers from './SingleSelect.reducers';
 import { DropMenuDumb as DropMenu } from '../DropMenu/DropMenu';
-import CaretIcon from '../Icon/CaretIcon/CaretIcon';
+import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 
 const cx = lucidClassNames.bind('&-SingleSelect');
 
@@ -280,7 +280,7 @@ const SingleSelect = createClass({
 								: placeholder}
 						</span>
 
-						<CaretIcon direction={isExpanded ? direction : 'down'} size={8} />
+						<ChevronIcon direction={isExpanded ? direction : 'down'} />
 					</div>
 				</DropMenu.Control>
 
