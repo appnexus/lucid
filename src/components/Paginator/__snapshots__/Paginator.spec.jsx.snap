@@ -691,7 +691,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     className="lucid-Paginator-total-count"
   >
     20
-
+     
     dogs
   </div>
   <div
@@ -782,7 +782,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     value={1}
   />
   <span>
-    of
+    of 
   </span>
   <Button
     hasOnlyIcon={true}
@@ -808,7 +808,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     className="lucid-Paginator-total-count"
   >
     --20--
-
+     
     objects
   </div>
   <div
@@ -899,7 +899,7 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     value={1}
   />
   <span>
-    of
+    of 
   </span>
   <Button
     hasOnlyIcon={true}
