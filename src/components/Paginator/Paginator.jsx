@@ -13,7 +13,16 @@ import { buildHybridComponent } from '../../util/state-management';
 
 const cx = lucidClassNames.bind('&-Paginator');
 
-const { arrayOf, bool, func, number, object, shape, string } = PropTypes;
+const {
+	arrayOf,
+	bool,
+	func,
+	number,
+	object,
+	oneOfType,
+	shape,
+	string,
+} = PropTypes;
 
 const { Option } = SingleSelect;
 
@@ -64,7 +73,7 @@ const Paginator = createClass({
 			SingleSelect component for the page size selector.
 		`,
 
-		showTotalObjects: bool`
+		showTotalObjects: oneOfType([bool, func])`
 			Show total count of objects.
 		`,
 
@@ -109,7 +118,6 @@ const Paginator = createClass({
 			hasPageSizeSelector: false,
 			isDisabled: false,
 			objectLabel: 'Object',
-			objectLabelPlural: 'Objects',
 			onPageSelect: _.noop,
 			selectedPageIndex: 0,
 			selectedPageSizeIndex: 0,
@@ -157,7 +165,12 @@ const Paginator = createClass({
 			<div style={style} className={cx('&', className)}>
 				{showTotalObjects && _.isNumber(totalCount) && (
 					<div className={cx('&-total-count')}>
-						{totalCount} {totalCount <= 1 ? objectLabel : objectLabelPlural}
+						{_.isFunction(showTotalObjects)
+							? showTotalObjects(totalCount)
+							: totalCount}{' '}
+						{totalCount <= 1
+							? objectLabel
+							: objectLabelPlural || `${objectLabel}s`}
 					</div>
 				)}
 				{hasPageSizeSelector ? (
