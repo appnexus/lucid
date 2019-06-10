@@ -11,7 +11,7 @@ import { getFirst, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-SidePanel');
 
-const { any, bool, func, oneOf, node, number, string } = PropTypes;
+const { any, bool, func, oneOf, node, number, string, oneOfType } = PropTypes;
 
 class SidePanel extends React.Component {
 	constructor(...args) {
@@ -201,7 +201,7 @@ SidePanel.propTypes = {
 		Sets the initial width in pixels. The actual width may change if the user
 		resizes it.
 	`,
-	topOffset: string`
+	topOffset: oneOfType([number, string])`
 		Sets the top margin for the panel. Defaults to \`0px\`.
 	`,
 	Header: any`
@@ -217,7 +217,7 @@ SidePanel.defaultProps = {
 	onResize: _.noop,
 	position: 'right',
 	preventBodyScroll: false,
-	topOffset: '0px',
+	topOffset: 0,
 	width: 240,
 };
 

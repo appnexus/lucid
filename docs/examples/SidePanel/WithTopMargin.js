@@ -26,7 +26,7 @@ export default class extends React.Component {
 				<SidePanel
 					isExpanded={this.state.isExpanded}
 					onCollapse={this.handleToggle}
-					topOffset={'50px'}
+					topOffset={50}
 				>
 					<SidePanel.Header>
 						<div>
