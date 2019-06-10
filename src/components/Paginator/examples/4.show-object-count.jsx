@@ -50,6 +50,20 @@ export default createClass({
 						objectLabelPlural='is more than one'
 					/>
 				</section>
+
+				<p>
+					Pass a custom formatter function as <code>showTotalObjects(count)</code> to
+					format the total count number.
+				</p>
+				<section>
+					<Paginator
+						hasPageSizeSelector
+						showTotalObjects={count => `--${count}--`}
+						totalCount={20}
+						objectLabel='object'
+						objectLabelPlural='objects'
+					/>
+				</section>
 			</div>
 		);
 	},
