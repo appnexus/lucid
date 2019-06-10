@@ -259,13 +259,15 @@ const storiesOfIcons = storiesOf('Icons', module)
 					style={{
 						display: 'grid',
 						gridGap: '10px',
-						gridTemplateColumns: 'repeat(10, auto)',
+						gridTemplateColumns: 'repeat(11, auto)',
+						justifyItems: 'start',
 					}}
 				>
 					<div>Plain</div>
 					<div>isClickable</div>
 					<div>isDisabled</div>
 					<div>isClickable + isDisabled</div>
+					<div>Button icon</div>
 					<div>Button</div>
 					<div>Button primary</div>
 					<div>Button link</div>
@@ -278,23 +280,26 @@ const storiesOfIcons = storiesOf('Icons', module)
 							<Icon isClickable />
 							<Icon isDisabled />
 							<Icon isClickable isDisabled />
-							<Button>
+							<Button isDisabled hasOnlyIcon>
+								<Icon />
+							</Button>
+							<Button isDisabled>
 								<Icon />
 								Button
 							</Button>
-							<Button kind='primary'>
+							<Button isDisabled kind='primary'>
 								<Icon />
 								Button
 							</Button>
-							<Button kind='link'>
+							<Button isDisabled kind='link'>
 								<Icon />
 								Button
 							</Button>
-							<Button kind='danger'>
+							<Button isDisabled kind='danger'>
 								<Icon />
 								Button
 							</Button>
-							<Button kind='invisible'>
+							<Button isDisabled kind='invisible'>
 								<Icon />
 								Button
 							</Button>
