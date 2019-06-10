@@ -21,7 +21,6 @@ import okaidia from 'react-syntax-highlighter/styles/prism/okaidia';
 import '../src/index.less';
 import ColorPalette from './color-palette';
 import { withPanelToggles } from '../.storybook/lucid-docs-addon/PanelToggles';
-import Button from '../src/components/Button/Button';
 
 registerLanguage('jsx', jsx);
 
@@ -117,7 +116,7 @@ class ArticlePage extends React.Component {
 					height: '100%',
 				}}
 			>
-				<a href='https://github.com/appnexus/lucid'>
+				<a href="https://github.com/appnexus/lucid">
 					<img
 						style={{
 							position: 'absolute',
@@ -125,10 +124,10 @@ class ArticlePage extends React.Component {
 							right: 0,
 							border: 0,
 						}}
-						src='//camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67'
-						srcSet='//aral.github.io/fork-me-on-github-retina-ribbons/right-graphite@2x.png 2x'
-						alt='Fork me on GitHub'
-						data-canonical-src='//s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png'
+						src="//camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67"
+						srcSet="//aral.github.io/fork-me-on-github-retina-ribbons/right-graphite@2x.png 2x"
+						alt="Fork me on GitHub"
+						data-canonical-src="//s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
 					/>
 				</a>
 				{children}
@@ -255,60 +254,27 @@ const storiesOfIcons = storiesOf('Icons', module)
 		() => (
 			<ArticlePage>
 				<h1>Icons</h1>
-				<div
+				<section
 					style={{
-						display: 'grid',
-						gridGap: '10px',
-						gridTemplateColumns: 'repeat(11, auto)',
-						justifyItems: 'start',
+						display: 'flex',
+						flexWrap: 'wrap',
 					}}
 				>
-					<div>Plain</div>
-					<div>isClickable</div>
-					<div>isDisabled</div>
-					<div>isClickable + isDisabled</div>
-					<div>Button icon</div>
-					<div>Button</div>
-					<div>Button primary</div>
-					<div>Button link</div>
-					<div>Button danger</div>
-					<div>Button invisible</div>
-					<div />
 					{_.map(filteredIcons, ({ name, component: Icon }) => (
-						<React.Fragment key={name}>
-							<Icon />
-							<Icon isClickable />
-							<Icon isDisabled />
-							<Icon isClickable isDisabled />
-							<Button isDisabled hasOnlyIcon>
-								<Icon />
-							</Button>
-							<Button isDisabled>
-								<Icon />
-								Button
-							</Button>
-							<Button isDisabled kind='primary'>
-								<Icon />
-								Button
-							</Button>
-							<Button isDisabled kind='link'>
-								<Icon />
-								Button
-							</Button>
-							<Button isDisabled kind='danger'>
-								<Icon />
-								Button
-							</Button>
-							<Button isDisabled kind='invisible'>
-								<Icon />
-								Button
-							</Button>
-							<LinkTo style={styles.link} kind='Icons' story={name}>
+						<div
+							key={name}
+							style={{
+								flexBasis: 256,
+								margin: 10,
+							}}
+						>
+							<Icon />{' '}
+							<LinkTo style={styles.link} kind="Icons" story={name}>
 								{name}
 							</LinkTo>
-						</React.Fragment>
+						</div>
 					))}
-				</div>
+				</section>
 			</ArticlePage>
 		),
 		{ options: articlePageOptions, panelToggles: undefined }
