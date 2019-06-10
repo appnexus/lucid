@@ -25,17 +25,24 @@ const InfoLightIcon = createClass({
 	},
 
 	render() {
-		const { className, ...passThroughs } = this.props;
+		const { className, isDisabled, isClickable, ...passThroughs } = this.props;
 
 		return (
 			<Icon
 				{...passThroughs}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
-				className={cx('&', className)}
+				isClickable={isClickable}
+				isDisabled={isDisabled}
+				className={cx(
+					'&',
+					isDisabled && '&-is-disabled',
+					isClickable && '&-is-clickable',
+					className
+				)}
 			>
-				<path d='M7.99 12.5v-6' />
+				<circle className={cx('&-background')} cx='8' cy='8' r='7.5' />
+				<path className={cx('&-stem')} d='M7.99 12.5v-6' />
 				<circle className={cx('&-dot')} cx='7.99' cy='4' r='.293' />
-				<circle cx='8' cy='8' r='7.5' />
 			</Icon>
 		);
 	},

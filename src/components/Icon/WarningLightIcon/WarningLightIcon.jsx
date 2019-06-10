@@ -25,17 +25,24 @@ const WarningLightIcon = createClass({
 	},
 
 	render() {
-		const { className, ...passThroughs } = this.props;
+		const { className, isDisabled, isClickable, ...passThroughs } = this.props;
 
 		return (
 			<Icon
 				{...passThroughs}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
-				className={cx('&', className)}
+				isClickable={isClickable}
+				isDisabled={isDisabled}
+				className={cx(
+					'&',
+					isDisabled && '&-is-disabled',
+					isClickable && '&-is-clickable',
+					className
+				)}
 			>
-				<path d='M7.99 6v4' />
-				<circle className={cx('&-period')} cx='7.99' cy='12' r='.293' />
-				<path d='M.5 15h15L8 .5z' />
+				<path className={cx('&-background')} d='M.5 15h15L8 .5z' />
+				<path className={cx('&-mark')} d='M7.99 6v4' />
+				<circle className={cx('&-mark')} cx='7.99' cy='12' r='.293' />
 			</Icon>
 		);
 	},

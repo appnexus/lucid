@@ -1,7 +1,8 @@
+import _ from 'lodash';
 import React from 'react';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
-import { createClass } from '../../../util/component-types';
+import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-MinusCircleIcon');
 
@@ -24,10 +25,21 @@ const MinusCircleIcon = createClass({
 	},
 
 	render() {
-		const { className, ...passThroughs } = this.props;
+		const { className, isDisabled, isClickable, ...passThroughs } = this.props;
 
 		return (
-			<Icon {...passThroughs} className={cx('&', className)}>
+			<Icon
+				{...omitProps(passThroughs, MinusCircleIcon, [], false)}
+				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
+				isClickable={isClickable}
+				isDisabled={isDisabled}
+				className={cx(
+					'&',
+					isDisabled && '&-is-disabled',
+					isClickable && '&-is-clickable',
+					className
+				)}
+			>
 				<circle className={cx('&-background')} cx='8' cy='8' r='7.5' />
 				<path className={cx('&-dash')} d='M4.5 8h7' />
 			</Icon>

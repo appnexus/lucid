@@ -25,13 +25,20 @@ const StarIcon = createClass({
 	},
 
 	render() {
-		const { className, ...passThroughs } = this.props;
+		const { className, isClickable, isDisabled, ...passThroughs } = this.props;
 
 		return (
 			<Icon
 				{...passThroughs}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
-				className={cx('&', className)}
+				isDisabled={isDisabled}
+				isClickable={isClickable}
+				className={cx(
+					'&',
+					isClickable && '&-is-clickable',
+					isDisabled && '&-is-disabled',
+					className
+				)}
 			>
 				<path
 					className={cx('&-background')}

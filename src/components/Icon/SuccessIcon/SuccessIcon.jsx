@@ -25,13 +25,20 @@ const SuccessIcon = createClass({
 	},
 
 	render() {
-		const { className, ...passThroughs } = this.props;
+		const { className, isDisabled, isClickable, ...passThroughs } = this.props;
 
 		return (
 			<Icon
 				{...omitProps(passThroughs, SuccessIcon, [], false)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
-				className={cx('&', className)}
+				isClickable={isClickable}
+				isDisabled={isDisabled}
+				className={cx(
+					'&',
+					isDisabled && '&-is-disabled',
+					isClickable && '&-is-clickable',
+					className
+				)}
 			>
 				<circle className={cx('&-background')} cx='8' cy='8' r='7.5' />
 				<path className={cx('&-check')} d='M4.5 8L7 10.5 11.5 6' />

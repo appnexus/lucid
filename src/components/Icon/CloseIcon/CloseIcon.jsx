@@ -25,14 +25,20 @@ const CloseIcon = createClass({
 	},
 
 	render() {
-		const { className, isClickable, ...passThroughs } = this.props;
+		const { className, isDisabled, isClickable, ...passThroughs } = this.props;
 
 		return (
 			<Icon
 				{...omitProps(passThroughs, CloseIcon)}
 				{..._.pick(passThroughs, _.keys(Icon.propTypes))}
 				isClickable={isClickable}
-				className={cx('&', isClickable && '&-is-clickable', className)}
+				isDisabled={isDisabled}
+				className={cx(
+					'&',
+					isDisabled && '&-is-disabled',
+					isClickable && '&-is-clickable',
+					className
+				)}
 			>
 				<path d='M.5.5l15 15m0-15l-15 15' />
 			</Icon>

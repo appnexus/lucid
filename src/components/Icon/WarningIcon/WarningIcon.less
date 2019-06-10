@@ -2,8 +2,15 @@
 @import (reference) '../../../styles/mixins.less';
 
 .@{prefix}-WarningIcon {
+	stroke: @featured-color-warning;
+
 	&-background {
-		fill: @color-primary;
+		fill: @featured-color-warning;
+	}
+
+	&-is-clickable:not(&-is-disabled):hover &-background {
+		stroke: @featured-color-warning-colorHover;
+		fill: @featured-color-warning-colorHover;
 	}
 
 	&-mark {

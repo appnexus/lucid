@@ -21,6 +21,7 @@ import okaidia from 'react-syntax-highlighter/styles/prism/okaidia';
 import '../src/index.less';
 import ColorPalette from './color-palette';
 import { withPanelToggles } from '../.storybook/lucid-docs-addon/PanelToggles';
+import Button from '../src/components/Button/Button';
 
 registerLanguage('jsx', jsx);
 
@@ -254,29 +255,55 @@ const storiesOfIcons = storiesOf('Icons', module)
 		() => (
 			<ArticlePage>
 				<h1>Icons</h1>
-				<section
+				<div
 					style={{
-						display: 'flex',
-						flexWrap: 'wrap',
+						display: 'grid',
+						gridGap: '10px',
+						gridTemplateColumns: 'repeat(10, auto)',
 					}}
 				>
+					<div>Plain</div>
+					<div>isClickable</div>
+					<div>isDisabled</div>
+					<div>isClickable + isDisabled</div>
+					<div>Button</div>
+					<div>Button primary</div>
+					<div>Button link</div>
+					<div>Button danger</div>
+					<div>Button invisible</div>
+					<div />
 					{_.map(filteredIcons, ({ name, component: Icon }) => (
-						<div
-							key={name}
-							style={{
-								flexBasis: 256,
-								margin: 10,
-							}}
-						>
+						<React.Fragment key={name}>
 							<Icon />
 							<Icon isClickable />
 							<Icon isDisabled />
+							<Icon isClickable isDisabled />
+							<Button>
+								<Icon />
+								Button
+							</Button>
+							<Button kind='primary'>
+								<Icon />
+								Button
+							</Button>
+							<Button kind='link'>
+								<Icon />
+								Button
+							</Button>
+							<Button kind='danger'>
+								<Icon />
+								Button
+							</Button>
+							<Button kind='invisible'>
+								<Icon />
+								Button
+							</Button>
 							<LinkTo style={styles.link} kind='Icons' story={name}>
 								{name}
 							</LinkTo>
-						</div>
+						</React.Fragment>
 					))}
-				</section>
+				</div>
 			</ArticlePage>
 		),
 		{ options: articlePageOptions, panelToggles: undefined }

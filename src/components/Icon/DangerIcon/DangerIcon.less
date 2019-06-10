@@ -12,7 +12,7 @@
 		fill: @featured-color-danger;
 	}
 
-	&-is-clickable:hover &-background {
+	&-is-clickable:not(&-is-disabled):hover &-background {
 		stroke: @featured-color-danger-colorHover;
 		fill: @featured-color-danger-colorHover;
 	}

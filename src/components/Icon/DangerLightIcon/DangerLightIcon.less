@@ -4,12 +4,12 @@
 .@{prefix}-DangerLightIcon {
 	stroke: @featured-color-danger;
 
-	&-is-clickable:hover &-background {
+	&-is-clickable:hover:not(&-is-disabled) &-background {
 		stroke: @featured-color-danger-colorHover;
 		fill: @featured-color-danger-colorHover;
 	}
 
-	&-is-clickable:hover &-x {
+	&-is-clickable:hover:not(&-is-disabled) &-x {
 		stroke: @color-white;
 	}
 }

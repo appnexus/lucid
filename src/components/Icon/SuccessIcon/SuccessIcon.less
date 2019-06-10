@@ -2,8 +2,15 @@
 @import (reference) '../../../styles/mixins.less';
 
 .@{prefix}-SuccessIcon {
+	stroke: @featured-color-success;
+
 	&-background {
-		fill: @color-primary;
+		fill: @featured-color-success;
+	}
+
+	&-is-clickable:not(&-is-disabled):hover &-background {
+		stroke: @featured-color-success-colorHover;
+		fill: @featured-color-success-colorHover;
 	}
 
 	&-check {

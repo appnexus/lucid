@@ -2,8 +2,21 @@
 @import (reference) '../../../styles/mixins.less';
 
 .@{prefix}-WarningLightIcon {
-	&-period {
-		fill: @color-primary;
+	stroke: @featured-color-warning;
+
+	&-mark {
+		stroke: @featured-color-warning;
+		fill: @featured-color-warning;
+	}
+
+	&-is-clickable:not(&-is-disabled):hover &-mark {
+		stroke: @color-white;
+		fill: @color-white;
+	}
+
+	&-is-clickable:not(&-is-disabled):hover &-background {
+		stroke: @featured-color-warning-colorHover;
+		fill: @featured-color-warning-colorHover;
 	}
 }
 
