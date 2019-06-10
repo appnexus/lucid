@@ -176,11 +176,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 15
     className="lucid-Tag-other-children"
   >
     Amet
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -194,11 +194,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 16
     className="lucid-Tag-other-children"
   >
     nam
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -212,11 +212,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 17
     className="lucid-Tag-other-children"
   >
     beatae
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -230,11 +230,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 18
     className="lucid-Tag-other-children"
   >
     quibusdam
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -248,11 +248,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 19
     className="lucid-Tag-other-children"
   >
     repudiandae
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -266,11 +266,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 20
     className="lucid-Tag-other-children"
   >
     facilis,
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -284,11 +284,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 21
     className="lucid-Tag-other-children"
   >
     ratione
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -302,11 +302,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 22
     className="lucid-Tag-other-children"
   >
     ratione.
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -320,11 +320,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 23
     className="lucid-Tag-other-children"
   >
     Hic
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -338,11 +338,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 24
     className="lucid-Tag-other-children"
   >
     molestias
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -356,11 +356,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 25
     className="lucid-Tag-other-children"
   >
     nobis
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -374,11 +374,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 26
     className="lucid-Tag-other-children"
   >
     autem
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -392,11 +392,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 27
     className="lucid-Tag-other-children"
   >
     sapiente
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -410,11 +410,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 28
     className="lucid-Tag-other-children"
   >
     vitae.
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -611,11 +611,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 38
     className="lucid-Tag-other-children"
   >
     Apples
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -629,11 +629,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 39
     className="lucid-Tag-other-children"
   >
     Oranges
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -647,11 +647,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 40
     className="lucid-Tag-other-children"
   >
     Bananas
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -704,11 +704,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 42
     className="lucid-Tag-other-children"
   >
     Carrots
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -722,11 +722,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 43
     className="lucid-Tag-other-children"
   >
     Spinach
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -740,11 +740,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 44
     className="lucid-Tag-other-children"
   >
     Celery
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -758,11 +758,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 45
     className="lucid-Tag-other-children"
   >
     Fruits
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
   <Tag
@@ -857,11 +857,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 46
     className="lucid-Tag-other-children"
   >
     Apples
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -875,11 +875,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 47
     className="lucid-Tag-other-children"
   >
     Oranges
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -893,11 +893,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 48
     className="lucid-Tag-other-children"
   >
     Bananas
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -911,11 +911,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 49
     className="lucid-Tag-other-children"
   >
     Apples
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -929,11 +929,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 50
     className="lucid-Tag-other-children"
   >
     Oranges
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -947,11 +947,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 51
     className="lucid-Tag-other-children"
   >
     Bananas
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -965,11 +965,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 52
     className="lucid-Tag-other-children"
   >
     Apples
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -983,11 +983,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 53
     className="lucid-Tag-other-children"
   >
     Oranges
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -1001,11 +1001,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 54
     className="lucid-Tag-other-children"
   >
     Bananas
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -1019,11 +1019,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 55
     className="lucid-Tag-other-children"
   >
     Vegetables
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
   <Tag
@@ -1064,11 +1064,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 56
     className="lucid-Tag-other-children"
   >
     Carrots
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -1082,11 +1082,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 57
     className="lucid-Tag-other-children"
   >
     Spinach
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -1100,11 +1100,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 58
     className="lucid-Tag-other-children"
   >
     Celery
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -1118,11 +1118,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 59
     className="lucid-Tag-other-children"
   >
     Produce
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
   <Tag
@@ -1215,11 +1215,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 60
     className="lucid-Tag-other-children"
   >
     Fruits
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
   <Tag
@@ -1268,11 +1268,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 61
     className="lucid-Tag-other-children"
   >
     Apples
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -1286,11 +1286,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 62
     className="lucid-Tag-other-children"
   >
     Oranges
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -1304,11 +1304,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 63
     className="lucid-Tag-other-children"
   >
     Bananas
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -1381,11 +1381,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 66
     className="lucid-Tag-other-children"
   >
     Carrots
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -1399,11 +1399,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 67
     className="lucid-Tag-other-children"
   >
     Spinach
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -1417,11 +1417,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 68
     className="lucid-Tag-other-children"
   >
     Celery
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -1538,11 +1538,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 71
     className="lucid-Tag-other-children"
   >
     Fruits
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
   <Tag
@@ -1591,11 +1591,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 72
     className="lucid-Tag-other-children"
   >
     Apples
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -1609,11 +1609,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 73
     className="lucid-Tag-other-children"
   >
     Oranges
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -1627,11 +1627,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 74
     className="lucid-Tag-other-children"
   >
     Bananas
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -1704,11 +1704,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 77
     className="lucid-Tag-other-children"
   >
     Carrots
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -1722,11 +1722,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 78
     className="lucid-Tag-other-children"
   >
     Spinach
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -1740,11 +1740,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 79
     className="lucid-Tag-other-children"
   >
     Celery
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -3646,11 +3646,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Last Man on Earth
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
   <Tag
@@ -3674,11 +3674,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Phil
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -3692,11 +3692,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Last Woman on Earth
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
   <Tag
@@ -3720,11 +3720,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Carol
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -3738,11 +3738,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Star Wars
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
   <Tag
@@ -3946,11 +3946,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Ask Aak
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -3964,11 +3964,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Admiral Gial Ackbar
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -3982,11 +3982,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Acros-Krik
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4000,11 +4000,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Ak-Rev
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4018,11 +4018,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Stass Allie
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4036,11 +4036,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Almec
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4054,11 +4054,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Mas Amedda
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4072,11 +4072,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Amee
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4090,11 +4090,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Padmé Amidala
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4108,11 +4108,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Cassian Andor
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4126,11 +4126,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Bail Antilles
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4144,11 +4144,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Raymus Antilles
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4162,11 +4162,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Wedge Antilles
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4180,11 +4180,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Queen Apailana
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4198,11 +4198,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Commander Appo
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4216,11 +4216,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Passel Argente
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4234,11 +4234,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Faro Argyus
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4252,11 +4252,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Seti Ashgad
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4270,11 +4270,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     AZI-3
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4288,11 +4288,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Lord of the Rings
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
   <Tag
@@ -4656,11 +4656,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Adrahil
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4674,11 +4674,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Adrahil II
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4692,11 +4692,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Aegnor
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4710,11 +4710,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Aerandir
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4728,11 +4728,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Aghan
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4746,11 +4746,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Aglahad
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4764,11 +4764,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Ailinel
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4782,11 +4782,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Alatar
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4800,11 +4800,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Aldamir
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4818,11 +4818,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Aldor
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4836,11 +4836,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Almarian
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4854,11 +4854,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Almiel
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4872,11 +4872,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Amandil
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4890,11 +4890,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Amdír
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4908,11 +4908,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Amlaith
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4926,11 +4926,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Amrod
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4944,11 +4944,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Amroth
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4962,11 +4962,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Anardil
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4980,11 +4980,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Anborn
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -4998,11 +4998,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Ancalagon The Black
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5016,11 +5016,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Andróg
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5034,11 +5034,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Angbor
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5052,11 +5052,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Angelimar
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5070,11 +5070,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Angelimir
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5088,11 +5088,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Angrod
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5106,11 +5106,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Anárion
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5124,11 +5124,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Ar-Adûnakhôr
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5142,11 +5142,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Ar-Gimilzôr
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5160,11 +5160,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Ar-Pharazôn
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5178,11 +5178,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Ar-Sakalthôr
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5196,11 +5196,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Ar-Zimrathôn
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5214,11 +5214,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Arador
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5232,11 +5232,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Araglas
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5250,11 +5250,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Aragorn I
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5268,11 +5268,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Aragorn II Elessar
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5286,11 +5286,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Star Trek
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
   <Tag
@@ -5404,11 +5404,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Jonathan Archer
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5422,11 +5422,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Ayala
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5440,11 +5440,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Azan
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5458,11 +5458,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Reginald Barclay
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5476,11 +5476,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Lieutenant, JG (TNG,FCT)
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5494,11 +5494,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Engineering Officer (TNG,Movies)
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5512,11 +5512,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Bareil Antos
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5530,11 +5530,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Julian Bashir
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5548,11 +5548,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Season 6 (TNG)
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>
@@ -5566,11 +5566,11 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
     className="lucid-Tag-other-children"
   >
     Lieutenant, JG (S1-3)
-    <CrossIcon
+    <CloseIcon
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      presetSize="small"
+      size={8}
     />
   </span>
 </div>

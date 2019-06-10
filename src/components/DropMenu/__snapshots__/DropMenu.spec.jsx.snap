@@ -559,9 +559,8 @@ exports[`DropMenu [common] example testing should match snapshot(s) for 07.actio
         tabIndex={0}
       >
         Colors
-        <CaretIcon
+        <ChevronIcon
           direction="down"
-          viewBox="0 3 16 8"
         />
       </div>
     </ContextMenu.Target>

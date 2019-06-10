@@ -4,61 +4,64 @@ exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DangerLightIcon"
-  isBadge={false}
   isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
-  <path
+  <circle
     className="lucid-DangerLightIcon-background"
-    d="M8 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"
+    cx="8"
+    cy="8"
+    r="7.5"
   />
   <path
     className="lucid-DangerLightIcon-x"
-    d="M9.163 8l2.48 2.465-1.17 1.17-2.466-2.48-2.48 2.48-1.17-1.17L6.837 8l-2.45-2.463 1.17-1.17 2.45 2.464 2.464-2.464 1.17 1.17L9.164 8zM16 8c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8zm-1 0c0-3.86-3.14-7-7-7S1 4.14 1 8s3.14 7 7 7 7-3.14 7-7z"
+    d="M5.5 5.5l5 5m0-5l-5 5"
   />
 </Icon>
 `;
 
-exports[`DangerLightIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
+exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-DangerLightIcon lucid-DangerLightIcon-is-clickable"
-  isBadge={false}
   isClickable={true}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
-  <path
+  <circle
     className="lucid-DangerLightIcon-background"
-    d="M8 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"
+    cx="8"
+    cy="8"
+    r="7.5"
   />
   <path
     className="lucid-DangerLightIcon-x"
-    d="M9.163 8l2.48 2.465-1.17 1.17-2.466-2.48-2.48 2.48-1.17-1.17L6.837 8l-2.45-2.463 1.17-1.17 2.45 2.464 2.464-2.464 1.17 1.17L9.164 8zM16 8c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8zm-1 0c0-3.86-3.14-7-7-7S1 4.14 1 8s3.14 7 7 7 7-3.14 7-7z"
+    d="M5.5 5.5l5 5m0-5l-5 5"
   />
 </Icon>
 `;
 
-exports[`DangerLightIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
+exports[`DangerLightIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
 <Icon
   aspectRatio="xMidYMid meet"
-  className="lucid-DangerLightIcon"
-  isBadge={false}
+  className="lucid-DangerLightIcon lucid-DangerLightIcon-is-disabled"
   isClickable={false}
   isDisabled={true}
   size={16}
   viewBox="0 0 16 16"
 >
-  <path
+  <circle
     className="lucid-DangerLightIcon-background"
-    d="M8 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"
+    cx="8"
+    cy="8"
+    r="7.5"
   />
   <path
-    className="lucid-DangerLightIcon-x lucid-DangerLightIcon-x-is-disabled"
-    d="M9.163 8l2.48 2.465-1.17 1.17-2.466-2.48-2.48 2.48-1.17-1.17L6.837 8l-2.45-2.463 1.17-1.17 2.45 2.464 2.464-2.464 1.17 1.17L9.164 8zM16 8c0 4.418-3.582 8-8 8s-8-3.582-8-8 3.582-8 8-8 8 3.582 8 8zm-1 0c0-3.86-3.14-7-7-7S1 4.14 1 8s3.14 7 7 7 7-3.14 7-7z"
+    className="lucid-DangerLightIcon-x"
+    d="M5.5 5.5l5 5m0-5l-5 5"
   />
 </Icon>
 `;

@@ -62,11 +62,10 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         onClick={[Function]}
         type="button"
       >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
+        <ChevronIcon
+          className="lucid-SplitButton-ChevronIcon"
           direction="down"
           size={8}
-          viewBox="0 3 16 8"
         />
       </Button>
     </ButtonGroup>
@@ -154,11 +153,10 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 01.de
         onClick={[Function]}
         type="button"
       >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
+        <ChevronIcon
+          className="lucid-SplitButton-ChevronIcon"
           direction="down"
           size={8}
-          viewBox="0 3 16 8"
         />
       </Button>
     </ButtonGroup>
@@ -244,11 +242,10 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 03.di
         onClick={[Function]}
         type="button"
       >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
+        <ChevronIcon
+          className="lucid-SplitButton-ChevronIcon"
           direction="down"
           size={8}
-          viewBox="0 3 16 8"
         />
       </Button>
     </ButtonGroup>
@@ -344,11 +341,10 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 04.up
         onClick={[Function]}
         type="button"
       >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
+        <ChevronIcon
+          className="lucid-SplitButton-ChevronIcon"
           direction="up"
           size={8}
-          viewBox="0 3 16 8"
         />
       </Button>
     </ButtonGroup>
@@ -445,11 +441,10 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
         size="large"
         type="button"
       >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
+        <ChevronIcon
+          className="lucid-SplitButton-ChevronIcon"
           direction="down"
           size={8}
-          viewBox="0 3 16 8"
         />
       </Button>
     </ButtonGroup>
@@ -538,11 +533,10 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
         size="small"
         type="button"
       >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
+        <ChevronIcon
+          className="lucid-SplitButton-ChevronIcon"
           direction="down"
           size={8}
-          viewBox="0 3 16 8"
         />
       </Button>
     </ButtonGroup>
@@ -631,11 +625,10 @@ exports[`SplitButton [common] example testing should match snapshot(s) for 4.siz
         size="short"
         type="button"
       >
-        <CaretIcon
-          className="lucid-SplitButton-CaretIcon"
+        <ChevronIcon
+          className="lucid-SplitButton-ChevronIcon"
           direction="down"
           size={8}
-          viewBox="0 3 16 8"
         />
       </Button>
     </ButtonGroup>

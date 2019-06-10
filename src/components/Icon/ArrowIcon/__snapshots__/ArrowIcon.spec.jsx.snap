@@ -4,14 +4,13 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
-  isBadge={false}
   isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
   <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
+    d="M0 8h15.5m-6-6l6 6-6 6"
   />
 </Icon>
 `;
@@ -20,14 +19,13 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-up"
-  isBadge={false}
   isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
   <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
+    d="M0 8h15.5m-6-6l6 6-6 6"
   />
 </Icon>
 `;
@@ -36,14 +34,13 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-down"
-  isBadge={false}
   isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
   <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
+    d="M0 8h15.5m-6-6l6 6-6 6"
   />
 </Icon>
 `;
@@ -51,15 +48,14 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.default 4`] = `
 <Icon
   aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
-  isBadge={false}
+  className="lucid-ArrowIcon lucid-ArrowIcon-is-right"
   isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
   <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
+    d="M0 8h15.5m-6-6l6 6-6 6"
   />
 </Icon>
 `;
@@ -67,367 +63,14 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
 exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.default 5`] = `
 <Icon
   aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-right"
-  isBadge={false}
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.default 6`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-up"
-  isBadge={true}
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.default 7`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-down"
-  isBadge={true}
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.default 8`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
-  isBadge={true}
   isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
   <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.default 9`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-right"
-  isBadge={true}
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
-  isBadge={false}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 2.clickable 2`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-up"
-  isBadge={false}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 2.clickable 3`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-down"
-  isBadge={false}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 2.clickable 4`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
-  isBadge={false}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 2.clickable 5`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-right"
-  isBadge={false}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 2.clickable 6`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-up"
-  isBadge={true}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 2.clickable 7`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-down"
-  isBadge={true}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 2.clickable 8`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
-  isBadge={true}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 2.clickable 9`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-right"
-  isBadge={true}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
-  isBadge={false}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 3.disabled 2`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-up"
-  isBadge={false}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 3.disabled 3`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-down"
-  isBadge={false}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 3.disabled 4`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
-  isBadge={false}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 3.disabled 5`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-right"
-  isBadge={false}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 3.disabled 6`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-up"
-  isBadge={true}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 3.disabled 7`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-down"
-  isBadge={true}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 3.disabled 8`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
-  isBadge={true}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
-  />
-</Icon>
-`;
-
-exports[`ArrowIcon [common] example testing should match snapshot(s) for 3.disabled 9`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ArrowIcon lucid-ArrowIcon-is-right"
-  isBadge={true}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M13.646 8.354c-1.32 1.317-1.975 1.976-3.293 3.293-.194.194-.353.128-.353-.147V9H3c-.552 0-1-.448-1-1s.448-1 1-1h7V4.5c0-.275.16-.34.354-.146 1.318 1.317 1.974 1.976 3.293 3.293.194.194.194.512 0 .707z"
+    d="M0 8h15.5m-6-6l6 6-6 6"
   />
 </Icon>
 `;

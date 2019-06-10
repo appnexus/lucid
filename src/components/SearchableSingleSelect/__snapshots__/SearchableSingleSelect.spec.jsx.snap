@@ -3,6 +3,11 @@
 exports[`SearchableSingleSelect [common] example testing should match snapshot(s) for 01.basic 1`] = `
 <div
   className="lucid-SearchableSingleSelect"
+  style={
+    Object {
+      "maxWidth": "100px",
+    }
+  }
 >
   <DropMenu
     ContextMenu={
@@ -484,7 +489,6 @@ exports[`SearchableSingleSelect [common] example testing should match snapshot(s
     >
       <LoadingIcon
         aspectRatio="xMidYMid meet"
-        isBadge={false}
         isClickable={false}
         isDisabled={false}
         size={16}

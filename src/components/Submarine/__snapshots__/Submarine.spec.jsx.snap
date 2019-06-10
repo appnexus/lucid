@@ -23,14 +23,19 @@ exports[`Submarine [common] example testing should match snapshot(s) for 1.defau
       <div
         className="lucid-Submarine-Bar-Title"
       />
-      <div
+      <Button
         className="lucid-Submarine-expander"
-        onMouseDown={[Function]}
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Submarine-Bar-content"
@@ -77,14 +82,19 @@ exports[`Submarine [common] example testing should match snapshot(s) for 2.disab
       <div
         className="lucid-Submarine-Bar-Title"
       />
-      <div
+      <Button
         className="lucid-Submarine-expander"
-        onMouseDown={[Function]}
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Submarine-Bar-content"
@@ -131,14 +141,19 @@ exports[`Submarine [common] example testing should match snapshot(s) for 3.initi
       <div
         className="lucid-Submarine-Bar-Title"
       />
-      <div
+      <Button
         className="lucid-Submarine-expander"
-        onMouseDown={[Function]}
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Submarine-Bar-content"
@@ -185,14 +200,19 @@ exports[`Submarine [common] example testing should match snapshot(s) for 4.posit
       <div
         className="lucid-Submarine-Bar-Title"
       />
-      <div
+      <Button
         className="lucid-Submarine-expander"
-        onMouseDown={[Function]}
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="up"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Submarine-Bar-content"
@@ -244,14 +264,19 @@ exports[`Submarine [common] example testing should match snapshot(s) for 5.custo
           Edit
         </button>
       </div>
-      <div
+      <Button
         className="lucid-Submarine-expander"
-        onMouseDown={[Function]}
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Submarine-Bar-content"
@@ -314,14 +339,19 @@ exports[`Submarine [common] example testing should match snapshot(s) for 6.custo
       <div
         className="lucid-Submarine-Bar-Title"
       />
-      <div
+      <Button
         className="lucid-Submarine-expander"
-        onMouseDown={[Function]}
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Submarine-Bar-content"
@@ -368,14 +398,19 @@ exports[`Submarine [common] example testing should match snapshot(s) for 7.contr
       <div
         className="lucid-Submarine-Bar-Title"
       />
-      <div
+      <Button
         className="lucid-Submarine-expander"
-        onMouseDown={[Function]}
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="up"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Submarine-Bar-content"
@@ -422,14 +457,19 @@ exports[`Submarine [common] example testing should match snapshot(s) for 8.handl
       <div
         className="lucid-Submarine-Bar-Title"
       />
-      <div
+      <Button
         className="lucid-Submarine-expander"
-        onMouseDown={[Function]}
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Submarine-Bar-content"
@@ -476,14 +516,19 @@ exports[`Submarine [common] example testing should match snapshot(s) for 9.neste
       <div
         className="lucid-Submarine-Bar-Title"
       />
-      <div
+      <Button
         className="lucid-Submarine-expander"
-        onMouseDown={[Function]}
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="up"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Submarine-Bar-content"
@@ -539,14 +584,19 @@ exports[`Submarine [common] example testing should match snapshot(s) for 9.neste
       <div
         className="lucid-Submarine-Bar-Title"
       />
-      <div
+      <Button
         className="lucid-Submarine-expander"
-        onMouseDown={[Function]}
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Submarine-Bar-content"
@@ -595,14 +645,19 @@ exports[`Submarine [common] example testing should match snapshot(s) for 10.hidd
       >
         This can be totally hidden from view
       </div>
-      <div
+      <Button
         className="lucid-Submarine-expander"
-        onMouseDown={[Function]}
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Submarine-Bar-content"
@@ -651,14 +706,19 @@ exports[`Submarine [common] example testing should match snapshot(s) for 11-titl
       >
         Submarine Title Stays While Collapsed!
       </div>
-      <div
+      <Button
         className="lucid-Submarine-expander"
-        onMouseDown={[Function]}
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
       >
         <ChevronIcon
           direction="down"
         />
-      </div>
+      </Button>
     </div>
     <div
       className="lucid-Submarine-Bar-content"

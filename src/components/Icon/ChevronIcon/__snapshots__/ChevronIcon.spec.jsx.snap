@@ -4,14 +4,13 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
-  isBadge={false}
   isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
   <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
+    d="M.5 4.5l7.5 7 7.5-7"
   />
 </Icon>
 `;
@@ -20,14 +19,13 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-up"
-  isBadge={false}
   isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
   <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
+    d="M.5 4.5l7.5 7 7.5-7"
   />
 </Icon>
 `;
@@ -36,14 +34,13 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
-  isBadge={false}
   isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
   <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
+    d="M.5 4.5l7.5 7 7.5-7"
   />
 </Icon>
 `;
@@ -52,14 +49,13 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-left"
-  isBadge={false}
   isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
   <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
+    d="M.5 4.5l7.5 7 7.5-7"
   />
 </Icon>
 `;
@@ -68,366 +64,13 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
 <Icon
   aspectRatio="xMidYMid meet"
   className="lucid-ChevronIcon lucid-ChevronIcon-is-right"
-  isBadge={false}
   isClickable={false}
   isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
   <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.default 6`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-up"
-  isBadge={true}
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.default 7`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
-  isBadge={true}
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.default 8`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-left"
-  isBadge={true}
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.default 9`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-right"
-  isBadge={true}
-  isClickable={false}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
-  isBadge={false}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.clickable 2`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-up"
-  isBadge={false}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.clickable 3`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
-  isBadge={false}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.clickable 4`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-left"
-  isBadge={false}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.clickable 5`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-right"
-  isBadge={false}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.clickable 6`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-up"
-  isBadge={true}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.clickable 7`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
-  isBadge={true}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.clickable 8`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-left"
-  isBadge={true}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 2.clickable 9`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-right"
-  isBadge={true}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
-  isBadge={false}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.disabled 2`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-up"
-  isBadge={false}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.disabled 3`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
-  isBadge={false}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.disabled 4`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-left"
-  isBadge={false}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.disabled 5`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-right"
-  isBadge={false}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.disabled 6`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-up"
-  isBadge={true}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.disabled 7`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
-  isBadge={true}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.disabled 8`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-left"
-  isBadge={true}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
-  />
-</Icon>
-`;
-
-exports[`ChevronIcon [common] example testing should match snapshot(s) for 3.disabled 9`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-ChevronIcon lucid-ChevronIcon-is-right"
-  isBadge={true}
-  isClickable={false}
-  isDisabled={true}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    d="M12.293 5.293l1.414 1.414-5 5c-.39.39-1.024.39-1.414 0l-5-5 1.414-1.414L8 9.586l4.293-4.293z"
+    d="M.5 4.5l7.5 7 7.5-7"
   />
 </Icon>
 `;
