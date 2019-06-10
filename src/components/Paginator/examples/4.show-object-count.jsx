@@ -32,11 +32,11 @@ export default createClass({
 					/>
 				</section>
 
-				<p>
-					The label can be changed using <code>objectLabel</code> and{' '}
-					<code>objectLabelPlural</code>
-				</p>
 				<section>
+					<p>
+						The label can be changed using <code>objectLabel</code> and{' '}
+						<code>objectLabelPlural</code>
+					</p>
 					<Paginator
 						hasPageSizeSelector
 						showTotalObjects
@@ -49,13 +49,25 @@ export default createClass({
 						totalCount={2}
 						objectLabelPlural='is more than one'
 					/>
+
+					<p>
+						<code>objectLabelPlural</code> will default to appending an "s"
+						after <code>objectLabel</code>.
+					</p>
+					<Paginator
+						hasPageSizeSelector
+						showTotalObjects
+						totalCount={20}
+						objectLabel='dog'
+					/>
 				</section>
 
-				<p>
-					Pass a custom formatter function as <code>showTotalObjects(count)</code> to
-					format the total count number.
-				</p>
 				<section>
+					<p>
+						Pass a custom formatter function as{' '}
+						<code>showTotalObjects(count)</code> to format the total count
+						number.
+					</p>
 					<Paginator
 						hasPageSizeSelector
 						showTotalObjects={count => `--${count}--`}

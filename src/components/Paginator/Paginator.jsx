@@ -118,7 +118,6 @@ const Paginator = createClass({
 			hasPageSizeSelector: false,
 			isDisabled: false,
 			objectLabel: 'Object',
-			objectLabelPlural: 'Objects',
 			onPageSelect: _.noop,
 			selectedPageIndex: 0,
 			selectedPageSizeIndex: 0,
@@ -169,7 +168,9 @@ const Paginator = createClass({
 						{_.isFunction(showTotalObjects)
 							? showTotalObjects(totalCount)
 							: totalCount}{' '}
-						{totalCount <= 1 ? objectLabel : objectLabelPlural}
+						{totalCount <= 1
+							? objectLabel
+							: objectLabelPlural || `${objectLabel}s`}
 					</div>
 				)}
 				{hasPageSizeSelector ? (
