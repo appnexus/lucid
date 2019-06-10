@@ -7,7 +7,7 @@ import {
 	filterTypes,
 	omitProps,
 } from '../../util/component-types';
-import CaretIcon from '../Icon/CaretIcon/CaretIcon';
+import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
 const cx = lucidClassNames.bind('&-Table');
@@ -348,10 +348,10 @@ const Th = createClass({
 					<div className={cx('&-Th-inner-content')}>{children}</div>
 					{isSorted || isSortable ? (
 						<div className={cx('&-Th-inner-caret')}>
-							<CaretIcon
+							<ArrowIcon
 								className={cx('&-sort-icon')}
 								direction={sortDirection}
-								size={6}
+								size={10}
 							/>
 						</div>
 					) : null}
