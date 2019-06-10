@@ -203,7 +203,6 @@ const VerticalListMenu = createClass({
 									{hasExpander ? (
 										<div
 											className={cx('&-Item-expander')}
-											kind='invisible'
 											onClick={_.partial(
 												this.handleToggle,
 												index,
