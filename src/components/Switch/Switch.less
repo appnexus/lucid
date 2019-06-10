@@ -73,30 +73,51 @@
 		border: 1px solid @color-primary;
 	}
 
-	&-is-selected &-visualization-container {
-		background-color: @color-white;
-		border: 1px solid @color-primary;
-	}
+	&-is-selected {
+		.@{prefix}-Switch-visualization-container {
+			background-color: @color-white;
+			border: 1px solid @color-primary;
+		}
 
-	&-is-selected &-visualization-handle {
-		border: none;
-		background-color: @color-primary;
-		transform: @Switch-selected-transform;
+		.@{prefix}-Switch-visualization-handle {
+			border: none;
+			background-color: @color-primary;
+			transform: @Switch-selected-transform;
+		}
+
+		&:hover {
+			& > span.@{prefix}-Switch-visualization-container {
+				opacity: .80;
+			}
+
+			& > span.@{prefix}-Switch-visualization-handle {
+				border: none;
+				background-color: @color-primary;
+				opacity: .80;
+			}
+		}
 	}
 
 	&-is-disabled {
 
-		& .@{prefix}-Switch-visualization-container,
-		& .@{prefix}-Switch-visualization-handle {
+		& .@{prefix}-Switch-visualization-container {
 			background-color: @Switch-disabled-color;
 			border-color: @Switch-disabled-border-color;
-			// border: none;
+		}
+
+		& .@{prefix}-Switch-visualization-handle {
+			background-color: transparent;
+			border-color: @Switch-disabled-border-color;
 		}
 
 		&:hover {
-			& .@{prefix}-Switch-visualization-container,
-			& .@{prefix}-Switch-visualization-handle {
+			& .@{prefix}-Switch-visualization-container {
 				background-color: @Switch-disabled-color;
+				border-color: @Switch-disabled-border-color;
+			}
+
+			& .@{prefix}-Switch-visualization-handle {
+				background-color: transparent;
 				border-color: @Switch-disabled-border-color;
 			}
 		}
@@ -194,22 +215,11 @@
 		}
 	}
 
-	// &-is-selected &-native:focus ~ &-visualization-handle {
-	// 	transform: @Switch-selected-transform @Switch-handle-scale;
-	// }
-
-	// &-is-selected:hover &-visualization-glow {
-	// 	transform: @Switch-selected-transform @Switch-glow-scale;
-	// }
-
 	&-is-selected:hover &-visualization-handle {
 		// transform: @Switch-selected-transform @Switch-handle-scale;
 		background-color: white;
 		border: 1px solid @color-primary;
 	}
 
-	// &-native:focus ~ &-visualization-handle {
-	// 	transform: @Switch-handle-scale;
-	// }
 }
 
