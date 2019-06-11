@@ -394,6 +394,13 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       <div>
         Dolor nihil delectus numquam laudantium nisi Minus accusantium hic consequatur accusantium assumenda illum quod! Praesentium qui vel nemo ea reiciendis. Accusantium officiis molestiae delectus nesciunt aperiam Fugit ipsam esse accusamus.
       </div>
+      <div>
+        <a
+          href="#"
+        >
+          Click Me
+        </a>
+      </div>
     </span>
     <CloseIcon
       className="lucid-Banner-close"
@@ -511,7 +518,12 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     <span
       className="lucid-Banner-content"
     >
-      Warning
+      Warning 
+      <a
+        href="#"
+      >
+        Don't Click Here
+      </a>
     </span>
     <CloseIcon
       className="lucid-Banner-close"
