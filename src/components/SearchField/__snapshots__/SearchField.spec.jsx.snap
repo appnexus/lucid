@@ -22,6 +22,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 1.def
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -49,6 +50,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 2.int
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -77,6 +79,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 3.pla
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -104,6 +107,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 4.dis
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -166,6 +170,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 6.cus
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -196,6 +201,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 7.val
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -223,6 +229,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   >
     <SearchIcon
       className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
+      size={12}
     />
   </div>
 </div>
@@ -251,6 +258,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -278,6 +286,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -305,6 +314,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -399,6 +409,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   >
     <SearchIcon
       className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
+      size={12}
     />
   </div>
 </div>
@@ -431,6 +442,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 9.deb
   >
     <SearchIcon
       className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
+      size={12}
     />
   </div>
 </div>

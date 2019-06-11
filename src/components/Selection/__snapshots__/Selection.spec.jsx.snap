@@ -187,7 +187,7 @@ exports[`Selection render should match snapshot for responsiveMode small 1`] = `
         className="lucid-Selection-label lucid-Selection-label-is-small"
       />
       <CloseIcon
-        className="lucid-Selection-close-button"
+        className="lucid-Selection-close-button lucid-Selection-close-button-is-small"
         isClickable={true}
         onClick={[Function]}
         size={16}

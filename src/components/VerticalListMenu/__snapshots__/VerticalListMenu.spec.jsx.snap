@@ -124,17 +124,11 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
         </div>
         <div
           className="lucid-VerticalListMenu-Item-expander"
-          kind="invisible"
           onClick={[Function]}
         >
           <ChevronIcon
             direction="down"
-            style={
-              Object {
-                "height": "20px",
-                "width": "20px",
-              }
-            }
+            size={12}
           />
         </div>
       </div>
@@ -972,17 +966,11 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
         </div>
         <div
           className="lucid-VerticalListMenu-Item-expander"
-          kind="invisible"
           onClick={[Function]}
         >
           <ChevronIcon
             direction="down"
-            style={
-              Object {
-                "height": "20px",
-                "width": "20px",
-              }
-            }
+            size={12}
           />
         </div>
       </div>

@@ -26,8 +26,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 1`] 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={44}
-      viewBox="-12 -6 28 28"
+      size={8}
     />
   </section>
 </CSSTransitionGroup>
@@ -86,8 +85,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 3`] 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={44}
-      viewBox="-12 -6 28 28"
+      size={8}
     />
   </section>
 </CSSTransitionGroup>
@@ -146,8 +144,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 5`] 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={44}
-      viewBox="-12 -6 28 28"
+      size={8}
     />
   </section>
 </CSSTransitionGroup>
@@ -206,8 +203,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 7`] 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={44}
-      viewBox="-12 -6 28 28"
+      size={8}
     />
   </section>
 </CSSTransitionGroup>
@@ -266,8 +262,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 9`] 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={44}
-      viewBox="-12 -6 28 28"
+      size={8}
     />
   </section>
 </CSSTransitionGroup>
@@ -331,8 +326,7 @@ exports[`Banner [common] example testing should match snapshot(s) for small 11`]
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={44}
-      viewBox="-12 -6 28 28"
+      size={8}
     />
   </section>
 </CSSTransitionGroup>
@@ -359,8 +353,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateful 1
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={26}
-      viewBox="-3 -6 20 20"
+      size={8}
     />
   </section>
 </CSSTransitionGroup>
@@ -386,14 +379,27 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     <span
       className="lucid-Banner-content"
     >
-      Default
+      <div>
+        Sit totam voluptas error dolorum ullam Quo ipsam esse amet mollitia consequuntur Cumque cum nisi porro cumque sit nisi Facilis placeat suscipit earum blanditiis eveniet Earum dolor voluptates perferendis quis
+      </div>
+      <div>
+        Adipisicing culpa atque totam quidem dicta consequatur fugiat quaerat Facilis cupiditate amet nam in perferendis Veritatis iusto molestiae illum doloribus deserunt Odit autem obcaecati dolores ad incidunt? Ipsa eveniet modi.
+      </div>
+      <div>
+        Consectetur eos maiores veniam maiores incidunt dolores Quas magni velit ullam necessitatibus atque. Animi harum aliquam totam quod unde Deserunt molestiae consequatur suscipit debitis sed? At sit nostrum ratione deserunt?
+      </div>
+      <div>
+        Lorem sit explicabo vitae illum labore Nostrum inventore dolor nisi deserunt voluptatem Voluptas itaque nesciunt omnis necessitatibus asperiores! Eius error ab consequatur necessitatibus repudiandae quibusdam Odio consequuntur at necessitatibus at
+      </div>
+      <div>
+        Dolor nihil delectus numquam laudantium nisi Minus accusantium hic consequatur accusantium assumenda illum quod! Praesentium qui vel nemo ea reiciendis. Accusantium officiis molestiae delectus nesciunt aperiam Fugit ipsam esse accusamus.
+      </div>
     </span>
     <CloseIcon
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={26}
-      viewBox="-3 -6 20 20"
+      size={8}
     />
   </section>
 </CSSTransitionGroup>
@@ -452,8 +458,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={26}
-      viewBox="-3 -6 20 20"
+      size={8}
     />
   </section>
 </CSSTransitionGroup>
@@ -512,8 +517,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={26}
-      viewBox="-3 -6 20 20"
+      size={8}
     />
   </section>
 </CSSTransitionGroup>
@@ -572,8 +576,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={26}
-      viewBox="-3 -6 20 20"
+      size={8}
     />
   </section>
 </CSSTransitionGroup>
@@ -632,8 +635,7 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={26}
-      viewBox="-3 -6 20 20"
+      size={8}
     />
   </section>
 </CSSTransitionGroup>
@@ -686,19 +688,18 @@ exports[`Banner [common] example testing should match snapshot(s) for stateless 
     <span
       className="lucid-Banner-icon"
     >
-      <Component />
+      <ChatIcon />
     </span>
     <span
       className="lucid-Banner-content"
     >
-      Has Custom Icon
+      Has Icon
     </span>
     <CloseIcon
       className="lucid-Banner-close"
       isClickable={true}
       onClick={[Function]}
-      size={26}
-      viewBox="-3 -6 20 20"
+      size={8}
     />
   </section>
 </CSSTransitionGroup>
