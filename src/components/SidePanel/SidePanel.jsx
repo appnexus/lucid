@@ -108,7 +108,8 @@ class SidePanel extends React.Component {
 				{...omitProps(passThroughs, SidePanel)}
 			>
 				<div
-					className={cx('&-pane')} style={{ width: this.state.width }}
+					className={cx('&-pane')}
+					style={{ width: this.state.width }}
 					style={{
 						marginTop: topOffset,
 					}}
