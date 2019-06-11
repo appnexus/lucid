@@ -130,9 +130,7 @@ const Banner = createClass({
 						{isCloseable ? (
 							<CloseIcon
 								isClickable
-								// style={{ height: 30 }}
-								size={isSmall ? 44 : 26}
-								viewBox={isSmall ? '-12 -6 28 28' : '-3 -6 20 20'}
+								size={8}
 								className={cx('&-close')}
 								onClick={this.handleClose}
 							/>

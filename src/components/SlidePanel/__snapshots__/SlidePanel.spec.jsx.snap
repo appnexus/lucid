@@ -11,7 +11,7 @@ exports[`SlidePanel [common] example testing should match snapshot(s) for 1.loop
           "damping": 37,
           "precision": 1,
           "stiffness": 640,
-          "val": -200,
+          "val": -150,
         },
         "translateXPixel": Object {
           "damping": 37,

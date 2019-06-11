@@ -878,7 +878,6 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
   >
     <LoadingIcon
       aspectRatio="xMidYMid meet"
-      isBadge={false}
       isClickable={false}
       isDisabled={false}
       size={16}

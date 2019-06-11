@@ -7,11 +7,10 @@ import {
 	Button,
 	CalendarIcon,
 	DuplicateIcon,
-	EditPageIcon,
+	EditIcon,
 	FileIcon,
-	FourSquaresIcon,
 	ImageIcon,
-	TableGearIcon,
+	SettingsIcon,
 } from '../../../index';
 
 const Slide = SlidePanel.Slide;
@@ -75,7 +74,7 @@ export default createClass({
 						/>
 					</Slide>
 					<Slide>
-						<EditPageIcon style={{ width: '100%', height: '30vh' }} />
+						<EditIcon style={{ width: '100%', height: '30vh' }} />
 					</Slide>
 					<Slide>
 						<FileIcon
@@ -87,9 +86,6 @@ export default createClass({
 						/>
 					</Slide>
 					<Slide>
-						<FourSquaresIcon style={{ width: '100%', height: '30vh' }} />
-					</Slide>
-					<Slide>
 						<ImageIcon
 							style={{
 								width: '100%',
@@ -99,7 +95,7 @@ export default createClass({
 						/>
 					</Slide>
 					<Slide>
-						<TableGearIcon style={{ width: '100%', height: '30vh' }} />
+						<SettingsIcon style={{ width: '100%', height: '30vh' }} />
 					</Slide>
 				</SlidePanel>
 			</section>

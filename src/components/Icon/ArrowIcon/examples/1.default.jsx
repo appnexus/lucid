@@ -12,14 +12,8 @@ export default createClass({
 				<div>
 					<ArrowIcon direction='up' />
 					<ArrowIcon direction='down' />
-					<ArrowIcon direction='left' />
 					<ArrowIcon direction='right' />
-				</div>
-				<div>
-					<ArrowIcon direction='up' isBadge />
-					<ArrowIcon direction='down' isBadge />
-					<ArrowIcon direction='left' isBadge />
-					<ArrowIcon direction='right' isBadge />
+					<ArrowIcon direction='left' />
 				</div>
 			</div>
 		);

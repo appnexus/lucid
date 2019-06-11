@@ -7,7 +7,10 @@ const { Option } = SearchableSingleSelect;
 export default createClass({
 	render() {
 		return (
-			<SearchableSingleSelect SearchField={{ placeholder: 'Name/ID' }}>
+			<SearchableSingleSelect
+				SearchField={{ placeholder: 'Name/ID' }}
+				style={{ maxWidth: '100px' }}
+			>
 				<Option isDisabled>Alabama</Option>
 				<Option>Alaska</Option>
 				<Option>Arizona</Option>

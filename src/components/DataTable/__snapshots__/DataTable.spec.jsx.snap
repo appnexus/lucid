@@ -3599,7 +3599,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           key="id"
           onClick={[Function]}
           rowSpan={null}
-          sortDirection="up"
+          sortDirection="down"
           width={41}
         >
           ID
@@ -3614,7 +3614,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           key="first_name"
           onClick={[Function]}
           rowSpan={null}
-          sortDirection="up"
+          sortDirection="down"
           width={100}
         >
           First
@@ -3628,7 +3628,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           key="last_name"
           onClick={[Function]}
           rowSpan={null}
-          sortDirection="up"
+          sortDirection="down"
           width={100}
         >
           Last
@@ -3641,7 +3641,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           key="email"
           onClick={[Function]}
           rowSpan={null}
-          sortDirection="up"
+          sortDirection="down"
         >
           E-Mail
         </Table.Th>
@@ -3654,7 +3654,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           key="occupation"
           onClick={[Function]}
           rowSpan={null}
-          sortDirection="up"
+          sortDirection="down"
           width={100}
         >
           Occupation
@@ -3668,7 +3668,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           key="salary"
           onClick={[Function]}
           rowSpan={null}
-          sortDirection="up"
+          sortDirection="down"
           width={100}
         >
           Salary
@@ -3717,7 +3717,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row0id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -3731,7 +3731,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row0first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3745,7 +3745,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row0last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3759,7 +3759,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row0email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -3773,7 +3773,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row0occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3787,7 +3787,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row0salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3838,7 +3838,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row1id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -3852,7 +3852,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row1first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3866,7 +3866,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row1last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3880,7 +3880,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row1email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -3894,7 +3894,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row1occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3908,7 +3908,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row1salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3959,7 +3959,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row2id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -3973,7 +3973,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row2first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -3987,7 +3987,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row2last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4001,7 +4001,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row2email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -4015,7 +4015,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row2occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4029,7 +4029,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row2salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4080,7 +4080,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row3id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -4094,7 +4094,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row3first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4108,7 +4108,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row3last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4122,7 +4122,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row3email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -4136,7 +4136,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row3occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4150,7 +4150,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row3salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4201,7 +4201,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row4id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -4215,7 +4215,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row4first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4229,7 +4229,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row4last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4243,7 +4243,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row4email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -4257,7 +4257,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row4occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4271,7 +4271,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row4salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4322,7 +4322,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row5id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -4336,7 +4336,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row5first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4350,7 +4350,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row5last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4364,7 +4364,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row5email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -4378,7 +4378,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row5occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4392,7 +4392,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row5salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4443,7 +4443,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row6id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -4457,7 +4457,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row6first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4471,7 +4471,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row6last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4485,7 +4485,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row6email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -4499,7 +4499,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row6occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4513,7 +4513,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row6salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4564,7 +4564,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row7id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -4578,7 +4578,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row7first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4592,7 +4592,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row7last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4606,7 +4606,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row7email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -4620,7 +4620,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row7occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4634,7 +4634,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row7salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4685,7 +4685,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row8id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -4699,7 +4699,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row8first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4713,7 +4713,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row8last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4727,7 +4727,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row8email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -4741,7 +4741,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row8occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4755,7 +4755,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row8salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4806,7 +4806,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row9id"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 41,
@@ -4820,7 +4820,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row9first_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4834,7 +4834,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={true}
           key="row9last_name"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4848,7 +4848,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={false}
           hasBorderRight={false}
           key="row9email"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": undefined,
@@ -4862,7 +4862,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row9occupation"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,
@@ -4876,7 +4876,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
           hasBorderLeft={true}
           hasBorderRight={false}
           key="row9salary"
-          sortDirection="up"
+          sortDirection="down"
           style={
             Object {
               "width": 100,

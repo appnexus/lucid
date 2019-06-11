@@ -10,7 +10,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   }
 >
   <div>
-    <ChevronThinIcon
+    <ChevronIcon
       className="lucid-DateSelect-chevron"
       direction="left"
       isClickable={true}
@@ -32,7 +32,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     </InfiniteSlidePanel.Slide>
   </InfiniteSlidePanel>
   <div>
-    <ChevronThinIcon
+    <ChevronIcon
       className="lucid-DateSelect-chevron"
       direction="right"
       isClickable={true}
@@ -53,7 +53,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   }
 >
   <div>
-    <ChevronThinIcon
+    <ChevronIcon
       className="lucid-DateSelect-chevron"
       direction="left"
       isClickable={true}
@@ -75,7 +75,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     </InfiniteSlidePanel.Slide>
   </InfiniteSlidePanel>
   <div>
-    <ChevronThinIcon
+    <ChevronIcon
       className="lucid-DateSelect-chevron"
       direction="right"
       isClickable={true}
@@ -96,7 +96,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   }
 >
   <div>
-    <ChevronThinIcon
+    <ChevronIcon
       className="lucid-DateSelect-chevron"
       direction="left"
       isClickable={true}
@@ -118,7 +118,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     </InfiniteSlidePanel.Slide>
   </InfiniteSlidePanel>
   <div>
-    <ChevronThinIcon
+    <ChevronIcon
       className="lucid-DateSelect-chevron"
       direction="right"
       isClickable={true}
@@ -139,7 +139,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   }
 >
   <div>
-    <ChevronThinIcon
+    <ChevronIcon
       className="lucid-DateSelect-chevron"
       direction="left"
       isClickable={true}
@@ -161,7 +161,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     </InfiniteSlidePanel.Slide>
   </InfiniteSlidePanel>
   <div>
-    <ChevronThinIcon
+    <ChevronIcon
       className="lucid-DateSelect-chevron"
       direction="right"
       isClickable={true}
@@ -182,7 +182,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   }
 >
   <div>
-    <ChevronThinIcon
+    <ChevronIcon
       className="lucid-DateSelect-chevron"
       direction="left"
       isClickable={true}
@@ -204,7 +204,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     </InfiniteSlidePanel.Slide>
   </InfiniteSlidePanel>
   <div>
-    <ChevronThinIcon
+    <ChevronIcon
       className="lucid-DateSelect-chevron"
       direction="right"
       isClickable={true}
@@ -225,7 +225,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   }
 >
   <div>
-    <ChevronThinIcon
+    <ChevronIcon
       className="lucid-DateSelect-chevron"
       direction="left"
       isClickable={true}
@@ -247,7 +247,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     </InfiniteSlidePanel.Slide>
   </InfiniteSlidePanel>
   <div>
-    <ChevronThinIcon
+    <ChevronIcon
       className="lucid-DateSelect-chevron"
       direction="right"
       isClickable={true}
@@ -269,7 +269,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   }
 >
   <div>
-    <ChevronThinIcon
+    <ChevronIcon
       className="lucid-DateSelect-chevron"
       direction="left"
       isClickable={true}
@@ -291,7 +291,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     </InfiniteSlidePanel.Slide>
   </InfiniteSlidePanel>
   <div>
-    <ChevronThinIcon
+    <ChevronIcon
       className="lucid-DateSelect-chevron"
       direction="right"
       isClickable={true}
@@ -312,7 +312,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
   }
 >
   <div>
-    <ChevronThinIcon
+    <ChevronIcon
       className="lucid-DateSelect-chevron"
       direction="left"
       isClickable={true}
@@ -373,7 +373,7 @@ exports[`DateSelect common tests [common] example testing should match snapshot(
     </div>
   </div>
   <div>
-    <ChevronThinIcon
+    <ChevronIcon
       className="lucid-DateSelect-chevron"
       direction="right"
       isClickable={true}

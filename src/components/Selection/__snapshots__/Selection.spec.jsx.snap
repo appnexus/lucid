@@ -13,13 +13,11 @@ exports[`Selection render should match snapshot for container 1`] = `
       <span
         className="lucid-Selection-label"
       />
-      <CrossIcon
+      <CloseIcon
         className="lucid-Selection-close-button"
         isClickable={true}
         onClick={[Function]}
-        presetSize="small"
-        size={28}
-        viewBox="-6 -6 28 28"
+        size={8}
       />
     </div>
     cont
@@ -43,13 +41,11 @@ exports[`Selection render should match snapshot for custom icons 1`] = `
       <span
         className="lucid-Selection-label"
       />
-      <CrossIcon
+      <CloseIcon
         className="lucid-Selection-close-button"
         isClickable={true}
         onClick={[Function]}
-        presetSize="small"
-        size={28}
-        viewBox="-6 -6 28 28"
+        size={8}
       />
     </div>
     <Selection.Icon
@@ -79,13 +75,11 @@ exports[`Selection render should match snapshot for danger 1`] = `
       <span
         className="lucid-Selection-label"
       />
-      <CrossIcon
+      <CloseIcon
         className="lucid-Selection-close-button"
         isClickable={true}
         onClick={[Function]}
-        presetSize="small"
-        size={28}
-        viewBox="-6 -6 28 28"
+        size={8}
       />
     </div>
     cont
@@ -109,13 +103,11 @@ exports[`Selection render should match snapshot for info 1`] = `
       <span
         className="lucid-Selection-label"
       />
-      <CrossIcon
+      <CloseIcon
         className="lucid-Selection-close-button"
         isClickable={true}
         onClick={[Function]}
-        presetSize="small"
-        size={28}
-        viewBox="-6 -6 28 28"
+        size={8}
       />
     </div>
     cont
@@ -136,13 +128,11 @@ exports[`Selection render should match snapshot for nested selections 1`] = `
       <span
         className="lucid-Selection-label"
       />
-      <CrossIcon
+      <CloseIcon
         className="lucid-Selection-close-button"
         isClickable={true}
         onClick={[Function]}
-        presetSize="small"
-        size={28}
-        viewBox="-6 -6 28 28"
+        size={8}
       />
     </div>
     <div
@@ -196,13 +186,11 @@ exports[`Selection render should match snapshot for responsiveMode small 1`] = `
       <span
         className="lucid-Selection-label lucid-Selection-label-is-small"
       />
-      <CrossIcon
-        className="lucid-Selection-close-button"
+      <CloseIcon
+        className="lucid-Selection-close-button lucid-Selection-close-button-is-small"
         isClickable={true}
         onClick={[Function]}
-        presetSize="small"
-        size={44}
-        viewBox="-3 -2 20 20"
+        size={16}
       />
     </div>
     Yolo
@@ -226,13 +214,11 @@ exports[`Selection render should match snapshot for success 1`] = `
       <span
         className="lucid-Selection-label"
       />
-      <CrossIcon
+      <CloseIcon
         className="lucid-Selection-close-button"
         isClickable={true}
         onClick={[Function]}
-        presetSize="small"
-        size={28}
-        viewBox="-6 -6 28 28"
+        size={8}
       />
     </div>
     cont
@@ -256,13 +242,11 @@ exports[`Selection render should match snapshot for warning 1`] = `
       <span
         className="lucid-Selection-label"
       />
-      <CrossIcon
+      <CloseIcon
         className="lucid-Selection-close-button"
         isClickable={true}
         onClick={[Function]}
-        presetSize="small"
-        size={28}
-        viewBox="-6 -6 28 28"
+        size={8}
       />
     </div>
     cont

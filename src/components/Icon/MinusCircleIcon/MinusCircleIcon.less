@@ -2,19 +2,19 @@
 @import (reference) '../../../styles/mixins.less';
 
 .@{prefix}-MinusCircleIcon {
-	&-minus {
-		fill: @color-white;
+	stroke: @color-secondary-1;
+
+	&-dash {
+		stroke: @color-white;
 	}
 
 	&-background {
+		stroke: @color-secondary-1;
 		fill: @color-secondary-1;
 	}
 
-	&-background-is-disabled {
-		fill: @color-disabledText;
+	&-is-clickable:not(&-is-disabled):hover &-background {
+		stroke: shade(@color-secondary-1, 20%);
+		fill: shade(@color-secondary-1, 20%);
 	}
-
-	// &-is-clickable:hover > &-background {
-	// 	fill: @color-secondary-1-hover;
-	// }
 }

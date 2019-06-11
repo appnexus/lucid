@@ -9,7 +9,7 @@ import { createClass, getFirst, omitProps } from '../../util/component-types';
 import * as reducers from './DateSelect.reducers';
 import InfiniteSlidePanel from '../InfiniteSlidePanel/InfiniteSlidePanel';
 import CalendarMonth from '../CalendarMonth/CalendarMonth';
-import ChevronThinIcon from '../Icon/ChevronThinIcon/ChevronThinIcon';
+import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
 import { DateUtils } from 'react-day-picker';
 
 const cx = lucidClassNames.bind('&-DateSelect');
@@ -310,7 +310,7 @@ const DateSelect = createClass({
 				{...omitProps(passThroughs, DateSelect)}
 			>
 				<div>
-					<ChevronThinIcon
+					<ChevronIcon
 						className={cx('&-chevron')}
 						size={NAV_BUTTON_SIZE}
 						isClickable
@@ -382,7 +382,7 @@ const DateSelect = createClass({
 					</div>
 				)}
 				<div>
-					<ChevronThinIcon
+					<ChevronIcon
 						className={cx('&-chevron')}
 						size={NAV_BUTTON_SIZE}
 						isClickable

@@ -4,15 +4,6 @@ import { AsteriskIcon } from '../../../../index';
 
 export default createClass({
 	render() {
-		return (
-			<div>
-				<div>
-					<AsteriskIcon />
-				</div>
-				<div>
-					<AsteriskIcon isBadge />
-				</div>
-			</div>
-		);
+		return <AsteriskIcon />;
 	},
 });

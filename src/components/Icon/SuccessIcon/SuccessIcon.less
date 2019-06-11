@@ -2,20 +2,19 @@
 @import (reference) '../../../styles/mixins.less';
 
 .@{prefix}-SuccessIcon {
-	&-check {
-		fill: @color-white;
-	}
+	stroke: @featured-color-success;
 
 	&-background {
 		fill: @featured-color-success;
-
-		&-is-disabled {
-			fill: @color-disabledText;
-		}
 	}
 
-	// &-is-clickable:hover > &-background {
-	// 	fill: @featured-color-success-colorHover;
-	// }
+	&-is-clickable:not(&-is-disabled):hover &-background {
+		stroke: @featured-color-success-colorHover;
+		fill: @featured-color-success-colorHover;
+	}
+
+	&-check {
+		stroke: @color-white;
+	}
 }
 

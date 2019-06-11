@@ -3,62 +3,21 @@
 exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) for 1.default 1`] = `
 <Icon
   aspectRatio="xMidYMid meet"
-  className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-clickable"
-  isBadge={false}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    className="lucid-MinusCircleLightIcon-background"
-    d="M8 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"
-  />
-  <path
-    className="lucid-MinusCircleLightIcon-minus-circle"
-    d="M8 0C3.582 0 0 3.582 0 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm0 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm5-8v2H3V7h10z"
-  />
-</Icon>
-`;
-
-exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) for 2.clickable 1`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
-  className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-clickable"
-  isBadge={false}
-  isClickable={true}
-  isDisabled={false}
-  size={16}
-  viewBox="0 0 16 16"
->
-  <path
-    className="lucid-MinusCircleLightIcon-background"
-    d="M8 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"
-  />
-  <path
-    className="lucid-MinusCircleLightIcon-minus-circle"
-    d="M8 0C3.582 0 0 3.582 0 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm0 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm5-8v2H3V7h10z"
-  />
-</Icon>
-`;
-
-exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) for 3.disabled 1`] = `
-<Icon
-  aspectRatio="xMidYMid meet"
   className="lucid-MinusCircleLightIcon"
-  isBadge={false}
   isClickable={false}
-  isDisabled={true}
+  isDisabled={false}
   size={16}
   viewBox="0 0 16 16"
 >
-  <path
+  <circle
     className="lucid-MinusCircleLightIcon-background"
-    d="M8 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z"
+    cx="8"
+    cy="8"
+    r="7.5"
   />
   <path
-    className="lucid-MinusCircleLightIcon-minus-circle lucid-MinusCircleLightIcon-minus-circle-is-disabled"
-    d="M8 0C3.582 0 0 3.582 0 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm0 15c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm5-8v2H3V7h10z"
+    className="lucid-MinusCircleLightIcon-dash"
+    d="M4.5 8h7"
   />
 </Icon>
 `;

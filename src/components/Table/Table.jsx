@@ -557,7 +557,7 @@ const Table = createClass({
 				using it directly in an app.
 			`,
 			categories: ['table'],
-			madeFrom: ['CaretIcon', 'DragCaptureZone'],
+			madeFrom: ['ArrowIcon', 'DragCaptureZone'],
 		},
 	},
 

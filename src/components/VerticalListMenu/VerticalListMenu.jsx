@@ -210,10 +210,7 @@ const VerticalListMenu = createClass({
 											)}
 										>
 											<ChevronIcon
-												style={{
-													height: '20px',
-													width: '20px',
-												}}
+												size={12}
 												direction={actualIsExpanded ? 'up' : 'down'}
 											/>
 										</div>

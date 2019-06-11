@@ -22,6 +22,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 1.def
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -49,6 +50,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 2.int
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -77,6 +79,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 3.pla
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -104,6 +107,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 4.dis
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -132,7 +136,6 @@ exports[`SearchField [common] example testing should match snapshot(s) for 5.cus
     <LoadingIcon
       aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
-      isBadge={false}
       isClickable={false}
       isDisabled={false}
       size={16}
@@ -167,6 +170,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 6.cus
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -197,6 +201,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 7.val
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -224,6 +229,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   >
     <SearchIcon
       className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
+      size={12}
     />
   </div>
 </div>
@@ -252,6 +258,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -279,6 +286,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -306,6 +314,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   >
     <SearchIcon
       className="lucid-SearchField-Icon"
+      size={12}
     />
   </div>
 </div>
@@ -334,7 +343,6 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     <LoadingIcon
       aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon"
-      isBadge={false}
       isClickable={false}
       isDisabled={false}
       size={16}
@@ -368,7 +376,6 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
     <LoadingIcon
       aspectRatio="xMidYMid meet"
       className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
-      isBadge={false}
       isClickable={false}
       isDisabled={false}
       size={16}
@@ -402,6 +409,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
   >
     <SearchIcon
       className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
+      size={12}
     />
   </div>
 </div>
@@ -434,6 +442,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 9.deb
   >
     <SearchIcon
       className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
+      size={12}
     />
   </div>
 </div>

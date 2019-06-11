@@ -23,5 +23,18 @@
 - added `isIncludeExclude` to `Switch`. Adds red/green styling.
 - removed `isBadge` from `Icon`. It was an ill conceived feature. All icons should not be allowed to be made circular via a prop.
 - returned `responsiveMode` in `Selection` to original meaning: `small` means small device with large style, and `large` means large device with small style. This was temporarily reversed out of a misunderstanding of the meaning of the prop.
+- removed `BeakerIcon`
+- removed `CaretIcon`, use `Chevron` or `Arrow` icons instead
+- removed `CrossIcon` in favor of `CloseIcon`
+- removed `DataViewIcon` in favor of `AnalyzeDataIcon`
+- removed `DownloadTableDataIcon` in favor of `DownloadIcon`
+- removed `EditPageIcon` in favor of `EditIcon`
+- removed `FourSquaresIcon`
+- renamed `QuestionMarkCircleIcon` to `QuestionMarkIcon` since it no longer has a circle around it
+- removed the `presetSize` prop from `SettingsIcon` since all our utility icons can now be scaled
+- removed `TableGearIcon` in favor of `SettingsIcon`
+- removed `ViewIcon`, we don't have a 1:1 replacement for this icon so you'll have to take it on a case by case basis
+- added `ViewTableIcon`
+- removed `ChevronThinIcon` in favor of just `Chevron`
 - added `topOffset` to `SidePanel`. This prop adds a top margin to the component.
 - added `isInvisible` to `SearchableSelect`

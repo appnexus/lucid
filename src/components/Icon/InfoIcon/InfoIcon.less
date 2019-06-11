@@ -2,19 +2,19 @@
 @import (reference) '../../../styles/mixins.less';
 
 .@{prefix}-InfoIcon {
-	&-mark {
+	stroke: @featured-color-info;
+
+	&-i {
 		fill: @color-white;
+		stroke: @color-white;
 	}
 
 	&-background {
 		fill: @featured-color-info;
 	}
 
-	&-background-is-disabled {
-		fill: @color-disabledText;
-	}
-
-	&-is-clickable:hover > &-background {
+	&-is-clickable:not(&-is-disabled):hover &-background {
+		stroke: @featured-color-info-colorHover;
 		fill: @featured-color-info-colorHover;
 	}
 }

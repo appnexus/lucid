@@ -26,13 +26,17 @@
 
 	// must use this specific selector in order to override default color
 	.@{prefix}-Banner-close {
-		fill: @color-white;
-		padding: 4px 0;
-		height: 24px;
+		align-self: flex-start;
+		margin-top: 14px;
+		stroke: @color-white;
 
 		&:hover {
-			fill: @color-white;
+			stroke: @color-white;
 		}
+	}
+
+	&-small > &-close {
+		margin-top: 9px;
 	}
 
 	// States
@@ -44,7 +48,12 @@
 	}
 
 	&-icon {
-		padding-top: @Banner-size-spacing-topBottom - 2px;
+		> .@{prefix}-Icon {
+			stroke: @color-white;
+		}
+
+		display: flex;
+		align-self: center;
 		margin-right: @Banner-size-spacing-rightLeft;
 	}
 
@@ -85,17 +94,7 @@
 	}
 
 
-	// Small version
-	&-small .@{prefix}-Banner-icon {
-		padding-top: @Banner-size-spacing-topBottom-small - 2px;
-	}
-
-	&-small .@{prefix}-Banner-close {
-		padding-top: @Banner-size-spacing-topBottom-small - 2px;
-		height: 16px;
-	}
-
-	&-small &-content	{
+	&-small &-content {
 		padding: @Banner-size-spacing-topBottom - 6px 0;
 		height: 12px;
 	}

@@ -23,7 +23,7 @@
 	letter-spacing: 0.05em;
 	padding: 0 @Button-size-padding;
 	outline: none;
-	color: @featured-color-default;
+	color: @color-darkGray;
 
 	// from normalize.css@4.1.1
 	margin: 0; /* 2 */
@@ -81,7 +81,7 @@
 			opacity: @opacity-disabled;
 
 			.@{prefix}-Icon {
-				fill: @color-white;
+				stroke: @color-white;
 			}
 
 			&:hover {
@@ -94,7 +94,7 @@
 		border-color: @featured-color-primary-borderColor;
 		color: @color-white;
 
-		.@{prefix}-Icon { fill: @color-white; }
+		.@{prefix}-Icon { stroke: @color-white; }
 
 		&:hover:not(.@{prefix}-Button-is-disabled) {
 			background-color: @featured-color-primary-backgroundColor;
@@ -113,7 +113,7 @@
 			opacity: @opacity-disabled;
 
 			.@{prefix}-Icon {
-				fill: @color-white;
+				stroke: @color-white;
 			}
 
 			&:hover {
@@ -126,7 +126,7 @@
 		border-color: @featured-color-danger-borderColor;
 		color: @color-white;
 
-		.@{prefix}-Icon { fill: @color-white; }
+		.@{prefix}-Icon { stroke: @color-white; }
 
 		&:hover:not(.@{prefix}-Button-is-disabled) {
 			background-color: @featured-color-danger-backgroundColor;
@@ -145,7 +145,7 @@
 			opacity: @opacity-disabled;
 
 			.@{prefix}-Icon {
-				fill: @featured-color-default-iconColorDisabled;
+				stroke: @featured-color-default-iconColorDisabled;
 			}
 
 			&:hover {
@@ -169,7 +169,7 @@
 		}
 
 		.@{prefix}-Icon {
-			fill: @color-primary;
+			stroke: @color-primary;
 		}
 	}
 
@@ -187,7 +187,7 @@
 			opacity: @opacity-disabled;
 
 			.@{prefix}-Icon {
-				fill: @featured-color-default-iconColorDisabled;
+				stroke: @featured-color-default-iconColorDisabled;
 			}
 
 			&:hover {
@@ -204,8 +204,7 @@
 		}
 
 		.@{prefix}-Icon {
-			fill: @color-primary;
-			margin-right: 0.25em;
+			stroke: @color-primary;
 		}
 	}
 
@@ -259,7 +258,7 @@
 			opacity: @opacity-disabled;
 
 			.@{prefix}-Icon {
-				fill: @featured-color-default-iconColorDisabled;
+				stroke: @featured-color-default-iconColorDisabled;
 			}
 
 			&:hover {

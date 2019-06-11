@@ -14,9 +14,30 @@ export default createClass({
 							<div style={{ margin: '10px' }}>
 								<Selection
 									isSmall
+									isRemovable={false}
+									responsiveMode={responsiveMode}
+									kind='container'
+									Label='Container Light Not Removable'
+								/>
+							</div>
+
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
 									responsiveMode={responsiveMode}
 									kind='container'
 									Label='Container Light'
+								/>
+							</div>
+
+							<div style={{ margin: '10px' }}>
+								<Selection
+									isSmall
+									isFilled
+									isRemovable={false}
+									responsiveMode={responsiveMode}
+									kind='container'
+									Label='Container Filled Not Removable'
 								/>
 							</div>
 

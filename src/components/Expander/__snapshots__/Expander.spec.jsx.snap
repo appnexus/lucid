@@ -205,9 +205,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.intera
         onClick={[Function]}
         type="button"
       >
-        <CrossIcon
-          presetSize="small"
-        />
+        <CloseIcon />
         Clear All
       </Button>
     </div>
@@ -243,9 +241,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.intera
         onClick={[Function]}
         type="button"
       >
-        <CrossIcon
-          presetSize="small"
-        />
+        <CloseIcon />
         Clear All
       </Button>
     </Expander.AdditionalLabelContent>

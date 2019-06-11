@@ -13,6 +13,7 @@
 	border-radius: @size-borderRadius;
 	border: 1px solid @featured-color-primary-borderColor;
 	padding-left: @size-S;
+	min-height: @size-standard-height;
 
 	&-Icon {
 		margin-right: @size-XS;
@@ -28,17 +29,16 @@
 
 	&-label {
 		flex: 1;
-		padding: 6px 28px 6px 0px;
+		padding: 6px 28px 6px 0;
 	}
 
 	&-close-button {
-		fill: @color-neutral-5;
 		position: absolute;
-		right: 0px;
-		top: 0px;
+		right: 10px;
+		top: 10px;
 
-		&:hover {
-			fill: @color-darkGray;
+		&-is-small {
+			top: 20px;
 		}
 	}
 
@@ -60,7 +60,7 @@
 
 	&:not(:last-child) {
 		&:not(.@{prefix}-Selection-is-top) {
-			border-bottom: 0px;
+			border-bottom: 0;
 		}
 	}
 
@@ -74,7 +74,7 @@
 		line-height: 44px;
 
 		.@{prefix}-Selection-Icon {
-			margin-top: 12px;
+			margin-top: 20px;
 		}
 	}
 
@@ -121,7 +121,5 @@
 		background-color: @color-neutral-3;
 		border-color: @color-neutral-3;
 	}
-
-
 }
 

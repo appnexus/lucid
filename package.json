@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "4.0.0-beta.13",
+  "version": "4.0.0-beta.14",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "module": "lib/index.js",
@@ -21,7 +21,7 @@
     "cover": "npm run jest -- --coverage",
     "dev": "npm run storybook",
     "docs": "NODE_ENV=development start-storybook -s ./docs/public -p 6006",
-    "jest": "NODE_ENV=test TZ=UTC jest --runInBand",
+    "jest": "NODE_ENV=test TZ=UTC jest",
     "snapshot": "NODE_ENV=test TZ=UTC jest -u",
     "lint": "eslint ./src --ext .js,.jsx",
     "lint-fix": "eslint ./src --ext .js,.jsx --fix",

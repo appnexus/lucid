@@ -16,10 +16,10 @@ export default createClass({
 					<EligibilityIcon eligibility='right' />
 				</div>
 				<div>
-					<EligibilityIcon eligibility='both' isBadge />
-					<EligibilityIcon eligibility='neither' isBadge />
-					<EligibilityIcon eligibility='left' isBadge />
-					<EligibilityIcon eligibility='right' isBadge />
+					<EligibilityIcon eligibility='both' isDisabled />
+					<EligibilityIcon eligibility='neither' isDisabled />
+					<EligibilityIcon eligibility='left' isDisabled />
+					<EligibilityIcon eligibility='right' isDisabled />
 				</div>
 			</div>
 		);

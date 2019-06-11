@@ -222,16 +222,16 @@ describe('Table', () => {
 				});
 
 				describe('sortDirection', () => {
-					it('should pass thru to the CaretIcon when `isSorted` is also true', () => {
+					it('should pass thru to the ArrowIcon when `isSorted` is also true', () => {
 						const wrapper = shallow(<Th isSorted sortDirection='down' />);
 						const containerWrapper = wrapper.find(
 							'.lucid-Table-Th-inner-caret'
 						);
 
 						assert.equal(
-							containerWrapper.find(CaretIcon).prop('direction'),
+							containerWrapper.find(ArrowIcon).prop('direction'),
 							'down',
-							'CaretIcon direction must match prop value'
+							'ArrowIcon direction must match prop value'
 						);
 					});
 				});

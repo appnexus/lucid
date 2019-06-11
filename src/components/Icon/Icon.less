@@ -1,14 +1,21 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-@Icon-color-badgeBackground: @color-mediumGray;
-
 .@{prefix}-Icon {
 	.no-firefox-svg-aliasing();
 
 	display: inline-block;
-	vertical-align: top; /* Prevents automatic addition of bottom margin. */
-	fill: @color-primary;
+	vertical-align: top; // Prevents automatic addition of bottom margin.
+
+	fill: none;
+	stroke: @color-primary;
+	stroke-miterlimit: 10;
+	stroke-linecap: square;
+
+	// Our icons are designed in a 16x16 grid using primarily strokes so it's
+	// possible for some small piece of the edges to overflow. This allows the
+	// entire, unclipped icon to be displayed without affecting the bounding box.
+	overflow: visible;
 
 	> path,
 	> rect,
@@ -18,16 +25,15 @@
 
 	&-is-clickable {
 		cursor: pointer;
-		fill: @color-linkColor;
 
 		&:hover {
-			fill: @color-linkColorHover;
+			stroke: darken(@color-primary, 7%);
 		}
 	}
 
 	&-is-disabled {
+		stroke: @color-darkGray;
 		opacity: @opacity-disabled;
-		fill: @featured-color-default-iconColorDisabled;
 		cursor: not-allowed;
 	}
 }

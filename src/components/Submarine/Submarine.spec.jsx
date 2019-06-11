@@ -354,13 +354,13 @@ describe('Submarine', () => {
 				const expanderWrapper = wrapper.find(
 					'.lucid-Submarine > .lucid-Submarine-Bar > .lucid-Submarine-Bar-header > .lucid-Submarine-expander'
 				);
-				const expanderWrapperOnMouseDown = expanderWrapper.prop('onMouseDown');
+				const expanderWrapperOnClick = expanderWrapper.prop('onClick');
 				const lastArg = {
 					event: {},
 					props: wrapper.props(),
 				};
 
-				expanderWrapperOnMouseDown(lastArg.event);
+				expanderWrapperOnClick(lastArg.event);
 
 				assert(onToggle.called, 'must be called');
 				assert.equal(

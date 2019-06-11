@@ -128,12 +128,7 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
         >
           <ChevronIcon
             direction="down"
-            style={
-              Object {
-                "height": "20px",
-                "width": "20px",
-              }
-            }
+            size={12}
           />
         </div>
       </div>
@@ -975,12 +970,7 @@ exports[`VerticalListMenu [common] example testing should match snapshot(s) for 
         >
           <ChevronIcon
             direction="down"
-            style={
-              Object {
-                "height": "20px",
-                "width": "20px",
-              }
-            }
+            size={12}
           />
         </div>
       </div>

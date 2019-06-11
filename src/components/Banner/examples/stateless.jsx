@@ -1,26 +1,45 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Banner, Icon } from '../../../index';
-
-const CustomIcon = createClass({
-	render() {
-		return (
-			<Icon size={18} viewBox='0 0 22 22'>
-				<path
-					fill='#FFFFFF'
-					d='M11,0A11,11,0,1,0,22,11,11,11,0,0,0,11,0Zm2.29,17q-0.85.34-1.35,0.51a3.57,3.57,0,0,1-1.18.18,2.34,2.34,0,0,1-1.6-.5A1.62,1.62,0,0,1,8.59,16a4.62,4.62,0,0,1,0-.61c0-.21.07-0.44,0.14-0.71l0.71-2.5c0.06-.24.12-0.47,0.16-0.68a3,3,0,0,0,.06-0.59,0.91,0.91,0,0,0-.2-0.67A1.12,1.12,0,0,0,8.75,10a2,2,0,0,0-.56.08l-0.49.16,0.19-.77Q8.57,9.2,9.21,9a3.93,3.93,0,0,1,1.2-.2A2.3,2.3,0,0,1,12,9.29a1.64,1.64,0,0,1,.55,1.28q0,0.16,0,.57a3.84,3.84,0,0,1-.14.76l-0.7,2.5c-0.06.2-.11,0.43-0.16,0.69a3.62,3.62,0,0,0-.07.58,0.84,0.84,0,0,0,.22.68,1.25,1.25,0,0,0,.77.18A2.23,2.23,0,0,0,13,16.44a3.31,3.31,0,0,0,.47-0.16ZM13.16,6.92A1.68,1.68,0,0,1,12,7.38a1.7,1.7,0,0,1-1.19-.46,1.46,1.46,0,0,1-.5-1.11,1.48,1.48,0,0,1,.5-1.11A1.69,1.69,0,0,1,12,4.23a1.67,1.67,0,0,1,1.19.46A1.5,1.5,0,0,1,13.16,6.92Z'
-				/>
-			</Icon>
-		);
-	},
-});
+import { Banner, ChatIcon } from '../../../index';
 
 export default createClass({
 	render() {
 		return (
 			<div>
 				<div>
-					<Banner style={{ marginBottom: 8 }}>Default</Banner>
+					<Banner style={{ marginBottom: 8 }}>
+						<div>
+							Sit totam voluptas error dolorum ullam Quo ipsam esse amet
+							mollitia consequuntur Cumque cum nisi porro cumque sit nisi
+							Facilis placeat suscipit earum blanditiis eveniet Earum dolor
+							voluptates perferendis quis
+						</div>
+						<div>
+							Adipisicing culpa atque totam quidem dicta consequatur fugiat
+							quaerat Facilis cupiditate amet nam in perferendis Veritatis iusto
+							molestiae illum doloribus deserunt Odit autem obcaecati dolores ad
+							incidunt? Ipsa eveniet modi.
+						</div>
+						<div>
+							Consectetur eos maiores veniam maiores incidunt dolores Quas magni
+							velit ullam necessitatibus atque. Animi harum aliquam totam quod
+							unde Deserunt molestiae consequatur suscipit debitis sed? At sit
+							nostrum ratione deserunt?
+						</div>
+						<div>
+							Lorem sit explicabo vitae illum labore Nostrum inventore dolor
+							nisi deserunt voluptatem Voluptas itaque nesciunt omnis
+							necessitatibus asperiores! Eius error ab consequatur
+							necessitatibus repudiandae quibusdam Odio consequuntur at
+							necessitatibus at
+						</div>
+						<div>
+							Dolor nihil delectus numquam laudantium nisi Minus accusantium hic
+							consequatur accusantium assumenda illum quod! Praesentium qui vel
+							nemo ea reiciendis. Accusantium officiis molestiae delectus
+							nesciunt aperiam Fugit ipsam esse accusamus.
+						</div>
+					</Banner>
 					<Banner isCloseable={false} style={{ marginBottom: 8 }}>
 						Default -- No Close {String.fromCharCode(0x00d7)}
 					</Banner>
@@ -70,12 +89,8 @@ export default createClass({
 				</div>
 
 				<div>
-					<Banner
-						style={{ marginBottom: 8 }}
-						icon={<CustomIcon />}
-						kind='danger'
-					>
-						Has Custom Icon
+					<Banner style={{ marginBottom: 8 }} icon={<ChatIcon />} kind='danger'>
+						Has Icon
 					</Banner>
 				</div>
 			</div>

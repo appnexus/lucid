@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'react-peek/prop-types';
 import ReactDOM from 'react-dom';
@@ -77,7 +76,6 @@ const Icon = createClass({
 			size: 16,
 			aspectRatio: 'xMidYMid meet',
 			viewBox: '0 0 16 16',
-			isBadge: false,
 			isDisabled: false,
 			isClickable: false,
 		};
@@ -102,26 +100,17 @@ const Icon = createClass({
 			className,
 			children,
 			size,
-			style,
 			viewBox,
 			aspectRatio,
-			isBadge,
 			isClickable,
 			isDisabled,
+			style,
 			...passThroughs
 		} = this.props;
 
-		// Because we control the icon size inline, we must also control the border
-		// radius in the case where they user wants `isBadge`. Later one, we filter
-		// out any `undefined` properties using lodash methods.
-		const actualStyle = {
-			...style,
-			borderRadius: _.get(
-				style,
-				'borderRadius',
-				isBadge ? `${size}px` : undefined
-			),
-		};
+		// Since our icons were designed at 16px with a 1.3px stroke, we use this
+		// formula to keep the stroke the same size regardless of `size`
+		const combinedStyles = { ...style, strokeWidth: (16 / size) * 1.3 };
 
 		return (
 			<svg
@@ -130,11 +119,10 @@ const Icon = createClass({
 				viewBox={viewBox}
 				preserveAspectRatio={aspectRatio}
 				{...omitProps(passThroughs, Icon)}
-				style={_.pickBy(actualStyle, _.negate(_.isUndefined))}
+				style={combinedStyles}
 				className={cx(
 					'&',
 					{
-						'&-is-badge': isBadge,
 						'&-is-clickable': !isDisabled && isClickable,
 						'&-is-disabled': isDisabled,
 					},
