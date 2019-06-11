@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import assert from 'assert';
 import { common } from '../../util/generic-tests';
 import Table from './Table';
-import CaretIcon from '../Icon/CaretIcon/CaretIcon';
+import ArrowIcon from '../Icon/ArrowIcon/ArrowIcon';
 import DragCaptureZone from '../DragCaptureZone/DragCaptureZone';
 
 const { Thead, Tbody, Tr, Th, Td } = Table;
@@ -208,13 +208,13 @@ describe('Table', () => {
 
 						assert.equal(containerWrapper.length, 1, 'must have a container');
 						assert.equal(
-							containerWrapper.find(CaretIcon).length,
+							containerWrapper.find(ArrowIcon).length,
 							1,
-							'must render a CaretIcon'
+							'must render a ArrowIcon'
 						);
 						assert(
 							containerWrapper
-								.find(CaretIcon)
+								.find(ArrowIcon)
 								.hasClass('lucid-Table-sort-icon'),
 							'must have className `lucid-Table-sort-icon`'
 						);

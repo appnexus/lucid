@@ -202,7 +202,7 @@ SidePanel.propTypes = {
 		resizes it.
 	`,
 	topOffset: oneOfType([number, string])`
-		Sets the top margin for the panel. Defaults to \`0px\`.
+		Sets the top margin for the panel. Defaults to \`0\`.
 	`,
 	Header: any`
 		Alternative to using \`<SidePanel.Header>\`.

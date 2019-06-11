@@ -43,10 +43,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
       >
         Select Color
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -120,10 +118,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
       >
         Select Color
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -200,10 +196,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.d
       >
         Select Color
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -277,10 +271,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.d
       >
         Select Color
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -354,10 +346,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
       >
         Select Color
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -496,10 +486,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.n
       >
         Select Foo
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -573,10 +561,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
       >
         Select Color
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -1752,20 +1738,17 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
       <span
         className="lucid-SingleSelect-Control-content"
       >
-        <PlusIcon
+        <SuccessIcon
           style={
             Object {
-              "backgroundColor": "gray",
               "marginRight": 4,
             }
           }
         />
          Add Color
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -1775,10 +1758,9 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
     isWrapped={true}
     key="SingleSelectOption0"
   >
-    <PlusIcon
+    <SuccessIcon
       style={
         Object {
-          "backgroundColor": "red",
           "marginRight": 4,
         }
       }
@@ -1791,16 +1773,14 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
     isWrapped={true}
     key="SingleSelectOption1"
   >
-    <PlusIcon
+    <SuccessIcon
       style={
         Object {
-          "backgroundColor": "green",
           "marginRight": 4,
         }
       }
     />
-     
-    Green
+     Green
   </DropMenu.Option>
   <DropMenu.Option
     isDisabled={false}
@@ -1808,10 +1788,9 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
     isWrapped={true}
     key="SingleSelectOption2"
   >
-    <PlusIcon
+    <SuccessIcon
       style={
         Object {
-          "backgroundColor": "blue",
           "marginRight": 4,
         }
       }
@@ -1864,10 +1843,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.n
       >
         Select Foo
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -1941,10 +1918,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.a
       >
         Select a number
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -2018,10 +1993,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
       >
         Green
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -2137,10 +2110,8 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 12.i
       >
         Select Color
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
@@ -2218,10 +2189,8 @@ exports[`SingleSelect child elements Option should render Option.Selected in the
       >
         option b
       </span>
-      <CaretIcon
+      <ChevronIcon
         direction="down"
-        size={8}
-        viewBox="0 3 16 8"
       />
     </div>
   </DropMenu.Control>
