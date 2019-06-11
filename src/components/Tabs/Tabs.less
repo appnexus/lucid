@@ -7,7 +7,7 @@
 .@{prefix}-Tabs {
 	&-bar {
 		font-size: @size-font;
-		font-weight: @font-weight-semiBold;
+		font-weight: @font-weight-medium;
 		font-family: @fontFamily;
 		list-style-type: none;
 		display: flex;
@@ -36,15 +36,15 @@
 		align-items: stretch;
 		box-sizing: border-box;
 		cursor: pointer;
-		color: @color-darkGray;
+		color: @color-neutral-9;
 		user-select: none;
 
 		&:hover {
 			border-bottom: 3px solid @color-primary;
 		}
 
-		&:active {
-			.dropshadow-gradient(@color-gray, @color-lightGray, @Tabs-spacer-height);
+		&-is-active {
+			font-weight: @font-weight-semiBold;
 		}
 
 		.@{prefix}-Badge {
@@ -105,13 +105,13 @@
 	&-Tab-is-active {
 		border-top: none;
 		border-bottom: 3px solid @color-primary;
-		color: @color-darkGray;
+		color: @color-neutral-9;
 		cursor: initial;
 	}
 
 	&-Tab-content {
 		flex: 1;
-		padding: 12px 15px;
+		padding: 9px 15px;
 		text-align: center;
 		height: 15px;
 		display: flex;
@@ -130,7 +130,7 @@
 	&-bar-is-multiline {
 		.@{prefix}-Tabs-Tab {
 			background-color: @color-lightGray;
-			color: @color-darkGray;
+			color: @color-neutral-9;
 
 			&:hover {
 				background-color: @color-white;

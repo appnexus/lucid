@@ -36,4 +36,4 @@
 - removed `ViewIcon`, we don't have a 1:1 replacement for this icon so you'll have to take it on a case by case basis
 - added `ViewTableIcon`
 - removed `ChevronThinIcon` in favor of just `Chevron`
-
+- added `topOffset` to `SidePanel`. This prop adds a top margin to the component.

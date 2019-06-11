@@ -12,7 +12,7 @@
 	flex-wrap: wrap;
 
 	// margin/padding
-	padding: 0 @size-S @size-XS 11px;
+	padding: 1px 3px 6px 10px;
 	margin: @size-S @size-S 0 0;
 
 	// typography
@@ -28,7 +28,7 @@
 	&-other-children {
 		display: inline-flex;
 		align-items: center;
-		padding: 7px @size-XS 0 0;
+		padding: 7px 9px 0 0;
 	}
 
 	&-is-top {
@@ -40,7 +40,7 @@
 	}
 
 	&-remove-button {
-		margin: 0 0 0 6px;
+		margin-left: 6px;
 	}
 
 	// ---------------
@@ -54,7 +54,6 @@
 
 		// typography
 		text-transform: none;
-
 	}
 
 	& > & > &-other-children {
@@ -89,7 +88,6 @@
 		color: @color-neutral-9;
 		font-size: @size-font;
 		font-weight: @font-weight-regular;
-		line-height: 0; // pairs with `min-height` so its okay
 		text-transform: none;
 
 		& > .@{prefix}-Tag-other-children {

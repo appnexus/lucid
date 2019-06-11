@@ -22,11 +22,11 @@ export default createClass({
 				</SwitchLabeled>
 
 				<section>
-					<SwitchLabeled isDisabled={true} style={style}>
-						<SwitchLabeled.Label>Disabled</SwitchLabeled.Label>
-					</SwitchLabeled>
 					<SwitchLabeled isSelected={true} style={style}>
 						<SwitchLabeled.Label>Selected</SwitchLabeled.Label>
+					</SwitchLabeled>
+					<SwitchLabeled isDisabled={true} style={style}>
+						<SwitchLabeled.Label>Disabled</SwitchLabeled.Label>
 					</SwitchLabeled>
 					<SwitchLabeled isDisabled={true} isSelected={true} style={style}>
 						<SwitchLabeled.Label>Disabled & selected</SwitchLabeled.Label>

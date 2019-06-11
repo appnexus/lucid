@@ -1,22 +1,25 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-@Switch-height: @size-standard-height;
+@Switch-height: 22px;
 @Switch-width: 50px;
 @Switch-animation-timing: 0.1s linear;
-@Switch-selected-transform: translate(22px, 0);
+@Switch-selected-transform: translate(16px, 0);
 
-@Switch-container-height: 22px;
+@Switch-container-height: 16px;
 @Switch-container-offset: @size-XXS;
-@Switch-container-width: 44px;
+@Switch-container-width: 32px;
 
 @Switch-glow-offset: 5px;
 @Switch-glow-radius: @size-S;
 @Switch-glow-scale: scale(1.556);
 
 @Switch-handle-offset: @size-XS;
-@Switch-handle-radius: 8px;
+@Switch-handle-radius: 5px;
 @Switch-handle-scale: scale(1.125);
+
+@Switch-disabled-color: fade(@color-neutral-9, 4%);
+@Switch-disabled-border-color: fade(@color-neutral-9, 15%);
 
 .@{prefix}-Switch {
 	cursor: pointer;
@@ -43,7 +46,7 @@
 		left: @Switch-container-offset;
 		position: absolute;
 		top: @Switch-container-offset;
-		transition: @Switch-animation-timing;
+		// transition: @Switch-animation-timing;
 		width: @Switch-container-width;
 	}
 
@@ -57,7 +60,7 @@
 		left: @Switch-handle-offset;
 		position: absolute;
 		top: @Switch-handle-offset;
-		transition: @Switch-animation-timing;
+		// transition: @Switch-animation-timing;
 		width: @Switch-handle-radius * 2;
 	}
 
@@ -76,6 +79,7 @@
 	}
 
 	&-is-selected &-visualization-handle {
+		border: none;
 		background-color: @color-primary;
 		transform: @Switch-selected-transform;
 	}
@@ -84,15 +88,16 @@
 
 		& .@{prefix}-Switch-visualization-container,
 		& .@{prefix}-Switch-visualization-handle {
-			background-color: fade(@color-neutral-9, 4%);
-			border-color: fade(@color-neutral-9, 15%);
+			background-color: @Switch-disabled-color;
+			border-color: @Switch-disabled-border-color;
+			// border: none;
 		}
 
 		&:hover {
 			& .@{prefix}-Switch-visualization-container,
 			& .@{prefix}-Switch-visualization-handle {
-				background-color: fade(@color-neutral-9, 4%);
-				border-color: fade(@color-neutral-9, 15%);
+				background-color: @Switch-disabled-color;
+				border-color: @Switch-disabled-border-color;
 			}
 		}
 	}
@@ -169,8 +174,8 @@
 
 			& .@{prefix}-Switch-visualization-container,
 			& .@{prefix}-Switch-visualization-handle {
-				background-color: fade(@color-neutral-9, 4%);
-				border-color: fade(@color-neutral-9, 15%);
+				background-color: @Switch-disabled-color;
+				border-color: @Switch-disabled-border-color;
 			}
 		}
 
@@ -189,9 +194,9 @@
 		}
 	}
 
-	&-is-selected &-native:focus ~ &-visualization-handle {
-		// transform: @Switch-selected-transform @Switch-handle-scale;
-	}
+	// &-is-selected &-native:focus ~ &-visualization-handle {
+	// 	transform: @Switch-selected-transform @Switch-handle-scale;
+	// }
 
 	// &-is-selected:hover &-visualization-glow {
 	// 	transform: @Switch-selected-transform @Switch-glow-scale;
@@ -203,8 +208,8 @@
 		border: 1px solid @color-primary;
 	}
 
-	&-native:focus ~ &-visualization-handle {
-		// transform: @Switch-handle-scale;
-	}
+	// &-native:focus ~ &-visualization-handle {
+	// 	transform: @Switch-handle-scale;
+	// }
 }
 

@@ -38,7 +38,8 @@
 		background-color: @featured-color-default-backgroundColorHover;
 	}
 
-	&:active:not(&-is-disabled) {
+	&:active:not(&-is-disabled),
+	&:focus:not(&-is-disabled) {
 		background-color: @featured-color-default-backgroundColorFocus;
 	}
 
@@ -100,8 +101,9 @@
 			.opacity(@opacity-hover);
 		}
 
-		&:active:not(.@{prefix}-Button-is-disabled) {
-			background-color: @featured-color-primary-backgroundColor;
+		&:active:not(.@{prefix}-Button-is-disabled),
+		&:focus:not(.@{prefix}-Button-is-disabled) {
+			background-color: @featured-color-primary-colorActive;
 			.opacity(1);
 		}
 	}
@@ -131,8 +133,9 @@
 			.opacity(@opacity-hover);
 		}
 
-		&:active:not(.@{prefix}-Button-is-disabled) {
-			background-color: @featured-color-danger-backgroundColor;
+		&:active:not(.@{prefix}-Button-is-disabled),
+		&:focus:not(.@{prefix}-Button-is-disabled) {
+			background-color: @featured-color-danger-colorActive;
 			.opacity(1);
 		}
 	}
@@ -195,7 +198,8 @@
 		border: none;
 		background: none;
 
-		&:active::before {
+		&:active::before,
+		&:focus::before {
 			opacity: 0;
 		}
 

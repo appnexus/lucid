@@ -4,37 +4,39 @@
 .@{prefix}-Expander {
 
 	&-icon {
-		.box-sizing();
+		// .box-sizing();
+		display: inline-block;
 
 		width: @size-expander-button;
 		height: @size-expander-button;
 		align-items: center;
-		display: flex;
 		justify-content: center;
 		margin-right: @size-XS;
+
+		.@{prefix}-Icon {
+			margin: 2px 2px;
+		}
 	}
 
 	&-header {
 		align-items: center;
 		color: @color-darkGray;
-		cursor: pointer;
 		display: flex;
 		font: @font;
 		justify-content: flex-start;
 
-		&:hover {
-			> .@{prefix}-Expander-icon {
-				.box-sizing();
+		&-toggle {
+			cursor: pointer;
 
-				background-color: @featured-color-default-backgroundColorHover;
-				outline: none;
-			}
+			&:hover {
+				> .@{prefix}-Expander-icon {
+					.box-sizing();
 
-			> .@{prefix}-Expander-text {
+					background-color: @featured-color-default-backgroundColorHover;
+					outline: none;
+				}
 
-				// `text-decoration `does not inherit when you're using `position:
-				// absolute` as per the spec
-				> span {
+				> .@{prefix}-Expander-text {
 					text-decoration: underline;
 				}
 			}
@@ -42,26 +44,20 @@
 	}
 
 	&-text {
-		.transition-group-animation-fade(@timing-animation-hover);
-
 		color: @color-darkGray;
 		height: @size-expander-button;
 		font-weight: @font-weight-medium;
 		position: relative;
 
-		// Since we have two elements in the dom during the transition from one
-		// label to another, we want the element that's leaving to appear "over
-		// the top" of the label that coming in.
-		&-leave {
-			position: absolute;
-			top: 0;
-			left: 0;
-		}
-
 		> * {
 			line-height: @size-expander-button;
 			white-space: nowrap;
 		}
+	}
+
+	&-additional-content {
+		flex: 1;
+		margin-left: @size-standard;
 	}
 
 	&-content {

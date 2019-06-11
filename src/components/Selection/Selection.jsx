@@ -208,7 +208,10 @@ const Selection = createClass({
 							<CloseIcon
 								isClickable
 								size={!isSmall ? 8 : 16}
-								className={cx('&-close-button')}
+								className={cx(
+									'&-close-button',
+									isSmall && '&-close-button-is-small'
+								)}
 								onClick={this.handleRemove}
 							/>
 						) : null}
