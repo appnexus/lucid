@@ -45,7 +45,6 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
       </span>
       <ChevronIcon
         direction="down"
-        size={8}
       />
     </div>
   </DropMenu.Control>
