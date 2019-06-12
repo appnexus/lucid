@@ -27,7 +27,7 @@
     "lint-fix": "eslint ./src --ext .js,.jsx --fix",
     "postpublish": "npm run build-docs && scripts/upload-docs-build-gh.sh && scripts/upload-docs-build-docspot.sh",
     "prettier": "prettier --write '{src,tests,scripts}/**/*.{js,jsx}'",
-    "preversion": "rm -rf dist && rm -rf lib && npm run lint && npm run build-js && npm run build-bundle && npm run build-modules",
+    "prepublishOnly": "rm -rf dist && rm -rf lib && npm run lint && npm run build-js && npm run build-bundle && npm run build-modules",
     "release": "np",
     "start": "npm run docs",
     "storybook": "start-storybook -p 6006",
