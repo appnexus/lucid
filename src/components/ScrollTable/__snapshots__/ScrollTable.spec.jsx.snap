@@ -7,6 +7,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 1.sta
   <Table
     density="extended"
     hasBorder={false}
+    hasHover={true}
     hasLightHeader={true}
     hasWordWrap={false}
     style={
@@ -1232,6 +1233,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 2.wit
   <Table
     density="extended"
     hasBorder={false}
+    hasHover={true}
     hasLightHeader={true}
     hasWordWrap={false}
     style={
@@ -2463,6 +2465,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 3.set
   <Table
     density="extended"
     hasBorder={false}
+    hasHover={true}
     hasLightHeader={true}
     hasWordWrap={false}
     style={
@@ -3688,6 +3691,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 4.ful
   <Table
     density="extended"
     hasBorder={false}
+    hasHover={true}
     hasLightHeader={true}
     hasWordWrap={false}
     style={
@@ -5983,6 +5987,7 @@ exports[`ScrollTable [common] example testing should match snapshot(s) for 5.set
   <Table
     density="extended"
     hasBorder={false}
+    hasHover={true}
     hasLightHeader={true}
     hasWordWrap={false}
     style={

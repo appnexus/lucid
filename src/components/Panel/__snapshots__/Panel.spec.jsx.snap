@@ -187,6 +187,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 06.no-margi
     <Table
       density="extended"
       hasBorder={false}
+      hasHover={true}
       hasLightHeader={true}
       hasWordWrap={true}
       style={
@@ -364,6 +365,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 07.no-conte
     <Table
       density="extended"
       hasBorder={false}
+      hasHover={true}
       hasLightHeader={true}
       hasWordWrap={true}
       style={
@@ -541,6 +543,7 @@ exports[`Panel [common] example testing should match snapshot(s) for 08.no-margi
     <Table
       density="extended"
       hasBorder={false}
+      hasHover={true}
       hasLightHeader={true}
       hasWordWrap={true}
       style={

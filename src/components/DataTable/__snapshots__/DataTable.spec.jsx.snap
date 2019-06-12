@@ -10295,6 +10295,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
           className="lucid-DataTable-fixed-header-fixed-columns-Table"
           density="extended"
           hasBorder={false}
+          hasHover={true}
           hasLightHeader={false}
           hasWordWrap={true}
         >
@@ -10343,6 +10344,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
           className="lucid-DataTable-fixed-header-unfixed-columns-Table"
           density="extended"
           hasBorder={false}
+          hasHover={true}
           hasLightHeader={false}
           hasWordWrap={true}
         >
@@ -10439,6 +10441,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
           className="lucid-DataTable-fixed-body-fixed-columns-Table"
           density="extended"
           hasBorder={false}
+          hasHover={true}
           hasLightHeader={false}
           hasWordWrap={false}
         >
@@ -10867,6 +10870,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 11.fixe
           className="lucid-DataTable-fixed-body-unfixed-columns-Table"
           density="extended"
           hasBorder={false}
+          hasHover={true}
           hasLightHeader={false}
           hasWordWrap={false}
         >
