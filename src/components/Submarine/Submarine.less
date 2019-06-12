@@ -15,7 +15,6 @@
 	flex-direction: column;
 
 	& > .@{prefix}-SplitHorizontal-inner {
-
 		& > .@{prefix}-Submarine-Bar {
 			position: relative;
 			z-index: @zindex-base;
@@ -82,27 +81,18 @@
 
 				& > .@{prefix}-Submarine-expander {
 					align-self: center;
-					// display: flex;
-					// justify-content: center;
-					// align-items: center;
 					flex: 0 0;
-					// height: @size-expander-button;
-					// width: @size-expander-button;
 					margin: 0 @size-XS;
-					// border: solid 1px @featured-color-default-borderColor;
-					// border-radius: @size-borderRadius;
-					// cursor: pointer;
 					z-index: @zindex-base + 1;
+
+					&:focus,
+					&:active {
+						background: none;
+					}
 
 					.@{prefix}-ChevronIcon {
 						stroke: @color-neutral-6;
 					}
-
-					//background-color: @featured-color-default-backgroundColor;
-
-					//&:hover {
-					//	background-color: @featured-color-default-backgroundColor;
-					//}
 				}
 			}
 

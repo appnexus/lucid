@@ -280,7 +280,10 @@ const SingleSelect = createClass({
 								: placeholder}
 						</span>
 
-						<ChevronIcon direction={isExpanded ? direction : 'down'} />
+						<ChevronIcon
+							size={12}
+							direction={isExpanded ? direction : 'down'}
+						/>
 					</div>
 				</DropMenu.Control>
 
