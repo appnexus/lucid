@@ -191,6 +191,7 @@ const Selection = createClass({
 						'&-is-bold': isBold,
 						'&-is-filled': isFilled,
 						'&-is-top': isTop,
+						'&-no-title': _.isEmpty(labelProps),
 					},
 					className
 				)}
