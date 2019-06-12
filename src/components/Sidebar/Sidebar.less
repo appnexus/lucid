@@ -5,6 +5,7 @@
 @Sidebar-transition-duration: @timing-animation-fade;
 @Sidebar-transition-half-duration: @Sidebar-transition-duration / 2;
 @Sidebar-transition-third-duration: @Sidebar-transition-duration / 3;
+@Sidebar-zIndex: 10;
 
 .@{prefix}-Sidebar {
 	display: flex;
@@ -18,7 +19,7 @@
 
 		& > .@{prefix}-Sidebar-Bar {
 			position: relative;
-			z-index: @zindex-base;
+			z-index: @Sidebar-zIndex;
 			background-color: @color-white;
 			overflow: auto;
 			display: flex;
@@ -40,7 +41,7 @@
 				height: 100%;
 				background-color: @color-neutral-3;
 				opacity: 1;
-				z-index: @zindex-base;
+				z-index: @Sidebar-zIndex;
 
 				.@{prefix}-SplitVertical-is-expanded& {
 					opacity: 0;
@@ -86,9 +87,13 @@
 					flex-shrink: 0;
 					height: @size-expander-button;
 					width: @size-expander-button;
-					margin: @size-XS;
+					margin-top: 2px;
 					cursor: pointer;
-					z-index: @zindex-base + 1;
+					z-index: @Sidebar-zIndex + 1;
+
+					&:focus {
+						background: none;
+					}
 
 					.@{prefix}-ChevronIcon {
 						stroke: @color-neutral-6;
@@ -115,7 +120,7 @@
 			align-items: center;
 			background-color: @color-neutral-3;
 			width: @Sidebar-Divider-width;
-			z-index: @zindex-base - 1;
+			z-index: @Sidebar-zIndex - 1;
 
 			.@{prefix}-Sidebar-is-position-left& {
 				transform: translateX(-@Sidebar-Divider-width);
@@ -231,4 +236,3 @@
 		}
 	}
 }
-

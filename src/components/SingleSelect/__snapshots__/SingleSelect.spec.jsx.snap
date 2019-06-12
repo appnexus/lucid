@@ -45,6 +45,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 01.b
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -120,6 +121,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 02.n
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -198,6 +200,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 03.d
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -273,6 +276,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 04.d
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -348,6 +352,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 05.g
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -488,6 +493,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 06.n
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -563,6 +569,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 07.m
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -1749,6 +1756,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 08.r
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -1845,6 +1853,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 09.n
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -1920,6 +1929,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 10.a
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -1995,6 +2005,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 11.s
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -2112,6 +2123,7 @@ exports[`SingleSelect [common] example testing should match snapshot(s) for 12.i
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -2191,6 +2203,7 @@ exports[`SingleSelect child elements Option should render Option.Selected in the
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>

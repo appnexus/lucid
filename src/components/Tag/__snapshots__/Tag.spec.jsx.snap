@@ -180,7 +180,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 15
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -198,7 +198,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 16
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -216,7 +216,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 17
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -234,7 +234,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 18
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -252,7 +252,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 19
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -270,7 +270,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 20
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -288,7 +288,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 21
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -306,7 +306,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 22
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -324,7 +324,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 23
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -342,7 +342,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 24
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -360,7 +360,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 25
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -378,7 +378,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 26
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -396,7 +396,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 27
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -414,7 +414,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 28
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -615,7 +615,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 38
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -633,7 +633,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 39
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -651,7 +651,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 40
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -708,7 +708,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 42
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -726,7 +726,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 43
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -744,7 +744,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 44
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -762,7 +762,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 45
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
   <Tag
@@ -861,7 +861,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 46
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -879,7 +879,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 47
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -897,7 +897,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 48
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -915,7 +915,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 49
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -933,7 +933,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 50
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -951,7 +951,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 51
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -969,7 +969,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 52
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -987,7 +987,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 53
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -1005,7 +1005,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 54
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -1023,7 +1023,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 55
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
   <Tag
@@ -1068,7 +1068,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 56
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -1086,7 +1086,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 57
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -1104,7 +1104,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 58
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -1122,7 +1122,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 59
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
   <Tag
@@ -1219,7 +1219,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 60
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
   <Tag
@@ -1272,7 +1272,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 61
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -1290,7 +1290,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 62
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -1308,7 +1308,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 63
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -1385,7 +1385,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 66
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -1403,7 +1403,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 67
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -1421,7 +1421,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 68
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -1542,7 +1542,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 71
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
   <Tag
@@ -1595,7 +1595,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 72
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -1613,7 +1613,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 73
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -1631,7 +1631,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 74
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -1708,7 +1708,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 77
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -1726,7 +1726,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 78
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -1744,7 +1744,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 01.default 79
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -3650,7 +3650,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
   <Tag
@@ -3678,7 +3678,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -3696,7 +3696,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
   <Tag
@@ -3724,7 +3724,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -3742,7 +3742,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
   <Tag
@@ -3950,7 +3950,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -3968,7 +3968,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -3986,7 +3986,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4004,7 +4004,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4022,7 +4022,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4040,7 +4040,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4058,7 +4058,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4076,7 +4076,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4094,7 +4094,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4112,7 +4112,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4130,7 +4130,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4148,7 +4148,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4166,7 +4166,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4184,7 +4184,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4202,7 +4202,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4220,7 +4220,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4238,7 +4238,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4256,7 +4256,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4274,7 +4274,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4292,7 +4292,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
   <Tag
@@ -4660,7 +4660,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4678,7 +4678,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4696,7 +4696,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4714,7 +4714,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4732,7 +4732,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4750,7 +4750,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4768,7 +4768,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4786,7 +4786,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4804,7 +4804,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4822,7 +4822,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4840,7 +4840,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4858,7 +4858,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4876,7 +4876,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4894,7 +4894,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4912,7 +4912,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4930,7 +4930,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4948,7 +4948,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4966,7 +4966,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -4984,7 +4984,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5002,7 +5002,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5020,7 +5020,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5038,7 +5038,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5056,7 +5056,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5074,7 +5074,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5092,7 +5092,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5110,7 +5110,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5128,7 +5128,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5146,7 +5146,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5164,7 +5164,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5182,7 +5182,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5200,7 +5200,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5218,7 +5218,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5236,7 +5236,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5254,7 +5254,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5272,7 +5272,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5290,7 +5290,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
   <Tag
@@ -5408,7 +5408,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5426,7 +5426,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5444,7 +5444,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5462,7 +5462,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5480,7 +5480,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5498,7 +5498,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5516,7 +5516,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5534,7 +5534,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5552,7 +5552,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>
@@ -5570,7 +5570,7 @@ exports[`Tag [common] example testing should match snapshot(s) for 04.interactiv
       className="lucid-Tag-remove-button"
       isClickable={true}
       onClick={[Function]}
-      size={8}
+      size={7}
     />
   </span>
 </div>

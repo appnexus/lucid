@@ -25,18 +25,19 @@
 	}
 
 	// must use this specific selector in order to override default color
-	.@{prefix}-Banner-close {
+	&-close&-close&-close {
 		align-self: flex-start;
 		margin-top: 14px;
 		stroke: @color-white;
 
 		&:hover {
 			stroke: @color-white;
+			opacity: 0.5;
 		}
 	}
 
-	&-small > &-close {
-		margin-top: 9px;
+	&-small&-small > &-close {
+		margin-top: 8px;
 	}
 
 	// States
@@ -72,6 +73,11 @@
 			&:last-of-type {
 				margin-bottom: 0;
 			}
+		}
+
+		a {
+			color: inherit;
+			text-decoration: underline;
 		}
 	}
 

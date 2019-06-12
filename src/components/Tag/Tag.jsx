@@ -106,7 +106,7 @@ const Tag = createClass({
 							<CloseIcon
 								onClick={this.handleRemove}
 								className={cx('&-remove-button')}
-								size={8}
+								size={7}
 								isClickable
 							/>
 						)}

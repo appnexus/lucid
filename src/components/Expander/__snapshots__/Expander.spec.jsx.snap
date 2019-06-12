@@ -16,6 +16,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 1.expand
       >
         <ChevronIcon
           direction="up"
+          size={12}
         />
       </span>
       <span
@@ -59,6 +60,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 2.intera
       >
         <ChevronIcon
           direction="down"
+          size={12}
         />
       </span>
       <span
@@ -117,6 +119,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 3.intera
       >
         <ChevronIcon
           direction="down"
+          size={12}
         />
       </span>
       <span
@@ -175,6 +178,7 @@ exports[`Expander [common] example testing should match snapshot(s) for 4.intera
       >
         <ChevronIcon
           direction="down"
+          size={12}
         />
       </span>
       <span

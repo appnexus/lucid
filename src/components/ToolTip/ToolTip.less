@@ -29,23 +29,27 @@
 		margin: 0 0 4px;
 	}
 
-	&-close {
+	// Double selector for small specificity increase
+	&-close&-close {
 		position: absolute;
 		top: 10px;
 		right: 10px;
 		cursor: pointer;
-		fill: @color-white;
+		stroke: @color-white;
 
 		&:hover {
-			fill: @color-neutral-5;
+			stroke: @color-white;
+			opacity: 0.5;
 		}
 	}
 
-	&-light &-close {
-		fill: @color-neutral-8;
+	// Double selector for small specificity increase
+	&-light &-close&-close {
+		stroke: @color-neutral-6;
 
 		&:hover {
-			fill: @color-neutral-7;
+			opacity: 1;
+			stroke: @color-neutral-7;
 		}
 	}
 

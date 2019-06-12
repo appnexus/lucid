@@ -267,6 +267,7 @@ const ToolTip = createClass({
 				>
 					{isCloseable ? (
 						<CloseIcon
+							isClickable
 							size={8}
 							onClick={this.handleClose}
 							className={flyOutCx('&-close')}

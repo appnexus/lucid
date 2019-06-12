@@ -39,6 +39,9 @@ export default createClass({
 							nemo ea reiciendis. Accusantium officiis molestiae delectus
 							nesciunt aperiam Fugit ipsam esse accusamus.
 						</div>
+						<div>
+							<a href='#'>Click Me</a>
+						</div>
 					</Banner>
 					<Banner isCloseable={false} style={{ marginBottom: 8 }}>
 						Default -- No Close {String.fromCharCode(0x00d7)}
@@ -59,7 +62,7 @@ export default createClass({
 
 				<div>
 					<Banner kind='warning' style={{ marginBottom: 8 }}>
-						Warning
+						Warning <a href='#'>Don't Click Here</a>
 					</Banner>
 					<Banner
 						kind='warning'

@@ -145,7 +145,7 @@ const Expander = createClass({
 				<header className={cx('&-header')}>
 					<div className={cx('&-header-toggle')} onClick={this.handleToggle}>
 						<span className={cx('&-icon')}>
-							<ChevronIcon direction={isExpanded ? 'up' : 'down'} />
+							<ChevronIcon size={12} direction={isExpanded ? 'up' : 'down'} />
 						</span>
 						{labelChildProp && (
 							<span className={cx('&-text')}>{labelChildProp.children}</span>

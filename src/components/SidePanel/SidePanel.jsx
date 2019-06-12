@@ -109,8 +109,8 @@ class SidePanel extends React.Component {
 			>
 				<div
 					className={cx('&-pane')}
-					style={{ width: this.state.width }}
 					style={{
+						width: this.state.width,
 						marginTop: topOffset,
 					}}
 				>
