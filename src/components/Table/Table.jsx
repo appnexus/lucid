@@ -85,6 +85,8 @@ const Tbody = createClass({
 	render() {
 		const { children, className, ...passThroughs } = this.props;
 
+		console.log(this.props)
+
 		return (
 			<tbody
 				{...omitProps(passThroughs, Tbody)}
@@ -593,6 +595,11 @@ const Table = createClass({
 		hasWordWrap: bool`
 			Enables word wrapping in tables cells.
 		`,
+
+		hasHover: bool`
+			Applies a row hover to rows. Defaults to true.
+		`,
+
 	},
 
 	getDefaultProps() {
@@ -601,6 +608,7 @@ const Table = createClass({
 			hasBorder: false,
 			hasWordWrap: true,
 			hasLightHeader: true,
+			hasHover: true,
 		};
 	},
 
@@ -611,6 +619,7 @@ const Table = createClass({
 			density,
 			hasWordWrap,
 			hasLightHeader,
+			hasHover,
 			style,
 			...passThroughs
 		} = this.props;
@@ -627,6 +636,7 @@ const Table = createClass({
 						'&-has-border': hasBorder,
 						'&-has-word-wrap': hasWordWrap,
 						'&-has-light-header': hasLightHeader,
+						'&-no-hover': !hasHover,
 					},
 					className
 				)}

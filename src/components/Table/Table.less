@@ -15,6 +15,24 @@
 	border-spacing: 0;
 	box-sizing: border-box;
 
+
+	/*
+		This removes the hover styles based upon hasHover equalling false
+	*/
+	&-no-hover.@{prefix}-Table {
+		.@{prefix}-Table-Tbody {
+			.@{prefix}-Table-Tr:hover {
+				& > .@{prefix}-Table-Td.@{prefix}-Table-is-first-single::after {
+				 display: none;
+			 	}
+				& > .@{prefix}-Table-Td:not([rowspan]),
+				.@{prefix}-Table > .@{prefix}-Table-Tbody > .@{prefix}-Table-Tr:hover > .@{prefix}-Table-Td[rowspan='1'] {
+					background-color: white;
+				}
+			}
+		}
+	}
+
 	/*
 		These two selectors hide the sorting caret icon
 		if the column is not sorted, and they show the icon

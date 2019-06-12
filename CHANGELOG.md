@@ -38,3 +38,4 @@
 - removed `ChevronThinIcon` in favor of just `Chevron`
 - added `topOffset` to `SidePanel`. This prop adds a top margin to the component.
 - added `isInvisible` to `SearchableSelect`
+- added `hasHover` to `Table` for removing hover styling on tables.
