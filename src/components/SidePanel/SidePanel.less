@@ -2,8 +2,8 @@
 @import (reference) '../../styles/mixins.less';
 
 .@{prefix}-SidePanel {
-
 	font-family: @fontFamily;
+	z-index: 100;
 
 	.@{prefix}-SidePanel-pane {
 		position: fixed;
@@ -37,7 +37,7 @@
 		.@{prefix}-SidePanel-header {
 			border-bottom: @border-lightBorder;
 			background: white;
-			padding: 20px 20px 0 20px;
+			padding: 20px;
 
 			.@{prefix}-SidePanel-header-inner-wrapper {
 				display: flex;
@@ -45,18 +45,12 @@
 
 				.@{prefix}-SidePanel-header-content {
 					flex: 1;
+					font-size: 24px;
+					font-weight: 500;
 				}
-
-				// .@{prefix}-SidePanel-header-closer {
-
-				// 	&.@{prefix}-CrossIcon {
-				// 		margin: 0;
-				// 	}
-				// }
 			}
 		}
 		.@{prefix}-SidePanel-body {
-
 			height: 100%;
 			display: flex;
 
