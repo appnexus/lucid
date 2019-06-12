@@ -695,6 +695,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
   >
     <CloseIcon
       className="lucid-ToolTip-FlyOut-close"
+      isClickable={true}
       onClick={[Function]}
       size={8}
     />
@@ -737,6 +738,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
   >
     <CloseIcon
       className="lucid-ToolTip-FlyOut-close"
+      isClickable={true}
       onClick={[Function]}
       size={8}
     />
@@ -821,6 +823,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
   >
     <CloseIcon
       className="lucid-ToolTip-FlyOut-close"
+      isClickable={true}
       onClick={[Function]}
       size={8}
     />
@@ -863,6 +866,7 @@ exports[`ToolTip [common] example testing should match snapshot(s) for 2.variant
   >
     <CloseIcon
       className="lucid-ToolTip-FlyOut-close"
+      isClickable={true}
       onClick={[Function]}
       size={8}
     />
