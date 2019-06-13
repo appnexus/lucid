@@ -85,8 +85,6 @@ const Tbody = createClass({
 	render() {
 		const { children, className, ...passThroughs } = this.props;
 
-		console.log(this.props)
-
 		return (
 			<tbody
 				{...omitProps(passThroughs, Tbody)}
