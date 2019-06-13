@@ -167,7 +167,7 @@ const Paginator = createClass({
 					<div className={cx('&-total-count')}>
 						{_.isFunction(showTotalObjects)
 							? showTotalObjects(totalCount)
-							: totalCount}{' '}
+							: totalCount.toLocaleString()}{' '}
 						{totalCount === 1
 							? objectLabel
 							: objectLabelPlural || `${objectLabel}s`}

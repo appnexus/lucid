@@ -12,7 +12,7 @@ export default createClass({
 					<Paginator
 						hasPageSizeSelector
 						showTotalObjects
-						totalCount={101}
+						totalCount={12321313}
 						SingleSelect={{
 							DropMenu: { direction: 'up' },
 						}}
