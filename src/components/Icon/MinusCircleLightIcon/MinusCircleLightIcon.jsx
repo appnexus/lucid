@@ -1,10 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'react-peek/prop-types';
 import Icon from '../Icon';
 import { lucidClassNames } from '../../../util/style-helpers';
 import { createClass, omitProps } from '../../../util/component-types';
 
 const cx = lucidClassNames.bind('&-MinusCircleLightIcon');
+const { bool } = PropTypes;
 
 const MinusCircleLightIcon = createClass({
 	displayName: 'MinusCircleLightIcon',
@@ -22,10 +24,20 @@ const MinusCircleLightIcon = createClass({
 
 	propTypes: {
 		...Icon.propTypes,
+		isActive: bool`
+			Controls the active state of the Icon. Basically toggles the same "look n
+			feel" as when you hover.
+		`,
 	},
 
 	render() {
-		const { className, isDisabled, isClickable, ...passThroughs } = this.props;
+		const {
+			isActive,
+			className,
+			isDisabled,
+			isClickable,
+			...passThroughs
+		} = this.props;
 
 		return (
 			<Icon
@@ -37,6 +49,7 @@ const MinusCircleLightIcon = createClass({
 					'&',
 					isDisabled && '&-is-disabled',
 					isClickable && '&-is-clickable',
+					isActive && '&-is-active',
 					className
 				)}
 			>

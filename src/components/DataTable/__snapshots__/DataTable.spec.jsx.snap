@@ -3606,6 +3606,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Th>
         <Table.Th
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           isResizable={true}
@@ -3728,6 +3729,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row0first_name"
@@ -3849,6 +3851,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row1first_name"
@@ -3970,6 +3973,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row2first_name"
@@ -3980,7 +3984,14 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
             }
           }
         >
-          Leonardo
+          <div>
+            Leon 
+            <div
+              className="child"
+            >
+              The Silly
+            </div>
+          </div>
         </Table.Td>
         <Table.Td
           align="left"
@@ -4091,6 +4102,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row3first_name"
@@ -4212,6 +4224,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row4first_name"
@@ -4333,6 +4346,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row5first_name"
@@ -4454,6 +4468,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row6first_name"
@@ -4575,6 +4590,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row7first_name"
@@ -4696,6 +4712,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row8first_name"
@@ -4817,6 +4834,7 @@ exports[`DataTable [common] example testing should match snapshot(s) for 04.inte
         </Table.Td>
         <Table.Td
           align="left"
+          className="parent"
           hasBorderLeft={true}
           hasBorderRight={true}
           key="row9first_name"
