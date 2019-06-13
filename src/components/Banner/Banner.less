@@ -9,7 +9,7 @@
 
 .@{prefix}-Banner {
 	.transition-group-animation-fade();
-	.box-sizing();
+	box-sizing: content-box;
 
 	border: none;
 	background-color: @color-neutral-9;
@@ -61,7 +61,7 @@
 	&-content {
 		flex: 1;
 		padding: @Banner-size-spacing-topBottom 0;
-		line-height: 1em;
+		line-height: 15px;
 
 		& > p {
 			line-height: 1.25em;

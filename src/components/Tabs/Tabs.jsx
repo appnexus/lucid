@@ -145,11 +145,6 @@ const Tab = createClass({
 							viewBox={'0 0 8 37'}
 							preserveAspectRatio='none'
 						>
-							<polygon
-								className={cx('&-Tab-arrow-background')}
-								fill='#fff'
-								points={'0,0 8,18.5 0,37'}
-							/>
 							<polyline
 								className={cx('&-Tab-arrow-tab-line')}
 								fill='#fff'
