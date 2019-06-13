@@ -29,7 +29,7 @@ const ClockIcon = createClass({
 		return (
 			<Icon {...passThroughs} className={cx('&', className)}>
 				<circle cx='8' cy='8' r='7.5' />
-				<path class='st0' d='M8 3.5v5l2.75 2.25' />
+				<path d='M8 3.5v5l2.75 2.25' />
 			</Icon>
 		);
 	},

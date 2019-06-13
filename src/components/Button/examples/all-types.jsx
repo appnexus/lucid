@@ -3,7 +3,7 @@ import React from 'react';
 import { Button, CheckIcon } from '../../../index';
 
 const kinds = [undefined, 'primary', 'link', 'danger', 'invisible'];
-const sizes = ['small', 'short', 'large'];
+const sizes = [undefined, 'small', 'short', 'large'];
 
 export default () => (
 	<div
@@ -11,7 +11,7 @@ export default () => (
 			display: 'grid',
 			gridGap: '10px',
 			gridTemplateColumns: `repeat(${kinds.length}, auto)`,
-			justifyItems: 'center',
+			justifyItems: 'start',
 			alignItems: 'center',
 			gridAutoFlow: 'column',
 		}}
@@ -20,11 +20,11 @@ export default () => (
 			_.map(kinds, kind => (
 				<React.Fragment key={`${size}-${kind}`}>
 					<Button style={{ gridColumn: sizeIndex + 1 }} size={size} kind={kind}>
-						{size} {kind}
+						{size ? size : 'standard'} {kind}
 					</Button>
 					<Button style={{ gridColumn: sizeIndex + 1 }} size={size} kind={kind}>
 						<CheckIcon />
-						{size} {kind}
+						{size ? size : 'standard'} {kind}
 					</Button>
 					<Button
 						style={{ gridColumn: sizeIndex + 1 }}
