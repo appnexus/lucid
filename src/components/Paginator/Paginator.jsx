@@ -168,7 +168,7 @@ const Paginator = createClass({
 						{_.isFunction(showTotalObjects)
 							? showTotalObjects(totalCount)
 							: totalCount}{' '}
-						{totalCount <= 1
+						{totalCount === 1
 							? objectLabel
 							: objectLabelPlural || `${objectLabel}s`}
 					</div>
