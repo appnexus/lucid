@@ -208,7 +208,7 @@ const Paginator = createClass({
 					isDisabled={isDisabled}
 					value={selectedPageIndex + 1}
 				/>
-				<span>of {totalPages}</span>
+				{!_.isNil(totalPages) && <span>of {totalPages.toLocaleString()}</span>}
 				<Button
 					kind='invisible'
 					onClick={_.partial(onPageSelect, selectedPageIndex + 1, totalPages)}
