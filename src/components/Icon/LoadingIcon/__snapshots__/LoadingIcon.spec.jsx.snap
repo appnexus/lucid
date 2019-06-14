@@ -6,7 +6,7 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
   className="lucid-LoadingIcon"
   isClickable={false}
   isDisabled={false}
-  nativeWidth={16}
+  nativeSize={16}
   size={16}
   style={
     Object {
@@ -48,7 +48,7 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
   className="lucid-LoadingIcon"
   isClickable={false}
   isDisabled={false}
-  nativeWidth={16}
+  nativeSize={16}
   size={16}
   style={
     Object {
@@ -90,7 +90,7 @@ exports[`LoadingIcon [common] example testing should match snapshot(s) for 1.def
   className="lucid-LoadingIcon"
   isClickable={false}
   isDisabled={false}
-  nativeWidth={16}
+  nativeSize={16}
   size={16}
   style={
     Object {
