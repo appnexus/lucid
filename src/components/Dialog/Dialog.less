@@ -33,13 +33,25 @@
 		width: @Dialog-size-largeWidth;
 	}
 
+
+
 	&-header {
-		flex: 1 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		font-family: @fontFamily;
 		font-size: @size-font-L;
 		color: @color-darkGray;
 		font-weight: @font-weight-medium;
 		padding: 26px @Dialog-size-spacing 10px;
+
+		.@{prefix}-Dialog-close-button {
+			position: relative;
+
+			.@{prefix}-Icon {
+				stroke: @color-neutral-6;
+			}
+		}
 	}
 
 	& &-is-menu &-header {

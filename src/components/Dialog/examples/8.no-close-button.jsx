@@ -22,17 +22,20 @@ export default createClass({
 				</Button>
 
 				<Dialog
-					isModal={false}
+					hasClose={false}
 					isShown={this.state.isShown}
-					handleClose={_.partial(this.handleShow, !this.state.isShown)}
-					onBackgroundClick={_.partial(this.handleShow, false)}
-					onEscape={_.partial(this.handleShow, false)}
 					Header='Header'
-					size='small'
+					size='medium'
 				>
-					In most cases, you'll probably just use an isModal Dialog, but this
-					example shows that the Dialog doesn't have to be a modal. Try pressing
-					"escape" to close this Dialog.
+					<div key={'info'}>
+						For better UX, we recommend NOT handling onEscape and
+						onBackgroundClick when isModal is true. The term "modal" implies
+						that the user needs to interact with one of the buttons in the
+						footer to exit the dialog.
+					</div>
+					{_.times(50).map(i => {
+						return <div key={i}>Body</div>;
+					})}
 					<Dialog.Footer>
 						<Button
 							kind='invisible'

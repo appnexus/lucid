@@ -21,7 +21,12 @@ export default createClass({
 					Toggle
 				</Button>
 
-				<Dialog isShown={this.state.isShown} Header='Header' size='small'>
+				<Dialog
+					isShown={this.state.isShown}
+					handleClose={_.partial(this.handleShow, !this.state.isShown)}
+					Header='Header'
+					size='small'
+				>
 					<div key={'info'}>
 						For better UX, we recommend NOT handling onEscape and
 						onBackgroundClick when isModal is true. The term "modal" implies

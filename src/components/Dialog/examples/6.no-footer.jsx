@@ -23,6 +23,7 @@ export default createClass({
 
 				<Dialog
 					isShown={this.state.isShown}
+					handleClose={_.partial(this.handleShow, !this.state.isShown)}
 					onBackgroundClick={_.partial(this.handleShow, false)}
 					onEscape={_.partial(this.handleShow, false)}
 					Header='Header'

@@ -21,7 +21,11 @@ export default createClass({
 					Toggle
 				</Button>
 
-				<Dialog isShown={this.state.isShown} size='large'>
+				<Dialog
+					isShown={this.state.isShown}
+					handleClose={_.partial(this.handleShow, !this.state.isShown)}
+					size='large'
+				>
 					<Dialog.Header>
 						<i>Rich Header</i>
 					</Dialog.Header>

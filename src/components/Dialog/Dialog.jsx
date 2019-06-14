@@ -4,10 +4,12 @@ import PropTypes from 'react-peek/prop-types';
 import Overlay from '../Overlay/Overlay';
 import { lucidClassNames } from '../../util/style-helpers';
 import { createClass, getFirst, omitProps } from '../../util/component-types';
+import Button from '../Button/Button';
+import { CloseIcon } from '../..';
 
 const cx = lucidClassNames.bind('&-Dialog');
 
-const { node, oneOf, bool } = PropTypes;
+const { node, oneOf, bool, func } = PropTypes;
 
 const SMALL = 'small';
 const MEDIUM = 'medium';
@@ -63,9 +65,23 @@ const Dialog = createClass({
 			scroll inside.
 		`,
 
+		handleClose: func`
+			Required unless \`hasClose\` is set to false.
+			The function that is called when the close button is triggered.
+		`,
+
 		isMenu: bool`
 			Defaults to false.
 			Provides a more segregated design to organize more content in the Dialog.
+		`,
+
+		hasClose: bool`
+			Defaults to true.
+			Provides a close button in the top right.
+		`,
+
+		hasGutters: bool`
+			A true or false value that dictates whether or not the Body has padding.
 		`,
 
 		Header: node`
@@ -75,16 +91,15 @@ const Dialog = createClass({
 		Footer: node`
 			*Child Element* - Footer contents. Only one \`Footer\` is used.
 		`,
-
-		hasGutters: bool`
-			A true or false value that dictates whether or not the Body has padding.
-		`,
 	},
 
 	getDefaultProps() {
 		return {
+			handleClose: _.noop,
 			size: MEDIUM,
+			isMenu: false,
 			hasGutters: true,
+			hasClose: true,
 		};
 	},
 
@@ -92,7 +107,9 @@ const Dialog = createClass({
 		const {
 			className,
 			size,
+			handleClose,
 			hasGutters,
+			hasClose,
 			isShown,
 			isMenu,
 			...passThroughs
@@ -124,7 +141,20 @@ const Dialog = createClass({
 						'&-is-menu': isMenu,
 					})}
 				>
-					<header {...headerChildProp} className={cx('&-header')} />
+					<header className={cx('&-header')}>
+						{headerChildProp.children}
+
+						{hasClose &&
+							<Button
+								kind='invisible'
+								hasOnlyIcon
+								className={cx('&-close-button')}
+								onClick={handleClose}
+							>
+								<CloseIcon />
+							</Button>
+						}
+					</header>
 
 					<section
 						className={cx('&-body', hasGutters ? '' : '&-body-no-gutters')}

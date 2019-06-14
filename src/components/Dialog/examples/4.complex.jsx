@@ -56,6 +56,7 @@ export default createClass({
 				<Dialog
 					isMenu
 					isShown={this.state.isShown}
+					handleClose={_.partial(this.handleShow, !this.state.isShown)}
 					Header='Advanced Filters'
 					size='medium'
 					height={500}

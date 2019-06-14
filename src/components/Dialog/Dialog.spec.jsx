@@ -27,7 +27,13 @@ describe('Dialog', () => {
 			</Dialog>
 		);
 
-		assert.equal(wrapper.find('.lucid-Dialog-header').text(), 'Mobius');
+		assert.equal(
+			wrapper
+				.find('.lucid-Dialog-header')
+				.text()
+				.startsWith('Mobius'),
+			true
+		);
 	});
 
 	it('should render a Footer', () => {

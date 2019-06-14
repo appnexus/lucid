@@ -16,6 +16,17 @@ exports[`Dialog [common] example testing should match snapshot(s) for 1.small 1`
       className="lucid-Dialog-header"
     >
       Header
+      <Button
+        className="lucid-Dialog-close-button"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
+      >
+        <CloseIcon />
+      </Button>
     </header>
     <section
       className="lucid-Dialog-body"
@@ -152,6 +163,17 @@ exports[`Dialog [common] example testing should match snapshot(s) for 2.medium 1
       className="lucid-Dialog-header"
     >
       Header
+      <Button
+        className="lucid-Dialog-close-button"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
+      >
+        <CloseIcon />
+      </Button>
     </header>
     <section
       className="lucid-Dialog-body"
@@ -490,6 +512,17 @@ exports[`Dialog [common] example testing should match snapshot(s) for 3.large-wi
       <i>
         Rich Header
       </i>
+      <Button
+        className="lucid-Dialog-close-button"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
+      >
+        <CloseIcon />
+      </Button>
     </header>
     <section
       className="lucid-Dialog-body"
@@ -832,6 +865,17 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 
       className="lucid-Dialog-header"
     >
       Advanced Filters
+      <Button
+        className="lucid-Dialog-close-button"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
+      >
+        <CloseIcon />
+      </Button>
     </header>
     <section
       className="lucid-Dialog-body"
@@ -1020,6 +1064,17 @@ exports[`Dialog [common] example testing should match snapshot(s) for 5.no-modal
       className="lucid-Dialog-header"
     >
       Header
+      <Button
+        className="lucid-Dialog-close-button"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
+      >
+        <CloseIcon />
+      </Button>
     </header>
     <section
       className="lucid-Dialog-body"
@@ -1102,6 +1157,17 @@ exports[`Dialog [common] example testing should match snapshot(s) for 6.no-foote
       className="lucid-Dialog-header"
     >
       Header
+      <Button
+        className="lucid-Dialog-close-button"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
+      >
+        <CloseIcon />
+      </Button>
     </header>
     <section
       className="lucid-Dialog-body"
@@ -1128,12 +1194,359 @@ exports[`Dialog [common] example testing should match snapshot(s) for 7.no-gutte
       className="lucid-Dialog-header"
     >
       Header
+      <Button
+        className="lucid-Dialog-close-button"
+        hasOnlyIcon={true}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        type="button"
+      >
+        <CloseIcon />
+      </Button>
     </header>
     <section
       className="lucid-Dialog-body lucid-Dialog-body-no-gutters"
     >
       This \`Dialog\` has no gutters!
     </section>
+  </div>
+</Overlay>
+`;
+
+exports[`Dialog [common] example testing should match snapshot(s) for 8.no-close-button 1`] = `
+<Overlay
+  className="lucid-Dialog"
+  isAnimated={true}
+  isModal={true}
+  isShown={false}
+  onBackgroundClick={[Function]}
+  onEscape={[Function]}
+>
+  <div
+    className="lucid-Dialog-window lucid-Dialog-window-is-medium"
+  >
+    <header
+      className="lucid-Dialog-header"
+    >
+      Header
+    </header>
+    <section
+      className="lucid-Dialog-body"
+    >
+      <div
+        key="info"
+      >
+        For better UX, we recommend NOT handling onEscape and onBackgroundClick when isModal is true. The term "modal" implies that the user needs to interact with one of the buttons in the footer to exit the dialog.
+      </div>
+      <div
+        key="0"
+      >
+        Body
+      </div>
+      <div
+        key="1"
+      >
+        Body
+      </div>
+      <div
+        key="2"
+      >
+        Body
+      </div>
+      <div
+        key="3"
+      >
+        Body
+      </div>
+      <div
+        key="4"
+      >
+        Body
+      </div>
+      <div
+        key="5"
+      >
+        Body
+      </div>
+      <div
+        key="6"
+      >
+        Body
+      </div>
+      <div
+        key="7"
+      >
+        Body
+      </div>
+      <div
+        key="8"
+      >
+        Body
+      </div>
+      <div
+        key="9"
+      >
+        Body
+      </div>
+      <div
+        key="10"
+      >
+        Body
+      </div>
+      <div
+        key="11"
+      >
+        Body
+      </div>
+      <div
+        key="12"
+      >
+        Body
+      </div>
+      <div
+        key="13"
+      >
+        Body
+      </div>
+      <div
+        key="14"
+      >
+        Body
+      </div>
+      <div
+        key="15"
+      >
+        Body
+      </div>
+      <div
+        key="16"
+      >
+        Body
+      </div>
+      <div
+        key="17"
+      >
+        Body
+      </div>
+      <div
+        key="18"
+      >
+        Body
+      </div>
+      <div
+        key="19"
+      >
+        Body
+      </div>
+      <div
+        key="20"
+      >
+        Body
+      </div>
+      <div
+        key="21"
+      >
+        Body
+      </div>
+      <div
+        key="22"
+      >
+        Body
+      </div>
+      <div
+        key="23"
+      >
+        Body
+      </div>
+      <div
+        key="24"
+      >
+        Body
+      </div>
+      <div
+        key="25"
+      >
+        Body
+      </div>
+      <div
+        key="26"
+      >
+        Body
+      </div>
+      <div
+        key="27"
+      >
+        Body
+      </div>
+      <div
+        key="28"
+      >
+        Body
+      </div>
+      <div
+        key="29"
+      >
+        Body
+      </div>
+      <div
+        key="30"
+      >
+        Body
+      </div>
+      <div
+        key="31"
+      >
+        Body
+      </div>
+      <div
+        key="32"
+      >
+        Body
+      </div>
+      <div
+        key="33"
+      >
+        Body
+      </div>
+      <div
+        key="34"
+      >
+        Body
+      </div>
+      <div
+        key="35"
+      >
+        Body
+      </div>
+      <div
+        key="36"
+      >
+        Body
+      </div>
+      <div
+        key="37"
+      >
+        Body
+      </div>
+      <div
+        key="38"
+      >
+        Body
+      </div>
+      <div
+        key="39"
+      >
+        Body
+      </div>
+      <div
+        key="40"
+      >
+        Body
+      </div>
+      <div
+        key="41"
+      >
+        Body
+      </div>
+      <div
+        key="42"
+      >
+        Body
+      </div>
+      <div
+        key="43"
+      >
+        Body
+      </div>
+      <div
+        key="44"
+      >
+        Body
+      </div>
+      <div
+        key="45"
+      >
+        Body
+      </div>
+      <div
+        key="46"
+      >
+        Body
+      </div>
+      <div
+        key="47"
+      >
+        Body
+      </div>
+      <div
+        key="48"
+      >
+        Body
+      </div>
+      <div
+        key="49"
+      >
+        Body
+      </div>
+      <Dialog.Footer>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          kind="invisible"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginRight": "9px",
+            }
+          }
+          type="button"
+        >
+          Cancel
+        </Button>
+        <Button
+          hasOnlyIcon={false}
+          isActive={false}
+          isDisabled={false}
+          kind="primary"
+          onClick={[Function]}
+          type="button"
+        >
+          Save
+        </Button>
+      </Dialog.Footer>
+    </section>
+    <footer
+      className="lucid-Dialog-footer"
+    >
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="invisible"
+        onClick={[Function]}
+        style={
+          Object {
+            "marginRight": "9px",
+          }
+        }
+        type="button"
+      >
+        Cancel
+      </Button>
+      <Button
+        hasOnlyIcon={false}
+        isActive={false}
+        isDisabled={false}
+        kind="primary"
+        onClick={[Function]}
+        type="button"
+      >
+        Save
+      </Button>
+    </footer>
   </div>
 </Overlay>
 `;
