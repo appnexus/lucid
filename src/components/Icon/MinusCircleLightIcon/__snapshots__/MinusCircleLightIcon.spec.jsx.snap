@@ -6,6 +6,7 @@ exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) 
   className="lucid-MinusCircleLightIcon"
   isClickable={false}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -28,6 +29,7 @@ exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) 
   className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-clickable"
   isClickable={true}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -50,6 +52,7 @@ exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) 
   className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-disabled lucid-MinusCircleLightIcon-is-clickable"
   isClickable={true}
   isDisabled={true}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -72,6 +75,7 @@ exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) 
   className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-active"
   isClickable={false}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -94,6 +98,7 @@ exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) 
   className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-clickable lucid-MinusCircleLightIcon-is-active"
   isClickable={true}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -116,6 +121,7 @@ exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) 
   className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-disabled lucid-MinusCircleLightIcon-is-clickable lucid-MinusCircleLightIcon-is-active"
   isClickable={true}
   isDisabled={true}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >

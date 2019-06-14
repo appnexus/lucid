@@ -138,6 +138,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 5.cus
       className="lucid-SearchField-Icon"
       isClickable={false}
       isDisabled={false}
+      nativeWidth={16}
       size={16}
       speed="normal"
       viewBox="0 0 16 16"
@@ -345,6 +346,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
       className="lucid-SearchField-Icon"
       isClickable={false}
       isDisabled={false}
+      nativeWidth={16}
       size={16}
       speed="normal"
       viewBox="0 0 16 16"
@@ -378,6 +380,7 @@ exports[`SearchField [common] example testing should match snapshot(s) for 8.pro
       className="lucid-SearchField-Icon lucid-SearchField-Icon-active"
       isClickable={false}
       isDisabled={false}
+      nativeWidth={16}
       size={16}
       speed="normal"
       viewBox="0 0 16 16"

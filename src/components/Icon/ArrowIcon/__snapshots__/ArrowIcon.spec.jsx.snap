@@ -6,6 +6,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
   className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
   isClickable={false}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -21,6 +22,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
   className="lucid-ArrowIcon lucid-ArrowIcon-is-up"
   isClickable={false}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -36,6 +38,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
   className="lucid-ArrowIcon lucid-ArrowIcon-is-down"
   isClickable={false}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -51,6 +54,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
   className="lucid-ArrowIcon lucid-ArrowIcon-is-right"
   isClickable={false}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -66,6 +70,7 @@ exports[`ArrowIcon [common] example testing should match snapshot(s) for 1.defau
   className="lucid-ArrowIcon lucid-ArrowIcon-is-left"
   isClickable={false}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >

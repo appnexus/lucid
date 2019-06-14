@@ -882,6 +882,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       aspectRatio="xMidYMid meet"
       isClickable={false}
       isDisabled={false}
+      nativeWidth={16}
       size={16}
       speed="normal"
       viewBox="0 0 16 16"

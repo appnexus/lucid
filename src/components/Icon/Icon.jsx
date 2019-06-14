@@ -69,6 +69,14 @@ const Icon = createClass({
 		children: any`
 			Any valid React children.
 		`,
+
+		nativeWidth: number`
+			Defines the native width the icon was designed for. We currently use a
+			standard 1.3px pixel stroke-width but ocassionally our icons are designed
+			at larger sizes and we need control to define what their native width is.
+			Most people won't need to worry about this prop unless their creating odd
+			sized icons.
+		`,
 	},
 
 	getDefaultProps() {
@@ -78,6 +86,7 @@ const Icon = createClass({
 			viewBox: '0 0 16 16',
 			isDisabled: false,
 			isClickable: false,
+			nativeWidth: 16,
 		};
 	},
 
@@ -105,12 +114,16 @@ const Icon = createClass({
 			isClickable,
 			isDisabled,
 			style,
+			nativeWidth,
 			...passThroughs
 		} = this.props;
 
 		// Since our icons were designed at 16px with a 1.3px stroke, we use this
 		// formula to keep the stroke the same size regardless of `size`
-		const combinedStyles = { ...style, strokeWidth: (16 / size) * 1.3 };
+		const combinedStyles = {
+			strokeWidth: (nativeWidth / size) * 1.3,
+			...style,
+		};
 
 		return (
 			<svg
