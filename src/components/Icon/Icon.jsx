@@ -74,7 +74,7 @@ const Icon = createClass({
 			Defines the native size the icon was designed for. We currently use a
 			standard 1.3px pixel stroke-width but ocassionally our icons are designed
 			at larger sizes and we need control to define what their native size is.
-			For non square icons this would be the large of either width or height.
+			For non square icons this would be the smaller of either width or height.
 			Most people won't need to worry about this prop unless their creating odd
 			sized icons.
 		`,
