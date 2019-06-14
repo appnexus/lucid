@@ -50,6 +50,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -853,6 +854,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -1397,6 +1399,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -1498,6 +1501,7 @@ exports[`SearchableSelect [common] example testing should match snapshot(s) for 
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -2297,6 +2301,7 @@ exports[`SearchableSelect child elements Option should render Option child funct
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
@@ -2399,6 +2404,7 @@ exports[`SearchableSelect child elements Option should render Option.Selected in
       </span>
       <ChevronIcon
         direction="down"
+        size={12}
       />
     </div>
   </DropMenu.Control>
