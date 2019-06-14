@@ -859,7 +859,7 @@ exports[`Dialog [common] example testing should match snapshot(s) for 4.complex 
   onEscape={[Function]}
 >
   <div
-    className="lucid-Dialog-window lucid-Dialog-window-is-medium lucid-Dialog-is-menu"
+    className="lucid-Dialog-window lucid-Dialog-window-is-medium lucid-Dialog-is-complex"
   >
     <header
       className="lucid-Dialog-header"
