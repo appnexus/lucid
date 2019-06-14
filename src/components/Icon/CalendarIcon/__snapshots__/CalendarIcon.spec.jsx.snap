@@ -6,7 +6,7 @@ exports[`CalendarIcon [common] example testing should match snapshot(s) for 1.de
   className="lucid-CalendarIcon"
   isClickable={false}
   isDisabled={false}
-  nativeWidth={16}
+  nativeSize={16}
   size={16}
   viewBox="0 0 16 16"
 >

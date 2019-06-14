@@ -6,7 +6,7 @@ exports[`AnalyzeDataIcon [common] example testing should match snapshot(s) for 1
   className="lucid-AnalyzeDataIcon"
   isClickable={false}
   isDisabled={false}
-  nativeWidth={16}
+  nativeSize={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -33,7 +33,7 @@ exports[`AnalyzeDataIcon [common] example testing should match snapshot(s) for 1
   className="lucid-AnalyzeDataIcon"
   isClickable={true}
   isDisabled={false}
-  nativeWidth={16}
+  nativeSize={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -60,7 +60,7 @@ exports[`AnalyzeDataIcon [common] example testing should match snapshot(s) for 1
   className="lucid-AnalyzeDataIcon"
   isClickable={false}
   isDisabled={true}
-  nativeWidth={16}
+  nativeSize={16}
   size={16}
   viewBox="0 0 16 16"
 >
