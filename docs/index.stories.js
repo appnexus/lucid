@@ -19,6 +19,7 @@ import SyntaxHighlighter, {
 import jsx from 'react-syntax-highlighter/languages/prism/jsx';
 import okaidia from 'react-syntax-highlighter/styles/prism/okaidia';
 import '../src/index.less';
+import '../src/styles/master.less';
 import ColorPalette from './color-palette';
 import { withPanelToggles } from '../.storybook/lucid-docs-addon/PanelToggles';
 

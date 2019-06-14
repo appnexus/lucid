@@ -6,6 +6,7 @@ exports[`HelpIcon [common] example testing should match snapshot(s) for 1.defaul
   className="lucid-HelpIcon"
   isClickable={false}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -32,6 +33,7 @@ exports[`HelpIcon [common] example testing should match snapshot(s) for 1.defaul
   className="lucid-HelpIcon lucid-HelpIcon-is-clickable"
   isClickable={true}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -58,6 +60,7 @@ exports[`HelpIcon [common] example testing should match snapshot(s) for 1.defaul
   className="lucid-HelpIcon lucid-HelpIcon-is-disabled"
   isClickable={false}
   isDisabled={true}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >

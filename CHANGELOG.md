@@ -12,7 +12,6 @@
 - table now defaults to `hasLightHeader`
 - removed `border` prop from `Table.td`
 - removed `isActionable` from `table`
-- added `presetSize` to `SettingsIcon`
 - added `isMenu` to `Dialog`. Styling adjustments for a more complex `Dialog`.
 - added `isTop` to `Tag`. Necessary only for tiered tags that are three levels deep. (Use at the top level)
 - added `isTop` to `Selection`. Necessary only for tiered selections. (Use at the top level)
@@ -33,9 +32,10 @@
 - renamed `QuestionMarkCircleIcon` to `QuestionMarkIcon` since it no longer has a circle around it
 - removed the `presetSize` prop from `SettingsIcon` since all our utility icons can now be scaled
 - removed `TableGearIcon` in favor of `SettingsIcon`
-- removed `ViewIcon`, we don't have a 1:1 replacement for this icon so you'll have to take it on a case by case basis
 - added `ViewTableIcon`
 - removed `ChevronThinIcon` in favor of just `Chevron`
 - added `topOffset` to `SidePanel`. This prop adds a top margin to the component.
 - added `isInvisible` to `SearchableSelect`
 - added `hasHover` to `Table` for removing hover styling on tables.
+- adjusted the default size of icons inside of `Button`s. This includes a `!important` style that was necessary because we using inline styles on icons to adjust the `stroke-width`.
+- added `nativeWidth` prop to `Icon` to allow for control over the stroke-width formula

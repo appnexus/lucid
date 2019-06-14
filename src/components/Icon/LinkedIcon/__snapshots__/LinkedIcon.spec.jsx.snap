@@ -6,6 +6,7 @@ exports[`LinkedIcon [common] example testing should match snapshot(s) for 1.defa
   className="lucid-LinkedIcon"
   isClickable={false}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >

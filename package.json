@@ -1,6 +1,6 @@
 {
   "name": "lucid-ui",
-  "version": "4.0.0-beta.18",
+  "version": "4.0.0-beta.21",
   "description": "A UI component library from AppNexus.",
   "main": "dist/index.js",
   "module": "lib/index.js",
@@ -142,7 +142,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run lint && npm test"
+      "pre-push": "npm test"
     }
   }
 }

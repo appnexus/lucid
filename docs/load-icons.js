@@ -1078,6 +1078,23 @@ module.exports = [
 	},
 
 	{
+		name: 'ViewIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/ViewIcon/ViewIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/ViewIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/ViewIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
 		name: 'ViewTableIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/ViewTableIcon/ViewTableIcon')

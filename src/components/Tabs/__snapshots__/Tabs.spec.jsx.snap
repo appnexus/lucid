@@ -776,11 +776,11 @@ exports[`Tabs [common] example testing should match snapshot(s) for 09-with-coun
       Three content
     </Tabs.Tab>
     <Tabs.Tab
-      Title="Three"
+      Title="Four"
       count={3}
       index={3}
       isDisabled={true}
-      isLastTab={true}
+      isLastTab={false}
       isOpen={true}
       isProgressive={false}
       isSelected={false}
@@ -788,9 +788,26 @@ exports[`Tabs [common] example testing should match snapshot(s) for 09-with-coun
       onSelect={[Function]}
     >
       <Tabs.Title>
-        Three
+        Four
       </Tabs.Title>
-      Three content
+      Four content
+    </Tabs.Tab>
+    <Tabs.Tab
+      Title="Five"
+      count={0}
+      index={4}
+      isDisabled={true}
+      isLastTab={true}
+      isOpen={true}
+      isProgressive={false}
+      isSelected={false}
+      key="4"
+      onSelect={[Function]}
+    >
+      <Tabs.Title>
+        Five
+      </Tabs.Title>
+      Five content
     </Tabs.Tab>
   </ul>
   <div
@@ -863,7 +880,7 @@ exports[`Tabs [common] example testing should match snapshot(s) for 09-with-coun
       Three content
     </Tabs.Tab>
     <Tabs.Tab
-      Title="Three"
+      Title="Four"
       count={123}
       index={3}
       isDisabled={true}
@@ -876,9 +893,9 @@ exports[`Tabs [common] example testing should match snapshot(s) for 09-with-coun
       onSelect={[Function]}
     >
       <Tabs.Title>
-        Three
+        Four
       </Tabs.Title>
-      Three content
+      Four content
     </Tabs.Tab>
   </ul>
   <div

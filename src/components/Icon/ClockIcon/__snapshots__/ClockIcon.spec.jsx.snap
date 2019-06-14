@@ -6,6 +6,7 @@ exports[`ClockIcon [common] example testing should match snapshot(s) for 1.defau
   className="lucid-ClockIcon"
   isClickable={false}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -15,7 +16,6 @@ exports[`ClockIcon [common] example testing should match snapshot(s) for 1.defau
     r="7.5"
   />
   <path
-    class="st0"
     d="M8 3.5v5l2.75 2.25"
   />
 </Icon>

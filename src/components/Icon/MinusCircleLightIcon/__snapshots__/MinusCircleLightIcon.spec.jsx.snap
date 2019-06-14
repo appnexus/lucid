@@ -6,6 +6,122 @@ exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) 
   className="lucid-MinusCircleLightIcon"
   isClickable={false}
   isDisabled={false}
+  nativeWidth={16}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-MinusCircleLightIcon-background"
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    className="lucid-MinusCircleLightIcon-dash"
+    d="M4.5 8h7"
+  />
+</Icon>
+`;
+
+exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) for 1.default 2`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-clickable"
+  isClickable={true}
+  isDisabled={false}
+  nativeWidth={16}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-MinusCircleLightIcon-background"
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    className="lucid-MinusCircleLightIcon-dash"
+    d="M4.5 8h7"
+  />
+</Icon>
+`;
+
+exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) for 1.default 3`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-disabled lucid-MinusCircleLightIcon-is-clickable"
+  isClickable={true}
+  isDisabled={true}
+  nativeWidth={16}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-MinusCircleLightIcon-background"
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    className="lucid-MinusCircleLightIcon-dash"
+    d="M4.5 8h7"
+  />
+</Icon>
+`;
+
+exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) for 1.default 4`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-active"
+  isClickable={false}
+  isDisabled={false}
+  nativeWidth={16}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-MinusCircleLightIcon-background"
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    className="lucid-MinusCircleLightIcon-dash"
+    d="M4.5 8h7"
+  />
+</Icon>
+`;
+
+exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) for 1.default 5`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-clickable lucid-MinusCircleLightIcon-is-active"
+  isClickable={true}
+  isDisabled={false}
+  nativeWidth={16}
+  size={16}
+  viewBox="0 0 16 16"
+>
+  <circle
+    className="lucid-MinusCircleLightIcon-background"
+    cx="8"
+    cy="8"
+    r="7.5"
+  />
+  <path
+    className="lucid-MinusCircleLightIcon-dash"
+    d="M4.5 8h7"
+  />
+</Icon>
+`;
+
+exports[`MinusCircleLightIcon [common] example testing should match snapshot(s) for 1.default 6`] = `
+<Icon
+  aspectRatio="xMidYMid meet"
+  className="lucid-MinusCircleLightIcon lucid-MinusCircleLightIcon-is-disabled lucid-MinusCircleLightIcon-is-clickable lucid-MinusCircleLightIcon-is-active"
+  isClickable={true}
+  isDisabled={true}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >

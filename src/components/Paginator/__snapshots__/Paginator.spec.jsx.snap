@@ -30,9 +30,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 1.basic
     style={null}
     value={1}
   />
-  <span>
-    of 
-  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -116,9 +113,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 2.page-
     style={null}
     value={1}
   />
-  <span>
-    of 
-  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -165,9 +159,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
     style={null}
     value={1}
   />
-  <span>
-    of 
-  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -251,9 +242,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 3.disab
     style={null}
     value={1}
   />
-  <span>
-    of 
-  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -344,9 +332,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     style={null}
     value={1}
   />
-  <span>
-    of 
-  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -430,9 +415,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     style={null}
     value={1}
   />
-  <span>
-    of 
-  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -547,9 +529,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     style={null}
     value={1}
   />
-  <span>
-    of 
-  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -664,9 +643,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     style={null}
     value={1}
   />
-  <span>
-    of 
-  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -781,9 +757,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     style={null}
     value={1}
   />
-  <span>
-    of 
-  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}
@@ -898,9 +871,6 @@ exports[`Paginator [common] example testing should match snapshot(s) for 4.show-
     style={null}
     value={1}
   />
-  <span>
-    of 
-  </span>
   <Button
     hasOnlyIcon={true}
     isActive={false}

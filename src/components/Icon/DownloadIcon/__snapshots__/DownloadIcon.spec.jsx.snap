@@ -6,6 +6,7 @@ exports[`DownloadIcon [common] example testing should match snapshot(s) for 1.de
   className="lucid-DownloadIcon"
   isClickable={false}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >

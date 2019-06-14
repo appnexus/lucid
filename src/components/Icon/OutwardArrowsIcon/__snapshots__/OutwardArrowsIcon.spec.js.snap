@@ -6,6 +6,7 @@ exports[`OutwardArrowsIcon [common] example testing should match snapshot(s) for
   className="lucid-OutwardArrowsIcon"
   isClickable={false}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -21,6 +22,7 @@ exports[`OutwardArrowsIcon [common] example testing should match snapshot(s) for
   className="lucid-OutwardArrowsIcon"
   isClickable={false}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -36,6 +38,7 @@ exports[`OutwardArrowsIcon [common] example testing should match snapshot(s) for
   className="lucid-OutwardArrowsIcon"
   isClickable={false}
   isDisabled={false}
+  nativeWidth={16}
   size={16}
   viewBox="0 0 16 16"
 >

@@ -29,12 +29,12 @@
 	}
 
 	&-Tab {
-		flex: 1 1 0px;
+		flex: 1 1 0;
 		height: inherit;
 		display: flex;
 		justify-content: center;
 		align-items: stretch;
-		box-sizing: border-box;
+		box-sizing: content-box;
 		cursor: pointer;
 		color: @color-neutral-9;
 		user-select: none;
@@ -115,6 +115,7 @@
 		text-align: center;
 		height: 15px;
 		display: inline-block;
+		line-height: 16px;
 	}
 
 	&-Tab-arrow {
@@ -157,12 +158,3 @@
 		}
 	}
 }
-
-.Tabs-mixin-tab-arrow-background(@color-Tab-background: @color-white) {
-	.@{prefix}-Tabs-Tab-arrow {
-		.@{prefix}-Tabs-Tab-arrow-background {
-			fill: @color-Tab-background;
-		}
-	}
-}
-
