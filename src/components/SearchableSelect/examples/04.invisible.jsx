@@ -93,7 +93,7 @@ export default createClass({
 					</OptionGroup>
 				</SearchableSelect>
 
-				<section>
+				<section style={{ marginTop: '10px' }}>
 					Selected Index: {JSON.stringify(this.state.selectedIndex)}
 				</section>
 			</section>
