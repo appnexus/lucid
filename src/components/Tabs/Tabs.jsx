@@ -124,7 +124,7 @@ const Tab = createClass({
 			>
 				<span className={cx('&-Tab-content')}>
 					{Title}
-					{count && (
+					{!_.isNil(count) && (
 						<Badge
 							style={{
 								marginLeft: '12px',

@@ -597,7 +597,6 @@ const Table = createClass({
 		hasHover: bool`
 			Applies a row hover to rows. Defaults to true.
 		`,
-
 	},
 
 	getDefaultProps() {
