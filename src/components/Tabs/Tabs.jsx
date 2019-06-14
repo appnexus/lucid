@@ -124,7 +124,7 @@ const Tab = createClass({
 			>
 				<span className={cx('&-Tab-content')}>
 					{Title}
-					{count && (
+					{
 						<Badge
 							style={{
 								marginLeft: '12px',
@@ -136,7 +136,7 @@ const Tab = createClass({
 						>
 							{count}
 						</Badge>
-					)}
+					}
 				</span>
 				{isProgressive && !isLastTab && (
 					<span className={cx('&-Tab-arrow')}>

@@ -21,8 +21,12 @@ export default createClass({
 						Three content
 					</Tabs.Tab>
 					<Tabs.Tab count={3} isDisabled>
-						<Tabs.Title>Three</Tabs.Title>
-						Three content
+						<Tabs.Title>Four</Tabs.Title>
+						Four content
+					</Tabs.Tab>
+					<Tabs.Tab count={0} isDisabled>
+						<Tabs.Title>Five</Tabs.Title>
+						Five content
 					</Tabs.Tab>
 				</Tabs>
 
@@ -41,8 +45,8 @@ export default createClass({
 						Three content
 					</Tabs.Tab>
 					<Tabs.Tab count={123} isDisabled isVariableCountWidth={true}>
-						<Tabs.Title>Three</Tabs.Title>
-						Three content
+						<Tabs.Title>Four</Tabs.Title>
+						Four content
 					</Tabs.Tab>
 				</Tabs>
 			</div>
