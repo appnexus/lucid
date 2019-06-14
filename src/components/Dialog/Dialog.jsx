@@ -37,7 +37,7 @@ const Dialog = createClass({
 			statics: {
 				peek: {
 					description: `
-						Renders a \`<header>\`.
+						Renders a \`<div>\`.
 					`,
 				},
 			},
@@ -70,7 +70,7 @@ const Dialog = createClass({
 			The function that is called when the close button is triggered.
 		`,
 
-		isMenu: bool`
+		isComplex: bool`
 			Defaults to false.
 			Provides a more segregated design to organize more content in the Dialog.
 		`,
@@ -97,7 +97,7 @@ const Dialog = createClass({
 		return {
 			handleClose: _.noop,
 			size: MEDIUM,
-			isMenu: false,
+			isComplex: false,
 			hasGutters: true,
 			hasClose: true,
 		};
@@ -111,7 +111,7 @@ const Dialog = createClass({
 			hasGutters,
 			hasClose,
 			isShown,
-			isMenu,
+			isComplex,
 			...passThroughs
 		} = this.props;
 
@@ -138,7 +138,7 @@ const Dialog = createClass({
 						'&-window-is-small': size === SMALL,
 						'&-window-is-medium': size === MEDIUM,
 						'&-window-is-large': size === LARGE,
-						'&-is-menu': isMenu,
+						'&-is-complex': isComplex,
 					})}
 				>
 					<header className={cx('&-header')}>

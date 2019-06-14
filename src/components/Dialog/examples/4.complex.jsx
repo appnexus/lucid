@@ -54,7 +54,7 @@ export default createClass({
 				</Button>
 
 				<Dialog
-					isMenu
+					isComplex
 					isShown={this.state.isShown}
 					handleClose={_.partial(this.handleShow, !this.state.isShown)}
 					Header='Advanced Filters'

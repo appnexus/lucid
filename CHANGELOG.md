@@ -12,7 +12,6 @@
 - table now defaults to `hasLightHeader`
 - removed `border` prop from `Table.td`
 - removed `isActionable` from `table`
-- added `isMenu` to `Dialog`. Styling adjustments for a more complex `Dialog`.
 - added `isTop` to `Tag`. Necessary only for tiered tags that are three levels deep. (Use at the top level)
 - added `isTop` to `Selection`. Necessary only for tiered selections. (Use at the top level)
 - added `isInvisible` to `SingleSelect`. We do not use a button under the hood for this component, but this simulates an invisible `Button`, styling-wise.
@@ -40,4 +39,4 @@
 - adjusted the default size of icons inside of `Button`s. This includes a `!important` style that was necessary because we using inline styles on icons to adjust the `stroke-width`.
 - added `nativeSize` prop to `Icon` to allow for control over the stroke-width formula
 - added `hasClose` and `handleClose` to `Dialog`
-
+- added `isComplex` to `Dialog`. Styling adjustments for a more complex `Dialog`.

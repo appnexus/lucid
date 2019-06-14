@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables.less';
 @import (reference) '../../styles/mixins.less';
 
-@Dialog-size-spacing: 30px;
+@Dialog-size-spacing: 25px;
 @Dialog-size-borderRadius: @size-borderRadius + 2;
 @Dialog-size-maxHeight: 80vh;
 @Dialog-size-smallWidth: 30%;
@@ -43,10 +43,12 @@
 		font-size: @size-font-L;
 		color: @color-darkGray;
 		font-weight: @font-weight-medium;
-		padding: 26px @Dialog-size-spacing 10px;
+		padding: 26px @Dialog-size-spacing 21px;
 
 		.@{prefix}-Dialog-close-button {
 			position: relative;
+			left: 0;
+			top: 0;
 			padding: 0 8px;
 
 			.@{prefix}-Icon {
@@ -55,18 +57,19 @@
 		}
 	}
 
-	& &-is-menu &-header {
+	& &-is-complex &-header {
+		display: flex;
 		box-sizing: content-box;
-		padding: 24px @Dialog-size-spacing 18px;
+		padding: 22px @Dialog-size-spacing 18px;
 		border-bottom: 1px solid @color-neutral-4;
 		font-size: @size-font-L;
-		height: 28px;
+		min-height: 28px;
 	}
 
 	&-body {
 		flex: 1 1 auto;
 		overflow: auto;
-		padding: 10px @Dialog-size-spacing;
+		padding: 0 @Dialog-size-spacing;
 		max-height: 60vh; // fix for IE 11 bug, otherwise the body doesn't shrink properly
 		font-size: @fontSize;
 		font-family: @fontFamily;
@@ -81,12 +84,12 @@
 		flex: 1 0 auto;
 		text-align: right;
 		background-color: @color-white;
-		padding: 26px;
+		padding: 20px @Dialog-size-spacing;
 	}
 
-	& &-is-menu &-footer {
+	& &-is-complex &-footer {
 		border-top: 1px solid @color-neutral-4;
-		padding: 20px @Dialog-size-spacing;
+		padding: 19px @Dialog-size-spacing;
 		height: 30px;
 		box-sizing: content-box;
 	}
