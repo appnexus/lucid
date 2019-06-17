@@ -6,7 +6,6 @@ exports[`MinusCircleIcon [common] example testing should match snapshot(s) for 1
   className="lucid-MinusCircleIcon"
   isClickable={false}
   isDisabled={false}
-  nativeSize={16}
   size={16}
   viewBox="0 0 16 16"
 >

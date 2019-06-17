@@ -6,7 +6,7 @@ import { createClass, omitProps } from '../../util/component-types';
 
 const cx = lucidClassNames.bind('&-Icon');
 
-const { any, string, number, object, bool, func } = PropTypes;
+const { any, string, number, bool, func } = PropTypes;
 
 const Icon = createClass({
 	displayName: 'Icon',
@@ -22,10 +22,6 @@ const Icon = createClass({
 	},
 
 	propTypes: {
-		style: object`
-			Styles that are passed through to the \`svg\`.
-		`,
-
 		className: any`
 			Classes that are appended to the component defaults. This prop is run
 			through the \`classnames\` library.
@@ -69,15 +65,6 @@ const Icon = createClass({
 		children: any`
 			Any valid React children.
 		`,
-
-		nativeSize: number`
-			Defines the native size the icon was designed for. We currently use a
-			standard 1.3px pixel stroke-width but ocassionally our icons are designed
-			at larger sizes and we need control to define what their native size is.
-			For non square icons this would be the smaller of either width or height.
-			Most people won't need to worry about this prop unless their creating odd
-			sized icons.
-		`,
 	},
 
 	getDefaultProps() {
@@ -87,7 +74,6 @@ const Icon = createClass({
 			viewBox: '0 0 16 16',
 			isDisabled: false,
 			isClickable: false,
-			nativeSize: 16,
 		};
 	},
 
@@ -114,17 +100,8 @@ const Icon = createClass({
 			aspectRatio,
 			isClickable,
 			isDisabled,
-			style,
-			nativeSize,
 			...passThroughs
 		} = this.props;
-
-		// Since our icons were designed at 16px with a 1.3px stroke, we use this
-		// formula to keep the stroke the same size regardless of `size`
-		const combinedStyles = {
-			strokeWidth: (nativeSize / size) * 1.3,
-			...style,
-		};
 
 		return (
 			<svg
@@ -133,7 +110,6 @@ const Icon = createClass({
 				viewBox={viewBox}
 				preserveAspectRatio={aspectRatio}
 				{...omitProps(passThroughs, Icon)}
-				style={combinedStyles}
 				className={cx(
 					'&',
 					{

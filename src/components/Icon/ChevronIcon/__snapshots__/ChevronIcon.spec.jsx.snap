@@ -6,7 +6,6 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
   className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
   isClickable={false}
   isDisabled={false}
-  nativeSize={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -22,7 +21,6 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
   className="lucid-ChevronIcon lucid-ChevronIcon-is-up"
   isClickable={false}
   isDisabled={false}
-  nativeSize={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -38,7 +36,6 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
   className="lucid-ChevronIcon lucid-ChevronIcon-is-down"
   isClickable={false}
   isDisabled={false}
-  nativeSize={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -54,7 +51,6 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
   className="lucid-ChevronIcon lucid-ChevronIcon-is-left"
   isClickable={false}
   isDisabled={false}
-  nativeSize={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -70,7 +66,6 @@ exports[`ChevronIcon [common] example testing should match snapshot(s) for 1.def
   className="lucid-ChevronIcon lucid-ChevronIcon-is-right"
   isClickable={false}
   isDisabled={false}
-  nativeSize={16}
   size={16}
   viewBox="0 0 16 16"
 >
