@@ -245,6 +245,23 @@ module.exports = [
 	},
 
 	{
+		name: 'CodeIcon',
+		component: getDefaultExport(
+			require('../src/components/Icon/CodeIcon/CodeIcon')
+		),
+		examplesContext: require.context(
+			'../src/components/Icon/CodeIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+		examplesContextRaw: require.context(
+			'!!raw-loader!../src/components/Icon/CodeIcon/examples',
+			true,
+			/\.jsx?$/
+		),
+	},
+
+	{
 		name: 'CrownIcon',
 		component: getDefaultExport(
 			require('../src/components/Icon/CrownIcon/CrownIcon')

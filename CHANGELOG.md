@@ -39,3 +39,4 @@
 - adjusted the default size of icons inside of `Button`s
 - added `handleClose` to `Dialog`
 - added `isComplex` to `Dialog`. Styling adjustments for a more complex `Dialog`.
+- added `CodeIcon`
