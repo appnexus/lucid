@@ -66,18 +66,13 @@ const Dialog = createClass({
 		`,
 
 		handleClose: func`
-			Required unless \`hasClose\` is set to false.
+			If this is truthy (if a function is provided). the close button will show.
 			The function that is called when the close button is triggered.
 		`,
 
 		isComplex: bool`
 			Defaults to false.
 			Provides a more segregated design to organize more content in the Dialog.
-		`,
-
-		hasClose: bool`
-			Defaults to true.
-			Provides a close button in the top right.
 		`,
 
 		hasGutters: bool`
@@ -95,11 +90,9 @@ const Dialog = createClass({
 
 	getDefaultProps() {
 		return {
-			handleClose: _.noop,
 			size: MEDIUM,
 			isComplex: false,
 			hasGutters: true,
-			hasClose: true,
 		};
 	},
 
@@ -109,7 +102,6 @@ const Dialog = createClass({
 			size,
 			handleClose,
 			hasGutters,
-			hasClose,
 			isShown,
 			isComplex,
 			...passThroughs
@@ -144,7 +136,7 @@ const Dialog = createClass({
 					<header className={cx('&-header')}>
 						{headerChildProp.children}
 
-						{hasClose &&
+						{handleClose &&
 							<Button
 								kind='invisible'
 								hasOnlyIcon

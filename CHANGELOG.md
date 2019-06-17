@@ -38,5 +38,5 @@
 - added `hasHover` to `Table` for removing hover styling on tables.
 - adjusted the default size of icons inside of `Button`s. This includes a `!important` style that was necessary because we using inline styles on icons to adjust the `stroke-width`.
 - added `nativeSize` prop to `Icon` to allow for control over the stroke-width formula
-- added `hasClose` and `handleClose` to `Dialog`
+- added `handleClose` to `Dialog`
 - added `isComplex` to `Dialog`. Styling adjustments for a more complex `Dialog`.
