@@ -57,19 +57,9 @@
 		}
 	}
 
-	// Nested icons should be 12px by deafult. The `!important` is necessary to
-	// beat the inline style. The inline style is necessary for settings a
-	// calculated `stroke-width` based on the icon's `size`. It's a quagmire. The
-	// only other approach I thought of would be to define a preset number of
-	// icon sizes and put the `stroke-widths` in the less file. That has the
-	// benefit of avoiding inline styling but it makes icon sizing less flexible.
-	// Given my time constraints I'm going with the `!important`.
-	//
-	// - @jdelamotte 2019-06-14
 	.@{prefix}-Icon {
 		width: 12px;
 		height: 12px;
-		stroke-width: 1.74 !important; // need `important` to beat inline style
 	}
 
 	& &-content {
@@ -244,7 +234,6 @@
 		.@{prefix}-Icon {
 			width: 24px;
 			height: 24px;
-			stroke-width: 0.87 !important; // need `important` to beat inline style
 		}
 	}
 

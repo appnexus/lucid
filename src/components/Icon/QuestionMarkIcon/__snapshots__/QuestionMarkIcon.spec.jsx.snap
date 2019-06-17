@@ -6,7 +6,6 @@ exports[`QuestionMarkIcon [common] example testing should match snapshot(s) for 
   className="lucid-QuestionMarkIcon"
   isClickable={false}
   isDisabled={false}
-  nativeSize={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -27,7 +26,6 @@ exports[`QuestionMarkIcon [common] example testing should match snapshot(s) for 
   className="lucid-QuestionMarkIcon"
   isClickable={true}
   isDisabled={false}
-  nativeSize={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -48,7 +46,6 @@ exports[`QuestionMarkIcon [common] example testing should match snapshot(s) for 
   className="lucid-QuestionMarkIcon"
   isClickable={false}
   isDisabled={true}
-  nativeSize={16}
   size={100}
   viewBox="0 0 16 16"
 >

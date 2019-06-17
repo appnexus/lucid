@@ -6,7 +6,6 @@ exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.defa
   className="lucid-AddURLIcon"
   isClickable={false}
   isDisabled={false}
-  nativeSize={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -25,7 +24,6 @@ exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.defa
   className="lucid-AddURLIcon"
   isClickable={true}
   isDisabled={false}
-  nativeSize={16}
   size={16}
   viewBox="0 0 16 16"
 >
@@ -44,7 +42,6 @@ exports[`AddURLIcon [common] example testing should match snapshot(s) for 1.defa
   className="lucid-AddURLIcon"
   isClickable={false}
   isDisabled={true}
-  nativeSize={16}
   size={16}
   viewBox="0 0 16 16"
 >

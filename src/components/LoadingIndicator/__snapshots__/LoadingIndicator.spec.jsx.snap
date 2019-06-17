@@ -259,7 +259,6 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
           aspectRatio="xMidYMid meet"
           isClickable={false}
           isDisabled={false}
-          nativeSize={16}
           size={16}
           speed="slow"
           viewBox="0 0 16 16"
@@ -355,7 +354,6 @@ exports[`LoadingIndicator [common] example testing should match snapshot(s) for 
           aspectRatio="xMidYMid meet"
           isClickable={false}
           isDisabled={false}
-          nativeSize={16}
           size={16}
           speed="fast"
           viewBox="0 0 16 16"
