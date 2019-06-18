@@ -30,8 +30,17 @@
 
 		.@{prefix}-SidePanel-position-left& {
 			left: 0;
-			flex-direction: row-reverse;
 			transform: translateX(-100%);
+
+			.@{prefix}-SidePanel-body {
+				flex-direction: row-reverse;
+
+				.@{prefix}-SidePanel-content {
+					overflow: auto;
+					padding: 20px 0px 20px 20px;
+					flex: 1;
+				}
+			}
 		}
 
 		.@{prefix}-SidePanel-header {
