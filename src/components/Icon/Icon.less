@@ -11,6 +11,7 @@
 	stroke: @color-primary;
 	stroke-miterlimit: 10;
 	stroke-linecap: square;
+	stroke-width: 1.3; // Designed for icons at 16x16
 
 	// Our icons are designed in a 16x16 grid using primarily strokes so it's
 	// possible for some small piece of the edges to overflow. This allows the
@@ -21,7 +22,7 @@
 	> rect,
 	> circle {
 		transform-origin: center center;
-		vector-effect: non-scaling-stroke;
+		vector-effect: non-scaling-stroke; // ensures we keep consistent stroke-width regardless of size
 	}
 
 	&-is-clickable {
