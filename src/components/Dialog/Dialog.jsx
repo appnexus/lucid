@@ -131,6 +131,7 @@ const Dialog = createClass({
 						'&-window-is-medium': size === MEDIUM,
 						'&-window-is-large': size === LARGE,
 						'&-is-complex': isComplex,
+						'&-no-footer': !footerChildProp,
 					})}
 				>
 					<header className={cx('&-header')}>

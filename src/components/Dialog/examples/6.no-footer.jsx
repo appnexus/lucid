@@ -27,7 +27,7 @@ export default createClass({
 					onBackgroundClick={_.partial(this.handleShow, false)}
 					onEscape={_.partial(this.handleShow, false)}
 					Header='Header'
-					size='small'
+					size='medium'
 				>
 					This `Dialog` has no footer!
 				</Dialog>
