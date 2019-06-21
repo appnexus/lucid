@@ -6,6 +6,11 @@
 	-ms-animation: ~"@{prefix}-LoadingIcon-rotate-animation" linear infinite;
 	stroke: none !important; // using a hammer cause this icon should never have a stroke
 
+	// Have to increase specificity here to beat an Icon style
+	& > circle {
+		vector-effect: none;
+	}
+
 	circle {
 		fill: none;
 		stroke-width: 12;
