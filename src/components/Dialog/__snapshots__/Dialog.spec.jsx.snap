@@ -1151,7 +1151,7 @@ exports[`Dialog [common] example testing should match snapshot(s) for 6.no-foote
   onEscape={[Function]}
 >
   <div
-    className="lucid-Dialog-window lucid-Dialog-window-is-small"
+    className="lucid-Dialog-window lucid-Dialog-window-is-medium lucid-Dialog-no-footer"
   >
     <header
       className="lucid-Dialog-header"
@@ -1188,7 +1188,7 @@ exports[`Dialog [common] example testing should match snapshot(s) for 7.no-gutte
   onEscape={[Function]}
 >
   <div
-    className="lucid-Dialog-window lucid-Dialog-window-is-medium"
+    className="lucid-Dialog-window lucid-Dialog-window-is-medium lucid-Dialog-no-footer"
   >
     <header
       className="lucid-Dialog-header"
