@@ -25,6 +25,8 @@
 
 		&-toggle {
 			cursor: pointer;
+			display: flex;
+			align-items: center;
 
 			&:hover {
 				> .@{prefix}-Expander-icon {
@@ -43,9 +45,7 @@
 
 	&-text {
 		color: @color-darkGray;
-		height: @size-expander-button;
 		font-weight: @font-weight-medium;
-		position: relative;
 
 		> * {
 			line-height: @size-expander-button;
