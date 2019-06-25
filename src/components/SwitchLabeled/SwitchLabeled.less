@@ -23,8 +23,8 @@
 
 	&:hover {
 		.@{prefix}-Switch-visualization-glow {
-			.opacity();
-			transform: @Switch-glow-scale;
+			// .opacity();
+			// transform: @Switch-glow-scale;
 		}
 
 		.@{prefix}-Switch-visualization-container {
@@ -46,9 +46,13 @@
 	}
 
 	&-is-disabled:hover {
-		.@{prefix}-Switch-visualization-container,
-		.@{prefix}-Switch-visualization-handle {
+		& .@{prefix}-Switch-visualization-container {
 			background-color: @Switch-disabled-color;
+			border-color: @Switch-disabled-border-color;
+		}
+
+		& .@{prefix}-Switch-visualization-handle {
+			background-color: transparent;
 			border-color: @Switch-disabled-border-color;
 		}
 
@@ -56,11 +60,11 @@
 			.@{prefix}-Switch-visualization-container {
 				background-color: @color-white;
 				border-color: @color-primary;
-				opacity: .50;
+				// opacity: .50;
 			}
 			.@{prefix}-Switch-visualization-handle {
 				background-color: @color-primary;
-				opacity: .50;
+				// opacity: .50;
 				border-color: transparent;
 			}
 		}
