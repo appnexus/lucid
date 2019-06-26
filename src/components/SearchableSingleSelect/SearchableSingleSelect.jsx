@@ -387,16 +387,21 @@ const SearchableSingleSelect = createClass({
 
 		//user made a selection
 		if (!_.isNil(props.selectedIndex)) {
+			const selectedOptionProps = this.state.flattenedOptionsData[
+				props.selectedIndex
+			].optionProps;
+
 			return (
 				<div
 					{...omitProps(passThroughs, SearchableSingleSelect)}
 					className={cx('&', className)}
 				>
 					<Selection
-						Label={this.renderOptionContent(
-							this.state.flattenedOptionsData[props.selectedIndex].optionProps,
-							''
-						)}
+						Label={
+							_.isNil(selectedOptionProps.Selected)
+								? this.renderOptionContent(selectedOptionProps, '')
+								: selectedOptionProps.Selected
+						}
 						onRemove={this.removeSelection}
 						kind='default'
 					/>
