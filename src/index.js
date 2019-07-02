@@ -18,7 +18,9 @@ import SearchableSingleSelect, {
 	SearchableSingleSelectDumb,
 } from './components/SearchableSingleSelect/SearchableSingleSelect';
 import DropMenu, { DropMenuDumb } from './components/DropMenu/DropMenu';
-import Expander, { ExpanderDumb } from './components/Expander/Expander';
+import Expander, {
+	ExpanderStateful,
+} from './components/Expander/Expander';
 import ExpanderPanel, {
 	ExpanderPanelDumb,
 } from './components/ExpanderPanel/ExpanderPanel';
@@ -247,7 +249,7 @@ export {
 	EnvelopeIcon,
 	EqualsIcon,
 	Expander,
-	ExpanderDumb,
+	ExpanderStateful,
 	ExpanderPanel,
 	ExpanderPanelDumb,
 	FileIcon,

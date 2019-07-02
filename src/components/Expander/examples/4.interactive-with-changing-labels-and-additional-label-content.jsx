@@ -1,12 +1,12 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Button, CloseIcon, EditIcon, Expander } from '../../../index';
+import { Button, CloseIcon, EditIcon, Expander, ExpanderStateful } from '../../../index';
 
 export default createClass({
 	render() {
 		return (
 			<div>
-				<Expander>
+				<ExpanderStateful>
 					<Expander.Label>Show Stuff</Expander.Label>
 					<Expander.AdditionalLabelContent>
 						<Button kind='invisible'>
@@ -94,7 +94,7 @@ export default createClass({
 						Letterpress beard fixie, umami waistcoat salvia ennui four loko
 						seitan lomo franzen pickled shoreditch master cleanse.
 					</p>
-				</Expander>
+				</ExpanderStateful>
 			</div>
 		);
 	},

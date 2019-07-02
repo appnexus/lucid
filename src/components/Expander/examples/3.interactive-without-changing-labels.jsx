@@ -1,12 +1,13 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Expander } from '../../../index';
+import { Expander, ExpanderStateful } from '../../../index';
 
+//@todo child components are kinda awkward since they won't be directly on HoC versions.  Should they be their own export?
 export default createClass({
 	render() {
 		return (
 			<div>
-				<Expander>
+				<ExpanderStateful>
 					<Expander.Label>Show Stuff</Expander.Label>
 					<p>
 						Tacos craft beer humblebrag meditation. Cold-pressed next level man
@@ -84,7 +85,7 @@ export default createClass({
 						Letterpress beard fixie, umami waistcoat salvia ennui four loko
 						seitan lomo franzen pickled shoreditch master cleanse.
 					</p>
-				</Expander>
+				</ExpanderStateful>
 			</div>
 		);
 	},

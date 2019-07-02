@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import createReactClass from 'create-react-class';
 import PropTypes from 'react-peek/prop-types';
 import _ from 'lodash';
@@ -139,3 +139,15 @@ export function omitProps(props, type, keys = [], targetIsDOMElement = true) {
 			.concat(additionalOmittedKeys)
 	);
 }
+
+export function withReducer(WrappedComponent, reducer, mapDispatchToProps, initialState){
+	return (props) => {
+		const propsWithDefault = {...WrappedComponent.defaultProps, ...props};
+		const [state, dispatch] = useReducer(reducer, initialState);
+		const dispatchProps = mapDispatchToProps(dispatch, propsWithDefault);
+		const mergedStateProps = {...propsWithDefault, ...state, ...dispatchProps};
+		return (
+			<WrappedComponent {...mergedStateProps} />
+		);
+	};
+};

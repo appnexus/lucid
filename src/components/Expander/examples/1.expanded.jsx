@@ -1,6 +1,6 @@
 import React from 'react';
 import createClass from 'create-react-class';
-import { Expander } from '../../../index';
+import { Expander} from '../../../index';
 
 export default createClass({
 	render() {
