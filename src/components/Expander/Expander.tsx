@@ -6,7 +6,6 @@ import ChevronIcon from "../Icon/ChevronIcon/ChevronIcon";
 import Collapsible from "../Collapsible/Collapsible";
 import { initialState, reducer, mapDispatchToProps } from "./Expander.reducers";
 const cx = lucidClassNames.bind("&-Expander");
-const { any, bool, func, node, object, oneOf, string } = PropTypes;
 type ExpanderProps = {
   className?: string,
   isExpanded?: boolean,
@@ -30,19 +29,14 @@ const Expander: React.SFC<ExpanderProps> = props => {
   Expander.Label.propName = "Label";
   Expander.Label.displayName = "Expander.Label";
   Expander.Label.propTypes = {
-    children: node`
-			Used to identify the purpose of this switch to the user -- can be any
-			renderable content.
-		`
+    children: PropTypes.node
   };
   Expander.AdditionalLabelContent = () => null;
   Expander.AdditionalLabelContent.displayName =
     "Expander.AdditionalLabelContent";
   Expander.AdditionalLabelContent.propName = "AdditionalLabelContent";
   Expander.AdditionalLabelContent.propTypes = {
-    children: node`
-			Used to display additional information or/and actions next to expander label.
-		`
+    children: PropTypes.node
   };
   const labelChildProp = _.first(
     _.map(findTypes(props, Expander.Label), "props")
