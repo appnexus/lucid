@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React from 'react';
-import PropTypes from 'react-peek/prop-types';
+import PropTypes from 'prop-types';
 import { lucidClassNames } from '../../util/style-helpers';
 import { findTypes, omitProps, withReducer } from '../../util/component-types';
 import ChevronIcon from '../Icon/ChevronIcon/ChevronIcon';
@@ -85,42 +85,21 @@ Expander.peek = {
 }
 
 Expander.propTypes = {
-	children: node`
-			Expandable content.
-		`,
+	children: node,
 
-	className: string`
-		Appended to the component-specific class names set on the root element.
-	`,
+	className: string,
 
-	isExpanded: bool`
-		Indicates that the component is in the "expanded" state when true and in
-		the "unexpanded" state when false.
-	`,
+	isExpanded: bool,
 
-	onToggle: func`
-		Called when the user clicks on the component's header.  Signature:
-		\`(isExpanded, { event, props }) => {}\`
-	`,
+	onToggle: func,
 
-	style: object`
-		Passed through to the root element.
-	`,
+	style: object,
 
-	Label: any`
-		Child element whose children represents content to be shown next to the
-		expander icon.
-	`,
+	Label: any,
 
-	AdditionalLabelContent: node`
-		Child element whose children respresent content to be shown inside
-		Expander.Label and to the right of it
-	`,
+	AdditionalLabelContent: node,
 
-	kind: oneOf(['simple', 'highlighted'])`
-		Renders different variants of Expander. 'simple' is default.
-		'highlighted' is more prominant.
-	`,
+	kind: oneOf(['simple', 'highlighted']),
 };
 
 Expander.Label = () => null;
