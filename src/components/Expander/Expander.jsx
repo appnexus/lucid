@@ -9,8 +9,6 @@ import {initialState, reducer, mapDispatchToProps} from './Expander.reducers';
 
 const cx = lucidClassNames.bind('&-Expander');
 
-const { any, bool, func, node, object, oneOf, string } = PropTypes;
-
 const Expander = (props) => {
 
 	const {
