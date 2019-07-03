@@ -5,20 +5,17 @@ import { findTypes, omitProps, withReducer } from "../../util/component-types";
 import ChevronIcon from "../Icon/ChevronIcon/ChevronIcon";
 import Collapsible from "../Collapsible/Collapsible";
 import { initialState, reducer, mapDispatchToProps } from "./Expander.reducers";
-
 const cx = lucidClassNames.bind("&-Expander");
 const { any, bool, func, node, object, oneOf, string } = PropTypes;
-
 type ExpanderProps = {
-  className?: any,
-  isExpanded?: any,
-  onToggle?: any,
-  style?: any,
+  className?: string,
+  isExpanded?: boolean,
+  onToggle?: (...args: any[]) => any,
+  style?: object,
   Label?: any,
-  AdditionalLabelContent?: any,
+  AdditionalLabelContent?: React.ReactNode,
   kind?: "simple" | "highlighted"
 };
-
 const Expander: React.SFC<ExpanderProps> = props => {
   const {
     children,
@@ -94,13 +91,11 @@ const Expander: React.SFC<ExpanderProps> = props => {
     </div>
   );
 };
-
 Expander.displayName = "Expander";
 Expander.defaultProps = {
   isExpanded: false,
   kind: "simple"
 };
-
 Expander.peek = {
   description: `
 		This is a container that provides a toggle that controls when the
@@ -108,7 +103,6 @@ Expander.peek = {
 	`,
   categories: ["layout"]
 };
-
 //@todo maybe just let consumers compose the HoC directly so they can pass their own initialState and whatnot?
 //@todo we could keep the stateful component as the default.  Just need to tweak our module loader in Storybook
 const ExpanderStateful = withReducer(
