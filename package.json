@@ -96,7 +96,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.13.0",
     "glob": "^7.1.1",
-    "husky": "^2.2.0",
+    "husky": "^3.0.0",
     "jest": "^21.2.1",
     "jscodeshift": "^0.5.0",
     "less": "^2.3.1",
